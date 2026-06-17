@@ -106,6 +106,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Alabama Judicial System and FindLaw — § 13A-7-2 Criminal Trespass in the First Degree",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-7-2/",
+    instructionRef: "APJI (Crim.) 28-2",
   },
   "al-disorderly-conduct": {
     citation: "Ala. Code § 13A-11-7",
@@ -675,6 +676,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Maryland General Assembly — § 6-403 Trespass on Private Property",
     sourceUrl: "https://law.justia.com/codes/maryland/section-6-403/",
+    instructionRef: "MCJI § 4:47.1",
   },
   "md-disorderly-conduct": {
     citation: "Md. Code Ann., Crim. Law § 10-201",
@@ -828,6 +830,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "North Carolina General Statutes — ncleg.gov",
     sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-159.12.html",
+    instructionRef: "NC PJI 223.10",
   },
   "nc-disorderly-conduct": {
     citation: "N.C. Gen. Stat. § 14-288.4",
@@ -898,6 +901,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia South Carolina Code — § 16-11-620 Entering Premises After Warning or Refusing to Leave",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-11-620/",
+    instructionRef: "SC Req. to Charge Crim. § 5-11",
   },
   "sc-disorderly-conduct": {
     citation: "S.C. Code Ann. § 16-17-530",
@@ -996,6 +1000,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-119/",
+    instructionRef: "VMJI § 52.100",
   },
   "va-disorderly-conduct": {
     citation: "Va. Code Ann. § 18.2-415",
@@ -1746,6 +1751,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Iowa Legislature — Iowa Code § 716.7 Trespass defined",
     sourceUrl: "https://law.justia.com/codes/iowa/section-716-7/",
+    instructionRef: "Iowa MCJI 1400.1",
   },
   "ia-disorderly-conduct": {
     citation: "Iowa Code § 723.4",
@@ -1816,6 +1822,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Kansas Legislature — Kan. Stat. Ann. § 21-5808 Criminal trespass",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5808/",
+    instructionRef: "PIK Crim. 4th 58.140",
+    instructionUrl: "https://www.kscourts.org/Kansas-Courts/District-Courts/Pattern-Jury-Instructions/Criminal",
   },
   "ks-petty-theft": {
     citation: "Kan. Stat. Ann. § 21-5801",
@@ -1887,6 +1895,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.605",
+    instructionRef: "CRIMJIG 17.10",
   },
   "mn-disorderly-conduct": {
     citation: "Minn. Stat. § 609.72",
@@ -2615,6 +2624,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "West Virginia Legislature — WV Code § 61-3B-3 Criminal trespass",
     sourceUrl: "https://code.wvlegislature.gov/61-3B-3/",
+    instructionRef: "WV Crim. J.I. § 26.01",
   },
   "wv-disorderly-conduct": {
     citation: "W. Va. Code § 61-6-1b",
@@ -2928,6 +2938,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 207.200 unlawful trespass upon land",
     sourceUrl: "https://law.justia.com/codes/nevada/section-207-200/",
+    instructionRef: "Nev. J.I. § 20.07",
   },
   "nv-resisting-arrest": {
     citation: "Nev. Rev. Stat. § 199.280",
@@ -3008,6 +3019,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Oregon Legislature — ORS 164.245 criminal trespass in the second degree",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1740",
   },
   "or-disorderly-conduct": {
     citation: "Or. Rev. Stat. § 166.025",
@@ -3162,7 +3174,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-102/",
   },
   "co-disorderly-conduct": { citation: "Colo. Rev. Stat. § 18-9-106", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_9/part_1/section_18_9_106" },
-  "co-trespassing": { citation: "Colo. Rev. Stat. § 18-4-502", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_5/section_18_4_502" },
+  "co-trespassing": { citation: "Colo. Rev. Stat. § 18-4-502", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_5/section_18_4_502", instructionRef: "COLJI-Criminal §18-4-502" },
   "co-petty-theft": { citation: "Colo. Rev. Stat. § 18-4-401", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_4/section_18_4_401" },
   "co-resisting-arrest": { citation: "Colo. Rev. Stat. § 18-8-103", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_8/part_1/section_18_8_103" },
   "co-failure-to-appear": { citation: "Colo. Rev. Stat. § 18-8-212", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_8/part_2/section_18_8_212" },
@@ -3258,6 +3270,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Justia Tennessee Code — Tenn. Code Ann. § 39-14-405 Criminal trespass",
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-14-405/",
+    instructionRef: "TPI-Crim. 30.01",
   },
   "tn-petty-theft": {
     citation: "Tenn. Code Ann. § 39-14-103",
@@ -3845,6 +3858,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 511.080 Criminal trespass in the third degree; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-511-080/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 15.01",
   },
   "ky-resisting-arrest": {
     citation: "Ky. Rev. Stat. § 520.090",
@@ -6777,6 +6791,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama unlawful possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-212/",
+    instructionRef: "APJI (Crim.) 46-1",
   },
   "ak-possession-of-controlled-substance": {
     citation: "Alaska Stat. § 11.71.060",
@@ -6807,7 +6822,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11350.",
     instructionRef: "CALCRIM 2304",
   },
-  "co-possession-of-controlled-substance": { citation: "Colo. Rev. Stat. § 18-18-403.5", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_18/part_4/section_18_18_403_5" },
+  "co-possession-of-controlled-substance": { citation: "Colo. Rev. Stat. § 18-18-403.5", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_18/part_4/section_18_18_403_5", instructionRef: "COLJI-Criminal §18-18-403.5" },
   "ct-possession-of-controlled-substance": {
     citation: "Conn. Gen. Stat. § 21a-279",
     confidence: "medium",
@@ -6870,6 +6885,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-124-401/",
+    instructionRef: "Iowa MCJI 2300.1",
   },
   "ks-possession-of-controlled-substance": {
     citation: "Kan. Stat. Ann. § 21-5706",
@@ -6886,6 +6902,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky possession of controlled substance in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-218a-1415/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 26.01",
   },
   "la-possession-of-controlled-substance": {
     citation: "La. Rev. Stat. § 40:966(C)",
@@ -6907,6 +6924,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland possession of controlled dangerous substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-5-601/",
+    instructionRef: "MCJI § 4:42.1",
   },
   "ma-possession-of-controlled-substance": {
     citation: "Mass. Gen. Laws ch. 94C § 34",
@@ -6968,6 +6986,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-453-336/",
+    instructionRef: "Nev. J.I. § 28.01",
   },
   "nh-possession-of-controlled-substance": {
     citation: "N.H. Rev. Stat. Ann. § 318-B:26",
@@ -7034,6 +7053,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon unlawful possession of a controlled substance (post-Measure 110 decriminalization and 2024 recriminalization — verify current statute status before promoting to high)",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors475.html",
+    instructionRef: "UCJI 3070",
   },
   "pa-possession-of-controlled-substance": {
     citation: "35 Pa. Stat. § 780-113(a)(16)",
@@ -7056,6 +7076,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-44-53-370/",
+    instructionRef: "SC Req. to Charge Crim. § 28-5",
   },
   "sd-possession-of-controlled-substance": {
     citation: "S.D. Codified Laws § 22-42-5",
@@ -7102,6 +7123,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-250/",
+    instructionRef: "VMJI § 41.200",
   },
   "wa-possession-of-controlled-substance": {
     citation: "Wash. Rev. Code § 69.50.4013",
@@ -7118,6 +7140,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — West Virginia possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://code.wvlegislature.gov/60A-4-401/",
+    instructionRef: "WV Crim. J.I. § 30.01",
   },
   "wi-possession-of-controlled-substance": {
     citation: "Wis. Stat. § 961.41(3g)",
@@ -7212,6 +7235,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama shoplifting; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-8-60/",
+    instructionRef: "APJI (Crim.) 29-1",
   },
   "ak-shoplifting": {
     citation: "Alaska Stat. § 11.46.220",
@@ -7242,7 +7266,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.5.",
     instructionRef: "CALCRIM 1800",
   },
-  "co-shoplifting": { citation: "Colo. Rev. Stat. § 18-4-406", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_4/section_18_4_406" },
+  "co-shoplifting": { citation: "Colo. Rev. Stat. § 18-4-406", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_4/section_18_4_406", instructionRef: "COLJI-Criminal §18-4-406" },
   "ct-shoplifting": {
     citation: "Conn. Gen. Stat. § 53a-119a",
     confidence: "medium",
@@ -7301,6 +7325,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa retail theft; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-714-13/",
+    instructionRef: "Iowa MCJI 1400.3",
   },
   "ks-shoplifting": {
     citation: "Kan. Stat. Ann. § 21-5801",
@@ -7317,6 +7342,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky shoplifting; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-433-234/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 14.30",
   },
   "la-shoplifting": {
     citation: "La. Rev. Stat. § 14:67.10",
@@ -7338,6 +7364,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland theft (shoplifting charged as theft in Maryland); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-7-104/",
+    instructionRef: "MCJI § 4:38.1",
   },
   "ma-shoplifting": {
     citation: "Mass. Gen. Laws ch. 266 § 30A",
@@ -7359,6 +7386,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.52",
+    instructionRef: "CRIMJIG 16.01",
   },
   "ms-shoplifting": {
     citation: "Miss. Code Ann. § 97-23-93",
@@ -7394,6 +7422,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada concealment of merchandise; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-597-850/",
+    instructionRef: "Nev. J.I. § 15.30",
   },
   "nh-shoplifting": {
     citation: "N.H. Rev. Stat. Ann. § 637:3-a",
@@ -7433,6 +7462,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "North Carolina General Statutes — ncleg.gov",
     sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-72.1.html",
+    instructionRef: "NC PJI 216.51",
   },
   "nd-shoplifting": {
     citation: "N.D. Cent. Code § 12.1-23-01",
@@ -7455,6 +7485,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon theft in the second degree (covers shoplifting); verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1616",
   },
   "pa-shoplifting": {
     citation: "18 Pa. Cons. Stat. § 3929",
@@ -7477,6 +7508,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina shoplifting / fraudulent concealment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-13-110/",
+    instructionRef: "SC Req. to Charge Crim. § 5-5",
   },
   "sd-shoplifting": {
     citation: "S.D. Codified Laws § 22-30A-5",
@@ -7491,6 +7523,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Tennessee theft of property (shoplifting is prosecuted as theft in Tennessee); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-14-146/",
+    instructionRef: "TPI-Crim. 30.07",
   },
   "tx-shoplifting": {
     citation: "Tex. Penal Code § 31.03",
@@ -7520,6 +7553,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-103/",
+    instructionRef: "VMJI § 52.210",
   },
   "wa-shoplifting": {
     citation: "Wash. Rev. Code § 9A.56.340",
@@ -7534,6 +7568,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — West Virginia shoplifting; verify against Justia before promoting to high",
     sourceUrl: "https://code.wvlegislature.gov/61-3-34/",
+    instructionRef: "WV Crim. J.I. § 25.01",
   },
   "wi-shoplifting": {
     citation: "Wis. Stat. § 943.50",
@@ -8960,6 +8995,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama criminal mischief (vandalism); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-7-29/",
+    instructionRef: "APJI (Crim.) 28-14",
   },
   "ak-vandalism": {
     citation: "Alaska Stat. § 11.46.480",
@@ -8990,7 +9026,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=594.",
     instructionRef: "CALCRIM 2900",
   },
-  "co-vandalism": { citation: "Colo. Rev. Stat. § 18-4-501", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_5/section_18_4_501" },
+  "co-vandalism": { citation: "Colo. Rev. Stat. § 18-4-501", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_5/section_18_4_501", instructionRef: "COLJI-Criminal §18-4-501" },
   "ct-vandalism": {
     citation: "Conn. Gen. Stat. § 53a-115",
     confidence: "medium",
@@ -9053,6 +9089,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa criminal mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-716-1/",
+    instructionRef: "Iowa MCJI 1400.5",
   },
   "ks-vandalism": {
     citation: "Kan. Stat. Ann. § 21-5813",
@@ -9060,6 +9097,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kansas criminal damage to property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5813/",
+    instructionRef: "PIK Crim. 4th 58.060",
+    instructionUrl: "https://www.kscourts.org/Kansas-Courts/District-Courts/Pattern-Jury-Instructions/Criminal",
   },
   "ky-vandalism": {
     citation: "Ky. Rev. Stat. Ann. § 512.020",
@@ -9067,6 +9106,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky criminal mischief in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-512-020/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 15.40",
   },
   "la-vandalism": {
     citation: "La. Rev. Stat. § 14:56",
@@ -9088,6 +9128,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland malicious destruction of property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-6-301/",
+    instructionRef: "MCJI § 4:46.1",
   },
   "ma-vandalism": {
     citation: "Mass. Gen. Laws ch. 266 § 127",
@@ -9109,6 +9150,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.595",
+    instructionRef: "CRIMJIG 17.25",
   },
   "ms-vandalism": {
     citation: "Miss. Code Ann. § 97-17-67",
@@ -9144,6 +9186,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada malicious destruction of property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-206-310/",
+    instructionRef: "Nev. J.I. § 21.01",
   },
   "nh-vandalism": {
     citation: "N.H. Rev. Stat. Ann. § 634:2",
@@ -9181,6 +9224,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "North Carolina General Statutes — ncleg.gov",
     sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-127.html",
+    instructionRef: "NC PJI 223.50",
   },
   "nd-vandalism": {
     citation: "N.D. Cent. Code § 12.1-21-01",
@@ -9203,6 +9247,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon criminal mischief in the first degree; verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1730",
   },
   "pa-vandalism": {
     citation: "18 Pa. Cons. Stat. § 3304",
@@ -9225,6 +9270,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina malicious injury to personal property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-11-510/",
+    instructionRef: "SC Req. to Charge Crim. § 5-8",
   },
   "sd-vandalism": {
     citation: "S.D. Codified Laws § 22-34-1",
@@ -9239,6 +9285,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Tennessee vandalism; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-14-408/",
+    instructionRef: "TPI-Crim. 30.13",
   },
   "tx-vandalism": {
     citation: "Tex. Penal Code § 28.03",
@@ -9261,6 +9308,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-137/",
+    instructionRef: "VMJI § 52.300",
   },
   "vt-vandalism": {
     citation: "Vt. Stat. Ann. tit. 13 § 3701",
@@ -9282,6 +9330,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — West Virginia destruction of property; verify against Justia before promoting to high",
     sourceUrl: "https://code.wvlegislature.gov/61-3-30/",
+    instructionRef: "WV Crim. J.I. § 26.03",
   },
   "wi-vandalism": {
     citation: "Wis. Stat. § 943.01",
@@ -9313,6 +9362,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-11-8/",
+    instructionRef: "APJI (Crim.) 41-3",
   },
   "ak-harassment": {
     citation: "Alaska Stat. § 11.61.120",
@@ -9343,7 +9393,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=653m.",
     instructionRef: "CALCRIM 2681",
   },
-  "co-harassment": { citation: "Colo. Rev. Stat. § 18-9-111", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_9/part_1/section_18_9_111" },
+  "co-harassment": { citation: "Colo. Rev. Stat. § 18-9-111", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_9/part_1/section_18_9_111", instructionRef: "COLJI-Criminal §18-9-111" },
   "ct-harassment": {
     citation: "Conn. Gen. Stat. § 53a-183",
     confidence: "medium",
@@ -9400,6 +9450,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-708-7/",
+    instructionRef: "Iowa MCJI 900.5",
   },
   "ks-harassment": {
     citation: "Kan. Stat. Ann. § 21-6101",
@@ -9407,6 +9458,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kansas harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-6101/",
+    instructionRef: "PIK Crim. 4th 56.150",
+    instructionUrl: "https://www.kscourts.org/Kansas-Courts/District-Courts/Pattern-Jury-Instructions/Criminal",
   },
   "ky-harassment": {
     citation: "Ky. Rev. Stat. Ann. § 525.070",
@@ -9414,6 +9467,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-525-070/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 17.20",
   },
   "la-harassment": {
     citation: "La. Rev. Stat. § 14:285",
@@ -9435,6 +9489,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-3-803/",
+    instructionRef: "MCJI § 3:23.1",
   },
   "ma-harassment": {
     citation: "Mass. Gen. Laws ch. 265 § 43A",
@@ -9456,6 +9511,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.749",
+    instructionRef: "CRIMJIG 12A.01",
   },
   "ms-harassment": {
     citation: "Miss. Code Ann. § 97-29-45",
@@ -9491,6 +9547,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-200-571/",
+    instructionRef: "Nev. J.I. § 20.05",
   },
   "nh-harassment": {
     citation: "N.H. Rev. Stat. Ann. § 644:4",
@@ -9528,6 +9585,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "North Carolina General Statutes — ncleg.gov",
     sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-395.html",
+    instructionRef: "NC PJI 235.90",
   },
   "nd-harassment": {
     citation: "N.D. Cent. Code § 12.1-17-07",
@@ -9550,6 +9608,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon harassment; verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors166.html",
+    instructionRef: "UCJI 1250",
   },
   "pa-harassment": {
     citation: "18 Pa. Cons. Stat. § 2709",
@@ -9572,6 +9631,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-1700/",
+    instructionRef: "SC Req. to Charge Crim. § 12-35",
   },
   "sd-harassment": {
     citation: "S.D. Codified Laws § 22-19A-1",
@@ -9586,6 +9646,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Tennessee harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-17-308/",
+    instructionRef: "TPI-Crim. 7.22",
   },
   "tx-harassment": {
     citation: "Tex. Penal Code § 42.07",
@@ -9608,6 +9669,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-186.3/",
+    instructionRef: "VMJI § 8.200",
   },
   "vt-harassment": {
     citation: "Vt. Stat. Ann. tit. 13 § 1027",
@@ -9636,6 +9698,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — West Virginia harassment; verify against Justia before promoting to high",
     sourceUrl: "https://code.wvlegislature.gov/61-2-9a/",
+    instructionRef: "WV Crim. J.I. § 20.01",
   },
   "wy-harassment": {
     citation: "Wyo. Stat. Ann. § 6-2-506",
@@ -10465,6 +10528,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-11-9/",
+    instructionRef: "APJI (Crim.) 41-2",
   },
   "ak-loitering": {
     citation: "Alaska Stat. § 11.61.150(a)(1)",
@@ -10495,7 +10559,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647.",
     instructionRef: "CALCRIM 2966",
   },
-  "co-loitering": { citation: "Colo. Rev. Stat. § 18-9-112", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_9/part_1/section_18_9_112" },
+  "co-loitering": { citation: "Colo. Rev. Stat. § 18-9-112", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_9/part_1/section_18_9_112", instructionRef: "COLJI-Criminal §18-9-112" },
   "ct-loitering": {
     citation: "Conn. Gen. Stat. § 53a-185",
     confidence: "medium",
@@ -10553,6 +10617,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa disorderly conduct (Iowa loitering is prosecuted under disorderly conduct statute); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-723-4/",
+    instructionRef: "Iowa MCJI 2600.1",
   },
   "ks-loitering": {
     citation: "Kan. Stat. Ann. § 21-6204",
@@ -10560,6 +10625,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kansas loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-6204/",
+    instructionRef: "PIK Crim. 4th 67.080",
+    instructionUrl: "https://www.kscourts.org/Kansas-Courts/District-Courts/Pattern-Jury-Instructions/Criminal",
   },
   "ky-loitering": {
     citation: "Ky. Rev. Stat. Ann. § 525.090",
@@ -10567,6 +10634,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-525-090/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 17.30",
   },
   "la-loitering": {
     citation: "La. Rev. Stat. § 14:103",
@@ -10588,6 +10656,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Maryland disorderly conduct (Maryland does not have a standalone loitering statute; loitering charged under disorderly conduct or trespass); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/maryland/section-10-201/",
+    instructionRef: "MCJI § 4:48.1",
   },
   "me-loitering": {
     citation: "Me. Rev. Stat. tit. 17-A § 506-A",
@@ -10609,6 +10678,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.725",
+    instructionRef: "CRIMJIG 17.50",
   },
   "mo-loitering": {
     citation: "Mo. Rev. Stat. § 574.050",
@@ -10644,6 +10714,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-207-030/",
+    instructionRef: "Nev. J.I. § 20.06",
   },
   "nh-loitering": {
     citation: "N.H. Rev. Stat. Ann. § 644:6",
@@ -10681,6 +10752,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "North Carolina General Statutes — ncleg.gov",
     sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-132.html",
+    instructionRef: "NC PJI 235.30",
   },
   "nd-loitering": {
     citation: "N.D. Cent. Code § 12.1-31-01",
@@ -10703,6 +10775,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon loitering; verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1750",
   },
   "pa-loitering": {
     citation: "18 Pa. Cons. Stat. § 5506",
@@ -10725,6 +10798,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-17-420/",
+    instructionRef: "SC Req. to Charge Crim. § 17-8",
   },
   "sd-loitering": {
     citation: "S.D. Codified Laws § 22-17-3",
@@ -10739,6 +10813,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Tennessee loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/tennessee/section-39-17-306/",
+    instructionRef: "TPI-Crim. 28.01",
   },
   "tx-loitering": {
     citation: "Tex. Penal Code § 42.01(a)(9)",
@@ -10761,6 +10836,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Virginia Code Annotated — law.lis.virginia.gov",
     sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-176/",
+    instructionRef: "VMJI § 8.300",
   },
   "vt-loitering": {
     citation: "Vt. Stat. Ann. tit. 13 § 1026",
@@ -10789,6 +10865,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — West Virginia disorderly conduct (WV loitering prosecuted under disorderly conduct statute); verify against Justia before promoting to high",
     sourceUrl: "https://code.wvlegislature.gov/61-6-1/",
+    instructionRef: "WV Crim. J.I. § 33.01",
   },
   "wy-loitering": {
     citation: "Wyo. Stat. Ann. § 6-6-102",
