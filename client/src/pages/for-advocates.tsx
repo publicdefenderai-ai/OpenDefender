@@ -124,16 +124,16 @@ export default function ForAdvocates() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-xs font-semibold uppercase tracking-widest text-white/60 mb-4">
+            <p className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">
               Advocate Hub
             </p>
-            <h1 className="text-3xl md:text-4xl font-black text-white mb-5 leading-tight">
+            <h1 className="text-2xl md:text-3xl font-black text-white mb-5 leading-tight">
               Tools for Public Defenders,{" "}
               <br className="hidden sm:block" />
               Social Workers & Case Advocates
             </h1>
             <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed mb-6">
-              Organized around how you actually work with clients, from first contact through resolution and beyond. Every resource here links to what already exists on OpenDefender — no logins, no fees.
+              Organized around how you actually work with clients, from first contact through resolution and beyond.
             </p>
             {/* Jump nav */}
             <div className="flex flex-wrap items-center justify-center gap-2 mt-2">
