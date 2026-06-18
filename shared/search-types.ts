@@ -19,6 +19,7 @@ export interface SearchDocument {
   contentZh?: string;
   tags: string[];
   aliases: string[];
+  headings?: string[];
   jurisdiction?: string;
   url: string;
   score?: number;

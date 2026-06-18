@@ -79,6 +79,7 @@ function scoreFields(
   normalizedContent: string,
   normalizedAliases: string[],
   normalizedTags: string[],
+  normalizedHeadings: string[],
   isDirect: boolean
 ): { score: number; matchedTerms: string[] } {
   let score = 0;
@@ -86,6 +87,8 @@ function scoreFields(
 
   for (const term of terms) {
     const nt = normalizeText(term);
+    if (!nt || nt.length < 2) continue;
+    const prefixRe = nt.length >= 3 ? new RegExp(`\\b${escapeRegex(nt)}`, 'i') : null;
 
     // ── Title ──────────────────────────────────────────────────────
     if (normalizedTitle === nt) {
@@ -93,6 +96,10 @@ function scoreFields(
       matchedTerms.push(term);
     } else if (normalizedTitle.includes(nt)) {
       score += isDirect ? 60 : 28;
+      matchedTerms.push(term);
+    } else if (prefixRe && prefixRe.test(normalizedTitle)) {
+      // Prefix match: "bai" matches "bail", "arrai" matches "arraignment"
+      score += isDirect ? 35 : 14;
       matchedTerms.push(term);
     }
 
@@ -103,6 +110,25 @@ function scoreFields(
     } else if (normalizedAliases.some(a => a.includes(nt))) {
       score += isDirect ? 45 : 18;
       matchedTerms.push(term);
+    } else if (prefixRe && normalizedAliases.some(a => prefixRe.test(a))) {
+      score += isDirect ? 22 : 9;
+      matchedTerms.push(term);
+    }
+
+    // ── Page section headings (e.g. "Booking", "Bail Hearing") ─────
+    // Scored between aliases and tags — a heading match is a strong signal
+    // that this page covers the topic the user is searching for.
+    if (normalizedHeadings.length > 0) {
+      if (normalizedHeadings.some(h => h === nt)) {
+        score += isDirect ? 55 : 22;
+        matchedTerms.push(term);
+      } else if (normalizedHeadings.some(h => h.includes(nt))) {
+        score += isDirect ? 30 : 12;
+        matchedTerms.push(term);
+      } else if (prefixRe && normalizedHeadings.some(h => prefixRe.test(h))) {
+        score += isDirect ? 18 : 7;
+        matchedTerms.push(term);
+      }
     }
 
     // ── Tags (primary topic signals — weighted heavily) ─────────────
@@ -114,6 +140,9 @@ function scoreFields(
       // Word-boundary partial tag match (e.g. "property" inside "property retrieval")
       // Min length 4 avoids false positives on short noise words
       score += isDirect ? 35 : 14;
+      matchedTerms.push(term);
+    } else if (prefixRe && nt.length >= 4 && normalizedTags.some(t => prefixRe.test(t))) {
+      score += isDirect ? 18 : 7;
       matchedTerms.push(term);
     }
 
@@ -144,9 +173,10 @@ function calculateScore(
   const normalizedContent = normalizeText(content);
   const normalizedAliases = doc.aliases.map(a => normalizeText(a));
   const normalizedTags = doc.tags.map(t => normalizeText(t));
+  const normalizedHeadings = (doc.headings || []).map(h => normalizeText(h));
 
-  const direct = scoreFields(directTerms, normalizedTitle, normalizedContent, normalizedAliases, normalizedTags, true);
-  const syn = scoreFields(synonymTerms, normalizedTitle, normalizedContent, normalizedAliases, normalizedTags, false);
+  const direct = scoreFields(directTerms, normalizedTitle, normalizedContent, normalizedAliases, normalizedTags, normalizedHeadings, true);
+  const syn = scoreFields(synonymTerms, normalizedTitle, normalizedContent, normalizedAliases, normalizedTags, normalizedHeadings, false);
 
   const typeBoosts: Record<SearchContentType, number> = {
     legal_resource: 1.3,
@@ -570,6 +600,7 @@ export function buildSearchIndex(): void {
       content: page.content,
       tags: page.tags,
       aliases: page.aliases,
+      headings: (page as { headings?: string[] }).headings,
       url: page.url,
     });
   }
@@ -754,6 +785,7 @@ export function buildSearchIndex(): void {
       content: 'Your Fourth Amendment rights against unreasonable searches and seizures. Phone search and digital privacy — police need a warrant to search your cell phone. Stop and frisk rights during police encounters. Vehicle search rights during traffic stops. Home search — how to respond when police come to your door. Search of person rights including pat-downs and strip searches. When police need a warrant. How to refuse consent. What to say when police ask to search.',
       tags: ['search', 'seizure', 'fourth amendment', 'warrant', 'police', 'phone search', 'stop and frisk', 'vehicle search', 'home search', 'traffic stop', 'consent', 'digital privacy'],
       aliases: ['police search', 'can police search', 'phone search', 'cell phone search', 'stop and frisk', 'traffic stop', 'search my car', 'search my home', 'refuse search'],
+      headings: ['Phone search and digital privacy', 'Can police search my cell phone', 'Stop and frisk', 'Terry stop', 'Traffic stop and vehicle search', 'Home search', 'Search of person', 'Pat-down', 'Strip search', 'How to refuse consent', 'What to say when police ask to search', 'When police need a warrant'],
       url: '/search-seizure'
     },
     {
@@ -794,6 +826,7 @@ export function buildSearchIndex(): void {
       content: 'Interactive 7-stage criminal case timeline. Arrest, arraignment, pretrial, plea bargaining, trial, sentencing, and appeal. Understand each stage of a criminal proceeding, your rights, and what to expect.',
       tags: ['timeline', 'case stages', 'criminal process', 'arraignment', 'trial', 'sentencing', 'appeal', 'arrest'],
       aliases: ['case stages', 'criminal procedure', 'court process timeline', 'what happens after arrest'],
+      headings: ['Arrest', 'Booking', 'Arraignment', 'Preliminary hearing', 'Pretrial motions', 'Pretrial', 'Bail hearing', 'Plea bargaining', 'Plea deal', 'Trial', 'Jury selection', 'Sentencing', 'Sentencing guidelines', 'Appeal', 'Your rights at each stage', 'Speedy trial', 'Public defender'],
       url: '/case-timeline'
     },
     {
@@ -894,6 +927,7 @@ export function buildSearchIndex(): void {
       content: 'Help with court logistics. Transportation to court, childcare during hearings, what to wear, what to bring, courthouse navigation, interpreter services. Getting your property back after arrest — personal belongings phone wallet keys cash ID inventoried at evidence unit of arresting precinct. Vehicle towed after arrest, contact towing company directly, storage fees accumulate daily. ID replacement after arrest, replacing driver license state ID Social Security card. Court-ordered programs verification, community service hours documentation. What happens if late to court, bench warrant, interpreter services.',
       tags: ['court logistics', 'transportation', 'childcare', 'courthouse', 'interpreter', 'what to wear', 'property retrieval', 'get property back', 'belongings', 'evidence unit', 'precinct', 'vehicle towed', 'ID replacement', 'court-ordered programs', 'community service'],
       aliases: ['getting to court', 'court preparation', 'courthouse help', 'court day', 'get belongings back', 'get property back after arrest', 'property retrieval', 'towed car after arrest', 'ID replacement after arrest', 'court ordered program', 'verify community service'],
+      headings: ['What to wear to court', 'What to bring to court', 'Transportation to court', 'Childcare during hearings', 'Interpreter services', 'Getting your property back after arrest', 'Evidence unit', 'Personal belongings retrieval', 'Vehicle towed after arrest', 'ID replacement after arrest', 'Replacing your driver license', 'Replacing your Social Security card', 'Court-ordered programs', 'Community service documentation', 'What if you are late to court', 'Bench warrant'],
       url: '/support/court-logistics'
     },
     {
@@ -954,6 +988,7 @@ export function buildSearchIndex(): void {
       content: 'Resources to manage and rebuild reputation after a criminal record. Expungement and record sealing eligibility screener. Clean Slate automatic clearance programs (8 states with active programs). FCRA rights when a background check is run: pre-adverse action notice, 7-year lookback rule, how to dispute errors. Rap sheet error identification: missing dispositions, improperly unsealed records, unrecorded warrant vacaturs. Certificates of relief from collateral consequences. Mugshot removal. Handling conversations with employers and family.',
       tags: ['reputation', 'record', 'expungement', 'record sealing', 'background check', 'FCRA', 'Clean Slate', 'certificates of relief', 'rap sheet errors', 'background check dispute', 'automatic clearance', 'collateral consequences'],
       aliases: ['clear criminal record', 'expunge record', 'seal record', 'background check dispute', 'dispute background check error', 'FCRA rights', 'certificate of relief', 'clean slate', 'rap sheet', 'missing disposition', 'mugshot removal', 'employer background check'],
+      headings: ['Expungement eligibility screener', 'Record sealing', 'Clean Slate automatic clearance', 'FCRA rights', 'Pre-adverse action notice', 'Background check dispute', '7-year lookback rule', 'Rap sheet errors', 'Missing disposition', 'Improperly unsealed records', 'Certificates of relief', 'Mugshot removal', 'Talking to employers about your record'],
       url: '/support/reputation'
     },
     {
@@ -1024,6 +1059,7 @@ export function buildSearchIndex(): void {
       content: 'When does your right to an attorney begin? Fifth Amendment vs Sixth Amendment right to counsel. Custodial interrogation triggers 5th Amendment — you must be in custody and being questioned. Sixth Amendment kicks in after formal charges are filed at arraignment or indictment. Detention vs custody vs arrest — they are not the same. A brief police stop may not trigger Miranda rights. Voluntary encounter: you are free to leave. Custodial interrogation: you are not free to leave and are being questioned. Miranda warning required. Invoke your right clearly: "I want a lawyer. I will not answer questions without a lawyer present." All questioning must stop immediately. Police cannot try again later or send a different officer. Lawyer during questioning vs lawyer at trial — different protections. Public defender appointed if you cannot afford an attorney. Right to counsel does not apply in civil cases or immigration removal. Grand jury testimony: no right to have attorney in the room. Unclear situations: home visits, being in a police car, workplace questioning, juvenile questioning.',
       tags: ['attorney', 'lawyer', 'right to counsel', 'fifth amendment', 'sixth amendment', 'miranda', 'custodial interrogation', 'custody', 'detention', 'arrest', 'public defender', 'invoke rights', 'interrogation'],
       aliases: ['when does right to attorney start', 'right to counsel', 'do i need a lawyer', 'can i get a lawyer', 'fifth vs sixth amendment', 'miranda rights attorney', 'invoke right to counsel', 'ask for lawyer', 'attorney during questioning', 'lawyer during interrogation', 'when to ask for lawyer'],
+      headings: ['Fifth Amendment right to counsel', 'Sixth Amendment right to counsel', 'When does your right to a lawyer begin', 'Custodial interrogation', 'Detention vs custody vs arrest', 'How to invoke your right to a lawyer', 'What happens after you invoke', 'Lawyer during questioning vs lawyer at trial', 'Public defender appointment', 'Grand jury testimony', 'Juvenile questioning'],
       url: '/right-to-counsel'
     },
     {
@@ -1034,6 +1070,7 @@ export function buildSearchIndex(): void {
       content: 'What officers need to enter your home, search your belongings, or arrest you. Search warrants, arrest warrants, ICE administrative warrants vs. judicial warrants. Your rights when officers have a warrant and when they do not. When no warrant is needed. Documented concerns about immigration enforcement. What to do at the door.',
       tags: ['warrant', 'search warrant', 'arrest warrant', 'ICE warrant', 'administrative warrant', 'judicial warrant', 'fourth amendment', 'home entry', 'immigration enforcement', 'consent', 'exigent circumstances', 'terry stop', 'no warrant', 'rights at home', 'I-200', 'I-205', 'border zone', 'expedited removal'],
       aliases: ['can police enter without warrant', 'do I have to open door', 'ICE at my door', 'warrant requirements', 'when do police need warrant', 'administrative vs judicial warrant', 'ICE form I-200', 'search without warrant', 'what is a warrant'],
+      headings: ['Search warrants', 'Arrest warrants', 'ICE administrative warrant vs judicial warrant', 'Officers at your door', 'What to do when officers arrive', 'When police do not need a warrant', 'Consent to search', 'Exigent circumstances', 'Fourth Amendment rights at home', 'Border zone and expedited removal'],
       url: '/warrants'
     },
     {
@@ -1044,6 +1081,7 @@ export function buildSearchIndex(): void {
       content: 'Step-by-step guide for the first 24 hours after arrest. At the moment of arrest: invoke your right to remain silent and ask for a lawyer immediately. Booking: cooperate with fingerprints and photos but do not answer questions about the incident. Your first phone call from jail: jail calls are recorded — call a family member, give them your facility name and booking number, ask them to find a lawyer. What never to say on a jail call. Sample script for first jail call. Facility and inmate locator by state. Bail hearing: have your attorney argue for release, mention ties to community. Getting legal representation: request a public defender if you cannot afford an attorney. Arraignment: plead not guilty — preserve your options. Between now and your next court date: attend every hearing, follow bail conditions, do not contact victims or witnesses. Do not discuss your case on social media. Who is charging you: local charges filed by city or county prosecutor — called District Attorney, State\'s Attorney, City Attorney, or County Attorney depending on the state; state charges filed by the state attorney general\'s office or state prosecutor; federal charges filed by a U.S. Attorney — these carry harsher penalties and different procedures. Understanding who brings the case against you matters for negotiating and for knowing which court your case will be in. When does your right to a lawyer actually begin: Fifth Amendment right during interrogation vs Sixth Amendment right at formal proceedings. The gap between arrest and arraignment. Right to counsel timing in California, New York, Texas, Florida, and federal courts. If you are on probation or parole: violation holds, probation officer notification, revocation hearing rights. Your first appearance before a magistrate: probable cause, bail conditions, right to counsel, how it works in each state.',
       tags: ['arrest', 'first 24 hours', 'booking', 'bail', 'arraignment', 'phone call', 'jail call', 'recorded call', 'public defender', 'attorney', 'right to remain silent', 'miranda', 'custody', 'right to counsel', 'sixth amendment', 'fifth amendment', 'probation', 'parole', 'violation', 'revocation', 'magistrate', 'first appearance', 'initial appearance', 'inmate locator', 'facility lookup', 'juvenile arrest'],
       aliases: ['just arrested', 'what to do after arrest', 'arrested now what', 'first steps after arrest', 'arrested guide', 'what happens when arrested', 'after being arrested', 'booking process', 'bail hearing guide', 'phone call from jail', 'calling from jail', 'jail call advice', 'what to say on jail call', 'when does right to lawyer begin', 'arrested on probation', 'arrested on parole', 'first court appearance', 'magistrate hearing', 'find someone in jail', 'inmate locator'],
+      headings: ['At the moment of arrest', 'Booking', 'Your first phone call from jail', 'Jail phone call script', 'What never to say on a jail call', 'Inmate and facility locator', 'Bail hearing', 'Getting legal representation', 'Arraignment', 'Post-arraignment steps', 'When does your right to a lawyer begin', 'Fifth Amendment vs Sixth Amendment', 'Right to counsel timing by state', 'If you are on probation or parole', 'Violation hold', 'Revocation hearing rights', 'Your first appearance before a magistrate'],
       url: '/first-24-hours'
     },
     {
@@ -1114,6 +1152,7 @@ export function buildSearchIndex(): void {
       content: 'How to prepare for a bail hearing. What judges consider: community ties, employment, housing, support network. Documentation checklist. Letter templates: employer support letter, character reference, family support statement. Types of release: ROR, cash bail, bail bond, conditional release. Bail fund resources including The Bail Project and National Bail Fund Network.',
       tags: ['bail', 'pretrial', 'bail hearing', 'release', 'ROR', 'bail bond', 'pretrial detention', 'arraignment', 'bail preparation'],
       aliases: ['bail hearing', 'get out of jail', 'pretrial release', 'release on recognizance', 'reduce bail', 'bail help'],
+      headings: ['What judges consider at bail', 'Community ties', 'Employment and housing', 'Documentation checklist', 'Employer support letter', 'Character reference letter', 'Family support statement', 'Release on recognizance', 'Cash bail', 'Bail bond', 'Conditional release', 'Bail fund resources'],
       url: '/support/court-logistics/bail-preparation'
     },
     {
@@ -1180,6 +1219,7 @@ export function buildSearchIndex(): void {
       content: page.content,
       tags: page.tags,
       aliases: page.aliases,
+      headings: (page as { headings?: string[] }).headings,
       url: page.url,
     });
   }
@@ -1246,7 +1286,7 @@ export function search(query: SearchQuery): SearchResponse {
     glossary: 3,
     court: 2,
     mock_qa: 2,
-    charge: 6,
+    charge: 3,
   };
 
   // Group from ALL scored results so each category gets its best matches
@@ -1261,6 +1301,15 @@ export function search(query: SearchQuery): SearchResponse {
     if (groupedResults[type].length < limit) {
       groupedResults[type].push(result);
     }
+  }
+
+  // When there are 4 or more strong non-charge results, suppress charges entirely
+  // so the results feel like a helpful guide rather than a charge lookup table.
+  const nonChargeResultCount = ALL_TYPES
+    .filter(t => t !== 'charge' && t !== 'mock_qa')
+    .reduce((sum, t) => sum + groupedResults[t].length, 0);
+  if (nonChargeResultCount >= 4) {
+    groupedResults['charge'] = [];
   }
 
   // Sort non-pinned sections by their top result score so the most relevant

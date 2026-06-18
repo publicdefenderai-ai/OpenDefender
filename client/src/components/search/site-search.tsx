@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Search, X, Loader2, FileText, Scale, BookOpen, Building, AlertCircle, HelpCircle, Shield, Briefcase } from "lucide-react";
+import { Search, X, Loader2, FileText, Scale, BookOpen, Building, HelpCircle, Shield, Briefcase } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import type { SearchResponse, SearchResult, SearchContentType } from "@shared/search-types";
-import { CONTENT_TYPE_LABELS } from "@shared/search-types";
 
 interface SiteSearchProps {
   open: boolean;
@@ -38,13 +37,11 @@ const TYPE_COLORS: Record<SearchContentType, string> = {
   charge: 'bg-rose-500/10 text-rose-600 dark:text-rose-400',
 };
 
-// Stable fallback type order — actual display order is score-driven (see sections build below)
 const ALL_TYPES: SearchContentType[] = [
   'rights_info', 'legal_resource', 'expungement', 'diversion_program',
   'glossary', 'court', 'mock_qa', 'charge',
 ];
 
-// These types always appear last regardless of score
 const PINNED_LAST = new Set<SearchContentType>(['charge', 'mock_qa']);
 
 const SECTION_LABELS: Record<SearchContentType, { en: string; es: string; zh: string }> = {
@@ -58,17 +55,59 @@ const SECTION_LABELS: Record<SearchContentType, { en: string; es: string; zh: st
   charge:            { en: 'Criminal Charges', es: 'Cargos Criminales', zh: '刑事指控' },
 };
 
+const POPULAR_SEARCHES: Record<'en' | 'es' | 'zh', string[]> = {
+  en: ['bail', 'expungement', 'miranda rights', 'housing', 'right to attorney', 'DUI', 'fines'],
+  es: ['fianza', 'eliminación de antecedentes', 'derechos miranda', 'vivienda', 'derecho a abogado', 'multas'],
+  zh: ['保释', '消除记录', '米兰达权利', '住房', '律师权利', '罚款'],
+};
+
+function escapeRegex(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function highlightSnippet(snippet: string, matchedTerms: string[]): React.ReactNode[] {
+  const clean = matchedTerms
+    .map(t => t.toLowerCase().replace(/[^\w\s]/g, ' ').trim())
+    .filter(t => t.length >= 2)
+    .sort((a, b) => b.length - a.length);
+
+  if (!clean.length) return [snippet];
+
+  const pattern = new RegExp(
+    `(${clean.map(t => escapeRegex(t)).join('|')})`,
+    'gi'
+  );
+  const parts = snippet.split(pattern);
+
+  return parts.map((part, i) => {
+    if (i % 2 === 1) {
+      return (
+        <mark
+          key={i}
+          className="bg-yellow-200/70 dark:bg-yellow-700/40 text-foreground rounded-sm px-0.5 not-italic font-medium"
+        >
+          {part}
+        </mark>
+      );
+    }
+    return part || null;
+  });
+}
+
 export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
-  const { t, i18n } = useTranslation();
+  const { t: _t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
+  const [focusedIndex, setFocusedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
-  const language = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
+  const resultRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const language: 'en' | 'es' | 'zh' = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(query);
+      setFocusedIndex(-1);
     }, 300);
     return () => clearTimeout(timer);
   }, [query]);
@@ -76,6 +115,10 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
   useEffect(() => {
     if (open && inputRef.current) {
       setTimeout(() => inputRef.current?.focus(), 100);
+    }
+    if (!open) {
+      setQuery("");
+      setFocusedIndex(-1);
     }
   }, [open]);
 
@@ -97,19 +140,11 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     setLocation(url);
   }, [onOpenChange, setLocation]);
 
-  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      onOpenChange(false);
-    }
-  }, [onOpenChange]);
-
   const getSectionLabel = (type: SearchContentType) => {
     const labels = SECTION_LABELS[type];
     return language === 'es' ? labels.es : language === 'zh' ? labels.zh : labels.en;
   };
 
-  // Build sections ordered by each group's top result score — most relevant section first.
-  // Charges and court-prep are always pinned last so the app never feels like a charge lookup tool.
   const sections: Array<{ type: SearchContentType; results: SearchResult[] }> = [];
   if (data?.groupedResults) {
     const mainTypes = ALL_TYPES
@@ -121,8 +156,54 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     }
   }
 
+  const flatResults = sections.flatMap(s => s.results);
+  const totalFlat = flatResults.length;
+
+  const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      if (focusedIndex >= 0) {
+        setFocusedIndex(-1);
+        inputRef.current?.focus();
+      } else {
+        onOpenChange(false);
+      }
+      return;
+    }
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      const next = Math.min(focusedIndex + 1, totalFlat - 1);
+      setFocusedIndex(next);
+      resultRefs.current[next]?.scrollIntoView({ block: 'nearest' });
+      resultRefs.current[next]?.focus();
+      return;
+    }
+    if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (focusedIndex <= 0) {
+        setFocusedIndex(-1);
+        inputRef.current?.focus();
+      } else {
+        const prev = focusedIndex - 1;
+        setFocusedIndex(prev);
+        resultRefs.current[prev]?.scrollIntoView({ block: 'nearest' });
+        resultRefs.current[prev]?.focus();
+      }
+      return;
+    }
+    if (e.key === 'Enter' && focusedIndex >= 0) {
+      const result = flatResults[focusedIndex];
+      if (result) handleResultClick(result.document.url);
+    }
+  }, [focusedIndex, totalFlat, flatResults, handleResultClick, onOpenChange]);
+
+  useEffect(() => {
+    resultRefs.current = resultRefs.current.slice(0, totalFlat);
+  }, [totalFlat]);
+
   const hasResults = sections.length > 0;
   const showNoResults = debouncedQuery.length >= 2 && !isLoading && !hasResults;
+
+  let globalIdx = 0;
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -146,13 +227,18 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
               onKeyDown={handleKeyDown}
               className="pl-10 pr-10"
               autoComplete="off"
+              aria-label={language === 'es' ? 'Buscar' : language === 'zh' ? '搜索' : 'Search'}
+              aria-autocomplete="list"
+              aria-controls="search-results"
+              aria-activedescendant={focusedIndex >= 0 ? `search-result-${focusedIndex}` : undefined}
             />
             {query && (
               <Button
                 variant="ghost"
                 size="sm"
                 className="absolute right-1 top-1/2 -translate-y-1/2 h-7 w-7 p-0"
-                onClick={() => setQuery("")}
+                onClick={() => { setQuery(""); setFocusedIndex(-1); inputRef.current?.focus(); }}
+                tabIndex={-1}
               >
                 <X className="h-4 w-4" />
               </Button>
@@ -220,7 +306,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                 </p>
               </div>
 
-              <div className="px-4 pb-4 space-y-5">
+              <div id="search-results" role="listbox" className="px-4 pb-4 space-y-5">
                 {sections.map(({ type, results }, sectionIdx) => {
                   const Icon = TYPE_ICONS[type];
                   const colorClass = TYPE_COLORS[type];
@@ -228,7 +314,6 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 
                   return (
                     <div key={type}>
-                      {/* Section divider before charges */}
                       {isCharges && sectionIdx > 0 && (
                         <div className="flex items-center gap-2 mb-3 -mx-4 px-4 border-t pt-4">
                           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
@@ -238,7 +323,6 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                         </div>
                       )}
 
-                      {/* Section heading */}
                       <div className="flex items-center gap-2 mb-2">
                         <div className={`p-1 rounded ${colorClass}`}>
                           <Icon className="h-3 w-3" />
@@ -251,9 +335,11 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                         </span>
                       </div>
 
-                      {/* Results in this section */}
                       <div className="space-y-1">
                         {results.map((result) => {
+                          const myIdx = globalIdx++;
+                          const isFocused = myIdx === focusedIndex;
+
                           const title =
                             language === 'zh' && result.document.titleZh
                               ? result.document.titleZh
@@ -261,11 +347,27 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                               ? result.document.titleEs
                               : result.document.title;
 
+                          const snippet = result.highlights[0]?.snippet ?? '';
+
                           return (
                             <button
                               key={result.document.id}
+                              id={`search-result-${myIdx}`}
+                              role="option"
+                              aria-selected={isFocused}
+                              ref={el => { resultRefs.current[myIdx] = el; }}
                               onClick={() => handleResultClick(result.document.url)}
-                              className="w-full text-left px-3 py-2.5 rounded-lg hover:bg-accent transition-colors border border-transparent hover:border-border"
+                              onFocus={() => setFocusedIndex(myIdx)}
+                              onKeyDown={(e) => {
+                                if (e.key === 'Enter') handleResultClick(result.document.url);
+                                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') handleKeyDown(e);
+                                if (e.key === 'Escape') { setFocusedIndex(-1); inputRef.current?.focus(); }
+                              }}
+                              className={`w-full text-left px-3 py-2.5 rounded-lg transition-colors border ${
+                                isFocused
+                                  ? 'bg-accent border-border ring-1 ring-ring/30'
+                                  : 'border-transparent hover:bg-accent hover:border-border'
+                              }`}
                             >
                               <div className="flex items-start gap-2.5">
                                 <div className={`mt-0.5 p-1 rounded shrink-0 ${colorClass}`}>
@@ -282,9 +384,9 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                                       </Badge>
                                     )}
                                   </div>
-                                  {result.highlights[0] && (
+                                  {snippet && (
                                     <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
-                                      {result.highlights[0].snippet}
+                                      {highlightSnippet(snippet, result.matchedTerms)}
                                     </p>
                                   )}
                                 </div>
@@ -314,7 +416,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                 {language === 'es' ? 'Búsquedas populares:' : language === 'zh' ? '热门搜索：' : 'Popular searches:'}
               </div>
               <div className="flex flex-wrap gap-1.5 justify-center">
-                {['bail', 'property', 'expungement', 'miranda rights', 'housing', 'fines', 'DUI'].map((term) => (
+                {POPULAR_SEARCHES[language].map((term) => (
                   <Button
                     key={term}
                     variant="outline"
@@ -332,7 +434,11 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 
         <div className="p-3 border-t text-xs text-muted-foreground flex items-center justify-between">
           <span>
-            {language === 'es' ? 'Presione ESC para cerrar' : language === 'zh' ? '按ESC关闭' : 'Press ESC to close'}
+            {language === 'es'
+              ? 'Flechas para navegar · ESC para cerrar'
+              : language === 'zh'
+              ? '方向键导航 · ESC关闭'
+              : 'Arrow keys to navigate · ESC to close'}
           </span>
           <span>
             {language === 'es' ? 'Solo resultados del sitio' : language === 'zh' ? '仅限站内内容' : 'Site content only'}
