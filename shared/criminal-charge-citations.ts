@@ -1911,6 +1911,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.72",
+    instructionRef: "CRIMJIG 17.20",
   },
   "mn-resisting-arrest": {
     citation: "Minn. Stat. § 609.50",
@@ -1918,6 +1919,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.50",
+    instructionRef: "CRIMJIG 13.01",
   },
   "mn-failure-to-appear": {
     citation: "Minn. Stat. § 609.49",
@@ -1925,6 +1927,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "MN Sentencing Guidelines Aug 2025 — corrected from § 609.491 (failure to comply with intermediate sanctions) to § 609.49 (Bail Jumping / failure to appear in court)",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.49",
+    instructionRef: "CRIMJIG 13.10",
   },
   "mn-petty-theft": {
     citation: "Minn. Stat. § 609.52",
@@ -1932,6 +1935,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Minnesota Statutes (2024) — revisor.mn.gov",
     sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.52",
+    instructionRef: "CRIMJIG 16.01",
   },
 
   // — Missouri —
@@ -3370,6 +3374,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 42.01",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.42.htm#42.01",
+    instructionRef: "TPJC 42.01",
   },
   "tx-trespassing": {
     citation: "Tex. Penal Code § 30.05",
@@ -3377,6 +3382,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Justia Texas Code — Tex. Penal Code § 30.05 Criminal trespass",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.30.htm",
+    instructionRef: "TPJC 30.05",
   },
   "tx-public-intoxication": {
     citation: "Tex. Penal Code § 49.02",
@@ -3384,6 +3390,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 49.02",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.49.htm#49.02",
+    instructionRef: "TPJC 49.02",
   },
   "tx-public-intoxication-misdemeanor": {
     citation: "Tex. Penal Code § 49.02",
@@ -3391,6 +3398,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Justia Texas Code — Tex. Penal Code § 49.02 Public intoxication (Class C misdemeanor)",
     sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm",
+    instructionRef: "TPJC 49.02",
   },
   "tx-petty-theft": {
     citation: "Tex. Penal Code § 31.03",
@@ -3398,6 +3406,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 31.03",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.31.htm#31.03",
+    instructionRef: "TPJC 31.03",
   },
   "tx-resisting-arrest": {
     citation: "Tex. Penal Code § 38.03",
@@ -3405,6 +3414,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 38.03",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.03",
+    instructionRef: "TPJC 38.03",
   },
   "tx-failure-to-appear": {
     citation: "Tex. Penal Code § 38.10",
@@ -3412,6 +3422,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-06",
     source: "Texas Legislature (tcss.legis.texas.gov) — Tex. Penal Code § 38.10",
     sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.38.htm#38.10",
+    instructionRef: "TPJC 38.10",
   },
   "tx-dui-first-offense": {
     citation: "Tex. Penal Code § 49.04",
