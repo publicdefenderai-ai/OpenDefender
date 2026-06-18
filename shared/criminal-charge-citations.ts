@@ -71,6 +71,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Alabama Judicial System jury instructions and Justia Alabama Code Title 13A Chapter 6 Article 1",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-2/",
+    instructionRef: "APJI-Crim. 15.01",
   },
   "al-felony-murder": {
     citation: "Ala. Code § 13A-6-2(a)(3)",
@@ -78,6 +79,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Alabama Judicial System document for § 13A-6-2(a)(3) Murder (Felony Murder)",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-2/",
+    instructionRef: "APJI-Crim. 15.02",
   },
   "al-voluntary-manslaughter": {
     citation: "Ala. Code § 13A-6-3",
@@ -85,6 +87,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Alabama Judicial System and Justia — § 13A-6-3 Manslaughter includes heat-of-passion killing",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-3/",
+    instructionRef: "APJI-Crim. 15.03",
   },
   "al-involuntary-manslaughter": {
     citation: "Ala. Code § 13A-6-3",
@@ -92,6 +95,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Justia Alabama Code — § 13A-6-3 Manslaughter includes reckless killing",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-3/",
+    instructionRef: "APJI-Crim. 15.03",
   },
   "al-criminally-negligent-homicide": {
     citation: "Ala. Code § 13A-6-4",
@@ -99,6 +103,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Alabama Judicial System document and Justia — § 13A-6-4 Criminally Negligent Homicide",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-4/",
+    instructionRef: "APJI-Crim. 15.04",
   },
   "al-trespassing": {
     citation: "Ala. Code § 13A-7-2",
@@ -571,6 +576,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-393/",
+    instructionRef: "GPJI §40-6-393",
   },
   "ga-trespassing": {
     citation: "O.C.G.A. § 16-7-21",
@@ -873,6 +879,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-10/",
+    instructionRef: "SC Req. to Charge Crim. § 2-1",
   },
   "sc-attempted-murder": {
     citation: "S.C. Code Ann. § 16-3-29",
@@ -880,6 +887,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-29/",
+    instructionRef: "SC Req. to Charge Crim. § 2-30",
   },
   "sc-voluntary-manslaughter": {
     citation: "S.C. Code Ann. § 16-3-50",
@@ -887,6 +895,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-50/",
+    instructionRef: "SC Req. to Charge Crim. § 2-10",
   },
   "sc-involuntary-manslaughter": {
     citation: "S.C. Code Ann. § 16-3-60",
@@ -894,6 +903,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-60/",
+    instructionRef: "SC Req. to Charge Crim. § 2-20",
   },
   "sc-trespassing": {
     citation: "S.C. Code Ann. § 16-11-620",
@@ -4125,6 +4135,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/",
+    instructionRef: "APJI-Crim. 28.01",
   },
   "ak-dui-first-offense": {
     citation: "Alaska Stat. § 28.35.030",
@@ -4423,6 +4434,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2930/",
+    instructionRef: "SC Req. to Charge Crim. § 28-1",
   },
   "sd-dui-first-offense": {
     citation: "S.D. Codified Laws § 32-23-1",
@@ -4508,6 +4520,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Alabama Sentencing Commission 2024 — corrected from § 13A-6-21 (Assault 2nd Degree, Class C felony) to § 13A-6-20 (Assault 1st Degree, Class B felony; the appropriate AL analog for aggravated assault)",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/",
+    instructionRef: "APJI-Crim. 13.01",
   },
   "ak-aggravated-assault": {
     citation: "Alaska Stat. § 11.41.200",
@@ -4804,6 +4817,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/",
+    instructionRef: "SC Req. to Charge Crim. § 4-1",
   },
   "sd-aggravated-assault": {
     citation: "S.D. Codified Laws § 22-18-1.1",
@@ -4902,6 +4916,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-130/",
+    instructionRef: "APJI-Crim. 13.05",
   },
   "ak-domestic-violence-assault": {
     citation: "Alaska Stat. § 11.41.230",
@@ -5146,6 +5161,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-25-20/",
+    instructionRef: "SC Req. to Charge Crim. § 4-20",
   },
   "sd-domestic-violence-assault": {
     citation: "S.D. Codified Laws § 25-10-1",
@@ -5239,6 +5255,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama robbery in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-8-41/",
+    instructionRef: "APJI-Crim. 16.01",
   },
   "ak-robbery-in-the-first-degree": {
     citation: "Alaska Stat. § 11.41.500",
@@ -5523,6 +5540,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina armed robbery; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-11-330/",
+    instructionRef: "SC Req. to Charge Crim. § 5-1",
   },
   "sd-robbery-in-the-first-degree": {
     citation: "S.D. Codified Laws § 22-30-1",
@@ -5621,6 +5639,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama robbery in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-8-42/",
+    instructionRef: "APJI-Crim. 16.02",
   },
   "ak-robbery-in-the-second-degree": {
     citation: "Alaska Stat. § 11.41.510",
@@ -5904,6 +5923,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina strong-arm robbery (unarmed); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-11-325/",
+    instructionRef: "SC Req. to Charge Crim. § 5-2",
   },
   "sd-robbery-in-the-second-degree": {
     citation: "S.D. Codified Laws § 22-30-7",
@@ -6002,6 +6022,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama burglary first degree (dwelling + person/weapon); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-7-5/",
+    instructionRef: "APJI-Crim. 17.01",
   },
   "ak-burglary-in-the-first-degree": {
     citation: "Alaska Stat. § 11.46.300",
@@ -6294,6 +6315,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-11-311/",
+    instructionRef: "SC Req. to Charge Crim. § 5-6",
   },
   "sd-burglary-in-the-first-degree": {
     citation: "S.D. Codified Laws § 22-32-1",
@@ -6392,6 +6414,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama burglary second degree (dwelling); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-7-6/",
+    instructionRef: "APJI-Crim. 17.02",
   },
   "ak-burglary-in-the-second-degree": {
     citation: "Alaska Stat. § 11.46.310",
@@ -6690,6 +6713,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-11-312/",
+    instructionRef: "SC Req. to Charge Crim. § 5-7",
   },
   "sd-burglary-in-the-second-degree": {
     citation: "S.D. Codified Laws § 22-32-3",
@@ -8608,6 +8632,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-61/",
+    instructionRef: "APJI-Crim. 21.01",
   },
   "ak-rape-in-the-first-degree": {
     citation: "Alaska Stat. § 11.41.410",
@@ -8905,6 +8930,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-652/",
+    instructionRef: "SC Req. to Charge Crim. § 6-1",
   },
   "sd-rape-in-the-first-degree": {
     citation: "S.D. Codified Laws § 22-22-1",
@@ -9723,6 +9749,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-231/",
+    instructionRef: "APJI-Crim. 26.01",
   },
   "al-possession-with-intent-to-distribute": {
     citation: "Ala. Code § 13A-12-211",
@@ -10325,6 +10352,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-44-53-375/",
+    instructionRef: "SC Req. to Charge Crim. § 26-10",
   },
   "sc-possession-with-intent-to-distribute": {
     citation: "S.C. Code Ann. § 44-53-370(a)(1)",
@@ -11212,6 +11240,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Alabama Sentencing Commission 2024 — corrected from § 13A-6-3 (Manslaughter, a distinct offense) to § 13A-6-2 (Murder; Alabama does not distinguish murder degrees — § 13A-6-2 covers all intentional murder)",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-2/",
+    instructionRef: "APJI-Crim. 15.01",
   },
   "ga-murder-in-the-second-degree": {
     citation: "Ga. Code Ann. § 16-5-1(b)",
@@ -11250,6 +11279,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-10/",
+    instructionRef: "SC Req. to Charge Crim. § 2-1",
   },
 
   // voluntary-manslaughter — remaining states
@@ -12268,6 +12298,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Alabama burglary in the third degree (Class C felony); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/alabama/section-13a-7-7/",
+    instructionRef: "APJI-Crim. 17.03",
   },
   "az-burglary-in-the-third-degree": {
     citation: "Ariz. Rev. Stat. § 13-1506",
@@ -12329,6 +12360,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — South Carolina burglary in the third degree (felony); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-11-312/",
+    instructionRef: "SC Req. to Charge Crim. § 5-8",
   },
 
   // ── BATCH 26: resisting-arrest, failure-to-appear, possession-marijuana remaining states ──
@@ -12946,7 +12978,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   // ── BATCH 28: DUI second offense, DUI third offense — all states ──
 
-  "al-dui-second-offense": { citation: "Ala. Code § 32-5A-191(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/" },
+  "al-dui-second-offense": { citation: "Ala. Code § 32-5A-191(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/", instructionRef: "APJI-Crim. 28.01" },
   "ak-dui-second-offense": { citation: "Alaska Stat. § 28.35.030(b)(1)(B)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-28-35-030/" },
   "az-dui-second-offense": { citation: "Ariz. Rev. Stat. § 28-1381(J)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/arizona/section-28-1381/" },
   "ar-dui-second-offense": { citation: "Ark. Code Ann. § 5-65-103(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-65-103/" },
@@ -12958,7 +12990,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "de-dui-second-offense": { citation: "Del. Code Ann. tit. 21, § 4177(d)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-4177/" },
   "dc-dui-second-offense": { citation: "D.C. Code § 50-2206.11(b)", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11", instructionRef: "DC Redbook § 3.100", instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions" },
   "fl-dui-second-offense": { citation: "Fla. Stat. § 316.193(2)(a)", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/316.193" },
-  "ga-dui-second-offense": { citation: "Ga. Code Ann. § 40-6-391(c)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/" },
+  "ga-dui-second-offense": { citation: "Ga. Code Ann. § 40-6-391(c)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/", instructionRef: "GPJI §40-6-391" },
   "hi-dui-second-offense": { citation: "Haw. Rev. Stat. § 291E-61(b)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-291e-61/" },
   "id-dui-second-offense": { citation: "Idaho Code § 18-8004(4)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-8004/" },
   "il-dui-second-offense": { citation: "625 Ill. Comp. Stat. 5/11-501(d)(1)(A)", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/062500050K11-501.htm", instructionRef: "IPI-CR 23.29", instructionUrl: "https://www.illinoiscourts.gov/resources/ff86413d-67ea-47ab-8732-f84d40f31119/file" },
@@ -12988,7 +13020,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "or-dui-second-offense": { citation: "Or. Rev. Stat. § 813.010(5)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors813.html" },
   "pa-dui-second-offense": { citation: "75 Pa. Cons. Stat. § 3804(a)(2)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/pennsylvania/section-3804/", instructionRef: "Pa. SSJI (Crim.) 73.3802" },
   "ri-dui-second-offense": { citation: "R.I. Gen. Laws § 31-27-2(d)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-31-27-2/" },
-  "sc-dui-second-offense": { citation: "S.C. Code Ann. § 56-5-2933(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina DUI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2933/" },
+  "sc-dui-second-offense": { citation: "S.C. Code Ann. § 56-5-2933(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina DUI second offense; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2933/", instructionRef: "SC Req. to Charge Crim. § 28-1" },
   "sd-dui-second-offense": { citation: "S.D. Codified Laws § 32-23-2.1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-32-23-2-1/" },
   "tn-dui-second-offense": { citation: "Tenn. Code Ann. § 55-10-403(a)(1)(B)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-55-10-403/", instructionRef: "TPI-Crim. 34.01" },
   "tx-dui-second-offense": { citation: "Tex. Penal Code § 49.04(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm", instructionRef: "TPJC 49.04" },
@@ -13005,7 +13037,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "pr-dui-second-offense": { citation: "P.R. Laws Ann. tit. 9, § 5141(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Puerto Rico DUI second offense; territory code — verify manually" },
   "vi-dui-second-offense": { citation: "V.I. Code Ann. tit. 20, § 495(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — U.S. Virgin Islands DUI second offense; territory code — verify manually" },
 
-  "al-dui-third-offense": { citation: "Ala. Code § 32-5A-191(c)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/" },
+  "al-dui-third-offense": { citation: "Ala. Code § 32-5A-191(c)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/", instructionRef: "APJI-Crim. 28.01" },
   "ak-dui-third-offense": { citation: "Alaska Stat. § 28.35.030(n)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-28-35-030/" },
   "az-dui-third-offense": { citation: "Ariz. Rev. Stat. § 28-1383(A)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/arizona/section-28-1383/" },
   "ar-dui-third-offense": { citation: "Ark. Code Ann. § 5-65-103(c)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-65-103/" },
@@ -13017,7 +13049,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "de-dui-third-offense": { citation: "Del. Code Ann. tit. 21, § 4177(d)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-4177/" },
   "dc-dui-third-offense": { citation: "D.C. Code § 50-2206.11(c)", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-2206-11", instructionRef: "DC Redbook § 3.100", instructionUrl: "https://www.dccourts.gov/superior-court/criminal-division/dc-criminal-jury-instructions" },
   "fl-dui-third-offense": { citation: "Fla. Stat. § 316.193(2)(b)1", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/316.193" },
-  "ga-dui-third-offense": { citation: "Ga. Code Ann. § 40-6-391(c)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/" },
+  "ga-dui-third-offense": { citation: "Ga. Code Ann. § 40-6-391(c)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/", instructionRef: "GPJI §40-6-391" },
   "hi-dui-third-offense": { citation: "Haw. Rev. Stat. § 291E-61(b)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-291e-61/" },
   "id-dui-third-offense": { citation: "Idaho Code § 18-8005(5)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-8005/" },
   "il-dui-third-offense": { citation: "625 Ill. Comp. Stat. 5/11-501(d)(2)(A)", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/062500050K11-501.htm", instructionRef: "IPI-CR 23.29", instructionUrl: "https://www.illinoiscourts.gov/resources/ff86413d-67ea-47ab-8732-f84d40f31119/file" },
@@ -13047,7 +13079,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "or-dui-third-offense": { citation: "Or. Rev. Stat. § 813.010(6)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors813.html" },
   "pa-dui-third-offense": { citation: "75 Pa. Cons. Stat. § 3804(a)(3)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/pennsylvania/section-3804/", instructionRef: "Pa. SSJI (Crim.) 73.3802" },
   "ri-dui-third-offense": { citation: "R.I. Gen. Laws § 31-27-2(d)(3)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-31-27-2/" },
-  "sc-dui-third-offense": { citation: "S.C. Code Ann. § 56-5-2933(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2933/" },
+  "sc-dui-third-offense": { citation: "S.C. Code Ann. § 56-5-2933(c)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2933/", instructionRef: "SC Req. to Charge Crim. § 28-1" },
   "sd-dui-third-offense": { citation: "S.D. Codified Laws § 32-23-4", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-32-23-4/" },
   "tn-dui-third-offense": { citation: "Tenn. Code Ann. § 55-10-403(a)(1)(C)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-55-10-403/", instructionRef: "TPI-Crim. 34.01" },
   "tx-dui-third-offense": { citation: "Tex. Penal Code § 49.09(b)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://statutes.capitol.texas.gov/Docs/PE/htm/PE.49.htm", instructionRef: "TPJC 49.09" },
@@ -14536,14 +14568,14 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   // ── Batch 34: Assault in the First Degree — all 50 states + DC + territories ──
   // Note: Some states use different nomenclature (Aggravated Assault, Aggravated Battery, etc.)
   // for their most serious non-fatal assault charge; the equivalent statute is cited below.
-  "al-assault-in-the-first-degree": { citation: "Ala. Code § 13A-6-20", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/" },
+  "al-assault-in-the-first-degree": { citation: "Ala. Code § 13A-6-20", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/", instructionRef: "APJI-Crim. 13.01" },
   "ak-assault-in-the-first-degree": { citation: "Alaska Stat. § 11.41.200", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-200/" },
   "az-assault-in-the-first-degree": { citation: "A.R.S. § 13-1204(A)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona aggravated assault (equivalent to first degree)", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1204/" },
   "ar-assault-in-the-first-degree": { citation: "Ark. Code Ann. § 5-13-201", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/arkansas/section-5-13-201/" },
   "co-assault-in-the-first-degree": { citation: "Colo. Rev. Stat. § 18-3-202", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-202/" },
   "ct-assault-in-the-first-degree": { citation: "Conn. Gen. Stat. § 53a-59", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-59/" },
   "de-assault-in-the-first-degree": { citation: "11 Del. C. § 613", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware assault first degree", sourceUrl: "https://law.justia.com/codes/delaware/section-613/" },
-  "ga-assault-in-the-first-degree": { citation: "O.C.G.A. § 16-5-21", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-21/" },
+  "ga-assault-in-the-first-degree": { citation: "O.C.G.A. § 16-5-21", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-21/", instructionRef: "GPJI §16-5-21" },
   "hi-assault-in-the-first-degree": { citation: "Haw. Rev. Stat. § 707-710", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-710/" },
   "id-assault-in-the-first-degree": { citation: "Idaho Code § 18-907", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-907/" },
   "il-assault-in-the-first-degree": { citation: "720 ILCS 5/12-3.05", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov; Aggravated Battery", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-3.05.htm", instructionRef: "IPI-CR 11.65", instructionUrl: "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file" },
@@ -14570,7 +14602,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-assault-in-the-first-degree": { citation: "Okla. Stat. tit. 21, § 645", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-645/" },
   "or-assault-in-the-first-degree": { citation: "Or. Rev. Stat. § 163.185", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html" },
   "ri-assault-in-the-first-degree": { citation: "R.I. Gen. Laws § 11-5-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-5-1/" },
-  "sc-assault-in-the-first-degree": { citation: "S.C. Code Ann. § 16-3-600(B)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/" },
+  "sc-assault-in-the-first-degree": { citation: "S.C. Code Ann. § 16-3-600(B)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/", instructionRef: "SC Req. to Charge Crim. § 4-1" },
   "sd-assault-in-the-first-degree": { citation: "S.D. Codified Laws § 22-18-1.1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-18-1-1/" },
   "tn-assault-in-the-first-degree": { citation: "Tenn. Code Ann. § 39-13-102", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-102/", instructionRef: "TPI-Crim. 7.21" },
   "ut-assault-in-the-first-degree": { citation: "Utah Code Ann. § 76-5-103", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-5-103/" },
@@ -14588,7 +14620,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "vi-assault-in-the-first-degree": { citation: "14 V.I.C. § 295", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
 
   // ── Batch 34 cont.: Assault with Deadly Weapon — all 52 applicable states + territories ──
-  "al-assault-with-deadly-weapon": { citation: "Ala. Code § 13A-6-20(a)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/" },
+  "al-assault-with-deadly-weapon": { citation: "Ala. Code § 13A-6-20(a)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/", instructionRef: "APJI-Crim. 13.01" },
   "ak-assault-with-deadly-weapon": { citation: "Alaska Stat. § 11.41.210(a)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-210/" },
   "ca-assault-with-deadly-weapon": { citation: "Cal. Penal Code § 245(a)(1)", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 245 (Stats. 2014); CALCRIM 875", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=245.", instructionRef: "CALCRIM 875" },
   "az-assault-with-deadly-weapon": { citation: "A.R.S. § 13-1204(A)(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona aggravated assault with deadly weapon", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1204/" },
@@ -14596,7 +14628,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-assault-with-deadly-weapon": { citation: "Colo. Rev. Stat. § 18-3-202(1)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-202/" },
   "ct-assault-with-deadly-weapon": { citation: "Conn. Gen. Stat. § 53a-59(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-59/" },
   "de-assault-with-deadly-weapon": { citation: "11 Del. C. § 613(a)(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware assault first degree with deadly weapon", sourceUrl: "https://law.justia.com/codes/delaware/section-613/" },
-  "ga-assault-with-deadly-weapon": { citation: "O.C.G.A. § 16-5-21(a)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-21/" },
+  "ga-assault-with-deadly-weapon": { citation: "O.C.G.A. § 16-5-21(a)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-21/", instructionRef: "GPJI §16-5-21" },
   "hi-assault-with-deadly-weapon": { citation: "Haw. Rev. Stat. § 707-711(1)(d)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-711/" },
   "id-assault-with-deadly-weapon": { citation: "Idaho Code § 18-905(a)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-905/" },
   "in-assault-with-deadly-weapon": { citation: "Ind. Code § 35-42-2-1(c)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/indiana/section-35-42-2-1/", instructionRef: "Ind. Model Crim. Jury Instr. 1.2010", instructionUrl: "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/" },
@@ -14624,7 +14656,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-assault-with-deadly-weapon": { citation: "Okla. Stat. tit. 21, § 645", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-645/" },
   "or-assault-with-deadly-weapon": { citation: "Or. Rev. Stat. § 163.185(1)(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html" },
   "ri-assault-with-deadly-weapon": { citation: "R.I. Gen. Laws § 11-5-2", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-5-2/" },
-  "sc-assault-with-deadly-weapon": { citation: "S.C. Code Ann. § 16-3-600(E)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/" },
+  "sc-assault-with-deadly-weapon": { citation: "S.C. Code Ann. § 16-3-600(E)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/", instructionRef: "SC Req. to Charge Crim. § 4-4" },
   "sd-assault-with-deadly-weapon": { citation: "S.D. Codified Laws § 22-18-1.1(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-18-1-1/" },
   "tn-assault-with-deadly-weapon": { citation: "Tenn. Code Ann. § 39-13-102(a)(1)(A)(iii)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-102/", instructionRef: "TPI-Crim. 7.21" },
   "ut-assault-with-deadly-weapon": { citation: "Utah Code Ann. § 76-5-103(1)(a)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-5-103/" },
@@ -14643,7 +14675,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   // ── Batch 35: Assault in the Second Degree — all 51 states + DC + territories ──
   // Note: States without a formal degree system use the equivalent moderate assault statute.
-  "al-assault-in-the-second-degree": { citation: "Ala. Code § 13A-6-21", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-21/" },
+  "al-assault-in-the-second-degree": { citation: "Ala. Code § 13A-6-21", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-21/", instructionRef: "APJI-Crim. 13.02" },
   "ak-assault-in-the-second-degree": { citation: "Alaska Stat. § 11.41.210", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-210/" },
   "ca-assault-in-the-second-degree": { citation: "Cal. Penal Code § 243", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 243 battery (Stats. 2023); CALCRIM 960", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=243.", instructionRef: "CALCRIM 960" },
   "az-assault-in-the-second-degree": { citation: "A.R.S. § 13-1203(A)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona assault (second degree level; AZ uses single assault statute with enhancements)", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1203/" },
@@ -14651,7 +14683,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-assault-in-the-second-degree": { citation: "Colo. Rev. Stat. § 18-3-203", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-203/" },
   "ct-assault-in-the-second-degree": { citation: "Conn. Gen. Stat. § 53a-60", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-60/" },
   "de-assault-in-the-second-degree": { citation: "11 Del. C. § 612", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware assault second degree", sourceUrl: "https://law.justia.com/codes/delaware/section-612/" },
-  "ga-assault-in-the-second-degree": { citation: "O.C.G.A. § 16-5-20", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-20/" },
+  "ga-assault-in-the-second-degree": { citation: "O.C.G.A. § 16-5-20", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-20/", instructionRef: "GPJI §16-5-20" },
   "hi-assault-in-the-second-degree": { citation: "Haw. Rev. Stat. § 707-711", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-711/" },
   "id-assault-in-the-second-degree": { citation: "Idaho Code § 18-901", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-901/" },
   "il-assault-in-the-second-degree": { citation: "720 ILCS 5/12-3", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov; Battery", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-3.htm", instructionRef: "IPI-CR 11.12", instructionUrl: "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file" },
@@ -14678,7 +14710,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-assault-in-the-second-degree": { citation: "Okla. Stat. tit. 21, § 644(B)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/" },
   "or-assault-in-the-second-degree": { citation: "Or. Rev. Stat. § 163.175", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html" },
   "ri-assault-in-the-second-degree": { citation: "R.I. Gen. Laws § 11-5-3", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-5-3/" },
-  "sc-assault-in-the-second-degree": { citation: "S.C. Code Ann. § 16-3-600(C)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/" },
+  "sc-assault-in-the-second-degree": { citation: "S.C. Code Ann. § 16-3-600(C)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/", instructionRef: "SC Req. to Charge Crim. § 4-2" },
   "sd-assault-in-the-second-degree": { citation: "S.D. Codified Laws § 22-18-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-18-1/" },
   "tn-assault-in-the-second-degree": { citation: "Tenn. Code Ann. § 39-13-101", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-101/", instructionRef: "TPI-Crim. 7.22" },
   "ut-assault-in-the-second-degree": { citation: "Utah Code Ann. § 76-5-102", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-5-102/" },
@@ -14697,7 +14729,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   // ── Batch 35 cont.: Assault in the Third Degree — all 51 states + DC + territories ──
   // Third degree (simple/misdemeanor assault): threatening act, minor bodily harm.
-  "al-assault-in-the-third-degree": { citation: "Ala. Code § 13A-6-22", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-22/" },
+  "al-assault-in-the-third-degree": { citation: "Ala. Code § 13A-6-22", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-22/", instructionRef: "APJI-Crim. 13.03" },
   "ak-assault-in-the-third-degree": { citation: "Alaska Stat. § 11.41.220", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-220/" },
   "ca-assault-in-the-third-degree": { citation: "Cal. Penal Code § 240", confidence: "high", lastVerified: "2026-06", source: "California Legislature (leginfo) — Cal. Penal Code § 240 simple assault (Stats. 2023); CALCRIM 915", sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=240.", instructionRef: "CALCRIM 915" },
   "az-assault-in-the-third-degree": { citation: "A.R.S. § 13-1203(A)(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona assault (simple threatening act; third degree level)", sourceUrl: "https://law.justia.com/codes/arizona/section-13-1203/" },
@@ -14705,7 +14737,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-assault-in-the-third-degree": { citation: "Colo. Rev. Stat. § 18-3-204", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-204/" },
   "ct-assault-in-the-third-degree": { citation: "Conn. Gen. Stat. § 53a-61", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-61/" },
   "de-assault-in-the-third-degree": { citation: "11 Del. C. § 611", confidence: "medium", lastVerified: "2026-04", source: "Training data — Delaware assault third degree", sourceUrl: "https://law.justia.com/codes/delaware/section-611/" },
-  "ga-assault-in-the-third-degree": { citation: "O.C.G.A. § 16-5-20(a)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-20/" },
+  "ga-assault-in-the-third-degree": { citation: "O.C.G.A. § 16-5-20(a)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-20/", instructionRef: "GPJI §16-5-20" },
   "hi-assault-in-the-third-degree": { citation: "Haw. Rev. Stat. § 707-712", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-712/" },
   "id-assault-in-the-third-degree": { citation: "Idaho Code § 18-901", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-901/" },
   "il-assault-in-the-third-degree": { citation: "720 ILCS 5/12-1", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov; Assault", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-1.htm", instructionRef: "IPI-CR 11.01", instructionUrl: "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file" },
@@ -14732,7 +14764,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ok-assault-in-the-third-degree": { citation: "Okla. Stat. tit. 21, § 644(A)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/" },
   "or-assault-in-the-third-degree": { citation: "Or. Rev. Stat. § 163.165", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html" },
   "ri-assault-in-the-third-degree": { citation: "R.I. Gen. Laws § 11-5-3(a)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-5-3/" },
-  "sc-assault-in-the-third-degree": { citation: "S.C. Code Ann. § 16-3-600(D)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/" },
+  "sc-assault-in-the-third-degree": { citation: "S.C. Code Ann. § 16-3-600(D)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/", instructionRef: "SC Req. to Charge Crim. § 4-3" },
   "sd-assault-in-the-third-degree": { citation: "S.D. Codified Laws § 22-18-1(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-18-1/" },
   "tn-assault-in-the-third-degree": { citation: "Tenn. Code Ann. § 39-13-101(a)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-101/", instructionRef: "TPI-Crim. 7.22" },
   "ut-assault-in-the-third-degree": { citation: "Utah Code Ann. § 76-5-102(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-5-102/" },
@@ -18023,7 +18055,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nd-felony-murder": { citation: "N.D. Cent. Code § 12.1-16-01(1)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/north-dakota/section-12-1-16-01/" },
   "ok-felony-murder": { citation: "Okla. Stat. tit. 21, § 701.7(B)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-7/" },
   "ri-felony-murder": { citation: "R.I. Gen. Laws § 11-23-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-23-1/" },
-  "sc-felony-murder": { citation: "S.C. Code Ann. § 16-3-10", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-10/" },
+  "sc-felony-murder": { citation: "S.C. Code Ann. § 16-3-10", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-10/", instructionRef: "SC Req. to Charge Crim. § 2-1" },
   "sd-felony-murder": { citation: "S.D. Codified Laws § 22-16-4", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-16-4/" },
   "ut-felony-murder": { citation: "Utah Code Ann. § 76-5-203(1)(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/utah/section-76-5-203/" },
   "vt-felony-murder": { citation: "Vt. Stat. Ann. tit. 13, § 2301", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-2301/" },
@@ -18229,7 +18261,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "ny-robbery-in-the-third-degree": { citation: "N.Y. Penal Law § 160.05", confidence: "high", lastVerified: "2026-06", source: "Training data — New York robbery in the third degree", sourceUrl: "https://www.nysenate.gov/legislation/laws/PEN/160.05" },
   "or-robbery-in-the-third-degree": { citation: "Or. Rev. Stat. § 164.395", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon robbery in the third degree", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html" },
 
-  "al-dui": { citation: "Ala. Code § 32-5A-191(h)", confidence: "medium", lastVerified: "2026-04", source: "Alabama Sentencing Commission 2024 — corrected from § 32-5A-191 (general DUI, which is a misdemeanor on first offense) to § 32-5A-191(h) (Felony DUI; the specific subsection covering felony-level DUI under the Alabama sentencing standards)", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/" },
+  "al-dui": { citation: "Ala. Code § 32-5A-191(h)", confidence: "medium", lastVerified: "2026-04", source: "Alabama Sentencing Commission 2024 — corrected from § 32-5A-191 (general DUI, which is a misdemeanor on first offense) to § 32-5A-191(h) (Felony DUI; the specific subsection covering felony-level DUI under the Alabama sentencing standards)", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-191/", instructionRef: "APJI-Crim. 28.01" },
   "md-dui": { citation: "Md. Code Ann., Transp. § 21-902", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/maryland/section-21-902/" },
   "va-dui": { citation: "Va. Code Ann. § 18.2-266", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-266/" },
   "wa-dui": { citation: "Wash. Rev. Code § 46.61.502", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502" },
@@ -18395,7 +18427,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   "ga-theft-by-shoplifting": { citation: "Ga. Code Ann. § 16-8-14", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia theft by shoplifting", sourceUrl: "https://law.justia.com/codes/georgia/section-16-8-14/" },
   "ga-simple-battery": { citation: "Ga. Code Ann. § 16-5-23", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-23/" },
-  "ga-dui-less-safe": { citation: "Ga. Code Ann. § 40-6-391(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/" },
+  "ga-dui-less-safe": { citation: "Ga. Code Ann. § 40-6-391(a)(1)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/georgia/section-40-6-391/", instructionRef: "GPJI §40-6-391" },
   "ga-possession-marijuana-less-than-oz": { citation: "Ga. Code Ann. § 16-13-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia possession of marijuana less than 1 oz", sourceUrl: "https://law.justia.com/codes/georgia/section-16-13-2/" },
   "ga-family-violence-battery": { citation: "Ga. Code Ann. § 16-5-23.1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-23-1/" },
   "ga-obstruction-of-officer": { citation: "Ga. Code Ann. § 16-10-24", confidence: "medium", lastVerified: "2026-04", source: "Training data — Georgia obstruction of an officer", sourceUrl: "https://law.justia.com/codes/georgia/section-16-10-24/" },
