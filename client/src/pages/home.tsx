@@ -401,7 +401,7 @@ export default function Home() {
                 <div className="space-y-3">
                   {/* Interactive scenario cards */}
                   {([
-                    { key: "arrested" as const, icon: <AlertTriangle className="h-5 w-5 text-white" />, label: t("home.urgentHelp.scenario1Label"), sub: t("home.urgentHelp.scenario1Sub"), cardCls: "border-red-200 dark:border-red-900 bg-red-50/40 dark:bg-red-950/20 hover:border-red-400 dark:hover:border-red-600", iconBg: "bg-red-600", hoverCls: "group-hover:text-red-700 dark:group-hover:text-red-300" },
+                    { key: "arrested" as const, icon: <AlertTriangle className="h-5 w-5 text-white" />, label: t("home.urgentHelp.scenario1Label"), sub: t("home.urgentHelp.scenario1Sub"), cardCls: "border-red-200 dark:border-red-900 hover:border-red-400 dark:hover:border-red-600", iconBg: "bg-red-600", hoverCls: "group-hover:text-red-700 dark:group-hover:text-red-300" },
                     { key: "charged" as const, icon: <Scale className="h-5 w-5 text-white" />, label: t("home.urgentHelp.scenario2Label"), sub: t("home.urgentHelp.scenario2Sub"), cardCls: "hover:border-amber-400 dark:hover:border-amber-600", iconBg: "bg-amber-600", hoverCls: "group-hover:text-amber-700 dark:group-hover:text-amber-300" },
                     { key: "family" as const, icon: <Users className="h-5 w-5 text-white" />, label: t("home.urgentHelp.scenario3Label"), sub: t("home.urgentHelp.scenario3Sub"), cardCls: "hover:border-blue-400 dark:hover:border-blue-600", iconBg: "bg-blue-600", hoverCls: "group-hover:text-blue-700 dark:group-hover:text-blue-300" },
                   ] as const).map((s, i) => (
@@ -429,7 +429,7 @@ export default function Home() {
                   {/* Link-only scenario cards */}
                   {([
                     { href: "/first-24-hours#before-arrest", icon: <AlertTriangle className="h-5 w-5 text-white" />, label: t("home.urgentHelp.scenario4Label"), sub: t("home.urgentHelp.scenario4Sub"), cardCls: "border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500", iconBg: "bg-slate-600", hoverCls: "group-hover:text-slate-700 dark:group-hover:text-slate-300" },
-                    { href: "/immigration-guidance#rapid-response", icon: <Phone className="h-5 w-5 text-white" />, label: t("home.urgentHelp.scenario5Label"), sub: t("home.urgentHelp.scenario5Sub"), cardCls: "border-orange-200 dark:border-orange-900 bg-orange-50/40 dark:bg-orange-950/20 hover:border-orange-400 dark:hover:border-orange-600", iconBg: "bg-orange-600", hoverCls: "group-hover:text-orange-700 dark:group-hover:text-orange-300" },
+                    { href: "/immigration-guidance#rapid-response", icon: <Phone className="h-5 w-5 text-white" />, label: t("home.urgentHelp.scenario5Label"), sub: t("home.urgentHelp.scenario5Sub"), cardCls: "border-orange-200 dark:border-orange-900 hover:border-orange-400 dark:hover:border-orange-600", iconBg: "bg-orange-600", hoverCls: "group-hover:text-orange-700 dark:group-hover:text-orange-300" },
                   ] as const).map((s, i) => (
                     <motion.div
                       key={s.href}
