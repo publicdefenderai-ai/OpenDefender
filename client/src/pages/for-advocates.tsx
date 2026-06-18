@@ -15,8 +15,8 @@ import {
   Globe2,
   Gavel,
   ClipboardList,
-  Star,
-  Lock,
+  Award,
+  FileSearch,
 } from "lucide-react";
 import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
@@ -181,7 +181,7 @@ export default function ForAdvocates() {
           <ToolCard
             Icon={Gavel}
             title="Bail & Pretrial Release Preparation"
-            desc="Pretrial detention status is the single strongest predictor of case outcome — detained clients are more likely to accept unfavorable pleas regardless of the underlying facts. Preparation checklist, documentation guide, and jurisdiction-specific bail factors."
+            desc="Pretrial detention status is the single strongest predictor of case outcome. Detained clients are more likely to accept unfavorable pleas regardless of the underlying facts. Preparation checklist, documentation guide, and jurisdiction-specific bail factors."
             href="/support/court-logistics/bail-preparation"
             color="text-amber-600 dark:text-amber-400"
             bg="bg-amber-50 dark:bg-amber-900/10"
@@ -192,7 +192,7 @@ export default function ForAdvocates() {
           <ToolCard
             Icon={Scale}
             title="Diversion Programs"
-            desc="111 programs across all 50 states + DC + Federal. When a client is eligible, diversion is the upstream intervention that makes every other resource unnecessary — no conviction, no record, no collateral consequences. Filter by state, charge type, and program type."
+            desc="111 programs across all 50 states + DC + Federal. When a client is eligible, diversion is the upstream intervention that makes every other resource unnecessary, with no conviction, no record, and no collateral consequences. Filter by state, charge type, and program type."
             href="/diversion-programs"
             color="text-teal-600 dark:text-teal-400"
             bg="bg-teal-50 dark:bg-teal-900/10"
@@ -206,13 +206,13 @@ export default function ForAdvocates() {
         id="life-stabilization"
         label="Section 2"
         headline="Life Stabilization"
-        intro="Clients with stable housing, income, and family support show up to hearings, follow through on conditions, and receive better outcomes. Life stabilization is not separate from legal strategy — it is legal strategy. Resolving a civil issue (eviction, benefits denial, child support arrears) can remove the instability driving the legal problem."
+        intro="When clients can focus on their case rather than where they will sleep or how they will feed their family, outcomes improve. These resources help stabilize the circumstances that would otherwise consume a client's attention during the most consequential period of their life."
       >
         <ScrollReveal delay={0}>
           <ToolCard
             Icon={Heart}
             title="Life & Family Support Hub"
-            desc="Housing, employment, childcare, mental health, transportation, finances, and re-entry resources — organized by life area. Designed to be shared directly with clients or referred to family members who are coordinating support."
+            desc="Housing, employment, childcare, mental health, transportation, finances, and re-entry resources, organized by life area. Designed to be shared directly with clients or referred to family members who are coordinating support."
             href="/support"
             color="text-rose-600 dark:text-rose-400"
             bg="bg-rose-50 dark:bg-rose-900/10"
@@ -223,7 +223,7 @@ export default function ForAdvocates() {
           <ToolCard
             Icon={Home}
             title="Court Logistics & Hearing Preparation"
-            desc="What to bring to court, court etiquette guidance, bail preparation checklist, and court locator. Clients who are prepared and present well make better impressions — and judges notice."
+            desc="What to bring to court, court etiquette guidance, bail preparation checklist, and court locator. Clients who arrive prepared and present themselves well make better impressions, and that matters."
             href="/support/court-logistics"
             color="text-slate-600 dark:text-slate-400"
             bg="bg-slate-50 dark:bg-slate-900/10"
@@ -274,32 +274,43 @@ export default function ForAdvocates() {
         </ScrollReveal>
         <ScrollReveal delay={0.07}>
           <ToolCard
-            Icon={ClipboardList}
-            title="First Contact Intake Checklist"
-            desc="A printable screening checklist for first client meetings: immigration status, housing stability, employment, open warrants, prior record, active supervision (probation/parole), and mental health history. Operationalizes the Bronx Defenders early interdisciplinary model."
-            color="text-indigo-600 dark:text-indigo-400"
-            bg="bg-indigo-50 dark:bg-indigo-900/10"
-            accent="#4338ca"
-            comingSoon
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.14}>
-          <ToolCard
             Icon={Search}
             title="Expungement Eligibility Screener"
-            desc="State-specific eligibility for expungement and record sealing — covering clean slate laws in 11 states, waiting periods, and charge-type exclusions. Useful for post-resolution planning and for advising clients on long-term record strategy before they accept a plea."
+            desc="State-specific eligibility for expungement and record sealing, covering clean slate laws in 11 states, waiting periods, and charge-type exclusions. Useful for post-resolution planning and for advising clients on long-term record strategy before they accept a plea."
             href="/support/reputation/eligibility"
             color="text-green-600 dark:text-green-400"
             bg="bg-green-50 dark:bg-green-900/10"
             accent="#16a34a"
           />
         </ScrollReveal>
+        <ScrollReveal delay={0.14}>
+          <ToolCard
+            Icon={FileSearch}
+            title="Rap Sheet Review & Error Correction"
+            desc="Step-by-step guide to obtaining FBI and state rap sheets, identifying the most common errors (misattributed charges, missing dispositions, stale arrest records), and submitting disputes. Errors on a rap sheet can affect bail, plea offers, and sentencing, and are more common than most clients expect."
+            href="/support/reputation#rap-sheet"
+            color="text-slate-600 dark:text-slate-400"
+            bg="bg-slate-50 dark:bg-slate-900/10"
+            accent="#475569"
+          />
+        </ScrollReveal>
         <ScrollReveal delay={0.21}>
           <ToolCard
+            Icon={Award}
+            title="Certificates of Relief"
+            desc="Where full expungement is unavailable, certificates of relief offer partial restoration of rights and can be presented to employers and landlords. Covers IL, NY, OH, and other states where this option exists, with links to the Collateral Consequences Resource Center."
+            href="/support/reputation#certificates-of-relief"
+            color="text-amber-600 dark:text-amber-400"
+            bg="bg-amber-50 dark:bg-amber-900/10"
+            accent="#b45309"
+          />
+        </ScrollReveal>
+        <ScrollReveal delay={0.28}>
+          <ToolCard
             Icon={Shield}
-            title="Background Check Rights & Record Repair"
-            desc="FCRA adverse action rights, dispute procedures, and rap sheet review steps. Includes employer and landlord communication templates clients can use directly — especially useful while a case is pending and before an expungement clears."
-            href="/support/reputation"
+            title="Background Check Rights (FCRA)"
+            desc="Adverse action notice rights, dispute procedures, and lookback period rules. Includes copy-ready employer and landlord communication templates clients can use directly, especially useful while a case is pending and before an expungement clears."
+            href="/support/reputation#fcra-rights"
             color="text-cyan-600 dark:text-cyan-400"
             bg="bg-cyan-50 dark:bg-cyan-900/10"
             accent="#0891b2"
@@ -312,7 +323,7 @@ export default function ForAdvocates() {
         id="client-education"
         label="Section 4"
         headline="Client Education"
-        intro="Clients who understand what's happening to them participate more effectively in their own defense. These plain-language resources are designed to be shared directly — all available in English, Spanish, and Chinese."
+        intro="Clients who understand what's happening to them participate more effectively in their own defense. These plain-language resources are designed to be shared directly, all available in English, Spanish, and Chinese."
       >
         <ScrollReveal delay={0}>
           <ToolCard
@@ -329,7 +340,7 @@ export default function ForAdvocates() {
           <ToolCard
             Icon={BookOpen}
             title="Full Case Timeline"
-            desc="7-stage visual guide from arrest through sentencing — arrest, booking, arraignment, pretrial, discovery, trial, sentencing. Covers client rights and key decisions at each stage. Useful at any point in the process for orienting clients to where they are."
+            desc="7-stage visual guide from arrest through sentencing: arrest, booking, arraignment, pretrial, discovery, trial, sentencing. Covers client rights and key decisions at each stage. Useful at any point in the process for orienting clients to where they are."
             href="/case-timeline"
             color="text-slate-600 dark:text-slate-400"
             bg="bg-slate-50 dark:bg-slate-900/10"
@@ -340,7 +351,7 @@ export default function ForAdvocates() {
           <ToolCard
             Icon={Shield}
             title="Know Your Rights"
-            desc="Core rights during police encounters, traffic stops, searches, and interrogations. Includes search and seizure scenarios and quick-reference cards. Available in English, Spanish, and Chinese — printable for distribution."
+            desc="Core rights during police encounters, traffic stops, searches, and interrogations. Includes search and seizure scenarios and quick-reference cards. Available in English, Spanish, and Chinese, printable for distribution."
             href="/rights-info"
             color="text-blue-600 dark:text-blue-400"
             bg="bg-blue-50 dark:bg-blue-900/10"
@@ -351,7 +362,7 @@ export default function ForAdvocates() {
           <ToolCard
             Icon={Users}
             title="Friends & Family Guide"
-            desc="For clients whose family members are the ones coordinating — what to do when a loved one is arrested, how to locate a detained person, how to support someone through the process. Available in English, Spanish, and Chinese."
+            desc="For clients whose family members are coordinating support: what to do when a loved one is arrested, how to locate a detained person, how to support someone through the process. Available in English, Spanish, and Chinese."
             href="/friends-family"
             color="text-pink-600 dark:text-pink-400"
             bg="bg-pink-50 dark:bg-pink-900/10"
@@ -365,29 +376,18 @@ export default function ForAdvocates() {
         id="find-help"
         label="Section 5"
         headline="Find Additional Help"
-        intro="When your client needs representation they don't have, or when you need to generate jurisdiction-specific legal documents, these resources extend what you can offer."
+        intro="When your client needs representation they don't yet have, these resources help locate legal aid and pro bono services by location."
         cols={2}
       >
         <ScrollReveal delay={0}>
           <ToolCard
             Icon={Users}
             title="Legal Aid Directory"
-            desc="Find legal aid organizations near any ZIP code. Includes LSC-funded offices, pro bono programs, and law school clinics — searchable by location and practice area."
+            desc="Find legal aid organizations near any ZIP code. Includes LSC-funded offices, pro bono programs, and law school clinics, searchable by location and practice area."
             href="/legal-aid"
             color="text-teal-600 dark:text-teal-400"
             bg="bg-teal-50 dark:bg-teal-900/10"
             accent="#0f766e"
-          />
-        </ScrollReveal>
-        <ScrollReveal delay={0.07}>
-          <ToolCard
-            Icon={Lock}
-            title="Attorney Portal — Document Generation"
-            desc="For verified attorneys: generate jurisdiction-specific criminal and immigration motions. Over 25 templates covering all 50 states + DC, plus EOIR-format immigration motions. Requires attorney verification."
-            href="/attorney-portal"
-            color="text-violet-600 dark:text-violet-400"
-            bg="bg-violet-50 dark:bg-violet-900/10"
-            accent="#7c3aed"
           />
         </ScrollReveal>
       </Section>
@@ -403,12 +403,12 @@ export default function ForAdvocates() {
                 {
                   Icon: FileText,
                   title: "Mitigation Builder",
-                  desc: "Structured social history form → formatted court-ready summary for bail, diversion, and sentencing.",
+                  desc: "Structured social history form with formatted, court-ready output for bail hearings, diversion eligibility, and sentencing.",
                 },
                 {
                   Icon: ClipboardList,
                   title: "First Contact Intake Checklist",
-                  desc: "Standardized intake screening to surface risks and resources at first client meeting.",
+                  desc: "Standardized intake screening to surface immigration status, housing, open warrants, supervision status, and mental health history at first meeting.",
                 },
                 {
                   Icon: Gavel,
