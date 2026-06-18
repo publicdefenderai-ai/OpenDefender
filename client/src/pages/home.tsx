@@ -1,35 +1,61 @@
-import { BrandShieldIcon } from "@/components/brand-logo";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import {
   AlertTriangle,
   ArrowRight,
-  Clock,
   Search,
-  Check,
   Scale,
   Users,
-  Heart,
   Globe2,
   MessageSquare,
   Phone,
+  Heart,
 } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { SiteSearch } from "@/components/search/site-search";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+
+function CountUp({ target, duration = 1400 }: { target: number; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (!inView) return;
+    if (target === 0) {
+      setCount(0);
+      return;
+    }
+    let animId: number;
+    const start = Date.now();
+    const tick = () => {
+      const elapsed = Date.now() - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.round(eased * target));
+      if (progress < 1) {
+        animId = requestAnimationFrame(tick);
+      }
+    };
+    animId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animId);
+  }, [inView, target, duration]);
+
+  return <span ref={ref}>{count}</span>;
+}
 
 export default function Home() {
   useScrollToTop();
   const { t } = useTranslation();
+  const [, navigate] = useLocation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
   const [urgentSituation, setUrgentSituation] = useState<"arrested" | "charged" | "family" | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -38,58 +64,96 @@ export default function Home() {
     setUrgentHelpOpen(true);
   };
 
-  const paths = [
+  const doors = [
     {
-      number: "1",
-      accent: "#1e3a5f",
-      accentBg: "#eef2f8",
-      Icon: Clock,
-      badge: t("home.paths.path1Badge"),
-      headline: t("home.paths.path1Headline"),
-      desc: t("home.paths.path1Desc"),
+      badge: t("home.doors.door1.badge"),
+      headline: t("home.doors.door1.headline"),
+      desc: t("home.doors.door1.desc"),
+      cta: t("home.doors.door1.cta"),
       link: "/first-24-hours",
-      cta: t("home.paths.path1Cta"),
+      links: [
+        { label: t("home.doors.door1.link1"), href: "/first-24-hours#inmate-locator" },
+        { label: t("home.doors.door1.link2"), href: "/support/court-logistics/bail-preparation" },
+        { label: t("home.doors.door1.link3"), href: "/support" },
+      ],
+      gradient: "from-[hsl(345,52%,22%)] via-[hsl(350,48%,28%)] to-[hsl(355,44%,34%)]",
+      pulsing: true,
     },
     {
-      number: "2",
-      accent: "#0f766e",
-      accentBg: "#eef9f8",
-      Icon: MessageSquare,
-      badge: t("home.paths.path2Badge"),
-      headline: t("home.paths.path2Headline"),
-      desc: t("home.paths.path2Desc"),
+      badge: t("home.doors.door2.badge"),
+      headline: t("home.doors.door2.headline"),
+      desc: t("home.doors.door2.desc"),
+      cta: t("home.doors.door2.cta"),
       link: "/case-guidance",
-      cta: t("home.paths.path2Cta"),
+      links: [
+        { label: t("home.doors.door2.link1"), href: "/rights-info" },
+        { label: t("home.doors.door2.link2"), href: "/case-timeline" },
+        { label: t("home.doors.door2.link3"), href: "/support/reputation/eligibility" },
+      ],
+      gradient: "from-[hsl(192,58%,18%)] via-[hsl(196,50%,24%)] to-[hsl(200,44%,30%)]",
+      pulsing: false,
     },
     {
-      number: "3",
-      accent: "#8b2252",
-      accentBg: "#f8eef3",
-      Icon: Heart,
-      badge: t("home.paths.path3Badge"),
-      headline: t("home.paths.path3Headline"),
-      desc: t("home.paths.path3Desc"),
-      link: "/support",
-      cta: t("home.paths.path3Cta"),
+      badge: t("home.doors.door3.badge"),
+      headline: t("home.doors.door3.headline"),
+      desc: t("home.doors.door3.desc"),
+      cta: t("home.doors.door3.cta"),
+      link: "/for-advocates",
+      links: [
+        { label: t("home.doors.door3.link1"), href: "/diversion-programs" },
+        { label: t("home.doors.door3.link2"), href: "/legal-aid" },
+        { label: t("home.doors.door3.link3"), href: "/support" },
+      ],
+      gradient: "from-[hsl(258,48%,20%)] via-[hsl(255,42%,28%)] to-[hsl(252,36%,35%)]",
+      pulsing: false,
     },
-    {
-      number: "4",
-      accent: "#92400e",
-      accentBg: "#fef3e2",
-      Icon: Globe2,
-      badge: t("home.paths.path4Badge"),
-      headline: t("home.paths.path4Headline"),
-      desc: t("home.paths.path4Desc"),
-      link: "/immigration-guidance",
-      cta: t("home.paths.path4Cta"),
-    },
-  ] as const;
+  ];
 
-  const trustItems = [
-    { title: t("home.trust.freeTitle"), desc: t("home.trust.freeDesc"), icon: Check },
-    { title: t("home.trust.privacyTitle"), desc: t("home.trust.privacyDesc"), icon: Check },
-    { title: t("home.trust.earlyKnowledgeTitle"), desc: t("home.trust.earlyKnowledgeDesc"), icon: Check },
-    { title: t("home.trust.multilingualTitle"), desc: t("home.trust.multilingualDesc"), icon: Check },
+  const secondaryPaths = [
+    {
+      Icon: Globe2,
+      title: t("home.secondary.immigration.title"),
+      desc: t("home.secondary.immigration.desc"),
+      cta: t("home.secondary.immigration.cta"),
+      href: "/immigration-guidance",
+      accent: "#b45309",
+      bg: "bg-amber-50/60 dark:bg-amber-900/10",
+      border: "border-amber-200 dark:border-amber-800/50",
+      color: "text-amber-700 dark:text-amber-400",
+    },
+    {
+      Icon: Heart,
+      title: t("home.secondary.lifeSupport.title"),
+      desc: t("home.secondary.lifeSupport.desc"),
+      cta: t("home.secondary.lifeSupport.cta"),
+      href: "/support",
+      accent: "#be185d",
+      bg: "bg-rose-50/60 dark:bg-rose-900/10",
+      border: "border-rose-200 dark:border-rose-800/50",
+      color: "text-rose-700 dark:text-rose-400",
+    },
+    {
+      Icon: Users,
+      title: t("home.secondary.findHelp.title"),
+      desc: t("home.secondary.findHelp.desc"),
+      cta: t("home.secondary.findHelp.cta"),
+      href: "/legal-aid",
+      accent: "#1d4ed8",
+      bg: "bg-blue-50/60 dark:bg-blue-900/10",
+      border: "border-blue-200 dark:border-blue-800/50",
+      color: "text-blue-700 dark:text-blue-400",
+    },
+    {
+      Icon: Scale,
+      title: t("home.secondary.pastConviction.title"),
+      desc: t("home.secondary.pastConviction.desc"),
+      cta: t("home.secondary.pastConviction.cta"),
+      href: "/support/reputation",
+      accent: "#475569",
+      bg: "bg-slate-50/60 dark:bg-slate-900/10",
+      border: "border-slate-200 dark:border-slate-800/50",
+      color: "text-slate-700 dark:text-slate-400",
+    },
   ];
 
   return (
@@ -108,128 +172,130 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-black mb-6 leading-[1.1] tracking-tight text-white">
-              <span className="text-teal-400">{t("home.hero.headlinePart1")}</span>
-              <br />
-              {t("home.hero.headlinePart2")}
+            <h1 className="font-display text-4xl sm:text-5xl md:text-[3.5rem] font-normal mb-6 leading-[1.15] tracking-tight text-white">
+              {t("home.hero.headlinePart1")}{" "}
+              <strong className="font-bold">{t("home.hero.headlinePart2")}</strong>
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t("home.hero.subtitle")}
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div className="flex items-center justify-center">
               <button
                 onClick={handleUrgentHelp}
                 className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 active:bg-teal-600 text-white font-bold text-base transition-colors shadow-lg shadow-teal-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
                 {t("home.hero.primaryCta")} <ArrowRight className="h-4 w-4" />
               </button>
-              <Link href="/directory">
-                <span className="text-slate-400 hover:text-white text-sm font-medium transition-colors underline underline-offset-2 hover:no-underline cursor-pointer">
-                  {t("home.hero.secondaryCta")} →
-                </span>
-              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Paths — shortened cards */}
-      <section className="pt-10 pb-4 md:pt-14 md:pb-6 bg-white dark:bg-background border-t border-border/20" id="paths">
-        <div className="max-w-5xl mx-auto px-4">
+      {/* Three Doors */}
+      <section className="pt-10 pb-6 md:pt-14 md:pb-8 bg-white dark:bg-background border-t border-border/20" id="paths">
+        <div className="max-w-6xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-black text-foreground mb-1 tracking-tight">
-                {t("home.paths.situationLabel")}
-              </h2>
-              <p className="text-base text-muted-foreground">{t("home.paths.situationSubtitle")}</p>
-            </div>
+            <h2 className="text-xl font-bold text-center text-foreground mb-6 tracking-tight">
+              {t("home.doors.sectionLabel")}
+            </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {paths.map(({ number, accent, accentBg, Icon, badge, headline, desc, link, cta }, i) => (
-              <ScrollReveal key={number} delay={i * 0.07}>
-                <Link href={link}>
-                  <div
-                    className="flex flex-col h-full rounded-2xl border border-border border-l-4 bg-background shadow-sm overflow-hidden transition-all duration-200 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
-                    style={{ borderLeftColor: accent }}
-                  >
-                    <div className="flex-1 p-5">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="w-7 h-7 rounded-full flex items-center justify-center text-white font-bold text-xs flex-shrink-0" style={{ background: accent }}>{number}</div>
-                        <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-semibold" style={{ background: accentBg, color: accent }}>
-                          <Icon className="w-3 h-3" />
-                          <span>{badge}</span>
-                        </div>
-                      </div>
-                      <h3 className="text-lg font-bold text-foreground mb-1.5 leading-snug">{headline}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {doors.map((door, i) => (
+              <motion.div
+                key={door.link}
+                initial={{ opacity: 0, y: 28 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="group"
+              >
+                <div
+                  role="link"
+                  tabIndex={0}
+                  aria-label={door.headline}
+                  onClick={() => navigate(door.link)}
+                  onKeyDown={(e) => e.key === "Enter" && navigate(door.link)}
+                  className={`relative flex flex-col rounded-2xl overflow-hidden cursor-pointer bg-gradient-to-br ${door.gradient} texture-grain
+                    transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl min-h-[300px] md:min-h-[340px]`}
+                >
+                  {/* Card content above grain layer */}
+                  <div className="relative z-10 flex flex-col flex-1 p-6">
+                    {/* Badge */}
+                    <div className="flex items-center gap-2 mb-4">
+                      {door.pulsing && (
+                        <span className="relative inline-flex items-center justify-center w-3 h-3 flex-shrink-0" aria-hidden="true">
+                          <span className="absolute h-full w-full rounded-full bg-rose-300/75 urgency-ring" />
+                          <span className="absolute h-full w-full rounded-full bg-rose-200/50 urgency-ring-delayed" />
+                          <span className="relative h-2 w-2 rounded-full bg-rose-200" />
+                        </span>
+                      )}
+                      <span className="text-[11px] font-semibold tracking-wider text-white/70 uppercase leading-tight">
+                        {door.badge}
+                      </span>
                     </div>
-                    <div className="px-5 pb-4">
-                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white w-full justify-center" style={{ background: accent }}>
-                        {cta} <ArrowRight className="w-3.5 h-3.5" />
-                      </div>
+
+                    {/* Headline */}
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-snug">
+                      {door.headline}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-sm text-white/75 leading-relaxed flex-1 mb-5">
+                      {door.desc}
+                    </p>
+
+                    {/* Primary CTA */}
+                    <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-semibold transition-colors mb-5 w-fit">
+                      {door.cta}
+                      <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+                    </div>
+
+                    {/* Secondary links */}
+                    <div className="flex flex-col gap-1.5 border-t border-white/15 pt-4">
+                      {door.links.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={(e) => e.stopPropagation()}
+                          className="text-xs text-white/60 hover:text-white/90 transition-colors flex items-center gap-1.5"
+                        >
+                          <ArrowRight className="h-2.5 w-2.5 opacity-50 flex-shrink-0" aria-hidden="true" />
+                          {link.label}
+                        </Link>
+                      ))}
                     </div>
                   </div>
-                </Link>
-              </ScrollReveal>
+                </div>
+              </motion.div>
             ))}
           </div>
 
-          {/* Friends & family — prominent secondary card */}
-          <ScrollReveal delay={0.25}>
-            <div className="mt-5 rounded-2xl border border-blue-200 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-950/20 overflow-hidden">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 p-5">
-                <div className="flex items-center gap-3 flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center flex-shrink-0">
-                    <Users className="w-5 h-5 text-white" />
+          {/* Secondary paths 2×2 */}
+          <ScrollReveal delay={0.15}>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-10 mb-4">
+              {t("home.secondary.title")}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {secondaryPaths.map(({ Icon, title, desc, cta, href, bg, border, color }, i) => (
+                <Link key={href} href={href}>
+                  <div className={`flex items-start gap-3.5 rounded-xl border p-4 cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg} ${border}`}>
+                    <Icon className={`h-4 w-4 mt-0.5 flex-shrink-0 ${color}`} strokeWidth={1.75} aria-hidden="true" />
+                    <div className="min-w-0">
+                      <p className="font-semibold text-foreground text-sm leading-snug">{title}</p>
+                      <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{desc}</p>
+                      <p className={`text-xs font-semibold flex items-center gap-1 mt-2 ${color}`}>
+                        {cta} <ArrowRight className="h-2.5 w-2.5" aria-hidden="true" />
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-0.5">
-                      {t("home.paths.path5Badge")}
-                    </p>
-                    <h3 className="text-base font-bold text-foreground leading-snug">{t("home.paths.path5Headline")}</h3>
-                  </div>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t("home.paths.path5Desc")}</p>
-                <Link href="/friends-family" className="flex-shrink-0">
-                  <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors whitespace-nowrap">
-                    {t("home.paths.path5Cta")} <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
                 </Link>
-              </div>
+              ))}
             </div>
           </ScrollReveal>
 
-          {/* Past conviction entry point */}
-          <ScrollReveal delay={0.26}>
-            <div className="mt-5 pt-5 border-t border-border/30 text-center">
-              <p className="text-sm text-muted-foreground">
-                {t("home.paths.pastConvictionLabel")}{" "}
-                <Link href="/support/reputation" className="font-medium text-foreground underline underline-offset-2 hover:no-underline">
-                  {t("home.paths.pastConvictionLink1")}
-                </Link>
-                {" "}or{" "}
-                <Link href="/support/reputation#fcra-rights" className="font-medium text-foreground underline underline-offset-2 hover:no-underline">
-                  {t("home.paths.pastConvictionLink2")}
-                </Link>.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          {/* How-to link — more prominent */}
-          <ScrollReveal delay={0.28}>
-            <div className="mt-4 text-center">
-              <Link href="/how-to">
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground border border-border rounded-lg px-4 py-2 hover:bg-muted/60 hover:border-foreground/20 transition-colors cursor-pointer">
-                  {t("home.paths.howToLink")}
-                </span>
-              </Link>
-            </div>
-          </ScrollReveal>
-
-          {/* Search bar — opens the same modal as the header search */}
-          <ScrollReveal delay={0.35}>
-            <div className="mt-6 mb-2 max-w-xl mx-auto">
+          {/* Search bar */}
+          <ScrollReveal delay={0.2}>
+            <div className="mt-7 mb-2 max-w-xl mx-auto">
               <button
                 onClick={() => setSearchOpen(true)}
                 className="w-full flex items-center gap-3 pl-3.5 pr-4 py-3 rounded-xl border border-border bg-background text-sm text-muted-foreground hover:border-teal-500/50 hover:bg-muted/40 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/40"
@@ -244,33 +310,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Compact trust section */}
-      <section className="py-12 md:py-16 bg-slate-50 dark:bg-background border-t border-border/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      {/* Animated stats + condensed trust strip */}
+      <section className="py-10 md:py-12 bg-slate-50 dark:bg-background border-t border-border/30">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+          {/* Animated triple stat */}
           <ScrollReveal>
-            <h2 className="text-xl font-bold text-foreground text-center mb-8">{t("home.trust.title")}</h2>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 mb-8">
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-black text-foreground tabular-nums">
+                  <CountUp target={3} />
+                </span>
+                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
+                  {t("home.stats.label1")}
+                </span>
+              </div>
+              <div className="hidden sm:block w-px h-10 bg-border" aria-hidden="true" />
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-black text-foreground tabular-nums">
+                  <CountUp target={51} />
+                </span>
+                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
+                  {t("home.stats.label2")}
+                </span>
+              </div>
+              <div className="hidden sm:block w-px h-10 bg-border" aria-hidden="true" />
+              <div className="flex flex-col items-center">
+                <span className="text-4xl font-black text-foreground tabular-nums">
+                  $<CountUp target={0} />
+                </span>
+                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-1">
+                  {t("home.stats.label3")}
+                </span>
+              </div>
+            </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {trustItems.map(({ title, desc }, i) => (
-              <ScrollReveal key={title} delay={i * 0.07}>
-                <div className="flex gap-3">
-                  <div className="w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="h-4 w-4 text-teal-600 dark:text-teal-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-foreground text-sm mb-1">{title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+
+          {/* Condensed trust badges */}
+          <ScrollReveal delay={0.1}>
+            <div className="flex flex-wrap items-center justify-center gap-2">
+              {[
+                t("home.stats.badge1"),
+                t("home.stats.badge2"),
+                t("home.stats.badge3"),
+              ].map((badge) => (
+                <span
+                  key={badge}
+                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-background border border-border text-muted-foreground"
+                >
+                  {badge}
+                </span>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       <Footer />
 
-      {/* Urgent Help Modal */}
+      {/* Urgent Help Modal — unchanged */}
       <Dialog open={urgentHelpOpen} onOpenChange={(open) => { setUrgentHelpOpen(open); if (!open) setUrgentSituation(null); }}>
         <DialogContent className="max-w-[95vw] md:max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>

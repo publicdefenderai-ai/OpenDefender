@@ -65,10 +65,10 @@ export default {
   },
   "home": {
     "hero": {
-      "headlinePart1": "Arrested? Facing Charges?",
-      "headlinePart2": "Know Your Rights",
-      "subtitle": "When police contact you, or you're arrested, the next few hours matter most. Get free, plain-language help from your first encounter through your full case, and support for housing, employment, and family.",
-      "primaryCta": "I Need Help Now",
+      "headlinePart1": "The legal system moves fast.",
+      "headlinePart2": "Start here.",
+      "subtitle": "Free, private guidance for people facing arrest, charges, or court — available in English, Spanish, and Chinese.",
+      "primaryCta": "Get Immediate Help",
       "secondaryCta": "Browse All Resources"
     },
     "features": {
@@ -122,7 +122,68 @@ export default {
       "pastConvictionLabel": "Not dealing with an active case?",
       "pastConvictionLink1": "Clear a past record",
       "pastConvictionLink2": "understand background check rights",
-      "searchPlaceholder": "Search rights, court processes, resources..."
+      "searchPlaceholder": "Search charges, topics, and site pages."
+    },
+    "doors": {
+      "sectionLabel": "Where do you want to start?",
+      "door1": {
+        "badge": "Someone Was Just Arrested",
+        "headline": "Your first hours matter most",
+        "desc": "Step-by-step guidance from the moment of arrest through bail, your first phone call, and what to expect at arraignment.",
+        "cta": "Start Here",
+        "link1": "Locate a detained person",
+        "link2": "Bail hearing prep",
+        "link3": "Life & family support"
+      },
+      "door2": {
+        "badge": "I've Been Charged or Released",
+        "headline": "Understand what comes next",
+        "desc": "Plain-language guidance on your charges, your rights, and every stage of the process from arraignment through sentencing.",
+        "cta": "Get Case Guidance",
+        "link1": "Know your rights",
+        "link2": "Full case timeline",
+        "link3": "Collateral consequences screener"
+      },
+      "door3": {
+        "badge": "I Work With People in This Situation",
+        "headline": "Tools built for advocates",
+        "desc": "Resources for public defenders, social workers, case managers, and community advocates supporting people through the justice system.",
+        "cta": "Go to Advocate Hub",
+        "link1": "Diversion programs",
+        "link2": "Legal aid directory",
+        "link3": "Life & family support hub"
+      }
+    },
+    "secondary": {
+      "title": "Also available",
+      "immigration": {
+        "title": "Immigration Rights",
+        "desc": "Rights during ICE encounters for everyone in the US.",
+        "cta": "Know Your Rights"
+      },
+      "lifeSupport": {
+        "title": "Life & Family Support",
+        "desc": "Housing, employment, childcare, and mental health resources.",
+        "cta": "Find Support"
+      },
+      "findHelp": {
+        "title": "Find Legal Help",
+        "desc": "Public defenders, legal aid, and court resources near you.",
+        "cta": "Search Directory"
+      },
+      "pastConviction": {
+        "title": "Past Conviction",
+        "desc": "Clear a past record or understand your background check rights.",
+        "cta": "Learn More"
+      }
+    },
+    "stats": {
+      "label1": "languages",
+      "label2": "jurisdictions",
+      "label3": "cost",
+      "badge1": "Free · Always",
+      "badge2": "Private · no data stored",
+      "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {
       "modalTitle": "Urgent Legal Situation",

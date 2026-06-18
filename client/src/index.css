@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -51,6 +53,7 @@
   /* Font families */
   --font-serif: 'Lora', 'Georgia', serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
 }
 
 .dark {
@@ -1060,6 +1063,29 @@
 
 .skeleton-rect {
   @apply skeleton;
+}
+
+/* ===== PULSING URGENCY DOT (Door 1 badge) ===== */
+
+@keyframes urgencyPing {
+  75%, 100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.urgency-ring {
+  animation: urgencyPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.urgency-ring-delayed {
+  animation: urgencyPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  animation-delay: 0.65s;
+}
+
+/* DM Serif Display — hero headline only */
+.font-display {
+  font-family: var(--font-display);
 }
 
 /* ===== TEXTURE OVERLAYS ===== */

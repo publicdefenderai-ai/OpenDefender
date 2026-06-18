@@ -61,10 +61,10 @@ export default {
   },
   "home": {
     "hero": {
-      "headlinePart1": "¿Arrestado? ¿Enfrentando Cargos?",
-      "headlinePart2": "Conozca Sus Derechos",
-      "subtitle": "Cuando la policía lo contacta, o lo arrestan, las próximas horas importan más. Obtenga ayuda gratuita en lenguaje claro desde su primer encuentro hasta su caso completo, y apoyo para vivienda, empleo y familia.",
-      "primaryCta": "Necesito Ayuda Ahora",
+      "headlinePart1": "El sistema legal se mueve rápido.",
+      "headlinePart2": "Comience aquí.",
+      "subtitle": "Orientación gratuita y privada para personas que enfrentan arresto, cargos o tribunal — disponible en inglés, español y chino.",
+      "primaryCta": "Obtener Ayuda Inmediata",
       "secondaryCta": "Ver Todos los Recursos"
     },
     "features": {
@@ -118,7 +118,68 @@ export default {
       "pastConvictionLabel": "¿No tiene un caso activo?",
       "pastConvictionLink1": "Limpiar un antecedente pasado",
       "pastConvictionLink2": "entender los derechos de verificación de antecedentes",
-      "searchPlaceholder": "Buscar derechos, procesos judiciales, recursos..."
+      "searchPlaceholder": "Buscar cargos, temas y páginas del sitio."
+    },
+    "doors": {
+      "sectionLabel": "¿Dónde quiere comenzar?",
+      "door1": {
+        "badge": "Alguien Acaba de Ser Arrestado",
+        "headline": "Las primeras horas importan más",
+        "desc": "Orientación paso a paso desde el momento del arresto hasta la fianza, la primera llamada telefónica y lo que puede esperar en la audiencia.",
+        "cta": "Comenzar Aquí",
+        "link1": "Localizar a una persona detenida",
+        "link2": "Preparación para la audiencia de fianza",
+        "link3": "Apoyo de vida y familia"
+      },
+      "door2": {
+        "badge": "Me Han Acusado o Me Han Liberado",
+        "headline": "Entienda qué viene después",
+        "desc": "Orientación en lenguaje claro sobre sus cargos, sus derechos y cada etapa del proceso desde la audiencia hasta la sentencia.",
+        "cta": "Obtener Orientación del Caso",
+        "link1": "Conozca sus derechos",
+        "link2": "Cronología completa del caso",
+        "link3": "Verificador de consecuencias colaterales"
+      },
+      "door3": {
+        "badge": "Trabajo con Personas en Esta Situación",
+        "headline": "Herramientas para defensores",
+        "desc": "Recursos para defensores públicos, trabajadores sociales, gestores de casos y defensores comunitarios que apoyan a personas en el sistema de justicia.",
+        "cta": "Ir al Centro de Defensores",
+        "link1": "Programas de desvío",
+        "link2": "Directorio de asistencia legal",
+        "link3": "Centro de apoyo de vida y familia"
+      }
+    },
+    "secondary": {
+      "title": "También disponible",
+      "immigration": {
+        "title": "Derechos de Inmigración",
+        "desc": "Derechos durante encuentros con ICE para todos en EE.UU.",
+        "cta": "Conozca Sus Derechos"
+      },
+      "lifeSupport": {
+        "title": "Apoyo de Vida y Familia",
+        "desc": "Recursos de vivienda, empleo, cuidado infantil y salud mental.",
+        "cta": "Encontrar Apoyo"
+      },
+      "findHelp": {
+        "title": "Encontrar Ayuda Legal",
+        "desc": "Defensores públicos, asistencia legal y recursos judiciales cerca de usted.",
+        "cta": "Buscar Directorio"
+      },
+      "pastConviction": {
+        "title": "Condena Pasada",
+        "desc": "Limpiar un antecedente pasado o entender sus derechos de verificación de antecedentes.",
+        "cta": "Aprenda Más"
+      }
+    },
+    "stats": {
+      "label1": "idiomas",
+      "label2": "jurisdicciones",
+      "label3": "costo",
+      "badge1": "Gratis · Siempre",
+      "badge2": "Privado · sin datos almacenados",
+      "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {
       "modalTitle": "Situación Legal Urgente",

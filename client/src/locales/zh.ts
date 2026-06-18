@@ -61,10 +61,10 @@ export default {
   },
   "home": {
     "hero": {
-      "headlinePart1": "被捕了？面临指控？",
-      "headlinePart2": "了解您的权利",
-      "subtitle": "当警察联系您或您被逮捕时，接下来的几个小时至关重要。从第一次接触到整个案件，获取免费、简明的帮助，以及住房、就业和家庭方面的支持。",
-      "primaryCta": "我现在需要帮助",
+      "headlinePart1": "法律系统运转迅速。",
+      "headlinePart2": "从这里开始。",
+      "subtitle": "为面临逮捕、指控或出庭的人提供免费、私密的指导 — 提供英语、西班牙语和中文服务。",
+      "primaryCta": "立即获取帮助",
       "secondaryCta": "浏览所有资源"
     },
     "features": {
@@ -118,7 +118,68 @@ export default {
       "pastConvictionLabel": "没有活跃案件？",
       "pastConvictionLink1": "清除过去的犯罪记录",
       "pastConvictionLink2": "了解背景调查权利",
-      "searchPlaceholder": "搜索权利、法庭流程、资源..."
+      "searchPlaceholder": "搜索指控、主题和网站页面。"
+    },
+    "doors": {
+      "sectionLabel": "您想从哪里开始？",
+      "door1": {
+        "badge": "有人刚刚被捕",
+        "headline": "最初几小时至关重要",
+        "desc": "从逮捕到保释、第一次电话以及预审的逐步指导。",
+        "cta": "从这里开始",
+        "link1": "查找被拘留者",
+        "link2": "保释听证准备",
+        "link3": "生活与家庭支持"
+      },
+      "door2": {
+        "badge": "我已被指控或获释",
+        "headline": "了解接下来会发生什么",
+        "desc": "用简单语言说明您的指控、权利以及从预审到判决的每个阶段。",
+        "cta": "获取案件指导",
+        "link1": "了解您的权利",
+        "link2": "完整案件时间表",
+        "link3": "附带后果筛查工具"
+      },
+      "door3": {
+        "badge": "我为处于此情况的人提供帮助",
+        "headline": "为倡导者构建的工具",
+        "desc": "为公设辩护人、社会工作者、案件管理员和社区倡导者提供的资源。",
+        "cta": "前往倡导者中心",
+        "link1": "转处计划",
+        "link2": "法律援助目录",
+        "link3": "生活与家庭支持中心"
+      }
+    },
+    "secondary": {
+      "title": "也可使用",
+      "immigration": {
+        "title": "移民权利",
+        "desc": "美国所有人在ICE接触时的权利。",
+        "cta": "了解您的权利"
+      },
+      "lifeSupport": {
+        "title": "生活与家庭支持",
+        "desc": "住房、就业、托儿和心理健康资源。",
+        "cta": "寻找支持"
+      },
+      "findHelp": {
+        "title": "寻找法律帮助",
+        "desc": "附近的公设辩护人、法律援助和法院资源。",
+        "cta": "搜索目录"
+      },
+      "pastConviction": {
+        "title": "过往定罪",
+        "desc": "清除过去的记录或了解您的背景调查权利。",
+        "cta": "了解更多"
+      }
+    },
+    "stats": {
+      "label1": "语言",
+      "label2": "司法管辖区",
+      "label3": "费用",
+      "badge1": "免费 · 始终",
+      "badge2": "私密 · 不存储数据",
+      "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {
       "modalTitle": "紧急法律情况",

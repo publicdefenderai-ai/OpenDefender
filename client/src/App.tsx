@@ -82,6 +82,7 @@ const FirstTwentyFourHours = lazy(() => import("@/pages/first-24-hours"));
 // CollateralConsequences merged into /support/reputation — route now redirects
 const RightToCounsel = lazy(() => import("@/pages/right-to-counsel"));
 const Warrants = lazy(() => import("@/pages/warrants"));
+const ForAdvocates = lazy(() => import("@/pages/for-advocates"));
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -152,6 +153,7 @@ function Router() {
       <Route path="/collateral-consequences"><Redirect to="/support/reputation" /></Route>
       <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/warrants" component={Warrants} />
+      <Route path="/for-advocates" component={ForAdvocates} />
       <Route path="/directory" component={Directory} />
       <Route path="/how-to" component={HowTo} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
