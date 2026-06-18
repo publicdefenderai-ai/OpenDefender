@@ -1719,6 +1719,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-707-2/",
+    instructionRef: "Iowa CJI 700.1",
   },
   "ia-murder-in-the-second-degree": {
     citation: "Iowa Code § 707.3",
@@ -1726,6 +1727,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-707-3/",
+    instructionRef: "Iowa CJI 700.3",
   },
   "ia-voluntary-manslaughter": {
     citation: "Iowa Code § 707.4",
@@ -1733,6 +1735,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-707-4/",
+    instructionRef: "Iowa CJI 710.1",
   },
   "ia-involuntary-manslaughter": {
     citation: "Iowa Code § 707.5",
@@ -1740,6 +1743,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-707-5/",
+    instructionRef: "Iowa CJI 710.3",
   },
   "ia-vehicular-homicide": {
     citation: "Iowa Code § 707.6A",
@@ -1747,6 +1751,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-707-6a/",
+    instructionRef: "Iowa CJI 720.1",
   },
   "ia-attempted-murder": {
     citation: "Iowa Code § 707.11",
@@ -2980,6 +2985,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1705",
   },
   "or-murder-in-the-second-degree": {
     citation: "Or. Rev. Stat. § 163.115",
@@ -2987,6 +2993,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1706",
   },
   "or-felony-murder": {
     citation: "Or. Rev. Stat. § 163.115",
@@ -2994,6 +3001,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1707",
   },
   "or-voluntary-manslaughter": {
     citation: "Or. Rev. Stat. § 163.118",
@@ -3001,6 +3009,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1710",
   },
   "or-involuntary-manslaughter": {
     citation: "Or. Rev. Stat. § 163.125",
@@ -3008,6 +3017,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1720",
   },
   "or-criminally-negligent-homicide": {
     citation: "Or. Rev. Stat. § 163.145",
@@ -3015,6 +3025,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1730",
   },
   "or-vehicular-homicide": {
     citation: "Or. Rev. Stat. § 163.149",
@@ -3022,6 +3033,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1735",
   },
   "or-trespassing": {
     citation: "Or. Rev. Stat. § 164.245",
@@ -3826,6 +3838,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY Revised Statutes § 507.020 Murder (KY has no degree distinctions for murder); Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-507-020/",
+    instructionRef: "KY JI § 507.020",
   },
   "ky-voluntary-manslaughter": {
     citation: "Ky. Rev. Stat. § 507.030",
@@ -3833,6 +3846,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 507.030 Manslaughter 1st degree; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-507-030/",
+    instructionRef: "KY JI § 507.030",
   },
   "ky-involuntary-manslaughter": {
     citation: "Ky. Rev. Stat. § 507.040",
@@ -3840,6 +3854,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 507.040 Manslaughter 2nd degree; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-507-040/",
+    instructionRef: "KY JI § 507.040",
   },
   "ky-criminally-negligent-homicide": {
     citation: "Ky. Rev. Stat. § 507.050",
@@ -3847,6 +3862,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 507.050 Reckless homicide (KY equivalent of criminally negligent homicide); Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-507-050/",
+    instructionRef: "KY JI § 507.050",
   },
   "ky-vehicular-homicide": {
     citation: "Ky. Rev. Stat. § 189A.010",
@@ -3854,6 +3870,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 189A.010 Operating motor vehicle under influence — causing death; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-189a-010/",
+    instructionRef: "KY JI § 189A.010",
   },
   "ky-disorderly-conduct": {
     citation: "Ky. Rev. Stat. § 525.060",
@@ -4238,6 +4255,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-321j-2/",
+    instructionRef: "Iowa CJI 2500.1",
   },
   "ks-dui-first-offense": {
     citation: "Kan. Stat. Ann. § 8-1567",
@@ -4254,6 +4272,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-189a-010/",
+    instructionRef: "KY JI § 189A.010",
   },
   "la-dui-first-offense": {
     citation: "La. Rev. Stat. § 14:98",
@@ -4412,6 +4431,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors813.html",
+    instructionRef: "UCJI 2712",
   },
   "pa-dui-first-offense": {
     citation: "75 Pa. Cons. Stat. § 3802",
@@ -4621,6 +4641,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-708-2/",
+    instructionRef: "Iowa CJI 1000.1",
   },
   "ks-aggravated-assault": {
     citation: "Kan. Stat. Ann. § 21-5412",
@@ -4637,6 +4658,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-508-010/",
+    instructionRef: "KY JI § 508.010",
   },
   "la-aggravated-assault": {
     citation: "La. Rev. Stat. § 14:37",
@@ -4795,6 +4817,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1851",
   },
   "pa-aggravated-assault": {
     citation: "18 Pa. Cons. Stat. § 2702",
@@ -5351,6 +5374,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa robbery in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-711-2/",
+    instructionRef: "Iowa CJI 920.1",
   },
   "ks-robbery-in-the-first-degree": {
     citation: "Kan. Stat. Ann. § 21-5421",
@@ -5367,6 +5391,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky robbery in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-515-020/",
+    instructionRef: "KY JI § 515.020",
   },
   "la-robbery-in-the-first-degree": {
     citation: "La. Rev. Stat. § 14:64",
@@ -5518,6 +5543,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon robbery in the first degree; verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1661",
   },
   "pa-robbery-in-the-first-degree": {
     citation: "18 Pa. Cons. Stat. § 3701(a)(1)(i)",
@@ -5734,6 +5760,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa robbery in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-711-3/",
+    instructionRef: "Iowa CJI 920.3",
   },
   "ks-robbery-in-the-second-degree": {
     citation: "Kan. Stat. Ann. § 21-5420",
@@ -5750,6 +5777,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky robbery in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-515-030/",
+    instructionRef: "KY JI § 515.030",
   },
   "la-robbery-in-the-second-degree": {
     citation: "La. Rev. Stat. § 14:65",
@@ -5901,6 +5929,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon robbery in the second degree; verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1662",
   },
   "pa-robbery-in-the-second-degree": {
     citation: "18 Pa. Cons. Stat. § 3701(a)(1)(ii)",
@@ -6126,6 +6155,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-713-3/",
+    instructionRef: "Iowa CJI 930.1",
   },
   "ks-burglary-in-the-first-degree": {
     citation: "Kan. Stat. Ann. § 21-5807(a)(1)",
@@ -6142,6 +6172,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-511-020/",
+    instructionRef: "KY JI § 511.020",
   },
   "la-burglary-in-the-first-degree": {
     citation: "La. Rev. Stat. § 14:60",
@@ -6293,6 +6324,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon burglary in the first degree; verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1671",
   },
   "pa-burglary-in-the-first-degree": {
     citation: "18 Pa. Cons. Stat. § 3502(a)(1)",
@@ -6517,6 +6549,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-713-5/",
+    instructionRef: "Iowa CJI 930.3",
   },
   "ks-burglary-in-the-second-degree": {
     citation: "Kan. Stat. Ann. § 21-5807(a)(2)",
@@ -6533,6 +6566,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Kentucky burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-511-030/",
+    instructionRef: "KY JI § 511.030",
   },
   "la-burglary-in-the-second-degree": {
     citation: "La. Rev. Stat. § 14:62",
@@ -6691,6 +6725,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oregon burglary in the second degree; verify against Oregon Legislature website before promoting to high",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1672",
   },
   "pa-burglary-in-the-second-degree": {
     citation: "18 Pa. Cons. Stat. § 3502(a)(2)",
@@ -8369,6 +8404,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-709-2/",
+    instructionRef: "Iowa CJI 900.1",
   },
   "ks-sexual-assault-in-the-first-degree": {
     citation: "Kan. Stat. Ann. § 21-5503",
@@ -8385,6 +8421,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-510-040/",
+    instructionRef: "KY JI § 510.040",
   },
   "la-sexual-assault-in-the-first-degree": {
     citation: "La. Rev. Stat. § 14:42",
@@ -8517,6 +8554,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1901",
   },
   "ri-sexual-assault-in-the-first-degree": {
     citation: "R.I. Gen. Laws § 11-37-2",
@@ -8709,6 +8747,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-709-2/",
+    instructionRef: "Iowa CJI 900.1",
   },
   "id-rape-in-the-first-degree": {
     citation: "Idaho Code § 18-6101",
@@ -8750,6 +8789,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-510-040/",
+    instructionRef: "KY JI § 510.040",
   },
   "la-rape-in-the-first-degree": {
     citation: "La. Rev. Stat. § 14:42",
@@ -8908,6 +8948,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors163.html",
+    instructionRef: "UCJI 1901",
   },
   "pa-rape-in-the-first-degree": {
     citation: "18 Pa. Cons. Stat. § 3121",
@@ -9967,6 +10008,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-124-401/",
+    instructionRef: "Iowa CJI 2300.1",
   },
   "ia-possession-with-intent-to-distribute": {
     citation: "Iowa Code § 124.401(1)(b)",
@@ -9974,6 +10016,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/iowa/section-124-401/",
+    instructionRef: "Iowa CJI 2300.3",
   },
   "ks-drug-trafficking": {
     citation: "Kan. Stat. Ann. § 21-5703",
@@ -9999,6 +10042,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-218a-1411/",
+    instructionRef: "KY JI § 218A.1411",
   },
   "ky-possession-with-intent-to-distribute": {
     citation: "Ky. Rev. Stat. Ann. § 218A.1412",
@@ -10006,6 +10050,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-218a-1412/",
+    instructionRef: "KY JI § 218A.1412",
   },
   "la-drug-trafficking": {
     citation: "La. Rev. Stat. § 40:966(A)",
@@ -10308,6 +10353,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors475.html",
+    instructionRef: "UCJI 2752",
   },
   "or-possession-with-intent-to-distribute": {
     citation: "Or. Rev. Stat. § 475.860",
@@ -10315,6 +10361,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors475.html",
+    instructionRef: "UCJI 2753",
   },
   "pa-drug-trafficking": {
     citation: "35 Pa. Stat. § 780-113(a)(30)",
@@ -11265,6 +11312,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-507-020/",
+    instructionRef: "KY JI § 507.020",
   },
   "me-murder-in-the-second-degree": {
     citation: "Me. Rev. Stat. tit. 17-A § 201",
