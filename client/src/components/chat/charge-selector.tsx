@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2, Filter } from "lucide-react";
+import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2, Filter, BookOpen, ExternalLink } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { Input } from "@/components/ui/input";
@@ -17,6 +17,8 @@ interface Charge {
   category: 'felony' | 'misdemeanor' | 'infraction';
   description: string;
   maxPenalty: string;
+  instructionRef?: string;
+  instructionUrl?: string;
 }
 
 interface ChargeSelectorProps {
@@ -228,6 +230,32 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                           </Badge>
                         </div>
                         <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
+                        {charge.instructionRef && (
+                          <div className="flex items-center gap-1 mt-1">
+                            <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
+                            <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium flex-shrink-0">
+                              {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
+                            </span>
+                            {charge.instructionUrl ? (
+                              <a
+                                href={charge.instructionUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium inline-flex items-center gap-0.5"
+                                onClick={(e) => e.stopPropagation()}
+                                data-testid={`link-instruction-selector-${charge.id}`}
+                                aria-label={`View official jury instruction ${charge.instructionRef}`}
+                              >
+                                {charge.instructionRef}
+                                <ExternalLink className="h-2.5 w-2.5" />
+                              </a>
+                            ) : (
+                              <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                {charge.instructionRef}
+                              </span>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </motion.button>
                   );

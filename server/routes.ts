@@ -12,7 +12,7 @@ import { insertLegalCaseSchema, insertCaseFeedbackSchema, insertGuidanceFlagSche
 import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
-import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -364,6 +364,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           description = charge.descriptionEs || translateDescription(charge.description) || charge.description;
         }
         
+        const instructionRef = getInstructionRef(charge);
+        const instructionUrl = getInstructionUrl(charge);
         return {
           id: charge.id,
           code: charge.code,
@@ -371,6 +373,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           category: charge.category,
           description,
           maxPenalty: charge.maxPenalty,
+          ...(instructionRef ? { instructionRef } : {}),
+          ...(instructionUrl ? { instructionUrl } : {}),
         };
       });
       
