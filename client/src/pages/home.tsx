@@ -397,7 +397,10 @@ export default function Home() {
             {/* Triage step */}
             {urgentSituation === null && (
               <>
-                <p className="text-sm text-muted-foreground">{t("home.urgentHelp.triageLead")}</p>
+                <div>
+                  <p className="text-[15px] font-bold text-foreground tracking-tight leading-snug">{t("home.urgentHelp.triageLead")}</p>
+                  <div className="mt-1.5 h-0.5 w-10 rounded-full bg-red-500" />
+                </div>
                 <div className="space-y-3">
                   {/* Interactive scenario cards */}
                   {([
