@@ -124,7 +124,7 @@ export default function ForAdvocates() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-bold uppercase tracking-widest text-white/70 mb-4">
+            <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-white/90 mb-4">
               Advocate Hub
             </p>
             <h1 className="text-2xl md:text-3xl font-black text-white mb-5 leading-tight">
