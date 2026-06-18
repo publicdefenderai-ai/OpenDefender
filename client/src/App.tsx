@@ -83,6 +83,7 @@ const FirstTwentyFourHours = lazy(() => import("@/pages/first-24-hours"));
 const RightToCounsel = lazy(() => import("@/pages/right-to-counsel"));
 const Warrants = lazy(() => import("@/pages/warrants"));
 const ForAdvocates = lazy(() => import("@/pages/for-advocates"));
+const MitigationBuilder = lazy(() => import("@/pages/for-advocates/mitigation-builder"));
 
 function BetaBanner() {
   const [isDismissed, setIsDismissed] = useState(false);
@@ -154,6 +155,7 @@ function Router() {
       <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/warrants" component={Warrants} />
       <Route path="/for-advocates" component={ForAdvocates} />
+      <Route path="/for-advocates/mitigation-builder" component={MitigationBuilder} />
       <Route path="/directory" component={Directory} />
       <Route path="/how-to" component={HowTo} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />

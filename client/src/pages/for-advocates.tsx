@@ -265,11 +265,11 @@ export default function ForAdvocates() {
           <ToolCard
             Icon={FileText}
             title="Mitigation Builder"
-            desc="A structured form that walks through the social history domains courts respond to: community ties, housing, employment, treatment participation, family responsibilities, character references, and trauma history. Output is a formatted summary ready for bail hearings, diversion eligibility, and sentencing."
+            desc="A structured intake form covering the social history domains courts respond to: community ties, housing, employment, treatment participation, family responsibilities, character references, and additional context. Output is a formatted summary ready to copy or print for bail hearings, diversion eligibility, and sentencing."
+            href="/for-advocates/mitigation-builder"
             color="text-violet-600 dark:text-violet-400"
             bg="bg-violet-50 dark:bg-violet-900/10"
             accent="#7c3aed"
-            comingSoon
           />
         </ScrollReveal>
         <ScrollReveal delay={0.07}>
@@ -400,11 +400,6 @@ export default function ForAdvocates() {
             <p className="text-sm font-semibold text-foreground mb-5">Tools being built specifically for advocates</p>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                {
-                  Icon: FileText,
-                  title: "Mitigation Builder",
-                  desc: "Structured social history form with formatted, court-ready output for bail hearings, diversion eligibility, and sentencing.",
-                },
                 {
                   Icon: ClipboardList,
                   title: "First Contact Intake Checklist",
