@@ -173,8 +173,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="font-display text-4xl sm:text-5xl md:text-[3.5rem] font-normal mb-6 leading-[1.15] tracking-tight text-white">
-              {t("home.hero.headlinePart1")}{" "}
-              <strong className="font-bold">{t("home.hero.headlinePart2")}</strong>
+              {t("home.hero.headlinePart1")}
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t("home.hero.subtitle")}
@@ -307,6 +306,11 @@ export default function Home() {
             </div>
           </ScrollReveal>
           <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
+          <div className="mt-2 mb-1 text-center">
+            <Link href="/directory" className="text-xs text-muted-foreground hover:text-foreground font-medium inline-flex items-center gap-1 transition-colors">
+              Browse all resources <ArrowRight className="h-3 w-3" />
+            </Link>
+          </div>
         </div>
       </section>
 

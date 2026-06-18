@@ -61,9 +61,9 @@ export default {
   },
   "home": {
     "hero": {
-      "headlinePart1": "El sistema legal se mueve rápido.",
-      "headlinePart2": "Comience aquí.",
-      "subtitle": "Orientación gratuita y privada para personas que enfrentan arresto, cargos o tribunal — disponible en inglés, español y chino.",
+      "headlinePart1": "¿Arrestado? ¿Con cargos? ¿Enfrentando al tribunal?",
+      "headlinePart2": "",
+      "subtitle": "Orientación legal gratuita en lenguaje claro para acusados, familias y sus defensores — cubre los 50 estados, disponible en inglés, español y chino.",
       "primaryCta": "Obtener Ayuda Inmediata",
       "secondaryCta": "Ver Todos los Recursos"
     },

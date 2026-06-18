@@ -65,9 +65,9 @@ export default {
   },
   "home": {
     "hero": {
-      "headlinePart1": "The legal system moves fast.",
-      "headlinePart2": "Start here.",
-      "subtitle": "Free, private guidance for people facing arrest, charges, or court — available in English, Spanish, and Chinese.",
+      "headlinePart1": "Arrested? Charged? Facing court?",
+      "headlinePart2": "",
+      "subtitle": "Free, plain-language legal guidance for defendants, families, and their advocates — covering all 50 states, available in English, Spanish, and Chinese.",
       "primaryCta": "Get Immediate Help",
       "secondaryCta": "Browse All Resources"
     },

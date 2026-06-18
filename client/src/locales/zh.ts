@@ -61,9 +61,9 @@ export default {
   },
   "home": {
     "hero": {
-      "headlinePart1": "法律系统运转迅速。",
-      "headlinePart2": "从这里开始。",
-      "subtitle": "为面临逮捕、指控或出庭的人提供免费、私密的指导 — 提供英语、西班牙语和中文服务。",
+      "headlinePart1": "被捕了？被指控了？面临出庭？",
+      "headlinePart2": "",
+      "subtitle": "为被告、家属及其倡导者提供免费、简明的法律指导 — 覆盖全部50个州，提供英语、西班牙语和中文服务。",
       "primaryCta": "立即获取帮助",
       "secondaryCta": "浏览所有资源"
     },
