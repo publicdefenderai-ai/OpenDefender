@@ -7,7 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity, BookOpen } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity, BookOpen, HelpCircle } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
@@ -525,6 +526,22 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
                                 {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Official Jury Instructions')}:
                               </span>
+                              <TooltipProvider>
+                                <Tooltip>
+                                  <TooltipTrigger asChild>
+                                    <button
+                                      type="button"
+                                      className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
+                                      aria-label="What is a jury instruction?"
+                                    >
+                                      <HelpCircle className="h-3 w-3" aria-hidden="true" />
+                                    </button>
+                                  </TooltipTrigger>
+                                  <TooltipContent side="top" className="max-w-xs text-xs">
+                                    These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.
+                                  </TooltipContent>
+                                </Tooltip>
+                              </TooltipProvider>
                               {chargeInstructionUrl ? (
                                 <a
                                   href={chargeInstructionUrl}

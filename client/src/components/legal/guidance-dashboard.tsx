@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from "react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
@@ -704,6 +705,22 @@ function YourChargesSection({
                 <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium flex-shrink-0">
                   {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                 </span>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button
+                        type="button"
+                        className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0 -mt-0.5"
+                        aria-label="What is a jury instruction?"
+                      >
+                        <HelpCircle className="h-3 w-3" aria-hidden="true" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top" className="max-w-xs text-xs">
+                      These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
                 {charge.instructionUrl ? (
                   <a
                     href={charge.instructionUrl}
