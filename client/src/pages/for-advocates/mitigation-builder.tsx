@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import {
   FileText,
   Copy,
@@ -8,7 +8,9 @@ import {
   ChevronDown,
   ChevronUp,
   ArrowLeft,
+  Download,
 } from "lucide-react";
+import { Document, Paragraph, TextRun, AlignmentType, Packer } from "docx";
 import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -292,10 +294,121 @@ function Domain({
   );
 }
 
+/* ─── Docx builder (client-side, nothing sent to server) ─── */
+
+function buildDocxParagraphs(output: string): Paragraph[] {
+  const paragraphs: Paragraph[] = [];
+  const lines = output.split("\n");
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+
+    // Skip the divider lines
+    if (/^─+$/.test(trimmed)) continue;
+
+    // Title line
+    if (trimmed === "MITIGATION SUMMARY — DRAFT") {
+      paragraphs.push(
+        new Paragraph({
+          alignment: AlignmentType.CENTER,
+          spacing: { after: 80 },
+          children: [new TextRun({ text: trimmed, bold: true, size: 28, font: "Times New Roman" })],
+        })
+      );
+      continue;
+    }
+
+    // Warning / footer verification line
+    if (
+      trimmed.startsWith("Review every line") ||
+      trimmed.startsWith("Verify every claim")
+    ) {
+      paragraphs.push(
+        new Paragraph({
+          spacing: { after: 60 },
+          children: [new TextRun({ text: trimmed, italics: true, size: 20, font: "Times New Roman", color: "CC0000" })],
+        })
+      );
+      continue;
+    }
+
+    // Domain section headers (ALL CAPS, no bullet)
+    const knownHeaders = [
+      "COMMUNITY TIES", "HOUSING STABILITY", "EMPLOYMENT",
+      "TREATMENT PARTICIPATION", "FAMILY RESPONSIBILITIES",
+      "CHARACTER REFERENCES", "ADDITIONAL CONTEXT",
+    ];
+    if (knownHeaders.includes(trimmed)) {
+      paragraphs.push(
+        new Paragraph({
+          spacing: { before: 240, after: 80 },
+          children: [new TextRun({ text: trimmed, bold: true, size: 24, font: "Times New Roman" })],
+        })
+      );
+      continue;
+    }
+
+    // Bullet items
+    if (trimmed.startsWith("• ")) {
+      paragraphs.push(
+        new Paragraph({
+          indent: { left: 360 },
+          spacing: { after: 40 },
+          children: [new TextRun({ text: trimmed, size: 24, font: "Times New Roman" })],
+        })
+      );
+      continue;
+    }
+
+    // Prepared / Client / Context header lines
+    if (
+      trimmed.startsWith("Prepared:") ||
+      trimmed.startsWith("Client:") ||
+      trimmed.startsWith("Context:")
+    ) {
+      paragraphs.push(
+        new Paragraph({
+          spacing: { after: 40 },
+          children: [new TextRun({ text: trimmed, size: 24, font: "Times New Roman" })],
+        })
+      );
+      continue;
+    }
+
+    // Blank line
+    if (trimmed === "") {
+      paragraphs.push(new Paragraph({ children: [] }));
+      continue;
+    }
+
+    // Everything else (free-form reference text, additional context)
+    paragraphs.push(
+      new Paragraph({
+        spacing: { after: 40 },
+        children: [new TextRun({ text: trimmed, size: 24, font: "Times New Roman" })],
+      })
+    );
+  }
+
+  return paragraphs;
+}
+
+function triggerDownload(blob: Blob, filename: string) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
 /* ─── Output panel ─── */
 
 function OutputPanel({ output }: { output: string }) {
   const [copied, setCopied] = useState(false);
+  const [docxLoading, setDocxLoading] = useState(false);
 
   const handleCopy = async () => {
     try {
@@ -310,6 +423,33 @@ function OutputPanel({ output }: { output: string }) {
     }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleDownloadTxt = () => {
+    const blob = new Blob([output], { type: "text/plain;charset=utf-8" });
+    triggerDownload(blob, "mitigation-summary-draft.txt");
+  };
+
+  const handleDownloadDocx = async () => {
+    setDocxLoading(true);
+    try {
+      const doc = new Document({
+        creator: "OpenDefender Advocate Hub",
+        title: "Mitigation Summary — Draft",
+        sections: [
+          {
+            properties: {
+              page: { margin: { top: 1440, bottom: 1440, left: 1440, right: 1440 } },
+            },
+            children: buildDocxParagraphs(output),
+          },
+        ],
+      });
+      const blob = await Packer.toBlob(doc);
+      triggerDownload(blob, "mitigation-summary-draft.docx");
+    } finally {
+      setDocxLoading(false);
+    }
   };
 
   const handlePrint = () => {
@@ -345,31 +485,44 @@ function OutputPanel({ output }: { output: string }) {
           <FileText className="h-4 w-4 text-muted-foreground" />
           <span className="text-sm font-semibold text-foreground">Summary output</span>
         </div>
-        {!empty && (
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={handleCopy}
-              className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors"
-            >
-              {copied ? (
-                <Check className="h-3.5 w-3.5 text-green-600" />
-              ) : (
-                <Copy className="h-3.5 w-3.5" />
-              )}
-              {copied ? "Copied" : "Copy"}
-            </button>
-            <button
-              type="button"
-              onClick={handlePrint}
-              className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors"
-            >
-              <Printer className="h-3.5 w-3.5" />
-              Print
-            </button>
-          </div>
-        )}
       </div>
+      {!empty && (
+        <div className="flex flex-wrap gap-2 px-4 py-2.5 border-b border-border bg-muted/10">
+          <button
+            type="button"
+            onClick={handleCopy}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors"
+          >
+            {copied ? <Check className="h-3.5 w-3.5 text-green-600" /> : <Copy className="h-3.5 w-3.5" />}
+            {copied ? "Copied" : "Copy"}
+          </button>
+          <button
+            type="button"
+            onClick={handleDownloadTxt}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors"
+          >
+            <Download className="h-3.5 w-3.5" />
+            .txt
+          </button>
+          <button
+            type="button"
+            onClick={handleDownloadDocx}
+            disabled={docxLoading}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-50"
+          >
+            <Download className="h-3.5 w-3.5" />
+            {docxLoading ? "Building…" : ".docx"}
+          </button>
+          <button
+            type="button"
+            onClick={handlePrint}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors"
+          >
+            <Printer className="h-3.5 w-3.5" />
+            Print / PDF
+          </button>
+        </div>
+      )}
 
       {empty ? (
         <div className="px-5 py-10 text-center text-sm text-muted-foreground">
