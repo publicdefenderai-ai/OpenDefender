@@ -163,6 +163,36 @@ export function getInstructionUrl(charge: CriminalCharge): string | null {
   return CHARGE_CITATIONS[charge.id]?.instructionUrl ?? null;
 }
 
+/**
+ * Maps Pattern Jury Instruction set prefixes to the vendor that publishes them
+ * behind a subscription paywall. When a charge has an instructionRef but no
+ * instructionUrl, the UI uses this to show "Available via <vendor>" so users
+ * know where to find the full text.
+ *
+ * Free/open sets (no entry needed): APJI (AL), FSJI (FL), DC Redbook (DC),
+ * GPJI (GA — no URL, not paywalled), COLJI (CO — no URL, not paywalled),
+ * CJI2d (MI — courts.michigan.gov), NY (nycourts.gov), NJ (njcourts.gov).
+ */
+const INSTRUCTION_SET_PAYWALL: Record<string, string> = {
+  'MCJI': 'LexisNexis',     // Maryland Criminal Jury Instructions
+  'VMJI': 'LexisNexis',     // Virginia Model Jury Instructions
+  'CRIMJIG': 'Westlaw',     // Minnesota Criminal Jury Instruction Guides
+};
+
+/**
+ * Returns the subscription vendor ("LexisNexis", "Westlaw", etc.) if the
+ * instruction set for this charge is paywalled and has no free instructionUrl.
+ * Returns null for free/open sets or charges with no instructionRef.
+ */
+export function getInstructionPaywall(charge: CriminalCharge): string | null {
+  const ref = CHARGE_CITATIONS[charge.id]?.instructionRef;
+  if (!ref) return null;
+  for (const [prefix, vendor] of Object.entries(INSTRUCTION_SET_PAYWALL)) {
+    if (ref.startsWith(prefix)) return vendor;
+  }
+  return null;
+}
+
 export const criminalCharges: CriminalCharge[] = [
   {
     id: 'al-murder-in-the-first-degree',

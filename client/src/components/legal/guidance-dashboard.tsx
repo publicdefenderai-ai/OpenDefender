@@ -55,7 +55,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
-import { criminalCharges, getInstructionRef, getInstructionUrl } from "@shared/criminal-charges";
+import { criminalCharges, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
@@ -604,6 +604,7 @@ function YourChargesSection({
       statuteCitations: dbCharge?.statuteCitations,
       instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
       instructionUrl: dbCharge ? getInstructionUrl(dbCharge) : undefined,
+      instructionPaywall: dbCharge ? getInstructionPaywall(dbCharge) : undefined,
     };
   });
 
@@ -698,10 +699,10 @@ function YourChargesSection({
 
             {/* Jury Instruction Reference */}
             {charge.instructionRef && (
-              <div className="flex items-start gap-1.5">
+              <div className="flex items-start gap-1.5 flex-wrap">
                 <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
                 <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium flex-shrink-0">
-                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Official Jury Instructions')}:
+                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                 </span>
                 {charge.instructionUrl ? (
                   <a
@@ -709,13 +710,19 @@ function YourChargesSection({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium"
-                    aria-label={`Official jury instruction ${charge.instructionRef}`}
+                    aria-label={`View official jury instruction ${charge.instructionRef}`}
                   >
                     {charge.instructionRef}
+                    <ExternalLink className="h-2.5 w-2.5 inline-block ml-0.5 mb-0.5" />
                   </a>
                 ) : (
                   <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
                     {charge.instructionRef}
+                    {charge.instructionPaywall && (
+                      <span className="text-indigo-400 dark:text-indigo-500 font-normal ml-1">
+                        (Available via {charge.instructionPaywall})
+                      </span>
+                    )}
                   </span>
                 )}
               </div>
