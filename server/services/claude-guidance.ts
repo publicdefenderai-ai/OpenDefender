@@ -324,8 +324,8 @@ RESPONSE STRUCTURE:
 Return a JSON object with these exact fields:
 - overview: ${overviewNote} following this pattern: (1) Current situation, (2) 2-3 important things to do to ensure the case proceeds smoothly, (3) Key issue(s) that will determine the outcome
 - criticalAlerts: Array of urgent warnings — MAXIMUM 2 ITEMS. Only include a criticalAlert when inaction in the next 24-48 hours has a concrete legal consequence (e.g., a missed deadline triggers a bench warrant, a bail condition violation causes re-arrest, a time-limited right is about to expire). General reminders such as "get a lawyer," "don't discuss your case," or "attend court" belong in warnings or avoidActions — NOT here. If nothing in the case rises to that standard, return an empty array [].
-- immediateActions: Array of {action: string, urgency: 'urgent'|'high'|'medium'|'low'} — describe what is typically important at this case stage and why, NOT as personal directives. Frame as what courts and attorneys generally focus on. Write "Having legal representation before arraignment is typically important because..." NOT "Get a lawyer today." Each item informs the person about what matters; it does not instruct them what to do.
-- nextSteps: Array of what to do after immediate actions
+- immediateActions: Array of {action: string, urgency: 'urgent'|'high'|'medium'|'low'} — describe what is typically important at this case stage and why, NOT as personal directives. Frame as what courts and attorneys generally focus on. Each action string MUST begin with a bold topic label followed by a colon, then the substantive guidance. Format: "**Legal Representation**: Having counsel before arraignment matters because..." Use short, specific topic labels (e.g., "**Bail Conditions**", "**Evidence Preservation**", "**Arraignment Date**"). Each item informs the person about what matters; it does not instruct them what to do.
+- nextSteps: Array of next steps after immediate actions. Each item string MUST begin with a bold topic label followed by a colon, then the substantive guidance. Format: "**Contact Public Defender**: If you cannot afford an attorney, contact the public defender's office as soon as possible." Use short, specific topic labels (e.g., "**Attorney Meeting**", "**Court Date**", "**Record Request**").
 - deadlines: Array of {event, timeframe, description, priority: 'critical'|'important'|'normal', daysFromNow}
 - rights: Array of charge-specific and stage-specific rights that apply to this situation. DO NOT include universal Miranda rights, the right to remain silent, the right to an attorney, or the right against self-incrimination — those are displayed separately as hardcoded content. Focus only on rights specific to this charge type or case stage.
 - resources: Array of {type, description, contact, hours?, website?}
@@ -362,7 +362,8 @@ JSON FORMATTING RULES:
 - Escape all special characters in strings properly (double quotes, backslashes, newlines)
 - Do NOT use literal newlines inside JSON string values - use \\n instead
 - Do NOT include trailing commas after the last item in arrays or objects
-- Ensure all property names are double-quoted`;
+- Ensure all property names are double-quoted
+- Do NOT use em dashes (—) anywhere in any string value. Use a comma, colon, or period instead.`;
 }
 
 // Input sanitization to prevent prompt injection and limit excessive input

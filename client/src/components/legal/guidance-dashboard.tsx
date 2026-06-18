@@ -185,21 +185,28 @@ interface GuidanceDashboardProps {
 }
 
 // Utility function to format charge names in plain English
-// Converts [text](url) markdown links in guidance text to real links.
+// Renders inline markdown: **bold** labels and [text](url) links.
 // Internal paths (/support/...) use wouter Link; external URLs use <a>.
 function renderWithLinks(text: string): React.ReactNode {
-  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
-  if (parts.length === 1) return text;
+  // Split on **bold** and [link](url) tokens
+  const tokens = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
+  if (tokens.length === 1) return text;
   return (
     <>
-      {parts.map((part, i) => {
-        const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-        if (!match) return <React.Fragment key={i}>{part}</React.Fragment>;
-        const [, label, href] = match;
-        if (href.startsWith('/')) {
-          return <Link key={i} href={href} className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</Link>;
+      {tokens.map((token, i) => {
+        const boldMatch = token.match(/^\*\*([^*]+)\*\*$/);
+        if (boldMatch) {
+          return <strong key={i} className="font-semibold">{boldMatch[1]}</strong>;
         }
-        return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</a>;
+        const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          const [, label, href] = linkMatch;
+          if (href.startsWith('/')) {
+            return <Link key={i} href={href} className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</Link>;
+          }
+          return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</a>;
+        }
+        return <React.Fragment key={i}>{token}</React.Fragment>;
       })}
     </>
   );
