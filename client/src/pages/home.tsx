@@ -174,6 +174,8 @@ export default function Home() {
           >
             <h1 className="font-display text-4xl sm:text-5xl md:text-[3.5rem] font-normal mb-6 leading-[1.15] tracking-tight text-white">
               {t("home.hero.headlinePart1")}
+              <br />
+              <strong className="font-bold">{t("home.hero.headlinePart2")}</strong>
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t("home.hero.subtitle")}
