@@ -63,7 +63,7 @@ export default {
     "hero": {
       "headlinePart1": "被捕了？面临指控？",
       "headlinePart2": "从这里开始。",
-      "subtitle": "为被告、家属及其倡导者提供免费、简明的法律指导 — 覆盖全部50个州，提供英语、西班牙语和中文服务。",
+      "subtitle": "为被告、家属及其倡导者提供免费、简明的法律指导，覆盖全部50个州，提供英语、西班牙语和中文服务。",
       "primaryCta": "立即获取帮助",
       "secondaryCta": "浏览所有资源"
     },

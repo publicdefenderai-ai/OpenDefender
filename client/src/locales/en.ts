@@ -67,7 +67,7 @@ export default {
     "hero": {
       "headlinePart1": "Arrested? Facing Charges?",
       "headlinePart2": "Start here.",
-      "subtitle": "Free, plain-language legal guidance for defendants, families, and their advocates — covering all 50 states, available in English, Spanish, and Chinese.",
+      "subtitle": "Free, plain-language legal guidance for defendants, families, and their advocates, covering all 50 states in English, Spanish, and Chinese.",
       "primaryCta": "Get Immediate Help",
       "secondaryCta": "Browse All Resources"
     },
