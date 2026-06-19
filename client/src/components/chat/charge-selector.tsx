@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2, Filter, BookOpen, ExternalLink } from "lucide-react";
+import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2, Filter, BookOpen, ExternalLink, HelpCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 
 interface Charge {
@@ -231,11 +232,28 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                         </div>
                         <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
                         {charge.instructionRef && (
-                          <div className="flex items-center gap-1 mt-1">
+                          <div className="flex items-center gap-1 mt-1 flex-wrap">
                             <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
                             <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium flex-shrink-0">
                               {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                             </span>
+                            <TooltipProvider>
+                              <Tooltip>
+                                <TooltipTrigger asChild>
+                                  <button
+                                    type="button"
+                                    className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
+                                    onClick={(e) => e.stopPropagation()}
+                                    aria-label="What is a jury instruction?"
+                                  >
+                                    <HelpCircle className="h-3 w-3" aria-hidden="true" />
+                                  </button>
+                                </TooltipTrigger>
+                                <TooltipContent side="top" className="max-w-xs text-xs">
+                                  These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.
+                                </TooltipContent>
+                              </Tooltip>
+                            </TooltipProvider>
                             {charge.instructionUrl ? (
                               <a
                                 href={charge.instructionUrl}
