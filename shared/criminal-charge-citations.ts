@@ -528,6 +528,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/810.08",
+    instructionRef: "Fla. Std. Jury Instr. (Crim.) 13.5",
+    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
   },
   "fl-disorderly-conduct": { citation: "Fla. Stat. § 877.03", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.03.html" },
   "fl-public-intoxication": {
@@ -1282,6 +1284,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Michigan Legislature — MCL § 750.552 Trespassing",
     sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-552",
+    instructionRef: "CJI2d 33.1",
+    instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
   },
   "mi-disorderly-conduct": {
     citation: "Mich. Comp. Laws § 750.167",
@@ -1580,6 +1584,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3503",
+    instructionRef: "Pa. SSJI 15.3503",
   },
   "pa-disorderly-conduct": {
     citation: "18 Pa.C.S. § 5503",
@@ -2216,6 +2221,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Ohio Revised Code — § 2911.21 Criminal trespass",
     sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2911.21",
+    instructionRef: "OJI 511.21",
   },
   "oh-disorderly-conduct": { citation: "Ohio Rev. Code Ann. § 2917.11", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2917.11" },
   "oh-public-intoxication": { citation: "Ohio Rev. Code Ann. § 2917.11", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2917.11" },
@@ -3208,6 +3214,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.52.070",
+    instructionRef: "WPIC 56.04",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+56.04",
   },
   "wa-disorderly-conduct": {
     citation: "Wash. Rev. Code § 9A.84.030",
@@ -3825,6 +3833,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "720 ILCS 5/21-3 Criminal trespass to real property; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/illinois/chapter-720/act-5/section-5-21-3/",
+    instructionRef: "IPI-CR 23.01",
+    instructionUrl: "https://www.illinoiscourts.gov/courts/supreme-court/committees/illinois-pattern-jury-instructions-criminal/",
   },
   "il-resisting-arrest": { citation: "720 ILCS 5/31-1", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K31-1.htm" },
   "il-failure-to-appear": { citation: "720 ILCS 5/32-10", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K32-10.htm" },
@@ -3890,6 +3900,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "IN Code § 35-43-2-2 Criminal trespass; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/indiana/section-35-43-2-2/",
+    instructionRef: "Ind. Model Crim. Jury Instr. 13.3010",
+    instructionUrl: "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
   },
   "in-public-intoxication": {
     citation: "Ind. Code § 7.1-5-1-3",
@@ -7576,6 +7588,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.015",
+    instructionRef: "Fla. Std. Jury Instr. (Crim.) 14.3",
+    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
   },
   "ga-shoplifting": {
     citation: "Ga. Code Ann. § 16-8-14",
@@ -7598,7 +7612,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Idaho retail theft; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/idaho/section-48-701/",
   },
-  "il-shoplifting": { citation: "720 Ill. Comp. Stat. 5/16-25", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K16-25.htm" },
+  "il-shoplifting": { citation: "720 Ill. Comp. Stat. 5/16-25", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K16-25.htm", instructionRef: "IPI-CR 26.01", instructionUrl: "https://www.illinoiscourts.gov/courts/supreme-court/committees/illinois-pattern-jury-instructions-criminal/" },
   "in-shoplifting": {
     citation: "Ind. Code § 35-43-4-2",
     confidence: "medium",
@@ -7668,6 +7682,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Michigan retail fraud in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356c",
+    instructionRef: "CJI2d 22.10",
+    instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
   },
   "mn-shoplifting": {
     citation: "Minn. Stat. § 609.52",
@@ -7760,13 +7776,15 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — North Dakota theft (shoplifting charged under general theft statute); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/north-dakota/section-12-1-23-01/",
   },
-  "oh-shoplifting": { citation: "Ohio Rev. Code Ann. § 2913.02", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2913.02" },
+  "oh-shoplifting": { citation: "Ohio Rev. Code Ann. § 2913.02", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2913.02", instructionRef: "OJI 513.02" },
   "ok-shoplifting": {
     citation: "Okla. Stat. tit. 21 § 1731",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Oklahoma shoplifting; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1731/",
+    instructionRef: "OUJI-CR 5-78",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-78.htm",
   },
   "or-shoplifting": {
     citation: "Or. Rev. Stat. § 164.095",
@@ -7850,6 +7868,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.56.340",
+    instructionRef: "WPIC 70.62",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+70.62",
   },
   "wv-shoplifting": {
     citation: "W. Va. Code § 61-3-34",
@@ -9399,6 +9419,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/806.13",
+    instructionRef: "Fla. Std. Jury Instr. (Crim.) 17.2",
+    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
   },
   "ga-vandalism": {
     citation: "Ga. Code Ann. § 16-7-22",
@@ -9427,6 +9449,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Illinois criminal damage to property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/illinois/chapter-720/act-5/section-5-21-1/",
+    instructionRef: "IPI-CR 27.01",
+    instructionUrl: "https://www.illinoiscourts.gov/courts/supreme-court/committees/illinois-pattern-jury-instructions-criminal/",
   },
   "in-vandalism": {
     citation: "Ind. Code § 35-43-1-2",
@@ -9434,6 +9458,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Indiana criminal mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/indiana/section-35-43-1-2/",
+    instructionRef: "Ind. Model Crim. Jury Instr. 15.2010",
+    instructionUrl: "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
   },
   "ia-vandalism": {
     citation: "Iowa Code § 716.1",
@@ -9495,6 +9521,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Michigan malicious destruction of property; verify against Justia before promoting to high",
     sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-377a",
+    instructionRef: "CJI2d 32.5",
+    instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
   },
   "mn-vandalism": {
     citation: "Minn. Stat. § 609.595",
@@ -9585,13 +9613,15 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — North Dakota criminal mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/north-dakota/section-12-1-21-01/",
   },
-  "oh-vandalism": { citation: "Ohio Rev. Code Ann. § 2909.05", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2909.05" },
+  "oh-vandalism": { citation: "Ohio Rev. Code Ann. § 2909.05", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2909.05", instructionRef: "OJI 509.05" },
   "ok-vandalism": {
     citation: "Okla. Stat. tit. 21 § 1760",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Oklahoma malicious injury to property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1760/",
+    instructionRef: "OUJI-CR 5-68",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-68.htm",
   },
   "or-vandalism": {
     citation: "Or. Rev. Stat. § 164.365",
@@ -9675,6 +9705,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.48.080",
+    instructionRef: "WPIC 58.04",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+58.04",
   },
   "wv-vandalism": {
     citation: "W. Va. Code § 61-3-30",
@@ -9766,6 +9798,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/784.048",
+    instructionRef: "Fla. Std. Jury Instr. (Crim.) 8.6",
+    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
   },
   "ga-harassment": {
     citation: "Ga. Code Ann. § 16-11-39.1",
@@ -9788,13 +9822,15 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Idaho harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/idaho/section-18-6710/",
   },
-  "il-harassment": { citation: "720 Ill. Comp. Stat. 5/26.5-2", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26.5-2.htm" },
+  "il-harassment": { citation: "720 Ill. Comp. Stat. 5/26.5-2", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26.5-2.htm", instructionRef: "IPI-CR 11.47", instructionUrl: "https://www.illinoiscourts.gov/courts/supreme-court/committees/illinois-pattern-jury-instructions-criminal/" },
   "in-harassment": {
     citation: "Ind. Code § 35-45-2-2",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Indiana harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/indiana/section-35-45-2-2/",
+    instructionRef: "Ind. Model Crim. Jury Instr. 17.2010",
+    instructionUrl: "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
   },
   "ia-harassment": {
     citation: "Iowa Code § 708.7",
@@ -9856,6 +9892,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Michigan stalking (harassment charges brought under stalking statute in Michigan); verify against Justia before promoting to high",
     sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-411s",
+    instructionRef: "CJI2d 18.5",
+    instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
   },
   "mn-harassment": {
     citation: "Minn. Stat. § 609.749",
@@ -9946,13 +9984,15 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — North Dakota harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/north-dakota/section-12-1-17-07/",
   },
-  "oh-harassment": { citation: "Ohio Rev. Code Ann. § 2917.21", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2917.21" },
+  "oh-harassment": { citation: "Ohio Rev. Code Ann. § 2917.21", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2917.21", instructionRef: "OJI 517.21" },
   "ok-harassment": {
     citation: "Okla. Stat. tit. 21 § 1172",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Oklahoma harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1172/",
+    instructionRef: "OUJI-CR 4-22",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-22.htm",
   },
   "or-harassment": {
     citation: "Or. Rev. Stat. § 166.065",
@@ -10036,6 +10076,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.46.020",
+    instructionRef: "WPIC 36.52.01",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+36.52.01",
   },
   "wi-harassment": {
     citation: "Wis. Stat. § 947.0125",
@@ -10959,7 +11001,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Delaware loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/delaware/section-1321/",
   },
-  "fl-loitering": { citation: "Fla. Stat. § 856.021", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0856/Sections/0856.021.html" },
+  "fl-loitering": { citation: "Fla. Stat. § 856.021", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0856/Sections/0856.021.html", instructionRef: "Fla. Std. Jury Instr. (Crim.) 29.3", instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/" },
   "ga-loitering": {
     citation: "Ga. Code Ann. § 16-11-36",
     confidence: "medium",
@@ -10981,13 +11023,15 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Idaho loitering (check: Idaho loitering statutes are limited; verify current operative section against Idaho Legislature website before promoting to high)",
     sourceUrl: "https://law.justia.com/codes/idaho/section-18-5901/",
   },
-  "il-loitering": { citation: "720 Ill. Comp. Stat. 5/26-1", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26-1.htm" },
+  "il-loitering": { citation: "720 Ill. Comp. Stat. 5/26-1", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26-1.htm", instructionRef: "IPI-CR 22.01", instructionUrl: "https://www.illinoiscourts.gov/courts/supreme-court/committees/illinois-pattern-jury-instructions-criminal/" },
   "in-loitering": {
     citation: "Ind. Code § 35-45-6-1",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Indiana loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/indiana/section-35-45-6-1/",
+    instructionRef: "Ind. Model Crim. Jury Instr. 17.4010",
+    instructionUrl: "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
   },
   "ia-loitering": {
     citation: "Iowa Code § 723.4",
@@ -11049,6 +11093,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Michigan disorderly person (loitering charged under disorderly person statute in Michigan); verify against Justia before promoting to high",
     sourceUrl: "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-167",
+    instructionRef: "CJI2d 20.5",
+    instructionUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
   },
   "mn-loitering": {
     citation: "Minn. Stat. § 609.725",
@@ -11139,13 +11185,14 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — North Dakota disorderly conduct (ND loitering prosecuted under disorderly conduct); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/north-dakota/section-12-1-31-01/",
   },
-  "oh-loitering": { citation: "Ohio Rev. Code Ann. § 2917.11(A)(5)", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2917.11" },
+  "oh-loitering": { citation: "Ohio Rev. Code Ann. § 2917.11(A)(5)", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2917.11", instructionRef: "OJI 517.11" },
   "ok-loitering": {
     citation: "Okla. Stat. tit. 21 § 1376",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Oklahoma loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1376/",
+    instructionRef: "OUJI-CR 5-40",
   },
   "or-loitering": {
     citation: "Or. Rev. Stat. § 164.675",
@@ -11229,6 +11276,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Washington Revised Code — app.leg.wa.gov",
     sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.84.030",
+    instructionRef: "WPIC 48.04",
+    instructionUrl: "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+48.04",
   },
   "wi-loitering": {
     citation: "Wis. Stat. § 947.02",
@@ -11303,6 +11352,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Oklahoma trespassing; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1835/",
+    instructionRef: "OUJI-CR 5-65",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-65.htm",
   },
 
   // Missing disorderly conduct states
