@@ -210,6 +210,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia and WomensLaw.org — § 5-39-203 Criminal Trespass",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-39-203/",
+    instructionRef: "AMI Crim. 7201",
   },
   "ar-disorderly-conduct": {
     citation: "Ark. Code Ann. § 5-71-207",
@@ -217,6 +218,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Arkansas Code § 5-71-207 — Disorderly Conduct",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-71-207/",
+    instructionRef: "AMI Crim. 9101",
   },
   "ar-public-intoxication": {
     citation: "Ark. Code Ann. § 5-71-212",
@@ -224,6 +226,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Arkansas Code § 5-71-212 — Public Intoxication",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-71-212/",
+    instructionRef: "AMI Crim. 9201",
   },
   "ar-resisting-arrest": {
     citation: "Ark. Code Ann. § 5-54-103",
@@ -231,6 +234,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Arkansas Code § 5-54-103 — Resisting Arrest",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-54-103/",
+    instructionRef: "AMI Crim. 9301",
   },
   "ar-failure-to-appear": {
     citation: "Ark. Code Ann. § 5-54-120",
@@ -238,6 +242,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Arkansas Code § 5-54-120 — Failure to Appear",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-54-120/",
+    instructionRef: "AMI Crim. 9401",
   },
   "ar-petty-theft": {
     citation: "Ark. Code Ann. § 5-36-103",
@@ -245,6 +250,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Arkansas Code § 5-36-103 — Theft of Property (Class A misdemeanor for value $1,000 or less)",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-36-103/",
+    instructionRef: "AMI Crim. 7003",
   },
   "dc-murder-in-the-first-degree": {
     citation: "D.C. Code § 22-2101",
@@ -769,6 +775,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Mississippi Code — § 97-17-97 Trespass",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-17-97/",
+    instructionRef: "Miss. Model JI (Crim.) 22-1",
   },
   "ms-disorderly-conduct": {
     citation: "Miss. Code Ann. § 97-35-7",
@@ -776,6 +783,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Mississippi Code — § 97-35-7 Disorderly Conduct",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-35-7/",
+    instructionRef: "Miss. Model JI (Crim.) 28-10",
   },
   "ms-public-intoxication": {
     citation: "Miss. Code Ann. § 97-29-47",
@@ -783,6 +791,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Mississippi Code — § 97-29-47 Profanity or Drunkenness in Public Place",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-29-47/",
+    instructionRef: "Miss. Model JI (Crim.) 28-20",
   },
   "ms-resisting-arrest": {
     citation: "Miss. Code Ann. § 97-9-73",
@@ -790,6 +799,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Mississippi Code — § 97-9-73 Resisting or Obstructing Arrest",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-9-73/",
+    instructionRef: "Miss. Model JI (Crim.) 24-1",
   },
   "ms-petty-theft": {
     citation: "Miss. Code Ann. § 97-17-43",
@@ -797,6 +807,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Justia Mississippi Code — § 97-17-43 Petit Larceny (under $1,000)",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-17-43/",
+    instructionRef: "Miss. Model JI (Crim.) 12-1",
   },
   "nc-murder-in-the-first-degree": {
     citation: "N.C. Gen. Stat. § 14-17",
@@ -3050,6 +3061,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 199.280 resisting public officer",
     sourceUrl: "https://law.justia.com/codes/nevada/section-199-280/",
+    instructionRef: "Nev. J.I. § 19.05",
   },
   "nv-failure-to-appear": {
     citation: "Nev. Rev. Stat. § 199.335",
@@ -3057,6 +3069,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 199.335 failure to appear after admission to bail",
     sourceUrl: "https://law.justia.com/codes/nevada/section-199-335/",
+    instructionRef: "Nev. J.I. § 19.10",
   },
   "nv-petty-theft": {
     citation: "Nev. Rev. Stat. § 205.240",
@@ -3064,6 +3077,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 205.240 petit larceny",
     sourceUrl: "https://law.justia.com/codes/nevada/section-205-240/",
+    instructionRef: "Nev. J.I. § 15.10",
   },
 
   // — Oregon (confirmed from oregonlegislature.gov) —
@@ -7113,6 +7127,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Arkansas possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-64-419/",
+    instructionRef: "AMI Crim. 6002",
   },
   "ca-possession-of-controlled-substance": {
     citation: "Cal. Health & Saf. Code § 11350",
@@ -7258,6 +7273,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-41-29-139/",
+    instructionRef: "Miss. Model JI (Crim.) 27-10",
   },
   "mo-possession-of-controlled-substance": {
     citation: "Mo. Rev. Stat. § 579.015",
@@ -7558,6 +7574,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Arkansas shoplifting; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-36-116/",
+    instructionRef: "AMI Crim. 7005",
   },
   "ca-shoplifting": {
     citation: "Cal. Penal Code § 459.5",
@@ -7699,6 +7716,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi shoplifting; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-23-93/",
+    instructionRef: "Miss. Model JI (Crim.) 12-5",
   },
   "mo-shoplifting": {
     citation: "Mo. Rev. Stat. § 570.030",
@@ -7933,6 +7951,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Arkansas theft of property (Class B felony = first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-36-103/",
+    instructionRef: "AMI Crim. 7001",
   },
   "ca-grand-theft-in-the-first-degree": {
     citation: "Cal. Penal Code § 487",
@@ -8063,6 +8082,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi grand larceny (value > $1,000); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-17-41/",
+    instructionRef: "Miss. Model JI (Crim.) 12-3",
   },
   "mo-grand-theft-in-the-first-degree": {
     citation: "Mo. Rev. Stat. § 570.030(2)(a)",
@@ -8091,6 +8111,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada grand larceny (Category B felony — value > $3,500 = first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-205-0832/",
+    instructionRef: "Nev. J.I. § 15.20",
   },
   "nh-grand-theft-in-the-first-degree": {
     citation: "N.H. Rev. Stat. Ann. § 637:2",
@@ -8273,6 +8294,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Arkansas theft of property (Class C/D felony = second degree equivalent, value $1,000-$25,000); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-36-103/",
+    instructionRef: "AMI Crim. 7002",
   },
   "co-grand-theft-in-the-second-degree": { citation: "Colo. Rev. Stat. § 18-4-401", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_4/part_4/section_18_4_401" },
   "ct-grand-theft-in-the-second-degree": {
@@ -8395,6 +8417,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi grand larceny (same statute as first degree; Mississippi uses a single grand larceny threshold at value > $1,000); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-17-41/",
+    instructionRef: "Miss. Model JI (Crim.) 12-3",
   },
   "mo-grand-theft-in-the-second-degree": {
     citation: "Mo. Rev. Stat. § 570.030",
@@ -8423,6 +8446,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada grand larceny (Category C felony = second degree equivalent, value $650-$3,500); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-205-0832/",
+    instructionRef: "Nev. J.I. § 15.25",
   },
   "nh-grand-theft-in-the-second-degree": {
     citation: "N.H. Rev. Stat. Ann. § 637:2",
@@ -9389,6 +9413,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Arkansas criminal mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-38-203/",
+    instructionRef: "AMI Crim. 7101",
   },
   "ca-vandalism": {
     citation: "Cal. Penal Code § 594",
@@ -9538,6 +9563,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi malicious mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-17-67/",
+    instructionRef: "Miss. Model JI (Crim.) 22-5",
   },
   "mo-vandalism": {
     citation: "Mo. Rev. Stat. § 569.100",
@@ -9768,6 +9794,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Arkansas harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-71-208/",
+    instructionRef: "AMI Crim. 9001",
   },
   "ca-harassment": {
     citation: "Cal. Penal Code § 653m",
@@ -9909,6 +9936,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi harassing communications; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-29-45/",
+    instructionRef: "Miss. Model JI (Crim.) 28-5",
   },
   "mo-harassment": {
     citation: "Mo. Rev. Stat. § 565.090",
@@ -10497,6 +10525,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-41-29-139/",
+    instructionRef: "Miss. Model JI (Crim.) 27-25",
   },
   "mo-drug-trafficking": {
     citation: "Mo. Rev. Stat. § 579.065",
@@ -10560,6 +10589,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/nevada/section-453-321/",
+    instructionRef: "Nev. JI 205",
   },
   "nh-drug-trafficking": {
     citation: "N.H. Rev. Stat. Ann. § 318-B:26(I)(c)",
