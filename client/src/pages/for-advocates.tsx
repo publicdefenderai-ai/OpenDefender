@@ -167,6 +167,18 @@ export default function ForAdvocates() {
       >
         <ScrollReveal delay={0}>
           <ToolCard
+            Icon={ClipboardList}
+            title="First Contact Intake Checklist"
+            desc="A structured screening tool for the first meeting with a new client. Covers supervision status, immigration exposure, open warrants, housing, mental health, and caregiving. Flags fire automatically for answers that require immediate legal attention — Padilla triggers, active supervision, open warrants."
+            href="/for-advocates/intake-checklist"
+            color="text-violet-600 dark:text-violet-400"
+            bg="bg-violet-50 dark:bg-violet-900/10"
+            accent="#7c3aed"
+            badge="Start here"
+          />
+        </ScrollReveal>
+        <ScrollReveal delay={0.07}>
+          <ToolCard
             Icon={AlertTriangle}
             title="Collateral Consequences Screening"
             desc="Before any plea discussion: screen for immigration status impact, housing eligibility, professional licensing bars, public benefits loss, parental rights, and sex offender registration requirements. Padilla v. Kentucky makes this a constitutional obligation for defense counsel."
@@ -174,10 +186,9 @@ export default function ForAdvocates() {
             color="text-red-600 dark:text-red-400"
             bg="bg-red-50 dark:bg-red-900/10"
             accent="#dc2626"
-            badge="Do first"
           />
         </ScrollReveal>
-        <ScrollReveal delay={0.07}>
+        <ScrollReveal delay={0.14}>
           <ToolCard
             Icon={Gavel}
             title="Bail & Pretrial Release Preparation"
@@ -188,7 +199,7 @@ export default function ForAdvocates() {
             accent="#d97706"
           />
         </ScrollReveal>
-        <ScrollReveal delay={0.14}>
+        <ScrollReveal delay={0.21}>
           <ToolCard
             Icon={Scale}
             title="Diversion Programs"
@@ -400,11 +411,6 @@ export default function ForAdvocates() {
             <p className="text-sm font-semibold text-foreground mb-5">Tools being built specifically for advocates</p>
             <div className="grid sm:grid-cols-2 gap-3">
               {[
-                {
-                  Icon: ClipboardList,
-                  title: "First Contact Intake Checklist",
-                  desc: "Standardized intake screening to surface immigration status, housing, open warrants, supervision status, and mental health history at first meeting.",
-                },
                 {
                   Icon: Gavel,
                   title: "Pretrial Release Arguments",
