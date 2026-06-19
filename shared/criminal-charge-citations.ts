@@ -7943,7 +7943,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.014",
     instructionRef: "FSJI 14.1",
-    instructionUrl: "https://www-media.floridabar.org/uploads/2023/07/14.1.docx",
+    instructionUrl: "https://www-media.floridabar.org/uploads/2025/02/14.1.docx",
   },
   "ga-grand-theft-in-the-first-degree": {
     citation: "Ga. Code Ann. § 16-8-12",
@@ -8275,7 +8275,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.014",
     instructionRef: "FSJI 14.1",
-    instructionUrl: "https://www-media.floridabar.org/uploads/2023/07/14.1.docx",
+    instructionUrl: "https://www-media.floridabar.org/uploads/2025/02/14.1.docx",
   },
   "ga-grand-theft-in-the-second-degree": {
     citation: "Ga. Code Ann. § 16-8-12",
@@ -13739,7 +13739,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-assault-on-peace-officer": { citation: "Colo. Rev. Stat. § 18-3-203(1)(f)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/colorado/section-18-3-203/" },
   "ct-assault-on-peace-officer": { citation: "Conn. Gen. Stat. § 53a-167c", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/connecticut/section-53a-167c/", instructionRef: "CT JI 6.6-1",},
   "de-assault-on-peace-officer": { citation: "Del. Code Ann. tit. 11, § 1102", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/delaware/section-1102/" },
-  "fl-assault-on-peace-officer": { citation: "Fla. Stat. § 784.07", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/784.07", instructionRef: "FSJI 8.11", instructionUrl: "https://www-media.floridabar.org/uploads/2024/03/8.11.docx" },
+  "fl-assault-on-peace-officer": { citation: "Fla. Stat. § 784.07", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/784.07", instructionRef: "FSJI 8.11", instructionUrl: "https://www-media.floridabar.org/uploads/2026/01/8.11.docx" },
   "ga-assault-on-peace-officer": { citation: "Ga. Code Ann. § 16-5-23(e)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/georgia/section-16-5-23/" },
   "hi-assault-on-peace-officer": { citation: "Haw. Rev. Stat. § 707-712.5", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/hawaii/section-707-712-5/", instructionRef: "Hawaii CJIS 10.04",},
   "id-assault-on-peace-officer": { citation: "Idaho Code § 18-915", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/idaho/section-18-915/" },
@@ -18810,7 +18810,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "co-possession-marijuana-public": { citation: "Colo. Rev. Stat. § 18-18-406(3)(a)", confidence: "high", lastVerified: "2026-06", source: "Colorado Revised Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/co/stat/title_18/article_18/part_4/section_18_18_406" },
   "co-driving-under-restraint": { citation: "Colo. Rev. Stat. § 42-2-138", confidence: "medium", lastVerified: "2026-04", source: "Training data — Colorado driving under restraint", sourceUrl: "https://law.justia.com/codes/colorado/section-42-2-138/" },
 
-  "fl-grand-theft-in-the-third-degree": { citation: "Fla. Stat. § 812.014(2)(c)", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.014", instructionRef: "FSJI 14.1", instructionUrl: "https://www-media.floridabar.org/uploads/2023/07/14.1.docx" },
+  "fl-grand-theft-in-the-third-degree": { citation: "Fla. Stat. § 812.014(2)(c)", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.014", instructionRef: "FSJI 14.1", instructionUrl: "https://www-media.floridabar.org/uploads/2025/02/14.1.docx" },
   "fl-distribution-of-controlled-substance": { citation: "Fla. Stat. § 893.13(1)", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/893.13" },
   "fl-petit-theft": { citation: "Fla. Stat. § 812.014(3)", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.014" },
   "fl-battery": { citation: "Fla. Stat. § 784.03", confidence: "high", lastVerified: "2026-04", source: "Florida Criminal Punishment Code § 921.0022 (2024)", sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/784.03" },
