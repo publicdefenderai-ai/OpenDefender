@@ -1601,6 +1601,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Pennsylvania Commission on Sentencing — OGS § 303.15",
     sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3921",
+    instructionRef: "Pa. SSJI (Crim.) 15.3921",
   },
 
   // — Rhode Island —
@@ -16047,7 +16048,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "oh-theft-by-receiving": { citation: "Ohio Rev. Code Ann. § 2913.51", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2913.51" },
   "ok-theft-by-receiving": { citation: "Okla. Stat. tit. 21, § 1713", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma concealing stolen property", sourceUrl: "https://law.justia.com/codes/oklahoma/section-1713/" },
   "or-theft-by-receiving": { citation: "Or. Rev. Stat. § 164.095", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon theft by receiving", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html" },
-  "pa-theft-by-receiving": { citation: "18 Pa. Cons. Stat. § 3925", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3925" },
+  "pa-theft-by-receiving": { citation: "18 Pa. Cons. Stat. § 3925", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3925", instructionRef: "Pa. SSJI (Crim.) 15.3925" },
   "ri-theft-by-receiving": { citation: "R.I. Gen. Laws § 11-41-2", confidence: "medium", lastVerified: "2026-04", source: "Training data — Rhode Island receiving stolen goods", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-41-2/" },
   "sc-theft-by-receiving": { citation: "S.C. Code Ann. § 16-13-180", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina receiving stolen goods", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-13-180/" },
   "sd-theft-by-receiving": { citation: "S.D. Codified Laws § 22-30A-7", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Dakota theft by receiving stolen property", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-30a-7/" },
@@ -18745,7 +18746,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wy-criminal-damage-misdemeanor": { citation: "Wyo. Stat. Ann. § 6-3-201", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming property destruction misdemeanor", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-3-201/" },
 
   "il-retail-theft": { citation: "720 Ill. Comp. Stat. 5/16-25", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K16-25.htm" },
-  "pa-retail-theft": { citation: "18 Pa. Cons. Stat. § 3929", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3929" },
+  "pa-retail-theft": { citation: "18 Pa. Cons. Stat. § 3929", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3929", instructionRef: "Pa. SSJI (Crim.) 15.3929" },
   "wi-retail-theft": { citation: "Wis. Stat. § 943.50", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wisconsin retail theft", sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-50/" },
 
   "il-criminal-damage-to-property": { citation: "720 Ill. Comp. Stat. 5/21-1", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K21-1.htm" },
