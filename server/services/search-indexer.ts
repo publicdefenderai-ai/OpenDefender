@@ -9,6 +9,78 @@ import { devLog } from "../utils/dev-logger";
 
 let searchIndex: SearchDocument[] = [];
 let indexReady = false;
+let fuzzyVocabulary: Map<string, number> = new Map();
+
+// Levenshtein edit distance — O(m*n) DP, optimized to a single row.
+// Returns 99 early when length difference alone exceeds maxDist (avoids full computation).
+function levenshtein(a: string, b: string): number {
+  if (a === b) return 0;
+  const m = a.length, n = b.length;
+  if (m === 0) return n;
+  if (n === 0) return m;
+  if (Math.abs(m - n) > 3) return 99;
+  const row: number[] = Array.from({ length: n + 1 }, (_, i) => i);
+  for (let i = 1; i <= m; i++) {
+    let prev = row[0];
+    row[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const temp = row[j];
+      row[j] = a[i - 1] === b[j - 1] ? prev : 1 + Math.min(prev, row[j], row[j - 1]);
+      prev = temp;
+    }
+  }
+  return row[n];
+}
+
+// Build a frequency-weighted vocabulary from high-value fields of every document.
+// Called once at the end of buildSearchIndex().
+function buildFuzzyVocabulary(): void {
+  fuzzyVocabulary = new Map();
+  for (const doc of searchIndex) {
+    const sources: string[] = [
+      doc.title,
+      ...(doc.tags || []),
+      ...(doc.aliases || []),
+      ...(doc.headings || []),
+    ];
+    for (const source of sources) {
+      for (const word of normalizeText(source).split(' ')) {
+        if (word.length >= 3 && !STOP_WORDS.has(word)) {
+          fuzzyVocabulary.set(word, (fuzzyVocabulary.get(word) || 0) + 1);
+        }
+      }
+    }
+  }
+}
+
+// For each direct query term not found in the vocabulary, find the closest
+// vocabulary word within an edit-distance budget that scales with word length.
+// Returns a Map of { originalNormalizedTerm → correctedWord }.
+function tryFuzzyCorrect(terms: string[]): Map<string, string> {
+  const corrections = new Map<string, string>();
+  for (const term of terms) {
+    const nt = normalizeText(term);
+    if (nt.length < 4) continue;
+    if (fuzzyVocabulary.has(nt)) continue;
+    const maxDist = nt.length >= 8 ? 2 : 1;
+    let bestWord = '';
+    let bestDist = maxDist + 1;
+    let bestFreq = 0;
+    for (const [vocabWord, freq] of fuzzyVocabulary) {
+      if (Math.abs(vocabWord.length - nt.length) > maxDist) continue;
+      const dist = levenshtein(nt, vocabWord);
+      if (dist < bestDist || (dist === bestDist && freq > bestFreq)) {
+        bestDist = dist;
+        bestWord = vocabWord;
+        bestFreq = freq;
+      }
+    }
+    if (bestWord && bestDist <= maxDist) {
+      corrections.set(nt, bestWord);
+    }
+  }
+  return corrections;
+}
 
 function normalizeText(text: string): string {
   return text
@@ -1226,47 +1298,63 @@ export function buildSearchIndex(): void {
   devLog('search', `Indexed ${sitePages.length} site pages`);
 
   searchIndex = documents;
+  buildFuzzyVocabulary();
   indexReady = true;
   const elapsed = Date.now() - startTime;
-  devLog('search', `Search index built: ${documents.length} documents in ${elapsed}ms`);
+  devLog('search', `Search index built: ${documents.length} documents, ${fuzzyVocabulary.size} vocab words in ${elapsed}ms`);
+}
+
+function runScoring(
+  docs: SearchDocument[],
+  directTerms: string[],
+  synonymTerms: string[],
+  filters: SearchQuery['filters'],
+  language: 'en' | 'es' | 'zh'
+): SearchResult[] {
+  const out: SearchResult[] = [];
+  const MIN_SCORE_THRESHOLD = 15;
+  for (const doc of docs) {
+    if (filters?.types && !filters.types.includes(doc.type)) continue;
+    if (filters?.jurisdiction && doc.jurisdiction && doc.jurisdiction !== filters.jurisdiction) continue;
+    const { score, matchedTerms } = calculateScore(doc, directTerms, synonymTerms, language);
+    if (score >= MIN_SCORE_THRESHOLD) {
+      const content = language === 'zh' && doc.contentZh ? doc.contentZh :
+                      language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
+      out.push({ document: doc, score, highlights: [{ field: 'content', snippet: generateHighlight(content, matchedTerms) }], matchedTerms });
+    }
+  }
+  out.sort((a, b) => b.score - a.score);
+  return out;
 }
 
 export function search(query: SearchQuery): SearchResponse {
   const startTime = Date.now();
-  
+
   if (!indexReady) {
     buildSearchIndex();
   }
 
   const expandedQuery = expandSynonyms(query.query);
-  const results: SearchResult[] = [];
+  let results = runScoring(searchIndex, expandedQuery.directTerms, expandedQuery.synonymTerms, query.filters, query.language);
+  let correctedQuery: string | undefined;
 
-  for (const doc of searchIndex) {
-    if (query.filters?.types && !query.filters.types.includes(doc.type)) {
-      continue;
-    }
-    if (query.filters?.jurisdiction && doc.jurisdiction && doc.jurisdiction !== query.filters.jurisdiction) {
-      continue;
-    }
-
-    const { score, matchedTerms } = calculateScore(doc, expandedQuery.directTerms, expandedQuery.synonymTerms, query.language);
-    
-    const MIN_SCORE_THRESHOLD = 15;
-    if (score >= MIN_SCORE_THRESHOLD) {
-      const content = query.language === 'zh' && doc.contentZh ? doc.contentZh :
-                      query.language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
-      const highlight = generateHighlight(content, matchedTerms);
-      
-      results.push({
-        document: doc,
-        score,
-        highlights: [{ field: 'content', snippet: highlight }],
-        matchedTerms,
-      });
+  // Fuzzy typo correction: only fires when the primary pass found nothing.
+  // For each query word that isn't in the vocabulary, find the closest match
+  // within an edit-distance budget, then re-run scoring with corrected terms.
+  if (results.length === 0 && fuzzyVocabulary.size > 0) {
+    const corrections = tryFuzzyCorrect(expandedQuery.directTerms);
+    if (corrections.size > 0) {
+      let corrected = normalizeText(query.query);
+      for (const [original, replacement] of corrections) {
+        corrected = corrected.replace(new RegExp(`\\b${escapeRegex(original)}\\b`, 'g'), replacement);
+      }
+      if (corrected !== normalizeText(query.query)) {
+        correctedQuery = corrected;
+        const correctedExpanded = expandSynonyms(corrected);
+        results = runScoring(searchIndex, correctedExpanded.directTerms, correctedExpanded.synonymTerms, query.filters, query.language);
+      }
     }
   }
-
-  results.sort((a, b) => b.score - a.score);
 
   // All known types in a stable fallback order (charges/mock_qa always last)
   const ALL_TYPES: SearchContentType[] = [
@@ -1343,6 +1431,7 @@ export function search(query: SearchQuery): SearchResponse {
     groupedResults,
     suggestions: suggestions.slice(0, 5),
     searchTimeMs,
+    correctedQuery,
   };
 }
 

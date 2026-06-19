@@ -42,6 +42,7 @@ export interface SearchResponse {
   groupedResults: Record<SearchContentType, SearchResult[]>;
   suggestions: string[];
   searchTimeMs: number;
+  correctedQuery?: string;
 }
 
 export interface SearchQuery {

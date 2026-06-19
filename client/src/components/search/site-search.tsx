@@ -296,7 +296,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 
           {hasResults && (
             <ScrollArea className="h-[460px]">
-              <div className="px-4 pt-3 pb-2">
+              <div className="px-4 pt-3 pb-1">
                 <p className="text-xs text-muted-foreground">
                   {language === 'es'
                     ? `${data!.totalCount} resultados · ${data!.searchTimeMs}ms`
@@ -304,6 +304,14 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                     ? `${data!.totalCount} 个结果 · ${data!.searchTimeMs}ms`
                     : `${data!.totalCount} results · ${data!.searchTimeMs}ms`}
                 </p>
+                {data!.correctedQuery && (
+                  <p className="text-xs mt-0.5">
+                    <span className="text-muted-foreground">
+                      {language === 'es' ? 'Mostrando resultados para ' : language === 'zh' ? '显示以下内容的结果：' : 'Showing results for '}
+                    </span>
+                    <span className="font-semibold text-foreground italic">{data!.correctedQuery}</span>
+                  </p>
+                )}
               </div>
 
               <div id="search-results" role="listbox" className="px-4 pb-4 space-y-5">
