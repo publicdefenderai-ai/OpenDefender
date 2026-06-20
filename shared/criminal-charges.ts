@@ -142,17 +142,25 @@ export function getInstructionRef(charge: CriminalCharge): string | null {
 }
 
 /**
+ * Official courts.ca.gov landing page for CALCRIM (California Criminal Jury Instructions).
+ * There are no stable per-instruction URLs on courts.ca.gov — all CALCRIM instructions
+ * are published via the general landing page which links to the full booklet PDFs.
+ * Verified live: https://www.courts.ca.gov/partners/california-jury-instructions
+ */
+const CALCRIM_LANDING_URL = "https://www.courts.ca.gov/partners/california-jury-instructions";
+
+/**
  * Returns a government-hosted URL to the Pattern Jury Instruction page for a charge,
  * if set in the overlay (e.g., nycourts.gov PDF for NY, njcourts.gov PDF for NJ).
  *
  * Preferred over sourceUrl for "View Law" links when present — instruction pages are
  * maintained by state courts, explicitly cite every statute element, and are always
- * on .gov domains. For CA, use buildCaLeginfoUrlFromCitation() which builds leginfo
- * URLs from the citation text directly.
+ * on .gov domains.
  *
  * Jurisdictions with instructionUrl set: NY (nycourts.gov PDFs), NJ (njcourts.gov PDFs).
+ * CA CALCRIM charges: instructionUrl is derived dynamically from CALCRIM_LANDING_URL
+ *   (per-instruction URLs do not exist on courts.ca.gov; the landing page links to booklets).
  * Jurisdictions with instructionRef text only (no instructionUrl):
- *   - CA: leginfo statute URL built from citation text via buildCaLeginfoUrlFromCitation()
  *   - AZ: azleg.gov statute URL in sourceUrl (no per-instruction RAJI URL publicly available)
  *   - GA: O.C.G.A. has no public .gov per-section URL; Justia sourceUrl blocked by design;
  *          GPJI instructionRef text is shown in UI — no View Law link is correct behavior
@@ -160,7 +168,17 @@ export function getInstructionRef(charge: CriminalCharge): string | null {
  *          COLJI instructionRef text is shown in UI — no View Law link is correct behavior
  */
 export function getInstructionUrl(charge: CriminalCharge): string | null {
-  return CHARGE_CITATIONS[charge.id]?.instructionUrl ?? null;
+  const explicit = CHARGE_CITATIONS[charge.id]?.instructionUrl;
+  if (explicit) return explicit;
+
+  // CA CALCRIM: return the official courts.ca.gov CALCRIM landing page for any charge
+  // that has a CALCRIM instructionRef — courts.ca.gov has no stable per-instruction URLs.
+  const ref = CHARGE_CITATIONS[charge.id]?.instructionRef;
+  if (ref && ref.startsWith('CALCRIM') && charge.id.startsWith('ca-')) {
+    return CALCRIM_LANDING_URL;
+  }
+
+  return null;
 }
 
 /**
