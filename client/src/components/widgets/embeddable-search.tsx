@@ -46,6 +46,8 @@ interface SearchResult {
     type: string;
     title: string;
     url: string;
+    instructionRef?: string;
+    instructionUrl?: string;
   };
   score: number;
   highlights: { field: string; snippet: string }[];
@@ -137,6 +139,28 @@ export function EmbeddableSearch({
                   {result.highlights[0] && (
                     <div className={`text-xs ${mutedClass} truncate`}>
                       {result.highlights[0].snippet}
+                    </div>
+                  )}
+                  {result.document.type === "charge" && result.document.instructionRef && (
+                    <div className="mt-1">
+                      {result.document.instructionUrl ? (
+                        <a
+                          href={result.document.instructionUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1 text-xs font-medium text-blue-700 bg-blue-50 border border-blue-200 rounded px-1.5 py-0.5 hover:bg-blue-100 transition-colors"
+                          aria-label={`Jury instruction: ${result.document.instructionRef}`}
+                        >
+                          <svg className="h-3 w-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                          {result.document.instructionRef}
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center gap-1 text-xs font-medium text-blue-700 bg-blue-50 border border-blue-200 rounded px-1.5 py-0.5">
+                          <svg className="h-3 w-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                          {result.document.instructionRef}
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>

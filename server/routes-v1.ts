@@ -3,7 +3,7 @@ import { Router as ExpressRouter } from "express";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { search, getSearchIndexStats } from "./services/search-indexer";
-import { criminalCharges, getChargeById } from "../shared/criminal-charges";
+import { criminalCharges, getChargeById, getInstructionRef, getInstructionUrl } from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
 import { openApiSpec } from "./openapi";
 import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
@@ -113,7 +113,15 @@ export function registerV1Routes(app: Express): void {
       }
 
       const total = filtered.length;
-      const data = filtered.slice(offset, offset + limit);
+      const data = filtered.slice(offset, offset + limit).map(charge => {
+        const instructionRef = getInstructionRef(charge);
+        const instructionUrl = getInstructionUrl(charge);
+        return {
+          ...charge,
+          ...(instructionRef ? { instructionRef } : {}),
+          ...(instructionUrl ? { instructionUrl } : {}),
+        };
+      });
 
       res.json({
         success: true,
@@ -132,7 +140,16 @@ export function registerV1Routes(app: Express): void {
       if (!charge) {
         return res.status(404).json({ success: false, error: 'Charge not found' });
       }
-      res.json({ success: true, data: charge });
+      const instructionRef = getInstructionRef(charge);
+      const instructionUrl = getInstructionUrl(charge);
+      res.json({
+        success: true,
+        data: {
+          ...charge,
+          ...(instructionRef ? { instructionRef } : {}),
+          ...(instructionUrl ? { instructionUrl } : {}),
+        }
+      });
     } catch (error) {
       devLog('api-v1', `Charge lookup error: ${error}`);
       res.status(500).json({ success: false, error: 'Failed to retrieve charge' });

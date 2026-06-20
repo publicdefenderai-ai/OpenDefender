@@ -23,6 +23,8 @@ export interface SearchDocument {
   jurisdiction?: string;
   url: string;
   score?: number;
+  instructionRef?: string;
+  instructionUrl?: string;
 }
 
 export interface SearchResult {

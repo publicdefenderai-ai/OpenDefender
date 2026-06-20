@@ -3,7 +3,7 @@ import { LEGAL_SYNONYMS } from "@shared/search-types";
 import { legalGlossaryTerms } from "../../client/src/lib/legal-glossary-data";
 import { diversionPrograms } from "../../client/src/lib/diversion-programs-data";
 import { expungementRules } from "../../client/src/lib/expungement-data";
-import { criminalCharges } from "@shared/criminal-charges";
+import { criminalCharges, getInstructionRef, getInstructionUrl } from "@shared/criminal-charges";
 import { GENERIC_MOCK_QA, PROCEEDING_LABELS, type ProceedingType } from "@shared/mock-qa";
 import { devLog } from "../utils/dev-logger";
 
@@ -313,6 +313,8 @@ export function buildSearchIndex(): void {
   devLog('search', `Indexed ${legalGlossaryTerms.length} glossary terms`);
 
   for (const charge of criminalCharges) {
+    const instructionRef = getInstructionRef(charge);
+    const instructionUrl = getInstructionUrl(charge);
     documents.push({
       id: `charge-${charge.id}`,
       type: 'charge',
@@ -324,6 +326,8 @@ export function buildSearchIndex(): void {
       aliases: [],
       jurisdiction: charge.jurisdiction,
       url: `/case-guidance?charge=${encodeURIComponent(charge.name)}`,
+      ...(instructionRef ? { instructionRef } : {}),
+      ...(instructionUrl ? { instructionUrl } : {}),
     });
   }
   devLog('search', `Indexed ${criminalCharges.length} criminal charges`);
