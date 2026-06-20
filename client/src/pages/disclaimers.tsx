@@ -164,7 +164,7 @@ export default function Disclaimers() {
                   <strong className="text-foreground">The Case Roadmap</strong> also includes a civil emergency triage step that asks categorical questions about active situations (housing, employment, dependents, immigration). These answers follow the same session-only path as all other Case Roadmap inputs: held in server memory, auto-deleted in 24 hours, never written to a database.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  AI-generated guidance is not a substitute for advice from a licensed attorney. We validate responses against legal databases, but AI can make mistakes. Consult a qualified attorney before making legal decisions.
+                  AI-generated guidance is not a substitute for advice from a licensed attorney. We cross-reference responses with legal databases to improve accuracy, but AI can make mistakes. Consult a qualified attorney before making legal decisions.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   Before your inputs reach the AI, we automatically scan for and remove personal information (names, phone numbers, addresses, Social Security numbers). See our{" "}

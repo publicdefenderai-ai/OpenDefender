@@ -587,7 +587,7 @@ export default function CaseGuidance() {
       streamProgress < 20 ? 'Analyzing your case details...' :
       streamProgress < 55 ? 'Writing your Case Roadmap...' :
       streamProgress < 88 ? 'Finalizing recommendations...' :
-      streamProgress < 100 ? 'Reviewing for legal accuracy...' :
+      streamProgress < 100 ? 'Cross-referencing with legal sources...' :
       'Almost done...';
 
     return (

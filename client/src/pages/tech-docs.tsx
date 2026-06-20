@@ -576,7 +576,7 @@ export default function TechDocs() {
                 </p>
                 <p>
                   <strong className="text-foreground">AI role:</strong> Claude generates the structured output (rights list, action items, deadlines, resources) for a given jurisdiction/charge/stage combination.
-                  Output is validated against the statute database before display. A rule-based fallback engine activates when the AI is unavailable.
+                  Output is cross-referenced against the statute database before display. A rule-based fallback engine activates when the AI is unavailable.
                 </p>
                 <p>
                   <strong className="text-foreground">Privacy:</strong> No case input is persisted. Session data is held in temporary server memory and auto-deleted within 24 hours.
@@ -670,7 +670,7 @@ export default function TechDocs() {
                   <div className="border-l-2 border-teal-400 pl-4 space-y-1">
                     <p className="font-medium text-foreground">Statute database check (Case Roadmap)</p>
                     <p>
-                      Every statutory citation in Case Roadmap output is cross-referenced against the database of 5,956 verified statutes across 51 jurisdictions (all 50 states + DC).
+                      Statutory citations in Case Roadmap output are cross-referenced against a database of 5,956 statute records spanning 51 jurisdictions (all 50 states + DC).
                       The check verifies that cited code sections exist and that the AI's description of the penalty or element is consistent with the statute's text.
                       Output that fails this check triggers a "requires confirmation" banner rather than being suppressed.
                     </p>

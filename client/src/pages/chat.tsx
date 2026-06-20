@@ -1054,8 +1054,8 @@ export default function ChatPage() {
     // Add confidence badge
     const stateName = state.caseInfo.stateName || state.caseInfo.state;
     const verificationBadge = stateName 
-      ? t('chat.messages.verifiedAgainst', { state: stateName, defaultValue: `✓ Verified against ${stateName} criminal statutes` })
-      : t('chat.messages.verifiedGeneric', '✓ Verified against official criminal statutes');
+      ? t('chat.messages.verifiedAgainst', { state: stateName, defaultValue: `✓ Cross-referenced with ${stateName} criminal statutes` })
+      : t('chat.messages.verifiedGeneric', '✓ Cross-referenced with official criminal statutes');
     
     formattedContent += `\n\n---\n*${verificationBadge}*`;
     

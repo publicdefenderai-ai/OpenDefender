@@ -1102,7 +1102,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           <div className="flex-1">
             <p className="text-sm text-slate-700 dark:text-slate-300" data-testid="text-validation-reassurance">
               {t('guidance.validation.reassurance', 
-                `This guidance is based on ${guidance.caseData.jurisdiction.toUpperCase()} criminal statutes and verified legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
+                `This guidance is based on ${guidance.caseData.jurisdiction.toUpperCase()} criminal statutes and publicly available legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
               )}
             </p>
             
@@ -1117,7 +1117,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     data-testid="btn-show-verification-details"
                   >
                     <ChevronRight className="h-3 w-3 mr-1 transition-transform group-data-[state=open]:rotate-90" />
-                    {t('guidance.validation.showDetails', 'How we verified this')}
+                    {t('guidance.validation.showDetails', 'How this guidance was sourced')}
                   </Button>
                 </CollapsibleTrigger>
                 <a
@@ -1133,11 +1133,11 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   <div className="space-y-1.5">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-3.5 w-3.5 text-green-500" />
-                      <span>{t('guidance.validation.checkedStatutes', 'Verified against state criminal statutes')}</span>
+                      <span>{t('guidance.validation.checkedStatutes', 'Cross-referenced with state criminal statutes')}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-3.5 w-3.5 text-green-500" />
-                      <span>{t('guidance.validation.checkedPenalties', 'Cross-referenced sentencing guidelines')}</span>
+                      <span>{t('guidance.validation.checkedPenalties', 'Cross-referenced with published sentencing guidelines')}</span>
                     </div>
                     {guidance.validation.precedents && guidance.validation.precedents.length > 0 ? (
                       <div className="flex items-center gap-2">
