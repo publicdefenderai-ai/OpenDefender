@@ -538,7 +538,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                     </button>
                                   </TooltipTrigger>
                                   <TooltipContent side="top" className="max-w-xs text-xs">
-                                    These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.
+                                    {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
                                   </TooltipContent>
                                 </Tooltip>
                               </TooltipProvider>

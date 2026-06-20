@@ -2059,6 +2059,7 @@ export default {
         "showMore": "显示更多{{count}}项指控...",
         "hasAttorneyLabel": "我已经有律师或公设辩护人",
         "juryInstruction": "官方陪审团指令",
+        "juryInstructionTooltip": "这些是陪审团在裁决您的案件时必须遵循的确切法律标准。它们说明了检察官对每项指控必须证明的内容。",
         "back": "返回",
         "continue": "继续"
       },
