@@ -3555,6 +3555,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "high",
     lastVerified: "2026-04",
     source: "GovInfo USCODE structured endpoint — verified 2026-04",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.74",
   
     sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1113&edition=prelim",
   },
@@ -10964,6 +10965,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "high",
     lastVerified: "2026-04",
     source: "GovInfo USCODE structured endpoint — verified 2026-04",
+    instructionRef: "9th Cir. Model Crim. Instr. § 14.1",
   
     sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section841&edition=prelim",
   },
@@ -11810,30 +11812,35 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa murder; territory codes inconsistently published online — verify manually before promoting to medium",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.70",
   },
   "gu-murder-in-the-first-degree": {
     citation: "9 GCA § 16.10",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam criminal homicide; territory codes inconsistently published online — verify manually before promoting to medium",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.70",
   },
   "mp-murder-in-the-first-degree": {
     citation: "6 CMC § 1301",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI murder; territory codes inconsistently published online — verify manually before promoting to medium",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.70",
   },
   "pr-murder-in-the-first-degree": {
     citation: "P.R. Laws Ann. tit. 33, § 4733",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico murder in the first degree; territory codes inconsistently published online — verify manually before promoting to medium",
+    instructionRef: "P.R. Instr. al Jurado (Asesinato en Primer Grado)",
   },
   "vi-murder-in-the-first-degree": {
     citation: "V.I. Code Ann. tit. 14, § 921",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands murder; territory codes inconsistently published online — verify manually before promoting to medium",
+    instructionRef: "3d Cir. Model Crim. JI § 6.17",
   },
 
   // aggravated-assault — territories
@@ -11842,30 +11849,35 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa aggravated assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "gu-aggravated-assault": {
     citation: "9 GCA § 19.20",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam aggravated assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "mp-aggravated-assault": {
     citation: "6 CMC § 1202",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "pr-aggravated-assault": {
     citation: "P.R. Laws Ann. tit. 33, § 4737",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico aggravated assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "P.R. Instr. al Jurado (Agresión Grave)",
   },
   "vi-aggravated-assault": {
     citation: "V.I. Code Ann. tit. 14, § 297",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "3d Cir. Model Crim. JI § 6.21",
   },
 
   // domestic-violence-assault — territories
@@ -11874,30 +11886,35 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa domestic violence; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "gu-domestic-violence-assault": {
     citation: "9 GCA § 30.10",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam domestic violence; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "mp-domestic-violence-assault": {
     citation: "6 CMC § 1302",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI domestic violence; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "pr-domestic-violence-assault": {
     citation: "P.R. Laws Ann. tit. 8, § 631",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico domestic violence; territory codes inconsistently published online — verify manually",
+    instructionRef: "P.R. Instr. al Jurado (Violencia Doméstica)",
   },
   "vi-domestic-violence-assault": {
     citation: "V.I. Code Ann. tit. 16, § 97",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands domestic violence; territory codes inconsistently published online — verify manually",
+    instructionRef: "3d Cir. Model Crim. JI § 6.21",
   },
 
   // rape-in-the-first-degree — territories
@@ -11906,30 +11923,35 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa rape / sexual assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.140",
   },
   "gu-rape-in-the-first-degree": {
     citation: "9 GCA § 25.15",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam criminal sexual conduct first degree; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.140",
   },
   "mp-rape-in-the-first-degree": {
     citation: "6 CMC § 1302(a)",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI sexual assault first degree; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.140",
   },
   "pr-rape-in-the-first-degree": {
     citation: "P.R. Laws Ann. tit. 33, § 4770",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico sexual assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "P.R. Instr. al Jurado (Agresión Sexual)",
   },
   "vi-rape-in-the-first-degree": {
     citation: "V.I. Code Ann. tit. 14, § 1699",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands rape first degree; territory codes inconsistently published online — verify manually",
+    instructionRef: "3d Cir. Model Crim. JI § 6.25",
   },
 
   // sexual-assault-in-the-first-degree — territories
@@ -11938,30 +11960,35 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa sexual assault first degree; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.140",
   },
   "gu-sexual-assault-in-the-first-degree": {
     citation: "9 GCA § 25.15",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam criminal sexual conduct first degree; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.140",
   },
   "mp-sexual-assault-in-the-first-degree": {
     citation: "6 CMC § 1302(a)",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI sexual assault; territory codes inconsistently published online — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.140",
   },
   "pr-sexual-assault-in-the-first-degree": {
     citation: "P.R. Laws Ann. tit. 33, § 4770",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico sexual assault first degree; territory codes inconsistently published online — verify manually",
+    instructionRef: "P.R. Instr. al Jurado (Agresión Sexual)",
   },
   "vi-sexual-assault-in-the-first-degree": {
     citation: "V.I. Code Ann. tit. 14, § 1699",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands sexual assault first degree; territory codes inconsistently published online — verify manually",
+    instructionRef: "3d Cir. Model Crim. JI § 6.25",
   },
 
   // murder-in-the-second-degree / voluntary-manslaughter / involuntary-manslaughter — territories
@@ -11970,90 +11997,105 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa murder (territory uses a single homicide statute); territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.71",
   },
   "gu-murder-in-the-second-degree": {
     citation: "9 GCA § 16.10",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam criminal homicide; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.71",
   },
   "mp-murder-in-the-second-degree": {
     citation: "6 CMC § 1301",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI murder; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.71",
   },
   "pr-murder-in-the-second-degree": {
     citation: "P.R. Laws Ann. tit. 33, § 4734",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico murder second degree; territory codes inconsistently published — verify manually",
+    instructionRef: "P.R. Instr. al Jurado (Asesinato en Segundo Grado)",
   },
   "vi-murder-in-the-second-degree": {
     citation: "V.I. Code Ann. tit. 14, § 922",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands murder second degree; territory codes inconsistently published — verify manually",
+    instructionRef: "3d Cir. Model Crim. JI § 6.18",
   },
   "as-voluntary-manslaughter": {
     citation: "Am. Samoa Code Ann. § 46.3502",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.72",
   },
   "gu-voluntary-manslaughter": {
     citation: "9 GCA § 16.30",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam voluntary manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.72",
   },
   "mp-voluntary-manslaughter": {
     citation: "6 CMC § 1302(b)",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.72",
   },
   "pr-voluntary-manslaughter": {
     citation: "P.R. Laws Ann. tit. 33, § 4736",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "P.R. Instr. al Jurado (Homicidio Voluntario)",
   },
   "vi-voluntary-manslaughter": {
     citation: "V.I. Code Ann. tit. 14, § 924",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "3d Cir. Model Crim. JI § 6.19",
   },
   "as-involuntary-manslaughter": {
     citation: "Am. Samoa Code Ann. § 46.3503",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa negligent homicide; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.73",
   },
   "gu-involuntary-manslaughter": {
     citation: "9 GCA § 16.40",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam involuntary manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.73",
   },
   "mp-involuntary-manslaughter": {
     citation: "6 CMC § 1303",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI negligent homicide; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.73",
   },
   "pr-involuntary-manslaughter": {
     citation: "P.R. Laws Ann. tit. 33, § 4737",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Puerto Rico involuntary manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "P.R. Instr. al Jurado (Homicidio Involuntario)",
   },
   "vi-involuntary-manslaughter": {
     citation: "V.I. Code Ann. tit. 14, § 925",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — U.S. Virgin Islands involuntary manslaughter; territory codes inconsistently published — verify manually",
+    instructionRef: "3d Cir. Model Crim. JI § 6.19",
   },
 
   // ── BATCH 23: DUI variants — remaining states + territories ──
@@ -12455,18 +12497,21 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — Guam simple assault; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "as-simple-assault-misdemeanor": {
     citation: "Am. Samoa Code Ann. § 46.3505(b)",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — American Samoa simple assault; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
   "mp-simple-assault-misdemeanor": {
     citation: "6 CMC § 1201",
     confidence: "medium",
     lastVerified: "2026-04",
     source: "Training data — CNMI simple assault; territory codes inconsistently published — verify manually",
+    instructionRef: "9th Cir. Model Crim. Instr. § 8.3",
   },
 
   // disorderly-conduct-misdemeanor — states using this specific ID
@@ -13274,11 +13319,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wv-distribution-of-controlled-substance": { citation: "W. Va. Code § 60A-4-401(a)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/60A-4-401/" },
   "wi-distribution-of-controlled-substance": { citation: "Wis. Stat. § 961.41(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wisconsin/section-961-41/" },
   "wy-distribution-of-controlled-substance": { citation: "Wyo. Stat. Ann. § 35-7-1031(a)(i)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-35-7-1031/" },
-  "as-distribution-of-controlled-substance": { citation: "Am. Samoa Code Ann. § 13.1003", confidence: "medium", lastVerified: "2026-04", source: "Training data — American Samoa controlled substances trafficking; territory code — verify manually before promoting to high" },
-  "gu-distribution-of-controlled-substance": { citation: "9 GCA § 67.401", confidence: "medium", lastVerified: "2026-04", source: "Training data — Guam delivery of controlled substance; territory code — verify manually before promoting to high" },
-  "mp-distribution-of-controlled-substance": { citation: "6 CMC § 2901", confidence: "medium", lastVerified: "2026-04", source: "Training data — CNMI distribution of controlled substance; territory code — verify manually before promoting to high" },
-  "pr-distribution-of-controlled-substance": { citation: "P.R. Laws Ann. tit. 24, § 2401", confidence: "medium", lastVerified: "2026-04", source: "Training data — Puerto Rico manufacture/distribution of controlled substance; territory code — verify manually before promoting to high" },
-  "vi-distribution-of-controlled-substance": { citation: "V.I. Code Ann. tit. 19, § 604", confidence: "medium", lastVerified: "2026-04", source: "Training data — U.S. Virgin Islands distribution of controlled substance; territory code — verify manually before promoting to high" },
+  "as-distribution-of-controlled-substance": { citation: "Am. Samoa Code Ann. § 13.1003", confidence: "medium", lastVerified: "2026-04", source: "Training data — American Samoa controlled substances trafficking; territory code — verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 14.1" },
+  "gu-distribution-of-controlled-substance": { citation: "9 GCA § 67.401", confidence: "medium", lastVerified: "2026-04", source: "Training data — Guam delivery of controlled substance; territory code — verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 14.1" },
+  "mp-distribution-of-controlled-substance": { citation: "6 CMC § 2901", confidence: "medium", lastVerified: "2026-04", source: "Training data — CNMI distribution of controlled substance; territory code — verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 14.1" },
+  "pr-distribution-of-controlled-substance": { citation: "P.R. Laws Ann. tit. 24, § 2401", confidence: "medium", lastVerified: "2026-04", source: "Training data — Puerto Rico manufacture/distribution of controlled substance; territory code — verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Sustancias Controladas — Distribución)" },
+  "vi-distribution-of-controlled-substance": { citation: "V.I. Code Ann. tit. 19, § 604", confidence: "medium", lastVerified: "2026-04", source: "Training data — U.S. Virgin Islands distribution of controlled substance; territory code — verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 9.15" },
 
   // manufacturing-controlled-substance — all states
   "al-manufacturing-controlled-substance": { citation: "Ala. Code § 13A-12-218", confidence: "medium", lastVerified: "2026-04", source: "Alabama Sentencing Commission 2024 — corrected from § 13A-12-217 (Manufacturing 2nd, Class B felony) to § 13A-12-218 (Manufacturing Controlled Substance 1st, Class A felony; the primary manufacturing offense in AL sentencing guidelines)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-218/" },
@@ -13332,11 +13377,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wv-manufacturing-controlled-substance": { citation: "W. Va. Code § 60A-4-401(a)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/60A-4-401/" },
   "wi-manufacturing-controlled-substance": { citation: "Wis. Stat. § 961.41(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wisconsin/section-961-41/" },
   "wy-manufacturing-controlled-substance": { citation: "Wyo. Stat. Ann. § 35-7-1031(a)(ii)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Wyoming manufacture of controlled substance; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/wyoming/section-35-7-1031/" },
-  "as-manufacturing-controlled-substance": { citation: "Am. Samoa Code Ann. § 13.1002", confidence: "medium", lastVerified: "2026-04", source: "Training data — American Samoa manufacture of controlled substance; territory code — verify manually" },
-  "gu-manufacturing-controlled-substance": { citation: "9 GCA § 67.401(a)(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Guam manufacture of controlled substance; territory code — verify manually" },
-  "mp-manufacturing-controlled-substance": { citation: "6 CMC § 2902", confidence: "medium", lastVerified: "2026-04", source: "Training data — CNMI manufacture of controlled substance; territory code — verify manually" },
-  "pr-manufacturing-controlled-substance": { citation: "P.R. Laws Ann. tit. 24, § 2401(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Puerto Rico manufacture of controlled substance; territory code — verify manually" },
-  "vi-manufacturing-controlled-substance": { citation: "V.I. Code Ann. tit. 19, § 604(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — U.S. Virgin Islands manufacture of controlled substance; territory code — verify manually" },
+  "as-manufacturing-controlled-substance": { citation: "Am. Samoa Code Ann. § 13.1002", confidence: "medium", lastVerified: "2026-04", source: "Training data — American Samoa manufacture of controlled substance; territory code — verify manually", instructionRef: "9th Cir. Model Crim. Instr. § 14.1" },
+  "gu-manufacturing-controlled-substance": { citation: "9 GCA § 67.401(a)(2)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Guam manufacture of controlled substance; territory code — verify manually", instructionRef: "9th Cir. Model Crim. Instr. § 14.1" },
+  "mp-manufacturing-controlled-substance": { citation: "6 CMC § 2902", confidence: "medium", lastVerified: "2026-04", source: "Training data — CNMI manufacture of controlled substance; territory code — verify manually", instructionRef: "9th Cir. Model Crim. Instr. § 14.1" },
+  "pr-manufacturing-controlled-substance": { citation: "P.R. Laws Ann. tit. 24, § 2401(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Puerto Rico manufacture of controlled substance; territory code — verify manually", instructionRef: "P.R. Instr. al Jurado (Sustancias Controladas — Manufactura)" },
+  "vi-manufacturing-controlled-substance": { citation: "V.I. Code Ann. tit. 19, § 604(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — U.S. Virgin Islands manufacture of controlled substance; territory code — verify manually", instructionRef: "3d Cir. Model Crim. JI § 9.15" },
 
   // possession-of-drug-paraphernalia — all states
   "al-possession-of-drug-paraphernalia": { citation: "Ala. Code § 13A-12-260", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama possession of drug paraphernalia; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-260/" },
@@ -15091,11 +15136,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wi-assault-in-the-first-degree": { citation: "Wis. Stat. § 940.19(6)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-19/", instructionRef: "Wis JI-Criminal 1220", instructionUrl: "https://www.wicourts.gov/courts/appeals/cin/index.htm",},
   "wy-assault-in-the-first-degree": { citation: "Wyo. Stat. Ann. § 6-2-502", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-2-502/", instructionRef: "Wyo. PJI Crim. 3.02",},
   "dc-assault-in-the-first-degree": { citation: "D.C. Code § 22-404.01", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-404-01", instructionRef: "DC Redbook § 4.500",},
-  "as-assault-in-the-first-degree": { citation: "Am. Samoa Code Ann. § 46.3001", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-assault-in-the-first-degree": { citation: "9 GCA § 19.30", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-assault-in-the-first-degree": { citation: "6 CMC § 1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "pr-assault-in-the-first-degree": { citation: "P.R. Laws Ann. tit. 33, § 4750", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-assault-in-the-first-degree": { citation: "14 V.I.C. § 295", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "as-assault-in-the-first-degree": { citation: "Am. Samoa Code Ann. § 46.3001", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.3" },
+  "gu-assault-in-the-first-degree": { citation: "9 GCA § 19.30", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.3" },
+  "mp-assault-in-the-first-degree": { citation: "6 CMC § 1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.3" },
+  "pr-assault-in-the-first-degree": { citation: "P.R. Laws Ann. tit. 33, § 4750", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Agresión Grave)" },
+  "vi-assault-in-the-first-degree": { citation: "14 V.I.C. § 295", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 6.21" },
 
   // ── Batch 34 cont.: Assault with Deadly Weapon — all 52 applicable states + territories ──
   "al-assault-with-deadly-weapon": { citation: "Ala. Code § 13A-6-20(a)(1)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-20/", instructionRef: "APJI-Crim. 13.01" },
@@ -16021,12 +16066,12 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wi-child-sexual-abuse": { citation: "Wis. Stat. § 948.02", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wisconsin/section-948-02/" },
   "wy-child-sexual-abuse": { citation: "Wyo. Stat. Ann. § 6-2-316", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-2-316/" },
   "dc-child-sexual-abuse": { citation: "D.C. Code § 22-3008", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-3008", instructionRef: "DC Redbook § 8.400" },
-  "pr-child-sexual-abuse": { citation: "P.R. Laws Ann. tit. 33, § 5192", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-child-sexual-abuse": { citation: "14 V.I.C. § 1700", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-child-sexual-abuse": { citation: "9 GCA § 25.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "as-child-sexual-abuse": { citation: "Am. Samoa Code Ann. § 46.3601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-child-sexual-abuse": { citation: "6 CMC § 1306", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-child-sexual-abuse": { citation: "18 U.S.C. § 2241", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2241&edition=prelim" },
+  "pr-child-sexual-abuse": { citation: "P.R. Laws Ann. tit. 33, § 5192", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Agresión Sexual — Menores)" },
+  "vi-child-sexual-abuse": { citation: "14 V.I.C. § 1700", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 6.25" },
+  "gu-child-sexual-abuse": { citation: "9 GCA § 25.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.140" },
+  "as-child-sexual-abuse": { citation: "Am. Samoa Code Ann. § 46.3601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.140" },
+  "mp-child-sexual-abuse": { citation: "6 CMC § 1306", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.140" },
+  "federal-child-sexual-abuse": { citation: "18 U.S.C. § 2241", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2241&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 8.140" },
 
   // sexual-exploitation-of-minor (56 entries)
   "al-sexual-exploitation-of-minor": { citation: "Ala. Code § 13A-12-197", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-197/" },
@@ -16087,7 +16132,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-sexual-exploitation-of-minor": { citation: "9 GCA § 28.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-sexual-exploitation-of-minor": { citation: "Am. Samoa Code Ann. § 46.3605", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-sexual-exploitation-of-minor": { citation: "6 CMC § 1307", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-sexual-exploitation-of-minor": { citation: "18 U.S.C. § 2251", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2251&edition=prelim" },
+  "federal-sexual-exploitation-of-minor": { citation: "18 U.S.C. § 2251", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2251&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 8.145" },
 
   // theft-by-receiving (56 entries) -- receiving stolen property / possession of stolen property
   "al-theft-by-receiving": { citation: "Ala. Code § 13A-8-16", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama theft of property by receiving stolen property", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-8-16/" },
@@ -16148,7 +16193,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-theft-by-receiving": { citation: "9 GCA § 43.40", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-theft-by-receiving": { citation: "Am. Samoa Code Ann. § 46.4210", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-theft-by-receiving": { citation: "6 CMC § 1302", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-theft-by-receiving": { citation: "18 U.S.C. § 2315", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2315&edition=prelim" },
+  "federal-theft-by-receiving": { citation: "18 U.S.C. § 2315", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2315&edition=prelim", instructionRef: "Sand's Mod. Fed. JI § 57A-11" },
 
   // statutory-rape (55 entries -- age of consent offenses)
   "al-statutory-rape": { citation: "Ala. Code § 13A-6-62", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-62/", instructionRef: "APJI-Crim. 21.02" },
@@ -16391,7 +16436,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-false-info-to-police": { citation: "9 GCA § 70.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-false-info-to-police": { citation: "Am. Samoa Code Ann. § 46.4501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-false-info-to-police": { citation: "6 CMC § 4204", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-false-info-to-police": { citation: "18 U.S.C. § 1001", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1001&edition=prelim" },
+  "federal-false-info-to-police": { citation: "18 U.S.C. § 1001", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1001&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 9.8" },
 
   // driving-without-insurance (56 entries)
   "al-driving-without-insurance": { citation: "Ala. Code § 32-7A-16", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama driving without insurance", sourceUrl: "https://law.justia.com/codes/alabama/section-32-7a-16/" },
@@ -16816,7 +16861,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-fake-id": { citation: "9 GCA § 34.32", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-fake-id": { citation: "Am. Samoa Code Ann. § 22.0707", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-fake-id": { citation: "4 CMC § 2006", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-fake-id": { citation: "18 U.S.C. § 1028", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1028&edition=prelim" },
+  "federal-fake-id": { citation: "18 U.S.C. § 1028", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1028&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 9.30" },
 
   // animal-at-large (56 entries)
   "al-animal-at-large": { citation: "Ala. Code § 3-5-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama animal running at large", sourceUrl: "https://law.justia.com/codes/alabama/section-3-5-3/" },
@@ -16936,7 +16981,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-animal-cruelty-misdemeanor": { citation: "10 GCA § 88101", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-animal-cruelty-misdemeanor": { citation: "Am. Samoa Code Ann. § 46.4501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-animal-cruelty-misdemeanor": { citation: "6 CMC § 4253", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-animal-cruelty-misdemeanor": { citation: "7 U.S.C. § 2156", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section2156&edition=prelim" },
+  "federal-animal-cruelty-misdemeanor": { citation: "7 U.S.C. § 2156", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section2156&edition=prelim", instructionRef: "Sand's Mod. Fed. JI § 32-8" },
 
   // --- Batch 43: illegal-camping, panhandling, curfew-violation, defective-vehicle-equipment ---
 
@@ -17536,7 +17581,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-attempted-robbery": { citation: "9 GCA §§ 4.50, 40.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-attempted-robbery": { citation: "Am. Samoa Code Ann. §§ 46.3101, 46.4201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-attempted-robbery": { citation: "6 CMC §§ 101, 1201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-attempted-robbery": { citation: "18 U.S.C. § 1951", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1951&edition=prelim" },
+  "federal-attempted-robbery": { citation: "18 U.S.C. § 1951", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1951&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 8.120" },
 
   // attempted-sexual-assault (56 entries)
   "al-attempted-sexual-assault": { citation: "Ala. Code §§ 13A-4-2, 13A-6-61", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-4-2/", instructionRef: "APJI-Crim. 21.01" },
@@ -17595,7 +17640,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-attempted-sexual-assault": { citation: "9 GCA §§ 4.50, 25.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-attempted-sexual-assault": { citation: "Am. Samoa Code Ann. §§ 46.3101, 46.3501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-attempted-sexual-assault": { citation: "6 CMC §§ 101, 1304", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-attempted-sexual-assault": { citation: "18 U.S.C. § 2241", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2241&edition=prelim" },
+  "federal-attempted-sexual-assault": { citation: "18 U.S.C. § 2241", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2241&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 8.140" },
 
   // solicitation (55 entries) -- solicitation of prostitution
   "al-solicitation": { citation: "Ala. Code § 13A-12-121", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama soliciting prostitution", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-12-121/" },
@@ -17718,7 +17763,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-rico-organized-crime": { citation: "9 GCA § 94.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-rico-organized-crime": { citation: "Am. Samoa Code Ann. § 46.4801", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-rico-organized-crime": { citation: "6 CMC § 4601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-rico-organized-crime": { citation: "18 U.S.C. § 1962", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1962&edition=prelim" },
+  "federal-rico-organized-crime": { citation: "18 U.S.C. § 1962", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1962&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 9.24" },
 
   // juvenile-delinquency-felony (56 entries)
   "al-juvenile-delinquency-felony": { citation: "Ala. Code § 12-15-102(3)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama juvenile delinquency (felony level)", sourceUrl: "https://law.justia.com/codes/alabama/section-12-15-102/" },
@@ -17777,7 +17822,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-juvenile-delinquency-felony": { citation: "19 GCA § 13201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-juvenile-delinquency-felony": { citation: "Am. Samoa Code Ann. § 45.1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-juvenile-delinquency-felony": { citation: "8 CMC § 1502", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-juvenile-delinquency-felony": { citation: "18 U.S.C. § 5031", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section5031&edition=prelim" },
+  "federal-juvenile-delinquency-felony": { citation: "18 U.S.C. § 5031", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section5031&edition=prelim", instructionRef: "Sand's Mod. Fed. JI § 9-15" },
 
   // juvenile-delinquency-misdemeanor (56 entries)
   "al-juvenile-delinquency-misdemeanor": { citation: "Ala. Code § 12-15-102(3)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama juvenile delinquency (misdemeanor level)", sourceUrl: "https://law.justia.com/codes/alabama/section-12-15-102/" },
@@ -17836,7 +17881,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-juvenile-delinquency-misdemeanor": { citation: "19 GCA § 13201", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-juvenile-delinquency-misdemeanor": { citation: "Am. Samoa Code Ann. § 45.1202", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-juvenile-delinquency-misdemeanor": { citation: "8 CMC § 1502", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-juvenile-delinquency-misdemeanor": { citation: "18 U.S.C. § 5031", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section5031&edition=prelim" },
+  "federal-juvenile-delinquency-misdemeanor": { citation: "18 U.S.C. § 5031", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section5031&edition=prelim", instructionRef: "Sand's Mod. Fed. JI § 9-15" },
 
   // juvenile-transfer-adult-court (56 entries)
   "al-juvenile-transfer-adult-court": { citation: "Ala. Code § 12-15-203", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama juvenile transfer to adult court", sourceUrl: "https://law.justia.com/codes/alabama/section-12-15-203/" },
@@ -17956,7 +18001,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-juvenile-firearm-possession": { citation: "10 GCA § 60115", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-juvenile-firearm-possession": { citation: "Am. Samoa Code Ann. § 46.4225", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-juvenile-firearm-possession": { citation: "6 CMC § 3106", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-juvenile-firearm-possession": { citation: "18 U.S.C. § 922(x)", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section922&edition=prelim" },
+  "federal-juvenile-firearm-possession": { citation: "18 U.S.C. § 922(x)", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section922&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 14.40" },
 
   "al-sexual-assault-in-the-third-degree": { citation: "Ala. Code § 13A-6-65", confidence: "medium", lastVerified: "2026-04", source: "Alabama Sentencing Commission 2024 — corrected from § 13A-6-22 (Assault 3rd Degree, a non-sexual physical assault) to § 13A-6-65 (Sexual Abuse 1st Degree, Class C felony; the lowest-degree sexual felony in Alabama)", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-65/", instructionRef: "APJI (Crim.) 21.03" },
   "ak-sexual-assault-in-the-third-degree": { citation: "Alaska Stat. § 11.41.425", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-425/", instructionRef: "Alaska PJI-Crim. 2-50-110",},
@@ -18016,7 +18061,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-sexual-assault-in-the-third-degree": { citation: "9 GCA § 25.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-sexual-assault-in-the-third-degree": { citation: "Am. Samoa Code Ann. § 46.3810", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-sexual-assault-in-the-third-degree": { citation: "6 CMC § 1302", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-sexual-assault-in-the-third-degree": { citation: "18 U.S.C. § 2243", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2243&edition=prelim" },
+  "federal-sexual-assault-in-the-third-degree": { citation: "18 U.S.C. § 2243", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2243&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 8.142" },
 
   "al-sexual-assault-in-the-second-degree": { citation: "Ala. Code § 13A-6-68", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alabama/section-13a-6-68/", instructionRef: "APJI (Crim.) 21.04" },
   "ak-sexual-assault-in-the-second-degree": { citation: "Alaska Stat. § 11.41.420", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-11-41-420/", instructionRef: "Alaska PJI-Crim. 2-50-108",},
@@ -18076,7 +18121,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "gu-sexual-assault-in-the-second-degree": { citation: "9 GCA § 25.15", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "as-sexual-assault-in-the-second-degree": { citation: "Am. Samoa Code Ann. § 46.3808", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "mp-sexual-assault-in-the-second-degree": { citation: "6 CMC § 1301", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-sexual-assault-in-the-second-degree": { citation: "18 U.S.C. § 2242", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2242&edition=prelim" },
+  "federal-sexual-assault-in-the-second-degree": { citation: "18 U.S.C. § 2242", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section2242&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 8.141" },
 
   "al-unregistered-vehicle": { citation: "Ala. Code § 40-12-260", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alabama operation of unregistered vehicle", sourceUrl: "https://law.justia.com/codes/alabama/section-40-12-260/" },
   "ak-unregistered-vehicle": { citation: "Alaska Stat. § 28.10.031", confidence: "medium", lastVerified: "2026-04", source: "Training data — Alaska registration required", sourceUrl: "https://law.justia.com/codes/alaska/section-28-10-031/" },
@@ -18540,12 +18585,12 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wa-felony-murder": { citation: "Wash. Rev. Code § 9A.32.030(1)(c)", confidence: "high", lastVerified: "2026-04", source: "Washington Revised Code — app.leg.wa.gov", sourceUrl: "https://app.leg.wa.gov/rcw/default.aspx?cite=9A.32.030" },
   "wv-felony-murder": { citation: "W. Va. Code § 61-2-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/61-2-1/", instructionRef: "W.Va. Crim. JI 1.05",},
   "wy-felony-murder": { citation: "Wyo. Stat. Ann. § 6-2-101(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-2-101/", instructionRef: "Wyo. PJI Crim. 1.06",},
-  "pr-felony-murder": { citation: "P.R. Laws Ann. tit. 33, § 4734", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-felony-murder": { citation: "14 V.I.C. § 921", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-felony-murder": { citation: "9 GCA § 16.30", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "as-felony-murder": { citation: "Am. Samoa Code Ann. § 46.3601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-felony-murder": { citation: "6 CMC § 1102", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "federal-felony-murder": { citation: "18 U.S.C. § 1111", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1111&edition=prelim" },
+  "pr-felony-murder": { citation: "P.R. Laws Ann. tit. 33, § 4734", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Asesinato en Primer Grado)" },
+  "vi-felony-murder": { citation: "14 V.I.C. § 921", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 6.17" },
+  "gu-felony-murder": { citation: "9 GCA § 16.30", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.70" },
+  "as-felony-murder": { citation: "Am. Samoa Code Ann. § 46.3601", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.70" },
+  "mp-felony-murder": { citation: "6 CMC § 1102", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.70" },
+  "federal-felony-murder": { citation: "18 U.S.C. § 1111", confidence: "high", lastVerified: "2026-04", source: "GovInfo USCODE structured endpoint — verified 2026-04", sourceUrl: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1111&edition=prelim", instructionRef: "9th Cir. Model Crim. Instr. § 8.70" },
 
   // --- Batch 50: driving-while-suspended/reckless-driving DC+territories, criminally-negligent-homicide, vehicular-homicide ---
   "dc-driving-while-suspended": { citation: "D.C. Code § 50-1403.01", confidence: "medium", lastVerified: "2026-04", source: "Training data — DC operating after revocation", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/50-1403-01" },
@@ -18589,11 +18634,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "wv-criminally-negligent-homicide": { citation: "W. Va. Code § 61-2-5", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/61-2-5/", instructionRef: "W.Va. Crim. JI 1.08",},
   "wy-criminally-negligent-homicide": { citation: "Wyo. Stat. Ann. § 6-2-105", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/wyoming/section-6-2-105/" },
   "dc-criminally-negligent-homicide": { citation: "D.C. Code § 22-2105", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://code.dccouncil.gov/us/dc/council/code/sections/22-2105", instructionRef: "DC Redbook § 4.300" },
-  "pr-criminally-negligent-homicide": { citation: "P.R. Laws Ann. tit. 33, § 4736", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-criminally-negligent-homicide": { citation: "14 V.I.C. § 925", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-criminally-negligent-homicide": { citation: "9 GCA § 16.50", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "as-criminally-negligent-homicide": { citation: "Am. Samoa Code Ann. § 46.3604", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-criminally-negligent-homicide": { citation: "6 CMC § 1108", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "pr-criminally-negligent-homicide": { citation: "P.R. Laws Ann. tit. 33, § 4736", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Homicidio Culposo)" },
+  "vi-criminally-negligent-homicide": { citation: "14 V.I.C. § 925", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 6.19" },
+  "gu-criminally-negligent-homicide": { citation: "9 GCA § 16.50", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.73" },
+  "as-criminally-negligent-homicide": { citation: "Am. Samoa Code Ann. § 46.3604", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.73" },
+  "mp-criminally-negligent-homicide": { citation: "6 CMC § 1108", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.73" },
 
   "al-vehicular-homicide": { citation: "Ala. Code § 32-5A-192", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/alabama/section-32-5a-192/" },
   "ak-vehicular-homicide": { citation: "Alaska Stat. § 28.35.040(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/alaska/section-28-35-040/", instructionRef: "Alaska PJI-Crim. 2-60-410",},
@@ -18612,11 +18657,11 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "sc-vehicular-homicide": { citation: "S.C. Code Ann. § 56-5-2910", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2910/" },
   "vt-vehicular-homicide": { citation: "Vt. Stat. Ann. tit. 23, § 1091(b)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/vermont/section-1091/", instructionRef: "Vt. JI Crim. 1013",},
   "wv-vehicular-homicide": { citation: "W. Va. Code § 17C-5-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://code.wvlegislature.gov/17C-5-1/", instructionRef: "W.Va. Crim. JI 28.10",},
-  "pr-vehicular-homicide": { citation: "P.R. Laws Ann. tit. 9, § 5143", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-vehicular-homicide": { citation: "20 V.I.C. § 495", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-vehicular-homicide": { citation: "16 GCA § 9113", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "as-vehicular-homicide": { citation: "Am. Samoa Code Ann. § 22.0711", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-vehicular-homicide": { citation: "9 CMC § 5167", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "pr-vehicular-homicide": { citation: "P.R. Laws Ann. tit. 9, § 5143", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Homicidio Vehicular)" },
+  "vi-vehicular-homicide": { citation: "20 V.I.C. § 495", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 6.19" },
+  "gu-vehicular-homicide": { citation: "16 GCA § 9113", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.73" },
+  "as-vehicular-homicide": { citation: "Am. Samoa Code Ann. § 22.0711", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.73" },
+  "mp-vehicular-homicide": { citation: "9 CMC § 5167", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.73" },
 
   // --- Batch 51: driving-on-suspended-license state variants + 19 common-charge territory entries ---
   "az-driving-on-suspended-license": { citation: "Ariz. Rev. Stat. § 28-3473", confidence: "medium", lastVerified: "2026-04", source: "Training data — Arizona driving on suspended license", sourceUrl: "https://law.justia.com/codes/arizona/section-28-3473/" },
@@ -18649,35 +18694,35 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "pr-shoplifting": { citation: "P.R. Laws Ann. tit. 33, § 4829", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "vi-shoplifting": { citation: "14 V.I.C. § 1083a", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
 
-  "as-burglary-in-the-first-degree": { citation: "Am. Samoa Code Ann. § 46.4401", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-burglary-in-the-first-degree": { citation: "9 GCA § 37.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-burglary-in-the-first-degree": { citation: "6 CMC § 1901", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "pr-burglary-in-the-first-degree": { citation: "P.R. Laws Ann. tit. 33, § 4840", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-burglary-in-the-first-degree": { citation: "14 V.I.C. § 441", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "as-burglary-in-the-first-degree": { citation: "Am. Samoa Code Ann. § 46.4401", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.130" },
+  "gu-burglary-in-the-first-degree": { citation: "9 GCA § 37.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.130" },
+  "mp-burglary-in-the-first-degree": { citation: "6 CMC § 1901", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.130" },
+  "pr-burglary-in-the-first-degree": { citation: "P.R. Laws Ann. tit. 33, § 4840", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Escalamiento)" },
+  "vi-burglary-in-the-first-degree": { citation: "14 V.I.C. § 441", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 7.08" },
 
-  "as-burglary-in-the-second-degree": { citation: "Am. Samoa Code Ann. § 46.4402", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-burglary-in-the-second-degree": { citation: "9 GCA § 37.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-burglary-in-the-second-degree": { citation: "6 CMC § 1902", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "pr-burglary-in-the-second-degree": { citation: "P.R. Laws Ann. tit. 33, § 4841", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-burglary-in-the-second-degree": { citation: "14 V.I.C. § 442", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "as-burglary-in-the-second-degree": { citation: "Am. Samoa Code Ann. § 46.4402", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.130" },
+  "gu-burglary-in-the-second-degree": { citation: "9 GCA § 37.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.130" },
+  "mp-burglary-in-the-second-degree": { citation: "6 CMC § 1902", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.130" },
+  "pr-burglary-in-the-second-degree": { citation: "P.R. Laws Ann. tit. 33, § 4841", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Escalamiento)" },
+  "vi-burglary-in-the-second-degree": { citation: "14 V.I.C. § 442", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 7.08" },
 
-  "as-robbery-in-the-first-degree": { citation: "Am. Samoa Code Ann. § 46.4501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-robbery-in-the-first-degree": { citation: "9 GCA § 40.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-robbery-in-the-first-degree": { citation: "6 CMC § 2001", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "pr-robbery-in-the-first-degree": { citation: "P.R. Laws Ann. tit. 33, § 4750", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-robbery-in-the-first-degree": { citation: "14 V.I.C. § 1861", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "as-robbery-in-the-first-degree": { citation: "Am. Samoa Code Ann. § 46.4501", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.120" },
+  "gu-robbery-in-the-first-degree": { citation: "9 GCA § 40.10", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.120" },
+  "mp-robbery-in-the-first-degree": { citation: "6 CMC § 2001", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.120" },
+  "pr-robbery-in-the-first-degree": { citation: "P.R. Laws Ann. tit. 33, § 4750", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Robo)" },
+  "vi-robbery-in-the-first-degree": { citation: "14 V.I.C. § 1861", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 7.07" },
 
-  "as-robbery-in-the-second-degree": { citation: "Am. Samoa Code Ann. § 46.4502", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-robbery-in-the-second-degree": { citation: "9 GCA § 40.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-robbery-in-the-second-degree": { citation: "6 CMC § 2002", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "pr-robbery-in-the-second-degree": { citation: "P.R. Laws Ann. tit. 33, § 4751", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-robbery-in-the-second-degree": { citation: "14 V.I.C. § 1862", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "as-robbery-in-the-second-degree": { citation: "Am. Samoa Code Ann. § 46.4502", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.120" },
+  "gu-robbery-in-the-second-degree": { citation: "9 GCA § 40.20", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.120" },
+  "mp-robbery-in-the-second-degree": { citation: "6 CMC § 2002", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 8.120" },
+  "pr-robbery-in-the-second-degree": { citation: "P.R. Laws Ann. tit. 33, § 4751", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Robo)" },
+  "vi-robbery-in-the-second-degree": { citation: "14 V.I.C. § 1862", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 7.07" },
 
-  "as-possession-of-controlled-substance": { citation: "Am. Samoa Code Ann. § 13.1006", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "gu-possession-of-controlled-substance": { citation: "9 GCA § 67.401.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "mp-possession-of-controlled-substance": { citation: "6 CMC § 3306", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "pr-possession-of-controlled-substance": { citation: "P.R. Laws Ann. tit. 24, § 2404", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
-  "vi-possession-of-controlled-substance": { citation: "19 V.I.C. § 604", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
+  "as-possession-of-controlled-substance": { citation: "Am. Samoa Code Ann. § 13.1006", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 14.4" },
+  "gu-possession-of-controlled-substance": { citation: "9 GCA § 67.401.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 14.4" },
+  "mp-possession-of-controlled-substance": { citation: "6 CMC § 3306", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "9th Cir. Model Crim. Instr. § 14.4" },
+  "pr-possession-of-controlled-substance": { citation: "P.R. Laws Ann. tit. 24, § 2404", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "P.R. Instr. al Jurado (Sustancias Controladas — Posesión)" },
+  "vi-possession-of-controlled-substance": { citation: "19 V.I.C. § 604", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high", instructionRef: "3d Cir. Model Crim. JI § 9.15" },
 
   "as-possession-with-intent-to-distribute": { citation: "Am. Samoa Code Ann. § 13.1007", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
   "gu-possession-with-intent-to-distribute": { citation: "9 GCA § 67.401.1(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — territory code; verify manually before promoting to high" },
