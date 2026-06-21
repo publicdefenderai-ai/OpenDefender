@@ -10,6 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+import { getInstructionPaywall } from "@shared/criminal-charges";
 
 interface Charge {
   id: string;
@@ -268,9 +269,16 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                                 <ExternalLink className="h-2.5 w-2.5" />
                               </a>
                             ) : (
-                              <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                {charge.instructionRef}
-                              </span>
+                              <>
+                                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                  {charge.instructionRef}
+                                </span>
+                                {getInstructionPaywall(charge as any) && (
+                                  <span className="text-xs text-amber-600 dark:text-amber-400">
+                                    (Available via {getInstructionPaywall(charge as any)})
+                                  </span>
+                                )}
+                              </>
                             )}
                           </div>
                         )}

@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity, BookOpen, HelpCircle } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl } from "@shared/criminal-charges";
+import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 
@@ -721,9 +721,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                     {listInstructionRef}
                                   </a>
                                 ) : (
-                                  <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                    {listInstructionRef}
-                                  </span>
+                                  <>
+                                    <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                      {listInstructionRef}
+                                    </span>
+                                    {getInstructionPaywall(charge) && (
+                                      <span className="text-xs text-amber-600 dark:text-amber-400">
+                                        (Available via {getInstructionPaywall(charge)})
+                                      </span>
+                                    )}
+                                  </>
                                 )}
                               </div>
                             )}
@@ -822,9 +829,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                     {fedInstructionRef}
                                   </a>
                                 ) : (
-                                  <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                    {fedInstructionRef}
-                                  </span>
+                                  <>
+                                    <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                                      {fedInstructionRef}
+                                    </span>
+                                    {getInstructionPaywall(charge) && (
+                                      <span className="text-xs text-amber-600 dark:text-amber-400">
+                                        (Available via {getInstructionPaywall(charge)})
+                                      </span>
+                                    )}
+                                  </>
                                 )}
                               </div>
                             )}
