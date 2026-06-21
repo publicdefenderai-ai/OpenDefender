@@ -2292,6 +2292,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Wisconsin Legislature — § 943.13 Trespass to land",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-13/",
+    instructionRef: "Wis JI-Criminal 1453",
+    instructionUrl: "https://www.wicourts.gov/courts/appeals/cin/index.htm",
   },
   "wi-disorderly-conduct": {
     citation: "Wis. Stat. § 947.01",
@@ -2673,6 +2675,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Utah Legislature — Utah Code § 76-6-206 Criminal trespass",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-206/",
+    instructionRef: "UMJI-CR 1704",
+    instructionUrl: "https://www.utcourts.gov/committees/modelCriminaljuryInstructions.html",
   },
   "ut-petty-theft": {
     citation: "Utah Code Ann. § 76-6-412",
@@ -4170,6 +4174,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "NM Statutes § 30-14-1 Criminal trespass; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-14-1/",
+    instructionRef: "UJI 14-1401",
+    instructionUrl: "https://nmsupremecourt.nmcourts.gov/",
   },
   "nm-resisting-arrest": {
     citation: "N.M. Stat. § 30-22-1",
@@ -7725,6 +7731,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Missouri stealing (covers shoplifting); verify against Justia before promoting to high",
     sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=570.030",
+    instructionRef: "MAI-CR 304.04",
+    instructionUrl: "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
   },
   "mt-shoplifting": {
     citation: "Mont. Code Ann. § 45-6-301",
@@ -7770,6 +7778,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — New Mexico shoplifting; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-16-20/",
+    instructionRef: "UJI 14-1620",
+    instructionUrl: "https://nmsupremecourt.nmcourts.gov/",
   },
   "ny-shoplifting": {
     citation: "N.Y. Penal Law § 155.25",
@@ -7865,6 +7875,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Utah retail theft; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-602/",
+    instructionRef: "UMJI-CR 1702",
+    instructionUrl: "https://www.utcourts.gov/committees/modelCriminaljuryInstructions.html",
   },
   "vt-shoplifting": {
     citation: "Vt. Stat. Ann. tit. 13 § 2575",
@@ -7904,6 +7916,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Wisconsin retail theft; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-50/",
+    instructionRef: "Wis JI-Criminal 1454",
+    instructionUrl: "https://www.wicourts.gov/courts/appeals/cin/index.htm",
   },
   "wy-shoplifting": {
     citation: "Wyo. Stat. Ann. § 6-3-402",
@@ -9572,6 +9586,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Missouri property damage in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=569.100",
+    instructionRef: "MAI-CR 323.52",
+    instructionUrl: "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
   },
   "mt-vandalism": {
     citation: "Mont. Code Ann. § 45-6-101",
@@ -9615,6 +9631,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — New Mexico malicious mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-15-1/",
+    instructionRef: "UJI 14-1501",
+    instructionUrl: "https://nmsupremecourt.nmcourts.gov/",
   },
   "ny-vandalism": {
     citation: "N.Y. Penal Law § 145.00",
@@ -9710,6 +9728,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Utah criminal mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-106/",
+    instructionRef: "UMJI-CR 1707",
+    instructionUrl: "https://www.utcourts.gov/committees/modelCriminaljuryInstructions.html",
   },
   "va-vandalism": {
     citation: "Va. Code Ann. § 18.2-137",
@@ -9749,6 +9769,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Wisconsin criminal damage to property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-01/",
+    instructionRef: "Wis JI-Criminal 1400",
+    instructionUrl: "https://www.wicourts.gov/courts/appeals/cin/index.htm",
   },
   "wy-vandalism": {
     citation: "Wyo. Stat. Ann. § 6-3-201",
@@ -9945,6 +9967,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Missouri harassment; verify against Justia before promoting to high",
     sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=565.090",
+    instructionRef: "MAI-CR 319.06",
+    instructionUrl: "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
   },
   "mt-harassment": {
     citation: "Mont. Code Ann. § 45-8-213",
@@ -9988,6 +10012,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — New Mexico harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-3a-2/",
+    instructionRef: "UJI 14-0341",
+    instructionUrl: "https://nmsupremecourt.nmcourts.gov/",
   },
   "ny-harassment": {
     citation: "N.Y. Penal Law § 240.26",
@@ -10083,6 +10109,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Utah harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-9-201/",
+    instructionRef: "UMJI-CR 1901",
+    instructionUrl: "https://www.utcourts.gov/committees/modelCriminaljuryInstructions.html",
   },
   "va-harassment": {
     citation: "Va. Code Ann. § 18.2-186.3",
@@ -10114,6 +10142,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Wisconsin harassment by telecommunications; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-947-0125/",
+    instructionRef: "Wis JI-Criminal 1900",
+    instructionUrl: "https://www.wicourts.gov/courts/appeals/cin/index.htm",
   },
   "wv-harassment": {
     citation: "W. Va. Code § 61-2-9a",
@@ -11142,6 +11172,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Missouri loitering; verify against Justia before promoting to high",
     sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=574.050",
+    instructionRef: "MAI-CR 327.10",
+    instructionUrl: "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
   },
   "ms-loitering": {
     citation: "Miss. Code Ann. § 97-35-37",
@@ -11192,6 +11224,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — New Mexico nuisance / disorderly conduct (New Mexico loitering charges rely on disorderly conduct or trespass statutes); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-20-1/",
+    instructionRef: "UJI 14-2001",
+    instructionUrl: "https://nmsupremecourt.nmcourts.gov/",
   },
   "ny-loitering": {
     citation: "N.Y. Penal Law § 240.35",
@@ -11285,6 +11319,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Utah disorderly conduct (Utah loitering charged under disorderly conduct statute); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-9-102/",
+    instructionRef: "UMJI-CR 1906",
+    instructionUrl: "https://www.utcourts.gov/committees/modelCriminaljuryInstructions.html",
   },
   "va-loitering": {
     citation: "Va. Code Ann. § 18.2-176",
@@ -11316,6 +11352,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Wisconsin loitering and prowling; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-947-02/",
+    instructionRef: "Wis JI-Criminal 1917",
+    instructionUrl: "https://www.wicourts.gov/courts/appeals/cin/index.htm",
   },
   "wv-loitering": {
     citation: "W. Va. Code § 61-6-1",
@@ -11369,6 +11407,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Missouri trespass in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=569.140",
+    instructionRef: "MAI-CR 323.68",
+    instructionUrl: "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
   },
   "nd-trespassing": {
     citation: "N.D. Cent. Code § 12.1-22-03",
