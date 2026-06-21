@@ -74,7 +74,7 @@ export default function Home() {
       links: [
         { label: t("home.doors.door1.link1"), href: "/first-24-hours#inmate-locator" },
         { label: t("home.doors.door1.link2"), href: "/support/court-logistics/bail-preparation" },
-        { label: t("home.doors.door1.link3"), href: "/support" },
+        { label: t("home.doors.door1.link3"), href: "/collateral-consequences" },
       ],
       gradient: "from-[hsl(345,52%,22%)] via-[hsl(350,48%,28%)] to-[hsl(355,44%,34%)]",
       pulsing: true,
@@ -88,7 +88,7 @@ export default function Home() {
       links: [
         { label: t("home.doors.door2.link1"), href: "/rights-info" },
         { label: t("home.doors.door2.link2"), href: "/case-timeline" },
-        { label: t("home.doors.door2.link3"), href: "/support/reputation/eligibility" },
+        { label: t("home.doors.door2.link3"), href: "/collateral-consequences" },
       ],
       gradient: "from-[hsl(192,58%,18%)] via-[hsl(196,50%,24%)] to-[hsl(200,44%,30%)]",
       pulsing: false,

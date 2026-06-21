@@ -129,7 +129,7 @@ export default {
         "cta": "Comenzar Aquí",
         "link1": "Localizar a una persona detenida",
         "link2": "Preparación para la audiencia de fianza",
-        "link3": "Apoyo de vida y familia"
+        "link3": "¿Qué está en riesgo ahora?"
       },
       "door2": {
         "badge": "Me Han Acusado o Me Han Liberado",

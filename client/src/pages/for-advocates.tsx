@@ -180,9 +180,9 @@ export default function ForAdvocates() {
         <ScrollReveal delay={0.07}>
           <ToolCard
             Icon={AlertTriangle}
-            title="Collateral Consequences Screening"
-            desc="Before any plea discussion: screen for immigration status impact, housing eligibility, professional licensing bars, public benefits loss, parental rights, and sex offender registration requirements. Padilla v. Kentucky makes this a constitutional obligation for defense counsel."
-            href="/support/reputation"
+            title="Arrest-Stage Risk Screener"
+            desc="Before any plea discussion: screen for immediate risks to housing, employment, immigration status, federal benefits, child welfare, supervision violation, and professional licensing. 7 yes-or-no questions. Results sorted by urgency with actions. Runs entirely in the browser."
+            href="/collateral-consequences"
             color="text-red-600 dark:text-red-400"
             bg="bg-red-50 dark:bg-red-900/10"
             accent="#dc2626"

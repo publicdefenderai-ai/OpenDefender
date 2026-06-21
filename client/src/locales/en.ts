@@ -133,7 +133,7 @@ export default {
         "cta": "Start Here",
         "link1": "Locate a detained person",
         "link2": "Bail hearing prep",
-        "link3": "Life & family support"
+        "link3": "What's at risk right now"
       },
       "door2": {
         "badge": "I've Been Charged or Released",
