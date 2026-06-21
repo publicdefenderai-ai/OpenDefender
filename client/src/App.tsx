@@ -154,6 +154,7 @@ function Router() {
       <Route path="/friends-family/toolkit" component={FamilyToolkit} />
       <Route path="/first-24-hours" component={FirstTwentyFourHours} />
       <Route path="/collateral-consequences" component={CollateralConsequences} />
+      <Route path="/collateral-consequences-screener"><Redirect to="/collateral-consequences" /></Route>
       <Route path="/right-to-counsel" component={RightToCounsel} />
       <Route path="/warrants" component={Warrants} />
       <Route path="/for-advocates" component={ForAdvocates} />

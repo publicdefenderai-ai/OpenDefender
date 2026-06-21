@@ -5611,9 +5611,116 @@ export default {
     }
   },
   "collateralConsequences": {
-    "title": "Consecuencias Ocultas de un Antecedente Penal",
-    "subtitle": "Una condena — o incluso una declaración de culpabilidad — desencadena consecuencias que van mucho más allá de la sentencia en sí. Muchas de estas nunca se explican en el tribunal.",
-    "relatedGuides": "Guías relacionadas"
+    "badge": "Etapa de arresto",
+    "pageTitle": "Verificador de Riesgos al Momento del Arresto",
+    "pageDesc": "Un arresto puede poner en riesgo inmediatamente la vivienda, el empleo y otros sistemas vitales, incluso antes de una condena. Responda 7 preguntas rápidas para ver qué puede necesitar atención ahora mismo.",
+    "qOf": "Pregunta {{n}} de {{total}}",
+    "yes": "Sí",
+    "no": "No",
+    "back": "Volver",
+    "resultsTitle": "Su Resumen de Riesgos",
+    "resultsDesc": "Estos sistemas pueden estar en riesgo inmediato según sus respuestas. Los elementos más urgentes aparecen primero.",
+    "noRiskTitle": "No Se Identificaron Riesgos Activos",
+    "noRiskDesc": "Según sus respuestas, ninguno de los sistemas civiles que evaluamos parece estar en riesgo inmediato por este arresto. Esto no cubre todas las posibles consecuencias. Hable con su abogado sobre su situación específica.",
+    "whatLabel": "Qué está en riesgo",
+    "timelineLabel": "Plazo",
+    "actionLabel": "Actuar ahora",
+    "disclaimer": "Este resumen es para su uso personal. Consulte a un abogado antes de compartirlo con cualquier persona.",
+    "generalInfo": "Solo información general. No es asesoramiento legal.",
+    "copyBtn": "Copiar resumen",
+    "copiedBtn": "Copiado",
+    "printBtn": "Imprimir",
+    "restart": "Comenzar de nuevo",
+    "backToHub": "Volver al Centro de Defensores",
+    "privacyStrip": "Esta herramienta no almacena ninguna de sus respuestas. Todo el procesamiento ocurre localmente en su dispositivo.",
+    "printHeading": "RESUMEN DE RIESGOS AL MOMENTO DEL ARRESTO",
+    "printDate": "Generado: {{date}}",
+    "printNoRisk": "No se identificaron riesgos activos según sus respuestas.",
+    "printTimeline": "Plazo:",
+    "printAction": "Actuar ahora:",
+    "printDisclaimer": "Este resumen es para su uso personal. Consulte a un abogado antes de compartirlo. Esta es solo información general y no constituye asesoramiento legal.",
+    "questions": {
+      "housing": {
+        "question": "¿Alquila vivienda o vive en una vivienda subsidiada o con Sección 8?",
+        "sub": "Incluye vivienda pública, vales de la Sección 8 o cualquier alquiler con asistencia gubernamental."
+      },
+      "employment": {
+        "question": "¿Está trabajando actualmente?",
+        "sub": "Incluye trabajo a tiempo completo, parcial, por cuenta propia o cualquier trabajo remunerado."
+      },
+      "immigration": {
+        "question": "¿Hay alguien en su hogar que no sea ciudadano estadounidense o residente permanente?",
+        "sub": "Incluye titulares de visas, beneficiarios de DACA, personas indocumentadas y otros con estatus temporal.",
+        "privacyNote": "Esta respuesta nunca se almacena ni se transmite. Solo se procesa en su navegador."
+      },
+      "benefits": {
+        "question": "¿Recibe beneficios federales?",
+        "sub": "Incluye SNAP, SSI, SSDI, Medicaid, Sección 8, TANF u otros programas de asistencia federal."
+      },
+      "children": {
+        "question": "¿Tiene hijos menores de edad bajo su cuidado?",
+        "sub": "Incluye hijos bajo su custodia o de los que usted es el cuidador principal."
+      },
+      "supervision": {
+        "question": "¿Está actualmente en libertad condicional o supervisada?",
+        "sub": "Incluye cualquier supervisión activa, liberación condicional u orden de supervisión comunitaria."
+      },
+      "license": {
+        "question": "¿Tiene una licencia profesional u ocupacional?",
+        "sub": "Incluye enfermería, docencia, contratista, guardia de seguridad, bienes raíces y otras profesiones con licencia."
+      }
+    },
+    "risks": {
+      "supervision": {
+        "title": "Riesgo de Violación de Supervisión",
+        "what": "Un nuevo arresto desencadena automáticamente una violación de la supervisión, sin importar cómo termine este caso. Se puede imponer una retención antes de que usted vea a un juez, y se puede programar una audiencia de revocación separada antes de que su caso penal se resuelva.",
+        "clock": "Su oficial de supervisión suele ser notificado dentro de las 24 horas del registro. Se puede imponer una retención antes de cualquier audiencia de fianza.",
+        "action": "Informe a su abogado defensor sobre su situación de supervisión de inmediato. No contacte a su oficial de supervisión sin hablar primero con su abogado.",
+        "linkLabel": "Obtener orientación del caso"
+      },
+      "immigration": {
+        "title": "Riesgo de Detención de ICE e Inmigración",
+        "what": "ICE puede presentar una orden de detención contra cualquier persona no ciudadana registrada en una cárcel local, solicitando que la cárcel retenga a la persona hasta 48 horas después de su fecha de liberación para que ICE pueda tomar custodia. Los cargos penales o una condena también pueden afectar el estatus de visa, la elegibilidad para la tarjeta verde y crear motivos de expulsión.",
+        "clock": "Una orden de detención de ICE puede emitirse en cuestión de horas después del registro. Esta es una de las consecuencias más rápidas de un arresto.",
+        "action": "Contacte a un abogado de inmigración lo antes posible, antes de cualquier discusión sobre declaraciones. Los cargos penales y las consecuencias migratorias deben evaluarse juntos.",
+        "linkLabel": "Orientación de inmigración"
+      },
+      "children": {
+        "title": "Riesgo de Bienestar Infantil y Custodia",
+        "what": "Las fuerzas del orden pueden notificar a los Servicios de Protección de Menores en el momento del arresto, especialmente si los niños estaban presentes o usted es el único cuidador. Una investigación abierta de CPS puede afectar los acuerdos de custodia y los derechos parentales antes de cualquier condena.",
+        "clock": "CPS puede ser notificado en el momento del arresto. Si los niños se quedan sin cuidado, la colocación de emergencia puede ocurrir el mismo día.",
+        "action": "Organice el cuidado de los niños con un adulto de confianza de inmediato si puede ser detenido. Documente los acuerdos de custodia existentes y contacte a su abogado si CPS se comunica con usted.",
+        "linkLabel": "Apoyo para cuidado infantil"
+      },
+      "housing": {
+        "title": "Riesgo de Vivienda y Desalojo",
+        "what": "Las autoridades de vivienda pública y los programas de la Sección 8 pueden iniciar procedimientos de desalojo basándose únicamente en un arresto, antes de cualquier condena. Las reglas federales de un solo incidente dan a las autoridades de vivienda una amplia autoridad para actuar. Los arrendadores privados también pueden tener cláusulas en el contrato que tratan un arresto como una violación.",
+        "clock": "Las autoridades de vivienda pública pueden iniciar procedimientos en pocos días después del arresto. Revise su contrato de arrendamiento de inmediato.",
+        "action": "Revise su contrato para ver las cláusulas de arresto o actividad criminal. Si vive en vivienda pública o usa un vale de la Sección 8, contacte a un abogado de vivienda antes de que la autoridad de vivienda se comunique con usted.",
+        "linkLabel": "Apoyo de vivienda"
+      },
+      "employment": {
+        "title": "Riesgo de Empleo",
+        "what": "Los empleadores a voluntad pueden despedir después de un arresto incluso sin condena. Algunos empleos requieren que los empleados reporten los arrestos a recursos humanos dentro de un número determinado de días. Los puestos que requieren autorización de seguridad o trabajo con poblaciones vulnerables enfrentan el mayor riesgo de suspensión.",
+        "clock": "No hay un plazo establecido. Un empleador a voluntad puede actuar de inmediato. Revise su contrato de trabajo para conocer los requisitos de notificación.",
+        "action": "Revise su contrato de trabajo y el manual del empleado para conocer las obligaciones de notificación de arrestos. No proporcione información a su empleador antes de consultar a su abogado.",
+        "linkLabel": "Apoyo de empleo"
+      },
+      "benefits": {
+        "title": "Riesgo de Beneficios Federales",
+        "what": "Algunos programas de beneficios federales requieren que reporte un arresto. Una condena por ciertos delitos, en particular de drogas, puede resultar en descalificación automática de programas como SNAP y la ayuda federal para estudiantes. Una condena por delito grave puede desencadenar una prohibición de por vida de SNAP en algunos estados.",
+        "clock": "Los requisitos de notificación varían según el programa. Algunos requieren notificación dentro de los 10 días posteriores al arresto. Contacte a su trabajador social para comprender sus obligaciones.",
+        "action": "Contacte a su trabajador social de beneficios para comprender sus obligaciones de notificación. Pregúntele a su abogado si los cargos que enfrenta conllevan consecuencias automáticas en los beneficios.",
+        "linkLabel": "Apoyo financiero"
+      },
+      "license": {
+        "title": "Riesgo de Licencia Profesional",
+        "what": "Muchas juntas de licencias requieren que los titulares reporten los arrestos dentro de los 30 días y pueden suspender una licencia mientras se conoce el resultado del caso. Los campos con mayor riesgo incluyen enfermería, docencia, derecho, bienes raíces, contratación y cualquier profesión que requiera verificación de antecedentes para la renovación.",
+        "clock": "La mayoría de las juntas de licencias requieren notificación dentro de los 30 días posteriores al arresto. Algunas juntas actúan de inmediato al recibir la notificación. Verifique las reglas específicas de su junta.",
+        "action": "Consulte las reglas de su junta de licencias sobre la notificación de arrestos. Contacte a un abogado que maneje asuntos de licencias profesionales antes de reportar a su junta.",
+        "linkLabel": "Encontrar ayuda legal"
+      }
+    }
   },
   "howTo": {
     "pageTitle": "Guía de Navegación",

@@ -5727,9 +5727,116 @@ export default {
     }
   },
   "collateralConsequences": {
-    "title": "Hidden Consequences of a Criminal Record",
-    "subtitle": "A conviction — or even a guilty plea — triggers consequences that extend far beyond the sentence itself. Many of these are never explained in court.",
-    "relatedGuides": "Related guides"
+    "badge": "Arrest stage",
+    "pageTitle": "Arrest-Stage Risk Screener",
+    "pageDesc": "An arrest can immediately put housing, employment, and other vital systems at risk, even before any conviction. Answer 7 quick yes-or-no questions to see what may need attention right now.",
+    "qOf": "Question {{n}} of {{total}}",
+    "yes": "Yes",
+    "no": "No",
+    "back": "Back",
+    "resultsTitle": "Your Risk Summary",
+    "resultsDesc": "These systems may be at immediate risk based on your answers. The most urgent items appear first.",
+    "noRiskTitle": "No Active Risks Identified",
+    "noRiskDesc": "Based on your answers, none of the civil systems we screen for appear to be at immediate risk from this arrest. This does not cover every possible consequence. Speak with your attorney about your specific situation.",
+    "whatLabel": "What's at risk",
+    "timelineLabel": "Timeline",
+    "actionLabel": "Act now",
+    "disclaimer": "This summary is for your own use. Consult an attorney before sharing it with anyone.",
+    "generalInfo": "General information only. Not legal advice.",
+    "copyBtn": "Copy summary",
+    "copiedBtn": "Copied",
+    "printBtn": "Print",
+    "restart": "Start over",
+    "backToHub": "Back to Advocate Hub",
+    "privacyStrip": "This tool stores none of your answers. All processing happens locally on your device.",
+    "printHeading": "ARREST-STAGE RISK SUMMARY",
+    "printDate": "Generated: {{date}}",
+    "printNoRisk": "No active risks identified based on your answers.",
+    "printTimeline": "Timeline:",
+    "printAction": "Act now:",
+    "printDisclaimer": "This summary is for your own use. Consult an attorney before sharing it with anyone. This is general information only and does not constitute legal advice.",
+    "questions": {
+      "housing": {
+        "question": "Are you renting, or living in subsidized or Section 8 housing?",
+        "sub": "Includes public housing, Section 8 vouchers, or any government-assisted rental."
+      },
+      "employment": {
+        "question": "Are you currently employed?",
+        "sub": "Includes full-time, part-time, gig work, or any paying job."
+      },
+      "immigration": {
+        "question": "Is anyone in your household not a U.S. citizen or permanent resident?",
+        "sub": "Includes visa holders, DACA recipients, undocumented individuals, and others with temporary status.",
+        "privacyNote": "This answer is never stored or transmitted. It runs only in your browser."
+      },
+      "benefits": {
+        "question": "Are you receiving federal benefits?",
+        "sub": "Includes SNAP, SSI, SSDI, Medicaid, Section 8, TANF, or other federal assistance programs."
+      },
+      "children": {
+        "question": "Do you have minor children in your care?",
+        "sub": "Includes children you have custody of or are the primary caregiver for."
+      },
+      "supervision": {
+        "question": "Are you currently on probation or parole?",
+        "sub": "Includes any active supervision, conditional release, or community supervision order."
+      },
+      "license": {
+        "question": "Do you hold a professional or occupational license?",
+        "sub": "Includes nursing, teaching, contractor, security guard, real estate, and other licensed professions."
+      }
+    },
+    "risks": {
+      "supervision": {
+        "title": "Probation or Parole Violation Risk",
+        "what": "A new arrest triggers an automatic supervision violation regardless of how this case ends. A hold may be placed before you see a judge, and a separate revocation hearing can be scheduled before your criminal case is resolved.",
+        "clock": "Your supervision officer is typically notified within 24 hours of booking. A hold can be placed before any bail hearing.",
+        "action": "Tell your defense attorney about your supervision status right away. Do not contact your supervision officer without speaking to your attorney first.",
+        "linkLabel": "Get case guidance"
+      },
+      "immigration": {
+        "title": "Immigration and ICE Detainer Risk",
+        "what": "ICE can lodge a detainer against any non-citizen booked into a local jail, asking the jail to hold the person up to 48 hours past their release date so ICE can take custody. Criminal charges or a conviction can also affect visa status, green card eligibility, and create grounds for removal.",
+        "clock": "An ICE detainer can be issued within hours of booking. This is one of the fastest-moving consequences of an arrest.",
+        "action": "Contact an immigration attorney as soon as possible, before any plea discussions. Criminal charges and immigration consequences must be evaluated together.",
+        "linkLabel": "Immigration guidance"
+      },
+      "children": {
+        "title": "Child Welfare and Custody Risk",
+        "what": "Law enforcement can notify Child Protective Services at the time of arrest, especially if children were present or you are the sole caregiver. An open CPS investigation can affect custody arrangements and parental rights before any conviction.",
+        "clock": "CPS can be notified at the time of arrest. If children are left without care, emergency placement can happen the same day.",
+        "action": "Arrange childcare with a trusted adult right away if you may be detained. Document existing custody arrangements and contact your attorney if CPS makes contact.",
+        "linkLabel": "Childcare support"
+      },
+      "housing": {
+        "title": "Housing and Eviction Risk",
+        "what": "Public housing authorities and Section 8 programs can begin eviction proceedings based on an arrest alone, before any conviction. Federal one-strike rules give housing authorities broad authority to act. Private landlords may also have lease clauses that treat an arrest as a violation.",
+        "clock": "Public housing authorities can begin proceedings within days of an arrest. Review your lease immediately.",
+        "action": "Review your lease for arrest or criminal activity clauses. If you live in public housing or use a Section 8 voucher, contact a housing attorney before the housing authority contacts you.",
+        "linkLabel": "Housing support"
+      },
+      "employment": {
+        "title": "Employment Risk",
+        "what": "At-will employers can terminate employment after an arrest even without a conviction. Some jobs require employees to report arrests to HR within a set number of days. Roles requiring security clearances or working with vulnerable populations face the highest risk of suspension.",
+        "clock": "There is no set timeline. An at-will employer can act immediately. Check your employment contract for arrest reporting requirements.",
+        "action": "Review your employment contract and employee handbook for arrest reporting obligations. Do not volunteer information to your employer before consulting your attorney.",
+        "linkLabel": "Employment support"
+      },
+      "benefits": {
+        "title": "Federal Benefits Risk",
+        "what": "Some federal benefit programs require you to report an arrest. A conviction for certain offenses, particularly drug offenses, can result in automatic disqualification from programs like SNAP and federal student aid. A felony conviction triggers a lifetime SNAP ban in some states.",
+        "clock": "Reporting requirements vary by program. Some require notification within 10 days of an arrest. Contact your caseworker to understand your obligations.",
+        "action": "Contact your benefits caseworker to understand your reporting obligations. Ask your attorney whether the charges you face carry automatic benefits consequences.",
+        "linkLabel": "Financial support"
+      },
+      "license": {
+        "title": "Professional License Risk",
+        "what": "Many licensing boards require license holders to report arrests within 30 days and can suspend a license pending the outcome of a case. Fields with the highest risk include nursing, teaching, law, real estate, contracting, security work, and any profession requiring a background check for renewal.",
+        "clock": "Most licensing boards require reporting within 30 days of an arrest. Some boards act immediately upon notification. Check your board's specific rules.",
+        "action": "Look up your licensing board's rules on arrest reporting. Contact an attorney who handles professional licensing matters before you report to your board.",
+        "linkLabel": "Find legal help"
+      }
+    }
   },
   "howTo": {
     "pageTitle": "Navigate This Tool",
