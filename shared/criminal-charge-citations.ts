@@ -535,7 +535,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/810.08",
     instructionRef: "Fla. Std. Jury Instr. (Crim.) 13.5",
-    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
+    instructionUrl: "https://www-media.floridabar.org/uploads/2023/07/13.5.docx",
   },
   "fl-disorderly-conduct": { citation: "Fla. Stat. § 877.03", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.03.html" },
   "fl-public-intoxication": {
@@ -7607,7 +7607,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/812.015",
     instructionRef: "Fla. Std. Jury Instr. (Crim.) 14.3",
-    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
+    instructionUrl: "https://www-media.floridabar.org/uploads/2022/08/14.3.rtf",
   },
   "ga-shoplifting": {
     citation: "Ga. Code Ann. § 16-8-14",
@@ -9446,7 +9446,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/806.13",
     instructionRef: "Fla. Std. Jury Instr. (Crim.) 17.2",
-    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
+    instructionUrl: "https://www-media.floridabar.org/uploads/2022/08/17.2.rtf",
   },
   "ga-vandalism": {
     citation: "Ga. Code Ann. § 16-7-22",
@@ -9827,7 +9827,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Florida Criminal Punishment Code § 921.0022 (2024)",
     sourceUrl: "https://www.flsenate.gov/Laws/Statutes/2024/784.048",
     instructionRef: "Fla. Std. Jury Instr. (Crim.) 8.6",
-    instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/",
+    instructionUrl: "https://www-media.floridabar.org/uploads/2024/03/8.6.docx",
   },
   "ga-harassment": {
     citation: "Ga. Code Ann. § 16-11-39.1",
@@ -11033,7 +11033,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Delaware loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/delaware/section-1321/",
   },
-  "fl-loitering": { citation: "Fla. Stat. § 856.021", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0856/Sections/0856.021.html", instructionRef: "Fla. Std. Jury Instr. (Crim.) 29.3", instructionUrl: "https://www.floridabar.org/rules/florida-standard-jury-instructions/" },
+  "fl-loitering": { citation: "Fla. Stat. § 856.021", confidence: "high", lastVerified: "2026-06", source: "Florida Legislature Online Sunshine — leg.state.fl.us", sourceUrl: "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0856/Sections/0856.021.html", instructionRef: "Fla. Std. Jury Instr. (Crim.) 29.3", instructionUrl: "https://www-media.floridabar.org/uploads/2022/08/29.3.rtf" },
   "ga-loitering": {
     citation: "Ga. Code Ann. § 16-11-36",
     confidence: "medium",
