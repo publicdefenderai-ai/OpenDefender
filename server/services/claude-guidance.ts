@@ -11,6 +11,7 @@ import { buildJurisdictionContextBlock } from '@shared/jurisdiction-procedure-ru
 import { buildCollateralConsequenceContextBlock } from '../../client/src/lib/collateral-consequences-data';
 import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
+import { getLocusContext } from './locus-lookup';
 
 // Validate Anthropic API credentials - graceful fallback if not configured
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -380,7 +381,7 @@ function sanitizeInput(input: string | undefined, maxLength: number = 5000): str
   return sanitized;
 }
 
-function buildUserPrompt(caseDetails: CaseDetails): string {
+function buildUserPrompt(caseDetails: CaseDetails, locusContext?: string | null): string {
   // Sanitize charges array/string
   const chargesUnknown = caseDetails.chargesUnknown || 
     (Array.isArray(caseDetails.charges) ? caseDetails.charges.length === 0 : !caseDetails.charges);
@@ -402,7 +403,7 @@ function buildUserPrompt(caseDetails: CaseDetails): string {
   const isDrugCase = !chargesUnknown && /drug|narcotic|controlled.?substance|marijuana|cannabis|cocaine|methamphetamine|heroin|fentanyl|opioid|possession.{0,20}substance/i.test(chargesText);
 
   let prompt = `Provide general legal information for someone in this situation. Do not treat this as a case analysis — treat it as orientation for a person at this charge type, jurisdiction, and case stage:
-${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}${collateralBlock ? `\n${collateralBlock}\n` : ''}
+${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}${collateralBlock ? `\n${collateralBlock}\n` : ''}${locusContext ? `\n${locusContext}\n` : ''}
 BASIC CASE INFORMATION:
 - Jurisdiction: ${sanitizeInput(caseDetails.jurisdiction, 100)}
 - Charges: ${chargesText}
@@ -857,7 +858,8 @@ export async function generateClaudeGuidance(
 
   try {
     const systemPrompt = buildSystemPrompt(processedDetails.language);
-    const userPrompt = buildUserPrompt(processedDetails);
+    const locusContext = await getLocusContext(processedDetails);
+    const userPrompt = buildUserPrompt(processedDetails, locusContext);
 
     if (!isRequestCostAcceptable(systemPrompt.length + userPrompt.length)) {
       throw new Error('Request input is too large to process. Please reduce the amount of detail provided.');
@@ -1085,7 +1087,8 @@ export async function streamClaudeGuidance(
   }
 
   const systemPrompt = buildSystemPrompt(processedDetails.language);
-  const userPrompt = buildUserPrompt(processedDetails);
+  const locusContext = await getLocusContext(processedDetails);
+  const userPrompt = buildUserPrompt(processedDetails, locusContext);
 
   if (!isRequestCostAcceptable(systemPrompt.length + userPrompt.length)) {
     throw new Error('Request input is too large to process. Please reduce the amount of detail provided.');

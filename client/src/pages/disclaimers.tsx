@@ -285,6 +285,66 @@ export default function Disclaimers() {
           </div>
         </ScrollReveal>
 
+        {/* Legal Data Sources */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Legal Data Sources
+            </h2>
+
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  Statute citations, case law, and ordinance references on this platform draw from several authoritative sources.
+                </p>
+                <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
+                  <li>
+                    <strong className="text-foreground">OpenLaws:</strong> Live statute text across 50 states, D.C., Puerto Rico, and Federal law.
+                  </li>
+                  <li>
+                    <strong className="text-foreground">GovInfo.gov (GPO):</strong> Federal criminal statutes (Title 18 U.S.C.) from the U.S. Government Publishing Office.
+                  </li>
+                  <li>
+                    <strong className="text-foreground">CourtListener / RECAP Archive:</strong> Federal and state case law and court documents from the Free Law Project.
+                  </li>
+                  <li>
+                    <strong className="text-foreground">LOCUS-v1 (LocalLaws / UC Berkeley):</strong> Municipal and county ordinance text used for local-ordinance charges
+                    (loitering, trespass, disorderly conduct, and similar offenses commonly prosecuted under city or county code).
+                    Citation: Peskoff, Barrow, Vu &amp; Davenport et al. (2026), <em>Freeing the Law with LOCUS</em>, arXiv:2606.19334.
+                    Dataset:{" "}
+                    <a
+                      href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                    >
+                      huggingface.co/datasets/LocalLaws/LOCUS-v1
+                    </a>.
+                    Licensed under{" "}
+                    <a
+                      href="https://creativecommons.org/licenses/by-nc/4.0/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                    >
+                      CC-BY-NC-4.0
+                    </a>.
+                  </li>
+                  <li>
+                    <strong className="text-foreground">Bureau of Justice Statistics (BJS):</strong> National crime statistics used for outcome data.
+                  </li>
+                  <li>
+                    <strong className="text-foreground">LegiScan:</strong> Bill tracking for monitoring statute changes.
+                  </li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  Statute and ordinance text may be outdated. Always verify citations directly with the official source before relying on them for legal decisions.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
         {/* Attorney Tools */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">

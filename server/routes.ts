@@ -32,6 +32,7 @@ import { requireCaptcha } from "./middleware/captcha-middleware";
 import { getCaptchaSiteKey, isCaptchaRequired } from "./services/captcha-verification";
 import { requireServiceBudget } from "./middleware/budget-gate";
 import { getAICostStatus } from "./services/cost-tracker";
+import { locusSearch, normalizeStateCode } from "./services/locus-lookup";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -679,6 +680,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to get search stats", error);
       res.status(500).json({ success: false, error: "Failed to get stats" });
+    }
+  });
+
+  // LOCUS Municipal Ordinance Lookup
+  // Queries LOCUS-v1 (LocalLaws/UC Berkeley, CC-BY-NC-4.0) for local ordinance text
+  // relevant to charges commonly prosecuted under city/county code.
+  app.get("/api/local-ordinance", searchRateLimiter, async (req, res) => {
+    try {
+      const { state, query } = req.query;
+
+      if (!state || typeof state !== 'string') {
+        return res.status(400).json({ success: false, error: 'state parameter required (2-letter postal code)' });
+      }
+      if (!query || typeof query !== 'string') {
+        return res.status(400).json({ success: false, error: 'query parameter required' });
+      }
+
+      const stateCode = normalizeStateCode(state);
+      if (!stateCode) {
+        return res.status(400).json({ success: false, error: 'Unrecognized state value' });
+      }
+
+      const sanitizedQuery = query.slice(0, 100).trim();
+      if (!sanitizedQuery) {
+        return res.status(400).json({ success: false, error: 'query must not be empty' });
+      }
+
+      const result = await locusSearch(sanitizedQuery, stateCode);
+
+      res.json({
+        success: true,
+        found: result !== null,
+        result: result ?? null,
+        attribution: 'LOCUS-v1 (LocalLaws / UC Berkeley, CC-BY-NC-4.0) · https://huggingface.co/datasets/LocalLaws/LOCUS-v1',
+      });
+    } catch (error) {
+      errLog('LOCUS ordinance lookup route error', error);
+      res.status(500).json({ success: false, error: 'Lookup failed' });
     }
   });
 
