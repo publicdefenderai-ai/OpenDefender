@@ -3157,6 +3157,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Oregon Legislature — ORS 166.025 disorderly conduct in the second degree",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors166.html",
+    instructionRef: "UCJI 1741",
   },
   "or-resisting-arrest": {
     citation: "Or. Rev. Stat. § 162.315",
@@ -3164,6 +3165,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Oregon Legislature — ORS 162.315 resisting arrest; Class A misdemeanor",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors162.html",
+    instructionRef: "UCJI 1711",
   },
   "or-failure-to-appear": {
     citation: "Or. Rev. Stat. § 162.205",
@@ -3172,6 +3174,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Oregon Legislature — ORS 162.195 failure to appear 2nd degree; ORS 162.205 failure to appear 1st degree",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors162.html",
+    instructionRef: "UCJI 1712",
   },
   "or-petty-theft": {
     citation: "Or. Rev. Stat. § 164.043",
@@ -3179,6 +3182,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Oregon Legislature — ORS 164.043 theft in the third degree (petty theft)",
     sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html",
+    instructionRef: "UCJI 1671",
   },
 
   // — Washington (confirmed from leg.wa.gov) —
