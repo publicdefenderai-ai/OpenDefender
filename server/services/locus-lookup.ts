@@ -299,7 +299,11 @@ export async function getLocusContext(caseDetails: {
       ? caseDetails.charges.join(' ')
       : (caseDetails.charges || '');
 
-    const keyword = extractLocalOrdinanceKeyword(chargesText);
+    // Charge IDs use hyphen-separated format (e.g. "ca-disorderly-conduct").
+    // Normalize hyphens to spaces so multi-word regex patterns match correctly.
+    const normalizedText = chargesText.replace(/-/g, ' ');
+
+    const keyword = extractLocalOrdinanceKeyword(normalizedText);
     if (!keyword) return null;
 
     const stateCode = normalizeStateCode(caseDetails.jurisdiction);
