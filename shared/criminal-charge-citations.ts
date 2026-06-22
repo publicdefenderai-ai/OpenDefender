@@ -4004,6 +4004,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 525.060 Disorderly conduct in the second degree; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-525-060/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 13.06",
   },
   "ky-trespassing": {
     citation: "Ky. Rev. Stat. § 511.080",
@@ -4019,6 +4020,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 520.090 Resisting arrest; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-520-090/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 12.06",
   },
   "ky-failure-to-appear": {
     citation: "Ky. Rev. Stat. § 431.520",
@@ -4026,6 +4028,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 431.520 Failure to appear; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-431-520/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 2.08",
   },
   "ky-petty-theft": {
     citation: "Ky. Rev. Stat. § 514.030",
@@ -4033,6 +4036,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "KY § 514.030 Theft by unlawful taking; Justia returned 403",
     sourceUrl: "https://law.justia.com/codes/kentucky/section-514-030/",
+    instructionRef: "KY Instr. to Juries (Crim.) § 9.02",
   },
 
   // — South Dakota —
