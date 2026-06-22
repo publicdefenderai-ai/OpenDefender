@@ -65,6 +65,11 @@ const contentPages = [
         description: "Interactive 7-stage visual timeline from arrest to sentencing with rights, tips, and jurisdiction-specific callouts per stage. Includes detailed bail and plea bargain accordion guides, speedy trial and public defender info cards, and a state selector. Formerly at /process, which redirects here.",
       },
       {
+        route: "/collateral-consequences",
+        title: "Collateral Consequences Screener",
+        description: "Arrest-stage screener. Seven yes/no questions cover the life areas most immediately at risk from a criminal charge: active supervision (probation/parole), immigration status, children/custody, housing, employment, public benefits, and professional licenses. Answers produce a prioritized risk panel — urgent risks shown first with direct links to the relevant support pages. No AI, no login. The former /collateral-consequences-screener route redirects here.",
+      },
+      {
         route: "/case-guidance",
         title: "Case Roadmap",
         description: "Structured Q&A intake flow. Users select jurisdiction, charge type, and case stage; the platform surfaces relevant content, rights, and next steps organized for that stage of the process. Not a guidance or advice engine — it routes users to the right information. Powered by Claude with output validated against the statute database and CourtListener. Available at /case-guidance.",
@@ -122,7 +127,7 @@ const contentPages = [
       {
         route: "/support/reputation",
         title: "Record Clearance & Reputation",
-        description: "Expungement and sealing eligibility rules for all 50 states + DC, organized by state. Covers the collateral consequences of a conviction on employment, housing, voting rights, professional licenses, immigration, and public benefits. Includes a record clearance screener at /eligibility. Formerly at /record-expungement and /collateral-consequences, both of which redirect here.",
+        description: "Expungement and sealing eligibility rules for all 50 states + DC, organized by state. Covers the long-term collateral consequences of a conviction on employment, housing, voting rights, professional licenses, immigration, and public benefits. Includes a record clearance eligibility screener at /support/reputation/eligibility. The legacy /record-expungement route redirects here.",
       },
       {
         route: "/support/reentry",
@@ -208,6 +213,27 @@ const contentPages = [
         route: "/immigration-guidance/after-deportation",
         title: "After Deportation",
         description: "Rights and resources for people who have been deported or who have a loved one facing deportation.",
+      },
+    ],
+  },
+  {
+    section: "For Advocates",
+    note: "Tools for public defenders, legal aid attorneys, and advocates. No AI, no login, no backend calls. All output is generated client-side and is never transmitted.",
+    pages: [
+      {
+        route: "/for-advocates",
+        title: "Advocate Tools Hub",
+        description: "Landing page for public defenders and legal advocates. Links to the Intake Checklist and Mitigation Builder. Describes the intended audience and use cases for each tool.",
+      },
+      {
+        route: "/for-advocates/intake-checklist",
+        title: "Public Defender Intake Checklist",
+        description: "Comprehensive first-meeting intake form covering: case identifiers (charges, court date, case number, jurisdiction), criminal history (probation, parole, open warrants, prior convictions), immigration status with automatic Padilla screening flag, housing stability, mental health and substance use history, medications if detained, dependent and caregiver status, and document collection checklist (ID, address, employment, character references, treatment records). Flag computation automatically raises critical alerts for active supervision, open warrants, and non-citizen status. Output can be printed or exported to .docx via the docx npm package.",
+      },
+      {
+        route: "/for-advocates/mitigation-builder",
+        title: "Mitigation Memo Builder",
+        description: "Generates a formatted sentencing mitigation memo from structured form input. Sections: community ties (years in community, family proximity, involvement), housing (status and duration), employment (employer, duration, letter of support), treatment history (mental health and substance use), family responsibilities (dependents, caregiver status, sole provider), and character references. Output rendered as plain text memo and exportable to .docx. No AI — all content is user-supplied; the tool formats and structures it.",
       },
     ],
   },
@@ -652,6 +678,61 @@ export default function TechDocs() {
               </CardContent>
             </Card>
 
+            {/* Jury Instruction References */}
+            <Card>
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-3">
+                  <Scale className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />
+                  <CardTitle className="text-base">Jury Instruction References</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground space-y-2">
+                <p>
+                  Pattern jury instructions — the exact standards a jury must apply to convict on a given charge — are surfaced alongside charge information throughout the platform.
+                  Each entry in <code className="bg-muted px-1 rounded text-xs">shared/criminal-charge-citations.ts</code> supports two optional fields:
+                </p>
+                <ul className="space-y-1 list-none">
+                  <li>— <strong className="text-foreground">instructionRef</strong> — the instruction number in its official set (e.g., "CALCRIM 1600", "CJI2d 125.25", "OUJI-CR 4-18", "WPIC 35.50")</li>
+                  <li>— <strong className="text-foreground">instructionUrl</strong> — direct link to the court-hosted HTML or PDF where available</li>
+                </ul>
+                <p>
+                  When present, these appear in three surfaces: (1) the guidance dashboard charges card with an info tooltip explaining what jury instructions are (trilingual EN/ES/ZH), (2) the Q&A flow charge selector, and (3) the public charge search API widget.
+                  For paywalled instruction sets — such as Kentucky (LexisNexis) or Oregon (LexisNexis) — the reference label is shown without a link, with a note indicating availability via Westlaw or LexisNexis.
+                </p>
+                <p>
+                  <strong className="text-foreground">Testing:</strong> Vitest regression tests in <code className="bg-muted px-1 rounded text-xs">tests/jury-instructions.test.ts</code> cover display logic and link validation.
+                  A link checker script (<code className="bg-muted px-1 rounded text-xs">scripts/check-jury-instruction-links.ts</code>) can be run manually to flag broken instruction URLs before release.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* LOCUS Municipal Ordinance Context */}
+            <Card>
+              <CardHeader className="pb-3">
+                <div className="flex items-center gap-3">
+                  <BookOpen className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
+                  <CardTitle className="text-base">LOCUS Municipal Ordinance Context</CardTitle>
+                  <Badge variant="secondary" className="text-xs">No API key required</Badge>
+                </div>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground space-y-2">
+                <p>
+                  For charges with local-ordinance-relevant keywords (loitering, trespass, disorderly conduct, public intoxication, noise, curfew, park rules), the platform queries the{" "}
+                  <strong className="text-foreground">LOCUS-v1</strong> dataset (LocalLaws / UC Berkeley) for the actual municipal ordinance text and injects it into Claude's prompt as context.
+                  This gives AI guidance access to the specific local ordinance rather than relying on general statutory knowledge.
+                </p>
+                <p>
+                  <strong className="text-foreground">Data source:</strong> HuggingFace Datasets Server API — <code className="bg-muted px-1 rounded text-xs">LocalLaws/LOCUS-v1</code>. Free, no API key.
+                  License: CC-BY-NC-4.0. Citation: Peskoff, Barrow, Vu &amp; Davenport et al. (2026), <em>Freeing the Law with LOCUS</em>, arXiv:2606.19334.
+                </p>
+                <p>
+                  <strong className="text-foreground">Implementation:</strong> <code className="bg-muted px-1 rounded text-xs">server/services/locus-lookup.ts</code>.
+                  Results are cached for 10 minutes per keyword/state pair. Lookup has an 8-second timeout; on failure, guidance proceeds without ordinance context.
+                  When an ordinance is found, the metadata (section number, jurisdiction) surfaces in the guidance dashboard as a MapPin attribution line and inside the sourcing collapsible.
+                </p>
+              </CardContent>
+            </Card>
+
             {/* AI Accuracy */}
             <Card id="ai-validation">
               <CardHeader className="pb-3">
@@ -773,6 +854,9 @@ export default function TechDocs() {
                 <p>
                   Full-text search across all content types: charges, glossary terms, diversion programs, expungement rules, rights pages, immigration pages, and all 58+ site pages.
                   Implemented server-side in <code className="bg-muted px-1 rounded text-xs">server/services/search-indexer.ts</code>. Index is built at server startup in approximately 15ms.
+                </p>
+                <p>
+                  <strong className="text-foreground">Fuzzy typo tolerance:</strong> A Levenshtein distance algorithm corrects single-character typos in non-trivial query terms against the full indexed vocabulary before scoring runs. This means misspellings like "assaul" or "tresapss" still return correct results.
                 </p>
                 <p>
                   <strong className="text-foreground">Legal synonym expansion:</strong> Queries are expanded via a curated synonym map (e.g., "lawyer" finds "attorney", "counsel"). Multi-word queries are also scored on individual meaningful terms.
@@ -958,6 +1042,24 @@ export default function TechDocs() {
                       file: "pages/case-timeline.tsx",
                       backend: "None",
                       i18n: "caseTimeline.*",
+                    },
+                    {
+                      feature: "Collateral Consequences Screener",
+                      file: "pages/collateral-consequences.tsx",
+                      backend: "None",
+                      i18n: "collateralConsequences.*",
+                    },
+                    {
+                      feature: "Public Defender Intake Checklist",
+                      file: "pages/for-advocates/intake-checklist.tsx",
+                      backend: "None (.docx export only)",
+                      i18n: "None (content hardcoded)",
+                    },
+                    {
+                      feature: "Mitigation Memo Builder",
+                      file: "pages/for-advocates/mitigation-builder.tsx",
+                      backend: "None (.docx export only)",
+                      i18n: "None (content hardcoded)",
                     },
                   ].map((row) => (
                     <tr key={row.feature}>
