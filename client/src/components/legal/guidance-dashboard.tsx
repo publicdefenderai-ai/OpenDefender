@@ -1095,6 +1095,26 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         jurisdiction={guidance.caseData?.jurisdiction}
       />
 
+      {/* Local Ordinance Attribution — shown when LOCUS found a relevant municipal ordinance */}
+      {guidance.localOrdinance && (
+        <div className="flex items-start gap-2 text-xs text-muted-foreground px-1 -mt-2">
+          <MapPin className="h-3 w-3 flex-shrink-0 mt-0.5" />
+          <span>
+            Local ordinance referenced: {guidance.localOrdinance.section} ({guidance.localOrdinance.jurisdictionDisplay})
+            {' · '}
+            <a
+              href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2 hover:text-foreground transition-colors"
+            >
+              LOCUS-v1
+            </a>
+            , CC-BY-NC-4.0
+          </span>
+        </div>
+      )}
+
       {/* Simple Reassurance Message with Hidden Technical Details */}
       {guidance.validation && (
         <div className="flex items-start gap-3 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700">
@@ -1139,6 +1159,23 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                       <CheckCircle className="h-3.5 w-3.5 text-green-500" />
                       <span>{t('guidance.validation.checkedPenalties', 'Cross-referenced with published sentencing guidelines')}</span>
                     </div>
+                    {guidance.localOrdinance && (
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-3.5 w-3.5 text-blue-500" />
+                        <span>
+                          Municipal ordinance context: {guidance.localOrdinance.section}, {guidance.localOrdinance.jurisdictionDisplay} (
+                          <a
+                            href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline hover:text-slate-700 dark:hover:text-slate-200"
+                          >
+                            LOCUS-v1
+                          </a>
+                          , CC-BY-NC-4.0)
+                        </span>
+                      </div>
+                    )}
                     {guidance.validation.precedents && guidance.validation.precedents.length > 0 ? (
                       <div className="flex items-center gap-2">
                         <CheckCircle className="h-3.5 w-3.5 text-green-500" />

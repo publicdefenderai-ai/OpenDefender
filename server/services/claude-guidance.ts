@@ -11,7 +11,7 @@ import { buildJurisdictionContextBlock } from '@shared/jurisdiction-procedure-ru
 import { buildCollateralConsequenceContextBlock } from '../../client/src/lib/collateral-consequences-data';
 import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
-import { getLocusContext } from './locus-lookup';
+import { getLocusContext, LOCUS_ATTRIBUTION } from './locus-lookup';
 
 // Validate Anthropic API credentials - graceful fallback if not configured
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -143,6 +143,11 @@ interface ClaudeGuidance {
     note: string;
   }>;
   dangerFlags?: string[];
+  localOrdinance?: {
+    section: string;
+    jurisdictionDisplay: string;
+    attribution: string;
+  };
   collateralConsequences?: Array<{
     category: string;
     consequence: string;
@@ -858,8 +863,8 @@ export async function generateClaudeGuidance(
 
   try {
     const systemPrompt = buildSystemPrompt(processedDetails.language);
-    const locusContext = await getLocusContext(processedDetails);
-    const userPrompt = buildUserPrompt(processedDetails, locusContext);
+    const locusResult = await getLocusContext(processedDetails);
+    const userPrompt = buildUserPrompt(processedDetails, locusResult?.contextText);
 
     if (!isRequestCostAcceptable(systemPrompt.length + userPrompt.length)) {
       throw new Error('Request input is too large to process. Please reduce the amount of detail provided.');
@@ -921,6 +926,11 @@ export async function generateClaudeGuidance(
       mockQA: parsedData.mockQA,
       uncertainties: Array.isArray(parsedData.uncertainties) ? parsedData.uncertainties : [],
       collateralConsequences: Array.isArray(parsedData.collateralConsequences) ? parsedData.collateralConsequences : undefined,
+      localOrdinance: locusResult ? {
+        section: locusResult.ordinance.section,
+        jurisdictionDisplay: locusResult.ordinance.jurisdictionDisplay,
+        attribution: LOCUS_ATTRIBUTION,
+      } : undefined,
       usageMetrics: {
         inputTokens: message.usage.input_tokens,
         outputTokens: message.usage.output_tokens,
@@ -1087,8 +1097,8 @@ export async function streamClaudeGuidance(
   }
 
   const systemPrompt = buildSystemPrompt(processedDetails.language);
-  const locusContext = await getLocusContext(processedDetails);
-  const userPrompt = buildUserPrompt(processedDetails, locusContext);
+  const locusResult = await getLocusContext(processedDetails);
+  const userPrompt = buildUserPrompt(processedDetails, locusResult?.contextText);
 
   if (!isRequestCostAcceptable(systemPrompt.length + userPrompt.length)) {
     throw new Error('Request input is too large to process. Please reduce the amount of detail provided.');
@@ -1170,6 +1180,11 @@ export async function streamClaudeGuidance(
       mockQA: parsedData.mockQA,
       uncertainties: Array.isArray(parsedData.uncertainties) ? parsedData.uncertainties : [],
       collateralConsequences: Array.isArray(parsedData.collateralConsequences) ? parsedData.collateralConsequences : undefined,
+      localOrdinance: locusResult ? {
+        section: locusResult.ordinance.section,
+        jurisdictionDisplay: locusResult.ordinance.jurisdictionDisplay,
+        attribution: LOCUS_ATTRIBUTION,
+      } : undefined,
       usageMetrics: {
         inputTokens: finalMessage.usage.input_tokens,
         outputTokens: finalMessage.usage.output_tokens,

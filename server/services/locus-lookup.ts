@@ -290,10 +290,15 @@ export async function locusSearch(
  *
  * Always resolves — never throws. Errors are logged and produce null.
  */
+export interface LocusContextResult {
+  contextText: string;
+  ordinance: LocusOrdinance;
+}
+
 export async function getLocusContext(caseDetails: {
   charges: string | string[];
   jurisdiction: string;
-}): Promise<string | null> {
+}): Promise<LocusContextResult | null> {
   try {
     const chargesText = Array.isArray(caseDetails.charges)
       ? caseDetails.charges.join(' ')
@@ -312,7 +317,7 @@ export async function getLocusContext(caseDetails: {
     const ordinance = await locusSearch(keyword, stateCode);
     if (!ordinance) return null;
 
-    return [
+    const contextText = [
       `LOCAL ORDINANCE REFERENCE (${ordinance.jurisdictionDisplay}):`,
       `This charge type ("${keyword}") is often prosecuted under municipal or county ordinance`,
       `rather than the state statute. The following local ordinance was found:`,
@@ -322,6 +327,8 @@ export async function getLocusContext(caseDetails: {
       `the state statute, and advise confirming the exact charging document with their attorney.`,
       `Source: ${LOCUS_ATTRIBUTION}`,
     ].join('\n');
+
+    return { contextText, ordinance };
   } catch (err) {
     errLog('getLocusContext failed', err);
     return null;
