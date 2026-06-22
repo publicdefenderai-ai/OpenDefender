@@ -1825,6 +1825,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Iowa Legislature — Iowa Code § 723.4 Disorderly conduct",
     sourceUrl: "https://law.justia.com/codes/iowa/section-723-4/",
+    instructionRef: "Iowa MCJI 1200.1",
   },
 
   // — Kansas —
@@ -7514,6 +7515,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa theft (simple misdemeanor — petty theft equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-714-2/",
+    instructionRef: "Iowa MCJI 1500.1",
   },
   "la-petty-theft": {
     citation: "La. Rev. Stat. § 14:67",
@@ -12944,6 +12946,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Iowa interference with official acts; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/iowa/section-719-1/",
+    instructionRef: "Iowa MCJI 2100.1",
   },
   "ks-resisting-arrest": {
     citation: "Kan. Stat. Ann. § 21-5414",
