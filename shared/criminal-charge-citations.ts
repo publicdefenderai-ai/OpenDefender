@@ -11042,6 +11042,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Arkansas loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/arkansas/section-5-71-213/",
+    instructionRef: "AMI Crim. 9102",
   },
   "ca-loitering": {
     citation: "Cal. Penal Code § 647(h)",
@@ -11191,6 +11192,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi disturbing the peace (Mississippi loitering charged under disturbing the peace statute); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-97-35-37/",
+    instructionRef: "Miss. Model JI (Crim.) 28-15",
   },
   "mt-loitering": {
     citation: "Mont. Code Ann. § 45-8-101",
@@ -13106,6 +13108,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Mississippi failure to appear; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/mississippi/section-99-5-27/",
+    instructionRef: "Miss. Model JI (Crim.) 24-5",
   },
   "mo-failure-to-appear": {
     citation: "Mo. Rev. Stat. § 544.665",
