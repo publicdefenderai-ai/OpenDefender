@@ -2058,7 +2058,7 @@ export default {
         "federalCharges": "Cargos Federales",
         "showMore": "Mostrar {{count}} cargos más...",
         "hasAttorneyLabel": "Ya tengo un abogado o defensor público",
-        "juryInstruction": "Instrucciones Oficiales del Jurado",
+        "juryInstruction": "Instrucción del Jurado",
         "juryInstructionTooltip": "Estas son las normas jurídicas exactas que un jurado debe seguir al decidir su caso. Explican lo que la fiscalía debe probar para cada cargo.",
         "back": "Volver",
         "continue": "Continuar"

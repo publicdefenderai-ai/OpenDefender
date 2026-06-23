@@ -524,7 +524,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             <div className="flex items-center gap-1.5 mt-1.5">
                               <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
                               <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Official Jury Instructions')}:
+                                {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                               </span>
                               <TooltipProvider>
                                 <Tooltip>
@@ -550,7 +550,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                   className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium"
                                   onClick={(e) => e.stopPropagation()}
                                   data-testid={`link-instruction-${charge.id}`}
-                                  aria-label={`${t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')} ${instructionRef}`}
+                                  aria-label={`${t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')} ${instructionRef}`}
                                 >
                                   {instructionRef}
                                 </a>
@@ -707,7 +707,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               <div className="flex items-center gap-1.5 mb-1">
                                 <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
                                 <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                                 </span>
                                 {listInstructionUrl ? (
                                   <a
@@ -815,7 +815,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               <div className="flex items-center gap-1.5 mb-1">
                                 <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
                                 <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Instruction')}:
+                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                                 </span>
                                 {fedInstructionUrl ? (
                                   <a

@@ -2100,7 +2100,7 @@ export default {
         "federalCharges": "Federal Charges",
         "showMore": "Show {{count}} more charges...",
         "hasAttorneyLabel": "I already have an attorney or public defender",
-        "juryInstruction": "Official Jury Instructions",
+        "juryInstruction": "Jury Instruction",
         "juryInstructionTooltip": "These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.",
         "back": "Back",
         "continue": "Continue"
