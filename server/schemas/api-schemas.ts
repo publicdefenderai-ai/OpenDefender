@@ -19,7 +19,9 @@ export const jsonSchemas = {
       evidenceToGather: { type: "array", items: { type: "string" }, description: "Evidence that may help the defense" },
       specificRights: { type: "array", items: { type: "string" }, description: "Rights specific to this charge" },
       urgentActions: { type: "array", items: { type: "string" }, description: "Immediate actions to take" },
-      statuteCitations: { type: "array", items: { type: "string" }, description: "Legal statute citations" }
+      statuteCitations: { type: "array", items: { type: "string" }, description: "Legal statute citations" },
+      instructionRef: { type: ["string", "null"], description: "Pattern Jury Instruction reference for this charge (e.g. \"CALCRIM 2100\", \"CJI2d 125.25\", \"OUJI-CR 4-18\"). Pattern Jury Instructions are the model instructions courts read to juries to explain the elements of an offense. Present only when a verified reference exists for the charge's jurisdiction; omitted or null otherwise." },
+      instructionUrl: { type: ["string", "null"], description: "Direct URL to the court-hosted or state-published Pattern Jury Instruction text for this charge. Present only when a publicly accessible URL is available; null when the instruction set is behind a paywall (e.g. LexisNexis/Westlaw) or when no URL has been verified." }
     },
     required: ["id", "name", "jurisdiction", "category", "description"]
   },

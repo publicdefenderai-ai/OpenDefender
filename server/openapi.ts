@@ -478,7 +478,17 @@ For integration support or to report issues, please open an issue on our GitHub 
             }
           },
           commonDefenses: { type: "array", items: { type: "string" } },
-          relatedCharges: { type: "array", items: { type: "string" } }
+          relatedCharges: { type: "array", items: { type: "string" } },
+          instructionRef: {
+            type: "string",
+            nullable: true,
+            description: "Pattern Jury Instruction reference for this charge (e.g. \"CALCRIM 2100\", \"CJI2d 125.25\", \"OUJI-CR 4-18\"). Pattern Jury Instructions are the model instructions courts read to juries to explain the elements of an offense. Present only when a verified reference exists for the charge's jurisdiction; omitted or null otherwise."
+          },
+          instructionUrl: {
+            type: "string",
+            nullable: true,
+            description: "Direct URL to the court-hosted or state-published Pattern Jury Instruction text for this charge. Present only when a publicly accessible URL is available; null when the instruction set is behind a paywall (e.g. LexisNexis/Westlaw) or when no URL has been verified."
+          }
         }
       },
       DiversionProgram: {
