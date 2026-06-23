@@ -709,6 +709,23 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                 <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
                                   {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                                 </span>
+                                <TooltipProvider>
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <button
+                                        type="button"
+                                        className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
+                                        aria-label="What is a jury instruction?"
+                                        onClick={(e) => e.stopPropagation()}
+                                      >
+                                        <HelpCircle className="h-3 w-3" aria-hidden="true" />
+                                      </button>
+                                    </TooltipTrigger>
+                                    <TooltipContent side="top" className="max-w-xs text-xs">
+                                      {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </TooltipProvider>
                                 {listInstructionUrl ? (
                                   <a
                                     href={listInstructionUrl}
@@ -817,6 +834,23 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                 <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
                                   {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
                                 </span>
+                                <TooltipProvider>
+                                  <Tooltip>
+                                    <TooltipTrigger asChild>
+                                      <button
+                                        type="button"
+                                        className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
+                                        aria-label="What is a jury instruction?"
+                                        onClick={(e) => e.stopPropagation()}
+                                      >
+                                        <HelpCircle className="h-3 w-3" aria-hidden="true" />
+                                      </button>
+                                    </TooltipTrigger>
+                                    <TooltipContent side="top" className="max-w-xs text-xs">
+                                      {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
+                                    </TooltipContent>
+                                  </Tooltip>
+                                </TooltipProvider>
                                 {fedInstructionUrl ? (
                                   <a
                                     href={fedInstructionUrl}
