@@ -1,0 +1,139 @@
+name: Quarterly Jury Instruction Link Check
+
+on:
+  # Runs at 10:00 UTC on January 1, April 1, July 1, and October 1
+  schedule:
+    - cron: '0 10 1 1,4,7,10 *'
+
+  # Manual trigger from the Actions tab
+  workflow_dispatch:
+    inputs:
+      fl_only:
+        description: 'Check Florida Bar URLs only (fastest — highest churn risk)'
+        required: false
+        default: false
+        type: boolean
+
+# Read-only checkout; issues:write only on the report job
+permissions:
+  contents: read
+
+jobs:
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 1: Run the link checker
+  # Florida Bar instruction documents live at date-stamped CDN URLs that go
+  # dead silently when the Bar revises an instruction (1-2 times per year).
+  # This job catches those 404s before users encounter them.
+  # ────────────────────────────────────────────────────────────────────────────
+  check-links:
+    name: Check Jury Instruction URLs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run jury instruction link checker (all jurisdictions)
+        if: ${{ !inputs.fl_only }}
+        run: npx tsx scripts/check-jury-instruction-links.ts --report
+        # Exit code 1 means broken links were found — still upload the report
+        continue-on-error: true
+
+      - name: Run jury instruction link checker (Florida Bar only)
+        if: ${{ inputs.fl_only == true }}
+        run: npx tsx scripts/check-jury-instruction-links.ts --report --fl-only
+        continue-on-error: true
+
+      - name: Upload link check report
+        uses: actions/upload-artifact@v4
+        with:
+          name: jury-instruction-link-report
+          path: scripts/output/jury-instruction-link-report.json
+          if-no-files-found: warn
+          retention-days: 90
+
+  # ────────────────────────────────────────────────────────────────────────────
+  # Job 2: Open a GitHub issue when broken links are found
+  # ────────────────────────────────────────────────────────────────────────────
+  report:
+    name: Open Issue for Broken Links
+    runs-on: ubuntu-latest
+    needs: check-links
+    if: always() && !cancelled()
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download link check report
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: jury-instruction-link-report
+          path: scripts/output
+
+      - name: Open GitHub issue for broken links
+        run: |
+          REPORT="scripts/output/jury-instruction-link-report.json"
+          if [ ! -f "$REPORT" ]; then
+            echo "No report file found — skipping issue creation."
+            exit 0
+          fi
+
+          BROKEN=$(node -e "
+            const r = require('./$REPORT');
+            const dead = (r.results || []).filter(x => !x.ok && x.note !== 'bot-block (likely live)');
+            console.log(dead.length);
+          " 2>/dev/null || echo "0")
+
+          if [ "$BROKEN" = "0" ]; then
+            echo "All jury instruction links are live. No issue needed."
+            exit 0
+          fi
+
+          BODY=$(node -e "
+            const r = require('./$REPORT');
+            const dead = (r.results || []).filter(x => !x.ok && x.note !== 'bot-block (likely live)');
+            const lines = dead.map(x => '- \`' + x.chargeKey + '\`: ' + x.url + ' → **' + x.status + '**');
+            console.log([
+              '## Quarterly jury instruction link check — broken links found',
+              '',
+              'The quarterly \`check-jury-instruction-links.ts\` run found **' + dead.length + ' broken URL(s)**.',
+              'Update or remove the corresponding \`instructionUrl\` entries in \`shared/criminal-charge-citations.ts\`.',
+              '',
+              '### Broken links',
+              ...lines,
+              '',
+              '> Florida Bar links (\`floridabar.org\`) are revised 1–2× per year.',
+              '> For each dead link, find the current URL at https://www.floridabar.org/jury-instructions/',
+            ].join('\n'));
+          " 2>/dev/null || echo "Could not parse report.")
+
+          gh issue create \
+            --title "Quarterly check: $BROKEN broken jury instruction link(s) found" \
+            --body "$BODY" \
+            --label "maintenance,content-accuracy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
