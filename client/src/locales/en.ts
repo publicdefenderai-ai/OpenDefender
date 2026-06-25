@@ -2102,6 +2102,7 @@ export default {
         "hasAttorneyLabel": "I already have an attorney or public defender",
         "juryInstruction": "Jury Instruction",
         "juryInstructionTooltip": "These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.",
+        "juryInstructionAriaLabel": "What is a jury instruction?",
         "back": "Back",
         "continue": "Continue"
       },

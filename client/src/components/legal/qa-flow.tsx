@@ -532,7 +532,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                     <button
                                       type="button"
                                       className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
-                                      aria-label="What is a jury instruction?"
+                                      aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
                                     >
                                       <HelpCircle className="h-3 w-3" aria-hidden="true" />
                                     </button>
@@ -715,7 +715,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                       <button
                                         type="button"
                                         className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
-                                        aria-label="What is a jury instruction?"
+                                        aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
                                         onClick={(e) => e.stopPropagation()}
                                       >
                                         <HelpCircle className="h-3 w-3" aria-hidden="true" />
@@ -840,7 +840,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                       <button
                                         type="button"
                                         className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
-                                        aria-label="What is a jury instruction?"
+                                        aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
                                         onClick={(e) => e.stopPropagation()}
                                       >
                                         <HelpCircle className="h-3 w-3" aria-hidden="true" />

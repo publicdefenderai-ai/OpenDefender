@@ -245,13 +245,13 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                                     type="button"
                                     className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
                                     onClick={(e) => e.stopPropagation()}
-                                    aria-label="What is a jury instruction?"
+                                    aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
                                   >
                                     <HelpCircle className="h-3 w-3" aria-hidden="true" />
                                   </button>
                                 </TooltipTrigger>
                                 <TooltipContent side="top" className="max-w-xs text-xs">
-                                  These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.
+                                  {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
                                 </TooltipContent>
                               </Tooltip>
                             </TooltipProvider>

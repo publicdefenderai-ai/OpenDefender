@@ -2060,6 +2060,7 @@ export default {
         "hasAttorneyLabel": "Ya tengo un abogado o defensor público",
         "juryInstruction": "Instrucción del Jurado",
         "juryInstructionTooltip": "Estas son las normas jurídicas exactas que un jurado debe seguir al decidir su caso. Explican lo que la fiscalía debe probar para cada cargo.",
+        "juryInstructionAriaLabel": "¿Qué es una instrucción al jurado?",
         "back": "Volver",
         "continue": "Continuar"
       },

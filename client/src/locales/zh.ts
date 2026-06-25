@@ -2060,6 +2060,7 @@ export default {
         "hasAttorneyLabel": "我已经有律师或公设辩护人",
         "juryInstruction": "陪审团指令",
         "juryInstructionTooltip": "这些是陪审团在裁决您的案件时必须遵循的确切法律标准。它们说明了检察官对每项指控必须证明的内容。",
+        "juryInstructionAriaLabel": "什么是陪审团指令？",
         "back": "返回",
         "continue": "继续"
       },

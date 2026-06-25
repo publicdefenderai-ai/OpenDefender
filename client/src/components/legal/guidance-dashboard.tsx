@@ -711,7 +711,7 @@ function YourChargesSection({
                       <button
                         type="button"
                         className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0 -mt-0.5"
-                        aria-label="What is a jury instruction?"
+                        aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
                       >
                         <HelpCircle className="h-3 w-3" aria-hidden="true" />
                       </button>
