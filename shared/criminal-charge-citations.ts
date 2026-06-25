@@ -2545,6 +2545,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-7/",
     instructionRef: "OUJI-CR 4-72",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-72.htm",
   },
   "ok-murder-in-the-second-degree": {
     citation: "Okla. Stat. tit. 21, § 701.8",
@@ -2553,6 +2554,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-8/",
     instructionRef: "OUJI-CR 4-83",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-83.htm",
   },
 
   // — Tennessee —
@@ -4958,6 +4960,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-646/",
     instructionRef: "OUJI-CR 4-18",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-18.htm",
   },
   "or-aggravated-assault": {
     citation: "Or. Rev. Stat. § 163.185",
@@ -5330,6 +5333,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/",
     instructionRef: "OUJI-CR 4-15a",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-15a.htm",
   },
   "or-domestic-violence-assault": {
     citation: "Or. Rev. Stat. § 163.160",
@@ -5717,6 +5721,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma robbery with firearms or dangerous weapons; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-797/",
     instructionRef: "OUJI-CR 4-141",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-141.htm",
   },
   "or-robbery-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 164.415",
@@ -6117,6 +6122,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma robbery by force or fear (unarmed); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-791/",
     instructionRef: "OUJI-CR 4-133",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-133.htm",
   },
   "or-robbery-in-the-second-degree": {
     citation: "Or. Rev. Stat. § 164.405",
@@ -6525,6 +6531,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1431/",
     instructionRef: "OUJI-CR 5-8",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-8.htm",
   },
   "or-burglary-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 164.225",
@@ -6940,6 +6947,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1435/",
     instructionRef: "OUJI-CR 5-17",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-17.htm",
   },
   "or-burglary-in-the-second-degree": {
     citation: "Or. Rev. Stat. § 164.215",
@@ -7331,6 +7339,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma possession of controlled dangerous substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-402/",
     instructionRef: "OUJI-CR 6-39",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-39.htm",
   },
   "or-possession-of-controlled-substance": {
     citation: "Or. Rev. Stat. § 475C.909",
@@ -8821,6 +8830,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1111/",
     instructionRef: "OUJI-CR 4-120",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-120.htm",
   },
   "or-sexual-assault-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 163.375",
@@ -9229,6 +9239,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1111/",
     instructionRef: "OUJI-CR 4-120",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-120.htm",
   },
   "or-rape-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 163.375",
@@ -10678,6 +10689,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-415/",
     instructionRef: "OUJI-CR 6-46",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-46.htm",
   },
   "ok-possession-with-intent-to-distribute": {
     citation: "Okla. Stat. tit. 63 § 2-401(a)(1)",
@@ -10686,6 +10698,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-401/",
     instructionRef: "OUJI-CR 6-44",
+    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-44.htm",
   },
   "or-drug-trafficking": {
     citation: "Or. Rev. Stat. § 475.860",
@@ -18904,7 +18917,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   "ma-domestic-assault-battery": { citation: "Mass. Gen. Laws ch. 265, § 13M", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-13m/", instructionRef: "MA Dist.Ct. Instr. 6.270", instructionUrl: "https://www.mass.gov/doc/6270-assault-on-family-or-household-member-gl-c-265-ss-13m/download" },
   "va-domestic-assault-battery": { citation: "Va. Code Ann. § 18.2-57.2", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-57.2/", instructionRef: "VMJI §22.100",},
-  "ok-domestic-assault-battery": { citation: "Okla. Stat. tit. 21, § 644", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/", instructionRef: "OUJI-CR 4-15a",},
+  "ok-domestic-assault-battery": { citation: "Okla. Stat. tit. 21, § 644", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/", instructionRef: "OUJI-CR 4-15a", instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-15a.htm",},
 
   "mn-domestic-assault": { citation: "Minn. Stat. § 609.2242", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.2242", instructionRef: "CRIMJIG 13.50",},
   "tn-domestic-assault": { citation: "Tenn. Code Ann. § 39-13-111", confidence: "low", lastVerified: "2026-04", source: "REPEALED per OpenLaws 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-111/" },

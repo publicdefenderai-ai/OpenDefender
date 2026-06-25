@@ -47,6 +47,11 @@ const BOT_BLOCK_HOSTS = new Set([
   // the /doc/* instruction PDFs are genuinely hosted and live.
   "mass.gov",
   "www.mass.gov",
+  // Oklahoma State Courts Network — behind Cloudflare Turnstile bot-protection;
+  // ouji-cr/* pages return Cloudflare challenge responses (typically 201) to
+  // automated clients, but the instruction pages are live in a real browser.
+  "www.oscn.net",
+  "oscn.net",
 ]);
 
 interface CheckResult {
