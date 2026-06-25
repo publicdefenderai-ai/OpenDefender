@@ -1836,6 +1836,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5402/",
     instructionRef: "PIK Crim. 4th 54.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-murder-in-the-second-degree": {
     citation: "Kan. Stat. Ann. § 21-5403",
@@ -1844,6 +1845,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5403/",
     instructionRef: "PIK Crim. 4th 54.020",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-felony-murder": {
     citation: "Kan. Stat. Ann. § 21-5402",
@@ -1852,6 +1854,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5402/",
     instructionRef: "PIK Crim. 4th 54.030",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-voluntary-manslaughter": {
     citation: "Kan. Stat. Ann. § 21-5404",
@@ -1860,6 +1863,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5404/",
     instructionRef: "PIK Crim. 4th 54.050",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-involuntary-manslaughter": {
     citation: "Kan. Stat. Ann. § 21-5405",
@@ -1868,6 +1872,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5405/",
     instructionRef: "PIK Crim. 4th 54.060",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-vehicular-homicide": {
     citation: "Kan. Stat. Ann. § 21-5406",
@@ -1876,6 +1881,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5406/",
     instructionRef: "PIK Crim. 4th 54.130",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-trespassing": {
     citation: "Kan. Stat. Ann. § 21-5808",
@@ -1884,6 +1890,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Kansas Legislature — Kan. Stat. Ann. § 21-5808 Criminal trespass",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5808/",
     instructionRef: "PIK Crim. 4th 58.140",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-petty-theft": {
     citation: "Kan. Stat. Ann. § 21-5801",
@@ -2242,6 +2249,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-01/",
     instructionRef: "Wis JI-Criminal 1010",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wi-murder-in-the-second-degree": {
     citation: "Wis. Stat. § 940.05",
@@ -2250,6 +2258,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-05/",
     instructionRef: "Wis JI-Criminal 1020",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wi-felony-murder": {
     citation: "Wis. Stat. § 940.03",
@@ -2258,6 +2267,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-03/",
     instructionRef: "Wis JI-Criminal 1070",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wi-criminally-negligent-homicide": {
     citation: "Wis. Stat. § 940.08",
@@ -2266,6 +2276,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-08/",
     instructionRef: "Wis JI-Criminal 1085",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wi-vehicular-homicide": {
     citation: "Wis. Stat. § 940.09",
@@ -2274,6 +2285,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-09/",
     instructionRef: "Wis JI-Criminal 1185",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wi-trespassing": {
     citation: "Wis. Stat. § 943.13",
@@ -2282,6 +2294,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Wisconsin Legislature — § 943.13 Trespass to land",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-13/",
     instructionRef: "Wis JI-Criminal 1453",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wi-disorderly-conduct": {
     citation: "Wis. Stat. § 947.01",
@@ -2619,6 +2632,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-202/",
     instructionRef: "UMJI-CR 1701",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "ut-murder-in-the-second-degree": {
     citation: "Utah Code Ann. § 76-5-203",
@@ -2627,6 +2641,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-203/",
     instructionRef: "UMJI-CR 1703",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "ut-voluntary-manslaughter": {
     citation: "Utah Code Ann. § 76-5-205",
@@ -2635,6 +2650,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-205/",
     instructionRef: "UMJI-CR 1711",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "ut-criminally-negligent-homicide": {
     citation: "Utah Code Ann. § 76-5-206",
@@ -2643,6 +2659,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-206/",
     instructionRef: "UMJI-CR 1715",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "ut-vehicular-homicide": {
     citation: "Utah Code Ann. § 76-5-207",
@@ -2651,6 +2668,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-207/",
     instructionRef: "UMJI-CR 1720",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "ut-trespassing": {
     citation: "Utah Code Ann. § 76-6-206",
@@ -2659,6 +2677,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Utah Legislature — Utah Code § 76-6-206 Criminal trespass",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-206/",
     instructionRef: "UMJI-CR 1704",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "ut-petty-theft": {
     citation: "Utah Code Ann. § 76-6-412",
@@ -3677,6 +3696,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:11-3 Murder",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-11-3/",
     instructionRef: "NJ MJC 2C:11-3",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-murder-in-the-second-degree": {
     citation: "N.J. Stat. § 2C:11-3(b)",
@@ -3685,6 +3705,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:11-3 Murder (aggravated/purposeful)",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-11-3/",
     instructionRef: "NJ MJC 2C:11-3",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-voluntary-manslaughter": {
     citation: "N.J. Stat. § 2C:11-4(a)",
@@ -3693,6 +3714,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:11-4 Aggravated/Reckless Manslaughter",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-11-4/",
     instructionRef: "NJ MJC 2C:11-4",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-involuntary-manslaughter": {
     citation: "N.J. Stat. § 2C:11-4(b)",
@@ -3701,6 +3723,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:11-4 Aggravated/Reckless Manslaughter",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-11-4/",
     instructionRef: "NJ MJC 2C:11-4",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-criminally-negligent-homicide": {
     citation: "N.J. Stat. § 2C:11-5",
@@ -3709,6 +3732,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:11-5 Death by Auto",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-11-5/",
     instructionRef: "NJ MJC 2C:11-5",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-vehicular-homicide": {
     citation: "N.J. Stat. § 2C:11-5",
@@ -3717,6 +3741,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:11-5 Death by Auto",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-11-5/",
     instructionRef: "NJ MJC 2C:11-5",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-felony-murder": {
     citation: "N.J. Stat. § 2C:11-3(a)(3)",
@@ -3725,6 +3750,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:11-3 Murder (felony murder variant)",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-11-3/",
     instructionRef: "NJ MJC 2C:11-3",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-disorderly-conduct": {
     citation: "N.J. Stat. § 2C:33-2",
@@ -3733,6 +3759,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:33-2 Disorderly Conduct",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-33-2/",
     instructionRef: "NJ MJC 2C:33-2",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-trespassing": {
     citation: "N.J. Stat. § 2C:18-3",
@@ -3741,6 +3768,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:18-3 Criminal Trespass",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-18-3/",
     instructionRef: "NJ MJC 2C:18-3",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-resisting-arrest": {
     citation: "N.J. Stat. § 2C:29-2",
@@ -3749,6 +3777,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:29-2 Resisting Arrest",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-29-2/",
     instructionRef: "NJ MJC 2C:29-2",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-failure-to-appear": {
     citation: "N.J. Stat. § 2C:29-7",
@@ -3757,6 +3786,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:29-7 Failure to Appear",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-29-7/",
     instructionRef: "NJ MJC 2C:29-7",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-petty-theft": {
     citation: "N.J. Stat. § 2C:20-3",
@@ -3765,6 +3795,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:20-3 Theft by Unlawful Taking",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-20-3/",
     instructionRef: "NJ MJC 2C:20-3",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
 
   // — Illinois —
@@ -4395,6 +4426,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/kansas/section-8-1567/",
     instructionRef: "PIK Crim. 4th 75.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-dui-first-offense": {
     citation: "Ky. Rev. Stat. Ann. § 189A.010",
@@ -4510,6 +4542,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 39:4-50 DUI/DWI",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-39-4-50/",
     instructionRef: "NJ MJC 39:4-50",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-dui-first-offense": {
     citation: "N.M. Stat. Ann. § 66-8-102",
@@ -4609,6 +4642,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-41-6a-502/",
     instructionRef: "UMJI-CR 1501",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-dui-first-offense": {
     citation: "Vt. Stat. Ann. tit. 23 § 1201",
@@ -4650,6 +4684,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-346-63/",
     instructionRef: "Wis JI-Criminal 2665",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-dui-first-offense": {
     citation: "Wyo. Stat. Ann. § 31-5-233",
@@ -4795,6 +4830,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5412/",
     instructionRef: "PIK Crim. 4th 52.030",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-aggravated-assault": {
     citation: "Ky. Rev. Stat. Ann. § 508.010",
@@ -4910,6 +4946,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:12-1 Aggravated Assault",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-12-1/",
     instructionRef: "NJ MJC 2C:12-1",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-aggravated-assault": {
     citation: "N.M. Stat. Ann. § 30-3-2",
@@ -5025,6 +5062,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-103/",
     instructionRef: "UMJI-CR 1102",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-aggravated-assault": {
     citation: "Vt. Stat. Ann. tit. 13 § 1024",
@@ -5066,6 +5104,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-19/",
     instructionRef: "Wis JI-Criminal 1220",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-aggravated-assault": {
     citation: "Wyo. Stat. Ann. § 6-2-502",
@@ -5199,6 +5238,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5414/",
     instructionRef: "PIK Crim. 4th 52.030",
+    instructionUrl: "https://www.kscourts.org/",
   },
 
   // ── BATCH 10 (continued): Domestic Violence Assault — remaining states ────
@@ -5390,6 +5430,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-77-36-1/",
     instructionRef: "UMJI-CR 1121",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-domestic-violence-assault": {
     citation: "Vt. Stat. Ann. tit. 15 § 1101",
@@ -5423,6 +5464,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-968-075/",
     instructionRef: "Wis JI-Criminal 1220",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-domestic-violence-assault": {
     citation: "Wyo. Stat. Ann. § 35-21-102",
@@ -5563,6 +5605,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas aggravated robbery; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5421/",
     instructionRef: "PIK Crim. 4th 56.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-robbery-in-the-first-degree": {
     citation: "Ky. Rev. Stat. Ann. § 515.020",
@@ -5678,6 +5721,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:15-1 Robbery (armed/first degree)",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-15-1/",
     instructionRef: "NJ MJC 2C:15-1",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-robbery-in-the-first-degree": {
     citation: "N.M. Stat. Ann. § 30-16-2",
@@ -5827,6 +5871,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin armed robbery; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-32/",
     instructionRef: "Wis JI-Criminal 1810",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-robbery-in-the-first-degree": {
     citation: "Wyo. Stat. Ann. § 6-2-401",
@@ -5964,6 +6009,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas robbery (unarmed — second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5420/",
     instructionRef: "PIK Crim. 4th 56.020",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-robbery-in-the-second-degree": {
     citation: "Ky. Rev. Stat. Ann. § 515.030",
@@ -6079,6 +6125,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:15-1 Robbery (second degree/unarmed)",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-15-1/",
     instructionRef: "NJ MJC 2C:15-1",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-robbery-in-the-second-degree": {
     citation: "N.M. Stat. Ann. § 30-16-2(B)",
@@ -6187,6 +6234,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah robbery (unarmed — second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-301/",
     instructionRef: "UMJI-CR 1801",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-robbery-in-the-second-degree": {
     citation: "Vt. Stat. Ann. tit. 13 § 608(b)",
@@ -6228,6 +6276,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin robbery (unarmed — second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-32/",
     instructionRef: "Wis JI-Criminal 1812",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-robbery-in-the-second-degree": {
     citation: "Wyo. Stat. Ann. § 6-2-401(b)",
@@ -6373,6 +6422,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas burglary (dwelling at night = first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5807/",
     instructionRef: "PIK Crim. 4th 59.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-burglary-in-the-first-degree": {
     citation: "Ky. Rev. Stat. Ann. § 511.020",
@@ -6488,6 +6538,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:18-2 Burglary (first degree/armed)",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-18-2/",
     instructionRef: "NJ MJC 2C:18-2",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-burglary-in-the-first-degree": {
     citation: "N.M. Stat. Ann. § 30-16-4",
@@ -6596,6 +6647,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah aggravated burglary (first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-202/",
     instructionRef: "UMJI-CR 1821",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-burglary-in-the-first-degree": {
     citation: "Vt. Stat. Ann. tit. 13 § 1201(a)",
@@ -6637,6 +6689,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin burglary (aggravated = first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-10/",
     instructionRef: "Wis JI-Criminal 1250",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-burglary-in-the-first-degree": {
     citation: "Wyo. Stat. Ann. § 6-3-301(a)",
@@ -6782,6 +6835,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas burglary (non-dwelling = second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5807/",
     instructionRef: "PIK Crim. 4th 59.020",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-burglary-in-the-second-degree": {
     citation: "Ky. Rev. Stat. Ann. § 511.030",
@@ -6897,6 +6951,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:18-2 Burglary (second degree/base offense)",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-18-2/",
     instructionRef: "NJ MJC 2C:18-2",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-burglary-in-the-second-degree": {
     citation: "N.M. Stat. Ann. § 30-16-3",
@@ -7012,6 +7067,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah burglary (non-aggravated = second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-202/",
     instructionRef: "UMJI-CR 1823",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-burglary-in-the-second-degree": {
     citation: "Vt. Stat. Ann. tit. 13 § 1201(b)",
@@ -7053,6 +7109,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin burglary (unaggravated = second degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-10/",
     instructionRef: "Wis JI-Criminal 1252",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-burglary-in-the-second-degree": {
     citation: "Wyo. Stat. Ann. § 6-3-301(b)",
@@ -7187,6 +7244,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas unlawful possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5706/",
     instructionRef: "PIK Crim. 4th 67.030",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-possession-of-controlled-substance": {
     citation: "Ky. Rev. Stat. Ann. § 218A.1415",
@@ -7297,6 +7355,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:35-10 Possession of Controlled Dangerous Substance",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-35-10/",
     instructionRef: "NJ MJC 2C:35-10",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-possession-of-controlled-substance": {
     citation: "N.M. Stat. Ann. § 30-31-23",
@@ -7402,6 +7461,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-58-37-8/",
     instructionRef: "UMJI-CR 1603",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-possession-of-controlled-substance": {
     citation: "Vt. Stat. Ann. tit. 18 § 4230(a)",
@@ -7442,6 +7502,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-961-41/",
     instructionRef: "Wis JI-Criminal 6030",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-possession-of-controlled-substance": {
     citation: "Wyo. Stat. Ann. § 35-7-1031(c)",
@@ -7630,6 +7691,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas theft (covers shoplifting); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5801/",
     instructionRef: "PIK Crim. 4th 58.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-shoplifting": {
     citation: "Ky. Rev. Stat. Ann. § 433.234",
@@ -7738,6 +7800,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:20-11 Shoplifting",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-20-11/",
     instructionRef: "NJ MJC 2C:20-11",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-shoplifting": {
     citation: "N.M. Stat. Ann. § 30-16-20",
@@ -7843,6 +7906,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah retail theft; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-602/",
     instructionRef: "UMJI-CR 1702",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-shoplifting": {
     citation: "Vt. Stat. Ann. tit. 13 § 2575",
@@ -7883,6 +7947,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin retail theft; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-50/",
     instructionRef: "Wis JI-Criminal 1454",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-shoplifting": {
     citation: "Wyo. Stat. Ann. § 6-3-402",
@@ -8010,6 +8075,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas theft (Severity Level 7 — value > $25,000 = first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5801/",
     instructionRef: "PIK Crim. 4th 58.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-grand-theft-in-the-first-degree": {
     citation: "Ky. Rev. Stat. Ann. § 514.030",
@@ -8344,6 +8410,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas theft (Severity Level 9 = second degree equivalent, value $1,500-$25,000); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5801/",
     instructionRef: "PIK Crim. 4th 58.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-grand-theft-in-the-second-degree": {
     citation: "Ky. Rev. Stat. Ann. § 514.030",
@@ -8691,6 +8758,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5503/",
     instructionRef: "PIK Crim. 4th 57.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-sexual-assault-in-the-first-degree": {
     citation: "Ky. Rev. Stat. Ann. § 510.040",
@@ -8797,6 +8865,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:14-2 Aggravated Sexual Assault",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-14-2/",
     instructionRef: "NJ MJC 2C:14-2",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-sexual-assault-in-the-first-degree": {
     citation: "N.M. Stat. Ann. § 30-9-11(D)(1)",
@@ -8887,6 +8956,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-402/",
     instructionRef: "UMJI-CR 601",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "vt-sexual-assault-in-the-first-degree": {
     citation: "Vt. Stat. Ann. tit. 13 § 3252",
@@ -8928,6 +8998,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-225/",
     instructionRef: "Wis JI-Criminal 1200",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-sexual-assault-in-the-first-degree": {
     citation: "Wyo. Stat. Ann. § 6-2-302",
@@ -9074,6 +9145,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5503/",
     instructionRef: "PIK Crim. 4th 57.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-rape-in-the-first-degree": {
     citation: "Ky. Rev. Stat. Ann. § 510.040",
@@ -9197,6 +9269,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:14-2 Aggravated Sexual Assault",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-14-2/",
     instructionRef: "NJ MJC 2C:14-2",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-rape-in-the-first-degree": {
     citation: "N.M. Stat. Ann. § 30-9-11(D)(1)",
@@ -9296,6 +9369,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-402/",
     instructionRef: "UMJI-CR 601",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "va-rape-in-the-first-degree": {
     citation: "Va. Code Ann. § 18.2-61",
@@ -9329,6 +9403,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-225/",
     instructionRef: "Wis JI-Criminal 1200",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wv-rape-in-the-first-degree": {
     citation: "W. Va. Code § 61-8B-3",
@@ -9474,6 +9549,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas criminal damage to property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5813/",
     instructionRef: "PIK Crim. 4th 58.060",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-vandalism": {
     citation: "Ky. Rev. Stat. Ann. § 512.020",
@@ -9686,6 +9762,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah criminal mischief; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-6-106/",
     instructionRef: "UMJI-CR 1707",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "va-vandalism": {
     citation: "Va. Code Ann. § 18.2-137",
@@ -9726,6 +9803,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin criminal damage to property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-943-01/",
     instructionRef: "Wis JI-Criminal 1400",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-vandalism": {
     citation: "Wyo. Stat. Ann. § 6-3-201",
@@ -9853,6 +9931,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-6101/",
     instructionRef: "PIK Crim. 4th 56.150",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-harassment": {
     citation: "Ky. Rev. Stat. Ann. § 525.070",
@@ -10065,6 +10144,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-9-201/",
     instructionRef: "UMJI-CR 1901",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "va-harassment": {
     citation: "Va. Code Ann. § 18.2-186.3",
@@ -10097,6 +10177,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin harassment by telecommunications; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-947-0125/",
     instructionRef: "Wis JI-Criminal 1900",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wv-harassment": {
     citation: "W. Va. Code § 61-2-9a",
@@ -10372,6 +10453,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5703/",
     instructionRef: "PIK Crim. 4th 67.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ks-possession-with-intent-to-distribute": {
     citation: "Kan. Stat. Ann. § 21-5705",
@@ -10380,6 +10462,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5705/",
     instructionRef: "PIK Crim. 4th 67.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-drug-trafficking": {
     citation: "Ky. Rev. Stat. Ann. § 218A.1411",
@@ -10597,6 +10680,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:35-5 Manufacturing/Distributing Controlled Dangerous Substances",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-35-5/",
     instructionRef: "NJ MJC 2C:35-5",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nj-possession-with-intent-to-distribute": {
     citation: "N.J. Stat. Ann. § 2C:35-5(a)(1)",
@@ -10605,6 +10689,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:35-5 Manufacturing/Distributing Controlled Dangerous Substances",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-35-5/",
     instructionRef: "NJ MJC 2C:35-5",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "nm-drug-trafficking": {
     citation: "N.M. Stat. Ann. § 30-31-20",
@@ -10817,6 +10902,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-58-37-8/",
     instructionRef: "UMJI-CR 1601",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "ut-possession-with-intent-to-distribute": {
     citation: "Utah Code Ann. § 58-37-8(1)(a)(iii)",
@@ -10825,6 +10911,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-58-37-8/",
     instructionRef: "UMJI-CR 1601",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "va-drug-trafficking": {
     citation: "Va. Code Ann. § 18.2-248",
@@ -10897,6 +10984,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-961-41/",
     instructionRef: "Wis JI-Criminal 6040",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wi-possession-with-intent-to-distribute": {
     citation: "Wis. Stat. § 961.41(1m)",
@@ -10905,6 +10993,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-961-41/",
     instructionRef: "Wis JI-Criminal 6040",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wy-drug-trafficking": {
     citation: "Wyo. Stat. Ann. § 35-7-1031(a)(i)",
@@ -11059,6 +11148,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-6204/",
     instructionRef: "PIK Crim. 4th 67.080",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ky-loitering": {
     citation: "Ky. Rev. Stat. Ann. § 525.090",
@@ -11269,6 +11359,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah disorderly conduct (Utah loitering charged under disorderly conduct statute); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-9-102/",
     instructionRef: "UMJI-CR 1906",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "va-loitering": {
     citation: "Va. Code Ann. § 18.2-176",
@@ -11301,6 +11392,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Wisconsin loitering and prowling; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-947-02/",
     instructionRef: "Wis JI-Criminal 1917",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
   "wv-loitering": {
     citation: "W. Va. Code § 61-6-1",
@@ -11734,6 +11826,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-01/",
     instructionRef: "Wis JI-Criminal 1055",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
 
   // involuntary-manslaughter — remaining states
@@ -11777,6 +11870,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Utah negligent homicide; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/utah/section-76-5-206/",
     instructionRef: "UMJI-CR 1709",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "wi-involuntary-manslaughter": {
     citation: "Wis. Stat. § 940.06",
@@ -11785,6 +11879,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/wisconsin/section-940-06/",
     instructionRef: "Wis JI-Criminal 1060",
+    instructionUrl: "https://www.wicourts.gov/courts/",
   },
 
   // murder-in-the-first-degree — territories
@@ -12105,6 +12200,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/kansas/section-8-1567/",
     instructionRef: "PIK Crim. 4th 75.010",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ne-dui-first": {
     citation: "Neb. Rev. Stat. § 60-6,196",
@@ -12139,6 +12235,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/utah/section-41-6a-502/",
     instructionRef: "UMJI-CR 2101",
+    instructionUrl: "https://www.utcourts.gov/",
   },
   "nv-dui-first-misdemeanor": {
     citation: "Nev. Rev. Stat. § 484C.400",
@@ -12844,6 +12941,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "NJ Model Jury Charges (Criminal) — 2C:18-2 Burglary (third-degree base offense)",
     sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-18-2/",
     instructionRef: "NJ MJC 2C:18-2",
+    instructionUrl: "https://www.njcourts.gov/courts/criminal",
   },
   "ny-burglary-in-the-third-degree": {
     citation: "N.Y. Penal Law § 140.20",
@@ -13196,6 +13294,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Kansas possession of marijuana (Class B misdemeanor for first offense); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/kansas/section-21-5706/",
     instructionRef: "PIK Crim. 4th 67.030",
+    instructionUrl: "https://www.kscourts.org/",
   },
   "ne-possession-marijuana": {
     citation: "Neb. Rev. Stat. § 28-416(13)",

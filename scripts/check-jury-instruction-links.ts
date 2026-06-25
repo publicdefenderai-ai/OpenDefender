@@ -52,6 +52,10 @@ const BOT_BLOCK_HOSTS = new Set([
   // automated clients, but the instruction pages are live in a real browser.
   "www.oscn.net",
   "oscn.net",
+  // Kansas Courts (kscourts.org) — returns 403 to automated HEAD/GET agents;
+  // the site is live and accessible in a real browser.
+  "kscourts.org",
+  "www.kscourts.org",
 ]);
 
 interface CheckResult {
