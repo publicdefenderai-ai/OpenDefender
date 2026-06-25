@@ -195,6 +195,7 @@ const INSTRUCTION_SET_PAYWALL: Record<string, string> = {
   'MCJI': 'LexisNexis',     // Maryland Criminal Jury Instructions
   'VMJI': 'LexisNexis',     // Virginia Model Jury Instructions
   'CRIMJIG': 'Westlaw',     // Minnesota Criminal Jury Instruction Guides
+  'RAJI': 'Arizona State Bar', // Revised Arizona Jury Instructions
 };
 
 /**
