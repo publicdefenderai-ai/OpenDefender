@@ -39,6 +39,14 @@ const BOT_BLOCK_HOSTS = new Set([
   "courts.ca.gov",
   "www.nycourts.gov",
   "nycourts.gov",
+  // Missouri Supreme Court — returns 403 to automated agents with any UA;
+  // pages are live and accessible in a real browser.
+  "courts.mo.gov",
+  "www.courts.mo.gov",
+  // Massachusetts government portal — returns 403 to automated agents;
+  // the /doc/* instruction PDFs are genuinely hosted and live.
+  "mass.gov",
+  "www.mass.gov",
 ]);
 
 interface CheckResult {

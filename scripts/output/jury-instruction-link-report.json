@@ -1,0 +1,3768 @@
+{
+  "generated": "2026-06-25T05:52:37.905Z",
+  "scope": "all jurisdictions",
+  "totalEntries": 518,
+  "uniqueUrlsChecked": 144,
+  "uniqueUrlsLive": 134,
+  "uniqueUrlsBroken": 10,
+  "results": [
+    {
+      "chargeKey": "fl-murder-in-the-first-degree",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/7.2.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-attempted-murder",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/7.2.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-murder-in-the-second-degree",
+      "url": "https://www-media.floridabar.org/uploads/2026/06/7.4.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-murder-in-the-third-degree",
+      "url": "https://www-media.floridabar.org/uploads/2025/09/7.6.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-felony-murder",
+      "url": "https://www-media.floridabar.org/uploads/2025/09/7.3.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-voluntary-manslaughter",
+      "url": "https://www-media.floridabar.org/uploads/2026/06/7.7.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-involuntary-manslaughter",
+      "url": "https://www-media.floridabar.org/uploads/2026/06/7.7.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-vehicular-homicide",
+      "url": "https://www-media.floridabar.org/uploads/2025/09/7.9.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-trespassing",
+      "url": "https://www-media.floridabar.org/uploads/2023/07/13.5.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-murder-in-the-first-degree",
+      "url": "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-iv-murder-in-the-first-degree",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-felony-murder",
+      "url": "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-iv-murder-in-the-first-degree",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-murder-in-the-second-degree",
+      "url": "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-v-murder-in-the-second-degree",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-voluntary-manslaughter",
+      "url": "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-vi-voluntary-manslaughter",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-involuntary-manslaughter",
+      "url": "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-vii-involuntary-manslaughter",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-vehicular-homicide",
+      "url": "https://www.mass.gov/doc/5140-motor-vehicle-homicide-felony-oui-liquor-and-recklessness-gl-c-90-ss-24ga/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-attempted-murder",
+      "url": "https://www.mass.gov/info-details/model-jury-instructions-on-homicide-viii-supplemental-instructions",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mi-murder-in-the-first-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-murder-in-the-second-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-voluntary-manslaughter",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-involuntary-manslaughter",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-vehicular-homicide",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-attempted-murder",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-trespassing",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-dui-first-offense",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-aggravated-assault",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-domestic-violence-assault",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-robbery-in-the-first-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-robbery-in-the-second-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-burglary-in-the-first-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-burglary-in-the-second-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-possession-of-controlled-substance",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-shoplifting",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-sexual-assault-in-the-first-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-rape-in-the-first-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-vandalism",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-harassment",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-drug-trafficking",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-possession-with-intent-to-distribute",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-loitering",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-possession-marijuana",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-possession-of-drug-paraphernalia",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-maintaining-drug-house",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-dui-second-offense",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-dui-third-offense",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-assault-on-peace-officer",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-drug-school-zone-enhancement",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-assault-in-the-first-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-assault-with-deadly-weapon",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-assault-in-the-second-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-assault-in-the-third-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-bank-robbery",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-residential-burglary",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-commercial-burglary",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-auto-burglary",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-child-sexual-abuse",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-sexual-exploitation-of-minor",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-statutory-rape",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-attempted-robbery",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-attempted-sexual-assault",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-sexual-assault-in-the-third-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-sexual-assault-in-the-second-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-rape-in-the-second-degree",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-felony-murder",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-criminally-negligent-homicide",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-assault-and-battery",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-owi",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "mi-domestic-violence",
+      "url": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-murder-in-the-first-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.27.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-murder-in-the-second-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-felony-murder",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-attempted-murder",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-voluntary-manslaughter",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.20.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-involuntary-manslaughter",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.15.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-criminally-negligent-homicide",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.10.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-trespassing",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/140/140.05.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-disorderly-conduct",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/240/240.20.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-public-intoxication",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/240/240.40.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-resisting-arrest",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/205/205.30.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-failure-to-appear",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/215/215.59.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-petty-theft",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/155/155.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-shoplifting",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/155/155.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-petit-larceny",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/155/155.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-murder-in-the-first-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-murder-in-the-second-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-voluntary-manslaughter",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-involuntary-manslaughter",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-dui-first-offense",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-aggravated-assault",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-domestic-violence-assault",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-robbery-in-the-first-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-robbery-in-the-second-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-burglary-in-the-first-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-burglary-in-the-second-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-possession-of-controlled-substance",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-shoplifting",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-sexual-assault-in-the-first-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-rape-in-the-first-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-vandalism",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-harassment",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-drug-trafficking",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-possession-with-intent-to-distribute",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-loitering",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-trespassing",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-assault-fourth-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-possession-of-drug-paraphernalia",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-maintaining-drug-house",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-dui-second-offense",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-dui-third-offense",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-assault-on-peace-officer",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-drug-school-zone-enhancement",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-assault-in-the-first-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-assault-with-deadly-weapon",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-assault-in-the-second-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-assault-in-the-third-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-bank-robbery",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-residential-burglary",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-commercial-burglary",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-auto-burglary",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-statutory-rape",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-attempted-robbery",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-attempted-sexual-assault",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-sexual-assault-in-the-third-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-sexual-assault-in-the-second-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-rape-in-the-second-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-attempted-murder",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-felony-murder",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-criminally-negligent-homicide",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-vehicular-homicide",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-dwi",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "mo-domestic-assault-fourth-degree",
+      "url": "https://www.courts.mo.gov/hosted/supremecourt/sup/criminaljury/",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ca-murder-in-the-first-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-murder-in-the-second-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-felony-murder",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-voluntary-manslaughter",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-involuntary-manslaughter",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-vehicular-homicide",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-attempted-murder",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-trespassing",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-disorderly-conduct",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-public-intoxication",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-resisting-arrest",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-failure-to-appear",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-petty-theft",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-dui-first-offense",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-domestic-violence-assault",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-robbery-in-the-first-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-robbery-in-the-second-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-burglary-in-the-first-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-burglary-in-the-second-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-possession-of-controlled-substance",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-shoplifting",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-grand-theft-in-the-first-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-rape-in-the-first-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-vandalism",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-harassment",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-drug-trafficking",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-possession-with-intent-to-distribute",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-loitering",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-domestic-battery",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-distribution-of-controlled-substance",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-manufacturing-controlled-substance",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-possession-of-drug-paraphernalia",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-maintaining-drug-house",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-dui-second-offense",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-dui-third-offense",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-unlawful-carrying-of-weapon",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-felon-in-possession-of-firearm",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-discharge-of-firearm-in-city",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-possession-of-prohibited-weapon",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-assault-on-peace-officer",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-criminal-attempt",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-conspiracy",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-aiding-and-abetting",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-accessory-after-the-fact",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-criminal-solicitation",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-gang-enhancement",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-hate-crime-enhancement",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-recidivist-enhancement",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-firearm-in-felony-enhancement",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-drug-school-zone-enhancement",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-money-laundering",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-wire-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-mail-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-check-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-insurance-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-tax-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-identity-theft",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-computer-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-credit-card-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-embezzlement",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-assault-with-deadly-weapon",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-assault-in-the-second-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-assault-in-the-third-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-menacing",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-carjacking",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-bank-robbery",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-reckless-driving",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-hit-and-run",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-forgery",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-contempt-of-court",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-protective-order-violation",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-child-sexual-abuse",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-sexual-exploitation-of-minor",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-theft-by-receiving",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-statutory-rape",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-minor-in-possession",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-false-info-to-police",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-failure-to-pay-child-support",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-noise-violation",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-indecent-exposure",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-fake-id",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-animal-cruelty-misdemeanor",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-illegal-camping",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-panhandling",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-attempted-robbery",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-attempted-sexual-assault",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-solicitation",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-rico-organized-crime",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-juvenile-firearm-possession",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-sexual-assault-in-the-third-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-sexual-assault-in-the-second-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-trespass-after-warning",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-rape-in-the-second-degree",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-bad-checks",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-disturbing-the-peace",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-driving-while-suspended",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-reckless-driving-criminal",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-criminally-negligent-homicide",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-petty-theft-misdemeanor",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-fare-evasion",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-prostitution-solicitation",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-stalking",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-kidnapping",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-arson",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ca-welfare-fraud",
+      "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-murder-in-the-first-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-attempted-murder",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-murder-in-the-second-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.04",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-voluntary-manslaughter",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.08",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-involuntary-manslaughter",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+26.10",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-vehicular-homicide",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+36.53.01",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-trespassing",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+56.04",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-murder-in-the-first-degree",
+      "url": "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.1-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "ct-murder-in-the-second-degree",
+      "url": "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.2-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "ct-voluntary-manslaughter",
+      "url": "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.3-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "ct-involuntary-manslaughter",
+      "url": "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.4-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "ct-criminally-negligent-homicide",
+      "url": "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.5-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "ct-vehicular-homicide",
+      "url": "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.6-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "ct-felony-murder",
+      "url": "https://www.jud.ct.gov/ji/Criminal/HomicideOffenses/2.7-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "il-murder-in-the-first-degree",
+      "url": "https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-murder-in-the-second-degree",
+      "url": "https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-voluntary-manslaughter",
+      "url": "https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-involuntary-manslaughter",
+      "url": "https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-criminally-negligent-homicide",
+      "url": "https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-felony-murder",
+      "url": "https://www.illinoiscourts.gov/resources/4ca60c86-cef3-465a-83ae-9cc61d159640/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-vehicular-homicide",
+      "url": "https://www.illinoiscourts.gov/resources/ff86413d-67ea-47ab-8732-f84d40f31119/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-dui-first-offense",
+      "url": "https://www.illinoiscourts.gov/resources/ff86413d-67ea-47ab-8732-f84d40f31119/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-dui-second-offense",
+      "url": "https://www.illinoiscourts.gov/resources/ff86413d-67ea-47ab-8732-f84d40f31119/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-dui-third-offense",
+      "url": "https://www.illinoiscourts.gov/resources/ff86413d-67ea-47ab-8732-f84d40f31119/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-trespassing",
+      "url": "https://www.illinoiscourts.gov/resources/50f36433-7722-466e-a3aa-0da8a6ae9b3c/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-vandalism",
+      "url": "https://www.illinoiscourts.gov/resources/50f36433-7722-466e-a3aa-0da8a6ae9b3c/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "in-murder-in-the-first-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-voluntary-manslaughter",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-involuntary-manslaughter",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-criminally-negligent-homicide",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-vehicular-homicide",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-trespassing",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-dui-first-offense",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-aggravated-assault",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-domestic-violence-assault",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-robbery-in-the-first-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-robbery-in-the-second-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-burglary-in-the-first-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-burglary-in-the-second-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-possession-of-controlled-substance",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-shoplifting",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-grand-theft-in-the-first-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-grand-theft-in-the-second-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-sexual-assault-in-the-first-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-rape-in-the-first-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-vandalism",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-harassment",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-drug-trafficking",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-possession-with-intent-to-distribute",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-loitering",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-murder-in-the-second-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-domestic-battery",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-possession-marijuana",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-possession-of-drug-paraphernalia",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-maintaining-drug-house",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-dui-second-offense",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-dui-third-offense",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-felon-in-possession-of-firearm",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-possession-of-prohibited-weapon",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-assault-on-peace-officer",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-drug-school-zone-enhancement",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-assault-in-the-first-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-assault-with-deadly-weapon",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-assault-in-the-second-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-assault-in-the-third-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-bank-robbery",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-residential-burglary",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-commercial-burglary",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-auto-burglary",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-child-sexual-abuse",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-sexual-exploitation-of-minor",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-statutory-rape",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-attempted-robbery",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-attempted-sexual-assault",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-juvenile-firearm-possession",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-sexual-assault-in-the-third-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-sexual-assault-in-the-second-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-rape-in-the-second-degree",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-attempted-murder",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-felony-murder",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "in-owi",
+      "url": "https://www.in.gov/courts/iocs/resources/model-criminal-jury-instructions/",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "nm-murder-in-the-first-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-murder-in-the-second-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-voluntary-manslaughter",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-involuntary-manslaughter",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-vehicular-homicide",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-trespassing",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-dui-first-offense",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-aggravated-assault",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-domestic-violence-assault",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-robbery-in-the-first-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-robbery-in-the-second-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-burglary-in-the-first-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-burglary-in-the-second-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-possession-of-controlled-substance",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-shoplifting",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-sexual-assault-in-the-first-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-rape-in-the-first-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-vandalism",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-harassment",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-drug-trafficking",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-possession-with-intent-to-distribute",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-loitering",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-possession-of-drug-paraphernalia",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-maintaining-drug-house",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-dui-second-offense",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-dui-third-offense",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-drug-school-zone-enhancement",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-bank-robbery",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-residential-burglary",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-commercial-burglary",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-auto-burglary",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-statutory-rape",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-attempted-robbery",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-attempted-sexual-assault",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-sexual-assault-in-the-third-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-sexual-assault-in-the-second-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-rape-in-the-second-degree",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-attempted-murder",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-felony-murder",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-criminally-negligent-homicide",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "nm-dui-dwi-first",
+      "url": "https://nmsupremecourt.nmcourts.gov/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-dui-first-offense",
+      "url": "https://www.jud.ct.gov/ji/Criminal/MotorVehicleOffenses/11.1-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "fl-dui-first-offense",
+      "url": "https://www-media.floridabar.org/uploads/2025/12/28.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-dui-second-offense",
+      "url": "https://www-media.floridabar.org/uploads/2025/12/28.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-dui-third-offense",
+      "url": "https://www-media.floridabar.org/uploads/2025/12/28.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-dui-first-offense",
+      "url": "https://www.mass.gov/doc/5310-operating-under-the-influence-of-intoxicating-liquor-gl-c-90-ss-24/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-dui-second-offense",
+      "url": "https://www.mass.gov/doc/5310-operating-under-the-influence-of-intoxicating-liquor-gl-c-90-ss-24/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-dui-third-offense",
+      "url": "https://www.mass.gov/doc/5310-operating-under-the-influence-of-intoxicating-liquor-gl-c-90-ss-24/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-dui-first-offense",
+      "url": "https://www.nycourts.gov/judges/cji/5-VehicleAndTrafficLaw/1192/1192.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ok-dui-first-offense",
+      "url": "https://www.oscn.net/applications/ouji-cr/6-11.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ok-dui-misdemeanor",
+      "url": "https://www.oscn.net/applications/ouji-cr/6-11.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-dui-first-offense",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-dui-second-offense",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-dui-third-offense",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-dui",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+92.06",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-aggravated-assault",
+      "url": "https://www.jud.ct.gov/ji/Criminal/AssaultOffenses/6.1-1.htm",
+      "method": "HEAD",
+      "status": 404,
+      "ok": false
+    },
+    {
+      "chargeKey": "fl-aggravated-assault",
+      "url": "https://www-media.floridabar.org/uploads/2024/03/8.2.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-aggravated-assault",
+      "url": "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-assault-in-the-first-degree",
+      "url": "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-assault-in-the-second-degree",
+      "url": "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-assault-in-the-third-degree",
+      "url": "https://www.illinoiscourts.gov/resources/26c815cd-a14a-4ab0-a234-704512806e8e/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-aggravated-assault",
+      "url": "https://www.mass.gov/doc/6160-assault-and-battery-causing-serious-bodily-injury-gl-c-265-ss-13abi/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-aggravated-assault",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/120/120.10.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-assault-in-the-first-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/120/120.10.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-aggravated-assault",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-assault-in-the-first-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-domestic-violence-assault",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-robbery-in-the-first-degree",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-robbery-in-the-second-degree",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-burglary-in-the-first-degree",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-burglary-in-the-second-degree",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-possession-of-controlled-substance",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-sexual-assault-in-the-first-degree",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-rape-in-the-first-degree",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-drug-trafficking",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-possession-with-intent-to-distribute",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-burglary-in-the-third-degree",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ct-dui-oui-first",
+      "url": "https://www.jud.ct.gov/JI/Criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-domestic-violence-assault",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.50",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-assault-fourth-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.50",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-robbery-in-the-first-degree",
+      "url": "https://www-media.floridabar.org/uploads/2023/07/15.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-robbery-in-the-second-degree",
+      "url": "https://www-media.floridabar.org/uploads/2023/07/15.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-attempted-robbery",
+      "url": "https://www-media.floridabar.org/uploads/2023/07/15.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-robbery-in-the-first-degree",
+      "url": "https://www.illinoiscourts.gov/resources/e4e7217e-9ba1-4e3e-acd3-325a6d871703/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-robbery-in-the-second-degree",
+      "url": "https://www.illinoiscourts.gov/resources/e4e7217e-9ba1-4e3e-acd3-325a6d871703/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-burglary-in-the-first-degree",
+      "url": "https://www.illinoiscourts.gov/resources/e4e7217e-9ba1-4e3e-acd3-325a6d871703/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-burglary-in-the-second-degree",
+      "url": "https://www.illinoiscourts.gov/resources/e4e7217e-9ba1-4e3e-acd3-325a6d871703/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-robbery-in-the-first-degree",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-armed-robbery-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-bank-robbery",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-armed-robbery-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-attempted-robbery",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-armed-robbery-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-robbery-in-the-first-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/160/160.15.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-bank-robbery",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/160/160.15.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-attempted-robbery",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/160/160.15.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-robbery-in-the-first-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+37.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-attempted-robbery",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+37.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-robbery-in-the-second-degree",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-unarmed-robbery-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-robbery-in-the-second-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/160/160.10.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-robbery-in-the-second-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+37.06",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-burglary-in-the-first-degree",
+      "url": "https://www-media.floridabar.org/uploads/2023/07/13.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-burglary-in-the-second-degree",
+      "url": "https://www-media.floridabar.org/uploads/2023/07/13.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-burglary-in-the-first-degree",
+      "url": "https://www.mass.gov/doc/8100-breaking-and-entering-a-building-ship-vessel-vehicle-in-the-nighttime-with-intent-to-commit-a-felony-gl-c-266-s-16-part-1/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-residential-burglary",
+      "url": "https://www.mass.gov/doc/8100-breaking-and-entering-a-building-ship-vessel-vehicle-in-the-nighttime-with-intent-to-commit-a-felony-gl-c-266-s-16-part-1/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-commercial-burglary",
+      "url": "https://www.mass.gov/doc/8100-breaking-and-entering-a-building-ship-vessel-vehicle-in-the-nighttime-with-intent-to-commit-a-felony-gl-c-266-s-16-part-1/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-auto-burglary",
+      "url": "https://www.mass.gov/doc/8100-breaking-and-entering-a-building-ship-vessel-vehicle-in-the-nighttime-with-intent-to-commit-a-felony-gl-c-266-s-16-part-1/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-burglary-in-the-first-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/140/140.30.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-burglary-in-the-first-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+38.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-burglary-in-the-second-degree",
+      "url": "https://www.mass.gov/doc/8104-breaking-and-entering-in-the-daytime-to-a-building-ship-vessel-vehicle-with-intent-to-commit-felony-no-person-therein-being-put-in-fear-gl-c-266-ss-18-part-ii/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-burglary-in-the-second-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/140/140.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-burglary-in-the-second-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+38.08",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-possession-of-controlled-substance",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/25.7.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-possession-of-controlled-substance",
+      "url": "https://www.mass.gov/doc/7820-possession-of-a-controlled-substance-other-than-marijuana/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-possession-of-drug-paraphernalia",
+      "url": "https://www.mass.gov/doc/7820-possession-of-a-controlled-substance-other-than-marijuana/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-drug-school-zone-enhancement",
+      "url": "https://www.mass.gov/doc/7820-possession-of-a-controlled-substance-other-than-marijuana/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-possession-of-controlled-substance",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/220/220.03.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-possession-of-controlled-substance",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+50.06",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-shoplifting",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/14.3.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-shoplifting",
+      "url": "https://www.illinoiscourts.gov/courts/supreme-court/committees/illinois-pattern-jury-instructions-criminal/",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ok-shoplifting",
+      "url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81304",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-shoplifting",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+70.62",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-grand-theft-in-the-first-degree",
+      "url": "https://www-media.floridabar.org/uploads/2025/02/14.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-grand-theft-in-the-second-degree",
+      "url": "https://www-media.floridabar.org/uploads/2025/02/14.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-grand-theft-in-the-third-degree",
+      "url": "https://www-media.floridabar.org/uploads/2025/02/14.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-grand-theft-in-the-first-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/155/155.42.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-grand-theft-in-the-first-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+70.14",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-grand-theft-in-the-second-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/155/155.40.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-grand-theft-in-the-second-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+70.18",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-sexual-assault-in-the-first-degree",
+      "url": "https://www-media.floridabar.org/uploads/2024/11/11.2.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-sexual-assault-in-the-first-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-rape-in-the-first-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-attempted-sexual-assault",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-rape-in-the-first-degree",
+      "url": "https://www.illinoiscourts.gov/resources/3c0f915f-f935-48c1-bfee-14abe143d330/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-rape-in-the-second-degree",
+      "url": "https://www.illinoiscourts.gov/resources/3c0f915f-f935-48c1-bfee-14abe143d330/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-rape-in-the-first-degree",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-rape-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-statutory-rape",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-rape-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-attempted-sexual-assault",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-rape-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-rape-in-the-second-degree",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-rape-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-rape-in-the-first-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/130/130.35.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-attempted-sexual-assault",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/130/130.35.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "fl-vandalism",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/17.2.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-vandalism",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/145/145.00.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ok-vandalism",
+      "url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81309",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-vandalism",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+58.04",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-harassment",
+      "url": "https://www-media.floridabar.org/uploads/2024/03/8.6.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-harassment",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/240/240.26.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ok-harassment",
+      "url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81086",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-harassment",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+36.52.01",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-drug-trafficking",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/25.7a.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-possession-with-intent-to-distribute",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/25.2.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-drug-trafficking",
+      "url": "https://www.illinoiscourts.gov/resources/83f19bf7-08c4-418b-9bfd-e1adca93bf6f/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-possession-with-intent-to-distribute",
+      "url": "https://www.illinoiscourts.gov/resources/83f19bf7-08c4-418b-9bfd-e1adca93bf6f/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-drug-trafficking",
+      "url": "https://www.mass.gov/doc/7800-distribution-manufacturing-or-cultivating-a-controlled-substance-other-than-marijuana-gl-c-94c-ss-32-32d/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-maintaining-drug-house",
+      "url": "https://www.mass.gov/doc/7800-distribution-manufacturing-or-cultivating-a-controlled-substance-other-than-marijuana-gl-c-94c-ss-32-32d/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-possession-with-intent-to-distribute",
+      "url": "https://www.mass.gov/doc/7830-possession-with-intent-to-distribute-controlled-substance-other-than-marijuana/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-drug-trafficking",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/220/220.43.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-possession-with-intent-to-distribute",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/220/220.16.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-drug-trafficking",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+50.02",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-possession-with-intent-to-distribute",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+50.04",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-loitering",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/29.3.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-loitering",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/240/240.35.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-loitering",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+48.04",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ok-voluntary-manslaughter",
+      "url": "https://www.oscn.net/applications/ouji-cr/4-89.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ok-involuntary-manslaughter",
+      "url": "https://www.oscn.net/applications/ouji-cr/4-97.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-burglary-in-the-third-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/140/140.20.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-auto-burglary",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/140/140.20.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-possession-of-drug-paraphernalia",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/220/220.50.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ok-possession-of-drug-paraphernalia",
+      "url": "https://www.oscn.net/applications/ouji-cr/6-47.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-maintaining-drug-house",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/220/220.44.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-drug-school-zone-enhancement",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/220/220.44.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ok-maintaining-drug-house",
+      "url": "https://www.oscn.net/applications/ouji-cr/6-49.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-felon-in-possession-of-firearm",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-firearm-possession-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-possession-of-prohibited-weapon",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-firearm-possession-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-juvenile-firearm-possession",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-firearm-possession-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "fl-assault-on-peace-officer",
+      "url": "https://www-media.floridabar.org/uploads/2026/01/8.11.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-assault-on-peace-officer",
+      "url": "https://www.mass.gov/doc/6140-assault-and-battery-gl-c-265-ss-13a/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-assault-and-battery",
+      "url": "https://www.mass.gov/doc/6140-assault-and-battery-gl-c-265-ss-13a/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-assault-on-peace-officer",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/120/120.08.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-assault-on-peace-officer",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.16",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ok-drug-school-zone-enhancement",
+      "url": "https://www.oscn.net/applications/ouji-cr/6-57.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-assault-with-deadly-weapon",
+      "url": "https://www.mass.gov/doc/6160-assault-by-means-of-dangerous-weapon-gl-c-265-ss-15b/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-assault-with-deadly-weapon",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/120/120.05.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-assault-in-the-second-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/120/120.05.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-assault-with-deadly-weapon",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.10",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-assault-in-the-second-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.10",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-assault-in-the-third-degree",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/120/120.00.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "wa-assault-in-the-third-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+35.12",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-child-sexual-abuse",
+      "url": "https://www.mass.gov/doc/6280-indecent-assault-and-battery-on-a-child-under-14-gl-c-265-ss-13b/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ma-sexual-exploitation-of-minor",
+      "url": "https://www.mass.gov/doc/superior-court-model-criminal-jury-instructions-sexual-exploitation-of-a-child-pdf/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ny-statutory-rape",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/130/130.25.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "fl-attempted-sexual-assault",
+      "url": "https://www-media.floridabar.org/uploads/2024/11/11.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-sexual-assault-in-the-third-degree",
+      "url": "https://www-media.floridabar.org/uploads/2024/11/11.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-rape-in-the-second-degree",
+      "url": "https://www-media.floridabar.org/uploads/2024/11/11.1.docx",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-sexual-assault-in-the-third-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.06",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "fl-sexual-assault-in-the-second-degree",
+      "url": "https://www-media.floridabar.org/uploads/2022/08/11.10.rtf",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-sexual-assault-in-the-second-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.04",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "wa-rape-in-the-second-degree",
+      "url": "https://www.courts.wa.gov/superiorct/jury_instructions/?fa=jury_instructions.displaySection&category=criminal&section=WPIC+45.04",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "il-attempted-murder",
+      "url": "https://www.illinoiscourts.gov/resources/1b7d83c5-5003-4ff0-9089-44ee081af018/file",
+      "method": "HEAD",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "chargeKey": "ok-felony-murder",
+      "url": "https://www.oscn.net/applications/ouji-cr/4-80.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ok-criminally-negligent-homicide",
+      "url": "https://www.oscn.net/applications/ouji-cr/4-102.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ny-vehicular-homicide",
+      "url": "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.12.pdf",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ok-vehicular-homicide",
+      "url": "https://www.oscn.net/applications/ouji-cr/4-127.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    },
+    {
+      "chargeKey": "ma-domestic-assault-battery",
+      "url": "https://www.mass.gov/doc/6270-assault-on-family-or-household-member-gl-c-265-ss-13m/download",
+      "method": "HEAD",
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
+    },
+    {
+      "chargeKey": "ok-assault-and-battery-misdemeanor",
+      "url": "https://www.oscn.net/applications/ouji-cr/4-15.htm",
+      "method": "HEAD",
+      "status": 201,
+      "ok": true
+    }
+  ]
+}
