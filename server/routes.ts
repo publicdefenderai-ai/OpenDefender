@@ -1722,9 +1722,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // OpenLaws API - Bulk import jurisdiction (disabled - method not implemented)
-  // TODO: Implement bulkImportJurisdiction in openlaws-client if needed
-
   // ============================================================================
   // Attorney Document Generation API
   // ============================================================================

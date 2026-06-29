@@ -54,15 +54,6 @@ export interface CriminalCharge {
 
 import { CHARGE_CITATIONS } from './criminal-charge-citations';
 
-/** Returns the confidence level for a charge, checking the overlay first. */
-export function getChargeConfidence(
-  charge: CriminalCharge
-): 'unverified' | 'low' | 'medium' | 'needs_review' | 'high' {
-  const overlay = CHARGE_CITATIONS[charge.id];
-  if (overlay) return overlay.confidence;
-  return charge.dataConfidence ?? 'unverified';
-}
-
 /** True only when the entry has a 'high' confidence citation (overlay or inline). */
 export function isCitationVerified(charge: CriminalCharge): boolean {
   const overlay = CHARGE_CITATIONS[charge.id];
@@ -94489,17 +94480,3 @@ export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[]
   return criminalCharges.filter(charge => charge.jurisdiction === jurisdiction);
 }
 
-export function searchCharges(query: string): CriminalCharge[] {
-  const lowercaseQuery = query.toLowerCase();
-  return criminalCharges.filter(charge => 
-    charge.name.toLowerCase().includes(lowercaseQuery) ||
-    charge.code.toLowerCase().includes(lowercaseQuery) ||
-    charge.description.toLowerCase().includes(lowercaseQuery)
-  );
-}
-
-export function getChargesByCategory(category: string): CriminalCharge[] {
-  const categoryIds = chargeCategories[category] || [];
-
-  return categoryIds.map(id => getChargeById(id)).filter(charge => charge !== undefined) as CriminalCharge[];
-}

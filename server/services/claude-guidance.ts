@@ -1301,8 +1301,3 @@ export async function testClaudeConnection(): Promise<boolean> {
     return false;
   }
 }
-
-// Check if AI guidance is available
-export function isAIGuidanceAvailable(): boolean {
-  return anthropic !== null;
-}
