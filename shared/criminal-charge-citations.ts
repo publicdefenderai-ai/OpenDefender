@@ -11514,6 +11514,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada disorderly conduct; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-203-010/",
+    instructionRef: "Nev. JI § 20.04",
   },
   "ok-disorderly-conduct": {
     citation: "Okla. Stat. tit. 21 § 1362",
@@ -11680,6 +11681,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada public intoxication (NV treats chronic public intox as health matter; disorderly conduct charged under § 203.010); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-458-010/",
+    instructionRef: "Nev. JI § 20.03",
   },
   "ok-public-intoxication": {
     citation: "Okla. Stat. tit. 37 § 8",
@@ -12405,6 +12407,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/nevada/section-200-481/",
+    instructionRef: "Nev. JI § 8.01",
   },
   "ks-battery-misdemeanor": {
     citation: "Kan. Stat. Ann. § 21-5413",
@@ -12513,6 +12516,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada petty larceny (value under $650); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-205-240/",
+    instructionRef: "Nev. JI § 15.10",
   },
   "ms-petit-larceny": {
     citation: "Miss. Code Ann. § 97-17-43",
@@ -13376,7 +13380,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "mo-distribution-of-controlled-substance": { citation: "Mo. Rev. Stat. § 579.020", confidence: "high", lastVerified: "2026-04", source: "Missouri Charge Code Manual Feb 2026 — updated from pre-2017 § 195.211 (recodification)", sourceUrl: "https://revisor.mo.gov/main/OneSection.aspx?section=579.020" },
   "mt-distribution-of-controlled-substance": { citation: "Mont. Code Ann. § 45-9-101", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/montana/section-45-9-101/" },
   "ne-distribution-of-controlled-substance": { citation: "Neb. Rev. Stat. § 28-416(1)(a)", confidence: "medium", lastVerified: "2026-04", source: "Training data — Nebraska distribution/delivery of controlled substance; verify against Justia before promoting to high", sourceUrl: "https://nebraskalegislature.gov/laws/statutes.php?stat=28-416" },
-  "nv-distribution-of-controlled-substance": { citation: "Nev. Rev. Stat. § 453.321", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/nevada/section-453-321/" },
+  "nv-distribution-of-controlled-substance": { citation: "Nev. Rev. Stat. § 453.321", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/nevada/section-453-321/", instructionRef: "Nev. JI § 28.05" },
   "nh-distribution-of-controlled-substance": { citation: "N.H. Rev. Stat. Ann. § 318-B:2", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/new-hampshire/section-318-b-2/" },
   "nj-distribution-of-controlled-substance": { citation: "N.J. Stat. Ann. § 2C:35-5", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-35-5/" },
   "nm-distribution-of-controlled-substance": { citation: "N.M. Stat. Ann. § 30-31-22", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-31-22/" },
