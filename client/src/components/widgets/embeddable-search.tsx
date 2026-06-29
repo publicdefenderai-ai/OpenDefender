@@ -28,7 +28,8 @@
  */
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { Search, X, ExternalLink } from "lucide-react";
+import { Search, X, ExternalLink, HelpCircle } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useQuery } from "@tanstack/react-query";
 
 function useDebounce<T>(value: T, delay: number): T {
@@ -142,7 +143,7 @@ export function EmbeddableSearch({
                     </div>
                   )}
                   {result.document.type === "charge" && result.document.instructionRef && (
-                    <div className="mt-1">
+                    <div className="mt-1 flex items-center gap-1 flex-wrap">
                       {result.document.instructionUrl ? (
                         <a
                           href={result.document.instructionUrl}
@@ -161,6 +162,23 @@ export function EmbeddableSearch({
                           {result.document.instructionRef}
                         </span>
                       )}
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <button
+                              type="button"
+                              onClick={(e) => e.stopPropagation()}
+                              className="inline-flex items-center text-blue-400 hover:text-blue-600 flex-shrink-0"
+                              aria-label="What is a jury instruction?"
+                            >
+                              <HelpCircle className="h-3 w-3" aria-hidden="true" />
+                            </button>
+                          </TooltipTrigger>
+                          <TooltipContent side="top" className="max-w-xs text-xs">
+                            These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     </div>
                   )}
                 </div>
