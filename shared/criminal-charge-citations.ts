@@ -9906,7 +9906,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Idaho harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/idaho/section-18-6710/",
   },
-  "il-harassment": { citation: "720 Ill. Comp. Stat. 5/26.5-2", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov; IPI-CR 11.47 removed — 11.47 is Definition of Hate Crime (§ 12-7.1), not harassment; no dedicated harassment by telephone IPI-CR instruction confirmed", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26.5-2.htm" },
+  "il-harassment": { citation: "720 Ill. Comp. Stat. 5/26.5-2", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov; IPI-CR 19.09 (Definition of Harassment by Telephone, Ch. 19) covers this offense — predecessor statute 720 ILCS 135/1-1 was replaced by § 26.5-2 but no updated IPI-CR instruction has been issued; 19.09 is the applicable pattern instruction (verified IPI-CR Ch. 19 PDF 2026-06)", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26.5-2.htm", instructionRef: "IPI-CR 19.09", instructionUrl: "https://www.illinoiscourts.gov/resources/8e77f5e4-a974-4ac9-9f72-1f6d31432b59/file" },
   "in-harassment": {
     citation: "Ind. Code § 35-45-2-2",
     confidence: "medium",
@@ -11123,7 +11123,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Idaho loitering (check: Idaho loitering statutes are limited; verify current operative section against Idaho Legislature website before promoting to high)",
     sourceUrl: "https://law.justia.com/codes/idaho/section-18-5901/",
   },
-  "il-loitering": { citation: "720 Ill. Comp. Stat. 5/26-1", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov; IPI-CR 22.01 removed — Chapter 22 is Interference with Judicial and Other Governmental Functions, not loitering/disorderly conduct; no IPI-CR instruction for § 26-1 confirmed", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26-1.htm" },
+  "il-loitering": { citation: "720 Ill. Comp. Stat. 5/26-1", confidence: "high", lastVerified: "2026-06", source: "Illinois General Assembly — ilga.gov; IPI-CR 19.07 (Definition of Disorderly Conduct, Ch. 19) covers § 26-1 directly (verified IPI-CR Ch. 19 PDF 2026-06); note Ch. 19 is titled 'Mob Action' but contains disorderly conduct and harassment instructions", sourceUrl: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26-1.htm", instructionRef: "IPI-CR 19.07", instructionUrl: "https://www.illinoiscourts.gov/resources/8e77f5e4-a974-4ac9-9f72-1f6d31432b59/file" },
   "in-loitering": {
     citation: "Ind. Code § 35-45-6-1",
     confidence: "medium",
