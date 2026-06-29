@@ -107,10 +107,10 @@ describe('NJ — njcourts.gov PDF URLs (NJ MJC)', () => {
     expect(getInstructionRef(charge)).toBe('NJ MJC 2C:12-1');
   });
 
-  it('returns njcourts.gov PDF URL for nj-assault-in-the-first-degree', () => {
+  it('returns njcourts.gov criminal landing URL for nj-assault-in-the-first-degree', () => {
     const charge = makeCharge('nj-assault-in-the-first-degree', 'NJ');
     const url = getInstructionUrl(charge);
-    expect(url).toBe('https://www.njcourts.gov/sites/default/files/attorneys/crimjury/2c121.pdf');
+    expect(url).toBe('https://www.njcourts.gov/courts/criminal');
   });
 
   it('returns NJ MJC ref for nj-assault-with-deadly-weapon', () => {
@@ -118,10 +118,10 @@ describe('NJ — njcourts.gov PDF URLs (NJ MJC)', () => {
     expect(getInstructionRef(charge)).toBe('NJ MJC 2C:12-1');
   });
 
-  it('returns njcourts.gov PDF URL for nj-assault-with-deadly-weapon', () => {
+  it('returns njcourts.gov criminal landing URL for nj-assault-with-deadly-weapon', () => {
     const charge = makeCharge('nj-assault-with-deadly-weapon', 'NJ');
     const url = getInstructionUrl(charge);
-    expect(url).toBe('https://www.njcourts.gov/sites/default/files/attorneys/crimjury/2c121.pdf');
+    expect(url).toBe('https://www.njcourts.gov/courts/criminal');
   });
 
   it('returned URL is on the njcourts.gov domain', () => {
