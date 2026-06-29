@@ -2558,7 +2558,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-7/",
     instructionRef: "OUJI-CR 4-72",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-72.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81127",
   },
   "ok-murder-in-the-second-degree": {
     citation: "Okla. Stat. tit. 21, § 701.8",
@@ -2567,7 +2567,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-8/",
     instructionRef: "OUJI-CR 4-83",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-83.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81138",
   },
 
   // — Tennessee —
@@ -4593,7 +4593,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-11-902/",
     instructionRef: "OUJI-CR 6-11",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-11.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81342",
   },
   "or-dui-first-offense": {
     citation: "Or. Rev. Stat. § 813.010",
@@ -4997,7 +4997,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-646/",
     instructionRef: "OUJI-CR 4-18",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-18.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81072",
   },
   "or-aggravated-assault": {
     citation: "Or. Rev. Stat. § 163.185",
@@ -5373,7 +5373,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/",
     instructionRef: "OUJI-CR 4-15a",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-15a.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=467451",
   },
   "or-domestic-violence-assault": {
     citation: "Or. Rev. Stat. § 163.160",
@@ -5765,7 +5765,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma robbery with firearms or dangerous weapons; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-797/",
     instructionRef: "OUJI-CR 4-141",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-141.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81196",
   },
   "or-robbery-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 164.415",
@@ -6169,7 +6169,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma robbery by force or fear (unarmed); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-791/",
     instructionRef: "OUJI-CR 4-133",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-133.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81188",
   },
   "or-robbery-in-the-second-degree": {
     citation: "Or. Rev. Stat. § 164.405",
@@ -6582,7 +6582,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma burglary in the first degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1431/",
     instructionRef: "OUJI-CR 5-8",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-8.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81209",
   },
   "or-burglary-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 164.225",
@@ -7002,7 +7002,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma burglary in the second degree; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1435/",
     instructionRef: "OUJI-CR 5-17",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/5-17.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81218",
   },
   "or-burglary-in-the-second-degree": {
     citation: "Or. Rev. Stat. § 164.215",
@@ -7398,7 +7398,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "Training data — Oklahoma possession of controlled dangerous substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-402/",
     instructionRef: "OUJI-CR 6-39",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-39.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81370",
   },
   "or-possession-of-controlled-substance": {
     citation: "Or. Rev. Stat. § 475C.909",
@@ -8899,7 +8899,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1111/",
     instructionRef: "OUJI-CR 4-120",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-120.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81175",
   },
   "or-sexual-assault-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 163.375",
@@ -9312,7 +9312,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-1111/",
     instructionRef: "OUJI-CR 4-120",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-120.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81175",
   },
   "or-rape-in-the-first-degree": {
     citation: "Or. Rev. Stat. § 163.375",
@@ -10774,7 +10774,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-415/",
     instructionRef: "OUJI-CR 6-46",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-46.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81377",
   },
   "ok-possession-with-intent-to-distribute": {
     citation: "Okla. Stat. tit. 63 § 2-401(a)(1)",
@@ -10783,7 +10783,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws verified 2026-04",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-401/",
     instructionRef: "OUJI-CR 6-44",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-44.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81375",
   },
   "or-drug-trafficking": {
     citation: "Or. Rev. Stat. § 475.860",
@@ -11817,7 +11817,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-711/",
     instructionRef: "OUJI-CR 4-89",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-89.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81144",
   },
   "wi-voluntary-manslaughter": {
     citation: "Wis. Stat. § 940.01(2)",
@@ -11861,7 +11861,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-716/",
     instructionRef: "OUJI-CR 4-97",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-97.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81152",
   },
   "ut-involuntary-manslaughter": {
     citation: "Utah Code Ann. § 76-5-206",
@@ -12294,7 +12294,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     source: "OpenLaws not_found — needs manual review",
     sourceUrl: "https://law.justia.com/codes/oklahoma/section-11-902/",
     instructionRef: "OUJI-CR 6-11",
-    instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-11.htm",
+    instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81342",
   },
   "nd-dui-misdemeanor": {
     citation: "N.D. Cent. Code § 39-08-01",
@@ -13500,7 +13500,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nc-possession-of-drug-paraphernalia": { citation: "N.C. Gen. Stat. § 90-113.22", confidence: "high", lastVerified: "2026-04", source: "North Carolina General Statutes — ncleg.gov", sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-113.22.html", instructionRef: "N.C. PJI-Crim. 260.60",},
   "nd-possession-of-drug-paraphernalia": { citation: "N.D. Cent. Code § 19-03.4-03", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Dakota possession of drug paraphernalia; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/north-dakota/section-19-03-4-03/" },
   "oh-possession-of-drug-paraphernalia": { citation: "Ohio Rev. Code Ann. § 2925.14", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2925.14", instructionRef: "OJI 525.14" },
-  "ok-possession-of-drug-paraphernalia": { citation: "Okla. Stat. tit. 63, § 2-405", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma possession of drug paraphernalia; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-405/", instructionRef: "OUJI-CR 6-47", instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-47.htm",},
+  "ok-possession-of-drug-paraphernalia": { citation: "Okla. Stat. tit. 63, § 2-405", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma possession of drug paraphernalia; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-405/", instructionRef: "OUJI-CR 6-47", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81378",},
   "or-possession-of-drug-paraphernalia": { citation: "Or. Rev. Stat. § 475.525", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon unlawful possession of drug paraphernalia; verify against Justia before promoting to high", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors475.html", instructionRef: "UCJI 2756",},
   "pa-possession-of-drug-paraphernalia": { citation: "35 Pa. Stat. § 780-113(a)(32)", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=35&sctn=780-113" },
   "ri-possession-of-drug-paraphernalia": { citation: "R.I. Gen. Laws § 21-28.5-4", confidence: "medium", lastVerified: "2026-04", source: "Training data — Rhode Island possession of drug paraphernalia; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/rhode-island/section-21-28-5-4/", instructionRef: "R.I. Model JI (Crim.) 20.5",},
@@ -13558,7 +13558,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nc-maintaining-drug-house": { citation: "N.C. Gen. Stat. § 90-108(a)(7)", confidence: "high", lastVerified: "2026-04", source: "North Carolina General Statutes — ncleg.gov", sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-108.html", instructionRef: "N.C. PJI-Crim. 260.65",},
   "nd-maintaining-drug-house": { citation: "N.D. Cent. Code § 19-03.1-23(1)(g)", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Dakota maintaining premises for controlled substance violations; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/north-dakota/section-19-03-1-23/" },
   "oh-maintaining-drug-house": { citation: "Ohio Rev. Code Ann. § 2925.05", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2925.05", instructionRef: "OJI 525.05" },
-  "ok-maintaining-drug-house": { citation: "Okla. Stat. tit. 63, § 2-404", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma maintaining place for drugs; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-404/", instructionRef: "OUJI-CR 6-49", instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-49.htm",},
+  "ok-maintaining-drug-house": { citation: "Okla. Stat. tit. 63, § 2-404", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma maintaining place for drugs; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-404/", instructionRef: "OUJI-CR 6-49", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81380",},
   "or-maintaining-drug-house": { citation: "Or. Rev. Stat. § 167.222", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon frequenting or maintaining a place for drug use; verify against Justia before promoting to high", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors167.html", instructionRef: "UCJI 2758",},
   "pa-maintaining-drug-house": { citation: "35 Pa. Stat. § 780-113(a)(17)", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=35&sctn=780-113" },
   "ri-maintaining-drug-house": { citation: "R.I. Gen. Laws § 21-28-4.07", confidence: "medium", lastVerified: "2026-04", source: "Training data — Rhode Island maintaining premises for drug trafficking; verify against Justia before promoting to high", sourceUrl: "https://law.justia.com/codes/rhode-island/section-21-28-4-07/", instructionRef: "R.I. Model JI (Crim.) 20.7",},
@@ -14581,7 +14581,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nc-drug-school-zone-enhancement": { citation: "N.C. Gen. Stat. § 90-95(e)(8)", confidence: "high", lastVerified: "2026-04", source: "North Carolina General Statutes — ncleg.gov", sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-95.html" },
   "nd-drug-school-zone-enhancement": { citation: "N.D. Cent. Code § 19-03.1-23.3", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Dakota drug-free zone enhancement", sourceUrl: "https://law.justia.com/codes/north-dakota/section-19-03-1-23-3/", instructionRef: "N.D. JI (Crim.) A-9-5",},
   "oh-drug-school-zone-enhancement": { citation: "Ohio Rev. Code Ann. § 2925.03(C)(5)", confidence: "high", lastVerified: "2026-06", source: "Ohio Laws — codes.ohio.gov", sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2925.03" },
-  "ok-drug-school-zone-enhancement": { citation: "Okla. Stat. tit. 63, § 2-508", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma drug-free zone enhancement", sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-508/", instructionRef: "OUJI-CR 6-57", instructionUrl: "https://www.oscn.net/applications/ouji-cr/6-57.htm",},
+  "ok-drug-school-zone-enhancement": { citation: "Okla. Stat. tit. 63, § 2-508", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma drug-free zone enhancement", sourceUrl: "https://law.justia.com/codes/oklahoma/section-2-508/", instructionRef: "OUJI-CR 6-57", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81388",},
   "or-drug-school-zone-enhancement": { citation: "Or. Rev. Stat. § 475.904", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon drug offense in drug-free zone", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors475.html", instructionRef: "UCJI 2760",},
   "pa-drug-school-zone-enhancement": { citation: "35 Pa. Stat. § 780-113.1", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=35&sctn=780-113.1" },
   "ri-drug-school-zone-enhancement": { citation: "R.I. Gen. Laws § 21-28-4.01.1", confidence: "medium", lastVerified: "2026-04", source: "Training data — Rhode Island school zone drug enhancement", sourceUrl: "https://law.justia.com/codes/rhode-island/section-21-28-4-01-1/", instructionRef: "R.I. Model JI (Crim.) 20.9",},
@@ -18699,7 +18699,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nh-felony-murder": { citation: "N.H. Rev. Stat. Ann. § 630:1-b(I)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/new-hampshire/section-630-1-b/", instructionRef: "N.H. Crim. JI §630:1-b",},
   "nm-felony-murder": { citation: "N.M. Stat. Ann. § 30-2-1(A)(2)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-2-1/", instructionRef: "UJI 14-203", instructionUrl: "https://nmsupremecourt.nmcourts.gov/",},
   "nd-felony-murder": { citation: "N.D. Cent. Code § 12.1-16-01(1)(b)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/north-dakota/section-12-1-16-01/", instructionRef: "N.D. JI (Crim.) A-1-6",},
-  "ok-felony-murder": { citation: "Okla. Stat. tit. 21, § 701.7(B)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-7/", instructionRef: "OUJI-CR 4-80", instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-80.htm",},
+  "ok-felony-murder": { citation: "Okla. Stat. tit. 21, § 701.7(B)", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-701-7/", instructionRef: "OUJI-CR 4-80", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81135",},
   "ri-felony-murder": { citation: "R.I. Gen. Laws § 11-23-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-23-1/" },
   "sc-felony-murder": { citation: "S.C. Code Ann. § 16-3-10", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-10/", instructionRef: "SC Req. to Charge Crim. § 2-1" },
   "sd-felony-murder": { citation: "S.D. Codified Laws § 22-16-4", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-dakota/section-22-16-4/", instructionRef: "S.D. PJI (Crim.) 22-2",},
@@ -18750,7 +18750,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nv-criminally-negligent-homicide": { citation: "Nev. Rev. Stat. § 200.070", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/nevada/section-200-070/", instructionRef: "Nev. JI 57",},
   "nm-criminally-negligent-homicide": { citation: "N.M. Stat. Ann. § 30-2-3", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-2-3/", instructionRef: "UJI 14-231a", instructionUrl: "https://nmsupremecourt.nmcourts.gov/",},
   "nc-criminally-negligent-homicide": { citation: "N.C. Gen. Stat. § 14-18", confidence: "high", lastVerified: "2026-04", source: "North Carolina General Statutes — ncleg.gov", sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-18.html" },
-  "ok-criminally-negligent-homicide": { citation: "Okla. Stat. tit. 21, § 711", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-711/", instructionRef: "OUJI-CR 4-102", instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-102.htm",},
+  "ok-criminally-negligent-homicide": { citation: "Okla. Stat. tit. 21, § 711", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-711/", instructionRef: "OUJI-CR 4-102", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81157",},
   "ri-criminally-negligent-homicide": { citation: "R.I. Gen. Laws § 11-23-3", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-11-23-3/", instructionRef: "R.I. Model JI (Crim.) 23.6",},
   "sc-criminally-negligent-homicide": { citation: "S.C. Code Ann. § 56-5-2910", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2910/" },
   "va-criminally-negligent-homicide": { citation: "Va. Code Ann. § 18.2-36", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-36/", instructionRef: "VMJI §15.200",},
@@ -18775,7 +18775,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nh-vehicular-homicide": { citation: "N.H. Rev. Stat. Ann. § 265-A:3", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/new-hampshire/section-265-a-3/" },
   "ny-vehicular-homicide": { citation: "N.Y. Penal Law § 125.12", confidence: "high", lastVerified: "2026-06", source: "NY Open Legislation API — N.Y. Penal Law § 125.12: \"Vehicular manslaughter in the second degree\"", sourceUrl: "https://law.justia.com/codes/new-york/penal-law/section-125-12/", instructionRef: "CJI2d PL 125.12", instructionUrl: "https://www.nycourts.gov/judges/cji/2-PenalLaw/125/125.12.pdf" },
   "nd-vehicular-homicide": { citation: "N.D. Cent. Code § 39-08-01.1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/north-dakota/section-39-08-01-1/", instructionRef: "N.D. JI (Crim.) A-1-7",},
-  "ok-vehicular-homicide": { citation: "Okla. Stat. tit. 47, § 11-903", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-11-903/", instructionRef: "OUJI-CR 4-127", instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-127.htm",},
+  "ok-vehicular-homicide": { citation: "Okla. Stat. tit. 47, § 11-903", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-11-903/", instructionRef: "OUJI-CR 4-127", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81182",},
   "pa-vehicular-homicide": { citation: "75 Pa. Cons. Stat. § 3732", confidence: "high", lastVerified: "2026-04", source: "Pennsylvania Commission on Sentencing — OGS § 303.15", sourceUrl: "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&sctn=3732" },
   "ri-vehicular-homicide": { citation: "R.I. Gen. Laws § 31-27-1", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/rhode-island/section-31-27-1/", instructionRef: "R.I. Model JI (Crim.) 23.9",},
   "sc-vehicular-homicide": { citation: "S.C. Code Ann. § 56-5-2910", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/south-carolina/section-56-5-2910/" },
@@ -19017,7 +19017,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
 
   "ma-domestic-assault-battery": { citation: "Mass. Gen. Laws ch. 265, § 13M", confidence: "needs_review", lastVerified: "2026-06", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/massachusetts/section-13m/", instructionRef: "MA Dist.Ct. Instr. 6.270", instructionUrl: "https://www.mass.gov/doc/6270-assault-on-family-or-household-member-gl-c-265-ss-13m/download" },
   "va-domestic-assault-battery": { citation: "Va. Code Ann. § 18.2-57.2", confidence: "high", lastVerified: "2026-04", source: "Virginia Code Annotated — law.lis.virginia.gov", sourceUrl: "https://law.lis.virginia.gov/vacode/18.2-57.2/", instructionRef: "VMJI §22.100",},
-  "ok-domestic-assault-battery": { citation: "Okla. Stat. tit. 21, § 644", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/", instructionRef: "OUJI-CR 4-15a", instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-15a.htm",},
+  "ok-domestic-assault-battery": { citation: "Okla. Stat. tit. 21, § 644", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-644/", instructionRef: "OUJI-CR 4-15a", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=467451",},
 
   "mn-domestic-assault": { citation: "Minn. Stat. § 609.2242", confidence: "high", lastVerified: "2026-04", source: "Minnesota Statutes (2024) — revisor.mn.gov", sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.2242", instructionRef: "CRIMJIG 13.50",},
   "tn-domestic-assault": { citation: "Tenn. Code Ann. § 39-13-111", confidence: "low", lastVerified: "2026-04", source: "REPEALED per OpenLaws 2026-04", sourceUrl: "https://law.justia.com/codes/tennessee/section-39-13-111/" },
@@ -19211,7 +19211,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "or-possession-less-than-ounce": { citation: "Or. Rev. Stat. § 475C.867", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon possession of marijuana less than 1 ounce", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors475.html" },
   "or-driving-while-suspended-misdemeanor": { citation: "Or. Rev. Stat. § 811.182", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon driving while suspended misdemeanor", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors811.html" },
 
-  "ok-assault-and-battery-misdemeanor": { citation: "Okla. Stat. tit. 21, § 641", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-641/", instructionRef: "OUJI-CR 4-15", instructionUrl: "https://www.oscn.net/applications/ouji-cr/4-15.htm",},
+  "ok-assault-and-battery-misdemeanor": { citation: "Okla. Stat. tit. 21, § 641", confidence: "needs_review", lastVerified: "2026-04", source: "OpenLaws not_found — needs manual review", sourceUrl: "https://law.justia.com/codes/oklahoma/section-641/", instructionRef: "OUJI-CR 4-15", instructionUrl: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=81069",},
   "ok-trespassing-misdemeanor": { citation: "Okla. Stat. tit. 21, § 1835", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma trespassing misdemeanor", sourceUrl: "https://law.justia.com/codes/oklahoma/section-1835/" },
   "ok-malicious-mischief": { citation: "Okla. Stat. tit. 21, § 1760", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma malicious mischief", sourceUrl: "https://law.justia.com/codes/oklahoma/section-1760/" },
 
