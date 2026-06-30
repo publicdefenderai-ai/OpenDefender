@@ -77,10 +77,10 @@ test.describe("Jury instruction display — QA flow Case Details step", () => {
     // Click the FL robbery row (charge.id = "fl-robbery-in-the-first-degree")
     await clickChargeRow(page, "fl-robbery-in-the-first-degree");
 
-    // The "Official Jury Instructions" label must appear (it shows in both the
-    // charge list and the selected-charges section, so use .first())
+    // The "Jury Instruction:" label must appear in the selected-charge card
+    // (it appears in both the charge list and selected section, so use .first())
     const instructionLabel = page
-      .locator("text=Official Jury Instructions")
+      .locator("text=Jury Instruction")
       .first();
     await instructionLabel.waitFor({ state: "visible" });
     await expect(instructionLabel).toBeVisible();
@@ -94,6 +94,41 @@ test.describe("Jury instruction display — QA flow Case Details step", () => {
     await expect(instructionLink).toHaveAttribute(
       "href",
       "https://www-media.floridabar.org/uploads/2023/07/15.1.docx"
+    );
+    await expect(instructionLink).toHaveAttribute("target", "_blank");
+  });
+
+  test("shows CALCRIM 1600 badge and courts.ca.gov link for CA robbery in the first degree", async ({
+    page,
+  }) => {
+    await openQAFlow(page);
+    await completeConsentStep(page);
+    await selectJurisdiction(page, "California");
+
+    // Case Details step: search for and select CA robbery
+    const searchInput = page.locator("#charge-search");
+    await searchInput.waitFor({ state: "visible" });
+    await searchInput.fill("robbery in the first degree");
+
+    // Click the CA robbery row (charge.id = "ca-robbery-in-the-first-degree")
+    await clickChargeRow(page, "ca-robbery-in-the-first-degree");
+
+    // The "Jury Instruction:" label must appear in the selected-charge card
+    const instructionLabel = page
+      .locator("text=Jury Instruction")
+      .first();
+    await instructionLabel.waitFor({ state: "visible" });
+    await expect(instructionLabel).toBeVisible();
+
+    // The instruction link must show "CALCRIM 1600" pointing to courts.ca.gov
+    const instructionLink = page.getByTestId(
+      "link-instruction-ca-robbery-in-the-first-degree"
+    );
+    await expect(instructionLink).toBeVisible();
+    await expect(instructionLink).toHaveText("CALCRIM 1600");
+    await expect(instructionLink).toHaveAttribute(
+      "href",
+      "https://www.courts.ca.gov/partners/california-jury-instructions"
     );
     await expect(instructionLink).toHaveAttribute("target", "_blank");
   });
@@ -125,9 +160,9 @@ test.describe("Jury instruction display — QA flow Case Details step", () => {
     const selectedCard = page.locator(".bg-blue-50").first();
     await selectedCard.waitFor({ state: "visible" });
 
-    // The "Official Jury Instructions" row must NOT be present at all
+    // The "Jury Instruction:" row must NOT be present at all
     await expect(
-      page.locator("text=Official Jury Instructions")
+      page.locator("text=Jury Instruction")
     ).not.toBeVisible();
 
     // No instruction link testids should exist
