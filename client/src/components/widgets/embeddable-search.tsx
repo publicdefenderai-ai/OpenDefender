@@ -28,8 +28,8 @@
  */
 
 import { useState, useCallback, useRef, useEffect } from "react";
-import { Search, X, ExternalLink, HelpCircle } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Search, X, ExternalLink } from "lucide-react";
+import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
 import { useQuery } from "@tanstack/react-query";
 
 function useDebounce<T>(value: T, delay: number): T {
@@ -143,43 +143,12 @@ export function EmbeddableSearch({
                     </div>
                   )}
                   {result.document.type === "charge" && result.document.instructionRef && (
-                    <div className="mt-1 flex items-center gap-1 flex-wrap">
-                      {result.document.instructionUrl ? (
-                        <a
-                          href={result.document.instructionUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1 text-xs font-medium text-blue-700 bg-blue-50 border border-blue-200 rounded px-1.5 py-0.5 hover:bg-blue-100 transition-colors"
-                          aria-label={`Jury instruction: ${result.document.instructionRef}`}
-                        >
-                          <svg className="h-3 w-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                          {result.document.instructionRef}
-                        </a>
-                      ) : (
-                        <span className="inline-flex items-center gap-1 text-xs font-medium text-blue-700 bg-blue-50 border border-blue-200 rounded px-1.5 py-0.5">
-                          <svg className="h-3 w-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                          {result.document.instructionRef}
-                        </span>
-                      )}
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger asChild>
-                            <button
-                              type="button"
-                              onClick={(e) => e.stopPropagation()}
-                              className="inline-flex items-center text-blue-400 hover:text-blue-600 flex-shrink-0"
-                              aria-label="What is a jury instruction?"
-                            >
-                              <HelpCircle className="h-3 w-3" aria-hidden="true" />
-                            </button>
-                          </TooltipTrigger>
-                          <TooltipContent side="top" className="max-w-xs text-xs">
-                            These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </div>
+                    <JuryInstructionBadge
+                      instructionRef={result.document.instructionRef}
+                      instructionUrl={result.document.instructionUrl}
+                      onLinkClick={(e) => e.stopPropagation()}
+                      variant="pill"
+                    />
                   )}
                 </div>
                 <ExternalLink className={`h-3 w-3 ${mutedClass} flex-shrink-0 ml-2`} />

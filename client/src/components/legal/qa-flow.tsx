@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
-import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity, BookOpen, HelpCircle } from "lucide-react";
+import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
@@ -521,45 +522,17 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                             </div>
                           )}
                           {instructionRef && (
-                            <div className="flex items-center gap-1.5 mt-1.5">
-                              <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
-                              <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
-                              </span>
-                              <TooltipProvider>
-                                <Tooltip>
-                                  <TooltipTrigger asChild>
-                                    <button
-                                      type="button"
-                                      className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
-                                      aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
-                                    >
-                                      <HelpCircle className="h-3 w-3" aria-hidden="true" />
-                                    </button>
-                                  </TooltipTrigger>
-                                  <TooltipContent side="top" className="max-w-xs text-xs">
-                                    {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
-                                  </TooltipContent>
-                                </Tooltip>
-                              </TooltipProvider>
-                              {chargeInstructionUrl ? (
-                                <a
-                                  href={chargeInstructionUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium"
-                                  onClick={(e) => e.stopPropagation()}
-                                  data-testid={`link-instruction-${charge.id}`}
-                                  aria-label={`${t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')} ${instructionRef}`}
-                                >
-                                  {instructionRef}
-                                </a>
-                              ) : (
-                                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                  {instructionRef}
-                                </span>
-                              )}
-                            </div>
+                            <JuryInstructionBadge
+                              instructionRef={instructionRef}
+                              instructionUrl={chargeInstructionUrl}
+                              chargeId={charge.id}
+                              dataTestIdPrefix="link-instruction"
+                              onLinkClick={(e) => e.stopPropagation()}
+                              label={t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}
+                              tooltipText={t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
+                              tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
+                              className="mt-1.5"
+                            />
                           )}
                         </div>
                         <button
@@ -704,52 +677,18 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               </div>
                             )}
                             {listInstructionRef && (
-                              <div className="flex items-center gap-1.5 mb-1">
-                                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
-                                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
-                                </span>
-                                <TooltipProvider>
-                                  <Tooltip>
-                                    <TooltipTrigger asChild>
-                                      <button
-                                        type="button"
-                                        className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
-                                        aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
-                                        <HelpCircle className="h-3 w-3" aria-hidden="true" />
-                                      </button>
-                                    </TooltipTrigger>
-                                    <TooltipContent side="top" className="max-w-xs text-xs">
-                                      {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
-                                    </TooltipContent>
-                                  </Tooltip>
-                                </TooltipProvider>
-                                {listInstructionUrl ? (
-                                  <a
-                                    href={listInstructionUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline font-medium"
-                                    onClick={(e) => e.stopPropagation()}
-                                    data-testid={`link-instruction-list-${charge.id}`}
-                                  >
-                                    {listInstructionRef}
-                                  </a>
-                                ) : (
-                                  <>
-                                    <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                      {listInstructionRef}
-                                    </span>
-                                    {getInstructionPaywall(charge) && (
-                                      <span className="text-xs text-amber-600 dark:text-amber-400">
-                                        (Available via {getInstructionPaywall(charge)})
-                                      </span>
-                                    )}
-                                  </>
-                                )}
-                              </div>
+                              <JuryInstructionBadge
+                                instructionRef={listInstructionRef}
+                                instructionUrl={listInstructionUrl}
+                                instructionPaywall={getInstructionPaywall(charge)}
+                                chargeId={charge.id}
+                                dataTestIdPrefix="link-instruction-list"
+                                onLinkClick={(e) => e.stopPropagation()}
+                                label={t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}
+                                tooltipText={t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
+                                tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
+                                className="mb-1"
+                              />
                             )}
                             <p className="text-xs text-muted-foreground">
                               {charge.description}
@@ -829,52 +768,18 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                               </div>
                             )}
                             {fedInstructionRef && (
-                              <div className="flex items-center gap-1.5 mb-1">
-                                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0" />
-                                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
-                                </span>
-                                <TooltipProvider>
-                                  <Tooltip>
-                                    <TooltipTrigger asChild>
-                                      <button
-                                        type="button"
-                                        className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0"
-                                        aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
-                                        <HelpCircle className="h-3 w-3" aria-hidden="true" />
-                                      </button>
-                                    </TooltipTrigger>
-                                    <TooltipContent side="top" className="max-w-xs text-xs">
-                                      {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
-                                    </TooltipContent>
-                                  </Tooltip>
-                                </TooltipProvider>
-                                {fedInstructionUrl ? (
-                                  <a
-                                    href={fedInstructionUrl}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-xs text-indigo-600 dark:text-indigo-400 hover:underline font-medium"
-                                    onClick={(e) => e.stopPropagation()}
-                                    data-testid={`link-instruction-fed-${charge.id}`}
-                                  >
-                                    {fedInstructionRef}
-                                  </a>
-                                ) : (
-                                  <>
-                                    <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                                      {fedInstructionRef}
-                                    </span>
-                                    {getInstructionPaywall(charge) && (
-                                      <span className="text-xs text-amber-600 dark:text-amber-400">
-                                        (Available via {getInstructionPaywall(charge)})
-                                      </span>
-                                    )}
-                                  </>
-                                )}
-                              </div>
+                              <JuryInstructionBadge
+                                instructionRef={fedInstructionRef}
+                                instructionUrl={fedInstructionUrl}
+                                instructionPaywall={getInstructionPaywall(charge)}
+                                chargeId={charge.id}
+                                dataTestIdPrefix="link-instruction-fed"
+                                onLinkClick={(e) => e.stopPropagation()}
+                                label={t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}
+                                tooltipText={t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
+                                tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
+                                className="mb-1"
+                              />
                             )}
                             <p className="text-xs text-muted-foreground">
                               {charge.description}

@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
@@ -700,49 +701,14 @@ function YourChargesSection({
 
             {/* Jury Instruction Reference */}
             {charge.instructionRef && (
-              <div className="flex items-start gap-1.5 flex-wrap">
-                <BookOpen className="h-3 w-3 text-indigo-500 dark:text-indigo-400 flex-shrink-0 mt-0.5" />
-                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium flex-shrink-0">
-                  {t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}:
-                </span>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <button
-                        type="button"
-                        className="inline-flex items-center text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-300 flex-shrink-0 -mt-0.5"
-                        aria-label={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
-                      >
-                        <HelpCircle className="h-3 w-3" aria-hidden="true" />
-                      </button>
-                    </TooltipTrigger>
-                    <TooltipContent side="top" className="max-w-xs text-xs">
-                      {t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
-                {charge.instructionUrl ? (
-                  <a
-                    href={charge.instructionUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-200 hover:underline font-medium"
-                    aria-label={`View official jury instruction ${charge.instructionRef}`}
-                  >
-                    {charge.instructionRef}
-                    <ExternalLink className="h-2.5 w-2.5 inline-block ml-0.5 mb-0.5" />
-                  </a>
-                ) : (
-                  <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                    {charge.instructionRef}
-                    {charge.instructionPaywall && (
-                      <span className="text-indigo-400 dark:text-indigo-500 font-normal ml-1">
-                        (Available via {charge.instructionPaywall})
-                      </span>
-                    )}
-                  </span>
-                )}
-              </div>
+              <JuryInstructionBadge
+                instructionRef={charge.instructionRef}
+                instructionUrl={charge.instructionUrl}
+                instructionPaywall={charge.instructionPaywall}
+                label={t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}
+                tooltipText={t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
+                tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
+              />
             )}
 
             {/* Separator between charges */}
