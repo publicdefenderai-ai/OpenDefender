@@ -455,7 +455,7 @@ export default function PrivacyPolicy() {
                   <tbody className="divide-y divide-border">
                     {[
                       { feature: "Case Roadmap and guided case support tool (including civil emergency triage)", ai: "Yes — Claude Sonnet 4.6 (rule-based fallback when AI unavailable)", data: "Server memory only, 24-hour TTL" },
-                      { feature: "Attorney Document Generation (Attorney Portal)", ai: "Yes — Claude Sonnet 4.6 (rule-based fallback when AI unavailable)", data: "Server memory only; requires verified attorney login" },
+                      { feature: "Attorney Document Generation (Attorney Portal)", ai: "Yes — Claude Sonnet 4.6 (no fallback; returns error if AI unavailable)", data: "Server memory only; requires verified attorney login" },
                       { feature: "Document Summarizer", ai: "Yes — Claude Sonnet 4.6", data: "Never written to disk" },
                       { feature: "Record Clearance Eligibility Screener", ai: "No — decision tree", data: "No — runs entirely in browser" },
                       { feature: "Collateral Consequences Screener", ai: "No — decision tree", data: "No — runs entirely in browser" },
