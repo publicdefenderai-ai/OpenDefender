@@ -100,7 +100,14 @@ Rescanned on July 12, 2026 as part of Task #176 retry. Results differ from first
 | `runSastScan()` | **Infrastructure failure** | Same `CANCEL` signal-kill error. Platform-level issue, not a code finding. |
 | `runHoundDogScan()` | **Infrastructure failure** | Same `HOUNDDOG_CLI_ABNORMAL_EXIT` with `reason: signal`. Platform-level issue, not a code finding. |
 
-**SAST and HoundDog scanner infrastructure failures are confirmed platform-level issues** (CLI processes receive kill signals before returning results). These failures reproduce consistently across both attempts, different invocation patterns, and different timeout values. They are not code findings.
+### Third attempt — July 12, 2026 (Task #180)
+
+| Scanner | Status | Finding |
+|---|---|---|
+| `runSastScan()` | **Infrastructure failure** | Same `CANCEL` signal-kill error (attempt 3). |
+| `runHoundDogScan()` | **Infrastructure failure** | Same `HOUNDDOG_CLI_ABNORMAL_EXIT` with `reason: signal` (attempt 3). |
+
+**SAST and HoundDog scanner infrastructure failures are confirmed platform-level issues** (CLI processes receive kill signals before returning results). These failures reproduce consistently across three separate task runs, different invocation patterns, and different timeout values. They are not code findings. No further retry tasks will be created until there is positive evidence the platform infrastructure issue has been resolved.
 
 ### Manual SAST assessment (compensating review)
 
