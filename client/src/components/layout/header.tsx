@@ -52,6 +52,7 @@ export function Header() {
   const navRef = useRef<HTMLDivElement>(null);
   const hoverOpenTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hoverCloseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const activeTriggerRef = useRef<HTMLButtonElement | null>(null);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -65,14 +66,18 @@ export function Header() {
     return () => document.removeEventListener("mousedown", handle);
   }, [openDropdown]);
 
-  // Close dropdown on Escape
+  // Close dropdown on Escape and restore focus to the trigger that opened it
   useEffect(() => {
     const handle = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpenDropdown(null);
+      if (e.key === "Escape" && openDropdown) {
+        setOpenDropdown(null);
+        activeTriggerRef.current?.focus();
+        activeTriggerRef.current = null;
+      }
     };
     document.addEventListener("keydown", handle);
     return () => document.removeEventListener("keydown", handle);
-  }, []);
+  }, [openDropdown]);
 
   // Clean up hover timers on unmount
   useEffect(() => {
@@ -233,8 +238,14 @@ export function Header() {
                       }}
                     >
                       <button
-                        onClick={() => setOpenDropdown(isOpen ? null : link.href)}
-                        onFocus={() => setOpenDropdown(link.href)}
+                        onClick={(e) => {
+                          activeTriggerRef.current = e.currentTarget;
+                          setOpenDropdown(isOpen ? null : link.href);
+                        }}
+                        onFocus={(e) => {
+                          activeTriggerRef.current = e.currentTarget;
+                          setOpenDropdown(link.href);
+                        }}
                         aria-expanded={isOpen}
                         aria-haspopup="true"
                         aria-label={link.label}
