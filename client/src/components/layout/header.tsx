@@ -242,9 +242,12 @@ export function Header() {
                           activeTriggerRef.current = e.currentTarget;
                           setOpenDropdown(isOpen ? null : link.href);
                         }}
-                        onFocus={(e) => {
-                          activeTriggerRef.current = e.currentTarget;
-                          setOpenDropdown(link.href);
+                        onKeyDown={(e) => {
+                          if (e.key === 'ArrowDown' && !isOpen) {
+                            e.preventDefault();
+                            activeTriggerRef.current = e.currentTarget;
+                            setOpenDropdown(link.href);
+                          }
                         }}
                         aria-expanded={isOpen}
                         aria-haspopup="true"
