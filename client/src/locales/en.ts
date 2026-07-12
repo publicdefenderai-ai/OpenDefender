@@ -3018,6 +3018,22 @@ export default {
       "freeHelp": "Free Help Available:",
       "freeHelpText": "Many immigrant advocacy organizations offer free assistance with family emergency planning. Contact your local legal aid organization or immigrant rights group for help creating these documents."
     },
+    "documentChecklist": {
+      "title": "Important Documents Checklist",
+      "all": "All",
+      "progress": "Progress",
+      "privacy": "Your progress is saved only on your device. We do not send data to our servers.",
+      "storageTips": "Storage Tips",
+      "tip1": "Make digital copies and store in secure cloud storage",
+      "tip2": "Give copies to a trusted person who doesn't live with you",
+      "tip3": "Consider a bank safe deposit box for originals",
+      "tip4": "Never carry all original documents at the same time",
+      "printBtn": "Print Checklist",
+      "printTitle": "Important Documents Checklist",
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium"
+    },
     "bond": {
       "badge": "Detention & Release",
       "title": "Immigration Bond Hearings",

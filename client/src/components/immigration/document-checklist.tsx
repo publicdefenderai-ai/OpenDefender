@@ -15,8 +15,6 @@ import {
   Heart,
   Scale,
   DollarSign,
-  
-  AlertTriangle
 } from 'lucide-react';
 
 type Lang = 'en' | 'es' | 'zh';
@@ -27,16 +25,18 @@ interface LocalizedString {
   zh: string;
 }
 
+interface DocumentItem {
+  id: string;
+  name: LocalizedString;
+  description: LocalizedString;
+  priority: 'critical' | 'high' | 'medium';
+}
+
 interface DocumentCategory {
   id: string;
   title: LocalizedString;
   icon: React.ReactNode;
-  documents: {
-    id: string;
-    name: LocalizedString;
-    description: LocalizedString;
-    priority: 'critical' | 'high' | 'medium';
-  }[];
+  documents: DocumentItem[];
 }
 
 const documentCategories: DocumentCategory[] = [
@@ -227,25 +227,17 @@ function t3(obj: LocalizedString, lang: Lang): string {
   return obj[lang] ?? obj.en;
 }
 
-const labels: Record<string, Record<Lang, string>> = {
-  all:          { en: 'All', es: 'Todos', zh: '全部' },
-  title:        { en: 'Important Documents Checklist', es: 'Lista de Documentos Importantes', zh: '重要文件清单' },
-  progress:     { en: 'Progress', es: 'Progreso', zh: '进度' },
-  privacy:      { en: 'Your progress is saved only on your device. We do not send data to our servers.', es: 'Su progreso se guarda solo en su dispositivo. No enviamos datos a nuestros servidores.', zh: '您的进度仅保存在您的设备上，我们不会将数据发送到服务器。' },
-  storageTips:  { en: 'Storage Tips', es: 'Consejos de Almacenamiento', zh: '存储建议' },
-  tip1:         { en: 'Make digital copies and store in secure cloud storage', es: 'Haga copias digitales y guárdelas en almacenamiento seguro en la nube', zh: '制作数字副本并存储在安全的云存储中' },
-  tip2:         { en: "Give copies to a trusted person who doesn't live with you", es: 'Dé copias a una persona de confianza que no viva con usted', zh: '将副本交给不与您同住的可信赖人员' },
-  tip3:         { en: 'Consider a bank safe deposit box for originals', es: 'Considere una caja de seguridad bancaria para originales', zh: '考虑将原件存放在银行保险柜中' },
-  tip4:         { en: 'Never carry all original documents at the same time', es: 'Nunca lleve todos los documentos originales al mismo tiempo', zh: '切勿同时携带所有原始文件' },
-  printBtn:     { en: 'Print Checklist', es: 'Imprimir Lista', zh: '打印清单' },
-  printTitle:   { en: 'Important Documents Checklist', es: 'Lista de Documentos', zh: '重要文件清单' },
-  critical:     { en: 'Critical', es: 'Crítico', zh: '关键' },
-  high:         { en: 'High', es: 'Alto', zh: '重要' },
-  medium:       { en: 'Medium', es: 'Medio', zh: '一般' },
-};
+function getPriorityColor(priority: string) {
+  switch (priority) {
+    case 'critical': return 'text-red-600 dark:text-red-400';
+    case 'high': return 'text-amber-600 dark:text-amber-400';
+    case 'medium': return 'text-blue-600 dark:text-blue-400';
+    default: return 'text-muted-foreground';
+  }
+}
 
 export function DocumentChecklist() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang: Lang = i18n.language?.startsWith('zh') ? 'zh' : i18n.language?.startsWith('es') ? 'es' : 'en';
   const [checkedDocs, setCheckedDocs] = useState<Set<string>>(new Set());
   const [activeCategory, setActiveCategory] = useState<string>('all');
@@ -284,15 +276,6 @@ export function DocumentChecklist() {
   const totalCount = allDocs.length;
   const progress = Math.round((completedCount / totalCount) * 100);
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'critical': return 'text-red-600 dark:text-red-400';
-      case 'high': return 'text-amber-600 dark:text-amber-400';
-      case 'medium': return 'text-blue-600 dark:text-blue-400';
-      default: return 'text-muted-foreground';
-    }
-  };
-
   const handlePrint = () => {
     const printWindow = window.open('', '_blank');
     if (!printWindow) return;
@@ -301,7 +284,7 @@ export function DocumentChecklist() {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>${labels.printTitle[lang]}</title>
+          <title>${t('immigration.documentChecklist.printTitle')}</title>
           <style>
             body { font-family: sans-serif; padding: 20px; max-width: 800px; margin: 0 auto; }
             h1 { font-size: 20px; }
@@ -319,8 +302,8 @@ export function DocumentChecklist() {
           </style>
         </head>
         <body>
-          <h1>${labels.title[lang]}</h1>
-          <p class="progress">${labels.progress[lang]}: ${completedCount}/${totalCount} (${progress}%)</p>
+          <h1>${t('immigration.documentChecklist.printTitle')}</h1>
+          <p class="progress">${t('immigration.documentChecklist.progress')}: ${completedCount}/${totalCount} (${progress}%)</p>
 
           ${documentCategories.map(cat => `
             <h2>${t3(cat.title, lang)}</h2>
@@ -330,7 +313,7 @@ export function DocumentChecklist() {
                   <div class="checkbox ${checkedDocs.has(doc.id) ? 'checked' : ''}"></div>
                   <div>
                     <span>${t3(doc.name, lang)}</span>
-                    <span class="priority ${doc.priority}">${labels[doc.priority][lang]}</span>
+                    <span class="priority ${doc.priority}">${t('immigration.documentChecklist.' + doc.priority)}</span>
                     <p class="description">${t3(doc.description, lang)}</p>
                   </div>
                 </li>
@@ -353,7 +336,7 @@ export function DocumentChecklist() {
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
             <FileText className="h-5 w-5 text-green-600 dark:text-green-400" />
           </div>
-          {labels.title[lang]}
+          {t('immigration.documentChecklist.title')}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -361,14 +344,14 @@ export function DocumentChecklist() {
         <Alert className="bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
           <Lock className="h-4 w-4 text-blue-600" />
           <AlertDescription className="text-blue-800 dark:text-blue-200 text-sm">
-            {labels.privacy[lang]}
+            {t('immigration.documentChecklist.privacy')}
           </AlertDescription>
         </Alert>
 
         {/* Progress */}
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
-            <span>{labels.progress[lang]}</span>
+            <span>{t('immigration.documentChecklist.progress')}</span>
             <span className="font-medium">{completedCount}/{totalCount} ({progress}%)</span>
           </div>
           <div className="h-3 bg-muted rounded-full overflow-hidden">
@@ -384,7 +367,7 @@ export function DocumentChecklist() {
               activeCategory === 'all' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'
             }`}
           >
-            {labels.all[lang]}
+            {t('immigration.documentChecklist.all')}
           </button>
           {documentCategories.map(cat => (
             <button
@@ -428,7 +411,7 @@ export function DocumentChecklist() {
                       </p>
                       <p className="text-xs text-muted-foreground">{t3(doc.description, lang)}</p>
                       <span className={`text-xs ${getPriorityColor(doc.priority)}`}>
-                        {labels[doc.priority][lang]}
+                        {t(`immigration.documentChecklist.${doc.priority}`)}
                       </span>
                     </div>
                   </button>
@@ -442,19 +425,19 @@ export function DocumentChecklist() {
         <div className="bg-muted/50 rounded-lg p-4 space-y-3">
           <h4 className="font-semibold flex items-center gap-2">
             <Cloud className="h-4 w-4" />
-            {labels.storageTips[lang]}
+            {t('immigration.documentChecklist.storageTips')}
           </h4>
           <ul className="text-sm text-muted-foreground space-y-1">
-            <li>• {labels.tip1[lang]}</li>
-            <li>• {labels.tip2[lang]}</li>
-            <li>• {labels.tip3[lang]}</li>
-            <li>• {labels.tip4[lang]}</li>
+            <li>• {t('immigration.documentChecklist.tip1')}</li>
+            <li>• {t('immigration.documentChecklist.tip2')}</li>
+            <li>• {t('immigration.documentChecklist.tip3')}</li>
+            <li>• {t('immigration.documentChecklist.tip4')}</li>
           </ul>
         </div>
 
         <Button onClick={handlePrint} variant="outline" className="w-full">
           <Printer className="h-4 w-4 mr-2" />
-          {labels.printBtn[lang]}
+          {t('immigration.documentChecklist.printBtn')}
         </Button>
       </CardContent>
     </Card>

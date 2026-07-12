@@ -47,6 +47,12 @@ export default {
         "lawyerDesc": "Representación legal en inmigración",
         "afterDeportation": "Después de la Deportación",
         "afterDeportationDesc": "Ayuda para familias en ambos lados de una orden de remoción"
+      },
+      "support": {
+        "resources": "Recursos de Apoyo",
+        "resourcesDesc": "Vivienda, empleo, finanzas, salud mental y más",
+        "friendsFamily": "Amigos y Familia",
+        "friendsFamilyDesc": "Ayuda a alguien que fue arrestado"
       }
     },
     "mobile": {
@@ -1102,39 +1108,45 @@ export default {
           "title": "Surta las recetas antes de las fechas judiciales",
           "body": "No deje que las recetas venzan antes de una fecha judicial donde sea posible la detención. Pida un suministro de 90 días si su seguro lo permite. Si el costo es una preocupación, use GoodRx o pida muestras a su médico."
         }
+      },
+      "treatmentConnection": {
+        "sectionTitle": "Conectarse a Tratamiento Antes de su Fecha en el Tribunal",
+        "sectionSubtitle": "Inscribirse en un programa relevante antes de la sentencia puede influir en cómo un juez ve su caso. Los tribunales generalmente ven favorablemente a los acusados que toman medidas hacia el tratamiento o la estabilización por cuenta propia.",
+        "whyTitle": "Por qué esto importa",
+        "whyBody": "En casos de drogas y algunos otros tipos de cargos, los jueces y fiscales consideran regularmente si un acusado ya se ha inscrito en tratamiento al decidir entre la encarcelación y alternativas. Una carta de un programa confirmando su fecha de inscripción es algo que su abogado puede presentar en cualquier audiencia. Incluso estar en lista de espera y documentar que solicitó ingreso tiene peso.",
+        "checklistTitle": "Antes de su próxima fecha en el tribunal",
+        "checklistItems": [
+          "Contacte al menos un programa relevante (tratamiento de drogas, asesoramiento de salud mental o manejo de la ira)",
+          "Pregunte si aceptan participantes involucrados en casos judiciales",
+          "Obtenga una carta en su papel membretado confirmando su fecha de inscripción o solicitud",
+          "Entregue esa carta a su abogado lo antes posible",
+          "Si un programa tiene lista de espera, pida una carta confirmando su lugar en ella. Los tribunales reconocen que solicitó aunque no haya comenzado aún."
+        ],
+        "findTitle": "Encontrar programas",
+        "findSamhsa": "El localizador de tratamientos de SAMHSA (findtreatment.gov) es la base de datos nacional más completa de instalaciones licenciadas de tratamiento de drogas y salud mental. Ingrese su código postal para encontrar programas cerca de usted y filtre por tipo de pago (Medicaid, escala móvil, gratuito).",
+        "findSamhsaNote": "La disponibilidad y los tiempos de espera cambian con frecuencia. Llame para confirmar antes de contar con un programa específico.",
+        "find211": "211 (llamada o texto) lo conecta con recursos locales de tratamiento y a menudo puede encontrar programas con cupos disponibles más rápido que una búsqueda en internet.",
+        "findAttorney": "Pregunte a su abogado o defensor público si tienen relaciones con programas locales. Muchos abogados defensores saben qué programas ven favorablemente los jueces en su condado.",
+        "findCourt": "Si tiene tratamiento ordenado por el tribunal como condición de fianza o desviación, confirme con su abogado qué proveedores están aprobados por el tribunal antes de inscribirse.",
+        "angerTitle": "Programas de manejo de la ira",
+        "angerBody": "No existe una base de datos nacional de proveedores de manejo de la ira. Los programas aprobados por el tribunal varían por condado y a veces por juez. Contacte al secretario del tribunal o a su abogado para preguntar si su condado tiene una lista de proveedores aprobados. Antes de inscribirse en cualquier programa, confirme que es aceptable para el tribunal.",
+        "angerQuestions": [
+          "¿Proporciona una carta de finalización con formato para presentación ante el tribunal?",
+          "¿Están reconocidos o aprobados por los tribunales de este condado?",
+          "¿Cuántas sesiones requiere el programa y cuál es el horario?"
+        ],
+        "scriptTitle": "Qué decir cuando llama a un programa",
+        "scriptBody": "Hola, mi nombre es [su nombre]. Actualmente estoy involucrado en un asunto legal y estoy buscando inscribirme en [tratamiento de drogas / asesoramiento de salud mental / manejo de la ira]. ¿Aceptan participantes involucrados en casos judiciales? ¿Aceptan [Medicaid / tarifas en escala móvil / pago propio]? Si me inscribo, ¿puede proporcionarme una carta en su papel membretado confirmando mi fecha de inscripción y el nombre del programa para mi abogado?",
+        "letterTitle": "Solicitud de documentación de inscripción",
+        "letterLabel": "Carta solicitando confirmación de inscripción",
+        "letterBody": "[Fecha]\n\nA: [Nombre del Programa]\nAsunto: Confirmación de Inscripción para Procedimiento Legal\n\nActualmente estoy inscrito en [o: solicitando ingreso a] su programa [nombre del programa]. Estoy involucrado en un procedimiento legal y mi abogado ha solicitado confirmación escrita de mi inscripción.\n\nPor favor proporcione una carta en papel membretado de su organización que incluya:\n- Mi nombre completo\n- La fecha en que comenzó mi inscripción (o mi fecha de solicitud)\n- El nombre y descripción del programa\n- Fecha esperada de finalización, si corresponde\n\nGracias,\n[Su Nombre]\n[Su Número de Teléfono]",
+        "attorneyTitle": "Informar a su abogado",
+        "attorneyLabel": "Mensaje para su abogado",
+        "attorneyBody": "Hola [Nombre del Abogado], quería informarle que me he [inscrito en / solicitado] [Nombre del Programa], un programa de [tratamiento de drogas / salud mental / manejo de la ira]. Comencé el [fecha] / estoy en lista de espera desde [fecha]. Estoy obteniendo una carta de confirmación de ellos para compartirla con usted. Por favor hágame saber si necesita un formato específico.",
+        "copyButton": "Copiar al Portapapeles",
+        "copied": "¡Copiado!",
+        "printButton": "Imprimir"
       }
-    },
-    "treatmentConnection": {
-      "sectionTitle": "Conectarse a Tratamiento Antes de su Fecha en el Tribunal",
-      "sectionSubtitle": "Inscribirse en un programa relevante antes de la sentencia puede influir en cómo un juez ve su caso. Los tribunales generalmente ven favorablemente a los acusados que toman medidas hacia el tratamiento o la estabilización por cuenta propia.",
-      "whyTitle": "Por qué esto importa",
-      "whyBody": "En casos de drogas y algunos otros tipos de cargos, los jueces y fiscales consideran regularmente si un acusado ya se ha inscrito en tratamiento al decidir entre la encarcelación y alternativas. Una carta de un programa confirmando su fecha de inscripción es algo que su abogado puede presentar en cualquier audiencia. Incluso estar en lista de espera y documentar que solicitó ingreso tiene peso.",
-      "checklistTitle": "Antes de su próxima fecha en el tribunal",
-      "checklistItems": [
-        "Contacte al menos un programa relevante (tratamiento de drogas, asesoramiento de salud mental o manejo de la ira)",
-        "Pregunte si aceptan participantes involucrados en casos judiciales",
-        "Obtenga una carta en su papel membretado confirmando su fecha de inscripción o solicitud",
-        "Entregue esa carta a su abogado lo antes posible",
-        "Si un programa tiene lista de espera, pida una carta confirmando su lugar en ella. Los tribunales reconocen que solicitó aunque no haya comenzado aún."
-      ],
-      "findSamhsa": "El localizador de tratamientos de SAMHSA (findtreatment.gov) es la base de datos nacional más completa de instalaciones licenciadas de tratamiento de drogas y salud mental. Ingrese su código postal para encontrar programas cerca de usted y filtre por tipo de pago (Medicaid, escala móvil, gratuito).",
-      "findSamhsaNote": "La disponibilidad y los tiempos de espera cambian con frecuencia. Llame para confirmar antes de contar con un programa específico.",
-      "find211": "211 (llamada o texto) lo conecta con recursos locales de tratamiento y a menudo puede encontrar programas con cupos disponibles más rápido que una búsqueda en internet.",
-      "findAttorney": "Pregunte a su abogado o defensor público si tienen relaciones con programas locales. Muchos abogados defensores saben qué programas ven favorablemente los jueces en su condado.",
-      "angerTitle": "Programas de manejo de la ira",
-      "angerBody": "No existe una base de datos nacional de proveedores de manejo de la ira. Los programas aprobados por el tribunal varían por condado y a veces por juez. Contacte al secretario del tribunal o a su abogado para preguntar si su condado tiene una lista de proveedores aprobados. Antes de inscribirse en cualquier programa, confirme que es aceptable para el tribunal.",
-      "angerQuestions": [
-        "¿Proporciona una carta de finalización con formato para presentación ante el tribunal?",
-        "¿Están reconocidos o aprobados por los tribunales de este condado?",
-        "¿Cuántas sesiones requiere el programa y cuál es el horario?"
-      ],
-      "scriptBody": "Hola, mi nombre es [su nombre]. Actualmente estoy involucrado en un asunto legal y estoy buscando inscribirme en [tratamiento de drogas / asesoramiento de salud mental / manejo de la ira]. ¿Aceptan participantes involucrados en casos judiciales? ¿Aceptan [Medicaid / tarifas en escala móvil / pago propio]? Si me inscribo, ¿puede proporcionarme una carta en su papel membretado confirmando mi fecha de inscripción y el nombre del programa para mi abogado?",
-      "letterTitle": "Solicitud de documentación de inscripción",
-      "letterLabel": "Carta solicitando confirmación de inscripción",
-      "letterBody": "[Fecha]\n\nA: [Nombre del Programa]\nAsunto: Confirmación de Inscripción para Procedimiento Legal\n\nActualmente estoy inscrito en [o: solicitando ingreso a] su programa [nombre del programa]. Estoy involucrado en un procedimiento legal y mi abogado ha solicitado confirmación escrita de mi inscripción.\n\nPor favor proporcione una carta en papel membretado de su organización que incluya:\n- Mi nombre completo\n- La fecha en que comenzó mi inscripción (o mi fecha de solicitud)\n- El nombre y descripción del programa\n- Fecha esperada de finalización, si corresponde\n\nGracias,\n[Su Nombre]\n[Su Número de Teléfono]",
-      "attorneyTitle": "Informar a su abogado",
-      "attorneyLabel": "Mensaje para su abogado",
-      "attorneyBody": "Hola [Nombre del Abogado], quería informarle que me he [inscrito en / solicitado] [Nombre del Programa], un programa de [tratamiento de drogas / salud mental / manejo de la ira]. Comencé el [fecha] / estoy en lista de espera desde [fecha]. Estoy obteniendo una carta de confirmación de ellos para compartirla con usted. Por favor hágame saber si necesita un formato específico."
     },
     "transportation": {
       "overview": "Su caso puede afectar su capacidad para conducir o moverse, pero no tiene por qué paralizar su vida. Entender el estado de su licencia, planificar alternativas y comunicarse proactivamente con quienes dependen de usted le ayudará a seguir adelante.",
@@ -3008,6 +3020,22 @@ export default {
       "freeHelp": "Ayuda Gratuita Disponible:",
       "freeHelpText": "Muchas organizaciones de defensa de inmigrantes ofrecen asistencia gratuita con la planificación de emergencia familiar. Contacte a su organización local de ayuda legal o grupo de derechos de inmigrantes para ayuda creando estos documentos."
     },
+    "documentChecklist": {
+      "title": "Lista de Documentos Importantes",
+      "all": "Todos",
+      "progress": "Progreso",
+      "privacy": "Su progreso se guarda solo en su dispositivo. No enviamos datos a nuestros servidores.",
+      "storageTips": "Consejos de Almacenamiento",
+      "tip1": "Haga copias digitales y guárdelas en almacenamiento seguro en la nube",
+      "tip2": "Dé copias a una persona de confianza que no viva con usted",
+      "tip3": "Considere una caja de seguridad bancaria para originales",
+      "tip4": "Nunca lleve todos los documentos originales al mismo tiempo",
+      "printBtn": "Imprimir Lista",
+      "printTitle": "Lista de Documentos Importantes",
+      "critical": "Crítico",
+      "high": "Alto",
+      "medium": "Medio"
+    },
     "bond": {
       "badge": "Detención y Liberación",
       "title": "Audiencias de Fianza de Inmigración",
@@ -3961,7 +3989,8 @@ export default {
     },
     "infoBanner": {
       "title": "¿Qué son los Programas de Desviación?",
-      "description": "Los programas de desviación permiten a los acusados elegibles evitar el proceso penal tradicional completando tratamiento, servicio comunitario u otros requisitos. La finalización exitosa a menudo resulta en cargos desestimados o penas reducidas."
+      "description": "Los programas de desviación permiten a los acusados elegibles evitar el proceso penal tradicional completando tratamiento, servicio comunitario u otros requisitos. La finalización exitosa a menudo resulta en cargos desestimados o penas reducidas.",
+      "disclaimer": "Este directorio enumera programas y sus criterios de elegibilidad tal como los reportan los propios programas. La disponibilidad y los términos varían según la jurisdicción. Si un programa específico es apropiado para su situación es una decisión para usted y su abogado. Esta página no forma una relación abogado-cliente."
     },
     "programCard": {
       "location": "Ubicación",
@@ -5039,6 +5068,7 @@ export default {
     "immKnowYourRights": "Conozca Sus Derechos",
     "immFindDetained": "Encontrar a una Persona Detenida",
     "immFindLawyer": "Encontrar un Abogado",
+    "first24Hours": "Primeras 24 Horas",
     "caseRoadmap": "Mapa del Caso",
     "lifeFamilyNav": "Vida y Familia",
     "resourcesDirectory": "Explorar Recursos",
@@ -5412,7 +5442,9 @@ export default {
       "fullCounselGuide": "Guía Completa sobre el Derecho a un Abogado",
       "caseTimeline": "Cronología Completa del Caso",
       "getGuidance": "Obtener Orientación Personalizada",
-      "findDefender": "Encontrar un Defensor Público"
+      "findDefender": "Encontrar un Defensor Público",
+      "courtLogistics": "Logística del Tribunal y Apoyo Legal",
+      "lifeSupport": "Apoyo para la Vida"
     },
     "script": {
       "line1": "«Hola, soy yo. Estoy bien, pero me han arrestado.»",
@@ -5649,7 +5681,9 @@ export default {
         "c4Title": "Declaraciones a Fiscales",
         "c4": "Los acuerdos o declaraciones hechas a fiscales sin un abogado presente pueden tener consecuencias graves. El privilegio abogado-cliente comienza solo cuando existe una relación abogado-cliente.",
         "attorneyUrgencyTitle": "Por qué hoy — y no la próxima semana — importa",
-        "attorneyUrgencyBody": "Un abogado involucrado en la comisaría, antes de que se presenten formalmente los cargos, a veces puede hablar con los investigadores e influir en qué se carga — o si se presentan cargos en absoluto. Un abogado que interviene en la lectura de cargos ya no tiene esa opción. Las pruebas se eliminan, las decisiones de acusación se consolidan y la ventana para una intervención temprana se cierra. Cuanto antes se contrate un abogado, más amplio es el rango de resultados posibles."
+        "attorneyUrgencyBody": "Un abogado involucrado en la comisaría, antes de que se presenten formalmente los cargos, a veces puede hablar con los investigadores e influir en qué se carga — o si se presentan cargos en absoluto. Un abogado que interviene en la lectura de cargos ya no tiene esa opción. Las pruebas se eliminan, las decisiones de acusación se consolidan y la ventana para una intervención temprana se cierra. Cuanto antes se contrate un abogado, más amplio es el rango de resultados posibles.",
+        "c5Title": "Cómo Se Asigna un Defensor Público",
+        "c5": "Un defensor público es asignado por un juez en su primera comparecencia ante el tribunal. No puede obtener uno asignado de antemano, y llamar a la oficina del defensor público no cambiará esto. Lo que un familiar puede obtener llamando a la oficina del defensor público: orientación general sobre qué tribunal probablemente verá el caso y qué esperar. Lo que no pueden obtener: un abogado asignado a su caso. Hasta que haya un abogado presente, su protección más efectiva es una invocación clara y consistente: «Quiero un abogado. No responderé ninguna pregunta.»"
       },
       "step6": {
         "title": "Lectura de Cargos: Su Primera Comparecencia ante el Tribunal",
