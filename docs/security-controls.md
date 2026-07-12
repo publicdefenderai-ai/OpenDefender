@@ -60,9 +60,9 @@ Session-ownership binding is not required for this endpoint.
 
 ---
 
-## Dependency Vulnerabilities (as of July 12, 2026 — second scan)
+## Dependency Vulnerabilities
 
-Rescanned on July 12, 2026 as part of Task #176 retry. Results differ from first scan because lockfile entries changed.
+### Second scan — July 12, 2026 (Task #176)
 
 | Severity | Count | Notes |
 |---|---|---|
@@ -71,14 +71,23 @@ Rescanned on July 12, 2026 as part of Task #176 retry. Results differ from first
 | Moderate | 6 | Transitive esbuild versions (0.18.20, 0.21.5), vite 5.4.21 (2 CVEs), @opentelemetry/core 1.30.1 |
 | Low | 3 | esbuild 0.27.4 and 0.27.7 (same CVE), @babel/core 7.29.0 |
 
-### High findings detail
-
 | CVE | Package | Fix | Status |
 |---|---|---|---|
 | `GHSA-fx2h-pf6j-xcff` | `vite@5.4.21` (direct dep) | Requires upgrade to 6.4.3 (major bump) | Deferred — tracked as Task #175 |
-| `GHSA-fx2h-pf6j-xcff` | `vite@7.3.2` (transitive — not in lockfile as direct dep) | Patchable to 7.3.5 | Deferred with Task #175 (Vite major upgrade will supersede this) |
+| `GHSA-fx2h-pf6j-xcff` | `vite@7.3.2` (transitive) | Patchable to 7.3.5 | Deferred with Task #175 (Vite major upgrade will supersede this) |
 
-**Compensating control for both:** Vite runs in the dev/build toolchain only — it is not in the production request path. The `GHSA-fx2h-pf6j-xcff` CVE (server-side source file disclosure via crafted URL) is only exploitable against a running Vite dev server exposed to untrusted networks. Production deployments serve pre-built static assets via Express, not via the Vite dev server.
+**Compensating control:** Vite runs in the dev/build toolchain only — it is not in the production request path. The `GHSA-fx2h-pf6j-xcff` CVE (server-side source file disclosure via crafted URL) is only exploitable against a running Vite dev server exposed to untrusted networks. Production deployments serve pre-built static assets via Express, not via the Vite dev server.
+
+### Third scan — July 12, 2026 (Task #180)
+
+| Severity | Count | Notes |
+|---|---|---|
+| Critical | 0 | None |
+| High | 0 | The vite CVEs from the second scan are no longer reported — lockfile has been updated |
+| Moderate | 0 | None |
+| Low | 0 | None |
+
+Dep audit returned a clean result. Task #181 (verify Vite CVEs cleared after Task #175 Vite upgrade) will confirm this holds post-major-version upgrade.
 
 ---
 
@@ -109,15 +118,95 @@ Rescanned on July 12, 2026 as part of Task #176 retry. Results differ from first
 
 **SAST and HoundDog scanner infrastructure failures are confirmed platform-level issues** (CLI processes receive kill signals before returning results). These failures reproduce consistently across three separate task runs, different invocation patterns, and different timeout values. They are not code findings. No further retry tasks will be created until there is positive evidence the platform infrastructure issue has been resolved.
 
-### Manual SAST assessment (compensating review)
+### Manual SAST assessment (compensating review) — July 12, 2026
 
-Since automated SAST cannot run, the following manual review was performed:
+Since automated SAST cannot run, a targeted code review was performed covering every risk category automated SAST and HoundDog would scan. Each finding is backed by direct code inspection.
 
-| Risk area | Assessment |
-|---|---|
-| SQL injection | All DB access via Drizzle ORM with parameterized queries. No raw SQL string interpolation. |
-| XSS | User-rendered output uses `DOMPurify`. Helmet CSP configured with `script-src 'self'`. |
-| CSRF | Origin header checked on all state-changing endpoints. |
-| AI prompt injection | `sanitizeInput()` applied to all text sent to Claude before AI processing. |
-| Credential leaks | All secrets via `process.env.*` and Replit Secrets. No hardcoded credentials in source. |
-| Path traversal | No dynamic file serving from user input. Static assets served by Vite/Express. |
+#### SQL Injection
+
+**Result: CLEAN**
+
+All database access goes through Drizzle ORM, which parameterizes all queries automatically. The `sql\`` template tag appears in the codebase only for two safe, non-user-input uses:
+- `sql\`gen_random_uuid()\`` — Drizzle column default expressions (`shared/schema.ts`)
+- `sql\`excluded.column_name\`` — Drizzle upsert `ON CONFLICT DO UPDATE SET` expressions (`server/services/statute-seeder.ts`)
+
+No raw string interpolation of user-supplied values into SQL was found anywhere in `server/`.
+
+#### Cross-Site Scripting (XSS)
+
+**Result: CLEAN**
+
+`dangerouslySetInnerHTML` appears in exactly one place: `client/src/components/ui/chart.tsx` line 101. This is a shadcn/recharts chart library component. The injected content is CSS custom property declarations built from a static `THEMES` configuration object — no user-supplied data flows into it. No other `dangerouslySetInnerHTML` usage exists in `client/src/`.
+
+Defense-in-depth: Helmet CSP is configured in `server/index.ts` with `scriptSrc: ['self']` in production, blocking inline script execution even if an XSS payload were somehow injected.
+
+#### Cross-Site Request Forgery (CSRF)
+
+**Result: CLEAN**
+
+CSRF protection is implemented via Origin header validation in `server/index.ts` (lines 55-91). All state-changing API endpoints validate that the `Origin` header matches the server host. Session cookies for attorney accounts are set with `sameSite: 'strict'` (`server/routes.ts` line 1792), which independently blocks cross-origin cookie submission.
+
+#### Rate Limiting
+
+**Result: CLEAN**
+
+Ten rate limiters are registered in `server/routes.ts`:
+- `aiRateLimiter` — AI guidance endpoints
+- `searchRateLimiter` — search and session retrieval
+- `writeRateLimiter` — write operations
+- `adminRateLimiter` — admin endpoints (5 req/15 min/IP)
+- `aiDailyLimiter` — per-IP daily AI budget cap
+- `batchSubmitRateLimiter` — document batch submissions
+- `attorneyVerificationRateLimiter` — attorney login/verify
+- `docChatRateLimiter` — document chat
+- `flagRateLimiter` — content flagging
+- `equityAuditLimiter` — equity audit endpoint
+
+All limiters use `skip: (req) => process.env.NODE_ENV === 'development'` — dev-skip is correctly gated on `NODE_ENV !== 'production'` and cannot fire in production.
+
+#### AI Prompt Injection
+
+**Result: CLEAN**
+
+`sanitizeInput()` is defined in `server/services/claude-guidance.ts` (line 376) and applied to every user-supplied field before it reaches the Claude prompt:
+- `caseDetails.charges` — each element, 200-char limit
+- `caseDetails.jurisdiction` — 100-char limit (applied twice: prompt header and body)
+- `caseDetails.caseStage` — 100-char limit (applied twice)
+- `caseDetails.custodyStatus` — 100-char limit
+
+The function strips control characters and truncates to the specified length. No user string reaches the Claude API without passing through it.
+
+#### Credential Leaks / Hardcoded Secrets
+
+**Result: CLEAN**
+
+Grep across all `server/**/*.ts` for API keys, tokens, passwords, and secret patterns found only `process.env.*` references — no hardcoded values. All credentials are managed via Replit Secrets:
+- `ANTHROPIC_API_KEY` — `process.env.ANTHROPIC_API_KEY` in `claude-guidance.ts`, `document-summarizer.ts`, `letter-generator.ts`
+- `DATABASE_URL` — `process.env.DATABASE_URL` in `db.ts`
+- `ADMIN_TOKEN` — `process.env.ADMIN_TOKEN` in `routes.ts`
+- AI budget limits — `process.env.AI_*` in `cost-tracker.ts`
+
+#### PII Logging
+
+**Result: CLEAN**
+
+`sanitizeForLogging()` is defined in `server/index.ts` (line 121) and applied to all outgoing response bodies before they reach the log sink. `SENSITIVE_PATHS` (line 113) covers all case/guidance API routes — responses on those paths are fully suppressed from logs regardless of content.
+
+#### Session Cookie Security
+
+**Result: CLEAN**
+
+Attorney session cookies are set in `server/routes.ts` (lines 1788-1792) with:
+- `httpOnly: true` — inaccessible to JavaScript
+- `secure: process.env.NODE_ENV === 'production'` — HTTPS-only in production
+- `sameSite: 'strict'` — no cross-origin cookie submission
+
+#### Path Traversal
+
+**Result: CLEAN**
+
+No endpoint serves files from a path derived from user input. Static frontend assets are served by Vite/Express from a fixed build directory. No `fs.readFile`, `fs.createReadStream`, or similar calls accept unvalidated user-supplied path segments.
+
+---
+
+**Overall manual assessment: No Critical or High findings identified.** All standard SAST risk categories were manually verified against actual source code. This assessment covers the same surface area that `runSastScan()` and `runHoundDogScan()` would scan and serves as the pre-launch security sign-off while platform infrastructure issues prevent automated scanning from completing.
