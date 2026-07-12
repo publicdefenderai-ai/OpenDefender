@@ -6673,7 +6673,7 @@ export default {
         },
         "nationalBailFund": {
           "name": "全国保释基金网络",
-          "description": "全美本地保释基金目录。在nationalbailfund.org按地点搜索。"
+          "description": "全美本地保释基金目录。通过社区正义交流所的保释基金目录按地点搜索。"
         },
         "legalAid": {
           "name": "法律援助",

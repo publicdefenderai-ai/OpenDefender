@@ -319,7 +319,7 @@ export default function FindAttorney() {
                 <ExternalLink className="h-4 w-4" />
               </a>
               <a 
-                href="https://www.justice.gov/eoir/office-of-the-chief-immigration-judge-background" 
+                href="https://www.justice.gov/eoir/immigration-court-information" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"

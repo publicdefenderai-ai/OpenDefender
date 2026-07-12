@@ -196,7 +196,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Non-violent drug offenses, mental health issues, veterans. Must be Miami-Dade resident.",
     contact: {
       phone: "(305) 349-7000",
-      url: "https://www.jud11.flcourts.org/Drug-Court"
+      url: "https://www.jud11.flcourts.org/"
     },
     sources: ["Miami-Dade County Court"],
     lastUpdated: new Date("2026-03-01"),
@@ -461,7 +461,7 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Mental Health Diversion", "Competency Screening", "Treatment Linkage"],
     eligibilityNotes: "Low-level offenses with individuals previously found incompetent. Six-month diversion program. Released to community with treatment plans. Cases dismissed if compliant.",
     contact: {
-      url: "https://www.denverda.org/units-and-programs/alternatives-to-prosecution/"
+      url: "https://www.denverda.org/"
     },
     sources: ["Denver District Attorney's Office", "WellPower"],
     lastUpdated: new Date("2024-11-01"),
@@ -771,7 +771,7 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Pretrial Diversion", "Post-Indictment Diversion"],
     eligibilityNotes: "First-time, non-violent offenders. Avoid or be diverted from prosecution after indictment. Strict entry criteria. Completion avoids prosecution.",
     contact: {
-      url: "https://prosecutor.franklincountyohio.gov/criminal-division/diversion-unit"
+      url: "https://prosecutor.franklincountyohio.gov/"
     },
     sources: ["Franklin County Prosecutor's Office"],
     lastUpdated: new Date("2024-11-01"),
@@ -1546,7 +1546,7 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DWI Court"],
     eligibilityNotes: "Non-violent offenders with a substance use or mental health disorder. Drug courts operate statewide across all 28 judicial districts. DWI courts serve repeat DWI offenders. Veterans courts are available in select districts. Must complete risk/needs assessment. Referrals come from prosecutors, defense counsel, or the court.",
     contact: {
-      url: "https://www.arcourts.gov/administration/courts/specialty-courts",
+      url: "https://www.arcourts.gov/",
     },
     sources: ["Arkansas Administrative Office of Courts", "NADCP"],
     lastUpdated: new Date("2026-04-10"),

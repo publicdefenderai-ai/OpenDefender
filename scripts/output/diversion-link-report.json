@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-10T05:57:39.733Z",
+  "generated": "2026-07-12T18:24:07.875Z",
   "results": [
     {
       "id": "ca-la-drug-court",
@@ -61,8 +61,8 @@
       "state": "FL",
       "url": "https://www.jud11.flcourts.org/Drug-Court",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 503,
+      "ok": false
     },
     {
       "id": "fl-broward-mental-health",
@@ -99,7 +99,7 @@
       "state": "NY",
       "url": "https://eac-network.org/bronx-tasc/",
       "method": "HEAD",
-      "status": 200,
+      "status": 202,
       "ok": true
     },
     {
@@ -190,8 +190,8 @@
       "state": "CO",
       "url": "https://www.denverda.org/units-and-programs/alternatives-to-prosecution/",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 404,
+      "ok": false
     },
     {
       "id": "ga-fulton-diversion-center",
@@ -343,8 +343,8 @@
       "state": "OH",
       "url": "https://prosecutor.franklincountyohio.gov/criminal-division/diversion-unit",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 404,
+      "ok": false
     },
     {
       "id": "ca-sacramento-mental-health",
@@ -352,8 +352,9 @@
       "state": "CA",
       "url": "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "ca-sacramento-drug-diversion",
@@ -361,8 +362,9 @@
       "state": "CA",
       "url": "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "ca-sacramento-veterans",
@@ -370,8 +372,9 @@
       "state": "CA",
       "url": "https://www.saccourt.ca.gov/criminal/collaborative-courts.aspx",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "ca-alameda-cares",
@@ -470,8 +473,9 @@
       "state": "NY",
       "url": "https://www.westchesterda.net/diversion-and-youth-programs",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "ny-westchester-opt-in",
@@ -479,8 +483,9 @@
       "state": "NY",
       "url": "https://www.westchesterda.net/diversion-and-youth-programs",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "ny-westchester-project-reset",
@@ -488,8 +493,9 @@
       "state": "NY",
       "url": "https://www.westchesterda.net/diversion-and-youth-programs",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "ny-rockland-partnership-youth",
@@ -597,7 +603,7 @@
       "state": "GA",
       "url": "https://henrycountyda.org/pretrial-diversion-program/",
       "method": "HEAD",
-      "status": 200,
+      "status": 202,
       "ok": true
     },
     {
@@ -732,8 +738,8 @@
       "state": "AR",
       "url": "https://www.arcourts.gov/administration/courts/specialty-courts",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 404,
+      "ok": false
     },
     {
       "id": "az-state-problem-solving-courts",
@@ -759,8 +765,9 @@
       "state": "DC",
       "url": "https://www.dccourts.gov",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "hi-state-drug-mental-health-court",
@@ -796,7 +803,7 @@
       "url": "https://www.kscourts.org",
       "method": "GET",
       "status": 403,
-      "ok": false,
+      "ok": true,
       "note": "403 – bot-blocked (likely live)"
     },
     {
@@ -814,8 +821,9 @@
       "state": "LA",
       "url": "https://www.lasc.org",
       "method": "HEAD",
-      "status": 200,
-      "ok": true
+      "status": "ERROR",
+      "ok": false,
+      "note": "TypeError: fetch failed"
     },
     {
       "id": "me-state-drug-treatment-courts",
@@ -977,9 +985,8 @@
       "state": "VT",
       "url": "https://www.vermontjudiciary.org",
       "method": "HEAD",
-      "status": 403,
-      "ok": true,
-      "note": "403 – bot-blocked (likely live)"
+      "status": 200,
+      "ok": true
     },
     {
       "id": "va-state-drug-treatment-courts",

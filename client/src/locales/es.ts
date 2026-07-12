@@ -6673,7 +6673,7 @@ export default {
         },
         "nationalBailFund": {
           "name": "Red Nacional de Fondos de Fianza",
-          "description": "Directorio de fondos de fianza locales en todo EE.UU. Busque por ubicacion en nationalbailfund.org."
+          "description": "Directorio de fondos de fianza locales en todo EE.UU. Busque por ubicación a través del directorio de fondos de fianza de Community Justice Exchange."
         },
         "legalAid": {
           "name": "Ayuda Legal",

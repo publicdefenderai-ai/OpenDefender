@@ -67,7 +67,7 @@ const externalResources: ExternalResource[] = [
     name: "HUD — Criminal Records and Fair Housing",
     description:
       "Federal guidance on tenant rights for people with criminal records in federally assisted housing. Blanket bans based on arrest records are not allowed under HUD policy.",
-    url: "https://www.hud.gov/program_offices/fair_housing_equal_opp/criminal_records",
+    url: "https://www.hud.gov/program_offices/fair_housing_equal_opp",
     type: "national",
     free: true,
   },
@@ -177,7 +177,7 @@ function CustomSections() {
           <TopicSection icon={Home} title="Housing" color="text-amber-600 dark:text-amber-400" borderColor="#d97706">
             <p>Your rights depend on the type of housing and your state.</p>
             <ul className="space-y-1.5 list-none">
-              <li><span className="font-semibold text-foreground">Federally assisted housing</span> — blanket bans on arrest records are not allowed. <ActionLink href="https://www.hud.gov/program_offices/fair_housing_equal_opp/criminal_records">HUD guidance →</ActionLink></li>
+              <li><span className="font-semibold text-foreground">Federally assisted housing</span> — blanket bans on arrest records are not allowed. <ActionLink href="https://www.hud.gov/program_offices/fair_housing_equal_opp">HUD guidance →</ActionLink></li>
               <li><span className="font-semibold text-foreground">Find programs</span> — call or text 211 for transitional housing and re-entry programs near you.</li>
               <li><span className="font-semibold text-foreground">Local protections</span> — many cities have "fair chance" housing laws. Ask a local legal aid office.</li>
             </ul>

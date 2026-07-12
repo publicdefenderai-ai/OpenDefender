@@ -6671,7 +6671,7 @@ export default {
         },
         "nationalBailFund": {
           "name": "National Bail Fund Network",
-          "description": "Directory of local bail funds across the US. Search by location at nationalbailfund.org."
+          "description": "Directory of local bail funds across the US. Search by location via the Community Justice Exchange bail fund directory."
         },
         "legalAid": {
           "name": "Legal Aid",

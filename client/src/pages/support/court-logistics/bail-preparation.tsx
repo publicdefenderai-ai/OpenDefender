@@ -539,7 +539,7 @@ export default function BailPreparation() {
                   {(
                     [
                       { key: "bailProject", url: "https://bailproject.org" },
-                      { key: "nationalBailFund", url: "https://nationalbailfund.org" },
+                      { key: "nationalBailFund", url: "https://www.communityjusticeexchange.org/en/nbfn-directory" },
                       { key: "legalAid", url: "/legal-aid" },
                       { key: "publicDefender", url: null },
                     ] as const
