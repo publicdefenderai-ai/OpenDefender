@@ -374,6 +374,29 @@ export default function PrivacyPolicy() {
           </div>
         </ScrollReveal>
 
+        {/* Public API Privacy */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Public API and Third-Party Integrators
+            </h2>
+
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  OpenDefender provides a free, read-only public API (<code className="text-sm bg-muted px-1 py-0.5 rounded">/api/v1/</code>) that lets developers and legal aid organizations embed our legal reference data in their own applications. Here is how privacy works for API access:
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2">
+                  <li><strong className="text-foreground">No user data collected:</strong> All API endpoints are read-only GET requests. No user data is submitted to or collected by us through the API.</li>
+                  <li><strong className="text-foreground">No authentication required:</strong> Public visitors and developers access the API without creating an account or providing personal information.</li>
+                  <li><strong className="text-foreground">Standard request logs:</strong> Like all web traffic, API requests generate standard server logs (IP address, request path, timestamp). These are retained briefly for security monitoring and are not used to identify individuals.</li>
+                  <li><strong className="text-foreground">Third-party responsibility:</strong> We are not responsible for how third parties who use the API handle data in their own applications. If you embed our data in your app, you are responsible for your own privacy practices and disclosures.</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
         {/* Your Rights */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
@@ -431,10 +454,14 @@ export default function PrivacyPolicy() {
                   </thead>
                   <tbody className="divide-y divide-border">
                     {[
-                      { feature: "Case Roadmap and guided case support tool (including civil emergency triage)", ai: "Yes — Claude Sonnet 4.6", data: "Server memory only, 24-hour TTL" },
+                      { feature: "Case Roadmap and guided case support tool (including civil emergency triage)", ai: "Yes — Claude Sonnet 4.6 (rule-based fallback when AI unavailable)", data: "Server memory only, 24-hour TTL" },
+                      { feature: "Attorney Document Generation (Attorney Portal)", ai: "Yes — Claude Sonnet 4.6 (rule-based fallback when AI unavailable)", data: "Server memory only; requires verified attorney login" },
                       { feature: "Document Summarizer", ai: "Yes — Claude Sonnet 4.6", data: "Never written to disk" },
-                      { feature: "Record Clearance Eligibility Screener", ai: "No — decision tree", data: "No — runs in browser" },
-                      { feature: "Public Defender Intake Form", ai: "No", data: "No — user prints and fills by hand" },
+                      { feature: "Record Clearance Eligibility Screener", ai: "No — decision tree", data: "No — runs entirely in browser" },
+                      { feature: "Collateral Consequences Screener", ai: "No — decision tree", data: "No — runs entirely in browser" },
+                      { feature: "Public Defender Intake Checklist", ai: "No", data: "No — .docx generated locally in browser, nothing transmitted" },
+                      { feature: "Mitigation Memo Builder", ai: "No", data: "No — .docx generated locally in browser, nothing transmitted" },
+                      { feature: "Public API (/api/v1/)", ai: "No", data: "No — returns public reference data only; no user data collected" },
                       { feature: "All other pages (rights, support, guides)", ai: "No", data: "No" },
                     ].map(({ feature, ai, data }) => (
                       <tr key={feature}>

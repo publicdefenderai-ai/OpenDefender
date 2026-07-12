@@ -4546,7 +4546,7 @@ export default {
     "hero": {
       "title": "Política de Privacidad",
       "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-      "lastUpdated": "Última actualización: Mayo 2026"
+      "lastUpdated": "Última actualización: Julio 2026"
     },
     "notice": {
       "title": "Plataforma que prioriza la privacidad:",

@@ -4546,7 +4546,7 @@ export default {
     "hero": {
       "title": "隐私政策",
       "subtitle": "我们致力于保护您的隐私。本政策说明我们如何处理您的信息。",
-      "lastUpdated": "最后更新：2026年5月"
+      "lastUpdated": "最后更新：2026年7月"
     },
     "notice": {
       "title": "隐私优先平台：",

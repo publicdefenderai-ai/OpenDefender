@@ -39,7 +39,7 @@ export default function Disclaimers() {
             Important information about using OpenDefender
           </p>
           <p className="text-sm text-white/60 mt-2">
-            Last updated: May 2026
+            Last updated: July 2026
           </p>
         </div>
       </section>
@@ -155,7 +155,10 @@ export default function Disclaimers() {
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Two tools on OpenDefender use AI to generate content: the <strong className="text-foreground">Case Roadmap and guided case support tool</strong> (both collect structured inputs and produce Claude-powered guidance), and the <strong className="text-foreground">Document Summarizer</strong>. Both use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
+                  Three features on OpenDefender use AI to generate content: the <strong className="text-foreground">Case Roadmap and guided case support tool</strong>, the <strong className="text-foreground">Attorney Document Generation</strong> tools in the Attorney Portal, and the <strong className="text-foreground">Document Summarizer</strong>. All three use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  The Case Roadmap and Attorney Document Generation also use a <strong className="text-foreground">rule-based fallback engine</strong> that runs automatically when the AI service is unavailable. In fallback mode, guidance is generated from structured legal rules rather than a live AI model — no data is sent to Anthropic in that case.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.
@@ -191,7 +194,13 @@ export default function Disclaimers() {
                   The <strong className="text-foreground">Record Clearance Eligibility Screener</strong> is a decision tree — it uses no AI and makes no server calls. It runs entirely in your browser. No data is transmitted or stored.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The <strong className="text-foreground">Public Defender Intake Form</strong> is a printable document you fill out by hand. No information is submitted, transmitted, or stored electronically.
+                  The <strong className="text-foreground">Collateral Consequences Screener</strong> is a yes/no questionnaire that flags life-area risks (housing, employment, immigration, custody, and more) based on your answers. It uses no AI and makes no server calls. Everything runs in your browser — no data leaves your device.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong className="text-foreground">Public Defender Intake Checklist</strong> is an electronic intake form for attorneys and advocates. It runs entirely in your browser, makes no server calls, and generates a downloadable .docx file locally on your device. No data is transmitted or stored on our servers.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  The <strong className="text-foreground">Mitigation Memo Builder</strong> helps attorneys and advocates structure client information into a formatted sentencing memo. It uses no AI and makes no server calls. The memo is generated as a .docx file entirely in your browser — no data is transmitted or stored on our servers.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
                   The <strong className="text-foreground">Rap Sheet Error Identification Guide</strong> and <strong className="text-foreground">FCRA rights information</strong> are informational only. They describe general processes and rights. Verify all dispute procedures and deadlines directly with the relevant agency — the FBI, your state criminal repository, or the background check company.
@@ -362,6 +371,33 @@ export default function Disclaimers() {
                   <li>We do not collect or store bar credentials, and we do not verify bar membership</li>
                   <li>Generated documents rely on jurisdiction-specific templates and third-party legal data that may contain errors or be outdated</li>
                 </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
+        {/* Public API */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              Public API
+            </h2>
+
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <p className="text-muted-foreground leading-relaxed">
+                  OpenDefender offers a free, read-only public API at <code className="text-sm bg-muted px-1 py-0.5 rounded">/api/v1/</code> that lets third-party developers and legal aid organizations embed our legal reference data — charges, statutes, diversion programs, and glossary terms — into their own tools and websites.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                  <li>All API endpoints are <strong className="text-foreground">read-only</strong> — no user data is submitted or collected through the API</li>
+                  <li>AI-powered guidance is not available through the public API — it requires direct use of the site</li>
+                  <li>Data returned through the API is general legal reference information — it is not legal advice and does not establish an attorney-client relationship</li>
+                  <li>Third parties who embed our data or widgets are responsible for including appropriate disclaimers in their own applications</li>
+                  <li>Rate limits apply (60 requests per minute per IP) to ensure fair access</li>
+                </ul>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  The same "general information only" limitation that applies on this site applies equally to any data accessed through the API. OpenDefender is not responsible for how third parties present or use data obtained through the public API.
+                </p>
               </CardContent>
             </Card>
           </div>

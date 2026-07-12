@@ -4544,7 +4544,7 @@ export default {
     "hero": {
       "title": "Privacy Policy",
       "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-      "lastUpdated": "Last Updated: May 2026"
+      "lastUpdated": "Last Updated: July 2026"
     },
     "notice": {
       "title": "Privacy-First Platform:",
@@ -4587,18 +4587,18 @@ export default {
       },
       "serverRestart": {
         "title": "Tools that store nothing at all",
-        "description": "The Record Clearance Eligibility Screener and the Public Defender Intake Form make no server calls. The screener runs entirely in your browser. The intake form is a printable document — no data is submitted or transmitted. All other static pages on the site (rights guides, support resources, court date guides, immigration guides) are similarly passive."
+        "description": "Several tools make no server calls at all: the Record Clearance Eligibility Screener, the Collateral Consequences Screener, the Public Defender Intake Checklist, and the Mitigation Memo Builder. All four run entirely in your browser. The two advocate tools generate downloadable .docx files locally on your device — no data is transmitted to our servers. All other static pages on the site (rights guides, support resources, court date guides, immigration guides) are similarly passive."
       }
     },
     "noDataTools": {
       "title": "Tools That Collect No Data",
-      "description": "The Record Clearance Eligibility Screener and the Public Defender Intake Form make no server calls at any point. The screener runs entirely in your browser as a decision tree. The intake form is a printable document you fill out by hand. No information is submitted, transmitted, or stored electronically when using either of these tools."
+      "description": "The Record Clearance Eligibility Screener, the Collateral Consequences Screener, the Public Defender Intake Checklist, and the Mitigation Memo Builder make no server calls at any point. The screeners run entirely in your browser as decision trees. The advocate tools generate downloadable .docx files locally on your device. No information is submitted, transmitted, or stored electronically when using any of these tools."
     },
     "technical": {
       "title": "Technical Details",
       "sessions": {
-        "title": "Session Data",
-        "description": "Temporary session data is used to maintain your browsing experience during a single visit. This data is automatically deleted when you close your browser or end your session. No session information is stored permanently."
+        "title": "Session Data and Cookies",
+        "description": "OpenDefender does not use tracking cookies or persistent identifiers for public visitors. A session cookie is used only when an attorney logs into the Attorney Portal — it keeps the attorney authenticated during their visit and is deleted when they log out or close their browser. Public visitors browsing the site, using AI guidance, or using the advocate tools do not receive any cookies. No session information is stored permanently."
       },
       "logs": {
         "title": "Server Logs",
