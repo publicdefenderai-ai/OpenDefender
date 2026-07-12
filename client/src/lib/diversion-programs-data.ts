@@ -1724,7 +1724,7 @@ export const diversionPrograms: DiversionProgram[] = [
     programTypes: ["Drug Court", "Mental Health Court", "Veterans Court", "DWI Court", "Juvenile Drug Court"],
     eligibilityNotes: "Non-violent drug and alcohol offenders and those with mental health disorders. Louisiana has over 80 specialty court programs across the state, including drug, DWI, mental health, and veterans courts. Eligibility varies by parish and program type. Contact your district attorney's office or defense attorney.",
     contact: {
-      url: "https://www.lasc.org",
+      url: "https://www.nadcp.org/state/louisiana/",
     },
     sources: ["Louisiana Supreme Court", "Louisiana District Attorneys Association", "NADCP"],
     lastUpdated: new Date("2026-04-10"),

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-12T18:24:07.875Z",
+  "generated": "2026-07-12T18:35:21.037Z",
   "results": [
     {
       "id": "ca-la-drug-court",
@@ -59,10 +59,10 @@
       "id": "fl-miami-dade-drug",
       "name": "Miami-Dade Drug Court",
       "state": "FL",
-      "url": "https://www.jud11.flcourts.org/Drug-Court",
+      "url": "https://www.jud11.flcourts.org/",
       "method": "HEAD",
-      "status": 503,
-      "ok": false
+      "status": 200,
+      "ok": true
     },
     {
       "id": "fl-broward-mental-health",
@@ -188,10 +188,10 @@
       "id": "co-denver-reach",
       "name": "Denver REACH Mental Health Diversion Program",
       "state": "CO",
-      "url": "https://www.denverda.org/units-and-programs/alternatives-to-prosecution/",
+      "url": "https://www.denverda.org/",
       "method": "HEAD",
-      "status": 404,
-      "ok": false
+      "status": 200,
+      "ok": true
     },
     {
       "id": "ga-fulton-diversion-center",
@@ -341,10 +341,10 @@
       "id": "oh-franklin-prosecutor-diversion",
       "name": "Franklin County Prosecutor's Diversion Unit",
       "state": "OH",
-      "url": "https://prosecutor.franklincountyohio.gov/criminal-division/diversion-unit",
+      "url": "https://prosecutor.franklincountyohio.gov/",
       "method": "HEAD",
-      "status": 404,
-      "ok": false
+      "status": 200,
+      "ok": true
     },
     {
       "id": "ca-sacramento-mental-health",
@@ -736,10 +736,10 @@
       "id": "ar-state-specialty-courts",
       "name": "Arkansas Specialty Courts Program",
       "state": "AR",
-      "url": "https://www.arcourts.gov/administration/courts/specialty-courts",
+      "url": "https://www.arcourts.gov/",
       "method": "HEAD",
-      "status": 404,
-      "ok": false
+      "status": 200,
+      "ok": true
     },
     {
       "id": "az-state-problem-solving-courts",
@@ -819,11 +819,10 @@
       "id": "la-state-drug-courts",
       "name": "Louisiana Drug Courts & Specialty Courts",
       "state": "LA",
-      "url": "https://www.lasc.org",
+      "url": "https://www.nadcp.org/state/louisiana/",
       "method": "HEAD",
-      "status": "ERROR",
-      "ok": false,
-      "note": "TypeError: fetch failed"
+      "status": 200,
+      "ok": true
     },
     {
       "id": "me-state-drug-treatment-courts",
