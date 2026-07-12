@@ -60,25 +60,57 @@ Session-ownership binding is not required for this endpoint.
 
 ---
 
-## Dependency Vulnerabilities (as of July 2026)
+## Dependency Vulnerabilities (as of July 12, 2026 — second scan)
+
+Rescanned on July 12, 2026 as part of Task #176 retry. Results differ from first scan because lockfile entries changed.
 
 | Severity | Count | Notes |
 |---|---|---|
 | Critical | 0 | None |
-| High | 1 | `vite@5.x` — fix requires Vite 6+ (major version bump). Deferred; tracked as Task #175. Compensating control: Vite runs in dev/build toolchain only, not in the production request path. |
-| Moderate | 21 | Transitive dependencies; no direct attack surface in this application |
-| Low | 6 | Informational only |
+| High | 2 | Both are the same CVE (`GHSA-fx2h-pf6j-xcff`) affecting two vite versions present in node_modules. See detail below. |
+| Moderate | 6 | Transitive esbuild versions (0.18.20, 0.21.5), vite 5.4.21 (2 CVEs), @opentelemetry/core 1.30.1 |
+| Low | 3 | esbuild 0.27.4 and 0.27.7 (same CVE), @babel/core 7.29.0 |
 
-`npm audit fix` was run and resolved all other high-severity transitive CVEs (basic-ftp, form-data, multer, path-to-regexp, picomatch, tmp, ws).
+### High findings detail
+
+| CVE | Package | Fix | Status |
+|---|---|---|---|
+| `GHSA-fx2h-pf6j-xcff` | `vite@5.4.21` (direct dep) | Requires upgrade to 6.4.3 (major bump) | Deferred — tracked as Task #175 |
+| `GHSA-fx2h-pf6j-xcff` | `vite@7.3.2` (transitive — not in lockfile as direct dep) | Patchable to 7.3.5 | Deferred with Task #175 (Vite major upgrade will supersede this) |
+
+**Compensating control for both:** Vite runs in the dev/build toolchain only — it is not in the production request path. The `GHSA-fx2h-pf6j-xcff` CVE (server-side source file disclosure via crafted URL) is only exploitable against a running Vite dev server exposed to untrusted networks. Production deployments serve pre-built static assets via Express, not via the Vite dev server.
 
 ---
 
-## Security Scanner Status (July 2026)
+## Security Scanner Status
+
+### Initial scan — July 2026 (Task #161)
 
 | Scanner | Status | Finding |
 |---|---|---|
-| `runDependencyAudit()` | Completed | 0 Critical, 1 High (vite@5.x, deferred — see above) |
-| `runSastScan()` | **Infrastructure failure** | Scanner received SIGKILL on every attempt (6+ tries). No code findings surfaced. Codebase uses parameterized queries via Drizzle ORM, Helmet CSP, CSRF origin-checking, `sanitizeInput()` on all Claude inputs, and `DOMPurify` on rendered output. Manual SAST review found no injection, XSS, or credential-leak patterns. |
-| `runHoundDogScan()` | **Infrastructure failure** | `HOUNDDOG_CLI_ABNORMAL_EXIT` with `reason: signal` on every attempt (6+ tries). No secrets or credentials are hardcoded; all secrets use `process.env.*` and are managed via Replit Secrets. |
+| `runDependencyAudit()` | Completed | 0 Critical, 1 High (vite@5.x) |
+| `runSastScan()` | **Infrastructure failure** | Scanner received SIGKILL on every attempt (6+ tries, varying timeouts) |
+| `runHoundDogScan()` | **Infrastructure failure** | `HOUNDDOG_CLI_ABNORMAL_EXIT` with `reason: signal` on every attempt (6+ tries) |
 
-The scanner infrastructure failures are platform-level issues (CLI receives kill signals), not code findings. The same infrastructure failures reproduce consistently across different invocation patterns and timeouts.
+### Retry scan — July 12, 2026 (Task #176)
+
+| Scanner | Status | Finding |
+|---|---|---|
+| `runDependencyAudit()` | Completed | 0 Critical, 2 High (both vite CVEs — see above), 6 Moderate, 3 Low |
+| `runSastScan()` | **Infrastructure failure** | Same `CANCEL` signal-kill error. Platform-level issue, not a code finding. |
+| `runHoundDogScan()` | **Infrastructure failure** | Same `HOUNDDOG_CLI_ABNORMAL_EXIT` with `reason: signal`. Platform-level issue, not a code finding. |
+
+**SAST and HoundDog scanner infrastructure failures are confirmed platform-level issues** (CLI processes receive kill signals before returning results). These failures reproduce consistently across both attempts, different invocation patterns, and different timeout values. They are not code findings.
+
+### Manual SAST assessment (compensating review)
+
+Since automated SAST cannot run, the following manual review was performed:
+
+| Risk area | Assessment |
+|---|---|
+| SQL injection | All DB access via Drizzle ORM with parameterized queries. No raw SQL string interpolation. |
+| XSS | User-rendered output uses `DOMPurify`. Helmet CSP configured with `script-src 'self'`. |
+| CSRF | Origin header checked on all state-changing endpoints. |
+| AI prompt injection | `sanitizeInput()` applied to all text sent to Claude before AI processing. |
+| Credential leaks | All secrets via `process.env.*` and Replit Secrets. No hardcoded credentials in source. |
+| Path traversal | No dynamic file serving from user input. Static assets served by Vite/Express. |
