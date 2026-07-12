@@ -1104,6 +1104,38 @@ export default {
         }
       }
     },
+    "treatmentConnection": {
+      "sectionTitle": "Conectarse a Tratamiento Antes de su Fecha en el Tribunal",
+      "sectionSubtitle": "Inscribirse en un programa relevante antes de la sentencia puede influir en cómo un juez ve su caso. Los tribunales generalmente ven favorablemente a los acusados que toman medidas hacia el tratamiento o la estabilización por cuenta propia.",
+      "whyTitle": "Por qué esto importa",
+      "whyBody": "En casos de drogas y algunos otros tipos de cargos, los jueces y fiscales consideran regularmente si un acusado ya se ha inscrito en tratamiento al decidir entre la encarcelación y alternativas. Una carta de un programa confirmando su fecha de inscripción es algo que su abogado puede presentar en cualquier audiencia. Incluso estar en lista de espera y documentar que solicitó ingreso tiene peso.",
+      "checklistTitle": "Antes de su próxima fecha en el tribunal",
+      "checklistItems": [
+        "Contacte al menos un programa relevante (tratamiento de drogas, asesoramiento de salud mental o manejo de la ira)",
+        "Pregunte si aceptan participantes involucrados en casos judiciales",
+        "Obtenga una carta en su papel membretado confirmando su fecha de inscripción o solicitud",
+        "Entregue esa carta a su abogado lo antes posible",
+        "Si un programa tiene lista de espera, pida una carta confirmando su lugar en ella. Los tribunales reconocen que solicitó aunque no haya comenzado aún."
+      ],
+      "findSamhsa": "El localizador de tratamientos de SAMHSA (findtreatment.gov) es la base de datos nacional más completa de instalaciones licenciadas de tratamiento de drogas y salud mental. Ingrese su código postal para encontrar programas cerca de usted y filtre por tipo de pago (Medicaid, escala móvil, gratuito).",
+      "findSamhsaNote": "La disponibilidad y los tiempos de espera cambian con frecuencia. Llame para confirmar antes de contar con un programa específico.",
+      "find211": "211 (llamada o texto) lo conecta con recursos locales de tratamiento y a menudo puede encontrar programas con cupos disponibles más rápido que una búsqueda en internet.",
+      "findAttorney": "Pregunte a su abogado o defensor público si tienen relaciones con programas locales. Muchos abogados defensores saben qué programas ven favorablemente los jueces en su condado.",
+      "angerTitle": "Programas de manejo de la ira",
+      "angerBody": "No existe una base de datos nacional de proveedores de manejo de la ira. Los programas aprobados por el tribunal varían por condado y a veces por juez. Contacte al secretario del tribunal o a su abogado para preguntar si su condado tiene una lista de proveedores aprobados. Antes de inscribirse en cualquier programa, confirme que es aceptable para el tribunal.",
+      "angerQuestions": [
+        "¿Proporciona una carta de finalización con formato para presentación ante el tribunal?",
+        "¿Están reconocidos o aprobados por los tribunales de este condado?",
+        "¿Cuántas sesiones requiere el programa y cuál es el horario?"
+      ],
+      "scriptBody": "Hola, mi nombre es [su nombre]. Actualmente estoy involucrado en un asunto legal y estoy buscando inscribirme en [tratamiento de drogas / asesoramiento de salud mental / manejo de la ira]. ¿Aceptan participantes involucrados en casos judiciales? ¿Aceptan [Medicaid / tarifas en escala móvil / pago propio]? Si me inscribo, ¿puede proporcionarme una carta en su papel membretado confirmando mi fecha de inscripción y el nombre del programa para mi abogado?",
+      "letterTitle": "Solicitud de documentación de inscripción",
+      "letterLabel": "Carta solicitando confirmación de inscripción",
+      "letterBody": "[Fecha]\n\nA: [Nombre del Programa]\nAsunto: Confirmación de Inscripción para Procedimiento Legal\n\nActualmente estoy inscrito en [o: solicitando ingreso a] su programa [nombre del programa]. Estoy involucrado en un procedimiento legal y mi abogado ha solicitado confirmación escrita de mi inscripción.\n\nPor favor proporcione una carta en papel membretado de su organización que incluya:\n- Mi nombre completo\n- La fecha en que comenzó mi inscripción (o mi fecha de solicitud)\n- El nombre y descripción del programa\n- Fecha esperada de finalización, si corresponde\n\nGracias,\n[Su Nombre]\n[Su Número de Teléfono]",
+      "attorneyTitle": "Informar a su abogado",
+      "attorneyLabel": "Mensaje para su abogado",
+      "attorneyBody": "Hola [Nombre del Abogado], quería informarle que me he [inscrito en / solicitado] [Nombre del Programa], un programa de [tratamiento de drogas / salud mental / manejo de la ira]. Comencé el [fecha] / estoy en lista de espera desde [fecha]. Estoy obteniendo una carta de confirmación de ellos para compartirla con usted. Por favor hágame saber si necesita un formato específico."
+    },
     "transportation": {
       "overview": "Su caso puede afectar su capacidad para conducir o moverse, pero no tiene por qué paralizar su vida. Entender el estado de su licencia, planificar alternativas y comunicarse proactivamente con quienes dependen de usted le ayudará a seguir adelante.",
       "actions": {
@@ -4120,6 +4152,19 @@ export default {
         "cta": "Obtener orientación"
       }
     },
+    "followingCase": {
+      "sectionTitle": "Seguimiento del Caso Después de la Lectura de Cargos",
+      "sectionSubtitle": "Una vez manejada la crisis inmediata, el caso continúa durante semanas o meses. Aquí se explica cómo mantenerse informado.",
+      "courtDocketTitle": "Encuentre el expediente judicial",
+      "courtDocketText": "El expediente es el registro oficial de todo lo presentado en el caso: cargos, audiencias programadas, mociones y órdenes judiciales. La mayoría de los tribunales estatales tienen una herramienta de búsqueda de casos pública en su sitio web. Busque por el nombre legal completo del acusado y el condado. El expediente se actualiza a medida que ocurren los eventos.",
+      "hearingDatesTitle": "Fechas de audiencias y aplazamientos",
+      "hearingDatesText": "Las próximas audiencias aparecen como eventos programados en el expediente. Si una audiencia es aplazada (llamado aplazamiento), la nueva fecha aparecerá allí. Los aplazamientos son comunes. No significan que algo esté mal. Consulte el expediente con regularidad en lugar de depender de lo que se dijo en la última audiencia.",
+      "federalTitle": "Casos federales",
+      "federalText": "Los casos federales están en PACER (pacer.gov). Muchos documentos también están disponibles gratuitamente a través de CourtListener, que está integrado en nuestra herramienta de registros judiciales. Los números de casos federales tienen un formato distintivo; por ejemplo, 2:24-CR-00123. Si ve ese tipo de formato, el caso es federal.",
+      "vineTitle": "Notificaciones sobre el estado de custodia",
+      "vineText": "VINELink (vinelink.com) es un servicio gubernamental gratuito que envía notificaciones automáticas cuando cambia el estado de custodia de una persona detenida, incluyendo traslados, liberaciones programadas y liberaciones imprevistas. Regístrese en línea o por teléfono.",
+      "continuanceNote": "Un aplazamiento es una postergación. Los casos suelen tener varios antes de resolverse. Es una parte normal del proceso."
+    },
     "probationParole": {
       "sectionTitle": "Si su familiar está en libertad condicional o supervisión",
       "sectionSubtitle": "Un arresto durante una supervisión activa es una situación más complicada. Esto es lo que las familias necesitan saber.",
@@ -4904,7 +4949,19 @@ export default {
     "whatToDoNow": "**¿Qué le gustaría hacer ahora?**",
     "verifiedAgainst": "✓ Verificado con los estatutos penales de {{state}}",
     "verifiedGeneric": "✓ Verificado con los estatutos penales oficiales",
-    "askFollowUpPrompt": "Ahora puede escribir cualquier pregunta adicional abajo."
+    "askFollowUpPrompt": "Ahora puede escribir cualquier pregunta adicional abajo.",
+    "pathwayMenu": "¿Con qué le gustaría ayuda?",
+    "lifeFamilyMenu": "Un caso legal afecta más que solo el tribunal. ¿En qué área necesita ayuda?",
+    "resourcesDirectoryMenu": "Explore nuestra biblioteca completa de recursos. Seleccione una categoría:",
+    "dirGetHelpMenu": "Obtener ayuda. Seleccione una herramienta:",
+    "dirKnowRightsMenu": "Conozca sus derechos. Seleccione un tema:",
+    "dirLegalSupportMenu": "Servicios de apoyo legal. Seleccione un recurso:",
+    "dirLifeFamilyMenu": "Vida y Familia. Seleccione un área:",
+    "dirReferenceMenu": "Referencia. Seleccione un recurso:",
+    "dirAttorneyToolsMenu": "Herramientas para Abogados:",
+    "concernsQuestionEarly": "Antes de revisar los cargos, ¿qué es lo que más le preocupa ahora mismo? Seleccione todas las que correspondan y continúe.",
+    "helpingFamilyInfo": "**Ayudando a Alguien que Fue Arrestado**\n\nEsto es en lo que debe enfocarse en las próximas horas.\n\n**Encontrarlos:** Llame a la cárcel del condado o use un localizador de reclusos en línea. Necesitará su nombre legal completo y fecha de nacimiento.\n\n**Representación legal:** La oficina del defensor público en el condado donde fueron arrestados puede proporcionar representación gratuita para quienes califiquen. Es importante comunicarse antes de la audiencia de fianza.\n\n**La audiencia de fianza:** Las audiencias de fianza suelen ocurrir dentro de las 24 a 72 horas del arresto. Aquí es cuando se determinan las condiciones de libertad y los montos de fianza.\n\n**Llamadas desde la cárcel:** Las llamadas desde la cárcel son grabadas y pueden ser monitoreadas por los fiscales. Las declaraciones pueden ser citadas como prueba. Mantenga las llamadas breves y evite hablar del incidente.\n\nNuestra guía completa de Amigos y Familia cubre localizadores de reclusos, fianza, comunicación y más:",
+    "first24HoursInfo": "**Las Primeras 24 Horas Tras el Arresto**\n\nLas decisiones tomadas en las primeras 24 horas suelen determinar el resto del caso.\n\n**Derecho a guardar silencio:** Invóquelo declarando claramente: \"Estoy invocando mi derecho a guardar silencio. Quiero un abogado.\" Una vez invocado, la policía está obligada a dejar de interrogarle.\n\n**En el fichaje:** El procesamiento estándar incluye fotografía, toma de huellas y una llamada telefónica.\n\n**Derecho a un abogado:** Las personas que no pueden pagar un abogado tienen derecho a uno designado por el tribunal.\n\n**Llamadas desde la cárcel:** Las llamadas son grabadas y pueden ser citadas y usadas en el tribunal.\n\n**Audiencia de fianza:** Suele ocurrir dentro de las 24 a 72 horas. Un juez determina las condiciones de libertad.\n\n**Lectura de cargos:** Se leen los cargos formales y se entra una declaración de culpabilidad.\n\n---\nLa guía completa recorre los 7 pasos: arresto, fichaje, llamada telefónica, fianza, abogado, lectura de cargos y libertad condicional/supervisión."
   },
   "replies": {
     "urgentYes": "Sí, necesito ayuda ahora mismo",
@@ -4981,7 +5038,48 @@ export default {
     "immSituationalGuides": "Guías Situacionales",
     "immKnowYourRights": "Conozca Sus Derechos",
     "immFindDetained": "Encontrar a una Persona Detenida",
-    "immFindLawyer": "Encontrar un Abogado"
+    "immFindLawyer": "Encontrar un Abogado",
+    "caseRoadmap": "Mapa del Caso",
+    "lifeFamilyNav": "Vida y Familia",
+    "resourcesDirectory": "Explorar Recursos",
+    "viewFirst24Hours": "Ver Guía Completa de las Primeras 24 Horas",
+    "dirGetHelp": "Obtener Ayuda",
+    "dirKnowRights": "Conocer Sus Derechos",
+    "dirLegalSupport": "Servicios de Apoyo Legal",
+    "dirLifeFamily": "Vida y Familia",
+    "dirReference": "Referencia",
+    "dirAttorneyTools": "Herramientas para Abogados",
+    "dirCaseRoadmap": "Mapa del Caso",
+    "dirAiChat": "Chat con IA",
+    "dirDocumentSummarizer": "Resumidor de Documentos",
+    "dirLetterGenerator": "Generador de Cartas",
+    "dirFirst24HoursGuide": "Guía de las Primeras 24 Horas",
+    "dirConstitutionalRights": "Derechos Constitucionales",
+    "dirCaseTimeline": "Cronología del Caso",
+    "dirFriendsFamily": "Amigos y Familia",
+    "dirWarrants": "Órdenes de Arresto",
+    "dirRightToCounsel": "Derecho a un Abogado",
+    "dirMockQA": "Preguntas y Respuestas de Práctica",
+    "dirPublicDefenders": "Defensores Públicos y Asistencia Legal",
+    "dirDiversionPrograms": "Programas de Desviación",
+    "dirRecordExpungement": "Eliminación de Antecedentes",
+    "dirImmigrationHelp": "Ayuda de Inmigración",
+    "dirSupportHub": "Centro de Vida y Familia (Todas las Áreas)",
+    "dirEmployment": "Derechos Laborales",
+    "dirHousing": "Vivienda",
+    "dirFinances": "Finanzas y Beneficios",
+    "dirFamilyCare": "Cuidado Familiar",
+    "dirMentalHealth": "Salud Mental",
+    "dirTransportation": "Transporte",
+    "dirReentry": "Reinserción",
+    "dirLegalGlossary": "Glosario Legal",
+    "dirCourtLocator": "Localizador de Tribunales",
+    "dirStatuteLookup": "Búsqueda de Estatutos",
+    "dirDocumentLibrary": "Biblioteca de Documentos",
+    "dirAttorneyPortal": "Portal para Abogados",
+    "dirCourtRecords": "Registros Judiciales",
+    "helpingFamilyMember": "Ayudando a alguien que fue arrestado",
+    "viewFriendsFamily": "Ver Guía de Amigos y Familia"
   },
   "header": {
     "title": "Chat de Orientación Legal",
@@ -5442,6 +5540,8 @@ export default {
         "c4": "Todo lo que diga a la policía desde el momento del arresto puede usarse como prueba. Las declaraciones destinadas a explicar o aclarar la situación a menudo complican el caso en lugar de resolverlo. Guardar silencio no es una admisión de culpabilidad.",
         "c5Title": "Anotar Detalles",
         "c5": "Anote lo que pueda — números de placa, nombres de agentes, testigos presentes y el lugar. Esta información puede ser útil para su abogado.",
+        "c6Title": "Entre el Arresto y el Fichaje",
+        "c6": "Tras el arresto, puede pasar tiempo en un auto patrulla, un área de retención o una sala de entrevistas antes de que comience el fichaje formal. Los agentes pueden hablarle informalmente durante este período: ofrecerle agua, decirle que todavía no está formalmente arrestado o hacer preguntas casuales. Las advertencias de Miranda no son obligatorias en esta etapa, pero las declaraciones hechas aquí pueden ser documentadas y usadas como prueba. Su invocación del derecho al silencio desde el momento del arresto se aplica durante todo este período.",
         "do1": "Para invocar su derecho a guardar silencio, diga claramente: «Estoy invocando mi derecho a guardar silencio». Para solicitar un abogado, diga: «Quiero un abogado». Una vez que lo diga claramente, la policía está obligada a dejar de interrogarle.",
         "do2": "Cumpla físicamente. No se resista, aunque crea que el arresto es ilegal.",
         "do3": "Trate de recordar los números de placa, nombres de los agentes y todo lo que ocurra.",
@@ -5878,6 +5978,10 @@ export default {
         "documentSummarizer": {
           "title": "Resumen de Documentos",
           "description": "Suba un documento legal y obtenga un resumen en lenguaje sencillo."
+        },
+        "letterGenerator": {
+          "title": "Generador de Cartas",
+          "description": "Genere una carta personalizada para su empleador, arrendador o compañía de servicios según su situación específica."
         },
         "first24Hours": {
           "title": "Sus Primeras 24 Horas",

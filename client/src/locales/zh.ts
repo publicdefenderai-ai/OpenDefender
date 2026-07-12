@@ -1104,6 +1104,38 @@ export default {
         }
       }
     },
+    "treatmentConnection": {
+      "sectionTitle": "在庭审日期前接受治疗",
+      "sectionSubtitle": "在量刑前参加相关项目可能会影响法官对您案件的看法。法院通常对主动寻求治疗或稳定状态的被告持正面态度。",
+      "whyTitle": "为什么这很重要",
+      "whyBody": "在毒品案件和其他一些类型的指控中，法官和检察官在决定监禁与替代方案时，会定期考虑被告是否已经参加了治疗项目。来自项目的确认您注册日期的信件是您的律师可以在任何听证会上出示的东西。即使在等待名单上并记录您已申请也有重要意义。",
+      "checklistTitle": "在下次庭审前",
+      "checklistItems": [
+        "联系至少一个相关项目（毒品治疗、心理健康咨询或愤怒管理）",
+        "询问他们是否接受与法律案件相关的参与者",
+        "获取一封印有其抬头的信件，确认您的入组或申请日期",
+        "尽快将该信件交给您的律师",
+        "如果项目有等待名单，请索取一封确认您在等待名单上位置的信件。法院承认您已申请，即使您尚未开始。"
+      ],
+      "findSamhsa": "SAMHSA的治疗查询工具（findtreatment.gov）是最完整的全国持牌毒品治疗和心理健康机构数据库。输入您的邮编查找附近的项目，按付款类型（Medicaid、滑动收费标准、免费）筛选。",
+      "findSamhsaNote": "可用性和等待时间经常变化。依赖特定项目前请致电确认。",
+      "find211": "211（电话或短信）可将您与当地治疗资源联系起来，通常比网络搜索更快找到有空位的项目。",
+      "findAttorney": "询问您的律师或公设辩护人是否与当地项目有合作关系。许多辩护律师了解您所在县的法官对哪些项目持正面看法。",
+      "angerTitle": "愤怒管理项目",
+      "angerBody": "目前没有全国性的愤怒管理服务提供者数据库。法院批准的项目因县和有时因法官而异。请联系法院书记员或您的律师，询问您的县是否有已批准服务提供者的名单。在参加任何项目之前，请确认该项目对法院是可接受的。",
+      "angerQuestions": [
+        "您是否提供格式适合法院提交的完成证明信？",
+        "您是否被该县法院认可或批准？",
+        "该项目需要多少次课程，时间表是什么？"
+      ],
+      "scriptBody": "您好，我叫[您的姓名]。我目前涉及一件法律事务，正在寻求参加[毒品治疗/心理健康咨询/愤怒管理]项目。您接受与法律案件相关的参与者吗？您接受[Medicaid/滑动收费标准/自费]吗？如果我参加，您能提供一封印有您单位抬头的信件，为我的律师确认我的入组日期和项目名称吗？",
+      "letterTitle": "入组文件申请",
+      "letterLabel": "申请入组确认函的信件",
+      "letterBody": "[日期]\n\n致：[项目名称]\n事由：法律程序入组确认\n\n我目前已参加（或：正在申请加入）贵方的[项目名称]项目。我正在参与法律程序，我的律师要求提供书面的入组确认。\n\n请在贵组织的抬头信纸上提供一封信，包含：\n- 我的全名\n- 我入组开始日期（或申请日期）\n- 项目的名称和描述\n- 预计完成日期（如适用）\n\n谢谢，\n[您的姓名]\n[您的电话号码]",
+      "attorneyTitle": "告知您的律师",
+      "attorneyLabel": "给律师的留言",
+      "attorneyBody": "您好[律师姓名]，我想告知您，我已经[参加了/申请了][项目名称]，这是一个[毒品治疗/心理健康/愤怒管理]项目。我于[日期]开始/我自[日期]起在等待名单上。我正在获取他们的确认信件与您分享。如果您需要特定格式，请告知我。"
+    },
     "transportation": {
       "overview": "你的案件可能影响你的驾驶或出行能力——但不必因此停止生活。了解你的驾照状态、规划替代方案，以及主动与依赖你的人沟通，将帮助你保持正常生活。",
       "actions": {
@@ -4119,6 +4151,19 @@ export default {
         "cta": "获取指导"
       }
     },
+    "followingCase": {
+      "sectionTitle": "提审后的案件跟进",
+      "sectionSubtitle": "一旦处理了眼前的危机，案件将持续数周或数月。以下是如何保持了解进展的方法。",
+      "courtDocketTitle": "查找法院案件档案",
+      "courtDocketText": "案件档案是案件中所有文件的官方记录：指控、预定庭审、动议和法院命令。大多数州法院在其网站上都有公共案件查询工具。请使用被告的完整法定姓名和县名进行搜索。档案会随事件发生而更新。",
+      "hearingDatesTitle": "庭审日期和延期",
+      "hearingDatesText": "即将到来的庭审作为预定事件出现在档案中。如果庭审被推迟（称为延期），新日期将显示在那里。延期很常见，并不意味着出了什么问题。请定期查阅档案，而不是依赖上次庭审时所说的内容。",
+      "federalTitle": "联邦案件",
+      "federalText": "联邦案件在PACER（pacer.gov）上。许多文件也可以通过CourtListener免费获取，CourtListener已整合到我们的法院记录工具中。联邦案件号有独特的格式；例如，2:24-CR-00123。如果您看到这样的格式，该案件就是联邦案件。",
+      "vineTitle": "羁押状态通知",
+      "vineText": "VINELink（vinelink.com）是一项免费政府服务，当被拘留人员的羁押状态发生变化时（包括转移、预定释放和意外释放），它会自动发送通知。请在线注册或通过电话注册。",
+      "continuanceNote": "延期是一种推迟。案件在解决之前通常会有几次延期，这是正常流程的一部分。"
+    },
     "probationParole": {
       "sectionTitle": "如果您的家人处于缓刑或假释期间",
       "sectionSubtitle": "在监督期间被捕是一种更为复杂的情况。以下是家属需要了解的内容。",
@@ -4904,7 +4949,19 @@ export default {
       "whatToDoNow": "**您接下来想做什么？**",
       "verifiedAgainst": "✓ 已根据 {{state}} 刑事法规验证",
       "verifiedGeneric": "✓ 已根据官方刑事法规验证",
-      "askFollowUpPrompt": "您现在可以在下方输入任何后续问题。"
+      "askFollowUpPrompt": "您现在可以在下方输入任何后续问题。",
+      "pathwayMenu": "您想要什么方面的帮助？",
+      "lifeFamilyMenu": "法律案件的影响不仅限于法庭。您需要哪方面的帮助？",
+      "resourcesDirectoryMenu": "浏览我们的完整资源库。请选择一个类别：",
+      "dirGetHelpMenu": "获取帮助。请选择一个工具：",
+      "dirKnowRightsMenu": "了解您的权利。请选择一个主题：",
+      "dirLegalSupportMenu": "法律支持服务。请选择一个资源：",
+      "dirLifeFamilyMenu": "生活与家庭。请选择一个区域：",
+      "dirReferenceMenu": "参考资料。请选择一个资源：",
+      "dirAttorneyToolsMenu": "律师工具：",
+      "concernsQuestionEarly": "在查看指控之前，您现在最担心的是什么？请选择所有适用项，然后继续。",
+      "helpingFamilyInfo": "**帮助被捕的人**\n\n以下是未来几小时需要关注的事项。\n\n**找到他们：** 致电县级监狱或使用在线在押人员查询工具。您需要提供他们的完整法定姓名和出生日期。\n\n**法律代理：** 被逮捕县的公设辩护人办公室可以为符合条件的人提供免费代理。在保释听证会前联系很重要。\n\n**保释听证会：** 保释听证会通常在逮捕后24至72小时内举行。此时确定释放条件和保释金额。\n\n**监狱电话：** 监狱的电话被录音，可能被检察官监听。陈述可被传唤作为证据。通话要简短，避免讨论案件。\n\n我们的完整亲友指南涵盖在押人员查询、保释、通讯等更多内容：",
+      "first24HoursInfo": "**被捕后的前24小时**\n\n前24小时做出的决定通常会影响整个案件的走向。\n\n**保持沉默权：** 清楚地声明来行使该权利：\"我正在行使我的保持沉默权。我要一名律师。\" 一旦声明，警察必须停止审问。\n\n**在登记入册时：** 标准程序包括拍照、采集指纹和打一个电话。\n\n**获得律师的权利：** 负担不起律师的人有权获得法院指定的律师。\n\n**监狱电话：** 电话被录音，可被传唤并在法庭上使用。\n\n**保释听证会：** 通常在24至72小时内进行。法官确定释放条件。\n\n**提审：** 宣读正式指控并作出认罪答辩。\n\n---\n完整指南涵盖所有7个步骤：逮捕、登记入册、电话、保释、律师、提审和缓刑/假释。"
     },
     "replies": {
       "urgentYes": "是的，我现在需要帮助",
@@ -4981,7 +5038,48 @@ export default {
       "immSituationalGuides": "情景指南",
       "immKnowYourRights": "了解您的权利",
       "immFindDetained": "查找被拘留人员",
-      "immFindLawyer": "查找律师"
+      "immFindLawyer": "查找律师",
+      "caseRoadmap": "案件路线图",
+      "lifeFamilyNav": "生活与家庭",
+      "resourcesDirectory": "浏览资源",
+      "viewFirst24Hours": "查看完整的前24小时指南",
+      "dirGetHelp": "获取帮助",
+      "dirKnowRights": "了解您的权利",
+      "dirLegalSupport": "法律支持服务",
+      "dirLifeFamily": "生活与家庭",
+      "dirReference": "参考资料",
+      "dirAttorneyTools": "律师工具",
+      "dirCaseRoadmap": "案件路线图",
+      "dirAiChat": "AI聊天",
+      "dirDocumentSummarizer": "文件摘要工具",
+      "dirLetterGenerator": "信函生成器",
+      "dirFirst24HoursGuide": "前24小时指南",
+      "dirConstitutionalRights": "宪法权利",
+      "dirCaseTimeline": "案件时间线",
+      "dirFriendsFamily": "亲友",
+      "dirWarrants": "逮捕令",
+      "dirRightToCounsel": "获得律师的权利",
+      "dirMockQA": "模拟问答练习",
+      "dirPublicDefenders": "公设辩护人和法律援助",
+      "dirDiversionPrograms": "转处计划",
+      "dirRecordExpungement": "前科消除",
+      "dirImmigrationHelp": "移民帮助",
+      "dirSupportHub": "生活与家庭中心（所有领域）",
+      "dirEmployment": "就业权利",
+      "dirHousing": "住房",
+      "dirFinances": "财务与福利",
+      "dirFamilyCare": "家庭照料",
+      "dirMentalHealth": "心理健康",
+      "dirTransportation": "交通",
+      "dirReentry": "重新融入社会",
+      "dirLegalGlossary": "法律词汇表",
+      "dirCourtLocator": "法院查询",
+      "dirStatuteLookup": "法规查询",
+      "dirDocumentLibrary": "文件库",
+      "dirAttorneyPortal": "律师门户",
+      "dirCourtRecords": "法院记录",
+      "helpingFamilyMember": "帮助被捕的人",
+      "viewFriendsFamily": "查看亲友指南"
     },
     "header": {
       "title": "法律指导对话",
@@ -5442,6 +5540,8 @@ export default {
         "c4": "从被捕那一刻起对警察所说的任何话都可以作为证据使用。旨在解释或澄清事情的陈述往往会造成问题而非解决问题。保持沉默不是认罪。",
         "c5Title": "记录细节",
         "c5": "尽量记录您能记录的内容——警徽号码、警官姓名、在场证人以及地点。这些信息可能对您的律师有用。",
+        "c6Title": "逮捕与登记入册之间",
+        "c6": "逮捕后，在正式登记入册开始之前，您可能会在警车、临时羁押区或审讯室中度过一段时间。警察可能会在此期间与您进行非正式交谈：提供水、表示您尚未被正式逮捕，或提问一些随意的问题。此阶段不需要Miranda警告，但此处做出的陈述可以被记录并用作证据。您从被逮捕那一刻起对沉默权的援引在整个这段时间内均适用。",
         "do1": "要援引保持沉默的权利，请清楚说出：「我援引保持沉默的权利。」要要求律师，请说：「我要一名律师。」一旦您清楚表明这一点，警察必须停止审问。",
         "do2": "在行动上配合。即使您认为逮捕是非法的，也不要抗拒。",
         "do3": "尽量记住警官编号、姓名以及所发生的一切。",
@@ -5878,6 +5978,10 @@ export default {
         "documentSummarizer": {
           "title": "文件摘要",
           "description": "上传法律文件，获取通俗易懂的摘要。"
+        },
+        "letterGenerator": {
+          "title": "信函生成器",
+          "description": "根据您的具体情况，为您的雇主、房东或公用事业公司生成个性化信函。"
         },
         "first24Hours": {
           "title": "被捕后的首个24小时",
