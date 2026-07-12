@@ -11,6 +11,17 @@
 import { useState, useEffect, useCallback } from "react";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
+// Prevent search engines from indexing this internal admin tool.
+function useAdminNoIndex() {
+  useEffect(() => {
+    const meta = document.createElement("meta");
+    meta.name = "robots";
+    meta.content = "noindex,nofollow";
+    document.head.appendChild(meta);
+    return () => { document.head.removeChild(meta); };
+  }, []);
+}
+
 // ── Official state legislature URLs ──────────────────────────────────────────
 // Primary lookup URL per jurisdiction. Opens the state's official code search
 // or the specific code section closest to what we can derive from the citation.
@@ -187,6 +198,7 @@ function StatusBadge({ status }: { status: string }) {
 
 export default function CitationReview() {
   useScrollToTop();
+  useAdminNoIndex();
 
   // Auth
   const [adminKey, setAdminKey] = useState<string>(

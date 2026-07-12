@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /embed/
 Disallow: /attorney/
+Disallow: /admin/
 Disallow: /api-docs
 Disallow: /widgets
 Disallow: /tech-docs

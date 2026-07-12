@@ -1295,7 +1295,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Get Legal Guidance by Session
-  app.get("/api/legal-guidance/:sessionId", async (req, res) => {
+  // Security note: sessionId is a server-generated UUID (128-bit random).
+  // Ownership is enforced by UUID unguessability (knowledge-as-token pattern).
+  // Full express-session binding is deferred pending schema migration to add an
+  // expressSessionId column to legal_cases. Rate limiter is applied to prevent
+  // enumeration attacks.
+  app.get("/api/legal-guidance/:sessionId", searchRateLimiter, async (req, res) => {
     try {
       const { sessionId } = req.params;
       const legalCase = await storage.getLegalCase(sessionId);
