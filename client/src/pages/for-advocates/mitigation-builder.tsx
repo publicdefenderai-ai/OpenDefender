@@ -393,6 +393,15 @@ function buildDocxParagraphs(output: string): Paragraph[] {
   return paragraphs;
 }
 
+function escHtml(str: string): string {
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 function triggerDownload(blob: Blob, filename: string) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -455,25 +464,237 @@ function OutputPanel({ output }: { output: string }) {
   const handlePrint = () => {
     const win = window.open("", "_blank");
     if (!win) return;
-    win.document.write(`
-      <html>
-        <head>
-          <title>Mitigation Summary — Draft</title>
-          <style>
-            body { font-family: monospace; padding: 40px; line-height: 1.7; max-width: 700px; margin: 0 auto; font-size: 13px; }
-            .warning { background: #fef9c3; border: 1px solid #fde047; padding: 10px 14px; border-radius: 6px; font-size: 12px; margin-bottom: 24px; font-family: Arial, sans-serif; }
-            pre { white-space: pre-wrap; }
-            @media print { .warning { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
-          </style>
-        </head>
-        <body>
-          <div class="warning">DRAFT — Review every line before use. Do not file without attorney verification.</div>
-          <pre>${output.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>
-        </body>
-      </html>
-    `);
+
+    // Parse output lines into structured HTML sections
+    const KNOWN_HEADERS = [
+      "COMMUNITY TIES", "HOUSING STABILITY", "EMPLOYMENT",
+      "TREATMENT PARTICIPATION", "FAMILY RESPONSIBILITIES",
+      "CHARACTER REFERENCES", "ADDITIONAL CONTEXT",
+    ];
+
+    const lines = output.split("\n");
+    const htmlParts: string[] = [];
+    let clientName = "";
+    let inList = false;
+
+    const closeList = () => {
+      if (inList) { htmlParts.push("</ul>"); inList = false; }
+    };
+
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+
+      // Skip dividers
+      if (/^─+$/.test(line)) continue;
+
+      // Title — replaced by the formal header block below
+      if (line === "MITIGATION SUMMARY — DRAFT") continue;
+
+      // Draft warning (first line after title)
+      if (line.startsWith("Review every line")) {
+        closeList();
+        htmlParts.push(`<div class="draft-warning">DRAFT — ${escHtml(line)}</div>`);
+        continue;
+      }
+
+      // Prepared / Client / Context metadata
+      if (line.startsWith("Prepared:") || line.startsWith("Context:")) {
+        closeList();
+        htmlParts.push(`<p class="meta">${escHtml(line)}</p>`);
+        continue;
+      }
+      if (line.startsWith("Client:")) {
+        clientName = line.replace("Client:", "").trim();
+        closeList();
+        htmlParts.push(`<p class="meta">${escHtml(line)}</p>`);
+        continue;
+      }
+
+      // Section headers
+      if (KNOWN_HEADERS.includes(line)) {
+        closeList();
+        htmlParts.push(`<h2>${escHtml(line)}</h2>`);
+        continue;
+      }
+
+      // Bullet items
+      if (line.startsWith("• ")) {
+        if (!inList) { htmlParts.push("<ul>"); inList = true; }
+        htmlParts.push(`<li>${escHtml(line.slice(2))}</li>`);
+        continue;
+      }
+
+      // Footer verification line
+      if (line.startsWith("Verify every claim") || line.startsWith("This summary contains")) {
+        closeList();
+        htmlParts.push(`<p class="footer-note">${escHtml(line)}</p>`);
+        continue;
+      }
+
+      // Blank line — spacer
+      if (line === "") {
+        closeList();
+        htmlParts.push("<div class='spacer'></div>");
+        continue;
+      }
+
+      // Free-form text (references, additional context)
+      closeList();
+      htmlParts.push(`<p>${escHtml(line)}</p>`);
+    }
+    closeList();
+
+    const bodyContent = htmlParts.join("\n");
+    const subheading = clientName ? `Re: ${clientName}` : "";
+
+    win.document.write(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sentencing Mitigation Memorandum${clientName ? ` — ${clientName}` : ""}</title>
+  <style>
+    /* ── Screen baseline ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.65;
+      color: #111;
+      background: #fff;
+      padding: 1in;
+      max-width: 8.5in;
+      margin: 0 auto;
+    }
+
+    /* ── Cover header ── */
+    .doc-header {
+      text-align: center;
+      border-bottom: 2px solid #111;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+    .doc-header h1 {
+      font-size: 14pt;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .doc-header .sub {
+      font-size: 11pt;
+      margin-top: 4px;
+      font-style: italic;
+    }
+
+    /* ── Draft warning ── */
+    .draft-warning {
+      background: #fef9c3;
+      border: 1px solid #ca8a04;
+      padding: 8px 14px;
+      font-size: 9pt;
+      font-family: Arial, sans-serif;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── Metadata block ── */
+    p.meta {
+      font-size: 11pt;
+      margin-bottom: 4px;
+    }
+
+    /* ── Section headings ── */
+    h2 {
+      font-size: 11pt;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-weight: bold;
+      border-bottom: 1px solid #555;
+      padding-bottom: 3px;
+      margin-top: 22px;
+      margin-bottom: 8px;
+      page-break-after: avoid;
+      orphans: 3;
+      widows: 3;
+    }
+
+    /* ── Bullet lists ── */
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 8px;
+    }
+    li {
+      padding-left: 1.2em;
+      text-indent: -1.2em;
+      margin-bottom: 4px;
+      font-size: 11pt;
+    }
+    li::before { content: "\\2022\\00A0"; }
+
+    /* ── Body paragraphs ── */
+    p { font-size: 11pt; margin-bottom: 6px; }
+
+    /* ── Footer note ── */
+    p.footer-note {
+      font-size: 9pt;
+      font-style: italic;
+      color: #555;
+      margin-top: 24px;
+      border-top: 1px solid #ccc;
+      padding-top: 8px;
+    }
+
+    .spacer { height: 8px; }
+
+    /* ── @page — margins + page numbers ── */
+    @page {
+      size: letter;
+      margin: 1in;
+    }
+    @page :first {
+      @bottom-center { content: ""; }
+    }
+
+    /* CSS-counter page numbers via running footer */
+    body::after {
+      content: none; /* handled by @page below in supporting browsers */
+    }
+
+    /* Fallback page-number footer for Chrome/Safari print */
+    @media print {
+      @page {
+        @bottom-center {
+          content: "Page " counter(page) " of " counter(pages);
+          font-size: 9pt;
+          font-family: Arial, sans-serif;
+          color: #555;
+        }
+      }
+      body {
+        padding: 0;
+        max-width: none;
+      }
+      .draft-warning {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      h2 { page-break-after: avoid; }
+      ul, li { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="doc-header">
+    <h1>Sentencing Mitigation Memorandum</h1>
+    ${subheading ? `<div class="sub">${escHtml(subheading)}</div>` : ""}
+  </div>
+  ${bodyContent}
+</body>
+</html>`);
     win.document.close();
-    win.print();
+    setTimeout(() => win.print(), 300);
   };
 
   const empty = !output;
@@ -516,6 +737,8 @@ function OutputPanel({ output }: { output: string }) {
           <button
             type="button"
             onClick={handlePrint}
+            title="Opens your browser's print dialog — choose 'Save as PDF' for a PDF copy."
+            aria-label="Print or save as PDF — opens browser print dialog"
             className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors"
           >
             <Printer className="h-3.5 w-3.5" />
