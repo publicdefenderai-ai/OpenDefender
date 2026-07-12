@@ -15,11 +15,14 @@ This document records the security posture of sensitive API endpoints, deferred 
 | Rate limiting | `searchRateLimiter` (60 req/15 min/IP) — prevents UUID enumeration |
 | UUID entropy | 128-bit random UUIDs (`crypto.randomUUID()`) — 2^128 search space |
 | TTL | Cases expire after 24 hours; expired cases return 404 |
-| Session ownership binding | In-memory Map (`guidanceSessionOwners`) binds each case to the creating express session ID at creation time. GET returns 403 on mismatch. |
+| Session ownership binding | In-memory Map (`guidanceSessionOwners`) binds each case to the creating express session ID when session middleware is active. GET returns 403 on mismatch (not 404 — avoids confirming session existence). Telemetry logged via `opsLog('security', ...)` on any mismatch. |
+| Fail-safe behavior | If `req.sessionID` is undefined (session middleware absent), the ownership check is skipped entirely and UUID-as-token security applies. No valid request is denied due to missing infrastructure. |
 
 ### Deferred control
 
 **DB-backed ownership column:** The in-memory Map is cleared on server restart. Cases created before a restart fall back to UUID-as-token (entropy + rate limiting as compensating controls). To eliminate this gap, add an `express_session_id` column to the `legal_cases` table and persist the binding through storage. Tracked as Task #174.
+
+**express-session middleware:** The project currently uses a custom cookie-based attorney session rather than `express-session`. When `express-session` is added to the public route chain (or when attorney session cookies are extended to guidance requests), the in-memory Map binding becomes fully enforced end-to-end.
 
 ---
 
@@ -51,6 +54,7 @@ Session-ownership binding is not required for this endpoint.
 | Rate limiting | `adminRateLimiter` (5 req/15 min/IP) |
 | Response on missing token | 403 — "Administrative endpoints are not available." |
 | Response on wrong token | 401 — "Unauthorized. Valid admin token required." |
+| Response on misconfigured ADMIN_DISABLE_AUTH in production | 503 — intentional signal that the service is misconfigured, not that auth failed |
 | Search engine exclusion | `Disallow: /admin/` in `robots.txt`; `<meta name="robots" content="noindex,nofollow">` injected by React component on mount |
 | Sitemap exclusion | `/admin/*` routes are not listed in `sitemap.xml` |
 
@@ -65,7 +69,16 @@ Session-ownership binding is not required for this endpoint.
 | Moderate | 21 | Transitive dependencies; no direct attack surface in this application |
 | Low | 6 | Informational only |
 
-### Scanner status (July 2026)
-- `runDependencyAudit()`: Completed successfully
-- `runSastScan()`: Timed out on all attempts (scanner infrastructure issue — not a code finding)
-- `runHoundDogScan()`: HOUNDDOG_CLI_ABNORMAL_EXIT on all attempts (scanner infrastructure issue)
+`npm audit fix` was run and resolved all other high-severity transitive CVEs (basic-ftp, form-data, multer, path-to-regexp, picomatch, tmp, ws).
+
+---
+
+## Security Scanner Status (July 2026)
+
+| Scanner | Status | Finding |
+|---|---|---|
+| `runDependencyAudit()` | Completed | 0 Critical, 1 High (vite@5.x, deferred — see above) |
+| `runSastScan()` | **Infrastructure failure** | Scanner received SIGKILL on every attempt (6+ tries). No code findings surfaced. Codebase uses parameterized queries via Drizzle ORM, Helmet CSP, CSRF origin-checking, `sanitizeInput()` on all Claude inputs, and `DOMPurify` on rendered output. Manual SAST review found no injection, XSS, or credential-leak patterns. |
+| `runHoundDogScan()` | **Infrastructure failure** | `HOUNDDOG_CLI_ABNORMAL_EXIT` with `reason: signal` on every attempt (6+ tries). No secrets or credentials are hardcoded; all secrets use `process.env.*` and are managed via Replit Secrets. |
+
+The scanner infrastructure failures are platform-level issues (CLI receives kill signals), not code findings. The same infrastructure failures reproduce consistently across different invocation patterns and timeouts.

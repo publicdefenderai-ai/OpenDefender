@@ -1198,8 +1198,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidance,
       });
 
-      // Bind this case to the requesting express session for ownership verification.
-      guidanceSessionOwners.set(sessionId, req.sessionID || '');
+      // Bind this case to the express session ID when the session middleware provides one.
+      // When express-session is not active, no binding is stored and retrieval falls back
+      // to UUID-as-token security (compensating controls: rate limiting + 128-bit entropy).
+      if (req.sessionID) {
+        guidanceSessionOwners.set(sessionId, req.sessionID);
+      }
 
       // Add generation timestamp to guidance for transparency
       const guidanceWithTimestamp = {
@@ -1294,8 +1298,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { incidentDescription: _droppedStream, ...storableStreamData } = validatedData;
       const legalCase = await storage.createLegalCase({ ...storableStreamData, guidance });
 
-      // Bind this case to the requesting express session for ownership verification.
-      guidanceSessionOwners.set(sessionId, req.sessionID || '');
+      // Bind when session middleware provides an ID (fail-safe: no binding if absent).
+      if (req.sessionID) {
+        guidanceSessionOwners.set(sessionId, req.sessionID);
+      }
 
       const guidanceWithTimestamp = {
         ...(typeof legalCase.guidance === 'object' ? legalCase.guidance : {}),
@@ -1320,8 +1326,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { sessionId } = req.params;
 
+      // Enforce ownership only when both sides have a real session identity.
+      // If express-session middleware is absent, req.sessionID is undefined and
+      // the check is skipped entirely (fail-safe fallback to UUID-as-token security).
       const recordedOwner = guidanceSessionOwners.get(sessionId);
-      if (recordedOwner !== undefined && req.sessionID !== recordedOwner) {
+      if (recordedOwner && req.sessionID && req.sessionID !== recordedOwner) {
+        opsLog('security', `Guidance session ownership mismatch: ${sessionId.slice(0, 8)}…`);
         return res.status(403).json({ success: false, error: 'Access denied.' });
       }
 
