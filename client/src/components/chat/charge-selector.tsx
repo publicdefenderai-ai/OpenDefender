@@ -112,6 +112,10 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
     >
       <button
         onClick={() => setIsExpanded(!isExpanded)}
+        aria-expanded={isExpanded}
+        aria-label={isExpanded
+          ? t('chat.chargeSelector.collapseLabel', 'Collapse charge selector')
+          : t('chat.chargeSelector.expandLabel', 'Expand charge selector')}
         className="w-full flex items-center justify-between p-3 border-b border-border hover:bg-muted/50 transition-colors"
         data-testid="button-charge-selector-toggle"
       >
@@ -147,11 +151,12 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
               />
             </div>
             
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1.5" role="group" aria-label={t('chat.chargeSelector.filterByCategory', 'Filter by category')}>
               {CATEGORY_KEYS.map((key) => (
                 <button
                   key={key}
                   onClick={() => setSelectedCategory(key)}
+                  aria-pressed={selectedCategory === key}
                   className={cn(
                     "px-2.5 py-1 rounded-full text-xs font-medium transition-colors",
                     selectedCategory === key
@@ -199,6 +204,11 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: Math.min(index * 0.01, 0.3) }}
                       onClick={() => toggleCharge(charge)}
+                      aria-pressed={isSelected}
+                      aria-label={isSelected
+                        ? t('chat.chargeSelector.removeCharge', { name: charge.name, defaultValue: `Remove ${charge.name}` })
+                        : t('chat.chargeSelector.addCharge', { name: charge.name, defaultValue: `Add ${charge.name}` })
+                      }
                       className={cn(
                         "w-full flex items-start gap-3 px-3 py-2.5 rounded-lg text-left",
                         "transition-colors text-sm",

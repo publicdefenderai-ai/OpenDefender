@@ -226,11 +226,18 @@ export function Header() {
                       className="relative"
                       onMouseEnter={() => handleDropdownMouseEnter(link.href)}
                       onMouseLeave={handleDropdownMouseLeave}
+                      onBlurCapture={(e) => {
+                        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                          setOpenDropdown(null);
+                        }
+                      }}
                     >
                       <button
                         onClick={() => setOpenDropdown(isOpen ? null : link.href)}
+                        onFocus={() => setOpenDropdown(link.href)}
                         aria-expanded={isOpen}
                         aria-haspopup="true"
+                        aria-label={link.label}
                         className={cn(
                           "relative flex items-center gap-1 px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
                           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",

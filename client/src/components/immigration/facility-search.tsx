@@ -76,17 +76,19 @@ export function FacilitySearch() {
               setSelectedState('');
             }}
             placeholder={lang === 'es' ? 'Buscar por nombre, ciudad o estado...' : 'Search by name, city, or state...'}
+            aria-label={lang === 'es' ? 'Buscar centros de detención por nombre, ciudad o estado' : 'Search detention facilities by name, city, or state'}
             className="pl-10"
           />
         </div>
 
         {/* State filter */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2" role="group" aria-label={lang === 'es' ? 'Filtrar por estado' : 'Filter by state'}>
           <button
             onClick={() => {
               setSelectedState('');
               setSearchQuery('');
             }}
+            aria-pressed={!selectedState && !searchQuery}
             className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
               !selectedState && !searchQuery
                 ? 'bg-primary text-primary-foreground'
@@ -102,6 +104,8 @@ export function FacilitySearch() {
                 setSelectedState(state);
                 setSearchQuery('');
               }}
+              aria-pressed={selectedState === state}
+              aria-label={lang === 'es' ? `Filtrar por ${state}` : `Filter by ${state}`}
               className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
                 selectedState === state
                   ? 'bg-primary text-primary-foreground'
@@ -131,6 +135,11 @@ export function FacilitySearch() {
                 onClick={() => setExpandedFacility(
                   expandedFacility === facility.id ? null : facility.id
                 )}
+                aria-expanded={expandedFacility === facility.id}
+                aria-label={expandedFacility === facility.id
+                  ? (lang === 'es' ? `Ocultar detalles de ${facility.name}` : `Hide details for ${facility.name}`)
+                  : (lang === 'es' ? `Ver detalles de ${facility.name}` : `Show details for ${facility.name}`)
+                }
                 className="w-full p-4 text-left hover:bg-muted/50 transition-colors"
               >
                 <div className="flex items-start justify-between gap-3">

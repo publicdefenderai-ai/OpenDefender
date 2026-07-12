@@ -360,9 +360,10 @@ export function DocumentChecklist() {
         </div>
 
         {/* Category filter */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2" role="group" aria-label={t('immigration.documentChecklist.filterByCategory', 'Filter by document category')}>
           <button
             onClick={() => setActiveCategory('all')}
+            aria-pressed={activeCategory === 'all'}
             className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
               activeCategory === 'all' ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'
             }`}
@@ -373,6 +374,8 @@ export function DocumentChecklist() {
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
+              aria-pressed={activeCategory === cat.id}
+              aria-label={t3(cat.title, lang)}
               className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1 ${
                 activeCategory === cat.id ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'
               }`}
@@ -396,6 +399,8 @@ export function DocumentChecklist() {
                   <button
                     key={doc.id}
                     onClick={() => toggleDoc(doc.id)}
+                    aria-pressed={checkedDocs.has(doc.id)}
+                    aria-label={`${t3(doc.name, lang)} — ${checkedDocs.has(doc.id) ? t('immigration.documentChecklist.markIncomplete', 'mark as not collected') : t('immigration.documentChecklist.markComplete', 'mark as collected')}`}
                     className={`w-full flex items-start gap-3 p-3 rounded-lg text-left transition-all ${
                       checkedDocs.has(doc.id) ? 'bg-green-50 dark:bg-green-950/30' : 'bg-muted/50 hover:bg-muted'
                     }`}
