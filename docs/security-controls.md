@@ -134,17 +134,17 @@ No raw string interpolation of user-supplied values into SQL was found anywhere 
 
 #### Cross-Site Scripting (XSS)
 
-**Result: CLEAN**
+**Result: CLEAN (with noted limitation)**
 
 `dangerouslySetInnerHTML` appears in exactly one place: `client/src/components/ui/chart.tsx` line 101. This is a shadcn/recharts chart library component. The injected content is CSS custom property declarations built from a static `THEMES` configuration object — no user-supplied data flows into it. No other `dangerouslySetInnerHTML` usage exists in `client/src/`.
 
-Defense-in-depth: Helmet CSP is configured in `server/index.ts` with `scriptSrc: ['self']` in production, blocking inline script execution even if an XSS payload were somehow injected.
+CSP (`server/index.ts` lines 29-31): production `scriptSrc` is `["'self'", "'unsafe-inline'"]`. `'unsafe-inline'` is present (required by CSS-in-JS libraries; a comment in the file marks this for future nonce-based hardening). Production removes `'unsafe-eval'` which development uses; eval-based XSS is blocked. Inline-script XSS is not blocked by CSP in the current configuration — the `dangerouslySetInnerHTML` audit above is therefore the primary XSS control.
 
 #### Cross-Site Request Forgery (CSRF)
 
 **Result: CLEAN**
 
-CSRF protection is implemented via Origin header validation in `server/index.ts` (lines 55-91). All state-changing API endpoints validate that the `Origin` header matches the server host. Session cookies for attorney accounts are set with `sameSite: 'strict'` (`server/routes.ts` line 1792), which independently blocks cross-origin cookie submission.
+CSRF protection is implemented via Origin header validation in `server/index.ts` (lines 64-110). For all state-changing methods (POST/PUT/DELETE/PATCH) on `/api/*` paths, the middleware validates the `Origin` header against the server `Host` — but only in production (`NODE_ENV === 'production'`) and only when the `Origin` header is present. Requests without an Origin header (e.g., server-to-server or same-origin non-browser requests) are not blocked. Primary defense-in-depth: attorney session cookies are set with `sameSite: 'strict'` (`server/routes.ts` line 1792), which prevents the browser from sending cookies on cross-origin requests in the first place. JSON Content-Type enforcement (lines 83-89) provides additional CSRF mitigation for API calls.
 
 #### Rate Limiting
 
@@ -174,7 +174,7 @@ All limiters use `skip: (req) => process.env.NODE_ENV === 'development'` — dev
 - `caseDetails.caseStage` — 100-char limit (applied twice)
 - `caseDetails.custodyStatus` — 100-char limit
 
-The function strips control characters and truncates to the specified length. No user string reaches the Claude API without passing through it.
+The function: (1) trims leading/trailing whitespace, (2) truncates to the specified max length, and (3) regex-replaces prompt-injection phrases (`ignore previous instructions`, `disregard`, `forget what I said`, `new instructions`) with `[redacted]`. No control-character stripping is performed. No user string reaches the Claude API without passing through it.
 
 #### Credential Leaks / Hardcoded Secrets
 
