@@ -1,56 +1,77 @@
-import { describe, it, expect } from 'vitest';
-import { getChargesByJurisdiction, getInstructionRef, getInstructionUrl } from '../shared/criminal-charges';
+import { describe, it, expect, beforeAll } from 'vitest';
 
-function buildApiShape(jurisdiction: string) {
-  return getChargesByJurisdiction(jurisdiction).map(charge => {
-    const instructionRef = getInstructionRef(charge);
-    const instructionUrl = getInstructionUrl(charge);
-    return {
-      id: charge.id,
-      code: charge.code,
-      name: charge.name,
-      category: charge.category,
-      ...(instructionRef ? { instructionRef } : {}),
-      ...(instructionUrl ? { instructionUrl } : {}),
-    };
-  });
+const BASE_URL = 'http://localhost:5000';
+
+interface ChargeApiItem {
+  id: string;
+  code: string;
+  name: string;
+  category: string;
+  instructionRef?: string;
+  instructionUrl?: string;
 }
 
-describe('/api/criminal-charges?jurisdiction=CA — instructionRef/instructionUrl field shape', () => {
-  const caCharges = buildApiShape('CA');
+interface ChargesApiResponse {
+  success: boolean;
+  charges: ChargeApiItem[];
+  count: number;
+  totalAvailable: number;
+}
 
-  it('returns at least one CA charge', () => {
-    expect(caCharges.length).toBeGreaterThan(0);
+let response: ChargesApiResponse;
+
+beforeAll(async () => {
+  const res = await fetch(`${BASE_URL}/api/criminal-charges?jurisdiction=CA`);
+  if (!res.ok) {
+    throw new Error(`GET /api/criminal-charges?jurisdiction=CA returned ${res.status}`);
+  }
+  response = (await res.json()) as ChargesApiResponse;
+});
+
+describe('GET /api/criminal-charges?jurisdiction=CA — instructionRef/instructionUrl contract', () => {
+  it('returns success: true and a charges array', () => {
+    expect(response.success).toBe(true);
+    expect(Array.isArray(response.charges)).toBe(true);
+    expect(response.charges.length).toBeGreaterThan(0);
   });
 
-  it('ca-robbery-in-the-first-degree is present in the CA charge list', () => {
-    const robbery = caCharges.find(c => c.id === 'ca-robbery-in-the-first-degree');
-    expect(robbery, 'ca-robbery-in-the-first-degree missing from /api/criminal-charges?jurisdiction=CA').toBeDefined();
+  it('ca-robbery-in-the-first-degree is present in the response', () => {
+    const robbery = response.charges.find(c => c.id === 'ca-robbery-in-the-first-degree');
+    expect(
+      robbery,
+      'ca-robbery-in-the-first-degree missing from /api/criminal-charges?jurisdiction=CA — charge ID may have changed',
+    ).toBeDefined();
   });
 
   it('ca-robbery-in-the-first-degree has instructionRef: "CALCRIM 1600"', () => {
-    const robbery = caCharges.find(c => c.id === 'ca-robbery-in-the-first-degree');
+    const robbery = response.charges.find(c => c.id === 'ca-robbery-in-the-first-degree');
     expect(robbery).toBeDefined();
-    expect((robbery as any).instructionRef).toBe('CALCRIM 1600');
-  });
-
-  it('ca-robbery-in-the-first-degree has a non-null instructionUrl', () => {
-    const robbery = caCharges.find(c => c.id === 'ca-robbery-in-the-first-degree');
-    expect(robbery).toBeDefined();
-    expect((robbery as any).instructionUrl).toBeTruthy();
-  });
-
-  it('at least one CA charge in the API response has both instructionRef and instructionUrl', () => {
-    const withBoth = caCharges.filter(c => (c as any).instructionRef && (c as any).instructionUrl);
     expect(
-      withBoth.length,
-      'No CA charges have both instructionRef and instructionUrl — citation overlay may be disconnected from the charges list',
-    ).toBeGreaterThan(0);
+      robbery!.instructionRef,
+      'instructionRef missing from ca-robbery-in-the-first-degree API response — field may have been renamed or dropped',
+    ).toBe('CALCRIM 1600');
+  });
+
+  it('ca-robbery-in-the-first-degree has a non-empty instructionUrl', () => {
+    const robbery = response.charges.find(c => c.id === 'ca-robbery-in-the-first-degree');
+    expect(robbery).toBeDefined();
+    expect(
+      robbery!.instructionUrl,
+      'instructionUrl missing from ca-robbery-in-the-first-degree API response — field may have been renamed or dropped',
+    ).toBeTruthy();
   });
 
   it('ca-robbery-in-the-first-degree instructionUrl points to courts.ca.gov', () => {
-    const robbery = caCharges.find(c => c.id === 'ca-robbery-in-the-first-degree');
+    const robbery = response.charges.find(c => c.id === 'ca-robbery-in-the-first-degree');
     expect(robbery).toBeDefined();
-    expect((robbery as any).instructionUrl).toMatch(/courts\.ca\.gov/);
+    expect(robbery!.instructionUrl).toMatch(/courts\.ca\.gov/);
+  });
+
+  it('at least one CA charge in the response has both instructionRef and instructionUrl', () => {
+    const withBoth = response.charges.filter(c => c.instructionRef && c.instructionUrl);
+    expect(
+      withBoth.length,
+      'No CA charges have both instructionRef and instructionUrl in the API response — citation overlay may be disconnected',
+    ).toBeGreaterThan(0);
   });
 });
