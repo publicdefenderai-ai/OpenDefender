@@ -2022,7 +2022,7 @@ export default {
         "bullet2Head": "Privacidad por diseño.",
         "bullet2Body": "Sus respuestas se eliminan cuando cierra esta sesión. Nada se almacena en nuestros servidores más de 24 horas.",
         "bullet3Head": "No está protegido por privilegio abogado-cliente.",
-        "bullet3Body": "A diferencia de una conversación con su abogado, esta sesión de IA no está protegida. Nuestro proveedor de IA (Anthropic) puede retener sus mensajes hasta 30 días y podría divulgarlos ante una citación válida.",
+        "bullet3Body": "Esta orientación es generada por un servicio de IA (Anthropic). No se establece ninguna relación abogado-cliente. Sus entradas — estado, tipo de cargo, etapa del caso y cualquier inquietud que seleccione — pueden ser procesadas por Anthropic y retenidas hasta 30 días por razones de seguridad y operativas.",
         "validationLink": "Conozca cómo verificamos las respuestas de IA →",
         "checkboxLabel": "Entiendo y quiero continuar",
         "continueButton": "Continuar"

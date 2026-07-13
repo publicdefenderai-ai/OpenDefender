@@ -2006,7 +2006,7 @@ export default {
       "title": "了解您的案件路线图",
       "cancel": "取消",
       "stepProgress": "第{{current}}步，共{{total}}步：{{title}}",
-      "privacyNotice": "你的回答不会被保存，会在你关闭会话时删除",
+      "privacyNotice": "您的会话数据已加密，并在24小时内自动删除。AI处理由Anthropic负责，Anthropic可能出于安全和运营目的保留会话数据最多30天。",
       "steps": {
         "consent": "隐私与同意",
         "jurisdiction": "你的州",
@@ -2022,7 +2022,7 @@ export default {
         "bullet2Head": "隐私优先设计。",
         "bullet2Body": "您的回答在关闭会话时即被删除，服务器保留不超过24小时。",
         "bullet3Head": "不受律师-委托人特权保护。",
-        "bullet3Body": "与您的律师对话不同，本AI会话不受保护。我们的AI提供商（Anthropic）可能保留您的输入最多30天，若收到有效传票，可能予以披露。",
+        "bullet3Body": "本指导由AI服务（Anthropic）生成，不构成律师-委托人关系。您的输入——所在州、指控类型、案件阶段及您选择的任何担忧——可能由Anthropic处理，并出于安全和运营目的保留最多30天。",
         "validationLink": "了解我们如何验证AI回答 →",
         "checkboxLabel": "我已理解并想继续",
         "continueButton": "继续"
