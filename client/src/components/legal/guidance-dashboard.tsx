@@ -705,9 +705,9 @@ function YourChargesSection({
                 instructionRef={charge.instructionRef}
                 instructionUrl={charge.instructionUrl}
                 instructionPaywall={charge.instructionPaywall}
-                label={t('legalGuidance.qaFlow.caseDetails.juryInstruction', 'Jury Instruction')}
-                tooltipText={t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip', 'These are the exact legal standards a jury must follow when deciding your case. They spell out what the prosecution must prove for each charge.')}
-                tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel', 'What is a jury instruction?')}
+                label={t('legalGuidance.qaFlow.caseDetails.juryInstruction')}
+                tooltipText={t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip')}
+                tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel')}
               />
             )}
 
