@@ -413,6 +413,37 @@ function buildSearchMock(results: object[]) {
 
 test.describe("Jury instruction badge — embeddable search widget (/embed/search)", () => {
   /**
+   * Non-mocked end-to-end: uses the real /api/v1/search endpoint.
+   * Guards the full pipeline: search indexer → routes-v1.ts → widget rendering.
+   * "robbery" reliably returns IL robbery (IPI-CR 14.01, illinoiscourts.gov link)
+   * as a top charge result with both instructionRef and instructionUrl populated.
+   */
+  test("renders a pill badge from real search results (no mock) — end-to-end pipeline", async ({
+    page,
+  }) => {
+    await page.goto("http://localhost:5000/embed/search");
+
+    const searchInput = page.locator('input[type="text"]');
+    await searchInput.waitFor({ state: "visible" });
+    await searchInput.fill("robbery");
+
+    // Wait for at least one instruction badge to appear in real results.
+    // The widget has a 300 ms debounce; allow up to 15 s for the real API call.
+    const firstBadge = page
+      .locator('[data-testid^="link-instruction-widget-"]')
+      .first();
+    await firstBadge.waitFor({ state: "visible", timeout: 15000 });
+
+    // The badge must have non-empty text and a valid href
+    const badgeText = await firstBadge.textContent();
+    expect(badgeText?.trim().length).toBeGreaterThan(0);
+    const badgeHref = await firstBadge.getAttribute("href");
+    expect(badgeHref).toBeTruthy();
+    expect(badgeHref).toMatch(/^https?:\/\//);
+    await expect(firstBadge).toHaveAttribute("target", "_blank");
+  });
+
+  /**
    * Positive: mock returns a charge result that has instructionRef + instructionUrl.
    * The blue pill badge must render with the ref text and correct href.
    */

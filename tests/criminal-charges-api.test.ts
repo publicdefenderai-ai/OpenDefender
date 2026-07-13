@@ -75,3 +75,88 @@ describe('GET /api/criminal-charges?jurisdiction=CA — instructionRef/instructi
     ).toBeGreaterThan(0);
   });
 });
+
+// ─── /api/v1/search contract ─────────────────────────────────────────────────
+// Guards the full pipeline: search indexer → routes-v1.ts serialization.
+// If either layer silently drops instructionRef/instructionUrl from charge
+// documents, the embeddable widget will render results with no badge and
+// integrators will have no way to know something broke.
+
+interface V1SearchResult {
+  document: {
+    id: string;
+    type: string;
+    title: string;
+    url: string;
+    instructionRef?: string;
+    instructionUrl?: string;
+  };
+  score: number;
+  highlights: { field: string; snippet: string }[];
+}
+
+interface V1SearchResponse {
+  success: boolean;
+  results: V1SearchResult[];
+  meta: { totalResults: number; queryTime: number; suggestions: string[] };
+}
+
+let v1Response: V1SearchResponse;
+
+beforeAll(async () => {
+  const res = await fetch(
+    `${BASE_URL}/api/v1/search?q=robbery&types=charge&limit=20`,
+  );
+  if (!res.ok) {
+    throw new Error(`GET /api/v1/search?q=robbery&types=charge returned ${res.status}`);
+  }
+  v1Response = (await res.json()) as V1SearchResponse;
+}, 15000);
+
+describe('GET /api/v1/search?q=robbery&types=charge — instructionRef/instructionUrl contract', () => {
+  it('returns success: true and a results array with at least one charge', () => {
+    expect(v1Response.success).toBe(true);
+    expect(Array.isArray(v1Response.results)).toBe(true);
+    expect(v1Response.results.length).toBeGreaterThan(0);
+    const chargeResults = v1Response.results.filter(r => r.document.type === 'charge');
+    expect(
+      chargeResults.length,
+      'No results of type "charge" returned — types filter may be broken',
+    ).toBeGreaterThan(0);
+  });
+
+  it('at least one charge result has both instructionRef and instructionUrl', () => {
+    const withBoth = v1Response.results.filter(
+      r => r.document.instructionRef && r.document.instructionUrl,
+    );
+    expect(
+      withBoth.length,
+      'No charge in /api/v1/search results has both instructionRef and instructionUrl — search indexer or serialization may have dropped these fields',
+    ).toBeGreaterThan(0);
+  });
+
+  it('charge-il-robbery-in-the-second-degree is present with instructionRef "IPI-CR 14.01"', () => {
+    const ilRobbery = v1Response.results.find(
+      r => r.document.id === 'charge-il-robbery-in-the-second-degree',
+    );
+    expect(
+      ilRobbery,
+      'charge-il-robbery-in-the-second-degree missing from /api/v1/search?q=robbery results — charge ID or search scoring may have changed',
+    ).toBeDefined();
+    expect(
+      ilRobbery!.document.instructionRef,
+      'instructionRef missing from IL robbery result — field dropped by search indexer or v1 serialization',
+    ).toBe('IPI-CR 14.01');
+  });
+
+  it('charge-il-robbery-in-the-second-degree instructionUrl points to illinoiscourts.gov', () => {
+    const ilRobbery = v1Response.results.find(
+      r => r.document.id === 'charge-il-robbery-in-the-second-degree',
+    );
+    expect(ilRobbery).toBeDefined();
+    expect(
+      ilRobbery!.document.instructionUrl,
+      'instructionUrl missing from IL robbery v1 search result',
+    ).toMatch(/illinoiscourts\.gov/);
+  });
+});
