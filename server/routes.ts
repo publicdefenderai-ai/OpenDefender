@@ -1262,7 +1262,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         .map((id: string) => {
           const charge = getChargeById(id);
           if (!charge) return null;
-          return { name: charge.name, classification: charge.category, code: charge.code, title: charge.name, maxPenalty: charge.maxPenalty };
+          return { id: charge.id, name: charge.name, classification: charge.category, code: charge.code, title: charge.name, maxPenalty: charge.maxPenalty };
         })
         .filter(Boolean);
 

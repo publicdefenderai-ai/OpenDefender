@@ -170,3 +170,216 @@ test.describe("Jury instruction display — QA flow Case Details step", () => {
     await expect(instructionLinks).toHaveCount(0);
   });
 });
+
+/**
+ * Helpers shared by the guidance-dashboard describe block below.
+ */
+
+/**
+ * Register a Playwright route intercept that returns a minimal valid SSE
+ * completion event so tests never hit the real AI endpoint.
+ *
+ * The guidance dashboard looks up each charge by `code` in the criminalCharges
+ * array to find its `instructionRef`. Passing a real FL robbery code produces
+ * a badge; passing an unknown code (no DB entry) leaves `instructionRef`
+ * undefined and the badge must be absent.
+ */
+async function mockGuidanceStream(
+  page: any,
+  chargeClassifications: Array<{ id?: string; code: string; name: string; classification: string }>
+) {
+  const guidance = {
+    overview: "Test overview for guidance dashboard jury instruction test.",
+    criticalAlerts: [],
+    immediateActions: [],
+    nextSteps: [],
+    deadlines: [],
+    rights: [],
+    resources: [],
+    warnings: [],
+    evidenceToGather: [],
+    courtPreparation: [],
+    avoidActions: [],
+    timeline: [],
+    chargeClassifications,
+  };
+  const event = {
+    type: "complete",
+    success: true,
+    sessionId: "test-session-jury-dashboard",
+    guidance,
+  };
+  const body = `data: ${JSON.stringify(event)}\n\n`;
+
+  await page.route("**/api/legal-guidance/stream", async (route: any) => {
+    await route.fulfill({
+      status: 200,
+      headers: {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        Connection: "keep-alive",
+      },
+      body,
+    });
+  });
+}
+
+/** Fill and advance past the Status step (case stage + custody + attorney). */
+async function completeStatusStep(page: any) {
+  const caseStageSelect = page.getByTestId("select-case-stage");
+  await caseStageSelect.waitFor({ state: "visible" });
+  await caseStageSelect.click();
+  await page
+    .locator('[role="option"]')
+    .filter({ hasText: "Just arrested" })
+    .first()
+    .click();
+
+  const custodySelect = page.getByTestId("select-custody-status");
+  await custodySelect.waitFor({ state: "visible" });
+  await custodySelect.click();
+  await page
+    .locator('[role="option"]')
+    .filter({ hasText: "Released on bail" })
+    .first()
+    .click();
+
+  const attorneySelect = page.getByTestId("select-has-attorney");
+  await attorneySelect.waitFor({ state: "visible" });
+  await attorneySelect.click();
+  await page
+    .locator('[role="option"]')
+    .filter({ hasText: /^No$/ })
+    .first()
+    .click();
+
+  await page.getByTestId("button-continue-status").click();
+}
+
+/** Advance past the Background step (all fields optional — just click Continue). */
+async function completeBackgroundStep(page: any) {
+  const continueBtn = page.getByTestId("button-continue-background");
+  await continueBtn.waitFor({ state: "visible" });
+  await continueBtn.click();
+}
+
+/**
+ * Submit the Additional Details step with no concerns selected.
+ * The submit button text is "Get My Case Support" (from i18n additionalDetails.submit).
+ */
+async function submitAdditionalDetailsStep(page: any) {
+  const submitBtn = page.getByRole("button", { name: /Get My Case Support/i });
+  await submitBtn.waitFor({ state: "visible" });
+  await submitBtn.click();
+}
+
+test.describe("Jury instruction badge — guidance dashboard", () => {
+  /**
+   * Positive: FL robbery has instructionRef "FSJI 15.1" in criminal-charge-citations.ts.
+   * After a full QA flow (stream mocked), the guidance dashboard must render:
+   *   data-testid="link-instruction-dashboard-fl-robbery-in-the-first-degree"
+   * pointing to the Florida Bar PDF.
+   */
+  test("renders badge with link for FL robbery in the guidance dashboard", async ({
+    page,
+  }) => {
+    await mockGuidanceStream(page, [
+      {
+        id: "fl-robbery-in-the-first-degree",
+        code: "812.13",
+        name: "Robbery in the First Degree",
+        classification: "felony",
+      },
+    ]);
+
+    await openQAFlow(page);
+    await completeConsentStep(page);
+    await selectJurisdiction(page, "Florida");
+
+    // Case Details: search for and select FL robbery
+    const searchInput = page.locator("#charge-search");
+    await searchInput.waitFor({ state: "visible" });
+    await searchInput.fill("robbery in the first degree");
+    await clickChargeRow(page, "fl-robbery-in-the-first-degree");
+    await page.getByTestId("button-next-case-details").click();
+
+    await completeStatusStep(page);
+    await completeBackgroundStep(page);
+    await submitAdditionalDetailsStep(page);
+
+    // Wait for the guidance dashboard to appear
+    const closeDashboardBtn = page.getByTestId("button-close-dashboard");
+    await closeDashboardBtn.waitFor({ state: "visible", timeout: 30000 });
+
+    // The jury instruction badge must be present in the dashboard
+    const badgeLink = page.getByTestId(
+      "link-instruction-dashboard-fl-robbery-in-the-first-degree"
+    );
+    await expect(badgeLink).toBeVisible();
+    await expect(badgeLink).toHaveText("FSJI 15.1");
+    await expect(badgeLink).toHaveAttribute(
+      "href",
+      "https://www-media.floridabar.org/uploads/2023/07/15.1.docx"
+    );
+    await expect(badgeLink).toHaveAttribute("target", "_blank");
+  });
+
+  /**
+   * Negative: a charge code that does not exist in criminalCharges results in
+   * dbCharge = undefined, so instructionRef stays undefined and the badge must
+   * not appear anywhere in the guidance dashboard.
+   */
+  test("does NOT render a badge in the guidance dashboard for a charge with no instructionRef", async ({
+    page,
+  }) => {
+    // "test-unknown-charge-no-instruction" is intentionally absent from
+    // criminalCharges, so the dashboard's dbCharge lookup returns undefined
+    // and instructionRef is undefined → badge conditional is false.
+    await mockGuidanceStream(page, [
+      {
+        code: "test-unknown-charge-no-instruction",
+        name: "Test Misdemeanor Charge",
+        classification: "misdemeanor",
+      },
+    ]);
+
+    await openQAFlow(page);
+    await completeConsentStep(page);
+    // Use Puerto Rico — a jurisdiction with no instructionRef entries — so the
+    // selected charge also carries no badge in the Case Details step.
+    await selectJurisdiction(page, "Puerto Rico");
+
+    // Select any available PR charge and advance past Case Details
+    const searchInput = page.locator("#charge-search");
+    await searchInput.waitFor({ state: "visible" });
+    await searchInput.fill("accessory after the fact");
+    const firstCheckbox = page
+      .locator('[data-testid^="checkbox-charge-"]')
+      .first();
+    await firstCheckbox.waitFor({ state: "visible", timeout: 15000 });
+    const chargeAttr = await firstCheckbox.getAttribute("data-testid");
+    const chargeId = chargeAttr!.replace("checkbox-charge-", "");
+    await clickChargeRow(page, chargeId);
+    await page.getByTestId("button-next-case-details").click();
+
+    await completeStatusStep(page);
+    await completeBackgroundStep(page);
+    await submitAdditionalDetailsStep(page);
+
+    // Wait for the guidance dashboard to appear
+    const closeDashboardBtn = page.getByTestId("button-close-dashboard");
+    await closeDashboardBtn.waitFor({ state: "visible", timeout: 30000 });
+
+    // The "Understanding Your Charges" card must render (the mock charge shows up)
+    const chargeSection = page
+      .locator('[data-testid^="charge-explanation-"]')
+      .first();
+    await expect(chargeSection).toBeVisible();
+
+    // No dashboard jury instruction badge must be present
+    const dashboardBadges = page.locator(
+      '[data-testid^="link-instruction-dashboard-"]'
+    );
+    await expect(dashboardBadges).toHaveCount(0);
+  });
+});

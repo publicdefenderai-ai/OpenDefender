@@ -129,6 +129,7 @@ interface EnhancedGuidanceData {
     completed: boolean;
   }>;
   chargeClassifications?: Array<{
+    id?: string;
     name: string;
     classification: string;
     code: string;
@@ -596,9 +597,14 @@ function YourChargesSection({
   // statuteCitations — required for the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
     const explanation = getChargeExplanation(classification.name);
-    const dbCharge = criminalCharges.find(c => c.code === classification.code);
+    // Prefer lookup by unique charge ID (when the backend includes it); fall back
+    // to statute code for backwards-compatibility with older stored guidance records.
+    const dbCharge = classification.id
+      ? criminalCharges.find(c => c.id === classification.id)
+      : criminalCharges.find(c => c.code === classification.code);
     return {
       name: formatChargeName(classification.name),
+      id: classification.id,
       code: classification.code,
       classification: classification.classification,
       explanation,
@@ -705,6 +711,8 @@ function YourChargesSection({
                 instructionRef={charge.instructionRef}
                 instructionUrl={charge.instructionUrl}
                 instructionPaywall={charge.instructionPaywall}
+                chargeId={charge.id ?? charge.code}
+                dataTestIdPrefix="link-instruction-dashboard"
                 label={t('legalGuidance.qaFlow.caseDetails.juryInstruction')}
                 tooltipText={t('legalGuidance.qaFlow.caseDetails.juryInstructionTooltip')}
                 tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel')}
