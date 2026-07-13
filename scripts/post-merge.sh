@@ -4,6 +4,17 @@ npm install
 npm run db:push
 npx vitest run tests/
 
+# Remove stale subrepl-* remotes left behind by task agent environments.
+# Each task agent adds a subrepl-* remote to .git/config and never cleans it up;
+# this prevents them from accumulating and breaking the git sync tab.
+STALE_REMOTES=$(git remote | grep '^subrepl-' || true)
+if [ -n "$STALE_REMOTES" ]; then
+  echo "$STALE_REMOTES" | xargs -I{} git remote remove {}
+  echo "[post-merge] Removed stale subrepl-* remotes: $(echo "$STALE_REMOTES" | tr '\n' ' ')"
+else
+  echo "[post-merge] No stale subrepl-* remotes found."
+fi
+
 # Re-apply GitHub remote URL with PAT after every task-agent merge.
 # Replit's merge process resets the remote to the plain HTTPS URL, stripping
 # the token. This ensures git push always works without manual intervention.
