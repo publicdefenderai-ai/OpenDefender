@@ -93,6 +93,21 @@ Task #175 (Vite major version upgrade) has not yet merged — vite is still at 5
 
 **Status:** All vite High/Moderate CVEs remain deferred pending Task #175 (Vite upgrade). Compensating control unchanged — Vite runs in the dev/build toolchain only and is not in the production request path. The `GHSA-fx2h-pf6j-xcff` CVE is only exploitable against a running Vite dev server exposed to untrusted networks; production serves pre-built static assets via Express.
 
+### Fourth scan — July 13, 2026 (Task #182)
+
+Task #175 (Vite major version upgrade) has merged. Main workspace is now on vite@6.4.3; vitest's transitive vite is 8.0.16. Both are past the fixed thresholds for `GHSA-fx2h-pf6j-xcff` / `CVE-2026-53571`.
+
+One residual High finding was identified in the initial post-upgrade scan: `CVE-2026-53571` (`GHSA-fx2h-pf6j-xcff`) on `vite@7.3.2` in `artifacts/mockup-sandbox/` (a direct dev dep — not the main app). Fixed inline: bumped `artifacts/mockup-sandbox/package.json` and `package-lock.json` to vite@7.3.5. Re-scan confirmed 0 vulnerabilities.
+
+| Severity | Count | Notes |
+|---|---|---|
+| Critical | 0 | None |
+| High | 0 | All vite CVEs cleared — main app on vite@6.4.3, mockup-sandbox patched to vite@7.3.5, vitest transitive on vite@8.0.16 |
+| Moderate | 0 | Previous esbuild and @opentelemetry/core moderate CVEs also resolved by the upgrade dependency tree |
+| Low | 0 | Previous esbuild and @babel/core low CVEs also resolved |
+
+**Status: CLEAN.** No outstanding dep audit findings.
+
 ---
 
 ## Security Scanner Status
