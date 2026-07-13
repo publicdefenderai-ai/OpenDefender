@@ -350,7 +350,7 @@ export default {
     "viewOnX": "在 X 上关注",
     "privacyNotice": "隐私优先：我们不存储你的个人数据。所有输入在会话结束后删除。",
     "copyright": "© 2026 OpenDefender。不能替代专业法律建议。",
-    "legalDisclaimer": "仅为一般法律信息——不能替代专业法律建议。请就您的具体情况咨询合格律师。"
+    "legalDisclaimer": "仅为一般性法律信息——不能替代专业法律建议。如有疑问，请就您的具体情况咨询合格律师。"
   },
   "directory": {
     "hero": {
@@ -3258,7 +3258,7 @@ export default {
       "items": {
         "security": "我们不对 RECAP 扩展的安全性、功能或隐私做法负责",
         "risk": "安装和使用这些扩展的风险由您自行承担",
-        "availability": "我们不保证这些第三方工具的可用性或性能",
+        "availability": "我们不保证这些第三方工具的正常可用性或运行性能",
         "review": "请在安装前查阅 Free Law Project 的服务条款和隐私政策"
       },
       "acknowledge": "点击以下链接即表示您确认正在离开我们的网站并访问第三方服务。"
@@ -4159,7 +4159,7 @@ export default {
     },
     "disclaimer": {
       "title": "法律免责声明：",
-      "text": "此信息仅供教育目的，不构成法律建议。每种情况都不同。请咨询合格律师，获取针对您亲人案件的具体指导。"
+      "text": "此信息仅供教育目的，不构成法律建议。每种情况各有不同。请咨询合格律师，获取针对您亲人案件的具体专业指导。"
     },
     "orientation": {
       "heading": "本网站现在能为您做什么",

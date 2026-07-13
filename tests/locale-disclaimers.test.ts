@@ -22,7 +22,7 @@ function flattenLocale(obj: LocaleNode, prefix = ''): Record<string, string> {
 const DISCLAIMER_PATTERN =
   /disclaimer|privacyNotice|consent\.bullet|notLegalAdvice|legalNotice/i;
 
-const MIN_RATIO = 0.20;
+const MIN_RATIO = 0.25;
 const MIN_EN_LENGTH = 60;
 
 const enFlat = flattenLocale(en as unknown as LocaleNode);
