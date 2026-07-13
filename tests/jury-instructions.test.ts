@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { getInstructionRef, getInstructionUrl } from '../shared/criminal-charges';
 import type { CriminalCharge } from '../shared/criminal-charges';
+import { CHARGE_CITATIONS } from '../shared/criminal-charge-citations';
 
 function makeCharge(
   id: string,
@@ -193,5 +194,47 @@ describe('CO — COLJI ref only, no public .gov per-section URL', () => {
   it('returns null URL for co-trespassing', () => {
     const charge = makeCharge('co-trespassing', 'CO');
     expect(getInstructionUrl(charge)).toBeNull();
+  });
+});
+
+describe('CA CALCRIM coverage — regression guard', () => {
+  /**
+   * Every CA entry in CHARGE_CITATIONS must either have an instructionRef
+   * (a CALCRIM number) or carry a "no CALCRIM" marker in its source field
+   * (used for infractions, juvenile WIC proceedings, bench-only matters, etc.).
+   *
+   * If this test fails, a new CA charge was added without one of those two
+   * forms of coverage. Add the CALCRIM ref, or add "no CALCRIM (<reason>)"
+   * to the source field, then re-run.
+   */
+  it('has zero CA entries missing both instructionRef and a "no CALCRIM" source note', () => {
+    const caEntries = Object.entries(CHARGE_CITATIONS).filter(([key]) =>
+      key.startsWith('ca-'),
+    );
+
+    const missing = caEntries
+      .filter(([, record]) => {
+        const hasRef = Boolean(record.instructionRef);
+        const hasExemption = Boolean(record.source?.includes('no CALCRIM'));
+        return !hasRef && !hasExemption;
+      })
+      .map(([key]) => key);
+
+    expect(missing).toEqual([]);
+  });
+
+  it('finds at least one CA entry with an instructionRef (sanity check)', () => {
+    const hasAny = Object.entries(CHARGE_CITATIONS).some(
+      ([key, record]) => key.startsWith('ca-') && Boolean(record.instructionRef),
+    );
+    expect(hasAny).toBe(true);
+  });
+
+  it('finds at least one CA entry with a "no CALCRIM" exemption (sanity check)', () => {
+    const hasAny = Object.entries(CHARGE_CITATIONS).some(
+      ([key, record]) =>
+        key.startsWith('ca-') && Boolean(record.source?.includes('no CALCRIM')),
+    );
+    expect(hasAny).toBe(true);
   });
 });
