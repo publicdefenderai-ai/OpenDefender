@@ -197,6 +197,102 @@ describe('CO — COLJI ref only, no public .gov per-section URL', () => {
   });
 });
 
+/**
+ * FL / TX / NY coverage guards
+ *
+ * These use a floor-count + pin approach rather than the strict CA "zero entries
+ * missing both ref AND exemption note" pattern.
+ *
+ * Why: FL has 81, TX has 83, and NY has 82 citation entries that lack an
+ * instructionRef but also have no "no FSJI/TPJC/CJI2d" exemption note — they
+ * are charges whose jury instruction coverage simply hasn't been annotated yet
+ * (drug offenses, traffic offenses, etc.). Adding 246 exemption notes is out of
+ * scope here. The guards below catch the regressions that matter most:
+ *   1. Existing refs are not silently deleted (floor count)
+ *   2. Specific high-value charges don't lose their pinned refs
+ */
+
+describe('FL FSJI coverage — regression guard', () => {
+  const flEntries = Object.entries(CHARGE_CITATIONS).filter(([key]) =>
+    key.startsWith('fl-'),
+  );
+  const flWithRef = flEntries.filter(([, record]) => Boolean(record.instructionRef));
+
+  it('finds at least one FL entry with an instructionRef (sanity check)', () => {
+    expect(flWithRef.length).toBeGreaterThan(0);
+  });
+
+  it('has at least 44 FL entries with an instructionRef (floor guard — do not delete existing refs)', () => {
+    expect(flWithRef.length).toBeGreaterThanOrEqual(44);
+  });
+
+  it('fl-robbery-in-the-first-degree keeps instructionRef "FSJI 15.1"', () => {
+    expect(CHARGE_CITATIONS['fl-robbery-in-the-first-degree']?.instructionRef).toBe(
+      'FSJI 15.1',
+    );
+  });
+
+  it('fl-murder-in-the-first-degree keeps instructionRef "FSJI 7.2"', () => {
+    expect(CHARGE_CITATIONS['fl-murder-in-the-first-degree']?.instructionRef).toBe(
+      'FSJI 7.2',
+    );
+  });
+});
+
+describe('TX TPJC coverage — regression guard', () => {
+  const txEntries = Object.entries(CHARGE_CITATIONS).filter(([key]) =>
+    key.startsWith('tx-'),
+  );
+  const txWithRef = txEntries.filter(([, record]) => Boolean(record.instructionRef));
+
+  it('finds at least one TX entry with an instructionRef (sanity check)', () => {
+    expect(txWithRef.length).toBeGreaterThan(0);
+  });
+
+  it('has at least 40 TX entries with an instructionRef (floor guard — do not delete existing refs)', () => {
+    expect(txWithRef.length).toBeGreaterThanOrEqual(40);
+  });
+
+  it('tx-robbery-in-the-first-degree keeps instructionRef "TPJC 29.03"', () => {
+    expect(CHARGE_CITATIONS['tx-robbery-in-the-first-degree']?.instructionRef).toBe(
+      'TPJC 29.03',
+    );
+  });
+
+  it('tx-murder-in-the-first-degree keeps instructionRef "TPJC 19.03"', () => {
+    expect(CHARGE_CITATIONS['tx-murder-in-the-first-degree']?.instructionRef).toBe(
+      'TPJC 19.03',
+    );
+  });
+});
+
+describe('NY CJI2d coverage — regression guard', () => {
+  const nyEntries = Object.entries(CHARGE_CITATIONS).filter(([key]) =>
+    key.startsWith('ny-'),
+  );
+  const nyWithRef = nyEntries.filter(([, record]) => Boolean(record.instructionRef));
+
+  it('finds at least one NY entry with an instructionRef (sanity check)', () => {
+    expect(nyWithRef.length).toBeGreaterThan(0);
+  });
+
+  it('has at least 45 NY entries with an instructionRef (floor guard — do not delete existing refs)', () => {
+    expect(nyWithRef.length).toBeGreaterThanOrEqual(45);
+  });
+
+  it('ny-robbery-in-the-first-degree keeps instructionRef "CJI2d PL 160.15"', () => {
+    expect(CHARGE_CITATIONS['ny-robbery-in-the-first-degree']?.instructionRef).toBe(
+      'CJI2d PL 160.15',
+    );
+  });
+
+  it('ny-murder-in-the-first-degree keeps instructionRef "CJI2d PL 125.27"', () => {
+    expect(CHARGE_CITATIONS['ny-murder-in-the-first-degree']?.instructionRef).toBe(
+      'CJI2d PL 125.27',
+    );
+  });
+});
+
 describe('CA CALCRIM coverage — regression guard', () => {
   /**
    * Every CA entry in CHARGE_CITATIONS must either have an instructionRef
