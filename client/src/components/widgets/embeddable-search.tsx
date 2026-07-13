@@ -146,6 +146,8 @@ export function EmbeddableSearch({
                     <JuryInstructionBadge
                       instructionRef={result.document.instructionRef}
                       instructionUrl={result.document.instructionUrl}
+                      chargeId={result.document.id}
+                      dataTestIdPrefix="link-instruction-widget"
                       onLinkClick={(e) => e.stopPropagation()}
                       variant="pill"
                     />

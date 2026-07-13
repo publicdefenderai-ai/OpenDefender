@@ -383,3 +383,122 @@ test.describe("Jury instruction badge — guidance dashboard", () => {
     await expect(dashboardBadges).toHaveCount(0);
   });
 });
+
+/**
+ * Embeddable widget tests — /embed/search
+ *
+ * The widget queries /api/v1/search and renders a JuryInstructionBadge (pill
+ * variant) whenever a result has type "charge" AND instructionRef is present.
+ *
+ * testid pattern: link-instruction-widget-<document.id>
+ * Document ids from the search indexer are prefixed with "charge-", e.g.
+ *   charge-fl-robbery-in-the-first-degree
+ *
+ * Both tests mock /api/v1/search so they are hermetic and never hit the real
+ * search indexer. The mock response mimics the exact shape returned by routes-v1.ts.
+ */
+
+const FL_ROBBERY_MOCK_ID = "charge-fl-robbery-in-the-first-degree";
+const FL_ROBBERY_INSTRUCTION_REF = "FSJI 15.1";
+const FL_ROBBERY_INSTRUCTION_URL =
+  "https://www-media.floridabar.org/uploads/2023/07/15.1.docx";
+
+function buildSearchMock(results: object[]) {
+  return {
+    success: true,
+    results,
+    meta: { totalResults: results.length, queryTime: 1, suggestions: [] },
+  };
+}
+
+test.describe("Jury instruction badge — embeddable search widget (/embed/search)", () => {
+  /**
+   * Positive: mock returns a charge result that has instructionRef + instructionUrl.
+   * The blue pill badge must render with the ref text and correct href.
+   */
+  test("renders pill badge with link for a charge that has an instructionRef", async ({
+    page,
+  }) => {
+    const mockResult = {
+      document: {
+        id: FL_ROBBERY_MOCK_ID,
+        type: "charge",
+        title: "Robbery in the First Degree",
+        url: "/case-guidance?charge=Robbery+in+the+First+Degree",
+        instructionRef: FL_ROBBERY_INSTRUCTION_REF,
+        instructionUrl: FL_ROBBERY_INSTRUCTION_URL,
+      },
+      score: 95,
+      highlights: [{ field: "title", snippet: "Robbery in the First Degree" }],
+    };
+
+    await page.route("**/api/v1/search**", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify(buildSearchMock([mockResult])),
+      });
+    });
+
+    await page.goto("http://localhost:5000/embed/search");
+
+    const searchInput = page.locator('input[type="text"]');
+    await searchInput.waitFor({ state: "visible" });
+    await searchInput.fill("robbery");
+
+    // Wait for the mocked result to render
+    const resultTitle = page.locator("text=Robbery in the First Degree").first();
+    await resultTitle.waitFor({ state: "visible", timeout: 10000 });
+
+    // The pill badge link must be visible with the correct ref text
+    const badgeLink = page.getByTestId(
+      `link-instruction-widget-${FL_ROBBERY_MOCK_ID}`
+    );
+    await expect(badgeLink).toBeVisible();
+    await expect(badgeLink).toHaveText(FL_ROBBERY_INSTRUCTION_REF);
+    await expect(badgeLink).toHaveAttribute("href", FL_ROBBERY_INSTRUCTION_URL);
+    await expect(badgeLink).toHaveAttribute("target", "_blank");
+  });
+
+  /**
+   * Negative: mock returns a charge result WITHOUT instructionRef.
+   * No pill badge must appear.
+   */
+  test("does NOT render a pill badge for a charge with no instructionRef", async ({
+    page,
+  }) => {
+    const mockResult = {
+      document: {
+        id: "charge-pr-accessory-after-the-fact",
+        type: "charge",
+        title: "Accessory After the Fact",
+        url: "/case-guidance?charge=Accessory+After+the+Fact",
+        // intentionally omitting instructionRef and instructionUrl
+      },
+      score: 70,
+      highlights: [{ field: "title", snippet: "Accessory After the Fact" }],
+    };
+
+    await page.route("**/api/v1/search**", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify(buildSearchMock([mockResult])),
+      });
+    });
+
+    await page.goto("http://localhost:5000/embed/search");
+
+    const searchInput = page.locator('input[type="text"]');
+    await searchInput.waitFor({ state: "visible" });
+    await searchInput.fill("accessory");
+
+    // Wait for the result to render
+    const resultTitle = page.locator("text=Accessory After the Fact").first();
+    await resultTitle.waitFor({ state: "visible", timeout: 10000 });
+
+    // No widget pill badge link must exist
+    const widgetBadges = page.locator('[data-testid^="link-instruction-widget-"]');
+    await expect(widgetBadges).toHaveCount(0);
+  });
+});
