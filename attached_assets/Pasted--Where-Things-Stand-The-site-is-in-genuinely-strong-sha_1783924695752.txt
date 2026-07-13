@@ -1,0 +1,63 @@
+
+Where Things Stand
+The site is in genuinely strong shape. The core features — AI case guidance, the first-24-hours hub, the immigration section, the support hub, the advocate toolkit, and the public API — are all production-ready. The backend security posture is solid. There are no TODOs scattered through production code. All 29 tests pass. The main risks before launch are in three contained areas: translation gaps, link freshness, and keyboard accessibility.
+
+The Jury Instructions Question — Draw the Line Here
+This is the biggest backlog management decision you need to make. Here's what the data shows:
+32% overall coverage (2,339 out of 7,224 citation entries have a jury instruction reference)
+No state is at zero. Every jurisdiction has at least some coverage.
+The Big 5 states are well covered: CA is at 85%, AR at 54%, MS at 59%, OR at 50%. NY, FL, TX, IL, OH all have solid coverage of violent and property crimes — the charges that matter most to real users.
+The infrastructure is done and tested. The shared JuryInstructionBadge component, the tooltip, the public API widget integration, and the Playwright regression tests are all merged and running.
+My recommendation: stop here. The remaining PROPOSED jury instruction tasks (#87, #145–#156) are diminishing-returns data entry work — more MA charges, more inchoate charges for MS/AR, more URL stability checks. You've achieved "coverage everywhere, not perfect everywhere." The tasks I'd handle as follows:
+Task
+Recommendation
+#87 (remaining MA jury instruction labels)
+Reject — coverage is already present for MA; marginal return
+#145–#156 (more MS/AR data, more link checks, tooltip i18n for jury instructions)
+Reject — the jury instruction chapter is done enough
+#59 (Ohio quarterly monitoring)
+Keep as a post-launch reminder, not a launch blocker
+#66 (Mitigation Builder AI narrative polish)
+Defer post-launch — genuinely useful but not critical
+#86 (DC felon-in-possession confidence level)
+Reject — minor metadata cleanup, not user-facing
+
+
+Priority 1: Accuracy — Must Do Before Launch
+Task #157 — Close i18n translation gaps
+The English locale file (en.ts) is 120 lines longer than the Spanish and Chinese versions. That's ~120 missing keys that silently fall back to English for Spanish- and Chinese-speaking users. Worse, the immigration document checklist has no Chinese support at all — the data structure doesn't even have a zh field. For a site explicitly serving Spanish and Chinese speakers, this is a first-priority fix.
+Task #158 — External link audit
+The diversion programs were last verified April 10, 2026. The support pages collectively have 65 external links to nonprofits, government programs, and crisis hotlines. Three months is a long time for government and nonprofit URLs to move. A broken hotline number for someone in crisis is a serious failure. The diversion programs checker script already exists (scripts/check-diversion-programs.ts) — it just needs to be run, and any dead links fixed.
+Task #162 — Legal disclaimer and privacy policy review
+Before you announce publicly, both the /disclaimers and /privacy-policy pages need a read-through to confirm they accurately reflect the current feature set. The site has grown significantly — the AI narrative, the document summarizer, the public API, the advocate toolkit — and the disclaimers should cover all of it. The effective date needs to be current.
+
+Priority 2: Ease of Use & Accessibility — Should Do Before Launch
+Task #159 — Fix keyboard navigation and aria-labels
+The header navigation dropdowns open on mouse hover but have no keyboard focus handlers. A user navigating by keyboard (or a screen reader) cannot open the main nav menus. This is a fundamental WCAG 2.1 failure. Additionally, several buttons in the immigration section and the charge selector lack aria-label attributes, making them opaque to screen readers. Given that a significant portion of your users may be in crisis, in custody, or using assistive technology, this matters.
+
+Priority 3: Substantive Utility — Nice to Have at Launch
+Task #160 — Mitigation Builder print stylesheet
+This is the one deferred feature worth shipping at launch. Public defenders use the mitigation memo in courtrooms, on paper, in front of judges. Right now the only export is .docx. Adding a clean @media print stylesheet and a "Print / Save as PDF" button costs very little and meaningfully expands the tool's usefulness for its core audience.
+
+Security — One Pre-Launch Scan
+Task #161 — Security scan and session ownership review
+The overall security posture is strong (Helmet, CSRF, rate limiting, PII redaction, sanitizeInput on all Claude calls). Two small items to close: (1) the guidance session retrieval endpoint (GET /api/legal-guidance/:sessionId) relies on UUID unguessability rather than session ownership — worth a lightweight fix; (2) run a formal dependency audit + SAST scan before going public. The admin route at /admin/citation-review should also be confirmed as non-indexed.
+
+What's Already Done and Doesn't Need Attention
+AI case guidance: production-ready, streaming works, dual-mode fallback works, PII redaction in place
+Attorney portal: intentionally de-publicized (all /attorney/* routes redirect to /directory) — this appears deliberate
+Immigration section: comprehensive, emergency cards, facility locator, DACA/TPS/raids toolkit, rapid-response hotlines
+First 24 Hours hub: complete with state-by-state locator, phone call script, juvenile callout, Step 3 expansion
+Collateral consequences screener: 7-question flow, risk prioritization, support page links
+Support hub: 11 sections, resource-page template, mental health, housing, employment, legal aid, reentry — all complete
+Search: fuzzy tolerance, synonym expansion, 6,663 indexed documents — working well
+Advocate toolkit: intake checklist + mitigation builder, client-side only, .docx export — solid
+
+Suggested Launch Order
+Now (reject and stop jury instruction backlog) — Clear the task queue so nothing unexpected merges while you prep for launch
+Week 1 — Tasks #157 (i18n), #158 (link audit), #162 (disclaimers)
+Week 2 — Tasks #159 (accessibility), #161 (security scan)
+Week 3 — Task #160 (print stylesheet), final smoke test, deploy
+Post-launch — Task #59 (Ohio quarterly monitoring), Task #66 (Mitigation Builder AI polish)
+
+The 6 tasks above (#157–#162) are now in your task panel in PROPOSED state. I'd suggest starting #157 and #158 in parallel — they're independent and both high-priority. You can assign any of them to a task agent or switch me to Build mode to tackle them directly. Let me know which items you'd like to start with, and which of the jury instruction PROPOSED tasks (#87, #145–#156) you want to formally reject.
