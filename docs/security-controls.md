@@ -78,16 +78,20 @@ Session-ownership binding is not required for this endpoint.
 
 **Compensating control:** Vite runs in the dev/build toolchain only — it is not in the production request path. The `GHSA-fx2h-pf6j-xcff` CVE (server-side source file disclosure via crafted URL) is only exploitable against a running Vite dev server exposed to untrusted networks. Production deployments serve pre-built static assets via Express, not via the Vite dev server.
 
-### Third scan — July 12, 2026 (Task #180)
+### Third scan — July 13, 2026 (Task #181)
+
+Task #175 (Vite major version upgrade) has not yet merged — vite is still at 5.4.21. The dep audit was re-run with corrected severity parsing (the Task #180 report of "0 High" was incorrect due to a parsing bug where `severity` is a nested object, not a plain string).
+
+**Accurate current findings (vite@5.4.21 still installed):**
 
 | Severity | Count | Notes |
 |---|---|---|
 | Critical | 0 | None |
-| High | 0 | The vite CVEs from the second scan are no longer reported — lockfile has been updated |
-| Moderate | 0 | None |
-| Low | 0 | None |
+| High | 2 | `GHSA-fx2h-pf6j-xcff` on `vite@5.4.21` (direct dep) and `vite@7.3.2` (transitive dep) |
+| Moderate | 6 | `vite@5.4.21` (2 additional CVEs: GHSA-4w7w-66w2-5vf9, GHSA-v6wh-96g9-6wx3), `vite@7.3.2` (GHSA-v6wh-96g9-6wx3), esbuild 0.18.20 and 0.21.5 (GHSA-67mh-4wv8-2f99), `@opentelemetry/core@1.30.1` (GHSA-8988-4f7v-96qf) |
+| Low | 3 | `esbuild@0.27.4` and `esbuild@0.27.7` (GHSA-g7r4-m6w7-qqqr), `@babel/core@7.29.0` (GHSA-4x5r-pxfx-6jf8) |
 
-Dep audit returned a clean result. Task #181 (verify Vite CVEs cleared after Task #175 Vite upgrade) will confirm this holds post-major-version upgrade.
+**Status:** All vite High/Moderate CVEs remain deferred pending Task #175 (Vite upgrade). Compensating control unchanged — Vite runs in the dev/build toolchain only and is not in the production request path. The `GHSA-fx2h-pf6j-xcff` CVE is only exploitable against a running Vite dev server exposed to untrusted networks; production serves pre-built static assets via Express.
 
 ---
 
