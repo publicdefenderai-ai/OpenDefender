@@ -2006,7 +2006,7 @@ export default {
       "title": "Entienda su Hoja de Ruta del Caso",
       "cancel": "Cancelar",
       "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
-      "privacyNotice": "Sus datos están encriptados y se eliminan automáticamente dentro de 24 horas. Sin embargo, los mensajes de IA pueden ser retenidos por nuestro proveedor hasta por 30 días y podrían estar sujetos a procesos legales durante ese tiempo.",
+      "privacyNotice": "Sus datos de sesión están encriptados y se eliminan automáticamente dentro de 24 horas. El procesamiento de IA está a cargo de Anthropic, quien puede retener datos de sesión hasta 30 días por razones de seguridad y operativas.",
       "steps": {
         "consent": "Privacidad y Consentimiento",
         "jurisdiction": "Su Estado",
@@ -2021,7 +2021,7 @@ export default {
         "bullet1Body": "Explicamos sus derechos y qué esperar — no le decimos qué hacer. Para asesoramiento sobre su caso, un defensor público o abogado de ayuda legal es su mejor recurso.",
         "bullet2Head": "Privacidad por diseño.",
         "bullet2Body": "Sus respuestas se eliminan cuando cierra esta sesión. Nada se almacena en nuestros servidores más de 24 horas.",
-        "bullet3Head": "No está protegido por privilegio abogado-cliente.",
+        "bullet3Head": "Procesado por IA, sin privilegio abogado-cliente.",
         "bullet3Body": "Esta orientación es generada por un servicio de IA (Anthropic). No se establece ninguna relación abogado-cliente. Sus entradas — estado, tipo de cargo, etapa del caso y cualquier inquietud que seleccione — pueden ser procesadas por Anthropic y retenidas hasta 30 días por razones de seguridad y operativas.",
         "validationLink": "Conozca cómo verificamos las respuestas de IA →",
         "checkboxLabel": "Entiendo y quiero continuar",
