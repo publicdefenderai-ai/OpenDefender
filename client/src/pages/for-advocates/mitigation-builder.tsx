@@ -819,6 +819,16 @@ export default function MitigationBuilder() {
         </div>
       </section>
 
+      {/* Disclaimer */}
+      <div className="max-w-5xl mx-auto px-4 pt-6">
+        <div className="flex items-start gap-3 rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
+          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed">
+            <span className="font-semibold">For attorney use or use under direct attorney supervision.</span> This tool does not create legal advice, and documents it produces are not automatically privileged. If you are the attorney of record, printed output may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Review any output with supervising counsel before retaining or sharing it.
+          </p>
+        </div>
+      </div>
+
       {/* Main layout */}
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="grid lg:grid-cols-2 gap-8 items-start">

@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
 import { Switch, Route, Redirect, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
@@ -14,7 +14,6 @@ import { AttorneyProvider } from "@/contexts/attorney-context";
 import { ChatLauncher } from "@/components/chat/chat-launcher";
 import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dialog";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
-import { X } from "lucide-react";
 import "./i18n";
 
 const NotFound = lazy(() => import("@/pages/not-found"));
@@ -86,42 +85,6 @@ const Warrants = lazy(() => import("@/pages/warrants"));
 const ForAdvocates = lazy(() => import("@/pages/for-advocates"));
 const MitigationBuilder = lazy(() => import("@/pages/for-advocates/mitigation-builder"));
 const IntakeChecklist = lazy(() => import("@/pages/for-advocates/intake-checklist"));
-
-function BetaBanner() {
-  const [isDismissed, setIsDismissed] = useState(false);
-  const { t } = useTranslation();
-
-  if (isDismissed) {
-    return null;
-  }
-
-  return (
-    <div
-      className="w-full bg-muted/80 border-b border-border py-2.5 px-4 print:hidden"
-      data-testid="beta-banner"
-    >
-      <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3 flex-1 min-w-0">
-          <span className="shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-            {t('beta.label')}
-          </span>
-          <p className="text-sm text-muted-foreground truncate sm:whitespace-normal">
-            <span className="hidden sm:inline">{t('beta.messageFull')}</span>
-            <span className="sm:hidden">{t('beta.messageShort')}</span>
-          </p>
-        </div>
-        <button
-          onClick={() => setIsDismissed(true)}
-          className="shrink-0 p-1 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-          aria-label={t('common.close')}
-          data-testid="beta-banner-dismiss"
-        >
-          <X className="h-4 w-4" />
-        </button>
-      </div>
-    </div>
-  );
-}
 
 function Router() {
   return (
@@ -232,7 +195,6 @@ function App() {
               <TooltipProvider>
                 <Toaster />
                 <SkipNavigation />
-                <BetaBanner />
                 <main id="main-content" tabIndex={-1}>
                   <Suspense fallback={<div className="min-h-screen bg-background" />}>
                     <AnimatePresence mode="wait">
