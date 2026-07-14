@@ -5759,7 +5759,7 @@ export default {
     "noRiskDesc": "Según sus respuestas, ninguno de los sistemas civiles que evaluamos parece estar en riesgo inmediato por este arresto. Esto no cubre todas las posibles consecuencias. Hable con su abogado sobre su situación específica.",
     "whatLabel": "Qué está en riesgo",
     "timelineLabel": "Plazo",
-    "actionLabel": "Actuar ahora",
+    "actionLabel": "Mejores prácticas",
     "disclaimer": "Este resumen es para su uso personal. Consulte a un abogado antes de compartirlo con cualquier persona.",
     "generalInfo": "Solo información general. No es asesoramiento legal.",
     "copyBtn": "Copiar resumen",
@@ -5772,7 +5772,7 @@ export default {
     "printDate": "Generado: {{date}}",
     "printNoRisk": "No se identificaron riesgos activos según sus respuestas.",
     "printTimeline": "Plazo:",
-    "printAction": "Actuar ahora:",
+    "printAction": "Mejores prácticas:",
     "printDisclaimer": "Este resumen es para su uso personal. Consulte a un abogado antes de compartirlo. Esta es solo información general y no constituye asesoramiento legal.",
     "questions": {
       "housing": {
@@ -5810,7 +5810,7 @@ export default {
         "title": "Riesgo de Violación de Supervisión",
         "what": "Un nuevo arresto desencadena automáticamente una violación de la supervisión, sin importar cómo termine este caso. Se puede imponer una retención antes de que usted vea a un juez, y se puede programar una audiencia de revocación separada antes de que su caso penal se resuelva.",
         "clock": "Su oficial de supervisión suele ser notificado dentro de las 24 horas del registro. Se puede imponer una retención antes de cualquier audiencia de fianza.",
-        "action": "Informe a su abogado defensor sobre su situación de supervisión de inmediato. No contacte a su oficial de supervisión sin hablar primero con su abogado.",
+        "action": "Informar a su abogado defensor sobre su situación de supervisión lo antes posible es una prioridad. La mayoría de los abogados aconsejan no contactar al oficial de supervisión antes de hablar primero con el abogado defensor.",
         "linkLabel": "Obtener orientación del caso"
       },
       "immigration": {
@@ -5824,7 +5824,7 @@ export default {
         "title": "Riesgo de Bienestar Infantil y Custodia",
         "what": "Las fuerzas del orden pueden notificar a los Servicios de Protección de Menores en el momento del arresto, especialmente si los niños estaban presentes o usted es el único cuidador. Una investigación abierta de CPS puede afectar los acuerdos de custodia y los derechos parentales antes de cualquier condena.",
         "clock": "CPS puede ser notificado en el momento del arresto. Si los niños se quedan sin cuidado, la colocación de emergencia puede ocurrir el mismo día.",
-        "action": "Organice el cuidado de los niños con un adulto de confianza de inmediato si puede ser detenido. Documente los acuerdos de custodia existentes y contacte a su abogado si CPS se comunica con usted.",
+        "action": "Tener el cuidado de los niños organizado con un adulto de confianza es importante si existe posibilidad de detención. Documentar los acuerdos de custodia existentes y comunicarse con un abogado si CPS hace contacto son pasos generalmente recomendados.",
         "linkLabel": "Apoyo para cuidado infantil"
       },
       "housing": {
@@ -5838,7 +5838,7 @@ export default {
         "title": "Riesgo de Empleo",
         "what": "Los empleadores a voluntad pueden despedir después de un arresto incluso sin condena. Algunos empleos requieren que los empleados reporten los arrestos a recursos humanos dentro de un número determinado de días. Los puestos que requieren autorización de seguridad o trabajo con poblaciones vulnerables enfrentan el mayor riesgo de suspensión.",
         "clock": "No hay un plazo establecido. Un empleador a voluntad puede actuar de inmediato. Revise su contrato de trabajo para conocer los requisitos de notificación.",
-        "action": "Revise su contrato de trabajo y el manual del empleado para conocer las obligaciones de notificación de arrestos. No proporcione información a su empleador antes de consultar a su abogado.",
+        "action": "Revisar su contrato de trabajo y el manual del empleado para conocer las obligaciones de notificación de arrestos es un buen primer paso. La mayoría de los abogados aconsejan no proporcionar información voluntariamente a su empleador antes de consultar con un abogado.",
         "linkLabel": "Apoyo de empleo"
       },
       "benefits": {

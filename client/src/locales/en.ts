@@ -5757,7 +5757,7 @@ export default {
     "noRiskDesc": "Based on your answers, none of the civil systems we screen for appear to be at immediate risk from this arrest. This does not cover every possible consequence. Speak with your attorney about your specific situation.",
     "whatLabel": "What's at risk",
     "timelineLabel": "Timeline",
-    "actionLabel": "Act now",
+    "actionLabel": "Best practices",
     "disclaimer": "This summary is for your own use. Consult an attorney before sharing it with anyone.",
     "generalInfo": "General information only. Not legal advice.",
     "copyBtn": "Copy summary",
@@ -5770,7 +5770,7 @@ export default {
     "printDate": "Generated: {{date}}",
     "printNoRisk": "No active risks identified based on your answers.",
     "printTimeline": "Timeline:",
-    "printAction": "Act now:",
+    "printAction": "Best practices:",
     "printDisclaimer": "This summary is for your own use. Consult an attorney before sharing it with anyone. This is general information only and does not constitute legal advice.",
     "questions": {
       "housing": {
@@ -5808,7 +5808,7 @@ export default {
         "title": "Probation or Parole Violation Risk",
         "what": "A new arrest triggers an automatic supervision violation regardless of how this case ends. A hold may be placed before you see a judge, and a separate revocation hearing can be scheduled before your criminal case is resolved.",
         "clock": "Your supervision officer is typically notified within 24 hours of booking. A hold can be placed before any bail hearing.",
-        "action": "Tell your defense attorney about your supervision status right away. Do not contact your supervision officer without speaking to your attorney first.",
+        "action": "Informing your defense attorney about your supervision status as early as possible is a priority. Most attorneys advise against contacting your supervision officer before speaking with defense counsel first.",
         "linkLabel": "Get case guidance"
       },
       "immigration": {
@@ -5822,7 +5822,7 @@ export default {
         "title": "Child Welfare and Custody Risk",
         "what": "Law enforcement can notify Child Protective Services at the time of arrest, especially if children were present or you are the sole caregiver. An open CPS investigation can affect custody arrangements and parental rights before any conviction.",
         "clock": "CPS can be notified at the time of arrest. If children are left without care, emergency placement can happen the same day.",
-        "action": "Arrange childcare with a trusted adult right away if you may be detained. Document existing custody arrangements and contact your attorney if CPS makes contact.",
+        "action": "Having childcare arranged with a trusted adult is important if detention is possible. Documenting existing custody arrangements and reaching out to an attorney if CPS makes contact are commonly recommended steps.",
         "linkLabel": "Childcare support"
       },
       "housing": {
@@ -5836,7 +5836,7 @@ export default {
         "title": "Employment Risk",
         "what": "At-will employers can terminate employment after an arrest even without a conviction. Some jobs require employees to report arrests to HR within a set number of days. Roles requiring security clearances or working with vulnerable populations face the highest risk of suspension.",
         "clock": "There is no set timeline. An at-will employer can act immediately. Check your employment contract for arrest reporting requirements.",
-        "action": "Review your employment contract and employee handbook for arrest reporting obligations. Do not volunteer information to your employer before consulting your attorney.",
+        "action": "Reviewing your employment contract and employee handbook for arrest reporting obligations is a good first step. Most attorneys advise against volunteering information to your employer before consulting with counsel.",
         "linkLabel": "Employment support"
       },
       "benefits": {
