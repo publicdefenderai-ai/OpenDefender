@@ -215,12 +215,12 @@ export default {
       "back": "← Back",
       "chargedSectionTitle": "Before your first court date",
       "chargedStep1Title": "Get a lawyer before you appear",
-      "chargedStep1Body": "If you cannot afford one, contact the public defender's office in the county where you were charged right away. Attending your first appearance without representation, if it can be avoided, is widely considered a significant risk.",
+      "chargedStep1Body": "If you cannot afford one, contact the public defender's office in the county where you were charged right away. Don't go to your first appearance without representation if you can avoid it.",
       "chargedStep2Title": "Conversations about your case are not protected",
       "chargedStep2Body": "Anything you tell friends, family, or post publicly can be obtained by prosecutors. Those people can be required by law to testify about what you told them.",
       "chargedStep3Title": "Understand your bail conditions",
       "chargedStep3Body": "If you were released on bail, read every condition carefully. Violating any condition, even accidentally, results in immediate re-arrest.",
-      "chargedStep4Title": "Missing your court date has serious consequences",
+      "chargedStep4Title": "Don't miss your court date",
       "chargedStep4Body": "Missing a hearing results in an arrest warrant being issued. Set multiple reminders.",
       "chargedLinkLabel": "Get Case Roadmap",
       "chargedLinkSub": "Guidance calibrated to your charge type, state, and case stage",
@@ -232,7 +232,7 @@ export default {
       "familyStep3Title": "Learn their booking number and the charges",
       "familyStep3Body": "You'll need this to post bail, contact their attorney, and stay informed about court dates.",
       "familyStep4Title": "Be careful what you say on phone calls",
-      "familyStep4Body": "Jail phone calls are recorded. Discussing the case or asking them to do anything related to the incident on a recorded line is one of the most common and costly mistakes.",
+      "familyStep4Body": "Jail phone calls are recorded. Don't discuss the case or ask them to do anything related to the incident.",
       "familyLink1Label": "Full Family Guide",
       "familyLink1Sub": "Finding, contacting, and supporting someone in custody",
       "familyLink2Label": "Jail Phone Calls",
@@ -508,7 +508,7 @@ export default {
         }
       },
       "tips": {
-        "tip1": "Keeping case details away from coworkers and maintaining professional conversations is widely recommended",
+        "tip1": "Don't discuss your case details with coworkers — keep conversations professional",
         "tip2": "Save copies of performance reviews and positive feedback from before your case",
         "tip3": "If you're job hunting, research 'ban the box' laws in your state that limit when employers can ask about criminal history",
         "tip4": "Consider consulting an employment attorney if you believe you're being treated unfairly at work"
@@ -644,7 +644,7 @@ export default {
       },
       "tips": {
         "tip1": "Keep all receipts and documentation of payments made toward your case",
-        "tip2": "Predatory lenders and high-interest debt typically worsen the situation — exploring all other options first is strongly advisable",
+        "tip2": "Don't borrow from predatory lenders or take on high-interest debt — explore all other options first",
         "tip3": "If you receive a bill you can't pay, contact the court immediately rather than ignoring it",
         "tip4": "Ask your attorney about expungement options that might help with future employment and housing"
       },
@@ -664,7 +664,7 @@ export default {
         "tanf": {
           "name": "TANF (Cash Assistance)",
           "what": "Federal law bans lifetime TANF receipt for people convicted of certain drug felonies, though many states have opted out of this ban. Your eligibility depends on your state and the nature of your conviction.",
-          "action": "Call 211 or your local Department of Social Services to confirm your state's rules. Eligibility rules vary significantly — verifying with the agency before assuming ineligibility is a common recommendation."
+          "action": "Call 211 or your local Department of Social Services to confirm your state's rules. Do not assume you are ineligible without checking."
         },
         "socialSecurity": {
           "name": "Social Security, SSI, and SSDI",
@@ -790,7 +790,7 @@ export default {
         },
         "q2": {
           "question": "Can I bring my phone to court?",
-          "answer": "Most courts allow phones in the building but require them to be silenced or off in courtrooms. Some courts prohibit phones entirely. Check your court's rules before going. Using your phone in the courtroom is against court rules in virtually all jurisdictions and can result in the device being confiscated."
+          "answer": "Most courts allow phones in the building but require them to be silenced or off in courtrooms. Some courts prohibit phones entirely. Check your court's rules before going. Never use your phone in the courtroom."
         },
         "q3": {
           "question": "What should I say to the judge?",
@@ -850,7 +850,7 @@ export default {
           "verifySteps": [
             "Call the court clerk's office and ask specifically: 'Is [program name] approved by this court for [your charge type]?' Get the answer in writing if possible.",
             "Ask your attorney or public defender to confirm before you enroll — this is a quick check they can do.",
-            "Relying solely on a program's own claim of court approval, without verifying directly with the court, carries real risk."
+            "Do not rely only on the program's own claim that they are court-approved. Verify directly with the court."
           ],
           "enrollTitle": "Questions to ask when you call to enroll",
           "enrollQuestions": [
@@ -1088,7 +1088,7 @@ export default {
         "tip1": "Carry a written medication list in your wallet — if you are arrested, this helps medical staff at booking",
         "tip2": "Ask your pharmacist about blister packs or pill organizers to make your medication routine easier to document",
         "tip3": "If you are in a drug court or diversion program, keep all appointment records and drug test results",
-        "tip4": "Mental health conditions like depression and PTSD are common during legal cases — seeking help before a crisis rather than during one leads to better outcomes",
+        "tip4": "Mental health conditions like depression and PTSD are common during legal cases — do not wait for a crisis to seek help",
         "tip5": "SAMHSA's findtreatment.gov lets you search for nearby treatment programs by type and insurance accepted"
       },
       "medicationSection": {
@@ -1104,7 +1104,7 @@ export default {
         },
         "step3": {
           "title": "Fill prescriptions before court dates",
-          "body": "Ensuring prescriptions are filled before a court date where incarceration is possible is an important practical step. Ask for a 90-day supply if your insurance allows. If cost is a concern, use GoodRx or ask your doctor for samples."
+          "body": "Do not let prescriptions lapse before a court date where incarceration is possible. Ask for a 90-day supply if your insurance allows. If cost is a concern, use GoodRx or ask your doctor for samples."
         }
       },
       "treatmentConnection": {
@@ -1260,7 +1260,7 @@ export default {
         }
       },
       "tips": {
-        "tip1": "Driving while your license is suspended adds new charges and makes your situation significantly worse",
+        "tip1": "Never drive while your license is suspended — new charges will make your situation significantly worse",
         "tip2": "Tell your attorney about any driving restrictions; they may factor into bail conditions or case strategy",
         "tip3": "Call 211 to ask about free or subsidized transportation programs in your community for medical or legal appointments",
         "tip4": "Keep rideshare apps downloaded and funded as a backup for getting to court on time"
@@ -1298,7 +1298,7 @@ export default {
         },
         "knowCustodyRules": {
           "title": "Know your custody rights and obligations",
-          "description": "If there is a custody order in place, review what it requires of you. Any changes to custody arrangements — temporary or otherwise — should involve communication with the other parent and ideally your attorney. Informal changes to a formal custody order without legal guidance can have unintended consequences.",
+          "description": "If there is a custody order in place, review what it requires of you. Any changes to custody arrangements — temporary or otherwise — should involve communication with the other parent and ideally your attorney. Do not make informal changes to a formal custody order without legal guidance.",
           "priority": "medium"
         }
       },
@@ -1365,7 +1365,7 @@ export default {
         },
         "q2": {
           "question": "What if I share custody with the other parent?",
-          "answer": "Any changes to custody or parenting schedules should follow your existing custody order and ideally involve communication with your co-parent. Informal changes to a formal custody arrangement without speaking to an attorney first can have unintended legal consequences."
+          "answer": "Any changes to custody or parenting schedules should follow your existing custody order and ideally involve communication with your co-parent. Do not make informal changes to a formal custody arrangement without speaking to your attorney first — doing so could have unintended legal consequences."
         },
         "q3": {
           "question": "Could my arrest or charges affect my custody rights?",
@@ -1401,7 +1401,7 @@ export default {
         },
         "knowEvictionProcess": {
           "title": "Understand the eviction process — it takes time and you have rights",
-          "description": "Receiving a late notice or even an eviction notice is not the end. Your landlord cannot remove you, change your locks, or shut off utilities without a court order. You have the right to respond to any eviction filing and to seek legal help before a hearing. Leaving voluntarily before understanding your options may forfeit important tenant rights.",
+          "description": "Receiving a late notice or even an eviction notice is not the end. Your landlord cannot remove you, change your locks, or shut off utilities without a court order. You have the right to respond to any eviction filing and to seek legal help before a hearing. Do not leave voluntarily without understanding your options.",
           "priority": "high"
         },
         "talkNetwork": {
@@ -1499,7 +1499,7 @@ export default {
         },
         "q3": {
           "question": "I received an eviction notice. Do I have to leave?",
-          "answer": "No. An eviction notice starts a legal process — it does not mean you have to leave immediately. You have the right to respond to the eviction filing in court, request a hearing, and seek legal assistance. Many cases are resolved through payment plans or negotiation before a court order is issued. Leaving voluntarily before understanding your options may forfeit important tenant rights. Contacting a tenant legal aid organization as soon as possible is a common recommendation."
+          "answer": "No. An eviction notice starts a legal process — it does not mean you have to leave immediately. You have the right to respond to the eviction filing in court, request a hearing, and seek legal assistance. Many cases are resolved through payment plans or negotiation before a court order is issued. Do not leave voluntarily before understanding your options. Contact a tenant legal aid organization as soon as possible."
         },
         "q4": {
           "question": "Can a landlord refuse to rent to me or deny my application because of my charges?",
@@ -1915,7 +1915,7 @@ export default {
       "understand": {
         "question": "Do you understand the charges against you?",
         "response": "Yes, Your Honor, I understand the charges.",
-        "explanation": "If you don't fully understand, it's okay to say 'I would like my attorney to explain them to me.' Saying yes when you don't truly understand is one of the most common arraignment mistakes."
+        "explanation": "If you don't fully understand, it's okay to say 'I would like my attorney to explain them to me.' Never say yes if you truly don't understand."
       },
       "attorney": {
         "question": "Do you have an attorney or do you need one appointed?",
@@ -1925,7 +1925,7 @@ export default {
       "waiveTime": {
         "question": "Do you waive your right to a speedy trial?",
         "response": "I would like to discuss this with my attorney before answering.",
-        "explanation": "Waiving time without consulting your attorney affects important deadlines — attorneys consistently recommend discussing this before responding."
+        "explanation": "Never waive time without consulting your attorney. This affects important deadlines in your case."
       }
     },
     "bail": {
@@ -2286,7 +2286,7 @@ export default {
       },
       "evidenceToGather": {
         "title": "Evidence — Discuss With Your Attorney",
-        "warning": "Evidence decisions depend entirely on your specific case facts. Touching, moving, sharing, or discarding anything related to your case before speaking with your attorney can affect what defenses are available."
+        "warning": "Evidence decisions depend entirely on your specific case facts. Do not touch, move, share, or discard anything related to your case before speaking with your attorney."
       },
       "importantWarnings": {
         "title": "Important Warnings"
@@ -5330,7 +5330,7 @@ export default {
   "first24Hours": {
     "title": "Your First 24 Hours",
     "subtitle": "From arrest through your first court appearance. Decisions made early in a case can have lasting consequences.",
-    "alert": "One principle is consistent across every step: legal experts uniformly advise against discussing case facts with anyone except your attorney — not police, not family, not cellmates, and not on the jail phone.",
+    "alert": "One rule applies to every step below: Do not discuss the facts of your case with anyone except your attorney. Not police, not family, not cellmates, and not on the jail phone.",
     "relatedGuides": "Related guides",
     "disclaimer": "This guide provides general legal information only. It is not legal advice, and no attorney-client relationship is formed by using it. Information here is not protected by attorney-client privilege. Laws and procedures vary by state. Consult a licensed attorney about your specific situation.",
     "deepDiveTitle": "Go deeper",
@@ -5343,8 +5343,8 @@ export default {
       "counselSixthTitle": "Sixth Amendment right: at formal proceedings",
       "counselSixthBody": "This right attaches once formal charges are filed, typically at arraignment or indictment. From this point, police cannot question you about the charged offense outside your attorney's presence.",
       "counselGapTitle": "The gap: after arrest, before formal charges",
-      "counselGapBody": "Between arrest and arraignment, your Sixth Amendment right has not yet attached for most purposes. This is the most dangerous window. Answering questions without an attorney present during this period carries the highest risk of self-incrimination.",
-      "counselGapWarning": "Answering questions without an attorney present during this window carries significant risk. Your invocation of silence must be clear and unambiguous.",
+      "counselGapBody": "Between arrest and arraignment, your Sixth Amendment right has not yet attached for most purposes. This is the most dangerous window. Do not answer any questions during this period without an attorney present.",
+      "counselGapWarning": "Do not answer any questions during this period without an attorney present. Your invocation of silence must be clear and unambiguous.",
       "probationTitle": "If you're on probation or parole",
       "probationAlert": "If you are on probation or parole, a new arrest is a more serious situation. You are not just facing new charges. You are also likely facing a violation proceeding on your existing supervision. The two tracks run in parallel.",
       "probationImmediateTitle": "What happens immediately",
@@ -5365,7 +5365,7 @@ export default {
       "probationRights2": "You have the right to a revocation hearing before your supervision is formally revoked. This must include written notice of the alleged violation, disclosure of the evidence against you, the opportunity to be heard, and a neutral hearing officer.",
       "probationRights3": "You have the right to counsel at a revocation hearing if revocation could result in incarceration, which it typically does.",
       "probationStep1": "Tell your attorney about your supervision status immediately. It affects strategy for both the new case and the violation proceeding.",
-      "probationStep2": "Contacting your PO directly without attorney guidance is generally inadvisable — statements to your PO may not carry the same legal protections as statements to police.",
+      "probationStep2": "Do not attempt to contact your PO directly without attorney guidance. Statements to your PO may not be protected.",
       "probationStep3": "Ask your attorney specifically: will bail on the new case release me, or is there a separate supervision hold? Are these the same attorney or do I need two?",
       "probationStep4": "Check whether your probation terms require self-reporting. Your attorney can help you decide if and how to respond.",
       "probationDisclaimer": "Violation outcomes vary widely by jurisdiction, the nature of the new offense, your supervision history, and your PO's discretion. An attorney who understands both tracks is essential.",
@@ -5376,7 +5376,7 @@ export default {
       "firstAppearanceVariationsTitle": "How it works by jurisdiction",
       "firstAppearanceHow1": "State your name. Confirm your identity. Nothing more unless your attorney instructs otherwise.",
       "firstAppearanceHow2": "If you don't have an attorney, ask for a public defender immediately. The magistrate is required to inform you of this right and facilitate appointment.",
-      "firstAppearanceHow3": "If asked about bail, briefly mention community ties (family, job, residence). Discussing the charges at this stage carries significant risk — attorneys consistently advise against it.",
+      "firstAppearanceHow3": "If asked about bail, briefly mention community ties (family, job, residence). Do not discuss the charges.",
       "firstAppearanceHow4": "If you are on probation or parole, your attorney needs to know before this hearing. It affects the bail calculus.",
       "counselStateCA": "Police must stop questioning immediately upon any invocation. CA also requires arraignment within 48 hours of arrest (excl. weekends/holidays). Post-Humphrey (2021): courts must consider your ability to pay before setting money bail.",
       "counselStateNY": "NY courts interpret the right to counsel broadly. Once you retain or request an attorney, police must contact that attorney before questioning. This protection is stronger than federal law.",
@@ -5398,13 +5398,13 @@ export default {
         "factsTitle": "Facts about the incident",
         "factsDetail": "\"I didn't do it,\" \"I wasn't there,\" \"It was self-defense.\" These all open the door to cross-examination and can be twisted out of context.",
         "alibiTitle": "Alibi information",
-        "alibiDetail": "Where you were and who you were with is information for your attorney only — not for jail calls.",
+        "alibiDetail": "Don't say where you were or who you were with. Share that only with your attorney.",
         "codefTitle": "Other people involved",
-        "codefDetail": "Mentioning co-defendants, witnesses, or anyone else who may have been present is among the most common and damaging call mistakes.",
+        "codefDetail": "Don't mention co-defendants, witnesses, or anyone else who may have been present.",
         "evidenceTitle": "Evidence",
-        "evidenceDetail": "Asking anyone to find, move, or hold onto items related to the incident can create separate obstruction exposure.",
+        "evidenceDetail": "Don't ask anyone to find, move, or hold onto any item related to the incident.",
         "victimTitle": "Contact with the alleged victim",
-        "victimDetail": "Passing messages, apologies, or explanations to the alleged victim through third parties is among the most serious call mistakes — it can be used to show consciousness of guilt.",
+        "victimDetail": "Never ask someone to pass along a message, apology, or explanation to the alleged victim or their family.",
         "frustrationTitle": "Frustration about the case",
         "frustrationDetail": "\"The police lied,\" \"They don't have real evidence.\" Prosecutors can use statements like these to establish consciousness of guilt."
       }
@@ -5430,7 +5430,7 @@ export default {
       "bullet1": "Police must notify parents or guardians before questioning a juvenile. If you are a minor, ask for your parent immediately.",
       "bullet2": "You may be held in a juvenile facility rather than an adult jail, depending on the charges and your age.",
       "bullet3": "Juvenile court is separate from adult criminal court. The process, rights, and outcomes differ significantly.",
-      "bullet4": "Juveniles are especially vulnerable during interrogation. Invoking the right to remain silent and asking for a parent and attorney before answering any questions is the approach most strongly recommended by juvenile defense attorneys.",
+      "bullet4": "Do not waive your rights. Juveniles are especially vulnerable during interrogation. Invoke your right to remain silent and ask for your parent and an attorney before answering any questions.",
       "bullet5": "If charges are serious, prosecutors may seek to try you as an adult. Your attorney must fight this."
     },
     "links": {
