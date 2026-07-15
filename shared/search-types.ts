@@ -103,9 +103,14 @@ export const LEGAL_SYNONYMS: Record<string, string[]> = {
   'dismiss': ['motion to dismiss', 'charges dropped', 'case dismissed', 'dropped charges'],
   'suppress': ['motion to suppress', 'exclude evidence', 'fourth amendment'],
   'evidence': ['suppress evidence', 'exclude evidence', 'motion to suppress'],
-  // Supervision
-  'probation': ['supervised release', 'community supervision', 'probation violation'],
-  'parole': ['early release', 'supervised release', 'parole violation'],
+  // Supervision / collateral consequences bridge
+  // 'parole' and 'probation' now map to 'collateral consequences' so that queries
+  // like "on parole" surface the collateral consequences screener alongside
+  // the first-24-hours arrest guide.
+  'probation': ['supervised release', 'community supervision', 'probation violation', 'collateral consequences', 'active supervision', 'revocation'],
+  'parole': ['early release', 'supervised release', 'parole violation', 'collateral consequences', 'active supervision', 'revocation'],
+  'supervision': ['probation', 'parole', 'supervised release', 'community supervision', 'collateral consequences', 'active supervision'],
+  'revocation': ['probation revocation', 'parole revocation', 'parole violation', 'probation violation', 'collateral consequences'],
   // Offense levels
   'felony': ['serious crime', 'major offense', 'felony charge'],
   'misdemeanor': ['minor offense', 'petty crime', 'misdemeanor charge'],

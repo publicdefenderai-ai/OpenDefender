@@ -1162,13 +1162,14 @@ export function buildSearchIndex(): void {
     },
     {
       id: 'collateral-consequences',
-      title: 'Collateral Consequences of a Conviction',
-      titleEs: 'Consecuencias Colaterales de una Condena',
-      titleZh: '定罪的附带后果',
-      content: 'Hidden consequences of a criminal conviction beyond jail and fines. Collateral consequences can affect employment, housing, professional licenses, voting rights, immigration status, public benefits, student loans, and child custody. Felony conviction can result in loss of voting rights in many states. Sex offender registration requirements. Deportation risk for non-citizens. Loss of occupational licenses. Difficulty finding housing with a criminal record. Drug conviction can affect eligibility for federal student aid.',
-      tags: ['collateral consequences', 'conviction', 'criminal record', 'voting rights', 'immigration', 'housing', 'employment', 'professional license', 'student loans', 'deportation'],
-      aliases: ['consequences of conviction', 'criminal record effects', 'felony consequences', 'hidden penalties', 'beyond jail time', 'conviction effects on life'],
-      url: '/support/reputation'
+      title: 'Collateral Consequences Screener',
+      titleEs: 'Evaluador de Consecuencias Colaterales',
+      titleZh: '附带后果评估',
+      content: 'Seven-question risk screener for the life areas most immediately threatened by a criminal charge. Questions cover: (1) active supervision — are you currently on probation or parole? A new arrest can trigger a revocation hold before your new case is even resolved. Probation and parole violations are treated as critical risk. (2) immigration status — non-citizens face deportation and removal risk from any conviction. (3) children and custody — arrest can affect custody arrangements and child protective services. (4) housing — arrest can trigger lease violations and eviction proceedings. (5) employment — background check flags, ban-the-box rights, job loss risk. (6) public benefits — SNAP, TANF, Section 8 housing eligibility. (7) professional licenses — occupational and professional licenses can be suspended or revoked. Results are prioritized: supervision and immigration are flagged as critical. No login required. No data stored.',
+      tags: ['collateral consequences', 'parole', 'probation', 'supervision', 'revocation', 'parole violation', 'probation violation', 'active supervision', 'parole hold', 'probation hold', 'immigration', 'deportation', 'custody', 'housing', 'employment', 'benefits', 'professional license', 'screener', 'conviction consequences', 'criminal record'],
+      aliases: ['on parole', 'on probation', 'active supervision', 'parole consequences', 'probation consequences', 'parole violation risk', 'probation revocation', 'what happens if arrested on parole', 'what happens if arrested on probation', 'parole hold', 'supervision hold', 'consequences of arrest', 'consequences of conviction', 'criminal record effects', 'felony consequences', 'hidden penalties', 'beyond jail time', 'conviction effects on life', 'life areas affected by arrest', 'collateral consequences check'],
+      headings: ['Active supervision risk', 'Probation or parole revocation hold', 'Immigration status risk', 'Child custody impact', 'Housing risk', 'Employment risk', 'Public benefits risk', 'Professional license risk'],
+      url: '/collateral-consequences'
     },
     {
       id: 'legal-aid',
@@ -1271,6 +1272,78 @@ export function buildSearchIndex(): void {
       aliases: ['rap sheet error', 'wrong criminal record', 'fix criminal record', 'missing disposition', 'FBI identity history summary', 'correct criminal record', 'criminal record mistake'],
       url: '/support/reputation#rap-sheet'
     },
+    {
+      id: 'for-advocates',
+      title: 'Advocate Toolkit: Tools for Public Defenders and Legal Aid Attorneys',
+      titleEs: 'Herramientas para Abogados Defensores y Ayuda Legal',
+      titleZh: '辩护人工具包',
+      content: 'Free browser-based tools for public defenders and legal aid attorneys. No login required. No backend calls. Includes the Public Defender Intake Checklist — a comprehensive first-meeting form covering case identifiers, probation and parole status, warrant status, immigration status with automatic Padilla review flag for non-citizens, housing, mental health, substance use, medications if detained, dependents, and document collection. Also includes the Mitigation Memo Builder — structures sentencing mitigation information including community ties, housing, employment, treatment history, family responsibilities, and character references into a formatted court memo. Both tools export to .docx.',
+      tags: ['advocate', 'public defender', 'attorney tools', 'intake checklist', 'mitigation memo', 'legal aid', 'defense attorney', 'criminal defense', 'sentencing mitigation', 'Padilla', 'probation', 'parole'],
+      aliases: ['advocate toolkit', 'defense attorney tools', 'public defender intake', 'mitigation memo builder', 'lawyer tools', 'intake checklist for attorneys', 'sentencing mitigation memo', 'pd tools'],
+      url: '/for-advocates'
+    },
+    {
+      id: 'for-advocates-intake',
+      title: 'Public Defender Intake Checklist',
+      titleEs: 'Lista de Verificación de Ingreso del Defensor Público',
+      titleZh: '公设辩护人入档清单',
+      content: 'Comprehensive first-meeting intake checklist for public defenders and legal aid attorneys. Covers case identifiers, current probation or parole status, warrant status, immigration status with automatic Padilla review flag for non-citizens, housing stability, mental health and substance use screening, medications if client is detained, dependents and family obligations, prior legal history, and document collection checklist. Automatic flag computation raises critical alerts for probation and parole holds, immigration exposure, and mental health crisis situations. Exportable to .docx. No data stored.',
+      tags: ['public defender', 'intake checklist', 'first meeting', 'attorney tools', 'probation', 'parole', 'immigration', 'Padilla', 'mental health', 'substance use', 'client intake', 'criminal defense', 'warrant status'],
+      aliases: ['public defender intake', 'attorney intake checklist', 'first meeting checklist', 'client intake form', 'PD intake', 'Padilla review', 'defense attorney intake form'],
+      url: '/for-advocates/intake-checklist'
+    },
+    {
+      id: 'for-advocates-mitigation',
+      title: 'Mitigation Memo Builder',
+      titleEs: 'Constructor de Memorando de Mitigación',
+      titleZh: '量刑减轻备忘录生成器',
+      content: 'Browser-based tool for public defenders to structure sentencing mitigation information into a formatted memo for the court. Input fields for community ties, housing stability, employment history, drug treatment or mental health program enrollment, family responsibilities and dependents, and character references. The tool formats content — it does not generate or embellish. Exportable to .docx. No AI, no login, no backend calls.',
+      tags: ['mitigation', 'sentencing mitigation', 'mitigation memo', 'attorney tools', 'sentencing', 'public defender', 'criminal defense', 'character references', 'treatment history', 'community ties'],
+      aliases: ['mitigation memo', 'sentencing memo', 'mitigation letter', 'sentencing mitigation memo builder', 'character letter for court', 'mitigation document', 'defense mitigation'],
+      url: '/for-advocates/mitigation-builder'
+    },
+    {
+      id: 'case-timeline',
+      title: 'Criminal Case Process: Stage-by-Stage Timeline',
+      titleEs: 'Proceso Penal: Cronograma por Etapas',
+      titleZh: '刑事案件流程：逐阶段时间表',
+      content: 'Interactive visual timeline of the 7 stages of a criminal case: arrest, booking, arraignment, pretrial hearings, plea or trial, sentencing, and post-conviction. Each stage describes what happens, your rights at that stage, and practical tips. Includes accordion guides for bail and plea bargains. Speedy trial and public defender information cards. State-specific callouts for major jurisdictions. Mock Q&A practice questions for each proceeding. Available in English, Spanish, and Chinese.',
+      tags: ['case timeline', 'criminal case process', 'arraignment', 'booking', 'trial', 'sentencing', 'plea', 'pretrial', 'post-conviction', 'case stages', 'court process'],
+      aliases: ['criminal case timeline', 'what happens in a criminal case', 'case stages', 'court process explained', 'steps in criminal case', 'criminal process guide', 'how does a criminal case work', 'what to expect in court'],
+      headings: ['Arrest', 'Booking', 'Arraignment', 'Pretrial hearings', 'Plea hearing', 'Trial', 'Sentencing', 'Post-conviction', 'Bail guide', 'Plea bargain guide', 'Speedy trial rights', 'Public defender'],
+      url: '/case-timeline'
+    },
+    {
+      id: 'immigration-guidance',
+      title: 'Immigration Rights and Criminal Cases',
+      titleEs: 'Derechos de Inmigración y Casos Penales',
+      titleZh: '移民权利与刑事案件',
+      content: 'Know your rights during immigration enforcement. ICE encounters: do not open the door without a judicial warrant. Right to remain silent. Do not sign anything without an attorney. If you are undocumented and arrested: you have the same Fifth and Sixth Amendment rights as citizens. Plead not guilty at arraignment. Immigration detainer (ICE hold): local jails may hold you extra time. Deportation consequences of a criminal conviction — for non-citizens, any conviction can trigger removal proceedings. Padilla v. Kentucky: your criminal defense attorney is required to advise you about immigration consequences of a plea. USCIS adjustment of status policy update May 2026.',
+      tags: ['immigration', 'ice', 'deportation', 'undocumented', 'immigration enforcement', 'right to remain silent', 'Padilla', 'removal', 'ice hold', 'immigration detainer', 'criminal immigration', 'adjustment of status', 'ice warrant'],
+      aliases: ['ice encounter', 'undocumented rights', 'ice arrest', 'immigration rights', 'criminal and immigration', 'deportation after conviction', 'padilla warning', 'immigration hold', 'ice detainer', 'what are my rights if undocumented'],
+      headings: ['ICE at your door', 'If you are undocumented and arrested', 'Immigration detainer', 'Deportation risk from conviction', 'Padilla v. Kentucky', 'Adjustment of status policy update'],
+      url: '/immigration-guidance'
+    },
+    {
+      id: 'how-to',
+      title: 'How OpenDefender Works: Five Paths Through the System',
+      titleEs: 'Cómo Funciona OpenDefender: Cinco Caminos',
+      titleZh: 'OpenDefender如何工作：五条路径',
+      content: 'Explainer for five different user journeys through the platform. Path 1: Just arrested — start with First 24 Hours, then case guidance and collateral consequences screener. Path 2: Supporting a loved one — start with Friends and Family. Path 3: Facing trial or sentencing — use case timeline, bail preparation, and court Q&A practice. Path 4: Dealing with collateral consequences including probation, parole, immigration, housing, employment, and benefits — use the collateral consequences screener. Path 5: Attorney or advocate — use the advocate toolkit. Also explains the AI guidance system, privacy protections, and how to find a public defender.',
+      tags: ['how it works', 'getting started', 'five paths', 'overview', 'explainer', 'guide', 'navigation'],
+      aliases: ['how to use this site', 'getting started', 'what does this site do', 'site overview', 'help guide', 'where do I start'],
+      url: '/how-to'
+    },
+    {
+      id: 'directory',
+      title: 'Site Directory: All Pages and Resources',
+      titleEs: 'Directorio del Sitio: Todas las Páginas y Recursos',
+      titleZh: '网站目录：所有页面和资源',
+      content: 'Complete directory of all pages, tools, and resources on OpenDefender. Organized by topic: rights, support, records, immigration, court preparation, and advocate tools.',
+      tags: ['directory', 'site map', 'all pages', 'overview', 'navigation'],
+      aliases: ['site directory', 'site map', 'all resources', 'all pages', 'index', 'what pages are on this site'],
+      url: '/directory'
+    },
   ];
 
   // Support, resource, and logistics pages get 'legal_resource' type
@@ -1278,11 +1351,19 @@ export function buildSearchIndex(): void {
   const LEGAL_RESOURCE_PAGE_IDS = new Set([
     'support-hub', 'support-employment', 'support-finances', 'support-court-logistics',
     'support-mental-health', 'support-transportation', 'support-childcare', 'support-housing',
-    'support-family-care', 'support-reputation', 'support-personal-health',
+    'support-family-care', 'support-reputation', 'support-reentry', 'support-personal-health',
     'resources', 'friends-family', 'friends-family-toolkit', 'legal-aid', 'recap-extensions',
     'document-library', 'document-summarizer', 'attorney-portal', 'attorney-playbooks',
     'court-locator', 'record-clearance-screener', 'pd-intake-form', 'court-date-guide', 'bail-preparation',
     'treatment-connection', 'fcra-background-check-rights', 'certificates-of-relief', 'rap-sheet-errors',
+    // Collateral consequences screener — legal_resource so it surfaces above charges
+    'collateral-consequences',
+    // Advocate toolkit pages
+    'for-advocates', 'for-advocates-intake', 'for-advocates-mitigation',
+    // Case timeline and immigration guidance
+    'case-timeline', 'immigration-guidance',
+    // Navigation / directory pages
+    'how-to', 'directory',
   ]);
 
   for (const page of sitePages) {

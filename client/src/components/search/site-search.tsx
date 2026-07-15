@@ -56,9 +56,9 @@ const SECTION_LABELS: Record<SearchContentType, { en: string; es: string; zh: st
 };
 
 const POPULAR_SEARCHES: Record<'en' | 'es' | 'zh', string[]> = {
-  en: ['bail', 'expungement', 'miranda rights', 'housing', 'right to attorney', 'DUI', 'fines'],
-  es: ['fianza', 'eliminación de antecedentes', 'derechos miranda', 'vivienda', 'derecho a abogado', 'multas'],
-  zh: ['保释', '消除记录', '米兰达权利', '住房', '律师权利', '罚款'],
+  en: ['bail', 'expungement', 'on parole', 'miranda rights', 'housing', 'right to attorney', 'probation'],
+  es: ['fianza', 'eliminación de antecedentes', 'libertad condicional', 'derechos miranda', 'vivienda', 'derecho a abogado'],
+  zh: ['保释', '消除记录', '假释', '米兰达权利', '住房', '律师权利'],
 };
 
 function escapeRegex(s: string) {
