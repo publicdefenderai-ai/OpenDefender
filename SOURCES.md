@@ -4,7 +4,7 @@
 
 This index documents where every category of data on the OpenDefender platform comes from, what verification processes are in place, and where to look to update the data. It is intended for quality control reviewers, contributors, and maintainers.
 
-Last reviewed: May 2026 (after-deportation page added; /directory and /how-to split into separate pages; immigration guidance updated with USCIS AOS policy memo PM-602-0199; six organizations added to external links table)
+Last reviewed: July 2026 (beta banner reinstated; 7 legal-guidance directive phrases softened in EN locale; LOCUS-v1 (LocalLaws) API added to Sections 9 and 11; collateral consequences screener, advocate toolkit, bail preparation, case timeline, and 11 support pages added to Section 8; glossary count updated to 50; stats locale file reference updated to locales/en.ts; criminal-charge-citations.ts overlay file noted in Section 2; API_INTEGRATION_STRATEGY.md charge and statute counts corrected)
 
 ---
 
@@ -84,6 +84,8 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 - Charge categories and penalty ranges reflect common patterns across US jurisdictions
 - Individual statute codes in the base set (e.g., "Cal. Penal Code § X") should be verified against the actual state code before being cited authoritatively
 - This data powers the AI Case Guidance feature's charge classification and validation, not the static editorial pages
+
+**Jury instruction overlay file:** `shared/criminal-charge-citations.ts` — a separate companion file that annotates select charges (primarily CA, NY, FL, TX, PA, OH, IL, and other major jurisdictions) with jury instruction references (`instructionRef`, e.g., "CALCRIM 1600") and direct URLs (`instructionUrl`) to court-hosted instruction documents. This file does not duplicate charge records; it overlays citation and instruction data onto charges defined in `shared/criminal-charges.ts`. Coverage is documented in `docs/citation-research/pji-availability.md`.
 
 **References:** Model Penal Code (American Law Institute, §§ 2.06, 2.07, 5.01, 5.02, 5.03); 18 U.S.C. §§ 2, 3, 371, 1113, 1349, 1373, 1951, 2242; FBI Uniform Crime Reporting (UCR) classifications for charge frequency ranking.
 
@@ -272,7 +274,7 @@ The script makes HEAD requests to all 111 contact URLs, falls back to GET when H
 
 **File:** `client/src/lib/legal-glossary-data.ts`
 
-**Coverage:** 46 terms as of March 2026.
+**Coverage:** 50 terms as of July 2026.
 
 **Source methodology:** Definitions are written by the platform authors in plain language (6th grade reading level per site policy), synthesized from standard constitutional law and criminal procedure principles. No single external database is used.
 
@@ -290,7 +292,7 @@ Terms include `learnMoreUrl` fields linking to relevant pages on the site where 
 
 ## 7. Statistics Cited in Content
 
-All statistics that appear in user-facing content are in `client/src/i18n.ts`. The following are the specific claims with their sources, as embedded in the content strings:
+All statistics that appear in user-facing content are in `client/src/locales/en.ts` (English), `client/src/locales/es.ts` (Spanish), and `client/src/locales/zh.ts` (Chinese). These files replaced the single `client/src/i18n.ts` file as of 2026. The following are the specific claims with their sources:
 
 ### Plea bargain rates
 - **Claim:** "Approximately 97–98% of criminal convictions are resolved through guilty pleas rather than trials."
@@ -346,6 +348,30 @@ The following pages are manually authored and maintained by the platform team. T
 | Friends & Family Toolkit | `client/src/pages/friends-family-toolkit.tsx` | `/friends-family/toolkit` | 2026-05 | 2027-01 |
 | Site Directory | `client/src/pages/directory.tsx` | `/directory` | 2026-05 | 2027-06 |
 | How It Works (Five Paths) | `client/src/pages/how-to.tsx` | `/how-to` | 2026-05 | 2027-06 |
+| Collateral Consequences Screener | `client/src/pages/collateral-consequences.tsx` | `/collateral-consequences` | 2026-07 (new) | 2027-01 |
+| Advocate Toolkit Hub | `client/src/pages/for-advocates.tsx` | `/for-advocates` | 2026-07 | 2027-01 |
+| Advocate: Intake Checklist | `client/src/pages/for-advocates/intake-checklist.tsx` | `/for-advocates/intake-checklist` | 2026-07 | 2027-01 |
+| Advocate: Mitigation Memo Builder | `client/src/pages/for-advocates/mitigation-builder.tsx` | `/for-advocates/mitigation-builder` | 2026-07 | 2027-01 |
+| Visual Case Timeline | `client/src/pages/case-timeline.tsx` (route redirect from `/process`) | `/case-timeline` | 2026-05 | 2027-01 |
+| Bail Preparation Toolkit | `client/src/pages/support/court-logistics/bail-preparation.tsx` | `/support/court-logistics/bail-preparation` | 2026-05 | 2027-01 |
+
+**Life Support Resource Pages (11 pages under `/support/*`):**
+
+These pages are template-driven with i18n content from `client/src/locales/en.ts`. Each page provides actionable steps, FAQs, and curated external links for a specific life area. Content is authored by the platform team and reviewed on the same annual cycle as other editorial pages.
+
+| Page | Route | Last Reviewed | Next Review |
+|------|-------|--------------|-------------|
+| Employment | `/support/employment` | 2026-05 | 2027-01 |
+| Finances | `/support/finances` | 2026-05 | 2027-01 |
+| Housing | `/support/housing` | 2026-05 | 2027-01 |
+| Transportation | `/support/transportation` | 2026-05 | 2027-01 |
+| Childcare | `/support/childcare` | 2026-05 | 2027-01 |
+| Court Logistics | `/support/court-logistics` | 2026-05 | 2027-01 |
+| Reputation & Records | `/support/reputation` | 2026-05 | 2027-01 |
+| Immigration (Support) | `/support/immigration` | 2026-05 | 2027-01 |
+| Mental Health & Treatment | `/support/mental-health` | 2026-05 | 2027-01 |
+| Personal Health | `/support/personal-health` | 2026-05 | 2027-01 |
+| Family Care | `/support/family-care` | 2026-05 | 2027-01 |
 
 **Merged/redirected pages (May 2026):**
 - Search and Seizure — merged as a tab into `/rights-info`. `client/src/pages/search-seizure.tsx` removed; route `/search-seizure` redirects to `/rights-info`.
@@ -398,6 +424,15 @@ The following pages are manually authored and maintained by the platform team. T
 | Tier 3 | OpenLaws API — https://docs.openlaws.us/ | Live citation fallback: if not found in local DB, queries OpenLaws before flagging as unverified | Yes (`OPENLAWS_API_KEY` optional) |
 
 The validator runs only on AI-generated Case Guidance output, not on static editorial pages.
+
+### Municipal Ordinance Text — LOCUS-v1 (LocalLaws / UC Berkeley)
+- **Service:** LOCUS-v1 — LocalLaws dataset via Hugging Face Datasets Server API — https://huggingface.co/datasets/the-ride/LOCUS-v1
+- **Purpose:** Municipal and county ordinance text for local-ordinance charges (loitering, trespass, disorderly conduct, illegal camping, noise violations, and similar municipal offenses)
+- **Authentication:** None required (public HuggingFace Datasets Server API)
+- **License:** CC-BY-NC-4.0
+- **Citation:** Peskoff, Barrow, Vu & Davenport et al. (2026), *LOCUS: A Dataset for Grounding Legal Statements in Local Ordinances*, arXiv:2606.19334
+- **Implementation:** `server/services/locus-lookup.ts`
+- **Note:** LOCUS-v1 is used as a supplementary reference for local-ordinance charges only. It is not used for state felony or misdemeanor citations, which come from the OpenLaws API and the curated seed database.
 
 ### Court and Legal Aid Geolocation
 - **Service:** OpenStreetMap Nominatim — https://nominatim.openstreetmap.org/search
@@ -552,6 +587,7 @@ The following external organizations are linked from support and resource pages.
 | Immigration Advocates Network | https://immigrationadvocates.org | After-deportation: free search for immigration legal aid by location |
 | NLIHC (National Low Income Housing Coalition) | https://nlihc.org | After-deportation: emergency rental assistance locator by county |
 | Vera Institute of Justice | https://vera.org | After-deportation: research and resources on immigration detention and deportation |
+| LOCUS-v1 / LocalLaws (UC Berkeley) | https://huggingface.co/datasets/the-ride/LOCUS-v1 | Municipal ordinance text for local-ordinance charges (loitering, trespass, disorderly conduct, etc.). CC-BY-NC-4.0. Cite: Peskoff et al. (2026), arXiv:2606.19334 |
 
 ---
 

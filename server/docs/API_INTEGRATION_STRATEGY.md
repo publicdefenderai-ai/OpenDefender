@@ -13,7 +13,7 @@ This document outlines the comprehensive API integration strategy for the Public
 | Component | Status | Coverage |
 |-----------|--------|----------|
 | **Federal Statutes (GovInfo API)** | ✅ Active | Complete Title 18 USC |
-| **State Statutes (Seed Data)** | ✅ Active | 1,385+ statutes across 51 jurisdictions |
+| **State Statutes (Seed Data)** | ✅ Active | 5,956 statutes across 51 jurisdictions |
 | **OpenLaws API** | ✅ Active | 53 jurisdictions (50 states + DC + PR + Federal) |
 | **LegiScan API** | ⚠️ Monitoring | Bill tracking for statute change alerts |
 
@@ -52,7 +52,7 @@ This document outlines the comprehensive API integration strategy for the Public
 ## State Statute Seed Data Coverage
 
 ### Coverage Summary
-- **Total Statutes**: 1,385+
+- **Total Statutes**: 5,956 (in PostgreSQL as of 2026)
 - **Jurisdictions**: 51 (all 50 states + DC)
 - **File**: `server/data/state-statutes-seed.ts`
 
@@ -170,8 +170,8 @@ Uses breadth-first search to navigate state statute hierarchies:
 ## Criminal Charge Database Integration
 
 ### Database Scale
-- **Total charges**: 4,146 across all jurisdictions
-- **Coverage**: All 50 states + DC + Federal
+- **Total charges**: 7,155 across all jurisdictions
+- **Coverage**: All 50 states + DC + territories (56 jurisdictions) + Federal
 - **Categories**: Homicide, assault, sexual offenses, theft, burglary, robbery, drugs, weapons, fraud, public order, DUI/traffic
 - **Source file**: `shared/criminal-charges.ts`
 
@@ -213,8 +213,10 @@ Uses breadth-first search to navigate state statute hierarchies:
 
 ---
 
-**Last Updated**: January 15, 2026
+**Last Updated**: July 15, 2026
 **Maintained By**: Public Defender AI Development Team
 **License**: MIT (code) / CC0 (documentation)
 
-**Major Update (Jan 15, 2026)**: Documentation updated to reflect current implementation. OpenLaws API is now fully integrated with working citation lookup. Seed data expanded to 1,385+ statutes covering all 51 jurisdictions. Hybrid search strategy (seed data + API) is fully operational.
+**Major Update (Jan 15, 2026)**: Documentation updated to reflect current implementation. OpenLaws API is now fully integrated with working citation lookup. Seed data at 1,385+ statutes covering all 51 jurisdictions. Hybrid search strategy (seed data + API) is fully operational.
+
+**Update (July 15, 2026)**: Charge count corrected to 7,155 (56 jurisdictions + federal, including inchoate/derivative phases 1–5). Statute seed data count corrected to 5,956 records in PostgreSQL. See `SOURCES.md` Section 2 for full phase breakdown.
