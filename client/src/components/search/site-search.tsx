@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { Search, X, Loader2, FileText, Scale, BookOpen, Building, HelpCircle, Shield, Briefcase } from "lucide-react";
+import { Search, X, Loader2, FileText, Scale, BookOpen, Building, HelpCircle, Shield, Briefcase, SlidersHorizontal } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "wouter";
@@ -44,6 +44,14 @@ const ALL_TYPES: SearchContentType[] = [
 
 const PINNED_LAST = new Set<SearchContentType>(['charge', 'mock_qa']);
 
+// Types that appear in the filter chips (main content types users care about)
+const FILTER_TYPES: { type: SearchContentType; labelEn: string; labelEs: string; labelZh: string }[] = [
+  { type: 'rights_info',       labelEn: 'Rights',     labelEs: 'Derechos',   labelZh: '权利' },
+  { type: 'legal_resource',    labelEn: 'Resources',  labelEs: 'Recursos',   labelZh: '资源' },
+  { type: 'expungement',       labelEn: 'Records',    labelEs: 'Registros',  labelZh: '记录' },
+  { type: 'diversion_program', labelEn: 'Programs',   labelEs: 'Programas',  labelZh: '项目' },
+];
+
 const SECTION_LABELS: Record<SearchContentType, { en: string; es: string; zh: string }> = {
   rights_info:       { en: 'Know Your Rights', es: 'Conozca Sus Derechos', zh: '了解您的权利' },
   legal_resource:    { en: 'Resources & Support', es: 'Recursos y Apoyo', zh: '资源与支持' },
@@ -60,6 +68,40 @@ const POPULAR_SEARCHES: Record<'en' | 'es' | 'zh', string[]> = {
   es: ['fianza', 'eliminación de antecedentes', 'libertad condicional', 'derechos miranda', 'vivienda', 'derecho a abogado'],
   zh: ['保释', '消除记录', '假释', '米兰达权利', '住房', '律师权利'],
 };
+
+// Convert a page URL to a short human-readable breadcrumb path.
+// Strips hash fragments, then maps each path segment to a label.
+const PATH_LABELS: Record<string, string> = {
+  'support': 'Support',
+  'rights-info': 'Rights',
+  'immigration-guidance': 'Immigration',
+  'for-advocates': 'Advocate Tools',
+  'friends-family': 'Friends & Family',
+  'attorney': 'Attorney Portal',
+  'legal-glossary': 'Legal Terms',
+  'diversion-programs': 'Diversion Programs',
+  'record-expungement': 'Record Clearing',
+  'case-timeline': 'Case Timeline',
+  'warrants': 'Warrants',
+  'legal-aid': 'Legal Aid',
+  'court-locator': 'Court Locator',
+  'case-guidance': 'Case Guidance',
+  'mock-qa': 'Court Prep',
+  'statutes': 'Statutes',
+  'how-to': 'How It Works',
+  'directory': 'Directory',
+  'collateral-consequences': 'Collateral Consequences',
+  'first-24-hours': 'First 24 Hours',
+};
+
+function urlToBreadcrumb(url: string): string {
+  const path = url.split('#')[0].split('?')[0];
+  const parts = path.split('/').filter(Boolean);
+  if (parts.length === 0) return 'Home';
+  return parts
+    .map(p => PATH_LABELS[p] ?? p.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '))
+    .join(' › ');
+}
 
 function escapeRegex(s: string) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -94,12 +136,27 @@ function highlightSnippet(snippet: string, matchedTerms: string[]): React.ReactN
   });
 }
 
+// Find the first heading that contains any matched query term.
+// Used to show a "See section: X" callout on relevant results.
+function findMatchedHeading(headings: string[] | undefined, matchedTerms: string[]): string | null {
+  if (!headings || headings.length === 0) return null;
+  const termPatterns = matchedTerms
+    .map(t => t.toLowerCase().replace(/[^\w\s]/g, ' ').trim())
+    .filter(t => t.length >= 3);
+  for (const heading of headings) {
+    const lh = heading.toLowerCase();
+    if (termPatterns.some(t => lh.includes(t))) return heading;
+  }
+  return null;
+}
+
 export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
   const { t: _t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const [query, setQuery] = useState("");
   const [debouncedQuery, setDebouncedQuery] = useState("");
   const [focusedIndex, setFocusedIndex] = useState(-1);
+  const [activeFilter, setActiveFilter] = useState<SearchContentType | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const resultRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const language: 'en' | 'es' | 'zh' = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
@@ -119,6 +176,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     if (!open) {
       setQuery("");
       setFocusedIndex(-1);
+      setActiveFilter(null);
     }
   }, [open]);
 
@@ -145,18 +203,55 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     return language === 'es' ? labels.es : language === 'zh' ? labels.zh : labels.en;
   };
 
-  const sections: Array<{ type: SearchContentType; results: SearchResult[] }> = [];
+  // Build sections sorted by top score, with pinned types last
+  const allSections: Array<{ type: SearchContentType; results: SearchResult[] }> = [];
   if (data?.groupedResults) {
     const mainTypes = ALL_TYPES
       .filter(t => !PINNED_LAST.has(t) && (data.groupedResults[t]?.length ?? 0) > 0)
       .sort((a, b) => (data.groupedResults[b][0]?.score ?? 0) - (data.groupedResults[a][0]?.score ?? 0));
     const pinnedTypes = ALL_TYPES.filter(t => PINNED_LAST.has(t) && (data.groupedResults[t]?.length ?? 0) > 0);
     for (const type of [...mainTypes, ...pinnedTypes]) {
-      sections.push({ type, results: data.groupedResults[type] });
+      allSections.push({ type, results: data.groupedResults[type] });
     }
   }
 
-  const flatResults = sections.flatMap(s => s.results);
+  // Apply type filter if one is active
+  const sections = activeFilter
+    ? allSections.filter(s => s.type === activeFilter || PINNED_LAST.has(s.type))
+    : allSections;
+
+  // Only show filter chips when there are 3+ sections with results (filtering is meaningful)
+  const availableFilters = FILTER_TYPES.filter(f =>
+    (data?.groupedResults[f.type]?.length ?? 0) > 0
+  );
+  const showFilters = !activeFilter && availableFilters.length >= 3;
+
+  // "Best matches" flat section: top 4 non-charge/non-mock_qa results sorted by raw score,
+  // shown only when 2+ different types are represented (otherwise the grouped view is enough).
+  // Each result here is removed from its grouped section below to prevent duplication.
+  const bestMatches: SearchResult[] = (() => {
+    if (!data?.groupedResults) return [];
+    const candidates = ALL_TYPES
+      .filter(t => !PINNED_LAST.has(t))
+      .flatMap(t => data.groupedResults[t] ?? [])
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 4);
+    const types = new Set(candidates.map(r => r.document.type));
+    return candidates.length >= 3 && types.size >= 2 ? candidates : [];
+  })();
+
+  const bestMatchIds = new Set(bestMatches.map(r => r.document.id));
+
+  // Grouped sections with best-match entries removed to avoid duplication
+  const groupedSections = sections.map(s => ({
+    ...s,
+    results: s.results.filter(r => !bestMatchIds.has(r.document.id)),
+  })).filter(s => s.results.length > 0);
+
+  const flatResults = [
+    ...bestMatches,
+    ...groupedSections.flatMap(s => s.results),
+  ];
   const totalFlat = flatResults.length;
 
   const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
@@ -200,10 +295,86 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     resultRefs.current = resultRefs.current.slice(0, totalFlat);
   }, [totalFlat]);
 
-  const hasResults = sections.length > 0;
+  const hasResults = allSections.length > 0;
   const showNoResults = debouncedQuery.length >= 2 && !isLoading && !hasResults;
 
   let globalIdx = 0;
+
+  // Shared result card renderer used in both the best-matches section and grouped sections
+  function ResultCard({ result }: { result: SearchResult }) {
+    const myIdx = globalIdx++;
+    const isFocused = myIdx === focusedIndex;
+    const Icon = TYPE_ICONS[result.document.type];
+    const colorClass = TYPE_COLORS[result.document.type];
+
+    const title =
+      language === 'zh' && result.document.titleZh
+        ? result.document.titleZh
+        : language === 'es' && result.document.titleEs
+        ? result.document.titleEs
+        : result.document.title;
+
+    const snippet = result.highlights[0]?.snippet ?? '';
+    const breadcrumb = urlToBreadcrumb(result.document.url);
+    const matchedHeading = findMatchedHeading(result.document.headings, result.matchedTerms);
+
+    return (
+      <button
+        key={result.document.id}
+        id={`search-result-${myIdx}`}
+        role="option"
+        aria-selected={isFocused}
+        ref={el => { resultRefs.current[myIdx] = el; }}
+        onClick={() => handleResultClick(result.document.url)}
+        onFocus={() => setFocusedIndex(myIdx)}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') handleResultClick(result.document.url);
+          if (e.key === 'ArrowDown' || e.key === 'ArrowUp') handleKeyDown(e);
+          if (e.key === 'Escape') { setFocusedIndex(-1); inputRef.current?.focus(); }
+        }}
+        className={`w-full text-left px-3 py-2.5 rounded-lg transition-colors border ${
+          isFocused
+            ? 'bg-accent border-border ring-1 ring-ring/30'
+            : 'border-transparent hover:bg-accent hover:border-border'
+        }`}
+      >
+        <div className="flex items-start gap-2.5">
+          <div className={`mt-0.5 p-1 rounded shrink-0 ${colorClass}`}>
+            <Icon className="h-3.5 w-3.5" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2 flex-wrap mb-0.5">
+              <span className="font-medium text-sm text-foreground truncate">
+                {title}
+              </span>
+              {result.document.jurisdiction && (
+                <Badge variant="outline" className="text-xs shrink-0 h-4 px-1">
+                  {result.document.jurisdiction}
+                </Badge>
+              )}
+            </div>
+            {/* Breadcrumb path */}
+            <span className="text-xs text-muted-foreground/50 block mb-0.5 truncate">
+              {breadcrumb}
+            </span>
+            {/* Content snippet with term highlighting */}
+            {snippet && (
+              <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
+                {highlightSnippet(snippet, result.matchedTerms)}
+              </p>
+            )}
+            {/* Section heading callout — only shown when a matched term lives in a specific section */}
+            {matchedHeading && !snippet.toLowerCase().includes(matchedHeading.toLowerCase().slice(0, 10)) && (
+              <span className="text-xs text-muted-foreground/60 mt-0.5 block truncate">
+                {language === 'es' ? 'Ver sección:' : language === 'zh' ? '相关章节：' : 'See section:'}{' '}
+                <span className="italic">{matchedHeading}</span>
+              </span>
+            )}
+          </div>
+        </div>
+      </button>
+    );
+  }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -296,6 +467,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
 
           {hasResults && (
             <ScrollArea className="h-[460px]">
+              {/* Meta bar: result count + typo correction notice */}
               <div className="px-4 pt-3 pb-1">
                 <p className="text-xs text-muted-foreground">
                   {language === 'es'
@@ -314,8 +486,65 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                 )}
               </div>
 
+              {/* Type filter chips — only shown when 3+ types have results and no filter is active */}
+              {showFilters && (
+                <div className="px-4 pb-2 flex items-center gap-1.5 flex-wrap">
+                  <SlidersHorizontal className="h-3 w-3 text-muted-foreground shrink-0" />
+                  {availableFilters.map(f => {
+                    const label = language === 'es' ? f.labelEs : language === 'zh' ? f.labelZh : f.labelEn;
+                    return (
+                      <button
+                        key={f.type}
+                        onClick={() => setActiveFilter(f.type)}
+                        className={`text-xs px-2 py-0.5 rounded-full border transition-colors ${TYPE_COLORS[f.type]} border-current/20 hover:opacity-80`}
+                      >
+                        {label}
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Active filter indicator with clear button */}
+              {activeFilter && (
+                <div className="px-4 pb-2 flex items-center gap-2">
+                  <span className="text-xs text-muted-foreground">
+                    {language === 'es' ? 'Filtrando:' : language === 'zh' ? '筛选：' : 'Filtering:'}
+                  </span>
+                  <span className={`text-xs px-2 py-0.5 rounded-full border ${TYPE_COLORS[activeFilter]} border-current/20`}>
+                    {(() => {
+                      const f = FILTER_TYPES.find(x => x.type === activeFilter);
+                      return f ? (language === 'es' ? f.labelEs : language === 'zh' ? f.labelZh : f.labelEn) : activeFilter;
+                    })()}
+                  </span>
+                  <button
+                    onClick={() => setActiveFilter(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground underline"
+                  >
+                    {language === 'es' ? 'Ver todos' : language === 'zh' ? '查看全部' : 'Show all'}
+                  </button>
+                </div>
+              )}
+
               <div id="search-results" role="listbox" className="px-4 pb-4 space-y-5">
-                {sections.map(({ type, results }, sectionIdx) => {
+
+                {/* Best matches flat section — top results across all types, no duplicates below */}
+                {bestMatches.length > 0 && !activeFilter && (
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                        {language === 'es' ? 'Mejores Resultados' : language === 'zh' ? '最佳匹配' : 'Best Matches'}
+                      </span>
+                      <div className="flex-1 h-px bg-border" />
+                    </div>
+                    <div className="space-y-1">
+                      {bestMatches.map(result => <ResultCard key={result.document.id} result={result} />)}
+                    </div>
+                  </div>
+                )}
+
+                {/* Grouped sections (best-match entries already removed to avoid duplication) */}
+                {groupedSections.map(({ type, results }, sectionIdx) => {
                   const Icon = TYPE_ICONS[type];
                   const colorClass = TYPE_COLORS[type];
                   const isCharges = type === 'charge';
@@ -344,64 +573,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                       </div>
 
                       <div className="space-y-1">
-                        {results.map((result) => {
-                          const myIdx = globalIdx++;
-                          const isFocused = myIdx === focusedIndex;
-
-                          const title =
-                            language === 'zh' && result.document.titleZh
-                              ? result.document.titleZh
-                              : language === 'es' && result.document.titleEs
-                              ? result.document.titleEs
-                              : result.document.title;
-
-                          const snippet = result.highlights[0]?.snippet ?? '';
-
-                          return (
-                            <button
-                              key={result.document.id}
-                              id={`search-result-${myIdx}`}
-                              role="option"
-                              aria-selected={isFocused}
-                              ref={el => { resultRefs.current[myIdx] = el; }}
-                              onClick={() => handleResultClick(result.document.url)}
-                              onFocus={() => setFocusedIndex(myIdx)}
-                              onKeyDown={(e) => {
-                                if (e.key === 'Enter') handleResultClick(result.document.url);
-                                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') handleKeyDown(e);
-                                if (e.key === 'Escape') { setFocusedIndex(-1); inputRef.current?.focus(); }
-                              }}
-                              className={`w-full text-left px-3 py-2.5 rounded-lg transition-colors border ${
-                                isFocused
-                                  ? 'bg-accent border-border ring-1 ring-ring/30'
-                                  : 'border-transparent hover:bg-accent hover:border-border'
-                              }`}
-                            >
-                              <div className="flex items-start gap-2.5">
-                                <div className={`mt-0.5 p-1 rounded shrink-0 ${colorClass}`}>
-                                  <Icon className="h-3.5 w-3.5" />
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <div className="flex items-center gap-2 flex-wrap mb-0.5">
-                                    <span className="font-medium text-sm text-foreground truncate">
-                                      {title}
-                                    </span>
-                                    {result.document.jurisdiction && (
-                                      <Badge variant="outline" className="text-xs shrink-0 h-4 px-1">
-                                        {result.document.jurisdiction}
-                                      </Badge>
-                                    )}
-                                  </div>
-                                  {snippet && (
-                                    <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed">
-                                      {highlightSnippet(snippet, result.matchedTerms)}
-                                    </p>
-                                  )}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
+                        {results.map(result => <ResultCard key={result.document.id} result={result} />)}
                       </div>
                     </div>
                   );

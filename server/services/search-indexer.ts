@@ -60,7 +60,10 @@ function tryFuzzyCorrect(terms: string[]): Map<string, string> {
   const corrections = new Map<string, string>();
   for (const term of terms) {
     const nt = normalizeText(term);
-    if (nt.length < 4) continue;
+    // Skip very short terms unless they're known legal abbreviations
+    if (nt.length < 4 && !LEGAL_SHORT_TERMS.has(nt)) continue;
+    // Never fuzzy-correct known legal abbreviations — "dui" should never become "due"
+    if (LEGAL_SHORT_TERMS.has(nt)) continue;
     if (fuzzyVocabulary.has(nt)) continue;
     const maxDist = nt.length >= 8 ? 2 : 1;
     let bestWord = '';
@@ -93,6 +96,10 @@ function normalizeText(text: string): string {
 // Common words that add noise if scored individually
 const STOP_WORDS = new Set(['the', 'and', 'for', 'are', 'but', 'not', 'you', 'all', 'can', 'her', 'was', 'one', 'our', 'out', 'day', 'get', 'has', 'him', 'his', 'how', 'its', 'may', 'new', 'now', 'own', 'say', 'she', 'two', 'who', 'did', 'use', 'way', 'had', 'let', 'put', 'set', 'too', 'any', 'few', 'far', 'off', 'old', 'why', 'ask', 'men', 'ran', 'run', 'see', 'try', 'yes', 'yet', 'ago', 'did', 'due', 'via', 'per', 'etc']);
 
+// Short legal abbreviations and acronyms that must NOT be filtered by the
+// 4-char minimum length rule and must NOT be fuzzy-corrected.
+const LEGAL_SHORT_TERMS = new Set(['dui', 'dwi', 'ice', 'tro', 'ada', 'fbi', 'doj', 'atf', 'oui', 'owi', 'ids', 'cps', 'tps']);
+
 // Returned by expandSynonyms — keeps direct query terms separate from
 // synonym-inferred terms so they can be scored at different weights.
 interface ExpandedQuery {
@@ -106,9 +113,10 @@ function expandSynonyms(query: string): ExpandedQuery {
 
   const directSet = new Set<string>([normalized]);
 
-  // For multi-word queries, individual meaningful words are direct matches
+  // For multi-word queries, individual meaningful words are direct matches.
+  // LEGAL_SHORT_TERMS (dui, ice, tro, etc.) bypass the 4-char minimum.
   for (const word of words) {
-    if (word.length >= 4 && !STOP_WORDS.has(word)) {
+    if ((word.length >= 4 || LEGAL_SHORT_TERMS.has(word)) && !STOP_WORDS.has(word)) {
       directSet.add(word);
     }
   }
@@ -262,7 +270,30 @@ function calculateScore(
   };
 
   const rawScore = direct.score + syn.score;
-  const score = rawScore * (typeBoosts[doc.type] || 1);
+
+  // Phrase coherence bonus: when a multi-word query has ALL its meaningful
+  // individual terms present in the document, the document is specifically
+  // about the query rather than tangentially mentioning one term.
+  // Only fires for 2+ meaningful terms; keeps the multiplier modest (1.2×)
+  // so it nudges rank rather than dominating it.
+  const meaningfulTerms = directTerms.filter(
+    t => !t.includes(' ') && t.length >= 4 && !STOP_WORDS.has(t)
+  );
+  let coherenceMultiplier = 1.0;
+  if (meaningfulTerms.length >= 2) {
+    const allPresent = meaningfulTerms.every(t => {
+      const nt = normalizeText(t);
+      return (
+        normalizedTitle.includes(nt) ||
+        normalizedContent.includes(nt) ||
+        normalizedAliases.some(a => a.includes(nt)) ||
+        normalizedTags.some(tag => tag.includes(nt))
+      );
+    });
+    if (allPresent) coherenceMultiplier = 1.2;
+  }
+
+  const score = rawScore * (typeBoosts[doc.type] || 1) * coherenceMultiplier;
   const matchedTerms = Array.from(new Set([...direct.matchedTerms, ...syn.matchedTerms]));
 
   return { score, matchedTerms };
@@ -1021,9 +1052,10 @@ export function buildSearchIndex(): void {
       title: 'Transportation Support Resources',
       titleEs: 'Recursos de Apoyo de Transporte',
       titleZh: '交通支持资源',
-      content: 'Transportation assistance for court appearances and legal appointments. Free or low-cost rides to court, bus passes, rideshare programs, and transportation for people with limited mobility.',
-      tags: ['transportation', 'rides', 'court transportation', 'bus pass', 'rideshare', 'getting to court'],
-      aliases: ['ride to court', 'free transportation', 'bus pass help', 'court ride'],
+      content: 'How to get to court, probation check-ins, and legal appointments when you have no car. Free and low-cost options: nonprofit court ride programs, bus pass assistance, rideshare subsidies, volunteer driver networks, and public transit trip planning. What to do if you will be late to court due to transportation — call your attorney immediately, transportation is not typically an excuse for missing a court date but documentation matters. Getting to probation or parole check-in appointments: missing a check-in can trigger a violation, so ask your officer in advance about transportation difficulties. Courthouse parking, ADA accessible transportation, and interpreter coordination for appointments.',
+      tags: ['transportation', 'rides', 'court transportation', 'bus pass', 'rideshare', 'getting to court', 'probation check-in', 'parole check-in', 'late to court', 'court ride', 'volunteer driver', 'ADA transportation'],
+      aliases: ['ride to court', 'free transportation', 'bus pass help', 'court ride', 'how do I get to court', 'no car for court', 'missing court transportation problem', 'probation appointment transportation', 'parole check-in transportation', 'late to court transportation'],
+      headings: ['Free rides to court', 'Bus pass assistance', 'What to do if you will be late', 'Probation and parole check-in transportation', 'ADA accessible transportation'],
       url: '/support/transportation'
     },
     {
@@ -1031,9 +1063,10 @@ export function buildSearchIndex(): void {
       title: 'Childcare Support Resources',
       titleEs: 'Recursos de Apoyo para el Cuidado de Niños',
       titleZh: '儿童照顾支持资源',
-      content: 'Childcare resources during court hearings and legal proceedings. Emergency childcare, subsidized childcare programs, and support for parents involved in the justice system.',
-      tags: ['childcare', 'child care', 'kids', 'children', 'parenting', 'court hearing childcare'],
-      aliases: ['childcare during court', 'babysitter help', 'child care assistance', 'kids during hearings'],
+      content: 'Finding childcare when you have court hearings, probation appointments, attorney meetings, or are dealing with a legal case. Emergency childcare options for same-day court dates. Subsidized daycare and Head Start programs for income-eligible families. Childcare voucher programs through local social services. What to tell the daycare if your schedule is unpredictable due to your case. If you are detained or incarcerated: who can care for your children, emergency custody arrangements, and how to prevent termination of parental rights by staying in contact through legal mail and phone calls. Your children\'s school has obligations to notify you of important events even if you are incarcerated. Rights of incarcerated parents regarding child protective services (CPS) proceedings.',
+      tags: ['childcare', 'child care', 'kids', 'children', 'parenting', 'court hearing childcare', 'emergency childcare', 'head start', 'childcare voucher', 'subsidized daycare', 'incarcerated parent', 'CPS', 'parental rights', 'DCFS'],
+      aliases: ['childcare during court', 'babysitter help', 'child care assistance', 'kids during hearings', 'who watches my kids during court', 'childcare emergency', 'no babysitter for court', 'children while in jail', 'parental rights incarceration', 'CPS and arrest', 'children when parent arrested'],
+      headings: ['Emergency childcare for court', 'Subsidized childcare programs', 'Head Start eligibility', 'If you are detained or incarcerated', 'Parental rights and CPS', 'Preventing termination of parental rights'],
       url: '/support/childcare'
     },
     {
@@ -1051,9 +1084,10 @@ export function buildSearchIndex(): void {
       title: 'Family Care Support Resources',
       titleEs: 'Recursos de Apoyo para el Cuidado Familiar',
       titleZh: '家庭照顾支持资源',
-      content: 'Support for families affected by the criminal justice system. Visitation rights, maintaining family bonds, parental rights during incarceration, and family counseling.',
-      tags: ['family', 'family care', 'visitation', 'parental rights', 'incarceration family', 'family counseling'],
-      aliases: ['visit someone in jail', 'parental rights', 'family support', 'maintain family contact'],
+      content: 'Support for maintaining family bonds during a criminal case or incarceration. Visitation rights: how to get on the visitor list, what ID is required, what you can and cannot bring, dress code requirements. Phone calls from jail: how calls are monitored and recorded, rate assistance programs, what never to say on a jail call. Letters and legal mail: the difference between regular mail (monitored) and legal mail from attorneys (confidential). Parental rights: your rights as a parent during incarceration, how to participate in custody hearings from jail via video, how to stay on your children\'s school contact list. Family counseling resources. Reunification services after release. Emergency planning: who will care for elderly or disabled family members if you are detained.',
+      tags: ['family', 'family care', 'visitation', 'parental rights', 'incarceration family', 'family counseling', 'prison visitation', 'jail phone calls', 'legal mail', 'family reunification', 'elderly care', 'custody hearing from jail'],
+      aliases: ['visit someone in jail', 'parental rights incarceration', 'family support', 'maintain family contact', 'keep in touch from jail', 'visit someone in prison', 'will I lose parental rights', 'custody while in jail', 'phone calls from jail', 'jail mail rules', 'family during incarceration'],
+      headings: ['Visitation rights', 'Getting on the visitor list', 'Phone calls from jail', 'Legal mail vs regular mail', 'Parental rights during incarceration', 'Custody hearings from jail', 'Family reunification after release', 'Emergency family planning'],
       url: '/support/family-care'
     },
     {
@@ -1082,9 +1116,10 @@ export function buildSearchIndex(): void {
       title: 'Personal Health Support Resources',
       titleEs: 'Recursos de Apoyo de Salud Personal',
       titleZh: '个人健康支持资源',
-      content: 'Personal health resources for people involved in the criminal justice system. Access to healthcare, medical appointments, prescription medications, insurance coverage, and managing health needs during your case. Free clinics, community health centers, and Medicaid enrollment assistance.',
-      tags: ['personal health', 'healthcare', 'medical', 'health insurance', 'medicaid', 'free clinic', 'prescription', 'health care'],
-      aliases: ['health care help', 'free medical care', 'doctor help', 'health insurance help', 'medicaid enrollment', 'medical assistance'],
+      content: 'Access to healthcare for people involved in the criminal justice system. Prescription medications: how to maintain access to prescriptions if detained, what to tell jail medical staff on intake, your right to necessary medications while incarcerated. Health insurance: arrest alone does not automatically terminate Medicaid (ACA protections). How to enroll in Medicaid after release. Free clinics and community health centers that serve people regardless of insurance status. CHIP for children of people involved in the system. Dental care and mental health services. Marketplace insurance enrollment during special enrollment periods triggered by release. Managing chronic conditions (diabetes, HIV, hypertension) during incarceration. Requesting medical care in jail: how to file a sick call request. ADA rights for people with disabilities in the criminal justice system.',
+      tags: ['personal health', 'healthcare', 'medical', 'health insurance', 'medicaid', 'free clinic', 'prescription', 'health care', 'prescription access', 'medication in custody', 'CHIP', 'dental care', 'community health center', 'ADA disability', 'chronic condition', 'sick call'],
+      aliases: ['health care help', 'free medical care', 'doctor help', 'health insurance help', 'medicaid enrollment', 'medical assistance', 'medication while in jail', 'lose health insurance arrested', 'medicaid after release', 'free clinic near me', 'prescription in jail', 'jail sick call', 'dental care low income', 'disability rights jail'],
+      headings: ['Prescription medications in custody', 'Medicaid and ACA protections', 'Enrolling in Medicaid after release', 'Free clinics and community health centers', 'CHIP for children', 'Dental care', 'Mental health services', 'Managing chronic conditions while incarcerated', 'ADA rights in the criminal justice system'],
       url: '/support/personal-health'
     },
     {
@@ -1423,10 +1458,13 @@ export function search(query: SearchQuery): SearchResponse {
   let results = runScoring(searchIndex, expandedQuery.directTerms, expandedQuery.synonymTerms, query.filters, query.language);
   let correctedQuery: string | undefined;
 
-  // Fuzzy typo correction: only fires when the primary pass found nothing.
-  // For each query word that isn't in the vocabulary, find the closest match
-  // within an edit-distance budget, then re-run scoring with corrected terms.
-  if (results.length === 0 && fuzzyVocabulary.size > 0) {
+  // Fuzzy typo correction: previously only fired on zero results, meaning
+  // a user who typed "probatoin" and got one weak unrelated result would
+  // never see the correction. Now fires whenever the top result is weak
+  // (score < 50), so near-miss typos always get a correction attempt.
+  // Uses corrected results only when they are substantially better (1.5×).
+  const topScore = results[0]?.score ?? 0;
+  if (fuzzyVocabulary.size > 0 && topScore < 50) {
     const corrections = tryFuzzyCorrect(expandedQuery.directTerms);
     if (corrections.size > 0) {
       let corrected = normalizeText(query.query);
@@ -1434,9 +1472,13 @@ export function search(query: SearchQuery): SearchResponse {
         corrected = corrected.replace(new RegExp(`\\b${escapeRegex(original)}\\b`, 'g'), replacement);
       }
       if (corrected !== normalizeText(query.query)) {
-        correctedQuery = corrected;
         const correctedExpanded = expandSynonyms(corrected);
-        results = runScoring(searchIndex, correctedExpanded.directTerms, correctedExpanded.synonymTerms, query.filters, query.language);
+        const correctedResults = runScoring(searchIndex, correctedExpanded.directTerms, correctedExpanded.synonymTerms, query.filters, query.language);
+        const correctedTopScore = correctedResults[0]?.score ?? 0;
+        if (correctedTopScore > topScore * 1.5 || (results.length === 0 && correctedResults.length > 0)) {
+          correctedQuery = corrected;
+          results = correctedResults;
+        }
       }
     }
   }

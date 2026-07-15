@@ -104,13 +104,49 @@ export const LEGAL_SYNONYMS: Record<string, string[]> = {
   'suppress': ['motion to suppress', 'exclude evidence', 'fourth amendment'],
   'evidence': ['suppress evidence', 'exclude evidence', 'motion to suppress'],
   // Supervision / collateral consequences bridge
-  // 'parole' and 'probation' now map to 'collateral consequences' so that queries
-  // like "on parole" surface the collateral consequences screener alongside
-  // the first-24-hours arrest guide.
   'probation': ['supervised release', 'community supervision', 'probation violation', 'collateral consequences', 'active supervision', 'revocation'],
   'parole': ['early release', 'supervised release', 'parole violation', 'collateral consequences', 'active supervision', 'revocation'],
   'supervision': ['probation', 'parole', 'supervised release', 'community supervision', 'collateral consequences', 'active supervision'],
   'revocation': ['probation revocation', 'parole revocation', 'parole violation', 'probation violation', 'collateral consequences'],
+  // Multi-word supervision queries (full-phrase keys — checked against normalized query)
+  'on parole': ['parole', 'collateral consequences', 'active supervision', 'revocation', 'parole hold'],
+  'on probation': ['probation', 'collateral consequences', 'active supervision', 'revocation', 'probation hold'],
+  // Supervision conditions / monitoring
+  'ankle': ['ankle monitor', 'electronic monitoring', 'supervised release', 'probation conditions', 'supervision'],
+  'monitor': ['ankle monitor', 'electronic monitoring', 'house arrest', 'supervision', 'probation'],
+  'violation': ['probation violation', 'parole violation', 'revocation', 'collateral consequences', 'contempt'],
+  'hold': ['parole hold', 'probation hold', 'immigration hold', 'ice hold', 'detention'],
+  // Warrants and court dates
+  'bench': ['bench warrant', 'failure to appear', 'missed court date', 'warrant'],
+  'appear': ['failure to appear', 'bench warrant', 'court date', 'missed hearing'],
+  'failure': ['failure to appear', 'bench warrant', 'missed court date', 'contempt of court'],
+  // Plea, sentencing, and post-conviction
+  'deal': ['plea deal', 'plea bargain', 'plea agreement', 'plea'],
+  'deferred': ['deferred adjudication', 'deferred sentence', 'diversion program', 'probation'],
+  'mandatory': ['mandatory minimum', 'sentencing guidelines', 'sentencing', 'minimum sentence'],
+  'minimum': ['mandatory minimum', 'sentencing', 'minimum sentence', 'federal sentencing guidelines'],
+  'restitution': ['victim compensation', 'court costs', 'fines', 'financial obligations', 'pay victim'],
+  'acquittal': ['not guilty', 'acquitted', 'charges dismissed', 'case dismissed'],
+  'acquitted': ['acquittal', 'not guilty', 'case dismissed', 'found not guilty'],
+  'appeal': ['conviction appeal', 'post-conviction relief', 'appellate court', 'appeal conviction'],
+  // Collateral consequences — benefits and housing
+  'snap': ['food stamps', 'snap benefits', 'public benefits', 'collateral consequences'],
+  'section': ['section 8', 'housing voucher', 'housing assistance', 'public benefits', 'hud'],
+  // Sex offender consequences
+  'registry': ['sex offender registry', 'sex offender registration', 'collateral consequences'],
+  'register': ['sex offender', 'registry', 'sex offender registration', 'collateral consequences'],
+  // Domestic violence / protective orders
+  'protective': ['protective order', 'restraining order', 'domestic violence', 'no contact order'],
+  'restraining': ['restraining order', 'protective order', 'domestic violence', 'order of protection'],
+  'domestic': ['domestic violence', 'restraining order', 'protective order', 'family court'],
+  // Immigration gaps
+  'daca': ['deferred action', 'dreamers', 'immigration', 'undocumented', 'work permit'],
+  'asylum': ['refugee', 'immigration', 'deportation', 'removal', 'asylum seeker'],
+  'detainer': ['ice detainer', 'immigration hold', 'ice hold', 'deportation', 'immigration detention'],
+  'green': ['green card', 'permanent resident', 'immigration', 'lawful permanent resident'],
+  // Advocate tools
+  'mitigation': ['sentencing mitigation', 'mitigation memo', 'advocate toolkit', 'character reference', 'sentencing'],
+  'intake': ['public defender intake', 'advocate toolkit', 'attorney intake', 'first meeting attorney'],
   // Offense levels
   'felony': ['serious crime', 'major offense', 'felony charge'],
   'misdemeanor': ['minor offense', 'petty crime', 'misdemeanor charge'],
