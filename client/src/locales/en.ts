@@ -1298,7 +1298,7 @@ export default {
         },
         "knowCustodyRules": {
           "title": "Know your custody rights and obligations",
-          "description": "If there is a custody order in place, review what it requires of you. Any changes to custody arrangements — temporary or otherwise — should involve communication with the other parent and ideally your attorney. Do not make informal changes to a formal custody order without legal guidance.",
+          "description": "If there is a custody order in place, review what it requires of you. Any changes to custody arrangements — temporary or otherwise — should involve communication with the other parent and ideally your attorney. Informal changes to a formal custody order without legal guidance can have unintended consequences.",
           "priority": "medium"
         }
       },
@@ -1365,7 +1365,7 @@ export default {
         },
         "q2": {
           "question": "What if I share custody with the other parent?",
-          "answer": "Any changes to custody or parenting schedules should follow your existing custody order and ideally involve communication with your co-parent. Do not make informal changes to a formal custody arrangement without speaking to your attorney first — doing so could have unintended legal consequences."
+          "answer": "Any changes to custody or parenting schedules should follow your existing custody order and ideally involve communication with your co-parent. Informal changes to a formal custody arrangement without speaking to your attorney first can have unintended legal consequences."
         },
         "q3": {
           "question": "Could my arrest or charges affect my custody rights?",
@@ -1499,7 +1499,7 @@ export default {
         },
         "q3": {
           "question": "I received an eviction notice. Do I have to leave?",
-          "answer": "No. An eviction notice starts a legal process — it does not mean you have to leave immediately. You have the right to respond to the eviction filing in court, request a hearing, and seek legal assistance. Many cases are resolved through payment plans or negotiation before a court order is issued. Do not leave voluntarily before understanding your options. Contact a tenant legal aid organization as soon as possible."
+          "answer": "No. An eviction notice starts a legal process — it does not mean you have to leave immediately. You have the right to respond to the eviction filing in court, request a hearing, and seek legal assistance. Many cases are resolved through payment plans or negotiation before a court order is issued. Leaving voluntarily before understanding your options may forfeit important tenant rights. Contact a tenant legal aid organization as soon as possible."
         },
         "q4": {
           "question": "Can a landlord refuse to rent to me or deny my application because of my charges?",
@@ -1925,7 +1925,7 @@ export default {
       "waiveTime": {
         "question": "Do you waive your right to a speedy trial?",
         "response": "I would like to discuss this with my attorney before answering.",
-        "explanation": "Never waive time without consulting your attorney. This affects important deadlines in your case."
+        "explanation": "Waiving time without consulting your attorney affects important deadlines — attorneys consistently recommend discussing this before responding."
       }
     },
     "bail": {
@@ -2286,7 +2286,7 @@ export default {
       },
       "evidenceToGather": {
         "title": "Evidence — Discuss With Your Attorney",
-        "warning": "Evidence decisions depend entirely on your specific case facts. Do not touch, move, share, or discard anything related to your case before speaking with your attorney."
+        "warning": "Evidence decisions depend entirely on your specific case facts. Touching, moving, sharing, or discarding anything related to your case before speaking with your attorney can affect what defenses are available."
       },
       "importantWarnings": {
         "title": "Important Warnings"
@@ -5344,7 +5344,7 @@ export default {
       "counselSixthBody": "This right attaches once formal charges are filed, typically at arraignment or indictment. From this point, police cannot question you about the charged offense outside your attorney's presence.",
       "counselGapTitle": "The gap: after arrest, before formal charges",
       "counselGapBody": "Between arrest and arraignment, your Sixth Amendment right has not yet attached for most purposes. This is the most dangerous window. Do not answer any questions during this period without an attorney present.",
-      "counselGapWarning": "Do not answer any questions during this period without an attorney present. Your invocation of silence must be clear and unambiguous.",
+      "counselGapWarning": "Answering questions without an attorney present during this window carries significant legal risk. Your invocation of silence must be clear and unambiguous.",
       "probationTitle": "If you're on probation or parole",
       "probationAlert": "If you are on probation or parole, a new arrest is a more serious situation. You are not just facing new charges. You are also likely facing a violation proceeding on your existing supervision. The two tracks run in parallel.",
       "probationImmediateTitle": "What happens immediately",
@@ -5365,7 +5365,7 @@ export default {
       "probationRights2": "You have the right to a revocation hearing before your supervision is formally revoked. This must include written notice of the alleged violation, disclosure of the evidence against you, the opportunity to be heard, and a neutral hearing officer.",
       "probationRights3": "You have the right to counsel at a revocation hearing if revocation could result in incarceration, which it typically does.",
       "probationStep1": "Tell your attorney about your supervision status immediately. It affects strategy for both the new case and the violation proceeding.",
-      "probationStep2": "Do not attempt to contact your PO directly without attorney guidance. Statements to your PO may not be protected.",
+      "probationStep2": "Contacting your PO directly without attorney guidance is generally inadvisable — statements to your PO may not carry the same legal protections.",
       "probationStep3": "Ask your attorney specifically: will bail on the new case release me, or is there a separate supervision hold? Are these the same attorney or do I need two?",
       "probationStep4": "Check whether your probation terms require self-reporting. Your attorney can help you decide if and how to respond.",
       "probationDisclaimer": "Violation outcomes vary widely by jurisdiction, the nature of the new offense, your supervision history, and your PO's discretion. An attorney who understands both tracks is essential.",
