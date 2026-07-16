@@ -54,11 +54,20 @@ interface CaseDetails {
   policeStatement?: string;
   witnessesPresent?: boolean;
   evidenceNotes?: string;
-  priorConvictions?: string;
+  priorConvictions?: boolean | null;
   employmentStatus?: string;
   familySituation?: string;
   selectedConcerns?: string[];
   language?: string;
+  // Background / collateral risk flags (new fields — all non-PII, pass through unchanged)
+  chargesUnknown?: boolean;
+  supervisionStatus?: string;
+  citizenshipStatus?: string;
+  hasMinorChildren?: boolean | null;
+  hasProfessionalLicense?: boolean | null;
+  hasHousingAssistance?: boolean | null;
+  civilUrgency?: Record<string, string>;
+  [key: string]: unknown;
 }
 
 /**
@@ -306,7 +315,10 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
     dob: 0,
   };
   
-  const redactField = (text: string | undefined): string => {
+  const redactField = (text: string | undefined | null): string => {
+    // Guard: only redact actual string values — booleans, null, undefined pass through as ''
+    if (text === null || text === undefined) return '';
+    if (typeof text !== 'string') return '';
     if (!text) return '';
     const original = text;
     const redacted = redactText(text);
@@ -323,6 +335,7 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
   };
   
   const redactedDetails: CaseDetails = {
+    // Non-PII structural fields — always pass through unchanged
     jurisdiction: caseDetails.jurisdiction,
     caseStage: caseDetails.caseStage,
     custodyStatus: caseDetails.custodyStatus,
@@ -330,16 +343,26 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
     witnessesPresent: caseDetails.witnessesPresent,
     charges: caseDetails.charges,
     language: caseDetails.language,
-    
+    selectedConcerns: caseDetails.selectedConcerns, // category IDs, not PII
+
+    // Background / collateral risk flags — enums and booleans, not PII
+    chargesUnknown: caseDetails.chargesUnknown,
+    supervisionStatus: caseDetails.supervisionStatus,
+    priorConvictions: caseDetails.priorConvictions,
+    citizenshipStatus: caseDetails.citizenshipStatus,
+    hasMinorChildren: caseDetails.hasMinorChildren,
+    hasProfessionalLicense: caseDetails.hasProfessionalLicense,
+    hasHousingAssistance: caseDetails.hasHousingAssistance,
+    civilUrgency: caseDetails.civilUrgency,
+
+    // Free-text fields — redact PII before sending to Claude
     arrestDate: redactField(caseDetails.arrestDate),
     arrestLocation: redactField(caseDetails.arrestLocation),
     incidentDescription: redactField(caseDetails.incidentDescription),
     policeStatement: redactField(caseDetails.policeStatement),
     evidenceNotes: redactField(caseDetails.evidenceNotes),
-    priorConvictions: redactField(caseDetails.priorConvictions),
     employmentStatus: redactField(caseDetails.employmentStatus),
     familySituation: redactField(caseDetails.familySituation),
-    selectedConcerns: caseDetails.selectedConcerns, // No PII in category IDs, pass through
   };
   
   const total = Object.values(allStats).reduce((sum, count) => sum + (count || 0), 0);
