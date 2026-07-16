@@ -1089,42 +1089,32 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </Alert>
       )}
 
-      {/* Urgent Takeaways — attorney notice (hardcoded) + AI critical alerts combined */}
-      {(() => {
-        const attorneyNotice = !guidance.caseData.hasAttorney
-          ? "If you cannot afford an attorney, ask the court to appoint you one at your next court appearance."
-          : null;
-        const allAlerts = [
-          ...(attorneyNotice ? [attorneyNotice] : []),
-          ...(guidance.criticalAlerts || []),
-        ];
-        if (allAlerts.length === 0) return null;
-        return (
-          <Alert
-            className="border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700"
-            data-testid="section-critical-alerts"
-          >
-            <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
-            <AlertDescription className="text-amber-800 dark:text-amber-200">
-              {allAlerts.length > 1 && (
-                <p className="font-semibold text-sm mb-2">Urgent Takeaways</p>
-              )}
-              {allAlerts.length === 1 ? (
-                <span className="text-sm">{allAlerts[0]}</span>
-              ) : (
-                <ul className="space-y-1.5 text-sm list-none">
-                  {allAlerts.map((alert, index) => (
-                    <li key={index} data-testid={`critical-alert-${index}`} className="flex items-start gap-2">
-                      <span className="mt-0.5 flex-shrink-0">•</span>
-                      <span>{renderWithLinks(alert)}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </AlertDescription>
-          </Alert>
-        );
-      })()}
+      {/* Urgent Takeaways — AI critical alerts only (time-sensitive, case-specific) */}
+      {guidance.criticalAlerts && guidance.criticalAlerts.length > 0 && (
+        <Alert
+          className="border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700"
+          data-testid="section-critical-alerts"
+        >
+          <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <AlertDescription className="text-amber-800 dark:text-amber-200">
+            {guidance.criticalAlerts.length > 1 && (
+              <p className="font-semibold text-sm mb-2">Urgent Takeaways</p>
+            )}
+            {guidance.criticalAlerts.length === 1 ? (
+              <span className="text-sm" data-testid="critical-alert-0">{renderWithLinks(guidance.criticalAlerts[0])}</span>
+            ) : (
+              <ul className="space-y-1.5 text-sm list-none">
+                {guidance.criticalAlerts.map((alert, index) => (
+                  <li key={index} data-testid={`critical-alert-${index}`} className="flex items-start gap-2">
+                    <span className="mt-0.5 flex-shrink-0">•</span>
+                    <span>{renderWithLinks(alert)}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </AlertDescription>
+        </Alert>
+      )}
 
       {/* Overview Section */}
       {guidance.overview && (
@@ -1317,38 +1307,6 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       {/* Documents You Should Have Section */}
       <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
-      {/* Urgent Deadlines */}
-      {getUrgentDeadlines().length > 0 && (
-        <Card className="border-border">
-          <CardHeader className="pb-3">
-            <CardTitle className="flex items-center gap-2 text-foreground">
-              <Clock className="h-5 w-5 text-muted-foreground" />
-              {t('legalGuidance.dashboard.upcomingDeadlines.title')}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {getUrgentDeadlines().map((deadline, index) => (
-                <div key={index} className="flex items-center justify-between p-3 bg-muted/30 rounded-lg border border-border">
-                  <div>
-                    <div className="font-medium text-foreground">{deadline.event}</div>
-                    <div className="text-sm text-muted-foreground">{deadline.description}</div>
-                  </div>
-                  <div className="text-right">
-                    <Badge variant={deadline.priority === 'critical' ? 'destructive' : 'secondary'}>
-                      {deadline.timeframe}
-                    </Badge>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* Local Court Variation Disclaimer */}
-            <LocalCourtDisclaimer jurisdiction={guidance.caseData.jurisdiction} />
-          </CardContent>
-        </Card>
-      )}
-
       {/* Immediate Actions Checklist */}
       <Card className="border-border">
         <CardHeader>
@@ -1473,6 +1431,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               })}
             </div>
           </div>
+          {/* Local Court Variation Disclaimer — timeframes vary by county */}
+          <LocalCourtDisclaimer jurisdiction={guidance.caseData?.jurisdiction ?? ''} />
         </CardContent>
       </Card>
 
@@ -1673,8 +1633,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </Collapsible>
         )}
 
-        {/* Important Warnings */}
-        {guidance.warnings.length > 0 && (
+        {/* Warnings & Court Preparation — merged into one collapsible */}
+        {(guidance.warnings.length > 0 || guidance.courtPreparation.length > 0) && (
           <Collapsible>
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
@@ -1682,7 +1642,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   <CardTitle className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <AlertTriangle className="h-5 w-5 text-red-600" />
-                      {t('legalGuidance.dashboard.importantWarnings.title')}
+                      {t('legalGuidance.dashboard.warningsAndPrep.title', 'Warnings & Court Preparation')}
                     </div>
                     <ChevronDown className="h-4 w-4" />
                   </CardTitle>
@@ -1691,48 +1651,37 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             </CollapsibleTrigger>
             <CollapsibleContent>
               <Card className="mt-2">
-                <CardContent className="pt-6">
-                  <ul className="space-y-2">
-                    {guidance.warnings.map((warning, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span className="text-red-600 mt-1">•</span>
-                        <span className="text-sm">{renderWithLinks(warning)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </CollapsibleContent>
-          </Collapsible>
-        )}
-
-        {/* Court Preparation */}
-        {guidance.courtPreparation.length > 0 && (
-          <Collapsible>
-            <CollapsibleTrigger asChild>
-              <Card className="cursor-pointer hover:bg-muted/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Gavel className="h-5 w-5 text-orange-600" />
-                      {t('legalGuidance.dashboard.courtPreparation.title')}
+                <CardContent className="pt-6 space-y-4">
+                  {guidance.warnings.length > 0 && (
+                    <div>
+                      {guidance.courtPreparation.length > 0 && (
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Things to Be Aware Of</p>
+                      )}
+                      <ul className="space-y-2">
+                        {guidance.warnings.map((warning, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <span className="text-red-600 mt-1">•</span>
+                            <span className="text-sm">{renderWithLinks(warning)}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <ChevronDown className="h-4 w-4" />
-                  </CardTitle>
-                </CardHeader>
-              </Card>
-            </CollapsibleTrigger>
-            <CollapsibleContent>
-              <Card className="mt-2">
-                <CardContent className="pt-6">
-                  <ul className="space-y-2">
-                    {guidance.courtPreparation.map((preparation, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <span className="text-orange-600 mt-1">•</span>
-                        <span className="text-sm">{preparation}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  )}
+                  {guidance.courtPreparation.length > 0 && (
+                    <div>
+                      {guidance.warnings.length > 0 && (
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2 pt-2 border-t border-border">Court Preparation</p>
+                      )}
+                      <ul className="space-y-2">
+                        {guidance.courtPreparation.map((preparation, index) => (
+                          <li key={index} className="flex items-start gap-2">
+                            <span className="text-orange-600 mt-1">•</span>
+                            <span className="text-sm">{renderWithLinks(preparation)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </CollapsibleContent>
