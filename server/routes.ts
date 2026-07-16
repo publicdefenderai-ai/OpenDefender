@@ -1192,12 +1192,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
-      // Generate personalized guidance based on case details
-      // chargesUnknown and civilUrgency are runtime flags (not DB columns) so passed separately
+      // Generate personalized guidance based on case details.
+      // These fields are not DB columns on legal_cases, so Zod strips them from
+      // validatedData. Re-inject from req.body so the AI prompt sees the full picture
+      // (probation status, priors, immigration, dependents, license, subsidized housing).
       const guidance = await generateLegalGuidance({
         ...validatedData,
         chargesUnknown: req.body.chargesUnknown === true,
         civilUrgency: req.body.civilUrgency,
+        supervisionStatus: req.body.supervisionStatus,
+        priorConvictions: req.body.priorConvictions,
+        citizenshipStatus: req.body.citizenshipStatus,
+        hasMinorChildren: req.body.hasMinorChildren,
+        hasProfessionalLicense: req.body.hasProfessionalLicense,
+        hasHousingAssistance: req.body.hasHousingAssistance,
       });
       
       // C-1: Strip incidentDescription before storing — raw user narrative may
@@ -1261,10 +1269,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
+      // Same field-restoration pattern as the non-streaming route above:
+      // preserve background answers Zod stripped so the prompt has them.
       const caseDataWithFlags = {
         ...validatedData,
         chargesUnknown: req.body.chargesUnknown === true,
         civilUrgency: req.body.civilUrgency,
+        supervisionStatus: req.body.supervisionStatus,
+        priorConvictions: req.body.priorConvictions,
+        citizenshipStatus: req.body.citizenshipStatus,
+        hasMinorChildren: req.body.hasMinorChildren,
+        hasProfessionalLicense: req.body.hasProfessionalLicense,
+        hasHousingAssistance: req.body.hasHousingAssistance,
       };
 
       // Charge lookup (same guard logic as generateLegalGuidance)

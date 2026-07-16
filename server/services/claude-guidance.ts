@@ -665,7 +665,72 @@ function extractJSON(responseText: string): string {
 }
 
 // Validate Claude response structure
+// Coerce a value into a display string. Claude sometimes returns objects like
+// { action: "...", reason: "..." } where the schema says string. We prefer known
+// display keys, then fall back to JSON stringification so nothing crashes the
+// renderer. Mirrors the client-side guard in renderWithLinks (guidance-dashboard).
+const CLAUDE_STRING_FALLBACK_KEYS = [
+  'action', 'step', 'text', 'description', 'consequence', 'warning',
+  'right', 'evidence', 'preparation', 'event', 'stage', 'timeframe',
+];
+function coerceToString(raw: unknown): string {
+  if (typeof raw === 'string') return raw;
+  if (raw === null || raw === undefined) return '';
+  if (typeof raw === 'object') {
+    const obj = raw as Record<string, unknown>;
+    for (const key of CLAUDE_STRING_FALLBACK_KEYS) {
+      const val = obj[key];
+      if (typeof val === 'string' && val.length > 0) return val;
+    }
+    try { return JSON.stringify(raw); } catch { return ''; }
+  }
+  return String(raw);
+}
+
+// Normalize Claude's response so downstream renderers never see objects where
+// strings are expected. Rejects empty items after coercion. Mutates `data`.
+function normalizeStringFields(data: any): void {
+  const stringArrayFields = [
+    'criticalAlerts', 'nextSteps', 'rights',
+    'warnings', 'evidenceToGather', 'courtPreparation', 'avoidActions',
+  ];
+  for (const field of stringArrayFields) {
+    if (Array.isArray(data[field])) {
+      data[field] = data[field]
+        .map(coerceToString)
+        .filter((s: string) => s.length > 0);
+    }
+  }
+  if (Array.isArray(data.immediateActions)) {
+    data.immediateActions = data.immediateActions
+      .map((item: any) => ({ ...item, action: coerceToString(item?.action) }))
+      .filter((item: any) => item.action.length > 0);
+  }
+  if (Array.isArray(data.deadlines)) {
+    data.deadlines = data.deadlines
+      .map((item: any) => ({
+        ...item,
+        event: coerceToString(item?.event),
+        description: coerceToString(item?.description),
+        timeframe: coerceToString(item?.timeframe),
+      }))
+      .filter((item: any) => item.event.length > 0);
+  }
+  if (Array.isArray(data.timeline)) {
+    data.timeline = data.timeline
+      .map((item: any) => ({
+        ...item,
+        stage: coerceToString(item?.stage),
+        description: coerceToString(item?.description),
+        timeframe: coerceToString(item?.timeframe),
+      }))
+      .filter((item: any) => item.stage.length > 0);
+  }
+}
+
 function validateClaudeResponse(data: any): void {
+  normalizeStringFields(data);
+
   const validUrgencies = ['urgent', 'high', 'medium', 'low'];
   const validPriorities = ['critical', 'important', 'normal'];
 
