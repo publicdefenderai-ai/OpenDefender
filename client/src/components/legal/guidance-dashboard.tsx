@@ -484,6 +484,80 @@ function PrecedentCasesSection({
   );
 }
 
+// categoryMeta used by CollateralConsequencesCard — defined at module level so the
+// named component below is stable across renders (no inline object recreation).
+const categoryMeta: Record<string, { label: string; Icon: React.ElementType; color: string }> = {
+  drivers_license:        { label: "Driver's License",        Icon: Car,          color: "text-amber-600" },
+  immigration:            { label: "Immigration Status",       Icon: Flag,         color: "text-red-600" },
+  housing:                { label: "Housing",                  Icon: Home,         color: "text-orange-600" },
+  employment:             { label: "Employment & Licensing",   Icon: Briefcase,    color: "text-blue-600" },
+  custody:                { label: "Child Custody",            Icon: Baby,         color: "text-purple-600" },
+  benefits:               { label: "Public Benefits",          Icon: DollarSign,   color: "text-green-600" },
+  firearms:               { label: "Firearms Rights",          Icon: Shield,       color: "text-slate-600" },
+  registry:               { label: "Sex Offender Registry",    Icon: AlertTriangle, color: "text-red-700" },
+  supervision_revocation: { label: "Probation / Parole",       Icon: Activity,     color: "text-amber-700" },
+  other:                  { label: "Other Consequence",        Icon: AlertTriangle, color: "text-slate-600" },
+};
+
+function CollateralConsequencesCard({
+  items,
+}: {
+  items: Array<{ category: string; consequence: string; timing: string; actionNote: string }>;
+}) {
+  return (
+    <Collapsible defaultOpen>
+      <CollapsibleTrigger asChild>
+        <Card className="cursor-pointer hover:bg-muted/50 border-amber-200 dark:border-amber-800">
+          <CardHeader>
+            <CardTitle className="flex items-center justify-between text-foreground">
+              <div className="flex items-center gap-2">
+                <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                Beyond the Sentence: What Else May Be at Risk
+                <Badge variant="secondary" className="text-xs">{items.length}</Badge>
+              </div>
+              <ChevronDown className="h-4 w-4 text-muted-foreground" />
+            </CardTitle>
+          </CardHeader>
+        </Card>
+      </CollapsibleTrigger>
+      <CollapsibleContent>
+        <Card className="mt-2 border-amber-200 dark:border-amber-800">
+          <CardContent className="pt-5 space-y-1">
+            <p className="text-xs text-muted-foreground pb-3">
+              These are consequences that go beyond the sentence itself. They often take effect automatically — sometimes upon a guilty plea, before sentencing. Raise each one with your attorney before any plea decision.
+            </p>
+            <div className="space-y-3">
+              {items.map((item, i) => {
+                const meta = categoryMeta[item.category] || categoryMeta.other;
+                const IconComp = meta.Icon;
+                return (
+                  <div key={i} className="p-3 rounded-lg border border-amber-100 dark:border-amber-900/40 bg-amber-50/40 dark:bg-amber-900/10">
+                    <div className="flex items-center gap-2 mb-1">
+                      <IconComp className={`h-3.5 w-3.5 ${meta.color} flex-shrink-0`} />
+                      <span className="text-xs font-semibold text-foreground">{meta.label}</span>
+                      <Badge variant="outline" className="text-xs ml-auto">{item.timing}</Badge>
+                    </div>
+                    <p className="text-sm text-foreground mb-1">{item.consequence}</p>
+                    <p className="text-xs text-muted-foreground italic">{item.actionNote}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="pt-3 flex items-center justify-between">
+              <p className="text-xs text-muted-foreground">These risks vary by state and charge. Verify with your attorney.</p>
+              <Link href="/collateral-consequences">
+                <Button variant="outline" size="sm" className="text-xs gap-1 h-7">
+                  Full Guide <ExternalLink className="h-3 w-3" />
+                </Button>
+              </Link>
+            </div>
+          </CardContent>
+        </Card>
+      </CollapsibleContent>
+    </Collapsible>
+  );
+}
+
 // Your Charges Section - Plain English explanation of charges
 interface LiveStatuteResult {
   success: boolean;
@@ -914,8 +988,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 <Scale className="h-5 w-5 text-muted-foreground" />
                 <CardTitle className="text-xl text-foreground">
                   {guidance.chargeClassifications && guidance.chargeClassifications.length > 0
-                    ? `Guidance: ${formatChargeName(guidance.chargeClassifications[0].name)} in ${guidance.caseData.jurisdiction.toUpperCase()}`
-                    : `Case Roadmap: ${guidance.caseData.jurisdiction.toUpperCase()}`}
+                    ? `Guidance: ${formatChargeName(guidance.chargeClassifications[0].name)} in ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`
+                    : `Case Roadmap: ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`}
                 </CardTitle>
               </div>
               {guidance.generatedAt && (
@@ -1096,7 +1170,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           <div className="flex-1">
             <p className="text-sm text-slate-700 dark:text-slate-300" data-testid="text-validation-reassurance">
               {t('guidance.validation.reassurance', 
-                `This guidance is based on ${guidance.caseData.jurisdiction.toUpperCase()} criminal statutes and publicly available legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
+                `This guidance is based on ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()} criminal statutes and publicly available legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
               )}
             </p>
             
@@ -1189,7 +1263,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   </div>
 
                   {/* Issues - only show if there are any */}
-                  {guidance.validation.issues.length > 0 && (
+                  {(guidance.validation.issues?.length ?? 0) > 0 && (
                     <div className="pt-2 border-t border-slate-200 dark:border-slate-600 space-y-1.5">
                       {guidance.validation.issues.map((issue, index) => (
                         <div 
@@ -1650,72 +1724,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         )}
 
         {/* Collateral Consequences */}
-        {guidance.collateralConsequences && guidance.collateralConsequences.length > 0 && (() => {
-          const categoryMeta: Record<string, { label: string; Icon: React.ElementType; color: string }> = {
-            drivers_license:        { label: "Driver's License",        Icon: Car,          color: "text-amber-600" },
-            immigration:            { label: "Immigration Status",       Icon: Flag,         color: "text-red-600" },
-            housing:                { label: "Housing",                  Icon: Home,         color: "text-orange-600" },
-            employment:             { label: "Employment & Licensing",   Icon: Briefcase,    color: "text-blue-600" },
-            custody:                { label: "Child Custody",            Icon: Baby,         color: "text-purple-600" },
-            benefits:               { label: "Public Benefits",          Icon: DollarSign,   color: "text-green-600" },
-            firearms:               { label: "Firearms Rights",          Icon: Shield,       color: "text-slate-600" },
-            registry:               { label: "Sex Offender Registry",    Icon: AlertTriangle, color: "text-red-700" },
-            supervision_revocation: { label: "Probation / Parole",       Icon: Activity,     color: "text-amber-700" },
-            other:                  { label: "Other Consequence",        Icon: AlertTriangle, color: "text-slate-600" },
-          };
-          return (
-            <Collapsible defaultOpen>
-              <CollapsibleTrigger asChild>
-                <Card className="cursor-pointer hover:bg-muted/50 border-amber-200 dark:border-amber-800">
-                  <CardHeader>
-                    <CardTitle className="flex items-center justify-between text-foreground">
-                      <div className="flex items-center gap-2">
-                        <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
-                        Beyond the Sentence: What Else May Be at Risk
-                        <Badge variant="secondary" className="text-xs">{guidance.collateralConsequences!.length}</Badge>
-                      </div>
-                      <ChevronDown className="h-4 w-4 text-muted-foreground" />
-                    </CardTitle>
-                  </CardHeader>
-                </Card>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <Card className="mt-2 border-amber-200 dark:border-amber-800">
-                  <CardContent className="pt-5 space-y-1">
-                    <p className="text-xs text-muted-foreground pb-3">
-                      These are consequences that go beyond the sentence itself. They often take effect automatically — sometimes upon a guilty plea, before sentencing. Raise each one with your attorney before any plea decision.
-                    </p>
-                    <div className="space-y-3">
-                      {guidance.collateralConsequences!.map((item, i) => {
-                        const meta = categoryMeta[item.category] || categoryMeta.other;
-                        const IconComp = meta.Icon;
-                        return (
-                          <div key={i} className="p-3 rounded-lg border border-amber-100 dark:border-amber-900/40 bg-amber-50/40 dark:bg-amber-900/10">
-                            <div className="flex items-center gap-2 mb-1">
-                              <IconComp className={`h-3.5 w-3.5 ${meta.color} flex-shrink-0`} />
-                              <span className="text-xs font-semibold text-foreground">{meta.label}</span>
-                              <Badge variant="outline" className="text-xs ml-auto">{item.timing}</Badge>
-                            </div>
-                            <p className="text-sm text-foreground mb-1">{item.consequence}</p>
-                            <p className="text-xs text-muted-foreground italic">{item.actionNote}</p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <div className="pt-3 flex items-center justify-between">
-                      <p className="text-xs text-muted-foreground">These risks vary by state and charge. Verify with your attorney.</p>
-                      <Link href="/collateral-consequences">
-                        <Button variant="outline" size="sm" className="text-xs gap-1 h-7">
-                          Full Guide <ExternalLink className="h-3 w-3" />
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CollapsibleContent>
-            </Collapsible>
-          );
-        })()}
+        {guidance.collateralConsequences && guidance.collateralConsequences.length > 0 && (
+          <CollateralConsequencesCard items={guidance.collateralConsequences} />
+        )}
 
         {/* Personalized Mock Q&A Practice */}
         {guidance.mockQA && guidance.mockQA.length > 0 && (

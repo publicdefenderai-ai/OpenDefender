@@ -465,6 +465,7 @@ export default function CaseGuidance() {
           chargeClassifications: guidance.chargeClassifications,
           mockQA: guidance.mockQA,
           collateralConsequences: guidance.collateralConsequences,
+          uncertainties: (guidance as any).uncertainties,
           caseData: {
             ...data,
             charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges
