@@ -190,7 +190,23 @@ interface GuidanceDashboardProps {
 // Utility function to format charge names in plain English
 // Renders inline markdown: **bold** labels and [text](url) links.
 // Internal paths (/support/...) use wouter Link; external URLs use <a>.
-function renderWithLinks(text: string): React.ReactNode {
+function renderWithLinks(raw: unknown): React.ReactNode {
+  // Claude occasionally returns an object instead of a string; coerce safely.
+  const text: string =
+    typeof raw === 'string'
+      ? raw
+      : raw !== null && raw !== undefined && typeof (raw as any) === 'object'
+        ? (
+            (raw as any).action ??
+            (raw as any).step ??
+            (raw as any).text ??
+            (raw as any).description ??
+            (raw as any).consequence ??
+            (raw as any).warning ??
+            JSON.stringify(raw)
+          )
+        : String(raw ?? '');
+
   // Split on **bold** and [link](url) tokens
   const tokens = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
   if (tokens.length === 1) return text;
