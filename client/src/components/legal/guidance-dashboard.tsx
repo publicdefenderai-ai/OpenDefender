@@ -190,7 +190,7 @@ interface GuidanceDashboardProps {
 // Utility function to format charge names in plain English
 // Renders inline markdown: **bold** labels and [text](url) links.
 // Internal paths (/support/...) use wouter Link; external URLs use <a>.
-function renderWithLinks(raw: unknown): React.ReactNode {
+function renderWithLinks(raw: unknown, navigate?: (href: string) => void): React.ReactNode {
   // Claude occasionally returns an object instead of a string; coerce safely.
   const text: string =
     typeof raw === 'string'
@@ -221,6 +221,17 @@ function renderWithLinks(raw: unknown): React.ReactNode {
         if (linkMatch) {
           const [, label, href] = linkMatch;
           if (href.startsWith('/')) {
+            if (navigate) {
+              return (
+                <button
+                  key={i}
+                  onClick={() => navigate(href)}
+                  className="underline underline-offset-2 hover:opacity-80 font-medium text-left"
+                >
+                  {label}
+                </button>
+              );
+            }
             return <Link key={i} href={href} className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</Link>;
           }
           return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</a>;
@@ -1108,13 +1119,13 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               <p className="font-semibold text-sm mb-2">Urgent Takeaways</p>
             )}
             {guidance.criticalAlerts.length === 1 ? (
-              <span className="text-sm" data-testid="critical-alert-0">{renderWithLinks(guidance.criticalAlerts[0])}</span>
+              <span className="text-sm" data-testid="critical-alert-0">{renderWithLinks(guidance.criticalAlerts[0], guardedNavigate)}</span>
             ) : (
               <ul className="space-y-1.5 text-sm list-none">
                 {guidance.criticalAlerts.map((alert, index) => (
                   <li key={index} data-testid={`critical-alert-${index}`} className="flex items-start gap-2">
                     <span className="mt-0.5 flex-shrink-0">•</span>
-                    <span>{renderWithLinks(alert)}</span>
+                    <span>{renderWithLinks(alert, guardedNavigate)}</span>
                   </li>
                 ))}
               </ul>
@@ -1144,7 +1155,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-guidance-overview">
-              {renderWithLinks(guidance.overview)}
+              {renderWithLinks(guidance.overview, guardedNavigate)}
             </p>
           </CardContent>
         </Card>
@@ -1345,7 +1356,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     completedActions.has(actionItem.action) ? 'line-through text-muted-foreground' : ''
                   }`}
                 >
-                  {renderWithLinks(actionItem.action)}
+                  {renderWithLinks(actionItem.action, guardedNavigate)}
                 </label>
                 <Badge 
                   variant={getUrgencyBadgeVariant(actionItem.urgency)}
@@ -1459,7 +1470,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   <div className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
                     {index + 1}
                   </div>
-                  <span className="flex-1 text-sm text-foreground">{renderWithLinks(step)}</span>
+                  <span className="flex-1 text-sm text-foreground">{renderWithLinks(step, guardedNavigate)}</span>
                 </div>
               ))}
             </div>
@@ -1668,7 +1679,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                         {guidance.warnings.map((warning, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-red-600 mt-1">•</span>
-                            <span className="text-sm">{renderWithLinks(warning)}</span>
+                            <span className="text-sm">{renderWithLinks(warning, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1683,7 +1694,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                         {guidance.courtPreparation.map((preparation, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-orange-600 mt-1">•</span>
-                            <span className="text-sm">{renderWithLinks(preparation)}</span>
+                            <span className="text-sm">{renderWithLinks(preparation, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1731,7 +1742,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     {guidance.avoidActions.map((action, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-red-500 mt-1">•</span>
-                        <span className="text-sm">{renderWithLinks(action)}</span>
+                        <span className="text-sm">{renderWithLinks(action, guardedNavigate)}</span>
                       </li>
                     ))}
                   </ul>

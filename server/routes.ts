@@ -1301,7 +1301,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const useAI = !!process.env.ANTHROPIC_API_KEY;
       let guidance: any;
 
-      if (useAI && (caseDataWithFlags.incidentDescription || (caseDataWithFlags.selectedConcerns && caseDataWithFlags.selectedConcerns.length > 0))) {
+      if (useAI) {
         try {
           guidance = await streamClaudeGuidance(
             caseDataWithFlags as any,
