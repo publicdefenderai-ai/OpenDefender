@@ -987,10 +987,17 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
   const handleConfirmExport = () => {
     setShowExportWarning(false);
-    // Generate PDF entirely on client-side - no data sent to external servers
-    generateGuidancePDF(guidance, i18n.language);
-    // Notify parent that export has been completed
-    onExport?.();
+    try {
+      // Generate PDF entirely on client-side — no data sent to external servers
+      generateGuidancePDF(guidance, i18n.language);
+      // Notify parent that export has been completed
+      onExport?.();
+    } catch (err) {
+      console.error('[PDF export error]', err);
+      // Surface the failure — previously this threw silently and the dialog
+      // just closed, leaving the user wondering why nothing happened.
+      alert(t('exportWarning.exportFailed', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'));
+    }
   };
 
   return (

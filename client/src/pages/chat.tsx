@@ -987,10 +987,6 @@ export default function ChatPage() {
       formattedContent += `**Next Steps**\n${data.nextSteps.map(s => `• ${s}`).join('\n')}\n\n`;
     }
     
-    if (data.deadlines && data.deadlines.length > 0) {
-      formattedContent += `**Important Deadlines**\n${data.deadlines.map(d => `• ${d.event}: ${d.timeframe}`).join('\n')}\n\n`;
-    }
-    
     if (data.resources && data.resources.length > 0) {
       formattedContent += `**Resources**\n${data.resources.map(r => `• ${r.type}: ${r.description}`).join('\n')}`;
     }
@@ -1101,7 +1097,7 @@ export default function ChatPage() {
         },
       } as any; // Type cast to avoid strict typing issues with guidance data format
       
-      generateGuidancePDF(enhancedGuidance, 'en');
+      generateGuidancePDF(enhancedGuidance, i18n.language);
       actions.setHasExported(true);
       toast({ title: t('chat.export.success', 'PDF downloaded successfully') });
       

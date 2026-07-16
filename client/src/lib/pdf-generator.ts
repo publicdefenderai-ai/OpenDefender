@@ -225,6 +225,30 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   let yPosition = 20;
   const isSpanish = language === 'es';
 
+  // Defensive normalization — Claude may return partial responses with missing fields.
+  // Using a safe object prevents hard crashes when any array or caseData field is absent.
+  const safe = {
+    criticalAlerts:   Array.isArray(guidance.criticalAlerts)        ? guidance.criticalAlerts        : [],
+    immediateActions: Array.isArray(guidance.immediateActions)      ? guidance.immediateActions      : [],
+    nextSteps:        Array.isArray(guidance.nextSteps)             ? guidance.nextSteps             : [],
+    deadlines:        Array.isArray(guidance.deadlines)             ? guidance.deadlines             : [],
+    rights:           Array.isArray(guidance.rights)                ? guidance.rights                : [],
+    resources:        Array.isArray(guidance.resources)             ? guidance.resources             : [],
+    warnings:         Array.isArray(guidance.warnings)              ? guidance.warnings              : [],
+    evidenceToGather: Array.isArray(guidance.evidenceToGather)      ? guidance.evidenceToGather      : [],
+    courtPreparation: Array.isArray(guidance.courtPreparation)      ? guidance.courtPreparation      : [],
+    avoidActions:     Array.isArray(guidance.avoidActions)          ? guidance.avoidActions          : [],
+    timeline:         Array.isArray(guidance.timeline)              ? guidance.timeline              : [],
+    mockQA:           Array.isArray(guidance.mockQA)                ? guidance.mockQA               : [],
+  };
+  const caseData = guidance.caseData ?? {
+    jurisdiction: 'Unknown',
+    charges: 'Not specified',
+    caseStage: 'Not specified',
+    custodyStatus: 'Not specified',
+    hasAttorney: false,
+  };
+
   // Localized labels
   const labels = isSpanish ? {
     title: 'Su Guía de Ayuda Legal',
@@ -384,10 +408,10 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   doc.setFont('helvetica', 'normal');
   
   const summaryData = [
-    [labels.yourState, guidance.caseData.jurisdiction.toUpperCase()],
-    [labels.processStage, guidance.caseData.caseStage],
-    [labels.inJail, guidance.caseData.custodyStatus],
-    [labels.hasLawyer, guidance.caseData.hasAttorney ? labels.yes : labels.no],
+    [labels.yourState, (caseData.jurisdiction || 'Unknown').toUpperCase()],
+    [labels.processStage, caseData.caseStage || 'Not specified'],
+    [labels.inJail, caseData.custodyStatus || 'Not specified'],
+    [labels.hasLawyer, caseData.hasAttorney ? labels.yes : labels.no],
   ];
 
   if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
@@ -398,7 +422,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       ]);
     });
   } else {
-    summaryData.push([labels.charges, guidance.caseData.charges]);
+    summaryData.push([labels.charges, caseData.charges || 'Not specified']);
   }
 
   autoTable(doc, {
@@ -548,27 +572,27 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   }
 
   // Critical Alerts / Urgent Takeaways
-  if (guidance.criticalAlerts && guidance.criticalAlerts.length > 0) {
+  if (safe.criticalAlerts.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.setTextColor(180, 100, 0);
-    doc.text(guidance.criticalAlerts.length > 1 ? 'Urgent Takeaways' : 'Urgent Takeaway', margin, yPosition);
+    doc.text(safe.criticalAlerts.length > 1 ? 'Urgent Takeaways' : 'Urgent Takeaway', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
-    guidance.criticalAlerts.forEach((alert) => {
+    safe.criticalAlerts.forEach((alert) => {
       checkPageBreak();
-      yPosition = addText(`   • ${pl(alert)}`, margin + 5, yPosition);
+      yPosition = addText(`   • ${pl(typeof alert === 'string' ? alert : String(alert))}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
   }
 
   // Immediate Actions
-  if (guidance.immediateActions.length > 0) {
+  if (safe.immediateActions.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -580,17 +604,17 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
 
-    guidance.immediateActions.forEach((actionItem, idx) => {
+    safe.immediateActions.forEach((actionItem) => {
       checkPageBreak();
-      const urgencyLabel = `[${actionItem.urgency.toUpperCase()}]`;
-      yPosition = addText(`   [ ] ${urgencyLabel} ${pl(actionItem.action)}`, margin + 5, yPosition);
+      const urgencyLabel = `[${(actionItem.urgency || 'medium').toUpperCase()}]`;
+      yPosition = addText(`   [ ] ${urgencyLabel} ${pl(actionItem.action || '')}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
   }
 
   // Deadlines
-  if (guidance.deadlines.length > 0) {
+  if (safe.deadlines.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -598,7 +622,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.text(labels.importantDates, margin, yPosition);
     yPosition += 8;
 
-    const deadlineData = guidance.deadlines.map(deadline => [
+    const deadlineData = safe.deadlines.map(deadline => [
       deadline.event,
       deadline.timeframe,
       deadline.priority.toUpperCase(),
@@ -625,7 +649,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   }
 
   // Documents You Should Have
-  const phase = mapCaseStageToPhase(guidance.caseData.caseStage);
+  const phase = mapCaseStageToPhase(caseData.caseStage);
   const legalDocuments = getDocumentsForPhase(phase, 'criminal');
   if (legalDocuments.length > 0) {
     checkPageBreak(40);
@@ -664,7 +688,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   }
 
   // Your Rights
-  if (guidance.rights.length > 0) {
+  if (safe.rights.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -676,16 +700,16 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
 
-    guidance.rights.forEach((right, idx) => {
+    safe.rights.forEach((right) => {
       checkPageBreak();
-      yPosition = addText(`• ${right}`, margin + 5, yPosition);
+      yPosition = addText(`• ${typeof right === 'string' ? right : String(right)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
   }
 
   // Next Steps
-  if (guidance.nextSteps.length > 0) {
+  if (safe.nextSteps.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -696,16 +720,16 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
 
-    guidance.nextSteps.forEach((step, idx) => {
+    safe.nextSteps.forEach((step, idx) => {
       checkPageBreak();
-      yPosition = addText(`${idx + 1}. ${pl(step)}`, margin + 5, yPosition);
+      yPosition = addText(`${idx + 1}. ${pl(typeof step === 'string' ? step : String(step))}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
   }
 
   // Evidence to Gather
-  if (guidance.evidenceToGather.length > 0) {
+  if (safe.evidenceToGather.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -715,35 +739,54 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
 
-    guidance.evidenceToGather.forEach((evidence, idx) => {
+    safe.evidenceToGather.forEach((evidence) => {
       checkPageBreak();
-      yPosition = addText(`   [ ] ${evidence}`, margin + 5, yPosition);
+      yPosition = addText(`   [ ] ${typeof evidence === 'string' ? evidence : String(evidence)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
   }
 
-  // Court Preparation
-  if (guidance.courtPreparation.length > 0) {
+  // Court Preparation & Warnings — combined section mirrors the dashboard UI
+  const hasCourt = safe.courtPreparation.length > 0;
+  const hasWarn  = safe.warnings.length > 0;
+  if (hasCourt || hasWarn) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    doc.text(labels.courtPrep, margin, yPosition);
+    doc.setTextColor(200, 100, 0);
+    doc.text(`${labels.warnings} & ${labels.courtPrep}`, margin, yPosition);
     yPosition += 8;
-
     doc.setFontSize(10);
     doc.setFont('helvetica', 'normal');
+    doc.setTextColor(0, 0, 0);
 
-    guidance.courtPreparation.forEach((item, idx) => {
-      checkPageBreak();
-      yPosition = addText(`   [ ] ${item}`, margin + 5, yPosition);
-      yPosition += 3;
-    });
+    if (hasWarn) {
+      safe.warnings.forEach((warning) => {
+        checkPageBreak();
+        yPosition = addText(`   * ${typeof warning === 'string' ? warning : String(warning)}`, margin + 5, yPosition);
+        yPosition += 3;
+      });
+      if (hasCourt) {
+        yPosition += 3;
+        doc.setDrawColor(200, 200, 200);
+        doc.line(margin, yPosition, pageWidth - margin, yPosition);
+        yPosition += 6;
+      }
+    }
+
+    if (hasCourt) {
+      safe.courtPreparation.forEach((item) => {
+        checkPageBreak();
+        yPosition = addText(`   [ ] ${typeof item === 'string' ? item : String(item)}`, margin + 5, yPosition);
+        yPosition += 3;
+      });
+    }
     yPosition += 5;
   }
 
   // Things to Avoid
-  if (guidance.avoidActions.length > 0) {
+  if (safe.avoidActions.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -755,37 +798,16 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setFont('helvetica', 'normal');
     doc.setTextColor(0, 0, 0);
 
-    guidance.avoidActions.forEach((action, idx) => {
+    safe.avoidActions.forEach((action) => {
       checkPageBreak();
-      yPosition = addText(`   - ${action}`, margin + 5, yPosition);
-      yPosition += 3;
-    });
-    yPosition += 5;
-  }
-
-  // Warnings
-  if (guidance.warnings.length > 0) {
-    checkPageBreak(30);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(200, 100, 0);
-    doc.text(labels.warnings, margin, yPosition);
-    yPosition += 8;
-
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(0, 0, 0);
-
-    guidance.warnings.forEach((warning, idx) => {
-      checkPageBreak();
-      yPosition = addText(`   * ${warning}`, margin + 5, yPosition);
+      yPosition = addText(`   - ${typeof action === 'string' ? action : String(action)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
   }
 
   // Resources
-  if (guidance.resources.length > 0) {
+  if (safe.resources.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -793,10 +815,10 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.text(labels.resources, margin, yPosition);
     yPosition += 8;
 
-    const resourceData = guidance.resources.map(resource => [
-      resource.type,
-      resource.description,
-      resource.contact,
+    const resourceData = safe.resources.map(resource => [
+      resource.type || '',
+      resource.description || '',
+      resource.contact || '',
       resource.hours || labels.na,
       resource.website || labels.na
     ]);
@@ -822,18 +844,18 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   }
 
   // Timeline
-  if (guidance.timeline.length > 0) {
+  if (safe.timeline.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
     doc.text(labels.timeline, margin, yPosition);
     yPosition += 8;
 
-    const timelineData = guidance.timeline.map(stage => [
+    const timelineData = safe.timeline.map(stage => [
       stage.completed ? '[X]' : '[ ]',
-      stage.stage,
-      stage.description,
-      stage.timeframe
+      stage.stage || '',
+      stage.description || '',
+      stage.timeframe || ''
     ]);
 
     autoTable(doc, {
@@ -856,7 +878,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   }
 
   // Practice Q&A Section
-  if (guidance.mockQA && guidance.mockQA.length > 0) {
+  if (safe.mockQA.length > 0) {
     checkPageBreak(60);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
@@ -872,7 +894,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     
     doc.setTextColor(0, 0, 0);
     
-    guidance.mockQA.forEach((qa, index) => {
+    safe.mockQA.forEach((qa, index) => {
       checkPageBreak(50);
       
       // Question number and text
@@ -929,9 +951,20 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
   // Generate filename with jurisdiction and date
   const dateStr = new Date().toISOString().split('T')[0];
-  const jurisdiction = guidance.caseData.jurisdiction.replace(/\s+/g, '-');
+  const jurisdiction = (caseData.jurisdiction || 'Unknown').replace(/\s+/g, '-');
   const filename = `Legal-Guidance-${jurisdiction}-${dateStr}.pdf`;
 
-  // Save the PDF (downloads to user's device)
-  doc.save(filename);
+  // Trigger download via blob URL — more reliable than doc.save() in sandboxed iframe contexts.
+  // jsPDF's built-in save() uses the same approach but can be silently blocked in some browsers.
+  const pdfBlob = doc.output('blob');
+  const downloadUrl = URL.createObjectURL(pdfBlob);
+  const downloadLink = document.createElement('a');
+  downloadLink.href = downloadUrl;
+  downloadLink.setAttribute('download', filename);
+  downloadLink.style.display = 'none';
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+  // Revoke after a short delay to ensure the browser has processed the click
+  setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
 }
