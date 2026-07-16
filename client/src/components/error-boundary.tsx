@@ -22,6 +22,22 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, info: { componentStack: string }) {
     console.error("[ErrorBoundary] Uncaught error:", error, info.componentStack);
+    try {
+      fetch('/api/client-error', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({
+          message: error.message?.slice(0, 500) ?? '',
+          stack: error.stack?.slice(0, 2000) ?? '',
+          componentStack: info.componentStack?.slice(0, 2000) ?? '',
+          url: typeof window !== 'undefined' ? window.location.pathname + window.location.search : '',
+          userAgent: typeof navigator !== 'undefined' ? navigator.userAgent.slice(0, 200) : '',
+        }),
+      }).catch(() => {});
+    } catch {
+      // Never let the error reporter crash the boundary itself.
+    }
   }
 
   render() {

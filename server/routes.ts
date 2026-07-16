@@ -171,6 +171,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
     validate: { trustProxy: false, xForwardedForHeader: false }
   });
 
+  // Rate limiter for client-side error reports (60 per hour per IP)
+  // Generous enough to catch cascading render errors, tight enough to block spam.
+  const clientErrorRateLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000,
+    max: 60,
+    message: { success: false },
+    standardHeaders: false,
+    legacyHeaders: false,
+    validate: { trustProxy: false, xForwardedForHeader: false },
+  });
+
   // Rate limiter for equity audit (2 per hour — AI cost control)
   const equityAuditLimiter = rateLimit({
     windowMs: 60 * 60 * 1000,
@@ -2745,6 +2756,29 @@ export async function registerRoutes(app: Express): Promise<Server> {
       errLog('[GuidanceFlag] Error storing flag:', error);
       res.status(500).json({ success: false, error: 'Failed to record flag.' });
     }
+  });
+
+  // Sink for client-side render errors caught by ErrorBoundary.
+  // Fire-and-forget: always returns 204 so a slow/failing sink never blocks the boundary UI.
+  // Truncates long fields before logging; does not persist to DB.
+  app.post("/api/client-error", clientErrorRateLimiter, async (req: Request, res: Response) => {
+    try {
+      const body = req.body ?? {};
+      const truncate = (s: unknown, max: number): string =>
+        typeof s === 'string' ? s.slice(0, max) : '';
+      const payload = {
+        message: truncate(body.message, 500),
+        stack: truncate(body.stack, 2000),
+        componentStack: truncate(body.componentStack, 2000),
+        url: truncate(body.url, 500),
+        userAgent: truncate(body.userAgent, 200),
+      };
+      errLog('[ClientError] render crash', payload);
+    } catch (error) {
+      // Never fail on the reporting path — the client is already in an error state.
+      errLog('[ClientError] reporting handler threw', error);
+    }
+    res.status(204).end();
   });
 
   // Admin-only: view flag data. Protected by requireAdminAuth middleware.
