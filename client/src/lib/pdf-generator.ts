@@ -64,6 +64,10 @@ interface EnhancedGuidanceData {
     timing: string;
     actionNote: string;
   }>;
+  uncertainties?: Array<{
+    area: string;
+    note: string;
+  }>;
   caseData: {
     jurisdiction: string;
     charges: string;
@@ -247,6 +251,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     timeline:         Array.isArray(guidance.timeline)              ? guidance.timeline              : [],
     mockQA:           Array.isArray(guidance.mockQA)                ? guidance.mockQA               : [],
     collateralConsequences: Array.isArray(guidance.collateralConsequences) ? guidance.collateralConsequences : [],
+    uncertainties:          Array.isArray(guidance.uncertainties)           ? guidance.uncertainties           : [],
   };
   const caseData = guidance.caseData ?? {
     jurisdiction: 'Unknown',
@@ -792,13 +797,46 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     yPosition += 5;
   }
 
-  // Collateral Consequences — matches dashboard section order (before Practice Q&A)
+  // Beyond the Sentence: What Else May Be at Risk — matches dashboard "CollateralConsequencesCard"
   if (safe.collateralConsequences.length > 0) {
+    // Human-readable category labels matching the dashboard's categoryMeta
+    const categoryLabels: Record<string, string> = {
+      drivers_license: "Driver's License",
+      immigration: 'Immigration Status',
+      housing: 'Housing',
+      employment: 'Employment & Licensing',
+      custody: 'Child Custody',
+      benefits: 'Public Benefits',
+      firearms: 'Firearms Rights',
+      registry: 'Sex Offender Registry',
+      supervision_revocation: 'Probation / Parole',
+      other: 'Other Consequence',
+    };
+    const categoryLabelsEs: Record<string, string> = {
+      drivers_license: 'Licencia de Conducir',
+      immigration: 'Estado Migratorio',
+      housing: 'Vivienda',
+      employment: 'Empleo y Licencias',
+      custody: 'Custodia de Menores',
+      benefits: 'Beneficios Públicos',
+      firearms: 'Derecho a Portar Armas',
+      registry: 'Registro de Ofensores Sexuales',
+      supervision_revocation: 'Probatoria / Libertad Condicional',
+      other: 'Otra Consecuencia',
+    };
+    const catLabel = (cat: string) =>
+      isSpanish
+        ? (categoryLabelsEs[cat] || cat)
+        : (categoryLabels[cat] || cat);
+
     checkPageBreak(40);
     doc.setFontSize(14);
     doc.setFont('helvetica', 'bold');
-    doc.setTextColor(180, 60, 0);
-    doc.text(isSpanish ? 'Consecuencias Adicionales' : 'Collateral Consequences', margin, yPosition);
+    doc.setTextColor(180, 90, 0);
+    doc.text(
+      isSpanish ? 'Más Allá de la Sentencia: Qué Más Puede Estar en Riesgo' : 'Beyond the Sentence: What Else May Be at Risk',
+      margin, yPosition
+    );
     yPosition += 6;
 
     doc.setFontSize(9);
@@ -806,14 +844,14 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.setTextColor(100, 100, 100);
     yPosition = addText(
       isSpanish
-        ? 'Consecuencias fuera del sistema penal que pueden afectar su vida.'
-        : 'Consequences outside the criminal system that may affect your life.',
+        ? 'Estas consecuencias van más allá de la sentencia y a veces entran en vigor automáticamente. Informe a su abogado antes de cualquier declaración de culpabilidad.'
+        : 'These consequences go beyond the sentence itself and often take effect automatically — sometimes upon a guilty plea. Raise each one with your attorney before any plea decision.',
       margin, yPosition
     );
     yPosition += 8;
 
     const collateralData = safe.collateralConsequences.map(item => [
-      item.category || '',
+      catLabel(item.category || 'other'),
       item.consequence || '',
       item.timing || '',
       item.actionNote || '',
@@ -825,22 +863,33 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
         isSpanish ? 'Área' : 'Area',
         isSpanish ? 'Consecuencia' : 'Consequence',
         isSpanish ? 'Cuándo' : 'When',
-        isSpanish ? 'Qué Hacer' : 'Action',
+        isSpanish ? 'Acción a Tomar' : 'Action to Take',
       ]],
       body: collateralData,
       theme: 'striped',
-      headStyles: { fillColor: [180, 60, 0] },
+      headStyles: { fillColor: [180, 90, 0] },
       margin: { left: margin, right: margin },
       styles: { fontSize: 8 },
       columnStyles: {
-        0: { cellWidth: 28 },
+        0: { cellWidth: 35 },
         1: { cellWidth: 'auto' },
         2: { cellWidth: 25 },
-        3: { cellWidth: 40 },
+        3: { cellWidth: 45 },
       }
     });
 
-    yPosition = (doc as any).lastAutoTable.finalY + 10;
+    yPosition = (doc as any).lastAutoTable.finalY + 5;
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(120, 120, 120);
+    yPosition = addText(
+      isSpanish
+        ? 'Estos riesgos varían por estado y cargo. Verifique con su abogado.'
+        : 'These risks vary by state and charge. Verify with your attorney.',
+      margin, yPosition
+    );
+    doc.setTextColor(0, 0, 0);
+    yPosition += 10;
   }
 
   // Practice Q&A Section — matches dashboard position (before Actions to Avoid)
@@ -910,6 +959,46 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       yPosition += 3;
     });
     yPosition += 5;
+  }
+
+  // Areas of Uncertainty — matches dashboard section
+  if (safe.uncertainties.length > 0) {
+    checkPageBreak(30);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(180, 140, 0);
+    doc.text(isSpanish ? 'Áreas de Incertidumbre' : 'Areas of Uncertainty', margin, yPosition);
+    yPosition += 8;
+
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(0, 0, 0);
+
+    safe.uncertainties.forEach((item) => {
+      checkPageBreak(20);
+      doc.setFont('helvetica', 'bold');
+      yPosition = addText(item.area || '', margin + 5, yPosition);
+      yPosition += 1;
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(9);
+      doc.setTextColor(80, 80, 80);
+      yPosition = addText(item.note || '', margin + 8, yPosition);
+      doc.setFontSize(10);
+      doc.setTextColor(0, 0, 0);
+      yPosition += 5;
+    });
+
+    doc.setFontSize(8);
+    doc.setFont('helvetica', 'italic');
+    doc.setTextColor(120, 120, 120);
+    yPosition = addText(
+      isSpanish
+        ? 'Estas áreas no pudieron confirmarse para su jurisdicción específica. Verifique con un abogado antes de actuar.'
+        : 'These areas could not be confirmed for your specific jurisdiction. Verify with a licensed attorney before relying on them.',
+      margin, yPosition
+    );
+    doc.setTextColor(0, 0, 0);
+    yPosition += 8;
   }
 
   // Resources

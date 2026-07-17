@@ -1502,7 +1502,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       {/* Expandable Sections */}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Your Rights */}
-        <Collapsible>
+        <Collapsible defaultOpen>
           <CollapsibleTrigger asChild>
             <Card className="cursor-pointer hover:bg-muted/50 border-border">
               <CardHeader>
@@ -1533,7 +1533,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </Collapsible>
 
         {/* Local Resources */}
-        <Collapsible>
+        <Collapsible defaultOpen>
           <CollapsibleTrigger asChild>
             <Card className="cursor-pointer hover:bg-muted/50 border-border">
               <CardHeader>
@@ -1614,7 +1614,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
         {/* Evidence — Discuss With Attorney */}
         {guidance.evidenceToGather.length > 0 && (
-          <Collapsible>
+          <Collapsible defaultOpen>
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
                 <CardHeader>
@@ -1653,7 +1653,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
         {/* Warnings & Court Preparation — merged into one collapsible */}
         {(guidance.warnings.length > 0 || guidance.courtPreparation.length > 0) && (
-          <Collapsible>
+          <Collapsible defaultOpen>
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
                 <CardHeader>
@@ -1721,7 +1721,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
         {/* Actions to Avoid */}
         {guidance.avoidActions.length > 0 && (
-          <Collapsible>
+          <Collapsible defaultOpen>
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
                 <CardHeader>
@@ -1754,7 +1754,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
         {/* Areas of Uncertainty */}
         {guidance.uncertainties && guidance.uncertainties.length > 0 && (
-          <Collapsible>
+          <Collapsible defaultOpen>
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50 border-amber-200 dark:border-amber-800" data-testid="collapsible-uncertainties">
                 <CardHeader>
