@@ -316,7 +316,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     documentName: 'Documento',
     documentDescription: 'Para Qué Sirve',
   } : {
-    title: 'Case Guidance Roadmap',
+    title: 'Your Case Roadmap',
     generated: 'Generated',
     privacy: 'PRIVATE: This document has your personal legal information. Don\'t share it without talking to a lawyer first.',
     caseInfo: 'Your Case Information',
