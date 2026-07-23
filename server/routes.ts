@@ -12,6 +12,7 @@ import { insertLegalCaseSchema, insertCaseFeedbackSchema, insertGuidanceFlagSche
 import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
+import { redactCaseDetails } from "./services/pii-redactor.js";
 import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
@@ -1398,7 +1399,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ success: false, error: 'None of the provided charge IDs were recognized.' });
       }
 
-      const rawGuidance = generateEnhancedGuidance(caseDataWithFlags as any);
+      // Apply PII redaction before running the rules engine — the engine output
+      // may echo back free-text fields (incidentDescription, policeStatement, etc.)
+      // that the user entered, so we scrub them first as a privacy safeguard.
+      const { redactedDetails } = redactCaseDetails(caseDataWithFlags as any);
+      const rawGuidance = generateEnhancedGuidance(redactedDetails as any);
 
       const guidance = {
         ...rawGuidance,
