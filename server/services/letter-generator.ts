@@ -20,7 +20,7 @@ export type LetterType =
 export interface LetterRequest {
   letterType: LetterType;
   answers: Record<string, string>;
-  language?: 'en' | 'es';
+  language?: 'en' | 'es' | 'zh';
 }
 
 export interface LetterResult {
@@ -46,8 +46,11 @@ const LETTER_CONTEXTS: Record<LetterType, string> = {
 
 function buildSystemPrompt(language: string): string {
   const inSpanish = language === 'es';
+  const inChinese = language === 'zh';
   const langInstruction = inSpanish
     ? 'IMPORTANT: Write the entire letter and all tips in Spanish (Español). Use clear, professional Spanish.'
+    : inChinese
+    ? 'IMPORTANT: Write the entire letter and all tips in Simplified Chinese (简体中文). Use clear, professional Chinese. Do NOT use English anywhere in the output.'
     : '';
 
   return `You are a communication coach helping people in difficult circumstances write professional, clear letters to employers, landlords, and utility companies. You are NOT providing legal advice. You are helping with practical written communication.

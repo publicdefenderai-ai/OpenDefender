@@ -176,17 +176,24 @@ interface ClaudeGuidance {
 
 function buildSystemPrompt(language?: string): string {
   const isSpanish = language === 'es';
-  
-  const languageInstruction = isSpanish 
+  const isChinese = language === 'zh';
+
+  const languageInstruction = isSpanish
     ? `IMPORTANT LANGUAGE REQUIREMENT: You MUST respond entirely in Spanish (Español). All text in the JSON response must be written in Spanish, using clear, simple language that is easy to understand. Do NOT use English anywhere in your response.`
+    : isChinese
+    ? `IMPORTANT LANGUAGE REQUIREMENT: You MUST respond entirely in Simplified Chinese (简体中文). All text in the JSON response must be written in Simplified Chinese. Use clear, everyday language that is easy to understand — avoid legalese. Do NOT use English anywhere in your response. Legal terms that have no natural Chinese equivalent may be followed by the English term in parentheses on first use only (e.g., 米兰达警告 (Miranda warning)), but the surrounding text must remain in Chinese.`
     : '';
-  
+
   const readingLevelNote = isSpanish
     ? 'en español sencillo (nivel de lectura de 6to-8vo grado)'
+    : isChinese
+    ? '使用简明的日常中文（初中阅读水平）'
     : 'in simple language (6th-8th grade reading level)';
-  
+
   const overviewNote = isSpanish
     ? 'A 3-5 sentence summary in simple Spanish'
+    : isChinese
+    ? '3-5句话的简明中文摘要'
     : 'A 3-5 sentence summary in plain English';
 
   return `You are an expert legal guidance assistant for OpenDefender, a platform helping people without legal representation understand their rights and next steps. Your role is to provide clear, actionable legal guidance ${readingLevelNote}.

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { BrandShieldIcon } from "@/components/brand-logo";
 import {
   Briefcase,
@@ -613,6 +614,7 @@ function LetterResult({
 
 export default function LetterGenerator() {
   useScrollToTop();
+  const { i18n } = useTranslation();
 
   const [state, setState] = useState<PageState>("select");
   const [selectedType, setSelectedType] = useState<LetterType | null>(null);
@@ -646,7 +648,7 @@ export default function LetterGenerator() {
       const res = await fetch("/api/generate-letter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ letterType: selectedType, answers }),
+        body: JSON.stringify({ letterType: selectedType, answers, language: i18n.language }),
       });
 
       const data = await res.json();

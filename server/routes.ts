@@ -2239,7 +2239,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             (obj) => Object.keys(obj).length <= 8,
             'Too many answer fields'
           ),
-          language: z.enum(['en', 'es']).default('en'),
+          language: z.enum(['en', 'es', 'zh']).default('en'),
         });
 
         const parseResult = bodySchema.safeParse(req.body);
@@ -2346,7 +2346,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       }
 
-      const language = (req.body.language as 'en' | 'es') || 'en';
+      const language = (req.body.language as 'en' | 'es' | 'zh') || 'en';
       const summaryType = req.body.summaryType || 'general';
 
       devLog('doc-summary', `Processing ${file.originalname} (${file.size} bytes)`);
@@ -2448,7 +2448,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       }
 
-      const language = (req.body.language as 'en' | 'es') || 'en';
+      const language = (req.body.language as 'en' | 'es' | 'zh') || 'en';
       const summaryType = req.body.summaryType || 'legal_document';
 
       devLog('attorney-doc-summary', `Processing ${file.originalname} (${file.size} bytes)`);
@@ -2702,7 +2702,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             })
           ).max(16),
           documentType: z.string().max(50).default('general'),
-          language: z.enum(['en', 'es']).default('en'),
+          language: z.enum(['en', 'es', 'zh']).default('en'),
         });
 
         const parseResult = bodySchema.safeParse(req.body);

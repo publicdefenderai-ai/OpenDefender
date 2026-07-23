@@ -49,7 +49,7 @@ export interface DocumentSummaryRequest {
   file: Buffer;
   mimeType: string;
   filename: string;
-  language?: 'en' | 'es';
+  language?: 'en' | 'es' | 'zh';
   summaryType?: 'general' | 'legal_document' | 'court_filing' | 'police_report' | 'evidence';
 }
 
@@ -219,11 +219,14 @@ export function redactDocumentPII(text: string): string {
 /**
  * Build system prompt for document summarization
  */
-function buildSystemPrompt(language: 'en' | 'es', summaryType: string): string {
+function buildSystemPrompt(language: 'en' | 'es' | 'zh', summaryType: string): string {
   const isSpanish = language === 'es';
+  const isChinese = language === 'zh';
 
   const languageInstruction = isSpanish
     ? 'IMPORTANT: Respond entirely in Spanish (Español). Use clear, simple language.'
+    : isChinese
+    ? 'IMPORTANT: Respond entirely in Simplified Chinese (简体中文). Use clear, simple language. Do NOT use English anywhere in your response.'
     : '';
 
   const typeInstructions: Record<string, string> = {
@@ -454,7 +457,7 @@ export async function answerDocumentQuestion(params: {
   question: string;
   conversationHistory: DocumentQAMessage[];
   documentType: string;
-  language: 'en' | 'es';
+  language: 'en' | 'es' | 'zh';
 }): Promise<DocumentQAResponse> {
   if (!anthropic) {
     throw new Error('Document Q&A service is not configured');
@@ -476,7 +479,7 @@ export async function answerDocumentQuestion(params: {
   // Keep only the most recent N turns to stay within context budget
   const limitedHistory = conversationHistory.slice(-(MAX_QA_HISTORY_TURNS * 2));
 
-  const langLabel = language === 'es' ? 'Spanish' : 'English';
+  const langLabel = language === 'es' ? 'Spanish' : language === 'zh' ? 'Simplified Chinese (简体中文)' : 'English';
 
   const systemPrompt = `You are a legal document assistant helping a user understand their document. The document content is provided below.
 
@@ -609,7 +612,7 @@ export interface BatchDocumentItem {
   file: Buffer;
   mimeType: string;
   filename: string;
-  language?: 'en' | 'es';
+  language?: 'en' | 'es' | 'zh';
   summaryType?: 'general' | 'legal_document' | 'court_filing' | 'police_report' | 'evidence';
 }
 
