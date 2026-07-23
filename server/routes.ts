@@ -1346,37 +1346,71 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Rules-Based Legal Guidance — no AI, no streaming, no Claude call
   // Uses the same guidance-engine.ts rules engine that backs the AI fallback path.
+  // Applies the same schema validation and charge-lookup pipeline as the stream endpoint
+  // so the response shape is equivalent and the dashboard renders identically.
   // No CAPTCHA required (no AI service involved); standard rate limits apply.
   app.post("/api/legal-guidance/rules", searchRateLimiter, async (req, res) => {
     try {
       const sessionId = req.body.sessionId || randomUUID();
 
-      const charges = Array.isArray(req.body.charges)
-        ? req.body.charges
-        : typeof req.body.charges === 'string'
-          ? [req.body.charges]
-          : [];
-
-      const caseData = {
-        jurisdiction: String(req.body.jurisdiction || ''),
-        charges,
-        caseStage: String(req.body.caseStage || 'arrest'),
-        custodyStatus: String(req.body.custodyStatus || 'released'),
-        hasAttorney: Boolean(req.body.hasAttorney),
+      // Mirror the same normalization + schema validation used by existing guidance routes.
+      const transformedData = {
+        ...req.body,
+        sessionId,
+        charges: Array.isArray(req.body.charges)
+          ? req.body.charges
+          : typeof req.body.charges === 'string'
+            ? [req.body.charges]
+            : req.body.charges,
+        expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000),
       };
 
-      const guidance = generateEnhancedGuidance(caseData as any);
+      const validatedData = insertLegalCaseSchema.parse(transformedData);
 
-      const guidanceWithMeta = {
-        ...guidance,
+      // Re-inject fields Zod strips (not DB columns) so the engine has the
+      // full picture, matching the pattern in the stream route above.
+      const caseDataWithFlags = {
+        ...validatedData,
+        chargesUnknown: req.body.chargesUnknown === true,
+        civilUrgency: req.body.civilUrgency,
+        supervisionStatus: req.body.supervisionStatus,
+        priorConvictions: req.body.priorConvictions,
+        citizenshipStatus: req.body.citizenshipStatus,
+        hasMinorChildren: req.body.hasMinorChildren,
+        hasProfessionalLicense: req.body.hasProfessionalLicense,
+        hasHousingAssistance: req.body.hasHousingAssistance,
+      };
+
+      // Charge classification — same guard logic as the stream route.
+      const chargeIds = Array.isArray(caseDataWithFlags.charges)
+        ? caseDataWithFlags.charges
+        : [caseDataWithFlags.charges];
+
+      const chargeClassifications = chargeIds
+        .map((id: string) => {
+          const charge = getChargeById(id);
+          if (!charge) return null;
+          return { id: charge.id, name: charge.name, classification: charge.category, code: charge.code, title: charge.name, maxPenalty: charge.maxPenalty };
+        })
+        .filter(Boolean);
+
+      if (chargeClassifications.length === 0 && chargeIds.length > 0 && chargeIds[0] !== '') {
+        return res.status(400).json({ success: false, error: 'None of the provided charge IDs were recognized.' });
+      }
+
+      const rawGuidance = generateEnhancedGuidance(caseDataWithFlags as any);
+
+      const guidance = {
+        ...rawGuidance,
+        chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined,
+        generatedBy: 'rule-based' as const,
         generatedAt: new Date().toISOString(),
-        sessionId,
       };
 
       res.json({
         success: true,
         sessionId,
-        guidance: guidanceWithMeta,
+        guidance,
       });
     } catch (error) {
       errLog('Failed to generate rules-based guidance', error);

@@ -603,13 +603,14 @@ export default function CaseGuidance() {
 
   // Show streaming progress while generating guidance
   if (isStreaming) {
-    const stage =
-      streamProgress === 0 ? 'Connecting to AI...' :
-      streamProgress < 20 ? 'Analyzing your case details...' :
-      streamProgress < 55 ? 'Writing your Case Roadmap...' :
-      streamProgress < 88 ? 'Finalizing recommendations...' :
-      streamProgress < 100 ? 'Cross-referencing with legal sources...' :
-      'Almost done...';
+    const stage = guidanceMode === 'rules'
+      ? 'Preparing your guidance...'
+      : streamProgress === 0 ? 'Analyzing your case details...' :
+        streamProgress < 20 ? 'Analyzing your case details...' :
+        streamProgress < 55 ? 'Writing your Case Roadmap...' :
+        streamProgress < 88 ? 'Finalizing recommendations...' :
+        streamProgress < 100 ? 'Cross-referencing with legal sources...' :
+        'Almost done...';
 
     return (
       <div className="min-h-screen bg-background">
