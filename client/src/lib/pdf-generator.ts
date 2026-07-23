@@ -11,6 +11,14 @@ function pl(text: string): string {
   );
 }
 
+// Strip inline markdown (bold, italic) so raw asterisks never appear in PDF output
+function stripMd(text: string): string {
+  return text
+    .replace(/\*\*([^*]+)\*\*/g, '$1')  // **bold**
+    .replace(/\*([^*]+)\*/g, '$1')       // *italic*
+    .replace(/_([^_]+)_/g, '$1');        // _italic_
+}
+
 interface ImmediateAction {
   action: string;
   urgency: 'urgent' | 'high' | 'medium' | 'low';
@@ -279,7 +287,8 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     chargesSubtitle: 'Esto es lo que significan estos términos legales en lenguaje sencillo.',
     keyTerms: 'Términos legales clave que la fiscalía debe probar:',
     chargeDisclaimer: 'Recuerde: La fiscalía debe probar cada elemento de estos cargos más allá de una duda razonable. Su abogado puede ayudar a identificar qué elementos pueden ser cuestionados basándose en la evidencia.',
-    immediateActions: 'Acciones Inmediatas (Próximas 48 Horas)',
+    urgentTakeaways: 'Alertas Urgentes',
+    immediateActions: 'Lo Que Importa Ahora',
     importantDates: 'Fechas Importantes',
     event: 'Evento',
     timeframe: 'Plazo',
@@ -332,7 +341,8 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     chargesSubtitle: "Here's what these legal terms actually mean in plain English.",
     keyTerms: 'Key legal terms the prosecution must prove:',
     chargeDisclaimer: 'Remember: The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence.',
-    immediateActions: 'Immediate Actions (Next 48 Hours)',
+    urgentTakeaways: 'Urgent Takeaways',
+    immediateActions: 'What Matters Now',
     importantDates: 'Important Dates',
     event: 'Event',
     timeframe: 'Timeframe',
@@ -449,7 +459,27 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
   yPosition = (doc as any).lastAutoTable.finalY + 10;
 
-  // Overview - appears first
+  // Urgent Takeaways — appears before overview, matching the web dashboard
+  if (safe.criticalAlerts.length > 0) {
+    checkPageBreak(30);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(180, 100, 0);
+    doc.text(labels.urgentTakeaways, margin, yPosition);
+    yPosition += 8;
+
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(0, 0, 0);
+    safe.criticalAlerts.forEach((alert) => {
+      checkPageBreak();
+      yPosition = addText(`   • ${pl(stripMd(typeof alert === 'string' ? alert : String(alert)))}`, margin + 5, yPosition);
+      yPosition += 3;
+    });
+    yPosition += 5;
+  }
+
+  // Overview - appears after Urgent Takeaways
   if (guidance.overview) {
     checkPageBreak(30);
     doc.setFontSize(14);
@@ -583,84 +613,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     yPosition += 10;
   }
 
-  // Critical Alerts
-  if (safe.criticalAlerts.length > 0) {
-    checkPageBreak(30);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(180, 100, 0);
-    doc.text(isSpanish ? 'Alertas Críticas' : 'Critical Alerts', margin, yPosition);
-    yPosition += 8;
-
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(0, 0, 0);
-    safe.criticalAlerts.forEach((alert) => {
-      checkPageBreak();
-      yPosition = addText(`   • ${pl(typeof alert === 'string' ? alert : String(alert))}`, margin + 5, yPosition);
-      yPosition += 3;
-    });
-    yPosition += 5;
-  }
-
-  // Immediate Actions
-  if (safe.immediateActions.length > 0) {
-    checkPageBreak(30);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(0, 100, 200);
-    doc.text(labels.immediateActions, margin, yPosition);
-    yPosition += 8;
-
-    doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor(0, 0, 0);
-
-    safe.immediateActions.forEach((actionItem) => {
-      checkPageBreak();
-      const urgencyLabel = `[${(actionItem.urgency || 'medium').toUpperCase()}]`;
-      yPosition = addText(`   [ ] ${urgencyLabel} ${pl(actionItem.action || '')}`, margin + 5, yPosition);
-      yPosition += 3;
-    });
-    yPosition += 5;
-  }
-
-  // Deadlines
-  if (safe.deadlines.length > 0) {
-    checkPageBreak(40);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor(0, 0, 0);
-    doc.text(labels.importantDates, margin, yPosition);
-    yPosition += 8;
-
-    const deadlineData = safe.deadlines.map(deadline => [
-      deadline.event,
-      deadline.timeframe,
-      deadline.priority.toUpperCase(),
-      deadline.description
-    ]);
-
-    autoTable(doc, {
-      startY: yPosition,
-      head: [[labels.event, labels.timeframe, labels.priority, labels.description]],
-      body: deadlineData,
-      theme: 'striped',
-      headStyles: { fillColor: [41, 128, 185] },
-      margin: { left: margin, right: margin },
-      styles: { fontSize: 9 },
-      columnStyles: {
-        0: { cellWidth: 40 },
-        1: { cellWidth: 30 },
-        2: { cellWidth: 25 },
-        3: { cellWidth: 'auto' }
-      }
-    });
-
-    yPosition = (doc as any).lastAutoTable.finalY + 10;
-  }
-
-  // Documents You Should Have
+  // Documents You Should Have — appears before What Matters Now, matching the web dashboard
   const phase = mapCaseStageToPhase(caseData.caseStage);
   const legalDocuments = getDocumentsForPhase(phase, 'criminal');
   if (legalDocuments.length > 0) {
@@ -693,6 +646,109 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       columnStyles: {
         0: { cellWidth: 50 },
         1: { cellWidth: 'auto' }
+      }
+    });
+
+    yPosition = (doc as any).lastAutoTable.finalY + 10;
+  }
+
+  // What Matters Now — action checklist matching the web dashboard
+  if (safe.immediateActions.length > 0) {
+    checkPageBreak(30);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(0, 100, 200);
+    doc.text(labels.immediateActions, margin, yPosition);
+    yPosition += 8;
+
+    doc.setFontSize(10);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor(0, 0, 0);
+
+    safe.immediateActions.forEach((actionItem) => {
+      checkPageBreak(25);
+      const urgency = (actionItem.urgency || 'medium').toUpperCase();
+      // Colored urgency indicator
+      doc.setFontSize(8);
+      doc.setFont('helvetica', 'bold');
+      if (urgency === 'URGENT') doc.setTextColor(192, 0, 0);
+      else if (urgency === 'HIGH') doc.setTextColor(180, 100, 0);
+      else doc.setTextColor(80, 80, 80);
+      doc.text(`\u25b8 ${urgency}`, margin + 5, yPosition);
+      yPosition += 5;
+      // Action text — markdown stripped so **bold** never appears raw
+      doc.setFontSize(10);
+      doc.setFont('helvetica', 'normal');
+      doc.setTextColor(0, 0, 0);
+      yPosition = addText(stripMd(pl(actionItem.action || '')), margin + 8, yPosition);
+      yPosition += 5;
+    });
+    yPosition += 3;
+  }
+
+  // Case Timeline — appears after What Matters Now, matching the web dashboard
+  if (safe.timeline.length > 0) {
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.text(labels.timeline, margin, yPosition);
+    yPosition += 8;
+
+    const timelineData = safe.timeline.map(stage => [
+      stage.completed ? '[X]' : '[ ]',
+      stage.stage || '',
+      stage.description || '',
+      stage.timeframe || ''
+    ]);
+
+    autoTable(doc, {
+      startY: yPosition,
+      head: [[labels.status, labels.stage, labels.description, labels.timeframe]],
+      body: timelineData,
+      theme: 'grid',
+      headStyles: { fillColor: [41, 128, 185] },
+      margin: { left: margin, right: margin },
+      styles: { fontSize: 9 },
+      columnStyles: {
+        0: { cellWidth: 15, halign: 'center' },
+        1: { cellWidth: 35 },
+        2: { cellWidth: 'auto' },
+        3: { cellWidth: 30 }
+      }
+    });
+
+    yPosition = (doc as any).lastAutoTable.finalY + 10;
+  }
+
+  // Deadlines
+  if (safe.deadlines.length > 0) {
+    checkPageBreak(40);
+    doc.setFontSize(14);
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor(0, 0, 0);
+    doc.text(labels.importantDates, margin, yPosition);
+    yPosition += 8;
+
+    const deadlineData = safe.deadlines.map(deadline => [
+      deadline.event,
+      deadline.timeframe,
+      deadline.priority.toUpperCase(),
+      deadline.description
+    ]);
+
+    autoTable(doc, {
+      startY: yPosition,
+      head: [[labels.event, labels.timeframe, labels.priority, labels.description]],
+      body: deadlineData,
+      theme: 'striped',
+      headStyles: { fillColor: [41, 128, 185] },
+      margin: { left: margin, right: margin },
+      styles: { fontSize: 9 },
+      columnStyles: {
+        0: { cellWidth: 40 },
+        1: { cellWidth: 30 },
+        2: { cellWidth: 25 },
+        3: { cellWidth: 'auto' }
       }
     });
 
@@ -734,7 +790,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     safe.nextSteps.forEach((step, idx) => {
       checkPageBreak();
-      yPosition = addText(`${idx + 1}. ${pl(typeof step === 'string' ? step : String(step))}`, margin + 5, yPosition);
+      yPosition = addText(`${idx + 1}. ${stripMd(pl(typeof step === 'string' ? step : String(step)))}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -753,7 +809,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     safe.evidenceToGather.forEach((evidence) => {
       checkPageBreak();
-      yPosition = addText(`   [ ] ${typeof evidence === 'string' ? evidence : String(evidence)}`, margin + 5, yPosition);
+      yPosition = addText(`   [ ] ${stripMd(typeof evidence === 'string' ? evidence : String(evidence))}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -776,7 +832,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     if (hasWarn) {
       safe.warnings.forEach((warning) => {
         checkPageBreak();
-        yPosition = addText(`   * ${typeof warning === 'string' ? warning : String(warning)}`, margin + 5, yPosition);
+        yPosition = addText(`   * ${stripMd(typeof warning === 'string' ? warning : String(warning))}`, margin + 5, yPosition);
         yPosition += 3;
       });
       if (hasCourt) {
@@ -790,7 +846,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     if (hasCourt) {
       safe.courtPreparation.forEach((item) => {
         checkPageBreak();
-        yPosition = addText(`   [ ] ${typeof item === 'string' ? item : String(item)}`, margin + 5, yPosition);
+        yPosition = addText(`   [ ] ${stripMd(typeof item === 'string' ? item : String(item))}`, margin + 5, yPosition);
         yPosition += 3;
       });
     }
@@ -1032,40 +1088,6 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
         2: { cellWidth: 35 },
         3: { cellWidth: 25 },
         4: { cellWidth: 30 }
-      }
-    });
-
-    yPosition = (doc as any).lastAutoTable.finalY + 10;
-  }
-
-  // Timeline
-  if (safe.timeline.length > 0) {
-    checkPageBreak(40);
-    doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
-    doc.text(labels.timeline, margin, yPosition);
-    yPosition += 8;
-
-    const timelineData = safe.timeline.map(stage => [
-      stage.completed ? '[X]' : '[ ]',
-      stage.stage || '',
-      stage.description || '',
-      stage.timeframe || ''
-    ]);
-
-    autoTable(doc, {
-      startY: yPosition,
-      head: [[labels.status, labels.stage, labels.description, labels.timeframe]],
-      body: timelineData,
-      theme: 'grid',
-      headStyles: { fillColor: [41, 128, 185] },
-      margin: { left: margin, right: margin },
-      styles: { fontSize: 9 },
-      columnStyles: {
-        0: { cellWidth: 15, halign: 'center' },
-        1: { cellWidth: 35 },
-        2: { cellWidth: 'auto' },
-        3: { cellWidth: 30 }
       }
     });
 
