@@ -34,6 +34,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     custodyStatus: "",
     hasAttorney: null,
     consentGiven: false,
+    guidanceMode: 'ai' as 'ai' | 'rules',
     selectedConcerns: [] as string[],
     civilUrgency: {} as Record<string, 'none' | 'active' | 'emergency'>,
     supervisionStatus: "" as string,
@@ -173,12 +174,18 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
 function ConsentStep({ formData, updateFormData, onNext }: any) {
   const { t } = useTranslation();
 
+  const handleChooseMode = (mode: 'ai' | 'rules') => {
+    updateFormData("guidanceMode", mode);
+    updateFormData("consentGiven", true);
+    onNext();
+  };
+
   return (
     <div className="space-y-5">
       <div>
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.consent.title')}</h3>
 
-        <ul className="space-y-4 text-sm">
+        <ul className="space-y-4 text-sm mb-5">
           <li className="flex items-start gap-3">
             <Scale className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
             <span className="text-muted-foreground">
@@ -193,14 +200,63 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
               {t('legalGuidance.qaFlow.consent.bullet2Body')}
             </span>
           </li>
-          <li className="flex items-start gap-3">
-            <AlertTriangle className="h-4 w-4 text-amber-500 mt-0.5 flex-shrink-0" />
-            <span className="text-muted-foreground">
-              <strong className="text-foreground">{t('legalGuidance.qaFlow.consent.bullet3Head')}</strong>{' '}
-              {t('legalGuidance.qaFlow.consent.bullet3Body')}
-            </span>
-          </li>
         </ul>
+
+        <div className="grid sm:grid-cols-2 gap-3">
+          {/* Card A — AI Guidance */}
+          <button
+            onClick={() => handleChooseMode('ai')}
+            data-testid="button-choose-ai"
+            className="text-left border-2 border-blue-200 hover:border-blue-500 rounded-lg p-4 space-y-2 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-background"
+          >
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="font-semibold text-sm text-foreground">
+                {t('legalGuidance.qaFlow.consent.cardATitle')}
+              </span>
+              <Badge className="bg-blue-600 text-white text-xs px-2 py-0">
+                {t('legalGuidance.qaFlow.consent.cardARecommended')}
+              </Badge>
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {t('legalGuidance.qaFlow.consent.cardABody')}
+            </p>
+            <p className="text-xs text-muted-foreground italic">
+              {t('legalGuidance.qaFlow.consent.cardATime')}
+            </p>
+            <p className="text-[11px] text-muted-foreground/70 leading-relaxed border-t pt-2 mt-1">
+              {t('legalGuidance.qaFlow.consent.cardADisclosure')}
+            </p>
+            <div className="pt-1">
+              <span className="text-xs font-medium text-blue-600">
+                {t('legalGuidance.qaFlow.consent.cardAButton')}
+              </span>
+            </div>
+          </button>
+
+          {/* Card B — Immediate / Rules-based */}
+          <button
+            onClick={() => handleChooseMode('rules')}
+            data-testid="button-choose-rules"
+            className="text-left border-2 border-border hover:border-green-500 rounded-lg p-4 space-y-2 transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-green-500 bg-background"
+          >
+            <div className="flex items-center gap-2">
+              <span className="font-semibold text-sm text-foreground">
+                {t('legalGuidance.qaFlow.consent.cardBTitle')}
+              </span>
+            </div>
+            <p className="text-xs text-muted-foreground leading-relaxed">
+              {t('legalGuidance.qaFlow.consent.cardBBody')}
+            </p>
+            <p className="text-xs text-muted-foreground italic">
+              {t('legalGuidance.qaFlow.consent.cardBTime')}
+            </p>
+            <div className="pt-1">
+              <span className="text-xs font-medium text-green-600">
+                {t('legalGuidance.qaFlow.consent.cardBButton')}
+              </span>
+            </div>
+          </button>
+        </div>
 
         <p className="text-xs text-muted-foreground mt-4">
           <a href="/tech-docs#ai-validation" className="underline hover:text-foreground transition-colors">
@@ -208,27 +264,6 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
           </a>
         </p>
       </div>
-
-      <div className="flex items-center space-x-2">
-        <Checkbox
-          id="consent"
-          checked={formData.consentGiven}
-          onCheckedChange={(checked) => updateFormData("consentGiven", checked)}
-          data-testid="checkbox-consent"
-        />
-        <Label htmlFor="consent" className="text-sm">
-          {t('legalGuidance.qaFlow.consent.checkboxLabel')}
-        </Label>
-      </div>
-
-      <Button
-        onClick={onNext}
-        disabled={!formData.consentGiven}
-        className="w-full bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
-        data-testid="button-next-consent"
-      >
-        {t('legalGuidance.qaFlow.consent.continueButton')} <ArrowRight className="ml-2 h-4 w-4" />
-      </Button>
     </div>
   );
 }

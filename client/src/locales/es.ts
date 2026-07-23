@@ -2016,16 +2016,24 @@ export default {
         "civilEmergencies": "Situaciones Activas"
       },
       "consent": {
-        "title": "Antes de comenzar",
+        "title": "¿Cómo prefiere recibir su orientación?",
         "bullet1Head": "Información legal, no asesoramiento legal.",
         "bullet1Body": "Explicamos sus derechos y qué esperar — no le decimos qué hacer. Para asesoramiento sobre su caso, un defensor público o abogado de ayuda legal es su mejor recurso.",
         "bullet2Head": "Privacidad por diseño.",
         "bullet2Body": "Sus respuestas se eliminan cuando cierra esta sesión. Nada se almacena en nuestros servidores más de 24 horas.",
-        "bullet3Head": "Procesado por IA, sin privilegio abogado-cliente.",
-        "bullet3Body": "Esta orientación es generada por un servicio de IA (Anthropic). No se establece ninguna relación abogado-cliente. Sus entradas — estado, tipo de cargo, etapa del caso y cualquier inquietud que seleccione — pueden ser procesadas por Anthropic y retenidas hasta 30 días por razones de seguridad y operativas.",
+        "cardATitle": "Orientación Personalizada con IA",
+        "cardARecommended": "Recomendado",
+        "cardABody": "Analiza sus cargos específicos, estado y etapa del caso para crear una hoja de ruta a su medida.",
+        "cardATime": "Tarda entre 30 y 60 segundos.",
+        "cardADisclosure": "Sus respuestas son procesadas por el servicio de IA de Anthropic y pueden ser retenidas hasta 30 días por razones de seguridad y operativas. No se establece ninguna relación abogado-cliente.",
+        "cardAButton": "Continuar con orientación IA →",
+        "cardBTitle": "Orientación Inmediata",
+        "cardBBody": "Orientación seleccionada para su estado y tipo de cargo — elaborada por nuestro equipo legal. Sin IA, sin espera.",
+        "cardBTime": "Resultados en segundos.",
+        "cardBButton": "Obtener orientación inmediata →",
         "validationLink": "Conozca cómo verificamos las respuestas de IA →",
-        "checkboxLabel": "Entiendo y quiero continuar",
-        "continueButton": "Continuar"
+        "badgeAI": "Orientación generada por IA",
+        "badgeRules": "Orientación basada en reglas"
       },
       "jurisdiction": {
         "title": "¿Dónde está su caso?",

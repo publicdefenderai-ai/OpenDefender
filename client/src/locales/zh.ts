@@ -2016,16 +2016,24 @@ export default {
         "civilEmergencies": "当前情况"
       },
       "consent": {
-        "title": "开始前请了解",
+        "title": "您希望如何获取指导？",
         "bullet1Head": "法律信息，非法律建议。",
         "bullet1Body": "我们解释您的权利和预期流程——我们不告诉您该怎么做。如需针对您案件的建议，公设辩护人或法律援助律师是您最好的资源。",
         "bullet2Head": "隐私优先设计。",
         "bullet2Body": "您的回答在关闭会话时即被删除，服务器保留不超过24小时。",
-        "bullet3Head": "由AI处理，不受律师-委托人特权保护。",
-        "bullet3Body": "本指导由AI服务（Anthropic）生成，不构成律师-委托人关系。您的输入——所在州、指控类型、案件阶段及您选择的任何担忧——可能由Anthropic处理，并出于安全和运营目的保留最多30天。",
+        "cardATitle": "AI个性化指导",
+        "cardARecommended": "推荐",
+        "cardABody": "根据您的具体指控、所在州和案件阶段，生成量身定制的案件路线图。",
+        "cardATime": "约需30至60秒。",
+        "cardADisclosure": "您的输入由Anthropic的AI服务处理，可能出于安全和运营目的保留最多30天。不构成律师-委托人关系。",
+        "cardAButton": "继续使用AI指导 →",
+        "cardBTitle": "即时指导",
+        "cardBBody": "针对您所在州和指控类型的精选指导——由我们的法律团队整理。无AI，无等待。",
+        "cardBTime": "几秒内即可获得结果。",
+        "cardBButton": "获取即时指导 →",
         "validationLink": "了解我们如何验证AI回答 →",
-        "checkboxLabel": "我已理解并想继续",
-        "continueButton": "继续"
+        "badgeAI": "AI生成的指导",
+        "badgeRules": "规则引擎生成的指导"
       },
       "jurisdiction": {
         "title": "你的案件在哪个州？",

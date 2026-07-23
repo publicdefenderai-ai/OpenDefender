@@ -185,6 +185,7 @@ interface GuidanceDashboardProps {
   onShowPublicDefender?: () => void;
   onShowLegalAid?: () => void;
   onExport?: () => void;
+  guidanceMode?: 'ai' | 'rules';
 }
 
 // Utility function to format charge names in plain English
@@ -928,7 +929,7 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
   );
 }
 
-export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid, onExport }: GuidanceDashboardProps) {
+export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid, onExport, guidanceMode = 'ai' }: GuidanceDashboardProps) {
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const { attemptNavigation } = useNavigationGuard();
@@ -1018,13 +1019,22 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         <CardHeader>
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 flex-wrap">
                 <Scale className="h-5 w-5 text-muted-foreground" />
                 <CardTitle className="text-xl text-foreground">
                   {guidance.chargeClassifications && guidance.chargeClassifications.length > 0
                     ? `Guidance: ${formatChargeName(guidance.chargeClassifications[0].name)} in ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`
                     : `Case Roadmap: ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()}`}
                 </CardTitle>
+                <Badge
+                  variant="outline"
+                  className="text-[11px] px-2 py-0 text-muted-foreground border-muted-foreground/30"
+                  data-testid="badge-guidance-mode"
+                >
+                  {guidanceMode === 'rules'
+                    ? t('legalGuidance.qaFlow.consent.badgeRules', 'Rules-based guidance')
+                    : t('legalGuidance.qaFlow.consent.badgeAI', 'AI-powered guidance')}
+                </Badge>
               </div>
               {guidance.generatedAt && (
                 <div className="text-xs text-muted-foreground flex items-center gap-1" data-testid="guidance-timestamp">

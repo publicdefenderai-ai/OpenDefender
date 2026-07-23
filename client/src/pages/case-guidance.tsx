@@ -309,6 +309,7 @@ export default function CaseGuidance() {
   const { toast } = useToast();
   const [showQAFlow, setShowQAFlow] = useState(false);
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
+  const [guidanceMode, setGuidanceMode] = useState<'ai' | 'rules'>('ai');
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamProgress, setStreamProgress] = useState(0);
   const { deleteGuidance } = useLegalGuidance();
@@ -430,13 +431,32 @@ export default function CaseGuidance() {
   }, [isStreaming]);
 
   const handleQAComplete = async (data: any) => {
+    const mode: 'ai' | 'rules' = data.guidanceMode === 'rules' ? 'rules' : 'ai';
+    setGuidanceMode(mode);
     setIsStreaming(true);
     setStreamProgress(0);
     try {
-      const result = await legalDataApi.streamLegalGuidance(data, (_chars, progress) => {
-        setStreamProgress(progress);
-      });
-      
+      let result: any;
+
+      if (mode === 'rules') {
+        // Rules-based path: standard fetch, no streaming, brief artificial delay
+        // so the transition doesn't feel jarring
+        const [response] = await Promise.all([
+          fetch('/api/legal-guidance/rules', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          }),
+          new Promise(resolve => setTimeout(resolve, 600)),
+        ]);
+        result = await response.json();
+      } else {
+        // AI path: existing streaming flow
+        result = await legalDataApi.streamLegalGuidance(data, (_chars, progress) => {
+          setStreamProgress(progress);
+        });
+      }
+
       if (result && result.success) {
         // Wait a tick to ensure the API response is fully processed
         // This prevents partial rendering of guidance data
@@ -449,7 +469,7 @@ export default function CaseGuidance() {
         const guidanceData: EnhancedGuidanceResult = {
           sessionId: result.sessionId,
           overview: guidance.overview || '',
-          generatedAt: (guidance as unknown as Record<string, unknown>).generatedAt as string | undefined, // Include timestamp for transparency
+          generatedAt: (guidance as unknown as Record<string, unknown>).generatedAt as string | undefined,
           criticalAlerts: guidance.criticalAlerts || [],
           immediateActions: guidance.immediateActions || [],
           nextSteps: guidance.nextSteps || [],
@@ -658,6 +678,7 @@ export default function CaseGuidance() {
             onShowPublicDefender={() => setShowPublicDefenderModal(true)}
             onShowLegalAid={() => setShowLegalAidModal(true)}
             onExport={() => setHasExported(true)}
+            guidanceMode={guidanceMode}
           />
         </main>
         

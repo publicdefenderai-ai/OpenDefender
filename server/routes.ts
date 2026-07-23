@@ -1344,6 +1344,46 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Rules-Based Legal Guidance — no AI, no streaming, no Claude call
+  // Uses the same guidance-engine.ts rules engine that backs the AI fallback path.
+  // No CAPTCHA required (no AI service involved); standard rate limits apply.
+  app.post("/api/legal-guidance/rules", searchRateLimiter, async (req, res) => {
+    try {
+      const sessionId = req.body.sessionId || randomUUID();
+
+      const charges = Array.isArray(req.body.charges)
+        ? req.body.charges
+        : typeof req.body.charges === 'string'
+          ? [req.body.charges]
+          : [];
+
+      const caseData = {
+        jurisdiction: String(req.body.jurisdiction || ''),
+        charges,
+        caseStage: String(req.body.caseStage || 'arrest'),
+        custodyStatus: String(req.body.custodyStatus || 'released'),
+        hasAttorney: Boolean(req.body.hasAttorney),
+      };
+
+      const guidance = generateEnhancedGuidance(caseData as any);
+
+      const guidanceWithMeta = {
+        ...guidance,
+        generatedAt: new Date().toISOString(),
+        sessionId,
+      };
+
+      res.json({
+        success: true,
+        sessionId,
+        guidance: guidanceWithMeta,
+      });
+    } catch (error) {
+      errLog('Failed to generate rules-based guidance', error);
+      res.status(500).json({ success: false, error: 'Failed to generate guidance' });
+    }
+  });
+
   // Get Legal Guidance by Session
   // Ownership check: compare the requesting session against the one recorded at creation.
   // Returns 403 (not 404) on mismatch to avoid confirming session existence.
