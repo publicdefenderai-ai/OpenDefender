@@ -1195,6 +1195,30 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any): Uncertai
     });
   }
 
+  // Minor children — null means unanswered, not "no"
+  if (caseData.hasMinorChildren === null || caseData.hasMinorChildren === undefined) {
+    items.push({
+      area: 'Minor Children / Custody Risk',
+      note: 'You did not indicate whether you have minor children in your care. If you do, a new arrest or conviction can be used to modify custody or visitation arrangements. Let your attorney know so they can factor this into your case strategy.',
+    });
+  }
+
+  // Professional license — null means unanswered, not "no"
+  if (caseData.hasProfessionalLicense === null || caseData.hasProfessionalLicense === undefined) {
+    items.push({
+      area: 'Professional License',
+      note: 'You did not indicate whether you hold a professional license (nursing, teaching, CDL, contracting, etc.). Most licensing boards require self-reporting of arrests and convictions — failure to report can result in separate disciplinary action. Tell your attorney if this applies to you.',
+    });
+  }
+
+  // Housing assistance — null means unanswered, not "no"
+  if (caseData.hasHousingAssistance === null || caseData.hasHousingAssistance === undefined) {
+    items.push({
+      area: 'Public / Subsidized Housing',
+      note: 'You did not indicate whether you receive housing assistance. Convictions for certain offenses — especially drug charges — can trigger mandatory eviction from public housing or loss of housing vouchers under federal rules. Tell your attorney if this applies to you.',
+    });
+  }
+
   // Custody status — in custody increases urgency of many deadlines
   if (caseData.custodyStatus === 'unknown' || !caseData.custodyStatus) {
     items.push({
