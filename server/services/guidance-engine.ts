@@ -662,20 +662,21 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
   return mockQA.slice(0, 5); // Limit to 5 questions
 }
 
+// Exported so tests can assert that every charge type has a consequence mapping.
+export const CHARGE_KEYWORDS: Record<string, string[]> = {
+  dui: ['dui', 'dwi', 'driving under', 'intoxicated', 'impaired', 'blood alcohol'],
+  assault: ['assault', 'battery', 'fighting', 'bodily harm', 'aggravated assault'],
+  drug: ['drug', 'possession', 'narcotic', 'controlled substance', 'marijuana', 'cocaine', 'heroin', 'fentanyl', 'meth'],
+  theft: ['theft', 'larceny', 'stealing', 'shoplifting', 'petty theft', 'grand theft'],
+  domestic: ['domestic', 'family violence', 'spousal', 'intimate partner'],
+  fraud: ['fraud', 'embezzlement', 'forgery', 'identity theft', 'wire fraud', 'mail fraud', 'financial crime', 'white collar'],
+  burglary: ['burglary', 'breaking and entering', 'home invasion', 'unlawful entry'],
+  traffic: ['speeding', 'reckless driving', 'hit and run', 'running red light', 'traffic violation', 'driving without license'],
+  weapons: ['weapon', 'firearm', 'gun', 'unlawful possession', 'concealed carry', 'armed'],
+};
+
 function identifyChargeType(charges: string): string {
-  const chargeKeywords = {
-    dui: ['dui', 'dwi', 'driving under', 'intoxicated', 'impaired', 'blood alcohol'],
-    assault: ['assault', 'battery', 'fighting', 'bodily harm', 'aggravated assault'],
-    drug: ['drug', 'possession', 'narcotic', 'controlled substance', 'marijuana', 'cocaine', 'heroin', 'fentanyl', 'meth'],
-    theft: ['theft', 'larceny', 'stealing', 'shoplifting', 'petty theft', 'grand theft'],
-    domestic: ['domestic', 'family violence', 'spousal', 'intimate partner'],
-    fraud: ['fraud', 'embezzlement', 'forgery', 'identity theft', 'wire fraud', 'mail fraud', 'financial crime', 'white collar'],
-    burglary: ['burglary', 'breaking and entering', 'home invasion', 'unlawful entry'],
-    traffic: ['speeding', 'reckless driving', 'hit and run', 'running red light', 'traffic violation', 'driving without license'],
-    weapons: ['weapon', 'firearm', 'gun', 'unlawful possession', 'concealed carry', 'armed']
-  };
-  
-  for (const [type, keywords] of Object.entries(chargeKeywords)) {
+  for (const [type, keywords] of Object.entries(CHARGE_KEYWORDS)) {
     if (keywords.some(keyword => charges.includes(keyword))) {
       return type;
     }
@@ -1062,6 +1063,84 @@ function buildCaseTimeline(caseStage: string, jurisdictionData: any): Array<{sta
   return timeline;
 }
 
+// Exported so tests can assert that every key in CHARGE_KEYWORDS has a corresponding entry here.
+// When adding a new charge type to CHARGE_KEYWORDS you MUST add an entry here too (or the
+// charge-coverage Vitest test will fail).
+export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]> = {
+  dui: [
+    {
+      category: 'drivers_license',
+      consequence: 'A DUI conviction typically triggers an automatic administrative license suspension separate from any criminal sentence, and may require an ignition interlock device.',
+      timing: 'Upon arrest (administrative) and conviction (criminal)',
+      actionNote: 'Request a DMV hearing within the deadline (often 10 days of arrest) to contest the administrative suspension while your criminal case proceeds.',
+    },
+  ],
+  assault: [
+    {
+      category: 'firearms',
+      consequence: 'Certain assault convictions — particularly felonies or offenses involving domestic partners — result in a federal prohibition on firearm possession under 18 U.S.C. § 922(g).',
+      timing: 'Upon felony conviction or qualifying misdemeanor conviction',
+      actionNote: 'Ask your attorney whether the specific charge carries a firearms disability. Even misdemeanor assault can trigger this prohibition in some circumstances.',
+    },
+  ],
+  drug: [
+    {
+      category: 'benefits',
+      consequence: 'Federal drug convictions can temporarily or permanently suspend eligibility for federal student financial aid and certain public benefits depending on the offense and prior record.',
+      timing: 'Upon conviction',
+      actionNote: 'Ask your attorney whether a diversion program or deferred adjudication would avoid a disqualifying conviction.',
+    },
+  ],
+  theft: [
+    {
+      category: 'background_check',
+      consequence: 'Theft convictions — especially felonies — appear on background checks and commonly disqualify individuals from jobs in finance, retail, healthcare, and government. The conviction must typically be disclosed on job applications.',
+      timing: 'Upon conviction',
+      actionNote: 'Discuss with your attorney whether expungement or record sealing is available in your jurisdiction after the case resolves, which may limit what future background checks show.',
+    },
+  ],
+  domestic: [
+    {
+      category: 'firearms',
+      consequence: 'A domestic violence misdemeanor conviction triggers a federal lifetime ban on firearm possession under the Lautenberg Amendment (18 U.S.C. § 922(g)(9)), even if no prison time is imposed.',
+      timing: 'Upon conviction',
+      actionNote: 'This applies even to misdemeanor pleas. Discuss with your attorney before entering any plea.',
+    },
+  ],
+  fraud: [
+    {
+      category: 'employment',
+      consequence: 'Fraud convictions — particularly felonies — can permanently bar individuals from working in finance, banking, or government-regulated industries, and often require disclosure on professional license applications.',
+      timing: 'Upon conviction',
+      actionNote: 'If you hold or are pursuing a professional license, tell your attorney immediately — fraud charges can trigger separate licensing board proceedings.',
+    },
+  ],
+  burglary: [
+    {
+      category: 'housing',
+      consequence: 'Burglary convictions — especially felonies — can result in denial of public housing, loss of housing vouchers, and barriers to renting private housing due to background check policies.',
+      timing: 'Upon conviction',
+      actionNote: 'If you rely on public housing or housing assistance, notify your attorney so the housing impact is considered in any plea or defense strategy.',
+    },
+  ],
+  traffic: [
+    {
+      category: 'drivers_license',
+      consequence: 'Serious traffic violations — including reckless driving, hit-and-run, or habitual offenses — can result in license suspension, revocation, or points accumulation leading to disqualification.',
+      timing: 'Upon conviction or administrative action',
+      actionNote: 'Request a DMV hearing if your license is administratively suspended. Commercial driver\'s license (CDL) holders face stricter consequences.',
+    },
+  ],
+  weapons: [
+    {
+      category: 'firearms',
+      consequence: 'A felony conviction results in a permanent federal prohibition on owning or possessing any firearm or ammunition for life.',
+      timing: 'Upon felony conviction',
+      actionNote: 'Any prior firearms must be transferred to a third party or surrendered. Failure to comply is a separate federal felony.',
+    },
+  ],
+};
+
 // Build personalized collateral consequences from background fields + charge type
 function buildCollateralConsequences(caseData: CaseData, chargeType: string): CollateralConsequenceItem[] {
   const items: CollateralConsequenceItem[] = [];
@@ -1119,43 +1198,8 @@ function buildCollateralConsequences(caseData: CaseData, chargeType: string): Co
     });
   }
 
-  // Charge-based consequences common to specific charge categories
-  const chargeConsequenceMap: Record<string, CollateralConsequenceItem[]> = {
-    dui: [
-      {
-        category: 'drivers_license',
-        consequence: 'A DUI conviction typically triggers an automatic administrative license suspension separate from any criminal sentence, and may require an ignition interlock device.',
-        timing: 'Upon arrest (administrative) and conviction (criminal)',
-        actionNote: 'Request a DMV hearing within the deadline (often 10 days of arrest) to contest the administrative suspension while your criminal case proceeds.',
-      },
-    ],
-    drug: [
-      {
-        category: 'benefits',
-        consequence: 'Federal drug convictions can temporarily or permanently suspend eligibility for federal student financial aid and certain public benefits depending on the offense and prior record.',
-        timing: 'Upon conviction',
-        actionNote: 'Ask your attorney whether a diversion program or deferred adjudication would avoid a disqualifying conviction.',
-      },
-    ],
-    domestic: [
-      {
-        category: 'firearms',
-        consequence: 'A domestic violence misdemeanor conviction triggers a federal lifetime ban on firearm possession under the Lautenberg Amendment (18 U.S.C. § 922(g)(9)), even if no prison time is imposed.',
-        timing: 'Upon conviction',
-        actionNote: 'This applies even to misdemeanor pleas. Discuss with your attorney before entering any plea.',
-      },
-    ],
-    weapons: [
-      {
-        category: 'firearms',
-        consequence: 'A felony conviction results in a permanent federal prohibition on owning or possessing any firearm or ammunition for life.',
-        timing: 'Upon felony conviction',
-        actionNote: 'Any prior firearms must be transferred to a third party or surrendered. Failure to comply is a separate federal felony.',
-      },
-    ],
-  };
-
-  const chargeSpecific = chargeConsequenceMap[chargeType] || [];
+  // Charge-based consequences — defined at module level in CHARGE_CONSEQUENCE_MAP
+  const chargeSpecific = CHARGE_CONSEQUENCE_MAP[chargeType] || [];
   for (const item of chargeSpecific) {
     if (!items.some(i => i.category === item.category)) {
       items.push(item);

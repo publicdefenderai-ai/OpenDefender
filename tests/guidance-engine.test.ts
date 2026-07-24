@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { generateEnhancedGuidance } from '../server/services/guidance-engine';
+import { generateEnhancedGuidance, CHARGE_KEYWORDS, CHARGE_CONSEQUENCE_MAP } from '../server/services/guidance-engine';
 
 const baseCase = {
   jurisdiction: 'CA',
@@ -317,6 +317,83 @@ describe('generateEnhancedGuidance integration', () => {
     for (const item of result.uncertainties!) {
       expect(item.area).toBeTruthy();
       expect(item.note).toBeTruthy();
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Charge-type coverage data-integrity check
+// ---------------------------------------------------------------------------
+// This test ensures that every charge type recognised by identifyChargeType
+// (CHARGE_KEYWORDS) has at least one consequence entry in CHARGE_CONSEQUENCE_MAP.
+// If you add a new key to CHARGE_KEYWORDS without adding a matching entry here,
+// this test will fail and users with that charge type would silently receive zero
+// charge-specific collateral consequences.
+describe('CHARGE_CONSEQUENCE_MAP coverage', () => {
+  it('has a non-empty entry for every key in CHARGE_KEYWORDS', () => {
+    const missingTypes: string[] = [];
+
+    for (const chargeType of Object.keys(CHARGE_KEYWORDS)) {
+      const entry = CHARGE_CONSEQUENCE_MAP[chargeType];
+      if (!entry || entry.length === 0) {
+        missingTypes.push(chargeType);
+      }
+    }
+
+    expect(
+      missingTypes,
+      `These charge types in CHARGE_KEYWORDS have no entry in CHARGE_CONSEQUENCE_MAP: ${missingTypes.join(', ')}. ` +
+      'Add at least one CollateralConsequenceItem for each type, or move it to an intentional-omission list.',
+    ).toHaveLength(0);
+  });
+
+  it('every CHARGE_CONSEQUENCE_MAP entry has valid consequence fields', () => {
+    for (const [type, items] of Object.entries(CHARGE_CONSEQUENCE_MAP)) {
+      for (const item of items) {
+        expect(item.category, `${type}: missing category`).toBeTruthy();
+        expect(item.consequence, `${type}: missing consequence`).toBeTruthy();
+        expect(item.timing, `${type}: missing timing`).toBeTruthy();
+        expect(item.actionNote, `${type}: missing actionNote`).toBeTruthy();
+      }
+    }
+  });
+
+  it('generates at least one charge-specific consequence for each keyword type', () => {
+    const keywordSampleMap: Record<string, string> = {
+      dui: 'driving under the influence',
+      assault: 'assault and battery',
+      drug: 'drug possession',
+      theft: 'grand theft',
+      domestic: 'domestic violence',
+      fraud: 'wire fraud',
+      burglary: 'burglary',
+      traffic: 'reckless driving',
+      weapons: 'carrying a concealed gun',
+    };
+
+    for (const [chargeType, chargeText] of Object.entries(keywordSampleMap)) {
+      const result = generateEnhancedGuidance({
+        jurisdiction: 'CA',
+        charges: chargeText,
+        caseStage: 'arraignment',
+        custodyStatus: 'released',
+        hasAttorney: false,
+        supervisionStatus: 'none',
+        citizenshipStatus: 'citizen',
+        hasMinorChildren: false,
+        hasProfessionalLicense: false,
+        hasHousingAssistance: false,
+      });
+
+      const chargeSpecificCategories = CHARGE_CONSEQUENCE_MAP[chargeType]?.map(i => i.category) ?? [];
+      const returnedCategories = result.collateralConsequences?.map(c => c.category) ?? [];
+      const covered = chargeSpecificCategories.some(cat => returnedCategories.includes(cat));
+
+      expect(
+        covered,
+        `charge type "${chargeType}" (sample: "${chargeText}") produced no charge-specific consequence categories in the output. ` +
+        `Expected one of: ${chargeSpecificCategories.join(', ')}. Got: ${returnedCategories.join(', ')}`,
+      ).toBe(true);
     }
   });
 });
