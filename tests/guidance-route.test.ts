@@ -1,0 +1,304 @@
+/**
+ * Guidance Route — HTTP response envelope tests (Task #209)
+ *
+ * Goal: Verify that the /api/legal-guidance/rules HTTP route returns a
+ * correctly-shaped JSON envelope so a regression in the route layer is caught
+ * before users see a broken or empty guidance dashboard.
+ *
+ * The rules route (POST /api/legal-guidance/rules) is the primary target
+ * because it:
+ *   - Has the lightest middleware stack (searchRateLimiter, which skips in dev)
+ *   - Makes no storage write — pure request-in / JSON-out
+ *   - Is the guaranteed fallback path when AI is unavailable
+ *
+ * The tests go through the REAL route handler (via registerRoutes) so any
+ * future change to the response envelope breaks a test immediately.
+ *
+ * Heavy service dependencies are mocked to prevent DB connections and API
+ * calls, while keeping the actual route logic, schema validation, and
+ * response shaping untouched.
+ */
+
+import { describe, it, expect, vi, beforeAll } from 'vitest';
+import request from 'supertest';
+import express from 'express';
+
+// ── Required top-level fields the guidance dashboard reads ────────────────────
+const REQUIRED_GUIDANCE_FIELDS = [
+  'overview',
+  'criticalAlerts',
+  'immediateActions',
+  'nextSteps',
+  'deadlines',
+  'rightsReminders',
+  'uncertainties',
+  'collateralConsequences',
+  'usageMetrics',
+];
+
+// ── Controlled mock return value for generateEnhancedGuidance ─────────────────
+const MOCK_RULES_GUIDANCE = {
+  overview: 'You have been charged with a criminal offense in California.',
+  criticalAlerts: [],
+  immediateActions: [{ action: 'Contact an attorney', urgency: 'urgent' }],
+  nextSteps: [{ step: 'Attend arraignment', timeframe: 'within 48 hours' }],
+  deadlines: [],
+  rightsReminders: ['You have the right to remain silent.'],
+  uncertainties: [],
+  collateralConsequences: [],
+  usageMetrics: {
+    inputTokens: 0,
+    outputTokens: 0,
+    estimatedCost: 0,
+    processingTime: 0,
+    model: 'rule-based',
+    cacheHit: false,
+    cacheCreationTokens: 0,
+    cacheReadTokens: 0,
+  },
+};
+
+// ── Heavy service mocks — prevents DB connections and API calls ───────────────
+// Storage (db connection)
+vi.mock('../server/storage', () => ({
+  storage: {
+    createLegalCase: vi.fn().mockResolvedValue({ id: 'test-id', guidance: {}, sessionId: 'sess' }),
+    getLegalCase: vi.fn().mockResolvedValue(null),
+    getLegalCasesBySession: vi.fn().mockResolvedValue([]),
+    deleteLegalCase: vi.fn().mockResolvedValue(undefined),
+    deleteExpiredCases: vi.fn().mockResolvedValue(0),
+    createLegalResource: vi.fn().mockResolvedValue({}),
+    getLegalResources: vi.fn().mockResolvedValue([]),
+    createCourtData: vi.fn().mockResolvedValue({}),
+    getCourtData: vi.fn().mockResolvedValue([]),
+    createCaseFeedback: vi.fn().mockResolvedValue({}),
+    createGuidanceFlag: vi.fn().mockResolvedValue({}),
+    getGlossaryTerms: vi.fn().mockResolvedValue([]),
+    getGlossaryTerm: vi.fn().mockResolvedValue(null),
+    createUser: vi.fn().mockResolvedValue({}),
+    getUserById: vi.fn().mockResolvedValue(null),
+    getUserByUsername: vi.fn().mockResolvedValue(null),
+    updateUser: vi.fn().mockResolvedValue({}),
+  },
+}));
+
+// Services that initialize external connections at import time
+vi.mock('../server/services/courtlistener', () => ({
+  courtListenerService: { searchOpinions: vi.fn(), getOpinion: vi.fn() },
+}));
+vi.mock('../server/services/legal-data', () => ({
+  legalDataService: { getLegalResources: vi.fn(), getStatutes: vi.fn() },
+}));
+vi.mock('../server/services/recap', () => ({
+  recapService: { fetchDocument: vi.fn() },
+}));
+vi.mock('../server/services/bjs-statistics', () => ({
+  bjsStatisticsService: { getCrimeStats: vi.fn(), getArrestStats: vi.fn() },
+}));
+vi.mock('../server/services/openlaws-client', () => ({
+  openLawsClient: { searchStatutes: vi.fn(), getStatute: vi.fn() },
+}));
+vi.mock('../server/services/statute-seeder', () => ({
+  statuteSeeder: { seedStatutes: vi.fn(), getSeededStatutes: vi.fn() },
+}));
+vi.mock('../server/services/attorney-docs/session-manager', () => ({
+  attorneySessionManager: {
+    createSession: vi.fn(),
+    getSession: vi.fn(),
+    deleteSession: vi.fn(),
+    verifySession: vi.fn(),
+  },
+}));
+vi.mock('../server/services/attorney-docs/document-generator', () => ({
+  getTemplates: vi.fn().mockReturnValue([]),
+  getTemplate: vi.fn().mockReturnValue(null),
+  generateDocument: vi.fn(),
+  getGeneratedDocument: vi.fn().mockReturnValue(null),
+  clearSessionDocuments: vi.fn(),
+}));
+vi.mock('../server/services/attorney-docs/docx-generator', () => ({
+  generateDocx: vi.fn().mockResolvedValue(Buffer.from('')),
+}));
+vi.mock('../server/services/document-summarizer', () => ({
+  summarizeDocument: vi.fn(),
+  validateFile: vi.fn().mockReturnValue({ valid: true }),
+  getSupportedFileTypes: vi.fn().mockReturnValue([]),
+  createSummaryBatch: vi.fn(),
+  getSummaryBatchStatus: vi.fn(),
+  cancelSummaryBatch: vi.fn(),
+  redactDocumentPII: vi.fn(),
+}));
+vi.mock('../server/services/search-indexer', () => ({
+  search: vi.fn().mockResolvedValue([]),
+  buildSearchIndex: vi.fn(),
+  getSearchIndexStats: vi.fn().mockReturnValue({ totalDocuments: 0 }),
+}));
+vi.mock('../server/services/locus-lookup', () => ({
+  locusSearch: vi.fn().mockResolvedValue([]),
+  normalizeStateCode: vi.fn().mockReturnValue('CA'),
+}));
+vi.mock('../server/services/legal-accuracy-validator', () => ({
+  validateLegalGuidance: vi.fn().mockResolvedValue({
+    isValid: true, confidenceScore: 1, issues: [], checksPerformed: 0, checksPassed: 0, summary: '',
+  }),
+}));
+vi.mock('../server/config/ai-model', () => ({
+  CLAUDE_MODEL_SONNET_DISPLAY_NAME: 'Claude Sonnet (test)',
+}));
+
+// Route-specific service mocks
+vi.mock('../server/services/guidance-engine', () => ({
+  generateEnhancedGuidance: vi.fn().mockReturnValue(MOCK_RULES_GUIDANCE),
+}));
+vi.mock('../server/services/pii-redactor', () => ({
+  redactCaseDetails: vi.fn().mockImplementation((data: unknown) => ({
+    redactedDetails: data,
+    stats: { total: 0 },
+  })),
+  isPIIRedactionEnabled: vi.fn().mockReturnValue(false),
+}));
+vi.mock('../server/services/cost-tracker', () => ({
+  isAIAvailable: vi.fn().mockReturnValue(true),
+  isServiceAvailable: vi.fn().mockReturnValue(true),
+  recordAICost: vi.fn().mockResolvedValue(undefined),
+  getAICostStatus: vi.fn().mockReturnValue({
+    daily: { limit: 10, spent: 0, remaining: 10 },
+  }),
+}));
+vi.mock('../server/services/captcha-verification', () => ({
+  isCaptchaRequired: vi.fn().mockReturnValue(false),
+  verifyCaptcha: vi.fn().mockResolvedValue({ success: true }),
+  getCaptchaSiteKey: vi.fn().mockReturnValue(null),
+}));
+vi.mock('../server/services/claude-guidance', () => ({
+  generateClaudeGuidance: vi.fn(),
+  streamClaudeGuidance: vi.fn(),
+  testClaudeConnection: vi.fn().mockResolvedValue({ ok: true }),
+  clearSessionCache: vi.fn(),
+}));
+vi.mock('../shared/playbooks/index', () => ({
+  getPlaybooks: vi.fn().mockReturnValue([]),
+  getPlaybook: vi.fn().mockReturnValue(null),
+}));
+
+// ── Build the test Express app once using the real registerRoutes ─────────────
+let testApp: express.Express;
+
+beforeAll(async () => {
+  const { registerRoutes } = await import('../server/routes');
+  testApp = express();
+  testApp.use(express.json());
+  await registerRoutes(testApp);
+});
+
+// ── Minimal valid request body (rules route schema) ───────────────────────────
+const VALID_BODY = {
+  jurisdiction: 'CA',
+  charges: [],
+  caseStage: 'arraignment',
+};
+
+// =============================================================================
+describe('POST /api/legal-guidance/rules — response envelope shape', () => {
+  it('returns 200 with { success: true, sessionId, guidance } envelope', async () => {
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send(VALID_BODY)
+      .expect(200);
+
+    expect(res.body.success).toBe(true);
+    expect(typeof res.body.sessionId).toBe('string');
+    expect(res.body.sessionId.length).toBeGreaterThan(0);
+    expect(res.body.guidance).toBeDefined();
+    expect(typeof res.body.guidance).toBe('object');
+  });
+
+  it('guidance object includes all required dashboard top-level fields', async () => {
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send(VALID_BODY)
+      .expect(200);
+
+    for (const field of REQUIRED_GUIDANCE_FIELDS) {
+      expect(res.body.guidance, `missing guidance field: ${field}`).toHaveProperty(field);
+    }
+  });
+
+  it('guidance includes generatedBy and generatedAt route-injected fields', async () => {
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send(VALID_BODY)
+      .expect(200);
+
+    expect(res.body.guidance.generatedBy).toBe('rule-based');
+    expect(typeof res.body.guidance.generatedAt).toBe('string');
+    // generatedAt should be a valid ISO timestamp
+    expect(() => new Date(res.body.guidance.generatedAt)).not.toThrow();
+    expect(new Date(res.body.guidance.generatedAt).getTime()).toBeGreaterThan(0);
+  });
+
+  it('uses a client-supplied sessionId when one is provided', async () => {
+    const sessionId = 'client-session-abc-123';
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send({ ...VALID_BODY, sessionId })
+      .expect(200);
+
+    expect(res.body.sessionId).toBe(sessionId);
+  });
+
+  it('generates a UUID sessionId when none is supplied', async () => {
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send(VALID_BODY)
+      .expect(200);
+
+    // UUID v4 pattern
+    expect(res.body.sessionId).toMatch(
+      /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i,
+    );
+  });
+});
+
+// =============================================================================
+describe('POST /api/legal-guidance/rules — error handling', () => {
+  it('returns a structured JSON error (not a stack trace) when guidance generation fails', async () => {
+    const { generateEnhancedGuidance } = await import('../server/services/guidance-engine');
+    (generateEnhancedGuidance as ReturnType<typeof vi.fn>).mockImplementationOnce(() => {
+      throw new Error('Engine failure');
+    });
+
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send(VALID_BODY)
+      .expect(500);
+
+    // Must be structured JSON — not a raw stack trace string
+    expect(res.body.success).toBe(false);
+    expect(typeof res.body.error).toBe('string');
+    expect(res.body.error).not.toMatch(/at Object\.|at async|Error:/);
+    // No stack trace properties leaked
+    expect(res.body.stack).toBeUndefined();
+  });
+
+  it('returns 400 with a structured error when all provided charge IDs are unrecognized', async () => {
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send({ ...VALID_BODY, charges: ['nonexistent-charge-id-xyz'] })
+      .expect(400);
+
+    expect(res.body.success).toBe(false);
+    expect(typeof res.body.error).toBe('string');
+  });
+
+  it('returns 500 with structured JSON when the request body fails schema validation', async () => {
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send({ charges: [] }) // missing jurisdiction and caseStage
+      .expect(500);
+
+    expect(res.body.success).toBe(false);
+    expect(typeof res.body.error).toBe('string');
+    expect(res.body.stack).toBeUndefined();
+  });
+});
