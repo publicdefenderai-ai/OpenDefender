@@ -2028,7 +2028,7 @@ export default {
         "cardADisclosure": "Sus respuestas son procesadas por el servicio de IA de Anthropic y pueden ser retenidas hasta 30 días por razones de seguridad y operativas. No se establece ninguna relación abogado-cliente.",
         "cardAButton": "Continuar con orientación IA →",
         "cardBTitle": "Orientación Inmediata",
-        "cardBBody": "Orientación seleccionada para su estado y tipo de cargo — elaborada por nuestro equipo legal. Sin IA, sin espera.",
+        "cardBBody": "Orientación seleccionada para su estado y tipo de cargo — extraída de nuestra base de datos de investigación legal. Resultados instantáneos, sin IA.",
         "cardBTime": "Resultados en segundos.",
         "cardBButton": "Obtener orientación inmediata →",
         "validationLink": "Conozca cómo verificamos las respuestas de IA →",

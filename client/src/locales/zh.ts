@@ -2028,7 +2028,7 @@ export default {
         "cardADisclosure": "您的输入由Anthropic的AI服务处理，可能出于安全和运营目的保留最多30天。不构成律师-委托人关系。",
         "cardAButton": "继续使用AI指导 →",
         "cardBTitle": "即时指导",
-        "cardBBody": "针对您所在州和指控类型的精选指导——由我们的法律团队整理。无AI，无等待。",
+        "cardBBody": "针对您所在州和指控类型的精选指导——来自我们的法律研究数据库。即时结果，无需AI。",
         "cardBTime": "几秒内即可获得结果。",
         "cardBButton": "获取即时指导 →",
         "validationLink": "了解我们如何验证AI回答 →",

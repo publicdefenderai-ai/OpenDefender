@@ -2026,7 +2026,7 @@ export default {
         "cardADisclosure": "Your inputs are processed by Anthropic's AI service and may be retained up to 30 days for safety and operational purposes. No attorney-client relationship is formed.",
         "cardAButton": "Continue with AI Guidance →",
         "cardBTitle": "Immediate Guidance",
-        "cardBBody": "Curated guidance for your state and charge type — researched by our legal team. No AI, no wait.",
+        "cardBBody": "Curated guidance for your state and charge type — drawn from our legal research database. Instant results, no AI.",
         "cardBTime": "Results in seconds.",
         "cardBButton": "Get Immediate Guidance →",
         "validationLink": "Learn how we verify AI responses →",
