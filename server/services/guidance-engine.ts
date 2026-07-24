@@ -9,6 +9,11 @@ interface CaseData {
   caseStage: string;
   custodyStatus: string;
   hasAttorney: boolean;
+  supervisionStatus?: string;
+  citizenshipStatus?: string;
+  hasMinorChildren?: boolean | null;
+  hasProfessionalLicense?: boolean | null;
+  hasHousingAssistance?: boolean | null;
 }
 
 interface GuidanceDeadline {
@@ -39,6 +44,18 @@ interface MockQAItem {
   category: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
 }
 
+interface CollateralConsequenceItem {
+  category: string;
+  consequence: string;
+  timing: string;
+  actionNote: string;
+}
+
+interface UncertaintyItem {
+  area: string;
+  note: string;
+}
+
 interface EnhancedGuidance {
   overview: string;
   criticalAlerts: string[];
@@ -58,6 +75,8 @@ interface EnhancedGuidance {
     completed: boolean;
   }>;
   mockQA?: MockQAItem[];
+  collateralConsequences?: CollateralConsequenceItem[];
+  uncertainties?: UncertaintyItem[];
 }
 
 // Jurisdiction-specific legal procedures and timelines
@@ -514,7 +533,9 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
     courtPreparation: (stageData as any)?.courtPreparation || [],
     avoidActions: buildAvoidActionsForCharges(specificCharges, stageData),
     timeline: buildCaseTimeline(caseStage, jurisdictionData),
-    mockQA: buildMockQA(caseData, specificCharges)
+    mockQA: buildMockQA(caseData, specificCharges),
+    collateralConsequences: buildCollateralConsequences(caseData, fallbackChargeType),
+    uncertainties: buildUncertainties(caseData, jurisdictionData),
   };
   
   return guidance;
@@ -1039,4 +1060,148 @@ function buildCaseTimeline(caseStage: string, jurisdictionData: any): Array<{sta
   ];
   
   return timeline;
+}
+
+// Build personalized collateral consequences from background fields + charge type
+function buildCollateralConsequences(caseData: CaseData, chargeType: string): CollateralConsequenceItem[] {
+  const items: CollateralConsequenceItem[] = [];
+
+  // Supervision / probation / parole
+  if (caseData.supervisionStatus && caseData.supervisionStatus !== 'none' && caseData.supervisionStatus !== '') {
+    const isParole = caseData.supervisionStatus === 'parole';
+    items.push({
+      category: 'supervision_revocation',
+      consequence: isParole
+        ? 'A new arrest or conviction can trigger a parole revocation hearing and return you to prison to serve the remainder of your sentence.'
+        : 'A new charge may be reported to your probation officer and can trigger a revocation hearing, leading to incarceration.',
+      timing: 'Upon arrest or conviction',
+      actionNote: `Tell your attorney about your ${isParole ? 'parole' : 'probation'} status immediately — they must factor this into every decision, including bail and plea discussions.`,
+    });
+  }
+
+  // Immigration status
+  if (caseData.citizenshipStatus === 'non_citizen') {
+    items.push({
+      category: 'immigration',
+      consequence: 'Non-citizens — including green card holders — can face deportation, inadmissibility, or bars to naturalization as a result of certain criminal convictions (Padilla v. Kentucky, 2010).',
+      timing: 'Upon conviction or guilty plea',
+      actionNote: 'Request that your attorney assess the immigration consequences of every charge and every plea option before you make any decisions.',
+    });
+  }
+
+  // Minor children / custody
+  if (caseData.hasMinorChildren === true) {
+    items.push({
+      category: 'custody',
+      consequence: 'An arrest or conviction — especially for violent or drug charges — can be used as grounds to modify custody or visitation arrangements. If a family court order is already in place, an arrest may trigger a review.',
+      timing: 'Upon arrest or conviction',
+      actionNote: 'Inform your attorney about any existing custody orders. A family law attorney may also need to be involved.',
+    });
+  }
+
+  // Professional license
+  if (caseData.hasProfessionalLicense === true) {
+    items.push({
+      category: 'employment',
+      consequence: 'Most state licensing boards (medical, legal, nursing, teaching, contracting, financial, etc.) require self-reporting of arrests and convictions. Failure to report can result in separate disciplinary action beyond the criminal case.',
+      timing: 'Upon arrest, charge, or conviction (varies by board)',
+      actionNote: 'Review your license board\'s reporting rules with your attorney. Proactive disclosure is almost always better than discovery by the board.',
+    });
+  }
+
+  // Public housing / housing assistance
+  if (caseData.hasHousingAssistance === true) {
+    items.push({
+      category: 'housing',
+      consequence: 'Convictions for certain offenses — especially drug charges and crimes involving violence — can result in mandatory eviction from public housing or termination of housing vouchers under federal rules (24 CFR Part 966).',
+      timing: 'Upon conviction or guilty plea',
+      actionNote: 'Notify your attorney that you receive housing assistance. The type of charge and local housing authority discretion both matter here.',
+    });
+  }
+
+  // Charge-based consequences common to specific charge categories
+  const chargeConsequenceMap: Record<string, CollateralConsequenceItem[]> = {
+    dui: [
+      {
+        category: 'drivers_license',
+        consequence: 'A DUI conviction typically triggers an automatic administrative license suspension separate from any criminal sentence, and may require an ignition interlock device.',
+        timing: 'Upon arrest (administrative) and conviction (criminal)',
+        actionNote: 'Request a DMV hearing within the deadline (often 10 days of arrest) to contest the administrative suspension while your criminal case proceeds.',
+      },
+    ],
+    drug: [
+      {
+        category: 'benefits',
+        consequence: 'Federal drug convictions can temporarily or permanently suspend eligibility for federal student financial aid and certain public benefits depending on the offense and prior record.',
+        timing: 'Upon conviction',
+        actionNote: 'Ask your attorney whether a diversion program or deferred adjudication would avoid a disqualifying conviction.',
+      },
+    ],
+    domestic: [
+      {
+        category: 'firearms',
+        consequence: 'A domestic violence misdemeanor conviction triggers a federal lifetime ban on firearm possession under the Lautenberg Amendment (18 U.S.C. § 922(g)(9)), even if no prison time is imposed.',
+        timing: 'Upon conviction',
+        actionNote: 'This applies even to misdemeanor pleas. Discuss with your attorney before entering any plea.',
+      },
+    ],
+    weapons: [
+      {
+        category: 'firearms',
+        consequence: 'A felony conviction results in a permanent federal prohibition on owning or possessing any firearm or ammunition for life.',
+        timing: 'Upon felony conviction',
+        actionNote: 'Any prior firearms must be transferred to a third party or surrendered. Failure to comply is a separate federal felony.',
+      },
+    ],
+  };
+
+  const chargeSpecific = chargeConsequenceMap[chargeType] || [];
+  for (const item of chargeSpecific) {
+    if (!items.some(i => i.category === item.category)) {
+      items.push(item);
+    }
+  }
+
+  return items;
+}
+
+// Build uncertainty notices when key background information is missing or jurisdiction is generic
+function buildUncertainties(caseData: CaseData, jurisdictionData: any): UncertaintyItem[] {
+  const items: UncertaintyItem[] = [];
+  const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
+
+  // Jurisdiction not specifically mapped — using federal defaults
+  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'FEDERAL'];
+  if (!knownJurisdictions.includes(jurisdiction)) {
+    items.push({
+      area: 'Jurisdiction-Specific Deadlines',
+      note: `Specific court deadlines and procedures for ${jurisdiction || 'your state'} were not available in our rules database. The timeframes shown are general estimates. Verify all deadlines with a local attorney or your court clerk.`,
+    });
+  }
+
+  // Supervision status not provided — couldn't assess revocation risk
+  if (!caseData.supervisionStatus) {
+    items.push({
+      area: 'Probation / Parole Status',
+      note: 'You did not indicate whether you are currently on probation or parole. If you are, a new charge may trigger a revocation proceeding — a serious additional risk that your attorney must know about immediately.',
+    });
+  }
+
+  // Immigration status not provided
+  if (!caseData.citizenshipStatus) {
+    items.push({
+      area: 'Immigration Consequences',
+      note: 'If you are not a U.S. citizen, criminal charges can have deportation or inadmissibility consequences. Because you did not indicate your citizenship status, these consequences could not be assessed. Let your attorney know your status right away.',
+    });
+  }
+
+  // Custody status — in custody increases urgency of many deadlines
+  if (caseData.custodyStatus === 'unknown' || !caseData.custodyStatus) {
+    items.push({
+      area: 'Custody Status',
+      note: 'Your custody status was not specified. Deadlines and procedural timelines are generally shorter when a defendant is in custody. If you are currently detained, confirm all deadlines with your attorney or the court.',
+    });
+  }
+
+  return items;
 }
