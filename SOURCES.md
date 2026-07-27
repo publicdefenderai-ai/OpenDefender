@@ -523,7 +523,7 @@ Two GitHub Actions workflows run on January 1, April 1, July 1, and October 1 at
 
 **File:** `client/src/lib/collateral-consequences-data.ts`
 
-**Coverage (as of March 2026):** All 50 states + DC (51 entries). Each entry covers four consequence categories: voting rights, employment (ban-the-box + occupational licensing), public benefits (SNAP/TANF drug felony ban status), and housing (fair chance housing laws).
+**Coverage (as of July 2026):** All 50 states + DC (51 entries). Each entry covers seven consequence categories: voting rights, employment (ban-the-box + occupational licensing), public benefits (SNAP/TANF drug felony ban status), housing (fair chance housing laws), driver's license suspension, immigration enforcement posture, and sex offender registration.
 
 **Primary sources per category:**
 
@@ -534,6 +534,9 @@ Two GitHub Actions workflows run on January 1, April 1, July 1, and October 1 at
 | Occupational licensing nexus reform | CCRC licensing tracker, Institute for Justice occupational licensing database, state licensing board statutes |
 | SNAP/TANF drug felony ban | USDA FNS State Options Reports, CLASP state snapshots, 21 U.S.C. § 862a (federal baseline) |
 | Fair chance housing | State statutes, CCRC housing tracker, local ordinance text |
+| Driver's license suspension (DUI/drug) | State DMV statutes, NCSL DUI law tracker (ncsl.org), GHSA state alcohol-impaired driving laws, Governors Highway Safety Association |
+| Immigration enforcement posture | ILRC Quick Reference Chart (2024), ICE 287(g) agreement list, state sanctuary-policy laws, Padilla v. Kentucky, 559 U.S. 356 (2010) |
+| Sex offender registration | SORNA, 34 U.S.C. § 20901 et seq.; NCSL sex offender laws database (ncsl.org/research/civil-and-criminal-justice); state sex offender registration statutes |
 
 **Data confidence tiers:**
 - `high` — verified against primary state statute text; specific citation exists

@@ -4,6 +4,7 @@ import {
   AlertTriangle, ArrowRight, ArrowLeft, Copy, Check,
   Printer, Info, Home, Briefcase, Globe2,
   DollarSign, Users, Scale, Award, CheckCircle2, Shield, Lock,
+  Car, AlertOctagon, ChevronRight,
 } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -112,6 +113,53 @@ const QUESTION_ORDER: QuestionId[] = [
 ];
 
 /* ------------------------------------------------------------------ */
+/* Charge-type pre-step types and constants                            */
+/* ------------------------------------------------------------------ */
+
+type ChargeType =
+  | "dui"
+  | "drug_possession"
+  | "drug_trafficking"
+  | "theft_property"
+  | "domestic_violence"
+  | "sex_offense"
+  | "other";
+
+/** Risk cards that are surfaced purely from the charge type selection,
+ *  not from yes/no question answers. Same shape as RiskMeta. */
+interface ChargeRiskMeta {
+  id: "driverLicense" | "sexOffender";
+  urgency: number;
+  Icon: React.ElementType;
+  color: string;
+  bg: string;
+  border: string;
+  linkHref: string;
+}
+
+const CHARGE_TYPE_RISKS: ChargeRiskMeta[] = [
+  {
+    id: "sexOffender", urgency: 0.5, Icon: AlertOctagon,
+    color: "text-red-700 dark:text-red-400",
+    bg: "bg-red-50 dark:bg-red-950/30",
+    border: "border-red-200 dark:border-red-800",
+    linkHref: "/legal-aid",
+  },
+  {
+    id: "driverLicense", urgency: 1.5, Icon: Car,
+    color: "text-amber-700 dark:text-amber-400",
+    bg: "bg-amber-50 dark:bg-amber-950/30",
+    border: "border-amber-200 dark:border-amber-800",
+    linkHref: "/support/transportation",
+  },
+];
+
+const CHARGE_TYPE_OPTION_KEYS: ChargeType[] = [
+  "dui", "drug_possession", "drug_trafficking",
+  "theft_property", "domestic_violence", "sex_offense", "other",
+];
+
+/* ------------------------------------------------------------------ */
 /* Privacy note sub-component                                          */
 /* ------------------------------------------------------------------ */
 
@@ -138,15 +186,25 @@ export default function CollateralConsequences() {
     benefits: null, children: null, supervision: null, license: null,
   });
   const [copied, setCopied] = useState(false);
+  const [chargeType, setChargeType] = useState<ChargeType | null>(null);
+  const [chargeTypeSelected, setChargeTypeSelected] = useState(false);
 
-  const isResults = step === QUESTION_ORDER.length;
+  const isResults = chargeTypeSelected && step === QUESTION_ORDER.length;
   const progress = Math.round((step / QUESTION_ORDER.length) * 100);
   const currentMeta = QUESTIONS[step];
   const currentId = QUESTION_ORDER[step];
 
-  const activeRisks = RISKS
-    .filter(r => answers[r.id] === "yes")
-    .sort((a, b) => a.urgency - b.urgency);
+  const chargeRisks: ChargeRiskMeta[] = CHARGE_TYPE_RISKS.filter(r => {
+    if (!chargeTypeSelected) return false;
+    if (r.id === "driverLicense") return chargeType === "dui" || chargeType === "drug_possession" || chargeType === "drug_trafficking";
+    if (r.id === "sexOffender") return chargeType === "sex_offense";
+    return false;
+  });
+
+  const activeRisks: (RiskMeta | ChargeRiskMeta)[] = [
+    ...chargeRisks,
+    ...RISKS.filter(r => answers[r.id] === "yes"),
+  ].sort((a, b) => a.urgency - b.urgency);
 
   /* Plain-text export builder (inside component so t() is in scope) */
   function buildPlainText(): string {
@@ -184,7 +242,12 @@ export default function CollateralConsequences() {
   }
 
   function handleBack() {
-    if (step > 0) setStep(s => s - 1);
+    if (step > 0) {
+      setStep(s => s - 1);
+    } else {
+      // Back from first question — return to charge type selector
+      setChargeTypeSelected(false);
+    }
   }
 
   function handleRestart() {
@@ -193,6 +256,8 @@ export default function CollateralConsequences() {
       housing: null, employment: null, immigration: null,
       benefits: null, children: null, supervision: null, license: null,
     });
+    setChargeType(null);
+    setChargeTypeSelected(false);
   }
 
   async function handleCopy() {
@@ -251,9 +316,42 @@ export default function CollateralConsequences() {
       <section className="py-10 md:py-14">
         <div className="max-w-xl mx-auto px-4">
 
-          {/* ---------- QUESTION FLOW ---------- */}
-          {!isResults ? (
+          {/* ---------- CHARGE TYPE PRE-STEP ---------- */}
+          {!chargeTypeSelected ? (
+            <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
+              <div className="rounded-2xl border border-border bg-card shadow-sm p-6 md:p-8 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center mb-5">
+                  <Scale className="h-6 w-6 text-rose-600 dark:text-rose-400" strokeWidth={1.75} aria-hidden="true" />
+                </div>
+                <h2 className="text-lg font-bold text-foreground leading-snug mb-2">
+                  {t("collateralConsequences.chargeType.heading")}
+                </h2>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                  {t("collateralConsequences.chargeType.sub")}
+                </p>
+                <div className="space-y-2">
+                  {CHARGE_TYPE_OPTION_KEYS.map(key => (
+                    <button
+                      key={key}
+                      onClick={() => { setChargeType(key); setChargeTypeSelected(true); }}
+                      className="w-full flex items-center justify-between px-4 py-3 rounded-xl border border-border bg-background text-sm font-medium text-foreground hover:border-rose-300 hover:bg-rose-50/50 dark:hover:bg-rose-950/20 dark:hover:border-rose-700 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
+                    >
+                      <span>{t(`collateralConsequences.chargeType.options.${key}`)}</span>
+                      <ChevronRight className="h-4 w-4 text-muted-foreground flex-shrink-0" aria-hidden="true" />
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <button
+                onClick={() => { setChargeType(null); setChargeTypeSelected(true); }}
+                className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {t("collateralConsequences.chargeType.skip")}
+              </button>
+            </motion.div>
+          ) : !isResults ? (
             <>
+              {/* ---------- QUESTION FLOW ---------- */}
               {/* Progress */}
               <div className="mb-6">
                 <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
@@ -324,15 +422,13 @@ export default function CollateralConsequences() {
                   </div>
 
                   {/* Back */}
-                  {step > 0 && (
-                    <button
-                      onClick={handleBack}
-                      className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
-                      {t("collateralConsequences.back")}
-                    </button>
-                  )}
+                  <button
+                    onClick={handleBack}
+                    className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
+                    {t("collateralConsequences.back")}
+                  </button>
                 </motion.div>
               </AnimatePresence>
             </>

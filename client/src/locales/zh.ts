@@ -5825,6 +5825,21 @@ export default {
         "sub": "包括护理、教学、承包商、保安、房地产及其他持证职业。"
       }
     },
+    // TODO: Task #177 — human translation needed for chargeType section
+    "chargeType": {
+      "heading": "What type of charge is this case about?",
+      "sub": "This helps us identify the most relevant consequences for your situation. Your answer is never stored.",
+      "skip": "Skip — I'm not sure yet",
+      "options": {
+        "dui": "DUI / Impaired driving",
+        "drug_possession": "Drug possession or use",
+        "drug_trafficking": "Drug sale, distribution, or trafficking",
+        "theft_property": "Theft, burglary, or property crime",
+        "domestic_violence": "Domestic violence or assault",
+        "sex_offense": "Sex offense",
+        "other": "Other / Not listed"
+      }
+    },
     "risks": {
       "supervision": {
         "title": "缓刑或假释违规风险",
@@ -5874,6 +5889,21 @@ export default {
         "clock": "大多数许可委员会要求在逮捕后30天内报告。某些委员会在收到通知后立即采取行动。查看您委员会的具体规定。",
         "action": "查阅您的许可委员会关于逮捕报告的规定。在向委员会报告之前，联系处理职业许可事务的律师。",
         "linkLabel": "寻找法律帮助"
+      },
+      // TODO: Task #177 — human translation needed for driverLicense and sexOffender risk cards
+      "driverLicense": {
+        "title": "Driver's License Suspension Risk",
+        "what": "DUI and many drug convictions automatically trigger driver's license suspension through two separate tracks: an administrative (DMV) suspension tied to your arrest, and a criminal court suspension tied to conviction. Both can run at the same time. Most states allow a restricted or hardship license for work and medical travel during suspension, but you must act quickly — the administrative suspension window can close within days of arrest.",
+        "clock": "In most states, the administrative license suspension begins automatically 30–60 days after arrest unless you request a DMV hearing, usually within 5–30 days of your arrest notice. Failing to request the hearing within the deadline waives your right to contest the administrative suspension.",
+        "action": "Ask your attorney to file a DMV hearing request on your behalf immediately — do not wait for your court date. Also ask about hardship or restricted license options and whether an ignition interlock device can allow you to drive during the suspension period.",
+        "linkLabel": "Transportation and license help"
+      },
+      "sexOffender": {
+        "title": "Sex Offender Registration Risk",
+        "what": "A conviction for a sex offense triggers mandatory registration under your state's sex offender registry law and under the federal Sex Offender Registration and Notification Act (SORNA, 34 U.S.C. § 20901). Registration lasts 10–15 years for lower-tier offenses and lifetime for serious or repeat offenses in most states. It requires regular in-person check-ins, address verification, and public online listing. Many states add residency restrictions — typically 500–2,000 feet from schools, parks, and day care centers — that severely limit where you can live.",
+        "clock": "Registration is required immediately upon conviction, upon release from incarceration, or upon arrival in any jurisdiction where you live, work, or go to school. Failure to register or update your registration is itself a separate state and federal felony.",
+        "action": "The tier and duration of registration is determined at sentencing. An attorney experienced in sex offender law should advise you before you enter any plea, because the registration consequences are often permanent and cannot be undone by expungement. Ask specifically about the minimum registration period and any petition for removal available under state law.",
+        "linkLabel": "Find legal help"
       }
     }
   },

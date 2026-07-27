@@ -1634,6 +1634,555 @@ export const COLLATERAL_CONSEQUENCE_RULES: Record<string, CollateralConsequenceR
 
 };
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Driver's License Suspension Rules
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Ignition interlock device (IID) requirement following a first-offense DUI.
+ * 'required'     — statute mandates IID for first offense.
+ * 'discretionary' — court or DMV may impose IID; not automatic for first offense.
+ * 'not_required'  — no IID requirement for first offense under state law.
+ */
+export type InterlockRequirement = 'required' | 'discretionary' | 'not_required';
+
+export interface DriversLicenseRule {
+  /** Two-letter state code or 'DC'. */
+  state: string;
+  stateName: string;
+  /** Suspension duration in days for a first-offense DUI/OUI/DWI conviction.
+   *  null = duration is wholly discretionary or BAC-tier-dependent (see notes). */
+  firstOffenseDuiSuspensionDays: number | null;
+  /** True if a restricted or hardship license (e.g. work-only driving) is
+   *  available during the suspension period for first-offense DUI. */
+  hardshipLicenseAvailable: boolean;
+  /** IID requirement for first-offense DUI reinstatement or restricted license. */
+  ignitionInterlockRequired: InterlockRequirement;
+  /** True if the DMV imposes an administrative license suspension upon arrest
+   *  or breath-test refusal BEFORE any criminal conviction (implied consent). */
+  adminSuspensionOnArrest: boolean;
+  /** True if a drug conviction (non-DUI, no vehicle involved) can trigger
+   *  automatic driver's license suspension under state law. */
+  drugConvictionSuspension: boolean;
+  source: string;
+  notes?: string;
+  dataConfidence: 'high' | 'medium' | 'low';
+  lastVerified: string;
+}
+
+export const DRIVERS_LICENSE_RULES: Record<string, DriversLicenseRule> = {
+
+  // ── Alabama ────────────────────────────────────────────────────────────────
+  AL: { state: 'AL', stateName: 'Alabama', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Ala. Code §§ 32-5A-191(c)(1), 32-5A-195; Ala. Code § 32-6-19', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Alaska ─────────────────────────────────────────────────────────────────
+  AK: { state: 'AK', stateName: 'Alaska', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Alaska Stat. §§ 28.15.165(a)(1), 28.35.030', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Arizona ────────────────────────────────────────────────────────────────
+  AZ: { state: 'AZ', stateName: 'Arizona', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Ariz. Rev. Stat. §§ 28-1381, 28-3318, 28-3319', notes: 'Administrative suspension runs concurrent with criminal suspension. IID required on all reinstatements.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Arkansas ───────────────────────────────────────────────────────────────
+  AR: { state: 'AR', stateName: 'Arkansas', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Ark. Code Ann. §§ 5-65-104, 5-65-118, 27-16-915', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── California ─────────────────────────────────────────────────────────────
+  CA: { state: 'CA', stateName: 'California', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: true, source: 'Cal. Veh. Code §§ 13352(a)(1), 13353, 23575; Cal. Veh. Code § 13202.5 (drug conviction)', notes: 'Restricted license with IID available from day 1. Drug conviction (Health & Safety Code § 11350 et seq.) triggers 1-year suspension under Veh. Code § 13202.5.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Colorado ───────────────────────────────────────────────────────────────
+  CO: { state: 'CO', stateName: 'Colorado', firstOffenseDuiSuspensionDays: 270, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Colo. Rev. Stat. §§ 42-2-126(3)(a), 42-2-132.5', notes: '9-month revocation. IID required for reinstatement and for early restricted license.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Connecticut ────────────────────────────────────────────────────────────
+  CT: { state: 'CT', stateName: 'Connecticut', firstOffenseDuiSuspensionDays: 45, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Conn. Gen. Stat. §§ 14-227b, 14-227c; Conn. Gen. Stat. § 14-111e', notes: '45-day hard suspension followed by IID period. Administrative hearing must be requested within 7 days.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Delaware ───────────────────────────────────────────────────────────────
+  DE: { state: 'DE', stateName: 'Delaware', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: false, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Del. Code Ann. tit. 21 §§ 2742, 4177', notes: 'No hardship license for first DUI. IID required for reinstatement.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── District of Columbia ───────────────────────────────────────────────────
+  DC: { state: 'DC', stateName: 'District of Columbia', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: false, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'D.C. Code §§ 50-2201.04a, 50-2201.05b', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Florida ────────────────────────────────────────────────────────────────
+  FL: { state: 'FL', stateName: 'Florida', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: true, drugConvictionSuspension: true, source: 'Fla. Stat. §§ 322.2615, 322.2616, 322.28; Fla. Stat. § 322.055 (drug conviction)', notes: 'Hardship license available after 30-day hard suspension. IID required if BAC ≥ 0.15 or child in vehicle. Drug conviction triggers 1-year suspension under § 322.055.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Georgia ────────────────────────────────────────────────────────────────
+  GA: { state: 'GA', stateName: 'Georgia', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'O.C.G.A. §§ 40-5-63, 40-5-64, 40-6-391', notes: '1-year suspension. Limited permit available after 120 days with IID. Admin hearing request required within 30 days of arrest.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Hawaii ─────────────────────────────────────────────────────────────────
+  HI: { state: 'HI', stateName: 'Hawaii', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Haw. Rev. Stat. §§ 291E-41, 291E-44.5', notes: '1-year revocation. Conditional license with IID available after 30-day hard revocation.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Idaho ──────────────────────────────────────────────────────────────────
+  ID: { state: 'ID', stateName: 'Idaho', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Idaho Code §§ 18-8004, 18-8008, 49-335', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Illinois ───────────────────────────────────────────────────────────────
+  IL: { state: 'IL', stateName: 'Illinois', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: true, source: '625 ILCS 5/6-208.1; 625 ILCS 5/6-206(a)(43) (drug conviction)', notes: '1-year Statutory Summary Suspension. BAIID (IID) required for restricted permit. Drug conviction triggers 1-year suspension.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Indiana ────────────────────────────────────────────────────────────────
+  IN: { state: 'IN', stateName: 'Indiana', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'Ind. Code §§ 9-30-7-5, 9-30-5-9', notes: 'No pre-conviction administrative suspension. Suspension follows criminal conviction. Probationary license available.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Iowa ────────────────────────────────────────────────────────────────────
+  IA: { state: 'IA', stateName: 'Iowa', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Iowa Code §§ 321J.9, 321J.12', notes: '180-day administrative revocation. IID required for temporary restricted license.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Kansas ─────────────────────────────────────────────────────────────────
+  KS: { state: 'KS', stateName: 'Kansas', firstOffenseDuiSuspensionDays: 30, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Kan. Stat. Ann. §§ 8-1014, 8-1015, 8-1016', notes: '30-day hard suspension followed by 330-day ignition interlock restriction.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Kentucky ───────────────────────────────────────────────────────────────
+  KY: { state: 'KY', stateName: 'Kentucky', firstOffenseDuiSuspensionDays: 30, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'Ky. Rev. Stat. Ann. §§ 189A.010, 189A.070', notes: 'No pre-conviction administrative suspension. 30-day court suspension; hardship license immediately available.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Louisiana ──────────────────────────────────────────────────────────────
+  LA: { state: 'LA', stateName: 'Louisiana', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'La. Rev. Stat. §§ 14:98, 32:415.1', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Maine ──────────────────────────────────────────────────────────────────
+  ME: { state: 'ME', stateName: 'Maine', firstOffenseDuiSuspensionDays: 150, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Me. Rev. Stat. tit. 29-A §§ 2411, 2453, 2457', notes: '150-day suspension. Conditional license with IID available after 30 days.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Maryland ───────────────────────────────────────────────────────────────
+  MD: { state: 'MD', stateName: 'Maryland', firstOffenseDuiSuspensionDays: 45, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Md. Code Ann., Transp. §§ 16-205.1, 16-205.2', notes: 'MVA administrative suspension: 45 days (DUI test) or 90 days (refusal). Ignition interlock program available in lieu of suspension.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Massachusetts ──────────────────────────────────────────────────────────
+  MA: { state: 'MA', stateName: 'Massachusetts', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: true, source: 'M.G.L. c. 90 §§ 24, 24D; M.G.L. c. 90 § 22(f) (drug conviction)', notes: '180-day license loss. 24D disposition allows hardship license with IID. Drug conviction suspends license under c. 90 § 22(f).', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Michigan ───────────────────────────────────────────────────────────────
+  MI: { state: 'MI', stateName: 'Michigan', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Mich. Comp. Laws §§ 257.303, 257.625k', notes: '180-day suspension. Restricted license with IID available for first 90 days.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Minnesota ──────────────────────────────────────────────────────────────
+  MN: { state: 'MN', stateName: 'Minnesota', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Minn. Stat. §§ 169A.20, 169A.54, 171.306', notes: '90-day administrative revocation. Ignition interlock program allows driving during revocation period.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Mississippi ────────────────────────────────────────────────────────────
+  MS: { state: 'MS', stateName: 'Mississippi', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: false, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Miss. Code Ann. §§ 63-11-23, 63-11-30, 63-11-45', notes: 'No hardship license for first conviction. IID required as condition of reinstatement.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Missouri ───────────────────────────────────────────────────────────────
+  MO: { state: 'MO', stateName: 'Missouri', firstOffenseDuiSuspensionDays: 30, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Mo. Rev. Stat. §§ 302.505, 302.525, 302.530', notes: '90-day admin suspension: 30-day hard then 60-day IID-restricted. Limited driving privilege available after 30 days.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Montana ────────────────────────────────────────────────────────────────
+  MT: { state: 'MT', stateName: 'Montana', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'Mont. Code Ann. §§ 61-8-402, 61-8-442', notes: 'No pre-conviction administrative suspension. 6-month court-ordered suspension. Restricted license available.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Nebraska ───────────────────────────────────────────────────────────────
+  NE: { state: 'NE', stateName: 'Nebraska', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Neb. Rev. Stat. §§ 60-4,164, 60-6,197.04, 60-6,211.11', notes: '180-day revocation. Limited license with IID available after 30 days.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Nevada ─────────────────────────────────────────────────────────────────
+  NV: { state: 'NV', stateName: 'Nevada', firstOffenseDuiSuspensionDays: 185, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Nev. Rev. Stat. §§ 484C.210, 484C.460', notes: '185-day revocation. Restricted license with IID available.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── New Hampshire ──────────────────────────────────────────────────────────
+  NH: { state: 'NH', stateName: 'New Hampshire', firstOffenseDuiSuspensionDays: 270, hardshipLicenseAvailable: false, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'N.H. Rev. Stat. Ann. §§ 265-A:14, 265-A:18, 265-A:36', notes: '9-month license loss. No occupational or hardship license available for first DUI.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── New Jersey ─────────────────────────────────────────────────────────────
+  NJ: { state: 'NJ', stateName: 'New Jersey', firstOffenseDuiSuspensionDays: null, hardshipLicenseAvailable: false, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'N.J. Stat. Ann. §§ 39:4-50, 39:4-50.17', notes: 'Suspension tied to BAC: 0.08–0.09% = 3 months; 0.10–0.14% = 7–12 months; ≥ 0.15% = IID required during and after. No hardship license. No pre-conviction administrative suspension.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── New Mexico ─────────────────────────────────────────────────────────────
+  NM: { state: 'NM', stateName: 'New Mexico', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'N.M. Stat. Ann. §§ 66-8-111, 66-8-111.1, 66-8-102', notes: '1-year revocation. Ignition interlock license available immediately.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── New York ───────────────────────────────────────────────────────────────
+  NY: { state: 'NY', stateName: 'New York', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'N.Y. Veh. & Traf. Law §§ 1193, 1194, 1198', notes: '1-year revocation for DWI. Hardship privilege available in limited circumstances. IID required for all DWI convictions.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── North Carolina ─────────────────────────────────────────────────────────
+  NC: { state: 'NC', stateName: 'North Carolina', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'N.C. Gen. Stat. §§ 20-16.5, 20-17, 20-179.3', notes: '1-year revocation. Limited driving privilege available after 30 days. IID required if BAC ≥ 0.15 or repeat offense.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── North Dakota ───────────────────────────────────────────────────────────
+  ND: { state: 'ND', stateName: 'North Dakota', firstOffenseDuiSuspensionDays: 91, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'N.D. Cent. Code §§ 39-08-01, 39-20-04.1, 39-20-07', notes: '91-day suspension. IID required for restricted license.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Ohio ───────────────────────────────────────────────────────────────────
+  OH: { state: 'OH', stateName: 'Ohio', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'Ohio Rev. Code Ann. §§ 4511.19, 4511.191, 4510.17', notes: 'ALS triggered by test result (not arrest), 90 days; refusal = 1 year. OVI criminal suspension 6 months to 3 years. Court may impose IID as a condition of limited driving privileges.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Oklahoma ───────────────────────────────────────────────────────────────
+  OK: { state: 'OK', stateName: 'Oklahoma', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Okla. Stat. tit. 47 §§ 753, 754, 6-205.1', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Oregon ─────────────────────────────────────────────────────────────────
+  OR: { state: 'OR', stateName: 'Oregon', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'O.R.S. §§ 813.010, 813.410, 813.600', notes: '1-year implied consent suspension (3 years for refusal). DUII hardship permit with IID available after 30 days.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Pennsylvania ───────────────────────────────────────────────────────────
+  PA: { state: 'PA', stateName: 'Pennsylvania', firstOffenseDuiSuspensionDays: null, hardshipLicenseAvailable: false, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: '75 Pa. C.S. §§ 3802, 3804, 1547', notes: 'Suspension depends on BAC tier: General Impairment (0.08–0.099%) = no suspension for first offense. High BAC (0.10–0.159%) = 12 months. Highest BAC (≥ 0.16%) or refusal = 12 months. No hardship license for DUI in PA.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Rhode Island ───────────────────────────────────────────────────────────
+  RI: { state: 'RI', stateName: 'Rhode Island', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'R.I. Gen. Laws §§ 31-27-2, 31-27-2.8', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── South Carolina ─────────────────────────────────────────────────────────
+  SC: { state: 'SC', stateName: 'South Carolina', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'S.C. Code Ann. §§ 56-5-2990, 56-5-2941', notes: '6-month suspension. Restricted license with IID available from day 1 of suspension.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── South Dakota ───────────────────────────────────────────────────────────
+  SD: { state: 'SD', stateName: 'South Dakota', firstOffenseDuiSuspensionDays: 30, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'S.D. Codified Laws §§ 32-23-10, 32-23-11', notes: 'No pre-conviction administrative suspension. 30-day court suspension; occupational permit available.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Tennessee ──────────────────────────────────────────────────────────────
+  TN: { state: 'TN', stateName: 'Tennessee', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'Tenn. Code Ann. §§ 55-10-401, 55-10-411, 55-10-417', notes: 'No pre-conviction administrative suspension. 1-year court revocation. Restricted license with IID available.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Texas ──────────────────────────────────────────────────────────────────
+  TX: { state: 'TX', stateName: 'Texas', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: true, drugConvictionSuspension: true, source: 'Tex. Transp. Code §§ 524.002, 524.012, 521.248; Tex. Transp. Code § 521.372 (drug conviction)', notes: '90-day ALR suspension; criminal conviction adds 90–365 days. Occupational license available. Drug conviction (not DUI) triggers 180-day license suspension under § 521.372.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Utah ───────────────────────────────────────────────────────────────────
+  UT: { state: 'UT', stateName: 'Utah', firstOffenseDuiSuspensionDays: 120, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Utah Code Ann. §§ 41-6a-502, 41-6a-515.5, 53-3-223', notes: '120-day suspension. IID required for reinstatement.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Vermont ────────────────────────────────────────────────────────────────
+  VT: { state: 'VT', stateName: 'Vermont', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: false, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Vt. Stat. Ann. tit. 23 §§ 1205, 1208, 1213', notes: 'No hardship license for first DUI. IID required upon reinstatement.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Virginia ───────────────────────────────────────────────────────────────
+  VA: { state: 'VA', stateName: 'Virginia', firstOffenseDuiSuspensionDays: 365, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'Va. Code Ann. §§ 18.2-270, 46.2-391, 18.2-272', notes: '7-day administrative license suspension at arrest. Criminal conviction: 12-month revocation. Restricted license with IID available immediately from day 1 of revocation.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Washington ─────────────────────────────────────────────────────────────
+  WA: { state: 'WA', stateName: 'Washington', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Wash. Rev. Code §§ 46.20.308, 46.20.3101, 46.61.502', notes: '90-day DOL suspension (test) or 1 year (refusal). Ignition interlock license available during suspension.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── West Virginia ──────────────────────────────────────────────────────────
+  WV: { state: 'WV', stateName: 'West Virginia', firstOffenseDuiSuspensionDays: 180, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'W. Va. Code §§ 17C-5-2, 17C-5A-1, 17C-5A-3a', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Wisconsin ──────────────────────────────────────────────────────────────
+  WI: { state: 'WI', stateName: 'Wisconsin', firstOffenseDuiSuspensionDays: 270, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'required', adminSuspensionOnArrest: false, drugConvictionSuspension: false, source: 'Wis. Stat. §§ 343.305, 343.30, 343.10', notes: '9-month revocation for first OWI. First OWI is a civil forfeiture (not criminal); no admin suspension. IID required for reinstatement.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Wyoming ────────────────────────────────────────────────────────────────
+  WY: { state: 'WY', stateName: 'Wyoming', firstOffenseDuiSuspensionDays: 90, hardshipLicenseAvailable: true, ignitionInterlockRequired: 'discretionary', adminSuspensionOnArrest: true, drugConvictionSuspension: false, source: 'Wyo. Stat. Ann. §§ 31-6-102, 31-6-107, 31-7-128', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Immigration Consequence Rules
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Estimated deportability risk under federal immigration law for each charge
+ * category. Deportability is governed by federal law (8 U.S.C. §§ 1227,
+ * 1101(a)(43)), not state law. State variation reflects ICE enforcement posture
+ * and how state statutes map to federal removal grounds.
+ *
+ * IMPORTANT: This is a general risk indicator only. Padilla v. Kentucky, 559
+ * U.S. 356 (2010), requires defense attorneys to advise non-citizen clients on
+ * immigration consequences BEFORE any plea. Always consult an immigration
+ * attorney before entering a guilty plea.
+ *
+ * 'critical' — near-certain deportability; very limited or no relief.
+ * 'high'     — likely deportable; limited discretionary relief may exist.
+ * 'moderate' — potentially deportable depending on charge details and sentence.
+ * 'low'      — generally not a deportable offense, but circumstances matter.
+ */
+export type ImmigrationRiskLevel = 'critical' | 'high' | 'moderate' | 'low';
+
+export interface ImmigrationConsequenceRule {
+  state: string;
+  stateName: string;
+  /**
+   * Whether the state broadly cooperates with ICE detainer requests
+   * (e.g., via 287(g) agreements or blanket policy). When true, an ICE
+   * detainer is more likely to be honored upon local booking.
+   */
+  broadIceCooperation: boolean;
+  /**
+   * Whether the state has enacted sanctuary-type policies limiting local
+   * law enforcement cooperation with civil ICE detainers.
+   */
+  sanctuaryPolicy: boolean;
+  /**
+   * Risk levels per charge category under federal INA.
+   * Sources: INA § 237(a) (8 U.S.C. § 1227); INA § 101(a)(43) (aggravated
+   * felony definition); ILRC Quick Reference Chart (2024);
+   * Padilla v. Kentucky, 559 U.S. 356 (2010).
+   */
+  duiRisk: ImmigrationRiskLevel;
+  drugPossessionRisk: ImmigrationRiskLevel;
+  drugTraffickingRisk: ImmigrationRiskLevel;
+  theftPropertyRisk: ImmigrationRiskLevel;
+  domesticViolenceRisk: ImmigrationRiskLevel;
+  sexOffenseRisk: ImmigrationRiskLevel;
+  source: string;
+  notes?: string;
+  dataConfidence: 'high' | 'medium' | 'low';
+  lastVerified: string;
+}
+
+// Helper to build a compact immigration rule. Risk levels are federal and
+// uniform across all states; only ICE cooperation posture varies by state.
+function _imm(state: string, stateName: string, broadIce: boolean, sanctuary: boolean, notes?: string): ImmigrationConsequenceRule {
+  return {
+    state, stateName,
+    broadIceCooperation: broadIce,
+    sanctuaryPolicy: sanctuary,
+    // Federal INA risk levels — same for all states:
+    duiRisk: 'moderate',           // First-offense DUI rarely deportable; felony DUI may be.
+    drugPossessionRisk: 'high',    // INA § 237(a)(2)(B)(i). Exception: single offense of 30g or less marijuana.
+    drugTraffickingRisk: 'critical', // Aggravated felony under INA § 101(a)(43)(B).
+    theftPropertyRisk: 'moderate', // CIMT if sentence of 1 year or more imposed; petty offense exception may apply.
+    domesticViolenceRisk: 'high',  // INA § 237(a)(2)(E)(i) — crime of domestic violence is deportable.
+    sexOffenseRisk: 'critical',    // Aggravated felony under INA § 101(a)(43)(A)/(F); also CIMT.
+    source: 'INA § 237(a) (8 U.S.C. § 1227); INA § 101(a)(43) (8 U.S.C. § 1101(a)(43)); ILRC Quick Reference Chart (2024)',
+    notes,
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+  };
+}
+
+export const IMMIGRATION_CONSEQUENCE_RULES: Record<string, ImmigrationConsequenceRule> = {
+  AL: _imm('AL', 'Alabama',          true,  false, 'Alabama counties have 287(g) task force agreements with ICE.'),
+  AK: _imm('AK', 'Alaska',           false, false),
+  AZ: _imm('AZ', 'Arizona',          true,  false, 'Maricopa County has a 287(g) agreement. State law (SB 1070 as modified) permits ICE cooperation.'),
+  AR: _imm('AR', 'Arkansas',         false, false),
+  CA: _imm('CA', 'California',       false, true,  'TRUTH Act (2017) and California Values Act (SB 54) limit ICE cooperation statewide. ICE detainers are not honored as a matter of state policy.'),
+  CO: _imm('CO', 'Colorado',         false, true,  'Colorado law limits ICE cooperation; local jails generally do not honor civil detainers.'),
+  CT: _imm('CT', 'Connecticut',      false, true,  'Connecticut TRUST Act limits honoring civil ICE detainers.'),
+  DE: _imm('DE', 'Delaware',         false, false),
+  DC: _imm('DC', 'District of Columbia', false, true, 'D.C. does not honor civil ICE detainers as a matter of policy.'),
+  FL: _imm('FL', 'Florida',          true,  false, 'Florida law requires cooperation with ICE detainers (HB 1355 / SB 1048 repealing sanctuary policies, 2023). Many county jails honor ICE detainers.'),
+  GA: _imm('GA', 'Georgia',          true,  false, 'Multiple Georgia counties (including Cobb, Gwinnett) have 287(g) agreements.'),
+  HI: _imm('HI', 'Hawaii',           false, false),
+  ID: _imm('ID', 'Idaho',            true,  false, 'Idaho counties broadly cooperate with ICE detainers.'),
+  IL: _imm('IL', 'Illinois',         false, true,  'TRUST Act (2017) prohibits local law enforcement from honoring civil ICE detainers.'),
+  IN: _imm('IN', 'Indiana',          true,  false, 'Indiana requires state agencies to cooperate with ICE detainers.'),
+  IA: _imm('IA', 'Iowa',             false, false),
+  KS: _imm('KS', 'Kansas',           false, false),
+  KY: _imm('KY', 'Kentucky',         false, false),
+  LA: _imm('LA', 'Louisiana',        true,  false, 'Louisiana requires cooperation with ICE under state law.'),
+  ME: _imm('ME', 'Maine',            false, false),
+  MD: _imm('MD', 'Maryland',         false, false, 'Maryland passed a law limiting cooperation (2021); some counties still cooperate.'),
+  MA: _imm('MA', 'Massachusetts',    false, true,  'Supreme Judicial Court ruled local jails cannot hold people solely on civil ICE detainers. Lunn v. Commonwealth (2017).'),
+  MI: _imm('MI', 'Michigan',         false, false),
+  MN: _imm('MN', 'Minnesota',        false, true,  'Minnesota does not honor civil ICE detainers as a general policy.'),
+  MS: _imm('MS', 'Mississippi',      true,  false, 'Mississippi counties cooperate with ICE detainers broadly.'),
+  MO: _imm('MO', 'Missouri',         false, false),
+  MT: _imm('MT', 'Montana',          false, false),
+  NE: _imm('NE', 'Nebraska',         false, false),
+  NV: _imm('NV', 'Nevada',           false, false, 'Las Vegas Metro and Clark County have had mixed policies on detainers.'),
+  NH: _imm('NH', 'New Hampshire',    false, false),
+  NJ: _imm('NJ', 'New Jersey',       false, true,  'Attorney General directive (2018, updated 2021) prohibits state and county law enforcement from honoring civil ICE detainers.'),
+  NM: _imm('NM', 'New Mexico',       false, true,  'New Mexico generally limits ICE cooperation; sanctuary-leaning policies statewide.'),
+  NY: _imm('NY', 'New York',         false, true,  'Green Light Law and sanctuary policies: NYC and many counties do not honor ICE detainers. State law limits DMV data sharing with ICE.'),
+  NC: _imm('NC', 'North Carolina',   false, false, 'Some NC counties (e.g., Alamance, Mecklenburg) have 287(g) agreements; others do not.'),
+  ND: _imm('ND', 'North Dakota',     false, false),
+  OH: _imm('OH', 'Ohio',             false, false),
+  OK: _imm('OK', 'Oklahoma',         false, false),
+  OR: _imm('OR', 'Oregon',           false, true,  'Oregon Sanctuary Law (ORS 181A.820) prohibits law enforcement from detecting or apprehending people solely for immigration violations.'),
+  PA: _imm('PA', 'Pennsylvania',     false, false, 'Philadelphia and Pittsburgh have sanctuary policies; many other counties cooperate.'),
+  RI: _imm('RI', 'Rhode Island',     false, true,  'Rhode Island does not honor civil ICE detainers as a matter of state policy.'),
+  SC: _imm('SC', 'South Carolina',   true,  false, 'Multiple SC counties have 287(g) agreements.'),
+  SD: _imm('SD', 'South Dakota',     false, false),
+  TN: _imm('TN', 'Tennessee',        true,  false, 'Tennessee law requires cooperation with ICE (enacted 2023).'),
+  TX: _imm('TX', 'Texas',            true,  false, 'SB 4 (2017) and successor statutes require local law enforcement to honor ICE detainers. Most Texas counties cooperate. Travis County (Austin) limits cooperation.'),
+  UT: _imm('UT', 'Utah',             false, false),
+  VT: _imm('VT', 'Vermont',          false, true,  'Vermont has sanctuary policies; state law limits ICE cooperation.'),
+  VA: _imm('VA', 'Virginia',         false, false, 'Virginia prohibited local 287(g) agreements (2020); some jurisdictions still cooperate informally.'),
+  WA: _imm('WA', 'Washington',       false, true,  'Keep Washington Working Act (2019) limits cooperation with ICE.'),
+  WV: _imm('WV', 'West Virginia',    false, false),
+  WI: _imm('WI', 'Wisconsin',        true,  false, 'Multiple Wisconsin counties cooperate with ICE detainers.'),
+  WY: _imm('WY', 'Wyoming',          false, false),
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Sex Offender Registration Rules
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Federal SORNA compliance tier for the state's registry.
+ * 'compliant'              = state adopted SORNA-compatible three-tier system.
+ * 'substantially_compliant' = mostly aligned but with state variations.
+ * 'non_compliant'          = state uses its own system, not SORNA-aligned.
+ */
+export type SornaCompliance = 'compliant' | 'substantially_compliant' | 'non_compliant';
+
+export interface SexOffenderRule {
+  state: string;
+  stateName: string;
+  /**
+   * Whether the state's registry framework is substantially aligned with
+   * federal SORNA (34 U.S.C. § 20901 et seq.).
+   */
+  sornaCompliance: SornaCompliance;
+  /**
+   * Minimum registration duration in years for the lowest-tier equivalent
+   * (typically first-time, non-contact, or misdemeanor-level sex offense).
+   * This is approximately SORNA Tier I (15 years) for compliant states.
+   * 'lifetime' for states that require lifetime registration even for lower-tier offenses.
+   */
+  tier1RegistrationYears: number | 'lifetime';
+  /**
+   * Registration duration for the highest-tier equivalent (serious or
+   * repeat felony sex offenses). 'lifetime' is common for Tier III / SVP.
+   */
+  tier3RegistrationYears: number | 'lifetime';
+  /** Does the state impose residence restrictions (distance from schools,
+   *  parks, playgrounds, bus stops, etc.)? */
+  residencyRestrictions: boolean;
+  /** Distance in feet from restricted locations if residency restrictions
+   *  apply; null if restrictions exist but vary widely by locality. */
+  residencyRestrictionFeet?: number | null;
+  /** Is the registry publicly accessible online (all 50 states + DC have this)? */
+  publicOnlineRegistry: boolean;
+  source: string;
+  notes?: string;
+  dataConfidence: 'high' | 'medium' | 'low';
+  lastVerified: string;
+}
+
+export const SEX_OFFENDER_RULES: Record<string, SexOffenderRule> = {
+
+  // ── Alabama ────────────────────────────────────────────────────────────────
+  AL: { state: 'AL', stateName: 'Alabama', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 2000, publicOnlineRegistry: true, source: 'Ala. Code §§ 15-20A-1 et seq.; 34 U.S.C. § 20911', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Alaska ─────────────────────────────────────────────────────────────────
+  AK: { state: 'AK', stateName: 'Alaska', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Alaska Stat. §§ 12.63.010 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Arizona ────────────────────────────────────────────────────────────────
+  AZ: { state: 'AZ', stateName: 'Arizona', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Ariz. Rev. Stat. §§ 13-3821 et seq.', notes: 'Sexually violent persons: lifetime and indefinite civil commitment authority.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Arkansas ───────────────────────────────────────────────────────────────
+  AR: { state: 'AR', stateName: 'Arkansas', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 2000, publicOnlineRegistry: true, source: 'Ark. Code Ann. §§ 12-12-901 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── California ─────────────────────────────────────────────────────────────
+  CA: { state: 'CA', stateName: 'California', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 2000, publicOnlineRegistry: true, source: 'Cal. Penal Code §§ 290 et seq. (as amended by AB 1149, 2021)', notes: 'California adopted a 3-tier system in 2021 (AB 1149). Tier 1: 10 years; Tier 2: 20 years; Tier 3: lifetime. Effective 2025 for retroactive petitions.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Colorado ───────────────────────────────────────────────────────────────
+  CO: { state: 'CO', stateName: 'Colorado', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Colo. Rev. Stat. §§ 16-22-101 et seq.', notes: 'Colorado uses its own classification system. Most Tier 1 equivalent registrants: 10 years. Sexually violent predators: lifetime.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Connecticut ────────────────────────────────────────────────────────────
+  CT: { state: 'CT', stateName: 'Connecticut', sornaCompliance: 'non_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Conn. Gen. Stat. §§ 54-250 et seq.', notes: 'Connecticut uses a risk-based classification system (not SORNA tiers). Registration duration depends on risk level.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Delaware ───────────────────────────────────────────────────────────────
+  DE: { state: 'DE', stateName: 'Delaware', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Del. Code Ann. tit. 11 §§ 4120 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── District of Columbia ───────────────────────────────────────────────────
+  DC: { state: 'DC', stateName: 'District of Columbia', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'D.C. Code §§ 22-4001 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Florida ────────────────────────────────────────────────────────────────
+  FL: { state: 'FL', stateName: 'Florida', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 'lifetime', tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Fla. Stat. §§ 943.0435, 800.04; Fla. Stat. § 775.215 (residency)', notes: 'Florida requires lifetime registration for nearly all sex offenses. Residency restrictions: 1,000 ft from schools, day care centers, parks, and playgrounds. Among the most restrictive regimes in the U.S.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Georgia ────────────────────────────────────────────────────────────────
+  GA: { state: 'GA', stateName: 'Georgia', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'O.C.G.A. §§ 42-1-12 et seq.', notes: '1,000-ft restriction from schools, child care facilities, parks, playgrounds, and bus stops.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Hawaii ─────────────────────────────────────────────────────────────────
+  HI: { state: 'HI', stateName: 'Hawaii', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Haw. Rev. Stat. §§ 846E-1 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Idaho ──────────────────────────────────────────────────────────────────
+  ID: { state: 'ID', stateName: 'Idaho', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Idaho Code §§ 18-8301 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Illinois ───────────────────────────────────────────────────────────────
+  IL: { state: 'IL', stateName: 'Illinois', sornaCompliance: 'non_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 500, publicOnlineRegistry: true, source: '730 ILCS 150/1 et seq. (Sex Offender Registration Act)', notes: 'Illinois uses its own classification system. Duration ranges: 10 years for Class B misdemeanor sex offenses to lifetime for Class X felonies. 500-ft restriction from schools, day care.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Indiana ────────────────────────────────────────────────────────────────
+  IN: { state: 'IN', stateName: 'Indiana', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Ind. Code §§ 11-8-8-1 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Iowa ────────────────────────────────────────────────────────────────────
+  IA: { state: 'IA', stateName: 'Iowa', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 2000, publicOnlineRegistry: true, source: 'Iowa Code §§ 692A.101 et seq.', notes: '2,000-ft residency restriction from schools. One of the broader restrictions in the country.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Kansas ─────────────────────────────────────────────────────────────────
+  KS: { state: 'KS', stateName: 'Kansas', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Kan. Stat. Ann. §§ 22-4901 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Kentucky ───────────────────────────────────────────────────────────────
+  KY: { state: 'KY', stateName: 'Kentucky', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Ky. Rev. Stat. Ann. §§ 17.500 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Louisiana ──────────────────────────────────────────────────────────────
+  LA: { state: 'LA', stateName: 'Louisiana', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'La. Rev. Stat. §§ 15:540 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Maine ──────────────────────────────────────────────────────────────────
+  ME: { state: 'ME', stateName: 'Maine', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Me. Rev. Stat. tit. 34-A §§ 11201 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Maryland ───────────────────────────────────────────────────────────────
+  MD: { state: 'MD', stateName: 'Maryland', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Md. Code Ann., Crim. Proc. §§ 11-701 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Massachusetts ──────────────────────────────────────────────────────────
+  MA: { state: 'MA', stateName: 'Massachusetts', sornaCompliance: 'non_compliant', tier1RegistrationYears: 20, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'M.G.L. c. 6 §§ 178C et seq.', notes: 'Massachusetts uses a Sex Offender Registry Board (SORB) risk classification (Level 1/2/3). Level 1 (low risk): not publicly listed. Level 3 (high risk): active community notification. Duration varies; registry system does not strictly track SORNA tiers.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Michigan ───────────────────────────────────────────────────────────────
+  MI: { state: 'MI', stateName: 'Michigan', sornaCompliance: 'non_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Mich. Comp. Laws §§ 28.721 et seq. (SORA)', notes: 'Michigan SORA amended post-People v. Betts (2021) Michigan Supreme Court ruling. 1,000-ft school zone restrictions.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Minnesota ──────────────────────────────────────────────────────────────
+  MN: { state: 'MN', stateName: 'Minnesota', sornaCompliance: 'non_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Minn. Stat. §§ 243.166 et seq.', notes: 'Minnesota uses a risk-level system (1/2/3), not SORNA tiers. Duration based on offense and risk classification.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Mississippi ────────────────────────────────────────────────────────────
+  MS: { state: 'MS', stateName: 'Mississippi', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1500, publicOnlineRegistry: true, source: 'Miss. Code Ann. §§ 45-33-21 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Missouri ───────────────────────────────────────────────────────────────
+  MO: { state: 'MO', stateName: 'Missouri', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Mo. Rev. Stat. §§ 589.400 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Montana ────────────────────────────────────────────────────────────────
+  MT: { state: 'MT', stateName: 'Montana', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Mont. Code Ann. §§ 46-23-501 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Nebraska ───────────────────────────────────────────────────────────────
+  NE: { state: 'NE', stateName: 'Nebraska', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 500, publicOnlineRegistry: true, source: 'Neb. Rev. Stat. §§ 29-4001 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Nevada ─────────────────────────────────────────────────────────────────
+  NV: { state: 'NV', stateName: 'Nevada', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Nev. Rev. Stat. §§ 179D.010 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── New Hampshire ──────────────────────────────────────────────────────────
+  NH: { state: 'NH', stateName: 'New Hampshire', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'N.H. Rev. Stat. Ann. §§ 651-B:1 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── New Jersey ─────────────────────────────────────────────────────────────
+  NJ: { state: 'NJ', stateName: 'New Jersey', sornaCompliance: 'non_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'N.J. Stat. Ann. §§ 2C:7-1 et seq. (Megan\'s Law)', notes: 'New Jersey uses Megan\'s Law Tier 1/2/3 risk classification (not SORNA offense tiers). Tier 3: community notification. No statutory residency restriction.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── New Mexico ─────────────────────────────────────────────────────────────
+  NM: { state: 'NM', stateName: 'New Mexico', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'N.M. Stat. Ann. §§ 29-11A-1 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── New York ───────────────────────────────────────────────────────────────
+  NY: { state: 'NY', stateName: 'New York', sornaCompliance: 'non_compliant', tier1RegistrationYears: 20, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'N.Y. Correct. Law §§ 168 et seq. (Sex Offender Registration Act)', notes: 'New York uses risk levels 1/2/3 (not SORNA tiers). Level 3: active community notification; 20-year or lifetime registration depending on designation. Sexually Violent Offender and Predatory Sex Offender designations increase duration.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── North Carolina ─────────────────────────────────────────────────────────
+  NC: { state: 'NC', stateName: 'North Carolina', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'N.C. Gen. Stat. §§ 14-208.5 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── North Dakota ───────────────────────────────────────────────────────────
+  ND: { state: 'ND', stateName: 'North Dakota', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'N.D. Cent. Code §§ 12.1-32-15 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Ohio ───────────────────────────────────────────────────────────────────
+  OH: { state: 'OH', stateName: 'Ohio', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Ohio Rev. Code Ann. §§ 2950.01 et seq.', notes: 'Ohio uses Tier 1/2/3 classification aligned with SORNA. Tier 1: 15 years (annually); Tier 2: 25 years (semi-annually); Tier 3: lifetime (quarterly).', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Oklahoma ───────────────────────────────────────────────────────────────
+  OK: { state: 'OK', stateName: 'Oklahoma', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 2000, publicOnlineRegistry: true, source: 'Okla. Stat. tit. 57 §§ 581 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Oregon ─────────────────────────────────────────────────────────────────
+  OR: { state: 'OR', stateName: 'Oregon', sornaCompliance: 'non_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'O.R.S. §§ 163A.005 et seq.', notes: 'Oregon uses offense-based classification. Duration varies. Not SORNA-compliant.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Pennsylvania ───────────────────────────────────────────────────────────
+  PA: { state: 'PA', stateName: 'Pennsylvania', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: '42 Pa. C.S. §§ 9799.10 et seq. (SORNA II, as amended after Commonwealth v. Muniz, 2017)', notes: 'Pennsylvania SORNA was restructured after Muniz. Current SORNA II applies prospectively from Dec. 20, 2012. Tier 1: 15 years; Tier 2: 25 years; Tier 3 / SVP: lifetime.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Rhode Island ───────────────────────────────────────────────────────────
+  RI: { state: 'RI', stateName: 'Rhode Island', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'R.I. Gen. Laws §§ 11-37.1-1 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── South Carolina ─────────────────────────────────────────────────────────
+  SC: { state: 'SC', stateName: 'South Carolina', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'S.C. Code Ann. §§ 23-3-400 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── South Dakota ───────────────────────────────────────────────────────────
+  SD: { state: 'SD', stateName: 'South Dakota', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'S.D. Codified Laws §§ 22-24B-1 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Tennessee ──────────────────────────────────────────────────────────────
+  TN: { state: 'TN', stateName: 'Tennessee', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 1000, publicOnlineRegistry: true, source: 'Tenn. Code Ann. §§ 40-39-201 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Texas ──────────────────────────────────────────────────────────────────
+  TX: { state: 'TX', stateName: 'Texas', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 500, publicOnlineRegistry: true, source: 'Tex. Code Crim. Proc. ch. 62 §§ 0101 et seq.', notes: '500-ft restriction from school premises for all registrants living or working there. Lifetime registration for "sexually violent offenses." Many felony sex offenses require lifetime registration.', dataConfidence: 'high', lastVerified: '2026-07' },
+
+  // ── Utah ───────────────────────────────────────────────────────────────────
+  UT: { state: 'UT', stateName: 'Utah', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Utah Code Ann. §§ 77-41-101 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Vermont ────────────────────────────────────────────────────────────────
+  VT: { state: 'VT', stateName: 'Vermont', sornaCompliance: 'non_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Vt. Stat. Ann. tit. 13 §§ 5401 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Virginia ───────────────────────────────────────────────────────────────
+  VA: { state: 'VA', stateName: 'Virginia', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Va. Code Ann. §§ 9.1-900 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Washington ─────────────────────────────────────────────────────────────
+  WA: { state: 'WA', stateName: 'Washington', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: true, residencyRestrictionFeet: 880, publicOnlineRegistry: true, source: 'Wash. Rev. Code §§ 9A.44.130 et seq.', notes: 'Level III (high risk) registrants: 880-ft restriction from K-12 schools.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── West Virginia ──────────────────────────────────────────────────────────
+  WV: { state: 'WV', stateName: 'West Virginia', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'W. Va. Code §§ 15-12-1 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Wisconsin ──────────────────────────────────────────────────────────────
+  WI: { state: 'WI', stateName: 'Wisconsin', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 15, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Wis. Stat. §§ 301.45 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+  // ── Wyoming ────────────────────────────────────────────────────────────────
+  WY: { state: 'WY', stateName: 'Wyoming', sornaCompliance: 'substantially_compliant', tier1RegistrationYears: 10, tier3RegistrationYears: 'lifetime', residencyRestrictions: false, publicOnlineRegistry: true, source: 'Wyo. Stat. Ann. §§ 7-19-301 et seq.', dataConfidence: 'medium', lastVerified: '2026-07' },
+
+};
+
+/**
+ * Returns the driver's license rule for a state, or null if not found.
+ */
+export function getDriversLicenseRule(jurisdiction: string): DriversLicenseRule | null {
+  const key = jurisdiction.trim().toUpperCase();
+  return DRIVERS_LICENSE_RULES[key] ?? null;
+}
+
+/**
+ * Returns the sex offender rule for a state, or null if not found.
+ */
+export function getSexOffenderRule(jurisdiction: string): SexOffenderRule | null {
+  const key = jurisdiction.trim().toUpperCase();
+  return SEX_OFFENDER_RULES[key] ?? null;
+}
+
+/**
+ * Returns the immigration consequence rule for a state, or null if not found.
+ */
+export function getImmigrationConsequenceRule(jurisdiction: string): ImmigrationConsequenceRule | null {
+  const key = jurisdiction.trim().toUpperCase();
+  return IMMIGRATION_CONSEQUENCE_RULES[key] ?? null;
+}
+
 /**
  * Returns the collateral consequence rule for a state, or null if not found.
  * Only returns entries with dataConfidence 'high' or 'medium'.
