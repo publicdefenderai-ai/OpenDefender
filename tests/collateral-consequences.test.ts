@@ -8,8 +8,12 @@
  *  2. The chargeRisks filter logic (extracted from the screener component) is
  *     correct for every charge type combination, including the stale-state
  *     regression path: select charge type → back → skip should yield no cards.
+ *  3. Structural: the amber "not legal advice" disclaimer is rendered outside
+ *     the no-risk / has-risk ternary so it appears on ALL results screens.
  */
 
+import * as fs from 'node:fs';
+import * as path from 'node:path';
 import { describe, it, expect } from 'vitest';
 import {
   DRIVERS_LICENSE_RULES,
@@ -290,5 +294,75 @@ describe('chargeRisks filter logic (screener)', () => {
   it('other → no charge-based cards', () => {
     const ids = computeChargeRiskIds('other', true);
     expect(ids).toHaveLength(0);
+  });
+});
+
+// ── Structural: disclaimer appears outside the no-risk/has-risk ternary ────────
+
+describe('disclaimer placement (structural regression)', () => {
+  const srcPath = path.resolve(
+    __dirname,
+    '../client/src/pages/collateral-consequences.tsx',
+  );
+  const src = fs.readFileSync(srcPath, 'utf8');
+
+  // Source layout we are guarding:
+  //   {activeRisks.length === 0 ? (    <- ternary open
+  //     <no-risk branch>
+  //   ) : (
+  //     <has-risk branch>
+  //   )}                               <- ternary close
+  //   <div role="note" ...>            <- disclaimer MUST be here, outside ternary
+
+  it('source file is readable', () => {
+    expect(src.length).toBeGreaterThan(0);
+  });
+
+  it('amber disclaimer box is present in the results section', () => {
+    expect(src).toContain('role="note"');
+    expect(src).toContain('aria-label="Not legal advice"');
+    expect(src).toContain('border-amber-200');
+  });
+
+  it('disclaimer appears after the no-risk/has-risk ternary closes', () => {
+    // Find the ternary that switches on activeRisks.length === 0
+    const ternaryOpenIdx = src.indexOf('activeRisks.length === 0 ? (');
+    expect(ternaryOpenIdx, 'ternary open not found').toBeGreaterThan(-1);
+
+    // The disclaimer div carries role="note" — find its position
+    const disclaimerIdx = src.indexOf('role="note"');
+    expect(disclaimerIdx, 'disclaimer not found').toBeGreaterThan(-1);
+
+    // The ternary must close (its `)}`) before the disclaimer starts.
+    // We find the `)}` that appears between the ternary open and the disclaimer.
+    const regionBetween = src.slice(ternaryOpenIdx, disclaimerIdx);
+    // The ternary closing pattern: `)}` on its own — appears at the end of the
+    // has-risk branch. Count occurrences to confirm the branch is closed.
+    const ternaryCloseMatches = regionBetween.match(/^\s*\)\}/m);
+    expect(
+      ternaryCloseMatches,
+      'ternary closing )} not found before the disclaimer — disclaimer may be inside the conditional',
+    ).not.toBeNull();
+  });
+
+  it('disclaimer appears on BOTH result paths (no-risk and has-risk) by being outside the ternary', () => {
+    // The no-risk branch ends with </div> just before `) : (`.
+    // The has-risk branch ends with </> just before `)}`.
+    // The disclaimer must come after both branches are closed.
+    //
+    // Strategy: split on the disclaimer marker and inspect the tail of the
+    // ternary that precedes it.  There must be no unclosed ternary branch.
+    const disclaimerIdx = src.indexOf('role="note"');
+    const beforeDisclaimer = src.slice(0, disclaimerIdx);
+
+    // The last occurrence of `activeRisks.length === 0 ? (` must be followed
+    // by its closing `)}` before the disclaimer.
+    const lastTernaryOpen = beforeDisclaimer.lastIndexOf('activeRisks.length === 0 ? (');
+    expect(lastTernaryOpen).toBeGreaterThan(-1);
+
+    const afterTernaryOpen = beforeDisclaimer.slice(lastTernaryOpen);
+    // `)}` closes the ternary; `): (` separates the two branches.
+    // Verify the closing `)}` is present in the region before the disclaimer.
+    expect(afterTernaryOpen).toMatch(/\)\}/);
   });
 });
