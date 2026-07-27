@@ -2006,7 +2006,7 @@ export default {
       "title": "Entienda su Hoja de Ruta del Caso",
       "cancel": "Cancelar",
       "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
-      "privacyNotice": "Sus datos de sesión están encriptados y se eliminan automáticamente dentro de 24 horas. El procesamiento de IA está a cargo de Anthropic, quien puede retener datos de sesión hasta 30 días por razones de seguridad y operativas.",
+      "privacyNotice": "Sus datos de sesión están encriptados y se eliminan automáticamente dentro de 24 horas.",
       "steps": {
         "consent": "Privacidad y Consentimiento",
         "jurisdiction": "Su Estado",

@@ -2006,7 +2006,7 @@ export default {
       "title": "了解您的案件路线图",
       "cancel": "取消",
       "stepProgress": "第{{current}}步，共{{total}}步：{{title}}",
-      "privacyNotice": "您的会话数据已加密，并在24小时内自动删除。AI处理由Anthropic负责，Anthropic可能出于安全和运营目的保留会话数据最多30天。",
+      "privacyNotice": "您的会话数据已加密，并在24小时内自动删除。",
       "steps": {
         "consent": "隐私与同意",
         "jurisdiction": "你的州",

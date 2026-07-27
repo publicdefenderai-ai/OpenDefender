@@ -2004,7 +2004,7 @@ export default {
       "title": "Understand Your Case Roadmap",
       "cancel": "Cancel",
       "stepProgress": "Step {{current}} of {{total}}: {{title}}",
-      "privacyNotice": "Your session data is encrypted and auto-deleted within 24 hours. AI processing is handled by Anthropic, who may retain session data for up to 30 days for safety and operational purposes.",
+      "privacyNotice": "Your session data is encrypted and auto-deleted within 24 hours.",
       "steps": {
         "consent": "Privacy & Consent",
         "jurisdiction": "Your State",
