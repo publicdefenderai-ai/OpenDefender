@@ -185,14 +185,16 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
   {
     id: "M-1",
     risk: "medium",
-    title: "Collateral Consequences Data — All Seven Categories",
+    title: "Collateral Consequences Data — All Nine Categories",
     description:
-      "The screener presents risk assessments in seven life areas. Inaccurate or overstated risk information causes unnecessary alarm; understated risk causes users to miss important consequences.",
+      "The screener presents risk assessments across nine life areas. Seven question-driven categories (supervision, immigration, children, housing, employment, benefits, professional license) are answered via yes/no questions. Two charge-type-driven categories are surfaced automatically based on the charge selection: driver's license suspension (DUI / drug possession / drug trafficking) and sex offender registry (sex offense charges). Inaccurate or overstated risk information causes unnecessary alarm; understated risk causes users to miss important consequences.",
     sourceFiles: [
-      { label: "collateral-consequences.tsx", path: "client/src/pages/collateral-consequences.tsx", note: "Screener logic (491 lines)" },
+      { label: "collateral-consequences.tsx (lines ~59–109)", path: "client/src/pages/collateral-consequences.tsx", note: "Question-driven risk data (RISKS array)" },
+      { label: "collateral-consequences.tsx (lines ~140–155)", path: "client/src/pages/collateral-consequences.tsx", note: "Charge-type-driven risk data (CHARGE_TYPE_RISKS array)" },
+      { label: "collateral-consequences.tsx (lines ~157–207)", path: "client/src/pages/collateral-consequences.tsx", note: "Charge-type pre-step and risk filtering logic" },
     ],
     legalQuestion:
-      'Are the risk level assignments (critical/warning) for each of the seven categories (supervision, immigration, children, housing, employment, benefits, license) appropriate? Is flagging immigration as "critical" for all non-citizens regardless of charge type correct? Are the consequence descriptions legally accurate as general educational statements? Note: driver\'s license, expanded immigration, and sex offender registry categories are pending addition and will need separate review.',
+      'Are the risk level assignments (critical/warning) for each of the nine consequence categories appropriate? Is flagging immigration as "critical" for all non-citizens regardless of charge type correct? Are all nine consequence descriptions legally accurate as general educational statements? For the two charge-type-driven categories: is driver\'s license suspension correctly limited to DUI, drug possession, and drug trafficking charges? Is the sex offender registry risk correctly limited to sex offense charges? Does the screener appropriately disclaim that it provides a preliminary risk flag only, not a legal determination?',
   },
   {
     id: "M-2",

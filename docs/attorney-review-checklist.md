@@ -260,19 +260,20 @@ Is the bar membership attestation step legally adequate to restrict access to at
 
 ---
 
-### M-1 · Collateral Consequences Data — All Seven Categories
+### M-1 · Collateral Consequences Data — All Nine Categories
 
-**Risk:** Medium — The collateral consequences screener presents risk assessments in seven life areas. Inaccurate or overstated risk information could cause unnecessary alarm; understated risk could cause users to miss important consequences.
+**Risk:** Medium — The collateral consequences screener presents risk assessments across nine life areas. Inaccurate or overstated risk information could cause unnecessary alarm; understated risk could cause users to miss important consequences.
 
 **Content location:**
-- `client/src/pages/collateral-consequences.tsx` — Screener implementation (491 lines)
-- Categories: `supervision` (probation/parole revocation), `immigration` (deportation risk), `children` (custody), `housing`, `employment`, `benefits` (public benefits), `license` (professional licenses)
-- Risk level assignments and urgency scores: lines ~82–112
-
-**Note on in-progress work:** A task is pending to add three additional consequence categories: driver's license suspension, immigration-specific consequences (beyond the current general flag), and sex offender registry. These new categories will need their own attorney review before launch. This item covers only the existing seven.
+- `client/src/pages/collateral-consequences.tsx` — Screener implementation
+- Seven question-driven categories: `supervision` (probation/parole revocation), `immigration` (deportation risk), `children` (custody), `housing`, `employment`, `benefits` (public benefits), `license` (professional licenses) — risk level assignments and urgency scores: lines ~59–109
+- Two charge-type-driven categories (surfaced automatically based on charge selection, not yes/no answers):
+  - `driverLicense` — driver's license suspension, triggered for DUI, drug possession, and drug trafficking charges
+  - `sexOffender` — sex offender registry, triggered for sex offense charges
+  - Definitions: lines ~140–155; filtering logic: lines ~157–207
 
 **Legal question for attorney:**  
-Are the risk level assignments (critical/warning) for each of the seven consequence categories appropriate? For example, is it correct to flag immigration consequences as "critical" for all non-citizen users regardless of charge type? Are the descriptions of each consequence area legally accurate as general educational statements? Does the screener appropriately disclaim that it provides a preliminary risk flag only, not a legal determination?
+Are the risk level assignments (critical/warning) for each of the nine consequence categories appropriate? For example, is it correct to flag immigration consequences as "critical" for all non-citizen users regardless of charge type? Are the descriptions of each consequence area legally accurate as general educational statements? For the two charge-type-driven categories: is driver's license suspension correctly limited to DUI, drug possession, and drug trafficking charges? Is the sex offender registry risk correctly limited to sex offense charges? Does the screener appropriately disclaim that it provides a preliminary risk flag only, not a legal determination?
 
 **Cleared:** ☐  
 **Reviewed by:** _______________  **Date:** _______________  
@@ -380,7 +381,6 @@ The following are tracked elsewhere or are purely technical:
 
 | Item | Location | Why Out of Scope Here |
 |------|----------|-----------------------|
-| New collateral consequence categories (driver's license, sex offender registry) | Task pending implementation | Not yet built; will need own review row when added |
 | Statute citation accuracy for 30+ unaudited states | `shared/criminal-charges.ts` | Technical data accuracy, not legal interpretation |
 | Broken external links | Diversion programs script | Operational, not legal content |
 | Spanish / Chinese translations of disclaimer text | `client/src/locales/es.ts`, `zh.ts` | Covered under translation task; attorney should review translated disclaimers separately |
