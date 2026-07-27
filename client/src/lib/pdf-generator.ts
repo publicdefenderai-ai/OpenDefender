@@ -36,6 +36,7 @@ interface EnhancedGuidanceData {
     description: string;
     priority: 'critical' | 'important' | 'normal';
     daysFromNow?: number;
+    isEstimate?: boolean;
   }>;
   rights: string[];
   resources: Array<{
@@ -729,9 +730,28 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     doc.text(labels.importantDates, margin, yPosition);
     yPosition += 8;
 
+    // Estimate notice — shown when any deadline is flagged as an estimate (unmapped state)
+    const hasEstimateDeadlines = safe.deadlines.some(d => d.isEstimate);
+    if (hasEstimateDeadlines) {
+      checkPageBreak(25);
+      doc.setFontSize(9);
+      doc.setFont('helvetica', 'bold');
+      doc.setTextColor(180, 100, 0);
+      const estimateLabel = isSpanish ? '⚠ Nota sobre plazos estimados' : '⚠ Note on estimated timeframes';
+      doc.text(estimateLabel, margin, yPosition);
+      yPosition += 5;
+      doc.setFont('helvetica', 'normal');
+      const estimateNotice = isSpanish
+        ? 'Estos plazos son estimados generales: los plazos exactos de su estado pueden variar. Verifique con sus documentos del tribunal o el sitio web del tribunal de su estado las fechas reales de su caso.'
+        : "These timeframes are general estimates — your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case.";
+      yPosition = addText(estimateNotice, margin, yPosition);
+      doc.setTextColor(0, 0, 0);
+      yPosition += 6;
+    }
+
     const deadlineData = safe.deadlines.map(deadline => [
       deadline.event,
-      deadline.timeframe,
+      deadline.isEstimate ? `~${deadline.timeframe}` : deadline.timeframe,
       deadline.priority.toUpperCase(),
       deadline.description
     ]);
