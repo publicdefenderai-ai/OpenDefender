@@ -5780,8 +5780,8 @@ export default {
     "whatLabel": "什么处于风险中",
     "timelineLabel": "时间表",
     "actionLabel": "最佳做法",
-    "disclaimer": "此摘要仅供您个人使用。在与任何人分享之前，请咨询律师。",
-    "generalInfo": "仅为一般信息，不构成法律建议。",
+    "disclaimer": "这些结果仅为初步风险提示，不构成法律认定。实际后果是否适用取决于您的具体指控、司法管辖区及案件结果。",
+    "generalInfo": "仅为一般信息，不构成法律建议。如需针对您具体情况的建议，请咨询合格律师。",
     "copyBtn": "复制摘要",
     "copiedBtn": "已复制",
     "printBtn": "打印",
@@ -5793,7 +5793,7 @@ export default {
     "printNoRisk": "根据您的回答，未发现活跃风险。",
     "printTimeline": "时间：",
     "printAction": "最佳做法：",
-    "printDisclaimer": "此摘要仅供您个人使用。在与任何人分享之前，请咨询律师。这仅为一般信息，不构成法律建议。",
+    "printDisclaimer": "这些结果仅为初步风险提示，不构成法律认定。实际后果是否适用取决于您的具体指控、司法管辖区及案件结果。仅为一般信息，不构成法律建议。如需针对您具体情况的建议，请咨询合格律师。",
     "questions": {
       "housing": {
         "question": "您是否在租房，或居住于补贴住房或第八章住房？",

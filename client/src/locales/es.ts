@@ -5780,8 +5780,8 @@ export default {
     "whatLabel": "Qué está en riesgo",
     "timelineLabel": "Plazo",
     "actionLabel": "Mejores prácticas",
-    "disclaimer": "Este resumen es para su uso personal. Consulte a un abogado antes de compartirlo con cualquier persona.",
-    "generalInfo": "Solo información general. No es asesoramiento legal.",
+    "disclaimer": "Estos resultados son señales de riesgo preliminares únicamente, no determinaciones legales. Si una consecuencia aplica realmente depende de los cargos específicos, la jurisdicción y el resultado del caso.",
+    "generalInfo": "Solo información general. No es asesoramiento legal. Consulte a un abogado calificado para asesoramiento específico a su situación.",
     "copyBtn": "Copiar resumen",
     "copiedBtn": "Copiado",
     "printBtn": "Imprimir",
@@ -5793,7 +5793,7 @@ export default {
     "printNoRisk": "No se identificaron riesgos activos según sus respuestas.",
     "printTimeline": "Plazo:",
     "printAction": "Mejores prácticas:",
-    "printDisclaimer": "Este resumen es para su uso personal. Consulte a un abogado antes de compartirlo. Esta es solo información general y no constituye asesoramiento legal.",
+    "printDisclaimer": "Estos resultados son señales de riesgo preliminares únicamente, no determinaciones legales. Si una consecuencia aplica realmente depende de los cargos específicos, la jurisdicción y el resultado del caso. Solo información general. No es asesoramiento legal. Consulte a un abogado calificado para asesoramiento específico a su situación.",
     "questions": {
       "housing": {
         "question": "¿Alquila vivienda o vive en una vivienda subsidiada o con Sección 8?",

@@ -5778,8 +5778,8 @@ export default {
     "whatLabel": "What's at risk",
     "timelineLabel": "Timeline",
     "actionLabel": "Best practices",
-    "disclaimer": "This summary is for your own use. Consult an attorney before sharing it with anyone.",
-    "generalInfo": "General information only. Not legal advice.",
+    "disclaimer": "These results are preliminary risk flags only — not legal determinations. Whether a consequence actually applies depends on your specific charges, jurisdiction, and case outcome.",
+    "generalInfo": "General information only. Not legal advice. Consult a qualified attorney for advice specific to your situation.",
     "copyBtn": "Copy summary",
     "copiedBtn": "Copied",
     "printBtn": "Print",
@@ -5791,7 +5791,7 @@ export default {
     "printNoRisk": "No active risks identified based on your answers.",
     "printTimeline": "Timeline:",
     "printAction": "Best practices:",
-    "printDisclaimer": "This summary is for your own use. Consult an attorney before sharing it with anyone. This is general information only and does not constitute legal advice.",
+    "printDisclaimer": "These results are preliminary risk flags only — not legal determinations. Whether a consequence actually applies depends on your specific charges, jurisdiction, and case outcome. General information only. Not legal advice. Consult a qualified attorney for advice specific to your situation.",
     "questions": {
       "housing": {
         "question": "Are you renting, or living in subsidized or Section 8 housing?",

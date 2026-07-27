@@ -521,10 +521,10 @@ export default function CollateralConsequences() {
               )}
 
               {/* Disclaimer */}
-              <div className="flex items-start gap-2 rounded-lg border border-border bg-muted/30 px-4 py-3 mb-5">
-                <Info className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" aria-hidden="true" />
-                <div className="text-xs text-muted-foreground leading-relaxed space-y-0.5">
-                  <p>{t("collateralConsequences.disclaimer")}</p>
+              <div className="flex items-start gap-2.5 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3 mb-5" role="note" aria-label="Not legal advice">
+                <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <div className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed space-y-1">
+                  <p className="font-semibold">{t("collateralConsequences.disclaimer")}</p>
                   <p>{t("collateralConsequences.generalInfo")}</p>
                 </div>
               </div>
