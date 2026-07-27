@@ -107,7 +107,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **Audit workbook:** `sentencing-commission-audit.xlsx` (project root) — generated and maintained by `generate_audit_sheet.py`. Contains per-state row counts, source document metadata, and audit notes.
 
-**Source documents inventoried (as of April 2026):**
+**Source documents inventoried (as of July 2026):**
 
 | State | Document | Edition / Year | Row Count | Notes |
 |-------|----------|---------------|-----------|-------|
@@ -118,6 +118,16 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 | Missouri | Charge Code Manual | Current (pages 1–116) | 2,730 | PDF pages 13–128; rows identified by charge code format `\d+\.\d-\d{3}[YN]\d{4}` |
 | Delaware | Criminal Benchbook — "Index of Offenses" | 2025 | 615 | Pages 4–26; 609 full entries + 6 split statute entries (11-1471 Video Lottery subdivisions) |
 | Texas | Inventory of Texas Felony Offenses by Category | Current through 85th Legislature (April 2018) | 726 | 706 entries under 24 standard Texas code titles + 20 Vernon's Civil Statutes entries (Racing Act, Securities Act, Sabotage, Sports Bribery, Commodity Markets) |
+| California | Cal. Penal Code / Health & Safety Code / Vehicle Code | 2026 | ~115 | leginfo.legislature.ca.gov; synthesized codes spot-checked against primary statute text across all charge categories; codes confirmed correct (2026-07) |
+| New York | NY Penal Law / Vehicle & Traffic Law | 2026 | ~118 | legislation.nysenate.gov; synthesized codes confirmed against NY Penal Law (§§ 120–265) and Veh. & Traf. Law (§ 1192); codes correct (2026-07) |
+| Florida | Florida Statutes Title XLVI (Crimes) | 2026 | ~117 | leg.state.fl.us Online Sunshine; all charge codes verified via FL statute verifier script; 45/45 spot-checked sections live (2026-07) |
+| Illinois | ILCS Chapters 5, 40, 625, 705, 720, 730 | 2026 | ~116 | ilga.gov static document server; synthesized codes verified via IL statute verifier script; codes confirmed correct (2026-07) |
+| Ohio | Ohio Revised Code Titles 29, 45 | 2026 | ~115 | codes.ohio.gov; 87/87 citations verified across 3 passes (rate-limited site); codes confirmed correct (2026-07) |
+| Georgia | Official Code of Georgia Ann. Titles 16, 40, 48 | 2026 | ~129 | law.justia.com/codes/georgia cross-referenced with sos.ga.gov; 310 synthesized codes corrected against O.C.G.A. (2026-07) |
+| North Carolina | NC General Statutes Chapters 14, 20, 50B, 90, 105 | 2026 | ~130 | ncleg.gov; ~60 synthesized codes corrected against NCGS; key corrections: homicide (§ 14-17), rape (§§ 14-27.21–14-27.27), DWI (§ 20-138.1) (2026-07) |
+| New Jersey | NJ Statutes Annotated Title 2C, 39, 54 | 2026 | ~127 | njleg.state.nj.us; ~70 synthesized codes corrected against N.J.S.A. 2C (New Jersey Code of Criminal Justice) (2026-07) |
+| Virginia | Code of Virginia Titles 4.1, 18.2, 38.2, 46.2, 54.1, 58.1 | 2026 | ~130 | law.lis.virginia.gov; ~55 synthesized codes corrected; existing correct entries (18.2-32, 18.2-57, 18.2-96, 18.2-266, 46.2-301) confirmed (2026-07) |
+| Arizona | Arizona Revised Statutes Titles 13, 28, 42 | 2026 | ~128 | azleg.gov; ~45 synthesized codes corrected; existing correct entries (§§ 13-1105, 13-1204, 13-1805, 28-693) confirmed (2026-07) |
 
 **How these are used:**
 
@@ -133,6 +143,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 | Criminal benchbook / judicial reference | AR, DE | State Supreme Court or Administrative Office of Courts |
 | Legislative charge code manual | MO | Missouri State Courts Administrator |
 | Legislative inventory | TX | Texas Legislative Council |
+| Official legislature website / primary statute text | CA, NY, FL, IL, OH, GA, NC, NJ, VA, AZ | State legislature or code publisher |
 
 **Obtaining updated editions:**
 
@@ -145,6 +156,16 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 | MO | https://www.courts.mo.gov/page.jsp?id=304 |
 | DE | https://courts.delaware.gov/Superior/benchbook.aspx |
 | TX | https://www.tlc.texas.gov/policy/felony_offenses.pdf |
+| CA | https://leginfo.legislature.ca.gov/faces/codes.xhtml (Penal Code Title 1–16, Health & Safety §§ 11000+, Vehicle Code §§ 23000+) |
+| NY | https://legislation.nysenate.gov/pdf/bills/2024/S4273 (NY Penal Law) — use legislation.nysenate.gov search |
+| FL | https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Index&Title_Request=XLVI |
+| IL | https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ChapterID=54 (Chapter 720 ILCS — Criminal Offenses) |
+| OH | https://codes.ohio.gov/ohio-revised-code/title-29 |
+| GA | https://law.justia.com/codes/georgia/title-16/ (proxy; verify key sections at sos.ga.gov) |
+| NC | https://www.ncleg.gov/Laws/GeneralStatuteSections/Chapter14 |
+| NJ | https://njleg.state.nj.us/Laws/StatuteArchive2022/2C.pdf |
+| VA | https://law.lis.virginia.gov/vacode/title18.2/ |
+| AZ | https://www.azleg.gov/arstitle/ (Title 13 — Criminal Code) |
 
 **Verification cadence:** These documents are updated by their respective states on legislative session cycles (typically annually or biennially). Re-count and re-audit when a new edition is published or when a state legislative session concludes.
 
@@ -153,6 +174,12 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 - MO charge code format (`NNNN.N-NNNYNN NNNN`) is specific to the Missouri court case management system and does not map directly to MO Revised Statutes without cross-referencing
 - AR Benchbook rows include all seriousness ranking levels (A through E unranked); each seriousness level for the same offense is a separate row
 - MI split MCL entries (214 rows) occur when multiple subsections share a single MCL base citation across multiple lines; each subsection line is counted separately
+- GA uses O.C.G.A. §§ 16-5-1, 16-8-40/41, 16-13-30/31 as multi-purpose umbrella statutes (no degree separation); entries mapped to the primary controlling section
+- NC robbery uses §§ 14-87 / 14-87.1 (armed / unarmed); no dedicated carjacking statute — mapped to § 14-87
+- NJ burglary (§ 2C:18-2) covers all degrees; degree determined by circumstances, not separate sections
+- VA Title 18.2 covers most crimes; DUI at § 18.2-266, traffic offenses at Title 46.2, drug paraphernalia at Title 54.1
+- AZ theft (§ 13-1802) is a single statute for all theft amounts; degree determined by value tier within the section
+- 2026-07 audit covered base charges only; inchoate/derivative phases (MPC-based), enhancement phases, and juvenile phases retain their non-state-specific citations (correct by design)
 
 ---
 
