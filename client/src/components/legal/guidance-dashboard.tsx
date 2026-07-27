@@ -109,6 +109,7 @@ interface EnhancedGuidanceData {
     description: string;
     priority: 'critical' | 'important' | 'normal';
     daysFromNow?: number;
+    isEstimate?: boolean;
   }>;
   rights: string[];
   resources: Array<{
@@ -1407,6 +1408,29 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           )}
         </CardHeader>
         <CardContent>
+          {/* Inline estimate notice — shown when the user's state is not individually mapped */}
+          {guidance.deadlines.some(d => d.isEstimate) && (
+            <div className="mb-4 p-3 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg" data-testid="notice-deadline-estimate">
+              <div className="flex items-start gap-2">
+                <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+                <div className="text-sm">
+                  <p className="text-amber-800 dark:text-amber-200">
+                    {t('legalGuidance.dashboard.estimateDeadlines.notice',
+                      "These timeframes are general estimates — your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case."
+                    )}
+                  </p>
+                  <button
+                    onClick={() => guardedNavigate('/court-locator')}
+                    className="inline-flex items-center gap-1 mt-2 text-amber-700 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-100 underline font-medium text-xs"
+                  >
+                    <Building className="h-3.5 w-3.5" />
+                    {t('legalGuidance.dashboard.estimateDeadlines.findCourt', 'Find your state court website')}
+                    <ExternalLink className="h-3 w-3" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
           <div className="relative">
             {/* Vertical connecting line */}
             <div className="absolute left-[11px] top-3 bottom-3 w-0.5 bg-muted-foreground/20" />

@@ -2285,6 +2285,18 @@ export default {
         "progress": "案件进展",
         "current": "当前"
       },
+      "estimateDeadlines": {
+        "notice": "这些时间框架是一般性估计——您所在州的确切截止日期可能有所不同。请查阅您的法庭文件或您所在州的法院网站，以了解您案件的实际日期。",
+        "findCourt": "查找您所在州的法院网站"
+      },
+      "uncertaintyDisclosures": {
+        "defaultCharge": {
+          "area": "此指控类型无详细指导",
+          "note": "我们没有针对此特定指控类型的详细指导。所显示的信息是一般性的，适用于大多数刑事案件。熟悉您所在州此类指控的律师将能提供更具体的指导。"
+        },
+        "dmiHearingVariation": "申请DMV听证的时间窗口因州而异——10天是常见的，但并非普遍适用。请立即查阅您的逮捕文件或您所在州的DMV网站。",
+        "publicDefenderIncome": "近似值——资格由法院决定，而非由这些数字决定。"
+      },
       "nextSteps": {
         "title": "下一步"
       },

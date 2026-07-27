@@ -2283,6 +2283,18 @@ export default {
         "progress": "Case Progress",
         "current": "Current"
       },
+      "estimateDeadlines": {
+        "notice": "These timeframes are general estimates — your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case.",
+        "findCourt": "Find your state court website"
+      },
+      "uncertaintyDisclosures": {
+        "defaultCharge": {
+          "area": "Charge-Specific Guidance Not Available",
+          "note": "We don't have detailed guidance for this specific charge type. The information shown is general and applies to most criminal cases. An attorney familiar with this charge type in your state will have more specific guidance."
+        },
+        "dmiHearingVariation": "The window to request a DMV hearing varies by state — 10 days is common but not universal. Check your arrest paperwork or your state DMV website immediately.",
+        "publicDefenderIncome": "Approximate — eligibility is determined by the court, not by these figures."
+      },
       "nextSteps": {
         "title": "Next Steps"
       },

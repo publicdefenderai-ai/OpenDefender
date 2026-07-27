@@ -22,6 +22,7 @@ interface GuidanceDeadline {
   description: string;
   priority: 'critical' | 'important' | 'normal';
   daysFromNow?: number;
+  isEstimate?: boolean;
 }
 
 interface GuidanceResource {
@@ -534,7 +535,7 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
     timeline: buildCaseTimeline(caseStage, jurisdictionData),
     mockQA: buildMockQA(caseData, specificCharges),
     collateralConsequences: buildCollateralConsequences(caseData, fallbackChargeType),
-    uncertainties: buildUncertainties(caseData, jurisdictionData),
+    uncertainties: buildUncertainties(caseData, jurisdictionData, fallbackChargeType),
   };
   
   return guidance;
@@ -901,14 +902,20 @@ function buildNextSteps(caseData: CaseData, stageData: any): string[] {
 
 function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: any): GuidanceDeadline[] {
   const deadlines: GuidanceDeadline[] = [];
-  
+
+  // Determine if this jurisdiction is one of the specifically mapped ones or a federal fallback
+  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'FEDERAL'];
+  const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
+  const isEstimate = !knownJurisdictions.includes(jurisdiction);
+
   if (caseData.caseStage === 'arrest') {
     deadlines.push({
       event: 'Arraignment Hearing',
       timeframe: jurisdictionData.arraignmentDeadline,
       description: 'First court appearance where charges are formally read',
       priority: 'critical',
-      daysFromNow: 2
+      daysFromNow: 2,
+      ...(isEstimate && { isEstimate: true }),
     });
   }
   
@@ -918,7 +925,8 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
       timeframe: jurisdictionData.preliminaryHearing || 'Within 10-14 days',
       description: 'Court determines probable cause for charges',
       priority: 'important',
-      daysFromNow: 10
+      daysFromNow: 10,
+      ...(isEstimate && { isEstimate: true }),
     });
   }
   
@@ -927,7 +935,8 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
     timeframe: jurisdictionData.discoveryDeadline,
     description: 'Exchange of evidence between prosecution and defense',
     priority: 'normal',
-    daysFromNow: 30
+    daysFromNow: 30,
+    ...(isEstimate && { isEstimate: true }),
   });
   
   return deadlines;
@@ -952,7 +961,7 @@ function buildResources(jurisdiction: string, hasAttorney: boolean): GuidanceRes
   if (!hasAttorney) {
     resources.push({
       type: 'Public Defender Office',
-      description: 'Free legal representation if you qualify financially',
+      description: 'Free legal representation if you qualify financially. Income thresholds shown are approximate — eligibility is determined by the court at your first appearance, not by these figures alone.',
       contact: 'Contact your local public defender office',
       hours: 'Monday-Friday 8:00 AM - 5:00 PM'
     });
@@ -1071,7 +1080,7 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
       category: 'drivers_license',
       consequence: 'A DUI conviction typically triggers an automatic administrative license suspension separate from any criminal sentence, and may require an ignition interlock device.',
       timing: 'Upon arrest (administrative) and conviction (criminal)',
-      actionNote: 'Request a DMV hearing within the deadline (often 10 days of arrest) to contest the administrative suspension while your criminal case proceeds.',
+      actionNote: 'Request a DMV hearing to contest the administrative suspension — the deadline is often 10 days from arrest, but this window varies by state. Check your arrest paperwork or your state DMV website immediately. This is one common consequence; a DUI conviction can carry additional consequences depending on your state and circumstances.',
     },
   ],
   assault: [
@@ -1087,7 +1096,7 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
       category: 'benefits',
       consequence: 'Federal drug convictions can temporarily or permanently suspend eligibility for federal student financial aid and certain public benefits depending on the offense and prior record.',
       timing: 'Upon conviction',
-      actionNote: 'Ask your attorney whether a diversion program or deferred adjudication would avoid a disqualifying conviction.',
+      actionNote: 'Ask your attorney whether a diversion program or deferred adjudication would avoid a disqualifying conviction. This is one of the more common consequences — drug charges can carry additional impacts (immigration, housing, licensing) depending on your circumstances. Use the [full collateral consequences screener](/collateral-consequences) for a more complete picture.',
     },
   ],
   theft: [
@@ -1095,7 +1104,7 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
       category: 'background_check',
       consequence: 'Theft convictions — especially felonies — appear on background checks and commonly disqualify individuals from jobs in finance, retail, healthcare, and government. The conviction must typically be disclosed on job applications.',
       timing: 'Upon conviction',
-      actionNote: 'Discuss with your attorney whether expungement or record sealing is available in your jurisdiction after the case resolves, which may limit what future background checks show.',
+      actionNote: 'Discuss with your attorney whether expungement or record sealing is available in your jurisdiction after the case resolves. This is one of the more common consequences — theft charges can carry additional impacts depending on your specific circumstances and state. Use the [full collateral consequences screener](/collateral-consequences) for a more complete picture.',
     },
   ],
   domestic: [
@@ -1209,7 +1218,7 @@ function buildCollateralConsequences(caseData: CaseData, chargeType: string): Co
 }
 
 // Build uncertainty notices when key background information is missing or jurisdiction is generic
-function buildUncertainties(caseData: CaseData, jurisdictionData: any): UncertaintyItem[] {
+function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackChargeType?: string): UncertaintyItem[] {
   const items: UncertaintyItem[] = [];
   const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
 
@@ -1267,6 +1276,14 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any): Uncertai
     items.push({
       area: 'Custody Status',
       note: 'Your custody status was not specified. Deadlines and procedural timelines are generally shorter when a defendant is in custody. If you are currently detained, confirm all deadlines with your attorney or the court.',
+    });
+  }
+
+  // Default charge bucket — no keyword match, so guidance is generic
+  if (fallbackChargeType === 'default') {
+    items.push({
+      area: 'Charge-Specific Guidance Not Available',
+      note: "We don't have detailed guidance for this specific charge type. The information shown is general and applies to most criminal cases. An attorney familiar with this charge type in your state will have more specific guidance on defenses, collateral consequences, and deadlines that apply to your situation.",
     });
   }
 

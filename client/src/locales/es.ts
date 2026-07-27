@@ -2285,6 +2285,18 @@ export default {
         "progress": "Progreso del Caso",
         "current": "Actual"
       },
+      "estimateDeadlines": {
+        "notice": "Estos plazos son estimaciones generales — los plazos exactos de su estado pueden ser diferentes. Revise los documentos del tribunal o el sitio web del tribunal de su estado para conocer las fechas reales de su caso.",
+        "findCourt": "Encuentre el sitio web del tribunal de su estado"
+      },
+      "uncertaintyDisclosures": {
+        "defaultCharge": {
+          "area": "Orientación Específica para Este Cargo No Disponible",
+          "note": "No tenemos orientación detallada para este tipo específico de cargo. La información mostrada es general y aplica a la mayoría de los casos penales. Un abogado familiarizado con este tipo de cargo en su estado tendrá orientación más específica."
+        },
+        "dmiHearingVariation": "El plazo para solicitar una audiencia en el DMV varía según el estado — 10 días es común pero no universal. Revise sus documentos de arresto o el sitio web del DMV de su estado de inmediato.",
+        "publicDefenderIncome": "Aproximado — la elegibilidad es determinada por el tribunal, no por estas cifras."
+      },
       "nextSteps": {
         "title": "Próximos Pasos"
       },
