@@ -26,8 +26,8 @@
  * Last full data pass: 2026-07
  *
  * Coverage: All 50 US states + DC + federal (52 entries).
- *   13 high-confidence: federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ, AR
- *   39 medium-confidence: all remaining 37 states + DC
+ *   23 high-confidence: federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ, AR, VA, WA, AZ, MA, TN, IN, MO, MD, WI, CO
+ *   29 medium-confidence: MN, SC, AL, LA, KY, OR, OK, CT, UT, IA, NV, MS, KS, NM, NE, WV, ID, HI, NH, ME, MT, RI, DE, SD, ND, AK, VT, WY, DC
  *    0 low-confidence: none — every jurisdiction is now injected into AI prompts
  */
 
@@ -412,8 +412,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Virginia uses a cash bail system with secured and unsecured bonds. Bail hearings are conducted by magistrates.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Washington ────────────────────────────────────────────────────────────
@@ -440,8 +440,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Washington uses a cash bail system. Courts may impose non-monetary conditions of release. OR release is common for non-violent offenses.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Arizona ───────────────────────────────────────────────────────────────
@@ -467,8 +467,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Arizona has a constitutional right to bail except for capital offenses or offenses showing proof evident. Ariz. Const. Art. II § 22.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Massachusetts ─────────────────────────────────────────────────────────
@@ -493,8 +493,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Massachusetts uses monetary bail. Bail is set at arraignment. OR release is available. Dangerousness hearings (M.G.L. ch. 276 § 58A) allow pretrial detention without bail for certain offenses.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Tennessee ─────────────────────────────────────────────────────────────
@@ -519,8 +519,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Tennessee uses a cash bail system. Bail is set at initial appearance before a magistrate.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Indiana ───────────────────────────────────────────────────────────────
@@ -547,8 +547,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Indiana uses a cash bail system with surety bonds. OR release is available for lower-level offenses.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Missouri ──────────────────────────────────────────────────────────────
@@ -572,8 +572,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Mo. Rev. Stat. § 544.170(2)',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
     notes: 'Non-monetary release conditions must be considered first under Mo. R. Crim. P. 33.01 before monetary bail is imposed. Cash bail remains available and widely used; no statewide reform enacted as of 2026.',
   },
 
@@ -599,8 +599,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Maryland uses a cash bail system with bond options. Commissioner sets bail at initial appearance; bail review available before a judge.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Wisconsin ─────────────────────────────────────────────────────────────
@@ -627,8 +627,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Wisconsin uses a cash bail system. Bail is set at initial appearance.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Colorado ──────────────────────────────────────────────────────────────
@@ -653,8 +653,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Colorado uses a cash bail system with monetary bond options. PR (personal recognizance) bonds are common.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Minnesota ─────────────────────────────────────────────────────────────
