@@ -23,7 +23,12 @@
  *   - When a reform changes a rule (bail reform, new speedy trial statute, etc.),
  *     update the entry and add a reformNote.
  *
- * Last full data pass: 2026-03
+ * Last full data pass: 2026-07
+ *
+ * Coverage: All 50 US states + DC + federal (52 entries).
+ *   13 high-confidence: federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ, AR
+ *   39 medium-confidence: all remaining 37 states + DC
+ *    0 low-confidence: none — every jurisdiction is now injected into AI prompts
  */
 
 export interface JurisdictionProcedureRule {

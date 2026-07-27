@@ -4,7 +4,7 @@
 
 This index documents where every category of data on the OpenDefender platform comes from, what verification processes are in place, and where to look to update the data. It is intended for quality control reviewers, contributors, and maintainers.
 
-Last reviewed: July 2026 (beta banner reinstated; 7 legal-guidance directive phrases softened in EN locale; LOCUS-v1 (LocalLaws) API added to Sections 9 and 11; collateral consequences screener, advocate toolkit, bail preparation, case timeline, and 11 support pages added to Section 8; glossary count updated to 50; stats locale file reference updated to locales/en.ts; criminal-charge-citations.ts overlay file noted in Section 2; API_INTEGRATION_STRATEGY.md charge and statute counts corrected)
+Last reviewed: July 2026 (beta banner reinstated; 7 legal-guidance directive phrases softened in EN locale; LOCUS-v1 (LocalLaws) API added to Sections 9 and 11; collateral consequences screener, advocate toolkit, bail preparation, case timeline, and 11 support pages added to Section 8; glossary count updated to 50; stats locale file reference updated to locales/en.ts; criminal-charge-citations.ts overlay file noted in Section 2; API_INTEGRATION_STRATEGY.md charge and statute counts corrected; §10a updated to reflect full 52-jurisdiction coverage — all 18 formerly-low-confidence states verified at medium/high and now injected into AI prompts)
 
 ---
 
@@ -460,13 +460,13 @@ The validator runs only on AI-generated Case Guidance output, not on static edit
 1. Legal accuracy validator (`server/services/legal-accuracy-validator.ts`) — imports `JURISDICTION_DEADLINE_RULES` for deadline validation of AI-generated guidance
 2. AI guidance prompt builder (`server/services/claude-guidance.ts`) — imports `buildJurisdictionContextBlock()` to inject verified state rules directly into the Claude prompt before generation
 
-**Data confidence tiers:**
+**Data confidence tiers (as of July 2026 — all 52 jurisdictions covered):**
 
 | Tier | States | How used |
 |------|--------|----------|
-| `high` | Federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ | Injected into AI prompts as authoritative cited fact |
-| `medium` | VA, WA, AZ, MA, TN, IN, MD, WI, CO, MN, SC, AL, LA, KY, OR, OK, CT, NV, KS, NM, AK, DC | Injected with qualifying language ("generally") |
-| `low` | MO, UT, IA, AR, MS, WV, ID, HI, NH, ME, MT, RI, DE, SD, ND, VT, WY, NE | NOT injected into AI prompts; retained for quarterly review only |
+| `high` | Federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ, AR | Injected into AI prompts as authoritative cited fact |
+| `medium` | VA, WA, AZ, MA, TN, IN, MO, MD, WI, CO, MN, SC, AL, LA, KY, OR, OK, CT, UT, IA, NV, MS, KS, NM, NE, WV, ID, HI, NH, ME, MT, RI, DE, SD, ND, AK, VT, WY, DC | Injected with qualifying language ("generally") |
+| `low` | *(none — all jurisdictions now injected)* | — |
 
 **Source methodology:** Each entry cites a specific statute, court rule, or case citation. High-confidence entries are based on well-established, widely-cited rules. Medium-confidence entries reflect best available knowledge from general legal references. Low-confidence entries require verification against current state statutes before being promoted.
 
@@ -477,7 +477,7 @@ The validator runs only on AI-generated Case Guidance output, not on static edit
 - NCSC (National Center for State Courts) — comparative state court procedure reference
 - Westlaw state rule summaries (general knowledge basis for medium-confidence entries)
 
-**Key reform notes (as of 2026-03):**
+**Key reform notes (as of 2026-07):**
 - Illinois: Cash bail eliminated statewide (SAFE-T Act / Pretrial Fairness Act, effective Sept. 18, 2023)
 - New Jersey: Cash bail eliminated for most defendants (Criminal Justice Reform Act, effective Jan. 1, 2017)
 - New York: Cash bail eliminated for most non-violent offenses (2019 reform, amended 2020 and 2022)
@@ -491,7 +491,7 @@ The validator runs only on AI-generated Case Guidance output, not on static edit
 4. Add a `bailReformNote` or `notes` field documenting the change
 5. Update this SOURCES.md entry with the reform note
 
-**Quarterly review:** Low-confidence entries are flagged for manual verification. To promote a low-confidence entry: visit the state's official legislature website (e.g., legislature.state.nm.us) or state court website, confirm the current rule, update the entry, and change `dataConfidence` to `'medium'` or `'high'`.
+**Quarterly review:** All 52 jurisdictions are now at medium or high confidence — there are no remaining low-confidence entries. Quarterly review should focus on re-verifying entries whose `lastVerified` date is older than 12 months, and on updating any entries affected by new bail reform legislation or speedy trial statute changes. To re-verify an entry: visit the official state legislature or court rules website, confirm the current rule, update the entry, and bump `lastVerified` to the current month.
 
 ---
 
