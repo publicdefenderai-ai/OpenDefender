@@ -1030,15 +1030,6 @@ export default function CaseGuidance() {
         </div>
       </section>
 
-      {/* Disclaimer */}
-      <div className="py-6 px-4">
-        <div className="max-w-4xl mx-auto">
-          <p className="text-xs text-muted-foreground text-center">
-            <span className="font-medium">{t('common.important')}:</span> {t('case.privacy.disclaimer')}
-          </p>
-        </div>
-      </div>
-
       <Footer />
     </div>
   );
