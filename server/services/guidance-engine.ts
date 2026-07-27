@@ -128,7 +128,7 @@ const chargeGuidance = {
   'dui': {
     name: 'DUI/DWI',
     immediateActions: [
-      'Request independent blood/breath test if possible',
+      'An independent blood or breath test may be requested in some jurisdictions — attorneys advise asking about this option promptly as timing matters.',
       'Document any medical conditions affecting tests',
       'Take photos of arrest scene and conditions',
       'Request DMV hearing within 10 days (varies by state)'
@@ -184,9 +184,9 @@ const chargeGuidance = {
   'drug': {
     name: 'Drug Possession',
     immediateActions: [
-      'Do not discuss substances with anyone except attorney',
+      'Discussing the substance of the case with anyone other than an attorney is something legal professionals advise against — attorney-client communications are the protected channel.',
       'Document any medical prescriptions',
-      'Identify potential search and seizure issues',
+      'Identifying potential search and seizure issues is an early priority attorneys typically raise in drug cases.',
       'Consider treatment program enrollment'
     ],
     evidenceToGather: [
@@ -270,8 +270,8 @@ const chargeGuidance = {
     immediateActions: [
       'Preserve all financial documents and records',
       'Do not destroy or alter any documents',
-      'Stop any ongoing transactions related to the case',
-      'Avoid communicating with potential co-defendants'
+      'Continuing transactions connected to a fraud investigation while charges are pending can be interpreted as evidence of intent — attorneys typically advise pausing any related activity.',
+      'Communication between co-defendants can complicate legal strategy and may raise evidentiary concerns — attorneys commonly advise limiting such contact.'
     ],
     evidenceToGather: [
       'Bank statements and financial records',
@@ -352,7 +352,7 @@ const chargeGuidance = {
   'weapons': {
     name: 'Weapons Offense',
     immediateActions: [
-      'Do not possess any weapons while case pending',
+      'Possessing weapons while a weapons charge is pending can result in additional charges and typically affects bail conditions — attorneys flag this as a priority concern.',
       'Document any legal ownership or permits',
       'Identify witnesses to the circumstances',
       'Review storage and transport laws'
@@ -412,9 +412,9 @@ const stageGuidance = {
   'arrest': {
     name: 'Arrest Stage',
     criticalActions: [
-      'Stay silent - don\'t answer questions without a lawyer',
-      'Ask for a lawyer before any questioning',
-      'Do what police say, but tell them you want a lawyer',
+      '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.',
+      '**Legal Representation**: Requesting an attorney before responding to questions is a constitutional right and a standard first step at this stage.',
+      '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict — attorneys advise doing both.',
       'Write down your booking number and where you are'
     ],
     immediateDeadlines: [
@@ -432,16 +432,15 @@ const stageGuidance = {
     ],
     avoidActions: [
       'Don\'t talk about your case with other people in jail',
-      'Don\'t sign anything without a lawyer looking at it first',
-      'Don\'t give up any of your rights',
-      'Don\'t fight back or resist when being arrested',
-      'Don\'t answer questions or make statements to police'
+      'Signing documents or waivers without attorney review can limit legal options — attorneys advise reviewing any paperwork with counsel before signing.',
+      'Waiving rights before consulting an attorney — including the right to silence — can significantly affect how a case proceeds.',
+      'Don\'t fight back or resist when being arrested'
     ]
   },
   'arraignment': {
     name: 'First Court Appearance',
     criticalActions: [
-      'Say "Not Guilty" to keep all your options open',
+      '**Plea at Arraignment**: Most attorneys advise entering a not guilty plea at arraignment — this preserves all options while the case and evidence are reviewed with counsel.',
       'Ask for a public defender if you can\'t afford a lawyer',
       'Talk to the judge about bail so you can get out of jail',
       'Get a copy of the papers that say what you\'re charged with'
@@ -558,7 +557,7 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
       {
         question: "Do you understand the charges against you?",
         suggestedResponse: "Yes, Your Honor, I understand the charges.",
-        explanation: "If you don't fully understand, it's okay to say 'I would like my attorney to explain them to me.' Don't pretend to understand if you don't.",
+        explanation: "If you don't fully understand, it's okay to say 'I would like my attorney to explain them to me.'",
         category: 'charges'
       },
       {
@@ -596,13 +595,13 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
       {
         question: "Are there any motions you would like to file?",
         suggestedResponse: "I will defer to my attorney on any motions.",
-        explanation: "Your attorney should handle this. Don't try to file motions on your own without legal guidance.",
+        explanation: "Motions involve procedural and legal considerations that attorneys handle — attempting to file them without counsel can affect how they're received by the court.",
         category: 'procedural'
       },
       {
         question: "Are you interested in discussing a plea agreement?",
         suggestedResponse: "I would like to continue discussions with my attorney before making any decisions.",
-        explanation: "Don't agree to anything on the spot. Always discuss plea offers thoroughly with your attorney.",
+        explanation: "Plea offers involve tradeoffs that benefit from full review of the evidence and available defenses — attorneys advise taking time to evaluate them carefully.",
         category: 'plea'
       }
     ],
@@ -636,7 +635,7 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
       {
         question: "Would you like to make a statement?",
         suggestedResponse: "I would like to speak with an attorney before answering any questions.",
-        explanation: "You have the right to remain silent. Use it. Anything you say can be used against you.",
+        explanation: "The right to remain silent means you are not required to answer questions. Anything said can be introduced in the case.",
         category: 'procedural'
       }
     ]
@@ -654,7 +653,7 @@ function buildMockQA(caseData: CaseData, specificCharges: any[]): MockQAItem[] {
     mockQA.push({
       question: `What do you know about the ${chargeName} charge against you?`,
       suggestedResponse: "I understand the nature of the charge. I would like to defer to my attorney for any specific details.",
-      explanation: "Don't discuss details of your case without your attorney present. This protects your rights.",
+      explanation: "The specifics of a case are typically kept within the attorney-client relationship — details shared outside it don't carry the same legal protections.",
       category: 'charges'
     });
   }
@@ -691,14 +690,14 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   
   // Add stage-specific alerts
   if (caseData.caseStage === 'arrest') {
-    alerts.push('URGENT: Stay silent - don\'t answer questions without a lawyer');
+    alerts.push('**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.');
     if (caseData.custodyStatus === 'detained') {
-      alerts.push(`You must see a judge ${jurisdictionData.arraignmentDeadline}`);
+      alerts.push(`Arraignment is required ${jurisdictionData.arraignmentDeadline}`);
     }
   }
   
   if (!caseData.hasAttorney) {
-    alerts.push('CRITICAL: Ask for a public defender right away if you can\'t afford a lawyer');
+    alerts.push('Requesting a public defender promptly matters — representation before arraignment can affect bail and initial proceedings.');
   }
   
   // Add charge-specific critical alerts
@@ -717,9 +716,9 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   // Add basic actions for arrest stage with URGENT priority
   if (caseData.caseStage === 'arrest') {
     actions.push(
-      { action: 'Stay silent - don\'t answer questions without a lawyer', urgency: 'urgent' },
-      { action: 'Ask for a lawyer before any questioning', urgency: 'urgent' },
-      { action: 'Do what police say, but tell them you want a lawyer', urgency: 'urgent' },
+      { action: '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.', urgency: 'urgent' },
+      { action: '**Legal Representation**: Requesting an attorney before responding to questions is a constitutional right and a standard first step at this stage.', urgency: 'urgent' },
+      { action: '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict — attorneys advise doing both.', urgency: 'urgent' },
       { action: 'Write down your booking number and where you are', urgency: 'high' }
     );
   }
@@ -796,7 +795,7 @@ function buildWarningsForCharges(caseData: CaseData, specificCharges: any[], fal
   // Add general warnings
   warnings.push(
     'Do not discuss your case on social media',
-    'Avoid contact with witnesses or alleged victims',
+    '**Witness and Victim Contact**: Contact with witnesses or the alleged victim while charges are pending can result in additional charges or bail revocation — attorneys consistently flag this as a significant risk.',
     'Comply with all court orders and bail conditions'
   );
   
@@ -850,14 +849,14 @@ function buildAvoidActionsForCharges(specificCharges: any[], stageData: any): st
   // Add general avoid actions for arrest/detention
   avoidActions.push(
     'Do not discuss case with cellmates',
-    'Do not sign any documents without attorney review',
-    'Do not waive any rights'
+    'Documents and waivers signed without attorney review can limit legal options — attorneys advise reviewing any paperwork with counsel first.',
+    'Waiving rights before consulting an attorney can significantly affect how a case proceeds.'
   );
   
   // Add charge-specific avoid actions
   specificCharges.forEach(charge => {
     if (charge.category === 'felony') {
-      avoidActions.push(`Do not contact alleged victims (${charge.code})`);
+      avoidActions.push(`Contact with the alleged victim while charges are pending can result in additional charges or bail violations (${charge.code}).`);
     }
     if (charge.name.toLowerCase().includes('domestic')) {
       avoidActions.push('Do not violate any restraining orders');
@@ -999,9 +998,9 @@ function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionD
   // Part 2: Important actions (2-3 key things)
   let actions = '';
   if (!hasAttorney) {
-    actions = 'The most important thing right now is to get a lawyer - ask for a public defender if you cannot afford one. Do not make any statements to police without a lawyer present.';
+    actions = 'Securing legal representation is the immediate priority — the public defender\'s office provides representation at no cost for those who qualify. Making statements to police before speaking with an attorney is something legal professionals consistently advise against.';
   } else if (caseStage === 'arrest') {
-    actions = 'Stay silent and do not answer questions without your lawyer. Make sure you attend your arraignment hearing on time.';
+    actions = 'Attorneys consistently advise against making statements without counsel present. Attending the arraignment hearing on time is the other immediate priority.';
   } else if (caseStage === 'arraignment') {
     actions = `Work with your lawyer to understand the charges and prepare for your plea. Make sure you meet the deadline for your arraignment: ${jurisdictionData.arraignmentDeadline}.`;
   } else if (caseStage === 'pre-trial') {
