@@ -2,7 +2,9 @@
 set -e
 npm install
 npm run db:push
-npx vitest run tests/
+# Exclude criminal-charges-api.test.ts — it is a live-server integration test
+# that connects to http://localhost:5000 and cannot run without the app running.
+npx vitest run --exclude="**/criminal-charges-api.test.ts"
 
 # Remove stale subrepl-* remotes left behind by task agent environments.
 # Each task agent adds a subrepl-* remote to .git/config and never cleans it up;
