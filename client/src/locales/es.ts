@@ -5890,20 +5890,19 @@ export default {
         "action": "Consulte las reglas de su junta de licencias sobre la notificación de arrestos. Contacte a un abogado que maneje asuntos de licencias profesionales antes de reportar a su junta.",
         "linkLabel": "Encontrar ayuda legal"
       },
-      // TODO: Task #177 — human translation needed for driverLicense and sexOffender risk cards
       "driverLicense": {
-        "title": "Driver's License Suspension Risk",
-        "what": "DUI and many drug convictions automatically trigger driver's license suspension through two separate tracks: an administrative (DMV) suspension tied to your arrest, and a criminal court suspension tied to conviction. Both can run at the same time. Most states allow a restricted or hardship license for work and medical travel during suspension, but you must act quickly — the administrative suspension window can close within days of arrest.",
-        "clock": "In most states, the administrative license suspension begins automatically 30–60 days after arrest unless you request a DMV hearing, usually within 5–30 days of your arrest notice. Failing to request the hearing within the deadline waives your right to contest the administrative suspension.",
-        "action": "Ask your attorney to file a DMV hearing request on your behalf immediately — do not wait for your court date. Also ask about hardship or restricted license options and whether an ignition interlock device can allow you to drive during the suspension period.",
-        "linkLabel": "Transportation and license help"
+        "title": "Riesgo de Suspensión de Licencia de Conducir",
+        "what": "El DUI y muchas condenas por drogas activan automáticamente la suspensión de la licencia de conducir a través de dos vías separadas: una suspensión administrativa (DMV) vinculada a su arresto y una suspensión del tribunal penal vinculada a la condena. Ambas pueden ocurrir al mismo tiempo. La mayoría de los estados permiten una licencia restringida o de emergencia para el trabajo y viajes médicos durante la suspensión, pero debe actuar rápidamente — el plazo de la suspensión administrativa puede cerrarse en días después del arresto.",
+        "clock": "En la mayoría de los estados, la suspensión administrativa de la licencia comienza automáticamente 30–60 días después del arresto, a menos que solicite una audiencia ante el DMV, generalmente dentro de los 5–30 días a partir del aviso de arresto. No solicitar la audiencia dentro del plazo renuncia a su derecho de impugnar la suspensión administrativa.",
+        "action": "Pida a su abogado que presente una solicitud de audiencia ante el DMV de inmediato — no espere la fecha de su tribunal. También pregunte sobre opciones de licencia restringida o de emergencia y si un dispositivo de bloqueo de encendido puede permitirle conducir durante el período de suspensión.",
+        "linkLabel": "Ayuda con transporte y licencia"
       },
       "sexOffender": {
-        "title": "Sex Offender Registration Risk",
-        "what": "A conviction for a sex offense triggers mandatory registration under your state's sex offender registry law and under the federal Sex Offender Registration and Notification Act (SORNA, 34 U.S.C. § 20901). Registration lasts 10–15 years for lower-tier offenses and lifetime for serious or repeat offenses in most states. It requires regular in-person check-ins, address verification, and public online listing. Many states add residency restrictions — typically 500–2,000 feet from schools, parks, and day care centers — that severely limit where you can live.",
-        "clock": "Registration is required immediately upon conviction, upon release from incarceration, or upon arrival in any jurisdiction where you live, work, or go to school. Failure to register or update your registration is itself a separate state and federal felony.",
-        "action": "The tier and duration of registration is determined at sentencing. An attorney experienced in sex offender law should advise you before you enter any plea, because the registration consequences are often permanent and cannot be undone by expungement. Ask specifically about the minimum registration period and any petition for removal available under state law.",
-        "linkLabel": "Find legal help"
+        "title": "Riesgo de Registro como Delincuente Sexual",
+        "what": "Una condena por un delito sexual activa el registro obligatorio bajo la ley del registro de delincuentes sexuales de su estado y bajo la Ley Federal de Registro y Notificación de Delincuentes Sexuales (SORNA, 34 U.S.C. § 20901). El registro dura entre 10 y 15 años para delitos de nivel inferior y de por vida para delitos graves o reincidentes en la mayoría de los estados. Requiere presentaciones periódicas en persona, verificación de domicilio y listado público en línea. Muchos estados agregan restricciones de residencia — típicamente de 500 a 2,000 pies de escuelas, parques y guarderías — que limitan severamente dónde puede vivir.",
+        "clock": "El registro se requiere de inmediato al ser condenado, al ser liberado de la prisión o al llegar a cualquier jurisdicción donde viva, trabaje o asista a la escuela. No registrarse o no actualizar su registro constituye por sí mismo un delito grave separado a nivel estatal y federal.",
+        "action": "El nivel y la duración del registro se determinan en la sentencia. Un abogado con experiencia en derecho de delincuentes sexuales debe asesorarle antes de presentar cualquier declaración de culpabilidad, porque las consecuencias del registro suelen ser permanentes y no pueden deshacerse mediante la eliminación de antecedentes. Pregunte específicamente sobre el período mínimo de registro y cualquier petición de eliminación disponible bajo la ley estatal.",
+        "linkLabel": "Encontrar ayuda legal"
       }
     }
   },

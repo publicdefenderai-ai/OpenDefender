@@ -5890,20 +5890,19 @@ export default {
         "action": "查阅您的许可委员会关于逮捕报告的规定。在向委员会报告之前，联系处理职业许可事务的律师。",
         "linkLabel": "寻找法律帮助"
       },
-      // TODO: Task #177 — human translation needed for driverLicense and sexOffender risk cards
       "driverLicense": {
-        "title": "Driver's License Suspension Risk",
-        "what": "DUI and many drug convictions automatically trigger driver's license suspension through two separate tracks: an administrative (DMV) suspension tied to your arrest, and a criminal court suspension tied to conviction. Both can run at the same time. Most states allow a restricted or hardship license for work and medical travel during suspension, but you must act quickly — the administrative suspension window can close within days of arrest.",
-        "clock": "In most states, the administrative license suspension begins automatically 30–60 days after arrest unless you request a DMV hearing, usually within 5–30 days of your arrest notice. Failing to request the hearing within the deadline waives your right to contest the administrative suspension.",
-        "action": "Ask your attorney to file a DMV hearing request on your behalf immediately — do not wait for your court date. Also ask about hardship or restricted license options and whether an ignition interlock device can allow you to drive during the suspension period.",
-        "linkLabel": "Transportation and license help"
+        "title": "驾驶执照吊销风险",
+        "what": "DUI（醉驾）和许多毒品相关定罪会通过两个独立途径自动触发驾驶执照吊销：一是与逮捕挂钩的行政（DMV）吊销，二是与定罪挂钩的刑事法庭吊销。两者可以同时进行。大多数州允许在吊销期间申请限制性或困难豁免驾照用于工作和就医，但您必须迅速行动——行政吊销的申请窗口可能在逮捕后数天内关闭。",
+        "clock": "在大多数州，行政执照吊销在逮捕后30至60天内自动生效，除非您申请DMV听证，通常须在收到逮捕通知后5至30天内提出。未能在截止日期内申请听证意味着您放弃了对行政吊销提出异议的权利。",
+        "action": "请立即要求您的律师代您提交DMV听证申请——不要等待庭审日期。同时询问关于限制性或困难豁免驾照的选项，以及点火锁定装置是否可以让您在吊销期间继续驾车。",
+        "linkLabel": "交通与驾照帮助"
       },
       "sexOffender": {
-        "title": "Sex Offender Registration Risk",
-        "what": "A conviction for a sex offense triggers mandatory registration under your state's sex offender registry law and under the federal Sex Offender Registration and Notification Act (SORNA, 34 U.S.C. § 20901). Registration lasts 10–15 years for lower-tier offenses and lifetime for serious or repeat offenses in most states. It requires regular in-person check-ins, address verification, and public online listing. Many states add residency restrictions — typically 500–2,000 feet from schools, parks, and day care centers — that severely limit where you can live.",
-        "clock": "Registration is required immediately upon conviction, upon release from incarceration, or upon arrival in any jurisdiction where you live, work, or go to school. Failure to register or update your registration is itself a separate state and federal felony.",
-        "action": "The tier and duration of registration is determined at sentencing. An attorney experienced in sex offender law should advise you before you enter any plea, because the registration consequences are often permanent and cannot be undone by expungement. Ask specifically about the minimum registration period and any petition for removal available under state law.",
-        "linkLabel": "Find legal help"
+        "title": "性犯罪者登记风险",
+        "what": "性犯罪定罪将触发您所在州的性犯罪者登记法及联邦《性犯罪者登记和通知法》（SORNA，34 U.S.C. § 20901）规定的强制登记义务。大多数州对较低级别罪行的登记期限为10至15年，对严重或累犯则为终身登记。登记要求定期亲自到场报到、地址核实及在公开网络上公示。许多州还附加居住限制——通常须距离学校、公园和托儿所500至2,000英尺——严重限制了您可以居住的地点。",
+        "clock": "定罪后、出狱后或抵达您居住、工作或就读学校的任何司法管辖区时，须立即完成登记。未能登记或更新登记本身即构成独立的州和联邦重罪。",
+        "action": "登记的级别和期限在量刑时确定。在做出任何认罪答辩之前，应咨询一位熟悉性犯罪者法律的律师——因为登记后果往往是永久性的，无法通过撤销定罪记录来消除。请特别询问最低登记期限以及州法律下是否有可提出的移除申请。",
+        "linkLabel": "寻找法律帮助"
       }
     }
   },
