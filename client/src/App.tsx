@@ -71,6 +71,7 @@ const ChildcareSupport = lazy(() => import("@/pages/support/childcare"));
 const HousingSupport = lazy(() => import("@/pages/support/housing"));
 // Admin-only pages — not indexed, not linked in public nav
 const AdminCitationReview = lazy(() => import("@/pages/admin/citation-review"));
+const AdminAttorneyReview = lazy(() => import("@/pages/admin/attorney-review"));
 const FamilyCareSupport = lazy(() => import("@/pages/support/family-care"));
 const ReputationSupport = lazy(() => import("@/pages/support/reputation"));
 const ReentrySupport = lazy(() => import("@/pages/support/reentry"));
@@ -165,6 +166,7 @@ function Router() {
       <Route path="/embed/glossary" component={EmbedGlossary} />
       {/* Admin-only: not in public nav, not search-indexed, requires admin key */}
       <Route path="/admin/citation-review" component={AdminCitationReview} />
+      <Route path="/admin/attorney-review" component={AdminAttorneyReview} />
       <Route component={NotFound} />
     </Switch>
   );

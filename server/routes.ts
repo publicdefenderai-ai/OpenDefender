@@ -785,6 +785,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // ============================================================================
+  // ADMIN: Key verification endpoint
+  // A lightweight endpoint used by all admin pages to validate the admin key
+  // without depending on any specific data store or feature endpoint.
+  // Returns 200 OK if the x-admin-api-key header matches ADMIN_TOKEN; 401 otherwise.
+  app.get("/api/admin/verify-key", adminRateLimiter, requireAdminAuth, (_req, res) => {
+    res.json({ ok: true });
+  });
+
   // ADMIN: Citation Review API
   // All endpoints require x-admin-api-key header.
   // ============================================================================
