@@ -196,3 +196,32 @@ describe('JURISDICTION_PROCEDURE_RULES — required string fields', () => {
     expect(bad).toEqual([]);
   });
 });
+
+// ─── Freshness: no entry older than 12 months ─────────────────────────────────
+
+describe('JURISDICTION_PROCEDURE_RULES — lastVerified freshness (≤ 12 months)', () => {
+  /**
+   * Computes the number of whole calendar months between two YYYY-MM dates.
+   * Returns a positive number when `verifiedYM` is in the past relative to `nowYM`.
+   */
+  function monthsAgo(verifiedYM: string, nowYM: string): number {
+    const [vy, vm] = verifiedYM.split('-').map(Number);
+    const [ny, nm] = nowYM.split('-').map(Number);
+    return (ny - vy) * 12 + (nm - vm);
+  }
+
+  it('every entry has a lastVerified date no more than 12 months old', () => {
+    // Use the current calendar year/month so the check stays accurate in CI.
+    const now = new Date();
+    const currentYM = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+
+    const stale = Object.entries(JURISDICTION_PROCEDURE_RULES)
+      .filter(([, rule]) => monthsAgo(rule.lastVerified, currentYM) > 12)
+      .map(([key, rule]) => `${key} (lastVerified: ${rule.lastVerified}, age: ${monthsAgo(rule.lastVerified, currentYM)} months)`);
+
+    expect(
+      stale,
+      `The following jurisdictions have procedure rules that are more than 12 months old and need re-verification:\n  ${stale.join('\n  ')}`,
+    ).toEqual([]);
+  });
+});
