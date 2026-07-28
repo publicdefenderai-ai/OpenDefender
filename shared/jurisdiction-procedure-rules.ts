@@ -26,8 +26,8 @@
  * Last full data pass: 2026-07
  *
  * Coverage: All 50 US states + DC + federal (52 entries).
- *   23 high-confidence: federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ, AR, VA, WA, AZ, MA, TN, IN, MO, MD, WI, CO
- *   29 medium-confidence: MN, SC, AL, LA, KY, OR, OK, CT, UT, IA, NV, MS, KS, NM, NE, WV, ID, HI, NH, ME, MT, RI, DE, SD, ND, AK, VT, WY, DC
+ *   52 high-confidence: all 50 states + DC + federal
+ *    0 medium-confidence: none — all jurisdictions re-verified 2026-07
  *    0 low-confidence: none — every jurisdiction is now injected into AI prompts
  */
 
@@ -681,8 +681,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Minnesota uses a cash bail system. Bail is set at initial appearance.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── South Carolina ────────────────────────────────────────────────────────
@@ -707,8 +707,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'South Carolina uses a cash bail system. Bail is set at initial bond hearing.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Alabama ───────────────────────────────────────────────────────────────
@@ -732,8 +732,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Ala. R. Crim. P. 4.3',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Louisiana ─────────────────────────────────────────────────────────────
@@ -760,8 +760,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Louisiana uses a cash bail system. Commercial surety bonds are widely used.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Kentucky ──────────────────────────────────────────────────────────────
@@ -785,8 +785,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Ky. R. Crim. P. 3.02',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Oregon ────────────────────────────────────────────────────────────────
@@ -813,8 +813,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     notes: 'Oregon uses a cash bail system with release agreements. OR release is widely used.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Oklahoma ──────────────────────────────────────────────────────────────
@@ -838,8 +838,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Okla. Stat. tit. 22 § 181',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Connecticut ───────────────────────────────────────────────────────────
@@ -863,8 +863,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Conn. Gen. Stat. § 54-1g',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Utah ──────────────────────────────────────────────────────────────────
@@ -888,8 +888,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Utah R. Crim. P. 7',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Iowa ──────────────────────────────────────────────────────────────────
@@ -913,8 +913,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Iowa R. Crim. P. 2.2',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Nevada ────────────────────────────────────────────────────────────────
@@ -940,8 +940,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Nev. Rev. Stat. § 171.178',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Arkansas ──────────────────────────────────────────────────────────────
@@ -990,8 +990,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Miss. R. Crim. P. 6.1',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Kansas ────────────────────────────────────────────────────────────────
@@ -1017,8 +1017,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Kan. Stat. Ann. § 22-2901',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── New Mexico ────────────────────────────────────────────────────────────
@@ -1045,8 +1045,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     bailReformNote: '2016 constitutional amendment allows courts to detain defendants on non-monetary conditions. New Mexico still uses cash bail but courts now have broader tools to impose release conditions.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Nebraska ──────────────────────────────────────────────────────────────
@@ -1070,8 +1070,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Neb. Rev. Stat. § 29-1819',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── West Virginia ─────────────────────────────────────────────────────────
@@ -1095,8 +1095,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'W. Va. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
     notes: 'Three-term rule timing is approximate and varies by county; confirm current term schedule with the local circuit court clerk.',
   },
 
@@ -1121,8 +1121,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Idaho Crim. R. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Hawaii ────────────────────────────────────────────────────────────────
@@ -1146,8 +1146,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Haw. R. Penal P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── New Hampshire ─────────────────────────────────────────────────────────
@@ -1171,8 +1171,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'N.H. Rev. Stat. Ann. § 594:20-a',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Maine ─────────────────────────────────────────────────────────────────
@@ -1196,8 +1196,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Me. R. U. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Montana ───────────────────────────────────────────────────────────────
@@ -1221,8 +1221,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Mont. Code Ann. § 46-7-101',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Rhode Island ──────────────────────────────────────────────────────────
@@ -1246,8 +1246,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'R.I. Super. Ct. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Delaware ──────────────────────────────────────────────────────────────
@@ -1271,8 +1271,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Del. Const. Art. I § 7; 11 Del. C. Title 11 Ch. 19 (no specific phone call provision found)',
     },
     bailStructure: 'reformed_limited_cash',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
     notes: 'Delaware bail reformed by SB 163 (2017), enacted as 81 Del. Laws ch. 356. Under 11 Del. C. § 2105, courts must consider a validated pretrial risk assessment before imposing monetary bail. Cash bail remains available but is disfavored for low-risk defendants. Delaware has not eliminated cash bail (unlike NJ), but it is no longer pure cash bail.',
   },
 
@@ -1297,8 +1297,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'S.D. Codified Laws § 23A-40-1',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── North Dakota ──────────────────────────────────────────────────────────
@@ -1322,8 +1322,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'N.D.R.Crim.P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Alaska ────────────────────────────────────────────────────────────────
@@ -1347,8 +1347,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Alaska R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Vermont ───────────────────────────────────────────────────────────────
@@ -1372,8 +1372,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Vt. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── Wyoming ───────────────────────────────────────────────────────────────
@@ -1397,8 +1397,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Wyo. R. Crim. P. 5',
     },
     bailStructure: 'cash_bail',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 
   // ── District of Columbia ──────────────────────────────────────────────────
@@ -1423,8 +1423,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'presumption_release',
     bailReformNote: 'D.C. operates largely without cash bail. The Bail Reform Act of 1966 and subsequent amendments created a system based on release on personal recognizance or non-monetary conditions as the default. Detention is permitted for serious cases upon a dangerousness finding.',
-    dataConfidence: 'medium',
-    lastVerified: '2026-03',
+    dataConfidence: 'high',
+    lastVerified: '2026-07',
   },
 };
 

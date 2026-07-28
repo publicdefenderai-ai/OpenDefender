@@ -74,11 +74,11 @@ describe('JURISDICTION_PROCEDURE_RULES — dataConfidence never "low"', () => {
     expect(hasHigh).toBe(true);
   });
 
-  it('at least one entry has dataConfidence "medium" (sanity check)', () => {
-    const hasMedium = Object.values(JURISDICTION_PROCEDURE_RULES).some(
-      (rule) => rule.dataConfidence === 'medium',
-    );
-    expect(hasMedium).toBe(true);
+  it('all entries have dataConfidence "high" — full verification completed 2026-07', () => {
+    const notHigh = Object.entries(JURISDICTION_PROCEDURE_RULES)
+      .filter(([, rule]) => rule.dataConfidence !== 'high')
+      .map(([key]) => key);
+    expect(notHigh).toEqual([]);
   });
 });
 

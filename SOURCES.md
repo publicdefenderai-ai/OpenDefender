@@ -530,8 +530,8 @@ The validator runs only on AI-generated Case Guidance output, not on static edit
 
 | Tier | States | How used |
 |------|--------|----------|
-| `high` | Federal, CA, NY, TX, FL, IL, PA, OH, GA, NC, MI, NJ, AR, VA, WA, AZ, MA, TN, IN, MO, MD, WI, CO | Injected into AI prompts as authoritative cited fact |
-| `medium` | MN, SC, AL, LA, KY, OR, OK, CT, UT, IA, NV, MS, KS, NM, NE, WV, ID, HI, NH, ME, MT, RI, DE, SD, ND, AK, VT, WY, DC | Injected with qualifying language ("generally") |
+| `high` | All 52 jurisdictions: Federal + all 50 states + DC (re-verified 2026-07) | Injected into AI prompts as authoritative cited fact |
+| `medium` | *(none — all jurisdictions promoted to high as of 2026-07)* | — |
 | `low` | *(none — all jurisdictions now injected)* | — |
 
 **Source methodology:** Each entry cites a specific statute, court rule, or case citation. High-confidence entries are based on well-established, widely-cited rules. Medium-confidence entries reflect best available knowledge from general legal references. Low-confidence entries require verification against current state statutes before being promoted.
