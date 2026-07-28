@@ -953,13 +953,32 @@ function buildNextSteps(caseData: CaseData, stageData: any): string[] {
   return steps;
 }
 
+// Jurisdictions with specific deadline data in jurisdictionRules.
+// Used by both buildDeadlines (rule-based path) and stampEstimateDeadlines (Claude path).
+export const KNOWN_JURISDICTIONS = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'FEDERAL'];
+
+/**
+ * Stamps isEstimate: true on every deadline for jurisdictions that are not in the
+ * specifically-mapped set.  Call this after any AI-generated guidance so that
+ * unmapped states (e.g. MT, WY, ND) always surface the estimate notice in the
+ * dashboard and PDF export, regardless of whether rule-based or Claude generated
+ * the deadlines.
+ */
+export function stampEstimateDeadlines(
+  jurisdiction: string,
+  deadlines: GuidanceDeadline[]
+): GuidanceDeadline[] {
+  const isEstimate = !KNOWN_JURISDICTIONS.includes((jurisdiction ?? '').toUpperCase());
+  if (!isEstimate) return deadlines;
+  return deadlines.map(d => ({ ...d, isEstimate: true }));
+}
+
 function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: any): GuidanceDeadline[] {
   const deadlines: GuidanceDeadline[] = [];
 
   // Determine if this jurisdiction is one of the specifically mapped ones or a federal fallback
-  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'FEDERAL'];
   const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
-  const isEstimate = !knownJurisdictions.includes(jurisdiction);
+  const isEstimate = !KNOWN_JURISDICTIONS.includes(jurisdiction);
 
   if (caseData.caseStage === 'arrest') {
     deadlines.push({

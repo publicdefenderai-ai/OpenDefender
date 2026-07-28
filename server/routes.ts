@@ -10,7 +10,7 @@ import { recapService } from "./services/recap";
 import { bjsStatisticsService } from "./services/bjs-statistics";
 import { insertLegalCaseSchema, insertCaseFeedbackSchema, insertGuidanceFlagSchema } from "@shared/schema";
 import { randomUUID, timingSafeEqual } from "crypto";
-import { generateEnhancedGuidance } from "./services/guidance-engine.js";
+import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
 import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl } from "../shared/criminal-charges.js";
@@ -1317,6 +1317,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
             (text) => sendEvent({ type: 'chunk', text }),
             sessionId
           );
+          // Stamp isEstimate on deadlines for unmapped jurisdictions — Claude doesn't
+          // set this flag itself, so we apply it here before the guidance is stored or sent.
+          if (Array.isArray(guidance.deadlines)) {
+            guidance = { ...guidance, deadlines: stampEstimateDeadlines(caseDataWithFlags.jurisdiction, guidance.deadlines) };
+          }
           guidance = { ...guidance, chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined, generatedBy: 'claude-ai' };
           opsLog('ai', `Stream tokens: ${guidance.usageMetrics?.inputTokens}+${guidance.usageMetrics?.outputTokens}, Cost: $${guidance.usageMetrics?.estimatedCost?.toFixed(4)}`);
         } catch (aiError) {
@@ -3021,8 +3026,14 @@ async function generateLegalGuidance(caseData: any) {
       // Log usage metrics (safe aggregates only)
       opsLog('ai', `Tokens: ${claudeGuidance.usageMetrics.inputTokens}+${claudeGuidance.usageMetrics.outputTokens}, Cost: $${claudeGuidance.usageMetrics.estimatedCost.toFixed(4)}`);
       
+      // Stamp isEstimate on deadlines for unmapped jurisdictions — Claude doesn't
+      // set this flag itself, so we apply it here before the guidance is returned.
+      const stampedDeadlines = Array.isArray(claudeGuidance.deadlines)
+        ? stampEstimateDeadlines(caseData.jurisdiction, claudeGuidance.deadlines)
+        : claudeGuidance.deadlines;
       return {
         ...claudeGuidance,
+        deadlines: stampedDeadlines,
         chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined,
         generatedBy: 'claude-ai'
       };
