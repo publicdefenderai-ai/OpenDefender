@@ -251,7 +251,14 @@ const jurisdictionRules: Record<string, JurisdictionRule> = {
     speedyTrialRight: '150 days from arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '10 days after arraignment'
+    discoveryDeadline: '10 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'Ariz. R. Crim. P. 4.1',
+      preliminaryHearing: 'Ariz. R. Crim. P. 5.1',
+      speedyTrialRight: 'Ariz. R. Crim. P. 8.2',
+      discoveryDeadline: 'Ariz. R. Crim. P. 15.1',
+    },
   },
   'NJ': {
     arraignmentDeadline: 'Within 48 hours',
@@ -259,7 +266,14 @@ const jurisdictionRules: Record<string, JurisdictionRule> = {
     speedyTrialRight: '180 days from indictment',
     publicDefenderIncome: 'Individual: $25,000, Family of 2: $34,000',
     bailSystem: 'Pretrial services assessment — bail reform',
-    discoveryDeadline: '20 days after arraignment'
+    discoveryDeadline: '20 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'N.J. Ct. R. 3:4-2',
+      preliminaryHearing: 'N.J. Ct. R. 3:10-1',
+      speedyTrialRight: 'N.J. Ct. R. 3:25-4 (Criminal Justice Reform Act)',
+      discoveryDeadline: 'N.J. Ct. R. 3:13-3',
+    },
   },
   'MI': {
     arraignmentDeadline: 'Within 48 hours',
@@ -267,7 +281,14 @@ const jurisdictionRules: Record<string, JurisdictionRule> = {
     speedyTrialRight: '180 days from arrest',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '21 days after arraignment'
+    discoveryDeadline: '21 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'Mich. Ct. R. 6.104',
+      preliminaryHearing: 'Mich. Ct. R. 6.110',
+      speedyTrialRight: 'MCL § 768.1 (constitutional speedy trial standard)',
+      discoveryDeadline: 'Mich. Ct. R. 6.201',
+    },
   },
   'NC': {
     arraignmentDeadline: 'Within 48 hours',
@@ -275,7 +296,14 @@ const jurisdictionRules: Record<string, JurisdictionRule> = {
     speedyTrialRight: '120 days if in custody',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '15 days after arraignment'
+    discoveryDeadline: '15 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'N.C. Gen. Stat. § 15A-511',
+      preliminaryHearing: 'N.C. Gen. Stat. § 15A-611',
+      speedyTrialRight: 'N.C. Gen. Stat. § 15A-701',
+      discoveryDeadline: 'N.C. Gen. Stat. § 15A-903',
+    },
   },
   'VA': {
     arraignmentDeadline: 'Within 48 hours',
@@ -283,7 +311,14 @@ const jurisdictionRules: Record<string, JurisdictionRule> = {
     speedyTrialRight: '5 months from arrest for misdemeanors',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '21 days after arraignment'
+    discoveryDeadline: '21 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'Va. Code Ann. § 19.2-158',
+      preliminaryHearing: 'Va. Code Ann. § 19.2-183',
+      speedyTrialRight: 'Va. Code Ann. § 19.2-243',
+      discoveryDeadline: 'Va. Sup. Ct. R. 3A:11',
+    },
   },
   'federal': {
     arraignmentDeadline: 'Without unnecessary delay',
@@ -1201,9 +1236,16 @@ function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionD
   // Part 1: Current situation
   let situation = '';
   if (caseStage === 'arrest') {
-    situation = custodyStatus === 'detained' 
-      ? 'You have been arrested and are currently in custody.' 
-      : 'You have been arrested and released.';
+    if (custodyStatus === 'detained') {
+      situation = 'You have been arrested and are currently in custody.';
+    } else if (custodyStatus === 'released' || custodyStatus === 'ownRecognizance') {
+      situation = 'You have been arrested and released.';
+    } else if (custodyStatus === 'notArrested') {
+      situation = 'You have not been arrested; charges or a summons may have been issued.';
+    } else {
+      // 'unsure' or blank — do not assert release status
+      situation = 'You have been arrested.';
+    }
   } else if (caseStage === 'arraignment') {
     situation = 'You are at the arraignment stage where charges will be formally read and you will enter a plea.';
   } else if (caseStage === 'pre-trial') {
@@ -1482,7 +1524,7 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackC
   }
 
   // Custody status — in custody increases urgency of many deadlines
-  if (caseData.custodyStatus === 'unknown' || !caseData.custodyStatus) {
+  if (caseData.custodyStatus === 'unknown' || caseData.custodyStatus === 'unsure' || !caseData.custodyStatus) {
     items.push({
       area: 'Custody Status',
       note: 'Your custody status was not specified. Deadlines and procedural timelines are generally shorter when a defendant is in custody. If you are currently detained, confirm all deadlines with your attorney or the court.',

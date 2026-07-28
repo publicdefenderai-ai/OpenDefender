@@ -996,7 +996,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
         </Button>
         <Button
           onClick={onNext}
-          disabled={!formData.caseStage}
+          disabled={!formData.caseStage || !formData.custodyStatus}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-continue-status"
         >
