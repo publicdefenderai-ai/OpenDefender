@@ -12,6 +12,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { buildPlainText } from "@/lib/build-plain-text";
+import { DRIVERS_LICENSE_RULES } from "@/lib/collateral-consequences-data";
+import { useJurisdiction } from "@/hooks/use-jurisdiction";
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -113,6 +115,23 @@ const QUESTION_ORDER: QuestionId[] = [
   "housing", "employment", "immigration", "benefits", "children", "supervision", "license",
 ];
 
+/** Maps the lowercase full-state-name stored by useJurisdiction → 2-letter abbr used by DRIVERS_LICENSE_RULES. */
+const STATE_NAME_TO_ABBR: Record<string, string> = {
+  "alabama": "AL", "alaska": "AK", "arizona": "AZ", "arkansas": "AR",
+  "california": "CA", "colorado": "CO", "connecticut": "CT", "delaware": "DE",
+  "florida": "FL", "georgia": "GA", "hawaii": "HI", "idaho": "ID",
+  "illinois": "IL", "indiana": "IN", "iowa": "IA", "kansas": "KS",
+  "kentucky": "KY", "louisiana": "LA", "maine": "ME", "maryland": "MD",
+  "massachusetts": "MA", "michigan": "MI", "minnesota": "MN", "mississippi": "MS",
+  "missouri": "MO", "montana": "MT", "nebraska": "NE", "nevada": "NV",
+  "new hampshire": "NH", "new jersey": "NJ", "new mexico": "NM", "new york": "NY",
+  "north carolina": "NC", "north dakota": "ND", "ohio": "OH", "oklahoma": "OK",
+  "oregon": "OR", "pennsylvania": "PA", "rhode island": "RI", "south carolina": "SC",
+  "south dakota": "SD", "tennessee": "TN", "texas": "TX", "utah": "UT",
+  "vermont": "VT", "virginia": "VA", "washington": "WA", "west virginia": "WV",
+  "wisconsin": "WI", "wyoming": "WY", "district of columbia": "DC",
+};
+
 /* ------------------------------------------------------------------ */
 /* Charge-type pre-step types and constants                            */
 /* ------------------------------------------------------------------ */
@@ -129,7 +148,7 @@ type ChargeType =
 /** Risk cards that are surfaced purely from the charge type selection,
  *  not from yes/no question answers. Same shape as RiskMeta. */
 interface ChargeRiskMeta {
-  id: "driverLicense" | "sexOffender";
+  id: "driverLicense" | "driverLicenseCheck" | "sexOffender";
   urgency: number;
   Icon: React.ElementType;
   color: string;
@@ -151,6 +170,13 @@ const CHARGE_TYPE_RISKS: ChargeRiskMeta[] = [
     color: "text-amber-700 dark:text-amber-400",
     bg: "bg-amber-50 dark:bg-amber-950/30",
     border: "border-amber-200 dark:border-amber-800",
+    linkHref: "/support/transportation",
+  },
+  {
+    id: "driverLicenseCheck", urgency: 1.5, Icon: Car,
+    color: "text-slate-700 dark:text-slate-400",
+    bg: "bg-slate-50 dark:bg-slate-950/30",
+    border: "border-slate-200 dark:border-slate-800",
     linkHref: "/support/transportation",
   },
 ];
@@ -181,6 +207,8 @@ export default function CollateralConsequences() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
 
+  const { jurisdiction } = useJurisdiction();
+
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<QuestionId, Answer>>({
     housing: null, employment: null, immigration: null,
@@ -197,7 +225,28 @@ export default function CollateralConsequences() {
 
   const chargeRisks: ChargeRiskMeta[] = CHARGE_TYPE_RISKS.filter(r => {
     if (!chargeTypeSelected) return false;
-    if (r.id === "driverLicense") return chargeType === "dui" || chargeType === "drug_possession" || chargeType === "drug_trafficking";
+
+    if (r.id === "driverLicense") {
+      if (chargeType === "dui") return true;
+      if (chargeType === "drug_possession" || chargeType === "drug_trafficking") {
+        // Only show the full warning when the user's state has an explicit drug-conviction suspension law.
+        // jurisdiction is stored as a lowercase full name (e.g. "california") by useJurisdiction.
+        const abbr = jurisdiction ? STATE_NAME_TO_ABBR[jurisdiction.toLowerCase()] : undefined;
+        if (!abbr) return false; // no/unknown jurisdiction → show soft check card instead
+        return DRIVERS_LICENSE_RULES[abbr]?.drugConvictionSuspension === true;
+      }
+      return false;
+    }
+
+    if (r.id === "driverLicenseCheck") {
+      // Soft "check your state" variant — only for drug charges with no recognisable jurisdiction entered
+      if (chargeType === "drug_possession" || chargeType === "drug_trafficking") {
+        const abbr = jurisdiction ? STATE_NAME_TO_ABBR[jurisdiction.toLowerCase()] : undefined;
+        return !abbr; // show only when state is unknown or not in map
+      }
+      return false;
+    }
+
     if (r.id === "sexOffender") return chargeType === "sex_offense";
     return false;
   });

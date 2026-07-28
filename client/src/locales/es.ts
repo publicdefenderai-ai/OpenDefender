@@ -5897,6 +5897,13 @@ export default {
         "action": "Pida a su abogado que presente una solicitud de audiencia ante el DMV de inmediato — no espere la fecha de su tribunal. También pregunte sobre opciones de licencia restringida o de emergencia y si un dispositivo de bloqueo de encendido puede permitirle conducir durante el período de suspensión.",
         "linkLabel": "Ayuda con transporte y licencia"
       },
+      "driverLicenseCheck": {
+        "title": "Licencia de Conducir — Verifique Su Estado",
+        "what": "Algunos estados (incluyendo CA, FL, IL, MA y TX) suspenden automáticamente la licencia de conducir por una condena por drogas, incluso cuando no hubo vehículo involucrado. Otros estados no lo hacen. Si esto aplica depende del estado donde fue condenado.",
+        "clock": "Si su estado exige la suspensión, generalmente entra en vigencia en la sentencia o poco después de la condena. Actuar antes de que se dicte una condena le da más opciones.",
+        "action": "Pregúntele específicamente a su abogado si su estado suspende las licencias de conducir por este tipo de condena por drogas y si hay disponible una licencia restringida o de emergencia. No asuma que su licencia está segura — ni que está en riesgo — sin confirmar la ley de su estado.",
+        "linkLabel": "Ayuda con transporte y licencia"
+      },
       "sexOffender": {
         "title": "Riesgo de Registro como Delincuente Sexual",
         "what": "Una condena por un delito sexual activa el registro obligatorio bajo la ley del registro de delincuentes sexuales de su estado y bajo la Ley Federal de Registro y Notificación de Delincuentes Sexuales (SORNA, 34 U.S.C. § 20901). El registro dura entre 10 y 15 años para delitos de nivel inferior y de por vida para delitos graves o reincidentes en la mayoría de los estados. Requiere presentaciones periódicas en persona, verificación de domicilio y listado público en línea. Muchos estados agregan restricciones de residencia — típicamente de 500 a 2,000 pies de escuelas, parques y guarderías — que limitan severamente dónde puede vivir.",

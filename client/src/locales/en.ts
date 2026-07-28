@@ -5894,6 +5894,13 @@ export default {
         "action": "Ask your attorney to file a DMV hearing request on your behalf immediately — do not wait for your court date. Also ask about hardship or restricted license options and whether an ignition interlock device can allow you to drive during the suspension period.",
         "linkLabel": "Transportation and license help"
       },
+      "driverLicenseCheck": {
+        "title": "Driver's License — Check Your State",
+        "what": "Some states (including CA, FL, IL, MA, and TX) automatically suspend your driver's license for a drug conviction even when no vehicle was involved. Other states do not. Whether this applies to you depends on the state where you were convicted.",
+        "clock": "If your state does require suspension, it typically takes effect at sentencing or shortly after conviction. Acting before a conviction is entered gives you the most options.",
+        "action": "Ask your attorney specifically whether your state suspends driver's licenses for this type of drug conviction and whether any hardship or restricted license is available. Do not assume your license is safe — and do not assume it is at risk — without confirming your state's rule.",
+        "linkLabel": "Transportation and license help"
+      },
       "sexOffender": {
         "title": "Sex Offender Registration Risk",
         "what": "A conviction for a sex offense triggers mandatory registration under your state's sex offender registry law and under the federal Sex Offender Registration and Notification Act (SORNA, 34 U.S.C. § 20901). Registration lasts 10–15 years for lower-tier offenses and lifetime for serious or repeat offenses in most states. It requires regular in-person check-ins, address verification, and public online listing. Many states add residency restrictions — typically 500–2,000 feet from schools, parks, and day care centers — that severely limit where you can live.",
