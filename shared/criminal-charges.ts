@@ -48774,7 +48774,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '46.4502',
+    code: '46.4203',
     jurisdiction: 'AS',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under American Samoa law',
@@ -48787,7 +48787,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '46.4502',
+    code: '46.4207',
     jurisdiction: 'AS',
     category: 'felony',
     description: 'Firearm possession by prohibited person under American Samoa law',
@@ -48800,7 +48800,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '46.4502',
+    code: '46.4203',
     jurisdiction: 'AS',
     category: 'felony',
     description: 'Unlawful discharge of firearm under American Samoa law',
@@ -48813,7 +48813,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '46.4502',
+    code: '46.4202',
     jurisdiction: 'AS',
     category: 'felony',
     description: 'Possession of illegal weapon under American Samoa law',
@@ -48891,7 +48891,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'as-forgery',
     name: 'Forgery',
-    code: '46.4201',
+    code: '46.4115',
     jurisdiction: 'AS',
     category: 'felony',
     description: 'Creating false documents under American Samoa law',
@@ -49684,7 +49684,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-unlawful-carrying-of-weapon',
     name: 'Unlawful Carrying of Weapon',
-    code: '9 GCA § 60.10',
+    code: '10 GCA § 60109',
     jurisdiction: 'GU',
     category: 'misdemeanor',
     description: 'Carrying weapon without permit under Guam law',
@@ -49697,7 +49697,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-felon-in-possession-of-firearm',
     name: 'Felon in Possession of Firearm',
-    code: '9 GCA § 60.10',
+    code: '10 GCA § 60102',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Firearm possession by prohibited person under Guam law',
@@ -49710,7 +49710,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-discharge-of-firearm-in-city',
     name: 'Discharge of Firearm in City',
-    code: '9 GCA § 60.10',
+    code: '10 GCA § 60121',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Unlawful discharge of firearm under Guam law',
@@ -49723,7 +49723,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '9 GCA § 60.10',
+    code: '10 GCA § 60102',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Possession of illegal weapon under Guam law',
@@ -51829,7 +51829,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-voluntary-manslaughter',
     name: 'Voluntary Manslaughter',
-    code: '14 V.I.C. § 923',
+    code: '14 V.I.C. § 924',
     jurisdiction: 'VI',
     category: 'felony',
     description: 'Killing in heat of passion under U.S. Virgin Islands law',
@@ -52544,7 +52544,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'vi-computer-fraud',
     name: 'Computer Fraud',
-    code: '14 V.I.C. § 2163',
+    code: '14 V.I.C. § 461',
     jurisdiction: 'VI',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under U.S. Virgin Islands law',
