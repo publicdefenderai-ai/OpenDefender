@@ -176,16 +176,17 @@ describe('buildCollateralConsequences', () => {
 // buildUncertainties
 // ---------------------------------------------------------------------------
 describe('buildUncertainties', () => {
-  it('adds a jurisdiction deadline notice for an unmapped state', () => {
+  it('adds a jurisdiction deadline notice for an unmapped jurisdiction (PR territory)', () => {
+    // PR (Puerto Rico) is a territory not in jurisdictionRules — still unmapped after 2026-07 audit
     const result = generateEnhancedGuidance({
       ...baseCase,
-      jurisdiction: 'WY',
+      jurisdiction: 'PR',
     });
     const item = result.uncertainties?.find(
       u => u.area === 'Jurisdiction-Specific Deadlines',
     );
     expect(item).toBeDefined();
-    expect(item?.note).toMatch(/WY/);
+    expect(item?.note).toMatch(/PR/);
   });
 
   it('does NOT add a jurisdiction deadline notice for a mapped state (CA)', () => {
@@ -247,8 +248,9 @@ describe('buildUncertainties', () => {
 // ---------------------------------------------------------------------------
 describe('generateEnhancedGuidance integration', () => {
   it('returns non-empty collateralConsequences and uncertainties when all background fields are set', () => {
+    // PR (Puerto Rico) is a territory not in jurisdictionRules — still unmapped after 2026-07 audit
     const result = generateEnhancedGuidance({
-      jurisdiction: 'WY',
+      jurisdiction: 'PR',
       charges: 'dui',
       caseStage: 'arraignment',
       custodyStatus: 'released',

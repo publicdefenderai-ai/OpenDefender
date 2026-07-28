@@ -233,32 +233,36 @@ const p1DeadlineScenarios: EvalScenario[] = [
 
 const p1UnmappedScenarios: EvalScenario[] = [
   {
-    label: 'P1-11: CO (unmapped) × arrest — uncertainty notice fires',
+    // CO was added to jurisdictionRules in the 2026-07 audit batch 2 — now mapped
+    label: 'P1-11: CO (mapped, 2026-07) × arrest — no isEstimate on deadlines',
     input: { ...baseMapped, jurisdiction: 'CO', charges: 'drug possession' },
     expect: {
-      requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
-      someDeadlineIsEstimate: true,
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
   {
-    label: 'P1-12: OR (unmapped) × arrest — uncertainty notice fires',
+    // OR was added to jurisdictionRules in the 2026-07 audit batch 2 — now mapped
+    label: 'P1-12: OR (mapped, 2026-07) × arrest — no isEstimate on deadlines',
     input: { ...baseMapped, jurisdiction: 'OR', charges: 'assault' },
     expect: {
-      requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
-      someDeadlineIsEstimate: true,
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
   {
-    label: 'P1-13: NV (unmapped) × arrest — uncertainty notice fires',
+    // NV was added to jurisdictionRules in the 2026-07 audit batch 2 — now mapped
+    label: 'P1-13: NV (mapped, 2026-07) × arrest — no isEstimate on deadlines',
     input: { ...baseMapped, jurisdiction: 'NV', charges: 'theft' },
     expect: {
-      requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
-      someDeadlineIsEstimate: true,
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
   {
-    label: 'P1-14: Unmapped state uncertainty note mentions jurisdiction abbreviation',
-    input: { ...baseMapped, jurisdiction: 'MT', charges: 'theft' },
+    // PR (Puerto Rico) is a territory not yet in jurisdictionRules — still unmapped
+    label: 'P1-14: Unmapped territory (PR) — uncertainty notice fires',
+    input: { ...baseMapped, jurisdiction: 'PR', charges: 'theft' },
     expect: {
       requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
       someDeadlineIsEstimate: true,
