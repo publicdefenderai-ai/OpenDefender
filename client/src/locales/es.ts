@@ -68,8 +68,8 @@ export default {
   "home": {
     "hero": {
       "headlinePart1": "¿Arrestado? ¿Enfrentando cargos?",
-      "headlinePart2": "Comience aquí.",
-      "headlinePart3": "¿Ayudando a alguien que lo fue?",
+      "headlinePart2": "¿Ayudando a alguien que lo fue?",
+      "headlinePart3": "Comience aquí.",
       "subtitle": "Orientación legal gratuita en lenguaje claro para acusados, familias y sus defensores, en los 50 estados, en inglés, español y chino.",
       "primaryCta": "Obtener Ayuda Inmediata",
       "secondaryCta": "Ver Todos los Recursos"
@@ -126,7 +126,7 @@ export default {
     "doors": {
       "sectionLabel": "¿Dónde quiere comenzar?",
       "door1": {
-        "badge": "Recién Arrestado, o Ayudando a Alguien que lo Fue",
+        "badge": "Alguien Acaba de Ser Arrestado",
         "headline": "Las primeras horas importan más",
         "desc": "Orientación paso a paso desde el momento del arresto hasta la fianza, la primera llamada telefónica y lo que puede esperar en la audiencia.",
         "cta": "Comenzar Aquí",

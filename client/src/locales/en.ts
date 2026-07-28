@@ -66,8 +66,8 @@ export default {
   "home": {
     "hero": {
       "headlinePart1": "Arrested? Facing Charges?",
-      "headlinePart2": "Start here.",
-      "headlinePart3": "Helping someone who was?",
+      "headlinePart2": "Helping someone who was?",
+      "headlinePart3": "Start here.",
       "subtitle": "Free, plain-language legal guidance for defendants, families, and their advocates, covering all 50 states in English, Spanish, and Chinese.",
       "primaryCta": "Get Immediate Help",
       "secondaryCta": "Browse All Resources"
@@ -124,7 +124,7 @@ export default {
     "doors": {
       "sectionLabel": "Where do you want to start?",
       "door1": {
-        "badge": "Just Arrested, or Helping Someone Who Was",
+        "badge": "Someone Was Just Arrested",
         "headline": "Your first hours matter most",
         "desc": "Step-by-step guidance from the moment of arrest through bail, your first phone call, and what to expect at arraignment.",
         "cta": "Start Here",

@@ -68,8 +68,8 @@ export default {
   "home": {
     "hero": {
       "headlinePart1": "被捕了？面临指控？",
-      "headlinePart2": "从这里开始。",
-      "headlinePart3": "在帮助被逮捕的人吗？",
+      "headlinePart2": "在帮助被逮捕的人吗？",
+      "headlinePart3": "从这里开始。",
       "subtitle": "为被告、家属及其倡导者提供免费、简明的法律指导，覆盖全部50个州，提供英语、西班牙语和中文服务。",
       "primaryCta": "立即获取帮助",
       "secondaryCta": "浏览所有资源"
@@ -126,7 +126,7 @@ export default {
     "doors": {
       "sectionLabel": "您想从哪里开始？",
       "door1": {
-        "badge": "刚被逮捕，或帮助被逮捕的人",
+        "badge": "有人刚刚被捕",
         "headline": "最初几小时至关重要",
         "desc": "从逮捕到保释、第一次电话以及预审的逐步指导。",
         "cta": "从这里开始",
