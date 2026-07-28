@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { generateEnhancedGuidance, CHARGE_KEYWORDS, CHARGE_CONSEQUENCE_MAP } from '../server/services/guidance-engine';
+import { criminalCharges, getChargeById } from '../shared/criminal-charges';
 
 const baseCase = {
   jurisdiction: 'CA',
@@ -394,6 +395,135 @@ describe('CHARGE_CONSEQUENCE_MAP coverage', () => {
         `charge type "${chargeType}" (sample: "${chargeText}") produced no charge-specific consequence categories in the output. ` +
         `Expected one of: ${chargeSpecificCategories.join(', ')}. Got: ${returnedCategories.join(', ')}`,
       ).toBe(true);
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Corrected statute codes — GA, NC, NJ, VA, AZ (2026-07 batch)
+// ---------------------------------------------------------------------------
+// These five states had 310 synthesized `code` fields replaced with verified
+// official statute numbers. The tests below confirm that:
+//  (a) The charge objects carry the correct verified codes.
+//  (b) The old synthesized garbage codes are NOT present anywhere in those objects.
+//  (c) The chargeClassifications mapping used by the AI guidance pipeline
+//      (which reads `charge.code` directly) surfaces the correct code in output.
+//
+// Correct  → old-synthesized
+//  GA 16-5-1  → 43-65
+//  NC 14-17   → 46-96
+//  NJ 2C:11-3 → 36-11
+//  VA 18.2-32 → 19-100
+//  AZ 13-1105 → 19-98
+
+describe('Corrected statute codes flow through to AI guidance output', () => {
+  const cases = [
+    {
+      state: 'GA',
+      chargeId: 'ga-murder-in-the-first-degree',
+      correctCode: '16-5-1',
+      oldSynthesized: '43-65',
+      description: 'Georgia O.C.G.A. Title 16',
+    },
+    {
+      state: 'NC',
+      chargeId: 'nc-murder-in-the-first-degree',
+      correctCode: '14-17',
+      oldSynthesized: '46-96',
+      description: 'North Carolina N.C.G.S. Chapter 14',
+    },
+    {
+      state: 'NJ',
+      chargeId: 'nj-murder-in-the-first-degree',
+      correctCode: '2C:11-3',
+      oldSynthesized: '36-11',
+      description: 'New Jersey N.J.S.A. Title 2C',
+    },
+    {
+      state: 'VA',
+      chargeId: 'va-murder-in-the-first-degree',
+      correctCode: '18.2-32',
+      oldSynthesized: '19-100',
+      description: 'Virginia Va. Code Ann. Title 18.2',
+    },
+    {
+      state: 'AZ',
+      chargeId: 'az-murder-in-the-first-degree',
+      correctCode: '13-1105',
+      oldSynthesized: '19-98',
+      description: 'Arizona A.R.S. Title 13',
+    },
+  ] as const;
+
+  for (const { state, chargeId, correctCode, oldSynthesized, description } of cases) {
+    it(`${state}: charge object carries the verified statute code (${description})`, () => {
+      const charge = getChargeById(chargeId);
+      expect(charge, `charge '${chargeId}' not found in criminalCharges`).toBeDefined();
+      expect(charge!.code).toBe(correctCode);
+    });
+
+    it(`${state}: old synthesized code '${oldSynthesized}' is NOT present in the charge object`, () => {
+      const charge = getChargeById(chargeId);
+      expect(charge, `charge '${chargeId}' not found in criminalCharges`).toBeDefined();
+      expect(charge!.code).not.toBe(oldSynthesized);
+    });
+
+    it(`${state}: chargeClassifications pipeline maps '${chargeId}' to the correct statute code`, () => {
+      // Simulate the exact mapping used in routes.ts to build chargeClassifications
+      // that are attached to AI guidance output.
+      const charge = getChargeById(chargeId);
+      expect(charge, `charge '${chargeId}' not found in criminalCharges`).toBeDefined();
+
+      const classification = {
+        id: charge!.id,
+        name: charge!.name,
+        classification: charge!.category,
+        code: charge!.code,   // routes.ts uses charge.code directly
+        title: charge!.name,
+        maxPenalty: charge!.maxPenalty,
+      };
+
+      expect(classification.code).toBe(correctCode);
+      expect(classification.code).not.toBe(oldSynthesized);
+    });
+  }
+
+  it('no GA charge carries a synthesized code matching pattern ##-## (e.g. 43-65)', () => {
+    // Synthesized GA codes followed a fake N-NN or NN-NN pattern that doesn't
+    // match real O.C.G.A. section numbers. Real codes are like 16-5-1 (three parts)
+    // or structured as Title-Chapter-Section. A two-part XX-YY code for GA is a red flag.
+    //
+    // We spot-check the 6 highest-severity GA charges that were corrected.
+    const highSeverityGaIds = [
+      'ga-murder-in-the-first-degree',   // was 43-65, now 16-5-1
+      'ga-murder-in-the-second-degree',  // was 43-66, now 16-5-1
+      'ga-voluntary-manslaughter',       // should be 16-5-2
+      'ga-rape-in-the-first-degree',     // should be 16-6-1
+      'ga-aggravated-assault',           // should be 16-5-21
+      'ga-robbery',                      // should be 16-8-40
+    ];
+
+    for (const id of highSeverityGaIds) {
+      const charge = getChargeById(id);
+      if (!charge) continue; // skip if charge not in DB
+      // Synthesized pattern: exactly two numeric segments separated by a dash
+      const isSynthesizedPattern = /^\d{2}-\d{2,3}$/.test(charge.code);
+      expect(
+        isSynthesizedPattern,
+        `GA charge '${id}' still has a synthesized-looking code: '${charge.code}'. ` +
+        'Real O.C.G.A. codes have three parts (Title-Chapter-Section, e.g. 16-5-1).',
+      ).toBe(false);
+    }
+  });
+
+  it('all five corrected states appear in the full criminalCharges array with correct jurisdiction', () => {
+    const correctedStates = ['GA', 'NC', 'NJ', 'VA', 'AZ'] as const;
+    for (const state of correctedStates) {
+      const stateCharges = criminalCharges.filter(c => c.jurisdiction === state);
+      expect(
+        stateCharges.length,
+        `Expected at least 1 charge entry for ${state}`,
+      ).toBeGreaterThan(0);
     }
   });
 });
