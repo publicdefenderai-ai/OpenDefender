@@ -83,6 +83,13 @@ export interface ScenarioExpect {
   requiredUncertaintyAreas?: string[];
 
   /**
+   * Every area string must NOT appear in `result.uncertainties[].area` (exact match).
+   * Use this to confirm that mapped jurisdictions do not emit the
+   * "Jurisdiction-Specific Deadlines" uncertainty notice.
+   */
+  absentUncertaintyAreas?: string[];
+
+  /**
    * When true, `result.uncertainties` must be non-empty.
    */
   uncertaintyShouldFire?: boolean;
@@ -225,23 +232,7 @@ const p1DeadlineScenarios: EvalScenario[] = [
 
 const p1UnmappedScenarios: EvalScenario[] = [
   {
-    label: 'P1-11: GA (unmapped) × arrest — uncertainty notice fires',
-    input: { ...baseMapped, jurisdiction: 'GA', charges: 'theft' },
-    expect: {
-      requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
-      someDeadlineIsEstimate: true,
-    },
-  },
-  {
-    label: 'P1-12: OH (unmapped) × arrest — uncertainty notice fires',
-    input: { ...baseMapped, jurisdiction: 'OH', charges: 'assault' },
-    expect: {
-      requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
-      someDeadlineIsEstimate: true,
-    },
-  },
-  {
-    label: 'P1-13: CO (unmapped) × arrest — uncertainty notice fires',
+    label: 'P1-11: CO (unmapped) × arrest — uncertainty notice fires',
     input: { ...baseMapped, jurisdiction: 'CO', charges: 'drug possession' },
     expect: {
       requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -249,15 +240,7 @@ const p1UnmappedScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-14: WA (unmapped) × arrest — uncertainty notice fires',
-    input: { ...baseMapped, jurisdiction: 'WA', charges: 'domestic violence' },
-    expect: {
-      requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
-      someDeadlineIsEstimate: true,
-    },
-  },
-  {
-    label: 'P1-15: AZ (unmapped) × arrest — uncertainty notice fires',
+    label: 'P1-12: AZ (unmapped) × arrest — uncertainty notice fires',
     input: { ...baseMapped, jurisdiction: 'AZ', charges: 'assault' },
     expect: {
       requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -265,7 +248,7 @@ const p1UnmappedScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-16: NV (unmapped) × arrest — uncertainty notice fires',
+    label: 'P1-13: NV (unmapped) × arrest — uncertainty notice fires',
     input: { ...baseMapped, jurisdiction: 'NV', charges: 'theft' },
     expect: {
       requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -273,11 +256,177 @@ const p1UnmappedScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-17: Unmapped state uncertainty note mentions jurisdiction abbreviation',
+    label: 'P1-14: Unmapped state uncertainty note mentions jurisdiction abbreviation',
     input: { ...baseMapped, jurisdiction: 'MT', charges: 'theft' },
     expect: {
       requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
       someDeadlineIsEstimate: true,
+    },
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PRIORITY 1 — Deadline accuracy for IL, PA, WA, OH, GA (newly mapped)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const p1NewStateDeadlineScenarios: EvalScenario[] = [
+  // ── Illinois ──
+  {
+    label: 'P1-23: IL × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'IL', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-24: IL × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'IL', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-25: IL × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'IL', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['28 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Pennsylvania ──
+  {
+    label: 'P1-26: PA × arrest — arraignment deadline matches jurisdiction rule (72 hours)',
+    input: { ...baseMapped, jurisdiction: 'PA', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['72 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-27: PA × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'PA', charges: 'burglary', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['14 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-28: PA × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'PA', charges: 'fraud', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Washington ──
+  {
+    label: 'P1-29: WA × arrest — arraignment deadline matches jurisdiction rule (72 hours if in custody)',
+    input: { ...baseMapped, jurisdiction: 'WA', charges: 'assault' },
+    expect: {
+      deadlineTimeframeKeywords: ['72 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-30: WA × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'WA', charges: 'domestic violence', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['10 court days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-31: WA × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'WA', charges: 'theft', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Ohio ──
+  {
+    label: 'P1-32: OH × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'OH', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-33: OH × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'OH', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['10 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-34: OH × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'OH', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['21 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Georgia ──
+  {
+    label: 'P1-35: GA × arrest — arraignment deadline matches jurisdiction rule (72 hours)',
+    input: { ...baseMapped, jurisdiction: 'GA', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['72 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-36: GA × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'GA', charges: 'burglary', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-37: GA × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'GA', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['10 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
 ];
@@ -931,6 +1080,7 @@ const p3StageScenarios: EvalScenario[] = [
 export const evalScenarios: EvalScenario[] = [
   ...p1DeadlineScenarios,
   ...p1UnmappedScenarios,
+  ...p1NewStateDeadlineScenarios,
   ...p1DuiScenarios,
   ...p1FederalScenarios,
   ...p2FlagConsequenceScenarios,

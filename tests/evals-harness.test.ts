@@ -159,6 +159,19 @@ function runScenario(scenario: EvalScenario): void {
     }
   }
 
+  // ── Absent uncertainty areas ──────────────────────────────────────────────
+  if (ex.absentUncertaintyAreas) {
+    const actualAreas = uncertainties.map(u => u.area);
+    for (const area of ex.absentUncertaintyAreas) {
+      expect(
+        actualAreas,
+        `[${label}]\n` +
+        `  Expected uncertainties NOT to include area: "${area}"\n` +
+        `  Actual areas: ${JSON.stringify(actualAreas)}`,
+      ).not.toContain(area);
+    }
+  }
+
   // ── uncertaintyShouldFire ─────────────────────────────────────────────────
   if (ex.uncertaintyShouldFire === true) {
     expect(

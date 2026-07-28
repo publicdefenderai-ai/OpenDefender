@@ -1,6 +1,6 @@
 # Content Accuracy Evals — Coverage Report
 
-**Generated:** 2026-07-27  
+**Generated:** 2026-07-28  
 **Harness:** `tests/evals-harness.test.ts`  
 **Fixture file:** `tests/fixtures/evals-scenarios.ts`  
 **Test runner:** `npx vitest run`
@@ -11,10 +11,10 @@
 
 | Dimension | Count |
 |---|---|
-| Total scenarios | 62 |
-| Passing | 62 |
+| Total scenarios | 77 |
+| Passing | 77 |
 | Failing | 0 |
-| Priority 1 (Deadlines) | 22 |
+| Priority 1 (Deadlines) | 37 |
 | Priority 2 (Collateral consequences) | 26 |
 | Priority 3 (Alerts, coverage, uncertainties) | 35 |
 
@@ -32,16 +32,18 @@
 | TX | Mapped | 2 | Arraignment + discovery deadlines |
 | NY | Mapped | 2 | Arraignment + discovery deadlines |
 | FL | Mapped | 2 | Arraignment + preliminary hearing |
+| IL | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| PA | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| WA | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| OH | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| GA | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | federal | Mapped | 2 | "Without unnecessary delay" language |
-| GA | Unmapped | 1 | isEstimate + uncertainty notice |
-| OH | Unmapped | 1 | isEstimate + uncertainty notice |
 | CO | Unmapped | 1 | isEstimate + uncertainty notice |
-| WA | Unmapped | 1 | isEstimate + uncertainty notice |
 | AZ | Unmapped | 1 | isEstimate + uncertainty notice |
 | NV | Unmapped | 1 | isEstimate + uncertainty notice |
 | MT | Unmapped | 1 | isEstimate + uncertainty notice |
 
-**46 states not individually covered** — all unmapped states exercise the same code path; `GA`, `OH`, `CO`, `WA`, `AZ`, `NV`, and `MT` serve as representative samples.
+**41 states not individually covered** — all unmapped states exercise the same code path; `CO`, `AZ`, `NV`, and `MT` serve as representative samples.
 
 ### Charge types covered
 
@@ -63,7 +65,7 @@
 | Stage | Scenarios | Notes |
 |---|---|---|
 | `arrest` | ~30 | Deadline + alert + consequence scenarios |
-| `arraignment` | ~25 | Deadline + DUI + charge coverage |
+| `arraignment` | ~40 | Deadline + DUI + charge coverage |
 | `pretrial` | 1 | immediateActions non-empty |
 | `trial` | 1 | immediateActions non-empty |
 
@@ -81,11 +83,11 @@
 
 ## What each priority group tests
 
-### Priority 1 — Deadline accuracy (P1-01 through P1-22)
-- **Mapped jurisdictions (CA, TX, NY, FL):** Each arraignment deadline string matches the constant in `jurisdictionRules` exactly (substring match).  Weekend caveat in CA is specifically tested (`'72 hours'`).
+### Priority 1 — Deadline accuracy (P1-01 through P1-37)
+- **Mapped jurisdictions (CA, TX, NY, FL, IL, PA, WA, OH, GA):** Each arraignment deadline string matches the constant in `jurisdictionRules` exactly (substring match).  Weekend caveat in CA is specifically tested (`'72 hours'`).
 - **Mapped jurisdictions:** Discovery and preliminary hearing deadlines are present at arraignment stage.
 - **Mapped jurisdictions:** No deadline has `isEstimate: true` — the engine should treat mapped rules as authoritative.
-- **Unmapped states (GA, OH, CO, WA, AZ, NV, MT):** At least one deadline has `isEstimate: true`, and the `Jurisdiction-Specific Deadlines` uncertainty notice fires.
+- **Unmapped states (CO, AZ, NV, MT):** At least one deadline has `isEstimate: true`, and the `Jurisdiction-Specific Deadlines` uncertainty notice fires.
 - **DUI × CA:** `immediateActions` contains the DMV hearing window text, including the `'10 days'` window.
 - **Federal:** Arraignment deadline timeframe contains `'Without unnecessary delay'`.
 
@@ -107,8 +109,8 @@
 ## Known gaps
 
 ### Jurisdictions not individually covered
-- 46 of 50 states plus DC and territories are covered only by the shared "unmapped state" code path.  The harness verifies the `isEstimate` flag and uncertainty notice fire, but does not verify the *actual deadline text* for those states because the engine uses `federal` defaults.
-- **Recommended follow-up:** Expand `jurisdictionRules` for at least 5–10 high-population states (IL, PA, WA, OH, GA, AZ, NJ, MI, NC, VA) and add deadline-accuracy scenarios for each.
+- 41 of 50 states plus DC and territories are covered only by the shared "unmapped state" code path.  The harness verifies the `isEstimate` flag and uncertainty notice fire, but does not verify the *actual deadline text* for those states because the engine uses `federal` defaults.
+- **Recommended follow-up:** Expand `jurisdictionRules` for additional high-population states (AZ, NJ, MI, NC, VA) and add deadline-accuracy scenarios for each.
 
 ### Case stages not fully exercised
 - `pretrial` and `trial` stages are each covered by a single "non-empty `immediateActions`" scenario.  The deadline logic for those stages (discovery and trial deadlines) is not individually verified per jurisdiction.

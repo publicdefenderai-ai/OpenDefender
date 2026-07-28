@@ -114,6 +114,46 @@ const jurisdictionRules = {
     bailSystem: 'Traditional bail system with pretrial services',
     discoveryDeadline: 'Within 15 days of demand'
   },
+  'IL': {
+    arraignmentDeadline: 'Within 48 hours',
+    preliminaryHearing: 'Within 30 days if in custody',
+    speedyTrialRight: '120 days for felonies, 160 days for misdemeanors',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Pretrial detention reform - no cash bail',
+    discoveryDeadline: '28 days after arraignment'
+  },
+  'PA': {
+    arraignmentDeadline: 'Within 72 hours',
+    preliminaryHearing: 'Within 14 days of preliminary arraignment',
+    speedyTrialRight: '365 days from complaint',
+    publicDefenderIncome: 'Individual: $25,000, Family of 2: $33,000',
+    bailSystem: 'Traditional bail system',
+    discoveryDeadline: '30 days after arraignment'
+  },
+  'WA': {
+    arraignmentDeadline: 'Within 72 hours if in custody',
+    preliminaryHearing: 'Within 10 court days if in custody',
+    speedyTrialRight: '60 days if in custody, 90 days if released',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Pretrial services assessment',
+    discoveryDeadline: '30 days after arraignment'
+  },
+  'OH': {
+    arraignmentDeadline: 'Within 48 hours',
+    preliminaryHearing: 'Within 10 days if in custody',
+    speedyTrialRight: '90 days if in custody, 270 days if released',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+    discoveryDeadline: '21 days after arraignment'
+  },
+  'GA': {
+    arraignmentDeadline: 'Within 72 hours',
+    preliminaryHearing: 'Within 30 days if in custody',
+    speedyTrialRight: '180 days if in custody',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+    discoveryDeadline: '10 days before trial'
+  },
   'federal': {
     arraignmentDeadline: 'Without unnecessary delay',
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
@@ -913,7 +953,7 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
   const deadlines: GuidanceDeadline[] = [];
 
   // Determine if this jurisdiction is one of the specifically mapped ones or a federal fallback
-  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'FEDERAL'];
+  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'FEDERAL'];
   const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
   const isEstimate = !knownJurisdictions.includes(jurisdiction);
 
@@ -1232,7 +1272,7 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackC
   const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
 
   // Jurisdiction not specifically mapped — using federal defaults
-  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'FEDERAL'];
+  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'FEDERAL'];
   if (!knownJurisdictions.includes(jurisdiction)) {
     items.push({
       area: 'Jurisdiction-Specific Deadlines',
