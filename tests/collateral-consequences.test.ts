@@ -10,6 +10,8 @@
  *     regression path: select charge type → back → skip should yield no cards.
  *  3. Structural: the amber "not legal advice" disclaimer is rendered outside
  *     the no-risk / has-risk ternary so it appears on ALL results screens.
+ *  4. i18n locale coverage: buildPlainText() produces real translated text
+ *     (not raw key names) for en, es, and zh locales.
  */
 
 import * as fs from 'node:fs';
@@ -25,6 +27,9 @@ import {
   type ImmigrationRiskLevel,
 } from '../client/src/lib/collateral-consequences-data';
 import { buildPlainText } from '../client/src/lib/build-plain-text';
+import enLocale from '../client/src/locales/en';
+import esLocale from '../client/src/locales/es';
+import zhLocale from '../client/src/locales/zh';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -516,4 +521,94 @@ describe('buildPlainText — charge-type risk cards appear in export', () => {
     const output = buildPlainText(t, [{ id: 'sexOffender' }], 'en', fixedDate);
     expect(output).toContain('** collateralConsequences.risks.sexOffender.title **');
   });
+});
+
+// ── buildPlainText: i18n locale coverage (en / es / zh) ──────────────────────
+//
+// These tests load the REAL locale objects from client/src/locales/{en,es,zh}.ts
+// and build a genuine t() resolver so that buildPlainText() receives actual
+// translated strings.  Each test asserts that the disclaimer in the output is:
+//   (a) non-empty
+//   (b) not the raw i18n key string ("collateralConsequences.printDisclaimer")
+// Both the no-risk and has-risk output paths are covered per locale.
+
+/** Resolves a dot-notation i18n key against a nested locale object, with
+ *  optional {{var}} interpolation.  Falls back to the key if the path is
+ *  missing so the test fails loudly on an absent translation. */
+function makeT(localeObj: Record<string, unknown>) {
+  return function t(key: string, vars?: Record<string, unknown>): string {
+    const parts = key.split('.');
+    let cur: unknown = localeObj;
+    for (const part of parts) {
+      if (cur !== null && typeof cur === 'object') {
+        cur = (cur as Record<string, unknown>)[part];
+      } else {
+        return key; // path not found — return key so assertions fail visibly
+      }
+    }
+    if (typeof cur !== 'string') return key;
+    if (!vars) return cur;
+    return cur.replace(/\{\{(\w+)\}\}/g, (_: string, k: string) =>
+      String(vars[k] ?? `{{${k}}}`),
+    );
+  };
+}
+
+const PRINT_DISCLAIMER_KEY = 'collateralConsequences.printDisclaimer';
+const fixedDateLocale = new Date('2026-01-01T12:00:00Z');
+
+/** Each locale file exports `{ translation: { ... } }`.  Unwrap the namespace
+ *  so key paths like "collateralConsequences.printDisclaimer" resolve correctly. */
+function unwrapTranslation(obj: unknown): Record<string, unknown> {
+  const o = obj as Record<string, unknown>;
+  if (o && typeof o.translation === 'object' && o.translation !== null) {
+    return o.translation as Record<string, unknown>;
+  }
+  return o;
+}
+
+const locales = [
+  { name: 'en', obj: unwrapTranslation(enLocale), lang: 'en' },
+  { name: 'es', obj: unwrapTranslation(esLocale), lang: 'es' },
+  { name: 'zh', obj: unwrapTranslation(zhLocale), lang: 'zh' },
+] as const;
+
+describe('buildPlainText — i18n locale coverage', () => {
+  for (const { name, obj, lang } of locales) {
+    const t = makeT(obj);
+
+    // ── no-risk path ──────────────────────────────────────────────────────────
+    it(`[${name}] no-risk path: printDisclaimer is non-empty translated text`, () => {
+      const output = buildPlainText(t, [], lang, fixedDateLocale);
+      const lastLine = output.trimEnd().split('\n').at(-1) ?? '';
+      expect(lastLine, `[${name}] last line must not be the raw key`).not.toBe(PRINT_DISCLAIMER_KEY);
+      expect(lastLine, `[${name}] last line must be non-empty`).not.toBe('');
+    });
+
+    it(`[${name}] no-risk path: disclaimer does not contain the raw key substring`, () => {
+      const output = buildPlainText(t, [], lang, fixedDateLocale);
+      expect(output, `[${name}] raw key must not appear in output`).not.toContain(PRINT_DISCLAIMER_KEY);
+    });
+
+    // ── has-risk path ─────────────────────────────────────────────────────────
+    it(`[${name}] has-risk path: printDisclaimer is non-empty translated text`, () => {
+      const output = buildPlainText(t, [{ id: 'housing' }], lang, fixedDateLocale);
+      const lastLine = output.trimEnd().split('\n').at(-1) ?? '';
+      expect(lastLine, `[${name}] last line must not be the raw key`).not.toBe(PRINT_DISCLAIMER_KEY);
+      expect(lastLine, `[${name}] last line must be non-empty`).not.toBe('');
+    });
+
+    it(`[${name}] has-risk path: disclaimer does not contain the raw key substring`, () => {
+      const output = buildPlainText(t, [{ id: 'housing' }], lang, fixedDateLocale);
+      expect(output, `[${name}] raw key must not appear in output`).not.toContain(PRINT_DISCLAIMER_KEY);
+    });
+
+    it(`[${name}] has-risk path with multiple risks: disclaimer still present and translated`, () => {
+      const risks = [{ id: 'supervision' }, { id: 'immigration' }, { id: 'children' }];
+      const output = buildPlainText(t, risks, lang, fixedDateLocale);
+      const lastLine = output.trimEnd().split('\n').at(-1) ?? '';
+      expect(lastLine, `[${name}] last line must not be the raw key`).not.toBe(PRINT_DISCLAIMER_KEY);
+      expect(lastLine, `[${name}] last line must be non-empty`).not.toBe('');
+    });
+  }
 });
