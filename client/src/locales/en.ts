@@ -67,22 +67,19 @@ export default {
     "hero": {
       "headlinePart1": "Arrested? Facing Charges?",
       "headlinePart2": "Start here.",
+      "headlinePart3": "Helping someone who was?",
       "subtitle": "Free, plain-language legal guidance for defendants, families, and their advocates, covering all 50 states in English, Spanish, and Chinese.",
       "primaryCta": "Get Immediate Help",
       "secondaryCta": "Browse All Resources"
     },
     "features": {
-      "title": "Powered by Real Legal Data",
-      "subtitle": "Our AI agent uses comprehensive legal databases and court records to provide accurate, up-to-date information.",
-      "federalCourts": "Court Records",
-      "federalCourtsDesc": "Access to millions of federal and state court opinions through CourtListener API. RECAP Archive integration for free access to federal court documents (PACER integration pending).",
-      "federalCourtsStatus": "Partial Completion",
-      "stateLaws": "State & Federal Laws",
-      "stateLawsDesc": "Complete 50-state + DC coverage with 5,956 criminal statutes across all offense categories. Federal statutes from GovInfo.gov. All 51 jurisdictions linked to official legislature websites.",
-      "stateLawsStatus": "Active - 51 Jurisdictions",
-      "analytics": "Criminal Justice Analytics",
-      "analyticsDesc": "Bureau of Justice Statistics (BJS) integration in progress. NCVS/NIBRS API implementation with proper weighting and pagination pending validation.",
-      "analyticsStatus": "Partial Completion"
+      "heading": "Most people face the hardest moments before they ever see a lawyer.",
+      "card1Title": "The first 24 hours",
+      "card1Desc": "Bail hearings, arraignment deadlines, and your right to silence happen before most people know what's coming. Know them in advance.",
+      "card2Title": "More than just the case",
+      "card2Desc": "An arrest can affect housing, employment, children, and benefits, often within days, and regardless of the outcome. Know what's at risk right now.",
+      "card3Title": "Available in English, Spanish, and Chinese",
+      "card3Desc": "Legal information shouldn't require a translator. Every page on this site is available in three languages."
     },
     "trust": {
       "title": "What We Stand For",
@@ -127,7 +124,7 @@ export default {
     "doors": {
       "sectionLabel": "Where do you want to start?",
       "door1": {
-        "badge": "Someone Was Just Arrested",
+        "badge": "Just Arrested, or Helping Someone Who Was",
         "headline": "Your first hours matter most",
         "desc": "Step-by-step guidance from the moment of arrest through bail, your first phone call, and what to expect at arraignment.",
         "cta": "Start Here",
@@ -145,13 +142,13 @@ export default {
         "link3": "Collateral consequences screener"
       },
       "door3": {
-        "badge": "I Work With People in This Situation",
-        "headline": "Tools built for advocates",
-        "desc": "Resources for public defenders, social workers, case managers, and community advocates supporting people through the justice system.",
-        "cta": "Go to Advocate Hub",
-        "link1": "Diversion programs",
-        "link2": "Legal aid directory",
-        "link3": "Life & family support hub"
+        "badge": "Life Disrupted by an Arrest",
+        "headline": "Protect what matters most",
+        "desc": "An arrest affects more than the case. Housing, employment, children, and benefits can all be at risk within days. Find support before things fall apart.",
+        "cta": "Life & Family Support",
+        "link1": "Housing stability",
+        "link2": "Employment rights",
+        "link3": "Children & childcare"
       }
     },
     "secondary": {
@@ -162,9 +159,9 @@ export default {
         "cta": "Know Your Rights"
       },
       "lifeSupport": {
-        "title": "Life & Family Support",
-        "desc": "Housing, employment, childcare, and mental health resources.",
-        "cta": "Find Support"
+        "title": "For Advocates & Public Defenders",
+        "desc": "Intake checklists, mitigation tools, and client-ready resources for case workers and advocates.",
+        "cta": "Open Advocate Hub"
       },
       "findHelp": {
         "title": "Find Legal Help",
@@ -172,9 +169,9 @@ export default {
         "cta": "Search Directory"
       },
       "pastConviction": {
-        "title": "Past Conviction",
-        "desc": "Clear a past record or understand your background check rights.",
-        "cta": "Learn More"
+        "title": "Helping Someone Who Was Arrested",
+        "desc": "Find them, understand what's happening, and know what you can do right now.",
+        "cta": "Family Support Guide"
       }
     },
     "stats": {
@@ -2030,6 +2027,8 @@ export default {
         "cardBTime": "Instant results.",
         "cardBButton": "Get Immediate Guidance →",
         "validationLink": "Learn how we verify AI responses →",
+        "escapeHatchTitle": "Not ready to answer questions?",
+        "escapeHatchLink": "Go straight to the First 24 Hours guide",
         "badgeAI": "AI-powered guidance",
         "badgeRules": "Rules-based guidance"
       },
@@ -2133,7 +2132,8 @@ export default {
           "yes": "Yes, in custody",
           "bail": "Released on bail/bond",
           "recognizance": "Released on recognizance (no bail)",
-          "no": "No, not in custody"
+          "no": "No, not in custody",
+          "unsure": "I'm not sure"
         },
         "back": "Back",
         "submitButton": "Get My Case Support",
@@ -5907,6 +5907,40 @@ export default {
         "clock": "Registration is required immediately upon conviction, upon release from incarceration, or upon arrival in any jurisdiction where you live, work, or go to school. Failure to register or update your registration is itself a separate state and federal felony.",
         "action": "The tier and duration of registration is determined at sentencing. An attorney experienced in sex offender law should advise you before you enter any plea, because the registration consequences are often permanent and cannot be undone by expungement. Ask specifically about the minimum registration period and any petition for removal available under state law.",
         "linkLabel": "Find legal help"
+      }
+    },
+    "stateRules": {
+      "heading": "State Laws: {{stateName}}",
+      "subheading": "These rules apply after a conviction — not to an arrest alone. Verified from primary sources.",
+      "voting": "Voting Rights",
+      "btb": "Hiring (Ban the Box)",
+      "benefits": "SNAP / TANF Drug Ban",
+      "housing": "Fair Chance Housing",
+      "verifiedOn": "Verified {{date}}",
+      "mediumConfidenceNote": "Based on secondary sources — confirm against current statute before relying on this.",
+      "noStateData": "State-specific data for your jurisdiction is not yet in our database. Visit ccresourcecenter.org for current rules.",
+      "votingStatus": {
+        "incarcerated": "Can vote while incarcerated",
+        "on_release": "Restored upon release",
+        "parole_complete": "Restored after parole",
+        "supervision_complete": "Must complete all supervision",
+        "waiting_period": "Waiting period after supervision",
+        "application_required": "Application required",
+        "permanent_bar": "Permanent bar (some offenses)"
+      },
+      "btbStatus": {
+        "private_also": "Applies to all employers",
+        "public_only": "Public employers only",
+        "none": "No statewide law"
+      },
+      "snapStatus": {
+        "no_ban": "No drug conviction ban",
+        "modified": "Partial restrictions apply",
+        "full_ban": "Lifetime ban for drug felonies"
+      },
+      "housingStatus": {
+        "yes": "Statewide fair chance law",
+        "no": "No statewide law (federal rules apply)"
       }
     }
   },

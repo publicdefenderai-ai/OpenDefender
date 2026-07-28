@@ -4,7 +4,7 @@ import {
   AlertTriangle, ArrowRight, ArrowLeft, Copy, Check,
   Printer, Info, Home, Briefcase, Globe2,
   DollarSign, Users, Scale, Award, CheckCircle2, Shield, Lock,
-  Car, AlertOctagon, ChevronRight,
+  Car, AlertOctagon, ChevronRight, Vote, Building2, Leaf,
 } from "lucide-react";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
@@ -12,7 +12,10 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { buildPlainText } from "@/lib/build-plain-text";
-import { DRIVERS_LICENSE_RULES } from "@/lib/collateral-consequences-data";
+import {
+  DRIVERS_LICENSE_RULES,
+  getCollateralConsequenceRule,
+} from "@/lib/collateral-consequences-data";
 import { useJurisdiction } from "@/hooks/use-jurisdiction";
 
 /* ------------------------------------------------------------------ */
@@ -195,6 +198,131 @@ function PrivacyNote({ text }: { text: string }) {
     <div className="flex items-start gap-2 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/30 px-3 py-2.5 mt-3">
       <Lock className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
       <p className="text-xs text-blue-800 dark:text-blue-300 leading-relaxed">{text}</p>
+    </div>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* State rules card                                                     */
+/* ------------------------------------------------------------------ */
+
+type RuleLevel = "good" | "moderate" | "restrictive";
+
+const LEVEL_CLASSES: Record<RuleLevel, string> = {
+  good:        "bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200",
+  moderate:    "bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200",
+  restrictive: "bg-red-100   dark:bg-red-900/30   text-red-800   dark:text-red-200",
+};
+
+function votingLevel(rule: ReturnType<typeof getCollateralConsequenceRule>): RuleLevel {
+  if (!rule) return "moderate";
+  if (rule.voting.canVoteWhileIncarcerated) return "good";
+  const rp = rule.voting.restorationPoint;
+  if (rp === "on_release") return "good";
+  if (rp === "permanent_bar") return "restrictive";
+  return "moderate";
+}
+
+function btbLevel(rule: ReturnType<typeof getCollateralConsequenceRule>): RuleLevel {
+  if (!rule) return "moderate";
+  const s = rule.employment.banTheBoxScope;
+  if (s === "private_also") return "good";
+  if (s === "none") return "restrictive";
+  return "moderate";
+}
+
+function snapLevel(rule: ReturnType<typeof getCollateralConsequenceRule>): RuleLevel {
+  if (!rule) return "moderate";
+  const snap = rule.benefits.snapDrugFelonyBan;
+  if (snap === "no_ban") return "good";
+  if (snap === "full_ban") return "restrictive";
+  return "moderate";
+}
+
+function housingLevel(rule: ReturnType<typeof getCollateralConsequenceRule>): RuleLevel {
+  if (!rule) return "moderate";
+  return rule.housing.fairChanceHousingLaw ? "good" : "moderate";
+}
+
+function StateRulesCard({ stateAbbr }: { stateAbbr: string }) {
+  const { t } = useTranslation();
+  const rule = getCollateralConsequenceRule(stateAbbr);
+
+  if (!rule) {
+    return (
+      <div className="rounded-xl border border-border bg-muted/30 px-4 py-3 text-xs text-muted-foreground">
+        {t("collateralConsequences.stateRules.noStateData")}
+      </div>
+    );
+  }
+
+  const rows: {
+    Icon: React.ElementType;
+    labelKey: string;
+    statusKey: string;
+    level: RuleLevel;
+  }[] = [
+    {
+      Icon: Vote,
+      labelKey: "collateralConsequences.stateRules.voting",
+      statusKey: `collateralConsequences.stateRules.votingStatus.${rule.voting.canVoteWhileIncarcerated ? "incarcerated" : rule.voting.restorationPoint}`,
+      level: votingLevel(rule),
+    },
+    {
+      Icon: Briefcase,
+      labelKey: "collateralConsequences.stateRules.btb",
+      statusKey: `collateralConsequences.stateRules.btbStatus.${rule.employment.banTheBoxScope}`,
+      level: btbLevel(rule),
+    },
+    {
+      Icon: Leaf,
+      labelKey: "collateralConsequences.stateRules.benefits",
+      statusKey: `collateralConsequences.stateRules.snapStatus.${rule.benefits.snapDrugFelonyBan}`,
+      level: snapLevel(rule),
+    },
+    {
+      Icon: Building2,
+      labelKey: "collateralConsequences.stateRules.housing",
+      statusKey: `collateralConsequences.stateRules.housingStatus.${rule.housing.fairChanceHousingLaw ? "yes" : "no"}`,
+      level: housingLevel(rule),
+    },
+  ];
+
+  return (
+    <div className="rounded-xl border border-border bg-card overflow-hidden">
+      <div className="px-4 pt-4 pb-3 border-b border-border/60">
+        <p className="text-sm font-bold text-foreground">
+          {t("collateralConsequences.stateRules.heading", { stateName: rule.stateName })}
+        </p>
+        <p className="text-xs text-muted-foreground mt-0.5 leading-snug">
+          {t("collateralConsequences.stateRules.subheading")}
+        </p>
+      </div>
+
+      <div className="divide-y divide-border/60">
+        {rows.map(({ Icon, labelKey, statusKey, level }) => (
+          <div key={labelKey} className="flex items-center justify-between px-4 py-2.5 gap-3">
+            <div className="flex items-center gap-2 min-w-0">
+              <Icon className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0" strokeWidth={1.75} aria-hidden="true" />
+              <span className="text-xs text-foreground truncate">{t(labelKey)}</span>
+            </div>
+            <span className={`text-xs font-medium px-2 py-0.5 rounded-full flex-shrink-0 ${LEVEL_CLASSES[level]}`}>
+              {t(statusKey)}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div className="px-4 py-2.5 border-t border-border/60 flex items-center justify-between gap-2">
+        <p className="text-xs text-muted-foreground">
+          {t("collateralConsequences.stateRules.verifiedOn", { date: rule.lastVerified })}
+          {rule.dataConfidence === "medium" && (
+            <span className="ml-1.5 text-amber-600 dark:text-amber-400">
+              · {t("collateralConsequences.stateRules.mediumConfidenceNote")}
+            </span>
+          )}
+        </p>
+      </div>
     </div>
   );
 }
@@ -544,6 +672,16 @@ export default function CollateralConsequences() {
                   </div>
                 </>
               )}
+
+              {/* State-specific rules panel */}
+              {(() => {
+                const abbr = jurisdiction ? STATE_NAME_TO_ABBR[jurisdiction.toLowerCase()] : undefined;
+                return abbr ? (
+                  <div className="mb-5">
+                    <StateRulesCard stateAbbr={abbr} />
+                  </div>
+                ) : null;
+              })()}
 
               {/* Disclaimer */}
               <div className="flex items-start gap-2.5 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3 mb-5" role="note" aria-label="Not legal advice">

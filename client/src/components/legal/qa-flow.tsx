@@ -263,6 +263,18 @@ function ConsentStep({ formData, updateFormData, onNext }: any) {
             {t('legalGuidance.qaFlow.consent.validationLink')}
           </a>
         </p>
+
+        <div className="mt-5 pt-4 border-t border-border flex items-center justify-between gap-3">
+          <p className="text-xs text-muted-foreground">
+            {t('legalGuidance.qaFlow.consent.escapeHatchTitle')}
+          </p>
+          <a
+            href="/first-24-hours"
+            className="text-xs font-medium text-teal-600 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300 whitespace-nowrap flex items-center gap-1 transition-colors"
+          >
+            {t('legalGuidance.qaFlow.consent.escapeHatchLink')} <ArrowRight className="h-3 w-3" />
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -845,7 +857,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           {formData.chargesUnknown && (
             <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg border border-amber-200 dark:border-amber-800">
               <p className="text-sm text-amber-800 dark:text-amber-200 leading-relaxed">
-                <strong>General guidance will be provided</strong> based on your jurisdiction, case stage, and any details you share in the next step. For more accurate guidance, describe what happened and any paperwork or information you've received in the "Additional Details" section.
+                <strong>You'll still get a useful roadmap.</strong> We'll base it on your state, where you are in the process, and anything else you share in the next steps. If you later receive paperwork or learn the charges, describe them in the "Additional Details" section for more specific guidance.
               </p>
             </div>
           )}
@@ -951,6 +963,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
                 <SelectItem value="released">{t('legalGuidance.qaFlow.status.custodyOptions.bail')}</SelectItem>
                 <SelectItem value="ownRecognizance">{t('legalGuidance.qaFlow.status.custodyOptions.recognizance')}</SelectItem>
                 <SelectItem value="notArrested">{t('legalGuidance.qaFlow.status.custodyOptions.no')}</SelectItem>
+                <SelectItem value="unsure">{t('legalGuidance.qaFlow.status.custodyOptions.unsure')}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -983,7 +996,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
         </Button>
         <Button
           onClick={onNext}
-          disabled={!formData.caseStage || !formData.custodyStatus}
+          disabled={!formData.caseStage}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-continue-status"
         >

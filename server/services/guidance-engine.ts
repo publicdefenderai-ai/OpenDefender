@@ -80,55 +80,125 @@ interface EnhancedGuidance {
   uncertainties?: UncertaintyItem[];
 }
 
-// Jurisdiction-specific legal procedures and timelines
-const jurisdictionRules = {
+// ── Jurisdiction rule types ────────────────────────────────────────────────────
+
+interface JurisdictionSources {
+  arraignmentDeadline?: string;
+  preliminaryHearing?: string;
+  speedyTrialRight?: string;
+  discoveryDeadline?: string;
+  bailSystem?: string;
+}
+
+interface JurisdictionRule {
+  arraignmentDeadline: string;
+  preliminaryHearing: string;
+  speedyTrialRight: string;
+  /** Approximate eligibility threshold — varies by county and changes annually with FPL. */
+  publicDefenderIncome: string;
+  bailSystem: string;
+  discoveryDeadline: string;
+  /** YYYY-MM this entry was last verified against primary statutory sources. */
+  lastVerified: string;
+  /** Primary statutory or regulatory citation for each field. Review annually. */
+  sources: JurisdictionSources;
+}
+
+// ── Jurisdiction data ──────────────────────────────────────────────────────────
+// Attorney review recommended before treating any value as authoritative.
+// Known accuracy gaps: GA discoveryDeadline (pre-HB 776), CA speedyTrialRight
+// (misdemeanor custody distinction), all publicDefenderIncome figures (FPL-linked).
+const jurisdictionRules: Record<string, JurisdictionRule> = {
   'CA': {
     arraignmentDeadline: 'Within 48 hours (72 hours if arrested on weekend)',
     preliminaryHearing: 'Within 10 court days for felonies',
-    speedyTrialRight: '60 days if in custody, 30 days if out',
-    publicDefenderIncome: 'Individual: $25,000, Family of 2: $35,000',
+    speedyTrialRight: '60 days for felonies; 30 days for misdemeanors if in custody, 45 days if released',
+    publicDefenderIncome: 'Approximately 2x federal poverty level (varies by county)',
     bailSystem: 'Schedule-based bail system',
-    discoveryDeadline: '30 days after arraignment'
+    discoveryDeadline: '30 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'PC § 825',
+      preliminaryHearing: 'PC § 859b',
+      speedyTrialRight: 'PC § 1382',
+      discoveryDeadline: 'PC § 1054.7',
+    },
   },
   'TX': {
     arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Not required - grand jury indictment for felonies',
+    preliminaryHearing: 'Not required — grand jury indictment for felonies',
     speedyTrialRight: '120 days for felonies, 60 days for misdemeanors',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Commercial bail bond system',
-    discoveryDeadline: '20 days before trial'
+    discoveryDeadline: 'Ongoing open-file obligation; witness list due 20 days before trial',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'CCP Art. 14.06; Tex. Const. Art. I § 11a',
+      speedyTrialRight: 'Tex. Const. Art. I § 10 (constitutional right; statutory act repealed 1987)',
+      discoveryDeadline: 'CCP Art. 39.14 (Michael Morton Act, 2013)',
+    },
   },
   'NY': {
     arraignmentDeadline: 'Within 24 hours',
     preliminaryHearing: 'Within 120 hours for felonies',
     speedyTrialRight: '6 months for felonies, 90 days for misdemeanors',
-    publicDefenderIncome: 'Individual: $25,000, Family of 4: $60,000',
-    bailSystem: 'Cash bail reform - limited detention',
-    discoveryDeadline: '15 days after arraignment'
+    publicDefenderIncome: 'Varies by county — apply to local public defender or legal aid office',
+    bailSystem: 'Cash bail reform — limited detention',
+    discoveryDeadline: '20 days after arraignment (in custody) or 35 days (not in custody)',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'CPL § 140.20',
+      preliminaryHearing: 'CPL § 180.10',
+      speedyTrialRight: 'CPL § 30.30',
+      discoveryDeadline: 'CPL § 245.10 (2020 reform, eff. Jan 1 2020)',
+      bailSystem: 'CPL § 510.10 (2020 bail reform)',
+    },
   },
   'FL': {
     arraignmentDeadline: 'Within 24 hours',
     preliminaryHearing: 'Within 21 days for felonies',
     speedyTrialRight: '175 days for felonies, 90 days for misdemeanors',
-    publicDefenderIncome: 'Individual: $27,750, Family of 2: $37,500',
+    publicDefenderIncome: 'Approximately 200% federal poverty level — apply to local public defender',
     bailSystem: 'Traditional bail system with pretrial services',
-    discoveryDeadline: 'Within 15 days of demand'
+    discoveryDeadline: 'Within 15 days of demand',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'Fla. R. Crim. P. 3.130',
+      preliminaryHearing: 'Fla. R. Crim. P. 3.133',
+      speedyTrialRight: 'Fla. R. Crim. P. 3.191',
+      discoveryDeadline: 'Fla. R. Crim. P. 3.220',
+    },
   },
   'IL': {
     arraignmentDeadline: 'Within 48 hours',
     preliminaryHearing: 'Within 30 days if in custody',
     speedyTrialRight: '120 days for felonies, 160 days for misdemeanors',
     publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Pretrial detention reform - no cash bail',
-    discoveryDeadline: '28 days after arraignment'
+    bailSystem: 'Pretrial Fairness Act — no cash bail (eff. Sept 2023)',
+    discoveryDeadline: '28 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: '725 ILCS 5/109-1',
+      preliminaryHearing: '725 ILCS 5/109-3',
+      speedyTrialRight: '725 ILCS 5/103-5',
+      discoveryDeadline: 'Ill. Sup. Ct. R. 412',
+      bailSystem: 'Pretrial Fairness Act, SB 2364 (2021)',
+    },
   },
   'PA': {
     arraignmentDeadline: 'Within 72 hours',
     preliminaryHearing: 'Within 14 days of preliminary arraignment',
     speedyTrialRight: '365 days from complaint',
-    publicDefenderIncome: 'Individual: $25,000, Family of 2: $33,000',
+    publicDefenderIncome: 'Approximately federal poverty guidelines — apply to local public defender',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '30 days after arraignment'
+    discoveryDeadline: '30 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'Pa. R. Crim. P. 516',
+      preliminaryHearing: 'Pa. R. Crim. P. 524',
+      speedyTrialRight: 'Pa. R. Crim. P. 600',
+      discoveryDeadline: 'Pa. R. Crim. P. 573',
+    },
   },
   'WA': {
     arraignmentDeadline: 'Within 72 hours if in custody',
@@ -136,7 +206,13 @@ const jurisdictionRules = {
     speedyTrialRight: '60 days if in custody, 90 days if released',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Pretrial services assessment',
-    discoveryDeadline: '30 days after arraignment'
+    discoveryDeadline: '30 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'CrR 4.1; CrRLJ 4.1',
+      speedyTrialRight: 'CrR 3.3',
+      discoveryDeadline: 'CrR 4.7',
+    },
   },
   'OH': {
     arraignmentDeadline: 'Within 48 hours',
@@ -144,7 +220,13 @@ const jurisdictionRules = {
     speedyTrialRight: '90 days if in custody, 270 days if released',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '21 days after arraignment'
+    discoveryDeadline: '21 days after arraignment',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'Ohio Crim. R. 10; ORC § 2937.01',
+      speedyTrialRight: 'ORC § 2945.71',
+      discoveryDeadline: 'Ohio Crim. R. 16',
+    },
   },
   'GA': {
     arraignmentDeadline: 'Within 72 hours',
@@ -152,7 +234,16 @@ const jurisdictionRules = {
     speedyTrialRight: '180 days if in custody',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '10 days before trial'
+    // ATTORNEY REVIEW NEEDED: HB 776 (2021) created automatic open-file discovery in GA.
+    // The pre-reform "10 days before trial" rule (OCGA § 17-16-5) may no longer apply.
+    discoveryDeadline: '10 days before trial',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'OCGA § 17-7-23',
+      preliminaryHearing: 'OCGA § 17-7-23.1',
+      speedyTrialRight: 'OCGA § 17-7-170 (demand for trial)',
+      discoveryDeadline: 'OCGA § 17-16-5 — see HB 776 (2021) for reform status',
+    },
   },
   'AZ': {
     arraignmentDeadline: 'Within 48 hours if in custody',
@@ -198,10 +289,17 @@ const jurisdictionRules = {
     arraignmentDeadline: 'Without unnecessary delay',
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
     speedyTrialRight: '70 days from indictment',
-    publicDefenderIncome: 'Individual: $30,000, Family of 2: $40,500',
+    publicDefenderIncome: 'Approximately 125% federal poverty level — apply to federal public defender office',
     bailSystem: 'Pretrial services assessment',
-    discoveryDeadline: 'Ongoing obligation'
-  }
+    discoveryDeadline: 'Ongoing obligation',
+    lastVerified: '2026-07',
+    sources: {
+      arraignmentDeadline: 'Fed. R. Crim. P. 5(a)',
+      preliminaryHearing: 'Fed. R. Crim. P. 5.1',
+      speedyTrialRight: '18 U.S.C. § 3161 (Speedy Trial Act)',
+      discoveryDeadline: 'Fed. R. Crim. P. 16',
+    },
+  },
 };
 
 // Charge-specific guidance database

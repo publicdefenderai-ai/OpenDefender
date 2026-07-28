@@ -69,22 +69,19 @@ export default {
     "hero": {
       "headlinePart1": "¿Arrestado? ¿Enfrentando cargos?",
       "headlinePart2": "Comience aquí.",
+      "headlinePart3": "¿Ayudando a alguien que lo fue?",
       "subtitle": "Orientación legal gratuita en lenguaje claro para acusados, familias y sus defensores, en los 50 estados, en inglés, español y chino.",
       "primaryCta": "Obtener Ayuda Inmediata",
       "secondaryCta": "Ver Todos los Recursos"
     },
     "features": {
-      "title": "Respaldado por Datos Legales Reales",
-      "subtitle": "Nuestro agente de IA utiliza bases de datos legales exhaustivas y registros judiciales para proporcionar información precisa y actualizada.",
-      "federalCourts": "Registros Judiciales",
-      "federalCourtsDesc": "Acceso a millones de opiniones judiciales federales y estatales a través de la API de CourtListener. Integración del Archivo RECAP para acceso gratuito a documentos judiciales federales (integración PACER pendiente).",
-      "federalCourtsStatus": "Finalización Parcial",
-      "stateLaws": "Leyes Estatales y Federales",
-      "stateLawsDesc": "Cobertura completa de 50 estados + DC con 5,956 estatutos penales en todas las categorías de delitos. Estatutos federales de GovInfo.gov. Las 51 jurisdicciones vinculadas a sitios web oficiales de legislaturas.",
-      "stateLawsStatus": "Activo - 51 Jurisdicciones",
-      "analytics": "Análisis de Justicia Penal",
-      "analyticsDesc": "Integración de la Oficina de Estadísticas de Justicia (BJS) en progreso. Implementación de API NCVS/NIBRS con ponderación adecuada y paginación pendiente de validación.",
-      "analyticsStatus": "Finalización Parcial"
+      "heading": "La mayoría de las personas enfrentan los momentos más difíciles antes de ver a un abogado.",
+      "card1Title": "Las primeras 24 horas",
+      "card1Desc": "Las audiencias de fianza, los plazos de acusación formal y su derecho al silencio suceden antes de que la mayoría sepa qué esperar. Conózcalos con anticipación.",
+      "card2Title": "Más que solo el caso",
+      "card2Desc": "Un arresto puede afectar la vivienda, el empleo, los hijos y los beneficios, a menudo en cuestión de días, sin importar el resultado. Sepa qué está en riesgo ahora.",
+      "card3Title": "Disponible en inglés, español y chino",
+      "card3Desc": "La información legal no debería requerir un traductor. Cada página de este sitio está disponible en tres idiomas."
     },
     "trust": {
       "title": "Lo Que Defendemos",
@@ -129,7 +126,7 @@ export default {
     "doors": {
       "sectionLabel": "¿Dónde quiere comenzar?",
       "door1": {
-        "badge": "Alguien Acaba de Ser Arrestado",
+        "badge": "Recién Arrestado, o Ayudando a Alguien que lo Fue",
         "headline": "Las primeras horas importan más",
         "desc": "Orientación paso a paso desde el momento del arresto hasta la fianza, la primera llamada telefónica y lo que puede esperar en la audiencia.",
         "cta": "Comenzar Aquí",
@@ -147,13 +144,13 @@ export default {
         "link3": "Verificador de consecuencias colaterales"
       },
       "door3": {
-        "badge": "Trabajo con Personas en Esta Situación",
-        "headline": "Herramientas para defensores",
-        "desc": "Recursos para defensores públicos, trabajadores sociales, gestores de casos y defensores comunitarios que apoyan a personas en el sistema de justicia.",
-        "cta": "Ir al Centro de Defensores",
-        "link1": "Programas de desvío",
-        "link2": "Directorio de asistencia legal",
-        "link3": "Centro de apoyo de vida y familia"
+        "badge": "Vida Afectada por un Arresto",
+        "headline": "Proteja lo que más importa",
+        "desc": "Un arresto afecta más que el caso. La vivienda, el empleo, los hijos y los beneficios pueden estar en riesgo en cuestión de días. Encuentre apoyo antes de que todo se desmorone.",
+        "cta": "Apoyo de Vida y Familia",
+        "link1": "Estabilidad de vivienda",
+        "link2": "Derechos laborales",
+        "link3": "Hijos y cuidado infantil"
       }
     },
     "secondary": {
@@ -164,9 +161,9 @@ export default {
         "cta": "Conozca Sus Derechos"
       },
       "lifeSupport": {
-        "title": "Apoyo de Vida y Familia",
-        "desc": "Recursos de vivienda, empleo, cuidado infantil y salud mental.",
-        "cta": "Encontrar Apoyo"
+        "title": "Para Defensores y Defensores Públicos",
+        "desc": "Listas de verificación de admisión, herramientas de mitigación y recursos para trabajadores de casos y defensores.",
+        "cta": "Abrir Centro de Defensores"
       },
       "findHelp": {
         "title": "Encontrar Ayuda Legal",
@@ -174,9 +171,9 @@ export default {
         "cta": "Buscar Directorio"
       },
       "pastConviction": {
-        "title": "Condena Pasada",
-        "desc": "Limpiar un antecedente pasado o entender sus derechos de verificación de antecedentes.",
-        "cta": "Aprenda Más"
+        "title": "Ayudando a Alguien que Fue Arrestado",
+        "desc": "Encuéntrelos, entienda lo que está pasando y sepa qué puede hacer ahora.",
+        "cta": "Guía de Apoyo Familiar"
       }
     },
     "stats": {
@@ -2032,6 +2029,8 @@ export default {
         "cardBTime": "Resultados instantáneos.",
         "cardBButton": "Obtener orientación inmediata →",
         "validationLink": "Conozca cómo verificamos las respuestas de IA →",
+        "escapeHatchTitle": "¿No está listo para responder preguntas?",
+        "escapeHatchLink": "Ir directamente a la guía de las primeras 24 horas",
         "badgeAI": "Orientación generada por IA",
         "badgeRules": "Orientación basada en reglas"
       },
@@ -2135,7 +2134,8 @@ export default {
           "yes": "Sí, bajo custodia",
           "bail": "Liberado bajo fianza",
           "recognizance": "Liberado bajo palabra (sin fianza)",
-          "no": "No, no estoy bajo custodia"
+          "no": "No, no estoy bajo custodia",
+          "unsure": "No estoy seguro/a"
         },
         "back": "Volver",
         "submitButton": "Obtener Mi Orientación Legal",
@@ -5910,6 +5910,40 @@ export default {
         "clock": "El registro se requiere de inmediato al ser condenado, al ser liberado de la prisión o al llegar a cualquier jurisdicción donde viva, trabaje o asista a la escuela. No registrarse o no actualizar su registro constituye por sí mismo un delito grave separado a nivel estatal y federal.",
         "action": "El nivel y la duración del registro se determinan en la sentencia. Un abogado con experiencia en derecho de delincuentes sexuales debe asesorarle antes de presentar cualquier declaración de culpabilidad, porque las consecuencias del registro suelen ser permanentes y no pueden deshacerse mediante la eliminación de antecedentes. Pregunte específicamente sobre el período mínimo de registro y cualquier petición de eliminación disponible bajo la ley estatal.",
         "linkLabel": "Encontrar ayuda legal"
+      }
+    },
+    "stateRules": {
+      "heading": "Leyes de {{stateName}}",
+      "subheading": "Estas reglas aplican después de una condena, no solo por un arresto. Verificadas con fuentes primarias.",
+      "voting": "Derecho al voto",
+      "btb": "Contratación (Bandera roja eliminada)",
+      "benefits": "Prohibición por condena de drogas (SNAP/TANF)",
+      "housing": "Ley de vivienda justa",
+      "verifiedOn": "Verificado {{date}}",
+      "mediumConfidenceNote": "Basado en fuentes secundarias — confirme con el estatuto vigente antes de depender de esto.",
+      "noStateData": "Los datos específicos para su estado aún no están en nuestra base de datos. Visite ccresourcecenter.org para las reglas actuales.",
+      "votingStatus": {
+        "incarcerated": "Puede votar mientras está encarcelado",
+        "on_release": "Se restaura al ser liberado",
+        "parole_complete": "Se restaura tras la libertad condicional",
+        "supervision_complete": "Debe completar toda la supervisión",
+        "waiting_period": "Período de espera después de la supervisión",
+        "application_required": "Se requiere solicitud",
+        "permanent_bar": "Prohibición permanente (algunos delitos)"
+      },
+      "btbStatus": {
+        "private_also": "Aplica a todos los empleadores",
+        "public_only": "Solo empleadores públicos",
+        "none": "Sin ley estatal"
+      },
+      "snapStatus": {
+        "no_ban": "Sin prohibición por condena de drogas",
+        "modified": "Restricciones parciales aplican",
+        "full_ban": "Prohibición de por vida para delitos graves de drogas"
+      },
+      "housingStatus": {
+        "yes": "Ley estatal de vivienda justa",
+        "no": "Sin ley estatal (aplican reglas federales)"
       }
     }
   },

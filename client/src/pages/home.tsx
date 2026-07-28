@@ -9,6 +9,7 @@ import {
   MessageSquare,
   Phone,
   Heart,
+  Briefcase,
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
@@ -98,11 +99,11 @@ export default function Home() {
       headline: t("home.doors.door3.headline"),
       desc: t("home.doors.door3.desc"),
       cta: t("home.doors.door3.cta"),
-      link: "/for-advocates",
+      link: "/support",
       links: [
-        { label: t("home.doors.door3.link1"), href: "/diversion-programs" },
-        { label: t("home.doors.door3.link2"), href: "/legal-aid" },
-        { label: t("home.doors.door3.link3"), href: "/support" },
+        { label: t("home.doors.door3.link1"), href: "/support/housing" },
+        { label: t("home.doors.door3.link2"), href: "/support/employment" },
+        { label: t("home.doors.door3.link3"), href: "/support/childcare" },
       ],
       gradient: "from-[hsl(258,48%,20%)] via-[hsl(255,42%,28%)] to-[hsl(252,36%,35%)]",
       pulsing: false,
@@ -122,15 +123,15 @@ export default function Home() {
       color: "text-amber-700 dark:text-amber-400",
     },
     {
-      Icon: Heart,
+      Icon: Briefcase,
       title: t("home.secondary.lifeSupport.title"),
       desc: t("home.secondary.lifeSupport.desc"),
       cta: t("home.secondary.lifeSupport.cta"),
-      href: "/support",
-      accent: "#be185d",
-      bg: "bg-rose-50/60 dark:bg-rose-900/10",
-      border: "border-rose-200 dark:border-rose-800/50",
-      color: "text-rose-700 dark:text-rose-400",
+      href: "/for-advocates",
+      accent: "#6d28d9",
+      bg: "bg-violet-50/60 dark:bg-violet-900/10",
+      border: "border-violet-200 dark:border-violet-800/50",
+      color: "text-violet-700 dark:text-violet-400",
     },
     {
       Icon: Users,
@@ -138,21 +139,21 @@ export default function Home() {
       desc: t("home.secondary.findHelp.desc"),
       cta: t("home.secondary.findHelp.cta"),
       href: "/legal-aid",
+      accent: "#0d9488",
+      bg: "bg-teal-50/60 dark:bg-teal-900/10",
+      border: "border-teal-200 dark:border-teal-800/50",
+      color: "text-teal-700 dark:text-teal-400",
+    },
+    {
+      Icon: Heart,
+      title: t("home.secondary.pastConviction.title"),
+      desc: t("home.secondary.pastConviction.desc"),
+      cta: t("home.secondary.pastConviction.cta"),
+      href: "/friends-family",
       accent: "#1d4ed8",
       bg: "bg-blue-50/60 dark:bg-blue-900/10",
       border: "border-blue-200 dark:border-blue-800/50",
       color: "text-blue-700 dark:text-blue-400",
-    },
-    {
-      Icon: Scale,
-      title: t("home.secondary.pastConviction.title"),
-      desc: t("home.secondary.pastConviction.desc"),
-      cta: t("home.secondary.pastConviction.cta"),
-      href: "/support/reputation",
-      accent: "#475569",
-      bg: "bg-slate-50/60 dark:bg-slate-900/10",
-      border: "border-slate-200 dark:border-slate-800/50",
-      color: "text-slate-700 dark:text-slate-400",
     },
   ];
 
@@ -176,6 +177,8 @@ export default function Home() {
               {t("home.hero.headlinePart1")}
               <br />
               <strong className="font-bold">{t("home.hero.headlinePart2")}</strong>
+              <br />
+              <span className="text-2xl sm:text-3xl font-light text-white/55 mt-1 block">{t("home.hero.headlinePart3")}</span>
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t("home.hero.subtitle")}
@@ -312,6 +315,32 @@ export default function Home() {
             <Link href="/directory" className="text-xs text-muted-foreground hover:text-foreground font-medium inline-flex items-center gap-1 transition-colors">
               Browse all resources <ArrowRight className="h-3 w-3" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why OpenDefender section */}
+      <section className="py-10 md:py-12 bg-white dark:bg-background border-t border-border/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <ScrollReveal>
+            <p className="text-center text-[15px] font-medium text-foreground mb-7 max-w-2xl mx-auto leading-relaxed">
+              {t("home.features.heading")}
+            </p>
+          </ScrollReveal>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {[
+              { Icon: AlertTriangle, title: t("home.features.card1Title"), desc: t("home.features.card1Desc"), color: "text-red-500" },
+              { Icon: Heart, title: t("home.features.card2Title"), desc: t("home.features.card2Desc"), color: "text-teal-500" },
+              { Icon: Globe2, title: t("home.features.card3Title"), desc: t("home.features.card3Desc"), color: "text-blue-500" },
+            ].map(({ Icon, title, desc, color }) => (
+              <ScrollReveal key={title}>
+                <div className="p-4 rounded-xl border border-border bg-muted/20 h-full">
+                  <Icon className={`h-4 w-4 ${color} mb-3`} strokeWidth={1.75} aria-hidden="true" />
+                  <p className="font-semibold text-sm text-foreground mb-1.5">{title}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>

@@ -69,22 +69,19 @@ export default {
     "hero": {
       "headlinePart1": "被捕了？面临指控？",
       "headlinePart2": "从这里开始。",
+      "headlinePart3": "在帮助被逮捕的人吗？",
       "subtitle": "为被告、家属及其倡导者提供免费、简明的法律指导，覆盖全部50个州，提供英语、西班牙语和中文服务。",
       "primaryCta": "立即获取帮助",
       "secondaryCta": "浏览所有资源"
     },
     "features": {
-      "title": "基于真实法律数据",
-      "subtitle": "我们的AI使用全面的法律数据库和法院记录，提供准确、最新的信息。",
-      "federalCourts": "法院记录",
-      "federalCourtsDesc": "通过CourtListener API获取数百万联邦和州法院判例。RECAP Archive整合提供免费联邦法院文件访问（PACER整合即将推出）。",
-      "federalCourtsStatus": "部分完成",
-      "stateLaws": "州和联邦法律",
-      "stateLawsDesc": "涵盖全部50个州加华盛顿特区，收录5,956项刑事法规，覆盖所有犯罪类别。联邦法规来自GovInfo.gov。全部51个辖区均链接至官方立法机构网站。",
-      "stateLawsStatus": "已启用 - 51个辖区",
-      "analytics": "刑事司法数据分析",
-      "analyticsDesc": "司法统计局（BJS）整合正在推进中。NCVS/NIBRS API实现及适当加权和分页功能正在验证中。",
-      "analyticsStatus": "部分完成"
+      "heading": "大多数人在见到律师之前就要经历最艰难的时刻。",
+      "card1Title": "最初24小时",
+      "card1Desc": "保释听证、起诉截止日期和您的沉默权，都发生在大多数人知道将面临什么之前。提前了解它们。",
+      "card2Title": "不仅仅是案件本身",
+      "card2Desc": "逮捕可能在几天内影响住房、就业、子女和福利，无论结果如何。立即了解哪些方面面临风险。",
+      "card3Title": "提供英语、西班牙语和中文",
+      "card3Desc": "法律信息不应该需要翻译。本网站的每个页面都提供三种语言。"
     },
     "trust": {
       "title": "我们的立场",
@@ -129,7 +126,7 @@ export default {
     "doors": {
       "sectionLabel": "您想从哪里开始？",
       "door1": {
-        "badge": "有人刚刚被捕",
+        "badge": "刚被逮捕，或帮助被逮捕的人",
         "headline": "最初几小时至关重要",
         "desc": "从逮捕到保释、第一次电话以及预审的逐步指导。",
         "cta": "从这里开始",
@@ -147,13 +144,13 @@ export default {
         "link3": "附带后果筛查工具"
       },
       "door3": {
-        "badge": "我为处于此情况的人提供帮助",
-        "headline": "为倡导者构建的工具",
-        "desc": "为公设辩护人、社会工作者、案件管理员和社区倡导者提供的资源。",
-        "cta": "前往倡导者中心",
-        "link1": "转处计划",
-        "link2": "法律援助目录",
-        "link3": "生活与家庭支持中心"
+        "badge": "逮捕扰乱了生活",
+        "headline": "保护最重要的事物",
+        "desc": "逮捕影响的不仅是案件。住房、就业、子女和福利可能在几天内受到影响。在一切崩溃之前寻求支持。",
+        "cta": "生活与家庭支持",
+        "link1": "住房稳定",
+        "link2": "就业权利",
+        "link3": "子女与托儿"
       }
     },
     "secondary": {
@@ -164,9 +161,9 @@ export default {
         "cta": "了解您的权利"
       },
       "lifeSupport": {
-        "title": "生活与家庭支持",
-        "desc": "住房、就业、托儿和心理健康资源。",
-        "cta": "寻找支持"
+        "title": "为倡导者和公设辩护人",
+        "desc": "为案件工作者和倡导者提供的入案清单、减轻工具和即用客户资源。",
+        "cta": "打开倡导者中心"
       },
       "findHelp": {
         "title": "寻找法律帮助",
@@ -174,9 +171,9 @@ export default {
         "cta": "搜索目录"
       },
       "pastConviction": {
-        "title": "过往定罪",
-        "desc": "清除过去的记录或了解您的背景调查权利。",
-        "cta": "了解更多"
+        "title": "帮助被逮捕的人",
+        "desc": "找到他们，了解情况，知道您现在可以做什么。",
+        "cta": "家庭支持指南"
       }
     },
     "stats": {
@@ -2032,6 +2029,8 @@ export default {
         "cardBTime": "即时结果。",
         "cardBButton": "获取即时指导 →",
         "validationLink": "了解我们如何验证AI回答 →",
+        "escapeHatchTitle": "还没准备好回答问题？",
+        "escapeHatchLink": "直接前往前24小时指南",
         "badgeAI": "AI生成的指导",
         "badgeRules": "规则引擎生成的指导"
       },
@@ -2135,7 +2134,8 @@ export default {
           "yes": "是的，正在被拘留",
           "bail": "已缴纳保释金释放",
           "recognizance": "自行具结释放（无需保释金）",
-          "no": "不，未被拘留"
+          "no": "不，未被拘留",
+          "unsure": "我不确定"
         },
         "back": "返回",
         "submitButton": "获取我的法律指导",
@@ -5910,6 +5910,40 @@ export default {
         "clock": "定罪后、出狱后或抵达您居住、工作或就读学校的任何司法管辖区时，须立即完成登记。未能登记或更新登记本身即构成独立的州和联邦重罪。",
         "action": "登记的级别和期限在量刑时确定。在做出任何认罪答辩之前，应咨询一位熟悉性犯罪者法律的律师——因为登记后果往往是永久性的，无法通过撤销定罪记录来消除。请特别询问最低登记期限以及州法律下是否有可提出的移除申请。",
         "linkLabel": "寻找法律帮助"
+      }
+    },
+    "stateRules": {
+      "heading": "{{stateName}}州法律",
+      "subheading": "这些规则适用于定罪后，而非仅因被捕。已经初级来源核实。",
+      "voting": "投票权",
+      "btb": "招聘（禁止勾选犯罪记录）",
+      "benefits": "SNAP/TANF毒品犯罪禁令",
+      "housing": "公平机会住房",
+      "verifiedOn": "核实于 {{date}}",
+      "mediumConfidenceNote": "基于二级来源 — 在依赖此信息前，请核对现行法规。",
+      "noStateData": "我们的数据库中尚无您所在州的具体数据。请访问 ccresourcecenter.org 查询最新规定。",
+      "votingStatus": {
+        "incarcerated": "服刑期间可投票",
+        "on_release": "释放后自动恢复",
+        "parole_complete": "假释结束后恢复",
+        "supervision_complete": "须完成全部监督才能恢复",
+        "waiting_period": "监督结束后须等待期满",
+        "application_required": "须提交申请",
+        "permanent_bar": "永久禁止（部分罪行）"
+      },
+      "btbStatus": {
+        "private_also": "适用于所有雇主",
+        "public_only": "仅适用于公共雇主",
+        "none": "无全州性法律"
+      },
+      "snapStatus": {
+        "no_ban": "无毒品定罪禁令",
+        "modified": "适用部分限制",
+        "full_ban": "毒品重罪终身禁止"
+      },
+      "housingStatus": {
+        "yes": "全州公平机会住房法律",
+        "no": "无全州法律（适用联邦规定）"
       }
     }
   },

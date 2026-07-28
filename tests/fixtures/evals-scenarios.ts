@@ -196,11 +196,12 @@ const p1DeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-08: NY × arraignment stage — discovery deadline present',
+    label: 'P1-08: NY × arraignment stage — discovery deadline present (CPL § 245.10, 2020)',
     input: { ...baseMapped, jurisdiction: 'NY', charges: 'domestic violence', caseStage: 'arraignment', custodyStatus: 'released' },
     expect: {
       deadlineEventKeywords: ['Discovery'],
-      deadlineTimeframeKeywords: ['15 days'],
+      // CPL § 245.10 (effective Jan 1, 2020): 35 days for defendant not in custody (custodyStatus: 'released')
+      deadlineTimeframeKeywords: ['35 days'],
       noDeadlineIsEstimate: true,
     },
   },
