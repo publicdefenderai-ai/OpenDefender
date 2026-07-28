@@ -676,6 +676,15 @@ export const CHARGE_KEYWORDS: Record<string, string[]> = {
 };
 
 function identifyChargeType(charges: string): string {
+  // Weapons-specific keywords take priority over the generic 'possession' keyword in the
+  // drug bucket. Without this check, "possession of a firearm" or "unlawful firearm
+  // possession" would match the drug bucket first and deliver drug guidance instead of
+  // weapons guidance.
+  const weaponPriorityKeywords = ['firearm', 'gun', 'weapon', 'concealed carry', 'armed'];
+  if (weaponPriorityKeywords.some(keyword => charges.includes(keyword))) {
+    return 'weapons';
+  }
+
   for (const [type, keywords] of Object.entries(CHARGE_KEYWORDS)) {
     if (keywords.some(keyword => charges.includes(keyword))) {
       return type;

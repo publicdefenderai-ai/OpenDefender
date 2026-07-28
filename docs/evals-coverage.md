@@ -110,11 +110,6 @@
 - 46 of 50 states plus DC and territories are covered only by the shared "unmapped state" code path.  The harness verifies the `isEstimate` flag and uncertainty notice fire, but does not verify the *actual deadline text* for those states because the engine uses `federal` defaults.
 - **Recommended follow-up:** Expand `jurisdictionRules` for at least 5–10 high-population states (IL, PA, WA, OH, GA, AZ, NJ, MI, NC, VA) and add deadline-accuracy scenarios for each.
 
-### Keyword matching order — "possession" before "firearm"
-- The `identifyChargeType` function iterates `CHARGE_KEYWORDS` in insertion order.  The `drug` bucket's keyword `'possession'` is matched before the `weapons` bucket's keyword `'firearm'`, so a charge like `"possession of a firearm"` or `"unlawful firearm possession"` maps to the **drug** bucket rather than **weapons**, producing a `benefits` consequence instead of the expected `firearms` consequence.
-- **Impact:** Users whose charge description includes the word "possession" and a firearms-related word will see drug-type guidance, not weapons guidance.
-- **Recommended fix:** Add weapon-specific keywords that are more specific than `'possession'`, or sort the `CHARGE_KEYWORDS` check so `weapons` is evaluated before `drug`, or add compound-keyword matching.
-
 ### Case stages not fully exercised
 - `pretrial` and `trial` stages are each covered by a single "non-empty `immediateActions`" scenario.  The deadline logic for those stages (discovery and trial deadlines) is not individually verified per jurisdiction.
 

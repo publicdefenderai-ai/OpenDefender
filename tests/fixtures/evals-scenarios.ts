@@ -511,14 +511,11 @@ const p2ChargeConsequenceScenarios: EvalScenario[] = [
     },
   },
   {
-    // NOTE: "unlawful firearm possession" maps to the *drug* bucket because the
-    // drug keyword list includes 'possession', which is matched before 'firearm'.
-    // This is a known engine gap documented in docs/evals-coverage.md.
-    // Use a charge string without 'possession' to reliably reach the weapons bucket.
-    label: 'P2-22: "carrying a firearm without a permit" → firearms consequence present',
-    input: { ...baseMapped, jurisdiction: 'FL', charges: 'carrying a firearm without a permit', caseStage: 'arraignment', custodyStatus: 'released' },
+    label: 'P2-22: "unlawful firearm possession" → firearms consequence present (not drug)',
+    input: { ...baseMapped, jurisdiction: 'FL', charges: 'unlawful firearm possession', caseStage: 'arraignment', custodyStatus: 'released' },
     expect: {
       requiredConsequenceCategories: ['firearms'],
+      absentConsequenceCategories: ['benefits'],
     },
   },
 
