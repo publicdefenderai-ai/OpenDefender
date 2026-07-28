@@ -430,3 +430,90 @@ describe('buildPlainText — disclaimer always present', () => {
     }
   });
 });
+
+// ── buildPlainText: charge-type cards (driverLicense / sexOffender) ───────────
+//
+// Verifies that when chargeRisks are merged into activeRisks and passed to
+// buildPlainText(), their section headers appear in the plain-text export.
+// The t() stub returns the i18n key so assertions are key-based.
+
+describe('buildPlainText — charge-type risk cards appear in export', () => {
+  const t = (key: string, _vars?: Record<string, unknown>) => key;
+  const fixedDate = new Date('2026-01-01T12:00:00Z');
+
+  it('driverLicense risk id → title and body keys present in output', () => {
+    const output = buildPlainText(t, [{ id: 'driverLicense' }], 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.risks.driverLicense.title');
+    expect(output).toContain('collateralConsequences.risks.driverLicense.what');
+    expect(output).toContain('collateralConsequences.risks.driverLicense.clock');
+    expect(output).toContain('collateralConsequences.risks.driverLicense.action');
+  });
+
+  it('sexOffender risk id → title and body keys present in output', () => {
+    const output = buildPlainText(t, [{ id: 'sexOffender' }], 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.risks.sexOffender.title');
+    expect(output).toContain('collateralConsequences.risks.sexOffender.what');
+    expect(output).toContain('collateralConsequences.risks.sexOffender.clock');
+    expect(output).toContain('collateralConsequences.risks.sexOffender.action');
+  });
+
+  it('driverLicenseCheck risk id → title and body keys present in output', () => {
+    const output = buildPlainText(t, [{ id: 'driverLicenseCheck' }], 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.risks.driverLicenseCheck.title');
+    expect(output).toContain('collateralConsequences.risks.driverLicenseCheck.what');
+  });
+
+  it('Skip path (no charge risks) → no driverLicense or sexOffender keys in output', () => {
+    // When the user clicks Skip, chargeType=null and chargeRisks=[]; only
+    // question-answer risks flow through.  Neither charge-type key should appear.
+    const output = buildPlainText(t, [{ id: 'housing' }, { id: 'employment' }], 'en', fixedDate);
+    expect(output).not.toContain('collateralConsequences.risks.driverLicense.title');
+    expect(output).not.toContain('collateralConsequences.risks.sexOffender.title');
+    expect(output).not.toContain('collateralConsequences.risks.driverLicenseCheck.title');
+  });
+
+  it('Skip with no question answers (all-clear) → no charge-type keys in output', () => {
+    const output = buildPlainText(t, [], 'en', fixedDate);
+    expect(output).not.toContain('collateralConsequences.risks.driverLicense.title');
+    expect(output).not.toContain('collateralConsequences.risks.sexOffender.title');
+    expect(output).not.toContain('collateralConsequences.risks.driverLicenseCheck.title');
+  });
+
+  it('DUI + housing answer → both driverLicense and housing keys in output', () => {
+    // Simulates activeRisks after DUI charge type and "yes" to housing question
+    const activeRisks = [{ id: 'driverLicense' }, { id: 'housing' }];
+    const output = buildPlainText(t, activeRisks, 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.risks.driverLicense.title');
+    expect(output).toContain('collateralConsequences.risks.housing.title');
+    expect(output).not.toContain('collateralConsequences.risks.sexOffender.title');
+  });
+
+  it('sex_offense + immigration answer → both sexOffender and immigration keys in output', () => {
+    // Simulates activeRisks after sex_offense charge type and "yes" to immigration question
+    const activeRisks = [{ id: 'sexOffender' }, { id: 'immigration' }];
+    const output = buildPlainText(t, activeRisks, 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.risks.sexOffender.title');
+    expect(output).toContain('collateralConsequences.risks.immigration.title');
+    expect(output).not.toContain('collateralConsequences.risks.driverLicense.title');
+  });
+
+  it('other charge type with question risks → no charge-type card titles in output', () => {
+    // "other" maps to no chargeRisks; only question-answer risks flow through
+    const activeRisks = [{ id: 'supervision' }, { id: 'children' }];
+    const output = buildPlainText(t, activeRisks, 'en', fixedDate);
+    expect(output).not.toContain('collateralConsequences.risks.driverLicense.title');
+    expect(output).not.toContain('collateralConsequences.risks.sexOffender.title');
+    expect(output).toContain('collateralConsequences.risks.supervision.title');
+    expect(output).toContain('collateralConsequences.risks.children.title');
+  });
+
+  it('charge-type section is formatted as ** title ** (bold markers)', () => {
+    const output = buildPlainText(t, [{ id: 'driverLicense' }], 'en', fixedDate);
+    expect(output).toContain('** collateralConsequences.risks.driverLicense.title **');
+  });
+
+  it('sexOffender section is formatted as ** title ** (bold markers)', () => {
+    const output = buildPlainText(t, [{ id: 'sexOffender' }], 'en', fixedDate);
+    expect(output).toContain('** collateralConsequences.risks.sexOffender.title **');
+  });
+});
