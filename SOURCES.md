@@ -128,6 +128,45 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 | New Jersey | NJ Statutes Annotated Title 2C, 39, 54 | 2026 | ~127 | njleg.state.nj.us; ~70 synthesized codes corrected against N.J.S.A. 2C (New Jersey Code of Criminal Justice) (2026-07) |
 | Virginia | Code of Virginia Titles 4.1, 18.2, 38.2, 46.2, 54.1, 58.1 | 2026 | ~130 | law.lis.virginia.gov; ~55 synthesized codes corrected; existing correct entries (18.2-32, 18.2-57, 18.2-96, 18.2-266, 46.2-301) confirmed (2026-07) |
 | Arizona | Arizona Revised Statutes Titles 13, 28, 42 | 2026 | ~128 | azleg.gov; ~45 synthesized codes corrected; existing correct entries (§§ 13-1105, 13-1204, 13-1805, 28-693) confirmed (2026-07) |
+| Alabama | Alabama Code Title 13A | 2026 | ~131 | law.justia.com/codes/alabama; all synthesized codes replaced; key: murder 13A-6-2, assault 13A-6-20/130, rape 13A-6-61/62, DUI 32-5A-191 (2026-07) |
+| Alaska | Alaska Statutes Title 11 | 2026 | ~131 | akleg.gov; all synthesized codes replaced; key: murder 11.41.100, SA 11.41.410/420, manslaughter 11.41.120, DUI 28.35.030 (2026-07) |
+| Connecticut | Connecticut General Statutes Chapter 53a | 2026 | ~131 | cga.ct.gov; all synthesized codes replaced; key: murder 53a-54a/54b, manslaughter 53a-55/56, larceny 53a-122, DUI 14-227a (2026-07) |
+| Hawaii | Hawaii Revised Statutes Title 37 | 2026 | ~131 | capitol.hawaii.gov; all synthesized codes replaced; key: murder 707-701/701.5, SA 707-730/731/732, OVUII 291E-61 (2026-07) |
+| Idaho | Idaho Statutes Title 18 | 2026 | ~131 | legislature.idaho.gov; all synthesized codes replaced; key: murder 18-4003, manslaughter 18-4006, rape 18-6101, burglary 18-1401, DUI 18-8004 (2026-07) |
+| Indiana | Indiana Code Title 35 | 2026 | ~131 | iga.in.gov; all synthesized codes replaced; key: murder 35-42-1-1, rape 35-42-4-1, robbery 35-42-5-1, OWI 9-30-5-1 (2026-07) |
+| Iowa | Iowa Code Title XVI | 2026 | ~131 | legis.iowa.gov; all synthesized codes replaced; key: murder 707.2, SA 709.1, OWI 321J.2 (2026-07) |
+| Kansas | Kansas Statutes Chapter 21 | 2026 | ~131 | kslegislature.org; all synthesized codes replaced; key: murder 21-5402, SA 21-5503, DUI 8-1567 (2026-07) |
+| Kentucky | Kentucky Revised Statutes | 2026 | ~131 | legislature.ky.gov; all synthesized codes replaced; key: murder 507.020, SA 510.110, DUI 189A.010 (2026-07) |
+| Louisiana | Louisiana Revised Statutes Title 14 | 2026 | ~131 | legis.la.gov; all synthesized codes replaced; key: murder 14:30/30.1, SA 14:42, DWI 14:98 (2026-07) |
+| Maine | Maine Revised Statutes Title 17-A | 2026 | ~131 | legislature.maine.gov; all synthesized codes replaced; key: murder 17-A § 201, SA 17-A § 253, OUI 29-A § 2411 (2026-07) |
+| Maryland | Maryland Code Criminal Law Article | 2026 | ~131 | mgaleg.maryland.gov; all synthesized codes replaced; key: murder CL § 2-201, SA CL § 3-303, DUI TR § 21-902 (2026-07) |
+| Massachusetts | Massachusetts General Laws Ch. 265–274 | 2026 | ~131 | malegislature.gov; all synthesized codes replaced; key: murder 265 § 1, SA 265 § 22, OUI 90 § 24 (2026-07) |
+| Minnesota | Minnesota Statutes Chapter 609 | 2026 | ~131 | revisor.mn.gov; all synthesized codes replaced; key: murder 609.185, SA 609.342, DWI 169A.20 (2026-07) |
+| Mississippi | Mississippi Code Title 97 | 2026 | ~131 | law.justia.com/codes/mississippi; all synthesized codes replaced; key: murder 97-3-19, SA 97-3-95, DUI 63-11-30 (2026-07) |
+| Montana | Montana Code Annotated Title 45 | 2026 | ~131 | leg.mt.gov; all synthesized codes replaced; key: murder 45-5-102, SA 45-5-502, DUI 61-8-401 (2026-07) |
+| Nebraska | Nebraska Revised Statutes Chapter 28 | 2026 | ~131 | nebraskalegislature.gov; all synthesized codes replaced; key: murder 28-303, SA 28-319, DUI 60-6,196 (2026-07) |
+| Nevada | Nevada Revised Statutes Chapter 200 | 2026 | ~131 | leg.state.nv.us; all synthesized codes replaced; key: murder 200.010, SA 200.366, DUI 484C.110 (2026-07) |
+| New Hampshire | New Hampshire RSA Title LXII Ch. 630 | 2026 | ~131 | gencourt.state.nh.us; all synthesized codes replaced; key: murder 630:1-a, SA 632-A:2, DWI 265-A:2 (2026-07) |
+| New Mexico | New Mexico Statutes Chapter 30 | 2026 | ~131 | nmlegis.gov; all synthesized codes replaced; key: murder 30-2-1, SA 30-9-11, DWI 66-8-102 (2026-07) |
+| North Dakota | North Dakota Century Code Title 12.1 | 2026 | ~131 | legis.nd.gov; all synthesized codes replaced; key: murder 12.1-16-01, SA 12.1-20-03, DUI 39-08-01 (2026-07) |
+| Oklahoma | Oklahoma Statutes Title 21 | 2026 | ~131 | oscn.net; all synthesized codes replaced; key: murder 21 § 701.7, SA 21 § 1111, DUI 47 § 11-902 (2026-07) |
+| Oregon | Oregon Revised Statutes Chapter 163 | 2026 | ~131 | oregonlegislature.gov; all synthesized codes replaced; key: murder 163.115, SA 163.375, DUII 813.010 (2026-07) |
+| Rhode Island | Rhode Island General Laws Ch. 11-23 | 2026 | ~131 | webserver.rilin.state.ri.us; all synthesized codes replaced; key: murder 11-23-1, SA 11-37-2, DUI 31-27-2 (2026-07) |
+| South Carolina | South Carolina Code Title 16 | 2026 | ~131 | scstatehouse.gov; all synthesized codes replaced; key: murder 16-3-10, SA 16-3-652, DUI 56-5-2930 (2026-07) |
+| South Dakota | South Dakota Codified Laws Title 22 | 2026 | ~131 | sdlegislature.gov; all synthesized codes replaced; key: murder 22-16-4, SA 22-22-1, DUI 32-23-1 (2026-07) |
+| Tennessee | Tennessee Code Annotated Title 39 | 2026 | ~131 | wapp.capitol.tn.gov; all synthesized codes replaced; key: murder 39-13-202, SA 39-13-503, DUI 55-10-401 (2026-07) |
+| Utah | Utah Code Title 76 | 2026 | ~131 | le.utah.gov; all synthesized codes replaced; key: murder 76-5-202, SA 76-5-402, DUI 41-6a-502 (2026-07) |
+| Vermont | Vermont Statutes Annotated Title 13 | 2026 | ~131 | legislature.vermont.gov; all synthesized codes replaced; key: murder 13 § 2301, SA 13 § 3252, DUI 23 § 1201 (2026-07) |
+| Wisconsin | Wisconsin Statutes Chapter 940 | 2026 | ~131 | docs.legis.wisconsin.gov; all synthesized codes replaced; key: murder 940.01, SA 940.225, OWI 346.63 (2026-07) |
+| Wyoming | Wyoming Statutes Title 6 | 2026 | ~131 | wyoleg.gov; all synthesized codes replaced; key: murder 6-2-101, SA 6-2-302, DUI 31-5-233 (2026-07) |
+| West Virginia | West Virginia Code Chapter 61 | 2026 | ~130 | law.justia.com/codes/west-virginia; all synthesized codes replaced; key: murder 61-2-1, assault 61-2-9, SA 61-8B-3, robbery 61-2-12, DUI 17C-5-2 (2026-07) |
+| District of Columbia | D.C. Code Title 22 | 2026 | ~131 | code.dccouncil.gov; all synthesized codes replaced; key: murder 22-2101, SA 22-3002, DUI 50-2201.05 (2026-07) |
+| Colorado | Colorado Revised Statutes Title 18 | 2026 | ~131 | leg.colorado.gov; all synthesized codes replaced; key: murder 18-3-102, SA 18-3-402, DUI 42-4-1301 (2026-07) |
+| American Samoa | ASCA Title 46 (Criminal Justice) | 2026 | ~131 | asbar.org; all synthesized codes replaced; key: murder 46.3502, assault 46.3520, robbery 46.4002, drug 13.1022 (2026-07) |
+| Guam | Guam Code Annotated Title 9 (9 GCA) | 2026 | ~131 | law.justia.com/codes/guam; all synthesized codes replaced; key: murder 9 GCA § 16.30, assault 9 GCA § 19.10, robbery 9 GCA § 40.10, drug 9 GCA § 67.401 (2026-07) |
+| N. Mariana Islands | CNMI Commonwealth Code Title 6 (6 CMC) | 2026 | ~131 | cnmilaw.org; all synthesized codes replaced; key: murder 6 CMC § 1101, assault 6 CMC § 1201, SA 6 CMC § 1301, robbery 6 CMC § 1411 (2026-07) |
+| Puerto Rico | Puerto Rico Penal Code (Ley 146-2012) | 2026 | ~131 | bvirtualogp.pr.gov; all synthesized codes replaced; key: murder Art. 93, assault Art. 122, robbery Art. 189, drug Art. 401 Ley 4-2017, weapons Ley 168-2019 (2026-07) |
+| US Virgin Islands | Virgin Islands Code Title 14 (V.I.C.) | 2026 | ~131 | law.justia.com/codes/virgin-islands; all synthesized codes replaced; key: murder 14 V.I.C. § 921, assault 14 V.I.C. § 295, burglary 14 V.I.C. § 441, drug 19 V.I.C. § 604 (2026-07) |
 
 **How these are used:**
 
