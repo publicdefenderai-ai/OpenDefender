@@ -1,7 +1,7 @@
 // Enhanced Legal Guidance Generation Engine
 // Implements charge-specific, jurisdiction-specific, and case-stage guidance
 
-import { criminalCharges, getChargeById } from '../../shared/criminal-charges';
+import { criminalCharges, getChargeById, getVerifiedCitation } from '../../shared/criminal-charges';
 
 interface CaseData {
   jurisdiction: string;
@@ -906,7 +906,11 @@ function buildAvoidActionsForCharges(specificCharges: any[], stageData: any): st
   // Add charge-specific avoid actions
   specificCharges.forEach(charge => {
     if (charge.category === 'felony') {
-      avoidActions.push(`Contact with the alleged victim while charges are pending can result in additional charges or bail violations (${charge.code}).`);
+      const citationLabel = getVerifiedCitation(charge);
+      avoidActions.push(
+        `Contact with the alleged victim while charges are pending can result in additional charges or bail violations` +
+        (citationLabel ? ` (${citationLabel})` : '') + '.',
+      );
     }
     if (charge.name.toLowerCase().includes('domestic')) {
       avoidActions.push('Do not violate any restraining orders');

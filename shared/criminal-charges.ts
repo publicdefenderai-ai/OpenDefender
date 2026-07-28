@@ -147,8 +147,16 @@ export interface CriminalCharge {
   descriptionEs?: string;
   id: string;
   name: string;
-  /** Internal section number. Generated — NOT verified against real state statutes unless
-   *  dataConfidence is 'high'. Never display this to users unless confidence is 'high'. */
+  /**
+   * Internal section number. Generated — NOT verified against real state statutes unless
+   * dataConfidence is 'high'. Never display this to users unless confidence is 'high'.
+   *
+   * @deprecated Access via `getVerifiedCitation(charge)` instead.
+   *   Directly reading `charge.code` risks surfacing a synthesized (wrong) statute
+   *   number to users in unaudited states. `getVerifiedCitation()` returns null when
+   *   no high-confidence citation is available, which is the correct "no data" signal.
+   *   Use `isCitationVerified(charge)` as a boolean gate before showing any citation.
+   */
   code: string;
   jurisdiction: string;
   category: 'felony' | 'misdemeanor' | 'infraction';
