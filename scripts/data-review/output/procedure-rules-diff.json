@@ -1,0 +1,425 @@
+{
+  "runAt": "2026-07-28T21:28:48.157Z",
+  "totalChecked": 52,
+  "freshCount": 52,
+  "staleCount": 0,
+  "staleThresholdMonths": 12,
+  "results": [
+    {
+      "jurisdiction": "federal",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "CA",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "NY",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "TX",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "FL",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "IL",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "PA",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "OH",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "GA",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "NC",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "MI",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "NJ",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "VA",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "WA",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "AZ",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "MA",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "TN",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "IN",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "MO",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "MD",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "WI",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "CO",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "MN",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "SC",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "AL",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "LA",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "KY",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "OR",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "OK",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "CT",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "UT",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "IA",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "NV",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "AR",
+      "lastVerified": "2026-03",
+      "ageMonths": 4,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "MS",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "KS",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "NM",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "NE",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "WV",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "ID",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "HI",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "NH",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "ME",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "MT",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "RI",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "DE",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "SD",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "ND",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "AK",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "VT",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "WY",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    },
+    {
+      "jurisdiction": "DC",
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
+      "dataConfidence": "high",
+      "stale": false,
+      "checkedAt": "2026-07-28T21:28:48.157Z"
+    }
+  ]
+}
