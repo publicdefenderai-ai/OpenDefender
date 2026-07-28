@@ -154,6 +154,46 @@ const jurisdictionRules = {
     bailSystem: 'Traditional bail system',
     discoveryDeadline: '10 days before trial'
   },
+  'AZ': {
+    arraignmentDeadline: 'Within 48 hours if in custody',
+    preliminaryHearing: 'Within 10 days if in custody',
+    speedyTrialRight: '150 days from arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+    discoveryDeadline: '10 days after arraignment'
+  },
+  'NJ': {
+    arraignmentDeadline: 'Within 48 hours',
+    preliminaryHearing: 'Within 20 days for indictable offenses',
+    speedyTrialRight: '180 days from indictment',
+    publicDefenderIncome: 'Individual: $25,000, Family of 2: $34,000',
+    bailSystem: 'Pretrial services assessment — bail reform',
+    discoveryDeadline: '20 days after arraignment'
+  },
+  'MI': {
+    arraignmentDeadline: 'Within 48 hours',
+    preliminaryHearing: 'Within 14 days',
+    speedyTrialRight: '180 days from arrest',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+    discoveryDeadline: '21 days after arraignment'
+  },
+  'NC': {
+    arraignmentDeadline: 'Within 48 hours',
+    preliminaryHearing: 'Within 15 days if in custody',
+    speedyTrialRight: '120 days if in custody',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+    discoveryDeadline: '15 days after arraignment'
+  },
+  'VA': {
+    arraignmentDeadline: 'Within 48 hours',
+    preliminaryHearing: 'Within 10 days if in custody',
+    speedyTrialRight: '5 months from arrest for misdemeanors',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+    discoveryDeadline: '21 days after arraignment'
+  },
   'federal': {
     arraignmentDeadline: 'Without unnecessary delay',
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
@@ -955,7 +995,7 @@ function buildNextSteps(caseData: CaseData, stageData: any): string[] {
 
 // Jurisdictions with specific deadline data in jurisdictionRules.
 // Used by both buildDeadlines (rule-based path) and stampEstimateDeadlines (Claude path).
-export const KNOWN_JURISDICTIONS = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'FEDERAL'];
+export const KNOWN_JURISDICTIONS = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'AZ', 'NJ', 'MI', 'NC', 'VA', 'FEDERAL'];
 
 /**
  * Stamps isEstimate: true on every deadline for jurisdictions that are not in the
@@ -1295,7 +1335,7 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackC
   const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
 
   // Jurisdiction not specifically mapped — using federal defaults
-  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'FEDERAL'];
+  const knownJurisdictions = ['CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'AZ', 'NJ', 'MI', 'NC', 'VA', 'FEDERAL'];
   if (!knownJurisdictions.includes(jurisdiction)) {
     items.push({
       area: 'Jurisdiction-Specific Deadlines',

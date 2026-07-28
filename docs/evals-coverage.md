@@ -11,10 +11,10 @@
 
 | Dimension | Count |
 |---|---|
-| Total scenarios | 77 |
-| Passing | 77 |
+| Total scenarios | 92 |
+| Passing | 92 |
 | Failing | 0 |
-| Priority 1 (Deadlines) | 37 |
+| Priority 1 (Deadlines) | 52 |
 | Priority 2 (Collateral consequences) | 26 |
 | Priority 3 (Alerts, coverage, uncertainties) | 35 |
 
@@ -37,13 +37,18 @@
 | WA | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | OH | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | GA | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| AZ | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| NJ | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| MI | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| NC | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| VA | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | federal | Mapped | 2 | "Without unnecessary delay" language |
 | CO | Unmapped | 1 | isEstimate + uncertainty notice |
-| AZ | Unmapped | 1 | isEstimate + uncertainty notice |
+| OR | Unmapped | 1 | isEstimate + uncertainty notice |
 | NV | Unmapped | 1 | isEstimate + uncertainty notice |
 | MT | Unmapped | 1 | isEstimate + uncertainty notice |
 
-**41 states not individually covered** — all unmapped states exercise the same code path; `CO`, `AZ`, `NV`, and `MT` serve as representative samples.
+**36 states not individually covered** — all unmapped states exercise the same code path; `CO`, `OR`, `NV`, and `MT` serve as representative samples.
 
 ### Charge types covered
 
@@ -83,11 +88,11 @@
 
 ## What each priority group tests
 
-### Priority 1 — Deadline accuracy (P1-01 through P1-37)
-- **Mapped jurisdictions (CA, TX, NY, FL, IL, PA, WA, OH, GA):** Each arraignment deadline string matches the constant in `jurisdictionRules` exactly (substring match).  Weekend caveat in CA is specifically tested (`'72 hours'`).
+### Priority 1 — Deadline accuracy (P1-01 through P1-52)
+- **Mapped jurisdictions (CA, TX, NY, FL, IL, PA, WA, OH, GA, AZ, NJ, MI, NC, VA):** Each arraignment deadline string matches the constant in `jurisdictionRules` exactly (substring match).  Weekend caveat in CA is specifically tested (`'72 hours'`).
 - **Mapped jurisdictions:** Discovery and preliminary hearing deadlines are present at arraignment stage.
 - **Mapped jurisdictions:** No deadline has `isEstimate: true` — the engine should treat mapped rules as authoritative.
-- **Unmapped states (CO, AZ, NV, MT):** At least one deadline has `isEstimate: true`, and the `Jurisdiction-Specific Deadlines` uncertainty notice fires.
+- **Unmapped states (CO, OR, NV, MT):** At least one deadline has `isEstimate: true`, and the `Jurisdiction-Specific Deadlines` uncertainty notice fires.
 - **DUI × CA:** `immediateActions` contains the DMV hearing window text, including the `'10 days'` window.
 - **Federal:** Arraignment deadline timeframe contains `'Without unnecessary delay'`.
 
@@ -110,7 +115,7 @@
 
 ### Jurisdictions not individually covered
 - 41 of 50 states plus DC and territories are covered only by the shared "unmapped state" code path.  The harness verifies the `isEstimate` flag and uncertainty notice fire, but does not verify the *actual deadline text* for those states because the engine uses `federal` defaults.
-- **Recommended follow-up:** Expand `jurisdictionRules` for additional high-population states (AZ, NJ, MI, NC, VA) and add deadline-accuracy scenarios for each.
+- **Recommended follow-up:** Expand `jurisdictionRules` for additional states beyond the current 14 mapped (CA, TX, NY, FL, IL, PA, WA, OH, GA, AZ, NJ, MI, NC, VA) and add deadline-accuracy scenarios for each.
 
 ### Case stages not fully exercised
 - `pretrial` and `trial` stages are each covered by a single "non-empty `immediateActions`" scenario.  The deadline logic for those stages (discovery and trial deadlines) is not individually verified per jurisdiction.
