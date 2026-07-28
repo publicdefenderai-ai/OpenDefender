@@ -111,6 +111,45 @@
 
 ---
 
+## Rule-change regression detection
+
+### How the feedback loop works
+
+The P1 deadline scenarios are the **authoritative source of truth** for what the engine should output for each mapped jurisdiction.  Each scenario's `deadlineTimeframeKeywords` is a verbatim substring of the corresponding `jurisdictionRules` constant in `server/services/guidance-engine.ts`.
+
+This means:
+
+> **Changing a `jurisdictionRules` value MUST cause the corresponding P1 scenario to fail.**
+
+For example, if `jurisdictionRules.IL.arraignmentDeadline` is updated from `"Within 48 hours"` to `"Within 24 hours"`, scenario `P1-23` (which asserts `deadlineTimeframeKeywords: ['48 hours']`) will fail immediately on the next `npx vitest run`.  The failure surfaces the discrepancy before it reaches users.
+
+### Canary tests
+
+`tests/evals-harness.test.ts` contains a dedicated `describe('Canary — P1 deadline scenarios catch rule-constant changes', ...)` block that provides an extra layer of protection for two representative jurisdictions (IL and NY):
+
+| Canary test | Jurisdiction | Canonical keyword | Corresponding P1 scenario |
+|---|---|---|---|
+| IL arraignment keyword present | IL | `"48 hours"` | P1-23 |
+| IL arraignment sensitivity (wrong keyword absent) | IL | `"24 hours"` must be absent alone | P1-23 |
+| NY arraignment keyword present | NY | `"24 hours"` | P1-07 |
+
+These canary tests fail alongside the matching P1 scenario whenever the rule constant changes, making the regression doubly visible in CI output.
+
+### Procedure when updating a `jurisdictionRules` value
+
+1. Update the constant in `server/services/guidance-engine.ts`.
+2. Run `npx vitest run tests/evals-harness.test.ts`.
+3. Failing P1 scenarios identify every scenario whose `deadlineTimeframeKeywords` no longer matches — update those keywords to the new string.
+4. If the changed jurisdiction is IL or NY, update the `canonicalKeyword` / `wrongKeyword` values in the canary block as well.
+5. Obtain attorney review of the updated rule text.
+6. Re-run `npx vitest run` to confirm all scenarios pass before merging.
+
+### Why the scenarios are the source of truth (not the rule constants)
+
+The scenarios were written by engineers reading the rule constants, but they will be reviewed by attorneys before launch.  After attorney review, the scenario expected values become the canonical statement of correct behaviour.  If a rule constant ever diverges from a scenario expected value, the *scenario* (attorney-reviewed) wins — the rule constant must be corrected and the attorney re-consulted.
+
+---
+
 ## Known gaps
 
 ### Jurisdictions not individually covered

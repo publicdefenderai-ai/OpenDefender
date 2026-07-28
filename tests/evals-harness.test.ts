@@ -301,3 +301,148 @@ describe('P3 — Missing background fields fire uncertainty notices', () => {
     });
   }
 });
+
+// ── Canary: rule-change regression detection ──────────────────────────────────
+//
+// PURPOSE
+// -------
+// The P1 deadline scenarios are the authoritative source of truth for what the
+// engine should output for each jurisdiction.  They are parameterised against
+// the *keyword* expected from `jurisdictionRules` in guidance-engine.ts.
+//
+// This means:
+//   - If an engineer updates `jurisdictionRules.IL.arraignmentDeadline` from
+//     "Within 48 hours" to "Within 24 hours", the P1-23 scenario (which asserts
+//     `deadlineTimeframeKeywords: ['48 hours']`) will FAIL immediately.
+//   - The failure surfaces the discrepancy before it reaches users.
+//   - The fix is: update the scenario expected value *and* get attorney review
+//     of the new rule text, then re-run the harness.
+//
+// The tests below verify the canary mechanism is live — they confirm that the
+// actual engine output matches the P1 keyword, AND that a deliberately wrong
+// keyword is absent.  If the engine output ever stops containing the canonical
+// keyword (because the rule constant changed), BOTH the P1 scenario and these
+// canary assertions will fail, making the regression impossible to miss.
+//
+// HOW TO USE WHEN A RULE CHANGES
+// --------------------------------
+// 1.  Update `jurisdictionRules` in server/services/guidance-engine.ts.
+// 2.  Run `npx vitest run tests/evals-harness.test.ts`.
+// 3.  Failing P1 scenarios identify every scenario whose expected keyword no
+//     longer matches.  Update those `deadlineTimeframeKeywords` values to the
+//     new string.
+// 4.  Update the canary assertion below (expectedKeyword / wrongKeyword) to
+//     match the new canonical value.
+// 5.  Obtain attorney review of the updated rule text before merging.
+
+describe('Canary — P1 deadline scenarios catch rule-constant changes', () => {
+  // ── IL arraignment: canonical value is "48 hours" ─────────────────────────
+  // If jurisdictionRules.IL.arraignmentDeadline changes, P1-23 will fail AND
+  // this canary will fail.  Both failures must be resolved together.
+  it('IL arraignment deadline output contains canonical keyword "48 hours"', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'IL',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+
+    const deadlines = result.deadlines ?? [];
+    const arraignment = deadlines.filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+
+    const canonicalKeyword = '48 hours';
+    const found = arraignment.some(d =>
+      d.timeframe.toLowerCase().includes(canonicalKeyword.toLowerCase()),
+    );
+
+    expect(
+      found,
+      `[Canary: IL arraignment]\n` +
+      `  The canonical P1-23 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► This means jurisdictionRules.IL.arraignmentDeadline no longer contains\n` +
+      `    "${canonicalKeyword}".  Update the rule constant, update the P1-23\n` +
+      `    scenario's deadlineTimeframeKeywords, update the canonicalKeyword in\n` +
+      `    this canary, and obtain attorney review before merging.`,
+    ).toBe(true);
+  });
+
+  it('IL arraignment deadline does NOT contain wrong keyword "24 hours" (canary sensitivity check)', () => {
+    // Asserts the test is actually sensitive: if the rule were changed to
+    // "Within 24 hours", the keyword "48 hours" would disappear from the output
+    // and the P1-23 scenario would fail.  This test confirms those two values
+    // are distinguishable by the harness.
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'IL',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+
+    const deadlines = result.deadlines ?? [];
+    const arraignment = deadlines.filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+
+    // "24 hours" must NOT appear as the sole timeframe: IL is a 48-hour state.
+    // If this assertion ever fails it means IL was changed to a 24-hour rule
+    // and P1-23 also needs to be updated.
+    const wrongKeyword = '24 hours';
+    const wrongFound = arraignment.some(
+      d =>
+        d.timeframe.toLowerCase().includes(wrongKeyword) &&
+        !d.timeframe.toLowerCase().includes('48'),
+    );
+
+    expect(
+      wrongFound,
+      `[Canary: IL arraignment sensitivity]\n` +
+      `  The wrong keyword "${wrongKeyword}" (without "48 hours") was found in an ` +
+      `IL arraignment timeframe, indicating jurisdictionRules.IL.arraignmentDeadline\n` +
+      `  may have been updated without updating P1-23 and this canary.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}`,
+    ).toBe(false);
+  });
+
+  // ── NY arraignment: canonical value is "24 hours" ─────────────────────────
+  // Mirrors the IL canary for a jurisdiction whose rule differs ("24 hours")
+  // so we confirm both 48-hour and 24-hour canonical values are under guard.
+  it('NY arraignment deadline output contains canonical keyword "24 hours"', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'NY',
+      charges: 'assault',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+
+    const deadlines = result.deadlines ?? [];
+    const arraignment = deadlines.filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+
+    const canonicalKeyword = '24 hours';
+    const found = arraignment.some(d =>
+      d.timeframe.toLowerCase().includes(canonicalKeyword.toLowerCase()),
+    );
+
+    expect(
+      found,
+      `[Canary: NY arraignment]\n` +
+      `  The canonical P1-07 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► This means jurisdictionRules.NY.arraignmentDeadline no longer contains\n` +
+      `    "${canonicalKeyword}".  Update the rule constant, update the P1-07\n` +
+      `    scenario's deadlineTimeframeKeywords, update the canonicalKeyword in\n` +
+      `    this canary, and obtain attorney review before merging.`,
+    ).toBe(true);
+  });
+});
