@@ -11,6 +11,7 @@ import { useTranslation } from "react-i18next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { buildPlainText } from "@/lib/build-plain-text";
 
 /* ------------------------------------------------------------------ */
 /* Types                                                                */
@@ -206,34 +207,9 @@ export default function CollateralConsequences() {
     ...RISKS.filter(r => answers[r.id] === "yes"),
   ].sort((a, b) => a.urgency - b.urgency);
 
-  /* Plain-text export builder (inside component so t() is in scope) */
-  function buildPlainText(): string {
-    const lang = i18n.language;
-    const locale = lang.startsWith("zh") ? "zh-CN" : lang.startsWith("es") ? "es-ES" : "en-US";
-    const dateStr = new Date().toLocaleDateString(locale, { year: "numeric", month: "long", day: "numeric" });
-
-    const lines: string[] = [
-      t("collateralConsequences.printHeading"),
-      t("collateralConsequences.printDate", { date: dateStr }),
-      "",
-    ];
-
-    if (activeRisks.length === 0) {
-      lines.push(t("collateralConsequences.printNoRisk"));
-    } else {
-      for (const r of activeRisks) {
-        lines.push(`** ${t(`collateralConsequences.risks.${r.id}.title`)} **`);
-        lines.push(t(`collateralConsequences.risks.${r.id}.what`));
-        lines.push("");
-        lines.push(`${t("collateralConsequences.printTimeline")} ${t(`collateralConsequences.risks.${r.id}.clock`)}`);
-        lines.push(`${t("collateralConsequences.printAction")} ${t(`collateralConsequences.risks.${r.id}.action`)}`);
-        lines.push("");
-      }
-    }
-
-    lines.push("---");
-    lines.push(t("collateralConsequences.printDisclaimer"));
-    return lines.join("\n");
+  /* Plain-text export — delegates to the exported pure helper */
+  function buildPlainTextForExport(): string {
+    return buildPlainText(t, activeRisks, i18n.language);
   }
 
   function handleAnswer(ans: "yes" | "no") {
@@ -261,7 +237,7 @@ export default function CollateralConsequences() {
   }
 
   async function handleCopy() {
-    const text = buildPlainText();
+    const text = buildPlainTextForExport();
     try {
       await navigator.clipboard.writeText(text);
     } catch {
@@ -277,7 +253,7 @@ export default function CollateralConsequences() {
   }
 
   function handlePrint() {
-    const text = buildPlainText();
+    const text = buildPlainTextForExport();
     const win = window.open("", "_blank");
     if (!win) return;
     win.document.write(

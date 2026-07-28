@@ -24,6 +24,7 @@ import {
   type SexOffenderRule,
   type ImmigrationRiskLevel,
 } from '../client/src/lib/collateral-consequences-data';
+import { buildPlainText } from '../client/src/lib/build-plain-text';
 
 // ── helpers ──────────────────────────────────────────────────────────────────
 
@@ -364,5 +365,68 @@ describe('disclaimer placement (structural regression)', () => {
     // `)}` closes the ternary; `): (` separates the two branches.
     // Verify the closing `)}` is present in the region before the disclaimer.
     expect(afterTernaryOpen).toMatch(/\)\}/);
+  });
+});
+
+// ── buildPlainText: disclaimer present on all output paths ────────────────────
+//
+// These tests call the REAL exported buildPlainText() from
+// client/src/lib/build-plain-text.ts.  A pass-through t() stub is used so the
+// output carries the i18n key names, making it easy to assert the disclaimer
+// key is present without depending on translated strings.
+
+describe('buildPlainText — disclaimer always present', () => {
+  /** Minimal stub: t(key) → key, t(key, vars) → key */
+  const t = (key: string, _vars?: Record<string, unknown>) => key;
+  const fixedDate = new Date('2026-01-01T12:00:00Z');
+
+  it('disclaimer is present when there are no active risks (no-risk path)', () => {
+    const output = buildPlainText(t, [], 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.printDisclaimer');
+  });
+
+  it('no-risk path emits printNoRisk and no risk section lines', () => {
+    const output = buildPlainText(t, [], 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.printNoRisk');
+    expect(output).not.toContain('collateralConsequences.risks.');
+  });
+
+  it('disclaimer is present when one risk is active (has-risk path)', () => {
+    const output = buildPlainText(t, [{ id: 'housing' }], 'en', fixedDate);
+    expect(output).toContain('collateralConsequences.printDisclaimer');
+  });
+
+  it('disclaimer is present when multiple risks are active', () => {
+    const output = buildPlainText(
+      t,
+      [{ id: 'supervision' }, { id: 'immigration' }, { id: 'housing' }],
+      'en',
+      fixedDate,
+    );
+    expect(output).toContain('collateralConsequences.printDisclaimer');
+  });
+
+  it('disclaimer appears after the --- separator on the no-risk path', () => {
+    const output = buildPlainText(t, [], 'en', fixedDate);
+    const sepIdx = output.lastIndexOf('---');
+    const disclaimerIdx = output.indexOf('collateralConsequences.printDisclaimer');
+    expect(sepIdx).toBeGreaterThan(-1);
+    expect(disclaimerIdx).toBeGreaterThan(sepIdx);
+  });
+
+  it('disclaimer appears after the --- separator on the has-risk path', () => {
+    const output = buildPlainText(t, [{ id: 'children' }, { id: 'benefits' }], 'en', fixedDate);
+    const sepIdx = output.lastIndexOf('---');
+    const disclaimerIdx = output.indexOf('collateralConsequences.printDisclaimer');
+    expect(sepIdx).toBeGreaterThan(-1);
+    expect(disclaimerIdx).toBeGreaterThan(sepIdx);
+  });
+
+  it('disclaimer is the last non-empty line of the output', () => {
+    for (const risks of [[], [{ id: 'housing' }]]) {
+      const output = buildPlainText(t, risks, 'en', fixedDate);
+      const lastLine = output.trimEnd().split('\n').at(-1);
+      expect(lastLine).toBe('collateralConsequences.printDisclaimer');
+    }
   });
 });
