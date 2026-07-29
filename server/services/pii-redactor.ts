@@ -46,6 +46,9 @@ interface CaseDetails {
   jurisdiction: string;
   charges: string | string[];
   caseStage: string;
+  /** Set by route handler when caseStage arrived blank; preserved so buildUserPrompt
+   *  can inject the unknown-stage deadlines override for Claude. Not PII — pass through. */
+  caseStageWasBlank?: boolean;
   custodyStatus: string;
   hasAttorney: boolean;
   arrestDate?: string;
@@ -338,6 +341,9 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
     // Non-PII structural fields — always pass through unchanged
     jurisdiction: caseDetails.jurisdiction,
     caseStage: caseDetails.caseStage,
+    // Preserve the blank-stage flag so buildUserPrompt can inject the
+    // unknown-stage deadlines override even after redaction rebuilds this object.
+    caseStageWasBlank: caseDetails.caseStageWasBlank,
     custodyStatus: caseDetails.custodyStatus,
     hasAttorney: caseDetails.hasAttorney,
     witnessesPresent: caseDetails.witnessesPresent,

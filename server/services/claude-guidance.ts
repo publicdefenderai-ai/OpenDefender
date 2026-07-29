@@ -79,6 +79,10 @@ interface CaseDetails {
   jurisdiction: string;
   charges: string | string[];
   caseStage: string;
+  /** True when the caller received a blank/missing caseStage and normalised it to a
+   *  default.  Used so the prompt can tell Claude the stage was not explicitly chosen
+   *  by the user, preventing it from fabricating stage-specific deadlines. */
+  caseStageWasBlank?: boolean;
   custodyStatus: string;
   hasAttorney: boolean;
   selectedConcerns?: string[];
@@ -414,14 +418,30 @@ function buildUserPrompt(caseDetails: CaseDetails, locusContext?: string | null)
   // Detect drug-related charges to surface treatment enrollment guidance
   const isDrugCase = !chargesUnknown && /drug|narcotic|controlled.?substance|marijuana|cannabis|cocaine|methamphetamine|heroin|fentanyl|opioid|possession.{0,20}substance/i.test(chargesText);
 
+  // caseStageWasBlank is set by the route handler when the incoming request had a
+  // blank/missing caseStage (screener export before the user selected a stage).
+  // The route normalises the value to 'arrest' before passing it here, so we cannot
+  // detect the blank from caseStage alone — the flag is the authoritative signal.
+  const caseStageWasBlank = caseDetails.caseStageWasBlank === true;
+  const caseStageDisplay = caseStageWasBlank
+    ? 'Not specified (defaulted to arrest stage for rules-engine purposes)'
+    : sanitizeInput(caseDetails.caseStage, 100);
+
   let prompt = `Provide general legal information for someone in this situation. Do not treat this as a case analysis — treat it as orientation for a person at this charge type, jurisdiction, and case stage:
 ${jurisdictionBlock ? `\n${jurisdictionBlock}\n` : ''}${collateralBlock ? `\n${collateralBlock}\n` : ''}${locusContext ? `\n${locusContext}\n` : ''}
 BASIC CASE INFORMATION:
 - Jurisdiction: ${sanitizeInput(caseDetails.jurisdiction, 100)}
 - Charges: ${chargesText}
-- Case Stage: ${sanitizeInput(caseDetails.caseStage, 100)}
+- Case Stage: ${caseStageDisplay}
 - In Custody: ${sanitizeInput(caseDetails.custodyStatus, 100)}
-- Has Attorney: ${caseDetails.hasAttorney ? 'Yes' : 'No'}`;
+- Has Attorney: ${caseDetails.hasAttorney ? 'Yes' : 'No'}${caseStageWasBlank ? `
+
+CASE STAGE UNKNOWN — DEADLINES OVERRIDE:
+The user exported guidance before selecting a case stage. Despite the system prompt's general instruction to populate the deadlines array, you MUST follow this override instead:
+- Return deadlines as an empty array [].
+- Do NOT include any stage-specific procedural deadlines (arraignment windows, preliminary hearing timelines, speedy trial clocks, discovery cutoffs). These all depend on a confirmed case stage and fabricating them is harmful.
+- You MAY include one entry in deadlines only if there is a concrete, universally applicable time-sensitive action (e.g. a DMV hearing window for DUI that runs from the arrest date, not the case stage). Use priority "important" and add a note that the user should confirm the exact deadline with an attorney.
+- In the overview and immediateActions, note clearly that the person has not yet selected a case stage and should do so to receive precise deadline guidance.` : ''}`;
 
   // Background context for collateral consequences
   const backgroundLines: string[] = [];

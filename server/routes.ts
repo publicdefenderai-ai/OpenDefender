@@ -1207,6 +1207,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // (probation status, priors, immigration, dependents, license, subsidized housing).
       const guidance = await generateLegalGuidance({
         ...validatedData,
+        // Normalise blank caseStage (screener export before stage selection) to a safe
+        // default so neither the rules engine nor Claude receives an empty string.
+        caseStage: validatedData.caseStage || 'arrest',
+        // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
+        // Claude avoid fabricating stage-specific deadlines.
+        caseStageWasBlank: !validatedData.caseStage,
         chargesUnknown: req.body.chargesUnknown === true,
         civilUrgency: req.body.civilUrgency,
         supervisionStatus: req.body.supervisionStatus,
@@ -1283,6 +1289,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // preserve background answers Zod stripped so the prompt has them.
       const caseDataWithFlags = {
         ...validatedData,
+        // Normalise blank caseStage (screener export before stage selection) to a safe
+        // default so neither the rules engine nor Claude receives an empty string.
+        caseStage: validatedData.caseStage || 'arrest',
+        // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
+        // Claude avoid fabricating stage-specific deadlines.
+        caseStageWasBlank: !validatedData.caseStage,
         chargesUnknown: req.body.chargesUnknown === true,
         civilUrgency: req.body.civilUrgency,
         supervisionStatus: req.body.supervisionStatus,
@@ -1300,7 +1312,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
           const charge = getChargeById(id);
           if (!charge) return null;
           const verifiedCode = getVerifiedCitation(charge);
-          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { verifiedCitation: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
+          return {
+            id: charge.id,
+            name: charge.name,
+            classification: charge.category,
+            // code carries the verified citation when available (used by AI prompt)
+            ...(verifiedCode ? { code: verifiedCode } : {}),
+            // verifiedCitation is the dedicated field consumed by the PDF generator
+            verifiedCitation: verifiedCode ?? null,
+            title: charge.name,
+            maxPenalty: charge.maxPenalty,
+          };
         })
         .filter(Boolean);
 
@@ -1392,6 +1414,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // full picture, matching the pattern in the stream route above.
       const caseDataWithFlags = {
         ...validatedData,
+        // Normalise blank caseStage (screener export before stage selection) to a safe
+        // default so neither the rules engine nor Claude receives an empty string.
+        caseStage: validatedData.caseStage || 'arrest',
+        // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
+        // Claude avoid fabricating stage-specific deadlines.
+        caseStageWasBlank: !validatedData.caseStage,
         chargesUnknown: req.body.chargesUnknown === true,
         civilUrgency: req.body.civilUrgency,
         supervisionStatus: req.body.supervisionStatus,
@@ -1412,7 +1440,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
           const charge = getChargeById(id);
           if (!charge) return null;
           const verifiedCode = getVerifiedCitation(charge);
-          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { verifiedCitation: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
+          return {
+            id: charge.id,
+            name: charge.name,
+            classification: charge.category,
+            // code carries the verified citation when available (used by AI prompt)
+            ...(verifiedCode ? { code: verifiedCode } : {}),
+            // verifiedCitation is the dedicated field consumed by the PDF generator
+            verifiedCitation: verifiedCode ?? null,
+            title: charge.name,
+            maxPenalty: charge.maxPenalty,
+          };
         })
         .filter(Boolean);
 
@@ -1459,7 +1497,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const recordedOwner = guidanceSessionOwners.get(sessionId);
       if (recordedOwner && req.sessionID && req.sessionID !== recordedOwner) {
         opsLog('security', `Guidance session ownership mismatch (in-memory): ${sessionId.slice(0, 8)}…`);
-        return res.status(403).json({ success: false, error: 'Your session has expired.', code: 'SESSION_EXPIRED' });
+        return res.status(403).json({ success: false, code: 'SESSION_EXPIRED', error: 'Your session has expired.' });
       }
 
       const legalCase = await storage.getLegalCase(sessionId);
@@ -1473,7 +1511,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Only enforced when both the stored column and the current session ID are present.
       if (legalCase.expressSessionId && req.sessionID && req.sessionID !== legalCase.expressSessionId) {
         opsLog('security', `Guidance session ownership mismatch (DB): ${sessionId.slice(0, 8)}…`);
-        return res.status(403).json({ success: false, error: 'Your session has expired.', code: 'SESSION_EXPIRED' });
+        return res.status(403).json({ success: false, code: 'SESSION_EXPIRED', error: 'Your session has expired.' });
       }
 
       // Add creation timestamp for transparency
@@ -3010,12 +3048,15 @@ async function generateLegalGuidance(caseData: any) {
         return null;
       }
       const verifiedCode = getVerifiedCitation(charge);
-      return { 
-        name: charge.name, 
-        classification: charge.category, 
-        ...(verifiedCode ? { verifiedCitation: verifiedCode } : {}),
+      return {
+        name: charge.name,
+        classification: charge.category,
+        // code carries the verified citation when available (used by AI prompt)
+        ...(verifiedCode ? { code: verifiedCode } : {}),
+        // verifiedCitation is the dedicated field consumed by the PDF generator
+        verifiedCitation: verifiedCode ?? null,
         title: charge.name,
-        maxPenalty: charge.maxPenalty 
+        maxPenalty: charge.maxPenalty,
       };
     })
     .filter(Boolean);

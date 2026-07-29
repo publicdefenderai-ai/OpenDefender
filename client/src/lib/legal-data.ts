@@ -188,12 +188,21 @@ export const legalDataApi = {
   },
 
   async getLegalGuidance(sessionId: string): Promise<{ success: boolean; guidance: LegalGuidance; case: any }> {
-    const response = await apiRequest('GET', `/api/legal-guidance/${sessionId}`);
+    // Use fetch directly rather than apiRequest so we can read the JSON body on a
+    // 403 response.  apiRequest calls throwIfResNotOk which consumes the body via
+    // res.text() before throwing — making the SESSION_EXPIRED code unreadable.
+    const response = await fetch(`/api/legal-guidance/${sessionId}`, {
+      method: 'GET',
+      credentials: 'include',
+    });
     const data = await response.json();
-    if (!data.success && data.code === 'SESSION_EXPIRED') {
-      const err = new Error(data.error || 'Session expired') as Error & { code: string };
-      err.code = 'SESSION_EXPIRED';
-      throw err;
+    if (!response.ok) {
+      if (data?.code === 'SESSION_EXPIRED') {
+        const err = new Error(data.error || 'Session expired') as Error & { code: string };
+        err.code = 'SESSION_EXPIRED';
+        throw err;
+      }
+      throw new Error(`${response.status}: ${data?.error || response.statusText}`);
     }
     return data;
   },
