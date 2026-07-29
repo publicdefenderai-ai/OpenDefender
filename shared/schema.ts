@@ -12,6 +12,7 @@ export const users = pgTable("users", {
 export const legalCases = pgTable("legal_cases", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   sessionId: text("session_id").notNull(),
+  expressSessionId: text("express_session_id"),
   jurisdiction: text("jurisdiction").notNull(),
   charges: text("charges").array().notNull(),
   caseStage: text("case_stage").notNull(),

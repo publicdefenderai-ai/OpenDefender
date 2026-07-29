@@ -3,6 +3,7 @@ import { execSync } from "child_process";
 import express, { type Request, Response, NextFunction } from "express";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
+import session from "express-session";
 import { registerRoutes } from "./routes";
 import { registerV1Routes } from "./routes-v1";
 import { setupVite, serveStatic, log } from "./vite";
@@ -50,6 +51,28 @@ app.use(express.urlencoded({ extended: false, limit: '1mb' }));
 
 // Cookie parser for attorney session management
 app.use(cookieParser());
+
+// ============================================================================
+// Session middleware — establishes req.sessionID for every request so the
+// guidance ownership check can bind and enforce session-scoped access control.
+// Uses a named cookie ("od.sid") to avoid fingerprinting default names.
+// SESSION_SECRET must be set in production; falls back to a dev-only string.
+// ============================================================================
+if (!process.env.SESSION_SECRET && process.env.NODE_ENV === 'production') {
+  opsLog('security', 'SESSION_SECRET is not set in production — sessions will not be secure');
+}
+app.use(session({
+  name: 'od.sid',
+  secret: process.env.SESSION_SECRET || 'dev-only-secret-change-in-production',
+  resave: false,
+  saveUninitialized: true, // issue a session ID to every visitor (needed for ownership binding)
+  cookie: {
+    httpOnly: true,
+    sameSite: 'lax',
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours — matches legal case expiry
+  },
+}));
 
 // ============================================================================
 // SECURITY: CSRF Protection for API endpoints

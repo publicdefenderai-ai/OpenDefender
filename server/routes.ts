@@ -1224,11 +1224,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const legalCase = await storage.createLegalCase({
         ...storableData,
         guidance,
+        // DB-backed ownership binding: store the express session ID so retrieval
+        // can enforce ownership even across server restarts (survives in-memory Map loss).
+        expressSessionId: req.sessionID || null,
       });
 
-      // Bind this case to the express session ID when the session middleware provides one.
-      // When express-session is not active, no binding is stored and retrieval falls back
-      // to UUID-as-token security (compensating controls: rate limiting + 128-bit entropy).
+      // Also maintain the fast in-memory ownership Map for sub-millisecond lookups.
       if (req.sessionID) {
         guidanceSessionOwners.set(sessionId, req.sessionID);
       }
@@ -1337,9 +1338,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // C-1: Strip incidentDescription before storing (same fix as non-stream route)
       const { incidentDescription: _droppedStream, ...storableStreamData } = validatedData;
-      const legalCase = await storage.createLegalCase({ ...storableStreamData, guidance });
+      const legalCase = await storage.createLegalCase({
+        ...storableStreamData,
+        guidance,
+        // DB-backed ownership binding (same pattern as non-stream route).
+        expressSessionId: req.sessionID || null,
+      });
 
-      // Bind when session middleware provides an ID (fail-safe: no binding if absent).
+      // Also maintain the fast in-memory ownership Map for sub-millisecond lookups.
       if (req.sessionID) {
         guidanceSessionOwners.set(sessionId, req.sessionID);
       }
@@ -1445,12 +1451,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const { sessionId } = req.params;
 
-      // Enforce ownership only when both sides have a real session identity.
+      // Tier-1: fast in-memory ownership check (populated at creation time).
       // If express-session middleware is absent, req.sessionID is undefined and
       // the check is skipped entirely (fail-safe fallback to UUID-as-token security).
       const recordedOwner = guidanceSessionOwners.get(sessionId);
       if (recordedOwner && req.sessionID && req.sessionID !== recordedOwner) {
-        opsLog('security', `Guidance session ownership mismatch: ${sessionId.slice(0, 8)}…`);
+        opsLog('security', `Guidance session ownership mismatch (in-memory): ${sessionId.slice(0, 8)}…`);
         return res.status(403).json({ success: false, error: 'Access denied.' });
       }
 
@@ -1458,6 +1464,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       if (!legalCase) {
         return res.status(404).json({ success: false, error: "Session not found or expired" });
+      }
+
+      // Tier-2: DB-backed ownership check — catches cases created before this server
+      // process started (in-memory Map entry would be absent after a restart).
+      // Only enforced when both the stored column and the current session ID are present.
+      if (legalCase.expressSessionId && req.sessionID && req.sessionID !== legalCase.expressSessionId) {
+        opsLog('security', `Guidance session ownership mismatch (DB): ${sessionId.slice(0, 8)}…`);
+        return res.status(403).json({ success: false, error: 'Access denied.' });
       }
 
       // Add creation timestamp for transparency
