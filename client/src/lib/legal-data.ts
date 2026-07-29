@@ -189,7 +189,13 @@ export const legalDataApi = {
 
   async getLegalGuidance(sessionId: string): Promise<{ success: boolean; guidance: LegalGuidance; case: any }> {
     const response = await apiRequest('GET', `/api/legal-guidance/${sessionId}`);
-    return response.json();
+    const data = await response.json();
+    if (!data.success && data.code === 'SESSION_EXPIRED') {
+      const err = new Error(data.error || 'Session expired') as Error & { code: string };
+      err.code = 'SESSION_EXPIRED';
+      throw err;
+    }
+    return data;
   },
 
   async deleteLegalGuidance(sessionId: string): Promise<{ success: boolean; message: string }> {

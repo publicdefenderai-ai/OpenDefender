@@ -2473,6 +2473,12 @@ export default {
       "successMessage": "All session data has been cleared from memory.",
       "errorTitle": "Error",
       "errorMessage": "Failed to clear session. Please try again."
+    },
+    "sessionExpired": {
+      "title": "Your session has expired",
+      "message": "This guidance is no longer accessible because your browser session has ended. This is a privacy protection — your case details are never stored permanently.",
+      "cta": "Start a new screener",
+      "subtext": "Your new guidance will be just as detailed. It only takes a few minutes."
     }
   },
   "rights": {

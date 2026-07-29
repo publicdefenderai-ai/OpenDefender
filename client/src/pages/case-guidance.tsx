@@ -21,7 +21,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
 
@@ -325,6 +325,10 @@ export default function CaseGuidance() {
   // Clear session confirmation state
   const [showClearConfirm, setShowClearConfirm] = useState(false);
 
+  // Session-expired state — set when a bookmarked sessionId no longer matches the browser session
+  const [sessionExpired, setSessionExpired] = useState(false);
+  const searchString = useSearch();
+
   // Navigation guard callbacks - memoized to prevent recreation
   const shouldBlockNavigation = useCallback(() => {
     return !!(guidanceResult && !hasExported);
@@ -377,6 +381,47 @@ export default function CaseGuidance() {
       return () => window.removeEventListener('beforeunload', handleBeforeUnload);
     }
   }, [guidanceResult, hasExported]);
+
+  // URL-based session restoration: if the URL contains ?session=<id>, attempt to
+  // retrieve existing guidance. A SESSION_EXPIRED response means the express-session
+  // cookie has rotated and the case is no longer accessible — show a helpful prompt.
+  useEffect(() => {
+    const params = new URLSearchParams(searchString);
+    const urlSessionId = params.get('session');
+    if (!urlSessionId || guidanceResult || sessionExpired) return;
+
+    legalDataApi.getLegalGuidance(urlSessionId).then((data) => {
+      if (data.success && data.guidance) {
+        const guidance = data.guidance as any;
+        setGuidanceResult({
+          sessionId: urlSessionId,
+          overview: guidance.overview || '',
+          generatedAt: guidance.generatedAt,
+          criticalAlerts: guidance.criticalAlerts || [],
+          immediateActions: guidance.immediateActions || [],
+          nextSteps: guidance.nextSteps || [],
+          deadlines: guidance.deadlines || [],
+          rights: guidance.rights || [],
+          resources: guidance.resources || [],
+          warnings: guidance.warnings || [],
+          evidenceToGather: guidance.evidenceToGather || [],
+          courtPreparation: guidance.courtPreparation || [],
+          avoidActions: guidance.avoidActions || [],
+          timeline: guidance.timeline || [],
+          validation: guidance.validation,
+          chargeClassifications: guidance.chargeClassifications,
+          mockQA: guidance.mockQA,
+          collateralConsequences: guidance.collateralConsequences,
+          caseData: guidance.caseData || { jurisdiction: '', charges: '', caseStage: '', custodyStatus: '', hasAttorney: false },
+        });
+      }
+    }).catch((err: Error & { code?: string }) => {
+      if (err.code === 'SESSION_EXPIRED') {
+        setSessionExpired(true);
+      }
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchString]);
 
   // Handler for attempting to close/navigate away from guidance
   const handleAttemptClose = (navigationAction?: () => void) => {
@@ -636,6 +681,48 @@ export default function CaseGuidance() {
                   </div>
                   <p className="text-xs text-muted-foreground text-right">
                     {streamProgress < 100 ? `${streamProgress}%` : 'Complete'}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (sessionExpired) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="px-4 py-16 flex items-center justify-center min-h-[60vh]">
+          <Card className="w-full max-w-lg">
+            <CardContent className="pt-8 pb-8 px-8">
+              <div className="flex flex-col items-center text-center space-y-5">
+                <div className="h-14 w-14 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
+                  <Clock className="h-7 w-7 text-amber-600 dark:text-amber-400" />
+                </div>
+                <div className="space-y-2">
+                  <h2 className="text-xl font-semibold">
+                    {t('case.sessionExpired.title', 'Your session has expired')}
+                  </h2>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t('case.sessionExpired.message', 'This guidance is no longer accessible because your browser session has ended. This is a privacy protection — your case details are never stored permanently.')}
+                  </p>
+                </div>
+                <div className="flex flex-col items-center gap-2 pt-2 w-full">
+                  <Button
+                    className="w-full sm:w-auto"
+                    onClick={() => {
+                      setSessionExpired(false);
+                      setShowQAFlow(true);
+                    }}
+                  >
+                    {t('case.sessionExpired.cta', 'Start a new screener')}
+                  </Button>
+                  <p className="text-xs text-muted-foreground">
+                    {t('case.sessionExpired.subtext', 'Your new guidance will be just as detailed. It only takes a few minutes.')}
                   </p>
                 </div>
               </div>

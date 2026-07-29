@@ -299,7 +299,8 @@ describe('GET /api/legal-guidance/:sessionId — ownership enforcement', () => {
     const res = await request.agent(testApp).get(`/api/legal-guidance/${caseSessionId}`);
     expect(res.status).toBe(403);
     expect(res.body.success).toBe(false);
-    expect(res.body.error).toBe('Access denied.');
+    expect(res.body.code).toBe('SESSION_EXPIRED');
+    expect(res.body.error).toBe('Your session has expired.');
   });
 
   it('allows UUID-as-token fallback when no ownership binding exists (pre-migration cases)', async () => {

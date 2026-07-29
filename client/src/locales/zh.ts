@@ -2475,6 +2475,12 @@ export default {
       "successMessage": "所有会话数据已从内存中清除。",
       "errorTitle": "错误",
       "errorMessage": "清除会话失败，请重试。"
+    },
+    "sessionExpired": {
+      "title": "您的会话已过期",
+      "message": "由于您的浏览器会话已结束，此指导内容不再可访问。这是一项隐私保护措施——您的案件详情从不会被永久存储。",
+      "cta": "开始新的问卷",
+      "subtext": "您的新指导内容将同样详细，只需几分钟即可完成。"
     }
   },
   "rights": {

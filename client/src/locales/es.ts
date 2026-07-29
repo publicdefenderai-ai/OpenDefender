@@ -2475,6 +2475,12 @@ export default {
       "successMessage": "Todos los datos de la sesión han sido borrados de la memoria.",
       "errorTitle": "Error",
       "errorMessage": "No se pudo borrar la sesión. Por favor intente de nuevo."
+    },
+    "sessionExpired": {
+      "title": "Su sesión ha expirado",
+      "message": "Esta orientación ya no está disponible porque su sesión del navegador ha finalizado. Esto es una medida de privacidad — los detalles de su caso nunca se almacenan de forma permanente.",
+      "cta": "Iniciar un nuevo cuestionario",
+      "subtext": "Su nueva orientación será igual de detallada. Solo toma unos minutos."
     }
   },
   "rights": {

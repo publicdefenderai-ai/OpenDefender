@@ -1459,7 +1459,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const recordedOwner = guidanceSessionOwners.get(sessionId);
       if (recordedOwner && req.sessionID && req.sessionID !== recordedOwner) {
         opsLog('security', `Guidance session ownership mismatch (in-memory): ${sessionId.slice(0, 8)}…`);
-        return res.status(403).json({ success: false, error: 'Access denied.' });
+        return res.status(403).json({ success: false, error: 'Your session has expired.', code: 'SESSION_EXPIRED' });
       }
 
       const legalCase = await storage.getLegalCase(sessionId);
@@ -1473,7 +1473,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Only enforced when both the stored column and the current session ID are present.
       if (legalCase.expressSessionId && req.sessionID && req.sessionID !== legalCase.expressSessionId) {
         opsLog('security', `Guidance session ownership mismatch (DB): ${sessionId.slice(0, 8)}…`);
-        return res.status(403).json({ success: false, error: 'Access denied.' });
+        return res.status(403).json({ success: false, error: 'Your session has expired.', code: 'SESSION_EXPIRED' });
       }
 
       // Add creation timestamp for transparency
