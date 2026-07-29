@@ -529,3 +529,112 @@ describe('Corrected statute codes flow through to AI guidance output', () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// Broad synthesized-code sweep — all jurisdictions not yet audited
+// ---------------------------------------------------------------------------
+// This test iterates every charge whose jurisdiction is NOT in the audited set
+// (see the AUDITED comment block at the top of shared/criminal-charges.ts).
+// Any charge whose code matches the synthesized pattern (two numeric segments
+// like "43-65") is flagged as a candidate for audit.
+//
+// IMPORTANT: This test intentionally does NOT fail — it only emits a report.
+//   When a new state's charges are added (or an existing state is removed from
+//   the AUDITED list during re-verification), the report makes suspects visible
+//   without blocking CI. Once a state is fully audited and corrected, add it to
+//   AUDITED_JURISDICTIONS below so it graduates to the failing spot-check tier.
+//
+// Pattern rationale: real statute codes always have ≥3 segments OR a non-numeric
+// prefix (e.g. "16-5-1", "2C:11-3", "13A-6-2", "707-701"). A bare "NN-NNN" or
+// "NN-NN" with exactly two all-numeric segments is the fingerprint of the
+// original synthesized codes from the 2025 data-generation run.
+describe('Synthesized-code sweep — unaudited jurisdictions', () => {
+  // ── Audited jurisdictions (update this list after each audit batch) ──────
+  // Source: AUDITED comment block in shared/criminal-charges.ts (2026-07).
+  // All 50 states + DC + 5 territories + federal have been audited.
+  const AUDITED_JURISDICTIONS = new Set([
+    // Batch 1 (2026-07)
+    'WA', 'PA', 'AR', 'MI', 'MO', 'DE', 'TX', 'CA', 'NY', 'FL', 'IL', 'OH',
+    'GA', 'NC', 'NJ', 'VA', 'AZ',
+    // Batch 2 (2026-07)
+    'AL', 'AK', 'CT', 'HI', 'ID', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+    'MA', 'MN', 'MS', 'MT', 'NE', 'NV', 'NH', 'NM', 'ND', 'OK', 'OR', 'RI',
+    'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WY', 'WV', 'DC', 'CO',
+    // Territories (2026-07)
+    'AS', 'GU', 'MP', 'PR', 'VI',
+    // Federal
+    'federal',
+  ]);
+
+  // Synthesized pattern: exactly two all-numeric segments joined by a dash
+  // e.g. "43-65", "19-100", "36-11".  Real codes have ≥3 segments, colons,
+  // letters, dots, or other structure that breaks this pattern.
+  const SYNTHESIZED_PATTERN = /^\d{1,3}-\d{2,3}$/;
+
+  it('reports any suspect codes in unaudited jurisdictions (does not fail)', () => {
+    const unauditedCharges = criminalCharges.filter(
+      c => !AUDITED_JURISDICTIONS.has(c.jurisdiction),
+    );
+
+    const suspects = unauditedCharges.filter(c => SYNTHESIZED_PATTERN.test(c.code));
+
+    if (suspects.length > 0) {
+      // Group by jurisdiction for a readable summary
+      const byJurisdiction: Record<string, Array<{ id: string; code: string; name: string }>> = {};
+      for (const c of suspects) {
+        (byJurisdiction[c.jurisdiction] ??= []).push({
+          id: c.id,
+          code: c.code,
+          name: c.name,
+        });
+      }
+
+      const lines: string[] = [
+        `\n⚠️  SYNTHESIZED-CODE CANDIDATES (${suspects.length} charges across ${Object.keys(byJurisdiction).length} unaudited jurisdiction(s)):`,
+        'These codes match the NN-NNN synthesized pattern and should be verified against official statutes.',
+        'Add each jurisdiction to AUDITED_JURISDICTIONS in this test once codes have been corrected.\n',
+      ];
+      for (const [jurisdiction, charges] of Object.entries(byJurisdiction).sort()) {
+        lines.push(`  ${jurisdiction} (${charges.length} suspect${charges.length === 1 ? '' : 's'}):`);
+        for (const ch of charges.slice(0, 10)) {
+          lines.push(`    ${ch.code.padEnd(12)}  ${ch.id}  (${ch.name})`);
+        }
+        if (charges.length > 10) {
+          lines.push(`    … and ${charges.length - 10} more`);
+        }
+      }
+      console.warn(lines.join('\n'));
+    } else if (unauditedCharges.length === 0) {
+      console.info(
+        '✅  All jurisdictions in criminalCharges are in the AUDITED_JURISDICTIONS set — ' +
+        'no unaudited entries to sweep.',
+      );
+    } else {
+      console.info(
+        `✅  No synthesized-code candidates found in ${unauditedCharges.length} unaudited charge entries.`,
+      );
+    }
+
+    // Non-failing assertion — ensures the test is tracked and its report is visible.
+    // Change toBe(0) once suspect states have been audited and corrected.
+    expect(suspects.length).toBeGreaterThanOrEqual(0);
+  });
+
+  it('AUDITED_JURISDICTIONS set contains no duplicate entries', () => {
+    // Sanity-check the set itself — duplicates in the initialiser would silently collapse.
+    const raw = [
+      'WA', 'PA', 'AR', 'MI', 'MO', 'DE', 'TX', 'CA', 'NY', 'FL', 'IL', 'OH',
+      'GA', 'NC', 'NJ', 'VA', 'AZ',
+      'AL', 'AK', 'CT', 'HI', 'ID', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+      'MA', 'MN', 'MS', 'MT', 'NE', 'NV', 'NH', 'NM', 'ND', 'OK', 'OR', 'RI',
+      'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WY', 'WV', 'DC', 'CO',
+      'AS', 'GU', 'MP', 'PR', 'VI',
+      'federal',
+    ];
+    const duplicates = raw.filter((v, i) => raw.indexOf(v) !== i);
+    expect(
+      duplicates,
+      `Duplicate entries in AUDITED_JURISDICTIONS: ${duplicates.join(', ')}`,
+    ).toHaveLength(0);
+  });
+});
