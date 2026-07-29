@@ -445,4 +445,304 @@ describe('Canary — P1 deadline scenarios catch rule-constant changes', () => {
       `    this canary, and obtain attorney review before merging.`,
     ).toBe(true);
   });
+
+  // ── CA arraignment: canonical value is "48 hours" ─────────────────────────
+  it('CA arraignment deadline output contains canonical keyword "48 hours" [P1-01]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'CA',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '48 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: CA arraignment]\n` +
+      `  The canonical P1-01 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.CA.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-01 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── TX arraignment: canonical value is "48 hours" ─────────────────────────
+  it('TX arraignment deadline output contains canonical keyword "48 hours" [P1-05]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'TX',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '48 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: TX arraignment]\n` +
+      `  The canonical P1-05 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.TX.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-05 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── FL arraignment: canonical value is "24 hours" ─────────────────────────
+  it('FL arraignment deadline output contains canonical keyword "24 hours" [P1-09]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'FL',
+      charges: 'drug possession',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '24 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: FL arraignment]\n` +
+      `  The canonical P1-09 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.FL.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-09 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── PA arraignment: canonical value is "72 hours" ─────────────────────────
+  it('PA arraignment deadline output contains canonical keyword "72 hours" [P1-26]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'PA',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '72 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: PA arraignment]\n` +
+      `  The canonical P1-26 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.PA.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-26 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── WA arraignment: canonical value is "72 hours" ─────────────────────────
+  it('WA arraignment deadline output contains canonical keyword "72 hours" [P1-29]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'WA',
+      charges: 'assault',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '72 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: WA arraignment]\n` +
+      `  The canonical P1-29 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.WA.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-29 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── OH arraignment: canonical value is "48 hours" ─────────────────────────
+  it('OH arraignment deadline output contains canonical keyword "48 hours" [P1-32]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'OH',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '48 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: OH arraignment]\n` +
+      `  The canonical P1-32 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.OH.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-32 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── GA arraignment: canonical value is "48 hours" ─────────────────────────
+  it('GA arraignment deadline output contains canonical keyword "48 hours" [P1-35]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'GA',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '48 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: GA arraignment]\n` +
+      `  The canonical P1-35 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.GA.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-35 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── AZ arraignment: canonical value is "24 hours" ─────────────────────────
+  it('AZ arraignment deadline output contains canonical keyword "24 hours" [P1-38]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'AZ',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '24 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: AZ arraignment]\n` +
+      `  The canonical P1-38 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.AZ.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-38 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── NJ arraignment: canonical value is "72 hours" ─────────────────────────
+  it('NJ arraignment deadline output contains canonical keyword "72 hours" [P1-41]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'NJ',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '72 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: NJ arraignment]\n` +
+      `  The canonical P1-41 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.NJ.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-41 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── MI arraignment: canonical value is "48 hours" ─────────────────────────
+  it('MI arraignment deadline output contains canonical keyword "48 hours" [P1-44]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'MI',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '48 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: MI arraignment]\n` +
+      `  The canonical P1-44 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.MI.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-44 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── NC arraignment: canonical value is "96 hours" ─────────────────────────
+  it('NC arraignment deadline output contains canonical keyword "96 hours" [P1-47]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'NC',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '96 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: NC arraignment]\n` +
+      `  The canonical P1-47 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.NC.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-47 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
+
+  // ── VA arraignment: canonical value is "72 hours" ─────────────────────────
+  it('VA arraignment deadline output contains canonical keyword "72 hours" [P1-50]', () => {
+    const result = generateEnhancedGuidance({
+      jurisdiction: 'VA',
+      charges: 'theft',
+      caseStage: 'arrest',
+      custodyStatus: 'detained',
+      hasAttorney: false,
+    } as any);
+    const arraignment = (result.deadlines ?? []).filter(d =>
+      d.event.toLowerCase().includes('arraignment'),
+    );
+    const canonicalKeyword = '72 hours';
+    expect(
+      arraignment.some(d => d.timeframe.toLowerCase().includes(canonicalKeyword)),
+      `[Canary: VA arraignment]\n` +
+      `  The canonical P1-50 keyword "${canonicalKeyword}" was NOT found in any ` +
+      `arraignment deadline timeframe.\n` +
+      `  Actual arraignment timeframes: ${JSON.stringify(arraignment.map(d => d.timeframe))}\n` +
+      `\n` +
+      `  ► jurisdictionRules.VA.arraignmentDeadline may have changed.\n` +
+      `    Update the rule constant, P1-50 scenario, this canary, and obtain attorney review.`,
+    ).toBe(true);
+  });
 });

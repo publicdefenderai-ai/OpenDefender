@@ -129,13 +129,25 @@ For example, if `jurisdictionRules.IL.arraignmentDeadline` is updated from `"Wit
 
 ### Canary tests
 
-`tests/evals-harness.test.ts` contains a dedicated `describe('Canary — P1 deadline scenarios catch rule-constant changes', ...)` block that provides an extra layer of protection for two representative jurisdictions (IL and NY):
+`tests/evals-harness.test.ts` contains a dedicated `describe('Canary — P1 deadline scenarios catch rule-constant changes', ...)` block that guards all 14 mapped jurisdictions:
 
 | Canary test | Jurisdiction | Canonical keyword | Corresponding P1 scenario |
 |---|---|---|---|
 | IL arraignment keyword present | IL | `"48 hours"` | P1-23 |
 | IL arraignment sensitivity (wrong keyword absent) | IL | `"24 hours"` must be absent alone | P1-23 |
 | NY arraignment keyword present | NY | `"24 hours"` | P1-07 |
+| CA arraignment keyword present | CA | `"48 hours"` | P1-01 |
+| TX arraignment keyword present | TX | `"48 hours"` | P1-05 |
+| FL arraignment keyword present | FL | `"24 hours"` | P1-09 |
+| PA arraignment keyword present | PA | `"72 hours"` | P1-26 |
+| WA arraignment keyword present | WA | `"72 hours"` | P1-29 |
+| OH arraignment keyword present | OH | `"48 hours"` | P1-32 |
+| GA arraignment keyword present | GA | `"48 hours"` | P1-35 |
+| AZ arraignment keyword present | AZ | `"24 hours"` | P1-38 |
+| NJ arraignment keyword present | NJ | `"72 hours"` | P1-41 |
+| MI arraignment keyword present | MI | `"48 hours"` | P1-44 |
+| NC arraignment keyword present | NC | `"96 hours"` | P1-47 |
+| VA arraignment keyword present | VA | `"72 hours"` | P1-50 |
 
 These canary tests fail alongside the matching P1 scenario whenever the rule constant changes, making the regression doubly visible in CI output.
 
@@ -144,7 +156,7 @@ These canary tests fail alongside the matching P1 scenario whenever the rule con
 1. Update the constant in `server/services/guidance-engine.ts`.
 2. Run `npx vitest run tests/evals-harness.test.ts`.
 3. Failing P1 scenarios identify every scenario whose `deadlineTimeframeKeywords` no longer matches — update those keywords to the new string.
-4. If the changed jurisdiction is IL or NY, update the `canonicalKeyword` / `wrongKeyword` values in the canary block as well.
+4. Update the corresponding canary assertion's `canonicalKeyword` value in the canary block.
 5. Obtain attorney review of the updated rule text.
 6. Re-run `npx vitest run` to confirm all scenarios pass before merging.
 
