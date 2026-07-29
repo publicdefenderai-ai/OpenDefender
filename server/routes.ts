@@ -1300,7 +1300,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           const charge = getChargeById(id);
           if (!charge) return null;
           const verifiedCode = getVerifiedCitation(charge);
-          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { code: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
+          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { verifiedCitation: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
         })
         .filter(Boolean);
 
@@ -1412,7 +1412,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           const charge = getChargeById(id);
           if (!charge) return null;
           const verifiedCode = getVerifiedCitation(charge);
-          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { code: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
+          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { verifiedCitation: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
         })
         .filter(Boolean);
 
@@ -3013,7 +3013,7 @@ async function generateLegalGuidance(caseData: any) {
       return { 
         name: charge.name, 
         classification: charge.category, 
-        ...(verifiedCode ? { code: verifiedCode } : {}),
+        ...(verifiedCode ? { verifiedCitation: verifiedCode } : {}),
         title: charge.name,
         maxPenalty: charge.maxPenalty 
       };
