@@ -11,10 +11,10 @@
 
 | Dimension | Count |
 |---|---|
-| Total scenarios | 107 |
-| Passing | 107 |
+| Total scenarios | 122 |
+| Passing | 122 |
 | Failing | 0 |
-| Priority 1 (Deadlines) | 67 |
+| Priority 1 (Deadlines) | 82 |
 | Priority 2 (Collateral consequences) | 26 |
 | Priority 3 (Alerts, coverage, uncertainties) | 35 |
 
@@ -47,12 +47,17 @@
 | MO | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | WI | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | MD | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| TN | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| IN | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| SC | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| KY | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| AL | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | federal | Mapped | 2 | "Without unnecessary delay" language |
 | OR | Unmapped | 1 | isEstimate + uncertainty notice |
 | NV | Unmapped | 1 | isEstimate + uncertainty notice |
 | MT | Unmapped | 1 | isEstimate + uncertainty notice |
 
-**31 states not individually covered** — all unmapped states exercise the same code path; `OR`, `NV`, and `MT` serve as representative samples.
+**26 states not individually covered** — all unmapped states exercise the same code path; `OR`, `NV`, and `MT` serve as representative samples.
 
 ### Charge types covered
 
