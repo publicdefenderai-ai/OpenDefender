@@ -60,6 +60,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   const [selectedGroup, setSelectedGroup] = useState("All Groups");
   const [selectedCharges, setSelectedCharges] = useState<Array<{ id: string; code: string; name: string }>>([]);
   const [isExpanded, setIsExpanded] = useState(true);
+  const [announcement, setAnnouncement] = useState("");
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(search), 300);
@@ -88,6 +89,32 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
 
+  useEffect(() => {
+    if (isLoading) return;
+    if (charges.length === 0) {
+      setAnnouncement(
+        debouncedSearch
+          ? t('chat.chargeSelector.noResults', 'No charges found matching your search')
+          : t('chat.chargeSelector.noCharges', 'No charges available')
+      );
+    } else if (debouncedSearch) {
+      setAnnouncement(
+        t('chat.chargeSelector.resultsAnnouncement', {
+          count: charges.length,
+          query: debouncedSearch,
+          defaultValue: `${charges.length} charge${charges.length === 1 ? '' : 's'} found matching ${debouncedSearch}`,
+        })
+      );
+    } else {
+      setAnnouncement(
+        t('chat.chargeSelector.resultsCount', {
+          count: charges.length,
+          defaultValue: `${charges.length} charge${charges.length === 1 ? '' : 's'} available`,
+        })
+      );
+    }
+  }, [charges, debouncedSearch, isLoading, t]);
+
   const toggleCharge = (charge: Charge) => {
     setSelectedCharges(prev => {
       const exists = prev.some(c => c.id === charge.id);
@@ -110,6 +137,15 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       animate={{ opacity: 1, y: 0 }}
       className="bg-background border border-border rounded-xl overflow-hidden w-full max-w-full"
     >
+      {/* Visually-hidden live region for screen reader announcements */}
+      <div
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        className="sr-only"
+      >
+        {announcement}
+      </div>
       <button
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
