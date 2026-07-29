@@ -2,9 +2,15 @@
 set -e
 npm install
 npm run db:push
-# Exclude criminal-charges-api.test.ts — it is a live-server integration test
-# that connects to http://localhost:5000 and cannot run without the app running.
-npx vitest run --exclude="**/criminal-charges-api.test.ts"
+# Exclude live-server integration tests — these require a running app + database
+# and will time out / fail in beforeAll during headless post-merge execution:
+#   criminal-charges-api.test.ts  — HTTP calls to localhost:5000
+#   guidance-route.test.ts        — imports server/routes; needs DB connection
+#   guidance-ownership.test.ts    — imports server/routes; needs DB connection
+npx vitest run \
+  --exclude="**/criminal-charges-api.test.ts" \
+  --exclude="**/guidance-route.test.ts" \
+  --exclude="**/guidance-ownership.test.ts"
 
 # Remove stale subrepl-* remotes left behind by task agent environments.
 # Each task agent adds a subrepl-* remote to .git/config and never cleans it up;
