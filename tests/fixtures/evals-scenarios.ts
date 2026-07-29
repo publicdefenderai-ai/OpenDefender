@@ -563,6 +563,166 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
 
+  // ── Colorado ──
+  {
+    label: 'P1-53: CO × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'CO', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-54: CO × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'CO', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-55: CO × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'CO', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['35 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Minnesota ──
+  {
+    label: 'P1-56: MN × arrest — arraignment deadline matches jurisdiction rule (36 hours)',
+    input: { ...baseMapped, jurisdiction: 'MN', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['36 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-57: MN × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'MN', charges: 'burglary', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['7 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-58: MN × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'MN', charges: 'fraud', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['28 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Missouri ──
+  {
+    label: 'P1-59: MO × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'MO', charges: 'assault' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-60: MO × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'MO', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-61: MO × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'MO', charges: 'theft', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Wisconsin ──
+  {
+    label: 'P1-62: WI × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'WI', charges: 'burglary' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-63: WI × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'WI', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['10 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-64: WI × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'WI', charges: 'domestic violence', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Maryland ──
+  {
+    label: 'P1-65: MD × arrest — arraignment deadline matches jurisdiction rule (24 hours)',
+    input: { ...baseMapped, jurisdiction: 'MD', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['24 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-66: MD × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'MD', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-67: MD × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'MD', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
   // ── Virginia ──
   {
     label: 'P1-50: VA × arrest — arraignment deadline matches jurisdiction rule (72 hours)',

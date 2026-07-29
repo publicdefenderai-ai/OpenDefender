@@ -218,6 +218,36 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
+  CO: {
+    preliminaryHearing: 'Within 30 days for felonies (Colo. R. Crim. P. 5)',
+    discoveryDeadline: '35 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system with PR bond option',
+  },
+  MN: {
+    preliminaryHearing: 'Within 7 days if in custody (Minn. R. Crim. P. 8.01)',
+    discoveryDeadline: '28 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  MO: {
+    preliminaryHearing: 'Within 30 days if in custody',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  WI: {
+    preliminaryHearing: 'Within 10 days if in custody (Wis. Stat. § 970.03)',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  MD: {
+    preliminaryHearing: 'Within 30 days for felonies (Md. Rule 4-221)',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system with bond options',
+  },
   federal: {
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
     discoveryDeadline: 'Ongoing obligation',
@@ -1055,7 +1085,7 @@ export const KNOWN_JURISDICTIONS = [
   'CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'AZ', 'NJ', 'MI', 'NC', 'VA', 'FEDERAL',
   // Batch 2 (2026-07)
   'AL', 'AK', 'CO', 'CT', 'DC', 'HI', 'IA', 'ID', 'IN', 'KS', 'KY', 'LA',
-  'MA', 'MD', 'ME', 'MN', 'MS', 'MT', 'ND', 'NE', 'NH', 'NM', 'NV', 'OK',
+  'MA', 'MD', 'ME', 'MN', 'MO', 'MS', 'MT', 'ND', 'NE', 'NH', 'NM', 'NV', 'OK',
   'OR', 'RI', 'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WV', 'WY',
 ];
 
