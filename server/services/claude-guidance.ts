@@ -127,7 +127,7 @@ interface ClaudeGuidance {
     completed: boolean;
   }>;
   chargeClassifications?: Array<{
-    code: string;
+    code?: string;
     title: string;
     classification: string;
     maxPenalty: string;

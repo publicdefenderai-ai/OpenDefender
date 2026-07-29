@@ -13,7 +13,7 @@ import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
-import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -1299,7 +1299,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         .map((id: string) => {
           const charge = getChargeById(id);
           if (!charge) return null;
-          return { id: charge.id, name: charge.name, classification: charge.category, code: charge.code, title: charge.name, maxPenalty: charge.maxPenalty };
+          const verifiedCode = getVerifiedCitation(charge);
+          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { code: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
         })
         .filter(Boolean);
 
@@ -1410,7 +1411,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         .map((id: string) => {
           const charge = getChargeById(id);
           if (!charge) return null;
-          return { id: charge.id, name: charge.name, classification: charge.category, code: charge.code, title: charge.name, maxPenalty: charge.maxPenalty };
+          const verifiedCode = getVerifiedCitation(charge);
+          return { id: charge.id, name: charge.name, classification: charge.category, ...(verifiedCode ? { code: verifiedCode } : {}), title: charge.name, maxPenalty: charge.maxPenalty };
         })
         .filter(Boolean);
 
@@ -3007,10 +3009,11 @@ async function generateLegalGuidance(caseData: any) {
         opsLog('guidance', `Warning: Charge ID "${id}" not found in database`);
         return null;
       }
+      const verifiedCode = getVerifiedCitation(charge);
       return { 
         name: charge.name, 
         classification: charge.category, 
-        code: charge.code,
+        ...(verifiedCode ? { code: verifiedCode } : {}),
         title: charge.name,
         maxPenalty: charge.maxPenalty 
       };
