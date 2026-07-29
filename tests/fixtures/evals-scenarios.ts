@@ -767,11 +767,13 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-72: IN × arraignment stage — preliminary hearing deadline present',
+    label: 'P1-72: IN × arraignment stage — preliminary hearing deadline present (Indiana uses initial hearing, IC § 35-33-7-1)',
     input: { ...baseMapped, jurisdiction: 'IN', charges: 'theft', caseStage: 'arraignment', custodyStatus: 'detained' },
     expect: {
       deadlineEventKeywords: ['Preliminary Hearing'],
-      deadlineTimeframeKeywords: ['20 days'],
+      // Indiana uses "initial hearing" held promptly after arrest (IC § 35-33-7-1).
+      // Prior keyword '20 days' was unsupported; updated to match corrected string.
+      deadlineTimeframeKeywords: ['Promptly'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
@@ -873,11 +875,13 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-82: AL × arraignment stage — discovery deadline present',
+    label: 'P1-82: AL × arraignment stage — discovery deadline present (14 days after written request, Ala. R. Crim. P. 16.1)',
     input: { ...baseMapped, jurisdiction: 'AL', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
     expect: {
       deadlineEventKeywords: ['Discovery'],
-      deadlineTimeframeKeywords: ['30 days'],
+      // Corrected from '30 days' — Ala. R. Crim. P. 16.1 requires disclosure within
+      // 14 days of written request, not 30 days after arraignment.
+      deadlineTimeframeKeywords: ['14 days'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },

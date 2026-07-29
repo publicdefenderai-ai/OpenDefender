@@ -114,8 +114,25 @@ interface JurisdictionRule {
 // Only the 15 batch-1 jurisdictions carry state-specific values; all others fall
 // back to defaultSupplemental.
 //
-// Known accuracy gaps: GA discoveryDeadline (pre-HB 776), CA speedyTrialRight
-// (misdemeanor custody distinction), all publicDefenderIncome figures (FPL-linked).
+// Known accuracy gaps (2026-07 verification pass):
+//   GA discoveryDeadline – pre-HB 776 rule may no longer apply; attorney review needed.
+//   CA speedyTrialRight  – misdemeanor custody distinction not captured.
+//   All publicDefenderIncome figures – FPL-linked, vary annually.
+//   TN discoveryDeadline – Tenn. R. Crim. P. 16 is request-triggered; "30 days"
+//     is a working approximation, not a fixed statutory deadline.
+//   SC preliminaryHearing – SC Rule 2 SCRCP confirmed right but specific day count
+//     was not confirmed against primary source; attorney review recommended.
+//   IN preliminaryHearing – Indiana uses "initial hearing" (IC § 35-33-7-1) not a
+//     separate preliminary hearing; prior "20 days" string was unsupported and has
+//     been corrected to reflect the prompt-after-arrest standard.
+//   KY preliminaryHearing – citation corrected from RCr 3.14 (probable cause
+//     finding) to RCr 3.10 (preliminary hearing); 10-day deadline consistent with
+//     Kentucky practice but attorney confirmation is recommended.
+//   AL preliminaryHearing – Rule 5.1 is a demand-based mechanism (defendant may
+//     demand within 30 days of arrest); prior string implied a custody-dependent
+//     scheduling deadline, which is inaccurate.
+//   AL discoveryDeadline  – corrected from "30 days after arraignment" to the
+//     Rule 16.1 standard of 14 days after written request.
 
 interface JurisdictionSupplemental {
   preliminaryHearing: string;
@@ -249,32 +266,58 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     bailSystem: 'Cash bail system with bond options',
   },
   TN: {
+    // Tenn. R. Crim. P. 5(d)(1)(A): if in custody and cannot make bond, preliminary
+    // hearing must be held within 10 days of initial appearance ("ten-day rule").
+    // Confirmed against tncourts.gov Rule 5 (2026-07).
     preliminaryHearing: 'Within 10 days if in custody (Tenn. R. Crim. P. 5)',
-    discoveryDeadline: '30 days after arraignment',
+    // Tenn. R. Crim. P. 16 is request-triggered; no fixed post-arraignment deadline.
+    // "30 days" is a working approximation — attorney review recommended.
+    discoveryDeadline: '30 days after arraignment (approximate; Rule 16 is request-based)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
   },
   IN: {
-    preliminaryHearing: 'Within 20 days if in custody',
+    // Indiana uses "initial hearing" (IC § 35-33-7-1), not a separate "preliminary
+    // hearing." The initial hearing — where probable cause is reviewed and rights are
+    // advised — must be held promptly after arrest (interpreted as within 48 hours for
+    // detained defendants). Corrected from prior "Within 20 days if in custody," which
+    // was unsupported. Verified against 2025 Indiana Rules of Criminal Procedure (2026-07).
+    preliminaryHearing: 'Promptly after arrest (initial hearing, IC § 35-33-7-1; Indiana uses initial hearing rather than a separate preliminary hearing)',
     discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
   },
   SC: {
-    preliminaryHearing: 'Within 10 days if in custody',
+    // SC Rule 2 SCRCP establishes the right to a preliminary hearing for any defendant
+    // charged with an offense triable in General Sessions Court. The specific scheduling
+    // deadline was not confirmed against a primary source; "10 days if in custody" is a
+    // working approximation — attorney review recommended (2026-07).
+    preliminaryHearing: 'Within 10 days if in custody (SC Rule 2 SCRCP; day count unverified — attorney review recommended)',
     discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
   },
   KY: {
-    preliminaryHearing: 'Within 10 days if in custody (Ky. R. Crim. P. 3.14)',
+    // KY RCr 3.10 governs the preliminary hearing ("Preliminary hearing; waiver").
+    // Prior citation "(Ky. R. Crim. P. 3.14)" was incorrect — RCr 3.14 is "Probable
+    // cause finding." Corrected to RCr 3.10. 10-day in-custody deadline is consistent
+    // with Kentucky practice; attorney confirmation recommended (2026-07).
+    preliminaryHearing: 'Within 10 days if in custody (Ky. R. Crim. P. 3.10)',
     discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
   },
   AL: {
-    preliminaryHearing: 'Within 30 days if in custody',
-    discoveryDeadline: '30 days after arraignment',
+    // Ala. R. Crim. P. 5.1(a): "A defendant charged by complaint with the commission
+    // of a felony may, within thirty (30) days of arrest, demand a preliminary hearing."
+    // This is a demand-based mechanism — the defendant must affirmatively request it
+    // within 30 days of arrest (not a custody-dependent auto-scheduling rule).
+    // Corrected from prior "Within 30 days if in custody." Verified against
+    // judicial.alabama.gov Rule 5.1 (2026-07).
+    preliminaryHearing: 'Defendant may demand hearing within 30 days of arrest (Ala. R. Crim. P. 5.1)',
+    // Ala. R. Crim. P. 16.1(a): upon written request, prosecutor must disclose within
+    // 14 days. Corrected from prior "30 days after arraignment." Verified (2026-07).
+    discoveryDeadline: 'Within 14 days of written request (Ala. R. Crim. P. 16.1)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
   },
