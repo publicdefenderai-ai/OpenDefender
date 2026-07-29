@@ -4609,18 +4609,18 @@ export default {
       },
       "serverRestart": {
         "title": "Herramientas que no almacenan nada",
-        "description": "El Evaluador de Elegibilidad para Eliminación de Antecedentes y el Formulario de Ingreso del Defensor Público no realizan ninguna llamada al servidor. El evaluador funciona completamente en su navegador. El formulario de ingreso es un documento imprimible que llena a mano. No se envía ni transmite ningún dato electrónicamente al usar ninguna de estas herramientas."
+        "description": "Varias herramientas no realizan ninguna llamada al servidor en absoluto: el Evaluador de Elegibilidad para Eliminación de Antecedentes, el Evaluador de Consecuencias Colaterales, la Lista de Verificación de Ingreso del Defensor Público y el Constructor de Memorandos de Mitigación. Las cuatro funcionan completamente en su navegador. Las dos herramientas para defensores generan archivos .docx descargables localmente en su dispositivo — no se transmiten datos a nuestros servidores. Todas las demás páginas estáticas del sitio (guías de derechos, recursos de apoyo, guías de fechas de tribunal, guías de inmigración) son igualmente pasivas."
       }
     },
     "noDataTools": {
-      "title": "Herramientas que no recopilan datos",
-      "description": "El Evaluador de Elegibilidad para Eliminación de Antecedentes y el Formulario de Ingreso del Defensor Público no realizan ninguna llamada al servidor en ningún momento. El evaluador funciona completamente en su navegador como un árbol de decisión. El formulario de ingreso es un documento imprimible que llena a mano. No se envía, transmite ni almacena ninguna información electrónicamente al usar cualquiera de estas herramientas."
+      "title": "Herramientas Que No Recopilan Datos",
+      "description": "El Evaluador de Elegibilidad para Eliminación de Antecedentes, el Evaluador de Consecuencias Colaterales, la Lista de Verificación de Ingreso del Defensor Público y el Constructor de Memorandos de Mitigación no realizan ninguna llamada al servidor en ningún momento. Los evaluadores funcionan completamente en su navegador como árboles de decisión. Las herramientas para defensores generan archivos .docx descargables localmente en su dispositivo. No se envía, transmite ni almacena ninguna información electrónicamente al usar ninguna de estas herramientas."
     },
     "technical": {
       "title": "Detalles Técnicos",
       "sessions": {
-        "title": "Datos de Sesión",
-        "description": "Los datos temporales de sesión se utilizan para mantener su experiencia de navegación durante una sola visita. Estos datos se eliminan automáticamente cuando cierra su navegador o finaliza su sesión. No se almacena información de sesión de forma permanente."
+        "title": "Datos de Sesión y Cookies",
+        "description": "OpenDefender no usa cookies de seguimiento ni identificadores persistentes para los visitantes públicos. Solo se usa una cookie de sesión cuando un abogado inicia sesión en el Portal de Abogados — mantiene al abogado autenticado durante su visita y se elimina cuando cierra sesión o cierra el navegador. Los visitantes públicos que navegan por el sitio, usan la orientación de IA o usan las herramientas para defensores no reciben ninguna cookie. No se almacena ninguna información de sesión de forma permanente."
       },
       "logs": {
         "title": "Registros del Servidor",
