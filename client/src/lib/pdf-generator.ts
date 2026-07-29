@@ -60,6 +60,10 @@ interface EnhancedGuidanceData {
     name: string;
     classification: string;
     code: string;
+    /** Verified citation string from getVerifiedCitation(), or null when unverified.
+     *  Populated by the guidance engine (routes.ts). When absent or null, no citation
+     *  parenthetical is shown in the PDF so an unverified code is never printed. */
+    verifiedCitation?: string | null;
   }>;
   mockQA?: Array<{
     question: string;
@@ -441,7 +445,9 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     guidance.chargeClassifications.forEach((charge, idx) => {
       summaryData.push([
         idx === 0 ? labels.charges : '',
-        `${formatChargeName(charge.name)} (${charge.code}) - ${charge.classification.toUpperCase()}`
+        charge.verifiedCitation
+          ? `${formatChargeName(charge.name)} (${charge.verifiedCitation}) - ${charge.classification.toUpperCase()}`
+          : `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`
       ]);
     });
   } else {
