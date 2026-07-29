@@ -2,6 +2,7 @@
 // Implements charge-specific, jurisdiction-specific, and case-stage guidance
 
 import { criminalCharges, getChargeById, getVerifiedCitation } from '../../shared/criminal-charges';
+import { JURISDICTION_PROCEDURE_RULES } from '../../shared/jurisdiction-procedure-rules';
 
 interface CaseData {
   jurisdiction: string;
@@ -104,682 +105,156 @@ interface JurisdictionRule {
   sources: JurisdictionSources;
 }
 
-// ── Jurisdiction data ──────────────────────────────────────────────────────────
-// Attorney review recommended before treating any value as authoritative.
+// ── Supplemental fields not present in shared/jurisdiction-procedure-rules.ts ──
+// JURISDICTION_PROCEDURE_RULES (shared) is the authoritative source for
+// arraignment, speedy_trial, bail, and lastVerified data.  The fields below
+// (preliminaryHearing, discoveryDeadline, publicDefenderIncome, bailSystem) are
+// used only by the rule-based UI path and have no shared-file equivalent.
+//
+// Only the 15 batch-1 jurisdictions carry state-specific values; all others fall
+// back to defaultSupplemental.
+//
 // Known accuracy gaps: GA discoveryDeadline (pre-HB 776), CA speedyTrialRight
 // (misdemeanor custody distinction), all publicDefenderIncome figures (FPL-linked).
-const jurisdictionRules: Record<string, JurisdictionRule> = {
-  'CA': {
-    arraignmentDeadline: 'Within 48 hours (72 hours if arrested on weekend)',
+
+interface JurisdictionSupplemental {
+  preliminaryHearing: string;
+  discoveryDeadline: string;
+  publicDefenderIncome: string;
+  bailSystem: string;
+}
+
+const defaultSupplemental: JurisdictionSupplemental = {
+  preliminaryHearing: 'Within 10-14 days for felonies',
+  discoveryDeadline: 'Within 30 days after arraignment',
+  publicDefenderIncome: 'Case-by-case determination',
+  bailSystem: 'Cash bail system',
+};
+
+const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
+  CA: {
     preliminaryHearing: 'Within 10 court days for felonies',
-    speedyTrialRight: '60 days for felonies; 30 days for misdemeanors if in custody, 45 days if released',
+    discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Approximately 2x federal poverty level (varies by county)',
     bailSystem: 'Schedule-based bail system',
-    discoveryDeadline: '30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'PC § 825',
-      preliminaryHearing: 'PC § 859b',
-      speedyTrialRight: 'PC § 1382',
-      discoveryDeadline: 'PC § 1054.7',
-    },
   },
-  'TX': {
-    arraignmentDeadline: 'Within 48 hours',
+  TX: {
     preliminaryHearing: 'Not required — grand jury indictment for felonies',
-    speedyTrialRight: '120 days for felonies, 60 days for misdemeanors',
+    discoveryDeadline: 'Ongoing open-file obligation; witness list due 20 days before trial',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Commercial bail bond system',
-    discoveryDeadline: 'Ongoing open-file obligation; witness list due 20 days before trial',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'CCP Art. 14.06; Tex. Const. Art. I § 11a',
-      speedyTrialRight: 'Tex. Const. Art. I § 10 (constitutional right; statutory act repealed 1987)',
-      discoveryDeadline: 'CCP Art. 39.14 (Michael Morton Act, 2013)',
-    },
   },
-  'NY': {
-    arraignmentDeadline: 'Within 24 hours',
+  NY: {
     preliminaryHearing: 'Within 120 hours for felonies',
-    speedyTrialRight: '6 months for felonies, 90 days for misdemeanors',
+    discoveryDeadline: '20 days after arraignment (in custody) or 35 days (not in custody)',
     publicDefenderIncome: 'Varies by county — apply to local public defender or legal aid office',
     bailSystem: 'Cash bail reform — limited detention',
-    discoveryDeadline: '20 days after arraignment (in custody) or 35 days (not in custody)',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'CPL § 140.20',
-      preliminaryHearing: 'CPL § 180.10',
-      speedyTrialRight: 'CPL § 30.30',
-      discoveryDeadline: 'CPL § 245.10 (2020 reform, eff. Jan 1 2020)',
-      bailSystem: 'CPL § 510.10 (2020 bail reform)',
-    },
   },
-  'FL': {
-    arraignmentDeadline: 'Within 24 hours',
+  FL: {
     preliminaryHearing: 'Within 21 days for felonies',
-    speedyTrialRight: '175 days for felonies, 90 days for misdemeanors',
+    discoveryDeadline: 'Within 15 days of demand',
     publicDefenderIncome: 'Approximately 200% federal poverty level — apply to local public defender',
     bailSystem: 'Traditional bail system with pretrial services',
-    discoveryDeadline: 'Within 15 days of demand',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Fla. R. Crim. P. 3.130',
-      preliminaryHearing: 'Fla. R. Crim. P. 3.133',
-      speedyTrialRight: 'Fla. R. Crim. P. 3.191',
-      discoveryDeadline: 'Fla. R. Crim. P. 3.220',
-    },
   },
-  'IL': {
-    arraignmentDeadline: 'Within 48 hours',
+  IL: {
     preliminaryHearing: 'Within 30 days if in custody',
-    speedyTrialRight: '120 days for felonies, 160 days for misdemeanors',
+    discoveryDeadline: '28 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Pretrial Fairness Act — no cash bail (eff. Sept 2023)',
-    discoveryDeadline: '28 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: '725 ILCS 5/109-1',
-      preliminaryHearing: '725 ILCS 5/109-3',
-      speedyTrialRight: '725 ILCS 5/103-5',
-      discoveryDeadline: 'Ill. Sup. Ct. R. 412',
-      bailSystem: 'Pretrial Fairness Act, SB 2364 (2021)',
-    },
   },
-  'PA': {
-    arraignmentDeadline: 'Within 72 hours',
+  PA: {
     preliminaryHearing: 'Within 14 days of preliminary arraignment',
-    speedyTrialRight: '365 days from complaint',
+    discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Approximately federal poverty guidelines — apply to local public defender',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Pa. R. Crim. P. 516',
-      preliminaryHearing: 'Pa. R. Crim. P. 524',
-      speedyTrialRight: 'Pa. R. Crim. P. 600',
-      discoveryDeadline: 'Pa. R. Crim. P. 573',
-    },
   },
-  'WA': {
-    arraignmentDeadline: 'Within 72 hours if in custody',
+  WA: {
     preliminaryHearing: 'Within 10 court days if in custody',
-    speedyTrialRight: '60 days if in custody, 90 days if released',
+    discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Pretrial services assessment',
-    discoveryDeadline: '30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'CrR 4.1; CrRLJ 4.1',
-      speedyTrialRight: 'CrR 3.3',
-      discoveryDeadline: 'CrR 4.7',
-    },
   },
-  'OH': {
-    arraignmentDeadline: 'Within 48 hours',
+  OH: {
     preliminaryHearing: 'Within 10 days if in custody',
-    speedyTrialRight: '90 days if in custody, 270 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
     discoveryDeadline: '21 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Ohio Crim. R. 10; ORC § 2937.01',
-      speedyTrialRight: 'ORC § 2945.71',
-      discoveryDeadline: 'Ohio Crim. R. 16',
-    },
-  },
-  'GA': {
-    arraignmentDeadline: 'Within 72 hours',
-    preliminaryHearing: 'Within 30 days if in custody',
-    speedyTrialRight: '180 days if in custody',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
+  },
+  GA: {
+    preliminaryHearing: 'Within 30 days if in custody',
     // ATTORNEY REVIEW NEEDED: HB 776 (2021) created automatic open-file discovery in GA.
     // The pre-reform "10 days before trial" rule (OCGA § 17-16-5) may no longer apply.
     discoveryDeadline: '10 days before trial',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'OCGA § 17-7-23',
-      preliminaryHearing: 'OCGA § 17-7-23.1',
-      speedyTrialRight: 'OCGA § 17-7-170 (demand for trial)',
-      discoveryDeadline: 'OCGA § 17-16-5 — see HB 776 (2021) for reform status',
-    },
-  },
-  'AZ': {
-    arraignmentDeadline: 'Within 48 hours if in custody',
-    preliminaryHearing: 'Within 10 days if in custody',
-    speedyTrialRight: '150 days from arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '10 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Ariz. R. Crim. P. 4.1',
-      preliminaryHearing: 'Ariz. R. Crim. P. 5.1',
-      speedyTrialRight: 'Ariz. R. Crim. P. 8.2',
-      discoveryDeadline: 'Ariz. R. Crim. P. 15.1',
-    },
   },
-  'NJ': {
-    arraignmentDeadline: 'Within 48 hours',
+  AZ: {
+    preliminaryHearing: 'Within 10 days if in custody',
+    discoveryDeadline: '10 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+  },
+  NJ: {
     preliminaryHearing: 'Within 20 days for indictable offenses',
-    speedyTrialRight: '180 days from indictment',
+    discoveryDeadline: '20 days after arraignment',
     publicDefenderIncome: 'Individual: $25,000, Family of 2: $34,000',
     bailSystem: 'Pretrial services assessment — bail reform',
-    discoveryDeadline: '20 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'N.J. Ct. R. 3:4-2',
-      preliminaryHearing: 'N.J. Ct. R. 3:10-1',
-      speedyTrialRight: 'N.J. Ct. R. 3:25-4 (Criminal Justice Reform Act)',
-      discoveryDeadline: 'N.J. Ct. R. 3:13-3',
-    },
   },
-  'MI': {
-    arraignmentDeadline: 'Within 48 hours',
+  MI: {
     preliminaryHearing: 'Within 14 days',
-    speedyTrialRight: '180 days from arrest',
+    discoveryDeadline: '21 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '21 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Mich. Ct. R. 6.104',
-      preliminaryHearing: 'Mich. Ct. R. 6.110',
-      speedyTrialRight: 'MCL § 768.1 (constitutional speedy trial standard)',
-      discoveryDeadline: 'Mich. Ct. R. 6.201',
-    },
   },
-  'NC': {
-    arraignmentDeadline: 'Within 48 hours',
+  NC: {
     preliminaryHearing: 'Within 15 days if in custody',
-    speedyTrialRight: '120 days if in custody',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
     discoveryDeadline: '15 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'N.C. Gen. Stat. § 15A-511',
-      preliminaryHearing: 'N.C. Gen. Stat. § 15A-611',
-      speedyTrialRight: 'N.C. Gen. Stat. § 15A-701',
-      discoveryDeadline: 'N.C. Gen. Stat. § 15A-903',
-    },
-  },
-  'VA': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10 days if in custody',
-    speedyTrialRight: '5 months from arrest for misdemeanors',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
-    discoveryDeadline: '21 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Va. Code Ann. § 19.2-158',
-      preliminaryHearing: 'Va. Code Ann. § 19.2-183',
-      speedyTrialRight: 'Va. Code Ann. § 19.2-243',
-      discoveryDeadline: 'Va. Sup. Ct. R. 3A:11',
-    },
   },
-  'federal': {
-    arraignmentDeadline: 'Without unnecessary delay',
+  VA: {
+    preliminaryHearing: 'Within 10 days if in custody',
+    discoveryDeadline: '21 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
+  },
+  federal: {
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
-    speedyTrialRight: '70 days from indictment',
+    discoveryDeadline: 'Ongoing obligation',
     publicDefenderIncome: 'Approximately 125% federal poverty level — apply to federal public defender office',
     bailSystem: 'Pretrial services assessment',
-    discoveryDeadline: 'Ongoing obligation',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Fed. R. Crim. P. 5(a)',
-      preliminaryHearing: 'Fed. R. Crim. P. 5.1',
-      speedyTrialRight: '18 U.S.C. § 3161 (Speedy Trial Act)',
-      discoveryDeadline: 'Fed. R. Crim. P. 16',
-    },
-  },
-
-  // ── 2026-07 audit batch 2 — verified against official state sources ──────────
-  'MA': {
-    arraignmentDeadline: 'Within 24 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No strict statutory limit (case management guidelines; District Court: 12 months)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'M.G.L. ch. 276 § 58',
-      speedyTrialRight: 'Mass. R. Crim. P. 36',
-    },
-  },
-  'TN': {
-    arraignmentDeadline: 'Within 72 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Tenn. Code Ann. § 40-7-118',
-      speedyTrialRight: 'Tenn. Const. Art. I § 9; U.S. Const. amend. VI',
-    },
-  },
-  'IN': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '70 days if in custody; 365 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Ind. Code § 35-33-7-1',
-      speedyTrialRight: 'Ind. R. Crim. P. 4',
-    },
-  },
-  'MD': {
-    arraignmentDeadline: 'Within 24 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '180 days from arraignment (Hicks rule)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Md. Rule 4-212',
-      speedyTrialRight: 'Md. Rule 4-271; State v. Hicks, 285 Md. 310 (1979)',
-    },
-  },
-  'WI': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '90 days if in custody; 180 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Wis. Stat. § 970.01',
-      speedyTrialRight: 'Wis. Stat. § 971.10',
-    },
-  },
-  'CO': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '6 months from arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Colo. R. Crim. P. 5',
-      speedyTrialRight: 'Colo. R. Crim. P. 48',
-    },
-  },
-  'MN': {
-    arraignmentDeadline: 'Within 36 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '60 days if in custody; 180 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Minn. R. Crim. P. 4.02',
-      speedyTrialRight: 'Minn. R. Crim. P. 11.10',
-    },
-  },
-  'SC': {
-    arraignmentDeadline: 'Within 24 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'Two-term rule if demanded; otherwise constitutional right only',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'S.C. Code Ann. § 17-15-10',
-      speedyTrialRight: 'S.C. Code Ann. § 17-23-90',
-    },
-  },
-  'AL': {
-    arraignmentDeadline: 'Within 72 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Ala. R. Crim. P. 4.3',
-      speedyTrialRight: 'Ala. Const. Art. I § 6; U.S. Const. amend. VI',
-    },
-  },
-  'LA': {
-    arraignmentDeadline: 'Within 72 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '2 years from arrest for felonies in custody; 120 days for misdemeanors in custody',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'La. Code Crim. Proc. Art. 230',
-      speedyTrialRight: 'La. Code Crim. Proc. Art. 578; Art. 701',
-    },
-  },
-  'KY': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Ky. R. Crim. P. 3.02',
-      speedyTrialRight: 'Ky. Const. § 11; U.S. Const. amend. VI',
-    },
-  },
-  'OR': {
-    arraignmentDeadline: 'Within 36 hours if in custody',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '60 days if in custody; 90 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Or. Rev. Stat. § 135.010',
-      speedyTrialRight: 'Or. Rev. Stat. § 135.747',
-    },
-  },
-  'OK': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Okla. Stat. tit. 22 § 181',
-      speedyTrialRight: 'Okla. Const. Art. II § 20',
-    },
-  },
-  'CT': {
-    arraignmentDeadline: 'Within 24 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No strict statutory deadline (constitutional and case-management rules)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Conn. Gen. Stat. § 54-1g',
-      speedyTrialRight: 'Conn. Const. Art. I § 8; U.S. Const. amend. VI',
-    },
-  },
-  'UT': {
-    arraignmentDeadline: 'Within 72 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Utah R. Crim. P. 7',
-      speedyTrialRight: 'Utah Const. Art. I § 12; U.S. Const. amend. VI',
-    },
-  },
-  'IA': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '90 days from indictment or arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Iowa R. Crim. P. 2.2(1)',
-      speedyTrialRight: 'Iowa R. Crim. P. 2.33(2)',
-    },
-  },
-  'NV': {
-    arraignmentDeadline: 'Within 72 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '60 days if in custody; 90 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Nev. Rev. Stat. § 171.178',
-      speedyTrialRight: 'Nev. Rev. Stat. § 178.556',
-    },
-  },
-  'MS': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Miss. R. Crim. P. 6.1',
-      speedyTrialRight: 'Miss. Const. Art. III § 26; U.S. Const. amend. VI',
-    },
-  },
-  'KS': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '90 days if in custody; 180 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Kan. Stat. Ann. § 22-2901',
-      speedyTrialRight: 'Kan. Stat. Ann. § 22-3402',
-    },
-  },
-  'NM': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '90 days if in custody; 180 days if released',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system with non-monetary release conditions available',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'N.M.R.A. Rule 5-303',
-      speedyTrialRight: 'N.M.R.A. Rule 5-604',
-    },
-  },
-  'NE': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '6 months from filing of information or indictment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Neb. Rev. Stat. § 29-1819',
-      speedyTrialRight: 'Neb. Rev. Stat. § 29-1207',
-    },
-  },
-  'WV': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'Three-term rule (approximately 9 months after indictment)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'W. Va. R. Crim. P. 5',
-      speedyTrialRight: 'W. Va. Code § 62-3-21',
-    },
-  },
-  'ID': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '6 months from filing of charge',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Idaho Crim. R. 5',
-      speedyTrialRight: 'Idaho Code § 19-3501',
-    },
-  },
-  'HI': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '180 days from arrest or filing of charges',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Haw. R. Penal P. 5',
-      speedyTrialRight: 'Haw. R. Penal P. 48',
-    },
-  },
-  'NH': {
-    arraignmentDeadline: 'Within 24 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'N.H. Rev. Stat. Ann. § 594:20-a',
-      speedyTrialRight: 'N.H. Const. Pt. I Art. 14; U.S. Const. amend. VI',
-    },
-  },
-  'ME': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Me. R. U. Crim. P. 5',
-      speedyTrialRight: 'Me. Const. Art. I § 6; U.S. Const. amend. VI',
-    },
-  },
-  'MT': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '6 months from first appearance',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Mont. Code Ann. § 46-7-101',
-      speedyTrialRight: 'Mont. Code Ann. § 46-13-401',
-    },
-  },
-  'RI': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'R.I. Super. Ct. R. Crim. P. 5',
-      speedyTrialRight: 'R.I. Const. Art. I § 10; U.S. Const. amend. VI',
-    },
-  },
-  'SD': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '180 days from arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'S.D. Codified Laws § 23A-40-1',
-      speedyTrialRight: 'S.D. Codified Laws § 23A-44-5.1',
-    },
-  },
-  'ND': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '90 days from arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'N.D.R.Crim.P. 5',
-      speedyTrialRight: 'N.D.R.Crim.P. 48(b)',
-    },
-  },
-  'AK': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '120 days from arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Alaska R. Crim. P. 5',
-      speedyTrialRight: 'Alaska R. Crim. P. 45',
-    },
-  },
-  'VT': {
-    arraignmentDeadline: 'Within 48 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Vt. R. Crim. P. 5',
-      speedyTrialRight: 'Vt. Const. Ch. I Art. 10; U.S. Const. amend. VI',
-    },
-  },
-  'WY': {
-    arraignmentDeadline: 'Within 72 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: 'No statutory deadline (constitutional right only)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'Wyo. R. Crim. P. 5',
-      speedyTrialRight: 'Wyo. Const. Art. I § 10; U.S. Const. amend. VI',
-    },
-  },
-  'DC': {
-    arraignmentDeadline: 'Within 24 hours',
-    preliminaryHearing: 'Within 10-14 days for felonies',
-    speedyTrialRight: '100 days from arrest',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Presumption of release — limited cash bail (D.C. Bail Reform Act)',
-    discoveryDeadline: 'Within 30 days after arraignment',
-    lastVerified: '2026-07',
-    sources: {
-      arraignmentDeadline: 'D.C. Code § 16-704',
-      speedyTrialRight: 'D.C. Code § 23-102',
-    },
   },
 };
+
+// ── Build jurisdictionRules from shared/jurisdiction-procedure-rules.ts ────────
+// The authoritative deadline strings (arraignment, speedy_trial) are imported
+// from the shared module so future corrections only need one file.
+// Supplemental fields are merged from the small table above.
+const jurisdictionRules: Record<string, JurisdictionRule> = Object.fromEntries(
+  Object.entries(JURISDICTION_PROCEDURE_RULES).map(([code, rule]) => {
+    const supp: JurisdictionSupplemental = jurisdictionSupplemental[code] ?? defaultSupplemental;
+    const entry: JurisdictionRule = {
+      arraignmentDeadline: rule.arraignment,
+      preliminaryHearing: supp.preliminaryHearing,
+      speedyTrialRight: rule.speedy_trial,
+      publicDefenderIncome: supp.publicDefenderIncome,
+      bailSystem: supp.bailSystem,
+      discoveryDeadline: supp.discoveryDeadline,
+      lastVerified: rule.lastVerified,
+      sources: {
+        arraignmentDeadline: rule.arraignmentSource,
+        speedyTrialRight: rule.speedyTrialSource,
+      },
+    };
+    return [code, entry];
+  })
+);
+
+// Preserve 'FEDERAL' (upper-case) as an alias for 'federal' so existing
+// callers that pass jurisdiction='FEDERAL' continue to resolve correctly.
+(jurisdictionRules as Record<string, JurisdictionRule>)['FEDERAL'] =
+  jurisdictionRules['federal'];
+
 
 // Charge-specific guidance database
 const chargeGuidance = {

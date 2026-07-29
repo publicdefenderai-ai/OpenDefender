@@ -140,10 +140,10 @@ const p1DeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-02: CA × arrest — arraignment deadline includes weekend caveat',
+    label: 'P1-02: CA × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
     input: { ...baseMapped, jurisdiction: 'CA', charges: 'assault' },
     expect: {
-      deadlineTimeframeKeywords: ['72 hours'],
+      deadlineTimeframeKeywords: ['48 hours'],
     },
   },
   {
@@ -405,10 +405,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
 
   // ── Georgia ──
   {
-    label: 'P1-35: GA × arrest — arraignment deadline matches jurisdiction rule (72 hours)',
+    label: 'P1-35: GA × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
     input: { ...baseMapped, jurisdiction: 'GA', charges: 'theft' },
     expect: {
-      deadlineTimeframeKeywords: ['72 hours'],
+      deadlineTimeframeKeywords: ['48 hours'],
       deadlineEventKeywords: ['Arraignment'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -437,10 +437,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
 
   // ── Arizona ──
   {
-    label: 'P1-38: AZ × arrest — arraignment deadline matches jurisdiction rule (48 hours if in custody)',
+    label: 'P1-38: AZ × arrest — arraignment deadline matches jurisdiction rule (24 hours)',
     input: { ...baseMapped, jurisdiction: 'AZ', charges: 'theft' },
     expect: {
-      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineTimeframeKeywords: ['24 hours'],
       deadlineEventKeywords: ['Arraignment'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -469,10 +469,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
 
   // ── New Jersey ──
   {
-    label: 'P1-41: NJ × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    label: 'P1-41: NJ × arrest — arraignment deadline matches jurisdiction rule (72 hours)',
     input: { ...baseMapped, jurisdiction: 'NJ', charges: 'theft' },
     expect: {
-      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineTimeframeKeywords: ['72 hours'],
       deadlineEventKeywords: ['Arraignment'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -533,10 +533,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
 
   // ── North Carolina ──
   {
-    label: 'P1-47: NC × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    label: 'P1-47: NC × arrest — arraignment deadline matches jurisdiction rule (96 hours)',
     input: { ...baseMapped, jurisdiction: 'NC', charges: 'theft' },
     expect: {
-      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineTimeframeKeywords: ['96 hours'],
       deadlineEventKeywords: ['Arraignment'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -565,10 +565,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
 
   // ── Virginia ──
   {
-    label: 'P1-50: VA × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    label: 'P1-50: VA × arrest — arraignment deadline matches jurisdiction rule (72 hours)',
     input: { ...baseMapped, jurisdiction: 'VA', charges: 'theft' },
     expect: {
-      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineTimeframeKeywords: ['72 hours'],
       deadlineEventKeywords: ['Arraignment'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
@@ -631,18 +631,18 @@ const p1DuiScenarios: EvalScenario[] = [
 
 const p1FederalScenarios: EvalScenario[] = [
   {
-    label: 'P1-21: Federal jurisdiction × arrest — "Without unnecessary delay" deadline',
+    label: 'P1-21: Federal jurisdiction × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
     input: { ...baseMapped, jurisdiction: 'federal', charges: 'wire fraud' },
     expect: {
-      deadlineTimeframeKeywords: ['Without unnecessary delay'],
+      deadlineTimeframeKeywords: ['48 hours'],
       noDeadlineIsEstimate: true,
     },
   },
   {
-    label: 'P1-22: Federal (uppercase) × arrest — arraignment delay language present',
+    label: 'P1-22: Federal (uppercase) × arrest — arraignment deadline present',
     input: { ...baseMapped, jurisdiction: 'FEDERAL', charges: 'mail fraud' },
     expect: {
-      deadlineTimeframeKeywords: ['Without unnecessary delay'],
+      deadlineTimeframeKeywords: ['48 hours'],
       noDeadlineIsEstimate: true,
     },
   },

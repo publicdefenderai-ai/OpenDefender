@@ -81,9 +81,13 @@ vi.mock('@shared/diversion-availability', () => ({
   checkDiversionAvailability: vi.fn().mockReturnValue({ unavailable: [] }),
 }));
 
-vi.mock('@shared/jurisdiction-procedure-rules', () => ({
-  buildJurisdictionContextBlock: vi.fn().mockReturnValue(''),
-}));
+vi.mock('@shared/jurisdiction-procedure-rules', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@shared/jurisdiction-procedure-rules')>();
+  return {
+    ...actual,
+    buildJurisdictionContextBlock: vi.fn().mockReturnValue(''),
+  };
+});
 
 // ── Imports (after all vi.mock declarations) ──────────────────────────────────
 import { generateClaudeGuidance } from '../server/services/claude-guidance';
