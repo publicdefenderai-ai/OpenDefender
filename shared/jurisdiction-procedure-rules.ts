@@ -189,9 +189,9 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     speedyTrialDays: {
       felony: 175,
       misdemeanor: 90,
-      notes: 'Clock runs from arrest or service of notice to appear. After the period expires, defendant may demand trial; if not brought to trial within 10 additional days, case is dismissed.',
+      notes: 'Clock runs from date formal charges are filed (amended eff. July 1, 2025; prior rule ran from arrest or service of notice to appear). After the period expires, defendant may file a notice of expiration of speedy trial; if not brought to trial within 30 days (recapture period, increased from 10 days by 2025 amendment), case is dismissed. Dismissal is without prejudice unless a constitutional speedy trial violation is independently established. Rule 3.134 also amended to allow pretrial release if formal charges are not brought within a reasonable time.',
     },
-    speedyTrialSource: 'Fla. R. Crim. P. 3.191',
+    speedyTrialSource: 'Fla. R. Crim. P. 3.191 (as amended eff. July 1, 2025, SC2022-1123); Fla. R. Crim. P. 3.134',
     phoneCall: {
       limitHours: null,
       description: 'No statutory time limit. Defendant must be given reasonable opportunity to communicate with family or attorney.',
