@@ -45,7 +45,7 @@ export function MobileBottomNav() {
               aria-label={t(item.labelKey, item.defaultLabel)}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex flex-col items-center justify-center flex-1 h-full py-2 px-1 transition-colors",
+                "flex flex-col items-center justify-center flex-1 h-full py-2 px-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
                 active
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"

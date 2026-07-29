@@ -89,7 +89,7 @@ export function FacilitySearch() {
               setSearchQuery('');
             }}
             aria-pressed={!selectedState && !searchQuery}
-            className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+            className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 ${
               !selectedState && !searchQuery
                 ? 'bg-primary text-primary-foreground'
                 : 'bg-muted text-muted-foreground hover:bg-muted/80'
@@ -106,7 +106,7 @@ export function FacilitySearch() {
               }}
               aria-pressed={selectedState === state}
               aria-label={lang === 'es' ? `Filtrar por ${state}` : `Filter by ${state}`}
-              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all ${
+              className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 ${
                 selectedState === state
                   ? 'bg-primary text-primary-foreground'
                   : 'bg-muted text-muted-foreground hover:bg-muted/80'
@@ -140,7 +140,7 @@ export function FacilitySearch() {
                   ? (lang === 'es' ? `Ocultar detalles de ${facility.name}` : `Hide details for ${facility.name}`)
                   : (lang === 'es' ? `Ver detalles de ${facility.name}` : `Show details for ${facility.name}`)
                 }
-                className="w-full p-4 text-left hover:bg-muted/50 transition-colors"
+                className="w-full p-4 text-left hover:bg-muted/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">

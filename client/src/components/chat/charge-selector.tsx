@@ -116,7 +116,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
         aria-label={isExpanded
           ? t('chat.chargeSelector.collapseLabel', 'Collapse charge selector')
           : t('chat.chargeSelector.expandLabel', 'Expand charge selector')}
-        className="w-full flex items-center justify-between p-3 border-b border-border hover:bg-muted/50 transition-colors"
+        className="w-full flex items-center justify-between p-3 border-b border-border hover:bg-muted/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
         data-testid="button-charge-selector-toggle"
       >
         <div className="flex items-center gap-2">
@@ -158,7 +158,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                   onClick={() => setSelectedCategory(key)}
                   aria-pressed={selectedCategory === key}
                   className={cn(
-                    "px-2.5 py-1 rounded-full text-xs font-medium transition-colors",
+                    "px-2.5 py-1 rounded-full text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
                     selectedCategory === key
                       ? "bg-primary text-primary-foreground"
                       : "bg-muted text-muted-foreground hover:bg-muted/80"
@@ -211,7 +211,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                       }
                       className={cn(
                         "w-full flex items-start gap-3 px-3 py-2.5 rounded-lg text-left",
-                        "transition-colors text-sm",
+                        "transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
                         isSelected
                           ? "bg-primary/10 border border-primary/30"
                           : "hover:bg-muted border border-transparent"
