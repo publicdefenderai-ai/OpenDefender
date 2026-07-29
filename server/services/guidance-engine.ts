@@ -278,6 +278,36 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
   },
+  LA: {
+    preliminaryHearing: 'Within 30 days if in custody',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  OR: {
+    preliminaryHearing: 'Within 14 days if in custody',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  OK: {
+    preliminaryHearing: 'Within 10 days if in custody',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  NV: {
+    preliminaryHearing: 'Within 15 days if in custody',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  CT: {
+    preliminaryHearing: 'Within 10 days for felonies',
+    discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
   federal: {
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
     discoveryDeadline: 'Ongoing obligation',

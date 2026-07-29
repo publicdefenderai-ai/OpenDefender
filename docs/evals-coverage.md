@@ -11,10 +11,10 @@
 
 | Dimension | Count |
 |---|---|
-| Total scenarios | 122 |
-| Passing | 122 |
+| Total scenarios | 137 |
+| Passing | 137 |
 | Failing | 0 |
-| Priority 1 (Deadlines) | 82 |
+| Priority 1 (Deadlines) | 97 |
 | Priority 2 (Collateral consequences) | 26 |
 | Priority 3 (Alerts, coverage, uncertainties) | 35 |
 
@@ -52,12 +52,15 @@
 | SC | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | KY | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | AL | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| LA | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| OR | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| OK | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| NV | Mapped | 3 | Arraignment + preliminary hearing + discovery |
+| CT | Mapped | 3 | Arraignment + preliminary hearing + discovery |
 | federal | Mapped | 2 | "Without unnecessary delay" language |
-| OR | Unmapped | 1 | isEstimate + uncertainty notice |
-| NV | Unmapped | 1 | isEstimate + uncertainty notice |
 | MT | Unmapped | 1 | isEstimate + uncertainty notice |
 
-**26 states not individually covered** — all unmapped states exercise the same code path; `OR`, `NV`, and `MT` serve as representative samples.
+**21 states not individually covered** — all unmapped states exercise the same code path; `MT` serves as a representative sample.
 
 ### Charge types covered
 
@@ -97,8 +100,8 @@
 
 ## What each priority group tests
 
-### Priority 1 — Deadline accuracy (P1-01 through P1-67)
-- **Mapped jurisdictions (CA, TX, NY, FL, IL, PA, WA, OH, GA, AZ, NJ, MI, NC, VA, CO, MN, MO, WI, MD):** Each arraignment deadline string matches the constant in `jurisdictionRules` exactly (substring match).  Weekend caveat in CA is specifically tested (`'72 hours'`).
+### Priority 1 — Deadline accuracy (P1-01 through P1-97)
+- **Mapped jurisdictions (CA, TX, NY, FL, IL, PA, WA, OH, GA, AZ, NJ, MI, NC, VA, CO, MN, MO, WI, MD, TN, IN, SC, KY, AL, LA, OR, OK, NV, CT):** Each arraignment deadline string matches the constant in `jurisdictionRules` exactly (substring match).  Weekend caveat in CA is specifically tested (`'72 hours'`).
 - **Mapped jurisdictions:** Discovery and preliminary hearing deadlines are present at arraignment stage.
 - **Mapped jurisdictions:** No deadline has `isEstimate: true` — the engine should treat mapped rules as authoritative.
 - **Unmapped states (OR, NV, MT):** At least one deadline has `isEstimate: true`, and the `Jurisdiction-Specific Deadlines` uncertainty notice fires.
