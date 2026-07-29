@@ -8,7 +8,7 @@
  */
 
 import { describe, it, expect } from 'vitest';
-import { JURISDICTION_PROCEDURE_RULES } from '../shared/jurisdiction-procedure-rules';
+import { JURISDICTION_PROCEDURE_RULES, buildJurisdictionContextBlock } from '../shared/jurisdiction-procedure-rules';
 import type { JurisdictionProcedureRule } from '../shared/jurisdiction-procedure-rules';
 
 // ─── Expected keys ────────────────────────────────────────────────────────────
@@ -194,6 +194,60 @@ describe('JURISDICTION_PROCEDURE_RULES — required string fields', () => {
       .filter(([, rule]) => !/^\d{4}-\d{2}$/.test(rule.lastVerified))
       .map(([key]) => key);
     expect(bad).toEqual([]);
+  });
+});
+
+// ─── buildJurisdictionContextBlock: no 'generally' for newly-promoted states ──
+//
+// Covers Task #255: all 29 states that were previously medium-confidence and
+// have since been promoted to high must produce prompt blocks with no qualifier.
+
+const NEWLY_PROMOTED_STATES = [
+  'MN', 'SC', 'AL', 'LA', 'KY', 'OR', 'OK', 'CT', 'UT', 'IA',
+  'NV', 'MS', 'KS', 'NM', 'NE', 'WV', 'ID', 'HI', 'NH', 'ME',
+  'MT', 'RI', 'DE', 'SD', 'ND', 'AK', 'VT', 'WY', 'DC',
+] as const;
+
+describe('buildJurisdictionContextBlock — no "generally" for newly-promoted high-confidence states', () => {
+  it('returns a non-null block for every newly-promoted state', () => {
+    const nullStates = NEWLY_PROMOTED_STATES.filter(
+      (abbr) => buildJurisdictionContextBlock(abbr) === null,
+    );
+    expect(nullStates, 'These states returned null (should be high-confidence)').toEqual([]);
+  });
+
+  it('contains no "generally" qualifier in the prompt block for any newly-promoted state', () => {
+    const withGenerally = NEWLY_PROMOTED_STATES.filter((abbr) => {
+      const block = buildJurisdictionContextBlock(abbr);
+      return block !== null && block.includes('generally');
+    });
+    expect(
+      withGenerally,
+      'These states still include the "generally" qualifier — they must be dataConfidence "high"',
+    ).toEqual([]);
+  });
+
+  // Spot-check 5 individual states to confirm full-confidence language
+  for (const abbr of ['MN', 'SC', 'AL', 'DC', 'WY'] as const) {
+    it(`${abbr} prompt block omits "generally" and includes "verified data"`, () => {
+      const block = buildJurisdictionContextBlock(abbr);
+      expect(block).not.toBeNull();
+      expect(block).not.toContain('generally');
+      expect(block).toContain('verified data');
+    });
+  }
+});
+
+describe('buildJurisdictionContextBlock — all high-confidence states omit "generally"', () => {
+  it('no high-confidence state produces a prompt block containing "generally"', () => {
+    const bad = Object.entries(JURISDICTION_PROCEDURE_RULES)
+      .filter(([, rule]) => rule.dataConfidence === 'high')
+      .filter(([key]) => {
+        const block = buildJurisdictionContextBlock(key);
+        return block !== null && block.includes('generally');
+      })
+      .map(([key]) => key);
+    expect(bad, 'High-confidence states must not include "generally" in their prompt block').toEqual([]);
   });
 });
 
