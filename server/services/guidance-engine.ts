@@ -405,6 +405,31 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
   },
 };
 
+/**
+ * Jurisdiction deadline rules merged from the shared procedure-rules module and
+ * the supplemental table above.
+ *
+ * ⚠️  **Do not edit these values without following the update procedure.**
+ *
+ * ## Update procedure (see `docs/evals-coverage.md` § "Procedure when updating")
+ *
+ * 1. **Change the rule** — edit the value here (or in
+ *    `shared/jurisdiction-procedure-rules.ts` for arraignment / speedy-trial
+ *    fields, or in `jurisdictionSupplemental` above for preliminary-hearing /
+ *    discovery fields).
+ * 2. **Run evals** — `npx vitest run tests/evals-harness.test.ts`.
+ *    Changing *any* value here **will** cause the corresponding P1 deadline
+ *    scenario(s) to fail immediately.  That is by design — the failure surfaces
+ *    the change before it reaches users.
+ * 3. **Update scenarios** — for each failing P1 scenario, update its
+ *    `deadlineTimeframeKeywords` (and any matching canary `canonicalKeyword`) to
+ *    the new string, then re-run to confirm all scenarios pass.
+ * 4. **Attorney review required** — obtain review of the updated rule text from
+ *    a licensed attorney before merging.  Passing eval scenarios confirm only
+ *    internal consistency, not legal accuracy.
+ *
+ * Full procedure: `docs/evals-coverage.md`
+ */
 // ── Build jurisdictionRules from shared/jurisdiction-procedure-rules.ts ────────
 // The authoritative deadline strings (arraignment, speedy_trial) are imported
 // from the shared module so future corrections only need one file.
