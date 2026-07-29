@@ -206,32 +206,78 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     bailSystem: 'Traditional bail system',
   },
   AZ: {
-    preliminaryHearing: 'Within 10 days if in custody',
-    discoveryDeadline: '10 days after arraignment',
+    // Ariz. R. Crim. P. 5.1(a): preliminary hearing within 10 days of initial
+    // appearance if defendant is in custody (20 days if released).
+    // Source verified by engineer against azleg.gov Rule 5.1 (2026-07).
+    // ATTORNEY REVIEW PENDING: deadline values not yet reviewed by licensed attorney.
+    preliminaryHearing: 'Within 10 days if in custody (Ariz. R. Crim. P. 5.1)',
+    // Ariz. R. Crim. P. 15.1(b)(1): prosecutor's initial disclosure due within
+    // 10 days after arraignment — one of the few states with a firm
+    // post-arraignment statutory deadline. Source verified by engineer (2026-07).
+    // ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '10 days after arraignment (Ariz. R. Crim. P. 15.1)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   NJ: {
-    preliminaryHearing: 'Within 20 days for indictable offenses',
-    discoveryDeadline: '20 days after arraignment',
+    // N.J. Ct. R. 3:4-3(a): preliminary hearing not later than 20 days after
+    // arrest for indictable offenses. Source verified by engineer (2026-07).
+    // Note: NJ eliminated cash bail (Jan 1, 2017); most indictable defendants
+    // go through the PSA risk-assessment process, but the 20-day scheduling
+    // right remains. ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 20 days for indictable offenses (N.J. Ct. R. 3:4-3)',
+    // N.J. Ct. R. 3:13-3(b): initial discovery provided no later than 20 days
+    // after return or unsealing of the indictment. "After arraignment" is used
+    // as a practical proxy since indictment and arraignment occur in close
+    // sequence for indictable offenses. Source verified by engineer (2026-07).
+    // ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '20 days after indictment/arraignment (N.J. Ct. R. 3:13-3)',
     publicDefenderIncome: 'Individual: $25,000, Family of 2: $34,000',
-    bailSystem: 'Pretrial services assessment — bail reform',
+    bailSystem: 'Pretrial services assessment — bail reform (no cash bail since 2017)',
   },
   MI: {
-    preliminaryHearing: 'Within 14 days',
-    discoveryDeadline: '21 days after arraignment',
+    // MCL § 766.4: district court must schedule preliminary examination within
+    // 14 days after arraignment. Source verified by engineer against
+    // Michigan Legislature website (2026-07). ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 14 days of arraignment (MCL § 766.4)',
+    // MCR 6.201(B): prosecutor must respond within 21 days of a defense
+    // discovery request. There is no automatic post-arraignment disclosure
+    // deadline — the 21-day clock is request-triggered. "21 days after
+    // arraignment" is a working approximation; engineer primary-source review
+    // 2026-07. ATTORNEY REVIEW PENDING — particularly for request-triggered
+    // nature of discovery obligation.
+    discoveryDeadline: '21 days after arraignment (approximate; MCR 6.201 is request-triggered)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   NC: {
-    preliminaryHearing: 'Within 15 days if in custody',
-    discoveryDeadline: '15 days after arraignment',
+    // N.C. Gen. Stat. § 15A-606(c): preliminary hearing must be held "no later
+    // than 15 working days after the arrest of the defendant when the defendant
+    // is in pretrial detention." Corrected from prior "15 days if in custody"
+    // to specify working days, which is the statutory standard.
+    // Source verified by engineer against ncleg.net § 15A-606 (2026-07).
+    // ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 15 working days if in custody (N.C. Gen. Stat. § 15A-606)',
+    // N.C. Gen. Stat. § 15A-902/903 (2004 Open Discovery Act): defense must make
+    // a written request; prosecution responds within a reasonable time.
+    // There is no fixed 15-day post-arraignment deadline in the statute.
+    // "15 days after arraignment" is a working approximation; engineer
+    // primary-source review 2026-07. ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '15 days after arraignment (approximate; § 15A-902 is request-triggered)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   VA: {
-    preliminaryHearing: 'Within 10 days if in custody',
-    discoveryDeadline: '21 days after arraignment',
+    // Va. Sup. Ct. Rule 3A:5(c): if the accused is in custody, the preliminary
+    // hearing shall be held within 10 days of arrest. Source verified by
+    // engineer against vacourts.gov Rule 3A:5 (2026-07). ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 10 days if in custody (Va. Sup. Ct. Rule 3A:5)',
+    // Va. Sup. Ct. R. 3A:11: discovery is largely motion-based — either party
+    // may move for disclosure, and the court may order production. There is no
+    // mandatory 21-day post-arraignment disclosure deadline by rule. "21 days
+    // after arraignment" approximates typical scheduling in Virginia practice.
+    // Engineer primary-source review 2026-07. ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '21 days after arraignment (approximate; Va. Sup. Ct. R. 3A:11 is motion-based)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },

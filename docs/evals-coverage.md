@@ -190,7 +190,20 @@ The scenarios were written by engineers reading the rule constants, but they wil
 - P2-14 confirms `assault` → `firearms` consequence appears, but the engine's `CHARGE_CONSEQUENCE_MAP.assault` applies to "certain assault convictions — particularly felonies or offenses involving domestic partners."  The harness does not verify the consequence text distinguishes between felony and misdemeanor assault paths.
 
 ### Attorney review status
-- None of the expected values have been verified by a licensed attorney.  Passing scenarios confirm *internal consistency* (the engine does what the rules constants say) but not *external accuracy* (whether the rules constants reflect current law).
+
+> **⚠️ Attorney review is pending for all states, including AZ, NJ, MI, NC, and VA.**  The table below documents an engineer-led primary-source research pass (July 2026) that verified deadline values against official statute and court-rule texts.  This is not a substitute for review by a licensed attorney.  Passing eval scenarios confirm only that the engine faithfully executes its own constants; they do **not** confirm legal accuracy.
+
+#### Engineer primary-source research pass — July 2026 (AZ, NJ, MI, NC, VA)
+
+| State | Date | Findings | Status |
+|---|---|---|---|
+| AZ | 2026-07 | Ariz. R. Crim. P. 5.1(a): 10-day preliminary hearing confirmed. Rule 15.1(b)(1): 10-day post-arraignment disclosure confirmed (one of few states with a firm statutory deadline). No changes to time values; source citations added. | Engineer-verified; **attorney review pending** |
+| NJ | 2026-07 | N.J. Ct. R. 3:4-3(a): 20-day preliminary hearing confirmed. Discovery technically triggered by indictment return (N.J. Ct. R. 3:13-3(b)), not arraignment — string clarified to "after indictment/arraignment." No change to time values. | Engineer-verified; **attorney review pending** |
+| MI | 2026-07 | MCL § 766.4: 14-day preliminary examination confirmed. MCR 6.201(B) discovery is *request-triggered* (21 days after defense request), not a fixed post-arraignment deadline — note added to string; no change to time value. | Engineer-verified; **attorney review pending** |
+| NC | 2026-07 | N.C. Gen. Stat. § 15A-606(c): statute specifies **15 working days** (not calendar days) for in-custody defendants — corrected from prior "15 days if in custody." Discovery under § 15A-902 is request-triggered; note added. | Corrected; **attorney review pending** |
+| VA | 2026-07 | Va. Sup. Ct. Rule 3A:5(c): 10-day in-custody preliminary hearing confirmed. Va. Sup. Ct. R. 3A:11 discovery is motion-based (no mandatory post-arraignment deadline) — note added; no change to time value. | Engineer-verified; **attorney review pending** |
+
+All other mapped states (CA, TX, NY, FL, IL, PA, WA, OH, GA, CO, MN, MO, WI, MD, TN, IN, SC, KY, AL, LA, OR, OK, NV, CT, federal) have had **no** primary-source research pass for the supplemental fields (`preliminaryHearing`, `discoveryDeadline`).  Passing scenarios confirm internal consistency only.
 
 ---
 
