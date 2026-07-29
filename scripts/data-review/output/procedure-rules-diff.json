@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-07-28T21:28:48.157Z",
+  "runAt": "2026-07-29T05:19:58.005Z",
   "totalChecked": 52,
   "freshCount": 52,
   "staleCount": 0,
@@ -7,99 +7,99 @@
   "results": [
     {
       "jurisdiction": "federal",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "CA",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "NY",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "TX",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "FL",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "IL",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "PA",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "OH",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "GA",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "NC",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "MI",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "NJ",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "VA",
@@ -107,7 +107,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "WA",
@@ -115,7 +115,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "AZ",
@@ -123,7 +123,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "MA",
@@ -131,7 +131,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "TN",
@@ -139,7 +139,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "IN",
@@ -147,7 +147,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "MO",
@@ -155,7 +155,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "MD",
@@ -163,7 +163,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "WI",
@@ -171,7 +171,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "CO",
@@ -179,7 +179,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "MN",
@@ -187,7 +187,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "SC",
@@ -195,7 +195,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "AL",
@@ -203,7 +203,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "LA",
@@ -211,7 +211,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "KY",
@@ -219,7 +219,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "OR",
@@ -227,7 +227,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "OK",
@@ -235,7 +235,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "CT",
@@ -243,7 +243,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "UT",
@@ -251,7 +251,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "IA",
@@ -259,7 +259,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "NV",
@@ -267,15 +267,15 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "AR",
-      "lastVerified": "2026-03",
-      "ageMonths": 4,
+      "lastVerified": "2026-07",
+      "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "MS",
@@ -283,7 +283,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "KS",
@@ -291,7 +291,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "NM",
@@ -299,7 +299,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "NE",
@@ -307,7 +307,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "WV",
@@ -315,7 +315,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "ID",
@@ -323,7 +323,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "HI",
@@ -331,7 +331,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "NH",
@@ -339,7 +339,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "ME",
@@ -347,7 +347,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "MT",
@@ -355,7 +355,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "RI",
@@ -363,7 +363,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "DE",
@@ -371,7 +371,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "SD",
@@ -379,7 +379,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "ND",
@@ -387,7 +387,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "AK",
@@ -395,7 +395,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "VT",
@@ -403,7 +403,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "WY",
@@ -411,7 +411,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     },
     {
       "jurisdiction": "DC",
@@ -419,7 +419,7 @@
       "ageMonths": 0,
       "dataConfidence": "high",
       "stale": false,
-      "checkedAt": "2026-07-28T21:28:48.157Z"
+      "checkedAt": "2026-07-29T05:19:58.005Z"
     }
   ]
 }

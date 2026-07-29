@@ -23,7 +23,7 @@
  *   - When a reform changes a rule (bail reform, new speedy trial statute, etc.),
  *     update the entry and add a reformNote.
  *
- * Last full data pass: 2026-07
+ * Last full data pass: 2026-07 (all 52 entries unified to this date)
  *
  * Coverage: All 50 US states + DC + federal (52 entries).
  *   52 high-confidence: all 50 states + DC + federal
@@ -96,7 +96,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'presumption_release',
     bailReformNote: 'Bail Reform Act of 1984 (18 U.S.C. § 3142) creates presumption of release on least restrictive conditions. Detention permitted only if defendant poses a danger or flight risk.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── California ────────────────────────────────────────────────────────────
@@ -122,7 +122,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     bailReformNote: 'California retains a cash bail system. SB 10 (2018) to eliminate cash bail was suspended pending voter referendum and did not take effect. OR (own recognizance) release is available and widely used.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── New York ──────────────────────────────────────────────────────────────
@@ -148,7 +148,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'reformed_limited_cash',
     bailReformNote: 'Bail reform law (effective January 2020, amended 2020 and 2022) eliminated cash bail for most misdemeanors and non-violent felonies. Cash bail still permitted for violent felonies and certain other charges. Non-monetary conditions are the default for qualifying offenses.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Texas ─────────────────────────────────────────────────────────────────
@@ -174,7 +174,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Texas uses a cash bail system. Magistrate sets bail amount at initial appearance. Bail schedules exist in many counties.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Florida ───────────────────────────────────────────────────────────────
@@ -200,7 +200,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Florida uses a cash bail system with bail schedules. Article I, § 14 of the Florida Constitution governs pretrial release.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Illinois ──────────────────────────────────────────────────────────────
@@ -228,7 +228,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'reformed_no_cash',
     bailReformNote: 'Illinois eliminated cash bail statewide effective September 18, 2023, under the Pretrial Fairness Act (part of the SAFE-T Act). All pretrial detention decisions are now based on dangerousness and flight risk under 725 ILCS 5/110-2. Cash bail is no longer available.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Pennsylvania ──────────────────────────────────────────────────────────
@@ -254,7 +254,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Pennsylvania uses monetary bail. Bail is set at the preliminary arraignment. Bail reduction hearings are available.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Ohio ──────────────────────────────────────────────────────────────────
@@ -282,7 +282,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Ohio uses a cash bail system. Bail is set at initial appearance. OR release is available for minor offenses.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Georgia ───────────────────────────────────────────────────────────────
@@ -308,7 +308,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Georgia uses a commercial surety bail system. Bond hearings are held at initial appearance. Georgia has significant issues with commercial bail bondsmen.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── North Carolina ────────────────────────────────────────────────────────
@@ -334,7 +334,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'North Carolina uses a cash bail system. Bail is set at initial appearance before a magistrate.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Michigan ──────────────────────────────────────────────────────────────
@@ -360,7 +360,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Michigan uses a cash bail system. Bail is set at arraignment. Personal recognizance bonds are available.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── New Jersey ────────────────────────────────────────────────────────────
@@ -386,7 +386,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'reformed_no_cash',
     bailReformNote: 'The Criminal Justice Reform Act (effective January 1, 2017) eliminated cash bail for almost all defendants. Pretrial detention decisions are based on risk assessment using the Public Safety Assessment (PSA) tool and a judicial dangerousness finding. New Jersey was among the first states to eliminate cash bail statewide.',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Virginia ──────────────────────────────────────────────────────────────
@@ -966,7 +966,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     dataConfidence: 'high',
-    lastVerified: '2026-03',
+    lastVerified: '2026-07',
   },
 
   // ── Mississippi ───────────────────────────────────────────────────────────
