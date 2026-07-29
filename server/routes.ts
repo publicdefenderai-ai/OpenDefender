@@ -392,6 +392,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return {
           id: charge.id,
           code: charge.code,
+          /** Verified statute citation (e.g. "Cal. Penal Code § 212.5(a)"), or null when
+           *  no high-confidence citation has been confirmed for this entry.
+           *  Callers should display this field rather than `code`, which may be synthesized. */
+          citation: getVerifiedCitation(charge) ?? null,
           name,
           category: charge.category,
           description,

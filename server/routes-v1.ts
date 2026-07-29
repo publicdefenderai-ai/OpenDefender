@@ -3,7 +3,7 @@ import { Router as ExpressRouter } from "express";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { search, getSearchIndexStats } from "./services/search-indexer";
-import { criminalCharges, getChargeById, getInstructionRef, getInstructionUrl } from "../shared/criminal-charges";
+import { criminalCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
 import { openApiSpec } from "./openapi";
 import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
@@ -118,6 +118,7 @@ export function registerV1Routes(app: Express): void {
         const instructionUrl = getInstructionUrl(charge);
         return {
           ...charge,
+          citation: getVerifiedCitation(charge) ?? null,
           ...(instructionRef ? { instructionRef } : {}),
           ...(instructionUrl ? { instructionUrl } : {}),
         };
@@ -146,6 +147,7 @@ export function registerV1Routes(app: Express): void {
         success: true,
         data: {
           ...charge,
+          citation: getVerifiedCitation(charge) ?? null,
           ...(instructionRef ? { instructionRef } : {}),
           ...(instructionUrl ? { instructionUrl } : {}),
         }

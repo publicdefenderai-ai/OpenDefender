@@ -25,6 +25,8 @@ export interface SearchDocument {
   score?: number;
   instructionRef?: string;
   instructionUrl?: string;
+  /** Verified statute citation, or null when unverified. Only present on 'charge' documents. */
+  citation?: string | null;
 }
 
 export interface SearchResult {

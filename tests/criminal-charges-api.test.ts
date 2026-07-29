@@ -5,6 +5,8 @@ const BASE_URL = 'http://localhost:5000';
 interface ChargeApiItem {
   id: string;
   code: string;
+  /** Verified statute citation, or null when unverified. */
+  citation: string | null;
   name: string;
   category: string;
   instructionRef?: string;
@@ -190,5 +192,87 @@ describe('GET /api/v1/search?q=robbery&types=charge — instructionRef/instructi
       ilRobbery!.document.instructionUrl,
       'instructionUrl missing from IL robbery v1 search result',
     ).toMatch(/illinoiscourts\.gov/);
+  });
+});
+
+// ─── citation field contract ──────────────────────────────────────────────────
+// Guards that every /api/criminal-charges response includes the `citation` field
+// (string | null) so third-party callers can distinguish verified statute codes
+// from synthesized ones without inspecting internal confidence metadata.
+
+// AL jurisdiction is used for the null-citation test: AL is partially verified in
+// the overlay, so some AL charges have high-confidence citations and some do not.
+let alResponse: ChargesApiResponse;
+
+beforeAll(async () => {
+  if (!serverAvailable) return;
+  try {
+    const res = await fetch(`${BASE_URL}/api/criminal-charges?jurisdiction=AL`);
+    if (res.ok) {
+      alResponse = (await res.json()) as ChargesApiResponse;
+    }
+  } catch {
+    // If the secondary fetch fails, the tests below will skip gracefully.
+  }
+}, 10000);
+
+describe('GET /api/criminal-charges — citation field contract', () => {
+  it('every CA charge in the response has a `citation` field (string or null, never undefined)', () => {
+    if (!serverAvailable) return;
+    const missing = response.charges.filter(
+      c => !Object.prototype.hasOwnProperty.call(c, 'citation'),
+    );
+    expect(
+      missing.length,
+      `${missing.length} charge(s) are missing the citation field entirely — field may have been dropped from the serializer`,
+    ).toBe(0);
+  });
+
+  it('ca-robbery-in-the-first-degree returns citation: "Cal. Penal Code § 212.5(a)" (high-confidence verified entry)', () => {
+    if (!serverAvailable) return;
+    const robbery = response.charges.find(c => c.id === 'ca-robbery-in-the-first-degree');
+    expect(
+      robbery,
+      'ca-robbery-in-the-first-degree missing from /api/criminal-charges?jurisdiction=CA',
+    ).toBeDefined();
+    expect(
+      robbery!.citation,
+      'ca-robbery-in-the-first-degree should have citation "Cal. Penal Code § 212.5(a)" — citation overlay may be disconnected or confidence downgraded',
+    ).toBe('Cal. Penal Code § 212.5(a)');
+  });
+
+  it('all non-null CA citations are non-empty strings', () => {
+    if (!serverAvailable) return;
+    const badCitations = response.charges.filter(
+      c => c.citation !== null && (typeof c.citation !== 'string' || c.citation.trim() === ''),
+    );
+    expect(
+      badCitations.length,
+      `${badCitations.length} charge(s) have non-null citation that is empty or not a string`,
+    ).toBe(0);
+  });
+
+  it('al-murder-in-the-second-degree returns citation: null (unverified entry must not surface a synthesized code)', () => {
+    if (!serverAvailable || !alResponse) return;
+    const charge = alResponse.charges.find(c => c.id === 'al-murder-in-the-second-degree');
+    expect(
+      charge,
+      'al-murder-in-the-second-degree missing from /api/criminal-charges?jurisdiction=AL',
+    ).toBeDefined();
+    expect(
+      charge!.citation,
+      'al-murder-in-the-second-degree should have citation: null — unverified entries must not return a synthesized statute code to API callers',
+    ).toBeNull();
+  });
+
+  it('every AL charge in the response has a `citation` field (string or null, never undefined)', () => {
+    if (!serverAvailable || !alResponse) return;
+    const missing = alResponse.charges.filter(
+      c => !Object.prototype.hasOwnProperty.call(c, 'citation'),
+    );
+    expect(
+      missing.length,
+      `${missing.length} AL charge(s) are missing the citation field entirely`,
+    ).toBe(0);
   });
 });
