@@ -6788,6 +6788,55 @@ export default {
       "disclaimer": "Esta lista es solo una herramienta practica. No es asesoramiento legal y no es privilegiada."
     }
   },
+  "disclaimers": {
+    "hero": {
+      "title": "Aviso Legal y Exenciones de Responsabilidad",
+      "subtitle": "Información importante sobre el uso de OpenDefender",
+      "lastUpdated": "Última actualización: julio de 2026"
+    },
+    "notLegalAdvice": {
+      "title": "No es Asesoramiento Legal",
+      "body": "OpenDefender proporciona información general y recursos prácticos — no es asesoramiento legal y no establece una relación abogado-cliente. La mayor parte de la plataforma cubre apoyo práctico: entender lo que está ocurriendo, conocer sus derechos, encontrar recursos y manejar las disrupciones de vida que acompañan a un caso legal. Para obtener asesoramiento específico a su situación legal, consulte a un abogado calificado."
+    },
+    "aiDisclosure": {
+      "title": "Divulgación sobre Tecnología de IA",
+      "p1": "Tres funciones de OpenDefender utilizan IA para generar contenido: la Hoja de Ruta del Caso y la herramienta de orientación, las herramientas de Generación de Documentos para Abogados en el Portal de Abogados, y el Resumidor de Documentos. Las tres utilizan Claude Sonnet 4.6 de Anthropic.",
+      "p2": "La Hoja de Ruta del Caso también incluye un motor de respaldo basado en reglas que se activa automáticamente cuando el servicio de IA no está disponible. En modo de respaldo, la orientación se genera a partir de reglas legales estructuradas, no de un modelo de IA activo — en ese caso no se envían datos a Anthropic. La Generación de Documentos para Abogados y el Resumidor de Documentos no tienen este respaldo y mostrarán un error si el servicio de IA no está disponible.",
+      "p3": "Todo el demás contenido de este sitio — información sobre derechos, el verificador de elegibilidad para eliminación de antecedentes, la guía de fechas de tribunal, guías de inmigración, recursos de apoyo y todas las demás páginas estáticas — no utiliza IA. Ha sido investigado y redactado manualmente.",
+      "p4": "La Hoja de Ruta del Caso también incluye un paso de clasificación de emergencias civiles que hace preguntas categóricas sobre situaciones activas (vivienda, empleo, dependientes, inmigración). Estas respuestas siguen el mismo proceso de solo sesión que todas las demás entradas de la Hoja de Ruta: se mantienen en la memoria del servidor, se eliminan automáticamente en 24 horas y nunca se escriben en una base de datos.",
+      "p5": "La orientación generada por IA no sustituye al asesoramiento de un abogado con licencia. Contrastamos las respuestas con bases de datos legales para mejorar la precisión, pero la IA puede cometer errores. Consulte a un abogado calificado antes de tomar decisiones legales.",
+      "p6": "Antes de que sus entradas lleguen a la IA, analizamos automáticamente y eliminamos información personal (nombres, números de teléfono, direcciones, números de Seguro Social). Consulte nuestra Política de Privacidad para obtener detalles completos sobre el manejo de datos."
+    },
+    "screeningTools": {
+      "title": "Herramientas de Evaluación y Elegibilidad",
+      "p1": "El Verificador de Elegibilidad para la Eliminación de Antecedentes es un árbol de decisiones — no usa IA ni realiza llamadas al servidor. Se ejecuta completamente en su navegador. No se transmiten ni almacenan datos.",
+      "p2": "El Verificador de Consecuencias Colaterales es un cuestionario de sí/no que identifica riesgos en áreas de vida (vivienda, empleo, inmigración, custodia y más) según sus respuestas. No usa IA ni realiza llamadas al servidor. Todo se ejecuta en su navegador — ningún dato sale de su dispositivo.",
+      "p3": "La Lista de Verificación de Admisión del Defensor Público es un formulario de admisión electrónico para abogados y defensores. Se ejecuta completamente en su navegador, no realiza llamadas al servidor y genera un archivo .docx descargable localmente en su dispositivo. No se transmiten ni almacenan datos en nuestros servidores.",
+      "p4": "El Constructor de Memorandos de Mitigación ayuda a abogados y defensores a estructurar la información del cliente en un memorando de sentencia formateado. No usa IA ni realiza llamadas al servidor. El memorando se genera como un archivo .docx completamente en su navegador — no se transmiten ni almacenan datos en nuestros servidores.",
+      "p5": "La Guía de Identificación de Errores en Hojas de Antecedentes y la información sobre derechos de la FCRA son únicamente informativas. Describen procesos y derechos generales. Verifique todos los procedimientos de disputa y plazos directamente con la agencia correspondiente — el FBI, el repositorio penal de su estado, o la empresa de verificación de antecedentes."
+    },
+    "publicApi": {
+      "title": "API Pública",
+      "intro": "OpenDefender ofrece una API pública gratuita y de solo lectura en /api/v1/ que permite a desarrolladores externos y organizaciones de asistencia legal incorporar nuestros datos de referencia legal — cargos, estatutos, programas de desviación y términos del glosario — en sus propias herramientas y sitios web.",
+      "item1": "Todos los puntos de acceso de la API son de solo lectura — no se envían ni recopilan datos de usuarios a través de la API",
+      "item2": "La orientación basada en IA no está disponible a través de la API pública — requiere el uso directo del sitio",
+      "item3": "Los datos devueltos por la API son información de referencia legal general — no son asesoramiento legal y no establecen una relación abogado-cliente",
+      "item4": "Los terceros que incorporen nuestros datos o componentes son responsables de incluir las exenciones de responsabilidad apropiadas en sus propias aplicaciones",
+      "item5": "Se aplican límites de velocidad (60 solicitudes por minuto por IP) para garantizar un acceso equitativo",
+      "footer": "La misma limitación de \"solo información general\" que se aplica en este sitio se aplica igualmente a cualquier dato al que se acceda a través de la API. OpenDefender no es responsable de cómo los terceros presentan o utilizan los datos obtenidos a través de la API pública."
+    },
+    "attorneyTools": {
+      "title": "Herramientas para Abogados",
+      "intro": "Nuestras herramientas de generación de documentos producen borradores de escritos legales para uso de abogados con licencia.",
+      "item1": "Todos los documentos generados son solo borradores — los abogados son los únicos responsables de revisar y verificar la exactitud antes de presentarlos",
+      "item2": "No recopilamos ni almacenamos credenciales del colegio de abogados, y no verificamos la membresía en el colegio",
+      "item3": "Los documentos generados dependen de plantillas específicas de cada jurisdicción y de datos legales de terceros que pueden contener errores o estar desactualizados"
+    },
+    "acknowledgement": {
+      "label": "Reconocimiento de las Divulgaciones:",
+      "body": "Al utilizar este sitio, usted reconoce estas exenciones de responsabilidad y comprende la naturaleza de código abierto y los límites de la plataforma."
+    }
+  },
   "courtDateGuide": {
     "badge": "Guía Práctica",
     "title": "Guía de Fechas de Tribunal: Cómo Seguir y No Perder su Fecha",

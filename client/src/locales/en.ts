@@ -6785,6 +6785,55 @@ export default {
       "disclaimer": "This checklist is a practical tool only. It is not legal advice and is not privileged."
     }
   },
+  "disclaimers": {
+    "hero": {
+      "title": "Legal Notice & Disclaimers",
+      "subtitle": "Important information about using OpenDefender",
+      "lastUpdated": "Last updated: July 2026"
+    },
+    "notLegalAdvice": {
+      "title": "Not Legal Advice",
+      "body": "OpenDefender provides general information and practical resources — it is not legal advice and does not establish an attorney-client relationship. Most of the platform covers practical support: understanding what is happening, knowing your rights, finding resources, and managing life disruptions that come with a legal case. For advice specific to your legal situation, consult a qualified attorney."
+    },
+    "aiDisclosure": {
+      "title": "AI Technology Disclosure",
+      "p1": "Three features on OpenDefender use AI to generate content: the Case Roadmap and guided case support tool, the Attorney Document Generation tools in the Attorney Portal, and the Document Summarizer. All three use Anthropic's Claude Sonnet 4.6.",
+      "p2": "The Case Roadmap also includes a rule-based fallback engine that runs automatically when the AI service is unavailable. In fallback mode, guidance is generated from structured legal rules rather than a live AI model — no data is sent to Anthropic in that case. Attorney Document Generation and the Document Summarizer do not have this fallback and will display an error if the AI service is unavailable.",
+      "p3": "All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.",
+      "p4": "The Case Roadmap also includes a civil emergency triage step that asks categorical questions about active situations (housing, employment, dependents, immigration). These answers follow the same session-only path as all other Case Roadmap inputs: held in server memory, auto-deleted in 24 hours, never written to a database.",
+      "p5": "AI-generated guidance is not a substitute for advice from a licensed attorney. We cross-reference responses with legal databases to improve accuracy, but AI can make mistakes. Consult a qualified attorney before making legal decisions.",
+      "p6": "Before your inputs reach the AI, we automatically scan for and remove personal information (names, phone numbers, addresses, Social Security numbers). See our Privacy Policy for the full details on data handling."
+    },
+    "screeningTools": {
+      "title": "Screening and Eligibility Tools",
+      "p1": "The Record Clearance Eligibility Screener is a decision tree — it uses no AI and makes no server calls. It runs entirely in your browser. No data is transmitted or stored.",
+      "p2": "The Collateral Consequences Screener is a yes/no questionnaire that flags life-area risks (housing, employment, immigration, custody, and more) based on your answers. It uses no AI and makes no server calls. Everything runs in your browser — no data leaves your device.",
+      "p3": "The Public Defender Intake Checklist is an electronic intake form for attorneys and advocates. It runs entirely in your browser, makes no server calls, and generates a downloadable .docx file locally on your device. No data is transmitted or stored on our servers.",
+      "p4": "The Mitigation Memo Builder helps attorneys and advocates structure client information into a formatted sentencing memo. It uses no AI and makes no server calls. The memo is generated as a .docx file entirely in your browser — no data is transmitted or stored on our servers.",
+      "p5": "The Rap Sheet Error Identification Guide and FCRA rights information are informational only. They describe general processes and rights. Verify all dispute procedures and deadlines directly with the relevant agency — the FBI, your state criminal repository, or the background check company."
+    },
+    "publicApi": {
+      "title": "Public API",
+      "intro": "OpenDefender offers a free, read-only public API at /api/v1/ that lets third-party developers and legal aid organizations embed our legal reference data — charges, statutes, diversion programs, and glossary terms — into their own tools and websites.",
+      "item1": "All API endpoints are read-only — no user data is submitted or collected through the API",
+      "item2": "AI-powered guidance is not available through the public API — it requires direct use of the site",
+      "item3": "Data returned through the API is general legal reference information — it is not legal advice and does not establish an attorney-client relationship",
+      "item4": "Third parties who embed our data or widgets are responsible for including appropriate disclaimers in their own applications",
+      "item5": "Rate limits apply (60 requests per minute per IP) to ensure fair access",
+      "footer": "The same \"general information only\" limitation that applies on this site applies equally to any data accessed through the API. OpenDefender is not responsible for how third parties present or use data obtained through the public API."
+    },
+    "attorneyTools": {
+      "title": "Attorney Tools",
+      "intro": "Our document generation tools produce draft legal filings for use by licensed attorneys.",
+      "item1": "All generated documents are drafts only — attorneys are solely responsible for reviewing and verifying accuracy before filing",
+      "item2": "We do not collect or store bar credentials, and we do not verify bar membership",
+      "item3": "Generated documents rely on jurisdiction-specific templates and third-party legal data that may contain errors or be outdated"
+    },
+    "acknowledgement": {
+      "label": "Acknowledgement of Disclosures:",
+      "body": "By using this site, you acknowledge these disclaimers and understand the open source nature and limits of the platform."
+    }
+  },
   "courtDateGuide": {
     "badge": "Practical Guide",
     "title": "Court Date Guide: How to Track and Not Miss Your Court Date",

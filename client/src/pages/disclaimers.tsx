@@ -1,4 +1,3 @@
-import { Info } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { BrandShieldIcon } from "@/components/brand-logo";
@@ -9,21 +8,9 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
-const TRANSLATION_NOTICES: Record<string, { title: string; text: string }> = {
-  es: {
-    title: "Aviso de traducción",
-    text: "Esta página se proporciona en español únicamente por conveniencia. La versión oficial y autorizada de estos avisos legales es la versión en inglés. Las traducciones pueden no reflejar el significado legal exacto del texto en inglés.",
-  },
-  zh: {
-    title: "翻译声明",
-    text: "本页面提供中文版本仅供参考。这些法律声明的官方权威版本为英文版本。翻译可能无法完全反映英文文本的确切法律含义。",
-  },
-};
-
 export default function Disclaimers() {
   useScrollToTop();
-  const { i18n } = useTranslation();
-  const notice = TRANSLATION_NOTICES[i18n.language] ?? null;
+  const { t } = useTranslation();
 
   return (
     <div className="min-h-screen bg-background">
@@ -33,29 +20,18 @@ export default function Disclaimers() {
       <section className="vivid-header py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
-            Legal Notice & Disclaimers
+            {t('disclaimers.hero.title')}
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Important information about using OpenDefender
+            {t('disclaimers.hero.subtitle')}
           </p>
           <p className="text-sm text-white/60 mt-2">
-            Last updated: July 2026
+            {t('disclaimers.hero.lastUpdated')}
           </p>
         </div>
       </section>
       
       <main className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-
-        {/* Translation notice — shown only for non-English languages */}
-        {notice && (
-          <Alert className="mb-10 border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
-            <Info className="h-4 w-4 text-amber-600 dark:text-amber-400" />
-            <AlertDescription className="text-amber-800 dark:text-amber-200">
-              <strong className="font-semibold">{notice.title}: </strong>
-              {notice.text}
-            </AlertDescription>
-          </Alert>
-        )}
 
         {/* About This Project */}
         <ScrollReveal>
@@ -81,13 +57,13 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Not Legal Advice
+              {t('disclaimers.notLegalAdvice.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender provides general information and practical resources — it is not legal advice and does not establish an attorney-client relationship. Most of the platform covers practical support: understanding what is happening, knowing your rights, finding resources, and managing life disruptions that come with a legal case. For advice specific to your legal situation, consult a qualified attorney.
+                  {t('disclaimers.notLegalAdvice.body')}
                 </p>
               </CardContent>
             </Card>
@@ -149,32 +125,28 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              AI Technology Disclosure
+              {t('disclaimers.aiDisclosure.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Three features on OpenDefender use AI to generate content: the <strong className="text-foreground">Case Roadmap and guided case support tool</strong>, the <strong className="text-foreground">Attorney Document Generation</strong> tools in the Attorney Portal, and the <strong className="text-foreground">Document Summarizer</strong>. All three use <strong className="text-foreground">Anthropic's Claude Sonnet 4.6</strong>.
+                  {t('disclaimers.aiDisclosure.p1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The <strong className="text-foreground">Case Roadmap</strong> also includes a <strong className="text-foreground">rule-based fallback engine</strong> that runs automatically when the AI service is unavailable. In fallback mode, guidance is generated from structured legal rules rather than a live AI model — no data is sent to Anthropic in that case. Attorney Document Generation and the Document Summarizer do not have this fallback and will display an error if the AI service is unavailable.
+                  {t('disclaimers.aiDisclosure.p2')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.
+                  {t('disclaimers.aiDisclosure.p3')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">The Case Roadmap</strong> also includes a civil emergency triage step that asks categorical questions about active situations (housing, employment, dependents, immigration). These answers follow the same session-only path as all other Case Roadmap inputs: held in server memory, auto-deleted in 24 hours, never written to a database.
+                  {t('disclaimers.aiDisclosure.p4')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  AI-generated guidance is not a substitute for advice from a licensed attorney. We cross-reference responses with legal databases to improve accuracy, but AI can make mistakes. Consult a qualified attorney before making legal decisions.
+                  {t('disclaimers.aiDisclosure.p5')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Before your inputs reach the AI, we automatically scan for and remove personal information (names, phone numbers, addresses, Social Security numbers). See our{" "}
-                  <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
-                    Privacy Policy
-                  </Link>{" "}
-                  for the full details on data handling.
+                  {t('disclaimers.aiDisclosure.p6')}
                 </p>
               </CardContent>
             </Card>
@@ -185,25 +157,25 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Screening and Eligibility Tools
+              {t('disclaimers.screeningTools.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  The <strong className="text-foreground">Record Clearance Eligibility Screener</strong> is a decision tree — it uses no AI and makes no server calls. It runs entirely in your browser. No data is transmitted or stored.
+                  {t('disclaimers.screeningTools.p1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The <strong className="text-foreground">Collateral Consequences Screener</strong> is a yes/no questionnaire that flags life-area risks (housing, employment, immigration, custody, and more) based on your answers. It uses no AI and makes no server calls. Everything runs in your browser — no data leaves your device.
+                  {t('disclaimers.screeningTools.p2')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The <strong className="text-foreground">Public Defender Intake Checklist</strong> is an electronic intake form for attorneys and advocates. It runs entirely in your browser, makes no server calls, and generates a downloadable .docx file locally on your device. No data is transmitted or stored on our servers.
+                  {t('disclaimers.screeningTools.p3')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The <strong className="text-foreground">Mitigation Memo Builder</strong> helps attorneys and advocates structure client information into a formatted sentencing memo. It uses no AI and makes no server calls. The memo is generated as a .docx file entirely in your browser — no data is transmitted or stored on our servers.
+                  {t('disclaimers.screeningTools.p4')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The <strong className="text-foreground">Rap Sheet Error Identification Guide</strong> and <strong className="text-foreground">FCRA rights information</strong> are informational only. They describe general processes and rights. Verify all dispute procedures and deadlines directly with the relevant agency — the FBI, your state criminal repository, or the background check company.
+                  {t('disclaimers.screeningTools.p5')}
                 </p>
               </CardContent>
             </Card>
@@ -358,18 +330,18 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Attorney Tools
+              {t('disclaimers.attorneyTools.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Our document generation tools produce draft legal filings for use by licensed attorneys.
+                  {t('disclaimers.attorneyTools.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>All generated documents are drafts only — attorneys are solely responsible for reviewing and verifying accuracy before filing</li>
-                  <li>We do not collect or store bar credentials, and we do not verify bar membership</li>
-                  <li>Generated documents rely on jurisdiction-specific templates and third-party legal data that may contain errors or be outdated</li>
+                  <li>{t('disclaimers.attorneyTools.item1')}</li>
+                  <li>{t('disclaimers.attorneyTools.item2')}</li>
+                  <li>{t('disclaimers.attorneyTools.item3')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -380,23 +352,23 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Public API
+              {t('disclaimers.publicApi.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender offers a free, read-only public API at <code className="text-sm bg-muted px-1 py-0.5 rounded">/api/v1/</code> that lets third-party developers and legal aid organizations embed our legal reference data — charges, statutes, diversion programs, and glossary terms — into their own tools and websites.
+                  {t('disclaimers.publicApi.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>All API endpoints are <strong className="text-foreground">read-only</strong> — no user data is submitted or collected through the API</li>
-                  <li>AI-powered guidance is not available through the public API — it requires direct use of the site</li>
-                  <li>Data returned through the API is general legal reference information — it is not legal advice and does not establish an attorney-client relationship</li>
-                  <li>Third parties who embed our data or widgets are responsible for including appropriate disclaimers in their own applications</li>
-                  <li>Rate limits apply (60 requests per minute per IP) to ensure fair access</li>
+                  <li>{t('disclaimers.publicApi.item1')}</li>
+                  <li>{t('disclaimers.publicApi.item2')}</li>
+                  <li>{t('disclaimers.publicApi.item3')}</li>
+                  <li>{t('disclaimers.publicApi.item4')}</li>
+                  <li>{t('disclaimers.publicApi.item5')}</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  The same "general information only" limitation that applies on this site applies equally to any data accessed through the API. OpenDefender is not responsible for how third parties present or use data obtained through the public API.
+                  {t('disclaimers.publicApi.footer')}
                 </p>
               </CardContent>
             </Card>
@@ -496,7 +468,7 @@ export default function Disclaimers() {
             <AlertDescription className="text-blue-800 dark:text-blue-200">
               <div className="flex items-start gap-3">
                 <BrandShieldIcon size={16} className="mt-0.5 flex-shrink-0" />
-                <span><strong className="font-semibold">Acknowledgement of Disclosures:</strong> By using this site, you acknowledge these disclaimers and understand the open source nature and limits of the platform.</span>
+                <span><strong className="font-semibold">{t('disclaimers.acknowledgement.label')}</strong> {t('disclaimers.acknowledgement.body')}</span>
               </div>
             </AlertDescription>
           </Alert>
