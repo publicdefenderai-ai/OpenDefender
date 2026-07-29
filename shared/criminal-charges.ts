@@ -49736,7 +49736,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-wire-fraud',
     name: 'Wire Fraud',
-    code: '9 GCA § 46.80',
+    code: '9 GCA § 46.40',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Fraud using electronic communications under Guam law',
@@ -49749,7 +49749,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-mail-fraud',
     name: 'Mail Fraud',
-    code: '9 GCA § 46.80',
+    code: '9 GCA § 46.40',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Fraud using postal service under Guam law',
@@ -49762,7 +49762,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-check-fraud',
     name: 'Check Fraud',
-    code: '9 GCA § 46.80',
+    code: '9 GCA § 46.30',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Fraudulent use of checks under Guam law',
@@ -49775,7 +49775,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-insurance-fraud',
     name: 'Insurance Fraud',
-    code: '9 GCA § 46.80',
+    code: '9 GCA § 46.40',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Fraudulent insurance claims under Guam law',
@@ -49788,7 +49788,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-tax-fraud',
     name: 'Tax Fraud',
-    code: '9 GCA § 46.80',
+    code: '9 GCA § 46.40',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Fraudulent tax reporting under Guam law',
@@ -49814,7 +49814,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-computer-fraud',
     name: 'Computer Fraud',
-    code: '9 GCA § 46.80',
+    code: '9 GCA § 46.503',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Unauthorized computer access for fraud under Guam law',
