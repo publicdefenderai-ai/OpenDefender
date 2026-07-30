@@ -49808,7 +49808,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-forgery',
     name: 'Forgery',
-    code: '9 GCA § 46.30',
+    code: '9 GCA § 46.10',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Creating false documents under Guam law',
