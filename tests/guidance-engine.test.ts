@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { generateEnhancedGuidance, CHARGE_KEYWORDS, CHARGE_CONSEQUENCE_MAP } from '../server/services/guidance-engine';
+import { generateEnhancedGuidance, CHARGE_KEYWORDS, CHARGE_CONSEQUENCE_MAP, KNOWN_JURISDICTIONS, stampEstimateDeadlines } from '../server/services/guidance-engine';
 import { criminalCharges, getChargeById } from '../shared/criminal-charges';
 
 const baseCase = {
@@ -636,5 +636,200 @@ describe('Synthesized-code sweep — unaudited jurisdictions', () => {
       duplicates,
       `Duplicate entries in AUDITED_JURISDICTIONS: ${duplicates.join(', ')}`,
     ).toHaveLength(0);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Estimate-deadline banner regression — unmapped jurisdictions
+// ---------------------------------------------------------------------------
+// The guidance dashboard renders a [data-testid="notice-deadline-estimate"]
+// banner whenever guidance.deadlines.some(d => d.isEstimate) is true.
+// These tests verify the engine sets isEstimate correctly so a future refactor
+// cannot silently drop the flag — which would remove the disclosure for users
+// in unmapped states and territories without any test failure.
+describe('isEstimate flag on deadlines — notice-deadline-estimate banner coverage', () => {
+  // Pick two territories that are intentionally absent from KNOWN_JURISDICTIONS
+  // so this test remains meaningful even if the mapped set grows further.
+  const UNMAPPED_JURISDICTIONS = ['PR', 'GU', 'VI', 'AS', 'MP'].filter(
+    j => !KNOWN_JURISDICTIONS.includes(j),
+  );
+
+  it('KNOWN_JURISDICTIONS is exported and contains the core mapped states', () => {
+    // Sanity-check: the export exists and the classic four are present.
+    expect(KNOWN_JURISDICTIONS).toContain('CA');
+    expect(KNOWN_JURISDICTIONS).toContain('TX');
+    expect(KNOWN_JURISDICTIONS).toContain('NY');
+    expect(KNOWN_JURISDICTIONS).toContain('FL');
+    expect(KNOWN_JURISDICTIONS).toContain('FEDERAL');
+  });
+
+  it('stampEstimateDeadlines marks every deadline isEstimate:true for an unmapped jurisdiction', () => {
+    const sampleDeadlines = [
+      { event: 'Arraignment', timeframe: '72 hours', description: 'Test', priority: 'critical' as const },
+      { event: 'Speedy trial', timeframe: '60 days', description: 'Test', priority: 'important' as const },
+    ];
+    // PR is a territory not in KNOWN_JURISDICTIONS
+    const stamped = stampEstimateDeadlines('PR', sampleDeadlines);
+    expect(stamped.every(d => d.isEstimate === true)).toBe(true);
+  });
+
+  it('stampEstimateDeadlines leaves deadlines unchanged for a mapped jurisdiction (CA)', () => {
+    const sampleDeadlines = [
+      { event: 'Arraignment', timeframe: '72 hours', description: 'Test', priority: 'critical' as const },
+    ];
+    const stamped = stampEstimateDeadlines('CA', sampleDeadlines);
+    expect(stamped.every(d => d.isEstimate === undefined || d.isEstimate === false)).toBe(true);
+  });
+
+  if (UNMAPPED_JURISDICTIONS.length > 0) {
+    it(`generateEnhancedGuidance sets isEstimate:true on deadlines for unmapped jurisdiction (${UNMAPPED_JURISDICTIONS[0]})`, () => {
+      // Regression guard: if this fails, the dashboard will silently omit the
+      // estimate notice banner ([data-testid="notice-deadline-estimate"]) for users
+      // in territories not covered by the jurisdiction rules database.
+      const jurisdiction = UNMAPPED_JURISDICTIONS[0];
+      const result = generateEnhancedGuidance({
+        ...baseCase,
+        jurisdiction,
+      });
+
+      // The dashboard banner renders when guidance.deadlines.some(d => d.isEstimate).
+      // Verify at least one deadline carries the flag.
+      const hasEstimate = result.deadlines.some(d => d.isEstimate === true);
+      expect(
+        hasEstimate,
+        `No deadline had isEstimate:true for jurisdiction "${jurisdiction}". ` +
+        'The [data-testid="notice-deadline-estimate"] banner in guidance-dashboard.tsx ' +
+        'will be hidden for users in unmapped states/territories.',
+      ).toBe(true);
+    });
+  }
+
+  it('generateEnhancedGuidance does NOT set isEstimate on deadlines for a mapped state (TX)', () => {
+    const result = generateEnhancedGuidance({
+      ...baseCase,
+      jurisdiction: 'TX',
+    });
+    const allAreEstimates = result.deadlines.every(d => d.isEstimate === true);
+    expect(
+      allAreEstimates,
+      'All deadlines were marked isEstimate for TX (a mapped state), which would show a misleading notice.',
+    ).toBe(false);
+  });
+
+  it('every unmapped territory produces at least one estimate deadline', () => {
+    // Regression sweep across all territories known to be outside KNOWN_JURISDICTIONS.
+    // If KNOWN_JURISDICTIONS is expanded to include a territory, it moves out of this
+    // list automatically and the test remains valid.
+    const territoryCodes = ['PR', 'GU', 'VI', 'AS', 'MP'].filter(
+      j => !KNOWN_JURISDICTIONS.includes(j),
+    );
+
+    for (const jurisdiction of territoryCodes) {
+      const result = generateEnhancedGuidance({
+        ...baseCase,
+        jurisdiction,
+      });
+      const hasEstimate = result.deadlines.some(d => d.isEstimate === true);
+      expect(
+        hasEstimate,
+        `Jurisdiction "${jurisdiction}" produced no deadline with isEstimate:true. ` +
+        'The estimate notice banner will be suppressed for users in this territory.',
+      ).toBe(true);
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Default-charge uncertainty item — "Charge-Specific Guidance Not Available"
+// ---------------------------------------------------------------------------
+// When a user's charge text does not match any keyword in CHARGE_KEYWORDS,
+// identifyChargeType() returns 'default', and buildUncertainties() appends an
+// item with area === 'Charge-Specific Guidance Not Available'.  These tests
+// confirm that end-to-end contract so a future rename or removal of the item
+// cannot silently drop the disclosure.
+describe('buildUncertainties — Charge-Specific Guidance Not Available item', () => {
+  // Charge strings chosen to guarantee no keyword match
+  const UNRECOGNIZED_CHARGES = [
+    'municipal ordinance violation 47B',
+    'obscure charge not matching any keyword',
+    'jaywalking code 12.4.7',
+    '!!!',
+  ];
+
+  it('adds the Charge-Specific Guidance Not Available uncertainty when charge text is unrecognized', () => {
+    const result = generateEnhancedGuidance({
+      ...baseCase,
+      charges: UNRECOGNIZED_CHARGES[0],
+    });
+
+    const item = result.uncertainties?.find(
+      u => u.area === 'Charge-Specific Guidance Not Available',
+    );
+    expect(
+      item,
+      `No uncertainty item with area "Charge-Specific Guidance Not Available" was produced ` +
+      `for charges="${UNRECOGNIZED_CHARGES[0]}". ` +
+      'Unmapped charge types silently receive generic guidance with no disclosure.',
+    ).toBeDefined();
+    expect(item!.note).toBeTruthy();
+  });
+
+  it('does NOT add the item when charge text matches a known keyword (e.g. "dui")', () => {
+    const result = generateEnhancedGuidance({
+      ...baseCase,
+      charges: 'driving under the influence',
+    });
+
+    const item = result.uncertainties?.find(
+      u => u.area === 'Charge-Specific Guidance Not Available',
+    );
+    expect(
+      item,
+      'A "Charge-Specific Guidance Not Available" item appeared even though the charge matched a known keyword.',
+    ).toBeUndefined();
+  });
+
+  it('adds the item consistently for multiple different unrecognized charge strings', () => {
+    for (const chargeText of UNRECOGNIZED_CHARGES) {
+      const result = generateEnhancedGuidance({
+        ...baseCase,
+        charges: chargeText,
+      });
+      const item = result.uncertainties?.find(
+        u => u.area === 'Charge-Specific Guidance Not Available',
+      );
+      expect(
+        item,
+        `Missing "Charge-Specific Guidance Not Available" uncertainty for charges="${chargeText}".`,
+      ).toBeDefined();
+    }
+  });
+
+  it('does NOT add the item for any of the recognized charge keywords', () => {
+    const knownChargeInputs: Record<string, string> = {
+      dui: 'dui arrest',
+      assault: 'simple assault',
+      drug: 'drug possession',
+      theft: 'grand theft',
+      domestic: 'domestic violence',
+      fraud: 'wire fraud',
+      burglary: 'residential burglary',
+      traffic: 'reckless driving',
+      weapons: 'carrying a concealed weapon',
+    };
+
+    for (const [chargeType, chargeText] of Object.entries(knownChargeInputs)) {
+      const result = generateEnhancedGuidance({
+        ...baseCase,
+        charges: chargeText,
+      });
+      const item = result.uncertainties?.find(
+        u => u.area === 'Charge-Specific Guidance Not Available',
+      );
+      expect(
+        item,
+        `Unexpected "Charge-Specific Guidance Not Available" item for recognized charge type "${chargeType}" (input: "${chargeText}").`,
+      ).toBeUndefined();
+    }
   });
 });
