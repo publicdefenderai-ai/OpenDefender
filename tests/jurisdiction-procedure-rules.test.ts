@@ -317,6 +317,103 @@ describe('buildJurisdictionContextBlock — statute citations and no placeholder
   });
 });
 
+// ─── Florida post-July-2025 speedy trial amendment regression guard ──────────
+//
+// Fla. R. Crim. P. 3.191 was amended effective July 1, 2025 (SC2022-1123):
+//   • The clock now starts from the date formal charges are filed (not arrest).
+//   • The recapture period increased from 10 to 30 days.
+// These tests ensure neither the data entry nor the generated prompt block can
+// silently revert to the pre-amendment language.
+
+describe('Florida — post-July-2025 speedy trial amendment (Fla. R. Crim. P. 3.191)', () => {
+  const flRule = JURISDICTION_PROCEDURE_RULES['FL'];
+
+  it('FL entry exists and is high-confidence', () => {
+    expect(flRule).toBeDefined();
+    expect(flRule.dataConfidence).toBe('high');
+  });
+
+  it('FL felony speedy trial is 175 days', () => {
+    expect(flRule.speedyTrialDays.felony).toBe(175);
+  });
+
+  it('FL misdemeanor speedy trial is 90 days', () => {
+    expect(flRule.speedyTrialDays.misdemeanor).toBe(90);
+  });
+
+  it('FL notes reference formal charges filing as clock start (not arrest)', () => {
+    const notes = flRule.speedyTrialDays.notes ?? '';
+    expect(notes).toMatch(/formal charges/i);
+    // The opening phrase must describe the clock starting from formal charges.
+    // "Clock runs from date formal charges are filed" is the expected wording.
+    // The note may mention arrest only in historical context ("prior rule ran
+    // from arrest") — that is acceptable. What must NOT appear is arrest as the
+    // current clock-start phrase.
+    expect(notes).toMatch(/clock runs from date formal charges/i);
+  });
+
+  it('FL notes reference the 30-day recapture period', () => {
+    const notes = flRule.speedyTrialDays.notes ?? '';
+    expect(notes).toMatch(/30.day/i);
+  });
+
+  it('FL notes do NOT mention the old 10-day recapture period as current', () => {
+    const notes = flRule.speedyTrialDays.notes ?? '';
+    // "10 days" must not appear as the current recapture period; the amendment
+    // increased it to 30 days. Mentions of "10 days" are acceptable only if
+    // they appear in a historical-context phrase (e.g. "increased from 10 days").
+    // The simplest guard: the phrase "within 10 days" must not appear.
+    expect(notes).not.toContain('within 10 days');
+  });
+
+  it('FL speedy trial source cites the 2025 amendment (SC2022-1123)', () => {
+    expect(flRule.speedyTrialSource).toContain('SC2022-1123');
+  });
+
+  it('FL speedy trial source cites the amended rule effective date (July 1, 2025)', () => {
+    expect(flRule.speedyTrialSource).toMatch(/July 1, 2025|2025/);
+  });
+
+  describe('buildJurisdictionContextBlock("FL") — prompt output', () => {
+    const block = buildJurisdictionContextBlock('FL');
+
+    it('returns a non-null prompt block', () => {
+      expect(block).not.toBeNull();
+    });
+
+    it('prompt block references formal charges as clock start', () => {
+      expect(block).toMatch(/formal charges/i);
+    });
+
+    it('prompt block references the 30-day recapture period', () => {
+      expect(block).toMatch(/30.day/i);
+    });
+
+    it('prompt block does NOT say the clock runs from arrest', () => {
+      // The note must not include "from arrest" as the starting point for FL's clock.
+      // (The arraignment line says "within 24 hours of arrest" — that is fine and
+      //  expected; we check only that the speedy-trial note itself does not use
+      //  "from arrest" as the clock-start phrase.)
+      const noteMatch = block!.match(/Note: (.+)/);
+      if (noteMatch) {
+        expect(noteMatch[1]).not.toMatch(/clock runs from arrest/i);
+      }
+    });
+
+    it('prompt block does NOT contain "within 10 days" as recapture language', () => {
+      expect(block).not.toContain('within 10 days');
+    });
+
+    it('prompt block is marked as verified data', () => {
+      expect(block).toContain('verified data');
+    });
+
+    it('prompt block does not contain the "generally" qualifier (high-confidence entry)', () => {
+      expect(block).not.toContain('generally');
+    });
+  });
+});
+
 // ─── Freshness: no entry older than 12 months ─────────────────────────────────
 
 describe('JURISDICTION_PROCEDURE_RULES — lastVerified freshness (≤ 12 months)', () => {
