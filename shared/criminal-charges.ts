@@ -49431,7 +49431,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-identity-theft',
     name: 'Identity Theft',
-    code: '9 GCA § 43.30',
+    code: '9 GCA § 46.80',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Using another person\'s identifying information under Guam law',
@@ -49444,7 +49444,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'gu-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '9 GCA § 43.30',
+    code: '9 GCA § 46.35',
     jurisdiction: 'GU',
     category: 'felony',
     description: 'Unauthorized use of credit card under Guam law',
