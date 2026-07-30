@@ -37,16 +37,16 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              About This Project
+              {t('disclaimers.aboutProject.title')}
             </h2>
             
             <Card>
-              <CardContent className="p-6">
+              <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender is a free, open source resource for people navigating the U.S. criminal justice and immigration systems, and for the practical life disruptions those systems create. It provides general rights information, early advocacy guidance, and practical support resources covering housing, employment, finances, family, mental health, immigration, and record clearing. It is not a legal service and does not provide legal advice.
+                  {t('disclaimers.aboutProject.p1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  You're welcome to use it, share it, change it, or build on it however you'd like.
+                  {t('disclaimers.aboutProject.p2')}
                 </p>
               </CardContent>
             </Card>
@@ -74,13 +74,13 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              No Guarantees
+              {t('disclaimers.noGuarantees.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  We do our best to provide accurate and helpful info, but sometimes there might be mistakes or outdated information. We can't promise everything here is perfect or up to date.
+                  {t('disclaimers.noGuarantees.body')}
                 </p>
               </CardContent>
             </Card>
@@ -91,13 +91,13 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Updates and Availability
+              {t('disclaimers.updatesAvailability.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  We try to keep OpenDefender working well, but it might not always be updated or available. Things can change without notice.
+                  {t('disclaimers.updatesAvailability.body')}
                 </p>
               </CardContent>
             </Card>
@@ -108,13 +108,13 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Limitation of Liability
+              {t('disclaimers.limitationOfLiability.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Use OpenDefender at your own risk, and we are not responsible if something doesn't go as expected, or for any other problems or losses you might have from using this site.
+                  {t('disclaimers.limitationOfLiability.body')}
                 </p>
               </CardContent>
             </Card>
@@ -186,17 +186,17 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Immigration Guidance
+              {t('disclaimers.immigrationGuidance.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Our immigration resources — including Know Your Rights materials, Red Cards, and program information — are for general informational purposes only.
+                  {t('disclaimers.immigrationGuidance.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Immigration law changes frequently and our information may not reflect the latest policies</li>
-                  <li>These materials are not legal advice and are not a substitute for consulting with a qualified immigration attorney</li>
+                  <li>{t('disclaimers.immigrationGuidance.item1')}</li>
+                  <li>{t('disclaimers.immigrationGuidance.item2')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -207,17 +207,17 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Translations & Multilingual Content
+              {t('disclaimers.multilingualContent.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  We provide content in English, Spanish, and Simplified Chinese to make information and resources more accessible.
+                  {t('disclaimers.multilingualContent.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Translations may not capture the precise legal meaning of every term — the English version is authoritative</li>
-                  <li>If you need legal guidance in a language other than English, we recommend consulting a bilingual attorney</li>
+                  <li>{t('disclaimers.multilingualContent.item1')}</li>
+                  <li>{t('disclaimers.multilingualContent.item2')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -228,17 +228,17 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Document Summarizer
+              {t('disclaimers.documentSummarizer.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Our Document Summarizer uses AI to create condensed summaries of legal documents you upload.
+                  {t('disclaimers.documentSummarizer.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Summaries are AI-generated and may omit important details — they are not a substitute for reading the full document</li>
-                  <li>Always review the original document with your attorney before making any decisions based on a summary</li>
+                  <li>{t('disclaimers.documentSummarizer.item1')}</li>
+                  <li>{t('disclaimers.documentSummarizer.item2')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -249,17 +249,17 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Court Records & Case Law
+              {t('disclaimers.courtRecords.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  We retrieve court records and case law from third-party sources including CourtListener, the RECAP Archive, and PACER.
+                  {t('disclaimers.courtRecords.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li>Records from these sources may be incomplete, delayed, or contain errors</li>
-                  <li>Always verify court records directly with the relevant court clerk's office for official information</li>
+                  <li>{t('disclaimers.courtRecords.item1')}</li>
+                  <li>{t('disclaimers.courtRecords.item2')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -270,28 +270,28 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Legal Data Sources
+              {t('disclaimers.legalDataSources.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Statute citations, case law, and ordinance references on this platform draw from several authoritative sources.
+                  {t('disclaimers.legalDataSources.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-3 text-muted-foreground">
                   <li>
-                    <strong className="text-foreground">OpenLaws:</strong> Live statute text across 50 states, D.C., Puerto Rico, and Federal law.
+                    <strong className="text-foreground">OpenLaws:</strong> {t('disclaimers.legalDataSources.openlaws')}
                   </li>
                   <li>
-                    <strong className="text-foreground">GovInfo.gov (GPO):</strong> Federal criminal statutes (Title 18 U.S.C.) from the U.S. Government Publishing Office.
+                    <strong className="text-foreground">GovInfo.gov (GPO):</strong> {t('disclaimers.legalDataSources.govinfo')}
                   </li>
                   <li>
-                    <strong className="text-foreground">CourtListener / RECAP Archive:</strong> Federal and state case law and court documents from the Free Law Project.
+                    <strong className="text-foreground">CourtListener / RECAP Archive:</strong> {t('disclaimers.legalDataSources.courtlistener')}
                   </li>
                   <li>
-                    <strong className="text-foreground">LOCUS-v1 (LocalLaws / UC Berkeley):</strong> Municipal and county ordinance text used for local-ordinance charges
-                    (loitering, trespass, disorderly conduct, and similar offenses commonly prosecuted under city or county code).
-                    Citation: Peskoff, Barrow, Vu &amp; Davenport et al. (2026), <em>Freeing the Law with LOCUS</em>, arXiv:2606.19334.
+                    <strong className="text-foreground">LOCUS-v1 (LocalLaws / UC Berkeley):</strong>{" "}
+                    {t('disclaimers.legalDataSources.locusDesc')}{" "}
+                    <em>Freeing the Law with LOCUS</em>, arXiv:2606.19334.
                     Dataset:{" "}
                     <a
                       href="https://huggingface.co/datasets/LocalLaws/LOCUS-v1"
@@ -300,8 +300,8 @@ export default function Disclaimers() {
                       className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
                     >
                       huggingface.co/datasets/LocalLaws/LOCUS-v1
-                    </a>.
-                    Licensed under{" "}
+                    </a>.{" "}
+                    {t('disclaimers.legalDataSources.locusLicensed')}{" "}
                     <a
                       href="https://creativecommons.org/licenses/by-nc/4.0/"
                       target="_blank"
@@ -312,14 +312,14 @@ export default function Disclaimers() {
                     </a>.
                   </li>
                   <li>
-                    <strong className="text-foreground">Bureau of Justice Statistics (BJS):</strong> National crime statistics used for outcome data.
+                    <strong className="text-foreground">Bureau of Justice Statistics (BJS):</strong> {t('disclaimers.legalDataSources.bjs')}
                   </li>
                   <li>
-                    <strong className="text-foreground">LegiScan:</strong> Bill tracking for monitoring statute changes.
+                    <strong className="text-foreground">LegiScan:</strong> {t('disclaimers.legalDataSources.legiscan')}
                   </li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  Statute and ordinance text may be outdated. Always verify citations directly with the official source before relying on them for legal decisions.
+                  {t('disclaimers.legalDataSources.footer')}
                 </p>
               </CardContent>
             </Card>
@@ -379,17 +379,17 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              About Third-Party Tools
+              {t('disclaimers.thirdPartyTools.title')}
             </h2>
             
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Some parts of the platform use other companies' services to work properly. You can learn about those and their privacy policies in our{" "}
+                  {t('disclaimers.thirdPartyTools.bodyPre')}{" "}
                   <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
-                    Privacy Policy
+                    {t('disclaimers.thirdPartyTools.bodyLink')}
                   </Link>{" "}
-                  page.
+                  {t('disclaimers.thirdPartyTools.bodyPost')}
                 </p>
               </CardContent>
             </Card>
@@ -400,28 +400,28 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Open Source Licensing
+              {t('disclaimers.openSourceLicensing.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender uses a dual-license structure to maximize both code reuse and access to justice:
+                  {t('disclaimers.openSourceLicensing.intro')}
                 </p>
                 <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                  <li><strong className="text-foreground">Code (MIT License):</strong> All source code is open source under the MIT License, allowing free use, modification, and distribution with attribution.</li>
-                  <li><strong className="text-foreground">Content (CC0 Public Domain):</strong> All non-code content — informational resources, practical guides, and templates — is released to the public domain under CC0, meaning anyone can use it without restrictions or attribution requirements.</li>
+                  <li><strong className="text-foreground">{t('disclaimers.openSourceLicensing.codeLicenseLabel')}</strong> {t('disclaimers.openSourceLicensing.codeLicenseBody')}</li>
+                  <li><strong className="text-foreground">{t('disclaimers.openSourceLicensing.contentLicenseLabel')}</strong> {t('disclaimers.openSourceLicensing.contentLicenseBody')}</li>
                 </ul>
                 <p className="text-muted-foreground leading-relaxed">
-                  The public repository is available{" "}
+                  {t('disclaimers.openSourceLicensing.githubPre')}{" "}
                   <a
                     href="https://github.com/publicdefenderai-ai/OpenDefender"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
                   >
-                    on GitHub
-                  </a>.
+                    {t('disclaimers.openSourceLicensing.githubLink')}
+                  </a>{t('disclaimers.openSourceLicensing.githubPost')}
                 </p>
               </CardContent>
             </Card>
@@ -432,13 +432,13 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Trademark Notice
+              {t('disclaimers.trademark.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  The CC0 public domain dedication does not apply to the "OpenDefender" name or logo. Those are trademarks and are not included. You are free to use, adapt, and share the content and code, but please don't use the OpenDefender name or logo in a way that suggests your project is officially part of or affiliated with this one.
+                  {t('disclaimers.trademark.body')}
                 </p>
               </CardContent>
             </Card>
@@ -449,13 +449,13 @@ export default function Disclaimers() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              No Endorsement
+              {t('disclaimers.noEndorsement.title')}
             </h2>
 
             <Card>
               <CardContent className="p-6">
                 <p className="text-muted-foreground leading-relaxed">
-                  Using or sharing OpenDefender's content or code does not mean we endorse your project, organization, or legal position. Please don't suggest or imply that OpenDefender backs anything you're doing.
+                  {t('disclaimers.noEndorsement.body')}
                 </p>
               </CardContent>
             </Card>

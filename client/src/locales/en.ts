@@ -6835,6 +6835,84 @@ export default {
       "item2": "We do not collect or store bar credentials, and we do not verify bar membership",
       "item3": "Generated documents rely on jurisdiction-specific templates and third-party legal data that may contain errors or be outdated"
     },
+    "aboutProject": {
+      "title": "About This Project",
+      "p1": "OpenDefender is a free, open source resource for people navigating the U.S. criminal justice and immigration systems, and for the practical life disruptions those systems create. It provides general rights information, early advocacy guidance, and practical support resources covering housing, employment, finances, family, mental health, immigration, and record clearing. It is not a legal service and does not provide legal advice.",
+      "p2": "You're welcome to use it, share it, change it, or build on it however you'd like."
+    },
+    "noGuarantees": {
+      "title": "No Guarantees",
+      "body": "We do our best to provide accurate and helpful info, but sometimes there might be mistakes or outdated information. We can't promise everything here is perfect or up to date."
+    },
+    "updatesAvailability": {
+      "title": "Updates and Availability",
+      "body": "We try to keep OpenDefender working well, but it might not always be updated or available. Things can change without notice."
+    },
+    "limitationOfLiability": {
+      "title": "Limitation of Liability",
+      "body": "Use OpenDefender at your own risk, and we are not responsible if something doesn't go as expected, or for any other problems or losses you might have from using this site."
+    },
+    "immigrationGuidance": {
+      "title": "Immigration Guidance",
+      "intro": "Our immigration resources — including Know Your Rights materials, Red Cards, and program information — are for general informational purposes only.",
+      "item1": "Immigration law changes frequently and our information may not reflect the latest policies",
+      "item2": "These materials are not legal advice and are not a substitute for consulting with a qualified immigration attorney"
+    },
+    "multilingualContent": {
+      "title": "Translations & Multilingual Content",
+      "intro": "We provide content in English, Spanish, and Simplified Chinese to make information and resources more accessible.",
+      "item1": "Translations may not capture the precise legal meaning of every term — the English version is authoritative",
+      "item2": "If you need legal guidance in a language other than English, we recommend consulting a bilingual attorney"
+    },
+    "documentSummarizer": {
+      "title": "Document Summarizer",
+      "intro": "Our Document Summarizer uses AI to create condensed summaries of legal documents you upload.",
+      "item1": "Summaries are AI-generated and may omit important details — they are not a substitute for reading the full document",
+      "item2": "Always review the original document with your attorney before making any decisions based on a summary"
+    },
+    "courtRecords": {
+      "title": "Court Records & Case Law",
+      "intro": "We retrieve court records and case law from third-party sources including CourtListener, the RECAP Archive, and PACER.",
+      "item1": "Records from these sources may be incomplete, delayed, or contain errors",
+      "item2": "Always verify court records directly with the relevant court clerk's office for official information"
+    },
+    "legalDataSources": {
+      "title": "Legal Data Sources",
+      "intro": "Statute citations, case law, and ordinance references on this platform draw from several authoritative sources.",
+      "openlaws": "Live statute text across 50 states, D.C., Puerto Rico, and Federal law.",
+      "govinfo": "Federal criminal statutes (Title 18 U.S.C.) from the U.S. Government Publishing Office.",
+      "courtlistener": "Federal and state case law and court documents from the Free Law Project.",
+      "locusDesc": "Municipal and county ordinance text used for local-ordinance charges (loitering, trespass, disorderly conduct, and similar offenses commonly prosecuted under city or county code). Citation: Peskoff, Barrow, Vu & Davenport et al. (2026),",
+      "locusLicensed": "Licensed under",
+      "bjs": "National crime statistics used for outcome data.",
+      "legiscan": "Bill tracking for monitoring statute changes.",
+      "footer": "Statute and ordinance text may be outdated. Always verify citations directly with the official source before relying on them for legal decisions."
+    },
+    "thirdPartyTools": {
+      "title": "About Third-Party Tools",
+      "bodyPre": "Some parts of the platform use other companies' services to work properly. You can learn about those and their privacy policies in our",
+      "bodyLink": "Privacy Policy",
+      "bodyPost": "page."
+    },
+    "openSourceLicensing": {
+      "title": "Open Source Licensing",
+      "intro": "OpenDefender uses a dual-license structure to maximize both code reuse and access to justice:",
+      "codeLicenseLabel": "Code (MIT License):",
+      "codeLicenseBody": "All source code is open source under the MIT License, allowing free use, modification, and distribution with attribution.",
+      "contentLicenseLabel": "Content (CC0 Public Domain):",
+      "contentLicenseBody": "All non-code content — informational resources, practical guides, and templates — is released to the public domain under CC0, meaning anyone can use it without restrictions or attribution requirements.",
+      "githubPre": "The public repository is available",
+      "githubLink": "on GitHub",
+      "githubPost": "."
+    },
+    "trademark": {
+      "title": "Trademark Notice",
+      "body": "The CC0 public domain dedication does not apply to the \"OpenDefender\" name or logo. Those are trademarks and are not included. You are free to use, adapt, and share the content and code, but please don't use the OpenDefender name or logo in a way that suggests your project is officially part of or affiliated with this one."
+    },
+    "noEndorsement": {
+      "title": "No Endorsement",
+      "body": "Using or sharing OpenDefender's content or code does not mean we endorse your project, organization, or legal position. Please don't suggest or imply that OpenDefender backs anything you're doing."
+    },
     "acknowledgement": {
       "label": "Acknowledgement of Disclosures:",
       "body": "By using this site, you acknowledge these disclaimers and understand the open source nature and limits of the platform."

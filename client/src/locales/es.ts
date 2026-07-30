@@ -6838,6 +6838,84 @@ export default {
       "item2": "No recopilamos ni almacenamos credenciales del colegio de abogados, y no verificamos la membresía en el colegio",
       "item3": "Los documentos generados dependen de plantillas específicas de cada jurisdicción y de datos legales de terceros que pueden contener errores o estar desactualizados"
     },
+    "aboutProject": {
+      "title": "Acerca de Este Proyecto",
+      "p1": "OpenDefender es un recurso gratuito y de código abierto para personas que navegan el sistema de justicia penal e inmigración de EE.UU., y para las disrupciones prácticas de vida que esos sistemas crean. Proporciona información general sobre derechos, orientación temprana de defensa y recursos prácticos de apoyo que cubren vivienda, empleo, finanzas, familia, salud mental, inmigración y eliminación de antecedentes. No es un servicio legal y no proporciona asesoramiento legal.",
+      "p2": "Puede usarlo, compartirlo, modificarlo o construir sobre él como desee."
+    },
+    "noGuarantees": {
+      "title": "Sin Garantías",
+      "body": "Hacemos nuestro mejor esfuerzo para proporcionar información precisa y útil, pero puede haber errores o información desactualizada. No podemos garantizar que todo aquí sea perfecto o esté al día."
+    },
+    "updatesAvailability": {
+      "title": "Actualizaciones y Disponibilidad",
+      "body": "Intentamos mantener OpenDefender funcionando bien, pero es posible que no siempre esté actualizado o disponible. Las cosas pueden cambiar sin previo aviso."
+    },
+    "limitationOfLiability": {
+      "title": "Limitación de Responsabilidad",
+      "body": "Use OpenDefender bajo su propio riesgo, y no somos responsables si algo no sale como se esperaba, ni de ningún otro problema o pérdida que pueda tener al usar este sitio."
+    },
+    "immigrationGuidance": {
+      "title": "Orientación sobre Inmigración",
+      "intro": "Nuestros recursos de inmigración — incluyendo materiales de Conozca Sus Derechos, Tarjetas Rojas e información sobre programas — son únicamente para propósitos informativos generales.",
+      "item1": "La ley de inmigración cambia frecuentemente y nuestra información puede no reflejar las últimas políticas",
+      "item2": "Estos materiales no son asesoramiento legal y no son un sustituto de consultar con un abogado de inmigración calificado"
+    },
+    "multilingualContent": {
+      "title": "Traducciones y Contenido Multilingüe",
+      "intro": "Proporcionamos contenido en inglés, español y chino simplificado para hacer la información y los recursos más accesibles.",
+      "item1": "Las traducciones pueden no capturar el significado legal preciso de cada término — la versión en inglés es la autorizada",
+      "item2": "Si necesita orientación legal en un idioma que no sea inglés, recomendamos consultar a un abogado bilingüe"
+    },
+    "documentSummarizer": {
+      "title": "Resumidor de Documentos",
+      "intro": "Nuestro Resumidor de Documentos usa IA para crear resúmenes condensados de los documentos legales que sube.",
+      "item1": "Los resúmenes son generados por IA y pueden omitir detalles importantes — no son un sustituto de leer el documento completo",
+      "item2": "Siempre revise el documento original con su abogado antes de tomar cualquier decisión basada en un resumen"
+    },
+    "courtRecords": {
+      "title": "Registros Judiciales y Jurisprudencia",
+      "intro": "Obtenemos registros judiciales y jurisprudencia de fuentes de terceros que incluyen CourtListener, el Archivo RECAP y PACER.",
+      "item1": "Los registros de estas fuentes pueden estar incompletos, retrasados o contener errores",
+      "item2": "Siempre verifique los registros judiciales directamente con la oficina del secretario del tribunal correspondiente para obtener información oficial"
+    },
+    "legalDataSources": {
+      "title": "Fuentes de Datos Legales",
+      "intro": "Las citas de estatutos, jurisprudencia y referencias de ordenanzas en esta plataforma provienen de varias fuentes autorizadas.",
+      "openlaws": "Texto de estatutos en vivo en los 50 estados, D.C., Puerto Rico y ley federal.",
+      "govinfo": "Estatutos penales federales (Título 18 del U.S.C.) de la Oficina de Publicaciones del Gobierno de EE.UU.",
+      "courtlistener": "Jurisprudencia federal y estatal y documentos judiciales del Proyecto de Derecho Libre.",
+      "locusDesc": "Texto de ordenanzas municipales y de condado utilizado para cargos de ordenanzas locales (merodeo, allanamiento, conducta desordenada y delitos similares comúnmente procesados bajo el código municipal o del condado). Cita: Peskoff, Barrow, Vu & Davenport et al. (2026),",
+      "locusLicensed": "Licenciado bajo",
+      "bjs": "Estadísticas nacionales de delincuencia utilizadas para datos de resultados.",
+      "legiscan": "Seguimiento de proyectos de ley para monitorear cambios en estatutos.",
+      "footer": "El texto de los estatutos y ordenanzas puede estar desactualizado. Siempre verifique las citas directamente con la fuente oficial antes de utilizarlas para decisiones legales."
+    },
+    "thirdPartyTools": {
+      "title": "Herramientas de Terceros",
+      "bodyPre": "Algunas partes de la plataforma utilizan servicios de otras empresas para funcionar correctamente. Puede obtener información sobre ellas y sus políticas de privacidad en nuestra página de",
+      "bodyLink": "Política de Privacidad",
+      "bodyPost": "."
+    },
+    "openSourceLicensing": {
+      "title": "Licencias de Código Abierto",
+      "intro": "OpenDefender utiliza una estructura de doble licencia para maximizar tanto la reutilización del código como el acceso a la justicia:",
+      "codeLicenseLabel": "Código (Licencia MIT):",
+      "codeLicenseBody": "Todo el código fuente es de código abierto bajo la Licencia MIT, que permite el uso libre, la modificación y la distribución con atribución.",
+      "contentLicenseLabel": "Contenido (Dominio Público CC0):",
+      "contentLicenseBody": "Todo el contenido que no es código — recursos informativos, guías prácticas y plantillas — se entrega al dominio público bajo CC0, lo que significa que cualquiera puede usarlo sin restricciones ni requisitos de atribución.",
+      "githubPre": "El repositorio público está disponible",
+      "githubLink": "en GitHub",
+      "githubPost": "."
+    },
+    "trademark": {
+      "title": "Aviso de Marca Registrada",
+      "body": "La dedicación al dominio público CC0 no se aplica al nombre o logotipo de \"OpenDefender\". Esos son marcas registradas y no están incluidos. Puede usar, adaptar y compartir el contenido y el código, pero por favor no use el nombre o logotipo de OpenDefender de manera que sugiera que su proyecto es parte oficial de este o está afiliado con él."
+    },
+    "noEndorsement": {
+      "title": "Sin Respaldo",
+      "body": "El uso o la difusión del contenido o código de OpenDefender no significa que respaldemos su proyecto, organización o posición legal. Por favor, no sugiera ni insinúe que OpenDefender apoya lo que usted está haciendo."
+    },
     "acknowledgement": {
       "label": "Reconocimiento de las Divulgaciones:",
       "body": "Al utilizar este sitio, usted reconoce estas exenciones de responsabilidad y comprende la naturaleza de código abierto y los límites de la plataforma."
