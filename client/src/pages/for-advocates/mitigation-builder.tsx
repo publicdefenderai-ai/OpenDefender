@@ -474,9 +474,19 @@ function OutputPanel({ output }: { output: string }) {
 
     const lines = output.split("\n");
     const htmlParts: string[] = [];
-    let clientName = "";
-    let inList = false;
 
+    // Extract header metadata first so it can live in the header block
+    let clientName = "";
+    let preparedDate = "";
+    let proceedingContext = "";
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+      if (line.startsWith("Client:")) clientName = line.replace("Client:", "").trim();
+      if (line.startsWith("Prepared:")) preparedDate = line.replace("Prepared:", "").trim();
+      if (line.startsWith("Context:")) proceedingContext = line.replace("Context:", "").trim();
+    }
+
+    let inList = false;
     const closeList = () => {
       if (inList) { htmlParts.push("</ul>"); inList = false; }
     };
@@ -484,42 +494,33 @@ function OutputPanel({ output }: { output: string }) {
     for (const rawLine of lines) {
       const line = rawLine.trim();
 
-      // Skip dividers
+      // Skip dividers, title, and metadata lines (rendered in header block)
       if (/^─+$/.test(line)) continue;
-
-      // Title — replaced by the formal header block below
       if (line === "MITIGATION SUMMARY — DRAFT") continue;
+      if (line.startsWith("Prepared:") || line.startsWith("Client:") || line.startsWith("Context:")) continue;
 
-      // Draft warning (first line after title)
+      // Draft warning — render as prominent callout
       if (line.startsWith("Review every line")) {
         closeList();
-        htmlParts.push(`<div class="draft-warning">DRAFT — ${escHtml(line)}</div>`);
+        htmlParts.push(
+          `<div class="draft-callout" role="note">` +
+          `<span class="draft-label">DRAFT — Review before use</span>` +
+          `<span class="draft-body">${escHtml(line)}</span>` +
+          `</div>`
+        );
         continue;
       }
 
-      // Prepared / Client / Context metadata
-      if (line.startsWith("Prepared:") || line.startsWith("Context:")) {
-        closeList();
-        htmlParts.push(`<p class="meta">${escHtml(line)}</p>`);
-        continue;
-      }
-      if (line.startsWith("Client:")) {
-        clientName = line.replace("Client:", "").trim();
-        closeList();
-        htmlParts.push(`<p class="meta">${escHtml(line)}</p>`);
-        continue;
-      }
-
-      // Section headers
+      // Section headers — each gets a page-break hint
       if (KNOWN_HEADERS.includes(line)) {
         closeList();
-        htmlParts.push(`<h2>${escHtml(line)}</h2>`);
+        htmlParts.push(`<h2 class="section-head">${escHtml(line)}</h2>`);
         continue;
       }
 
       // Bullet items
       if (line.startsWith("• ")) {
-        if (!inList) { htmlParts.push("<ul>"); inList = true; }
+        if (!inList) { htmlParts.push('<ul class="fact-list">'); inList = true; }
         htmlParts.push(`<li>${escHtml(line.slice(2))}</li>`);
         continue;
       }
@@ -534,161 +535,207 @@ function OutputPanel({ output }: { output: string }) {
       // Blank line — spacer
       if (line === "") {
         closeList();
-        htmlParts.push("<div class='spacer'></div>");
         continue;
       }
 
       // Free-form text (references, additional context)
       closeList();
-      htmlParts.push(`<p>${escHtml(line)}</p>`);
+      htmlParts.push(`<p class="body-para">${escHtml(line)}</p>`);
     }
     closeList();
 
     const bodyContent = htmlParts.join("\n");
-    const subheading = clientName ? `Re: ${clientName}` : "";
 
     win.document.write(`<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sentencing Mitigation Memorandum${clientName ? ` — ${clientName}` : ""}</title>
+  <title>Sentencing Mitigation Memorandum${clientName ? ` \u2014 ${clientName}` : ""}</title>
   <style>
-    /* ── Screen baseline ── */
+    /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Body — screen preview ── */
     body {
       font-family: "Times New Roman", Times, Georgia, serif;
       font-size: 12pt;
-      line-height: 1.65;
+      line-height: 1.7;
       color: #111;
       background: #fff;
       padding: 1in;
       max-width: 8.5in;
       margin: 0 auto;
+      position: relative;
     }
 
-    /* ── Cover header ── */
-    .doc-header {
-      text-align: center;
-      border-bottom: 2px solid #111;
-      padding-bottom: 14px;
-      margin-bottom: 20px;
+    /* ── DRAFT watermark — shows on every printed page ── */
+    @media print {
+      body::before {
+        content: "DRAFT";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-35deg);
+        font-size: 96pt;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        color: rgba(0,0,0,0.045);
+        letter-spacing: 0.12em;
+        pointer-events: none;
+        z-index: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
     }
-    .doc-header h1 {
+
+    /* ── Document header block ── */
+    .doc-header {
+      border-bottom: 2.5px solid #111;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .doc-header-title {
+      text-align: center;
       font-size: 14pt;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
       font-weight: bold;
+      margin-bottom: 10px;
     }
-    .doc-header .sub {
-      font-size: 11pt;
-      margin-top: 4px;
-      font-style: italic;
+    .doc-header-meta {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2px 12px;
+      font-size: 10.5pt;
+    }
+    .doc-header-meta .meta-label {
+      font-weight: bold;
+      white-space: nowrap;
+      color: #333;
+    }
+    .doc-header-meta .meta-value {
+      color: #111;
     }
 
-    /* ── Draft warning ── */
-    .draft-warning {
+    /* ── DRAFT callout ── */
+    .draft-callout {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
       background: #fef9c3;
-      border: 1px solid #ca8a04;
-      padding: 8px 14px;
-      font-size: 9pt;
-      font-family: Arial, sans-serif;
-      border-radius: 4px;
-      margin-bottom: 18px;
+      border: 1.5px solid #ca8a04;
+      border-left: 5px solid #b45309;
+      padding: 10px 14px;
+      border-radius: 3px;
+      margin-bottom: 20px;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
-
-    /* ── Metadata block ── */
-    p.meta {
-      font-size: 11pt;
-      margin-bottom: 4px;
+    .draft-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #92400e;
+    }
+    .draft-body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      color: #78350f;
     }
 
     /* ── Section headings ── */
-    h2 {
-      font-size: 11pt;
+    .section-head {
+      font-size: 10.5pt;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       font-weight: bold;
-      border-bottom: 1px solid #555;
+      border-bottom: 1px solid #444;
       padding-bottom: 3px;
-      margin-top: 22px;
+      margin-top: 26px;
       margin-bottom: 8px;
+      break-after: avoid;
       page-break-after: avoid;
       orphans: 3;
       widows: 3;
     }
 
     /* ── Bullet lists ── */
-    ul {
+    .fact-list {
       list-style: none;
       padding-left: 0;
-      margin-bottom: 8px;
+      margin: 4px 0 10px 0;
     }
-    li {
-      padding-left: 1.2em;
-      text-indent: -1.2em;
-      margin-bottom: 4px;
+    .fact-list li {
+      padding-left: 1.3em;
+      text-indent: -1.3em;
+      margin-bottom: 5px;
       font-size: 11pt;
+      break-inside: avoid;
+      page-break-inside: avoid;
     }
-    li::before { content: "\\2022\\00A0"; }
+    .fact-list li::before { content: "\\2022\\00A0"; }
 
     /* ── Body paragraphs ── */
-    p { font-size: 11pt; margin-bottom: 6px; }
+    .body-para {
+      font-size: 11pt;
+      margin-bottom: 7px;
+    }
 
     /* ── Footer note ── */
-    p.footer-note {
+    .footer-note {
       font-size: 9pt;
       font-style: italic;
       color: #555;
-      margin-top: 24px;
+      margin-top: 28px;
       border-top: 1px solid #ccc;
-      padding-top: 8px;
+      padding-top: 10px;
     }
 
-    .spacer { height: 8px; }
-
-    /* ── @page — margins + page numbers ── */
+    /* ── @page: letter with 1-inch margins + page numbers ── */
     @page {
-      size: letter;
+      size: letter portrait;
       margin: 1in;
+      @bottom-center {
+        content: "Page " counter(page) " of " counter(pages);
+        font-size: 9pt;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #666;
+      }
     }
     @page :first {
-      @bottom-center { content: ""; }
+      @top-right { content: ""; }
     }
 
-    /* CSS-counter page numbers via running footer */
-    body::after {
-      content: none; /* handled by @page below in supporting browsers */
-    }
-
-    /* Fallback page-number footer for Chrome/Safari print */
     @media print {
-      @page {
-        @bottom-center {
-          content: "Page " counter(page) " of " counter(pages);
-          font-size: 9pt;
-          font-family: Arial, sans-serif;
-          color: #555;
-        }
-      }
       body {
         padding: 0;
         max-width: none;
       }
-      .draft-warning {
+      .draft-callout {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-      h2 { page-break-after: avoid; }
-      ul, li { page-break-inside: avoid; }
+      .section-head {
+        break-after: avoid;
+        page-break-after: avoid;
+      }
+      .fact-list li {
+        break-inside: avoid;
+        page-break-inside: avoid;
+      }
     }
   </style>
 </head>
 <body>
   <div class="doc-header">
-    <h1>Sentencing Mitigation Memorandum</h1>
-    ${subheading ? `<div class="sub">${escHtml(subheading)}</div>` : ""}
+    <div class="doc-header-title">Sentencing Mitigation Memorandum</div>
+    <div class="doc-header-meta">
+      ${preparedDate ? `<span class="meta-label">Prepared:</span><span class="meta-value">${escHtml(preparedDate)}</span>` : ""}
+      ${clientName ? `<span class="meta-label">Client:</span><span class="meta-value">${escHtml(clientName)}</span>` : ""}
+      ${proceedingContext ? `<span class="meta-label">Context:</span><span class="meta-value">${escHtml(proceedingContext)}</span>` : ""}
+    </div>
   </div>
   ${bodyContent}
 </body>
