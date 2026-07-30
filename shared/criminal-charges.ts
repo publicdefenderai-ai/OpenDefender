@@ -25,13 +25,17 @@
 // primary sources. Codes have been corrected where the synthesized value was wrong.
 //
 // AUDITED — codes confirmed correct via official state legislature / sentencing commission:
-//   WA  (RCW)            — CFC Adult Sentencing Manual 2025, felony index
 //   PA  (Pa.C.S.)        — PA Sentencing Commission Guidelines 8th Ed., §303a.9 offense list
+//   TX  (Tex. codes)     — TLC Inventory of TX Felony Offenses (through 85th Legislature)
+//
+// AUDIT SOURCE REFERENCED — header added but charge codes NOT YET corrected:
+//   (These states have synthesized codes still in place; add to audited list only after
+//    applying code corrections charge-by-charge against the primary source.)
+//   WA  (RCW)            — CFC Adult Sentencing Manual 2025, felony index
 //   AR  (A.C.A.)         — AR Supreme Court Criminal Benchbook 2026, seriousness table
 //   MI  (MCL)            — MI Sentencing Guidelines 2025, alphabetical felony list
 //   MO  (Mo.Rev.Stat.)   — MO Charge Code Manual (through current session), charge code index
 //   DE  (Del.C.)         — DE Superior Court Criminal Benchbook 2025, offense index
-//   TX  (Tex. codes)     — TLC Inventory of TX Felony Offenses (through 85th Legislature)
 //   CA  (Cal. Pen. Code / H&S Code / Veh. Code)
 //                        — leginfo.legislature.ca.gov; codes confirmed against Penal Code,
 //                          Health & Safety Code, and Vehicle Code (2026-07)
@@ -124,15 +128,18 @@
 // TERRITORIES AUDITED (2026-07) — codes cross-referenced against official territory codes:
 //   AS  (ASCA)           — asbar.org Title 46 (Criminal Justice); key: murder 46.3502,
 //                          assault 46.3520, robbery 46.4002, drug 13.1022 (2026-07)
-//   GU  (9 GCA)          — law.justia.com/codes/guam Title 9 (Crimes and Corrections);
-//                          key: murder 9 GCA § 16.30, assault 9 GCA § 19.10,
-//                          robbery 9 GCA § 40.10, drug 9 GCA § 67.401 (2026-07)
 //   MP  (6 CMC)          — cnmilaw.org Title 6 (Crimes and Criminal Procedure);
 //                          key: murder 6 CMC § 1101, assault 6 CMC § 1201,
 //                          SA 6 CMC § 1301, robbery 6 CMC § 1411 (2026-07)
+//
+// TERRITORIES — AUDIT SOURCE REFERENCED, CODES NOT YET FULLY CORRECTED:
+//   GU  (9 GCA)          — law.justia.com/codes/guam Title 9 (Crimes and Corrections);
+//                          key codes correct; gu-protective-order-violation code
+//                          (30-401) still requires correction against 9 GCA § 30.xx (2026-07)
 //   PR  (Ley 146-2012)   — bvirtualogp.pr.gov Puerto Rico Penal Code (Law 146-2012);
-//                          key: murder Art. 93, assault Art. 122, robbery Art. 189,
-//                          drug Art. 401 Ley 4-2017, weapons Ley 168-2019 (2026-07)
+//                          key codes correct; traffic (Ley 22) and domestic codes
+//                          (pr-conducir-*, pr-protective-order-violation,
+//                          pr-failure-to-pay-child-support) still require verification (2026-07)
 //   VI  (V.I.C.)         — law.justia.com/codes/virgin-islands Title 14 (Crimes);
 //                          key: murder 14 V.I.C. § 921, assault 14 V.I.C. § 295,
 //                          burglary 14 V.I.C. § 441, drug 19 V.I.C. § 604 (2026-07)
@@ -3066,7 +3073,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'ca-petty-theft-misdemeanor',
     name: 'Petty Theft (Under $950)',
-    code: '484-488',
+    code: '488',
     jurisdiction: 'CA',
     category: 'misdemeanor',
     description: 'Theft of property valued at $950 or less under California Penal Code §§ 484-488. One of the most commonly prosecuted crimes in California.',
@@ -33031,7 +33038,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'oh-mail-fraud',
     name: 'Mail Fraud',
-    code: '23-32',
+    code: '2913.02',
     jurisdiction: 'OH',
     category: 'felony',
     description: 'Fraud using postal service under Ohio law',
@@ -35475,7 +35482,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-possession-of-controlled-substance',
     name: 'Possession of Controlled Substance',
-    code: '780-113',
+    code: '35-780-113',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Unlawful possession of controlled substances under Pennsylvania law',
@@ -35618,7 +35625,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-wire-fraud',
     name: 'Wire Fraud',
-    code: '32-52',
+    code: '18-4107',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Fraud using electronic communications under Pennsylvania law',
@@ -35631,7 +35638,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-mail-fraud',
     name: 'Mail Fraud',
-    code: '30-43',
+    code: '18-3922',
     jurisdiction: 'PA',
     category: 'felony',
     description: 'Fraud using postal service under Pennsylvania law',
@@ -42560,7 +42567,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-domestic-violence-assault',
     name: 'Domestic Violence Assault',
-    code: '39-58',
+    code: '18.2-57.2',
     jurisdiction: 'VA',
     category: 'misdemeanor',
     description: 'Assault against family/household member under Virginia law',
@@ -78604,7 +78611,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'va-illegal-fireworks',
     name: 'Illegal Discharge of Fireworks',
-    code: '27-97',
+    code: '59.1-149.2',
     jurisdiction: 'VA',
     category: 'misdemeanor',
     description: 'Possessing, selling, or discharging fireworks in violation of local or state fireworks regulations under VA law',
