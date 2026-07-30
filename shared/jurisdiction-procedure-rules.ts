@@ -189,7 +189,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     speedyTrialDays: {
       felony: 175,
       misdemeanor: 90,
-      notes: 'Clock runs from date formal charges are filed (amended eff. July 1, 2025; prior rule ran from arrest or service of notice to appear). After the period expires, defendant may file a notice of expiration of speedy trial; if not brought to trial within 30 days (recapture period, increased from 10 days by 2025 amendment), case is dismissed. Dismissal is without prejudice unless a constitutional speedy trial violation is independently established. Rule 3.134 also amended to allow pretrial release if formal charges are not brought within a reasonable time.',
+      notes: 'Clock runs from date formal charges are filed (amended eff. July 1, 2025; prior rule ran from arrest or service of notice to appear). After the period expires, defendant may file a notice of expiration of speedy trial; if not brought to trial within 30 days (recapture period, increased from 10 days by 2025 amendment), case is dismissed. Dismissal is without prejudice unless a constitutional speedy trial violation is independently established. Rule 3.134 also amended to allow pretrial release if formal charges are not brought within a reasonable time. — CONFORMING RULES STATUS (verified 2026-07): SC2022-1123 directed the Traffic Court Rules and Juvenile Delinquency Rules committees to consider consistent changes. The Traffic Court Rules Committee proposed amendments to Fla. R. Traf. Ct. 6.325 (Speedy Trial: Infractions Only) and 6.160 (Practice As In Criminal Rules) in Aug 2025; the Supreme Court\'s Nov 6, 2025 opinion (SC2023-1609) adopted only rules 6.340 and 6.480 and did NOT adopt the proposed 6.325 amendment. A second batch of proposed traffic court amendments was published Oct 15, 2025 and remains pending before the Court. The Juvenile Court Rules Committee proposed conforming amendments to Fla. R. Juv. P. 8.090 (Speedy Trial), published for comment Oct 15, 2025; the Oct 16, 2025 Supreme Court opinion (SC2025-0237) amended other juvenile rules but NOT 8.090. As of July 2026, neither Fla. R. Traf. Ct. 6.325 nor Fla. R. Juv. P. 8.090 has been amended to conform with the 3.191 changes. Recheck at next quarterly review.',
     },
     speedyTrialSource: 'Fla. R. Crim. P. 3.191 (as amended eff. July 1, 2025, SC2022-1123); Fla. R. Crim. P. 3.134',
     phoneCall: {
@@ -198,7 +198,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       source: 'Fla. Stat. § 951.23 (detention facility requirements)',
     },
     bailStructure: 'cash_bail',
-    notes: 'Florida uses a cash bail system with bail schedules. Article I, § 14 of the Florida Constitution governs pretrial release.',
+    notes: 'Florida uses a cash bail system with bail schedules. Article I, § 14 of the Florida Constitution governs pretrial release. Traffic infractions governed by Fla. R. Traf. Ct. 6.325 (180-day period from service of citation; unamended as of 2026-07). Juvenile delinquency speedy trial governed by Fla. R. Juv. P. 8.090 (90-day period from filing of petition; unamended as of 2026-07).',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
