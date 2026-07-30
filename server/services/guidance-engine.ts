@@ -955,7 +955,7 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
     evidenceToGather: buildEvidenceForCharges(specificCharges, fallbackChargeData),
     courtPreparation: (stageData as any)?.courtPreparation || [],
     avoidActions: buildAvoidActionsForCharges(specificCharges, stageData),
-    timeline: buildCaseTimeline(caseStage, jurisdictionData),
+    timeline: buildCaseTimeline(caseStage, jurisdictionData, jurisdiction),
     mockQA: buildMockQA(caseData, specificCharges),
     collateralConsequences: buildCollateralConsequences(caseData, fallbackChargeType),
     uncertainties: buildUncertainties(caseData, jurisdictionData, fallbackChargeType),
@@ -1385,10 +1385,13 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
   }
   
   if (caseData.caseStage === 'arraignment') {
+    const isIndiana = jurisdiction === 'IN';
     deadlines.push({
-      event: 'Preliminary Hearing',
+      event: isIndiana ? 'Initial Hearing' : 'Preliminary Hearing',
       timeframe: jurisdictionData.preliminaryHearing || 'Within 10-14 days',
-      description: 'Court determines probable cause for charges',
+      description: isIndiana
+        ? 'Court reviews probable cause and advises rights (Indiana uses "initial hearing" rather than a separate preliminary hearing — IC § 35-33-7-1)'
+        : 'Court determines probable cause for charges',
       priority: 'important',
       daysFromNow: 10,
       ...(isEstimate && { isEstimate: true }),
@@ -1506,7 +1509,8 @@ function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionD
   return `${situation} ${actions} ${keyIssue}`;
 }
 
-function buildCaseTimeline(caseStage: string, jurisdictionData: any): Array<{stage: string; description: string; timeframe: string; completed: boolean}> {
+function buildCaseTimeline(caseStage: string, jurisdictionData: any, jurisdiction?: string): Array<{stage: string; description: string; timeframe: string; completed: boolean}> {
+  const isIndiana = (jurisdiction || '').toUpperCase() === 'IN';
   const timeline = [
     {
       stage: 'Arrest',
@@ -1521,8 +1525,10 @@ function buildCaseTimeline(caseStage: string, jurisdictionData: any): Array<{sta
       completed: caseStage !== 'arrest'
     },
     {
-      stage: 'Preliminary Hearing',
-      description: 'Court determines probable cause',
+      stage: isIndiana ? 'Initial Hearing' : 'Preliminary Hearing',
+      description: isIndiana
+        ? 'Court reviews probable cause and advises rights (Indiana uses "initial hearing" — IC § 35-33-7-1)'
+        : 'Court determines probable cause',
       timeframe: jurisdictionData.preliminaryHearing || 'Within 2 weeks',
       completed: false
     },

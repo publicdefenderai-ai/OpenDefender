@@ -767,12 +767,13 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-72: IN × arraignment stage — preliminary hearing deadline present (Indiana uses initial hearing, IC § 35-33-7-1)',
+    label: 'P1-72: IN × arraignment stage — initial hearing deadline present (Indiana uses initial hearing, IC § 35-33-7-1)',
     input: { ...baseMapped, jurisdiction: 'IN', charges: 'theft', caseStage: 'arraignment', custodyStatus: 'detained' },
     expect: {
-      deadlineEventKeywords: ['Preliminary Hearing'],
-      // Indiana uses "initial hearing" held promptly after arrest (IC § 35-33-7-1).
-      // Prior keyword '20 days' was unsupported; updated to match corrected string.
+      // Indiana uses "initial hearing" (IC § 35-33-7-1), not "preliminary hearing".
+      // The event label must reflect this to avoid confusing users who will only hear "initial hearing" in court.
+      deadlineEventKeywords: ['Initial Hearing'],
+      // Indiana's initial hearing is held promptly after arrest (IC § 35-33-7-1).
       deadlineTimeframeKeywords: ['Promptly'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
