@@ -612,3 +612,104 @@ describe('buildPlainText — i18n locale coverage', () => {
     });
   }
 });
+
+// ── Risk card i18n completeness (es / zh) ────────────────────────────────────
+//
+// For every risk id the screener can display, verify that each of the four
+// body-text fields (title, what, clock, action) resolves to a non-empty string
+// that is NOT the raw dot-notation key.  A missing or blank translation would
+// silently produce an empty line — or the raw key — in the exported summary for
+// non-English users.
+
+const RISK_IDS = [
+  'housing',
+  'employment',
+  'immigration',
+  'benefits',
+  'children',
+  'supervision',
+  'license',
+  'driverLicense',
+  'driverLicenseCheck',
+  'sexOffender',
+] as const;
+
+const RISK_FIELDS = ['title', 'what', 'clock', 'action'] as const;
+
+describe('Risk card i18n completeness', () => {
+  // Only test es and zh — en is the source of truth, not a translation target.
+  const translatedLocales = locales.filter(({ name }) => name !== 'en');
+
+  for (const { name, obj } of translatedLocales) {
+    describe(`[${name}] all risk card fields are non-empty translated text`, () => {
+      for (const riskId of RISK_IDS) {
+        for (const field of RISK_FIELDS) {
+          it(`risks.${riskId}.${field}`, () => {
+            const key = `collateralConsequences.risks.${riskId}.${field}`;
+            const t = makeT(obj);
+            const resolved = t(key);
+            expect(
+              resolved,
+              `[${name}] "${key}" must not fall back to the raw key (translation missing)`,
+            ).not.toBe(key);
+            expect(
+              resolved.trim(),
+              `[${name}] "${key}" must not be empty`,
+            ).not.toBe('');
+          });
+        }
+      }
+    });
+  }
+});
+
+// ── Locale completeness: es and zh key sets match en ────────────────────────
+//
+// Walk the en locale's collateralConsequences.risks subtree and assert that
+// every leaf key that exists in en also exists (and is non-empty) in es and zh.
+// This catches newly-added risk ids or fields in en that were not yet translated.
+
+function collectLeafKeys(
+  obj: unknown,
+  prefix: string,
+  result: string[] = [],
+): string[] {
+  if (typeof obj === 'string') {
+    result.push(prefix);
+  } else if (obj !== null && typeof obj === 'object') {
+    for (const [k, v] of Object.entries(obj as Record<string, unknown>)) {
+      collectLeafKeys(v, prefix ? `${prefix}.${k}` : k, result);
+    }
+  }
+  return result;
+}
+
+describe('Locale key completeness — risks section', () => {
+  const enObj = unwrapTranslation(enLocale);
+  const enCC = (enObj as Record<string, unknown>)?.collateralConsequences as Record<string, unknown>;
+  const enRisks = enCC?.risks;
+  const enLeafKeys = collectLeafKeys(enRisks, '');
+
+  const translatedLocales2 = [
+    { name: 'es', obj: unwrapTranslation(esLocale) },
+    { name: 'zh', obj: unwrapTranslation(zhLocale) },
+  ];
+
+  for (const { name, obj } of translatedLocales2) {
+    it(`[${name}] has all risk keys present in en`, () => {
+      const t = makeT(obj);
+      const missingOrPassthrough: string[] = [];
+      for (const leafKey of enLeafKeys) {
+        const fullKey = `collateralConsequences.risks.${leafKey}`;
+        const resolved = t(fullKey);
+        if (resolved === fullKey || resolved.trim() === '') {
+          missingOrPassthrough.push(fullKey);
+        }
+      }
+      expect(
+        missingOrPassthrough,
+        `[${name}] these keys are missing or empty: ${missingOrPassthrough.join(', ')}`,
+      ).toHaveLength(0);
+    });
+  }
+});
