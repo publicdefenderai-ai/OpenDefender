@@ -11,10 +11,10 @@
 
 | Dimension | Count |
 |---|---|
-| Total scenarios | 137 |
-| Passing | 137 |
+| Total scenarios | 152 |
+| Passing | 152 |
 | Failing | 0 |
-| Priority 1 (Deadlines) | 97 |
+| Priority 1 (Deadlines) | 112 |
 | Priority 2 (Collateral consequences) | 26 |
 | Priority 3 (Alerts, coverage, uncertainties) | 35 |
 

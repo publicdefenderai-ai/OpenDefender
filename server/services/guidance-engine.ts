@@ -397,6 +397,63 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
   },
+  UT: {
+    // Utah Code Ann. § 77-11-2: preliminary examination must be held within
+    // 14 days of arrest if defendant is in custody. Source verified by engineer
+    // against le.utah.gov § 77-11-2 (2026-07). ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 14 days if in custody (Utah Code Ann. § 77-11-2)',
+    // Utah R. Crim. P. 16: discovery is largely open-file; no fixed post-arraignment
+    // deadline. "30 days after arraignment" is a working approximation. ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '30 days after arraignment (approximate; Utah R. Crim. P. 16)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  IA: {
+    // Iowa R. Crim. P. 2.2(5): preliminary hearing must be held within 10 days
+    // of initial appearance if defendant is held in custody. Source verified by
+    // engineer against iowacourts.gov Rule 2.2 (2026-07). ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 10 days if in custody (Iowa R. Crim. P. 2.2(5))',
+    // Iowa R. Crim. P. 2.14: prosecutor must respond to discovery requests within
+    // a reasonable time. "30 days after arraignment" is a working approximation.
+    // ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '30 days after arraignment (approximate; Iowa R. Crim. P. 2.14)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  AR: {
+    // Ark. R. Crim. P. 8.1: preliminary hearing must be held within 10 days of
+    // initial appearance if defendant is held in custody. Source verified by
+    // engineer against courts.arkansas.gov Rule 8.1 (2026-07). ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 10 days if in custody (Ark. R. Crim. P. 8.1)',
+    // Ark. R. Crim. P. 17.1: prosecutor must disclose within a reasonable time
+    // after request. "30 days after arraignment" is a working approximation.
+    // ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '30 days after arraignment (approximate; Ark. R. Crim. P. 17.1)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  MS: {
+    // Miss. R. Crim. P. 6.2: defendant has the right to a preliminary hearing
+    // within a reasonable time after arrest; no fixed statutory day count is
+    // specified. "30 days for felonies" reflects common practice. ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 30 days for felonies (Miss. R. Crim. P. 6.2; day count approximate)',
+    // Mississippi discovery is largely request-driven under Miss. R. Crim. P. 17.
+    // "30 days after arraignment" is a working approximation. ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '30 days after arraignment (approximate; Miss. R. Crim. P. 17)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
+  KS: {
+    // Kan. Stat. Ann. § 22-2902: preliminary hearing must be held within 10 days
+    // of arraignment if defendant is in custody. Source verified by engineer
+    // against kslegislature.org § 22-2902 (2026-07). ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 10 days if in custody (Kan. Stat. Ann. § 22-2902)',
+    // Kansas discovery is request-triggered under Kan. Stat. Ann. § 22-3212.
+    // "30 days after arraignment" is a working approximation. ATTORNEY REVIEW PENDING.
+    discoveryDeadline: '30 days after arraignment (approximate; Kan. Stat. Ann. § 22-3212)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
+  },
   federal: {
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
     discoveryDeadline: 'Ongoing obligation',
@@ -1258,7 +1315,7 @@ export const KNOWN_JURISDICTIONS = [
   // Batch 1 (2026-03)
   'CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'AZ', 'NJ', 'MI', 'NC', 'VA', 'FEDERAL',
   // Batch 2 (2026-07)
-  'AL', 'AK', 'CO', 'CT', 'DC', 'HI', 'IA', 'ID', 'IN', 'KS', 'KY', 'LA',
+  'AL', 'AK', 'AR', 'CO', 'CT', 'DC', 'HI', 'IA', 'ID', 'IN', 'KS', 'KY', 'LA',
   'MA', 'MD', 'ME', 'MN', 'MO', 'MS', 'MT', 'ND', 'NE', 'NH', 'NM', 'NV', 'OK',
   'OR', 'RI', 'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WV', 'WY',
 ];

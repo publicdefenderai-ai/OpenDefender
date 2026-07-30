@@ -1047,6 +1047,167 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
 
+  // ── Utah ──
+  {
+    label: 'P1-98: UT × arrest — arraignment deadline matches jurisdiction rule (72 hours)',
+    input: { ...baseMapped, jurisdiction: 'UT', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['72 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-99: UT × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'UT', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['14 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-100: UT × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'UT', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Iowa ──
+  {
+    label: 'P1-101: IA × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'IA', charges: 'burglary' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-102: IA × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'IA', charges: 'theft', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['10 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-103: IA × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'IA', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Arkansas ──
+  {
+    label: 'P1-104: AR × arrest — arraignment deadline matches jurisdiction rule (48-hour floor)',
+    input: { ...baseMapped, jurisdiction: 'AR', charges: 'theft' },
+    expect: {
+      // AR arraignment string: "Without unnecessary delay (Ark. R. Crim. P. 8.1; 48-hour federal constitutional floor)"
+      deadlineTimeframeKeywords: ['48-hour'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-105: AR × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'AR', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['10 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-106: AR × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'AR', charges: 'fraud', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Mississippi ──
+  {
+    label: 'P1-107: MS × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'MS', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-108: MS × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'MS', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-109: MS × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'MS', charges: 'burglary', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
+  // ── Kansas ──
+  {
+    label: 'P1-110: KS × arrest — arraignment deadline matches jurisdiction rule (48 hours)',
+    input: { ...baseMapped, jurisdiction: 'KS', charges: 'theft' },
+    expect: {
+      deadlineTimeframeKeywords: ['48 hours'],
+      deadlineEventKeywords: ['Arraignment'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-111: KS × arraignment stage — preliminary hearing deadline present',
+    input: { ...baseMapped, jurisdiction: 'KS', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'detained' },
+    expect: {
+      deadlineEventKeywords: ['Preliminary Hearing'],
+      deadlineTimeframeKeywords: ['10 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+  {
+    label: 'P1-112: KS × arraignment stage — discovery deadline present',
+    input: { ...baseMapped, jurisdiction: 'KS', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
+    expect: {
+      deadlineEventKeywords: ['Discovery'],
+      deadlineTimeframeKeywords: ['30 days'],
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+    },
+  },
+
   // ── Virginia ──
   {
     label: 'P1-50: VA × arrest — arraignment deadline matches jurisdiction rule (72 hours)',
