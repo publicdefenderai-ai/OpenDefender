@@ -10,6 +10,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Badge } from "@/components/ui/badge";
 import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, AlertTriangle, Briefcase, Users, Home, DollarSign, Car, Heart, Globe, Shield, ChevronDown, Plus, Search, Activity } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
@@ -25,6 +26,7 @@ interface QAFlowProps {
 export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: QAFlowProps) {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
+  const [showCaseStageWarning, setShowCaseStageWarning] = useState(false);
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired } = useCaptcha();
   const [formData, setFormData] = useState({
     jurisdiction: "",
@@ -74,7 +76,26 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
+      // Guard: warn if no case stage selected before submitting
+      if (!formData.caseStage) {
+        setShowCaseStageWarning(true);
+        return;
+      }
       onComplete({ ...formData, captchaToken });
+    }
+  };
+
+  const handleCaseStageWarningConfirm = () => {
+    setShowCaseStageWarning(false);
+    onComplete({ ...formData, captchaToken });
+  };
+
+  const handleCaseStageWarningCancel = () => {
+    setShowCaseStageWarning(false);
+    // Navigate back to the StatusStep (index 3) so the user can fill in the stage
+    const statusStepIndex = baseSteps.findIndex(s => s.component === StatusStep);
+    if (statusStepIndex >= 0) {
+      setCurrentStep(statusStepIndex);
     }
   };
 
@@ -91,6 +112,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
   const CurrentStepComponent = steps[currentStep].component;
 
   return (
+    <>
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>
         <div className="flex items-center justify-between mb-4">
@@ -168,6 +190,30 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
       </CardContent>
 
     </Card>
+
+      {/* Case stage warning dialog */}
+      <AlertDialog open={showCaseStageWarning} onOpenChange={setShowCaseStageWarning}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle className="flex items-center gap-2">
+              <AlertTriangle className="h-5 w-5 text-amber-500" />
+              {t('legalGuidance.qaFlow.caseStageWarning.title')}
+            </AlertDialogTitle>
+            <AlertDialogDescription>
+              {t('legalGuidance.qaFlow.caseStageWarning.description')}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel onClick={handleCaseStageWarningCancel} data-testid="button-case-stage-warning-back">
+              {t('legalGuidance.qaFlow.caseStageWarning.goBack')}
+            </AlertDialogCancel>
+            <AlertDialogAction onClick={handleCaseStageWarningConfirm} data-testid="button-case-stage-warning-continue">
+              {t('legalGuidance.qaFlow.caseStageWarning.continueAnyway')}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </>
   );
 }
 

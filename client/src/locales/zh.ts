@@ -2207,6 +2207,12 @@ export default {
         "submit": "获取我的法律指导",
         "next": "下一步"
       },
+      "caseStageWarning": {
+        "title": "未选择案件阶段",
+        "description": "您尚未选择案件阶段。指导将默认使用逮捕阶段，这可能与您的实际情况不符。您是否要返回并选择阶段，还是继续使用逮捕阶段？",
+        "continueAnyway": "继续使用逮捕阶段",
+        "goBack": "返回并选择"
+      },
       "civilEmergencies": {
         "title": "现在正在发生什么？",
         "subtitle": "对于您提到的每个方面，告诉我们是否已经有事情发生。这有助于我们确定最紧迫的事项。",

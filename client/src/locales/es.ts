@@ -2207,6 +2207,12 @@ export default {
         "submit": "Obtener Mi Orientación Legal",
         "next": "Siguiente"
       },
+      "caseStageWarning": {
+        "title": "No se seleccionó una etapa del caso",
+        "description": "No ha seleccionado una etapa del caso. La orientación tomará como referencia la etapa de arresto, lo que puede no corresponder a su situación. ¿Desea volver y seleccionar su etapa, o continuar con la etapa de arresto?",
+        "continueAnyway": "Continuar con la etapa de arresto",
+        "goBack": "Volver y seleccionar"
+      },
       "civilEmergencies": {
         "title": "¿Qué está pasando ahora mismo?",
         "subtitle": "Para cada área que mencionó, díganos si ya está ocurriendo algo. Esto nos ayuda a identificar lo que es más urgente.",

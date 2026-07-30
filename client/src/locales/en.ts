@@ -2205,6 +2205,12 @@ export default {
         "submit": "Get My Case Support",
         "next": "Next"
       },
+      "caseStageWarning": {
+        "title": "No case stage selected",
+        "description": "You haven't selected a case stage. Guidance will default to the arrest stage, which may not match your situation. Would you like to go back and select your stage, or continue with the arrest stage?",
+        "continueAnyway": "Continue with arrest stage",
+        "goBack": "Go back and select"
+      },
       "civilEmergencies": {
         "title": "What's happening right now?",
         "subtitle": "For each area you mentioned, let us know if anything is already happening. This helps us flag what's most time-sensitive.",
