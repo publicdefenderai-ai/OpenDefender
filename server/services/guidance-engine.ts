@@ -133,6 +133,14 @@ interface JurisdictionRule {
 //     scheduling deadline, which is inaccurate.
 //   AL discoveryDeadline  – corrected from "30 days after arraignment" to the
 //     Rule 16.1 standard of 14 days after written request.
+//   OR preliminaryHearing – prior string "Within 14 days if in custody" was
+//     unsupported and cited § 135.173 (an evidence-rules provision). Corrected
+//     to 5 judicial days per ORS § 135.070(2), verified (2026-07). Attorney
+//     review pending.
+//   NV preliminaryHearing – prior string "Within 15 days if in custody"; 15 days
+//     confirmed by NRS § 171.196(2) but the custody qualifier is not in the
+//     statute text — deadline applies to any defendant who does not waive
+//     examination. String updated; citation added. Attorney review pending.
 
 interface JurisdictionSupplemental {
   preliminaryHearing: string;
@@ -374,7 +382,14 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     bailSystem: 'Cash bail system',
   },
   OR: {
-    preliminaryHearing: 'Within 14 days if in custody',
+    // ORS § 135.070(2): "If a preliminary hearing is requested, it shall be held as
+    // soon as practicable but in any event within five judicial days if the defendant
+    // is in custody or within 30 days if the defendant is not in custody."
+    // Source verified by engineer against oregonlegislature.gov ORS § 135.070 (2026-07).
+    // NOTE: Prior string said "14 days if in custody" and cited § 135.173 (an
+    // evidence-rules provision, not a timing rule); corrected to 5 judicial days
+    // per the actual timing statute, § 135.070(2). ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 5 judicial days if in custody (ORS § 135.070)',
     discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
@@ -386,7 +401,14 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     bailSystem: 'Cash bail system',
   },
   NV: {
-    preliminaryHearing: 'Within 15 days if in custody',
+    // NRS § 171.196(2): "If the defendant does not waive examination, the magistrate
+    // shall hear the evidence within 15 days, unless for good cause shown the
+    // magistrate extends such time." The 15-day window applies generally, not only
+    // when the defendant is in custody; the custody qualifier in the prior string
+    // was not supported by the statute text.
+    // Source verified by engineer against nevada.public.law NRS § 171.196 (2026-07).
+    // ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Within 15 days (Nev. Rev. Stat. § 171.196)',
     discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',

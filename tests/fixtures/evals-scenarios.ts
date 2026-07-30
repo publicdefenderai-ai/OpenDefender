@@ -931,11 +931,13 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-87: OR × arraignment stage — preliminary hearing deadline present',
+    label: 'P1-87: OR × arraignment stage — preliminary hearing deadline present (ORS § 135.070: 5 judicial days if in custody)',
     input: { ...baseMapped, jurisdiction: 'OR', charges: 'burglary', caseStage: 'arraignment', custodyStatus: 'detained' },
     expect: {
       deadlineEventKeywords: ['Preliminary Hearing'],
-      deadlineTimeframeKeywords: ['14 days'],
+      // Corrected from '14 days' — ORS § 135.070(2) requires the hearing within
+      // 5 judicial days if the defendant is in custody (prior "14 days" was unsupported).
+      deadlineTimeframeKeywords: ['5 judicial days'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
