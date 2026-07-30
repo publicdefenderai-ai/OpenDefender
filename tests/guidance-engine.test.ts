@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { generateEnhancedGuidance, CHARGE_KEYWORDS, CHARGE_CONSEQUENCE_MAP, KNOWN_JURISDICTIONS, stampEstimateDeadlines } from '../server/services/guidance-engine';
-import { criminalCharges, getChargeById } from '../shared/criminal-charges';
+import { criminalCharges, getChargeById, getVerifiedCitation } from '../shared/criminal-charges';
+import { CHARGE_CITATIONS } from '../shared/criminal-charge-citations';
 
 const baseCase = {
   jurisdiction: 'CA',
@@ -831,5 +832,172 @@ describe('buildUncertainties — Charge-Specific Guidance Not Available item', (
         `Unexpected "Charge-Specific Guidance Not Available" item for recognized charge type "${chargeType}" (input: "${chargeText}").`,
       ).toBeUndefined();
     }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// getVerifiedCitation guard — unverified codes excluded from AI guidance output
+// ---------------------------------------------------------------------------
+// Task 262 added a getVerifiedCitation() guard to all chargeClassifications
+// mappings in routes.ts so that synthesized / unverified codes never appear
+// in the `code` field of the AI guidance output.
+//
+// The helper below replicates the exact mapping logic from
+// generateLegalGuidance() (server/routes.ts ~line 3050) so that any future
+// refactor that breaks the guard will immediately surface here.
+//
+// Fixture choices:
+//   Unverified: 'dc-murder-in-the-first-degree'
+//     — overlay entry exists but confidence === 'needs_review', so
+//       getVerifiedCitation() returns null and `code` must be absent.
+//   High-confidence: 'al-murder-in-the-first-degree'
+//     — overlay entry has confidence === 'high', citation "Ala. Code § 13A-6-2";
+//       getVerifiedCitation() returns that citation and `code` must be present.
+//   High-confidence (second): 'ar-murder-in-the-first-degree'
+//     — confirms the pattern holds for a different state.
+
+/** Mirrors the chargeClassification object built inside generateLegalGuidance. */
+function buildClassificationForCharge(chargeId: string) {
+  const charge = getChargeById(chargeId);
+  if (!charge) return null;
+  const verifiedCode = getVerifiedCitation(charge);
+  return {
+    name: charge.name,
+    classification: charge.category,
+    ...(verifiedCode ? { code: verifiedCode } : {}),
+    verifiedCitation: verifiedCode ?? null,
+    title: charge.name,
+    maxPenalty: charge.maxPenalty,
+  };
+}
+
+describe('getVerifiedCitation guard — chargeClassifications code field', () => {
+  // ── Unverified charges: code must be absent ─────────────────────────────
+
+  it('dc-murder-in-the-first-degree (needs_review): chargeClassification has no code field', () => {
+    // Confirm the fixture is still needs_review so a promotion doesn't silently
+    // invalidate this test.
+    const overlay = CHARGE_CITATIONS['dc-murder-in-the-first-degree'];
+    expect(overlay, 'Fixture dc-murder-in-the-first-degree not found in CHARGE_CITATIONS').toBeDefined();
+    expect(
+      overlay!.confidence,
+      'Fixture confidence changed — update this test to use a different unverified charge',
+    ).not.toBe('high');
+
+    const classification = buildClassificationForCharge('dc-murder-in-the-first-degree');
+    expect(classification, 'dc-murder-in-the-first-degree not found in criminalCharges').not.toBeNull();
+    expect(
+      (classification as any).code,
+      'chargeClassification.code must be absent for a charge without a high-confidence citation ' +
+      '(dc-murder-in-the-first-degree has confidence=needs_review). ' +
+      'The getVerifiedCitation guard in generateLegalGuidance may have been removed.',
+    ).toBeUndefined();
+  });
+
+  it('dc-murder-in-the-first-degree (needs_review): verifiedCitation is null', () => {
+    const classification = buildClassificationForCharge('dc-murder-in-the-first-degree');
+    expect(classification).not.toBeNull();
+    expect(classification!.verifiedCitation).toBeNull();
+  });
+
+  // ── High-confidence charges: code must be present and correct ───────────
+
+  it('al-murder-in-the-first-degree (high): chargeClassification.code equals the verified citation', () => {
+    const overlay = CHARGE_CITATIONS['al-murder-in-the-first-degree'];
+    expect(overlay, 'Fixture al-murder-in-the-first-degree not found in CHARGE_CITATIONS').toBeDefined();
+    expect(overlay!.confidence).toBe('high');
+
+    const classification = buildClassificationForCharge('al-murder-in-the-first-degree');
+    expect(classification, 'al-murder-in-the-first-degree not found in criminalCharges').not.toBeNull();
+    expect(
+      (classification as any).code,
+      'chargeClassification.code must be present for al-murder-in-the-first-degree (confidence=high). ' +
+      'The getVerifiedCitation guard may have been broken.',
+    ).toBe(overlay!.citation);
+  });
+
+  it('al-murder-in-the-first-degree (high): code matches expected value "Ala. Code § 13A-6-2"', () => {
+    const classification = buildClassificationForCharge('al-murder-in-the-first-degree');
+    expect(classification).not.toBeNull();
+    expect((classification as any).code).toBe('Ala. Code § 13A-6-2');
+  });
+
+  it('al-murder-in-the-first-degree (high): verifiedCitation matches code', () => {
+    const classification = buildClassificationForCharge('al-murder-in-the-first-degree');
+    expect(classification).not.toBeNull();
+    expect(classification!.verifiedCitation).toBe((classification as any).code);
+    expect(classification!.verifiedCitation).toBeTruthy();
+  });
+
+  it('ar-murder-in-the-first-degree (high): code equals the verified citation', () => {
+    const overlay = CHARGE_CITATIONS['ar-murder-in-the-first-degree'];
+    expect(overlay, 'Fixture ar-murder-in-the-first-degree not found in CHARGE_CITATIONS').toBeDefined();
+    expect(overlay!.confidence).toBe('high');
+
+    const classification = buildClassificationForCharge('ar-murder-in-the-first-degree');
+    expect(classification, 'ar-murder-in-the-first-degree not found in criminalCharges').not.toBeNull();
+    expect((classification as any).code).toBe(overlay!.citation);
+    expect((classification as any).code).toBe('Ark. Code Ann. § 5-10-102');
+  });
+
+  // ── Cross-check: getVerifiedCitation agrees with overlay directly ────────
+
+  it('getVerifiedCitation returns null for dc-murder-in-the-first-degree', () => {
+    const charge = getChargeById('dc-murder-in-the-first-degree');
+    expect(charge, 'dc-murder-in-the-first-degree not found').toBeDefined();
+    expect(getVerifiedCitation(charge!)).toBeNull();
+  });
+
+  it('getVerifiedCitation returns the high-confidence citation for al-murder-in-the-first-degree', () => {
+    const charge = getChargeById('al-murder-in-the-first-degree');
+    expect(charge, 'al-murder-in-the-first-degree not found').toBeDefined();
+    expect(getVerifiedCitation(charge!)).toBe('Ala. Code § 13A-6-2');
+  });
+
+  // ── Guard completeness: every high-confidence overlay entry produces a code ──
+
+  it('every CHARGE_CITATIONS entry with confidence=high produces a code field in chargeClassification', () => {
+    const highConfidenceIds = Object.entries(CHARGE_CITATIONS)
+      .filter(([, rec]) => rec.confidence === 'high')
+      .map(([id]) => id);
+
+    // There must be at least some high-confidence entries for this test to be meaningful.
+    expect(highConfidenceIds.length).toBeGreaterThan(0);
+
+    const missing: string[] = [];
+    for (const chargeId of highConfidenceIds) {
+      const classification = buildClassificationForCharge(chargeId);
+      if (!classification) continue; // charge not in criminal-charges DB — skip
+      if (!(classification as any).code) {
+        missing.push(chargeId);
+      }
+    }
+
+    expect(
+      missing,
+      `These high-confidence citation entries produced no code field in chargeClassification: ${missing.join(', ')}. ` +
+      'A high-confidence overlay must always surface a code field in the AI guidance output.',
+    ).toHaveLength(0);
+  });
+
+  it('no CHARGE_CITATIONS entry with confidence≠high produces a code field in chargeClassification', () => {
+    const nonHighIds = Object.entries(CHARGE_CITATIONS)
+      .filter(([, rec]) => rec.confidence !== 'high')
+      .map(([id]) => id);
+
+    const leaking: string[] = [];
+    for (const chargeId of nonHighIds) {
+      const classification = buildClassificationForCharge(chargeId);
+      if (!classification) continue;
+      if ((classification as any).code) {
+        leaking.push(`${chargeId} (confidence=${CHARGE_CITATIONS[chargeId].confidence})`);
+      }
+    }
+
+    expect(
+      leaking,
+      `These non-high-confidence entries incorrectly produced a code field: ${leaking.join(', ')}. ` +
+      'Only high-confidence citations should appear in chargeClassification.code.',
+    ).toHaveLength(0);
   });
 });
