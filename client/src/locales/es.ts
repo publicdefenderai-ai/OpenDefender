@@ -6811,7 +6811,8 @@ export default {
       "p3": "Todo el demás contenido de este sitio — información sobre derechos, el verificador de elegibilidad para eliminación de antecedentes, la guía de fechas de tribunal, guías de inmigración, recursos de apoyo y todas las demás páginas estáticas — no utiliza IA. Ha sido investigado y redactado manualmente.",
       "p4": "La Hoja de Ruta del Caso también incluye un paso de clasificación de emergencias civiles que hace preguntas categóricas sobre situaciones activas (vivienda, empleo, dependientes, inmigración). Estas respuestas siguen el mismo proceso de solo sesión que todas las demás entradas de la Hoja de Ruta: se mantienen en la memoria del servidor, se eliminan automáticamente en 24 horas y nunca se escriben en una base de datos.",
       "p5": "La orientación generada por IA no sustituye al asesoramiento de un abogado con licencia. Contrastamos las respuestas con bases de datos legales para mejorar la precisión, pero la IA puede cometer errores. Consulte a un abogado calificado antes de tomar decisiones legales.",
-      "p6": "Antes de que sus entradas lleguen a la IA, analizamos automáticamente y eliminamos información personal (nombres, números de teléfono, direcciones, números de Seguro Social). Consulte nuestra Política de Privacidad para obtener detalles completos sobre el manejo de datos."
+      "p6_pre": "Antes de que sus entradas lleguen a la IA, analizamos automáticamente y eliminamos información personal (nombres, números de teléfono, direcciones, números de Seguro Social). Consulte nuestra",
+      "p6_post": "para obtener detalles completos sobre el manejo de datos."
     },
     "screeningTools": {
       "title": "Herramientas de Evaluación y Elegibilidad",

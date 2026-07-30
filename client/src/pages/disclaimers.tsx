@@ -146,7 +146,11 @@ export default function Disclaimers() {
                   {t('disclaimers.aiDisclosure.p5')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  {t('disclaimers.aiDisclosure.p6')}
+                  {t('disclaimers.aiDisclosure.p6_pre')}{' '}
+                  <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline">
+                    {t('footer.privacyPolicy')}
+                  </Link>{' '}
+                  {t('disclaimers.aiDisclosure.p6_post')}
                 </p>
               </CardContent>
             </Card>

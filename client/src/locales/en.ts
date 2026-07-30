@@ -6808,7 +6808,8 @@ export default {
       "p3": "All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.",
       "p4": "The Case Roadmap also includes a civil emergency triage step that asks categorical questions about active situations (housing, employment, dependents, immigration). These answers follow the same session-only path as all other Case Roadmap inputs: held in server memory, auto-deleted in 24 hours, never written to a database.",
       "p5": "AI-generated guidance is not a substitute for advice from a licensed attorney. We cross-reference responses with legal databases to improve accuracy, but AI can make mistakes. Consult a qualified attorney before making legal decisions.",
-      "p6": "Before your inputs reach the AI, we automatically scan for and remove personal information (names, phone numbers, addresses, Social Security numbers). See our Privacy Policy for the full details on data handling."
+      "p6_pre": "Before your inputs reach the AI, we automatically scan for and remove personal information (names, phone numbers, addresses, Social Security numbers). See our",
+      "p6_post": "for the full details on data handling."
     },
     "screeningTools": {
       "title": "Screening and Eligibility Tools",
