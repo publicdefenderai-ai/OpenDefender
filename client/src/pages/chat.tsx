@@ -746,7 +746,7 @@ export default function ChatPage() {
     actions.setCurrentStep('concerns_early');
   }, [actions, addBotMessageWithKey]);
 
-  const handleChargesSelect = useCallback((charges: Array<{ id: string; code: string; name: string }>) => {
+  const handleChargesSelect = useCallback((charges: Array<{ id: string; code?: string | null; name: string }>) => {
     actions.saveHistoryPoint(); // Save history before this selection
     const chargeNames = charges.map(c => c.name);
     const chargeIds = charges.map(c => c.id);

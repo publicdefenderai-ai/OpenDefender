@@ -14,7 +14,11 @@ import { getInstructionPaywall } from "@shared/criminal-charges";
 
 interface Charge {
   id: string;
-  code: string;
+  /** Present only when the entry has a verified high-confidence citation.
+   *  Absent for unverified/synthesized codes — use `citation` instead. */
+  code?: string | null;
+  /** Verified statute citation string, or null when unverified. */
+  citation?: string | null;
   name: string;
   category: 'felony' | 'misdemeanor' | 'infraction';
   description: string;
@@ -25,7 +29,7 @@ interface Charge {
 
 interface ChargeSelectorProps {
   jurisdiction: string;
-  onSelect: (charges: Array<{ id: string; code: string; name: string }>) => void;
+  onSelect: (charges: Array<{ id: string; code?: string | null; name: string }>) => void;
 }
 
 const CATEGORY_KEYS = ['All', 'felony', 'misdemeanor', 'infraction'] as const;
