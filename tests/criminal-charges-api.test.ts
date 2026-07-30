@@ -193,6 +193,33 @@ describe('GET /api/v1/search?q=robbery&types=charge — instructionRef/instructi
       'instructionUrl missing from IL robbery v1 search result',
     ).toMatch(/illinoiscourts\.gov/);
   });
+
+  it('charge-fl-robbery-in-the-first-degree is present with instructionRef "FSJI 15.1"', () => {
+    if (!serverAvailable) return;
+    const flRobbery = v1Response.results.find(
+      r => r.document.id === 'charge-fl-robbery-in-the-first-degree',
+    );
+    expect(
+      flRobbery,
+      'charge-fl-robbery-in-the-first-degree missing from /api/v1/search?q=robbery results — charge ID or search scoring may have changed',
+    ).toBeDefined();
+    expect(
+      flRobbery!.document.instructionRef,
+      'instructionRef missing from FL robbery result — field dropped by search indexer or v1 serialization',
+    ).toBe('FSJI 15.1');
+  });
+
+  it('charge-fl-robbery-in-the-first-degree has a truthy instructionUrl', () => {
+    if (!serverAvailable) return;
+    const flRobbery = v1Response.results.find(
+      r => r.document.id === 'charge-fl-robbery-in-the-first-degree',
+    );
+    expect(flRobbery).toBeDefined();
+    expect(
+      flRobbery!.document.instructionUrl,
+      'instructionUrl missing from FL robbery v1 search result — field dropped by search indexer or v1 serialization',
+    ).toBeTruthy();
+  });
 });
 
 // ─── citation field contract ──────────────────────────────────────────────────
