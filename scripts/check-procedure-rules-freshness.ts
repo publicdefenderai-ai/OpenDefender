@@ -21,6 +21,7 @@ import { JURISDICTION_PROCEDURE_RULES } from '../shared/jurisdiction-procedure-r
 import type { JurisdictionProcedureRule } from '../shared/jurisdiction-procedure-rules';
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 
@@ -33,8 +34,10 @@ const REPORT_FLAG    = process.argv.includes('--report');
 /**
  * Returns the number of whole calendar months between a YYYY-MM date and now.
  * Positive = in the past.
+ *
+ * Exported for unit testing.
  */
-function monthsAgo(verifiedYM: string, now: Date): number {
+export function monthsAgo(verifiedYM: string, now: Date): number {
   const [vy, vm] = verifiedYM.split('-').map(Number);
   return (now.getFullYear() - vy) * 12 + (now.getMonth() + 1 - vm);
 }
@@ -42,18 +45,40 @@ function monthsAgo(verifiedYM: string, now: Date): number {
 /**
  * Returns the Date on which a YYYY-MM lastVerified entry will become stale
  * (i.e. the first day of the month exactly STALE_MONTHS later).
+ *
+ * Exported for unit testing.
  */
-function staleDate(verifiedYM: string): Date {
+export function staleDate(verifiedYM: string, staleMonths = STALE_MONTHS): Date {
   const [vy, vm] = verifiedYM.split('-').map(Number);
-  const staleMonth = vm - 1 + STALE_MONTHS; // 0-based month arithmetic
+  const staleMonth = vm - 1 + staleMonths; // 0-based month arithmetic
   const staleYear  = vy + Math.floor(staleMonth / 12);
   const staleM     = staleMonth % 12;
   return new Date(staleYear, staleM, 1);
 }
 
 /** Days between two Dates (positive when `future` is after `reference`). */
-function daysUntil(future: Date, reference: Date): number {
+export function daysUntil(future: Date, reference: Date): number {
   return Math.round((future.getTime() - reference.getTime()) / (1000 * 60 * 60 * 24));
+}
+
+/**
+ * Classify a single lastVerified date string against a reference Date.
+ * Returns 'stale', 'expiring-soon', or 'ok'.
+ *
+ * Exported for unit testing.
+ */
+export function classifyFreshness(
+  lastVerified: string,
+  now: Date,
+  staleMonths = STALE_MONTHS,
+  warnDays = WARN_DAYS,
+): 'stale' | 'expiring-soon' | 'ok' {
+  const age  = monthsAgo(lastVerified, now);
+  const sd   = staleDate(lastVerified, staleMonths);
+  const days = daysUntil(sd, now);
+  if (age > staleMonths) return 'stale';
+  if (days <= warnDays)  return 'expiring-soon';
+  return 'ok';
 }
 
 // ─── Report types ─────────────────────────────────────────────────────────────
@@ -179,4 +204,8 @@ function main(): void {
   process.exit(stale.length > 0 ? 1 : 0);
 }
 
-main();
+// Only run main() when this file is executed directly (not when imported by tests).
+const __filename = fileURLToPath(import.meta.url);
+if (process.argv[1] === __filename) {
+  main();
+}

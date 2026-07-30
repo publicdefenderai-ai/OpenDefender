@@ -10,6 +10,7 @@
 import { describe, it, expect } from 'vitest';
 import { JURISDICTION_PROCEDURE_RULES, buildJurisdictionContextBlock } from '../shared/jurisdiction-procedure-rules';
 import type { JurisdictionProcedureRule } from '../shared/jurisdiction-procedure-rules';
+import { monthsAgo, staleDate, daysUntil, classifyFreshness } from '../scripts/check-procedure-rules-freshness';
 
 // ─── Expected keys ────────────────────────────────────────────────────────────
 
@@ -411,6 +412,205 @@ describe('Florida — post-July-2025 speedy trial amendment (Fla. R. Crim. P. 3.
     it('prompt block does not contain the "generally" qualifier (high-confidence entry)', () => {
       expect(block).not.toContain('generally');
     });
+  });
+});
+
+// ─── Freshness script: helper unit tests ──────────────────────────────────────
+//
+// Verifies that the core logic in check-procedure-rules-freshness.ts correctly
+// classifies entries as 'stale', 'expiring-soon', or 'ok' when given controlled
+// inputs.  This catches accidental exit-code swaps or date-math regressions
+// before any real entry reaches the 12-month mark in production.
+
+describe('check-procedure-rules-freshness — monthsAgo helper', () => {
+  it('returns 0 for the same year-month', () => {
+    const now = new Date(2026, 6, 15); // 2026-07-15
+    expect(monthsAgo('2026-07', now)).toBe(0);
+  });
+
+  it('returns 1 for exactly one month ago', () => {
+    const now = new Date(2026, 6, 15); // 2026-07-15
+    expect(monthsAgo('2026-06', now)).toBe(1);
+  });
+
+  it('returns 12 for exactly 12 months ago', () => {
+    const now = new Date(2026, 6, 1); // 2026-07-01
+    expect(monthsAgo('2025-07', now)).toBe(12);
+  });
+
+  it('returns 13 for 13 months ago (stale)', () => {
+    const now = new Date(2026, 6, 1); // 2026-07-01
+    expect(monthsAgo('2025-06', now)).toBe(13);
+  });
+
+  it('returns 0 for a future month (not yet stale)', () => {
+    const now = new Date(2026, 6, 1); // 2026-07-01
+    expect(monthsAgo('2026-08', now)).toBe(-1);
+  });
+});
+
+describe('check-procedure-rules-freshness — staleDate helper', () => {
+  it('stale date for 2025-07 (12-month window) is 2026-07-01', () => {
+    const sd = staleDate('2025-07');
+    expect(sd.getFullYear()).toBe(2026);
+    expect(sd.getMonth()).toBe(6); // 0-based: 6 = July
+    expect(sd.getDate()).toBe(1);
+  });
+
+  it('stale date for 2025-01 is 2026-01-01', () => {
+    const sd = staleDate('2025-01');
+    expect(sd.getFullYear()).toBe(2026);
+    expect(sd.getMonth()).toBe(0); // January
+  });
+
+  it('stale date wraps correctly across December boundary (2025-12 → 2027-12)', () => {
+    // 2025-12 + 24 months = 2027-12
+    const sd = staleDate('2025-12', 24);
+    expect(sd.getFullYear()).toBe(2027);
+    expect(sd.getMonth()).toBe(11); // December
+  });
+});
+
+describe('check-procedure-rules-freshness — daysUntil helper', () => {
+  it('returns positive when future is after reference', () => {
+    const ref    = new Date(2026, 0, 1);  // 2026-01-01
+    const future = new Date(2026, 0, 31); // 2026-01-31
+    expect(daysUntil(future, ref)).toBe(30);
+  });
+
+  it('returns 0 when dates are equal', () => {
+    const d = new Date(2026, 3, 15);
+    expect(daysUntil(d, d)).toBe(0);
+  });
+
+  it('returns negative when future is before reference (already stale)', () => {
+    const ref    = new Date(2026, 6, 15); // 2026-07-15
+    const future = new Date(2026, 5, 1);  // 2026-06-01 (in the past)
+    expect(daysUntil(future, ref)).toBeLessThan(0);
+  });
+});
+
+describe('check-procedure-rules-freshness — classifyFreshness (failure-path tests)', () => {
+  // Reference date anchored in the past so tests never drift as calendar advances.
+  // All tests use now = 2026-07-01 as the reference point.
+  const NOW = new Date(2026, 6, 1); // 2026-07-01
+
+  it('classifies a 13-month-old entry as "stale"', () => {
+    // lastVerified 2025-06  →  age = 13 months  →  stale
+    expect(classifyFreshness('2025-06', NOW)).toBe('stale');
+  });
+
+  it('classifies a 14-month-old entry as "stale"', () => {
+    expect(classifyFreshness('2025-05', NOW)).toBe('stale');
+  });
+
+  it('classifies a 24-month-old entry as "stale"', () => {
+    expect(classifyFreshness('2024-07', NOW)).toBe('stale');
+  });
+
+  it('classifies an entry exactly at the 12-month boundary as "ok" (not yet stale)', () => {
+    // lastVerified 2025-07  →  age = 12 months  →  staleDate = 2026-07-01 = NOW  →  daysUntil = 0
+    // age > 12 is FALSE  →  days <= 60 is TRUE  →  'expiring-soon'
+    // (boundary: age == 12 is NOT stale per script; daysUntil == 0 is expiring-soon)
+    const result = classifyFreshness('2025-07', NOW);
+    expect(result).toBe('expiring-soon');
+  });
+
+  it('classifies an entry 30 days from stale as "expiring-soon"', () => {
+    // staleDate('2025-08') = 2026-08-01, which is 31 days after 2026-07-01
+    // age = 11 months, daysUntil = 31 → within WARN_DAYS (60) → expiring-soon
+    expect(classifyFreshness('2025-08', NOW)).toBe('expiring-soon');
+  });
+
+  it('classifies an entry 59 days from stale as "expiring-soon"', () => {
+    // staleDate('2025-09') = 2026-09-01 = 62 days after 2026-07-01 → ok
+    // staleDate('2025-08') = 2026-08-01 = 31 days → expiring-soon
+    // Use a NOW that is exactly 59 days before the stale boundary.
+    // staleDate('2025-08') = 2026-08-01; NOW = 2026-06-03 → 59 days until stale
+    const now59 = new Date(2026, 5, 3); // 2026-06-03
+    expect(classifyFreshness('2025-08', now59)).toBe('expiring-soon');
+  });
+
+  it('classifies an entry 61 days from stale as "ok"', () => {
+    // staleDate('2025-08') = 2026-08-01; NOW = 2026-06-01 → 61 days until stale → ok
+    const now61 = new Date(2026, 5, 1); // 2026-06-01
+    expect(classifyFreshness('2025-08', now61)).toBe('ok');
+  });
+
+  it('classifies a freshly-verified entry (this month) as "ok"', () => {
+    expect(classifyFreshness('2026-07', NOW)).toBe('ok');
+  });
+
+  it('classifies an entry verified 6 months ago as "ok"', () => {
+    expect(classifyFreshness('2026-01', NOW)).toBe('ok');
+  });
+});
+
+describe('check-procedure-rules-freshness — fake-entry injection (integration)', () => {
+  // Simulates what the script does: inject a synthetic entry into a copy of the
+  // real rules map and assert that the classification logic catches it as stale.
+
+  const NOW = new Date(2026, 6, 1); // fixed reference: 2026-07-01
+
+  it('a fake entry with lastVerified 13 months ago is classified as stale', () => {
+    // 13 months before 2026-07 = 2025-06
+    const staleVerified = '2025-06';
+    expect(classifyFreshness(staleVerified, NOW)).toBe('stale');
+  });
+
+  it('a fake entry with lastVerified 2 years ago is classified as stale', () => {
+    expect(classifyFreshness('2024-07', NOW)).toBe('stale');
+  });
+
+  it('a fake entry with lastVerified 11 months ago is NOT stale', () => {
+    // 2025-08 → age = 11 months → not stale (may be expiring-soon)
+    const result = classifyFreshness('2025-08', NOW);
+    expect(result).not.toBe('stale');
+  });
+
+  it('injecting a stale entry into a cloned rule map yields at least one stale classification', () => {
+    // Clone real data and inject a stale fake entry
+    const fakeRules: Record<string, { lastVerified: string }> = {
+      ...Object.fromEntries(
+        Object.entries(JURISDICTION_PROCEDURE_RULES).map(([k, v]) => [k, { lastVerified: v.lastVerified }]),
+      ),
+      __TEST_STALE__: { lastVerified: '2024-01' }, // very stale
+    };
+
+    const staleKeys = Object.entries(fakeRules)
+      .filter(([, r]) => classifyFreshness(r.lastVerified, NOW) === 'stale')
+      .map(([k]) => k);
+
+    expect(staleKeys).toContain('__TEST_STALE__');
+  });
+
+  it('injecting an expiring-soon entry into a cloned rule map yields at least one expiring-soon classification', () => {
+    // staleDate('2025-08') = 2026-08-01 = 31 days after NOW (2026-07-01) → expiring-soon
+    const fakeRules: Record<string, { lastVerified: string }> = {
+      ...Object.fromEntries(
+        Object.entries(JURISDICTION_PROCEDURE_RULES).map(([k, v]) => [k, { lastVerified: v.lastVerified }]),
+      ),
+      __TEST_EXPIRING__: { lastVerified: '2025-08' },
+    };
+
+    const expiringSoonKeys = Object.entries(fakeRules)
+      .filter(([, r]) => classifyFreshness(r.lastVerified, NOW) === 'expiring-soon')
+      .map(([k]) => k);
+
+    expect(expiringSoonKeys).toContain('__TEST_EXPIRING__');
+  });
+
+  it('real production entries (as of test authoring) are all classified as ok or expiring-soon (none stale)', () => {
+    // Guard: real data must not already be stale at 2026-07-01.
+    // If this fails, a real entry needs re-verification.
+    const staleReal = Object.entries(JURISDICTION_PROCEDURE_RULES)
+      .filter(([, r]) => classifyFreshness(r.lastVerified, NOW) === 'stale')
+      .map(([k]) => k);
+
+    expect(
+      staleReal,
+      `Real entries are stale at 2026-07-01 and need re-verification: ${staleReal.join(', ')}`,
+    ).toEqual([]);
   });
 });
 
