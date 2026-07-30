@@ -251,6 +251,72 @@ describe('buildJurisdictionContextBlock — all high-confidence states omit "gen
   });
 });
 
+// ─── Prompt-block content: citations and no placeholders (all 52 jurisdictions) ──
+//
+// Covers Task #310: ensures that every jurisdiction's prompt block is non-null,
+// contains a recognisable statute-style citation, and is free of placeholder text
+// or empty source fragments that would silently degrade the AI guidance prompt.
+
+describe('buildJurisdictionContextBlock — statute citations and no placeholders (all 52 jurisdictions)', () => {
+  const ALL_KEYS = Object.keys(JURISDICTION_PROCEDURE_RULES);
+
+  it('covers all 52 jurisdictions', () => {
+    expect(ALL_KEYS).toHaveLength(52);
+  });
+
+  it('returns a non-null block for every jurisdiction', () => {
+    const nullKeys = ALL_KEYS.filter((key) => buildJurisdictionContextBlock(key) === null);
+    expect(nullKeys, 'These jurisdictions returned null from buildJurisdictionContextBlock').toEqual([]);
+  });
+
+  it('every block contains a statute-style citation (§, ILCS, Rule N, Art., Crim. P/R, Penal P., U.S.C., amend., Gen. Stat, or case cite "v. <digits>")', () => {
+    // A statute-style citation is recognised by any of:
+    //   §            — section symbol used in virtually all statutory cites
+    //   ILCS         — Illinois Compiled Statutes (e.g. 725 ILCS 5/109-1)
+    //   Rule <digit> — numbered court rule (e.g. Md. Rule 4-212, N.M.R.A. Rule 5-303)
+    //   Ct. R.       — court rule abbreviation (e.g. N.J. Ct. R. 3:4-1)
+    //   R.Crim.P.    — compact criminal procedure rule form (e.g. N.D.R.Crim.P. 5)
+    //   Crim. P/R    — spaced criminal procedure rules (e.g. Fed. R. Crim. P., CrR)
+    //   Penal P.     — penal procedure rules (e.g. Haw. R. Penal P. 5)
+    //   U.S.C.       — United States Code
+    //   Art.         — article reference (e.g. Tex. Code Crim. Proc. Art. 15.17)
+    //   amend.       — constitutional amendment (e.g. U.S. Const. amend. VI)
+    //   Gen. Stat    — general statutes (e.g. N.C. Gen. Stat.)
+    //    v. <digit>  — case citation (e.g. Barker v. Wingo, 407 U.S. 514)
+    const CITATION_RE = /§|ILCS|Rule \d|Ct\. R\.|R\.Crim\.P\.|Crim\. [PR]|Penal P\.|U\.S\.C\.|Art\.|amend\.|Gen\. Stat| v\. \d/;
+    const missing = ALL_KEYS.filter((key) => {
+      const block = buildJurisdictionContextBlock(key);
+      return block !== null && !CITATION_RE.test(block);
+    });
+    expect(
+      missing,
+      'These blocks lack any statute-style citation — check that source fields are populated',
+    ).toEqual([]);
+  });
+
+  it('no block contains the word "placeholder"', () => {
+    const withPlaceholder = ALL_KEYS.filter((key) => {
+      const block = buildJurisdictionContextBlock(key);
+      return block !== null && /placeholder/i.test(block);
+    });
+    expect(
+      withPlaceholder,
+      'These blocks contain placeholder text that must be replaced with real citation data',
+    ).toEqual([]);
+  });
+
+  it('no block contains an empty source fragment "()"', () => {
+    const withEmptySource = ALL_KEYS.filter((key) => {
+      const block = buildJurisdictionContextBlock(key);
+      return block !== null && block.includes('()');
+    });
+    expect(
+      withEmptySource,
+      'These blocks contain an empty source fragment "()" — a source field was left blank',
+    ).toEqual([]);
+  });
+});
+
 // ─── Freshness: no entry older than 12 months ─────────────────────────────────
 
 describe('JURISDICTION_PROCEDURE_RULES — lastVerified freshness (≤ 12 months)', () => {
