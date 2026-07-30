@@ -341,3 +341,53 @@ describe('CA CALCRIM coverage — regression guard', () => {
     expect(hasAny).toBe(true);
   });
 });
+
+describe('OR UCJI coverage — regression guard', () => {
+  /**
+   * Oregon UCJI refs must use the normalized format "UCJI X" (e.g. "UCJI 1705"),
+   * never "UCJI No. X".  If this format test fails, an instructionRef was written
+   * in the legacy format — strip the "No." and re-run.
+   *
+   * Every OR entry in CHARGE_CITATIONS must also either have an instructionRef
+   * (a UCJI number) or carry a "no UCJI" marker in its source field (used for
+   * charges that have no corresponding Oregon UCJI section).
+   *
+   * If the coverage test fails, a new OR charge was added without one of those
+   * two forms of coverage.  Add the UCJI ref, or add "no UCJI (<reason>)" to
+   * the source field, then re-run.
+   */
+  const orEntries = Object.entries(CHARGE_CITATIONS).filter(([key]) =>
+    key.startsWith('or-'),
+  );
+
+  it('has no OR instructionRef using the legacy "UCJI No." format (normalized form is "UCJI X")', () => {
+    const badFormat = orEntries
+      .filter(([, record]) => record.instructionRef?.includes('UCJI No.'))
+      .map(([key]) => key);
+    expect(badFormat).toEqual([]);
+  });
+
+  const orMissing = orEntries
+    .filter(([, record]) => {
+      const hasRef = Boolean(record.instructionRef);
+      const hasExemption = Boolean(record.source?.includes('no UCJI'));
+      return !hasRef && !hasExemption;
+    })
+    .map(([key]) => key);
+
+  it('has zero OR entries missing both instructionRef and a "no UCJI" source note', () => {
+    expect(orMissing).toEqual([]);
+  });
+
+  it('finds at least one OR entry with an instructionRef (sanity check)', () => {
+    const hasAny = orEntries.some(([, record]) => Boolean(record.instructionRef));
+    expect(hasAny).toBe(true);
+  });
+
+  it('finds at least one OR entry with a "no UCJI" exemption (sanity check)', () => {
+    const hasAny = orEntries.some(([, record]) =>
+      Boolean(record.source?.includes('no UCJI')),
+    );
+    expect(hasAny).toBe(true);
+  });
+});
