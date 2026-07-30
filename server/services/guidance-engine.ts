@@ -156,6 +156,14 @@ const defaultSupplemental: JurisdictionSupplemental = {
   bailSystem: 'Cash bail system',
 };
 
+/**
+ * Per-jurisdiction overrides for preliminaryHearing, discoveryDeadline,
+ * publicDefenderIncome, and bailSystem.
+ *
+ * ⚠️  **Do not edit individual state entries without following the update
+ * procedure** — see `docs/evals-coverage.md` § "Procedure when updating" and
+ * the full procedure comment on `jurisdictionRules` below.
+ */
 const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
   CA: {
     preliminaryHearing: 'Within 10 court days for felonies',
