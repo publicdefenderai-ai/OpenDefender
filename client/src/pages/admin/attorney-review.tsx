@@ -345,36 +345,38 @@ function ReviewCard({
   return (
     <div className={`rounded-lg border-2 ${cfg.border} ${cfg.bg} overflow-hidden transition-all`}>
       {/* Header row */}
-      <div className="flex items-center gap-3 px-4 py-3">
-        <span className={`shrink-0 text-xs font-bold font-mono px-2 py-0.5 rounded ${
+      <div className="flex items-start gap-2 px-3 sm:px-4 py-3 flex-wrap">
+        <span className={`shrink-0 mt-0.5 text-xs font-bold font-mono px-2 py-0.5 rounded ${
           item.risk === "high" ? "bg-red-100 text-red-800" : "bg-yellow-100 text-yellow-800"
         }`}>
           {item.id}
         </span>
-        <span className="font-semibold text-sm flex-1 text-gray-900">{item.title}</span>
-        <StatusBadge status={state.status} />
-        <button
-          onClick={() => setExpanded(e => !e)}
-          className="shrink-0 text-xs text-gray-500 hover:text-gray-800 px-2 py-1 rounded hover:bg-white/60 transition-colors"
-          aria-label={expanded ? "Collapse" : "Expand"}
-        >
-          {expanded ? "▲ Hide" : "▼ Details"}
-        </button>
+        <span className="font-semibold text-sm flex-1 min-w-0 text-gray-900 leading-snug pt-0.5">{item.title}</span>
+        <div className="flex items-center gap-2 shrink-0">
+          <StatusBadge status={state.status} />
+          <button
+            onClick={() => setExpanded(e => !e)}
+            className="shrink-0 text-xs text-gray-500 hover:text-gray-800 px-2 py-1 rounded hover:bg-white/60 transition-colors"
+            aria-label={expanded ? "Collapse" : "Expand"}
+          >
+            {expanded ? "▲ Hide" : "▼ Show"}
+          </button>
+        </div>
       </div>
 
       {expanded && (
-        <div className="border-t border-current/10 px-4 py-4 space-y-4 bg-white/40">
+        <div className="border-t border-current/10 px-3 sm:px-4 py-4 space-y-4 bg-white/40">
           {/* Description */}
           <p className="text-sm text-gray-700">{item.description}</p>
 
           {/* Source files */}
           <div>
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">Source Files</p>
-            <ul className="space-y-1">
+            <ul className="space-y-1.5">
               {item.sourceFiles.map((f, i) => (
-                <li key={i} className="flex items-baseline gap-2 text-xs">
-                  <code className="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded font-mono text-[11px]">{f.label}</code>
-                  {f.note && <span className="text-gray-500">— {f.note}</span>}
+                <li key={i} className="text-xs">
+                  <code className="bg-gray-100 text-gray-800 px-1.5 py-0.5 rounded font-mono text-[11px] break-all">{f.label}</code>
+                  {f.note && <span className="text-gray-500"> — {f.note}</span>}
                 </li>
               ))}
             </ul>
@@ -598,33 +600,33 @@ export default function AdminAttorneyReview() {
     <div className="min-h-screen bg-gray-50 pb-16">
       {/* Header */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-10 print:static">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-bold bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded">ADMIN</span>
+        <div className="max-w-4xl mx-auto px-4 py-3 flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs font-bold bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded shrink-0">ADMIN</span>
               <h1 className="text-base font-bold text-gray-900">Attorney Pre-Launch Review</h1>
             </div>
-            <p className="text-xs text-gray-500 mt-0.5">
+            <p className="text-xs text-gray-500 mt-0.5 hidden sm:block">
               Source of truth: <code className="bg-gray-100 px-1 rounded">docs/attorney-review-checklist.md</code>
               {" · "}Status persisted in <code className="bg-gray-100 px-1 rounded">localStorage</code>
             </p>
           </div>
-          <div className="flex items-center gap-2 shrink-0">
+          <div className="flex items-center gap-1.5 shrink-0 flex-wrap justify-end">
             <button
               onClick={handlePrint}
-              className="text-xs px-3 py-1.5 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600 transition-colors"
+              className="text-xs px-2.5 py-1.5 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600 transition-colors whitespace-nowrap"
             >
-              Print / Export
+              <span className="hidden sm:inline">Print / </span>Export
             </button>
             <button
               onClick={handleReset}
-              className="text-xs px-3 py-1.5 border border-red-200 rounded-lg hover:bg-red-50 text-red-600 transition-colors"
+              className="text-xs px-2.5 py-1.5 border border-red-200 rounded-lg hover:bg-red-50 text-red-600 transition-colors whitespace-nowrap"
             >
-              Reset All
+              Reset
             </button>
             <button
               onClick={() => { sessionStorage.removeItem("adminKey"); setAuthed(false); }}
-              className="text-xs px-3 py-1.5 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600 transition-colors"
+              className="text-xs px-2.5 py-1.5 border border-gray-300 rounded-lg hover:bg-gray-50 text-gray-600 transition-colors whitespace-nowrap"
             >
               Sign Out
             </button>
@@ -635,18 +637,18 @@ export default function AdminAttorneyReview() {
       <div className="max-w-4xl mx-auto px-4 pt-6 space-y-8">
 
         {/* Launch readiness bar */}
-        <div className={`rounded-xl border-2 p-5 ${allHighCleared ? "border-green-300 bg-green-50" : "border-red-200 bg-red-50"}`}>
-          <div className="flex items-center justify-between mb-3">
-            <div>
-              <h2 className="font-bold text-gray-900">
+        <div className={`rounded-xl border-2 p-4 sm:p-5 ${allHighCleared ? "border-green-300 bg-green-50" : "border-red-200 bg-red-50"}`}>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 gap-2">
+            <div className="min-w-0">
+              <h2 className="font-bold text-gray-900 text-sm sm:text-base">
                 {allHighCleared ? "✅ HIGH-Risk Items Cleared — Ready for Launch Gate" : "🔴 Launch Blocked — HIGH-Risk Items Pending"}
               </h2>
               <p className="text-sm text-gray-600 mt-0.5">All 9 HIGH-risk items must be cleared before the site goes public.</p>
             </div>
-            <div className="text-right shrink-0">
+            <div className="sm:text-right sm:shrink-0 flex sm:block items-baseline gap-1">
               <span className="text-3xl font-bold text-gray-900">{cleared}</span>
               <span className="text-lg text-gray-400">/{total}</span>
-              <p className="text-xs text-gray-500">items cleared</p>
+              <p className="text-xs text-gray-500 sm:mt-0 ml-1 sm:ml-0">items cleared</p>
             </div>
           </div>
 
