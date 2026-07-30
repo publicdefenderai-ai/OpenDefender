@@ -641,6 +641,150 @@ describe('Synthesized-code sweep — unaudited jurisdictions', () => {
 });
 
 // ---------------------------------------------------------------------------
+// Hard-failing synthesized-code guard — audited jurisdictions only
+// ---------------------------------------------------------------------------
+// The sweep above is intentionally non-failing: it reports suspects in *unaudited*
+// jurisdictions without blocking CI. But any new charge added to an already-audited
+// state could silently carry a synthesized code — and the sweep would never catch it
+// because audited states are excluded from that check.
+//
+// This separate describe block closes that gap with a **hard-failing** assertion:
+// every charge whose jurisdiction is in AUDITED_JURISDICTIONS must NOT have a code
+// that matches the synthesized pattern.
+//
+// Pattern: /^\d{1,3}-\d{2,3}$/ — exactly two all-numeric segments joined by a dash.
+// That is the fingerprint of the 2025 data-generation run (e.g. "43-65", "19-100").
+//
+// ── Pattern exceptions (real codes that look synthesized) ─────────────────
+//
+//   NC  (N.C.G.S.)  — North Carolina General Statutes use Chapter-Section format:
+//                     e.g. 14-17 (murder), 14-208 (sex offender), 20-138 (DWI).
+//                     These are genuinely two all-numeric segments separated by a dash.
+//                     NC is therefore excluded from the pattern check.
+//
+//   NE  (R.R.S.)    — Nebraska Revised Statutes use Chapter-Section format:
+//                     e.g. 28-303 (murder), 28-319 (SA).
+//                     Indistinguishable from the synthesized pattern by shape alone.
+//                     NE is therefore excluded from the pattern check.
+//
+//   HI  (H.R.S.)    — Hawaii Revised Statutes use Title-Section format:
+//                     e.g. 707-701 (murder), 707-730 (SA), 291E-61 (OVUII).
+//                     The all-numeric pairs (707-701, 707-730) match the pattern.
+//                     HI is therefore excluded from the pattern check.
+//
+// If future audit work reveals other states with legitimately two-segment numeric
+// codes, add them to SYNTHESIZED_PATTERN_EXCEPTIONS below with a comment citing
+// the official code format.
+// ──────────────────────────────────────────────────────────────────────────
+describe('Synthesized-code guard — audited jurisdictions (hard-failing)', () => {
+  // Must stay in sync with the AUDITED_JURISDICTIONS set in the sweep above.
+  const AUDITED_JURISDICTIONS = new Set([
+    // Batch 1 (2026-07)
+    'WA', 'PA', 'AR', 'MI', 'MO', 'DE', 'TX', 'CA', 'NY', 'FL', 'IL', 'OH',
+    'GA', 'NC', 'NJ', 'VA', 'AZ',
+    // Batch 2 (2026-07)
+    'AL', 'AK', 'CT', 'HI', 'ID', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+    'MA', 'MN', 'MS', 'MT', 'NE', 'NV', 'NH', 'NM', 'ND', 'OK', 'OR', 'RI',
+    'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WY', 'WV', 'DC', 'CO',
+    // Territories (2026-07)
+    'AS', 'GU', 'MP', 'PR', 'VI',
+    // Federal
+    'federal',
+  ]);
+
+  // Jurisdictions whose real statute codes are legitimately two all-numeric
+  // segments and therefore cannot be distinguished from the synthesized pattern
+  // by shape alone. See the documentation block above for the rationale for each.
+  //
+  // Format notes for each excepted jurisdiction:
+  //   NC  — N.C.G.S. Chapter-Section, e.g. 14-17 (murder), 20-138 (DWI), 90-95 (drug)
+  //   NE  — R.R.S. Chapter-Section, e.g. 28-303 (murder), 28-319 (SA), 60-6,196 (DUI)
+  //   HI  — H.R.S. Title-Section, e.g. 707-701 (murder), 707-730 (SA), 291E-61 (OVUII*)
+  //          (* 291E-61 has a letter so it doesn't match, but 707-xxx pairs do)
+  //   MD  — Md. Code Art.-Section, stored without the article prefix,
+  //          e.g. "2-201" = CL § 2-201 (murder), "3-303" = CL § 3-303 (SA)
+  //   DC  — D.C. Code § Title-Section, e.g. 22-404 (assault), 22-2101 (murder*)
+  //          (* 22-2101 has 4 digits so doesn't match; 22-404 does)
+  //   MA  — M.G.L. Chapter-Section, e.g. 265-13 (manslaughter), 265-22 (rape)
+  //   ID  — Idaho Code § Chapter-Section, e.g. 18-901 (assault), 18-4003 (murder*)
+  //          (* 18-4003 has 4 digits so doesn't match; 18-901 does)
+  //   CT  — C.G.S. § Chapter-Section, e.g. 14-222 (reckless driving), 53a-54a uses letters
+  //   VT  — V.S.A. Title-Section, e.g. 23-674 (DWI suspended), 28-252 (probation)
+  //   KS  — K.S.A. § Chapter-Section, e.g. 8-262 (driving suspended), 21-5402 has 4 digits
+  //   OK  — Okla. Stat. Title-Section for plain-number sections,
+  //          e.g. 21-711 (manslaughter), 21-716 (involuntary manslaughter)
+  //   VI  — V.I.C. Title-Section, e.g. 14-297 (simple assault), 20-494 (DUI)
+  //   AZ  — A.R.S. § Title-Section for 3-digit-or-fewer sections,
+  //          e.g. 28-693 (reckless driving), 13-901 (probation violation)
+  const SYNTHESIZED_PATTERN_EXCEPTIONS = new Set([
+    'NC', // N.C.G.S. Chapter-Section (2-segment), e.g. 14-17
+    'NE', // R.R.S. Chapter-Section (2-segment), e.g. 28-303
+    'HI', // H.R.S. Title-Section (2-segment), e.g. 707-701
+    'MD', // Md. Code Art.-Section stored without prefix, e.g. 2-201
+    'DC', // D.C. Code § Title-Section, e.g. 22-404
+    'MA', // M.G.L. Chapter-Section, e.g. 265-13
+    'ID', // Idaho Code § Chapter-Section, e.g. 18-901
+    'CT', // C.G.S. § Chapter-Section, e.g. 14-222
+    'VT', // V.S.A. Title-Section, e.g. 23-674
+    'KS', // K.S.A. § Chapter-Section for short sections, e.g. 8-262
+    'OK', // Okla. Stat. Title-Section for plain-number sections, e.g. 21-711
+    'VI', // V.I.C. Title-Section, e.g. 14-297
+    'AZ', // A.R.S. § Title-Section for ≤3-digit sections, e.g. 28-693
+  ]);
+
+  // Same synthesized fingerprint used by the non-failing sweep above.
+  const SYNTHESIZED_PATTERN = /^\d{1,3}-\d{2,3}$/;
+
+  it('no charge in an audited jurisdiction carries a synthesized-pattern code', () => {
+    const violations: Array<{ id: string; jurisdiction: string; code: string; name: string }> = [];
+
+    for (const charge of criminalCharges) {
+      // Only check audited jurisdictions (unaudited ones are covered by the sweep above).
+      if (!AUDITED_JURISDICTIONS.has(charge.jurisdiction)) continue;
+
+      // Skip jurisdictions whose official codes happen to match the synthesized shape.
+      if (SYNTHESIZED_PATTERN_EXCEPTIONS.has(charge.jurisdiction)) continue;
+
+      if (SYNTHESIZED_PATTERN.test(charge.code)) {
+        violations.push({
+          id: charge.id,
+          jurisdiction: charge.jurisdiction,
+          code: charge.code,
+          name: charge.name,
+        });
+      }
+    }
+
+    if (violations.length > 0) {
+      const lines = [
+        `\n❌  SYNTHESIZED CODE REGRESSION — ${violations.length} charge(s) in audited jurisdiction(s) carry a synthesized-pattern code:`,
+        'A charge was added (or reverted) with a fake NN-NNN code in an already-audited state.',
+        'Correct the code against the official state statute before merging.\n',
+      ];
+      for (const v of violations) {
+        lines.push(`  ${v.jurisdiction.padEnd(4)}  ${v.code.padEnd(12)}  ${v.id}  (${v.name})`);
+      }
+      // Surface the full list in the failure message so it is visible in CI logs.
+      expect(
+        violations,
+        lines.join('\n'),
+      ).toHaveLength(0);
+    }
+  });
+
+  it('SYNTHESIZED_PATTERN_EXCEPTIONS contains only jurisdictions that are in AUDITED_JURISDICTIONS', () => {
+    // Sanity-check: an exception for a non-audited jurisdiction is meaningless.
+    for (const j of SYNTHESIZED_PATTERN_EXCEPTIONS) {
+      expect(
+        AUDITED_JURISDICTIONS.has(j),
+        `SYNTHESIZED_PATTERN_EXCEPTIONS includes '${j}', which is not in AUDITED_JURISDICTIONS. ` +
+        'Either audit that jurisdiction first or remove it from the exceptions set.',
+      ).toBe(true);
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
 // Estimate-deadline banner regression — unmapped jurisdictions
 // ---------------------------------------------------------------------------
 // The guidance dashboard renders a [data-testid="notice-deadline-estimate"]
