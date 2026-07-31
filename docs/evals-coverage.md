@@ -11,12 +11,13 @@
 
 | Dimension | Count |
 |---|---|
-| Total scenarios | 152 |
-| Passing | 152 |
+| Total scenarios | 158 |
+| Passing | 158 |
 | Failing | 0 |
 | Priority 1 (Deadlines) | 112 |
 | Priority 2 (Collateral consequences) | 26 |
 | Priority 3 (Alerts, coverage, uncertainties) | 35 |
+| Priority 4 (Multi-charge inputs) | 6 |
 
 > **⚠️ Attorney review recommended.** Expected values in the scenarios were derived from the rules constants in `server/services/guidance-engine.ts` by the engineering team.  They verify that the engine faithfully executes its own rules, but they do **not** independently verify that those rules are legally accurate.  A licensed attorney should review the jurisdiction deadlines in `jurisdictionRules`, the consequence language in `CHARGE_CONSEQUENCE_MAP`, and the critical alert text in `buildCriticalAlertsForCharges` before treating passing eval results as authoritative for users.
 
@@ -121,6 +122,10 @@
 - **All keyword groups:** Each of the 9 mapped charge groups (`dui`, `assault`, `drug`, `theft`, `domestic`, `fraud`, `burglary`, `traffic`, `weapons`) and multiple secondary keyword samples produce non-empty `immediateActions` and at least one collateral consequence.
 - **Missing background fields:** Each nullable background field omitted or set to `null` fires the corresponding uncertainty area (`Probation / Parole Status`, `Immigration Consequences`, `Minor Children / Custody Risk`, `Professional License`, `Public / Subsidized Housing`).
 
+### Priority 4 — Multi-charge array inputs (MC-01 through MC-06)
+- **Same-category pairs:** `MC-03` (`unlawful firearm possession + assault` → `firearms`) and `MC-04` (`dui + reckless driving` → `drivers_license`) confirm that multi-charge arrays where both charges map to the same consequence category work correctly.
+- **Cross-category pairs (currently failing):** `MC-01`, `MC-02`, `MC-05`, `MC-06` assert the correct behaviour — both charge types' consequence categories must appear — and expose the engine's single-chargeType gap.  These scenarios serve as the regression harness for the eventual fix.
+
 ---
 
 ## Rule-change regression detection
@@ -183,8 +188,28 @@ The scenarios were written by engineers reading the rule constants, but they wil
 ### Case stages not fully exercised
 - `pretrial` and `trial` stages are each covered by a single "non-empty `immediateActions`" scenario.  The deadline logic for those stages (discovery and trial deadlines) is not individually verified per jurisdiction.
 
-### Multi-charge input
-- All scenarios supply a single charge string.  The engine supports `charges` as an array.  The eval harness does not include scenarios with multiple simultaneous charges.
+### Multi-charge input (fixed 2026-07-31)
+
+Six Priority 4 scenarios (`MC-01` through `MC-06` in `tests/fixtures/evals-scenarios.ts`) were added to exercise multi-charge array inputs.  All six now pass.
+
+**Root cause (now resolved):** `generateEnhancedGuidance()` previously joined the `charges` array into a single string and called `identifyChargeType()` once.  That function returned on the first keyword match, so only one charge type's consequences were ever looked up — silently dropping consequences for the second or third charge.
+
+**Fix applied:** `generateEnhancedGuidance()` now calls `identifyChargeType()` for every element of the `charges` array individually, deduplicates the resulting type list, and passes the full list to `buildCollateralConsequences()`.  That function iterates over every type and merges items by `category` (deduplicating).  `buildUncertainties()` fires the "Charge-Specific Guidance Not Available" notice only when **all** charge types fall into the default bucket.
+
+**Scenarios verified:**
+
+| Scenario | Input charges | Required categories | Status |
+|---|---|---|---|
+| MC-01 | `['drug possession', 'carrying a concealed weapon']` | `benefits`, `firearms` | ✓ passes |
+| MC-02 | `['domestic violence', 'drug possession']` | `firearms`, `benefits` | ✓ passes |
+| MC-03 | `['unlawful possession of a firearm', 'assault']` | `firearms` | ✓ passes |
+| MC-04 | `['dui', 'reckless driving']` | `drivers_license` | ✓ passes |
+| MC-05 | `['wire fraud', 'theft']` | `employment`, `background_check` | ✓ passes |
+| MC-06 | `['burglary', 'drug possession']` | `housing`, `benefits` | ✓ passes |
+
+**Relevant files:**
+- `server/services/guidance-engine.ts` — `generateEnhancedGuidance()`, `buildCollateralConsequences()`, `buildUncertainties()`
+- `tests/fixtures/evals-scenarios.ts` — `p4MultiChargeScenarios` array (MC-01 through MC-06)
 
 ### Firearm consequence for misdemeanor assault
 - P2-14 confirms `assault` → `firearms` consequence appears, but the engine's `CHARGE_CONSEQUENCE_MAP.assault` applies to "certain assault convictions — particularly felonies or offenses involving domestic partners."  The harness does not verify the consequence text distinguishes between felony and misdemeanor assault paths.

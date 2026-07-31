@@ -936,9 +936,17 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
   const chargeIds = Array.isArray(charges) ? charges : [charges];
   const specificCharges = chargeIds.map(id => getChargeById(id)).filter(Boolean);
   
-  // Fallback to legacy charge type identification for backwards compatibility
-  const chargesString = Array.isArray(charges) ? charges.join(' ').toLowerCase() : charges.toLowerCase();
-  const fallbackChargeType = identifyChargeType(chargesString);
+  // Identify a charge type for EACH individual charge so that multi-charge inputs
+  // don't silently lose consequences for the second or third charge.
+  // Each element of chargeIds is matched independently; the results are deduplicated
+  // before being passed to consequence / uncertainty builders.
+  const chargeTypeList: string[] = Array.from(
+    new Set(chargeIds.map(id => identifyChargeType(id.toLowerCase())))
+  );
+  // Keep a single "fallback" type for legacy helpers that still expect one value.
+  // We prefer the first non-default type so that specific guidance wins over the
+  // generic bucket when at least one charge is recognisable.
+  const fallbackChargeType = chargeTypeList.find(t => t !== 'default') ?? chargeTypeList[0] ?? 'default';
   const fallbackChargeData = chargeGuidance[fallbackChargeType as keyof typeof chargeGuidance];
   
   // Get stage-specific guidance
@@ -959,8 +967,8 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
     avoidActions: buildAvoidActionsForCharges(specificCharges, stageData),
     timeline: buildCaseTimeline(caseStage, jurisdictionData, jurisdiction),
     mockQA: buildMockQA(caseData, specificCharges),
-    collateralConsequences: buildCollateralConsequences(caseData, fallbackChargeType),
-    uncertainties: buildUncertainties(caseData, jurisdictionData, fallbackChargeType),
+    collateralConsequences: buildCollateralConsequences(caseData, chargeTypeList),
+    uncertainties: buildUncertainties(caseData, jurisdictionData, chargeTypeList),
   };
   
   return guidance;
@@ -1629,8 +1637,10 @@ export const CHARGE_CONSEQUENCE_MAP: Record<string, CollateralConsequenceItem[]>
   ],
 };
 
-// Build personalized collateral consequences from background fields + charge type
-function buildCollateralConsequences(caseData: CaseData, chargeType: string): CollateralConsequenceItem[] {
+// Build personalized collateral consequences from background fields + charge type(s).
+// Accepts a single charge type string for backwards compatibility, or an array when
+// multiple charges are present so consequences for each type are merged.
+function buildCollateralConsequences(caseData: CaseData, chargeType: string | string[]): CollateralConsequenceItem[] {
   const items: CollateralConsequenceItem[] = [];
 
   // Supervision / probation / parole
@@ -1686,11 +1696,15 @@ function buildCollateralConsequences(caseData: CaseData, chargeType: string): Co
     });
   }
 
-  // Charge-based consequences — defined at module level in CHARGE_CONSEQUENCE_MAP
-  const chargeSpecific = CHARGE_CONSEQUENCE_MAP[chargeType] || [];
-  for (const item of chargeSpecific) {
-    if (!items.some(i => i.category === item.category)) {
-      items.push(item);
+  // Charge-based consequences — look up each charge type independently so that
+  // multi-charge inputs (e.g. drug + weapons) produce consequences for every type.
+  const chargeTypes = Array.isArray(chargeType) ? chargeType : [chargeType];
+  for (const type of chargeTypes) {
+    const chargeSpecific = CHARGE_CONSEQUENCE_MAP[type] || [];
+    for (const item of chargeSpecific) {
+      if (!items.some(i => i.category === item.category)) {
+        items.push(item);
+      }
     }
   }
 
@@ -1698,7 +1712,7 @@ function buildCollateralConsequences(caseData: CaseData, chargeType: string): Co
 }
 
 // Build uncertainty notices when key background information is missing or jurisdiction is generic
-function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackChargeType?: string): UncertaintyItem[] {
+function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackChargeType?: string | string[]): UncertaintyItem[] {
   const items: UncertaintyItem[] = [];
   const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
 
@@ -1758,8 +1772,16 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackC
     });
   }
 
-  // Default charge bucket — no keyword match, so guidance is generic
-  if (fallbackChargeType === 'default') {
+  // Default charge bucket — no keyword match, so guidance is generic.
+  // For multi-charge inputs, fire only if ALL charges fell into the default bucket
+  // (i.e. no specific guidance is available for any of them).
+  const chargeTypeArr = fallbackChargeType === undefined
+    ? []
+    : Array.isArray(fallbackChargeType)
+      ? fallbackChargeType
+      : [fallbackChargeType];
+  const allDefault = chargeTypeArr.length === 0 || chargeTypeArr.every(t => t === 'default');
+  if (allDefault) {
     items.push({
       area: 'Charge-Specific Guidance Not Available',
       note: "We don't have detailed guidance for this specific charge type. The information shown is general and applies to most criminal cases. An attorney familiar with this charge type in your state will have more specific guidance on defenses, collateral consequences, and deadlines that apply to your situation.",

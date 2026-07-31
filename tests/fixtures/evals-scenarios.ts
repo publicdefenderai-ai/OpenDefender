@@ -1887,6 +1887,131 @@ const p3StageScenarios: EvalScenario[] = [
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// PRIORITY 4 — Multi-charge array inputs
+//
+// These scenarios pass `charges` as a string array to expose how the engine
+// handles multiple simultaneous charges.  The engine currently joins the array
+// into a single string and runs one `identifyChargeType` pass, meaning only
+// the first keyword-matching charge type drives collateral-consequence lookup.
+//
+// Scenarios marked "GAP" assert the CORRECT behaviour (both consequence
+// categories must be present).  They are expected to FAIL until the engine is
+// extended to map consequences for every charge in the array independently.
+// Failing scenarios are documented in docs/evals-coverage.md §"Known gaps".
+//
+// Scenarios marked "PASSES" are included to confirm that multi-charge inputs
+// where both charges map to the same consequence category still work correctly.
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const p4MultiChargeScenarios: EvalScenario[] = [
+  // ── MC-01: drug possession + weapons charge  (GAP) ───────────────────────────
+  // Weapon priority check fires on the joined string, returning 'weapons'.
+  // The drug-specific 'benefits' consequence is never looked up.
+  {
+    label: 'MC-01: [drug possession, carrying a concealed weapon] → both benefits AND firearms present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'CA',
+      charges: ['drug possession', 'carrying a concealed weapon'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+    },
+    expect: {
+      // Both categories must be present: drug → benefits, weapons → firearms.
+      requiredConsequenceCategories: ['benefits', 'firearms'],
+    },
+  },
+
+  // ── MC-02: domestic violence + drug possession  (GAP) ────────────────────────
+  // 'drug' / 'possession' keywords appear before 'domestic' in CHARGE_KEYWORDS
+  // iteration, so the engine returns 'drug' and the domestic firearms ban is lost.
+  {
+    label: 'MC-02: [domestic violence, drug possession] → both firearms AND benefits present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'TX',
+      charges: ['domestic violence', 'drug possession'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+    },
+    expect: {
+      // domestic → firearms (Lautenberg), drug → benefits.
+      requiredConsequenceCategories: ['firearms', 'benefits'],
+    },
+  },
+
+  // ── MC-03: weapons charge + assault  (PASSES — same consequence category) ────
+  // Weapon priority fires; both charge types map to 'firearms', so no consequence
+  // is silently lost even though only one chargeType is resolved.
+  {
+    label: 'MC-03: [unlawful possession of a firearm, assault] → firearms consequence present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'FL',
+      charges: ['unlawful possession of a firearm', 'assault'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+    },
+    expect: {
+      requiredConsequenceCategories: ['firearms'],
+    },
+  },
+
+  // ── MC-04: DUI + reckless driving  (PASSES — same consequence category) ──────
+  // Both charge types map to 'drivers_license', so the single chargeType pass
+  // produces the correct consequence regardless of which type wins.
+  {
+    label: 'MC-04: [dui, reckless driving] → drivers_license consequence present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'CA',
+      charges: ['dui', 'reckless driving'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+    },
+    expect: {
+      requiredConsequenceCategories: ['drivers_license'],
+    },
+  },
+
+  // ── MC-05: wire fraud + theft  (GAP) ─────────────────────────────────────────
+  // 'theft' appears before 'fraud' in CHARGE_KEYWORDS iteration, so the engine
+  // returns 'theft' and the fraud-specific 'employment' consequence is lost.
+  {
+    label: 'MC-05: [wire fraud, theft] → both employment AND background_check present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'NY',
+      charges: ['wire fraud', 'theft'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+    },
+    expect: {
+      // fraud → employment, theft → background_check.
+      requiredConsequenceCategories: ['employment', 'background_check'],
+    },
+  },
+
+  // ── MC-06: burglary + drug possession  (GAP) ─────────────────────────────────
+  // 'drug' / 'possession' keywords match before 'burglary' in CHARGE_KEYWORDS,
+  // so the engine returns 'drug' and the housing consequence for burglary is lost.
+  {
+    label: 'MC-06: [burglary, drug possession] → both housing AND benefits present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'IL',
+      charges: ['burglary', 'drug possession'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+    },
+    expect: {
+      // burglary → housing, drug → benefits.
+      requiredConsequenceCategories: ['housing', 'benefits'],
+    },
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // Aggregate export
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -1903,4 +2028,5 @@ export const evalScenarios: EvalScenario[] = [
   ...p3ChargeCoverageScenarios,
   ...p3MissingFieldUncertaintyScenarios,
   ...p3StageScenarios,
+  ...p4MultiChargeScenarios,
 ];
