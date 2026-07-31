@@ -34,6 +34,7 @@ import { getCaptchaSiteKey, isCaptchaRequired } from "./services/captcha-verific
 import { requireServiceBudget } from "./middleware/budget-gate";
 import { getAICostStatus } from "./services/cost-tracker";
 import { locusSearch, normalizeStateCode } from "./services/locus-lookup";
+import { polishMitigationNarrative, MITIGATION_FIELD_WHITELIST } from "./services/mitigation-polisher";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -3039,6 +3040,72 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ success: false, error: 'Failed to run equity audit. Check server logs.' });
     }
   });
+
+  // ============================================================================
+  // Mitigation Builder — AI Narrative Polish
+  // POST /api/mitigation/polish
+  //
+  // Passes advocate-entered fields to Claude and returns court-ready prose.
+  // GUARDRAILS:
+  //  • System prompt forbids adding any detail not present in the inputs.
+  //  • Empty fields are filtered before the Claude call — never inferred.
+  //  • No data is logged, cached, or stored after the response is returned.
+  //  • Rate-limited to protect API cost.
+  // ============================================================================
+  app.post(
+    "/api/mitigation/polish",
+    requireServiceBudget("claude-guidance"),
+    aiRateLimiter,
+    aiDailyLimiter,
+    async (req, res) => {
+      try {
+        const rawBody = req.body ?? {};
+
+        // Reject requests that contain keys outside the allowed schema.
+        // This closes the prompt-injection vector where unknown keys could
+        // carry extra narrative content into the Claude call.
+        const unknownKeys = Object.keys(rawBody).filter(
+          (k) => !(MITIGATION_FIELD_WHITELIST as readonly string[]).includes(k)
+        );
+        if (unknownKeys.length > 0) {
+          return res.status(400).json({
+            success: false,
+            error: `Unknown field(s): ${unknownKeys.join(", ")}. Only mitigation form fields are accepted.`,
+          });
+        }
+
+        // Validate: each present field must be a string within the length cap.
+        for (const key of MITIGATION_FIELD_WHITELIST) {
+          if (key in rawBody && typeof rawBody[key] !== "string") {
+            return res.status(400).json({ success: false, error: `Field '${key}' must be a string.` });
+          }
+          // Hard cap per field to prevent prompt injection via very large inputs
+          if (typeof rawBody[key] === "string" && (rawBody[key] as string).length > 2000) {
+            return res.status(400).json({ success: false, error: `Field '${key}' exceeds maximum length.` });
+          }
+        }
+
+        // Build a clean, whitelist-only object — never pass rawBody directly.
+        const fields: Record<string, string> = {};
+        for (const key of MITIGATION_FIELD_WHITELIST) {
+          if (typeof rawBody[key] === "string") {
+            fields[key] = rawBody[key] as string;
+          }
+        }
+
+        const result = await polishMitigationNarrative(fields);
+        if (!result.success) {
+          return res.status(422).json(result);
+        }
+
+        // No data stored or logged — respond and discard
+        return res.json(result);
+      } catch (error) {
+        errLog("mitigation/polish: unexpected error", error);
+        return res.status(500).json({ success: false, error: "An unexpected error occurred." });
+      }
+    }
+  );
 
   const httpServer = createServer(app);
   return httpServer;
