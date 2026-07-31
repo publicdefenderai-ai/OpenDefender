@@ -106,59 +106,36 @@ interface JurisdictionRule {
 }
 
 // ── Supplemental fields not present in shared/jurisdiction-procedure-rules.ts ──
-// JURISDICTION_PROCEDURE_RULES (shared) is the authoritative source for
-// arraignment, speedy_trial, bail, and lastVerified data.  The fields below
-// (preliminaryHearing, discoveryDeadline, publicDefenderIncome, bailSystem) are
+// JURISDICTION_PROCEDURE_RULES (shared) is now the authoritative source for
+// arraignment, speedy_trial, bail, preliminaryHearing, discoveryDeadline, and
+// lastVerified data.  The fields below (publicDefenderIncome, bailSystem) are
 // used only by the rule-based UI path and have no shared-file equivalent.
 //
-// Only the 15 batch-1 jurisdictions carry state-specific values; all others fall
+// Only batch-1 jurisdictions carry state-specific values; all others fall
 // back to defaultSupplemental.
 //
 // Known accuracy gaps (2026-07 verification pass):
 //   GA discoveryDeadline – pre-HB 776 rule may no longer apply; attorney review needed.
 //   CA speedyTrialRight  – misdemeanor custody distinction not captured.
 //   All publicDefenderIncome figures – FPL-linked, vary annually.
-//   TN discoveryDeadline – Tenn. R. Crim. P. 16 is request-triggered; "30 days"
-//     is a working approximation, not a fixed statutory deadline.
-//   SC preliminaryHearing – SC Rule 2 SCRCP verified (2026-07): demand-based; defendant
-//     requests within 10 days of notice, hearing held within 10 days of request.
-//   IN preliminaryHearing – Indiana uses "initial hearing" (IC § 35-33-7-1) not a
-//     separate preliminary hearing; prior "20 days" string was unsupported and has
-//     been corrected to reflect the prompt-after-arrest standard.
-//   KY preliminaryHearing – citation corrected from RCr 3.14 (probable cause
-//     finding) to RCr 3.10 (preliminary hearing); 10-day deadline consistent with
-//     Kentucky practice but attorney confirmation is recommended.
-//   AL preliminaryHearing – Rule 5.1 is a demand-based mechanism (defendant may
-//     demand within 30 days of arrest); prior string implied a custody-dependent
-//     scheduling deadline, which is inaccurate.
-//   AL discoveryDeadline  – corrected from "30 days after arraignment" to the
-//     Rule 16.1 standard of 14 days after written request.
-//   OR preliminaryHearing – prior string "Within 14 days if in custody" was
-//     unsupported and cited § 135.173 (an evidence-rules provision). Corrected
-//     to 5 judicial days per ORS § 135.070(2), verified (2026-07). Attorney
-//     review pending.
-//   NV preliminaryHearing – prior string "Within 15 days if in custody"; 15 days
-//     confirmed by NRS § 171.196(2) but the custody qualifier is not in the
-//     statute text — deadline applies to any defendant who does not waive
-//     examination. String updated; citation added. Attorney review pending.
 
 interface JurisdictionSupplemental {
-  preliminaryHearing: string;
-  discoveryDeadline: string;
   publicDefenderIncome: string;
   bailSystem: string;
 }
 
 const defaultSupplemental: JurisdictionSupplemental = {
-  preliminaryHearing: 'Within 10-14 days for felonies',
-  discoveryDeadline: 'Within 30 days after arraignment',
   publicDefenderIncome: 'Case-by-case determination',
   bailSystem: 'Cash bail system',
 };
 
 /**
- * Per-jurisdiction overrides for preliminaryHearing, discoveryDeadline,
- * publicDefenderIncome, and bailSystem.
+ * Per-jurisdiction overrides for publicDefenderIncome and bailSystem.
+ * preliminaryHearing and discoveryDeadline have been migrated to
+ * shared/jurisdiction-procedure-rules.ts and are read directly from there.
+ *
+ * Only entries where at least one field differs from defaultSupplemental are
+ * listed. All other jurisdictions fall back to defaultSupplemental.
  *
  * ⚠️  **Do not edit individual state entries without following the update
  * procedure** — see `docs/evals-coverage.md` § "Procedure when updating" and
@@ -166,329 +143,70 @@ const defaultSupplemental: JurisdictionSupplemental = {
  */
 const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
   CA: {
-    preliminaryHearing: 'Within 10 court days for felonies',
-    discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Approximately 2x federal poverty level (varies by county)',
     bailSystem: 'Schedule-based bail system',
   },
   TX: {
-    preliminaryHearing: 'Not required — grand jury indictment for felonies',
-    discoveryDeadline: 'Ongoing open-file obligation; witness list due 20 days before trial',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Commercial bail bond system',
   },
   NY: {
-    preliminaryHearing: 'Within 120 hours for felonies',
-    discoveryDeadline: '20 days after arraignment (in custody) or 35 days (not in custody)',
     publicDefenderIncome: 'Varies by county — apply to local public defender or legal aid office',
     bailSystem: 'Cash bail reform — limited detention',
   },
   FL: {
-    preliminaryHearing: 'Within 21 days for felonies',
-    discoveryDeadline: 'Within 15 days of demand',
     publicDefenderIncome: 'Approximately 200% federal poverty level — apply to local public defender',
     bailSystem: 'Traditional bail system with pretrial services',
   },
   IL: {
-    preliminaryHearing: 'Within 30 days if in custody',
-    discoveryDeadline: '28 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Pretrial Fairness Act — no cash bail (eff. Sept 2023)',
   },
   PA: {
-    preliminaryHearing: 'Within 14 days of preliminary arraignment',
-    discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Approximately federal poverty guidelines — apply to local public defender',
     bailSystem: 'Traditional bail system',
   },
   WA: {
-    preliminaryHearing: 'Within 10 court days if in custody',
-    discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Pretrial services assessment',
   },
   OH: {
-    preliminaryHearing: 'Within 10 days if in custody',
-    discoveryDeadline: '21 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   GA: {
-    preliminaryHearing: 'Within 30 days if in custody',
-    // ATTORNEY REVIEW NEEDED: HB 776 (2021) created automatic open-file discovery in GA.
-    // The pre-reform "10 days before trial" rule (OCGA § 17-16-5) may no longer apply.
-    discoveryDeadline: '10 days before trial',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   AZ: {
-    // Ariz. R. Crim. P. 5.1(a): preliminary hearing within 10 days of initial
-    // appearance if defendant is in custody (20 days if released).
-    // Source verified by engineer against azleg.gov Rule 5.1 (2026-07).
-    // ATTORNEY REVIEW PENDING: deadline values not yet reviewed by licensed attorney.
-    preliminaryHearing: 'Within 10 days if in custody (Ariz. R. Crim. P. 5.1)',
-    // Ariz. R. Crim. P. 15.1(b)(1): prosecutor's initial disclosure due within
-    // 10 days after arraignment — one of the few states with a firm
-    // post-arraignment statutory deadline. Source verified by engineer (2026-07).
-    // ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '10 days after arraignment (Ariz. R. Crim. P. 15.1)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   NJ: {
-    // N.J. Ct. R. 3:4-3(a): preliminary hearing not later than 20 days after
-    // arrest for indictable offenses. Source verified by engineer (2026-07).
-    // Note: NJ eliminated cash bail (Jan 1, 2017); most indictable defendants
-    // go through the PSA risk-assessment process, but the 20-day scheduling
-    // right remains. ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 20 days for indictable offenses (N.J. Ct. R. 3:4-3)',
-    // N.J. Ct. R. 3:13-3(b): initial discovery provided no later than 20 days
-    // after return or unsealing of the indictment. "After arraignment" is used
-    // as a practical proxy since indictment and arraignment occur in close
-    // sequence for indictable offenses. Source verified by engineer (2026-07).
-    // ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '20 days after indictment/arraignment (N.J. Ct. R. 3:13-3)',
     publicDefenderIncome: 'Individual: $25,000, Family of 2: $34,000',
     bailSystem: 'Pretrial services assessment — bail reform (no cash bail since 2017)',
   },
   MI: {
-    // MCL § 766.4: district court must schedule preliminary examination within
-    // 14 days after arraignment. Source verified by engineer against
-    // Michigan Legislature website (2026-07). ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 14 days of arraignment (MCL § 766.4)',
-    // MCR 6.201(B): prosecutor must respond within 21 days of a defense
-    // discovery request. There is no automatic post-arraignment disclosure
-    // deadline — the 21-day clock is request-triggered. "21 days after
-    // arraignment" is a working approximation; engineer primary-source review
-    // 2026-07. ATTORNEY REVIEW PENDING — particularly for request-triggered
-    // nature of discovery obligation.
-    discoveryDeadline: '21 days after arraignment (approximate; MCR 6.201 is request-triggered)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   NC: {
-    // N.C. Gen. Stat. § 15A-606(c): preliminary hearing must be held "no later
-    // than 15 working days after the arrest of the defendant when the defendant
-    // is in pretrial detention." Corrected from prior "15 days if in custody"
-    // to specify working days, which is the statutory standard.
-    // Source verified by engineer against ncleg.net § 15A-606 (2026-07).
-    // ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 15 working days if in custody (N.C. Gen. Stat. § 15A-606)',
-    // N.C. Gen. Stat. § 15A-902/903 (2004 Open Discovery Act): defense must make
-    // a written request; prosecution responds within a reasonable time.
-    // There is no fixed 15-day post-arraignment deadline in the statute.
-    // "15 days after arraignment" is a working approximation; engineer
-    // primary-source review 2026-07. ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '15 days after arraignment (approximate; § 15A-902 is request-triggered)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   VA: {
-    // Va. Sup. Ct. Rule 3A:5(c): if the accused is in custody, the preliminary
-    // hearing shall be held within 10 days of arrest. Source verified by
-    // engineer against vacourts.gov Rule 3A:5 (2026-07). ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 10 days if in custody (Va. Sup. Ct. Rule 3A:5)',
-    // Va. Sup. Ct. R. 3A:11: discovery is largely motion-based — either party
-    // may move for disclosure, and the court may order production. There is no
-    // mandatory 21-day post-arraignment disclosure deadline by rule. "21 days
-    // after arraignment" approximates typical scheduling in Virginia practice.
-    // Engineer primary-source review 2026-07. ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '21 days after arraignment (approximate; Va. Sup. Ct. R. 3A:11 is motion-based)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
   },
   CO: {
-    preliminaryHearing: 'Within 30 days for felonies (Colo. R. Crim. P. 5)',
-    discoveryDeadline: '35 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system with PR bond option',
   },
-  MN: {
-    preliminaryHearing: 'Within 7 days if in custody (Minn. R. Crim. P. 8.01)',
-    discoveryDeadline: '28 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  MO: {
-    preliminaryHearing: 'Within 30 days if in custody',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  WI: {
-    preliminaryHearing: 'Within 10 days if in custody (Wis. Stat. § 970.03)',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
   MD: {
-    preliminaryHearing: 'Within 30 days for felonies (Md. Rule 4-221)',
-    discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system with bond options',
   },
-  TN: {
-    // Tenn. R. Crim. P. 5(d)(1)(A): if in custody and cannot make bond, preliminary
-    // hearing must be held within 10 days of initial appearance ("ten-day rule").
-    // Confirmed against tncourts.gov Rule 5 (2026-07).
-    preliminaryHearing: 'Within 10 days if in custody (Tenn. R. Crim. P. 5)',
-    // Tenn. R. Crim. P. 16 is request-triggered; no fixed post-arraignment deadline.
-    // "30 days" is a working approximation — attorney review recommended.
-    discoveryDeadline: '30 days after arraignment (approximate; Rule 16 is request-based)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  IN: {
-    // Indiana uses "initial hearing" (IC § 35-33-7-1), not a separate "preliminary
-    // hearing." The initial hearing — where probable cause is reviewed and rights are
-    // advised — must be held promptly after arrest (interpreted as within 48 hours for
-    // detained defendants). Corrected from prior "Within 20 days if in custody," which
-    // was unsupported. Verified against 2025 Indiana Rules of Criminal Procedure (2026-07).
-    preliminaryHearing: 'Promptly after arrest (initial hearing, IC § 35-33-7-1; Indiana uses initial hearing rather than a separate preliminary hearing)',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  SC: {
-    // SC Rule 2 SCRCP (verified against sccourts.org, 2026-07): any defendant charged
-    // with an offense not triable by a magistrate (i.e., General Sessions Court) has the
-    // right to a preliminary hearing. The mechanism is demand-based — defendant must
-    // request within 10 days of notice, and the hearing must be held within 10 days of
-    // the request. The prior "if in custody" qualifier is not in the rule text.
-    // ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Defendant must request within 10 days of notice; hearing held within 10 days of request (SC Rule 2 SCRCP)',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  KY: {
-    // KY RCr 3.10 governs the preliminary hearing ("Preliminary hearing; waiver").
-    // Prior citation "(Ky. R. Crim. P. 3.14)" was incorrect — RCr 3.14 is "Probable
-    // cause finding." Corrected to RCr 3.10. 10-day in-custody deadline is consistent
-    // with Kentucky practice; attorney confirmation recommended (2026-07).
-    preliminaryHearing: 'Within 10 days if in custody (Ky. R. Crim. P. 3.10)',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  AL: {
-    // Ala. R. Crim. P. 5.1(a): "A defendant charged by complaint with the commission
-    // of a felony may, within thirty (30) days of arrest, demand a preliminary hearing."
-    // This is a demand-based mechanism — the defendant must affirmatively request it
-    // within 30 days of arrest (not a custody-dependent auto-scheduling rule).
-    // Corrected from prior "Within 30 days if in custody." Verified against
-    // judicial.alabama.gov Rule 5.1 (2026-07).
-    preliminaryHearing: 'Defendant may demand hearing within 30 days of arrest (Ala. R. Crim. P. 5.1)',
-    // Ala. R. Crim. P. 16.1(a): upon written request, prosecutor must disclose within
-    // 14 days. Corrected from prior "30 days after arraignment." Verified (2026-07).
-    discoveryDeadline: 'Within 14 days of written request (Ala. R. Crim. P. 16.1)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  LA: {
-    preliminaryHearing: 'Within 30 days if in custody',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  OR: {
-    // ORS § 135.070(2): "If a preliminary hearing is requested, it shall be held as
-    // soon as practicable but in any event within five judicial days if the defendant
-    // is in custody or within 30 days if the defendant is not in custody."
-    // Source verified by engineer against oregonlegislature.gov ORS § 135.070 (2026-07).
-    // NOTE: Prior string said "14 days if in custody" and cited § 135.173 (an
-    // evidence-rules provision, not a timing rule); corrected to 5 judicial days
-    // per the actual timing statute, § 135.070(2). ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 5 judicial days if in custody (ORS § 135.070)',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  OK: {
-    preliminaryHearing: 'Within 10 days if in custody',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  NV: {
-    // NRS § 171.196(2): "If the defendant does not waive examination, the magistrate
-    // shall hear the evidence within 15 days, unless for good cause shown the
-    // magistrate extends such time." The 15-day window applies generally, not only
-    // when the defendant is in custody; the custody qualifier in the prior string
-    // was not supported by the statute text.
-    // Source verified by engineer against nevada.public.law NRS § 171.196 (2026-07).
-    // ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 15 days (Nev. Rev. Stat. § 171.196)',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  CT: {
-    preliminaryHearing: 'Within 10 days for felonies',
-    discoveryDeadline: '30 days after arraignment',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  UT: {
-    // Utah Code Ann. § 77-11-2: preliminary examination must be held within
-    // 14 days of arrest if defendant is in custody. Source verified by engineer
-    // against le.utah.gov § 77-11-2 (2026-07). ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 14 days if in custody (Utah Code Ann. § 77-11-2)',
-    // Utah R. Crim. P. 16: discovery is largely open-file; no fixed post-arraignment
-    // deadline. "30 days after arraignment" is a working approximation. ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '30 days after arraignment (approximate; Utah R. Crim. P. 16)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  IA: {
-    // Iowa R. Crim. P. 2.2(5): preliminary hearing must be held within 10 days
-    // of initial appearance if defendant is held in custody. Source verified by
-    // engineer against iowacourts.gov Rule 2.2 (2026-07). ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 10 days if in custody (Iowa R. Crim. P. 2.2(5))',
-    // Iowa R. Crim. P. 2.14: prosecutor must respond to discovery requests within
-    // a reasonable time. "30 days after arraignment" is a working approximation.
-    // ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '30 days after arraignment (approximate; Iowa R. Crim. P. 2.14)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  AR: {
-    // Ark. R. Crim. P. 8.1: preliminary hearing must be held within 10 days of
-    // initial appearance if defendant is held in custody. Source verified by
-    // engineer against courts.arkansas.gov Rule 8.1 (2026-07). ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 10 days if in custody (Ark. R. Crim. P. 8.1)',
-    // Ark. R. Crim. P. 17.1: prosecutor must disclose within a reasonable time
-    // after request. "30 days after arraignment" is a working approximation.
-    // ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '30 days after arraignment (approximate; Ark. R. Crim. P. 17.1)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  MS: {
-    // Miss. R. Crim. P. 6.2: defendant has the right to a preliminary hearing
-    // within a reasonable time after arrest; no fixed statutory day count is
-    // specified. "30 days for felonies" reflects common practice. ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 30 days for felonies (Miss. R. Crim. P. 6.2; day count approximate)',
-    // Mississippi discovery is largely request-driven under Miss. R. Crim. P. 17.
-    // "30 days after arraignment" is a working approximation. ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '30 days after arraignment (approximate; Miss. R. Crim. P. 17)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
-  KS: {
-    // Kan. Stat. Ann. § 22-2902: preliminary hearing must be held within 10 days
-    // of arraignment if defendant is in custody. Source verified by engineer
-    // against kslegislature.org § 22-2902 (2026-07). ATTORNEY REVIEW PENDING.
-    preliminaryHearing: 'Within 10 days if in custody (Kan. Stat. Ann. § 22-2902)',
-    // Kansas discovery is request-triggered under Kan. Stat. Ann. § 22-3212.
-    // "30 days after arraignment" is a working approximation. ATTORNEY REVIEW PENDING.
-    discoveryDeadline: '30 days after arraignment (approximate; Kan. Stat. Ann. § 22-3212)',
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system',
-  },
   federal: {
-    preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
-    discoveryDeadline: 'Ongoing obligation',
     publicDefenderIncome: 'Approximately 125% federal poverty level — apply to federal public defender office',
     bailSystem: 'Pretrial services assessment',
   },
@@ -528,11 +246,11 @@ const jurisdictionRules: Record<string, JurisdictionRule> = Object.fromEntries(
     const supp: JurisdictionSupplemental = jurisdictionSupplemental[code] ?? defaultSupplemental;
     const entry: JurisdictionRule = {
       arraignmentDeadline: rule.arraignment,
-      preliminaryHearing: supp.preliminaryHearing,
+      preliminaryHearing: rule.preliminaryHearing,
       speedyTrialRight: rule.speedy_trial,
       publicDefenderIncome: supp.publicDefenderIncome,
       bailSystem: supp.bailSystem,
-      discoveryDeadline: supp.discoveryDeadline,
+      discoveryDeadline: rule.discoveryDeadline,
       lastVerified: rule.lastVerified,
       sources: {
         arraignmentDeadline: rule.arraignmentSource,
