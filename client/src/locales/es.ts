@@ -5837,19 +5837,18 @@ export default {
         "sub": "Incluye enfermería, docencia, contratista, guardia de seguridad, bienes raíces y otras profesiones con licencia."
       }
     },
-    // TODO: Task #177 — human translation needed for chargeType section
     "chargeType": {
-      "heading": "What type of charge is this case about?",
-      "sub": "This helps us identify the most relevant consequences for your situation. Your answer is never stored.",
-      "skip": "Skip — I'm not sure yet",
+      "heading": "¿Qué tipo de cargo involucra este caso?",
+      "sub": "Esto nos ayuda a identificar las consecuencias más relevantes para su situación. Su respuesta nunca se almacena.",
+      "skip": "Omitir — aún no estoy seguro/a",
       "options": {
-        "dui": "DUI / Impaired driving",
-        "drug_possession": "Drug possession or use",
-        "drug_trafficking": "Drug sale, distribution, or trafficking",
-        "theft_property": "Theft, burglary, or property crime",
-        "domestic_violence": "Domestic violence or assault",
-        "sex_offense": "Sex offense",
-        "other": "Other / Not listed"
+        "dui": "DUI / Conducción bajo los efectos del alcohol o drogas",
+        "drug_possession": "Posesión o consumo de drogas",
+        "drug_trafficking": "Venta, distribución o tráfico de drogas",
+        "theft_property": "Robo, allanamiento u otro delito contra la propiedad",
+        "domestic_violence": "Violencia doméstica o agresión",
+        "sex_offense": "Delito sexual",
+        "other": "Otro / No está en la lista"
       }
     },
     "risks": {

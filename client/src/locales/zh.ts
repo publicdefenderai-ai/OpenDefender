@@ -5837,19 +5837,18 @@ export default {
         "sub": "包括护理、教学、承包商、保安、房地产及其他持证职业。"
       }
     },
-    // TODO: Task #177 — human translation needed for chargeType section
     "chargeType": {
-      "heading": "What type of charge is this case about?",
-      "sub": "This helps us identify the most relevant consequences for your situation. Your answer is never stored.",
-      "skip": "Skip — I'm not sure yet",
+      "heading": "这个案件涉及哪类指控？",
+      "sub": "这有助于我们识别与您情况最相关的后果。您的回答不会被存储。",
+      "skip": "跳过——我还不确定",
       "options": {
-        "dui": "DUI / Impaired driving",
-        "drug_possession": "Drug possession or use",
-        "drug_trafficking": "Drug sale, distribution, or trafficking",
-        "theft_property": "Theft, burglary, or property crime",
-        "domestic_violence": "Domestic violence or assault",
-        "sex_offense": "Sex offense",
-        "other": "Other / Not listed"
+        "dui": "醉驾 / 驾驶能力受损",
+        "drug_possession": "毒品持有或使用",
+        "drug_trafficking": "毒品销售、分发或贩运",
+        "theft_property": "盗窃、入室行窃或财产犯罪",
+        "domestic_violence": "家庭暴力或人身侵害",
+        "sex_offense": "性犯罪",
+        "other": "其他 / 未列出"
       }
     },
     "risks": {
