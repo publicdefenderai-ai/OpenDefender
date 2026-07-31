@@ -7,10 +7,13 @@ npm run db:push
 #   criminal-charges-api.test.ts  — HTTP calls to localhost:5000
 #   guidance-route.test.ts        — imports server/routes; needs DB connection
 #   guidance-ownership.test.ts    — imports server/routes; needs DB connection
+#   mitigation-polish.test.ts     — HTTP calls to localhost:5000/api/mitigation/polish;
+#                                   server runs on pre-merge code so new routes return 404
 npx vitest run \
   --exclude="**/criminal-charges-api.test.ts" \
   --exclude="**/guidance-route.test.ts" \
-  --exclude="**/guidance-ownership.test.ts"
+  --exclude="**/guidance-ownership.test.ts" \
+  --exclude="**/mitigation-polish.test.ts"
 
 # Remove stale subrepl-* remotes left behind by task agent environments.
 # Each task agent adds a subrepl-* remote to .git/config and never cleans it up;
