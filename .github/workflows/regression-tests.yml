@@ -25,3 +25,6 @@ jobs:
 
       - name: Run regression tests
         run: npx vitest run tests/
+
+      - name: Check procedure-rules freshness
+        run: npx tsx scripts/check-procedure-rules-freshness.ts
