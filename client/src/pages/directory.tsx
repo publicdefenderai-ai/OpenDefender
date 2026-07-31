@@ -79,6 +79,7 @@ export default function Directory() {
       description: t("howTo.sections.getHelp.description"),
       resources: [
         { title: t("howTo.sections.getHelp.caseGuidance.title"), description: t("howTo.sections.getHelp.caseGuidance.description"), link: "/case-guidance" },
+        { title: t("collateralConsequences.pageTitle"), description: t("collateralConsequences.pageDesc"), link: "/collateral-consequences" },
         { title: t("howTo.sections.getHelp.aiChat.title"), description: t("howTo.sections.getHelp.aiChat.description"), link: "/chat" },
         { title: t("howTo.sections.getHelp.documentSummarizer.title"), description: t("howTo.sections.getHelp.documentSummarizer.description"), link: "/document-summarizer" },
         { title: t("howTo.sections.getHelp.letterGenerator.title"), description: t("howTo.sections.getHelp.letterGenerator.description"), link: "/letter-generator" },

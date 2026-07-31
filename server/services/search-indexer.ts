@@ -877,6 +877,16 @@ export function buildSearchIndex(): void {
       url: '/case-guidance'
     },
     {
+      id: 'collateral-consequences',
+      title: 'Arrest-Stage Risk Screener',
+      titleEs: 'Verificador de Riesgos al Momento del Arresto',
+      titleZh: '逮捕阶段风险筛查',
+      content: 'An arrest can immediately put housing, employment, and other vital systems at risk, even before any conviction. Answer 7 quick yes-or-no questions to see what may need attention right now. Screens for housing risk, employment risk, immigration consequences, professional licenses, student aid, public benefits, and child custody. Collateral consequences of arrest. What is at risk. Housing risk from arrest. Immigration consequences of arrest. Employment risk.',
+      tags: ['collateral consequences', 'housing risk', 'immigration', 'arrest risk', 'employment', 'screener', 'risk assessment', 'professional license', 'benefits', 'child custody'],
+      aliases: ["what's at risk", 'housing risk', 'immigration arrest', 'collateral consequences screener', 'risk screener', 'what happens to my housing', 'will i lose my job', 'immigration consequences', 'arrest consequences'],
+      url: '/collateral-consequences'
+    },
+    {
       id: 'process',
       title: 'Court Process Guide',
       titleEs: 'Guía del Proceso Judicial',
