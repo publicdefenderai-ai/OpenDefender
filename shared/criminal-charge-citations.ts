@@ -3071,7 +3071,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 207.200 unlawful trespass upon land",
     sourceUrl: "https://law.justia.com/codes/nevada/section-207-200/",
-    instructionRef: "Nev. J.I. § 20.07",
+    instructionRef: "Nev. JI § 20.07",
   },
   "nv-resisting-arrest": {
     citation: "Nev. Rev. Stat. § 199.280",
@@ -3079,7 +3079,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 199.280 resisting public officer",
     sourceUrl: "https://law.justia.com/codes/nevada/section-199-280/",
-    instructionRef: "Nev. J.I. § 19.05",
+    instructionRef: "Nev. JI § 19.05",
   },
   "nv-failure-to-appear": {
     citation: "Nev. Rev. Stat. § 199.335",
@@ -3087,7 +3087,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 199.335 failure to appear after admission to bail",
     sourceUrl: "https://law.justia.com/codes/nevada/section-199-335/",
-    instructionRef: "Nev. J.I. § 19.10",
+    instructionRef: "Nev. JI § 19.10",
   },
   "nv-petty-theft": {
     citation: "Nev. Rev. Stat. § 205.240",
@@ -3095,7 +3095,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Nevada Legislature — NRS 205.240 petit larceny",
     sourceUrl: "https://law.justia.com/codes/nevada/section-205-240/",
-    instructionRef: "Nev. J.I. § 15.10",
+    instructionRef: "Nev. JI § 15.10",
   },
 
   // — Oregon (confirmed from oregonlegislature.gov) —
@@ -7339,7 +7339,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada possession of controlled substance; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-453-336/",
-    instructionRef: "Nev. J.I. § 28.01",
+    instructionRef: "Nev. JI § 28.01",
   },
   "nh-possession-of-controlled-substance": {
     citation: "N.H. Rev. Stat. Ann. § 318-B:26",
@@ -7784,7 +7784,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada concealment of merchandise; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-597-850/",
-    instructionRef: "Nev. J.I. § 15.30",
+    instructionRef: "Nev. JI § 15.30",
   },
   "nh-shoplifting": {
     citation: "N.H. Rev. Stat. Ann. § 637:3-a",
@@ -8157,7 +8157,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada grand larceny (Category B felony — value > $3,500 = first degree equivalent); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-205-0832/",
-    instructionRef: "Nev. J.I. § 15.20",
+    instructionRef: "Nev. JI § 15.20",
   },
   "nh-grand-theft-in-the-first-degree": {
     citation: "N.H. Rev. Stat. Ann. § 637:2",
@@ -8492,7 +8492,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada grand larceny (Category C felony = second degree equivalent, value $650-$3,500); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-205-0832/",
-    instructionRef: "Nev. J.I. § 15.25",
+    instructionRef: "Nev. JI § 15.25",
   },
   "nh-grand-theft-in-the-second-degree": {
     citation: "N.H. Rev. Stat. Ann. § 637:2",
@@ -9642,7 +9642,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada malicious destruction of property; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-206-310/",
-    instructionRef: "Nev. J.I. § 21.01",
+    instructionRef: "Nev. JI § 21.01",
   },
   "nh-vandalism": {
     citation: "N.H. Rev. Stat. Ann. § 634:2",
@@ -10024,7 +10024,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada harassment; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-200-571/",
-    instructionRef: "Nev. J.I. § 20.05",
+    instructionRef: "Nev. JI § 20.05",
   },
   "nh-harassment": {
     citation: "N.H. Rev. Stat. Ann. § 644:4",
@@ -11241,7 +11241,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Nevada loitering; verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/nevada/section-207-030/",
-    instructionRef: "Nev. J.I. § 20.06",
+    instructionRef: "Nev. JI § 20.06",
   },
   "nh-loitering": {
     citation: "N.H. Rev. Stat. Ann. § 644:6",
