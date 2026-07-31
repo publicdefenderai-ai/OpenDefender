@@ -631,7 +631,8 @@ describe('Synthesized-code sweep — unaudited jurisdictions', () => {
       'AL', 'AK', 'CT', 'HI', 'ID', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
       'MA', 'MN', 'MS', 'MT', 'NE', 'NV', 'NH', 'NM', 'ND', 'OK', 'OR', 'RI',
       'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WY', 'WV', 'DC', 'CO',
-      'AS', 'MP', 'VI',
+      'AR', 'DE', 'MI', 'MO', 'WA',
+      'AS', 'GU', 'MP', 'PR', 'VI',
       'federal',
     ];
     const duplicates = raw.filter((v, i) => raw.indexOf(v) !== i);
@@ -682,16 +683,16 @@ describe('Synthesized-code guard — audited jurisdictions (hard-failing)', () =
   // Must stay in sync with the AUDITED_JURISDICTIONS set in the sweep above.
   const AUDITED_JURISDICTIONS = new Set([
     // Batch 1 (2026-07) — codes confirmed correct
-    // NOTE: WA, AR, MI, MO, DE were listed in the audit header but charge codes
-    // were never corrected; they remain in the non-failing sweep until fixed.
     'PA', 'TX', 'CA', 'NY', 'FL', 'IL', 'OH',
     'GA', 'NC', 'NJ', 'VA', 'AZ',
     // Batch 2 (2026-07)
     'AL', 'AK', 'CT', 'HI', 'ID', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
     'MA', 'MN', 'MS', 'MT', 'NE', 'NV', 'NH', 'NM', 'ND', 'OK', 'OR', 'RI',
     'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WY', 'WV', 'DC', 'CO',
-    // Territories (2026-07) — GU and PR have residual uncorrected codes; exclude until fixed
-    'AS', 'MP', 'VI',
+    // Batch 3 (2026-07) — inchoate/enhancement/minor-offense codes corrected (task 341)
+    'AR', 'DE', 'MI', 'MO', 'WA',
+    // Territories (2026-07) — residual codes corrected (task 341)
+    'AS', 'GU', 'MP', 'PR', 'VI',
     // Federal
     'federal',
   ]);
@@ -737,6 +738,11 @@ describe('Synthesized-code guard — audited jurisdictions (hard-failing)', () =
     'NH', // N.H. RSA Chapter-Section (2-segment), e.g. 179-10 (liquor/minors)
     'ME', // Me. Rev. Stat. Title-Section (2-segment), e.g. 8-223 (same format as MA)
     'NY', // NYC Admin. Code § Title-Section, e.g. 10-125 (alcohol in parks)
+    'DE', // Del. Code tit.-section (2-segment), e.g. 11-636 (murder), 21-4177 (DUI)
+          //   Real codes like 11-632 (manslaughter) are indistinguishable from the
+          //   synthesized pattern by shape alone; Title-§ is Delaware's official format.
+    'PR', // Puerto Rico LPRA Title-Section, e.g. 8-632 (DV protective order violation)
+          //   Codes like 8 LPRA § 632 use the same N-NNN shape as synthesized codes.
   ]);
 
   // Same synthesized fingerprint used by the non-failing sweep above.
