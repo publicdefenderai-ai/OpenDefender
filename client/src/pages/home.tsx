@@ -173,7 +173,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-[1.45rem] sm:text-4xl md:text-[3.5rem] font-normal mb-6 leading-[1.15] tracking-tight text-white">
+            <h1 className="font-display text-[1.45rem] sm:text-4xl md:text-[3.5rem] font-normal mb-6 leading-snug tracking-tight text-white">
               {t("home.hero.headlinePart1")}
               <br />
               {t("home.hero.headlinePart2")}
