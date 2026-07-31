@@ -105,125 +105,22 @@ interface JurisdictionRule {
   sources: JurisdictionSources;
 }
 
-// ── Supplemental fields not present in shared/jurisdiction-procedure-rules.ts ──
-// JURISDICTION_PROCEDURE_RULES (shared) is now the authoritative source for
-// arraignment, speedy_trial, bail, preliminaryHearing, discoveryDeadline, and
-// lastVerified data.  The fields below (publicDefenderIncome, bailSystem) are
-// used only by the rule-based UI path and have no shared-file equivalent.
-//
-// Only batch-1 jurisdictions carry state-specific values; all others fall
-// back to defaultSupplemental.
-//
 // Known accuracy gaps (2026-07 verification pass):
 //   GA discoveryDeadline – pre-HB 776 rule may no longer apply; attorney review needed.
 //   CA speedyTrialRight  – misdemeanor custody distinction not captured.
 //   All publicDefenderIncome figures – FPL-linked, vary annually.
 
-interface JurisdictionSupplemental {
-  publicDefenderIncome: string;
-  bailSystem: string;
-}
-
-const defaultSupplemental: JurisdictionSupplemental = {
-  publicDefenderIncome: 'Case-by-case determination',
-  bailSystem: 'Cash bail system',
-};
-
 /**
- * Per-jurisdiction overrides for publicDefenderIncome and bailSystem.
- * preliminaryHearing and discoveryDeadline have been migrated to
- * shared/jurisdiction-procedure-rules.ts and are read directly from there.
- *
- * Only entries where at least one field differs from defaultSupplemental are
- * listed. All other jurisdictions fall back to defaultSupplemental.
- *
- * ⚠️  **Do not edit individual state entries without following the update
- * procedure** — see `docs/evals-coverage.md` § "Procedure when updating" and
- * the full procedure comment on `jurisdictionRules` below.
- */
-const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
-  CA: {
-    publicDefenderIncome: 'Approximately 2x federal poverty level (varies by county)',
-    bailSystem: 'Schedule-based bail system',
-  },
-  TX: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Commercial bail bond system',
-  },
-  NY: {
-    publicDefenderIncome: 'Varies by county — apply to local public defender or legal aid office',
-    bailSystem: 'Cash bail reform — limited detention',
-  },
-  FL: {
-    publicDefenderIncome: 'Approximately 200% federal poverty level — apply to local public defender',
-    bailSystem: 'Traditional bail system with pretrial services',
-  },
-  IL: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Pretrial Fairness Act — no cash bail (eff. Sept 2023)',
-  },
-  PA: {
-    publicDefenderIncome: 'Approximately federal poverty guidelines — apply to local public defender',
-    bailSystem: 'Traditional bail system',
-  },
-  WA: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Pretrial services assessment',
-  },
-  OH: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
-  },
-  GA: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
-  },
-  AZ: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
-  },
-  NJ: {
-    publicDefenderIncome: 'Individual: $25,000, Family of 2: $34,000',
-    bailSystem: 'Pretrial services assessment — bail reform (no cash bail since 2017)',
-  },
-  MI: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
-  },
-  NC: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
-  },
-  VA: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Traditional bail system',
-  },
-  CO: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system with PR bond option',
-  },
-  MD: {
-    publicDefenderIncome: 'Case-by-case determination',
-    bailSystem: 'Cash bail system with bond options',
-  },
-  federal: {
-    publicDefenderIncome: 'Approximately 125% federal poverty level — apply to federal public defender office',
-    bailSystem: 'Pretrial services assessment',
-  },
-};
-
-/**
- * Jurisdiction deadline rules merged from the shared procedure-rules module and
- * the supplemental table above.
+ * Jurisdiction deadline rules built entirely from the shared procedure-rules module.
+ * All fields — including publicDefenderIncome and bailSystem — are now authoritative
+ * in shared/jurisdiction-procedure-rules.ts.
  *
  * ⚠️  **Do not edit these values without following the update procedure.**
  *
  * ## Update procedure (see `docs/evals-coverage.md` § "Procedure when updating")
  *
- * 1. **Change the rule** — edit the value here (or in
- *    `shared/jurisdiction-procedure-rules.ts` for arraignment / speedy-trial
- *    fields, or in `jurisdictionSupplemental` above for preliminary-hearing /
- *    discovery fields).
+ * 1. **Change the rule** — edit the value in
+ *    `shared/jurisdiction-procedure-rules.ts`.
  * 2. **Run evals** — `npx vitest run tests/evals-harness.test.ts`.
  *    Changing *any* value here **will** cause the corresponding P1 deadline
  *    scenario(s) to fail immediately.  That is by design — the failure surfaces
@@ -238,18 +135,16 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
  * Full procedure: `docs/evals-coverage.md`
  */
 // ── Build jurisdictionRules from shared/jurisdiction-procedure-rules.ts ────────
-// The authoritative deadline strings (arraignment, speedy_trial) are imported
-// from the shared module so future corrections only need one file.
-// Supplemental fields are merged from the small table above.
+// All fields are now read directly from the shared module; no supplemental
+// table is needed.
 const jurisdictionRules: Record<string, JurisdictionRule> = Object.fromEntries(
   Object.entries(JURISDICTION_PROCEDURE_RULES).map(([code, rule]) => {
-    const supp: JurisdictionSupplemental = jurisdictionSupplemental[code] ?? defaultSupplemental;
     const entry: JurisdictionRule = {
       arraignmentDeadline: rule.arraignment,
       preliminaryHearing: rule.preliminaryHearing,
       speedyTrialRight: rule.speedy_trial,
-      publicDefenderIncome: supp.publicDefenderIncome,
-      bailSystem: supp.bailSystem,
+      publicDefenderIncome: rule.publicDefenderIncome,
+      bailSystem: rule.bailSystem,
       discoveryDeadline: rule.discoveryDeadline,
       lastVerified: rule.lastVerified,
       sources: {
