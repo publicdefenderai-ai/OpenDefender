@@ -20,6 +20,8 @@ import {
   Info,
   GitBranch,
   Compass,
+  AlertTriangle,
+  ArrowRight,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -161,6 +163,28 @@ export default function SupportHub() {
                   </div>
                 </div>
               </div>
+            </ScrollReveal>
+          </div>
+        </section>
+
+        {/* Screener callout */}
+        <section className="pt-4 pb-0">
+          <div className="container mx-auto px-4 max-w-5xl">
+            <ScrollReveal>
+              <Link href="/collateral-consequences">
+                <div className="rounded-xl border border-amber-300/60 bg-amber-50/60 dark:bg-amber-950/20 dark:border-amber-700/40 p-5 flex items-start gap-4 cursor-pointer hover:shadow-md transition-all duration-200 group">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/40 border border-amber-300/60 dark:border-amber-700/40 flex items-center justify-center">
+                    <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-semibold text-foreground mb-1">Just arrested or recently charged?</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Check what's at risk right now — housing, job, benefits, family — and get a personalized list of next steps before your first court date.
+                    </p>
+                  </div>
+                  <ArrowRight className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-3 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
             </ScrollReveal>
           </div>
         </section>
