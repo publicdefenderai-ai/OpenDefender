@@ -120,8 +120,8 @@ interface JurisdictionRule {
 //   All publicDefenderIncome figures – FPL-linked, vary annually.
 //   TN discoveryDeadline – Tenn. R. Crim. P. 16 is request-triggered; "30 days"
 //     is a working approximation, not a fixed statutory deadline.
-//   SC preliminaryHearing – SC Rule 2 SCRCP confirmed right but specific day count
-//     was not confirmed against primary source; attorney review recommended.
+//   SC preliminaryHearing – SC Rule 2 SCRCP verified (2026-07): demand-based; defendant
+//     requests within 10 days of notice, hearing held within 10 days of request.
 //   IN preliminaryHearing – Indiana uses "initial hearing" (IC § 35-33-7-1) not a
 //     separate preliminary hearing; prior "20 days" string was unsupported and has
 //     been corrected to reflect the prompt-after-arrest standard.
@@ -350,11 +350,13 @@ const jurisdictionSupplemental: Record<string, JurisdictionSupplemental> = {
     bailSystem: 'Cash bail system',
   },
   SC: {
-    // SC Rule 2 SCRCP establishes the right to a preliminary hearing for any defendant
-    // charged with an offense triable in General Sessions Court. The specific scheduling
-    // deadline was not confirmed against a primary source; "10 days if in custody" is a
-    // working approximation — attorney review recommended (2026-07).
-    preliminaryHearing: 'Within 10 days if in custody (SC Rule 2 SCRCP; day count unverified — attorney review recommended)',
+    // SC Rule 2 SCRCP (verified against sccourts.org, 2026-07): any defendant charged
+    // with an offense not triable by a magistrate (i.e., General Sessions Court) has the
+    // right to a preliminary hearing. The mechanism is demand-based — defendant must
+    // request within 10 days of notice, and the hearing must be held within 10 days of
+    // the request. The prior "if in custody" qualifier is not in the rule text.
+    // ATTORNEY REVIEW PENDING.
+    preliminaryHearing: 'Defendant must request within 10 days of notice; hearing held within 10 days of request (SC Rule 2 SCRCP)',
     discoveryDeadline: '30 days after arraignment',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
