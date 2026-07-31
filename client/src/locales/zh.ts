@@ -5924,6 +5924,13 @@ export default {
         "linkLabel": "寻找法律帮助"
       }
     },
+    "stateDeadlines": {
+      "selectorLabel": "查看各州具体截止日期",
+      "selectorPlaceholder": "选择州以查看当地截止日期",
+      "calloutHeading": "{{stateName}} — 当地规定",
+      "calloutSource": "来源：{{source}}",
+      "calloutNote": "仅供一般指导。在依赖此信息之前，请向持牌律师核实。"
+    },
     "stateRules": {
       "heading": "{{stateName}}州法律",
       "subheading": "这些规则适用于定罪后，而非仅因被捕。已经初级来源核实。",

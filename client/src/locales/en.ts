@@ -5921,6 +5921,13 @@ export default {
         "linkLabel": "Find legal help"
       }
     },
+    "stateDeadlines": {
+      "selectorLabel": "See state-specific deadlines",
+      "selectorPlaceholder": "Select a state for local deadlines",
+      "calloutHeading": "{{stateName}} — Local Rule",
+      "calloutSource": "Source: {{source}}",
+      "calloutNote": "For general guidance only. Verify with a licensed attorney before relying on this."
+    },
     "stateRules": {
       "heading": "State Laws: {{stateName}}",
       "subheading": "These rules apply after a conviction — not to an arrest alone. Verified from primary sources.",

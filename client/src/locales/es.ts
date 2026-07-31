@@ -5924,6 +5924,13 @@ export default {
         "linkLabel": "Encontrar ayuda legal"
       }
     },
+    "stateDeadlines": {
+      "selectorLabel": "Ver plazos según el estado",
+      "selectorPlaceholder": "Seleccione un estado para ver los plazos locales",
+      "calloutHeading": "{{stateName}} — Regla local",
+      "calloutSource": "Fuente: {{source}}",
+      "calloutNote": "Solo orientación general. Verifique con un abogado autorizado antes de depender de esta información."
+    },
     "stateRules": {
       "heading": "Leyes de {{stateName}}",
       "subheading": "Estas reglas aplican después de una condena, no solo por un arresto. Verificadas con fuentes primarias.",
