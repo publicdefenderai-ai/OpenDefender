@@ -131,20 +131,16 @@ function makeGuidance(overrides: Partial<Parameters<typeof generateGuidancePDF>[
   };
 }
 
-// Auto-discover an unmapped state so the test stays valid even as KNOWN_JURISDICTIONS grows.
-const ALL_US_STATES = [
-  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN',
-  'IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV',
-  'NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN',
-  'TX','UT','VT','VA','WA','WV','WI','WY','DC',
-];
-const UNMAPPED_STATE = ALL_US_STATES.find(s => !KNOWN_JURISDICTIONS.includes(s));
+// Use a synthetic unmapped code so the test is stable regardless of how many
+// real jurisdictions are added to JURISDICTION_PROCEDURE_RULES.  'XX' is not a
+// valid FIPS state code and will never appear in KNOWN_JURISDICTIONS.
+const UNMAPPED_STATE = 'XX';
 const MAPPED_STATE = 'CA'; // California — always in KNOWN_JURISDICTIONS
 
-if (!UNMAPPED_STATE) {
+if (KNOWN_JURISDICTIONS.includes(UNMAPPED_STATE)) {
   throw new Error(
-    'Test setup error: every US state is now in KNOWN_JURISDICTIONS. ' +
-    'Add a synthetic unmapped code (e.g. "XX") or update stampEstimateDeadlines to accept an explicit override.',
+    `Test setup error: synthetic unmapped code "${UNMAPPED_STATE}" is present in KNOWN_JURISDICTIONS. ` +
+    'Choose a different synthetic code that is not a real jurisdiction.',
   );
 }
 if (!KNOWN_JURISDICTIONS.includes(MAPPED_STATE)) {

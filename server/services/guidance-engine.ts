@@ -1347,18 +1347,13 @@ function buildNextSteps(caseData: CaseData, stageData: any): string[] {
 }
 
 // Jurisdictions with specific deadline data in jurisdictionRules.
-// Used by both buildDeadlines (rule-based path) and stampEstimateDeadlines (Claude path).
-// Original 15 (2026-03 audit): CA, TX, NY, FL, IL, PA, WA, OH, GA, AZ, NJ, MI, NC, VA, FEDERAL
-// Added 2026-07 audit batch 2: AL, AK, CO, CT, DC, HI, IA, ID, IN, KS, KY, LA, MA, MD, ME,
-//   MN, MS, MT, ND, NE, NH, NM, NV, OK, OR, RI, SC, SD, TN, UT, VT, WI, WV, WY
-export const KNOWN_JURISDICTIONS = [
-  // Batch 1 (2026-03)
-  'CA', 'TX', 'NY', 'FL', 'IL', 'PA', 'WA', 'OH', 'GA', 'AZ', 'NJ', 'MI', 'NC', 'VA', 'FEDERAL',
-  // Batch 2 (2026-07)
-  'AL', 'AK', 'AR', 'CO', 'CT', 'DC', 'HI', 'IA', 'ID', 'IN', 'KS', 'KY', 'LA',
-  'MA', 'MD', 'ME', 'MN', 'MO', 'MS', 'MT', 'ND', 'NE', 'NH', 'NM', 'NV', 'OK',
-  'OR', 'RI', 'SC', 'SD', 'TN', 'UT', 'VT', 'WI', 'WV', 'WY',
-];
+// Derived from JURISDICTION_PROCEDURE_RULES so this list never drifts out of sync
+// when a new state is added to shared/jurisdiction-procedure-rules.ts.
+// Keys in the shared file are lowercase 'federal' and uppercase state codes;
+// we normalise everything to uppercase so look-ups are case-insensitive.
+export const KNOWN_JURISDICTIONS: string[] = Object.keys(JURISDICTION_PROCEDURE_RULES).map(
+  k => k.toUpperCase()
+);
 
 /**
  * Stamps isEstimate: true on every deadline for jurisdictions that are not in the
