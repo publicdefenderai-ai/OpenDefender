@@ -281,6 +281,11 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                             {getCategoryLabel(charge.category)}
                           </Badge>
                         </div>
+                        {charge.citation && (
+                          <p className="text-xs font-mono text-primary/80 mt-0.5 break-words" data-testid={`charge-citation-${charge.id}`}>
+                            {charge.citation}
+                          </p>
+                        )}
                         <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
                         {charge.instructionRef && (
                           <JuryInstructionBadge
