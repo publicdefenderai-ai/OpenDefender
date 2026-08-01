@@ -23,12 +23,21 @@
  *   - When a reform changes a rule (bail reform, new speedy trial statute, etc.),
  *     update the entry and add a reformNote.
  *
- * Last full data pass: 2026-07 (all 52 entries unified to this date)
+ * Last full data pass: 2026-07 for the entries whose lastVerified says so.
+ * NOT all 52 entries carry that date — a 2026-07 commit
+ * (see git history: "Bump all 52 procedure rule lastVerified dates to 2026-07")
+ * mass-dated every entry without accompanying verification work. That bump was
+ * reverted for federal, CA, NY, TX, IL, PA, WA, OH, GA — these 9 had no primary-source
+ * review in the 2026-07 pass (their arraignment/bail/speedy-trial fields are untouched
+ * since 2026-03) and are back at lastVerified: '2026-03' pending real re-verification.
+ * FL, AZ, NJ, MI, NC, VA did get genuine 2026-07 review and correctly keep that date.
  *
  * Coverage: All 50 US states + DC + federal (52 entries).
  *   52 high-confidence: all 50 states + DC + federal
- *    0 medium-confidence: none — all jurisdictions re-verified 2026-07
- *    0 low-confidence: none — every jurisdiction is now injected into AI prompts
+ *    0 medium-confidence
+ *    0 low-confidence (as a whole-record rating — see PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS
+ *    below for jurisdictions whose preliminaryHearing/discoveryDeadline fields specifically
+ *    are unverified placeholder text, independent of the record's overall dataConfidence)
  */
 
 export interface JurisdictionProcedureRule {
@@ -102,7 +111,11 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
     discoveryDeadline: 'Ongoing obligation',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — this entry's arraignment/
+    // bail/speedy-trial fields were not reviewed in the 2026-07 pass (only the
+    // preliminaryHearing/discoveryDeadline fields above were newly added then).
+    // Do not bump without an accompanying primary-source review of the other fields.
+    lastVerified: '2026-03',
   },
 
   // ── California ────────────────────────────────────────────────────────────
@@ -130,7 +143,9 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 10 court days for felonies',
     discoveryDeadline: '30 days after arraignment',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above
+    // for why this wasn't bumped to 2026-07 with the rest of the file.
+    lastVerified: '2026-03',
   },
 
   // ── New York ──────────────────────────────────────────────────────────────
@@ -158,7 +173,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 120 hours for felonies',
     discoveryDeadline: '20 days after arraignment (in custody) or 35 days (not in custody)',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
+    lastVerified: '2026-03',
   },
 
   // ── Texas ─────────────────────────────────────────────────────────────────
@@ -186,7 +202,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Not required — grand jury indictment for felonies',
     discoveryDeadline: 'Ongoing open-file obligation; witness list due 20 days before trial',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
+    lastVerified: '2026-03',
   },
 
   // ── Florida ───────────────────────────────────────────────────────────────
@@ -244,7 +261,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 30 days if in custody',
     discoveryDeadline: '28 days after arraignment',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
+    lastVerified: '2026-03',
   },
 
   // ── Pennsylvania ──────────────────────────────────────────────────────────
@@ -272,7 +290,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 14 days of preliminary arraignment',
     discoveryDeadline: '30 days after arraignment',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
+    lastVerified: '2026-03',
   },
 
   // ── Ohio ──────────────────────────────────────────────────────────────────
@@ -302,7 +321,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 10 days if in custody',
     discoveryDeadline: '21 days after arraignment',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
+    lastVerified: '2026-03',
   },
 
   // ── Georgia ───────────────────────────────────────────────────────────────
@@ -330,7 +350,10 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 30 days if in custody',
     discoveryDeadline: '10 days before trial',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
+    // ATTORNEY REVIEW NEEDED: HB 776 (2021) created automatic open-file discovery
+    // in GA; the "10 days before trial" discoveryDeadline above may predate that reform.
+    lastVerified: '2026-03',
   },
 
   // ── North Carolina ────────────────────────────────────────────────────────
@@ -473,7 +496,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     preliminaryHearing: 'Within 10 court days if in custody',
     discoveryDeadline: '30 days after arraignment',
     dataConfidence: 'high',
-    lastVerified: '2026-07',
+    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
+    lastVerified: '2026-03',
   },
 
   // ── Arizona ───────────────────────────────────────────────────────────────
@@ -1535,6 +1559,29 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     lastVerified: '2026-07',
   },
 };
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Jurisdictions whose preliminaryHearing / discoveryDeadline strings above are
+// generic placeholder text, not confirmed against a state-specific primary
+// source. (dataConfidence on the record as a whole reflects the arraignment/
+// bail/speedy-trial fields, which for these jurisdictions WERE verified in an
+// earlier pass — only these two newer fields lack that verification.)
+//
+// Detected programmatically: every jurisdiction below carries either the exact
+// boilerplate 'Within 10-14 days for felonies' / 'Within 30 days after
+// arraignment' pair, or an equivalently uncited generic string, with no rule
+// or statute citation embedded in either field — unlike e.g. CO ('Colo. R.
+// Crim. P. 5') or WI ('Wis. Stat. § 970.03'), which got real per-state review.
+//
+// Consumers (guidance-engine.ts buildDeadlines) should treat the Preliminary
+// Hearing / Discovery Deadline items for these jurisdictions as estimates
+// (isEstimate: true) even though the jurisdiction is otherwise "known."
+// Remove an entry once its preliminaryHearing/discoveryDeadline fields have
+// been verified against that state's actual court rules and cited inline.
+export const PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS: string[] = [
+  'MA', 'MO', 'LA', 'OK', 'CT', 'NM', 'NE', 'WV', 'ID', 'HI',
+  'NH', 'ME', 'MT', 'RI', 'SD', 'ND', 'AK', 'VT', 'WY', 'DC',
+];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Backward-compatible export for the legal accuracy validator.

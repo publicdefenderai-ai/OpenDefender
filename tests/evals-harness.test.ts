@@ -93,6 +93,18 @@ function runScenario(scenario: EvalScenario): void {
     ).toHaveLength(0);
   }
 
+  // ── Exact set of deadline events expected to be estimates ─────────────────
+  if (ex.exactEstimateDeadlineEvents) {
+    const actualEstimateEvents = deadlines.filter(d => d.isEstimate === true).map(d => d.event).sort();
+    const expectedEvents = [...ex.exactEstimateDeadlineEvents].sort();
+    expect(
+      actualEstimateEvents,
+      `[${label}]\n` +
+      `  Expected exactly these deadline events to have isEstimate=true: ${JSON.stringify(expectedEvents)}\n` +
+      `  Actual: ${JSON.stringify(actualEstimateEvents)}`,
+    ).toEqual(expectedEvents);
+  }
+
   // ── Required consequence categories ──────────────────────────────────────
   if (ex.requiredConsequenceCategories) {
     const actualCategories = consequences.map(c => c.category);

@@ -2,7 +2,7 @@
 // Implements charge-specific, jurisdiction-specific, and case-stage guidance
 
 import { criminalCharges, getChargeById, getVerifiedCitation } from '../../shared/criminal-charges';
-import { JURISDICTION_PROCEDURE_RULES } from '../../shared/jurisdiction-procedure-rules';
+import { JURISDICTION_PROCEDURE_RULES, PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS } from '../../shared/jurisdiction-procedure-rules';
 
 interface CaseData {
   jurisdiction: string;
@@ -1079,14 +1079,29 @@ export const KNOWN_JURISDICTIONS: string[] = Object.keys(JURISDICTION_PROCEDURE_
  * unmapped states (e.g. MT, WY, ND) always surface the estimate notice in the
  * dashboard and PDF export, regardless of whether rule-based or Claude generated
  * the deadlines.
+ *
+ * Also stamps isEstimate: true on Preliminary/Initial Hearing and Discovery
+ * Deadline items specifically for jurisdictions in
+ * PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS, even when the jurisdiction is
+ * otherwise "known" — their preliminaryHearing/discoveryDeadline source values
+ * are unverified generic placeholder text (see shared/jurisdiction-procedure-rules.ts).
  */
 export function stampEstimateDeadlines(
   jurisdiction: string,
   deadlines: GuidanceDeadline[]
 ): GuidanceDeadline[] {
-  const isEstimate = !KNOWN_JURISDICTIONS.includes((jurisdiction ?? '').toUpperCase());
-  if (!isEstimate) return deadlines;
-  return deadlines.map(d => ({ ...d, isEstimate: true }));
+  const normalized = (jurisdiction ?? '').toUpperCase();
+  const isEstimate = !KNOWN_JURISDICTIONS.includes(normalized);
+  if (isEstimate) {
+    return deadlines.map(d => ({ ...d, isEstimate: true }));
+  }
+  if (!PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS.includes(normalized)) {
+    return deadlines;
+  }
+  const unverifiedEvents = new Set(['Preliminary Hearing', 'Initial Hearing', 'Discovery Deadline']);
+  return deadlines.map(d =>
+    unverifiedEvents.has(d.event) ? { ...d, isEstimate: true } : d
+  );
 }
 
 function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: any): GuidanceDeadline[] {
@@ -1095,6 +1110,13 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
   // Determine if this jurisdiction is one of the specifically mapped ones or a federal fallback
   const jurisdiction = caseData.jurisdiction?.toUpperCase() || '';
   const isEstimate = !KNOWN_JURISDICTIONS.includes(jurisdiction);
+
+  // preliminaryHearing/discoveryDeadline are unverified generic placeholder text
+  // for these jurisdictions (see PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS in
+  // shared/jurisdiction-procedure-rules.ts) even though the jurisdiction is
+  // otherwise "known" — flag those two deadline items as estimates too.
+  const isProceduralDeadlineEstimate =
+    isEstimate || PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS.includes(jurisdiction);
 
   if (caseData.caseStage === 'arrest') {
     deadlines.push({
@@ -1106,7 +1128,7 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
       ...(isEstimate && { isEstimate: true }),
     });
   }
-  
+
   if (caseData.caseStage === 'arraignment') {
     const isIndiana = jurisdiction === 'IN';
     deadlines.push({
@@ -1117,17 +1139,17 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
         : 'Court determines probable cause for charges',
       priority: 'important',
       daysFromNow: 10,
-      ...(isEstimate && { isEstimate: true }),
+      ...(isProceduralDeadlineEstimate && { isEstimate: true }),
     });
   }
-  
+
   deadlines.push({
     event: 'Discovery Deadline',
     timeframe: jurisdictionData.discoveryDeadline,
     description: 'Exchange of evidence between prosecution and defense',
     priority: 'normal',
     daysFromNow: 30,
-    ...(isEstimate && { isEstimate: true }),
+    ...(isProceduralDeadlineEstimate && { isEstimate: true }),
   });
   
   return deadlines;

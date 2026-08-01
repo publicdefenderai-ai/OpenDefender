@@ -5926,7 +5926,73 @@ export default {
       "selectorPlaceholder": "Select a state for local deadlines",
       "calloutHeading": "{{stateName}} — Local Rule",
       "calloutSource": "Source: {{source}}",
-      "calloutNote": "For general guidance only. Verify with a licensed attorney before relying on this."
+      "calloutNote": "For general guidance only. Verify with a licensed attorney before relying on this.",
+      "entries": {
+        "federal": {
+          "stateName": "Federal (HUD / Federal Rules)",
+          "housing": {
+            "headline": "PHAs must give written notice and a grievance opportunity",
+            "detail": "Federal HUD rules require mandatory termination for a narrow set of crimes (drug-related convictions in federally assisted housing, meth production on the premises, lifetime sex offender registrants). For all other criminal activity, housing authorities have discretion. In either case, the PHA must provide written notice and allow you to request a grievance hearing before eviction proceeds.",
+            "source": "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d"
+          },
+          "license": {
+            "headline": "No single federal reporting deadline — check your specific license or clearance terms",
+            "detail": "Federal agencies and licensing bodies each have their own reporting rules. Security clearances and many federal licenses typically require self-reporting an arrest within 5–30 days. Missing a required report can be treated as a separate violation. Check your specific documentation immediately."
+          }
+        },
+        "CA": {
+          "stateName": "California",
+          "housing": {
+            "headline": "PHA must give 14-day written notice; you may request a grievance hearing",
+            "detail": "California housing authorities must provide a written notice of lease termination and the specific reasons. You have the right to request a grievance hearing, typically within 10–14 days of the notice. Los Angeles and San Francisco have additional local fair-chance housing protections requiring individualized assessment before any housing action tied to criminal history.",
+            "source": "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955"
+          },
+          "license": {
+            "headline": "Most boards require self-reporting within 30 days of a conviction — not an arrest",
+            "detail": "California Business & Professions Code § 490 prohibits denying a license solely based on a prior conviction; boards must conduct an individualized assessment. Most CA boards (nursing: Cal. B&P § 2762; teaching: Ed. Code § 44009; contractors: Cal. B&P § 7069) require reporting a conviction or guilty plea within 30 days. An arrest alone generally does not trigger a mandatory report unless the board's specific regulations require it.",
+            "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+          }
+        },
+        "NY": {
+          "stateName": "New York",
+          "housing": {
+            "headline": "NYCHA gives 30-day notice; you have 10 days to request a grievance hearing",
+            "detail": "New York City Housing Authority (NYCHA) must serve a written lease termination notice at least 30 days before the termination date. A household member has 10 days from receipt to request a grievance hearing. New York Correction Law Article 23-A also limits private landlords from denying housing based on a criminal record without individualized review.",
+            "source": "NYCHA Grievance Procedures; N.Y. Correction Law §§ 750–754; N.Y. Exec. Law § 296(16)"
+          },
+          "license": {
+            "headline": "NY Correction Law Art. 23-A applies; most boards require reporting within 30 days of conviction",
+            "detail": "New York Correction Law Article 23-A prohibits automatic denial of a professional license based solely on a prior conviction. Boards must apply an eight-factor balancing test. Most NY licensing boards require self-reporting a conviction or final adjudication within 30 days. An arrest without conviction is generally not reportable unless the specific board's rules say otherwise.",
+            "source": "N.Y. Correction Law §§ 750–754"
+          }
+        },
+        "TX": {
+          "stateName": "Texas",
+          "housing": {
+            "headline": "PHAs generally give 14-day written notice per HUD rules; no statewide fair-chance law",
+            "detail": "Texas housing authorities follow federal HUD minimum notice requirements. Most provide 14 days' written notice before a lease termination related to criminal activity. Texas has no statewide fair-chance housing law, so each PHA's administrative plan governs discretionary cases. Contact your housing authority as soon as possible after an arrest — before any formal notice is issued.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of a final conviction",
+            "detail": "Texas Occupations Code Chapter 53 prohibits automatic license denial based on a prior conviction. Boards must apply a seven-factor balancing test. Most Texas licensing boards (medical, nursing, teaching) require self-reporting a conviction within 30 days after it becomes final. An arrest alone is usually not a reportable event unless the specific board's statute says so.",
+            "source": "Tex. Occ. Code §§ 53.021–53.025"
+          }
+        },
+        "FL": {
+          "stateName": "Florida",
+          "housing": {
+            "headline": "PHAs follow HUD notice rules; some counties have additional local protections",
+            "detail": "Florida housing authorities follow federal HUD minimum requirements (written notice and grievance opportunity). Florida has no statewide fair-chance housing law. Local ordinances in Miami-Dade and other counties may provide additional procedural rights. Contact your housing authority as soon as you are aware of any action — delays make appeals harder.",
+            "source": "HUD 24 C.F.R. § 966.4; Fla. Stat. § 760.23"
+          },
+          "license": {
+            "headline": "Most FL boards require reporting within 30 days of conviction or plea",
+            "detail": "Florida Statutes § 456.0635 governs health care licensees and requires reporting certain criminal actions. Most Florida licensing boards require self-reporting a conviction, guilty plea, or no-contest plea within 30 days. Arrests without conviction are generally not reportable unless the board's specific statute requires it. Failure to report is itself a separate ground for discipline.",
+            "source": "Fla. Stat. §§ 456.0635, 456.072(1)(c)"
+          }
+        }
+      }
     },
     "stateRules": {
       "heading": "State Laws: {{stateName}}",

@@ -5928,7 +5928,73 @@ export default {
       "selectorPlaceholder": "Seleccione un estado para ver los plazos locales",
       "calloutHeading": "{{stateName}} — Regla local",
       "calloutSource": "Fuente: {{source}}",
-      "calloutNote": "Solo orientación general. Verifique con un abogado autorizado antes de depender de esta información."
+      "calloutNote": "Solo orientación general. Verifique con un abogado autorizado antes de depender de esta información.",
+      "entries": {
+        "federal": {
+          "stateName": "Federal (reglas del HUD / reglas federales)",
+          "housing": {
+            "headline": "Las PHA deben dar aviso por escrito y la oportunidad de una audiencia de queja",
+            "detail": "Las reglas federales del HUD exigen la terminación obligatoria para un grupo reducido de delitos (condenas relacionadas con drogas en viviendas con asistencia federal, producción de metanfetamina en el lugar, registro de por vida como delincuente sexual). Para cualquier otra actividad delictiva, las autoridades de vivienda tienen discreción. En cualquier caso, la PHA debe entregar aviso por escrito y permitirle solicitar una audiencia de queja antes de que proceda el desalojo.",
+            "source": "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d"
+          },
+          "license": {
+            "headline": "No existe un plazo federal único de notificación — consulte los términos específicos de su licencia o autorización de seguridad",
+            "detail": "Cada agencia federal y organismo de licencias tiene sus propias reglas de notificación. Las autorizaciones de seguridad y muchas licencias federales generalmente exigen autoinformar un arresto dentro de 5 a 30 días. No presentar un informe requerido puede tratarse como una infracción separada. Revise de inmediato su documentación específica."
+          }
+        },
+        "CA": {
+          "stateName": "California",
+          "housing": {
+            "headline": "La PHA debe dar aviso por escrito con 14 días de anticipación; puede solicitar una audiencia de queja",
+            "detail": "Las autoridades de vivienda de California deben entregar un aviso por escrito de terminación del contrato de arrendamiento y las razones específicas. Usted tiene derecho a solicitar una audiencia de queja, generalmente dentro de 10 a 14 días desde el aviso. Los Ángeles y San Francisco cuentan con protecciones adicionales locales de vivienda de oportunidad justa que exigen una evaluación individualizada antes de cualquier acción de vivienda relacionada con antecedentes penales.",
+            "source": "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen autoinformar dentro de 30 días de una condena — no de un arresto",
+            "detail": "El Código de Negocios y Profesiones de California § 490 prohíbe denegar una licencia únicamente por una condena previa; las juntas deben realizar una evaluación individualizada. La mayoría de las juntas de CA (enfermería: Cal. B&P § 2762; docencia: Ed. Code § 44009; contratistas: Cal. B&P § 7069) exigen informar una condena o declaración de culpabilidad dentro de 30 días. Un arresto por sí solo generalmente no activa un informe obligatorio, salvo que las regulaciones específicas de la junta lo exijan.",
+            "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+          }
+        },
+        "NY": {
+          "stateName": "Nueva York",
+          "housing": {
+            "headline": "NYCHA da aviso de 30 días; usted tiene 10 días para solicitar una audiencia de queja",
+            "detail": "La Autoridad de Vivienda de la Ciudad de Nueva York (NYCHA) debe entregar un aviso por escrito de terminación del contrato de arrendamiento al menos 30 días antes de la fecha de terminación. Un miembro del hogar tiene 10 días desde la recepción para solicitar una audiencia de queja. La Ley de Corrección de Nueva York, Artículo 23-A, también limita a los propietarios privados de negar vivienda por antecedentes penales sin una revisión individualizada.",
+            "source": "NYCHA Grievance Procedures; N.Y. Correction Law §§ 750–754; N.Y. Exec. Law § 296(16)"
+          },
+          "license": {
+            "headline": "Se aplica el Art. 23-A de la Ley de Corrección de NY; la mayoría de las juntas exigen informar dentro de 30 días de la condena",
+            "detail": "El Artículo 23-A de la Ley de Corrección de Nueva York prohíbe la denegación automática de una licencia profesional basada únicamente en una condena previa. Las juntas deben aplicar una prueba de equilibrio de ocho factores. La mayoría de las juntas de licencias de NY exigen autoinformar una condena o adjudicación final dentro de 30 días. Un arresto sin condena generalmente no es informable, salvo que las reglas específicas de la junta indiquen lo contrario.",
+            "source": "N.Y. Correction Law §§ 750–754"
+          }
+        },
+        "TX": {
+          "stateName": "Texas",
+          "housing": {
+            "headline": "Las PHA generalmente dan aviso por escrito de 14 días según las reglas del HUD; no existe una ley estatal de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Texas siguen los requisitos mínimos de aviso del HUD federal. La mayoría entrega un aviso por escrito de 14 días antes de una terminación del contrato relacionada con actividad delictiva. Texas no tiene una ley estatal de vivienda de oportunidad justa, por lo que el plan administrativo de cada PHA rige los casos discrecionales. Comuníquese con su autoridad de vivienda lo antes posible después de un arresto — antes de que se emita cualquier aviso formal.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de una condena final",
+            "detail": "El Código de Ocupaciones de Texas, Capítulo 53, prohíbe la denegación automática de una licencia por una condena previa. Las juntas deben aplicar una prueba de equilibrio de siete factores. La mayoría de las juntas de licencias de Texas (médica, enfermería, docencia) exigen autoinformar una condena dentro de 30 días después de que sea firme. Un arresto por sí solo generalmente no es un evento informable, salvo que el estatuto específico de la junta lo indique.",
+            "source": "Tex. Occ. Code §§ 53.021–53.025"
+          }
+        },
+        "FL": {
+          "stateName": "Florida",
+          "housing": {
+            "headline": "Las PHA siguen las reglas de aviso del HUD; algunos condados tienen protecciones locales adicionales",
+            "detail": "Las autoridades de vivienda de Florida siguen los requisitos mínimos federales del HUD (aviso por escrito y oportunidad de audiencia de queja). Florida no tiene una ley estatal de vivienda de oportunidad justa. Las ordenanzas locales en Miami-Dade y otros condados pueden ofrecer derechos procesales adicionales. Comuníquese con su autoridad de vivienda tan pronto como tenga conocimiento de cualquier acción — las demoras dificultan las apelaciones.",
+            "source": "HUD 24 C.F.R. § 966.4; Fla. Stat. § 760.23"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas de FL exigen informar dentro de 30 días de la condena o declaración",
+            "detail": "El Estatuto de Florida § 456.0635 rige a los profesionales de la salud con licencia y exige informar ciertas acciones penales. La mayoría de las juntas de licencias de Florida exigen autoinformar una condena, declaración de culpabilidad o de no impugnación (no contest) dentro de 30 días. Los arrestos sin condena generalmente no son informables, salvo que el estatuto específico de la junta lo exija. No informar es en sí mismo un motivo separado de sanción disciplinaria.",
+            "source": "Fla. Stat. §§ 456.0635, 456.072(1)(c)"
+          }
+        }
+      }
     },
     "stateRules": {
       "heading": "Leyes de {{stateName}}",

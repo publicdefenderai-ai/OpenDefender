@@ -139,111 +139,44 @@ const STATE_NAME_TO_ABBR: Record<string, string> = {
 /* State-specific deadline data for risk card callouts                 */
 /* ------------------------------------------------------------------ */
 
-interface StateDeadlineEntry {
-  headline: string;
-  detail: string;
-  source?: string;
+interface StateDeadlineCategory {
+  /** Whether this category has a `source` string to render (federal.license has none). */
+  hasSource: boolean;
 }
 
 interface StateDeadlines {
-  stateName: string;
-  housing?: StateDeadlineEntry;
-  license?: StateDeadlineEntry;
+  /** i18n key segment — text (stateName/headline/detail/source) lives in
+   *  collateralConsequences.stateDeadlines.entries.<stateCode>.* in each locale file. */
+  stateCode: string;
+  housing?: StateDeadlineCategory;
+  license?: StateDeadlineCategory;
 }
 
 /**
  * State-specific deadline and procedural rules surfaced as callout blocks
  * inside the housing and professional-license risk cards.
  *
+ * This is structural data only (which states/categories exist, and whether a
+ * source citation is present) — the actual text lives in the locale files
+ * under collateralConsequences.stateDeadlines.entries so ES/ZH users get
+ * translated legal text, not just translated surrounding UI chrome. Statute/
+ * rule citations themselves are kept identical across locales (legal
+ * citations aren't translated).
+ *
  * Coverage: Federal baseline + CA, NY, TX, FL.
  * Sources: HUD 24 C.F.R. § 966.4; state statutes as cited per entry.
  * Quarterly review recommended — rules change year to year.
  */
 const SCREENER_STATE_DEADLINES: Record<string, StateDeadlines> = {
-  federal: {
-    stateName: "Federal (HUD / Federal Rules)",
-    housing: {
-      headline: "PHAs must give written notice and a grievance opportunity",
-      detail:
-        "Federal HUD rules require mandatory termination for a narrow set of crimes (drug-related convictions in federally assisted housing, meth production on the premises, lifetime sex offender registrants). For all other criminal activity, housing authorities have discretion. In either case, the PHA must provide written notice and allow you to request a grievance hearing before eviction proceeds.",
-      source: "24 C.F.R. § 966.4(l)(3); 42 U.S.C. § 1437d",
-    },
-    license: {
-      headline: "No single federal reporting deadline — check your specific license or clearance terms",
-      detail:
-        "Federal agencies and licensing bodies each have their own reporting rules. Security clearances and many federal licenses typically require self-reporting an arrest within 5–30 days. Missing a required report can be treated as a separate violation. Check your specific documentation immediately.",
-    },
-  },
-  CA: {
-    stateName: "California",
-    housing: {
-      headline: "PHA must give 14-day written notice; you may request a grievance hearing",
-      detail:
-        "California housing authorities must provide a written notice of lease termination and the specific reasons. You have the right to request a grievance hearing, typically within 10–14 days of the notice. Los Angeles and San Francisco have additional local fair-chance housing protections requiring individualized assessment before any housing action tied to criminal history.",
-      source: "HUD 24 C.F.R. § 966.4; Cal. Gov. Code § 12955",
-    },
-    license: {
-      headline: "Most boards require self-reporting within 30 days of a conviction — not an arrest",
-      detail:
-        "California Business & Professions Code § 490 prohibits denying a license solely based on a prior conviction; boards must conduct an individualized assessment. Most CA boards (nursing: Cal. B&P § 2762; teaching: Ed. Code § 44009; contractors: Cal. B&P § 7069) require reporting a conviction or guilty plea within 30 days. An arrest alone generally does not trigger a mandatory report unless the board's specific regulations require it.",
-      source: "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009",
-    },
-  },
-  NY: {
-    stateName: "New York",
-    housing: {
-      headline: "NYCHA gives 30-day notice; you have 10 days to request a grievance hearing",
-      detail:
-        "New York City Housing Authority (NYCHA) must serve a written lease termination notice at least 30 days before the termination date. A household member has 10 days from receipt to request a grievance hearing. New York Correction Law Article 23-A also limits private landlords from denying housing based on a criminal record without individualized review.",
-      source: "NYCHA Grievance Procedures; N.Y. Correction Law §§ 750–754; N.Y. Exec. Law § 296(16)",
-    },
-    license: {
-      headline: "NY Correction Law Art. 23-A applies; most boards require reporting within 30 days of conviction",
-      detail:
-        "New York Correction Law Article 23-A prohibits automatic denial of a professional license based solely on a prior conviction. Boards must apply an eight-factor balancing test. Most NY licensing boards require self-reporting a conviction or final adjudication within 30 days. An arrest without conviction is generally not reportable unless the specific board's rules say otherwise.",
-      source: "N.Y. Correction Law §§ 750–754",
-    },
-  },
-  TX: {
-    stateName: "Texas",
-    housing: {
-      headline: "PHAs generally give 14-day written notice per HUD rules; no statewide fair-chance law",
-      detail:
-        "Texas housing authorities follow federal HUD minimum notice requirements. Most provide 14 days' written notice before a lease termination related to criminal activity. Texas has no statewide fair-chance housing law, so each PHA's administrative plan governs discretionary cases. Contact your housing authority as soon as possible after an arrest — before any formal notice is issued.",
-      source: "HUD 24 C.F.R. § 966.4",
-    },
-    license: {
-      headline: "Most boards require reporting within 30 days of a final conviction",
-      detail:
-        "Texas Occupations Code Chapter 53 prohibits automatic license denial based on a prior conviction. Boards must apply a seven-factor balancing test. Most Texas licensing boards (medical, nursing, teaching) require self-reporting a conviction within 30 days after it becomes final. An arrest alone is usually not a reportable event unless the specific board's statute says so.",
-      source: "Tex. Occ. Code §§ 53.021–53.025",
-    },
-  },
-  FL: {
-    stateName: "Florida",
-    housing: {
-      headline: "PHAs follow HUD notice rules; some counties have additional local protections",
-      detail:
-        "Florida housing authorities follow federal HUD minimum requirements (written notice and grievance opportunity). Florida has no statewide fair-chance housing law. Local ordinances in Miami-Dade and other counties may provide additional procedural rights. Contact your housing authority as soon as you are aware of any action — delays make appeals harder.",
-      source: "HUD 24 C.F.R. § 966.4; Fla. Stat. § 760.23",
-    },
-    license: {
-      headline: "Most FL boards require reporting within 30 days of conviction or plea",
-      detail:
-        "Florida Statutes § 456.0635 governs health care licensees and requires reporting certain criminal actions. Most Florida licensing boards require self-reporting a conviction, guilty plea, or no-contest plea within 30 days. Arrests without conviction are generally not reportable unless the board's specific statute requires it. Failure to report is itself a separate ground for discipline.",
-      source: "Fla. Stat. §§ 456.0635, 456.072(1)(c)",
-    },
-  },
+  federal: { stateCode: "federal", housing: { hasSource: true }, license: { hasSource: false } },
+  CA: { stateCode: "CA", housing: { hasSource: true }, license: { hasSource: true } },
+  NY: { stateCode: "NY", housing: { hasSource: true }, license: { hasSource: true } },
+  TX: { stateCode: "TX", housing: { hasSource: true }, license: { hasSource: true } },
+  FL: { stateCode: "FL", housing: { hasSource: true }, license: { hasSource: true } },
 };
 
-/** The ordered list of state options shown in the selector dropdown. */
-const STATE_DEADLINE_OPTIONS: Array<{ value: string; label: string }> = [
-  { value: "federal", label: "Federal (HUD / Federal Rules)" },
-  { value: "CA", label: "California" },
-  { value: "NY", label: "New York" },
-  { value: "TX", label: "Texas" },
-  { value: "FL", label: "Florida" },
-];
+/** The ordered list of state codes shown in the selector dropdown; labels come from i18n. */
+const STATE_DEADLINE_OPTIONS: string[] = ["federal", "CA", "NY", "TX", "FL"];
 
 /* ------------------------------------------------------------------ */
 /* Charge-type pre-step types and constants                            */
@@ -756,8 +689,10 @@ export default function CollateralConsequences() {
                       className="flex-1 min-w-[180px] text-xs rounded-lg border border-border bg-background text-foreground px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-rose-500"
                     >
                       <option value="">{t("collateralConsequences.stateDeadlines.selectorPlaceholder")}</option>
-                      {STATE_DEADLINE_OPTIONS.map(opt => (
-                        <option key={opt.value} value={opt.value}>{opt.label}</option>
+                      {STATE_DEADLINE_OPTIONS.map(code => (
+                        <option key={code} value={code}>
+                          {t(`collateralConsequences.stateDeadlines.entries.${code}.stateName`)}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -765,12 +700,15 @@ export default function CollateralConsequences() {
                   <div className="space-y-4 mb-6">
                     {activeRisks.map((risk, i) => {
                       // Determine if this card has state-specific deadline data.
-                      const deadlineEntry: StateDeadlineEntry | undefined =
+                      const deadlineCategory: StateDeadlineCategory | undefined =
                         selectedStateDeadlines && risk.id === "housing"
                           ? selectedStateDeadlines.housing
                           : selectedStateDeadlines && risk.id === "license"
                             ? selectedStateDeadlines.license
                             : undefined;
+                      const deadlineI18nBase = selectedStateDeadlines
+                        ? `collateralConsequences.stateDeadlines.entries.${selectedStateDeadlines.stateCode}.${risk.id}`
+                        : "";
 
                       return (
                       <motion.div
@@ -818,26 +756,26 @@ export default function CollateralConsequences() {
                           </div>
 
                           {/* ── State-specific deadline callout ── */}
-                          {deadlineEntry && selectedStateDeadlines && (
+                          {deadlineCategory && selectedStateDeadlines && (
                             <div className="rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/40 p-3">
                               <div className="flex items-center gap-1.5 mb-1">
                                 <MapPin className="h-3 w-3 text-blue-600 dark:text-blue-400 flex-shrink-0" aria-hidden="true" />
                                 <p className="text-xs font-bold uppercase tracking-wider text-blue-700 dark:text-blue-300">
                                   {t("collateralConsequences.stateDeadlines.calloutHeading", {
-                                    stateName: selectedStateDeadlines.stateName,
+                                    stateName: t(`collateralConsequences.stateDeadlines.entries.${selectedStateDeadlines.stateCode}.stateName`),
                                   })}
                                 </p>
                               </div>
                               <p className="text-xs font-semibold text-blue-900 dark:text-blue-200 mb-1 leading-snug">
-                                {deadlineEntry.headline}
+                                {t(`${deadlineI18nBase}.headline`)}
                               </p>
                               <p className="text-xs text-blue-800 dark:text-blue-300 leading-relaxed">
-                                {deadlineEntry.detail}
+                                {t(`${deadlineI18nBase}.detail`)}
                               </p>
-                              {deadlineEntry.source && (
+                              {deadlineCategory.hasSource && (
                                 <p className="text-xs text-blue-600 dark:text-blue-400 mt-1.5 italic">
                                   {t("collateralConsequences.stateDeadlines.calloutSource", {
-                                    source: deadlineEntry.source,
+                                    source: t(`${deadlineI18nBase}.source`),
                                   })}
                                 </p>
                               )}
