@@ -552,8 +552,8 @@ export default function FriendsFamily() {
             <div className="flex items-start gap-3 mb-6">
               <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
               <div>
-                <h2 className="text-xl font-bold text-foreground mb-1">What else may be at risk</h2>
-                <p className="text-sm text-muted-foreground">A conviction can trigger consequences that go far beyond the sentence itself. These are called collateral consequences — and they can affect your family member's job, housing, benefits, immigration status, and more. The most important time to raise these with an attorney is before any plea decision.</p>
+                <h2 className="text-xl font-bold text-foreground mb-1">{t('friendsFamily.atRisk.sectionTitle')}</h2>
+                <p className="text-sm text-muted-foreground">{t('friendsFamily.atRisk.sectionSubtitle')}</p>
               </div>
             </div>
           </ScrollReveal>
@@ -562,8 +562,8 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.1}>
               <Card className="h-full">
                 <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1">Employment and professional licenses</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">A conviction can result in job loss, background-check failures, or automatic suspension of a professional license (nursing, teaching, commercial driver's license, contractor, etc.). These consequences can happen even before sentencing is complete.</p>
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.atRisk.employment.title')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.atRisk.employment.text')}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -571,8 +571,8 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.2}>
               <Card className="h-full">
                 <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1">Public and subsidized housing</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Many public housing authorities require lease termination after certain convictions. This can affect the entire household, not just the person convicted. Private landlords may also legally refuse to rent to someone with a criminal record.</p>
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.atRisk.housing.title')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.atRisk.housing.text')}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -580,8 +580,8 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.3}>
               <Card className="h-full">
                 <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1">Government benefits (SNAP, SSI, Medicaid)</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Some federal benefit programs restrict eligibility after certain drug felony convictions. The impact varies by state and benefit type, but can affect the whole household's access to food assistance and healthcare.</p>
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.atRisk.benefits.title')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.atRisk.benefits.text')}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -589,8 +589,8 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.4}>
               <Card className="h-full">
                 <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1">Immigration status</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Even a misdemeanor conviction can trigger deportation, denial of citizenship, or loss of visa eligibility for non-citizens. This risk can apply to a guilty plea even before trial. An immigration attorney should review the case early.</p>
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.atRisk.immigration.title')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.atRisk.immigration.text')}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -598,8 +598,8 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.5}>
               <Card className="h-full">
                 <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1">Child custody and family court</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">Charges involving violence, drugs, or children can trigger CPS involvement or be used as grounds to modify custody in family court. These proceedings can run parallel to the criminal case with their own deadlines.</p>
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.atRisk.custody.title')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.atRisk.custody.text')}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -607,8 +607,8 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.6}>
               <Card className="h-full">
                 <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1">Firearms, voting, and civil rights</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">A felony conviction typically results in loss of the right to own or possess a firearm under federal law. In many states, voting rights are temporarily suspended during incarceration or parole. Some states restore these rights automatically; others require a separate application.</p>
+                  <p className="font-semibold text-sm text-foreground mb-1">{t('friendsFamily.atRisk.firearms.title')}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.atRisk.firearms.text')}</p>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -618,8 +618,8 @@ export default function FriendsFamily() {
             <div className="mt-5 flex items-start gap-3 p-4 bg-amber-50 dark:bg-amber-900/15 border border-amber-200 dark:border-amber-800/40 rounded-lg">
               <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
               <p className="text-sm text-amber-800 dark:text-amber-200">
-                <strong>These consequences are sometimes called "invisible punishments"</strong> — they are not announced in court and the attorney handling the criminal case may not raise them unless asked. The best time to address them is before any plea decision is made.{' '}
-                <Link href="/collateral-consequences" className="underline font-semibold hover:text-amber-900 dark:hover:text-amber-100">Learn more on our Collateral Consequences page.</Link>
+                <strong>{t('friendsFamily.atRisk.warningStrong')}</strong>{t('friendsFamily.atRisk.warningText')}{' '}
+                <Link href="/collateral-consequences" className="underline font-semibold hover:text-amber-900 dark:hover:text-amber-100">{t('friendsFamily.atRisk.warningCta')}</Link>
               </p>
             </div>
           </ScrollReveal>
@@ -674,21 +674,21 @@ export default function FriendsFamily() {
           <ScrollReveal>
             <div className="flex items-center gap-3 mb-2">
               <Clock className="h-5 w-5 text-slate-500" />
-              <h2 className="text-xl font-bold text-foreground">If Your Family Member Has Been in Custody for a While</h2>
+              <h2 className="text-xl font-bold text-foreground">{t('friendsFamily.longTerm.sectionTitle')}</h2>
             </div>
-            <p className="text-muted-foreground mb-8 max-w-2xl">The first 48 hours pass. The case continues for weeks or months. Here is how to support someone in custody over a longer period and how to plan for what comes next.</p>
+            <p className="text-muted-foreground mb-8 max-w-2xl">{t('friendsFamily.longTerm.sectionSubtitle')}</p>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-5">
             <ScrollReveal>
               <Card>
                 <CardContent className="pt-5">
-                  <h3 className="text-sm font-semibold text-foreground mb-3">Staying in contact</h3>
+                  <h3 className="text-sm font-semibold text-foreground mb-3">{t('friendsFamily.longTerm.contact.title')}</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Jail phone calls are recorded and can be monitored. Do not discuss the case, evidence, or anything that could be used in court.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Mail is typically read by facility staff. Apply the same caution to written letters.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>In-person visitation rules vary by facility. Call the jail to understand scheduling, approved visitor lists, and ID requirements.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Keeping contact consistent matters for the person's mental health and for demonstrating family support to the court.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.contact.item1')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.contact.item2')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.contact.item3')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.contact.item4')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -697,11 +697,11 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.07}>
               <Card>
                 <CardContent className="pt-5">
-                  <h3 className="text-sm font-semibold text-foreground mb-3">Financial support while in custody</h3>
+                  <h3 className="text-sm font-semibold text-foreground mb-3">{t('friendsFamily.longTerm.financial.title')}</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Most facilities have a commissary account system. You can typically deposit money online, by phone, or by money order. The person can use these funds for phone calls, food items, and hygiene products.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Phone call costs from jail are often high. Services like Securus and ICSolutions are common providers — you can set up a prepaid account to reduce per-call costs.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>If you are managing their finances or property while they are in custody, a power of attorney document prepared with the help of a legal aid organization can authorize you to act on their behalf.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.financial.item1')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.financial.item2')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.financial.item3')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -710,11 +710,11 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.1}>
               <Card>
                 <CardContent className="pt-5">
-                  <h3 className="text-sm font-semibold text-foreground mb-3">Supporting their case from the outside</h3>
+                  <h3 className="text-sm font-semibold text-foreground mb-3">{t('friendsFamily.longTerm.caseSupport.title')}</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Stay in contact with their attorney or public defender. They can update you on court dates and what documentation or character references they need.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Gather character references from employers, community members, teachers, or religious leaders. Written letters from people who know the person well can be submitted to the court.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>In drug-related cases, helping them enroll in a treatment program — even from custody — can affect sentencing outcomes. Ask the attorney what programs are available.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.caseSupport.item1')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.caseSupport.item2')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.caseSupport.item3')}</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -723,14 +723,14 @@ export default function FriendsFamily() {
             <ScrollReveal delay={0.14}>
               <Card>
                 <CardContent className="pt-5">
-                  <h3 className="text-sm font-semibold text-foreground mb-3">Planning for release</h3>
+                  <h3 className="text-sm font-semibold text-foreground mb-3">{t('friendsFamily.longTerm.release.title')}</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>People leaving custody often need ID documents, a place to stay, and a plan for employment immediately on release. Starting this planning early matters.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Some release conditions (probation, reporting, treatment programs) begin on the day of release. Knowing the conditions in advance helps avoid violations.</li>
-                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>Our Re-entry Resources page covers ID restoration, housing with a record, and employment rights in detail.</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.release.item1')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.release.item2')}</li>
+                    <li className="flex items-start gap-2"><span className="flex-shrink-0 mt-0.5">•</span>{t('friendsFamily.longTerm.release.item3')}</li>
                   </ul>
                   <Link href="/support/reentry" className="inline-flex items-center gap-1 text-sm font-medium text-foreground underline underline-offset-2 hover:no-underline mt-3">
-                    Re-entry Resources <ArrowRight className="h-3.5 w-3.5" />
+                    {t('friendsFamily.longTerm.release.linkText')} <ArrowRight className="h-3.5 w-3.5" />
                   </Link>
                 </CardContent>
               </Card>
@@ -739,10 +739,10 @@ export default function FriendsFamily() {
 
           <ScrollReveal delay={0.2}>
             <div className="mt-6 rounded-xl border border-border bg-muted/20 p-5">
-              <h3 className="text-sm font-semibold text-foreground mb-2">Taking care of yourself</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">Supporting someone through a long legal case is exhausting and stressful. Many families experience anxiety, financial strain, and relationship pressure during this time. The mental health resources on this site are for family members too — not just defendants. Reaching out for support is not a sign of giving up.</p>
+              <h3 className="text-sm font-semibold text-foreground mb-2">{t('friendsFamily.longTerm.selfCare.title')}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{t('friendsFamily.longTerm.selfCare.text')}</p>
               <Link href="/support/mental-health" className="inline-flex items-center gap-1 text-sm font-medium text-foreground underline underline-offset-2 hover:no-underline mt-3">
-                Mental Health & Treatment Resources <ArrowRight className="h-3.5 w-3.5" />
+                {t('friendsFamily.longTerm.selfCare.linkText')} <ArrowRight className="h-3.5 w-3.5" />
               </Link>
             </div>
           </ScrollReveal>

@@ -4240,6 +4240,72 @@ export default {
     "privacyBanner": {
       "title": "Privacy First:",
       "text": "We do not store your personal data — all input deleted after session."
+    },
+    "atRisk": {
+      "sectionTitle": "What else may be at risk",
+      "sectionSubtitle": "A conviction can trigger consequences that go far beyond the sentence itself. These are called collateral consequences — and they can affect your family member's job, housing, benefits, immigration status, and more. The most important time to raise these with an attorney is before any plea decision.",
+      "employment": {
+        "title": "Employment and professional licenses",
+        "text": "A conviction can result in job loss, background-check failures, or automatic suspension of a professional license (nursing, teaching, commercial driver's license, contractor, etc.). These consequences can happen even before sentencing is complete."
+      },
+      "housing": {
+        "title": "Public and subsidized housing",
+        "text": "Many public housing authorities require lease termination after certain convictions. This can affect the entire household, not just the person convicted. Private landlords may also legally refuse to rent to someone with a criminal record."
+      },
+      "benefits": {
+        "title": "Government benefits (SNAP, SSI, Medicaid)",
+        "text": "Some federal benefit programs restrict eligibility after certain drug felony convictions. The impact varies by state and benefit type, but can affect the whole household's access to food assistance and healthcare."
+      },
+      "immigration": {
+        "title": "Immigration status",
+        "text": "Even a misdemeanor conviction can trigger deportation, denial of citizenship, or loss of visa eligibility for non-citizens. This risk can apply to a guilty plea even before trial. An immigration attorney should review the case early."
+      },
+      "custody": {
+        "title": "Child custody and family court",
+        "text": "Charges involving violence, drugs, or children can trigger CPS involvement or be used as grounds to modify custody in family court. These proceedings can run parallel to the criminal case with their own deadlines."
+      },
+      "firearms": {
+        "title": "Firearms, voting, and civil rights",
+        "text": "A felony conviction typically results in loss of the right to own or possess a firearm under federal law. In many states, voting rights are temporarily suspended during incarceration or parole. Some states restore these rights automatically; others require a separate application."
+      },
+      "warningStrong": "These consequences are sometimes called \"invisible punishments\"",
+      "warningText": " — they are not announced in court and the attorney handling the criminal case may not raise them unless asked. The best time to address them is before any plea decision is made.",
+      "warningCta": "Learn more on our Collateral Consequences page."
+    },
+    "longTerm": {
+      "sectionTitle": "If Your Family Member Has Been in Custody for a While",
+      "sectionSubtitle": "The first 48 hours pass. The case continues for weeks or months. Here is how to support someone in custody over a longer period and how to plan for what comes next.",
+      "contact": {
+        "title": "Staying in contact",
+        "item1": "Jail phone calls are recorded and can be monitored. Do not discuss the case, evidence, or anything that could be used in court.",
+        "item2": "Mail is typically read by facility staff. Apply the same caution to written letters.",
+        "item3": "In-person visitation rules vary by facility. Call the jail to understand scheduling, approved visitor lists, and ID requirements.",
+        "item4": "Keeping contact consistent matters for the person's mental health and for demonstrating family support to the court."
+      },
+      "financial": {
+        "title": "Financial support while in custody",
+        "item1": "Most facilities have a commissary account system. You can typically deposit money online, by phone, or by money order. The person can use these funds for phone calls, food items, and hygiene products.",
+        "item2": "Phone call costs from jail are often high. Services like Securus and ICSolutions are common providers — you can set up a prepaid account to reduce per-call costs.",
+        "item3": "If you are managing their finances or property while they are in custody, a power of attorney document prepared with the help of a legal aid organization can authorize you to act on their behalf."
+      },
+      "caseSupport": {
+        "title": "Supporting their case from the outside",
+        "item1": "Stay in contact with their attorney or public defender. They can update you on court dates and what documentation or character references they need.",
+        "item2": "Gather character references from employers, community members, teachers, or religious leaders. Written letters from people who know the person well can be submitted to the court.",
+        "item3": "In drug-related cases, helping them enroll in a treatment program — even from custody — can affect sentencing outcomes. Ask the attorney what programs are available."
+      },
+      "release": {
+        "title": "Planning for release",
+        "item1": "People leaving custody often need ID documents, a place to stay, and a plan for employment immediately on release. Starting this planning early matters.",
+        "item2": "Some release conditions (probation, reporting, treatment programs) begin on the day of release. Knowing the conditions in advance helps avoid violations.",
+        "item3": "Our Re-entry Resources page covers ID restoration, housing with a record, and employment rights in detail.",
+        "linkText": "Re-entry Resources"
+      },
+      "selfCare": {
+        "title": "Taking care of yourself",
+        "text": "Supporting someone through a long legal case is exhausting and stressful. Many families experience anxiety, financial strain, and relationship pressure during this time. The mental health resources on this site are for family members too — not just defendants. Reaching out for support is not a sign of giving up.",
+        "linkText": "Mental Health & Treatment Resources"
+      }
     }
   },
   "courtLocator": {

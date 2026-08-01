@@ -4242,6 +4242,72 @@ export default {
     "privacyBanner": {
       "title": "Privacidad Primero:",
       "text": "No almacenamos sus datos personales — toda la información se elimina después de la sesión."
+    },
+    "atRisk": {
+      "sectionTitle": "Qué más puede estar en riesgo",
+      "sectionSubtitle": "Una condena puede desencadenar consecuencias que van mucho más allá de la sentencia misma. Estas se llaman consecuencias colaterales — y pueden afectar el trabajo, la vivienda, los beneficios, el estatus migratorio y más de su familiar. El momento más importante para plantear estas cuestiones con un abogado es antes de cualquier decisión sobre un acuerdo de culpabilidad.",
+      "employment": {
+        "title": "Empleo y licencias profesionales",
+        "text": "Una condena puede resultar en pérdida de empleo, fallar verificaciones de antecedentes, o la suspensión automática de una licencia profesional (enfermería, docencia, licencia de conductor comercial, contratista, etc.). Estas consecuencias pueden ocurrir incluso antes de que se complete la sentencia."
+      },
+      "housing": {
+        "title": "Vivienda pública y subsidiada",
+        "text": "Muchas autoridades de vivienda pública exigen la rescisión del contrato de arrendamiento tras ciertas condenas. Esto puede afectar a todo el hogar, no solo a la persona condenada. Los arrendadores privados también pueden negarse legalmente a alquilar a alguien con antecedentes penales."
+      },
+      "benefits": {
+        "title": "Beneficios gubernamentales (SNAP, SSI, Medicaid)",
+        "text": "Algunos programas federales de beneficios restringen la elegibilidad tras ciertas condenas por delitos graves relacionados con drogas. El impacto varía según el estado y el tipo de beneficio, pero puede afectar el acceso de todo el hogar a asistencia alimentaria y atención médica."
+      },
+      "immigration": {
+        "title": "Estatus migratorio",
+        "text": "Incluso una condena por delito menor puede desencadenar la deportación, la denegación de la ciudadanía o la pérdida de elegibilidad para visa de no ciudadanos. Este riesgo puede aplicarse a una declaración de culpabilidad incluso antes del juicio. Un abogado de inmigración debe revisar el caso con anticipación."
+      },
+      "custody": {
+        "title": "Custodia de menores y tribunal de familia",
+        "text": "Los cargos relacionados con violencia, drogas o niños pueden desencadenar la intervención de Servicios de Protección Infantil o usarse como fundamento para modificar la custodia en el tribunal de familia. Estos procedimientos pueden correr en paralelo al caso penal con sus propios plazos."
+      },
+      "firearms": {
+        "title": "Armas de fuego, voto y derechos civiles",
+        "text": "Una condena por delito grave típicamente resulta en la pérdida del derecho a poseer armas de fuego bajo la ley federal. En muchos estados, los derechos de voto se suspenden temporalmente durante el encarcelamiento o la libertad condicional. Algunos estados restauran estos derechos automáticamente; otros requieren una solicitud por separado."
+      },
+      "warningStrong": "Estas consecuencias a veces se llaman \"castigos invisibles\"",
+      "warningText": " — no se anuncian en el tribunal y el abogado que maneja el caso penal puede no mencionarlas a menos que se le pregunte. El mejor momento para abordarlas es antes de que se tome cualquier decisión sobre un acuerdo de culpabilidad.",
+      "warningCta": "Más información en nuestra página de Consecuencias Colaterales."
+    },
+    "longTerm": {
+      "sectionTitle": "Si su familiar lleva un tiempo bajo custodia",
+      "sectionSubtitle": "Las primeras 48 horas pasan. El caso continúa durante semanas o meses. Aquí le explicamos cómo apoyar a alguien bajo custodia durante un período más largo y cómo planificar lo que viene después.",
+      "contact": {
+        "title": "Mantener el contacto",
+        "item1": "Las llamadas telefónicas desde la cárcel son grabadas y pueden ser monitoreadas. No hable del caso, la evidencia ni nada que pueda usarse en el tribunal.",
+        "item2": "El correo normalmente es leído por el personal del establecimiento. Aplique la misma precaución a las cartas escritas.",
+        "item3": "Las reglas de visitas en persona varían según el establecimiento. Llame a la cárcel para conocer los horarios, las listas de visitantes aprobados y los requisitos de identificación.",
+        "item4": "Mantener el contacto de manera constante es importante para la salud mental de la persona y para demostrar el apoyo familiar al tribunal."
+      },
+      "financial": {
+        "title": "Apoyo económico durante la custodia",
+        "item1": "La mayoría de los establecimientos tienen un sistema de cuenta de comisaría. Generalmente puede depositar dinero en línea, por teléfono o mediante giro postal. La persona puede usar estos fondos para llamadas, alimentos e higiene.",
+        "item2": "Los costos de las llamadas desde la cárcel suelen ser elevados. Servicios como Securus e ICSolutions son proveedores comunes — puede configurar una cuenta prepagada para reducir el costo por llamada.",
+        "item3": "Si está administrando sus finanzas o propiedades mientras está bajo custodia, un poder notarial preparado con la ayuda de una organización de asistencia legal puede autorizarle a actuar en su nombre."
+      },
+      "caseSupport": {
+        "title": "Apoyar su caso desde el exterior",
+        "item1": "Mantenga contacto con su abogado o defensor público. Ellos pueden informarle sobre las fechas del tribunal y qué documentación o referencias de carácter necesitan.",
+        "item2": "Reúna referencias de carácter de empleadores, miembros de la comunidad, maestros o líderes religiosos. El tribunal puede recibir cartas escritas por personas que conocen bien a su familiar.",
+        "item3": "En casos relacionados con drogas, ayudarles a inscribirse en un programa de tratamiento — incluso desde la custodia — puede influir en el resultado de la sentencia. Consulte al abogado qué programas están disponibles."
+      },
+      "release": {
+        "title": "Planificar para la liberación",
+        "item1": "Las personas que salen de custodia a menudo necesitan documentos de identidad, un lugar donde vivir y un plan de empleo de inmediato al salir. Comenzar esta planificación con anticipación es importante.",
+        "item2": "Algunas condiciones de liberación (libertad condicional, reportes, programas de tratamiento) comienzan el día de la liberación. Conocer las condiciones con antelación ayuda a evitar violaciones.",
+        "item3": "Nuestra página de Recursos de Reinserción cubre en detalle la restauración de documentos de identidad, la vivienda con antecedentes y los derechos laborales.",
+        "linkText": "Recursos de Reinserción"
+      },
+      "selfCare": {
+        "title": "Cuidarse a uno mismo",
+        "text": "Apoyar a alguien durante un largo proceso legal es agotador y estresante. Muchas familias experimentan ansiedad, presión financiera y tensión en las relaciones durante este tiempo. Los recursos de salud mental de este sitio también son para los familiares, no solo para los acusados. Buscar apoyo no es señal de rendirse.",
+        "linkText": "Recursos de Salud Mental y Tratamiento"
+      }
     }
   },
   "courtLocator": {
