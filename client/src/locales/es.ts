@@ -2209,8 +2209,8 @@ export default {
         "next": "Siguiente"
       },
       "caseStageWarning": {
-        "title": "No se seleccionó una etapa del caso",
-        "description": "No ha seleccionado una etapa del caso. La orientación tomará como referencia la etapa de arresto, lo que puede no corresponder a su situación. ¿Desea volver y seleccionar su etapa, o continuar con la etapa de arresto?",
+        "title": "Sin etapa del caso seleccionada",
+        "description": "No ha seleccionado una etapa del caso. La orientación usará la etapa de arresto de forma predeterminada, lo que puede no coincidir con su situación actual. ¿Desea volver y seleccionar su etapa, o continuar con la etapa de arresto?",
         "continueAnyway": "Continuar con la etapa de arresto",
         "goBack": "Volver y seleccionar"
       },
