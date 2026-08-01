@@ -1127,6 +1127,7 @@ export default {
         "findCourt": "Si tiene tratamiento ordenado por el tribunal como condición de fianza o desviación, confirme con su abogado qué proveedores están aprobados por el tribunal antes de inscribirse.",
         "angerTitle": "Programas de manejo de la ira",
         "angerBody": "No existe una base de datos nacional de proveedores de manejo de la ira. Los programas aprobados por el tribunal varían por condado y a veces por juez. Contacte al secretario del tribunal o a su abogado para preguntar si su condado tiene una lista de proveedores aprobados. Antes de inscribirse en cualquier programa, confirme que es aceptable para el tribunal.",
+        "angerQuestionsLabel": "Preguntas para hacer a cualquier proveedor de manejo de la ira:",
         "angerQuestions": [
           "¿Proporciona una carta de finalización con formato para presentación ante el tribunal?",
           "¿Están reconocidos o aprobados por los tribunales de este condado?",

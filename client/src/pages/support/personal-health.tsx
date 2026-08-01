@@ -299,7 +299,7 @@ function TreatmentConnectionSection() {
             <Card className="border border-border/60">
               <CardContent className="p-4">
                 <p className="text-sm font-semibold text-foreground mb-3">
-                  Questions to ask any anger management provider:
+                  {t('support.personalHealth.treatmentConnection.angerQuestionsLabel')}
                 </p>
                 <ul className="space-y-2">
                   {Array.isArray(angerQuestions) && angerQuestions.map((q, i) => (

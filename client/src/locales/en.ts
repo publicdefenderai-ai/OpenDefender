@@ -1125,6 +1125,7 @@ export default {
         "findCourt": "If you have court-mandated treatment as a condition of bail or diversion, confirm with your attorney which providers are court-approved before enrolling.",
         "angerTitle": "Anger management programs",
         "angerBody": "There is no national database of anger management providers. Court-approved programs vary by county and sometimes by judge. Contact the court clerk or your attorney to ask if your county has a list of approved providers. Before enrolling in any program, confirm it is court-acceptable. Completing a non-approved program will not satisfy a court requirement.",
+        "angerQuestionsLabel": "Questions to ask any anger management provider:",
         "angerQuestions": [
           "Do you provide a letter of completion formatted for court submission?",
           "Are you recognized or approved by courts in this county?",
