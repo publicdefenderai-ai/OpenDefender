@@ -9,7 +9,7 @@
  * Status: Persisted per-item in localStorage under key `atty-review-v1`.
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 // Prevent search engines from indexing this internal admin tool.
@@ -265,8 +265,6 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
 
 // ── Persistence ───────────────────────────────────────────────────────────────
 
-const STORAGE_KEY = "atty-review-v1";
-
 interface ItemState {
   status: ReviewStatus;
   reviewedBy: string;
@@ -276,25 +274,47 @@ interface ItemState {
 
 type StoredState = Record<string, ItemState>;
 
-function loadState(): StoredState {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
-  } catch {
-    return {};
-  }
-}
-
-function saveState(state: StoredState) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch {
-    // localStorage unavailable
-  }
-}
-
 function defaultItemState(): ItemState {
   return { status: "pending", reviewedBy: "", reviewedDate: "", notes: "" };
+}
+
+// Server-side API helpers — all reads/writes go through the server so the
+// whole team shares one view. The admin key is passed on every request.
+
+async function fetchAllStatus(adminKey: string): Promise<StoredState> {
+  const res = await fetch("/api/admin/attorney-review-status", {
+    headers: { "x-admin-api-key": adminKey },
+  });
+  if (!res.ok) return {};
+  const data = await res.json();
+  return data.items ?? {};
+}
+
+/** Returns true if the save succeeded, false on any network/server error. */
+async function saveItemStatus(adminKey: string, id: string, state: ItemState): Promise<boolean> {
+  try {
+    const res = await fetch(`/api/admin/attorney-review-status/${encodeURIComponent(id)}`, {
+      method: "PUT",
+      headers: { "x-admin-api-key": adminKey, "Content-Type": "application/json" },
+      body: JSON.stringify(state),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+/** Returns true if the reset succeeded. */
+async function resetAllStatus(adminKey: string): Promise<boolean> {
+  try {
+    const res = await fetch("/api/admin/attorney-review-status", {
+      method: "DELETE",
+      headers: { "x-admin-api-key": adminKey },
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
 }
 
 // ── Sub-components ────────────────────────────────────────────────────────────
@@ -321,25 +341,82 @@ function StatusBadge({ status }: { status: ReviewStatus }) {
   );
 }
 
+/**
+ * ReviewCard — renders one checklist item.
+ *
+ * onChange       : called immediately for status / date changes (single events).
+ * onChangeDebounced: called ~800 ms after the user stops typing in text fields
+ *                    (reviewedBy, notes) to avoid a server round-trip per keystroke.
+ */
 function ReviewCard({
   item,
   state,
   onChange,
+  onChangeDebounced,
 }: {
   item: ChecklistItem;
   state: ItemState;
   onChange: (next: ItemState) => void;
+  onChangeDebounced: (next: ItemState) => void;
 }) {
   const [expanded, setExpanded] = useState(false);
+  // Local text state so the input stays responsive while debounce waits
+  const [localReviewedBy, setLocalReviewedBy] = useState(state.reviewedBy);
+  const [localNotes, setLocalNotes] = useState(state.notes);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // latestStateRef always holds the most-recent merged state so the debounced
+  // callback reads fresh values at fire-time rather than stale closure values.
+  // Without this, typing in notes and then cycling status before 800 ms would
+  // cause the debounce to overwrite the new status with the old one.
+  const latestStateRef = useRef<ItemState>({ ...state });
+
+  // Keep ref in sync whenever parent state OR local text changes.
+  useEffect(() => {
+    latestStateRef.current = {
+      ...state,
+      reviewedBy: localReviewedBy,
+      notes: localNotes,
+    };
+  });
+
+  // Sync local text state if parent state is reset from outside (e.g. global reset)
+  useEffect(() => { setLocalReviewedBy(state.reviewedBy); }, [state.reviewedBy]);
+  useEffect(() => { setLocalNotes(state.notes); }, [state.notes]);
+
   const cfg = STATUS_CONFIG[state.status];
+
+  function scheduleTextSave() {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      // Read from ref at fire-time — always contains the latest merged state.
+      onChangeDebounced(latestStateRef.current);
+    }, 800);
+  }
 
   function cycleStatus() {
     const next = NEXT_STATUS[state.status];
-    onChange({
-      ...state,
+    const merged: ItemState = {
+      ...latestStateRef.current,
       status: next,
       reviewedDate: next === "cleared" ? new Date().toISOString().slice(0, 10) : state.reviewedDate,
-    });
+    };
+    latestStateRef.current = merged;
+    onChange(merged);
+  }
+
+  function handleReviewedByChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const val = e.target.value;
+    setLocalReviewedBy(val);
+    // latestStateRef will be updated on the next render via the effect above;
+    // because scheduleTextSave fires async (800ms later), the ref will be current.
+    scheduleTextSave();
+  }
+
+  function handleNotesChange(e: React.ChangeEvent<HTMLTextAreaElement>) {
+    const val = e.target.value;
+    setLocalNotes(val);
+    scheduleTextSave();
   }
 
   return (
@@ -394,8 +471,8 @@ function ReviewCard({
               <label className="block text-xs font-semibold text-gray-500 mb-1">Reviewed by (initials)</label>
               <input
                 type="text"
-                value={state.reviewedBy}
-                onChange={e => onChange({ ...state, reviewedBy: e.target.value })}
+                value={localReviewedBy}
+                onChange={handleReviewedByChange}
                 placeholder="e.g. J.D.S."
                 className="w-full text-sm border border-gray-300 rounded px-2 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
@@ -405,7 +482,11 @@ function ReviewCard({
               <input
                 type="date"
                 value={state.reviewedDate}
-                onChange={e => onChange({ ...state, reviewedDate: e.target.value })}
+                onChange={e => {
+                  const merged = { ...latestStateRef.current, reviewedDate: e.target.value };
+                  latestStateRef.current = merged;
+                  onChange(merged);
+                }}
                 className="w-full text-sm border border-gray-300 rounded px-2 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400"
               />
             </div>
@@ -430,8 +511,8 @@ function ReviewCard({
           <div>
             <label className="block text-xs font-semibold text-gray-500 mb-1">Attorney notes</label>
             <textarea
-              value={state.notes}
-              onChange={e => onChange({ ...state, notes: e.target.value })}
+              value={localNotes}
+              onChange={handleNotesChange}
               placeholder="Observations, required changes, follow-up items…"
               rows={3}
               className="w-full text-sm border border-gray-300 rounded px-2 py-1.5 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 resize-y"
@@ -529,35 +610,66 @@ export default function AdminAttorneyReview() {
   // "checking" = on mount, re-verifying stored key server-side before showing content.
   // Never trust sessionStorage alone — always confirm with /api/admin/verify-key first.
   const [authed, setAuthed] = useState(false);
+  const [adminKey, setAdminKey] = useState<string>("");
   const [checking, setChecking] = useState(true);
+  const [loadingStatus, setLoadingStatus] = useState(false);
   const [itemStates, setItemStates] = useState<StoredState>({});
+  // Track in-flight saves to show a saving indicator
+  const [saving, setSaving] = useState(false);
+  // Show a banner when a save fails so the user isn't misled
+  const [saveError, setSaveError] = useState(false);
+
+  // Load server-side status once authenticated.
+  async function loadFromServer(key: string) {
+    setLoadingStatus(true);
+    try {
+      const fetched = await fetchAllStatus(key);
+      setItemStates(fetched);
+    } finally {
+      setLoadingStatus(false);
+    }
+  }
 
   useEffect(() => {
-    setItemStates(loadState());
     const stored = sessionStorage.getItem("adminKey");
     if (!stored) {
-      // No key stored — go straight to login form
       setChecking(false);
       return;
     }
     // Re-verify the stored key against the server on every mount.
-    // A stale or forged sessionStorage value is rejected here.
-    verifyAdminKey(stored).then(valid => {
+    verifyAdminKey(stored).then(async valid => {
       if (valid) {
+        setAdminKey(stored);
         setAuthed(true);
+        await loadFromServer(stored);
       } else {
-        // Key is invalid or expired — clear it and show the login form
         sessionStorage.removeItem("adminKey");
       }
       setChecking(false);
     });
   }, []);
 
-  function updateItem(id: string, next: ItemState) {
+  const updateItem = useCallback(async (id: string, next: ItemState) => {
     const updated = { ...itemStates, [id]: next };
     setItemStates(updated);
-    saveState(updated);
-  }
+    setSaving(true);
+    setSaveError(false);
+    const ok = await saveItemStatus(adminKey, id, next);
+    setSaving(false);
+    if (!ok) setSaveError(true);
+  }, [itemStates, adminKey]);
+
+  // Debounced variant — same logic, exposed separately so ReviewCard can call it
+  // after text-field changes without causing a per-keystroke HTTP request.
+  const updateItemDebounced = useCallback(async (id: string, next: ItemState) => {
+    // Update local state immediately so other derived values (counts) stay current
+    setItemStates(prev => ({ ...prev, [id]: next }));
+    setSaving(true);
+    setSaveError(false);
+    const ok = await saveItemStatus(adminKey, id, next);
+    setSaving(false);
+    if (!ok) setSaveError(true);
+  }, [adminKey]);
 
   function getState(id: string): ItemState {
     return itemStates[id] ?? defaultItemState();
@@ -573,7 +685,19 @@ export default function AdminAttorneyReview() {
   }
 
   if (!authed) {
-    return <AdminAuthGate onAuth={(_key: string) => setAuthed(true)} />;
+    return <AdminAuthGate onAuth={(key: string) => {
+      setAdminKey(key);
+      setAuthed(true);
+      loadFromServer(key);
+    }} />;
+  }
+
+  if (loadingStatus) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <p className="text-sm text-gray-500">Loading shared review status…</p>
+      </div>
+    );
   }
 
   const highItems = CHECKLIST_ITEMS.filter(i => i.risk === "high");
@@ -589,10 +713,15 @@ export default function AdminAttorneyReview() {
     window.print();
   }
 
-  function handleReset() {
-    if (confirm("Reset ALL item statuses to pending? This cannot be undone.")) {
-      setItemStates({});
-      saveState({});
+  async function handleReset() {
+    if (confirm("Reset ALL item statuses to pending? This resets the shared server state and cannot be undone.")) {
+      const ok = await resetAllStatus(adminKey);
+      if (ok) {
+        setItemStates({});
+        setSaveError(false);
+      } else {
+        setSaveError(true);
+      }
     }
   }
 
@@ -608,7 +737,8 @@ export default function AdminAttorneyReview() {
             </div>
             <p className="text-xs text-gray-500 mt-0.5 hidden sm:block">
               Source of truth: <code className="bg-gray-100 px-1 rounded">docs/attorney-review-checklist.md</code>
-              {" · "}Status persisted in <code className="bg-gray-100 px-1 rounded">localStorage</code>
+              {" · "}Status shared server-side — visible to all team members
+              {saving && <span className="ml-1 text-blue-500 italic">saving…</span>}
             </p>
           </div>
           <div className="flex items-center gap-1.5 shrink-0 flex-wrap justify-end">
@@ -635,6 +765,25 @@ export default function AdminAttorneyReview() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 pt-6 space-y-8">
+
+        {/* Save error banner */}
+        {saveError && (
+          <div className="rounded-lg border border-red-300 bg-red-50 px-4 py-3 flex items-start gap-3">
+            <span className="text-red-600 font-bold shrink-0">⚠</span>
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold text-red-800">Save failed</p>
+              <p className="text-xs text-red-700 mt-0.5">
+                Your last change could not be saved to the server. Check your connection and try again.
+                Other team members may not see this change until it succeeds.
+              </p>
+            </div>
+            <button
+              onClick={() => setSaveError(false)}
+              className="shrink-0 text-red-400 hover:text-red-600 text-lg leading-none"
+              aria-label="Dismiss"
+            >×</button>
+          </div>
+        )}
 
         {/* Launch readiness bar */}
         <div className={`rounded-xl border-2 p-4 sm:p-5 ${allHighCleared ? "border-green-300 bg-green-50" : "border-red-200 bg-red-50"}`}>
@@ -690,6 +839,7 @@ export default function AdminAttorneyReview() {
                 item={item}
                 state={getState(item.id)}
                 onChange={next => updateItem(item.id, next)}
+                onChangeDebounced={next => updateItemDebounced(item.id, next)}
               />
             ))}
           </div>
@@ -710,6 +860,7 @@ export default function AdminAttorneyReview() {
                 item={item}
                 state={getState(item.id)}
                 onChange={next => updateItem(item.id, next)}
+                onChangeDebounced={next => updateItemDebounced(item.id, next)}
               />
             ))}
           </div>
@@ -717,7 +868,7 @@ export default function AdminAttorneyReview() {
 
         {/* Footer note */}
         <p className="text-xs text-gray-400 text-center pb-4">
-          Status is stored locally in this browser only. To share progress with the team, use the print/export button above to generate a PDF.
+          Status is stored server-side and shared with all team members. Changes are saved immediately.
           Full checklist with file line ranges: <code>docs/attorney-review-checklist.md</code>
         </p>
       </div>

@@ -272,12 +272,12 @@ const p1UnmappedScenarios: EvalScenario[] = [
     },
   },
   {
-    // PR (Puerto Rico) is a territory not yet in jurisdictionRules — still unmapped
-    label: 'P1-14: Unmapped territory (PR) — uncertainty notice fires',
+    // PR (Puerto Rico) — territory entries added in 2026-07; now mapped with medium confidence
+    label: 'P1-14: PR (mapped territory, 2026-07) × arrest — no isEstimate on deadlines',
     input: { ...baseMapped, jurisdiction: 'PR', charges: 'theft' },
     expect: {
-      requiredUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
-      someDeadlineIsEstimate: true,
+      noDeadlineIsEstimate: true,
+      absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
 ];

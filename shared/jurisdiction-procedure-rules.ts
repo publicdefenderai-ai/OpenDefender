@@ -32,12 +32,15 @@
  * since 2026-03) and are back at lastVerified: '2026-03' pending real re-verification.
  * FL, AZ, NJ, MI, NC, VA did get genuine 2026-07 review and correctly keep that date.
  *
- * Coverage: All 50 US states + DC + federal (52 entries).
+ * Coverage: All 50 US states + DC + federal + 5 territories (57 entries).
  *   52 high-confidence: all 50 states + DC + federal
- *    0 medium-confidence
- *    0 low-confidence (as a whole-record rating — see PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS
- *    below for jurisdictions whose preliminaryHearing/discoveryDeadline fields specifically
- *    are unverified placeholder text, independent of the record's overall dataConfidence)
+ *    5 medium-confidence: AS, GU, MP, PR, VI (territory rules verified 2026-07
+ *                          from territory codes; injected into AI prompts with
+ *                          qualifying language)
+ *    0 low-confidence: none (as a whole-record rating — see
+ *    PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS below for jurisdictions whose
+ *    preliminaryHearing/discoveryDeadline fields specifically are unverified
+ *    placeholder text, independent of the record's overall dataConfidence)
  */
 
 export interface JurisdictionProcedureRule {
@@ -49,6 +52,11 @@ export interface JurisdictionProcedureRule {
   // ── Procedural deadline strings (single source of truth) ─────────────────
   preliminaryHearing: string;  // e.g. "Within 10 court days for felonies"
   discoveryDeadline: string;   // e.g. "30 days after arraignment"
+
+  /** Approximate eligibility threshold — varies by county and changes annually with FPL. */
+  publicDefenderIncome: string;
+  /** Brief description of the jurisdiction's bail system. */
+  bailSystem: string;
 
   // ── Structured data for AI prompt injection ───────────────────────────────
   arraignmentHours: number;
@@ -110,6 +118,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailReformNote: 'Bail Reform Act of 1984 (18 U.S.C. § 3142) creates presumption of release on least restrictive conditions. Detention permitted only if defendant poses a danger or flight risk.',
     preliminaryHearing: 'Within 14 days if in custody, 21 days if released',
     discoveryDeadline: 'Ongoing obligation',
+    publicDefenderIncome: 'Approximately 125% federal poverty level — apply to federal public defender office',
+    bailSystem: 'Pretrial services assessment',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — this entry's arraignment/
     // bail/speedy-trial fields were not reviewed in the 2026-07 pass (only the
@@ -142,6 +152,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailReformNote: 'California retains a cash bail system. SB 10 (2018) to eliminate cash bail was suspended pending voter referendum and did not take effect. OR (own recognizance) release is available and widely used.',
     preliminaryHearing: 'Within 10 court days for felonies',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Approximately 2x federal poverty level (varies by county)',
+    bailSystem: 'Schedule-based bail system',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above
     // for why this wasn't bumped to 2026-07 with the rest of the file.
@@ -172,6 +184,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailReformNote: 'Bail reform law (effective January 2020, amended 2020 and 2022) eliminated cash bail for most misdemeanors and non-violent felonies. Cash bail still permitted for violent felonies and certain other charges. Non-monetary conditions are the default for qualifying offenses.',
     preliminaryHearing: 'Within 120 hours for felonies',
     discoveryDeadline: '20 days after arraignment (in custody) or 35 days (not in custody)',
+    publicDefenderIncome: 'Varies by county — apply to local public defender or legal aid office',
+    bailSystem: 'Cash bail reform — limited detention',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
     lastVerified: '2026-03',
@@ -201,6 +215,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Texas uses a cash bail system. Magistrate sets bail amount at initial appearance. Bail schedules exist in many counties.',
     preliminaryHearing: 'Not required — grand jury indictment for felonies',
     discoveryDeadline: 'Ongoing open-file obligation; witness list due 20 days before trial',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Commercial bail bond system',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
     lastVerified: '2026-03',
@@ -230,6 +246,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Florida uses a cash bail system with bail schedules. Article I, § 14 of the Florida Constitution governs pretrial release. Traffic infractions governed by Fla. R. Traf. Ct. 6.325 (180-day period from service of citation; unamended as of 2026-07). Juvenile delinquency speedy trial governed by Fla. R. Juv. P. 8.090 (90-day period from filing of petition; unamended as of 2026-07).',
     preliminaryHearing: 'Within 21 days for felonies',
     discoveryDeadline: 'Within 15 days of demand',
+    publicDefenderIncome: 'Approximately 200% federal poverty level — apply to local public defender',
+    bailSystem: 'Traditional bail system with pretrial services',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -260,6 +278,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailReformNote: 'Illinois eliminated cash bail statewide effective September 18, 2023, under the Pretrial Fairness Act (part of the SAFE-T Act). All pretrial detention decisions are now based on dangerousness and flight risk under 725 ILCS 5/110-2. Cash bail is no longer available.',
     preliminaryHearing: 'Within 30 days if in custody',
     discoveryDeadline: '28 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Pretrial Fairness Act — no cash bail (eff. Sept 2023)',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
     lastVerified: '2026-03',
@@ -289,6 +309,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Pennsylvania uses monetary bail. Bail is set at the preliminary arraignment. Bail reduction hearings are available.',
     preliminaryHearing: 'Within 14 days of preliminary arraignment',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Approximately federal poverty guidelines — apply to local public defender',
+    bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
     lastVerified: '2026-03',
@@ -320,6 +342,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Ohio uses a cash bail system. Bail is set at initial appearance. OR release is available for minor offenses.',
     preliminaryHearing: 'Within 10 days if in custody',
     discoveryDeadline: '21 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
     lastVerified: '2026-03',
@@ -349,6 +373,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Georgia uses a commercial surety bail system. Bond hearings are held at initial appearance. Georgia has significant issues with commercial bail bondsmen.',
     preliminaryHearing: 'Within 30 days if in custody',
     discoveryDeadline: '10 days before trial',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
     // ATTORNEY REVIEW NEEDED: HB 776 (2021) created automatic open-file discovery
@@ -380,6 +406,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'North Carolina uses a cash bail system. Bail is set at initial appearance before a magistrate.',
     preliminaryHearing: 'Within 15 working days if in custody (N.C. Gen. Stat. § 15A-606)',
     discoveryDeadline: '15 days after arraignment (approximate; § 15A-902 is request-triggered)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -408,6 +436,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Michigan uses a cash bail system. Bail is set at arraignment. Personal recognizance bonds are available.',
     preliminaryHearing: 'Within 14 days of arraignment (MCL § 766.4)',
     discoveryDeadline: '21 days after arraignment (approximate; MCR 6.201 is request-triggered)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -436,6 +466,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailReformNote: 'The Criminal Justice Reform Act (effective January 1, 2017) eliminated cash bail for almost all defendants. Pretrial detention decisions are based on risk assessment using the Public Safety Assessment (PSA) tool and a judicial dangerousness finding. New Jersey was among the first states to eliminate cash bail statewide.',
     preliminaryHearing: 'Within 20 days for indictable offenses (N.J. Ct. R. 3:4-3)',
     discoveryDeadline: '20 days after indictment/arraignment (N.J. Ct. R. 3:13-3)',
+    publicDefenderIncome: 'Individual: $25,000, Family of 2: $34,000',
+    bailSystem: 'Pretrial services assessment — bail reform (no cash bail since 2017)',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -465,6 +497,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Virginia uses a cash bail system with secured and unsecured bonds. Bail hearings are conducted by magistrates.',
     preliminaryHearing: 'Within 10 days if in custody (Va. Sup. Ct. Rule 3A:5)',
     discoveryDeadline: '21 days after arraignment (approximate; Va. Sup. Ct. R. 3A:11 is motion-based)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -495,6 +529,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Washington uses a cash bail system. Courts may impose non-monetary conditions of release. OR release is common for non-violent offenses.',
     preliminaryHearing: 'Within 10 court days if in custody',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Pretrial services assessment',
     dataConfidence: 'high',
     // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
     lastVerified: '2026-03',
@@ -525,6 +561,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Arizona has a constitutional right to bail except for capital offenses or offenses showing proof evident. Ariz. Const. Art. II § 22.',
     preliminaryHearing: 'Within 10 days if in custody (Ariz. R. Crim. P. 5.1)',
     discoveryDeadline: '10 days after arraignment (Ariz. R. Crim. P. 15.1)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -553,6 +591,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Massachusetts uses monetary bail. Bail is set at arraignment. OR release is available. Dangerousness hearings (M.G.L. ch. 276 § 58A) allow pretrial detention without bail for certain offenses.',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -581,6 +621,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Tennessee uses a cash bail system. Bail is set at initial appearance before a magistrate.',
     preliminaryHearing: 'Within 10 days if in custody (Tenn. R. Crim. P. 5)',
     discoveryDeadline: '30 days after arraignment (approximate; Rule 16 is request-based)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -611,6 +653,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Indiana uses a cash bail system with surety bonds. OR release is available for lower-level offenses.',
     preliminaryHearing: 'Promptly after arrest (initial hearing, IC § 35-33-7-1; Indiana uses initial hearing rather than a separate preliminary hearing)',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -638,6 +682,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 30 days if in custody',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
     notes: 'Non-monetary release conditions must be considered first under Mo. R. Crim. P. 33.01 before monetary bail is imposed. Cash bail remains available and widely used; no statewide reform enacted as of 2026.',
@@ -667,6 +713,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Maryland uses a cash bail system with bond options. Commissioner sets bail at initial appearance; bail review available before a judge.',
     preliminaryHearing: 'Within 30 days for felonies (Md. Rule 4-221)',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system with bond options',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -697,6 +745,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Wisconsin uses a cash bail system. Bail is set at initial appearance.',
     preliminaryHearing: 'Within 10 days if in custody (Wis. Stat. § 970.03)',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -725,6 +775,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Colorado uses a cash bail system with monetary bond options. PR (personal recognizance) bonds are common.',
     preliminaryHearing: 'Within 30 days for felonies (Colo. R. Crim. P. 5)',
     discoveryDeadline: '35 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system with PR bond option',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -755,6 +807,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Minnesota uses a cash bail system. Bail is set at initial appearance.',
     preliminaryHearing: 'Within 7 days if in custody (Minn. R. Crim. P. 8.01)',
     discoveryDeadline: '28 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -783,6 +837,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'South Carolina uses a cash bail system. Bail is set at initial bond hearing.',
     preliminaryHearing: 'Defendant must request within 10 days of notice; hearing held within 10 days of request (SC Rule 2 SCRCP)',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -810,6 +866,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Defendant may demand hearing within 30 days of arrest (Ala. R. Crim. P. 5.1)',
     discoveryDeadline: 'Within 14 days of written request (Ala. R. Crim. P. 16.1)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -840,6 +898,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Louisiana uses a cash bail system. Commercial surety bonds are widely used.',
     preliminaryHearing: 'Within 30 days if in custody',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -867,6 +927,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days if in custody (Ky. R. Crim. P. 3.10)',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -897,6 +959,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     notes: 'Oregon uses a cash bail system with release agreements. OR release is widely used.',
     preliminaryHearing: 'Within 5 judicial days if in custody (ORS § 135.070)',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -924,6 +988,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days if in custody',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -951,6 +1017,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days for felonies',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -978,6 +1046,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 14 days if in custody (Utah Code Ann. § 77-11-2)',
     discoveryDeadline: '30 days after arraignment (approximate; Utah R. Crim. P. 16)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1005,6 +1075,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days if in custody (Iowa R. Crim. P. 2.2(5))',
     discoveryDeadline: '30 days after arraignment (approximate; Iowa R. Crim. P. 2.14)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1034,6 +1106,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 15 days (Nev. Rev. Stat. § 171.196)',
     discoveryDeadline: '30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1061,6 +1135,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days if in custody (Ark. R. Crim. P. 8.1)',
     discoveryDeadline: '30 days after arraignment (approximate; Ark. R. Crim. P. 17.1)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1088,6 +1164,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 30 days for felonies (Miss. R. Crim. P. 6.2; day count approximate)',
     discoveryDeadline: '30 days after arraignment (approximate; Miss. R. Crim. P. 17)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1117,6 +1195,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days if in custody (Kan. Stat. Ann. § 22-2902)',
     discoveryDeadline: '30 days after arraignment (approximate; Kan. Stat. Ann. § 22-3212)',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1147,6 +1227,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailReformNote: '2016 constitutional amendment allows courts to detain defendants on non-monetary conditions. New Mexico still uses cash bail but courts now have broader tools to impose release conditions.',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1174,6 +1256,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1201,6 +1285,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
     notes: 'Three-term rule timing is approximate and varies by county; confirm current term schedule with the local circuit court clerk.',
@@ -1229,6 +1315,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1256,6 +1344,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1283,6 +1373,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1310,6 +1402,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1337,6 +1431,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1364,6 +1460,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1391,6 +1489,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'reformed_limited_cash',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
     notes: 'Delaware bail reformed by SB 163 (2017), enacted as 81 Del. Laws ch. 356. Under 11 Del. C. § 2105, courts must consider a validated pretrial risk assessment before imposing monetary bail. Cash bail remains available but is disfavored for low-risk defendants. Delaware has not eliminated cash bail (unlike NJ), but it is no longer pure cash bail.',
@@ -1419,6 +1519,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1446,6 +1548,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1473,6 +1577,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1500,6 +1606,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1527,8 +1635,171 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
+  },
+
+  // ── Puerto Rico ───────────────────────────────────────────────────────────
+  // Puerto Rico operates under its own Criminal Procedure Rules (Reglas de
+  // Procedimiento Criminal de Puerto Rico), separate from federal rules.
+  PR: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arrest, felony)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'P.R. Laws Ann. tit. 34, R. Crim. P. 23 — initial appearance without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'P.R. Laws Ann. tit. 34, R. Crim. P. 23; bail determined at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 60,
+      notes: 'Puerto Rico has its own Criminal Procedure Code independent of federal rules. Speedy trial clock runs from arrest. The 180-day period applies to felonies; misdemeanors are subject to a shorter period. Puerto Rico courts also apply U.S. Sixth Amendment protections.',
+    },
+    speedyTrialSource: 'P.R. Laws Ann. tit. 34, R. Crim. P. 64; P.R. Const. Art. II § 11; U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel and family after arrest.',
+      source: 'P.R. Laws Ann. tit. 34, R. Crim. P. 23; P.R. Const. Art. II § 11',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10 days if in custody (felony)',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to Sociedad para Asistencia Legal (SAL) or Federal Public Defender',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'Puerto Rico has its own Criminal Procedure Code (Reglas de Procedimiento Criminal de Puerto Rico). Federal criminal procedure rules (Fed. R. Crim. P.) do NOT govern Puerto Rico territorial courts. Cases in the U.S. District Court for Puerto Rico are subject to federal rules.',
+  },
+
+  // ── Guam ──────────────────────────────────────────────────────────────────
+  // Guam operates under the Guam Code Annotated (GCA) Title 8 — Criminal
+  // Procedure, modeled after the Federal Rules of Criminal Procedure.
+  GU: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arraignment)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'Guam R. Crim. P. 5 — initial appearance without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'Guam R. Crim. P. 5; bail reviewed at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 180,
+      notes: 'Guam criminal procedure is closely modeled on the Federal Rules of Criminal Procedure. The 180-day speedy trial period runs from arraignment. Note: Guam is an unincorporated U.S. territory; federal constitutional protections including the Sixth Amendment apply.',
+    },
+    speedyTrialSource: 'Guam Code Ann. tit. 8, § 80.60; Guam Const. Art. I § 12; U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel.',
+      source: 'Guam R. Crim. P. 5; Guam Code Ann. tit. 8',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10 days if in custody (felony)',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to Guam Public Defender Service Corporation',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'Guam is an unincorporated U.S. territory. Criminal procedure is governed by the Guam Code Annotated (GCA), modeled on federal rules. U.S. Sixth Amendment and due process protections apply. Cases in U.S. District Court of Guam are governed by Federal Rules of Criminal Procedure.',
+  },
+
+  // ── U.S. Virgin Islands ───────────────────────────────────────────────────
+  // The V.I. Superior Court operates under the Virgin Islands Code (V.I.C.)
+  // and its own Superior Court Rules of Criminal Procedure.
+  VI: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arrest)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'V.I. Code Ann. tit. 5, § 3561; V.I. Super. Ct. R. Crim. P. 5 — without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'V.I. Code Ann. tit. 5, § 3561; bail reviewed at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 90,
+      notes: 'The U.S. Virgin Islands has its own criminal procedure code and Superior Court rules. Federal constitutional protections including the Sixth Amendment apply as an unincorporated territory. Speedy trial runs from arrest for felonies.',
+    },
+    speedyTrialSource: 'V.I. Code Ann. tit. 5, § 3562; V.I. Const. App. I; U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel after arrest.',
+      source: 'V.I. Super. Ct. R. Crim. P. 5; V.I. Code Ann. tit. 5',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10 days if in custody (felony)',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to V.I. Public Defender Services',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'U.S. Virgin Islands is an unincorporated U.S. territory. Criminal procedure is governed by V.I. Code Ann. tit. 5 and V.I. Superior Court Rules. Federal Rules of Criminal Procedure govern cases in the U.S. District Court of the Virgin Islands.',
+  },
+
+  // ── American Samoa ────────────────────────────────────────────────────────
+  // American Samoa has unique status: it is the only unincorporated,
+  // unorganized territory where residents are U.S. nationals (not citizens).
+  // Criminal procedure is governed by the American Samoa Code Annotated (ASCA).
+  AS: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arraignment)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'Am. Samoa Code Ann. (ASCA) tit. 46, § 46.1202 — initial appearance without unnecessary delay; 48-hour floor applied by practice',
+    bailHearingHours: 48,
+    bailHearingSource: 'ASCA tit. 46; bail reviewed at initial appearance before the High Court',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 180,
+      notes: 'American Samoa High Court follows procedures modeled on federal rules. American Samoa is the only U.S. territory whose residents are U.S. nationals, not citizens, though criminal procedure rights are substantially similar. Note: the U.S. Constitution does not apply by its own force to American Samoa; rights are conferred by the Revised Organic Act and local constitution.',
+    },
+    speedyTrialSource: 'ASCA tit. 46, § 46.1204; Am. Samoa Const. Art. I § 5; see also Fitisemanu v. United States, 1 F.4th 862 (10th Cir. 2021)',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Right to counsel applies at initial appearance.',
+      source: 'ASCA tit. 46; Am. Samoa Const. Art. I § 5',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10-14 days for felonies',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to American Samoa Government (ASG) Office of Public Defender',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'American Samoa is an unincorporated, unorganized U.S. territory with unique constitutional status. Residents are U.S. nationals but not citizens by birth. Criminal procedure is governed by the American Samoa Code Annotated (ASCA) and American Samoa High Court rules. Federal constitutional guarantees do not apply by their own force — rights derive from the Revised Organic Act and local organic act.',
+  },
+
+  // ── Northern Mariana Islands ───────────────────────────────────────────────
+  // The Commonwealth of the Northern Mariana Islands (CNMI) operates under the
+  // CNMI Code and its own Superior Court Criminal Rules.
+  MP: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arraignment)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'CNMI R. Crim. P. 5 — initial appearance without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'CNMI R. Crim. P. 5; bail reviewed at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 180,
+      notes: 'The CNMI became a U.S. commonwealth in 1978 under a Covenant with the United States. Most federal constitutional protections apply. Criminal procedure follows rules modeled on the Federal Rules of Criminal Procedure. Speedy trial runs from arraignment.',
+    },
+    speedyTrialSource: 'CNMI R. Crim. P. 48; CNMI Const. Art. I § 4(c); U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel after arrest.',
+      source: 'CNMI R. Crim. P. 5; CNMI Const. Art. I § 4',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10-14 days for felonies',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to CNMI Public Defender Office',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'The Commonwealth of the Northern Mariana Islands (CNMI) is a commonwealth in political union with the United States. Most federal constitutional protections apply by virtue of the 1978 Covenant. Criminal procedure is governed by the CNMI Code and CNMI Superior Court Criminal Rules, modeled on federal rules. Cases in U.S. District Court of the NMI are governed by Federal Rules of Criminal Procedure.',
   },
 
   // ── District of Columbia ──────────────────────────────────────────────────
@@ -1555,6 +1826,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailReformNote: 'D.C. operates largely without cash bail. The Bail Reform Act of 1966 and subsequent amendments created a system based on release on personal recognizance or non-monetary conditions as the default. Detention is permitted for serious cases upon a dangerousness finding.',
     preliminaryHearing: 'Within 10-14 days for felonies',
     discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination',
+    bailSystem: 'Cash bail system',
     dataConfidence: 'high',
     lastVerified: '2026-07',
   },
@@ -1625,6 +1898,9 @@ export function buildJurisdictionContextBlock(jurisdiction: string): string | nu
     'HAWAII': 'HI', 'NEW HAMPSHIRE': 'NH', 'MAINE': 'ME', 'MONTANA': 'MT',
     'RHODE ISLAND': 'RI', 'DELAWARE': 'DE', 'SOUTH DAKOTA': 'SD', 'NORTH DAKOTA': 'ND',
     'ALASKA': 'AK', 'VERMONT': 'VT', 'WYOMING': 'WY', 'DISTRICT OF COLUMBIA': 'DC',
+    'PUERTO RICO': 'PR', 'GUAM': 'GU', 'U.S. VIRGIN ISLANDS': 'VI',
+    'VIRGIN ISLANDS': 'VI', 'AMERICAN SAMOA': 'AS',
+    'NORTHERN MARIANA ISLANDS': 'MP', 'CNMI': 'MP',
     'FEDERAL': 'federal',
   };
 

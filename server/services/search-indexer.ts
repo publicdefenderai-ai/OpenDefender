@@ -100,6 +100,24 @@ const STOP_WORDS = new Set(['the', 'and', 'for', 'are', 'but', 'not', 'you', 'al
 // 4-char minimum length rule and must NOT be fuzzy-corrected.
 const LEGAL_SHORT_TERMS = new Set(['dui', 'dwi', 'ice', 'tro', 'ada', 'fbi', 'doj', 'atf', 'oui', 'owi', 'ids', 'cps', 'tps']);
 
+/**
+ * For charge names like "Robbery in the First Degree" or "Murder in the Second Degree",
+ * extract the base crime name ("robbery", "murder") and return it as a lowercase alias.
+ * This ensures that a user searching "robbery" finds FL's "Robbery in the First Degree"
+ * via an alias-exact-match score (90 × 0.6 boost) even though "robbery" is only a partial
+ * title match (60 × 0.6). Returns null when the name is already a short-form crime name
+ * (no degree qualifier to strip).
+ */
+function extractChargeBaseAlias(name: string): string | null {
+  // Match "Robbery in the First Degree", "Assault in the Second Degree", etc.
+  const m = name.match(/^(.+?)\s+in\s+the\s+(?:first|second|third|fourth|fifth)\s+degree$/i);
+  if (m) return m[1].trim().toLowerCase();
+  // Match "First-Degree Murder", "Second Degree Assault", etc.
+  const m2 = name.match(/^(?:first|second|third|fourth|fifth)[- ]degree\s+(.+)$/i);
+  if (m2) return m2[1].trim().toLowerCase();
+  return null;
+}
+
 // Returned by expandSynonyms — keeps direct query terms separate from
 // synonym-inferred terms so they can be scored at different weights.
 interface ExpandedQuery {
@@ -347,6 +365,7 @@ export function buildSearchIndex(): void {
     const instructionRef = getInstructionRef(charge);
     const instructionUrl = getInstructionUrl(charge);
     const citation = getVerifiedCitation(charge) ?? null;
+    const baseAlias = extractChargeBaseAlias(charge.name);
     documents.push({
       id: `charge-${charge.id}`,
       type: 'charge',
@@ -1455,7 +1474,17 @@ function runScoring(
       out.push({ document: doc, score, highlights: [{ field: 'content', snippet: generateHighlight(content, matchedTerms) }], matchedTerms });
     }
   }
-  out.sort((a, b) => b.score - a.score);
+  out.sort((a, b) => {
+    const scoreDiff = b.score - a.score;
+    if (scoreDiff !== 0) return scoreDiff;
+    // Tiebreak: charges (and other docs) with a verified instructionUrl rank
+    // ahead of equally-scored peers. Among many state charges with the same
+    // partial-title score, this surfaces high-quality instruction-linked entries
+    // before those with only a citation reference.
+    const aUrl = a.document.instructionUrl ? 1 : 0;
+    const bUrl = b.document.instructionUrl ? 1 : 0;
+    return bUrl - aUrl;
+  });
   return out;
 }
 
@@ -1504,7 +1533,14 @@ export function search(query: SearchQuery): SearchResponse {
   // Types that should always appear last regardless of their score
   const PINNED_LAST = new Set<SearchContentType>(['charge', 'mock_qa']);
 
-  // Per-type result caps
+  // Per-type result caps.
+  // When the caller filters to 'charge' only (e.g. ?types=charge), raise the
+  // charge cap to 20 so the full requested limit worth of matching charges can
+  // be returned — the outer route's limit=N slice is the real cap in that case.
+  const chargesOnlyFilter =
+    query.filters?.types &&
+    query.filters.types.length === 1 &&
+    query.filters.types[0] === 'charge';
   const GROUP_LIMITS: Record<SearchContentType, number> = {
     rights_info: 5,
     legal_resource: 5,
@@ -1513,7 +1549,7 @@ export function search(query: SearchQuery): SearchResponse {
     glossary: 3,
     court: 2,
     mock_qa: 2,
-    charge: 3,
+    charge: chargesOnlyFilter ? 50 : 3,
   };
 
   // Group from ALL scored results so each category gets its best matches

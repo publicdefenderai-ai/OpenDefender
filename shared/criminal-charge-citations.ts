@@ -1142,6 +1142,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Massachusetts Legislature — c. 266 § 120 Trespass",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-120/",
+    instructionRef: "MA Dist.Ct. Instr. 8.400",
+    instructionUrl: "https://www.mass.gov/doc/8400-criminal-trespass-gl-c-266-ss-120/download",
   },
   "ma-disorderly-conduct": {
     citation: "Mass. Gen. Laws c. 272, § 53",
@@ -1149,6 +1151,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-03",
     source: "Massachusetts Legislature — c. 272 § 53 Disorderly Conduct",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-53/",
+    instructionRef: "MA Dist.Ct. Instr. 9.100",
+    instructionUrl: "https://www.mass.gov/doc/9100-disorderly-conduct-gl-c-272-ss-53/download",
   },
   "ma-public-intoxication": {
     citation: "Mass. Gen. Laws c. 272, § 53",
@@ -12603,6 +12607,8 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     lastVerified: "2026-04",
     source: "Training data — Massachusetts disorderly conduct (misdemeanor); verify against Justia before promoting to high",
     sourceUrl: "https://law.justia.com/codes/massachusetts/section-53/",
+    instructionRef: "MA Dist.Ct. Instr. 9.100",
+    instructionUrl: "https://www.mass.gov/doc/9100-disorderly-conduct-gl-c-272-ss-53/download",
   },
   "sd-disorderly-conduct-misdemeanor": {
     citation: "S.D. Codified Laws § 22-18-35",

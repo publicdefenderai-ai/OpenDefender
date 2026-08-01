@@ -399,6 +399,19 @@ export const insertGuidanceFlagSchema = createInsertSchema(guidanceFlags).omit({
 export type InsertGuidanceFlag = z.infer<typeof insertGuidanceFlagSchema>;
 export type GuidanceFlag = typeof guidanceFlags.$inferSelect;
 
+// Attorney Pre-Launch Review Checklist — server-side shared state
+// Keyed by item ID (e.g. "H-1", "M-3"). One row per checklist item.
+export const attorneyReviewItems = pgTable("attorney_review_items", {
+  itemId: text("item_id").primaryKey(), // e.g. "H-1"
+  status: text("status").notNull().default("pending"), // pending | in-review | cleared
+  reviewedBy: text("reviewed_by").notNull().default(""),
+  reviewedDate: text("reviewed_date").notNull().default(""),
+  notes: text("notes").notNull().default(""),
+  updatedAt: timestamp("updated_at").defaultNow(),
+});
+
+export type AttorneyReviewItem = typeof attorneyReviewItems.$inferSelect;
+
 // AI daily cost tracking — persisted to survive server restarts
 export const aiDailyCosts = pgTable("ai_daily_costs", {
   date: text("date").primaryKey(), // YYYY-MM-DD UTC
