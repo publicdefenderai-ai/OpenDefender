@@ -133,6 +133,11 @@ interface EnhancedGuidanceData {
     id?: string;
     name: string;
     classification: string;
+    /**
+     * Internal/legacy statute section number. NOT verified unless dataConfidence is 'high'.
+     * Never display this to users — it may be synthesized. Use the `citation` field on the
+     * CriminalCharge DB entry (via getVerifiedCitation()) for any user-visible statute reference.
+     */
     code: string;
   }>;
   mockQA?: Array<{
@@ -686,7 +691,14 @@ function YourChargesSection({
   chargeClassifications,
   jurisdiction,
 }: {
-  chargeClassifications?: Array<{ name: string; classification: string; code: string }>;
+  chargeClassifications?: Array<{
+    id?: string;
+    name: string;
+    classification: string;
+    /** Internal/legacy field — NOT rendered to users. Only used for DB charge lookup fallback.
+     *  User-visible statute references come from getVerifiedCitation() on the matched DB entry. */
+    code: string;
+  }>;
   jurisdiction?: string;
 }) {
   const { t } = useTranslation();
