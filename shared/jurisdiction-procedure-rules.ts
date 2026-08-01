@@ -71,6 +71,10 @@ export interface JurisdictionProcedureRule {
     misdemeanor: number | null;
     misdemeanorInCustody?: number;
     notes?: string;               // e.g. "Term-of-court rule; defendant must demand"
+    /** Short user-facing note about a recent statutory change to this rule.
+     *  Emitted as a highlighted RULE CHANGE line in the AI prompt block so Claude
+     *  explicitly alerts users who may have read outdated material. */
+    reformNote?: string;
   };
   speedyTrialSource: string;
 
@@ -235,6 +239,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       felony: 175,
       misdemeanor: 90,
       notes: 'Clock runs from date formal charges are filed (amended eff. July 1, 2025; prior rule ran from arrest or service of notice to appear). After the period expires, defendant may file a notice of expiration of speedy trial; if not brought to trial within 30 days (recapture period, increased from 10 days by 2025 amendment), case is dismissed. Dismissal is without prejudice unless a constitutional speedy trial violation is independently established. Rule 3.134 also amended to allow pretrial release if formal charges are not brought within a reasonable time. — CONFORMING RULES STATUS (verified 2026-07): SC2022-1123 directed the Traffic Court Rules and Juvenile Delinquency Rules committees to consider consistent changes. The Traffic Court Rules Committee proposed amendments to Fla. R. Traf. Ct. 6.325 (Speedy Trial: Infractions Only) and 6.160 (Practice As In Criminal Rules) in Aug 2025; the Supreme Court\'s Nov 6, 2025 opinion (SC2023-1609) adopted only rules 6.340 and 6.480 and did NOT adopt the proposed 6.325 amendment. A second batch of proposed traffic court amendments was published Oct 15, 2025 and remains pending before the Court. The Juvenile Court Rules Committee proposed conforming amendments to Fla. R. Juv. P. 8.090 (Speedy Trial), published for comment Oct 15, 2025; the Oct 16, 2025 Supreme Court opinion (SC2025-0237) amended other juvenile rules but NOT 8.090. As of July 2026, neither Fla. R. Traf. Ct. 6.325 nor Fla. R. Juv. P. 8.090 has been amended to conform with the 3.191 changes. Recheck at next quarterly review.',
+      reformNote: 'Florida changed this rule effective July 1, 2025: the speedy trial clock now starts when formal charges are filed, not at arrest. The recapture period also increased from 10 days to 30 days. Users who have read older materials online may have the pre-2025 rule in mind.',
     },
     speedyTrialSource: 'Fla. R. Crim. P. 3.191 (as amended eff. July 1, 2025, SC2022-1123); Fla. R. Crim. P. 3.134',
     phoneCall: {
@@ -1994,11 +1999,17 @@ export function buildJurisdictionContextBlock(jurisdiction: string): string | nu
     const misdText = st.misdemeanor !== null ? `${st.misdemeanor} days (misdemeanor)` : null;
     const speedyParts = [felonyCustodyText, felonyText, misdText].filter(Boolean).join(' / ');
     lines.push(`• Speedy trial: ${qualifier ? qualifier + ' ' : ''}${speedyParts} (${rule.speedyTrialSource})`);
+    if (st.reformNote) {
+      lines.push(`  RULE CHANGE: ${st.reformNote}`);
+    }
     if (st.notes) {
       lines.push(`  Note: ${st.notes}`);
     }
   } else {
     lines.push(`• Speedy trial: No statutory deadline. Constitutional right only (${rule.speedyTrialSource}).`);
+    if (st.reformNote) {
+      lines.push(`  RULE CHANGE: ${st.reformNote}`);
+    }
     if (st.notes) {
       lines.push(`  Note: ${st.notes}`);
     }
