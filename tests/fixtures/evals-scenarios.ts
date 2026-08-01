@@ -760,11 +760,12 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-70: TN × arraignment stage — discovery deadline present',
+    label: 'P1-70: TN × arraignment stage — discovery deadline present (request-triggered, Tenn. R. Crim. P. 16)',
     input: { ...baseMapped, jurisdiction: 'TN', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'released' },
     expect: {
       deadlineEventKeywords: ['Discovery'],
-      deadlineTimeframeKeywords: ['30 days'],
+      // Tenn. R. Crim. P. 16 is request-triggered — no fixed post-arraignment deadline.
+      deadlineTimeframeKeywords: ['Upon request'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
