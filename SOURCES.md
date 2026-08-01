@@ -58,6 +58,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 ---
 
 ## 2. Criminal Charges Database
+**Public page:** `/data-sources` — Section §2 (Criminal Charges Database) and §8 (Jury Instruction References)
 
 **File:** `shared/criminal-charges.ts`
 
@@ -223,6 +224,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 ---
 
 ## 3. Legal Aid Organizations
+**Public page:** `/data-sources` — Section §7 (Legal Aid Organizations)
 
 **File:** `server/data/legal-aid-organizations-seed.ts`
 
@@ -265,6 +267,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 ---
 
 ## 4. Expungement Eligibility Data
+**Public page:** `/data-sources` — Section §5 (Expungement Eligibility)
 
 **File:** `client/src/lib/expungement-data.ts`
 
@@ -295,6 +298,7 @@ Each state entry in this file contains a `sources` array listing the exact legal
 ---
 
 ## 5. Diversion Programs
+**Public page:** `/data-sources` — Section §6 (Diversion Programs)
 
 **File:** `client/src/lib/diversion-programs-data.ts`
 
@@ -395,6 +399,7 @@ All statistics that appear in user-facing content are in `client/src/locales/en.
 ---
 
 ## 8. Static Editorial Pages
+**Public page:** `/data-sources` — Section §4 (Constitutional Rights)
 
 The following pages are manually authored and maintained by the platform team. They are not validated by the automated legal accuracy validator (which only applies to AI Case Guidance output).
 
@@ -473,6 +478,7 @@ These pages are template-driven with i18n content from `client/src/locales/en.ts
 ---
 
 ## 9. External APIs and Services
+**Public page:** `/data-sources` — Section §9 (External Validation APIs) and §10 (AI Guidance)
 
 ### AI Case Guidance
 - **Provider:** Anthropic Claude Sonnet 4 (claude-sonnet-4-6)
@@ -512,6 +518,7 @@ The validator runs only on AI-generated Case Guidance output, not on static edit
 ---
 
 ## 10a. Jurisdiction Procedure Rules
+**Public page:** `/data-sources` — Section §1 (Jurisdiction Procedure Rules)
 
 **File:** `shared/jurisdiction-procedure-rules.ts`
 
@@ -586,6 +593,7 @@ Two GitHub Actions workflows run on January 1, April 1, July 1, and October 1 at
 ---
 
 ## 10b. Collateral Consequences Data
+**Public page:** `/data-sources` — Section §3 (Collateral Consequences)
 
 **File:** `client/src/lib/collateral-consequences-data.ts`
 

@@ -1161,6 +1161,13 @@ export default function TechDocs() {
                 <span className="text-sm">Export Sample (CSV)</span>
                 <ExternalLink className="h-3 w-3 ml-auto text-muted-foreground" />
               </a>
+              <Link
+                href="/data-sources"
+                className="flex items-center gap-2 p-3 rounded-lg border hover:bg-muted transition-colors"
+              >
+                <Database className="h-4 w-4 text-muted-foreground" />
+                <span className="text-sm">Data Sources &amp; Methodology</span>
+              </Link>
               <a
                 href="https://github.com/publicdefenderai-ai/OpenDefender"
                 target="_blank"
