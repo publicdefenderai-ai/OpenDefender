@@ -128,6 +128,7 @@ interface EnhancedGuidanceData {
     description: string;
     timeframe: string;
     completed: boolean;
+    isEstimate?: boolean;
   }>;
   chargeClassifications?: Array<{
     id?: string;
@@ -1482,8 +1483,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                             </Badge>
                           )}
                         </h4>
-                        <Badge variant={isCompleted ? 'secondary' : 'outline'} className="text-xs">
-                          {stage.timeframe}
+                        <Badge variant={isCompleted ? 'secondary' : 'outline'} className={`text-xs ${stage.isEstimate ? 'border-amber-400 text-amber-700 dark:text-amber-400' : ''}`} title={stage.isEstimate ? 'General estimate — verify with your court' : undefined}>
+                          {stage.isEstimate ? `~${stage.timeframe}` : stage.timeframe}
                         </Badge>
                       </div>
                       <p className={`text-sm mt-1 ${isCurrentStage ? 'text-foreground' : 'text-muted-foreground'}`}>

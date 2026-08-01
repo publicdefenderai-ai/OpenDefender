@@ -55,6 +55,7 @@ interface EnhancedGuidanceData {
     description: string;
     timeframe: string;
     completed: boolean;
+    isEstimate?: boolean;
   }>;
   chargeClassifications?: Array<{
     name: string;
@@ -705,7 +706,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       stage.completed ? '[X]' : '[ ]',
       stage.stage || '',
       stage.description || '',
-      stage.timeframe || ''
+      stage.isEstimate ? `~${stage.timeframe}` : (stage.timeframe || '')
     ]);
 
     autoTable(doc, {
