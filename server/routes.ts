@@ -184,6 +184,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
     validate: { trustProxy: false, xForwardedForHeader: false },
   });
 
+  // Rate limiter for attorney-review-status writes
+  // Much higher than adminRateLimiter because checklist editing is interactive
+  // (save-on-blur for text, immediate save for status/date toggles).
+  const attorneyReviewWriteLimiter = rateLimit({
+    windowMs: 60 * 60 * 1000, // 1 hour
+    max: 600, // 600 writes/hour — well above realistic editing sessions
+    message: { success: false, error: "Too many review updates. Please try again shortly." },
+    standardHeaders: true,
+    legacyHeaders: false,
+    validate: { trustProxy: false, xForwardedForHeader: false },
+  });
+
   // Rate limiter for equity audit (2 per hour — AI cost control)
   const equityAuditLimiter = rateLimit({
     windowMs: 60 * 60 * 1000,
@@ -799,6 +811,90 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Returns 200 OK if the x-admin-api-key header matches ADMIN_TOKEN; 401 otherwise.
   app.get("/api/admin/verify-key", adminRateLimiter, requireAdminAuth, (_req, res) => {
     res.json({ ok: true });
+  });
+
+  // ============================================================================
+  // ADMIN: Attorney Review Status API
+  // Stores checklist item status server-side so all team members share one view.
+  // All endpoints require x-admin-api-key header.
+  // ============================================================================
+
+  // GET /api/admin/attorney-review-status
+  // Returns all stored item states as a flat object keyed by item ID.
+  app.get("/api/admin/attorney-review-status", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const { db } = await import("./db.js");
+      const { attorneyReviewItems } = await import("../shared/schema.js");
+      const rows = await db.select().from(attorneyReviewItems);
+      const result: Record<string, { status: string; reviewedBy: string; reviewedDate: string; notes: string }> = {};
+      for (const row of rows) {
+        result[row.itemId] = {
+          status: row.status,
+          reviewedBy: row.reviewedBy,
+          reviewedDate: row.reviewedDate,
+          notes: row.notes,
+        };
+      }
+      res.json({ success: true, items: result });
+    } catch (err) {
+      errLog("Failed to load attorney review status", err);
+      res.status(500).json({ success: false, error: "Failed to load review status" });
+    }
+  });
+
+  // PUT /api/admin/attorney-review-status/:itemId
+  // Upserts a single checklist item's state.
+  app.put("/api/admin/attorney-review-status/:itemId", attorneyReviewWriteLimiter, requireAdminAuth, async (req, res) => {
+    try {
+      const { itemId } = req.params;
+      if (!itemId || itemId.length > 20) {
+        return res.status(400).json({ success: false, error: "Invalid itemId" });
+      }
+      const { status, reviewedBy, reviewedDate, notes } = req.body as Record<string, string>;
+      const validStatuses = ["pending", "in-review", "cleared"];
+      if (!validStatuses.includes(status)) {
+        return res.status(400).json({ success: false, error: "Invalid status" });
+      }
+      if (typeof reviewedBy !== "string" || reviewedBy.length > 200) {
+        return res.status(400).json({ success: false, error: "Invalid reviewedBy" });
+      }
+      if (typeof reviewedDate !== "string" || reviewedDate.length > 20) {
+        return res.status(400).json({ success: false, error: "Invalid reviewedDate" });
+      }
+      if (typeof notes !== "string" || notes.length > 10000) {
+        return res.status(400).json({ success: false, error: "Notes too long" });
+      }
+
+      const { db } = await import("./db.js");
+      const { attorneyReviewItems } = await import("../shared/schema.js");
+
+      await db
+        .insert(attorneyReviewItems)
+        .values({ itemId, status, reviewedBy, reviewedDate, notes, updatedAt: new Date() })
+        .onConflictDoUpdate({
+          target: attorneyReviewItems.itemId,
+          set: { status, reviewedBy, reviewedDate, notes, updatedAt: new Date() },
+        });
+
+      res.json({ success: true });
+    } catch (err) {
+      errLog("Failed to save attorney review status", err);
+      res.status(500).json({ success: false, error: "Failed to save review status" });
+    }
+  });
+
+  // DELETE /api/admin/attorney-review-status (reset all)
+  // Deletes all rows, resetting every item to pending.
+  app.delete("/api/admin/attorney-review-status", attorneyReviewWriteLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const { db } = await import("./db.js");
+      const { attorneyReviewItems } = await import("../shared/schema.js");
+      await db.delete(attorneyReviewItems);
+      res.json({ success: true });
+    } catch (err) {
+      errLog("Failed to reset attorney review status", err);
+      res.status(500).json({ success: false, error: "Failed to reset review status" });
+    }
   });
 
   // ADMIN: Citation Review API

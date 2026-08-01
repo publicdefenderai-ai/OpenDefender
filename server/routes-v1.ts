@@ -63,7 +63,13 @@ export function registerV1Routes(app: Express): void {
       const q = req.query.q as string;
       const lang = (req.query.lang as string) || 'en';
       const types = req.query.types as string;
-      const limit = Math.min(parseInt(req.query.limit as string) || 20, 50);
+      // When the caller filters to charges only, raise the default limit so
+      // all relevant charges can be returned (not just the first 20).
+      // A charge-only search is a deliberate charge lookup — the caller wants
+      // comprehensive results, not a mixed cross-type list capped at 20.
+      const chargesOnlySearch = types === 'charge';
+      const defaultLimit = chargesOnlySearch ? 50 : 20;
+      const limit = Math.min(parseInt(req.query.limit as string) || defaultLimit, 100);
 
       if (!q || q.length < 2 || q.length > 100) {
         return res.status(400).json({
