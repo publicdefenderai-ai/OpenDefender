@@ -6,7 +6,7 @@
  *
  * Access: /admin/attorney-review
  * Auth:   Enter your ADMIN_API_KEY when prompted. Stored in sessionStorage.
- * Status: Persisted per-item in localStorage under key `atty-review-v1`.
+ * Status: Persisted server-side via /api/admin/attorney-review-status — shared across all browsers and devices.
  */
 
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -765,6 +765,26 @@ export default function AdminAttorneyReview() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 pt-6 space-y-8">
+
+        {/* Persistence notice — always visible */}
+        <div className="rounded-lg border border-blue-200 bg-blue-50 px-4 py-3 flex items-start gap-3 print:hidden">
+          <svg className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p className="text-xs text-blue-800 leading-relaxed">
+            <span className="font-semibold">Progress is saved to the server</span> and is immediately visible to every
+            authenticated team member, on any browser or device. Switching browsers, devices, or clearing browser
+            data will not affect saved status.{" "}
+            To share a snapshot offline or with someone without admin access, use the{" "}
+            <button
+              onClick={handlePrint}
+              className="underline font-medium hover:text-blue-900 focus:outline-none"
+            >
+              Print / Export
+            </button>{" "}
+            button above.
+          </p>
+        </div>
 
         {/* Save error banner */}
         {saveError && (
