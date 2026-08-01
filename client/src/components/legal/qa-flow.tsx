@@ -15,6 +15,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
+import { shouldShowCaseStageWarning, QA_FLOW_STATUS_STEP_INDEX } from "./qa-flow-guard";
 
 interface QAFlowProps {
   onComplete: (data: any) => void;
@@ -77,7 +78,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
       setCurrentStep(currentStep + 1);
     } else {
       // Guard: warn if no case stage selected before submitting
-      if (!formData.caseStage) {
+      if (shouldShowCaseStageWarning(formData.caseStage)) {
         setShowCaseStageWarning(true);
         return;
       }
@@ -92,11 +93,9 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
 
   const handleCaseStageWarningCancel = () => {
     setShowCaseStageWarning(false);
-    // Navigate back to the StatusStep (index 3) so the user can fill in the stage
-    const statusStepIndex = baseSteps.findIndex(s => s.component === StatusStep);
-    if (statusStepIndex >= 0) {
-      setCurrentStep(statusStepIndex);
-    }
+    // Navigate back to the StatusStep so the user can fill in the stage.
+    // QA_FLOW_STATUS_STEP_INDEX is the authoritative constant for this index.
+    setCurrentStep(QA_FLOW_STATUS_STEP_INDEX);
   };
 
   const prevStep = () => {
