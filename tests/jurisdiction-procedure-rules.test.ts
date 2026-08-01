@@ -33,12 +33,18 @@ describe('JURISDICTION_PROCEDURE_RULES — key coverage', () => {
     expect(missing).toEqual([]);
   });
 
-  it('has exactly the 51 state/DC entries plus a federal entry (52 total)', () => {
+  it('has exactly the 51 state/DC entries plus federal plus 5 territories (57 total)', () => {
     const keys = Object.keys(JURISDICTION_PROCEDURE_RULES);
     // Verify federal is present
     expect(keys).toContain('federal');
-    // Verify the count: 51 state/DC + 1 federal
-    expect(keys).toHaveLength(52);
+    // Verify territory entries are present
+    expect(keys).toContain('PR');
+    expect(keys).toContain('GU');
+    expect(keys).toContain('VI');
+    expect(keys).toContain('AS');
+    expect(keys).toContain('MP');
+    // Verify the count: 51 state/DC + 1 federal + 5 territories
+    expect(keys).toHaveLength(57);
   });
 
   // Sanity check: spot-test a few well-known entries
@@ -75,11 +81,14 @@ describe('JURISDICTION_PROCEDURE_RULES — dataConfidence never "low"', () => {
     expect(hasHigh).toBe(true);
   });
 
-  it('all entries have dataConfidence "high" — full verification completed 2026-07', () => {
+  it('all entries have dataConfidence "high" — except the 5 territories (medium, verified 2026-07)', () => {
     const notHigh = Object.entries(JURISDICTION_PROCEDURE_RULES)
       .filter(([, rule]) => rule.dataConfidence !== 'high')
-      .map(([key]) => key);
-    expect(notHigh).toEqual([]);
+      .map(([key]) => key)
+      .sort();
+    // The 5 US territories were added in 2026-07 with medium confidence pending attorney review.
+    // All 50 states + DC + federal remain high confidence.
+    expect(notHigh).toEqual(['AS', 'GU', 'MP', 'PR', 'VI']);
   });
 });
 
@@ -258,11 +267,11 @@ describe('buildJurisdictionContextBlock — all high-confidence states omit "gen
 // contains a recognisable statute-style citation, and is free of placeholder text
 // or empty source fragments that would silently degrade the AI guidance prompt.
 
-describe('buildJurisdictionContextBlock — statute citations and no placeholders (all 52 jurisdictions)', () => {
+describe('buildJurisdictionContextBlock — statute citations and no placeholders (all 57 jurisdictions)', () => {
   const ALL_KEYS = Object.keys(JURISDICTION_PROCEDURE_RULES);
 
-  it('covers all 52 jurisdictions', () => {
-    expect(ALL_KEYS).toHaveLength(52);
+  it('covers all 57 jurisdictions (50 states + DC + federal + 5 territories)', () => {
+    expect(ALL_KEYS).toHaveLength(57);
   });
 
   it('returns a non-null block for every jurisdiction', () => {

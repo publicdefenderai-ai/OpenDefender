@@ -177,17 +177,18 @@ describe('buildCollateralConsequences', () => {
 // buildUncertainties
 // ---------------------------------------------------------------------------
 describe('buildUncertainties', () => {
-  it('adds a jurisdiction deadline notice for an unmapped jurisdiction (PR territory)', () => {
-    // PR (Puerto Rico) is a territory not in jurisdictionRules — still unmapped after 2026-07 audit
+  it('adds a jurisdiction deadline notice for an unmapped jurisdiction (e.g. unknown code ZZ)', () => {
+    // Use a code that is not and will never be in jurisdictionRules to keep this test stable.
+    // PR, GU, VI, AS, MP are now mapped (added 2026-07) so they no longer trigger the notice.
     const result = generateEnhancedGuidance({
       ...baseCase,
-      jurisdiction: 'PR',
+      jurisdiction: 'ZZ',
     });
     const item = result.uncertainties?.find(
       u => u.area === 'Jurisdiction-Specific Deadlines',
     );
     expect(item).toBeDefined();
-    expect(item?.note).toMatch(/PR/);
+    expect(item?.note).toMatch(/ZZ/);
   });
 
   it('does NOT add a jurisdiction deadline notice for a mapped state (CA)', () => {
@@ -249,9 +250,10 @@ describe('buildUncertainties', () => {
 // ---------------------------------------------------------------------------
 describe('generateEnhancedGuidance integration', () => {
   it('returns non-empty collateralConsequences and uncertainties when all background fields are set', () => {
-    // PR (Puerto Rico) is a territory not in jurisdictionRules — still unmapped after 2026-07 audit
+    // Use ZZ (an unknown code) to guarantee the jurisdiction-deadline uncertainty fires.
+    // PR, GU, VI, AS, MP are now mapped (2026-07) so they no longer trigger that notice.
     const result = generateEnhancedGuidance({
-      jurisdiction: 'PR',
+      jurisdiction: 'ZZ',
       charges: 'dui',
       caseStage: 'arraignment',
       custodyStatus: 'released',
@@ -839,8 +841,9 @@ describe('isEstimate flag on deadlines — notice-deadline-estimate banner cover
       { event: 'Arraignment', timeframe: '72 hours', description: 'Test', priority: 'critical' as const },
       { event: 'Speedy trial', timeframe: '60 days', description: 'Test', priority: 'important' as const },
     ];
-    // PR is a territory not in KNOWN_JURISDICTIONS
-    const stamped = stampEstimateDeadlines('PR', sampleDeadlines);
+    // Use ZZ — a code that will never be in KNOWN_JURISDICTIONS.
+    // PR, GU, VI, AS, MP are now mapped (2026-07) so stampEstimateDeadlines no longer marks them.
+    const stamped = stampEstimateDeadlines('ZZ', sampleDeadlines);
     expect(stamped.every(d => d.isEstimate === true)).toBe(true);
   });
 

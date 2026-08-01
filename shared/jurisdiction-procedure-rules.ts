@@ -25,10 +25,12 @@
  *
  * Last full data pass: 2026-07 (all 52 entries unified to this date)
  *
- * Coverage: All 50 US states + DC + federal (52 entries).
+ * Coverage: All 50 US states + DC + federal + 5 territories (57 entries).
  *   52 high-confidence: all 50 states + DC + federal
- *    0 medium-confidence: none — all jurisdictions re-verified 2026-07
- *    0 low-confidence: none — every jurisdiction is now injected into AI prompts
+ *    5 medium-confidence: AS, GU, MP, PR, VI (territory rules verified 2026-07
+ *                          from territory codes; injected into AI prompts with
+ *                          qualifying language)
+ *    0 low-confidence: none
  */
 
 export interface JurisdictionProcedureRule {
@@ -1614,6 +1616,167 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     lastVerified: '2026-07',
   },
 
+  // ── Puerto Rico ───────────────────────────────────────────────────────────
+  // Puerto Rico operates under its own Criminal Procedure Rules (Reglas de
+  // Procedimiento Criminal de Puerto Rico), separate from federal rules.
+  PR: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arrest, felony)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'P.R. Laws Ann. tit. 34, R. Crim. P. 23 — initial appearance without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'P.R. Laws Ann. tit. 34, R. Crim. P. 23; bail determined at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 60,
+      notes: 'Puerto Rico has its own Criminal Procedure Code independent of federal rules. Speedy trial clock runs from arrest. The 180-day period applies to felonies; misdemeanors are subject to a shorter period. Puerto Rico courts also apply U.S. Sixth Amendment protections.',
+    },
+    speedyTrialSource: 'P.R. Laws Ann. tit. 34, R. Crim. P. 64; P.R. Const. Art. II § 11; U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel and family after arrest.',
+      source: 'P.R. Laws Ann. tit. 34, R. Crim. P. 23; P.R. Const. Art. II § 11',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10 days if in custody (felony)',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to Sociedad para Asistencia Legal (SAL) or Federal Public Defender',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'Puerto Rico has its own Criminal Procedure Code (Reglas de Procedimiento Criminal de Puerto Rico). Federal criminal procedure rules (Fed. R. Crim. P.) do NOT govern Puerto Rico territorial courts. Cases in the U.S. District Court for Puerto Rico are subject to federal rules.',
+  },
+
+  // ── Guam ──────────────────────────────────────────────────────────────────
+  // Guam operates under the Guam Code Annotated (GCA) Title 8 — Criminal
+  // Procedure, modeled after the Federal Rules of Criminal Procedure.
+  GU: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arraignment)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'Guam R. Crim. P. 5 — initial appearance without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'Guam R. Crim. P. 5; bail reviewed at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 180,
+      notes: 'Guam criminal procedure is closely modeled on the Federal Rules of Criminal Procedure. The 180-day speedy trial period runs from arraignment. Note: Guam is an unincorporated U.S. territory; federal constitutional protections including the Sixth Amendment apply.',
+    },
+    speedyTrialSource: 'Guam Code Ann. tit. 8, § 80.60; Guam Const. Art. I § 12; U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel.',
+      source: 'Guam R. Crim. P. 5; Guam Code Ann. tit. 8',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10 days if in custody (felony)',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to Guam Public Defender Service Corporation',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'Guam is an unincorporated U.S. territory. Criminal procedure is governed by the Guam Code Annotated (GCA), modeled on federal rules. U.S. Sixth Amendment and due process protections apply. Cases in U.S. District Court of Guam are governed by Federal Rules of Criminal Procedure.',
+  },
+
+  // ── U.S. Virgin Islands ───────────────────────────────────────────────────
+  // The V.I. Superior Court operates under the Virgin Islands Code (V.I.C.)
+  // and its own Superior Court Rules of Criminal Procedure.
+  VI: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arrest)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'V.I. Code Ann. tit. 5, § 3561; V.I. Super. Ct. R. Crim. P. 5 — without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'V.I. Code Ann. tit. 5, § 3561; bail reviewed at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 90,
+      notes: 'The U.S. Virgin Islands has its own criminal procedure code and Superior Court rules. Federal constitutional protections including the Sixth Amendment apply as an unincorporated territory. Speedy trial runs from arrest for felonies.',
+    },
+    speedyTrialSource: 'V.I. Code Ann. tit. 5, § 3562; V.I. Const. App. I; U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel after arrest.',
+      source: 'V.I. Super. Ct. R. Crim. P. 5; V.I. Code Ann. tit. 5',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10 days if in custody (felony)',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to V.I. Public Defender Services',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'U.S. Virgin Islands is an unincorporated U.S. territory. Criminal procedure is governed by V.I. Code Ann. tit. 5 and V.I. Superior Court Rules. Federal Rules of Criminal Procedure govern cases in the U.S. District Court of the Virgin Islands.',
+  },
+
+  // ── American Samoa ────────────────────────────────────────────────────────
+  // American Samoa has unique status: it is the only unincorporated,
+  // unorganized territory where residents are U.S. nationals (not citizens).
+  // Criminal procedure is governed by the American Samoa Code Annotated (ASCA).
+  AS: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arraignment)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'Am. Samoa Code Ann. (ASCA) tit. 46, § 46.1202 — initial appearance without unnecessary delay; 48-hour floor applied by practice',
+    bailHearingHours: 48,
+    bailHearingSource: 'ASCA tit. 46; bail reviewed at initial appearance before the High Court',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 180,
+      notes: 'American Samoa High Court follows procedures modeled on federal rules. American Samoa is the only U.S. territory whose residents are U.S. nationals, not citizens, though criminal procedure rights are substantially similar. Note: the U.S. Constitution does not apply by its own force to American Samoa; rights are conferred by the Revised Organic Act and local constitution.',
+    },
+    speedyTrialSource: 'ASCA tit. 46, § 46.1204; Am. Samoa Const. Art. I § 5; see also Fitisemanu v. United States, 1 F.4th 862 (10th Cir. 2021)',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Right to counsel applies at initial appearance.',
+      source: 'ASCA tit. 46; Am. Samoa Const. Art. I § 5',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10-14 days for felonies',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to American Samoa Government (ASG) Office of Public Defender',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'American Samoa is an unincorporated, unorganized U.S. territory with unique constitutional status. Residents are U.S. nationals but not citizens by birth. Criminal procedure is governed by the American Samoa Code Annotated (ASCA) and American Samoa High Court rules. Federal constitutional guarantees do not apply by their own force — rights derive from the Revised Organic Act and local organic act.',
+  },
+
+  // ── Northern Mariana Islands ───────────────────────────────────────────────
+  // The Commonwealth of the Northern Mariana Islands (CNMI) operates under the
+  // CNMI Code and its own Superior Court Criminal Rules.
+  MP: {
+    arraignment: '48 hours',
+    speedy_trial: '180 days (from arraignment)',
+    bail_hearing: '48 hours',
+    arraignmentHours: 48,
+    arraignmentSource: 'CNMI R. Crim. P. 5 — initial appearance without unnecessary delay; 48-hour floor applies',
+    bailHearingHours: 48,
+    bailHearingSource: 'CNMI R. Crim. P. 5; bail reviewed at initial appearance',
+    speedyTrialDays: {
+      felony: 180,
+      misdemeanor: 180,
+      notes: 'The CNMI became a U.S. commonwealth in 1978 under a Covenant with the United States. Most federal constitutional protections apply. Criminal procedure follows rules modeled on the Federal Rules of Criminal Procedure. Speedy trial runs from arraignment.',
+    },
+    speedyTrialSource: 'CNMI R. Crim. P. 48; CNMI Const. Art. I § 4(c); U.S. Const. amend. VI',
+    phoneCall: {
+      limitHours: null,
+      description: 'No specific statutory time limit. Defendant has the right to communicate with counsel after arrest.',
+      source: 'CNMI R. Crim. P. 5; CNMI Const. Art. I § 4',
+    },
+    bailStructure: 'cash_bail',
+    preliminaryHearing: 'Within 10-14 days for felonies',
+    discoveryDeadline: 'Within 30 days after arraignment',
+    publicDefenderIncome: 'Case-by-case determination — apply to CNMI Public Defender Office',
+    bailSystem: 'Cash bail system',
+    dataConfidence: 'medium',
+    lastVerified: '2026-07',
+    notes: 'The Commonwealth of the Northern Mariana Islands (CNMI) is a commonwealth in political union with the United States. Most federal constitutional protections apply by virtue of the 1978 Covenant. Criminal procedure is governed by the CNMI Code and CNMI Superior Court Criminal Rules, modeled on federal rules. Cases in U.S. District Court of the NMI are governed by Federal Rules of Criminal Procedure.',
+  },
+
   // ── District of Columbia ──────────────────────────────────────────────────
   DC: {
     arraignment: '24 hours',
@@ -1687,6 +1850,9 @@ export function buildJurisdictionContextBlock(jurisdiction: string): string | nu
     'HAWAII': 'HI', 'NEW HAMPSHIRE': 'NH', 'MAINE': 'ME', 'MONTANA': 'MT',
     'RHODE ISLAND': 'RI', 'DELAWARE': 'DE', 'SOUTH DAKOTA': 'SD', 'NORTH DAKOTA': 'ND',
     'ALASKA': 'AK', 'VERMONT': 'VT', 'WYOMING': 'WY', 'DISTRICT OF COLUMBIA': 'DC',
+    'PUERTO RICO': 'PR', 'GUAM': 'GU', 'U.S. VIRGIN ISLANDS': 'VI',
+    'VIRGIN ISLANDS': 'VI', 'AMERICAN SAMOA': 'AS',
+    'NORTHERN MARIANA ISLANDS': 'MP', 'CNMI': 'MP',
     'FEDERAL': 'federal',
   };
 
