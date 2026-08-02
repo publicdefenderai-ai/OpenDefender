@@ -13,7 +13,19 @@ import {
   Loader2,
   SquarePen,
 } from "lucide-react";
-import { Document, Paragraph, TextRun, AlignmentType, Packer } from "docx";
+import {
+  Document,
+  Paragraph,
+  TextRun,
+  AlignmentType,
+  Packer,
+  BorderStyle,
+  ShadingType,
+  Table,
+  TableRow,
+  TableCell,
+  WidthType,
+} from "docx";
 import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -299,53 +311,131 @@ function Domain({
 
 /* ─── Docx builder (client-side, nothing sent to server) ─── */
 
-function buildDocxParagraphs(output: string): Paragraph[] {
-  const paragraphs: Paragraph[] = [];
-  const lines = output.split("\n");
+function buildDocxParagraphs(output: string, form: FormState): (Paragraph | Table)[] {
+  const nodes: (Paragraph | Table)[] = [];
 
-  for (const line of lines) {
-    const trimmed = line.trim();
+  const today = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
-    // Skip the divider lines
+  // ── Header block: centred title + bottom rule ──────────────────────────────
+  nodes.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 140 },
+      border: { bottom: { color: "111111", size: 12, style: BorderStyle.SINGLE } },
+      children: [
+        new TextRun({ text: "Sentencing Mitigation Memorandum", bold: true, size: 32, font: "Times New Roman" }),
+      ],
+    })
+  );
+
+  // Metadata rows (bold label + plain value)
+  const addMeta = (label: string, value: string) => {
+    nodes.push(
+      new Paragraph({
+        spacing: { after: 40 },
+        children: [
+          new TextRun({ text: `${label}  `, bold: true, size: 22, font: "Times New Roman" }),
+          new TextRun({ text: value, size: 22, font: "Times New Roman" }),
+        ],
+      })
+    );
+  };
+  addMeta("Prepared:", today);
+  if (form.clientName) addMeta("Client:", form.clientName);
+  if (form.caseContext) addMeta("Context:", form.caseContext);
+
+  // Rule after metadata
+  nodes.push(
+    new Paragraph({
+      spacing: { before: 100, after: 180 },
+      border: { bottom: { color: "111111", size: 8, style: BorderStyle.SINGLE } },
+      children: [],
+    })
+  );
+
+  // ── DRAFT callout: shaded table cell with amber border ────────────────────
+  nodes.push(
+    new Table({
+      width: { size: 100, type: WidthType.PERCENTAGE },
+      rows: [
+        new TableRow({
+          children: [
+            new TableCell({
+              shading: { fill: "FEF9C3", type: ShadingType.CLEAR, color: "auto" },
+              borders: {
+                top:    { style: BorderStyle.SINGLE, size: 6,  color: "CA8A04" },
+                bottom: { style: BorderStyle.SINGLE, size: 6,  color: "CA8A04" },
+                left:   { style: BorderStyle.THICK,  size: 24, color: "B45309" },
+                right:  { style: BorderStyle.SINGLE, size: 6,  color: "CA8A04" },
+              },
+              margins: { top: 80, bottom: 80, left: 140, right: 140 },
+              children: [
+                new Paragraph({
+                  spacing: { after: 40 },
+                  children: [
+                    new TextRun({
+                      text: "DRAFT — Review before use",
+                      bold: true,
+                      size: 20,
+                      font: "Arial",
+                      color: "92400E",
+                    }),
+                  ],
+                }),
+                new Paragraph({
+                  spacing: { after: 0 },
+                  children: [
+                    new TextRun({
+                      text: "Review every line before use. Do not file without attorney verification.",
+                      italics: true,
+                      size: 18,
+                      font: "Arial",
+                      color: "78350F",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        }),
+      ],
+    })
+  );
+
+  // Spacer after callout
+  nodes.push(new Paragraph({ spacing: { after: 200 }, children: [] }));
+
+  // ── Body content ───────────────────────────────────────────────────────────
+  const KNOWN_HEADERS = [
+    "COMMUNITY TIES", "HOUSING STABILITY", "EMPLOYMENT",
+    "TREATMENT PARTICIPATION", "FAMILY RESPONSIBILITIES",
+    "CHARACTER REFERENCES", "ADDITIONAL CONTEXT",
+  ];
+
+  for (const rawLine of output.split("\n")) {
+    const trimmed = rawLine.trim();
+
+    // Skip dividers, title, metadata, and draft warning (already in header/callout)
     if (/^─+$/.test(trimmed)) continue;
-
-    // Title line
-    if (trimmed === "MITIGATION SUMMARY — DRAFT") {
-      paragraphs.push(
-        new Paragraph({
-          alignment: AlignmentType.CENTER,
-          spacing: { after: 80 },
-          children: [new TextRun({ text: trimmed, bold: true, size: 28, font: "Times New Roman" })],
-        })
-      );
-      continue;
-    }
-
-    // Warning / footer verification line
+    if (trimmed === "MITIGATION SUMMARY — DRAFT") continue;
+    if (trimmed.startsWith("Review every line")) continue;
     if (
-      trimmed.startsWith("Review every line") ||
-      trimmed.startsWith("Verify every claim")
-    ) {
-      paragraphs.push(
-        new Paragraph({
-          spacing: { after: 60 },
-          children: [new TextRun({ text: trimmed, italics: true, size: 20, font: "Times New Roman", color: "CC0000" })],
-        })
-      );
-      continue;
-    }
+      trimmed.startsWith("Prepared:") ||
+      trimmed.startsWith("Client:") ||
+      trimmed.startsWith("Context:")
+    ) continue;
 
-    // Domain section headers (ALL CAPS, no bullet)
-    const knownHeaders = [
-      "COMMUNITY TIES", "HOUSING STABILITY", "EMPLOYMENT",
-      "TREATMENT PARTICIPATION", "FAMILY RESPONSIBILITIES",
-      "CHARACTER REFERENCES", "ADDITIONAL CONTEXT",
-    ];
-    if (knownHeaders.includes(trimmed)) {
-      paragraphs.push(
+    // Section headers — bold, with bottom border
+    if (KNOWN_HEADERS.includes(trimmed)) {
+      nodes.push(
         new Paragraph({
-          spacing: { before: 240, after: 80 },
-          children: [new TextRun({ text: trimmed, bold: true, size: 24, font: "Times New Roman" })],
+          spacing: { before: 280, after: 80 },
+          border: { bottom: { color: "444444", size: 6, style: BorderStyle.SINGLE } },
+          children: [new TextRun({ text: trimmed, bold: true, size: 22, font: "Times New Roman" })],
         })
       );
       continue;
@@ -353,26 +443,25 @@ function buildDocxParagraphs(output: string): Paragraph[] {
 
     // Bullet items
     if (trimmed.startsWith("• ")) {
-      paragraphs.push(
+      nodes.push(
         new Paragraph({
           indent: { left: 360 },
-          spacing: { after: 40 },
-          children: [new TextRun({ text: trimmed, size: 24, font: "Times New Roman" })],
+          spacing: { after: 60 },
+          children: [new TextRun({ text: trimmed, size: 22, font: "Times New Roman" })],
         })
       );
       continue;
     }
 
-    // Prepared / Client / Context header lines
-    if (
-      trimmed.startsWith("Prepared:") ||
-      trimmed.startsWith("Client:") ||
-      trimmed.startsWith("Context:")
-    ) {
-      paragraphs.push(
+    // Footer verification lines — italic, with top border
+    if (trimmed.startsWith("Verify every claim") || trimmed.startsWith("This summary contains")) {
+      nodes.push(
         new Paragraph({
-          spacing: { after: 40 },
-          children: [new TextRun({ text: trimmed, size: 24, font: "Times New Roman" })],
+          spacing: { before: 240, after: 60 },
+          border: { top: { color: "CCCCCC", size: 6, style: BorderStyle.SINGLE } },
+          children: [
+            new TextRun({ text: trimmed, italics: true, size: 18, font: "Times New Roman", color: "555555" }),
+          ],
         })
       );
       continue;
@@ -380,20 +469,20 @@ function buildDocxParagraphs(output: string): Paragraph[] {
 
     // Blank line
     if (trimmed === "") {
-      paragraphs.push(new Paragraph({ children: [] }));
+      nodes.push(new Paragraph({ children: [] }));
       continue;
     }
 
-    // Everything else (free-form reference text, additional context)
-    paragraphs.push(
+    // Free-form text (references, additional context)
+    nodes.push(
       new Paragraph({
-        spacing: { after: 40 },
-        children: [new TextRun({ text: trimmed, size: 24, font: "Times New Roman" })],
+        spacing: { after: 60 },
+        children: [new TextRun({ text: trimmed, size: 22, font: "Times New Roman" })],
       })
     );
   }
 
-  return paragraphs;
+  return nodes;
 }
 
 function escHtml(str: string): string {
@@ -638,7 +727,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
             properties: {
               page: { margin: { top: 1440, bottom: 1440, left: 1440, right: 1440 } },
             },
-            children: buildDocxParagraphs(output),
+            children: buildDocxParagraphs(output, form),
           },
         ],
       });
