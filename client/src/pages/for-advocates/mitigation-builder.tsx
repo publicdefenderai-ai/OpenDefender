@@ -35,6 +35,7 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
 interface FormState {
   clientName: string;
+  caseNumber: string;
   caseContext: string;
   // Community ties
   yearsInCommunity: string;
@@ -66,6 +67,7 @@ interface FormState {
 
 const EMPTY: FormState = {
   clientName: "",
+  caseNumber: "",
   caseContext: "",
   yearsInCommunity: "",
   familyNearby: "",
@@ -103,6 +105,7 @@ function generateOutput(f: FormState): string {
   lines.push("Review every line before use. Do not file without attorney verification.");
   lines.push(`Prepared: ${today}`);
   if (f.clientName) lines.push(`Client: ${f.clientName}`);
+  if (f.caseNumber) lines.push(`Case No.: ${f.caseNumber}`);
   if (f.caseContext) lines.push(`Context: ${f.caseContext}`);
   lines.push("");
 
@@ -346,6 +349,7 @@ function buildDocxParagraphs(output: string, form: FormState): (Paragraph | Tabl
   };
   addMeta("Prepared:", today);
   if (form.clientName) addMeta("Client:", form.clientName);
+  if (form.caseNumber) addMeta("Case No.:", form.caseNumber);
   if (form.caseContext) addMeta("Context:", form.caseContext);
 
   // Rule after metadata
@@ -426,6 +430,7 @@ function buildDocxParagraphs(output: string, form: FormState): (Paragraph | Tabl
     if (
       trimmed.startsWith("Prepared:") ||
       trimmed.startsWith("Client:") ||
+      trimmed.startsWith("Case No.:") ||
       trimmed.startsWith("Context:")
     ) continue;
 
@@ -540,6 +545,7 @@ function PolishPanel({ form }: { form: FormState }) {
           "AI-POLISHED DRAFT — NOT FOR FILING WITHOUT ATTORNEY REVIEW",
           `Prepared: ${today}`,
           ...(form.clientName ? [`Client: ${form.clientName}`] : []),
+          ...(form.caseNumber ? [`Case No.: ${form.caseNumber}`] : []),
           ...(form.caseContext ? [`Context: ${form.caseContext}`] : []),
           "",
         ].join("\n");
@@ -755,11 +761,13 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
     // Extract header metadata first so it can live in the header block
     let clientName = "";
     let preparedDate = "";
+    let caseNumber = "";
     let proceedingContext = "";
     for (const rawLine of lines) {
       const line = rawLine.trim();
       if (line.startsWith("Client:")) clientName = line.replace("Client:", "").trim();
       if (line.startsWith("Prepared:")) preparedDate = line.replace("Prepared:", "").trim();
+      if (line.startsWith("Case No.:")) caseNumber = line.replace("Case No.:", "").trim();
       if (line.startsWith("Context:")) proceedingContext = line.replace("Context:", "").trim();
     }
 
@@ -774,7 +782,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
       // Skip dividers, title, and metadata lines (rendered in header block)
       if (/^─+$/.test(line)) continue;
       if (line === "MITIGATION SUMMARY — DRAFT") continue;
-      if (line.startsWith("Prepared:") || line.startsWith("Client:") || line.startsWith("Context:")) continue;
+      if (line.startsWith("Prepared:") || line.startsWith("Client:") || line.startsWith("Case No.:") || line.startsWith("Context:")) continue;
 
       // Draft warning — render as prominent callout
       if (line.startsWith("Review every line")) {
@@ -1011,6 +1019,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
     <div class="doc-header-meta">
       ${preparedDate ? `<span class="meta-label">Prepared:</span><span class="meta-value">${escHtml(preparedDate)}</span>` : ""}
       ${clientName ? `<span class="meta-label">Client:</span><span class="meta-value">${escHtml(clientName)}</span>` : ""}
+      ${caseNumber ? `<span class="meta-label">Case No.:</span><span class="meta-value">${escHtml(caseNumber)}</span>` : ""}
       ${proceedingContext ? `<span class="meta-label">Context:</span><span class="meta-value">${escHtml(proceedingContext)}</span>` : ""}
     </div>
   </div>
@@ -1181,6 +1190,14 @@ export default function MitigationBuilder() {
                   value={form.clientName}
                   onChange={set("clientName")}
                   placeholder="e.g. J. Smith — or leave blank"
+                />
+              </div>
+              <div>
+                <Label hint="optional">Case / docket number</Label>
+                <Input
+                  value={form.caseNumber}
+                  onChange={set("caseNumber")}
+                  placeholder="e.g. 2024-CR-00512"
                 />
               </div>
               <div>
