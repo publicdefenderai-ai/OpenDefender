@@ -403,6 +403,10 @@ export default {
       "calloutDesc": "211 connects you to local services for housing, food, health care, and benefits — free, 24/7, in every state. It's the fastest way to find what's available near you.",
       "eligibilityNote": "Some programs ask about open cases or prior convictions. It's worth a call to ask — many are more flexible than their intake staff first suggests."
     },
+    "screenerCallout": {
+      "heading": "Just arrested or recently charged?",
+      "body": "Check what's at risk right now — housing, job, benefits, family — and get a personalized list of next steps before your first court date."
+    },
     "relatedResources": "Related Resources",
     "visitWebsite": "Visit website",
     "free": "Free",

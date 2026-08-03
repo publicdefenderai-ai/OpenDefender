@@ -405,6 +405,10 @@ export default {
       "calloutDesc": "El 211 le conecta con servicios locales de vivienda, alimentos, atención médica y beneficios — gratuito, disponible 24/7, en todo el país. Es la forma más rápida de encontrar lo que hay disponible cerca de usted.",
       "eligibilityNote": "Algunos programas preguntan sobre casos abiertos o condenas previas. Vale la pena llamar para preguntar — muchos son más flexibles de lo que el personal de admisión sugiere inicialmente."
     },
+    "screenerCallout": {
+      "heading": "¿Fue arrestado recientemente o le acaban de presentar cargos?",
+      "body": "Verifique qué está en riesgo ahora mismo — vivienda, empleo, beneficios, familia — y obtenga una lista personalizada de próximos pasos antes de su primera fecha en el tribunal."
+    },
     "relatedResources": "Recursos Relacionados",
     "visitWebsite": "Visitar sitio web",
     "free": "Gratis",

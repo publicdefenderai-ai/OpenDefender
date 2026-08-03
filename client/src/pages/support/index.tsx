@@ -177,9 +177,9 @@ export default function SupportHub() {
                     <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-semibold text-foreground mb-1">Just arrested or recently charged?</p>
+                    <p className="text-sm font-semibold text-foreground mb-1">{t('support.screenerCallout.heading')}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Check what's at risk right now — housing, job, benefits, family — and get a personalized list of next steps before your first court date.
+                      {t('support.screenerCallout.body')}
                     </p>
                   </div>
                   <ArrowRight className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-3 group-hover:translate-x-1 transition-transform" />
