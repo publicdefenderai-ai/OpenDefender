@@ -213,12 +213,17 @@ export function applyJurisdictionVariant(
 // ============================================================================
 
 /**
- * Format a hearing type value into readable text
+ * Format a hearing type value into readable text.
+ * Pass the two-letter jurisdiction code to get jurisdiction-specific labels
+ * (e.g. Indiana uses "Initial Hearing" rather than "Preliminary Hearing" —
+ * IC § 35-33-7-1).
  */
-export function formatHearingType(value: string): string {
+export function formatHearingType(value: string, jurisdiction?: string): string {
+  // Indiana uses "Initial Hearing" rather than a separate preliminary hearing.
+  const isIndiana = (jurisdiction || "").toUpperCase() === "IN";
   const hearingTypes: Record<string, string> = {
     arraignment: "Arraignment",
-    preliminary: "Preliminary Hearing",
+    preliminary: isIndiana ? "Initial Hearing" : "Preliminary Hearing",
     pretrial: "Pre-Trial Conference",
     motions: "Motion Hearing",
     trial: "Trial",

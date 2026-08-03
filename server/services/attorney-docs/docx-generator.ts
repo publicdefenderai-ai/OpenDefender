@@ -293,7 +293,7 @@ function generateDocumentContent(
         if (isImmigration) {
           paragraphs.push(...generateImmigrationCaption(formData, options, rules, document.templateName));
         } else {
-          paragraphs.push(...generateCaptionSection(formData, options, rules, document.templateName));
+          paragraphs.push(...generateCaptionSection(formData, options, rules, document.templateName, document.jurisdiction));
         }
         break;
 
@@ -445,7 +445,8 @@ function generateCaptionSection(
   formData: Record<string, string>,
   options: Required<DocxOptions>,
   rules: CourtFormattingRules,
-  templateName: string
+  templateName: string,
+  jurisdiction?: string
 ): Paragraph[] {
   const paragraphs: Paragraph[] = [];
 
@@ -587,7 +588,7 @@ function generateCaptionSection(
 
   // Hearing date/time on right if attorney header is present (formatted courts)
   if (rules.includeAttorneyHeader && formData.currentHearingDate) {
-    const hearingType = formatHearingTypeForDocument(formData.hearingType);
+    const hearingType = formatHearingTypeForDocument(formData.hearingType, jurisdiction);
     paragraphs.push(
       new Paragraph({
         tabStops: [
@@ -722,7 +723,7 @@ function generateCaptionSection(
 
   // Non-formatted courts show hearing info below title
   if (!rules.includeAttorneyHeader && formData.currentHearingDate) {
-    const hearingType = formatHearingTypeForDocument(formData.hearingType);
+    const hearingType = formatHearingTypeForDocument(formData.hearingType, jurisdiction);
     paragraphs.push(
       new Paragraph({
         alignment: AlignmentType.CENTER,
@@ -1670,12 +1671,17 @@ function formatProceedingType(value?: string): string {
 }
 
 /**
- * Format hearing type for document display
+ * Format hearing type for document display.
+ * Pass the two-letter jurisdiction code to get jurisdiction-specific labels
+ * (e.g. Indiana uses "Initial Hearing" rather than "Preliminary Hearing" —
+ * IC § 35-33-7-1).
  */
-function formatHearingTypeForDocument(hearingType: string): string {
+function formatHearingTypeForDocument(hearingType: string, jurisdiction?: string): string {
+  // Indiana uses "Initial Hearing" rather than a separate preliminary hearing.
+  const isIndiana = (jurisdiction || "").toUpperCase() === "IN";
   const types: Record<string, string> = {
     arraignment: "Arraignment",
-    preliminary: "Preliminary Hearing",
+    preliminary: isIndiana ? "Initial Hearing" : "Preliminary Hearing",
     pretrial: "Pre-Trial Conference",
     motions: "Motion Hearing",
     trial: "Trial",

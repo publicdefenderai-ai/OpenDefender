@@ -124,7 +124,7 @@ export function DocumentPreview({
                 {/* Hearing Info */}
                 {formData.currentHearingDate && (
                   <div className="text-center text-sm italic text-muted-foreground">
-                    [{formatHearingType(formData.hearingType)} Scheduled:{" "}
+                    [{formatHearingType(formData.hearingType, jurisdiction)} Scheduled:{" "}
                     {formatDate(formData.currentHearingDate)}
                     {formData.currentHearingTime && ` at ${formData.currentHearingTime}`}]
                   </div>
@@ -386,10 +386,14 @@ function formatCourtLabel(jurisdiction: string, courtType?: "state" | "federal" 
   return "Draft — Standard Format";
 }
 
-function formatHearingType(value: string): string {
+function formatHearingType(value: string, jurisdiction?: string): string {
+  // Indiana uses "Initial Hearing" rather than a separate preliminary hearing
+  // (IC § 35-33-7-1). Translate the label so documents filed in Indiana
+  // use the jurisdiction-correct terminology.
+  const isIndiana = (jurisdiction || "").toUpperCase() === "IN";
   const types: Record<string, string> = {
     arraignment: "Arraignment",
-    preliminary: "Preliminary Hearing",
+    preliminary: isIndiana ? "Initial Hearing" : "Preliminary Hearing",
     pretrial: "Pre-Trial Conference",
     motions: "Motion Hearing",
     trial: "Trial",
