@@ -490,6 +490,141 @@ function buildDocxParagraphs(output: string, form: FormState): (Paragraph | Tabl
   return nodes;
 }
 
+/* ─── Docx builder for polished (free-form narrative) draft ─── */
+
+function buildPolishDocxParagraphs(editedText: string, form: FormState): (Paragraph | Table)[] {
+  const nodes: (Paragraph | Table)[] = [];
+
+  const today = new Date().toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
+  // ── Header block: centred title + bottom rule ──────────────────────────────
+  nodes.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 140 },
+      border: { bottom: { color: "111111", size: 12, style: BorderStyle.SINGLE } },
+      children: [
+        new TextRun({ text: "Sentencing Mitigation Memorandum", bold: true, size: 32, font: "Times New Roman" }),
+      ],
+    })
+  );
+
+  // Metadata rows (bold label + plain value)
+  const addMeta = (label: string, value: string) => {
+    nodes.push(
+      new Paragraph({
+        spacing: { after: 40 },
+        children: [
+          new TextRun({ text: `${label}  `, bold: true, size: 22, font: "Times New Roman" }),
+          new TextRun({ text: value, size: 22, font: "Times New Roman" }),
+        ],
+      })
+    );
+  };
+  addMeta("Prepared:", today);
+  if (form.clientName) addMeta("Client:", form.clientName);
+  if (form.caseNumber) addMeta("Case No.:", form.caseNumber);
+  if (form.caseContext) addMeta("Context:", form.caseContext);
+
+  // Rule after metadata
+  nodes.push(
+    new Paragraph({
+      spacing: { before: 100, after: 180 },
+      border: { bottom: { color: "111111", size: 8, style: BorderStyle.SINGLE } },
+      children: [],
+    })
+  );
+
+  // ── DRAFT callout: shaded table cell with amber border ────────────────────
+  nodes.push(
+    new Table({
+      width: { size: 100, type: WidthType.PERCENTAGE },
+      rows: [
+        new TableRow({
+          children: [
+            new TableCell({
+              shading: { fill: "FEF9C3", type: ShadingType.CLEAR, color: "auto" },
+              borders: {
+                top:    { style: BorderStyle.SINGLE, size: 6,  color: "CA8A04" },
+                bottom: { style: BorderStyle.SINGLE, size: 6,  color: "CA8A04" },
+                left:   { style: BorderStyle.THICK,  size: 24, color: "B45309" },
+                right:  { style: BorderStyle.SINGLE, size: 6,  color: "CA8A04" },
+              },
+              margins: { top: 80, bottom: 80, left: 140, right: 140 },
+              children: [
+                new Paragraph({
+                  spacing: { after: 40 },
+                  children: [
+                    new TextRun({
+                      text: "AI-POLISHED DRAFT — NOT FOR FILING WITHOUT ATTORNEY REVIEW",
+                      bold: true,
+                      size: 20,
+                      font: "Arial",
+                      color: "92400E",
+                    }),
+                  ],
+                }),
+                new Paragraph({
+                  spacing: { after: 0 },
+                  children: [
+                    new TextRun({
+                      text: "AI-generated. You must edit and verify every claim before use. Do not file without attorney review.",
+                      italics: true,
+                      size: 18,
+                      font: "Arial",
+                      color: "78350F",
+                    }),
+                  ],
+                }),
+              ],
+            }),
+          ],
+        }),
+      ],
+    })
+  );
+
+  // Spacer after callout
+  nodes.push(new Paragraph({ spacing: { after: 200 }, children: [] }));
+
+  // ── Body: render free-form narrative paragraphs ───────────────────────────
+  // Skip header lines that are already rendered above
+  const skipPrefixes = [
+    "AI-POLISHED DRAFT",
+    "Prepared:",
+    "Client:",
+    "Case No.:",
+    "Context:",
+  ];
+
+  for (const rawLine of editedText.split("\n")) {
+    const trimmed = rawLine.trim();
+
+    // Skip header metadata lines
+    if (skipPrefixes.some((p) => trimmed.startsWith(p))) continue;
+
+    // Blank line — spacer
+    if (trimmed === "") {
+      nodes.push(new Paragraph({ spacing: { after: 80 }, children: [] }));
+      continue;
+    }
+
+    // Free-form narrative paragraph
+    nodes.push(
+      new Paragraph({
+        spacing: { after: 120 },
+        children: [new TextRun({ text: trimmed, size: 22, font: "Times New Roman" })],
+      })
+    );
+  }
+
+  return nodes;
+}
+
 function escHtml(str: string): string {
   return str
     .replace(/&/g, "&amp;")
@@ -523,6 +658,7 @@ function PolishPanel({ form }: { form: FormState }) {
   const [editedText, setEditedText] = useState("");
   const [checkboxChecked, setCheckboxChecked] = useState(false);
   const [polishCopied, setPolishCopied] = useState(false);
+  const [polishDocxLoading, setPolishDocxLoading] = useState(false);
 
   const handlePolish = async () => {
     setPolish({ status: "loading" });
@@ -573,6 +709,31 @@ function PolishPanel({ form }: { form: FormState }) {
     }
     setPolishCopied(true);
     setTimeout(() => setPolishCopied(false), 2000);
+  };
+
+  const handleDownloadPolishDocx = async () => {
+    setPolishDocxLoading(true);
+    try {
+      const doc = new Document({
+        creator: "OpenDefender Advocate Hub",
+        title: "AI-Polished Mitigation Draft",
+        sections: [
+          {
+            properties: {
+              page: { margin: { top: 1440, bottom: 1440, left: 1440, right: 1440 } },
+            },
+            children: buildPolishDocxParagraphs(editedText, form),
+          },
+        ],
+      });
+      const blob = await Packer.toBlob(doc);
+      const safeName = form.clientName
+        ? `mitigation-polished-draft-${form.clientName.replace(/[^a-z0-9]/gi, "-").toLowerCase()}.docx`
+        : "mitigation-polished-draft.docx";
+      triggerDownload(blob, safeName);
+    } finally {
+      setPolishDocxLoading(false);
+    }
   };
 
   return (
@@ -675,20 +836,31 @@ function PolishPanel({ form }: { form: FormState }) {
               </label>
             </div>
 
-            {/* Copy polished text */}
-            <button
-              type="button"
-              onClick={handlePolishCopy}
-              disabled={!checkboxChecked}
-              className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-            >
-              {polishCopied ? (
-                <Check className="h-3.5 w-3.5 text-green-600" />
-              ) : (
-                <Copy className="h-3.5 w-3.5" />
-              )}
-              {polishCopied ? "Copied" : "Copy polished draft"}
-            </button>
+            {/* Copy + download actions */}
+            <div className="flex flex-wrap gap-2">
+              <button
+                type="button"
+                onClick={handlePolishCopy}
+                disabled={!checkboxChecked}
+                className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                {polishCopied ? (
+                  <Check className="h-3.5 w-3.5 text-green-600" />
+                ) : (
+                  <Copy className="h-3.5 w-3.5" />
+                )}
+                {polishCopied ? "Copied" : "Copy polished draft"}
+              </button>
+              <button
+                type="button"
+                onClick={handleDownloadPolishDocx}
+                disabled={!checkboxChecked || polishDocxLoading}
+                className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <Download className="h-3.5 w-3.5" />
+                {polishDocxLoading ? "Building…" : "Download .docx"}
+              </button>
+            </div>
           </>
         )}
       </div>
