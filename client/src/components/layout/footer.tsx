@@ -109,6 +109,11 @@ export function Footer() {
                   {t('footer.noticeDisclaimers')}
                 </Link>
               </li>
+              <li>
+                <Link href="/data-sources" className="text-gray-300 hover:text-white transition-colors">
+                  Data Sources
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -1065,11 +1065,14 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     },
   },
   {
-    label: 'P1-97: CT × arraignment stage — discovery deadline present',
+    label: 'P1-97: CT × arraignment stage — discovery deadline present (Conn. Prac. Book § 40-11(a): 3 business days in custody)',
     input: { ...baseMapped, jurisdiction: 'CT', charges: 'assault', caseStage: 'arraignment', custodyStatus: 'released' },
     expect: {
       deadlineEventKeywords: ['Discovery'],
-      deadlineTimeframeKeywords: ['30 days'],
+      // Corrected from '30 days' — Conn. Prac. Book § 40-11(a) requires automatic
+      // disclosure within 3 business days of arraignment for in-custody defendants
+      // (or at/before arraignment if released). '30 days' was inaccurate placeholder text.
+      deadlineTimeframeKeywords: ['3 business days'],
       exactEstimateDeadlineEvents: ['Discovery Deadline', 'Preliminary Hearing'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },

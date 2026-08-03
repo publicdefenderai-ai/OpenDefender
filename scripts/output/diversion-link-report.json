@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-12T18:35:21.037Z",
+  "generated": "2026-08-01T19:49:05.579Z",
   "results": [
     {
       "id": "ca-la-drug-court",
@@ -99,14 +99,15 @@
       "state": "NY",
       "url": "https://eac-network.org/bronx-tasc/",
       "method": "HEAD",
-      "status": 202,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "de-wilmington-tasc",
       "name": "Delaware TASC Treatment Access Center - Wilmington",
       "state": "DE",
-      "url": "https://www.nationaltasc.org",
+      "url": "https://dhss.delaware.gov/dsamh/division-of-substance-abuse-and-mental-health/treatment-access-centers/",
       "method": "HEAD",
       "status": 200,
       "ok": true
@@ -115,7 +116,7 @@
       "id": "de-georgetown-tasc",
       "name": "Delaware TASC Treatment Access Center - Georgetown",
       "state": "DE",
-      "url": "https://www.nationaltasc.org",
+      "url": "https://dhss.delaware.gov/dsamh/division-of-substance-abuse-and-mental-health/treatment-access-centers/",
       "method": "HEAD",
       "status": 200,
       "ok": true
@@ -473,9 +474,8 @@
       "state": "NY",
       "url": "https://www.westchesterda.net/diversion-and-youth-programs",
       "method": "HEAD",
-      "status": 403,
-      "ok": true,
-      "note": "403 – bot-blocked (likely live)"
+      "status": 200,
+      "ok": true
     },
     {
       "id": "ny-westchester-opt-in",
@@ -483,9 +483,8 @@
       "state": "NY",
       "url": "https://www.westchesterda.net/diversion-and-youth-programs",
       "method": "HEAD",
-      "status": 403,
-      "ok": true,
-      "note": "403 – bot-blocked (likely live)"
+      "status": 200,
+      "ok": true
     },
     {
       "id": "ny-westchester-project-reset",
@@ -493,9 +492,8 @@
       "state": "NY",
       "url": "https://www.westchesterda.net/diversion-and-youth-programs",
       "method": "HEAD",
-      "status": 403,
-      "ok": true,
-      "note": "403 – bot-blocked (likely live)"
+      "status": 200,
+      "ok": true
     },
     {
       "id": "ny-rockland-partnership-youth",
@@ -603,8 +601,9 @@
       "state": "GA",
       "url": "https://henrycountyda.org/pretrial-diversion-program/",
       "method": "HEAD",
-      "status": 202,
-      "ok": true
+      "status": 403,
+      "ok": true,
+      "note": "403 – bot-blocked (likely live)"
     },
     {
       "id": "ga-douglas-pretrial-diversion",

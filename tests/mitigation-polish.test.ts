@@ -53,7 +53,7 @@ describe('MITIGATION_FIELD_WHITELIST', () => {
 // ─── HTTP endpoint tests ──────────────────────────────────────────────────────
 
 describe('POST /api/mitigation/polish — field-locked schema enforcement', () => {
-  it.skipIf(!serverAvailable)('rejects requests with unknown keys (prompt injection vector)', async () => {
+  it.skipIf(() => !serverAvailable)('rejects requests with unknown keys (prompt injection vector)', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -70,7 +70,7 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect(data.error).toContain('injectedPrompt');
   });
 
-  it.skipIf(!serverAvailable)('rejects requests with multiple unknown keys', async () => {
+  it.skipIf(() => !serverAvailable)('rejects requests with multiple unknown keys', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -85,7 +85,7 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect(data.success).toBe(false);
   });
 
-  it.skipIf(!serverAvailable)('rejects a non-string field value', async () => {
+  it.skipIf(() => !serverAvailable)('rejects a non-string field value', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -99,7 +99,7 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect(data.error).toMatch(/must be a string/i);
   });
 
-  it.skipIf(!serverAvailable)('rejects a field value exceeding 2000 characters', async () => {
+  it.skipIf(() => !serverAvailable)('rejects a field value exceeding 2000 characters', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -113,7 +113,7 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect(data.error).toMatch(/exceeds maximum length/i);
   });
 
-  it.skipIf(!serverAvailable)('returns 422 when no narrative fields are provided', async () => {
+  it.skipIf(() => !serverAvailable)('returns 422 when no narrative fields are provided', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -127,7 +127,7 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect([422, 503]).toContain(res.status);
   });
 
-  it.skipIf(!serverAvailable)('accepts an empty body (all fields optional)', async () => {
+  it.skipIf(() => !serverAvailable)('accepts an empty body (all fields optional)', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -137,7 +137,7 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect([422, 503]).toContain(res.status);
   });
 
-  it.skipIf(!serverAvailable)('accepts a valid whitelisted payload without rejecting it at schema layer', async () => {
+  it.skipIf(() => !serverAvailable)('accepts a valid whitelisted payload without rejecting it at schema layer', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },

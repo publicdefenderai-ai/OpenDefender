@@ -71,6 +71,10 @@ export interface JurisdictionProcedureRule {
     misdemeanor: number | null;
     misdemeanorInCustody?: number;
     notes?: string;               // e.g. "Term-of-court rule; defendant must demand"
+    /** Short user-facing note about a recent statutory change to this rule.
+     *  Emitted as a highlighted RULE CHANGE line in the AI prompt block so Claude
+     *  explicitly alerts users who may have read outdated material. */
+    reformNote?: string;
   };
   speedyTrialSource: string;
 
@@ -235,6 +239,7 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       felony: 175,
       misdemeanor: 90,
       notes: 'Clock runs from date formal charges are filed (amended eff. July 1, 2025; prior rule ran from arrest or service of notice to appear). After the period expires, defendant may file a notice of expiration of speedy trial; if not brought to trial within 30 days (recapture period, increased from 10 days by 2025 amendment), case is dismissed. Dismissal is without prejudice unless a constitutional speedy trial violation is independently established. Rule 3.134 also amended to allow pretrial release if formal charges are not brought within a reasonable time. — CONFORMING RULES STATUS (verified 2026-07): SC2022-1123 directed the Traffic Court Rules and Juvenile Delinquency Rules committees to consider consistent changes. The Traffic Court Rules Committee proposed amendments to Fla. R. Traf. Ct. 6.325 (Speedy Trial: Infractions Only) and 6.160 (Practice As In Criminal Rules) in Aug 2025; the Supreme Court\'s Nov 6, 2025 opinion (SC2023-1609) adopted only rules 6.340 and 6.480 and did NOT adopt the proposed 6.325 amendment. A second batch of proposed traffic court amendments was published Oct 15, 2025 and remains pending before the Court. The Juvenile Court Rules Committee proposed conforming amendments to Fla. R. Juv. P. 8.090 (Speedy Trial), published for comment Oct 15, 2025; the Oct 16, 2025 Supreme Court opinion (SC2025-0237) amended other juvenile rules but NOT 8.090. As of July 2026, neither Fla. R. Traf. Ct. 6.325 nor Fla. R. Juv. P. 8.090 has been amended to conform with the 3.191 changes. Recheck at next quarterly review.',
+      reformNote: 'Florida changed this rule effective July 1, 2025: the speedy trial clock now starts when formal charges are filed, not at arrest. The recapture period also increased from 10 days to 30 days. Users who have read older materials online may have the pre-2025 rule in mind.',
     },
     speedyTrialSource: 'Fla. R. Crim. P. 3.191 (as amended eff. July 1, 2025, SC2022-1123); Fla. R. Crim. P. 3.134',
     phoneCall: {
@@ -590,7 +595,12 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Massachusetts uses monetary bail. Bail is set at arraignment. OR release is available. Dangerousness hearings (M.G.L. ch. 276 § 58A) allow pretrial detention without bail for certain offenses.',
     preliminaryHearing: 'Within 10-14 days for felonies',
-    discoveryDeadline: 'Within 30 days after arraignment',
+    // Mass. R. Crim. P. 14(a)(1)(A) creates an automatic disclosure obligation — the
+    // prosecution must provide most discoverable materials without a defense request.
+    // Timing tracks the first pretrial conference (roughly 21 days in District Court,
+    // 28 days in Superior Court); no single fixed post-arraignment deadline.
+    // "30 days" was a generic placeholder; 21–28 days is more accurate.
+    discoveryDeadline: 'Within 21–28 days of arraignment (approximate; Mass. R. Crim. P. 14(a)(1)(A) — automatic disclosure; no defense request required)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -620,6 +630,10 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Tennessee uses a cash bail system. Bail is set at initial appearance before a magistrate.',
     preliminaryHearing: 'Within 10 days if in custody (Tenn. R. Crim. P. 5)',
+    // Tenn. R. Crim. P. 16 is request-triggered: the defendant must serve a written
+    // request on the prosecution to initiate discovery.  There is no automatic fixed
+    // post-arraignment disclosure deadline — the state's obligation arises only after
+    // the request is received.  (Engineer-verified 2026-07; attorney review pending.)
     discoveryDeadline: 'Upon request (no fixed post-arraignment deadline; Tenn. R. Crim. P. 16 is request-triggered)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
@@ -652,7 +666,13 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Indiana uses a cash bail system with surety bonds. OR release is available for lower-level offenses.',
     preliminaryHearing: 'Promptly after arrest (initial hearing, IC § 35-33-7-1; Indiana uses initial hearing rather than a separate preliminary hearing)',
-    discoveryDeadline: '30 days after arraignment',
+    // Indiana criminal discovery is obtained by motion — the defense must file a
+    // discovery motion with the court.  There is no fixed automatic post-arraignment
+    // deadline; the court sets response timelines when granting the motion.
+    // Ind. Code § 35-36-1 governs the scope of court-ordered disclosure.
+    // The "30 days" figure is a common practical approximation, not a statutory deadline.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: '30 days after arraignment (approximate; Ind. Code § 35-36-1 — court-ordered by motion; no fixed automatic post-arraignment deadline)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -836,7 +856,12 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'South Carolina uses a cash bail system. Bail is set at initial bond hearing.',
     preliminaryHearing: 'Defendant must request within 10 days of notice; hearing held within 10 days of request (SC Rule 2 SCRCP)',
-    discoveryDeadline: 'Within 30 days of written demand (SC Rule 5(a)(2) SCRCrimP)',
+    // SC Rule 5(a)(2) SCRCrimP is request-triggered: the prosecution's disclosure
+    // obligation is activated by the defendant's written demand.  The state has 30 days
+    // from that demand to produce responsive materials.  There is no automatic
+    // post-arraignment disclosure requirement independent of the written demand.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: 'Within 30 days of written demand (SC Rule 5(a)(2) SCRCrimP — request-triggered)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -865,7 +890,12 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Defendant may demand hearing within 30 days of arrest (Ala. R. Crim. P. 5.1)',
-    discoveryDeadline: 'Within 14 days of written request (Ala. R. Crim. P. 16.1)',
+    // Ala. R. Crim. P. 16.1 is request-triggered: the prosecution must disclose
+    // responsive materials within 14 days after the defendant's written request.
+    // There is no automatic post-arraignment disclosure — the obligation is activated
+    // only by the written request.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: 'Within 14 days of written request (Ala. R. Crim. P. 16.1 — request-triggered)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -897,7 +927,13 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Louisiana uses a cash bail system. Commercial surety bonds are widely used.',
     preliminaryHearing: 'Within 30 days if in custody',
-    discoveryDeadline: '30 days after arraignment',
+    // La. Code Crim. Proc. Ann. Art. 716–723 governs discovery in Louisiana.
+    // Discovery is motion-triggered: the defendant must file a motion for discovery
+    // with the court; the prosecution has no automatic post-arraignment disclosure
+    // obligation under state law.  The "30 days" figure is a common practical
+    // approximation for court-ordered response time, not a statutory deadline.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: '30 days after arraignment (approximate; La. Code Crim. Proc. Ann. Art. 716 — motion-triggered; no automatic disclosure obligation)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -926,7 +962,13 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days if in custody (Ky. R. Crim. P. 3.10)',
-    discoveryDeadline: '30 days after arraignment',
+    // Ky. RCr 7.24 is request-triggered: the defendant must serve a written demand
+    // on the prosecution to initiate discovery.  There is no fixed automatic
+    // post-arraignment disclosure deadline independent of the written demand.
+    // The "30 days" figure is a common practical approximation for court response
+    // time after a demand is filed, not a statutory deadline.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: '30 days after arraignment (approximate; Ky. RCr 7.24 — request-triggered; disclosure upon written demand)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -958,7 +1000,14 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Oregon uses a cash bail system with release agreements. OR release is widely used.',
     preliminaryHearing: 'Within 5 judicial days if in custody (ORS § 135.070)',
-    discoveryDeadline: '30 days after arraignment',
+    // ORS § 135.815 creates an automatic disclosure obligation: the prosecution must
+    // disclose listed items (prior convictions, expert witnesses, evidence favorable to
+    // the defense, etc.) without a defense request.  The statute requires disclosure
+    // "as soon as practicable" — there is no fixed post-arraignment day limit in the
+    // statute itself.  "30 days" is a common practical approximation used by courts and
+    // practitioners, not a statutory deadline.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: '30 days after arraignment (approximate; ORS § 135.815 — automatic disclosure for most materials; no fixed post-arraignment day limit in statute)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -987,7 +1036,12 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days if in custody',
-    discoveryDeadline: '30 days after arraignment',
+    // Okla. Stat. tit. 22 § 2002(A) is request-triggered: the defendant must file
+    // a written request for discovery; the prosecution has no automatic post-arraignment
+    // disclosure obligation.  The "30 days" figure is a common practical approximation
+    // for prosecutorial response time after a request, not a statutory deadline.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: '30 days after arraignment (approximate; Okla. Stat. tit. 22 § 2002(A) — request-triggered; no automatic post-arraignment disclosure)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -1016,7 +1070,15 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 10 days for felonies',
-    discoveryDeadline: '30 days after arraignment',
+    // Conn. Prac. Book § 40-11(a) creates an automatic disclosure obligation: the
+    // prosecution must provide listed items without a defense request.  For in-custody
+    // defendants, disclosure must occur within 3 business days of arraignment; for
+    // released defendants, prior to or at arraignment.  Additional items under
+    // § 40-13 et seq. are disclosed on a continuing basis.  The prior "30 days after
+    // arraignment" placeholder was inaccurate — the actual rule is a 3-business-day
+    // initial window for in-custody defendants (or at/before arraignment if released).
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: 'Within 3 business days of arraignment for in-custody defendants; at or before arraignment if released (Conn. Prac. Book § 40-11(a) — automatic disclosure)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -1105,7 +1167,13 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     },
     bailStructure: 'cash_bail',
     preliminaryHearing: 'Within 15 days (Nev. Rev. Stat. § 171.196)',
-    discoveryDeadline: '30 days after arraignment',
+    // NRS § 174.234 creates a mandatory automatic disclosure obligation: the prosecution
+    // must provide listed items (prior convictions, statements, expert summaries, etc.)
+    // to the defense without a written request.  The statute requires disclosure
+    // "as soon as practicable" — no specific post-arraignment day limit is stated.
+    // The "30 days" figure is a common practical approximation, not a statutory deadline.
+    // (Engineer-verified 2026-07; attorney review pending.)
+    discoveryDeadline: '30 days after arraignment (approximate; NRS § 174.234 — mandatory automatic disclosure; no fixed post-arraignment day limit in statute)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Cash bail system',
     dataConfidence: 'high',
@@ -1931,11 +1999,17 @@ export function buildJurisdictionContextBlock(jurisdiction: string): string | nu
     const misdText = st.misdemeanor !== null ? `${st.misdemeanor} days (misdemeanor)` : null;
     const speedyParts = [felonyCustodyText, felonyText, misdText].filter(Boolean).join(' / ');
     lines.push(`• Speedy trial: ${qualifier ? qualifier + ' ' : ''}${speedyParts} (${rule.speedyTrialSource})`);
+    if (st.reformNote) {
+      lines.push(`  RULE CHANGE: ${st.reformNote}`);
+    }
     if (st.notes) {
       lines.push(`  Note: ${st.notes}`);
     }
   } else {
     lines.push(`• Speedy trial: No statutory deadline. Constitutional right only (${rule.speedyTrialSource}).`);
+    if (st.reformNote) {
+      lines.push(`  RULE CHANGE: ${st.reformNote}`);
+    }
     if (st.notes) {
       lines.push(`  Note: ${st.notes}`);
     }

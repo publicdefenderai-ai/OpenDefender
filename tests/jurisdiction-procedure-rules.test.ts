@@ -421,6 +421,23 @@ describe('Florida — post-July-2025 speedy trial amendment (Fla. R. Crim. P. 3.
     it('prompt block does not contain the "generally" qualifier (high-confidence entry)', () => {
       expect(block).not.toContain('generally');
     });
+
+    it('prompt block contains a RULE CHANGE notice for the July 1, 2025 amendment', () => {
+      expect(block).toContain('RULE CHANGE');
+    });
+
+    it('prompt block explicitly states the clock starts from formal charges filing, not at arrest', () => {
+      // The reformNote must include "not at arrest" so users who read pre-2025 material are corrected.
+      expect(block).toMatch(/not at arrest/i);
+    });
+
+    it('prompt block mentions July 1, 2025 as the effective date of the rule change', () => {
+      expect(block).toMatch(/July 1, 2025/);
+    });
+
+    it('prompt block notes that the recapture period increased from 10 to 30 days', () => {
+      expect(block).toMatch(/10 days to 30 days|10.*30 days/i);
+    });
   });
 });
 

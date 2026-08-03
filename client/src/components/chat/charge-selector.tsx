@@ -62,7 +62,9 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedGroup, setSelectedGroup] = useState("All Groups");
-  const [selectedCharges, setSelectedCharges] = useState<Array<{ id: string; code: string; name: string }>>([]);
+  // `code` is retained here for backward compatibility with consumers of onSelect, but is
+  // never rendered in user-facing UI. User-visible statute references always use `citation`.
+  const [selectedCharges, setSelectedCharges] = useState<Array<{ id: string; code?: string | null; name: string }>>([]);
   const [isExpanded, setIsExpanded] = useState(true);
   const [announcement, setAnnouncement] = useState("");
 
@@ -125,6 +127,8 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       if (exists) {
         return prev.filter(c => c.id !== charge.id);
       }
+      // `code` is the legacy/internal field — kept for backward compat, never shown to users.
+      // User-visible statute citations always come from `charge.citation` (null when unverified).
       return [...prev, { id: charge.id, code: charge.code, name: charge.name }];
     });
   };
@@ -281,6 +285,11 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                             {getCategoryLabel(charge.category)}
                           </Badge>
                         </div>
+                        {charge.citation && (
+                          <p className="text-xs font-mono text-primary/80 mt-0.5 break-words" data-testid={`charge-citation-${charge.id}`}>
+                            {charge.citation}
+                          </p>
+                        )}
                         <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
                         {charge.instructionRef && (
                           <JuryInstructionBadge

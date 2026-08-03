@@ -128,11 +128,17 @@ interface EnhancedGuidanceData {
     description: string;
     timeframe: string;
     completed: boolean;
+    isEstimate?: boolean;
   }>;
   chargeClassifications?: Array<{
     id?: string;
     name: string;
     classification: string;
+    /**
+     * Internal/legacy statute section number. NOT verified unless dataConfidence is 'high'.
+     * Never display this to users — it may be synthesized. Use the `citation` field on the
+     * CriminalCharge DB entry (via getVerifiedCitation()) for any user-visible statute reference.
+     */
     code: string;
   }>;
   mockQA?: Array<{
@@ -686,7 +692,14 @@ function YourChargesSection({
   chargeClassifications,
   jurisdiction,
 }: {
-  chargeClassifications?: Array<{ name: string; classification: string; code: string }>;
+  chargeClassifications?: Array<{
+    id?: string;
+    name: string;
+    classification: string;
+    /** Internal/legacy field — NOT rendered to users. Only used for DB charge lookup fallback.
+     *  User-visible statute references come from getVerifiedCitation() on the matched DB entry. */
+    code: string;
+  }>;
   jurisdiction?: string;
 }) {
   const { t } = useTranslation();
@@ -1470,8 +1483,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                             </Badge>
                           )}
                         </h4>
-                        <Badge variant={isCompleted ? 'secondary' : 'outline'} className="text-xs">
-                          {stage.timeframe}
+                        <Badge variant={isCompleted ? 'secondary' : 'outline'} className={`text-xs ${stage.isEstimate ? 'border-amber-400 text-amber-700 dark:text-amber-400' : ''}`} title={stage.isEstimate ? 'General estimate — verify with your court' : undefined}>
+                          {stage.isEstimate ? `~${stage.timeframe}` : stage.timeframe}
                         </Badge>
                       </div>
                       <p className={`text-sm mt-1 ${isCurrentStage ? 'text-foreground' : 'text-muted-foreground'}`}>

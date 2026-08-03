@@ -75,6 +75,7 @@ interface EnhancedGuidance {
     description: string;
     timeframe: string;
     completed: boolean;
+    isEstimate?: boolean;
   }>;
   mockQA?: MockQAItem[];
   collateralConsequences?: CollateralConsequenceItem[];
@@ -1126,7 +1127,10 @@ function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionD
   } else if (caseStage === 'arrest') {
     actions = 'Attorneys consistently advise against making statements without counsel present. Attending the arraignment hearing on time is the other immediate priority.';
   } else if (caseStage === 'arraignment') {
-    actions = `Work with your lawyer to understand the charges and prepare for your plea. Make sure you meet the deadline for your arraignment: ${jurisdictionData.arraignmentDeadline}.`;
+    const arraignmentTimeframe = KNOWN_JURISDICTIONS.includes((caseData.jurisdiction || '').toUpperCase())
+      ? jurisdictionData.arraignmentDeadline
+      : `${jurisdictionData.arraignmentDeadline} (estimate — verify with your court)`;
+    actions = `Work with your lawyer to understand the charges and prepare for your plea. Make sure you meet the deadline for your arraignment: ${arraignmentTimeframe}.`;
   } else if (caseStage === 'pre-trial') {
     actions = 'Work closely with your lawyer to gather evidence and prepare your defense. Follow all court orders and bail conditions.';
   } else {
@@ -1149,8 +1153,12 @@ function buildOverview(caseData: CaseData, specificCharges: any[], jurisdictionD
   return `${situation} ${actions} ${keyIssue}`;
 }
 
-function buildCaseTimeline(caseStage: string, jurisdictionData: any, jurisdiction?: string): Array<{stage: string; description: string; timeframe: string; completed: boolean}> {
+function buildCaseTimeline(caseStage: string, jurisdictionData: any, jurisdiction?: string): Array<{stage: string; description: string; timeframe: string; completed: boolean; isEstimate?: boolean}> {
   const isIndiana = (jurisdiction || '').toUpperCase() === 'IN';
+  // Flag timeframes that come from the federal fallback as estimates so the UI
+  // and PDF can surface a caveat (~ prefix / amber indicator) rather than
+  // presenting generic federal values as if they were state-specific rules.
+  const isUnknownJurisdiction = !KNOWN_JURISDICTIONS.includes((jurisdiction || '').toUpperCase());
   const timeline = [
     {
       stage: 'Arrest',
@@ -1162,7 +1170,8 @@ function buildCaseTimeline(caseStage: string, jurisdictionData: any, jurisdictio
       stage: 'Arraignment',
       description: 'Charges read, plea entered, bail set',
       timeframe: jurisdictionData.arraignmentDeadline,
-      completed: caseStage !== 'arrest'
+      completed: caseStage !== 'arrest',
+      ...(isUnknownJurisdiction && { isEstimate: true }),
     },
     {
       stage: isIndiana ? 'Initial Hearing' : 'Preliminary Hearing',
@@ -1170,7 +1179,8 @@ function buildCaseTimeline(caseStage: string, jurisdictionData: any, jurisdictio
         ? 'Court reviews probable cause and advises rights (Indiana uses "initial hearing" — IC § 35-33-7-1)'
         : 'Court determines probable cause',
       timeframe: jurisdictionData.preliminaryHearing || 'Within 2 weeks',
-      completed: false
+      completed: false,
+      ...(isUnknownJurisdiction && { isEstimate: true }),
     },
     {
       stage: 'Discovery',
@@ -1182,7 +1192,8 @@ function buildCaseTimeline(caseStage: string, jurisdictionData: any, jurisdictio
       stage: 'Trial',
       description: 'Presentation of evidence and verdict',
       timeframe: jurisdictionData.speedyTrialRight,
-      completed: false
+      completed: false,
+      ...(isUnknownJurisdiction && { isEstimate: true }),
     }
   ];
   

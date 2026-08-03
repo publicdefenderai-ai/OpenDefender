@@ -291,7 +291,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Coordinates all drug court diversion programs in Delaware. Superior Court minimum 6 months, Court of Common Pleas minimum 14 weeks.",
     contact: {
       phone: "(302) 577-2711",
-      url: "https://www.nationaltasc.org"
+      url: "https://dhss.delaware.gov/dsamh/division-of-substance-abuse-and-mental-health/treatment-access-centers/"
     },
     sources: ["Delaware Department of Health and Social Services", "Center for Health and Justice Report"],
     lastUpdated: new Date("2024-09-20"),
@@ -309,7 +309,7 @@ export const diversionPrograms: DiversionProgram[] = [
     eligibilityNotes: "Southern Delaware location serving Sussex County. Provides intake assessments, urinalysis, educational groups, and case management services.",
     contact: {
       phone: "(302) 854-0010",
-      url: "https://www.nationaltasc.org"
+      url: "https://dhss.delaware.gov/dsamh/division-of-substance-abuse-and-mental-health/treatment-access-centers/"
     },
     sources: ["Delaware Department of Health and Social Services", "Center for Health and Justice Report"],
     lastUpdated: new Date("2024-09-20"),
