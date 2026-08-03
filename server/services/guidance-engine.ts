@@ -744,6 +744,7 @@ function identifyChargeType(charges: string): string {
 // New charge-specific guidance functions
 function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any, specificCharges: any[]): string[] {
   const alerts: string[] = [];
+  const jurisdiction = (caseData.jurisdiction ?? '').toUpperCase();
   
   // Add stage-specific alerts
   if (caseData.caseStage === 'arrest') {
@@ -751,6 +752,13 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
     if (caseData.custodyStatus === 'detained') {
       alerts.push(`Arraignment is required ${jurisdictionData.arraignmentDeadline}`);
     }
+  }
+
+  // SC: preliminary hearing is demand-based — must be actively requested
+  if (jurisdiction === 'SC' && (caseData.caseStage === 'arrest' || caseData.caseStage === 'arraignment')) {
+    alerts.push(
+      '**SC Preliminary Hearing — Action Required**: In South Carolina, a preliminary hearing will NOT be scheduled automatically. You must actively request it in writing within 10 days of receiving notice. Failing to request within that window forfeits this right entirely (SC Rule 2 SCRCP).'
+    );
   }
   
   if (!caseData.hasAttorney) {

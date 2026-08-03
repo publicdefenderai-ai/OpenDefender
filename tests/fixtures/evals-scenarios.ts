@@ -815,16 +815,20 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
       deadlineEventKeywords: ['Arraignment'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+      // SC preliminary hearing is demand-based; warn at arrest stage too
+      requiredAlertKeywords: ['must actively request', '10 days', 'SC Rule 2 SCRCP'],
     },
   },
   {
-    label: 'P1-75: SC × arraignment stage — preliminary hearing deadline present',
+    label: 'P1-75: SC × arraignment stage — preliminary hearing deadline present and demand warning shown',
     input: { ...baseMapped, jurisdiction: 'SC', charges: 'drug possession', caseStage: 'arraignment', custodyStatus: 'detained' },
     expect: {
       deadlineEventKeywords: ['Preliminary Hearing'],
       deadlineTimeframeKeywords: ['10 days'],
       noDeadlineIsEstimate: true,
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
+      // SC Rule 2 SCRCP: hearing is NOT automatic — defendant must request in writing within 10 days
+      requiredAlertKeywords: ['must actively request', '10 days', 'SC Rule 2 SCRCP'],
     },
   },
   {
