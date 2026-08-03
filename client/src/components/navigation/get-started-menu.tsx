@@ -426,7 +426,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/record-expungement')}
+        onClick={() => handleNavigate('/support/reputation/eligibility')}
         className="w-full"
         data-testid="submenu-item-record-expungement"
       >

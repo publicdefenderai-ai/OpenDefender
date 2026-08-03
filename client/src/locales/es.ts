@@ -444,7 +444,8 @@ export default {
       "childcare": "Apoyo para el Cuidado Infantil",
       "housing": "Ayuda con Vivienda",
       "familyCare": "Apoyo para el Cuidado Familiar",
-      "reputation": "Reputación y Registros"
+      "reputation": "Reputación y Registros",
+      "recordClearing": "Evaluador de Eliminación de Antecedentes"
     },
     "employment": {
       "overview": "Enfrentar cargos penales puede crear incertidumbre sobre su trabajo. Entender sus derechos y planificar con anticipación puede ayudar a proteger su empleo mientras se concentra en su caso.",
@@ -1896,6 +1897,140 @@ export default {
         "ccrcDesc": "El recurso nacional autorizado sobre certificados de alivio y todas las demás consecuencias colaterales. Incluye un inventario estado por estado de los programas disponibles.",
         "cleanSlateLink": "Iniciativa de Pizarra Limpia: Rastreador Estatal",
         "cleanSlateLinkDesc": "Rastrea la legislación de Pizarra Limpia y programas de alivio relacionados por estado."
+      }
+    },
+    "reentry": {
+      "overview": "Esta guía es para personas que se acercan a su liberación o que recientemente completaron una sentencia. Cubre lo que más importa primero: obtener una identificación oficial, eliminar o sellar su expediente si califica, encontrar vivienda, encontrar trabajo y conocer sus derechos de voto. Empiece con la identificación — todo lo demás depende de ese paso.",
+      "actions": {
+        "getId": {
+          "title": "Obtenga una identificación oficial primero",
+          "description": "Se requiere una identificación con fotografía emitida por el gobierno para solicitudes de vivienda, trámites de empleo, inscripción en beneficios y cuentas bancarias. Comience con su acta de nacimiento, luego su tarjeta de Seguro Social, luego una identificación estatal con fotografía. Todo lo demás depende de este paso.",
+          "timeframe": "Antes que nada"
+        },
+        "call211": {
+          "title": "Llame o envíe un mensaje de texto al 211",
+          "description": "Marque el 211 (o envíe su código postal por mensaje de texto al 898-211) para encontrar programas locales de reinserción, vivienda de transición, capacitación laboral y ayuda de emergencia cerca de usted. Gratuito y disponible las 24 horas en la mayor parte de EE. UU.",
+          "timeframe": "Día 1"
+        },
+        "recordClearing": {
+          "title": "Verifique si puede eliminar su expediente",
+          "description": "Un expediente eliminado o sellado puede abrir puertas que de otro modo permanecen cerradas — especialmente para solicitudes de vivienda y verificaciones de antecedentes. Varios estados ahora eliminan automáticamente los expedientes elegibles, y nuestro evaluador gratuito puede decirle qué está disponible probablemente en el suyo en un par de minutos.",
+          "timeframe": "Las primeras semanas"
+        },
+        "checkVoting": {
+          "title": "Verifique si sus derechos de voto han sido restaurados",
+          "description": "Muchas personas no saben que sus derechos se restauraron automáticamente al ser liberadas. La elegibilidad varía según el estado — en la mayoría de los estados, los derechos se restauran al salir de prisión. Verifique su estatus antes de la próxima elección.",
+          "timeframe": "Antes de su próxima elección"
+        }
+      },
+      "resources": {
+        "211": {
+          "description": "Marque el 211 o visite 211.org para encontrar programas locales de reinserción, vivienda de transición, asistencia alimentaria y capacitación laboral. Gratuito, disponible las 24 horas, en la mayor parte de EE. UU."
+        },
+        "clearMyRecord": {
+          "description": "Ayuda gratuita y guiada para eliminar expedientes penales elegibles en los estados participantes. No se requiere abogado — la herramienta verifica su elegibilidad y puede ayudar a presentar el papeleo."
+        },
+        "careerOneStop": {
+          "description": "Búsqueda de empleo, capacitación en habilidades y recursos de carrera, incluyendo una sección dedicada a la reinserción. Use el localizador para encontrar un Centro de Empleo Americano en persona cerca de usted."
+        },
+        "ssa": {
+          "description": "Reemplace una tarjeta de Seguro Social perdida en línea o en persona. La necesitará antes de obtener una identificación estatal. Llame o visite cualquier oficina del Seguro Social."
+        },
+        "hud": {
+          "description": "Orientación federal sobre los derechos de los inquilinos para personas con antecedentes penales en viviendas con asistencia federal. Las prohibiciones generales basadas en registros de arresto no están permitidas bajo la política de HUD."
+        },
+        "ncsl": {
+          "description": "Tabla estado por estado de las leyes de restauración de derechos de voto, mantenida por la Conferencia Nacional de Legislaturas Estatales (NCSL). (Fuente: NCSL, actualizado anualmente.)"
+        },
+        "voteGov": {
+          "description": "Información oficial de votación del gobierno de EE. UU. Verifique los requisitos de inscripción de su estado y regístrese en línea donde esté disponible."
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "¿Necesito una identificación para conseguir vivienda o trabajo?",
+          "answer": "Sí, en casi todos los casos. Se requiere una identificación con fotografía emitida por el gobierno para solicitudes de vivienda, formularios I-9 de empleo, cuentas bancarias y la mayoría de los beneficios públicos. Obtener su identificación es el primer paso — todo lo demás sigue a partir de ahí."
+        },
+        "qRecord": {
+          "question": "¿De verdad ayuda eliminar mi expediente?",
+          "answer": "A menudo, sí. La mayoría de los arrendadores y empleadores que realizan verificaciones de antecedentes no verán un expediente que ha sido eliminado o sellado. No borra cada rastro en todas partes — algunos sistemas gubernamentales y de las fuerzas del orden mantienen acceso — pero para las verificaciones de antecedentes privadas que se solicitan con más frecuencia en solicitudes de vivienda y empleo, elimina un obstáculo importante. Algunos estados ahora hacen esto automáticamente. El evaluador de elegibilidad puede decirle qué está probablemente disponible donde vive."
+        },
+        "q2": {
+          "question": "¿Puede un arrendador negarse a alquilarme por mi antecedente penal?",
+          "answer": "Para viviendas con asistencia federal, las prohibiciones generales basadas en registros de arresto no están permitidas bajo las directrices de HUD. Para arrendadores privados, depende de su estado y ciudad — muchos tienen leyes de vivienda de 'oportunidad justa' que limitan cuándo y cómo se pueden usar los antecedentes. Llame al 211 para encontrar programas de vivienda que trabajen con personas con antecedentes."
+        },
+        "q3": {
+          "question": "¿Puede un empleador rechazarme por mi antecedente?",
+          "answer": "Los empleadores pueden considerar el historial penal, pero la orientación de la EEOC dice que el antecedente debe ser relevante para el trabajo específico. Más de 35 estados y 150+ ciudades tienen leyes de 'Ban the Box' (eliminar la casilla de antecedentes) que retrasan las preguntas sobre el historial penal hasta más adelante en el proceso de contratación. Consulte el rastreador de NELP para conocer las reglas de su estado. (Fuente: National Employment Law Project, 2024.)"
+        },
+        "q4": {
+          "question": "¿Cuándo regresan mis derechos de voto?",
+          "answer": "Depende de su estado. La mayoría de los estados restauran los derechos de voto automáticamente cuando es liberado de prisión. Algunos requieren completar primero la libertad condicional o supervisada. Unos pocos requieren una solicitud por separado. Consulte la tabla estado por estado de NCSL o vote.gov para conocer su estado específico."
+        }
+      },
+      "topics": {
+        "sectionTitle": "Por dónde empezar, por tema",
+        "footnote": "Los recursos varían según el estado y el condado. Los enlaces anteriores son puntos de partida nacionales. Llame al 211 para programas específicos de su ubicación.",
+        "id": {
+          "title": "Obtenga Su Identificación Primero",
+          "intro": "Se requiere una identificación con fotografía para vivienda, trabajos y beneficios. Haga esto antes que nada.",
+          "step1Label": "1. Acta de nacimiento",
+          "step1Text": "— solicítela a través de su estado o",
+          "step2Label": "2. Tarjeta de Seguro Social",
+          "step2Text": "— gratis en",
+          "step2AfterText": "o llame al 1-800-772-1213",
+          "step3Label": "3. Identificación estatal",
+          "step3Text": "— lleve ambos documentos al DMV. Llame al 211 para preguntar sobre exenciones de tarifas."
+        },
+        "recordClearing": {
+          "title": "Elimine Su Expediente",
+          "intro": "Muchos estados ahora eliminan ciertos expedientes automáticamente, a veces sin que usted tenga que presentar nada.",
+          "item1Label": "Verifique su elegibilidad",
+          "item1Text": "— unas pocas preguntas rápidas le dicen qué está probablemente disponible en su estado.",
+          "item1LinkLabel": "Comenzar el evaluador de elegibilidad →",
+          "item2Label": "Eliminación automática de \"Pizarra Limpia\"",
+          "item2Text": "— varios estados ahora eliminan automáticamente los expedientes elegibles, sin una petición judicial.",
+          "item2LinkLabel": "Ver qué estados →",
+          "item3Label": "Ayuda gratuita para presentar una petición",
+          "item3Text": "— si su estado le exige presentar una solicitud, estas organizaciones pueden ayudar sin costo.",
+          "item3LinkLabel": "Iniciativa de Pizarra Limpia"
+        },
+        "housing": {
+          "title": "Vivienda",
+          "intro": "Sus derechos dependen del tipo de vivienda y de su estado.",
+          "item1Label": "Vivienda con asistencia federal",
+          "item1Text": "— las prohibiciones generales basadas en registros de arresto no están permitidas.",
+          "item1LinkLabel": "Orientación de HUD →",
+          "item2Label": "Encuentre programas",
+          "item2Text": "— llame o envíe un mensaje de texto al 211 para vivienda de transición y programas de reinserción cerca de usted.",
+          "item3Label": "Protecciones locales",
+          "item3Text": "— muchas ciudades tienen leyes de vivienda de \"oportunidad justa\". Consulte a una oficina local de ayuda legal."
+        },
+        "employment": {
+          "title": "Empleo",
+          "intro": "La ley federal limita cómo los empleadores pueden usar su historial penal.",
+          "item1Label": "Derechos de la EEOC",
+          "item1Text": "— los empleadores deben demostrar que un antecedente es relevante para el trabajo. Los rechazos generales suelen ser ilegales.",
+          "item1LinkLabel": "Orientación de la EEOC →",
+          "item2Label": "Ban the Box",
+          "item2Text": "— más de 35 estados retrasan las preguntas sobre el historial penal hasta después de una oferta de trabajo.",
+          "item2LinkLabel": "Verifique su estado →",
+          "item3Label": "Búsqueda de empleo",
+          "item3Text": "—",
+          "item3AfterText": "(Departamento de Trabajo) tiene una sección de reinserción y centros de empleo locales."
+        },
+        "voting": {
+          "title": "Derechos de Voto",
+          "intro": "La mayoría de los estados restauran los derechos de voto automáticamente cuando sale de prisión.",
+          "item1Label": "Verifique su estado",
+          "item1Text": "— algunos requieren terminar la libertad condicional; Maine y Vermont nunca suspenden los derechos.",
+          "item1LinkLabel": "Tabla estado por estado →",
+          "item2Label": "Regístrese",
+          "item2Text": "—",
+          "item2AfterText": "es el portal oficial de registro de EE. UU. Muchos estados permiten el registro en línea.",
+          "item3Label": "¿Necesita ayuda?",
+          "item3Text": "— la oficina electoral de su estado o una organización local de ayuda legal puede confirmar su elegibilidad."
+        }
       }
     }
   },
@@ -6682,6 +6817,20 @@ export default {
       "clearMyRecord": "Code for America: Elimina Mi Registro",
       "cleanSlate": "Iniciativa Clean Slate: Seguimiento por Estado",
       "lawHelp": "LawHelp.org: Ayuda Legal Gratuita por Estado"
+    },
+    "autoClearance": {
+      "heading": "Eliminación automática en {{state}}",
+      "legislationLabel": "Legislación:",
+      "offenseTypesLabel": "Cubre:",
+      "waitingPeriodLabel": "Período de espera:",
+      "linkLabel": "Más información"
+    },
+    "stateInfo": {
+      "heading": "Sobre la eliminación de antecedentes en {{state}}",
+      "exclusionsLabel": "Delitos comúnmente excluidos",
+      "moreExclusions": "+{{count}} más",
+      "sourcesLabel": "Fuentes legales",
+      "noDataNote": "Todavía no tenemos reglas detalladas específicas de {{state}} en nuestra base de datos. La orientación general anterior sigue aplicando — una organización local de ayuda legal puede confirmar los detalles de su expediente."
     },
     "disclaimer": "Este evaluador proporciona solo información general. No es asesoramiento legal. Los resultados dependen de su registro específico y la ley estatal. Contacte a una organización de ayuda legal para una revisión completa."
   },

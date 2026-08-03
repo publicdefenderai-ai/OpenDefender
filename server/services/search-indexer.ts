@@ -401,6 +401,12 @@ export function buildSearchIndex(): void {
   for (const rule of expungementRules) {
     const exclusions = rule.exclusions || [];
     const conditions = rule.conditions || [];
+    // The screener (record-clearance-screener.tsx) only offers the 50 states + DC as
+    // options — its state codes match rule.state directly except for the "Federal"
+    // entry, which has no screener option and links to the general info page instead.
+    const screenerUrl = rule.state === 'Federal'
+      ? '/support/reputation'
+      : `/support/reputation/eligibility?state=${rule.state}`;
     documents.push({
       id: `expungement-${rule.id}`,
       type: 'expungement',
@@ -409,7 +415,7 @@ export function buildSearchIndex(): void {
       tags: ['expungement', 'record clearing', rule.state],
       aliases: ['expunction', 'record sealing', 'record clearing'],
       jurisdiction: rule.state,
-      url: `/record-expungement#${rule.state.toLowerCase().replace(/\s+/g, '-')}`,
+      url: screenerUrl,
     });
   }
   devLog('search', `Indexed ${expungementRules.length} expungement rules`);

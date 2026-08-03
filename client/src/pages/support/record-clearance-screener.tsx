@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 import {
   ChevronLeft,
   ChevronRight,
@@ -10,6 +10,7 @@ import {
   XCircle,
   ExternalLink,
   ShieldCheck,
+  Scale,
 } from "lucide-react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -19,20 +20,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-
-// States with active automatic clearance programs
-const AUTO_CLEARANCE_STATES = new Set(["CA", "IL", "NY", "PA", "MI", "CT", "DE", "NJ"]);
-// Cannabis-only automatic clearance
-const CANNABIS_AUTO_STATES = new Set(["CA", "IL", "NY"]);
-// States with misdemeanor automatic clearance after waiting period
-const MISDEMEANOR_AUTO_STATES = new Set(["PA", "MI", "CT", "DE", "NJ"]);
-
-// States that typically do not allow felony expungement at all
-const NO_FELONY_EXPUNGE_STATES = new Set([
-  "AK", "AL", "CO", "HI", "ID", "KS", "LA", "ME", "MN", "MS",
-  "MT", "ND", "NE", "NH", "OH", "OR", "SC", "SD", "TN", "TX",
-  "UT", "VT", "WV", "WY",
-]);
+import {
+  getExpungementByState,
+  hasAutomaticClearance,
+  automaticClearanceData,
+} from "@/lib/expungement-data";
 
 type Step = 1 | 2 | 3 | 4;
 type RecordType = "arrest" | "misdemeanor" | "felony" | "marijuana";
@@ -40,6 +32,16 @@ type TimeframeType = "lt1" | "1to3" | "3to7" | "gt7";
 type SentenceType = "complete" | "fines" | "probation";
 
 type ResultType = "A" | "B" | "C" | "D";
+
+// Lower-bound months for each timeframe bucket, checked against each state's
+// real waitingPeriods data (client/src/lib/expungement-data.ts) — conservative
+// on purpose so the tool never tells someone they're eligible before they are.
+const TIMEFRAME_MONTHS: Record<TimeframeType, number> = {
+  lt1: 0,
+  "1to3": 12,
+  "3to7": 36,
+  gt7: 84,
+};
 
 interface Answers {
   state: string;
@@ -102,57 +104,83 @@ const US_STATES = [
   { code: "WY", name: "Wyoming" },
 ];
 
+// Determines the coarse A/B/C/D bucket for the result headline, backed by
+// each state's real waitingPeriods/automatic-clearance data instead of
+// hardcoded, uncited state lists. The full state-specific overview,
+// exclusions, and sources (from getExpungementByState) are shown alongside
+// this bucket in ResultCard — the bucket is a starting signal, not the
+// whole answer.
 function determineResult(answers: Answers): ResultType {
   const { state, recordType, timeframe, sentence } = answers;
+  if (!state || !recordType || !timeframe || !sentence) return "C";
 
-  // Check for automatic clearance eligibility
-  if (recordType === "marijuana" && AUTO_CLEARANCE_STATES.has(state)) {
-    return "A";
-  }
-  if (recordType === "arrest" && AUTO_CLEARANCE_STATES.has(state)) {
-    return "A";
-  }
-  if (
-    recordType === "misdemeanor" &&
-    MISDEMEANOR_AUTO_STATES.has(state) &&
-    (timeframe === "3to7" || timeframe === "gt7") &&
-    sentence === "complete"
-  ) {
-    return "A";
+  const rule = getExpungementByState(state);
+  const autoInfo = automaticClearanceData[state];
+  const monthsSince = TIMEFRAME_MONTHS[timeframe];
+
+  // Automatic clearance — only when the state's program actually covers this
+  // offense type (client/src/lib/expungement-data.ts automaticClearanceData).
+  if (hasAutomaticClearance(state) && autoInfo) {
+    const types = autoInfo.offenseTypes.map((o) => o.toLowerCase());
+    if (recordType === "marijuana" && types.some((t) => t.includes("marijuana") || t.includes("cannabis"))) {
+      return "A";
+    }
+    if (recordType === "arrest") {
+      return "A";
+    }
+    if (
+      sentence === "complete" &&
+      ((recordType === "misdemeanor" && types.some((t) => t.includes("misdemeanor"))) ||
+        (recordType === "felony" && types.some((t) => t.includes("felon"))))
+    ) {
+      return "A";
+    }
   }
 
-  // Limited or no pathway for violent felonies
-  if (recordType === "felony" && NO_FELONY_EXPUNGE_STATES.has(state)) {
-    return "D";
-  }
-
-  // Not yet eligible
+  // Still under supervision
   if (sentence === "probation") {
     return "C";
   }
-  if (timeframe === "lt1" || (timeframe === "1to3" && sentence !== "complete")) {
+
+  const waitingPeriods = rule?.waitingPeriods as
+    | { misdemeanorMonths?: number; felonyMonths?: number }
+    | undefined;
+  const requiredMonths =
+    recordType === "felony"
+      ? waitingPeriods?.felonyMonths
+      : recordType === "misdemeanor"
+        ? waitingPeriods?.misdemeanorMonths
+        : 0; // arrests and marijuana-only records without an automatic program are treated as petition-eligible once complete
+
+  // Our data shows no defined felony waiting period for this state — limited
+  // or no pathway, rather than guessing.
+  if (recordType === "felony" && !requiredMonths) {
+    return "D";
+  }
+
+  if (sentence === "fines") {
     return "C";
   }
 
-  // Petition-based expungement may be available
-  if (
-    sentence === "complete" &&
-    (timeframe === "3to7" || timeframe === "gt7")
-  ) {
-    return "B";
-  }
-  if (sentence === "complete" && timeframe === "1to3") {
-    return "B";
-  }
-  if (sentence === "fines" && (timeframe === "3to7" || timeframe === "gt7")) {
+  if (requiredMonths !== undefined && monthsSince < requiredMonths) {
     return "C";
   }
 
-  return "C";
+  return "B";
 }
 
-function ResultCard({ result }: { result: ResultType }) {
+function ResultCard({ result, state, recordType }: { result: ResultType; state: string; recordType: RecordType | "" }) {
   const { t } = useTranslation();
+  const rule = getExpungementByState(state);
+  const autoInfo = automaticClearanceData[state];
+  const showAutoClearance =
+    hasAutomaticClearance(state) &&
+    autoInfo &&
+    (result === "A" ||
+      (recordType === "marijuana" && autoInfo.offenseTypes.some((o) => o.toLowerCase().includes("marijuana") || o.toLowerCase().includes("cannabis"))));
+  const stateName = US_STATES.find((s) => s.code === state)?.name ?? state;
+  const visibleExclusions = rule?.exclusions?.slice(0, 5) ?? [];
+  const remainingExclusions = (rule?.exclusions?.length ?? 0) - visibleExclusions.length;
 
   const configs = {
     A: {
@@ -201,6 +229,102 @@ function ResultCard({ result }: { result: ResultType }) {
           </p>
         </CardContent>
       </Card>
+
+      {showAutoClearance && autoInfo && (
+        <Card className="border-teal-300 dark:border-teal-700 bg-teal-50/60 dark:bg-teal-950/20">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
+              {t("screener.autoClearance.heading", { state: stateName })}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-2 text-sm">
+            {autoInfo.legislation && (
+              <p>
+                <span className="font-semibold text-foreground">{t("screener.autoClearance.legislationLabel")}</span>{" "}
+                <span className="text-muted-foreground">{autoInfo.legislation}</span>
+              </p>
+            )}
+            <p>
+              <span className="font-semibold text-foreground">{t("screener.autoClearance.offenseTypesLabel")}</span>{" "}
+              <span className="text-muted-foreground">{autoInfo.offenseTypes.join(", ")}</span>
+            </p>
+            {autoInfo.waitingPeriodNote && (
+              <p>
+                <span className="font-semibold text-foreground">{t("screener.autoClearance.waitingPeriodLabel")}</span>{" "}
+                <span className="text-muted-foreground">{autoInfo.waitingPeriodNote}</span>
+              </p>
+            )}
+            {autoInfo.notes && <p className="text-muted-foreground">{autoInfo.notes}</p>}
+            {autoInfo.link && (
+              <a
+                href={autoInfo.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-teal-700 dark:text-teal-400 font-medium hover:underline"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+                {t("screener.autoClearance.linkLabel")}
+              </a>
+            )}
+          </CardContent>
+        </Card>
+      )}
+
+      {rule ? (
+        <Card className="border border-border/60">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-base flex items-center gap-2">
+              <Scale className="h-4 w-4 shrink-0" />
+              {t("screener.stateInfo.heading", { state: stateName })}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <p className="text-sm text-muted-foreground leading-relaxed">{rule.overview}</p>
+
+            {visibleExclusions.length > 0 && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
+                  {t("screener.stateInfo.exclusionsLabel")}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {visibleExclusions.map((exclusion, i) => (
+                    <Badge key={i} variant="outline" className="text-xs font-normal">
+                      {exclusion}
+                    </Badge>
+                  ))}
+                  {remainingExclusions > 0 && (
+                    <Badge variant="outline" className="text-xs font-normal">
+                      {t("screener.stateInfo.moreExclusions", { count: remainingExclusions })}
+                    </Badge>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {rule.sources && rule.sources.length > 0 && (
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-1.5">
+                  {t("screener.stateInfo.sourcesLabel")}
+                </p>
+                <div className="flex flex-wrap gap-x-3 gap-y-1">
+                  {rule.sources.map((source, i) => (
+                    <span key={i} className="text-xs text-muted-foreground">
+                      {source}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      ) : (
+        <Alert className="border-border bg-muted/40">
+          <AlertDescription className="text-sm text-muted-foreground">
+            {t("screener.stateInfo.noDataNote", { state: stateName })}
+          </AlertDescription>
+        </Alert>
+      )}
 
       <Card className="border border-border/60">
         <CardHeader className="pb-3">
@@ -258,9 +382,16 @@ export default function RecordClearanceScreener() {
   const { t } = useTranslation();
   useScrollToTop();
 
-  const [step, setStep] = useState<Step>(1);
+  // Deep-linking support (e.g. from site search: /support/reputation/eligibility?state=CA)
+  // pre-selects the state and skips straight to step 2 instead of making the
+  // user re-pick a state they already told us via the link.
+  const searchParams = new URLSearchParams(useSearch());
+  const stateFromUrl = searchParams.get("state")?.toUpperCase() ?? "";
+  const isValidStateFromUrl = US_STATES.some((s) => s.code === stateFromUrl);
+
+  const [step, setStep] = useState<Step>(isValidStateFromUrl ? 2 : 1);
   const [answers, setAnswers] = useState<Answers>({
-    state: "",
+    state: isValidStateFromUrl ? stateFromUrl : "",
     recordType: "",
     timeframe: "",
     sentence: "",
@@ -497,7 +628,7 @@ export default function RecordClearanceScreener() {
             </ScrollReveal>
           ) : (
             <ScrollReveal>
-              {result && <ResultCard result={result} />}
+              {result && <ResultCard result={result} state={answers.state} recordType={answers.recordType} />}
               <div className="flex items-center justify-between mt-6">
                 <Button variant="outline" onClick={handleBack} className="gap-2">
                   <ChevronLeft className="h-4 w-4" />

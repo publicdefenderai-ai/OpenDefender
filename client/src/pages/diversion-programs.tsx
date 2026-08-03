@@ -403,7 +403,7 @@ export default function DiversionPrograms() {
                   <p className="text-muted-foreground text-sm mb-4">
                     {t('diversionPrograms.quickNav.recordClearingDesc')}
                   </p>
-                  <Link href="/record-expungement">
+                  <Link href="/support/reputation/eligibility">
                     <Button variant="outline" className="w-full">
                       {t('diversionPrograms.quickNav.recordClearingButton')}
                     </Button>

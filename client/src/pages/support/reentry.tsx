@@ -1,4 +1,5 @@
-import { Compass, IdCard, Home, Briefcase, Vote, ExternalLink } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Compass, IdCard, FileX, Home, Briefcase, Vote, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
@@ -10,134 +11,12 @@ import {
 } from "@/components/support/resource-page-template";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
-const startHereItems: ActionItem[] = [
-  {
-    id: "get-id",
-    title: "Get official ID first",
-    description:
-      "A government-issued photo ID is required for housing applications, employment paperwork, benefits enrollment, and bank accounts. Start with your birth certificate, then your Social Security card, then a state-issued photo ID. Everything else depends on this step.",
-    priority: "high",
-    timeframe: "Before anything else",
-  },
-  {
-    id: "call-211",
-    title: "Call or text 211",
-    description:
-      "Dial 211 (or text your ZIP code to 898-211) to find local re-entry programs, transitional housing, job training, and emergency help near you. Free and available 24/7 across most of the U.S.",
-    priority: "high",
-    timeframe: "Day 1",
-  },
-  {
-    id: "check-voting",
-    title: "Check whether your voting rights have been restored",
-    description:
-      "Many people don't know their rights came back automatically upon release. Eligibility varies by state — in most states, rights are restored when you leave prison. Check your status before your next election.",
-    priority: "medium",
-    timeframe: "Before your next election",
-  },
-];
-
-const externalResources: ExternalResource[] = [
-  {
-    name: "211 — Local Services Locator",
-    description:
-      "Dial 211 or visit 211.org to find local re-entry programs, transitional housing, food assistance, and job training. Free, 24/7, available across most of the U.S.",
-    url: "https://www.211.org/",
-    type: "national",
-    free: true,
-  },
-  {
-    name: "CareerOneStop (U.S. Dept. of Labor)",
-    description:
-      "Job search, skills training, and career resources including a dedicated re-entry section. Use the locator to find an in-person American Job Center near you.",
-    url: "https://www.careeronestop.org/",
-    type: "national",
-    free: true,
-  },
-  {
-    name: "Social Security Administration — Replace Your Card",
-    description:
-      "Replace a lost Social Security card online or in person. You will need this before getting a state-issued ID. Call or visit any Social Security office.",
-    url: "https://www.ssa.gov/ssnumber/",
-    phone: "1-800-772-1213",
-    type: "national",
-    free: true,
-  },
-  {
-    name: "HUD — Criminal Records and Fair Housing",
-    description:
-      "Federal guidance on tenant rights for people with criminal records in federally assisted housing. Blanket bans based on arrest records are not allowed under HUD policy.",
-    url: "https://www.hud.gov/program_offices/fair_housing_equal_opp",
-    type: "national",
-    free: true,
-  },
-  {
-    name: "NCSL — Felon Voting Rights by State",
-    description:
-      "State-by-state chart of voting rights restoration laws, maintained by the National Conference of State Legislatures. (Source: NCSL, updated annually.)",
-    url: "https://www.ncsl.org/elections-and-campaigns/felon-voting-rights",
-    type: "online",
-    free: true,
-  },
-  {
-    name: "Vote.gov",
-    description:
-      "Official U.S. government voting information. Check your state's registration requirements and register online where available.",
-    url: "https://vote.gov/",
-    type: "national",
-    free: true,
-  },
-];
-
-const faqs: FAQ[] = [
-  {
-    question: "Do I need ID to get housing or a job?",
-    answer:
-      "Yes, in almost all cases. A government-issued photo ID is required for housing applications, employment I-9 forms, bank accounts, and most public benefits. Getting your ID is the first step — everything else follows from it.",
-  },
-  {
-    question: "Can a landlord refuse to rent to me because of my criminal record?",
-    answer:
-      "For federally assisted housing, blanket bans based on arrest records are not allowed under HUD guidance. For private landlords, it depends on your state and city — many have 'fair chance' housing laws that limit when and how records can be used. Call 211 to find housing programs that work with people with records.",
-  },
-  {
-    question: "Can an employer reject me because of my record?",
-    answer:
-      "Employers can consider criminal history, but EEOC guidance says the record must be relevant to the specific job. Over 35 states and 150+ cities have Ban the Box laws that delay criminal history questions until later in the hiring process. Check NELP's tracker for your state's rules. (Source: National Employment Law Project, 2024.)",
-  },
-  {
-    question: "When do my voting rights come back?",
-    answer:
-      "It depends on your state. Most states restore voting rights automatically when you are released from prison. Some require completing parole or probation first. A few require a separate application. Check the NCSL state-by-state chart or vote.gov for your specific state.",
-  },
-];
-
-function TopicSection({
-  icon: Icon,
-  title,
-  color,
-  borderColor,
-  children,
-}: {
-  icon: React.ElementType;
-  title: string;
-  color: string;
-  borderColor: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <Card className="h-full border-l-4 overflow-hidden" style={{ borderLeftColor: borderColor }}>
-      <CardHeader className="pb-2 pt-4 px-4">
-        <CardTitle className="flex items-center gap-2 text-sm font-semibold">
-          <Icon className={`h-4 w-4 flex-shrink-0 ${color}`} strokeWidth={1.75} />
-          {title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="pt-0 px-4 pb-4 space-y-2 text-sm text-muted-foreground">
-        {children}
-      </CardContent>
-    </Card>
-  );
+interface TopicStep {
+  label: string;
+  text: string;
+  linkLabel?: string;
+  linkHref?: string;
+  afterText?: string;
 }
 
 function ActionLink({ href, children }: { href: string; children: React.ReactNode }) {
@@ -154,63 +33,157 @@ function ActionLink({ href, children }: { href: string; children: React.ReactNod
   );
 }
 
+function InternalActionLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="inline-flex items-center gap-1 text-primary hover:underline underline-offset-2 font-medium">
+      {children}
+    </Link>
+  );
+}
+
+function TopicSection({
+  icon: Icon,
+  title,
+  color,
+  borderColor,
+  intro,
+  steps,
+  ordered,
+}: {
+  icon: React.ElementType;
+  title: string;
+  color: string;
+  borderColor: string;
+  intro: string;
+  steps: TopicStep[];
+  ordered?: boolean;
+}) {
+  const ListTag = ordered ? "ol" : "ul";
+  return (
+    <Card className="h-full border-l-4 overflow-hidden" style={{ borderLeftColor: borderColor }}>
+      <CardHeader className="pb-2 pt-4 px-4">
+        <CardTitle className="flex items-center gap-2 text-sm font-semibold">
+          <Icon className={`h-4 w-4 flex-shrink-0 ${color}`} strokeWidth={1.75} />
+          {title}
+        </CardTitle>
+      </CardHeader>
+      <CardContent className="pt-0 px-4 pb-4 space-y-2 text-sm text-muted-foreground">
+        <p>{intro}</p>
+        <ListTag className="space-y-1.5 list-none">
+          {steps.map((step, i) => (
+            <li key={i}>
+              <span className="font-semibold text-foreground">{step.label}</span> {step.text}
+              {step.linkLabel && step.linkHref && (
+                <>
+                  {" "}
+                  {step.linkHref.startsWith("http") ? (
+                    <ActionLink href={step.linkHref}>{step.linkLabel}</ActionLink>
+                  ) : (
+                    <InternalActionLink href={step.linkHref}>{step.linkLabel}</InternalActionLink>
+                  )}
+                </>
+              )}
+              {step.afterText && <> {step.afterText}</>}
+            </li>
+          ))}
+        </ListTag>
+      </CardContent>
+    </Card>
+  );
+}
+
 function CustomSections() {
+  const { t } = useTranslation();
+  const ns = "support.reentry.topics";
+
   return (
     <div className="space-y-4 mb-8">
       <ScrollReveal>
-        <h2 className="text-xl font-bold text-foreground mb-4">Where to start, by topic</h2>
+        <h2 className="text-xl font-bold text-foreground mb-4">{t(`${ns}.sectionTitle`)}</h2>
       </ScrollReveal>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 min-w-0">
         <ScrollReveal delay={0.1}>
-          <TopicSection icon={IdCard} title="Get Your ID First" color="text-orange-600 dark:text-orange-400" borderColor="#ea580c">
-            <p>Photo ID is required for housing, jobs, and benefits. Do this before anything else.</p>
-            <ol className="space-y-1.5 list-none">
-              <li><span className="font-semibold text-foreground">1. Birth certificate</span> — order via your state or <ActionLink href="https://www.vitalchek.com/">VitalChek.com</ActionLink></li>
-              <li><span className="font-semibold text-foreground">2. Social Security card</span> — free at <ActionLink href="https://www.ssa.gov/ssnumber/">ssa.gov/ssnumber</ActionLink> or call 1-800-772-1213</li>
-              <li><span className="font-semibold text-foreground">3. State ID</span> — bring both documents to the DMV. Call 211 to ask about fee waivers.</li>
-            </ol>
-          </TopicSection>
+          <TopicSection
+            icon={IdCard}
+            title={t(`${ns}.id.title`)}
+            color="text-orange-600 dark:text-orange-400"
+            borderColor="#ea580c"
+            intro={t(`${ns}.id.intro`)}
+            ordered
+            steps={[
+              { label: t(`${ns}.id.step1Label`), text: t(`${ns}.id.step1Text`), linkLabel: "VitalChek.com", linkHref: "https://www.vitalchek.com/" },
+              { label: t(`${ns}.id.step2Label`), text: t(`${ns}.id.step2Text`), linkLabel: "ssa.gov/ssnumber", linkHref: "https://www.ssa.gov/ssnumber/", afterText: t(`${ns}.id.step2AfterText`) },
+              { label: t(`${ns}.id.step3Label`), text: t(`${ns}.id.step3Text`) },
+            ]}
+          />
         </ScrollReveal>
 
-        <ScrollReveal delay={0.15}>
-          <TopicSection icon={Home} title="Housing" color="text-amber-600 dark:text-amber-400" borderColor="#d97706">
-            <p>Your rights depend on the type of housing and your state.</p>
-            <ul className="space-y-1.5 list-none">
-              <li><span className="font-semibold text-foreground">Federally assisted housing</span> — blanket bans on arrest records are not allowed. <ActionLink href="https://www.hud.gov/program_offices/fair_housing_equal_opp">HUD guidance →</ActionLink></li>
-              <li><span className="font-semibold text-foreground">Find programs</span> — call or text 211 for transitional housing and re-entry programs near you.</li>
-              <li><span className="font-semibold text-foreground">Local protections</span> — many cities have "fair chance" housing laws. Ask a local legal aid office.</li>
-            </ul>
-          </TopicSection>
+        <ScrollReveal delay={0.13}>
+          <TopicSection
+            icon={FileX}
+            title={t(`${ns}.recordClearing.title`)}
+            color="text-teal-600 dark:text-teal-400"
+            borderColor="#0d9488"
+            intro={t(`${ns}.recordClearing.intro`)}
+            steps={[
+              { label: t(`${ns}.recordClearing.item1Label`), text: t(`${ns}.recordClearing.item1Text`), linkLabel: t(`${ns}.recordClearing.item1LinkLabel`), linkHref: "/support/reputation/eligibility" },
+              { label: t(`${ns}.recordClearing.item2Label`), text: t(`${ns}.recordClearing.item2Text`), linkLabel: t(`${ns}.recordClearing.item2LinkLabel`), linkHref: "/support/reputation#clean-slate" },
+              { label: t(`${ns}.recordClearing.item3Label`), text: t(`${ns}.recordClearing.item3Text`), linkLabel: "Clean Slate Initiative", linkHref: "https://cleanslateinitiative.org/states/" },
+            ]}
+          />
         </ScrollReveal>
 
-        <ScrollReveal delay={0.2}>
-          <TopicSection icon={Briefcase} title="Employment" color="text-blue-600 dark:text-blue-400" borderColor="#2563eb">
-            <p>Federal law limits how employers can use your criminal history.</p>
-            <ul className="space-y-1.5 list-none">
-              <li><span className="font-semibold text-foreground">EEOC rights</span> — employers must show a record is relevant to the job. Blanket rejections are often illegal. <ActionLink href="https://www.eeoc.gov/laws/guidance/questions-and-answers-clarifying-guidance-use-arrest-conviction-records">EEOC guidance →</ActionLink></li>
-              <li><span className="font-semibold text-foreground">Ban the Box</span> — 35+ states delay criminal history questions until after a job offer. <ActionLink href="https://www.nelp.org/policy-issue/fair-chance-ban-the-box/">Check your state →</ActionLink></li>
-              <li><span className="font-semibold text-foreground">Job search</span> — <ActionLink href="https://www.careeronestop.org/">CareerOneStop</ActionLink> (Dept. of Labor) has a re-entry section and local job centers.</li>
-            </ul>
-          </TopicSection>
+        <ScrollReveal delay={0.16}>
+          <TopicSection
+            icon={Home}
+            title={t(`${ns}.housing.title`)}
+            color="text-amber-600 dark:text-amber-400"
+            borderColor="#d97706"
+            intro={t(`${ns}.housing.intro`)}
+            steps={[
+              { label: t(`${ns}.housing.item1Label`), text: t(`${ns}.housing.item1Text`), linkLabel: t(`${ns}.housing.item1LinkLabel`), linkHref: "https://www.hud.gov/program_offices/fair_housing_equal_opp" },
+              { label: t(`${ns}.housing.item2Label`), text: t(`${ns}.housing.item2Text`) },
+              { label: t(`${ns}.housing.item3Label`), text: t(`${ns}.housing.item3Text`) },
+            ]}
+          />
         </ScrollReveal>
 
-        <ScrollReveal delay={0.25}>
-          <TopicSection icon={Vote} title="Voting Rights" color="text-green-600 dark:text-green-400" borderColor="#16a34a">
-            <p>Most states restore voting rights automatically when you leave prison.</p>
-            <ul className="space-y-1.5 list-none">
-              <li><span className="font-semibold text-foreground">Check your state</span> — some require finishing parole; Maine and Vermont never suspend rights. <ActionLink href="https://www.ncsl.org/elections-and-campaigns/felon-voting-rights">State-by-state chart →</ActionLink></li>
-              <li><span className="font-semibold text-foreground">Register</span> — <ActionLink href="https://vote.gov/">Vote.gov</ActionLink> is the official U.S. registration portal. Many states allow online registration.</li>
-              <li><span className="font-semibold text-foreground">Need help?</span> — your state election office or a local legal aid org can confirm your eligibility.</li>
-            </ul>
-          </TopicSection>
+        <ScrollReveal delay={0.19}>
+          <TopicSection
+            icon={Briefcase}
+            title={t(`${ns}.employment.title`)}
+            color="text-blue-600 dark:text-blue-400"
+            borderColor="#2563eb"
+            intro={t(`${ns}.employment.intro`)}
+            steps={[
+              { label: t(`${ns}.employment.item1Label`), text: t(`${ns}.employment.item1Text`), linkLabel: t(`${ns}.employment.item1LinkLabel`), linkHref: "https://www.eeoc.gov/laws/guidance/questions-and-answers-clarifying-guidance-use-arrest-conviction-records" },
+              { label: t(`${ns}.employment.item2Label`), text: t(`${ns}.employment.item2Text`), linkLabel: t(`${ns}.employment.item2LinkLabel`), linkHref: "https://www.nelp.org/policy-issue/fair-chance-ban-the-box/" },
+              { label: t(`${ns}.employment.item3Label`), text: t(`${ns}.employment.item3Text`), linkLabel: "CareerOneStop", linkHref: "https://www.careeronestop.org/", afterText: t(`${ns}.employment.item3AfterText`) },
+            ]}
+          />
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.22}>
+          <TopicSection
+            icon={Vote}
+            title={t(`${ns}.voting.title`)}
+            color="text-green-600 dark:text-green-400"
+            borderColor="#16a34a"
+            intro={t(`${ns}.voting.intro`)}
+            steps={[
+              { label: t(`${ns}.voting.item1Label`), text: t(`${ns}.voting.item1Text`), linkLabel: t(`${ns}.voting.item1LinkLabel`), linkHref: "https://www.ncsl.org/elections-and-campaigns/felon-voting-rights" },
+              { label: t(`${ns}.voting.item2Label`), text: t(`${ns}.voting.item2Text`), linkLabel: "Vote.gov", linkHref: "https://vote.gov/", afterText: t(`${ns}.voting.item2AfterText`) },
+              { label: t(`${ns}.voting.item3Label`), text: t(`${ns}.voting.item3Text`) },
+            ]}
+          />
         </ScrollReveal>
       </div>
 
       <ScrollReveal delay={0.3}>
         <Alert className="border-border bg-muted/50">
           <AlertDescription className="text-muted-foreground text-sm">
-            Resources vary by state and county. Links above are national starting points. Call 211 for programs specific to your location.
+            {t(`${ns}.footnote`)}
           </AlertDescription>
         </Alert>
       </ScrollReveal>
@@ -219,22 +192,132 @@ function CustomSections() {
 }
 
 export default function ReentrySupport() {
+  const { t } = useTranslation();
+
+  const startHereItems: ActionItem[] = [
+    {
+      id: "get-id",
+      title: t("support.reentry.actions.getId.title"),
+      description: t("support.reentry.actions.getId.description"),
+      priority: "high",
+      timeframe: t("support.reentry.actions.getId.timeframe"),
+    },
+    {
+      id: "call-211",
+      title: t("support.reentry.actions.call211.title"),
+      description: t("support.reentry.actions.call211.description"),
+      priority: "high",
+      timeframe: t("support.reentry.actions.call211.timeframe"),
+    },
+    {
+      id: "record-clearing",
+      title: t("support.reentry.actions.recordClearing.title"),
+      description: t("support.reentry.actions.recordClearing.description"),
+      priority: "high",
+      timeframe: t("support.reentry.actions.recordClearing.timeframe"),
+      url: "/support/reputation/eligibility",
+    },
+    {
+      id: "check-voting",
+      title: t("support.reentry.actions.checkVoting.title"),
+      description: t("support.reentry.actions.checkVoting.description"),
+      priority: "medium",
+      timeframe: t("support.reentry.actions.checkVoting.timeframe"),
+    },
+  ];
+
+  const externalResources: ExternalResource[] = [
+    {
+      name: "211 — Local Services Locator",
+      description: t("support.reentry.resources.211.description"),
+      url: "https://www.211.org/",
+      type: "national",
+      free: true,
+    },
+    {
+      name: "Code for America — Clear My Record",
+      description: t("support.reentry.resources.clearMyRecord.description"),
+      url: "https://www.codeforamerica.org/programs/clear-my-record/",
+      type: "national",
+      free: true,
+    },
+    {
+      name: "CareerOneStop (U.S. Dept. of Labor)",
+      description: t("support.reentry.resources.careerOneStop.description"),
+      url: "https://www.careeronestop.org/",
+      type: "national",
+      free: true,
+    },
+    {
+      name: "Social Security Administration — Replace Your Card",
+      description: t("support.reentry.resources.ssa.description"),
+      url: "https://www.ssa.gov/ssnumber/",
+      phone: "1-800-772-1213",
+      type: "national",
+      free: true,
+    },
+    {
+      name: "HUD — Criminal Records and Fair Housing",
+      description: t("support.reentry.resources.hud.description"),
+      url: "https://www.hud.gov/program_offices/fair_housing_equal_opp",
+      type: "national",
+      free: true,
+    },
+    {
+      name: "NCSL — Felon Voting Rights by State",
+      description: t("support.reentry.resources.ncsl.description"),
+      url: "https://www.ncsl.org/elections-and-campaigns/felon-voting-rights",
+      type: "online",
+      free: true,
+    },
+    {
+      name: "Vote.gov",
+      description: t("support.reentry.resources.voteGov.description"),
+      url: "https://vote.gov/",
+      type: "national",
+      free: true,
+    },
+  ];
+
+  const faqs: FAQ[] = [
+    {
+      question: t("support.reentry.faq.q1.question"),
+      answer: t("support.reentry.faq.q1.answer"),
+    },
+    {
+      question: t("support.reentry.faq.qRecord.question"),
+      answer: t("support.reentry.faq.qRecord.answer"),
+    },
+    {
+      question: t("support.reentry.faq.q2.question"),
+      answer: t("support.reentry.faq.q2.answer"),
+    },
+    {
+      question: t("support.reentry.faq.q3.question"),
+      answer: t("support.reentry.faq.q3.answer"),
+    },
+    {
+      question: t("support.reentry.faq.q4.question"),
+      answer: t("support.reentry.faq.q4.answer"),
+    },
+  ];
+
   return (
     <ResourcePageTemplate
       categoryId="reentry"
       icon={Compass}
       iconColor="bg-orange-500/10 text-orange-600 dark:text-orange-400"
       heroGradient="bg-gradient-to-br from-orange-500/5 via-background to-background"
-      overview="This guide is for people approaching release or who have recently completed a sentence. It covers the four areas that matter most first: getting official ID, finding housing, finding work, and knowing your voting rights. Start with ID — everything else requires it."
+      overview={t("support.reentry.overview")}
       startHereItems={startHereItems}
       externalResources={externalResources}
       faqs={faqs}
       customSections={<CustomSections />}
       relatedLinks={[
-        { label: "Employment Help", href: "/support/employment" },
-        { label: "Housing Stability", href: "/support/housing" },
-        { label: "Hidden Consequences", href: "/support/reputation" },
-        { label: "Life Support Hub", href: "/support" },
+        { label: t("support.relatedLinks.recordClearing"), href: "/support/reputation/eligibility" },
+        { label: t("support.relatedLinks.reputation"), href: "/support/reputation" },
+        { label: t("support.relatedLinks.employment"), href: "/support/employment" },
+        { label: t("support.relatedLinks.housing"), href: "/support/housing" },
       ]}
     />
   );

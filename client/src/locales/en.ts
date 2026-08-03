@@ -442,7 +442,8 @@ export default {
       "childcare": "Childcare Support",
       "housing": "Housing Help",
       "familyCare": "Family Care Support",
-      "reputation": "Reputation & Records"
+      "reputation": "Reputation & Records",
+      "recordClearing": "Record Clearing Screener"
     },
     "employment": {
       "overview": "Facing criminal charges can create uncertainty about your job. Understanding your rights and planning ahead can help protect your employment while you focus on your case.",
@@ -1894,6 +1895,140 @@ export default {
         "ccrcDesc": "The authoritative national resource on certificates of relief and all other collateral consequences. Includes a state-by-state inventory of available programs.",
         "cleanSlateLink": "Clean Slate Initiative: State Tracker",
         "cleanSlateLinkDesc": "Tracks Clean Slate legislation and related relief programs by state."
+      }
+    },
+    "reentry": {
+      "overview": "This guide is for people approaching release or who have recently completed a sentence. It covers what matters most first: getting official ID, clearing or sealing your record where you're eligible, finding housing, finding work, and knowing your voting rights. Start with ID — everything else requires it.",
+      "actions": {
+        "getId": {
+          "title": "Get official ID first",
+          "description": "A government-issued photo ID is required for housing applications, employment paperwork, benefits enrollment, and bank accounts. Start with your birth certificate, then your Social Security card, then a state-issued photo ID. Everything else depends on this step.",
+          "timeframe": "Before anything else"
+        },
+        "call211": {
+          "title": "Call or text 211",
+          "description": "Dial 211 (or text your ZIP code to 898-211) to find local re-entry programs, transitional housing, job training, and emergency help near you. Free and available 24/7 across most of the U.S.",
+          "timeframe": "Day 1"
+        },
+        "recordClearing": {
+          "title": "Check if you can clear your record",
+          "description": "A cleared or sealed record can open doors that stay closed otherwise — for housing applications and background checks especially. Several states now clear eligible records automatically, and our free screener can tell you what's likely available in yours in a couple of minutes.",
+          "timeframe": "First few weeks"
+        },
+        "checkVoting": {
+          "title": "Check whether your voting rights have been restored",
+          "description": "Many people don't know their rights came back automatically upon release. Eligibility varies by state — in most states, rights are restored when you leave prison. Check your status before your next election.",
+          "timeframe": "Before your next election"
+        }
+      },
+      "resources": {
+        "211": {
+          "description": "Dial 211 or visit 211.org to find local re-entry programs, transitional housing, food assistance, and job training. Free, 24/7, available across most of the U.S."
+        },
+        "clearMyRecord": {
+          "description": "Free, guided help clearing eligible criminal records in participating states. No attorney required — the tool checks your eligibility and can help file the paperwork."
+        },
+        "careerOneStop": {
+          "description": "Job search, skills training, and career resources including a dedicated re-entry section. Use the locator to find an in-person American Job Center near you."
+        },
+        "ssa": {
+          "description": "Replace a lost Social Security card online or in person. You will need this before getting a state-issued ID. Call or visit any Social Security office."
+        },
+        "hud": {
+          "description": "Federal guidance on tenant rights for people with criminal records in federally assisted housing. Blanket bans based on arrest records are not allowed under HUD policy."
+        },
+        "ncsl": {
+          "description": "State-by-state chart of voting rights restoration laws, maintained by the National Conference of State Legislatures. (Source: NCSL, updated annually.)"
+        },
+        "voteGov": {
+          "description": "Official U.S. government voting information. Check your state's registration requirements and register online where available."
+        }
+      },
+      "faq": {
+        "q1": {
+          "question": "Do I need ID to get housing or a job?",
+          "answer": "Yes, in almost all cases. A government-issued photo ID is required for housing applications, employment I-9 forms, bank accounts, and most public benefits. Getting your ID is the first step — everything else follows from it."
+        },
+        "qRecord": {
+          "question": "Will clearing my record really help?",
+          "answer": "Often, yes. Most landlords and employers who run background checks won't see a record that's been expunged or sealed. It doesn't erase every trace everywhere — some government and law enforcement systems keep access — but for the private background checks that come up most often in housing and job applications, it removes a major barrier. Some states now do this automatically. The eligibility screener can tell you what's likely available where you live."
+        },
+        "q2": {
+          "question": "Can a landlord refuse to rent to me because of my criminal record?",
+          "answer": "For federally assisted housing, blanket bans based on arrest records are not allowed under HUD guidance. For private landlords, it depends on your state and city — many have 'fair chance' housing laws that limit when and how records can be used. Call 211 to find housing programs that work with people with records."
+        },
+        "q3": {
+          "question": "Can an employer reject me because of my record?",
+          "answer": "Employers can consider criminal history, but EEOC guidance says the record must be relevant to the specific job. Over 35 states and 150+ cities have Ban the Box laws that delay criminal history questions until later in the hiring process. Check NELP's tracker for your state's rules. (Source: National Employment Law Project, 2024.)"
+        },
+        "q4": {
+          "question": "When do my voting rights come back?",
+          "answer": "It depends on your state. Most states restore voting rights automatically when you are released from prison. Some require completing parole or probation first. A few require a separate application. Check the NCSL state-by-state chart or vote.gov for your specific state."
+        }
+      },
+      "topics": {
+        "sectionTitle": "Where to start, by topic",
+        "footnote": "Resources vary by state and county. Links above are national starting points. Call 211 for programs specific to your location.",
+        "id": {
+          "title": "Get Your ID First",
+          "intro": "Photo ID is required for housing, jobs, and benefits. Do this before anything else.",
+          "step1Label": "1. Birth certificate",
+          "step1Text": "— order via your state or",
+          "step2Label": "2. Social Security card",
+          "step2Text": "— free at",
+          "step2AfterText": "or call 1-800-772-1213",
+          "step3Label": "3. State ID",
+          "step3Text": "— bring both documents to the DMV. Call 211 to ask about fee waivers."
+        },
+        "recordClearing": {
+          "title": "Clear Your Record",
+          "intro": "Many states now clear certain records automatically, sometimes without you having to file anything.",
+          "item1Label": "Check your eligibility",
+          "item1Text": "— a few quick questions tell you what's likely available in your state.",
+          "item1LinkLabel": "Start the eligibility screener →",
+          "item2Label": "Automatic \"Clean Slate\" clearance",
+          "item2Text": "— several states now clear eligible records automatically, without a court petition.",
+          "item2LinkLabel": "See which states →",
+          "item3Label": "Free help filing a petition",
+          "item3Text": "— if your state requires you to file, these organizations can help at no cost.",
+          "item3LinkLabel": "Clean Slate Initiative"
+        },
+        "housing": {
+          "title": "Housing",
+          "intro": "Your rights depend on the type of housing and your state.",
+          "item1Label": "Federally assisted housing",
+          "item1Text": "— blanket bans on arrest records are not allowed.",
+          "item1LinkLabel": "HUD guidance →",
+          "item2Label": "Find programs",
+          "item2Text": "— call or text 211 for transitional housing and re-entry programs near you.",
+          "item3Label": "Local protections",
+          "item3Text": "— many cities have \"fair chance\" housing laws. Ask a local legal aid office."
+        },
+        "employment": {
+          "title": "Employment",
+          "intro": "Federal law limits how employers can use your criminal history.",
+          "item1Label": "EEOC rights",
+          "item1Text": "— employers must show a record is relevant to the job. Blanket rejections are often illegal.",
+          "item1LinkLabel": "EEOC guidance →",
+          "item2Label": "Ban the Box",
+          "item2Text": "— 35+ states delay criminal history questions until after a job offer.",
+          "item2LinkLabel": "Check your state →",
+          "item3Label": "Job search",
+          "item3Text": "—",
+          "item3AfterText": "(Dept. of Labor) has a re-entry section and local job centers."
+        },
+        "voting": {
+          "title": "Voting Rights",
+          "intro": "Most states restore voting rights automatically when you leave prison.",
+          "item1Label": "Check your state",
+          "item1Text": "— some require finishing parole; Maine and Vermont never suspend rights.",
+          "item1LinkLabel": "State-by-state chart →",
+          "item2Label": "Register",
+          "item2Text": "—",
+          "item2AfterText": "is the official U.S. registration portal. Many states allow online registration.",
+          "item3Label": "Need help?",
+          "item3Text": "— your state election office or a local legal aid org can confirm your eligibility."
+        }
       }
     }
   },
@@ -6680,6 +6815,20 @@ export default {
       "clearMyRecord": "Code for America: Clear My Record",
       "cleanSlate": "Clean Slate Initiative: State Tracker",
       "lawHelp": "LawHelp.org: Free Legal Aid by State"
+    },
+    "autoClearance": {
+      "heading": "Automatic clearance in {{state}}",
+      "legislationLabel": "Legislation:",
+      "offenseTypesLabel": "Covers:",
+      "waitingPeriodLabel": "Waiting period:",
+      "linkLabel": "Learn more"
+    },
+    "stateInfo": {
+      "heading": "About record clearing in {{state}}",
+      "exclusionsLabel": "Commonly excluded offenses",
+      "moreExclusions": "+{{count}} more",
+      "sourcesLabel": "Legal sources",
+      "noDataNote": "We don't yet have detailed state-specific rules for {{state}} in our database. The general guidance above still applies — a local legal aid organization can confirm the specifics for your record."
     },
     "disclaimer": "This screener provides general information only. It is not legal advice. Results depend on your specific record and state law. Contact a legal aid organization for a full review."
   },

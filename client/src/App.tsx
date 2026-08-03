@@ -107,7 +107,7 @@ function Router() {
       <Route path="/immigration-guidance/after-deportation" component={AfterDeportation} />
       <Route path="/legal-glossary" component={LegalGlossary} />
       <Route path="/diversion-programs" component={DiversionPrograms} />
-      <Route path="/record-expungement"><Redirect to="/support/reputation" /></Route>
+      <Route path="/record-expungement"><Redirect to="/support/reputation/eligibility" /></Route>
       <Route path="/mission-statement" component={MissionStatement} />
       <Route path="/court-records" component={CourtRecords} />
       <Route path="/recap-extensions" component={RecapExtensions} />

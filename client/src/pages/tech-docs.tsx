@@ -577,8 +577,8 @@ export default function TechDocs() {
                 <p>
                   <strong className="text-foreground">Reputation & Record Clearance</strong> (<code className="bg-muted px-1 rounded text-xs">/support/reputation</code>) consolidates
                   expungement eligibility rules for all 50 states + DC with the collateral consequences guide. A record clearance eligibility screener lives at
-                  <code className="bg-muted px-1 rounded text-xs"> /support/reputation/eligibility</code>. The legacy routes <code className="bg-muted px-1 rounded text-xs">/record-expungement</code> and{" "}
-                  <code className="bg-muted px-1 rounded text-xs">/collateral-consequences</code> both redirect here permanently.
+                  <code className="bg-muted px-1 rounded text-xs"> /support/reputation/eligibility</code>. The legacy route <code className="bg-muted px-1 rounded text-xs">/record-expungement</code> redirects
+                  permanently to the eligibility screener. <code className="bg-muted px-1 rounded text-xs">/collateral-consequences</code> is a separate, live page (the consequence-risk screener), not a redirect.
                 </p>
                 <p>No AI, no login required for any page in this section.</p>
               </CardContent>

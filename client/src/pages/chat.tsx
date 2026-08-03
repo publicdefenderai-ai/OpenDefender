@@ -415,7 +415,7 @@ export default function ChatPage() {
           setLocation('/diversion-programs');
           actions.markFlowCompleted('resources');
         } else if (reply.value === 'resources_expungement') {
-          setLocation('/record-expungement');
+          setLocation('/support/reputation/eligibility');
           actions.markFlowCompleted('resources');
         } else if (reply.value === 'resources_doc_summarizer') {
           setLocation('/document-summarizer');
