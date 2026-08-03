@@ -59,8 +59,8 @@ export interface ScenarioExpect {
    * deadline fields are verified/authoritative and others are still generic
    * placeholder text — e.g. a state whose arraignment deadline is cited but
    * whose preliminaryHearing/discoveryDeadline fields are not
-   * (see PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS in
-   * shared/jurisdiction-procedure-rules.ts). Every event in this array must
+   * (see PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS / DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS
+   * in shared/jurisdiction-procedure-rules.ts). Every event in this array must
    * have isEstimate: true, and every event NOT in this array must not.
    */
   exactEstimateDeadlineEvents?: string[];
@@ -647,7 +647,7 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
       deadlineTimeframeKeywords: ['48 hours'],
       deadlineEventKeywords: ['Arraignment'],
       // MO's arraignmentDeadline is cited/authoritative; its discoveryDeadline
-      // is unverified placeholder text (PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS).
+      // is unverified placeholder text (DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS).
       exactEstimateDeadlineEvents: ['Discovery Deadline'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
@@ -911,9 +911,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineTimeframeKeywords: ['72 hours'],
       deadlineEventKeywords: ['Arraignment'],
-      // LA's arraignmentDeadline is cited/authoritative; its discoveryDeadline
-      // is unverified placeholder text (PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS).
-      exactEstimateDeadlineEvents: ['Discovery Deadline'],
+      // LA's arraignmentDeadline and discoveryDeadline are both cited/authoritative
+      // (La. Code Crim. Proc. Ann. Art. 716); only preliminaryHearing is still
+      // unverified placeholder text (PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS).
+      exactEstimateDeadlineEvents: [],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -923,8 +924,8 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineEventKeywords: ['Preliminary Hearing'],
       deadlineTimeframeKeywords: ['30 days'],
-      // LA's preliminaryHearing/discoveryDeadline are unverified placeholder text.
-      exactEstimateDeadlineEvents: ['Discovery Deadline', 'Preliminary Hearing'],
+      // LA's preliminaryHearing is still unverified placeholder text; discoveryDeadline is now cited.
+      exactEstimateDeadlineEvents: ['Preliminary Hearing'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -934,7 +935,7 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineEventKeywords: ['Discovery'],
       deadlineTimeframeKeywords: ['30 days'],
-      exactEstimateDeadlineEvents: ['Discovery Deadline', 'Preliminary Hearing'],
+      exactEstimateDeadlineEvents: ['Preliminary Hearing'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -980,9 +981,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineTimeframeKeywords: ['48 hours'],
       deadlineEventKeywords: ['Arraignment'],
-      // OK's arraignmentDeadline is cited/authoritative; its discoveryDeadline
-      // is unverified placeholder text (PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS).
-      exactEstimateDeadlineEvents: ['Discovery Deadline'],
+      // OK's arraignmentDeadline and discoveryDeadline are both cited/authoritative
+      // (Okla. Stat. tit. 22 § 2002(A)); only preliminaryHearing is still
+      // unverified placeholder text (PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS).
+      exactEstimateDeadlineEvents: [],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -992,8 +994,8 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineEventKeywords: ['Preliminary Hearing'],
       deadlineTimeframeKeywords: ['10 days'],
-      // OK's preliminaryHearing/discoveryDeadline are unverified placeholder text.
-      exactEstimateDeadlineEvents: ['Discovery Deadline', 'Preliminary Hearing'],
+      // OK's preliminaryHearing is still unverified placeholder text; discoveryDeadline is now cited.
+      exactEstimateDeadlineEvents: ['Preliminary Hearing'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -1003,7 +1005,7 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineEventKeywords: ['Discovery'],
       deadlineTimeframeKeywords: ['30 days'],
-      exactEstimateDeadlineEvents: ['Discovery Deadline', 'Preliminary Hearing'],
+      exactEstimateDeadlineEvents: ['Preliminary Hearing'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -1047,9 +1049,10 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineTimeframeKeywords: ['24 hours'],
       deadlineEventKeywords: ['Arraignment'],
-      // CT's arraignmentDeadline is cited/authoritative; its discoveryDeadline
-      // is unverified placeholder text (PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS).
-      exactEstimateDeadlineEvents: ['Discovery Deadline'],
+      // CT's arraignmentDeadline and discoveryDeadline are both cited/authoritative
+      // (Conn. Prac. Book § 40-11(a)); only preliminaryHearing is still
+      // unverified placeholder text (PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS).
+      exactEstimateDeadlineEvents: [],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -1059,8 +1062,8 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
     expect: {
       deadlineEventKeywords: ['Preliminary Hearing'],
       deadlineTimeframeKeywords: ['10 days'],
-      // CT's preliminaryHearing/discoveryDeadline are unverified placeholder text.
-      exactEstimateDeadlineEvents: ['Discovery Deadline', 'Preliminary Hearing'],
+      // CT's preliminaryHearing is still unverified placeholder text; discoveryDeadline is now cited.
+      exactEstimateDeadlineEvents: ['Preliminary Hearing'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },
@@ -1073,7 +1076,7 @@ const p1NewStateDeadlineScenarios: EvalScenario[] = [
       // disclosure within 3 business days of arraignment for in-custody defendants
       // (or at/before arraignment if released). '30 days' was inaccurate placeholder text.
       deadlineTimeframeKeywords: ['3 business days'],
-      exactEstimateDeadlineEvents: ['Discovery Deadline', 'Preliminary Hearing'],
+      exactEstimateDeadlineEvents: ['Preliminary Hearing'],
       absentUncertaintyAreas: ['Jurisdiction-Specific Deadlines'],
     },
   },

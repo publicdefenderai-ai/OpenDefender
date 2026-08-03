@@ -2,7 +2,7 @@
 // Implements charge-specific, jurisdiction-specific, and case-stage guidance
 
 import { criminalCharges, getChargeById, getVerifiedCitation } from '../../shared/criminal-charges';
-import { JURISDICTION_PROCEDURE_RULES, PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS } from '../../shared/jurisdiction-procedure-rules';
+import { JURISDICTION_PROCEDURE_RULES, PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS, DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS } from '../../shared/jurisdiction-procedure-rules';
 
 interface CaseData {
   jurisdiction: string;
@@ -976,11 +976,13 @@ export const KNOWN_JURISDICTIONS: string[] = Object.keys(JURISDICTION_PROCEDURE_
  * dashboard and PDF export, regardless of whether rule-based or Claude generated
  * the deadlines.
  *
- * Also stamps isEstimate: true on Preliminary/Initial Hearing and Discovery
+ * Also stamps isEstimate: true on Preliminary/Initial Hearing and/or Discovery
  * Deadline items specifically for jurisdictions in
- * PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS, even when the jurisdiction is
- * otherwise "known" — their preliminaryHearing/discoveryDeadline source values
+ * PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS / DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS,
+ * even when the jurisdiction is otherwise "known" — those fields' source values
  * are unverified generic placeholder text (see shared/jurisdiction-procedure-rules.ts).
+ * The two lists are checked independently because some jurisdictions have one
+ * field verified and cited while the other is still the generic placeholder.
  */
 export function stampEstimateDeadlines(
   jurisdiction: string,
@@ -991,13 +993,21 @@ export function stampEstimateDeadlines(
   if (isEstimate) {
     return deadlines.map(d => ({ ...d, isEstimate: true }));
   }
-  if (!PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS.includes(normalized)) {
+  const preliminaryHearingEvents = new Set(['Preliminary Hearing', 'Initial Hearing']);
+  const isPreliminaryHearingEstimate = PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS.includes(normalized);
+  const isDiscoveryDeadlineEstimate = DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS.includes(normalized);
+  if (!isPreliminaryHearingEstimate && !isDiscoveryDeadlineEstimate) {
     return deadlines;
   }
-  const unverifiedEvents = new Set(['Preliminary Hearing', 'Initial Hearing', 'Discovery Deadline']);
-  return deadlines.map(d =>
-    unverifiedEvents.has(d.event) ? { ...d, isEstimate: true } : d
-  );
+  return deadlines.map(d => {
+    if (isPreliminaryHearingEstimate && preliminaryHearingEvents.has(d.event)) {
+      return { ...d, isEstimate: true };
+    }
+    if (isDiscoveryDeadlineEstimate && d.event === 'Discovery Deadline') {
+      return { ...d, isEstimate: true };
+    }
+    return d;
+  });
 }
 
 function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: any): GuidanceDeadline[] {
@@ -1008,11 +1018,14 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
   const isEstimate = !KNOWN_JURISDICTIONS.includes(jurisdiction);
 
   // preliminaryHearing/discoveryDeadline are unverified generic placeholder text
-  // for these jurisdictions (see PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS in
-  // shared/jurisdiction-procedure-rules.ts) even though the jurisdiction is
-  // otherwise "known" — flag those two deadline items as estimates too.
-  const isProceduralDeadlineEstimate =
-    isEstimate || PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS.includes(jurisdiction);
+  // for some jurisdictions (see PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS /
+  // DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS in shared/jurisdiction-procedure-rules.ts)
+  // even though the jurisdiction is otherwise "known" — flag each field as an
+  // estimate independently, since one field can be verified while the other isn't.
+  const isPreliminaryHearingEstimate =
+    isEstimate || PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS.includes(jurisdiction);
+  const isDiscoveryDeadlineEstimate =
+    isEstimate || DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS.includes(jurisdiction);
 
   if (caseData.caseStage === 'arrest') {
     deadlines.push({
@@ -1035,7 +1048,7 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
         : 'Court determines probable cause for charges',
       priority: 'important',
       daysFromNow: 10,
-      ...(isProceduralDeadlineEstimate && { isEstimate: true }),
+      ...(isPreliminaryHearingEstimate && { isEstimate: true }),
     });
   }
 
@@ -1045,7 +1058,7 @@ function buildDeadlines(caseData: CaseData, jurisdictionData: any, stageData: an
     description: 'Exchange of evidence between prosecution and defense',
     priority: 'normal',
     daysFromNow: 30,
-    ...(isProceduralDeadlineEstimate && { isEstimate: true }),
+    ...(isDiscoveryDeadlineEstimate && { isEstimate: true }),
   });
   
   return deadlines;

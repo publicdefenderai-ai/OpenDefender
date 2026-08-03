@@ -38,8 +38,8 @@
  *                          from territory codes; injected into AI prompts with
  *                          qualifying language)
  *    0 low-confidence: none (as a whole-record rating — see
- *    PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS below for jurisdictions whose
- *    preliminaryHearing/discoveryDeadline fields specifically are unverified
+ *    PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS / DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS
+ *    below for jurisdictions whose preliminaryHearing/discoveryDeadline fields specifically are unverified
  *    placeholder text, independent of the record's overall dataConfidence)
  */
 
@@ -1902,25 +1902,35 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Jurisdictions whose preliminaryHearing / discoveryDeadline strings above are
-// generic placeholder text, not confirmed against a state-specific primary
+// Jurisdictions whose preliminaryHearing and/or discoveryDeadline strings above
+// are generic placeholder text, not confirmed against a state-specific primary
 // source. (dataConfidence on the record as a whole reflects the arraignment/
 // bail/speedy-trial fields, which for these jurisdictions WERE verified in an
 // earlier pass — only these two newer fields lack that verification.)
 //
-// Detected programmatically: every jurisdiction below carries either the exact
+// Detected programmatically: every jurisdiction below carries the exact
 // boilerplate 'Within 10-14 days for felonies' / 'Within 30 days after
-// arraignment' pair, or an equivalently uncited generic string, with no rule
-// or statute citation embedded in either field — unlike e.g. CO ('Colo. R.
+// arraignment' text (or an equivalently uncited generic string) in the field(s)
+// listed, with no rule or statute citation embedded — unlike e.g. CO ('Colo. R.
 // Crim. P. 5') or WI ('Wis. Stat. § 970.03'), which got real per-state review.
+// Split into two lists (rather than one combined list) because some states —
+// MA, LA, OK, CT — have since had discoveryDeadline verified with a real
+// citation while preliminaryHearing is still the generic placeholder; treating
+// both fields as equally unverified for those states would understate real
+// work that's already been done.
 //
-// Consumers (guidance-engine.ts buildDeadlines) should treat the Preliminary
-// Hearing / Discovery Deadline items for these jurisdictions as estimates
+// Consumers (guidance-engine.ts buildDeadlines/stampEstimateDeadlines) should
+// treat the matching deadline item for these jurisdictions as an estimate
 // (isEstimate: true) even though the jurisdiction is otherwise "known."
-// Remove an entry once its preliminaryHearing/discoveryDeadline fields have
-// been verified against that state's actual court rules and cited inline.
-export const PROCEDURAL_DEADLINE_ESTIMATE_JURISDICTIONS: string[] = [
+// Remove an entry once its field has been verified against that state's
+// actual court rules and cited inline.
+export const PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS: string[] = [
   'MA', 'MO', 'LA', 'OK', 'CT', 'NM', 'NE', 'WV', 'ID', 'HI',
+  'NH', 'ME', 'MT', 'RI', 'SD', 'ND', 'AK', 'VT', 'WY', 'DC',
+];
+
+export const DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS: string[] = [
+  'MO', 'NM', 'NE', 'WV', 'ID', 'HI',
   'NH', 'ME', 'MT', 'RI', 'SD', 'ND', 'AK', 'VT', 'WY', 'DC',
 ];
 
