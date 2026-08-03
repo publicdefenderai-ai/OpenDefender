@@ -99,8 +99,10 @@ export type MitigationFieldKey = typeof MITIGATION_FIELD_WHITELIST[number];
  * Keep only whitelisted fields that have a non-empty string value.
  * Iterates the whitelist — never Object.entries(fields) — so unknown
  * keys on the input object are structurally impossible to reach Claude.
+ *
+ * Exported for unit testing (prompt-construction and no-added-facts tests).
  */
-function filterFilled(fields: MitigationFields): Partial<Record<MitigationFieldKey, string>> {
+export function filterFilled(fields: MitigationFields): Partial<Record<MitigationFieldKey, string>> {
   const out: Partial<Record<MitigationFieldKey, string>> = {};
   for (const key of MITIGATION_FIELD_WHITELIST) {
     const v = fields[key];
@@ -136,8 +138,10 @@ const FIELD_LABELS: Record<MitigationFieldKey, string> = {
 };
 
 /** Build the user-facing field list that becomes the locked input for Claude.
- *  Iterates the whitelist in order so the prompt is deterministic. */
-function buildFieldList(filled: Partial<Record<MitigationFieldKey, string>>): string {
+ *  Iterates the whitelist in order so the prompt is deterministic.
+ *
+ * Exported for unit testing (prompt-construction and no-added-facts tests). */
+export function buildFieldList(filled: Partial<Record<MitigationFieldKey, string>>): string {
   return MITIGATION_FIELD_WHITELIST
     .filter((k) => k !== 'clientName' && k !== 'caseContext' && filled[k]) // metadata handled separately; skip empty
     .map((k) => `${FIELD_LABELS[k]}: ${filled[k]}`)
@@ -146,7 +150,8 @@ function buildFieldList(filled: Partial<Record<MitigationFieldKey, string>>): st
 
 // ─── System prompt ─────────────────────────────────────────────────────────────
 
-const SYSTEM_PROMPT = `You are a legal writing assistant helping a criminal defense advocate draft a mitigation memorandum for court.
+/** Exported for guardrail-phrase tests — confirms the prompt text hasn't drifted. */
+export const SYSTEM_PROMPT = `You are a legal writing assistant helping a criminal defense advocate draft a mitigation memorandum for court.
 
 YOUR STRICT RULES — violating any one is a critical error:
 
