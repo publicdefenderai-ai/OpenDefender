@@ -6148,6 +6148,58 @@ export default {
             "detail": "Cada agencia federal y organismo de licencias tiene sus propias reglas de notificación. Las autorizaciones de seguridad y muchas licencias federales generalmente exigen autoinformar un arresto dentro de 5 a 30 días. No presentar un informe requerido puede tratarse como una infracción separada. Revise de inmediato su documentación específica."
           }
         },
+        "AL": {
+          "stateName": "Alabama",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Alabama siguen los requisitos mínimos federales del HUD — aviso por escrito de terminación del contrato con razones específicas y derecho a solicitar una audiencia de queja. Alabama no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto para conocer el plan administrativo específico de su PHA antes de que se emita un aviso formal.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de una condena; rige la reforma de nexo de 2019",
+            "detail": "La HB 244 de Alabama (2019) exige que las juntas de licencias realicen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Alabama exigen autoinformar una condena o declaración de culpabilidad dentro de 30 días. Un arresto por sí solo generalmente no es un evento informable, salvo que las reglas de la junta indiquen lo contrario.",
+            "source": "Ala. Code § 41-22-1 et seq.; HB 244 (2019)"
+          }
+        },
+        "AK": {
+          "stateName": "Alaska",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Alaska siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Alaska no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Si recibe un aviso de vivienda relacionado con actividad delictiva, solicite una audiencia de queja de inmediato — el plazo suele ser de 10 a 14 días desde la recepción del aviso.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de una condena; se requiere nexo para la denegación",
+            "detail": "La Alaska Stat. § 08.01.075 prohíbe que las juntas de licencias denieguen una licencia únicamente por una condena previa sin una determinación de nexo. La mayoría de las juntas de Alaska exigen autoinformar una condena final dentro de 30 días. Un arresto sin condena generalmente no es informable, salvo que las regulaciones específicas de la junta lo requieran.",
+            "source": "Alaska Stat. § 08.01.075"
+          }
+        },
+        "AZ": {
+          "stateName": "Arizona",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Arizona siguen los requisitos mínimos federales del HUD — aviso por escrito de terminación del contrato con razones específicas y derecho a solicitar una audiencia de queja. Arizona no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda lo antes posible tras un arresto, antes de que se emita un aviso formal.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "La Ariz. Rev. Stat. § 41-1093 et seq. (2019) exige que las juntas de licencias realicen una evaluación individualizada y apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Arizona exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Ariz. Rev. Stat. § 41-1093 et seq. (2019)"
+          }
+        },
+        "AR": {
+          "stateName": "Arkansas",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Arkansas siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Arkansas no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se requiere nexo desde 2019",
+            "detail": "La Ark. Code Ann. § 17-1-103 (2019) exige que las juntas de licencias consideren si una condena está directamente relacionada con la ocupación antes de denegar una licencia. La mayoría de las juntas de Arkansas exigen autoinformar una condena final dentro de 30 días. Un arresto por sí solo generalmente no es un evento informable.",
+            "source": "Ark. Code Ann. § 17-1-103 (2019)"
+          }
+        },
         "CA": {
           "stateName": "California",
           "housing": {
@@ -6159,6 +6211,357 @@ export default {
             "headline": "La mayoría de las juntas exigen autoinformar dentro de 30 días de una condena — no de un arresto",
             "detail": "El Código de Negocios y Profesiones de California § 490 prohíbe denegar una licencia únicamente por una condena previa; las juntas deben realizar una evaluación individualizada. La mayoría de las juntas de CA (enfermería: Cal. B&P § 2762; docencia: Ed. Code § 44009; contratistas: Cal. B&P § 7069) exigen informar una condena o declaración de culpabilidad dentro de 30 días. Un arresto por sí solo generalmente no activa un informe obligatorio, salvo que las regulaciones específicas de la junta lo exijan.",
             "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+          }
+        },
+        "CO": {
+          "stateName": "Colorado",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; Denver tiene una ordenanza de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Colorado siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja. La Ordenanza de Vivienda de Oportunidad Justa de Denver (vigente desde enero de 2022) prohíbe a los propietarios preguntar sobre antecedentes penales antes de una oferta de arrendamiento condicional. Fuera de Denver, Colorado no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4; Denver Ord. 21-1370"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "La Colo. Rev. Stat. § 24-34-101 et seq. (HB 19-1275, 2019) exige que las juntas de licencias realicen una evaluación individualizada y apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Colorado exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Colo. Rev. Stat. § 24-34-101 et seq. (HB 19-1275, 2019)"
+          }
+        },
+        "CT": {
+          "stateName": "Connecticut",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Connecticut siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Connecticut no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados, aunque algunos municipios pueden tener protecciones locales. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4; Conn. Gen. Stat. § 46a-80"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se aplica el estándar de 'relación razonable'",
+            "detail": "La Conn. Gen. Stat. § 46a-80 exige que las juntas de licencias apliquen un estándar de 'relación razonable' antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Connecticut exigen autoinformar una condena final dentro de 30 días. Un arresto sin condena generalmente no es informable, salvo que las reglas específicas de la junta indiquen lo contrario.",
+            "source": "Conn. Gen. Stat. § 46a-80"
+          }
+        },
+        "DE": {
+          "stateName": "Delaware",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Delaware siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Delaware no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "La Del. Code Ann. tit. 29 § 8735(y) (2019) exige que las juntas de licencias realicen una evaluación individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Delaware exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Del. Code Ann. tit. 29 § 8735(y) (2019)"
+          }
+        },
+        "DC": {
+          "stateName": "Distrito de Columbia",
+          "housing": {
+            "headline": "La Ley de Detección de Antecedentes Penales Justos de DC prohíbe consultar antes de una oferta condicional",
+            "detail": "La Ley de Detección de Antecedentes Penales Justos para Vivienda de DC (D.C. Code § 42-3505.08, 2016) prohíbe a los propietarios preguntar sobre antecedentes penales hasta después de hacer una oferta condicional de arrendamiento. Tras la oferta condicional, los propietarios solo pueden considerar ciertos delitos con evaluación individualizada. El DC también sigue las reglas federales del HUD para vivienda pública — aviso por escrito y oportunidad de audiencia de queja antes de cualquier desalojo.",
+            "source": "D.C. Code § 42-3505.08; HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo",
+            "detail": "El D.C. Code § 47-2853.17 (2019) exige que las juntas de licencias del DC apliquen una evaluación individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas del DC exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables, salvo que las reglas específicas de la junta lo requieran.",
+            "source": "D.C. Code § 47-2853.17 (2019)"
+          }
+        },
+        "FL": {
+          "stateName": "Florida",
+          "housing": {
+            "headline": "Las PHA siguen las reglas de aviso del HUD; algunos condados tienen protecciones locales adicionales",
+            "detail": "Las autoridades de vivienda de Florida siguen los requisitos mínimos federales del HUD (aviso por escrito y oportunidad de audiencia de queja). Florida no tiene una ley estatal de vivienda de oportunidad justa. Las ordenanzas locales en Miami-Dade y otros condados pueden ofrecer derechos procesales adicionales. Comuníquese con su autoridad de vivienda tan pronto como tenga conocimiento de cualquier acción — las demoras dificultan las apelaciones.",
+            "source": "HUD 24 C.F.R. § 966.4; Fla. Stat. § 760.23"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas de FL exigen informar dentro de 30 días de la condena o declaración",
+            "detail": "El Estatuto de Florida § 456.0635 rige a los profesionales de la salud con licencia y exige informar ciertas acciones penales. La mayoría de las juntas de licencias de Florida exigen autoinformar una condena, declaración de culpabilidad o de no impugnación (no contest) dentro de 30 días. Los arrestos sin condena generalmente no son informables, salvo que el estatuto específico de la junta lo exija. No informar es en sí mismo un motivo separado de sanción disciplinaria.",
+            "source": "Fla. Stat. §§ 456.0635, 456.072(1)(c)"
+          }
+        },
+        "GA": {
+          "stateName": "Georgia",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; solicite la audiencia administrativa generalmente dentro de 10 a 14 días del aviso",
+            "detail": "Las autoridades de vivienda de Georgia siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Georgia no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Si fue arrestado y enfrenta una terminación de contrato por actividad delictiva, el plazo para solicitar la audiencia administrativa es generalmente de 10 a 14 días. Comuníquese con su autoridad de vivienda de inmediato.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; estándar de relación directa (2021)",
+            "detail": "La O.C.G.A. § 43-1-19 (modificada en 2021) exige que las juntas de licencias apliquen un estándar de 'relación directa' antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Georgia exigen autoinformar una condena final dentro de 30 días. Un arresto sin condena generalmente no es informable, salvo que las reglas específicas de la junta indiquen lo contrario.",
+            "source": "O.C.G.A. § 43-1-19 (modificada en 2021)"
+          }
+        },
+        "HI": {
+          "stateName": "Hawái",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Hawái siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Hawái no tiene una ley estatal de vivienda de oportunidad justa específicamente para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se requiere nexo para la denegación",
+            "detail": "La Haw. Rev. Stat. § 831-3.1 exige que las juntas de licencias apliquen una evaluación individualizada antes de denegar una licencia por antecedentes penales. Hawái es uno de los estados pioneros en requerir una determinación de nexo. La mayoría de las juntas de Hawái exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Haw. Rev. Stat. § 831-3.1"
+          }
+        },
+        "ID": {
+          "stateName": "Idaho",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Idaho siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Idaho no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2020)",
+            "detail": "El Idaho Code § 67-9406 (HB 357, 2020) exige que las juntas de licencias realicen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Idaho exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Idaho Code § 67-9406 (HB 357, 2020)"
+          }
+        },
+        "IL": {
+          "stateName": "Illinois",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; Chicago y el Condado de Cook tienen protecciones de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Illinois siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Chicago (RLTO § 5-12-170) y el Condado de Cook (Enmienda de Vivienda Justa, 2020) restringen el uso de antecedentes penales en decisiones de arrendamiento sin evaluación individualizada. No existe ley estatal para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato.",
+            "source": "HUD 24 C.F.R. § 966.4; Chicago RLTO § 5-12-170; Cook County Just Housing Amendment (2020)"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la Ley de Licencias Justas (2021)",
+            "detail": "La Ley de Licencias Justas para Ciudadanos que Regresan de Illinois (SB 1814, 2021) exige que las juntas de licencias apliquen una evaluación individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Illinois exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "IL Fair Licensure for Returned Citizens Act (SB 1814, 2021); 225 ILCS 450/2"
+          }
+        },
+        "IN": {
+          "stateName": "Indiana",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Indiana siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Indiana no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se requiere evaluación individualizada (2020)",
+            "detail": "El Ind. Code § 25-1-1.2-5 (HEA 1059, 2020) exige que las juntas de licencias realicen una evaluación individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Indiana exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Ind. Code § 25-1-1.2-5 (HEA 1059, 2020)"
+          }
+        },
+        "IA": {
+          "stateName": "Iowa",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Iowa siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Iowa no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se requiere nexo (2020)",
+            "detail": "El Iowa Code § 272C.2(2) (2020) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Iowa exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Iowa Code § 272C.2(2) (2020)"
+          }
+        },
+        "KS": {
+          "stateName": "Kansas",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Kansas siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Kansas no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2020)",
+            "detail": "El Kan. Stat. Ann. § 74-120 (SB 367, 2020) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Kansas exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Kan. Stat. Ann. § 74-120 (SB 367, 2020)"
+          }
+        },
+        "KY": {
+          "stateName": "Kentucky",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Kentucky siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Kentucky no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2020)",
+            "detail": "El Ky. Rev. Stat. Ann. § 335B.010 et seq. (SB 165, 2020) exige que las juntas de licencias realicen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Kentucky exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Ky. Rev. Stat. Ann. § 335B.010 et seq. (SB 165, 2020)"
+          }
+        },
+        "LA": {
+          "stateName": "Luisiana",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Luisiana siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Luisiana no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "La La. Rev. Stat. § 37:2950 (HB 707, 2021) exige que las juntas de licencias apliquen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Luisiana exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "La. Rev. Stat. § 37:2950 (HB 707, 2021)"
+          }
+        },
+        "ME": {
+          "stateName": "Maine",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Maine siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Maine no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "La Me. Rev. Stat. tit. 32 § 13862-A (2019) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Maine exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Me. Rev. Stat. tit. 32 § 13862-A (2019)"
+          }
+        },
+        "MD": {
+          "stateName": "Maryland",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; la ciudad de Baltimore tiene una ordenanza de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Maryland siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. La ciudad de Baltimore tiene una ordenanza de vivienda de oportunidad justa que restringe cómo los propietarios pueden usar los antecedentes penales. No existe ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "El Md. Code Ann., Bus. Occ. & Prof. § 1-304 (SB 782, 2019) exige que las juntas de licencias apliquen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Maryland exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Md. Code Ann., Bus. Occ. & Prof. § 1-304 (SB 782, 2019)"
+          }
+        },
+        "MA": {
+          "stateName": "Massachusetts",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; la reforma CORI limita cuándo los propietarios pueden preguntar sobre antecedentes penales",
+            "detail": "Las autoridades de vivienda de Massachusetts siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. La reforma CORI estatal (M.G.L. c. 151B) restringe cuándo los propietarios con 6 o más unidades pueden preguntar sobre antecedentes penales. Boston tiene una ordenanza de vivienda de oportunidad justa. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4; M.G.L. c. 151B § 4(9)"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la Ley de Reforma de Justicia Penal (2018)",
+            "detail": "La M.G.L. c. 6A § 18M (Ley de Reforma de Justicia Penal, 2018) exige que las juntas de licencias apliquen una evaluación individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Massachusetts exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables bajo la reforma CORI.",
+            "source": "M.G.L. c. 6A § 18M; M.G.L. c. 151B § 4(9½) (CORI Reform Act)"
+          }
+        },
+        "MI": {
+          "stateName": "Michigan",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Michigan siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Michigan no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2018)",
+            "detail": "El MCL § 338.41 et seq. (enmiendas al Código Ocupacional, 2018) exige que las juntas de licencias apliquen una evaluación individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Michigan exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "MCL § 338.41 et seq. (Occupational Code amendments, 2018)"
+          }
+        },
+        "MN": {
+          "stateName": "Minnesota",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; Minneapolis y St. Paul restringen consultas sobre antecedentes penales en solicitudes",
+            "detail": "Las autoridades de vivienda de Minnesota siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Minneapolis y St. Paul tienen ordenanzas de vivienda de oportunidad justa que prohíben consultar antecedentes penales en solicitudes de arrendamiento antes de una oferta condicional. No existe ley estatal para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4; Minneapolis Fair Chance in Housing Ordinance (2020)"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se aplica el estándar de relación directa",
+            "detail": "La Minn. Stat. § 364.03 exige que las juntas de licencias apliquen un estándar de 'relación directa' antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Minnesota exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Minn. Stat. § 364.03"
+          }
+        },
+        "MS": {
+          "stateName": "Misisipi",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Misisipi siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Misisipi no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados ni una reforma estatal de nexo en licencias ocupacionales. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; las juntas tienen amplia discreción",
+            "detail": "Misisipi no tiene una ley estatal de reforma de nexo en licencias ocupacionales a partir de 2026. La mayoría de las juntas de licencias de Misisipi exigen autoinformar una condena final dentro de 30 días. Las juntas tienen amplia discreción para denegar una licencia por antecedentes penales. Consulte a un abogado si una junta amenaza con una acción disciplinaria.",
+            "source": "Miss. Code Ann. § 73-1-1 et seq."
+          }
+        },
+        "MO": {
+          "stateName": "Misuri",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Misuri siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Misuri no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "La Mo. Rev. Stat. § 324.011 (SB 262, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Misuri exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Mo. Rev. Stat. § 324.011 (SB 262, 2021)"
+          }
+        },
+        "MT": {
+          "stateName": "Montana",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Montana siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Montana no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "La Mont. Code Ann. § 37-1-203 (SB 212, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Montana exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Mont. Code Ann. § 37-1-203 (SB 212, 2021)"
+          }
+        },
+        "NE": {
+          "stateName": "Nebraska",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Nebraska siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Nebraska no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El Neb. Rev. Stat. § 71-8401 et seq. (LB 299, 2021) exige que las juntas de licencias apliquen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Nebraska exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Neb. Rev. Stat. § 71-8401 et seq. (LB 299, 2021)"
+          }
+        },
+        "NV": {
+          "stateName": "Nevada",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Nevada siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Nevada no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se requiere nexo (2017)",
+            "detail": "El NRS § 622A.300 (AB 384, 2017) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Nevada exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "NRS § 622A.300 (AB 384, 2017)"
+          }
+        },
+        "NH": {
+          "stateName": "Nuevo Hampshire",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Nuevo Hampshire siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Nuevo Hampshire no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "La N.H. Rev. Stat. Ann. § 332-G:8 (2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Nuevo Hampshire exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "N.H. Rev. Stat. Ann. § 332-G:8 (2021)"
+          }
+        },
+        "NJ": {
+          "stateName": "Nueva Jersey",
+          "housing": {
+            "headline": "Ley de Vivienda de Oportunidad Justa de NJ (2021) — los propietarios no pueden preguntar sobre antecedentes penales antes de una oferta condicional",
+            "detail": "La Ley de Vivienda de Oportunidad Justa estatal de Nueva Jersey (N.J. Stat. Ann. § 46:8-52 et seq., vigente desde 2022) prohíbe a los propietarios preguntar sobre antecedentes penales hasta después de hacer una oferta condicional de arrendamiento. Tras la oferta condicional, los propietarios deben aplicar una evaluación individualizada. Las autoridades de vivienda de Nueva Jersey también siguen las reglas federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes de cualquier desalojo de vivienda pública.",
+            "source": "N.J. Stat. Ann. § 46:8-52 et seq. (Fair Chance in Housing Act, 2021); HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El N.J. Stat. Ann. § 45:1-21.1 (2021) exige que las juntas de licencias apliquen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Nueva Jersey exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "N.J. Stat. Ann. § 45:1-21.1 (2021)"
+          }
+        },
+        "NM": {
+          "stateName": "Nuevo México",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Nuevo México siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Nuevo México no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "La NMSA 1978 § 61-1-34 (2019) exige que las juntas de licencias apliquen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Nuevo México exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "NMSA 1978 § 61-1-34 (2019)"
           }
         },
         "NY": {
@@ -6174,6 +6577,136 @@ export default {
             "source": "N.Y. Correction Law §§ 750–754"
           }
         },
+        "NC": {
+          "stateName": "Carolina del Norte",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Carolina del Norte siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Carolina del Norte no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "La N.C. Gen. Stat. § 93B-8.1 (HB 661, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Carolina del Norte exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "N.C. Gen. Stat. § 93B-8.1 (HB 661, 2021)"
+          }
+        },
+        "ND": {
+          "stateName": "Dakota del Norte",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Dakota del Norte siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Dakota del Norte no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El N.D. Cent. Code § 43-51-01 et seq. (SB 2344, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Dakota del Norte exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "N.D. Cent. Code § 43-51-01 et seq. (SB 2344, 2021)"
+          }
+        },
+        "OH": {
+          "stateName": "Ohio",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Ohio siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Ohio no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se aplica el estándar de relación directa",
+            "detail": "El Ohio Rev. Code Ann. § 9.79 (SB 255, 2012; ampliado por HB 263, 2021) exige que las juntas de licencias apliquen un estándar de 'relación directa' antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Ohio exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Ohio Rev. Code Ann. § 9.79 (SB 255, 2012; HB 263, 2021)"
+          }
+        },
+        "OK": {
+          "stateName": "Oklahoma",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Oklahoma siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Oklahoma no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "El Okla. Stat. tit. 59 § 4100 et seq. (SB 1106, 2019) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Oklahoma exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Okla. Stat. tit. 59 § 4100 et seq. (SB 1106, 2019)"
+          }
+        },
+        "OR": {
+          "stateName": "Oregón",
+          "housing": {
+            "headline": "La Ley de Vivienda de Oportunidad Justa de Oregón (2021) restringe el uso de antecedentes penales a nivel estatal",
+            "detail": "La Ley de Vivienda de Oportunidad Justa de Oregón (Or. Rev. Stat. § 90.303, vigente desde 2022) restringe cuándo los propietarios pueden usar antecedentes penales en decisiones de arrendamiento. Los propietarios no pueden preguntar sobre antecedentes penales hasta después de aceptar una solicitud de arrendamiento. Las autoridades de vivienda de Oregón también siguen las reglas federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes de cualquier desalojo de vivienda pública.",
+            "source": "Or. Rev. Stat. § 90.303 (Fair Chance Housing Act, 2021); HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "La Or. Rev. Stat. § 676.612 (HB 2009, 2019) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Oregón exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Or. Rev. Stat. § 676.612 (HB 2009, 2019)"
+          }
+        },
+        "PA": {
+          "stateName": "Pensilvania",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; Filadelfia tiene una ordenanza de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Pensilvania siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Filadelfia tiene una ordenanza de vivienda de oportunidad justa que restringe cuándo los propietarios pueden usar antecedentes penales. No existe ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4; 18 Pa. C.S. § 9125"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se requiere nexo (2020)",
+            "detail": "El 63 Pa. C.S. § 3113 (SB 637, 2020) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Pensilvania exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "63 Pa. C.S. § 3113 (SB 637, 2020)"
+          }
+        },
+        "RI": {
+          "stateName": "Rhode Island",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Rhode Island siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Rhode Island no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2022)",
+            "detail": "El R.I. Gen. Laws § 5-76-2 (2022) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Rhode Island exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "R.I. Gen. Laws § 5-76-2 (2022)"
+          }
+        },
+        "SC": {
+          "stateName": "Carolina del Sur",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Carolina del Sur siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Carolina del Sur no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados ni una reforma estatal de nexo en licencias ocupacionales. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; las juntas tienen amplia discreción",
+            "detail": "Carolina del Sur no tiene una ley estatal de reforma de nexo en licencias ocupacionales a partir de 2026. La mayoría de las juntas de licencias de Carolina del Sur exigen autoinformar una condena final dentro de 30 días. Las juntas tienen amplia discreción para denegar una licencia por antecedentes penales. Consulte a un abogado si una junta amenaza con una acción disciplinaria.",
+            "source": "S.C. Code Ann. § 40-1-110 et seq."
+          }
+        },
+        "SD": {
+          "stateName": "Dakota del Sur",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Dakota del Sur siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Dakota del Sur no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El SDCL § 36-2A-9 (SB 72, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Dakota del Sur exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "SDCL § 36-2A-9 (SB 72, 2021)"
+          }
+        },
+        "TN": {
+          "stateName": "Tennessee",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Tennessee siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Tennessee no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "El Tenn. Code Ann. § 62-76-101 et seq. (HB 261, 2019) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Tennessee exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Tenn. Code Ann. § 62-76-101 et seq. (HB 261, 2019)"
+          }
+        },
         "TX": {
           "stateName": "Texas",
           "housing": {
@@ -6187,17 +6720,95 @@ export default {
             "source": "Tex. Occ. Code §§ 53.021–53.025"
           }
         },
-        "FL": {
-          "stateName": "Florida",
+        "UT": {
+          "stateName": "Utah",
           "housing": {
-            "headline": "Las PHA siguen las reglas de aviso del HUD; algunos condados tienen protecciones locales adicionales",
-            "detail": "Las autoridades de vivienda de Florida siguen los requisitos mínimos federales del HUD (aviso por escrito y oportunidad de audiencia de queja). Florida no tiene una ley estatal de vivienda de oportunidad justa. Las ordenanzas locales en Miami-Dade y otros condados pueden ofrecer derechos procesales adicionales. Comuníquese con su autoridad de vivienda tan pronto como tenga conocimiento de cualquier acción — las demoras dificultan las apelaciones.",
-            "source": "HUD 24 C.F.R. § 966.4; Fla. Stat. § 760.23"
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Utah siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Utah no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
           },
           "license": {
-            "headline": "La mayoría de las juntas de FL exigen informar dentro de 30 días de la condena o declaración",
-            "detail": "El Estatuto de Florida § 456.0635 rige a los profesionales de la salud con licencia y exige informar ciertas acciones penales. La mayoría de las juntas de licencias de Florida exigen autoinformar una condena, declaración de culpabilidad o de no impugnación (no contest) dentro de 30 días. Los arrestos sin condena generalmente no son informables, salvo que el estatuto específico de la junta lo exija. No informar es en sí mismo un motivo separado de sanción disciplinaria.",
-            "source": "Fla. Stat. §§ 456.0635, 456.072(1)(c)"
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2020)",
+            "detail": "El Utah Code Ann. § 58-1-304 (SB 34, 2020) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Utah exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Utah Code Ann. § 58-1-304 (SB 34, 2020)"
+          }
+        },
+        "VT": {
+          "stateName": "Vermont",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Vermont siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Vermont no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2019)",
+            "detail": "El 26 V.S.A. § 3105 (2019) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Vermont exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "26 V.S.A. § 3105 (2019)"
+          }
+        },
+        "VA": {
+          "stateName": "Virginia",
+          "housing": {
+            "headline": "Las PHA siguen las reglas del HUD; algunas localidades tienen protecciones de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Virginia siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Algunas localidades de Virginia (incluida Alejandría) tienen protecciones de vivienda de oportunidad justa para propietarios privados. No existe ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto.",
+            "source": "HUD 24 C.F.R. § 966.4; Va. Code Ann. § 36-96.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El Va. Code Ann. § 54.1-204 (SB 1127, 2021) exige que las juntas de licencias apliquen una evaluación de nexo individualizada antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Virginia exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Va. Code Ann. § 54.1-204 (SB 1127, 2021)"
+          }
+        },
+        "WA": {
+          "stateName": "Washington",
+          "housing": {
+            "headline": "La Ley de Vivienda de Oportunidad Justa de WA (2018) restringe el uso de antecedentes penales a nivel estatal",
+            "detail": "La Ley de Vivienda de Oportunidad Justa de Washington (RCW 59.18.580, vigente desde 2018) restringe cuándo los propietarios pueden usar antecedentes penales en decisiones de arrendamiento. Aplica a propietarios con 3 o más unidades en las jurisdicciones aplicables; Seattle tiene protecciones más amplias. Las autoridades de vivienda de Washington también siguen las reglas federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes de cualquier desalojo de vivienda pública.",
+            "source": "RCW 59.18.580 (Fair Chance Housing Act, 2018); HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El RCW 18.185.020 (SB 5046, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Washington exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "RCW 18.185.020 (SB 5046, 2021)"
+          }
+        },
+        "WV": {
+          "stateName": "Virginia Occidental",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Virginia Occidental siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Virginia Occidental no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El W. Va. Code § 30-1-7a (SB 97, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Virginia Occidental exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "W. Va. Code § 30-1-7a (SB 97, 2021)"
+          }
+        },
+        "WI": {
+          "stateName": "Wisconsin",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa para propietarios privados",
+            "detail": "Las autoridades de vivienda de Wisconsin siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Wisconsin no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; se aplica el estándar de relación sustancial",
+            "detail": "La Wis. Stat. § 111.335 (modificada en 2016) exige que las juntas de licencias apliquen un estándar de 'relación sustancial' antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Wisconsin exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Wis. Stat. § 111.335 (amended 2016)"
+          }
+        },
+        "WY": {
+          "stateName": "Wyoming",
+          "housing": {
+            "headline": "Las PHA siguen las reglas federales del HUD; no existe ley estatal de vivienda de oportunidad justa",
+            "detail": "Las autoridades de vivienda de Wyoming siguen los requisitos mínimos federales del HUD — aviso por escrito y oportunidad de audiencia de queja antes del desalojo. Wyoming no tiene una ley estatal de vivienda de oportunidad justa para propietarios privados. Comuníquese con su autoridad de vivienda de inmediato tras cualquier arresto; el plan administrativo de cada PHA rige los casos discrecionales.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "La mayoría de las juntas exigen informar dentro de 30 días de la condena; rige la reforma de nexo (2021)",
+            "detail": "El Wyo. Stat. Ann. § 33-1-120 (SF 84, 2021) exige que las juntas de licencias apliquen una prueba de nexo antes de denegar una licencia por antecedentes penales. La mayoría de las juntas de Wyoming exigen autoinformar una condena final dentro de 30 días. Los arrestos sin condena generalmente no son informables.",
+            "source": "Wyo. Stat. Ann. § 33-1-120 (SF 84, 2021)"
           }
         }
       }

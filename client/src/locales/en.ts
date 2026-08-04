@@ -6146,6 +6146,58 @@ export default {
             "detail": "Federal agencies and licensing bodies each have their own reporting rules. Security clearances and many federal licenses typically require self-reporting an arrest within 5–30 days. Missing a required report can be treated as a separate violation. Check your specific documentation immediately."
           }
         },
+        "AL": {
+          "stateName": "Alabama",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Alabama housing authorities follow federal HUD minimum requirements — written notice of lease termination with specific reasons and the right to request a grievance hearing. Alabama has no statewide fair-chance housing law for private landlords. Contact your housing authority immediately after any arrest to understand your specific PHA's administrative plan before a formal notice is issued.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of a conviction; nexus reform applies since 2019",
+            "detail": "Alabama HB 244 (2019) requires licensing boards to conduct an individualized nexus assessment before denying a license based on criminal history. Most Alabama boards require self-reporting a conviction or guilty plea within 30 days. An arrest alone is generally not a reportable event unless the specific board's rules state otherwise.",
+            "source": "Ala. Code § 41-22-1 et seq.; HB 244 (2019)"
+          }
+        },
+        "AK": {
+          "stateName": "Alaska",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Alaska housing authorities follow federal HUD minimum requirements — written notice and a grievance opportunity before eviction. Alaska has no statewide fair-chance housing law for private landlords. If you receive any housing notice related to criminal activity, request a grievance hearing promptly — the window is typically 10–14 days from receipt of notice.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of a conviction; nexus required for denial",
+            "detail": "Alaska Stat. § 08.01.075 prohibits licensing boards from denying a license solely due to a prior conviction without a nexus finding. Most Alaska boards require self-reporting a final conviction within 30 days. An arrest without a conviction is generally not reportable unless the board's specific regulations require it.",
+            "source": "Alaska Stat. § 08.01.075"
+          }
+        },
+        "AZ": {
+          "stateName": "Arizona",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Arizona housing authorities follow federal HUD minimum requirements — written notice of lease termination with specific reasons and the right to request a grievance hearing. Arizona has no statewide fair-chance housing law for private landlords. Contact your housing authority as soon as possible after an arrest, before a formal notice is issued.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Arizona HB 2569 / Ariz. Rev. Stat. § 41-1093 et seq. (2019) requires licensing boards to conduct an individualized assessment and apply a nexus test before denying a license based on criminal history. Most Arizona boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Ariz. Rev. Stat. § 41-1093 et seq. (2019)"
+          }
+        },
+        "AR": {
+          "stateName": "Arkansas",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Arkansas housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Arkansas has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary housing actions.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus required since 2019",
+            "detail": "Ark. Code Ann. § 17-1-103 (2019) requires licensing boards to consider whether a conviction is directly related to the occupation before denying a license. Most Arkansas boards require self-reporting a final conviction within 30 days. An arrest alone is generally not a reportable event.",
+            "source": "Ark. Code Ann. § 17-1-103 (2019)"
+          }
+        },
         "CA": {
           "stateName": "California",
           "housing": {
@@ -6157,6 +6209,357 @@ export default {
             "headline": "Most boards require self-reporting within 30 days of a conviction — not an arrest",
             "detail": "California Business & Professions Code § 490 prohibits denying a license solely based on a prior conviction; boards must conduct an individualized assessment. Most CA boards (nursing: Cal. B&P § 2762; teaching: Ed. Code § 44009; contractors: Cal. B&P § 7069) require reporting a conviction or guilty plea within 30 days. An arrest alone generally does not trigger a mandatory report unless the board's specific regulations require it.",
             "source": "Cal. Bus. & Prof. Code §§ 490, 2762; Ed. Code § 44009"
+          }
+        },
+        "CO": {
+          "stateName": "Colorado",
+          "housing": {
+            "headline": "PHAs follow HUD notice rules; Denver has a Fair Chance for Housing ordinance",
+            "detail": "Colorado housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity. Denver's Fair Chance for Housing Ordinance (eff. Jan. 2022) prohibits landlords from inquiring about criminal history before a conditional rental offer. Outside Denver, Colorado has no statewide private landlord fair-chance housing law. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4; Denver Ord. 21-1370"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Colo. Rev. Stat. § 24-34-101 et seq. (HB 19-1275, 2019) requires licensing boards to conduct an individualized assessment and apply a nexus test before denying a license based on criminal history. Most Colorado boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Colo. Rev. Stat. § 24-34-101 et seq. (HB 19-1275, 2019)"
+          }
+        },
+        "CT": {
+          "stateName": "Connecticut",
+          "housing": {
+            "headline": "PHAs follow HUD notice rules; no statewide fair-chance housing law for private landlords",
+            "detail": "Connecticut housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Connecticut has no statewide fair-chance housing law for private landlords, though some municipalities may have local protections. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4; Conn. Gen. Stat. § 46a-80"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; 'reasonable relationship' standard applies",
+            "detail": "Conn. Gen. Stat. § 46a-80 requires licensing boards to apply a 'reasonable relationship' standard before denying a license based on criminal history. Most Connecticut boards require self-reporting a final conviction within 30 days. An arrest without conviction is generally not reportable unless the board's specific rules state otherwise.",
+            "source": "Conn. Gen. Stat. § 46a-80"
+          }
+        },
+        "DE": {
+          "stateName": "Delaware",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Delaware housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Delaware has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Del. Code Ann. tit. 29 § 8735(y) (2019) requires licensing boards to conduct an individualized assessment before denying a license based on criminal history. Most Delaware boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Del. Code Ann. tit. 29 § 8735(y) (2019)"
+          }
+        },
+        "DC": {
+          "stateName": "District of Columbia",
+          "housing": {
+            "headline": "DC Fair Criminal Record Screening Act prohibits inquiry until after a conditional offer",
+            "detail": "The DC Fair Criminal Record Screening for Housing Act (D.C. Code § 42-3505.08, 2016) prohibits landlords from inquiring about criminal history until after making a conditional rental offer. After a conditional offer, landlords may consider only certain crimes with individualized assessment. DC also follows federal HUD rules for public housing — written notice and grievance opportunity before any eviction.",
+            "source": "D.C. Code § 42-3505.08; HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform applies",
+            "detail": "D.C. Code § 47-2853.17 (2019) requires DC licensing boards to apply an individualized assessment before denying a license based on criminal history. Most DC boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable unless the board's specific rules require it.",
+            "source": "D.C. Code § 47-2853.17 (2019)"
+          }
+        },
+        "FL": {
+          "stateName": "Florida",
+          "housing": {
+            "headline": "PHAs follow HUD notice rules; some counties have additional local protections",
+            "detail": "Florida housing authorities follow federal HUD minimum requirements (written notice and grievance opportunity). Florida has no statewide fair-chance housing law. Local ordinances in Miami-Dade and other counties may provide additional procedural rights. Contact your housing authority as soon as you are aware of any action — delays make appeals harder.",
+            "source": "HUD 24 C.F.R. § 966.4; Fla. Stat. § 760.23"
+          },
+          "license": {
+            "headline": "Most FL boards require reporting within 30 days of conviction or plea",
+            "detail": "Florida Statutes § 456.0635 governs health care licensees and requires reporting certain criminal actions. Most Florida licensing boards require self-reporting a conviction, guilty plea, or no-contest plea within 30 days. Arrests without conviction are generally not reportable unless the board's specific statute requires it. Failure to report is itself a separate ground for discipline.",
+            "source": "Fla. Stat. §§ 456.0635, 456.072(1)(c)"
+          }
+        },
+        "GA": {
+          "stateName": "Georgia",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; admin hearing request typically due within 10–14 days of notice",
+            "detail": "Georgia housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Georgia has no statewide fair-chance housing law for private landlords. Note: if arrested and subject to a criminal-activity lease termination, the admin hearing request window is typically 10–14 days. Contact your housing authority immediately — do not wait for formal notice.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; direct relationship standard (2021)",
+            "detail": "O.C.G.A. § 43-1-19 (amended 2021) requires licensing boards to apply a 'direct relationship' standard before denying a license based on criminal history. Most Georgia boards require self-reporting a final conviction within 30 days. An arrest without conviction is generally not reportable unless the board's specific rules state otherwise.",
+            "source": "O.C.G.A. § 43-1-19 (amended 2021)"
+          }
+        },
+        "HI": {
+          "stateName": "Hawaii",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide private landlord fair-chance law",
+            "detail": "Hawaii housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Hawaii has no statewide fair-chance housing law specifically for private landlords. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus required for denial",
+            "detail": "Haw. Rev. Stat. § 831-3.1 requires licensing boards to apply an individualized assessment before denying a license based on criminal history. Hawaii is one of the earliest states to require a nexus finding. Most Hawaii boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Haw. Rev. Stat. § 831-3.1"
+          }
+        },
+        "ID": {
+          "stateName": "Idaho",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Idaho housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Idaho has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2020) applies",
+            "detail": "Idaho Code § 67-9406 (HB 357, 2020) requires licensing boards to conduct an individualized nexus assessment before denying a license based on criminal history. Most Idaho boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Idaho Code § 67-9406 (HB 357, 2020)"
+          }
+        },
+        "IL": {
+          "stateName": "Illinois",
+          "housing": {
+            "headline": "PHAs follow HUD rules; Chicago and Cook County have fair chance housing protections",
+            "detail": "Illinois housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Chicago (RLTO § 5-12-170) and Cook County (Just Housing Amendment, 2020) restrict landlords from using criminal history in rental decisions without individualized assessment. No statewide private landlord law. Contact your housing authority promptly.",
+            "source": "HUD 24 C.F.R. § 966.4; Chicago RLTO § 5-12-170; Cook County Just Housing Amendment (2020)"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; Fair Licensure Act (2021) applies",
+            "detail": "Illinois Fair Licensure for Returned Citizens Act (SB 1814, 2021) requires licensing boards to apply an individualized assessment before denying a license based on criminal history. Most Illinois boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "IL Fair Licensure for Returned Citizens Act (SB 1814, 2021); 225 ILCS 450/2"
+          }
+        },
+        "IN": {
+          "stateName": "Indiana",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Indiana housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Indiana has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; individualized assessment required (2020)",
+            "detail": "Ind. Code § 25-1-1.2-5 (HEA 1059, 2020) requires licensing boards to conduct an individualized assessment before denying a license based on criminal history. Most Indiana boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Ind. Code § 25-1-1.2-5 (HEA 1059, 2020)"
+          }
+        },
+        "IA": {
+          "stateName": "Iowa",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Iowa housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Iowa has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus required (2020)",
+            "detail": "Iowa Code § 272C.2(2) (2020) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Iowa boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Iowa Code § 272C.2(2) (2020)"
+          }
+        },
+        "KS": {
+          "stateName": "Kansas",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Kansas housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Kansas has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2020) applies",
+            "detail": "Kan. Stat. Ann. § 74-120 (SB 367, 2020) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Kansas boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Kan. Stat. Ann. § 74-120 (SB 367, 2020)"
+          }
+        },
+        "KY": {
+          "stateName": "Kentucky",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Kentucky housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Kentucky has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2020) applies",
+            "detail": "Ky. Rev. Stat. Ann. § 335B.010 et seq. (SB 165, 2020) requires licensing boards to conduct an individualized nexus assessment before denying a license based on criminal history. Most Kentucky boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Ky. Rev. Stat. Ann. § 335B.010 et seq. (SB 165, 2020)"
+          }
+        },
+        "LA": {
+          "stateName": "Louisiana",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Louisiana housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Louisiana has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "La. Rev. Stat. § 37:2950 (HB 707, 2021) requires licensing boards to apply an individualized nexus assessment before denying a license based on criminal history. Most Louisiana boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "La. Rev. Stat. § 37:2950 (HB 707, 2021)"
+          }
+        },
+        "ME": {
+          "stateName": "Maine",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law for private landlords",
+            "detail": "Maine housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Maine has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Me. Rev. Stat. tit. 32 § 13862-A (2019) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Maine boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Me. Rev. Stat. tit. 32 § 13862-A (2019)"
+          }
+        },
+        "MD": {
+          "stateName": "Maryland",
+          "housing": {
+            "headline": "PHAs follow HUD notice rules; Baltimore City has a fair chance housing ordinance",
+            "detail": "Maryland housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Baltimore City has a fair chance housing ordinance restricting how landlords may use criminal history. No statewide private landlord fair-chance housing law. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Md. Code Ann., Bus. Occ. & Prof. § 1-304 (SB 782, 2019) requires licensing boards to apply an individualized nexus assessment before denying a license based on criminal history. Most Maryland boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Md. Code Ann., Bus. Occ. & Prof. § 1-304 (SB 782, 2019)"
+          }
+        },
+        "MA": {
+          "stateName": "Massachusetts",
+          "housing": {
+            "headline": "PHAs follow HUD rules; CORI reform restricts when landlords may ask about criminal history",
+            "detail": "Massachusetts housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. State CORI reform (M.G.L. c. 151B) restricts when landlords with 6+ units may inquire about criminal history. Boston has a Fair Chance for Housing ordinance. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4; M.G.L. c. 151B § 4(9)"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; Criminal Justice Reform Act (2018) applies",
+            "detail": "M.G.L. c. 6A § 18M (Criminal Justice Reform Act, 2018) requires licensing boards to apply an individualized assessment before denying a license based on criminal history. Most Massachusetts boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable under CORI reform.",
+            "source": "M.G.L. c. 6A § 18M; M.G.L. c. 151B § 4(9½) (CORI Reform Act)"
+          }
+        },
+        "MI": {
+          "stateName": "Michigan",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law for private landlords",
+            "detail": "Michigan housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Michigan has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2018) applies",
+            "detail": "MCL § 338.41 et seq. (Occupational Code amendments, 2018) requires licensing boards to apply an individualized assessment before denying a license based on criminal history. Most Michigan boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "MCL § 338.41 et seq. (Occupational Code amendments, 2018)"
+          }
+        },
+        "MN": {
+          "stateName": "Minnesota",
+          "housing": {
+            "headline": "PHAs follow HUD rules; Minneapolis and St. Paul restrict criminal history inquiries on applications",
+            "detail": "Minnesota housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Minneapolis and St. Paul have fair chance housing ordinances prohibiting criminal history inquiries on rental applications before a conditional offer. No statewide private landlord law. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4; Minneapolis Fair Chance in Housing Ordinance (2020)"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; direct relationship standard applies",
+            "detail": "Minn. Stat. § 364.03 requires licensing boards to apply a 'direct relationship' standard before denying a license based on criminal history. Most Minnesota boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Minn. Stat. § 364.03"
+          }
+        },
+        "MS": {
+          "stateName": "Mississippi",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Mississippi housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Mississippi has no statewide fair-chance housing law for private landlords and no statewide occupational licensing nexus reform. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; boards have broad discretion",
+            "detail": "Mississippi has no statewide occupational licensing nexus reform law as of 2026. Most Mississippi licensing boards require self-reporting a final conviction within 30 days. Boards have broad discretion to deny a license based on criminal history. Consult an attorney if a board action is threatened.",
+            "source": "Miss. Code Ann. § 73-1-1 et seq. (general licensing provisions)"
+          }
+        },
+        "MO": {
+          "stateName": "Missouri",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Missouri housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Missouri has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "Mo. Rev. Stat. § 324.011 (SB 262, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Missouri boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Mo. Rev. Stat. § 324.011 (SB 262, 2021)"
+          }
+        },
+        "MT": {
+          "stateName": "Montana",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Montana housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Montana has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "Mont. Code Ann. § 37-1-203 (SB 212, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Montana boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Mont. Code Ann. § 37-1-203 (SB 212, 2021)"
+          }
+        },
+        "NE": {
+          "stateName": "Nebraska",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Nebraska housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Nebraska has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "Neb. Rev. Stat. § 71-8401 et seq. (LB 299, 2021) requires licensing boards to apply an individualized nexus assessment before denying a license based on criminal history. Most Nebraska boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Neb. Rev. Stat. § 71-8401 et seq. (LB 299, 2021)"
+          }
+        },
+        "NV": {
+          "stateName": "Nevada",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide private landlord fair-chance law",
+            "detail": "Nevada housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Nevada has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus required (2017)",
+            "detail": "NRS § 622A.300 (AB 384, 2017) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Nevada boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "NRS § 622A.300 (AB 384, 2017)"
+          }
+        },
+        "NH": {
+          "stateName": "New Hampshire",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "New Hampshire housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. New Hampshire has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "N.H. Rev. Stat. Ann. § 332-G:8 (2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most New Hampshire boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "N.H. Rev. Stat. Ann. § 332-G:8 (2021)"
+          }
+        },
+        "NJ": {
+          "stateName": "New Jersey",
+          "housing": {
+            "headline": "NJ Fair Chance in Housing Act (2021) — landlords may not ask about criminal history before a conditional offer",
+            "detail": "New Jersey's statewide Fair Chance in Housing Act (N.J. Stat. Ann. § 46:8-52 et seq., eff. 2022) prohibits landlords from inquiring about criminal history until after making a conditional rental offer. After a conditional offer, landlords must apply an individualized assessment. New Jersey housing authorities also follow federal HUD rules — written notice and grievance opportunity before any public housing eviction.",
+            "source": "N.J. Stat. Ann. § 46:8-52 et seq. (Fair Chance in Housing Act, 2021); HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "N.J. Stat. Ann. § 45:1-21.1 (2021) requires licensing boards to apply an individualized nexus assessment before denying a license based on criminal history. Most New Jersey boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "N.J. Stat. Ann. § 45:1-21.1 (2021)"
+          }
+        },
+        "NM": {
+          "stateName": "New Mexico",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide private landlord fair-chance law",
+            "detail": "New Mexico housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. New Mexico has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "NMSA 1978 § 61-1-34 (2019) requires licensing boards to apply an individualized nexus assessment before denying a license based on criminal history. Most New Mexico boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "NMSA 1978 § 61-1-34 (2019)"
           }
         },
         "NY": {
@@ -6172,6 +6575,136 @@ export default {
             "source": "N.Y. Correction Law §§ 750–754"
           }
         },
+        "NC": {
+          "stateName": "North Carolina",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "North Carolina housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. North Carolina has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "N.C. Gen. Stat. § 93B-8.1 (HB 661, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most North Carolina boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "N.C. Gen. Stat. § 93B-8.1 (HB 661, 2021)"
+          }
+        },
+        "ND": {
+          "stateName": "North Dakota",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "North Dakota housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. North Dakota has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "N.D. Cent. Code § 43-51-01 et seq. (SB 2344, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most North Dakota boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "N.D. Cent. Code § 43-51-01 et seq. (SB 2344, 2021)"
+          }
+        },
+        "OH": {
+          "stateName": "Ohio",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law for private landlords",
+            "detail": "Ohio housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Ohio has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; direct relationship standard applies",
+            "detail": "Ohio Rev. Code Ann. § 9.79 (SB 255, 2012; expanded HB 263, 2021) requires licensing boards to apply a 'direct relationship' standard before denying a license based on criminal history. Most Ohio boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Ohio Rev. Code Ann. § 9.79 (SB 255, 2012; HB 263, 2021)"
+          }
+        },
+        "OK": {
+          "stateName": "Oklahoma",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Oklahoma housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Oklahoma has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Okla. Stat. tit. 59 § 4100 et seq. (SB 1106, 2019) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Oklahoma boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Okla. Stat. tit. 59 § 4100 et seq. (SB 1106, 2019)"
+          }
+        },
+        "OR": {
+          "stateName": "Oregon",
+          "housing": {
+            "headline": "Oregon Fair Chance Housing Act (2021) restricts landlord use of criminal history statewide",
+            "detail": "Oregon's statewide Fair Chance Housing Act (Or. Rev. Stat. § 90.303, eff. 2022) restricts when landlords may use criminal history in rental decisions. Landlords may not inquire about criminal history until after accepting a rental application. Oregon housing authorities also follow federal HUD rules — written notice and grievance opportunity before any public housing eviction.",
+            "source": "Or. Rev. Stat. § 90.303 (Fair Chance Housing Act, 2021); HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Or. Rev. Stat. § 676.612 (HB 2009, 2019) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Oregon boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Or. Rev. Stat. § 676.612 (HB 2009, 2019)"
+          }
+        },
+        "PA": {
+          "stateName": "Pennsylvania",
+          "housing": {
+            "headline": "PHAs follow HUD notice rules; Philadelphia has a fair chance housing ordinance",
+            "detail": "Pennsylvania housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Philadelphia has a fair chance housing ordinance restricting when landlords may use criminal history. No statewide private landlord fair-chance housing law. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4; 18 Pa. C.S. § 9125"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus required (2020)",
+            "detail": "63 Pa. C.S. § 3113 (SB 637, 2020) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Pennsylvania boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "63 Pa. C.S. § 3113 (SB 637, 2020)"
+          }
+        },
+        "RI": {
+          "stateName": "Rhode Island",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law for private landlords",
+            "detail": "Rhode Island housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Rhode Island has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2022) applies",
+            "detail": "R.I. Gen. Laws § 5-76-2 (2022) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Rhode Island boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "R.I. Gen. Laws § 5-76-2 (2022)"
+          }
+        },
+        "SC": {
+          "stateName": "South Carolina",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "South Carolina housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. South Carolina has no statewide fair-chance housing law for private landlords and no statewide occupational licensing nexus reform. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; boards have broad discretion",
+            "detail": "South Carolina has no statewide occupational licensing nexus reform law as of 2026. Most South Carolina licensing boards require self-reporting a final conviction within 30 days. Boards have broad discretion to deny a license based on criminal history. Consult an attorney if a board action is threatened.",
+            "source": "S.C. Code Ann. § 40-1-110 et seq. (general licensing provisions)"
+          }
+        },
+        "SD": {
+          "stateName": "South Dakota",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "South Dakota housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. South Dakota has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "SDCL § 36-2A-9 (SB 72, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most South Dakota boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "SDCL § 36-2A-9 (SB 72, 2021)"
+          }
+        },
+        "TN": {
+          "stateName": "Tennessee",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Tennessee housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Tennessee has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "Tenn. Code Ann. § 62-76-101 et seq. (HB 261, 2019) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Tennessee boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Tenn. Code Ann. § 62-76-101 et seq. (HB 261, 2019)"
+          }
+        },
         "TX": {
           "stateName": "Texas",
           "housing": {
@@ -6185,17 +6718,95 @@ export default {
             "source": "Tex. Occ. Code §§ 53.021–53.025"
           }
         },
-        "FL": {
-          "stateName": "Florida",
+        "UT": {
+          "stateName": "Utah",
           "housing": {
-            "headline": "PHAs follow HUD notice rules; some counties have additional local protections",
-            "detail": "Florida housing authorities follow federal HUD minimum requirements (written notice and grievance opportunity). Florida has no statewide fair-chance housing law. Local ordinances in Miami-Dade and other counties may provide additional procedural rights. Contact your housing authority as soon as you are aware of any action — delays make appeals harder.",
-            "source": "HUD 24 C.F.R. § 966.4; Fla. Stat. § 760.23"
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Utah housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Utah has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
           },
           "license": {
-            "headline": "Most FL boards require reporting within 30 days of conviction or plea",
-            "detail": "Florida Statutes § 456.0635 governs health care licensees and requires reporting certain criminal actions. Most Florida licensing boards require self-reporting a conviction, guilty plea, or no-contest plea within 30 days. Arrests without conviction are generally not reportable unless the board's specific statute requires it. Failure to report is itself a separate ground for discipline.",
-            "source": "Fla. Stat. §§ 456.0635, 456.072(1)(c)"
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2020) applies",
+            "detail": "Utah Code Ann. § 58-1-304 (SB 34, 2020) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Utah boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Utah Code Ann. § 58-1-304 (SB 34, 2020)"
+          }
+        },
+        "VT": {
+          "stateName": "Vermont",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law for private landlords",
+            "detail": "Vermont housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Vermont has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2019) applies",
+            "detail": "26 V.S.A. § 3105 (2019) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Vermont boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "26 V.S.A. § 3105 (2019)"
+          }
+        },
+        "VA": {
+          "stateName": "Virginia",
+          "housing": {
+            "headline": "PHAs follow HUD rules; some localities have fair chance housing protections",
+            "detail": "Virginia housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Some Virginia localities (including Alexandria) have fair chance housing protections for private landlords. No statewide private landlord fair-chance housing law. Contact your housing authority promptly after any arrest.",
+            "source": "HUD 24 C.F.R. § 966.4; Va. Code Ann. § 36-96.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "Va. Code Ann. § 54.1-204 (SB 1127, 2021) requires licensing boards to apply an individualized nexus assessment before denying a license based on criminal history. Most Virginia boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Va. Code Ann. § 54.1-204 (SB 1127, 2021)"
+          }
+        },
+        "WA": {
+          "stateName": "Washington",
+          "housing": {
+            "headline": "WA Fair Chance Housing Act (2018) restricts landlord use of criminal history statewide",
+            "detail": "Washington's statewide Fair Chance Housing Act (RCW 59.18.580, eff. 2018) restricts when landlords may use criminal history in rental decisions. Applies to landlords with 3+ units in applicable jurisdictions; Seattle has broader protections. Washington housing authorities also follow federal HUD rules — written notice and grievance opportunity before any public housing eviction.",
+            "source": "RCW 59.18.580 (Fair Chance Housing Act, 2018); HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "RCW 18.185.020 (SB 5046, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Washington boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "RCW 18.185.020 (SB 5046, 2021)"
+          }
+        },
+        "WV": {
+          "stateName": "West Virginia",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "West Virginia housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. West Virginia has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "W. Va. Code § 30-1-7a (SB 97, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most West Virginia boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "W. Va. Code § 30-1-7a (SB 97, 2021)"
+          }
+        },
+        "WI": {
+          "stateName": "Wisconsin",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law for private landlords",
+            "detail": "Wisconsin housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Wisconsin has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; substantial relationship standard applies",
+            "detail": "Wis. Stat. § 111.335 (amended 2016) requires licensing boards to apply a 'substantial relationship' standard before denying a license based on criminal history. Most Wisconsin boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Wis. Stat. § 111.335 (amended 2016)"
+          }
+        },
+        "WY": {
+          "stateName": "Wyoming",
+          "housing": {
+            "headline": "PHAs follow federal HUD notice rules; no statewide fair-chance housing law",
+            "detail": "Wyoming housing authorities follow federal HUD minimum requirements — written notice and grievance opportunity before eviction. Wyoming has no statewide fair-chance housing law for private landlords. Contact your housing authority promptly after any arrest; each PHA's administrative plan governs discretionary cases.",
+            "source": "HUD 24 C.F.R. § 966.4"
+          },
+          "license": {
+            "headline": "Most boards require reporting within 30 days of conviction; nexus reform (2021) applies",
+            "detail": "Wyo. Stat. Ann. § 33-1-120 (SF 84, 2021) requires licensing boards to apply a nexus test before denying a license based on criminal history. Most Wyoming boards require self-reporting a final conviction within 30 days. Arrests without conviction are generally not reportable.",
+            "source": "Wyo. Stat. Ann. § 33-1-120 (SF 84, 2021)"
           }
         }
       }
