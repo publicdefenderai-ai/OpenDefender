@@ -2047,6 +2047,88 @@ const p4MultiChargeScenarios: EvalScenario[] = [
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// PRIORITY 5 — Multi-charge + background-flag combinations
+//
+// These scenarios verify that the highest-risk users — those with both a
+// drug/weapons charge AND a background flag such as non-citizenship or parole —
+// receive EVERY relevant consequence category.  Missing any one category could
+// mean an advocate fails to surface a critical warning (federal benefits loss,
+// deportation risk, or parole revocation) to their client.
+// ═══════════════════════════════════════════════════════════════════════════════
+
+const p5MultiChargeFlagScenarios: EvalScenario[] = [
+  // ── MC-BF-01: drug possession + weapons charge + non-citizen ─────────────────
+  // A non-citizen facing both a drug and a weapons charge must see:
+  //   • benefits (drug → federal student aid / public benefits suspension)
+  //   • firearms (weapons → federal felony firearm prohibition)
+  //   • immigration (non_citizen → deportation / inadmissibility risk)
+  // All three must appear; losing any one is a critical gap for an advocate.
+  {
+    label: 'MC-BF-01: [drug possession, carrying a concealed weapon] + non_citizen → benefits AND firearms AND immigration all present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'CA',
+      charges: ['drug possession', 'carrying a concealed weapon'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+      citizenshipStatus: 'non_citizen',
+      supervisionStatus: 'none',
+    },
+    expect: {
+      requiredConsequenceCategories: ['benefits', 'firearms', 'immigration'],
+    },
+  },
+
+  // ── MC-BF-02: domestic violence + drug possession + parole ───────────────────
+  // A person on parole facing domestic violence and drug charges must see:
+  //   • firearms   (domestic → Lautenberg Amendment lifetime firearm ban)
+  //   • benefits   (drug → federal student aid / public benefits suspension)
+  //   • supervision_revocation (parole → new charge can return them to prison)
+  // This is the highest-severity combination: a drug conviction triggers the
+  // federal benefits warning, while the parole flag means an arrest alone may
+  // revoke supervision — advocates must not miss either.
+  {
+    label: 'MC-BF-02: [domestic violence, drug possession] + parole → firearms AND benefits AND supervision_revocation all present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'TX',
+      charges: ['domestic violence', 'drug possession'],
+      caseStage: 'arraignment',
+      custodyStatus: 'detained',
+      supervisionStatus: 'parole',
+      citizenshipStatus: 'citizen',
+    },
+    expect: {
+      requiredConsequenceCategories: ['firearms', 'benefits', 'supervision_revocation'],
+    },
+  },
+
+  // ── MC-BF-03: drug possession + burglary + non-citizen + probation ────────────
+  // A non-citizen on probation facing drug and burglary charges must see:
+  //   • benefits              (drug → federal benefits suspension)
+  //   • housing               (burglary → public housing / voucher loss)
+  //   • immigration           (non_citizen → deportation risk)
+  //   • supervision_revocation (probation → new charge can trigger revocation)
+  // Four distinct consequence categories from two charges and two flags — the
+  // most complete combination possible without a professional license or children.
+  {
+    label: 'MC-BF-03: [drug possession, burglary] + non_citizen + probation → benefits AND housing AND immigration AND supervision_revocation all present',
+    input: {
+      ...baseMapped,
+      jurisdiction: 'IL',
+      charges: ['drug possession', 'burglary'],
+      caseStage: 'arraignment',
+      custodyStatus: 'released',
+      citizenshipStatus: 'non_citizen',
+      supervisionStatus: 'probation',
+    },
+    expect: {
+      requiredConsequenceCategories: ['benefits', 'housing', 'immigration', 'supervision_revocation'],
+    },
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // Aggregate export
 // ═══════════════════════════════════════════════════════════════════════════════
 
@@ -2064,4 +2146,5 @@ export const evalScenarios: EvalScenario[] = [
   ...p3MissingFieldUncertaintyScenarios,
   ...p3StageScenarios,
   ...p4MultiChargeScenarios,
+  ...p5MultiChargeFlagScenarios,
 ];
