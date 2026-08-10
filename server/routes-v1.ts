@@ -7,9 +7,9 @@ import { criminalCharges, getChargeById, getInstructionRef, getInstructionUrl, g
 import { devLog } from "./utils/dev-logger";
 import { openApiSpec } from "./openapi";
 import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
-import { diversionPrograms } from "../client/src/lib/diversion-programs-data";
-import { legalGlossaryTerms } from "../client/src/lib/legal-glossary-data";
-import { expungementRules } from "../client/src/lib/expungement-data";
+import { diversionPrograms } from "../shared/diversion-programs-data";
+import { legalGlossaryTerms } from "../shared/legal-glossary-data";
+import { expungementRules } from "../shared/expungement-data";
 import type { DiversionProgram, ExpungementRule, GlossaryTerm } from "@shared/schema";
 
 const PUBLIC_API_CORS_OPTIONS = {

@@ -8,7 +8,7 @@ import { devLog, opsLog, errLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
 import { checkDiversionAvailability, extractDiversionMentions } from '@shared/diversion-availability';
 import { buildJurisdictionContextBlock } from '@shared/jurisdiction-procedure-rules';
-import { buildCollateralConsequenceContextBlock } from '../../client/src/lib/collateral-consequences-data';
+import { buildCollateralConsequenceContextBlock } from '../../shared/collateral-consequences-data';
 import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 import { getLocusContext, LOCUS_ATTRIBUTION } from './locus-lookup';
