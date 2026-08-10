@@ -147,8 +147,8 @@
     "bufferutil": "^4.0.8"
   },
   "overrides": {
-    "@xmldom/xmldom": ">=0.9.0",
-    "lodash-es": ">=4.18.1",
-    "follow-redirects": ">=1.16.0"
+    "postcss": {
+      "nanoid": "^3.3.17"
+    }
   }
 }
