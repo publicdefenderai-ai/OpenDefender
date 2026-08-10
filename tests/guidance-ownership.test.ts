@@ -3,15 +3,19 @@
  *
  * Goal: Verify that GET /api/legal-guidance/:sessionId enforces session
  * ownership so a caller who only knows the UUID cannot read another user's
- * legal guidance.
+ * legal guidance, for as long as the owning session is still live.
  *
- * Two enforcement tiers are tested:
- *   1. In-memory Map (populated at creation time, cleared on restart)
- *   2. DB-backed expressSessionId column (survives restarts)
+ * Enforcement is in-memory only (guidanceSessionOwners Map, populated at
+ * creation time), by design — this project intentionally does not persist
+ * session bindings or legal case data beyond the running process (see
+ * MemStorage in server/storage.ts). A restart clears the Map, and any case
+ * created before it falls back to UUID-as-token security (128-bit entropy +
+ * rate limiting). That's an accepted tradeoff: users are warned before
+ * navigating away from unsaved guidance and offered an export, so nothing
+ * depends on the binding surviving a restart.
  *
  * Tests use a real express-session middleware to produce genuine req.sessionID
- * values, and a stateful storage mock that captures the expressSessionId
- * passed during case creation so GET can check it.
+ * values, and a stateful storage mock backing GET/POST /api/legal-guidance.
  */
 
 import { describe, it, expect, vi, beforeAll, afterEach } from 'vitest';
@@ -25,14 +29,13 @@ const { caseStore } = vi.hoisted(() => ({
   caseStore: {} as Record<string, any>,
 }));
 
-// ── Storage mock — captures expressSessionId from createLegalCase ─────────────
+// ── Storage mock — in-memory, mirroring the real MemStorage backing ───────────
 vi.mock('../server/storage', () => ({
   storage: {
     createLegalCase: vi.fn().mockImplementation(async (data: any) => {
       const record = {
         id: randomUUID(),
         sessionId: data.sessionId,
-        expressSessionId: data.expressSessionId ?? null,
         guidance: data.guidance ?? { overview: 'test guidance' },
         createdAt: new Date(),
         expiresAt: new Date(Date.now() + 86_400_000),
@@ -254,7 +257,7 @@ describe('GET /api/legal-guidance/:sessionId — ownership enforcement', () => {
     expect(getRes.body.success).toBe(true);
   });
 
-  it('returns 403 when a different session tries to retrieve guidance (in-memory Map tier)', async () => {
+  it('returns 403 (not 404) when a different session tries to retrieve guidance', async () => {
     // Agent A creates the case
     const agentA = request.agent(testApp);
     const postRes = await agentA
@@ -267,52 +270,24 @@ describe('GET /api/legal-guidance/:sessionId — ownership enforcement', () => {
     // Agent B (different session, fresh request) tries to retrieve
     const agentB = request.agent(testApp);
     const getRes = await agentB.get(`/api/legal-guidance/${sessionId}`);
+    // Must be 403, not 404 — 404 would reveal whether the case exists
     expect(getRes.status).toBe(403);
     expect(getRes.body.success).toBe(false);
+    expect(getRes.body.code).toBe('SESSION_EXPIRED');
   });
 
-  it('returns 403 when a different session tries to retrieve guidance (DB-backed tier — restart simulation)', async () => {
-    // Simulate a case created before the server restarted:
-    // the in-memory Map has no entry, but the DB has the expressSessionId.
-    // Use a session ID value no incoming request will ever match.
-    const caseSessionId = randomUUID();
-    const originalOwnerSessionId = 'original-owner-session-' + randomUUID();
-
-    caseStore[caseSessionId] = {
-      id: randomUUID(),
-      sessionId: caseSessionId,
-      expressSessionId: originalOwnerSessionId, // DB-backed binding
-      guidance: { overview: 'private guidance' },
-      createdAt: new Date(),
-      expiresAt: new Date(Date.now() + 86_400_000),
-      jurisdiction: 'CA',
-      charges: [],
-      caseStage: 'arraignment',
-      custodyStatus: null,
-      hasAttorney: null,
-      consentGiven: null,
-      incidentDescription: null,
-      selectedConcerns: null,
-    };
-
-    // A fresh agent (new session, different ID from originalOwnerSessionId) tries to read
-    const res = await request.agent(testApp).get(`/api/legal-guidance/${caseSessionId}`);
-    expect(res.status).toBe(403);
-    expect(res.body.success).toBe(false);
-    expect(res.body.code).toBe('SESSION_EXPIRED');
-    expect(res.body.error).toBe('Your session has expired.');
-  });
-
-  it('allows UUID-as-token fallback when no ownership binding exists (pre-migration cases)', async () => {
-    // Cases with expressSessionId = null have no binding recorded.
-    // Access control falls back to 128-bit UUID entropy (possession of the UUID = authorized).
+  it('falls back to UUID-as-token access when no in-memory binding is recorded (e.g. after a restart)', async () => {
+    // No session persistence, by design: a case with no entry in
+    // guidanceSessionOwners — because the process restarted since it was
+    // created, or the record was seeded directly like this fixture — is
+    // accessible to anyone who has the UUID. This is the accepted fallback,
+    // not a bug; see the file-level docstring above.
     const caseSessionId = randomUUID();
 
     caseStore[caseSessionId] = {
       id: randomUUID(),
       sessionId: caseSessionId,
-      expressSessionId: null, // no binding — pre-migration or legacy case
-      guidance: { overview: 'legacy guidance' },
+      guidance: { overview: 'guidance from before a restart' },
       createdAt: new Date(),
       expiresAt: new Date(Date.now() + 86_400_000),
       jurisdiction: 'CA',
@@ -329,47 +304,5 @@ describe('GET /api/legal-guidance/:sessionId — ownership enforcement', () => {
     const res = await request.agent(testApp).get(`/api/legal-guidance/${caseSessionId}`);
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
-  });
-
-  it('stores expressSessionId in the case when creating via POST', async () => {
-    const agent = request.agent(testApp);
-
-    const postRes = await agent
-      .post('/api/legal-guidance')
-      .send(VALID_CASE_BODY);
-
-    expect(postRes.status).toBe(200);
-    const { sessionId } = postRes.body;
-
-    // The stored case must have a non-null expressSessionId
-    const storedCase = caseStore[sessionId];
-    expect(storedCase).toBeDefined();
-    expect(typeof storedCase.expressSessionId).toBe('string');
-    expect(storedCase.expressSessionId.length).toBeGreaterThan(0);
-  });
-
-  it('returns 403 (not 404) on ownership mismatch to avoid confirming session existence', async () => {
-    const caseSessionId = randomUUID();
-
-    caseStore[caseSessionId] = {
-      id: randomUUID(),
-      sessionId: caseSessionId,
-      expressSessionId: 'owner-session-' + randomUUID(),
-      guidance: { overview: 'private' },
-      createdAt: new Date(),
-      expiresAt: new Date(Date.now() + 86_400_000),
-      jurisdiction: 'CA',
-      charges: [],
-      caseStage: 'arraignment',
-      custodyStatus: null,
-      hasAttorney: null,
-      consentGiven: null,
-      incidentDescription: null,
-      selectedConcerns: null,
-    };
-
-    const res = await request.agent(testApp).get(`/api/legal-guidance/${caseSessionId}`);
-    // Must be 403, not 404 — 404 would reveal whether the case exists
-    expect(res.status).toBe(403);
   });
 });

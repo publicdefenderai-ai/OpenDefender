@@ -265,7 +265,6 @@ export class MemStorage implements IStorage {
       id,
       createdAt: now,
       expiresAt,
-      expressSessionId: insertCase.expressSessionId ?? null,
       custodyStatus: insertCase.custodyStatus ?? null,
       hasAttorney: insertCase.hasAttorney ?? null,
       consentGiven: insertCase.consentGiven ?? null,

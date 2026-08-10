@@ -18,11 +18,11 @@ This document records the security posture of sensitive API endpoints, deferred 
 | Session ownership binding | In-memory Map (`guidanceSessionOwners`) binds each case to the creating express session ID when session middleware is active. GET returns 403 on mismatch (not 404 — avoids confirming session existence). Telemetry logged via `opsLog('security', ...)` on any mismatch. |
 | Fail-safe behavior | If `req.sessionID` is undefined (session middleware absent), the ownership check is skipped entirely and UUID-as-token security applies. No valid request is denied due to missing infrastructure. |
 
-### Deferred control
+### Accepted tradeoff — no session persistence
 
-**DB-backed ownership column:** The in-memory Map is cleared on server restart. Cases created before a restart fall back to UUID-as-token (entropy + rate limiting as compensating controls). To eliminate this gap, add an `express_session_id` column to the `legal_cases` table and persist the binding through storage. Tracked as Task #174.
+The in-memory Map is cleared on server restart (as is all legal case data — `legal_cases` is backed by `MemStorage`, an in-process store, not a persisted Postgres table). Cases created before a restart fall back to UUID-as-token (128-bit entropy + rate limiting as compensating controls).
 
-**express-session middleware:** The project currently uses a custom cookie-based attorney session rather than `express-session`. When `express-session` is added to the public route chain (or when attorney session cookies are extended to guidance requests), the in-memory Map binding becomes fully enforced end-to-end.
+This was evaluated and intentionally **not** closed with a DB-backed ownership column (an earlier version of this control added an `express_session_id` column and a second enforcement tier reading it — since removed). Reasoning: adding session persistence to survive restarts runs against the project's minimal-data-retention posture, and the case data itself already doesn't survive a restart, so persisting only the ownership binding wouldn't have made a case retrievable after a restart anyway — just changed who could retrieve it (nobody, correctly, since the case is gone) versus (anyone with the UUID, the current fallback). The UI warns users before they navigate away from unsaved guidance and offers an export, which is the accepted mitigation for losing access on a restart.
 
 ---
 

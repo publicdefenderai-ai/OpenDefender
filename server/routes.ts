@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { extractBackgroundFlags } from "./utils/background-flags";
 import { courtListenerService } from "./services/courtlistener";
 import { legalDataService } from "./services/legal-data";
 import { recapService } from "./services/recap";
@@ -1308,7 +1309,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Generate personalized guidance based on case details.
       // These fields are not DB columns on legal_cases, so Zod strips them from
       // validatedData. Re-inject from req.body so the AI prompt sees the full picture
-      // (probation status, priors, immigration, dependents, license, subsidized housing).
+      // (probation status, priors, immigration, dependents, license, subsidized housing) —
+      // validated first (extractBackgroundFlags), so an invalid value is dropped and
+      // logged rather than reaching the rules engine or the Claude prompt unvalidated.
       const guidance = await generateLegalGuidance({
         ...validatedData,
         // Normalise blank caseStage (screener export before stage selection) to a safe
@@ -1318,13 +1321,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
         chargesUnknown: req.body.chargesUnknown === true,
-        civilUrgency: req.body.civilUrgency,
-        supervisionStatus: req.body.supervisionStatus,
-        priorConvictions: req.body.priorConvictions,
-        citizenshipStatus: req.body.citizenshipStatus,
-        hasMinorChildren: req.body.hasMinorChildren,
-        hasProfessionalLicense: req.body.hasProfessionalLicense,
-        hasHousingAssistance: req.body.hasHousingAssistance,
+        ...extractBackgroundFlags(req.body),
       });
       
       // C-1: Strip incidentDescription before storing — raw user narrative may
@@ -1334,12 +1331,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const legalCase = await storage.createLegalCase({
         ...storableData,
         guidance,
-        // DB-backed ownership binding: store the express session ID so retrieval
-        // can enforce ownership even across server restarts (survives in-memory Map loss).
-        expressSessionId: req.sessionID || null,
       });
 
-      // Also maintain the fast in-memory ownership Map for sub-millisecond lookups.
+      // Ownership binding, in memory only — intentional: no session persistence.
+      // If the process restarts, the binding is gone and retrieval falls back to
+      // UUID-as-token security (see GET handler below). Users are warned before
+      // navigating away from unsaved guidance and offered an export, so losing
+      // the binding on restart has a UX mitigation already in place upstream.
       if (req.sessionID) {
         guidanceSessionOwners.set(sessionId, req.sessionID);
       }
@@ -1390,7 +1388,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
       // Same field-restoration pattern as the non-streaming route above:
-      // preserve background answers Zod stripped so the prompt has them.
+      // preserve background answers Zod stripped so the prompt has them,
+      // validated first so an invalid value is dropped and logged rather
+      // than reaching the rules engine or the Claude prompt unvalidated.
       const caseDataWithFlags = {
         ...validatedData,
         // Normalise blank caseStage (screener export before stage selection) to a safe
@@ -1400,13 +1400,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
         chargesUnknown: req.body.chargesUnknown === true,
-        civilUrgency: req.body.civilUrgency,
-        supervisionStatus: req.body.supervisionStatus,
-        priorConvictions: req.body.priorConvictions,
-        citizenshipStatus: req.body.citizenshipStatus,
-        hasMinorChildren: req.body.hasMinorChildren,
-        hasProfessionalLicense: req.body.hasProfessionalLicense,
-        hasHousingAssistance: req.body.hasHousingAssistance,
+        ...extractBackgroundFlags(req.body),
       };
 
       // Charge lookup (same guard logic as generateLegalGuidance)
@@ -1468,11 +1462,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const legalCase = await storage.createLegalCase({
         ...storableStreamData,
         guidance,
-        // DB-backed ownership binding (same pattern as non-stream route).
-        expressSessionId: req.sessionID || null,
       });
 
-      // Also maintain the fast in-memory ownership Map for sub-millisecond lookups.
+      // Ownership binding, in memory only (same pattern as non-stream route above).
       if (req.sessionID) {
         guidanceSessionOwners.set(sessionId, req.sessionID);
       }
@@ -1515,7 +1507,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
       // Re-inject fields Zod strips (not DB columns) so the engine has the
-      // full picture, matching the pattern in the stream route above.
+      // full picture, matching the pattern in the stream route above —
+      // validated first so an invalid value is dropped and logged rather
+      // than reaching the rules engine unvalidated.
       const caseDataWithFlags = {
         ...validatedData,
         // Normalise blank caseStage (screener export before stage selection) to a safe
@@ -1525,13 +1519,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
         chargesUnknown: req.body.chargesUnknown === true,
-        civilUrgency: req.body.civilUrgency,
-        supervisionStatus: req.body.supervisionStatus,
-        priorConvictions: req.body.priorConvictions,
-        citizenshipStatus: req.body.citizenshipStatus,
-        hasMinorChildren: req.body.hasMinorChildren,
-        hasProfessionalLicense: req.body.hasProfessionalLicense,
-        hasHousingAssistance: req.body.hasHousingAssistance,
+        ...extractBackgroundFlags(req.body),
       };
 
       // Charge classification — same guard logic as the stream route.
@@ -1589,13 +1577,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Get Legal Guidance by Session
   // Ownership check: compare the requesting session against the one recorded at creation.
   // Returns 403 (not 404) on mismatch to avoid confirming session existence.
-  // Falls through for cases not in the Map (pre-restart survivability); those cases
-  // remain protected by UUID entropy + rate limiting (see docs/security-controls.md).
+  //
+  // In-memory only, by design: this project intentionally does not persist session
+  // bindings (or legal case data — see MemStorage in server/storage.ts) beyond the
+  // running process. A restart clears the binding, and that case falls back to
+  // UUID-as-token security (128-bit entropy + rate limiting — see
+  // docs/security-controls.md). This is an accepted tradeoff, not a gap to be
+  // closed: the UI warns users before they navigate away from unsaved guidance
+  // and offers an export, so nothing depends on the binding surviving a restart.
   app.get("/api/legal-guidance/:sessionId", searchRateLimiter, async (req, res) => {
     try {
       const { sessionId } = req.params;
 
-      // Tier-1: fast in-memory ownership check (populated at creation time).
       // If express-session middleware is absent, req.sessionID is undefined and
       // the check is skipped entirely (fail-safe fallback to UUID-as-token security).
       const recordedOwner = guidanceSessionOwners.get(sessionId);
@@ -1605,17 +1598,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const legalCase = await storage.getLegalCase(sessionId);
-      
+
       if (!legalCase) {
         return res.status(404).json({ success: false, error: "Session not found or expired" });
-      }
-
-      // Tier-2: DB-backed ownership check — catches cases created before this server
-      // process started (in-memory Map entry would be absent after a restart).
-      // Only enforced when both the stored column and the current session ID are present.
-      if (legalCase.expressSessionId && req.sessionID && req.sessionID !== legalCase.expressSessionId) {
-        opsLog('security', `Guidance session ownership mismatch (DB): ${sessionId.slice(0, 8)}…`);
-        return res.status(403).json({ success: false, code: 'SESSION_EXPIRED', error: 'Your session has expired.' });
       }
 
       // Add creation timestamp for transparency
