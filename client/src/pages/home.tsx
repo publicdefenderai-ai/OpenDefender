@@ -282,8 +282,8 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {secondaryPaths.map(({ Icon, title, desc, cta, href, bg, border, color }, i) => (
-                <Link key={href} href={href}>
-                  <div className={`flex items-start gap-3.5 rounded-xl border p-4 cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 ${bg} ${border}`}>
+                <Link key={href} href={href} className="flex">
+                  <div className={`flex items-start gap-3.5 rounded-xl border p-4 cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 h-full w-full ${bg} ${border}`}>
                     <Icon className={`h-4 w-4 mt-0.5 flex-shrink-0 ${color}`} strokeWidth={1.75} aria-hidden="true" />
                     <div className="min-w-0">
                       <p className="font-semibold text-foreground text-sm leading-snug">{title}</p>
