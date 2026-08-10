@@ -9,6 +9,18 @@ import { registerV1Routes } from "./routes-v1";
 import { setupVite, serveStatic, log } from "./vite";
 import { opsLog } from "./utils/dev-logger";
 import { initializeCostTracker } from "./services/cost-tracker";
+import { assertProductionEnv } from "./startup-checks";
+
+// Production environment guard — fail loud at startup, not silently at runtime.
+//
+// Both of these previously degraded quietly when unset: SESSION_SECRET fell
+// back to a hardcoded dev string (letting anyone forge a session-ownership
+// cookie), and missing Turnstile keys made isCaptchaRequired() return false
+// (silently disabling bot protection on every AI endpoint). Either failure
+// mode is a one-line log message away from going unnoticed indefinitely.
+// Refusing to boot forces a misconfigured production deploy to be caught
+// immediately, by whoever is deploying it, instead of discovered later.
+assertProductionEnv(process.env);
 
 const app = express();
 // Trust only the first proxy hop (Replit's load balancer).
@@ -56,11 +68,9 @@ app.use(cookieParser());
 // Session middleware — establishes req.sessionID for every request so the
 // guidance ownership check can bind and enforce session-scoped access control.
 // Uses a named cookie ("od.sid") to avoid fingerprinting default names.
-// SESSION_SECRET must be set in production; falls back to a dev-only string.
+// The dev-only fallback secret below is unreachable in production — the
+// startup guard above already refused to boot if SESSION_SECRET is unset.
 // ============================================================================
-if (!process.env.SESSION_SECRET && process.env.NODE_ENV === 'production') {
-  opsLog('security', 'SESSION_SECRET is not set in production — sessions will not be secure');
-}
 app.use(session({
   name: 'od.sid',
   secret: process.env.SESSION_SECRET || 'dev-only-secret-change-in-production',
