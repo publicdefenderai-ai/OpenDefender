@@ -29,8 +29,8 @@ interface DropdownItem {
   label: string;
   desc: string;
   icon?: LucideIcon;
-  iconBg?: string;
-  iconColor?: string;
+  iconBgClass?: string;
+  iconColorClass?: string;
 }
 
 interface NavLink {
@@ -127,8 +127,8 @@ export function Header() {
       label: t('header.nav.support', 'Life & Family'),
       megaMenu: true,
       dropdown: [
-        { href: "/support",         label: t('header.dropdown.support.resources',        'Support Resources'), desc: t('header.dropdown.support.resourcesDesc',        'Housing, employment, finances, mental health, and more'), icon: Heart, iconBg: '#f8eef3', iconColor: '#8b2252' },
-        { href: "/friends-family",  label: t('header.dropdown.support.friendsFamily',    'Friends & Family'),  desc: t('header.dropdown.support.friendsFamilyDesc',    'Help someone who was arrested'),                          icon: Users, iconBg: '#f8eef3', iconColor: '#8b2252' },
+        { href: "/support",         label: t('header.dropdown.support.resources',        'Support Resources'), desc: t('header.dropdown.support.resourcesDesc',        'Housing, employment, finances, mental health, and more'), icon: Heart, iconBgClass: 'bg-rose-50 dark:bg-rose-950/30', iconColorClass: 'text-rose-700 dark:text-rose-400' },
+        { href: "/friends-family",  label: t('header.dropdown.support.friendsFamily',    'Friends & Family'),  desc: t('header.dropdown.support.friendsFamilyDesc',    'Help someone who was arrested'),                          icon: Users, iconBgClass: 'bg-rose-50 dark:bg-rose-950/30', iconColorClass: 'text-rose-700 dark:text-rose-400' },
       ],
     },
     {
@@ -136,9 +136,9 @@ export function Header() {
       label: t('header.nav.caseGuidance', 'Get Guidance'),
       megaMenu: true,
       dropdown: [
-        { href: "/case-guidance",       label: t('header.dropdown.guidance.personalized', 'Case Roadmap'), desc: t('header.dropdown.guidance.personalizedDesc', 'Plain-language overview of what to expect for your charges and state'),       icon: Compass,      iconBg: '#eef9f8', iconColor: '#0f766e' },
-        { href: "/chat",                label: t('header.dropdown.guidance.chat', 'AI Chat'),                        desc: t('header.dropdown.guidance.chatDesc', 'Open conversation with our AI assistant'),               icon: MessageSquare, iconBg: '#eef9f8', iconColor: '#0f766e' },
-        { href: "/document-summarizer", label: t('header.dropdown.guidance.summarizer', 'Document Summarizer'),      desc: t('header.dropdown.guidance.summarizerDesc', 'Understand the legal documents in your case'),       icon: FileText,      iconBg: '#eef9f8', iconColor: '#0f766e' },
+        { href: "/case-guidance",       label: t('header.dropdown.guidance.personalized', 'Case Roadmap'), desc: t('header.dropdown.guidance.personalizedDesc', 'Plain-language overview of what to expect for your charges and state'),       icon: Compass,      iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
+        { href: "/chat",                label: t('header.dropdown.guidance.chat', 'AI Chat'),                        desc: t('header.dropdown.guidance.chatDesc', 'Open conversation with our AI assistant'),               icon: MessageSquare, iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
+        { href: "/document-summarizer", label: t('header.dropdown.guidance.summarizer', 'Document Summarizer'),      desc: t('header.dropdown.guidance.summarizerDesc', 'Understand the legal documents in your case'),       icon: FileText,      iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
       ],
     },
     {
@@ -146,12 +146,12 @@ export function Header() {
       label: t('header.nav.immigration', 'Immigration'),
       megaMenu: true,
       dropdown: [
-        { href: "/immigration-guidance",                   label: t('header.dropdown.immigration.general', 'General Information'),      desc: t('header.dropdown.immigration.generalDesc', 'Overview of immigration rights and resources'), icon: Globe2,       iconBg: '#fef3e2', iconColor: '#92400e' },
-        { href: "/immigration-guidance#detailed-guides",   label: t('header.dropdown.immigration.situational', 'Situational Guides'),    desc: t('header.dropdown.immigration.situationalDesc', 'ICE encounters, raids, detention, and more'), icon: AlertCircle,  iconBg: '#fef3e2', iconColor: '#92400e' },
-        { href: "/immigration-guidance/know-your-rights",  label: t('header.dropdown.immigration.rights', 'Know Your Rights'),          desc: t('header.dropdown.immigration.rightsDesc', 'Your rights regardless of status'),              icon: Shield,       iconBg: '#fef3e2', iconColor: '#92400e' },
-        { href: "/immigration-guidance/find-detained",     label: t('header.dropdown.immigration.detained', 'Find a Detained Person'),  desc: t('header.dropdown.immigration.detainedDesc', 'Locate someone in ICE custody'),               icon: MapPin,       iconBg: '#fef3e2', iconColor: '#92400e' },
-        { href: "/immigration-guidance/find-attorney",     label: t('header.dropdown.immigration.lawyer', 'Find a Lawyer'),             desc: t('header.dropdown.immigration.lawyerDesc', 'Immigration legal representation'),             icon: Scale,        iconBg: '#fef3e2', iconColor: '#92400e' },
-        { href: "/immigration-guidance/after-deportation", label: t('header.dropdown.immigration.afterDeportation', 'After Deportation'),  desc: t('header.dropdown.immigration.afterDeportationDesc', 'Help for families on both sides of a removal'), icon: Users, iconBg: '#fef3e2', iconColor: '#92400e' },
+        { href: "/immigration-guidance",                   label: t('header.dropdown.immigration.general', 'General Information'),      desc: t('header.dropdown.immigration.generalDesc', 'Overview of immigration rights and resources'), icon: Globe2,      iconBgClass: 'bg-amber-50 dark:bg-amber-950/30', iconColorClass: 'text-amber-800 dark:text-amber-400' },
+        { href: "/immigration-guidance#detailed-guides",   label: t('header.dropdown.immigration.situational', 'Situational Guides'),    desc: t('header.dropdown.immigration.situationalDesc', 'ICE encounters, raids, detention, and more'), icon: AlertCircle, iconBgClass: 'bg-amber-50 dark:bg-amber-950/30', iconColorClass: 'text-amber-800 dark:text-amber-400' },
+        { href: "/immigration-guidance/know-your-rights",  label: t('header.dropdown.immigration.rights', 'Know Your Rights'),          desc: t('header.dropdown.immigration.rightsDesc', 'Your rights regardless of status'),              icon: Shield,      iconBgClass: 'bg-amber-50 dark:bg-amber-950/30', iconColorClass: 'text-amber-800 dark:text-amber-400' },
+        { href: "/immigration-guidance/find-detained",     label: t('header.dropdown.immigration.detained', 'Find a Detained Person'),  desc: t('header.dropdown.immigration.detainedDesc', 'Locate someone in ICE custody'),               icon: MapPin,      iconBgClass: 'bg-amber-50 dark:bg-amber-950/30', iconColorClass: 'text-amber-800 dark:text-amber-400' },
+        { href: "/immigration-guidance/find-attorney",     label: t('header.dropdown.immigration.lawyer', 'Find a Lawyer'),             desc: t('header.dropdown.immigration.lawyerDesc', 'Immigration legal representation'),             icon: Scale,       iconBgClass: 'bg-amber-50 dark:bg-amber-950/30', iconColorClass: 'text-amber-800 dark:text-amber-400' },
+        { href: "/immigration-guidance/after-deportation", label: t('header.dropdown.immigration.afterDeportation', 'After Deportation'),  desc: t('header.dropdown.immigration.afterDeportationDesc', 'Help for families on both sides of a removal'), icon: Users,       iconBgClass: 'bg-amber-50 dark:bg-amber-950/30', iconColorClass: 'text-amber-800 dark:text-amber-400' },
       ],
     },
     {
@@ -159,8 +159,8 @@ export function Header() {
       label: t('header.nav.explore', 'Explore'),
       megaMenu: true,
       dropdown: [
-        { href: "/directory", label: t('header.dropdown.explore.directory', 'Resource Directory'), desc: t('header.dropdown.explore.directoryDesc', 'Browse legal aid, support services, and resources by category'), icon: BookOpen, iconBg: '#eef2ff', iconColor: '#4338ca' },
-        { href: "/how-to",   label: t('header.dropdown.explore.howTo',    'How It Works'),        desc: t('header.dropdown.explore.howToDesc',    "See how the site\u2019s paths fit together and where to start"),  icon: HelpCircle, iconBg: '#f1f5f9', iconColor: '#475569' },
+        { href: "/directory", label: t('header.dropdown.explore.directory', 'Resource Directory'), desc: t('header.dropdown.explore.directoryDesc', 'Browse legal aid, support services, and resources by category'), icon: BookOpen,  iconBgClass: 'bg-indigo-50 dark:bg-indigo-950/30', iconColorClass: 'text-indigo-700 dark:text-indigo-400' },
+        { href: "/how-to",   label: t('header.dropdown.explore.howTo',    'How It Works'),        desc: t('header.dropdown.explore.howToDesc',    "See how the site\u2019s paths fit together and where to start"),  icon: HelpCircle, iconBgClass: 'bg-slate-100 dark:bg-slate-800/50', iconColorClass: 'text-slate-600 dark:text-slate-400' },
       ],
     },
   ];
@@ -302,11 +302,8 @@ export function Header() {
                                       )}
                                     >
                                       {Icon && (
-                                        <div
-                                          className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
-                                          style={{ background: item.iconBg }}
-                                        >
-                                          <Icon className="w-4 h-4" style={{ color: item.iconColor }} />
+                                        <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5", item.iconBgClass)}>
+                                          <Icon className={cn("w-4 h-4", item.iconColorClass)} />
                                         </div>
                                       )}
                                       <div>
@@ -426,11 +423,8 @@ export function Header() {
                                   >
                                     <div className="flex items-start gap-2.5">
                                       {ItemIcon && (
-                                        <div
-                                          className="w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5"
-                                          style={{ background: item.iconBg }}
-                                        >
-                                          <ItemIcon className="w-3.5 h-3.5" style={{ color: item.iconColor }} />
+                                        <div className={cn("w-6 h-6 rounded-md flex items-center justify-center flex-shrink-0 mt-0.5", item.iconBgClass)}>
+                                          <ItemIcon className={cn("w-3.5 h-3.5", item.iconColorClass)} />
                                         </div>
                                       )}
                                       <div>
