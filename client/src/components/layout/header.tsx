@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, Fragment } from "react";
-import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, ChevronDown, Globe2, Compass, AlertCircle, Scale, Heart } from "lucide-react";
+import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, ChevronDown, Globe2, Compass, AlertCircle, Scale, Heart, BookOpen, HelpCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { SearchButton } from "@/components/search/site-search";
@@ -154,7 +154,15 @@ export function Header() {
         { href: "/immigration-guidance/after-deportation", label: t('header.dropdown.immigration.afterDeportation', 'After Deportation'),  desc: t('header.dropdown.immigration.afterDeportationDesc', 'Help for families on both sides of a removal'), icon: Users, iconBg: '#fef3e2', iconColor: '#92400e' },
       ],
     },
-    { href: "/directory", label: t('header.nav.explore', 'Explore') },
+    {
+      href: "/directory",
+      label: t('header.nav.explore', 'Explore'),
+      megaMenu: true,
+      dropdown: [
+        { href: "/directory", label: t('header.dropdown.explore.directory', 'Resource Directory'), desc: t('header.dropdown.explore.directoryDesc', 'Browse legal aid, support services, and resources by category'), icon: BookOpen, iconBg: '#eef2ff', iconColor: '#4338ca' },
+        { href: "/how-to",   label: t('header.dropdown.explore.howTo',    'How It Works'),        desc: t('header.dropdown.explore.howToDesc',    "See how the site\u2019s paths fit together and where to start"),  icon: HelpCircle, iconBg: '#f1f5f9', iconColor: '#475569' },
+      ],
+    },
   ];
 
   const menuItems = [
