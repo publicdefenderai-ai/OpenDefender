@@ -87,6 +87,16 @@ function RemindersSection() {
         </ScrollReveal>
 
         <ScrollReveal>
+          <div className="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 p-5 mb-4">
+            <h3 className="text-sm font-semibold text-foreground mb-1">Public Defender Intake Form</h3>
+            <p className="text-sm text-muted-foreground mb-3">Fill this out before your first meeting with your public defender — personal info, employment, housing, and case details. Print and hand it to them at the start to make every minute count.</p>
+            <a href="/support/court-logistics/intake-form" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-600 hover:bg-amber-500 text-white text-sm font-semibold transition-colors">
+              Open Form <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal>
           <div className="rounded-xl border border-purple-200 dark:border-purple-800 bg-purple-50/50 dark:bg-purple-950/20 p-5">
             <h3 className="text-sm font-semibold text-foreground mb-1">{t(`${ns}.guideLabel`)}</h3>
             <p className="text-sm text-muted-foreground mb-3">{t(`${ns}.guideDesc`)}</p>
@@ -247,6 +257,14 @@ export default function CourtLogisticsSupport() {
   const { t } = useTranslation();
 
   const startHereItems: ActionItem[] = [
+    {
+      id: "pd-intake-form",
+      title: "Prepare Your Public Defender Intake Form",
+      description: "Before your first meeting with your public defender, fill out this form with your personal information, employment, housing, and case details. Handing it to your PD at the start saves time and helps them build the strongest defense for you. Print it at home or at a library.",
+      priority: "high",
+      timeframe: "Before your first PD meeting",
+      url: "/support/court-logistics/intake-form",
+    },
     {
       id: "bail-preparation",
       title: "Prepare for Your Bail Hearing",
