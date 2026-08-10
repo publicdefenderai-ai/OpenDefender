@@ -3138,6 +3138,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     requireServiceBudget("claude-guidance"),
     aiRateLimiter,
     aiDailyLimiter,
+    requireCaptcha,
     async (req, res) => {
       try {
         const rawBody = req.body ?? {};
