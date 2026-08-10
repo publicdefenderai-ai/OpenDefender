@@ -377,14 +377,15 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailStructure: 'cash_bail',
     notes: 'Georgia uses a commercial surety bail system. Bond hearings are held at initial appearance. Georgia has significant issues with commercial bail bondsmen.',
     preliminaryHearing: 'Within 30 days if in custody',
-    discoveryDeadline: '10 days before trial',
+    discoveryDeadline: '10 days before trial (O.C.G.A. § 17-16-4)',
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
-    // ATTORNEY REVIEW NEEDED: HB 776 (2021) created automatic open-file discovery
-    // in GA; the "10 days before trial" discoveryDeadline above may predate that reform.
-    lastVerified: '2026-03',
+    // NOTE: HB 776 (2021) added automatic open-file disclosure obligations for the
+    // prosecution but did NOT change the 10-days-before-trial deadline in § 17-16-4.
+    // Verified against the 2024 Georgia Code (Justia, law.justia.com/codes/georgia/
+    // title-17/chapter-16/article-1/section-17-16-4/). Value confirmed current.
+    lastVerified: '2026-08',
   },
 
   // ── North Carolina ────────────────────────────────────────────────────────
