@@ -2562,6 +2562,19 @@ export default {
       "legalInfoTitle": "Legal Information",
       "legalInfoDesc": "Laws and past court cases that apply to your situation"
     },
+    "loading": {
+      "title": "Generating Your Case Roadmap",
+      "titleRules": "Preparing your guidance...",
+      "stage0": "Analyzing your case details...",
+      "stage20": "Writing your Case Roadmap...",
+      "stage55": "Finalizing recommendations...",
+      "stage88": "Cross-referencing with legal sources...",
+      "almostDone": "Almost done...",
+      "complete": "Complete",
+      "cancel": "Cancel",
+      "timedOutTitle": "Taking longer than usual",
+      "timedOut": "The request timed out. Please check your connection and try again."
+    },
     "privacy": {
       "title": "Your Privacy is Protected",
       "subtitle": "We take your privacy seriously. Here's how we protect your information.",

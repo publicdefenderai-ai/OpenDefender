@@ -1,8 +1,8 @@
 import type { SearchDocument, SearchContentType, SearchQuery, SearchResult, SearchResponse } from "@shared/search-types";
 import { LEGAL_SYNONYMS } from "@shared/search-types";
-import { legalGlossaryTerms } from "../../client/src/lib/legal-glossary-data";
-import { diversionPrograms } from "../../client/src/lib/diversion-programs-data";
-import { expungementRules } from "../../client/src/lib/expungement-data";
+import { legalGlossaryTerms } from "../../shared/legal-glossary-data";
+import { diversionPrograms } from "../../shared/diversion-programs-data";
+import { expungementRules } from "../../shared/expungement-data";
 import { criminalCharges, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "@shared/criminal-charges";
 import { GENERIC_MOCK_QA, PROCEEDING_LABELS, type ProceedingType } from "@shared/mock-qa";
 import { devLog } from "../utils/dev-logger";

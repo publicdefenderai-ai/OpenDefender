@@ -2564,6 +2564,19 @@ export default {
       "legalInfoTitle": "法律信息",
       "legalInfoDesc": "适用于你情况的法律和以往案例"
     },
+    "loading": {
+      "title": "正在生成案件路线图",
+      "titleRules": "正在准备您的指导...",
+      "stage0": "正在分析案件详情...",
+      "stage20": "正在撰写案件路线图...",
+      "stage55": "正在完善建议...",
+      "stage88": "正在与法律来源交叉核对...",
+      "almostDone": "即将完成...",
+      "complete": "完成",
+      "cancel": "取消",
+      "timedOutTitle": "处理时间超出预期",
+      "timedOut": "请求超时，请检查网络连接后重试。"
+    },
     "privacy": {
       "title": "你的隐私受到保护",
       "subtitle": "我们重视你的隐私。以下是我们如何保护你的信息。",

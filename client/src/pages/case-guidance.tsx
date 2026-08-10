@@ -1,5 +1,5 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -312,6 +312,8 @@ export default function CaseGuidance() {
   const [guidanceMode, setGuidanceMode] = useState<'ai' | 'rules'>('ai');
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamProgress, setStreamProgress] = useState(0);
+  const abortControllerRef = useRef<AbortController | null>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { deleteGuidance } = useLegalGuidance();
   const { data: aiStatus } = useAIAvailability();
   const aiUnavailable = aiStatus && aiStatus.available === false;
@@ -475,11 +477,36 @@ export default function CaseGuidance() {
     return () => clearInterval(interval);
   }, [isStreaming]);
 
+  const GUIDANCE_TIMEOUT_MS = 90_000;
+
+  const handleCancel = useCallback(() => {
+    abortControllerRef.current?.abort('user_cancelled');
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = null;
+    abortControllerRef.current = null;
+    setIsStreaming(false);
+    setStreamProgress(0);
+  }, []);
+
   const handleQAComplete = async (data: any) => {
     const mode: 'ai' | 'rules' = data.guidanceMode === 'rules' ? 'rules' : 'ai';
     setGuidanceMode(mode);
     setIsStreaming(true);
     setStreamProgress(0);
+
+    const controller = new AbortController();
+    abortControllerRef.current = controller;
+
+    // Auto-cancel after GUIDANCE_TIMEOUT_MS on bad connections
+    timeoutRef.current = setTimeout(() => {
+      controller.abort('timeout');
+      toast({
+        title: t('case.loading.timedOutTitle', 'Taking longer than usual'),
+        description: t('case.loading.timedOut', 'The request timed out. Please check your connection and try again.'),
+        variant: "destructive",
+      });
+    }, GUIDANCE_TIMEOUT_MS);
+
     try {
       let result: any;
 
@@ -491,15 +518,16 @@ export default function CaseGuidance() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data),
+            signal: controller.signal,
           }),
           new Promise(resolve => setTimeout(resolve, 600)),
         ]);
         result = await response.json();
       } else {
-        // AI path: existing streaming flow
+        // AI path: streaming flow with abort signal
         result = await legalDataApi.streamLegalGuidance(data, (_chars, progress) => {
           setStreamProgress(progress);
-        });
+        }, controller.signal);
       }
 
       if (result && result.success) {
@@ -553,14 +581,22 @@ export default function CaseGuidance() {
           variant: "destructive",
         });
       }
-    } catch (error) {
-      console.error("Failed to generate guidance:", error);
-      toast({
-        title: t('caseGuidance.errors.errorOccurred', 'Error'),
-        description: t('caseGuidance.errors.tryAgain', 'An error occurred while generating guidance. Please try again.'),
-        variant: "destructive",
-      });
+    } catch (error: any) {
+      // Abort errors are either user-initiated cancels or the timeout handler
+      // (which shows its own toast). Suppress the generic error toast for both.
+      const isAbort = error?.name === 'AbortError' || controller.signal.aborted;
+      if (!isAbort) {
+        console.error("Failed to generate guidance:", error);
+        toast({
+          title: t('caseGuidance.errors.errorOccurred', 'Error'),
+          description: t('caseGuidance.errors.tryAgain', 'An error occurred while generating guidance. Please try again.'),
+          variant: "destructive",
+        });
+      }
     } finally {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+      abortControllerRef.current = null;
       setIsStreaming(false);
       setStreamProgress(0);
     }
@@ -649,27 +685,32 @@ export default function CaseGuidance() {
   // Show streaming progress while generating guidance
   if (isStreaming) {
     const stage = guidanceMode === 'rules'
-      ? 'Preparing your guidance...'
-      : streamProgress === 0 ? 'Analyzing your case details...' :
-        streamProgress < 20 ? 'Analyzing your case details...' :
-        streamProgress < 55 ? 'Writing your Case Roadmap...' :
-        streamProgress < 88 ? 'Finalizing recommendations...' :
-        streamProgress < 100 ? 'Cross-referencing with legal sources...' :
-        'Almost done...';
+      ? t('case.loading.titleRules', 'Preparing your guidance...')
+      : streamProgress < 20
+        ? t('case.loading.stage0', 'Analyzing your case details...')
+        : streamProgress < 55
+          ? t('case.loading.stage20', 'Writing your Case Roadmap...')
+          : streamProgress < 88
+            ? t('case.loading.stage55', 'Finalizing recommendations...')
+            : streamProgress < 100
+              ? t('case.loading.stage88', 'Cross-referencing with legal sources...')
+              : t('case.loading.almostDone', 'Almost done...');
 
     return (
       <div className="min-h-screen bg-background">
         <Header />
         <main className="px-4 py-8 flex items-center justify-center min-h-[60vh]">
           <Card className="w-full max-w-md">
-            <CardContent className="pt-6">
+            <CardContent className="pt-6 pb-5">
               <div className="flex flex-col items-center justify-center space-y-5 text-center">
                 <div className="relative">
                   <div className="h-16 w-16 border-4 border-blue-200 dark:border-blue-800 border-t-blue-600 dark:border-t-blue-400 rounded-full animate-spin"></div>
                   <Scale className="h-8 w-8 text-blue-600 dark:text-blue-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-xl font-semibold">Generating Your Case Roadmap</h3>
+                  <h3 className="text-xl font-semibold">
+                    {t('case.loading.title', 'Generating Your Case Roadmap')}
+                  </h3>
                   <p className="text-sm text-muted-foreground">{stage}</p>
                 </div>
                 <div className="w-full space-y-1">
@@ -680,9 +721,18 @@ export default function CaseGuidance() {
                     />
                   </div>
                   <p className="text-xs text-muted-foreground text-right">
-                    {streamProgress < 100 ? `${streamProgress}%` : 'Complete'}
+                    {streamProgress < 100
+                      ? `${streamProgress}%`
+                      : t('case.loading.complete', 'Complete')}
                   </p>
                 </div>
+                {/* De-emphasized cancel — small and low-contrast so it won't be tapped accidentally */}
+                <button
+                  onClick={handleCancel}
+                  className="text-xs text-muted-foreground/50 hover:text-muted-foreground transition-colors underline-offset-2 hover:underline mt-1"
+                >
+                  {t('case.loading.cancel', 'Cancel')}
+                </button>
               </div>
             </CardContent>
           </Card>

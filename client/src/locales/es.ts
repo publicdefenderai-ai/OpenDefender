@@ -2564,6 +2564,19 @@ export default {
       "legalInfoTitle": "Información Legal",
       "legalInfoDesc": "Leyes y casos pasados que se aplican a su situación"
     },
+    "loading": {
+      "title": "Generando su Guía del Caso",
+      "titleRules": "Preparando su orientación...",
+      "stage0": "Analizando los detalles de su caso...",
+      "stage20": "Escribiendo su Guía del Caso...",
+      "stage55": "Finalizando recomendaciones...",
+      "stage88": "Verificando con fuentes legales...",
+      "almostDone": "Casi listo...",
+      "complete": "Completado",
+      "cancel": "Cancelar",
+      "timedOutTitle": "Esto está tardando más de lo esperado",
+      "timedOut": "La solicitud tardó demasiado. Por favor verifique su conexión e intente de nuevo."
+    },
     "privacy": {
       "title": "Su Privacidad Está Protegida",
       "subtitle": "Tomamos su privacidad en serio. Así es como protegemos su información.",

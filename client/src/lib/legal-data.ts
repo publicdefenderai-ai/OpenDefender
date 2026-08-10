@@ -134,12 +134,14 @@ export const legalDataApi = {
 
   async streamLegalGuidance(
     caseData: any,
-    onProgress: (charsReceived: number, progress: number) => void
+    onProgress: (charsReceived: number, progress: number) => void,
+    signal?: AbortSignal
   ): Promise<{ success: boolean; sessionId: string; guidance: LegalGuidance }> {
     const response = await fetch('/api/legal-guidance/stream', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(caseData),
+      signal,
     });
 
     if (!response.ok || !response.body) {
