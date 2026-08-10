@@ -93,32 +93,6 @@ export default {
       "multilingualDesc": "English, Spanish, and Chinese. Understanding your rights should never require a translator."
     },
     "paths": {
-      "situationLabel": "What's your situation?",
-      "situationSubtitle": "Choose your path. Most people use more than one.",
-      "path1Badge": "Just arrested or recently released",
-      "path1Headline": "First 24 Hours",
-      "path1Desc": "Step-by-step from arrest through your first court appearance.",
-      "path1Cta": "Start Here",
-      "path2Badge": "Charged and need to understand the process",
-      "path2Headline": "Case Roadmap",
-      "path2Desc": "What to expect at each stage of your case, in plain language.",
-      "path2Cta": "Get Roadmap",
-      "path3Badge": "Life disruption while your case is pending",
-      "path3Headline": "Life & Family",
-      "path3Desc": "Housing, employment, childcare, and mental health resources.",
-      "path3Cta": "Find Support",
-      "path4Badge": "Immigration or mixed-status concerns",
-      "path4Headline": "Immigration Rights",
-      "path4Desc": "Rights during ICE encounters for everyone in the US.",
-      "path4Cta": "Know Your Rights",
-      "path5Badge": "Helping a friend or family member",
-      "path5Headline": "Helping Someone Who Was Arrested",
-      "path5Desc": "Find them, understand what's happening, and learn what you can do right now.",
-      "path5Cta": "Family Support Guide",
-      "howToLink": "Not sure which path fits? See how the five paths work together →",
-      "pastConvictionLabel": "Not dealing with an active case?",
-      "pastConvictionLink1": "Clear a past record",
-      "pastConvictionLink2": "understand background check rights",
       "searchPlaceholder": "Search charges, topics, and site pages."
     },
     "doors": {
@@ -158,20 +132,20 @@ export default {
         "desc": "Rights during ICE encounters for everyone in the US.",
         "cta": "Know Your Rights"
       },
-      "lifeSupport": {
-        "title": "For Advocates & Public Defenders",
-        "desc": "Intake checklists, mitigation tools, and client-ready resources for case workers and advocates.",
-        "cta": "Open Advocate Hub"
+      "reentry": {
+        "title": "Already Have a Record?",
+        "desc": "Clear or seal past convictions, know your rights in background checks, and find reentry support for housing, jobs, and benefits.",
+        "cta": "Reentry & Record Clearing"
       },
       "findHelp": {
         "title": "Find Legal Help",
         "desc": "Public defenders, legal aid, and court resources near you.",
         "cta": "Search Directory"
       },
-      "pastConviction": {
-        "title": "Helping Someone Who Was Arrested",
-        "desc": "Find them, understand what's happening, and know what you can do right now.",
-        "cta": "Family Support Guide"
+      "lifeSupport": {
+        "title": "For Advocates & Public Defenders",
+        "desc": "Intake checklists, mitigation tools, and client-ready resources for case workers and advocates.",
+        "cta": "Open Advocate Hub"
       }
     },
     "stats": {
@@ -7902,6 +7876,530 @@ export default {
         "item4": "Dress appropriately. Business casual or better is recommended.",
         "item5": "Turn your phone to silent before entering the courtroom.",
         "item6": "Tell your attorney about any changes in your situation since your last meeting."
+      }
+    }
+  },
+  "warrants": {
+    "hero": {
+      "title": "Warrants & Your Rights",
+      "subtitle": "What officers need to enter your home, search your belongings, or arrest you — and what you can do whether they have one or not"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "knowYourRights": "Know Your Rights",
+      "current": "Warrants & Your Rights"
+    },
+    "sidebar": {
+      "onThisPage": "On this page",
+      "related": "Related"
+    },
+    "ifNowBadge": "If this is now",
+    "sections": {
+      "atTheDoor": { "label": "Officers at Your Door", "shortLabel": "At Your Door" },
+      "whatIsWarrant": { "label": "What Is a Warrant?", "shortLabel": "What Is a Warrant?" },
+      "searchWarrants": { "label": "Search Warrants", "shortLabel": "Search Warrants" },
+      "arrestWarrants": { "label": "Arrest Warrants", "shortLabel": "Arrest Warrants" },
+      "noWarrantNeeded": { "label": "When No Warrant Is Needed", "shortLabel": "No Warrant Needed" },
+      "iceWarrants": { "label": "ICE vs. Court Warrants", "shortLabel": "ICE Warrants" },
+      "documentedConcerns": { "label": "Documented Concerns", "shortLabel": "Documented Concerns" },
+      "whatToDo": { "label": "What to Do", "shortLabel": "What to Do" }
+    },
+    "quickLinks": {
+      "iceEncounter": "ICE Encounter Rights",
+      "raidsToolkit": "Raids Preparedness Toolkit",
+      "first24Hours": "First 24 Hours After Arrest",
+      "rightToCounsel": "Right to an Attorney",
+      "searchSeizure": "Search & Seizure Rights"
+    },
+    "atTheDoor": {
+      "alertBold": "You do not have to open the door.",
+      "alertRest": "Speak through it, and ask to see any warrant before doing anything else.",
+      "steps": [
+        "Opening the door can be treated as consent to entry. You can speak through the door or a window.",
+        "Ask: \"Do you have a warrant?\" You have the right to ask this.",
+        "If they say yes: you can view it without opening the door — for example, by asking them to slide it under. Read it before anything else happens.",
+        "Check the document: look for a judge's signature and your address. If it is signed by an immigration officer rather than a judge, it does not authorize entry into your home without your consent.",
+        "If it is a valid judicial warrant: officers may enter. If you want to invoke your right to remain silent, say so clearly — for example: \"I am invoking my right to remain silent.\" Contact your attorney as soon as possible. Physically resisting entry, even if unlawful, creates additional criminal exposure.",
+        "If there is no judicial warrant: you do not have to let them in. If you want to make your position clear, you can say calmly through the door: \"I do not consent to entry.\"",
+        "After the encounter: write down officer names, badge numbers, what was said, and what documents you saw."
+      ],
+      "seeFullGuidePrefix": "See the",
+      "seeFullGuideLink": "full What to Do guide",
+      "seeFullGuideSuffix": "below for other situations, including street stops and arrest warrants."
+    },
+    "whatIsWarrant": {
+      "intro1": "A warrant is a legal document signed by a judge that gives officers permission to do one specific thing: search a specific place, or arrest a specific person. Without a warrant, officers generally cannot enter your home or take you into custody unless you give permission or a legal exception applies.",
+      "intro2": "Not every document an officer carries is the same. A document signed by an immigration agency supervisor is very different from one signed by a federal judge. The difference matters, and it is explained in detail in the ICE section below.",
+      "table": {
+        "headerType": "Type",
+        "headerWhoSigns": "Who signs it",
+        "headerWhatItAllows": "What it allows",
+        "searchWarrant": { "type": "Search warrant", "whoSigns": "Judge or magistrate", "whatItAllows": "Enter and search a specific place for specific items" },
+        "arrestWarrant": { "type": "Arrest warrant", "whoSigns": "Judge or magistrate", "whatItAllows": "Arrest a specific named person" },
+        "iceAdmin": {
+          "type": "ICE administrative warrant",
+          "whoSigns": "ICE officer (not a court)",
+          "whatItAllowsPre": "Administrative arrest. Does",
+          "whatItAllowsBold": "not",
+          "whatItAllowsPost": "authorize entry into a home without consent"
+        },
+        "iceJudicial": { "type": "ICE judicial warrant", "whoSigns": "Federal judge or magistrate", "whatItAllows": "Entry into a home for immigration enforcement" }
+      }
+    },
+    "searchWarrants": {
+      "requirementsTitle": "What a valid search warrant must include",
+      "requirements": [
+        "A signature from a judge or magistrate, not a supervisor or agency head",
+        "The specific address to be searched, not just a general area or building",
+        "A description of what officers are looking for, not a blank permission to search everything",
+        "A current date; warrants can be challenged if they are old or stale"
+      ],
+      "canDoTitle": "What officers can do with one",
+      "canDo": [
+        "Enter the named location",
+        "Search the areas described in the warrant",
+        "Seize items listed in the warrant",
+        "Also seize contraband visible in plain view while legally present"
+      ],
+      "cannotDoTitle": "What they cannot do",
+      "cannotDo": [
+        "Search rooms or areas not named in the warrant",
+        "Search for items not described in the warrant",
+        "Use one address's warrant to search a different address",
+        "Expand the search beyond what the warrant specifies"
+      ],
+      "checkingBold": "Checking a warrant at the door:",
+      "checkingRest": "You have the right to read any warrant before anything else happens. You can ask officers to slide it under the door. Look for: a judge's signature, your specific address, and a description of what they're looking for. You are not required to help officers search, and physically interfering with a search carries legal consequences."
+    },
+    "arrestWarrants": {
+      "p1Pre": "An arrest warrant gives officers the legal right to arrest the named person. It does",
+      "p1Bold": "not",
+      "p1Post": "give them the right to search your home.",
+      "p2": "If officers say they have an arrest warrant for someone else and want to come inside, you do not have to let them in unless they also have a search warrant for your specific address.",
+      "p3": "If the arrest warrant names you: you will be taken into custody. Do not resist physically. Once arrested, your right to remain silent and your right to an attorney still apply from that moment forward. Say clearly that you are invoking both.",
+      "relatedBold": "Related:",
+      "relatedPre": "To understand what happens next after an arrest, see the",
+      "relatedLink1": "First 24 Hours guide",
+      "relatedMid": "and the",
+      "relatedLink2": "Right to an Attorney guide"
+    },
+    "noWarrantNeeded": {
+      "intro": "Courts have approved certain situations where officers can act without a warrant. These exceptions are real and legal, but they have limits, and officers sometimes claim them more broadly than courts have approved.",
+      "outro": "Knowing these exceptions matters: if officers claim one, you can clearly state that you do not consent. You may not be able to stop the search in the moment, but your objection on record gives your attorney something to work with."
+    },
+    "exceptions": {
+      "limitLabel": "The limit:",
+      "tapNext": "Tap to see the next exception →",
+      "items": [
+        {
+          "title": "Your consent",
+          "description": "You gave officers permission to search or to enter. This is the most common way officers get around the warrant requirement.",
+          "limit": "You have the right to refuse. Saying 'I do not consent' is legal and cannot be held against you. Consent obtained through pressure or deception may be challenged in court."
+        },
+        {
+          "title": "Emergency (exigent circumstances)",
+          "description": "Officers face a real emergency: someone is in danger, a suspect is fleeing, or evidence is about to be destroyed.",
+          "limit": "The emergency must be genuine and urgent, not invented after the fact. Courts look carefully at whether a real emergency existed."
+        },
+        {
+          "title": "Plain view",
+          "description": "Officers are already legally present and can see contraband without searching for it.",
+          "limit": "Officers must already be lawfully present. They cannot trespass to get a 'plain view' of something."
+        },
+        {
+          "title": "Search during a lawful arrest",
+          "description": "When officers make a valid arrest, they can search the person and the area immediately around them for weapons or evidence.",
+          "limit": "This does not extend to the whole house or vehicle. It covers the person and what's within arm's reach."
+        },
+        {
+          "title": "Vehicle searches",
+          "description": "Cars have less privacy protection than homes under the law. Officers with probable cause can search a vehicle without a warrant.",
+          "limit": "They still need a real reason. A hunch is not enough. The search must relate to that reason."
+        },
+        {
+          "title": "Brief investigative stop (Terry stop)",
+          "description": "Officers with reasonable suspicion may briefly stop and question you, and may pat you down for weapons.",
+          "limit": "A pat-down is for weapons only, not a full search. 'Reasonable suspicion' must be based on specific facts, not a general feeling."
+        }
+      ]
+    },
+    "iceWarrants": {
+      "intro": "This distinction is critical for anyone who may have contact with immigration enforcement.",
+      "criticalBold": "An ICE administrative warrant is not a court order.",
+      "criticalRest": "It does not give officers the legal right to enter your home without your consent.",
+      "adminCard": {
+        "badge": "Administrative Warrant",
+        "title": "Form I-200 or I-205",
+        "point1": "Signed by an ICE officer, not a court",
+        "point2": "Does not authorize entry into a home without consent",
+        "point3": "This is the document ICE most commonly carries",
+        "howToIdentifyLabel": "How to identify it:",
+        "howToIdentifyText": "The top reads \"U.S. Department of Homeland Security\" and is signed by a \"Deportation Officer\" or \"Immigration Enforcement Agent,\" not a judge."
+      },
+      "judicialCard": {
+        "badge": "Judicial Warrant",
+        "title": "Issued by a Federal Court",
+        "point1": "Signed by a U.S. District Court judge or magistrate",
+        "point2": "Does authorize entry into a home",
+        "point3": "Much rarer in immigration enforcement",
+        "howToIdentifyLabel": "How to identify it:",
+        "howToIdentifyText": "The document will be on federal court letterhead and signed by a judge, referencing a specific federal court (e.g., \"United States District Court for the __ District\")."
+      },
+      "rightsApply": {
+        "title": "Your rights apply regardless of immigration status",
+        "p1": "The Fourth Amendment protects all people in the United States from unlawful searches and seizures, not just citizens. Your right to refuse warrantless entry into your home applies whether you are a citizen, a permanent resident, an undocumented person, or a visitor.",
+        "p2": "You also have the right to remain silent. You are not required to answer questions about your immigration status, your country of origin, or how you entered the country."
+      },
+      "resourcesPre": "For ICE encounter scripts, scenario guides, and printable red cards, see the",
+      "resourcesLink1": "Immigration Know Your Rights",
+      "resourcesMid": "page and the",
+      "resourcesLink2": "Raids Preparedness Toolkit"
+    },
+    "documentedConcerns": {
+      "intro": "Courts, legal organizations, and government oversight bodies have documented situations where enforcement practices did not follow standard warrant requirements. This section describes what has been found — not to suggest that every officer behaves this way, but so you know what to watch for and how to respond if it happens to you.",
+      "items": [
+        {
+          "title": "Administrative warrants used to enter homes",
+          "body": "Multiple federal courts have ruled that an ICE administrative warrant (Form I-200 or I-205) does not satisfy the Fourth Amendment's requirement for a judicial warrant to enter a home. The ACLU and National Immigration Law Center have documented cases where officers entered homes presenting only administrative documents, without consent and without a court-issued warrant."
+        },
+        {
+          "title": "Consent obtained under pressure",
+          "body": "Courts have recognized that consent may not be truly voluntary when it is obtained under coercion, fear, or when residents do not understand they have the right to refuse. The Vera Institute of Justice and ACLU have documented patterns of officers obtaining \"consent\" from people who did not know they could say no, including situations where officers were already positioned at all exits of a home or building before asking."
+        },
+        {
+          "title": "Knock-and-announce requirements",
+          "body": "Even when officers have a valid judicial warrant, they are generally required to knock, announce their presence, and give occupants a brief moment to respond before forcing entry (18 U.S.C. § 3109 for federal officers; state law equivalents vary). Legal organization reports and lawsuits have documented instances in both criminal and immigration enforcement where this requirement was not followed."
+        },
+        {
+          "title": "The 100-mile border zone",
+          "body": "U.S. Customs and Border Protection (CBP) has broader legal authority within 100 miles of any U.S. border or coastline — an area that includes most of the country's largest cities, including New York, Los Angeles, Chicago, Houston, and Miami. Within this zone, CBP can stop people at fixed checkpoints and question them about citizenship without the same warrant requirements that apply elsewhere. The ACLU has published extensive documentation of stops and searches that residents report went beyond what the law allows."
+        },
+        {
+          "title": "Expedited removal",
+          "body": "Federal immigration law allows for expedited removal (deportation without a court hearing) for people who cannot show they have been continuously present in the United States for at least two years. This process operates outside the normal judicial warrant framework. The scope of who is subject to expedited removal has changed through policy shifts over time. Consult an immigration attorney to understand the current rules."
+        }
+      ],
+      "violatedBold": "If you believe your rights were violated:",
+      "violatedRest": "Document everything: who was there, what was said, what documents were shown. Tell your attorney as soon as possible. A warrantless or non-consensual home entry may be grounds to suppress evidence or bring other legal challenges. The ACLU and NILC also have resources for people who want to report rights violations."
+    },
+    "divider": {
+      "nowWhat": "Now, what you can do"
+    },
+    "whatToDo": {
+      "intro": "The following describes how these rights work in practice and what you are legally able to do in each situation.",
+      "atHome": {
+        "title": "If officers come to your home",
+        "steps": [
+          "Opening the door can be treated as consent to entry. Speak through the door or a window.",
+          "Ask: \"Do you have a warrant?\"",
+          "You can view the warrant without opening the door — for example, by asking them to slide it under. Look for a judge's signature and your address.",
+          "If it is a valid judicial warrant: they may enter. Stay calm. If you want to invoke your right to remain silent, say so clearly and call your attorney as soon as possible.",
+          "If there is no judicial warrant, or officers have an ICE administrative form only: you do not have to let them in. You can say: \"I do not consent to entry.\"",
+          "Physically resisting entry, even when entry is unlawful, creates additional criminal exposure. Contest unlawful entry in court afterward. Your stated non-consent is part of the record.",
+          "Write down everything as soon as it is safe: names, badge numbers, what was said, and what documents you saw."
+        ]
+      },
+      "onStreet": {
+        "title": "If you are stopped on the street",
+        "steps": [
+          "Ask: \"Am I free to go?\" If the answer is yes, you may leave.",
+          "If no: you are being detained. Stay calm. Running can result in additional charges.",
+          "If you want to invoke your right to remain silent, say so clearly: \"I am invoking my right to remain silent.\"",
+          "Officers may pat you down for weapons during a lawful stop. This is not a full search. You can state: 'I do not consent to a search.' Your objection is part of the record even if officers proceed.",
+          "You are not required to answer questions about where you are going, where you have been, or your immigration status."
+        ]
+      },
+      "arrestWarrant": {
+        "title": "If officers have an arrest warrant for you",
+        "steps": [
+          "Physically resisting arrest creates additional criminal exposure and physical danger.",
+          "If you want to invoke your rights, say so clearly: \"I am invoking my right to remain silent and my right to an attorney.\"",
+          "You are not required to answer questions beyond your name. If you want to invoke this protection, you can say: 'I will not answer questions without a lawyer present.'",
+          "Contact your attorney as soon as you are allowed to make a phone call."
+        ]
+      },
+      "alwaysBold": "Always, in every situation:",
+      "alwaysRest": "Write down what happened as soon as it is safe to do so: officer names, badge numbers, what they said, what documents they showed, and any witnesses. Your memory will fade. A written account is something your attorney can use."
+    },
+    "relatedGuides": {
+      "title": "Related Guides",
+      "searchSeizure": "Search & Seizure Rights",
+      "rightToCounsel": "Right to an Attorney",
+      "knowYourRights": "Know Your Rights",
+      "iceEncounter": "ICE Encounter Rights",
+      "raidsToolkit": "Raids Preparedness Toolkit",
+      "first24": "Your First 24 Hours"
+    },
+    "disclaimer": "This page provides general legal information, not legal advice. Warrant law is highly fact-specific and varies by jurisdiction. If you believe your rights were violated, consult a licensed criminal defense or immigration attorney about your specific situation."
+  },
+  "letterGenerator": {
+    "hero": {
+      "badge": "Letter Generator",
+      "title": "Get help writing a letter",
+      "subtitle": "Generate a professional, general-purpose letter for your employer, landlord, or utility company. Answer a few questions below."
+    },
+    "privacyNotice": {
+      "bold": "Nothing you enter here is saved.",
+      "rest": "Your answers are used once to generate a letter, then discarded. We never store your name, case details, or the content of your letter."
+    },
+    "select": {
+      "title": "What kind of letter do you need?",
+      "templatesPre": "Looking for a ready-made template instead? Copyable template letters are available on the",
+      "templatesHousingLink": "housing",
+      "templatesMid": "and",
+      "templatesEmploymentLink": "employment",
+      "templatesPost": "pages."
+    },
+    "back": "Back",
+    "optionalTag": "(optional)",
+    "selectPlaceholder": "Select an option...",
+    "generateButton": "Generate my letter",
+    "writingLetter": "Writing your letter...",
+    "genericError": "Something went wrong generating your letter. Please try again.",
+    "disclosureAlert": "This letter intentionally discloses a criminal record to an employer. Only use it if you have decided you want to share this information.",
+    "generalNoteBold": "Note:",
+    "generalNoteRest": "These letters use general, professional language and do not disclose specific case details unless you choose to add them.",
+    "employerHandbookBold": "Check your employee handbook first.",
+    "employerHandbookRest": "Some employers require advance notice or specific documentation for time off — review your company's policy before sending this letter.",
+    "result": {
+      "title": "Your draft letter",
+      "writeAnother": "Write another",
+      "subjectLabel": "Subject:",
+      "copyButton": "Copy letter",
+      "copiedButton": "Copied",
+      "printButton": "Print",
+      "printTitle": "Letter",
+      "printNote": "Replace any [bracketed] text with your own details before sending. This letter was generated as a general-purpose draft and does not constitute legal advice.",
+      "beforeYouSend": "Before you send",
+      "disclaimer": "This letter is a general-purpose draft, not legal advice. Review it carefully and edit anything that doesn't apply to your situation before sending."
+    },
+    "privacyFooter": {
+      "bold": "Privacy first.",
+      "rest": "This tool does not store your answers or generated letters."
+    },
+    "types": {
+      "employerCourtDates": {
+        "title": "Request time off for court",
+        "description": "Ask your employer for time off to attend court dates, without over-explaining the details.",
+        "fields": {
+          "frequency": {
+            "label": "How often will you need time off?",
+            "options": [
+              "Just one date",
+              "A few dates over the next few months",
+              "Regularly, on an ongoing basis",
+              "I'm not sure yet"
+            ]
+          },
+          "whoseCase": {
+            "label": "Whose legal matter is this?",
+            "options": [
+              "My own case",
+              "A family member's case"
+            ]
+          },
+          "documentation": {
+            "label": "Can you provide court documentation if your employer asks?",
+            "options": [
+              "Yes, I have a court notice or summons",
+              "I can request one",
+              "No, I'd rather not share documentation"
+            ]
+          },
+          "additionalContext": {
+            "label": "Anything else you'd like the letter to address?",
+            "placeholder": "Optional — e.g. a preferred way to make up missed hours"
+          }
+        }
+      },
+      "employerExplainAbsence": {
+        "title": "Explain an absence to your employer",
+        "description": "Explain a recent or upcoming absence related to a legal matter, briefly and professionally.",
+        "fields": {
+          "duration": {
+            "label": "How long were (or will) you be out?",
+            "options": [
+              "Less than a day",
+              "One to two days",
+              "Several days",
+              "More than a week"
+            ]
+          },
+          "reasonToShare": {
+            "label": "What would you like to tell your employer about the reason?",
+            "options": [
+              "A legal or court matter",
+              "A family emergency related to a legal matter",
+              "A personal matter I'd rather keep general",
+              "I'll let the letter stay vague"
+            ]
+          },
+          "currentStatus": {
+            "label": "What is the current status of the matter?",
+            "options": [
+              "Resolved",
+              "Ongoing",
+              "Upcoming",
+              "I'd rather not specify"
+            ]
+          },
+          "additionalContext": {
+            "label": "Anything else you'd like the letter to address?",
+            "placeholder": "Optional — e.g. when you expect to return"
+          }
+        }
+      },
+      "employerRecordDisclosure": {
+        "title": "Disclose a record to an employer",
+        "description": "Proactively and professionally share a criminal record with a potential or current employer.",
+        "fields": {
+          "typeOfRole": {
+            "label": "What type of role are you applying for or currently in?",
+            "placeholder": "e.g. warehouse associate, office assistant"
+          },
+          "timeSinceOffense": {
+            "label": "How long ago did this happen?",
+            "options": [
+              "Less than a year ago",
+              "One to three years ago",
+              "Three to ten years ago",
+              "More than ten years ago"
+            ]
+          },
+          "generalCategory": {
+            "label": "What general category best describes it?",
+            "options": [
+              "A non-violent offense",
+              "A traffic-related offense",
+              "A drug-related offense",
+              "A property-related offense",
+              "I'd rather describe it in general terms only"
+            ]
+          },
+          "stepsSinceThen": {
+            "label": "What steps have you taken since then?",
+            "options": [
+              "Completed probation or supervision",
+              "Completed a treatment or education program",
+              "Maintained steady employment",
+              "None of these apply"
+            ]
+          }
+        }
+      },
+      "landlordPaymentPlan": {
+        "title": "Request a rent payment plan",
+        "description": "Ask your landlord for a deferral or payment arrangement, with a concrete plan to catch up.",
+        "fields": {
+          "howFarBehind": {
+            "label": "How far behind on rent are you?",
+            "options": [
+              "Less than one month",
+              "One month",
+              "Two months",
+              "More than two months"
+            ]
+          },
+          "reason": {
+            "label": "What's the main reason for the shortfall?",
+            "options": [
+              "A recent job loss or reduced hours",
+              "An unexpected medical or family expense",
+              "A legal matter affecting income",
+              "I'd rather keep this general"
+            ]
+          },
+          "partialPayment": {
+            "label": "Can you make a partial payment now?",
+            "options": [
+              "Yes, I can pay some now",
+              "Not right now, but soon",
+              "No, not at this time"
+            ]
+          },
+          "catchUpPlan": {
+            "label": "What's your plan to catch up?",
+            "placeholder": "e.g. paying an extra $100/month starting next month"
+          }
+        }
+      },
+      "landlordSituationNotice": {
+        "title": "Notify your landlord of a change in circumstances",
+        "description": "Proactively inform your landlord of a change in your situation to maintain a good relationship.",
+        "fields": {
+          "whatToCommunicate": {
+            "label": "What would you like to let your landlord know?",
+            "options": [
+              "A temporary change in income",
+              "A change in who lives in the unit",
+              "An upcoming absence from the unit",
+              "A legal matter that may affect your schedule"
+            ]
+          },
+          "currentStatus": {
+            "label": "What is the current status?",
+            "options": [
+              "Resolved",
+              "Ongoing",
+              "I'd rather not specify"
+            ]
+          },
+          "whatYouAreAsking": {
+            "label": "Is there anything specific you're asking for?",
+            "options": [
+              "Just keeping you informed, no request",
+              "A brief accommodation or flexibility",
+              "A point of contact in case you're unreachable"
+            ]
+          },
+          "additionalContext": {
+            "label": "Anything else you'd like the letter to address?",
+            "placeholder": "Optional"
+          }
+        }
+      },
+      "utilityHardship": {
+        "title": "Request utility hardship assistance",
+        "description": "Contact a utility company to request a payment plan, deferral, or hardship program to avoid disconnection.",
+        "fields": {
+          "utilityType": {
+            "label": "Which utility is this for?",
+            "options": [
+              "Electric",
+              "Gas",
+              "Water",
+              "Internet or phone",
+              "More than one utility"
+            ]
+          },
+          "currentSituation": {
+            "label": "What's your current situation?",
+            "options": [
+              "Facing disconnection soon",
+              "Already disconnected",
+              "Trying to get ahead of a shortfall",
+              "Not sure, just exploring options"
+            ]
+          },
+          "reason": {
+            "label": "What's the main reason for the hardship?",
+            "options": [
+              "A recent job loss or reduced hours",
+              "An unexpected medical or family expense",
+              "A legal matter affecting income",
+              "I'd rather keep this general"
+            ]
+          },
+          "whatIAmRequesting": {
+            "label": "What are you requesting?",
+            "options": [
+              "A payment plan",
+              "A short extension",
+              "Enrollment in a hardship program",
+              "I'm not sure — please suggest options"
+            ]
+          }
+        }
       }
     }
   }

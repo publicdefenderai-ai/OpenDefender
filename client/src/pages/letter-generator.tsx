@@ -34,12 +34,14 @@ type LetterType =
 
 type FieldType = "select" | "text" | "textarea";
 
-interface Field {
+/** Structural definition — translated label/placeholder/options come from i18n
+ *  at render time via the `key`, which is also the (untranslated, stable)
+ *  identifier sent to the backend as the answers record's key. */
+interface FieldDef {
   key: string;
-  label: string;
   type: FieldType;
-  options?: string[];
-  placeholder?: string;
+  i18nKey: string;
+  optionCount?: number;
   optional?: boolean;
 }
 
@@ -48,14 +50,13 @@ interface LetterTypeDef {
   icon: React.ElementType;
   iconColor: string;
   borderColor: string;
-  title: string;
-  description: string;
-  fields: Field[];
+  i18nKey: string;
+  fields: FieldDef[];
 }
 
 type PageState = "select" | "intake" | "loading" | "result";
 
-// ── Letter type definitions ───────────────────────────────────────────────────
+// ── Letter type definitions (structural — text comes from i18n) ───────────────
 
 const LETTER_TYPES: LetterTypeDef[] = [
   {
@@ -63,40 +64,12 @@ const LETTER_TYPES: LetterTypeDef[] = [
     icon: Briefcase,
     iconColor: "text-blue-600 dark:text-blue-400",
     borderColor: "#3b82f6",
-    title: "Request time off for court",
-    description:
-      "Ask your employer for time off to attend court appearances, without over-sharing the details.",
+    i18nKey: "employerCourtDates",
     fields: [
-      {
-        key: "Frequency",
-        label: "How often will you need time off?",
-        type: "select",
-        options: [
-          "A single appearance",
-          "A few appearances over the next several weeks",
-          "Roughly once a month for several months",
-          "Ongoing — not yet certain",
-        ],
-      },
-      {
-        key: "Whose case",
-        label: "Whose legal matter is this?",
-        type: "select",
-        options: ["My own", "A close family member I need to support"],
-      },
-      {
-        key: "Documentation",
-        label: "Can you provide court documentation if asked?",
-        type: "select",
-        options: ["Yes", "Possibly", "No"],
-      },
-      {
-        key: "Additional context",
-        label: "Anything else to address in the letter?",
-        type: "textarea",
-        placeholder: "e.g., requesting to make up missed work, flexible scheduling, etc.",
-        optional: true,
-      },
+      { key: "Frequency", type: "select", i18nKey: "frequency", optionCount: 4 },
+      { key: "Whose case", type: "select", i18nKey: "whoseCase", optionCount: 2 },
+      { key: "Documentation", type: "select", i18nKey: "documentation", optionCount: 3 },
+      { key: "Additional context", type: "textarea", i18nKey: "additionalContext", optional: true },
     ],
   },
   {
@@ -104,44 +77,12 @@ const LETTER_TYPES: LetterTypeDef[] = [
     icon: Briefcase,
     iconColor: "text-indigo-600 dark:text-indigo-400",
     borderColor: "#6366f1",
-    title: "Explain an absence to your employer",
-    description:
-      "Explain a recent absence related to a legal matter. Professional and brief — honest without over-sharing.",
+    i18nKey: "employerExplainAbsence",
     fields: [
-      {
-        key: "Duration",
-        label: "How long were you absent?",
-        type: "select",
-        options: ["A few hours", "One day", "Two to three days", "More than three days"],
-      },
-      {
-        key: "Reason to share",
-        label: "What can you share about why?",
-        type: "select",
-        options: [
-          "A legal matter that required my attendance",
-          "A personal matter that required my immediate attention and has since been addressed",
-          "A family emergency",
-          "A personal matter I would prefer not to detail",
-        ],
-      },
-      {
-        key: "Current status",
-        label: "What is your situation now?",
-        type: "select",
-        options: [
-          "I am back at work and the situation is resolved",
-          "I am back at work but may need occasional time off",
-          "I am still managing the situation",
-        ],
-      },
-      {
-        key: "Additional context",
-        label: "Anything else to address?",
-        type: "textarea",
-        placeholder: "e.g., offering to make up work, noting strong performance history, etc.",
-        optional: true,
-      },
+      { key: "Duration", type: "select", i18nKey: "duration", optionCount: 4 },
+      { key: "Reason to share", type: "select", i18nKey: "reasonToShare", optionCount: 4 },
+      { key: "Current status", type: "select", i18nKey: "currentStatus", optionCount: 3 },
+      { key: "Additional context", type: "textarea", i18nKey: "additionalContext", optional: true },
     ],
   },
   {
@@ -149,50 +90,12 @@ const LETTER_TYPES: LetterTypeDef[] = [
     icon: Briefcase,
     iconColor: "text-teal-600 dark:text-teal-400",
     borderColor: "#14b8a6",
-    title: "Disclose a record to an employer",
-    description:
-      "Proactively and professionally share a criminal record when applying for a job. Confident and forward-looking.",
+    i18nKey: "employerRecordDisclosure",
     fields: [
-      {
-        key: "Type of role",
-        label: "What type of job are you applying for?",
-        type: "text",
-        placeholder: "e.g., warehouse worker, delivery driver, retail associate",
-      },
-      {
-        key: "Time since offense",
-        label: "How long ago did the incident occur?",
-        type: "select",
-        options: [
-          "Less than 1 year ago",
-          "1 to 3 years ago",
-          "3 to 5 years ago",
-          "More than 5 years ago",
-        ],
-      },
-      {
-        key: "General category",
-        label: "General category of the offense",
-        type: "select",
-        options: [
-          "Drug-related",
-          "Theft or financial",
-          "DUI or traffic-related",
-          "Assault or disorderly conduct",
-          "Other non-violent offense",
-        ],
-      },
-      {
-        key: "Steps since then",
-        label: "What positive steps have you taken since?",
-        type: "select",
-        options: [
-          "Completed my sentence and have been working steadily since",
-          "Completed job training or education",
-          "Volunteered or contributed to my community",
-          "Several of these",
-        ],
-      },
+      { key: "Type of role", type: "text", i18nKey: "typeOfRole" },
+      { key: "Time since offense", type: "select", i18nKey: "timeSinceOffense", optionCount: 4 },
+      { key: "General category", type: "select", i18nKey: "generalCategory", optionCount: 5 },
+      { key: "Steps since then", type: "select", i18nKey: "stepsSinceThen", optionCount: 4 },
     ],
   },
   {
@@ -200,48 +103,12 @@ const LETTER_TYPES: LetterTypeDef[] = [
     icon: Home,
     iconColor: "text-amber-600 dark:text-amber-400",
     borderColor: "#f59e0b",
-    title: "Request a rent payment plan",
-    description:
-      "Ask your landlord for a deferral or payment arrangement. Professional, honest, with a concrete plan.",
+    i18nKey: "landlordPaymentPlan",
     fields: [
-      {
-        key: "How far behind",
-        label: "How far behind on rent are you?",
-        type: "select",
-        options: [
-          "Less than one month",
-          "About one to two months",
-          "Two to three months",
-          "More than three months",
-        ],
-      },
-      {
-        key: "Reason",
-        label: "Main reason for the shortfall",
-        type: "select",
-        options: [
-          "Job loss or reduced hours",
-          "Legal costs from a recent case",
-          "Medical expenses",
-          "Other unexpected expenses",
-        ],
-      },
-      {
-        key: "Partial payment",
-        label: "Can you make a partial payment now?",
-        type: "select",
-        options: [
-          "Yes — I can pay a portion immediately",
-          "Not immediately, but within a few weeks",
-          "No — I need a full deferral for now",
-        ],
-      },
-      {
-        key: "Catch-up plan",
-        label: "How do you plan to catch up?",
-        type: "text",
-        placeholder: "e.g., Starting a new job next week, receiving assistance, can catch up in 2 months",
-      },
+      { key: "How far behind", type: "select", i18nKey: "howFarBehind", optionCount: 4 },
+      { key: "Reason", type: "select", i18nKey: "reason", optionCount: 4 },
+      { key: "Partial payment", type: "select", i18nKey: "partialPayment", optionCount: 3 },
+      { key: "Catch-up plan", type: "text", i18nKey: "catchUpPlan" },
     ],
   },
   {
@@ -249,48 +116,12 @@ const LETTER_TYPES: LetterTypeDef[] = [
     icon: Home,
     iconColor: "text-orange-600 dark:text-orange-400",
     borderColor: "#f97316",
-    title: "Notify landlord of changed circumstances",
-    description:
-      "Proactively inform your landlord of a change in your situation to maintain a good relationship.",
+    i18nKey: "landlordSituationNotice",
     fields: [
-      {
-        key: "What to communicate",
-        label: "What are you telling your landlord?",
-        type: "select",
-        options: [
-          "A change in personal circumstances that may temporarily affect my situation",
-          "A possible disruption to upcoming rent payments",
-          "A need to explain a recent absence from the unit",
-          "A change in household circumstances",
-        ],
-      },
-      {
-        key: "Current status",
-        label: "How is the situation right now?",
-        type: "select",
-        options: [
-          "The situation is stabilizing",
-          "I am actively working to resolve it",
-          "The situation has been resolved",
-        ],
-      },
-      {
-        key: "What you are asking",
-        label: "What are you asking from your landlord?",
-        type: "select",
-        options: [
-          "Understanding and patience while I work through this",
-          "A brief extension on the next payment",
-          "Nothing specific — I just want to be transparent",
-        ],
-      },
-      {
-        key: "Additional context",
-        label: "Anything else to address?",
-        type: "textarea",
-        placeholder: "e.g., strong payment history, long tenancy, etc.",
-        optional: true,
-      },
+      { key: "What to communicate", type: "select", i18nKey: "whatToCommunicate", optionCount: 4 },
+      { key: "Current status", type: "select", i18nKey: "currentStatus", optionCount: 3 },
+      { key: "What you are asking", type: "select", i18nKey: "whatYouAreAsking", optionCount: 3 },
+      { key: "Additional context", type: "textarea", i18nKey: "additionalContext", optional: true },
     ],
   },
   {
@@ -298,52 +129,32 @@ const LETTER_TYPES: LetterTypeDef[] = [
     icon: Zap,
     iconColor: "text-yellow-600 dark:text-yellow-400",
     borderColor: "#eab308",
-    title: "Request utility hardship assistance",
-    description:
-      "Contact a utility company to request a payment plan, deferral, or hardship program to avoid disconnection.",
+    i18nKey: "utilityHardship",
     fields: [
-      {
-        key: "Utility type",
-        label: "Type of utility",
-        type: "select",
-        options: ["Electric", "Gas", "Water", "Phone or internet", "Multiple utilities"],
-      },
-      {
-        key: "Current situation",
-        label: "Payment situation",
-        type: "select",
-        options: [
-          "One month behind",
-          "Two to three months behind",
-          "Received a disconnect or shutoff notice",
-          "Not yet behind but anticipating difficulty",
-        ],
-      },
-      {
-        key: "Reason",
-        label: "Reason for hardship",
-        type: "select",
-        options: [
-          "Job loss or reduced income",
-          "Legal costs",
-          "Medical expenses",
-          "Other unexpected circumstances",
-        ],
-      },
-      {
-        key: "What I am requesting",
-        label: "What you are asking for",
-        type: "select",
-        options: [
-          "A payment plan to catch up gradually",
-          "A one-time deferral",
-          "Information about hardship or assistance programs",
-          "An extension before any disconnection",
-        ],
-      },
+      { key: "Utility type", type: "select", i18nKey: "utilityType", optionCount: 5 },
+      { key: "Current situation", type: "select", i18nKey: "currentSituation", optionCount: 4 },
+      { key: "Reason", type: "select", i18nKey: "reason", optionCount: 4 },
+      { key: "What I am requesting", type: "select", i18nKey: "whatIAmRequesting", optionCount: 4 },
     ],
   },
 ];
+
+const LETTER_TYPE_NS = "letterGenerator.types";
+
+function useTypeText(typeKey: string, fieldKey?: string) {
+  const { t } = useTranslation();
+  const base = fieldKey ? `${LETTER_TYPE_NS}.${typeKey}.fields.${fieldKey}` : `${LETTER_TYPE_NS}.${typeKey}`;
+  return (suffix: string) => t(`${base}.${suffix}`);
+}
+
+function useOptions(typeKey: string, fieldKey: string, count: number): string[] {
+  const { t } = useTranslation();
+  const options: string[] = [];
+  for (let i = 0; i < count; i++) {
+    options.push(t(`${LETTER_TYPE_NS}.${typeKey}.fields.${fieldKey}.options.${i}`));
+  }
+  return options;
+}
 
 // ── Selection card ────────────────────────────────────────────────────────────
 
@@ -354,6 +165,7 @@ function TypeCard({
   def: LetterTypeDef;
   onSelect: (id: LetterType) => void;
 }) {
+  const { t } = useTranslation();
   const Icon = def.icon;
   return (
     <button
@@ -364,12 +176,73 @@ function TypeCard({
       <div className="flex items-start gap-3">
         <Icon className={`h-5 w-5 flex-shrink-0 mt-0.5 ${def.iconColor}`} strokeWidth={1.75} />
         <div className="flex-1 min-w-0">
-          <p className="font-semibold text-foreground text-sm mb-1">{def.title}</p>
-          <p className="text-xs text-muted-foreground leading-relaxed">{def.description}</p>
+          <p className="font-semibold text-foreground text-sm mb-1">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.title`)}</p>
+          <p className="text-xs text-muted-foreground leading-relaxed">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.description`)}</p>
         </div>
         <ChevronRight className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5 group-hover:text-foreground transition-colors" />
       </div>
     </button>
+  );
+}
+
+// ── Field renderer ────────────────────────────────────────────────────────────
+
+function IntakeField({
+  typeKey,
+  field,
+  value,
+  onChange,
+}: {
+  typeKey: string;
+  field: FieldDef;
+  value: string;
+  onChange: (key: string, value: string) => void;
+}) {
+  const { t } = useTranslation();
+  const text = useTypeText(typeKey, field.i18nKey);
+  const options = useOptions(typeKey, field.i18nKey, field.optionCount ?? 0);
+
+  return (
+    <div>
+      <label className="block text-sm font-medium text-foreground mb-1.5">
+        {text("label")}
+        {field.optional && (
+          <span className="text-muted-foreground font-normal ml-1">{t("letterGenerator.optionalTag")}</span>
+        )}
+      </label>
+      {field.type === "select" ? (
+        <select
+          value={value ?? ""}
+          onChange={(e) => onChange(field.key, e.target.value)}
+          className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        >
+          <option value="">{t("letterGenerator.selectPlaceholder")}</option>
+          {options.map((opt, i) => (
+            <option key={i} value={opt}>
+              {opt}
+            </option>
+          ))}
+        </select>
+      ) : field.type === "textarea" ? (
+        <textarea
+          value={value ?? ""}
+          onChange={(e) => onChange(field.key, e.target.value)}
+          placeholder={text("placeholder")}
+          rows={3}
+          maxLength={400}
+          className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
+        />
+      ) : (
+        <input
+          type="text"
+          value={value ?? ""}
+          onChange={(e) => onChange(field.key, e.target.value)}
+          placeholder={text("placeholder")}
+          maxLength={200}
+          className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+        />
+      )}
+    </div>
   );
 }
 
@@ -390,6 +263,7 @@ function IntakeForm({
   onBack: () => void;
   loading: boolean;
 }) {
+  const { t } = useTranslation();
   const Icon = def.icon;
   const requiredFields = def.fields.filter((f) => !f.optional);
   const allRequiredFilled = requiredFields.every(
@@ -407,11 +281,11 @@ function IntakeForm({
           className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <ChevronLeft className="h-4 w-4" />
-          Back
+          {t("letterGenerator.back")}
         </button>
         <div className="flex items-center gap-2">
           <Icon className={`h-5 w-5 ${def.iconColor}`} strokeWidth={1.75} />
-          <h2 className="font-semibold text-foreground">{def.title}</h2>
+          <h2 className="font-semibold text-foreground">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.title`)}</h2>
         </div>
       </div>
 
@@ -419,13 +293,13 @@ function IntakeForm({
         <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700">
           <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400" />
           <AlertDescription className="text-amber-800 dark:text-amber-200 text-sm">
-            This letter intentionally discloses a criminal record. Review the final draft carefully before sending. If you are unsure whether or when to disclose, speak with your attorney first.
+            {t("letterGenerator.disclosureAlert")}
           </AlertDescription>
         </Alert>
       ) : (
         <Alert className="border-blue-200 bg-blue-50 dark:bg-blue-900/20 dark:border-blue-700">
           <AlertDescription className="text-blue-800 dark:text-blue-200 text-sm">
-            <strong>Note:</strong> These letters use general language. Do not include specific facts about your case — what you are charged with, what happened, or anything related to the underlying dispute. The letter will say "a legal matter" rather than specific details, which protects your legal position.
+            <strong>{t("letterGenerator.generalNoteBold")}</strong> {t("letterGenerator.generalNoteRest")}
           </AlertDescription>
         </Alert>
       )}
@@ -434,53 +308,20 @@ function IntakeForm({
         <Alert className="border-orange-200 bg-orange-50 dark:bg-orange-900/20 dark:border-orange-700">
           <AlertTriangle className="h-4 w-4 text-orange-600 dark:text-orange-400" />
           <AlertDescription className="text-orange-800 dark:text-orange-200 text-sm">
-            <strong>Check your employee handbook first.</strong> Some employers require employees to report certain types of arrests or legal matters — for example, a DUI for someone in a driving role, or a financial offense for someone in a financial role. Review your company policy or contract before sending, and contact HR or a union representative if you are unsure what is required. This letter template covers the basics but may not meet all employer-specific requirements.
+            <strong>{t("letterGenerator.employerHandbookBold")}</strong> {t("letterGenerator.employerHandbookRest")}
           </AlertDescription>
         </Alert>
       )}
 
       <div className="space-y-4">
         {def.fields.map((field) => (
-          <div key={field.key}>
-            <label className="block text-sm font-medium text-foreground mb-1.5">
-              {field.label}
-              {field.optional && (
-                <span className="text-muted-foreground font-normal ml-1">(optional)</span>
-              )}
-            </label>
-            {field.type === "select" && field.options ? (
-              <select
-                value={answers[field.key] ?? ""}
-                onChange={(e) => onChange(field.key, e.target.value)}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              >
-                <option value="">Select an option...</option>
-                {field.options.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
-            ) : field.type === "textarea" ? (
-              <textarea
-                value={answers[field.key] ?? ""}
-                onChange={(e) => onChange(field.key, e.target.value)}
-                placeholder={field.placeholder}
-                rows={3}
-                maxLength={400}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-              />
-            ) : (
-              <input
-                type="text"
-                value={answers[field.key] ?? ""}
-                onChange={(e) => onChange(field.key, e.target.value)}
-                placeholder={field.placeholder}
-                maxLength={200}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-              />
-            )}
-          </div>
+          <IntakeField
+            key={field.key}
+            typeKey={def.i18nKey}
+            field={field}
+            value={answers[field.key]}
+            onChange={onChange}
+          />
         ))}
       </div>
 
@@ -490,7 +331,7 @@ function IntakeForm({
         className="w-full gap-2"
       >
         <Sparkles className="h-4 w-4" />
-        Generate my letter
+        {t("letterGenerator.generateButton")}
       </Button>
     </div>
   );
@@ -509,9 +350,11 @@ function LetterResult({
   tips: string[];
   onReset: () => void;
 }) {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
-  const fullText = subject ? `Subject: ${subject}\n\n${letter}` : letter;
+  const subjectLabelText = t("letterGenerator.result.subjectLabel");
+  const fullText = subject ? `${subjectLabelText} ${subject}\n\n${letter}` : letter;
 
   const handleCopy = async () => {
     try {
@@ -531,15 +374,17 @@ function LetterResult({
   const handlePrint = () => {
     const win = window.open("", "_blank");
     if (win) {
-      win.document.write(`<html><head><title>Letter</title>
+      const printTitle = t("letterGenerator.result.printTitle");
+      const printNote = t("letterGenerator.result.printNote");
+      win.document.write(`<html><head><title>${printTitle}</title>
         <style>body{font-family:Arial,sans-serif;padding:40px;max-width:700px;margin:0 auto;line-height:1.6}
         .subject{font-weight:bold;margin-bottom:20px}
         .body{white-space:pre-wrap}
         .note{font-size:12px;color:#666;margin-top:24px;border-top:1px solid #ddd;padding-top:12px;font-style:italic}
         </style></head><body>
-        ${subject ? `<p class="subject">Subject: ${subject}</p>` : ""}
+        ${subject ? `<p class="subject">${subjectLabelText} ${subject}</p>` : ""}
         <div class="body">${letter.replace(/\n/g, "<br>")}</div>
-        <p class="note">Replace all [bracketed] text with your own details before sending.</p>
+        <p class="note">${printNote}</p>
         </body></html>`);
       win.document.close();
       win.print();
@@ -549,20 +394,20 @@ function LetterResult({
   return (
     <div className="space-y-5">
       <div className="flex items-center justify-between">
-        <h2 className="font-semibold text-foreground">Your draft letter</h2>
+        <h2 className="font-semibold text-foreground">{t("letterGenerator.result.title")}</h2>
         <button
           onClick={onReset}
           className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <RefreshCw className="h-3.5 w-3.5" />
-          Write another
+          {t("letterGenerator.result.writeAnother")}
         </button>
       </div>
 
       {subject && (
         <div className="rounded-lg border border-border bg-muted/30 px-4 py-2.5">
           <span className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mr-2">
-            Subject:
+            {t("letterGenerator.result.subjectLabel")}
           </span>
           <span className="text-sm text-foreground">{subject}</span>
         </div>
@@ -577,18 +422,18 @@ function LetterResult({
       <div className="flex gap-2">
         <Button onClick={handleCopy} variant="outline" size="sm" className="gap-2">
           {copied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
-          {copied ? "Copied" : "Copy letter"}
+          {copied ? t("letterGenerator.result.copiedButton") : t("letterGenerator.result.copyButton")}
         </Button>
         <Button onClick={handlePrint} variant="outline" size="sm" className="gap-2">
           <Printer className="h-4 w-4" />
-          Print
+          {t("letterGenerator.result.printButton")}
         </Button>
       </div>
 
       {tips.length > 0 && (
         <div className="rounded-xl border border-border bg-muted/30 p-4 space-y-2">
           <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest">
-            Before you send
+            {t("letterGenerator.result.beforeYouSend")}
           </p>
           <ul className="space-y-1.5">
             {tips.map((tip, i) => (
@@ -603,7 +448,7 @@ function LetterResult({
 
       <Alert className="border-border bg-muted/50">
         <AlertDescription className="text-xs text-muted-foreground">
-          This is a communication draft, not legal advice. Replace all [bracketed] text with your own details before sending. Review the letter carefully — if anything in it describes facts about your case that you did not intend to disclose, remove or replace it with general language before sending. You are never required to explain more than the practical need.
+          {t("letterGenerator.result.disclaimer")}
         </AlertDescription>
       </Alert>
     </div>
@@ -614,7 +459,7 @@ function LetterResult({
 
 export default function LetterGenerator() {
   useScrollToTop();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [state, setState] = useState<PageState>("select");
   const [selectedType, setSelectedType] = useState<LetterType | null>(null);
@@ -654,13 +499,13 @@ export default function LetterGenerator() {
       const data = await res.json();
 
       if (!res.ok || !data.success) {
-        throw new Error(data.error ?? "Failed to generate letter");
+        throw new Error(data.error ?? t("letterGenerator.genericError"));
       }
 
       setResult({ letter: data.letter, subject: data.subject, tips: data.tips });
       setState("result");
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+      setError(err instanceof Error ? err.message : t("letterGenerator.genericError"));
       setState("intake");
     }
   };
@@ -684,14 +529,14 @@ export default function LetterGenerator() {
             <div className="flex items-center justify-center gap-2 mb-4">
               <Sparkles className="h-5 w-5 text-white/80" />
               <span className="text-sm font-medium text-white/80 uppercase tracking-widest">
-                Life Support Tool
+                {t("letterGenerator.hero.badge")}
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Letter Generator
+              {t("letterGenerator.hero.title")}
             </h1>
             <p className="text-base md:text-lg text-white/85 max-w-xl mx-auto">
-              Generate a personalized letter for your specific situation — to your employer, landlord, or utility company.
+              {t("letterGenerator.hero.subtitle")}
             </p>
           </ScrollReveal>
         </div>
@@ -706,7 +551,7 @@ export default function LetterGenerator() {
             <div className="flex items-start gap-2.5 rounded-xl border border-border bg-muted/30 p-4 mb-8">
               <BrandShieldIcon size={16} className="flex-shrink-0 mt-0.5 text-muted-foreground" />
               <p className="text-xs text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Privacy:</strong> No personal information is collected. The letter uses [YOUR NAME] and similar placeholders — you fill in the real details before sending. Nothing is stored after your session ends.
+                <strong className="text-foreground">{t("letterGenerator.privacyNotice.bold")}</strong> {t("letterGenerator.privacyNotice.rest")}
               </p>
             </div>
           </ScrollReveal>
@@ -715,18 +560,18 @@ export default function LetterGenerator() {
           {state === "select" && (
             <ScrollReveal>
               <h2 className="text-lg font-semibold text-foreground mb-1">
-                What kind of letter do you need?
+                {t("letterGenerator.select.title")}
               </h2>
               <p className="text-sm text-muted-foreground mb-6">
-                Copyable template letters are available on the{" "}
+                {t("letterGenerator.select.templatesPre")}{" "}
                 <a href="/support/housing" className="underline underline-offset-2 font-medium text-foreground hover:text-foreground/80">
-                  housing
+                  {t("letterGenerator.select.templatesHousingLink")}
                 </a>{" "}
-                and{" "}
+                {t("letterGenerator.select.templatesMid")}{" "}
                 <a href="/support/employment" className="underline underline-offset-2 font-medium text-foreground hover:text-foreground/80">
-                  employment
+                  {t("letterGenerator.select.templatesEmploymentLink")}
                 </a>{" "}
-                pages, respectively. This tool tailors the letter to your specific situation.
+                {t("letterGenerator.select.templatesPost")}
               </p>
               <div className="grid gap-3">
                 {LETTER_TYPES.map((def) => (
@@ -741,7 +586,7 @@ export default function LetterGenerator() {
             <ScrollReveal>
               <Card className="border-border">
                 <CardHeader className="pb-4">
-                  <CardTitle className="text-base">{selectedDef.title}</CardTitle>
+                  <CardTitle className="text-base">{t(`${LETTER_TYPE_NS}.${selectedDef.i18nKey}.title`)}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   {error && (
@@ -769,14 +614,14 @@ export default function LetterGenerator() {
           {state === "loading" && !selectedDef && (
             <div className="text-center py-16">
               <div className="animate-spin rounded-full h-8 w-8 border-2 border-primary border-t-transparent mx-auto mb-4" />
-              <p className="text-sm text-muted-foreground">Writing your letter...</p>
+              <p className="text-sm text-muted-foreground">{t("letterGenerator.writingLetter")}</p>
             </div>
           )}
 
           {/* Generating overlay when selectedDef exists */}
           {state === "loading" && selectedDef && (
             <div className="mt-4 text-center">
-              <p className="text-sm text-muted-foreground animate-pulse">Writing your letter...</p>
+              <p className="text-sm text-muted-foreground animate-pulse">{t("letterGenerator.writingLetter")}</p>
             </div>
           )}
 
@@ -802,7 +647,7 @@ export default function LetterGenerator() {
           <div className="flex items-center justify-center gap-2">
             <BrandShieldIcon size={16} />
             <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              <strong>{t("letterGenerator.privacyFooter.bold")}</strong> {t("letterGenerator.privacyFooter.rest")}
             </span>
           </div>
         </div>

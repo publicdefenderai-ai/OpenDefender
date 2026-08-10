@@ -10,6 +10,7 @@ import {
   Phone,
   Heart,
   Briefcase,
+  Sunrise,
 } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
@@ -123,15 +124,15 @@ export default function Home() {
       color: "text-amber-700 dark:text-amber-400",
     },
     {
-      Icon: Briefcase,
-      title: t("home.secondary.lifeSupport.title"),
-      desc: t("home.secondary.lifeSupport.desc"),
-      cta: t("home.secondary.lifeSupport.cta"),
-      href: "/for-advocates",
-      accent: "#6d28d9",
-      bg: "bg-violet-50/60 dark:bg-violet-900/10",
-      border: "border-violet-200 dark:border-violet-800/50",
-      color: "text-violet-700 dark:text-violet-400",
+      Icon: Sunrise,
+      title: t("home.secondary.reentry.title"),
+      desc: t("home.secondary.reentry.desc"),
+      cta: t("home.secondary.reentry.cta"),
+      href: "/support/reentry",
+      accent: "#4338ca",
+      bg: "bg-indigo-50/60 dark:bg-indigo-900/10",
+      border: "border-indigo-200 dark:border-indigo-800/50",
+      color: "text-indigo-700 dark:text-indigo-400",
     },
     {
       Icon: Users,
@@ -145,15 +146,15 @@ export default function Home() {
       color: "text-teal-700 dark:text-teal-400",
     },
     {
-      Icon: Heart,
-      title: t("home.secondary.pastConviction.title"),
-      desc: t("home.secondary.pastConviction.desc"),
-      cta: t("home.secondary.pastConviction.cta"),
-      href: "/friends-family",
-      accent: "#1d4ed8",
-      bg: "bg-blue-50/60 dark:bg-blue-900/10",
-      border: "border-blue-200 dark:border-blue-800/50",
-      color: "text-blue-700 dark:text-blue-400",
+      Icon: Briefcase,
+      title: t("home.secondary.lifeSupport.title"),
+      desc: t("home.secondary.lifeSupport.desc"),
+      cta: t("home.secondary.lifeSupport.cta"),
+      href: "/for-advocates",
+      accent: "#6d28d9",
+      bg: "bg-violet-50/60 dark:bg-violet-900/10",
+      border: "border-violet-200 dark:border-violet-800/50",
+      color: "text-violet-700 dark:text-violet-400",
     },
   ];
 

@@ -95,32 +95,6 @@ export default {
       "multilingualDesc": "Inglés, español y chino. Entender sus derechos nunca debería requerir un traductor."
     },
     "paths": {
-      "situationLabel": "¿Cuál es su situación?",
-      "situationSubtitle": "Elija su camino. La mayoría de las personas usa más de uno.",
-      "path1Badge": "Recién arrestado o liberado recientemente",
-      "path1Headline": "Primeras 24 Horas",
-      "path1Desc": "Paso a paso desde el arresto hasta su primera comparecencia.",
-      "path1Cta": "Comenzar Aquí",
-      "path2Badge": "Acusado y necesita entender el proceso",
-      "path2Headline": "Hoja de Ruta del Caso",
-      "path2Desc": "Qué esperar en cada etapa de su caso, en lenguaje claro.",
-      "path2Cta": "Ver Hoja de Ruta",
-      "path3Badge": "Problemas de vida mientras su caso está pendiente",
-      "path3Headline": "Vida y Familia",
-      "path3Desc": "Recursos de vivienda, empleo, cuidado infantil y salud mental.",
-      "path3Cta": "Encontrar Apoyo",
-      "path4Badge": "Preocupaciones de inmigración o familia de estatus mixto",
-      "path4Headline": "Derechos de Inmigración",
-      "path4Desc": "Derechos durante encuentros con ICE para todos en EE.UU.",
-      "path4Cta": "Conozca Sus Derechos",
-      "path5Badge": "Ayudando a un amigo o familiar",
-      "path5Headline": "Ayudando a Alguien que Fue Arrestado",
-      "path5Desc": "Encuéntrelos, entienda lo que está pasando y aprenda qué puede hacer ahora.",
-      "path5Cta": "Guía de Apoyo Familiar",
-      "howToLink": "¿No sabe qué camino elegir? Vea cómo funcionan los cinco caminos juntos →",
-      "pastConvictionLabel": "¿No tiene un caso activo?",
-      "pastConvictionLink1": "Limpiar un antecedente pasado",
-      "pastConvictionLink2": "entender los derechos de verificación de antecedentes",
       "searchPlaceholder": "Buscar cargos, temas y páginas del sitio."
     },
     "doors": {
@@ -160,20 +134,20 @@ export default {
         "desc": "Derechos durante encuentros con ICE para todos en EE.UU.",
         "cta": "Conozca Sus Derechos"
       },
-      "lifeSupport": {
-        "title": "Para Defensores y Defensores Públicos",
-        "desc": "Listas de verificación de admisión, herramientas de mitigación y recursos para trabajadores de casos y defensores.",
-        "cta": "Abrir Centro de Defensores"
+      "reentry": {
+        "title": "¿Ya Tiene Antecedentes Penales?",
+        "desc": "Elimine o selle condenas anteriores, conozca sus derechos frente a verificaciones de antecedentes, y encuentre apoyo de reinserción para vivienda, empleo y beneficios.",
+        "cta": "Reinserción y Limpieza de Antecedentes"
       },
       "findHelp": {
         "title": "Encontrar Ayuda Legal",
         "desc": "Defensores públicos, asistencia legal y recursos judiciales cerca de usted.",
         "cta": "Buscar Directorio"
       },
-      "pastConviction": {
-        "title": "Ayudando a Alguien que Fue Arrestado",
-        "desc": "Encuéntrelos, entienda lo que está pasando y sepa qué puede hacer ahora.",
-        "cta": "Guía de Apoyo Familiar"
+      "lifeSupport": {
+        "title": "Para Defensores y Defensores Públicos",
+        "desc": "Listas de verificación de admisión, herramientas de mitigación y recursos para trabajadores de casos y defensores.",
+        "cta": "Abrir Centro de Defensores"
       }
     },
     "stats": {
@@ -7904,6 +7878,530 @@ export default {
         "item4": "Vístase apropiadamente. Se recomienda ropa de negocios informal o mejor.",
         "item5": "Ponga su teléfono en silencio antes de entrar a la sala del tribunal.",
         "item6": "Informe a su abogado sobre cualquier cambio en su situación desde su última reunión."
+      }
+    }
+  },
+  "warrants": {
+    "hero": {
+      "title": "Órdenes Judiciales y Sus Derechos",
+      "subtitle": "Lo que los oficiales necesitan para entrar a su hogar, registrar sus pertenencias o arrestarlo — y qué puede hacer usted, tengan una orden o no"
+    },
+    "breadcrumb": {
+      "home": "Inicio",
+      "knowYourRights": "Conozca Sus Derechos",
+      "current": "Órdenes Judiciales y Sus Derechos"
+    },
+    "sidebar": {
+      "onThisPage": "En esta página",
+      "related": "Relacionado"
+    },
+    "ifNowBadge": "Si esto es ahora",
+    "sections": {
+      "atTheDoor": { "label": "Oficiales en Su Puerta", "shortLabel": "En Su Puerta" },
+      "whatIsWarrant": { "label": "¿Qué Es una Orden Judicial?", "shortLabel": "¿Qué Es una Orden?" },
+      "searchWarrants": { "label": "Órdenes de Registro", "shortLabel": "Órdenes de Registro" },
+      "arrestWarrants": { "label": "Órdenes de Arresto", "shortLabel": "Órdenes de Arresto" },
+      "noWarrantNeeded": { "label": "Cuándo No Se Necesita una Orden", "shortLabel": "Sin Orden Necesaria" },
+      "iceWarrants": { "label": "ICE vs. Órdenes Judiciales", "shortLabel": "Órdenes de ICE" },
+      "documentedConcerns": { "label": "Preocupaciones Documentadas", "shortLabel": "Preocupaciones Documentadas" },
+      "whatToDo": { "label": "Qué Hacer", "shortLabel": "Qué Hacer" }
+    },
+    "quickLinks": {
+      "iceEncounter": "Derechos ante ICE",
+      "raidsToolkit": "Kit de Preparación para Redadas",
+      "first24Hours": "Primeras 24 Horas Tras un Arresto",
+      "rightToCounsel": "Derecho a un Abogado",
+      "searchSeizure": "Derechos de Registro e Incautación"
+    },
+    "atTheDoor": {
+      "alertBold": "No tiene que abrir la puerta.",
+      "alertRest": "Hable a través de ella y pida ver cualquier orden judicial antes de que ocurra cualquier otra cosa.",
+      "steps": [
+        "Abrir la puerta puede considerarse como consentimiento para la entrada. Puede hablar a través de la puerta o una ventana.",
+        "Pregunte: \"¿Tiene una orden judicial?\" Tiene derecho a preguntar esto.",
+        "Si dicen que sí: puede verla sin abrir la puerta — por ejemplo, pidiéndoles que la deslicen por debajo. Léala antes de que ocurra cualquier otra cosa.",
+        "Revise el documento: busque la firma de un juez y su dirección. Si está firmado por un oficial de inmigración en lugar de un juez, no autoriza la entrada a su hogar sin su consentimiento.",
+        "Si es una orden judicial válida: los oficiales pueden entrar. Si desea invocar su derecho a permanecer en silencio, dígalo claramente — por ejemplo: \"Estoy invocando mi derecho a permanecer en silencio\". Contacte a su abogado lo antes posible. Resistirse físicamente a la entrada, incluso si es ilegal, crea exposición penal adicional.",
+        "Si no hay orden judicial: no tiene que dejarlos entrar. Si desea dejar clara su postura, puede decir con calma a través de la puerta: \"No consiento la entrada\".",
+        "Después del encuentro: anote los nombres de los oficiales, números de placa, lo que se dijo y qué documentos vio."
+      ],
+      "seeFullGuidePrefix": "Consulte la",
+      "seeFullGuideLink": "guía completa de Qué Hacer",
+      "seeFullGuideSuffix": "más abajo para otras situaciones, incluyendo paradas en la calle y órdenes de arresto."
+    },
+    "whatIsWarrant": {
+      "intro1": "Una orden judicial es un documento legal firmado por un juez que da a los oficiales permiso para hacer una cosa específica: registrar un lugar específico o arrestar a una persona específica. Sin una orden judicial, los oficiales generalmente no pueden entrar a su hogar ni detenerlo, a menos que usted dé permiso o aplique una excepción legal.",
+      "intro2": "No todos los documentos que porta un oficial son iguales. Un documento firmado por un supervisor de una agencia de inmigración es muy diferente de uno firmado por un juez federal. La diferencia importa, y se explica en detalle en la sección de ICE más abajo.",
+      "table": {
+        "headerType": "Tipo",
+        "headerWhoSigns": "Quién la firma",
+        "headerWhatItAllows": "Qué permite",
+        "searchWarrant": { "type": "Orden de registro", "whoSigns": "Juez o magistrado", "whatItAllows": "Entrar y registrar un lugar específico en busca de objetos específicos" },
+        "arrestWarrant": { "type": "Orden de arresto", "whoSigns": "Juez o magistrado", "whatItAllows": "Arrestar a una persona específica nombrada" },
+        "iceAdmin": {
+          "type": "Orden administrativa de ICE",
+          "whoSigns": "Oficial de ICE (no un tribunal)",
+          "whatItAllowsPre": "Arresto administrativo. No",
+          "whatItAllowsBold": "autoriza",
+          "whatItAllowsPost": "la entrada a un hogar sin consentimiento"
+        },
+        "iceJudicial": { "type": "Orden judicial de ICE", "whoSigns": "Juez o magistrado federal", "whatItAllows": "Entrada a un hogar para hacer cumplir las leyes de inmigración" }
+      }
+    },
+    "searchWarrants": {
+      "requirementsTitle": "Lo que debe incluir una orden de registro válida",
+      "requirements": [
+        "Una firma de un juez o magistrado, no de un supervisor o jefe de agencia",
+        "La dirección específica que se va a registrar, no solo un área o edificio general",
+        "Una descripción de lo que buscan los oficiales, no un permiso en blanco para registrar todo",
+        "Una fecha vigente; las órdenes judiciales pueden impugnarse si son antiguas o han caducado"
+      ],
+      "canDoTitle": "Lo que los oficiales pueden hacer con una",
+      "canDo": [
+        "Entrar al lugar nombrado",
+        "Registrar las áreas descritas en la orden",
+        "Incautar los objetos listados en la orden",
+        "También incautar contrabando visible a simple vista mientras están legalmente presentes"
+      ],
+      "cannotDoTitle": "Lo que no pueden hacer",
+      "cannotDo": [
+        "Registrar habitaciones o áreas no nombradas en la orden",
+        "Buscar objetos no descritos en la orden",
+        "Usar la orden de una dirección para registrar una dirección diferente",
+        "Ampliar el registro más allá de lo que especifica la orden"
+      ],
+      "checkingBold": "Verificar una orden judicial en la puerta:",
+      "checkingRest": "Tiene derecho a leer cualquier orden judicial antes de que ocurra cualquier otra cosa. Puede pedir a los oficiales que la deslicen por debajo de la puerta. Busque: la firma de un juez, su dirección específica y una descripción de lo que están buscando. No está obligado a ayudar a los oficiales a registrar, e interferir físicamente con un registro conlleva consecuencias legales."
+    },
+    "arrestWarrants": {
+      "p1Pre": "Una orden de arresto da a los oficiales el derecho legal de arrestar a la persona nombrada. No",
+      "p1Bold": "les",
+      "p1Post": "da el derecho de registrar su hogar.",
+      "p2": "Si los oficiales dicen tener una orden de arresto para otra persona y quieren entrar, no tiene que dejarlos entrar a menos que también tengan una orden de registro para su dirección específica.",
+      "p3": "Si la orden de arresto lo nombra a usted: será detenido. No se resista físicamente. Una vez arrestado, su derecho a permanecer en silencio y su derecho a un abogado siguen aplicando desde ese momento en adelante. Diga claramente que está invocando ambos.",
+      "relatedBold": "Relacionado:",
+      "relatedPre": "Para entender qué sucede después de un arresto, consulte la",
+      "relatedLink1": "guía de las Primeras 24 Horas",
+      "relatedMid": "y la",
+      "relatedLink2": "guía de Derecho a un Abogado"
+    },
+    "noWarrantNeeded": {
+      "intro": "Los tribunales han aprobado ciertas situaciones en las que los oficiales pueden actuar sin una orden judicial. Estas excepciones son reales y legales, pero tienen límites, y a veces los oficiales las invocan de forma más amplia de lo que los tribunales han aprobado.",
+      "outro": "Conocer estas excepciones importa: si los oficiales invocan una, puede declarar claramente que no consiente. Puede que no logre detener el registro en ese momento, pero su objeción registrada le da a su abogado algo con qué trabajar."
+    },
+    "exceptions": {
+      "limitLabel": "El límite:",
+      "tapNext": "Toque para ver la siguiente excepción →",
+      "items": [
+        {
+          "title": "Su consentimiento",
+          "description": "Usted dio permiso a los oficiales para registrar o entrar. Esta es la forma más común en que los oficiales evitan el requisito de orden judicial.",
+          "limit": "Tiene derecho a negarse. Decir 'no consiento' es legal y no puede usarse en su contra. El consentimiento obtenido mediante presión o engaño puede impugnarse en el tribunal."
+        },
+        {
+          "title": "Emergencia (circunstancias exigentes)",
+          "description": "Los oficiales enfrentan una emergencia real: alguien está en peligro, un sospechoso está huyendo, o se está a punto de destruir evidencia.",
+          "limit": "La emergencia debe ser genuina y urgente, no inventada después del hecho. Los tribunales examinan cuidadosamente si existió una emergencia real."
+        },
+        {
+          "title": "A simple vista",
+          "description": "Los oficiales ya están legalmente presentes y pueden ver contrabando sin buscarlo.",
+          "limit": "Los oficiales deben estar ya presentes legalmente. No pueden entrar sin autorización para obtener una vista 'a simple vista' de algo."
+        },
+        {
+          "title": "Registro durante un arresto legal",
+          "description": "Cuando los oficiales realizan un arresto válido, pueden registrar a la persona y el área inmediatamente a su alrededor en busca de armas o evidencia.",
+          "limit": "Esto no se extiende a toda la casa o vehículo. Cubre a la persona y lo que está a su alcance inmediato."
+        },
+        {
+          "title": "Registro de vehículos",
+          "description": "Los autos tienen menos protección de privacidad que los hogares bajo la ley. Los oficiales con causa probable pueden registrar un vehículo sin una orden judicial.",
+          "limit": "Aun así necesitan una razón real. Una sospecha no es suficiente. El registro debe relacionarse con esa razón."
+        },
+        {
+          "title": "Parada investigativa breve (parada Terry)",
+          "description": "Los oficiales con sospecha razonable pueden detenerlo brevemente y hacerle preguntas, y pueden palparlo por encima de la ropa en busca de armas.",
+          "limit": "El palpado es solo para armas, no un registro completo. La 'sospecha razonable' debe basarse en hechos específicos, no en una sensación general."
+        }
+      ]
+    },
+    "iceWarrants": {
+      "intro": "Esta distinción es fundamental para cualquier persona que pueda tener contacto con la aplicación de las leyes de inmigración.",
+      "criticalBold": "Una orden administrativa de ICE no es una orden judicial.",
+      "criticalRest": "No da a los oficiales el derecho legal de entrar a su hogar sin su consentimiento.",
+      "adminCard": {
+        "badge": "Orden Administrativa",
+        "title": "Formulario I-200 o I-205",
+        "point1": "Firmada por un oficial de ICE, no por un tribunal",
+        "point2": "No autoriza la entrada a un hogar sin consentimiento",
+        "point3": "Este es el documento que ICE porta con más frecuencia",
+        "howToIdentifyLabel": "Cómo identificarla:",
+        "howToIdentifyText": "En la parte superior dice \"U.S. Department of Homeland Security\" y está firmada por un \"Deportation Officer\" o \"Immigration Enforcement Agent\", no por un juez."
+      },
+      "judicialCard": {
+        "badge": "Orden Judicial",
+        "title": "Emitida por un Tribunal Federal",
+        "point1": "Firmada por un juez o magistrado de un Tribunal de Distrito de EE. UU.",
+        "point2": "Sí autoriza la entrada a un hogar",
+        "point3": "Mucho más rara en la aplicación de las leyes de inmigración",
+        "howToIdentifyLabel": "Cómo identificarla:",
+        "howToIdentifyText": "El documento estará en membrete de un tribunal federal y firmado por un juez, haciendo referencia a un tribunal federal específico (por ejemplo, \"United States District Court for the __ District\")."
+      },
+      "rightsApply": {
+        "title": "Sus derechos aplican sin importar su estatus migratorio",
+        "p1": "La Cuarta Enmienda protege a todas las personas en los Estados Unidos de registros e incautaciones ilegales, no solo a los ciudadanos. Su derecho a rechazar la entrada sin orden judicial a su hogar aplica ya sea que sea ciudadano, residente permanente, una persona indocumentada o un visitante.",
+        "p2": "También tiene derecho a permanecer en silencio. No está obligado a responder preguntas sobre su estatus migratorio, su país de origen, o cómo entró al país."
+      },
+      "resourcesPre": "Para guiones de encuentros con ICE, guías de escenarios y tarjetas rojas imprimibles, consulte la página de",
+      "resourcesLink1": "Conozca Sus Derechos ante Inmigración",
+      "resourcesMid": "y el",
+      "resourcesLink2": "Kit de Preparación para Redadas"
+    },
+    "documentedConcerns": {
+      "intro": "Tribunales, organizaciones legales y organismos de supervisión gubernamental han documentado situaciones en las que las prácticas de aplicación de la ley no siguieron los requisitos estándar de orden judicial. Esta sección describe lo que se ha encontrado — no para sugerir que todo oficial actúa así, sino para que usted sepa qué observar y cómo responder si le sucede a usted.",
+      "items": [
+        {
+          "title": "Órdenes administrativas usadas para entrar a hogares",
+          "body": "Múltiples tribunales federales han dictaminado que una orden administrativa de ICE (Formulario I-200 o I-205) no satisface el requisito de la Cuarta Enmienda de una orden judicial para entrar a un hogar. La ACLU y el National Immigration Law Center han documentado casos en los que oficiales entraron a hogares presentando solo documentos administrativos, sin consentimiento y sin una orden judicial emitida por un tribunal."
+        },
+        {
+          "title": "Consentimiento obtenido bajo presión",
+          "body": "Los tribunales han reconocido que el consentimiento puede no ser verdaderamente voluntario cuando se obtiene bajo coerción, miedo, o cuando los residentes no comprenden que tienen derecho a negarse. El Vera Institute of Justice y la ACLU han documentado patrones de oficiales que obtienen \"consentimiento\" de personas que no sabían que podían decir que no, incluyendo situaciones en las que los oficiales ya estaban posicionados en todas las salidas de un hogar o edificio antes de preguntar."
+        },
+        {
+          "title": "Requisitos de tocar y anunciarse",
+          "body": "Incluso cuando los oficiales tienen una orden judicial válida, generalmente están obligados a tocar, anunciar su presencia y dar a los ocupantes un breve momento para responder antes de forzar la entrada (18 U.S.C. § 3109 para oficiales federales; las leyes estatales equivalentes varían). Informes de organizaciones legales y demandas han documentado casos, tanto en la aplicación penal como de inmigración, en los que este requisito no se siguió."
+        },
+        {
+          "title": "La zona fronteriza de 100 millas",
+          "body": "La Oficina de Aduanas y Protección Fronteriza de EE. UU. (CBP) tiene una autoridad legal más amplia dentro de las 100 millas de cualquier frontera o costa de EE. UU. — un área que incluye la mayoría de las ciudades más grandes del país, incluyendo Nueva York, Los Ángeles, Chicago, Houston y Miami. Dentro de esta zona, la CBP puede detener a personas en puntos de control fijos y preguntarles sobre su ciudadanía sin los mismos requisitos de orden judicial que aplican en otros lugares. La ACLU ha publicado documentación extensa de paradas y registros que, según reportan los residentes, fueron más allá de lo que permite la ley."
+        },
+        {
+          "title": "Remoción acelerada",
+          "body": "La ley federal de inmigración permite la remoción acelerada (deportación sin una audiencia judicial) para personas que no pueden demostrar que han estado presentes continuamente en los Estados Unidos durante al menos dos años. Este proceso opera fuera del marco normal de orden judicial. El alcance de quién está sujeto a la remoción acelerada ha cambiado con el tiempo debido a cambios de política. Consulte a un abogado de inmigración para entender las reglas actuales."
+        }
+      ],
+      "violatedBold": "Si cree que se violaron sus derechos:",
+      "violatedRest": "Documente todo: quién estaba presente, qué se dijo, qué documentos se mostraron. Informe a su abogado lo antes posible. Una entrada al hogar sin orden judicial o sin consentimiento puede ser motivo para suprimir evidencia o presentar otros desafíos legales. La ACLU y el NILC también tienen recursos para personas que deseen reportar violaciones de derechos."
+    },
+    "divider": {
+      "nowWhat": "Ahora, qué puede hacer usted"
+    },
+    "whatToDo": {
+      "intro": "A continuación se describe cómo funcionan estos derechos en la práctica y qué puede hacer legalmente en cada situación.",
+      "atHome": {
+        "title": "Si los oficiales vienen a su hogar",
+        "steps": [
+          "Abrir la puerta puede considerarse como consentimiento para la entrada. Hable a través de la puerta o una ventana.",
+          "Pregunte: \"¿Tiene una orden judicial?\"",
+          "Puede ver la orden judicial sin abrir la puerta — por ejemplo, pidiéndoles que la deslicen por debajo. Busque la firma de un juez y su dirección.",
+          "Si es una orden judicial válida: pueden entrar. Mantenga la calma. Si desea invocar su derecho a permanecer en silencio, dígalo claramente y llame a su abogado lo antes posible.",
+          "Si no hay orden judicial, o los oficiales solo tienen un formulario administrativo de ICE: no tiene que dejarlos entrar. Puede decir: \"No consiento la entrada\".",
+          "Resistirse físicamente a la entrada, incluso cuando la entrada es ilegal, crea exposición penal adicional. Impugne la entrada ilegal en el tribunal después. Su no consentimiento declarado forma parte del registro.",
+          "Anote todo tan pronto como sea seguro hacerlo: nombres, números de placa, lo que se dijo y qué documentos vio."
+        ]
+      },
+      "onStreet": {
+        "title": "Si lo detienen en la calle",
+        "steps": [
+          "Pregunte: \"¿Soy libre de irme?\" Si la respuesta es sí, puede retirarse.",
+          "Si no: está siendo detenido. Mantenga la calma. Correr puede resultar en cargos adicionales.",
+          "Si desea invocar su derecho a permanecer en silencio, dígalo claramente: \"Estoy invocando mi derecho a permanecer en silencio\".",
+          "Los oficiales pueden palparlo por encima de la ropa en busca de armas durante una parada legal. Esto no es un registro completo. Puede decir: 'No consiento un registro'. Su objeción forma parte del registro aunque los oficiales continúen.",
+          "No está obligado a responder preguntas sobre a dónde va, dónde ha estado, o su estatus migratorio."
+        ]
+      },
+      "arrestWarrant": {
+        "title": "Si los oficiales tienen una orden de arresto para usted",
+        "steps": [
+          "Resistirse físicamente al arresto crea exposición penal adicional y peligro físico.",
+          "Si desea invocar sus derechos, dígalo claramente: \"Estoy invocando mi derecho a permanecer en silencio y mi derecho a un abogado\".",
+          "No está obligado a responder preguntas más allá de su nombre. Si desea invocar esta protección, puede decir: 'No responderé preguntas sin un abogado presente'.",
+          "Contacte a su abogado tan pronto como se le permita hacer una llamada telefónica."
+        ]
+      },
+      "alwaysBold": "Siempre, en toda situación:",
+      "alwaysRest": "Anote lo que sucedió tan pronto como sea seguro hacerlo: nombres de los oficiales, números de placa, lo que dijeron, qué documentos mostraron, y cualquier testigo. Su memoria se desvanecerá. Un relato escrito es algo que su abogado puede usar."
+    },
+    "relatedGuides": {
+      "title": "Guías Relacionadas",
+      "searchSeizure": "Derechos de Registro e Incautación",
+      "rightToCounsel": "Derecho a un Abogado",
+      "knowYourRights": "Conozca Sus Derechos",
+      "iceEncounter": "Derechos ante ICE",
+      "raidsToolkit": "Kit de Preparación para Redadas",
+      "first24": "Sus Primeras 24 Horas"
+    },
+    "disclaimer": "Esta página proporciona información legal general, no asesoría legal. La ley sobre órdenes judiciales depende en gran medida de los hechos y varía según la jurisdicción. Si cree que se violaron sus derechos, consulte a un abogado con licencia en defensa penal o inmigración sobre su situación específica."
+  },
+  "letterGenerator": {
+    "hero": {
+      "badge": "Generador de cartas",
+      "title": "Obtenga ayuda para escribir una carta",
+      "subtitle": "Genere una carta profesional y de uso general para su empleador, arrendador o compañía de servicios públicos. Responda algunas preguntas a continuación."
+    },
+    "privacyNotice": {
+      "bold": "Nada de lo que escriba aquí se guarda.",
+      "rest": "Sus respuestas se usan una sola vez para generar una carta y luego se descartan. Nunca almacenamos su nombre, los detalles de su caso ni el contenido de su carta."
+    },
+    "select": {
+      "title": "¿Qué tipo de carta necesita?",
+      "templatesPre": "¿Busca una plantilla ya hecha? Hay cartas plantilla que puede copiar disponibles en las páginas de",
+      "templatesHousingLink": "vivienda",
+      "templatesMid": "y",
+      "templatesEmploymentLink": "empleo",
+      "templatesPost": "."
+    },
+    "back": "Atrás",
+    "optionalTag": "(opcional)",
+    "selectPlaceholder": "Seleccione una opción...",
+    "generateButton": "Generar mi carta",
+    "writingLetter": "Escribiendo su carta...",
+    "genericError": "Ocurrió un error al generar su carta. Por favor, inténtelo de nuevo.",
+    "disclosureAlert": "Esta carta divulga intencionalmente un antecedente penal a un empleador. Úsela solo si ha decidido que desea compartir esta información.",
+    "generalNoteBold": "Nota:",
+    "generalNoteRest": "Estas cartas usan un lenguaje general y profesional y no divulgan detalles específicos del caso a menos que usted decida agregarlos.",
+    "employerHandbookBold": "Revise primero el manual del empleado.",
+    "employerHandbookRest": "Algunos empleadores requieren aviso previo o documentación específica para tomar tiempo libre; revise la política de su empresa antes de enviar esta carta.",
+    "result": {
+      "title": "Su carta preliminar",
+      "writeAnother": "Escribir otra",
+      "subjectLabel": "Asunto:",
+      "copyButton": "Copiar carta",
+      "copiedButton": "Copiado",
+      "printButton": "Imprimir",
+      "printTitle": "Carta",
+      "printNote": "Reemplace cualquier texto entre [corchetes] con sus propios datos antes de enviarla. Esta carta se generó como un borrador de uso general y no constituye asesoría legal.",
+      "beforeYouSend": "Antes de enviarla",
+      "disclaimer": "Esta carta es un borrador de uso general, no asesoría legal. Revísela cuidadosamente y edite cualquier parte que no corresponda a su situación antes de enviarla."
+    },
+    "privacyFooter": {
+      "bold": "La privacidad es lo primero.",
+      "rest": "Esta herramienta no almacena sus respuestas ni las cartas generadas."
+    },
+    "types": {
+      "employerCourtDates": {
+        "title": "Solicitar tiempo libre para asistir a la corte",
+        "description": "Pida a su empleador tiempo libre para asistir a citas judiciales, sin dar demasiados detalles.",
+        "fields": {
+          "frequency": {
+            "label": "¿Con qué frecuencia necesitará tiempo libre?",
+            "options": [
+              "Solo una fecha",
+              "Algunas fechas en los próximos meses",
+              "De forma regular y continua",
+              "Todavía no estoy seguro/a"
+            ]
+          },
+          "whoseCase": {
+            "label": "¿De quién es este asunto legal?",
+            "options": [
+              "Mi propio caso",
+              "El caso de un familiar"
+            ]
+          },
+          "documentation": {
+            "label": "¿Puede proporcionar documentación de la corte si su empleador la solicita?",
+            "options": [
+              "Sí, tengo una notificación o citación judicial",
+              "Puedo solicitar una",
+              "No, prefiero no compartir documentación"
+            ]
+          },
+          "additionalContext": {
+            "label": "¿Algo más que le gustaría que la carta abordara?",
+            "placeholder": "Opcional: por ejemplo, una forma preferida de recuperar las horas perdidas"
+          }
+        }
+      },
+      "employerExplainAbsence": {
+        "title": "Explicar una ausencia a su empleador",
+        "description": "Explique una ausencia reciente o próxima relacionada con un asunto legal, de forma breve y profesional.",
+        "fields": {
+          "duration": {
+            "label": "¿Cuánto tiempo estuvo (o estará) ausente?",
+            "options": [
+              "Menos de un día",
+              "Uno o dos días",
+              "Varios días",
+              "Más de una semana"
+            ]
+          },
+          "reasonToShare": {
+            "label": "¿Qué le gustaría decirle a su empleador sobre el motivo?",
+            "options": [
+              "Un asunto legal o judicial",
+              "Una emergencia familiar relacionada con un asunto legal",
+              "Un asunto personal que prefiero mantener general",
+              "Dejaré la carta en términos generales"
+            ]
+          },
+          "currentStatus": {
+            "label": "¿Cuál es el estado actual del asunto?",
+            "options": [
+              "Resuelto",
+              "En curso",
+              "Próximo",
+              "Prefiero no especificar"
+            ]
+          },
+          "additionalContext": {
+            "label": "¿Algo más que le gustaría que la carta abordara?",
+            "placeholder": "Opcional: por ejemplo, cuándo espera regresar"
+          }
+        }
+      },
+      "employerRecordDisclosure": {
+        "title": "Divulgar un antecedente a un empleador",
+        "description": "Comparta de manera proactiva y profesional un antecedente penal con un empleador potencial o actual.",
+        "fields": {
+          "typeOfRole": {
+            "label": "¿Para qué tipo de puesto está solicitando o en cuál trabaja actualmente?",
+            "placeholder": "por ejemplo, auxiliar de almacén, asistente de oficina"
+          },
+          "timeSinceOffense": {
+            "label": "¿Hace cuánto tiempo ocurrió esto?",
+            "options": [
+              "Hace menos de un año",
+              "Hace uno a tres años",
+              "Hace tres a diez años",
+              "Hace más de diez años"
+            ]
+          },
+          "generalCategory": {
+            "label": "¿Qué categoría general lo describe mejor?",
+            "options": [
+              "Un delito no violento",
+              "Una infracción de tránsito",
+              "Un delito relacionado con drogas",
+              "Un delito contra la propiedad",
+              "Prefiero describirlo solo en términos generales"
+            ]
+          },
+          "stepsSinceThen": {
+            "label": "¿Qué medidas ha tomado desde entonces?",
+            "options": [
+              "Completé la libertad condicional o supervisión",
+              "Completé un programa de tratamiento o educación",
+              "Mantuve un empleo estable",
+              "Ninguna de estas aplica"
+            ]
+          }
+        }
+      },
+      "landlordPaymentPlan": {
+        "title": "Solicitar un plan de pago de alquiler",
+        "description": "Pida a su arrendador un aplazamiento o arreglo de pago, con un plan concreto para ponerse al día.",
+        "fields": {
+          "howFarBehind": {
+            "label": "¿Cuánto atraso tiene en el alquiler?",
+            "options": [
+              "Menos de un mes",
+              "Un mes",
+              "Dos meses",
+              "Más de dos meses"
+            ]
+          },
+          "reason": {
+            "label": "¿Cuál es el motivo principal del déficit?",
+            "options": [
+              "Una pérdida de empleo o reducción de horas reciente",
+              "Un gasto médico o familiar inesperado",
+              "Un asunto legal que afecta sus ingresos",
+              "Prefiero mantener esto general"
+            ]
+          },
+          "partialPayment": {
+            "label": "¿Puede hacer un pago parcial ahora?",
+            "options": [
+              "Sí, puedo pagar algo ahora",
+              "Ahora no, pero pronto",
+              "No, en este momento no"
+            ]
+          },
+          "catchUpPlan": {
+            "label": "¿Cuál es su plan para ponerse al día?",
+            "placeholder": "por ejemplo, pagar $100 adicionales al mes a partir del próximo mes"
+          }
+        }
+      },
+      "landlordSituationNotice": {
+        "title": "Notificar a su arrendador un cambio de circunstancias",
+        "description": "Informe de manera proactiva a su arrendador sobre un cambio en su situación para mantener una buena relación.",
+        "fields": {
+          "whatToCommunicate": {
+            "label": "¿Qué le gustaría comunicarle a su arrendador?",
+            "options": [
+              "Un cambio temporal en los ingresos",
+              "Un cambio en quién vive en la unidad",
+              "Una ausencia próxima de la unidad",
+              "Un asunto legal que puede afectar su horario"
+            ]
+          },
+          "currentStatus": {
+            "label": "¿Cuál es el estado actual?",
+            "options": [
+              "Resuelto",
+              "En curso",
+              "Prefiero no especificar"
+            ]
+          },
+          "whatYouAreAsking": {
+            "label": "¿Hay algo específico que esté solicitando?",
+            "options": [
+              "Solo mantenerlo informado, sin solicitud",
+              "Una breve consideración o flexibilidad",
+              "Un punto de contacto en caso de que no pueda localizarme"
+            ]
+          },
+          "additionalContext": {
+            "label": "¿Algo más que le gustaría que la carta abordara?",
+            "placeholder": "Opcional"
+          }
+        }
+      },
+      "utilityHardship": {
+        "title": "Solicitar asistencia por dificultades económicas para servicios públicos",
+        "description": "Contacte a una compañía de servicios públicos para solicitar un plan de pago, aplazamiento o programa de asistencia para evitar la desconexión.",
+        "fields": {
+          "utilityType": {
+            "label": "¿Para qué servicio es esto?",
+            "options": [
+              "Electricidad",
+              "Gas",
+              "Agua",
+              "Internet o teléfono",
+              "Más de un servicio"
+            ]
+          },
+          "currentSituation": {
+            "label": "¿Cuál es su situación actual?",
+            "options": [
+              "Enfrenta una desconexión próxima",
+              "Ya fue desconectado",
+              "Trata de adelantarse a un déficit",
+              "No está seguro/a, solo explorando opciones"
+            ]
+          },
+          "reason": {
+            "label": "¿Cuál es el motivo principal de la dificultad económica?",
+            "options": [
+              "Una pérdida de empleo o reducción de horas reciente",
+              "Un gasto médico o familiar inesperado",
+              "Un asunto legal que afecta sus ingresos",
+              "Prefiero mantener esto general"
+            ]
+          },
+          "whatIAmRequesting": {
+            "label": "¿Qué está solicitando?",
+            "options": [
+              "Un plan de pago",
+              "Una breve prórroga",
+              "Inscripción en un programa de asistencia",
+              "No estoy seguro/a; por favor sugiera opciones"
+            ]
+          }
+        }
       }
     }
   }
