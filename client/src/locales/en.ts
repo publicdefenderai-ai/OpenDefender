@@ -7028,6 +7028,10 @@ export default {
         "mockQA": {
           "title": "Mock Q&A Practice",
           "description": "Practice answering questions you might face in court proceedings."
+        },
+        "familyToolkit": {
+          "title": "Friends & Family Toolkit",
+          "description": "Practical tools and scripts for families supporting a loved one through the legal process."
         }
       },
       "findResources": {
@@ -7052,6 +7056,10 @@ export default {
         "recordExpungement": {
           "title": "Record Expungement",
           "description": "Learn about sealing criminal records."
+        },
+        "recordClearanceScreener": {
+          "title": "Record Clearance Screener",
+          "description": "Check if you may qualify to seal or expunge your record."
         }
       },
       "lifeSupport": {
@@ -7084,6 +7092,18 @@ export default {
         "childcare": {
           "title": "Childcare Resources",
           "description": "Finding childcare during court dates and legal appointments."
+        },
+        "pdIntakeForm": {
+          "title": "Public Defender Intake Form",
+          "description": "Prepare your personal, employment, and case details before your first PD meeting."
+        },
+        "courtDateGuide": {
+          "title": "Court Date Guide",
+          "description": "Confirm your hearing, set reminders, and know exactly what to bring."
+        },
+        "bailPreparation": {
+          "title": "Bail Preparation Checklist",
+          "description": "Documents and steps to prepare for your bail hearing."
         }
       },
       "reference": {
@@ -7104,6 +7124,14 @@ export default {
         "documentLibrary": {
           "title": "Document Library",
           "description": "Legal forms, templates, and guides."
+        },
+        "howItWorks": {
+          "title": "How It Works",
+          "description": "See how OpenDefender's five paths fit together and where to start."
+        },
+        "dataSources": {
+          "title": "Data Sources",
+          "description": "Where our legal guidance comes from and how we verify it."
         }
       },
       "attorneyTools": {
@@ -7116,7 +7144,33 @@ export default {
         "courtRecords": {
           "title": "Court Records Search",
           "description": "Search federal court documents via PACER/RECAP."
+        },
+        "forAdvocates": {
+          "title": "For Advocates",
+          "description": "Tools for case workers, social workers, and legal advocates."
+        },
+        "mitigationBuilder": {
+          "title": "Mitigation Builder",
+          "description": "AI-assisted tool to help build a compelling mitigation narrative."
+        },
+        "intakeChecklist": {
+          "title": "Intake Checklist",
+          "description": "Structured intake questionnaire for advocates and case workers."
         }
+      },
+      "immigration": {
+        "title": "Immigration",
+        "description": "Rights and resources for immigrants and mixed-status families",
+        "overview":         { "title": "Immigration Guidance",           "description": "Rights during ICE encounters, enforcement, and deportation proceedings." },
+        "knowYourRights":   { "title": "Know Your Rights (Immigration)", "description": "Your rights regardless of citizenship or immigration status." },
+        "findAttorney":     { "title": "Find an Immigration Lawyer",     "description": "Locate immigration legal representation near you." },
+        "findDetained":     { "title": "Find a Detained Person",         "description": "Locate someone held in ICE or federal immigration custody." },
+        "afterDeportation": { "title": "After Deportation",              "description": "Help for families separated by deportation on both sides of the border." },
+        "workplaceRaids":   { "title": "Workplace Raids",                "description": "Your rights if ICE enters your workplace." },
+        "raidsToolkit":     { "title": "Raids Toolkit",                  "description": "Know-your-rights cards and response guides for ICE raids." },
+        "bondHearings":     { "title": "Bond Hearings",                  "description": "How immigration bond hearings work and how to prepare." },
+        "dacaTps":          { "title": "DACA & TPS",                     "description": "Information on Deferred Action for Childhood Arrivals and Temporary Protected Status." },
+        "familyPlanning":   { "title": "Family Planning",                "description": "Guidance for mixed-status families navigating immigration enforcement." }
       },
       "developersPartners": {
         "title": "Developers & Partners",
