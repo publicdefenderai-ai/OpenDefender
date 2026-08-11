@@ -10,6 +10,7 @@ import { setupVite, serveStatic, log } from "./vite";
 import { opsLog } from "./utils/dev-logger";
 import { initializeCostTracker } from "./services/cost-tracker";
 import { assertProductionEnv } from "./startup-checks";
+import { isCrossOriginRequest } from "./middleware/csrf-check";
 
 // Production environment guard — fail loud at startup, not silently at runtime.
 //
@@ -88,12 +89,15 @@ app.use(session({
 // SECURITY: CSRF Protection for API endpoints
 // ============================================================================
 // For JSON APIs, we use a combination of:
-// 1. SameSite cookies (set on client-side cookies)
+// 1. SameSite=lax cookies (first line of defense, but not sufficient alone —
+//    the session cookie above IS used for auth: it backs the guidance
+//    session-ownership binding, so this is not a cookie-free JSON API).
 // 2. Content-Type validation for state-changing requests
-// 3. Origin/Referer header checking
-//
-// This prevents cross-site request forgery without requiring CSRF tokens,
-// which is appropriate for JSON-based APIs that don't use cookies for auth.
+// 3. Strict Origin/Referer header checking — REQUIRED, not just checked when
+//    present. A request with no Origin or Referer header is rejected rather
+//    than assumed same-origin; real browsers always send at least one of
+//    these on state-changing requests, so a missing pair is itself a signal
+//    of a forged/non-browser request, not a false positive to wave through.
 app.use((req, res, next) => {
   // Only check state-changing methods
   if (['POST', 'PUT', 'DELETE', 'PATCH'].includes(req.method)) {
@@ -121,20 +125,22 @@ app.use((req, res, next) => {
         });
       }
 
-      // Check Origin header for additional CSRF protection
+      // Check Origin/Referer header for CSRF protection.
+      // In production, a state-changing API request must present an Origin
+      // or Referer header whose host matches ours. Previously this only
+      // checked the header when present, so a request with no Origin header
+      // at all — trivial for a script or a non-browser client to produce —
+      // bypassed the check entirely and relied on SameSite=lax alone.
       const origin = req.headers['origin'];
+      const referer = req.headers['referer'];
       const host = req.headers['host'];
 
-      // In production, verify origin matches host
-      if (process.env.NODE_ENV === 'production' && origin) {
-        const originHost = new URL(origin).host;
-        if (originHost !== host) {
-          opsLog('security', `Cross-origin request blocked: ${origin} -> ${host}`);
-          return res.status(403).json({
-            success: false,
-            error: 'Cross-origin requests not allowed'
-          });
-        }
+      if (process.env.NODE_ENV === 'production' && isCrossOriginRequest({ origin, referer, host })) {
+        opsLog('security', `Cross-origin request blocked: origin=${origin ?? '(none)'} referer=${referer ?? '(none)'} -> ${host}`);
+        return res.status(403).json({
+          success: false,
+          error: 'Cross-origin requests not allowed'
+        });
       }
     }
   }
