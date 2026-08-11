@@ -7030,6 +7030,10 @@ export default {
         "mockQA": {
           "title": "Práctica de Preguntas y Respuestas",
           "description": "Practique respondiendo preguntas que podría enfrentar en procedimientos judiciales."
+        },
+        "familyToolkit": {
+          "title": "Kit de Herramientas para Amigos y Familiares",
+          "description": "Herramientas prácticas para familias que apoyan a un ser querido en el proceso legal."
         }
       },
       "findResources": {
@@ -7054,6 +7058,10 @@ export default {
         "recordExpungement": {
           "title": "Limpieza de Antecedentes",
           "description": "Aprenda sobre el sellado de antecedentes penales."
+        },
+        "recordClearanceScreener": {
+          "title": "Evaluador de Elegibilidad para Limpieza de Antecedentes",
+          "description": "Verifique si puede calificar para sellar o expungir su expediente."
         }
       },
       "lifeSupport": {
@@ -7086,6 +7094,18 @@ export default {
         "childcare": {
           "title": "Recursos de Cuidado Infantil",
           "description": "Encontrar cuidado infantil durante fechas de tribunal y citas legales."
+        },
+        "pdIntakeForm": {
+          "title": "Formulario de Admisión para Defensor Público",
+          "description": "Prepare su información personal, laboral y de caso antes de su primera reunión con el defensor."
+        },
+        "courtDateGuide": {
+          "title": "Guía para la Fecha de Audiencia",
+          "description": "Confirme su audiencia, configure recordatorios y sepa exactamente qué traer."
+        },
+        "bailPreparation": {
+          "title": "Lista de Verificación para Preparación de Fianza",
+          "description": "Documentos y pasos para prepararse para su audiencia de fianza."
         }
       },
       "reference": {
@@ -7106,6 +7126,14 @@ export default {
         "documentLibrary": {
           "title": "Biblioteca de Documentos",
           "description": "Formularios legales, plantillas y guías."
+        },
+        "howItWorks": {
+          "title": "Cómo Funciona",
+          "description": "Vea cómo los cinco caminos de OpenDefender encajan y por dónde empezar."
+        },
+        "dataSources": {
+          "title": "Fuentes de Datos",
+          "description": "De dónde proviene nuestra orientación legal y cómo la verificamos."
         }
       },
       "attorneyTools": {
@@ -7118,7 +7146,47 @@ export default {
         "courtRecords": {
           "title": "Búsqueda de Registros Judiciales",
           "description": "Busque documentos de tribunales federales vía PACER/RECAP."
+        },
+        "forAdvocates": {
+          "title": "Para Defensores",
+          "description": "Herramientas para trabajadores de casos, trabajadores sociales y defensores legales."
+        },
+        "mitigationBuilder": {
+          "title": "Constructor de Mitigación",
+          "description": "Herramienta asistida por IA para construir una narrativa de mitigación convincente."
+        },
+        "intakeChecklist": {
+          "title": "Lista de Verificación de Admisión",
+          "description": "Cuestionario de admisión estructurado para defensores y trabajadores de casos."
         }
+      },
+      "immigration": {
+        "title": "Inmigración",
+        "description": "Derechos y recursos para inmigrantes y familias de estatus mixto",
+        "overview":         { "title": "Orientación sobre Inmigración",              "description": "Derechos durante encuentros con el ICE, cumplimiento y procedimientos de deportación." },
+        "knowYourRights":   { "title": "Conozca Sus Derechos (Inmigración)",         "description": "Sus derechos independientemente de su ciudadanía o estatus migratorio." },
+        "findAttorney":     { "title": "Encontrar un Abogado de Inmigración",        "description": "Localice representación legal de inmigración cerca de usted." },
+        "findDetained":     { "title": "Encontrar a una Persona Detenida",           "description": "Localice a alguien detenido por ICE o en custodia federal de inmigración." },
+        "afterDeportation": { "title": "Después de la Deportación",                  "description": "Ayuda para familias separadas por deportación a ambos lados de la frontera." },
+        "workplaceRaids":   { "title": "Redadas en el Lugar de Trabajo",             "description": "Sus derechos si el ICE entra a su lugar de trabajo." },
+        "raidsToolkit":     { "title": "Kit de Herramientas para Redadas",           "description": "Tarjetas de derechos y guías de respuesta para redadas del ICE." },
+        "bondHearings":     { "title": "Audiencias de Fianza",                       "description": "Cómo funcionan las audiencias de fianza de inmigración y cómo prepararse." },
+        "dacaTps":          { "title": "DACA y TPS",                                 "description": "Información sobre Acción Diferida para los Llegados en la Infancia y Estado de Protección Temporal." },
+        "familyPlanning":   { "title": "Planificación Familiar",                     "description": "Orientación para familias de estatus mixto que navegan el cumplimiento de inmigración." }
+      },
+      "immigration": {
+        "title": "Inmigración",
+        "description": "Derechos y recursos para inmigrantes y familias de estatus mixto",
+        "overview":         { "title": "Orientación sobre Inmigración",              "description": "Derechos durante encuentros con el ICE, cumplimiento y procedimientos de deportación." },
+        "knowYourRights":   { "title": "Conozca Sus Derechos (Inmigración)",         "description": "Sus derechos independientemente de su ciudadanía o estatus migratorio." },
+        "findAttorney":     { "title": "Encontrar un Abogado de Inmigración",        "description": "Localice representación legal de inmigración cerca de usted." },
+        "findDetained":     { "title": "Encontrar a una Persona Detenida",           "description": "Localice a alguien detenido por ICE o en custodia federal de inmigración." },
+        "afterDeportation": { "title": "Después de la Deportación",                  "description": "Ayuda para familias separadas por deportación a ambos lados de la frontera." },
+        "workplaceRaids":   { "title": "Redadas en el Lugar de Trabajo",             "description": "Sus derechos si el ICE entra a su lugar de trabajo." },
+        "raidsToolkit":     { "title": "Kit de Herramientas para Redadas",           "description": "Tarjetas de derechos y guías de respuesta para redadas del ICE." },
+        "bondHearings":     { "title": "Audiencias de Fianza",                       "description": "Cómo funcionan las audiencias de fianza de inmigración y cómo prepararse." },
+        "dacaTps":          { "title": "DACA y TPS",                                 "description": "Información sobre Acción Diferida para los Llegados en la Infancia y Estado de Protección Temporal." },
+        "familyPlanning":   { "title": "Planificación Familiar",                     "description": "Orientación para familias de estatus mixto que navegan el cumplimiento de inmigración." }
       },
       "developersPartners": {
         "title": "Desarrolladores y Socios",

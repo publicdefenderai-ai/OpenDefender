@@ -7030,6 +7030,10 @@ export default {
         "mockQA": {
           "title": "模拟问答练习",
           "description": "练习回答您在法庭程序中可能面对的问题。"
+        },
+        "familyToolkit": {
+          "title": "家人与朋友工具包",
+          "description": "为支持亲人经历法律程序的家庭提供的实用工具和话术。"
         }
       },
       "findResources": {
@@ -7054,6 +7058,10 @@ export default {
         "recordExpungement": {
           "title": "记录清除",
           "description": "了解如何封存犯罪记录。"
+        },
+        "recordClearanceScreener": {
+          "title": "犯罪记录清除资格评估",
+          "description": "检查您是否有资格封存或清除犯罪记录。"
         }
       },
       "lifeSupport": {
@@ -7086,6 +7094,18 @@ export default {
         "childcare": {
           "title": "儿童看护资源",
           "description": "在出庭日期和法律预约期间寻找儿童看护。"
+        },
+        "pdIntakeForm": {
+          "title": "公共辩护人入案表格",
+          "description": "在第一次与公共辩护人会面前，准备好您的个人、就业和案件信息。"
+        },
+        "courtDateGuide": {
+          "title": "出庭日期指南",
+          "description": "确认您的听证会，设置提醒，并确切了解需要携带什么。"
+        },
+        "bailPreparation": {
+          "title": "保释准备清单",
+          "description": "为保释听证会准备的文件和步骤。"
         }
       },
       "reference": {
@@ -7106,6 +7126,14 @@ export default {
         "documentLibrary": {
           "title": "文件库",
           "description": "法律表格、模板和指南。"
+        },
+        "howItWorks": {
+          "title": "使用说明",
+          "description": "了解OpenDefender的五条路径如何配合以及从哪里开始。"
+        },
+        "dataSources": {
+          "title": "数据来源",
+          "description": "我们法律指导的来源以及如何验证。"
         }
       },
       "attorneyTools": {
@@ -7118,7 +7146,33 @@ export default {
         "courtRecords": {
           "title": "法院记录搜索",
           "description": "通过PACER/RECAP搜索联邦法院文件。"
+        },
+        "forAdvocates": {
+          "title": "倡导者资源",
+          "description": "为案件工作者、社工和法律倡导者提供的工具。"
+        },
+        "mitigationBuilder": {
+          "title": "减刑陈述构建器",
+          "description": "AI辅助工具，帮助构建有说服力的减刑陈述。"
+        },
+        "intakeChecklist": {
+          "title": "入案清单",
+          "description": "为倡导者和案件工作者设计的结构化入案问卷。"
         }
+      },
+      "immigration": {
+        "title": "移民",
+        "description": "为移民和混合身份家庭提供的权利和资源",
+        "overview":         { "title": "移民指南",               "description": "在ICE执法、强制执行和驱逐程序中的权利。" },
+        "knowYourRights":   { "title": "了解您的权利（移民）",   "description": "无论公民身份或移民身份如何，您都享有这些权利。" },
+        "findAttorney":     { "title": "寻找移民律师",           "description": "在您附近找到移民法律代理。" },
+        "findDetained":     { "title": "寻找被拘留人员",         "description": "找到被ICE或联邦移民机构拘留的人。" },
+        "afterDeportation": { "title": "驱逐后",                 "description": "为被驱逐令分离的两岸家庭提供帮助。" },
+        "workplaceRaids":   { "title": "工作场所突袭",           "description": "如果ICE进入您的工作场所，您的权利。" },
+        "raidsToolkit":     { "title": "突袭应对工具包",         "description": "ICE突袭的权利卡和应对指南。" },
+        "bondHearings":     { "title": "保释听证会",             "description": "移民保释听证会的运作方式及如何准备。" },
+        "dacaTps":          { "title": "DACA与TPS",              "description": "关于童年抵美者暂缓遣返和临时保护身份的信息。" },
+        "familyPlanning":   { "title": "家庭规划",               "description": "为混合移民身份家庭应对移民执法提供指导。" }
       },
       "developersPartners": {
         "title": "开发者与合作伙伴",
