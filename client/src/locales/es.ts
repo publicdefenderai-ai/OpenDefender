@@ -7174,20 +7174,6 @@ export default {
         "dacaTps":          { "title": "DACA y TPS",                                 "description": "Información sobre Acción Diferida para los Llegados en la Infancia y Estado de Protección Temporal." },
         "familyPlanning":   { "title": "Planificación Familiar",                     "description": "Orientación para familias de estatus mixto que navegan el cumplimiento de inmigración." }
       },
-      "immigration": {
-        "title": "Inmigración",
-        "description": "Derechos y recursos para inmigrantes y familias de estatus mixto",
-        "overview":         { "title": "Orientación sobre Inmigración",              "description": "Derechos durante encuentros con el ICE, cumplimiento y procedimientos de deportación." },
-        "knowYourRights":   { "title": "Conozca Sus Derechos (Inmigración)",         "description": "Sus derechos independientemente de su ciudadanía o estatus migratorio." },
-        "findAttorney":     { "title": "Encontrar un Abogado de Inmigración",        "description": "Localice representación legal de inmigración cerca de usted." },
-        "findDetained":     { "title": "Encontrar a una Persona Detenida",           "description": "Localice a alguien detenido por ICE o en custodia federal de inmigración." },
-        "afterDeportation": { "title": "Después de la Deportación",                  "description": "Ayuda para familias separadas por deportación a ambos lados de la frontera." },
-        "workplaceRaids":   { "title": "Redadas en el Lugar de Trabajo",             "description": "Sus derechos si el ICE entra a su lugar de trabajo." },
-        "raidsToolkit":     { "title": "Kit de Herramientas para Redadas",           "description": "Tarjetas de derechos y guías de respuesta para redadas del ICE." },
-        "bondHearings":     { "title": "Audiencias de Fianza",                       "description": "Cómo funcionan las audiencias de fianza de inmigración y cómo prepararse." },
-        "dacaTps":          { "title": "DACA y TPS",                                 "description": "Información sobre Acción Diferida para los Llegados en la Infancia y Estado de Protección Temporal." },
-        "familyPlanning":   { "title": "Planificación Familiar",                     "description": "Orientación para familias de estatus mixto que navegan el cumplimiento de inmigración." }
-      },
       "developersPartners": {
         "title": "Desarrolladores y Socios",
         "description": "Herramientas de integración para organizaciones y desarrolladores",
