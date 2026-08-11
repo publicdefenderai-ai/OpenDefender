@@ -23,13 +23,16 @@
  *   - When a reform changes a rule (bail reform, new speedy trial statute, etc.),
  *     update the entry and add a reformNote.
  *
- * Last full data pass: 2026-07 for the entries whose lastVerified says so.
- * NOT all 52 entries carry that date — a 2026-07 commit
- * (see git history: "Bump all 52 procedure rule lastVerified dates to 2026-07")
- * mass-dated every entry without accompanying verification work. That bump was
- * reverted for federal, CA, NY, TX, IL, PA, WA, OH, GA — these 9 had no primary-source
- * review in the 2026-07 pass (their arraignment/bail/speedy-trial fields are untouched
- * since 2026-03) and are back at lastVerified: '2026-03' pending real re-verification.
+ * Last full data pass: 2026-07 for most entries, 2026-08 for the nine below.
+ * A 2026-07 commit (see git history: "Bump all 52 procedure rule lastVerified
+ * dates to 2026-07") mass-dated every entry without accompanying verification
+ * work. That bump was reverted for federal, CA, NY, TX, IL, PA, WA, OH, GA —
+ * these 9 had no primary-source review in the 2026-07 pass and went back to
+ * lastVerified: '2026-03' pending real re-verification. All 9 have since had
+ * that real review done individually (each carries its own dated NOTE above
+ * lastVerified explaining what was checked and against what source) and are
+ * now at lastVerified: '2026-08'. Three of the nine (CA, IL, WA) had actual
+ * data errors fixed in the process, not just staleness — see their NOTEs.
  * FL, AZ, NJ, MI, NC, VA did get genuine 2026-07 review and correctly keep that date.
  *
  * Coverage: All 50 US states + DC + federal + 5 territories (57 entries).
@@ -125,17 +128,17 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Approximately 125% federal poverty level — apply to federal public defender office',
     bailSystem: 'Pretrial services assessment',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — this entry's arraignment/
-    // bail/speedy-trial fields were not reviewed in the 2026-07 pass (only the
-    // preliminaryHearing/discoveryDeadline fields above were newly added then).
-    // Do not bump without an accompanying primary-source review of the other fields.
-    lastVerified: '2026-03',
+    // NOTE: Verified against 18 U.S.C. § 3161(c)(1) (Speedy Trial Act of 1974)
+    // and Fed. R. Crim. P. 5, 10 (law.cornell.edu/uscode/text/18/3161). No
+    // amendments to the 70-day trial deadline or the 48-hour appearance rule
+    // found for 2025-2026. Values confirmed current.
+    lastVerified: '2026-08',
   },
 
   // ── California ────────────────────────────────────────────────────────────
   CA: {
     arraignment: '48 hours',
-    speedy_trial: '60 days (felony) / 30 days (misdemeanor)',
+    speedy_trial: '60 days (felony) / 30 days (misdemeanor, in custody) / 45 days (misdemeanor, not in custody)',
     bail_hearing: '48 hours',
     arraignmentHours: 48,
     arraignmentSource: 'Cal. Penal Code § 825 — "without unnecessary delay, and in any event within two days after arrest"',
@@ -143,8 +146,9 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     bailHearingSource: 'Cal. Penal Code § 825; bail set at arraignment',
     speedyTrialDays: {
       felony: 60,
-      misdemeanor: 30,
-      notes: 'Clock runs from arraignment. Defendant must be brought to trial within 60 days (felony) or 30 days (misdemeanor in custody) of arraignment.',
+      misdemeanor: 45,
+      misdemeanorInCustody: 30,
+      notes: 'Clock runs from arraignment or entry of plea. Felony: 60 days, no custody distinction. Misdemeanor: 30 days if in custody at arraignment, 45 days if not in custody — the prior "flat 30 days" figure omitted the not-in-custody tier.',
     },
     speedyTrialSource: 'Cal. Penal Code § 1382',
     phoneCall: {
@@ -159,9 +163,13 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Approximately 2x federal poverty level (varies by county)',
     bailSystem: 'Schedule-based bail system',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above
-    // for why this wasn't bumped to 2026-07 with the rest of the file.
-    lastVerified: '2026-03',
+    // NOTE: CORRECTED — speedyTrialDays.misdemeanor was 30 with no custody
+    // distinction, which mismatched this entry's own notes text (which already
+    // said "30 days (misdemeanor in custody)") and Cal. Penal Code § 1382's
+    // actual 30-day (in custody) / 45-day (not in custody) split. Verified
+    // against the current Penal Code text (shouselaw.com/ca/defense/penal-code/1382).
+    // No 2024-2026 amendments to § 1382 found.
+    lastVerified: '2026-08',
   },
 
   // ── New York ──────────────────────────────────────────────────────────────
@@ -191,8 +199,13 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Varies by county — apply to local public defender or legal aid office',
     bailSystem: 'Cash bail reform — limited detention',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
-    lastVerified: '2026-03',
+    // NOTE: discoveryDeadline (20 days in custody / 35 days not in custody)
+    // verified word-for-word against current CPL § 245.10 text (nysenate.gov/
+    // legislation/laws/CPL/245.10). Article 245's certificate-of-compliance
+    // requirement is still tied to the CPL 30.30 speedy-trial clock per its
+    // 2020/2022/2023 amendments; no further amendment found since. Values
+    // confirmed current.
+    lastVerified: '2026-08',
   },
 
   // ── Texas ─────────────────────────────────────────────────────────────────
@@ -222,8 +235,13 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Commercial bail bond system',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
-    lastVerified: '2026-03',
+    // NOTE: The "no statutory speedy trial deadline" holding of Ex parte
+    // Meshell, 767 S.W.2d 348 (Tex. Crim. App. 1989) remains current — no
+    // subsequent statute has reinstated a Texas Speedy Trial Act. The 20-day
+    // pretrial witness-disclosure deadline is a real statewide default under
+    // Tex. Code Crim. Proc. Art. 39.14 (Michael Morton Act), confirmed via
+    // current secondary-source summaries of Art. 39.14. Values confirmed current.
+    lastVerified: '2026-08',
   },
 
   // ── Florida ───────────────────────────────────────────────────────────────
@@ -260,18 +278,18 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
   // ── Illinois ──────────────────────────────────────────────────────────────
   IL: {
     arraignment: '48 hours',
-    speedy_trial: '120 days (felony, in custody) / 160 days (felony, bailable) / 45 days (misdemeanor, in custody)',
+    speedy_trial: '120 days in custody / 160 days on bail or recognizance after demanding trial — applies uniformly regardless of felony or misdemeanor classification',
     bail_hearing: '48 hours',
     arraignmentHours: 48,
     arraignmentSource: '725 ILCS 5/109-1 — "without unnecessary delay... within 48 hours after arrest"',
     bailHearingHours: 48,
     bailHearingSource: '725 ILCS 5/109-1; detention review at arraignment',
     speedyTrialDays: {
-      felony: 120,
+      felony: 160,
       felonyInCustody: 120,
-      misdemeanor: 45,
-      misdemeanorInCustody: 45,
-      notes: 'Felony: 120 days if held in custody; 160 days if released on conditions. Class A misdemeanor: 45 days (in custody), 90 days (released). Counts from demand or initial incarceration, depending on circumstance.',
+      misdemeanor: 160,
+      misdemeanorInCustody: 120,
+      notes: '725 ILCS 5/103-5 sets a single 120-day (in custody) / 160-day (on bail or recognizance, running from the defendant\'s demand for trial) framework that applies identically to felonies and misdemeanors — the statute does not set a separate, shorter misdemeanor deadline. A person released from custody after demanding trial while in custody keeps credit for time already served toward the 160-day period.',
     },
     speedyTrialSource: '725 ILCS 5/103-5',
     phoneCall: {
@@ -286,8 +304,15 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Pretrial Fairness Act — no cash bail (eff. Sept 2023)',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
-    lastVerified: '2026-03',
+    // NOTE: CORRECTED — speedyTrialDays previously had felony/felonyInCustody
+    // both set to 120 (no actual custody distinction encoded) and invented a
+    // 45-day misdemeanor-specific figure that does not appear anywhere in
+    // 725 ILCS 5/103-5. Verified the statute's text directly (via ilga.gov,
+    // mirrored at codes.findlaw.com/il and lawserver.com): the 120-day
+    // (custody) / 160-day (bail, after demand) framework is the *only* rule
+    // in this section and applies to "every person," felony or misdemeanor
+    // alike. No 2025-2026 amendment to 103-5 found.
+    lastVerified: '2026-08',
   },
 
   // ── Pennsylvania ──────────────────────────────────────────────────────────
@@ -317,8 +342,11 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Approximately federal poverty guidelines — apply to local public defender',
     bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
-    lastVerified: '2026-03',
+    // NOTE: 365-day rule confirmed current against Pa. R. Crim. P. 600 text
+    // (pacodeandbulletin.gov, code current through 55 Pa.B. 1784, Feb. 2025).
+    // No amendment found changing the 365-day figure itself. Values confirmed
+    // current.
+    lastVerified: '2026-08',
   },
 
   // ── Ohio ──────────────────────────────────────────────────────────────────
@@ -334,8 +362,8 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
       felony: 270,
       felonyInCustody: 90,
       misdemeanor: 90,
-      misdemeanorInCustody: 45,
-      notes: 'Felony: 270 days (not in custody); 90 days (in custody). 1st-degree misdemeanor: 90 days (not in custody); 45 days (in custody). Days count triple while defendant is held in jail on the charge.',
+      misdemeanorInCustody: 30,
+      notes: 'Felony: 270 days (not in custody); 90 days (in custody, i.e. 270 ÷ 3). 1st/2nd-degree misdemeanor: 90 days (not in custody); 30 days (in custody, i.e. 90 ÷ 3) — the prior 45-day in-custody figure conflated this with the separate 3rd/4th-degree misdemeanor tier below. Days in jail count triple toward all of these deadlines (§ 2945.71(E)). Ohio also has two shorter, lower-severity tiers this simplified record does not carry separate fields for: 3rd/4th-degree misdemeanor is 45 days (not in custody), and minor misdemeanor is 30 days (not in custody) — both also subject to the triple-count rule if in custody.',
     },
     speedyTrialSource: 'Ohio Rev. Code § 2945.71',
     phoneCall: {
@@ -350,8 +378,18 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Traditional bail system',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
-    lastVerified: '2026-03',
+    // NOTE: CORRECTED — misdemeanorInCustody was 45, which is actually the
+    // *not-in-custody* deadline for Ohio's separate 3rd/4th-degree misdemeanor
+    // tier (ORC 2945.71(B)(1)), not the in-custody figure for the 90-day
+    // 1st/2nd-degree tier this record represents; the correct triple-count
+    // derivation is 90 ÷ 3 = 30. Verified against current ORC 2945.71/.73 text
+    // and secondary summaries (codes.ohio.gov; mmdefense.law). Note: Sub.
+    // S.B. 143 (131st General Assembly, already in force for years, not a
+    // recent change) amended § 2945.73's remedy for felony violations from
+    // outright discharge to release-from-detention-pending-trial with a
+    // 14-day prosecutor cure window — this doesn't change the deadline
+    // numbers stored here, only what happens if they're missed.
+    lastVerified: '2026-08',
   },
 
   // ── Georgia ───────────────────────────────────────────────────────────────
@@ -512,18 +550,18 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
   // ── Washington ────────────────────────────────────────────────────────────
   WA: {
     arraignment: '72 hours',
-    speedy_trial: '60 days (misdemeanor, in custody) / 90 days (gross misdemeanor, in custody) / 60 days (felony, in custody from arraignment)',
+    speedy_trial: '60 days (in custody) / 90 days (released) from arraignment — applies uniformly to felony, misdemeanor, and gross misdemeanor',
     bail_hearing: '48 hours',
     arraignmentHours: 72,
     arraignmentSource: 'Wash. Super. Ct. Crim. R. (CrR) 3.2(d) — arraignment without unnecessary delay; typically within 1-3 judicial days',
     bailHearingHours: 48,
     bailHearingSource: 'CrR 3.2; bail reviewed at arraignment; detention hearings within 48 hours',
     speedyTrialDays: {
-      felony: 60,
+      felony: 90,
       felonyInCustody: 60,
-      misdemeanor: 60,
+      misdemeanor: 90,
       misdemeanorInCustody: 60,
-      notes: 'Felony: 60 days from arraignment if in custody; 90 days if released. Misdemeanor: 60 days in custody; 90 days released. Gross misdemeanor: same as misdemeanor. Timelines run from arraignment and are tolled by continuances and other excludable periods.',
+      notes: 'Felony, misdemeanor, and gross misdemeanor all use the same CrR/CrRLJ 3.3 framework: 60 days from arraignment if held in custody the entire time, 90 days if released at any point before trial (even briefly, or under conditions). If release is later revoked, the defendant must still be tried within 90 days total and no more than 60 of those days in custody. Timelines are tolled by continuances and other excludable periods.',
     },
     speedyTrialSource: 'Wash. Super. Ct. Crim. R. (CrR) 3.3; Wash. Dist. Ct. Crim. R. (CrRLJ) 3.3',
     phoneCall: {
@@ -538,8 +576,19 @@ export const JURISDICTION_PROCEDURE_RULES: Record<string, JurisdictionProcedureR
     publicDefenderIncome: 'Case-by-case determination',
     bailSystem: 'Pretrial services assessment',
     dataConfidence: 'high',
-    // NOTE: lastVerified intentionally left at 2026-03 — see federal entry above.
-    lastVerified: '2026-03',
+    // NOTE: CORRECTED — felony and misdemeanor both had their in-custody and
+    // released figures set to the same number (60), so the record never
+    // actually encoded the custody-based split despite the notes text
+    // describing one. Verified against CrR 3.3 / CrRLJ 3.3 rule text and
+    // secondary summaries (courts.wa.gov; case-law summaries of the 60/90
+    // framework): felony, misdemeanor, and gross misdemeanor all share the
+    // same 60-day (in custody) / 90-day (released) rule — there's no
+    // felony-specific or misdemeanor-specific number, unlike some other
+    // states. No 2025-2026 amendment changing these figures found (a
+    // proposed "cure period" amendment exists but concerns the *remedy* for
+    // a missed deadline, not the deadline itself, and its adoption status
+    // wasn't independently confirmed here).
+    lastVerified: '2026-08',
   },
 
   // ── Arizona ───────────────────────────────────────────────────────────────
