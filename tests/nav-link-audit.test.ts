@@ -93,10 +93,14 @@ const appSrc = read("client/src/App.tsx");
 const routes = extractRoutes(appSrc);
 
 const surfaces: Array<{ name: string; file: string }> = [
-  { name: "directory.tsx",   file: "client/src/pages/directory.tsx" },
-  { name: "header.tsx",      file: "client/src/components/layout/header.tsx" },
-  { name: "footer.tsx",      file: "client/src/components/layout/footer.tsx" },
-  { name: "home.tsx",        file: "client/src/pages/home.tsx" },
+  { name: "directory.tsx",           file: "client/src/pages/directory.tsx" },
+  { name: "header.tsx",              file: "client/src/components/layout/header.tsx" },
+  { name: "footer.tsx",              file: "client/src/components/layout/footer.tsx" },
+  { name: "home.tsx",                file: "client/src/pages/home.tsx" },
+  { name: "how-to.tsx",              file: "client/src/pages/how-to.tsx" },
+  { name: "friends-family.tsx",      file: "client/src/pages/friends-family.tsx" },
+  { name: "support/index.tsx",       file: "client/src/pages/support/index.tsx" },
+  { name: "immigration-guidance.tsx", file: "client/src/pages/immigration-guidance.tsx" },
 ];
 
 describe("Nav link audit — all internal links resolve to registered routes", () => {
