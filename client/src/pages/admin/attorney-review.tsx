@@ -46,12 +46,12 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     description:
       "The site's primary liability shield. Disclaims attorney-client relationship formation, legal privilege, and distinguishes information from advice. Appears on multiple pages.",
     sourceFiles: [
-      { label: "en.ts:2592–2597", path: "client/src/locales/en.ts", note: "Main rights-info disclaimer" },
-      { label: "en.ts:2018–2019", path: "client/src/locales/en.ts", note: "Case guidance consent header" },
-      { label: "en.ts:2456", path: "client/src/locales/en.ts", note: "Privacy page footer disclaimer" },
-      { label: "en.ts:5355", path: "client/src/locales/en.ts", note: "First 24 Hours guide disclaimer" },
-      { label: "en.ts:6491", path: "client/src/locales/en.ts", note: "Record clearance screener disclaimer" },
-      { label: "disclaimers.tsx:499", path: "client/src/pages/disclaimers.tsx", note: "Site disclaimers page" },
+      { label: "en.ts:2733", path: "client/src/locales/en.ts", note: "Main rights-info disclaimer" },
+      { label: "en.ts:2129–2130", path: "client/src/locales/en.ts", note: "Case guidance consent header" },
+      { label: "en.ts:2589", path: "client/src/locales/en.ts", note: "Case guidance privacy step footer disclaimer" },
+      { label: "en.ts:5560", path: "client/src/locales/en.ts", note: "First 24 Hours guide disclaimer" },
+      { label: "en.ts:7489", path: "client/src/locales/en.ts", note: "Record clearance screener disclaimer" },
+      { label: "disclaimers.tsx:475", path: "client/src/pages/disclaimers.tsx", note: "Site disclaimers page" },
     ],
     legalQuestion:
       "Do the disclaimer statements in each location adequately disclaim attorney-client relationship formation, disclaim legal privilege, and convey that the site provides information rather than advice? Are there jurisdictions where this language would be legally insufficient?",
@@ -63,9 +63,9 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     description:
       "Users are told their inputs are processed by Anthropic and retained up to 30 days. This disclosure must be accurate and appear at a point where users can meaningfully choose not to proceed.",
     sourceFiles: [
-      { label: "en.ts:2026", path: "client/src/locales/en.ts", note: "AI guidance card retention disclosure" },
-      { label: "en.ts:4949–4950", path: "client/src/locales/en.ts", note: "Chat privilege warning" },
-      { label: "en.ts:5238–5239", path: "client/src/locales/en.ts", note: "notLegalAdvice keys" },
+      { label: "en.ts:2137", path: "client/src/locales/en.ts", note: "AI guidance card retention disclosure" },
+      { label: "en.ts:5154–5155", path: "client/src/locales/en.ts", note: "Chat privilege warning" },
+      { label: "en.ts:5443–5444", path: "client/src/locales/en.ts", note: "notLegalAdvice / notLegalAdviceDesc keys" },
       { label: "claude-guidance.ts", path: "server/services/claude-guidance.ts", note: "AI context builder" },
       { label: "ai-model.ts", path: "server/config/ai-model.ts", note: "Model config (Claude Sonnet 4.6)" },
     ],
@@ -81,6 +81,7 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     sourceFiles: [
       { label: "claude-guidance.ts", path: "server/services/claude-guidance.ts", note: "Guidance prompt and context builder" },
       { label: "case-guidance.tsx", path: "client/src/pages/case-guidance.tsx", note: "Guidance flow UI" },
+      { label: "jurisdiction-procedure-rules.ts", path: "shared/jurisdiction-procedure-rules.ts", note: "Feeds deadline facts into the prompt — see M-7" },
     ],
     legalQuestion:
       "Generate sample guidance at /case-guidance for: (1) CA felony DUI pre-arraignment, (2) NY drug possession felony arraignment, (3) TX assault plea stage, (4) FL grand theft sentencing, (5) IL domestic battery post-conviction, (6) any state non-citizen with felony. Do outputs contain accurate legal information? Do they stay in bounds of general information vs. advice? Do they flag attorney consultation appropriately?",
@@ -90,7 +91,7 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     risk: "high",
     title: "Document Templates — Criminal Motions (AI-Generated Sections)",
     description:
-      "38 templates have AI-generated argument sections used by licensed attorneys to generate court filings. Errors could result in ineffective motions or professional responsibility issues.",
+      "39 templates have AI-generated argument sections used by licensed attorneys to generate court filings. Errors could result in ineffective motions or professional responsibility issues. NOTE: the live generation UI (/attorney/documents) currently redirects to /directory, and the backend API is now also disabled by default via the ATTORNEY_PORTAL_ENABLED feature flag — review these as source files.",
     sourceFiles: [
       { label: "motion-to-suppress.ts", path: "shared/templates/motion-to-suppress.ts" },
       { label: "motion-for-discovery.ts", path: "shared/templates/motion-for-discovery.ts" },
@@ -109,7 +110,7 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     risk: "high",
     title: "Document Templates — Immigration (EOIR Format)",
     description:
-      "14 templates for EOIR immigration court filings. These must comply with current BIA Practice Manual requirements. Errors could directly affect immigration outcomes.",
+      "14 templates for EOIR immigration court filings. These must comply with current BIA Practice Manual requirements. Errors could directly affect immigration outcomes. Same access blocker as H-4 (frontend hidden, backend now feature-flagged off) — review as source files.",
     sourceFiles: [
       { label: "bond-motion-eoir.ts", path: "shared/templates/bond-motion-eoir.ts" },
       { label: "motion-for-withholding-removal-cat.ts", path: "shared/templates/motion-for-withholding-removal-cat.ts" },
@@ -125,18 +126,19 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
   {
     id: "H-6",
     risk: "high",
-    title: "Know Your Rights — ICE Encounters",
+    title: "Know Your Rights — ICE Encounters & Warrants",
     description:
-      "Tells users what they are legally permitted to do during ICE encounters. Inaccurate information could lead users to waive rights or take action that worsens their legal situation.",
+      "Tells users what they are legally permitted to do during ICE encounters and what a warrant does and does not authorize. Inaccurate information could lead users to waive rights or take action that worsens their legal situation.",
     sourceFiles: [
-      { label: "know-your-rights.tsx:341", path: "client/src/pages/immigration/know-your-rights.tsx", note: "NILC source attribution" },
+      { label: "know-your-rights.tsx:340–341", path: "client/src/pages/immigration/know-your-rights.tsx", note: "NILC source attribution" },
       { label: "know-your-rights.tsx (full)", path: "client/src/pages/immigration/know-your-rights.tsx" },
       { label: "raids-toolkit.tsx", path: "client/src/pages/immigration/raids-toolkit.tsx" },
       { label: "workplace-raids.tsx", path: "client/src/pages/immigration/workplace-raids.tsx" },
-      { label: "en.ts:2600–2870", path: "client/src/locales/en.ts", note: "All immigration locale keys" },
+      { label: "warrants.tsx", path: "client/src/pages/warrants.tsx", note: "Added — dedicated ICE vs. court warrant section, directly on point; recently translated, content itself pre-existing" },
+      { label: "en.ts:2739–3349", path: "client/src/locales/en.ts", note: "All immigration locale keys" },
     ],
     legalQuestion:
-      "Is the ICE encounter guidance accurate under current Fourth and Fifth Amendment precedent? Does the platform correctly describe judicial warrant vs. administrative warrant? Is the NILC December 2025 source current? Does the raids-toolkit/workplace-raids content stay within rights education rather than legal strategy?",
+      "Is the ICE encounter guidance accurate under current Fourth and Fifth Amendment precedent? Does the platform correctly and consistently describe judicial warrant vs. administrative warrant across both know-your-rights.tsx and warrants.tsx? Is the NILC December 2025 source current? Does the raids-toolkit/workplace-raids content stay within rights education rather than legal strategy?",
   },
   {
     id: "H-7",
@@ -149,7 +151,7 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
       { label: "bond-hearings.tsx", path: "client/src/pages/immigration/bond-hearings.tsx" },
       { label: "family-planning.tsx", path: "client/src/pages/immigration/family-planning.tsx" },
       { label: "after-deportation.tsx", path: "client/src/pages/immigration/after-deportation.tsx" },
-      { label: "en.ts:2877", path: "client/src/locales/en.ts", note: 'DACA disclaimer: "Immigration law changes frequently"' },
+      { label: "en.ts:3016", path: "client/src/locales/en.ts", note: 'DACA disclaimer: "Immigration law changes frequently"' },
     ],
     legalQuestion:
       "Are DACA eligibility requirements (birth after June 15, 1981; U.S. presence since June 15, 2007) current? Are bond hearing procedures consistent with INA § 236(a) and current BIA precedent? Does family planning content stay in general preparation vs. legal strategy? Is after-deportation content accurate on re-entry bars?",
@@ -161,24 +163,25 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     description:
       "The /disclaimers page is the site's comprehensive liability disclosure, referenced from multiple pages. It is the authoritative statement of what the platform does and does not provide.",
     sourceFiles: [
-      { label: "disclaimers.tsx", path: "client/src/pages/disclaimers.tsx", note: "Full disclaimers page (~500 lines)" },
+      { label: "disclaimers.tsx", path: "client/src/pages/disclaimers.tsx", note: "Full disclaimers page (485 lines)" },
     ],
     legalQuestion:
-      'Does the disclaimers page adequately cover the platform\'s liability exposure? Are there content areas not addressed that should be? Is the "Acknowledgement of Disclosures" closing language legally effective as constructive notice to users who use the site?',
+      'Does the disclaimers page adequately cover the platform\'s liability exposure? Are there content areas not addressed that should be — including whether it should mention the Attorney Portal API being reachable while its frontend is disabled (see H-9)? Is the "Acknowledgement of Disclosures" closing language legally effective as constructive notice to users who use the site?',
   },
   {
     id: "H-9",
     risk: "high",
     title: "Attorney Portal Bar Attestation & Disclaimer",
     description:
-      "The Attorney Portal gates document generation behind a bar membership attestation. If inadequate, lay users could access and rely on attorney-only tools without the expertise to use them safely.",
+      "The Attorney Portal gates document generation behind a bar membership attestation. If inadequate, lay users could access and rely on attorney-only tools without the expertise to use them safely. NOTE: the frontend is unreachable via the UI, and POST /api/attorney/verify is now also gated by the ATTORNEY_PORTAL_ENABLED feature flag (404 while off) — the attestation-adequacy question below is currently moot in practice but still needs an answer before the flag is ever turned on.",
     sourceFiles: [
       { label: "attorney/index.tsx:135", path: "client/src/pages/attorney/index.tsx", note: "Attorney tools disclaimer" },
-      { label: "attorney-context.tsx", path: "client/src/contexts/attorney-context.tsx", note: "Bar attestation state management" },
-      { label: "en.ts:5252", path: "client/src/locales/en.ts", note: "attorney.disclaimer locale key" },
+      { label: "attorney-context.tsx", path: "client/src/contexts/attorney-context.tsx", note: "Bar attestation state management (frontend)" },
+      { label: "attestation-schema.ts", path: "shared/attorney/attestation-schema.ts", note: "Actual validation: four self-attested checkboxes, no bar-number or identity check" },
+      { label: "en.ts:5457", path: "client/src/locales/en.ts", note: "attorneyPortal.disclaimer locale key (corrected — prior citation used a key name that doesn't exist)" },
     ],
     legalQuestion:
-      "Is the bar membership attestation legally adequate to restrict attorney-only document generation? Does the attestation language create attorney responsibility for use of AI-generated document sections? Is there an unauthorized practice of law concern if the attestation gate is bypassed?",
+      "Is a four-checkbox self-attestation, with no bar-number or identity verification, legally adequate to restrict attorney-only document generation? Does the attestation language create attorney responsibility for use of AI-generated document sections? Is there an unauthorized practice of law concern given the gate can be passed by anyone willing to check four boxes?",
   },
 
   // ── MEDIUM RISK ────────────────────────────────────────────────────────────
@@ -187,26 +190,27 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     risk: "medium",
     title: "Collateral Consequences Data — All Nine Categories",
     description:
-      "The screener presents risk assessments across nine life areas. Seven question-driven categories (supervision, immigration, children, housing, employment, benefits, professional license) are answered via yes/no questions. Two charge-type-driven categories are surfaced automatically based on the charge selection: driver's license suspension (DUI / drug possession / drug trafficking) and sex offender registry (sex offense charges). Inaccurate or overstated risk information causes unnecessary alarm; understated risk causes users to miss important consequences.",
+      "The screener presents risk assessments across nine life areas. Seven question-driven categories (supervision, immigration, children, housing, employment, benefits, professional license) are answered via yes/no questions. Two charge-type-driven categories are surfaced automatically based on the charge selection: driver's license suspension (DUI unconditionally; drug possession/trafficking only in states with a verified drugConvictionSuspension rule) and sex offender registry (sex offense charges). Inaccurate or overstated risk information causes unnecessary alarm; understated risk causes users to miss important consequences.",
     sourceFiles: [
-      { label: "collateral-consequences.tsx (lines ~59–109)", path: "client/src/pages/collateral-consequences.tsx", note: "Question-driven risk data (RISKS array)" },
-      { label: "collateral-consequences.tsx (lines ~140–155)", path: "client/src/pages/collateral-consequences.tsx", note: "Charge-type-driven risk data (CHARGE_TYPE_RISKS array)" },
-      { label: "collateral-consequences.tsx (lines ~157–207)", path: "client/src/pages/collateral-consequences.tsx", note: "Charge-type pre-step and risk filtering logic" },
+      { label: "collateral-consequences.tsx (lines 65–115)", path: "client/src/pages/collateral-consequences.tsx", note: "Question-driven risk data (RISKS array)" },
+      { label: "collateral-consequences.tsx (lines 251–283)", path: "client/src/pages/collateral-consequences.tsx", note: "Charge-type-driven risk data (CHARGE_TYPE_RISKS array)" },
+      { label: "collateral-consequences.tsx (lines 468–491)", path: "client/src/pages/collateral-consequences.tsx", note: "Charge-type filtering logic, incl. per-state drug-suspension check" },
+      { label: "collateral-consequences-data.ts", path: "shared/collateral-consequences-data.ts", note: "DRIVERS_LICENSE_RULES — per-state table, recently verified for all 50 states + DC" },
     ],
     legalQuestion:
-      'Are the risk level assignments (critical/warning) for each of the nine consequence categories appropriate? Is flagging immigration as "critical" for all non-citizens regardless of charge type correct? Are all nine consequence descriptions legally accurate as general educational statements? For the two charge-type-driven categories: is driver\'s license suspension correctly limited to DUI, drug possession, and drug trafficking charges? Is the sex offender registry risk correctly limited to sex offense charges? Does the screener appropriately disclaim that it provides a preliminary risk flag only, not a legal determination?',
+      'Are the risk level assignments (critical/warning) for each of the nine consequence categories appropriate? Is flagging immigration as "critical" for all non-citizens regardless of charge type correct? Are all nine consequence descriptions legally accurate as general educational statements? Is it legally correct that the driver\'s-license warning for drug charges only fires in states with a confirmed suspension law rather than for every drug charge nationwide? Is the sex offender registry risk correctly limited to sex offense charges? Does the screener appropriately disclaim that it provides a preliminary risk flag only, not a legal determination?',
   },
   {
     id: "M-2",
     risk: "medium",
     title: "Charge Citations Flagged needs_review (548 entries)",
     description:
-      "548 entries in shared/criminal-charge-citations.ts carry confidence: 'needs_review' because OpenLaws API returned not_found. They are not shown to users but inform AI guidance context. Top states: ME(23), HI(23), OK(22), DC(21), ID(20), VT(19), OR(19), UT(18).",
+      "548 entries in shared/criminal-charge-citations.ts carry confidence: 'needs_review' because OpenLaws API returned not_found. They are not shown to users but inform AI guidance context. Top states: DC(36), ME(35), HI(34), ID(34), OR(34), VT(33), OK(33), UT(31).",
     sourceFiles: [
       { label: "criminal-charge-citations.ts", path: "shared/criminal-charge-citations.ts", note: "Filter for confidence: 'needs_review' — 548 entries" },
     ],
     legalQuestion:
-      "For a representative sample — all DC entries (21), all DE entries (15), 10 random entries from ME/HI/OK — are the statute citations correct? Should any be corrected before AI guidance uses them as context? Use /admin/citation-review for interactive verification against official state legislature sites.",
+      "For a representative sample — all DC entries (36), all ME entries (35), 10 random entries from HI/ID/OR — are the statute citations correct? Should any be corrected before AI guidance uses them as context? Use /admin/citation-review for interactive verification against official state legislature sites.",
   },
   {
     id: "M-3",
@@ -216,11 +220,11 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
       "The screener at /support/reputation/eligibility gives users a preliminary indication of whether their record may be eligible for expungement or sealing. Incorrect signals could cause users to pursue wrong remedies or give up on legitimate ones.",
     sourceFiles: [
       { label: "record-clearance-screener.tsx", path: "client/src/pages/support/record-clearance-screener.tsx" },
-      { label: "en.ts:6427", path: "client/src/locales/en.ts", note: "Screener subtitle" },
-      { label: "en.ts:6491", path: "client/src/locales/en.ts", note: "Screener disclaimer" },
+      { label: "en.ts:7411", path: "client/src/locales/en.ts", note: "Screener subtitle" },
+      { label: "en.ts:7489", path: "client/src/locales/en.ts", note: "Screener disclaimer" },
     ],
     legalQuestion:
-      "Are the eligibility logic pathways consistent with general expungement/record sealing rules in the most common states? Does the screener appropriately disclaim that results are preliminary? Is the disclaimer at en.ts:6491 sufficient to prevent users from relying on it as a definitive eligibility determination?",
+      "Are the eligibility logic pathways consistent with general expungement/record sealing rules in the most common states? Does the screener appropriately disclaim that results are preliminary? Is the disclaimer sufficient to prevent users from relying on it as a definitive eligibility determination?",
   },
   {
     id: "M-4",
@@ -229,12 +233,12 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
     description:
       "Lists 111 diversion programs with self-reported eligibility criteria across all 50 states + DC + Federal. Users may rely on this when deciding whether to request a diversion program.",
     sourceFiles: [
-      { label: "diversion-programs.ts", path: "server/data/diversion-programs.ts", note: "Program data (111 entries)" },
+      { label: "diversion-programs-data.ts", path: "shared/diversion-programs-data.ts", note: "Program data (111 entries) — path corrected, moved from server/data/" },
       { label: "diversion-programs.tsx", path: "client/src/pages/diversion-programs.tsx" },
-      { label: "en.ts:4011", path: "client/src/locales/en.ts", note: "Directory disclaimer" },
+      { label: "en.ts:4150", path: "client/src/locales/en.ts", note: "Directory disclaimer" },
     ],
     legalQuestion:
-      "Is the disclaimer at en.ts:4011 adequate for a self-reported eligibility directory? Are there eligibility criteria that appear legally incorrect? Should the directory more prominently state that diversion participation typically requires prosecutorial agreement?",
+      "Is the disclaimer adequate for a self-reported eligibility directory? Are there eligibility criteria that appear legally incorrect? Should the directory more prominently state that diversion participation typically requires prosecutorial agreement?",
   },
   {
     id: "M-5",
@@ -244,7 +248,7 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
       "Used by public defenders. The Padilla immigration flag (auto-raised for non-citizen clients) is a specific constitutional obligation under Padilla v. Kentucky. If it fires incorrectly, defenders could miss or over-trigger a required inquiry.",
     sourceFiles: [
       { label: "intake-checklist.tsx", path: "client/src/pages/for-advocates/intake-checklist.tsx" },
-      { label: "en.ts:6738", path: "client/src/locales/en.ts", note: "Checklist disclaimer" },
+      { label: "en.ts:7736", path: "client/src/locales/en.ts", note: "Checklist disclaimer" },
     ],
     legalQuestion:
       "Does the Padilla flag trigger correctly for non-citizen status (not just immigration-related charges)? Does the flag description accurately convey that Padilla v. Kentucky requires counsel to advise non-citizen clients of deportation consequences of guilty pleas? Is the tool's disclaimer adequate for use by licensed attorneys?",
@@ -259,7 +263,20 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
       { label: "privacy-policy.tsx", path: "client/src/pages/privacy-policy.tsx" },
     ],
     legalQuestion:
-      "Does the policy accurately describe the data lifecycle: session storage, 24-hour server-side TTL, Anthropic 30-day AI processing retention? Are there claims inconsistent with the actual technical implementation? Does it comply with CCPA for California users and applicable state privacy laws?",
+      "Does the policy accurately describe the data lifecycle: in-memory-only session storage (no database persistence), 24-hour TTL or full loss on server restart, Anthropic 30-day AI processing retention? Are there claims inconsistent with the actual technical implementation? Does it comply with CCPA for California users and applicable state privacy laws?",
+  },
+  {
+    id: "M-7",
+    risk: "medium",
+    title: "Jurisdiction Procedure Deadlines (Speedy Trial / Discovery / Arraignment) — New",
+    description:
+      "shared/jurisdiction-procedure-rules.ts feeds arraignment, bail-hearing, speedy-trial, and discovery-deadline facts directly into the AI guidance prompt as authoritative fact. This cycle's re-verification of the 9 highest-population jurisdictions (federal, CA, NY, TX, IL, PA, OH, WA, GA) found real substantive errors, not just staleness, in 3 of them (CA, IL, WA). The other 43 jurisdictions have not had an equivalent primary-source pass.",
+    sourceFiles: [
+      { label: "jurisdiction-procedure-rules.ts", path: "shared/jurisdiction-procedure-rules.ts", note: "Header comment (lines 1–44) documents verification status per jurisdiction" },
+      { label: "claude-guidance.ts", path: "server/services/claude-guidance.ts", note: "buildJurisdictionContextBlock — where this enters the AI prompt" },
+    ],
+    legalQuestion:
+      "For a sample of jurisdictions not already re-verified this cycle (suggested: 3–5 high-traffic or high-risk states), are the arraignment, speedy-trial, and discovery-deadline figures still accurate against current statute/rule text? Should the maintenance process require documented sourcing for every future lastVerified change, the way the 9 corrected entries now do?",
   },
 ];
 

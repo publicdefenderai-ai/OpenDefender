@@ -31,6 +31,7 @@ import { z } from "zod";
 import multer from "multer";
 import { summarizeDocument, validateFile, getSupportedFileTypes, createSummaryBatch, getSummaryBatchStatus, cancelSummaryBatch, redactDocumentPII } from "./services/document-summarizer";
 import { requireCaptcha } from "./middleware/captcha-middleware";
+import { isAttorneyPortalEnabled } from "./middleware/attorney-portal-gate";
 import { getCaptchaSiteKey, isCaptchaRequired } from "./services/captcha-verification";
 import { requireServiceBudget } from "./middleware/budget-gate";
 import { getAICostStatus } from "./services/cost-tracker";
@@ -2024,9 +2025,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
   // Attorney Document Generation API
   // ============================================================================
+  //
+  // Feature-flagged off by default — see server/middleware/attorney-portal-gate.ts
+  // for why. The frontend (/attorney/*) already redirects to /directory; this
+  // flag makes the backend match that, instead of leaving these endpoints
+  // reachable directly. Set ATTORNEY_PORTAL_ENABLED=true to re-enable once the
+  // attorney-review checklist's H-4/H-5/H-9 items are cleared.
+  const requireAttorneyPortalEnabled = (req: Request, res: Response, next: NextFunction) => {
+    if (!isAttorneyPortalEnabled(process.env)) {
+      return res.status(404).json({ success: false, error: 'Not found.' });
+    }
+    next();
+  };
 
   // Create verified attorney session
-  app.post("/api/attorney/verify", attorneyVerificationRateLimiter, async (req, res) => {
+  app.post("/api/attorney/verify", requireAttorneyPortalEnabled, attorneyVerificationRateLimiter, async (req, res) => {
     try {
       const validation = attorneyVerificationRequestSchema.safeParse(req.body);
 
@@ -2068,7 +2081,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Validate existing attorney session
-  app.get("/api/attorney/session", async (req, res) => {
+  app.get("/api/attorney/session", requireAttorneyPortalEnabled, async (req, res) => {
     try {
       const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
 
@@ -2107,7 +2120,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Cleanup attorney session on page unload (via sendBeacon)
   // sendBeacon sends a POST with cookies but no custom headers,
   // so this is a separate endpoint from the DELETE route.
-  app.post("/api/attorney/session/cleanup", writeRateLimiter, async (req, res) => {
+  app.post("/api/attorney/session/cleanup", requireAttorneyPortalEnabled, writeRateLimiter, async (req, res) => {
     try {
       const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
 
@@ -2128,7 +2141,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Terminate attorney session
-  app.delete("/api/attorney/session", writeRateLimiter, async (req, res) => {
+  app.delete("/api/attorney/session", requireAttorneyPortalEnabled, writeRateLimiter, async (req, res) => {
     try {
       const sessionId = req.cookies?.[attorneySessionManager.getCookieName()];
 
@@ -2191,7 +2204,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
 
   // List available templates
-  app.get("/api/attorney/templates", requireAttorneySession, async (req, res) => {
+  app.get("/api/attorney/templates", requireAttorneyPortalEnabled, requireAttorneySession, async (req, res) => {
     try {
       const { category } = req.query;
       const templates = getTemplates(category as string);
@@ -2207,7 +2220,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Get specific template
-  app.get("/api/attorney/templates/:templateId", requireAttorneySession, async (req, res) => {
+  app.get("/api/attorney/templates/:templateId", requireAttorneyPortalEnabled, requireAttorneySession, async (req, res) => {
     try {
       const { templateId } = req.params;
       const { jurisdiction } = req.query;
@@ -2240,7 +2253,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     formData: z.record(z.string(), z.string())
   });
 
-  app.post("/api/attorney/documents/generate", requireAttorneySession, requireServiceBudget('attorney-docs'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
+  app.post("/api/attorney/documents/generate", requireAttorneyPortalEnabled, requireAttorneySession, requireServiceBudget('attorney-docs'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     try {
       const validation = generateDocumentSchema.safeParse(req.body);
 
@@ -2288,7 +2301,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Export document to DOCX
-  app.post("/api/attorney/documents/export", requireAttorneySession, async (req, res) => {
+  app.post("/api/attorney/documents/export", requireAttorneyPortalEnabled, requireAttorneySession, async (req, res) => {
     try {
       const { documentId, formData } = req.body;
 
@@ -2325,7 +2338,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Get generated document by ID
-  app.get("/api/attorney/documents/:documentId", requireAttorneySession, async (req, res) => {
+  app.get("/api/attorney/documents/:documentId", requireAttorneyPortalEnabled, requireAttorneySession, async (req, res) => {
     try {
       const { documentId } = req.params;
 
@@ -2363,7 +2376,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
 
   // List playbooks (optionally filtered by category)
-  app.get("/api/attorney/playbooks", requireAttorneySession, (req, res) => {
+  app.get("/api/attorney/playbooks", requireAttorneyPortalEnabled, requireAttorneySession, (req, res) => {
     try {
       const { category } = req.query;
       const playbooks = getPlaybooks(category as string | undefined);
@@ -2375,7 +2388,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Get single playbook by ID
-  app.get("/api/attorney/playbooks/:playbookId", requireAttorneySession, (req, res) => {
+  app.get("/api/attorney/playbooks/:playbookId", requireAttorneyPortalEnabled, requireAttorneySession, (req, res) => {
     try {
       const playbook = getPlaybook(req.params.playbookId);
       if (!playbook) {
@@ -2630,7 +2643,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * Attorney-specific document summarization endpoint
    * Requires valid attorney session, uses same privacy guarantees
    */
-  app.post("/api/attorney/document-summary/summarize", requireAttorneySession, requireServiceBudget('document-summarizer'), aiRateLimiter, aiDailyLimiter, (req, res, next) => {
+  app.post("/api/attorney/document-summary/summarize", requireAttorneyPortalEnabled, requireAttorneySession, requireServiceBudget('document-summarizer'), aiRateLimiter, aiDailyLimiter, (req, res, next) => {
     documentUpload.single('document')(req, res, (err) => {
       if (err) {
         if (err instanceof multer.MulterError) {
@@ -2824,6 +2837,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * Submit a batch of documents for asynchronous summarization (attorney).
    */
   app.post("/api/attorney/document-summary/batch",
+    requireAttorneyPortalEnabled,
     requireAttorneySession,
     requireServiceBudget('document-summarizer'),
     batchSubmitRateLimiter,
@@ -2881,6 +2895,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
    * Poll for batch status and retrieve results when complete (attorney).
    */
   app.get("/api/attorney/document-summary/batch/:batchId",
+    requireAttorneyPortalEnabled,
     requireAttorneySession,
     searchRateLimiter,
     async (req: Request, res: Response) => {
