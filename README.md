@@ -4,7 +4,7 @@
 
 OpenDefender is a free, open-source platform that provides plain-language rights information, early advocacy guidance, and practical life support resources — covering housing, employment, finances, mental health and treatment, immigration, and more. Everything is free, trilingual, and requires no account.
 
-🌐 **Live Platform**: [opendefender.replit.app](https://opendefender.replit.app/)
+🌐 **Live Platform**: [opendefender.ai](https://opendefender.ai/) (also available at [opendefender.net](https://opendefender.net/))
 
 ---
 

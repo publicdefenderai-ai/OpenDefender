@@ -9,7 +9,7 @@
 4. All HIGH-risk items must be cleared before launch. MEDIUM-risk items should be cleared or have a documented rationale for deferral.
 
 **Last updated:** 2026-08 (full line-number and scope audit against current codebase — see "What changed in this update" below)
-**Platform URL:** ⚠️ Two different URLs appear in project docs — `https://opendefender.app` (this doc's prior version) vs. `https://opendefender.replit.app` (README.md). Confirm which is the actual production domain before sending this to a reviewer; the wrong link at the top of a legal review document undermines confidence in the rest of it.
+**Platform URL:** `https://opendefender.ai` (also reachable at `https://opendefender.net`) | `http://localhost:5000` (dev). Both custom domains point at the same deployment — confirmed by checking that `/admin/attorney-review` progress saved on one is visible on the other. `opendefender.app` and `opendefender.replit.app`, cited in earlier versions of this document, are not live domains for this project.
 
 ---
 

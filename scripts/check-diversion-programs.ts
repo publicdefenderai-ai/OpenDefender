@@ -41,7 +41,7 @@ async function checkUrl(
     redirect: "follow",
     headers: {
       "User-Agent":
-        "Mozilla/5.0 (compatible; OpenDefender-LinkChecker/1.0; +https://opendefender.app)",
+        "Mozilla/5.0 (compatible; OpenDefender-LinkChecker/1.0; +https://opendefender.ai)",
     },
   };
 
