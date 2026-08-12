@@ -132,8 +132,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   const [isChatLoading, setIsChatLoading] = useState(false);
   const [chatError, setChatError] = useState<string | null>(null);
 
-  // CAPTCHA state
+  // CAPTCHA state — the upload step and the Q&A chat step hit separate
+  // requireCaptcha-gated endpoints, and a Turnstile token is single-use, so
+  // each step needs its own independent token/widget rather than sharing one.
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
+  const { token: chatCaptchaToken, setToken: setChatCaptchaToken, reset: resetChatCaptcha } = useCaptcha();
+  const [chatCaptchaAttempt, setChatCaptchaAttempt] = useState(0);
   // AI availability
   const { data: aiStatus } = useAIAvailability();
   const aiUnavailable = aiStatus && aiStatus.available === false;
@@ -297,6 +301,10 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
     const question = chatQuestion.trim();
     if (!question || !extractedDocText || isChatLoading || !summary) return;
     if (chatMessages.filter(m => m.role === 'user').length >= MAX_QA_TURNS) return;
+    if (captchaRequired && !chatCaptchaToken) {
+      setChatError('Please complete the verification before asking a question.');
+      return;
+    }
 
     const userMsg: QAMessage = { role: 'user', content: question };
     const updatedMessages = [...chatMessages, userMsg];
@@ -320,6 +328,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
           conversationHistory: historyForApi,
           documentType: summary.documentType,
           language: i18n.language === 'es' ? 'es' : 'en',
+          ...(chatCaptchaToken && chatCaptchaToken !== 'not-required' ? { captchaToken: chatCaptchaToken } : {}),
         }),
       });
 
@@ -338,6 +347,10 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
       setChatError(err instanceof Error ? err.message : 'Failed to get answer. Please try again.');
       // Remove the unanswered user message so they can retry
       setChatMessages(prev => prev.slice(0, -1));
+      // The Turnstile token is single-use — force a fresh widget rather than
+      // let the user retry with an already-spent token.
+      resetChatCaptcha();
+      setChatCaptchaAttempt((n) => n + 1);
     } finally {
       setIsChatLoading(false);
     }
@@ -885,7 +898,13 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
 
                     {/* Question input */}
                     {chatMessages.filter(m => m.role === 'user').length < MAX_QA_TURNS && (
-                      <div className="flex gap-2">
+                      <div className="space-y-2">
+                        {captchaRequired && (
+                          <div className="flex justify-center">
+                            <TurnstileCaptcha key={chatCaptchaAttempt} onVerify={setChatCaptchaToken} size="normal" />
+                          </div>
+                        )}
+                        <div className="flex gap-2">
                         <input
                           type="text"
                           value={chatQuestion}
@@ -899,7 +918,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                         />
                         <Button
                           onClick={handleChatSubmit}
-                          disabled={!chatQuestion.trim() || isChatLoading || !!aiUnavailable}
+                          disabled={!chatQuestion.trim() || isChatLoading || !!aiUnavailable || !!(captchaRequired && !chatCaptchaToken)}
                           size="sm"
                           className="px-3"
                           aria-label="Send question"
@@ -910,6 +929,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                             <Send className="h-4 w-4" />
                           )}
                         </Button>
+                        </div>
                       </div>
                     )}
 

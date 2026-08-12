@@ -3160,9 +3160,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
         // Reject requests that contain keys outside the allowed schema.
         // This closes the prompt-injection vector where unknown keys could
-        // carry extra narrative content into the Claude call.
+        // carry extra narrative content into the Claude call. captchaToken is
+        // excluded from this check (not from the request) — requireCaptcha
+        // above already reads and verifies it directly off req.body, and it
+        // never reaches MITIGATION_FIELD_WHITELIST or the `fields` object
+        // built below, so allowing the key through here doesn't reopen the
+        // injection vector this check exists for.
         const unknownKeys = Object.keys(rawBody).filter(
-          (k) => !(MITIGATION_FIELD_WHITELIST as readonly string[]).includes(k)
+          (k) => k !== 'captchaToken' && !(MITIGATION_FIELD_WHITELIST as readonly string[]).includes(k)
         );
         if (unknownKeys.length > 0) {
           return res.status(400).json({

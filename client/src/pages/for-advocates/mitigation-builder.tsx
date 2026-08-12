@@ -30,6 +30,7 @@ import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 
 /* ─── Types ─── */
 
@@ -659,8 +660,14 @@ function PolishPanel({ form }: { form: FormState }) {
   const [checkboxChecked, setCheckboxChecked] = useState(false);
   const [polishCopied, setPolishCopied] = useState(false);
   const [polishDocxLoading, setPolishDocxLoading] = useState(false);
+  const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
+  const [captchaAttempt, setCaptchaAttempt] = useState(0);
 
   const handlePolish = async () => {
+    if (captchaRequired && !captchaToken) {
+      setPolish({ status: "error", message: "Please complete the verification below before generating." });
+      return;
+    }
     setPolish({ status: "loading" });
     setCheckboxChecked(false);
 
@@ -668,7 +675,10 @@ function PolishPanel({ form }: { form: FormState }) {
       const res = await fetch("/api/mitigation/polish", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          ...form,
+          ...(captchaToken && captchaToken !== "not-required" ? { captchaToken } : {}),
+        }),
       });
       const data = await res.json();
       if (data.success) {
@@ -690,9 +700,15 @@ function PolishPanel({ form }: { form: FormState }) {
         setPolish({ status: "done", text: full });
       } else {
         setPolish({ status: "error", message: data.error ?? "Unknown error." });
+        // The Turnstile token is single-use — force a fresh widget rather
+        // than let the user retry with an already-spent token.
+        resetCaptcha();
+        setCaptchaAttempt((n) => n + 1);
       }
     } catch {
       setPolish({ status: "error", message: "Network error. Please try again." });
+      resetCaptcha();
+      setCaptchaAttempt((n) => n + 1);
     }
   };
 
@@ -753,7 +769,8 @@ function PolishPanel({ form }: { form: FormState }) {
           <button
             type="button"
             onClick={handlePolish}
-            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white transition-colors"
+            disabled={!!(captchaRequired && !captchaToken)}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Sparkles className="h-3.5 w-3.5" />
             {polish.status === "idle" ? "Generate narrative" : "Regenerate"}
@@ -767,6 +784,13 @@ function PolishPanel({ form }: { form: FormState }) {
           <span className="font-semibold">Field-locked:</span> Claude will only use information you entered — empty fields are skipped and nothing is inferred. Output is unlabeled prose; your structured summary above remains unchanged. No data is stored or logged.
         </p>
       </div>
+
+      {/* CAPTCHA verification — shown whenever the Generate/Regenerate button above is active */}
+      {captchaRequired && polish.status !== "loading" && (
+        <div className="px-4 py-3 bg-background border-b border-violet-100 dark:border-violet-900/50 flex justify-center">
+          <TurnstileCaptcha key={captchaAttempt} onVerify={setCaptchaToken} size="normal" />
+        </div>
+      )}
 
       {/* Body */}
       <div className="px-4 py-4 bg-background space-y-4">

@@ -30,6 +30,7 @@ import { QuickReplyButtons, FullWidthReply } from "@/components/chat/quick-repli
 import { ProgressBreadcrumbs, GeneratingProgress } from "@/components/chat/progress-indicator";
 import { CaseStatusPanel } from "@/components/chat/case-status-panel";
 import { ChatInput } from "@/components/chat/chat-input";
+import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import { StateSelector } from "@/components/chat/state-selector";
 import { ChargeSelector } from "@/components/chat/charge-selector";
 import { useToast } from "@/hooks/use-toast";
@@ -101,6 +102,21 @@ export default function ChatPage() {
   const [showExportWarning, setShowExportWarning] = useState(false);
   const [privilegeWarningAcknowledged, setPrivilegeWarningAcknowledged] = useState(false);
   const [selectedConcerns, setSelectedConcerns] = useState<string[]>([]);
+
+  // CAPTCHA gate for /api/legal-guidance — three separate points in this
+  // conversational flow (concerns submit, free-text incident description,
+  // and skipping the privilege warning) all trigger a guidance request, so
+  // rather than duplicating a widget at each one, a single shared token is
+  // required and surfaced once near the input, ahead of whichever path fires.
+  const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
+  const [captchaAttempt, setCaptchaAttempt] = useState(0);
+  const captchaBlocked = !!(captchaRequired && !captchaToken);
+  const handleCaptchaFailure = useCallback(() => {
+    // Turnstile tokens are single-use — force a fresh widget rather than
+    // let the user retry with an already-spent token.
+    resetCaptcha();
+    setCaptchaAttempt((n) => n + 1);
+  }, [resetCaptcha]);
 
   const { visibleItems: visibleMessages, pendingCount } = useProgressiveReveal(
     state.messages,
@@ -793,6 +809,13 @@ export default function ChatPage() {
       return;
     }
 
+    if (captchaBlocked) {
+      addBotMessageWithKey('chat.messages.captchaRequired', [
+        { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
+      ]);
+      return;
+    }
+
     setIsTyping(true);
     actions.setIsGenerating(true);
     actions.setCurrentStep('generating_guidance');
@@ -808,6 +831,7 @@ export default function ChatPage() {
         incidentDescription: state.caseInfo.incidentDescription,
         selectedConcerns: selectedConcerns,
         language: i18n.language,
+        ...(captchaToken && captchaToken !== 'not-required' ? { captchaToken } : {}),
       });
 
       const data = await response.json();
@@ -829,15 +853,24 @@ export default function ChatPage() {
       console.error('Guidance generation error:', error);
       setIsTyping(false);
       actions.setIsGenerating(false);
+      handleCaptchaFailure();
+      actions.setCurrentStep('concerns_question');
 
       addBotMessageWithKey('chat.messages.error', [
         { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
       ]);
     }
-  }, [selectedConcerns, state.caseInfo, state.currentStep, state.caseInfo.stateName, state.caseInfo.state, actions, addBotMessageWithKey, t, i18n.language]);
+  }, [selectedConcerns, state.caseInfo, state.currentStep, state.caseInfo.stateName, state.caseInfo.state, actions, addBotMessageWithKey, t, i18n.language, captchaBlocked, captchaToken, handleCaptchaFailure]);
 
   const handleFreeTextSubmit = useCallback(async (message: string) => {
     if (state.currentStep === 'incident_description') {
+      if (captchaBlocked) {
+        addBotMessageWithKey('chat.messages.captchaRequired', [
+          { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
+        ]);
+        return;
+      }
+
       actions.addMessage({ role: 'user', content: message });
       actions.updateCaseInfo({ incidentDescription: message });
 
@@ -856,6 +889,7 @@ export default function ChatPage() {
           incidentDescription: message,
           selectedConcerns: state.caseInfo.selectedConcerns || [],
           language: i18n.language,
+          ...(captchaToken && captchaToken !== 'not-required' ? { captchaToken } : {}),
         });
         const data = await response.json();
         setIsTyping(false);
@@ -871,6 +905,8 @@ export default function ChatPage() {
         console.error('Guidance generation error:', error);
         setIsTyping(false);
         actions.setIsGenerating(false);
+        handleCaptchaFailure();
+        actions.setCurrentStep('incident_description');
         addBotMessageWithKey('chat.messages.error', [
           { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
         ]);
@@ -955,7 +991,7 @@ export default function ChatPage() {
         addBotMessageWithKey('chat.messages.followUpResponse');
       }, 1500);
     }
-  }, [state.currentStep, state.caseInfo, state.completedFlows, actions, addBotMessage, addBotMessageWithKey, t]);
+  }, [state.currentStep, state.caseInfo, state.completedFlows, actions, addBotMessage, addBotMessageWithKey, t, i18n.language, captchaBlocked, captchaToken, handleCaptchaFailure]);
 
   const handleClose = useCallback(() => {
     if (state.hasUnsavedGuidance) {
@@ -1110,10 +1146,17 @@ export default function ChatPage() {
   }, [state.guidanceData, state.caseInfo, state.completedFlows, actions, toast, t, addBotMessageWithKey]);
 
   const handlePrivilegeSkip = useCallback(async () => {
+    if (captchaBlocked) {
+      addBotMessageWithKey('chat.messages.captchaRequired', [
+        { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
+      ]);
+      return;
+    }
+
     setIsTyping(true);
     actions.setIsGenerating(true);
     actions.setCurrentStep('generating_guidance');
-    
+
     try {
       const response = await apiRequest('POST', '/api/legal-guidance', {
         jurisdiction: state.caseInfo.state,
@@ -1124,15 +1167,16 @@ export default function ChatPage() {
         incidentDescription: '',
         selectedConcerns: state.caseInfo.selectedConcerns || [],
         language: i18n.language,
+        ...(captchaToken && captchaToken !== 'not-required' ? { captchaToken } : {}),
       });
 
       const data = await response.json();
-      
+
       setIsTyping(false);
       actions.setIsGenerating(false);
       actions.setGuidanceData(data.guidance || data);
       actions.markFlowCompleted('personalized_guidance');
-      
+
       addBotMessageWithKey('chat.messages.guidanceReady', [
         { id: 'view-guidance', labelKey: 'chat.replies.viewGuidance', value: 'view_guidance', color: 'blue' as const },
         { id: 'export-pdf', labelKey: 'chat.replies.exportPdf', value: 'export_pdf', color: 'slate' as const },
@@ -1141,11 +1185,13 @@ export default function ChatPage() {
       console.error('Guidance generation error:', error);
       setIsTyping(false);
       actions.setIsGenerating(false);
+      handleCaptchaFailure();
+      actions.setCurrentStep('privilege_warning');
       addBotMessageWithKey('chat.messages.error', [
         { id: 'retry', labelKey: 'chat.replies.retry', value: 'retry' },
       ]);
     }
-  }, [state.caseInfo, actions, addBotMessageWithKey, i18n.language]);
+  }, [state.caseInfo, actions, addBotMessageWithKey, i18n.language, captchaBlocked, captchaToken, handleCaptchaFailure]);
 
   const canUseFreeText = state.currentStep === 'incident_description' ||
                           state.currentStep === 'pd_zip_search' ||
@@ -1338,7 +1384,7 @@ export default function ChatPage() {
                   <div className="flex items-center gap-3">
                     <Button
                       onClick={handleConcernsSubmit}
-                      disabled={state.isGenerating}
+                      disabled={state.isGenerating || captchaBlocked}
                       className="min-w-[120px]"
                     >
                       {t('chat.concerns.done', 'Continue')}
@@ -1364,6 +1410,11 @@ export default function ChatPage() {
 
           <div className="p-4 sm:p-6 border-t border-border bg-background">
             <div className="max-w-2xl mx-auto">
+              {captchaRequired && !state.isGenerating && (
+                <div className="flex justify-center mb-3">
+                  <TurnstileCaptcha key={captchaAttempt} onVerify={setCaptchaToken} size="normal" />
+                </div>
+              )}
               <ChatInput
                 onSend={handleFreeTextSubmit}
                 disabled={state.isGenerating}

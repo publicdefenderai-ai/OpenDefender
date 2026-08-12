@@ -40,14 +40,21 @@ app.use(helmet({
       defaultSrc: ["'self'"],
       // Removed 'unsafe-eval' - React/Vite work without it
       // Development mode may need relaxed CSP; production should be strict
+      // challenges.cloudflare.com is required for Turnstile CAPTCHA (script
+      // loads the widget API; frame-src renders the actual challenge iframe).
+      // Without both, every CAPTCHA-gated page (letter generator, chat,
+      // case guidance, document summarizer, mitigation builder) silently
+      // fails with "Failed to load verification" the moment real Turnstile
+      // keys are configured, since the browser blocks the script/iframe
+      // before it ever reaches Cloudflare.
       scriptSrc: process.env.NODE_ENV === 'development'
-        ? ["'self'", "'unsafe-inline'", "'unsafe-eval'"]
-        : ["'self'", "'unsafe-inline'"],
+        ? ["'self'", "'unsafe-inline'", "'unsafe-eval'", "https://challenges.cloudflare.com"]
+        : ["'self'", "'unsafe-inline'", "https://challenges.cloudflare.com"],
       styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
       fontSrc: ["'self'", "https://fonts.gstatic.com"],
       imgSrc: ["'self'", "data:", "https:", "blob:"],
       connectSrc: ["'self'", "https:", "wss:"],
-      frameSrc: ["'self'"],
+      frameSrc: ["'self'", "https://challenges.cloudflare.com"],
       objectSrc: ["'none'"],
       upgradeInsecureRequests: [],
     },
