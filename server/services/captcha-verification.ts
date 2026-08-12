@@ -38,14 +38,17 @@ interface VerificationResult {
  * @returns Verification result
  */
 export async function verifyCaptcha(token: string, remoteIp?: string): Promise<VerificationResult> {
+  // In development the Turnstile widget can't run (domain mismatch with .replit.dev),
+  // so skip verification entirely — captcha protection is only needed in production.
+  if (process.env.NODE_ENV === 'development') {
+    devLog('captcha', 'Development mode — skipping Turnstile verification');
+    return { success: true };
+  }
+
   const secretKey = process.env.TURNSTILE_SECRET_KEY;
 
-  // If no secret key configured, skip verification in development
+  // If no secret key configured, fail closed in production
   if (!secretKey) {
-    if (process.env.NODE_ENV === 'development') {
-      devLog('captcha', 'No TURNSTILE_SECRET_KEY set, skipping verification in development');
-      return { success: true };
-    }
     errLog('[CAPTCHA] TURNSTILE_SECRET_KEY not configured');
     return {
       success: false,
@@ -125,17 +128,19 @@ export async function verifyCaptcha(token: string, remoteIp?: string): Promise<V
 }
 
 /**
- * Check if CAPTCHA is required (i.e., properly configured)
- * Only require CAPTCHA if both keys are set - otherwise gracefully disable
+ * Check if CAPTCHA is required (i.e., properly configured and in production)
+ * Disabled in development because the Turnstile widget rejects non-production domains.
  */
 export function isCaptchaRequired(): boolean {
+  if (process.env.NODE_ENV === 'development') return false;
   return !!process.env.TURNSTILE_SECRET_KEY && !!process.env.TURNSTILE_SITE_KEY;
 }
 
 /**
- * Get the public site key for frontend use
- * This is safe to expose to clients
+ * Get the public site key for frontend use.
+ * Returns null in development so the widget is not rendered.
  */
 export function getCaptchaSiteKey(): string | null {
+  if (process.env.NODE_ENV === 'development') return null;
   return process.env.TURNSTILE_SITE_KEY || null;
 }
