@@ -8225,6 +8225,7 @@ export default {
     "generateButton": "生成我的信函",
     "writingLetter": "正在撰写您的信函…",
     "genericError": "生成信函时出现问题，请重试。",
+    "captchaRequiredError": "请先完成下方的验证，然后再生成您的信函。",
     "disclosureAlert": "此信函将有意向雇主披露犯罪记录。只有在您已决定要分享此信息时才使用它。",
     "generalNoteBold": "提示：",
     "generalNoteRest": "这些信函使用通用、专业的措辞，除非您选择添加，否则不会披露具体案件细节。",

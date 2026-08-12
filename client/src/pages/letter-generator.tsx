@@ -21,6 +21,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -255,6 +256,10 @@ function IntakeForm({
   onSubmit,
   onBack,
   loading,
+  captchaRequired,
+  captchaToken,
+  captchaAttempt,
+  onCaptchaVerify,
 }: {
   def: LetterTypeDef;
   answers: Record<string, string>;
@@ -262,6 +267,10 @@ function IntakeForm({
   onSubmit: () => void;
   onBack: () => void;
   loading: boolean;
+  captchaRequired: boolean;
+  captchaToken: string | null;
+  captchaAttempt: number;
+  onCaptchaVerify: (token: string) => void;
 }) {
   const { t } = useTranslation();
   const Icon = def.icon;
@@ -325,9 +334,15 @@ function IntakeForm({
         ))}
       </div>
 
+      {captchaRequired && (
+        <div className="flex justify-center">
+          <TurnstileCaptcha key={captchaAttempt} onVerify={onCaptchaVerify} />
+        </div>
+      )}
+
       <Button
         onClick={onSubmit}
-        disabled={!allRequiredFilled || loading}
+        disabled={!allRequiredFilled || loading || (captchaRequired && !captchaToken)}
         className="w-full gap-2"
       >
         <Sparkles className="h-4 w-4" />
@@ -471,6 +486,13 @@ export default function LetterGenerator() {
   } | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
+  // Bumped whenever the CAPTCHA needs to be redone (e.g. after a failed submit) —
+  // used as the widget's React key to force a fresh Turnstile challenge, since
+  // a token is single-use and silently retrying with a spent one would just
+  // reproduce the "CAPTCHA verification required" error indefinitely.
+  const [captchaAttempt, setCaptchaAttempt] = useState(0);
+
   const selectedDef = LETTER_TYPES.find((t) => t.id === selectedType) ?? null;
 
   const handleSelect = (id: LetterType) => {
@@ -486,6 +508,10 @@ export default function LetterGenerator() {
 
   const handleSubmit = async () => {
     if (!selectedType) return;
+    if (captchaRequired && !captchaToken) {
+      setError(t("letterGenerator.captchaRequiredError"));
+      return;
+    }
     setState("loading");
     setError(null);
 
@@ -493,7 +519,12 @@ export default function LetterGenerator() {
       const res = await fetch("/api/generate-letter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ letterType: selectedType, answers, language: i18n.language }),
+        body: JSON.stringify({
+          letterType: selectedType,
+          answers,
+          language: i18n.language,
+          ...(captchaToken && captchaToken !== "not-required" ? { captchaToken } : {}),
+        }),
       });
 
       const data = await res.json();
@@ -507,6 +538,11 @@ export default function LetterGenerator() {
     } catch (err) {
       setError(err instanceof Error ? err.message : t("letterGenerator.genericError"));
       setState("intake");
+      // The Turnstile token is single-use — after any failed attempt (including
+      // a CAPTCHA rejection), force a fresh widget rather than let the user
+      // retry with an already-spent token and hit the same error again.
+      resetCaptcha();
+      setCaptchaAttempt((n) => n + 1);
     }
   };
 
@@ -604,6 +640,10 @@ export default function LetterGenerator() {
                     onSubmit={handleSubmit}
                     onBack={handleReset}
                     loading={state === "loading"}
+                    captchaRequired={!!captchaRequired}
+                    captchaToken={captchaToken}
+                    captchaAttempt={captchaAttempt}
+                    onCaptchaVerify={setCaptchaToken}
                   />
                 </CardContent>
               </Card>

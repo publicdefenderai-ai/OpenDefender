@@ -8223,6 +8223,7 @@ export default {
     "generateButton": "Generate my letter",
     "writingLetter": "Writing your letter...",
     "genericError": "Something went wrong generating your letter. Please try again.",
+    "captchaRequiredError": "Please complete the verification below before generating your letter.",
     "disclosureAlert": "This letter intentionally discloses a criminal record to an employer. Only use it if you have decided you want to share this information.",
     "generalNoteBold": "Note:",
     "generalNoteRest": "These letters use general, professional language and do not disclose specific case details unless you choose to add them.",

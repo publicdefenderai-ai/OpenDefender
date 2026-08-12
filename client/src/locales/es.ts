@@ -8225,6 +8225,7 @@ export default {
     "generateButton": "Generar mi carta",
     "writingLetter": "Escribiendo su carta...",
     "genericError": "Ocurrió un error al generar su carta. Por favor, inténtelo de nuevo.",
+    "captchaRequiredError": "Por favor, complete la verificación a continuación antes de generar su carta.",
     "disclosureAlert": "Esta carta divulga intencionalmente un antecedente penal a un empleador. Úsela solo si ha decidido que desea compartir esta información.",
     "generalNoteBold": "Nota:",
     "generalNoteRest": "Estas cartas usan un lenguaje general y profesional y no divulgan detalles específicos del caso a menos que usted decida agregarlos.",
