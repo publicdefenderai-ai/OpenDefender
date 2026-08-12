@@ -308,6 +308,42 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Simple possession for personal use is less serious than possession with intent to sell. The type and amount of drug matters: marijuana is treated differently than heroin in many states."
+  },
+  // ── California Check Fraud ─────────────────────────────────────────────────
+  // Based on CALCRIM No. 1970 (Cal. Penal Code § 476a) and Cal. Penal Code § 476.
+  // § 476a: writing/passing a check knowing there are insufficient funds + intent to defraud.
+  // § 476:  making/passing a check on a fictitious, closed, or forged account.
+  {
+    chargePattern: /check.{0,20}fraud|bad.{0,5}check|insufficient.{0,10}funds.{0,10}check|476a?(\b|$)|writing.{0,10}bad.{0,5}check|passing.{0,10}bad.{0,5}check|forged.{0,10}check/i,
+    plainSummary: "Check fraud under California law covers two related offenses. The most common is Penal Code § 476a — writing, passing, or using a check when you knew your account didn't have enough money to cover it, and doing so to get money or something of value. The second is Penal Code § 476 — making or passing a check on a fictitious account, a closed account, or one you had no right to use, or forging a signature on a check. The critical word in both charges is 'knowing': the prosecutor must prove you were aware the check wouldn't clear. Accidentally miscounting your balance or a bank error is not a crime under these statutes.",
+    keyTerms: [
+      {
+        term: "Intent to Defraud",
+        plainMeaning: "You were trying to obtain money, goods, or services by using a check you knew was worthless or would bounce",
+        example: "Writing a check for rent knowing your account was already overdrawn, or using a check on an account you knew was closed"
+      },
+      {
+        term: "Insufficient Funds (§ 476a)",
+        plainMeaning: "Your bank account did not have enough money to cover the full amount of the check at the time you wrote or passed it",
+        example: "A $600 check written when your account balance was $40"
+      },
+      {
+        term: "Fictitious or Forged Check (§ 476)",
+        plainMeaning: "Using a check on an account that doesn't exist, was closed, or belongs to someone else — or signing someone else's name without permission",
+        example: "Writing a check on a bank account you closed last year, or signing your employer's name on a business check without authorization"
+      },
+      {
+        term: "Making, Drawing, Uttering, or Delivering",
+        plainMeaning: "Any step in creating or passing the check counts — you don't have to be the one who wrote it to be charged",
+        example: "Handing a bad check to a cashier, depositing someone else's check knowing it's bad, or endorsing a fraudulent check for cash"
+      },
+      {
+        term: "Wobbler",
+        plainMeaning: "This offense can be filed as either a misdemeanor or a felony — the prosecutor decides based on the dollar amount, your prior record, and the circumstances",
+        example: "A first offense involving a small amount is often charged as a misdemeanor; a pattern of bad checks or a large amount is more likely a felony"
+      }
+    ],
+    degreeContext: "Check fraud under § 476a is a 'wobbler': charged as a misdemeanor it carries up to one year in county jail; as a felony, up to three years in county jail (under California's realignment). Prosecutors weigh the dollar amount of the check, whether there was a pattern of multiple bad checks, and your prior criminal record. Checks over $950 and repeat offenses are significantly more likely to be filed as felonies. Diversion programs and civil compromise (repaying what's owed) are sometimes available for first-time offenders. The forgery variant under § 476 carries the same sentencing range but is more seriously viewed because it involves deliberate falsification rather than an account with no money."
   }
 ];
 
