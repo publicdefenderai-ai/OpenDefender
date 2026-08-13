@@ -1133,7 +1133,7 @@ export default function ChatPage() {
         },
       } as any; // Type cast to avoid strict typing issues with guidance data format
       
-      generateGuidancePDF(enhancedGuidance, i18n.language);
+      await generateGuidancePDF(enhancedGuidance, i18n.language);
       actions.setHasExported(true);
       toast({ title: t('chat.export.success', 'PDF downloaded successfully') });
       

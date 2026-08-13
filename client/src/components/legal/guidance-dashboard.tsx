@@ -950,6 +950,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
   const [completedActions, setCompletedActions] = useState<Set<string>>(new Set());
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['alerts', 'actions']));
   const [showExportWarning, setShowExportWarning] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
   const [showFlagDialog, setShowFlagDialog] = useState(false);
   const [flagReason, setFlagReason] = useState('');
   const [flagSubmitted, setFlagSubmitted] = useState(false);
@@ -1011,11 +1012,12 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
     setShowExportWarning(true);
   };
 
-  const handleConfirmExport = () => {
+  const handleConfirmExport = async () => {
     setShowExportWarning(false);
+    setIsExporting(true);
     try {
-      // Generate PDF entirely on client-side — no data sent to external servers
-      generateGuidancePDF(guidance, i18n.language);
+      // Generate PDF entirely on client-side. No data sent to external servers.
+      await generateGuidancePDF(guidance, i18n.language);
       // Notify parent that export has been completed
       onExport?.();
     } catch (err) {
@@ -1023,6 +1025,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       // Surface the failure — previously this threw silently and the dialog
       // just closed, leaving the user wondering why nothing happened.
       alert(t('exportWarning.exportFailed', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'));
+    } finally {
+      setIsExporting(false);
     }
   };
 
@@ -2083,8 +2087,12 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>{t('common.cancel', 'Cancel')}</AlertDialogCancel>
-            <AlertDialogAction onClick={handleConfirmExport} data-testid="button-confirm-export">
-              {t('exportWarning.confirmButton', 'I Understand, Export PDF')}
+            <AlertDialogAction onClick={handleConfirmExport} disabled={isExporting} data-testid="button-confirm-export">
+              {isExporting ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : (
+                t('exportWarning.confirmButton', 'I Understand, Export PDF')
+              )}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

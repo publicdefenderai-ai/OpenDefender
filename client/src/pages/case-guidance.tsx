@@ -451,11 +451,20 @@ export default function CaseGuidance() {
   };
 
   // Handler for export from warning dialog - exports PDF and stays on page
-  const handleExportFromWarning = () => {
+  const handleExportFromWarning = async () => {
     if (guidanceResult) {
-      // Generate the PDF directly
-      generateGuidancePDF(guidanceResult, i18n.language);
-      setHasExported(true);
+      try {
+        // Generate the PDF directly
+        await generateGuidancePDF(guidanceResult, i18n.language);
+        setHasExported(true);
+      } catch (error) {
+        console.error('[PDF export error]', error);
+        toast({
+          title: t('case.export.errorTitle', 'Export failed'),
+          description: t('case.export.errorMessage', 'PDF export failed. Please try again or use your browser\'s print function (Ctrl+P / Cmd+P).'),
+          variant: "destructive",
+        });
+      }
     }
     // Close dialog and clear pending navigation - user stays on guidance page after export
     setShowExitWarning(false);

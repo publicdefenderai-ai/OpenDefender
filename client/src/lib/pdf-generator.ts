@@ -3,6 +3,40 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 
+// jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
+// text renders as garbage without an embedded CJK font. This lazily fetches a GB2312-subset
+// TrueType build of Noto Sans SC (Regular + Bold, ~2.2MB each) and caches the base64 result so
+// only the first Chinese-language export in a session pays the download cost.
+let cjkFontPromise: Promise<{ regular: string; bold: string }> | null = null;
+
+function arrayBufferToBase64(buffer: ArrayBuffer): string {
+  let binary = '';
+  const bytes = new Uint8Array(buffer);
+  const chunkSize = 0x8000; // avoid blowing the call stack on String.fromCharCode(...bytes)
+  for (let i = 0; i < bytes.length; i += chunkSize) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + chunkSize));
+  }
+  return btoa(binary);
+}
+
+async function loadCJKFont(): Promise<{ regular: string; bold: string }> {
+  if (!cjkFontPromise) {
+    cjkFontPromise = Promise.all([
+      fetch('/fonts/NotoSansSC-Regular.ttf').then(r => r.arrayBuffer()),
+      fetch('/fonts/NotoSansSC-Bold.ttf').then(r => r.arrayBuffer()),
+    ])
+      .then(([regularBuf, boldBuf]) => ({
+        regular: arrayBufferToBase64(regularBuf),
+        bold: arrayBufferToBase64(boldBuf),
+      }))
+      .catch((err) => {
+        cjkFontPromise = null; // don't cache a failure — allow retry on the next export
+        throw err;
+      });
+  }
+  return cjkFontPromise;
+}
+
 // Convert markdown links to readable plain text for PDF output:
 // [Childcare Resources](/support/childcare) → Childcare Resources (opendefender.org/support/childcare)
 function pl(text: string): string {
@@ -238,16 +272,26 @@ function formatSentenceLength(months: number): string {
 /**
  * Generates a PDF document from legal guidance data.
  * All processing happens client-side - no data is sent to external servers.
- * 
+ *
  * @param guidance - The legal guidance data to export
- * @param language - The language for the PDF (en or es)
+ * @param language - The language for the PDF (en, es, or zh)
  */
-export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: string = 'en') {
+export async function generateGuidancePDF(guidance: EnhancedGuidanceData, language: string = 'en') {
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
   const margin = 15;
   let yPosition = 20;
   const isSpanish = language === 'es';
+  const isChinese = language === 'zh';
+  const FONT_NAME = isChinese ? 'NotoSansSC' : 'helvetica';
+
+  if (isChinese) {
+    const { regular, bold } = await loadCJKFont();
+    doc.addFileToVFS('NotoSansSC-Regular.ttf', regular);
+    doc.addFont('NotoSansSC-Regular.ttf', 'NotoSansSC', 'normal');
+    doc.addFileToVFS('NotoSansSC-Bold.ttf', bold);
+    doc.addFont('NotoSansSC-Bold.ttf', 'NotoSansSC', 'bold');
+  }
 
   // Defensive normalization — Claude may return partial responses with missing fields.
   // Using a safe object prevents hard crashes when any array or caseData field is absent.
@@ -403,13 +447,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
   // Title
   doc.setFontSize(22);
-  doc.setFont('helvetica', 'bold');
+  doc.setFont(FONT_NAME, 'bold');
   doc.text(labels.title, pageWidth / 2, yPosition, { align: 'center' });
   yPosition += 15;
 
   // Subtitle - Date and Session
   doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
+  doc.setFont(FONT_NAME, 'normal');
   doc.setTextColor(100, 100, 100);
   const currentDate = new Date().toLocaleDateString(isSpanish ? 'es-ES' : 'en-US', { 
     year: 'numeric', 
@@ -427,13 +471,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
   // Case Summary Section
   doc.setFontSize(16);
-  doc.setFont('helvetica', 'bold');
+  doc.setFont(FONT_NAME, 'bold');
   doc.setTextColor(0, 0, 0);
   doc.text(labels.caseInfo, margin, yPosition);
   yPosition += 8;
 
   doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
+  doc.setFont(FONT_NAME, 'normal');
   
   const summaryData = [
     [labels.yourState, (caseData.jurisdiction || 'Unknown').toUpperCase()],
@@ -462,7 +506,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     theme: 'grid',
     headStyles: { fillColor: [41, 128, 185] },
     margin: { left: margin, right: margin },
-    styles: { fontSize: 10 },
+    styles: { fontSize: 10, font: FONT_NAME },
   });
 
   yPosition = (doc as any).lastAutoTable.finalY + 10;
@@ -471,13 +515,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.criticalAlerts.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(180, 100, 0);
     doc.text(labels.urgentTakeaways, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
     safe.criticalAlerts.forEach((alert) => {
       checkPageBreak();
@@ -491,13 +535,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (guidance.overview) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 100, 200);
     doc.text(labels.overview, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
     yPosition = addText(pl(guidance.overview), margin + 5, yPosition);
@@ -508,13 +552,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (guidance.chargeClassifications && guidance.chargeClassifications.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 100, 200);
     doc.text(labels.understandingCharges, margin, yPosition);
     yPosition += 6;
 
     doc.setFontSize(9);
-    doc.setFont('helvetica', 'italic');
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
     doc.setTextColor(100, 100, 100);
     yPosition = addText(labels.chargesSubtitle, margin, yPosition);
     yPosition += 8;
@@ -524,7 +568,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       
       // Charge header with classification
       doc.setFontSize(11);
-      doc.setFont('helvetica', 'bold');
+      doc.setFont(FONT_NAME, 'bold');
       doc.setTextColor(0, 0, 0);
       const chargeHeader = `${formatChargeName(charge.name)} - ${charge.classification.toUpperCase()}`;
       doc.text(chargeHeader, margin, yPosition);
@@ -534,7 +578,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       const explanation = getChargeExplanation(charge.name);
       
       doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
+      doc.setFont(FONT_NAME, 'normal');
       doc.setTextColor(0, 0, 0);
 
       if (explanation?.plainSummary) {
@@ -553,7 +597,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       if (explanation?.degreeContext) {
         checkPageBreak(25);
         doc.setFontSize(9);
-        doc.setFont('helvetica', 'italic');
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
         doc.setTextColor(80, 80, 80);
         yPosition = addText(`${labels.howDegreesDiffer} ${explanation.degreeContext}`, margin + 5, yPosition);
         yPosition += 6;
@@ -564,7 +608,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       if (explanation?.keyTerms && explanation.keyTerms.length > 0) {
         checkPageBreak(30);
         doc.setFontSize(10);
-        doc.setFont('helvetica', 'bold');
+        doc.setFont(FONT_NAME, 'bold');
         doc.setTextColor(0, 0, 0);
         doc.text(labels.keyTerms, margin + 5, yPosition);
         yPosition += 8;
@@ -574,20 +618,20 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
           
           // Term name on its own line
           doc.setFontSize(10);
-          doc.setFont('helvetica', 'bold');
+          doc.setFont(FONT_NAME, 'bold');
           doc.setTextColor(0, 0, 0);
           doc.text(`${term.term}`, margin + 10, yPosition);
           yPosition += 6;
           
           // Definition on next line, indented
-          doc.setFont('helvetica', 'normal');
+          doc.setFont(FONT_NAME, 'normal');
           yPosition = addText(term.plainMeaning, margin + 15, yPosition);
           yPosition += 4;
 
           // Example on its own line
           if (term.example) {
             doc.setFontSize(9);
-            doc.setFont('helvetica', 'italic');
+            doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
             doc.setTextColor(100, 100, 100);
             yPosition = addText(`${labels.example} ${term.example}`, margin + 15, yPosition);
             doc.setTextColor(0, 0, 0);
@@ -610,7 +654,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     checkPageBreak(25);
     yPosition += 5;
     doc.setFontSize(9);
-    doc.setFont('helvetica', 'italic');
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
     doc.setTextColor(100, 100, 100);
     yPosition = addText(
       labels.chargeDisclaimer,
@@ -627,13 +671,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (legalDocuments.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 100, 200);
     doc.text(labels.documentsYouNeed, margin, yPosition);
     yPosition += 6;
 
     doc.setFontSize(9);
-    doc.setFont('helvetica', 'italic');
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
     doc.setTextColor(100, 100, 100);
     yPosition = addText(labels.documentsSubtitle, margin, yPosition);
     yPosition += 8;
@@ -650,7 +694,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       theme: 'striped',
       headStyles: { fillColor: [41, 128, 185] },
       margin: { left: margin, right: margin },
-      styles: { fontSize: 9 },
+      styles: { fontSize: 9, font: FONT_NAME },
       columnStyles: {
         0: { cellWidth: 50 },
         1: { cellWidth: 'auto' }
@@ -664,13 +708,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.immediateActions.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 100, 200);
     doc.text(labels.immediateActions, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
     safe.immediateActions.forEach((actionItem) => {
@@ -678,7 +722,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       const urgency = (actionItem.urgency || 'medium').toUpperCase();
       // Colored urgency indicator
       doc.setFontSize(8);
-      doc.setFont('helvetica', 'bold');
+      doc.setFont(FONT_NAME, 'bold');
       if (urgency === 'URGENT') doc.setTextColor(192, 0, 0);
       else if (urgency === 'HIGH') doc.setTextColor(180, 100, 0);
       else doc.setTextColor(80, 80, 80);
@@ -686,7 +730,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       yPosition += 5;
       // Action text — markdown stripped so **bold** never appears raw
       doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
+      doc.setFont(FONT_NAME, 'normal');
       doc.setTextColor(0, 0, 0);
       yPosition = addText(stripMd(pl(actionItem.action || '')), margin + 8, yPosition);
       yPosition += 5;
@@ -698,7 +742,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.timeline.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.text(labels.timeline, margin, yPosition);
     yPosition += 8;
 
@@ -716,7 +760,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       theme: 'grid',
       headStyles: { fillColor: [41, 128, 185] },
       margin: { left: margin, right: margin },
-      styles: { fontSize: 9 },
+      styles: { fontSize: 9, font: FONT_NAME },
       columnStyles: {
         0: { cellWidth: 15, halign: 'center' },
         1: { cellWidth: 35 },
@@ -732,7 +776,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.deadlines.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 0, 0);
     doc.text(labels.importantDates, margin, yPosition);
     yPosition += 8;
@@ -742,12 +786,12 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     if (hasEstimateDeadlines) {
       checkPageBreak(25);
       doc.setFontSize(9);
-      doc.setFont('helvetica', 'bold');
+      doc.setFont(FONT_NAME, 'bold');
       doc.setTextColor(180, 100, 0);
       const estimateLabel = isSpanish ? '⚠ Nota sobre plazos estimados' : '⚠ Note on estimated timeframes';
       doc.text(estimateLabel, margin, yPosition);
       yPosition += 5;
-      doc.setFont('helvetica', 'normal');
+      doc.setFont(FONT_NAME, 'normal');
       const estimateNotice = isSpanish
         ? 'Estos plazos son estimados generales: los plazos exactos de su estado pueden variar. Verifique con sus documentos del tribunal o el sitio web del tribunal de su estado las fechas reales de su caso.'
         : "These timeframes are general estimates: your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case.";
@@ -770,7 +814,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       theme: 'striped',
       headStyles: { fillColor: [41, 128, 185] },
       margin: { left: margin, right: margin },
-      styles: { fontSize: 9 },
+      styles: { fontSize: 9, font: FONT_NAME },
       columnStyles: {
         0: { cellWidth: 40 },
         1: { cellWidth: 30 },
@@ -786,13 +830,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.rights.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 150, 0);
     doc.text(labels.yourRights, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
     safe.rights.forEach((right) => {
@@ -807,13 +851,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.nextSteps.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 0, 0);
     doc.text(labels.nextSteps, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
 
     safe.nextSteps.forEach((step, idx) => {
       checkPageBreak();
@@ -827,12 +871,12 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.evidenceToGather.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.text(labels.evidenceToGather, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
 
     safe.evidenceToGather.forEach((evidence) => {
       checkPageBreak();
@@ -848,12 +892,12 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (hasCourt || hasWarn) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(200, 100, 0);
     doc.text(`${labels.warnings} & ${labels.courtPrep}`, margin, yPosition);
     yPosition += 8;
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
     if (hasWarn) {
@@ -914,7 +958,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     checkPageBreak(40);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(180, 90, 0);
     doc.text(
       isSpanish ? 'Más Allá de la Sentencia: Qué Más Puede Estar en Riesgo' : 'Beyond the Sentence: What Else May Be at Risk',
@@ -923,7 +967,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     yPosition += 6;
 
     doc.setFontSize(9);
-    doc.setFont('helvetica', 'italic');
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
     doc.setTextColor(100, 100, 100);
     yPosition = addText(
       isSpanish
@@ -952,7 +996,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       theme: 'striped',
       headStyles: { fillColor: [180, 90, 0] },
       margin: { left: margin, right: margin },
-      styles: { fontSize: 8 },
+      styles: { fontSize: 8, font: FONT_NAME },
       columnStyles: {
         0: { cellWidth: 35 },
         1: { cellWidth: 'auto' },
@@ -963,7 +1007,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
 
     yPosition = (doc as any).lastAutoTable.finalY + 5;
     doc.setFontSize(8);
-    doc.setFont('helvetica', 'italic');
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
     doc.setTextColor(120, 120, 120);
     yPosition = addText(
       isSpanish
@@ -979,13 +1023,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.mockQA.length > 0) {
     checkPageBreak(60);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(41, 128, 185);
     doc.text(labels.practiceQA, margin, yPosition);
     yPosition += 6;
     
     doc.setFontSize(9);
-    doc.setFont('helvetica', 'italic');
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
     doc.setTextColor(100, 100, 100);
     doc.text(labels.practiceQASubtitle, margin, yPosition);
     yPosition += 10;
@@ -996,23 +1040,23 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       checkPageBreak(50);
       
       doc.setFontSize(11);
-      doc.setFont('helvetica', 'bold');
+      doc.setFont(FONT_NAME, 'bold');
       yPosition = addText(`${index + 1}. ${qa.question}`, margin, yPosition);
       yPosition += 3;
       
       doc.setFontSize(10);
-      doc.setFont('helvetica', 'bold');
+      doc.setFont(FONT_NAME, 'bold');
       doc.setTextColor(41, 128, 185);
       doc.text(labels.suggestedResponse + ':', margin + 5, yPosition);
       yPosition += 5;
       
-      doc.setFont('helvetica', 'normal');
+      doc.setFont(FONT_NAME, 'normal');
       doc.setTextColor(0, 0, 0);
       yPosition = addText(`"${qa.suggestedResponse}"`, margin + 10, yPosition);
       yPosition += 3;
       
       doc.setFontSize(9);
-      doc.setFont('helvetica', 'italic');
+      doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
       doc.setTextColor(80, 80, 80);
       yPosition = addText(qa.explanation, margin + 10, yPosition);
       yPosition += 8;
@@ -1027,13 +1071,13 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.avoidActions.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(200, 0, 0);
     doc.text(labels.actionsToAvoid, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
     safe.avoidActions.forEach((action) => {
@@ -1048,21 +1092,21 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.uncertainties.length > 0) {
     checkPageBreak(30);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(180, 140, 0);
     doc.text(isSpanish ? 'Áreas de Incertidumbre' : 'Areas of Uncertainty', margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
-    doc.setFont('helvetica', 'normal');
+    doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
     safe.uncertainties.forEach((item) => {
       checkPageBreak(20);
-      doc.setFont('helvetica', 'bold');
+      doc.setFont(FONT_NAME, 'bold');
       yPosition = addText(item.area || '', margin + 5, yPosition);
       yPosition += 1;
-      doc.setFont('helvetica', 'normal');
+      doc.setFont(FONT_NAME, 'normal');
       doc.setFontSize(9);
       doc.setTextColor(80, 80, 80);
       yPosition = addText(item.note || '', margin + 8, yPosition);
@@ -1072,7 +1116,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     });
 
     doc.setFontSize(8);
-    doc.setFont('helvetica', 'italic');
+    doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
     doc.setTextColor(120, 120, 120);
     yPosition = addText(
       isSpanish
@@ -1088,7 +1132,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
   if (safe.resources.length > 0) {
     checkPageBreak(40);
     doc.setFontSize(14);
-    doc.setFont('helvetica', 'bold');
+    doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(0, 0, 0);
     doc.text(labels.resources, margin, yPosition);
     yPosition += 8;
@@ -1108,7 +1152,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       theme: 'striped',
       headStyles: { fillColor: [41, 128, 185] },
       margin: { left: margin, right: margin },
-      styles: { fontSize: 8 },
+      styles: { fontSize: 8, font: FONT_NAME },
       columnStyles: {
         0: { cellWidth: 30 },
         1: { cellWidth: 'auto' },
