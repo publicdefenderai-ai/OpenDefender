@@ -292,7 +292,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     understandingCharges: 'Entendiendo sus Cargos',
     chargesSubtitle: 'Esto es lo que significan estos términos legales en lenguaje sencillo.',
     keyTerms: 'Términos legales clave que la fiscalía debe probar:',
-    chargeDisclaimer: 'Recuerde: La fiscalía debe probar cada elemento de estos cargos más allá de una duda razonable. Su abogado puede ayudar a identificar qué elementos pueden ser cuestionados basándose en la evidencia.',
+    chargeDisclaimer: 'Recuerde: La fiscalía debe probar cada elemento de estos cargos más allá de una duda razonable. Su abogado puede ayudar a identificar qué elementos pueden ser cuestionados basándose en la evidencia. Los rangos de sentencia anteriores son estimaciones generales y no son específicos de su estado ni de su caso. Las penas reales dependen del estatuto de su jurisdicción y de los hechos de su caso, lo cual su abogado puede confirmar.',
     urgentTakeaways: 'Alertas Urgentes',
     immediateActions: 'Lo Que Importa Ahora',
     importantDates: 'Fechas Importantes',
@@ -346,7 +346,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     understandingCharges: 'Understanding Your Charges',
     chargesSubtitle: "Here's what these legal terms actually mean in plain English.",
     keyTerms: 'Key legal terms the prosecution must prove:',
-    chargeDisclaimer: 'Remember: The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence.',
+    chargeDisclaimer: 'Remember: The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence. The sentencing ranges above are general estimates and are not specific to your state or your case. Actual penalties depend on your jurisdiction\'s statute and the facts of your case, which your attorney can confirm.',
     urgentTakeaways: 'Urgent Takeaways',
     immediateActions: 'What Matters Now',
     importantDates: 'Important Dates',
@@ -750,7 +750,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
       doc.setFont('helvetica', 'normal');
       const estimateNotice = isSpanish
         ? 'Estos plazos son estimados generales: los plazos exactos de su estado pueden variar. Verifique con sus documentos del tribunal o el sitio web del tribunal de su estado las fechas reales de su caso.'
-        : "These timeframes are general estimates — your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case.";
+        : "These timeframes are general estimates: your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case.";
       yPosition = addText(estimateNotice, margin, yPosition);
       doc.setTextColor(0, 0, 0);
       yPosition += 6;
@@ -928,7 +928,7 @@ export function generateGuidancePDF(guidance: EnhancedGuidanceData, language: st
     yPosition = addText(
       isSpanish
         ? 'Estas consecuencias van más allá de la sentencia y a veces entran en vigor automáticamente. Informe a su abogado antes de cualquier declaración de culpabilidad.'
-        : 'These consequences go beyond the sentence itself and often take effect automatically — sometimes upon a guilty plea. Raise each one with your attorney before any plea decision.',
+        : 'These consequences go beyond the sentence itself and often take effect automatically, sometimes upon a guilty plea. Raise each one with your attorney before any plea decision.',
       margin, yPosition
     );
     yPosition += 8;

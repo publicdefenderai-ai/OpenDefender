@@ -2406,7 +2406,7 @@ export default {
         "current": "Actual"
       },
       "estimateDeadlines": {
-        "notice": "Estos plazos son estimaciones generales — los plazos exactos de su estado pueden ser diferentes. Revise los documentos del tribunal o el sitio web del tribunal de su estado para conocer las fechas reales de su caso.",
+        "notice": "Estos plazos son estimaciones generales: los plazos exactos de su estado pueden ser diferentes. Revise los documentos del tribunal o el sitio web del tribunal de su estado para conocer las fechas reales de su caso.",
         "findCourt": "Encuentre el sitio web del tribunal de su estado"
       },
       "uncertaintyDisclosures": {

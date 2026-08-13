@@ -2404,7 +2404,7 @@ export default {
         "current": "Current"
       },
       "estimateDeadlines": {
-        "notice": "These timeframes are general estimates — your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case.",
+        "notice": "These timeframes are general estimates: your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case.",
         "findCourt": "Find your state court website"
       },
       "uncertaintyDisclosures": {

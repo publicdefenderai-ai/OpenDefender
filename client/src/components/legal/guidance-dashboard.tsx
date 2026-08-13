@@ -559,7 +559,7 @@ function CollateralConsequencesCard({
         <Card className="mt-2 border-amber-200 dark:border-amber-800">
           <CardContent className="pt-5 space-y-1">
             <p className="text-xs text-muted-foreground pb-3">
-              These are consequences that go beyond the sentence itself. They often take effect automatically — sometimes upon a guilty plea, before sentencing. Raise each one with your attorney before any plea decision.
+              These are consequences that go beyond the sentence itself. They often take effect automatically, sometimes upon a guilty plea, before sentencing. Raise each one with your attorney before any plea decision.
             </p>
             <div className="space-y-3">
               {items.map((item, i) => {
@@ -846,7 +846,7 @@ function YourChargesSection({
         <div className="p-3 rounded-lg bg-muted/50 border border-border mt-4">
           <p className="text-xs text-muted-foreground leading-relaxed">
             <strong>Remember: </strong>
-            The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence.
+            The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence. The sentencing ranges above are general estimates and are not specific to your state or your case. Actual penalties depend on your jurisdiction's statute and the facts of your case, which your attorney can confirm.
           </p>
         </div>
       </CardContent>
@@ -1429,7 +1429,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 <div className="text-sm">
                   <p className="text-amber-800 dark:text-amber-200">
                     {t('legalGuidance.dashboard.estimateDeadlines.notice',
-                      "These timeframes are general estimates — your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case."
+                      "These timeframes are general estimates: your state's exact deadlines may differ. Check your court paperwork or your state court's website for the actual dates in your case."
                     )}
                   </p>
                   <button
@@ -1483,7 +1483,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                             </Badge>
                           )}
                         </h4>
-                        <Badge variant={isCompleted ? 'secondary' : 'outline'} className={`text-xs ${stage.isEstimate ? 'border-amber-400 text-amber-700 dark:text-amber-400' : ''}`} title={stage.isEstimate ? 'General estimate — verify with your court' : undefined}>
+                        <Badge variant={isCompleted ? 'secondary' : 'outline'} className={`text-xs ${stage.isEstimate ? 'border-amber-400 text-amber-700 dark:text-amber-400' : ''}`} title={stage.isEstimate ? 'General estimate: verify with your court' : undefined}>
                           {stage.isEstimate ? `~${stage.timeframe}` : stage.timeframe}
                         </Badge>
                       </div>
@@ -1996,7 +1996,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               {t('guidance.flag.dialogTitle', 'Report an issue')}
             </DialogTitle>
             <DialogDescription>
-              {t('guidance.flag.dialogDesc', 'Help us improve. No case details are submitted — only the issue type and your jurisdiction.')}
+              {t('guidance.flag.dialogDesc', 'Help us improve. No case details are submitted, only the issue type and your jurisdiction.')}
             </DialogDescription>
           </DialogHeader>
 
@@ -2064,15 +2064,15 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-amber-500 font-bold">•</span>
-                    <span><strong>{t('exportWarning.notLegalAdvice', 'This is not legal advice')}</strong> — {t('exportWarning.notLegalAdviceDesc', "It's general legal information only")}</span>
+                    <span><strong>{t('exportWarning.notLegalAdvice', 'This is not legal advice')}.</strong> {t('exportWarning.notLegalAdviceDesc', "It's general legal information only")}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-amber-500 font-bold">•</span>
-                    <span><strong>{t('exportWarning.notPrivileged', 'Not protected by attorney-client privilege')}</strong> — {t('exportWarning.notPrivilegedDesc', 'Documents you create and share may be requested by opposing parties in legal proceedings')}</span>
+                    <span><strong>{t('exportWarning.notPrivileged', 'Not protected by attorney-client privilege')}.</strong> {t('exportWarning.notPrivilegedDesc', 'Documents you create and share may be requested by opposing parties in legal proceedings')}</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-amber-500 font-bold">•</span>
-                    <span><strong>{t('exportWarning.shareWithAttorney', 'Share only with your attorney')}</strong> — {t('exportWarning.shareWithAttorneyDesc', 'If you have a lawyer, share this with them first before anyone else')}</span>
+                    <span><strong>{t('exportWarning.shareWithAttorney', 'Share only with your attorney')}.</strong> {t('exportWarning.shareWithAttorneyDesc', 'If you have a lawyer, share this with them first before anyone else')}</span>
                   </li>
                 </ul>
                 <p className="text-sm text-muted-foreground italic">

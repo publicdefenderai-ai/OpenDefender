@@ -316,7 +316,7 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Suspension vs. Revocation",
-        plainMeaning: "A suspension is a temporary removal of your license, usually for a set period. A revocation is a full cancellation — you would need to reapply entirely to get your license back.",
+        plainMeaning: "A suspension is a temporary removal of your license, usually for a set period. A revocation is a full cancellation. You would need to reapply entirely to get your license back.",
         example: "Missing a court date may trigger a 30-day suspension; a DUI conviction may result in full revocation"
       },
       {
@@ -326,7 +326,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "DWLS / DWLI",
-        plainMeaning: "Abbreviations for Driving While License Suspended or Invalid — the same legal allegation as driving on a suspended license",
+        plainMeaning: "Abbreviations for Driving While License Suspended or Invalid: the same legal allegation as driving on a suspended license",
         example: "Being pulled over for a taillight and the officer discovering your license is currently suspended"
       }
     ],
@@ -335,7 +335,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Driving Without License / Minor Traffic Offenses ──────────────────────
   {
     chargePattern: /driving.{0,25}without.{0,15}(?:license|insurance|privileges)|aggravated.unlicensed.operation|driving.with.expired|driving.without.valid|defective.vehicle|aggravated.speeding/i,
-    plainSummary: "These charges involve operating a vehicle while missing a required legal credential — a valid license, current insurance, valid registration, or a passing inspection — or driving significantly over the speed limit. The prosecutor must prove you were driving and that the specific requirement was not met at that time. Most of these are traffic-level misdemeanors or civil infractions, though some can become more serious with prior convictions.",
+    plainSummary: "These charges involve operating a vehicle while missing a required legal credential, such as a valid license, current insurance, valid registration, or a passing inspection, or driving significantly over the speed limit. The prosecutor must prove you were driving and that the specific requirement was not met at that time. Most of these are traffic-level misdemeanors or civil infractions, though some can become more serious with prior convictions.",
     keyTerms: [
       {
         term: "Unlicensed Operation",
@@ -344,7 +344,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Proof of Compliance",
-        plainMeaning: "Documentation showing you actually had the required credential on the date of the offense — sometimes dismisses the charge",
+        plainMeaning: "Documentation showing you actually had the required credential on the date of the offense, which can sometimes dismiss the charge",
         example: "Showing the court a valid insurance card or registration that was active on the date you were cited"
       },
       {
@@ -358,7 +358,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Criminal Mischief / Vandalism / Property Damage ───────────────────────
   {
     chargePattern: /criminal.mischief|criminal.damage|criminal.damaging|criminal.property.damage|malicious.mischief|malicious.destruction|malicious.injury|malicious.damage|mdop|vandalism|destruction.of.property|damage.to.property|property.damage.\d|injury.to.personal.property|unlawful.mischief/i,
-    plainSummary: "This charge means the prosecutor believes you intentionally or recklessly damaged, defaced, or destroyed property belonging to someone else. They must prove the damage was deliberate or at minimum reckless — accidentally breaking something is not a crime. The severity of the charge almost always depends on the dollar value of the damage caused.",
+    plainSummary: "This charge means the prosecutor believes you intentionally or recklessly damaged, defaced, or destroyed property belonging to someone else. They must prove the damage was deliberate or at minimum reckless. Accidentally breaking something is not a crime. The severity of the charge almost always depends on the dollar value of the damage caused.",
     keyTerms: [
       {
         term: "Intent or Recklessness",
@@ -367,7 +367,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Dollar Threshold",
-        plainMeaning: "The amount of damage caused determines whether the charge is a minor or serious offense — most states have cutoffs at $500, $1,000, or $2,500",
+        plainMeaning: "The amount of damage caused determines whether the charge is a minor or serious offense: most states have cutoffs at $500, $1,000, or $2,500",
         example: "Spray-painting a wall that costs $300 to repaint may be a misdemeanor; breaking a $10,000 storefront window could be a felony"
       },
       {
@@ -381,16 +381,16 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Trespass / Unlawful Entry ─────────────────────────────────────────────
   {
     chargePattern: /trespass|unlawful.entry/i,
-    plainSummary: "A trespass charge means you entered or stayed on someone else's property without permission. The prosecutor must prove you knew you were not allowed to be there — either because you were told to leave, there were posted signs, or the property was clearly private. Entering a home is treated far more seriously than entering land or a commercial property.",
+    plainSummary: "A trespass charge means you entered or stayed on someone else's property without permission. The prosecutor must prove you knew you were not allowed to be there, either because you were told to leave, there were posted signs, or the property was clearly private. Entering a home is treated far more seriously than entering land or a commercial property.",
     keyTerms: [
       {
         term: "Notice",
-        plainMeaning: "Being informed — verbally, by a sign, or by a prior ban — that you are not permitted on the property",
+        plainMeaning: "Being informed, verbally, by a sign, or by a prior ban, that you are not permitted on the property",
         example: "A 'No Trespassing' sign at the fence line, or a store manager who previously told you not to return"
       },
       {
         term: "Dwelling",
-        plainMeaning: "A building used as a home — houses, apartments, or anywhere people live — which carries elevated penalties compared to trespassing on open land",
+        plainMeaning: "A building used as a home, such as a house or apartment, which carries elevated penalties compared to trespassing on open land",
         example: "Entering an apartment building you don't live in without authorization is trespass to a dwelling"
       },
       {
@@ -399,16 +399,16 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Being asked to leave a bar and refusing to go for 20 minutes"
       }
     ],
-    degreeContext: "Trespassing on open land or a business is usually a misdemeanor or infraction with a fine. Entering a home or occupied dwelling bumps it to a more serious misdemeanor or low-level felony. Being armed during a trespass, or having prior trespass convictions, significantly increases the grade. Criminal trespass is distinct from burglary — trespass does not require intent to commit another crime inside."
+    degreeContext: "Trespassing on open land or a business is usually a misdemeanor or infraction with a fine. Entering a home or occupied dwelling bumps it to a more serious misdemeanor or low-level felony. Being armed during a trespass, or having prior trespass convictions, significantly increases the grade. Criminal trespass is distinct from burglary: trespass does not require intent to commit another crime inside."
   },
   // ── Shoplifting / Retail Theft / Transit Fraud ────────────────────────────
   {
     chargePattern: /shoplifting|retail.fraud|turnstile.jumping|willful.concealment|fare.evasion/i,
-    plainSummary: "Shoplifting means taking merchandise from a store without paying, or concealing it with the intent to leave without paying. Retail fraud and willful concealment are different names for the same basic act. Turnstile jumping (transit fraud) means using public transit without paying the fare. The prosecutor must prove you intended to take the item — accidentally leaving with something in your cart is a defense.",
+    plainSummary: "Shoplifting means taking merchandise from a store without paying, or concealing it with the intent to leave without paying. Retail fraud and willful concealment are different names for the same basic act. Turnstile jumping (transit fraud) means using public transit without paying the fare. The prosecutor must prove you intended to take the item. Accidentally leaving with something in your cart is a defense.",
     keyTerms: [
       {
         term: "Intent to Steal",
-        plainMeaning: "You specifically meant to take the item without paying — this is the element the prosecutor must prove",
+        plainMeaning: "You specifically meant to take the item without paying, which is the element the prosecutor must prove",
         example: "Hiding an item in your bag or under your clothing while still in the store shows intent"
       },
       {
@@ -427,11 +427,11 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Disorderly Conduct / Disturbing the Peace / Public Order ──────────────
   {
     chargePattern: /disorderly.conduct|disorderly.person|disorderly.intoxication|disturbing.the.peace|breach.of.peace|appearing.in.public.under.the.influence|curfew.violation|truancy|chronic.absenteeism|simple.aggression/i,
-    plainSummary: "These charges cover behavior that disrupts public order — acting aggressively in public, being visibly intoxicated in a public place, making excessive noise, or violating time-based rules like curfew. The prosecutor must show your conduct was disruptive enough to alarm or annoy a reasonable person, or that you violated a specific rule (like curfew). These are almost always misdemeanors or minor infractions.",
+    plainSummary: "These charges cover behavior that disrupts public order: acting aggressively in public, being visibly intoxicated in a public place, making excessive noise, or violating time-based rules like curfew. The prosecutor must show your conduct was disruptive enough to alarm or annoy a reasonable person, or that you violated a specific rule (like curfew). These are almost always misdemeanors or minor infractions.",
     keyTerms: [
       {
         term: "Public Place",
-        plainMeaning: "Any space open to the general public — streets, parks, stores, parking lots",
+        plainMeaning: "Any space open to the general public: streets, parks, stores, parking lots",
         example: "Yelling aggressively outside a convenience store counts as a public-place offense"
       },
       {
@@ -450,7 +450,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Drug Distribution / Trafficking / School Zone ─────────────────────────
   {
     chargePattern: /drug.traffick|distribution.of.controlled.substance|drug.distribution|drug.offense.*school|school.zone|possession.with.intent.to.distribute|manufacturing.controlled|maintaining.drug.house|promoting.a.detrimental.drug|drug.paraphernalia|simple.possession(?!.{0,5}controlled)|unlawful.possession.of.(?:cannabis|scheduled)/i,
-    plainSummary: "Drug distribution and trafficking charges mean the prosecutor believes you were selling, delivering, or moving controlled substances, not just using them. Simple possession of marijuana or cannabis without a prescription in states that still criminalize it is a lesser but related charge. A school zone enhancement adds extra penalties if the drug activity occurred within a set distance of a school. Prosecution must prove you intended to distribute — not just that you personally used the substance.",
+    plainSummary: "Drug distribution and trafficking charges mean the prosecutor believes you were selling, delivering, or moving controlled substances, not just using them. Simple possession of marijuana or cannabis without a prescription in states that still criminalize it is a lesser but related charge. A school zone enhancement adds extra penalties if the drug activity occurred within a set distance of a school. Prosecution must prove you intended to distribute, not just that you personally used the substance.",
     keyTerms: [
       {
         term: "Distribution vs. Possession",
@@ -459,7 +459,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Drug Trafficking",
-        plainMeaning: "A more serious charge than distribution — it's typically tied to larger quantities or crossing state/international lines",
+        plainMeaning: "A more serious charge than distribution; it's typically tied to larger quantities or crossing state or international lines",
         example: "Being caught moving a large quantity of drugs across state lines triggers federal trafficking charges"
       },
       {
@@ -477,12 +477,12 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Prohibited Person",
-        plainMeaning: "Someone legally barred from owning or possessing firearms — most commonly because of a prior felony conviction or certain domestic violence convictions",
+        plainMeaning: "Someone legally barred from owning or possessing firearms, most commonly because of a prior felony conviction or certain domestic violence convictions",
         example: "If you have any prior felony conviction, federal law makes it a crime for you to touch a firearm, even briefly"
       },
       {
         term: "Constructive Possession",
-        plainMeaning: "You don't have to be physically holding a weapon to 'possess' it — having access and control is enough",
+        plainMeaning: "You don't have to be physically holding a weapon to 'possess' it. Having access and control is enough",
         example: "A gun found in a car you were driving or in a home you share with others can still lead to a possession charge"
       },
       {
@@ -491,7 +491,7 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Committing a robbery while armed adds mandatory years to the robbery sentence on top of any weapons charge"
       }
     ],
-    degreeContext: "Unlawful carrying or discharge in a city is typically a felony carrying 1–5 years. A felon in possession of a firearm is a federal felony with a mandatory minimum of up to 15 years for repeat offenders (Armed Career Criminal Act). Using a firearm during a crime of violence triggers federal mandatory minimums of 5–10 years consecutive — meaning served after, not instead of, the underlying sentence."
+    degreeContext: "Unlawful carrying or discharge in a city is typically a felony carrying 1–5 years. A felon in possession of a firearm is a federal felony with a mandatory minimum of up to 15 years for repeat offenders (Armed Career Criminal Act). Using a firearm during a crime of violence triggers federal mandatory minimums of 5-10 years consecutive, meaning served after, not instead of, the underlying sentence."
   },
   // ── Sexual Assault (generic / criminal sexual assault) ────────────────────
   {
@@ -500,12 +500,12 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Consent",
-        plainMeaning: "A clear, voluntary, ongoing agreement to engage in sexual activity — someone who is unconscious, severely intoxicated, or under a certain age cannot legally consent",
+        plainMeaning: "A clear, voluntary, ongoing agreement to engage in sexual activity. Someone who is unconscious, severely intoxicated, or under a certain age cannot legally consent",
         example: "A person who said 'yes' earlier in the evening cannot be assumed to have consented to all subsequent activity"
       },
       {
         term: "Criminal Sexual Abuse",
-        plainMeaning: "In states that use this term, it typically covers unwanted sexual contact that falls short of penetration — touching, groping, or fondling",
+        plainMeaning: "In states that use this term, it typically covers unwanted sexual contact that falls short of penetration, such as touching, groping, or fondling",
         example: "Grabbing someone in a sexual way without their consent when no penetration occurred"
       },
       {
@@ -519,21 +519,21 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Sex Offenses Against Minors ───────────────────────────────────────────
   {
     chargePattern: /child.sexual.abuse|sexual.exploitation.of.minor|statutory.rape|unlawful.sexual.activity.*minor|sexual.penetration.*foreign.object/i,
-    plainSummary: "These charges involve alleged sexual conduct with a person under the legal age of consent, or using a minor in sexual material. The defining feature of statutory rape and similar charges is that the victim's age itself makes the act illegal — even if the minor appeared to agree, the law says a minor cannot legally consent. Sexual exploitation of a minor includes producing, distributing, or possessing images of minors in sexual situations.",
+    plainSummary: "These charges involve alleged sexual conduct with a person under the legal age of consent, or using a minor in sexual material. The defining feature of statutory rape and similar charges is that the victim's age itself makes the act illegal. Even if the minor appeared to agree, the law says a minor cannot legally consent. Sexual exploitation of a minor includes producing, distributing, or possessing images of minors in sexual situations.",
     keyTerms: [
       {
         term: "Age of Consent",
-        plainMeaning: "The minimum legal age at which a person can agree to sexual activity — it varies by state, typically between 16 and 18",
+        plainMeaning: "The minimum legal age at which a person can agree to sexual activity. It varies by state, typically between 16 and 18",
         example: "In a state where the age of consent is 17, sexual activity with a 16-year-old is illegal regardless of what the minor said"
       },
       {
         term: "Strict Liability",
-        plainMeaning: "In many states, genuinely believing the person was of legal age is not a defense — the act is illegal regardless of your belief",
+        plainMeaning: "In many states, genuinely believing the person was of legal age is not a defense. The act is illegal regardless of your belief",
         example: "Being told by the minor that they were 18 may not protect you from prosecution if they were actually 15"
       },
       {
         term: "Sexual Exploitation",
-        plainMeaning: "Any use of a minor in sexually explicit material — taking photos or video, sharing it, or possessing it — which is a separate federal crime even without physical contact",
+        plainMeaning: "Any use of a minor in sexually explicit material, including taking photos or video, sharing it, or possessing it, which is a separate federal crime even without physical contact",
         example: "Having explicit images of minors on a device, even if received rather than taken, is a federal felony"
       }
     ],
@@ -542,7 +542,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Financial Fraud (wire, tax, credit card, computer, RICO, embezzlement) ─
   {
     chargePattern: /credit.card.fraud|wire.fraud|mail.fraud|tax.fraud|insurance.fraud|computer.fraud|money.laundering|rico|racketeering|embezzlement|extortion|misappropriation/i,
-    plainSummary: "These charges accuse you of obtaining money or property through deception, concealment, or threats, or of participating in a broader criminal enterprise. The prosecutor must prove you acted deliberately — that you knew what you were doing was illegal. These offenses are almost always felonies, frequently prosecuted federally, and can carry decades in prison plus financial penalties.",
+    plainSummary: "These charges accuse you of obtaining money or property through deception, concealment, or threats, or of participating in a broader criminal enterprise. The prosecutor must prove you acted deliberately: that you knew what you were doing was illegal. These offenses are almost always felonies, frequently prosecuted federally, and can carry decades in prison plus financial penalties.",
     keyTerms: [
       {
         term: "Intent to Defraud",
@@ -574,18 +574,18 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Substantial Step (Attempted Murder)",
-        plainMeaning: "More than just thinking about or planning the act — you must have taken a real action toward carrying it out",
+        plainMeaning: "More than just thinking about or planning the act. You must have taken a real action toward carrying it out",
         example: "Obtaining a weapon and driving to the victim's location is a substantial step, even if you were stopped before the act"
       },
       {
         term: "Asportation (Kidnapping)",
-        plainMeaning: "Moving the victim from one place to another against their will — even a short distance can satisfy this element",
+        plainMeaning: "Moving the victim from one place to another against their will. Even a short distance can satisfy this element",
         example: "Forcing someone into a car and driving them two blocks is legally sufficient movement for kidnapping"
       },
       {
         term: "Criminal Negligence",
         plainMeaning: "Acting with such extreme carelessness about human life that it goes beyond a simple mistake and becomes criminal",
-        example: "Racing through a school zone at 90 mph and striking a pedestrian — the recklessness is so extreme it's treated as criminal"
+        example: "Racing through a school zone at 90 mph and striking a pedestrian: the recklessness is so extreme it's treated as criminal"
       }
     ],
     degreeContext: "All of these are serious felonies. Attempted murder carries 5–life depending on the state and weapon used. Kidnapping ranges from 5–life, with life mandatory if the victim is a child or is harmed. Arson of an occupied building can carry 10–20 years. Carjacking is a federal crime carrying up to 25 years, and life or death if someone is killed. Vehicular homicide typically carries 3–15 years, increasing if DUI was involved."
@@ -597,17 +597,17 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Bodily Injury",
-        plainMeaning: "Any physical pain or harm to the body, even minor — a bruise, scratch, or nosebleed qualifies",
+        plainMeaning: "Any physical pain or harm to the body, even minor: a bruise, scratch, or nosebleed qualifies",
         example: "Punching someone and leaving a bruise satisfies the bodily injury element even without a hospital visit"
       },
       {
         term: "Reasonable Apprehension",
-        plainMeaning: "Making someone genuinely believe they were about to be hurt — even without touching them",
+        plainMeaning: "Making someone genuinely believe they were about to be hurt, even without touching them",
         example: "Raising your fist and stepping toward someone who then steps back in fear"
       },
       {
         term: "Peace Officer",
-        plainMeaning: "A law enforcement official performing their duties — police officers, sheriffs, corrections officers, and sometimes probation officers",
+        plainMeaning: "A law enforcement official performing their duties: police officers, sheriffs, corrections officers, and sometimes probation officers",
         example: "Pushing a police officer who is arresting you elevates the assault to 'assault on a peace officer,' a more serious felony"
       }
     ],
@@ -620,7 +620,7 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Agreement (Conspiracy)",
-        plainMeaning: "Two or more people reaching an understanding to commit a crime together — it doesn't have to be in writing or even explicit",
+        plainMeaning: "Two or more people reaching an understanding to commit a crime together. It doesn't have to be in writing or even explicit",
         example: "Verbally agreeing with a friend to rob a store is a conspiracy, even if you never go through with it"
       },
       {
@@ -634,7 +634,7 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Driving the getaway car makes you liable for the robbery even if you never entered the store"
       }
     ],
-    degreeContext: "Conspiracy and aiding-and-abetting charges typically carry the same sentence as the underlying crime. Being an accessory after the fact carries a lesser sentence — usually half the maximum of the crime helped. Criminal attempt is also typically punished at half the full sentence. The Armed Career Criminal Act (federal) mandates a 15-year minimum for defendants with three prior violent felony or drug trafficking convictions."
+    degreeContext: "Conspiracy and aiding-and-abetting charges typically carry the same sentence as the underlying crime. Being an accessory after the fact carries a lesser sentence, usually half the maximum of the crime helped. Criminal attempt is also typically punished at half the full sentence. The Armed Career Criminal Act (federal) mandates a 15-year minimum for defendants with three prior violent felony or drug trafficking convictions."
   },
   // ── Contempt / Violation of Probation or Protective Order ─────────────────
   {
@@ -643,41 +643,41 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Probation Conditions",
-        plainMeaning: "The specific rules you agreed to follow in exchange for probation instead of jail — these may include regular check-ins, drug testing, curfews, and no new arrests",
+        plainMeaning: "The specific rules you agreed to follow in exchange for probation instead of jail. These may include regular check-ins, drug testing, curfews, and no new arrests",
         example: "Testing positive for drugs when your probation conditions require you to stay clean"
       },
       {
         term: "Protective Order",
-        plainMeaning: "A court order forbidding you from contacting or coming near a specific person — often issued in domestic violence cases",
+        plainMeaning: "A court order forbidding you from contacting or coming near a specific person, often issued in domestic violence cases",
         example: "Sending a text message to someone protected by a no-contact order violates the order even if the message seems harmless"
       },
       {
         term: "Willful Violation",
-        plainMeaning: "You knew about the order and consciously chose to break it — accidental or inadvertent contact may be a defense",
+        plainMeaning: "You knew about the order and consciously chose to break it. Accidental or inadvertent contact may be a defense",
         example: "Running into the protected person at a grocery store by accident is different from going to their home"
       }
     ],
-    degreeContext: "Contempt of court can result in fines or short jail stays (civil contempt) or criminal charges with up to one year in jail. Probation violations can result in your probation being revoked and your original suspended sentence being imposed — meaning you go to jail or prison for the original crime. Protective order violations are typically misdemeanors for first offenses but escalate to felonies with repeat violations or when accompanied by violence."
+    degreeContext: "Contempt of court can result in fines or short jail stays (civil contempt) or criminal charges with up to one year in jail. Probation violations can result in your probation being revoked and your original suspended sentence being imposed, meaning you go to jail or prison for the original crime. Protective order violations are typically misdemeanors for first offenses but escalate to felonies with repeat violations or when accompanied by violence."
   },
   // ── Stalking / Harassment / Terroristic Threats ───────────────────────────
   {
     chargePattern: /stalking|harassment|terroristic.threat|threatening.and.intimidating|menacing/i,
-    plainSummary: "These charges involve conduct that caused another person to reasonably fear for their safety. Stalking typically requires a pattern of repeated unwanted contact or surveillance. Harassment covers persistent unwanted communication or conduct intended to alarm or distress. Terroristic threats involve communicating an intent to commit violence to terrorize a person or group — the threat does not have to be carried out. The prosecutor must show the victim's fear was reasonable and that you caused it intentionally.",
+    plainSummary: "These charges involve conduct that caused another person to reasonably fear for their safety. Stalking typically requires a pattern of repeated unwanted contact or surveillance. Harassment covers persistent unwanted communication or conduct intended to alarm or distress. Terroristic threats involve communicating an intent to commit violence to terrorize a person or group. The threat does not have to be carried out. The prosecutor must show the victim's fear was reasonable and that you caused it intentionally.",
     keyTerms: [
       {
         term: "Pattern of Conduct",
-        plainMeaning: "A series of acts — not just one incident — that together establish a course of behavior",
+        plainMeaning: "A series of acts, not just one incident, that together establish a course of behavior",
         example: "Showing up at someone's home, then their workplace, then their gym over the course of two weeks"
       },
       {
         term: "Reasonable Fear",
-        plainMeaning: "Fear that a normal person in the same situation would also feel — not just the specific victim's personal reaction",
+        plainMeaning: "Fear that a normal person in the same situation would also feel, not just the specific victim's personal reaction",
         example: "Sending messages saying 'I know where you sleep' would cause most people to fear for their safety"
       },
       {
         term: "Terroristic Threat",
-        plainMeaning: "A communication — spoken, written, or electronic — that threatens violence against a person or group to cause terror or coerce action",
-        example: "Calling someone and saying you will harm them if they testify in court — even if you have no intention of following through"
+        plainMeaning: "A communication, spoken, written, or electronic, that threatens violence against a person or group to cause terror or coerce action",
+        example: "Calling someone and saying you will harm them if they testify in court, even if you have no intention of following through"
       }
     ],
     degreeContext: "First-offense harassment or stalking is typically a misdemeanor with fines and up to one year in jail. A prior stalking conviction, use of a weapon, violation of a protective order while stalking, or targeting a minor or public official elevates it to a felony with 2–5 years or more. Terroristic threats are usually felonies from the first offense."
@@ -685,25 +685,25 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── DV Abbreviation Variants ──────────────────────────────────────────────
   {
     chargePattern: /^dv[\s\-]|domestic.battering|partner.or.family.member.assault/i,
-    plainSummary: "DV (domestic violence) charges filed under abbreviated names like 'DV Assault' or 'DV 3rd Degree' are the same as domestic violence assault or battery charges — they involve physical harm or threats against a family member, household member, or intimate partner. The DV designation triggers a separate set of consequences beyond the underlying assault charge, including mandatory no-contact orders and loss of firearm rights.",
+    plainSummary: "DV (domestic violence) charges filed under abbreviated names like 'DV Assault' or 'DV 3rd Degree' are the same as domestic violence assault or battery charges. They involve physical harm or threats against a family member, household member, or intimate partner. The DV designation triggers a separate set of consequences beyond the underlying assault charge, including mandatory no-contact orders and loss of firearm rights.",
     keyTerms: [
       {
         term: "Domestic Relationship",
-        plainMeaning: "The relationship between you and the alleged victim — must be a current or former spouse, romantic partner, cohabitant, or family member",
+        plainMeaning: "The relationship between you and the alleged victim: must be a current or former spouse, romantic partner, cohabitant, or family member",
         example: "Current girlfriend, ex-husband, roommate, parent, or child"
       },
       {
         term: "Mandatory Arrest",
-        plainMeaning: "In many states, police must make an arrest when responding to a domestic violence call if there is visible evidence of injury — even if the victim does not want charges filed",
+        plainMeaning: "In many states, police must make an arrest when responding to a domestic violence call if there is visible evidence of injury, even if the victim does not want charges filed",
         example: "Officers arriving and seeing a bruise may arrest even over the victim's objection"
       },
       {
         term: "No-Contact Order",
-        plainMeaning: "A court order issued automatically in most DV cases requiring you to have zero contact with the alleged victim — violating it is a separate crime",
+        plainMeaning: "A court order issued automatically in most DV cases requiring you to have zero contact with the alleged victim. Violating it is a separate crime",
         example: "Texting the victim to apologize while a no-contact order is in place is itself a criminal violation"
       }
     ],
-    degreeContext: "DV assault at the lower degrees is typically a misdemeanor (fines, up to one year in jail, mandatory counseling). Any DV conviction permanently strips federal gun rights. A second DV conviction, use of a weapon, or visible serious injury usually elevates to a felony. Immigration consequences for non-citizens can be severe — DV convictions are deportable offenses."
+    degreeContext: "DV assault at the lower degrees is typically a misdemeanor (fines, up to one year in jail, mandatory counseling). Any DV conviction permanently strips federal gun rights. A second DV conviction, use of a weapon, or visible serious injury usually elevates to a felony. Immigration consequences for non-citizens can be severe: DV convictions are deportable offenses."
   },
   // ── Animal Cruelty ────────────────────────────────────────────────────────
   {
@@ -712,7 +712,7 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Intentional Cruelty",
-        plainMeaning: "Deliberately harming an animal — beating, burning, or torturing it",
+        plainMeaning: "Deliberately harming an animal: beating, burning, or torturing it",
         example: "Hitting a dog repeatedly as punishment in a way that causes injury"
       },
       {
@@ -726,26 +726,26 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Your dog running loose in a neighborhood where a leash is legally required"
       }
     ],
-    degreeContext: "Animal at large is typically a civil infraction with a small fine. Animal cruelty is a misdemeanor for first offenses in most states but can be a felony for deliberate torture, killing, or cases involving multiple animals. Aggravated animal cruelty — deliberate, prolonged suffering — is a felony in all 50 states, with sentences of 1–5 years."
+    degreeContext: "Animal at large is typically a civil infraction with a small fine. Animal cruelty is a misdemeanor for first offenses in most states but can be a felony for deliberate torture, killing, or cases involving multiple animals. Aggravated animal cruelty, meaning deliberate, prolonged suffering, is a felony in all 50 states, with sentences of 1-5 years."
   },
   // ── Solicitation / Prostitution ───────────────────────────────────────────
   {
     chargePattern: /prostitut|solicitation.*sex|sex.*solicitation/i,
-    plainSummary: "Prostitution charges mean you are accused of exchanging sexual acts for money or anything of value. Solicitation (or 'patronizing') charges mean you offered money or value to someone else for a sexual act. The prosecutor must prove an agreement or offer was made — the act itself does not have to be completed. These are typically misdemeanors on a first offense but carry significant collateral consequences.",
+    plainSummary: "Prostitution charges mean you are accused of exchanging sexual acts for money or anything of value. Solicitation (or 'patronizing') charges mean you offered money or value to someone else for a sexual act. The prosecutor must prove an agreement or offer was made. The act itself does not have to be completed. These are typically misdemeanors on a first offense but carry significant collateral consequences.",
     keyTerms: [
       {
         term: "Offer or Agreement",
-        plainMeaning: "The crime is completed when an offer is made and understood — you don't have to follow through with the act",
+        plainMeaning: "The crime is completed when an offer is made and understood. You don't have to follow through with the act",
         example: "Agreeing to pay a price and specifying the act in an undercover officer's presence is legally sufficient"
       },
       {
         term: "Undercover Operations",
-        plainMeaning: "Police commonly use undercover officers posing as buyers or sellers — contact initiated by an undercover officer is not entrapment unless the officer induced you to do something you wouldn't otherwise have done",
+        plainMeaning: "Police commonly use undercover officers posing as buyers or sellers. Contact initiated by an undercover officer is not entrapment unless the officer induced you to do something you wouldn't otherwise have done",
         example: "Responding to an ad and agreeing to terms with an undercover officer meets the legal standard for arrest"
       },
       {
         term: "Sex Trafficking",
-        plainMeaning: "A far more serious charge — compelling or coercing another person into prostitution, especially minors. Distinct from simple prostitution.",
+        plainMeaning: "A far more serious charge: compelling or coercing another person into prostitution, especially minors. Distinct from simple prostitution.",
         example: "Controlling another person's prostitution through force or threats is trafficking, not a misdemeanor"
       }
     ],
@@ -754,12 +754,12 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Criminal Possession of Stolen Property ────────────────────────────────
   {
     chargePattern: /possession.of.stolen.property|receiving.stolen/i,
-    plainSummary: "Criminal possession of stolen property means you had property in your possession that you knew, or had reason to know, was stolen. You don't have to be the one who stole it — receiving, buying, or even holding stolen goods can be charged. The prosecutor must prove you knew or reasonably should have known the property was stolen.",
+    plainSummary: "Criminal possession of stolen property means you had property in your possession that you knew, or had reason to know, was stolen. You don't have to be the one who stole it. Receiving, buying, or even holding stolen goods can be charged. The prosecutor must prove you knew or reasonably should have known the property was stolen.",
     keyTerms: [
       {
         term: "Knowledge",
-        plainMeaning: "The key element — prosecutors prove you knew the property was stolen through the circumstances (low price, no receipt, seller's behavior)",
-        example: "Buying a brand-new phone for $20 from a stranger on the street — the price suggests you should have known it was stolen"
+        plainMeaning: "The key element: prosecutors prove you knew the property was stolen through the circumstances (low price, no receipt, seller's behavior)",
+        example: "Buying a brand-new phone for $20 from a stranger on the street: the price suggests you should have known it was stolen"
       },
       {
         term: "Constructive Possession",
@@ -768,7 +768,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Value Determines Grade",
-        plainMeaning: "Like theft, the charge level depends on the value of the stolen property — higher value means a more serious charge",
+        plainMeaning: "Like theft, the charge level depends on the value of the stolen property: higher value means a more serious charge",
         example: "Receiving a $200 stolen bicycle may be a misdemeanor; receiving a $5,000 stolen laptop may be a felony"
       }
     ],
@@ -777,11 +777,11 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Criminal Non-Support / Failure to Pay Child Support ───────────────────
   {
     chargePattern: /nonsupport|failure.to.(?:pay.)?(?:child.)?support|criminal.nonsupport/i,
-    plainSummary: "Criminal non-support means you have a court-ordered obligation to pay child or spousal support and you have willfully failed to make those payments. The key word is 'willfully' — the prosecutor must prove you had the ability to pay and chose not to, not just that you couldn't afford it. This is a criminal charge separate from the civil family court process.",
+    plainSummary: "Criminal non-support means you have a court-ordered obligation to pay child or spousal support and you have willfully failed to make those payments. The key word is 'willfully': the prosecutor must prove you had the ability to pay and chose not to, not just that you couldn't afford it. This is a criminal charge separate from the civil family court process.",
     keyTerms: [
       {
         term: "Willful Failure",
-        plainMeaning: "Deliberately not paying when you have the ability to — job loss or genuine financial hardship may be a defense if documented",
+        plainMeaning: "Deliberately not paying when you have the ability to. Job loss or genuine financial hardship may be a defense if documented",
         example: "Being employed and choosing to spend income on other things while not paying court-ordered support"
       },
       {
@@ -800,11 +800,11 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Abuse of Family / Household Member ───────────────────────────────────
   {
     chargePattern: /abuse.of.(?:family|household)/i,
-    plainSummary: "Abuse of a family or household member is a domestic violence charge that covers physical harm, threatening behavior, or emotional abuse directed at someone you live with or are related to. It is similar to domestic assault but may be broader in some states — covering not just physical contact but also harassment, threats, or intimidation within the household.",
+    plainSummary: "Abuse of a family or household member is a domestic violence charge that covers physical harm, threatening behavior, or emotional abuse directed at someone you live with or are related to. It is similar to domestic assault but may be broader in some states, covering not just physical contact but also harassment, threats, or intimidation within the household.",
     keyTerms: [
       {
         term: "Household Member",
-        plainMeaning: "Anyone who lives with you — a roommate, family member, partner, or even a former cohabitant",
+        plainMeaning: "Anyone who lives with you: a roommate, family member, partner, or even a former cohabitant",
         example: "A college roommate, adult child living at home, or a former partner who moved out recently"
       },
       {
@@ -814,7 +814,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Emotional or Psychological Abuse",
-        plainMeaning: "In states that include it, a pattern of behavior designed to control, isolate, or intimidate — threats, humiliation, or controlling finances",
+        plainMeaning: "In states that include it, a pattern of behavior designed to control, isolate, or intimidate: threats, humiliation, or controlling finances",
         example: "Repeatedly threatening to harm the victim if they leave the relationship"
       }
     ],
@@ -823,16 +823,16 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Hit and Run ───────────────────────────────────────────────────────────
   {
     chargePattern: /hit.and.run/i,
-    plainSummary: "Hit and run means you were involved in a vehicle accident and left the scene without stopping to identify yourself, exchange information, or provide aid to anyone who was injured. The law requires all drivers in an accident to stop — even if you don't believe you caused it. Whether it is a misdemeanor or felony depends almost entirely on whether anyone was injured.",
+    plainSummary: "Hit and run means you were involved in a vehicle accident and left the scene without stopping to identify yourself, exchange information, or provide aid to anyone who was injured. The law requires all drivers in an accident to stop, even if you don't believe you caused it. Whether it is a misdemeanor or felony depends almost entirely on whether anyone was injured.",
     keyTerms: [
       {
         term: "Duty to Stop",
-        plainMeaning: "Every driver involved in an accident must stop at or near the scene — this is a legal requirement in all states",
+        plainMeaning: "Every driver involved in an accident must stop at or near the scene. This is a legal requirement in all states",
         example: "Clipping another car in a parking lot and driving away, even if the damage seems minor"
       },
       {
         term: "Duty to Render Aid",
-        plainMeaning: "If someone is injured, you must provide reasonable help — calling 911 satisfies this in most states",
+        plainMeaning: "If someone is injured, you must provide reasonable help. Calling 911 satisfies this in most states",
         example: "Calling emergency services before leaving the scene shows an attempt to render aid"
       },
       {
@@ -846,44 +846,44 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Resisting Arrest / Obstruction of Justice ─────────────────────────────
   {
     chargePattern: /resisting.arrest|resisting.law.enforcement|resisting.officer|refusing.to.submit.to.arrest|evading.arrest|obstruction.of.(?:justice|officer)|resist.*delay.*obstruct|resist.*obstruct.*officer/i,
-    plainSummary: "Resisting arrest means you physically struggled, fled, or otherwise actively prevented an officer from making a lawful arrest. Obstruction of justice means you interfered with a law enforcement investigation or court proceeding — giving false information, hiding evidence, or intimidating witnesses. The arrest or investigation does not have to have resulted in a conviction for these charges to stand.",
+    plainSummary: "Resisting arrest means you physically struggled, fled, or otherwise actively prevented an officer from making a lawful arrest. Obstruction of justice means you interfered with a law enforcement investigation or court proceeding: giving false information, hiding evidence, or intimidating witnesses. The arrest or investigation does not have to have resulted in a conviction for these charges to stand.",
     keyTerms: [
       {
         term: "Lawful Arrest",
-        plainMeaning: "The officer must have had a legal basis to make the arrest — resisting an unlawful arrest may be a defense in some states, though it is risky to attempt",
+        plainMeaning: "The officer must have had a legal basis to make the arrest. Resisting an unlawful arrest may be a defense in some states, though it is risky to attempt",
         example: "An officer attempting to arrest you based on a valid warrant is making a lawful arrest"
       },
       {
         term: "Physical Resistance",
-        plainMeaning: "Pulling away, running, pushing, or fighting the officer — even minor physical resistance counts",
+        plainMeaning: "Pulling away, running, pushing, or fighting the officer. Even minor physical resistance counts",
         example: "Pulling your arm away when an officer tries to handcuff you"
       },
       {
         term: "Obstruction",
-        plainMeaning: "Any deliberate act that hinders a police investigation or court proceeding — false statements, destroying evidence, or threatening witnesses",
+        plainMeaning: "Any deliberate act that hinders a police investigation or court proceeding: false statements, destroying evidence, or threatening witnesses",
         example: "Telling police you don't know someone when you do, in order to shield them from investigation"
       }
     ],
-    degreeContext: "Resisting arrest without violence is typically a misdemeanor (fines, up to one year in jail). Resisting with violence — striking or injuring an officer — is a felony. Obstruction of justice is a misdemeanor for simple interference but can be a federal felony when it affects federal investigations, with sentences up to 5–20 years depending on the underlying case."
+    degreeContext: "Resisting arrest without violence is typically a misdemeanor (fines, up to one year in jail). Resisting with violence, meaning striking or injuring an officer, is a felony. Obstruction of justice is a misdemeanor for simple interference but can be a federal felony when it affects federal investigations, with sentences up to 5–20 years depending on the underlying case."
   },
   // ── Perjury ───────────────────────────────────────────────────────────────
   {
     chargePattern: /perjury|false.swearing/i,
-    plainSummary: "Perjury means you made a false statement under oath — in court testimony, a deposition, or on a sworn document — while knowing the statement was false. The lie must be material, meaning it had the potential to affect the outcome of the case. An honest mistake or a statement you believed to be true at the time is not perjury.",
+    plainSummary: "Perjury means you made a false statement under oath, such as in court testimony, a deposition, or on a sworn document, while knowing the statement was false. The lie must be material, meaning it had the potential to affect the outcome of the case. An honest mistake or a statement you believed to be true at the time is not perjury.",
     keyTerms: [
       {
         term: "Under Oath",
-        plainMeaning: "You had formally sworn or affirmed to tell the truth — in a courtroom, a deposition, a grand jury, or on a sworn affidavit",
+        plainMeaning: "You had formally sworn or affirmed to tell the truth: in a courtroom, a deposition, a grand jury, or on a sworn affidavit",
         example: "Testimony given after being sworn in by the court clerk, or a signed and notarized affidavit"
       },
       {
         term: "Materiality",
-        plainMeaning: "The false statement must have been about something important to the case — not a minor or irrelevant detail",
+        plainMeaning: "The false statement must have been about something important to the case, not a minor or irrelevant detail",
         example: "Lying about where you were on the night of the crime is material; lying about what you had for breakfast is not"
       },
       {
         term: "Knowing Falsity",
-        plainMeaning: "You knew the statement was false when you made it — being wrong or misremembering is not perjury",
+        plainMeaning: "You knew the statement was false when you made it. Being wrong or misremembering is not perjury",
         example: "Testifying that you've never met someone when you clearly remember meeting them multiple times"
       }
     ],
@@ -896,17 +896,17 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Personal Use Limit",
-        plainMeaning: "The maximum amount of marijuana a person may legally possess in states where it is legal — typically 1 to 2 ounces for adults",
+        plainMeaning: "The maximum amount of marijuana a person may legally possess in states where it is legal: typically 1 to 2 ounces for adults",
         example: "Possessing 4 ounces in a state where the legal limit is 1 ounce is still a crime even though marijuana is legal there"
       },
       {
         term: "Over Legal Limit",
-        plainMeaning: "Having marijuana in an amount that exceeds the legal personal allowance — often charged separately from full illegality",
+        plainMeaning: "Having marijuana in an amount that exceeds the legal personal allowance, often charged separately from full illegality",
         example: "Being caught with 3 ounces when your state's limit is 1 ounce"
       },
       {
         term: "THC",
-        plainMeaning: "The active psychoactive compound in marijuana — products containing THC (edibles, oils, wax, concentrates) are subject to the same possession laws as raw cannabis",
+        plainMeaning: "The active psychoactive compound in marijuana. Products containing THC, such as edibles, oils, wax, and concentrates, are subject to the same possession laws as raw cannabis",
         example: "A THC vape cartridge is treated as marijuana possession in most jurisdictions"
       }
     ],
@@ -919,8 +919,8 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Penetration",
-        plainMeaning: "Any sexual penetration, however slight, of any body part or with any object — this is the act element that distinguishes rape from lesser sexual offenses",
-        example: "Even minimal penetration satisfies this element — the act does not have to be completed"
+        plainMeaning: "Any sexual penetration, however slight, of any body part or with any object. This is the act element that distinguishes rape from lesser sexual offenses",
+        example: "Even minimal penetration satisfies this element. The act does not have to be completed"
       },
       {
         term: "Lack of Consent",
@@ -938,7 +938,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Forgery ───────────────────────────────────────────────────────────────
   {
     chargePattern: /forgery(?!.*check)|forging|uttering.(?:forged|false)/i,
-    plainSummary: "Forgery means you made, altered, or used a false written document with the intent to defraud someone. This covers a wide range of documents: signatures, checks, contracts, IDs, prescriptions, wills, and official documents. The prosecutor must prove you knowingly created or used a fake or altered document — and that you intended to deceive.",
+    plainSummary: "Forgery means you made, altered, or used a false written document with the intent to defraud someone. This covers a wide range of documents: signatures, checks, contracts, IDs, prescriptions, wills, and official documents. The prosecutor must prove you knowingly created or used a fake or altered document, and that you intended to deceive.",
     keyTerms: [
       {
         term: "False Writing",
@@ -952,7 +952,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Uttering",
-        plainMeaning: "Passing or presenting a forged document to someone — even if you didn't create it yourself",
+        plainMeaning: "Passing or presenting a forged document to someone, even if you didn't create it yourself",
         example: "Handing a forged check to a bank teller to cash it, even if someone else forged the signature"
       }
     ],
@@ -961,17 +961,17 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Failure to Appear ─────────────────────────────────────────────────────
   {
     chargePattern: /failure.to.appear|failure.to.report|bench.warrant.*failure/i,
-    plainSummary: "Failure to appear means you missed a required court date without a legal excuse. This is a separate criminal charge on top of your underlying case, and it results in a bench warrant being issued for your arrest. The prosecutor must prove you had notice of the court date and willfully failed to appear — a genuine emergency or lack of notice may be a defense.",
+    plainSummary: "Failure to appear means you missed a required court date without a legal excuse. This is a separate criminal charge on top of your underlying case, and it results in a bench warrant being issued for your arrest. The prosecutor must prove you had notice of the court date and willfully failed to appear. A genuine emergency or lack of notice may be a defense.",
     keyTerms: [
       {
         term: "Bench Warrant",
         plainMeaning: "A warrant issued directly by the judge authorizing police to arrest you and bring you before the court",
-        example: "After you miss court, the judge signs a warrant — any routine traffic stop can result in your immediate arrest"
+        example: "After you miss court, the judge signs a warrant. Any routine traffic stop can result in your immediate arrest"
       },
       {
         term: "Notice of Court Date",
-        plainMeaning: "Proof that you knew about the hearing — given in person at a prior hearing, by mail, or through your attorney",
-        example: "Signing paperwork at your last court date confirming you know the next date — that signature is evidence of notice"
+        plainMeaning: "Proof that you knew about the hearing: given in person at a prior hearing, by mail, or through your attorney",
+        example: "Signing paperwork at your last court date confirming you know the next date. That signature is evidence of notice"
       },
       {
         term: "Willfulness",
@@ -979,21 +979,21 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Being in the hospital on the day of the hearing, with medical records to prove it, may negate willfulness"
       }
     ],
-    degreeContext: "Failure to appear on a misdemeanor is typically a misdemeanor itself, carrying fines and up to 6–12 months in jail. Failure to appear on a felony case is usually a separate felony, with 1–3 years additional. Beyond the criminal charge, the outstanding bench warrant follows you indefinitely — it can surface during any police contact, including traffic stops, years later."
+    degreeContext: "Failure to appear on a misdemeanor is typically a misdemeanor itself, carrying fines and up to 6–12 months in jail. Failure to appear on a felony case is usually a separate felony, with 1–3 years additional. Beyond the criminal charge, the outstanding bench warrant follows you indefinitely. It can surface during any police contact, including traffic stops, years later."
   },
   // ── Failure to Identify / Providing False Information ─────────────────────
   {
     chargePattern: /failure.to.identify|providing.false.information.to.police|false.information.to.*(?:police|officer)|fake.id|fraudulent.id|possession.of.fake|possession.of.fraudulent.id/i,
-    plainSummary: "Failure to identify means you refused to give your name and basic identifying information to a police officer who lawfully stopped you and had a right to request it. Providing false information means you gave a false name, birthdate, or ID to an officer. Possession of a fake or fraudulent ID means you had a document falsely representing your identity or age. Note: the constitutional right to remain silent is different — some states require you to state your name even if you can refuse to answer other questions.",
+    plainSummary: "Failure to identify means you refused to give your name and basic identifying information to a police officer who lawfully stopped you and had a right to request it. Providing false information means you gave a false name, birthdate, or ID to an officer. Possession of a fake or fraudulent ID means you had a document falsely representing your identity or age. Note: the constitutional right to remain silent is different. Some states require you to state your name even if you can refuse to answer other questions.",
     keyTerms: [
       {
         term: "Lawful Stop or Detention",
-        plainMeaning: "The officer must have had a legal basis to stop you — reasonable suspicion of a crime — for identification to be required",
+        plainMeaning: "The officer must have had a legal basis to stop you, meaning reasonable suspicion of a crime, for identification to be required",
         example: "If police had no reason to stop you, your refusal to identify may be protected; if they had reasonable suspicion, you may be legally required to give your name"
       },
       {
         term: "Stop and Identify States",
-        plainMeaning: "About half of US states have laws requiring you to provide your name when lawfully stopped — the other half cannot require it",
+        plainMeaning: "About half of US states have laws requiring you to provide your name when lawfully stopped. The other half cannot require it",
         example: "Texas, Nevada, and California require identification; New York does not have a stop-and-identify statute"
       },
       {
@@ -1007,7 +1007,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Indecent Exposure / Gross Sexual Imposition / Offensive Touching ───────
   {
     chargePattern: /indecent.exposure|public.urination|gross.sexual.imposition|indecent.assault|offensive.touching/i,
-    plainSummary: "Indecent exposure means you exposed your genitals in a public place or in view of others who did not consent to seeing it. Gross sexual imposition and indecent assault cover unwanted sexual touching that falls short of penetration. Offensive touching is the lowest-level sexual contact offense — any unwanted contact of a sexual nature. These charges all require the prosecutor to prove the act was intentional and that others were present or the contact was non-consensual.",
+    plainSummary: "Indecent exposure means you exposed your genitals in a public place or in view of others who did not consent to seeing it. Gross sexual imposition and indecent assault cover unwanted sexual touching that falls short of penetration. Offensive touching is the lowest-level sexual contact offense: any unwanted contact of a sexual nature. These charges all require the prosecutor to prove the act was intentional and that others were present or the contact was non-consensual.",
     keyTerms: [
       {
         term: "Public Exposure",
@@ -1021,7 +1021,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Consent",
-        plainMeaning: "The other person's clear, voluntary agreement to the contact — absence of protest alone is not consent",
+        plainMeaning: "The other person's clear, voluntary agreement to the contact. Absence of protest alone is not consent",
         example: "A person who is asleep, drugged, or frozen in fear has not consented even if they say nothing"
       }
     ],
@@ -1030,25 +1030,25 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Reckless Driving / Reckless Conduct ───────────────────────────────────
   {
     chargePattern: /reckless.(?:driving|conduct|endangerment)|careless.driving.*criminal/i,
-    plainSummary: "Reckless driving or reckless conduct means you operated a vehicle (or acted in some other way) with a conscious disregard for the substantial risk of harm to other people or property. It is more serious than simple negligence — the prosecutor must show you knew your behavior was dangerous and chose to do it anyway. This is distinct from DUI (which requires impairment) and from vehicular homicide (which requires a death).",
+    plainSummary: "Reckless driving or reckless conduct means you operated a vehicle (or acted in some other way) with a conscious disregard for the substantial risk of harm to other people or property. It is more serious than simple negligence: the prosecutor must show you knew your behavior was dangerous and chose to do it anyway. This is distinct from DUI (which requires impairment) and from vehicular homicide (which requires a death).",
     keyTerms: [
       {
         term: "Conscious Disregard",
-        plainMeaning: "You were aware of the risk your actions created and chose to ignore it — not just a mistake in judgment",
+        plainMeaning: "You were aware of the risk your actions created and chose to ignore it, not just a mistake in judgment",
         example: "Racing another vehicle through a crowded area at twice the speed limit, knowing cars and pedestrians were present"
       },
       {
         term: "Substantial Risk",
-        plainMeaning: "A risk that is significant and unjustifiable given the circumstances — not every risk is criminal",
+        plainMeaning: "A risk that is significant and unjustifiable given the circumstances. Not every risk is criminal",
         example: "Weaving between lanes at high speed on a busy freeway creates a substantial risk; speeding 10 mph over on an empty road does not"
       },
       {
         term: "Reckless Endangerment",
-        plainMeaning: "A related charge focusing on the risk of harm created, even without an accident — you don't have to actually hurt someone",
-        example: "Firing a gun in the air in a residential neighborhood — the risk to others makes it criminal even if no one is hit"
+        plainMeaning: "A related charge focusing on the risk of harm created, even without an accident. You don't have to actually hurt someone",
+        example: "Firing a gun in the air in a residential neighborhood: the risk to others makes it criminal even if no one is hit"
       }
     ],
-    degreeContext: "Reckless driving is usually a misdemeanor (fines, license suspension, up to 90 days or one year in jail). If the reckless conduct causes injury, it escalates to a more serious misdemeanor or low-level felony. Reckless conduct causing serious injury or death becomes a felony — reckless endangerment carries 1–5 years, reckless homicide 2–10 years depending on the state."
+    degreeContext: "Reckless driving is usually a misdemeanor (fines, license suspension, up to 90 days or one year in jail). If the reckless conduct causes injury, it escalates to a more serious misdemeanor or low-level felony. Reckless conduct causing serious injury or death becomes a felony: reckless endangerment carries 1-5 years, reckless homicide 2-10 years depending on the state."
   },
   // ── Public Intoxication / Minor in Possession / Open Container ────────────
   {
@@ -1057,17 +1057,17 @@ export const chargeExplanations: ChargeExplanation[] = [
     keyTerms: [
       {
         term: "Public Place",
-        plainMeaning: "Any area accessible to the general public — streets, parks, parking lots, storefronts",
+        plainMeaning: "Any area accessible to the general public: streets, parks, parking lots, storefronts",
         example: "Being drunk on your own private property is generally not public intoxication"
       },
       {
         term: "Danger to Self or Others",
-        plainMeaning: "Most states require more than just being visibly drunk — you must be unsafe or disturbing others",
+        plainMeaning: "Most states require more than just being visibly drunk. You must be unsafe or disturbing others",
         example: "Staggering into traffic or picking fights with strangers reaches the threshold; sitting quietly on a park bench may not"
       },
       {
         term: "Minor in Possession",
-        plainMeaning: "A person under 21 having alcohol — this applies even to a closed, unopened container",
+        plainMeaning: "A person under 21 having alcohol. This applies even to a closed, unopened container",
         example: "A 19-year-old holding a sealed beer they didn't open can be cited for minor in possession"
       }
     ],
@@ -1076,7 +1076,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Loitering / Panhandling / Illegal Camping / Peace Disturbance ──────────
   {
     chargePattern: /loitering|panhandling|aggressive.solicitation|illegal.camping|sleeping.in.public|peace.disturbance|littering|illegal.dumping|illegal.discharge.of.fireworks|fishing.*without.*license|hunting.*without.*license/i,
-    plainSummary: "These are low-level public order and quality-of-life offenses. Loitering means lingering in a public place without apparent purpose in a way that raises suspicion or disturbs others. Panhandling or aggressive solicitation covers begging for money, especially when done in a manner that intimidates. Illegal camping or sleeping in public covers staying overnight in prohibited public spaces. Peace disturbance is similar to disorderly conduct — acting in a way that disturbs neighborhood peace.",
+    plainSummary: "These are low-level public order and quality-of-life offenses. Loitering means lingering in a public place without apparent purpose in a way that raises suspicion or disturbs others. Panhandling or aggressive solicitation covers begging for money, especially when done in a manner that intimidates. Illegal camping or sleeping in public covers staying overnight in prohibited public spaces. Peace disturbance is similar to disorderly conduct: acting in a way that disturbs neighborhood peace.",
     keyTerms: [
       {
         term: "Loitering",
@@ -1090,7 +1090,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Infraction vs. Misdemeanor",
-        plainMeaning: "Most of these offenses are civil infractions (like a traffic ticket) rather than criminal charges — they result in fines, not jail time or a criminal record",
+        plainMeaning: "Most of these offenses are civil infractions (like a traffic ticket) rather than criminal charges. They result in fines, not jail time or a criminal record",
         example: "A littering ticket doesn't go on your criminal record the way a misdemeanor conviction would"
       }
     ],
@@ -1099,11 +1099,11 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Hate Crime Enhancement ────────────────────────────────────────────────
   {
     chargePattern: /hate.crime|federal.hate.crime|bias.motivated/i,
-    plainSummary: "A hate crime charge or enhancement means the underlying offense (assault, vandalism, harassment, etc.) was motivated by the victim's race, religion, national origin, sexual orientation, gender identity, or disability. The underlying crime is charged separately, and the hate crime adds an additional charge or increases the sentence. The prosecutor must prove the bias motivation — that the victim was targeted because of who they are.",
+    plainSummary: "A hate crime charge or enhancement means the underlying offense (assault, vandalism, harassment, etc.) was motivated by the victim's race, religion, national origin, sexual orientation, gender identity, or disability. The underlying crime is charged separately, and the hate crime adds an additional charge or increases the sentence. The prosecutor must prove the bias motivation: that the victim was targeted because of who they are.",
     keyTerms: [
       {
         term: "Bias Motivation",
-        plainMeaning: "The crime was committed because of the victim's actual or perceived membership in a protected group — not just that you had bias, but that the bias caused you to commit the crime",
+        plainMeaning: "The crime was committed because of the victim's actual or perceived membership in a protected group, not just that you had bias, but that the bias caused you to commit the crime",
         example: "Spray-painting a racial slur on someone's car is vandalism made a hate crime by the bias motivation"
       },
       {
@@ -1122,7 +1122,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Murder in the Third Degree ────────────────────────────────────────────
   {
     chargePattern: /murder.in.the.third.degree|third.degree.murder|murder.*3rd.degree/i,
-    plainSummary: "Third degree murder exists in only a handful of states (including Minnesota, Florida, and Pennsylvania) and covers intentional killings that fall between second degree murder and manslaughter. The exact definition varies by state: in Minnesota, it requires a 'depraved mind' — causing death through reckless conduct with extreme indifference to human life but without targeting a specific person. In Florida, it includes deaths resulting from certain drug offenses.",
+    plainSummary: "Third degree murder exists in only a handful of states (including Minnesota, Florida, and Pennsylvania) and covers intentional killings that fall between second degree murder and manslaughter. The exact definition varies by state: in Minnesota, it requires a 'depraved mind,' meaning causing death through reckless conduct with extreme indifference to human life but without targeting a specific person. In Florida, it includes deaths resulting from certain drug offenses.",
     keyTerms: [
       {
         term: "Depraved Mind",
@@ -1131,7 +1131,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Without Intent to Kill a Specific Person",
-        plainMeaning: "The key distinction from second degree murder — the recklessness is so extreme it's murder, but there was no plan to kill the victim in particular",
+        plainMeaning: "The key distinction from second degree murder: the recklessness is so extreme it's murder, but there was no plan to kill the victim in particular",
         example: "Recklessly driving a car through a crowded space at very high speed resulting in a pedestrian's death"
       },
       {
@@ -1145,25 +1145,25 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Recidivist / Sentencing Enhancement ──────────────────────────────────
   {
     chargePattern: /prior.felony.*enhancement|recidivist|habitual.offender|three.strikes|repeat.offender.*enhancement|prior.conviction.*enhancement/i,
-    plainSummary: "Recidivist or sentencing enhancement charges are not standalone crimes — they are legal findings that increase your sentence because of your prior criminal history. 'Three strikes' laws impose very long mandatory sentences (sometimes life) for a third serious felony conviction. Habitual offender statutes double or triple standard sentences. The enhancement is imposed at sentencing after conviction, not as a separate crime you are found guilty of at trial.",
+    plainSummary: "Recidivist or sentencing enhancement charges are not standalone crimes. They are legal findings that increase your sentence because of your prior criminal history. 'Three strikes' laws impose very long mandatory sentences (sometimes life) for a third serious felony conviction. Habitual offender statutes double or triple standard sentences. The enhancement is imposed at sentencing after conviction, not as a separate crime you are found guilty of at trial.",
     keyTerms: [
       {
         term: "Prior Conviction",
-        plainMeaning: "A previous guilty verdict or guilty plea in any court — used as the basis for triggering enhanced sentences",
+        plainMeaning: "A previous guilty verdict or guilty plea in any court, used as the basis for triggering enhanced sentences",
         example: "Two prior felony convictions for robbery trigger a 'three strikes' enhancement if you are convicted of a third qualifying felony"
       },
       {
         term: "Qualifying Offense",
-        plainMeaning: "Not all prior convictions trigger enhancements — most laws specify only certain serious or violent crimes count as 'strikes'",
+        plainMeaning: "Not all prior convictions trigger enhancements. Most laws specify only certain serious or violent crimes count as 'strikes'",
         example: "A prior DUI typically doesn't count as a 'strike,' but a prior robbery or assault with a weapon usually does"
       },
       {
         term: "Mandatory Minimum",
-        plainMeaning: "A sentence the judge must impose at a minimum and cannot go below — enhancements often trigger mandatory minimums that remove judicial discretion",
+        plainMeaning: "A sentence the judge must impose at a minimum and cannot go below. Enhancements often trigger mandatory minimums that remove judicial discretion",
         example: "A third-strike conviction may require a minimum of 25 years regardless of the circumstances of the current offense"
       }
     ],
-    degreeContext: "Recidivist enhancements can dramatically increase sentences — from doubling the standard term to triggering mandatory life sentences under three-strikes laws. These are imposed at sentencing by the judge. Your attorney may challenge whether prior convictions qualify, whether they were constitutionally obtained, or whether the enhancement was properly noticed before trial."
+    degreeContext: "Recidivist enhancements can dramatically increase sentences, from doubling the standard term to triggering mandatory life sentences under three-strikes laws. These are imposed at sentencing by the judge. Your attorney may challenge whether prior convictions qualify, whether they were constitutionally obtained, or whether the enhancement was properly noticed before trial."
   },
   // ── Illegal Entry / Illegal Re-Entry (Federal Immigration) ────────────────
   {
@@ -1177,7 +1177,7 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Removal / Deportation",
-        plainMeaning: "A prior formal order requiring you to leave the United States — which is what makes a subsequent entry 'illegal re-entry' rather than just illegal entry",
+        plainMeaning: "A prior formal order requiring you to leave the United States, which is what makes a subsequent entry 'illegal re-entry' rather than just illegal entry",
         example: "Being formally deported by an immigration judge and then returning without permission"
       },
       {
@@ -1191,11 +1191,11 @@ export const chargeExplanations: ChargeExplanation[] = [
   // ── Juvenile Proceedings ──────────────────────────────────────────────────
   {
     chargePattern: /juvenile.delinquency|juvenile.transfer.to.adult|juvenile.firearm|transfer.*adult.court|waiver.hearing|federal.juvenile/i,
-    plainSummary: "Juvenile charges are handled differently from adult criminal cases. A 'delinquency adjudication' is the juvenile equivalent of a guilty verdict — the judge finds the juvenile 'delinquent' rather than 'guilty.' Juvenile records are typically confidential and can often be sealed or expunged when the juvenile turns 18. A transfer or 'waiver' hearing determines whether a juvenile case should be moved to adult court, where sentences are much harsher.",
+    plainSummary: "Juvenile charges are handled differently from adult criminal cases. A 'delinquency adjudication' is the juvenile equivalent of a guilty verdict: the judge finds the juvenile 'delinquent' rather than 'guilty.' Juvenile records are typically confidential and can often be sealed or expunged when the juvenile turns 18. A transfer or 'waiver' hearing determines whether a juvenile case should be moved to adult court, where sentences are much harsher.",
     keyTerms: [
       {
         term: "Delinquency Adjudication",
-        plainMeaning: "The juvenile court's finding that the minor committed the act — not a criminal conviction, but can have similar consequences",
+        plainMeaning: "The juvenile court's finding that the minor committed the act, not a criminal conviction, but can have similar consequences",
         example: "A 15-year-old found to have committed assault is 'adjudicated delinquent' rather than 'convicted'"
       },
       {
@@ -1205,11 +1205,11 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Disposition",
-        plainMeaning: "The juvenile court's sentence — could include probation, counseling, community service, or placement in a juvenile facility",
+        plainMeaning: "The juvenile court's sentence: could include probation, counseling, community service, or placement in a juvenile facility",
         example: "A judge may order a juvenile to complete 100 hours of community service and attend counseling instead of detention"
       }
     ],
-    degreeContext: "Juvenile adjudications generally cannot result in prison — the maximum is placement in a juvenile facility until age 18 or 21 depending on the state. If transferred to adult court, all adult sentencing ranges apply. Records can often be expunged at 18, but transfers to adult court and serious adjudications may not be eligible for expungement and can follow the person into adulthood."
+    degreeContext: "Juvenile adjudications generally cannot result in prison. The maximum is placement in a juvenile facility until age 18 or 21 depending on the state. If transferred to adult court, all adult sentencing ranges apply. Records can often be expunged at 18, but transfers to adult court and serious adjudications may not be eligible for expungement and can follow the person into adulthood."
   },
   // ── California Check Fraud ─────────────────────────────────────────────────
   // Based on CALCRIM No. 1970 (Cal. Penal Code § 476a) and Cal. Penal Code § 476.
@@ -1217,7 +1217,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   // § 476:  making/passing a check on a fictitious, closed, or forged account.
   {
     chargePattern: /check.{0,20}fraud|bad.{0,5}check|insufficient.{0,10}funds.{0,10}check|476a?(\b|$)|writing.{0,10}bad.{0,5}check|passing.{0,10}bad.{0,5}check|forged.{0,10}check/i,
-    plainSummary: "Check fraud under California law covers two related offenses. The most common is Penal Code § 476a — writing, passing, or using a check when you knew your account didn't have enough money to cover it, and doing so to get money or something of value. The second is Penal Code § 476 — making or passing a check on a fictitious account, a closed account, or one you had no right to use, or forging a signature on a check. The critical word in both charges is 'knowing': the prosecutor must prove you were aware the check wouldn't clear. Accidentally miscounting your balance or a bank error is not a crime under these statutes.",
+    plainSummary: "Check fraud under California law covers two related offenses. The most common is Penal Code § 476a: writing, passing, or using a check when you knew your account didn't have enough money to cover it, and doing so to get money or something of value. The second is Penal Code § 476: making or passing a check on a fictitious account, a closed account, or one you had no right to use, or forging a signature on a check. The critical word in both charges is 'knowing': the prosecutor must prove you were aware the check wouldn't clear. Accidentally miscounting your balance or a bank error is not a crime under these statutes.",
     keyTerms: [
       {
         term: "Intent to Defraud",
@@ -1231,17 +1231,17 @@ export const chargeExplanations: ChargeExplanation[] = [
       },
       {
         term: "Fictitious or Forged Check (§ 476)",
-        plainMeaning: "Using a check on an account that doesn't exist, was closed, or belongs to someone else — or signing someone else's name without permission",
+        plainMeaning: "Using a check on an account that doesn't exist, was closed, or belongs to someone else, or signing someone else's name without permission",
         example: "Writing a check on a bank account you closed last year, or signing your employer's name on a business check without authorization"
       },
       {
         term: "Making, Drawing, Uttering, or Delivering",
-        plainMeaning: "Any step in creating or passing the check counts — you don't have to be the one who wrote it to be charged",
+        plainMeaning: "Any step in creating or passing the check counts. You don't have to be the one who wrote it to be charged",
         example: "Handing a bad check to a cashier, depositing someone else's check knowing it's bad, or endorsing a fraudulent check for cash"
       },
       {
         term: "Wobbler",
-        plainMeaning: "This offense can be filed as either a misdemeanor or a felony — the prosecutor decides based on the dollar amount, your prior record, and the circumstances",
+        plainMeaning: "This offense can be filed as either a misdemeanor or a felony. The prosecutor decides based on the dollar amount, your prior record, and the circumstances",
         example: "A first offense involving a small amount is often charged as a misdemeanor; a pattern of bad checks or a large amount is more likely a felony"
       }
     ],
