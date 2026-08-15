@@ -712,7 +712,7 @@ function YourChargesSection({
   // Also look up the original DB entry to carry through dataConfidence and
   // statuteCitations — required for the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
-    const explanation = getChargeExplanation(classification.name);
+    const explanation = getChargeExplanation(classification.name, jurisdiction);
     // Prefer lookup by unique charge ID (when the backend includes it); fall back
     // to statute code for backwards-compatibility with older stored guidance records.
     const dbCharge = classification.id
@@ -776,8 +776,23 @@ function YourChargesSection({
               {charge.explanation?.plainSummary || getFallbackDescription(charge)}
             </p>
 
-            {/* Degree Context - helps explain 1st vs 2nd degree etc. */}
-            {charge.explanation?.degreeContext && (
+            {/* Jurisdiction-specific detail takes priority over the generic degree context
+                when a shared/charge-explanation-jurisdiction-overlay.ts entry exists for
+                the user's state. Falls back to the generic explanation otherwise. */}
+            {charge.explanation?.jurisdictionDetail ? (
+              <div className="p-3 rounded-lg bg-muted/50 border-l-2 border-primary">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  <span className="font-medium text-foreground">
+                    {jurisdiction ? `In ${jurisdiction}: ` : 'For this jurisdiction: '}
+                  </span>
+                  {charge.explanation.jurisdictionDetail.keyRule}
+                </p>
+                <p className="text-xs text-muted-foreground mt-2">
+                  Source: {charge.explanation.jurisdictionDetail.citation}
+                  {charge.explanation.jurisdictionDetail.penaltyClass && ` (${charge.explanation.jurisdictionDetail.penaltyClass})`}
+                </p>
+              </div>
+            ) : charge.explanation?.degreeContext && (
               <div className="p-3 rounded-lg bg-muted/50 border-l-2 border-primary">
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   <span className="font-medium text-foreground">How degrees differ: </span>

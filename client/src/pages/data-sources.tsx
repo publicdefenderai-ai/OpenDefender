@@ -281,6 +281,88 @@ export default function DataSources() {
           </div>
         </ScrollReveal>
 
+        {/* Section 2b — Charge Explanations */}
+        <ScrollReveal>
+          <div className="mb-10 md:mb-12">
+            <SectionHeader number="§2b" title="Charge Explanations" confidence="partial" />
+            <Card>
+              <CardContent className="p-6 space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary source</p>
+                    <p>Statute text read directly from state legislature and government websites, one citation per verified entry</p>
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p>16 of 56 charge categories have real, state-specific detail so far; the rest use general, non-state-specific language</p>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-muted-foreground leading-relaxed text-sm">
+                    The "Understanding Your Charges" card and its PDF version explain what a charge means in plain
+                    language. This content is a separate project from the citation database above, and started later:
+                    it had no sourcing at all until August 2026. Closing that gap is ongoing, and coverage is
+                    partial by design. We would rather show you accurate detail for the charges we have verified,
+                    and a clearly general explanation for the ones we have not, than pretend every state has been checked.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">What is verified vs. general</p>
+                  <div className="space-y-3 text-sm text-muted-foreground">
+                    <div className="border border-border rounded-lg p-4">
+                      <p className="font-semibold text-foreground mb-1">State-specific: 16 highest-frequency charges</p>
+                      <p>
+                        Murder (first degree, second degree, felony murder), manslaughter, assault (first degree,
+                        aggravated, deadly weapon, second degree, third degree), battery, domestic violence, DUI,
+                        drug possession, theft, robbery, and burglary have real detail for all 10 of our original
+                        anchor states: California, New York, Florida, Virginia, Ohio, Illinois, Georgia, North
+                        Carolina, New Jersey, and Arizona, plus Texas, Pennsylvania, Michigan, Washington,
+                        Massachusetts, Tennessee, Indiana, Missouri, Maryland, Wisconsin, Colorado, Minnesota,
+                        South Carolina, Alabama, Louisiana, Kentucky, Oregon, Oklahoma, Connecticut, Utah, Nevada, Iowa, Arkansas, Mississippi, Kansas, New Mexico, Puerto Rico, Nebraska, Idaho, West Virginia, Hawaii, New Hampshire, Maine, Montana, Rhode Island, Delaware, North Dakota, Vermont, the District of Columbia, and Wyoming, the first forty jurisdictions added beyond that anchor set, including Puerto Rico as the first U.S. territory in this expansion. Some individual
+                        charge terms do not exist in every state (for example, several states have no "first
+                        degree assault" statute, and Indiana and Wisconsin have no "assault" concept separate from
+                        battery at all); those gaps are noted directly rather than force-mapped to the wrong charge.
+                      </p>
+                    </div>
+                    <div className="border border-border rounded-lg p-4">
+                      <p className="font-semibold text-foreground mb-1">General only: the remaining 40 charge categories</p>
+                      <p>
+                        Charges like weapons offenses, sex offenses, financial fraud, and forgery still use
+                        general, non-state-specific language. This is the same content that existed before this
+                        project started, not yet reviewed against any state's actual statute text.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Why some states are missing for a given charge</p>
+                  <p className="text-sm text-muted-foreground">
+                    Not every state uses the same legal terms. For example, California, Florida, and Ohio do not
+                    have a charge called "first degree assault," so no entry is forced to fit that label; their
+                    real equivalents (aggravated assault, felonious assault) are covered under those charges
+                    instead. New Jersey does not grade murder into degrees at all. When a state genuinely does not
+                    use a term, that is stated plainly rather than mapped to the wrong statute.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">How data is kept current</p>
+                  <p className="text-sm text-muted-foreground">
+                    Each state-specific entry records the statute it was read from, a link to that source, and the
+                    date it was last verified. As coverage expands to more states and charge categories, this
+                    section will be updated to reflect the current state.
+                  </p>
+                </div>
+
+                <ReportError />
+              </CardContent>
+            </Card>
+          </div>
+        </ScrollReveal>
+
         {/* Section 3 — Collateral Consequences */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">

@@ -575,7 +575,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       yPosition += 8;
 
       // Get explanation for this charge
-      const explanation = getChargeExplanation(charge.name);
+      const explanation = getChargeExplanation(charge.name, caseData.jurisdiction);
       
       doc.setFontSize(10);
       doc.setFont(FONT_NAME, 'normal');
@@ -593,8 +593,22 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
         yPosition += 6;
       }
 
-      // Degree context if available
-      if (explanation?.degreeContext) {
+      // Jurisdiction-specific detail takes priority over the generic degree context when a
+      // shared/charge-explanation-jurisdiction-overlay.ts entry exists for this state.
+      if (explanation?.jurisdictionDetail) {
+        checkPageBreak(25);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(80, 80, 80);
+        const jd = explanation.jurisdictionDetail;
+        const stateLabel = caseData.jurisdiction ? `In ${caseData.jurisdiction}:` : 'For this jurisdiction:';
+        yPosition = addText(`${stateLabel} ${jd.keyRule}`, margin + 5, yPosition);
+        yPosition += 4;
+        doc.setFontSize(8);
+        yPosition = addText(`Source: ${jd.citation}${jd.penaltyClass ? ` (${jd.penaltyClass})` : ''}`, margin + 5, yPosition);
+        yPosition += 6;
+        doc.setTextColor(0, 0, 0);
+      } else if (explanation?.degreeContext) {
         checkPageBreak(25);
         doc.setFontSize(9);
         doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
