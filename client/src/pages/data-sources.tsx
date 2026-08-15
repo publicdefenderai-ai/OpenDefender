@@ -327,11 +327,23 @@ export default function DataSources() {
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
-                      <p className="font-semibold text-foreground mb-1">General only: the remaining 40 charge categories</p>
+                      <p className="font-semibold text-foreground mb-1">State-specific: 20 additional charges (California, New York so far)</p>
                       <p>
-                        Charges like weapons offenses, sex offenses, financial fraud, and forgery still use
-                        general, non-state-specific language. This is the same content that existed before this
-                        project started, not yet reviewed against any state's actual statute text.
+                        Weapons charges, financial fraud, sexual assault, resisting arrest, forgery, failure to
+                        appear, shoplifting, criminal mischief, trespass, disorderly conduct, stalking, animal
+                        cruelty, prostitution, receiving stolen property, criminal nonsupport, hate crime
+                        enhancement, kidnapping, arson, carjacking, and vehicular homicide have real detail for
+                        California and New York, the first two of our 10 anchor states. The remaining 8 anchor
+                        states, then the broader jurisdiction expansion, are in progress.
+                      </p>
+                    </div>
+                    <div className="border border-border rounded-lg p-4">
+                      <p className="font-semibold text-foreground mb-1">General only: the remaining 24 charge categories</p>
+                      <p>
+                        Charges like sex offenses against minors, rape, indecent exposure, driving offenses, and
+                        drug distribution still use general, non-state-specific language. This is the same content
+                        that existed before this project started, not yet reviewed against any state's actual
+                        statute text.
                       </p>
                     </div>
                   </div>
