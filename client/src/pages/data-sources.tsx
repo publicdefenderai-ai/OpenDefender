@@ -327,15 +327,15 @@ export default function DataSources() {
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
-                      <p className="font-semibold text-foreground mb-1">State-specific: 20 additional charges (all 10 original anchor states)</p>
+                      <p className="font-semibold text-foreground mb-1">State-specific: 20 additional charges (12 states so far)</p>
                       <p>
                         Weapons charges, financial fraud, sexual assault, resisting arrest, forgery, failure to
                         appear, shoplifting, criminal mischief, trespass, disorderly conduct, stalking, animal
                         cruelty, prostitution, receiving stolen property, criminal nonsupport, hate crime
                         enhancement, kidnapping, arson, carjacking, and vehicular homicide have real detail for
-                        all 10 of our original anchor states: California, New York, Florida, Virginia, Ohio,
-                        Illinois, Georgia, North Carolina, New Jersey, and Arizona. Expanding this coverage to the
-                        remaining 42 jurisdictions is the next phase of this project.
+                        all 10 of our original anchor states (California, New York, Florida, Virginia, Ohio,
+                        Illinois, Georgia, North Carolina, New Jersey, and Arizona) plus Texas and Pennsylvania.
+                        Expanding this coverage to the remaining 40 jurisdictions is ongoing.
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
