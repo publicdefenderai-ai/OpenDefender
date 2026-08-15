@@ -1259,11 +1259,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Low-dollar damage (usually under $500–$1,000) is typically a misdemeanor carrying fines and possible short jail time. Damage above the felony threshold ($1,000–$2,500 depending on the state) can mean a felony conviction with 1–5 years in prison. Prior convictions or damage to certain protected property (schools, places of worship) can elevate the charge.",
     sources: [
       { citation: "Cal. Penal Code § 594", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=594." },
-      { citation: "N.Y. Penal Law § 145.00", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/145.00" }
+      { citation: "N.Y. Penal Law § 145.00", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/145.00" },
+      { citation: "Fla. Stat. § 806.13", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/806.13" },
+      { citation: "Va. Code Ann. § 18.2-137 (injuring property)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-137/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California calls this offense 'vandalism' and sets its felony/misdemeanor line at $400 in damage, notably lower than most states' $500-$1,000 threshold, with a $50,000 fine ceiling once damage reaches $10,000 or more. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base criminal mischief tier sets its reckless-damage threshold at $250 and includes a distinctive standalone path for disabling emergency communication equipment to prevent someone from calling for help, unrelated to any property-value threshold.",
+    notes: "California calls this offense 'vandalism' and sets its felony/misdemeanor line at $400 in damage, notably lower than most states' $500-$1,000 threshold, with a $50,000 fine ceiling once damage reaches $10,000 or more. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base criminal mischief tier sets its reckless-damage threshold at $250 and includes a distinctive standalone path for disabling emergency communication equipment to prevent someone from calling for help, unrelated to any property-value threshold. Florida grades primarily by dollar damage across three clean tiers, with automatic third degree felony treatment for a prior conviction or for damaging religious property. Virginia splits first on intent to steal rather than value: damage without intent to steal is a flat Class 3 misdemeanor dismissible if the owner confirms full restitution by affidavit, while intentional damage is graded separately by value.",
   },
   // ── Trespass / Unlawful Entry ─────────────────────────────────────────────
   {
@@ -1290,11 +1292,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Trespassing on open land or a business is usually a misdemeanor or infraction with a fine. Entering a home or occupied dwelling bumps it to a more serious misdemeanor or low-level felony. Being armed during a trespass, or having prior trespass convictions, significantly increases the grade. Criminal trespass is distinct from burglary: trespass does not require intent to commit another crime inside.",
     sources: [
       { citation: "Cal. Penal Code § 602", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=602." },
-      { citation: "N.Y. Penal Law § 140.05", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/140.05" }
+      { citation: "N.Y. Penal Law § 140.05", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/140.05" },
+      { citation: "Fla. Stat. § 810.08 (trespass in structure or conveyance)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/810.08" },
+      { citation: "Va. Code Ann. § 18.2-119", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-119/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "Unlike most states' single unified trespass test, California lists more than 25 separately enumerated prohibited acts (timber cutting, unauthorized soil removal, damaging road signs, entering livestock land, leaving gates open, occupying a structure without consent, and more) rather than one general definition. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York classifies base trespass as a VIOLATION, below even a misdemeanor in its three-tier felony/misdemeanor/violation system, one of the lightest classifications for this offense among states surveyed.",
+    notes: "Unlike most states' single unified trespass test, California lists more than 25 separately enumerated prohibited acts (timber cutting, unauthorized soil removal, damaging road signs, entering livestock land, leaving gates open, occupying a structure without consent, and more) rather than one general definition. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York classifies base trespass as a VIOLATION, below even a misdemeanor in its three-tier felony/misdemeanor/violation system, one of the lightest classifications for this offense among states surveyed. Florida escalates trespass to a third degree felony specifically when the trespasser is armed with a firearm or dangerous weapon. Virginia's trespass statute requires the defendant to have actually received a prior warning (notice, posted sign, or court order) before entry counts as criminal, a narrower base element than states criminalizing any unauthorized entry outright.",
   },
   // ── Shoplifting / Retail Theft / Transit Fraud ────────────────────────────
   {
@@ -1321,11 +1325,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Shoplifting under the state's threshold (usually $500–$1,000) is a misdemeanor with fines and possible jail time up to one year. Above that threshold, or with prior shoplifting convictions, it becomes a felony. Many first-time offenders are eligible for diversion programs or civil settlement with the retailer that keeps the offense off their record.",
     sources: [
       { citation: "Cal. Penal Code § 459.5", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.5." },
-      { citation: "N.Y. Penal Law § 155.25 (petit larceny)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/155.25" }
+      { citation: "N.Y. Penal Law § 155.25 (petit larceny)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/155.25" },
+      { citation: "Fla. Stat. § 812.015 (retail theft)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/812.015" },
+      { citation: "Va. Code Ann. § 18.2-103 (concealment of merchandise)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-103/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "Created by Proposition 47 as its own standalone misdemeanor for entering a business to steal $950 or less; California expressly bars charging the same conduct as burglary or theft instead, closing off a route around Prop 47's misdemeanor treatment. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York has no standalone shoplifting statute; a shoplifting-type theft is simply charged as ordinary petit or grand larceny, the same statute used for any other theft.",
+    notes: "Created by Proposition 47 as its own standalone misdemeanor for entering a business to steal $950 or less; California expressly bars charging the same conduct as burglary or theft instead, closing off a route around Prop 47's misdemeanor treatment. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York has no standalone shoplifting statute; a shoplifting-type theft is simply charged as ordinary petit or grand larceny, the same statute used for any other theft. Florida's retail theft statute targets organized and repeat shoplifting specifically, coordinated rings, resale conspiracies, or 10+ items across stores in 120 days, rather than a single low-value taking. Virginia's shoplifting statute is a simple concealment-or-price-tampering offense graded by the general larceny value line, with concealment on store premises itself creating a presumption of intent to steal.",
   },
   // ── Disorderly Conduct / Disturbing the Peace / Public Order ──────────────
   {
@@ -1352,11 +1358,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Almost all of these are misdemeanors or non-criminal infractions. Fines and community service are the most common outcomes, with jail time (up to 90 days or one year) possible for repeat offenses or conduct that caused a serious disturbance. Curfew violations for juveniles are typically handled in juvenile court with no adult criminal record.",
     sources: [
       { citation: "Cal. Penal Code § 647", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647." },
-      { citation: "N.Y. Penal Law § 240.20", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/240.20" }
+      { citation: "N.Y. Penal Law § 240.20", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/240.20" },
+      { citation: "Fla. Stat. § 877.03 (breach of the peace)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/877.03" },
+      { citation: "Va. Code Ann. § 18.2-415", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-415/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's disorderly conduct statute is a genuinely broad omnibus provision folding in lewd conduct, prostitution/solicitation, begging, loitering near restrooms, public intoxication (with a mandatory 72-hour civil hold rather than jail), and voyeurism/unlawful recording, all under one statute. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.Like trespass, New York classifies disorderly conduct as a VIOLATION rather than a misdemeanor, its lightest classification tier, covering fighting, unreasonable noise, obstructing traffic, and refusing a dispersal order among other paths.",
+    notes: "California's disorderly conduct statute is a genuinely broad omnibus provision folding in lewd conduct, prostitution/solicitation, begging, loitering near restrooms, public intoxication (with a mandatory 72-hour civil hold rather than jail), and voyeurism/unlawful recording, all under one statute. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.Like trespass, New York classifies disorderly conduct as a VIOLATION rather than a misdemeanor, its lightest classification tier, covering fighting, unreasonable noise, obstructing traffic, and refusing a dispersal order among other paths. Florida uses old-fashioned, broadly worded 'corrupts the public morals' language rather than an enumerated list of prohibited acts. Virginia's statute exempts elementary and secondary students from prosecution for conduct at school or school events, a carve-out not seen in most other states' disorderly conduct laws.",
   },
   // ── Drug Distribution / Trafficking / School Zone ─────────────────────────
   {
@@ -1407,11 +1415,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Unlawful carrying or discharge in a city is typically a felony carrying 1–5 years. A felon in possession of a firearm is a federal felony with a mandatory minimum of up to 15 years for repeat offenders (Armed Career Criminal Act). Using a firearm during a crime of violence triggers federal mandatory minimums of 5-10 years consecutive, meaning served after, not instead of, the underlying sentence.",
     sources: [
       { citation: "Cal. Penal Code § 29800", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=29800." },
-      { citation: "N.Y. Penal Law § 265.02", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/265.02" }
+      { citation: "N.Y. Penal Law § 265.02", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/265.02" },
+      { citation: "Fla. Stat. § 790.23", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/790.23" },
+      { citation: "Va. Code Ann. § 18.2-308.2", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-308.2/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's prohibited-person firearm statute (§ 29800) covers anyone with any prior felony conviction, specified misdemeanors, narcotics addiction, or a known outstanding warrant for a qualifying offense, and extends to minors certified as adults. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's third-degree weapon possession statute covers a genuinely broad list of separate paths (prior-conviction elevation, explosives/silencers/machine guns, defaced or disguised firearms, possessing three or more firearms, assault weapons, or an unloaded firearm during specified felonies) rather than one simple prohibited-person test.",
+    notes: "California's prohibited-person firearm statute (§ 29800) covers anyone with any prior felony conviction, specified misdemeanors, narcotics addiction, or a known outstanding warrant for a qualifying offense, and extends to minors certified as adults. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's third-degree weapon possession statute covers a genuinely broad list of separate paths (prior-conviction elevation, explosives/silencers/machine guns, defaced or disguised firearms, possessing three or more firearms, assault weapons, or an unloaded firearm during specified felonies) rather than one simple prohibited-person test. Florida elevates felon-in-possession from a second to a first degree felony specifically upon a prior gang-related enhancement, a narrower escalation trigger than a generic prior-violent-felony test. Virginia attaches mandatory minimum sentences on top of its Class 6 felony base, 5 years for a prior violent felony, 2 years for any other felony within the past 10 years, both running consecutively.",
   },
   // ── Sexual Assault (generic / criminal sexual assault) ────────────────────
   {
@@ -1438,11 +1448,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Sexual assault is universally a felony. Depending on the state and degree, sentences range from 3–5 years for lower-level offenses to 20+ years or life for aggravated forms. Many convictions also require lifetime sex offender registration, which carries significant restrictions on where you can live and work.",
     sources: [
       { citation: "Cal. Penal Code § 243.4", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=243.4." },
-      { citation: "N.Y. Penal Law § 130.65", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/130.65" }
+      { citation: "N.Y. Penal Law § 130.65", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/130.65" },
+      { citation: "Fla. Stat. § 794.011 (sexual battery)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/794.011" },
+      { citation: "Va. Code Ann. § 18.2-67.3 (aggravated sexual battery)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-67.3/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's closest equivalent to generic 'sexual assault' (short of rape) is sexual battery, graded by circumstance (restrained, institutionalized, or deceived-unconscious victim = felony) rather than by numbered degrees, with a lesser 'simple sexual battery' misdemeanor tier absent those aggravating facts. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York does not use the term 'sexual assault' at all, calling its closest equivalent 'sexual abuse'; first degree covers forcible compulsion, a physically helpless victim, or specified young-victim age combinations.",
+    notes: "California's closest equivalent to generic 'sexual assault' (short of rape) is sexual battery, graded by circumstance (restrained, institutionalized, or deceived-unconscious victim = felony) rather than by numbered degrees, with a lesser 'simple sexual battery' misdemeanor tier absent those aggravating facts. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York does not use the term 'sexual assault' at all, calling its closest equivalent 'sexual abuse'; first degree covers forcible compulsion, a physically helpless victim, or specified young-victim age combinations. Florida is unusually severe at the top: an adult offender against a victim under 12 faces a capital felony, and even a minor offender against the same age victim faces a life felony. Virginia's aggravated sexual battery statute treats every qualifying aggravating circumstance (victim's age, incapacity, force, weapon, family relationship, or professional abuse of trust) identically, one flat felony range regardless of which circumstance applied.",
   },
   // ── Sex Offenses Against Minors ───────────────────────────────────────────
   {
@@ -1498,11 +1510,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Wire fraud and tax fraud carry federal sentences of up to 20 years per count, and prosecutors often stack multiple counts. RICO convictions can result in 20 years per predicate act plus forfeiture of all proceeds. Embezzlement sentencing tracks the amount stolen: under $10,000 is often a misdemeanor; above $100,000 almost certainly means prison. Financial penalties, restitution, and asset forfeiture accompany almost all convictions in this category.",
     sources: [
       { citation: "Cal. Penal Code § 503 (embezzlement, definition); § 514 (penalty)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=514." },
-      { citation: "N.Y. Penal Law § 155.05 (definition); § 155.30 (grand larceny 4th degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/155.30" }
+      { citation: "N.Y. Penal Law § 155.05 (definition); § 155.30 (grand larceny 4th degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/155.30" },
+      { citation: "Fla. Stat. § 817.034 (Florida Communications Fraud Act)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/817.034" },
+      { citation: "Va. Code Ann. § 18.2-111 (embezzlement); §§ 18.2-95, 18.2-96 (penalty)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-111/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California has no single 'financial fraud' statute; wire fraud, mail fraud, tax fraud, money laundering, and RICO are uniform federal crimes, not state-specific. The state-level component, embezzlement, is punished exactly like theft of the same value, using the same $950 felony/misdemeanor line, except embezzlement of public funds is always a felony regardless of amount. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York has no separate embezzlement or false-pretenses statute; its larceny definition explicitly consolidates trespassory taking, embezzlement, false pretenses, extortion, bad checks, and even wage/deed theft into one unified offense graded by value rather than by fraud method.",
+    notes: "California has no single 'financial fraud' statute; wire fraud, mail fraud, tax fraud, money laundering, and RICO are uniform federal crimes, not state-specific. The state-level component, embezzlement, is punished exactly like theft of the same value, using the same $950 felony/misdemeanor line, except embezzlement of public funds is always a felony regardless of amount. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York has no separate embezzlement or false-pretenses statute; its larceny definition explicitly consolidates trespassory taking, embezzlement, false pretenses, extortion, bad checks, and even wage/deed theft into one unified offense graded by value rather than by fraud method. Florida's closest equivalent is the Communications Fraud Act, an organized-scheme statute graded by aggregate value, with a full one-level reclassification for elderly, minor, or disabled victims. Virginia, like California, treats embezzlement as a legal fiction of larceny outright, with the penalty set entirely by the general larceny-value statutes rather than stated in the embezzlement section itself.",
   },
   // ── Attempted Murder / Kidnapping / Arson / Carjacking / Vehicular Homicide
   {
@@ -1553,11 +1567,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Kidnapping is a felony everywhere, with sentences commonly ranging from 3 to 25 years depending on the state and circumstances. Aggravating factors that increase the sentence typically include holding the victim for ransom, harming the victim, kidnapping a child, or using a weapon. A defendant who voluntarily releases the victim unharmed before trial receives a substantially lower sentence in many states.",
     sources: [
       { citation: "Cal. Penal Code § 207 (definition); § 208 (base penalty); § 209 (aggravated)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=209." },
-      { citation: "N.Y. Penal Law § 135.20 (2nd degree); § 135.25 (1st degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/135.25" }
+      { citation: "N.Y. Penal Law § 135.20 (2nd degree); § 135.25 (1st degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/135.25" },
+      { citation: "Fla. Stat. § 787.01", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/787.01" },
+      { citation: "Va. Code Ann. § 18.2-47 (abduction)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-47/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "Base kidnapping is 3, 5, or 8 years (5, 8, or 11 if the victim is under 14), while a separate aggravated-kidnapping statute for ransom/extortion or to facilitate robbery/a sex offense reaches life without parole or life with parole, with the robbery/sex-offense path requiring the movement to have increased the victim's risk of harm beyond what the underlying offense itself would have caused. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's second degree kidnapping is a strikingly minimal base offense, simply 'abducts another person' with no further elements spelled out, while first degree requires ransom intent, 12+ hour restraint with an aggravating intent, or the victim's death.",
+    notes: "Base kidnapping is 3, 5, or 8 years (5, 8, or 11 if the victim is under 14), while a separate aggravated-kidnapping statute for ransom/extortion or to facilitate robbery/a sex offense reaches life without parole or life with parole, with the robbery/sex-offense path requiring the movement to have increased the victim's risk of harm beyond what the underlying offense itself would have caused. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's second degree kidnapping is a strikingly minimal base offense, simply 'abducts another person' with no further elements spelled out, while first degree requires ransom intent, 12+ hour restraint with an aggravating intent, or the victim's death. Florida already sets its base kidnapping at a first degree felony up to life, escalating to a life felony only for a child-under-13 confinement combined with a listed accompanying offense. Virginia calls this offense 'abduction' and separately criminalizes forced labor, with 'intimidation' in that context expanded to include threatening someone's immigration status.",
   },
   // ── Arson ──────────────────────────────────────────────────────────────────
   {
@@ -1584,11 +1600,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Arson of an occupied structure is typically the most serious tier, often carrying 10 to 30 years, especially if someone was injured or killed. Arson of an unoccupied structure or of personal property is graded lower, frequently based on the dollar value of the property destroyed, and can be a felony or a misdemeanor depending on that value. Nearly every state also has a lesser reckless-burning or negligent-fire offense for cases where intent to burn a specific target cannot be proven.",
     sources: [
       { citation: "Cal. Penal Code § 451", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=451." },
-      { citation: "N.Y. Penal Law § 150.05 (4th degree); § 150.20 (1st degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/150.20" }
+      { citation: "N.Y. Penal Law § 150.05 (4th degree); § 150.20 (1st degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/150.20" },
+      { citation: "Fla. Stat. § 806.01", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/806.01" },
+      { citation: "Va. Code Ann. § 18.2-77", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-77/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "A clean four-tier felony ladder graded by outcome and target (great bodily injury, inhabited structure, structure/forest land, property generally) rather than by intent variations; burning your own personal property is generally not arson absent fraud or injury to another. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base arson tier is unusually reckless-only rather than intentional (recklessly damaging property by intentionally starting a fire), while the top tier requires an incendiary device or explosive plus a known or reasonably foreseeable non-participant present in the structure.",
+    notes: "A clean four-tier felony ladder graded by outcome and target (great bodily injury, inhabited structure, structure/forest land, property generally) rather than by intent variations; burning your own personal property is generally not arson absent fraud or injury to another. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base arson tier is unusually reckless-only rather than intentional (recklessly damaging property by intentionally starting a fire), while the top tier requires an incendiary device or explosive plus a known or reasonably foreseeable non-participant present in the structure. Florida uses a two-tier occupancy-based structure (first degree for occupied/dwelling, second degree for other structures) rather than California's four-tier outcome ladder. Virginia's occupied-structure arson carries one of the harshest floors surveyed, life or a minimum of five years, dropping all the way to a Class 4 felony for the identical conduct against an unoccupied structure.",
   },
   // ── Carjacking ─────────────────────────────────────────────────────────────
   {
@@ -1615,11 +1633,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "State carjacking statutes typically carry sentences in the 3 to 20 year range, with the higher end reserved for cases involving a weapon or an injured victim. The federal carjacking statute carries up to 15 years, 25 years if serious bodily injury results, and up to life or the death penalty if the victim dies.",
     sources: [
       { citation: "Cal. Penal Code § 215", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=215." },
-      { citation: "N.Y. Penal Law Article 160 (robbery)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/160.00" }
+      { citation: "N.Y. Penal Law Article 160 (robbery)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/160.00" },
+      { citation: "Fla. Stat. § 812.133", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/812.133" },
+      { citation: "Va. Code Ann. § 18.2-58.1", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-58.1/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's carjacking statute (3, 5, or 9 years) is explicitly not a substitute for robbery; the same conduct can be charged under both statutes, though the defendant cannot be punished twice for the identical act. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York has no standalone carjacking statute; forcibly taking a vehicle directly from a person is prosecuted as ordinary robbery under the same degree structure that applies to any other property.",
+    notes: "California's carjacking statute (3, 5, or 9 years) is explicitly not a substitute for robbery; the same conduct can be charged under both statutes, though the defendant cannot be punished twice for the identical act. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York has no standalone carjacking statute; forcibly taking a vehicle directly from a person is prosecuted as ordinary robbery under the same degree structure that applies to any other property. Florida's carjacking is a first degree felony up to life regardless of whether the offender was armed, a genuine outlier among the states surveyed so far. Virginia has its own standalone carjacking statute, unlike New York's robbery-based approach, carrying a mandatory minimum of 15 years regardless of weapon use, similar to Florida's weapon-agnostic grading.",
   },
   // ── Vehicular Homicide / Criminally Negligent Homicide / Reckless Homicide ─
   {
@@ -1646,11 +1666,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Sentences typically range from 1 to 15 years depending on the state and whether aggravating factors like DUI, excessive speed, or a prior record are present. Some states grade this as its own homicide offense with its own sentencing range; others fold it into the involuntary manslaughter category instead. A DUI-involved death frequently carries a mandatory minimum sentence that a non-impaired negligent death does not.",
     sources: [
       { citation: "Cal. Penal Code § 191.5", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=191.5." },
-      { citation: "N.Y. Penal Law § 125.12 (2nd degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/125.12" }
+      { citation: "N.Y. Penal Law § 125.12 (2nd degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/125.12" },
+      { citation: "Fla. Stat. § 782.071", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/782.071" },
+      { citation: "Va. Code Ann. § 18.2-36.1", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-36.1/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's vehicular-homicide-equivalent offense is specifically tied to DUI (gross vehicular manslaughter while intoxicated, 4/6/10 years, rising to 15-to-life with a qualifying prior); a separate ordinary-negligence DUI-death subsection caps at 4 years, and non-DUI vehicular manslaughter is governed by a different statute (§ 192(c)) not covered here. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base vehicular-homicide offense, like California's, is tied specifically to impaired driving, with a rebuttable presumption that proven intoxication caused the death; a separate first-degree statute exists for aggravated circumstances not independently confirmed to subsection-level detail in this pass.",
+    notes: "California's vehicular-homicide-equivalent offense is specifically tied to DUI (gross vehicular manslaughter while intoxicated, 4/6/10 years, rising to 15-to-life with a qualifying prior); a separate ordinary-negligence DUI-death subsection caps at 4 years, and non-DUI vehicular manslaughter is governed by a different statute (§ 192(c)) not covered here. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base vehicular-homicide offense, like California's, is tied specifically to impaired driving, with a rebuttable presumption that proven intoxication caused the death; a separate first-degree statute exists for aggravated circumstances not independently confirmed to subsection-level detail in this pass. Florida's vehicular homicide has no DUI element at all, unlike California and New York; it turns purely on reckless operation, with a first degree felony enhancement specifically for leaving the scene. Virginia, like California, ties this offense specifically to DUI, escalating to a mandatory one-year-minimum aggravated tier when the conduct showed a gross, wanton, and culpable disregard for human life.",
   },
   // ── Assault (generic / lower degree / on officer) ─────────────────────────
   {
@@ -1749,11 +1771,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "First-offense harassment or stalking is typically a misdemeanor with fines and up to one year in jail. A prior stalking conviction, use of a weapon, violation of a protective order while stalking, or targeting a minor or public official elevates it to a felony with 2–5 years or more. Terroristic threats are usually felonies from the first offense.",
     sources: [
       { citation: "Cal. Penal Code § 646.9", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=646.9." },
-      { citation: "N.Y. Penal Law § 120.45", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/120.45" }
+      { citation: "N.Y. Penal Law § 120.45", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/120.45" },
+      { citation: "Fla. Stat. § 784.048", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/784.048" },
+      { citation: "Va. Code Ann. § 18.2-60.3", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-60.3/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's stalking statute requires BOTH a repeated harassing course of conduct AND a separate credible threat element, a higher bar than harassment alone; a restraining-order violation or qualifying prior escalates the base misdemeanor directly to a felony. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's fourth-degree stalking statute expressly defines 'following' to include unauthorized GPS or electronic location tracking, and covers threats to employment through continued workplace contact after a warning to stop.",
+    notes: "California's stalking statute requires BOTH a repeated harassing course of conduct AND a separate credible threat element, a higher bar than harassment alone; a restraining-order violation or qualifying prior escalates the base misdemeanor directly to a felony. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's fourth-degree stalking statute expressly defines 'following' to include unauthorized GPS or electronic location tracking, and covers threats to employment through continued workplace contact after a warning to stop. Florida's aggravated stalking felony tier is triggered by a credible threat, a protective order violation, a victim under 16, or a qualifying sex-offense conviction. Virginia builds in a rebuttable presumption of intent whenever the person contacts or follows the target after being told to stop, a lower practical bar than requiring a standalone credible threat.",
   },
   // ── DV Abbreviation Variants ──────────────────────────────────────────────
   {
@@ -1804,11 +1828,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Animal at large is typically a civil infraction with a small fine. Animal cruelty is a misdemeanor for first offenses in most states but can be a felony for deliberate torture, killing, or cases involving multiple animals. Aggravated animal cruelty, meaning deliberate, prolonged suffering, is a felony in all 50 states, with sentences of 1-5 years.",
     sources: [
       { citation: "Cal. Penal Code § 597", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=597." },
-      { citation: "N.Y. Agriculture & Markets Law § 353", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/AGM/353" }
+      { citation: "N.Y. Agriculture & Markets Law § 353", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/AGM/353" },
+      { citation: "Fla. Stat. § 828.12", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/828.12" },
+      { citation: "Va. Code Ann. § 3.2-6570", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/3.2-6570/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's animal cruelty statute is unusual among wobbler offenses: both the felony and misdemeanor versions share the identical $20,000 fine ceiling rather than the fine dropping for the lesser charge. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's animal cruelty offense is a genuine structural outlier: it lives in the Agriculture and Markets Law, not the Penal Law at all, though it is still treated as a criminal misdemeanor for procedural purposes.",
+    notes: "California's animal cruelty statute is unusual among wobbler offenses: both the felony and misdemeanor versions share the identical $20,000 fine ceiling rather than the fine dropping for the lesser charge. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's animal cruelty offense is a genuine structural outlier: it lives in the Agriculture and Markets Law, not the Penal Law at all, though it is still treated as a criminal misdemeanor for procedural purposes. Florida's aggravated cruelty felony carries its own mandatory minimum fine and jail time specifically for proven intentional torture, on top of the base aggravated tier. Virginia's animal cruelty statute, like New York's, lives outside the general criminal code (Title 3.2, Agriculture), and its felony tier for cruel killing applies only when a death or euthanasia is linked to a prior offense within five years.",
   },
   // ── Solicitation / Prostitution ───────────────────────────────────────────
   {
@@ -1835,11 +1861,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "First-offense prostitution or solicitation is typically a misdemeanor with fines and possible jail time up to 6–12 months. Repeat offenses or involvement with minors becomes a felony. Even a misdemeanor conviction carries collateral consequences: it appears on background checks, can affect housing and employment, and carries immigration consequences for non-citizens.",
     sources: [
       { citation: "Cal. Penal Code § 647(b)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647." },
-      { citation: "N.Y. Penal Law § 230.00", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/230.00" }
+      { citation: "N.Y. Penal Law § 230.00", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/230.00" },
+      { citation: "Fla. Stat. § 796.07", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/796.07" },
+      { citation: "Va. Code Ann. § 18.2-346", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-346/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California has no standalone prostitution statute; prostitution and solicitation are charged under the same disorderly conduct statute (§ 647) that also covers lewd conduct and public intoxication, as one listed subsection rather than its own law. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.Unlike California, New York keeps prostitution as its own dedicated statute (Article 230) rather than folding it into a general disorderly conduct law.",
+    notes: "California has no standalone prostitution statute; prostitution and solicitation are charged under the same disorderly conduct statute (§ 647) that also covers lewd conduct and public intoxication, as one listed subsection rather than its own law. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.Unlike California, New York keeps prostitution as its own dedicated statute (Article 230) rather than folding it into a general disorderly conduct law. Florida escalates purely by repeat-offense count, from a second degree misdemeanor first offense to a third degree felony by the third. Virginia, like New York, keeps prostitution as its own dedicated statute, but requires solicitation to be followed by a substantial act in furtherance, not just the offer itself.",
   },
   // ── Criminal Possession of Stolen Property ────────────────────────────────
   {
@@ -1866,11 +1894,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Receiving stolen property under the state's threshold is a misdemeanor. Above the threshold ($500–$1,000 in most states) it becomes a felony. If the stolen property is a firearm or vehicle, it's typically a felony regardless of value. Sentences mirror theft charges at the same dollar level.",
     sources: [
       { citation: "Cal. Penal Code § 496", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=496." },
-      { citation: "N.Y. Penal Law § 165.40", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/165.40" }
+      { citation: "N.Y. Penal Law § 165.40", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/165.40" },
+      { citation: "Fla. Stat. § 812.019 (dealing in stolen property)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/812.019" },
+      { citation: "Va. Code Ann. § 18.2-108", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-108/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "Uses the same $950 value line as California's other property crimes (wobbler above, misdemeanor at or below absent priors); a defendant cannot be convicted of both receiving stolen property and theft for the same property, and a victim can separately sue for triple damages. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York calls this offense 'criminal possession of stolen property'; its base fifth-degree tier is value-independent, a straight Class A misdemeanor regardless of the property's worth.",
+    notes: "Uses the same $950 value line as California's other property crimes (wobbler above, misdemeanor at or below absent priors); a defendant cannot be convicted of both receiving stolen property and theft for the same property, and a victim can separately sue for triple damages. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York calls this offense 'criminal possession of stolen property'; its base fifth-degree tier is value-independent, a straight Class A misdemeanor regardless of the property's worth. Florida's dedicated statute is built around trafficking in stolen property rather than passive receipt, which appears to fall back to the general theft statute instead. Virginia again uses its legal-fiction approach: receiving stolen property is deemed larceny outright, and prosecution can proceed even if the original thief was never convicted.",
   },
   // ── Criminal Non-Support / Failure to Pay Child Support ───────────────────
   {
@@ -1897,11 +1927,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Criminal non-support starts as a misdemeanor for smaller arrears or short periods. It becomes a felony when arrears exceed a threshold (often $5,000–$10,000) or when payments have been missed for more than one year. Federal charges apply when a parent crosses state lines to avoid payment. Civil remedies (wage garnishment, license suspension, tax refund seizure) typically run alongside the criminal process.",
     sources: [
       { citation: "Cal. Penal Code § 270", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=270." },
-      { citation: "N.Y. Penal Law § 260.05", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/260.05" }
+      { citation: "N.Y. Penal Law § 260.05", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/260.05" },
+      { citation: "Fla. Stat. § 827.06", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/827.06" },
+      { citation: "Va. Code Ann. § 20-61 (desertion or nonsupport)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/20-61/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "Abandonment or desertion of the child is itself prima facie evidence of willfulness under California's nonsupport statute, and a first offense is a straight misdemeanor while a subsequent offense after a formal parentage adjudication can be charged as a low-level felony. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.Covers two separate paths, a parent/guardian/custodian failing to support a child under 16 while financially able, and anyone bound by a court support order for a child under 18 who knowingly fails to pay.",
+    notes: "Abandonment or desertion of the child is itself prima facie evidence of willfulness under California's nonsupport statute, and a first offense is a straight misdemeanor while a subsequent offense after a formal parentage adjudication can be charged as a low-level felony. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.Covers two separate paths, a parent/guardian/custodian failing to support a child under 16 while financially able, and anyone bound by a court support order for a child under 18 who knowingly fails to pay. Florida's felony escalation is tied to a fourth or subsequent violation, or $5,000 or more owed for over a year, whichever comes first. Virginia's nonsupport statute lives in the Domestic Relations title rather than the criminal code, and requires the dependent to be in actual 'necessitous circumstances,' not just owed money.",
   },
   // ── Abuse of Family / Household Member ───────────────────────────────────
   {
@@ -1976,11 +2008,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Resisting arrest without violence is typically a misdemeanor (fines, up to one year in jail). Resisting with violence, meaning striking or injuring an officer, is a felony. Obstruction of justice is a misdemeanor for simple interference but can be a federal felony when it affects federal investigations, with sentences up to 5–20 years depending on the underlying case.",
     sources: [
       { citation: "Cal. Penal Code § 148(a)(1)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=148." },
-      { citation: "N.Y. Penal Law § 205.30", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/205.30" }
+      { citation: "N.Y. Penal Law § 205.30", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/205.30" },
+      { citation: "Fla. Stat. § 843.01 (resisting officer with violence)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/843.01" },
+      { citation: "Va. Code Ann. § 18.2-460", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-460/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's base resisting-arrest offense is a misdemeanor with its own built-in weapon-removal enhancements (non-firearm and firearm) layered on top, provable even for an unsuccessful attempt to take the officer's firearm. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.A short single-element statute (intentionally preventing an authorized arrest) with no separate weapon-based felony enhancement built into the section itself, unlike some states' resisting-arrest laws.",
+    notes: "California's base resisting-arrest offense is a misdemeanor with its own built-in weapon-removal enhancements (non-firearm and firearm) layered on top, provable even for an unsuccessful attempt to take the officer's firearm. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.A short single-element statute (intentionally preventing an authorized arrest) with no separate weapon-based felony enhancement built into the section itself, unlike some states' resisting-arrest laws. Florida's violent-resisting statute is a straight third degree felony, with a separate lower-level non-violent resisting statute (§ 843.02) for passive noncompliance. Virginia folds resisting arrest into a broader obstruction-of-justice statute alongside intimidation and false statements to police, all sharing the same Class 1 misdemeanor baseline unless force or a threat ties to a drug, weapons, or violent-felony case.",
   },
   // ── Perjury ───────────────────────────────────────────────────────────────
   {
@@ -2079,11 +2113,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Forgery is typically a felony when it involves financial instruments, official documents, or significant dollar amounts. Minor forgeries (fake IDs for alcohol, small-value document alterations) may be misdemeanors. Sentences range from 1–3 years for less serious forgery to 5–10 years for large-scale fraud involving forged documents.",
     sources: [
       { citation: "Cal. Penal Code § 470 (definition); § 473 (penalty)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=473." },
-      { citation: "N.Y. Penal Law § 170.05", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/170.05" }
+      { citation: "N.Y. Penal Law § 170.05", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/170.05" },
+      { citation: "Fla. Stat. § 831.01", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/831.01" },
+      { citation: "Va. Code Ann. § 18.2-172", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-172/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California treats forgery as a 'wobbler' (misdemeanor or felony at prosecutorial/court discretion), except Proposition 47 locked forgery of specified financial instruments valued at $950 or less into a straight misdemeanor absent disqualifying priors. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base forgery tier is a straight Class A misdemeanor; higher degrees escalate specifically for particular instrument categories like government documents, money, or securities, not covered by this base citation.",
+    notes: "California treats forgery as a 'wobbler' (misdemeanor or felony at prosecutorial/court discretion), except Proposition 47 locked forgery of specified financial instruments valued at $950 or less into a straight misdemeanor absent disqualifying priors. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's base forgery tier is a straight Class A misdemeanor; higher degrees escalate specifically for particular instrument categories like government documents, money, or securities, not covered by this base citation. Florida's forgery statute enumerates a specific list of covered document types (deeds, wills, bonds, insurance policies) rather than using a general standard. Virginia uses a general 'any writing' standard instead of an enumerated document list, carving out only checks and public records, which are covered by separate statutes.",
   },
   // ── Failure to Appear ─────────────────────────────────────────────────────
   {
@@ -2110,11 +2146,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Failure to appear on a misdemeanor is typically a misdemeanor itself, carrying fines and up to 6–12 months in jail. Failure to appear on a felony case is usually a separate felony, with 1–3 years additional. Beyond the criminal charge, the outstanding bench warrant follows you indefinitely. It can surface during any police contact, including traffic stops, years later.",
     sources: [
       { citation: "Cal. Penal Code § 1320.5 (felony); § 1320 (misdemeanor)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1320.5." },
-      { citation: "N.Y. Penal Law § 215.57 (1st degree); § 215.56 (2nd degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/215.57" }
+      { citation: "N.Y. Penal Law § 215.57 (1st degree); § 215.56 (2nd degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/215.57" },
+      { citation: "Fla. Stat. § 843.15", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/843.15" },
+      { citation: "Va. Code Ann. § 19.2-128", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/19.2-128/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California splits failure to appear by the underlying case: a felony case triggers § 1320.5 (up to 3 years, $10,000 fine), while a misdemeanor case or own-recognizance release falls under the separate misdemeanor statute, § 1320. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York calls this offense 'bail jumping' and grades it by the underlying case's severity: first degree requires a Class A or B felony indictment and a failure to appear within 30 days of the required date, a Class D felony.",
+    notes: "California splits failure to appear by the underlying case: a felony case triggers § 1320.5 (up to 3 years, $10,000 fine), while a misdemeanor case or own-recognizance release falls under the separate misdemeanor statute, § 1320. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York calls this offense 'bail jumping' and grades it by the underlying case's severity: first degree requires a Class A or B felony indictment and a failure to appear within 30 days of the required date, a Class D felony. Florida grades failure to appear purely by the underlying case type, felony versus misdemeanor, with no separate willfulness-mitigation framework spelled out in the statute. Virginia's statute explicitly requires courts to weigh mitigating circumstances like medical conditions and transportation issues, and states that an isolated prior nonappearance alone doesn't prove willfulness.",
   },
   // ── Failure to Identify / Providing False Information ─────────────────────
   {
@@ -2261,11 +2299,13 @@ export const chargeExplanations: ChargeExplanation[] = [
     degreeContext: "Hate crime enhancements typically increase the sentence by 50–100% over the base offense. Federal hate crime convictions (Matthew Shepard Act) carry up to 10 years in addition to the underlying crime, or life if the offense involved kidnapping, sexual assault, or resulted in death.",
     sources: [
       { citation: "Cal. Penal Code § 422.55 (definition); § 422.7 (enhancement)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=422.7." },
-      { citation: "N.Y. Penal Law § 485.05 (definition); § 485.10 (enhancement)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/485.10" }
+      { citation: "N.Y. Penal Law § 485.05 (definition); § 485.10 (enhancement)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/485.10" },
+      { citation: "Fla. Stat. § 775.085", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/775.085" },
+      { citation: "Va. Code Ann. § 18.2-57 (bias-motivated assault and battery)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-57/" }
     ],
     dataConfidence: "high",
     lastVerified: "2026-08",
-    notes: "California's hate crime provision is a sentencing enhancement layered onto an underlying offense, not a standalone crime; § 422.7 elevates the offense specifically where actual or potential violence, property damage over $950, or a prior hate-crime conviction is present. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's hate crime enhancement bumps a misdemeanor or Class C/D/E felony up one full category, raises Class B felony minimums to 6-12 years and Class A-I minimums to 20+ years, and automatically reclassifies the offense as a violent felony if the underlying crime already qualifies as one.",
+    notes: "California's hate crime provision is a sentencing enhancement layered onto an underlying offense, not a standalone crime; § 422.7 elevates the offense specifically where actual or potential violence, property damage over $950, or a prior hate-crime conviction is present. Fresh Tier 2 sourcing project (2026-08): all 10 anchor states (CA, NY, FL, VA, OH, IL, GA, NC, NJ, AZ) plus expansion to the remaining 41 jurisdictions is ongoing.New York's hate crime enhancement bumps a misdemeanor or Class C/D/E felony up one full category, raises Class B felony minimums to 6-12 years and Class A-I minimums to 20+ years, and automatically reclassifies the offense as a violent felony if the underlying crime already qualifies as one. Florida uses a clean, continuous one-level reclassification ladder that applies at every severity tier, from misdemeanor up through a first degree felony becoming a life felony. Virginia has no general, standalone hate-crime statute at all; bias-motivated enhancement is instead built directly into individual offense statutes like assault and battery, making it narrower and offense-specific.",
   },
   // ── Murder in the Third Degree ────────────────────────────────────────────
   {
