@@ -327,7 +327,7 @@ export default function DataSources() {
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
-                      <p className="font-semibold text-foreground mb-1">State-specific: 20 additional charges (44 states so far)</p>
+                      <p className="font-semibold text-foreground mb-1">State-specific: 20 additional charges (46 states so far)</p>
                       <p>
                         Weapons charges, financial fraud, sexual assault, resisting arrest, forgery, failure to
                         appear, shoplifting, criminal mischief, trespass, disorderly conduct, stalking, animal
@@ -338,8 +338,8 @@ export default function DataSources() {
                         Michigan, Washington, Massachusetts, Tennessee, Indiana, Missouri, Maryland, Wisconsin,
                         Colorado, Minnesota, South Carolina, Alabama, Louisiana, Kentucky, Oregon, Connecticut,
                         Utah, Nevada, Iowa, Arkansas, Mississippi, Kansas, Nebraska, Idaho, West Virginia, Hawaii,
-                        New Hampshire, Maine, Montana, Rhode Island, Delaware, and North Dakota. Expanding this
-                        coverage to the remaining jurisdictions is ongoing.
+                        New Hampshire, Maine, Montana, Rhode Island, Delaware, North Dakota, Vermont, and the
+                        District of Columbia. Expanding this coverage to the remaining jurisdictions is ongoing.
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
