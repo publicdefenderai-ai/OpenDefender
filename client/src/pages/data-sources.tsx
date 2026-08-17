@@ -294,7 +294,7 @@ export default function DataSources() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
-                    <p>16 of 56 charge categories have real, state-specific detail so far; the rest use general, non-state-specific language</p>
+                    <p>36 of 60 charge categories have real, state-specific detail so far; the rest use general, non-state-specific language</p>
                   </div>
                 </div>
 
