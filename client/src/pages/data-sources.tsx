@@ -294,7 +294,7 @@ export default function DataSources() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
-                    <p>36 of 60 charge categories have real, state-specific detail so far; the rest use general, non-state-specific language</p>
+                    <p>56 of 60 charge categories have real, state-specific detail for at least one state so far (coverage still varies widely by category, see below); the rest use general, non-state-specific language</p>
                   </div>
                 </div>
 
@@ -343,12 +343,24 @@ export default function DataSources() {
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
-                      <p className="font-semibold text-foreground mb-1">General only: the remaining 24 charge categories</p>
+                      <p className="font-semibold text-foreground mb-1">State-specific: 20 more charges (California so far)</p>
                       <p>
-                        Charges like sex offenses against minors, rape, indecent exposure, driving offenses, and
-                        drug distribution still use general, non-state-specific language. This is the same content
-                        that existed before this project started, not yet reviewed against any state's actual
-                        statute text.
+                        Rape, sex offenses against minors, indecent exposure, drug distribution, marijuana
+                        possession, driving while suspended, driving without a license, reckless driving, hit and
+                        run, public intoxication, loitering, perjury, failure to identify, murder in the third
+                        degree, check fraud, abuse of a family member, attempted murder, conspiracy/accessory/attempt,
+                        recidivist (habitual offender) enhancement, and juvenile transfer proceedings have real
+                        detail for California, the first of our 10 anchor states. Expanding this coverage to the
+                        remaining jurisdictions is ongoing.
+                      </p>
+                    </div>
+                    <div className="border border-border rounded-lg p-4">
+                      <p className="font-semibold text-foreground mb-1">General only: 4 remaining categories</p>
+                      <p>
+                        Illegal entry/re-entry and contempt/probation-violation are handled through federal or
+                        procedural rules that do not meaningfully vary by state, so they stay general by design.
+                        Two other categories in our data are internal catch-all labels rather than distinct charges
+                        a person is ever actually charged with, and never get their own state-specific detail.
                       </p>
                     </div>
                   </div>
