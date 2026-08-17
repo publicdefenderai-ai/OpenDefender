@@ -320,14 +320,14 @@ export default function DataSources() {
                         anchor states: California, New York, Florida, Virginia, Ohio, Illinois, Georgia, North
                         Carolina, New Jersey, and Arizona, plus Texas, Pennsylvania, Michigan, Washington,
                         Massachusetts, Tennessee, Indiana, Missouri, Maryland, Wisconsin, Colorado, Minnesota,
-                        South Carolina, Alabama, Louisiana, Kentucky, Oregon, Oklahoma, Connecticut, Utah, Nevada, Iowa, Arkansas, Mississippi, Kansas, New Mexico, Puerto Rico, Nebraska, Idaho, West Virginia, Hawaii, New Hampshire, Maine, Montana, Rhode Island, Delaware, North Dakota, Vermont, the District of Columbia, and Wyoming, the first forty jurisdictions added beyond that anchor set, including Puerto Rico as the first U.S. territory in this expansion. Some individual
+                        South Carolina, Alabama, Louisiana, Kentucky, Oregon, Oklahoma, Connecticut, Utah, Nevada, Iowa, Arkansas, Mississippi, Kansas, New Mexico, Puerto Rico, Nebraska, Idaho, West Virginia, Hawaii, New Hampshire, Maine, Montana, Rhode Island, Delaware, North Dakota, Vermont, the District of Columbia, Wyoming, and Alaska, the first forty-one jurisdictions added beyond that anchor set, including Puerto Rico as the first U.S. territory in this expansion. Some individual
                         charge terms do not exist in every state (for example, several states have no "first
                         degree assault" statute, and Indiana and Wisconsin have no "assault" concept separate from
                         battery at all); those gaps are noted directly rather than force-mapped to the wrong charge.
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
-                      <p className="font-semibold text-foreground mb-1">State-specific: 20 additional charges (47 states so far)</p>
+                      <p className="font-semibold text-foreground mb-1">State-specific: 20 additional charges (48 states so far)</p>
                       <p>
                         Weapons charges, financial fraud, sexual assault, resisting arrest, forgery, failure to
                         appear, shoplifting, criminal mischief, trespass, disorderly conduct, stalking, animal
@@ -339,7 +339,7 @@ export default function DataSources() {
                         Colorado, Minnesota, South Carolina, Alabama, Louisiana, Kentucky, Oregon, Connecticut,
                         Utah, Nevada, Iowa, Arkansas, Mississippi, Kansas, Nebraska, Idaho, West Virginia, Hawaii,
                         New Hampshire, Maine, Montana, Rhode Island, Delaware, North Dakota, Vermont, the
-                        District of Columbia, and Wyoming. Expanding this coverage to the remaining jurisdictions is ongoing.
+                        District of Columbia, Wyoming, and Alaska. Expanding this coverage to the remaining jurisdictions is ongoing.
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
