@@ -343,15 +343,15 @@ export default function DataSources() {
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
-                      <p className="font-semibold text-foreground mb-1">State-specific: 20 more charges (9 of our anchor states so far)</p>
+                      <p className="font-semibold text-foreground mb-1">State-specific: 20 more charges (all 10 anchor states)</p>
                       <p>
                         Rape, sex offenses against minors, indecent exposure, drug distribution, marijuana
                         possession, driving while suspended, driving without a license, reckless driving, hit and
                         run, public intoxication, loitering, perjury, failure to identify, murder in the third
                         degree, check fraud, abuse of a family member, attempted murder, conspiracy/accessory/attempt,
                         recidivist (habitual offender) enhancement, and juvenile transfer proceedings have real
-                        detail for California, New York, Florida, Virginia, Ohio, Illinois, Georgia, North
-                        Carolina, and New Jersey, 9 of our 10 anchor states.
+                        detail for all 10 of our original anchor states (California, New York, Florida, Virginia,
+                        Ohio, Illinois, Georgia, North Carolina, New Jersey, and Arizona).
                         Expanding this coverage to the remaining jurisdictions is ongoing.
                       </p>
                     </div>
