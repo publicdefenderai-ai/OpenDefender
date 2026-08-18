@@ -294,7 +294,7 @@ export default function DataSources() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
-                    <p>56 of 60 charge categories have real, state-specific detail for at least one state so far (coverage still varies widely by category, see below); the rest use general, non-state-specific language</p>
+                    <p>56 of 60 charge categories have real, state-specific detail for nearly all 52 jurisdictions in scope (50 states, D.C., and Puerto Rico); the remaining 4 categories use general, non-state-specific language by design, not because they haven't been reached yet</p>
                   </div>
                 </div>
 
@@ -302,9 +302,12 @@ export default function DataSources() {
                   <p className="text-muted-foreground leading-relaxed text-sm">
                     The "Understanding Your Charges" card and its PDF version explain what a charge means in plain
                     language. This content is a separate project from the citation database above, and started later:
-                    it had no sourcing at all until August 2026. Closing that gap is ongoing, and coverage is
-                    partial by design. We would rather show you accurate detail for the charges we have verified,
-                    and a clearly general explanation for the ones we have not, than pretend every state has been checked.
+                    it had no sourcing at all until August 2026. As of August 2026, real per-state detail is in
+                    place across all three coverage tiers for every jurisdiction in scope except two disclosed gaps:
+                    South Dakota, whose official legislature site has blocked every access path tried so far, and
+                    Oklahoma, which is still missing one of the three tiers. We would rather show you accurate
+                    detail for the charges we have verified, and a clearly general explanation for the ones we
+                    have not, than pretend every state has been checked.
                   </p>
                 </div>
 
@@ -339,7 +342,10 @@ export default function DataSources() {
                         Colorado, Minnesota, South Carolina, Alabama, Louisiana, Kentucky, Oregon, Connecticut,
                         Utah, Nevada, Iowa, Arkansas, Mississippi, Kansas, Nebraska, Idaho, West Virginia, Hawaii,
                         New Hampshire, Maine, Montana, Rhode Island, Delaware, North Dakota, Vermont, the
-                        District of Columbia, Wyoming, Alaska, New Mexico, and Puerto Rico. Expanding this coverage to the remaining jurisdictions is ongoing.
+                        District of Columbia, Wyoming, Alaska, New Mexico, and Puerto Rico. Only South Dakota and
+                        Oklahoma remain: South Dakota is blocked by its official site's bot-detection gate, and
+                        Oklahoma's sourcing wall was resolved for the other two tiers but hasn't been revisited
+                        for this one yet.
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
