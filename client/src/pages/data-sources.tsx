@@ -343,7 +343,7 @@ export default function DataSources() {
                       </p>
                     </div>
                     <div className="border border-border rounded-lg p-4">
-                      <p className="font-semibold text-foreground mb-1">State-specific: 20 more charges (40 jurisdictions so far)</p>
+                      <p className="font-semibold text-foreground mb-1">State-specific: 20 more charges (42 jurisdictions so far)</p>
                       <p>
                         Rape, sex offenses against minors, indecent exposure, drug distribution, marijuana
                         possession, driving while suspended, driving without a license, reckless driving, hit and
@@ -355,7 +355,8 @@ export default function DataSources() {
                         Pennsylvania, Michigan, Washington, Massachusetts, Tennessee, Indiana, Missouri,
                         Maryland, Wisconsin, Colorado, Minnesota, South Carolina, Alabama, Louisiana,
                         Kentucky, Oregon, Oklahoma, Connecticut, Utah, Nevada, Iowa, Arkansas,
-                        Mississippi, Kansas, New Mexico, Puerto Rico, Nebraska, Idaho, and West Virginia.
+                        Mississippi, Kansas, New Mexico, Puerto Rico, Nebraska, Idaho, West Virginia,
+                        Hawaii, and New Hampshire.
                         Expanding this coverage to the remaining jurisdictions is ongoing.
                       </p>
                     </div>
