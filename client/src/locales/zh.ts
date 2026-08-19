@@ -5116,6 +5116,10 @@ export default {
       "pendingReviewWarning": {
         "title": "尚未经律师审查。",
         "body": "此说明仅作为一般起点。在依赖此内容之前，请向持牌刑事辩护律师核实具体内容。"
+      },
+      "translationDraftWarning": {
+        "title": "暂定翻译。",
+        "body": "此翻译由机器辅助生成，尚未经双语法律专业人士审核。请与您的律师核实关键术语。"
       }
     }
   },

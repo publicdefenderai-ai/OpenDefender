@@ -376,6 +376,8 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     documentDescription: 'Para Qué Sirve',
     /** Shown before charge explanations flagged pendingAttorneyReview: true */
     pendingReviewWarning: '⚠ Nota: Esta explicación aún no ha sido revisada por un abogado defensor penal autorizado. Trátela solo como un punto de partida general.',
+    /** Shown before charge explanations whose translation is machine-assisted and not yet reviewed */
+    translationDraftWarning: '⚠ Traducción provisional: Esta traducción fue generada automáticamente y aún no ha sido revisada por un profesional legal bilingüe. Verifique términos críticos con su abogado.',
   } : {
     title: 'Your Case Roadmap',
     generated: 'Generated',
@@ -432,13 +434,18 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     documentDescription: 'What It\'s For',
     /** Shown before charge explanations flagged pendingAttorneyReview: true */
     pendingReviewWarning: '⚠ Note: This explanation has not yet been reviewed by a licensed criminal defense attorney. Treat it as a general starting point only.',
+    /** Shown before charge explanations whose translation is machine-assisted and not yet reviewed */
+    translationDraftWarning: '⚠ Draft translation: This translation was machine-assisted and has not yet been reviewed by a bilingual legal professional. Verify critical terms with your attorney.',
   };
 
-  // Chinese requires a separate override for the pending-review warning because
-  // the labels object above only branches on Spanish vs. English.
+  // Chinese requires separate overrides for warning strings because the labels
+  // object above only branches on Spanish vs. English.
   const pendingReviewWarningLocalized: string = isChinese
     ? '⚠ 注意：此说明尚未经持牌刑事辩护律师审查。请仅将其视为一般起点。'
     : labels.pendingReviewWarning;
+  const translationDraftWarningLocalized: string = isChinese
+    ? '⚠ 暂定翻译：此翻译由机器辅助生成，尚未经双语法律专业人士审核。请与您的律师核实关键术语。'
+    : labels.translationDraftWarning;
 
   // Helper function to add text with word wrap
   const addText = (text: string, x: number, y: number, options?: any) => {
@@ -585,7 +592,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       yPosition += 8;
 
       // Get explanation for this charge
-      const explanation = getChargeExplanation(charge.name, caseData.jurisdiction);
+      const explanation = getChargeExplanation(charge.name, caseData.jurisdiction, language);
       
       doc.setFontSize(10);
       doc.setFont(FONT_NAME, 'normal');
@@ -602,6 +609,22 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
         doc.setTextColor(180, 100, 0); // amber
         yPosition = addText(
           pendingReviewWarningLocalized,
+          margin + 5,
+          yPosition
+        );
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
+
+      // Translation-draft notice — shown when the explanation was machine-translated
+      // and has not yet been reviewed by a fluent-speaker legal professional.
+      if (explanation?.translationDraft === true) {
+        checkPageBreak(15);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(30, 80, 160); // blue to distinguish from amber attorney-review warning
+        yPosition = addText(
+          translationDraftWarningLocalized,
           margin + 5,
           yPosition
         );

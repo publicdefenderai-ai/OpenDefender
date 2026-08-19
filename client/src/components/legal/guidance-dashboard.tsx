@@ -702,7 +702,7 @@ function YourChargesSection({
   }>;
   jurisdiction?: string;
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   if (!chargeClassifications || chargeClassifications.length === 0) {
     return null;
@@ -712,7 +712,7 @@ function YourChargesSection({
   // Also look up the original DB entry to carry through dataConfidence and
   // statuteCitations — required for the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
-    const explanation = getChargeExplanation(classification.name, jurisdiction);
+    const explanation = getChargeExplanation(classification.name, jurisdiction, i18n.language);
     // Prefer lookup by unique charge ID (when the backend includes it); fall back
     // to statute code for backwards-compatibility with older stored guidance records.
     const dbCharge = classification.id
@@ -787,6 +787,20 @@ function YourChargesSection({
                     {t('guidance.yourCharges.pendingReviewWarning.title', 'Not yet attorney-reviewed.')}
                   </span>{" "}
                   {t('guidance.yourCharges.pendingReviewWarning.body', 'This explanation is a general starting point only. Verify specifics with a licensed criminal defense attorney before relying on it.')}
+                </p>
+              </div>
+            )}
+
+            {/* Translation-draft notice — shown when explanation is machine-translated
+                and has not yet been reviewed by a fluent-speaker legal professional. */}
+            {charge.explanation?.translationDraft && (
+              <div className="flex items-start gap-2 p-2.5 rounded-md bg-blue-50 border border-blue-200 dark:bg-blue-950/30 dark:border-blue-800">
+                <AlertTriangle className="h-4 w-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+                <p className="text-xs text-blue-800 dark:text-blue-300 leading-snug">
+                  <span className="font-semibold">
+                    {t('guidance.yourCharges.translationDraftWarning.title', 'Provisional translation.')}
+                  </span>{" "}
+                  {t('guidance.yourCharges.translationDraftWarning.body', 'This translation was machine-assisted and has not yet been reviewed by a bilingual legal professional. Verify critical terms with your attorney.')}
                 </p>
               </div>
             )}

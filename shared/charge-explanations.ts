@@ -1,4 +1,5 @@
 import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail } from "./charge-explanation-jurisdiction-overlay";
+import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
 
 export interface LegalTermExplanation {
   term: string;
@@ -3472,6 +3473,9 @@ function normalizeJurisdictionCode(jurisdiction: string): string {
 
 export interface ChargeExplanationWithJurisdiction extends ChargeExplanation {
   jurisdictionDetail?: JurisdictionChargeDetail;
+  /** True when the returned translation is machine-assisted and not yet reviewed
+   *  by a fluent-speaker legal professional. Callers may show a draft notice. */
+  translationDraft?: boolean;
 }
 
 /**
@@ -3483,19 +3487,53 @@ export interface ChargeExplanationWithJurisdiction extends ChargeExplanation {
  */
 export function getChargeExplanation(
   chargeName: string,
-  jurisdiction?: string
+  jurisdiction?: string,
+  language?: string
 ): ChargeExplanationWithJurisdiction | null {
   const normalizedName = chargeName.toLowerCase().trim();
 
   for (const explanation of chargeExplanations) {
     if (explanation.chargePattern.test(normalizedName)) {
-      if (!jurisdiction) {
-        return explanation;
+      // Resolve jurisdiction overlay first
+      let resolved: ChargeExplanationWithJurisdiction = explanation;
+      if (jurisdiction) {
+        const stateCode = normalizeJurisdictionCode(jurisdiction);
+        const overlayKey = `${stateCode}-${explanation.slug}`;
+        const jurisdictionDetail = CHARGE_EXPLANATION_JURISDICTION_OVERLAY[overlayKey];
+        resolved = jurisdictionDetail ? { ...explanation, jurisdictionDetail } : explanation;
       }
-      const stateCode = normalizeJurisdictionCode(jurisdiction);
-      const overlayKey = `${stateCode}-${explanation.slug}`;
-      const jurisdictionDetail = CHARGE_EXPLANATION_JURISDICTION_OVERLAY[overlayKey];
-      return jurisdictionDetail ? { ...explanation, jurisdictionDetail } : explanation;
+
+      // Apply language translations when a non-English locale is requested
+      const lang = (language ?? "en").split("-")[0].toLowerCase();
+      if (lang === "es" || lang === "zh") {
+        const translationEntry = CHARGE_EXPLANATION_TRANSLATIONS[explanation.slug];
+        const locale = translationEntry?.[lang as "es" | "zh"];
+        if (locale) {
+          const translatedKeyTerms = resolved.keyTerms.map((term, i) => {
+            const termTranslation = locale.keyTerms[i];
+            if (!termTranslation) return term;
+            return {
+              ...term,
+              plainMeaning: termTranslation.plainMeaning,
+              ...(termTranslation.example !== undefined
+                ? { example: termTranslation.example }
+                : {}),
+            };
+          });
+          return {
+            ...resolved,
+            plainSummary: locale.plainSummary,
+            keyTerms: translatedKeyTerms,
+            ...(locale.degreeContext !== undefined
+              ? { degreeContext: locale.degreeContext }
+              : {}),
+            // Surface draft flag so callers can show a pending-review notice
+            translationDraft: locale.draft,
+          };
+        }
+      }
+
+      return resolved;
     }
   }
 
@@ -3504,13 +3542,14 @@ export function getChargeExplanation(
 
 export function getMultipleChargeExplanations(
   chargeNames: string[],
-  jurisdiction?: string
+  jurisdiction?: string,
+  language?: string
 ): Array<{
   chargeName: string;
   explanation: ChargeExplanationWithJurisdiction | null;
 }> {
   return chargeNames.map(name => ({
     chargeName: name,
-    explanation: getChargeExplanation(name, jurisdiction)
+    explanation: getChargeExplanation(name, jurisdiction, language)
   }));
 }

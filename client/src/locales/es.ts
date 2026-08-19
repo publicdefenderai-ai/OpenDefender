@@ -5116,6 +5116,10 @@ export default {
       "pendingReviewWarning": {
         "title": "Aún no revisado por un abogado.",
         "body": "Esta explicación es solo un punto de partida general. Verifique los detalles con un abogado defensor penal autorizado antes de depender de ella."
+      },
+      "translationDraftWarning": {
+        "title": "Traducción provisional.",
+        "body": "Esta traducción fue generada automáticamente y aún no ha sido revisada por un profesional legal bilingüe. Verifique términos críticos con su abogado."
       }
     }
   },
