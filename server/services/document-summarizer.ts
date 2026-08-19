@@ -20,6 +20,7 @@ const pdfParse = (pdfParseModule as any).default || pdfParseModule;
 import mammoth from 'mammoth';
 import { devLog, errLog, opsLog } from '../utils/dev-logger';
 import { recordAICost, isRequestCostAcceptable } from './cost-tracker';
+import { MAX_AI_PROMPT_BYTES } from '../config/ai-input-limits';
 
 // Initialize Anthropic client
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -32,18 +33,97 @@ const anthropic = apiKey ? new Anthropic({
   timeout: 120000, // 2 minute timeout for document processing
 }) : null;
 
+export const MAX_CLAUDE_USER_CONTENT_BYTES = MAX_AI_PROMPT_BYTES;
+const MAX_PROMPT_FILENAME_BYTES = 128;
+// Images are base64-encoded before Claude receives them. This conservative
+// source limit leaves room for the encoded bytes and the final prompt text.
+export const MAX_VISION_IMAGE_BYTES = Math.floor(
+  (MAX_CLAUDE_USER_CONTENT_BYTES - 512) * 3 / 4,
+);
+
 // Supported file types and their max sizes
 const SUPPORTED_TYPES = {
   'application/pdf': { ext: 'pdf', maxSize: 10 * 1024 * 1024 }, // 10MB
   'application/vnd.openxmlformats-officedocument.wordprocessingml.document': { ext: 'docx', maxSize: 10 * 1024 * 1024 },
   'text/plain': { ext: 'txt', maxSize: 1 * 1024 * 1024 }, // 1MB
-  'image/png': { ext: 'png', maxSize: 5 * 1024 * 1024 }, // 5MB - for OCR via Claude vision
-  'image/jpeg': { ext: 'jpg', maxSize: 5 * 1024 * 1024 },
-  'image/webp': { ext: 'webp', maxSize: 5 * 1024 * 1024 },
+  'image/png': { ext: 'png', maxSize: MAX_VISION_IMAGE_BYTES },
+  'image/jpeg': { ext: 'jpg', maxSize: MAX_VISION_IMAGE_BYTES },
+  'image/webp': { ext: 'webp', maxSize: MAX_VISION_IMAGE_BYTES },
 };
 
-// Maximum text length to send to Claude (~25k tokens at ~4 chars/token)
-const MAX_TEXT_LENGTH = 100_000;
+// Raw extraction is bounded before redaction; final prompt content is bounded
+// again after redaction by the builders below.
+export const MAX_CLAUDE_DOCUMENT_TEXT_BYTES = MAX_CLAUDE_USER_CONTENT_BYTES;
+
+export function truncateUtf8(text: string, maxBytes: number): string {
+  if (Buffer.byteLength(text, 'utf8') <= maxBytes) {
+    return text;
+  }
+
+  let end = 0;
+  let bytes = 0;
+  for (const character of text) {
+    const characterBytes = Buffer.byteLength(character, 'utf8');
+    if (bytes + characterBytes > maxBytes) break;
+    bytes += characterBytes;
+    end += character.length;
+  }
+  return text.slice(0, end);
+}
+
+function textBytes(text: string): number {
+  return Buffer.byteLength(text, 'utf8');
+}
+
+export function claudeContentBytes(content: Anthropic.Messages.ContentBlockParam[]): number {
+  return content.reduce((bytes, block) => {
+    if (block.type === 'text') return bytes + textBytes(block.text);
+    if (block.type === 'image' && block.source.type === 'base64') {
+      return bytes + textBytes(block.source.data);
+    }
+    return bytes;
+  }, 0);
+}
+
+function assertClaudeContentBudget(content: Anthropic.Messages.ContentBlockParam[]): void {
+  const contentBytes = claudeContentBytes(content);
+  if (contentBytes > MAX_CLAUDE_USER_CONTENT_BYTES) {
+    throw new Error('Document content exceeds the 10 KB AI prompt limit.');
+  }
+}
+
+function documentTextPrefix(filename: string): string {
+  return `Please analyze this legal document and provide a summary. The file is named "${filename}".\n\nDOCUMENT CONTENT:\n\n`;
+}
+
+export function buildBoundedDocumentTextContent(redactedText: string, filename: string): Anthropic.Messages.TextBlockParam[] {
+  const promptFilename = truncateUtf8(filename, MAX_PROMPT_FILENAME_BYTES);
+  const prefix = documentTextPrefix(promptFilename);
+  const availableTextBytes = MAX_CLAUDE_USER_CONTENT_BYTES - textBytes(prefix);
+  if (availableTextBytes < 1) {
+    throw new Error('Document filename exceeds the AI prompt limit.');
+  }
+
+  const content = [{ type: 'text' as const, text: `${prefix}${truncateUtf8(redactedText, availableTextBytes)}` }];
+  assertClaudeContentBudget(content);
+  return content;
+}
+
+export function buildBoundedVisionContent(
+  file: Buffer,
+  mimeType: 'image/png' | 'image/jpeg' | 'image/webp' | 'image/gif',
+  filename: string,
+): Anthropic.Messages.ContentBlockParam[] {
+  const promptFilename = truncateUtf8(filename, MAX_PROMPT_FILENAME_BYTES);
+  const base64Data = file.toString('base64');
+  const text = `Please analyze this document image and provide a summary. The file is named "${promptFilename}". Extract all visible text and provide the structured analysis.`;
+  const content: Anthropic.Messages.ContentBlockParam[] = [
+    { type: 'image', source: { type: 'base64', media_type: mimeType, data: base64Data } },
+    { type: 'text', text },
+  ];
+  assertClaudeContentBudget(content);
+  return content;
+}
 
 export interface DocumentSummaryRequest {
   file: Buffer;
@@ -131,7 +211,7 @@ async function extractText(file: Buffer, mimeType: string): Promise<{ text: stri
       case 'application/pdf': {
         const pdfData = await pdfParse(file);
         return {
-          text: pdfData.text.slice(0, MAX_TEXT_LENGTH),
+          text: truncateUtf8(pdfData.text, MAX_CLAUDE_DOCUMENT_TEXT_BYTES),
           pageCount: pdfData.numpages
         };
       }
@@ -139,13 +219,13 @@ async function extractText(file: Buffer, mimeType: string): Promise<{ text: stri
       case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': {
         const result = await mammoth.extractRawText({ buffer: file });
         return {
-          text: result.value.slice(0, MAX_TEXT_LENGTH)
+          text: truncateUtf8(result.value, MAX_CLAUDE_DOCUMENT_TEXT_BYTES)
         };
       }
 
       case 'text/plain': {
         return {
-          text: file.toString('utf-8').slice(0, MAX_TEXT_LENGTH)
+          text: truncateUtf8(file.toString('utf-8'), MAX_CLAUDE_DOCUMENT_TEXT_BYTES)
         };
       }
 
@@ -304,36 +384,15 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
   let messageContent: Anthropic.Messages.ContentBlockParam[];
 
   if (mimeType.startsWith('image/')) {
-    // Use Claude's vision capability for images
-    const base64Data = file.toString('base64');
     const mediaType = mimeType as 'image/png' | 'image/jpeg' | 'image/webp' | 'image/gif';
-
-    messageContent = [
-      {
-        type: 'image',
-        source: {
-          type: 'base64',
-          media_type: mediaType,
-          data: base64Data,
-        },
-      },
-      {
-        type: 'text',
-        text: `Please analyze this document image and provide a summary. The file is named "${filename}". Extract all visible text and provide the structured analysis.`,
-      },
-    ];
+    messageContent = buildBoundedVisionContent(file, mediaType, filename);
   } else {
     // Text-based document
     if (!redactedText || redactedText.trim().length < 50) {
       throw new Error('Could not extract sufficient text from the document. The file may be empty, corrupted, or contain only images.');
     }
 
-    messageContent = [
-      {
-        type: 'text',
-        text: `Please analyze this legal document and provide a summary. The file is named "${filename}".\n\nDOCUMENT CONTENT:\n\n${redactedText}`,
-      },
-    ];
+    messageContent = buildBoundedDocumentTextContent(redactedText, filename);
   }
 
   try {
@@ -444,8 +503,6 @@ export async function summarizeDocument(request: DocumentSummaryRequest): Promis
 
 const MAX_QA_HISTORY_TURNS = 8;       // max 8 back-and-forth pairs in context
 const MAX_QA_QUESTION_LENGTH = 600;   // chars per question
-const MAX_EXTRACTED_TEXT_FOR_QA = 80_000; // chars of doc text sent per request
-
 /**
  * Answer a follow-up question about a document that was already summarized.
  * The extractedText is the PII-redacted text returned from summarizeDocument.
@@ -471,19 +528,54 @@ export async function answerDocumentQuestion(params: {
     throw new Error('Question cannot be empty');
   }
 
-  const truncatedText = extractedText.slice(0, MAX_EXTRACTED_TEXT_FOR_QA);
-  if (!truncatedText || truncatedText.trim().length < 50) {
-    throw new Error('Document text is too short to answer questions about');
-  }
-
   // Keep only the most recent N turns to stay within context budget
   const limitedHistory = conversationHistory.slice(-(MAX_QA_HISTORY_TURNS * 2));
 
   const langLabel = language === 'es' ? 'Spanish' : language === 'zh' ? 'Simplified Chinese (简体中文)' : 'English';
+  const safeDocumentType = truncateUtf8(documentType, 50);
+  const messages: Anthropic.Messages.MessageParam[] = [
+    ...limitedHistory,
+    { role: 'user', content: sanitizedQuestion },
+  ];
+
+  const systemPromptWithoutDocument = `You are a legal document assistant helping a user understand their document. The document content is provided below.
+
+DOCUMENT TYPE: ${safeDocumentType}
+RESPONSE LANGUAGE: ${langLabel}
+
+DOCUMENT TEXT:
+
+Your role:
+- Answer questions about THIS specific document only, using the text above as your sole source
+- When quoting the document, use the exact words from it — do not paraphrase quotes
+- Use plain language (6th–8th grade reading level) in your answers
+- Be clear about what the document says versus general legal information
+- If the answer is not in the document, say so directly
+- NEVER provide legal advice, predict outcomes, or recommend specific courses of action
+- Always recommend consulting a licensed attorney for legal decisions
+
+Respond in JSON format only:
+{
+  "answer": "your plain-language answer here",
+  "citations": [
+    { "quote": "exact text from the document", "context": "brief explanation of why this is relevant" }
+  ]
+}
+
+If there are no relevant quotable passages, return an empty citations array.`;
+  const messageBytes = messages.reduce(
+    (bytes, item) => bytes + (typeof item.content === 'string' ? textBytes(item.content) : 0),
+    0,
+  );
+  const remainingDocumentBytes = MAX_CLAUDE_USER_CONTENT_BYTES - textBytes(systemPromptWithoutDocument) - messageBytes;
+  const truncatedText = truncateUtf8(redactDocumentPII(extractedText), Math.max(0, remainingDocumentBytes));
+  if (!truncatedText || truncatedText.trim().length < 50) {
+    throw new Error('Document text is too short to answer questions within the 10 KB AI prompt limit.');
+  }
 
   const systemPrompt = `You are a legal document assistant helping a user understand their document. The document content is provided below.
 
-DOCUMENT TYPE: ${documentType}
+DOCUMENT TYPE: ${safeDocumentType}
 RESPONSE LANGUAGE: ${langLabel}
 
 DOCUMENT TEXT:
@@ -507,11 +599,9 @@ Respond in JSON format only:
 }
 
 If there are no relevant quotable passages, return an empty citations array.`;
-
-  const messages: Anthropic.Messages.MessageParam[] = [
-    ...limitedHistory,
-    { role: 'user', content: sanitizedQuestion },
-  ];
+  if (textBytes(systemPrompt) + messageBytes > MAX_CLAUDE_USER_CONTENT_BYTES) {
+    throw new Error('Document Q&A content exceeds the 10 KB AI prompt limit.');
+  }
 
   devLog('doc-qa', `Q&A question (${sanitizedQuestion.length} chars), history turns: ${limitedHistory.length / 2}`);
 
@@ -656,16 +746,9 @@ async function prepareDocumentContent(
   const redactedText = text ? redactDocumentPII(text) : '';
 
   if (mimeType.startsWith('image/')) {
-    const base64Data = file.toString('base64');
     const mediaType = mimeType as 'image/png' | 'image/jpeg' | 'image/webp' | 'image/gif';
     return {
-      messageContent: [
-        { type: 'image', source: { type: 'base64', media_type: mediaType, data: base64Data } },
-        {
-          type: 'text',
-          text: `Please analyze this document image and provide a summary. The file is named "${filename}". Extract all visible text and provide the structured analysis.`,
-        },
-      ],
+      messageContent: buildBoundedVisionContent(file, mediaType, filename),
     };
   }
 
@@ -674,12 +757,7 @@ async function prepareDocumentContent(
   }
 
   return {
-    messageContent: [
-      {
-        type: 'text',
-        text: `Please analyze this legal document and provide a summary. The file is named "${filename}".\n\nDOCUMENT CONTENT:\n\n${redactedText}`,
-      },
-    ],
+    messageContent: buildBoundedDocumentTextContent(redactedText, filename),
     pageCount,
   };
 }

@@ -37,6 +37,7 @@ import { requireServiceBudget } from "./middleware/budget-gate";
 import { getAICostStatus } from "./services/cost-tracker";
 import { locusSearch, normalizeStateCode } from "./services/locus-lookup";
 import { polishMitigationNarrative, MITIGATION_FIELD_WHITELIST } from "./services/mitigation-polisher";
+import { aiBodySizeLimit, TEN_KB } from "./middleware/ai-body-size";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -1289,7 +1290,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Personalized Legal Guidance API (rate limited - expensive AI operations)
-  app.post("/api/legal-guidance", requireServiceBudget('claude-guidance'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
+  app.post("/api/legal-guidance",
+    // 10 KB matches the shared Claude prompt-smuggling boundary.
+    aiBodySizeLimit(TEN_KB),
+    requireServiceBudget('claude-guidance'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     try {
       const sessionId = req.body.sessionId || randomUUID();
       
@@ -1361,7 +1365,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Streaming Legal Guidance (SSE) — identical middleware, streams tokens as they arrive
-  app.post("/api/legal-guidance/stream", requireServiceBudget('claude-guidance'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
+  app.post("/api/legal-guidance/stream",
+    // 10 KB matches the non-streaming intake route because both build the same prompt.
+    aiBodySizeLimit(TEN_KB),
+    requireServiceBudget('claude-guidance'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     // Set SSE headers before writing anything
     res.setHeader('Content-Type', 'text/event-stream');
     res.setHeader('Cache-Control', 'no-cache');
@@ -2253,7 +2260,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
     formData: z.record(z.string(), z.string())
   });
 
-  app.post("/api/attorney/documents/generate", requireAttorneyPortalEnabled, requireAttorneySession, requireServiceBudget('attorney-docs'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
+  app.post("/api/attorney/documents/generate",
+    // 10 KB matches the shared Claude prompt-smuggling boundary for form data.
+    aiBodySizeLimit(TEN_KB),
+    requireAttorneyPortalEnabled, requireAttorneySession, requireServiceBudget('attorney-docs'), aiRateLimiter, aiDailyLimiter, requireCaptcha, async (req, res) => {
     try {
       const validation = generateDocumentSchema.safeParse(req.body);
 
@@ -2468,6 +2478,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
    */
   app.post(
     '/api/generate-letter',
+    // 10 KB exceeds the eight short answer fields without allowing a hidden long prompt.
+    aiBodySizeLimit(TEN_KB),
     requireServiceBudget('letter-generator'),
     aiRateLimiter,
     aiDailyLimiter,
@@ -2548,7 +2560,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       next();
     });
-  }, async (req: Request, res: Response) => {
+  },
+  // 10 KB covers multipart metadata; uploaded text is separately capped before Claude.
+  aiBodySizeLimit(TEN_KB),
+  async (req: Request, res: Response) => {
     try {
       const file = req.file;
 
@@ -2661,7 +2676,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       next();
     });
-  }, async (req: Request, res: Response) => {
+  },
+  // 10 KB covers multipart metadata; uploaded text is separately capped before Claude.
+  aiBodySizeLimit(TEN_KB),
+  async (req: Request, res: Response) => {
     try {
       const file = req.file;
 
@@ -2763,6 +2781,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         next();
       });
     },
+    // 10 KB covers multipart metadata; each uploaded document is text-capped before Claude.
+    aiBodySizeLimit(TEN_KB),
     async (req: Request, res: Response) => {
       try {
         const files = req.files as Express.Multer.File[] | undefined;
@@ -2856,6 +2876,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         next();
       });
     },
+    // 10 KB covers multipart metadata; each uploaded document is text-capped before Claude.
+    aiBodySizeLimit(TEN_KB),
     async (req: Request, res: Response) => {
       try {
         const files = req.files as Express.Multer.File[] | undefined;
@@ -2935,6 +2957,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
    */
   app.post(
     '/api/document-summary/chat',
+    // 10 KB matches the shared Claude prompt-smuggling boundary for chat context.
+    aiBodySizeLimit(TEN_KB),
     requireServiceBudget('document-summarizer'),
     aiRateLimiter,
     aiDailyLimiter,
@@ -3064,7 +3088,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Admin-only: run a demographic equity audit. Protected by requireAdminAuth middleware.
   // Runs two paired case scenarios through the AI and returns outputs + metrics for human review.
   // Rate-limited to 2 requests per hour to control AI cost.
-  app.post("/api/admin/equity-audit", requireAdminAuth, adminRateLimiter, equityAuditLimiter, async (req: Request, res: Response) => {
+  app.post("/api/admin/equity-audit",
+    // 10 KB is ample for a scenario selector and blocks unused prompt-bearing fields.
+    aiBodySizeLimit(TEN_KB),
+    requireAdminAuth, adminRateLimiter, equityAuditLimiter, async (req: Request, res: Response) => {
     const { scenarioPairId } = req.body || {};
     if (!scenarioPairId || typeof scenarioPairId !== 'string') {
       return res.status(400).json({
@@ -3150,6 +3177,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
   app.post(
     "/api/mitigation/polish",
+    // 10 KB blocks combined form-field prompt smuggling beyond the per-field caps.
+    aiBodySizeLimit(TEN_KB),
     requireServiceBudget("claude-guidance"),
     aiRateLimiter,
     aiDailyLimiter,
@@ -3157,17 +3186,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     async (req, res) => {
       try {
         const rawBody = req.body ?? {};
-
-        // Reject bodies larger than 10 KB to prevent prompt-smuggling via
-        // many fields each just under the per-field cap.
-        const MAX_BODY_BYTES = 10 * 1024; // 10 KB
-        const bodyBytes = Buffer.byteLength(JSON.stringify(rawBody), "utf8");
-        if (bodyBytes > MAX_BODY_BYTES) {
-          return res.status(413).json({
-            success: false,
-            error: `Request body too large (${bodyBytes} bytes). Maximum allowed is ${MAX_BODY_BYTES} bytes.`,
-          });
-        }
 
         // Reject requests that contain keys outside the allowed schema.
         // This closes the prompt-injection vector where unknown keys could
