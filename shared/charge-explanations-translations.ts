@@ -1,14 +1,14 @@
 /**
  * Spanish and Chinese translations for charge plain-language explanations.
  *
- * ⚠  DRAFT — These translations were machine-assisted and have NOT yet been
+ * ⚠  DRAFT: These translations were machine-assisted and have NOT yet been
  * reviewed by a fluent-speaker legal professional. Treat them as illustrative
  * only until a qualified reviewer signs off. Set `draft: false` (or remove the
  * field) once each language/entry combination has been reviewed.
  *
  * Structure: keyed by slug (matches ChargeExplanation.slug).
  * keyTerms arrays MUST align positionally with the English keyTerms array in
- * shared/charge-explanations.ts — the i-th element here corresponds to the
+ * shared/charge-explanations.ts: the i-th element here corresponds to the
  * i-th English term. Only plainMeaning and example are translated; the legal
  * term name (term.term) stays in English so it matches court documents.
  */
