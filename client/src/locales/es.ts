@@ -4771,7 +4771,7 @@ export default {
     "hero": {
       "title": "Política de Privacidad",
       "subtitle": "Estamos comprometidos a proteger su privacidad. Esta política explica cómo manejamos su información.",
-      "lastUpdated": "Última actualización: Julio 2026"
+      "lastUpdated": "Última actualización: Agosto 2026"
     },
     "notice": {
       "title": "Plataforma que prioriza la privacidad:",
@@ -4814,12 +4814,12 @@ export default {
       },
       "serverRestart": {
         "title": "Herramientas que no almacenan nada",
-        "description": "Varias herramientas no realizan ninguna llamada al servidor en absoluto: el Evaluador de Elegibilidad para Eliminación de Antecedentes, el Evaluador de Consecuencias Colaterales, la Lista de Verificación de Ingreso del Defensor Público y el Constructor de Memorandos de Mitigación. Las cuatro funcionan completamente en su navegador. Las dos herramientas para defensores generan archivos .docx descargables localmente en su dispositivo — no se transmiten datos a nuestros servidores. Todas las demás páginas estáticas del sitio (guías de derechos, recursos de apoyo, guías de fechas de tribunal, guías de inmigración) son igualmente pasivas."
+        "description": "Varias herramientas no realizan ninguna llamada al servidor en absoluto: el Evaluador de Elegibilidad para Eliminación de Antecedentes, el Evaluador de Consecuencias Colaterales y la Lista de Verificación de Ingreso del Defensor Público. Las tres funcionan completamente en su navegador; las herramientas para defensores generan archivos .docx descargables localmente en su dispositivo, y no se transmiten datos a nuestros servidores. El formulario principal del Constructor de Memorandos de Mitigación y su exportación a .docx funcionan de la misma manera, pero también ofrece un paso opcional de 'Pulido con IA' que sí envía los campos que usted ingresó a nuestro servidor para un procesamiento de IA único (consulte Fuentes de Datos Externas más abajo). Todas las demás páginas estáticas del sitio (guías de derechos, recursos de apoyo, guías de fechas de tribunal, guías de inmigración) son igualmente pasivas."
       }
     },
     "noDataTools": {
       "title": "Herramientas Que No Recopilan Datos",
-      "description": "El Evaluador de Elegibilidad para Eliminación de Antecedentes, el Evaluador de Consecuencias Colaterales, la Lista de Verificación de Ingreso del Defensor Público y el Constructor de Memorandos de Mitigación no realizan ninguna llamada al servidor en ningún momento. Los evaluadores funcionan completamente en su navegador como árboles de decisión. Las herramientas para defensores generan archivos .docx descargables localmente en su dispositivo. No se envía, transmite ni almacena ninguna información electrónicamente al usar ninguna de estas herramientas."
+      "description": "El Evaluador de Elegibilidad para Eliminación de Antecedentes, el Evaluador de Consecuencias Colaterales y la Lista de Verificación de Ingreso del Defensor Público no realizan ninguna llamada al servidor en ningún momento. Los evaluadores funcionan completamente en su navegador como árboles de decisión; la lista de verificación de ingreso genera un archivo .docx descargable localmente en su dispositivo. No se envía, transmite ni almacena ninguna información electrónicamente al usar ninguna de estas herramientas. El formulario principal del Constructor de Memorandos de Mitigación funciona de la misma manera, pero su paso opcional de 'Pulido con IA' sí envía los campos que usted ingresó a nuestro servidor; consulte 'Cómo Manejamos los Datos de la Hoja de Ruta del Caso y las Herramientas de IA' más arriba."
     },
     "technical": {
       "title": "Detalles Técnicos",
@@ -4835,7 +4835,7 @@ export default {
         "title": "Fuentes de Datos Externas",
         "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - usado en la Hoja de Ruta del Caso, el Resumidor de Documentos y el Chat de IA. La información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad y luego los elimina automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - usado en la Hoja de Ruta del Caso, la herramienta de orientación, el Resumidor de Documentos, el Generador de Cartas, las herramientas de Generación de Documentos para Abogados, y el paso opcional de 'Pulido con IA' en el Constructor de Memorandos de Mitigación. La información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad y luego los elimina automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
           "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
           "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
           "recap": "Archivo RECAP - para documentos judiciales federales",
@@ -7755,7 +7755,7 @@ export default {
     "hero": {
       "title": "Aviso Legal y Exenciones de Responsabilidad",
       "subtitle": "Información importante sobre el uso de OpenDefender",
-      "lastUpdated": "Última actualización: julio de 2026"
+      "lastUpdated": "Última actualización: agosto de 2026"
     },
     "notLegalAdvice": {
       "title": "No es Asesoramiento Legal",
@@ -7763,7 +7763,7 @@ export default {
     },
     "aiDisclosure": {
       "title": "Divulgación sobre Tecnología de IA",
-      "p1": "Tres funciones de OpenDefender utilizan IA para generar contenido: la Hoja de Ruta del Caso y la herramienta de orientación, las herramientas de Generación de Documentos para Abogados en el Portal de Abogados, y el Resumidor de Documentos. Las tres utilizan Claude Sonnet 4.6 de Anthropic.",
+      "p1": "Cinco funciones de OpenDefender utilizan IA para generar contenido: la Hoja de Ruta del Caso y la herramienta de orientación, las herramientas de Generación de Documentos para Abogados en el Portal de Abogados, el Resumidor de Documentos, el Generador de Cartas, y el paso opcional de 'Pulido con IA' en el Constructor de Memorandos de Mitigación. Las cinco utilizan Claude Sonnet 4.6 de Anthropic.",
       "p2": "La Hoja de Ruta del Caso también incluye un motor de respaldo basado en reglas que se activa automáticamente cuando el servicio de IA no está disponible. En modo de respaldo, la orientación se genera a partir de reglas legales estructuradas, no de un modelo de IA activo — en ese caso no se envían datos a Anthropic. La Generación de Documentos para Abogados y el Resumidor de Documentos no tienen este respaldo y mostrarán un error si el servicio de IA no está disponible.",
       "p3": "Todo el demás contenido de este sitio — información sobre derechos, el verificador de elegibilidad para eliminación de antecedentes, la guía de fechas de tribunal, guías de inmigración, recursos de apoyo y todas las demás páginas estáticas — no utiliza IA. Ha sido investigado y redactado manualmente.",
       "p4": "La Hoja de Ruta del Caso también incluye un paso de clasificación de emergencias civiles que hace preguntas categóricas sobre situaciones activas (vivienda, empleo, dependientes, inmigración). Estas respuestas siguen el mismo proceso de solo sesión que todas las demás entradas de la Hoja de Ruta: se mantienen en la memoria del servidor, se eliminan automáticamente en 24 horas y nunca se escriben en una base de datos.",
@@ -7776,7 +7776,7 @@ export default {
       "p1": "El Verificador de Elegibilidad para la Eliminación de Antecedentes es un árbol de decisiones — no usa IA ni realiza llamadas al servidor. Se ejecuta completamente en su navegador. No se transmiten ni almacenan datos.",
       "p2": "El Verificador de Consecuencias Colaterales es un cuestionario de sí/no que identifica riesgos en áreas de vida (vivienda, empleo, inmigración, custodia y más) según sus respuestas. No usa IA ni realiza llamadas al servidor. Todo se ejecuta en su navegador — ningún dato sale de su dispositivo.",
       "p3": "La Lista de Verificación de Admisión del Defensor Público es un formulario de admisión electrónico para abogados y defensores. Se ejecuta completamente en su navegador, no realiza llamadas al servidor y genera un archivo .docx descargable localmente en su dispositivo. No se transmiten ni almacenan datos en nuestros servidores.",
-      "p4": "El Constructor de Memorandos de Mitigación ayuda a abogados y defensores a estructurar la información del cliente en un memorando de sentencia formateado. No usa IA ni realiza llamadas al servidor. El memorando se genera como un archivo .docx completamente en su navegador — no se transmiten ni almacenan datos en nuestros servidores.",
+      "p4": "El Constructor de Memorandos de Mitigación ayuda a abogados y defensores a estructurar la información del cliente en un memorando de sentencia formateado. La herramienta principal funciona completamente en su navegador. El memorando se genera como un archivo .docx de forma local, y no se transmiten ni almacenan datos en nuestros servidores. Una función aparte y opcional, 'Pulido con IA', puede convertir sus entradas estructuradas en texto narrativo. Si la utiliza, los valores de los campos que ingresó se envían a nuestro servidor y se reenvían a Claude para un procesamiento único. Nada se registra, se almacena en caché ni se guarda después.",
       "p5": "La Guía de Identificación de Errores en Hojas de Antecedentes y la información sobre derechos de la FCRA son únicamente informativas. Describen procesos y derechos generales. Verifique todos los procedimientos de disputa y plazos directamente con la agencia correspondiente — el FBI, el repositorio penal de su estado, o la empresa de verificación de antecedentes."
     },
     "publicApi": {
