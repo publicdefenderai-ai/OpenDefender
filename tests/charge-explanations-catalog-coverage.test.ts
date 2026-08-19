@@ -18,4 +18,25 @@ describe('charge explanation catalog coverage', () => {
       ].join('\n'),
     ).toEqual([]);
   });
+
+  it.each([
+    ['Aggravated Criminal Sexual Assault', 'sexual-assault'],
+    ['Armed Career Criminal Act (Federal Three-Strikes)', 'recidivist-enhancement'],
+    ['Domestic Assault in the Third Degree', 'domestic-violence'],
+    ['Domestic Violence - Simple Assault', 'domestic-violence'],
+    ['Driving Under Suspension', 'driving-while-suspended'],
+    ['Providing False Information to Police', 'failure-to-identify'],
+    ['Juvenile Firearm Possession', 'juvenile-proceedings'],
+    ['Shoplifting - Retail Theft', 'shoplifting'],
+    ['Theft of Services (Fare Evasion)', 'theft'],
+    ['Simple Possession of Marijuana', 'marijuana-possession'],
+    ['Sexual Assault in the First Degree', 'sexual-assault'],
+    ['Sexual Assault in the Second Degree', 'sexual-assault'],
+    ['Sexual Assault in the Third Degree', 'sexual-assault'],
+    ['Unlawful Possession of Cannabis', 'marijuana-possession'],
+    ['Statutory Rape', 'sex-offenses-against-minors'],
+    ['Use of Firearm During Crime of Violence or Drug Trafficking (Federal)', 'weapons-charges'],
+  ])('resolves %s to the intended %s explanation', (chargeName, expectedSlug) => {
+    expect(getChargeExplanation(chargeName)?.slug).toBe(expectedSlug);
+  });
 });
