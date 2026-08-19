@@ -98,7 +98,7 @@ export default function DataSources() {
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
             Where our legal content comes from, how confident we are in it, and what its limitations are.
           </p>
-          <p className="text-sm text-white/60 mt-2">Last reviewed: July 2026</p>
+          <p className="text-sm text-white/60 mt-2">Last reviewed: August 2026</p>
         </div>
       </section>
 
