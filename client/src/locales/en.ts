@@ -4769,7 +4769,7 @@ export default {
     "hero": {
       "title": "Privacy Policy",
       "subtitle": "We are committed to protecting your privacy. This policy explains how we handle your information.",
-      "lastUpdated": "Last Updated: July 2026"
+      "lastUpdated": "Last Updated: August 2026"
     },
     "notice": {
       "title": "Privacy-First Platform:",
@@ -4812,12 +4812,12 @@ export default {
       },
       "serverRestart": {
         "title": "Tools that store nothing at all",
-        "description": "Several tools make no server calls at all: the Record Clearance Eligibility Screener, the Collateral Consequences Screener, the Public Defender Intake Checklist, and the Mitigation Memo Builder. All four run entirely in your browser. The two advocate tools generate downloadable .docx files locally on your device — no data is transmitted to our servers. All other static pages on the site (rights guides, support resources, court date guides, immigration guides) are similarly passive."
+        "description": "Several tools make no server calls at all: the Record Clearance Eligibility Screener, the Collateral Consequences Screener, and the Public Defender Intake Checklist. All three run entirely in your browser; the advocate tools generate downloadable .docx files locally on your device, and no data is transmitted to our servers. The Mitigation Memo Builder's core form and .docx export work the same way, but it also offers an optional 'AI Polish' step that does send your entered fields to our server for one-time AI processing (see External Data Sources below). All other static pages on the site (rights guides, support resources, court date guides, immigration guides) are similarly passive."
       }
     },
     "noDataTools": {
       "title": "Tools That Collect No Data",
-      "description": "The Record Clearance Eligibility Screener, the Collateral Consequences Screener, the Public Defender Intake Checklist, and the Mitigation Memo Builder make no server calls at any point. The screeners run entirely in your browser as decision trees. The advocate tools generate downloadable .docx files locally on your device. No information is submitted, transmitted, or stored electronically when using any of these tools."
+      "description": "The Record Clearance Eligibility Screener, the Collateral Consequences Screener, and the Public Defender Intake Checklist make no server calls at any point. The screeners run entirely in your browser as decision trees; the intake checklist generates a downloadable .docx file locally on your device. No information is submitted, transmitted, or stored electronically when using any of these tools. The Mitigation Memo Builder's core form works the same way, but its optional 'AI Polish' step does send your entered fields to our server; see 'How We Handle Case Roadmap and AI Tool Data' above."
     },
     "technical": {
       "title": "Technical Details",
@@ -4833,7 +4833,7 @@ export default {
         "title": "External Data Sources",
         "description": "Our platform accesses public legal databases and services to provide you with information:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap, guided case support tool, and Document Summarizer. Personal information is removed before processing. Anthropic may retain inputs for up to 30 days for operational and safety purposes and then automatically deletes them. This data is never used to train AI models.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap, guided case support tool, Document Summarizer, Letter Generator, Attorney Document Generation tools, and the optional 'AI Polish' step in the Mitigation Memo Builder. Personal information is removed before processing. Anthropic may retain inputs for up to 30 days for operational and safety purposes and then automatically deletes them. This data is never used to train AI models.",
           "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
           "courtListener": "CourtListener API - for case law and court data",
           "recap": "RECAP Archive - for federal court documents",
@@ -7749,7 +7749,7 @@ export default {
     "hero": {
       "title": "Legal Notice & Disclaimers",
       "subtitle": "Important information about using OpenDefender",
-      "lastUpdated": "Last updated: July 2026"
+      "lastUpdated": "Last updated: August 2026"
     },
     "notLegalAdvice": {
       "title": "Not Legal Advice",
@@ -7757,7 +7757,7 @@ export default {
     },
     "aiDisclosure": {
       "title": "AI Technology Disclosure",
-      "p1": "Three features on OpenDefender use AI to generate content: the Case Roadmap and guided case support tool, the Attorney Document Generation tools in the Attorney Portal, and the Document Summarizer. All three use Anthropic's Claude Sonnet 4.6.",
+      "p1": "Five features on OpenDefender use AI to generate content: the Case Roadmap and guided case support tool, the Attorney Document Generation tools in the Attorney Portal, the Document Summarizer, the Letter Generator, and the optional 'AI Polish' step in the Mitigation Memo Builder. All five use Anthropic's Claude Sonnet 4.6.",
       "p2": "The Case Roadmap also includes a rule-based fallback engine that runs automatically when the AI service is unavailable. In fallback mode, guidance is generated from structured legal rules rather than a live AI model — no data is sent to Anthropic in that case. Attorney Document Generation and the Document Summarizer do not have this fallback and will display an error if the AI service is unavailable.",
       "p3": "All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.",
       "p4": "The Case Roadmap also includes a civil emergency triage step that asks categorical questions about active situations (housing, employment, dependents, immigration). These answers follow the same session-only path as all other Case Roadmap inputs: held in server memory, auto-deleted in 24 hours, never written to a database.",
@@ -7770,7 +7770,7 @@ export default {
       "p1": "The Record Clearance Eligibility Screener is a decision tree — it uses no AI and makes no server calls. It runs entirely in your browser. No data is transmitted or stored.",
       "p2": "The Collateral Consequences Screener is a yes/no questionnaire that flags life-area risks (housing, employment, immigration, custody, and more) based on your answers. It uses no AI and makes no server calls. Everything runs in your browser — no data leaves your device.",
       "p3": "The Public Defender Intake Checklist is an electronic intake form for attorneys and advocates. It runs entirely in your browser, makes no server calls, and generates a downloadable .docx file locally on your device. No data is transmitted or stored on our servers.",
-      "p4": "The Mitigation Memo Builder helps attorneys and advocates structure client information into a formatted sentencing memo. It uses no AI and makes no server calls. The memo is generated as a .docx file entirely in your browser — no data is transmitted or stored on our servers.",
+      "p4": "The Mitigation Memo Builder helps attorneys and advocates structure client information into a formatted sentencing memo. The core builder runs entirely in your browser. The memo is generated as a .docx file locally, and no data is transmitted or stored on our servers. A separate, optional 'AI Polish' feature can convert your structured entries into narrative prose. If you use it, the field values you entered are sent to our server and forwarded to Claude for one-time processing. Nothing is logged, cached, or stored afterward.",
       "p5": "The Rap Sheet Error Identification Guide and FCRA rights information are informational only. They describe general processes and rights. Verify all dispute procedures and deadlines directly with the relevant agency — the FBI, your state criminal repository, or the background check company."
     },
     "publicApi": {
