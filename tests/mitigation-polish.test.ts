@@ -137,6 +137,35 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect([422, 503]).toContain(res.status);
   });
 
+  it.skipIf(() => !serverAvailable)('rejects a body larger than 10 KB with 413', async () => {
+    // Build a payload that is well over 10 KB but uses only whitelisted fields.
+    // 15 KB spread across valid fields exercises the combined-size limit
+    // independently of the per-field 2 000-character cap.
+    const bigValue = 'x'.repeat(1999); // just under per-field cap
+    const body: Record<string, string> = {};
+    // Fill enough fields to exceed 10 KB total (1999 chars × 8 fields ≈ 16 KB raw)
+    const fieldsToFill = [
+      'yearsInCommunity', 'communityInvolvement', 'housingStatus',
+      'employmentStatus', 'familyContext', 'additionalContext',
+      'references', 'treatmentDocumentation',
+    ];
+    for (const f of fieldsToFill) {
+      body[f] = bigValue;
+    }
+    const serialized = JSON.stringify(body);
+    expect(serialized.length).toBeGreaterThan(10 * 1024); // confirm the fixture is large enough
+
+    const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: serialized,
+    });
+    expect(res.status).toBe(413);
+    const data = await res.json();
+    expect(data.success).toBe(false);
+    expect(data.error).toMatch(/too large/i);
+  });
+
   it.skipIf(() => !serverAvailable)('accepts a valid whitelisted payload without rejecting it at schema layer', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
       method: 'POST',

@@ -3158,6 +3158,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         const rawBody = req.body ?? {};
 
+        // Reject bodies larger than 10 KB to prevent prompt-smuggling via
+        // many fields each just under the per-field cap.
+        const MAX_BODY_BYTES = 10 * 1024; // 10 KB
+        const bodyBytes = Buffer.byteLength(JSON.stringify(rawBody), "utf8");
+        if (bodyBytes > MAX_BODY_BYTES) {
+          return res.status(413).json({
+            success: false,
+            error: `Request body too large (${bodyBytes} bytes). Maximum allowed is ${MAX_BODY_BYTES} bytes.`,
+          });
+        }
+
         // Reject requests that contain keys outside the allowed schema.
         // This closes the prompt-injection vector where unknown keys could
         // carry extra narrative content into the Claude call. captchaToken is
