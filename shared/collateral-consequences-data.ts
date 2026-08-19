@@ -120,6 +120,26 @@ export interface HousingRule {
   notes?: string;
 }
 
+// ── Screener deadline callouts ────────────────────────────────────────────────
+
+/**
+ * Structural data for the state-specific deadline callouts on the collateral
+ * consequences screener. The localized headline, detail, and source text
+ * remain in the locale files so the callouts are translated with the rest of
+ * the page.
+ */
+export interface StateDeadlineCategory {
+  /** Whether this category has a source string to render. */
+  hasSource: boolean;
+}
+
+export interface StateDeadlineData {
+  /** i18n key segment used under stateDeadlines.entries. */
+  stateCode: string;
+  housing?: StateDeadlineCategory;
+  license?: StateDeadlineCategory;
+}
+
 // ── Top-level Rule ─────────────────────────────────────────────────────────────
 
 export interface CollateralConsequenceRule {
@@ -132,6 +152,7 @@ export interface CollateralConsequenceRule {
   employment: EmploymentRule;
   benefits: BenefitsRule;
   housing: HousingRule;
+  deadlineData: StateDeadlineData;
 }
 
 // ── Data ───────────────────────────────────────────────────────────────────────
@@ -139,7 +160,7 @@ export interface CollateralConsequenceRule {
 // 'low' are retained as starting points for quarterly review and are NOT
 // injected into AI prompts or surfaced to users as authoritative facts.
 
-export const COLLATERAL_CONSEQUENCE_RULES: Record<string, CollateralConsequenceRule> = {
+const COLLATERAL_CONSEQUENCE_RULES_BASE: Record<string, Omit<CollateralConsequenceRule, 'deadlineData'>> = {
 
   // ── Alabama ────────────────────────────────────────────────────────────────
   AL: {
@@ -1633,6 +1654,48 @@ export const COLLATERAL_CONSEQUENCE_RULES: Record<string, CollateralConsequenceR
   },
 
 };
+
+/**
+ * Every state currently has both screener categories. Keeping this structural
+ * metadata on the shared jurisdiction records means adding or removing a
+ * jurisdiction updates the screener's data source and selector together.
+ */
+export const COLLATERAL_CONSEQUENCE_RULES: Record<string, CollateralConsequenceRule> =
+  Object.fromEntries(
+    Object.entries(COLLATERAL_CONSEQUENCE_RULES_BASE).map(([stateCode, rule]) => [
+      stateCode,
+      {
+        ...rule,
+        deadlineData: {
+          stateCode,
+          housing: { hasSource: true },
+          license: { hasSource: true },
+        },
+      },
+    ]),
+  ) as Record<string, CollateralConsequenceRule>;
+
+/** Federal baseline shown alongside the state jurisdiction records. */
+export const FEDERAL_STATE_DEADLINE_DATA: StateDeadlineData = {
+  stateCode: 'federal',
+  housing: { hasSource: true },
+  license: { hasSource: false },
+};
+
+/** Ordered list of jurisdictions shown in the screener deadline selector. */
+export const COLLATERAL_CONSEQUENCE_DEADLINE_OPTIONS: string[] = [
+  FEDERAL_STATE_DEADLINE_DATA.stateCode,
+  ...Object.keys(COLLATERAL_CONSEQUENCE_RULES),
+];
+
+/** Returns shared screener deadline metadata for a state or the federal baseline. */
+export function getCollateralConsequenceDeadlineData(stateCode: string): StateDeadlineData | null {
+  const key = stateCode.trim().toUpperCase();
+  if (stateCode.trim().toLowerCase() === FEDERAL_STATE_DEADLINE_DATA.stateCode) {
+    return FEDERAL_STATE_DEADLINE_DATA;
+  }
+  return COLLATERAL_CONSEQUENCE_RULES[key]?.deadlineData ?? null;
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Driver's License Suspension Rules

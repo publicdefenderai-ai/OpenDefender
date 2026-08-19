@@ -18,9 +18,13 @@ import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { describe, it, expect } from 'vitest';
 import {
+  COLLATERAL_CONSEQUENCE_DEADLINE_OPTIONS,
+  COLLATERAL_CONSEQUENCE_RULES,
   DRIVERS_LICENSE_RULES,
+  FEDERAL_STATE_DEADLINE_DATA,
   IMMIGRATION_CONSEQUENCE_RULES,
   SEX_OFFENDER_RULES,
+  getCollateralConsequenceDeadlineData,
   type DriversLicenseRule,
   type ImmigrationConsequenceRule,
   type SexOffenderRule,
@@ -61,6 +65,33 @@ function computeChargeRiskIds(
   }
   return result;
 }
+
+// ── Shared screener deadline data ─────────────────────────────────────────────
+
+describe('shared screener deadline data', () => {
+  it('covers the federal baseline and every shared jurisdiction', () => {
+    expect(COLLATERAL_CONSEQUENCE_DEADLINE_OPTIONS).toEqual([
+      'federal',
+      ...US_JURISDICTIONS,
+    ]);
+
+    for (const code of US_JURISDICTIONS) {
+      const deadlineData = COLLATERAL_CONSEQUENCE_RULES[code].deadlineData;
+      expect(deadlineData.stateCode, `${code}.deadlineData.stateCode`).toBe(code);
+      expect(deadlineData.housing?.hasSource, `${code}.housing source`).toBe(true);
+      expect(deadlineData.license?.hasSource, `${code}.license source`).toBe(true);
+    }
+  });
+
+  it('keeps the federal source behavior and resolves selector values safely', () => {
+    expect(FEDERAL_STATE_DEADLINE_DATA.license?.hasSource).toBe(false);
+    expect(getCollateralConsequenceDeadlineData('federal')).toBe(FEDERAL_STATE_DEADLINE_DATA);
+    expect(getCollateralConsequenceDeadlineData(' ca ')).toEqual(
+      COLLATERAL_CONSEQUENCE_RULES.CA.deadlineData,
+    );
+    expect(getCollateralConsequenceDeadlineData('unknown')).toBeNull();
+  });
+});
 
 // ── Driver's License Rules ────────────────────────────────────────────────────
 

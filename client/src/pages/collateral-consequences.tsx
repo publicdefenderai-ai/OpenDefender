@@ -15,6 +15,9 @@ import { buildPlainText } from "@/lib/build-plain-text";
 import {
   DRIVERS_LICENSE_RULES,
   getCollateralConsequenceRule,
+  getCollateralConsequenceDeadlineData,
+  COLLATERAL_CONSEQUENCE_DEADLINE_OPTIONS,
+  type StateDeadlineCategory,
 } from "@/lib/collateral-consequences-data";
 import { useJurisdiction } from "@/hooks/use-jurisdiction";
 
@@ -134,104 +137,6 @@ const STATE_NAME_TO_ABBR: Record<string, string> = {
   "vermont": "VT", "virginia": "VA", "washington": "WA", "west virginia": "WV",
   "wisconsin": "WI", "wyoming": "WY", "district of columbia": "DC",
 };
-
-/* ------------------------------------------------------------------ */
-/* State-specific deadline data for risk card callouts                 */
-/* ------------------------------------------------------------------ */
-
-interface StateDeadlineCategory {
-  /** Whether this category has a `source` string to render (federal.license has none). */
-  hasSource: boolean;
-}
-
-interface StateDeadlines {
-  /** i18n key segment — text (stateName/headline/detail/source) lives in
-   *  collateralConsequences.stateDeadlines.entries.<stateCode>.* in each locale file. */
-  stateCode: string;
-  housing?: StateDeadlineCategory;
-  license?: StateDeadlineCategory;
-}
-
-/**
- * State-specific deadline and procedural rules surfaced as callout blocks
- * inside the housing and professional-license risk cards.
- *
- * This is structural data only (which states/categories exist, and whether a
- * source citation is present) — the actual text lives in the locale files
- * under collateralConsequences.stateDeadlines.entries so ES/ZH users get
- * translated legal text, not just translated surrounding UI chrome. Statute/
- * rule citations themselves are kept identical across locales (legal
- * citations aren't translated).
- *
- * Coverage: Federal baseline + CA, NY, TX, FL.
- * Sources: HUD 24 C.F.R. § 966.4; state statutes as cited per entry.
- * Quarterly review recommended — rules change year to year.
- */
-const SCREENER_STATE_DEADLINES: Record<string, StateDeadlines> = {
-  federal: { stateCode: "federal", housing: { hasSource: true }, license: { hasSource: false } },
-  AL: { stateCode: "AL", housing: { hasSource: true }, license: { hasSource: true } },
-  AK: { stateCode: "AK", housing: { hasSource: true }, license: { hasSource: true } },
-  AZ: { stateCode: "AZ", housing: { hasSource: true }, license: { hasSource: true } },
-  AR: { stateCode: "AR", housing: { hasSource: true }, license: { hasSource: true } },
-  CA: { stateCode: "CA", housing: { hasSource: true }, license: { hasSource: true } },
-  CO: { stateCode: "CO", housing: { hasSource: true }, license: { hasSource: true } },
-  CT: { stateCode: "CT", housing: { hasSource: true }, license: { hasSource: true } },
-  DE: { stateCode: "DE", housing: { hasSource: true }, license: { hasSource: true } },
-  DC: { stateCode: "DC", housing: { hasSource: true }, license: { hasSource: true } },
-  FL: { stateCode: "FL", housing: { hasSource: true }, license: { hasSource: true } },
-  GA: { stateCode: "GA", housing: { hasSource: true }, license: { hasSource: true } },
-  HI: { stateCode: "HI", housing: { hasSource: true }, license: { hasSource: true } },
-  ID: { stateCode: "ID", housing: { hasSource: true }, license: { hasSource: true } },
-  IL: { stateCode: "IL", housing: { hasSource: true }, license: { hasSource: true } },
-  IN: { stateCode: "IN", housing: { hasSource: true }, license: { hasSource: true } },
-  IA: { stateCode: "IA", housing: { hasSource: true }, license: { hasSource: true } },
-  KS: { stateCode: "KS", housing: { hasSource: true }, license: { hasSource: true } },
-  KY: { stateCode: "KY", housing: { hasSource: true }, license: { hasSource: true } },
-  LA: { stateCode: "LA", housing: { hasSource: true }, license: { hasSource: true } },
-  ME: { stateCode: "ME", housing: { hasSource: true }, license: { hasSource: true } },
-  MD: { stateCode: "MD", housing: { hasSource: true }, license: { hasSource: true } },
-  MA: { stateCode: "MA", housing: { hasSource: true }, license: { hasSource: true } },
-  MI: { stateCode: "MI", housing: { hasSource: true }, license: { hasSource: true } },
-  MN: { stateCode: "MN", housing: { hasSource: true }, license: { hasSource: true } },
-  MS: { stateCode: "MS", housing: { hasSource: true }, license: { hasSource: true } },
-  MO: { stateCode: "MO", housing: { hasSource: true }, license: { hasSource: true } },
-  MT: { stateCode: "MT", housing: { hasSource: true }, license: { hasSource: true } },
-  NE: { stateCode: "NE", housing: { hasSource: true }, license: { hasSource: true } },
-  NV: { stateCode: "NV", housing: { hasSource: true }, license: { hasSource: true } },
-  NH: { stateCode: "NH", housing: { hasSource: true }, license: { hasSource: true } },
-  NJ: { stateCode: "NJ", housing: { hasSource: true }, license: { hasSource: true } },
-  NM: { stateCode: "NM", housing: { hasSource: true }, license: { hasSource: true } },
-  NY: { stateCode: "NY", housing: { hasSource: true }, license: { hasSource: true } },
-  NC: { stateCode: "NC", housing: { hasSource: true }, license: { hasSource: true } },
-  ND: { stateCode: "ND", housing: { hasSource: true }, license: { hasSource: true } },
-  OH: { stateCode: "OH", housing: { hasSource: true }, license: { hasSource: true } },
-  OK: { stateCode: "OK", housing: { hasSource: true }, license: { hasSource: true } },
-  OR: { stateCode: "OR", housing: { hasSource: true }, license: { hasSource: true } },
-  PA: { stateCode: "PA", housing: { hasSource: true }, license: { hasSource: true } },
-  RI: { stateCode: "RI", housing: { hasSource: true }, license: { hasSource: true } },
-  SC: { stateCode: "SC", housing: { hasSource: true }, license: { hasSource: true } },
-  SD: { stateCode: "SD", housing: { hasSource: true }, license: { hasSource: true } },
-  TN: { stateCode: "TN", housing: { hasSource: true }, license: { hasSource: true } },
-  TX: { stateCode: "TX", housing: { hasSource: true }, license: { hasSource: true } },
-  UT: { stateCode: "UT", housing: { hasSource: true }, license: { hasSource: true } },
-  VT: { stateCode: "VT", housing: { hasSource: true }, license: { hasSource: true } },
-  VA: { stateCode: "VA", housing: { hasSource: true }, license: { hasSource: true } },
-  WA: { stateCode: "WA", housing: { hasSource: true }, license: { hasSource: true } },
-  WV: { stateCode: "WV", housing: { hasSource: true }, license: { hasSource: true } },
-  WI: { stateCode: "WI", housing: { hasSource: true }, license: { hasSource: true } },
-  WY: { stateCode: "WY", housing: { hasSource: true }, license: { hasSource: true } },
-};
-
-/** The ordered list of state codes shown in the selector dropdown; labels come from i18n. */
-const STATE_DEADLINE_OPTIONS: string[] = [
-  "federal",
-  "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC",
-  "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY",
-  "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT",
-  "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH",
-  "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT",
-  "VT", "VA", "WA", "WV", "WI", "WY",
-];
 
 /* ------------------------------------------------------------------ */
 /* Charge-type pre-step types and constants                            */
@@ -457,13 +362,15 @@ export default function CollateralConsequences() {
     if (screenerState !== "") return; // already set (either by user or previous auto-fill)
     if (!jurisdiction) return;
     const abbr = STATE_NAME_TO_ABBR[jurisdiction.toLowerCase()];
-    if (abbr && SCREENER_STATE_DEADLINES[abbr]) {
+    if (abbr && getCollateralConsequenceDeadlineData(abbr)) {
       setScreenerState(abbr);
     }
   }, [isResults]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /** Returns state deadline data for the currently selected screener state, or null. */
-  const selectedStateDeadlines = screenerState ? SCREENER_STATE_DEADLINES[screenerState] ?? null : null;
+  const selectedStateDeadlines = screenerState
+    ? getCollateralConsequenceDeadlineData(screenerState)
+    : null;
 
   const chargeRisks: ChargeRiskMeta[] = CHARGE_TYPE_RISKS.filter(r => {
     if (!chargeTypeSelected) return false;
@@ -744,7 +651,7 @@ export default function CollateralConsequences() {
                       className="flex-1 min-w-[180px] text-xs rounded-lg border border-border bg-background text-foreground px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-rose-500"
                     >
                       <option value="">{t("collateralConsequences.stateDeadlines.selectorPlaceholder")}</option>
-                      {STATE_DEADLINE_OPTIONS.map(code => (
+                      {COLLATERAL_CONSEQUENCE_DEADLINE_OPTIONS.map(code => (
                         <option key={code} value={code}>
                           {t(`collateralConsequences.stateDeadlines.entries.${code}.stateName`)}
                         </option>
