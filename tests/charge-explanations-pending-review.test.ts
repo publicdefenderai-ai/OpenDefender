@@ -1,24 +1,24 @@
 /**
- * Task #444 — Data-layer tests: verify that every new charge-explanation entry
+ * Task #444: Data-layer tests: verify that every new charge-explanation entry
  * carries an explicit pendingAttorneyReview: true flag, and that pre-existing
  * entries do not.
  *
- * No jsPDF mocks here — we call the real getChargeExplanation against the live
+ * No jsPDF mocks here: we call the real getChargeExplanation against the live
  * shared/charge-explanations.ts so the field values are authoritative.
  *
  * Tests:
- *  A1-A3  — new entries (sourced to medium confidence in task #448) have pendingAttorneyReview: true
- *  A4-A5  — new sourced (high-confidence) entries also have the flag
+ *  A1-A3: new entries (sourced to medium confidence in task #448) have pendingAttorneyReview: true
+ *  A4-A5: new sourced (high-confidence) entries also have the flag
  *            (sourced ≠ reviewed; dataConfidence reflects source quality only)
- *  A6-A7  — pre-existing entries do NOT have pendingAttorneyReview
- *  A8     — the CA stop-and-identify error is fixed (California is NOT named as
+ *  A6-A7: pre-existing entries do NOT have pendingAttorneyReview
+ *  A8: the CA stop-and-identify error is fixed (California is NOT named as
  *            a stop-and-identify state in the failure-to-identify entry)
  */
 
 import { describe, it, expect } from 'vitest';
 import { getChargeExplanation } from '../shared/charge-explanations';
 
-describe('A — charge-explanations pendingAttorneyReview field', () => {
+describe('A: charge-explanations pendingAttorneyReview field', () => {
 
   // ── new low-confidence entries ─────────────────────────────────────────────
 
@@ -44,7 +44,7 @@ describe('A — charge-explanations pendingAttorneyReview field', () => {
     expect(expl!.dataConfidence).toBe('medium');
   });
 
-  // ── new sourced (high-confidence) entries — pending review despite sourcing ─
+  // ── new sourced (high-confidence) entries: pending review despite sourcing ──
 
   it('A4: forgery (sourced, high confidence) still has pendingAttorneyReview: true', () => {
     const expl = getChargeExplanation('forgery');
@@ -61,7 +61,7 @@ describe('A — charge-explanations pendingAttorneyReview field', () => {
     expect(expl!.dataConfidence).toBe('high');
   });
 
-  // ── pre-existing entries — must NOT carry the flag ─────────────────────────
+  // ── pre-existing entries: must NOT carry the flag ──────────────────────────
 
   it('A6: pre-existing robbery entry does NOT have pendingAttorneyReview', () => {
     const expl = getChargeExplanation('robbery');

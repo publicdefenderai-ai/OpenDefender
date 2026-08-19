@@ -3,7 +3,7 @@
 **Status:** PENDING REVIEW  
 **Date generated:** 2026-08  
 **File:** `shared/charge-explanations.ts`  
-**Entries requiring review:** 16 new entries (all now AI-drafted with statutory sources; the 13 originally unsourced entries were sourced against the 10 anchor jurisdictions in the 2026-08 sourcing pass and raised from `dataConfidence: "low"` to `"medium"` — attorney review is still pending for all 16)
+**Entries requiring review:** 16 existing entries, newly flagged for review (all now AI-drafted with statutory sources; the 13 originally unsourced entries were sourced against the 10 anchor jurisdictions in the 2026-08 sourcing pass and raised from `dataConfidence: "low"` to `"medium"`; attorney review is still pending for all 16)
 
 ---
 
