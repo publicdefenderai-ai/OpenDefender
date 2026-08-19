@@ -7,7 +7,7 @@
  * shared/charge-explanations.ts so the field values are authoritative.
  *
  * Tests:
- *  A1-A3  — new low-confidence entries have pendingAttorneyReview: true
+ *  A1-A3  — new entries (sourced to medium confidence in task #448) have pendingAttorneyReview: true
  *  A4-A5  — new sourced (high-confidence) entries also have the flag
  *            (sourced ≠ reviewed; dataConfidence reflects source quality only)
  *  A6-A7  — pre-existing entries do NOT have pendingAttorneyReview
@@ -22,25 +22,26 @@ describe('A — charge-explanations pendingAttorneyReview field', () => {
 
   // ── new low-confidence entries ─────────────────────────────────────────────
 
-  it('A1: loitering (low confidence) has pendingAttorneyReview: true', () => {
+  it('A1: loitering (sourced, medium confidence) has pendingAttorneyReview: true', () => {
     const expl = getChargeExplanation('loitering');
     expect(expl).not.toBeNull();
     expect(expl!.pendingAttorneyReview).toBe(true);
-    expect(expl!.dataConfidence).toBe('low');
+    // Task #448 sourcing pass: anchor-state statutes added, low -> medium
+    expect(expl!.dataConfidence).toBe('medium');
   });
 
-  it('A2: rape (low confidence) has pendingAttorneyReview: true', () => {
+  it('A2: rape (sourced, medium confidence) has pendingAttorneyReview: true', () => {
     const expl = getChargeExplanation('rape');
     expect(expl).not.toBeNull();
     expect(expl!.pendingAttorneyReview).toBe(true);
-    expect(expl!.dataConfidence).toBe('low');
+    expect(expl!.dataConfidence).toBe('medium');
   });
 
-  it('A3: perjury (low confidence) has pendingAttorneyReview: true', () => {
+  it('A3: perjury (sourced, medium confidence) has pendingAttorneyReview: true', () => {
     const expl = getChargeExplanation('perjury');
     expect(expl).not.toBeNull();
     expect(expl!.pendingAttorneyReview).toBe(true);
-    expect(expl!.dataConfidence).toBe('low');
+    expect(expl!.dataConfidence).toBe('medium');
   });
 
   // ── new sourced (high-confidence) entries — pending review despite sourcing ─

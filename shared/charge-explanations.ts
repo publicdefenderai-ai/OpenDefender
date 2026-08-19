@@ -2844,11 +2844,24 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Testifying that you've never met someone when you clearly remember meeting them multiple times"
       }
     ],
-    degreeContext: "Perjury is a felony in all US jurisdictions. Federal perjury carries up to 5 years in prison per count. State perjury typically carries 2–5 years. Multiple false statements in the same proceeding can be charged as separate counts. Prosecutors treat perjury seriously because it directly undermines the justice system, and judges have little tolerance for it at sentencing.",
+    degreeContext: "Perjury is a felony in nearly all US jurisdictions, but not universally at every grade: New York grades perjury into three degrees, and its base offense (perjury in the third degree, any false statement under oath) is only a class A misdemeanor — the felony grades there require that the false statement was material and made in an official proceeding. Federal perjury carries up to 5 years in prison per count. State felony perjury typically carries 2–5 years (Virginia and North Carolina treat it as a felony that also disqualifies the person from ever testifying under oath or holding public office in some contexts). Multiple false statements in the same proceeding can be charged as separate counts. Prosecutors treat perjury seriously because it directly undermines the justice system, and judges have little tolerance for it at sentencing.",
+    sources: [
+      { citation: "Cal. Penal Code § 118", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=118." },
+      { citation: "N.Y. Penal Law §§ 210.05 (third degree, class A misdemeanor), 210.10, 210.15", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/210.15" },
+      { citation: "Fla. Stat. § 837.02", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/837.02" },
+      { citation: "Va. Code Ann. § 18.2-434", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-434/" },
+      { citation: "Ohio Rev. Code § 2921.11", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2921.11" },
+      { citation: "720 ILCS 5/32-2", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K32-2.htm" },
+      { citation: "O.C.G.A. § 16-10-70", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-10-70/" },
+      { citation: "N.C. Gen. Stat. § 14-209", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-209.html" },
+      { citation: "N.J.S.A. 2C:28-1", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-28-1/" },
+      { citation: "A.R.S. § 13-2702", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-2702/" },
+      { citation: "18 U.S.C. § 1621", jurisdiction: "federal", url: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title18-section1621&num=0&edition=prelim" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge and pattern jury instructions. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) recantation defense availability varies by jurisdiction; (2) two-witness rule vs. corroboration rule split across jurisdictions; (3) subornation of perjury as a separate charge not discussed here; (4) federal sentence may stack per false statement, not per proceeding. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor-state perjury statutes plus 18 U.S.C. § 1621 (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Corrections made during sourcing: the original claim that perjury is 'a felony in all US jurisdictions' was wrong — New York's base perjury offense (third degree, N.Y. Penal Law § 210.05) is a class A misdemeanor, with materiality in an official proceeding required to reach the felony grades; degreeContext was rewritten accordingly. Materiality is an element in most anchor states (CA § 118, FL § 837.02, OH § 2921.11, IL 720 ILCS 5/32-2, NJ 2C:28-1, AZ § 13-2702) but Virginia's § 18.2-434 and North Carolina's § 14-209 do not use a materiality element in the same way. Remaining risk areas for attorney review: (1) recantation defense availability varies by jurisdiction (NJ 2C:28-1(d) codifies one; most anchors do not); (2) two-witness/corroboration rule split; (3) subornation of perjury as a separate charge not discussed here; (4) federal sentence may stack per false statement, not per proceeding. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Marijuana / Cannabis Possession ───────────────────────────────────────
   {
@@ -2873,10 +2886,22 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Simple possession of a small amount (under 1 ounce in most states) is a misdemeanor or, in many legalization states, a civil infraction with a fine only. Possession of larger amounts or in a school zone is a more serious misdemeanor or felony. Amounts large enough to suggest distribution (often over 1 pound) shift the charge toward trafficking.",
+    sources: [
+      { citation: "Cal. Health & Safety Code § 11357", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11357." },
+      { citation: "N.Y. Penal Law §§ 222.25, 222.30 (unlawful/criminal possession of cannabis over legal limits)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/222.25" },
+      { citation: "Fla. Stat. § 893.13(6)(b)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/893.13" },
+      { citation: "Va. Code Ann. § 4.1-1105.1 (possession over legal limit); § 4.1-1100 (legal personal amount)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/4.1-1105.1/" },
+      { citation: "Ohio Rev. Code § 2925.11(C)(3); ch. 3780 (adult use)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2925.11" },
+      { citation: "410 ILCS 705/10-10 (legal possession limits); 720 ILCS 550/4 (Cannabis Control Act penalties)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/041007050K10-10.htm" },
+      { citation: "O.C.G.A. § 16-13-30(j); § 16-13-2(b) (misdemeanor for ≤1 oz)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-13-30/" },
+      { citation: "N.C. Gen. Stat. § 90-95(d)(4)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-95.html" },
+      { citation: "N.J.S.A. 2C:35-10c (possession over 6 oz); 24:6I-22 (legal personal possession)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-35-10/" },
+      { citation: "A.R.S. § 36-2852 (legal limits, Prop 207); § 13-3405 (possession over limits)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-3405/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) personal-use limits vary significantly by state and change frequently as legalization laws evolve; (2) school-zone distance thresholds vary by state (500 ft to 1,000 ft); (3) the weight threshold for trafficking vs. possession varies widely by state; (4) some states treat any amount of concentrate/wax differently than flower. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. The anchor states split cleanly: CA, NY, VA, OH, IL, NJ, and AZ have legalized adult recreational possession up to a limit (with over-limit possession remaining a violation, misdemeanor, or felony by amount), while FL, GA, and NC still criminalize simple possession — FL ≤20 g and GA ≤1 oz are misdemeanors, NC ≤0.5 oz is a fine-only class 3 misdemeanor. The 'typically 1 to 2 ounces' personal-use generalization matches CA (28.5 g), IL (30 g), VA (1 oz public), AZ (1 oz) but NY allows 3 oz and NJ 6 oz. Remaining risk areas: (1) limits change frequently as legalization laws evolve; (2) school-zone distance thresholds vary by state; (3) trafficking weight thresholds vary widely; (4) several anchors treat concentrates differently (AZ caps at 5 g, IL at 5 g, NY at 24 g). See docs/attorney-review-charge-explanations.md.",
   },
   // ── Rape ──────────────────────────────────────────────────────────────────
   {
@@ -2900,11 +2925,23 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Using physical restraint, threats of harm, or a position of authority to overcome the victim's resistance"
       }
     ],
-    degreeContext: "Rape is universally a felony. First-degree rape (involving force, weapons, or serious injury) typically carries 10–25 years or life. Second and third degree cover statutory or non-forcible rape and carry shorter but still substantial sentences (3–15 years). Rape of a child carries mandatory sentences of 10–25 years to life, and all convictions require sex offender registration.",
+    degreeContext: "Rape is universally a felony. First-degree or forcible rape (involving force, weapons, or serious injury) typically carries 10–25 years or life. Lower degrees cover non-forcible or incapacity-based conduct and carry shorter but still substantial sentences (3–15 years). Rape of a child carries the longest sentences — several states impose mandatory minimums of 10–25 years to life. Sex offender registration is generally required after conviction in every state, though the registration tier and duration vary.",
+    sources: [
+      { citation: "Cal. Penal Code § 261", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=261." },
+      { citation: "N.Y. Penal Law § 130.35 (rape, first degree)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/130.35" },
+      { citation: "Fla. Stat. § 794.011 (sexual battery)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/794.011" },
+      { citation: "Va. Code Ann. § 18.2-61", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-61/" },
+      { citation: "Ohio Rev. Code § 2907.02", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2907.02" },
+      { citation: "720 ILCS 5/11-1.20 (criminal sexual assault); 5/11-1.30 (aggravated)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K11-1.20.htm" },
+      { citation: "O.C.G.A. § 16-6-1", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-6-1/" },
+      { citation: "N.C. Gen. Stat. § 14-27.21 (first-degree forcible rape)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-27.21.html" },
+      { citation: "N.J.S.A. 2C:14-2 (sexual assault / aggravated sexual assault)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-14-2/" },
+      { citation: "A.R.S. § 13-1406 (sexual assault)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-1406/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge and pattern jury instructions. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. This entry covers a serious and legally sensitive charge area. Key risk areas: (1) most states have moved from 'rape' terminology to 'sexual assault in the first degree' — this entry must be carefully checked against the specific state's current statute name; (2) the consent standard and force requirement vary significantly by state; (3) statutory rape (age-based) is a distinct crime with different elements — confirm this entry doesn't conflate those; (4) mandatory minimum sentences and sex offender registration requirements are highly state-specific and change frequently. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. This entry covers a serious and legally sensitive charge area. Terminology confirmed to vary across anchors exactly as the plainSummary warns: CA, NY, VA, OH, GA, and NC keep 'rape' as the statutory name; FL calls the same conduct 'sexual battery' (§ 794.011); IL uses 'criminal sexual assault' (720 ILCS 5/11-1.20); NJ uses 'sexual assault/aggravated sexual assault' (2C:14-2); AZ uses 'sexual assault' (§ 13-1406). The former claim that 'all convictions require sex offender registration' with mandatory 10–25-to-life for child rape everywhere was softened: registration is generally required in every anchor state but tiers/durations differ, and the mandatory-minimum figures match FL § 794.011(2) and NC § 14-27.23-.24-style child provisions but not every anchor. Remaining risk areas: (1) consent standard and force requirement vary significantly by state (NY moved to a lack-of-consent-centered structure); (2) statutory rape (age-based) is a distinct crime — this entry addresses forcible/incapacity rape; (3) mandatory minimums and registration change frequently. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Forgery ───────────────────────────────────────────────────────────────
   {
@@ -3089,10 +3126,22 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Failure to identify in a state that requires it is typically a misdemeanor with a small fine. Providing false information is a more serious misdemeanor or low-level felony depending on the circumstances. Possession of a fake ID is a misdemeanor in most states (often used by minors for alcohol) but rises to a felony when used for identity fraud or financial crimes.",
+    sources: [
+      { citation: "Cal. Penal Code § 148.9 (false identification to officer; CA has no general stop-and-identify statute)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=148.9." },
+      { citation: "N.Y. Penal Law § 190.23 (false personation; NY has no general stop-and-identify statute)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/190.23" },
+      { citation: "Fla. Stat. § 901.36 (false name to law enforcement)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/901.36" },
+      { citation: "Va. Code Ann. § 19.2-82.1 (false identity to law-enforcement officer)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/19.2-82.1/" },
+      { citation: "Ohio Rev. Code § 2921.29 (failure to disclose personal information — stop-and-identify)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2921.29" },
+      { citation: "720 ILCS 5/31-4.5 (obstructing identification)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K31-4.5.htm" },
+      { citation: "O.C.G.A. § 16-10-25 (giving false name/date of birth to officer)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-10-25/" },
+      { citation: "N.C. Gen. Stat. § 14-223 (resist, delay, obstruct — covers false identification per case law)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-223.html" },
+      { citation: "N.J.S.A. 2C:29-3(b) (hindering own apprehension, includes giving false information to police)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-29-3/" },
+      { citation: "A.R.S. § 13-2412 (refusing to provide truthful name when lawfully detained)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-2412/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) whether a state is a 'stop-and-identify' state changes frequently; (2) the constitutional limits on identification requirements (Hiibel v. Nevada, 2004) must be accurately represented; (3) providing false ID to an officer vs. possessing a fake ID are different offenses with different elements; (4) the text should clearly distinguish between a minor using a fake ID for alcohol (typically a minor infraction/misdemeanor) and a fake ID used for fraud (felony). See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Sourcing confirmed the entry's core stop-and-identify split for the anchors: OH (§ 2921.29) and AZ (§ 13-2412) are true stop-and-identify states requiring disclosure of name during a lawful detention; CA and NY are not — there, only affirmatively giving FALSE identifying information is criminal (CA Pen. § 148.9; NY Penal § 190.23). FL, VA, GA, IL, NJ, and NC likewise criminalize false identification rather than silence. Remaining risk areas: (1) stop-and-identify status changes with legislation; (2) Hiibel v. Sixth Judicial Dist. Court of Nevada, 542 U.S. 177 (2004) sets the constitutional frame; (3) false ID to an officer vs. possessing a fake ID are different offenses — fake-ID possession statutes are not separately cited here; (4) minor-with-fake-ID (alcohol) vs. fraud-use grading distinction still needs attorney confirmation. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Indecent Exposure / Gross Sexual Imposition / Offensive Touching ───────
   {
@@ -3117,10 +3166,22 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Indecent exposure is typically a misdemeanor for a first offense, but becomes a felony for repeat offenders or if a child witnessed the act. Gross sexual imposition and indecent assault are usually felonies carrying 1–5 years. All sex-offense convictions, even misdemeanors involving exposure to a child, may require sex offender registration depending on the state.",
+    sources: [
+      { citation: "Cal. Penal Code § 314 (indecent exposure)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=314." },
+      { citation: "N.Y. Penal Law § 245.01 (exposure of a person); § 130.52 (forcible touching)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/245.01" },
+      { citation: "Fla. Stat. § 800.03 (exposure of sexual organs)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/800.03" },
+      { citation: "Va. Code Ann. § 18.2-387", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-387/" },
+      { citation: "Ohio Rev. Code § 2907.09 (public indecency); § 2907.05 (gross sexual imposition)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2907.09" },
+      { citation: "720 ILCS 5/11-30 (public indecency)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K11-30.htm" },
+      { citation: "O.C.G.A. § 16-6-8 (public indecency)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-6-8/" },
+      { citation: "N.C. Gen. Stat. § 14-190.9 (indecent exposure)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-190.9.html" },
+      { citation: "N.J.S.A. 2C:14-4 (lewdness)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-14-4/" },
+      { citation: "A.R.S. § 13-1402 (indecent exposure)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-1402/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) this entry groups three distinct charges (indecent exposure, gross sexual imposition, offensive touching) that are actually separate offenses with different elements — an attorney should verify that grouping them in one entry doesn't mislead advocates; (2) sex offender registration triggers for misdemeanor indecent exposure vary significantly by state and require careful verification; (3) public urination is a separate offense in most states and may not require registration. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Sourcing confirmed the entry's general pattern in the anchors: base indecent exposure is a misdemeanor in all 10, escalating to a felony for repeat offenses (CA § 314 second offense; AZ § 13-1402 with priors) or when a child is present/targeted (FL, NC § 14-190.9(a1) felony when victim under 16; OH, GA, NJ 2C:14-4(b)). 'Gross sexual imposition' is Ohio-specific statutory terminology (§ 2907.05) — other anchors call the equivalent conduct sexual battery, forcible touching (NY § 130.52), or criminal sexual contact. Remaining risk areas: (1) this entry still groups three distinct charges (exposure, sexual-contact offenses, offensive touching) with different elements; (2) registration triggers for misdemeanor exposure vary — e.g. CA § 314 requires registration on any conviction, most other anchors only for felony/child-related grades; (3) public urination is typically charged under disorderly-conduct or local ordinances and may not require registration. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Reckless Driving / Reckless Conduct ───────────────────────────────────
   {
@@ -3145,10 +3206,22 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Reckless driving is usually a misdemeanor (fines, license suspension, up to 90 days or one year in jail). If the reckless conduct causes injury, it escalates to a more serious misdemeanor or low-level felony. Reckless conduct causing serious injury or death becomes a felony: reckless endangerment carries 1-5 years, reckless homicide 2-10 years depending on the state.",
+    sources: [
+      { citation: "Cal. Veh. Code § 23103", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23103." },
+      { citation: "N.Y. Veh. & Traf. Law § 1212", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/VAT/1212" },
+      { citation: "Fla. Stat. § 316.192", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/316.192" },
+      { citation: "Va. Code Ann. §§ 46.2-852 to 46.2-865 (reckless driving)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/46.2-852/" },
+      { citation: "Ohio Rev. Code § 4511.20 (operation in willful or wanton disregard)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-4511.20" },
+      { citation: "625 ILCS 5/11-503", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/062500050K11-503.htm" },
+      { citation: "O.C.G.A. § 40-6-390", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-40-motor-vehicles-and-traffic/ga-code-sect-40-6-390/" },
+      { citation: "N.C. Gen. Stat. § 20-140", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_20/GS_20-140.html" },
+      { citation: "N.J.S.A. 39:4-96", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-39-motor-vehicles-and-traffic-regulation/nj-st-sect-39-4-96/" },
+      { citation: "A.R.S. § 28-693", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-28-transportation/az-rev-st-sect-28-693/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) 'reckless driving' and 'reckless conduct/endangerment' are distinct offenses with different elements — confirm the entry doesn't conflate them; (2) the specific threshold for criminal vs. civil recklessness differs by jurisdiction; (3) the entry mentions vehicular homicide without clearly separating it as a distinct charge with much higher sentences; (4) sentence ranges are generalizations that may not match the specific jurisdiction an advocate is dealing with. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions' reckless driving statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. All 10 anchors grade base reckless driving as a misdemeanor (or, in NJ, a motor-vehicle offense outside the criminal code carrying up to 60 days), consistent with degreeContext. Notable anchor variations: Virginia is unusually aggressive — reckless driving is a Class 1 misdemeanor (up to 12 months) and includes per-se speed triggers (85+ mph, or 20 over) under §§ 46.2-852 to -865; Ohio's § 4511.20 base offense is a minor misdemeanor (fine-only) escalating with priors, gentler than most anchors; IL escalates to a Class 4 felony when great bodily harm results (aggravated reckless driving); CA Veh. § 23103 escalates under § 23104-23105 when injury results. 'Reckless endangerment' as a general (non-vehicle) offense exists in NY (Penal Law §§ 120.20, 120.25) and AZ (§ 13-1201 endangerment) but several anchors (CA, VA, NC) have no general endangerment statute — the keyTerm describes it accurately as a 'related charge' that varies. Remaining risk areas: (1) reckless driving vs. reckless conduct/endangerment remain distinct offenses; (2) vehicular homicide is a separate charge with much higher sentences; (3) sentence ranges are generalizations. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Public Intoxication / Minor in Possession / Open Container ────────────
   {
@@ -3172,11 +3245,23 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "A 19-year-old holding a sealed beer they didn't open can be cited for minor in possession"
       }
     ],
-    degreeContext: "These are almost always misdemeanors or civil infractions. Public intoxication is often handled by a brief detainment rather than prosecution. Fines are the most common outcome; jail time is rare for first offenses. Minor in possession often carries a fine, community service, and license suspension for young drivers. Open container violations are typically traffic infractions.",
+    degreeContext: "These are almost always misdemeanors or civil infractions — and in a number of states public intoxication is not a crime at all. New York, Illinois, New Jersey, and Arizona have no statewide public intoxication crime: those states treat intoxication as a public-health matter, and New Jersey and Arizona statutes affirmatively bar criminal punishment for it (police may still take an incapacitated person into protective custody). Where it remains criminal (California, Florida, Virginia, Ohio, Georgia, North Carolina), it is a low-level misdemeanor and often handled by brief detainment rather than prosecution. Fines are the most common outcome; jail time is rare for first offenses. Minor in possession often carries a fine, community service, and license suspension for young drivers. Open container violations are typically traffic infractions.",
+    sources: [
+      { citation: "Cal. Penal Code § 647(f)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647." },
+      { citation: "No criminal public intoxication offense; N.Y. Mental Hyg. Law § 22.09 (protective custody for incapacitated persons only)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/MHY/22.09" },
+      { citation: "Fla. Stat. § 856.011", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/856.011" },
+      { citation: "Va. Code Ann. § 18.2-388", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-388/" },
+      { citation: "Ohio Rev. Code § 2917.11(B) (disorderly conduct while voluntarily intoxicated)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2917.11" },
+      { citation: "No statewide public intoxication offense; 720 ILCS 5/26-1 (disorderly conduct) is the closest general charge", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26-1.htm" },
+      { citation: "O.C.G.A. § 16-11-41", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-11-41/" },
+      { citation: "N.C. Gen. Stat. § 14-444 (intoxicated and disruptive in public)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-444.html" },
+      { citation: "N.J.S.A. 26:2B-26 (intoxication itself may not be criminally punished)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-26-health-and-vital-statistics/nj-st-sect-26-2b-26/" },
+      { citation: "A.R.S. § 36-2031 (bars state/local criminal public-intoxication offenses)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-36-public-health-and-safety/az-rev-st-sect-36-2031/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) this entry groups three distinct offense types (public intoxication, minor in possession, open container) — an attorney should verify this grouping is appropriate and not misleading; (2) some states (notably Texas) have decriminalized public intoxication to a civil matter while others maintain criminal penalties; (3) minor in possession laws vary significantly (some states have 'use and lose' license suspension that goes beyond this entry's description); (4) open container laws vary between federal highway law applicability and state-specific rules. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Major correction from sourcing: the anchors split 6/4 — CA § 647(f), FL § 856.011, VA § 18.2-388, OH § 2917.11(B), GA § 16-11-41, and NC § 14-444 criminalize public intoxication (NC only when the person is also disruptive), while NY, IL, NJ, and AZ have NO statewide public intoxication crime; NJ (26:2B-26) and AZ (36-2031) affirmatively prohibit criminal punishment for intoxication, treating it as a health condition. degreeContext was rewritten to reflect this. The 'danger to self or others' keyTerm matches CA's standard (unable to exercise care for own safety / obstructing a public way) and NC's disruptive requirement, but FL, VA, GA, and OH criminalize public intoxication/disorderly-while-intoxicated on lower showings. Remaining risk areas: (1) minor-in-possession and open-container statutes are separate offense families not individually cited here; (2) 'use and lose' license-suspension laws for minors vary; (3) open container rules vary between the federal TEA-21 framework and state law. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Loitering / Panhandling / Illegal Camping / Peace Disturbance ──────────
   {
@@ -3200,11 +3285,23 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "A littering ticket doesn't go on your criminal record the way a misdemeanor conviction would"
       }
     ],
-    degreeContext: "Most of these are civil infractions or minor misdemeanors punishable by fines only. Repeat violations or conduct that escalates to harassment can become more serious charges. Illegal camping prosecutions have decreased in many cities following court rulings limiting enforcement when shelter is unavailable.",
+    degreeContext: "Most of these are civil infractions or minor misdemeanors punishable by fines only. Repeat violations or conduct that escalates to harassment can become more serious charges. Several states have no general state loitering crime at all — loitering is instead prohibited by city or county ordinance, or only in specific contexts like loitering to buy drugs. Public-camping bans are again broadly enforceable after the U.S. Supreme Court's 2024 decision in City of Grants Pass v. Johnson, which held that enforcing them against people without shelter access does not violate the Eighth Amendment; some states and cities still limit enforcement as a matter of local policy.",
+    sources: [
+      { citation: "Cal. Penal Code § 647 (loitering-related subdivisions); § 602 et seq. (trespass/camping-adjacent)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=647." },
+      { citation: "N.Y. Penal Law § 240.35 (loitering)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/240.35" },
+      { citation: "Fla. Stat. § 856.021 (loitering or prowling)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/856.021" },
+      { citation: "No general state loitering crime; Va. Code Ann. § 15.2-926 authorizes local loitering ordinances", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/15.2-926/" },
+      { citation: "No general state loitering crime; Ohio Rev. Code § 2917.11 (disorderly conduct) is the closest general charge", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2917.11" },
+      { citation: "No general state loitering crime (Chicago's gang-loitering ordinance struck down, City of Chicago v. Morales, 527 U.S. 41 (1999)); 720 ILCS 5/26-1 (disorderly conduct) is the closest general charge", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K26-1.htm" },
+      { citation: "O.C.G.A. § 16-11-36 (loitering or prowling)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-11-36/" },
+      { citation: "No general state loitering crime; local ordinances authorized under N.C. Gen. Stat. § 160A-174", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_160A/GS_160A-174.html" },
+      { citation: "N.J.S.A. 2C:33-2.1 (loitering to obtain or distribute CDS; NJ repealed its general loitering statute)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-33-2-1/" },
+      { citation: "A.R.S. § 13-2905 (loitering)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-2905/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) this entry groups many distinct, unrelated offenses (loitering, panhandling, camping, peace disturbance, littering, fishing/hunting without a license) — an attorney should verify whether this broad grouping serves advocates or confuses them; (2) First Amendment limitations on anti-loitering and anti-panhandling ordinances (Martin v. Boise, 9th Cir. 2018) are important and not discussed; (3) 'illegal camping' enforcement has significant recent case law that advocates need to know about. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Sourcing findings: only FL (§ 856.021), GA (§ 16-11-36), AZ (§ 13-2905), NY (§ 240.35, specific-context loitering), and CA (§ 647 subdivisions) retain state-level loitering crimes; VA, OH, IL, NC, and NJ have no general state loitering offense — it survives only as local ordinances or narrow purpose-specific statutes (NJ drug loitering, 2C:33-2.1). Vagueness case law (Papachristou v. Jacksonville (1972); City of Chicago v. Morales (1999)) invalidated broad loitering laws, which is why FL/GA-style statutes require alarming circumstances plus an opportunity to explain. Correction from sourcing: the old degreeContext said camping prosecutions decreased under rulings limiting enforcement when shelter is unavailable (Martin v. Boise line) — that was superseded by City of Grants Pass v. Johnson, 603 U.S. 520 (2024), which permits enforcement of public-camping bans; text updated. Remaining risk areas: (1) this entry still groups many distinct offenses (panhandling, littering, fishing/hunting without a license are separately codified, mostly as infractions); (2) First Amendment limits on panhandling restrictions (Reed v. Town of Gilbert line) not discussed. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Hate Crime Enhancement ────────────────────────────────────────────────
   {
@@ -3290,7 +3387,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   {
     chargePattern: /murder.in.the.third.degree|third.degree.murder|murder.*3rd.degree/i,
     slug: "murder-in-the-third-degree",
-    plainSummary: "Third degree murder exists in only a handful of states (including Minnesota, Florida, and Pennsylvania) and covers intentional killings that fall between second degree murder and manslaughter. The exact definition varies by state: in Minnesota, it requires a 'depraved mind,' meaning causing death through reckless conduct with extreme indifference to human life but without targeting a specific person. In Florida, it includes deaths resulting from certain drug offenses.",
+    plainSummary: "Third degree murder exists in only three states: Minnesota, Pennsylvania, and Florida. It covers killings that fall between second degree murder and manslaughter. The exact definition varies by state: in Minnesota, it requires a 'depraved mind,' meaning causing death through eminently dangerous conduct with extreme indifference to human life but without targeting a specific person (Minnesota also has a separate third-degree path for supplying drugs that cause a death). In Pennsylvania, third degree is simply any murder with malice that is not first or second degree. In Florida, third degree murder is an unintentional killing that happens during a felony NOT on the state's first-degree felony list.",
     keyTerms: [
       {
         term: "Depraved Mind",
@@ -3303,16 +3400,30 @@ export const chargeExplanations: ChargeExplanation[] = [
         example: "Recklessly driving a car through a crowded space at very high speed resulting in a pedestrian's death"
       },
       {
-        term: "Drug-Induced Murder (Florida)",
-        plainMeaning: "In Florida, providing drugs that cause another person's death can be charged as third-degree felony murder even without intent to kill",
-        example: "Selling or giving someone drugs that they die from as a direct result of ingesting"
+        term: "Third-Degree Felony Murder (Florida)",
+        plainMeaning: "In Florida, an unintentional killing during a felony that is NOT on the first-degree murder felony list is third degree murder. A drug-delivery death is not third degree in Florida — deaths from distributing listed drugs are first degree murder there",
+        example: "A death that happens unintentionally during a felony like grand theft, which is not on Florida's first-degree felony-murder list"
       }
     ],
-    degreeContext: "Third degree murder is a serious felony. In Minnesota, the maximum is 25 years. In Pennsylvania, it carries up to 40 years. It is generally less severe than first or second degree murder but far more serious than manslaughter, and typically results in substantial prison time.",
+    degreeContext: "Third degree murder is a serious felony. In Minnesota, the maximum is 25 years. In Pennsylvania, it carries up to 40 years. In Florida, it is a second-degree felony punishable by up to 15 years. It is generally less severe than first or second degree murder but far more serious than manslaughter, and typically results in substantial prison time. No other state uses a third degree of murder — everywhere else the equivalent conduct is charged as second degree murder or manslaughter.",
+    sources: [
+      { citation: "Minn. Stat. § 609.195", jurisdiction: "MN", url: "https://www.revisor.mn.gov/statutes/cite/609.195" },
+      { citation: "18 Pa.C.S. § 2502(c)", jurisdiction: "PA", url: "https://codes.findlaw.com/pa/title-18-pacsa-crimes-and-offenses/pa-csa-sect-18-2502/" },
+      { citation: "Fla. Stat. § 782.04(4) (third degree felony murder); § 782.04(1)(a)3 (drug-distribution deaths are FIRST degree)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/782.04" },
+      { citation: "No third degree murder; degrees defined at Cal. Penal Code § 189", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=189." },
+      { citation: "No third degree murder; N.Y. Penal Law art. 125 defines two degrees", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/125.25" },
+      { citation: "No third degree murder; Va. Code Ann. §§ 18.2-31 to 18.2-33 define capital/first/second degree", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-32/" },
+      { citation: "No degree-numbered murder; Ohio Rev. Code §§ 2903.01 (aggravated murder), 2903.02 (murder)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2903.02" },
+      { citation: "No third degree murder; 720 ILCS 5/9-1 to 5/9-3 (first/second degree murder, manslaughter)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K9-1.htm" },
+      { citation: "No third degree murder; O.C.G.A. § 16-5-1 (murder and felony murder)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-5-1/" },
+      { citation: "No third degree murder; N.C. Gen. Stat. § 14-17 (first and second degree)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-17.html" },
+      { citation: "No degrees of murder; N.J.S.A. 2C:11-3 (murder)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-11-3/" },
+      { citation: "No third degree murder; A.R.S. §§ 13-1104 (second degree), 13-1105 (first degree)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-1105/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) third degree murder exists in only a small number of states (MN, PA, FL) — the entry must clearly state this and not imply it is a common charge structure; (2) Minnesota's third degree murder law was famously contested in the George Floyd case (State v. Chauvin), and the elements and availability of the charge have been litigated at the appellate level — the entry should be carefully checked against current MN case law; (3) Pennsylvania's third degree is defined by common law malice, not a statute's 'depraved mind' test, which differs from MN's test; (4) Florida's third degree felony murder (drug delivery causing death) is structurally distinct from MN/PA. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the three third-degree states (MN, PA, FL) plus explicit 'no third degree' confirmations for all 10 anchor jurisdictions (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Corrections made during sourcing: the original text claimed Florida's third degree murder 'includes deaths resulting from certain drug offenses' — that was wrong. Fla. Stat. § 782.04(1)(a)3 makes deaths from unlawful distribution of listed substances FIRST degree murder; § 782.04(4) third degree murder is an unintentional killing during a felony not on the first-degree enumerated list. The drug-death keyTerm was replaced. Minnesota's drug-death path (§ 609.195(b)) IS third degree there, now noted in plainSummary. Remaining risk areas: (1) MN's depraved-mind element was heavily litigated in State v. Noor and State v. Chauvin regarding whether it can apply to conduct directed at a single person — current MN case law should be attorney-checked; (2) PA third degree is defined by common-law malice, not a depraved-mind statute. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Recidivist / Sentencing Enhancement ──────────────────────────────────
   {
@@ -3337,10 +3448,22 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Recidivist enhancements can dramatically increase sentences, from doubling the standard term to triggering mandatory life sentences under three-strikes laws. These are imposed at sentencing by the judge. Your attorney may challenge whether prior convictions qualify, whether they were constitutionally obtained, or whether the enhancement was properly noticed before trial.",
+    sources: [
+      { citation: "Cal. Penal Code § 667(b)–(i); § 1170.12 (Three Strikes)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667." },
+      { citation: "N.Y. Penal Law §§ 70.06 (second felony offender), 70.08 (persistent violent felony offender), 70.10 (persistent felony offender)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/70.06" },
+      { citation: "Fla. Stat. § 775.084 (habitual felony offender / violent career criminal / prison releasee reoffender framework)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/775.084" },
+      { citation: "Va. Code Ann. § 19.2-297.1 (third violent felony conviction — life sentence)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/19.2-297.1/" },
+      { citation: "Ohio Rev. Code § 2929.14(B)(2) with § 2941.149 (repeat violent offender specification)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2929.14" },
+      { citation: "730 ILCS 5/5-4.5-95 (habitual criminal; Class X sentencing for repeat Class 1/2 felonies)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/073000050K5-4.5-95.htm" },
+      { citation: "O.C.G.A. § 17-10-7 (recidivist sentencing; fourth felony serves maximum without parole)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-17-criminal-procedure/ga-code-sect-17-10-7/" },
+      { citation: "N.C. Gen. Stat. § 14-7.1 et seq. (habitual felon); § 14-7.7 (violent habitual felon)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-7.1.html" },
+      { citation: "N.J.S.A. 2C:43-7.1 (persistent offenders — 'Three Strikes' life without parole)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-43-7-1/" },
+      { citation: "A.R.S. § 13-703 (repetitive offenders)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-703/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) three-strikes laws vary widely by state in what counts as a 'strike' and what sentence is mandated — the entry's generalization may mislead advocates about their specific state; (2) the right to challenge prior convictions used as enhancements is important (Apprendi v. New Jersey, Almendarez-Torres) and is not discussed; (3) mandatory minimums triggered by recidivist enhancements leave judges with zero discretion, which is a critical advocate concern not emphasized here; (4) the procedural notice requirement mentioned in degreeContext varies significantly by jurisdiction and should be verified. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions' recidivist statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Sourcing confirmed the entry's structural claims across the anchors, with notable variation: CA's Three Strikes (Pen. §§ 667(b)–(i), 1170.12, as narrowed by Prop 36 (2012)) doubles second-strike terms and imposes 25-to-life for a third serious/violent strike; VA § 19.2-297.1 and NJ 2C:43-7.1 mandate life for a third violent felony; GA § 17-10-7 is unusually broad — a fourth felony of ANY kind means serving the maximum with no parole; NC uses a status-offense model (habitual felon is itself indicted as a status raising the felony class four levels); NY, FL, OH, IL, and AZ use graduated sentencing-range escalators rather than flat life terms. One nuance against the plainSummary's 'imposed at sentencing, not found at trial' generalization: in NC (and formerly under several habitual-criminal acts) the habitual-felon status is separately indicted and found by a jury, though prior convictions themselves remain a judge question under Almendarez-Torres. Remaining risk areas: (1) what counts as a 'strike' varies widely; (2) Apprendi/Almendarez-Torres challenge rights not discussed; (3) notice/indictment procedure varies significantly by state. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Illegal Entry / Illegal Re-Entry (Federal Immigration) ────────────────
   {
@@ -3365,10 +3488,16 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Illegal entry is a misdemeanor with up to 6 months for first offense, 2 years for subsequent. Illegal re-entry without a prior felony carries up to 2 years. With a prior deportation after a felony conviction, the maximum is 10 years. With a prior deportation after an 'aggravated felony,' the maximum is 20 years. These charges have significant consequences for any future immigration applications.",
+    sources: [
+      { citation: "8 U.S.C. § 1325 (improper entry by alien)", jurisdiction: "federal", url: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title8-section1325&num=0&edition=prelim" },
+      { citation: "8 U.S.C. § 1326 (reentry of removed aliens; enhanced maxima in § 1326(b))", jurisdiction: "federal", url: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title8-section1326&num=0&edition=prelim" },
+      { citation: "8 U.S.C. § 1101(a)(43) (aggravated felony definition)", jurisdiction: "federal", url: "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title8-section1101&num=0&edition=prelim" },
+      { citation: "U.S.S.G. § 2L1.2 (unlawfully entering or remaining — guideline offense levels)", jurisdiction: "federal", url: "https://www.ussc.gov/guidelines" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against the current federal statutes and sentencing guidelines. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) the sentencing ranges for § 1326 are highly sensitive to prior criminal history under USSG § 2L1.2 and must be checked against current sentencing guidelines, not just the statutory maximum; (2) the 'fast-track' plea program mentioned in the plain summary has been expanded and modified — current availability should be verified; (3) the interaction between the criminal charge and the simultaneous civil immigration removal proceeding is critical for advocates and is not described here; (4) the definition of 'aggravated felony' under 8 U.S.C. § 1101(a)(43) is notoriously complex and the subject of frequent litigation. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the governing federal statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. These offenses are exclusively federal — states may not prosecute unlawful entry or presence as state crimes (Arizona v. United States, 567 U.S. 387 (2012) preempted Arizona's attempt), so the 10 anchor-state coverage used for other entries does not apply; federal citations are the complete source set. Sourcing confirmed the entry's sentence figures against the statute text: § 1325 first offense up to 6 months, subsequent up to 2 years; § 1326(a) base maximum 2 years; § 1326(b)(1) 10 years after removal following a felony (or three misdemeanors involving drugs/crimes against the person); § 1326(b)(2) 20 years after removal following an aggravated felony. Remaining risk areas: (1) real sentencing exposure turns on U.S.S.G. § 2L1.2's prior-history enhancements, not just statutory maxima; (2) 'fast-track' (early disposition) program availability varies by district and should be verified; (3) the parallel civil removal proceeding and its interaction with the criminal case is critical for advocates and not described here; (4) the aggravated-felony definition in § 1101(a)(43) is notoriously complex and heavily litigated. See docs/attorney-review-charge-explanations.md.",
   },
   // ── Juvenile Proceedings ──────────────────────────────────────────────────
   {
@@ -3393,10 +3522,22 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Juvenile adjudications generally cannot result in prison. The maximum is placement in a juvenile facility until age 18 or 21 depending on the state. If transferred to adult court, all adult sentencing ranges apply. Records can often be expunged at 18, but transfers to adult court and serious adjudications may not be eligible for expungement and can follow the person into adulthood.",
+    sources: [
+      { citation: "Cal. Welf. & Inst. Code § 602 (juvenile court jurisdiction); § 707 (transfer hearing)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=707." },
+      { citation: "N.Y. Family Court Act art. 3 (juvenile delinquency; § 301.2 definitions); Raise the Age framework", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/FCT/301.2" },
+      { citation: "Fla. Stat. § 985.556 (waiver); § 985.557 (prosecutor direct file)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/985.556" },
+      { citation: "Va. Code Ann. § 16.1-269.1 (transfer to circuit court)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/16.1-269.1/" },
+      { citation: "Ohio Rev. Code §§ 2152.10, 2152.12 (mandatory and discretionary transfer)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2152.12" },
+      { citation: "705 ILCS 405/5-805 (transfer of jurisdiction); 405/5-120 (delinquency jurisdiction)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/070504050K5-805.htm" },
+      { citation: "O.C.G.A. § 15-11-560 et seq. (superior court jurisdiction and transfer)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-15-courts/ga-code-sect-15-11-560/" },
+      { citation: "N.C. Gen. Stat. § 7B-2200 (transfer of jurisdiction to superior court)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_7B/GS_7B-2200.html" },
+      { citation: "N.J.S.A. 2A:4A-26.1 (waiver of jurisdiction to adult court)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2a-administration-of-civil-and-criminal-justice/nj-st-sect-2a-4a-26-1/" },
+      { citation: "A.R.S. § 13-501 (juveniles prosecuted as adults); § 8-327 (transfer hearing)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-501/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge. Not verified against specific state statutes. Not reviewed by a licensed criminal defense attorney. Key risk areas: (1) the age cutoff for juvenile court jurisdiction varies by state (some states set it at 17, others at 18) and changes frequently — verify the entry doesn't imply a universal rule; (2) automatic transfer ('direct file') for serious charges vs. discretionary waiver is a critical distinction not made clear in this entry; (3) the statement that records 'can often' be expunged is imprecise — expungement eligibility is highly state-specific; (4) the entry doesn't mention that some states allow prosecutors to 'direct file' in adult court for certain offenses without a transfer hearing; (5) sex offense adjudications often require registration even from juvenile court. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions' juvenile jurisdiction and transfer statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Sourcing confirmed the transfer-mechanism split across anchors: FL is the standout — prosecutors may 'direct file' many cases in adult court without any judicial hearing (§ 985.557); AZ similarly gives prosecutors charging discretion and mandates adult prosecution for some 15-17-year-old offenses (§ 13-501); CA moved the opposite direction — after Prop 57 (2016) only a judge may order transfer, prosecutors cannot direct file (Welf. & Inst. § 707); OH has both mandatory and discretionary judicial transfer (§ 2152.12); NY handles 16-17-year-olds through a Youth Part of adult court under Raise the Age rather than classic waiver. Juvenile jurisdiction age ceilings also vary (GA and TX-style age-16 cutoffs vs. 17 in most anchors), so the entry correctly avoids a universal rule. Remaining risk areas: (1) expungement/sealing eligibility is highly state-specific; (2) juvenile sex-offense adjudications can trigger registration; (3) direct-file vs. waiver distinction should be surfaced to advocates per-state via the jurisdiction overlay. See docs/attorney-review-charge-explanations.md.",
   },
   // ── California Check Fraud ─────────────────────────────────────────────────
   // Based on CALCRIM No. 1970 (Cal. Penal Code § 476a) and Cal. Penal Code § 476.
@@ -3434,10 +3575,22 @@ export const chargeExplanations: ChargeExplanation[] = [
       }
     ],
     degreeContext: "Check fraud under § 476a is a 'wobbler': charged as a misdemeanor it carries up to one year in county jail; as a felony, up to three years in county jail (under California's realignment). Prosecutors weigh the dollar amount of the check, whether there was a pattern of multiple bad checks, and your prior criminal record. Checks over $950 and repeat offenses are significantly more likely to be filed as felonies. Diversion programs and civil compromise (repaying what's owed) are sometimes available for first-time offenders. The forgery variant under § 476 carries the same sentencing range but is more seriously viewed because it involves deliberate falsification rather than an account with no money.",
+    sources: [
+      { citation: "Cal. Penal Code § 476a (insufficient funds); § 476 (fictitious/forged checks)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=476a." },
+      { citation: "N.Y. Penal Law § 190.05 (issuing a bad check)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/190.05" },
+      { citation: "Fla. Stat. § 832.05 (worthless checks)", jurisdiction: "FL", url: "https://www.flsenate.gov/Laws/Statutes/2024/832.05" },
+      { citation: "Va. Code Ann. § 18.2-181 (bad checks)", jurisdiction: "VA", url: "https://law.lis.virginia.gov/vacode/18.2-181/" },
+      { citation: "Ohio Rev. Code § 2913.11 (passing bad checks)", jurisdiction: "OH", url: "https://codes.ohio.gov/ohio-revised-code/section-2913.11" },
+      { citation: "720 ILCS 5/17-1(B) (deceptive practices — bad checks)", jurisdiction: "IL", url: "https://www.ilga.gov/legislation/ilcs/documents/072000050K17-1.htm" },
+      { citation: "O.C.G.A. § 16-9-20 (deposit account fraud)", jurisdiction: "GA", url: "https://codes.findlaw.com/ga/title-16-crimes-and-offenses/ga-code-sect-16-9-20/" },
+      { citation: "N.C. Gen. Stat. § 14-107 (worthless checks)", jurisdiction: "NC", url: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-107.html" },
+      { citation: "N.J.S.A. 2C:21-5 (bad checks)", jurisdiction: "NJ", url: "https://codes.findlaw.com/nj/title-2c-the-new-jersey-code-of-criminal-justice/nj-st-sect-2c-21-5/" },
+      { citation: "A.R.S. § 13-1807 (issuing a bad check)", jurisdiction: "AZ", url: "https://codes.findlaw.com/az/title-13-criminal-code/az-rev-st-sect-13-1807/" }
+    ],
     pendingAttorneyReview: true,
-    dataConfidence: "low",
+    dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge and California-specific pattern jury instructions (CALCRIM No. 1970). Not reviewed by a licensed criminal defense attorney. This entry is California-specific (§§ 476, 476a). Key risk areas: (1) the entry should clearly state it applies only to California — advocates in other states need to look at their state's bad-check or NSF check statute; (2) the Proposition 47 threshold ($950) has been the subject of ongoing litigation and ballot-measure challenges — verify it is still current; (3) civil compromise availability (Penal Code § 1377) has been narrowed by case law and should be verified; (4) the entry doesn't address the 'make good' letter and 30-day cure period that some California prosecutors require before filing. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge and California-specific pattern jury instructions (CALCRIM No. 1970); now sourced against the 10 anchor jurisdictions' bad-check statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. The plainSummary/keyTerms/degreeContext text remains California-specific (§§ 476, 476a) — advocates in other anchor states should rely on the cited statute for their state: every anchor criminalizes knowingly passing a check without sufficient funds, but grading differs (NY § 190.05 is a flat class B misdemeanor; FL § 832.05 escalates at $150; VA § 18.2-181 becomes felony larceny at $1,000; OH § 2913.11 escalates at $1,000/$7,500/$150,000; GA § 16-9-20 and NC § 14-107 grade by amount with low-value misdemeanors; NJ 2C:21-5 grades from disorderly-persons up at $200/$1,000/$75,000; AZ § 13-1807 is a class 1 misdemeanor, felony at $5,000+ if restitution unpaid; IL grades under its general deceptive-practices ladder). Several anchors (FL, VA, NC, GA) build in statutory notice/cure presumptions similar to California's 'make good' practice. Key remaining risk areas: (1) the entry should clearly state its narrative applies only to California (separate task exists for that display issue); (2) the Prop 47 $950 threshold should be re-verified against post-2024 amendments (Prop 36 (2024) added repeat-theft carve-outs); (3) civil compromise (Pen. § 1377) availability has been narrowed by case law; (4) the CA 'make good' letter/cure practice is not addressed in the entry text. See docs/attorney-review-charge-explanations.md.",
   }
 ];
 
