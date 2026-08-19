@@ -729,6 +729,11 @@ function YourChargesSection({
       instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
       instructionUrl: dbCharge ? getInstructionUrl(dbCharge) : undefined,
       instructionPaywall: dbCharge ? getInstructionPaywall(dbCharge) : undefined,
+      /** True when the plain-language explanation itself is pending attorney review.
+       *  Driven by explanation.pendingAttorneyReview — an explicit per-entry flag
+       *  distinct from dataConfidence (which reflects statutory-source quality and
+       *  can be 'high' even while attorney review is still pending). */
+      explanationPendingReview: explanation?.pendingAttorneyReview === true,
     };
   });
 
@@ -770,6 +775,21 @@ function YourChargesSection({
                 {charge.classification}
               </Badge>
             </div>
+
+            {/* Pending-review warning — shown when explanation.pendingAttorneyReview is true.
+                Uses the translation system so the warning is readable in the advocate's
+                selected language (English, Spanish, or Chinese). */}
+            {charge.explanationPendingReview && (
+              <div className="flex items-start gap-2 p-2.5 rounded-md bg-amber-50 border border-amber-200 dark:bg-amber-950/30 dark:border-amber-800">
+                <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                <p className="text-xs text-amber-800 dark:text-amber-300 leading-snug">
+                  <span className="font-semibold">
+                    {t('guidance.yourCharges.pendingReviewWarning.title', 'Not yet attorney-reviewed.')}
+                  </span>{" "}
+                  {t('guidance.yourCharges.pendingReviewWarning.body', 'This explanation is a general starting point only. Verify specifics with a licensed criminal defense attorney before relying on it.')}
+                </p>
+              </div>
+            )}
 
             {/* Plain Summary - use explanation or fallback */}
             <p className="text-sm text-foreground leading-relaxed">

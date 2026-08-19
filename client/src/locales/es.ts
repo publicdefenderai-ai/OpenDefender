@@ -5111,6 +5111,14 @@ export default {
       }
     }
   },
+  "guidance": {
+    "yourCharges": {
+      "pendingReviewWarning": {
+        "title": "Aún no revisado por un abogado.",
+        "body": "Esta explicación es solo un punto de partida general. Verifique los detalles con un abogado defensor penal autorizado antes de depender de ella."
+      }
+    }
+  },
   "chat": {
   "openChat": "Abrir chat de orientación legal",
   "progress": {

@@ -5109,6 +5109,14 @@ export default {
       }
     }
   },
+  "guidance": {
+    "yourCharges": {
+      "pendingReviewWarning": {
+        "title": "Not yet attorney-reviewed.",
+        "body": "This explanation is a general starting point only. Verify specifics with a licensed criminal defense attorney before relying on it."
+      }
+    }
+  },
   "chat": {
   "openChat": "Open case support chat",
   "progress": {

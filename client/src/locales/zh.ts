@@ -5111,6 +5111,14 @@ export default {
       }
     }
   },
+  "guidance": {
+    "yourCharges": {
+      "pendingReviewWarning": {
+        "title": "尚未经律师审查。",
+        "body": "此说明仅作为一般起点。在依赖此内容之前，请向持牌刑事辩护律师核实具体内容。"
+      }
+    }
+  },
   "chat": {
     "openChat": "打开法律指导对话",
     "progress": {

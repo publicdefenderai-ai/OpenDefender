@@ -374,6 +374,8 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     documentsSubtitle: 'Estos documentos son importantes para su etapa actual del proceso legal.',
     documentName: 'Documento',
     documentDescription: 'Para Qué Sirve',
+    /** Shown before charge explanations flagged pendingAttorneyReview: true */
+    pendingReviewWarning: '⚠ Nota: Esta explicación aún no ha sido revisada por un abogado defensor penal autorizado. Trátela solo como un punto de partida general.',
   } : {
     title: 'Your Case Roadmap',
     generated: 'Generated',
@@ -428,7 +430,15 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     documentsSubtitle: 'These documents are important for your current stage in the legal process.',
     documentName: 'Document',
     documentDescription: 'What It\'s For',
+    /** Shown before charge explanations flagged pendingAttorneyReview: true */
+    pendingReviewWarning: '⚠ Note: This explanation has not yet been reviewed by a licensed criminal defense attorney. Treat it as a general starting point only.',
   };
+
+  // Chinese requires a separate override for the pending-review warning because
+  // the labels object above only branches on Spanish vs. English.
+  const pendingReviewWarningLocalized: string = isChinese
+    ? '⚠ 注意：此说明尚未经持牌刑事辩护律师审查。请仅将其视为一般起点。'
+    : labels.pendingReviewWarning;
 
   // Helper function to add text with word wrap
   const addText = (text: string, x: number, y: number, options?: any) => {
@@ -580,6 +590,24 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setFontSize(10);
       doc.setFont(FONT_NAME, 'normal');
       doc.setTextColor(0, 0, 0);
+
+      // Pending-review notice — driven by explanation.pendingAttorneyReview, an explicit
+      // per-entry flag. Distinct from dataConfidence: a sourced entry can have
+      // dataConfidence: 'high' and still be pending attorney review, so gating on
+      // dataConfidence alone would silently omit the warning for those three entries.
+      if (explanation?.pendingAttorneyReview === true) {
+        checkPageBreak(15);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(180, 100, 0); // amber
+        yPosition = addText(
+          pendingReviewWarningLocalized,
+          margin + 5,
+          yPosition
+        );
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
 
       if (explanation?.plainSummary) {
         yPosition = addText(explanation.plainSummary, margin + 5, yPosition);
