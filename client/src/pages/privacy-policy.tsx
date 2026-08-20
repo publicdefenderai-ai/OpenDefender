@@ -6,6 +6,8 @@ import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
 import { privacySupplementCopy } from "./privacy-supplement-copy";
 
+const ANTHROPIC_COMMERCIAL_TERMS_URL = "https://www.anthropic.com/legal/commercial-terms";
+
 export default function PrivacyPolicy() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
@@ -302,7 +304,18 @@ export default function PrivacyPolicy() {
                     {t('privacyPolicy.technical.external.description')}
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-muted-foreground ml-2">
-                    <li>{t('privacyPolicy.technical.external.services.anthropic')}</li>
+                    <li>
+                      {t('privacyPolicy.technical.external.services.anthropic')}
+                      <a
+                        href={ANTHROPIC_COMMERCIAL_TERMS_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline underline-offset-2"
+                      >
+                        {t('privacyPolicy.technical.external.services.anthropicTermsLink')}
+                      </a>
+                      {t('privacyPolicy.technical.external.services.anthropicTermsSuffix')}
+                    </li>
                     <li>{t('privacyPolicy.technical.external.services.govInfo')}</li>
                     <li>{t('privacyPolicy.technical.external.services.courtListener')}</li>
                     <li>{t('privacyPolicy.technical.external.services.recap')}</li>
@@ -415,7 +428,18 @@ export default function PrivacyPolicy() {
                 </table>
               </CardContent>
             </Card>
-            <p className="text-xs text-muted-foreground mt-3 leading-relaxed">{copy.inventory.terms}</p>
+            <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
+              {copy.inventory.termsBeforeLink}
+              <a
+                href={ANTHROPIC_COMMERCIAL_TERMS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2"
+              >
+                {copy.inventory.termsLink}
+              </a>
+              {copy.inventory.termsAfterLink}
+            </p>
           </div>
         </ScrollReveal>
 

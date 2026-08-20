@@ -315,10 +315,7 @@ export default {
   },
   "disclosure": {
     "label": "Información legal importante",
-    "summary": "OpenDefender ofrece información educativa general basada en fuentes legales públicas, datos seleccionados y, a veces, texto generado por IA; no es asesoramiento legal. La información puede estar incompleta, estimada o desactualizada. Verifique detalles, plazos y citas importantes con un abogado o una fuente oficial.",
-    "fullNotice": "Aviso completo",
-    "sources": "Fuentes",
-    "privacy": "Privacidad"
+    "summary": "OpenDefender ofrece información educativa general basada en fuentes legales públicas, datos seleccionados y, a veces, texto generado por IA; no es asesoramiento legal. La información puede estar incompleta, estimada o desactualizada. Verifique detalles, plazos y citas importantes con un abogado o una fuente oficial."
   },
   "footer": {
     "tagline": "Expandiendo el acceso a la justicia a través de orientación legal y recursos impulsados por IA.",
@@ -340,7 +337,6 @@ export default {
     "ourMission": "Nuestra Misión",
     "developmentRoadmap": "Hoja de Ruta de Desarrollo",
     "privacyPolicy": "Política de Privacidad",
-    "termsOfService": "Términos de Servicio",
     "noticeDisclaimers": "Avisos y Exenciones",
     "rightToCounsel": "Derecho a un Abogado",
     "forDevelopers": "Para Desarrolladores",
@@ -4931,7 +4927,9 @@ export default {
         "title": "Fuentes de Datos Externas",
         "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - usado en la Hoja de Ruta y chat, resumen y preguntas de documentos, cartas, redacción y resumen para abogados, y Pulido con IA. Intentamos ocultar identificadores, sin garantizar que se detecte todo. Bajo los términos comerciales estándar de Anthropic, las entradas pueden retenerse hasta 30 días por operación y seguridad y no se usan para entrenar por defecto. No afirmamos que se aplique retención cero.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 — usado en la Hoja de Ruta y chat, resumen y preguntas de documentos, cartas, redacción y resumen para abogados, y Pulido con IA. Cuando está disponible, OpenDefender usa redacción automática antes del procesamiento por IA para eliminar identificadores comunes. Puede omitir información sensible; no envíe datos personales o confidenciales innecesarios. Bajo los términos comerciales estándar de Anthropic, las entradas pueden retenerse hasta 30 días por operación y seguridad y no se usan para entrenar por defecto. Consulte ",
+          "anthropicTermsLink": "las condiciones comerciales de Anthropic",
+          "anthropicTermsSuffix": " para obtener más información sobre su retención de datos.",
           "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
           "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
           "recap": "Archivo RECAP - para documentos judiciales federales",
@@ -5611,11 +5609,6 @@ export default {
     "attestation1": "Soy un abogado con licencia en buena posición con mi colegio de abogados estatal, y estoy accediendo a estas herramientas en nombre de un cliente que represento.",
     "attestation2": "Estoy accediendo a estas herramientas en nombre de un cliente que represento.",
     "attestation3": "Entiendo que las protecciones del privilegio abogado-cliente dependen del uso adecuado de estas herramientas.",
-    "attestation4": "Acepto los",
-    "termsOfService": "Términos de Servicio",
-    "tosTitle": "Términos de Servicio de Herramientas para Abogados",
-    "tosSubtitle": "Por favor revise antes de aceptar.",
-    "tosContent": "Al usar estas herramientas para abogados, usted reconoce y acepta lo siguiente:",
     "privacyNotice": "Los registros de la sesión de abogado se guardan en memoria y normalmente caducan en 1 hora o al reiniciar. La retención de IA se explica en la Política de Privacidad.",
     "verifying": "Verificando...",
     "submit": "Verificar y Continuar"

@@ -19,6 +19,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { SiteSearch } from "@/components/search/site-search";
+import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -397,6 +398,7 @@ export default function Home() {
         </div>
       </section>
 
+      <DisclosureNotice />
       <Footer />
 
       {/* Urgent Help Modal */}

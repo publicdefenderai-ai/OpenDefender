@@ -315,10 +315,7 @@ export default {
   },
   "disclosure": {
     "label": "重要法律信息",
-    "summary": "OpenDefender 提供来自公共法律来源、精选数据集以及部分 AI 生成文字的一般教育信息，并非法律建议。信息可能不完整、属于估算或已过时。请向律师或官方来源核实重要细节、截止日期和引证。",
-    "fullNotice": "完整通知",
-    "sources": "来源",
-    "privacy": "隐私"
+    "summary": "OpenDefender 提供来自公共法律来源、精选数据集以及部分 AI 生成文字的一般教育信息，并非法律建议。信息可能不完整、属于估算或已过时。请向律师或官方来源核实重要细节、截止日期和引证。"
   },
   "footer": {
     "tagline": "通过AI驱动的法律指导和资源，扩大司法公正的覆盖面。",
@@ -340,7 +337,6 @@ export default {
     "ourMission": "我们的使命",
     "developmentRoadmap": "开发路线图",
     "privacyPolicy": "隐私政策",
-    "termsOfService": "服务条款",
     "noticeDisclaimers": "通知与免责声明",
     "rightToCounsel": "获得律师的权利",
     "forDevelopers": "开发者资源",
@@ -4931,7 +4927,9 @@ export default {
         "title": "外部数据源",
         "description": "我们的平台访问公共法律数据库和服务来为您提供信息：",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - 用于案件路线图与聊天、文件摘要与问答、信函、律师草拟与摘要以及 AI 润色。我们会尝试遮盖常见身份信息，但不能保证全部检出。按 Anthropic 标准商业 API 条款，输入可能出于运营和安全目的保留最多30天，默认不用于模型训练。我们不声称适用零数据保留。",
+          "anthropic": "Anthropic Claude Sonnet 4.6 — 用于案件路线图与聊天、文件摘要与问答、信函、律师草拟与摘要以及 AI 润色。在可用的情况下，OpenDefender 会在 AI 处理前使用自动遮盖来移除常见身份信息。自动遮盖可能遗漏敏感信息；请不要提交不必要的个人或机密信息。按 Anthropic 标准商业 API 条款，输入可能出于运营和安全目的保留最多30天，默认不用于模型训练。请参阅 ",
+          "anthropicTermsLink": "Anthropic 的商业 API 条款",
+          "anthropicTermsSuffix": "，了解其数据保留的更多信息。",
           "govInfo": "GovInfo.gov API - 用于联邦刑事法规（美国法典第18编）",
           "courtListener": "CourtListener API - 用于判例法和法院数据",
           "recap": "RECAP Archive - 用于联邦法院文件",
@@ -5611,11 +5609,6 @@ export default {
       "attestation1": "我是一名持有有效执照的律师，目前在州律师协会中信誉良好，我正在代表我的客户使用这些工具。",
       "attestation2": "我正在代表我的客户使用这些工具。",
       "attestation3": "我理解律师-客户保密特权的保护取决于对这些工具的正确使用。",
-      "attestation4": "我接受",
-      "termsOfService": "服务条款",
-      "tosTitle": "律师工具服务条款",
-      "tosSubtitle": "请在接受前仔细阅读。",
-      "tosContent": "使用这些律师工具即表示您确认并同意以下内容：",
       "privacyNotice": "律师会话记录保存在服务器内存中，通常在1小时后或服务重启时清除。AI 提供商保留期限详见隐私政策。",
       "verifying": "正在验证……",
       "submit": "验证并继续"

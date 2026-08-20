@@ -12,7 +12,7 @@
     "start": "NODE_ENV=production node dist/index.js",
     "start:release-check": "node scripts/release-check/start-production.mjs",
     "check": "tsc",
-    "audit:dependencies": "npm audit --audit-level=high",
+    "audit:dependencies": "npm audit --omit=dev --audit-level=moderate",
     "release:verify": "npm run check && npm run audit:dependencies && npm run build && npm run test:e2e:release",
     "db:push": "drizzle-kit push",
     "review:detention": "tsx scripts/data-review/check-detention-facilities.ts",
@@ -73,6 +73,7 @@
     "cors": "^2.8.6",
     "date-fns": "^3.6.0",
     "docx": "^9.5.1",
+    "dompurify": "^3.4.14",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "drizzle-zod": "^0.7.0",
@@ -153,6 +154,7 @@
   "overrides": {
     "postcss": {
       "nanoid": "^3.3.17"
-    }
+    },
+    "dompurify": "$dompurify"
   }
 }

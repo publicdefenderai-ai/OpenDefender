@@ -18,8 +18,8 @@ export const attestationsSchema = z.object({
   understandsPrivilegeRequirements: z.literal(true, {
     errorMap: () => ({ message: "You must attest that you understand privilege requirements" })
   }),
-  acceptsTermsOfService: z.literal(true, {
-    errorMap: () => ({ message: "You must accept the Terms of Service" })
+  acceptsDisclosures: z.literal(true, {
+    errorMap: () => ({ message: "You must acknowledge the Notice & Disclosures" })
   }),
 });
 

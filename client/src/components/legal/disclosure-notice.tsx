@@ -1,6 +1,5 @@
 import { AlertTriangle } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { Link } from "wouter";
 
 type DisclosureNoticeProps = {
   className?: string;
@@ -19,18 +18,7 @@ export function DisclosureNotice({ className = "", compact = false }: Disclosure
       <div className={`mx-auto flex max-w-7xl items-start gap-2 px-4 ${compact ? "py-2" : "py-3"}`}>
         <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0 text-amber-700 dark:text-amber-400" aria-hidden="true" />
         <p className="text-xs leading-relaxed sm:text-sm">
-          {t("disclosure.summary")}{" "}
-          <Link href="/disclaimers" className="font-semibold underline underline-offset-2">
-            {t("disclosure.fullNotice")}
-          </Link>
-          {" · "}
-          <Link href="/data-sources" className="font-semibold underline underline-offset-2">
-            {t("disclosure.sources")}
-          </Link>
-          {" · "}
-          <Link href="/privacy-policy" className="font-semibold underline underline-offset-2">
-            {t("disclosure.privacy")}
-          </Link>
+          {t("disclosure.summary")}
         </p>
       </div>
     </aside>

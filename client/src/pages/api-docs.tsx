@@ -4,7 +4,6 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -288,8 +287,6 @@ export default function ApiDocs() {
             Free, open access to legal information and resources. Integrate our datasets into your applications 
             to help more people access legal guidance.
           </p>
-
-          <DisclosureNotice compact className="mb-6 rounded-lg border" />
 
           <p className="text-sm text-muted-foreground mb-6">
             The current <code className="bg-muted px-1 rounded">/charges</code> dataset contains 7,155 curated or synthesized entries across 57 jurisdiction codes. Verify important details against official sources.

@@ -504,9 +504,6 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                       <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="underline">
                         {t('privacyPolicy.documentSummarizer.tool.privacyLink')}
                       </a>{" · "}
-                      <a href="/terms" target="_blank" rel="noopener noreferrer" className="underline">
-                        {t('privacyPolicy.documentSummarizer.tool.termsLink')}
-                      </a>{" · "}
                       <a href="/disclaimers" target="_blank" rel="noopener noreferrer" className="underline">
                         {t('privacyPolicy.documentSummarizer.tool.disclosureLink')}
                       </a>

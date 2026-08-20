@@ -8,7 +8,6 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { DocumentSummarizer } from "@/components/document-summarizer";
-import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 
 export default function DocumentSummarizerPage() {
   useScrollToTop();
@@ -45,7 +44,6 @@ export default function DocumentSummarizerPage() {
       {/* Main Content */}
       <section className="py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <DisclosureNotice compact className="mb-6 rounded-lg border" />
           {/* Back Button */}
           <div className="mb-6">
             <Link href="/legal-aid">
