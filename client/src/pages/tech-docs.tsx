@@ -293,7 +293,7 @@ const contentPages = [
       },
       {
         route: "/for-advocates/mitigation-builder",
-        title: "Mitigation Memo — AI Polish",
+        title: "Mitigation Memo: AI Polish",
         description: "Optional action that sends populated mitigation fields to Claude to produce a narrative draft. The core builder and .docx export remain client-side.",
       },
       {
@@ -645,7 +645,7 @@ export default function TechDocs() {
                   <code className="bg-muted px-1 rounded text-xs">shared/legal-documents.ts</code>. Includes a progress indicator and a typing indicator for pacing.
                 </p>
                 <p>
-                  Like the Case Roadmap, this is an orientation and routing tool — not a legal advice interface. Case records are held in server memory and generally expire within 24 hours or on service restart.
+                  Like the Case Roadmap, this is an orientation and routing tool, not a legal advice interface. Case records are held in server memory and generally expire within 24 hours or on service restart.
                 </p>
               </CardContent>
             </Card>
@@ -896,16 +896,16 @@ export default function TechDocs() {
               <CardContent className="text-sm text-muted-foreground space-y-2">
                 <p>The platform is designed for users in legal distress who may be at risk. It minimizes data but still uses an essential session cookie, temporary in-memory records, standard operational logs, and disclosed third-party processors.</p>
                 <ul className="space-y-1 list-none">
-                  <li>— Case and feedback records are held in server memory and generally expire within 24 hours; guidance responses may be cached in memory for about 15 minutes</li>
-                  <li>— Some consent and audit metadata may remain in memory until service restart; infrastructure providers may retain operational logs</li>
-                  <li>— Anthropic may retain AI inputs and outputs for up to 30 days under its standard commercial API terms</li>
-                  <li>— No analytics identifiers or fingerprinting</li>
-                  <li>— An essential <code className="bg-muted px-1 rounded text-xs">od.sid</code> cookie, normally valid for 24 hours, provides session security and record ownership</li>
-                  <li>— Session cache keys are prefixed by session ID to prevent cross-session data leakage</li>
-                  <li>— An NLP-based redactor (<code className="bg-muted px-1 rounded text-xs">compromise.js</code>) attempts to remove common identifiers before AI processing, but automated redaction may miss sensitive details</li>
-                  <li>— CSS color injection uses an allowlist (<code className="bg-muted px-1 rounded text-xs">sanitizeColor()</code>) to prevent XSS</li>
-                  <li>— No test or admin routes exposed in production</li>
-                  <li>— Admin auth requires explicit <code className="bg-muted px-1 rounded text-xs">ADMIN_DISABLE_AUTH=true</code> env var, never gated on <code className="bg-muted px-1 rounded text-xs">NODE_ENV</code></li>
+                  <li>• Case and feedback records are held in server memory and generally expire within 24 hours; guidance responses may be cached in memory for about 15 minutes</li>
+                  <li>• Some consent and audit metadata may remain in memory until service restart; infrastructure providers may retain operational logs</li>
+                  <li>• Anthropic may retain AI inputs and outputs for up to 30 days under its standard commercial API terms</li>
+                  <li>• No analytics identifiers or fingerprinting</li>
+                  <li>• An essential <code className="bg-muted px-1 rounded text-xs">od.sid</code> cookie, normally valid for 24 hours, provides session security and record ownership</li>
+                  <li>• Session cache keys are prefixed by session ID to prevent cross-session data leakage</li>
+                  <li>• An NLP-based redactor (<code className="bg-muted px-1 rounded text-xs">compromise.js</code>) attempts to remove common identifiers before AI processing, but automated redaction may miss sensitive details</li>
+                  <li>• CSS color injection uses an allowlist (<code className="bg-muted px-1 rounded text-xs">sanitizeColor()</code>) to prevent XSS</li>
+                  <li>• No test or admin routes exposed in production</li>
+                  <li>• Admin auth requires explicit <code className="bg-muted px-1 rounded text-xs">ADMIN_DISABLE_AUTH=true</code> env var, never gated on <code className="bg-muted px-1 rounded text-xs">NODE_ENV</code></li>
                 </ul>
               </CardContent>
             </Card>

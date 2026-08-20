@@ -394,7 +394,7 @@ Does the Padilla review auto-flag trigger correctly (for non-citizen status, not
 **Content location:**
 - `client/src/pages/privacy-policy.tsx` — Full privacy policy
 - Key claims to verify:
-  - "Session-only" / "data deleted after session" — verify against the actual lifecycle: an essential 24-hour cookie, temporary in-memory case and feedback records, shorter guidance caching, some metadata that can remain until restart, and provider-specific logs or AI retention.
+  - "Session-only" / "data deleted after session": verify against the actual lifecycle: an essential 24-hour cookie, temporary in-memory case and feedback records, shorter guidance caching, some metadata that can remain until restart, and provider-specific logs or AI retention.
   - Anthropic data retention — currently stated as "up to 30 days" in guidance consent; verify this matches Anthropic's current API terms
   - Third-party data sharing disclosures
 

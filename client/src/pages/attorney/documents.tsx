@@ -48,7 +48,7 @@ function DocumentsContent() {
               )}
             </p>
             <p className="text-sm font-medium text-amber-800 dark:text-amber-300 max-w-2xl mx-auto mt-4">
-              Separate attorney filing drafts — these DOCX documents are not part of a defendant's Case Roadmap, chat guidance, PDF, or print plan.
+              Separate attorney filing drafts: these DOCX documents are not part of a defendant's Case Roadmap, chat guidance, PDF, or print plan.
             </p>
           </motion.div>
         </div>

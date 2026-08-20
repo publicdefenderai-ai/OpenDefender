@@ -313,7 +313,7 @@ export default {
   },
   "disclosure": {
     "label": "Important legal information",
-    "summary": "OpenDefender provides general educational information from public legal sources, curated datasets, and sometimes AI-generated text—not legal advice. Information may be incomplete, estimated, or outdated. Verify important details, deadlines, and citations with an attorney or official source.",
+    "summary": "OpenDefender provides general educational information from public legal sources, curated datasets, and sometimes AI-generated text, not legal advice. Information may be incomplete, estimated, or outdated. Verify important details, deadlines, and citations with an attorney or official source.",
     "fullNotice": "Full notice",
     "sources": "Sources",
     "privacy": "Privacy"
@@ -4832,7 +4832,7 @@ export default {
       },
       "piiRedaction": {
         "title": "Additional safeguard: automated redaction before AI processing",
-        "description": "Before AI processing, we attempt to redact common identifiers such as phone numbers, email addresses, and Social Security numbers. Automated redaction may miss sensitive details, so it is a safeguard—not a guarantee. AI inputs are processed by Anthropic."
+        "description": "Before AI processing, we attempt to redact common identifiers such as phone numbers, email addresses, and Social Security numbers. Automated redaction may miss sensitive details, so it is a safeguard, not a guarantee. AI inputs are processed by Anthropic."
       },
       "autoDelete": {
         "title": "24-hour memory expiration",
