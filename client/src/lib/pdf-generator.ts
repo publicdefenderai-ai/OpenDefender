@@ -2,6 +2,7 @@ import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
+import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
 
 // jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
 // text renders as garbage without an embedded CJK font. This lazily fetches a GB2312-subset
@@ -53,77 +54,7 @@ function stripMd(text: string): string {
     .replace(/_([^_]+)_/g, '$1');        // _italic_
 }
 
-interface ImmediateAction {
-  action: string;
-  urgency: 'urgent' | 'high' | 'medium' | 'low';
-}
-
-interface EnhancedGuidanceData {
-  sessionId: string;
-  overview: string;
-  criticalAlerts: string[];
-  immediateActions: ImmediateAction[];
-  nextSteps: string[];
-  deadlines: Array<{
-    event: string;
-    timeframe: string;
-    description: string;
-    priority: 'critical' | 'important' | 'normal';
-    daysFromNow?: number;
-    isEstimate?: boolean;
-  }>;
-  rights: string[];
-  resources: Array<{
-    type: string;
-    description: string;
-    contact: string;
-    hours?: string;
-    website?: string;
-  }>;
-  warnings: string[];
-  evidenceToGather: string[];
-  courtPreparation: string[];
-  avoidActions: string[];
-  timeline: Array<{
-    stage: string;
-    description: string;
-    timeframe: string;
-    completed: boolean;
-    isEstimate?: boolean;
-  }>;
-  chargeClassifications?: Array<{
-    name: string;
-    classification: string;
-    code: string;
-    /** Verified citation string from getVerifiedCitation(), or null when unverified.
-     *  Populated by the guidance engine (routes.ts). When absent or null, no citation
-     *  parenthetical is shown in the PDF so an unverified code is never printed. */
-    verifiedCitation?: string | null;
-  }>;
-  mockQA?: Array<{
-    question: string;
-    suggestedResponse: string;
-    explanation: string;
-    category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
-  }>;
-  collateralConsequences?: Array<{
-    category: string;
-    consequence: string;
-    timing: string;
-    actionNote: string;
-  }>;
-  uncertainties?: Array<{
-    area: string;
-    note: string;
-  }>;
-  caseData: {
-    jurisdiction: string;
-    charges: string;
-    caseStage: string;
-    custodyStatus: string;
-    hasAttorney: boolean;
-  };
-}
+type EnhancedGuidanceData = GuidanceViewModel;
 
 // Utility function to format charge names in plain English
 const formatChargeName = (name: string): string => {
@@ -277,6 +208,7 @@ function formatSentenceLength(months: number): string {
  * @param language - The language for the PDF (en, es, or zh)
  */
 export async function generateGuidancePDF(guidance: EnhancedGuidanceData, language: string = 'en') {
+  guidance = normalizeGuidance(guidance) as EnhancedGuidanceData;
   const doc = new jsPDF();
   const pageWidth = doc.internal.pageSize.getWidth();
   const margin = 15;
@@ -707,7 +639,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       }
 
       // Separator between charges
-      if (chargeIdx < guidance.chargeClassifications!.length - 1) {
+      if (chargeIdx < guidance.chargeClassifications.length - 1) {
         yPosition += 3;
         doc.setDrawColor(200, 200, 200);
         doc.line(margin, yPosition, pageWidth - margin, yPosition);

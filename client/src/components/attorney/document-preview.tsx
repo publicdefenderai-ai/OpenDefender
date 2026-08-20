@@ -198,6 +198,7 @@ export function DocumentPreview({
             </ul>
             <p className="text-xs text-muted-foreground pt-1 border-t">
               This is a starting draft. You are solely responsible for any document filed with a court. AI-generated drafts must be fully reviewed and edited by the filing attorney before filing.
+              This attorney-filing DOCX is separate from, and does not contain, the defendant Case Roadmap guidance plan.
             </p>
           </div>
 

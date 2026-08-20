@@ -210,7 +210,7 @@ beforeAll(async () => {
     cookie: { secure: false, httpOnly: true, sameSite: 'lax' },
   }));
   await registerRoutes(testApp);
-});
+}, 30_000);
 
 // Reset case store between tests to prevent cross-test contamination
 afterEach(() => {

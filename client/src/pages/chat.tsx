@@ -38,6 +38,8 @@ import { apiRequest } from "@/lib/queryClient";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
 import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-aid-services";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
+import { normalizeGuidance } from "@shared/guidance-view-model";
+import { buildGuidanceChatSummary } from "@shared/guidance-chat-summary";
 
 const US_STATES: Record<string, string> = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -1007,36 +1009,14 @@ export default function ChatPage() {
 
   const handleViewGuidance = useCallback(() => {
     if (!state.guidanceData) return;
-    
-    const data = state.guidanceData;
-    let formattedContent = "";
-    
-    if (data.overview) {
-      formattedContent = `**Overview**\n${data.overview}\n\n`;
-    }
-    
-    if (data.rights && data.rights.length > 0) {
-      formattedContent += `**Your Rights**\n${data.rights.map(r => `• ${r}`).join('\n')}\n\n`;
-    }
-    
-    if (data.nextSteps && data.nextSteps.length > 0) {
-      formattedContent += `**Next Steps**\n${data.nextSteps.map(s => `• ${s}`).join('\n')}\n\n`;
-    }
-    
-    if (data.resources && data.resources.length > 0) {
-      formattedContent += `**Resources**\n${data.resources.map(r => `• ${r.type}: ${r.description}`).join('\n')}`;
-    }
-    
-    // Add personalized practice Q&A if available
-    if (data.mockQA && data.mockQA.length > 0) {
-      formattedContent += `\n\n**${t('mockQA.personalizedTitle', 'Practice Questions for Your Case')}**\n`;
-      formattedContent += `${t('mockQA.sectionSubtitle', 'Questions you may be asked during your proceeding')}\n\n`;
-      data.mockQA.forEach((qa: { question: string; suggestedResponse: string; explanation: string }, index: number) => {
-        formattedContent += `**${index + 1}. ${qa.question}**\n`;
-        formattedContent += `> ${t('mockQA.suggestedResponse', 'Suggested Response')}: "${qa.suggestedResponse}"\n`;
-        formattedContent += `*${qa.explanation}*\n\n`;
-      });
-    }
+    const data = normalizeGuidance(state.guidanceData, {
+      jurisdiction: state.caseInfo.stateName || state.caseInfo.state || 'Unknown',
+      charges: state.caseInfo.chargeNames?.join(', ') || 'Not specified',
+      caseStage: state.caseInfo.courtStage || 'Not specified',
+      custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
+      hasAttorney: state.caseInfo.hasAttorney || false,
+    });
+    let formattedContent = buildGuidanceChatSummary(data);
     
     // Add Documents You Should Have section based on case stage
     const casePhase = mapCaseStageToPhase(state.caseInfo.courtStage || 'just_arrested');
@@ -1122,16 +1102,13 @@ export default function ChatPage() {
       const { generateGuidancePDF } = await import('@/lib/pdf-generator');
       
       // Format guidance data for the full PDF generator
-      const enhancedGuidance = {
-        ...state.guidanceData,
-        caseData: {
-          jurisdiction: state.caseInfo.stateName || state.caseInfo.state || 'Unknown',
-          charges: state.caseInfo.chargeNames?.join(', ') || 'Not specified',
-          caseStage: state.caseInfo.courtStage || 'Not specified',
-          custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
-          hasAttorney: state.caseInfo.hasAttorney || false,
-        },
-      } as any; // Type cast to avoid strict typing issues with guidance data format
+      const enhancedGuidance = normalizeGuidance(state.guidanceData, {
+        jurisdiction: state.caseInfo.stateName || state.caseInfo.state || 'Unknown',
+        charges: state.caseInfo.chargeNames?.join(', ') || 'Not specified',
+        caseStage: state.caseInfo.courtStage || 'Not specified',
+        custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
+        hasAttorney: state.caseInfo.hasAttorney || false,
+      });
       
       await generateGuidancePDF(enhancedGuidance, i18n.language);
       actions.setHasExported(true);

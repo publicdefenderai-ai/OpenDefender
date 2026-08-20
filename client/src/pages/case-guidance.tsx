@@ -34,85 +34,11 @@ import { useLegalGuidance, useAIAvailability } from "@/hooks/use-legal-data";
 import { legalDataApi } from "@/lib/legal-data";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
+import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
 import { useToast } from "@/hooks/use-toast";
 
-interface ImmediateAction {
-  action: string;
-  urgency: 'urgent' | 'high' | 'medium' | 'low';
-}
-
-interface EnhancedGuidanceResult {
-  sessionId: string;
-  overview: string;
-  generatedAt?: string; // ISO timestamp when guidance was generated
-  criticalAlerts: string[];
-  immediateActions: ImmediateAction[];
-  nextSteps: string[];
-  deadlines: Array<{
-    event: string;
-    timeframe: string;
-    description: string;
-    priority: 'critical' | 'important' | 'normal';
-    daysFromNow?: number;
-  }>;
-  rights: string[];
-  resources: Array<{
-    type: string;
-    description: string;
-    contact: string;
-    hours?: string;
-    website?: string;
-  }>;
-  warnings: string[];
-  evidenceToGather: string[];
-  courtPreparation: string[];
-  avoidActions: string[];
-  timeline: Array<{
-    stage: string;
-    description: string;
-    timeframe: string;
-    completed: boolean;
-  }>;
-  validation?: {
-    confidenceScore: number;
-    isValid: boolean;
-    summary: string;
-    checksPerformed: number;
-    checksPassed: number;
-    issues: Array<{
-      type: string;
-      severity: 'error' | 'warning' | 'info';
-      message: string;
-      suggestion?: string;
-    }>;
-  };
-  chargeClassifications?: Array<{
-    name: string;
-    classification: string;
-    code: string;
-  }>;
-  mockQA?: Array<{
-    question: string;
-    suggestedResponse: string;
-    explanation: string;
-    category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
-  }>;
-  collateralConsequences?: Array<{
-    category: string;
-    consequence: string;
-    timing: string;
-    actionNote: string;
-  }>;
-  caseData: {
-    jurisdiction: string;
-    charges: string;
-    caseStage: string;
-    custodyStatus: string;
-    hasAttorney: boolean;
-    selectedConcerns?: string[];
-  };
-}
+type EnhancedGuidanceResult = GuidanceViewModel;
 
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
   const { t } = useTranslation();
@@ -395,27 +321,7 @@ export default function CaseGuidance() {
     legalDataApi.getLegalGuidance(urlSessionId).then((data) => {
       if (data.success && data.guidance) {
         const guidance = data.guidance as any;
-        setGuidanceResult({
-          sessionId: urlSessionId,
-          overview: guidance.overview || '',
-          generatedAt: guidance.generatedAt,
-          criticalAlerts: guidance.criticalAlerts || [],
-          immediateActions: guidance.immediateActions || [],
-          nextSteps: guidance.nextSteps || [],
-          deadlines: guidance.deadlines || [],
-          rights: guidance.rights || [],
-          resources: guidance.resources || [],
-          warnings: guidance.warnings || [],
-          evidenceToGather: guidance.evidenceToGather || [],
-          courtPreparation: guidance.courtPreparation || [],
-          avoidActions: guidance.avoidActions || [],
-          timeline: guidance.timeline || [],
-          validation: guidance.validation,
-          chargeClassifications: guidance.chargeClassifications,
-          mockQA: guidance.mockQA,
-          collateralConsequences: guidance.collateralConsequences,
-          caseData: guidance.caseData || { jurisdiction: '', charges: '', caseStage: '', custodyStatus: '', hasAttorney: false },
-        });
+        setGuidanceResult(normalizeGuidance({ ...guidance, sessionId: urlSessionId }) as EnhancedGuidanceResult);
       }
     }).catch((err: Error & { code?: string }) => {
       if (err.code === 'SESSION_EXPIRED') {
@@ -548,31 +454,13 @@ export default function CaseGuidance() {
         const guidance = result.guidance;
         
         // Build the complete guidance data object synchronously
-        const guidanceData: EnhancedGuidanceResult = {
-          sessionId: result.sessionId,
-          overview: guidance.overview || '',
-          generatedAt: (guidance as unknown as Record<string, unknown>).generatedAt as string | undefined,
-          criticalAlerts: guidance.criticalAlerts || [],
-          immediateActions: guidance.immediateActions || [],
-          nextSteps: guidance.nextSteps || [],
-          deadlines: guidance.deadlines || [],
-          rights: guidance.rights || [],
-          resources: guidance.resources || [],
-          warnings: guidance.warnings || [],
-          evidenceToGather: guidance.evidenceToGather || [],
-          courtPreparation: guidance.courtPreparation || [],
-          avoidActions: guidance.avoidActions || [],
-          timeline: guidance.timeline || [],
-          validation: guidance.validation,
-          chargeClassifications: guidance.chargeClassifications,
-          mockQA: guidance.mockQA,
-          collateralConsequences: guidance.collateralConsequences,
-          uncertainties: (guidance as any).uncertainties,
-          caseData: {
+        const guidanceData = normalizeGuidance(
+          { ...guidance, sessionId: result.sessionId },
+          {
             ...data,
-            charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges
+            charges: Array.isArray(data.charges) ? data.charges.join(', ') : data.charges,
           },
-        };
+        );
         
         // Close the QA flow first
         setShowQAFlow(false);

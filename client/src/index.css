@@ -1359,6 +1359,36 @@ a:focus-visible,
   .print-section {
     padding: 0 !important;
   }
+  .guidance-print-plan {
+    color: #000 !important;
+    background: #fff !important;
+  }
+  .guidance-print-plan header,
+  .guidance-print-plan section,
+  .guidance-print-plan footer {
+    margin-bottom: 1rem;
+  }
+  .guidance-print-plan h1 {
+    font-size: 20pt;
+    font-weight: 700;
+  }
+  .guidance-print-plan h2 {
+    font-size: 13pt;
+    font-weight: 700;
+    border-bottom: 1px solid #999;
+    margin-bottom: 0.35rem;
+  }
+  .guidance-print-plan ul,
+  .guidance-print-plan ol {
+    padding-left: 1.25rem;
+  }
+  .guidance-print-plan li {
+    margin-bottom: 0.25rem;
+  }
+  .guidance-print-plan [data-guidance-section] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
   .quick-ref-card {
     break-inside: avoid;
     page-break-inside: avoid;

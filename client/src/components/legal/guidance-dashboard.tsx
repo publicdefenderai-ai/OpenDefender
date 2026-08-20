@@ -41,7 +41,8 @@ import {
   Activity,
   Loader2,
   Flag,
-  Send
+  Send,
+  Printer
 } from "lucide-react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -61,13 +62,10 @@ import { criminalCharges, getInstructionRef, getInstructionUrl, getInstructionPa
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
+import { GuidancePrintPlan } from "@/components/legal/guidance-print-plan";
 import { getStateCourtInfo, getCourtLocatorUrl } from "@shared/state-court-websites";
 import { BrandShieldIcon } from "@/components/brand-logo";
-
-interface ImmediateAction {
-  action: string;
-  urgency: 'urgent' | 'high' | 'medium' | 'low';
-}
+import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
 
 interface PrecedentCase {
   id: string;
@@ -96,95 +94,7 @@ interface TierValidation {
   }>;
 }
 
-interface EnhancedGuidanceData {
-  sessionId: string;
-  overview: string;
-  generatedAt?: string; // ISO timestamp when guidance was generated
-  criticalAlerts: string[];
-  immediateActions: ImmediateAction[];
-  nextSteps: string[];
-  deadlines: Array<{
-    event: string;
-    timeframe: string;
-    description: string;
-    priority: 'critical' | 'important' | 'normal';
-    daysFromNow?: number;
-    isEstimate?: boolean;
-  }>;
-  rights: string[];
-  resources: Array<{
-    type: string;
-    description: string;
-    contact: string;
-    hours?: string;
-    website?: string;
-  }>;
-  warnings: string[];
-  evidenceToGather: string[];
-  courtPreparation: string[];
-  avoidActions: string[];
-  timeline: Array<{
-    stage: string;
-    description: string;
-    timeframe: string;
-    completed: boolean;
-    isEstimate?: boolean;
-  }>;
-  chargeClassifications?: Array<{
-    id?: string;
-    name: string;
-    classification: string;
-    /**
-     * Internal/legacy statute section number. NOT verified unless dataConfidence is 'high'.
-     * Never display this to users — it may be synthesized. Use the `citation` field on the
-     * CriminalCharge DB entry (via getVerifiedCitation()) for any user-visible statute reference.
-     */
-    code: string;
-  }>;
-  mockQA?: Array<{
-    question: string;
-    suggestedResponse: string;
-    explanation: string;
-    category?: 'identity' | 'charges' | 'circumstances' | 'plea' | 'procedural' | 'general';
-  }>;
-  uncertainties?: Array<{
-    area: string;
-    note: string;
-  }>;
-  dangerFlags?: string[];
-  collateralConsequences?: Array<{
-    category: string;
-    consequence: string;
-    timing: string;
-    actionNote: string;
-  }>;
-  validation?: {
-    confidenceScore: number;
-    isValid: boolean;
-    summary: string;
-    checksPerformed: number;
-    checksPassed: number;
-    issues: Array<{
-      type: string;
-      severity: 'error' | 'warning' | 'info';
-      message: string;
-      suggestion?: string;
-    }>;
-    tiers?: {
-      tier1: TierValidation;
-      tier2?: TierValidation;
-    };
-    precedents?: PrecedentCase[];
-  };
-  caseData: {
-    jurisdiction: string;
-    charges: string;
-    caseStage: string;
-    custodyStatus: string;
-    hasAttorney: boolean;
-    selectedConcerns?: string[];
-  };
-}
+type EnhancedGuidanceData = GuidanceViewModel;
 
 interface GuidanceDashboardProps {
   guidance: EnhancedGuidanceData;
@@ -874,8 +784,8 @@ function YourChargesSection({
             {charge.instructionRef && (
               <JuryInstructionBadge
                 instructionRef={charge.instructionRef}
-                instructionUrl={charge.instructionUrl}
-                instructionPaywall={charge.instructionPaywall}
+                instructionUrl={charge.instructionUrl ?? undefined}
+                instructionPaywall={charge.instructionPaywall ?? undefined}
                 chargeId={charge.id ?? charge.code}
                 dataTestIdPrefix="link-instruction-dashboard"
                 label={t('legalGuidance.qaFlow.caseDetails.juryInstruction')}
@@ -993,6 +903,7 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
 }
 
 export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid, onExport, guidanceMode = 'ai' }: GuidanceDashboardProps) {
+  guidance = normalizeGuidance(guidance);
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const { attemptNavigation } = useNavigationGuard();
@@ -1080,7 +991,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-6">
+    <>
+      <GuidancePrintPlan guidance={guidance} />
+      <div className="max-w-6xl mx-auto p-6 space-y-6 print:hidden">
       {/* Case Summary Header */}
       <Card className="border-l-4 border-l-primary">
         <CardHeader>
@@ -1119,6 +1032,15 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             <div className="flex gap-2 flex-wrap md:flex-nowrap">
               <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
                 {t('legalGuidance.dashboard.close')}
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => window.print()}
+                className="gap-2 flex-1 md:flex-none print:hidden"
+                data-testid="button-print-guidance"
+              >
+                <Printer className="h-4 w-4" />
+                {t('legalGuidance.dashboard.print', 'Print')}
               </Button>
               <Button variant="outline" onClick={handleExportClick} className="gap-2 flex-1 md:flex-none" data-testid="button-export-pdf">
                 <Download className="h-4 w-4" />
@@ -1185,10 +1107,11 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       )}
 
       {/* Urgent Takeaways — AI critical alerts only (time-sensitive, case-specific) */}
-      {guidance.criticalAlerts && guidance.criticalAlerts.length > 0 && (
+      {guidance.criticalAlerts.length > 0 && (
         <Alert
           className="border-amber-300 bg-amber-50 dark:bg-amber-900/20 dark:border-amber-700"
           data-testid="section-critical-alerts"
+          data-guidance-section="criticalAlerts"
         >
           <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
           <AlertDescription className="text-amber-800 dark:text-amber-200">
@@ -1213,7 +1136,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Overview Section */}
       {guidance.overview && (
-        <Card className="border-border">
+        <Card className="border-border" data-guidance-section="overview">
           <CardHeader className="pb-3">
             <div className="flex items-start justify-between gap-4">
               <CardTitle className="flex items-center gap-2 text-foreground">
@@ -1239,10 +1162,12 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       )}
 
       {/* Your Charges Section */}
-      <YourChargesSection
-        chargeClassifications={guidance.chargeClassifications}
-        jurisdiction={guidance.caseData?.jurisdiction}
-      />
+      <div data-guidance-section="charges">
+        <YourChargesSection
+          chargeClassifications={guidance.chargeClassifications}
+          jurisdiction={guidance.caseData?.jurisdiction}
+        />
+      </div>
 
       {/* Local Ordinance Attribution — shown when LOCUS found a relevant municipal ordinance */}
       {guidance.localOrdinance && (
@@ -1403,7 +1328,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
       {/* Immediate Actions Checklist */}
-      <Card className="border-border">
+      <Card className="border-border" data-guidance-section="immediateActions">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-foreground">
@@ -1453,7 +1378,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       </Card>
 
       {/* Enhanced Case Timeline */}
-      <Card className="border-border">
+      <Card className="border-border" data-guidance-section="timeline">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-foreground">
             <Calendar className="h-5 w-5 text-muted-foreground" />
@@ -1554,9 +1479,62 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </CardContent>
       </Card>
 
+      {/* Important Dates — same normalized deadlines used by chat and PDF. */}
+      {guidance.deadlines.length > 0 && (
+        <Card className="border-border" data-guidance-section="deadlines" data-testid="section-deadlines">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <Clock className="h-5 w-5 text-muted-foreground" />
+              {t('legalGuidance.dashboard.importantDates.title', 'Important Dates')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {guidance.deadlines.map((deadline, index) => (
+              <div key={`${deadline.event}-${index}`} className="rounded-lg border border-border p-3" data-testid={`deadline-${index}`}>
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="font-medium text-foreground">{deadline.event}</p>
+                    <p className="text-sm text-muted-foreground mt-1">{deadline.description}</p>
+                  </div>
+                  <Badge
+                    variant={deadline.priority === 'critical' ? 'destructive' : deadline.priority === 'important' ? 'default' : 'outline'}
+                    className="shrink-0"
+                  >
+                    {deadline.isEstimate ? '~' : ''}{deadline.timeframe}
+                  </Badge>
+                </div>
+              </div>
+            ))}
+            <LocalCourtDisclaimer jurisdiction={guidance.caseData.jurisdiction} />
+          </CardContent>
+        </Card>
+      )}
+
+      {/* Your Rights */}
+      {guidance.rights.length > 0 && (
+        <Card className="border-border" data-guidance-section="rights">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <BrandShieldIcon size={20} />
+              {t('legalGuidance.dashboard.yourRights.title')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <ul className="space-y-2">
+              {guidance.rights.map((right, index) => (
+                <li key={index} className="flex items-start gap-2">
+                  <span className="text-muted-foreground mt-1">•</span>
+                  <span className="text-sm text-foreground">{right}</span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      )}
+
       {/* Next Steps */}
       {guidance.nextSteps.length > 0 && (
-        <Card className="border-border">
+        <Card className="border-border" data-guidance-section="nextSteps">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <ArrowRight className="h-5 w-5 text-muted-foreground" />
@@ -1601,37 +1579,6 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Expandable Sections */}
       <div className="grid md:grid-cols-2 gap-6">
-        {/* Your Rights */}
-        <Collapsible defaultOpen>
-          <CollapsibleTrigger asChild>
-            <Card className="cursor-pointer hover:bg-muted/50 border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between text-foreground">
-                  <div className="flex items-center gap-2">
-                    <BrandShieldIcon size={20} />
-                    {t('legalGuidance.dashboard.yourRights.title')}
-                  </div>
-                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
-                </CardTitle>
-              </CardHeader>
-            </Card>
-          </CollapsibleTrigger>
-          <CollapsibleContent>
-            <Card className="mt-2 border-border">
-              <CardContent className="pt-6">
-                <ul className="space-y-2">
-                  {guidance.rights.map((right, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <span className="text-muted-foreground mt-1">•</span>
-                      <span className="text-sm text-foreground">{right}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </CollapsibleContent>
-        </Collapsible>
-
         {/* Local Resources */}
         <Collapsible defaultOpen>
           <CollapsibleTrigger asChild>
@@ -1714,7 +1661,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
         {/* Evidence — Discuss With Attorney */}
         {guidance.evidenceToGather.length > 0 && (
-          <Collapsible defaultOpen>
+          <Collapsible defaultOpen data-guidance-section="evidenceToGather">
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
                 <CardHeader>
@@ -1771,7 +1718,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               <Card className="mt-2">
                 <CardContent className="pt-6 space-y-4">
                   {guidance.warnings.length > 0 && (
-                    <div>
+                    <div data-guidance-section="warnings">
                       {guidance.courtPreparation.length > 0 && (
                         <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Things to Be Aware Of</p>
                       )}
@@ -1786,7 +1733,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     </div>
                   )}
                   {guidance.courtPreparation.length > 0 && (
-                    <div>
+                    <div data-guidance-section="courtPreparation">
                       {guidance.warnings.length > 0 && (
                         <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2 pt-2 border-t border-border">Court Preparation</p>
                       )}
@@ -1808,20 +1755,24 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
         {/* Collateral Consequences */}
         {guidance.collateralConsequences && guidance.collateralConsequences.length > 0 && (
-          <CollateralConsequencesCard items={guidance.collateralConsequences} />
+          <div data-guidance-section="collateralConsequences">
+            <CollateralConsequencesCard items={guidance.collateralConsequences} />
+          </div>
         )}
 
         {/* Personalized Mock Q&A Practice */}
         {guidance.mockQA && guidance.mockQA.length > 0 && (
-          <MockQAList 
-            items={guidance.mockQA}
-            title={t('mockQA.personalizedTitle', 'Practice Questions for Your Case')}
-          />
+          <div data-guidance-section="mockQA">
+            <MockQAList
+              items={guidance.mockQA}
+              title={t('mockQA.personalizedTitle', 'Practice Questions for Your Case')}
+            />
+          </div>
         )}
 
         {/* Actions to Avoid */}
         {guidance.avoidActions.length > 0 && (
-          <Collapsible defaultOpen>
+          <Collapsible defaultOpen data-guidance-section="avoidActions">
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
                 <CardHeader>
@@ -1854,7 +1805,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
         {/* Areas of Uncertainty */}
         {guidance.uncertainties && guidance.uncertainties.length > 0 && (
-          <Collapsible defaultOpen>
+          <Collapsible defaultOpen data-guidance-section="uncertainties">
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50 border-amber-200 dark:border-amber-800" data-testid="collapsible-uncertainties">
                 <CardHeader>
@@ -1887,6 +1838,33 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </Collapsible>
         )}
       </div>
+
+      {/* Generated legal contacts — the same resource records shown in chat and PDF. */}
+      {guidance.resources.length > 0 && (
+        <Card className="border-border" data-guidance-section="resources" data-testid="section-guidance-resources">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-foreground">
+              <Users className="h-5 w-5 text-muted-foreground" />
+              {t('legalGuidance.dashboard.resources.title', 'Legal Resources & Contacts')}
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            {guidance.resources.map((resource, index) => (
+              <div key={`${resource.type}-${index}`} className="rounded-lg border border-border p-3">
+                <p className="font-medium text-foreground">{resource.type}</p>
+                <p className="text-sm text-muted-foreground mt-1">{resource.description}</p>
+                <p className="text-sm mt-2">{resource.contact}</p>
+                {resource.hours && <p className="text-xs text-muted-foreground mt-1">{resource.hours}</p>}
+                {resource.website && (
+                  <a href={resource.website} target="_blank" rel="noopener noreferrer" className="text-sm text-primary underline mt-1 inline-block">
+                    {resource.website}
+                  </a>
+                )}
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      )}
 
       {/* Concern-Based Support Resources */}
       {guidance.caseData?.selectedConcerns && guidance.caseData.selectedConcerns.length > 0 && (
@@ -2146,6 +2124,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-    </div>
+      </div>
+    </>
   );
 }

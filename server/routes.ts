@@ -38,6 +38,18 @@ import { getAICostStatus } from "./services/cost-tracker";
 import { locusSearch, normalizeStateCode } from "./services/locus-lookup";
 import { polishMitigationNarrative, MITIGATION_FIELD_WHITELIST } from "./services/mitigation-polisher";
 import { aiBodySizeLimit, TEN_KB } from "./middleware/ai-body-size";
+import { normalizeGuidance } from "../shared/guidance-view-model";
+
+function guidanceCaseData(caseData: any) {
+  return {
+    jurisdiction: String(caseData.jurisdiction ?? ''),
+    charges: Array.isArray(caseData.charges) ? caseData.charges.join(', ') : String(caseData.charges ?? ''),
+    caseStage: String(caseData.caseStage ?? ''),
+    custodyStatus: String(caseData.custodyStatus ?? ''),
+    hasAttorney: Boolean(caseData.hasAttorney),
+    selectedConcerns: Array.isArray(caseData.selectedConcerns) ? caseData.selectedConcerns : undefined,
+  };
+}
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
@@ -1317,7 +1329,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // (probation status, priors, immigration, dependents, license, subsidized housing) —
       // validated first (extractBackgroundFlags), so an invalid value is dropped and
       // logged rather than reaching the rules engine or the Claude prompt unvalidated.
-      const guidance = await generateLegalGuidance({
+      const guidanceInput = {
         ...validatedData,
         // Normalise blank caseStage (screener export before stage selection) to a safe
         // default so neither the rules engine nor Claude receives an empty string.
@@ -1327,7 +1339,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         caseStageWasBlank: !validatedData.caseStage,
         chargesUnknown: req.body.chargesUnknown === true,
         ...extractBackgroundFlags(req.body),
-      });
+      };
+      const rawGuidance = await generateLegalGuidance(guidanceInput);
+      const guidance = normalizeGuidance({
+        ...rawGuidance,
+        sessionId,
+        generatedAt: new Date().toISOString(),
+      }, guidanceCaseData(guidanceInput));
       
       // C-1: Strip incidentDescription before storing — raw user narrative may
       // contain PII (names, addresses, witnesses) that must not persist even in
@@ -1348,10 +1366,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       // Add generation timestamp to guidance for transparency
-      const guidanceWithTimestamp = {
-        ...(typeof legalCase.guidance === 'object' ? legalCase.guidance : {}),
-        generatedAt: new Date().toISOString()
-      };
+      const guidanceWithTimestamp = normalizeGuidance(legalCase.guidance, guidanceCaseData(guidanceInput));
 
       res.json({ 
         success: true, 
@@ -1465,6 +1480,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidance = { ...guidance, chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined, generatedBy: 'rule-based' };
       }
 
+      guidance = normalizeGuidance({
+        ...guidance,
+        sessionId,
+        generatedAt: new Date().toISOString(),
+      }, guidanceCaseData(caseDataWithFlags));
+
       // C-1: Strip incidentDescription before storing (same fix as non-stream route)
       const { incidentDescription: _droppedStream, ...storableStreamData } = validatedData;
       const legalCase = await storage.createLegalCase({
@@ -1477,10 +1498,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidanceSessionOwners.set(sessionId, req.sessionID);
       }
 
-      const guidanceWithTimestamp = {
-        ...(typeof legalCase.guidance === 'object' ? legalCase.guidance : {}),
-        generatedAt: new Date().toISOString(),
-      };
+      const guidanceWithTimestamp = normalizeGuidance(legalCase.guidance, guidanceCaseData(caseDataWithFlags));
 
       sendEvent({ type: 'complete', success: true, sessionId, guidance: guidanceWithTimestamp });
       res.end();
@@ -1564,12 +1582,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { redactedDetails } = redactCaseDetails(caseDataWithFlags as any);
       const rawGuidance = generateEnhancedGuidance(redactedDetails as any);
 
-      const guidance = {
+      const guidance = normalizeGuidance({
         ...rawGuidance,
         chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined,
         generatedBy: 'rule-based' as const,
+        sessionId,
         generatedAt: new Date().toISOString(),
-      };
+      }, guidanceCaseData(caseDataWithFlags));
 
       res.json({
         success: true,

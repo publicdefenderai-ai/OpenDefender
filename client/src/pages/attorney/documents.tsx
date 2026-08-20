@@ -47,6 +47,9 @@ function DocumentsContent() {
                 "AI-assisted drafting for criminal and immigration matters. Generates professionally structured starting drafts — always verify local rules and standing orders before filing."
               )}
             </p>
+            <p className="text-sm font-medium text-amber-800 dark:text-amber-300 max-w-2xl mx-auto mt-4">
+              Separate attorney filing drafts — these DOCX documents are not part of a defendant's Case Roadmap, chat guidance, PDF, or print plan.
+            </p>
           </motion.div>
         </div>
       </section>

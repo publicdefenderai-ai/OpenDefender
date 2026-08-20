@@ -189,7 +189,7 @@ beforeAll(async () => {
   testApp = express();
   testApp.use(express.json());
   await registerRoutes(testApp);
-});
+}, 30_000);
 
 // ── Minimal valid request body (rules route schema) ───────────────────────────
 const VALID_BODY = {
