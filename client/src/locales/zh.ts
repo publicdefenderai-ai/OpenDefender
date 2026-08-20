@@ -2140,7 +2140,7 @@ export default {
       "title": "了解您的案件路线图",
       "cancel": "取消",
       "stepProgress": "第{{current}}步，共{{total}}步：{{title}}",
-      "privacyNotice": "我们使用会话 Cookie 保障安全。案件记录保存在服务器内存中，通常在24小时内过期。",
+      "privacyNotice": "为保障安全，我们会使用会话 Cookie。案件记录保存在服务器内存中，通常会在24小时内删除。",
       "steps": {
         "consent": "隐私与同意",
         "jurisdiction": "你的州",
@@ -2153,16 +2153,16 @@ export default {
         "title": "您希望如何获取指导？",
         "bullet1Head": "法律信息，非法律建议。",
         "bullet1Body": "我们解释您的权利和预期流程——我们不告诉您该怎么做。如需针对您案件的建议，公设辩护人或法律援助律师是您最好的资源。",
-        "bullet2Head": "隐私优先设计。",
-        "bullet2Body": "您的回答暂存在服务器内存中，而非永久案件数据库。记录通常在24小时内过期，或在服务重启时清除。",
+        "bullet2Head": "从设计之初就保护隐私。",
+        "bullet2Body": "您的回答暂存在服务器内存中，而非永久案件数据库。记录通常会在24小时内删除，或在服务重启时清除。",
         "cardATitle": "AI个性化指导",
         "cardARecommended": "推荐",
         "cardABody": "根据您的具体指控、所在州和案件阶段，生成量身定制的案件路线图。",
         "cardATime": "约需30至60秒。",
-        "cardADisclosure": "您的输入由Anthropic的AI服务处理，可能出于安全和运营目的保留最多30天。不构成律师-委托人关系。",
+        "cardADisclosure": "您的输入由 Anthropic 的 AI 服务处理，出于安全和运营目的，可能会保留最多 30 天。不构成律师与委托人之间的关系。",
         "cardAButton": "继续使用AI指导 →",
         "cardBTitle": "即时指导",
-        "cardBBody": "针对您所在州和指控类型的精选指导——来自我们的法律研究数据库。无需AI。",
+        "cardBBody": "针对您所在州和指控类型的法律指导——内容来自我们的法律研究数据库，不使用 AI。",
         "cardBTime": "即时结果。",
         "cardBButton": "获取即时指导 →",
         "validationLink": "了解我们如何验证AI回答 →",
@@ -2172,9 +2172,9 @@ export default {
         "badgeRules": "规则引擎生成的指导"
       },
       "jurisdiction": {
-        "title": "你的案件在哪个州？",
-        "label": "你的州",
-        "placeholder": "选择你的州...",
+        "title": "您的案件在哪个州？",
+        "label": "您的州",
+        "placeholder": "选择您的州...",
         "states": {
           "AL": "Alabama",
           "AK": "Alaska",
@@ -2233,45 +2233,45 @@ export default {
         "continue": "继续"
       },
       "caseDetails": {
-        "title": "你面临什么指控？",
+        "title": "您面临什么指控？",
         "selectedCharges": "已选择的指控：",
         "filterLabel": "按类别筛选（可选）",
         "filterPlaceholder": "所有类别",
         "allCategories": "所有类别",
         "searchLabel": "搜索指控",
-        "searchPlaceholder": "输入搜索（例如：逃票、醉驾、盗窃...）",
+        "searchPlaceholder": "输入关键词进行搜索（例如：逃票、酒驾、盗窃……）",
         "noResults": "未找到指控。请尝试其他搜索词或类别。",
-        "selectLabel": "选择所有适用于你案件的指控：",
+        "selectLabel": "选择所有适用于您案件的指控：",
         "stateCharges": "州指控",
         "federalCharges": "联邦指控",
-        "showMore": "显示更多{{count}}项指控...",
+        "showMore": "显示另外 {{count}} 项指控……",
         "hasAttorneyLabel": "我已经有律师或公设辩护人",
-        "juryInstruction": "陪审团指令",
-        "juryInstructionTooltip": "这些是陪审团在裁决您的案件时必须遵循的确切法律标准。它们说明了检察官对每项指控必须证明的内容。",
-        "juryInstructionAriaLabel": "什么是陪审团指令？",
+        "juryInstruction": "陪审团指示",
+        "juryInstructionTooltip": "这些是陪审团审理您的案件时必须遵循的具体法律标准，说明检察官必须为每项指控证明哪些事实。",
+        "juryInstructionAriaLabel": "什么是陪审团指示？",
         "back": "返回",
         "continue": "继续"
       },
       "status": {
         "title": "当前状态",
-        "caseStageLabel": "你的案件处于哪个阶段？",
+        "caseStageLabel": "您的案件处于哪个阶段？",
         "caseStageplaceholder": "选择当前阶段...",
         "stages": {
-          "arrest": "刚被逮捕 / 调查阶段",
-          "arraignment": "提审已安排/已完成",
+          "arrest": "刚被逮捕／正在接受调查",
+          "arraignment": "提审已安排或已完成",
           "pretrial": "审前程序",
-          "trial": "审判已安排/进行中",
+          "trial": "审判已安排或正在进行",
           "sentencing": "量刑阶段",
           "appeal": "上诉程序",
           "unsure": "不确定"
         },
-        "custodyLabel": "你目前是否被拘留？",
-        "custodyPlaceholder": "选择拘留状态...",
+        "custodyLabel": "您目前是否被拘留？",
+        "custodyPlaceholder": "选择您的拘留状态...",
         "custodyOptions": {
           "yes": "是的，正在被拘留",
-          "bail": "已缴纳保释金释放",
-          "recognizance": "自行具结释放（无需保释金）",
-          "no": "不，未被拘留",
+          "bail": "缴纳保释金后获释",
+          "recognizance": "具结释放（无需缴纳保释金）",
+          "no": "没有，我未被拘留",
           "unsure": "我不确定"
         },
         "back": "返回",
@@ -2280,10 +2280,10 @@ export default {
       },
       "additionalDetails": {
         "title": "补充信息（可选）",
-        "description": "你提供的细节越多，我们的AI就能为你的具体情况提供越好的指导。所有字段都是可选的——你可以跳过不想回答的问题。",
-        "incidentLabel": "发生了什么？用你自己的话描述事件经过",
-        "incidentPlaceholder": "例如：我下班开车回家时被警察拦下了。他们说我在左右摇晃，但我只是为了避开一个坑洞才转了一下方向...",
-        "concernsLabel": "你最担心什么？",
+        "description": "您提供的细节越多，AI 就越能为您的具体情况提供有针对性的指导。所有字段均为可选，您可以跳过任何不愿回答的问题。",
+        "incidentLabel": "发生了什么？请用您自己的话描述事件经过",
+        "incidentPlaceholder": "例如：我下班开车回家时被警察拦下了。他们说我开车摇摆不定，但我只是为了躲开一个坑洼才打了一下方向盘……",
+        "concernsLabel": "您最担心什么？",
         "concernsSubtitle": "选择所有适用的选项。这有助于我们提供相关资源。",
         "concernsCategories": {
           "employment": {
@@ -2292,11 +2292,11 @@ export default {
           },
           "childcare": {
             "label": "儿童照顾",
-            "description": "监护权问题、儿童福利介入"
+            "description": "监护权问题、儿童福利机构介入"
           },
           "familyCare": {
             "label": "家庭照顾",
-            "description": "照顾年迈父母或家属"
+            "description": "照顾年迈父母或受扶养人"
           },
           "housing": {
             "label": "住房",
@@ -2308,11 +2308,11 @@ export default {
           },
           "transportation": {
             "label": "交通",
-            "description": "驾照暂停、上班或上庭出行"
+            "description": "驾照被暂停、上班或上庭出行"
           },
           "mentalHealth": {
             "label": "心理健康与治疗",
-            "description": "药物治疗、心理健康咨询和支持"
+            "description": "成瘾治疗、心理健康咨询和压力支持"
           },
           "personalHealth": {
             "label": "个人健康",
@@ -2320,26 +2320,26 @@ export default {
           },
           "immigration": {
             "label": "移民身份",
-            "description": "签证、绿卡、驱逐出境担忧"
+            "description": "签证、绿卡以及对被驱逐出境的担忧"
           },
           "reputation": {
             "label": "名誉",
-            "description": "公开记录、社会或职业影响"
+            "description": "公开记录、社会或职业方面的污名"
           },
           "courtLogistics": {
             "label": "法庭事务",
-            "description": "何时何地出庭、需要准备什么"
+            "description": "何时何地出庭，以及需要了解什么"
           },
           "diversionPrograms": {
-            "label": "转处计划",
-            "description": "可能有助于避免定罪或减少指控的替代途径"
+            "label": "分流项目",
+            "description": "可能帮助您避免定罪或减轻指控的替代途径"
           },
           "reentry": {
             "label": "重返社会资源",
-            "description": "服刑后的身份证恢复、住房、就业和投票权"
+            "description": "服刑后恢复身份证件、寻找住房和工作，以及恢复投票权所需的资源"
           }
         },
-        "noConcernsSelected": "如果没有适用的选项可以跳过",
+        "noConcernsSelected": "如果没有适用选项，可以跳过此项",
         "back": "返回",
         "submit": "获取我的法律指导",
         "next": "下一步"
@@ -2352,41 +2352,41 @@ export default {
       },
       "civilEmergencies": {
         "title": "现在正在发生什么？",
-        "subtitle": "对于您提到的每个方面，告诉我们是否已经有事情发生。这有助于我们确定最紧迫的事项。",
+        "subtitle": "对于您提到的每个方面，请告诉我们是否已经发生了什么情况。这样我们可以标出最需要及时处理的事项。",
         "back": "返回",
         "generate": "获取我的法律指导",
         "housing": {
-          "question": "关于您的住房——有什么事情已经发生了吗？",
-          "none": "目前什么都没有发生",
+          "question": "关于您的住房，是否已经发生了什么情况？",
+          "none": "目前还没有发生任何情况",
           "active": "我收到了房东的信件、通知或电话",
-          "emergency": "驱逐或租约终止程序已经开始"
+          "emergency": "驱逐或终止租约的程序已经开始"
         },
         "employment": {
-          "question": "关于您的工作——您目前的情况是什么？",
-          "none": "我的雇主不知道这次逮捕",
-          "active": "我的雇主知道了，但目前还没有采取任何行动",
-          "emergency": "我已被停职、休假或解雇"
+          "question": "关于您的工作，您目前是什么情况？",
+          "none": "我的雇主还不知道我被逮捕了",
+          "active": "我的雇主知道了，但目前还没有采取行动",
+          "emergency": "我已被停职、安排休假或解雇"
         },
         "dependents": {
-          "question": "关于您的子女或家属——您目前的情况是什么？",
-          "none": "他们有人照顾，目前没有担忧",
-          "active": "我不确定在我处理这件事时谁会照顾他们",
-          "emergency": "儿童福利机构已经介入或与我联系"
+          "question": "关于您的子女或受扶养人，您目前是什么情况？",
+          "none": "他们有人照料，目前没有任何问题",
+          "active": "我不确定在我处理这件事期间由谁照顾他们",
+          "emergency": "儿童福利机构已经介入或联系过我"
         },
         "immigration": {
-          "question": "关于移民——有什么事情已经发生了吗？",
-          "none": "没有进行中的移民程序",
-          "active": "我有现有的移民案件或待处理的身份问题",
-          "emergency": "我收到了移民通知、拘留令或ICE接触"
+          "question": "关于移民，是否已经发生了什么情况？",
+          "none": "没有正在进行的移民程序",
+          "active": "我有正在处理的移民案件，或有待解决的移民身份问题",
+          "emergency": "我收到移民通知、拘留通知或 ICE 联系"
         }
       },
       "privilegeWarning": {
         "title": "您无需说明发生了什么",
-        "criminalWarning": "您在此输入的任何内容均不具有隐私保护或保密性，不受律师-委托人特权保护。",
-        "notPrivate": "本工具无需了解发生了什么就能帮助您。我们可以在不了解您案件任何细节的情况下，向您说明您的权利、接下来会发生什么、应该联系谁以及可以期待什么。",
-        "recommendation": "对大多数人来说更安全的选择：跳过此栏。您收到的指导仍会针对您的具体指控、案件阶段和所在州。",
-        "governmentWarning": "如果您分享详情：您的消息由 Anthropic 的 AI 处理，可能被存储最长 30 天。如果法院或政府机构提出请求，这些内容可能被披露。",
-        "continueAnyway": "我明白了——仍要添加详情",
+        "criminalWarning": "您在此输入的任何内容都不属于私人或保密信息，也不受律师—委托人特权保护。",
+        "notPrivate": "无需了解发生了什么，本工具也能帮助您。即使不提供案件细节，我们也可以向您说明您的权利、接下来会发生什么、应该联系谁以及可以期待什么。",
+        "recommendation": "对大多数人来说，更安全的选择是跳过此栏。您收到的指导仍会根据您的具体指控、案件阶段和所在州提供。",
+        "governmentWarning": "如果您分享详细情况，您的消息会由 Anthropic 的 AI 处理，并可能保存最多 30 天。如果法院或政府机构提出请求，这些内容可能被披露。",
+        "continueAnyway": "我明白了——仍然添加详情",
         "skipAndGetGuidance": "不分享详情，直接获取指导",
         "findLawyer": "帮我找一位律师"
       },

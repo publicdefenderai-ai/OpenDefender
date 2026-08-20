@@ -2140,7 +2140,7 @@ export default {
       "title": "Entienda su Hoja de Ruta del Caso",
       "cancel": "Cancelar",
       "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
-      "privacyNotice": "Se usa una cookie de sesión por seguridad. Los registros de caso se guardan en memoria del servidor y generalmente caducan en 24 horas.",
+      "privacyNotice": "Se usa una cookie de sesión por seguridad. Los datos del caso se guardan en la memoria del servidor y generalmente se eliminan en 24 horas.",
       "steps": {
         "consent": "Privacidad y Consentimiento",
         "jurisdiction": "Su Estado",
@@ -2153,16 +2153,16 @@ export default {
         "title": "¿Cómo prefiere recibir su orientación?",
         "bullet1Head": "Información legal, no asesoramiento legal.",
         "bullet1Body": "Explicamos sus derechos y qué esperar — no le decimos qué hacer. Para asesoramiento sobre su caso, un defensor público o abogado de ayuda legal es su mejor recurso.",
-        "bullet2Head": "Privacidad por diseño.",
-        "bullet2Body": "Sus respuestas se mantienen temporalmente en memoria del servidor, no en una base de datos permanente de casos. Los registros generalmente caducan en 24 horas o se borran al reiniciar el servicio.",
+        "bullet2Head": "Diseñado para proteger su privacidad.",
+        "bullet2Body": "Sus respuestas se mantienen temporalmente en la memoria del servidor, no en una base de datos permanente de casos. Los datos generalmente se eliminan en 24 horas o cuando se reinicia el servicio.",
         "cardATitle": "Orientación Personalizada con IA",
         "cardARecommended": "Recomendado",
         "cardABody": "Analiza sus cargos específicos, estado y etapa del caso para crear una hoja de ruta a su medida.",
         "cardATime": "Tarda entre 30 y 60 segundos.",
         "cardADisclosure": "Sus respuestas son procesadas por el servicio de IA de Anthropic y pueden ser retenidas hasta 30 días por razones de seguridad y operativas. No se establece ninguna relación abogado-cliente.",
-        "cardAButton": "Continuar con orientación IA →",
+        "cardAButton": "Continuar con orientación mediante IA →",
         "cardBTitle": "Orientación Inmediata",
-        "cardBBody": "Orientación seleccionada para su estado y tipo de cargo — extraída de nuestra base de datos de investigación legal. Sin IA.",
+        "cardBBody": "Orientación preparada para su estado y tipo de cargo, basada en nuestra base de datos de investigación legal. Sin IA.",
         "cardBTime": "Resultados instantáneos.",
         "cardBButton": "Obtener orientación inmediata →",
         "validationLink": "Conozca cómo verificamos las respuestas de IA →",
@@ -2172,7 +2172,7 @@ export default {
         "badgeRules": "Orientación basada en reglas"
       },
       "jurisdiction": {
-        "title": "¿Dónde está su caso?",
+        "title": "¿En qué estado se encuentra su caso?",
         "label": "Su Estado",
         "placeholder": "Seleccione su estado...",
         "states": {
@@ -2239,14 +2239,14 @@ export default {
         "filterPlaceholder": "Todas las categorías",
         "allCategories": "Todas las categorías",
         "searchLabel": "Buscar cargos",
-        "searchPlaceholder": "Escriba para buscar (ej. DUI, robo, asalto...)",
+        "searchPlaceholder": "Escriba para buscar (por ejemplo, evasión de tarifa, DUI, robo...)",
         "noResults": "No se encontraron cargos. Intente con otro término de búsqueda o categoría.",
         "selectLabel": "Seleccione todos los cargos que apliquen a su caso:",
         "stateCharges": "Cargos Estatales",
         "federalCharges": "Cargos Federales",
         "showMore": "Mostrar {{count}} cargos más...",
         "hasAttorneyLabel": "Ya tengo un abogado o defensor público",
-        "juryInstruction": "Instrucción del Jurado",
+        "juryInstruction": "Instrucciones para el jurado",
         "juryInstructionTooltip": "Estas son las normas jurídicas exactas que un jurado debe seguir al decidir su caso. Explican lo que la fiscalía debe probar para cada cargo.",
         "juryInstructionAriaLabel": "¿Qué es una instrucción al jurado?",
         "back": "Volver",
@@ -2258,15 +2258,15 @@ export default {
         "caseStageplaceholder": "Seleccione la etapa actual...",
         "stages": {
           "arrest": "Recién arrestado / Investigación",
-          "arraignment": "Lectura de cargos programada/completada",
+          "arraignment": "Lectura de cargos programada o completada",
           "pretrial": "Procedimientos previos al juicio",
-          "trial": "Juicio programado/en progreso",
+          "trial": "Juicio programado o en curso",
           "sentencing": "Fase de sentencia",
           "appeal": "Proceso de apelación",
           "unsure": "No estoy seguro"
         },
         "custodyLabel": "¿Está actualmente bajo custodia?",
-        "custodyPlaceholder": "Seleccione estado de custodia...",
+        "custodyPlaceholder": "Seleccione su situación de custodia...",
         "custodyOptions": {
           "yes": "Sí, bajo custodia",
           "bail": "Liberado bajo fianza",
@@ -2280,9 +2280,9 @@ export default {
       },
       "additionalDetails": {
         "title": "Cuéntenos Más (Opcional)",
-        "description": "Entre más detalles proporcione, mejor podrá nuestra IA adaptar la orientación a su situación específica. Todos los campos son opcionales - omita cualquiera que no se sienta cómodo compartiendo.",
+        "description": "Cuantos más detalles proporcione, mejor podrá la IA adaptar la orientación a su situación específica. Todos los campos son opcionales; omita cualquiera que no se sienta cómodo compartiendo.",
         "incidentLabel": "¿Qué pasó? Describa el incidente en sus propias palabras",
-        "incidentPlaceholder": "Ejemplo: Iba manejando a casa del trabajo cuando la policía me detuvo. Dijeron que estaba zigzagueando pero acababa de esquivar un bache...",
+        "incidentPlaceholder": "Ejemplo: Iba manejando a casa del trabajo cuando la policía me detuvo. Dijeron que estaba zigzagueando, pero acababa de esquivar un bache...",
         "concernsLabel": "¿Qué es lo que más le preocupa?",
         "concernsSubtitle": "Seleccione todas las que apliquen. Esto nos ayuda a proporcionar recursos relevantes.",
         "concernsCategories": {
@@ -2292,15 +2292,15 @@ export default {
           },
           "childcare": {
             "label": "Cuidado de Niños",
-            "description": "Preocupaciones de custodia, participación de bienestar infantil"
+            "description": "Preocupaciones de custodia, intervención de los servicios de protección infantil"
           },
           "familyCare": {
-            "label": "Cuidado Familiar",
-            "description": "Cuidado de padres ancianos o dependientes"
+            "label": "Cuidado de familiares",
+            "description": "Cuidado de padres mayores o personas dependientes"
           },
           "housing": {
             "label": "Vivienda",
-            "description": "Riesgo de desalojo, problemas de arrendamiento"
+            "description": "Riesgo de desalojo, problemas de arrendamiento y estabilidad de la vivienda"
           },
           "finances": {
             "label": "Finanzas y Beneficios",
@@ -2312,7 +2312,7 @@ export default {
           },
           "mentalHealth": {
             "label": "Salud Mental y Tratamiento",
-            "description": "Tratamiento de adicciones, consejería de salud mental y apoyo"
+            "description": "Tratamiento por consumo de sustancias, asesoramiento de salud mental y apoyo para el estrés"
           },
           "personalHealth": {
             "label": "Salud Personal",
@@ -2320,26 +2320,26 @@ export default {
           },
           "immigration": {
             "label": "Estatus Migratorio",
-            "description": "Visa, tarjeta verde, preocupaciones de deportación"
+            "description": "Visa, tarjeta verde y preocupaciones relacionadas con la deportación"
           },
           "reputation": {
             "label": "Reputación",
             "description": "Registros públicos, estigma social o profesional"
           },
           "courtLogistics": {
-            "label": "Logística de la Corte",
-            "description": "Cuándo y dónde presentarse, qué esperar"
+            "label": "Aspectos prácticos del tribunal",
+            "description": "Cuándo y dónde comparecer y qué esperar"
           },
           "diversionPrograms": {
-            "label": "Programas de Derivación",
-            "description": "Caminos alternativos que pueden ayudar a evitar una condena o reducir los cargos"
+            "label": "Programas alternativos",
+            "description": "Alternativas que pueden ayudar a evitar una condena o reducir los cargos"
           },
           "reentry": {
             "label": "Recursos de Reinserción",
-            "description": "Restauración de identificación, vivienda, empleo y derechos de voto tras la encarcelación"
+            "description": "Recuperación de documentos de identidad, vivienda, empleo y derechos de voto después del encarcelamiento"
           }
         },
-        "noConcernsSelected": "Puede omitir esto si ninguna aplica",
+        "noConcernsSelected": "Puede omitir esto si ninguna opción se aplica a usted",
         "back": "Volver",
         "submit": "Obtener Mi Orientación Legal",
         "next": "Siguiente"
@@ -2356,46 +2356,46 @@ export default {
         "back": "Volver",
         "generate": "Obtener Mi Orientación Legal",
         "housing": {
-          "question": "Respecto a su vivienda — ¿ha pasado algo ya?",
-          "none": "Todavía no ha pasado nada",
+          "question": "En cuanto a su vivienda, ¿ha ocurrido algo?",
+          "none": "Todavía no ha ocurrido nada",
           "active": "Recibí una carta, aviso o llamada de mi arrendador",
-          "emergency": "Han comenzado procedimientos de desalojo o terminación de contrato"
+          "emergency": "Han comenzado procedimientos de desalojo o de terminación del contrato"
         },
         "employment": {
-          "question": "Respecto a su trabajo — ¿cuál es su situación actual?",
+          "question": "En cuanto a su trabajo, ¿cuál es su situación actual?",
           "none": "Mi empleador no sabe del arresto",
-          "active": "Mi empleador sabe, y todavía no ha tomado ninguna medida",
-          "emergency": "Me han suspendido, puesto en licencia, o despedido"
+          "active": "Mi empleador lo sabe, pero todavía no ha tomado ninguna medida",
+          "emergency": "Me han suspendido, puesto en licencia o despedido"
         },
         "dependents": {
-          "question": "Respecto a sus hijos o dependientes — ¿cuál es su situación actual?",
-          "none": "Están cuidados y no hay preocupaciones ahora mismo",
-          "active": "No estoy seguro/a de quién los cuidará mientras manejo esto",
-          "emergency": "Una agencia de bienestar infantil ha estado involucrada o se ha comunicado"
+          "question": "En cuanto a sus hijos o personas dependientes, ¿cuál es su situación actual?",
+          "none": "Están bien atendidos y no hay preocupaciones ahora mismo",
+          "active": "No estoy seguro/a de quién los cuidará mientras me ocupo de esto",
+          "emergency": "Los servicios de protección infantil han intervenido o se han comunicado"
         },
         "immigration": {
-          "question": "Respecto a inmigración — ¿ha pasado algo ya?",
+          "question": "En cuanto a inmigración, ¿ha ocurrido algo?",
           "none": "No hay procedimientos de inmigración activos",
-          "active": "Tengo un caso de inmigración existente o preocupación de estatus pendiente",
-          "emergency": "Recibí un aviso de inmigración, detención, o contacto de ICE"
+          "active": "Tengo un caso de inmigración en curso o una preocupación pendiente relacionada con mi estatus migratorio",
+          "emergency": "Recibí un aviso de inmigración, una orden de retención o un contacto de ICE"
         }
       },
       "privilegeWarning": {
-        "title": "No necesita decirle qué pasó",
-        "criminalWarning": "Nada de lo que escriba aquí es privado o confidencial. No existe protección de privilegio abogado-cliente.",
-        "notPrivate": "Esta herramienta no necesita saber lo que pasó para ayudarle. Podemos explicarle sus derechos, qué sigue, a quién llamar y qué esperar — sin ningún detalle de su caso.",
-        "recommendation": "La opción más segura para la mayoría de las personas: omita esta sección. La orientación que reciba seguirá siendo específica para sus cargos, etapa del caso y estado.",
-        "governmentWarning": "Si comparte detalles: sus mensajes son procesados por la IA de Anthropic y pueden almacenarse hasta 30 días. Si un tribunal o agencia gubernamental los solicita, pueden ser divulgados.",
-        "continueAnyway": "Entiendo — agregar detalles de todos modos",
+        "title": "No necesita contar lo que ocurrió",
+        "criminalWarning": "Nada de lo que escriba aquí es privado ni confidencial. No está protegido por el secreto profesional entre abogado y cliente.",
+        "notPrivate": "Esta herramienta no necesita saber lo que ocurrió para ayudarle. Podemos explicarle sus derechos, qué sigue, a quién llamar y qué esperar sin que comparta ningún detalle de su caso.",
+        "recommendation": "Para la mayoría de las personas, la opción más segura es omitir este campo. La orientación que reciba seguirá adaptada a sus cargos, la etapa de su caso y su estado.",
+        "governmentWarning": "Si comparte detalles, sus mensajes serán procesados por la IA de Anthropic y pueden almacenarse hasta 30 días. Si un tribunal o una agencia gubernamental los solicita, pueden divulgarse.",
+        "continueAnyway": "Entiendo — añadir detalles de todas formas",
         "skipAndGetGuidance": "Obtener orientación sin compartir detalles",
-        "findLawyer": "Ayúdeme a Encontrar un Abogado"
+        "findLawyer": "Ayúdeme a encontrar un abogado"
       },
       "clearSession": {
-        "button": "Borrar Mi Sesión",
+        "button": "Borrar mi sesión",
         "confirm": "¿Borrar todos los datos?",
         "description": "Esto eliminará toda la información de su caso de nuestros servidores inmediatamente. Esta acción no se puede deshacer.",
         "cancel": "Cancelar",
-        "cleared": "Sesión borrada exitosamente"
+        "cleared": "Sesión eliminada correctamente"
       }
     },
     "dashboard": {
