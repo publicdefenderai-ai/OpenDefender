@@ -2162,7 +2162,7 @@ export default {
         "cardADisclosure": "您的输入由 Anthropic 的 AI 服务处理，出于安全和运营目的，可能会保留最多 30 天。不构成律师与委托人之间的关系。",
         "cardAButton": "继续使用AI指导 →",
         "cardBTitle": "即时指导",
-        "cardBBody": "针对您所在州和指控类型的法律指导——内容来自我们的法律研究数据库，不使用 AI。",
+        "cardBBody": "针对您所在州和指控类型的法律指导，内容来自我们的法律研究数据库，不使用 AI。",
         "cardBTime": "即时结果。",
         "cardBButton": "获取即时指导 →",
         "validationLink": "了解我们如何验证AI回答 →",
@@ -2382,11 +2382,11 @@ export default {
       },
       "privilegeWarning": {
         "title": "您无需说明发生了什么",
-        "criminalWarning": "您在此输入的任何内容都不属于私人或保密信息，也不受律师—委托人特权保护。",
+        "criminalWarning": "您在此输入的任何内容都不属于私人或保密信息，也不受律师-委托人特权保护。",
         "notPrivate": "无需了解发生了什么，本工具也能帮助您。即使不提供案件细节，我们也可以向您说明您的权利、接下来会发生什么、应该联系谁以及可以期待什么。",
         "recommendation": "对大多数人来说，更安全的选择是跳过此栏。您收到的指导仍会根据您的具体指控、案件阶段和所在州提供。",
         "governmentWarning": "如果您分享详细情况，您的消息会由 Anthropic 的 AI 处理，并可能保存最多 30 天。如果法院或政府机构提出请求，这些内容可能被披露。",
-        "continueAnyway": "我明白了——仍然添加详情",
+        "continueAnyway": "我明白了，仍然添加详情",
         "skipAndGetGuidance": "不分享详情，直接获取指导",
         "findLawyer": "帮我找一位律师"
       },

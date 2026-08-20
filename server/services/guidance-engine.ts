@@ -453,9 +453,9 @@ const stageGuidance = {
   'arrest': {
     name: 'Arrest Stage',
     criticalActions: [
-      '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.',
+      '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against; anything said can be used in the case.',
       '**Legal Representation**: Requesting an attorney before responding to questions is a constitutional right and a standard first step at this stage.',
-      '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict — attorneys advise doing both.',
+      '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict; attorneys advise doing both.',
       'Write down your booking number and where you are'
     ],
     immediateDeadlines: [
@@ -749,7 +749,7 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   
   // Add stage-specific alerts
   if (caseData.caseStage === 'arrest') {
-    alerts.push('**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.');
+    alerts.push('**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against; anything said can be used in the case.');
     if (caseData.custodyStatus === 'detained') {
       alerts.push(`Arraignment is required ${jurisdictionData.arraignmentDeadline}`);
     }
@@ -782,9 +782,9 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   // Add basic actions for arrest stage with URGENT priority
   if (caseData.caseStage === 'arrest') {
     actions.push(
-      { action: '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.', urgency: 'urgent', treatment: 'legal-information' },
+      { action: '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against; anything said can be used in the case.', urgency: 'urgent', treatment: 'legal-information' },
       { action: '**Legal Representation**: Requesting an attorney before responding to questions is a constitutional right and a standard first step at this stage.', urgency: 'urgent', treatment: 'legal-information' },
-      { action: '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict — attorneys advise doing both.', urgency: 'urgent', treatment: 'legal-information' },
+      { action: '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict; attorneys advise doing both.', urgency: 'urgent', treatment: 'legal-information' },
       { action: 'Write down your booking number and where you are', urgency: 'high', treatment: 'practical' }
     );
   }

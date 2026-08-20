@@ -2426,7 +2426,7 @@ export default {
         "subtitle": "Focus on the things you can do today to make daily life and your next appointment more manageable.",
         "organize": "Put your court papers, appointment details, and important contacts in one place.",
         "calendar": "Add upcoming appointments and court dates from your paperwork to a calendar.",
-        "everydaySupport": "Choose one everyday need to address today—housing, food, work, child care, transportation, or wellbeing.",
+        "everydaySupport": "Choose one everyday need to address today: housing, food, work, child care, transportation, or wellbeing.",
         "completed": "Completed: {{count}} of {{total}} practical steps",
         "resourcesTitle": "Find support and information",
         "findLegalHelp": "Find legal help",

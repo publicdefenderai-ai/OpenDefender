@@ -2386,7 +2386,7 @@ export default {
         "notPrivate": "Esta herramienta no necesita saber lo que ocurrió para ayudarle. Podemos explicarle sus derechos, qué sigue, a quién llamar y qué esperar sin que comparta ningún detalle de su caso.",
         "recommendation": "Para la mayoría de las personas, la opción más segura es omitir este campo. La orientación que reciba seguirá adaptada a sus cargos, la etapa de su caso y su estado.",
         "governmentWarning": "Si comparte detalles, sus mensajes serán procesados por la IA de Anthropic y pueden almacenarse hasta 30 días. Si un tribunal o una agencia gubernamental los solicita, pueden divulgarse.",
-        "continueAnyway": "Entiendo — añadir detalles de todas formas",
+        "continueAnyway": "Entiendo, añadir detalles de todas formas",
         "skipAndGetGuidance": "Obtener orientación sin compartir detalles",
         "findLawyer": "Ayúdeme a encontrar un abogado"
       },
