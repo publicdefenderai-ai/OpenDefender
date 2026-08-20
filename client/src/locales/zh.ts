@@ -2423,6 +2423,24 @@ export default {
         "title": "现在最重要的事",
         "completed": "已完成：{{count}}/{{total}}项操作"
       },
+      "practicalPlan": {
+        "title": "先从实用步骤开始",
+        "subtitle": "先处理今天能做的事，让日常生活和下一次预约更容易应对。",
+        "organize": "将法庭文件、预约详情和重要联系人放在同一个地方。",
+        "calendar": "将文件中列出的即将到来的预约和出庭日期记入日历。",
+        "everydaySupport": "今天选择处理一项日常需求：住房、食物、工作、托儿、交通或身心健康。",
+        "completed": "已完成：{{count}}/{{total}} 个实用步骤",
+        "resourcesTitle": "查找支持与信息",
+        "findLegalHelp": "寻找法律帮助",
+        "findLegalHelpDescription": "查找您附近的公设辩护人或法律援助。",
+        "findCourt": "查找您的法院",
+        "findCourtDescription": "查询法院网站、地址和联系信息。",
+        "lifeSupport": "获得生活与家庭支持",
+        "lifeSupportDescription": "查找住房、食物、工作、交通、托儿或身心健康方面的帮助。",
+        "legalInformationTitle": "可了解的案件信息",
+        "legalInformationDescription": "以下是可能重要的一般法律主题，并非针对您个人的指示。律师可以说明这些信息如何适用于您的情况。",
+        "talkToLawyer": "涉及您案件的具体决定，请咨询合格律师。"
+      },
       "caseTimeline": {
         "title": "案件时间线",
         "progress": "案件进展",
@@ -2450,8 +2468,8 @@ export default {
         "title": "当地资源"
       },
       "evidenceToGather": {
-        "title": "证据事项 — 请与律师讨论",
-        "warning": "证据处理的决定完全取决于您案件的具体事实。在与律师交谈之前，请勿触碰、移动、分享或处置任何与您案件相关的物品。"
+        "title": "可与律师讨论的证据事项",
+        "warning": "证据应如何处理取决于您案件的事实和相关法律。以下主题可帮助您在作出与证据有关的决定前，准备向合格律师提出的问题。"
       },
       "importantWarnings": {
         "title": "重要警告"
@@ -2460,7 +2478,12 @@ export default {
         "title": "出庭准备"
       },
       "actionsToAvoid": {
-        "title": "常见关注事项"
+        "title": "行动前可讨论的问题",
+        "description": "以下主题可能影响案件。它们是一般信息，并非针对您个人的指示；律师可以就您情况中的选择提供建议。"
+      },
+      "warningsAndPrep": {
+        "thingsToReview": "可了解的事项",
+        "courtInformation": "可了解的法庭信息"
       },
       "supportResources": {
         "title": "为您提供的支持资源",

@@ -2,10 +2,17 @@
 // Runs server-side after Claude response is parsed, before returning to client.
 // No second API call — pure regex pattern matching.
 import { opsLog } from '../utils/dev-logger';
+import type { ImmediateActionTreatment } from '../../shared/guidance-view-model';
 
 export interface DangerScanResult {
   dangerFlags: string[];
   hasDangerContent: boolean;
+}
+export interface SafetyImmediateAction {
+  action: string;
+  urgency: 'low' | 'medium' | 'high' | 'urgent';
+  /** Preserve author-assigned display treatment while filtering unsafe text. */
+  treatment?: ImmediateActionTreatment;
 }
 
 const DANGER_PATTERNS: Array<{ category: string; pattern: RegExp }> = [
@@ -65,10 +72,10 @@ function itemMatchesDanger(text: string): boolean {
  * injecting the standard replacement notice once if anything was removed.
  */
 export function stripDangerousItems(
-  immediateActions: Array<{ action: string; urgency: 'low' | 'medium' | 'high' | 'urgent' }>,
+  immediateActions: SafetyImmediateAction[],
   avoidActions: string[]
 ): {
-  immediateActions: Array<{ action: string; urgency: 'low' | 'medium' | 'high' | 'urgent' }>;
+  immediateActions: SafetyImmediateAction[];
   avoidActions: string[];
   strippedCount: number;
 } {

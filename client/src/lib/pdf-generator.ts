@@ -271,6 +271,10 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     chargeDisclaimer: 'Recuerde: La fiscalía debe probar cada elemento de estos cargos más allá de una duda razonable. Su abogado puede ayudar a identificar qué elementos pueden ser cuestionados basándose en la evidencia. Los rangos de sentencia anteriores son estimaciones generales y no son específicos de su estado ni de su caso. Las penas reales dependen del estatuto de su jurisdicción y de los hechos de su caso, lo cual su abogado puede confirmar.',
     urgentTakeaways: 'Alertas Urgentes',
     immediateActions: 'Lo Que Importa Ahora',
+    practicalSteps: 'Pasos Prácticos que Puede Realizar',
+    practicalStepsIntro: 'Pasos cotidianos que puede realizar y controlar.',
+    legalInformation: 'Información del Caso para Revisar',
+    legalInformationIntro: 'Estos son temas legales generales, no instrucciones personales. Un abogado puede explicarle cómo se aplican a su situación.',
     importantDates: 'Fechas Importantes',
     event: 'Evento',
     timeframe: 'Plazo',
@@ -329,6 +333,10 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     chargeDisclaimer: 'Remember: The prosecution must prove every element of these charges beyond a reasonable doubt. Your attorney can help identify which elements may be challenged based on the evidence. The sentencing ranges above are general estimates and are not specific to your state or your case. Actual penalties depend on your jurisdiction\'s statute and the facts of your case, which your attorney can confirm.',
     urgentTakeaways: 'Urgent Takeaways',
     immediateActions: 'What Matters Now',
+    practicalSteps: 'Practical Steps You Can Take',
+    practicalStepsIntro: 'Everyday steps you can take and control.',
+    legalInformation: 'Case Information to Review',
+    legalInformationIntro: 'These are general legal topics, not personal instructions. A lawyer can explain how they apply to your situation.',
     importantDates: 'Important Dates',
     event: 'Event',
     timeframe: 'Timeframe',
@@ -381,6 +389,43 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   const disclosureFooter = isChinese
     ? '一般教育信息；并非法律建议。内容可能不完整、属于估算、已过时或由AI生成。请核实截止日期和引证。'
     : labels.footer;
+  const actionLabels = isChinese ? {
+    practicalSteps: '您可以采取的实用步骤',
+    practicalStepsIntro: '您可以自主完成和掌控的日常步骤。',
+    legalInformation: '可了解的案件信息',
+    legalInformationIntro: '以下是一般法律信息，并非针对您个人的指示。律师可以说明这些信息如何适用于您的情况。',
+    organize: '将法庭文件、预约详情和重要联系人放在同一个地方。',
+    calendar: '将文件中列出的即将到来的预约和出庭日期记入日历。',
+    everydaySupport: '今天选择处理一项日常需求：住房、食物、工作、托儿、交通或身心健康。',
+    resources: '查找支持与信息',
+    legalHelp: '[寻找法律帮助](/resources) — 查找您附近的公设辩护人或法律援助。',
+    court: '[查找您的法院](/court-locator) — 查询法院网站、地址和联系信息。',
+    lifeSupport: '[获得生活与家庭支持](/support) — 查找住房、食物、工作、交通、托儿或身心健康方面的帮助。',
+    evidenceTitle: '可与律师讨论的证据事项',
+    evidenceIntro: '证据应如何处理取决于您案件的事实和相关法律。这些主题可帮助您准备向合格律师提出的问题。',
+    courtTitle: '可了解的法庭信息',
+    courtIntro: '出庭准备可能因法院和您案件的事实而异。律师可以帮助您了解哪些选择适用。',
+    avoidTitle: '行动前可讨论的问题',
+    avoidIntro: '以下主题可能影响案件。它们是一般信息，并非针对您个人的指示。',
+  } : {
+    practicalSteps: labels.practicalSteps,
+    practicalStepsIntro: labels.practicalStepsIntro,
+    legalInformation: labels.legalInformation,
+    legalInformationIntro: labels.legalInformationIntro,
+    organize: isSpanish ? 'Guarde en un mismo lugar los documentos del tribunal, los detalles de sus citas y los contactos importantes.' : 'Put your court papers, appointment details, and important contacts in one place.',
+    calendar: isSpanish ? 'Anote en un calendario las próximas citas y fechas judiciales que aparezcan en sus documentos.' : 'Add upcoming appointments and court dates from your paperwork to a calendar.',
+    everydaySupport: isSpanish ? 'Elija una necesidad cotidiana que pueda atender hoy: vivienda, comida, trabajo, cuidado infantil, transporte o bienestar.' : 'Choose one everyday need to address today—housing, food, work, child care, transportation, or wellbeing.',
+    resources: isSpanish ? 'Encuentre apoyo e información' : 'Find support and information',
+    legalHelp: isSpanish ? '[Encuentre ayuda legal](/resources) — Busque un defensor público o asistencia legal cerca de usted.' : '[Find legal help](/resources) — Search for a public defender or legal aid near you.',
+    court: isSpanish ? '[Encuentre su tribunal](/court-locator) — Busque el sitio web, la dirección y la información de contacto del tribunal.' : '[Find your court](/court-locator) — Look up the court website, address, and contact information.',
+    lifeSupport: isSpanish ? '[Obtenga apoyo para usted y su familia](/support) — Encuentre ayuda con vivienda, comida, trabajo, transporte, cuidado infantil o bienestar.' : '[Get life and family support](/support) — Find help with housing, food, work, transportation, child care, or wellbeing.',
+    evidenceTitle: isSpanish ? 'Temas de evidencia para revisar con un abogado' : 'Evidence topics to review with a lawyer',
+    evidenceIntro: isSpanish ? 'La forma de manejar la evidencia depende de los hechos y de la ley de su caso. Estos temas pueden ayudarle a preparar preguntas para un abogado calificado.' : 'How evidence should be handled depends on the facts and law in your case. These topics can help you prepare questions for a qualified lawyer.',
+    courtTitle: isSpanish ? 'Información judicial para revisar' : 'Court information to review',
+    courtIntro: isSpanish ? 'La preparación para el tribunal puede variar según el tribunal y los hechos de su caso. Un abogado puede ayudarle a entender qué opciones aplican.' : 'Court preparation can vary by court and the facts of your case. A lawyer can help you understand which options apply.',
+    avoidTitle: isSpanish ? 'Preguntas para discutir antes de actuar' : 'Questions to discuss before acting',
+    avoidIntro: isSpanish ? 'Los temas a continuación pueden afectar un caso. Son información general, no una lista de instrucciones personales.' : 'The topics below can affect a case. They are general information, not a personalized list of instructions.',
+  };
   const disclaimerUrl = 'https://opendefender.ai/disclaimers';
   const dataSourcesUrl = 'https://opendefender.ai/data-sources';
 
@@ -706,8 +751,13 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     yPosition = (doc as any).lastAutoTable.finalY + 10;
   }
 
-  // What Matters Now — action checklist matching the web dashboard
-  if (safe.immediateActions.length > 0) {
+  // The shared practical plan is always available, even when there are no
+  // generated immediate-action records (for example, after safety filtering).
+  if (
+    guidance.practicalStarterSteps.length > 0 ||
+    guidance.practicalSupportLinks.length > 0 ||
+    safe.immediateActions.length > 0
+  ) {
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont(FONT_NAME, 'bold');
@@ -719,7 +769,25 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
-    safe.immediateActions.forEach((actionItem) => {
+    const practicalActions = safe.immediateActions.filter(action => action.treatment === 'practical');
+    const legalInformationActions = safe.immediateActions.filter(action => action.treatment !== 'practical');
+
+    const writeActions = (items: Array<{ action: string; urgency?: string }>, title: string, intro?: string) => {
+      if (!items.length) return;
+      checkPageBreak(25);
+      doc.setFontSize(11);
+      doc.setFont(FONT_NAME, 'bold');
+      doc.setTextColor(0, 0, 0);
+      doc.text(title, margin + 3, yPosition);
+      yPosition += 6;
+      if (intro) {
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, 'normal');
+        doc.setTextColor(80, 80, 80);
+        yPosition = addText(intro, margin + 3, yPosition);
+        yPosition += 3;
+      }
+      items.forEach((actionItem) => {
       checkPageBreak(25);
       const urgency = (actionItem.urgency || 'medium').toUpperCase();
       // Colored urgency indicator
@@ -736,7 +804,28 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setTextColor(0, 0, 0);
       yPosition = addText(stripMd(pl(actionItem.action || '')), margin + 8, yPosition);
       yPosition += 5;
+      });
+    };
+
+    writeActions([
+      ...guidance.practicalStarterSteps.map(step => ({ action: actionLabels[step] })),
+      ...practicalActions,
+    ], actionLabels.practicalSteps, actionLabels.practicalStepsIntro);
+    checkPageBreak(25);
+    doc.setFontSize(11);
+    doc.setFont(FONT_NAME, 'bold');
+    doc.setTextColor(0, 0, 0);
+    doc.text(actionLabels.resources, margin + 3, yPosition);
+    yPosition += 6;
+    doc.setFontSize(10);
+    doc.setFont(FONT_NAME, 'normal');
+    guidance.practicalSupportLinks.forEach(link => {
+      checkPageBreak();
+      yPosition = addText(`   • ${pl(actionLabels[link.kind])}`, margin + 5, yPosition);
+      yPosition += 3;
     });
+    yPosition += 3;
+    writeActions(legalInformationActions, actionLabels.legalInformation, actionLabels.legalInformationIntro);
     yPosition += 3;
   }
 
@@ -874,15 +963,19 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     checkPageBreak(30);
     doc.setFontSize(14);
     doc.setFont(FONT_NAME, 'bold');
-    doc.text(labels.evidenceToGather, margin, yPosition);
+    doc.text(actionLabels.evidenceTitle, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
     doc.setFont(FONT_NAME, 'normal');
+    doc.setTextColor(80, 80, 80);
+    yPosition = addText(actionLabels.evidenceIntro, margin, yPosition);
+    yPosition += 4;
+    doc.setTextColor(0, 0, 0);
 
     safe.evidenceToGather.forEach((evidence) => {
       checkPageBreak();
-      yPosition = addText(`   [ ] ${stripMd(typeof evidence === 'string' ? evidence : String(evidence))}`, margin + 5, yPosition);
+      yPosition = addText(`   • ${stripMd(typeof evidence === 'string' ? evidence : String(evidence))}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -896,7 +989,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     doc.setFontSize(14);
     doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(200, 100, 0);
-    doc.text(`${labels.warnings} & ${labels.courtPrep}`, margin, yPosition);
+    doc.text(`${labels.warnings} & ${actionLabels.courtTitle}`, margin, yPosition);
     yPosition += 8;
     doc.setFontSize(10);
     doc.setFont(FONT_NAME, 'normal');
@@ -917,9 +1010,15 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     }
 
     if (hasCourt) {
+      doc.setFontSize(9);
+      doc.setTextColor(80, 80, 80);
+      yPosition = addText(actionLabels.courtIntro, margin, yPosition);
+      yPosition += 3;
+      doc.setFontSize(10);
+      doc.setTextColor(0, 0, 0);
       safe.courtPreparation.forEach((item) => {
         checkPageBreak();
-        yPosition = addText(`   [ ] ${stripMd(typeof item === 'string' ? item : String(item))}`, margin + 5, yPosition);
+        yPosition = addText(`   • ${stripMd(typeof item === 'string' ? item : String(item))}`, margin + 5, yPosition);
         yPosition += 3;
       });
     }
@@ -1075,11 +1174,14 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     doc.setFontSize(14);
     doc.setFont(FONT_NAME, 'bold');
     doc.setTextColor(200, 0, 0);
-    doc.text(labels.actionsToAvoid, margin, yPosition);
+    doc.text(actionLabels.avoidTitle, margin, yPosition);
     yPosition += 8;
 
     doc.setFontSize(10);
     doc.setFont(FONT_NAME, 'normal');
+    doc.setTextColor(80, 80, 80);
+    yPosition = addText(actionLabels.avoidIntro, margin, yPosition);
+    yPosition += 4;
     doc.setTextColor(0, 0, 0);
 
     safe.avoidActions.forEach((action) => {

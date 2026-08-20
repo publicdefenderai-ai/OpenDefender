@@ -2423,6 +2423,24 @@ export default {
         "title": "Qué Importa Ahora",
         "completed": "Completadas: {{count}} de {{total}} acciones"
       },
+      "practicalPlan": {
+        "title": "Empiece con pasos prácticos",
+        "subtitle": "Concéntrese en lo que puede hacer hoy para que la vida diaria y su próxima cita sean más manejables.",
+        "organize": "Guarde en un mismo lugar los documentos del tribunal, los detalles de sus citas y los contactos importantes.",
+        "calendar": "Anote en un calendario las próximas citas y fechas judiciales que aparezcan en sus documentos.",
+        "everydaySupport": "Elija una necesidad cotidiana que pueda atender hoy: vivienda, comida, trabajo, cuidado infantil, transporte o bienestar.",
+        "completed": "Completados: {{count}} de {{total}} pasos prácticos",
+        "resourcesTitle": "Encuentre apoyo e información",
+        "findLegalHelp": "Encuentre ayuda legal",
+        "findLegalHelpDescription": "Busque un defensor público o asistencia legal cerca de usted.",
+        "findCourt": "Encuentre su tribunal",
+        "findCourtDescription": "Busque el sitio web, la dirección y la información de contacto del tribunal.",
+        "lifeSupport": "Obtenga apoyo para usted y su familia",
+        "lifeSupportDescription": "Encuentre ayuda con vivienda, comida, trabajo, transporte, cuidado infantil o bienestar.",
+        "legalInformationTitle": "Información del caso para revisar",
+        "legalInformationDescription": "Estos son temas legales generales que pueden ser importantes. No son instrucciones personales; un abogado puede explicarle cómo se aplican a su situación.",
+        "talkToLawyer": "Para decisiones específicas de su caso, consulte con un abogado calificado."
+      },
       "caseTimeline": {
         "title": "Cronología del Caso",
         "progress": "Progreso del Caso",
@@ -2450,8 +2468,8 @@ export default {
         "title": "Recursos Locales"
       },
       "evidenceToGather": {
-        "title": "Evidencia — Consulte con Su Abogado",
-        "warning": "Las decisiones sobre evidencia dependen completamente de los hechos específicos de su caso. No toque, mueva, comparta ni descarte nada relacionado con su caso sin antes hablar con su abogado."
+        "title": "Temas de evidencia para revisar con un abogado",
+        "warning": "La forma de manejar la evidencia depende de los hechos y de la ley de su caso. Los temas a continuación pueden ayudarle a preparar preguntas para un abogado calificado antes de tomar decisiones relacionadas con la evidencia."
       },
       "importantWarnings": {
         "title": "Advertencias Importantes"
@@ -2460,7 +2478,12 @@ export default {
         "title": "Preparación para la Corte"
       },
       "actionsToAvoid": {
-        "title": "Preocupaciones Comunes"
+        "title": "Preguntas para discutir antes de actuar",
+        "description": "Los temas a continuación pueden afectar un caso. Son información general, no una lista de instrucciones personales; un abogado puede aconsejarle sobre las decisiones en su situación."
+      },
+      "warningsAndPrep": {
+        "thingsToReview": "Aspectos para revisar",
+        "courtInformation": "Información judicial para revisar"
       },
       "supportResources": {
         "title": "Recursos de Apoyo Para Usted",

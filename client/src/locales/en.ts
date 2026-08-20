@@ -2421,6 +2421,24 @@ export default {
         "title": "What Matters Now",
         "completed": "Completed: {{count}} of {{total}} actions"
       },
+      "practicalPlan": {
+        "title": "Start with practical steps",
+        "subtitle": "Focus on the things you can do today to make daily life and your next appointment more manageable.",
+        "organize": "Put your court papers, appointment details, and important contacts in one place.",
+        "calendar": "Add upcoming appointments and court dates from your paperwork to a calendar.",
+        "everydaySupport": "Choose one everyday need to address today—housing, food, work, child care, transportation, or wellbeing.",
+        "completed": "Completed: {{count}} of {{total}} practical steps",
+        "resourcesTitle": "Find support and information",
+        "findLegalHelp": "Find legal help",
+        "findLegalHelpDescription": "Search for a public defender or legal aid near you.",
+        "findCourt": "Find your court",
+        "findCourtDescription": "Look up the court website, address, and contact information.",
+        "lifeSupport": "Get life and family support",
+        "lifeSupportDescription": "Find help with housing, food, work, transportation, child care, or wellbeing.",
+        "legalInformationTitle": "Case information to review",
+        "legalInformationDescription": "These are general legal topics that may matter. They are not personal instructions; a lawyer can explain how they apply to your situation.",
+        "talkToLawyer": "For case-specific decisions, ask a qualified lawyer."
+      },
       "caseTimeline": {
         "title": "Case Timeline",
         "progress": "Case Progress",
@@ -2448,8 +2466,8 @@ export default {
         "title": "Local Resources"
       },
       "evidenceToGather": {
-        "title": "Evidence — Discuss With Your Attorney",
-        "warning": "Evidence decisions depend entirely on your specific case facts. Touching, moving, sharing, or discarding anything related to your case before speaking with your attorney can affect what defenses are available."
+        "title": "Evidence topics to review with a lawyer",
+        "warning": "How evidence should be handled depends on the facts and the law in your case. The topics below can help you prepare questions for a qualified lawyer before making evidence-related decisions."
       },
       "importantWarnings": {
         "title": "Important Warnings"
@@ -2458,7 +2476,12 @@ export default {
         "title": "Court Preparation"
       },
       "actionsToAvoid": {
-        "title": "Common Concerns"
+        "title": "Questions to discuss before acting",
+        "description": "The topics below can affect a case. They are general information, not a personalized list of instructions; a lawyer can advise on choices in your situation."
+      },
+      "warningsAndPrep": {
+        "thingsToReview": "Things to review",
+        "courtInformation": "Court information to review"
       },
       "supportResources": {
         "title": "Support Resources For You",

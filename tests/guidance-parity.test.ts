@@ -112,6 +112,20 @@ describe('normalized guidance surface parity', () => {
     });
   });
 
+  it('uses explicit treatment instead of guessing whether an action is practical', () => {
+    const guidance = normalizeGuidance({
+      immediateActions: [
+        { action: 'UNCLASSIFIED_ACTION', urgency: 'high' },
+        { action: 'PRACTICAL_ACTION', urgency: 'low', treatment: 'practical' },
+      ],
+    });
+
+    expect(guidance.immediateActions).toEqual([
+      { action: 'UNCLASSIFIED_ACTION', urgency: 'high', treatment: 'legal-information' },
+      { action: 'PRACTICAL_ACTION', urgency: 'low', treatment: 'practical' },
+    ]);
+  });
+
   it('documents treatment for every canonical section on all four surfaces', () => {
     expect(Object.keys(GUIDANCE_SURFACE_TREATMENT)).toEqual([...GUIDANCE_SECTION_ORDER]);
     for (const section of GUIDANCE_SECTION_ORDER) {
@@ -143,6 +157,65 @@ describe('normalized guidance surface parity', () => {
       expect(position, `${value} missing or out of order`).toBeGreaterThan(previous);
       previous = position;
     }
+  });
+
+  it('keeps explicitly practical actions distinct from case information in chat and print', () => {
+    const guidance = normalizeGuidance({
+      ...completeGuidance(),
+      immediateActions: [
+        { action: 'PRACTICAL_ACTION', urgency: 'low', treatment: 'practical' },
+        { action: 'LEGAL_INFORMATION_ACTION', urgency: 'high' },
+      ],
+    });
+
+    const chat = buildGuidanceChatSummary(guidance);
+    expect(chat).toContain('Practical steps you can take');
+    expect(chat).toContain('Case information to review');
+    expect(chat).toContain('PRACTICAL_ACTION');
+    expect(chat).toContain('LEGAL_INFORMATION_ACTION');
+
+    const print = renderToStaticMarkup(React.createElement(GuidancePrintPlan, { guidance }));
+    expect(print).toContain('Practical steps you can take');
+    expect(print).toContain('Case information to review');
+    expect(print).toContain('not personal instructions');
+  });
+
+  it('renders the shared practical starter plan and support destinations in chat, print, and PDF', async () => {
+    const guidance = completeGuidance();
+    expect(guidance.practicalStarterSteps).toEqual(['organize', 'calendar', 'everydaySupport']);
+    expect(guidance.practicalSupportLinks.map(link => link.href)).toEqual(['/resources', '/court-locator', '/support']);
+
+    const chat = buildGuidanceChatSummary(guidance);
+    expect(chat).toContain('Put your court papers');
+    expect(chat).toContain('Find legal help');
+    expect(chat).toContain('Get life and family support');
+
+    const print = renderToStaticMarkup(React.createElement(GuidancePrintPlan, { guidance }));
+    expect(print).toContain('Put your court papers');
+    expect(print).toContain('href="/resources"');
+    expect(print).toContain('href="/support"');
+
+    rendered.length = 0;
+    await generateGuidancePDF(guidance, 'en');
+    const pdf = rendered.join('\n');
+    expect(pdf).toContain('Put your court papers');
+    expect(pdf).toContain('Find legal help');
+    expect(pdf).toContain('Get life and family support');
+  });
+
+  it('keeps the shared practical PDF plan when generated immediate actions are empty', async () => {
+    const guidance = normalizeGuidance({
+      ...completeGuidance(),
+      immediateActions: [],
+    });
+
+    rendered.length = 0;
+    await generateGuidancePDF(guidance, 'en');
+    const pdf = rendered.join('\n');
+    expect(pdf).toContain('Put your court papers');
+    expect(pdf).toContain('Find legal help');
+    expect(pdf).toContain('Find your court');
+    expect(pdf).toContain('Get life and family support');
   });
 
   it('dashboard exposes a stable marker for every canonical section', () => {

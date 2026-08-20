@@ -37,6 +37,7 @@ interface GuidanceResource {
 export interface ImmediateAction {
   action: string;
   urgency: 'urgent' | 'high' | 'medium' | 'low';
+  treatment?: 'practical' | 'legal-information';
 }
 
 interface MockQAItem {
@@ -781,10 +782,10 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   // Add basic actions for arrest stage with URGENT priority
   if (caseData.caseStage === 'arrest') {
     actions.push(
-      { action: '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.', urgency: 'urgent' },
-      { action: '**Legal Representation**: Requesting an attorney before responding to questions is a constitutional right and a standard first step at this stage.', urgency: 'urgent' },
-      { action: '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict — attorneys advise doing both.', urgency: 'urgent' },
-      { action: 'Write down your booking number and where you are', urgency: 'high' }
+      { action: '**Right to Silence**: Answering questions before consulting an attorney is something legal professionals consistently advise against — anything said can be used in the case.', urgency: 'urgent', treatment: 'legal-information' },
+      { action: '**Legal Representation**: Requesting an attorney before responding to questions is a constitutional right and a standard first step at this stage.', urgency: 'urgent', treatment: 'legal-information' },
+      { action: '**Compliance and Counsel**: Complying with lawful officer instructions and requesting an attorney are not in conflict — attorneys advise doing both.', urgency: 'urgent', treatment: 'legal-information' },
+      { action: 'Write down your booking number and where you are', urgency: 'high', treatment: 'practical' }
     );
   }
   
@@ -792,7 +793,8 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   if (stageData?.criticalActions) {
     actions.push(...stageData.criticalActions.map((action: string) => ({ 
       action, 
-      urgency: 'urgent' as const 
+      urgency: 'urgent' as const,
+      treatment: 'legal-information' as const,
     })));
   }
   
@@ -800,7 +802,8 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   if (stageData?.immediateActions) {
     actions.push(...stageData.immediateActions.map((action: string) => ({ 
       action, 
-      urgency: 'high' as const 
+      urgency: 'high' as const,
+      treatment: 'legal-information' as const,
     })));
   }
   
@@ -809,7 +812,8 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
     if (charge.urgentActions) {
       actions.push(...charge.urgentActions.map((action: string) => ({ 
         action, 
-        urgency: 'urgent' as const 
+        urgency: 'urgent' as const,
+        treatment: 'legal-information' as const,
       })));
     }
   });
@@ -818,7 +822,8 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   if (fallbackChargeData?.immediateActions) {
     actions.push(...fallbackChargeData.immediateActions.map((action: string) => ({ 
       action, 
-      urgency: 'medium' as const 
+      urgency: 'medium' as const,
+      treatment: 'legal-information' as const,
     })));
   }
   
@@ -826,13 +831,19 @@ function buildImmediateActionsForCharges(caseData: CaseData, stageData: any, spe
   if (!caseData.hasAttorney && caseData.caseStage === 'arrest') {
     actions.unshift({ 
       action: 'Ask for a public defender right away if you can\'t afford a lawyer', 
-      urgency: 'urgent' 
+      urgency: 'urgent',
+      treatment: 'legal-information',
     });
   }
   
   // Remove duplicates based on action text
   const uniqueActions = Array.from(
-    new Map(actions.map(item => [item.action, item])).values()
+    actions.reduce((unique, item) => {
+      // Keep the first explicit source treatment. A later legacy stage string
+      // must not replace a deliberately authored practical action.
+      if (!unique.has(item.action)) unique.set(item.action, item);
+      return unique;
+    }, new Map<string, ImmediateAction>()).values()
   );
   
   return uniqueActions;

@@ -154,7 +154,7 @@ function renderWithLinks(raw: unknown, navigate?: (href: string) => void): React
           }
           return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</a>;
         }
-        return <React.Fragment key={i}>{token}</React.Fragment>;
+        return <span key={i}>{token}</span>;
       })}
     </>
   );
@@ -956,9 +956,16 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
     setExpandedSections(newExpanded);
   };
 
-  const getImmediateActionsProgress = () => {
-    if (guidance.immediateActions.length === 0) return 0;
-    return Math.round((completedActions.size / guidance.immediateActions.length) * 100);
+  const practicalStarterActions = guidance.practicalStarterSteps.map(step =>
+    t(`legalGuidance.dashboard.practicalPlan.${step}`),
+  );
+  const generatedPracticalActions = guidance.immediateActions.filter(action => action.treatment === 'practical');
+  const legalInformationActions = guidance.immediateActions.filter(action => action.treatment !== 'practical');
+  const practicalActions = [...practicalStarterActions, ...generatedPracticalActions.map(action => action.action)];
+
+  const getPracticalActionsProgress = () => {
+    if (practicalActions.length === 0) return 0;
+    return Math.round((completedActions.size / practicalActions.length) * 100);
   };
 
   const getUrgentDeadlines = () => {
@@ -992,7 +999,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
   return (
     <>
-      <GuidancePrintPlan guidance={guidance} />
+      <GuidancePrintPlan guidance={guidance} language={i18n.language} />
       <div className="max-w-6xl mx-auto p-6 space-y-6 print:hidden">
       {/* Case Summary Header */}
       <Card className="border-l-4 border-l-primary">
@@ -1086,8 +1093,8 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             <div className="text-center">
               <div className="text-sm text-muted-foreground">{t('legalGuidance.dashboard.summary.actionsCompleted')}</div>
               <div className="flex items-center gap-2">
-                <Progress value={getImmediateActionsProgress()} className="flex-1" />
-                <span className="text-sm font-medium">{getImmediateActionsProgress()}%</span>
+                <Progress value={getPracticalActionsProgress()} className="flex-1" />
+                <span className="text-sm font-medium">{getPracticalActionsProgress()}%</span>
               </div>
             </div>
           </div>
@@ -1327,55 +1334,119 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       {/* Documents You Should Have Section */}
       <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
-      {/* Immediate Actions Checklist */}
-      <Card className="border-border" data-guidance-section="immediateActions">
+      {/* Practical support is intentionally separate from case-specific legal information. */}
+      <Card className="border-primary/30 bg-primary/[0.03]" data-testid="practical-action-plan">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-foreground">
-              <CheckCircle className="h-5 w-5 text-muted-foreground" />
-              {t('legalGuidance.dashboard.immediateActions.title')}
+              <CheckCircle className="h-5 w-5 text-primary" />
+              {t('legalGuidance.dashboard.practicalPlan.title')}
             </div>
             <div className="flex items-center gap-2">
-              <Progress value={getImmediateActionsProgress()} className="w-24" />
-              <span className="text-sm font-medium text-muted-foreground">{getImmediateActionsProgress()}%</span>
+              <Progress value={getPracticalActionsProgress()} className="w-24" />
+              <span className="text-sm font-medium text-muted-foreground">{getPracticalActionsProgress()}%</span>
             </div>
           </CardTitle>
+          <p className="text-sm text-muted-foreground">
+            {t('legalGuidance.dashboard.practicalPlan.subtitle')}
+          </p>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
-            {guidance.immediateActions.map((actionItem, index) => (
+            {practicalActions.map((action, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <Checkbox
-                  id={`action-${index}`}
-                  checked={completedActions.has(actionItem.action)}
-                  onCheckedChange={() => toggleAction(actionItem.action)}
+                  id={`practical-action-${index}`}
+                  checked={completedActions.has(action)}
+                  onCheckedChange={() => toggleAction(action)}
                   className="mt-1"
-                  data-testid={`checkbox-action-${index}`}
+                  data-testid={`checkbox-practical-action-${index}`}
                 />
                 <label
-                  htmlFor={`action-${index}`}
+                  htmlFor={`practical-action-${index}`}
                   className={`flex-1 cursor-pointer ${
-                    completedActions.has(actionItem.action) ? 'line-through text-muted-foreground' : ''
+                    completedActions.has(action) ? 'line-through text-muted-foreground' : ''
                   }`}
                 >
-                  {renderWithLinks(actionItem.action, guardedNavigate)}
+                  {renderWithLinks(action, guardedNavigate)}
                 </label>
-                <Badge 
-                  variant={getUrgencyBadgeVariant(actionItem.urgency)}
-                  className="text-xs uppercase shrink-0"
-                  data-testid={`badge-urgency-${index}`}
-                >
-                  {actionItem.urgency}
-                </Badge>
               </div>
             ))}
           </div>
-          
+
           <div className="mt-4 text-sm text-muted-foreground">
-            {t('legalGuidance.dashboard.immediateActions.completed', { count: completedActions.size, total: guidance.immediateActions.length })}
+            {t('legalGuidance.dashboard.practicalPlan.completed', { count: completedActions.size, total: practicalActions.length })}
+          </div>
+
+          <div className="mt-5 pt-4 border-t border-border">
+            <p className="text-sm font-medium text-foreground mb-3">
+              {t('legalGuidance.dashboard.practicalPlan.resourcesTitle')}
+            </p>
+            <div className="grid gap-2 sm:grid-cols-3">
+              {guidance.practicalSupportLinks.map((link) => {
+                const Icon = link.kind === 'legalHelp' ? Scale : link.kind === 'court' ? Building : LifeBuoy;
+                const translationKey = link.kind === 'legalHelp'
+                  ? 'findLegalHelp'
+                  : link.kind === 'court'
+                    ? 'findCourt'
+                    : 'lifeSupport';
+                const action = link.kind === 'legalHelp' && onShowPublicDefender
+                  ? onShowPublicDefender
+                  : () => guardedNavigate(link.href);
+                return (
+                  <Button
+                    key={link.kind}
+                    variant="outline"
+                    className="h-auto min-h-16 justify-start text-left whitespace-normal"
+                    onClick={action}
+                  >
+                    <Icon className="h-4 w-4 mr-2 shrink-0" />
+                    <span>
+                      <span className="block font-medium">{t(`legalGuidance.dashboard.practicalPlan.${translationKey}`)}</span>
+                      <span className="block text-xs font-normal text-muted-foreground mt-0.5">{t(`legalGuidance.dashboard.practicalPlan.${translationKey}Description`)}</span>
+                    </span>
+                  </Button>
+                );
+              })}
+            </div>
           </div>
         </CardContent>
       </Card>
+
+      {/* These records contain general case information, not a personalized task list. */}
+      {legalInformationActions.length > 0 && (
+      <Card className="border-border" data-guidance-section="immediateActions" data-testid="legal-information-actions">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2 text-foreground">
+            <BookOpen className="h-5 w-5 text-muted-foreground" />
+            {t('legalGuidance.dashboard.practicalPlan.legalInformationTitle')}
+          </CardTitle>
+          <p className="text-sm text-muted-foreground">
+            {t('legalGuidance.dashboard.practicalPlan.legalInformationDescription')}
+          </p>
+        </CardHeader>
+        <CardContent>
+          <ul className="space-y-3">
+            {legalInformationActions.map((actionItem, index) => (
+              <li key={index} className="flex items-start gap-3 p-3 rounded-lg border">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span className="flex-1 text-sm">{renderWithLinks(actionItem.action, guardedNavigate)}</span>
+                <Badge
+                  variant={getUrgencyBadgeVariant(actionItem.urgency)}
+                  className="text-xs uppercase shrink-0"
+                  data-testid={`badge-legal-information-${index}`}
+                >
+                  {actionItem.urgency}
+                </Badge>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 text-xs text-muted-foreground">
+            {t('legalGuidance.dashboard.practicalPlan.talkToLawyer')}
+          </p>
+        </CardContent>
+      </Card>
+      )}
 
       {/* Enhanced Case Timeline */}
       <Card className="border-border" data-guidance-section="timeline">
@@ -1720,7 +1791,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   {guidance.warnings.length > 0 && (
                     <div data-guidance-section="warnings">
                       {guidance.courtPreparation.length > 0 && (
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">Things to Be Aware Of</p>
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2">{t('legalGuidance.dashboard.warningsAndPrep.thingsToReview')}</p>
                       )}
                       <ul className="space-y-2">
                         {guidance.warnings.map((warning, index) => (
@@ -1735,7 +1806,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   {guidance.courtPreparation.length > 0 && (
                     <div data-guidance-section="courtPreparation">
                       {guidance.warnings.length > 0 && (
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2 pt-2 border-t border-border">Court Preparation</p>
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-2 pt-2 border-t border-border">{t('legalGuidance.dashboard.warningsAndPrep.courtInformation')}</p>
                       )}
                       <ul className="space-y-2">
                         {guidance.courtPreparation.map((preparation, index) => (
@@ -1789,6 +1860,9 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             <CollapsibleContent>
               <Card className="mt-2">
                 <CardContent className="pt-6">
+                  <p className="text-sm text-muted-foreground mb-4">
+                    {t('legalGuidance.dashboard.actionsToAvoid.description')}
+                  </p>
                   <ul className="space-y-2">
                     {guidance.avoidActions.map((action, index) => (
                       <li key={index} className="flex items-start gap-2">

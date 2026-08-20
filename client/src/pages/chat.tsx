@@ -1016,7 +1016,7 @@ export default function ChatPage() {
       custodyStatus: state.caseInfo.custodyStatus || 'Not specified',
       hasAttorney: state.caseInfo.hasAttorney || false,
     });
-    let formattedContent = buildGuidanceChatSummary(data);
+    let formattedContent = buildGuidanceChatSummary(data, i18n.language);
     
     // Add Documents You Should Have section based on case stage
     const casePhase = mapCaseStageToPhase(state.caseInfo.courtStage || 'just_arrested');

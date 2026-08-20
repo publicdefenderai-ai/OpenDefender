@@ -16,6 +16,23 @@ const baseCase = {
   hasHousingAssistance: false,
 };
 
+describe('immediate action treatment', () => {
+  it('preserves an explicitly practical booking-information action when stage guidance repeats it', () => {
+    const result = generateEnhancedGuidance({
+      ...baseCase,
+      caseStage: 'arrest',
+    });
+    const bookingAction = result.immediateActions.find(
+      item => item.action === 'Write down your booking number and where you are',
+    );
+
+    expect(bookingAction).toMatchObject({
+      urgency: 'high',
+      treatment: 'practical',
+    });
+  });
+});
+
 // ---------------------------------------------------------------------------
 // buildCollateralConsequences
 // ---------------------------------------------------------------------------

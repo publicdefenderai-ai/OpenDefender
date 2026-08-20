@@ -22,7 +22,38 @@ export const GUIDANCE_SURFACE_TREATMENT: Record<GuidanceSectionId, {
   dashboard: 'shown', chat: 'shown', pdf: 'shown', print: 'shown',
 }])) as Record<GuidanceSectionId, { dashboard: 'shown'; chat: 'shown' | 'linked'; pdf: 'shown'; print: 'shown' }>;
 
-export interface ImmediateAction { action: string; urgency: 'urgent' | 'high' | 'medium' | 'low'; }
+/**
+ * Presentation is assigned by an action's author or source boundary, never
+ * inferred from its prose. Legal-information items stay readable but are not
+ * presented as user-specific, completable instructions.
+ */
+export type ImmediateActionTreatment = 'practical' | 'legal-information';
+export interface ImmediateAction {
+  action: string;
+  urgency: 'urgent' | 'high' | 'medium' | 'low';
+  treatment?: ImmediateActionTreatment;
+}
+export type PracticalStarterStepId = 'organize' | 'calendar' | 'everydaySupport';
+export type PracticalSupportLinkKind = 'legalHelp' | 'court' | 'lifeSupport';
+export interface PracticalSupportLink {
+  kind: PracticalSupportLinkKind;
+  href: string;
+}
+
+/**
+ * These IDs, rather than localized prose, travel with every normalized plan.
+ * Each surface renders the same practical actions in the user's language.
+ */
+export const DEFAULT_PRACTICAL_STARTER_STEPS: readonly PracticalStarterStepId[] = [
+  'organize',
+  'calendar',
+  'everydaySupport',
+] as const;
+export const DEFAULT_PRACTICAL_SUPPORT_LINKS: readonly PracticalSupportLink[] = [
+  { kind: 'legalHelp', href: '/resources' },
+  { kind: 'court', href: '/court-locator' },
+  { kind: 'lifeSupport', href: '/support' },
+] as const;
 export interface GuidanceDeadline { event: string; timeframe: string; description: string; priority: 'critical' | 'important' | 'normal'; daysFromNow?: number; isEstimate?: boolean; }
 export interface GuidanceTimelineItem { stage: string; description: string; timeframe: string; completed: boolean; isEstimate?: boolean; }
 export interface GuidanceResource { type: string; description: string; contact: string; hours?: string; website?: string; }
@@ -36,6 +67,8 @@ export interface GuidanceViewModel {
   overview: string;
   criticalAlerts: string[];
   immediateActions: ImmediateAction[];
+  practicalStarterSteps: PracticalStarterStepId[];
+  practicalSupportLinks: PracticalSupportLink[];
   nextSteps: string[];
   deadlines: GuidanceDeadline[];
   rights: string[];
@@ -82,7 +115,17 @@ export function normalizeGuidance(raw: unknown, caseDataOverride?: Partial<Guida
     generatedAt: typeof value.generatedAt === 'string' ? value.generatedAt : undefined,
     overview: typeof value.overview === 'string' ? value.overview : '',
     criticalAlerts: strings(value.criticalAlerts),
-    immediateActions: items<ImmediateAction>(value.immediateActions).filter(item => item && typeof item.action === 'string'),
+    immediateActions: items<ImmediateAction>(value.immediateActions)
+      .filter(item => item && typeof item.action === 'string')
+      .map(item => ({
+        ...item,
+        // Legacy and AI-authored actions are intentionally conservative:
+        // they are legal information unless their source explicitly labels
+        // them as a practical action.
+        treatment: item.treatment === 'practical' ? 'practical' : 'legal-information',
+      })),
+    practicalStarterSteps: [...DEFAULT_PRACTICAL_STARTER_STEPS],
+    practicalSupportLinks: DEFAULT_PRACTICAL_SUPPORT_LINKS.map(link => ({ ...link })),
     nextSteps: strings(value.nextSteps),
     deadlines: items<GuidanceDeadline>(value.deadlines).filter(item => item && typeof item.event === 'string'),
     rights,
