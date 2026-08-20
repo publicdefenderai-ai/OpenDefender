@@ -48,5 +48,5 @@ jobs:
       - name: Install Chromium for browser checks
         run: npx playwright install --with-deps chromium
 
-      - name: Verify production release artifact
+      - name: Verify production release artifact and moderate-or-higher dependency audit
         run: npm run release:verify

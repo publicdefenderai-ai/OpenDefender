@@ -173,7 +173,11 @@ npx playwright install chromium # first time only, when Chromium is not already 
 npm run release:verify
 ```
 
-The gate type-checks the app, blocks known dependency vulnerabilities rated high or critical, builds the production artifact, starts that artifact with non-production test settings, and runs its release browser suite against it. The browser checks cover the primary navigation paths and local DOCX and Print/PDF export actions. It does not use production secrets, CAPTCHA solving, or AI services. The broader browser suite remains available with `npm run test:e2e` in an environment configured for those flows.
+The gate type-checks the app, blocks known **production** dependency vulnerabilities rated moderate, high, or critical, builds the production artifact, starts that artifact with non-production test settings, and runs its release browser suite against it. The browser checks cover the primary navigation paths and local DOCX and Print/PDF export actions. It does not use production secrets, CAPTCHA solving, or AI services. The broader browser suite remains available with `npm run test:e2e` in an environment configured for those flows.
+
+#### Dependency-audit exception
+
+As of August 20, 2026, a full `npm audit` reports four moderate findings in Drizzle Kit's development-only migration CLI: `drizzle-kit` → `@esbuild-kit/esm-loader` → `@esbuild-kit/core-utils` → `esbuild@0.18.20`. Drizzle Kit 0.31.10 is the current published release and still declares that deprecated loader; its only audit-proposed fix is an unsupported downgrade to 0.18.1. This exception has been reviewed for the release gate because the chain is a `devDependency`, is not included in the production artifact, and is not used by the production server or browser build. The gate audits production dependencies at moderate-or-higher severity. Recheck the exception when upgrading Drizzle Kit and before any change that makes migration tooling part of a deployed runtime.
 
 ---
 
