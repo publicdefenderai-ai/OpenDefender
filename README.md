@@ -158,6 +158,17 @@ npm run dev
 
 The app runs at `http://localhost:5000`.
 
+### Release verification
+
+Before merging or releasing, run the same production-readiness gate used in CI:
+
+```bash
+npx playwright install chromium # first time only, when Chromium is not already installed
+npm run release:verify
+```
+
+The gate type-checks the app, blocks known dependency vulnerabilities rated high or critical, builds the production artifact, starts that artifact with non-production test settings, and runs its release browser suite against it. The browser checks cover the primary navigation paths and local DOCX and Print/PDF export actions. It does not use production secrets, CAPTCHA solving, or AI services. The broader browser suite remains available with `npm run test:e2e` in an environment configured for those flows.
+
 ---
 
 ## Architecture

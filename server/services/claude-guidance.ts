@@ -76,6 +76,7 @@ export function clearSessionCache(sessionId?: string): void {
 }
 
 interface CaseDetails {
+  [key: string]: unknown;
   jurisdiction: string;
   charges: string | string[];
   caseStage: string;

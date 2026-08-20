@@ -69,7 +69,7 @@ interface CaseDetails {
   hasMinorChildren?: boolean | null;
   hasProfessionalLicense?: boolean | null;
   hasHousingAssistance?: boolean | null;
-  civilUrgency?: Record<string, string>;
+  civilUrgency?: Record<string, 'none' | 'active' | 'emergency'>;
   [key: string]: unknown;
 }
 

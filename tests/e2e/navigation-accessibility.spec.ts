@@ -21,11 +21,12 @@ test.describe("intent navigation and accessibility", () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto("/");
 
-    await expect(page.getByRole("navigation", { name: "Mobile navigation" })).toBeVisible();
-    await expect(page.getByRole("link", { name: "Urgent help" })).toHaveAttribute("href", "/first-24-hours");
-    await expect(page.getByRole("link", { name: "Case Roadmap" })).toHaveAttribute("href", "/case-guidance");
-    await expect(page.getByRole("link", { name: "Understand a case stage" })).toHaveAttribute("href", "/case-timeline");
-    await expect(page.getByRole("link", { name: "Legal help" })).toHaveAttribute("href", "/legal-aid");
+    const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
+    await expect(mobileNav).toBeVisible();
+    await expect(mobileNav.getByRole("link", { name: "Urgent help" })).toHaveAttribute("href", "/first-24-hours");
+    await expect(mobileNav.getByRole("link", { name: "Case Roadmap" })).toHaveAttribute("href", "/case-guidance");
+    await expect(mobileNav.getByRole("link", { name: "Understand a case stage" })).toHaveAttribute("href", "/case-timeline");
+    await expect(mobileNav.getByRole("link", { name: "Legal help" })).toHaveAttribute("href", "/legal-aid");
   });
 
   test("site search uses combobox and listbox keyboard semantics", async ({ page }) => {

@@ -194,26 +194,37 @@ function generateOutput(f: FormState): string {
 
 /* ─── Field components ─── */
 
-function Label({ children, hint }: { children: React.ReactNode; hint?: string }) {
+function Label({
+  children,
+  hint,
+  htmlFor,
+}: {
+  children: React.ReactNode;
+  hint?: string;
+  htmlFor?: string;
+}) {
   return (
-    <div className="mb-1">
+    <label htmlFor={htmlFor} className="mb-1 block">
       <span className="text-sm font-medium text-foreground">{children}</span>
       {hint && <span className="text-xs text-muted-foreground ml-2">{hint}</span>}
-    </div>
+    </label>
   );
 }
 
 function Input({
+  id,
   value,
   onChange,
   placeholder,
 }: {
+  id?: string;
   value: string;
   onChange: (v: string) => void;
   placeholder?: string;
 }) {
   return (
     <input
+      id={id}
       type="text"
       value={value}
       onChange={(e) => onChange(e.target.value)}
@@ -1381,8 +1392,9 @@ export default function MitigationBuilder() {
                 Header information
               </p>
               <div>
-                <Label hint="optional">Client name or identifier</Label>
+                <Label htmlFor="mitigation-client-name" hint="optional">Client name or identifier</Label>
                 <Input
+                  id="mitigation-client-name"
                   value={form.clientName}
                   onChange={set("clientName")}
                   placeholder="e.g. J. Smith — or leave blank"
@@ -1413,8 +1425,9 @@ export default function MitigationBuilder() {
               defaultOpen
             >
               <div>
-                <Label hint="optional">Time in community</Label>
+                <Label htmlFor="mitigation-years-in-community" hint="optional">Time in community</Label>
                 <Input
+                  id="mitigation-years-in-community"
                   value={form.yearsInCommunity}
                   onChange={set("yearsInCommunity")}
                   placeholder="e.g. 12 years in [city/neighborhood]"

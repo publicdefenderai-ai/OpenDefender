@@ -40,6 +40,17 @@ import {
 } from "@/lib/diversion-programs-data";
 import { DiversionProgramCard } from "@/components/legal/diversion-program-card";
 
+function normalizeProgramContact(contact: unknown) {
+  if (!contact || typeof contact !== "object") return undefined;
+
+  const value = contact as Record<string, unknown>;
+  return {
+    phone: typeof value.phone === "string" ? value.phone : undefined,
+    email: typeof value.email === "string" ? value.email : undefined,
+    url: typeof value.url === "string" ? value.url : undefined,
+  };
+}
+
 export default function DiversionPrograms() {
   useScrollToTop();
   const { t } = useTranslation();
@@ -354,7 +365,13 @@ export default function DiversionPrograms() {
                 {filteredPrograms.map((program) => (
                   <DiversionProgramCard
                     key={program.id}
-                    program={program}
+                    program={{
+                      ...program,
+                      county: program.county ?? undefined,
+                      cities: program.cities ?? undefined,
+                      eligibilityNotes: program.eligibilityNotes ?? undefined,
+                      contact: normalizeProgramContact(program.contact),
+                    }}
                   />
                 ))}
               </div>

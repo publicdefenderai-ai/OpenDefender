@@ -215,7 +215,9 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  await initializeCostTracker();
+  if (process.env.RELEASE_CHECK !== "true") {
+    await initializeCostTracker();
+  }
   registerV1Routes(app);
   const server = await registerRoutes(app);
 

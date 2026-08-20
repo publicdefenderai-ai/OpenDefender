@@ -3,8 +3,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 
 interface JuryInstructionBadgeProps {
   instructionRef: string;
-  instructionUrl?: string;
-  instructionPaywall?: string;
+  instructionUrl?: string | null;
+  instructionPaywall?: string | null;
   chargeId?: string;
   dataTestIdPrefix?: string;
   onLinkClick?: (e: React.MouseEvent) => void;

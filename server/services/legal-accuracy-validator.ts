@@ -80,7 +80,7 @@ interface GuidanceToValidate {
   deadlines?: Array<{ event: string; timeframe: string; description: string; priority: string; daysFromNow?: number }>;
   rights?: string[];
   warnings?: string[];
-  chargeClassifications?: Array<{ code: string; title: string; classification: string; maxPenalty: string }>;
+  chargeClassifications?: Array<{ code?: string; title: string; classification: string; maxPenalty: string }>;
   timeline?: Array<{ stage: string; description: string; timeframe: string; completed: boolean }>;
 }
 

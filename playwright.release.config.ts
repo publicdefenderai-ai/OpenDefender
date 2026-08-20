@@ -1,7 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 import { execFileSync } from "node:child_process";
 
-const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:5000";
+const serverPort = process.env.RELEASE_CHECK_PORT ?? "5001";
+const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? `http://127.0.0.1:${serverPort}`;
 
 function findSystemChromium(): string | undefined {
   if (process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH) {
@@ -46,4 +47,14 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
   ],
+  webServer: {
+    command: "npm run start:release-check",
+    env: {
+      ...process.env,
+      PORT: serverPort,
+    },
+    url: baseURL,
+    timeout: 60_000,
+    reuseExistingServer: false,
+  },
 });
