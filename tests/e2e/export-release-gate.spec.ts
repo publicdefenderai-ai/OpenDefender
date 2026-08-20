@@ -43,7 +43,7 @@ test.describe("browser export release gate", () => {
     expect(docxContents.length).toBeGreaterThan(100);
 
     await page.getByRole("button", {
-      name: "Print or save as PDF — opens browser print dialog",
+      name: "Print or save as PDF: opens browser print dialog",
     }).click();
 
     await expect

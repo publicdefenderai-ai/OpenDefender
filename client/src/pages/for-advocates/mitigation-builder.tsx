@@ -792,7 +792,7 @@ function PolishPanel({ form }: { form: FormState }) {
       {/* Info banner */}
       <div className="px-4 py-2.5 bg-violet-50/60 dark:bg-violet-950/20 border-b border-violet-100 dark:border-violet-900/50">
         <p className="text-[11px] text-violet-800 dark:text-violet-300 leading-relaxed">
-          <span className="font-semibold">Field-locked:</span> Claude will only use information you entered — empty fields are skipped and nothing is inferred. Output is unlabeled prose; your structured summary above remains unchanged. Anthropic may retain API data for up to 30 days under its standard terms.
+          <span className="font-semibold">Field-locked:</span> Claude will only use information you entered; empty fields are skipped and nothing is inferred. Output is unlabeled prose; your structured summary above remains unchanged. Anthropic may retain API data for up to 30 days under its standard terms.
         </p>
       </div>
 
@@ -1277,8 +1277,8 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
           <button
             type="button"
             onClick={handlePrint}
-            title="Opens your browser's print dialog — choose 'Save as PDF' for a PDF copy."
-            aria-label="Print or save as PDF — opens browser print dialog"
+            title="Opens your browser's print dialog. Choose 'Save as PDF' for a PDF copy."
+            aria-label="Print or save as PDF: opens browser print dialog"
             className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors"
           >
             <Printer className="h-3.5 w-3.5" />

@@ -107,7 +107,7 @@ function PrintableKit({ fields }: { fields: Record<string, string> }) {
   return (
     <div className="hidden print:block p-8 font-sans text-sm">
       <h1 className="text-xl font-bold mb-1">Emergency Contact Kit</h1>
-      <p className="text-xs text-gray-500 mb-6">OpenDefender — opendefender.ai · Temporary in-memory session records · Not legal advice</p>
+      <p className="text-xs text-gray-500 mb-6">OpenDefender · opendefender.ai · Temporary in-memory session records · Not legal advice</p>
       <div className="grid grid-cols-2 gap-x-8 gap-y-3">
         {Object.entries(fields).filter(([, v]) => v.trim()).map(([key, value]) => (
           <div key={key}>

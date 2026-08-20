@@ -154,7 +154,7 @@ export interface DocumentSummary {
     outputTokens: number;
     estimatedCost: number;
   };
-  /** Redaction-attempted extracted text — returned to the client for Q&A, not saved to a persistent document store */
+  /** Redaction-attempted extracted text: returned to the client for Q&A, not saved to a persistent document store */
   extractedText?: string;
 }
 
@@ -547,7 +547,7 @@ DOCUMENT TEXT:
 
 Your role:
 - Answer questions about THIS specific document only, using the text above as your sole source
-- When quoting the document, use the exact words from it — do not paraphrase quotes
+- When quoting the document, use the exact words from it; do not paraphrase quotes
 - Use plain language (6th–8th grade reading level) in your answers
 - Be clear about what the document says versus general legal information
 - If the answer is not in the document, say so directly
@@ -583,7 +583,7 @@ ${truncatedText}
 
 Your role:
 - Answer questions about THIS specific document only, using the text above as your sole source
-- When quoting the document, use the exact words from it — do not paraphrase quotes
+- When quoting the document, use the exact words from it; do not paraphrase quotes
 - Use plain language (6th–8th grade reading level) in your answers
 - Be clear about what the document says versus general legal information
 - If the answer is not in the document, say so directly

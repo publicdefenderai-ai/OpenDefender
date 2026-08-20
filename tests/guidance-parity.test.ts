@@ -271,7 +271,7 @@ describe('normalized guidance surface parity', () => {
     expect(guidance.chargeClassifications[0].name).toBe('Claude Title Charge');
 
     const chat = buildGuidanceChatSummary(guidance);
-    expect(chat).toContain('Claude Title Charge — felony');
+    expect(chat).toContain('Claude Title Charge: felony');
     expect(chat).not.toContain('CLAUDE_INTERNAL_CODE');
 
     rendered.length = 0;

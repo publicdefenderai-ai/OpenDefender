@@ -85,7 +85,7 @@ export function buildGuidanceChatSummary(raw: unknown, language = 'en'): string 
     criticalAlerts: guidance.criticalAlerts.length ? `**Urgent Takeaways**\n${bullet(guidance.criticalAlerts)}` : '',
     overview: guidance.overview ? `**Overview**\n${guidance.overview}` : '',
     charges: guidance.chargeClassifications.length
-      ? `**Your Charges**\n${bullet(guidance.chargeClassifications.map(item => `${item.name} — ${item.classification}`))}`
+      ? `**Your Charges**\n${bullet(guidance.chargeClassifications.map(item => `${item.name}: ${item.classification}`))}`
       : '',
     immediateActions: practicalPlan.length || legalInformationActions.length ? [
       practicalPlan.length
@@ -99,7 +99,7 @@ export function buildGuidanceChatSummary(raw: unknown, language = 'en'): string 
       ? `**Case Timeline**\n${bullet(guidance.timeline.map(item => `${item.stage}: ${item.description} (${item.isEstimate ? '~' : ''}${item.timeframe})`))}`
       : '',
     deadlines: guidance.deadlines.length
-      ? `**Important Dates**\n${bullet(guidance.deadlines.map(item => `${item.event}: ${item.isEstimate ? '~' : ''}${item.timeframe} [${item.priority}] — ${item.description}`))}`
+      ? `**Important Dates**\n${bullet(guidance.deadlines.map(item => `${item.event}: ${item.isEstimate ? '~' : ''}${item.timeframe} [${item.priority}], ${item.description}`))}`
       : '',
     rights: guidance.rights.length ? `**Your Rights**\n${bullet(guidance.rights)}` : '',
     nextSteps: guidance.nextSteps.length ? `**Next Steps**\n${bullet(guidance.nextSteps)}` : '',
@@ -107,7 +107,7 @@ export function buildGuidanceChatSummary(raw: unknown, language = 'en'): string 
     warnings: guidance.warnings.length ? `**Important Warnings**\n${bullet(guidance.warnings)}` : '',
     courtPreparation: guidance.courtPreparation.length ? `**${labels.courtInformation}**\n${labels.courtNote}\n${bullet(guidance.courtPreparation)}` : '',
     collateralConsequences: guidance.collateralConsequences.length
-      ? `**Possible Collateral Consequences**\n${bullet(guidance.collateralConsequences.map(item => `${item.consequence} (${item.timing}) — ${item.actionNote}`))}`
+      ? `**Possible Collateral Consequences**\n${bullet(guidance.collateralConsequences.map(item => `${item.consequence} (${item.timing}): ${item.actionNote}`))}`
       : '',
     mockQA: guidance.mockQA.length
       ? `**Practice Questions for Your Case**\n${bullet(guidance.mockQA.map(item => `${item.question}\n  Suggested response: ${item.suggestedResponse}\n  Why: ${item.explanation}`))}`
@@ -121,7 +121,7 @@ export function buildGuidanceChatSummary(raw: unknown, language = 'en'): string 
           `${item.type}: ${item.description} (${item.contact})`,
           item.hours ? `Hours: ${item.hours}` : '',
           item.website ? `Website: ${item.website}` : '',
-        ].filter(Boolean).join(' — ')))}`
+        ].filter(Boolean).join('; ')))}`
       : '',
   };
 

@@ -74,7 +74,7 @@ const sourceDisclosureCopy = {
       sourceHeading: "Kinds of sources used",
       sources: [
         "Official primary law: state statutes, court rules, and case law (one cited source per rule where verified).",
-        "Curated or synthesized charge entries organized from Model Penal Code patterns — some statute codes are generated organizational placeholders, not official code.",
+        "Curated or synthesized charge entries organized from Model Penal Code patterns; some statute codes are generated organizational placeholders, not official code.",
         "Public APIs and datasets: OpenLaws, CourtListener/RECAP, GovInfo (U.S. GPO), and the LOCUS municipal-ordinance dataset.",
         "Court-published jury instructions (some free, some paywalled), referenced by series number and, where available, a direct link.",
       ],

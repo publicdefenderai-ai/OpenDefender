@@ -1550,7 +1550,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         </CardContent>
       </Card>
 
-      {/* Important Dates — same normalized deadlines used by chat and PDF. */}
+      {/* Important Dates: same normalized deadlines used by chat and PDF. */}
       {guidance.deadlines.length > 0 && (
         <Card className="border-border" data-guidance-section="deadlines" data-testid="section-deadlines">
           <CardHeader>
@@ -1913,7 +1913,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
         )}
       </div>
 
-      {/* Generated legal contacts — the same resource records shown in chat and PDF. */}
+      {/* Generated legal contacts: the same resource records shown in chat and PDF. */}
       {guidance.resources.length > 0 && (
         <Card className="border-border" data-guidance-section="resources" data-testid="section-guidance-resources">
           <CardHeader>
