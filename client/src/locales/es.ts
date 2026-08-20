@@ -107,7 +107,7 @@ export default {
       "freeTitle": "Siempre Gratuito",
       "freeDesc": "Entender sus derechos no debería costar dinero. OpenDefender es gratuito para cualquiera que lo necesite.",
       "privacyTitle": "Privacidad Protegida",
-      "privacyDesc": "No se almacena información personal. Todos los datos de la sesión se eliminan cuando usted se va.",
+      "privacyDesc": "Una cookie de 24 horas y registros temporales en memoria respaldan el servicio. Consulte la Política de Privacidad.",
       "earlyKnowledgeTitle": "Conocimiento Temprano, Mejores Resultados",
       "earlyKnowledgeDesc": "La investigación muestra que el acceso temprano a información legal conduce a mejores resultados. Las condiciones de fianza, los cargos y el interrogatorio policial ocurren antes de que la mayoría consulten a un abogado. Existimos para cerrar esa brecha.",
       "multilingualTitle": "Disponible en Su Idioma",
@@ -174,7 +174,7 @@ export default {
       "label2": "jurisdicciones",
       "label3": "costo",
       "badge1": "Gratis · Siempre",
-      "badge2": "Privado · sin datos almacenados",
+      "badge2": "Privacidad · registros temporales",
       "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {
@@ -313,6 +313,13 @@ export default {
       "foundOffices": "Se encontró {{count}} oficina{{plural}} cerca de usted"
     }
   },
+  "disclosure": {
+    "label": "Información legal importante",
+    "summary": "OpenDefender ofrece información educativa general basada en fuentes legales públicas, datos seleccionados y, a veces, texto generado por IA; no es asesoramiento legal. La información puede estar incompleta, estimada o desactualizada. Verifique detalles, plazos y citas importantes con un abogado o una fuente oficial.",
+    "fullNotice": "Aviso completo",
+    "sources": "Fuentes",
+    "privacy": "Privacidad"
+  },
   "footer": {
     "tagline": "Expandiendo el acceso a la justicia a través de orientación legal y recursos impulsados por IA.",
     "legalResources": "Recursos Legales",
@@ -333,12 +340,13 @@ export default {
     "ourMission": "Nuestra Misión",
     "developmentRoadmap": "Hoja de Ruta de Desarrollo",
     "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
     "noticeDisclaimers": "Avisos y Exenciones",
     "rightToCounsel": "Derecho a un Abogado",
     "forDevelopers": "Para Desarrolladores",
     "viewOnGithub": "Ver en GitHub",
     "viewOnX": "Seguir en X",
-    "privacyNotice": "Privacidad Primero: No almacenamos sus datos personales. Toda información se elimina después de la sesión.",
+    "privacyNotice": "Privacidad primero: una cookie de 24 horas y registros temporales en memoria respaldan el servicio. Consulte la Política de Privacidad.",
     "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional.",
     "legalDisclaimer": "Solo información legal general — no sustituye el asesoramiento legal profesional. Consulte siempre a un abogado calificado para su situación específica."
   },
@@ -2136,7 +2144,7 @@ export default {
       "title": "Entienda su Hoja de Ruta del Caso",
       "cancel": "Cancelar",
       "stepProgress": "Paso {{current}} de {{total}}: {{title}}",
-      "privacyNotice": "Sus datos de sesión están encriptados y se eliminan automáticamente dentro de 24 horas.",
+      "privacyNotice": "Se usa una cookie de sesión por seguridad. Los registros de caso se guardan en memoria del servidor y generalmente caducan en 24 horas.",
       "steps": {
         "consent": "Privacidad y Consentimiento",
         "jurisdiction": "Su Estado",
@@ -2150,7 +2158,7 @@ export default {
         "bullet1Head": "Información legal, no asesoramiento legal.",
         "bullet1Body": "Explicamos sus derechos y qué esperar — no le decimos qué hacer. Para asesoramiento sobre su caso, un defensor público o abogado de ayuda legal es su mejor recurso.",
         "bullet2Head": "Privacidad por diseño.",
-        "bullet2Body": "Sus respuestas se eliminan cuando cierra esta sesión. Nada se almacena en nuestros servidores más de 24 horas.",
+        "bullet2Body": "Sus respuestas se mantienen temporalmente en memoria del servidor, no en una base de datos permanente de casos. Los registros generalmente caducan en 24 horas o se borran al reiniciar el servicio.",
         "cardATitle": "Orientación Personalizada con IA",
         "cardARecommended": "Recomendado",
         "cardABody": "Analiza sus cargos específicos, estado y etapa del caso para crear una hoja de ruta a su medida.",
@@ -2465,10 +2473,10 @@ export default {
       },
       "privacyNotice": {
         "title": "Su Privacidad está Protegida",
-        "text": "Esta orientación se genera en base a su información y se eliminará automáticamente después de que termine su sesión. No se almacena información personal de forma permanente.",
-        "encrypted": "Todos los datos encriptados en tránsito y en reposo",
-        "autoDelete": "Datos de sesión eliminados automáticamente después de 24 horas",
-        "piiRedacted": "Información personal redactada antes del procesamiento de IA",
+        "text": "Esta orientación se genera a partir de sus datos. Los registros de caso se guardan en memoria, no en una base permanente, y generalmente caducan en 24 horas o al reiniciar.",
+        "encrypted": "Los datos se cifran en tránsito; los registros temporales quedan en memoria del servidor",
+        "autoDelete": "Los registros de caso generalmente caducan de la memoria en 24 horas",
+        "piiRedacted": "La redacción automática intenta quitar identificadores comunes antes del procesamiento con IA",
         "deleteNow": "Eliminar Mis Datos Ahora",
         "deleteNote": "Elimina permanentemente todos los datos de la sesión"
       }
@@ -2555,7 +2563,7 @@ export default {
       "subtitle": "Obtenga Orientación Personalizada",
       "description": "Responda algunas preguntas sobre su situación para recibir orientación legal personalizada, próximos pasos y recursos específicos para su caso y jurisdicción.",
       "startButton": "Iniciar Evaluación Personalizada",
-      "privacyNote": "Sus respuestas son privadas y se eliminan automáticamente después de su sesión"
+      "privacyNote": "Sus respuestas se guardan temporalmente en memoria y generalmente caducan en 24 horas"
     },
     "howItWorks": {
       "title": "Cómo Funciona la Orientación Personalizada",
@@ -2599,38 +2607,38 @@ export default {
     "privacy": {
       "title": "Su Privacidad Está Protegida",
       "subtitle": "Tomamos su privacidad en serio. Así es como protegemos su información.",
-      "noStorageTitle": "Sin Almacenamiento de Datos",
-      "noStorageDesc": "La información personal no se guarda en nuestros servidores",
-      "sessionOnlyTitle": "Solo Durante la Sesión",
-      "sessionOnlyDesc": "Los datos existen solo durante su sesión activa",
+      "noStorageTitle": "Procesamiento Temporal",
+      "noStorageDesc": "Los datos del caso usan memoria temporal del servidor y pueden enviarse a Anthropic para orientación con IA",
+      "sessionOnlyTitle": "Retención Informada",
+      "sessionOnlyDesc": "Los registros del caso suelen caducar en 24 horas; los registros de proveedores pueden durar más",
       "autoDeleteTitle": "Eliminación Automática",
-      "autoDeleteDesc": "Toda la información se elimina automáticamente cuando se va",
-      "anonymousTitle": "Anónimo",
-      "anonymousDesc": "No se requiere cuenta, uso completamente anónimo",
+      "autoDeleteDesc": "Los registros temporales suelen caducar en 24 horas o al reiniciar el servicio",
+      "anonymousTitle": "Sin Cuenta Pública",
+      "anonymousDesc": "No se requiere una cuenta pública; se usa una cookie esencial y metadatos operativos",
       "disclaimer": "Esta herramienta proporciona información y orientación legal general únicamente. No sustituye el asesoramiento legal profesional. Siempre consulte con un abogado calificado para obtener asesoramiento específico a su caso.",
       "getStartedButton": "Comenzar Ahora",
       "learnRightsButton": "Aprenda Primero Sobre Sus Derechos",
-      "footerBanner": "No almacenamos sus datos personales — toda información se elimina después de la sesión."
+      "footerBanner": "Usamos una cookie de 24 horas y registros temporales de caso en memoria. Consulte la Política de Privacidad."
     },
     "exitWarning": {
       "title": "Antes de Irse",
-      "message": "Su orientación personalizada no ha sido exportada. Para proteger su privacidad, no almacenamos esta información. Si se va ahora, se perderá.",
+      "message": "Su orientación personalizada no ha sido exportada. OpenDefender no mantiene una biblioteca permanente de casos, por lo que la copia del navegador puede perderse si se va. Los registros temporales y del proveedor siguen la Política de Privacidad.",
       "export": "Exportar",
       "proceed": "Continuar"
     },
     "clearSession": {
       "title": "Borrar Datos de Sesión",
-      "message": "Esto eliminará permanentemente toda la información de su caso y orientación de la memoria. Esta acción no se puede deshacer.",
+      "message": "Esto eliminará de la memoria de OpenDefender la información y orientación del caso actualmente accesibles. No afecta la retención de proveedores y operaciones descrita en la Política de Privacidad.",
       "confirm": "Borrar Sesión",
       "cancel": "Cancelar",
       "successTitle": "Sesión Borrada",
-      "successMessage": "Todos los datos de la sesión han sido borrados de la memoria.",
+      "successMessage": "El registro del caso actualmente accesible se borró de la memoria de OpenDefender.",
       "errorTitle": "Error",
       "errorMessage": "No se pudo borrar la sesión. Por favor intente de nuevo."
     },
     "sessionExpired": {
       "title": "Su sesión ha expirado",
-      "message": "Esta orientación ya no está disponible porque su sesión del navegador ha finalizado. Esto es una medida de privacidad — los detalles de su caso nunca se almacenan de forma permanente.",
+      "message": "Esta orientación ya no está disponible porque el registro temporal de OpenDefender caducó o se borró. La retención de proveedores y operaciones se explica en la Política de Privacidad.",
       "cta": "Iniciar un nuevo cuestionario",
       "subtext": "Su nueva orientación será igual de detallada. Solo toma unos minutos."
     }
@@ -3863,7 +3871,8 @@ export default {
     "viewQuickRef": "Tarjeta de Referencia Rápida",
     "disclaimer": {
       "title": "Importante:",
-      "text": "Cada caso es diferente. Las etapas mostradas son una guía general para un caso penal típico. Su caso puede tener pasos adicionales o menos. Siempre consulte con su abogado sobre su situación específica."
+      "text": "Cada caso es diferente. Las etapas mostradas son una guía general para un caso penal típico. Su caso puede tener pasos adicionales o menos. Siempre consulte con su abogado sobre su situación específica.",
+      "deadlines": "Las fechas y plazos pueden ser estimaciones, cambiar según la jurisdicción u orden judicial y deben verificarse con su abogado y la regla oficial vigente."
     },
     "stages": {
       "arrest": {
@@ -4387,7 +4396,7 @@ export default {
     },
     "privacyBanner": {
       "title": "Privacidad Primero:",
-      "text": "No almacenamos sus datos personales — toda la información se elimina después de la sesión."
+      "text": "OpenDefender usa una cookie esencial y registros temporales en memoria. Consulte la Política de Privacidad."
     },
     "atRisk": {
       "sectionTitle": "Qué más puede estar en riesgo",
@@ -4559,7 +4568,7 @@ export default {
       },
       "privacyFirst": {
         "title": "Privacidad Primero",
-        "description": "Proteger la privacidad del usuario con sesiones efímeras y sin retención de datos"
+        "description": "Protección de la privacidad mediante minimización de datos, registros temporales y retención divulgada"
       },
       "continuousImprovement": {
         "title": "Mejora Continua",
@@ -4794,13 +4803,13 @@ export default {
     },
     "notice": {
       "title": "Plataforma que prioriza la privacidad:",
-      "description": "No recopilamos ni almacenamos datos personales. Su privacidad está protegida de forma predeterminada."
+      "description": "Minimizamos los datos, usamos una cookie esencial y guardamos registros de caso en memoria temporal del servidor, no en una base permanente."
     },
     "principles": {
       "title": "Nuestros Principios de Privacidad",
       "noPersonalData": {
-        "title": "Sin Recopilación de Datos Personales",
-        "description": "No recopilamos nombres, información de contacto, números de caso ni ninguna otra información que lo identifique como persona. Cuando usa la Hoja de Ruta del Caso o las herramientas de chat con IA, los datos que ingresa — jurisdicción, tipo de cargo, etapa del caso y preocupaciones — se mantienen en memoria temporal del servidor y se eliminan automáticamente en 24 horas. No se escriben en una base de datos persistente ni se vinculan a ninguna identidad."
+        "title": "Minimización de Datos",
+        "description": "La orientación pública no exige nombre, correo ni teléfono. Se emite una cookie de sesión de 24 horas por seguridad y control de registros. Los datos del caso se guardan en memoria temporal y suelen caducar en 24 horas o al reiniciar. Evite datos identificatorios en campos de texto."
       },
       "anonymizedData": {
         "title": "Solo Datos Anonimizados",
@@ -4812,8 +4821,8 @@ export default {
         }
       },
       "noSharing": {
-        "title": "Sin Compartir o Vender Datos",
-        "description": "No compartimos, vendemos ni proporcionamos sus datos a terceros. Como no recopilamos datos personales, no podríamos compartirlos aunque quisiéramos. Cualquier dato anonimizado compartido está completamente desprovisto de información identificatoria."
+        "title": "No Vendemos Datos Personales",
+        "description": "No vendemos datos personales. Proveedores de alojamiento, seguridad, mapas y datos legales pueden procesar información limitada. Los datos de IA se envían a Anthropic solo al usar una función asistida por IA."
       }
     },
     "caseData": {
@@ -4821,19 +4830,87 @@ export default {
       "summary": "La Hoja de Ruta del Caso, el Chat de IA, el Resumidor de Documentos y el paso de triaje de emergencias civiles utilizan solo memoria temporal del servidor. Ningún dato de estas herramientas se escribe en una base de datos persistente. Esto es exactamente lo que sucede:",
       "memoryOnly": {
         "title": "Qué se almacena — y qué no",
-        "description": "Sus datos se mantienen solo en la memoria del servidor: jurisdicción, tipo de cargo, etapa del caso, estado de custodia, preocupaciones seleccionadas y la orientación de IA generada. Lo que nunca se recopila: su nombre, dirección, teléfono, correo electrónico, número de caso o cualquier información identificatoria. Los datos que proporciona son categóricos (un estado, un tipo de cargo, un sí o no), no hechos del caso en formato libre."
+        "description": "Sus datos pueden incluir jurisdicción, cargo, etapa, custodia, preocupaciones, texto libre, texto de documentos y orientación generada. Se guardan en memoria del servidor, no en una base permanente. No ingrese nombres, contactos, números de caso u otros datos sensibles innecesarios."
       },
       "piiRedaction": {
-        "title": "Medida adicional: información personal eliminada antes del procesamiento de IA",
-        "description": "Antes de que los datos lleguen a la IA, escaneamos automáticamente y eliminamos información personal como números de teléfono, correos electrónicos y números de Seguro Social. Esto aplica incluso si ingresa información identificatoria en un campo de texto libre. Sus datos personales no se envían a servicios de IA externos."
+        "title": "Medida adicional: redacción automática antes del procesamiento de IA",
+        "description": "Antes del procesamiento con IA, intentamos ocultar identificadores comunes como teléfonos, correos y números de Seguro Social. La redacción automática puede omitir datos sensibles; es una protección, no una garantía. Anthropic procesa las entradas de IA."
       },
       "autoDelete": {
-        "title": "Eliminación automática después de 24 horas",
-        "description": "Los datos de sesión en memoria expiran automáticamente después de 24 horas y se eliminan permanentemente. No se requiere ninguna acción. Cada reinicio del servidor también borra todos los datos de sesión."
+        "title": "Caducidad de memoria en 24 horas",
+        "description": "Los registros de caso y comentarios suelen caducar de la memoria en 24 horas; un reinicio puede borrarlos antes. La orientación puede quedar en caché unos 15 minutos. Algunos metadatos de consentimiento, auditoría, seguridad y operación pueden permanecer hasta el reinicio o en registros de proveedores."
       },
       "serverRestart": {
         "title": "Herramientas que no almacenan nada",
         "description": "Varias herramientas no realizan ninguna llamada al servidor en absoluto: el Evaluador de Elegibilidad para Eliminación de Antecedentes, el Evaluador de Consecuencias Colaterales y la Lista de Verificación de Ingreso del Defensor Público. Las tres funcionan completamente en su navegador; las herramientas para defensores generan archivos .docx descargables localmente en su dispositivo, y no se transmiten datos a nuestros servidores. El formulario principal del Constructor de Memorandos de Mitigación y su exportación a .docx funcionan de la misma manera, pero también ofrece un paso opcional de 'Pulido con IA' que sí envía los campos que usted ingresó a nuestro servidor para un procesamiento de IA único (consulte Fuentes de Datos Externas más abajo). Todas las demás páginas estáticas del sitio (guías de derechos, recursos de apoyo, guías de fechas de tribunal, guías de inmigración) son igualmente pasivas."
+      }
+    },
+    "documentSummarizer": {
+      "title": "Privacidad del Resumidor de Documentos",
+      "summary": "El Resumidor envía a Anthropic el texto extraído para generar resúmenes y respuestas. Se aplican las siguientes protecciones y límites.",
+      "noStorage": {
+        "title": "Procesamiento temporal de documentos",
+        "description": "Los bytes y el texto extraído se procesan en memoria temporal del servidor, no en una base permanente de documentos. Un reinicio puede eliminarlos antes."
+      },
+      "aiProcessing": {
+        "title": "Procesamiento de IA por Anthropic",
+        "description": "El texto y las preguntas se envían a Anthropic para generar resúmenes y respuestas. Intentamos ocultar identificadores comunes, pero la redacción automática puede omitir datos sensibles. Bajo los términos estándar de Anthropic, los datos de API pueden conservarse hasta 30 días."
+      },
+      "summaryNotStored": {
+        "title": "Su copia queda bajo su control",
+        "description": "OpenDefender no crea una biblioteca permanente de documentos o resúmenes. Las copias que descargue, imprima o guarde permanecen en su dispositivo o en servicios que usted elija."
+      },
+      "security": {
+        "title": "Seguridad y consentimiento",
+        "description": "El procesamiento usa conexiones cifradas. Cargue solo documentos autorizados, quite datos sensibles innecesarios y compare todo resumen de IA con el original."
+      },
+      "supportedFiles": {
+        "title": "Qué Puede Cargar",
+        "description": "Admitimos archivos PDF, DOCX, TXT, PNG y JPEG dentro de los límites mostrados. Quite información personal innecesaria antes de cargar."
+      },
+      "tool": {
+        "title": "Resumidor de Documentos",
+        "description": "Obtenga un resumen en lenguaje sencillo generado por IA de un documento legal",
+        "close": "Cerrar",
+        "consentHeading": "Antes de cargar un documento, tenga en cuenta lo siguiente:",
+        "memoryProcessing": "OpenDefender no escribe su documento en una base de datos permanente. Se procesa en memoria temporal del servidor mientras se genera el resumen.",
+        "summaryLibrary": "OpenDefender no crea una biblioteca permanente de resúmenes. El resultado se devuelve a este navegador; descargue una copia si desea conservarlo.",
+        "aiProcessing": "Claude, un servicio de IA de Anthropic, analizará su documento.",
+        "providerRetention": "Anthropic procesa el texto del documento. Según sus términos estándar de API comercial, las entradas y salidas pueden conservarse hasta 30 días por motivos operativos y de seguridad y, de forma predeterminada, no se usan para entrenar modelos. OpenDefender no afirma que se apliquen condiciones de retención cero.",
+        "courtProceedings": "Si participa en un caso legal, podrían preguntarle en el tribunal qué recursos usó para entender documentos legales, incluida esta herramienta.",
+        "notLegalAdvice": "Esta herramienta ofrece resúmenes informativos, no asesoramiento legal. La IA puede cometer errores u omitir detalles importantes. Pida a un abogado que revise los documentos legales importantes.",
+        "reviewLinks": "Revise:",
+        "privacyLink": "Política de Privacidad",
+        "termsLink": "Términos de Servicio",
+        "disclosureLink": "Aviso completo",
+        "consentAgreement": "Entiendo y acepto la información anterior. Entiendo que esta herramienta ofrece resúmenes informativos, no asesoramiento legal, y que debo consultar a un abogado para recibir orientación legal.",
+        "continue": "Continuar para Cargar el Documento",
+        "chooseDifferent": "Elegir Otro Archivo",
+        "dropHere": "Suelte el archivo aquí",
+        "release": "Suelte para cargar",
+        "clickOrDrag": "Haga clic para cargar o arrastre y suelte",
+        "fileTypes": "PDF, DOCX, TXT o imágenes (PNG, JPEG) de hasta 10 MB",
+        "documentType": "Tipo de Documento (ayuda a mejorar la precisión)",
+        "documentTypes": {
+          "contract": "Contrato/Acuerdo",
+          "courtFiling": "Presentación/Moción Judicial",
+          "evidence": "Documento de Prueba",
+          "general": "Documento Legal General",
+          "policeReport": "Informe Policial"
+        },
+        "supported": "Formatos admitidos:",
+        "back": "Atrás",
+        "summarize": "Resumir Documento",
+        "analyzing": "Analizando su documento...",
+        "processingTime": "Los documentos grandes pueden tardar hasta un minuto",
+        "qnaTitle": "Haga Preguntas Sobre Este Documento",
+        "qnaDescription": "Haga preguntas de seguimiento sobre el documento. Las respuestas usan el texto y citas directas. Cada pregunta envía el texto a Anthropic; la retención estándar de API puede ser de hasta 30 días.",
+        "disclaimerTitle": "Aviso",
+        "disclaimerBody": "Este resumen generado por IA es solo informativo, no asesoramiento legal. Puede contener errores u omitir detalles importantes. Pida a un abogado que revise el documento original.",
+        "privacyTitle": "Privacidad y retención",
+        "privacyBody": "OpenDefender no guarda una biblioteca permanente de documentos o resúmenes. Se aplican el procesamiento temporal en memoria del servidor y la posible retención de API de Anthropic de hasta 30 días. Descargue una copia si desea conservarla.",
+        "downloadSummary": "Descargar Resumen",
+        "another": "Resumir Otro Documento"
       }
     },
     "noDataTools": {
@@ -4844,7 +4921,7 @@ export default {
       "title": "Detalles Técnicos",
       "sessions": {
         "title": "Datos de Sesión y Cookies",
-        "description": "OpenDefender no usa cookies de seguimiento ni identificadores persistentes para los visitantes públicos. Solo se usa una cookie de sesión cuando un abogado inicia sesión en el Portal de Abogados — mantiene al abogado autenticado durante su visita y se elimina cuando cierra sesión o cierra el navegador. Los visitantes públicos que navegan por el sitio, usan la orientación de IA o usan las herramientas para defensores no reciben ninguna cookie. No se almacena ninguna información de sesión de forma permanente."
+        "description": "OpenDefender emite a cada visitante una cookie esencial od.sid, normalmente válida por 24 horas, para seguridad y control de registros. No usamos cookies publicitarias ni píxeles de seguimiento entre sitios. Los casos públicos se guardan en memoria, no en una base permanente."
       },
       "logs": {
         "title": "Registros del Servidor",
@@ -4854,7 +4931,7 @@ export default {
         "title": "Fuentes de Datos Externas",
         "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - usado en la Hoja de Ruta del Caso, la herramienta de orientación, el Resumidor de Documentos, el Generador de Cartas, las herramientas de Generación de Documentos para Abogados, y el paso opcional de 'Pulido con IA' en el Constructor de Memorandos de Mitigación. La información personal se elimina antes del procesamiento. Anthropic puede retener los datos hasta 30 días para fines operativos y de seguridad y luego los elimina automáticamente. Estos datos nunca se usan para entrenar modelos de IA.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - usado en la Hoja de Ruta y chat, resumen y preguntas de documentos, cartas, redacción y resumen para abogados, y Pulido con IA. Intentamos ocultar identificadores, sin garantizar que se detecte todo. Bajo los términos comerciales estándar de Anthropic, las entradas pueden retenerse hasta 30 días por operación y seguridad y no se usan para entrenar por defecto. No afirmamos que se aplique retención cero.",
           "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
           "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
           "recap": "Archivo RECAP - para documentos judiciales federales",
@@ -4866,7 +4943,7 @@ export default {
           "eoir": "EOIR.gov - para encontrar proveedores de servicios legales de inmigración en su área",
           "nominatim": "OpenStreetMap Nominatim - para localizar tribunales y oficinas de defensores públicos cercanos según su código postal. Su consulta de ubicación se envía a este servicio de mapeo gratuito y de código abierto."
         },
-        "note": "Cuando usa nuestra plataforma para buscar en estas bases de datos, sus consultas pueden transmitirse a estos servicios. La información personal se elimina automáticamente antes de enviarse a los servicios de IA. Recomendamos revisar sus políticas de privacidad si tiene inquietudes sobre el acceso a datos externos."
+        "note": "Las consultas pueden transmitirse a estos servicios. Intentamos ocultar identificadores comunes antes del procesamiento con IA, pero la redacción automática puede omitir datos sensibles. Revise sus políticas y evite enviar información personal innecesaria."
       },
       "captcha": {
         "title": "Verificación CAPTCHA",
@@ -4875,11 +4952,11 @@ export default {
     },
     "rights": {
       "title": "Sus Derechos de Privacidad",
-      "description": "Debido a que no recopilamos ni almacenamos datos personales, automáticamente tiene las siguientes protecciones:",
+      "description": "OpenDefender minimiza los datos y no mantiene cuentas para la orientación pública. Se aplican estas prácticas:",
       "list": {
-        "noDataStored": "No hay datos para acceder, modificar o eliminar - nunca los almacenamos en primer lugar",
-        "sessionControl": "Control total sobre los datos de sesión - simplemente cierre su navegador para finalizar todo el seguimiento",
-        "noTracking": "Sin seguimiento entre sitios, cookies o identificadores persistentes"
+        "noDataStored": "No hay una base permanente de casos; los registros de caso y comentarios suelen caducar en 24 horas",
+        "sessionControl": "Cerrar el navegador no borra inmediatamente registros del servidor; la caducidad o el reinicio los elimina",
+        "noTracking": "Sin publicidad ni seguimiento entre sitios; se usa una cookie esencial de 24 horas"
       }
     },
     "changes": {
@@ -5175,7 +5252,7 @@ export default {
     "none": "Ninguna seleccionada"
   },
   "messages": {
-    "welcome": "¡Hola! Soy un asistente de inteligencia artificial aquí para ayudarle a entender su situación legal. Todo lo que hablemos es privado y se elimina después de su sesión.\n\n¿Está en una situación urgente ahora mismo?",
+    "welcome": "¡Hola! Soy un asistente de IA que ofrece información educativa general. Una cookie y registros temporales en memoria respaldan el chat; Anthropic procesa los mensajes de IA según lo divulgado.\n\n¿Está en una situación urgente ahora mismo?",
     "emergencyAdviceFull": "🚨 **Durante un Arresto o Detención**\n\n**Resistencia física:** La resistencia física, incluso a un arresto ilegal, puede ponerle en peligro físico y resultar en cargos adicionales. La vía apropiada para impugnar un arresto ilegal es a través del proceso legal posterior, no en el momento del encuentro.\n\n**Derecho a permanecer en silencio:** La Quinta Enmienda protege contra la autoincriminación. Este derecho se ejerce declarando claramente que lo está invocando. Los tribunales han sostenido que la policía debe detener el interrogatorio una vez que este derecho se invoca claramente. No tiene que responder preguntas sobre adónde va, qué está haciendo o dónde vive.\n\n**Derecho a un abogado:** El derecho a un abogado aplica desde el momento del arresto. Las personas que no pueden pagar un abogado tienen derecho a uno designado por el tribunal. Este derecho se ejerce en la primera comparecencia ante el tribunal.\n\n**Consentimiento a registros:** Negarse claramente al consentimiento de un registro preserva ciertos derechos y protecciones para su caso, incluso si los oficiales aún realizan el registro.\n\n**Documentación:** Información como números de placa de los oficiales, números de patrulla e identidades de testigos presentes es típicamente útil para un abogado que revisa el incidente.\n\n---\n**¿Qué le gustaría hacer ahora?**",
     "mainMenu": "¿En qué puedo ayudarle?",
     "stateQuestion": "Vamos a darle orientación personalizada. Primero, ¿en qué estado está su caso?",
@@ -5183,7 +5260,7 @@ export default {
     "stageQuestion": "¿En qué etapa está su caso?",
     "custodyQuestion": "¿Está actualmente bajo custodia o ha sido liberado?",
     "attorneyQuestion": "¿Tiene un abogado o defensor público?",
-    "descriptionPrompt": "Gracias por esa información. Ahora, describa brevemente lo que pasó - esto me ayuda a darle orientación más relevante.\n\n(Su información es analizada por IA para proporcionar orientación. Los datos personales se eliminan automáticamente antes del procesamiento. Nada se almacena después de su sesión.)",
+    "descriptionPrompt": "Gracias por esa información. Ahora, describa brevemente lo que pasó; esto ayuda a dar orientación más relevante.\n\n(Su información es analizada por IA. Intentamos ocultar identificadores comunes, pero la redacción puede omitir datos. Evite información sensible innecesaria. La retención temporal y de Anthropic se explica en la Política de Privacidad.)",
     "descriptionPromptWithWarning": "Gracias. Antes del siguiente paso — **no necesita decirle qué pasó.**\n\nPodemos explicarle sus derechos, qué sigue y a quién llamar sin conocer ningún detalle de su caso.\n\nSi decide compartir detalles: nada aquí es privado o confidencial. No existe protección de privilegio abogado-cliente. Anthropic puede almacenar sus mensajes hasta 30 días y pueden ser divulgados si un tribunal o agencia gubernamental los solicita.\n\nLa opción más segura para la mayoría: omita los detalles. Su orientación seguirá siendo específica para sus cargos y estado.",
     "privilegeWarning": "Gracias. Antes del siguiente paso — **no necesita decirle qué pasó.**\n\nPodemos explicarle sus derechos, qué sigue y a quién llamar sin conocer ningún detalle de su caso.\n\nSi decide compartir detalles: nada aquí es privado o confidencial. No existe protección de privilegio abogado-cliente. Anthropic puede almacenar sus mensajes hasta 30 días y pueden ser divulgados si un tribunal o agencia gubernamental los solicita.\n\nLa opción más segura para la mayoría: omita los detalles. Su orientación seguirá siendo específica para sus cargos y estado.",
     "privilegeAcknowledged": "Entendido. Adelante — tómese su tiempo.",
@@ -5395,7 +5472,7 @@ export default {
     "errorDesc": "Hubo un error con la entrada de voz. Intente de nuevo."
   },
   "footer": {
-    "privacy": "Su información es privada y se elimina después de su sesión"
+    "privacy": "Los registros de caso se guardan temporalmente en memoria y generalmente caducan en 24 horas"
   },
   "exitWarning": {
     "title": "Tiene orientación que no ha sido exportada",
@@ -5539,7 +5616,7 @@ export default {
     "tosTitle": "Términos de Servicio de Herramientas para Abogados",
     "tosSubtitle": "Por favor revise antes de aceptar.",
     "tosContent": "Al usar estas herramientas para abogados, usted reconoce y acepta lo siguiente:",
-    "privacyNotice": "Los datos de su sesión se eliminarán automáticamente después de 1 hora.",
+    "privacyNotice": "Los registros de la sesión de abogado se guardan en memoria y normalmente caducan en 1 hora o al reiniciar. La retención de IA se explica en la Política de Privacidad.",
     "verifying": "Verificando...",
     "submit": "Verificar y Continuar"
   },
@@ -7002,7 +7079,7 @@ export default {
     "immigrationGuidance": "Orientación sobre Inmigración",
     "immigrationGuidanceDesc": "Derechos durante encuentros con ICE, redadas en el trabajo, audiencias de fianza y aplicación de leyes migratorias.",
     "privacyLabel": "Privacidad Primero:",
-    "privacyText": "No almacenamos sus datos personales — toda la información se elimina al finalizar la sesión.",
+    "privacyText": "Usamos una cookie de 24 horas y registros temporales de caso en memoria. Consulte la Política de Privacidad.",
     "sections": {
       "getHelp": {
         "title": "Obtener Ayuda",
@@ -7255,7 +7332,7 @@ export default {
     },
     "documentSummarizer": {
       "title": "Resumidor de Documentos",
-      "description": "Cargue documentos legales y obtenga resúmenes en lenguaje sencillo impulsados por IA. Sus documentos nunca se almacenan."
+      "description": "Cargue documentos para procesamiento temporal y resúmenes de IA. El texto se envía a Anthropic según lo divulgado."
     },
     "sections": {
       "legalHelp": {
@@ -7767,7 +7844,7 @@ export default {
       "title": "Imprimir la Lista",
       "intro": "Use este boton para imprimir la lista de documentacion. Lleve la copia impresa a la audiencia de fianza para que no se olvide nada.",
       "button": "Imprimir Lista",
-      "disclaimer": "Esta lista es solo una herramienta practica. No es asesoramiento legal y no es privilegiada."
+      "disclaimer": "Esta lista es información educativa general, no asesoramiento legal, y no es privilegiada. Puede estar incompleta o desactualizada; verifique los detalles importantes con su abogado y fuentes oficiales vigentes. opendefender.ai/disclaimers"
     }
   },
   "disclaimers": {
@@ -7782,12 +7859,12 @@ export default {
     },
     "aiDisclosure": {
       "title": "Divulgación sobre Tecnología de IA",
-      "p1": "Cinco funciones de OpenDefender utilizan IA para generar contenido: la Hoja de Ruta del Caso y la herramienta de orientación, las herramientas de Generación de Documentos para Abogados en el Portal de Abogados, el Resumidor de Documentos, el Generador de Cartas, y el paso opcional de 'Pulido con IA' en el Constructor de Memorandos de Mitigación. Las cinco utilizan Claude Sonnet 4.6 de Anthropic.",
-      "p2": "La Hoja de Ruta del Caso también incluye un motor de respaldo basado en reglas que se activa automáticamente cuando el servicio de IA no está disponible. En modo de respaldo, la orientación se genera a partir de reglas legales estructuradas, no de un modelo de IA activo — en ese caso no se envían datos a Anthropic. La Generación de Documentos para Abogados y el Resumidor de Documentos no tienen este respaldo y mostrarán un error si el servicio de IA no está disponible.",
-      "p3": "Todo el demás contenido de este sitio — información sobre derechos, el verificador de elegibilidad para eliminación de antecedentes, la guía de fechas de tribunal, guías de inmigración, recursos de apoyo y todas las demás páginas estáticas — no utiliza IA. Ha sido investigado y redactado manualmente.",
-      "p4": "La Hoja de Ruta del Caso también incluye un paso de clasificación de emergencias civiles que hace preguntas categóricas sobre situaciones activas (vivienda, empleo, dependientes, inmigración). Estas respuestas siguen el mismo proceso de solo sesión que todas las demás entradas de la Hoja de Ruta: se mantienen en la memoria del servidor, se eliminan automáticamente en 24 horas y nunca se escriben en una base de datos.",
-      "p5": "La orientación generada por IA no sustituye al asesoramiento de un abogado con licencia. Contrastamos las respuestas con bases de datos legales para mejorar la precisión, pero la IA puede cometer errores. Consulte a un abogado calificado antes de tomar decisiones legales.",
-      "p6_pre": "Antes de que sus entradas lleguen a la IA, analizamos automáticamente y eliminamos información personal (nombres, números de teléfono, direcciones, números de Seguro Social). Consulte nuestra",
+      "p1": "Las funciones identificadas como asistidas por IA usan Claude Sonnet 4.6 de Anthropic. Incluyen la Hoja de Ruta y chat, pulido de narrativas de mitigación, Generador de Cartas, resumen y preguntas de documentos, y generación y resumen de documentos para abogados.",
+      "p2": "La Hoja de Ruta incluye un modo basado en reglas y puede usarlo si la IA no está disponible. En ese modo no se envían datos de la Hoja de Ruta a Anthropic. La mayoría de las demás funciones asistidas por IA muestran un error si Anthropic no está disponible.",
+      "p3": "Las páginas estáticas de derechos, apoyo, evaluación y recursos no generan texto con IA en el momento de la solicitud. Su contenido se basa en fuentes legales públicas y datos seleccionados o a veces sintetizados, y puede estar incompleto, estimado, desactualizado, mal traducido o ser incorrecto.",
+      "p4": "Los registros de caso y comentarios se guardan en memoria del servidor, no en una base permanente, y generalmente caducan en 24 horas o al reiniciar. La orientación puede quedar en caché unos 15 minutos. Algunos metadatos de consentimiento, auditoría, seguridad y operación pueden permanecer hasta el reinicio o en registros de proveedores.",
+      "p5": "El texto generado por IA no sustituye el asesoramiento de un abogado y no se adapta a todos los hechos. La IA puede omitir información, equivocarse o producir citas desactualizadas. Verifique detalles, plazos y citas importantes con un abogado y fuentes oficiales vigentes.",
+      "p6_pre": "Antes del procesamiento con IA intentamos ocultar identificadores comunes como nombres, teléfonos, direcciones y números de Seguro Social. La redacción automática puede omitir datos sensibles; evite información personal innecesaria. Consulte nuestra",
       "p6_post": "para obtener detalles completos sobre el manejo de datos."
     },
     "screeningTools": {
@@ -7795,7 +7872,7 @@ export default {
       "p1": "El Verificador de Elegibilidad para la Eliminación de Antecedentes es un árbol de decisiones — no usa IA ni realiza llamadas al servidor. Se ejecuta completamente en su navegador. No se transmiten ni almacenan datos.",
       "p2": "El Verificador de Consecuencias Colaterales es un cuestionario de sí/no que identifica riesgos en áreas de vida (vivienda, empleo, inmigración, custodia y más) según sus respuestas. No usa IA ni realiza llamadas al servidor. Todo se ejecuta en su navegador — ningún dato sale de su dispositivo.",
       "p3": "La Lista de Verificación de Admisión del Defensor Público es un formulario de admisión electrónico para abogados y defensores. Se ejecuta completamente en su navegador, no realiza llamadas al servidor y genera un archivo .docx descargable localmente en su dispositivo. No se transmiten ni almacenan datos en nuestros servidores.",
-      "p4": "El Constructor de Memorandos de Mitigación ayuda a abogados y defensores a estructurar la información del cliente en un memorando de sentencia formateado. La herramienta principal funciona completamente en su navegador. El memorando se genera como un archivo .docx de forma local, y no se transmiten ni almacenan datos en nuestros servidores. Una función aparte y opcional, 'Pulido con IA', puede convertir sus entradas estructuradas en texto narrativo. Si la utiliza, los valores de los campos que ingresó se envían a nuestro servidor y se reenvían a Claude para un procesamiento único. Nada se registra, se almacena en caché ni se guarda después.",
+      "p4": "El formulario principal y la exportación local .docx del Constructor de Memorandos funcionan en su navegador. El Pulido con IA opcional envía los campos completados mediante nuestro servidor a Claude de Anthropic. OpenDefender no guarda esa solicitud en una base permanente de memorandos, pero se aplica el procesamiento operativo estándar y Anthropic puede retener datos de API hasta 30 días bajo sus términos estándar.",
       "p5": "La Guía de Identificación de Errores en Hojas de Antecedentes y la información sobre derechos de la FCRA son únicamente informativas. Describen procesos y derechos generales. Verifique todos los procedimientos de disputa y plazos directamente con la agencia correspondiente — el FBI, el repositorio penal de su estado, o la empresa de verificación de antecedentes."
     },
     "publicApi": {

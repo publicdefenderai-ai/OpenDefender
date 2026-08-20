@@ -4,10 +4,13 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useTranslation } from "react-i18next";
+import { privacySupplementCopy } from "./privacy-supplement-copy";
 
 export default function PrivacyPolicy() {
   useScrollToTop();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const language = i18n.language.startsWith("es") ? "es" : i18n.language.startsWith("zh") ? "zh" : "en";
+  const copy = privacySupplementCopy[language];
 
   return (
     <div className="min-h-screen bg-background">
@@ -38,7 +41,7 @@ export default function PrivacyPolicy() {
             </h2>
             
             <div className="space-y-6">
-              {/* No Personal Data Collection */}
+              {/* Data Minimization */}
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">
@@ -101,7 +104,7 @@ export default function PrivacyPolicy() {
                     {t('privacyPolicy.caseData.memoryOnly.title', 'Memory-Only Storage')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('privacyPolicy.caseData.memoryOnly.description', 'Your case information is stored only in temporary server memory - it is never written to a database or saved to disk. This means your data exists only while being processed and cannot be recovered after your session ends.')}
+                    {t('privacyPolicy.caseData.memoryOnly.description', 'Case inputs are held in temporary server memory rather than a persistent case database and generally expire within 24 hours or on service restart.')}
                   </p>
                 </CardContent>
               </Card>
@@ -110,10 +113,10 @@ export default function PrivacyPolicy() {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">
-                    {t('privacyPolicy.caseData.piiRedaction.title', 'Personal Information Automatically Removed')}
+                    {t('privacyPolicy.caseData.piiRedaction.title', 'Automated Redaction Safeguard')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('privacyPolicy.caseData.piiRedaction.description', 'Before your case details are processed by our AI, we automatically detect and remove personal information like names, phone numbers, email addresses, and Social Security numbers. This redaction happens locally on our servers using machine learning - your personal details are never sent to external AI services.')}
+                    {t('privacyPolicy.caseData.piiRedaction.description', 'Before AI processing, we attempt to redact common identifiers. Automated redaction may miss sensitive details, and AI inputs are processed by Anthropic.')}
                   </p>
                 </CardContent>
               </Card>
@@ -125,7 +128,7 @@ export default function PrivacyPolicy() {
                     {t('privacyPolicy.caseData.autoDelete.title', 'Automatic 24-Hour Deletion')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('privacyPolicy.caseData.autoDelete.description', 'Even in memory, your case data has a maximum lifespan of 24 hours. After this time, it is automatically and permanently deleted. You don\'t need to take any action - deletion happens automatically.')}
+                    {t('privacyPolicy.caseData.autoDelete.description', 'Case and feedback records generally expire from server memory within 24 hours. Some consent, audit, security, and provider records follow separate disclosed retention periods.')}
                   </p>
                 </CardContent>
               </Card>
@@ -137,7 +140,7 @@ export default function PrivacyPolicy() {
                     {t('privacyPolicy.caseData.serverRestart.title', 'Cleared on Server Restart')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('privacyPolicy.caseData.serverRestart.description', 'Because data is stored only in memory, any server restart or update completely clears all session data. This happens regularly as we improve the platform, providing an additional layer of data ephemerality.')}
+                    {t('privacyPolicy.caseData.serverRestart.description', 'A service restart clears OpenDefender case records held in that process. Provider logs and some operational records can follow separate retention periods.')}
                   </p>
                 </CardContent>
               </Card>
@@ -153,7 +156,7 @@ export default function PrivacyPolicy() {
             </h2>
 
             <p className="text-muted-foreground mb-6">
-              {t('privacyPolicy.documentSummarizer.summary', 'Our Document Summarizer allows you to upload legal documents for AI-powered analysis. Here\'s how we protect your uploaded documents:')}
+              {t('privacyPolicy.documentSummarizer.summary', 'The Document Summarizer sends extracted document text to Anthropic for summaries and question answering. The safeguards and limits below apply.')}
             </p>
 
             <div className="space-y-4">
@@ -161,22 +164,22 @@ export default function PrivacyPolicy() {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">
-                    {t('privacyPolicy.documentSummarizer.noStorage.title', 'Documents Are Never Stored')}
+                    {t('privacyPolicy.documentSummarizer.noStorage.title', 'Temporary Document Processing')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('privacyPolicy.documentSummarizer.noStorage.description', 'Your uploaded documents are processed entirely in server memory and are never written to disk or saved in any database. The file data is immediately discarded after your summary is generated. We do not keep copies of your documents.')}
+                    {t('privacyPolicy.documentSummarizer.noStorage.description', 'Uploaded document bytes and extracted text are processed in temporary server memory rather than saved to a persistent document database.')}
                   </p>
                 </CardContent>
               </Card>
 
-              {/* Summary Not Stored */}
+              {/* User Copy */}
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">
-                    {t('privacyPolicy.documentSummarizer.summaryNotStored.title', 'Summaries Are Not Stored')}
+                    {t('privacyPolicy.documentSummarizer.summaryNotStored.title', 'Your Copy Remains Under Your Control')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('privacyPolicy.documentSummarizer.summaryNotStored.description', 'The AI-generated summary exists only in your browser session. We do not save or cache summaries on our servers. If you want to keep your summary, use the download button - otherwise it will be lost when you close or refresh the page.')}
+                    {t('privacyPolicy.documentSummarizer.summaryNotStored.description', 'OpenDefender does not create a permanent document or summary library. Copies you download, print, or save remain on your device or with services you choose.')}
                   </p>
                 </CardContent>
               </Card>
@@ -185,17 +188,11 @@ export default function PrivacyPolicy() {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold mb-2">
-                    {t('privacyPolicy.documentSummarizer.anthropicProcessing.title', 'AI Processing by Anthropic')}
+                    {t('privacyPolicy.documentSummarizer.aiProcessing.title', 'AI Processing by Anthropic')}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
-                    {t('privacyPolicy.documentSummarizer.anthropicProcessing.description', 'To generate summaries, your document content is sent to Anthropic\'s Claude AI. Important privacy protections apply:')}
+                    {t('privacyPolicy.documentSummarizer.aiProcessing.description', 'Document text and questions are sent to Anthropic. Automated redaction may miss sensitive details, and Anthropic may retain API data for up to 30 days under its standard terms.')}
                   </p>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2 mt-3">
-                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.noTraining', 'Anthropic does not use your documents to train AI models')}</li>
-                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.retention', 'Anthropic may temporarily retain data for up to 30 days for operational and safety purposes')}</li>
-                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.autoDelete', 'After 30 days, any retained data is automatically and permanently deleted')}</li>
-                    <li>{t('privacyPolicy.documentSummarizer.anthropicProcessing.piiRedaction', 'We remove personal information (SSN, phone numbers, emails) before sending to Anthropic')}</li>
-                  </ul>
                 </CardContent>
               </Card>
 
@@ -218,40 +215,14 @@ export default function PrivacyPolicy() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Government & Legal Requests
+              {copy.government.title}
             </h2>
 
-            <div className="space-y-4">
-              <Card className="border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    AI Provider Data Retention
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    We use Anthropic's Claude AI to process your case information. Under Anthropic's standard API terms, your prompts and the AI's responses may be retained by Anthropic for up to 30 days for operational and safety purposes. We do not have a zero-data-retention agreement with Anthropic.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">
-                    Legal Process Disclosure
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-3">
-                    During the 30-day retention period, if Anthropic receives a valid legal request (such as a subpoena, court order, or warrant), they may be required to disclose your conversation data. This could include:
-                  </p>
-                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2">
-                    <li>The questions and details you provided about your case</li>
-                    <li>The AI-generated guidance you received</li>
-                    <li>Metadata about when you used the service</li>
-                  </ul>
-                  <p className="text-muted-foreground leading-relaxed mt-3">
-                    While we redact personal information before sending to the AI, the substance of your legal questions may still be disclosed.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/20">
+              <CardContent className="p-6">
+                <p className="text-muted-foreground leading-relaxed">{copy.government.body}</p>
+              </CardContent>
+            </Card>
           </div>
         </ScrollReveal>
 
@@ -259,22 +230,12 @@ export default function PrivacyPolicy() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              No Attorney-Client Privilege
+              {copy.privilege.title}
             </h2>
 
             <Card className="border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-950/20">
-              <CardContent className="p-6 space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Important:</strong> Your conversations with this AI tool are NOT protected by attorney-client privilege. This means:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2">
-                  <li>Information you share here could be requested by prosecutors, law enforcement, or civil litigants through legal process</li>
-                  <li>Unlike conversations with your attorney, there is no legal protection preventing disclosure</li>
-                  <li>Sharing documents you later send to an attorney does not make those documents privileged</li>
-                </ul>
-                <p className="text-muted-foreground leading-relaxed font-medium">
-                  If you are under investigation or facing criminal charges, consult a licensed attorney before sharing case details with any AI tool. Only conversations with your attorney are legally protected.
-                </p>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground leading-relaxed">{copy.privilege.body}</p>
               </CardContent>
             </Card>
           </div>
@@ -284,22 +245,19 @@ export default function PrivacyPolicy() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              How We Use AI Services
+              {copy.aiUse.title}
             </h2>
 
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender uses Anthropic's Claude API (not the consumer Claude.ai product). Key differences:
+                  {copy.aiUse.intro}
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2">
-                  <li><strong className="text-foreground">No training:</strong> Your data is not used to train Anthropic's AI models</li>
-                  <li><strong className="text-foreground">30-day retention:</strong> Anthropic may retain prompts for up to 30 days for safety monitoring</li>
-                  <li><strong className="text-foreground">PII redaction:</strong> We remove names, phone numbers, SSNs, and other personal identifiers before sending to Anthropic</li>
-                  <li><strong className="text-foreground">Government requests:</strong> Anthropic will comply with valid legal process during the retention period</li>
+                  {copy.aiUse.bullets.map((item) => <li key={item}>{item}</li>)}
                 </ul>
-                <p className="text-muted-foreground leading-relaxed">
-                  For more details, see <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 underline">Anthropic's Privacy Policy</a> and <a href="https://privacy.claude.com/en/articles/9519291-what-is-anthropic-s-policy-for-handling-governmental-requests-for-user-information" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 underline">Government Request Policy</a>.
+                <p className="text-muted-foreground leading-relaxed font-medium">
+                  {copy.aiUse.callout}
                 </p>
               </CardContent>
             </Card>
@@ -378,20 +336,12 @@ export default function PrivacyPolicy() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Public API and Third-Party Integrators
+              {copy.api.title}
             </h2>
 
             <Card>
-              <CardContent className="p-6 space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  OpenDefender provides a free, read-only public API (<code className="text-sm bg-muted px-1 py-0.5 rounded">/api/v1/</code>) that lets developers and legal aid organizations embed our legal reference data in their own applications. Here is how privacy works for API access:
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-2">
-                  <li><strong className="text-foreground">No user data collected:</strong> All API endpoints are read-only GET requests. No user data is submitted to or collected by us through the API.</li>
-                  <li><strong className="text-foreground">No authentication required:</strong> Public visitors and developers access the API without creating an account or providing personal information.</li>
-                  <li><strong className="text-foreground">Standard request logs:</strong> Like all web traffic, API requests generate standard server logs (IP address, request path, timestamp). These are retained briefly for security monitoring and are not used to identify individuals.</li>
-                  <li><strong className="text-foreground">Third-party responsibility:</strong> We are not responsible for how third parties who use the API handle data in their own applications. If you embed our data in your app, you are responsible for your own privacy practices and disclosures.</li>
-                </ul>
+              <CardContent className="p-6">
+                <p className="text-muted-foreground leading-relaxed">{copy.api.body}</p>
               </CardContent>
             </Card>
           </div>
@@ -440,40 +390,32 @@ export default function PrivacyPolicy() {
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Which Features Use AI
+              {copy.inventory.title}
             </h2>
+            <p className="text-muted-foreground mb-4">{copy.inventory.subtitle}</p>
             <Card>
               <CardContent className="p-0 overflow-hidden">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-border bg-muted/40">
-                      <th className="text-left px-4 py-3 font-semibold text-foreground">Feature</th>
-                      <th className="text-left px-4 py-3 font-semibold text-foreground">Uses AI?</th>
-                      <th className="text-left px-4 py-3 font-semibold text-foreground">Data stored?</th>
+                      {copy.inventory.headers.map((header) => (
+                        <th key={header} className="text-left px-4 py-3 font-semibold text-foreground">{header}</th>
+                      ))}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-border">
-                    {[
-                      { feature: "Case Roadmap and guided case support tool (including civil emergency triage)", ai: "Yes — Claude Sonnet 4.6 (rule-based fallback when AI unavailable)", data: "Server memory only, 24-hour TTL" },
-                      { feature: "Attorney Document Generation (Attorney Portal)", ai: "Yes — Claude Sonnet 4.6 (no fallback; returns error if AI unavailable)", data: "Server memory only; requires verified attorney login" },
-                      { feature: "Document Summarizer", ai: "Yes — Claude Sonnet 4.6", data: "Never written to disk" },
-                      { feature: "Record Clearance Eligibility Screener", ai: "No — decision tree", data: "No — runs entirely in browser" },
-                      { feature: "Collateral Consequences Screener", ai: "No — decision tree", data: "No — runs entirely in browser" },
-                      { feature: "Public Defender Intake Checklist", ai: "No", data: "No — .docx generated locally in browser, nothing transmitted" },
-                      { feature: "Mitigation Memo Builder", ai: "No", data: "No — .docx generated locally in browser, nothing transmitted" },
-                      { feature: "Public API (/api/v1/)", ai: "No", data: "No — returns public reference data only; no user data collected" },
-                      { feature: "All other pages (rights, support, guides)", ai: "No", data: "No" },
-                    ].map(({ feature, ai, data }) => (
+                    {copy.inventory.rows.map(([feature, sent, retention]) => (
                       <tr key={feature}>
                         <td className="px-4 py-3 text-foreground">{feature}</td>
-                        <td className="px-4 py-3 text-muted-foreground">{ai}</td>
-                        <td className="px-4 py-3 text-muted-foreground">{data}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{sent}</td>
+                        <td className="px-4 py-3 text-muted-foreground">{retention}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </CardContent>
             </Card>
+            <p className="text-xs text-muted-foreground mt-3 leading-relaxed">{copy.inventory.terms}</p>
           </div>
         </ScrollReveal>
 

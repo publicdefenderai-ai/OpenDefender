@@ -286,7 +286,7 @@ export function registerV1Routes(app: Express): void {
         success: true,
         totalDocuments: stats.totalDocuments,
         byType: stats.documentsByType,
-        jurisdictions: 51
+        jurisdictions: new Set(criminalCharges.map(charge => charge.jurisdiction)).size
       });
     } catch (error) {
       devLog('api-v1', `Stats error: ${error}`);

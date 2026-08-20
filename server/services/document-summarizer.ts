@@ -4,11 +4,11 @@
  * Provides AI-powered summarization of legal documents using Claude.
  *
  * PRIVACY & SECURITY:
- * - Documents are processed in memory only - never written to disk or database
+ * - Documents are processed in OpenDefender memory and are not written to a document database
  * - No caching of documents or summaries
- * - PII is redacted before sending to Claude
- * - All data is cleared after response is sent
- * - Anthropic does not store documents permanently or use them for AI training
+ * - Automated redaction attempts to remove common identifiers before sending text to Claude
+ * - OpenDefender does not retain a permanent document or summary library
+ * - Anthropic does not use standard commercial API inputs for training by default
  * - Anthropic may temporarily retain data for up to 30 days for operational/safety purposes
  */
 
@@ -154,7 +154,7 @@ export interface DocumentSummary {
     outputTokens: number;
     estimatedCost: number;
   };
-  /** PII-redacted extracted text — returned to client for session Q&A, never stored server-side */
+  /** Redaction-attempted extracted text — returned to the client for Q&A, not saved to a persistent document store */
   extractedText?: string;
 }
 
@@ -505,9 +505,9 @@ const MAX_QA_HISTORY_TURNS = 8;       // max 8 back-and-forth pairs in context
 const MAX_QA_QUESTION_LENGTH = 600;   // chars per question
 /**
  * Answer a follow-up question about a document that was already summarized.
- * The extractedText is the PII-redacted text returned from summarizeDocument.
- * It is never stored server-side — the client holds it in session state and
- * sends it back with each question.
+ * The extractedText has passed through automated redaction, which may miss sensitive details.
+ * The client holds it in session state and sends it back with each question; Anthropic's
+ * disclosed provider retention applies to each request.
  */
 export async function answerDocumentQuestion(params: {
   extractedText: string;

@@ -272,7 +272,7 @@ export default function BailPreparation() {
 </head>
 <body>
   <h1>Bail Preparation Checklist</h1>
-  <p class="subtitle">opendefender.org/support/court-logistics/bail-preparation</p>
+  <p class="subtitle">opendefender.ai/support/court-logistics/bail-preparation</p>
   ${sectionsHtml}
   <p class="footer">${disclaimer}</p>
 </body>

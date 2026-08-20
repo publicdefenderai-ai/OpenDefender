@@ -73,10 +73,10 @@ being sent. If the scope has changed, update the consent and privacy notice lang
 ### 4. Privacy Policy Consistency
 
 **Current policy commitments (from Privacy Policy page):**
-- No personal data collected or stored
-- All interactions are anonymous
-- Session data auto-deleted when you close your browser or end your session
-- We do not sell or share your data
+- Public guidance does not require an account, name, email address, or phone number
+- An essential 24-hour session cookie supports security and record ownership
+- Case and feedback records are held in server memory and generally expire within 24 hours or on restart; disclosed provider retention also applies
+- Personal data is not sold; necessary processors and external data services are disclosed
 
 **Does this feature comply with all four commitments above?**
 - [ ] Yes — no changes needed
@@ -121,7 +121,7 @@ profile from "user narrated the facts of their arrest in detail.")
 
 | Condition | Met? |
 |---|---|
-| All data collected is session-only or explicitly consented to | |
+| All collection, temporary records, cookies, logs, and provider retention are disclosed and necessary | |
 | Third-party processing disclosed in consent/privacy flows | |
 | Privacy policy remains accurate | |
 | No new personal data stored on our servers | |

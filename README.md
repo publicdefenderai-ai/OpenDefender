@@ -4,7 +4,9 @@
 
 OpenDefender is a free, open-source platform that provides plain-language rights information, early advocacy guidance, and practical life support resources — covering housing, employment, finances, mental health and treatment, immigration, and more. Everything is free, trilingual, and requires no account.
 
-🌐 **Live Platform**: [opendefender.ai](https://opendefender.ai/) (also available at [opendefender.net](https://opendefender.net/))
+🌐 **Live Platform**: [opendefender.ai](https://opendefender.ai/) (primary; also available at [opendefender.net](https://opendefender.net/))
+
+> **Important:** OpenDefender provides general educational information drawn from public legal sources, curated and sometimes synthesized datasets, user-selected inputs, and, in identified features, AI-generated text. It is not legal advice and is not tailored to every fact. Information may be incomplete, estimated, outdated, mistranslated, or incorrect. Verify important details, deadlines, and citations with a qualified attorney and a current official source. See the [full notice](https://opendefender.ai/disclaimers), [data sources and methodology](https://opendefender.ai/data-sources), [privacy policy](https://opendefender.ai/privacy-policy), and [terms](https://opendefender.ai/terms).
 
 ---
 
@@ -41,8 +43,8 @@ Each page includes actionable steps, vetted external resources, FAQs, and nation
 ### Case Roadmap
 - **Jurisdiction and charge-aware:** Enter your state, charge type, case stage, and custody status to get information calibrated to your specific combination of circumstances
 - **Civil emergency triage:** If housing, employment, childcare, or immigration situations are active alongside a criminal case, the Roadmap surfaces those concerns and links to the relevant life support resources
-- **Privacy-first:** All inputs are session-only, never written to a persistent database, and expire within 24 hours or on server restart
-- **Powered by Claude Sonnet 4.6** for the guidance generation step
+- **Privacy-first:** A 24-hour session cookie provides security and record ownership. Case inputs and guidance are held in server memory rather than a permanent case database and generally expire within 24 hours or on server restart; some consent/audit metadata can remain in memory until restart.
+- **AI-assisted:** Claude Sonnet 4.6 generates the AI Roadmap mode. A non-AI rules-based Roadmap is also available and serves as a fallback.
 - **Informational, not advisory:** The Roadmap provides general legal information for your charge type and stage — users seeking legal advice are prompted to obtain counsel
 
 ### Rights & Education
@@ -64,11 +66,13 @@ Each page includes actionable steps, vetted external resources, FAQs, and nation
 - **Public Defender Intake Form** (`/support/court-logistics/intake-form`) — printable background information form; no data collection
 
 ### Comprehensive Legal Database
-- **7,155 Criminal Charges** with statute citations across all 56 U.S. jurisdictions (50 states, DC, and territories)
+- **7,155 Criminal Charge Entries** across states, DC, federal, and territory datasets. Most base entries were curated or synthesized using Model Penal Code patterns; some statute codes are organizational placeholders and must be verified against official law.
 - **5,956 State Statutes** with citation links to all 51 state legislature websites
 - **111 Diversion Programs** covering all 50 states, DC, and Federal programs
-- **Complete Federal Criminal Code** via GovInfo API (Title 18 USC)
-- **Live Statute Retrieval** via OpenLaws API across 53 jurisdictions
+- **Federal criminal-law retrieval** via GovInfo API (Title 18 USC), subject to API coverage and availability
+- **State statute retrieval** via OpenLaws where supported, plus curated source links
+
+Coverage counts describe records in the repository, not a guarantee of legal completeness or current accuracy. Procedure rules and deadlines can change; some preliminary-hearing and discovery fields are expressly marked as estimates. See [Data Sources & Methodology](https://opendefender.ai/data-sources).
 
 ### Site-Wide Search
 - Indexes legal documents, site pages, and resource sections across charges, statutes, glossary terms, diversion programs, and all resource pages
@@ -87,8 +91,8 @@ Verified attorneys access 37 motion templates across criminal and immigration de
 **EOIR immigration motions** — NTA Pleadings, Continuance, Bond, Change of Venue, Reopen, Terminate, Reconsider, Stay of Removal, Suppress (Immigration), Voluntary Departure, Late Filing, Administrative Close, Notice of Appeal (BIA), Withholding of Removal / CAT
 
 - Word (.docx) export with jurisdiction-specific formatting
-- 60-minute secure sessions with automatic cleanup
-- PII never sent to AI — only case metadata
+- 60-minute attorney sessions held in server memory and cleared on expiry or restart
+- Automated redaction attempts to remove common identifiers before AI processing where supported, but it is not guaranteed to catch every sensitive detail. Attorneys remain responsible for privilege, confidentiality, client consent, and review.
 
 ### Attorney Playbooks
 Stage-by-stage strategic roadmaps for criminal and immigration defense, from investigation through appeal.
@@ -99,6 +103,8 @@ A public REST API (`/api/v1/`) for third-party integration:
 - Embeddable widgets
 - OpenAPI specification with interactive docs at `/api-docs`
 - CORS enabled with rate limiting
+
+API responses inherit the same source and accuracy limitations as the site. They are general educational reference data, not legal advice; integrators should preserve the [disclosure](https://opendefender.ai/disclaimers) and verify important fields against official sources.
 
 ---
 
@@ -127,14 +133,14 @@ Visit the live platform — no account required:
 
 | Variable | Service | Purpose | Required? |
 |----------|---------|---------|-----------|
-| `ANTHROPIC_API_KEY` | [Anthropic](https://console.anthropic.com/) | Case Roadmap via Claude Sonnet 4.6 | **Required** for AI features |
+| `ANTHROPIC_API_KEY` | [Anthropic](https://console.anthropic.com/) | Claude Sonnet 4.6 for identified AI-assisted features | **Required** for AI features |
 | `DATABASE_URL` | PostgreSQL | Database connection string | **Required** |
 | `COURTLISTENER_API_TOKEN` | [CourtListener](https://www.courtlistener.com/help/api/) | Case law search and court records | Optional |
 | `OPENLAWS_API_KEY` | [OpenLaws](https://openlaws.com/) | Live statute retrieval (53 jurisdictions) | Optional |
 | `GOVINFO_API_KEY` | [GovInfo.gov](https://api.govinfo.gov/docs/) | Federal statutes (Title 18 USC) | Optional |
 | `LEGISCAN_API_KEY` | [LegiScan](https://legiscan.com/legiscan) | Bill tracking for statute changes | Optional |
 
-> The app runs with reduced features when optional keys are absent. The Case Roadmap and the rule-based fallback both work with just `ANTHROPIC_API_KEY` and `DATABASE_URL`.
+> The app runs with reduced features when optional keys are absent. AI-assisted tools require `ANTHROPIC_API_KEY`; the Roadmap's rules-based mode does not call Anthropic. Under Anthropic's standard commercial API terms, API inputs and outputs may be retained for up to 30 days for safety and operational purposes and are not used for model training by default. This project does not represent that zero-data-retention terms apply.
 
 **Installation**
 
@@ -202,7 +208,7 @@ The gate type-checks the app, blocks known dependency vulnerabilities rated high
 │   ├── data/                   # Curated seed data (statutes, programs)
 │   └── middleware/             # Auth, rate limiting, PII redaction
 ├── shared/                     # Code shared between client and server
-│   ├── criminal-charges.ts     # 7,155 charges across 56 jurisdictions
+│   ├── criminal-charges.ts     # 7,155 charge entries across 57 jurisdiction codes
 │   ├── schema.ts               # Drizzle ORM database schema
 │   ├── playbooks/              # Attorney playbook content
 │   ├── templates/              # Document template definitions

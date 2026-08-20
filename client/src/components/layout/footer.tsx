@@ -110,6 +110,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
+                  {t('footer.termsOfService')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/disclaimers" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.noticeDisclaimers')}
                 </Link>

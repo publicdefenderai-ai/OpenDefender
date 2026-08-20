@@ -45,7 +45,7 @@ export default function Widgets() {
   const [glossaryTheme, setGlossaryTheme] = useState<"light" | "dark">("light");
   const [glossaryLanguage, setGlossaryLanguage] = useState<"en" | "es">("en");
 
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://opendefender.net';
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://opendefender.ai';
 
   const generateSearchEmbed = () => {
     const params = new URLSearchParams({

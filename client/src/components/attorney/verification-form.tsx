@@ -11,6 +11,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
 import { Loader2, Info } from "lucide-react";
+import { Link } from "wouter";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -37,6 +38,11 @@ const formSchema = z.object({
       message: "You must acknowledge privilege requirements",
     }),
   }),
+  acceptsTermsOfService: z.literal(true, {
+    errorMap: () => ({
+      message: "You must accept the Terms of Service",
+    }),
+  }),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -54,6 +60,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
     defaultValues: {
       isLicensedAttorneyActingForClient: false as unknown as true,
       understandsPrivilegeRequirements: false as unknown as true,
+      acceptsTermsOfService: false as unknown as true,
     },
   });
 
@@ -64,7 +71,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
       isLicensedAttorney: data.isLicensedAttorneyActingForClient,
       actingOnBehalfOfClient: data.isLicensedAttorneyActingForClient,
       understandsPrivilegeRequirements: data.understandsPrivilegeRequirements,
-      acceptsTermsOfService: true,
+      acceptsTermsOfService: data.acceptsTermsOfService,
     });
 
     if (success && onSuccess) {
@@ -138,6 +145,28 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
             )}
           />
 
+          <FormField
+            control={form.control}
+            name="acceptsTermsOfService"
+            render={({ field }) => (
+              <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                <FormControl>
+                  <Checkbox checked={field.value} onCheckedChange={field.onChange} />
+                </FormControl>
+                <div className="space-y-1 leading-none">
+                  <FormLabel className="font-normal">
+                    {t("attorneyPortal.verify.acceptTermsPre", "I have read and accept the")}{" "}
+                    <Link href="/terms" target="_blank" className="font-medium underline">
+                      {t("footer.termsOfService", "Terms of Service")}
+                    </Link>
+                    .
+                  </FormLabel>
+                  <FormMessage />
+                </div>
+              </FormItem>
+            )}
+          />
+
         </div>
 
         {/* Privacy Notice */}
@@ -146,7 +175,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
           <AlertDescription className="text-blue-800 dark:text-blue-200">
             {t(
               "attorneyPortal.verify.privacyNotice",
-              "Your session data will be automatically deleted after 1 hour."
+               "Attorney-session records are held in server memory and normally expire after 1 hour or on server restart. AI providers may retain disclosed inputs as described in the Privacy Policy."
             )}
           </AlertDescription>
         </Alert>

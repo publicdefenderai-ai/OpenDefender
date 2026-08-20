@@ -382,7 +382,7 @@ export default function SearchSeizure() {
           <div className="flex items-center justify-center space-x-2">
             <BrandShieldIcon size={16} />
             <span className="text-sm font-medium">
-              <strong>Privacy First:</strong> We do not store your personal data — all input deleted after session.
+              <strong>Privacy:</strong> OpenDefender uses an essential session cookie and temporary in-memory records. See the Privacy Policy.
             </span>
           </div>
         </div>

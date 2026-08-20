@@ -217,7 +217,7 @@ export default function AttorneyPortal() {
                 </div>
                 <CardTitle>{t('attorneyPortal.documentSummarizer.title', 'Document Summarizer')}</CardTitle>
                 <CardDescription>
-                  {t('attorneyPortal.documentSummarizer.description', 'Upload client documents and get AI-powered summaries to quickly understand filings, reports, and evidence. Documents are never stored.')}
+                  {t('attorneyPortal.documentSummarizer.description', 'Upload authorized client documents for temporary processing and AI-powered summaries. Document text is sent to Anthropic as disclosed in the Privacy Policy.')}
                 </CardDescription>
               </CardHeader>
               <CardContent>

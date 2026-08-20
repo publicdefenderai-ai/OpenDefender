@@ -394,12 +394,12 @@ Does the Padilla review auto-flag trigger correctly (for non-citizen status, not
 **Content location:**
 - `client/src/pages/privacy-policy.tsx` — Full privacy policy
 - Key claims to verify:
-  - "Session-only" / "data deleted after session" — verify against actual session storage TTL. This is now simpler than when this doc was last written: session persistence was removed entirely this cycle (no database-backed session store); the only server-side state is an in-memory 24-hour cookie TTL (`server/index.ts`, `maxAge: 24 * 60 * 60 * 1000`) that is wiped completely on any server restart, not just after 24 hours.
+  - "Session-only" / "data deleted after session" — verify against the actual lifecycle: an essential 24-hour cookie, temporary in-memory case and feedback records, shorter guidance caching, some metadata that can remain until restart, and provider-specific logs or AI retention.
   - Anthropic data retention — currently stated as "up to 30 days" in guidance consent; verify this matches Anthropic's current API terms
   - Third-party data sharing disclosures
 
 **Legal question for attorney:**
-Does the privacy policy accurately describe the data lifecycle (in-memory session storage only, no database persistence, 24-hour TTL or full loss on restart, Anthropic 30-day AI processing retention)? Are there any claims in the privacy policy that are inconsistent with the actual technical implementation? Does the policy comply with CCPA requirements for California users and with any applicable state privacy laws for the states most likely to use this platform?
+Does the privacy policy accurately describe the data lifecycle (essential session cookie, temporary in-memory records and caches, restart behavior, consent/audit/security metadata, infrastructure logs, and Anthropic's possible 30-day AI processing retention)? Are there any claims in the privacy policy that are inconsistent with the actual technical implementation? Does the policy comply with CCPA requirements for California users and with any applicable state privacy laws for the states most likely to use this platform?
 
 **Cleared:** ☐
 **Reviewed by:** _______________  **Date:** _______________

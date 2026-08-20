@@ -218,7 +218,7 @@ const contentPages = [
   },
   {
     section: "For Advocates",
-    note: "Tools for public defenders, legal aid attorneys, and advocates. No AI, no login, no backend calls. All output is generated client-side and is never transmitted.",
+    note: "Tools for public defenders, legal aid attorneys, and advocates. Core intake and document formatting run client-side. The optional AI Polish feature sends the entered mitigation fields to Anthropic through the OpenDefender server.",
     pages: [
       {
         route: "/for-advocates",
@@ -233,7 +233,7 @@ const contentPages = [
       {
         route: "/for-advocates/mitigation-builder",
         title: "Mitigation Memo Builder",
-        description: "Generates a formatted sentencing mitigation memo from structured form input. Sections: community ties (years in community, family proximity, involvement), housing (status and duration), employment (employer, duration, letter of support), treatment history (mental health and substance use), family responsibilities (dependents, caregiver status, sole provider), and character references. Output rendered as plain text memo and exportable to .docx. No AI — all content is user-supplied; the tool formats and structures it.",
+        description: "Generates a formatted sentencing mitigation memo from structured form input. Core formatting and .docx export run in the browser. An optional AI Polish action sends populated fields to Claude to produce narrative prose; users should avoid unnecessary sensitive information and review the result.",
       },
     ],
   },
@@ -269,7 +269,7 @@ const contentPages = [
   },
   {
     section: "AI-Assisted Tools",
-    note: "These four routes use Claude (claude-sonnet-4-6) via the Anthropic API. All require ANTHROPIC_API_KEY. No user input is retained after the session ends.",
+    note: "Identified features use Claude (claude-sonnet-4-6) through the Anthropic API and require ANTHROPIC_API_KEY. OpenDefender holds some inputs and outputs temporarily in server memory; Anthropic may retain API data for up to 30 days under its standard terms.",
     pages: [
       {
         route: "/case-guidance",
@@ -290,6 +290,21 @@ const contentPages = [
         route: "/letter-generator",
         title: "Letter Generator",
         description: "AI-assisted templates for letters to employers (court date notice, absence explanation, record disclosure), landlords (payment plan request, situation notice), and utility providers (hardship request). Copy, print, or save output.",
+      },
+      {
+        route: "/for-advocates/mitigation-builder",
+        title: "Mitigation Memo — AI Polish",
+        description: "Optional action that sends populated mitigation fields to Claude to produce a narrative draft. The core builder and .docx export remain client-side.",
+      },
+      {
+        route: "/attorney/documents",
+        title: "Attorney Document Generation",
+        description: "Creates legal filing drafts for verified attorney sessions using Claude and jurisdiction-specific templates. Attorneys must review facts, citations, formatting, privilege, and filing decisions.",
+      },
+      {
+        route: "/attorney/document-summarizer",
+        title: "Attorney Document Summarization",
+        description: "Uses the same Anthropic-backed document summarization and question-answering service for verified attorney sessions.",
       },
     ],
   },
@@ -605,7 +620,7 @@ export default function TechDocs() {
                   Output is cross-referenced against the statute database before display. A rule-based fallback engine activates when the AI is unavailable.
                 </p>
                 <p>
-                  <strong className="text-foreground">Privacy:</strong> No case input is persisted. Session data is held in temporary server memory and auto-deleted within 24 hours.
+                  <strong className="text-foreground">Privacy:</strong> No permanent case database is used. Case records are held in temporary server memory and generally expire within 24 hours or on service restart.
                   No user identity is passed to the AI.
                 </p>
                 <p>
@@ -630,7 +645,7 @@ export default function TechDocs() {
                   <code className="bg-muted px-1 rounded text-xs">shared/legal-documents.ts</code>. Includes a progress indicator and a typing indicator for pacing.
                 </p>
                 <p>
-                  Like the Case Roadmap, this is an orientation and routing tool — not a legal advice interface. Session data is not persisted beyond the session.
+                  Like the Case Roadmap, this is an orientation and routing tool — not a legal advice interface. Case records are held in server memory and generally expire within 24 hours or on service restart.
                 </p>
               </CardContent>
             </Card>
@@ -648,7 +663,7 @@ export default function TechDocs() {
                 <p>
                   Available at <code className="bg-muted px-1 rounded text-xs">/document-summarizer</code>. Users paste or upload a legal document
                   (charging document, court order, plea agreement) and receive a plain-language summary written at a 6th grade reading level.
-                  Subject to the same privacy architecture as the Case Roadmap — no document content is retained after the session ends.
+                  Document bytes and extracted text are processed temporarily in server memory rather than saved to a persistent document database. Anthropic may retain API inputs for up to 30 days under its standard terms.
                   Uses prompt caching on the system prompt to reduce latency on repeated calls.
                 </p>
               </CardContent>
@@ -673,7 +688,7 @@ export default function TechDocs() {
                   <li>— <strong className="text-foreground">Utility provider letters</strong> — hardship request</li>
                 </ul>
                 <p>
-                  Users complete a short form; AI fills in the letter body. Output can be copied, printed, or saved. No letter content is retained after the session.
+                  Users complete a short form; AI fills in the letter body. Output can be copied, printed, or saved. The request is processed by Anthropic; users should avoid unnecessary sensitive details and review the output.
                 </p>
               </CardContent>
             </Card>
@@ -879,12 +894,15 @@ export default function TechDocs() {
                 </div>
               </CardHeader>
               <CardContent className="text-sm text-muted-foreground space-y-2">
-                <p>The platform is designed for users in legal distress who may be at risk. No user-identifying data is logged or stored beyond the session.</p>
+                <p>The platform is designed for users in legal distress who may be at risk. It minimizes data but still uses an essential session cookie, temporary in-memory records, standard operational logs, and disclosed third-party processors.</p>
                 <ul className="space-y-1 list-none">
-                  <li>— All AI input and output is deleted after the session ends; case data is not written to the persistent database</li>
+                  <li>— Case and feedback records are held in server memory and generally expire within 24 hours; guidance responses may be cached in memory for about 15 minutes</li>
+                  <li>— Some consent and audit metadata may remain in memory until service restart; infrastructure providers may retain operational logs</li>
+                  <li>— Anthropic may retain AI inputs and outputs for up to 30 days under its standard commercial API terms</li>
                   <li>— No analytics identifiers or fingerprinting</li>
+                  <li>— An essential <code className="bg-muted px-1 rounded text-xs">od.sid</code> cookie, normally valid for 24 hours, provides session security and record ownership</li>
                   <li>— Session cache keys are prefixed by session ID to prevent cross-session data leakage</li>
-                  <li>— An NLP-based redactor (<code className="bg-muted px-1 rounded text-xs">compromise.js</code>) strips names, contact information, government IDs, and street addresses before any input reaches the AI</li>
+                  <li>— An NLP-based redactor (<code className="bg-muted px-1 rounded text-xs">compromise.js</code>) attempts to remove common identifiers before AI processing, but automated redaction may miss sensitive details</li>
                   <li>— CSS color injection uses an allowlist (<code className="bg-muted px-1 rounded text-xs">sanitizeColor()</code>) to prevent XSS</li>
                   <li>— No test or admin routes exposed in production</li>
                   <li>— Admin auth requires explicit <code className="bg-muted px-1 rounded text-xs">ADMIN_DISABLE_AUTH=true</code> env var, never gated on <code className="bg-muted px-1 rounded text-xs">NODE_ENV</code></li>

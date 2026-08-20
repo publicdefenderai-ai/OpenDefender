@@ -297,6 +297,11 @@ export default function CaseTimeline() {
               <AlertDescription className="text-muted-foreground">
                 <strong>{t("caseTimeline.disclaimer.title", "Important:")}</strong>{" "}
                 {t("caseTimeline.disclaimer.text", "Every case is different. The stages shown are a general guide for a typical criminal case. Your case may have additional or fewer steps. Always consult with your attorney about your specific situation.")}
+                {" "}
+                {t("caseTimeline.disclaimer.deadlines", "Timeframes may be estimates or outdated; verify every deadline in your court papers or with an attorney or official court source.")}{" "}
+                <Link href="/data-sources" className="font-medium text-primary underline underline-offset-2">
+                  {t("disclosure.sources", "Sources")}
+                </Link>
               </AlertDescription>
             </Alert>
           </ScrollReveal>

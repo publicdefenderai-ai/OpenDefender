@@ -21,6 +21,8 @@ const { rendered, mockDoc } = vi.hoisted(() => {
     setDrawColor: vi.fn(),
     text: vi.fn((text: string | string[]) => rendered.push(Array.isArray(text) ? text.join(' ') : text)),
     splitTextToSize: vi.fn((text: string) => [text]),
+    getTextWidth: vi.fn((text: string) => text.length),
+    textWithLink: vi.fn((text: string) => { rendered.push(text); }),
     addPage: vi.fn(),
     line: vi.fn(),
     lastAutoTable: { finalY: 50 },
@@ -218,6 +220,22 @@ describe('normalized guidance surface parity', () => {
       'PARITY_AVOID', 'PARITY_UNCERTAINTY', 'PARITY_RESOURCE',
       'PARITY_RESOURCE_HOURS', 'https://parity.example',
     ].forEach(value => expect(output).toContain(value));
+    expect(output).toContain('General educational information; not legal advice.');
+    expect(output).toContain('https://opendefender.ai/disclaimers');
+    expect(output).toContain('https://opendefender.ai/data-sources');
+    expect(mockDoc.textWithLink).toHaveBeenCalledWith(
+      'https://opendefender.ai/disclaimers',
+      expect.any(Number),
+      expect.any(Number),
+      { url: 'https://opendefender.ai/disclaimers' },
+    );
+    expect(mockDoc.textWithLink).toHaveBeenCalledWith(
+      'https://opendefender.ai/data-sources',
+      expect.any(Number),
+      expect.any(Number),
+      { url: 'https://opendefender.ai/data-sources' },
+    );
+    expect(output).toContain('Page 1 of 1');
     expect(mockDoc.output).toHaveBeenCalledWith('blob');
   });
 });

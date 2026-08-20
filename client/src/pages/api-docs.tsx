@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -58,7 +59,7 @@ const endpoints: Endpoint[] = [
     method: "GET",
     path: "/api/v1/charges",
     summary: "List criminal charges",
-    description: "Browse 4,100+ criminal charge definitions across 51 jurisdictions (50 states + DC + Federal).",
+    description: "Browse 7,155 curated or synthesized criminal-charge entries across 57 jurisdiction codes (50 states, DC, Federal, and five territories). Verify statute details against official sources.",
     tag: "Data",
     parameters: [
       { name: "jurisdiction", required: false, description: "Two-letter state code", example: "CA" },
@@ -69,7 +70,7 @@ const endpoints: Endpoint[] = [
     exampleResponse: {
       success: true,
       data: [{ id: "ca-dui-first-offense", name: "DUI - First Offense", jurisdiction: "CA", severity: "misdemeanor" }],
-      meta: { total: 4144, limit: 50, offset: 0 }
+      meta: { total: 7155, limit: 50, offset: 0 }
     }
   },
   {
@@ -287,6 +288,12 @@ export default function ApiDocs() {
             Free, open access to legal information and resources. Integrate our datasets into your applications 
             to help more people access legal guidance.
           </p>
+
+          <DisclosureNotice compact className="mb-6 rounded-lg border" />
+
+          <p className="text-sm text-muted-foreground mb-6">
+            The current <code className="bg-muted px-1 rounded">/charges</code> dataset contains 7,155 curated or synthesized entries across 57 jurisdiction codes. Verify important details against official sources.
+          </p>
           
           <div className="flex flex-wrap gap-4">
             <Button asChild>
@@ -324,7 +331,7 @@ export default function ApiDocs() {
                   <Database className="h-5 w-5 text-blue-600 dark:text-blue-300" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold">{stats?.totalDocuments?.toLocaleString() || '4,299'}</div>
+                  <div className="text-2xl font-bold">{stats?.totalDocuments?.toLocaleString() || '7,462'}</div>
                   <div className="text-sm text-muted-foreground">Total Documents</div>
                 </div>
               </div>
@@ -338,7 +345,7 @@ export default function ApiDocs() {
                   <Globe className="h-5 w-5 text-green-600 dark:text-green-300" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold">51</div>
+                  <div className="text-2xl font-bold">{stats?.jurisdictions || 57}</div>
                   <div className="text-sm text-muted-foreground">Jurisdictions</div>
                 </div>
               </div>
@@ -435,21 +442,21 @@ export default function ApiDocs() {
               <div>
                 <h4 className="font-semibold text-sm mb-2">1. Search for legal content</h4>
                 <div className="bg-slate-900 text-slate-100 rounded-lg p-3">
-                  <code className="text-sm">curl "https://opendefender.net/api/v1/search?q=DUI&lang=en"</code>
+                  <code className="text-sm">curl "https://opendefender.ai/api/v1/search?q=DUI&lang=en"</code>
                 </div>
               </div>
               
               <div>
                 <h4 className="font-semibold text-sm mb-2">2. Get charges for a state</h4>
                 <div className="bg-slate-900 text-slate-100 rounded-lg p-3">
-                  <code className="text-sm">curl "https://opendefender.net/api/v1/charges?jurisdiction=CA&limit=10"</code>
+                  <code className="text-sm">curl "https://opendefender.ai/api/v1/charges?jurisdiction=CA&limit=10"</code>
                 </div>
               </div>
               
               <div>
                 <h4 className="font-semibold text-sm mb-2">3. Export data as CSV</h4>
                 <div className="bg-slate-900 text-slate-100 rounded-lg p-3">
-                  <code className="text-sm">curl "https://opendefender.net/api/v1/export/charges?format=csv" -o charges.csv</code>
+                  <code className="text-sm">curl "https://opendefender.ai/api/v1/export/charges?format=csv" -o charges.csv</code>
                 </div>
               </div>
             </div>
@@ -466,7 +473,7 @@ export default function ApiDocs() {
             </p>
             <div className="bg-muted rounded-lg p-4 border-l-4 border-primary">
               <p className="text-sm font-medium">
-                Data provided by <a href="https://opendefender.net" className="text-primary hover:underline">OpenDefender</a>
+                Data provided by <a href="https://opendefender.ai" className="text-primary hover:underline">OpenDefender</a>
               </p>
             </div>
           </CardContent>

@@ -2431,12 +2431,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // ============================================================================
-  // Document Summarization API (Session-based, no storage)
+  // Document Summarization API (temporary OpenDefender memory plus disclosed Anthropic processing)
   // ============================================================================
 
   /**
    * Configure multer for in-memory file handling only.
-   * Files are NEVER written to disk - processed in memory and discarded.
+     * Files are not written to an OpenDefender document database; request bytes use memory.
    * Maximum file size: 10MB
    */
   const documentUpload = multer({
@@ -2633,7 +2633,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       devLog('doc-summary', `Processing ${file.originalname} (${file.size} bytes)`);
 
-      // Summarize the document (no storage, processed in memory)
+      // Summarize in temporary OpenDefender memory; Anthropic's disclosed retention applies.
       const summary = await summarizeDocument({
         file: file.buffer,
         mimeType: file.mimetype,
@@ -2653,9 +2653,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true,
         summary,
         privacyConfirmation: {
-          documentStored: false,
-          summaryStored: false,
-          message: "Your document and this summary have not been stored. This data exists only in your browser session."
+          documentStoredInOpenDefenderDatabase: false,
+          summaryStoredInOpenDefenderDatabase: false,
+          anthropicRetentionMayApply: true,
+          message: "OpenDefender does not save a permanent document or summary library. Temporary memory processing and Anthropic's possible 30-day API retention apply."
         }
       });
 
@@ -2755,8 +2756,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true,
         summary,
         privacyConfirmation: {
-          documentStored: false,
-          summaryStored: false,
+          documentStoredInOpenDefenderDatabase: false,
+          summaryStoredInOpenDefenderDatabase: false,
+          anthropicRetentionMayApply: true,
         }
       });
 
@@ -2834,8 +2836,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ...result,
           message: 'Batch submitted. Poll /api/document-summary/batch/:batchId for status and results.',
           privacyConfirmation: {
-            documentsStored: false,
-            message: 'Your documents have not been stored. Only anonymized batch metadata is retained temporarily.',
+            documentsStoredInOpenDefenderDatabase: false,
+            anthropicRetentionMayApply: true,
+            message: 'OpenDefender does not create a permanent document library. Batch results and metadata are held temporarily in memory, and Anthropic provider retention may apply.',
           },
         });
       } catch (error) {
@@ -3191,7 +3194,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // GUARDRAILS:
   //  • System prompt forbids adding any detail not present in the inputs.
   //  • Empty fields are filtered before the Claude call — never inferred.
-  //  • No data is logged, cached, or stored after the response is returned.
+  //  • OpenDefender does not create a persistent case record; Anthropic's disclosed provider retention still applies.
   //  • Rate-limited to protect API cost.
   // ============================================================================
   app.post(
@@ -3248,7 +3251,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           return res.status(422).json(result);
         }
 
-        // No data stored or logged — respond and discard
+        // No OpenDefender case record is created here; provider retention follows Anthropic's terms.
         return res.json(result);
       } catch (error) {
         errLog("mitigation/polish: unexpected error", error);

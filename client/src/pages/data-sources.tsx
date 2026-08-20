@@ -7,6 +7,7 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { Link } from "wouter";
 import { AlertTriangle, CheckCircle, Info, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 // States whose preliminary-hearing and discovery-deadline fields are estimates
 // (arraignment, bail, and speedy-trial are fully verified for all 52 jurisdictions)
@@ -15,58 +16,46 @@ const ESTIMATE_JURISDICTIONS = [
   'NH', 'ME', 'MT', 'RI', 'SD', 'ND', 'AK', 'VT', 'WY', 'DC',
 ];
 
-function ConfidenceBadge({ level }: { level: 'verified' | 'estimated' | 'partial' }) {
-  if (level === 'verified') {
-    return (
-      <Badge variant="outline" className="text-green-700 border-green-300 bg-green-50 dark:text-green-400 dark:border-green-700 dark:bg-green-950/20 gap-1">
-        <CheckCircle className="h-3 w-3" />
-        Verified
-      </Badge>
-    );
-  }
-  if (level === 'partial') {
-    return (
-      <Badge variant="outline" className="text-amber-700 border-amber-300 bg-amber-50 dark:text-amber-400 dark:border-amber-700 dark:bg-amber-950/20 gap-1">
-        <Info className="h-3 w-3" />
-        Partially Estimated
-      </Badge>
-    );
-  }
-  return (
-    <Badge variant="outline" className="text-orange-700 border-orange-300 bg-orange-50 dark:text-orange-400 dark:border-orange-700 dark:bg-orange-950/20 gap-1">
-      <AlertTriangle className="h-3 w-3" />
-      Estimated
-    </Badge>
-  );
-}
-
-function SectionHeader({
-  number,
-  title,
-  confidence,
-}: {
-  number: string;
-  title: string;
-  confidence: 'verified' | 'estimated' | 'partial';
-}) {
-  return (
-    <div className="flex flex-wrap items-center gap-3 mb-4">
-      <span className="text-sm font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded">
-        {number}
-      </span>
-      <h2 className="text-2xl md:text-3xl font-bold">{title}</h2>
-      <ConfidenceBadge level={confidence} />
-    </div>
-  );
-}
-
-function ReportError() {
-  return (
-    <div className="mt-4 pt-4 border-t border-border">
-      <p className="text-sm text-muted-foreground flex items-start gap-2">
-        <Mail className="h-4 w-4 mt-0.5 shrink-0 text-muted-foreground" />
-        <span>
-          <strong className="text-foreground">Spotted an error?</strong>{" "}
+const sourceDisclosureCopy = {
+  en: {
+    title: "Data Sources & Methodology",
+    subtitle: "Where our legal content comes from, how confident we are in it, and what its limitations are.",
+    reviewed: "Last reviewed: August 2026",
+    heading: "Three things every user should know before relying on this platform",
+    items: [
+      ["Most criminal-charge entries are curated and synthesized, not verbatim state statutes.", "The base charge dataset was organized using Model Penal Code patterns and other curated research. Some statute codes are generated organizational placeholders. Never cite them as authoritative without checking the current official code."],
+      ["Some preliminary-hearing and discovery timeframes are estimates.", `For ${ESTIMATE_JURISDICTIONS.join(", ")}, those fields have not all been verified against primary sources and are shown as approximations. Court rules and case-specific orders can also change any deadline.`],
+      ["The platform has not completed a full licensed-attorney review.", "Content draws from public legal sources, curated datasets, user-selected inputs, and sometimes AI-generated text. It may be incomplete, estimated, outdated, mistranslated, or wrong. It is general educational information, not legal advice. Verify important details, deadlines, and citations with an attorney and a current official source."],
+    ],
+    badges: {
+      verified: "Verified",
+      partial: "Partially Estimated",
+      estimated: "Estimated",
+    },
+    sectionTitles: {
+      "§1": "Jurisdiction Procedure Rules",
+      "§2": "Criminal Charges Database",
+      "§2b": "Charge Explanations",
+      "§3": "Collateral Consequences",
+      "§4": "Constitutional Rights",
+      "§5": "Expungement Eligibility",
+      "§6": "Diversion Programs",
+      "§7": "Legal Aid Organizations",
+      "§8": "Jury Instruction References",
+      "§9": "External Validation APIs",
+      "§10": "AI Guidance",
+    },
+    labels: {
+      sourceType: "Source type",
+      primarySource: "Primary source",
+      primarySources: "Primary sources",
+      primaryCitations: "Primary citations",
+      coverage: "Coverage",
+    },
+    reportError: {
+      lead: "Spotted an error?",
+      body: (
+        <>
           Email{" "}
           <a
             href="mailto:legal-data@opendefender.io"
@@ -76,6 +65,284 @@ function ReportError() {
           </a>{" "}
           with the state, the section, and what you believe the correct rule to be. We review all
           submissions and update the platform within 30 days of confirmed corrections.
+        </>
+      ),
+    },
+    methodology: {
+      title: "Methodology & coverage summary",
+      intro: "Before the detailed inventory below, here is what our legal content is built from and what its confidence labels mean.",
+      sourceHeading: "Kinds of sources used",
+      sources: [
+        "Official primary law: state statutes, court rules, and case law (one cited source per rule where verified).",
+        "Curated or synthesized charge entries organized from Model Penal Code patterns — some statute codes are generated organizational placeholders, not official code.",
+        "Public APIs and datasets: OpenLaws, CourtListener/RECAP, GovInfo (U.S. GPO), and the LOCUS municipal-ordinance dataset.",
+        "Court-published jury instructions (some free, some paywalled), referenced by series number and, where available, a direct link.",
+      ],
+      confidenceHeading: "What the confidence labels mean",
+      confidence: [
+        ["Verified", "Checked against a primary or authoritative source with a specific citation."],
+        ["Partially Estimated", "Mostly verified, but some fields (for example, certain preliminary-hearing or discovery deadlines) are approximations not yet confirmed against a primary source."],
+        ["Estimated", "An approximation shown when a primary source has not been confirmed; treat it as a starting point, not authority."],
+      ],
+      limitationsHeading: "Key limitations",
+      limitations: [
+        "Some citations, statute placeholders, and deadlines still need verification against the current official source before you rely on them.",
+        "This inventory has not been fully reviewed by a licensed attorney. It is general educational information, not legal advice.",
+      ],
+      reportHeading: "How to report an error",
+      report: (
+        <>
+          Email{" "}
+          <a
+            href="mailto:legal-data@opendefender.io"
+            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+          >
+            legal-data@opendefender.io
+          </a>{" "}
+          with the state, the section, and the correction you believe is needed. We review all submissions and update the platform within 30 days of confirmed corrections.
+        </>
+      ),
+      englishNote: "The detailed inventory below is currently presented in English. The material limitations described above apply in every language.",
+    },
+  },
+  es: {
+    title: "Fuentes de Datos y Metodología",
+    subtitle: "De dónde proviene el contenido legal, nuestro nivel de confianza y sus limitaciones.",
+    reviewed: "Última revisión: agosto de 2026",
+    heading: "Tres cosas que toda persona debe saber antes de confiar en esta plataforma",
+    items: [
+      ["La mayoría de las entradas de cargos penales son seleccionadas y sintetizadas; no son copias textuales de estatutos estatales.", "El conjunto base se organizó con patrones del Código Penal Modelo y otra investigación seleccionada. Algunos códigos son marcadores generados para organizar información. No los cite como autoridad sin verificar el código oficial vigente."],
+      ["Algunos plazos de audiencia preliminar y descubrimiento son estimaciones.", `Para ${ESTIMATE_JURISDICTIONS.join(", ")}, no todos esos campos se han verificado con fuentes primarias y se muestran como aproximaciones. Las reglas judiciales y órdenes de un caso también pueden cambiar cualquier plazo.`],
+      ["La plataforma no ha completado una revisión integral por abogados con licencia.", "El contenido se basa en fuentes legales públicas, datos seleccionados, entradas elegidas por el usuario y, a veces, texto generado por IA. Puede estar incompleto, estimado, desactualizado, mal traducido o ser incorrecto. Es información educativa general, no asesoramiento legal. Verifique detalles, plazos y citas importantes con un abogado y una fuente oficial vigente."],
+    ],
+    badges: {
+      verified: "Verificado",
+      partial: "Parcialmente estimado",
+      estimated: "Estimado",
+    },
+    sectionTitles: {
+      "§1": "Reglas de procedimiento por jurisdicción",
+      "§2": "Base de datos de cargos penales",
+      "§2b": "Explicaciones de cargos",
+      "§3": "Consecuencias colaterales",
+      "§4": "Derechos constitucionales",
+      "§5": "Elegibilidad para eliminación de antecedentes",
+      "§6": "Programas de derivación",
+      "§7": "Organizaciones de asistencia legal",
+      "§8": "Referencias de instrucciones al jurado",
+      "§9": "API de validación externa",
+      "§10": "Orientación con IA",
+    },
+    labels: {
+      sourceType: "Tipo de fuente",
+      primarySource: "Fuente principal",
+      primarySources: "Fuentes principales",
+      primaryCitations: "Citas principales",
+      coverage: "Cobertura",
+    },
+    reportError: {
+      lead: "¿Encontró un error?",
+      body: (
+        <>
+          Escriba a{" "}
+          <a
+            href="mailto:legal-data@opendefender.io"
+            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+          >
+            legal-data@opendefender.io
+          </a>{" "}
+          indicando el estado, la sección y cuál cree que es la regla correcta. Revisamos todos los
+          envíos y actualizamos la plataforma dentro de los 30 días de confirmar una corrección.
+        </>
+      ),
+    },
+    methodology: {
+      title: "Resumen de metodología y cobertura",
+      intro: "Antes del inventario detallado que aparece abajo, esto es de qué se compone nuestro contenido legal y qué significan sus etiquetas de confianza.",
+      sourceHeading: "Tipos de fuentes utilizadas",
+      sources: [
+        "Ley primaria oficial: estatutos estatales, reglas judiciales y jurisprudencia (una fuente citada por regla cuando está verificada).",
+        "Entradas de cargos seleccionadas o sintetizadas y organizadas a partir de patrones del Código Penal Modelo; algunos códigos de estatuto son marcadores generados para organizar información, no el código oficial.",
+        "API y conjuntos de datos públicos: OpenLaws, CourtListener/RECAP, GovInfo (GPO de EE. UU.) y el conjunto de datos de ordenanzas municipales LOCUS.",
+        "Instrucciones al jurado publicadas por los tribunales (algunas gratuitas, otras de pago), referenciadas por número de serie y, cuando es posible, con un enlace directo.",
+      ],
+      confidenceHeading: "Qué significan las etiquetas de confianza",
+      confidence: [
+        ["Verificado", "Comprobado con una fuente primaria o autorizada, con una cita específica."],
+        ["Parcialmente estimado", "En su mayoría verificado, pero algunos campos (por ejemplo, ciertos plazos de audiencia preliminar o descubrimiento) son aproximaciones aún no confirmadas con una fuente primaria."],
+        ["Estimado", "Una aproximación que se muestra cuando no se ha confirmado una fuente primaria; tómela como punto de partida, no como autoridad."],
+      ],
+      limitationsHeading: "Limitaciones clave",
+      limitations: [
+        "Algunas citas, marcadores de estatutos y plazos aún deben verificarse con la fuente oficial vigente antes de que usted confíe en ellos.",
+        "Este inventario no ha sido revisado en su totalidad por un abogado con licencia. Es información educativa general, no asesoramiento legal.",
+      ],
+      reportHeading: "Cómo reportar un error",
+      report: (
+        <>
+          Escriba a{" "}
+          <a
+            href="mailto:legal-data@opendefender.io"
+            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+          >
+            legal-data@opendefender.io
+          </a>{" "}
+          indicando el estado, la sección y la corrección que cree necesaria. Revisamos todos los envíos y actualizamos la plataforma dentro de los 30 días de confirmar una corrección.
+        </>
+      ),
+      englishNote: "El inventario detallado que aparece abajo se presenta actualmente en inglés. Las limitaciones materiales descritas arriba aplican en todos los idiomas.",
+    },
+  },
+  zh: {
+    title: "数据来源与方法",
+    subtitle: "法律内容来自何处、我们对其可信度的判断，以及内容的局限。",
+    reviewed: "最后审查：2026年8月",
+    heading: "依赖本平台前，每位用户都应了解的三件事",
+    items: [
+      ["大多数刑事指控条目是精选和综合整理的内容，并非州法规原文。", "基础指控数据依据《示范刑法典》模式和其他精选研究整理。部分法规代码是为组织信息而生成的占位符。未经查验最新官方法典，请勿将其作为权威引证。"],
+      ["部分初步听证和证据开示期限属于估算。", `对于 ${ESTIMATE_JURISDICTIONS.join("、")}，相关字段尚未全部通过一手来源核实，因此以近似值显示。法院规则和个案命令也可能改变任何截止日期。`],
+      ["本平台尚未完成持牌律师的全面审查。", "内容来自公共法律来源、精选数据集、用户选择的输入，以及部分 AI 生成文字。内容可能不完整、属于估算、已过时、翻译有误或不正确。这只是一般教育信息，并非法律建议。请向律师和最新官方来源核实重要细节、截止日期和引证。"],
+    ],
+    badges: {
+      verified: "已核实",
+      partial: "部分为估算",
+      estimated: "估算",
+    },
+    sectionTitles: {
+      "§1": "各法域程序规则",
+      "§2": "刑事指控数据库",
+      "§2b": "指控说明",
+      "§3": "附带后果",
+      "§4": "宪法权利",
+      "§5": "记录清除资格",
+      "§6": "转介项目",
+      "§7": "法律援助机构",
+      "§8": "陪审团指示参考",
+      "§9": "外部验证 API",
+      "§10": "AI 指导",
+    },
+    labels: {
+      sourceType: "来源类型",
+      primarySource: "主要来源",
+      primarySources: "主要来源",
+      primaryCitations: "主要引证",
+      coverage: "覆盖范围",
+    },
+    reportError: {
+      lead: "发现错误？",
+      body: (
+        <>
+          请发送邮件至{" "}
+          <a
+            href="mailto:legal-data@opendefender.io"
+            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+          >
+            legal-data@opendefender.io
+          </a>{" "}
+          ，并注明州、相关章节以及您认为正确的规则。我们会审核所有反馈，并在确认更正后 30 天内更新平台。
+        </>
+      ),
+    },
+    methodology: {
+      title: "方法与覆盖范围摘要",
+      intro: "在下方详细清单之前，以下说明我们的法律内容由什么构成，以及各可信度标签的含义。",
+      sourceHeading: "所使用的来源类型",
+      sources: [
+        "官方一手法律：州法规、法院规则和判例法（已核实的规则均标注一个引证来源）。",
+        "依据《示范刑法典》模式整理的精选或综合指控条目；部分法规代码是为组织信息而生成的占位符，并非官方法典。",
+        "公共 API 和数据集：OpenLaws、CourtListener/RECAP、GovInfo（美国 GPO）以及 LOCUS 市政条例数据集。",
+        "法院发布的陪审团指示（部分免费，部分需付费），以系列编号引用，并在可能时提供直接链接。",
+      ],
+      confidenceHeading: "可信度标签的含义",
+      confidence: [
+        ["已核实", "已对照一手或权威来源核实，并附有具体引证。"],
+        ["部分为估算", "大部分已核实，但部分字段（例如某些初步听证或证据开示期限）为尚未通过一手来源确认的近似值。"],
+        ["估算", "在未确认一手来源时显示的近似值；请将其视为参考起点，而非权威依据。"],
+      ],
+      limitationsHeading: "主要局限",
+      limitations: [
+        "在您依赖之前，部分引证、法规占位符和截止日期仍需对照最新官方来源进行核实。",
+        "本清单尚未经过持牌律师的全面审查。它只是一般教育信息，并非法律建议。",
+      ],
+      reportHeading: "如何报告错误",
+      report: (
+        <>
+          请发送邮件至{" "}
+          <a
+            href="mailto:legal-data@opendefender.io"
+            className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+          >
+            legal-data@opendefender.io
+          </a>{" "}
+          ，并注明州、相关章节以及您认为需要的更正。我们会审核所有反馈，并在确认更正后 30 天内更新平台。
+        </>
+      ),
+      englishNote: "下方的详细清单目前以英文呈现。上述实质性限制适用于所有语言。",
+    },
+  },
+} as const;
+
+type DisclosureCopy = typeof sourceDisclosureCopy[keyof typeof sourceDisclosureCopy];
+
+function ConfidenceBadge({
+  level,
+  copy,
+}: {
+  level: 'verified' | 'estimated' | 'partial';
+  copy: DisclosureCopy;
+}) {
+  if (level === 'verified') {
+    return (
+      <Badge variant="outline" className="text-green-700 border-green-300 bg-green-50 dark:text-green-400 dark:border-green-700 dark:bg-green-950/20 gap-1">
+        <CheckCircle className="h-3 w-3" />
+        {copy.badges.verified}
+      </Badge>
+    );
+  }
+  if (level === 'partial') {
+    return (
+      <Badge variant="outline" className="text-amber-700 border-amber-300 bg-amber-50 dark:text-amber-400 dark:border-amber-700 dark:bg-amber-950/20 gap-1">
+        <Info className="h-3 w-3" />
+        {copy.badges.partial}
+      </Badge>
+    );
+  }
+  return (
+    <Badge variant="outline" className="text-orange-700 border-orange-300 bg-orange-50 dark:text-orange-400 dark:border-orange-700 dark:bg-orange-950/20 gap-1">
+      <AlertTriangle className="h-3 w-3" />
+      {copy.badges.estimated}
+    </Badge>
+  );
+}
+
+function SectionHeader({
+  number,
+  confidence,
+  copy,
+}: {
+  number: keyof DisclosureCopy["sectionTitles"];
+  confidence: 'verified' | 'estimated' | 'partial';
+  copy: DisclosureCopy;
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-3 mb-4">
+      <span className="text-sm font-mono text-muted-foreground bg-muted px-2 py-0.5 rounded">
+        {number}
+      </span>
+      <h2 className="text-2xl md:text-3xl font-bold">{copy.sectionTitles[number]}</h2>
+      <ConfidenceBadge level={confidence} copy={copy} />
+    </div>
+  );
+}
+
+function ReportError({ copy }: { copy: DisclosureCopy }) {
+  return (
+    <div className="mt-4 pt-4 border-t border-border">
+      <p className="text-sm text-muted-foreground flex items-start gap-2">
+        <Mail className="h-4 w-4 mt-0.5 shrink-0 text-muted-foreground" />
+        <span>
+          <strong className="text-foreground">{copy.reportError.lead}</strong>{" "}
+          {copy.reportError.body}
         </span>
       </p>
     </div>
@@ -84,6 +351,9 @@ function ReportError() {
 
 export default function DataSources() {
   useScrollToTop();
+  const { i18n } = useTranslation();
+  const language = i18n.language.startsWith("es") ? "es" : i18n.language.startsWith("zh") ? "zh" : "en";
+  const copy: DisclosureCopy = sourceDisclosureCopy[language];
 
   return (
     <div className="min-h-screen bg-background">
@@ -93,12 +363,12 @@ export default function DataSources() {
       <section className="vivid-header py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
-            Data Sources &amp; Methodology
+            {copy.title}
           </h1>
           <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
-            Where our legal content comes from, how confident we are in it, and what its limitations are.
+            {copy.subtitle}
           </p>
-          <p className="text-sm text-white/60 mt-2">Last reviewed: August 2026</p>
+          <p className="text-sm text-white/60 mt-2">{copy.reviewed}</p>
         </div>
       </section>
 
@@ -109,45 +379,95 @@ export default function DataSources() {
           <Alert className="mb-12 border-amber-300 bg-amber-50 dark:bg-amber-950/20 dark:border-amber-700">
             <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
             <AlertDescription className="text-amber-900 dark:text-amber-200 ml-2">
-              <p className="font-semibold text-base mb-3">Three things every user should know before relying on this platform</p>
+              <p className="font-semibold text-base mb-3">{copy.heading}</p>
               <ol className="list-decimal pl-4 space-y-2 text-sm leading-relaxed">
-                <li>
-                  <strong>Most criminal charges were synthesized, not pulled from state statutes.</strong>{" "}
-                  Our 7,155-charge database was built from Model Penal Code patterns. Statute codes in the
-                  base set are generated placeholders — they are useful for organizing guidance but should
-                  not be cited as authoritative without cross-checking against your state's official code.
-                </li>
-                <li>
-                  <strong>Preliminary-hearing and discovery-deadline data for 20 states are estimates.</strong>{" "}
-                  Arraignment timing, bail hearing timing, and speedy-trial windows are verified for all 52
-                  jurisdictions. But for {ESTIMATE_JURISDICTIONS.join(', ')}, the specific preliminary-hearing
-                  and discovery-deadline fields have not been verified against primary sources and are shown
-                  as approximations.
-                </li>
-                <li>
-                  <strong>This platform has not been formally reviewed by a licensed attorney.</strong>{" "}
-                  Content is researched and written by the platform team and checked against primary legal
-                  sources. It is not legal advice, and it has not undergone a full attorney review pass.
-                  Always verify important deadlines and rights with a qualified attorney.
-                </li>
+                {copy.items.map(([lead, body]) => (
+                  <li key={lead}>
+                    <strong>{lead}</strong>{" "}{body}
+                  </li>
+                ))}
               </ol>
             </AlertDescription>
           </Alert>
         </ScrollReveal>
 
+        {/* Localized Methodology & Coverage Summary (understandable in every language) */}
+        <ScrollReveal>
+          <Card className="mb-12 border-border">
+            <CardContent className="p-6 space-y-5">
+              <div>
+                <h2 className="text-xl md:text-2xl font-bold mb-2">{copy.methodology.title}</h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">{copy.methodology.intro}</p>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                  {copy.methodology.sourceHeading}
+                </p>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground leading-relaxed">
+                  {copy.methodology.sources.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                  {copy.methodology.confidenceHeading}
+                </p>
+                <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+                  {copy.methodology.confidence.map(([label, meaning]) => (
+                    <li key={label}>
+                      <strong className="text-foreground">{label}:</strong> {meaning}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                  {copy.methodology.limitationsHeading}
+                </p>
+                <ul className="list-disc pl-5 space-y-1 text-sm text-muted-foreground leading-relaxed">
+                  {copy.methodology.limitations.map((l) => (
+                    <li key={l}>{l}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                  {copy.methodology.reportHeading}
+                </p>
+                <p className="text-sm text-muted-foreground flex items-start gap-2 leading-relaxed">
+                  <Mail className="h-4 w-4 mt-0.5 shrink-0 text-muted-foreground" />
+                  <span>{copy.methodology.report}</span>
+                </p>
+              </div>
+
+              <Alert className="border-blue-300 bg-blue-50 dark:bg-blue-950/20 dark:border-blue-700">
+                <Info className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                <AlertDescription className="text-blue-900 dark:text-blue-200 ml-2 text-sm leading-relaxed">
+                  {copy.methodology.englishNote}
+                </AlertDescription>
+              </Alert>
+            </CardContent>
+          </Card>
+        </ScrollReveal>
+
         {/* Section 1 — Jurisdiction Procedure Rules */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§1" title="Jurisdiction Procedure Rules" confidence="partial" />
+            <SectionHeader number="§1" confidence="partial" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Source type</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.sourceType}</p>
                     <p>State statutes, court rules, and case law — one primary citation per jurisdiction</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>All 50 states + DC + Federal + 5 U.S. territories (57 total)</p>
                   </div>
                 </div>
@@ -203,7 +523,7 @@ export default function DataSources() {
                   </p>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -212,16 +532,16 @@ export default function DataSources() {
         {/* Section 2 — Criminal Charges Database */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§2" title="Criminal Charges Database" confidence="partial" />
+            <SectionHeader number="§2" confidence="partial" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary source</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.primarySource}</p>
                     <p>Model Penal Code (ALI); individual state statutes for verified entries; FBI UCR for charge frequency ranking</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>7,155 charges across 57 jurisdiction codes (50 states + DC + 5 territories + Federal)</p>
                   </div>
                 </div>
@@ -275,7 +595,7 @@ export default function DataSources() {
                   </p>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -284,16 +604,16 @@ export default function DataSources() {
         {/* Section 2b — Charge Explanations */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§2b" title="Charge Explanations" confidence="partial" />
+            <SectionHeader number="§2b" confidence="partial" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary source</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.primarySource}</p>
                     <p>Statute text read directly from state legislature and government websites, one citation per verified entry</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>56 of 60 charge categories have real, state-specific detail for nearly all 52 jurisdictions in scope (50 states, D.C., and Puerto Rico); the remaining 4 categories use general, non-state-specific language by design, not because they haven't been reached yet</p>
                   </div>
                 </div>
@@ -400,7 +720,7 @@ export default function DataSources() {
                   </p>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -409,12 +729,12 @@ export default function DataSources() {
         {/* Section 3 — Collateral Consequences */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§3" title="Collateral Consequences" confidence="partial" />
+            <SectionHeader number="§3" confidence="partial" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary citations</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.primaryCitations}</p>
                     <p>
                       18 U.S.C. § 922(g) (federal firearms prohibition); <em>Padilla v. Kentucky</em>, 559 U.S. 356
                       (2010) (immigration consequences); 21 U.S.C. § 862a (federal SNAP/TANF drug felony ban);
@@ -422,7 +742,7 @@ export default function DataSources() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>All 50 states + DC (51 entries), across 7 consequence categories</p>
                   </div>
                 </div>
@@ -459,7 +779,7 @@ export default function DataSources() {
                   </ul>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -468,12 +788,12 @@ export default function DataSources() {
         {/* Section 4 — Constitutional Rights */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§4" title="Constitutional Rights" confidence="verified" />
+            <SectionHeader number="§4" confidence="verified" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary citations</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.primaryCitations}</p>
                     <p>U.S. Const. Amends. IV, V, VI, VIII, XIV; landmark Supreme Court decisions</p>
                   </div>
                   <div>
@@ -511,7 +831,7 @@ export default function DataSources() {
                   </ul>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -520,16 +840,16 @@ export default function DataSources() {
         {/* Section 5 — Expungement Eligibility */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§5" title="Expungement Eligibility" confidence="partial" />
+            <SectionHeader number="§5" confidence="partial" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary sources</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.primarySources}</p>
                     <p>State legislature websites (statute text) and state court administrative websites; one citation per state entry</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>All 50 states + DC + Federal (52 entries total). Expanded to full national coverage in March 2026.</p>
                   </div>
                 </div>
@@ -563,7 +883,7 @@ export default function DataSources() {
                   </ul>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -572,16 +892,16 @@ export default function DataSources() {
         {/* Section 6 — Diversion Programs */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§6" title="Diversion Programs" confidence="partial" />
+            <SectionHeader number="§6" confidence="partial" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary sources</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.primarySources}</p>
                     <p>NADCP Find-a-Drug-Court locator; NDAA Prosecutor-Led Diversion Directory; individual state court system and prosecutor office websites</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>111 programs covering all 50 states + DC + Federal. Last link validation: April 10, 2026.</p>
                   </div>
                 </div>
@@ -606,7 +926,7 @@ export default function DataSources() {
                   </p>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -615,16 +935,16 @@ export default function DataSources() {
         {/* Section 7 — Legal Aid Organizations */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§7" title="Legal Aid Organizations" confidence="verified" />
+            <SectionHeader number="§7" confidence="verified" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Primary sources</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.primarySources}</p>
                     <p>EOIR Pro Bono List; Legal Services Corporation (LSC) grantee directory; federal judiciary public defender directory; official state and county government websites</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>195+ organizations. Last manual verification: March 2026.</p>
                   </div>
                 </div>
@@ -647,7 +967,7 @@ export default function DataSources() {
                   </ul>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -656,16 +976,16 @@ export default function DataSources() {
         {/* Section 8 — Jury Instruction References */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§8" title="Jury Instruction References" confidence="partial" />
+            <SectionHeader number="§8" confidence="partial" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Source type</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.sourceType}</p>
                     <p>Official court-published instruction sets; supplemented by commercially published sets where court PDFs are unavailable</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Coverage</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{copy.labels.coverage}</p>
                     <p>Major jurisdictions: CA, NY, FL, TX, PA, OH, IL, and others. Not all charges in all states have instruction references.</p>
                   </div>
                 </div>
@@ -723,7 +1043,7 @@ export default function DataSources() {
                   </p>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -732,7 +1052,7 @@ export default function DataSources() {
         {/* Section 9 — External Validation APIs */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§9" title="External Validation APIs" confidence="verified" />
+            <SectionHeader number="§9" confidence="verified" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <p className="text-muted-foreground leading-relaxed text-sm">
@@ -824,7 +1144,7 @@ export default function DataSources() {
                   </div>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>
@@ -833,7 +1153,7 @@ export default function DataSources() {
         {/* Section 10 — AI Guidance Disclosure */}
         <ScrollReveal>
           <div className="mb-10 md:mb-12">
-            <SectionHeader number="§10" title="AI Guidance" confidence="verified" />
+            <SectionHeader number="§10" confidence="verified" copy={copy} />
             <Card>
               <CardContent className="p-6 space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4 text-sm">
@@ -868,12 +1188,12 @@ export default function DataSources() {
                   <div className="flex gap-3">
                     <CheckCircle className="h-4 w-4 text-green-600 shrink-0 mt-0.5" />
                     <div>
-                      <p className="font-semibold text-foreground">PII redacted before transmission</p>
+                      <p className="font-semibold text-foreground">Automated redaction before transmission</p>
                       <p className="text-muted-foreground">
-                        Before your case details are sent to Anthropic, our servers automatically detect and
-                        remove personal information — names, phone numbers, email addresses, Social Security
-                        numbers, and similar identifiers. Redaction happens server-side; your personal details
-                        never reach Anthropic's infrastructure.
+                        Before case details are sent to Anthropic, our servers attempt to detect and remove
+                        common identifiers such as names, phone numbers, email addresses, and Social Security
+                        numbers. Automated redaction can miss sensitive details, so avoid submitting
+                        unnecessary personal information.
                       </p>
                     </div>
                   </div>
@@ -918,7 +1238,7 @@ export default function DataSources() {
                   </p>
                 </div>
 
-                <ReportError />
+                <ReportError copy={copy} />
               </CardContent>
             </Card>
           </div>

@@ -52,7 +52,7 @@ export class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h2>
             <p className="text-muted-foreground mb-6">
-              An unexpected error occurred. Reload the page to continue — your session data is not stored, so nothing will be lost.
+              An unexpected error occurred. Reload the page to continue. Unsaved browser input may be lost; temporary server records expire as described in the Privacy Policy.
             </p>
             <Button onClick={() => window.location.reload()}>
               Reload Page

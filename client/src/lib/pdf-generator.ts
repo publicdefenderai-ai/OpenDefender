@@ -39,10 +39,10 @@ async function loadCJKFont(): Promise<{ regular: string; bold: string }> {
 }
 
 // Convert markdown links to readable plain text for PDF output:
-// [Childcare Resources](/support/childcare) → Childcare Resources (opendefender.org/support/childcare)
+// [Childcare Resources](/support/childcare) → Childcare Resources (opendefender.ai/support/childcare)
 function pl(text: string): string {
   return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) =>
-    href.startsWith('/') ? `${label} (opendefender.org${href})` : `${label} (${href})`
+    href.startsWith('/') ? `${label} (opendefender.ai${href})` : `${label} (${href})`
   );
 }
 
@@ -294,7 +294,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     practiceQASubtitle: 'Preguntas que le pueden hacer y respuestas sugeridas',
     suggestedResponse: 'Respuesta Sugerida',
     explanation: 'Por Qué Esto Importa',
-    footer: 'Esto no es asesoría legal. Consulte con un abogado calificado para su situación específica.',
+    footer: 'Información educativa general; no es asesoría legal. Puede ser incompleta, estimada, desactualizada o generada por IA. Verifique plazos y citas.',
     page: 'Página',
     of: 'de',
     na: 'N/D',
@@ -352,7 +352,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     practiceQASubtitle: 'Questions you may be asked and suggested responses',
     suggestedResponse: 'Suggested Response',
     explanation: 'Why This Matters',
-    footer: 'This is not legal advice. Consult with a qualified attorney for your specific situation.',
+    footer: 'General educational information; not legal advice. May be incomplete, estimated, outdated, or AI-generated. Verify deadlines and citations.',
     page: 'Page',
     of: 'of',
     na: 'N/A',
@@ -378,6 +378,11 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   const translationDraftWarningLocalized: string = isChinese
     ? '⚠ 暂定翻译：此翻译由机器辅助生成，尚未经双语法律专业人士审核。请与您的律师核实关键术语。'
     : labels.translationDraftWarning;
+  const disclosureFooter = isChinese
+    ? '一般教育信息；并非法律建议。内容可能不完整、属于估算、已过时或由AI生成。请核实截止日期和引证。'
+    : labels.footer;
+  const disclaimerUrl = 'https://opendefender.ai/disclaimers';
+  const dataSourcesUrl = 'https://opendefender.ai/data-sources';
 
   // Helper function to add text with word wrap
   const addText = (text: string, x: number, y: number, options?: any) => {
@@ -1166,18 +1171,46 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   const pageCount = doc.getNumberOfPages();
   for (let i = 1; i <= pageCount; i++) {
     doc.setPage(i);
-    doc.setFontSize(8);
+    doc.setFontSize(6.5);
     doc.setTextColor(150, 150, 150);
+    const footerLines = doc.splitTextToSize(disclosureFooter, pageWidth - (2 * margin) - 18);
     doc.text(
-      labels.footer,
+      footerLines,
       pageWidth / 2,
-      doc.internal.pageSize.getHeight() - 10,
+      doc.internal.pageSize.getHeight() - 15,
       { align: 'center' }
+    );
+    const separator = ' · ';
+    const getLinkTextWidth = (text: string) =>
+      typeof (doc as any).getTextWidth === 'function'
+        ? (doc as any).getTextWidth(text)
+        : text.length * 1.25;
+    const writeLinkedText = (text: string, x: number, url: string) => {
+      if (typeof (doc as any).textWithLink === 'function') {
+        (doc as any).textWithLink(text, x, linksY, { url });
+      } else {
+        doc.text(text, x, linksY);
+        if (typeof (doc as any).link === 'function') {
+          (doc as any).link(x, linksY - 2.5, getLinkTextWidth(text), 3.5, { url });
+        }
+      }
+    };
+    const disclaimerWidth = getLinkTextWidth(disclaimerUrl);
+    const separatorWidth = getLinkTextWidth(separator);
+    const dataSourcesWidth = getLinkTextWidth(dataSourcesUrl);
+    const linksStart = (pageWidth - disclaimerWidth - separatorWidth - dataSourcesWidth) / 2;
+    const linksY = doc.internal.pageSize.getHeight() - 8;
+    writeLinkedText(disclaimerUrl, linksStart, disclaimerUrl);
+    doc.text(separator, linksStart + disclaimerWidth, linksY);
+    writeLinkedText(
+      dataSourcesUrl,
+      linksStart + disclaimerWidth + separatorWidth,
+      dataSourcesUrl
     );
     doc.text(
       `${labels.page} ${i} ${labels.of} ${pageCount}`,
       pageWidth - margin,
-      doc.internal.pageSize.getHeight() - 10,
+      doc.internal.pageSize.getHeight() - 8,
       { align: 'right' }
     );
   }

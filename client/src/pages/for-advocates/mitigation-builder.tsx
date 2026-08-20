@@ -792,7 +792,7 @@ function PolishPanel({ form }: { form: FormState }) {
       {/* Info banner */}
       <div className="px-4 py-2.5 bg-violet-50/60 dark:bg-violet-950/20 border-b border-violet-100 dark:border-violet-900/50">
         <p className="text-[11px] text-violet-800 dark:text-violet-300 leading-relaxed">
-          <span className="font-semibold">Field-locked:</span> Claude will only use information you entered — empty fields are skipped and nothing is inferred. Output is unlabeled prose; your structured summary above remains unchanged. No data is stored or logged.
+          <span className="font-semibold">Field-locked:</span> Claude will only use information you entered — empty fields are skipped and nothing is inferred. Output is unlabeled prose; your structured summary above remains unchanged. Anthropic may retain API data for up to 30 days under its standard terms.
         </p>
       </div>
 

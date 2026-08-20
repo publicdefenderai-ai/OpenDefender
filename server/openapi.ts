@@ -6,6 +6,17 @@ export const openApiSpec = {
 ## Overview
 OpenDefender provides free, open access to legal information and resources. This API enables third-party developers, legal aid organizations, and civil rights groups to integrate our datasets into their own applications.
 
+## Legal and Data Notice
+OpenDefender provides general educational information drawn from public legal sources and curated or synthesized datasets. API data is not legal advice, is not tailored to all facts, and may be incomplete, estimated, outdated, mistranslated, or incorrect. Some charge entries and statute identifiers are organizational or synthesized rather than verbatim official code. Verify important details, deadlines, and citations with a qualified attorney and the current official source.
+
+Full notice: https://opendefender.ai/disclaimers
+
+Data sources and methodology: https://opendefender.ai/data-sources
+
+Privacy policy: https://opendefender.ai/privacy-policy
+
+Terms: https://opendefender.ai/terms
+
 ## Rate Limits
 - **Search endpoints**: 30 requests per minute
 - **Data endpoints**: 60 requests per minute
@@ -13,7 +24,7 @@ OpenDefender provides free, open access to legal information and resources. This
 
 ## Data Attribution
 When using this data, please include attribution:
-> Data provided by OpenDefender (opendefender.net)
+> Data provided by OpenDefender (opendefender.ai)
 
 ## Security Notes
 - All endpoints are read-only (GET requests only)
@@ -121,7 +132,7 @@ For integration support or to report issues, please open an issue on our GitHub 
       get: {
         tags: ["Criminal Charges"],
         summary: "List criminal charges",
-        description: "Returns criminal charge definitions. Filter by jurisdiction or get all 4,100+ charges across 51 jurisdictions.",
+        description: "Returns 7,155 curated or synthesized criminal-charge entries across 57 jurisdiction codes. Some statute identifiers are organizational placeholders; verify important details against official sources.",
         parameters: [
           {
             name: "jurisdiction",
@@ -415,12 +426,12 @@ For integration support or to report issues, please open an issue on our GitHub 
                 schema: {
                   type: "object",
                   properties: {
-                    totalDocuments: { type: "integer", example: 4299 },
+                    totalDocuments: { type: "integer", example: 7462 },
                     byType: {
                       type: "object",
                       additionalProperties: { type: "integer" }
                     },
-                    jurisdictions: { type: "integer", example: 51 }
+                    jurisdictions: { type: "integer", example: 57 }
                   }
                 }
               }

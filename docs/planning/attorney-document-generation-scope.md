@@ -188,7 +188,7 @@ Attorneys input structured case facts through a guided interface, and the system
 ### Key Principles
 1. **Attorney-only access** - Verified legal professionals acting on behalf of clients
 2. **Template-assisted generation** - AI fills structured templates rather than free-form generation
-3. **Zero persistence** - Case data deleted immediately after session
+3. **Minimized retention** - Attorney case records remain in temporary server memory and normally expire after 1 hour or on restart; disclosed AI-provider retention also applies
 4. **Privilege protection** - Clear markings and attestations throughout
 5. **Human-in-the-loop** - Attorney review required before any document is finalized
 
@@ -252,8 +252,8 @@ Attorneys input structured case facts through a guided interface, and the system
 │     - Structured form with required fields                      │
 │     - Jurisdiction-specific prompts                             │
 │     - Clear labels for what information is needed               │
-│     ⚠️ Warning: "Information entered is processed by AI and     │
-│        will be permanently deleted after this session"          │
+│     ⚠️ Warning: "Information entered is processed by AI.        │
+│        Temporary and provider retention are disclosed."         │
 └─────────────────────────────────────────────────────────────────┘
                               │
                               ▼
@@ -278,9 +278,9 @@ Attorneys input structured case facts through a guided interface, and the system
                               ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │  6. SESSION TERMINATION                                         │
-│     - All case data permanently deleted                         │
+│     - OpenDefender attorney-session records cleared             │
 │     - Confirmation shown to user                                │
-│     - Audit log entry (no case details, only metadata)          │
+│     - Disclosed provider and audit retention may continue       │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -405,13 +405,13 @@ function terminateSession(sessionId: string): void {
 }
 ```
 
-### Data Deletion Guarantees
+### Data Retention Boundaries
 
 1. **No database storage** - Case facts never written to persistent storage
-2. **Memory-only processing** - Data exists only during active request
-3. **30-minute session limit** - Automatic expiration and cleanup
-4. **Explicit deletion on export** - Data cleared when document downloaded
-5. **No Claude conversation history** - Each request is stateless
+2. **Memory-only OpenDefender records** - Attorney session records normally expire after 1 hour or on service restart
+3. **Provider processing** - Anthropic may retain API inputs and outputs for up to 30 days under its standard commercial terms
+4. **Operational metadata** - Consent, audit, security, and infrastructure logs can follow separate disclosed retention periods
+5. **Stateless AI requests** - OpenDefender does not create a persistent Claude conversation history
 
 ---
 
@@ -440,7 +440,7 @@ interface AttorneyAttestation {
 > "This service is exclusively for licensed attorneys preparing documents on behalf of clients. Documents generated are marked as privileged attorney work product. By proceeding, you attest that you are a licensed attorney and that the information you provide is protected by attorney-client privilege."
 
 **Before Fact Input:**
-> "The information you enter will be processed by AI to generate your document. All data is encrypted in transit and permanently deleted after your session ends. No case information is retained by Public Defender AI."
+> "The information you enter will be processed by AI to generate your document. OpenDefender holds attorney-session records in temporary server memory, normally for up to 1 hour or until service restart. Anthropic may retain API data for up to 30 days under its standard terms. Avoid unnecessary sensitive information and review the Privacy Policy."
 
 **On Document Preview:**
 > "This is a DRAFT document requiring your professional review before filing. You are responsible for verifying all facts, citations, and legal arguments. AI-generated content may contain errors."
@@ -450,7 +450,7 @@ interface AttorneyAttestation {
 > 1. You have reviewed the draft and take responsibility for its contents
 > 2. The document is attorney work product protected by privilege
 > 3. Sharing outside the attorney-client relationship may waive privilege
-> 4. All case data will be permanently deleted from our systems"
+> 4. OpenDefender's temporary records and provider retention follow the Privacy Policy"
 
 ### Document Watermarking
 

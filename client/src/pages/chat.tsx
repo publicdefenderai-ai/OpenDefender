@@ -40,6 +40,7 @@ import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-a
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance } from "@shared/guidance-view-model";
 import { buildGuidanceChatSummary } from "@shared/guidance-chat-summary";
+import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 
 const US_STATES: Record<string, string> = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -1281,6 +1282,8 @@ export default function ChatPage() {
             </div>
           </header>
 
+          <DisclosureNotice compact className="shrink-0 border-t-0" />
+
           <ProgressBreadcrumbs currentStep={state.currentStep} />
 
           <ScrollArea className="flex-1 px-4 sm:px-6 py-6 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
@@ -1408,7 +1411,7 @@ export default function ChatPage() {
                 }
               />
               <p className="text-xs text-muted-foreground text-center mt-3">
-                {t('chat.footer.privacy', 'Your data is encrypted and deleted after this session')}
+                {t('chat.footer.privacy', 'Case records are held temporarily in server memory and generally expire within 24 hours')}
               </p>
             </div>
           </div>

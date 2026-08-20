@@ -105,7 +105,7 @@ export default {
       "freeTitle": "Always Free",
       "freeDesc": "Understanding your rights should not cost money. OpenDefender is free for anyone who needs it.",
       "privacyTitle": "Privacy Protected",
-      "privacyDesc": "No personal information stored. All session data deleted when you leave.",
+      "privacyDesc": "A 24-hour session cookie and temporary in-memory records support the service. See the Privacy Policy.",
       "earlyKnowledgeTitle": "Early Knowledge, Better Outcomes",
       "earlyKnowledgeDesc": "Research shows that early access to legal information leads to better case outcomes. Bail conditions, charges, and police questioning happen before most people see a lawyer. We exist to close that gap.",
       "multilingualTitle": "Available in Your Language",
@@ -172,7 +172,7 @@ export default {
       "label2": "jurisdictions",
       "label3": "cost",
       "badge1": "Free · Always",
-      "badge2": "Private · no data stored",
+      "badge2": "Privacy-minded · temporary records",
       "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {
@@ -311,6 +311,13 @@ export default {
       "foundOffices": "Found {{count}} office{{plural}} near you"
     }
   },
+  "disclosure": {
+    "label": "Important legal information",
+    "summary": "OpenDefender provides general educational information from public legal sources, curated datasets, and sometimes AI-generated text—not legal advice. Information may be incomplete, estimated, or outdated. Verify important details, deadlines, and citations with an attorney or official source.",
+    "fullNotice": "Full notice",
+    "sources": "Sources",
+    "privacy": "Privacy"
+  },
   "footer": {
     "tagline": "We help people understand their rights and find free legal information.",
     "legalResources": "Legal Resources",
@@ -331,12 +338,13 @@ export default {
     "ourMission": "Our Mission",
     "developmentRoadmap": "Development Roadmap",
     "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
     "noticeDisclaimers": "Notice & Disclaimers",
     "rightToCounsel": "Right to Counsel",
     "forDevelopers": "For Developers",
     "viewOnGithub": "View on GitHub",
     "viewOnX": "Follow on X",
-    "privacyNotice": "Privacy First: We do not store your personal data. All input is deleted after session.",
+    "privacyNotice": "Privacy first: a 24-hour session cookie and temporary in-memory records support the service. See our Privacy Policy for details.",
     "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice.",
     "legalDisclaimer": "General legal information only — not a substitute for professional legal advice. Always consult a qualified attorney for your specific situation."
   },
@@ -2134,7 +2142,7 @@ export default {
       "title": "Understand Your Case Roadmap",
       "cancel": "Cancel",
       "stepProgress": "Step {{current}} of {{total}}: {{title}}",
-      "privacyNotice": "Your session data is encrypted and auto-deleted within 24 hours.",
+      "privacyNotice": "A session cookie is used for security. Case records are held in server memory and generally expire within 24 hours.",
       "steps": {
         "consent": "Privacy & Consent",
         "jurisdiction": "Your State",
@@ -2148,7 +2156,7 @@ export default {
         "bullet1Head": "Legal information, not legal advice.",
         "bullet1Body": "We explain your rights and what to expect — we don't tell you what to do. For advice on your specific case, a public defender or legal aid attorney is your best resource.",
         "bullet2Head": "Private by design.",
-        "bullet2Body": "Your answers are deleted when you close this session. Nothing is stored on our servers beyond 24 hours.",
+        "bullet2Body": "Your answers are held temporarily in server memory rather than a permanent case database. Case records generally expire within 24 hours or are cleared when the service restarts.",
         "cardATitle": "Personalized AI Guidance",
         "cardARecommended": "Recommended",
         "cardABody": "Analyzes your specific charges, state, and case stage to build a tailored roadmap.",
@@ -2463,10 +2471,10 @@ export default {
       },
       "privacyNotice": {
         "title": "Your Privacy is Protected",
-        "text": "This guidance is generated based on your input and will be automatically deleted after your session ends. No personal information is permanently stored.",
-        "encrypted": "All data encrypted in transit and at rest",
-        "autoDelete": "Session data automatically deleted after 24 hours",
-        "piiRedacted": "Personal information redacted before AI processing",
+        "text": "This guidance is generated from your input. Case records are held in server memory rather than a permanent case database and generally expire within 24 hours or on service restart.",
+        "encrypted": "Data is encrypted in transit; temporary records remain in server memory",
+        "autoDelete": "Case records generally expire from server memory within 24 hours",
+        "piiRedacted": "Automated redaction attempts to remove common identifiers before AI processing",
         "deleteNow": "Delete My Data Now",
         "deleteNote": "Permanently removes all session data"
       }
@@ -2553,7 +2561,7 @@ export default {
       "subtitle": "Understand Your Charges and Case Process",
       "description": "Tell us your state, charges, and where you are in the process. Get a plain-language overview of what typically happens at your stage.",
       "startButton": "Get Started",
-      "privacyNote": "Your responses are private and automatically deleted after your session"
+      "privacyNote": "Your responses are held temporarily in server memory and generally expire within 24 hours"
     },
     "howItWorks": {
       "title": "How It Works",
@@ -2597,38 +2605,38 @@ export default {
     "privacy": {
       "title": "Your Privacy is Protected",
       "subtitle": "We take your privacy seriously. Here's how we protect your information.",
-      "noStorageTitle": "No Data Storage",
-      "noStorageDesc": "Personal information is not saved to our servers",
-      "sessionOnlyTitle": "Session-Only",
-      "sessionOnlyDesc": "Data exists only during your active session",
+      "noStorageTitle": "Temporary Processing",
+      "noStorageDesc": "Case inputs use temporary server memory and may be sent to Anthropic for AI guidance",
+      "sessionOnlyTitle": "Disclosed Retention",
+      "sessionOnlyDesc": "Case records generally expire within 24 hours; provider records may last longer",
       "autoDeleteTitle": "Auto-Delete",
-      "autoDeleteDesc": "All information automatically deleted when you leave",
-      "anonymousTitle": "Anonymous",
-      "anonymousDesc": "No account required, completely anonymous usage",
+      "autoDeleteDesc": "Temporary case records generally expire within 24 hours or on service restart",
+      "anonymousTitle": "No Public Account",
+      "anonymousDesc": "No public account is required; an essential session cookie and operational metadata are used",
       "disclaimer": "This tool provides general legal information and guidance only. It is not a substitute for professional legal advice. Always consult with a qualified attorney for advice specific to your case.",
       "getStartedButton": "Get Started Now",
       "learnRightsButton": "Learn About Your Rights First",
-      "footerBanner": "We do not store your personal data — all input deleted after session."
+      "footerBanner": "We use a 24-hour session cookie and temporary in-memory case records. See the Privacy Policy."
     },
     "exitWarning": {
       "title": "Before You Go",
-      "message": "Your personalized guidance has not been exported. To protect your privacy, we don't store this information. If you leave now, it will be lost.",
+      "message": "Your personalized guidance has not been exported. OpenDefender does not keep a permanent case library, so the browser copy may be lost if you leave. Temporary and provider records follow the Privacy Policy.",
       "export": "Export",
       "proceed": "Proceed"
     },
     "clearSession": {
       "title": "Clear Session Data",
-      "message": "This will permanently delete all your case information and guidance from memory. This action cannot be undone.",
+      "message": "This will delete the currently accessible case information and guidance from OpenDefender memory. Provider and operational retention described in the Privacy Policy is not affected.",
       "confirm": "Clear Session",
       "cancel": "Cancel",
       "successTitle": "Session Cleared",
-      "successMessage": "All session data has been cleared from memory.",
+      "successMessage": "The currently accessible case record has been cleared from OpenDefender memory.",
       "errorTitle": "Error",
       "errorMessage": "Failed to clear session. Please try again."
     },
     "sessionExpired": {
       "title": "Your session has expired",
-      "message": "This guidance is no longer accessible because your browser session has ended. This is a privacy protection — your case details are never stored permanently.",
+      "message": "This guidance is no longer accessible because the temporary OpenDefender record expired or was cleared. Provider and operational retention is described in the Privacy Policy.",
       "cta": "Start a new screener",
       "subtext": "Your new guidance will be just as detailed. It only takes a few minutes."
     }
@@ -3861,7 +3869,8 @@ export default {
     "viewQuickRef": "Quick-Reference Card",
     "disclaimer": {
       "title": "Important:",
-      "text": "Every case is different. The stages shown are a general guide for a typical criminal case. Your case may have additional or fewer steps. Always consult with your attorney about your specific situation."
+      "text": "Every case is different. The stages shown are a general guide for a typical criminal case. Your case may have additional or fewer steps. Always consult with your attorney about your specific situation.",
+      "deadlines": "Dates and timeframes may be estimates, can change by jurisdiction or court order, and must be verified with your attorney and the current official rule."
     },
     "stages": {
       "arrest": {
@@ -4385,7 +4394,7 @@ export default {
     },
     "privacyBanner": {
       "title": "Privacy First:",
-      "text": "We do not store your personal data — all input deleted after session."
+      "text": "OpenDefender uses an essential session cookie and temporary in-memory records. See the Privacy Policy."
     },
     "atRisk": {
       "sectionTitle": "What else may be at risk",
@@ -4557,7 +4566,7 @@ export default {
       },
       "privacyFirst": {
         "title": "Privacy First",
-        "description": "Protecting user privacy with ephemeral sessions and no data retention"
+        "description": "Protecting privacy through data minimization, temporary in-memory records, and disclosed retention"
       },
       "continuousImprovement": {
         "title": "Continuous Improvement",
@@ -4792,13 +4801,13 @@ export default {
     },
     "notice": {
       "title": "Privacy-First Platform:",
-      "description": "We do not collect or store personal data. Your privacy is protected by default."
+      "description": "We minimize data, use an essential session cookie, and keep case records in temporary server memory rather than a permanent case database."
     },
     "principles": {
       "title": "Our Privacy Principles",
       "noPersonalData": {
-        "title": "No Personal Data Collection",
-        "description": "We do not collect names, contact information, case numbers, or any other information that identifies you as a person. When you use the Case Roadmap or AI chat tools, the inputs you provide — jurisdiction, charge type, case stage, and concerns — are held in temporary server memory and auto-deleted within 24 hours. They are not written to a persistent database and are not linked to any identity."
+        "title": "Data Minimization",
+        "description": "Public guidance does not require a name, email address, or phone number. A 24-hour session cookie is issued for security and record ownership. Case inputs are held in temporary server memory and generally expire within 24 hours or on service restart. Avoid entering identifying details in free-text fields."
       },
       "anonymizedData": {
         "title": "Anonymized Data Only",
@@ -4810,8 +4819,8 @@ export default {
         }
       },
       "noSharing": {
-        "title": "No Data Sharing or Sale",
-        "description": "We do not share, sell, or provide your data to any third parties. Since we do not collect personal data, we could not share it even if we wanted to. Any anonymized data shared is completely stripped of identifying information."
+        "title": "No Sale of Personal Data",
+        "description": "We do not sell personal data. Hosting, security, mapping, and legal-data providers may process limited request information. AI inputs are sent to Anthropic only when an AI-assisted feature is used."
       }
     },
     "caseData": {
@@ -4819,19 +4828,87 @@ export default {
       "summary": "The Case Roadmap, guided case support tool, Document Summarizer, and the civil emergency triage step all use temporary server memory only. No data from these tools is written to a persistent database. Here is exactly what happens:",
       "memoryOnly": {
         "title": "What is stored — and what is not",
-        "description": "Your inputs are held in server memory only: jurisdiction, charge type, case stage, custody status, concerns selected, and the AI guidance generated. What is never collected: your name, address, phone number, email, case number, or any identifying information. The inputs you provide are categorical (a state, a charge type, a yes or no) — not free-form case facts."
+        "description": "Your inputs may include jurisdiction, charge type, case stage, custody status, selected concerns, free-text details, uploaded document text, and generated guidance. These records are held in server memory rather than a persistent case database. Do not enter names, contact details, case numbers, or other unnecessary sensitive information."
       },
       "piiRedaction": {
-        "title": "Additional safeguard: personal information removed before AI processing",
-        "description": "Before inputs reach the AI, we automatically scan for and remove personal information such as phone numbers, email addresses, and Social Security numbers. This applies even if you enter identifying information in a free-text field. Your personal details are not sent to external AI services."
+        "title": "Additional safeguard: automated redaction before AI processing",
+        "description": "Before AI processing, we attempt to redact common identifiers such as phone numbers, email addresses, and Social Security numbers. Automated redaction may miss sensitive details, so it is a safeguard—not a guarantee. AI inputs are processed by Anthropic."
       },
       "autoDelete": {
-        "title": "Automatic deletion after 24 hours",
-        "description": "Memory-held session data expires automatically after 24 hours and is permanently deleted. No action needed. Every server restart also clears all session data."
+        "title": "24-hour memory expiration",
+        "description": "Case and feedback records held in memory generally expire within 24 hours, and a server restart can clear them earlier. Guidance may be cached in memory for about 15 minutes. Some consent, audit, security, and operational metadata may remain in memory until restart or in provider logs under provider retention practices."
       },
       "serverRestart": {
         "title": "Tools that store nothing at all",
         "description": "Several tools make no server calls at all: the Record Clearance Eligibility Screener, the Collateral Consequences Screener, and the Public Defender Intake Checklist. All three run entirely in your browser; the advocate tools generate downloadable .docx files locally on your device, and no data is transmitted to our servers. The Mitigation Memo Builder's core form and .docx export work the same way, but it also offers an optional 'AI Polish' step that does send your entered fields to our server for one-time AI processing (see External Data Sources below). All other static pages on the site (rights guides, support resources, court date guides, immigration guides) are similarly passive."
+      }
+    },
+    "documentSummarizer": {
+      "title": "Document Summarizer Privacy",
+      "summary": "The Document Summarizer sends extracted document text to Anthropic for summaries and question answering. The safeguards and limits below apply.",
+      "noStorage": {
+        "title": "Temporary document processing",
+        "description": "Uploaded document bytes and extracted text are processed in temporary server memory rather than saved to a persistent document database. A service restart may clear them earlier."
+      },
+      "aiProcessing": {
+        "title": "AI processing by Anthropic",
+        "description": "Document text and questions are sent to Anthropic to generate summaries and answers. We attempt to redact common identifiers, but automated redaction can miss sensitive details. Under Anthropic's standard commercial API terms, API inputs and outputs may be retained for up to 30 days."
+      },
+      "summaryNotStored": {
+        "title": "Your copy remains under your control",
+        "description": "OpenDefender does not create a permanent document or summary library. Copies you download, print, or save remain on your device or with services you choose."
+      },
+      "security": {
+        "title": "Security and consent",
+        "description": "Processing uses encrypted connections. Upload only documents you are authorized to use, remove unnecessary sensitive information, and review every AI-generated summary against the original."
+      },
+      "supportedFiles": {
+        "title": "What You Can Upload",
+        "description": "We support PDF, DOCX, TXT, PNG, and JPEG files within the limits shown in the upload tool. Remove unnecessary personal information before uploading."
+      },
+      "tool": {
+        "title": "Document Summarizer",
+        "description": "Get an AI-generated plain-language summary of a legal document",
+        "close": "Close",
+        "consentHeading": "Before you upload a document, please understand:",
+        "memoryProcessing": "OpenDefender does not write your document to a persistent document database. It is processed in temporary server memory while the summary is generated.",
+        "summaryLibrary": "OpenDefender does not create a permanent summary library. The result is returned to this browser; download a copy if you want to keep one.",
+        "aiProcessing": "Your document will be analyzed by Claude, an AI service from Anthropic.",
+        "providerRetention": "Anthropic processes the document text. Under its standard commercial API terms, inputs and outputs may be retained for up to 30 days for operational and safety purposes and are not used for model training by default. OpenDefender does not represent that zero-data-retention terms apply.",
+        "courtProceedings": "If you are involved in a legal case, you might be asked in court about resources you used to understand legal documents, including this tool.",
+        "notLegalAdvice": "This tool provides informational summaries, not legal advice. AI can make mistakes or miss important details. Have an attorney review important legal documents.",
+        "reviewLinks": "Review:",
+        "privacyLink": "Privacy Policy",
+        "termsLink": "Terms of Service",
+        "disclosureLink": "Full disclosure",
+        "consentAgreement": "I understand and agree to the information above. I understand that this tool provides informational summaries, not legal advice, and that I should consult an attorney for legal guidance.",
+        "continue": "Continue to Upload Document",
+        "chooseDifferent": "Choose Different File",
+        "dropHere": "Drop your file here",
+        "release": "Release to upload",
+        "clickOrDrag": "Click to upload or drag and drop",
+        "fileTypes": "PDF, DOCX, TXT, or images (PNG, JPEG) up to 10 MB",
+        "documentType": "Document Type (helps improve summary accuracy)",
+        "documentTypes": {
+          "contract": "Contract/Agreement",
+          "courtFiling": "Court Filing/Motion",
+          "evidence": "Evidence Document",
+          "general": "General Legal Document",
+          "policeReport": "Police Report"
+        },
+        "supported": "Supported:",
+        "back": "Back",
+        "summarize": "Summarize Document",
+        "analyzing": "Analyzing your document...",
+        "processingTime": "This may take up to a minute for larger documents",
+        "qnaTitle": "Ask Questions About This Document",
+        "qnaDescription": "Ask follow-up questions about the document. Answers use the document text and direct quotations. Each question sends the document text to Anthropic; standard API retention may be up to 30 days.",
+        "disclaimerTitle": "Disclaimer",
+        "disclaimerBody": "This AI-generated summary is for information only, not legal advice. It may contain mistakes or miss important details. Ask an attorney to review the original document.",
+        "privacyTitle": "Privacy and retention",
+        "privacyBody": "OpenDefender does not save a permanent document or summary library. Temporary server-memory processing and Anthropic's possible 30-day API retention apply. Download a copy if you want to keep one.",
+        "downloadSummary": "Download Summary",
+        "another": "Summarize Another Document"
       }
     },
     "noDataTools": {
@@ -4842,7 +4919,7 @@ export default {
       "title": "Technical Details",
       "sessions": {
         "title": "Session Data and Cookies",
-        "description": "OpenDefender does not use tracking cookies or persistent identifiers for public visitors. A session cookie is used only when an attorney logs into the Attorney Portal — it keeps the attorney authenticated during their visit and is deleted when they log out or close their browser. Public visitors browsing the site, using AI guidance, or using the advocate tools do not receive any cookies. No session information is stored permanently."
+        "description": "OpenDefender issues every visitor an essential od.sid session cookie, normally valid for 24 hours, for security and record ownership. We do not use advertising cookies or cross-site tracking pixels. Public case records are held in server memory rather than a permanent case database."
       },
       "logs": {
         "title": "Server Logs",
@@ -4852,7 +4929,7 @@ export default {
         "title": "External Data Sources",
         "description": "Our platform accesses public legal databases and services to provide you with information:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap, guided case support tool, Document Summarizer, Letter Generator, Attorney Document Generation tools, and the optional 'AI Polish' step in the Mitigation Memo Builder. Personal information is removed before processing. Anthropic may retain inputs for up to 30 days for operational and safety purposes and then automatically deletes them. This data is never used to train AI models.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap and chat guidance, Document Summarizer and document Q&A, Letter Generator, attorney drafting and summarization, and optional AI Polish. We attempt to redact common identifiers before processing, but cannot guarantee every sensitive detail is detected. Under Anthropic's standard commercial API terms, inputs may be retained up to 30 days for operational and safety purposes and are not used for model training by default. OpenDefender does not represent that zero-data-retention terms apply.",
           "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
           "courtListener": "CourtListener API - for case law and court data",
           "recap": "RECAP Archive - for federal court documents",
@@ -4864,7 +4941,7 @@ export default {
           "eoir": "EOIR.gov - for finding immigration legal service providers in your area",
           "nominatim": "OpenStreetMap Nominatim - for locating nearby courthouses and public defender offices based on your ZIP code. Your location query is sent to this free, open-source mapping service."
         },
-        "note": "When you use our platform to search these databases, your queries may be transmitted to these services. Personal information is automatically redacted before being sent to AI services. We recommend reviewing their privacy policies if you have concerns about external data access."
+        "note": "When you use our platform to search these databases, your queries may be transmitted to those services. We attempt to redact common identifiers before AI processing, but automated redaction may miss sensitive details. Review provider privacy policies and avoid submitting unnecessary personal information."
       },
       "captcha": {
         "title": "CAPTCHA Verification",
@@ -4873,11 +4950,11 @@ export default {
     },
     "rights": {
       "title": "Your Privacy Rights",
-      "description": "Because we do not collect or store personal data, you automatically have the following protections:",
+      "description": "OpenDefender minimizes data and does not maintain user accounts for public guidance. The following practices apply:",
       "list": {
-        "noDataStored": "No data to access, modify, or delete - we never store it in the first place",
-        "sessionControl": "Full control over session data - simply close your browser to end all tracking",
-        "noTracking": "No cross-site tracking, cookies, or persistent identifiers"
+        "noDataStored": "No permanent public case database; case and feedback records generally expire from server memory within 24 hours",
+        "sessionControl": "Closing the browser does not immediately erase server records; expiry or service restart clears temporary case records",
+        "noTracking": "No advertising cookies or cross-site tracking; an essential 24-hour session cookie is used"
       }
     },
     "changes": {
@@ -5169,7 +5246,7 @@ export default {
     "none": "None selected"
   },
   "messages": {
-    "welcome": "Hi! I'm an AI assistant here to help you understand your legal situation. Everything we discuss stays private and is deleted after your session.\n\nAre you in an urgent situation right now?",
+    "welcome": "Hi! I'm an AI assistant that provides general educational information. A session cookie and temporary in-memory records support this chat; Anthropic processes AI messages as disclosed.\n\nAre you in an urgent situation right now?",
     "emergencyAdviceFull": "🚨 **During an Arrest or Detention**\n\n**Physical resistance:** Physical resistance, even to an unlawful arrest, can put you in physical danger and result in additional charges. The appropriate avenue to challenge an unlawful arrest is through the legal process after the fact, not at the moment of encounter.\n\n**Right to remain silent:** The Fifth Amendment protects against self-incrimination. This right is exercised by stating clearly that you are invoking it. Courts have held that police must stop questioning once this right is clearly invoked. Questions about where you are going, what you are doing, or where you live do not have to be answered.\n\n**Right to counsel:** The right to an attorney applies from the moment of arrest. People who cannot afford an attorney are entitled to a court-appointed one. This right is exercised at the first court appearance.\n\n**Consent to searches:** Clearly refusing consent to a search preserves certain rights and protections for your case, even if officers still conduct a search.\n\n**Documentation:** Information such as officer badge numbers, car numbers, and the identities of witnesses present during an encounter is typically useful to an attorney reviewing the incident.\n\n---\n**What would you like to do next?**",
     "mainMenu": "What can I help you with?",
     "stateQuestion": "Let's build your Case Roadmap. First, what state is your case in?",
@@ -5177,7 +5254,7 @@ export default {
     "stageQuestion": "What stage is your case in?",
     "custodyQuestion": "Are you currently in custody or have you been released?",
     "attorneyQuestion": "Do you have an attorney or public defender?",
-    "descriptionPrompt": "Thanks for that information. Now, briefly describe what happened - this helps me give you more relevant guidance.\n\n(Your information is analyzed by AI to provide guidance. Personal details are automatically removed before processing. Nothing is stored after your session.)",
+    "descriptionPrompt": "Thanks for that information. Now, briefly describe what happened - this helps me give you more relevant guidance.\n\n(Your information is analyzed by AI. We attempt to redact common identifiers, but redaction may miss details. Avoid unnecessary sensitive information. Temporary records and Anthropic retention are described in the Privacy Policy.)",
     "descriptionPromptWithWarning": "Thanks for that. Let me put together some information for you based on your situation.\n\n**Important:** This is general legal information, not legal advice. No attorney-client relationship is formed. Messages in this chat are processed by Anthropic and may be retained for up to 30 days. This chat is not protected by attorney-client privilege.",
     "privilegeWarning": "Thanks for that. Let me put together some information for you based on your situation.\n\n**Important:** This is general legal information, not legal advice. No attorney-client relationship is formed. Messages in this chat are processed by Anthropic and may be retained for up to 30 days. This chat is not protected by attorney-client privilege.",
     "privilegeAcknowledged": "Understood. Go ahead — take your time.",
@@ -5389,7 +5466,7 @@ export default {
     "errorDesc": "There was an error with voice input. Please try again."
   },
   "footer": {
-    "privacy": "Your information is private and deleted after your session"
+    "privacy": "Case records are held temporarily in server memory and generally expire within 24 hours"
   },
   "exitWarning": {
     "title": "You have guidance that hasn't been exported",
@@ -5533,7 +5610,7 @@ export default {
     "tosTitle": "Attorney Tools Terms of Service",
     "tosSubtitle": "Please review before accepting.",
     "tosContent": "By using these attorney tools, you acknowledge and agree to the following:",
-    "privacyNotice": "Your session data will be automatically deleted after 1 hour.",
+    "privacyNotice": "Attorney-session records are held in server memory and normally expire after 1 hour or on service restart. AI-provider retention is described in the Privacy Policy.",
     "verifying": "Verifying...",
     "submit": "Verify and Continue"
   },
@@ -6996,7 +7073,7 @@ export default {
     "immigrationGuidance": "Immigration Guidance",
     "immigrationGuidanceDesc": "Rights during ICE encounters, workplace raids, bond hearings, and immigration enforcement.",
     "privacyLabel": "Privacy First:",
-    "privacyText": "We do not store your personal data — all input deleted after session.",
+    "privacyText": "We use a 24-hour session cookie and temporary in-memory case records. See the Privacy Policy.",
     "sections": {
       "getHelp": {
         "title": "Get Help",
@@ -7249,7 +7326,7 @@ export default {
     },
     "documentSummarizer": {
       "title": "Document Summarizer",
-      "description": "Upload legal documents and get AI-powered plain-English summaries. Your documents are never stored."
+      "description": "Upload documents for temporary processing and AI-powered summaries. Document text is sent to Anthropic as disclosed."
     },
     "sections": {
       "legalHelp": {
@@ -7761,7 +7838,7 @@ export default {
       "title": "Print the Checklist",
       "intro": "Use this button to print the documentation checklist. Bring the printed copy to the bail hearing so nothing is forgotten.",
       "button": "Print Checklist",
-      "disclaimer": "This checklist is a practical tool only. It is not legal advice and is not privileged."
+      "disclaimer": "This checklist is general educational information, not legal advice, and is not privileged. It may be incomplete or outdated; verify important details with your lawyer and current official sources. opendefender.ai/disclaimers"
     }
   },
   "disclaimers": {
@@ -7776,12 +7853,12 @@ export default {
     },
     "aiDisclosure": {
       "title": "AI Technology Disclosure",
-      "p1": "Five features on OpenDefender use AI to generate content: the Case Roadmap and guided case support tool, the Attorney Document Generation tools in the Attorney Portal, the Document Summarizer, the Letter Generator, and the optional 'AI Polish' step in the Mitigation Memo Builder. All five use Anthropic's Claude Sonnet 4.6.",
-      "p2": "The Case Roadmap also includes a rule-based fallback engine that runs automatically when the AI service is unavailable. In fallback mode, guidance is generated from structured legal rules rather than a live AI model — no data is sent to Anthropic in that case. Attorney Document Generation and the Document Summarizer do not have this fallback and will display an error if the AI service is unavailable.",
-      "p3": "All other content on this site — rights information, the record clearance screener, the court date guide, immigration guides, support resources, and all other static pages — does not use AI. It is manually researched and authored.",
-      "p4": "The Case Roadmap also includes a civil emergency triage step that asks categorical questions about active situations (housing, employment, dependents, immigration). These answers follow the same session-only path as all other Case Roadmap inputs: held in server memory, auto-deleted in 24 hours, never written to a database.",
-      "p5": "AI-generated guidance is not a substitute for advice from a licensed attorney. We cross-reference responses with legal databases to improve accuracy, but AI can make mistakes. Consult a qualified attorney before making legal decisions.",
-      "p6_pre": "Before your inputs reach the AI, we automatically scan for and remove personal information (names, phone numbers, addresses, Social Security numbers). See our",
+      "p1": "Features identified as AI-assisted use Anthropic's Claude Sonnet 4.6. They include Case Roadmap and chat guidance, mitigation narrative polishing, the Letter Generator, Document Summarizer and document Q&A, and attorney document generation and summarization.",
+      "p2": "The Case Roadmap includes a rules-based mode and can use that mode if AI is unavailable. In rules-based mode, no Roadmap input is sent to Anthropic. Most other AI-assisted features return an error if Anthropic is unavailable rather than silently substituting non-AI output.",
+      "p3": "Static rights, support, screening, and resource pages do not generate their text with AI at request time. Their content draws from public legal sources and curated or sometimes synthesized datasets, and may still be incomplete, estimated, outdated, mistranslated, or wrong.",
+      "p4": "Case and feedback records are held in server memory rather than a permanent case database and generally expire within 24 hours or on service restart. Guidance may be cached in memory for about 15 minutes. Some consent, audit, security, and operational metadata may remain in memory until restart or in provider logs under provider retention practices.",
+      "p5": "AI-generated text is not a substitute for advice from a licensed attorney and is not tailored to every fact. AI can omit information, make mistakes, or produce outdated citations. Verify important details, deadlines, and citations with an attorney and current official sources.",
+      "p6_pre": "Before AI processing, we attempt to redact common identifiers such as names, phone numbers, addresses, and Social Security numbers. Automated redaction may miss sensitive details, so avoid submitting unnecessary personal information. See our",
       "p6_post": "for the full details on data handling."
     },
     "screeningTools": {
@@ -7789,7 +7866,7 @@ export default {
       "p1": "The Record Clearance Eligibility Screener is a decision tree — it uses no AI and makes no server calls. It runs entirely in your browser. No data is transmitted or stored.",
       "p2": "The Collateral Consequences Screener is a yes/no questionnaire that flags life-area risks (housing, employment, immigration, custody, and more) based on your answers. It uses no AI and makes no server calls. Everything runs in your browser — no data leaves your device.",
       "p3": "The Public Defender Intake Checklist is an electronic intake form for attorneys and advocates. It runs entirely in your browser, makes no server calls, and generates a downloadable .docx file locally on your device. No data is transmitted or stored on our servers.",
-      "p4": "The Mitigation Memo Builder helps attorneys and advocates structure client information into a formatted sentencing memo. The core builder runs entirely in your browser. The memo is generated as a .docx file locally, and no data is transmitted or stored on our servers. A separate, optional 'AI Polish' feature can convert your structured entries into narrative prose. If you use it, the field values you entered are sent to our server and forwarded to Claude for one-time processing. Nothing is logged, cached, or stored afterward.",
+      "p4": "The Mitigation Memo Builder's core form and local .docx export run in your browser. Its optional AI Polish feature sends populated fields through our server to Anthropic's Claude. OpenDefender does not write that request to a persistent memo database, but standard operational processing applies and Anthropic may retain API data for up to 30 days under its standard terms.",
       "p5": "The Rap Sheet Error Identification Guide and FCRA rights information are informational only. They describe general processes and rights. Verify all dispute procedures and deadlines directly with the relevant agency — the FBI, your state criminal repository, or the background check company."
     },
     "publicApi": {

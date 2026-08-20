@@ -171,7 +171,7 @@ Uses breadth-first search to navigate state statute hierarchies:
 
 ### Database Scale
 - **Total charges**: 7,155 across all jurisdictions
-- **Coverage**: All 50 states + DC + territories (56 jurisdictions) + Federal
+- **Coverage**: 57 jurisdiction codes: all 50 states, DC, five territories, and Federal
 - **Categories**: Homicide, assault, sexual offenses, theft, burglary, robbery, drugs, weapons, fraud, public order, DUI/traffic
 - **Source file**: `shared/criminal-charges.ts`
 
@@ -219,4 +219,4 @@ Uses breadth-first search to navigate state statute hierarchies:
 
 **Major Update (Jan 15, 2026)**: Documentation updated to reflect current implementation. OpenLaws API is now fully integrated with working citation lookup. Seed data at 1,385+ statutes covering all 51 jurisdictions. Hybrid search strategy (seed data + API) is fully operational.
 
-**Update (July 15, 2026)**: Charge count corrected to 7,155 (56 jurisdictions + federal, including inchoate/derivative phases 1–5). Statute seed data count corrected to 5,956 records in PostgreSQL. See `SOURCES.md` Section 2 for full phase breakdown.
+**Update (July 15, 2026)**: Charge count corrected to 7,155 (57 jurisdiction codes including federal and inchoate/derivative phases 1–5). Statute seed data count corrected to 5,956 records in PostgreSQL. See `SOURCES.md` Section 2 for full phase breakdown.

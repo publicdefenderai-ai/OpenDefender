@@ -29,7 +29,7 @@ function PreviewChrome({ url, children }: { url: string; children: React.ReactNo
 
 function First24Preview() {
   return (
-    <PreviewChrome url="opendefender.org/first-24-hours">
+    <PreviewChrome url="opendefender.ai/first-24-hours">
       <div className="bg-[#1e3a5f] px-4 py-3.5">
         <div className="text-white/50 text-[10px] uppercase tracking-widest mb-0.5">BEGIN YOUR DEFENSE HERE</div>
         <div className="text-white text-base font-bold leading-tight">Your First 24 Hours</div>
@@ -56,7 +56,7 @@ function First24Preview() {
 
 function GuidancePreview() {
   return (
-    <PreviewChrome url="opendefender.org/chat">
+    <PreviewChrome url="opendefender.ai/chat">
       <div className="bg-white px-4 py-3 border-b border-slate-100">
         <div className="flex items-center gap-2 text-[11px] font-medium text-slate-600">
           <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
@@ -70,14 +70,14 @@ function GuidancePreview() {
       </div>
       <div className="bg-slate-50 p-3 space-y-2">
         <div className="bg-white rounded-lg p-2.5 shadow-sm border border-slate-100">
-          <div className="text-[10px] text-slate-600 leading-relaxed">Hi! I'm an AI assistant here to help you understand your legal situation. Everything stays private and is deleted after your session.</div>
+          <div className="text-[10px] text-slate-600 leading-relaxed">Hi! I'm an AI assistant providing general educational information. Temporary records and Anthropic processing are explained in the Privacy Policy.</div>
           <div className="text-[10px] font-semibold text-slate-700 mt-1.5">Are you in an urgent situation right now?</div>
         </div>
         <div className="grid grid-cols-2 gap-1.5">
           <div className="py-1.5 rounded text-center text-[10px] font-medium text-red-700 bg-red-50 border border-red-200">Yes, help now</div>
           <div className="py-1.5 rounded text-center text-[10px] font-medium text-slate-500 bg-slate-50 border border-slate-200">No, time to talk</div>
         </div>
-        <div className="text-center text-[10px] text-slate-400">Your information is private</div>
+        <div className="text-center text-[10px] text-slate-400">See the Privacy Policy for data handling</div>
       </div>
     </PreviewChrome>
   );
@@ -85,7 +85,7 @@ function GuidancePreview() {
 
 function SupportPreview() {
   return (
-    <PreviewChrome url="opendefender.org/support">
+    <PreviewChrome url="opendefender.ai/support">
       <div className="bg-[#8b2252] px-4 py-3.5">
         <div className="text-white text-base font-bold">Support Resources</div>
         <div className="text-white/70 text-[11px] mt-0.5">Facing legal challenges affects every part of your life</div>
@@ -108,7 +108,7 @@ function SupportPreview() {
 
 function ImmigrationPreview() {
   return (
-    <PreviewChrome url="opendefender.org/immigration-guidance">
+    <PreviewChrome url="opendefender.ai/immigration-guidance">
       <div className="px-4 py-4 text-center" style={{ background: "linear-gradient(135deg, #92400e 0%, #b45309 100%)" }}>
         <div className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center mx-auto mb-1.5">
           <Globe className="w-4 h-4 text-white" />
@@ -259,7 +259,7 @@ function ExampleFlow({ steps, label, title, subtitle }: { steps: FlowStep[]; lab
 
 function FamilyPreview() {
   return (
-    <PreviewChrome url="opendefender.org/friends-family">
+    <PreviewChrome url="opendefender.ai/friends-family">
       <div className="bg-[#1d4ed8] px-4 py-3.5">
         <div className="flex items-center gap-2 mb-1">
           <Users className="w-4 h-4 text-white/80" />

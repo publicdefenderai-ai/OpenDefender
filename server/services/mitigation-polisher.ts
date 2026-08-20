@@ -7,7 +7,7 @@
  *  1. System prompt explicitly forbids adding any detail not present verbatim in inputs.
  *  2. Prohibited phrases list: language implying guilt, regret, or admission.
  *  3. Empty fields are filtered server-side — never sent to Claude.
- *  4. No data is logged, cached, or stored after the response is returned.
+ *  4. OpenDefender does not create a persistent case record; Anthropic's disclosed provider retention applies.
  *  5. Output must be labeled DRAFT by the caller before display.
  *  6. Runtime no-added-facts check: Claude's response is scanned for words that
  *     don't trace back to any provided field (findAddedWords). A response that

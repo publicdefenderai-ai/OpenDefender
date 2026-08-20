@@ -14,6 +14,7 @@ import { AttorneyProvider } from "@/contexts/attorney-context";
 import { ChatLauncher } from "@/components/chat/chat-launcher";
 import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dialog";
 import { MobileBottomNav } from "@/components/navigation/mobile-bottom-nav";
+import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { X } from "lucide-react";
 import "./i18n";
@@ -58,6 +59,7 @@ const ApiDocs = lazy(() => import("@/pages/api-docs"));
 const Widgets = lazy(() => import("@/pages/widgets"));
 const TechDocs = lazy(() => import("@/pages/tech-docs"));
 const DataSources = lazy(() => import("@/pages/data-sources"));
+const TermsOfService = lazy(() => import("@/pages/terms-of-service"));
 const EmbedSearch = lazy(() => import("@/pages/embed/search"));
 const EmbedRights = lazy(() => import("@/pages/embed/rights"));
 const EmbedGlossary = lazy(() => import("@/pages/embed/glossary"));
@@ -164,6 +166,7 @@ function Router() {
       <Route path="/widgets" component={Widgets} />
       <Route path="/tech-docs" component={TechDocs} />
       <Route path="/data-sources" component={DataSources} />
+      <Route path="/terms" component={TermsOfService} />
       <Route path="/embed/search" component={EmbedSearch} />
       <Route path="/embed/rights" component={EmbedRights} />
       <Route path="/embed/glossary" component={EmbedGlossary} />
@@ -238,6 +241,7 @@ function App() {
                 <Toaster />
                 <SkipNavigation />
                 <BetaBanner />
+                 <DisclosureNotice compact />
                 <main id="main-content" tabIndex={-1} className="pb-16 md:pb-0">
                   <Suspense fallback={<div className="min-h-screen bg-background" />}>
                     <AnimatePresence mode="wait">
