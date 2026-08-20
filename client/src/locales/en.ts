@@ -4925,7 +4925,9 @@ export default {
         "title": "External Data Sources",
         "description": "Our platform accesses public legal databases and services to provide you with information:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap and chat guidance, Document Summarizer and document Q&A, Letter Generator, attorney drafting and summarization, and optional AI Polish. Where available, OpenDefender uses automated redaction before AI processing to remove some common identifiers. It can miss sensitive information, so do not submit unnecessary personal or confidential details. Under Anthropic's standard commercial API terms, inputs may be retained for up to 30 days for safety and operational purposes and are not used for model training by default. OpenDefender cannot promise zero-data retention.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 — used in the Case Roadmap and chat guidance, Document Summarizer and document Q&A, Letter Generator, attorney drafting and summarization, and optional AI Polish. Where available, OpenDefender uses automated redaction before AI processing to remove common identifiers. It can miss sensitive information, so do not submit unnecessary personal or confidential details. Under Anthropic's standard commercial API terms, inputs may be retained for up to 30 days for safety and operational purposes and are not used for model training by default. See ",
+          "anthropicTermsLink": "Anthropic’s commercial API terms",
+          "anthropicTermsSuffix": " for more details about their data retention.",
           "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
           "courtListener": "CourtListener API - for case law and court data",
           "recap": "RECAP Archive - for federal court documents",

@@ -4927,7 +4927,9 @@ export default {
         "title": "Fuentes de Datos Externas",
         "description": "Nuestra plataforma accede a bases de datos y servicios legales públicos para proporcionarle información:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - usado en la Hoja de Ruta y chat, resumen y preguntas de documentos, cartas, redacción y resumen para abogados, y Pulido con IA. Cuando está disponible, OpenDefender usa redacción automática antes del procesamiento por IA para eliminar algunos identificadores comunes. Puede omitir información sensible; no envíe datos personales o confidenciales innecesarios. Bajo los términos comerciales estándar de Anthropic, las entradas pueden retenerse hasta 30 días por operación y seguridad y no se usan para entrenar por defecto. OpenDefender no puede prometer retención cero de datos.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 — usado en la Hoja de Ruta y chat, resumen y preguntas de documentos, cartas, redacción y resumen para abogados, y Pulido con IA. Cuando está disponible, OpenDefender usa redacción automática antes del procesamiento por IA para eliminar identificadores comunes. Puede omitir información sensible; no envíe datos personales o confidenciales innecesarios. Bajo los términos comerciales estándar de Anthropic, las entradas pueden retenerse hasta 30 días por operación y seguridad y no se usan para entrenar por defecto. Consulte ",
+          "anthropicTermsLink": "las condiciones comerciales de Anthropic",
+          "anthropicTermsSuffix": " para obtener más información sobre su retención de datos.",
           "govInfo": "API de GovInfo.gov - para estatutos penales federales (Título 18 USC)",
           "courtListener": "API de CourtListener - para jurisprudencia y datos judiciales",
           "recap": "Archivo RECAP - para documentos judiciales federales",

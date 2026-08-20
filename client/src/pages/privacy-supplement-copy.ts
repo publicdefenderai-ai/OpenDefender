@@ -33,7 +33,9 @@ export const privacySupplementCopy = {
         ["Mitigation AI Polish", "Only populated mitigation fields; blank fields are omitted", "Core form and export are local; AI request uses standard operational processing; Anthropic up to 30 days"],
         ["Attorney Generation and Summarization", "Attorney-entered facts, instructions, or uploaded document text", "Attorney session records normally expire within 1 hour or on restart; Anthropic up to 30 days"],
       ],
-      terms: "These retention periods describe OpenDefender's current implementation and Anthropic's standard commercial API terms. Infrastructure, security, and operational logs may follow provider-specific retention practices. OpenDefender cannot promise zero-data retention.",
+      termsBeforeLink: "These retention periods describe OpenDefender's current implementation and Anthropic's standard commercial API terms. Infrastructure, security, and operational logs may follow provider-specific retention practices. See ",
+      termsLink: "Anthropic’s commercial API terms",
+      termsAfterLink: " for more details about their data retention.",
     },
   },
   es: {
@@ -70,7 +72,9 @@ export const privacySupplementCopy = {
         ["Pulido con IA de Mitigación", "Solo campos completados; se omiten campos vacíos", "Formulario y exportación local; solicitud de IA con procesamiento estándar; Anthropic hasta 30 días"],
         ["Generación y Resumen para Abogados", "Hechos, instrucciones o texto de documentos ingresados por el abogado", "Sesión de abogado normalmente 1 hora o hasta reinicio; Anthropic hasta 30 días"],
       ],
-      terms: "Estos periodos describen la implementación actual y los términos comerciales estándar de Anthropic. Los registros de infraestructura, seguridad y operación pueden seguir prácticas de retención propias del proveedor. OpenDefender no puede prometer retención cero de datos.",
+      termsBeforeLink: "Estos periodos describen la implementación actual y los términos comerciales estándar de Anthropic. Los registros de infraestructura, seguridad y operación pueden seguir prácticas de retención propias del proveedor. Consulte ",
+      termsLink: "las condiciones comerciales de Anthropic",
+      termsAfterLink: " para obtener más información sobre su retención de datos.",
     },
   },
   zh: {
@@ -107,7 +111,9 @@ export const privacySupplementCopy = {
         ["减轻情节 AI 润色", "仅已填写字段；空白字段会被省略", "核心表单和导出在本地；AI 请求进行标准处理；Anthropic 最多30天"],
         ["律师文件生成与摘要", "律师输入的事实、指示或上传文件文字", "律师会话通常1小时或到服务重启；Anthropic 最多30天"],
       ],
-      terms: "这些期限说明当前实现及 Anthropic 标准商业 API 条款。基础设施、安全和运营日志可能遵循提供商自己的保留做法。OpenDefender 无法承诺零数据保留。",
+      termsBeforeLink: "这些期限说明当前实现及 Anthropic 标准商业 API 条款。基础设施、安全和运营日志可能遵循提供商自己的保留做法。请参阅 ",
+      termsLink: "Anthropic 的商业 API 条款",
+      termsAfterLink: "，了解其数据保留的更多信息。",
     },
   },
 } as const;

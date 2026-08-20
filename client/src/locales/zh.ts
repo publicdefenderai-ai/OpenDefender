@@ -4927,7 +4927,9 @@ export default {
         "title": "外部数据源",
         "description": "我们的平台访问公共法律数据库和服务来为您提供信息：",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - 用于案件路线图与聊天、文件摘要与问答、信函、律师草拟与摘要以及 AI 润色。在可用的情况下，OpenDefender 会在 AI 处理前使用自动遮盖来移除部分常见身份信息。自动遮盖可能遗漏敏感信息；请不要提交不必要的个人或机密信息。按 Anthropic 标准商业 API 条款，输入可能出于运营和安全目的保留最多30天，默认不用于模型训练。OpenDefender 无法承诺零数据保留。",
+          "anthropic": "Anthropic Claude Sonnet 4.6 — 用于案件路线图与聊天、文件摘要与问答、信函、律师草拟与摘要以及 AI 润色。在可用的情况下，OpenDefender 会在 AI 处理前使用自动遮盖来移除常见身份信息。自动遮盖可能遗漏敏感信息；请不要提交不必要的个人或机密信息。按 Anthropic 标准商业 API 条款，输入可能出于运营和安全目的保留最多30天，默认不用于模型训练。请参阅 ",
+          "anthropicTermsLink": "Anthropic 的商业 API 条款",
+          "anthropicTermsSuffix": "，了解其数据保留的更多信息。",
           "govInfo": "GovInfo.gov API - 用于联邦刑事法规（美国法典第18编）",
           "courtListener": "CourtListener API - 用于判例法和法院数据",
           "recap": "RECAP Archive - 用于联邦法院文件",
