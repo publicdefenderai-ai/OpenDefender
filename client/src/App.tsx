@@ -14,7 +14,6 @@ import { AttorneyProvider } from "@/contexts/attorney-context";
 import { ChatLauncher } from "@/components/chat/chat-launcher";
 import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dialog";
 import { MobileBottomNav } from "@/components/navigation/mobile-bottom-nav";
-import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { X } from "lucide-react";
 import "./i18n";
@@ -240,7 +239,6 @@ function App() {
                 <Toaster />
                 <SkipNavigation />
                 <BetaBanner />
-                 <DisclosureNotice compact />
                 <main id="main-content" tabIndex={-1} className="pb-16 md:pb-0">
                   <Suspense fallback={<div className="min-h-screen bg-background" />}>
                     <AnimatePresence mode="wait">

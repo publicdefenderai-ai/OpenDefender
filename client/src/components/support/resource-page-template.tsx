@@ -21,7 +21,6 @@ import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useState } from "react";
-import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 
 export interface ActionItem {
   id: string;
@@ -402,7 +401,6 @@ export function ResourcePageTemplate({
               {/* Disclaimer */}
               <section className="py-8">
                 <div className={sidebar ? "" : "container mx-auto px-4"}>
-                  <DisclosureNotice compact className="mb-4 rounded-lg border" />
                   <div className={sidebar ? "flex items-start gap-2" : "max-w-3xl mx-auto flex items-start gap-2"}>
                     <AlertCircle className="h-3.5 w-3.5 text-muted-foreground flex-shrink-0 mt-0.5" />
                     <p className="text-xs text-muted-foreground leading-relaxed">

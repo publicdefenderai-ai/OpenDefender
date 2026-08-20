@@ -29,7 +29,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { QAFlow } from "@/components/legal/qa-flow";
-import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 import { GuidanceDashboard } from "@/components/legal/guidance-dashboard";
 import { useLegalGuidance, useAIAvailability } from "@/hooks/use-legal-data";
 import { legalDataApi } from "@/lib/legal-data";
@@ -686,7 +685,6 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <DisclosureNotice compact />
         <main className="max-w-7xl mx-auto px-4 py-8">
           <QAFlow
             onComplete={handleQAComplete}
@@ -707,8 +705,6 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <DisclosureNotice compact />
-        
         <main className="px-4 py-8">
           <GuidanceDashboard 
             guidance={guidanceResult} 

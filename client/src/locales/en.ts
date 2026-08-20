@@ -313,10 +313,7 @@ export default {
   },
   "disclosure": {
     "label": "Important legal information",
-    "summary": "OpenDefender provides general educational information from public legal sources, curated datasets, and sometimes AI-generated text—not legal advice. Information may be incomplete, estimated, or outdated. Verify important details, deadlines, and citations with an attorney or official source.",
-    "fullNotice": "Full notice",
-    "sources": "Sources",
-    "privacy": "Privacy"
+    "summary": "OpenDefender provides general educational information from public legal sources, curated datasets, and sometimes AI-generated text—not legal advice. Information may be incomplete, estimated, or outdated. Verify important details, deadlines, and citations with an attorney or official source."
   },
   "footer": {
     "tagline": "We help people understand their rights and find free legal information.",
@@ -4928,7 +4925,7 @@ export default {
         "title": "External Data Sources",
         "description": "Our platform accesses public legal databases and services to provide you with information:",
         "services": {
-          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap and chat guidance, Document Summarizer and document Q&A, Letter Generator, attorney drafting and summarization, and optional AI Polish. We attempt to redact common identifiers before processing, but cannot guarantee every sensitive detail is detected. Under Anthropic's standard commercial API terms, inputs may be retained up to 30 days for operational and safety purposes and are not used for model training by default. OpenDefender does not represent that zero-data-retention terms apply.",
+          "anthropic": "Anthropic Claude Sonnet 4.6 - used in the Case Roadmap and chat guidance, Document Summarizer and document Q&A, Letter Generator, attorney drafting and summarization, and optional AI Polish. Where available, OpenDefender uses automated redaction before AI processing to remove some common identifiers. It can miss sensitive information, so do not submit unnecessary personal or confidential details. Under Anthropic's standard commercial API terms, inputs may be retained for up to 30 days for safety and operational purposes and are not used for model training by default. OpenDefender cannot promise zero-data retention.",
           "govInfo": "GovInfo.gov API - for federal criminal statutes (Title 18 USC)",
           "courtListener": "CourtListener API - for case law and court data",
           "recap": "RECAP Archive - for federal court documents",

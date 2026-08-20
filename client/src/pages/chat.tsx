@@ -40,7 +40,6 @@ import { searchLegalAidOrganizations, LegalAidOrganization } from "@/lib/legal-a
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance } from "@shared/guidance-view-model";
 import { buildGuidanceChatSummary } from "@shared/guidance-chat-summary";
-import { DisclosureNotice } from "@/components/legal/disclosure-notice";
 
 const US_STATES: Record<string, string> = {
   AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
@@ -1281,8 +1280,6 @@ export default function ChatPage() {
               </Button>
             </div>
           </header>
-
-          <DisclosureNotice compact className="shrink-0 border-t-0" />
 
           <ProgressBreadcrumbs currentStep={state.currentStep} />
 
