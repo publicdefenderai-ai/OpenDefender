@@ -38,9 +38,9 @@ const formSchema = z.object({
       message: "You must acknowledge privilege requirements",
     }),
   }),
-  acceptsTermsOfService: z.literal(true, {
+  acceptsDisclosures: z.literal(true, {
     errorMap: () => ({
-      message: "You must accept the Terms of Service",
+      message: "You must acknowledge the Notice & Disclosures",
     }),
   }),
 });
@@ -60,7 +60,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
     defaultValues: {
       isLicensedAttorneyActingForClient: false as unknown as true,
       understandsPrivilegeRequirements: false as unknown as true,
-      acceptsTermsOfService: false as unknown as true,
+      acceptsDisclosures: false as unknown as true,
     },
   });
 
@@ -71,7 +71,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
       isLicensedAttorney: data.isLicensedAttorneyActingForClient,
       actingOnBehalfOfClient: data.isLicensedAttorneyActingForClient,
       understandsPrivilegeRequirements: data.understandsPrivilegeRequirements,
-      acceptsTermsOfService: data.acceptsTermsOfService,
+      acceptsDisclosures: data.acceptsDisclosures,
     });
 
     if (success && onSuccess) {
@@ -147,7 +147,7 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
 
           <FormField
             control={form.control}
-            name="acceptsTermsOfService"
+            name="acceptsDisclosures"
             render={({ field }) => (
               <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                 <FormControl>
@@ -155,9 +155,9 @@ export function VerificationForm({ onSuccess }: VerificationFormProps) {
                 </FormControl>
                 <div className="space-y-1 leading-none">
                   <FormLabel className="font-normal">
-                    {t("attorneyPortal.verify.acceptTermsPre", "I have read and accept the")}{" "}
-                    <Link href="/terms" target="_blank" className="font-medium underline">
-                      {t("footer.termsOfService", "Terms of Service")}
+                    {t("attorneyPortal.verify.acceptDisclosuresPre", "I have read the")}{" "}
+                    <Link href="/disclaimers" target="_blank" className="font-medium underline">
+                      {t("footer.noticeDisclaimers", "Notice & Disclosures")}
                     </Link>
                     .
                   </FormLabel>

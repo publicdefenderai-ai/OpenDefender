@@ -15,7 +15,7 @@ Data sources and methodology: https://opendefender.ai/data-sources
 
 Privacy policy: https://opendefender.ai/privacy-policy
 
-Terms: https://opendefender.ai/terms
+Notice & Disclosures: https://opendefender.ai/disclaimers
 
 ## Rate Limits
 - **Search endpoints**: 30 requests per minute

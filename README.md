@@ -6,7 +6,7 @@ OpenDefender is a free, open-source platform that provides plain-language rights
 
 🌐 **Live Platform**: [opendefender.ai](https://opendefender.ai/) (primary; also available at [opendefender.net](https://opendefender.net/))
 
-> **Important:** OpenDefender provides general educational information drawn from public legal sources, curated and sometimes synthesized datasets, user-selected inputs, and, in identified features, AI-generated text. It is not legal advice and is not tailored to every fact. Information may be incomplete, estimated, outdated, mistranslated, or incorrect. Verify important details, deadlines, and citations with a qualified attorney and a current official source. See the [full notice](https://opendefender.ai/disclaimers), [data sources and methodology](https://opendefender.ai/data-sources), [privacy policy](https://opendefender.ai/privacy-policy), and [terms](https://opendefender.ai/terms).
+> **Important:** OpenDefender provides general educational information drawn from public legal sources, curated and sometimes synthesized datasets, user-selected inputs, and, in identified features, AI-generated text. It is not legal advice and is not tailored to every fact. Information may be incomplete, estimated, outdated, mistranslated, or incorrect. Verify important details, deadlines, and citations with a qualified attorney and a current official source. See the [full notice](https://opendefender.ai/disclaimers), [data sources and methodology](https://opendefender.ai/data-sources), and [privacy policy](https://opendefender.ai/privacy-policy).
 
 ---
 

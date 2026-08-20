@@ -9,7 +9,7 @@ export interface AttorneyAttestation {
   isLicensedAttorney: boolean;
   actingOnBehalfOfClient: boolean;
   understandsPrivilegeRequirements: boolean;
-  acceptsTermsOfService: boolean;
+  acceptsDisclosures: boolean;
 }
 
 export interface AttorneySession {

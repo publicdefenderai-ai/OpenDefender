@@ -59,7 +59,6 @@ const ApiDocs = lazy(() => import("@/pages/api-docs"));
 const Widgets = lazy(() => import("@/pages/widgets"));
 const TechDocs = lazy(() => import("@/pages/tech-docs"));
 const DataSources = lazy(() => import("@/pages/data-sources"));
-const TermsOfService = lazy(() => import("@/pages/terms-of-service"));
 const EmbedSearch = lazy(() => import("@/pages/embed/search"));
 const EmbedRights = lazy(() => import("@/pages/embed/rights"));
 const EmbedGlossary = lazy(() => import("@/pages/embed/glossary"));
@@ -166,7 +165,7 @@ function Router() {
       <Route path="/widgets" component={Widgets} />
       <Route path="/tech-docs" component={TechDocs} />
       <Route path="/data-sources" component={DataSources} />
-      <Route path="/terms" component={TermsOfService} />
+      <Route path="/terms"><Redirect to="/disclaimers" /></Route>
       <Route path="/embed/search" component={EmbedSearch} />
       <Route path="/embed/rights" component={EmbedRights} />
       <Route path="/embed/glossary" component={EmbedGlossary} />
