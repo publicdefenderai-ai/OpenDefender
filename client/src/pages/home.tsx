@@ -12,7 +12,7 @@ import {
   Briefcase,
   Sunrise,
 } from "lucide-react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -57,7 +57,6 @@ function CountUp({ target, duration = 1400 }: { target: number; duration?: numbe
 export default function Home() {
   useScrollToTop();
   const { t } = useTranslation();
-  const [, navigate] = useLocation();
   const [urgentHelpOpen, setUrgentHelpOpen] = useState(false);
   const [urgentSituation, setUrgentSituation] = useState<"arrested" | "charged" | "family" | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -215,12 +214,7 @@ export default function Home() {
                 className="group"
               >
                 <div
-                  role="link"
-                  tabIndex={0}
-                  aria-label={door.headline}
-                  onClick={() => navigate(door.link)}
-                  onKeyDown={(e) => e.key === "Enter" && navigate(door.link)}
-                  className={`relative flex flex-col rounded-2xl overflow-hidden cursor-pointer bg-gradient-to-br ${door.gradient} texture-grain
+                  className={`relative flex flex-col rounded-2xl overflow-hidden bg-gradient-to-br ${door.gradient} texture-grain
                     transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl min-h-[300px] md:min-h-[340px]`}
                 >
                   {/* Card content above grain layer */}
@@ -250,10 +244,13 @@ export default function Home() {
                     </p>
 
                     {/* Primary CTA */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-semibold transition-colors mb-5 w-fit">
+                    <Link
+                      href={door.link}
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-semibold transition-colors mb-5 w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    >
                       {door.cta}
                       <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
-                    </div>
+                    </Link>
 
                     {/* Secondary links */}
                     <div className="flex flex-col gap-1.5 border-t border-white/15 pt-4">
@@ -261,8 +258,7 @@ export default function Home() {
                         <Link
                           key={link.href}
                           href={link.href}
-                          onClick={(e) => e.stopPropagation()}
-                          className="text-xs text-white/60 hover:text-white/90 transition-colors flex items-center gap-1.5"
+                          className="text-xs text-white/60 hover:text-white/90 transition-colors flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         >
                           <ArrowRight className="h-2.5 w-2.5 opacity-50 flex-shrink-0" aria-hidden="true" />
                           {link.label}
@@ -314,7 +310,7 @@ export default function Home() {
           <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
           <div className="mt-2 mb-1 text-center">
             <Link href="/directory" className="text-xs text-muted-foreground hover:text-foreground font-medium inline-flex items-center gap-1 transition-colors">
-              Browse all resources <ArrowRight className="h-3 w-3" />
+              {t("navigation.browseAll", "Browse all resources")} <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
         </div>

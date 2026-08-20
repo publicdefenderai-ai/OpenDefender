@@ -88,7 +88,7 @@ function tryFuzzyCorrect(terms: string[]): Map<string, string> {
 function normalizeText(text: string): string {
   return text
     .toLowerCase()
-    .replace(/[^\w\s]/g, ' ')
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -832,6 +832,19 @@ export function buildSearchIndex(): void {
       url: '/friends-family/toolkit'
     },
     {
+      id: 'data-sources',
+      title: 'Data Sources and Methodology',
+      titleEs: 'Fuentes de Datos y Metodología',
+      titleZh: '数据来源与方法',
+      content: 'Where OpenDefender legal information comes from, how sources are verified, confidence levels, known limitations, estimated deadlines, primary legal sources, and how to report an error.',
+      contentEs: 'De dónde proviene la información legal de OpenDefender, cómo se verifican las fuentes, los niveles de confianza, las limitaciones conocidas, los plazos estimados, las fuentes legales primarias y cómo informar un error.',
+      contentZh: 'OpenDefender 法律信息的来源、来源验证方式、可信度、已知限制、估算期限、主要法律来源以及如何报告错误。',
+      tags: ['data sources', 'methodology', 'accuracy', 'citations', 'verification', 'limitations', 'confidence'],
+      aliases: ['sources', 'how accurate', 'where does this information come from', 'trusted sources', 'verify information'],
+      headings: ['Legal data limitations', 'Jurisdiction procedure rules', 'Criminal charges database', 'How information is verified'],
+      url: '/data-sources'
+    },
+    {
       id: 'directory',
       title: 'Site Directory',
       titleEs: 'Directorio del Sitio',
@@ -1435,7 +1448,7 @@ export function buildSearchIndex(): void {
     // Case timeline and immigration guidance
     'case-timeline', 'immigration-guidance',
     // Navigation / directory pages
-    'how-to', 'directory',
+    'how-to', 'directory', 'data-sources',
   ]);
 
   for (const page of sitePages) {

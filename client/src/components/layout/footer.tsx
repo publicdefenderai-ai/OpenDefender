@@ -53,6 +53,11 @@ export function Footer() {
             <h4 className="font-semibold text-lg mb-5">{t('footer.getHelp')}</h4>
             <ul className="space-y-3 text-sm">
               <li>
+                <Link href="/first-24-hours" className="text-gray-300 hover:text-white transition-colors">
+                  {t('navigation.intents.urgent.label', 'Urgent help')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/case-guidance" className="text-gray-300 hover:text-white transition-colors">
                   {t('footer.getCaseGuidance')}
                 </Link>
@@ -63,13 +68,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/immigration-guidance" className="text-gray-300 hover:text-white transition-colors">
-                  {t('footer.immigrationEnforcement')}
+                <Link href="/case-timeline" className="text-gray-300 hover:text-white transition-colors">
+                  {t('navigation.intents.stage.label', 'Understand a case stage')}
                 </Link>
               </li>
               <li>
-                <Link href="/friends-family" className="text-gray-300 hover:text-white transition-colors">
-                  {t('footer.friendsFamily')}
+                <Link href="/legal-aid" className="text-gray-300 hover:text-white transition-colors">
+                  {t('navigation.intents.legalHelp.label', 'Find a lawyer or resources')}
                 </Link>
               </li>
               <li>
@@ -111,7 +116,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/data-sources" className="text-gray-300 hover:text-white transition-colors">
-                  Data Sources
+                  {t('navigation.intents.sources.label', 'Verify sources')}
                 </Link>
               </li>
             </ul>

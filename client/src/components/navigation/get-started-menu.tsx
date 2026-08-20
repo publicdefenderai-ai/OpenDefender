@@ -193,7 +193,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/attorney')}
+        onClick={() => handleNavigate('/legal-aid')}
         className="w-full"
         data-testid="menu-item-attorney-tools"
       >
@@ -205,10 +205,10 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               </div>
               <div className="flex-1 text-left min-w-0">
                 <h3 className="font-semibold text-sm sm:text-lg group-hover:text-slate-600 transition-colors">
-                  {t('getStartedMenu.main.attorneyTools.title', 'Attorney Tools')}
+                  {t('navigation.intents.legalHelp.label', 'Find a lawyer or resources')}
                 </h3>
                 <p className="hidden sm:block text-sm text-muted-foreground">
-                  {t('getStartedMenu.main.attorneyTools.description', 'Document drafting and resources for legal professionals')}
+                  {t('navigation.intents.legalHelp.description', 'Find public defenders, legal aid, courts, and support')}
                 </p>
               </div>
               <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground group-hover:text-slate-600 transition-colors flex-shrink-0" />
@@ -292,7 +292,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/quick-reference')}
+        onClick={() => handleNavigate('/rights-info')}
         className="w-full"
         data-testid="submenu-item-quick-reference"
       >
@@ -309,7 +309,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/search-seizure')}
+        onClick={() => handleNavigate('/rights-info')}
         className="w-full"
         data-testid="submenu-item-search-seizure"
       >
@@ -392,7 +392,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/resources')}
+        onClick={() => handleNavigate('/legal-aid')}
         className="w-full"
         data-testid="submenu-item-legal-aid-orgs"
       >
@@ -551,6 +551,23 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
               <FileSearch className="h-5 w-5 text-indigo-600" />
               <span className="font-medium group-hover:text-indigo-600 transition-colors">
                 {t('getStartedMenu.resourcesSubmenu.lawsRecords')}
+              </span>
+            </div>
+          </CardContent>
+        </Card>
+      </button>
+
+      <button
+        onClick={() => handleNavigate('/data-sources')}
+        className="w-full"
+        data-testid="submenu-item-data-sources"
+      >
+        <Card className="hover:shadow-md hover:border-blue-500 transition-all duration-200 cursor-pointer group">
+          <CardContent className="p-3">
+            <div className="flex items-center gap-3">
+              <BookOpen className="h-5 w-5 text-blue-600" />
+              <span className="font-medium group-hover:text-blue-600 transition-colors">
+                {t('navigation.intents.sources.label', 'Verify sources')}
               </span>
             </div>
           </CardContent>

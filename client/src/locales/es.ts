@@ -65,6 +65,25 @@ export default {
     "darkMode": "Modo Oscuro",
     "lightMode": "Modo Claro"
   },
+  "navigation": {
+    "groups": {
+      "case": "Entender su caso",
+      "help": "Encontrar ayuda",
+      "trust": "Fuentes y recursos"
+    },
+    "browseAll": "Ver todos los recursos",
+    "mobile": {
+      "legalHelp": "Ayuda legal"
+    },
+    "intents": {
+      "urgent": { "label": "Ayuda urgente", "description": "Qué hacer después de un arresto o antes de un plazo judicial urgente" },
+      "roadmap": { "label": "Hoja de Ruta del Caso", "description": "Obtenga un plan claro según su cargo, estado y etapa del caso" },
+      "charges": { "label": "Entender los cargos", "description": "Comience con su cargo y conozca lo que puede significar" },
+      "legalHelp": { "label": "Encontrar un abogado o recursos", "description": "Encuentre defensores públicos, ayuda legal, tribunales y apoyo" },
+      "stage": { "label": "Entender una etapa del caso", "description": "Vea qué sucede desde el arresto hasta la sentencia" },
+      "sources": { "label": "Verificar las fuentes", "description": "Revise de dónde proviene la información y sus limitaciones" }
+    }
+  },
   "home": {
     "hero": {
       "headlinePart1": "¿Arrestado? ¿Enfrentando cargos?",

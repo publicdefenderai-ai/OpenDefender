@@ -65,6 +65,25 @@ export default {
     "lightMode": "浅色模式",
     "mobileMenu": "菜单"
   },
+  "navigation": {
+    "groups": {
+      "case": "了解您的案件",
+      "help": "寻找帮助",
+      "trust": "来源与资源"
+    },
+    "browseAll": "浏览所有资源",
+    "mobile": {
+      "legalHelp": "法律帮助"
+    },
+    "intents": {
+      "urgent": { "label": "紧急帮助", "description": "被捕后或紧急法庭期限前该怎么做" },
+      "roadmap": { "label": "案件路线图", "description": "根据指控、州和案件阶段获取易懂的计划" },
+      "charges": { "label": "了解指控", "description": "从您的指控开始，了解其可能含义" },
+      "legalHelp": { "label": "寻找律师或资源", "description": "查找公设辩护人、法律援助、法院和支持服务" },
+      "stage": { "label": "了解案件阶段", "description": "了解从被捕到量刑的流程" },
+      "sources": { "label": "核实来源", "description": "查看信息来源及其局限性" }
+    }
+  },
   "home": {
     "hero": {
       "headlinePart1": "被捕了？面临指控？",

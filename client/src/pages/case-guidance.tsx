@@ -715,6 +715,25 @@ export default function CaseGuidance() {
             onExport={() => setHasExported(true)}
             guidanceMode={guidanceMode}
           />
+          <aside
+            className="max-w-5xl mx-auto mt-6 rounded-xl border border-border bg-muted/30 p-4"
+            aria-labelledby="trusted-resources-heading"
+          >
+            <h2 id="trusted-resources-heading" className="font-semibold text-foreground">
+              {t('guidance.trustedResources.title', 'Check trusted help and sources')}
+            </h2>
+            <p className="text-sm text-muted-foreground mt-1">
+              {t('guidance.trustedResources.description', 'Use local legal help for your situation, and review how OpenDefender builds and verifies this guidance.')}
+            </p>
+            <div className="flex flex-wrap gap-3 mt-3">
+              <Link href="/legal-aid" className="text-sm font-semibold text-primary underline underline-offset-4">
+                {t('navigation.intents.legalHelp.label', 'Find a lawyer or resources')}
+              </Link>
+              <Link href="/data-sources" className="text-sm font-semibold text-primary underline underline-offset-4">
+                {t('navigation.intents.sources.label', 'Verify sources')}
+              </Link>
+            </div>
+          </aside>
         </main>
         
         {/* Public Defender Search Modal */}
@@ -951,7 +970,7 @@ export default function CaseGuidance() {
       )}
 
       {/* Hero Section */}
-      <section className="vivid-header py-16 md:py-20 lg:py-24">
+      <section id="understand-charges" className="vivid-header py-16 md:py-20 lg:py-24 scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
           <ScrollReveal>
             <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-5 md:mb-6" data-testid="heading-case-title">

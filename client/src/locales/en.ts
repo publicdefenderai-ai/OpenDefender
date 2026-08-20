@@ -63,6 +63,25 @@ export default {
     "lightMode": "Light Mode",
     "mobileMenu": "Menu"
   },
+  "navigation": {
+    "groups": {
+      "case": "Understand your case",
+      "help": "Find help",
+      "trust": "Trust & explore"
+    },
+    "browseAll": "Browse all resources",
+    "mobile": {
+      "legalHelp": "Legal help"
+    },
+    "intents": {
+      "urgent": { "label": "Urgent help", "description": "What to do after an arrest or before an urgent court deadline" },
+      "roadmap": { "label": "Case Roadmap", "description": "Get a plain-language plan for your charge, state, and case stage" },
+      "charges": { "label": "Understand charges", "description": "Start with your charge and learn what it may mean" },
+      "legalHelp": { "label": "Find a lawyer or resources", "description": "Find public defenders, legal aid, courts, and support" },
+      "stage": { "label": "Understand a case stage", "description": "See what happens from arrest through sentencing" },
+      "sources": { "label": "Verify sources", "description": "Check where the information comes from and its limitations" }
+    }
+  },
   "home": {
     "hero": {
       "headlinePart1": "Arrested? Facing Charges?",

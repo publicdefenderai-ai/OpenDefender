@@ -49,6 +49,7 @@ function extractPaths(src: string): string[] {
     /\bhref:\s*"(\/[^"#?]*)(?:[#?][^"]*)?"/,
     /\blink:\s*"(\/[^"#?]*)(?:[#?][^"]*)?"/,
     /\bto="(\/[^"#?]*)(?:[#?][^"]*)?"/, // <Redirect to="…">
+    /\bhandleNavigate\(['"](\/[^'"#?]*)(?:[#?][^'"]*)?['"]\)/,
   ];
 
   for (const re of patterns) {
@@ -96,6 +97,9 @@ const surfaces: Array<{ name: string; file: string }> = [
   { name: "directory.tsx",           file: "client/src/pages/directory.tsx" },
   { name: "header.tsx",              file: "client/src/components/layout/header.tsx" },
   { name: "footer.tsx",              file: "client/src/components/layout/footer.tsx" },
+  { name: "get-started-menu.tsx",    file: "client/src/components/navigation/get-started-menu.tsx" },
+  { name: "mobile-bottom-nav.tsx",   file: "client/src/components/navigation/mobile-bottom-nav.tsx" },
+  { name: "intent-navigation.ts",    file: "client/src/components/navigation/intent-navigation.ts" },
   { name: "home.tsx",                file: "client/src/pages/home.tsx" },
   { name: "how-to.tsx",              file: "client/src/pages/how-to.tsx" },
   { name: "friends-family.tsx",      file: "client/src/pages/friends-family.tsx" },

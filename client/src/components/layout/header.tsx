@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef, Fragment } from "react";
-import { Menu, MessageSquare, Shield, MapPin, Languages, Moon, Sun, FileText, Users, ChevronDown, Globe2, Compass, AlertCircle, Scale, Heart, BookOpen, HelpCircle } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, Shield, MapPin, Languages, Moon, Sun, FileText, Users, ChevronDown, Globe2, AlertCircle, Scale, Heart, BookOpen, HelpCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { SearchButton } from "@/components/search/site-search";
@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/select";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "@/components/ui/theme-provider";
+import { getIntentDestinations } from "@/components/navigation/intent-navigation";
 
 interface DropdownItem {
   href: string;
@@ -120,25 +121,30 @@ export function Header() {
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng);
   const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
+  const intentDestinations = getIntentDestinations(t);
+  const intent = Object.fromEntries(intentDestinations.map((destination) => [destination.id, destination])) as Record<string, typeof intentDestinations[number]>;
+
   const navLinks: NavLink[] = [
-    { href: "/first-24-hours", label: t('header.nav.first24Hours', 'First 24 Hours') },
+    { href: intent.urgent.href, label: intent.urgent.label },
     {
-      href: "/support",
-      label: t('header.nav.support', 'Life & Family'),
+      href: intent.roadmap.href,
+      label: t('navigation.groups.case', 'Understand your case'),
       megaMenu: true,
       dropdown: [
-        { href: "/support",         label: t('header.dropdown.support.resources',        'Support Resources'), desc: t('header.dropdown.support.resourcesDesc',        'Housing, employment, finances, mental health, and more'), icon: Heart, iconBgClass: 'bg-rose-50 dark:bg-rose-950/30', iconColorClass: 'text-rose-700 dark:text-rose-400' },
-        { href: "/friends-family",  label: t('header.dropdown.support.friendsFamily',    'Friends & Family'),  desc: t('header.dropdown.support.friendsFamilyDesc',    'Help someone who was arrested'),                          icon: Users, iconBgClass: 'bg-rose-50 dark:bg-rose-950/30', iconColorClass: 'text-rose-700 dark:text-rose-400' },
+        { href: intent.roadmap.href, label: intent.roadmap.label, desc: intent.roadmap.description, icon: intent.roadmap.icon, iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
+        { href: intent.charges.href, label: intent.charges.label, desc: intent.charges.description, icon: intent.charges.icon, iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
+        { href: intent.stage.href, label: intent.stage.label, desc: intent.stage.description, icon: intent.stage.icon, iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
+        { href: "/rights-info", label: t('header.menu.knowRights', 'Know Your Rights'), desc: t('header.menu.knowRightsDesc', 'Constitutional rights in plain language'), icon: Shield, iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
       ],
     },
     {
-      href: "/case-guidance",
-      label: t('header.nav.caseGuidance', 'Get Guidance'),
+      href: intent.legalHelp.href,
+      label: t('navigation.groups.help', 'Find help'),
       megaMenu: true,
       dropdown: [
-        { href: "/case-guidance",       label: t('header.dropdown.guidance.personalized', 'Case Roadmap'), desc: t('header.dropdown.guidance.personalizedDesc', 'Plain-language overview of what to expect for your charges and state'),       icon: Compass,      iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
-        { href: "/chat",                label: t('header.dropdown.guidance.chat', 'AI Chat'),                        desc: t('header.dropdown.guidance.chatDesc', 'Open conversation with our AI assistant'),               icon: MessageSquare, iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
-        { href: "/document-summarizer", label: t('header.dropdown.guidance.summarizer', 'Document Summarizer'),      desc: t('header.dropdown.guidance.summarizerDesc', 'Understand the legal documents in your case'),       icon: FileText,      iconBgClass: 'bg-teal-50 dark:bg-teal-950/30', iconColorClass: 'text-teal-700 dark:text-teal-400' },
+        { href: intent.legalHelp.href, label: intent.legalHelp.label, desc: intent.legalHelp.description, icon: intent.legalHelp.icon, iconBgClass: 'bg-rose-50 dark:bg-rose-950/30', iconColorClass: 'text-rose-700 dark:text-rose-400' },
+        { href: "/support", label: t('header.dropdown.support.resources', 'Support Resources'), desc: t('header.dropdown.support.resourcesDesc', 'Housing, employment, finances, mental health, and more'), icon: Heart, iconBgClass: 'bg-rose-50 dark:bg-rose-950/30', iconColorClass: 'text-rose-700 dark:text-rose-400' },
+        { href: "/friends-family", label: t('header.dropdown.support.friendsFamily', 'Friends & Family'), desc: t('header.dropdown.support.friendsFamilyDesc', 'Help someone who was arrested'), icon: Users, iconBgClass: 'bg-rose-50 dark:bg-rose-950/30', iconColorClass: 'text-rose-700 dark:text-rose-400' },
       ],
     },
     {
@@ -155,10 +161,11 @@ export function Header() {
       ],
     },
     {
-      href: "/directory",
-      label: t('header.nav.explore', 'Explore'),
+      href: intent.sources.href,
+      label: t('navigation.groups.trust', 'Trust & explore'),
       megaMenu: true,
       dropdown: [
+        { href: intent.sources.href, label: intent.sources.label, desc: intent.sources.description, icon: intent.sources.icon, iconBgClass: 'bg-indigo-50 dark:bg-indigo-950/30', iconColorClass: 'text-indigo-700 dark:text-indigo-400' },
         { href: "/directory", label: t('header.dropdown.explore.directory', 'Resource Directory'), desc: t('header.dropdown.explore.directoryDesc', 'Browse legal aid, support services, and resources by category'), icon: BookOpen,  iconBgClass: 'bg-indigo-50 dark:bg-indigo-950/30', iconColorClass: 'text-indigo-700 dark:text-indigo-400' },
         { href: "/how-to",   label: t('header.dropdown.explore.howTo',    'How It Works'),        desc: t('header.dropdown.explore.howToDesc',    "See how the site\u2019s paths fit together and where to start"),  icon: HelpCircle, iconBgClass: 'bg-slate-100 dark:bg-slate-800/50', iconColorClass: 'text-slate-600 dark:text-slate-400' },
       ],
@@ -169,7 +176,7 @@ export function Header() {
     { title: t('header.menu.friendsFamily', 'For Families & Friends'), href: "/friends-family",  icon: Users,    description: t('header.menu.friendsFamilyDesc', 'Start here if someone you know was arrested.'),              testId: "menu-friends-family",   featured: true  },
     { title: t('header.menu.knowRights', 'Know Your Rights'),          href: "/rights-info",     icon: Shield,   description: t('header.menu.knowRightsDesc', 'Constitutional rights in plain language'),                     testId: "menu-know-rights",      featured: false },
     { title: t('header.menu.documentLibrary', 'Document Library'),     href: "/document-library", icon: FileText, description: t('header.menu.documentLibraryDesc', 'Understand the legal documents in your case'),          testId: "menu-document-library", featured: false },
-    { title: t('header.menu.findResources', 'Find Legal Help'),        href: "/legal-aid",        icon: MapPin,   description: t('header.menu.findResourcesDesc', 'Locate public defenders, legal aid, and courts'),         testId: "menu-find-resources",   featured: false },
+    { title: intent.sources.label, href: intent.sources.href, icon: intent.sources.icon, description: intent.sources.description, testId: "menu-data-sources", featured: false },
   ];
 
   return (
@@ -202,7 +209,7 @@ export function Header() {
 
                 if (!link.dropdown) {
                   return (
-                    <Fragment key={link.href}>
+                    <div key={link.href} className="contents">
                       <button
                         onClick={() => { setOpenDropdown(null); handleNavigate(link.href); }}
                         className={cn(
@@ -224,7 +231,7 @@ export function Header() {
                         />
                       </button>
                       {separator}
-                    </Fragment>
+                    </div>
                   );
                 }
 
@@ -234,7 +241,7 @@ export function Header() {
                 const panelWidth = link.href === '/immigration-guidance' ? 'w-[460px]' : 'w-72';
 
                 return (
-                  <Fragment key={link.href}>
+                  <div key={link.href} className="contents">
                     <div
                       className="relative"
                       onMouseEnter={() => handleDropdownMouseEnter(link.href)}
@@ -333,7 +340,7 @@ export function Header() {
                       )}
                     </div>
                     {separator}
-                  </Fragment>
+                  </div>
                 );
               })}
             </nav>

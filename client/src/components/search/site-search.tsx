@@ -109,7 +109,7 @@ function escapeRegex(s: string) {
 
 function highlightSnippet(snippet: string, matchedTerms: string[]): React.ReactNode[] {
   const clean = matchedTerms
-    .map(t => t.toLowerCase().replace(/[^\w\s]/g, ' ').trim())
+    .map(t => t.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, ' ').trim())
     .filter(t => t.length >= 2)
     .sort((a, b) => b.length - a.length);
 
@@ -141,7 +141,7 @@ function highlightSnippet(snippet: string, matchedTerms: string[]): React.ReactN
 function findMatchedHeading(headings: string[] | undefined, matchedTerms: string[]): string | null {
   if (!headings || headings.length === 0) return null;
   const termPatterns = matchedTerms
-    .map(t => t.toLowerCase().replace(/[^\w\s]/g, ' ').trim())
+    .map(t => t.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, ' ').trim())
     .filter(t => t.length >= 3);
   for (const heading of headings) {
     const lh = heading.toLowerCase();
@@ -269,19 +269,16 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
       const next = Math.min(focusedIndex + 1, totalFlat - 1);
       setFocusedIndex(next);
       resultRefs.current[next]?.scrollIntoView({ block: 'nearest' });
-      resultRefs.current[next]?.focus();
       return;
     }
     if (e.key === 'ArrowUp') {
       e.preventDefault();
       if (focusedIndex <= 0) {
         setFocusedIndex(-1);
-        inputRef.current?.focus();
       } else {
         const prev = focusedIndex - 1;
         setFocusedIndex(prev);
         resultRefs.current[prev]?.scrollIntoView({ block: 'nearest' });
-        resultRefs.current[prev]?.focus();
       }
       return;
     }
@@ -323,6 +320,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
         key={result.document.id}
         id={`search-result-${myIdx}`}
         role="option"
+        tabIndex={-1}
         aria-selected={isFocused}
         ref={el => { resultRefs.current[myIdx] = el; }}
         onClick={() => handleResultClick(result.document.url)}
@@ -399,7 +397,10 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
               className="pl-10 pr-10"
               autoComplete="off"
               aria-label={language === 'es' ? 'Buscar' : language === 'zh' ? '搜索' : 'Search'}
+              role="combobox"
               aria-autocomplete="list"
+              aria-haspopup="listbox"
+              aria-expanded={debouncedQuery.length >= 2 && hasResults}
               aria-controls="search-results"
               aria-activedescendant={focusedIndex >= 0 ? `search-result-${focusedIndex}` : undefined}
             />

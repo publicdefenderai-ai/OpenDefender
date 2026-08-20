@@ -1,26 +1,27 @@
 import { useLocation, Link } from "wouter";
-import { Home, MessageCircle, BookOpen, Scale, MoreHorizontal } from "lucide-react";
+import { Home, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
+import { getIntentDestinations } from "@/components/navigation/intent-navigation";
 
 interface NavItem {
   href: string;
-  icon: typeof Home;
-  labelKey: string;
-  defaultLabel: string;
+  icon: LucideIcon;
+  label: string;
 }
-
-const navItems: NavItem[] = [
-  { href: "/", icon: Home, labelKey: "nav.home", defaultLabel: "Home" },
-  { href: "/chat", icon: MessageCircle, labelKey: "nav.chat", defaultLabel: "Chat" },
-  { href: "/document-library", icon: BookOpen, labelKey: "nav.documents", defaultLabel: "Docs" },
-  { href: "/rights-info", icon: Scale, labelKey: "nav.rights", defaultLabel: "Rights" },
-  { href: "/how-to", icon: MoreHorizontal, labelKey: "nav.more", defaultLabel: "More" },
-];
 
 export function MobileBottomNav() {
   const [location] = useLocation();
   const { t } = useTranslation();
+  const intents = getIntentDestinations(t);
+  const byId = Object.fromEntries(intents.map((destination) => [destination.id, destination])) as Record<string, typeof intents[number]>;
+  const navItems: NavItem[] = [
+    { href: "/", icon: Home, label: t("nav.home", "Home") },
+    { href: byId.urgent.href, icon: byId.urgent.icon, label: byId.urgent.label },
+    { href: byId.roadmap.href, icon: byId.roadmap.icon, label: byId.roadmap.label },
+    { href: byId.stage.href, icon: byId.stage.icon, label: byId.stage.label },
+    { href: byId.legalHelp.href, icon: byId.legalHelp.icon, label: t("navigation.mobile.legalHelp", "Legal help") },
+  ];
 
   const isActive = (href: string) => {
     if (href === "/") return location === "/";
@@ -42,7 +43,7 @@ export function MobileBottomNav() {
             <Link
               key={item.href}
               href={item.href}
-              aria-label={t(item.labelKey, item.defaultLabel)}
+               aria-label={item.label}
               aria-current={active ? "page" : undefined}
               className={cn(
                 "flex flex-col items-center justify-center flex-1 h-full py-2 px-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
@@ -50,7 +51,7 @@ export function MobileBottomNav() {
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
               )}
-              data-testid={`nav-${item.defaultLabel.toLowerCase().replace(/\s/g, "-")}`}
+               data-testid={`nav-${item.href === "/" ? "home" : item.href.split("/").filter(Boolean)[0]}`}
             >
               <Icon
                 className={cn(
@@ -59,7 +60,7 @@ export function MobileBottomNav() {
                 )}
               />
               <span className="text-xs font-medium truncate">
-                {t(item.labelKey, item.defaultLabel)}
+                 {item.label}
               </span>
             </Link>
           );
