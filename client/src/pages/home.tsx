@@ -398,7 +398,7 @@ export default function Home() {
         </div>
       </section>
 
-      <DisclosureNotice />
+      <DisclosureNotice className="mx-4 mb-6 rounded-xl border border-border/60 bg-muted/20 md:mx-auto md:max-w-6xl" />
       <Footer />
 
       {/* Urgent Help Modal */}
