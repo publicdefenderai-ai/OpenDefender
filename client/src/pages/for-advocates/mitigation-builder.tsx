@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   FileText,
   Copy,
@@ -659,6 +659,8 @@ function triggerDownload(blob: Blob, filename: string) {
 
 /* ─── Polish with AI panel ─── */
 
+const POLISH_COOLDOWN_MS = 5_000;
+
 type PolishState =
   | { status: "idle" }
   | { status: "loading" }
@@ -673,12 +675,26 @@ function PolishPanel({ form }: { form: FormState }) {
   const [polishDocxLoading, setPolishDocxLoading] = useState(false);
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
   const [captchaAttempt, setCaptchaAttempt] = useState(0);
+  const [polishCooldown, setPolishCooldown] = useState(false);
+  const polishRequestInFlightRef = useRef(false);
+  const polishCooldownRef = useRef(false);
+  const polishCooldownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (polishCooldownTimerRef.current) {
+        clearTimeout(polishCooldownTimerRef.current);
+      }
+    };
+  }, []);
 
   const handlePolish = async () => {
+    if (polishRequestInFlightRef.current || polishCooldownRef.current) return;
     if (captchaRequired && !captchaToken) {
       setPolish({ status: "error", message: "Please complete the verification below before generating." });
       return;
     }
+    polishRequestInFlightRef.current = true;
     setPolish({ status: "loading" });
     setCheckboxChecked(false);
 
@@ -720,6 +736,15 @@ function PolishPanel({ form }: { form: FormState }) {
       setPolish({ status: "error", message: "Network error. Please try again." });
       resetCaptcha();
       setCaptchaAttempt((n) => n + 1);
+    } finally {
+      polishRequestInFlightRef.current = false;
+      polishCooldownRef.current = true;
+      setPolishCooldown(true);
+      polishCooldownTimerRef.current = setTimeout(() => {
+        polishCooldownRef.current = false;
+        polishCooldownTimerRef.current = null;
+        setPolishCooldown(false);
+      }, POLISH_COOLDOWN_MS);
     }
   };
 
@@ -780,11 +805,11 @@ function PolishPanel({ form }: { form: FormState }) {
           <button
             type="button"
             onClick={handlePolish}
-            disabled={!!(captchaRequired && !captchaToken)}
+            disabled={!!(captchaRequired && !captchaToken) || polishCooldown}
             className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Sparkles className="h-3.5 w-3.5" />
-            {polish.status === "idle" ? "Generate narrative" : "Regenerate"}
+            {polishCooldown ? "Please wait…" : polish.status === "idle" ? "Generate narrative" : "Regenerate"}
           </button>
         )}
       </div>
