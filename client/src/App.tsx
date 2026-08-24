@@ -16,6 +16,7 @@ import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dial
 import { MobileBottomNav } from "@/components/navigation/mobile-bottom-nav";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
 import { X } from "lucide-react";
+import ChatPage from "@/pages/chat";
 import "./i18n";
 
 const NotFound = lazy(() => import("@/pages/not-found"));
@@ -48,7 +49,6 @@ const Directory = lazy(() => import("@/pages/directory"));
 const PrivacyPolicy = lazy(() => import("@/pages/privacy-policy"));
 const Disclaimers = lazy(() => import("@/pages/disclaimers"));
 const Statutes = lazy(() => import("@/pages/statutes"));
-const Chat = lazy(() => import("@/pages/chat"));
 const DocumentLibrary = lazy(() => import("@/pages/document-library"));
 const Resources = lazy(() => import("@/pages/resources"));
 const DocumentSummarizerPage = lazy(() => import("@/pages/document-summarizer"));
@@ -132,7 +132,7 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/disclaimers" component={Disclaimers} />
       <Route path="/statutes" component={Statutes} />
-      <Route path="/chat" component={Chat} />
+      <Route path="/chat" component={ChatPage} />
       <Route path="/document-library" component={DocumentLibrary} />
       <Route path="/legal-aid" component={Resources} />
       <Route path="/resources"><Redirect to="/legal-aid" /></Route>

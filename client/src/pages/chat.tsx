@@ -94,6 +94,7 @@ export default function ChatPage() {
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
   const { state, actions } = useChat();
+  const { openChat, addMessage, setCurrentStep } = actions;
   const { toast } = useToast();
   const { theme, setTheme } = useTheme();
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -163,11 +164,15 @@ export default function ChatPage() {
   const hasInitialized = useRef(false);
   
   useEffect(() => {
-    actions.openChat();
-    
+    openChat();
+
+    // Keep initialization tied to the current state rather than only the
+    // first render. The route can mount while the shared provider is still
+    // settling after a navigation, which used to leave a blank message log
+    // on small screens.
     if (state.currentStep === 'welcome' && state.messages.length === 0 && !hasInitialized.current) {
       hasInitialized.current = true;
-      actions.addMessage({
+      addMessage({
         role: 'bot',
         contentKey: 'chat.messages.welcome',
         quickReplies: [
@@ -175,12 +180,12 @@ export default function ChatPage() {
           { id: 'urgent-no', labelKey: 'chat.replies.urgentNo', value: 'urgent_no', color: 'slate' as const },
         ],
       });
-      actions.setCurrentStep('emergency_check');
+      setCurrentStep('emergency_check');
     }
     return () => {
       if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
     };
-  }, []);
+  }, [openChat, addMessage, setCurrentStep, state.currentStep, state.messages.length]);
 
   // Detect "stuck" state when user returns from another page
   // This happens when the last message has no quick replies and input is locked
@@ -1283,8 +1288,16 @@ export default function ChatPage() {
 
           <ProgressBreadcrumbs currentStep={state.currentStep} />
 
-          <ScrollArea className="flex-1 px-4 sm:px-6 py-6 overflow-y-auto" style={{ maxHeight: 'calc(100dvh - 180px)' }}>
+          <ScrollArea
+            className="min-h-0 flex-1 px-4 sm:px-6 py-6 overflow-y-auto"
+            style={{ minHeight: 0 }}
+          >
             <div className="max-w-2xl mx-auto space-y-3" role="log" aria-live="polite" aria-label="Chat messages">
+              {state.messages.length === 0 && !isTyping && (
+                <div className="rounded-xl border border-border bg-muted/30 px-4 py-4 text-sm text-muted-foreground" role="status">
+                  {t('chat.loadingConversation', 'Starting your conversation…')}
+                </div>
+              )}
               {pendingCount > 0 && (
                 <div className="text-center py-2 text-sm text-muted-foreground animate-pulse">
                   {t('chat.loadingHistory', 'Loading earlier messages...')}
@@ -1385,7 +1398,7 @@ export default function ChatPage() {
             </div>
           </ScrollArea>
 
-          <div className="p-4 sm:p-6 border-t border-border bg-background">
+          <div className="chat-composer shrink-0 p-4 sm:p-6 border-t border-border bg-background">
             <div className="max-w-2xl mx-auto">
               {captchaRequired && !state.isGenerating && (
                 <div className="flex justify-center mb-3">

@@ -73,9 +73,9 @@ export function QuickReplyButtons({
             onClick={() => !disabled && handleSelect(reply)}
             disabled={disabled}
             className={cn(
-              "flex items-center gap-2 px-4 py-3 rounded-xl",
+              "flex min-w-0 min-h-[44px] items-center gap-2 px-4 py-3 rounded-xl",
               "border text-left text-[15px] font-medium",
-              "transition-colors duration-150",
+              "transition-colors duration-150 break-words",
               reply.color 
                 ? colorStyles[reply.color]
                 : "border-border bg-background text-foreground hover:bg-muted hover:border-primary/50",
@@ -89,7 +89,7 @@ export function QuickReplyButtons({
                 {reply.icon}
               </span>
             )}
-            <span className="flex-1">{displayLabel}</span>
+             <span className="min-w-0 flex-1">{displayLabel}</span>
           </motion.button>
         );
       })}
@@ -127,7 +127,7 @@ export function FullWidthReply({
       onClick={() => !disabled && handleSelect()}
       disabled={disabled}
       className={cn(
-        "w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl",
+        "w-full min-h-[44px] flex items-center justify-center gap-2 px-4 py-3 rounded-xl",
         "text-[15px] font-medium transition-colors duration-150",
         variant === 'primary' && "bg-primary text-primary-foreground hover:bg-primary/90",
         variant === 'outline' && "border border-border bg-background text-foreground hover:bg-muted",

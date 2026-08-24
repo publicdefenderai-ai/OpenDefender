@@ -54,10 +54,10 @@ export function ChatInput({
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="flex items-center gap-2 px-4 py-3 bg-muted/50 rounded-xl border border-border/50"
+        className="flex min-w-0 items-start gap-2 px-4 py-3 bg-muted/50 rounded-xl border border-border/50"
       >
         <Lock className="h-4 w-4 text-muted-foreground flex-shrink-0" />
-        <p className="text-sm text-muted-foreground">
+        <p className="min-w-0 text-sm text-muted-foreground">
           {lockMessage || t('chat.input.lockedMessage', 'Answer the questions above to continue')}
         </p>
       </motion.div>
@@ -93,7 +93,7 @@ export function ChatInput({
             type="submit"
             size="icon"
             disabled={disabled || !message.trim()}
-            className="h-9 w-9 rounded-lg shrink-0"
+             className="h-11 w-11 rounded-lg shrink-0"
             data-testid="button-send-message"
             aria-label="Send message"
           >

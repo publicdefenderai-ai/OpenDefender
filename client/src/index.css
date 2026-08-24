@@ -107,6 +107,10 @@
       scroll-padding-top: 4.5rem;
       scroll-padding-bottom: calc(4rem + env(safe-area-inset-bottom, 0px));
     }
+
+    .chat-composer {
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    }
   }
   
   body {

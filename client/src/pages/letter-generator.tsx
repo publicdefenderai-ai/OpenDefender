@@ -215,7 +215,7 @@ function IntakeField({
         <select
           value={value ?? ""}
           onChange={(e) => onChange(field.key, e.target.value)}
-          className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
+          className="w-full min-h-[44px] rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
         >
           <option value="">{t("letterGenerator.selectPlaceholder")}</option>
           {options.map((opt, i) => (
@@ -284,15 +284,15 @@ function IntakeForm({
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         <button
           onClick={onBack}
-          className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="min-h-[44px] flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <ChevronLeft className="h-4 w-4" />
           {t("letterGenerator.back")}
         </button>
-        <div className="flex items-center gap-2">
+        <div className="min-w-0 flex items-center gap-2">
           <Icon className={`h-5 w-5 ${def.iconColor}`} strokeWidth={1.75} />
           <h2 className="font-semibold text-foreground">{t(`${LETTER_TYPE_NS}.${def.i18nKey}.title`)}</h2>
         </div>
@@ -408,11 +408,11 @@ function LetterResult({
 
   return (
     <div className="space-y-5">
-      <div className="flex items-center justify-between">
-        <h2 className="font-semibold text-foreground">{t("letterGenerator.result.title")}</h2>
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <h2 className="min-w-0 font-semibold text-foreground">{t("letterGenerator.result.title")}</h2>
         <button
           onClick={onReset}
-          className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+          className="min-h-[44px] flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
         >
           <RefreshCw className="h-3.5 w-3.5" />
           {t("letterGenerator.result.writeAnother")}
@@ -434,7 +434,7 @@ function LetterResult({
         </pre>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex flex-wrap gap-2">
         <Button onClick={handleCopy} variant="outline" size="sm" className="gap-2">
           {copied ? <Check className="h-4 w-4 text-green-600" /> : <Copy className="h-4 w-4" />}
           {copied ? t("letterGenerator.result.copiedButton") : t("letterGenerator.result.copyButton")}

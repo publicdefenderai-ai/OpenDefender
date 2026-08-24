@@ -344,9 +344,9 @@ function TriRow({
   const showFlag = flagValue && flagText && value === flagValue;
   return (
     <div className="space-y-1.5">
-      <div className="flex items-center justify-between gap-4">
-        <span className="text-sm text-foreground leading-snug flex-1">{label}</span>
-        <div className="w-44 flex-shrink-0">
+      <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+        <span className="min-w-0 text-sm text-foreground leading-snug flex-1">{label}</span>
+        <div className="w-full sm:w-44 flex-shrink-0">
           <TriToggle value={value} onChange={onChange} />
         </div>
       </div>
@@ -526,8 +526,8 @@ function OutputPanel({ output, flags }: { output: string; flags: IntakeFlag[] })
 
   return (
     <div className="rounded-xl border border-border overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-3 bg-muted/30 border-b border-border">
-        <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-muted/30 border-b border-border">
+        <div className="flex min-w-0 items-center gap-2">
           <FileText className="h-4 w-4 text-muted-foreground" />
           <span className="text-sm font-semibold text-foreground">Intake record output</span>
         </div>
@@ -535,17 +535,17 @@ function OutputPanel({ output, flags }: { output: string; flags: IntakeFlag[] })
 
       {!empty && (
         <div className="flex flex-wrap gap-2 px-4 py-2.5 border-b border-border bg-muted/10">
-          <button type="button" onClick={handleCopy} className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
+          <button type="button" onClick={handleCopy} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
             {copied ? <Check className="h-3.5 w-3.5 text-green-600" /> : <Copy className="h-3.5 w-3.5" />}
             {copied ? "Copied" : "Copy"}
           </button>
-          <button type="button" onClick={handleDownloadTxt} className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
+          <button type="button" onClick={handleDownloadTxt} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
             <Download className="h-3.5 w-3.5" /> .txt
           </button>
-          <button type="button" onClick={handleDownloadDocx} disabled={docxLoading} className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-50">
+          <button type="button" onClick={handleDownloadDocx} disabled={docxLoading} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-50">
             <Download className="h-3.5 w-3.5" /> {docxLoading ? "Building..." : ".docx"}
           </button>
-          <button type="button" onClick={handlePrint} className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
+          <button type="button" onClick={handlePrint} className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md border border-border hover:bg-muted transition-colors">
             <Printer className="h-3.5 w-3.5" /> Print / PDF
           </button>
         </div>
@@ -671,7 +671,7 @@ export default function IntakeChecklist() {
                 <FieldLabel>Charge(s)</FieldLabel>
                 <TextInput value={s.charges} onChange={set('charges')} placeholder="e.g. Burglary in the second degree" />
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <FieldLabel>Court date</FieldLabel>
                   <TextInput value={s.courtDate} onChange={set('courtDate')} placeholder="e.g. July 14, 2026" />

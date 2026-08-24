@@ -113,12 +113,13 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
   return (
     <>
     <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <div className="flex items-center justify-between mb-4">
-          <CardTitle className="text-2xl">{t('legalGuidance.qaFlow.title')}</CardTitle>
+      <CardHeader className="p-4 sm:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+          <CardTitle className="min-w-0 text-xl sm:text-2xl">{t('legalGuidance.qaFlow.title')}</CardTitle>
           <Button
             variant="ghost"
             onClick={onCancel}
+            className="min-h-[44px] shrink-0"
             data-testid="button-cancel-qa"
           >
             {t('legalGuidance.qaFlow.cancel')}
@@ -126,7 +127,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
         </div>
         
         {/* Progress Indicator */}
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-wrap items-center gap-2">
           {steps.map((_, index) => (
             <div
               key={index}
@@ -145,7 +146,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
         </p>
       </CardHeader>
 
-      <CardContent>
+      <CardContent className="p-4 sm:p-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentStep}
@@ -170,8 +171,8 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
         </AnimatePresence>
 
         {/* Privacy Notice */}
-        <div className="flex items-center justify-between mt-6 p-4 bg-muted rounded-lg">
-          <div className="flex items-center space-x-2">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mt-6 p-4 bg-muted rounded-lg">
+          <div className="flex items-start gap-2">
             <Lock className="h-4 w-4 text-muted-foreground" />
             <p className="text-xs text-muted-foreground">
               {t('legalGuidance.qaFlow.privacyNotice')}
@@ -181,7 +182,7 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
             variant="ghost"
             size="sm"
             onClick={onClearSession}
-            className="text-xs text-red-600 hover:text-red-700"
+            className="min-h-[44px] self-start text-xs text-red-600 hover:text-red-700"
           >
             {t('legalGuidance.qaFlow.clearSession.button')}
           </Button>
@@ -417,10 +418,11 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
         )}
       </div>
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col-reverse sm:flex-row gap-3">
         <Button
           variant="outline"
           onClick={onPrev}
+          className="min-h-[44px] sm:w-auto"
           data-testid="button-prev-jurisdiction"
         >
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.jurisdiction.back')}
@@ -943,10 +945,11 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         </div>
       </div>
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col-reverse sm:flex-row gap-3">
         <Button
           variant="outline"
           onClick={onPrev}
+          className="min-h-[44px] sm:w-auto"
           data-testid="button-prev-case-details"
         >
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.caseDetails.back')}
@@ -1031,7 +1034,7 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
         </div>
       </div>
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col-reverse sm:flex-row gap-3">
         <Button
           variant="outline"
           onClick={onPrev}
@@ -1187,7 +1190,7 @@ function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
         </div>
       </div>
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col-reverse sm:flex-row gap-3">
         <Button
           variant="outline"
           onClick={onPrev}
@@ -1351,7 +1354,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         </div>
       )}
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col-reverse sm:flex-row gap-3">
         <Button variant="outline" onClick={onPrev}>
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.additionalDetails.back')}
         </Button>
@@ -1471,7 +1474,7 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, captch
         </div>
       )}
 
-      <div className="flex space-x-4">
+      <div className="flex flex-col-reverse sm:flex-row gap-3">
         <Button variant="outline" onClick={onPrev}>
           <ArrowLeft className="mr-2 h-4 w-4" />
           {t('legalGuidance.qaFlow.civilEmergencies.back')}

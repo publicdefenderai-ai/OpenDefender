@@ -314,7 +314,7 @@ function Domain({
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between px-5 py-4 bg-muted/30 hover:bg-muted/50 transition-colors text-left"
       >
-        <div className="flex items-center gap-3">
+        <div className="flex min-w-0 flex-wrap items-center gap-2 sm:gap-3">
           <span className="font-semibold text-sm text-foreground">{title}</span>
           {filled > 0 && (
             <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
@@ -328,7 +328,7 @@ function Domain({
           <ChevronDown className="h-4 w-4 text-muted-foreground flex-shrink-0" />
         )}
       </button>
-      {open && <div className="px-5 py-5 space-y-4 bg-background">{children}</div>}
+       {open && <div className="px-4 sm:px-5 py-5 space-y-4 bg-background">{children}</div>}
     </div>
   );
 }
@@ -1086,8 +1086,8 @@ function PolishPanel({ form }: { form: FormState }) {
   return (
     <div className="mt-4 rounded-xl border border-violet-200 dark:border-violet-800 overflow-hidden">
       {/* Header */}
-      <div className="flex items-center justify-between px-4 py-3 bg-violet-50 dark:bg-violet-950/40 border-b border-violet-200 dark:border-violet-800">
-        <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-violet-50 dark:bg-violet-950/40 border-b border-violet-200 dark:border-violet-800">
+        <div className="flex min-w-0 items-center gap-2">
           <Sparkles className="h-4 w-4 text-violet-600 dark:text-violet-400" />
           <span className="text-sm font-semibold text-violet-900 dark:text-violet-200">
             Polish with AI
@@ -1101,7 +1101,7 @@ function PolishPanel({ form }: { form: FormState }) {
             type="button"
             onClick={handlePolish}
             disabled={!!(captchaRequired && !captchaToken) || polishCooldown}
-            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Sparkles className="h-3.5 w-3.5" />
             {polishCooldown ? "Please wait…" : polish.status === "idle" ? "Generate narrative" : "Regenerate"}

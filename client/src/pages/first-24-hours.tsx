@@ -489,7 +489,7 @@ export default function FirstTwentyFourHours() {
         <ScrollReveal delay={0.019}>
           <div className="mb-8">
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">Jump to any step</p>
-            <div className="grid grid-cols-8 gap-1.5">
+            <div className="grid grid-cols-4 sm:grid-cols-8 gap-1.5">
               {([
                 { n: 0, id: 'step-before-arrest', label: 'Pre-Arrest', Icon: AlertTriangle },
                 { n: 1, id: 'step-arrest',      label: 'Arrest',       Icon: ShieldAlert },
@@ -503,11 +503,11 @@ export default function FirstTwentyFourHours() {
                 <button
                   key={n}
                   onClick={() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
-                  className="flex flex-col items-center gap-1 py-2.5 px-1 rounded-lg border border-border/60 bg-muted/20 hover:border-primary/40 hover:bg-muted/60 transition-all text-center group"
+                  aria-label={`Jump to ${label}`}
+                  className="flex min-h-[52px] flex-col items-center justify-center gap-1 py-2 px-1 rounded-lg border border-border/60 bg-muted/20 hover:border-primary/40 hover:bg-muted/60 transition-all text-center group"
                 >
                   <Icon className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-foreground leading-tight hidden sm:block">{label}</span>
-                  <span className="text-[10px] font-bold text-muted-foreground sm:hidden">{n}</span>
+                  <span className="text-[10px] font-semibold text-muted-foreground group-hover:text-foreground leading-tight">{label}</span>
                 </button>
               ))}
             </div>

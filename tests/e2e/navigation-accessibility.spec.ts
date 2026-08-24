@@ -57,6 +57,31 @@ test.describe("intent navigation and accessibility", () => {
     await expect(page.locator('[data-testid="chat-launcher"]')).toHaveCount(1);
   });
 
+  test("mobile chat initializes its welcome prompt without update-loop errors", async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 800 });
+    const consoleErrors: string[] = [];
+    page.on("console", (message) => {
+      if (message.type() === "error") consoleErrors.push(message.text());
+    });
+
+    await page.goto("/chat");
+
+    const log = page.getByRole("log", { name: "Chat messages" });
+    await expect(log).toContainText("I'm an AI assistant");
+    await expect(page.getByRole("button", { name: "Yes, I need help right now" })).toBeVisible();
+    await expect(page.getByRole("button", { name: "No, I have time to talk" })).toBeVisible();
+
+    const viewport = page.viewportSize();
+    const dimensions = await page.evaluate(() => ({
+      bodyWidth: document.body.scrollWidth,
+      documentWidth: document.documentElement.clientWidth,
+    }));
+    expect(viewport).not.toBeNull();
+    expect(dimensions.bodyWidth).toBeLessThanOrEqual(viewport!.width);
+    expect(dimensions.bodyWidth).toBe(dimensions.documentWidth);
+    expect(consoleErrors.some((message) => message.includes("Maximum update depth exceeded"))).toBe(false);
+  });
+
   test("desktop chat launcher keeps its established bottom offset", async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto("/");
