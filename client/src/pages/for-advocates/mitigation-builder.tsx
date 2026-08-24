@@ -436,6 +436,7 @@ function buildDocxParagraphs(output: string, form: FormState): (Paragraph | Tabl
     nodes.push(
       new Paragraph({
         spacing: { after: 40 },
+        wordWrap: true,
         children: [
           new TextRun({ text: `${label}  `, bold: true, size: 22, font: "Times New Roman" }),
           new TextRun({ text: value, size: 22, font: "Times New Roman" }),
@@ -614,6 +615,7 @@ function buildPolishDocxParagraphs(editedText: string, form: FormState): (Paragr
     nodes.push(
       new Paragraph({
         spacing: { after: 40 },
+        wordWrap: true,
         children: [
           new TextRun({ text: `${label}  `, bold: true, size: 22, font: "Times New Roman" }),
           new TextRun({ text: value, size: 22, font: "Times New Roman" }),
@@ -985,7 +987,7 @@ function PolishPanel({ form }: { form: FormState }) {
     }
     .doc-header-meta {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: max-content minmax(0, 1fr);
       gap: 2px 12px;
       font-size: 10.5pt;
     }
@@ -994,7 +996,12 @@ function PolishPanel({ form }: { form: FormState }) {
       white-space: nowrap;
       color: #333;
     }
-    .doc-header-meta .meta-value { color: #111; }
+    .doc-header-meta .meta-value {
+      min-width: 0;
+      color: #111;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
 
     .draft-callout {
       display: flex;
@@ -1422,7 +1429,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
     }
     .doc-header-meta {
       display: grid;
-      grid-template-columns: auto 1fr;
+      grid-template-columns: max-content minmax(0, 1fr);
       gap: 2px 12px;
       font-size: 10.5pt;
     }
@@ -1432,7 +1439,10 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
       color: #333;
     }
     .doc-header-meta .meta-value {
+      min-width: 0;
       color: #111;
+      overflow-wrap: anywhere;
+      word-break: break-word;
     }
 
     /* ── DRAFT callout ── */

@@ -85,8 +85,10 @@ test.describe("browser export release gate", () => {
 
     await page.goto("/for-advocates/mitigation-builder");
     await page.getByLabel("Client name or identifier").fill("Release Gate Test");
-    const caseNumber = "RG-2026-471";
+    const caseNumber = "2024-CR-00512/A (Superior Court) #LONG-CASE-0000000000000000";
+    expect(caseNumber).toHaveLength(60);
     await page.getByPlaceholder("e.g. 2024-CR-00512").fill(caseNumber);
+    await page.getByPlaceholder("e.g. Bail hearing, diversion application, sentencing memo").fill("Bail hearing");
     await page.getByLabel("Time in community").fill("12 years in the community");
     await expect(page.getByText("Summary output")).toBeVisible();
 
@@ -97,7 +99,29 @@ test.describe("browser export release gate", () => {
     const structuredDocxContents = await readDownload(await structuredDownload.createReadStream());
     expect(structuredDocxContents.subarray(0, 2).toString()).toBe("PK");
     expect(structuredDocxContents.length).toBeGreaterThan(100);
-    expect(extractDocxDocumentXml(structuredDocxContents)).toContain(caseNumber);
+    const structuredDocumentXml = extractDocxDocumentXml(structuredDocxContents);
+    expect(structuredDocumentXml).toContain(caseNumber);
+    expect(structuredDocumentXml).toContain("Release Gate Test");
+    expect(structuredDocumentXml).toContain("Bail hearing");
+
+    await page.getByRole("button", {
+      name: "Print or save as PDF: opens browser print dialog",
+    }).click();
+    await expect
+      .poll(() =>
+        page.evaluate(
+          () => (window as Window & { __releaseGatePrintCalls?: number }).__releaseGatePrintCalls ?? 0,
+        ),
+      )
+      .toBe(1);
+    const structuredPrintDocument = await page.evaluate(
+      () => (window as Window & { __releaseGatePrintDocument?: string }).__releaseGatePrintDocument ?? "",
+    );
+    expect(structuredPrintDocument).toContain(`>${caseNumber}<`);
+    expect(structuredPrintDocument).toContain(">Release Gate Test<");
+    expect(structuredPrintDocument).toContain(">Bail hearing<");
+    expect(structuredPrintDocument).toContain("grid-template-columns: max-content minmax(0, 1fr)");
+    expect(structuredPrintDocument).toContain("overflow-wrap: anywhere");
 
     await page.getByRole("button", { name: "Generate narrative", exact: true }).click();
     await expect(page.getByRole("checkbox")).toBeVisible();
@@ -110,7 +134,10 @@ test.describe("browser export release gate", () => {
     const polishedDocxContents = await readDownload(await polishedDownload.createReadStream());
     expect(polishedDocxContents.subarray(0, 2).toString()).toBe("PK");
     expect(polishedDocxContents.length).toBeGreaterThan(100);
-    expect(extractDocxDocumentXml(polishedDocxContents)).toContain(caseNumber);
+    const polishedDocumentXml = extractDocxDocumentXml(polishedDocxContents);
+    expect(polishedDocumentXml).toContain(caseNumber);
+    expect(polishedDocumentXml).toContain("Release Gate Test");
+    expect(polishedDocumentXml).toContain("Bail hearing");
 
     await page.getByRole("button", {
       name: "Print or save as PDF: opens browser print dialog",
@@ -132,5 +159,13 @@ test.describe("browser export release gate", () => {
         ),
       )
       .toContain("Sentencing Mitigation Memorandum");
+    const printDocument = await page.evaluate(
+      () => (window as Window & { __releaseGatePrintDocument?: string }).__releaseGatePrintDocument ?? "",
+    );
+    expect(printDocument).toContain(`>${caseNumber}<`);
+    expect(printDocument).toContain(">Release Gate Test<");
+    expect(printDocument).toContain(">Bail hearing<");
+    expect(printDocument).toContain("grid-template-columns: max-content minmax(0, 1fr)");
+    expect(printDocument).toContain("overflow-wrap: anywhere");
   });
 });
