@@ -5363,6 +5363,10 @@ export default {
       "pendingReviewWarning": {
         "title": "Not yet attorney-reviewed.",
         "body": "This explanation is a general starting point only. Verify specifics with a licensed criminal defense attorney before relying on it."
+      },
+      "jurisdictionCoverageWarning": {
+        "title": "State-specific detail not yet verified.",
+        "body": "This is general charge information. We do not have verified state-specific detail for this charge yet. Ask a licensed attorney to confirm the rule, deadlines, and penalties for your case."
       }
     }
   },

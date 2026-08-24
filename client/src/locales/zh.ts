@@ -5369,6 +5369,10 @@ export default {
       "translationDraftWarning": {
         "title": "暂定翻译。",
         "body": "此翻译由机器辅助生成，尚未经双语法律专业人士审核。请与您的律师核实关键术语。"
+      },
+      "jurisdictionCoverageWarning": {
+        "title": "州级具体信息尚未核实。",
+        "body": "这是一般性的罪名信息。我们目前还没有核实该罪名的州级具体细节。请向持牌律师确认您案件适用的规则、期限和刑罚。"
       }
     }
   },

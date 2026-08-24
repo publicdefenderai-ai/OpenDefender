@@ -715,6 +715,24 @@ function YourChargesSection({
               </div>
             )}
 
+            {/* A neutral explanation is still useful when the selected jurisdiction
+                has no verified overlay, but do not imply that comparative corpus
+                text is state-specific guidance. */}
+            {charge.explanation?.jurisdictionDetailMissing && (
+              <div
+                className="flex items-start gap-2 p-2.5 rounded-md bg-slate-50 border border-slate-200 dark:bg-slate-900/40 dark:border-slate-700"
+                data-testid={`charge-jurisdiction-coverage-${index}`}
+              >
+                <AlertTriangle className="h-4 w-4 text-slate-600 dark:text-slate-300 shrink-0 mt-0.5" />
+                <p className="text-xs text-slate-700 dark:text-slate-300 leading-snug">
+                  <span className="font-semibold">
+                    {t('guidance.yourCharges.jurisdictionCoverageWarning.title', 'State-specific detail not yet verified.')}
+                  </span>{' '}
+                  {t('guidance.yourCharges.jurisdictionCoverageWarning.body', 'This is general charge information. We do not have verified state-specific detail for this charge yet. Ask a licensed attorney to confirm the rule, deadlines, and penalties for your case.')}
+                </p>
+              </div>
+            )}
+
             {/* Plain Summary - use explanation or fallback */}
             <p className="text-sm text-foreground leading-relaxed">
               {charge.explanation?.plainSummary || getFallbackDescription(charge)}

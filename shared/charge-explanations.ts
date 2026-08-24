@@ -1,5 +1,6 @@
 import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail } from "./charge-explanation-jurisdiction-overlay";
 import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
+import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
 
 export interface LegalTermExplanation {
   term: string;
@@ -3626,6 +3627,10 @@ function normalizeJurisdictionCode(jurisdiction: string): string {
 
 export interface ChargeExplanationWithJurisdiction extends ChargeExplanation {
   jurisdictionDetail?: JurisdictionChargeDetail;
+  /** True when a jurisdiction was selected but this charge has no verified
+   * jurisdiction overlay. Generic guidance remains available, but callers
+   * should show a coverage limitation instead of implying state-specific detail. */
+  jurisdictionDetailMissing?: boolean;
   /** True when the returned translation is machine-assisted and not yet reviewed
    *  by a fluent-speaker legal professional. Callers may show a draft notice. */
   translationDraft?: boolean;
@@ -3653,10 +3658,27 @@ export function getChargeExplanation(
         const stateCode = normalizeJurisdictionCode(jurisdiction);
         const overlayKey = `${stateCode}-${explanation.slug}`;
         const jurisdictionDetail = CHARGE_EXPLANATION_JURISDICTION_OVERLAY[overlayKey];
-        resolved = jurisdictionDetail ? { ...explanation, jurisdictionDetail } : explanation;
+        resolved = {
+          ...explanation,
+          ...(jurisdictionDetail ? { jurisdictionDetail } : {}),
+          jurisdictionDetailMissing: !jurisdictionDetail,
+        };
       }
 
-      // Apply language translations when a non-English locale is requested
+       // Comparative state-law prose is useful on research surfaces, but it must
+       // not enter case-specific guidance. The scoped view keeps the charge
+       // explanation neutral and leaves selected-state law to the overlay above.
+       const scopedContent = jurisdiction
+         ? getScopedCaseGuidance(explanation.slug, language)
+         : null;
+       if (scopedContent) {
+         resolved = {
+           ...resolved,
+           ...scopedContent,
+         };
+       }
+
+       // Apply language translations when a non-English locale is requested
       const lang = (language ?? "en").split("-")[0].toLowerCase();
       if (lang === "es" || lang === "zh") {
         const translationEntry = CHARGE_EXPLANATION_TRANSLATIONS[explanation.slug];
@@ -3673,7 +3695,7 @@ export function getChargeExplanation(
                 : {}),
             };
           });
-          return {
+           const translated = {
             ...resolved,
             plainSummary: locale.plainSummary,
             keyTerms: translatedKeyTerms,
@@ -3683,6 +3705,12 @@ export function getChargeExplanation(
             // Surface draft flag so callers can show a pending-review notice
             translationDraft: locale.draft,
           };
+           const localizedScopedContent = jurisdiction
+             ? getScopedCaseGuidance(explanation.slug, lang)
+             : null;
+           return localizedScopedContent
+             ? { ...translated, ...localizedScopedContent }
+             : translated;
         }
       }
 

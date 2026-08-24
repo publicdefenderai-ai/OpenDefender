@@ -11,7 +11,7 @@ import {
 import { buildGuidanceChatSummary } from '../shared/guidance-chat-summary';
 import { GuidancePrintPlan } from '../client/src/components/legal/guidance-print-plan';
 
-const { rendered, mockDoc } = vi.hoisted(() => {
+const { rendered, mockDoc, mockGetChargeExplanation } = vi.hoisted(() => {
   const rendered: string[] = [];
   const mockDoc = {
     internal: { pageSize: { getWidth: () => 210, getHeight: () => 297 } },
@@ -30,7 +30,7 @@ const { rendered, mockDoc } = vi.hoisted(() => {
     setPage: vi.fn(),
     output: vi.fn(() => new Blob()),
   };
-  return { rendered, mockDoc };
+  return { rendered, mockDoc, mockGetChargeExplanation: vi.fn(() => null) };
 });
 
 vi.mock('jspdf', () => {
@@ -48,7 +48,7 @@ vi.mock('jspdf-autotable', () => ({
   }),
 }));
 
-vi.mock('@shared/charge-explanations', () => ({ getChargeExplanation: vi.fn(() => null) }));
+vi.mock('@shared/charge-explanations', () => ({ getChargeExplanation: mockGetChargeExplanation }));
 vi.mock('@shared/legal-documents', () => ({
   getDocumentsForPhase: vi.fn(() => []),
   mapCaseStageToPhase: vi.fn(() => 'arrest'),
@@ -91,6 +91,7 @@ describe('normalized guidance surface parity', () => {
   beforeEach(() => {
     rendered.length = 0;
     vi.clearAllMocks();
+    mockGetChargeExplanation.mockReturnValue(null);
     mockDoc.text.mockImplementation((text: string | string[]) => rendered.push(Array.isArray(text) ? text.join(' ') : text));
     mockDoc.splitTextToSize.mockImplementation((text: string) => [text]);
   });
@@ -310,5 +311,17 @@ describe('normalized guidance surface parity', () => {
     );
     expect(output).toContain('Page 1 of 1');
     expect(mockDoc.output).toHaveBeenCalledWith('blob');
+  });
+
+  it('prints the state-coverage limitation when a charge has no verified overlay', async () => {
+    mockGetChargeExplanation.mockReturnValue({
+      plainSummary: 'Neutral charge summary.',
+      degreeContext: 'Neutral degree context.',
+      keyTerms: [],
+      jurisdictionDetailMissing: true,
+    } as any);
+
+    await generateGuidancePDF(completeGuidance(), 'en');
+    expect(rendered.join('\n')).toContain('State-specific detail not yet verified');
   });
 });

@@ -5369,6 +5369,10 @@ export default {
       "translationDraftWarning": {
         "title": "Traducción provisional.",
         "body": "Esta traducción fue generada automáticamente y aún no ha sido revisada por un profesional legal bilingüe. Verifique términos críticos con su abogado."
+      },
+      "jurisdictionCoverageWarning": {
+        "title": "Los detalles específicos del estado aún no están verificados.",
+        "body": "Esta es información general sobre el cargo. Aún no tenemos detalles estatales verificados para este cargo. Pida a un abogado autorizado que confirme la regla, los plazos y las penas de su caso."
       }
     }
   },

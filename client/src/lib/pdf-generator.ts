@@ -314,6 +314,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     pendingReviewWarning: '⚠ Nota: Esta explicación aún no ha sido revisada por un abogado defensor penal autorizado. Trátela solo como un punto de partida general.',
     /** Shown before charge explanations whose translation is machine-assisted and not yet reviewed */
     translationDraftWarning: '⚠ Traducción provisional: Esta traducción fue generada automáticamente y aún no ha sido revisada por un profesional legal bilingüe. Verifique términos críticos con su abogado.',
+     jurisdictionCoverageWarning: '⚠ Detalle específico del estado aún no verificado: Esta es información general sobre el cargo. Pida a un abogado autorizado que confirme la regla, los plazos y las penas de su caso.',
   } : {
     title: 'Your Case Roadmap',
     generated: 'Generated',
@@ -376,6 +377,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     pendingReviewWarning: '⚠ Note: This explanation has not yet been reviewed by a licensed criminal defense attorney. Treat it as a general starting point only.',
     /** Shown before charge explanations whose translation is machine-assisted and not yet reviewed */
     translationDraftWarning: '⚠ Draft translation: This translation was machine-assisted and has not yet been reviewed by a bilingual legal professional. Verify critical terms with your attorney.',
+     jurisdictionCoverageWarning: '⚠ State-specific detail not yet verified: This is general charge information. Ask a licensed attorney to confirm the rule, deadlines, and penalties for your case.',
   };
 
   // Chinese requires separate overrides for warning strings because the labels
@@ -386,6 +388,9 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   const translationDraftWarningLocalized: string = isChinese
     ? '⚠ 暂定翻译：此翻译由机器辅助生成，尚未经双语法律专业人士审核。请与您的律师核实关键术语。'
     : labels.translationDraftWarning;
+  const jurisdictionCoverageWarningLocalized: string = isChinese
+    ? '⚠ 州级具体信息尚未核实：这是一般性的罪名信息。请向持牌律师确认您案件适用的规则、期限和刑罚。'
+    : labels.jurisdictionCoverageWarning;
   const disclosureFooter = isChinese
     ? '一般教育信息；并非法律建议。内容可能不完整、属于估算、已过时或由AI生成。请核实截止日期和引证。'
     : labels.footer;
@@ -610,6 +615,16 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
           margin + 5,
           yPosition
         );
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
+
+      if (explanation?.jurisdictionDetailMissing === true) {
+        checkPageBreak(18);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(90, 90, 90);
+        yPosition = addText(jurisdictionCoverageWarningLocalized, margin + 5, yPosition);
         doc.setTextColor(0, 0, 0);
         yPosition += 6;
       }
