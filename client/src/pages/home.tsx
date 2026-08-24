@@ -177,8 +177,6 @@ export default function Home() {
             <h1 className="font-display text-[1.55rem] sm:text-[2.5rem] md:text-[3.75rem] font-normal mb-6 tracking-tight text-white" style={{ lineHeight: '1.15' }}>
               {t("home.hero.headlinePart1")}
               <br />
-              {t("home.hero.headlinePart2")}
-              <br />
               <strong className="font-bold text-white">{t("home.hero.headlinePart3")}</strong>
             </h1>
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">

@@ -87,7 +87,6 @@ export default {
   "home": {
     "hero": {
       "headlinePart1": "¿Arrestado? ¿Enfrentando cargos?",
-      "headlinePart2": "¿Ayudando a alguien que lo fue?",
       "headlinePart3": "Comience aquí.",
       "subtitle": "Orientación legal gratuita en lenguaje claro para acusados, familias y sus defensores, en los 50 estados, en inglés, español y chino.",
       "primaryCta": "Obtener Ayuda Inmediata",
