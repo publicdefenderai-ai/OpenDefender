@@ -74,7 +74,7 @@ export default {
       "legalHelp": "Legal help"
     },
     "intents": {
-      "urgent": { "label": "Urgent help", "description": "What to do after an arrest or before an urgent court deadline" },
+      "urgent": { "label": "First 24 Hours", "description": "What to do after an arrest or before an urgent court deadline" },
       "roadmap": { "label": "Case Roadmap", "description": "Get a plain-language plan for your charge, state, and case stage" },
       "charges": { "label": "Understand charges", "description": "Start with your charge and learn what it may mean" },
       "legalHelp": { "label": "Find a lawyer or resources", "description": "Find public defenders, legal aid, courts, and support" },

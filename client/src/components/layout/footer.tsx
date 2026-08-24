@@ -54,7 +54,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li>
                 <Link href="/first-24-hours" className="text-gray-300 hover:text-white transition-colors">
-                  {t('navigation.intents.urgent.label', 'Urgent help')}
+                  {t('navigation.intents.urgent.label', 'First 24 Hours')}
                 </Link>
               </li>
               <li>

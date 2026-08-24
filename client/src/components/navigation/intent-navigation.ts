@@ -38,7 +38,7 @@ const INTENT_DESTINATION_DEFINITIONS: Array<{
     id: "urgent",
     href: "/first-24-hours",
     labelKey: "navigation.intents.urgent.label",
-    defaultLabel: "Urgent help",
+    defaultLabel: "First 24 Hours",
     descriptionKey: "navigation.intents.urgent.description",
     defaultDescription: "What to do after an arrest or before an urgent court deadline",
     icon: AlertTriangle,

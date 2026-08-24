@@ -76,7 +76,7 @@ export default {
       "legalHelp": "法律帮助"
     },
     "intents": {
-      "urgent": { "label": "紧急帮助", "description": "被捕后或紧急法庭期限前该怎么做" },
+      "urgent": { "label": "前24小时", "description": "被捕后或紧急法庭期限前该怎么做" },
       "roadmap": { "label": "案件路线图", "description": "根据指控、州和案件阶段获取易懂的计划" },
       "charges": { "label": "了解指控", "description": "从您的指控开始，了解其可能含义" },
       "legalHelp": { "label": "寻找律师或资源", "description": "查找公设辩护人、法律援助、法院和支持服务" },
