@@ -788,6 +788,208 @@ function PolishPanel({ form }: { form: FormState }) {
     }
   };
 
+  const handlePrint = () => {
+    const win = window.open("", "_blank");
+    if (!win) return;
+
+    const lines = editedText.split("\n");
+    let clientName = "";
+    let preparedDate = "";
+    let caseNumber = "";
+    let proceedingContext = "";
+
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+      if (line.startsWith("Client:")) clientName = line.replace("Client:", "").trim();
+      if (line.startsWith("Prepared:")) preparedDate = line.replace("Prepared:", "").trim();
+      if (line.startsWith("Case No.:")) caseNumber = line.replace("Case No.:", "").trim();
+      if (line.startsWith("Context:")) proceedingContext = line.replace("Context:", "").trim();
+    }
+
+    // Keep blank-line paragraph breaks while folding wrapped lines into one
+    // printable narrative paragraph.
+    const paragraphs: string[] = [];
+    let currentParagraph: string[] = [];
+    const flushParagraph = () => {
+      if (currentParagraph.length > 0) {
+        paragraphs.push(currentParagraph.join("\n"));
+        currentParagraph = [];
+      }
+    };
+
+    for (const rawLine of lines) {
+      const line = rawLine.trim();
+
+      // These lines are rendered in the print header or AI-specific callout.
+      if (
+        line.startsWith("AI-POLISHED DRAFT") ||
+        line.startsWith("Prepared:") ||
+        line.startsWith("Client:") ||
+        line.startsWith("Case No.:") ||
+        line.startsWith("Context:") ||
+        line.startsWith("AI-generated.")
+      ) {
+        continue;
+      }
+
+      if (line === "") {
+        flushParagraph();
+        continue;
+      }
+
+      currentParagraph.push(line);
+    }
+    flushParagraph();
+
+    const bodyContent = paragraphs
+      .map((paragraph) => `<p class="narrative-para">${escHtml(paragraph)}</p>`)
+      .join("\n");
+
+    win.document.write(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI-Polished Sentencing Mitigation Memorandum${clientName ? ` \u2014 ${escHtml(clientName)}` : ""}</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Times New Roman", Times, Georgia, serif;
+      font-size: 12pt;
+      line-height: 1.7;
+      color: #111;
+      background: #fff;
+      padding: 1in;
+      max-width: 8.5in;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    @media print {
+      body::before {
+        content: "DRAFT";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-35deg);
+        font-size: 96pt;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        color: rgba(0,0,0,0.045);
+        letter-spacing: 0.12em;
+        pointer-events: none;
+        z-index: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+
+    .doc-header {
+      border-bottom: 2.5px solid #111;
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+    .doc-header-title {
+      text-align: center;
+      font-size: 14pt;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .doc-header-meta {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 2px 12px;
+      font-size: 10.5pt;
+    }
+    .doc-header-meta .meta-label {
+      font-weight: bold;
+      white-space: nowrap;
+      color: #333;
+    }
+    .doc-header-meta .meta-value { color: #111; }
+
+    .draft-callout {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      background: #fef9c3;
+      border: 1.5px solid #ca8a04;
+      border-left: 5px solid #b45309;
+      padding: 10px 14px;
+      border-radius: 3px;
+      margin-bottom: 22px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .draft-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #92400e;
+    }
+    .draft-body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 9pt;
+      color: #78350f;
+    }
+
+    .narrative-para {
+      font-size: 11.5pt;
+      margin-bottom: 12px;
+      white-space: pre-wrap;
+      orphans: 3;
+      widows: 3;
+    }
+
+    @page {
+      size: letter portrait;
+      margin: 1in;
+      @bottom-center {
+        content: "Page " counter(page) " of " counter(pages);
+        font-size: 9pt;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #666;
+      }
+    }
+    @page :first { @top-right { content: ""; } }
+
+    @media print {
+      body {
+        padding: 0;
+        max-width: none;
+      }
+      .draft-callout {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="doc-header">
+    <div class="doc-header-title">Sentencing Mitigation Memorandum</div>
+    <div class="doc-header-meta">
+      ${preparedDate ? `<span class="meta-label">Prepared:</span><span class="meta-value">${escHtml(preparedDate)}</span>` : ""}
+      ${clientName ? `<span class="meta-label">Client:</span><span class="meta-value">${escHtml(clientName)}</span>` : ""}
+      ${caseNumber ? `<span class="meta-label">Case No.:</span><span class="meta-value">${escHtml(caseNumber)}</span>` : ""}
+      ${proceedingContext ? `<span class="meta-label">Context:</span><span class="meta-value">${escHtml(proceedingContext)}</span>` : ""}
+    </div>
+  </div>
+  <div class="draft-callout" role="note">
+    <span class="draft-label">AI-POLISHED DRAFT — Not for filing without attorney review</span>
+    <span class="draft-body">AI-generated. You must edit and verify every claim before use. Do not file without attorney review.</span>
+  </div>
+  ${bodyContent}
+</body>
+</html>`);
+    win.document.close();
+    setTimeout(() => win.print(), 300);
+  };
+
   return (
     <div className="mt-4 rounded-xl border border-violet-200 dark:border-violet-800 overflow-hidden">
       {/* Header */}
@@ -919,6 +1121,17 @@ function PolishPanel({ form }: { form: FormState }) {
               >
                 <Download className="h-3.5 w-3.5" />
                 {polishDocxLoading ? "Building…" : "Download .docx"}
+              </button>
+              <button
+                type="button"
+                onClick={handlePrint}
+                disabled={!checkboxChecked}
+                title="Opens your browser's print dialog. Choose 'Save as PDF' for a PDF copy."
+                aria-label="Print or save polished draft as PDF: opens browser print dialog"
+                className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-md border border-border hover:bg-muted transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              >
+                <Printer className="h-3.5 w-3.5" />
+                Print / PDF
               </button>
             </div>
           </>
