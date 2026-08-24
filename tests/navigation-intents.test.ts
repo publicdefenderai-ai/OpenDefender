@@ -21,6 +21,12 @@ describe("intent navigation", () => {
 
 describe("trusted-source search", () => {
   it.each([
+    ["en", "sources"],
+    ["en", "accuracy"],
+    ["en", "methodology"],
+    ["en", "where does data come from"],
+    ["en", "how reliable"],
+    ["en", "where does this come from"],
     ["en", "how accurate"],
     ["es", "fuentes de datos"],
     ["zh", "数据来源"],
@@ -30,5 +36,19 @@ describe("trusted-source search", () => {
     const urls = response.results.map((result) => result.document.url);
 
     expect(urls).toContain("/data-sources");
+  });
+
+  it("indexes the page title and key section headings", () => {
+    buildSearchIndex();
+    const response = search({ query: "confidence labels", language: "en", limit: 20 });
+    const result = response.results.find((entry) => entry.document.url === "/data-sources");
+
+    expect(result?.document.title).toBe("Data Sources and Methodology");
+    expect(result?.document.headings).toEqual(expect.arrayContaining([
+      "Methodology & coverage summary",
+      "Jurisdiction Procedure Rules",
+      "Criminal Charges Database",
+      "AI Guidance",
+    ]));
   });
 });
