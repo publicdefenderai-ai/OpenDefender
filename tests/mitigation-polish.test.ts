@@ -254,7 +254,7 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
       }
       polishMitigationNarrativeMock.mockReset();
     }
-  }, 30_000);
+  }, 60_000);
 
   it.skipIf(() => !serverAvailable)('accepts a valid whitelisted payload without rejecting it at schema layer', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {

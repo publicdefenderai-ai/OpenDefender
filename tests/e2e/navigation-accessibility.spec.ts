@@ -29,6 +29,43 @@ test.describe("intent navigation and accessibility", () => {
     await expect(mobileNav.getByRole("link", { name: "Legal help" })).toHaveAttribute("href", "/legal-aid");
   });
 
+  test("mobile navigation keeps full accessible names while fitting compact labels", async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 800 });
+    await page.goto("/");
+
+    const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
+    const stageLink = mobileNav.getByRole("link", { name: "Understand a case stage" });
+
+    await expect(stageLink).toBeVisible();
+    await expect(stageLink.locator("span").last()).toHaveText("Case stage");
+    await expect(stageLink).toHaveAttribute("aria-label", "Understand a case stage");
+
+    const navBox = await mobileNav.boundingBox();
+    const viewport = page.viewportSize();
+    expect(navBox).not.toBeNull();
+    expect(viewport).not.toBeNull();
+    expect(navBox!.x).toBeGreaterThanOrEqual(0);
+    expect(navBox!.x + navBox!.width).toBeLessThanOrEqual(viewport!.width);
+  });
+
+  test("mobile page reserves space for the fixed navigation", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/");
+
+    const main = page.locator("#main-content");
+    await expect(main).toHaveClass(/mobile-nav-page-offset/);
+    await expect(page.locator('[data-testid="chat-launcher"]')).toHaveCount(1);
+  });
+
+  test("desktop chat launcher keeps its established bottom offset", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await page.goto("/");
+
+    const launcher = page.locator('[data-testid="chat-launcher"]');
+    await expect(launcher).toBeVisible();
+    await expect(launcher).toHaveCSS("bottom", "24px");
+  });
+
   test("site search uses combobox and listbox keyboard semantics", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("button", { name: "Search site" }).click();

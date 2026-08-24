@@ -239,7 +239,7 @@ function App() {
                 <Toaster />
                 <SkipNavigation />
                 <BetaBanner />
-                <main id="main-content" tabIndex={-1} className="pb-16 md:pb-0">
+                <main id="main-content" tabIndex={-1} className="mobile-nav-page-offset">
                   <Suspense fallback={<div className="min-h-screen bg-background" />}>
                     <AnimatePresence mode="wait">
                       <PageTransition key={location}>

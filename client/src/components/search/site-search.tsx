@@ -652,7 +652,7 @@ export function SearchButton() {
         variant="ghost"
         size="icon"
         onClick={() => setOpen(true)}
-        className="h-9 w-9"
+         className="h-11 w-11 md:h-9 md:w-9"
         aria-label={language === 'es' ? 'Buscar en el sitio' : language === 'zh' ? '搜索网站' : 'Search site'}
       >
         <Search className="h-4 w-4" />

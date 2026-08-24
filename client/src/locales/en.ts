@@ -71,6 +71,9 @@ export default {
     },
     "browseAll": "Browse all resources",
     "mobile": {
+      "urgent": "First 24h",
+      "roadmap": "Roadmap",
+      "stage": "Case stage",
       "legalHelp": "Legal help"
     },
     "intents": {

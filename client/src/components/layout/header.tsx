@@ -373,12 +373,12 @@ export function Header() {
             {/* Mobile hamburger */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="text-muted-foreground hover:text-foreground md:hidden" data-testid="button-menu" aria-label="Open navigation menu">
+                <Button variant="ghost" size="icon" className="h-11 w-11 text-muted-foreground hover:text-foreground md:hidden" data-testid="button-menu" aria-label="Open navigation menu">
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
 
-              <SheetContent side="right" className="w-[85vw] sm:w-[360px] flex flex-col overflow-y-auto">
+              <SheetContent side="right" className="w-[85vw] sm:w-[360px] flex flex-col overflow-y-auto overscroll-contain safe-area-bottom">
                 <SheetHeader>
                   <SheetTitle>{t('header.mobileMenu', 'Menu')}</SheetTitle>
                 </SheetHeader>

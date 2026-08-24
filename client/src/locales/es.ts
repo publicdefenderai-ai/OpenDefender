@@ -73,6 +73,9 @@ export default {
     },
     "browseAll": "Ver todos los recursos",
     "mobile": {
+      "urgent": "Primeras 24 h",
+      "roadmap": "Ruta del caso",
+      "stage": "Etapa del caso",
       "legalHelp": "Ayuda legal"
     },
     "intents": {

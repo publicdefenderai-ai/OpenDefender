@@ -27,7 +27,7 @@ export function ChatLauncher() {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.8, y: 20 }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
-        className="fixed bottom-20 right-4 z-50 md:bottom-6 md:right-6"
+         className="fixed chat-launcher-position right-4 z-50 md:bottom-6 md:right-6"
         data-testid="chat-launcher"
       >
         <motion.div

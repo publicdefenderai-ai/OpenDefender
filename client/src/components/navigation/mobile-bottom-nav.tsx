@@ -8,6 +8,7 @@ interface NavItem {
   href: string;
   icon: LucideIcon;
   label: string;
+  mobileLabel: string;
 }
 
 export function MobileBottomNav() {
@@ -16,11 +17,36 @@ export function MobileBottomNav() {
   const intents = getIntentDestinations(t);
   const byId = Object.fromEntries(intents.map((destination) => [destination.id, destination])) as Record<string, typeof intents[number]>;
   const navItems: NavItem[] = [
-    { href: "/", icon: Home, label: t("nav.home", "Home") },
-    { href: byId.urgent.href, icon: byId.urgent.icon, label: byId.urgent.label },
-    { href: byId.roadmap.href, icon: byId.roadmap.icon, label: byId.roadmap.label },
-    { href: byId.stage.href, icon: byId.stage.icon, label: byId.stage.label },
-    { href: byId.legalHelp.href, icon: byId.legalHelp.icon, label: t("navigation.mobile.legalHelp", "Legal help") },
+    {
+      href: "/",
+      icon: Home,
+      label: t("nav.home", "Home"),
+      mobileLabel: t("nav.home", "Home"),
+    },
+    {
+      href: byId.urgent.href,
+      icon: byId.urgent.icon,
+      label: byId.urgent.label,
+      mobileLabel: t("navigation.mobile.urgent", "First 24h"),
+    },
+    {
+      href: byId.roadmap.href,
+      icon: byId.roadmap.icon,
+      label: byId.roadmap.label,
+      mobileLabel: t("navigation.mobile.roadmap", "Roadmap"),
+    },
+    {
+      href: byId.stage.href,
+      icon: byId.stage.icon,
+      label: byId.stage.label,
+      mobileLabel: t("navigation.mobile.stage", "Case stage"),
+    },
+    {
+      href: byId.legalHelp.href,
+      icon: byId.legalHelp.icon,
+      label: t("navigation.mobile.legalHelp", "Legal help"),
+      mobileLabel: t("navigation.mobile.legalHelp", "Legal help"),
+    },
   ];
 
   const isActive = (href: string) => {
@@ -34,7 +60,7 @@ export function MobileBottomNav() {
       role="navigation"
       aria-label={t("nav.mobileNavigation", "Mobile navigation")}
     >
-      <div className="flex items-center justify-around h-16 px-2">
+      <div className="flex items-center justify-around h-16 px-1 sm:px-2 gap-0.5">
         {navItems.map((item) => {
           const Icon = item.icon;
           const active = isActive(item.href);
@@ -46,7 +72,7 @@ export function MobileBottomNav() {
                aria-label={item.label}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex flex-col items-center justify-center flex-1 h-full py-2 px-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
+                "flex flex-col items-center justify-center flex-1 min-w-0 h-full py-1 px-0.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
                 active
                   ? "text-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -59,8 +85,8 @@ export function MobileBottomNav() {
                   active && "scale-110"
                 )}
               />
-              <span className="text-xs font-medium truncate">
-                 {item.label}
+               <span className="text-[10px] leading-tight font-medium text-center whitespace-normal break-words line-clamp-2">
+                  {item.mobileLabel}
               </span>
             </Link>
           );

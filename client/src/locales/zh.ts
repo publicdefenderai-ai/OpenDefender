@@ -73,6 +73,9 @@ export default {
     },
     "browseAll": "浏览所有资源",
     "mobile": {
+      "urgent": "前24小时",
+      "roadmap": "案件路线图",
+      "stage": "案件阶段",
       "legalHelp": "法律帮助"
     },
     "intents": {

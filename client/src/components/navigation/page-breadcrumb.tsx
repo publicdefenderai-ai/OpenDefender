@@ -39,11 +39,11 @@ export function PageBreadcrumb({ items, currentPage, className }: PageBreadcrumb
         <div className="md:hidden">
           <button
             onClick={() => handleNavigate(lastItem.href)}
-            className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+             className="inline-flex min-h-11 max-w-full items-center gap-1.5 py-2 text-left text-sm text-muted-foreground hover:text-foreground transition-colors"
             data-testid="breadcrumb-back-mobile"
           >
             <ArrowLeft className="h-4 w-4" />
-            <span>{lastItem.label}</span>
+             <span className="min-w-0 break-words">{lastItem.label}</span>
           </button>
         </div>
 
