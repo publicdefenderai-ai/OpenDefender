@@ -38,6 +38,7 @@ import { getAICostStatus } from "./services/cost-tracker";
 import { locusSearch, normalizeStateCode } from "./services/locus-lookup";
 import { polishMitigationNarrative, MITIGATION_FIELD_WHITELIST } from "./services/mitigation-polisher";
 import { aiBodySizeLimit, TEN_KB } from "./middleware/ai-body-size";
+import { getMitigationPolishMaxBodyBytes } from "./config/mitigation-polish";
 import { normalizeGuidance } from "../shared/guidance-view-model";
 
 function guidanceCaseData(caseData: any) {
@@ -52,6 +53,8 @@ function guidanceCaseData(caseData: any) {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  const mitigationPolishMaxBodyBytes = getMitigationPolishMaxBodyBytes(process.env);
+
   // ============================================================================
   // SECURITY: Guidance Session Ownership Map
   // Maps case sessionId → express session ID to enforce ownership on retrieval.
@@ -3199,8 +3202,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // ============================================================================
   app.post(
     "/api/mitigation/polish",
-    // 10 KB blocks combined form-field prompt smuggling beyond the per-field caps.
-    aiBodySizeLimit(TEN_KB),
+    // Blocks combined form-field prompt smuggling beyond the per-field caps.
+    aiBodySizeLimit(mitigationPolishMaxBodyBytes),
     requireServiceBudget("claude-guidance"),
     aiRateLimiter,
     aiDailyLimiter,

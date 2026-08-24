@@ -10,6 +10,12 @@
 
 import { describe, it, expect } from 'vitest';
 import { getMissingProductionEnvVars, assertProductionEnv } from '../server/startup-checks';
+import {
+  DEFAULT_MITIGATION_POLISH_MAX_BODY_BYTES,
+  getMitigationPolishMaxBodyBytes,
+  MAX_MITIGATION_POLISH_BODY_BYTES,
+  MITIGATION_POLISH_MAX_BODY_BYTES_ENV,
+} from '../server/config/mitigation-polish';
 
 const COMPLETE_ENV = {
   NODE_ENV: 'production',
@@ -45,6 +51,29 @@ describe('getMissingProductionEnvVars', () => {
 });
 
 describe('assertProductionEnv', () => {
+  it('uses the 10 KB default when the mitigation body limit is unset', () => {
+    expect(getMitigationPolishMaxBodyBytes({})).toBe(DEFAULT_MITIGATION_POLISH_MAX_BODY_BYTES);
+  });
+
+  it('accepts a positive integer mitigation body limit up to 100 KB', () => {
+    expect(
+      getMitigationPolishMaxBodyBytes({
+        [MITIGATION_POLISH_MAX_BODY_BYTES_ENV]: String(MAX_MITIGATION_POLISH_BODY_BYTES),
+      }),
+    ).toBe(MAX_MITIGATION_POLISH_BODY_BYTES);
+  });
+
+  it('rejects an invalid mitigation body limit during startup validation', () => {
+    for (const value of ['0', '-1', '10240.5', 'not-a-number', String(MAX_MITIGATION_POLISH_BODY_BYTES + 1)]) {
+      expect(() =>
+        assertProductionEnv({
+          NODE_ENV: 'development',
+          [MITIGATION_POLISH_MAX_BODY_BYTES_ENV]: value,
+        }),
+      ).toThrow(new RegExp(MITIGATION_POLISH_MAX_BODY_BYTES_ENV));
+    }
+  });
+
   it('throws in production when SESSION_SECRET is missing', () => {
     expect(() =>
       assertProductionEnv({ ...COMPLETE_ENV, SESSION_SECRET: undefined }),

@@ -5,6 +5,8 @@
  * unit-testable without booting the real server — see tests/startup-checks.test.ts.
  */
 
+import { getMitigationPolishMaxBodyBytes } from './config/mitigation-polish';
+
 /** Environment variables that must be set before the server is allowed to start in production. */
 const REQUIRED_IN_PRODUCTION = ['SESSION_SECRET', 'TURNSTILE_SECRET_KEY', 'TURNSTILE_SITE_KEY'] as const;
 
@@ -17,10 +19,15 @@ export function getMissingProductionEnvVars(env: NodeJS.ProcessEnv): string[] {
 }
 
 /**
- * Throws if `env.NODE_ENV === 'production'` and any required var is missing.
- * No-op in any other environment (development, test, undefined).
+ * Throws if the environment has an invalid tunable setting, or if
+ * `env.NODE_ENV === 'production'` and any required var is missing.
+ * Production-only requirements remain a no-op in other environments.
  */
 export function assertProductionEnv(env: NodeJS.ProcessEnv): void {
+  // Validate tunable request limits in every environment so a malformed
+  // deployment setting fails at startup rather than at the first request.
+  getMitigationPolishMaxBodyBytes(env);
+
   if (env.NODE_ENV !== 'production') return;
 
   const missing = getMissingProductionEnvVars(env);
