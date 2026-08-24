@@ -1043,24 +1043,31 @@ export default {
       },
       "resources": {
         "lifeline": {
+          "name": "Lifeline Program (Free Phone)",
           "description": "Federal program providing free or discounted phone service to people who qualify based on income or enrollment in Medicaid, SNAP, or other assistance programs. Apply at lifelinesupport.org."
         },
         "samhsa": {
+          "name": "SAMHSA National Helpline",
           "description": "Free, confidential 24/7 helpline for substance use and mental health information and treatment referrals. Available in English and Spanish."
         },
         "partnership": {
+          "name": "Partnership to End Addiction Helpline",
           "description": "Free helpline for families dealing with substance use disorders — call, text, or chat online. Evidence-based guidance for getting loved ones into treatment."
         },
         "smartRecovery": {
+          "name": "SMART Recovery",
           "description": "Science-based, non-12-step addiction recovery support with in-person and online meetings. Free to attend."
         },
         "nar": {
+          "name": "Nar-Anon Family Groups",
           "description": "Free peer support for people affected by someone else's addiction. In-person and online groups available nationwide."
         },
         "nami": {
+          "name": "NAMI (National Alliance on Mental Illness)",
           "description": "The nation's largest mental health organization — local chapters offer support groups, education, and advocacy. NAMI Helpline available Monday through Friday."
         },
         "goodRx": {
+          "name": "GoodRx — Prescription Savings",
           "description": "Free tool to compare prescription drug prices and find coupons. Can significantly reduce out-of-pocket costs if your insurance is disrupted during your case."
         }
       },
@@ -1119,6 +1126,7 @@ export default {
           "If a program has a waitlist, ask for a letter confirming your place on the waitlist. Courts recognize that you applied even if you have not started yet."
         ],
         "findTitle": "Finding programs",
+        "findSamhsaLabel": "SAMHSA — findtreatment.gov",
         "findSamhsa": "SAMHSA's treatment locator (findtreatment.gov) is the most complete national database of licensed drug treatment and mental health facilities. Enter your ZIP code to find programs near you, filter by payment type (Medicaid, sliding scale, free), and see what services each facility offers.",
         "findSamhsaNote": "Availability and wait times change frequently. Call to confirm before counting on a specific program.",
         "find211": "211 (call or text) connects you to local treatment resources and can often find programs with current openings faster than a web search.",

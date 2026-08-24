@@ -1045,24 +1045,31 @@ export default {
       },
       "resources": {
         "lifeline": {
+          "name": "Lifeline计划（免费电话）",
           "description": "联邦计划，为符合收入资格或已登记Medicaid、SNAP或其他援助项目的人提供免费或折扣电话服务。请访问lifelinesupport.org申请。"
         },
         "samhsa": {
+          "name": "SAMHSA全国服务热线",
           "description": "免费、保密的24小时药物使用和心理健康信息及治疗转介热线。提供英语和西班牙语服务。"
         },
         "partnership": {
+          "name": "Partnership to End Addiction帮助热线",
           "description": "为处理药物使用障碍的家庭提供的免费热线——可致电、发短信或在线聊天。提供循证指导，帮助你的亲人接受治疗。"
         },
         "smartRecovery": {
+          "name": "SMART Recovery",
           "description": "基于科学的非十二步戒瘾康复支持，提供面对面和线上会议。免费参加。"
         },
         "nar": {
+          "name": "Nar-Anon家庭小组",
           "description": "为受他人成瘾影响的人提供免费同伴支持。在全国各地提供面对面和线上团体。"
         },
         "nami": {
+          "name": "NAMI（全国心理疾病联盟）",
           "description": "全国最大的心理健康组织——当地分会提供支持团体、教育和倡导。NAMI帮助热线周一至周五可用。"
         },
         "goodRx": {
+          "name": "GoodRx——处方药省钱工具",
           "description": "免费工具，用于比较处方药价格和寻找优惠券。如果你在案件期间保险中断，可以显著降低自付费用。"
         }
       },
@@ -1121,6 +1128,7 @@ export default {
           "如果项目有等待名单，请索取一封确认您在等待名单上位置的信件。法院承认您已申请，即使您尚未开始。"
         ],
         "findTitle": "寻找项目",
+        "findSamhsaLabel": "SAMHSA — findtreatment.gov",
         "findSamhsa": "SAMHSA的治疗查询工具（findtreatment.gov）是最完整的全国持牌毒品治疗和心理健康机构数据库。输入您的邮编查找附近的项目，按付款类型（Medicaid、滑动收费标准、免费）筛选。",
         "findSamhsaNote": "可用性和等待时间经常变化。依赖特定项目前请致电确认。",
         "find211": "211（电话或短信）可将您与当地治疗资源联系起来，通常比网络搜索更快找到有空位的项目。",

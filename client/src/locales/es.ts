@@ -1045,24 +1045,31 @@ export default {
       },
       "resources": {
         "lifeline": {
+          "name": "Programa Lifeline (Teléfono gratuito)",
           "description": "Programa federal que proporciona servicio telefónico gratuito o con descuento a personas que califican según ingresos o inscripción en Medicaid, SNAP u otros programas de asistencia. Solicítelo en lifelinesupport.org."
         },
         "samhsa": {
+          "name": "Línea Nacional de Ayuda de SAMHSA",
           "description": "Línea de ayuda gratuita y confidencial las 24 horas para información sobre uso de sustancias y salud mental, y referencias a tratamiento. Disponible en inglés y español."
         },
         "partnership": {
+          "name": "Línea de ayuda de Partnership to End Addiction",
           "description": "Línea de ayuda gratuita para familias con problemas de uso de sustancias — llame, envíe un mensaje de texto o chatee en línea. Orientación basada en evidencia para conectar a sus seres queridos con tratamiento."
         },
         "smartRecovery": {
+          "name": "SMART Recovery",
           "description": "Apoyo para la recuperación de adicciones basado en ciencia, sin el modelo de los 12 pasos. Reuniones presenciales y en línea. Gratuito para asistir."
         },
         "nar": {
+          "name": "Grupos Familiares Nar-Anon",
           "description": "Apoyo entre pares gratuito para personas afectadas por la adicción de un ser querido. Grupos presenciales y en línea disponibles en todo el país."
         },
         "nami": {
+          "name": "NAMI (Alianza Nacional sobre Enfermedades Mentales)",
           "description": "La organización de salud mental más grande del país — los capítulos locales ofrecen grupos de apoyo, educación y defensa. Línea de ayuda de NAMI disponible de lunes a viernes."
         },
         "goodRx": {
+          "name": "GoodRx — Ahorro en medicamentos recetados",
           "description": "Herramienta gratuita para comparar precios de medicamentos y encontrar cupones. Puede reducir significativamente los costos de bolsillo si su seguro se ve afectado durante su caso."
         }
       },
@@ -1121,6 +1128,7 @@ export default {
           "Si un programa tiene lista de espera, pida una carta confirmando su lugar en ella. Los tribunales reconocen que solicitó aunque no haya comenzado aún."
         ],
         "findTitle": "Encontrar programas",
+        "findSamhsaLabel": "SAMHSA — findtreatment.gov",
         "findSamhsa": "El localizador de tratamientos de SAMHSA (findtreatment.gov) es la base de datos nacional más completa de instalaciones licenciadas de tratamiento de drogas y salud mental. Ingrese su código postal para encontrar programas cerca de usted y filtre por tipo de pago (Medicaid, escala móvil, gratuito).",
         "findSamhsaNote": "La disponibilidad y los tiempos de espera cambian con frecuencia. Llame para confirmar antes de contar con un programa específico.",
         "find211": "211 (llamada o texto) lo conecta con recursos locales de tratamiento y a menudo puede encontrar programas con cupos disponibles más rápido que una búsqueda en internet.",

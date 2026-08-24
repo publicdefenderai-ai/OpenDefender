@@ -243,7 +243,9 @@ function TreatmentConnectionSection() {
             <div className="space-y-4">
               <Card className="border border-border/60">
                 <CardContent className="p-4">
-                  <p className="font-semibold text-sm text-foreground mb-1.5">SAMHSA — findtreatment.gov</p>
+                  <p className="font-semibold text-sm text-foreground mb-1.5">
+                    {t('support.personalHealth.treatmentConnection.findSamhsaLabel')}
+                  </p>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {t('support.personalHealth.treatmentConnection.findSamhsa')}
                   </p>
@@ -425,7 +427,7 @@ export default function PersonalHealthSupport() {
 
   const externalResources: ExternalResource[] = [
     {
-      name: "Lifeline Program (Free Phone)",
+      name: t('support.personalHealth.resources.lifeline.name'),
       description: t('support.personalHealth.resources.lifeline.description'),
       url: "https://www.lifelinesupport.org/",
       phone: "1-800-234-9473",
@@ -433,7 +435,7 @@ export default function PersonalHealthSupport() {
       free: true,
     },
     {
-      name: "SAMHSA National Helpline",
+      name: t('support.personalHealth.resources.samhsa.name'),
       description: t('support.personalHealth.resources.samhsa.description'),
       url: "https://www.samhsa.gov/find-help/national-helpline",
       phone: "1-800-662-4357",
@@ -441,7 +443,7 @@ export default function PersonalHealthSupport() {
       free: true,
     },
     {
-      name: "Partnership to End Addiction Helpline",
+      name: t('support.personalHealth.resources.partnership.name'),
       description: t('support.personalHealth.resources.partnership.description'),
       url: "https://drugfree.org/help/",
       phone: "1-855-378-4373",
@@ -449,21 +451,21 @@ export default function PersonalHealthSupport() {
       free: true,
     },
     {
-      name: "SMART Recovery",
+      name: t('support.personalHealth.resources.smartRecovery.name'),
       description: t('support.personalHealth.resources.smartRecovery.description'),
       url: "https://www.smartrecovery.org/",
       type: "online",
       free: true,
     },
     {
-      name: "Nar-Anon Family Groups",
+      name: t('support.personalHealth.resources.nar.name'),
       description: t('support.personalHealth.resources.nar.description'),
       url: "https://www.nar-anon.org/",
       type: "national",
       free: true,
     },
     {
-      name: "NAMI (National Alliance on Mental Illness)",
+      name: t('support.personalHealth.resources.nami.name'),
       description: t('support.personalHealth.resources.nami.description'),
       url: "https://www.nami.org/",
       phone: "1-800-950-6264",
@@ -471,7 +473,7 @@ export default function PersonalHealthSupport() {
       free: true,
     },
     {
-      name: "GoodRx — Prescription Savings",
+      name: t('support.personalHealth.resources.goodRx.name'),
       description: t('support.personalHealth.resources.goodRx.description'),
       url: "https://www.goodrx.com/",
       type: "online",
