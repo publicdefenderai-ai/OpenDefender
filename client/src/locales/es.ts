@@ -341,7 +341,7 @@ export default {
     "forDevelopers": "Para Desarrolladores",
     "viewOnGithub": "Ver en GitHub",
     "viewOnX": "Seguir en X",
-    "privacyNotice": "Privacidad primero: una cookie de 24 horas y registros temporales en memoria respaldan el servicio. Consulte la Política de Privacidad.",
+    "privacyNotice": "Tu privacidad importa. La información de tu caso se conserva temporalmente y, por lo general, deja de estar disponible en 24 horas. Consulta nuestra Política de Privacidad.",
     "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional.",
     "legalDisclaimer": "Solo información legal general — no sustituye el asesoramiento legal profesional. Consulte siempre a un abogado calificado para su situación específica."
   },
