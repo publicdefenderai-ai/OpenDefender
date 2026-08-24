@@ -1,0 +1,36 @@
+name: Live Mitigation Guardrail
+
+on:
+  schedule:
+    # Run nightly at 02:30 UTC.
+    - cron: '30 2 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  smoke-test:
+    name: Claude no-added-facts smoke test
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run live guardrail smoke test
+        if: env.ANTHROPIC_API_KEY != ''
+        run: npm run test:live:guardrail
+
+      - name: Skip live guardrail smoke test when secret is unavailable
+        if: env.ANTHROPIC_API_KEY == ''
+        run: echo "ANTHROPIC_API_KEY is unavailable; skipping live Claude smoke test."
