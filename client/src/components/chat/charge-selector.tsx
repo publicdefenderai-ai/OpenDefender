@@ -29,8 +29,13 @@ interface Charge {
 
 interface ChargeSelectorProps {
   jurisdiction: string;
-  onSelect: (charges: Array<{ id: string; code?: string | null; name: string }>) => void;
+  onSelect: (charges: ChargeSelection[]) => void;
 }
+
+export type ChargeSelection = {
+  id: string;
+  name: string;
+};
 
 const CATEGORY_KEYS = ['All', 'felony', 'misdemeanor', 'infraction'] as const;
 
@@ -62,9 +67,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedGroup, setSelectedGroup] = useState("All Groups");
-  // `code` is retained here for backward compatibility with consumers of onSelect, but is
-  // never rendered in user-facing UI. User-visible statute references always use `citation`.
-  const [selectedCharges, setSelectedCharges] = useState<Array<{ id: string; code?: string | null; name: string }>>([]);
+  const [selectedCharges, setSelectedCharges] = useState<ChargeSelection[]>([]);
   const [isExpanded, setIsExpanded] = useState(true);
   const [announcement, setAnnouncement] = useState("");
 
@@ -127,9 +130,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       if (exists) {
         return prev.filter(c => c.id !== charge.id);
       }
-      // `code` is the legacy/internal field — kept for backward compat, never shown to users.
-      // User-visible statute citations always come from `charge.citation` (null when unverified).
-      return [...prev, { id: charge.id, code: charge.code, name: charge.name }];
+      return [...prev, { id: charge.id, name: charge.name }];
     });
   };
 

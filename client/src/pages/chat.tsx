@@ -32,7 +32,7 @@ import { CaseStatusPanel } from "@/components/chat/case-status-panel";
 import { ChatInput } from "@/components/chat/chat-input";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import { StateSelector } from "@/components/chat/state-selector";
-import { ChargeSelector } from "@/components/chat/charge-selector";
+import { ChargeSelector, ChargeSelection } from "@/components/chat/charge-selector";
 import { useToast } from "@/hooks/use-toast";
 import { apiRequest } from "@/lib/queryClient";
 import { searchPublicDefenderOffices, PublicDefenderOffice } from "@/lib/public-defender-services";
@@ -764,7 +764,7 @@ export default function ChatPage() {
     actions.setCurrentStep('concerns_early');
   }, [actions, addBotMessageWithKey]);
 
-  const handleChargesSelect = useCallback((charges: Array<{ id: string; code?: string | null; name: string }>) => {
+  const handleChargesSelect = useCallback((charges: ChargeSelection[]) => {
     actions.saveHistoryPoint(); // Save history before this selection
     const chargeNames = charges.map(c => c.name);
     const chargeIds = charges.map(c => c.id);
