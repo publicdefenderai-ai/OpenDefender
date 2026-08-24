@@ -8,14 +8,44 @@
  *  (c) Per-field length cap.
  *  (d) Non-string field rejection.
  *  (e) Empty-field graceful rejection (no narrative fields provided).
+ *  (f) Custom request-body limit is enforced by the live registered route.
  *
  * The Claude call itself is NOT exercised here to avoid network cost and
  * flakiness; that boundary is covered by the unit-level whitelist tests
  * in the service module.
  */
 
-import { describe, it, expect, beforeAll } from 'vitest';
+import express from 'express';
+import request from 'supertest';
+import { describe, it, expect, beforeAll, vi } from 'vitest';
 import { MITIGATION_FIELD_WHITELIST } from '../server/services/mitigation-polisher';
+import { MITIGATION_POLISH_MAX_BODY_BYTES_ENV } from '../server/config/mitigation-polish';
+
+const { polishMitigationNarrativeMock } = vi.hoisted(() => ({
+  polishMitigationNarrativeMock: vi.fn(),
+}));
+
+vi.mock('../server/services/mitigation-polisher', async () => {
+  const actual = await vi.importActual<typeof import('../server/services/mitigation-polisher')>(
+    '../server/services/mitigation-polisher',
+  );
+  return {
+    ...actual,
+    polishMitigationNarrative: polishMitigationNarrativeMock,
+  };
+});
+
+vi.mock('../server/middleware/budget-gate', () => ({
+  requireServiceBudget: vi.fn().mockReturnValue(
+    (_req: express.Request, _res: express.Response, next: express.NextFunction) => next(),
+  ),
+}));
+
+vi.mock('../server/services/captcha-verification', () => ({
+  isCaptchaRequired: vi.fn().mockReturnValue(false),
+  verifyCaptcha: vi.fn().mockResolvedValue({ success: true }),
+  getCaptchaSiteKey: vi.fn().mockReturnValue(null),
+}));
 
 const BASE_URL = 'http://localhost:5000';
 let serverAvailable = true;
@@ -165,6 +195,66 @@ describe('POST /api/mitigation/polish — field-locked schema enforcement', () =
     expect(data.success).toBe(false);
     expect(data.error).toMatch(/too large/i);
   });
+
+  it('enforces a custom body limit on the registered route without changing the default coverage', async () => {
+    const customLimit = 20 * 1024;
+    const previousLimit = process.env[MITIGATION_POLISH_MAX_BODY_BYTES_ENV];
+    process.env[MITIGATION_POLISH_MAX_BODY_BYTES_ENV] = String(customLimit);
+    polishMitigationNarrativeMock.mockResolvedValue({
+      success: false,
+      error: 'test service reached',
+    });
+
+    try {
+      const { registerRoutes } = await import('../server/routes');
+      const testApp = express();
+      testApp.use(express.json({ limit: '1mb' }));
+      await registerRoutes(testApp);
+
+      const makeBody = (fieldCount: number) =>
+        Object.fromEntries(
+          MITIGATION_FIELD_WHITELIST
+            .slice(2, 2 + fieldCount)
+            .map((field) => [field, 'x'.repeat(1999)]),
+        );
+
+      const withinLimitBody = makeBody(8);
+      const withinLimitSerialized = JSON.stringify(withinLimitBody);
+      expect(withinLimitSerialized.length).toBeGreaterThan(10 * 1024);
+      expect(Buffer.byteLength(withinLimitSerialized, 'utf8')).toBeLessThan(customLimit);
+
+      const withinLimitResponse = await request(testApp)
+        .post('/api/mitigation/polish')
+        .send(withinLimitBody);
+
+      expect(withinLimitResponse.status).toBe(422);
+      expect(withinLimitResponse.body).toEqual({
+        success: false,
+        error: 'test service reached',
+      });
+      expect(polishMitigationNarrativeMock).toHaveBeenCalledTimes(1);
+
+      const overLimitBody = makeBody(11);
+      const overLimitSerialized = JSON.stringify(overLimitBody);
+      expect(Buffer.byteLength(overLimitSerialized, 'utf8')).toBeGreaterThan(customLimit);
+
+      const overLimitResponse = await request(testApp)
+        .post('/api/mitigation/polish')
+        .send(overLimitBody);
+
+      expect(overLimitResponse.status).toBe(413);
+      expect(overLimitResponse.body.success).toBe(false);
+      expect(overLimitResponse.body.error).toMatch(/too large/i);
+      expect(polishMitigationNarrativeMock).toHaveBeenCalledTimes(1);
+    } finally {
+      if (previousLimit === undefined) {
+        delete process.env[MITIGATION_POLISH_MAX_BODY_BYTES_ENV];
+      } else {
+        process.env[MITIGATION_POLISH_MAX_BODY_BYTES_ENV] = previousLimit;
+      }
+      polishMitigationNarrativeMock.mockReset();
+    }
+  }, 30_000);
 
   it.skipIf(() => !serverAvailable)('accepts a valid whitelisted payload without rejecting it at schema layer', async () => {
     const res = await fetch(`${BASE_URL}/api/mitigation/polish`, {
