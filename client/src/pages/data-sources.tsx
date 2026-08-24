@@ -19,7 +19,7 @@ const ESTIMATE_JURISDICTIONS = [
 const sourceDisclosureCopy = {
   en: {
     title: "Data Sources & Methodology",
-    subtitle: "Where our legal content comes from, how confident we are in it, and what its limitations are.",
+    subtitle: "Where our content comes from, how confident we are in it, and what its limitations are.",
     reviewed: "Last reviewed: August 2026",
     heading: "Three things every user should know before relying on this platform",
     items: [
@@ -70,7 +70,7 @@ const sourceDisclosureCopy = {
     },
     methodology: {
       title: "Methodology & coverage summary",
-      intro: "Before the detailed inventory below, here is what our legal content is built from and what its confidence labels mean.",
+      intro: "Before the detailed inventory below, here is what our content is built from and what its confidence labels mean.",
       sourceHeading: "Kinds of sources used",
       sources: [
         "Official primary law: state statutes, court rules, and case law (one cited source per rule where verified).",
@@ -107,7 +107,7 @@ const sourceDisclosureCopy = {
   },
   es: {
     title: "Fuentes de Datos y Metodología",
-    subtitle: "De dónde proviene el contenido legal, nuestro nivel de confianza y sus limitaciones.",
+    subtitle: "De dónde proviene el contenido, nuestro nivel de confianza y sus limitaciones.",
     reviewed: "Última revisión: agosto de 2026",
     heading: "Tres cosas que toda persona debe saber antes de confiar en esta plataforma",
     items: [
@@ -158,7 +158,7 @@ const sourceDisclosureCopy = {
     },
     methodology: {
       title: "Resumen de metodología y cobertura",
-      intro: "Antes del inventario detallado que aparece abajo, esto es de qué se compone nuestro contenido legal y qué significan sus etiquetas de confianza.",
+      intro: "Antes del inventario detallado que aparece abajo, esto es de qué se compone nuestro contenido y qué significan sus etiquetas de confianza.",
       sourceHeading: "Tipos de fuentes utilizadas",
       sources: [
         "Ley primaria oficial: estatutos estatales, reglas judiciales y jurisprudencia (una fuente citada por regla cuando está verificada).",
@@ -195,7 +195,7 @@ const sourceDisclosureCopy = {
   },
   zh: {
     title: "数据来源与方法",
-    subtitle: "法律内容来自何处、我们对其可信度的判断，以及内容的局限。",
+    subtitle: "内容来自何处、我们对其可信度的判断，以及内容的局限。",
     reviewed: "最后审查：2026年8月",
     heading: "依赖本平台前，每位用户都应了解的三件事",
     items: [
@@ -245,7 +245,7 @@ const sourceDisclosureCopy = {
     },
     methodology: {
       title: "方法与覆盖范围摘要",
-      intro: "在下方详细清单之前，以下说明我们的法律内容由什么构成，以及各可信度标签的含义。",
+      intro: "在下方详细清单之前，以下说明我们的内容由什么构成，以及各可信度标签的含义。",
       sourceHeading: "所使用的来源类型",
       sources: [
         "官方一手法律：州法规、法院规则和判例法（已核实的规则均标注一个引证来源）。",
