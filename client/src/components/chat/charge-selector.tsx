@@ -243,56 +243,62 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                 charges.map((charge, index) => {
                   const isSelected = selectedCharges.some(c => c.id === charge.id);
                   return (
-                    <motion.button
+                    <motion.div
                       key={charge.id}
                       initial={{ opacity: 0, x: -5 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: Math.min(index * 0.01, 0.3) }}
-                      onClick={() => toggleCharge(charge)}
-                      aria-pressed={isSelected}
-                      aria-label={isSelected
-                        ? t('chat.chargeSelector.removeCharge', { name: charge.name, defaultValue: `Remove ${charge.name}` })
-                        : t('chat.chargeSelector.addCharge', { name: charge.name, defaultValue: `Add ${charge.name}` })
-                      }
                       className={cn(
-                        "w-full flex items-start gap-3 px-3 py-2.5 rounded-lg text-left",
-                        "transition-colors text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
+                        "w-full rounded-lg text-sm transition-colors",
                         isSelected
                           ? "bg-primary/10 border border-primary/30"
                           : "hover:bg-muted border border-transparent"
                       )}
-                      data-testid={`charge-option-${charge.id}`}
                     >
-                      <div className={cn(
-                        "w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center transition-colors mt-0.5",
-                        isSelected
-                          ? "bg-primary border-primary text-primary-foreground"
-                          : "border-border"
-                      )}>
-                        {isSelected && <Check className="h-3 w-3" />}
-                      </div>
-                      <div className="flex-1 min-w-0 overflow-hidden">
-                        <div className="flex flex-wrap items-start gap-1">
-                          <span className={cn("break-words", isSelected && "font-medium")}>{charge.name}</span>
-                          <Badge 
-                            variant="outline" 
-                            className={cn(
-                              "text-xs flex-shrink-0",
-                              charge.category === 'felony' && "border-red-500/50 text-red-600",
-                              charge.category === 'misdemeanor' && "border-yellow-500/50 text-yellow-600",
-                              charge.category === 'infraction' && "border-green-500/50 text-green-600"
-                            )}
-                          >
-                            {getCategoryLabel(charge.category)}
-                          </Badge>
+                      <motion.button
+                        type="button"
+                        onClick={() => toggleCharge(charge)}
+                        aria-pressed={isSelected}
+                        aria-label={isSelected
+                          ? t('chat.chargeSelector.removeCharge', { name: charge.name, defaultValue: `Remove ${charge.name}` })
+                          : t('chat.chargeSelector.addCharge', { name: charge.name, defaultValue: `Add ${charge.name}` })
+                        }
+                        className="w-full flex items-start gap-3 px-3 pt-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 rounded-lg"
+                        data-testid={`charge-option-${charge.id}`}
+                      >
+                        <div className={cn(
+                          "w-5 h-5 rounded border flex-shrink-0 flex items-center justify-center transition-colors mt-0.5",
+                          isSelected
+                            ? "bg-primary border-primary text-primary-foreground"
+                            : "border-border"
+                        )}>
+                          {isSelected && <Check className="h-3 w-3" />}
                         </div>
-                        {charge.citation && (
-                          <p className="text-xs font-mono text-primary/80 mt-0.5 break-words" data-testid={`charge-citation-${charge.id}`}>
-                            {charge.citation}
-                          </p>
-                        )}
-                        <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
-                        {charge.instructionRef && (
+                        <div className="flex-1 min-w-0 overflow-hidden">
+                          <div className="flex flex-wrap items-start gap-1">
+                            <span className={cn("break-words", isSelected && "font-medium")}>{charge.name}</span>
+                            <Badge
+                              variant="outline"
+                              className={cn(
+                                "text-xs flex-shrink-0",
+                                charge.category === 'felony' && "border-red-500/50 text-red-600",
+                                charge.category === 'misdemeanor' && "border-yellow-500/50 text-yellow-600",
+                                charge.category === 'infraction' && "border-green-500/50 text-green-600"
+                              )}
+                            >
+                              {getCategoryLabel(charge.category)}
+                            </Badge>
+                          </div>
+                          {charge.citation && (
+                            <p className="text-xs font-mono text-primary/80 mt-0.5 break-words" data-testid={`charge-citation-${charge.id}`}>
+                              {charge.citation}
+                            </p>
+                          )}
+                          <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
+                        </div>
+                      </motion.button>
+                      {charge.instructionRef && (
+                        <div className="ml-11 px-3 pb-2.5">
                           <JuryInstructionBadge
                             instructionRef={charge.instructionRef}
                             instructionUrl={charge.instructionUrl}
@@ -305,9 +311,9 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                             tooltipAriaLabel={t('legalGuidance.qaFlow.caseDetails.juryInstructionAriaLabel')}
                             className="mt-1"
                           />
-                        )}
-                      </div>
-                    </motion.button>
+                        </div>
+                      )}
+                    </motion.div>
                   );
                 })
               ) : (
