@@ -173,7 +173,7 @@ export default {
       "label2": "jurisdicciones",
       "label3": "costo",
       "badge1": "Gratis · Siempre",
-      "badge2": "Privacidad · registros temporales",
+      "badge2": "Privacidad primero",
       "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {

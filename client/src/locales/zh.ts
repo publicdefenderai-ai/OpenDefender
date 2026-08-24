@@ -173,7 +173,7 @@ export default {
       "label2": "司法管辖区",
       "label3": "费用",
       "badge1": "免费 · 始终",
-      "badge2": "注重隐私 · 临时记录",
+      "badge2": "隐私优先",
       "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {
