@@ -171,7 +171,7 @@ export default {
       "label2": "jurisdictions",
       "label3": "cost",
       "badge1": "Free · Always",
-      "badge2": "Privacy-minded · temporary records",
+      "badge2": "Privacy First",
       "badge3": "EN / ES / ZH"
     },
     "urgentHelp": {
