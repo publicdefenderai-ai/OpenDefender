@@ -4300,10 +4300,22 @@ export default {
       "alertText": "If they can't afford a lawyer, they have the right to a public defender. The request happens at their first court appearance — the sooner legal representation is in place, the better.",
       "publicDefenderTitle": "Public Defender",
       "publicDefenderDesc": "The court appoints a public defender at no cost for those who qualify. Tell the judge at the first court appearance that you cannot afford an attorney.",
+      "publicDefenderLink": "Learn about your right to a public defender",
       "legalAidTitle": "Legal Aid Organizations",
       "legalAidDesc": "Free or low-cost legal services for qualifying individuals.",
+      "legalAidLink": "Find legal aid organizations near you",
       "privateAttorneyTitle": "Private Attorney",
-      "privateAttorneyDesc": "Hired representation. Can be expensive but may offer more personalized attention."
+      "privateAttorneyDesc": "Hired representation. Can be expensive but may offer more personalized attention.",
+      "alternativeCounselTitle": "If the public defender's office isn't available",
+      "alternativeCounselText": "When a public defender has a conflict of interest or the office is at capacity, the court appoints a private attorney from a local panel instead. The person still receives free representation. The process is the same.",
+      "alternativeCounselCheck": "Check the court's website for an \"assigned counsel\" or \"appointment panel\" section.",
+      "alternativeCounselAsk": "Ask the court clerk directly. They administer the panel and know who is on it.",
+      "bailPreparationTitle": "Preparing for the bail hearing",
+      "bailPreparationText": "The bail hearing often happens within 24 to 48 hours of arrest. Gathering information before it starts can help the attorney argue for release. Employment records, proof of housing, names of family members in the area, and character references all factor in.",
+      "bailPreparationLink": "Bail Preparation Checklist and Templates",
+      "drugCaseTitle": "If this is a drug-related case",
+      "drugCaseText": "Courts in drug cases often consider whether the defendant has already enrolled in a treatment program when deciding between incarceration and alternatives. Enrolling before the first court appearance can matter. A letter from the program confirming enrollment is something the attorney can present.",
+      "drugCaseLink": "Treatment Connection Guide: How to Enroll and Document It"
     },
     "step3": {
       "title": "Gather Important Information",
@@ -4319,7 +4331,10 @@ export default {
       "keyInfo8": "Witness contact information",
       "keyInfo9": "Which office filed charges (not the police — see below)",
       "prosecutorNote": "The office that filed charges is not the police department. Look at the top of any paperwork for a name like 'Office of the District Attorney,' 'City Attorney,' or 'United States Attorney.' This tells you which court the case is in and which programs may be available — information their attorney will need.",
-      "prosecutorCta": "See glossary: Prosecutor"
+      "prosecutorCta": "See glossary: Prosecutor",
+      "toolkitPromptTitle": "Ready to collect this information?",
+      "toolkitPromptText": "The Family Toolkit has a fillable Contact Info Kit, a court record lookup, and more.",
+      "toolkitPromptButton": "Open toolkit"
     },
     "step4": {
       "title": "Understand Bail and Bonding",
@@ -4346,6 +4361,8 @@ export default {
       "practicalHelp4": "Secure important documents",
       "practicalHelp5": "Manage their affairs while detained",
       "practicalHelp6": "Deposit money for commissary/phone calls",
+      "reentryLead": "Start planning for re-entry now:",
+      "reentryLink": "ID, housing, employment, and voting rights",
       "emotionalSupportTitle": "Emotional Support:",
       "emotionalSupport1": "Stay in contact through approved channels",
       "emotionalSupport2": "Write letters if visits aren't possible",
@@ -4479,6 +4496,11 @@ export default {
         "text": "Supporting someone through a long legal case is exhausting and stressful. Many families experience anxiety, financial strain, and relationship pressure during this time. The mental health resources on this site are for family members too — not just defendants. Reaching out for support is not a sign of giving up.",
         "linkText": "Mental Health & Treatment Resources"
       }
+    },
+    "toolkitCta": {
+      "title": "Now use the Family Toolkit",
+      "text": "Collect contact information, look up court records, and track what needs certified mail — all in one place.",
+      "button": "Open toolkit"
     }
   },
   "courtLocator": {

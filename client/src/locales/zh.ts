@@ -4301,10 +4301,22 @@ export default {
       "alertText": "如果他们请不起律师，他们有权获得公设辩护人。申请在第一次出庭时提出——越早获得法律代理越好。",
       "publicDefenderTitle": "公设辩护人",
       "publicDefenderDesc": "对于符合条件的人，法院会免费指派公设辩护人。在第一次出庭时告诉法官您无力支付律师费即可申请。",
+      "publicDefenderLink": "了解获得公设辩护人的权利",
       "legalAidTitle": "法律援助机构",
       "legalAidDesc": "为符合条件的个人提供免费或低价法律服务。",
+      "legalAidLink": "查找您附近的法律援助组织",
       "privateAttorneyTitle": "私人律师",
-      "privateAttorneyDesc": "聘请的代理人。费用可能较高，但可能提供更个性化的服务。"
+      "privateAttorneyDesc": "聘请的代理人。费用可能较高，但可能提供更个性化的服务。",
+      "alternativeCounselTitle": "如果公设辩护人办公室无法提供服务",
+      "alternativeCounselText": "如果公设辩护人与案件存在利益冲突，或办公室已达到接案上限，法院会改为从当地名单中指派一名私人律师。该人员仍可获得免费代理，流程不变。",
+      "alternativeCounselCheck": "查看法院网站，查找“指定律师”或“指派律师名单”栏目。",
+      "alternativeCounselAsk": "直接询问法院书记官。他们负责管理该名单，知道名单上有哪些律师。",
+      "bailPreparationTitle": "准备保释听证",
+      "bailPreparationText": "保释听证通常在逮捕后的24至48小时内进行。提前收集信息可以帮助律师争取释放。就业记录、住房证明、当地家属姓名和品格证明都会影响结果。",
+      "bailPreparationLink": "保释准备清单和模板",
+      "drugCaseTitle": "如果这是涉及毒品的案件",
+      "drugCaseText": "在毒品案件中，法院通常会考虑被告在决定监禁还是其他替代方案时是否已经参加治疗项目。在第一次出庭前参加治疗可能很重要。律师可以提交治疗项目确认参加的证明信。",
+      "drugCaseLink": "治疗衔接指南：如何参加项目并提供证明"
     },
     "step3": {
       "title": "收集重要信息",
@@ -4320,7 +4332,10 @@ export default {
       "keyInfo8": "证人联系方式",
       "keyInfo9": "哪个办公室提起了指控（不是警察——见下文）",
       "prosecutorNote": "提起指控的办公室不是警察部门。查看任何文件的顶部，寻找地区检察官办公室、市检察官或联邦检察官等名称。这表明案件在哪个法院审理，以及可能适用哪些项目——律师需要了解这些信息。",
-      "prosecutorCta": "查看词汇表：检察官"
+      "prosecutorCta": "查看词汇表：检察官",
+      "toolkitPromptTitle": "准备好收集这些信息了吗？",
+      "toolkitPromptText": "家庭工具包包含可填写的联系信息套件、法院记录查询等功能。",
+      "toolkitPromptButton": "打开工具包"
     },
     "step4": {
       "title": "了解保释和担保",
@@ -4347,6 +4362,8 @@ export default {
       "practicalHelp4": "保管重要文件",
       "practicalHelp5": "在拘留期间代为处理事务",
       "practicalHelp6": "为狱中消费账户/电话充值",
+      "reentryLead": "现在开始为重新融入社会做计划：",
+      "reentryLink": "身份证件、住房、就业和投票权",
       "emotionalSupportTitle": "情感支持：",
       "emotionalSupport1": "通过批准的渠道保持联系",
       "emotionalSupport2": "如果无法探视，就写信",
@@ -4476,6 +4493,11 @@ export default {
         "text": "在漫长的法律案件中支持他人是令人精疲力竭且压力巨大的。许多家庭在此期间经历焦虑、经济压力和人际关系紧张。本网站的心理健康资源也适用于家属——不仅仅是被告。寻求支持并不意味着放弃。",
         "linkText": "心理健康与治疗资源"
       }
+    },
+    "toolkitCta": {
+      "title": "现在使用家庭工具包",
+      "text": "收集联系信息、查询法院记录，并跟踪需要通过认证邮件寄送的事项——一站式完成。",
+      "button": "打开工具包"
     },
     "privacyBanner": {
       "title": "隐私优先：",

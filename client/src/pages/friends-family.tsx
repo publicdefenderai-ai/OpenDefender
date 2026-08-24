@@ -193,7 +193,7 @@ export default function FriendsFamily() {
                           href="/right-to-counsel"
                           className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                         >
-                          Learn about your right to a public defender
+                          {t('friendsFamily.step2.publicDefenderLink')}
                           <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                       </div>
@@ -207,7 +207,7 @@ export default function FriendsFamily() {
                           href="/legal-aid"
                           className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
                         >
-                          Find legal aid organizations near you
+                          {t('friendsFamily.step2.legalAidLink')}
                           <ArrowRight className="h-3.5 w-3.5" />
                         </Link>
                       </div>
@@ -221,45 +221,45 @@ export default function FriendsFamily() {
                     </div>
 
                     <div className="mt-4 rounded-lg border border-border bg-background p-4">
-                      <h4 className="font-semibold text-sm mb-2">If the public defender's office isn't available</h4>
+                      <h4 className="font-semibold text-sm mb-2">{t('friendsFamily.step2.alternativeCounselTitle')}</h4>
                       <p className="text-sm text-muted-foreground mb-3">
-                        When a public defender has a conflict of interest or the office is at capacity, the court appoints a private attorney from a local panel instead. The person still receives free representation. The process is the same.
+                        {t('friendsFamily.step2.alternativeCounselText')}
                       </p>
                       <ul className="space-y-1.5 text-sm text-muted-foreground">
                         <li className="flex items-start gap-2">
                           <span className="flex-shrink-0 mt-0.5">•</span>
-                          Check the court's website for an "assigned counsel" or "appointment panel" section.
+                          {t('friendsFamily.step2.alternativeCounselCheck')}
                         </li>
                         <li className="flex items-start gap-2">
                           <span className="flex-shrink-0 mt-0.5">•</span>
-                          Ask the court clerk directly. They administer the panel and know who is on it.
+                          {t('friendsFamily.step2.alternativeCounselAsk')}
                         </li>
                       </ul>
                     </div>
 
                     <div className="mt-4 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50/50 dark:bg-amber-950/20 p-4">
-                      <h4 className="font-semibold text-sm mb-2">Preparing for the bail hearing</h4>
+                      <h4 className="font-semibold text-sm mb-2">{t('friendsFamily.step2.bailPreparationTitle')}</h4>
                       <p className="text-sm text-muted-foreground mb-3">
-                        The bail hearing often happens within 24 to 48 hours of arrest. Gathering information before it starts can help the attorney argue for release. Employment records, proof of housing, names of family members in the area, and character references all factor in.
+                        {t('friendsFamily.step2.bailPreparationText')}
                       </p>
                       <Link
                         href="/support/court-logistics/bail-preparation"
                         className="inline-flex items-center gap-1 text-sm font-medium text-amber-700 dark:text-amber-400 hover:underline"
                       >
-                        Bail Preparation Checklist and Templates <ArrowRight className="h-3.5 w-3.5" />
+                        {t('friendsFamily.step2.bailPreparationLink')} <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
 
                     <div className="mt-4 rounded-lg border border-teal-200 dark:border-teal-800 bg-teal-50/50 dark:bg-teal-950/20 p-4">
-                      <h4 className="font-semibold text-sm mb-2">If this is a drug-related case</h4>
+                      <h4 className="font-semibold text-sm mb-2">{t('friendsFamily.step2.drugCaseTitle')}</h4>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Courts in drug cases often consider whether the defendant has already enrolled in a treatment program when deciding between incarceration and alternatives. Enrolling before the first court appearance can matter. A letter from the program confirming enrollment is something the attorney can present.
+                        {t('friendsFamily.step2.drugCaseText')}
                       </p>
                       <Link
                         href="/support/mental-health#treatment-connection"
                         className="inline-flex items-center gap-1 text-sm font-medium text-teal-700 dark:text-teal-400 hover:underline"
                       >
-                        Treatment Connection Guide: How to Enroll and Document It <ArrowRight className="h-3.5 w-3.5" />
+                        {t('friendsFamily.step2.drugCaseLink')} <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
                     </div>
                   </div>
@@ -311,12 +311,12 @@ export default function FriendsFamily() {
                   {/* Toolkit prompt — contextual entry inside Step 3 */}
                   <div className="mt-4 rounded-xl border border-border bg-muted/30 p-4 flex items-start justify-between gap-4">
                     <div className="min-w-0">
-                      <p className="text-sm font-semibold text-foreground">Ready to collect this information?</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">The Family Toolkit has a fillable Contact Info Kit, a court record lookup, and more.</p>
+                      <p className="text-sm font-semibold text-foreground">{t('friendsFamily.step3.toolkitPromptTitle')}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{t('friendsFamily.step3.toolkitPromptText')}</p>
                     </div>
                     <Link href="/friends-family/toolkit" className="flex-shrink-0">
                       <Button size="sm" variant="outline" className="whitespace-nowrap">
-                        Open toolkit →
+                        {t('friendsFamily.step3.toolkitPromptButton')} →
                       </Button>
                     </Link>
                   </div>
@@ -402,9 +402,9 @@ export default function FriendsFamily() {
                         <li>• {t('friendsFamily.step5.practicalHelp4')}</li>
                         <li>• {t('friendsFamily.step5.practicalHelp5')}</li>
                         <li>• {t('friendsFamily.step5.practicalHelp6')}</li>
-                        <li>• Start planning for re-entry now:{" "}
+                        <li>• {t('friendsFamily.step5.reentryLead')}{" "}
                           <Link href="/support/reentry" className="underline underline-offset-2 font-medium">
-                            ID, housing, employment, and voting rights →
+                            {t('friendsFamily.step5.reentryLink')} →
                           </Link>
                         </li>
                       </ul>
@@ -755,12 +755,12 @@ export default function FriendsFamily() {
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-muted/20 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div>
-                <p className="font-bold text-foreground mb-1">Now use the Family Toolkit</p>
-                <p className="text-sm text-muted-foreground max-w-md">Collect contact information, look up court records, and track what needs certified mail — all in one place.</p>
+                <p className="font-bold text-foreground mb-1">{t('friendsFamily.toolkitCta.title')}</p>
+                <p className="text-sm text-muted-foreground max-w-md">{t('friendsFamily.toolkitCta.text')}</p>
               </div>
               <Link href="/friends-family/toolkit" className="flex-shrink-0">
                 <Button className="whitespace-nowrap">
-                  Open toolkit →
+                  {t('friendsFamily.toolkitCta.button')} →
                 </Button>
               </Link>
             </div>

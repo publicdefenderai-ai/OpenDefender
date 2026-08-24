@@ -4302,10 +4302,22 @@ export default {
       "alertText": "Si no pueden pagar un abogado, tienen derecho a un defensor público. La solicitud se hace en la primera comparecencia ante el tribunal — cuanto antes se cuente con representación legal, mejor.",
       "publicDefenderTitle": "Defensor Público",
       "publicDefenderDesc": "El tribunal asigna un defensor público sin costo para quienes califican. Dígale al juez en la primera comparecencia que no puede pagar un abogado.",
+      "publicDefenderLink": "Conozca su derecho a un defensor público",
       "legalAidTitle": "Organizaciones de Asistencia Legal",
       "legalAidDesc": "Servicios legales gratuitos o de bajo costo para personas que califiquen.",
+      "legalAidLink": "Encuentre organizaciones de asistencia legal cerca de usted",
       "privateAttorneyTitle": "Abogado Privado",
-      "privateAttorneyDesc": "Representación contratada. Puede ser costoso pero puede ofrecer atención más personalizada."
+      "privateAttorneyDesc": "Representación contratada. Puede ser costoso pero puede ofrecer atención más personalizada.",
+      "alternativeCounselTitle": "Si la oficina del defensor público no está disponible",
+      "alternativeCounselText": "Cuando un defensor público tiene un conflicto de intereses o la oficina está al límite de su capacidad, el tribunal designa en su lugar a un abogado privado de un panel local. La persona sigue recibiendo representación gratuita. El proceso es el mismo.",
+      "alternativeCounselCheck": "Consulte el sitio web del tribunal para ver una sección de «abogados designados» o «panel de nombramientos».",
+      "alternativeCounselAsk": "Pregunte directamente al secretario del tribunal. Administra el panel y sabe quién forma parte de él.",
+      "bailPreparationTitle": "Prepararse para la audiencia de fianza",
+      "bailPreparationText": "La audiencia de fianza suele ocurrir entre 24 y 48 horas después del arresto. Recopilar información antes de que comience puede ayudar al abogado a argumentar a favor de la libertad. Los registros de empleo, comprobantes de vivienda, nombres de familiares en la zona y referencias de carácter son factores relevantes.",
+      "bailPreparationLink": "Lista de verificación y plantillas para preparar la fianza",
+      "drugCaseTitle": "Si este es un caso relacionado con drogas",
+      "drugCaseText": "En casos relacionados con drogas, los tribunales suelen considerar si la persona acusada ya se inscribió en un programa de tratamiento al decidir entre el encarcelamiento y otras alternativas. Inscribirse antes de la primera comparecencia puede ser importante. El abogado puede presentar una carta del programa que confirme la inscripción.",
+      "drugCaseLink": "Guía de conexión con tratamiento: cómo inscribirse y documentarlo"
     },
     "step3": {
       "title": "Recopilar Información Importante",
@@ -4321,7 +4333,10 @@ export default {
       "keyInfo8": "Información de contacto de testigos",
       "keyInfo9": "Qué oficina presentó los cargos (no la policía — vea abajo)",
       "prosecutorNote": "La oficina que presentó los cargos no es el departamento de policía. Busque en la parte superior de cualquier documento un nombre como 'Fiscalía del Distrito,' 'Procurador Municipal' o 'Fiscal Federal.' Esto indica en qué tribunal se lleva el caso y qué programas pueden estar disponibles — información que el abogado necesitará.",
-      "prosecutorCta": "Ver glosario: Fiscal"
+      "prosecutorCta": "Ver glosario: Fiscal",
+      "toolkitPromptTitle": "¿Listo para recopilar esta información?",
+      "toolkitPromptText": "El Kit Familiar incluye un kit rellenable de información de contacto, una consulta de registros judiciales y más.",
+      "toolkitPromptButton": "Abrir kit"
     },
     "step4": {
       "title": "Entender la Fianza y la Libertad Bajo Fianza",
@@ -4348,6 +4363,8 @@ export default {
       "practicalHelp4": "Asegure documentos importantes",
       "practicalHelp5": "Administre sus asuntos mientras está detenido",
       "practicalHelp6": "Deposite dinero para llamadas telefónicas/comisaría",
+      "reentryLead": "Comience a planificar ahora la reinserción:",
+      "reentryLink": "Identificación, vivienda, empleo y derechos de voto",
       "emotionalSupportTitle": "Apoyo Emocional:",
       "emotionalSupport1": "Manténgase en contacto a través de canales aprobados",
       "emotionalSupport2": "Escriba cartas si las visitas no son posibles",
@@ -4481,6 +4498,11 @@ export default {
         "text": "Apoyar a alguien durante un largo proceso legal es agotador y estresante. Muchas familias experimentan ansiedad, presión financiera y tensión en las relaciones durante este tiempo. Los recursos de salud mental de este sitio también son para los familiares, no solo para los acusados. Buscar apoyo no es señal de rendirse.",
         "linkText": "Recursos de Salud Mental y Tratamiento"
       }
+    },
+    "toolkitCta": {
+      "title": "Ahora use el Kit Familiar",
+      "text": "Recopile información de contacto, consulte registros judiciales y haga seguimiento de lo que requiere correo certificado, todo en un solo lugar.",
+      "button": "Abrir kit"
     }
   },
   "courtLocator": {
