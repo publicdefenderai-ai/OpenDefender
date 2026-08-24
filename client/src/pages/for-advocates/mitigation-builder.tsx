@@ -16,10 +16,12 @@ import {
 import {
   Document,
   Header as DocxHeader,
+  Footer as DocxFooter,
   Paragraph,
   TextRun,
   AlignmentType,
   Packer,
+  PageNumber,
   BorderStyle,
   ShadingType,
   Table,
@@ -380,6 +382,29 @@ function createDraftWatermarkHeader(): DocxHeader {
     children: [
       new Paragraph({
         children: [createDraftWatermark()],
+      }),
+    ],
+  });
+}
+
+function createPageNumberFooter(): DocxFooter {
+  const footerTextRun = {
+    font: "Arial",
+    size: 18,
+    color: "666666",
+  };
+
+  return new DocxFooter({
+    children: [
+      new Paragraph({
+        alignment: AlignmentType.CENTER,
+        spacing: { before: 0, after: 0 },
+        children: [
+          new TextRun({ text: "Page ", ...footerTextRun }),
+          new TextRun({ children: [PageNumber.CURRENT], ...footerTextRun }),
+          new TextRun({ text: " of ", ...footerTextRun }),
+          new TextRun({ children: [PageNumber.TOTAL_PAGES], ...footerTextRun }),
+        ],
       }),
     ],
   });
@@ -834,6 +859,7 @@ function PolishPanel({ form }: { form: FormState }) {
               page: { margin: { top: 1440, bottom: 1440, left: 1440, right: 1440 } },
             },
             headers: { default: createDraftWatermarkHeader() },
+            footers: { default: createPageNumberFooter() },
             children: buildPolishDocxParagraphs(editedText, form),
           },
         ],
@@ -1239,6 +1265,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
               page: { margin: { top: 1440, bottom: 1440, left: 1440, right: 1440 } },
             },
             headers: { default: createDraftWatermarkHeader() },
+            footers: { default: createPageNumberFooter() },
             children: buildDocxParagraphs(output, form),
           },
         ],
