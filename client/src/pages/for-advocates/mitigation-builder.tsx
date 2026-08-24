@@ -572,7 +572,7 @@ function buildPolishDocxParagraphs(editedText: string, form: FormState): (Paragr
                   spacing: { after: 40 },
                   children: [
                     new TextRun({
-                      text: "AI-POLISHED DRAFT — NOT FOR FILING WITHOUT ATTORNEY REVIEW",
+                      text: "AI-POLISHED DRAFT: NOT FOR FILING WITHOUT ATTORNEY REVIEW",
                       bold: true,
                       size: 20,
                       font: "Arial",
@@ -715,7 +715,7 @@ function PolishPanel({ form }: { form: FormState }) {
           day: "numeric",
         });
         const header = [
-          "AI-POLISHED DRAFT — NOT FOR FILING WITHOUT ATTORNEY REVIEW",
+          "AI-POLISHED DRAFT: NOT FOR FILING WITHOUT ATTORNEY REVIEW",
           `Prepared: ${today}`,
           ...(form.clientName ? [`Client: ${form.clientName}`] : []),
           ...(form.caseNumber ? [`Case No.: ${form.caseNumber}`] : []),
@@ -849,7 +849,7 @@ function PolishPanel({ form }: { form: FormState }) {
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>AI-Polished Sentencing Mitigation Memorandum${clientName ? ` \u2014 ${escHtml(clientName)}` : ""}</title>
+  <title>AI-Polished Sentencing Mitigation Memorandum${clientName ? `: ${escHtml(clientName)}` : ""}</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -980,7 +980,7 @@ function PolishPanel({ form }: { form: FormState }) {
     </div>
   </div>
   <div class="draft-callout" role="note">
-    <span class="draft-label">AI-POLISHED DRAFT — Not for filing without attorney review</span>
+    <span class="draft-label">AI-POLISHED DRAFT: Not for filing without attorney review</span>
     <span class="draft-body">AI-generated. You must edit and verify every claim before use. Do not file without attorney review.</span>
   </div>
   ${bodyContent}
@@ -1280,7 +1280,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sentencing Mitigation Memorandum${clientName ? ` \u2014 ${clientName}` : ""}</title>
+  <title>Sentencing Mitigation Memorandum${clientName ? `: ${clientName}` : ""}</title>
   <style>
     /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

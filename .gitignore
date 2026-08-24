@@ -39,6 +39,11 @@ after_*.png
 *_clicked.png
 *_check_inputs.png
 
+# Playwright output (regenerated on every run; failure artifacts, not source)
+test-results/
+playwright-report/
+blob-report/
+
 # Raw scraped / intermediate data files
 scraped-*.json
 
