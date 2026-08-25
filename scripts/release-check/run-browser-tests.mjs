@@ -1,7 +1,26 @@
-import { spawn } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 
 const releasePort = "5001";
+const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 const command = process.platform === "win32" ? "npx.cmd" : "npx";
+
+const buildProcess = spawnSync(npmCommand, ["run", "build"], {
+  env: {
+    ...process.env,
+    NODE_ENV: "production",
+  },
+  stdio: "inherit",
+});
+
+if (buildProcess.error) {
+  console.error("Release build failed to start:", buildProcess.error);
+  process.exit(1);
+}
+
+if (buildProcess.status !== 0) {
+  process.exit(buildProcess.status ?? 1);
+}
+
 const testProcess = spawn(
   command,
   [
