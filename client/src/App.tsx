@@ -15,8 +15,10 @@ import { ChatLauncher } from "@/components/chat/chat-launcher";
 import { KeyboardShortcutsDialog } from "@/components/ui/keyboard-shortcuts-dialog";
 import { MobileBottomNav } from "@/components/navigation/mobile-bottom-nav";
 import { useKeyboardShortcuts } from "@/hooks/use-keyboard-shortcuts";
-import { X } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 import ChatPage from "@/pages/chat";
+import LegalGlossaryPage from "@/pages/legal-glossary";
+import DocumentSummarizerPage from "@/pages/document-summarizer";
 import "./i18n";
 
 const NotFound = lazy(() => import("@/pages/not-found"));
@@ -34,7 +36,6 @@ const FindDetained = lazy(() => import("@/pages/immigration/find-detained"));
 const KnowYourRights = lazy(() => import("@/pages/immigration/know-your-rights"));
 const RaidsToolkit = lazy(() => import("@/pages/immigration/raids-toolkit"));
 const AfterDeportation = lazy(() => import("@/pages/immigration/after-deportation"));
-const LegalGlossary = lazy(() => import("@/pages/legal-glossary"));
 const DiversionPrograms = lazy(() => import("@/pages/diversion-programs"));
 const CollateralConsequences = lazy(() => import("@/pages/collateral-consequences"));
 // RecordExpungement redirects to /support/reputation — import no longer needed
@@ -51,7 +52,6 @@ const Disclaimers = lazy(() => import("@/pages/disclaimers"));
 const Statutes = lazy(() => import("@/pages/statutes"));
 const DocumentLibrary = lazy(() => import("@/pages/document-library"));
 const Resources = lazy(() => import("@/pages/resources"));
-const DocumentSummarizerPage = lazy(() => import("@/pages/document-summarizer"));
 const LetterGeneratorPage = lazy(() => import("@/pages/letter-generator"));
 // Attorney tool pages removed from public router — all /attorney/* redirect to /directory
 const ApiDocs = lazy(() => import("@/pages/api-docs"));
@@ -107,7 +107,7 @@ function Router() {
       <Route path="/immigration-guidance/know-your-rights" component={KnowYourRights} />
       <Route path="/immigration-guidance/raids-toolkit" component={RaidsToolkit} />
       <Route path="/immigration-guidance/after-deportation" component={AfterDeportation} />
-      <Route path="/legal-glossary" component={LegalGlossary} />
+      <Route path="/legal-glossary" component={LegalGlossaryPage} />
       <Route path="/diversion-programs" component={DiversionPrograms} />
       <Route path="/record-expungement"><Redirect to="/support/reputation/eligibility" /></Route>
       <Route path="/mission-statement" component={MissionStatement} />
@@ -225,6 +225,23 @@ function BetaBanner() {
   );
 }
 
+function RouteLoading() {
+  const { t } = useTranslation();
+
+  return (
+    <div
+      className="flex min-h-[50vh] items-center justify-center bg-background px-4"
+      role="status"
+      aria-live="polite"
+    >
+      <div className="flex items-center gap-3 text-sm text-muted-foreground">
+        <Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" />
+        <span>{t("common.loading", "Loading...")}</span>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [location] = useLocation();
   useKeyboardShortcuts();
@@ -240,7 +257,7 @@ function App() {
                 <SkipNavigation />
                 <BetaBanner />
                 <main id="main-content" tabIndex={-1} className="mobile-nav-page-offset">
-                  <Suspense fallback={<div className="min-h-screen bg-background" />}>
+                  <Suspense fallback={<RouteLoading />}>
                     <AnimatePresence mode="wait">
                       <PageTransition key={location}>
                         <Router />

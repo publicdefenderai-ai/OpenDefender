@@ -103,14 +103,14 @@ export default function CourtLocator() {
       <Header />
 
       {/* Hero Section */}
-      <section className="vivid-header-teal py-16 md:py-20">
+      <section className="vivid-header-teal py-10 md:py-20">
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white">
                 {t('courtLocator.hero.title')}
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              <p className="text-base md:text-xl text-white/80 max-w-3xl mx-auto">
                 {t('courtLocator.hero.subtitle')}
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function CourtLocator() {
           {/* Search Section */}
           <ScrollReveal delay={0.2}>
             <div className="max-w-md mx-auto mb-8">
-              <div className="flex gap-3">
+              <div className="flex flex-col gap-2 sm:flex-row sm:gap-3">
                 <div className="flex-1">
                   <Input
                     type="text"
@@ -127,14 +127,14 @@ export default function CourtLocator() {
                     value={zipCode}
                     onChange={(e) => setZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
                     onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                    className="bg-white border-2 border-blue-300 text-black placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                    className="min-h-[44px] bg-white border-2 border-blue-300 text-black placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
                     data-testid="input-zip-code"
                   />
                 </div>
                 <Button
                   onClick={handleSearch}
                   disabled={isSearching || zipCode.length !== 5}
-                  className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 shadow-lg"
+                  className="min-h-[44px] bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 shadow-lg"
                   data-testid="button-search-courts"
                 >
                   {isSearching ? (
@@ -344,8 +344,8 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
     <ScrollReveal key={court.id} delay={index * 0.1}>
       <Card className="h-full hover:shadow-lg transition-all duration-300">
         <CardHeader>
-          <div className="flex items-start justify-between">
-            <div className="flex-1">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div className="min-w-0 flex-1">
               <CardTitle className="text-lg mb-2">{court.name}</CardTitle>
               <div className="flex flex-wrap gap-2 mb-2">
                 <Badge className={`${getCourtTypeColor(court.type)} text-white`}>
@@ -358,7 +358,7 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
                 )}
               </div>
             </div>
-            <div className="text-right">
+            <div className="shrink-0 text-left sm:text-right">
               <div className="text-sm text-muted-foreground mb-1">{t('courtLocator.courtCard.distance')}</div>
               <div className="font-semibold text-blue-600">
                 {court.distance} {t('courtLocator.courtCard.miles')}
@@ -420,7 +420,7 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
               <Button
                 variant="outline"
                 size="sm"
-                className="flex-1"
+                className="min-h-[44px] flex-1"
                 onClick={() => window.open(`https://maps.google.com/maps?daddr=${encodeURIComponent(court.address)}`, '_blank')}
                 data-testid={`button-directions-${court.id}`}
               >
@@ -428,10 +428,12 @@ function CourtCard({ court, index, getCourtTypeColor, getCourtTypeName, t }: {
                 {t('courtLocator.courtCard.directions')}
               </Button>
               {court.website && (
-                <Button
+                  <Button
                   variant="outline"
                   size="sm"
-                  onClick={() => window.open(court.website, '_blank')}
+                    className="min-h-[44px] min-w-[44px]"
+                    aria-label={t('courtLocator.courtCard.website')}
+                    onClick={() => window.open(court.website, '_blank')}
                   data-testid={`button-website-${court.id}`}
                 >
                   <ExternalLink className="h-3 w-3" />

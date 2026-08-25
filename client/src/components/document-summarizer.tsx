@@ -437,8 +437,8 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
   return (
     <Card className="w-full max-w-3xl mx-auto">
       <CardHeader>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div className="min-w-0 flex items-start gap-3">
             <FileText className="h-6 w-6 text-blue-600" />
             <div>
               <CardTitle>{t('privacyPolicy.documentSummarizer.tool.title')}</CardTitle>
@@ -448,7 +448,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
             </div>
           </div>
           {onClose && (
-            <Button variant="ghost" onClick={onClose}>
+            <Button variant="ghost" className="min-h-[44px] shrink-0" onClick={onClose}>
               {t('privacyPolicy.documentSummarizer.tool.close')}
             </Button>
           )}
@@ -512,7 +512,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                 </AlertDescription>
               </Alert>
 
-              <div className="flex items-start space-x-3 p-4 bg-blue-50 dark:bg-blue-950/50 rounded-lg border border-blue-200 dark:border-blue-800">
+              <div className="flex items-start gap-3 p-4 bg-blue-50 dark:bg-blue-950/50 rounded-lg border border-blue-200 dark:border-blue-800">
                 <Checkbox
                   id="consent"
                   checked={consentGiven}
@@ -526,7 +526,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               <Button
                 onClick={handleConsentContinue}
                 disabled={!consentGiven}
-                className="w-full"
+                className="w-full min-h-[44px]"
               >
                 {t('privacyPolicy.documentSummarizer.tool.continue')}
               </Button>
@@ -648,16 +648,16 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               {/* CAPTCHA verification */}
               <TurnstileCaptcha onVerify={setCaptchaToken} size="normal" />
 
-              <div className="flex gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 {!isAttorneyMode && (
-                  <Button variant="outline" onClick={handleReset} className="flex-1">
+                  <Button variant="outline" onClick={handleReset} className="min-h-[44px] flex-1">
                     {t('privacyPolicy.documentSummarizer.tool.back')}
                   </Button>
                 )}
                 <Button
                   onClick={handleSubmit}
                   disabled={!selectedFile || (captchaRequired && !captchaToken) || !!aiUnavailable}
-                  className="flex-1"
+                  className="min-h-[44px] flex-1"
                 >
                   {t('privacyPolicy.documentSummarizer.tool.summarize')}
                 </Button>
@@ -699,8 +699,8 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               className="space-y-6"
             >
               {/* Document Info Header */}
-              <div className="flex items-center justify-between p-4 bg-green-50 dark:bg-green-950/50 border border-green-200 dark:border-green-800 rounded-lg">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-start justify-between gap-3 p-4 bg-green-50 dark:bg-green-950/50 border border-green-200 dark:border-green-800 rounded-lg">
+                <div className="min-w-0 flex items-start gap-3">
                   <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-400" />
                   <div>
                     <p className="font-medium text-green-800 dark:text-green-200">Summary Generated</p>
@@ -944,7 +944,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                           onKeyDown={e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); handleChatSubmit(); } }}
                           placeholder="Ask something specific about this document…"
                           disabled={isChatLoading || !!aiUnavailable}
-                          className="flex-1 text-sm border border-input bg-background rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1 disabled:opacity-50"
+                          className="min-h-[44px] flex-1 text-sm border border-input bg-background rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-1 disabled:opacity-50"
                           maxLength={600}
                           aria-label="Ask a question about the document"
                         />
@@ -952,7 +952,7 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
                           onClick={handleChatSubmit}
                           disabled={!chatQuestion.trim() || isChatLoading || !!aiUnavailable || !!(captchaRequired && !chatCaptchaToken)}
                           size="sm"
-                          className="px-3"
+                          className="min-h-[44px] min-w-[44px] px-3"
                           aria-label="Send question"
                         >
                           {isChatLoading ? (
@@ -995,12 +995,12 @@ export function DocumentSummarizer({ isAttorneyMode = false, onClose }: Document
               </div>
 
               {/* Action Buttons */}
-              <div className="flex gap-3">
-                <Button onClick={handleDownloadSummary} variant="outline" className="flex-1">
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button onClick={handleDownloadSummary} variant="outline" className="min-h-[44px] flex-1">
                   <Download className="h-4 w-4 mr-2" />
                   {t('privacyPolicy.documentSummarizer.tool.downloadSummary')}
                 </Button>
-                <Button onClick={handleReset} className="flex-1">
+                <Button onClick={handleReset} className="min-h-[44px] flex-1">
                   {t('privacyPolicy.documentSummarizer.tool.another')}
                 </Button>
               </div>

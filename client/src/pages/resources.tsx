@@ -303,6 +303,14 @@ export default function Resources() {
               <Card
                 className="cursor-pointer group hover:shadow-md hover:-translate-y-0.5 transition-all border-indigo-200 dark:border-indigo-800/60 bg-indigo-50/60 dark:bg-indigo-900/10"
                 onClick={() => setShowPublicDefenderModal(true)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setShowPublicDefenderModal(true);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
                 data-testid="card-public-defender"
               >
                 <CardContent className="p-5">
@@ -323,6 +331,14 @@ export default function Resources() {
               <Card
                 className="cursor-pointer group hover:shadow-md hover:-translate-y-0.5 transition-all border-rose-200 dark:border-rose-800/60 bg-rose-50/60 dark:bg-rose-900/10"
                 onClick={() => setShowLegalAidModal(true)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    setShowLegalAidModal(true);
+                  }
+                }}
+                role="button"
+                tabIndex={0}
                 data-testid="card-legal-aid"
               >
                 <CardContent className="p-5">
@@ -467,7 +483,7 @@ export default function Resources() {
             <DialogTitle>{t('home.publicDefenderSearch.title')}</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 sm:flex-row">
               <Input
                 type="text"
                 placeholder={t('home.publicDefenderSearch.inputPlaceholder')}
@@ -475,10 +491,10 @@ export default function Resources() {
                 onChange={(e) => setPdZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
                 onKeyPress={(e) => e.key === 'Enter' && handlePublicDefenderSearch()}
                 maxLength={5}
-                className="flex-1"
+                className="min-h-[44px] flex-1"
                 data-testid="input-pd-zip-code-resources"
               />
-              <Button onClick={handlePublicDefenderSearch} disabled={pdSearching} data-testid="button-search-pd-resources">
+              <Button className="min-h-[44px] sm:w-auto" onClick={handlePublicDefenderSearch} disabled={pdSearching} data-testid="button-search-pd-resources">
                 <Search className="h-4 w-4 mr-2" />
                 {pdSearching ? t('home.publicDefenderSearch.searching') : t('home.publicDefenderSearch.searchButton')}
               </Button>
@@ -508,7 +524,7 @@ export default function Resources() {
             <DialogTitle>{t('home.legalAidSearch.title')}</DialogTitle>
           </DialogHeader>
           <div className="space-y-4">
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 sm:flex-row">
               <Input
                 type="text"
                 placeholder={t('home.legalAidSearch.inputPlaceholder')}
@@ -516,10 +532,10 @@ export default function Resources() {
                 onChange={(e) => setLaZipCode(e.target.value.replace(/\D/g, '').slice(0, 5))}
                 onKeyPress={(e) => e.key === 'Enter' && handleLegalAidSearch()}
                 maxLength={5}
-                className="flex-1"
+                className="min-h-[44px] flex-1"
                 data-testid="input-la-zip-code-resources"
               />
-              <Button onClick={handleLegalAidSearch} disabled={laSearching} data-testid="button-search-la-resources">
+              <Button className="min-h-[44px] sm:w-auto" onClick={handleLegalAidSearch} disabled={laSearching} data-testid="button-search-la-resources">
                 <Search className="h-4 w-4 mr-2" />
                 {laSearching ? t('home.legalAidSearch.searching') : t('home.legalAidSearch.searchButton')}
               </Button>

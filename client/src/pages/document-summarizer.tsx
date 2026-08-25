@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { FileSearch, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
@@ -7,7 +8,10 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { DocumentSummarizer } from "@/components/document-summarizer";
+
+const DocumentSummarizer = lazy(() =>
+  import("@/components/document-summarizer").then(({ DocumentSummarizer }) => ({ default: DocumentSummarizer }))
+);
 
 export default function DocumentSummarizerPage() {
   useScrollToTop();
@@ -55,7 +59,19 @@ export default function DocumentSummarizerPage() {
           </div>
 
           {/* Document Summarizer Component */}
-          <DocumentSummarizer isAttorneyMode={false} />
+          <Suspense
+            fallback={
+              <div
+                className="flex min-h-56 items-center justify-center rounded-lg border border-border bg-card px-4"
+                role="status"
+                aria-live="polite"
+              >
+                <span className="text-sm text-muted-foreground">{t("common.loading", "Loading...")}</span>
+              </div>
+            }
+          >
+            <DocumentSummarizer isAttorneyMode={false} />
+          </Suspense>
         </div>
       </section>
 

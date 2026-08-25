@@ -170,7 +170,7 @@ export default function StatutesPage() {
         </div>
 
         <div className="mb-6">
-          <div className="flex gap-4 mb-4">
+          <div className="flex flex-col gap-3 mb-4 sm:flex-row">
             <div className="flex-1">
               <Input
                 placeholder="Search by law name, citation, or keyword..."
@@ -180,7 +180,7 @@ export default function StatutesPage() {
                 data-testid="input-search-statutes"
               />
             </div>
-            <Button onClick={handleSearch} data-testid="button-search">
+            <Button className="min-h-[44px] sm:w-auto" onClick={handleSearch} data-testid="button-search">
               <Search className="h-4 w-4 mr-2" />
               Search
             </Button>
@@ -299,18 +299,19 @@ export default function StatutesPage() {
                   Enter any statute citation to retrieve the full official text directly from OpenLaws. 
                   Try formats like <span className="font-mono text-xs bg-muted px-1 py-0.5 rounded">Cal. Penal Code § 242</span>, <span className="font-mono text-xs bg-muted px-1 py-0.5 rounded">18 U.S.C. § 1343</span>, or <span className="font-mono text-xs bg-muted px-1 py-0.5 rounded">Tex. Penal Code § 22.01</span>.
                 </p>
-                <div className="flex gap-3">
+                <div className="flex flex-col gap-3 sm:flex-row">
                   <Input
                     placeholder="e.g. Cal. Penal Code § 242"
                     value={citationInput}
                     onChange={(e) => setCitationInput(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && handleCitationLookup()}
                     data-testid="input-citation-lookup"
-                    className="flex-1"
+                    className="min-h-[44px] flex-1"
                   />
                   <Button
                     onClick={handleCitationLookup}
                     disabled={!citationInput.trim()}
+                    className="min-h-[44px] sm:w-auto"
                     data-testid="button-citation-lookup"
                   >
                     <Zap className="h-4 w-4 mr-2" />

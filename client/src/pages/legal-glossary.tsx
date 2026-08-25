@@ -121,7 +121,7 @@ export default function LegalGlossary() {
       <section className="py-12">
         <div className="max-w-6xl mx-auto px-4">
           <ScrollReveal>
-            <div className="flex items-center gap-4 mb-8">
+            <div className="flex flex-wrap items-center gap-3 mb-8">
               <Link href="/">
                 <Button variant="outline" size="sm">
                   <ArrowLeft className="h-4 w-4 mr-2" />
@@ -164,7 +164,7 @@ export default function LegalGlossary() {
                           variant={selectedLetter === letter ? "default" : "outline"}
                           size="sm"
                           onClick={() => setSelectedLetter(selectedLetter === letter ? "" : letter)}
-                          className="w-10 h-10 p-0 min-w-[2.5rem]"
+                           className="w-10 h-10 min-h-[44px] p-0 min-w-[2.5rem]"
                           data-testid={`button-letter-${letter}`}
                         >
                           {letter.toUpperCase()}

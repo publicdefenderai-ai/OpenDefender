@@ -109,4 +109,45 @@ test.describe("intent navigation and accessibility", () => {
     await expect(combobox).toHaveAttribute("aria-activedescendant", /search-result-\d+/);
     await expect(combobox).toBeFocused();
   });
+
+  test("mobile resource tools render their initial states without overflow", async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 800 });
+
+    await page.goto("/legal-glossary");
+    await expect(page.getByRole("heading", { name: "Legal Glossary" })).toBeVisible();
+    await expect(page.getByPlaceholder(/search legal terms/i)).toBeVisible();
+
+    await page.goto("/document-summarizer");
+    await expect(page.getByRole("heading", { name: "Document Summarizer" }).first()).toBeVisible();
+    await expect(page.getByRole("checkbox")).toBeVisible();
+    await expect(page.getByRole("button", { name: /continue/i })).toBeDisabled();
+
+    const dimensions = await page.evaluate(() => ({
+      bodyWidth: document.body.scrollWidth,
+      documentWidth: document.documentElement.clientWidth,
+    }));
+    expect(dimensions.bodyWidth).toBeLessThanOrEqual(360);
+    expect(dimensions.bodyWidth).toBe(dimensions.documentWidth);
+  });
+
+  test("mobile legal-help ZIP dialogs stack controls and validate short ZIPs locally", async ({ page }) => {
+    await page.setViewportSize({ width: 360, height: 800 });
+    await page.goto("/legal-aid");
+
+    await page.getByTestId("card-public-defender").click();
+    const dialog = page.getByRole("dialog");
+    await expect(dialog).toBeVisible();
+
+    const zipInput = page.getByTestId("input-pd-zip-code-resources");
+    await zipInput.fill("12");
+    await page.getByTestId("button-search-pd-resources").click();
+    await expect(dialog).toContainText(/five digit|5-digit|zip/i);
+
+    const dimensions = await page.evaluate(() => ({
+      bodyWidth: document.body.scrollWidth,
+      documentWidth: document.documentElement.clientWidth,
+    }));
+    expect(dimensions.bodyWidth).toBeLessThanOrEqual(360);
+    expect(dimensions.bodyWidth).toBe(dimensions.documentWidth);
+  });
 });

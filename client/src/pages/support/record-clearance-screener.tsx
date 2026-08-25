@@ -470,11 +470,11 @@ export default function RecordClearanceScreener() {
           {!showResult ? (
             <ScrollReveal>
               {/* Progress indicator */}
-              <div className="flex items-center gap-2 mb-8">
+              <div className="flex flex-wrap items-center gap-2 mb-8">
                 {[1, 2, 3, 4].map((s) => (
                   <div key={s} className="flex items-center gap-2">
                     <div
-                      className={`h-8 w-8 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${
+                      className={`h-8 w-8 shrink-0 rounded-full flex items-center justify-center text-sm font-semibold transition-colors ${
                         s === step
                           ? "bg-amber-500 text-white"
                           : s < step
@@ -509,7 +509,7 @@ export default function RecordClearanceScreener() {
                     <select
                       value={answers.state}
                       onChange={(e) => handleStateChange(e.target.value)}
-                      className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                      className="w-full min-h-[44px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
                     >
                       <option value="">{t("screener.step1.placeholder")}</option>
                       {US_STATES.map((s) => (
@@ -606,12 +606,12 @@ export default function RecordClearanceScreener() {
               )}
 
               {/* Navigation */}
-              <div className="flex items-center justify-between mt-6">
+              <div className="flex flex-col-reverse gap-3 mt-6 sm:flex-row sm:items-center sm:justify-between">
                 <Button
                   variant="outline"
                   onClick={handleBack}
                   disabled={step === 1}
-                  className="gap-2"
+                  className="min-h-[44px] gap-2 sm:w-auto"
                 >
                   <ChevronLeft className="h-4 w-4" />
                   {t("screener.back")}
@@ -619,7 +619,7 @@ export default function RecordClearanceScreener() {
                 <Button
                   onClick={handleNext}
                   disabled={!canProceed()}
-                  className="gap-2 bg-amber-600 hover:bg-amber-700 text-white"
+                  className="min-h-[44px] gap-2 bg-amber-600 hover:bg-amber-700 text-white sm:w-auto"
                 >
                   {step === totalSteps ? t("screener.seeResult") : t("screener.next")}
                   {step < totalSteps && <ChevronRight className="h-4 w-4" />}
@@ -629,15 +629,15 @@ export default function RecordClearanceScreener() {
           ) : (
             <ScrollReveal>
               {result && <ResultCard result={result} state={answers.state} recordType={answers.recordType} />}
-              <div className="flex items-center justify-between mt-6">
-                <Button variant="outline" onClick={handleBack} className="gap-2">
+              <div className="flex flex-col-reverse gap-3 mt-6 sm:flex-row sm:items-center sm:justify-between">
+                <Button variant="outline" onClick={handleBack} className="min-h-[44px] gap-2 sm:w-auto">
                   <ChevronLeft className="h-4 w-4" />
                   {t("screener.back")}
                 </Button>
                 <Button
                   variant="outline"
                   onClick={handleReset}
-                  className="gap-2"
+                  className="min-h-[44px] gap-2 sm:w-auto"
                 >
                   {t("screener.startOver")}
                 </Button>
