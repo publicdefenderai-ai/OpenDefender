@@ -268,15 +268,18 @@ const CHECKLIST_ITEMS: ChecklistItem[] = [
   {
     id: "M-7",
     risk: "medium",
-    title: "Jurisdiction Procedure Deadlines (Speedy Trial / Discovery / Arraignment) — New",
+    title: "Jurisdiction Procedure Deadlines and State-Specific Timeline Guidance",
     description:
-      "shared/jurisdiction-procedure-rules.ts feeds arraignment, bail-hearing, speedy-trial, and discovery-deadline facts directly into the AI guidance prompt as authoritative fact. This cycle's re-verification of the 9 highest-population jurisdictions (federal, CA, NY, TX, IL, PA, OH, WA, GA) found real substantive errors, not just staleness, in 3 of them (CA, IL, WA). The other 43 jurisdictions have not had an equivalent primary-source pass.",
+      "shared/jurisdiction-procedure-rules.ts feeds arraignment, bail-hearing, speedy-trial, preliminary-hearing, and discovery-deadline facts directly into the AI guidance prompt as authoritative or qualified facts. Review must cover the newly added state deadline data, batch-2 discovery characterizations, the five territory records, and South Carolina's preliminary-hearing demand language. This cycle's re-verification of the 9 highest-population jurisdictions (federal, CA, NY, TX, IL, PA, OH, WA, GA) found real substantive errors, not just staleness, in 3 of them (CA, IL, WA).",
     sourceFiles: [
-      { label: "jurisdiction-procedure-rules.ts", path: "shared/jurisdiction-procedure-rules.ts", note: "Header comment (lines 1–44) documents verification status per jurisdiction" },
+      { label: "jurisdiction-procedure-rules.ts", path: "shared/jurisdiction-procedure-rules.ts", note: "57 jurisdiction records; header documents verification status, territory coverage, and estimate fields" },
       { label: "claude-guidance.ts", path: "server/services/claude-guidance.ts", note: "buildJurisdictionContextBlock — where this enters the AI prompt" },
+      { label: "guidance-dashboard.tsx", path: "client/src/components/legal/guidance-dashboard.tsx", note: "Timeline, deadline cards, and estimate-warning presentation" },
+      { label: "guidance-print-plan.tsx", path: "client/src/components/legal/guidance-print-plan.tsx", note: "Timeline and deadline content used by print/PDF output" },
+      { label: "evals-coverage.md", path: "docs/evals-coverage.md", note: "State coverage matrix and batch-2 verification notes" },
     ],
     legalQuestion:
-      "For a sample of jurisdictions not already re-verified this cycle (suggested: 3–5 high-traffic or high-risk states), are the arraignment, speedy-trial, and discovery-deadline figures still accurate against current statute/rule text? Should the maintenance process require documented sourcing for every future lastVerified change, the way the 9 corrected entries now do?",
+      "For a sample of jurisdictions not already re-verified this cycle (suggested: 3–5 high-traffic or high-risk states), are the arraignment, speedy-trial, preliminary-hearing, and discovery-deadline figures still accurate against current statute/rule text? Are the newly added state entries and batch-2 discovery characterizations legally sound? Are the territory rules appropriately qualified and clearly distinguished from state rules? Is South Carolina's preliminary-hearing demand language accurate, including when a demand is required and what deadline applies? Should the maintenance process require documented sourcing for every future lastVerified change, the way the individually verified entries now do?",
   },
 ];
 

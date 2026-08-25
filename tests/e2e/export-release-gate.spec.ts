@@ -9,7 +9,7 @@ async function readDownload(download: Awaited<ReturnType<import("@playwright/tes
   return Buffer.concat(chunks);
 }
 
-function extractDocxDocumentXml(contents: Buffer): string {
+function extractDocxEntry(contents: Buffer, entryName: string): Buffer {
   const localFileHeaderSignature = 0x04034b50;
   let offset = 0;
 
@@ -26,17 +26,21 @@ function extractDocxDocumentXml(contents: Buffer): string {
     const dataStart = fileNameStart + fileNameLength + extraFieldLength;
     const dataEnd = dataStart + compressedSize;
 
-    if (fileName === "word/document.xml") {
+    if (fileName === entryName) {
       const compressedData = contents.subarray(dataStart, dataEnd);
-      if (compressionMethod === 0) return compressedData.toString("utf8");
-      if (compressionMethod === 8) return inflateRawSync(compressedData).toString("utf8");
+      if (compressionMethod === 0) return compressedData;
+      if (compressionMethod === 8) return inflateRawSync(compressedData);
       throw new Error(`Unsupported ZIP compression method: ${compressionMethod}`);
     }
 
     offset = dataEnd;
   }
 
-  throw new Error("DOCX archive did not contain word/document.xml");
+  throw new Error(`DOCX archive did not contain ${entryName}`);
+}
+
+function extractDocxXml(contents: Buffer, entryName: string): string {
+  return extractDocxEntry(contents, entryName).toString("utf8");
 }
 
 test.describe("browser export release gate", () => {
@@ -72,7 +76,9 @@ test.describe("browser export release gate", () => {
         body: JSON.stringify({ required: false, siteKey: null }),
       });
     });
+    let polishRequestCount = 0;
     await page.route("**/api/mitigation/polish", async (route) => {
+      polishRequestCount += 1;
       await route.fulfill({
         status: 200,
         contentType: "application/json",
@@ -99,10 +105,17 @@ test.describe("browser export release gate", () => {
     const structuredDocxContents = await readDownload(await structuredDownload.createReadStream());
     expect(structuredDocxContents.subarray(0, 2).toString()).toBe("PK");
     expect(structuredDocxContents.length).toBeGreaterThan(100);
-    const structuredDocumentXml = extractDocxDocumentXml(structuredDocxContents);
+    const structuredDocumentXml = extractDocxXml(structuredDocxContents, "word/document.xml");
+    const structuredHeaderXml = extractDocxXml(structuredDocxContents, "word/header1.xml");
+    const structuredFooterXml = extractDocxXml(structuredDocxContents, "word/footer1.xml");
     expect(structuredDocumentXml).toContain(caseNumber);
     expect(structuredDocumentXml).toContain("Release Gate Test");
     expect(structuredDocumentXml).toContain("Bail hearing");
+    expect(structuredDocumentXml).toContain("DRAFT");
+    expect(structuredHeaderXml).toContain("Diagonal DRAFT watermark");
+    expect(structuredHeaderXml).toContain('behindDoc="1"');
+    expect(structuredFooterXml).toContain("PAGE");
+    expect(structuredFooterXml).toContain("NUMPAGES");
 
     await page.getByRole("button", {
       name: "Print or save as PDF: opens browser print dialog",
@@ -122,8 +135,16 @@ test.describe("browser export release gate", () => {
     expect(structuredPrintDocument).toContain(">Bail hearing<");
     expect(structuredPrintDocument).toContain("grid-template-columns: max-content minmax(0, 1fr)");
     expect(structuredPrintDocument).toContain("overflow-wrap: anywhere");
+    expect(structuredPrintDocument).toContain('content: "DRAFT";');
+    expect(structuredPrintDocument).toContain('content: "Page " counter(page) " of " counter(pages);');
 
-    await page.getByRole("button", { name: "Generate narrative", exact: true }).click();
+    const polishButton = page.getByRole("button", { name: "Generate narrative", exact: true });
+    await polishButton.click();
+    await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(polishButton).toBeHidden();
+    const cooldownButton = page.getByRole("button", { name: /Please wait/ });
+    await expect(cooldownButton).toBeVisible();
+    await expect(cooldownButton).toBeDisabled();
     await expect(page.getByRole("checkbox")).toBeVisible();
     await page.getByRole("checkbox").check();
 
@@ -134,10 +155,17 @@ test.describe("browser export release gate", () => {
     const polishedDocxContents = await readDownload(await polishedDownload.createReadStream());
     expect(polishedDocxContents.subarray(0, 2).toString()).toBe("PK");
     expect(polishedDocxContents.length).toBeGreaterThan(100);
-    const polishedDocumentXml = extractDocxDocumentXml(polishedDocxContents);
+    const polishedDocumentXml = extractDocxXml(polishedDocxContents, "word/document.xml");
+    const polishedHeaderXml = extractDocxXml(polishedDocxContents, "word/header1.xml");
+    const polishedFooterXml = extractDocxXml(polishedDocxContents, "word/footer1.xml");
     expect(polishedDocumentXml).toContain(caseNumber);
     expect(polishedDocumentXml).toContain("Release Gate Test");
     expect(polishedDocumentXml).toContain("Bail hearing");
+    expect(polishedDocumentXml).toContain("AI-POLISHED DRAFT");
+    expect(polishedHeaderXml).toContain("Diagonal DRAFT watermark");
+    expect(polishedHeaderXml).toContain('behindDoc="1"');
+    expect(polishedFooterXml).toContain("PAGE");
+    expect(polishedFooterXml).toContain("NUMPAGES");
 
     await page.getByRole("button", {
       name: "Print or save as PDF: opens browser print dialog",
@@ -167,5 +195,7 @@ test.describe("browser export release gate", () => {
     expect(printDocument).toContain(">Bail hearing<");
     expect(printDocument).toContain("grid-template-columns: max-content minmax(0, 1fr)");
     expect(printDocument).toContain("overflow-wrap: anywhere");
+    expect(printDocument).toContain('content: "DRAFT";');
+    expect(printDocument).toContain('content: "Page " counter(page) " of " counter(pages);');
   });
 });
