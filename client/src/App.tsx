@@ -207,9 +207,9 @@ function BetaBanner() {
           <span className="shrink-0 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
             {t('beta.label')}
           </span>
-          <p className="text-sm text-muted-foreground truncate sm:whitespace-normal">
+          <p className="min-w-0 max-w-full overflow-hidden text-sm text-muted-foreground truncate sm:whitespace-normal">
             <span className="hidden sm:inline">{t('beta.messageFull')}</span>
-            <span className="sm:hidden">{t('beta.messageShort')}</span>
+            <span className="sm:hidden block truncate">{t('beta.messageShort')}</span>
           </p>
         </div>
         <button

@@ -9,7 +9,7 @@
     "test:e2e:release": "node scripts/release-check/run-browser-tests.mjs",
     "test:live:guardrail": "tsx tests/e2e/mitigation-live-guardrail.ts",
     "dev": "NODE_ENV=development tsx server/index.ts",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
+    "build": "NODE_ENV=production vite build && NODE_ENV=production esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "start:release-check": "node scripts/release-check/start-production.mjs",
     "check": "tsc",

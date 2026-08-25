@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   MapPin,
@@ -230,6 +230,7 @@ export default function Resources() {
   const [pdOffices, setPdOffices] = useState<PublicDefenderOffice[]>([]);
   const [pdError, setPdError] = useState("");
   const [pdHasSearched, setPdHasSearched] = useState(false);
+  const publicDefenderTriggerRef = useRef<HTMLDivElement>(null);
 
   // Legal Aid Organizations search state
   const [showLegalAidModal, setShowLegalAidModal] = useState(false);
@@ -238,6 +239,7 @@ export default function Resources() {
   const [laOrganizations, setLaOrganizations] = useState<LegalAidOrganization[]>([]);
   const [laError, setLaError] = useState("");
   const [laHasSearched, setLaHasSearched] = useState(false);
+  const legalAidTriggerRef = useRef<HTMLDivElement>(null);
 
   const handlePublicDefenderSearch = async () => {
     if (!pdZipCode.trim() || pdZipCode.length !== 5) {
@@ -311,6 +313,7 @@ export default function Resources() {
                 }}
                 role="button"
                 tabIndex={0}
+                ref={publicDefenderTriggerRef}
                 data-testid="card-public-defender"
               >
                 <CardContent className="p-5">
@@ -339,6 +342,7 @@ export default function Resources() {
                 }}
                 role="button"
                 tabIndex={0}
+                ref={legalAidTriggerRef}
                 data-testid="card-legal-aid"
               >
                 <CardContent className="p-5">
@@ -477,7 +481,13 @@ export default function Resources() {
       <Footer />
 
       {/* Public Defender Search Modal — unchanged */}
-      <Dialog open={showPublicDefenderModal} onOpenChange={setShowPublicDefenderModal}>
+      <Dialog
+        open={showPublicDefenderModal}
+        onOpenChange={(open) => {
+          setShowPublicDefenderModal(open);
+          if (!open) requestAnimationFrame(() => publicDefenderTriggerRef.current?.focus());
+        }}
+      >
         <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t('home.publicDefenderSearch.title')}</DialogTitle>
@@ -518,7 +528,13 @@ export default function Resources() {
       </Dialog>
 
       {/* Legal Aid Search Modal — unchanged */}
-      <Dialog open={showLegalAidModal} onOpenChange={setShowLegalAidModal}>
+      <Dialog
+        open={showLegalAidModal}
+        onOpenChange={(open) => {
+          setShowLegalAidModal(open);
+          if (!open) requestAnimationFrame(() => legalAidTriggerRef.current?.focus());
+        }}
+      >
         <DialogContent className="max-w-[95vw] md:max-w-3xl max-h-[80vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{t('home.legalAidSearch.title')}</DialogTitle>

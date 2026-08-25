@@ -1,4 +1,35 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
+
+const MOBILE_LANGUAGES = ["en", "es", "zh"] as const;
+const PHONE_VIEWPORTS = [
+  { width: 390, height: 844, name: "portrait" },
+  { width: 667, height: 375, name: "narrow landscape" },
+] as const;
+
+async function expectNoHorizontalOverflow(page: Page, width: number) {
+  // Let route transition animations finish before measuring transformed bounds.
+  await page.waitForTimeout(500);
+  const dimensions = await page.evaluate(() => {
+    const viewportWidth = window.innerWidth;
+    const overflowing = Array.from(document.querySelectorAll<HTMLElement>("body *"))
+      .map((element) => {
+        const rect = element.getBoundingClientRect();
+        return { tag: element.tagName, className: element.className, right: Math.round(rect.right), left: Math.round(rect.left) };
+      })
+      .filter(({ right, left }) => right > viewportWidth + 1 || left < -1)
+      .sort((a, b) => b.right - a.right)
+      .slice(0, 3);
+
+    return {
+      bodyWidth: document.body.scrollWidth,
+      documentWidth: document.documentElement.clientWidth,
+      viewportWidth,
+      overflowing,
+    };
+  });
+  expect(dimensions.bodyWidth, `${page.url()} overflow details: ${JSON.stringify(dimensions.overflowing)}`).toBeLessThanOrEqual(width);
+  expect(dimensions.bodyWidth).toBeLessThanOrEqual(dimensions.documentWidth);
+}
 
 test.describe("intent navigation and accessibility", () => {
   test("home path cards have no nested interactive controls", async ({ page }) => {
@@ -54,7 +85,19 @@ test.describe("intent navigation and accessibility", () => {
 
     const main = page.locator("#main-content");
     await expect(main).toHaveClass(/mobile-nav-page-offset/);
-    await expect(page.locator('[data-testid="chat-launcher"]')).toHaveCount(1);
+    const mobileNav = page.getByRole("navigation", { name: "Mobile navigation" });
+    const launcher = page.locator('[data-testid="chat-launcher"]');
+    await expect(launcher).toHaveCount(1);
+    await expect(mobileNav).toHaveCSS("position", "fixed");
+
+    const viewport = page.viewportSize();
+    const navBox = await mobileNav.boundingBox();
+    const launcherBox = await launcher.boundingBox();
+    expect(viewport).not.toBeNull();
+    expect(navBox).not.toBeNull();
+    expect(launcherBox).not.toBeNull();
+    expect(navBox!.y + navBox!.height).toBeCloseTo(viewport!.height, 0);
+    expect(launcherBox!.y + launcherBox!.height).toBeLessThan(navBox!.y);
   });
 
   test("mobile chat initializes its welcome prompt without update-loop errors", async ({ page }) => {
@@ -138,16 +181,75 @@ test.describe("intent navigation and accessibility", () => {
     const dialog = page.getByRole("dialog");
     await expect(dialog).toBeVisible();
 
+    await page.keyboard.press("Escape");
+    await expect(dialog).toBeHidden();
+    await expect(page.getByTestId("card-public-defender")).toBeFocused();
+    await page.getByTestId("card-public-defender").click();
+    await expect(dialog).toBeVisible();
+
     const zipInput = page.getByTestId("input-pd-zip-code-resources");
     await zipInput.fill("12");
     await page.getByTestId("button-search-pd-resources").click();
     await expect(dialog).toContainText(/five digit|5-digit|zip/i);
 
-    const dimensions = await page.evaluate(() => ({
-      bodyWidth: document.body.scrollWidth,
-      documentWidth: document.documentElement.clientWidth,
-    }));
-    expect(dimensions.bodyWidth).toBeLessThanOrEqual(360);
-    expect(dimensions.bodyWidth).toBe(dimensions.documentWidth);
+    await expectNoHorizontalOverflow(page, 360);
+  });
+
+  test("mobile release matrix covers supported languages and both phone orientations", async ({ page }) => {
+    test.setTimeout(180_000);
+    await page.goto("/");
+
+    const layoutRoutes = [
+      "/legal-glossary",
+      "/document-summarizer",
+      "/immigration-guidance",
+      "/statutes",
+      "/support/reputation/eligibility",
+    ];
+
+    for (const language of MOBILE_LANGUAGES) {
+      await page.evaluate((lng) => localStorage.setItem("i18nextLng", lng), language);
+      await page.setViewportSize(PHONE_VIEWPORTS[0]);
+
+      for (const route of layoutRoutes) {
+        await page.goto(route);
+        await expect(page.locator("main h1").first()).toBeVisible({ timeout: 15_000 });
+        await expectNoHorizontalOverflow(page, PHONE_VIEWPORTS[0].width);
+      }
+    }
+
+    await page.evaluate(() => localStorage.setItem("i18nextLng", "en"));
+    for (const viewport of PHONE_VIEWPORTS) {
+      await page.setViewportSize(viewport);
+      for (const route of layoutRoutes) {
+        await page.goto(route);
+        await expect(page.locator("main h1").first()).toBeVisible({ timeout: 15_000 });
+        await expectNoHorizontalOverflow(page, viewport.width);
+      }
+    }
+  });
+
+  test("record-clearance screener keeps incomplete, progressing, result, and reset states usable", async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto("/support/reputation/eligibility");
+
+    const next = page.getByRole("button", { name: "Next" });
+    await expect(next).toBeDisabled();
+    await page.locator("select").selectOption("CA");
+    await expect(next).toBeEnabled();
+    await next.click();
+
+    await page.getByRole("button", { name: "Misdemeanor conviction" }).click();
+    await page.getByRole("button", { name: "Next" }).click();
+    await page.getByRole("button", { name: "More than 7 years ago" }).click();
+    await page.getByRole("button", { name: "Next" }).click();
+    await page.getByRole("button", { name: "Yes, everything is complete" }).click();
+    await page.getByRole("button", { name: "See My Result" }).click();
+
+    await expect(page.getByText(/may be eligible|may apply|not eligible/i).first()).toBeVisible();
+    await expect(page.getByRole("button", { name: "Start Over" })).toBeVisible();
+    await page.getByRole("button", { name: "Start Over" }).click();
+    await expect(page.getByRole("button", { name: "Next" })).toBeDisabled();
+    await expectNoHorizontalOverflow(page, 390);
   });
 });
