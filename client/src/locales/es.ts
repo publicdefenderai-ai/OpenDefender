@@ -5397,7 +5397,7 @@ export default {
     "validation": {
       "sourcePending": "La orientación principal está lista. Las verificaciones opcionales de fuentes aún están en curso.",
       "sourceComplete": "La orientación principal está lista. Las verificaciones opcionales de fuentes se incluyen cuando están disponibles.",
-      "sourceUnavailable": "La orientación principal está lista. Las verificaciones opcionales de fuentes no estuvieron disponibles."
+      "sourceUnavailable": "Algunos detalles de verificación opcionales no están disponibles en este momento; la hoja de ruta principal no se ve afectada."
     }
   },
   "chat": {

@@ -5397,7 +5397,7 @@ export default {
     "validation": {
       "sourcePending": "核心指导已准备好。可选的来源核查仍在进行。",
       "sourceComplete": "核心指导已准备好。可选的来源核查会在可用时显示。",
-      "sourceUnavailable": "核心指导已准备好。可选的来源核查暂时无法使用。"
+      "sourceUnavailable": "部分可选的核验信息暂时无法使用；主要指引不受影响。"
     }
   },
   "chat": {

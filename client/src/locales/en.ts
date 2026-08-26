@@ -5391,7 +5391,7 @@ export default {
     "validation": {
       "sourcePending": "Core guidance is ready. Optional source checks are still running.",
       "sourceComplete": "Core guidance is ready. Optional source checks are included where available.",
-      "sourceUnavailable": "Core guidance is ready. Optional source checks were unavailable."
+      "sourceUnavailable": "Some optional verification details are unavailable right now; the main roadmap is unaffected."
     }
   },
   "chat": {

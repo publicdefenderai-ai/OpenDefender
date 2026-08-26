@@ -1224,16 +1224,17 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                 `This guidance is based on ${(guidance.caseData?.jurisdiction ?? '').toUpperCase()} criminal statutes and publicly available legal information. For your specific situation, we recommend speaking with a public defender or legal aid attorney.`
               )}
             </p>
-            {guidance.validation.sourceEnrichment && (
+            {guidance.validation.sourceEnrichment?.status === 'unavailable' && (
               <p
-                className="mt-2 text-xs text-slate-500 dark:text-slate-400"
+                className="mt-2 text-xs text-muted-foreground"
                 data-testid="text-source-enrichment-status"
+                role="status"
+                aria-live="polite"
               >
-                {guidance.validation.sourceEnrichment.status === 'pending'
-                  ? t('guidance.validation.sourcePending', 'Core guidance is ready. Optional source checks are still running.')
-                  : guidance.validation.sourceEnrichment.status === 'unavailable'
-                    ? t('guidance.validation.sourceUnavailable', 'Core guidance is ready. Optional source checks were unavailable.')
-                    : t('guidance.validation.sourceComplete', 'Core guidance is ready. Optional source checks are included where available.')}
+                {t(
+                  'guidance.validation.sourceUnavailable',
+                  'Some optional verification details are unavailable right now; the main roadmap is unaffected.'
+                )}
               </p>
             )}
             
