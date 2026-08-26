@@ -138,7 +138,7 @@ export default function QuickReference() {
         currentPage={t("quickRef.title", "Quick-Reference Cards")}
       />
 
-      <section className="vivid-header py-10 md:py-14">
+      <section className="vivid-header py-10 md:py-14 print:hidden">
         <div className="max-w-5xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">

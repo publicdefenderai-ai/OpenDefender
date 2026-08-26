@@ -1403,7 +1403,7 @@ a:focus-visible,
 }
 
 @media print {
-  header, footer, nav, .print\\:hidden,
+  header, footer, nav, .print\:hidden,
   [class*="chat-launcher"], [class*="mobile-bottom-nav"],
   [class*="beta-banner"] {
     display: none !important;

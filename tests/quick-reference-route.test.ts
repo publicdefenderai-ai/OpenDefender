@@ -31,6 +31,7 @@ describe("Quick Reference route", () => {
 
   it("keeps the print action and printable card section on the canonical destination", () => {
     const pageSource = read("client/src/pages/quick-reference.tsx");
+    const stylesSource = read("client/src/index.css");
     expect(pageSource).toContain('data-testid="button-print-all-cards"');
     expect(pageSource).toContain('data-testid="section-quick-reference-cards"');
     expect(pageSource).toContain('value={activeTab} onValueChange={setActiveTab}');
@@ -40,6 +41,9 @@ describe("Quick Reference route", () => {
     expect(pageSource).toContain('data-testid="print-all-cards"');
     expect(pageSource).toContain('cardTestId="printable-card"');
     expect(pageSource).toContain("window.print()");
+    expect(stylesSource).toContain("header, footer, nav, .print\\:hidden");
+    expect(stylesSource).toContain(".quick-ref-card");
+    expect(stylesSource).toContain("break-inside: avoid");
   });
 
   it("links the canonical rights page to the printable cards", () => {
