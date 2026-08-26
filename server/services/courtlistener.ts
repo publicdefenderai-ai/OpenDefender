@@ -1,22 +1,23 @@
 import { errLog } from '../utils/dev-logger';
 
 interface CourtListenerAPI {
-  searchOpinions(query: string, jurisdiction?: string): Promise<any>;
-  semanticSearchOpinions(query: string, jurisdiction?: string, keywordFilter?: string): Promise<any>;
-  hybridSearchOpinions(naturalLanguage: string, keywords: string, jurisdiction?: string): Promise<any>;
-  getJudgeData(judgeId: string): Promise<any>;
-  searchDockets(query: string): Promise<any>;
+  searchOpinions(query: string, jurisdiction?: string, signal?: AbortSignal): Promise<any>;
+  semanticSearchOpinions(query: string, jurisdiction?: string, keywordFilter?: string, signal?: AbortSignal): Promise<any>;
+  hybridSearchOpinions(naturalLanguage: string, keywords: string, jurisdiction?: string, signal?: AbortSignal): Promise<any>;
+  getJudgeData(judgeId: string, signal?: AbortSignal): Promise<any>;
+  searchDockets(query: string, signal?: AbortSignal): Promise<any>;
 }
 
 class CourtListenerService implements CourtListenerAPI {
   private baseUrl = 'https://www.courtlistener.com/api/rest/v4';
   private apiKey: string;
+  private requestTimeoutMs = 8_000;
 
   constructor() {
     this.apiKey = process.env.COURTLISTENER_API_TOKEN || process.env.COURTLISTENER_API_KEY || '';
   }
 
-  private async makeRequest(endpoint: string, params?: Record<string, string>) {
+  private async makeRequest(endpoint: string, params?: Record<string, string>, externalSignal?: AbortSignal) {
     const url = new URL(`${this.baseUrl}${endpoint}`);
     if (params) {
       Object.entries(params).forEach(([key, value]) => {
@@ -32,19 +33,34 @@ class CourtListenerService implements CourtListenerAPI {
       headers['Authorization'] = `Token ${this.apiKey}`;
     }
 
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), this.requestTimeoutMs);
+    const abortExternalRequest = () => controller.abort();
+    externalSignal?.addEventListener('abort', abortExternalRequest, { once: true });
+
     try {
-      const response = await fetch(url.toString(), { headers });
+      const response = await fetch(url.toString(), { headers, signal: controller.signal });
       if (!response.ok) {
         throw new Error(`CourtListener API error: ${response.status} ${response.statusText}`);
       }
       return await response.json();
     } catch (error) {
-      errLog('CourtListener API request failed', error);
+      const timedOut = controller.signal.aborted && !externalSignal?.aborted;
+      errLog('CourtListener provider request failed', {
+        endpoint,
+        reason: timedOut ? 'timeout' : externalSignal?.aborted ? 'cancelled' : 'provider_error',
+      });
+      if (timedOut) {
+        throw new Error('CourtListener API request timed out');
+      }
       throw error;
+    } finally {
+      clearTimeout(timer);
+      externalSignal?.removeEventListener('abort', abortExternalRequest);
     }
   }
 
-  async searchOpinions(query: string, jurisdiction?: string) {
+  async searchOpinions(query: string, jurisdiction?: string, signal?: AbortSignal) {
     const params: Record<string, string> = {
       q: query,
       format: 'json',
@@ -54,10 +70,10 @@ class CourtListenerService implements CourtListenerAPI {
       params.court = jurisdiction;
     }
 
-    return this.makeRequest('/search/', params);
+    return this.makeRequest('/search/', params, signal);
   }
 
-  async semanticSearchOpinions(query: string, jurisdiction?: string, keywordFilter?: string) {
+  async semanticSearchOpinions(query: string, jurisdiction?: string, keywordFilter?: string, signal?: AbortSignal) {
     const params: Record<string, string> = {
       q: query,
       search_type: 'semantic',
@@ -72,10 +88,10 @@ class CourtListenerService implements CourtListenerAPI {
       params.q = `"${keywordFilter}" ${query}`;
     }
 
-    return this.makeRequest('/search/', params);
+    return this.makeRequest('/search/', params, signal);
   }
 
-  async hybridSearchOpinions(naturalLanguage: string, keywords: string, jurisdiction?: string) {
+  async hybridSearchOpinions(naturalLanguage: string, keywords: string, jurisdiction?: string, signal?: AbortSignal) {
     const params: Record<string, string> = {
       q: `"${keywords}" ${naturalLanguage}`,
       search_type: 'semantic',
@@ -86,21 +102,21 @@ class CourtListenerService implements CourtListenerAPI {
       params.court = jurisdiction;
     }
 
-    return this.makeRequest('/search/', params);
+    return this.makeRequest('/search/', params, signal);
   }
 
-  async getJudgeData(judgeId: string) {
-    return this.makeRequest(`/people/${judgeId}/`);
+  async getJudgeData(judgeId: string, signal?: AbortSignal) {
+    return this.makeRequest(`/people/${judgeId}/`, undefined, signal);
   }
 
-  async searchDockets(query: string) {
+  async searchDockets(query: string, signal?: AbortSignal) {
     const params = {
       q: query,
       type: 'r', // RECAP documents
       format: 'json',
     };
 
-    return this.makeRequest('/search/', params);
+    return this.makeRequest('/search/', params, signal);
   }
 
   async getCaseStatistics(jurisdiction: string) {

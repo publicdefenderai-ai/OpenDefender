@@ -5393,6 +5393,11 @@ export default {
         "title": "Los detalles específicos del estado aún no están verificados.",
         "body": "Esta es información general sobre el cargo. Aún no tenemos detalles estatales verificados para este cargo. Pida a un abogado autorizado que confirme la regla, los plazos y las penas de su caso."
       }
+    },
+    "validation": {
+      "sourcePending": "La orientación principal está lista. Las verificaciones opcionales de fuentes aún están en curso.",
+      "sourceComplete": "La orientación principal está lista. Las verificaciones opcionales de fuentes se incluyen cuando están disponibles.",
+      "sourceUnavailable": "La orientación principal está lista. Las verificaciones opcionales de fuentes no estuvieron disponibles."
     }
   },
   "chat": {

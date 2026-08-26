@@ -95,6 +95,12 @@ export interface GuidanceViewModel {
     issues: Array<{ type: string; severity: 'error' | 'warning' | 'info'; message: string; suggestion?: string }>;
     tiers?: Record<string, { name: string; score: number; checksPerformed: number; checksPassed: number; issues: Array<{ type: string; severity: 'error' | 'warning' | 'info'; message: string }> }>;
     precedents?: Array<{ id: string; caseName: string; citation: string; court: string; courtLevel: 'supreme' | 'appellate' | 'trial' | 'unknown'; jurisdiction: string; dateFiled: string; relevanceScore: number; matchedChargeCategories: string[]; excerpt?: string; url?: string; absoluteUrl?: string }>;
+    sourceEnrichment?: {
+      status: 'pending' | 'complete' | 'unavailable';
+      providers: string[];
+      providerStatuses?: Record<string, 'available' | 'unavailable' | 'not_run'>;
+      message: string;
+    };
   };
   dangerFlags?: string[];
   localOrdinance?: any;

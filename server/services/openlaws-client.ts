@@ -4,6 +4,15 @@ import { db } from '../db';
 import { statutes } from '@shared/schema';
 import { devLog, opsLog, errLog } from '../utils/dev-logger';
 
+function logOpenLawsFailure(operation: string, error: unknown): void {
+  const axiosError = axios.isAxiosError(error) ? error : undefined;
+  errLog('OpenLaws provider request failed', {
+    operation,
+    status: axiosError?.response?.status,
+    code: axiosError?.code,
+  });
+}
+
 /**
  * OpenLaws API Client
  * Integrates with OpenLaws API for comprehensive 50-state statute coverage
@@ -158,6 +167,7 @@ export class OpenLawsClient {
   private apiKey?: string;
   private isConfigured: boolean = false;
   private jurisdictionCache: OpenLawsJurisdiction[] | null = null;
+  private lastSearchStatus: 'available' | 'unavailable' | 'not_run' = 'not_run';
 
   constructor(config: OpenLawsConfig) {
     this.apiKey = config.apiKey || process.env.OPENLAWS_API_KEY;
@@ -171,6 +181,10 @@ export class OpenLawsClient {
         ...(this.apiKey && { 'Authorization': `Bearer ${this.apiKey}` }),
       },
     });
+  }
+
+  getLastSearchStatus(): 'available' | 'unavailable' | 'not_run' {
+    return this.lastSearchStatus;
   }
 
   /**
@@ -250,7 +264,8 @@ export class OpenLawsClient {
     jurisdictionKey: string,
     lawKey: string,
     path?: string,
-    depth: number = 1
+    depth: number = 1,
+    signal?: AbortSignal
   ): Promise<OpenLawsDivision> {
     if (!this.isConfigured) {
       throw new Error('OpenLaws API not configured');
@@ -260,7 +275,8 @@ export class OpenLawsClient {
     const fullPath = path ? `${basePath}/${path}` : basePath;
     
     const response = await this.axios.get(fullPath, {
-      params: { depth }
+      params: { depth },
+      signal,
     });
     
     // Root level returns an array, convert to object format for consistency
@@ -297,7 +313,8 @@ export class OpenLawsClient {
   async getStatuteByPath(
     jurisdictionKey: string,
     lawKey: string,
-    path: string
+    path: string,
+    signal?: AbortSignal
   ): Promise<OpenLawsDivision | null> {
     if (!this.isConfigured) {
       throw new Error('OpenLaws API not configured');
@@ -305,7 +322,8 @@ export class OpenLawsClient {
 
     try {
       const response = await this.axios.get(
-        `/jurisdictions/${jurisdictionKey}/laws/${lawKey}/divisions/${path}`
+        `/jurisdictions/${jurisdictionKey}/laws/${lawKey}/divisions/${path}`,
+        { signal }
       );
       return response.data;
     } catch (error) {
@@ -498,7 +516,8 @@ export class OpenLawsClient {
     lawKey: string,
     sectionNum: string,
     codeHint?: string,
-    maxDepth: number = 6
+    maxDepth: number = 6,
+    signal?: AbortSignal
   ): Promise<OpenLawsDivision | null> {
     if (!this.isConfigured) {
       throw new Error('OpenLaws API not configured');
@@ -506,7 +525,7 @@ export class OpenLawsClient {
 
     try {
       // Phase 1: Get root divisions and find matching compilation
-      const root = await this.getDivisions(jurisdictionKey, lawKey, undefined, 2);
+      const root = await this.getDivisions(jurisdictionKey, lawKey, undefined, 2, signal);
       
       if (!root.display_children || root.display_children.length === 0) {
         devLog('openlaws', `No divisions found for ${jurisdictionKey}/${lawKey}`);
@@ -538,10 +557,11 @@ export class OpenLawsClient {
           
           for (const path of currentLevel) {
             if (totalApiCalls >= maxApiCalls) break;
+            if (signal?.aborted) throw new Error('OpenLaws lookup cancelled');
             
             try {
               totalApiCalls++;
-              const division = await this.getDivisions(jurisdictionKey, lawKey, path, 2);
+              const division = await this.getDivisions(jurisdictionKey, lawKey, path, 2, signal);
               
               if (division.display_children) {
                 for (const child of division.display_children) {
@@ -549,7 +569,7 @@ export class OpenLawsClient {
                   if (this.matchesSection(child.path, sectionNum) || 
                       this.matchesSection(child.display_name, sectionNum)) {
                     // Found it! Fetch full content
-                    const fullSection = await this.getStatuteByPath(jurisdictionKey, lawKey, child.path);
+                    const fullSection = await this.getStatuteByPath(jurisdictionKey, lawKey, child.path, signal);
                     if (fullSection && (fullSection.markdown_content || fullSection.plaintext_content)) {
                       devLog('openlaws', `Found section ${sectionNum} at depth ${depth + 1}: ${child.path}`);
                       return fullSection;
@@ -577,7 +597,7 @@ export class OpenLawsClient {
       devLog('openlaws', `Section ${sectionNum} not found after ${totalApiCalls} API calls`);
       return null;
     } catch (error) {
-      errLog(`[OpenLaws] Error searching for section ${sectionNum}`, error);
+      logOpenLawsFailure('section search', error);
       return null;
     }
   }
@@ -613,8 +633,10 @@ export class OpenLawsClient {
    * Search for a statute by citation string
    * Uses generic BFS to find the section in any jurisdiction
    */
-  async searchByCitation(citation: string): Promise<OpenLawsStatute | null> {
+  async searchByCitation(citation: string, options: { signal?: AbortSignal } = {}): Promise<OpenLawsStatute | null> {
+    this.lastSearchStatus = 'not_run';
     if (!this.isConfigured) {
+      this.lastSearchStatus = 'unavailable';
       throw new Error('OpenLaws API not configured');
     }
 
@@ -631,13 +653,15 @@ export class OpenLawsClient {
     }
 
     try {
-      const division = await this.findSectionInLaw(jurisdiction, lawKey, section, codeHint);
+      const division = await this.findSectionInLaw(jurisdiction, lawKey, section, codeHint, 6, options.signal);
+      this.lastSearchStatus = 'available';
       if (division) {
         return this.divisionToStatute(division, citation);
       }
       return null;
     } catch (error) {
-      errLog(`[OpenLaws] Error searching for citation "${citation}"`, error);
+      this.lastSearchStatus = 'unavailable';
+      logOpenLawsFailure('citation search', error);
       return null;
     }
   }
@@ -693,7 +717,7 @@ export class OpenLawsClient {
         };
       }
     } catch (error) {
-      errLog(`[OpenLaws] Database lookup error`, error);
+      logOpenLawsFailure('database lookup', error);
       // Continue to API fallback
     }
 
@@ -712,7 +736,7 @@ export class OpenLawsClient {
         await this.importStatute(apiResult);
         opsLog('openlaws', `Imported to database: ${citation}`);
       } catch (error) {
-        errLog(`[OpenLaws] Import error`, error);
+        logOpenLawsFailure('statute import', error);
       }
     }
 
@@ -823,7 +847,7 @@ export class OpenLawsClient {
       opsLog('openlaws', `Imported statute: ${openLawsStatute.citation} (${openLawsStatute.jurisdiction})`);
       return true;
     } catch (error) {
-      errLog(`[OpenLaws] Error importing statute ${openLawsStatute.citation}`, error);
+      logOpenLawsFailure('statute import', error);
       return false;
     }
   }

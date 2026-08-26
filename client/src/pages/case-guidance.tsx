@@ -331,6 +331,49 @@ export default function CaseGuidance() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchString]);
 
+  // Source checks intentionally run after the core roadmap is returned. Refresh
+  // the saved session briefly so optional results become visible without making
+  // initial guidance wait on an external provider.
+  const pendingEnrichmentSessionId = guidanceResult?.validation?.sourceEnrichment?.status === 'pending'
+    ? guidanceResult.sessionId
+    : null;
+  useEffect(() => {
+    if (!pendingEnrichmentSessionId) return;
+
+    let stopped = false;
+    let attempts = 0;
+    let timer: ReturnType<typeof setTimeout> | undefined;
+
+    const refreshEnrichment = async () => {
+      if (stopped || attempts >= 10) return;
+      attempts += 1;
+      try {
+        const data = await legalDataApi.getLegalGuidance(pendingEnrichmentSessionId);
+        const refreshed = normalizeGuidance(data.guidance);
+        const status = refreshed.validation?.sourceEnrichment?.status;
+        if (!stopped && status && status !== 'pending') {
+          setGuidanceResult(current => current ? {
+            ...current,
+            ...refreshed,
+            sessionId: current.sessionId,
+          } as EnhancedGuidanceResult : current);
+          return;
+        }
+      } catch {
+        // The initial response remains usable if the optional refresh fails.
+      }
+      if (!stopped && attempts < 10) {
+        timer = setTimeout(refreshEnrichment, 1_200);
+      }
+    };
+
+    timer = setTimeout(refreshEnrichment, 1_200);
+    return () => {
+      stopped = true;
+      if (timer) clearTimeout(timer);
+    };
+  }, [pendingEnrichmentSessionId]);
+
   // Handler for attempting to close/navigate away from guidance
   const handleAttemptClose = (navigationAction?: () => void) => {
     if (guidanceResult && !hasExported) {

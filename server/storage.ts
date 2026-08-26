@@ -15,6 +15,7 @@ export interface IStorage {
   // Legal case management (ephemeral)
   createLegalCase(legalCase: InsertLegalCase): Promise<LegalCase>;
   getLegalCase(sessionId: string): Promise<LegalCase | undefined>;
+  updateLegalCaseGuidance(sessionId: string, guidance: LegalCase['guidance']): Promise<void>;
   deleteLegalCase(sessionId: string): Promise<void>;
   
   // Legal resources
@@ -287,6 +288,13 @@ export class MemStorage implements IStorage {
       this.legalCases.delete(sessionId);
     }
     return undefined;
+  }
+
+  async updateLegalCaseGuidance(sessionId: string, guidance: LegalCase['guidance']): Promise<void> {
+    const legalCase = this.legalCases.get(sessionId);
+    if (legalCase && legalCase.expiresAt > new Date()) {
+      legalCase.guidance = guidance;
+    }
   }
 
   async deleteLegalCase(sessionId: string): Promise<void> {

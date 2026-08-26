@@ -27,7 +27,9 @@ import { criminalCharges, getChargeById, getChargesByJurisdiction } from '@share
 import { JURISDICTION_DEADLINE_RULES } from '@shared/jurisdiction-procedure-rules';
 import { openLawsClient } from './openlaws-client';
 import { caseLawValidator, type PrecedentCase, type CaseLawValidationResult } from './case-law-validator';
-import { devLog, opsLog, errLog } from '../utils/dev-logger';
+import { devLog, opsLog } from '../utils/dev-logger';
+
+const LIVE_SOURCE_TIMEOUT_MS = 12_000;
 
 export interface ValidationIssue {
   type: 'citation_not_found' | 'penalty_mismatch' | 'jurisdiction_mismatch' | 'timeline_issue' | 'charge_not_found' | 'no_precedents' | 'weak_precedents' | 'contrary_precedent';
@@ -70,6 +72,17 @@ export interface ValidationResult {
   };
   precedents?: PrecedentCase[];
   caseLaw?: CaseLawValidationResult;
+  sourceEnrichment?: {
+    status: 'pending' | 'complete' | 'unavailable';
+    providers: string[];
+    providerStatuses: Record<string, 'available' | 'unavailable' | 'not_run'>;
+    message: string;
+  };
+}
+
+export interface LegalValidationOptions {
+  /** Skip network providers during the fast, user-facing validation phase. */
+  includeExternalSources?: boolean;
 }
 
 interface GuidanceToValidate {
@@ -174,8 +187,14 @@ function normalizeJurisdiction(jurisdiction: string): string {
 
 async function validateCitations(
   guidance: GuidanceToValidate,
-  jurisdiction: string
-): Promise<{ verified: number; total: number; issues: ValidationIssue[] }> {
+  jurisdiction: string,
+  includeLiveStatuteLookup: boolean
+): Promise<{
+  verified: number;
+  total: number;
+  issues: ValidationIssue[];
+  openLawsStatus: 'available' | 'unavailable' | 'not_run';
+}> {
   const issues: ValidationIssue[] = [];
   let verified = 0;
   let total = 0;
@@ -194,7 +213,7 @@ async function validateCitations(
   total = citations.length;
   
   if (total === 0) {
-    return { verified: 0, total: 0, issues: [] };
+    return { verified: 0, total: 0, issues: [], openLawsStatus: 'not_run' };
   }
   
   const normalizedJurisdiction = normalizeJurisdiction(jurisdiction);
@@ -204,43 +223,57 @@ async function validateCitations(
     : [];
   
   const allStatutes = [...statutes, ...federalStatutes];
+  let openLawsStatus: 'available' | 'unavailable' | 'not_run' = includeLiveStatuteLookup ? 'unavailable' : 'not_run';
+  const sourceController = includeLiveStatuteLookup ? new AbortController() : undefined;
+  const sourceTimer = sourceController
+    ? setTimeout(() => sourceController.abort(), LIVE_SOURCE_TIMEOUT_MS)
+    : undefined;
   
-  for (const citation of citations) {
-    const found = allStatutes.some(statute => 
-      statute.citation.toLowerCase().includes(citation.toLowerCase()) ||
-      citation.toLowerCase().includes(statute.section?.toLowerCase() || '')
-    );
+  try {
+    for (const citation of citations) {
+      const found = allStatutes.some(statute =>
+        statute.citation.toLowerCase().includes(citation.toLowerCase()) ||
+        citation.toLowerCase().includes(statute.section?.toLowerCase() || '')
+      );
     
-    if (found) {
-      verified++;
-    } else {
-      // Tier 3: OpenLaws live lookup as authoritative fallback before flagging
-      let confirmedByOpenLaws = false;
-      try {
-        const liveResult = await openLawsClient.searchByCitation(citation);
-        if (liveResult) {
-          verified++;
-          confirmedByOpenLaws = true;
-          devLog('validator', `Tier 3 OpenLaws confirmed: ${citation}`);
+      if (found) {
+        verified++;
+      } else {
+        // Tier 3: OpenLaws live lookup as authoritative fallback before flagging.
+        let confirmedByOpenLaws = false;
+        if (includeLiveStatuteLookup && !sourceController?.signal.aborted) {
+          try {
+            const liveResult = await openLawsClient.searchByCitation(citation, {
+              signal: sourceController?.signal,
+            });
+            openLawsStatus = openLawsClient.getLastSearchStatus?.() ?? (liveResult ? 'available' : 'unavailable');
+            if (liveResult) {
+              verified++;
+              confirmedByOpenLaws = true;
+              devLog('validator', 'Tier 3 OpenLaws confirmed a citation');
+            }
+          } catch {
+            // OpenLaws unavailable or not configured — proceed to flag
+          }
         }
-      } catch {
-        // OpenLaws unavailable or not configured — proceed to flag
-      }
 
-      if (!confirmedByOpenLaws) {
-        issues.push({
-          type: 'citation_not_found',
-          severity: 'warning',
-          field: 'citations',
-          message: `Citation "${citation}" could not be verified in our database or via live statute lookup`,
-          aiValue: citation,
-          suggestion: 'This citation could not be confirmed. Have your attorney verify it before relying on it.',
-        });
+        if (!confirmedByOpenLaws) {
+          issues.push({
+            type: 'citation_not_found',
+            severity: 'warning',
+            field: 'citations',
+            message: `Citation "${citation}" could not be verified in our database or via live statute lookup`,
+            aiValue: citation,
+            suggestion: 'This citation could not be confirmed. Have your attorney verify it before relying on it.',
+          });
+        }
       }
     }
+  } finally {
+    if (sourceTimer) clearTimeout(sourceTimer);
   }
   
-  return { verified, total, issues };
+  return { verified, total, issues, openLawsStatus };
 }
 
 async function validatePenalties(
@@ -488,8 +521,10 @@ function generateSummary(result: Omit<ValidationResult, 'summary'>): string {
 
 export async function validateLegalGuidance(
   guidance: GuidanceToValidate,
-  context: CaseContext
+  context: CaseContext,
+  options: LegalValidationOptions = {}
 ): Promise<ValidationResult> {
+  const includeExternalSources = options.includeExternalSources ?? true;
   opsLog('validator', 'Starting legal accuracy validation...');
   const startTime = Date.now();
   
@@ -497,7 +532,7 @@ export async function validateLegalGuidance(
   let tier1ChecksPerformed = 0;
   let tier1ChecksPassed = 0;
   
-  const citationResult = await validateCitations(guidance, context.jurisdiction);
+  const citationResult = await validateCitations(guidance, context.jurisdiction, includeExternalSources);
   tier1Issues.push(...citationResult.issues);
   if (citationResult.total > 0) {
     tier1ChecksPerformed++;
@@ -530,7 +565,8 @@ export async function validateLegalGuidance(
   let tier2ChecksPerformed = 0;
   let tier2ChecksPassed = 0;
   
-  try {
+  if (includeExternalSources) {
+   try {
     devLog('validator', 'Starting Tier 2 case law validation...');
     caseLawResult = await caseLawValidator.validateWithCaseLaw(guidance, context);
     
@@ -550,7 +586,7 @@ export async function validateLegalGuidance(
         message: issue.message,
       }));
     }
-  } catch (error) {
+   } catch (error) {
     opsLog('validator', 'Tier 2 case law validation failed');
     tier2Issues.push({
       type: 'no_precedents',
@@ -558,6 +594,7 @@ export async function validateLegalGuidance(
       field: 'precedents',
       message: 'Case law validation temporarily unavailable.',
     });
+   }
   }
   
   // Combine all issues
@@ -628,6 +665,29 @@ export async function validateLegalGuidance(
     },
     precedents: caseLawResult?.precedents,
     caseLaw: caseLawResult,
+    sourceEnrichment: (() => {
+      const providerStatuses = {
+        CourtListener: includeExternalSources
+          ? caseLawResult?.providerStatus ?? 'unavailable'
+          : 'not_run' as const,
+        OpenLaws: citationResult.openLawsStatus,
+      };
+      const hasAvailableProvider = Object.values(providerStatuses).includes('available');
+      return {
+        status: !includeExternalSources
+          ? 'pending' as const
+          : hasAvailableProvider
+            ? 'complete' as const
+            : 'unavailable' as const,
+        providers: ['CourtListener', 'OpenLaws'],
+        providerStatuses,
+        message: !includeExternalSources
+          ? 'Core guidance is ready. Optional source enrichment is still being checked.'
+          : hasAvailableProvider
+            ? 'Core guidance is ready. Optional source enrichment is included where available.'
+            : 'Core guidance is ready. Optional source enrichment was unavailable.',
+      };
+    })(),
   };
   
   const duration = Date.now() - startTime;

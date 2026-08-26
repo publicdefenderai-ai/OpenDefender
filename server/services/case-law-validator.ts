@@ -14,7 +14,9 @@
 
 import { courtListenerService } from './courtlistener';
 import { getChargeById } from '@shared/criminal-charges';
-import { devLog, opsLog, errLog } from '../utils/dev-logger';
+import { devLog, opsLog } from '../utils/dev-logger';
+
+const CASE_LAW_TIMEOUT_MS = 12_000;
 
 export interface PrecedentCase {
   id: string;
@@ -34,6 +36,7 @@ export interface PrecedentCase {
 
 export interface CaseLawValidationResult {
   isAvailable: boolean;
+  providerStatus: 'available' | 'unavailable';
   precedentsFound: number;
   precedents: PrecedentCase[];
   confidenceBoost: number;
@@ -398,6 +401,7 @@ class CaseLawValidator {
     
     const result: CaseLawValidationResult = {
       isAvailable: false,
+      providerStatus: 'unavailable',
       precedentsFound: 0,
       precedents: [],
       confidenceBoost: 0,
@@ -424,66 +428,73 @@ class CaseLawValidator {
         enhancedQuery = `${query} ${statuteSearchTerms.slice(0, 2).join(' ')}`;
       }
       
-      devLog('case-law', `Searching CourtListener: "${enhancedQuery}" in ${context.jurisdiction}`);
-      if (statuteSearchTerms.length > 0) {
-        devLog('case-law', `Statute search terms: ${statuteSearchTerms.join(', ')}`);
-      }
-      
-      // Use hybrid search for best results
-      let searchResult = await courtListenerService.hybridSearchOpinions(
-        enhancedQuery,
-        keywords,
-        courtFilter
-      );
-      
-      // Fallback 1: Try without jurisdiction filter if no results
-      if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && courtFilter) {
-        devLog('case-law', `No results with jurisdiction filter, trying broader search...`);
-        await this.throttleRequest();
-        searchResult = await courtListenerService.hybridSearchOpinions(
+      // Do not log search terms: they are derived from the user's case.
+      devLog('case-law', 'Searching CourtListener');
+
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), CASE_LAW_TIMEOUT_MS);
+      try {
+        // Use hybrid search for best results
+        let searchResult = await courtListenerService.hybridSearchOpinions(
           enhancedQuery,
           keywords,
-          undefined // No jurisdiction filter
+          courtFilter,
+          controller.signal
         );
-      }
       
-      // Fallback 2: Try statute-specific search if we have statute terms
-      if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && statuteSearchTerms.length > 0) {
-        const statuteQuery = statuteSearchTerms.join(' ');
-        devLog('case-law', `Trying statute-specific search: "${statuteQuery}"`);
-        await this.throttleRequest();
-        searchResult = await courtListenerService.searchOpinions(
-          statuteQuery,
-          courtFilter
-        );
-      }
-      
-      // Fallback 3: Try simpler category-based query
-      if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
-        const fallbackQuery = this.buildFallbackQuery(chargeArray);
-        if (fallbackQuery && fallbackQuery !== keywords) {
-          devLog('case-law', `Trying category fallback query: "${fallbackQuery}"`);
+        // Fallback 1: Try without jurisdiction filter if no results
+        if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && courtFilter) {
+          devLog('case-law', 'No filtered results; trying broader search');
           await this.throttleRequest();
-          searchResult = await courtListenerService.semanticSearchOpinions(
-            fallbackQuery,
-            courtFilter,
-            undefined
+          searchResult = await courtListenerService.hybridSearchOpinions(
+            enhancedQuery,
+            keywords,
+            undefined,
+            controller.signal
           );
         }
-      }
       
-      if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
-        result.summary = 'No relevant case law found for this charge and jurisdiction.';
-        result.issues.push({
-          type: 'no_precedents',
-          severity: 'info',
-          message: 'Unable to find case law precedents. Guidance based on statute data only.',
-        });
-        this.cache.set(cacheKey, { result, timestamp: Date.now() });
-        return result;
-      }
+        // Fallback 2: Try statute-specific search if we have statute terms
+        if ((!searchResult || !searchResult.results || searchResult.results.length === 0) && statuteSearchTerms.length > 0) {
+          const statuteQuery = statuteSearchTerms.join(' ');
+          devLog('case-law', 'Trying statute-specific search');
+          await this.throttleRequest();
+          searchResult = await courtListenerService.searchOpinions(
+            statuteQuery,
+            courtFilter,
+            controller.signal
+          );
+        }
       
-      result.isAvailable = true;
+        // Fallback 3: Try simpler category-based query
+        if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
+          const fallbackQuery = this.buildFallbackQuery(chargeArray);
+          if (fallbackQuery && fallbackQuery !== keywords) {
+            devLog('case-law', 'Trying category fallback query');
+            await this.throttleRequest();
+            searchResult = await courtListenerService.semanticSearchOpinions(
+              fallbackQuery,
+              courtFilter,
+              undefined,
+              controller.signal
+            );
+          }
+        }
+      
+        if (!searchResult || !searchResult.results || searchResult.results.length === 0) {
+          result.providerStatus = 'available';
+          result.summary = 'No relevant case law found for this charge and jurisdiction.';
+          result.issues.push({
+            type: 'no_precedents',
+            severity: 'info',
+            message: 'Unable to find case law precedents. Guidance based on statute data only.',
+          });
+          this.cache.set(cacheKey, { result, timestamp: Date.now() });
+          return result;
+        }
+
+        result.isAvailable = true;
+        result.providerStatus = 'available';
       
       // Extract charge categories for relevance scoring
       const chargeCategories = chargeArray.flatMap(c => this.extractChargeCategory(c));
@@ -593,10 +604,13 @@ class CaseLawValidator {
       
       opsLog('case-law', `Found ${result.precedentsFound} precedents, Tier 2 score: ${(result.tier2Score * 100).toFixed(1)}%`);
       
-      return result;
+        return result;
+      } finally {
+        clearTimeout(timeout);
+      }
       
     } catch (error) {
-      errLog('[CaseLawValidator] Error querying CourtListener', error);
+      opsLog('case-law', 'CourtListener enrichment failed');
       result.summary = 'Case law validation temporarily unavailable.';
       result.issues.push({
         type: 'no_precedents',

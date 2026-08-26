@@ -36,6 +36,7 @@ const responseCache = new Map<string, CacheEntry>();
 // Reverse index: sessionId -> Set of cache keys belonging to that session
 const sessionCacheKeys = new Map<string, Set<string>>();
 const CACHE_TTL = 15 * 60 * 1000; // 15 minutes in milliseconds (privacy-focused)
+let cacheGeneration = 0;
 
 // Clean up expired cache entries periodically (every 5 minutes)
 setInterval(() => {
@@ -61,6 +62,7 @@ setInterval(() => {
 
 // Function to clear cache for a specific session (call on session end)
 export function clearSessionCache(sessionId?: string): void {
+  cacheGeneration += 1;
   if (!sessionId) {
     responseCache.clear();
     sessionCacheKeys.clear();
@@ -73,6 +75,14 @@ export function clearSessionCache(sessionId?: string): void {
       devLog('privacy', `Cleared ${keys.size} cache entries for session ${sessionId.slice(0, 8)}...`);
     }
   }
+}
+
+export function getGuidanceCacheKey(caseDetails: CaseDetails, sessionId?: string): string {
+  const processedDetails = isPIIRedactionEnabled()
+    ? redactCaseDetails(caseDetails).redactedDetails
+    : caseDetails;
+  const baseKey = generateCacheKey(processedDetails);
+  return sessionId ? `${sessionId}:${baseKey}` : baseKey;
 }
 
 interface CaseDetails {
@@ -176,8 +186,71 @@ interface ClaudeGuidance {
       message: string;
       suggestion?: string;
     }>;
+    sourceEnrichment?: {
+      status: 'pending' | 'complete' | 'unavailable';
+      providers: string[];
+      providerStatuses?: Record<string, 'available' | 'unavailable' | 'not_run'>;
+      message: string;
+    };
   };
 }
+
+function setGuidanceValidation(guidance: ClaudeGuidance, validationResult: ValidationResult): void {
+  const nextValidation = {
+    confidenceScore: validationResult.confidenceScore,
+    isValid: validationResult.isValid,
+    summary: validationResult.summary,
+    checksPerformed: validationResult.checksPerformed,
+    checksPassed: validationResult.checksPassed,
+    issues: validationResult.issues.map(issue => ({
+      type: issue.type,
+      severity: issue.severity,
+      message: issue.message,
+      suggestion: issue.suggestion,
+    })),
+    sourceEnrichment: validationResult.sourceEnrichment,
+  };
+
+  // Keep the original object identity so a completed background enrichment is
+  // visible to the ephemeral stored case and any cached response.
+  if (guidance.validation) {
+    Object.assign(guidance.validation, nextValidation);
+  } else {
+    guidance.validation = nextValidation;
+  }
+}
+
+function startOptionalSourceEnrichment(
+  guidance: ClaudeGuidance,
+  context: { jurisdiction: string; charges: string | string[]; caseStage?: string },
+  phaseStart: number,
+  cacheKey?: string,
+  onUpdated?: () => Promise<void> | void,
+): void {
+  const generation = cacheGeneration;
+  void validateLegalGuidance(guidance, context)
+    .then(async (validationResult) => {
+      if (generation !== cacheGeneration) return;
+      setGuidanceValidation(guidance, validationResult);
+      if (cacheKey) {
+        responseCache.set(cacheKey, { response: guidance, timestamp: Date.now() });
+      }
+      await onUpdated?.();
+      opsLog('guidance', `Optional source enrichment completed in ${Date.now() - phaseStart}ms`);
+    })
+    .catch(() => {
+      if (guidance.validation?.sourceEnrichment) {
+        guidance.validation.sourceEnrichment = {
+          ...guidance.validation.sourceEnrichment,
+          status: 'unavailable',
+          message: 'Core guidance is ready. Optional source enrichment was unavailable.',
+        };
+      }
+      opsLog('guidance', `Optional source enrichment failed after ${Date.now() - phaseStart}ms`);
+    });
+}
+
+export { startOptionalSourceEnrichment };
 
 function buildSystemPrompt(language?: string): string {
   const isSpanish = language === 'es';
@@ -955,6 +1028,7 @@ export async function generateClaudeGuidance(
   }
 
   try {
+    const guidanceStart = Date.now();
     const systemPrompt = buildSystemPrompt(processedDetails.language);
     const locusResult = await getLocusContext(processedDetails);
     const userPrompt = buildUserPrompt(processedDetails, locusResult?.contextText);
@@ -968,6 +1042,7 @@ export async function generateClaudeGuidance(
     devLog('claude', 'Making API request to Claude (with retry on timeout)...');
 
     const message = await callClaudeWithRetry(systemPrompt, userPrompt, 1);
+    opsLog('guidance', `Claude generation completed in ${Date.now() - guidanceStart}ms`);
 
     // Extract the text content
     const textContent = message.content.find(block => block.type === 'text');
@@ -1031,31 +1106,19 @@ export async function generateClaudeGuidance(
       },
     };
 
-    // Run legal accuracy validation against our databases
+    // Run only local validation before returning the roadmap. Network providers
+    // are optional enrichment and must never delay the user-facing response.
+    const validationStart = Date.now();
     try {
       const validationResult = await validateLegalGuidance(guidance, {
         jurisdiction: processedDetails.jurisdiction,
         charges: processedDetails.charges,
         caseStage: processedDetails.caseStage,
-      });
-      
-      guidance.validation = {
-        confidenceScore: validationResult.confidenceScore,
-        isValid: validationResult.isValid,
-        summary: validationResult.summary,
-        checksPerformed: validationResult.checksPerformed,
-        checksPassed: validationResult.checksPassed,
-        issues: validationResult.issues.map(issue => ({
-          type: issue.type,
-          severity: issue.severity,
-          message: issue.message,
-          suggestion: issue.suggestion,
-        })),
-      };
-      
-      devLog('guidance', `Validation complete - Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+      }, { includeExternalSources: false });
+      setGuidanceValidation(guidance, validationResult);
+      opsLog('guidance', `Core validation completed in ${Date.now() - validationStart}ms`);
     } catch (validationError) {
-      devLog('guidance', 'Validation failed, returning guidance without validation', validationError);
+      opsLog('guidance', `Core validation failed after ${Date.now() - validationStart}ms`);
       // Continue without validation - guidance is still useful
     }
 
@@ -1126,6 +1189,7 @@ export async function generateClaudeGuidance(
       sessionCacheKeys.get(sessionId)!.add(cacheKey);
     }
 
+    opsLog('guidance', `Core roadmap ready in ${Date.now() - guidanceStart}ms`);
     return guidance;
   } catch (error) {
     errLog('Claude AI error', error);
@@ -1189,6 +1253,7 @@ export async function streamClaudeGuidance(
     return cachedEntry.response;
   }
 
+  const guidanceStart = Date.now();
   const systemPrompt = buildSystemPrompt(processedDetails.language);
   const locusResult = await getLocusContext(processedDetails);
   const userPrompt = buildUserPrompt(processedDetails, locusResult?.contextText);
@@ -1230,7 +1295,8 @@ export async function streamClaudeGuidance(
       }
     }
 
-    const finalMessage = await stream.finalMessage();
+  const finalMessage = await stream.finalMessage();
+  opsLog('guidance', `Claude stream generation completed in ${Date.now() - guidanceStart}ms`);
     devLog('claude', `Stream completed in ${Date.now() - startTime}ms`);
     devLog('claude', 'Stream usage', finalMessage.usage);
 
@@ -1285,29 +1351,19 @@ export async function streamClaudeGuidance(
       },
     };
 
-    // Legal accuracy validation (same as non-streaming path)
+    // Keep streaming completion responsive: local validation is fast, while
+    // network-backed source checks run as optional enrichment.
+    const validationStart = Date.now();
     try {
       const validationResult = await validateLegalGuidance(guidance, {
         jurisdiction: processedDetails.jurisdiction,
         charges: processedDetails.charges,
         caseStage: processedDetails.caseStage,
-      });
-      guidance.validation = {
-        confidenceScore: validationResult.confidenceScore,
-        isValid: validationResult.isValid,
-        summary: validationResult.summary,
-        checksPerformed: validationResult.checksPerformed,
-        checksPassed: validationResult.checksPassed,
-        issues: validationResult.issues.map(issue => ({
-          type: issue.type,
-          severity: issue.severity,
-          message: issue.message,
-          suggestion: issue.suggestion,
-        })),
-      };
-      devLog('guidance', `Stream validation complete — Confidence: ${(validationResult.confidenceScore * 100).toFixed(1)}%`);
+      }, { includeExternalSources: false });
+      setGuidanceValidation(guidance, validationResult);
+      opsLog('guidance', `Stream core validation completed in ${Date.now() - validationStart}ms`);
     } catch (validationError) {
-      devLog('guidance', 'Validation failed on stream path, continuing without it', validationError);
+      opsLog('guidance', `Stream core validation failed after ${Date.now() - validationStart}ms`);
     }
 
     // Safety scan
@@ -1359,6 +1415,7 @@ export async function streamClaudeGuidance(
       sessionCacheKeys.get(sessionId)!.add(cacheKey);
     }
 
+    opsLog('guidance', `Core streamed roadmap ready in ${Date.now() - guidanceStart}ms`);
     return guidance;
   } catch (error: any) {
     errLog('Claude stream error', error);

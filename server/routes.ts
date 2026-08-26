@@ -12,7 +12,7 @@ import { bjsStatisticsService } from "./services/bjs-statistics";
 import { insertLegalCaseSchema, insertCaseFeedbackSchema, insertGuidanceFlagSchema } from "@shared/schema";
 import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
-import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache } from "./services/claude-guidance.js";
+import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache, getGuidanceCacheKey, startOptionalSourceEnrichment } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
 import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
@@ -1368,6 +1368,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidanceSessionOwners.set(sessionId, req.sessionID);
       }
 
+      startOptionalSourceEnrichment(
+        legalCase.guidance as any,
+        {
+          jurisdiction: guidanceInput.jurisdiction,
+          charges: guidanceInput.charges,
+          caseStage: guidanceInput.caseStage,
+        },
+        Date.now(),
+        getGuidanceCacheKey(guidanceInput as any, sessionId),
+        () => storage.updateLegalCaseGuidance(sessionId, legalCase.guidance),
+      );
+
       // Add generation timestamp to guidance for transparency
       const guidanceWithTimestamp = normalizeGuidance(legalCase.guidance, guidanceCaseData(guidanceInput));
 
@@ -1483,6 +1495,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         guidance = { ...guidance, chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined, generatedBy: 'rule-based' };
       }
 
+      if (!guidance.validation) {
+        try {
+          guidance.validation = await validateLegalGuidance(guidance, {
+            jurisdiction: caseDataWithFlags.jurisdiction,
+            charges: caseDataWithFlags.charges,
+            caseStage: caseDataWithFlags.caseStage,
+          }, { includeExternalSources: false });
+        } catch {
+          opsLog('guidance', 'Stream core validation failed before response');
+        }
+      }
+
       guidance = normalizeGuidance({
         ...guidance,
         sessionId,
@@ -1500,6 +1524,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (req.sessionID) {
         guidanceSessionOwners.set(sessionId, req.sessionID);
       }
+
+      startOptionalSourceEnrichment(
+        legalCase.guidance as any,
+        {
+          jurisdiction: caseDataWithFlags.jurisdiction,
+          charges: caseDataWithFlags.charges,
+          caseStage: caseDataWithFlags.caseStage,
+        },
+        Date.now(),
+        getGuidanceCacheKey(caseDataWithFlags as any, sessionId),
+        () => storage.updateLegalCaseGuidance(sessionId, legalCase.guidance),
+      );
 
       const guidanceWithTimestamp = normalizeGuidance(legalCase.guidance, guidanceCaseData(caseDataWithFlags));
 
@@ -1584,14 +1620,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // that the user entered, so we scrub them first as a privacy safeguard.
       const { redactedDetails } = redactCaseDetails(caseDataWithFlags as any);
       const rawGuidance = generateEnhancedGuidance(redactedDetails as any);
+      const coreValidation = await validateLegalGuidance(
+        rawGuidance,
+        {
+          jurisdiction: caseDataWithFlags.jurisdiction,
+          charges: caseDataWithFlags.charges,
+          caseStage: caseDataWithFlags.caseStage,
+        },
+        { includeExternalSources: false },
+      );
 
       const guidance = normalizeGuidance({
         ...rawGuidance,
+        validation: coreValidation,
         chargeClassifications: chargeClassifications.length > 0 ? chargeClassifications : undefined,
         generatedBy: 'rule-based' as const,
         sessionId,
         generatedAt: new Date().toISOString(),
       }, guidanceCaseData(caseDataWithFlags));
+
+      const { incidentDescription: _droppedRules, ...storableRulesData } = validatedData;
+      const legalCase = await storage.createLegalCase({
+        ...storableRulesData,
+        guidance,
+      });
+      if (req.sessionID) {
+        guidanceSessionOwners.set(sessionId, req.sessionID);
+      }
+
+      startOptionalSourceEnrichment(
+        legalCase.guidance as any,
+        {
+          jurisdiction: caseDataWithFlags.jurisdiction,
+          charges: caseDataWithFlags.charges,
+          caseStage: caseDataWithFlags.caseStage,
+        },
+        Date.now(),
+        getGuidanceCacheKey(caseDataWithFlags as any, sessionId),
+        () => storage.updateLegalCaseGuidance(sessionId, legalCase.guidance),
+      );
 
       res.json({
         success: true,
@@ -3342,7 +3409,7 @@ async function generateLegalGuidance(caseData: any) {
       jurisdiction: caseData.jurisdiction,
       charges: caseData.charges,
       caseStage: caseData.caseStage,
-    });
+    }, { includeExternalSources: false });
     
     validation = {
       confidenceScore: validationResult.confidenceScore,
@@ -3356,6 +3423,7 @@ async function generateLegalGuidance(caseData: any) {
         message: issue.message,
         suggestion: issue.suggestion,
       })),
+      sourceEnrichment: validationResult.sourceEnrichment,
     };
     
     opsLog('guidance', `Validation: ${(validationResult.confidenceScore * 100).toFixed(1)}% confidence`);

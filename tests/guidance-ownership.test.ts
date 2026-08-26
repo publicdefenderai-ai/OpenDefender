@@ -186,6 +186,8 @@ vi.mock('../server/services/claude-guidance', () => ({
   streamClaudeGuidance: vi.fn().mockRejectedValue(new Error('no API key')),
   testClaudeConnection: vi.fn().mockResolvedValue({ ok: false }),
   clearSessionCache: vi.fn(),
+  getGuidanceCacheKey: vi.fn().mockReturnValue('test-cache-key'),
+  startOptionalSourceEnrichment: vi.fn(),
 }));
 vi.mock('../shared/playbooks/index', () => ({
   getPlaybooks: vi.fn().mockReturnValue([]),

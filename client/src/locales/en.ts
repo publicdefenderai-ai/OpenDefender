@@ -5387,6 +5387,11 @@ export default {
         "title": "State-specific detail not yet verified.",
         "body": "This is general charge information. We do not have verified state-specific detail for this charge yet. Ask a licensed attorney to confirm the rule, deadlines, and penalties for your case."
       }
+    },
+    "validation": {
+      "sourcePending": "Core guidance is ready. Optional source checks are still running.",
+      "sourceComplete": "Core guidance is ready. Optional source checks are included where available.",
+      "sourceUnavailable": "Core guidance is ready. Optional source checks were unavailable."
     }
   },
   "chat": {
