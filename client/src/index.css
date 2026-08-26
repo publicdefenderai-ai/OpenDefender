@@ -1514,6 +1514,22 @@ a:focus-visible,
     background: var(--editorial-paper);
   }
 
+  /* Immigration detail pages are rendered inside the shared editorial frame.
+     Scope this treatment so legacy page markup gets the same quiet card
+     surface without changing cards elsewhere in the application. */
+  main.editorial-reading .rounded-xl.border.bg-card {
+    border-color: var(--editorial-rule);
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--editorial-ink) 5%, transparent);
+  }
+
+  main.editorial-reading .rounded-xl.border.bg-card:hover {
+    border-color: var(--editorial-signal);
+  }
+
+  main.editorial-reading > section {
+    scroll-margin-top: 5rem;
+  }
+
   .editorial-workspace {
     background: color-mix(in srgb, var(--editorial-paper) 78%, var(--editorial-paper-deep));
   }

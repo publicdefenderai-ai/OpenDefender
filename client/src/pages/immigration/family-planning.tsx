@@ -8,12 +8,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useTranslation } from 'react-i18next';
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
+import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
 
 export default function FamilyPlanning() {
   useScrollToTop();
@@ -25,46 +22,22 @@ export default function FamilyPlanning() {
   ];
   
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb 
-        items={breadcrumbItems} 
-        currentPage={t('immigration.family.title')} 
-      />
-
-      <section className="vivid-header-amber text-white py-12 lg:py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
-                <Heart className="h-8 w-8 text-white" />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white" data-testid="text-family-planning-title">
-                {t('immigration.family.title')}
-              </h1>
+    <ImmigrationDetailLayout
+      title={t('immigration.family.title')}
+      subtitle={t('immigration.family.subtitle')}
+      breadcrumbItems={breadcrumbItems}
+      icon={<Heart className="h-7 w-7" />}
+      alert={
+        <Alert className="border-blue-300 bg-blue-50 dark:border-blue-700 dark:bg-blue-950/40">
+          <AlertDescription className="text-blue-900 dark:text-blue-200" data-testid="alert-family-planning">
+            <div className="flex items-start gap-3">
+              <BrandShieldIcon size={20} className="mt-0.5 shrink-0" />
+              <span><strong>{t('immigration.family.planningAlert')}</strong> {t('immigration.family.planningAlertText')}</span>
             </div>
-            <p className="text-lg text-white/90 max-w-3xl" data-testid="text-family-planning-subtitle">
-              {t('immigration.family.subtitle')}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-blue-50 border-blue-200 dark:bg-blue-950/50 dark:border-blue-800">
-        <AlertDescription className="text-blue-800 dark:text-blue-200" data-testid="alert-family-planning">
-          <div className="flex items-start gap-3">
-            <BrandShieldIcon size={20} className="mt-0.5 flex-shrink-0" />
-            <span><strong>{t('immigration.family.planningAlert')}</strong> {t('immigration.family.planningAlertText')}</span>
-          </div>
-        </AlertDescription>
-      </Alert>
-
-      <RapidlyEvolvingNotice />
+          </AlertDescription>
+        </Alert>
+      }
+    >
 
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">
@@ -274,7 +247,6 @@ export default function FamilyPlanning() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ImmigrationDetailLayout>
   );
 }

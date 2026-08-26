@@ -8,12 +8,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { useTranslation } from 'react-i18next';
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
+import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
 
 export default function DacaTps() {
   useScrollToTop();
@@ -25,44 +22,20 @@ export default function DacaTps() {
   ];
   
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb 
-        items={breadcrumbItems} 
-        currentPage={t('immigration.daca.title')} 
-      />
-
-      <section className="vivid-header-amber text-white py-12 lg:py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
-                <BrandShieldIcon size={32} light />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white" data-testid="text-daca-tps-title">
-                {t('immigration.daca.title')}
-              </h1>
-            </div>
-            <p className="text-lg text-white/90 max-w-3xl" data-testid="text-daca-tps-subtitle">
-              {t('immigration.daca.subtitle')}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
-        <AlertTriangle className="h-5 w-5 text-amber-600" />
-        <AlertDescription className="text-amber-800 dark:text-amber-200" data-testid="alert-daca-disclaimer">
-          <strong>{t('immigration.common.importantLabel')}</strong> {t('immigration.daca.disclaimer')}
-        </AlertDescription>
-      </Alert>
-
-      <RapidlyEvolvingNotice />
+    <ImmigrationDetailLayout
+      title={t('immigration.daca.title')}
+      subtitle={t('immigration.daca.subtitle')}
+      breadcrumbItems={breadcrumbItems}
+      icon={<BrandShieldIcon size={28} />}
+      alert={
+        <Alert className="border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-950/40">
+          <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+          <AlertDescription className="text-amber-900 dark:text-amber-200" data-testid="alert-daca-disclaimer">
+            <strong>{t('immigration.common.importantLabel')}</strong> {t('immigration.daca.disclaimer')}
+          </AlertDescription>
+        </Alert>
+      }
+    >
 
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">
@@ -247,7 +220,6 @@ export default function DacaTps() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ImmigrationDetailLayout>
   );
 }

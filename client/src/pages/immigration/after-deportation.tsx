@@ -28,11 +28,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { useTranslation } from "react-i18next";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
 
 /* ── Sidebar section map ───────────────────────────────────────── */
 
@@ -176,27 +174,17 @@ export default function AfterDeportation() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb
-        items={breadcrumbItems}
-        currentPage={t("afterDeportation.breadcrumb")}
-      />
-
-      {/* Hero */}
-      <section className="vivid-header-alt py-14 md:py-18">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <Badge className="mb-4 bg-amber-500/20 text-amber-200 border-amber-400/30 text-xs">
-            {t("afterDeportation.heroTagline")}
-          </Badge>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight mb-5 text-white">
-            {t("afterDeportation.heroTitle")}
-          </h1>
-          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
-            {t("afterDeportation.heroSubtitle")}
-          </p>
-        </div>
-      </section>
+    <ImmigrationDetailLayout
+      title={t("afterDeportation.heroTitle")}
+      subtitle={t("afterDeportation.heroSubtitle")}
+      breadcrumbItems={breadcrumbItems}
+      icon={<Users className="h-7 w-7" />}
+      eyebrow={
+        <Badge variant="outline" className="mb-3 text-xs font-medium text-muted-foreground">
+          {t("afterDeportation.heroTagline")}
+        </Badge>
+      }
+    >
 
       {/* Mobile pill nav */}
       <div className="lg:hidden sticky top-0 z-30 bg-background/95 backdrop-blur border-b border-border shadow-sm">
@@ -521,7 +509,6 @@ export default function AfterDeportation() {
         </div>
       </div>
 
-      <Footer />
-    </div>
+    </ImmigrationDetailLayout>
   );
 }

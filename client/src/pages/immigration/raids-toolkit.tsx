@@ -1,5 +1,4 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
-import { motion } from 'framer-motion';
 import {
   Shield,
   AlertTriangle,
@@ -13,15 +12,12 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
-import { PageBreadcrumb } from '@/components/navigation/page-breadcrumb';
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 import { ScenarioGuide } from '@/components/immigration/scenario-guide';
 import { SafetyChecklist } from '@/components/immigration/safety-checklist';
 import { EmergencyCard } from '@/components/immigration/emergency-card';
-import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
+import { ImmigrationDetailLayout } from '@/components/immigration/immigration-detail-layout';
 
 export default function RaidsToolkit() {
   useScrollToTop();
@@ -34,51 +30,25 @@ export default function RaidsToolkit() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb
-        items={breadcrumbItems}
-        currentPage={lang === 'es' ? 'Kit de Preparación para Redadas' : 'Raids Preparedness Toolkit'}
-      />
-
-      {/* Hero Section */}
-      <section className="vivid-header-amber text-white py-12 lg:py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
-                <BrandShieldIcon size={32} light />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white">
-                {lang === 'es' ? 'Kit de Preparación para Redadas' : 'Raids Preparedness Toolkit'}
-              </h1>
-            </div>
-            <p className="text-lg text-white/90 max-w-3xl">
-              {lang === 'es'
-                ? 'Recursos de preparación comunitaria y orientación específica para diferentes escenarios de encuentro con ICE. Prepárese antes de que ocurra una emergencia.'
-                : 'Community preparedness resources and scenario-specific guidance for different ICE encounters. Prepare before an emergency happens.'}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Critical Alert */}
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-red-50 border-red-200 dark:bg-red-950/50 dark:border-red-800">
-        <AlertTriangle className="h-5 w-5 text-red-600" />
-        <AlertDescription className="text-red-800 dark:text-red-200">
-          <strong>{lang === 'es' ? 'RECUERDE:' : 'REMEMBER:'}</strong>{' '}
-          {lang === 'es'
-            ? 'La preparación es clave. Tenga un plan antes de que ocurra una emergencia. Estos derechos aplican a TODAS las personas en Estados Unidos.'
-            : 'Preparation is key. Have a plan before an emergency happens. These rights apply to ALL persons in the United States.'}
-        </AlertDescription>
-      </Alert>
-
-      <RapidlyEvolvingNotice />
+    <ImmigrationDetailLayout
+      title={lang === 'es' ? 'Kit de Preparación para Redadas' : 'Raids Preparedness Toolkit'}
+      subtitle={lang === 'es'
+        ? 'Recursos de preparación comunitaria y orientación específica para diferentes escenarios de encuentro con ICE. Prepárese antes de que ocurra una emergencia.'
+        : 'Community preparedness resources and scenario-specific guidance for different ICE encounters. Prepare before an emergency happens.'}
+      breadcrumbItems={breadcrumbItems}
+      icon={<BrandShieldIcon size={28} />}
+      alert={
+        <Alert className="border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/40">
+          <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
+          <AlertDescription className="text-red-900 dark:text-red-200">
+            <strong>{lang === 'es' ? 'RECUERDE:' : 'REMEMBER:'}</strong>{' '}
+            {lang === 'es'
+              ? 'La preparación es clave. Tenga un plan antes de que ocurra una emergencia. Estos derechos aplican a TODAS las personas en Estados Unidos.'
+              : 'Preparation is key. Have a plan before an emergency happens. These rights apply to ALL persons in the United States.'}
+          </AlertDescription>
+        </Alert>
+      }
+    >
 
       {/* Quick Links */}
       <section className="py-8 bg-background">
@@ -313,7 +283,6 @@ export default function RaidsToolkit() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ImmigrationDetailLayout>
   );
 }

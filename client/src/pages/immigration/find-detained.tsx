@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import {
   Search,
   AlertTriangle,
@@ -17,13 +16,10 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
-import { Header } from '@/components/layout/header';
-import { Footer } from '@/components/layout/footer';
 import { ScrollReveal } from '@/components/ui/scroll-reveal';
-import { PageBreadcrumb } from '@/components/navigation/page-breadcrumb';
 import { useScrollToTop } from '@/hooks/use-scroll-to-top';
 import { FacilitySearch } from '@/components/immigration/facility-search';
-import { RapidlyEvolvingNotice } from '@/components/immigration/rapidly-evolving-notice';
+import { ImmigrationDetailLayout } from '@/components/immigration/immigration-detail-layout';
 
 export default function FindDetained() {
   useScrollToTop();
@@ -141,51 +137,25 @@ export default function FindDetained() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb
-        items={breadcrumbItems}
-        currentPage={lang === 'es' ? 'Encontrar a un Ser Querido' : 'Find a Loved One'}
-      />
-
-      {/* Hero Section */}
-      <section className="vivid-header-amber text-white py-12 lg:py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
-                <Search className="h-8 w-8 text-white" />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white">
-                {lang === 'es' ? 'Encontrar a un Ser Querido Después del Arresto' : 'Finding a Loved One After Arrest'}
-              </h1>
-            </div>
-            <p className="text-lg text-white/90 max-w-3xl">
-              {lang === 'es'
-                ? 'Guía paso a paso para localizar a alguien que ha sido detenido por ICE. Incluye cómo usar el localizador de detenidos, información sobre fianzas y directorio de centros de detención.'
-                : 'Step-by-step guide to locate someone who has been detained by ICE. Includes how to use the detainee locator, bond information, and detention facility directory.'}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Critical Alert */}
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-amber-50 border-amber-200 dark:bg-amber-950/50 dark:border-amber-800">
-        <Clock className="h-5 w-5 text-amber-600" />
-        <AlertDescription className="text-amber-800 dark:text-amber-200">
-          <strong>{lang === 'es' ? 'Actúe Rápido:' : 'Act Quickly:'}</strong>{' '}
-          {lang === 'es'
-            ? 'Los primeros días después del arresto son críticos. Localizar a la persona rápidamente ayuda a asegurar representación legal y puede afectar su elegibilidad para fianza.'
-            : 'The first few days after arrest are critical. Locating the person quickly helps secure legal representation and may affect their bond eligibility.'}
-        </AlertDescription>
-      </Alert>
-
-      <RapidlyEvolvingNotice />
+    <ImmigrationDetailLayout
+      title={lang === 'es' ? 'Encontrar a un Ser Querido Después del Arresto' : 'Finding a Loved One After Arrest'}
+      subtitle={lang === 'es'
+        ? 'Guía paso a paso para localizar a alguien que ha sido detenido por ICE. Incluye cómo usar el localizador de detenidos, información sobre fianzas y directorio de centros de detención.'
+        : 'Step-by-step guide to locate someone who has been detained by ICE. Includes how to use the detainee locator, bond information, and detention facility directory.'}
+      breadcrumbItems={breadcrumbItems}
+      icon={<Search className="h-7 w-7" />}
+      alert={
+        <Alert className="border-amber-300 bg-amber-50 dark:border-amber-700 dark:bg-amber-950/40">
+          <Clock className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+          <AlertDescription className="text-amber-900 dark:text-amber-200">
+            <strong>{lang === 'es' ? 'Actúe Rápido:' : 'Act Quickly:'}</strong>{' '}
+            {lang === 'es'
+              ? 'Los primeros días después del arresto son críticos. Localizar a la persona rápidamente ayuda a asegurar representación legal y puede afectar su elegibilidad para fianza.'
+              : 'The first few days after arrest are critical. Locating the person quickly helps secure legal representation and may affect their bond eligibility.'}
+          </AlertDescription>
+        </Alert>
+      }
+    >
 
       {/* ICE Locator Steps */}
       <section className="py-12 bg-background">
@@ -481,7 +451,6 @@ export default function FindDetained() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ImmigrationDetailLayout>
   );
 }

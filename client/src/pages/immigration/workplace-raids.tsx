@@ -12,12 +12,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from 'react-i18next';
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
-import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
-import { RapidlyEvolvingNotice } from "@/components/immigration/rapidly-evolving-notice";
+import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
 
 export default function WorkplaceRaids() {
   useScrollToTop();
@@ -30,44 +27,20 @@ export default function WorkplaceRaids() {
   ];
   
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <PageBreadcrumb 
-        items={breadcrumbItems} 
-        currentPage={t('immigration.raids.title')} 
-      />
-
-      <section className="vivid-header-amber text-white py-12 lg:py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 via-white/10 to-transparent flex items-center justify-center ring-1 ring-white/20">
-                <Building2 className="h-8 w-8 text-white" />
-              </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-white" data-testid="text-workplace-raids-title">
-                {t('immigration.raids.title')}
-              </h1>
-            </div>
-            <p className="text-lg text-white/90 max-w-3xl" data-testid="text-workplace-raids-subtitle">
-              {t('immigration.raids.subtitle')}
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      <Alert className="max-w-4xl mx-auto px-4 mt-6 mb-4 bg-red-50 border-red-200 dark:bg-red-950/50 dark:border-red-800">
-        <AlertTriangle className="h-5 w-5 text-red-600" />
-        <AlertDescription className="text-red-800 dark:text-red-200" data-testid="alert-workplace-critical">
-          <strong>{t('immigration.raids.criticalAlert')}</strong> {t('immigration.raids.criticalAlertText')}
-        </AlertDescription>
-      </Alert>
-
-      <RapidlyEvolvingNotice />
+    <ImmigrationDetailLayout
+      title={t('immigration.raids.title')}
+      subtitle={t('immigration.raids.subtitle')}
+      breadcrumbItems={breadcrumbItems}
+      icon={<Building2 className="h-7 w-7" />}
+      alert={
+        <Alert className="border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-950/40">
+          <AlertTriangle className="h-5 w-5 text-red-600 dark:text-red-400" />
+          <AlertDescription className="text-red-900 dark:text-red-200" data-testid="alert-workplace-critical">
+            <strong>{t('immigration.raids.criticalAlert')}</strong> {t('immigration.raids.criticalAlertText')}
+          </AlertDescription>
+        </Alert>
+      }
+    >
 
       <section className="py-12 bg-background">
         <div className="max-w-7xl mx-auto px-4">
@@ -379,7 +352,6 @@ export default function WorkplaceRaids() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ImmigrationDetailLayout>
   );
 }
