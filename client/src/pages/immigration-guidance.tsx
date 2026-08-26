@@ -145,11 +145,11 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
   };
 
   const getColorClasses = (color: string) => {
-    const colors: Record<string, { bg: string; text: string; ring: string }> = {
-      blue: { bg: 'from-blue-500/20 via-blue-500/10', text: 'text-blue-600 dark:text-blue-400', ring: 'ring-blue-500/20' },
-      orange: { bg: 'from-orange-500/20 via-orange-500/10', text: 'text-orange-600 dark:text-orange-400', ring: 'ring-orange-500/20' },
-      purple: { bg: 'from-purple-500/20 via-purple-500/10', text: 'text-purple-600 dark:text-purple-400', ring: 'ring-purple-500/20' },
-      red: { bg: 'from-red-500/20 via-red-500/10', text: 'text-red-600 dark:text-red-400', ring: 'ring-red-500/20' },
+    const colors: Record<string, string> = {
+      blue: 'text-blue-600 dark:text-blue-400',
+      orange: 'text-orange-600 dark:text-orange-400',
+      purple: 'text-purple-600 dark:text-purple-400',
+      red: 'text-red-600 dark:text-red-400',
     };
     return colors[color] || colors.blue;
   };
@@ -173,12 +173,12 @@ function DeportationPhasesCarousel({ t }: { t: (key: string) => string }) {
             tabIndex={0}
             onKeyDown={(e) => (e.key === "Enter" || e.key === " ") ? advance() : undefined}
             aria-label={`Phase ${activeIndex + 1} of ${phases.length}: ${activePhase.title}. Tap to advance.`}
-            className="h-full shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer select-none group active:scale-[0.995]"
+            className="editorial-card editorial-card-interactive h-full cursor-pointer select-none group active:scale-[0.995]"
           >
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-foreground" data-testid={`text-${activePhase.id}-title`}>
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${activeColors.bg} to-transparent flex items-center justify-center ring-1 ${activeColors.ring}`}>
-                  <span className={activeColors.text}>{activePhase.icon}</span>
+                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
+                  <span className={activeColors}>{activePhase.icon}</span>
                 </div>
                 <div>
                   <Badge variant="outline" className="mb-1">Phase {activeIndex + 1} of {phases.length}</Badge>
@@ -285,7 +285,7 @@ export default function ImmigrationGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-red-500/20">
+                <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mx-auto mb-5">
                 <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-emergency-rights-title">
@@ -302,7 +302,7 @@ export default function ImmigrationGuidance() {
               <Card className="editorial-card editorial-card-interactive">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-constitutional-rights-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <BrandShieldIcon size={20} />
                     </div>
                     {t('immigration.emergencyRights.constitutionalTitle')}
@@ -343,7 +343,7 @@ export default function ImmigrationGuidance() {
               <Card className="editorial-card editorial-card-interactive">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-what-not-to-do-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <XCircle className="h-5 w-5 text-red-600 dark:text-red-400" />
                     </div>
                     {t('immigration.emergencyRights.whatNotToDoTitle')}
@@ -403,7 +403,7 @@ export default function ImmigrationGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <div className="w-16 h-16 rounded-xl bg-muted flex items-center justify-center mx-auto mb-6">
+              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mx-auto mb-5">
                 <BookOpen className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-detailed-guides-title">
@@ -418,21 +418,21 @@ export default function ImmigrationGuidance() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal delay={0.1}>
               <Link href="/immigration-guidance/daca-tps">
-                <Card className="h-full hover:shadow-lg hover:border-blue-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <BrandShieldIcon size={24} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-blue-600 transition-colors" data-testid="link-daca-tps">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-daca-tps">
                           {t('immigration.hub.detailedGuides.dacaCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.dacaCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-blue-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -441,21 +441,21 @@ export default function ImmigrationGuidance() {
 
             <ScrollReveal delay={0.15}>
               <Link href="/immigration-guidance/workplace-raids">
-                <Card className="h-full hover:shadow-lg hover:border-orange-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent flex items-center justify-center ring-1 ring-orange-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <Building2 className="h-6 w-6 text-orange-600 dark:text-orange-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-orange-600 transition-colors" data-testid="link-workplace-raids">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-workplace-raids">
                           {t('immigration.hub.detailedGuides.raidsCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.raidsCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-orange-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -464,21 +464,21 @@ export default function ImmigrationGuidance() {
 
             <ScrollReveal delay={0.2}>
               <Link href="/immigration-guidance/family-planning">
-                <Card className="h-full hover:shadow-lg hover:border-purple-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent flex items-center justify-center ring-1 ring-purple-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <Heart className="h-6 w-6 text-purple-600 dark:text-purple-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-purple-600 transition-colors" data-testid="link-family-planning">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-family-planning">
                           {t('immigration.hub.detailedGuides.familyCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.familyCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-purple-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -487,21 +487,21 @@ export default function ImmigrationGuidance() {
 
             <ScrollReveal delay={0.25}>
               <Link href="/immigration-guidance/bond-hearings">
-                <Card className="h-full hover:shadow-lg hover:border-green-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <Scale className="h-6 w-6 text-green-600 dark:text-green-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-green-600 transition-colors" data-testid="link-bond-hearings">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-bond-hearings">
                           {t('immigration.hub.detailedGuides.bondCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.bondCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-green-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -510,21 +510,21 @@ export default function ImmigrationGuidance() {
 
             <ScrollReveal delay={0.3}>
               <Link href="/immigration-guidance/find-attorney">
-                <Card className="h-full hover:shadow-lg hover:border-red-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <UserCheck className="h-6 w-6 text-red-600 dark:text-red-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-red-600 transition-colors" data-testid="link-find-attorney">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-find-attorney">
                           {t('immigration.hub.detailedGuides.attorneyCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.attorneyCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-red-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -533,21 +533,21 @@ export default function ImmigrationGuidance() {
 
             <ScrollReveal delay={0.35}>
               <Link href="/immigration-guidance/find-detained">
-                <Card className="h-full hover:shadow-lg hover:border-cyan-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent flex items-center justify-center ring-1 ring-cyan-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <Eye className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-cyan-600 transition-colors" data-testid="link-find-detained">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-find-detained">
                           {t('immigration.hub.detailedGuides.findDetainedCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.findDetainedCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-cyan-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -556,21 +556,21 @@ export default function ImmigrationGuidance() {
 
             <ScrollReveal delay={0.4}>
               <Link href="/immigration-guidance/know-your-rights">
-                <Card className="h-full hover:shadow-lg hover:border-emerald-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 via-emerald-500/10 to-transparent flex items-center justify-center ring-1 ring-emerald-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <FileText className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-emerald-600 transition-colors" data-testid="link-know-your-rights">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-know-your-rights">
                           {t('immigration.hub.detailedGuides.kyrCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.kyrCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-emerald-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -579,21 +579,21 @@ export default function ImmigrationGuidance() {
 
             <ScrollReveal delay={0.45}>
               <Link href="/immigration-guidance/raids-toolkit">
-                <Card className="h-full hover:shadow-lg hover:border-amber-500/50 transition-all duration-200 cursor-pointer group">
+                <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-transparent flex items-center justify-center ring-1 ring-amber-500/20 flex-shrink-0">
+                      <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                         <Flag className="h-6 w-6 text-amber-600 dark:text-amber-400" />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg group-hover:text-amber-600 transition-colors" data-testid="link-raids-toolkit">
+                        <h3 className="font-semibold text-lg group-hover:text-primary transition-colors" data-testid="link-raids-toolkit">
                           {t('immigration.hub.detailedGuides.raidsToolkitCard.title')}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
                           {t('immigration.hub.detailedGuides.raidsToolkitCard.description')}
                         </p>
                       </div>
-                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-amber-600 transition-colors flex-shrink-0" />
+                      <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
@@ -604,21 +604,21 @@ export default function ImmigrationGuidance() {
             <ScrollReveal delay={0.35}>
               <div className="mt-6 pt-6 border-t border-border/40">
                 <Link href="/immigration-guidance/after-deportation">
-                  <Card className="h-full hover:shadow-lg hover:border-slate-500/50 transition-all duration-200 cursor-pointer group border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/20">
+                  <Card className="editorial-card editorial-card-interactive h-full cursor-pointer group">
                     <CardContent className="pt-6">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-slate-500/20 via-slate-500/10 to-transparent flex items-center justify-center ring-1 ring-slate-500/20 flex-shrink-0">
+                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                           <Users className="h-6 w-6 text-slate-600 dark:text-slate-400" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-semibold text-lg group-hover:text-slate-700 dark:group-hover:text-slate-300 transition-colors">
+                          <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
                             {t('header.dropdown.immigration.afterDeportation')}
                           </h3>
                           <p className="text-sm text-muted-foreground mt-1">
                             {t('header.dropdown.immigration.afterDeportationDesc')}
                           </p>
                         </div>
-                        <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-slate-600 transition-colors flex-shrink-0" />
+                        <ChevronRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
                       </div>
                     </CardContent>
                   </Card>
@@ -634,7 +634,7 @@ export default function ImmigrationGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
+              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mx-auto mb-5">
                 <Clock className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-deportation-phases-title">
@@ -655,7 +655,7 @@ export default function ImmigrationGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-green-500/20">
+              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mx-auto mb-5">
                 <BrandShieldIcon size={32} />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-special-protections-title">
@@ -669,10 +669,10 @@ export default function ImmigrationGuidance() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
+              <Card className="editorial-card editorial-card-interactive h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-us-citizens-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <UserCheck className="h-5 w-5 text-green-600 dark:text-green-400" />
                     </div>
                     {t('immigration.specialProtections.usCitizens.title')}
@@ -691,10 +691,10 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
+              <Card className="editorial-card editorial-card-interactive h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-vulnerable-populations-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                     </div>
                     {t('immigration.specialProtections.vulnerable.title')}
@@ -713,10 +713,10 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.3}>
-              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
+              <Card className="editorial-card editorial-card-interactive h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-sanctuary-jurisdictions-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent flex items-center justify-center ring-1 ring-purple-500/20">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <Home className="h-5 w-5 text-purple-600 dark:text-purple-400" />
                     </div>
                     {t('immigration.specialProtections.sanctuary.title')}
@@ -742,7 +742,7 @@ export default function ImmigrationGuidance() {
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
+              <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center mx-auto mb-5">
                 <Phone className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-emergency-resources-title">
@@ -756,10 +756,10 @@ export default function ImmigrationGuidance() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
+              <Card className="editorial-card editorial-card-interactive h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-national-hotlines-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <Phone className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                     </div>
                     {t('immigration.resources.hotlines.title')}
@@ -788,10 +788,10 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200 h-full">
+              <Card className="editorial-card editorial-card-interactive h-full">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-locator-services-title">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                       <BookOpen className="h-5 w-5 text-green-600 dark:text-green-400" />
                     </div>
                     {t('immigration.resources.locators.title')}
@@ -849,10 +849,10 @@ export default function ImmigrationGuidance() {
 
           {/* Prepare Now Section */}
           <ScrollReveal delay={0.3}>
-            <Card className="mt-8 hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+            <Card className="editorial-card editorial-card-interactive mt-8">
               <CardHeader>
                 <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-prepare-now-title">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent flex items-center justify-center ring-1 ring-purple-500/20">
+                  <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center">
                     <FileText className="h-5 w-5 text-purple-600 dark:text-purple-400" />
                   </div>
                   {t('immigration.resources.prepareTitle')}

@@ -1479,9 +1479,10 @@ a:focus-visible,
   }
 
   .editorial-nav-separator {
-    color: var(--editorial-rule);
-    font-family: var(--font-serif);
-    font-size: 1.15rem;
+    background: var(--editorial-rule);
+    border-radius: 999px;
+    color: transparent;
+    flex-shrink: 0;
   }
 
   .editorial-dropdown {

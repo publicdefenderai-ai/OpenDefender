@@ -204,7 +204,7 @@ export function Header() {
                 const isLast = idx === navLinks.length - 1;
 
                 const separator = !isLast ? (
-                  <span aria-hidden="true" className="editorial-nav-separator select-none px-1 leading-none">/</span>
+                  <span aria-hidden="true" className="editorial-nav-separator inline-block h-5 w-px bg-border/80 mx-2 select-none" />
                 ) : null;
 
                 if (!link.dropdown) {

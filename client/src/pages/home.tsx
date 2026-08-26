@@ -182,27 +182,13 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t("home.hero.subtitle")}
             </p>
-            <div className="flex flex-col items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center">
               <button
                 onClick={handleUrgentHelp}
                 className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 active:bg-teal-600 text-white font-bold text-base transition-colors shadow-lg shadow-teal-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
                 {t("home.hero.primaryCta")} <ArrowRight className="h-4 w-4" />
               </button>
-              <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
-                <Link
-                  href="/case-guidance"
-                  className="editorial-hero-link"
-                >
-                  {t("home.doors.door2.cta")}
-                </Link>
-                <Link
-                  href="/directory"
-                  className="editorial-hero-link"
-                >
-                  {t("home.hero.secondaryCta")}
-                </Link>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -217,18 +203,18 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {doors.map((door, i) => (
               <motion.div
                 key={door.link}
                 initial={{ opacity: 0, y: 28 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className={`group ${i === 0 ? "md:col-span-7 md:row-span-2" : "md:col-span-5"}`}
+                className="group h-full"
               >
                 <div
                   className={`editorial-path-card editorial-path-card-${door.tone} relative flex flex-col overflow-hidden
-                    ${i === 0 ? "min-h-[360px] md:min-h-[460px]" : "min-h-[260px] md:min-h-[220px]"}`}
+                    h-full min-h-[360px]`}
                 >
                   <div className="relative z-10 flex flex-col flex-1 p-6">
                     <div className="flex items-center gap-2 mb-4">
