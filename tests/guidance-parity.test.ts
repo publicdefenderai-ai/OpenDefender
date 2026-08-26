@@ -10,6 +10,7 @@ import {
 } from '../shared/guidance-view-model';
 import { buildGuidanceChatSummary } from '../shared/guidance-chat-summary';
 import { GuidancePrintPlan } from '../client/src/components/legal/guidance-print-plan';
+import { renderGuidanceRichText } from '../client/src/components/legal/guidance-rich-text';
 
 const { rendered, mockDoc, mockGetChargeExplanation } = vi.hoisted(() => {
   const rendered: string[] = [];
@@ -323,5 +324,66 @@ describe('normalized guidance surface parity', () => {
 
     await generateGuidancePDF(completeGuidance(), 'en');
     expect(rendered.join('\n')).toContain('State-specific detail not yet verified');
+  });
+
+  it('renders generated Markdown in browser print and removes it from PDF text', async () => {
+    const guidance = normalizeGuidance({
+      ...completeGuidance(),
+      overview: 'Review **this warning** and [legal help](/resources).',
+      rights: ['**Right to counsel** before answering questions.'],
+      warnings: ['**Do not discuss your case** on social media.'],
+      evidenceToGather: ['Preserve [case records](/support/evidence) for your attorney.'],
+    });
+
+    const markup = renderToStaticMarkup(React.createElement(GuidancePrintPlan, { guidance }));
+    expect(markup).toContain('<strong class="font-semibold">this warning</strong>');
+    expect(markup).toContain('href="/resources"');
+    expect(markup).not.toContain('**');
+    expect(renderToStaticMarkup(React.createElement('p', null, renderGuidanceRichText('**Bold** and *italic*'))))
+      .toContain('<em>italic</em>');
+
+    rendered.length = 0;
+    await generateGuidancePDF(guidance, 'en');
+    const pdf = rendered.join('\n');
+    expect(pdf).toContain('Review this warning and legal help (opendefender.ai/resources).');
+    expect(pdf).toContain('Right to counsel');
+    expect(pdf).not.toContain('**');
+    expect(pdf).not.toContain('[case records](/support/evidence)');
+  });
+
+  it('deduplicates repeated warnings while preserving distinct local subjects', () => {
+    const guidance = normalizeGuidance({
+      ...completeGuidance(),
+      warnings: [
+        'Court rules and deadlines vary by county. Verify all deadlines with your local court.',
+        'Court rules and deadlines vary by county. Verify all deadlines with your local court.',
+        'Bail schedules vary by county and should be confirmed before arraignment.',
+        'A separate DMV administrative deadline may apply and should be confirmed with the DMV.',
+      ],
+      uncertainties: [
+        {
+          area: 'Jurisdiction-Specific Deadlines',
+          note: 'Specific court deadlines and procedures for this state were not available. The timeframes shown are general estimates. Verify all deadlines with a local attorney.',
+        },
+        {
+          area: 'County Bail Amounts',
+          note: 'Bail schedules vary by county and may differ from statewide figures. Confirm the amount with your attorney.',
+        },
+        {
+          area: 'County Sentencing Practices',
+          note: 'Local sentencing practices vary by county. Ask an attorney about the practices in your court.',
+        },
+      ],
+    });
+
+    expect(guidance.warnings).toEqual([
+      'A separate DMV administrative deadline may apply and should be confirmed with the DMV.',
+    ]);
+    expect(guidance.uncertainties).toHaveLength(3);
+    expect(guidance.uncertainties.map(item => item.area)).toEqual([
+      'Jurisdiction-Specific Deadlines',
+      'County Bail Amounts',
+      'County Sentencing Practices',
+    ]);
   });
 });

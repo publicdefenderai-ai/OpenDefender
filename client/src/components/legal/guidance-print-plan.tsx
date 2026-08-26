@@ -5,6 +5,7 @@ import {
   type GuidanceSectionId,
   type GuidanceViewModel,
 } from "@shared/guidance-view-model";
+import { renderGuidanceRichText } from "./guidance-rich-text";
 
 const SECTION_LABELS: Record<GuidanceSectionId, string> = {
   criticalAlerts: "Urgent Takeaways",
@@ -116,7 +117,7 @@ function sectionLabels(language: string): Record<GuidanceSectionId, string> {
 }
 
 function list(items: string[]) {
-  return <ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul>;
+  return <ul>{items.map((item, index) => <li key={index}>{renderGuidanceRichText(item)}</li>)}</ul>;
 }
 
 function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel, language: string) {
@@ -124,14 +125,14 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
     case "criticalAlerts":
       return guidance.criticalAlerts.length ? list(guidance.criticalAlerts) : null;
     case "overview":
-      return guidance.overview ? <p>{guidance.overview}</p> : null;
+      return guidance.overview ? <p>{renderGuidanceRichText(guidance.overview)}</p> : null;
     case "charges":
       return guidance.chargeClassifications.length ? (
         <ul>
           {guidance.chargeClassifications.map((charge, index) => (
             <li key={index}>
-              <strong>{charge.name}:</strong> {charge.classification}
-              {charge.verifiedCitation && <>, {charge.verifiedCitation}</>}
+              <strong>{renderGuidanceRichText(charge.name)}:</strong> {renderGuidanceRichText(charge.classification)}
+              {charge.verifiedCitation && <>, {renderGuidanceRichText(charge.verifiedCitation)}</>}
             </li>
           ))}
         </ul>
@@ -145,7 +146,7 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
           <h3>{actions.practical}</h3>
           <ol>
             {guidance.practicalStarterSteps.map((step) => <li key={step}>{actions[step]}</li>)}
-            {practicalActions.map((item, index) => <li key={`generated-${index}`}><strong>{item.urgency}:</strong> {item.action}</li>)}
+             {practicalActions.map((item, index) => <li key={`generated-${index}`}><strong>{item.urgency}:</strong> {renderGuidanceRichText(item.action)}</li>)}
           </ol>
           <h3>{actions.resources}</h3>
           <ul>
@@ -159,7 +160,7 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
             <>
               <h3>{actions.legal}</h3>
               <p>{actions.note}</p>
-              <ul>{legalInformationActions.map((item, index) => <li key={index}><strong>{item.urgency}:</strong> {item.action}</li>)}</ul>
+               <ul>{legalInformationActions.map((item, index) => <li key={index}><strong>{item.urgency}:</strong> {renderGuidanceRichText(item.action)}</li>)}</ul>
             </>
           )}
         </>
@@ -167,13 +168,13 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
     case "timeline":
       return guidance.timeline.length ? (
         <ol>{guidance.timeline.map((item, index) => (
-          <li key={index}><strong>{item.stage}:</strong> {item.description} ({item.isEstimate ? "~" : ""}{item.timeframe}){item.completed ? ", completed" : ""}</li>
+          <li key={index}><strong>{renderGuidanceRichText(item.stage)}:</strong> {renderGuidanceRichText(item.description)} ({item.isEstimate ? "~" : ""}{renderGuidanceRichText(item.timeframe)}){item.completed ? ", completed" : ""}</li>
         ))}</ol>
       ) : null;
     case "deadlines":
       return guidance.deadlines.length ? (
         <ul>{guidance.deadlines.map((item, index) => (
-          <li key={index}><strong>{item.event}:</strong> {item.isEstimate ? "~" : ""}{item.timeframe} [{item.priority}], {item.description}</li>
+          <li key={index}><strong>{renderGuidanceRichText(item.event)}:</strong> {item.isEstimate ? "~" : ""}{renderGuidanceRichText(item.timeframe)} [{item.priority}], {renderGuidanceRichText(item.description)}</li>
         ))}</ul>
       ) : null;
     case "rights":
@@ -189,16 +190,16 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
     case "collateralConsequences":
       return guidance.collateralConsequences.length ? (
         <ul>{guidance.collateralConsequences.map((item, index) => (
-          <li key={index}><strong>{item.consequence}</strong> ({item.timing}): {item.actionNote}</li>
+           <li key={index}><strong>{renderGuidanceRichText(item.consequence)}</strong> ({renderGuidanceRichText(item.timing)}): {renderGuidanceRichText(item.actionNote)}</li>
         ))}</ul>
       ) : null;
     case "mockQA":
       return guidance.mockQA.length ? (
         <ol>{guidance.mockQA.map((item, index) => (
           <li key={index}>
-            <strong>{item.question}</strong>
-            <div>Suggested response: {item.suggestedResponse}</div>
-            <div>Why: {item.explanation}</div>
+             <strong>{renderGuidanceRichText(item.question)}</strong>
+             <div>Suggested response: {renderGuidanceRichText(item.suggestedResponse)}</div>
+             <div>Why: {renderGuidanceRichText(item.explanation)}</div>
           </li>
         ))}</ol>
       ) : null;
@@ -206,15 +207,15 @@ function sectionContent(section: GuidanceSectionId, guidance: GuidanceViewModel,
       return guidance.avoidActions.length ? <><p>{immediateActionLabels(language).avoidNote}</p>{list(guidance.avoidActions)}</> : null;
     case "uncertainties":
       return guidance.uncertainties.length ? (
-        <ul>{guidance.uncertainties.map((item, index) => <li key={index}><strong>{item.area}:</strong> {item.note}</li>)}</ul>
+         <ul>{guidance.uncertainties.map((item, index) => <li key={index}><strong>{renderGuidanceRichText(item.area)}:</strong> {renderGuidanceRichText(item.note)}</li>)}</ul>
       ) : null;
     case "resources":
       return guidance.resources.length ? (
         <ul>{guidance.resources.map((item, index) => (
           <li key={index}>
-            <strong>{item.type}:</strong> {item.description}, {item.contact}
-            {item.hours && <>, {item.hours}</>}
-            {item.website && <>, {item.website}</>}
+             <strong>{renderGuidanceRichText(item.type)}:</strong> {renderGuidanceRichText(item.description)}, {renderGuidanceRichText(item.contact)}
+             {item.hours && <>, {renderGuidanceRichText(item.hours)}</>}
+             {item.website && <>, {renderGuidanceRichText(item.website)}</>}
           </li>
         ))}</ul>
       ) : null;

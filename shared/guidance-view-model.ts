@@ -111,11 +111,110 @@ export interface GuidanceViewModel {
 const strings = (value: unknown): string[] => Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : [];
 const items = <T>(value: unknown): T[] => Array.isArray(value) ? value as T[] : [];
 
+function comparisonText(value: string): string {
+  return value
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[*_`#]/g, '')
+    .replace(/[^\p{L}\p{N}\s]/gu, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLocaleLowerCase();
+}
+
+function comparisonTokens(value: string): Set<string> {
+  return new Set(comparisonText(value).split(/\s+/).filter(token => token.length > 2));
+}
+
+function nearDuplicate(left: string, right: string): boolean {
+  const leftText = comparisonText(left);
+  const rightText = comparisonText(right);
+  if (!leftText || !rightText) return false;
+  if (leftText === rightText) return true;
+  if (leftText.length < 35 || rightText.length < 35) return false;
+
+  const leftTokens = comparisonTokens(left);
+  const rightTokens = comparisonTokens(right);
+  if (leftTokens.size < 5 || rightTokens.size < 5) return false;
+  const overlap = [...leftTokens].filter(token => rightTokens.has(token)).length;
+  const union = new Set([...leftTokens, ...rightTokens]).size;
+  const containment = overlap / Math.min(leftTokens.size, rightTokens.size);
+  const jaccard = overlap / union;
+  return overlap >= 5 && (containment >= 0.85 || jaccard >= 0.75);
+}
+
+const DEDUPE_TOPICS = [
+  /\bdeadlines?\b|\btimeframes?\b|\bplazos?\b|截止|期限/iu,
+  /\bprocedur(?:e|es|al)\b|\bcourt rules?\b|\bcourt practices?\b|\bprocedimientos?\b|程序|规则/iu,
+  /\bbail\b|\bbond\b|\bfianza\b|保释/iu,
+  /\bsentenc(?:e|ing)\b|\bpenalt(?:y|ies)\b|\bsentencia\b|\bpenas?\b|判刑|刑罚/iu,
+  /\barraignment\b|\bcomparecencia\b|\blectura de cargos\b|提审/iu,
+];
+
+function matchingTopics(value: string): Set<number> {
+  return new Set(DEDUPE_TOPICS.flatMap((pattern, index) => pattern.test(value) ? [index] : []));
+}
+
+function isLocalVerificationCaveat(value: string): boolean {
+  return (
+    /\bcount(?:y|ies)\b|\blocal\b|\bjurisdiction\b|\bstate[- ]specific\b|\bcondad(?:o|os)\b|\blocal(?:es)?\b|\bjurisdicci[oó]n\b|县|当地|辖区/iu.test(value)
+    && /\bverif(?:y|ied|ication)\b|\bconfirm(?:ed|ation)?\b|\bvary\b|\bdiffer\b|\bnot available\b|\buncertain\b|\bno pudo confirmarse\b|\bconfirma(?:r|ción)\b|核实|确认|不同/iu.test(value)
+  );
+}
+
+function uniqueStrings(values: string[]): string[] {
+  const result: string[] = [];
+  for (const value of values) {
+    if (!value.trim()) continue;
+    if (!result.some(existing => nearDuplicate(existing, value))) {
+      result.push(value);
+    }
+  }
+  return result;
+}
+
+/**
+ * Keep uncertainty items as the structured home for jurisdiction caveats.
+ * A warning is removed only when it is an exact/near duplicate or repeats the
+ * same local-verification topic. Distinct case-specific subjects, such as a
+ * DMV deadline versus a criminal-court deadline, remain visible.
+ */
+function dedupeWarningsAndUncertainties(
+  warnings: string[],
+  uncertainties: GuidanceUncertainty[],
+): { warnings: string[]; uncertainties: GuidanceUncertainty[] } {
+  const uniqueWarnings = uniqueStrings(warnings);
+  const uniqueUncertainties: GuidanceUncertainty[] = [];
+
+  for (const item of uncertainties) {
+    if (!item.area.trim() && !item.note.trim()) continue;
+    const duplicate = uniqueUncertainties.some(existing =>
+      nearDuplicate(`${existing.area}: ${existing.note}`, `${item.area}: ${item.note}`),
+    );
+    if (!duplicate) uniqueUncertainties.push(item);
+  }
+
+  const retainedWarnings = uniqueWarnings.filter(warning => !uniqueUncertainties.some(item => {
+    const uncertaintyText = `${item.area}: ${item.note}`;
+    if (nearDuplicate(warning, uncertaintyText)) return true;
+    if (!isLocalVerificationCaveat(warning) || !isLocalVerificationCaveat(uncertaintyText)) return false;
+
+    const warningTopics = matchingTopics(warning);
+    const uncertaintyTopics = matchingTopics(uncertaintyText);
+    return [...warningTopics].some(topic => uncertaintyTopics.has(topic));
+  }));
+
+  return { warnings: retainedWarnings, uncertainties: uniqueUncertainties };
+}
+
 /** Convert API, rules, streaming, or legacy cached data to the one display contract. */
 export function normalizeGuidance(raw: unknown, caseDataOverride?: Partial<GuidanceViewModel['caseData']>): GuidanceViewModel {
   const value = (raw && typeof raw === 'object' ? raw : {}) as Record<string, any>;
   const sourceCase = value.caseData && typeof value.caseData === 'object' ? value.caseData : {};
   const rights = strings(value.rights ?? value.rightsReminders);
+  const warningContent = dedupeWarningsAndUncertainties(
+    strings(value.warnings),
+    items<GuidanceUncertainty>(value.uncertainties).filter(item => item && typeof item.area === 'string' && typeof item.note === 'string'),
+  );
   return {
     sessionId: typeof value.sessionId === 'string' ? value.sessionId : '',
     generatedAt: typeof value.generatedAt === 'string' ? value.generatedAt : undefined,
@@ -137,7 +236,7 @@ export function normalizeGuidance(raw: unknown, caseDataOverride?: Partial<Guida
     rights,
     rightsReminders: rights,
     resources: items<GuidanceResource>(value.resources).filter(item => item && typeof item.type === 'string'),
-    warnings: strings(value.warnings),
+    warnings: warningContent.warnings,
     evidenceToGather: strings(value.evidenceToGather),
     courtPreparation: strings(value.courtPreparation),
     avoidActions: strings(value.avoidActions),
@@ -152,7 +251,7 @@ export function normalizeGuidance(raw: unknown, caseDataOverride?: Partial<Guida
       })),
     mockQA: items<MockQAItem>(value.mockQA).filter(item => item && typeof item.question === 'string'),
     collateralConsequences: items<CollateralConsequence>(value.collateralConsequences).filter(item => item && typeof item.consequence === 'string'),
-    uncertainties: items<GuidanceUncertainty>(value.uncertainties).filter(item => item && typeof item.area === 'string'),
+    uncertainties: warningContent.uncertainties,
     caseData: {
       jurisdiction: String(caseDataOverride?.jurisdiction ?? sourceCase.jurisdiction ?? ''),
       charges: String(caseDataOverride?.charges ?? sourceCase.charges ?? ''),

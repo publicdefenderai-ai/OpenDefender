@@ -49,9 +49,14 @@ function pl(text: string): string {
 // Strip inline markdown (bold, italic) so raw asterisks never appear in PDF output
 function stripMd(text: string): string {
   return text
-    .replace(/\*\*([^*]+)\*\*/g, '$1')  // **bold**
-    .replace(/\*([^*]+)\*/g, '$1')       // *italic*
-    .replace(/_([^_]+)_/g, '$1');        // _italic_
+    .replace(/(\*\*|__)(.*?)\1/g, '$2')  // **bold** / __bold__
+    .replace(/(?<!\w)(\*|_)([^*\n_]+)\1/g, '$2') // *italic* / _italic_
+    .replace(/^#{1,6}\s+/gm, '');        // markdown headings
+}
+
+function pdfText(value: unknown): string {
+  const text = typeof value === 'string' ? value : String(value ?? '');
+  return stripMd(pl(text));
 }
 
 type EnhancedGuidanceData = GuidanceViewModel;
@@ -436,7 +441,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
   // Helper function to add text with word wrap
   const addText = (text: string, x: number, y: number, options?: any) => {
-    const lines = doc.splitTextToSize(text, pageWidth - 2 * margin);
+    const lines = doc.splitTextToSize(pdfText(text), pageWidth - 2 * margin);
     doc.text(lines, x, y, options);
     return y + (lines.length * 7);
   };
@@ -548,7 +553,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     doc.setFont(FONT_NAME, 'normal');
     doc.setTextColor(0, 0, 0);
 
-    yPosition = addText(pl(guidance.overview), margin + 5, yPosition);
+      yPosition = addText(guidance.overview, margin + 5, yPosition);
     yPosition += 10;
   }
 
@@ -817,7 +822,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setFontSize(10);
       doc.setFont(FONT_NAME, 'normal');
       doc.setTextColor(0, 0, 0);
-      yPosition = addText(stripMd(pl(actionItem.action || '')), margin + 8, yPosition);
+       yPosition = addText(actionItem.action || '', margin + 8, yPosition);
       yPosition += 5;
       });
     };
@@ -836,7 +841,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     doc.setFont(FONT_NAME, 'normal');
     guidance.practicalSupportLinks.forEach(link => {
       checkPageBreak();
-      yPosition = addText(`   • ${pl(actionLabels[link.kind])}`, margin + 5, yPosition);
+       yPosition = addText(`   • ${actionLabels[link.kind]}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 3;
@@ -855,8 +860,8 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     const timelineData = safe.timeline.map(stage => [
       stage.completed ? '[X]' : '[ ]',
       stage.stage || '',
-      stage.description || '',
-      stage.isEstimate ? `~${stage.timeframe}` : (stage.timeframe || '')
+       pdfText(stage.description || ''),
+       stage.isEstimate ? `~${pdfText(stage.timeframe)}` : pdfText(stage.timeframe || '')
     ]);
 
     autoTable(doc, {
@@ -907,10 +912,10 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     }
 
     const deadlineData = safe.deadlines.map(deadline => [
-      deadline.event,
-      deadline.isEstimate ? `~${deadline.timeframe}` : deadline.timeframe,
+       pdfText(deadline.event),
+       deadline.isEstimate ? `~${pdfText(deadline.timeframe)}` : pdfText(deadline.timeframe),
       deadline.priority.toUpperCase(),
-      deadline.description
+       pdfText(deadline.description)
     ]);
 
     autoTable(doc, {
@@ -990,7 +995,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
     safe.evidenceToGather.forEach((evidence) => {
       checkPageBreak();
-      yPosition = addText(`   • ${stripMd(typeof evidence === 'string' ? evidence : String(evidence))}`, margin + 5, yPosition);
+       yPosition = addText(`   • ${typeof evidence === 'string' ? evidence : String(evidence)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -1013,7 +1018,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     if (hasWarn) {
       safe.warnings.forEach((warning) => {
         checkPageBreak();
-        yPosition = addText(`   * ${stripMd(typeof warning === 'string' ? warning : String(warning))}`, margin + 5, yPosition);
+         yPosition = addText(`   * ${typeof warning === 'string' ? warning : String(warning)}`, margin + 5, yPosition);
         yPosition += 3;
       });
       if (hasCourt) {
@@ -1033,7 +1038,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.setTextColor(0, 0, 0);
       safe.courtPreparation.forEach((item) => {
         checkPageBreak();
-        yPosition = addText(`   • ${stripMd(typeof item === 'string' ? item : String(item))}`, margin + 5, yPosition);
+         yPosition = addText(`   • ${typeof item === 'string' ? item : String(item)}`, margin + 5, yPosition);
         yPosition += 3;
       });
     }
@@ -1095,9 +1100,9 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
     const collateralData = safe.collateralConsequences.map(item => [
       catLabel(item.category || 'other'),
-      item.consequence || '',
-      item.timing || '',
-      item.actionNote || '',
+       pdfText(item.consequence || ''),
+       pdfText(item.timing || ''),
+       pdfText(item.actionNote || ''),
     ]);
 
     autoTable(doc, {
@@ -1201,7 +1206,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
 
     safe.avoidActions.forEach((action) => {
       checkPageBreak();
-      yPosition = addText(`   - ${typeof action === 'string' ? action : String(action)}`, margin + 5, yPosition);
+       yPosition = addText(`   - ${typeof action === 'string' ? action : String(action)}`, margin + 5, yPosition);
       yPosition += 3;
     });
     yPosition += 5;
@@ -1223,12 +1228,12 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     safe.uncertainties.forEach((item) => {
       checkPageBreak(20);
       doc.setFont(FONT_NAME, 'bold');
-      yPosition = addText(item.area || '', margin + 5, yPosition);
+       yPosition = addText(item.area || '', margin + 5, yPosition);
       yPosition += 1;
       doc.setFont(FONT_NAME, 'normal');
       doc.setFontSize(9);
       doc.setTextColor(80, 80, 80);
-      yPosition = addText(item.note || '', margin + 8, yPosition);
+       yPosition = addText(item.note || '', margin + 8, yPosition);
       doc.setFontSize(10);
       doc.setTextColor(0, 0, 0);
       yPosition += 5;
@@ -1257,11 +1262,11 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     yPosition += 8;
 
     const resourceData = safe.resources.map(resource => [
-      resource.type || '',
-      resource.description || '',
-      resource.contact || '',
-      resource.hours || labels.na,
-      resource.website || labels.na
+      pdfText(resource.type || ''),
+      pdfText(resource.description || ''),
+      pdfText(resource.contact || ''),
+      pdfText(resource.hours || labels.na),
+      pdfText(resource.website || labels.na)
     ]);
 
     autoTable(doc, {

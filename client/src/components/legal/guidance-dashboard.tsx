@@ -63,6 +63,7 @@ import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
 import { GuidancePrintPlan } from "@/components/legal/guidance-print-plan";
+import { renderGuidanceRichText } from "@/components/legal/guidance-rich-text";
 import { getStateCourtInfo, getCourtLocatorUrl } from "@shared/state-court-websites";
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
@@ -103,61 +104,6 @@ interface GuidanceDashboardProps {
   onShowLegalAid?: () => void;
   onExport?: () => void;
   guidanceMode?: 'ai' | 'rules';
-}
-
-// Utility function to format charge names in plain English
-// Renders inline markdown: **bold** labels and [text](url) links.
-// Internal paths (/support/...) use wouter Link; external URLs use <a>.
-function renderWithLinks(raw: unknown, navigate?: (href: string) => void): React.ReactNode {
-  // Claude occasionally returns an object instead of a string; coerce safely.
-  const text: string =
-    typeof raw === 'string'
-      ? raw
-      : raw !== null && raw !== undefined && typeof (raw as any) === 'object'
-        ? (
-            (raw as any).action ??
-            (raw as any).step ??
-            (raw as any).text ??
-            (raw as any).description ??
-            (raw as any).consequence ??
-            (raw as any).warning ??
-            JSON.stringify(raw)
-          )
-        : String(raw ?? '');
-
-  // Split on **bold** and [link](url) tokens
-  const tokens = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
-  if (tokens.length === 1) return text;
-  return (
-    <>
-      {tokens.map((token, i) => {
-        const boldMatch = token.match(/^\*\*([^*]+)\*\*$/);
-        if (boldMatch) {
-          return <strong key={i} className="font-semibold">{boldMatch[1]}</strong>;
-        }
-        const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-        if (linkMatch) {
-          const [, label, href] = linkMatch;
-          if (href.startsWith('/')) {
-            if (navigate) {
-              return (
-                <button
-                  key={i}
-                  onClick={() => navigate(href)}
-                  className="underline underline-offset-2 hover:opacity-80 font-medium text-left"
-                >
-                  {label}
-                </button>
-              );
-            }
-            return <Link key={i} href={href} className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</Link>;
-          }
-          return <a key={i} href={href} target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:opacity-80 font-medium">{label}</a>;
-        }
-        return <span key={i}>{token}</span>;
-      })}
-    </>
-  );
 }
 
 const formatChargeName = (name: string): string => {
@@ -1144,13 +1090,13 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               <p className="font-semibold text-sm mb-2">Urgent Takeaways</p>
             )}
             {guidance.criticalAlerts.length === 1 ? (
-              <span className="text-sm" data-testid="critical-alert-0">{renderWithLinks(guidance.criticalAlerts[0], guardedNavigate)}</span>
+              <span className="text-sm" data-testid="critical-alert-0">{renderGuidanceRichText(guidance.criticalAlerts[0], guardedNavigate)}</span>
             ) : (
               <ul className="space-y-1.5 text-sm list-none">
                 {guidance.criticalAlerts.map((alert, index) => (
                   <li key={index} data-testid={`critical-alert-${index}`} className="flex items-start gap-2">
                     <span className="mt-0.5 flex-shrink-0">•</span>
-                    <span>{renderWithLinks(alert, guardedNavigate)}</span>
+                    <span>{renderGuidanceRichText(alert, guardedNavigate)}</span>
                   </li>
                 ))}
               </ul>
@@ -1180,7 +1126,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed" data-testid="text-guidance-overview">
-              {renderWithLinks(guidance.overview, guardedNavigate)}
+              {renderGuidanceRichText(guidance.overview, guardedNavigate)}
             </p>
           </CardContent>
         </Card>
@@ -1399,7 +1345,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     completedActions.has(action) ? 'line-through text-muted-foreground' : ''
                   }`}
                 >
-                  {renderWithLinks(action, guardedNavigate)}
+                  {renderGuidanceRichText(action, guardedNavigate)}
                 </label>
               </div>
             ))}
@@ -1461,7 +1407,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
             {legalInformationActions.map((actionItem, index) => (
               <li key={index} className="flex items-start gap-3 p-3 rounded-lg border">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="flex-1 text-sm">{renderWithLinks(actionItem.action, guardedNavigate)}</span>
+                <span className="flex-1 text-sm">{renderGuidanceRichText(actionItem.action, guardedNavigate)}</span>
                 <Badge
                   variant={getUrgencyBadgeVariant(actionItem.urgency)}
                   className="text-xs uppercase shrink-0"
@@ -1650,7 +1596,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                   <div className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center text-xs font-semibold mt-0.5">
                     {index + 1}
                   </div>
-                  <span className="flex-1 text-sm text-foreground">{renderWithLinks(step, guardedNavigate)}</span>
+                  <span className="flex-1 text-sm text-foreground">{renderGuidanceRichText(step, guardedNavigate)}</span>
                 </div>
               ))}
             </div>
@@ -1828,7 +1774,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                         {guidance.warnings.map((warning, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-red-600 mt-1">•</span>
-                            <span className="text-sm">{renderWithLinks(warning, guardedNavigate)}</span>
+                            <span className="text-sm">{renderGuidanceRichText(warning, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1843,7 +1789,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                         {guidance.courtPreparation.map((preparation, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-orange-600 mt-1">•</span>
-                            <span className="text-sm">{renderWithLinks(preparation, guardedNavigate)}</span>
+                            <span className="text-sm">{renderGuidanceRichText(preparation, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1898,7 +1844,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
                     {guidance.avoidActions.map((action, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-red-500 mt-1">•</span>
-                        <span className="text-sm">{renderWithLinks(action, guardedNavigate)}</span>
+                        <span className="text-sm">{renderGuidanceRichText(action, guardedNavigate)}</span>
                       </li>
                     ))}
                   </ul>
