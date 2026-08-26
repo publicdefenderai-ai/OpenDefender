@@ -105,17 +105,17 @@ function PlaybookCard({ playbook }: { playbook: PlaybookSummary }) {
 
   return (
     <Link href={`/attorney/playbooks/${playbook.id}`}>
-      <div className="group h-full flex flex-col border rounded-xl p-4 bg-card hover:border-green-400 hover:shadow-sm transition-all cursor-pointer">
+      <div className="editorial-card editorial-card-interactive group h-full flex flex-col p-4 cursor-pointer">
         {/* Top row: difficulty badge + chevron */}
         <div className="flex items-center justify-between mb-3">
           <span className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${diff.className}`}>
             {diff.label}
           </span>
-          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-green-600 transition-colors" />
+          <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-[var(--editorial-signal)] transition-colors" />
         </div>
 
         {/* Name */}
-        <p className="font-semibold text-sm leading-snug mb-1.5 group-hover:text-green-700 dark:group-hover:text-green-400 transition-colors">
+        <p className="font-semibold text-sm leading-snug mb-1.5 group-hover:text-[var(--editorial-signal)] transition-colors">
           {playbook.name}
         </p>
 
@@ -201,7 +201,7 @@ function CategoryPlaybooks({ category }: CategoryPlaybooksProps) {
     return (
       <Card>
         <CardContent className="flex items-center justify-center py-12">
-          <Loader2 className="h-6 w-6 text-green-600 animate-spin mr-3" />
+          <Loader2 className="h-6 w-6 text-[var(--editorial-signal)] animate-spin mr-3" />
           <p className="text-muted-foreground text-sm">Loading playbooks...</p>
         </CardContent>
       </Card>
@@ -242,15 +242,14 @@ function PlaybooksContent() {
       <SessionTimer />
 
       {/* Hero */}
-      <section className="relative py-10 md:py-14 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-slate-50 to-green-50 dark:from-green-950/20 dark:via-slate-950 dark:to-green-950/20" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-10 md:py-14">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-green-600 rounded-xl mb-5">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-[var(--editorial-signal)] mb-5">
               <BookOpen className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-2xl sm:text-3xl font-bold mb-2 text-foreground">

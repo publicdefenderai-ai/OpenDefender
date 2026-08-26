@@ -319,7 +319,7 @@ function TriToggle({ value, onChange }: { value: TriValue; onChange: (v: TriValu
           onClick={() => onChange(value === val ? '' : val)}
           className={`flex-1 px-2 py-2 font-semibold transition-colors border-r last:border-r-0 border-border leading-none
             ${value === val
-              ? 'bg-violet-100 dark:bg-violet-900/30 text-violet-800 dark:text-violet-200'
+              ? 'bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)]'
               : 'bg-background text-muted-foreground hover:bg-muted/50'
             }`}
         >
@@ -378,7 +378,7 @@ function Domain({ title, filled, children, defaultOpen = false }: {
 }) {
   const [open, setOpen] = useState(defaultOpen);
   return (
-    <div className="rounded-xl border border-border overflow-hidden">
+    <div className="editorial-card overflow-hidden">
       <button
         type="button"
         onClick={() => setOpen(o => !o)}
@@ -387,7 +387,7 @@ function Domain({ title, filled, children, defaultOpen = false }: {
         <div className="flex items-center gap-3">
           <span className="font-semibold text-sm text-foreground">{title}</span>
           {filled > 0 && (
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300">
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)]">
               {filled} {filled === 1 ? "field" : "fields"} filled
             </span>
           )}
@@ -432,7 +432,7 @@ function DocCheckbox({ checked, onChange, label }: {
       <div
         onClick={() => onChange(!checked)}
         className={`w-4 h-4 rounded border flex-shrink-0 flex items-center justify-center transition-colors
-          ${checked ? 'bg-violet-600 border-violet-600' : 'border-border group-hover:border-violet-400'}`}
+          ${checked ? 'bg-[var(--editorial-signal)] border-[var(--editorial-signal)]' : 'border-border group-hover:border-[var(--editorial-signal)]'}`}
       >
         {checked && <Check className="h-3 w-3 text-white" />}
       </div>
@@ -443,9 +443,9 @@ function DocCheckbox({ checked, onChange, label }: {
 
 function InfoNote({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex items-start gap-2 rounded-lg border border-blue-200 dark:border-blue-800 bg-blue-50 dark:bg-blue-950/30 px-3 py-2.5 mb-1">
-      <Info className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
-      <p className="text-xs text-blue-800 dark:text-blue-300 leading-relaxed">{children}</p>
+    <div className="flex items-start gap-2 rounded-lg border border-[var(--editorial-signal)]/30 bg-[var(--editorial-signal-soft)] px-3 py-2.5 mb-1">
+      <Info className="h-3.5 w-3.5 text-[var(--editorial-signal)] flex-shrink-0 mt-0.5" />
+      <p className="text-xs text-foreground leading-relaxed">{children}</p>
     </div>
   );
 }
@@ -525,7 +525,7 @@ function OutputPanel({ output, flags }: { output: string; flags: IntakeFlag[] })
   };
 
   return (
-    <div className="rounded-xl border border-border overflow-hidden">
+    <div className="editorial-card overflow-hidden">
       <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-muted/30 border-b border-border">
         <div className="flex min-w-0 items-center gap-2">
           <FileText className="h-4 w-4 text-muted-foreground" />
@@ -625,27 +625,27 @@ export default function IntakeChecklist() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="vivid-header-purple py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-4 vivid-header-content">
-          <Link href="/for-advocates" className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-xs font-semibold mb-5 transition-colors">
+      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <Link href="/for-advocates" className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-xs font-semibold mb-5 transition-colors">
             <ArrowLeft className="h-3.5 w-3.5" /> Advocate Hub
           </Link>
-          <p className="text-sm font-bold uppercase tracking-widest text-white/60 mb-2">Advocate tool</p>
-          <h1 className="text-2xl md:text-3xl font-black text-white mb-3 leading-tight">
+          <p className="editorial-kicker mb-2">Advocate tool</p>
+          <h1 className="text-3xl md:text-4xl text-foreground mb-3 leading-tight">
             First Contact Intake Checklist
           </h1>
-          <p className="text-sm md:text-base text-white/75 max-w-2xl leading-relaxed">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
             A structured screening tool for the first meeting with a new client. Covers every legal-risk domain that must be identified before any plea discussion begins. Flags fire automatically for answers that require immediate legal attention.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/10 text-white/80">Nothing is saved or sent anywhere</span>
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/10 text-white/80">For defense counsel or use under attorney supervision</span>
+            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">Nothing is saved or sent anywhere</span>
+            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">For defense counsel or use under attorney supervision</span>
           </div>
         </div>
       </section>
 
       <div className="max-w-5xl mx-auto px-4 pt-6">
-        <div className="flex items-start gap-3 rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
+        <div className="flex items-start gap-3 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
           <Shield className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
           <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed">
             <span className="font-semibold">For attorney use or use under direct attorney supervision.</span> This tool does not create legal advice, and documents it produces are not automatically privileged. If you are the attorney of record, printed output may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Review any output with supervising counsel before retaining or sharing it.
@@ -819,7 +819,7 @@ export default function IntakeChecklist() {
           <div className="lg:sticky lg:top-6 space-y-4">
             <OutputPanel output={output} flags={flags} />
 
-            <div className="rounded-xl border border-border px-4 py-4">
+            <div className="editorial-card px-4 py-4">
               <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">Next steps</p>
               <div className="space-y-1">
                 {[
@@ -832,7 +832,7 @@ export default function IntakeChecklist() {
                   <Link key={href} href={href}>
                     <div className="flex items-center justify-between gap-2 rounded-lg px-3 py-2.5 hover:bg-muted/50 transition-colors group cursor-pointer">
                       <div>
-                        <p className="text-xs font-semibold text-foreground group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">{label}</p>
+                        <p className="text-xs font-semibold text-foreground group-hover:text-[var(--editorial-signal)] transition-colors">{label}</p>
                         <p className="text-[11px] text-muted-foreground">{desc}</p>
                       </div>
                       <ArrowLeft className="h-3.5 w-3.5 rotate-180 text-muted-foreground flex-shrink-0" />

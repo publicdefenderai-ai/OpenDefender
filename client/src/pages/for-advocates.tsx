@@ -39,20 +39,20 @@ interface ToolCardProps {
 function ToolCard({ Icon, title, desc, href, color, bg, accent, comingSoon, badge }: ToolCardProps) {
   const inner = (
     <div
-      className={`flex flex-col h-full rounded-xl border border-l-4 p-5 transition-all
+      className={`editorial-card editorial-card-interactive flex flex-col h-full border-l-4 p-5
         ${comingSoon
           ? "opacity-60 cursor-default bg-muted/30 border-border"
-          : `cursor-pointer hover:shadow-md hover:-translate-y-1 ${bg}`}
+          : "cursor-pointer"}
       `}
-      style={{ borderLeftColor: comingSoon ? undefined : accent }}
+      style={{ borderLeftColor: comingSoon ? undefined : "var(--editorial-signal)" }}
     >
       <div className="flex items-start justify-between mb-3">
         <Icon
-          className={`h-5 w-5 flex-shrink-0 ${comingSoon ? "text-muted-foreground" : color}`}
+          className={`h-5 w-5 flex-shrink-0 ${comingSoon ? "text-muted-foreground" : "text-[var(--editorial-signal)]"}`}
           strokeWidth={1.75}
         />
         {badge && (
-          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 ml-2">
+          <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)] ml-2">
             {badge}
           </span>
         )}
@@ -67,7 +67,7 @@ function ToolCard({ Icon, title, desc, href, color, bg, accent, comingSoon, badg
       </p>
       <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-3">{desc}</p>
       {!comingSoon && (
-        <p className={`text-xs font-semibold flex items-center gap-1 ${color}`}>
+        <p className="text-xs font-semibold flex items-center gap-1 text-[var(--editorial-signal)]">
           Open <ArrowRight className="h-3 w-3" />
         </p>
       )}
@@ -117,22 +117,22 @@ export default function ForAdvocates() {
       <Header />
 
       {/* Hero */}
-      <section className="vivid-header-purple py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
+      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-16 md:py-20">
+        <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-2xl md:text-3xl font-black uppercase tracking-wide text-white/90 mb-4">
+            <p className="editorial-kicker mb-4">
               Advocate Hub
             </p>
-            <h1 className="text-2xl md:text-3xl font-black text-white mb-5 leading-tight">
+            <h1 className="text-3xl md:text-4xl text-foreground mb-5 leading-tight">
               Tools for Public Defenders,{" "}
               <br className="hidden sm:block" />
               Social Workers & Case Advocates
             </h1>
-            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed mb-6">
+            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
               Organized around how you actually work with clients, from first contact through resolution and beyond.
             </p>
             {/* Jump nav */}
@@ -147,7 +147,7 @@ export default function ForAdvocates() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/80 hover:text-white transition-colors"
+                  className="editorial-path-action text-xs font-semibold px-3 py-1.5 transition-colors"
                 >
                   {item.label}
                 </a>

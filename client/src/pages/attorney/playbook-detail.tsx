@@ -93,7 +93,7 @@ function PlaybookDetailContent() {
         <Header />
         <SessionTimer />
         <div className="flex items-center justify-center py-32">
-          <Loader2 className="h-8 w-8 animate-spin text-green-600" />
+          <Loader2 className="h-8 w-8 animate-spin text-[var(--editorial-signal)]" />
         </div>
         <Footer />
       </div>
@@ -125,9 +125,8 @@ function PlaybookDetailContent() {
       <SessionTimer />
 
       {/* Hero */}
-      <section className="relative py-10 md:py-14 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-slate-50 to-green-50 dark:from-green-950/20 dark:via-slate-950 dark:to-green-950/20" />
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-10 md:py-14">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <Link href="/attorney/playbooks">
             <Button variant="ghost" size="sm" className="mb-6 -ml-2 text-muted-foreground hover:text-foreground">
               <ArrowLeft className="h-4 w-4 mr-1" />
@@ -213,11 +212,11 @@ function PlaybookDetailContent() {
                 <AccordionItem
                   key={stage.id}
                   value={stage.id}
-                  className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden"
+                  className="border border-border rounded-lg overflow-hidden bg-card"
                 >
-                  <AccordionTrigger className="px-4 py-4 hover:no-underline hover:bg-slate-50 dark:hover:bg-slate-900/50 [&[data-state=open]]:bg-slate-50 dark:[&[data-state=open]]:bg-slate-900/50">
+                  <AccordionTrigger className="px-4 py-4 hover:no-underline hover:bg-muted/50 [&[data-state=open]]:bg-muted/40">
                     <div className="flex items-center gap-3 text-left">
-                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 text-sm font-bold shrink-0">
+                      <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)] text-sm font-bold shrink-0">
                         {stageIndex + 1}
                       </span>
                       <div>
@@ -269,15 +268,15 @@ function PlaybookDetailContent() {
                             {stage.relevantTemplates.map((ref) => (
                               <div
                                 key={ref.templateId}
-                                className="flex items-start gap-3 bg-blue-50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900 rounded-lg p-3"
+                                className="flex items-start gap-3 bg-[var(--editorial-signal-soft)] border border-[var(--editorial-signal)]/30 rounded-lg p-3"
                               >
-                                <FileText className="h-4 w-4 text-blue-500 shrink-0 mt-0.5" />
+                                <FileText className="h-4 w-4 text-[var(--editorial-signal)] shrink-0 mt-0.5" />
                                 <div className="flex-1 min-w-0">
-                                  <div className="font-medium text-sm text-blue-900 dark:text-blue-100">{ref.name}</div>
-                                  <div className="text-xs text-blue-700 dark:text-blue-300 mt-0.5">{ref.relevance}</div>
+                                  <div className="font-medium text-sm text-foreground">{ref.name}</div>
+                                  <div className="text-xs text-muted-foreground mt-0.5">{ref.relevance}</div>
                                 </div>
                                 <Link href={`/attorney/documents/${ref.templateId}`}>
-                                  <Button size="sm" variant="outline" className="shrink-0 text-xs border-blue-200 text-blue-700 hover:bg-blue-100 dark:border-blue-700 dark:text-blue-300 dark:hover:bg-blue-900/50">
+                                  <Button size="sm" variant="outline" className="shrink-0 text-xs border-[var(--editorial-signal)] text-[var(--editorial-signal)] hover:bg-background">
                                     {t("attorney.playbooks.openTemplate", "Open")}
                                   </Button>
                                 </Link>
@@ -289,7 +288,7 @@ function PlaybookDetailContent() {
 
                       {/* Client Guidance */}
                       {stage.clientGuidance && (
-                        <div className="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-lg p-3">
+                        <div className="bg-muted/30 border border-border rounded-lg p-3">
                           <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-1.5">
                             {t("attorney.playbooks.clientGuidance", "Client Guidance")}
                           </h4>
@@ -316,7 +315,7 @@ function PlaybookDetailContent() {
 
                       {/* Stage Jurisdiction Variations */}
                       {stage.jurisdictionVariations && stage.jurisdictionVariations.length > 0 && (
-                        <div className="bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-700 rounded-lg p-3">
+                        <div className="bg-muted/30 border border-border rounded-lg p-3">
                           <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground mb-2">
                             State Variations
                           </h4>
@@ -351,7 +350,7 @@ function PlaybookDetailContent() {
               </h2>
               <div className="space-y-3">
                 {playbook.jurisdictionNotes.map((note, i) => (
-                  <Card key={i} className="border-slate-200 dark:border-slate-700">
+                  <Card key={i} className="editorial-card">
                     <CardHeader className="pb-2">
                       <CardTitle className="text-sm font-semibold text-foreground">{note.topic}</CardTitle>
                     </CardHeader>

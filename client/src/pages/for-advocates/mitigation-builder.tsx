@@ -308,7 +308,7 @@ function Domain({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-xl border border-border overflow-hidden">
+    <div className="editorial-card overflow-hidden">
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
@@ -317,7 +317,7 @@ function Domain({
         <div className="flex min-w-0 flex-wrap items-center gap-2 sm:gap-3">
           <span className="font-semibold text-sm text-foreground">{title}</span>
           {filled > 0 && (
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--editorial-signal-soft)] text-[var(--editorial-signal)]">
               {filled} {filled === 1 ? "field" : "fields"} filled
             </span>
           )}
@@ -1084,15 +1084,15 @@ function PolishPanel({ form }: { form: FormState }) {
   };
 
   return (
-    <div className="mt-4 rounded-xl border border-violet-200 dark:border-violet-800 overflow-hidden">
+    <div className="editorial-card mt-4 overflow-hidden">
       {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-violet-50 dark:bg-violet-950/40 border-b border-violet-200 dark:border-violet-800">
+      <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 bg-[var(--editorial-signal-soft)] border-b border-[var(--editorial-signal)]/30">
         <div className="flex min-w-0 items-center gap-2">
-          <Sparkles className="h-4 w-4 text-violet-600 dark:text-violet-400" />
-          <span className="text-sm font-semibold text-violet-900 dark:text-violet-200">
+          <Sparkles className="h-4 w-4 text-[var(--editorial-signal)]" />
+          <span className="text-sm font-semibold text-foreground">
             Polish with AI
           </span>
-          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-violet-100 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300 uppercase tracking-wide">
+          <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-background text-[var(--editorial-signal)] uppercase tracking-wide">
             Beta
           </span>
         </div>
@@ -1101,7 +1101,7 @@ function PolishPanel({ form }: { form: FormState }) {
             type="button"
             onClick={handlePolish}
             disabled={!!(captchaRequired && !captchaToken) || polishCooldown}
-            className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-violet-600 hover:bg-violet-700 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-[var(--editorial-signal)] hover:opacity-90 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Sparkles className="h-3.5 w-3.5" />
             {polishCooldown ? "Please wait…" : polish.status === "idle" ? "Generate narrative" : "Regenerate"}
@@ -1110,15 +1110,15 @@ function PolishPanel({ form }: { form: FormState }) {
       </div>
 
       {/* Info banner */}
-      <div className="px-4 py-2.5 bg-violet-50/60 dark:bg-violet-950/20 border-b border-violet-100 dark:border-violet-900/50">
-        <p className="text-[11px] text-violet-800 dark:text-violet-300 leading-relaxed">
+      <div className="px-4 py-2.5 bg-[var(--editorial-signal-soft)] border-b border-[var(--editorial-signal)]/20">
+        <p className="text-[11px] text-foreground leading-relaxed">
           <span className="font-semibold">Field-locked:</span> Claude will only use information you entered; empty fields are skipped and nothing is inferred. Output is unlabeled prose; your structured summary above remains unchanged. Anthropic may retain API data for up to 30 days under its standard terms.
         </p>
       </div>
 
       {/* CAPTCHA verification — shown whenever the Generate/Regenerate button above is active */}
       {captchaRequired && polish.status !== "loading" && (
-        <div className="px-4 py-3 bg-background border-b border-violet-100 dark:border-violet-900/50 flex justify-center">
+        <div className="px-4 py-3 bg-background border-b border-[var(--editorial-signal)]/20 flex justify-center">
           <TurnstileCaptcha key={captchaAttempt} onVerify={setCaptchaToken} size="normal" />
         </div>
       )}
@@ -1126,14 +1126,14 @@ function PolishPanel({ form }: { form: FormState }) {
       {/* Body */}
       <div className="px-4 py-4 bg-background space-y-4">
         {polish.status === "idle" && (
-          <p className="text-sm text-muted-foreground text-center py-4">
-            Click <span className="font-semibold text-violet-700 dark:text-violet-400">"Generate narrative"</span> above to convert your filled fields into court-ready prose.
+            <p className="text-sm text-muted-foreground text-center py-4">
+            Click <span className="font-semibold text-[var(--editorial-signal)]">"Generate narrative"</span> above to convert your filled fields into court-ready prose.
           </p>
         )}
 
         {polish.status === "loading" && (
           <div className="flex items-center justify-center gap-2 py-6 text-sm text-muted-foreground">
-            <Loader2 className="h-4 w-4 animate-spin text-violet-600" />
+            <Loader2 className="h-4 w-4 animate-spin text-[var(--editorial-signal)]" />
             Generating narrative…
           </div>
         )}
@@ -1576,7 +1576,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
   const empty = !output;
 
   return (
-    <div className="rounded-xl border border-border overflow-hidden">
+    <div className="editorial-card overflow-hidden">
       <div className="flex items-center justify-between px-4 py-3 bg-muted/30 border-b border-border">
         <div className="flex items-center gap-2">
           <FileText className="h-4 w-4 text-muted-foreground" />
@@ -1678,28 +1678,28 @@ export default function MitigationBuilder() {
       <Header />
 
       {/* Page header */}
-      <section className="vivid-header-purple py-12 md:py-16">
-        <div className="max-w-5xl mx-auto px-4 vivid-header-content">
+      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-4">
           <Link
             href="/for-advocates"
-            className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-xs font-semibold mb-5 transition-colors"
+            className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground text-xs font-semibold mb-5 transition-colors"
           >
             <ArrowLeft className="h-3.5 w-3.5" /> Advocate Hub
           </Link>
-          <p className="text-sm font-bold uppercase tracking-widest text-white/60 mb-2">
+          <p className="editorial-kicker mb-2">
             Advocate tool
           </p>
-          <h1 className="text-2xl md:text-3xl font-black text-white mb-3 leading-tight">
+          <h1 className="text-3xl md:text-4xl text-foreground mb-3 leading-tight">
             Mitigation Builder
           </h1>
-          <p className="text-sm md:text-base text-white/75 max-w-2xl leading-relaxed">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl leading-relaxed">
             A structured intake form covering the social history domains courts respond to. Fill in what you know and your formatted summary appears on the right, ready to copy or print.
           </p>
           <div className="mt-4 flex flex-wrap gap-3">
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/10 text-white/80">
+            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">
               Nothing is saved or sent anywhere
             </span>
-            <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-white/10 text-white/80">
+            <span className="text-xs font-semibold px-3 py-1.5 rounded-full border border-border bg-[var(--editorial-paper)] text-muted-foreground">
               For use at bail, diversion, and sentencing hearings
             </span>
           </div>
@@ -1708,7 +1708,7 @@ export default function MitigationBuilder() {
 
       {/* Disclaimer */}
       <div className="max-w-5xl mx-auto px-4 pt-6">
-        <div className="flex items-start gap-3 rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
+        <div className="flex items-start gap-3 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-950/30 px-4 py-3">
           <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
           <p className="text-xs text-amber-800 dark:text-amber-300 leading-relaxed">
             <span className="font-semibold">For attorney use or use under direct attorney supervision.</span> This tool does not create legal advice, and documents it produces are not automatically privileged. If you are the attorney of record, printed output may constitute attorney work product. If you are not an attorney, this document is not privileged and may be subject to disclosure. Review any output with supervising counsel before retaining or sharing it.
@@ -2022,7 +2022,7 @@ export default function MitigationBuilder() {
             <OutputWithPolish output={output} form={form} />
 
             {/* Cross-links to reputation page */}
-            <div className="mt-4 rounded-xl border border-border/60 px-5 py-4 bg-muted/20">
+            <div className="editorial-card mt-4 px-5 py-4 bg-muted/20">
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">
                 After the case resolves
               </p>

@@ -72,9 +72,9 @@ function DocumentWizardContent() {
 
         <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <Card>
+            <Card className="editorial-card">
               <CardContent className="flex flex-col items-center justify-center py-16">
-                <Loader2 className="h-12 w-12 text-blue-600 animate-spin mb-4" />
+                <Loader2 className="h-12 w-12 text-[var(--editorial-signal)] animate-spin mb-4" />
                 <p className="text-muted-foreground">Loading template...</p>
               </CardContent>
             </Card>
@@ -123,10 +123,8 @@ function DocumentWizardContent() {
       <SessionTimer />
 
       {/* Hero Section */}
-      <section className="relative py-8 md:py-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-slate-50 to-blue-50 dark:from-blue-950/20 dark:via-slate-950 dark:to-blue-950/20" />
-
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-8 md:py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,7 +139,7 @@ function DocumentWizardContent() {
             </Link>
 
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center">
+              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-[var(--editorial-signal)] flex items-center justify-center">
                 <FileText className="h-7 w-7 text-white" />
               </div>
               <div>

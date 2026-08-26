@@ -25,17 +25,15 @@ function DocumentsContent() {
       <Header />
       <SessionTimer />
 
-      <section className="relative py-12 md:py-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-slate-50 to-blue-50 dark:from-blue-950/20 dark:via-slate-950 dark:to-blue-950/20" />
-
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
+      <section className="border-b border-border/60 bg-[var(--editorial-paper-deep)] py-12 md:py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl mb-6">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-lg bg-[var(--editorial-signal)] mb-6">
               <FileText className="h-8 w-8 text-white" />
             </div>
             <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-foreground">
@@ -47,7 +45,7 @@ function DocumentsContent() {
                 "AI-assisted drafting for criminal and immigration matters. Generates professionally structured starting drafts — always verify local rules and standing orders before filing."
               )}
             </p>
-            <p className="text-sm font-medium text-amber-800 dark:text-amber-300 max-w-2xl mx-auto mt-4">
+            <p className="text-sm font-medium text-amber-800 dark:text-amber-300 max-w-2xl mx-auto mt-4 border-t border-amber-200/70 dark:border-amber-800/70 pt-3">
               Separate attorney filing drafts: these DOCX documents are not part of a defendant's Case Roadmap, chat guidance, PDF, or print plan.
             </p>
           </motion.div>
@@ -141,9 +139,9 @@ function CategoryTemplates({ category }: CategoryTemplatesProps) {
 
   if (isLoading) {
     return (
-      <Card>
+      <Card className="editorial-card">
         <CardContent className="flex flex-col items-center justify-center py-16">
-          <Loader2 className="h-8 w-8 text-blue-600 animate-spin mb-4" />
+          <Loader2 className="h-8 w-8 text-[var(--editorial-signal)] animate-spin mb-4" />
           <p className="text-muted-foreground">Loading templates...</p>
         </CardContent>
       </Card>
@@ -152,7 +150,7 @@ function CategoryTemplates({ category }: CategoryTemplatesProps) {
 
   if (error) {
     return (
-      <Card className="border-red-200">
+      <Card className="editorial-card border-red-200 dark:border-red-800">
         <CardContent className="flex flex-col items-center justify-center py-16 text-center">
           <p className="text-red-600">{error}</p>
         </CardContent>
@@ -170,10 +168,10 @@ function CategoryTemplates({ category }: CategoryTemplatesProps) {
   }
 
   return (
-    <Card className="border-dashed">
+    <Card className="editorial-card border-dashed">
       <CardContent className="flex flex-col items-center justify-center py-16 text-center">
-        <div className="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center mb-4">
-          <Folder className="h-8 w-8 text-slate-400" />
+        <div className="w-16 h-16 bg-[var(--editorial-paper-deep)] rounded-full flex items-center justify-center mb-4">
+          <Folder className="h-8 w-8 text-muted-foreground" />
         </div>
         <h3 className="text-lg font-semibold mb-2">
           {t("attorneyPortal.documents.comingSoonTitle", "No Templates Found")}
