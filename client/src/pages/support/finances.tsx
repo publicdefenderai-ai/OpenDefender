@@ -16,8 +16,10 @@ import {
 import {
   Accordion, AccordionContent, AccordionItem, AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import {
+  PageSectionNav,
+  ScanFirstPageFrame,
+} from "@/components/layout/scan-first-page-frame";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import {
   getCourtFeesForState, courtFeesByState,
@@ -32,12 +34,6 @@ const SECTIONS = [
   { id: "court-fees",    shortLabel: "Court Fees",     Icon: Scale          },
   { id: "resources",     shortLabel: "Resources",      Icon: Globe          },
   { id: "faqs",          shortLabel: "FAQs & Tips",    Icon: HelpCircle     },
-];
-
-const RELATED_LINKS = [
-  { href: "/support/employment",  label: "Employment Support"     },
-  { href: "/resources",           label: "Find a Public Defender" },
-  { href: "/support",             label: "All Life Support Topics" },
 ];
 
 const BENEFIT_IDS = ["snap", "medicaid", "tanf", "socialSecurity", "banking"] as const;
@@ -118,57 +114,6 @@ function SectionPanel({
 
 /* ── Sidebar ───────────────────────────────────────────────────── */
 
-function PageSidebar({
-  openIds, onOpen,
-}: {
-  openIds: Set<string>;
-  onOpen: (id: string) => void;
-}) {
-  return (
-    <nav aria-label="Page sections">
-      <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-2">
-        On this page
-      </p>
-      <div className="space-y-0.5">
-        {SECTIONS.map(({ id, shortLabel, Icon }) => {
-          const active = openIds.has(id);
-          return (
-            <button
-              key={id}
-              onClick={() => onOpen(id)}
-              className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-left transition-colors ${
-                active
-                  ? "bg-emerald-50 dark:bg-emerald-900/20 text-emerald-800 dark:text-emerald-200 font-semibold"
-                  : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
-              }`}
-            >
-              <Icon className={`h-3.5 w-3.5 flex-shrink-0 ${
-                active ? "text-emerald-600 dark:text-emerald-400" : ""
-              }`} />
-              <span className="leading-snug text-xs">{shortLabel}</span>
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="mt-5 pt-4 border-t border-border/50">
-        <p className="text-[10px] font-semibold text-muted-foreground uppercase tracking-widest mb-2 px-2">
-          Related
-        </p>
-        <div className="space-y-0.5">
-          {RELATED_LINKS.map(({ href, label }) => (
-            <Link key={href} href={href}>
-              <span className="block px-2.5 py-1.5 text-xs text-muted-foreground hover:text-foreground hover:bg-muted/50 rounded-md transition-colors leading-snug">
-                {label}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </nav>
-  );
-}
-
 /* ── Page ──────────────────────────────────────────────────────── */
 
 export default function FinancesSupport() {
@@ -176,19 +121,6 @@ export default function FinancesSupport() {
   const { t } = useTranslation();
   const [openIds, setOpenIds] = useState<Set<string>>(new Set(["quick-actions"]));
   const [selectedState, setSelectedState] = useState("");
-
-  const scrollToSection = (id: string) => {
-    const el = document.getElementById(id);
-    if (el) {
-      const top = el.getBoundingClientRect().top + window.scrollY - 88;
-      window.scrollTo({ top: Math.max(0, top) });
-    }
-  };
-
-  const openAndScroll = (id: string) => {
-    scrollToSection(id);
-    setOpenIds(prev => new Set([...prev, id]));
-  };
 
   const toggleSection = (id: string) => {
     setOpenIds(prev => {
@@ -233,68 +165,49 @@ export default function FinancesSupport() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ScanFirstPageFrame>
 
       {/* Hero */}
-      <section className="vivid-header py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 mb-5">
-            <DollarSign className="h-7 w-7 text-white" />
+      <section className="vivid-header py-10 md:py-14">
+        <div className="max-w-5xl mx-auto px-4 vivid-header-content">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/15 mb-4">
+              <DollarSign className="h-6 w-6 text-white" />
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
+              Financial Support After Arrest
+            </h1>
+            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+              {t('support.finances.overview')}
+            </p>
           </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">
-            Financial Support After Arrest
-          </h1>
-          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
-            {t('support.finances.overview')}
-          </p>
         </div>
       </section>
 
       {/* Back link */}
-      <div className="max-w-6xl mx-auto px-4 pt-6">
-        <Link href="/support">
-          <span className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Back to Life Support
-          </span>
+      <div className="max-w-6xl mx-auto w-full px-4 pt-5">
+        <Link
+          href="/support"
+          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
+          {t("support.backToSupport")}
         </Link>
       </div>
 
-      {/* Mobile pill nav */}
-      <div className="lg:hidden sticky top-0 z-30 bg-background/95 backdrop-blur border-b border-border shadow-sm mt-4">
-        <div className="px-4">
-          <div className="flex gap-2 overflow-x-auto py-2.5 no-scrollbar">
-            {SECTIONS.map(({ id, shortLabel }) => (
-              <button
-                key={id}
-                onClick={() => openAndScroll(id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
-                  openIds.has(id)
-                    ? "border-emerald-400 bg-emerald-50 text-emerald-800 dark:bg-emerald-900/20 dark:text-emerald-300"
-                    : "border-border hover:bg-muted hover:border-foreground/20 text-muted-foreground"
-                }`}
-              >
-                {shortLabel}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
+      <PageSectionNav
+        ariaLabel={t("support.pageSections", "On this page")}
+        accentClassName="text-emerald-700 dark:text-emerald-300"
+        items={SECTIONS.map(({ id, Icon }) => ({
+          id,
+          icon: Icon,
+          label: t(`support.finances.navigation.${id}`, SECTIONS.find(section => section.id === id)?.shortLabel ?? id),
+        }))}
+      />
 
-      {/* Layout: sidebar + content */}
-      <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
-        <div className="flex gap-10">
-
-          {/* Sidebar — desktop only */}
-          <aside className="hidden lg:block w-52 flex-shrink-0">
-            <div className="sticky top-24">
-              <PageSidebar openIds={openIds} onOpen={openAndScroll} />
-            </div>
-          </aside>
-
-          {/* Main content */}
-          <div className="flex-1 min-w-0 space-y-3">
+      {/* Content */}
+      <div className="max-w-4xl mx-auto w-full px-4 py-8 md:py-10">
+        <div className="space-y-3">
 
             {/* ── QUICK ACTIONS ─────────────────────────────────── */}
             <SectionPanel
@@ -635,10 +548,8 @@ export default function FinancesSupport() {
             </Alert>
 
           </div>
-        </div>
       </div>
 
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }

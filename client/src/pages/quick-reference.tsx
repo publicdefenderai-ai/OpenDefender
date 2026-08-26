@@ -25,8 +25,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { Link } from "wouter";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { PageBreadcrumb } from "@/components/navigation/page-breadcrumb";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
@@ -117,21 +116,20 @@ export default function QuickReference() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ScanFirstPageFrame>
       <PageBreadcrumb
         items={breadcrumbItems}
         currentPage={t("quickRef.title", "Quick-Reference Cards")}
       />
 
-      <section className="vivid-header py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content">
+      <section className="vivid-header py-10 md:py-14">
+        <div className="max-w-5xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
                 {t("quickRef.title", "Quick-Reference Cards")}
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6">
+              <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-6 leading-relaxed">
                 {t("quickRef.subtitle", "Compact, printable guides for your rights at every stage. Save them to your phone or print them out.")}
               </p>
               <Button
@@ -148,7 +146,7 @@ export default function QuickReference() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-background print-section" ref={printRef}>
+      <section id="quick-reference-cards" className="py-10 md:py-14 bg-background print-section scroll-mt-20" ref={printRef}>
         <div className="max-w-6xl mx-auto px-4">
           <Tabs defaultValue="police" className="w-full">
             <ScrollReveal>
@@ -228,8 +226,7 @@ export default function QuickReference() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }
 

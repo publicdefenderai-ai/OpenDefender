@@ -16,8 +16,10 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import {
+  PageSectionNav,
+  ScanFirstPageFrame,
+} from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { useState } from "react";
@@ -281,18 +283,23 @@ export function ResourcePageTemplate({
   const theme = categoryThemes[categoryId] || categoryThemes.employment;
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Header />
-      <main className="flex-1">
+    <ScanFirstPageFrame>
 
         {/* Hero */}
         <section className={`${theme.heroClass} editorial-hero overflow-hidden`}>
           <div className={`max-w-6xl mx-auto px-4 vivid-header-content flex items-stretch gap-0 ${heroImage ? 'min-h-[220px] md:min-h-[260px]' : 'py-10 md:py-14'}`}>
             <div className={`flex flex-col justify-center py-10 md:py-14 ${heroImage ? 'flex-1 md:max-w-[58%]' : 'w-full max-w-4xl'}`}>
               <Link href="/support">
-                <Button variant="ghost" size="sm" className="mb-5 text-white/70 hover:text-white hover:bg-white/10 self-start">
-                  <ChevronLeft className="h-4 w-4 mr-1" />
-                  {t('support.backToSupport')}
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className="mb-5 text-white/70 hover:text-white hover:bg-white/10 self-start"
+                >
+                  <span>
+                    <ChevronLeft className="h-4 w-4 mr-1" />
+                    {t('support.backToSupport')}
+                  </span>
                 </Button>
               </Link>
               <div className="flex items-center gap-3 mb-3">
@@ -316,6 +323,18 @@ export function ResourcePageTemplate({
             )}
           </div>
         </section>
+
+        {!sidebar && (
+          <PageSectionNav
+            ariaLabel={t("support.pageSections", "On this page")}
+            items={[
+              { id: "section-start-here", label: t("support.startHere") },
+              { id: "section-resources", label: t("support.helpfulResources") },
+              ...(faqs?.length ? [{ id: "section-faq", label: t("support.faqs", "FAQs") }] : []),
+              ...(tips?.length ? [{ id: "section-tips", label: t("support.tips.title") }] : []),
+            ]}
+          />
+        )}
 
         {/* All post-hero content — flex layout when sidebar is provided */}
         <div className={sidebar ? "max-w-6xl mx-auto px-4" : ""}>
@@ -385,9 +404,11 @@ export function ResourcePageTemplate({
                         <div className="flex flex-wrap gap-3">
                           {relatedLinks.map((link, index) => (
                             <Link key={index} href={link.href}>
-                              <Button variant="outline" size="sm" className="group">
-                                {link.label}
-                                <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                              <Button asChild variant="outline" size="sm" className="group">
+                                <span>
+                                  {link.label}
+                                  <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                </span>
                               </Button>
                             </Link>
                           ))}
@@ -414,8 +435,6 @@ export function ResourcePageTemplate({
           </div>{/* end flex */}
         </div>{/* end sidebar wrapper */}
 
-      </main>
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }

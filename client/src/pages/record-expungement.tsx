@@ -29,8 +29,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Link } from "wouter";
 
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { 
@@ -220,11 +219,10 @@ export default function RecordExpungement() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ScanFirstPageFrame>
 
       {/* Hero Section - Amber Vivid Header */}
-      <section className="vivid-header-green py-12 lg:py-16">
+      <section className="vivid-header-green py-10 lg:py-14">
         <div className="max-w-7xl mx-auto px-4 vivid-header-content">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -232,13 +230,13 @@ export default function RecordExpungement() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-              <FileX className="h-8 w-8 text-white" />
+            <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <FileX className="h-6 w-6 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
               {t('recordExpungement.hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/85 max-w-3xl mx-auto">
+            <p className="text-base md:text-lg mb-2 text-white/85 max-w-2xl mx-auto leading-relaxed">
               {t('recordExpungement.hero.subtitle')}
             </p>
           </motion.div>
@@ -246,7 +244,7 @@ export default function RecordExpungement() {
       </section>
 
       {/* Main Content */}
-      <section className="py-12">
+      <section id="expungement-check" className="py-10 md:py-12 scroll-mt-20">
         <div className="max-w-4xl mx-auto px-4">
           <ScrollReveal>
             <div className="flex items-center gap-4 mb-8">
@@ -404,7 +402,6 @@ export default function RecordExpungement() {
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }

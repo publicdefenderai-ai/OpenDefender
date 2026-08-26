@@ -2,8 +2,7 @@ import { ChevronRight, Clock, MessageSquare, Heart, Globe, ArrowRight, Shield, U
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
 
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { ScanFirstPageFrame } from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
@@ -417,11 +416,10 @@ export default function HowTo() {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
+    <ScanFirstPageFrame>
 
       {/* Hero */}
-      <section className="vivid-header-alt py-12 md:py-16">
+      <section className="vivid-header-alt py-10 md:py-14">
         <div className="max-w-3xl mx-auto px-4 vivid-header-content">
           <ScrollReveal>
             <div className="text-center">
@@ -462,7 +460,7 @@ export default function HowTo() {
       </section>
 
       {/* Five paths */}
-      <section className="py-8 md:py-10">
+      <section id="how-to-paths" className="py-8 md:py-10 scroll-mt-20">
         <div className="max-w-5xl mx-auto px-4 space-y-6">
           {paths.map((path, i) => (
             <ScrollReveal key={path.number} delay={i * 0.07}>
@@ -483,7 +481,7 @@ export default function HowTo() {
       />
 
       {/* Family member parallel journey */}
-      <section className="py-12 bg-blue-50/50 dark:bg-blue-950/10 border-t border-blue-100 dark:border-blue-900/30">
+      <section id="how-to-family" className="py-12 bg-blue-50/50 dark:bg-blue-950/10 border-t border-blue-100 dark:border-blue-900/30 scroll-mt-20">
         <div className="max-w-3xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-8">
@@ -521,17 +519,17 @@ export default function HowTo() {
           </div>
           <ScrollReveal delay={0.2}>
             <div className="mt-8 text-center">
-              <Link href="/friends-family">
-                <button className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors">
-                  {t("howTo.paths.path5.cta")} <ArrowRight className="w-4 h-4" />
-                </button>
+              <Link
+                href="/friends-family"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 transition-colors"
+              >
+                {t("howTo.paths.path5.cta")} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }

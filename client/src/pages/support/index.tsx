@@ -25,8 +25,10 @@ import {
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import {
+  PageSectionNav,
+  ScanFirstPageFrame,
+} from "@/components/layout/scan-first-page-frame";
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 
@@ -116,9 +118,7 @@ export default function SupportHub() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <Header />
-      <main className="flex-1">
+    <ScanFirstPageFrame>
         {/* Hero */}
         <section className="vivid-header-rose py-12 md:py-16">
           <div className="max-w-3xl mx-auto px-4 text-center vivid-header-content">
@@ -138,7 +138,7 @@ export default function SupportHub() {
         </section>
 
         {/* 211 Start Here card */}
-        <section className="pt-8 pb-0">
+        <section id="support-start" className="pt-8 pb-0 scroll-mt-20">
           <div className="container mx-auto px-4 max-w-5xl">
             <ScrollReveal>
               <div className="rounded-xl border border-border bg-muted/30 p-5 flex items-start gap-4">
@@ -168,7 +168,7 @@ export default function SupportHub() {
         </section>
 
         {/* Screener callout */}
-        <section className="pt-4 pb-0">
+        <section id="support-screener" className="pt-4 pb-0 scroll-mt-20">
           <div className="container mx-auto px-4 max-w-5xl">
             <ScrollReveal>
               <Link href="/collateral-consequences">
@@ -190,7 +190,17 @@ export default function SupportHub() {
         </section>
 
         {/* Category groups */}
-        <section className="py-12 md:py-16">
+        <PageSectionNav
+          ariaLabel={t("support.pageSections", "On this page")}
+          items={[
+            { id: "support-start", label: t("support.startHereCard.heading") },
+            { id: "support-screener", label: t("support.screenerCallout.heading") },
+            { id: "support-topics", label: t("support.topicDirectory", "Browse support topics") },
+            { id: "support-partners", label: t("support.partners", "Community partners") },
+          ]}
+        />
+
+        <section id="support-topics" className="py-12 md:py-16 scroll-mt-20">
           <div className="container mx-auto px-4 max-w-5xl">
             <ScrollReveal>
               {GROUPS.map((group, gi) => {
@@ -209,7 +219,7 @@ export default function SupportHub() {
         </section>
 
         {/* Partners callout */}
-        <section className="py-10 border-t border-border/40">
+        <section id="support-partners" className="py-10 border-t border-border/40 scroll-mt-20">
           <div className="container mx-auto px-4 max-w-5xl">
             <ScrollReveal>
               <div className="rounded-xl bg-muted/40 border border-border/50 p-5 flex items-start gap-4">
@@ -233,8 +243,6 @@ export default function SupportHub() {
             </ScrollReveal>
           </div>
         </section>
-      </main>
-      <Footer />
-    </div>
+    </ScanFirstPageFrame>
   );
 }
