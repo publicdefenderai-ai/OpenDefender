@@ -40,6 +40,7 @@ import { polishMitigationNarrative, MITIGATION_FIELD_WHITELIST } from "./service
 import { aiBodySizeLimit, TEN_KB } from "./middleware/ai-body-size";
 import { getMitigationPolishMaxBodyBytes } from "./config/mitigation-polish";
 import { normalizeGuidance } from "../shared/guidance-view-model";
+import { getProviderMetrics } from "./services/operations-metrics";
 
 function guidanceCaseData(caseData: any) {
   return {
@@ -829,6 +830,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Returns 200 OK if the x-admin-api-key header matches ADMIN_TOKEN; 401 otherwise.
   app.get("/api/admin/verify-key", adminRateLimiter, requireAdminAuth, (_req, res) => {
     res.json({ ok: true });
+  });
+
+  // GET /api/admin/provider-metrics
+  // Returns aggregate provider availability and latency only. The underlying
+  // table contains no request parameters, citations, prompts, or case data.
+  app.get("/api/admin/provider-metrics", adminRateLimiter, requireAdminAuth, async (req, res) => {
+    const rawDays = req.query.days === undefined ? 30 : Number(req.query.days);
+    if (!Number.isInteger(rawDays) || rawDays < 1 || rawDays > 90) {
+      return res.status(400).json({
+        success: false,
+        error: "days must be an integer between 1 and 90",
+      });
+    }
+
+    try {
+      const report = await getProviderMetrics(rawDays);
+      return res.json({ success: true, ...report });
+    } catch (error) {
+      errLog("Failed to load provider metrics", error);
+      return res.status(500).json({
+        success: false,
+        error: "Failed to load provider metrics",
+      });
+    }
   });
 
   // ============================================================================

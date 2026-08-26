@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp, jsonb, boolean, unique, real, integer, index } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, jsonb, boolean, unique, real, integer, index, primaryKey } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -56,6 +56,30 @@ export const courtData = pgTable("court_data", {
   lastUpdated: timestamp("last_updated").defaultNow(),
 }, (table) => ({
   jurisdictionIdx: index("court_data_jurisdiction_idx").on(table.jurisdiction),
+}));
+
+/**
+ * Privacy-safe daily provider metrics. This table intentionally stores only
+ * aggregate counters and bounded timings; it must never contain request
+ * parameters, citations, prompts, sessions, or guidance content.
+ */
+export const providerMetrics = pgTable("provider_metrics", {
+  provider: varchar("provider", { length: 32 }).notNull(),
+  operation: varchar("operation", { length: 64 }).notNull(),
+  bucketStart: timestamp("bucket_start").notNull(),
+  requestCount: integer("request_count").notNull().default(0),
+  successCount: integer("success_count").notNull().default(0),
+  failureCount: integer("failure_count").notNull().default(0),
+  timeoutCount: integer("timeout_count").notNull().default(0),
+  clientErrorCount: integer("client_error_count").notNull().default(0),
+  cancelledCount: integer("cancelled_count").notNull().default(0),
+  durationTotalMs: integer("duration_total_ms").notNull().default(0),
+  durationMaxMs: integer("duration_max_ms").notNull().default(0),
+  lastOutcome: varchar("last_outcome", { length: 24 }).notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+}, (table) => ({
+  primaryKey: primaryKey({ columns: [table.provider, table.operation, table.bucketStart] }),
+  bucketStartIdx: index("provider_metrics_bucket_start_idx").on(table.bucketStart),
 }));
 
 export const insertUserSchema = createInsertSchema(users).pick({

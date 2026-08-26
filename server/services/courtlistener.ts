@@ -1,4 +1,5 @@
 import { errLog } from '../utils/dev-logger';
+import { recordProviderMetric, type MetricsOutcome } from './operations-metrics';
 
 interface CourtListenerAPI {
   searchOpinions(query: string, jurisdiction?: string, signal?: AbortSignal): Promise<any>;
@@ -36,6 +37,7 @@ class CourtListenerService implements CourtListenerAPI {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), this.requestTimeoutMs);
     const abortExternalRequest = () => controller.abort();
+    const startedAt = Date.now();
     externalSignal?.addEventListener('abort', abortExternalRequest, { once: true });
 
     try {
@@ -43,12 +45,30 @@ class CourtListenerService implements CourtListenerAPI {
       if (!response.ok) {
         throw new Error(`CourtListener API error: ${response.status} ${response.statusText}`);
       }
-      return await response.json();
+      const data = await response.json();
+      void recordProviderMetric({
+        provider: 'CourtListener',
+        operation: 'api_request',
+        outcome: 'success',
+        durationMs: Date.now() - startedAt,
+      });
+      return data;
     } catch (error) {
       const timedOut = controller.signal.aborted && !externalSignal?.aborted;
+      const outcome: MetricsOutcome = timedOut
+        ? 'timeout'
+        : externalSignal?.aborted
+          ? 'cancelled'
+          : 'failure';
+      void recordProviderMetric({
+        provider: 'CourtListener',
+        operation: 'api_request',
+        outcome,
+        durationMs: Date.now() - startedAt,
+      });
       errLog('CourtListener provider request failed', {
         endpoint,
-        reason: timedOut ? 'timeout' : externalSignal?.aborted ? 'cancelled' : 'provider_error',
+        reason: outcome,
       });
       if (timedOut) {
         throw new Error('CourtListener API request timed out');

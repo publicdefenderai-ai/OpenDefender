@@ -1,8 +1,9 @@
-import axios, { AxiosInstance } from 'axios';
+import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 import { eq, ilike } from 'drizzle-orm';
 import { db } from '../db';
 import { statutes } from '@shared/schema';
 import { devLog, opsLog, errLog } from '../utils/dev-logger';
+import { recordProviderMetric, type MetricsOutcome } from './operations-metrics';
 
 function logOpenLawsFailure(operation: string, error: unknown): void {
   const axiosError = axios.isAxiosError(error) ? error : undefined;
@@ -181,6 +182,45 @@ export class OpenLawsClient {
         ...(this.apiKey && { 'Authorization': `Bearer ${this.apiKey}` }),
       },
     });
+
+    // Interceptors record only aggregate request outcome and latency. The
+    // request URL and parameters are intentionally never passed to metrics.
+    this.axios.interceptors.request.use((request) => {
+      (request as typeof request & { metricsStartedAt?: number }).metricsStartedAt = Date.now();
+      return request;
+    });
+    this.axios.interceptors.response.use(
+      (response) => {
+        const startedAt = (response.config as typeof response.config & { metricsStartedAt?: number }).metricsStartedAt;
+        void recordProviderMetric({
+          provider: 'OpenLaws',
+          operation: 'api_request',
+          outcome: 'success',
+          durationMs: startedAt ? Date.now() - startedAt : 0,
+        });
+        return response;
+      },
+      (error: unknown) => {
+        const axiosError = axios.isAxiosError(error) ? error : undefined;
+        const config = axiosError?.config as (AxiosRequestConfig & { metricsStartedAt?: number }) | undefined;
+        const startedAt = config?.metricsStartedAt;
+        const status = axiosError?.response?.status;
+        const outcome: MetricsOutcome = axios.isCancel(error)
+          ? 'cancelled'
+          : axiosError?.code === 'ECONNABORTED' || axiosError?.code === 'ETIMEDOUT' || status === 408
+            ? 'timeout'
+            : status && status >= 400 && status < 500
+              ? 'client_error'
+              : 'failure';
+        void recordProviderMetric({
+          provider: 'OpenLaws',
+          operation: 'api_request',
+          outcome,
+          durationMs: startedAt ? Date.now() - startedAt : 0,
+        });
+        return Promise.reject(error);
+      },
+    );
   }
 
   getLastSearchStatus(): 'available' | 'unavailable' | 'not_run' {

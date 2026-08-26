@@ -28,6 +28,7 @@ import { JURISDICTION_DEADLINE_RULES } from '@shared/jurisdiction-procedure-rule
 import { openLawsClient } from './openlaws-client';
 import { caseLawValidator, type PrecedentCase, type CaseLawValidationResult } from './case-law-validator';
 import { devLog, opsLog } from '../utils/dev-logger';
+import { recordProviderMetric } from './operations-metrics';
 
 const LIVE_SOURCE_TIMEOUT_MS = 12_000;
 
@@ -520,6 +521,38 @@ function generateSummary(result: Omit<ValidationResult, 'summary'>): string {
 }
 
 export async function validateLegalGuidance(
+  guidance: GuidanceToValidate,
+  context: CaseContext,
+  options: LegalValidationOptions = {}
+): Promise<ValidationResult> {
+  const includeExternalSources = options.includeExternalSources ?? true;
+  const enrichmentStart = Date.now();
+
+  try {
+    const result = await validateLegalGuidanceInternal(guidance, context, options);
+    if (includeExternalSources) {
+      void recordProviderMetric({
+        provider: 'GuidanceEnrichment',
+        operation: 'source_enrichment',
+        outcome: result.sourceEnrichment?.status === 'complete' ? 'success' : 'failure',
+        durationMs: Date.now() - enrichmentStart,
+      });
+    }
+    return result;
+  } catch (error) {
+    if (includeExternalSources) {
+      void recordProviderMetric({
+        provider: 'GuidanceEnrichment',
+        operation: 'source_enrichment',
+        outcome: 'failure',
+        durationMs: Date.now() - enrichmentStart,
+      });
+    }
+    throw error;
+  }
+}
+
+async function validateLegalGuidanceInternal(
   guidance: GuidanceToValidate,
   context: CaseContext,
   options: LegalValidationOptions = {}

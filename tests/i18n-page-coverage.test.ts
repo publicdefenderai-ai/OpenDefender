@@ -48,6 +48,7 @@ const ALLOWED_UNTRANSLATED: Record<string, string> = {
   'client/src/pages/widgets.tsx': 'Embed/config reference for partner sites, not a defendant-facing page.',
   'client/src/pages/admin/attorney-review.tsx': 'Internal staff admin tool (attorney content review queue).',
   'client/src/pages/admin/citation-review.tsx': 'Internal staff admin tool (citation review queue).',
+  'client/src/pages/admin/provider-metrics.tsx': 'Internal staff admin tool (source provider operations metrics).',
   'client/src/components/attorney/template-wizard.tsx': 'Attorney-facing professional tooling, not defendant-facing.',
   'client/src/components/attorney/template-form-section.tsx': 'Attorney-facing professional tooling, not defendant-facing.',
   'client/src/components/attorney/document-preview.tsx': 'Attorney-facing professional tooling, not defendant-facing.',
