@@ -56,7 +56,7 @@ export function MobileBottomNav() {
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-t border-border md:hidden safe-area-bottom"
+      className="editorial-mobile-nav fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-t border-border md:hidden safe-area-bottom"
       role="navigation"
       aria-label={t("nav.mobileNavigation", "Mobile navigation")}
     >
@@ -73,16 +73,15 @@ export function MobileBottomNav() {
               aria-current={active ? "page" : undefined}
               className={cn(
                 "flex flex-col items-center justify-center flex-1 min-w-0 h-full py-1 px-0.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
-                active
-                  ? "text-primary"
+                 active
+                   ? "text-primary font-semibold"
                   : "text-muted-foreground hover:text-foreground"
               )}
                data-testid={`nav-${item.href === "/" ? "home" : item.href.split("/").filter(Boolean)[0]}`}
             >
               <Icon
                 className={cn(
-                  "h-5 w-5 mb-1 transition-transform",
-                  active && "scale-110"
+                   "h-5 w-5 mb-1"
                 )}
               />
                <span className="text-[10px] leading-tight font-medium text-center whitespace-normal break-words line-clamp-2">

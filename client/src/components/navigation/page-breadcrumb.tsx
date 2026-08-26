@@ -32,7 +32,7 @@ export function PageBreadcrumb({ items, currentPage, className }: PageBreadcrumb
   return (
     <nav 
       aria-label="Breadcrumb" 
-      className={cn("border-b border-border/40 bg-muted/20", className)}
+      className={cn("editorial-breadcrumb border-b border-border/40 bg-muted/20", className)}
     >
       <div className="max-w-7xl mx-auto px-4 py-2.5">
         {/* Mobile: Back link only */}

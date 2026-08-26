@@ -78,7 +78,7 @@ export default function Home() {
         { label: t("home.doors.door1.link2"), href: "/support/court-logistics/bail-preparation" },
         { label: t("home.doors.door1.link3"), href: "/collateral-consequences" },
       ],
-      gradient: "from-[hsl(345,52%,22%)] via-[hsl(350,48%,28%)] to-[hsl(355,44%,34%)]",
+      tone: "urgent",
       pulsing: true,
     },
     {
@@ -92,7 +92,7 @@ export default function Home() {
         { label: t("home.doors.door2.link2"), href: "/case-timeline" },
         { label: t("home.doors.door2.link3"), href: "/collateral-consequences" },
       ],
-      gradient: "from-[hsl(192,58%,18%)] via-[hsl(196,50%,24%)] to-[hsl(200,44%,30%)]",
+      tone: "case",
       pulsing: false,
     },
     {
@@ -106,7 +106,7 @@ export default function Home() {
         { label: t("home.doors.door3.link2"), href: "/support/employment" },
         { label: t("home.doors.door3.link3"), href: "/support/childcare" },
       ],
-      gradient: "from-[hsl(258,48%,20%)] via-[hsl(255,42%,28%)] to-[hsl(252,36%,35%)]",
+      tone: "support",
       pulsing: false,
     },
   ];
@@ -182,13 +182,27 @@ export default function Home() {
             <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
               {t("home.hero.subtitle")}
             </p>
-            <div className="flex items-center justify-center">
+            <div className="flex flex-col items-center justify-center gap-4">
               <button
                 onClick={handleUrgentHelp}
                 className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 active:bg-teal-600 text-white font-bold text-base transition-colors shadow-lg shadow-teal-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
               >
                 {t("home.hero.primaryCta")} <ArrowRight className="h-4 w-4" />
               </button>
+              <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+                <Link
+                  href="/case-guidance"
+                  className="editorial-hero-link"
+                >
+                  {t("home.doors.door2.cta")}
+                </Link>
+                <Link
+                  href="/directory"
+                  className="editorial-hero-link"
+                >
+                  {t("home.hero.secondaryCta")}
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -203,63 +217,54 @@ export default function Home() {
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
             {doors.map((door, i) => (
               <motion.div
                 key={door.link}
                 initial={{ opacity: 0, y: 28 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="group"
+                className={`group ${i === 0 ? "md:col-span-7 md:row-span-2" : "md:col-span-5"}`}
               >
                 <div
-                  className={`relative flex flex-col rounded-2xl overflow-hidden bg-gradient-to-br ${door.gradient} texture-grain
-                    transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl min-h-[300px] md:min-h-[340px]`}
+                  className={`editorial-path-card editorial-path-card-${door.tone} relative flex flex-col overflow-hidden
+                    ${i === 0 ? "min-h-[360px] md:min-h-[460px]" : "min-h-[260px] md:min-h-[220px]"}`}
                 >
-                  {/* Card content above grain layer */}
                   <div className="relative z-10 flex flex-col flex-1 p-6">
-                    {/* Badge */}
                     <div className="flex items-center gap-2 mb-4">
                       {door.pulsing && (
-                        <span className="relative inline-flex items-center justify-center w-3 h-3 flex-shrink-0" aria-hidden="true">
-                          <span className="absolute h-full w-full rounded-full bg-rose-300/75 urgency-ring" />
-                          <span className="absolute h-full w-full rounded-full bg-rose-200/50 urgency-ring-delayed" />
-                          <span className="relative h-2 w-2 rounded-full bg-rose-200" />
+                        <span className="editorial-urgency-dot" aria-hidden="true">
                         </span>
                       )}
-                      <span className="text-[11px] font-semibold tracking-wider text-white/70 uppercase leading-tight">
+                      <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase leading-tight">
                         {door.badge}
                       </span>
                     </div>
 
-                    {/* Headline */}
-                    <h3 className="text-xl md:text-2xl font-bold text-white mb-3 leading-snug">
+                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 leading-snug">
                       {door.headline}
                     </h3>
 
-                    {/* Description */}
-                    <p className="text-sm text-white/75 leading-relaxed flex-1 mb-5">
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">
                       {door.desc}
                     </p>
 
-                    {/* Primary CTA */}
                     <Link
                       href={door.link}
-                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-white/15 hover:bg-white/25 text-white text-sm font-semibold transition-colors mb-5 w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                      className="editorial-path-action inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold transition-colors mb-5 w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       {door.cta}
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
+                      <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
                     </Link>
 
-                    {/* Secondary links */}
-                    <div className="flex flex-col gap-1.5 border-t border-white/15 pt-4">
+                    <div className="flex flex-col gap-2 border-t border-border pt-4">
                       {door.links.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
-                          className="text-xs text-white/60 hover:text-white/90 transition-colors flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                          className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                         >
-                          <ArrowRight className="h-2.5 w-2.5 opacity-50 flex-shrink-0" aria-hidden="true" />
+                          <ArrowRight className="h-2.5 w-2.5 opacity-60 flex-shrink-0" aria-hidden="true" />
                           {link.label}
                         </Link>
                       ))}
@@ -276,14 +281,14 @@ export default function Home() {
               {t("home.secondary.title")}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {secondaryPaths.map(({ Icon, title, desc, cta, href, bg, border, color }, i) => (
+              {secondaryPaths.map(({ Icon, title, desc, cta, href }) => (
                 <Link key={href} href={href} className="flex">
-                  <div className={`flex items-start gap-3.5 rounded-xl border p-4 cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 h-full w-full ${bg} ${border}`}>
-                    <Icon className={`h-4 w-4 mt-0.5 flex-shrink-0 ${color}`} strokeWidth={1.75} aria-hidden="true" />
+                  <div className="editorial-secondary-path flex items-start gap-3.5 p-4 cursor-pointer h-full w-full">
+                    <Icon className="h-4 w-4 mt-0.5 flex-shrink-0 text-[var(--editorial-signal)]" strokeWidth={1.75} aria-hidden="true" />
                     <div className="min-w-0">
                       <p className="font-semibold text-foreground text-sm leading-snug">{title}</p>
                       <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{desc}</p>
-                      <p className={`text-xs font-semibold flex items-center gap-1 mt-2 ${color}`}>
+                      <p className="text-xs font-semibold text-[var(--editorial-signal)] flex items-center gap-1 mt-2">
                         {cta} <ArrowRight className="h-2.5 w-2.5" aria-hidden="true" />
                       </p>
                     </div>
@@ -298,7 +303,7 @@ export default function Home() {
             <div className="mt-7 mb-2 max-w-xl mx-auto">
               <button
                 onClick={() => setSearchOpen(true)}
-                className="w-full flex items-center gap-3 pl-3.5 pr-4 py-3 rounded-xl border border-border bg-background text-sm text-muted-foreground hover:border-teal-500/50 hover:bg-muted/40 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500/40"
+                className="w-full flex items-center gap-3 pl-3.5 pr-4 py-3 rounded-md border border-border bg-background text-sm text-muted-foreground hover:border-[var(--editorial-signal)] hover:bg-muted/40 transition-colors text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--editorial-signal)]"
                 aria-label={t("home.paths.searchPlaceholder")}
               >
                 <Search className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
@@ -324,14 +329,14 @@ export default function Home() {
             </p>
           </ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { Icon: AlertTriangle, title: t("home.features.card1Title"), desc: t("home.features.card1Desc"), color: "text-red-500" },
-              { Icon: Heart, title: t("home.features.card2Title"), desc: t("home.features.card2Desc"), color: "text-teal-500" },
-              { Icon: Globe2, title: t("home.features.card3Title"), desc: t("home.features.card3Desc"), color: "text-blue-500" },
-            ].map(({ Icon, title, desc, color }) => (
+              {[
+                { Icon: AlertTriangle, title: t("home.features.card1Title"), desc: t("home.features.card1Desc") },
+                { Icon: Heart, title: t("home.features.card2Title"), desc: t("home.features.card2Desc") },
+                { Icon: Globe2, title: t("home.features.card3Title"), desc: t("home.features.card3Desc") },
+              ].map(({ Icon, title, desc }) => (
               <ScrollReveal key={title}>
                 <div className="p-4 rounded-xl border border-border bg-muted/20 h-full">
-                  <Icon className={`h-4 w-4 ${color} mb-3`} strokeWidth={1.75} aria-hidden="true" />
+                  <Icon className="h-4 w-4 text-[var(--editorial-signal)] mb-3" strokeWidth={1.75} aria-hidden="true" />
                   <p className="font-semibold text-sm text-foreground mb-1.5">{title}</p>
                   <p className="text-xs text-muted-foreground leading-relaxed">{desc}</p>
                 </div>
@@ -386,7 +391,7 @@ export default function Home() {
               ].map((badge) => (
                 <span
                   key={badge}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-background border border-border text-muted-foreground"
+                  className="inline-flex items-center px-3 py-1 rounded-sm text-xs font-semibold bg-background border border-border text-muted-foreground"
                 >
                   {badge}
                 </span>

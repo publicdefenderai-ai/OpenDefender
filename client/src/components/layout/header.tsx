@@ -267,6 +267,7 @@ export function Header() {
                         aria-expanded={isOpen}
                         aria-haspopup="true"
                         aria-label={link.label}
+                        aria-current={isActive ? "page" : undefined}
                         className={cn(
                           "relative flex items-center gap-1 px-3 py-2 text-sm rounded-sm transition-colors duration-150 group",
                           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1",
@@ -409,6 +410,7 @@ export function Header() {
                           <button
                             onClick={() => setMobileExpanded(isExpanded ? null : link.href)}
                             aria-expanded={isExpanded}
+                            aria-current={location.startsWith(link.href) ? "page" : undefined}
                             className={cn(
                               "w-full flex items-center justify-between gap-2.5 px-3 py-2.5 rounded-lg text-sm text-left transition-colors",
                               location.startsWith(link.href) ? "bg-muted text-foreground font-medium" : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
