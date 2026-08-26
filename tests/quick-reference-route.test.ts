@@ -7,25 +7,29 @@ const read = (relativePath: string) =>
   fs.readFileSync(path.join(ROOT, relativePath), "utf-8");
 
 describe("Quick Reference route", () => {
-  it("routes the Quick Reference destination to the printable cards page", () => {
+  it("keeps the legacy URL redirecting to the canonical rights experience", () => {
     const appSource = read("client/src/App.tsx");
     const headerSource = read("client/src/components/layout/header.tsx");
+    const getStartedSource = read("client/src/components/navigation/get-started-menu.tsx");
     expect(appSource).toContain(
       'const QuickReference = lazy(() => import("@/pages/quick-reference"));',
     );
     expect(appSource).toContain(
-      '<Route path="/quick-reference" component={QuickReference} />',
+      '<Route path="/quick-reference-cards" component={QuickReference} />',
     );
-    expect(appSource).not.toContain(
+    expect(appSource).toContain(
       '<Route path="/quick-reference"><Redirect to="/rights-info" /></Route>',
     );
     expect(headerSource).toContain(
-      'href: "/quick-reference", icon: FileText',
+      'href: "/rights-info#quick-reference-cards", icon: FileText',
     );
     expect(headerSource).toContain('testId: "menu-quick-reference"');
+    expect(getStartedSource).toContain(
+      "handleNavigate('/rights-info#quick-reference-cards')",
+    );
   });
 
-  it("keeps the print action and printable card section on the destination", () => {
+  it("keeps the print action and printable card section on the canonical destination", () => {
     const pageSource = read("client/src/pages/quick-reference.tsx");
     expect(pageSource).toContain('data-testid="button-print-all-cards"');
     expect(pageSource).toContain('data-testid="section-quick-reference-cards"');
@@ -36,5 +40,13 @@ describe("Quick Reference route", () => {
     expect(pageSource).toContain('data-testid="print-all-cards"');
     expect(pageSource).toContain('cardTestId="printable-card"');
     expect(pageSource).toContain("window.print()");
+  });
+
+  it("links the canonical rights page to the printable cards", () => {
+    const rightsSource = read("client/src/pages/rights-info.tsx");
+    expect(rightsSource).toContain('id="quick-reference-cards"');
+    expect(rightsSource).toContain('href="/quick-reference-cards"');
+    expect(rightsSource).toContain('data-testid="button-open-printable-rights-cards"');
+    expect(rightsSource).toContain("rights.printableCards");
   });
 });

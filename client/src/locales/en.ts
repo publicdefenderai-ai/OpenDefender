@@ -2812,6 +2812,11 @@ export default {
         "detailedExplanation": "The law requires that you be formally told about the criminal charges against you, usually at your first court appearance within 48-72 hours of arrest. You have the right to know exactly what crimes you're accused of, which laws they say you broke, and what punishments you could face. This information lets you and your lawyer prepare your defense and makes sure you can't be tried for crimes you weren't properly told about."
       }
     },
+    "printableCards": {
+      "title": "Printable Quick-Reference Cards",
+      "description": "Save or print compact guides covering your rights during police encounters and common court stages.",
+      "button": "Open Printable Rights Cards"
+    },
     "detailedRights": {
       "title": "Your Legal Rights in Detail",
       "tabs": {

@@ -145,4 +145,18 @@ describe('i18n page coverage guard', () => {
     const stale = Object.keys(ALLOWED_UNTRANSLATED).filter((rel) => !fs.existsSync(path.join(ROOT, rel)));
     expect(stale, `These allowlist entries reference files that no longer exist: ${stale.join(', ')}`).toEqual([]);
   });
+
+  it('keeps the canonical printable rights callout translated in every supported language', () => {
+    const buttonLabels = {
+      en: 'Open Printable Rights Cards',
+      es: 'Abrir Tarjetas Imprimibles de Derechos',
+      zh: '打开可打印的权利卡片',
+    } as const;
+
+    for (const locale of Object.keys(buttonLabels) as Array<keyof typeof buttonLabels>) {
+      const source = fs.readFileSync(path.join(ROOT, `client/src/locales/${locale}.ts`), 'utf8');
+      expect(source, `${locale} locale is missing the printable rights callout`).toContain('"printableCards"');
+      expect(source, `${locale} locale is missing the printable rights callout button`).toContain(`"button": "${buttonLabels[locale]}"`);
+    }
+  });
 });

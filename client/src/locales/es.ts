@@ -2814,6 +2814,11 @@ export default {
         "detailedExplanation": "La Sexta Enmienda requiere que sea informado formalmente de los cargos criminales en su contra, típicamente en su lectura de cargos o comparecencia inicial dentro de 48-72 horas del arresto. Tiene derecho a saber exactamente de qué crímenes se le acusa, las leyes específicas que supuestamente violó, y las penas potenciales que enfrenta. Esta información le permite a usted y a su abogado preparar una estrategia de defensa apropiada y asegura que no pueda ser juzgado por crímenes de los que no fue debidamente notificado."
       }
     },
+    "printableCards": {
+      "title": "Tarjetas de Referencia Rápida Imprimibles",
+      "description": "Guarde o imprima guías breves sobre sus derechos durante encuentros con la policía y etapas comunes de la corte.",
+      "button": "Abrir Tarjetas Imprimibles de Derechos"
+    },
     "detailedRights": {
       "title": "Sus Derechos Constitucionales en Detalle",
       "tabs": {

@@ -292,7 +292,7 @@ export function GetStartedMenu({ isOpen, onClose, onShowPublicDefender, onShowLe
       </button>
 
       <button
-        onClick={() => handleNavigate('/quick-reference')}
+        onClick={() => handleNavigate('/rights-info#quick-reference-cards')}
         className="w-full"
         data-testid="submenu-item-quick-reference"
       >

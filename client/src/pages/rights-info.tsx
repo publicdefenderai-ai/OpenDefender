@@ -20,6 +20,7 @@ import {
   CheckCircle,
   ChevronDown,
   User,
+  Printer,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -130,6 +131,34 @@ export default function RightsInfo() {
               />
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      {/* Printable Quick Reference */}
+      <section
+        id="quick-reference-cards"
+        className="py-10 md:py-14 bg-muted/30"
+        data-testid="section-printable-rights-cards"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <ScrollReveal>
+            <div className="editorial-surface rounded-2xl border border-border p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div>
+                <h2 className="text-2xl font-bold text-foreground mb-2" data-testid="heading-printable-rights-cards">
+                  {t('rights.printableCards.title')}
+                </h2>
+                <p className="text-muted-foreground">
+                  {t('rights.printableCards.description')}
+                </p>
+              </div>
+              <Link href="/quick-reference-cards">
+                <Button className="shrink-0" data-testid="button-open-printable-rights-cards">
+                  <Printer className="h-4 w-4 mr-2" />
+                  {t('rights.printableCards.button')}
+                </Button>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
