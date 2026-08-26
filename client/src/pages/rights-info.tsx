@@ -148,20 +148,20 @@ export default function RightsInfo() {
 
               <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
                 <ScrollReveal delay={0.1}>
-                  <TabsList className="grid w-full grid-cols-3 lg:grid-cols-5 mb-10 md:mb-12 bg-background border border-border">
-                    <TabsTrigger value="miranda" data-testid="tab-miranda" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                  <TabsList className="editorial-surface grid w-full grid-cols-3 lg:grid-cols-5 mb-10 md:mb-12 bg-background">
+                    <TabsTrigger value="miranda" data-testid="tab-miranda" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
                       {t('rights.detailedRights.tabs.miranda')}
                     </TabsTrigger>
-                    <TabsTrigger value="arrest" data-testid="tab-arrest" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                    <TabsTrigger value="arrest" data-testid="tab-arrest" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
                       {t('rights.detailedRights.tabs.arrest')}
                     </TabsTrigger>
-                    <TabsTrigger value="court" data-testid="tab-court" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                    <TabsTrigger value="court" data-testid="tab-court" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
                       {t('rights.detailedRights.tabs.court')}
                     </TabsTrigger>
-                    <TabsTrigger value="prison" data-testid="tab-prison" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                    <TabsTrigger value="prison" data-testid="tab-prison" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
                       {t('rights.detailedRights.tabs.prison')}
                     </TabsTrigger>
-                    <TabsTrigger value="search" data-testid="tab-search" className="data-[state=active]:bg-blue-600 data-[state=active]:text-white data-[state=active]:font-bold data-[state=active]:shadow-md hover:bg-blue-100 hover:text-blue-800 hover:font-semibold transition-all duration-200">
+                    <TabsTrigger value="search" data-testid="tab-search" className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:font-bold hover:bg-muted transition-colors">
                       Search & Seizure
                     </TabsTrigger>
                   </TabsList>
@@ -370,12 +370,12 @@ function QuickRightCard({ icon, title, description, onClick }: {
 }) {
   return (
     <Card 
-      className="text-center hover:shadow-lg transition-all duration-200 cursor-pointer border hover:border-primary hover:ring-2 hover:ring-primary/30 ring-offset-2 ring-offset-background card-press" 
+      className="editorial-card editorial-card-interactive text-center cursor-pointer card-press"
       onClick={onClick}
       data-testid={`card-right-${title.toLowerCase().replace(/\s+/g, '-')}`}
     >
       <CardContent className="p-6">
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-4 text-primary ring-1 ring-primary/20">
+        <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center mx-auto mb-4 text-primary">
           {icon}
         </div>
         <h3 className="font-semibold text-foreground mb-2">{title}</h3>

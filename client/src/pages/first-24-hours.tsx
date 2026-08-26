@@ -129,7 +129,7 @@ function Step({ number, title, timeframe, context, dos = [], donts = [], conside
 
   if (isAccordion) {
     return (
-      <div id={id} className={`rounded-xl border overflow-hidden transition-all duration-200 ${colors.border} ${isOpen ? colors.activeBg : "bg-background"}`}>
+      <div id={id} className={`editorial-card overflow-hidden transition-colors duration-200 ${isOpen ? "bg-muted/20" : "bg-background"}`}>
         <button
           onClick={onToggle}
           aria-expanded={isOpen}
@@ -460,7 +460,7 @@ export default function FirstTwentyFourHours() {
           </h1>
           <div className="flex items-center justify-center gap-4 mb-5">
             <span className="h-px w-10 bg-amber-300/50 flex-shrink-0" />
-            <p className="text-lg md:text-xl font-semibold tracking-[0.12em] text-amber-200 uppercase">
+            <p className="editorial-kicker !text-amber-200 text-lg md:text-xl tracking-[0.12em]">
               {t('first24Hours.tagline')}
             </p>
             <span className="h-px w-10 bg-amber-300/50 flex-shrink-0" />
@@ -471,7 +471,7 @@ export default function FirstTwentyFourHours() {
         </div>
       </section>
 
-      <main className="max-w-5xl mx-auto px-4 py-12 md:py-16">
+      <main className="editorial-reading max-w-5xl mx-auto px-4 py-12 md:py-16">
         <div className="flex gap-12 items-start">
           <PageSidebar
             jurisdiction={jurisdiction}
@@ -579,7 +579,7 @@ export default function FirstTwentyFourHours() {
                 ],
               },
             ] as { value: string; title: string; considerations: Array<{ heading: string; text: string }> }[]).map(({ value, title, considerations }) => (
-              <AccordionItem key={value} value={value} className="border border-border/70 rounded-lg px-4 bg-background/60">
+              <AccordionItem key={value} value={value} className="editorial-card px-4 bg-background/60">
                 <AccordionTrigger className="text-left hover:no-underline py-3">
                   <span className="font-semibold text-sm">{title}</span>
                 </AccordionTrigger>
@@ -599,7 +599,7 @@ export default function FirstTwentyFourHours() {
         </Step>
 
         {/* Section header */}
-        <div className="flex items-center gap-4 mb-8 mt-6">
+        <div className="editorial-section-heading mb-8 mt-6">
           <div className="flex-1 h-px bg-border" />
           <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground px-1 whitespace-nowrap">Your 7-Step Guide</span>
           <div className="flex-1 h-px bg-border" />

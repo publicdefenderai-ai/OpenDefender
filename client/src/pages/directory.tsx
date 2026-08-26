@@ -200,7 +200,7 @@ export default function Directory() {
       </section>
 
       {/* Full site inventory */}
-      <section className="py-10 md:py-14 bg-muted/20">
+      <section className="editorial-reading py-10 md:py-14 bg-muted/20">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {inventoryCategories.map((cat, i) => (

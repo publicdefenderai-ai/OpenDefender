@@ -168,8 +168,8 @@ export default function CaseTimeline() {
               exit="exit"
               transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
             >
-              <Card className={`border-2 ${currentStage.borderColor}`}>
-                <CardHeader className={currentStage.bgColor}>
+              <Card className="editorial-card border-l-4 border-l-primary">
+                <CardHeader className="bg-muted/30">
                   <CardTitle className={`flex items-center gap-3 ${currentStage.color}`}>
                     {currentStage.icon}
                     <span>
@@ -189,7 +189,7 @@ export default function CaseTimeline() {
                   />
 
                   <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-green-50 dark:bg-green-950/30 p-5 rounded-lg border border-green-200 dark:border-green-800">
+                    <div className="editorial-card p-5 border-l-4 border-l-emerald-600">
                       <h3 className="font-semibold text-green-800 dark:text-green-200 mb-3 flex items-center gap-2">
                         <BrandShieldIcon size={16} />
                         {t("caseTimeline.yourRights", "Your Rights")}
@@ -206,7 +206,7 @@ export default function CaseTimeline() {
                       </ul>
                     </div>
 
-                    <div className="bg-amber-50 dark:bg-amber-950/30 p-5 rounded-lg border border-amber-200 dark:border-amber-800">
+                    <div className="editorial-card p-5 border-l-4 border-l-amber-500">
                       <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-3 flex items-center gap-2">
                         <AlertTriangle className="h-4 w-4" />
                         {t("caseTimeline.whatToKnow", "What to Know")}
@@ -335,8 +335,8 @@ export default function CaseTimeline() {
             {/* Bail Guide */}
             <ScrollReveal delay={0.1}>
               <div id="bail-guide" className="scroll-mt-20">
-                <Card className="border-2 border-green-200 dark:border-green-800">
-                  <CardHeader className="bg-green-50 dark:bg-green-950/50">
+              <Card className="editorial-card border-l-4 border-l-green-600">
+                  <CardHeader className="bg-muted/30">
                     <CardTitle className="text-green-800 dark:text-green-200">
                       {t('process.guides.bail.title')}
                     </CardTitle>
@@ -447,7 +447,7 @@ export default function CaseTimeline() {
             {/* Plea Bargain Guide */}
             <ScrollReveal delay={0.2}>
               <Card className="border-2 border-blue-200 dark:border-blue-800">
-                <CardHeader className="bg-blue-50 dark:bg-blue-950/50">
+                  <CardHeader className="bg-muted/30">
                   <CardTitle className="text-blue-800 dark:text-blue-200">
                     {t('process.guides.plea.title')}
                   </CardTitle>

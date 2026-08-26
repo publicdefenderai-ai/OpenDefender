@@ -163,7 +163,7 @@ export default function DataSources() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="border-b border-border bg-gradient-to-b from-muted/60 to-background">
+        <section className="border-b border-border bg-muted/30">
           <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{t("home.dataSources.transparency.eyebrow")}</p>
             <div className="mt-3 max-w-3xl">
@@ -179,7 +179,7 @@ export default function DataSources() {
         </section>
 
         <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 md:py-12">
-          <aside className="rounded-2xl border border-amber-300/70 bg-amber-50/70 p-5 dark:border-amber-900 dark:bg-amber-950/20" aria-labelledby="limitations-heading">
+          <aside className="editorial-card border-amber-300/70 bg-amber-50/70 p-5 dark:border-amber-900 dark:bg-amber-950/20" aria-labelledby="limitations-heading">
             <div className="flex gap-3">
               <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-amber-700 dark:text-amber-300" aria-hidden="true" />
               <div>
@@ -215,7 +215,7 @@ export default function DataSources() {
               <h2 id="inventory-heading" className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">{t("home.dataSources.transparency.inventoryHeading")}</h2>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">{t("home.dataSources.transparency.inventoryIntro")}</p>
             </div>
-            <nav aria-label={t("home.dataSources.transparency.topicNavigation")} className="mt-6 rounded-2xl border border-border bg-card p-4">
+            <nav aria-label={t("home.dataSources.transparency.topicNavigation")} className="editorial-surface mt-6 rounded-2xl p-4">
               <div className="grid gap-x-5 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
                 {DATA_SOURCE_IDS.map((id) => <a key={id} href={`#${detailIds[id]}`} className="rounded-lg px-2 py-1.5 text-sm font-medium text-primary underline-offset-4 hover:bg-muted hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">{t(`home.dataSources.transparency.items.${id}.title`)}</a>)}
               </div>
@@ -226,7 +226,7 @@ export default function DataSources() {
           </section>
 
           <section className="mt-12 grid gap-5 lg:grid-cols-2" aria-label={t("home.dataSources.transparency.additionalInformation")}>
-            <Card>
+            <Card className="editorial-card">
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-foreground">{t("home.dataSources.transparency.outOfScopeHeading")}</h2>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{t("home.dataSources.transparency.outOfScopeIntro")}</p>
@@ -235,7 +235,7 @@ export default function DataSources() {
                 </ul>
               </CardContent>
             </Card>
-            <Card id="report-error" className="scroll-mt-24">
+            <Card id="report-error" className="editorial-card scroll-mt-24">
               <CardContent className="p-6">
                 <h2 className="text-xl font-bold text-foreground">{t("home.dataSources.transparency.reportHeading")}</h2>
                 <p className="mt-2 text-sm leading-6 text-muted-foreground">{t("home.dataSources.transparency.reportBody")}</p>

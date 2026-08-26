@@ -118,7 +118,7 @@ export default function LegalGlossary() {
       </section>
 
       {/* Main Content */}
-      <section className="py-12">
+      <section className="editorial-reading py-12">
         <div className="max-w-6xl mx-auto px-4">
           <ScrollReveal>
             <div className="flex flex-wrap items-center gap-3 mb-8">
@@ -136,7 +136,7 @@ export default function LegalGlossary() {
 
           {/* Search and Filters */}
           <ScrollReveal delay={0.1}>
-            <Card className="mb-8">
+            <Card className="editorial-card mb-8">
               <CardContent className="p-6">
                 <div className="space-y-6">
                   {/* Search Input */}
@@ -217,7 +217,7 @@ export default function LegalGlossary() {
           {/* Terms List */}
           <ScrollReveal delay={0.2}>
             {filteredTerms.length > 0 ? (
-              <Card>
+              <Card className="editorial-card">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <BookOpen className="h-5 w-5" />

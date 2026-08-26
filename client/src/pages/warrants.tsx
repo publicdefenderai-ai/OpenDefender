@@ -161,8 +161,10 @@ function SectionPanel({ id, title, icon, isOpen, onToggle, children, urgent }: S
       }`}
     >
       <button
+        type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
+        aria-controls={`${id}-content`}
         className={`w-full text-left flex items-center justify-between px-5 py-4 gap-3 transition-colors ${
           isOpen
             ? urgent
@@ -193,6 +195,7 @@ function SectionPanel({ id, title, icon, isOpen, onToggle, children, urgent }: S
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
+            id={`${id}-content`}
             key="content"
             initial={{ height: 0 }}
             animate={{ height: "auto" }}
@@ -334,8 +337,9 @@ export default function Warrants() {
             {SECTION_IDS.map(({ id, urgent }) => (
               <button
                 key={id}
+                type="button"
                 onClick={() => openAndScroll(id)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
+                className={`px-3 py-1.5 rounded-sm text-xs font-medium whitespace-nowrap border flex-shrink-0 transition-colors ${
                   openIds.has(id)
                     ? urgent
                       ? "border-amber-400 bg-amber-50 text-amber-800 dark:bg-amber-900/20 dark:text-amber-300"
@@ -353,7 +357,7 @@ export default function Warrants() {
       </div>
 
       {/* Layout: sidebar + content */}
-      <div className="max-w-6xl mx-auto px-4 py-12 md:py-16">
+      <div className="editorial-reading max-w-6xl mx-auto px-4 py-12 md:py-16">
         <div className="flex gap-10">
 
           {/* Sidebar — desktop only */}
@@ -381,7 +385,7 @@ export default function Warrants() {
                   <strong>{t("warrants.atTheDoor.alertBold")}</strong> {t("warrants.atTheDoor.alertRest")}
                 </AlertDescription>
               </Alert>
-              <Card>
+              <Card className="editorial-card">
                 <CardContent className="p-6">
                   <AtTheDoorSteps />
                   <p className="text-xs text-muted-foreground mt-6 pt-4 border-t border-border">

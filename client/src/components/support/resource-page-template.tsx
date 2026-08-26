@@ -78,7 +78,7 @@ const categoryThemes: Record<string, { accent: string; accentBg: string; accentB
 
 function SectionHeading({ title }: { title: string }) {
   return (
-    <div className="flex items-center gap-4 mb-6">
+    <div className="editorial-section-heading flex items-center gap-4 mb-6">
       <span className="text-xs font-semibold tracking-widest uppercase text-muted-foreground whitespace-nowrap">
         {title}
       </span>
@@ -97,7 +97,7 @@ function ActionCard({ item, index, theme }: { item: ActionItem; index: number; t
   };
 
   const card = (
-    <Card className={`h-full hover:shadow-md transition-shadow duration-200 ${item.url ? 'cursor-pointer hover:border-primary/30' : ''}`}>
+    <Card className={`editorial-card-interactive h-full ${item.url ? 'cursor-pointer' : ''}`}>
       <CardContent className="p-5">
         <div className="flex items-start gap-3">
           <span className="flex-shrink-0 w-6 h-6 rounded-full bg-muted flex items-center justify-center text-xs font-semibold text-muted-foreground mt-0.5">
@@ -143,7 +143,7 @@ function ResourceCard({ resource, theme }: { resource: ExternalResource; theme: 
   const { t } = useTranslation();
 
   return (
-    <Card className="h-full hover:shadow-sm transition-shadow duration-200">
+    <Card className="editorial-card-interactive h-full">
       <CardContent className="p-5 h-full flex flex-col">
         <div className="flex items-start justify-between gap-2 mb-2">
           <h4 className="font-semibold text-[15px] text-foreground leading-snug">{resource.name}</h4>
@@ -190,7 +190,7 @@ function FAQItem({ faq, theme }: { faq: FAQ; theme: typeof categoryThemes[string
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card className={`transition-shadow duration-200 ${isOpen ? 'shadow-sm' : 'hover:shadow-sm'}`}>
+    <Card className={`editorial-card-interactive transition-shadow duration-200 ${isOpen ? 'shadow-sm' : ''}`}>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
@@ -286,7 +286,7 @@ export function ResourcePageTemplate({
       <main className="flex-1">
 
         {/* Hero */}
-        <section className={`${theme.heroClass} overflow-hidden`}>
+        <section className={`${theme.heroClass} editorial-hero overflow-hidden`}>
           <div className={`max-w-6xl mx-auto px-4 vivid-header-content flex items-stretch gap-0 ${heroImage ? 'min-h-[220px] md:min-h-[260px]' : 'py-10 md:py-14'}`}>
             <div className={`flex flex-col justify-center py-10 md:py-14 ${heroImage ? 'flex-1 md:max-w-[58%]' : 'w-full max-w-4xl'}`}>
               <Link href="/support">
@@ -350,7 +350,7 @@ export function ResourcePageTemplate({
               {customSections}
 
               {/* Helpful Resources */}
-              <section id="section-resources" className="py-10 md:py-12 bg-muted/30 scroll-mt-20">
+              <section id="section-resources" className="py-10 md:py-12 bg-muted/30 scroll-mt-20 editorial-reading">
                 <div className={sidebar ? "" : "container mx-auto px-4"}>
                   <ScrollReveal>
                     <SectionHeading title={t('support.helpfulResources')} />

@@ -1353,7 +1353,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
       {/* Practical support is intentionally separate from case-specific legal information. */}
-      <Card className="border-primary/30 bg-primary/[0.03]" data-testid="practical-action-plan">
+      <Card className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="practical-action-plan">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-foreground">
@@ -1433,7 +1433,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* These records contain general case information, not a personalized task list. */}
       {legalInformationActions.length > 0 && (
-      <Card className="border-border" data-guidance-section="immediateActions" data-testid="legal-information-actions">
+       <Card className="editorial-card" data-guidance-section="immediateActions" data-testid="legal-information-actions">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-foreground">
             <BookOpen className="h-5 w-5 text-muted-foreground" />
@@ -1467,7 +1467,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
       )}
 
       {/* Enhanced Case Timeline */}
-      <Card className="border-border" data-guidance-section="timeline">
+      <Card className="editorial-card" data-guidance-section="timeline">
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-foreground">
             <Calendar className="h-5 w-5 text-muted-foreground" />
@@ -1570,7 +1570,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Important Dates: same normalized deadlines used by chat and PDF. */}
       {guidance.deadlines.length > 0 && (
-        <Card className="border-border" data-guidance-section="deadlines" data-testid="section-deadlines">
+        <Card className="editorial-card" data-guidance-section="deadlines" data-testid="section-deadlines">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <Clock className="h-5 w-5 text-muted-foreground" />
@@ -1601,7 +1601,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Your Rights */}
       {guidance.rights.length > 0 && (
-        <Card className="border-border" data-guidance-section="rights">
+        <Card className="editorial-card" data-guidance-section="rights">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <BrandShieldIcon size={20} />
@@ -1623,7 +1623,7 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
 
       {/* Next Steps */}
       {guidance.nextSteps.length > 0 && (
-        <Card className="border-border" data-guidance-section="nextSteps">
+        <Card className="editorial-card" data-guidance-section="nextSteps">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-foreground">
               <ArrowRight className="h-5 w-5 text-muted-foreground" />

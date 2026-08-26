@@ -247,7 +247,7 @@ export default function ImmigrationGuidance() {
 
       {/* Hero Section - Vivid Gradient Style */}
       <section className="vivid-header-amber text-white py-16 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
+        <div className="absolute inset-0 bg-primary/[0.04]" />
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -299,7 +299,7 @@ export default function ImmigrationGuidance() {
 
           <div className="grid md:grid-cols-2 gap-8">
             <ScrollReveal delay={0.1}>
-              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+              <Card className="editorial-card editorial-card-interactive">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-constitutional-rights-title">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent flex items-center justify-center ring-1 ring-green-500/20">
@@ -340,7 +340,7 @@ export default function ImmigrationGuidance() {
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <Card className="hover:shadow-lg hover:border-primary/30 transition-all duration-200">
+              <Card className="editorial-card editorial-card-interactive">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-foreground" data-testid="text-what-not-to-do-title">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-500/20 via-red-500/10 to-transparent flex items-center justify-center ring-1 ring-red-500/20">
@@ -399,11 +399,11 @@ export default function ImmigrationGuidance() {
       </div>
 
       {/* Topic Navigation Cards */}
-      <section id="detailed-guides" className="py-16 bg-background">
+      <section id="detailed-guides" className="editorial-reading py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mx-auto mb-6 ring-1 ring-primary/20">
+              <div className="w-16 h-16 rounded-xl bg-muted flex items-center justify-center mx-auto mb-6">
                 <BookOpen className="h-8 w-8 text-primary" />
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6" data-testid="text-detailed-guides-title">

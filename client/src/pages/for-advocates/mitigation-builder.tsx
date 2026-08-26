@@ -1717,13 +1717,13 @@ export default function MitigationBuilder() {
       </div>
 
       {/* Main layout */}
-      <div className="max-w-5xl mx-auto px-4 py-10">
+      <div className="editorial-workspace max-w-5xl mx-auto px-4 py-10">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
 
           {/* Left: form */}
           <div className="space-y-3">
             {/* Header fields */}
-            <div className="rounded-xl border border-border px-5 py-5 space-y-4 bg-background">
+            <div className="editorial-card px-5 py-5 space-y-4 bg-background">
               <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">
                 Header information
               </p>

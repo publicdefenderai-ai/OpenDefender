@@ -596,8 +596,8 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="px-4 py-8 flex items-center justify-center min-h-[60vh]">
-          <Card className="w-full max-w-md">
+        <main className="editorial-workspace px-4 py-8 flex items-center justify-center min-h-[60vh]">
+          <Card className="editorial-card w-full max-w-md">
             <CardContent className="pt-6 pb-5">
               <div className="flex flex-col items-center justify-center space-y-5 text-center">
                 <div className="relative">
@@ -643,8 +643,8 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="px-4 py-16 flex items-center justify-center min-h-[60vh]">
-          <Card className="w-full max-w-lg">
+        <main className="editorial-workspace px-4 py-16 flex items-center justify-center min-h-[60vh]">
+          <Card className="editorial-card w-full max-w-lg">
             <CardContent className="pt-8 pb-8 px-8">
               <div className="flex flex-col items-center text-center space-y-5">
                 <div className="h-14 w-14 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center">
@@ -685,7 +685,7 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="max-w-7xl mx-auto px-4 py-8">
+        <main className="editorial-workspace max-w-7xl mx-auto px-4 py-8">
           <QAFlow
             onComplete={handleQAComplete}
             onCancel={() => setShowQAFlow(false)}
@@ -705,7 +705,7 @@ export default function CaseGuidance() {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <main className="px-4 py-8">
+        <main className="editorial-workspace px-4 py-8">
           <GuidanceDashboard 
             guidance={guidanceResult} 
             onClose={() => handleAttemptClose()}
@@ -715,7 +715,7 @@ export default function CaseGuidance() {
             guidanceMode={guidanceMode}
           />
           <aside
-            className="max-w-5xl mx-auto mt-6 rounded-xl border border-border bg-muted/30 p-4"
+            className="editorial-card max-w-5xl mx-auto mt-6 p-4"
             aria-labelledby="trusted-resources-heading"
           >
             <h2 id="trusted-resources-heading" className="font-semibold text-foreground">
@@ -1047,7 +1047,7 @@ export default function CaseGuidance() {
       <section className="py-14 md:py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="bg-muted/50 rounded-xl p-6 md:p-8">
+            <div className="editorial-surface rounded-xl p-6 md:p-8">
               <div className="flex flex-col items-center text-center mb-6">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center mb-4 ring-1 ring-primary/20">
                   <BrandShieldIcon size={24} />
@@ -1148,13 +1148,13 @@ function PrivacyGrid() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className={`relative group overflow-hidden rounded-xl bg-gradient-to-br ${item.gradient} p-[1px]`}
+            className="editorial-card editorial-card-interactive relative group overflow-hidden p-4"
             data-testid={`privacy-card-${index}`}
           >
-            <div className="relative h-full rounded-xl bg-background/80 backdrop-blur-sm p-4 transition-shadow duration-300 group-hover:shadow-lg">
+            <div className="relative h-full">
               <div className="flex items-start gap-3">
-                <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${item.iconBg} flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                  <Icon className="h-5 w-5 text-white" />
+                <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                  <Icon className="h-5 w-5 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-semibold text-foreground text-sm mb-1">
