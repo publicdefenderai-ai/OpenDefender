@@ -392,7 +392,7 @@ export default function CaseGuidance() {
     return () => clearInterval(interval);
   }, [isStreaming]);
 
-  const GUIDANCE_TIMEOUT_MS = 90_000;
+  const GUIDANCE_TIMEOUT_MS = 120_000;
 
   const handleCancel = useCallback(() => {
     abortControllerRef.current?.abort('user_cancelled');
@@ -412,7 +412,7 @@ export default function CaseGuidance() {
     const controller = new AbortController();
     abortControllerRef.current = controller;
 
-    // Auto-cancel after GUIDANCE_TIMEOUT_MS on bad connections
+    // Auto-cancel after 120 seconds on bad connections
     timeoutRef.current = setTimeout(() => {
       controller.abort('timeout');
       toast({
