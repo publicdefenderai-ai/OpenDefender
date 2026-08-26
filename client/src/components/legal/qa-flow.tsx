@@ -1347,8 +1347,8 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         )}
       </div>
 
-      {/* CAPTCHA if required */}
-      {captchaRequired && (
+      {/* Verify once on the final step, immediately before the support request. */}
+      {isLast && captchaRequired && (
         <div className="flex justify-center">
           <TurnstileCaptcha onVerify={setCaptchaToken} />
         </div>
@@ -1360,7 +1360,7 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
         </Button>
         <Button
           onClick={onNext}
-          disabled={!hasUrgencyConcerns && captchaRequired && !captchaToken}
+          disabled={isLast && captchaRequired && !captchaToken}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700"
         >
           {hasUrgencyConcerns
@@ -1407,7 +1407,7 @@ const CIVIL_QUESTIONS: CivilQuestion[] = [
   },
 ];
 
-function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, captchaToken, setCaptchaToken, captchaRequired }: any) {
+function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, isLast, captchaToken, setCaptchaToken, captchaRequired }: any) {
   const { t } = useTranslation();
   const concerns = formData.selectedConcerns || [];
   const civilUrgency = formData.civilUrgency || {};
@@ -1468,7 +1468,7 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, captch
         );
       })}
 
-      {captchaRequired && (
+      {isLast && captchaRequired && (
         <div className="flex justify-center">
           <TurnstileCaptcha onVerify={setCaptchaToken} />
         </div>
