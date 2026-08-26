@@ -410,7 +410,14 @@ export default function FindDetained() {
                   <h3 className="font-semibold text-sm">
                     {lang === 'es' ? 'Línea de Reportes de Detención ICE' : 'ICE Detention Reporting Line'}
                   </h3>
-                  <p className="text-xl font-bold text-primary mt-2">1-888-351-4024</p>
+                    <a
+                      href="tel:18883514024"
+                      className="inline-block text-xl font-bold text-primary mt-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                      aria-label={lang === 'es' ? 'Llame a la línea de reportes de detención de ICE al 1-888-351-4024' : 'Call the ICE detention reporting line at 1-888-351-4024'}
+                      data-testid="link-ice-detention-reporting"
+                    >
+                      1-888-351-4024
+                    </a>
                 </CardContent>
               </Card>
             </ScrollReveal>
@@ -422,7 +429,14 @@ export default function FindDetained() {
                   <h3 className="font-semibold text-sm">
                     {lang === 'es' ? 'NIJC (Ayuda Legal)' : 'NIJC (Legal Help)'}
                   </h3>
-                  <p className="text-xl font-bold text-primary mt-2">312-660-1370</p>
+                    <a
+                      href="tel:3126601370"
+                      className="inline-block text-xl font-bold text-primary mt-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                      aria-label={lang === 'es' ? 'Llame a NIJC para ayuda legal al 312-660-1370' : 'Call NIJC for legal help at 312-660-1370'}
+                      data-testid="link-nijc-legal-help"
+                    >
+                      312-660-1370
+                    </a>
                 </CardContent>
               </Card>
             </ScrollReveal>

@@ -175,6 +175,7 @@ export function Header() {
   const menuItems = [
     { title: t('header.menu.friendsFamily', 'For Families & Friends'), href: "/friends-family",  icon: Users,    description: t('header.menu.friendsFamilyDesc', 'Start here if someone you know was arrested.'),              testId: "menu-friends-family",   featured: true  },
     { title: t('header.menu.knowRights', 'Know Your Rights'),          href: "/rights-info",     icon: Shield,   description: t('header.menu.knowRightsDesc', 'Constitutional rights in plain language'),                     testId: "menu-know-rights",      featured: false },
+    { title: t('getStartedMenu.legalRightsSubmenu.quickReference', 'Quick-Reference Cards'), href: "/quick-reference", icon: FileText, description: t('quickRef.subtitle', 'Compact, printable guides for your rights at every stage.'), testId: "menu-quick-reference", featured: false },
     { title: t('header.menu.documentLibrary', 'Document Library'),     href: "/document-library", icon: FileText, description: t('header.menu.documentLibraryDesc', 'Understand the legal documents in your case'),          testId: "menu-document-library", featured: false },
     { title: intent.sources.label, href: intent.sources.href, icon: intent.sources.icon, description: intent.sources.description, testId: "menu-data-sources", featured: false },
   ];

@@ -18,6 +18,7 @@ import { ScenarioGuide } from '@/components/immigration/scenario-guide';
 import { SafetyChecklist } from '@/components/immigration/safety-checklist';
 import { EmergencyCard } from '@/components/immigration/emergency-card';
 import { ImmigrationDetailLayout } from '@/components/immigration/immigration-detail-layout';
+import { ClickToCallLink } from '@/components/ui/click-to-call';
 
 export default function RaidsToolkit() {
   useScrollToTop();
@@ -165,15 +166,27 @@ export default function RaidsToolkit() {
                 <CardContent className="space-y-3">
                   <div>
                     <p className="font-semibold text-sm">NILC</p>
-                    <p className="text-primary font-bold">213-639-3900</p>
+                    <ClickToCallLink
+                      phoneNumber="213-639-3900"
+                      className="font-bold"
+                      data-testid="link-hotline-nilc"
+                    />
                   </div>
                   <div>
                     <p className="font-semibold text-sm">United We Dream</p>
-                    <p className="text-primary font-bold">1-844-363-1423</p>
+                    <ClickToCallLink
+                      phoneNumber="1-844-363-1423"
+                      className="font-bold"
+                      data-testid="link-hotline-uwd"
+                    />
                   </div>
                   <div>
                     <p className="font-semibold text-sm">ACLU</p>
-                    <p className="text-primary font-bold">212-549-2660</p>
+                    <ClickToCallLink
+                      phoneNumber="212-549-2660"
+                      className="font-bold"
+                      data-testid="link-hotline-aclu"
+                    />
                   </div>
                 </CardContent>
               </Card>
@@ -224,6 +237,7 @@ export default function RaidsToolkit() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-sm text-primary hover:underline"
+                    data-testid="link-ilrc-red-cards"
                   >
                     ILRC Red Cards <ExternalLink className="h-3 w-3" />
                   </a>
@@ -232,6 +246,7 @@ export default function RaidsToolkit() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-sm text-primary hover:underline"
+                    data-testid="link-nilc-enforcement"
                   >
                     NILC Enforcement Resources <ExternalLink className="h-3 w-3" />
                   </a>
@@ -240,6 +255,7 @@ export default function RaidsToolkit() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 text-sm text-primary hover:underline"
+                    data-testid="link-aclu-immigrant-rights"
                   >
                     ACLU Immigrants' Rights <ExternalLink className="h-3 w-3" />
                   </a>

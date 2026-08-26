@@ -1,5 +1,5 @@
 import { BrandShieldIcon } from "@/components/brand-logo";
-import { useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
@@ -38,12 +38,14 @@ function PrintableCard({
   bgColor,
   borderColor,
   sections,
+  testId,
 }: {
   title: string;
   icon: React.ReactNode;
   color: string;
   bgColor: string;
   borderColor: string;
+  testId?: string;
   sections: {
     heading: string;
     headingIcon?: React.ReactNode;
@@ -54,7 +56,7 @@ function PrintableCard({
   const { t } = useTranslation();
 
   return (
-    <div className="quick-ref-card break-inside-avoid">
+    <div className="quick-ref-card break-inside-avoid" data-testid={testId}>
       <Card className={`border-2 ${borderColor} overflow-hidden`}>
         <CardHeader className={`${bgColor} py-4`}>
           <CardTitle className={`flex items-center gap-2 text-lg ${color}`}>
@@ -106,14 +108,28 @@ export default function QuickReference() {
   useScrollToTop();
   const { t } = useTranslation();
   const printRef = useRef<HTMLDivElement>(null);
+  const [activeTab, setActiveTab] = useState("police");
+  const [printAllPending, setPrintAllPending] = useState(false);
 
   const breadcrumbItems = [
     { label: t("breadcrumb.home", "Home"), href: "/" },
   ];
 
   const handlePrint = () => {
-    window.print();
+    setActiveTab("all");
+    setPrintAllPending(true);
   };
+
+  useEffect(() => {
+    if (!printAllPending) return;
+
+    const printTimer = window.setTimeout(() => {
+      window.print();
+      setPrintAllPending(false);
+    }, 0);
+
+    return () => window.clearTimeout(printTimer);
+  }, [printAllPending]);
 
   return (
     <ScanFirstPageFrame>
@@ -137,6 +153,7 @@ export default function QuickReference() {
                 variant="outline"
                 className="bg-white/10 border-white/30 text-white hover:bg-white/20"
                 aria-label={t("quickRef.printAll", "Print all cards")}
+                data-testid="button-print-all-cards"
               >
                 <Printer className="h-4 w-4 mr-2" />
                 {t("quickRef.printAll", "Print All Cards")}
@@ -146,9 +163,9 @@ export default function QuickReference() {
         </div>
       </section>
 
-      <section id="quick-reference-cards" className="py-10 md:py-14 bg-background print-section scroll-mt-20" ref={printRef}>
+      <section id="quick-reference-cards" className="py-10 md:py-14 bg-background print-section scroll-mt-20" ref={printRef} data-testid="section-quick-reference-cards">
         <div className="max-w-6xl mx-auto px-4">
-          <Tabs defaultValue="police" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <ScrollReveal>
               <TabsList className="grid w-full grid-cols-2 lg:grid-cols-3 mb-10 bg-background border border-border print:hidden">
                 <TabsTrigger
@@ -191,19 +208,14 @@ export default function QuickReference() {
               </div>
             </TabsContent>
 
-            <TabsContent value="all">
-              <div className="space-y-6 print:space-y-4">
-                <PoliceEncounterCard />
-                <div className="grid md:grid-cols-2 gap-6 print:grid-cols-2 print:gap-4">
-                  <ArraignmentCard />
-                  <BailHearingCard />
-                  <PretrialCard />
-                  <PleaCard />
-                  <SentencingCard />
-                </div>
-              </div>
+            <TabsContent value="all" className="print:hidden">
+              <AllCardsContent />
             </TabsContent>
           </Tabs>
+
+          <div id="print-all-cards" className="hidden print:block" data-testid="print-all-cards">
+            <AllCardsContent cardTestId="printable-card" />
+          </div>
 
           <ScrollReveal delay={0.25}>
             <p className="text-sm text-center text-muted-foreground mt-8 print:hidden">
@@ -230,7 +242,22 @@ export default function QuickReference() {
   );
 }
 
-function PoliceEncounterCard() {
+function AllCardsContent({ cardTestId }: { cardTestId?: string }) {
+  return (
+    <div className="space-y-6 print:space-y-4">
+      <PoliceEncounterCard testId={cardTestId} />
+      <div className="grid md:grid-cols-2 gap-6 print:grid-cols-2 print:gap-4">
+        <ArraignmentCard testId={cardTestId} />
+        <BailHearingCard testId={cardTestId} />
+        <PretrialCard testId={cardTestId} />
+        <PleaCard testId={cardTestId} />
+        <SentencingCard testId={cardTestId} />
+      </div>
+    </div>
+  );
+}
+
+function PoliceEncounterCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <div className="max-w-2xl mx-auto">
@@ -240,6 +267,7 @@ function PoliceEncounterCard() {
         color="text-red-700 dark:text-red-300"
         bgColor="bg-red-50 dark:bg-red-950/40"
         borderColor="border-red-300 dark:border-red-700"
+        testId={testId}
         sections={[
           {
             heading: t("quickRef.police.stay", "Stay Calm & Remember"),
@@ -293,7 +321,7 @@ function PoliceEncounterCard() {
   );
 }
 
-function ArraignmentCard() {
+function ArraignmentCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
@@ -302,6 +330,7 @@ function ArraignmentCard() {
       color="text-amber-700 dark:text-amber-300"
       bgColor="bg-amber-50 dark:bg-amber-950/40"
       borderColor="border-amber-300 dark:border-amber-700"
+      testId={testId}
       sections={[
         {
           heading: t("quickRef.arraignment.expect", "What to Expect"),
@@ -349,7 +378,7 @@ function ArraignmentCard() {
   );
 }
 
-function BailHearingCard() {
+function BailHearingCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
@@ -358,6 +387,7 @@ function BailHearingCard() {
       color="text-green-700 dark:text-green-300"
       bgColor="bg-green-50 dark:bg-green-950/40"
       borderColor="border-green-300 dark:border-green-700"
+      testId={testId}
       sections={[
         {
           heading: t("quickRef.bail.expect", "What to Expect"),
@@ -404,7 +434,7 @@ function BailHearingCard() {
   );
 }
 
-function PretrialCard() {
+function PretrialCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
@@ -413,6 +443,7 @@ function PretrialCard() {
       color="text-blue-700 dark:text-blue-300"
       bgColor="bg-blue-50 dark:bg-blue-950/40"
       borderColor="border-blue-300 dark:border-blue-700"
+      testId={testId}
       sections={[
         {
           heading: t("quickRef.pretrial.expect", "What to Expect"),
@@ -460,7 +491,7 @@ function PretrialCard() {
   );
 }
 
-function PleaCard() {
+function PleaCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
@@ -469,6 +500,7 @@ function PleaCard() {
       color="text-amber-700 dark:text-amber-300"
       bgColor="bg-amber-50 dark:bg-amber-950/40"
       borderColor="border-amber-300 dark:border-amber-700"
+      testId={testId}
       sections={[
         {
           heading: t("quickRef.plea.expect", "What to Expect"),
@@ -515,7 +547,7 @@ function PleaCard() {
   );
 }
 
-function SentencingCard() {
+function SentencingCard({ testId }: { testId?: string }) {
   const { t } = useTranslation();
   return (
     <PrintableCard
@@ -524,6 +556,7 @@ function SentencingCard() {
       color="text-slate-700 dark:text-slate-300"
       bgColor="bg-slate-50 dark:bg-slate-800/60"
       borderColor="border-slate-300 dark:border-slate-700"
+      testId={testId}
       sections={[
         {
           heading: t("quickRef.sentencing.expect", "What to Expect"),

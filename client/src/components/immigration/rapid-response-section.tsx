@@ -224,6 +224,7 @@ function HotlineCard({
             href={`sms:${entry.tel}`}
             className="text-2xl font-black text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 transition-colors leading-none"
             aria-label={`Text ${entry.org} at ${entry.number}`}
+            data-testid={`link-hotline-${entry.id}`}
           >
             {entry.number}
           </a>
@@ -233,6 +234,7 @@ function HotlineCard({
           href={`tel:${entry.tel}`}
           className="text-2xl font-black text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 transition-colors leading-none"
           aria-label={`Call ${entry.org} at ${entry.number}`}
+          data-testid={`link-hotline-${entry.id}`}
         >
           {entry.number}
         </a>
@@ -348,6 +350,7 @@ export function RapidResponseSection() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-medium text-red-700 dark:text-red-300 hover:underline flex items-center gap-1 flex-shrink-0"
+            data-testid="link-hotline-directory"
           >
             {t("immigration.rapidResponse.fullDirectoryLink")}
             <ExternalLink className="h-3 w-3" />

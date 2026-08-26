@@ -62,7 +62,7 @@ const EmbedSearch = lazy(() => import("@/pages/embed/search"));
 const EmbedRights = lazy(() => import("@/pages/embed/rights"));
 const EmbedGlossary = lazy(() => import("@/pages/embed/glossary"));
 const CaseTimeline = lazy(() => import("@/pages/case-timeline"));
-// QuickReference page fails to load — route redirects to /rights-info
+const QuickReference = lazy(() => import("@/pages/quick-reference"));
 const SupportHub = lazy(() => import("@/pages/support/index"));
 const EmploymentSupport = lazy(() => import("@/pages/support/employment"));
 const FinancesSupport = lazy(() => import("@/pages/support/finances"));
@@ -115,7 +115,7 @@ function Router() {
       <Route path="/recap-extensions" component={RecapExtensions} />
       <Route path="/process"><Redirect to="/case-timeline" /></Route>
       <Route path="/case-timeline" component={CaseTimeline} />
-      <Route path="/quick-reference"><Redirect to="/rights-info" /></Route>
+      <Route path="/quick-reference" component={QuickReference} />
       <Route path="/search-seizure"><Redirect to="/rights-info" /></Route>
       <Route path="/friends-family" component={FriendsFamily} />
       <Route path="/friends-family/toolkit" component={FamilyToolkit} />
