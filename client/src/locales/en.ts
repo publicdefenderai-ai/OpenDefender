@@ -2475,6 +2475,7 @@ export default {
       "civilEmergencies": {
         "title": "What's happening right now?",
         "subtitle": "For each area you mentioned, let us know if anything is already happening. This helps us flag what's most time-sensitive.",
+        "noConcerns": "No urgent support concerns were selected. You can continue to generate your guidance.",
         "back": "Back",
         "generate": "Get My Case Support",
         "housing": {

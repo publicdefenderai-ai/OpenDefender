@@ -2477,6 +2477,7 @@ export default {
       "civilEmergencies": {
         "title": "现在正在发生什么？",
         "subtitle": "对于您提到的每个方面，请告诉我们是否已经发生了什么情况。这样我们可以标出最需要及时处理的事项。",
+        "noConcerns": "您没有选择任何紧急支持事项。您可以继续生成指引。",
         "back": "返回",
         "generate": "获取我的法律指导",
         "housing": {

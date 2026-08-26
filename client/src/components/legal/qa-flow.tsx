@@ -48,11 +48,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     hasHousingAssistance: null as boolean | null,
   });
 
-  const URGENCY_CONCERN_IDS = ['housing', 'employment', 'childcare', 'familyCare', 'immigration'];
-  const hasUrgencyConcerns = URGENCY_CONCERN_IDS.some(c =>
-    (formData.selectedConcerns || []).includes(c)
-  );
-
   const baseSteps = [
     { title: t('legalGuidance.qaFlow.steps.consent'),           component: ConsentStep },
     { title: t('legalGuidance.qaFlow.steps.jurisdiction'),      component: JurisdictionStep },
@@ -62,16 +57,10 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     { title: t('legalGuidance.qaFlow.steps.additionalDetails'), component: AdditionalDetailsStep },
   ];
 
-  const steps = hasUrgencyConcerns
-    ? [...baseSteps, { title: t('legalGuidance.qaFlow.steps.civilEmergencies'), component: CivilEmergenciesStep }]
-    : baseSteps;
-
-  // Clamp currentStep if urgency concerns are removed while on the triage step
-  useEffect(() => {
-    if (currentStep >= steps.length) {
-      setCurrentStep(steps.length - 1);
-    }
-  }, [steps.length]);
+  const steps = [
+    ...baseSteps,
+    { title: t('legalGuidance.qaFlow.steps.civilEmergencies'), component: CivilEmergenciesStep },
+  ];
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
@@ -127,10 +116,11 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
         </div>
         
         {/* Progress Indicator */}
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2" data-testid="qa-step-indicator">
           {steps.map((_, index) => (
             <div
               key={index}
+              data-testid={`qa-step-circle-${index + 1}`}
               className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
                 index === currentStep 
                   ? "bg-gray-700 text-white" 
@@ -162,7 +152,6 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
               onPrev={prevStep}
               isFirst={currentStep === 0}
               isLast={currentStep === steps.length - 1}
-              hasUrgencyConcerns={hasUrgencyConcerns}
               captchaToken={captchaToken}
               setCaptchaToken={setCaptchaToken}
               captchaRequired={captchaRequired}
@@ -1210,7 +1199,7 @@ function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
   );
 }
 
-function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, hasUrgencyConcerns, captchaToken, setCaptchaToken, captchaRequired }: any) {
+function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLast, captchaToken, setCaptchaToken, captchaRequired }: any) {
   const { t } = useTranslation();
   const [concernsOpen, setConcernsOpen] = useState(false);
   const concernsRef = useRef<HTMLDivElement>(null);
@@ -1363,9 +1352,9 @@ function AdditionalDetailsStep({ formData, updateFormData, onNext, onPrev, isLas
           disabled={isLast && captchaRequired && !captchaToken}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700"
         >
-          {hasUrgencyConcerns
-            ? t('legalGuidance.qaFlow.additionalDetails.next')
-            : t('legalGuidance.qaFlow.additionalDetails.submit')}
+          {isLast
+            ? t('legalGuidance.qaFlow.additionalDetails.submit')
+            : t('legalGuidance.qaFlow.additionalDetails.next')}
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
@@ -1442,6 +1431,15 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, isLast
           {t('legalGuidance.qaFlow.civilEmergencies.subtitle')}
         </p>
       </div>
+
+      {activeQuestions.length === 0 && (
+        <p className="rounded-lg border border-dashed border-border px-4 py-3 text-sm text-muted-foreground">
+          {t(
+            'legalGuidance.qaFlow.civilEmergencies.noConcerns',
+            'No urgent support concerns were selected. You can continue to generate your guidance.'
+          )}
+        </p>
+      )}
 
       {activeQuestions.map(({ key, field }) => {
         const selected = civilUrgency[field] as UrgencyLevel | undefined;

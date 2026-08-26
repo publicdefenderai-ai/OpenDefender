@@ -2477,6 +2477,7 @@ export default {
       "civilEmergencies": {
         "title": "¿Qué está pasando ahora mismo?",
         "subtitle": "Para cada área que mencionó, díganos si ya está ocurriendo algo. Esto nos ayuda a identificar lo que es más urgente.",
+        "noConcerns": "No seleccionó ninguna preocupación urgente de apoyo. Puede continuar para generar su orientación.",
         "back": "Volver",
         "generate": "Obtener Mi Orientación Legal",
         "housing": {
