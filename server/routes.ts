@@ -1886,11 +1886,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ success: false, error: "Valid session ID required" });
       }
 
+      // A live ownership binding prevents another browser session from
+      // deleting a case it cannot access. Cases created before a restart have
+      // no binding and retain the UUID-as-token behavior used by GET.
+      const recordedOwner = guidanceSessionOwners.get(sessionId);
+      if (recordedOwner && req.sessionID && req.sessionID !== recordedOwner) {
+        return res.status(403).json({
+          success: false,
+          code: 'SESSION_EXPIRED',
+          error: 'Your session has expired.',
+        });
+      }
+
       // Delete session data from storage
       await storage.deleteSessionData(sessionId);
 
       // Clear AI guidance cache (uses singleton already imported at top)
       clearSessionCache(sessionId);
+      guidanceSessionOwners.delete(sessionId);
 
       res.json({
         success: true,
@@ -1903,15 +1916,46 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Clear Session - Clear all cached guidance data (privacy feature)
-  app.post("/api/session/clear", writeRateLimiter, (_req, res) => {
+  // Clear Session - Delete this browser session's guidance and cache data.
+  // This route intentionally never clears the shared cache for other users.
+  app.post("/api/session/clear", writeRateLimiter, async (req, res) => {
     try {
-      // Clear all AI guidance cache
-      clearSessionCache();
+      const requestedSessionId = req.body?.sessionId;
+      if (requestedSessionId !== undefined &&
+          (typeof requestedSessionId !== 'string' || requestedSessionId.length === 0)) {
+        return res.status(400).json({ success: false, error: "Valid session ID required" });
+      }
+
+      const recordedOwner = requestedSessionId
+        ? guidanceSessionOwners.get(requestedSessionId)
+        : undefined;
+      if (recordedOwner && req.sessionID && req.sessionID !== recordedOwner) {
+        return res.status(403).json({
+          success: false,
+          code: 'SESSION_EXPIRED',
+          error: 'Your session has expired.',
+        });
+      }
+
+      // When the screener is open, the completed record may not be present in
+      // React state. Use the express session binding to find and remove it.
+      const sessionIds = requestedSessionId
+        ? [requestedSessionId]
+        : req.sessionID
+          ? Array.from(guidanceSessionOwners.entries())
+              .filter(([, owner]) => owner === req.sessionID)
+              .map(([sessionId]) => sessionId)
+          : [];
+
+      for (const sessionId of sessionIds) {
+        await storage.deleteSessionData(sessionId);
+        clearSessionCache(sessionId);
+        guidanceSessionOwners.delete(sessionId);
+      }
 
       res.json({
         success: true,
-        message: "Session cleared",
+        message: "Session data deleted",
         timestamp: new Date().toISOString()
       });
     } catch (error) {

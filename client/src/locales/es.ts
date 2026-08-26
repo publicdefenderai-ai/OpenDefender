@@ -2517,8 +2517,8 @@ export default {
       },
       "clearSession": {
         "button": "Borrar mi sesión",
-        "confirm": "¿Borrar todos los datos?",
-        "description": "Esto eliminará toda la información de su caso de nuestros servidores inmediatamente. Esta acción no se puede deshacer.",
+        "confirm": "¿Borrar los datos del caso?",
+        "description": "Esto eliminará inmediatamente de nuestros servidores cualquier registro de orientación completa del caso y la memoria caché de IA asociada. Esta acción no se puede deshacer.",
         "cancel": "Cancelar",
         "cleared": "Sesión eliminada correctamente"
       }
@@ -2528,6 +2528,7 @@ export default {
       "generatedOn": "Generado el",
       "hideDetails": "Ocultar Detalles",
       "showDetails": "Mostrar Detalles",
+      "newSession": "Iniciar una nueva sesión",
       "close": "Cerrar",
       "exportPDF": "Exportar PDF",
       "summary": {
@@ -2784,8 +2785,9 @@ export default {
     },
     "clearSession": {
       "title": "Borrar Datos de Sesión",
-      "message": "Esto eliminará de la memoria de OpenDefender la información y orientación del caso actualmente accesibles. No afecta la retención de proveedores y operaciones descrita en la Política de Privacidad.",
+      "message": "Esto eliminará inmediatamente de la memoria de OpenDefender su registro de orientación completa del caso y la memoria caché de IA asociada. No afecta la retención de proveedores y operaciones descrita en la Política de Privacidad.",
       "confirm": "Borrar Sesión",
+      "clearing": "Borrando…",
       "cancel": "Cancelar",
       "successTitle": "Sesión Borrada",
       "successMessage": "El registro del caso actualmente accesible se borró de la memoria de OpenDefender.",

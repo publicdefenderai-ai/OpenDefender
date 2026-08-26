@@ -269,6 +269,7 @@ export default function CaseGuidance() {
 
   // Clear session confirmation state
   const [showClearConfirm, setShowClearConfirm] = useState(false);
+  const [isClearingSession, setIsClearingSession] = useState(false);
 
   // Session-expired state — set when a bookmarked sessionId no longer matches the browser session
   const [sessionExpired, setSessionExpired] = useState(false);
@@ -613,17 +614,32 @@ export default function CaseGuidance() {
   };
 
   const handleNewSession = async () => {
-    if (guidanceResult?.sessionId) {
-      await deleteGuidance.mutateAsync(guidanceResult.sessionId);
-    }
-    setGuidanceResult(null);
-    setPendingGuidanceData(null);
-    setGuidanceTimedOut(false);
-    setGuidanceRecoveryError(false);
-    setReviewingTimedOutAnswers(false);
+    if (isClearingSession) return;
+    setIsClearingSession(true);
+    try {
+      if (guidanceResult?.sessionId) {
+        await deleteGuidance.mutateAsync(guidanceResult.sessionId);
+      } else {
+        await legalDataApi.clearSession();
+      }
+      setGuidanceResult(null);
+      setPendingGuidanceData(null);
+      setGuidanceTimedOut(false);
+      setGuidanceRecoveryError(false);
+      setReviewingTimedOutAnswers(false);
       setRetryCaptchaToken(null);
       setRetryCaptchaAttempt((attempt) => attempt + 1);
-    setShowQAFlow(true);
+      setShowQAFlow(true);
+    } catch (error) {
+      console.error('Failed to delete guidance before starting a new session:', error);
+      toast({
+        title: t('case.clearSession.errorTitle'),
+        description: t('case.clearSession.errorMessage'),
+        variant: 'destructive',
+      });
+    } finally {
+      setIsClearingSession(false);
+    }
   };
 
   const handleStartQA = () => {
@@ -640,8 +656,13 @@ export default function CaseGuidance() {
   };
 
   const confirmClearSession = async () => {
+    if (isClearingSession) return;
+    setIsClearingSession(true);
     try {
-      await fetch('/api/session/clear', { method: 'POST' });
+      // Pass the completed guidance ID when one is available. The server also
+      // resolves records owned by this browser session when the screener is
+      // still open and there is no local result yet.
+      await legalDataApi.clearSession(guidanceResult?.sessionId);
       // Reset all local state
       setGuidanceResult(null);
       setPendingGuidanceData(null);
@@ -663,6 +684,8 @@ export default function CaseGuidance() {
         description: t('case.clearSession.errorMessage'),
         variant: 'destructive',
       });
+    } finally {
+      setIsClearingSession(false);
     }
   };
 
@@ -907,6 +930,42 @@ export default function CaseGuidance() {
               setShowPublicDefenderModal(true);
             }}
             onClearSession={handleClearSession}
+            clearSessionDialog={
+              <Dialog open={showClearConfirm} onOpenChange={setShowClearConfirm}>
+                <DialogContent className="max-w-md">
+                  <DialogHeader>
+                    <DialogTitle className="flex items-center gap-2">
+                      <AlertTriangle className="h-5 w-5 text-red-500" />
+                      {t('case.clearSession.title')}
+                    </DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground">
+                      {t('case.clearSession.message')}
+                    </p>
+                    <div className="flex gap-3 justify-end">
+                      <Button
+                        variant="outline"
+                        onClick={() => setShowClearConfirm(false)}
+                        data-testid="button-cancel-clear-session"
+                      >
+                        {t('case.clearSession.cancel')}
+                      </Button>
+                      <Button
+                        variant="destructive"
+                        onClick={confirmClearSession}
+                        disabled={isClearingSession}
+                        data-testid="button-confirm-clear-session"
+                      >
+                        {isClearingSession
+                          ? t('case.clearSession.clearing')
+                          : t('case.clearSession.confirm')}
+                      </Button>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            }
             initialData={reviewingTimedOutAnswers ? pendingGuidanceData : undefined}
             reviewAnswers={reviewingTimedOutAnswers}
           />
@@ -924,6 +983,7 @@ export default function CaseGuidance() {
           <GuidanceDashboard 
             guidance={guidanceResult} 
             onClose={() => handleAttemptClose()}
+            onNewSession={handleNewSession}
             onShowPublicDefender={() => setShowPublicDefenderModal(true)}
             onShowLegalAid={() => setShowLegalAidModal(true)}
             onExport={() => setHasExported(true)}
@@ -1123,39 +1183,6 @@ export default function CaseGuidance() {
                   data-testid="button-export-and-stay"
                 >
                   {t('case.exitWarning.export')}
-                </Button>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
-
-        {/* Clear Session Confirmation Dialog */}
-        <Dialog open={showClearConfirm} onOpenChange={setShowClearConfirm}>
-          <DialogContent className="max-w-md">
-            <DialogHeader>
-              <DialogTitle className="flex items-center gap-2">
-                <AlertTriangle className="h-5 w-5 text-red-500" />
-                {t('case.clearSession.title')}
-              </DialogTitle>
-            </DialogHeader>
-            <div className="space-y-4">
-              <p className="text-muted-foreground">
-                {t('case.clearSession.message')}
-              </p>
-              <div className="flex gap-3 justify-end">
-                <Button
-                  variant="outline"
-                  onClick={() => setShowClearConfirm(false)}
-                  data-testid="button-cancel-clear-session"
-                >
-                  {t('case.clearSession.cancel')}
-                </Button>
-                <Button
-                  variant="destructive"
-                  onClick={confirmClearSession}
-                  data-testid="button-confirm-clear-session"
-                >
-                  {t('case.clearSession.confirm')}
                 </Button>
               </div>
             </div>

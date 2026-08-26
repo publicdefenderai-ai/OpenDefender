@@ -2515,8 +2515,8 @@ export default {
       },
       "clearSession": {
         "button": "Clear My Session",
-        "confirm": "Clear all data?",
-        "description": "This will delete all your case information from our servers immediately. This cannot be undone.",
+        "confirm": "Clear case data?",
+        "description": "This will immediately delete any completed case guidance record and associated AI cache from our servers. This cannot be undone.",
         "cancel": "Cancel",
         "cleared": "Session cleared successfully"
       }
@@ -2526,6 +2526,7 @@ export default {
       "generatedOn": "Generated on",
       "hideDetails": "Hide Details",
       "showDetails": "Show Details",
+      "newSession": "Start New Session",
       "close": "Close",
       "exportPDF": "Export PDF",
       "summary": {
@@ -2782,8 +2783,9 @@ export default {
     },
     "clearSession": {
       "title": "Clear Session Data",
-      "message": "This will delete the currently accessible case information and guidance from OpenDefender memory. Provider and operational retention described in the Privacy Policy is not affected.",
+      "message": "This will immediately delete your completed case guidance record and associated AI cache from OpenDefender memory. Provider and operational retention described in the Privacy Policy is not affected.",
       "confirm": "Clear Session",
+      "clearing": "Clearing…",
       "cancel": "Cancel",
       "successTitle": "Session Cleared",
       "successMessage": "The currently accessible case record has been cleared from OpenDefender memory.",

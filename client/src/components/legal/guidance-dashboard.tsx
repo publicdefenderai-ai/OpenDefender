@@ -100,6 +100,7 @@ type EnhancedGuidanceData = GuidanceViewModel;
 interface GuidanceDashboardProps {
   guidance: EnhancedGuidanceData;
   onClose: () => void;
+  onNewSession?: () => void;
   onShowPublicDefender?: () => void;
   onShowLegalAid?: () => void;
   onExport?: () => void;
@@ -866,7 +867,7 @@ function DocumentsSection({ caseStage, guardedNavigate }: { caseStage: string; g
   );
 }
 
-export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onShowLegalAid, onExport, guidanceMode = 'ai' }: GuidanceDashboardProps) {
+export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPublicDefender, onShowLegalAid, onExport, guidanceMode = 'ai' }: GuidanceDashboardProps) {
   guidance = normalizeGuidance(guidance);
   const { t, i18n } = useTranslation();
   const [, setLocation] = useLocation();
@@ -1001,6 +1002,16 @@ export function GuidanceDashboard({ guidance, onClose, onShowPublicDefender, onS
               )}
             </div>
             <div className="flex gap-2 flex-wrap md:flex-nowrap">
+              {onNewSession && (
+                <Button
+                  variant="outline"
+                  onClick={onNewSession}
+                  className="flex-1 md:flex-none"
+                  data-testid="button-new-session"
+                >
+                  {t('legalGuidance.dashboard.newSession', 'Start New Session')}
+                </Button>
+              )}
               <Button variant="outline" onClick={onClose} className="flex-1 md:flex-none" data-testid="button-close-dashboard">
                 {t('legalGuidance.dashboard.close')}
               </Button>

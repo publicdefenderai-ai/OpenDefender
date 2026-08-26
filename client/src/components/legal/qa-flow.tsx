@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import type { ReactNode } from "react";
 import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -22,6 +23,7 @@ interface QAFlowProps {
   onCancel: () => void;
   onFindLawyer?: () => void;
   onClearSession?: () => void;
+  clearSessionDialog?: ReactNode;
   initialData?: Partial<QAFormData>;
   reviewAnswers?: boolean;
 }
@@ -49,6 +51,7 @@ export function QAFlow({
   onCancel,
   onFindLawyer,
   onClearSession,
+  clearSessionDialog,
   initialData,
   reviewAnswers = false,
 }: QAFlowProps) {
@@ -200,6 +203,8 @@ export function QAFlow({
       </CardContent>
 
     </Card>
+
+      {clearSessionDialog}
 
       {/* Case stage warning dialog */}
       <AlertDialog open={showCaseStageWarning} onOpenChange={setShowCaseStageWarning}>

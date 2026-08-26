@@ -213,7 +213,12 @@ export const legalDataApi = {
   },
 
   async deleteLegalGuidance(sessionId: string): Promise<{ success: boolean; message: string }> {
-    const response = await apiRequest('DELETE', `/api/legal-guidance/${sessionId}`);
+    const response = await apiRequest('DELETE', `/api/session/${encodeURIComponent(sessionId)}`);
+    return response.json();
+  },
+
+  async clearSession(sessionId?: string): Promise<{ success: boolean; message: string }> {
+    const response = await apiRequest('POST', '/api/session/clear', sessionId ? { sessionId } : undefined);
     return response.json();
   },
 };

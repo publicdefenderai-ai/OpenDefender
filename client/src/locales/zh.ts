@@ -2517,8 +2517,8 @@ export default {
       },
       "clearSession": {
         "button": "清除我的会话",
-        "confirm": "清除所有数据？",
-        "description": "这将立即从我们的服务器中删除您所有的案件信息。此操作无法撤销。",
+        "confirm": "清除案件数据？",
+        "description": "这将立即从我们的服务器中删除任何已完成的案件指导记录及其相关的 AI 缓存。此操作无法撤销。",
         "cancel": "取消",
         "cleared": "会话已成功清除"
       }
@@ -2528,6 +2528,7 @@ export default {
       "generatedOn": "生成日期",
       "hideDetails": "隐藏详情",
       "showDetails": "显示详情",
+      "newSession": "开始新会话",
       "close": "关闭",
       "exportPDF": "导出PDF",
       "summary": {
@@ -2784,8 +2785,9 @@ export default {
     },
     "clearSession": {
       "title": "清除会话数据",
-      "message": "这将从 OpenDefender 内存中删除当前可访问的案件信息和指导。隐私政策所述的提供商及运营保留记录不受影响。",
+      "message": "这将立即从 OpenDefender 内存中删除您已完成的案件指导记录及其相关的 AI 缓存。隐私政策所述的提供商及运营保留记录不受影响。",
       "confirm": "清除会话",
+      "clearing": "正在清除…",
       "cancel": "取消",
       "successTitle": "会话已清除",
       "successMessage": "当前可访问的案件记录已从 OpenDefender 内存中清除。",

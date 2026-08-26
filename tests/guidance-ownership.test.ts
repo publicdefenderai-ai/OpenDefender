@@ -75,7 +75,9 @@ vi.mock('../server/storage', () => ({
     getUserByUsername: vi.fn().mockResolvedValue(null),
     createUser: vi.fn().mockResolvedValue({}),
     deleteLegalCase: vi.fn().mockResolvedValue(undefined),
-    deleteSessionData: vi.fn().mockResolvedValue(undefined),
+    deleteSessionData: vi.fn().mockImplementation(async (sessionId: string) => {
+      delete caseStore[sessionId];
+    }),
   },
 }));
 
@@ -306,5 +308,48 @@ describe('GET /api/legal-guidance/:sessionId — ownership enforcement', () => {
     const res = await request.agent(testApp).get(`/api/legal-guidance/${caseSessionId}`);
     expect(res.status).toBe(200);
     expect(res.body.success).toBe(true);
+  });
+});
+
+describe('DELETE /api/session/:sessionId — explicit guidance deletion', () => {
+  it('deletes the record immediately so it cannot be retrieved afterward', async () => {
+    const agent = request.agent(testApp);
+    const postRes = await agent
+      .post('/api/legal-guidance')
+      .send(VALID_CASE_BODY)
+      .expect(200);
+    const { sessionId } = postRes.body;
+
+    await agent
+      .delete(`/api/session/${sessionId}`)
+      .expect(200)
+      .expect(({ body }) => {
+        expect(body.success).toBe(true);
+      });
+
+    await agent
+      .get(`/api/legal-guidance/${sessionId}`)
+      .expect(404);
+  });
+
+  it('clears the owned record through the Clear Session route', async () => {
+    const agent = request.agent(testApp);
+    const postRes = await agent
+      .post('/api/legal-guidance')
+      .send(VALID_CASE_BODY)
+      .expect(200);
+    const { sessionId } = postRes.body;
+
+    await agent
+      .post('/api/session/clear')
+      .expect(200)
+      .expect(({ body }) => {
+        expect(body.success).toBe(true);
+      });
+
+    expect(caseStore[sessionId]).toBeUndefined();
+    await agent
+      .get(`/api/legal-guidance/${sessionId}`)
+      .expect(404);
   });
 });
