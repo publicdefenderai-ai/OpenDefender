@@ -499,6 +499,10 @@ export default {
     "startHere": "Start Here",
     "practicalSteps": "Practical steps",
     "helpfulResources": "Helpful Resources",
+    "pageSections": "On this page",
+    "topicDirectory": "Browse support topics",
+    "partners": "Community partners",
+    "faqs": "FAQs",
     "startHereCard": {
       "heading": "Not sure where to start?",
       "callout": "Call or text 211",
@@ -679,6 +683,13 @@ export default {
       }
     },
     "finances": {
+      "navigation": {
+        "quick-actions": "Quick Actions",
+        "benefits": "Benefits",
+        "court-fees": "Court Fees",
+        "resources": "Resources",
+        "faqs": "FAQs & Tips"
+      },
       "overview": "Legal cases can strain your finances through attorney fees, fines, lost work time, and more. Understanding your options for managing these costs can reduce stress and help you focus on your case.",
       "actions": {
         "assessCosts": {

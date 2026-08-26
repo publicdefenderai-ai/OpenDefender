@@ -501,6 +501,10 @@ export default {
     "startHere": "Comience Aquí",
     "practicalSteps": "Pasos prácticos",
     "helpfulResources": "Recursos Útiles",
+    "pageSections": "En esta página",
+    "topicDirectory": "Explorar temas de apoyo",
+    "partners": "Socios comunitarios",
+    "faqs": "Preguntas frecuentes",
     "startHereCard": {
       "heading": "¿No sabe por dónde empezar?",
       "callout": "Llame o envíe un mensaje al 211",
@@ -681,6 +685,13 @@ export default {
       }
     },
     "finances": {
+      "navigation": {
+        "quick-actions": "Acciones rápidas",
+        "benefits": "Beneficios",
+        "court-fees": "Tarifas judiciales",
+        "resources": "Recursos",
+        "faqs": "Preguntas frecuentes y consejos"
+      },
       "overview": "Los casos legales pueden afectar sus finanzas a través de honorarios de abogados, multas, tiempo de trabajo perdido y más. Entender sus opciones para manejar estos costos puede reducir el estrés y ayudarle a concentrarse en su caso.",
       "actions": {
         "assessCosts": {

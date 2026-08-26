@@ -501,6 +501,10 @@ export default {
     "startHere": "从这里开始",
     "practicalSteps": "实用步骤",
     "helpfulResources": "有用资源",
+    "pageSections": "本页内容",
+    "topicDirectory": "浏览支持主题",
+    "partners": "社区合作伙伴",
+    "faqs": "常见问题",
     "startHereCard": {
       "heading": "不知道从哪里开始？",
       "callout": "拨打或发短信至 211",
@@ -681,6 +685,13 @@ export default {
       }
     },
     "finances": {
+      "navigation": {
+        "quick-actions": "快速操作",
+        "benefits": "福利",
+        "court-fees": "法庭费用",
+        "resources": "资源",
+        "faqs": "常见问题与建议"
+      },
       "overview": "法律案件可能通过律师费、罚款、误工损失等多种方式给财务带来压力。了解管理这些费用的方案，可以减轻压力，帮助你专注于案件。",
       "actions": {
         "assessCosts": {
