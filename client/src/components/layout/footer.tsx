@@ -7,7 +7,7 @@ export function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="bg-slate-700 text-white">
+    <footer className="editorial-footer text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-10 lg:gap-16">
@@ -125,7 +125,7 @@ export function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="bg-slate-800">
+      <div className="editorial-footer-bar">
         <div className="max-w-7xl mx-auto px-4 py-4 space-y-1.5">
           <p className="text-gray-400 text-xs text-center leading-relaxed">
             {t('footer.legalDisclaimer')}

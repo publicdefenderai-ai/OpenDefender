@@ -29,7 +29,7 @@ export function BrandLogo({ variant = "default", size = "sm" }: BrandLogoProps) 
         }}
       />
       <span
-        className={`font-bold ${textSize} tracking-tight`}
+        className={`font-semibold ${textSize} tracking-tight`}
         style={{ color, letterSpacing: "-0.01em" }}
       >
         OpenDefender

@@ -180,7 +180,7 @@ export function Header() {
   ];
 
   return (
-    <header className="bg-background shadow-sm border-b sticky top-0 z-40">
+    <header className="editorial-header sticky top-0 z-40">
       <nav className="max-w-7xl mx-auto px-4 py-3.5" aria-label="Main navigation">
         <div className="flex items-center justify-between">
 
@@ -204,7 +204,7 @@ export function Header() {
                 const isLast = idx === navLinks.length - 1;
 
                 const separator = !isLast ? (
-                  <span aria-hidden="true" className="text-border select-none px-0.5 text-base leading-none">·</span>
+                  <span aria-hidden="true" className="editorial-nav-separator select-none px-1 leading-none">/</span>
                 ) : null;
 
                 if (!link.dropdown) {
@@ -219,13 +219,13 @@ export function Header() {
                         )}
                       >
                         {link.label}
-                        <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-[1.5px] rounded-full bg-primary opacity-[0.12]" />
+                        <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-px bg-primary opacity-[0.12]" />
                         <span
                           aria-hidden="true"
                           className={cn(
-                            "absolute bottom-0 left-0 right-0 h-[2px] rounded-full transition-all duration-200",
+                            "absolute bottom-0 left-0 right-0 h-[2px] transition-all duration-200",
                             isActive
-                              ? "bg-gradient-to-r from-transparent via-primary to-transparent opacity-100"
+                              ? "bg-primary opacity-100"
                               : "bg-primary opacity-0 group-hover:opacity-50"
                           )}
                         />
@@ -275,13 +275,13 @@ export function Header() {
                       >
                         {link.label}
                         <ChevronDown className={cn("h-3.5 w-3.5 transition-transform duration-150", isOpen && "rotate-180")} />
-                        <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-[1.5px] rounded-full bg-primary opacity-[0.12]" />
+                        <span aria-hidden="true" className="absolute bottom-0 left-1 right-1 h-px bg-primary opacity-[0.12]" />
                         <span
                           aria-hidden="true"
                           className={cn(
-                            "absolute bottom-0 left-0 right-0 h-[2px] rounded-full transition-all duration-200",
+                            "absolute bottom-0 left-0 right-0 h-[2px] transition-all duration-200",
                             isActive || isOpen
-                              ? "bg-gradient-to-r from-transparent via-primary to-transparent opacity-100"
+                               ? "bg-primary opacity-100"
                               : "bg-primary opacity-0 group-hover:opacity-50"
                           )}
                         />
@@ -291,7 +291,7 @@ export function Header() {
                         <>
                           {isMegaMenu ? (
                             <div className={cn(
-                              "absolute top-full mt-2 bg-background border border-border rounded-xl shadow-xl z-50 p-2",
+                              "editorial-dropdown absolute top-full mt-2 bg-background border border-border z-50 p-2",
                               panelAlign,
                               panelWidth
                             )}>
@@ -304,7 +304,7 @@ export function Header() {
                                       key={item.href}
                                       onClick={() => handleNavigate(item.href)}
                                       className={cn(
-                                        "flex items-start gap-3 px-3 py-2.5 rounded-lg hover:bg-muted/60 transition-colors group text-left",
+                                        "flex items-start gap-3 px-3 py-2.5 rounded-md hover:bg-muted/60 transition-colors group text-left",
                                         isLastOdd && "col-span-2"
                                       )}
                                     >
@@ -323,7 +323,7 @@ export function Header() {
                               </div>
                             </div>
                           ) : (
-                            <div className="absolute top-full left-0 mt-1.5 w-64 bg-background border border-border rounded-xl shadow-lg z-50 py-1.5 overflow-hidden">
+                            <div className="editorial-dropdown absolute top-full left-0 mt-1.5 w-64 bg-background border border-border z-50 py-1.5 overflow-hidden">
                               {link.dropdown!.map((item) => (
                                 <button
                                   key={item.href}
