@@ -175,7 +175,10 @@ export const legalDataApi = {
 
         if (event.type === 'chunk') {
           totalChars += (event.text as string).length;
-          const progress = Math.min(92, Math.round((totalChars / estimatedTotal) * 100));
+          // Keep the generation phase visibly separate from completion. The
+          // response is not ready until the complete event arrives, so a
+          // progress bar that stops at 92% looks like a dead end.
+          const progress = Math.min(84, Math.round((totalChars / estimatedTotal) * 100));
           onProgress(totalChars, progress);
         } else if (event.type === 'complete') {
           onProgress(totalChars, 100);

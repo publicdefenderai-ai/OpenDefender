@@ -142,25 +142,6 @@ function nearDuplicate(left: string, right: string): boolean {
   return overlap >= 5 && (containment >= 0.85 || jaccard >= 0.75);
 }
 
-const DEDUPE_TOPICS = [
-  /\bdeadlines?\b|\btimeframes?\b|\bplazos?\b|截止|期限/iu,
-  /\bprocedur(?:e|es|al)\b|\bcourt rules?\b|\bcourt practices?\b|\bprocedimientos?\b|程序|规则/iu,
-  /\bbail\b|\bbond\b|\bfianza\b|保释/iu,
-  /\bsentenc(?:e|ing)\b|\bpenalt(?:y|ies)\b|\bsentencia\b|\bpenas?\b|判刑|刑罚/iu,
-  /\barraignment\b|\bcomparecencia\b|\blectura de cargos\b|提审/iu,
-];
-
-function matchingTopics(value: string): Set<number> {
-  return new Set(DEDUPE_TOPICS.flatMap((pattern, index) => pattern.test(value) ? [index] : []));
-}
-
-function isLocalVerificationCaveat(value: string): boolean {
-  return (
-    /\bcount(?:y|ies)\b|\blocal\b|\bjurisdiction\b|\bstate[- ]specific\b|\bcondad(?:o|os)\b|\blocal(?:es)?\b|\bjurisdicci[oó]n\b|县|当地|辖区/iu.test(value)
-    && /\bverif(?:y|ied|ication)\b|\bconfirm(?:ed|ation)?\b|\bvary\b|\bdiffer\b|\bnot available\b|\buncertain\b|\bno pudo confirmarse\b|\bconfirma(?:r|ción)\b|核实|确认|不同/iu.test(value)
-  );
-}
-
 function uniqueStrings(values: string[]): string[] {
   const result: string[] = [];
   for (const value of values) {
@@ -173,10 +154,9 @@ function uniqueStrings(values: string[]): string[] {
 }
 
 /**
- * Keep uncertainty items as the structured home for jurisdiction caveats.
- * A warning is removed only when it is an exact/near duplicate or repeats the
- * same local-verification topic. Distinct case-specific subjects, such as a
- * DMV deadline versus a criminal-court deadline, remain visible.
+ * Remove only exact/near duplicates. Warnings and uncertainties can share a
+ * broad subject while still describing different legal propositions, so both
+ * surfaces must remain visible unless the text is materially the same.
  */
 function dedupeWarningsAndUncertainties(
   warnings: string[],
@@ -195,12 +175,7 @@ function dedupeWarningsAndUncertainties(
 
   const retainedWarnings = uniqueWarnings.filter(warning => !uniqueUncertainties.some(item => {
     const uncertaintyText = `${item.area}: ${item.note}`;
-    if (nearDuplicate(warning, uncertaintyText)) return true;
-    if (!isLocalVerificationCaveat(warning) || !isLocalVerificationCaveat(uncertaintyText)) return false;
-
-    const warningTopics = matchingTopics(warning);
-    const uncertaintyTopics = matchingTopics(uncertaintyText);
-    return [...warningTopics].some(topic => uncertaintyTopics.has(topic));
+    return nearDuplicate(warning, uncertaintyText);
   }));
 
   return { warnings: retainedWarnings, uncertainties: uniqueUncertainties };

@@ -2746,7 +2746,19 @@ export default {
       "complete": "完成",
       "cancel": "取消",
       "timedOutTitle": "处理时间超出预期",
-      "timedOut": "请求超时，请检查网络连接后重试。"
+      "timedOut": "案件指导请求完成时间过长。你的回答仍然保留着，因此无需重新开始即可重试。",
+      "retryFailedTitle": "重试未能完成",
+      "retryFailed": "这次尝试未能完成。你的回答仍然保留着，因此可以通过新的验证再次尝试。",
+      "recoveryTitle": "选择如何继续",
+      "recoveryDescription": "你可以重试个性化指导，改用更快的规则路线图，或先查看你的回答。",
+      "retryAI": "重试 AI 指导",
+      "retryVerification": "请完成上方验证后重试 AI 指导。",
+      "useRules": "使用更快的规则路线图",
+      "reviewAnswers": "查看我的回答",
+      "phaseLabel": "指导生成阶段",
+      "generationPhase": "正在生成案件路线图",
+      "sourceCheckPhase": "正在核对法律来源",
+      "rulesPhase": "正在准备基于规则的路线图"
     },
     "privacy": {
       "title": "你的隐私受到保护",

@@ -7,6 +7,9 @@ import {
   Clock,
   Phone,
   Scale,
+  RefreshCw,
+  BookOpen,
+  ClipboardList,
   HelpCircle,
   MapPin,
   Navigation,
@@ -18,7 +21,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Link, useSearch } from "wouter";
@@ -37,6 +40,12 @@ import { generateGuidancePDF } from "@/lib/pdf-generator";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
 import { useNavigationGuard } from "@/contexts/navigation-guard";
 import { useToast } from "@/hooks/use-toast";
+import { TurnstileCaptcha } from "@/components/captcha/turnstile";
+import {
+  buildGuidanceRetryPayload,
+  isGuidanceRequestActive,
+  type GuidanceRetryMode,
+} from "@/lib/case-guidance-retry";
 
 type EnhancedGuidanceResult = GuidanceViewModel;
 
@@ -238,8 +247,16 @@ export default function CaseGuidance() {
   const [guidanceMode, setGuidanceMode] = useState<'ai' | 'rules'>('ai');
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamProgress, setStreamProgress] = useState(0);
+  const [pendingGuidanceData, setPendingGuidanceData] = useState<any | null>(null);
+  const [guidanceTimedOut, setGuidanceTimedOut] = useState(false);
+  const [guidanceRecoveryError, setGuidanceRecoveryError] = useState(false);
+  const [reviewingTimedOutAnswers, setReviewingTimedOutAnswers] = useState(false);
+  const [retryCaptchaToken, setRetryCaptchaToken] = useState<string | null>(null);
+  const [retryCaptchaAttempt, setRetryCaptchaAttempt] = useState(0);
   const abortControllerRef = useRef<AbortController | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const requestIdRef = useRef(0);
+  const guidanceAttemptInFlightRef = useRef(false);
   const { deleteGuidance } = useLegalGuidance();
   const { data: aiStatus } = useAIAvailability();
   const aiUnavailable = aiStatus && aiStatus.available === false;
@@ -438,6 +455,8 @@ export default function CaseGuidance() {
   const GUIDANCE_TIMEOUT_MS = 120_000;
 
   const handleCancel = useCallback(() => {
+    requestIdRef.current += 1;
+    guidanceAttemptInFlightRef.current = false;
     abortControllerRef.current?.abort('user_cancelled');
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     timeoutRef.current = null;
@@ -447,22 +466,39 @@ export default function CaseGuidance() {
   }, []);
 
   const handleQAComplete = async (data: any) => {
+    if (guidanceAttemptInFlightRef.current) return;
+    guidanceAttemptInFlightRef.current = true;
+
+    const requestId = ++requestIdRef.current;
     const mode: 'ai' | 'rules' = data.guidanceMode === 'rules' ? 'rules' : 'ai';
+    const { captchaToken: _submittedCaptchaToken, ...caseData } = data;
+    setPendingGuidanceData(caseData);
+    setGuidanceTimedOut(false);
+    setGuidanceRecoveryError(false);
+    setReviewingTimedOutAnswers(false);
+    setRetryCaptchaToken(null);
     setGuidanceMode(mode);
     setIsStreaming(true);
     setStreamProgress(0);
+
+    // Retire any timed-out controller before starting a replacement request.
+    abortControllerRef.current?.abort('superseded');
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
     const controller = new AbortController();
     abortControllerRef.current = controller;
 
     // Auto-cancel after 120 seconds on bad connections
     timeoutRef.current = setTimeout(() => {
+      if (!isGuidanceRequestActive(requestIdRef.current, requestId)) return;
       controller.abort('timeout');
-      toast({
-        title: t('case.loading.timedOutTitle', 'Taking longer than usual'),
-        description: t('case.loading.timedOut', 'The request timed out. Please check your connection and try again.'),
-        variant: "destructive",
-      });
+      setGuidanceTimedOut(true);
+      setGuidanceRecoveryError(false);
+      setIsStreaming(false);
+      setStreamProgress(0);
+      guidanceAttemptInFlightRef.current = false;
+      setRetryCaptchaToken(null);
+      setRetryCaptchaAttempt((attempt) => attempt + 1);
     }, GUIDANCE_TIMEOUT_MS);
 
     try {
@@ -484,15 +520,21 @@ export default function CaseGuidance() {
       } else {
         // AI path: streaming flow with abort signal
         result = await legalDataApi.streamLegalGuidance(data, (_chars, progress) => {
-          setStreamProgress(progress);
+          if (isGuidanceRequestActive(requestIdRef.current, requestId)) {
+            setStreamProgress(progress);
+          }
         }, controller.signal);
       }
+
+      if (!isGuidanceRequestActive(requestIdRef.current, requestId)) return;
 
       if (result && result.success) {
         // Wait a tick to ensure the API response is fully processed
         // This prevents partial rendering of guidance data
         await new Promise(resolve => setTimeout(resolve, 0));
         
+        if (!isGuidanceRequestActive(requestIdRef.current, requestId)) return;
+
         // The guidance is directly the EnhancedGuidance object
         const guidance = result.guidance;
         
@@ -514,7 +556,12 @@ export default function CaseGuidance() {
         // Reset export state for new guidance session
         setHasExported(false);
       } else {
+        if (!isGuidanceRequestActive(requestIdRef.current, requestId)) return;
         console.error("API returned unsuccessful result:", result);
+        setGuidanceTimedOut(true);
+        setGuidanceRecoveryError(true);
+        setRetryCaptchaToken(null);
+        setRetryCaptchaAttempt((attempt) => attempt + 1);
         toast({
           title: t('caseGuidance.errors.generationFailed', 'Generation Failed'),
           description: t('caseGuidance.errors.tryAgain', 'Failed to generate guidance. Please try again.'),
@@ -522,11 +569,16 @@ export default function CaseGuidance() {
         });
       }
     } catch (error: any) {
+      if (!isGuidanceRequestActive(requestIdRef.current, requestId)) return;
       // Abort errors are either user-initiated cancels or the timeout handler
       // (which shows its own toast). Suppress the generic error toast for both.
       const isAbort = error?.name === 'AbortError' || controller.signal.aborted;
       if (!isAbort) {
         console.error("Failed to generate guidance:", error);
+        setGuidanceTimedOut(true);
+        setGuidanceRecoveryError(true);
+        setRetryCaptchaToken(null);
+        setRetryCaptchaAttempt((attempt) => attempt + 1);
         toast({
           title: t('caseGuidance.errors.errorOccurred', 'Error'),
           description: t('caseGuidance.errors.tryAgain', 'An error occurred while generating guidance. Please try again.'),
@@ -534,12 +586,30 @@ export default function CaseGuidance() {
         });
       }
     } finally {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-      abortControllerRef.current = null;
-      setIsStreaming(false);
-      setStreamProgress(0);
+      if (isGuidanceRequestActive(requestIdRef.current, requestId)) {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+        abortControllerRef.current = null;
+        setIsStreaming(false);
+        setStreamProgress(0);
+        guidanceAttemptInFlightRef.current = false;
+      }
     }
+  };
+
+  const handleRetryGuidance = (mode: GuidanceRetryMode) => {
+    if (!pendingGuidanceData) return;
+    if (mode === 'ai' && !retryCaptchaToken) return;
+    void handleQAComplete(
+      buildGuidanceRetryPayload(pendingGuidanceData, mode, retryCaptchaToken),
+    );
+  };
+
+  const handleReviewTimedOutAnswers = () => {
+    setGuidanceTimedOut(false);
+    setGuidanceRecoveryError(false);
+    setReviewingTimedOutAnswers(true);
+    setShowQAFlow(true);
   };
 
   const handleNewSession = async () => {
@@ -547,10 +617,20 @@ export default function CaseGuidance() {
       await deleteGuidance.mutateAsync(guidanceResult.sessionId);
     }
     setGuidanceResult(null);
+    setPendingGuidanceData(null);
+    setGuidanceTimedOut(false);
+    setGuidanceRecoveryError(false);
+    setReviewingTimedOutAnswers(false);
+      setRetryCaptchaToken(null);
+      setRetryCaptchaAttempt((attempt) => attempt + 1);
     setShowQAFlow(true);
   };
 
   const handleStartQA = () => {
+    setPendingGuidanceData(null);
+    setGuidanceTimedOut(false);
+    setReviewingTimedOutAnswers(false);
+      setRetryCaptchaToken(null);
     setShowQAFlow(true);
   };
 
@@ -564,6 +644,10 @@ export default function CaseGuidance() {
       await fetch('/api/session/clear', { method: 'POST' });
       // Reset all local state
       setGuidanceResult(null);
+      setPendingGuidanceData(null);
+      setGuidanceTimedOut(false);
+      setGuidanceRecoveryError(false);
+      setReviewingTimedOutAnswers(false);
       setShowQAFlow(false);
       setHasExported(false);
       setShowClearConfirm(false);
@@ -624,17 +708,12 @@ export default function CaseGuidance() {
 
   // Show streaming progress while generating guidance
   if (isStreaming) {
+    const isSourceCheckPhase = guidanceMode === 'ai' && streamProgress >= 70;
     const stage = guidanceMode === 'rules'
-      ? t('case.loading.titleRules', 'Preparing your guidance...')
-      : streamProgress < 20
-        ? t('case.loading.stage0', 'Analyzing your case details...')
-        : streamProgress < 55
-          ? t('case.loading.stage20', 'Writing your Case Roadmap...')
-          : streamProgress < 88
-            ? t('case.loading.stage55', 'Finalizing recommendations...')
-            : streamProgress < 100
-              ? t('case.loading.stage88', 'Cross-referencing with legal sources...')
-              : t('case.loading.almostDone', 'Almost done...');
+      ? t('case.loading.rulesPhase', 'Preparing the rules-based roadmap...')
+      : isSourceCheckPhase
+        ? t('case.loading.sourceCheckPhase', 'Checking legal sources...')
+        : t('case.loading.generationPhase', 'Building your case roadmap...');
 
     return (
       <div className="min-h-screen bg-background">
@@ -653,18 +732,30 @@ export default function CaseGuidance() {
                   </h3>
                   <p className="text-sm text-muted-foreground">{stage}</p>
                 </div>
+                {guidanceMode === 'ai' && (
+                  <div className="w-full space-y-2 text-left" aria-label={t('case.loading.phaseLabel', 'Guidance generation phases')}>
+                    <div className={`flex items-center gap-2 text-sm ${!isSourceCheckPhase ? 'font-semibold text-blue-700 dark:text-blue-300' : 'text-muted-foreground'}`}>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full border border-current text-xs">1</span>
+                      {t('case.loading.generationPhase', 'Building your case roadmap')}
+                    </div>
+                    <div className={`flex items-center gap-2 text-sm ${isSourceCheckPhase ? 'font-semibold text-blue-700 dark:text-blue-300' : 'text-muted-foreground'}`}>
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full border border-current text-xs">2</span>
+                      {t('case.loading.sourceCheckPhase', 'Checking legal sources')}
+                    </div>
+                  </div>
+                )}
                 <div className="w-full space-y-1">
                   <div className="h-2 w-full bg-blue-100 dark:bg-blue-900/30 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-blue-600 dark:bg-blue-400 rounded-full transition-all duration-300 ease-out"
-                      style={{ width: `${streamProgress === 0 ? 2 : streamProgress}%` }}
+                      style={{ width: `${Math.max(2, streamProgress)}%` }}
+                      role="progressbar"
+                      aria-valuemin={0}
+                      aria-valuemax={100}
+                      aria-valuenow={streamProgress}
+                      aria-label={stage}
                     />
                   </div>
-                  <p className="text-xs text-muted-foreground text-right">
-                    {streamProgress < 100
-                      ? `${streamProgress}%`
-                      : t('case.loading.complete', 'Complete')}
-                  </p>
                 </div>
                 {/* De-emphasized cancel — small and low-contrast so it won't be tapped accidentally */}
                 <button
@@ -673,6 +764,82 @@ export default function CaseGuidance() {
                 >
                   {t('case.loading.cancel', 'Cancel')}
                 </button>
+              </div>
+            </CardContent>
+          </Card>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
+  if (guidanceTimedOut) {
+    return (
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main className="editorial-workspace px-4 py-16 flex items-center justify-center min-h-[60vh]">
+          <Card className="editorial-card w-full max-w-lg">
+            <CardContent className="pt-8 pb-8 px-8">
+              <div className="space-y-6">
+                <Alert
+                  role="alert"
+                  aria-live="assertive"
+                  className="border-amber-300 bg-amber-50 text-amber-950 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-100"
+                >
+                  <Clock className="h-5 w-5" />
+                  <AlertTitle>
+                    {guidanceRecoveryError
+                      ? t('case.loading.retryFailedTitle', 'That retry could not be completed')
+                      : t('case.loading.timedOutTitle', 'Taking longer than usual')}
+                  </AlertTitle>
+                  <AlertDescription className="mt-2 text-amber-900 dark:text-amber-100">
+                    {guidanceRecoveryError
+                      ? t('case.loading.retryFailed', 'That attempt could not be completed. Your answers are still here, so you can try again with a new verification.')
+                      : t('case.loading.timedOut', 'The guidance request took too long to finish. Your answers are still here, so you can try again without starting over.')}
+                  </AlertDescription>
+                </Alert>
+
+                <div className="space-y-2">
+                  <h2 className="text-xl font-semibold">
+                    {t('case.loading.recoveryTitle', 'Choose how to continue')}
+                  </h2>
+                  <p className="text-sm text-muted-foreground">
+                    {t('case.loading.recoveryDescription', 'You can retry the personalized guidance, switch to a faster rules-based roadmap, or review your answers first.')}
+                  </p>
+                </div>
+
+                <div className="grid gap-3">
+                  <div className="rounded-lg border border-border bg-muted/30 p-3">
+                    <TurnstileCaptcha
+                      key={retryCaptchaAttempt}
+                      onVerify={setRetryCaptchaToken}
+                      onExpire={() => setRetryCaptchaToken(null)}
+                      onError={() => setRetryCaptchaToken(null)}
+                    />
+                    {!retryCaptchaToken && (
+                      <p className="text-xs text-muted-foreground">
+                        {t('case.loading.retryVerification', 'Complete the verification above to retry AI guidance.')}
+                      </p>
+                    )}
+                  </div>
+                  <Button
+                    onClick={() => handleRetryGuidance('ai')}
+                    disabled={!retryCaptchaToken}
+                    className="w-full justify-start min-h-[48px]"
+                    data-testid="button-retry-ai-guidance"
+                  >
+                    <RefreshCw className="mr-3 h-4 w-4" />
+                    {t('case.loading.retryAI', 'Retry AI guidance')}
+                  </Button>
+                  <Button onClick={() => handleRetryGuidance('rules')} variant="outline" className="w-full justify-start min-h-[48px]" data-testid="button-use-rules-guidance">
+                    <BookOpen className="mr-3 h-4 w-4" />
+                    {t('case.loading.useRules', 'Use the faster rules-based roadmap')}
+                  </Button>
+                  <Button onClick={handleReviewTimedOutAnswers} variant="ghost" className="w-full justify-start min-h-[48px]" data-testid="button-review-guidance-answers">
+                    <ClipboardList className="mr-3 h-4 w-4" />
+                    {t('case.loading.reviewAnswers', 'Review my answers')}
+                  </Button>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -731,12 +898,17 @@ export default function CaseGuidance() {
         <main className="editorial-workspace max-w-7xl mx-auto px-4 py-8">
           <QAFlow
             onComplete={handleQAComplete}
-            onCancel={() => setShowQAFlow(false)}
+            onCancel={() => {
+              setShowQAFlow(false);
+              setReviewingTimedOutAnswers(false);
+            }}
             onFindLawyer={() => {
               setShowQAFlow(false);
               setShowPublicDefenderModal(true);
             }}
             onClearSession={handleClearSession}
+            initialData={reviewingTimedOutAnswers ? pendingGuidanceData : undefined}
+            reviewAnswers={reviewingTimedOutAnswers}
           />
         </main>
         <Footer />

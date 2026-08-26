@@ -377,6 +377,8 @@ describe('normalized guidance surface parity', () => {
     });
 
     expect(guidance.warnings).toEqual([
+      'Court rules and deadlines vary by county. Verify all deadlines with your local court.',
+      'Bail schedules vary by county and should be confirmed before arraignment.',
       'A separate DMV administrative deadline may apply and should be confirmed with the DMV.',
     ]);
     expect(guidance.uncertainties).toHaveLength(3);

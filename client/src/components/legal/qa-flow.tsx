@@ -22,31 +22,44 @@ interface QAFlowProps {
   onCancel: () => void;
   onFindLawyer?: () => void;
   onClearSession?: () => void;
+  initialData?: Partial<QAFormData>;
+  reviewAnswers?: boolean;
 }
 
-export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: QAFlowProps) {
+interface QAFormData {
+  jurisdiction: string;
+  charges: string[];
+  chargesUnknown: boolean;
+  caseStage: string;
+  custodyStatus: string;
+  hasAttorney: boolean | null;
+  consentGiven: boolean;
+  guidanceMode: 'ai' | 'rules';
+  selectedConcerns: string[];
+  civilUrgency: Record<string, 'none' | 'active' | 'emergency'>;
+  supervisionStatus: string;
+  priorConvictions: boolean | null;
+  citizenshipStatus: string;
+  hasMinorChildren: boolean | null;
+  hasProfessionalLicense: boolean | null;
+  hasHousingAssistance: boolean | null;
+}
+export function QAFlow({
+  onComplete,
+  onCancel,
+  onFindLawyer,
+  onClearSession,
+  initialData,
+  reviewAnswers = false,
+}: QAFlowProps) {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [showCaseStageWarning, setShowCaseStageWarning] = useState(false);
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired } = useCaptcha();
-  const [formData, setFormData] = useState({
-    jurisdiction: "",
-    charges: [] as string[],
-    chargesUnknown: false,
-    caseStage: "",
-    custodyStatus: "",
-    hasAttorney: null,
-    consentGiven: false,
-    guidanceMode: 'ai' as 'ai' | 'rules',
-    selectedConcerns: [] as string[],
-    civilUrgency: {} as Record<string, 'none' | 'active' | 'emergency'>,
-    supervisionStatus: "" as string,
-    priorConvictions: null as boolean | null,
-    citizenshipStatus: "" as string,
-    hasMinorChildren: null as boolean | null,
-    hasProfessionalLicense: null as boolean | null,
-    hasHousingAssistance: null as boolean | null,
-  });
+  const [formData, setFormData] = useState<QAFormData>(() => ({
+    ...EMPTY_FORM_DATA,
+    ...initialData,
+  }));
 
   const baseSteps = [
     { title: t('legalGuidance.qaFlow.steps.consent'),           component: ConsentStep },
@@ -61,6 +74,14 @@ export function QAFlow({ onComplete, onCancel, onFindLawyer, onClearSession }: Q
     ...baseSteps,
     { title: t('legalGuidance.qaFlow.steps.civilEmergencies'), component: CivilEmergenciesStep },
   ];
+
+  // When a timed-out submission returns to the screener, start at the last
+  // step so the user can review or edit the answers that were submitted.
+  useEffect(() => {
+    if (reviewAnswers) {
+      setCurrentStep(steps.length - 1);
+    }
+  }, [reviewAnswers, steps.length]);
 
   const nextStep = () => {
     if (currentStep < steps.length - 1) {
@@ -1489,3 +1510,22 @@ function CivilEmergenciesStep({ formData, updateFormData, onNext, onPrev, isLast
     </div>
   );
 }
+
+const EMPTY_FORM_DATA: QAFormData = {
+  jurisdiction: "",
+  charges: [],
+  chargesUnknown: false,
+  caseStage: "",
+  custodyStatus: "",
+  hasAttorney: null,
+  consentGiven: false,
+  guidanceMode: 'ai',
+  selectedConcerns: [],
+  civilUrgency: {},
+  supervisionStatus: "",
+  priorConvictions: null,
+  citizenshipStatus: "",
+  hasMinorChildren: null,
+  hasProfessionalLicense: null,
+  hasHousingAssistance: null,
+};

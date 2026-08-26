@@ -2744,7 +2744,19 @@ export default {
       "complete": "Complete",
       "cancel": "Cancel",
       "timedOutTitle": "Taking longer than usual",
-      "timedOut": "The request timed out. Please check your connection and try again."
+      "timedOut": "The guidance request took too long to finish. Your answers are still here, so you can try again without starting over.",
+      "retryFailedTitle": "That retry could not be completed",
+      "retryFailed": "That attempt could not be completed. Your answers are still here, so you can try again with a new verification.",
+      "recoveryTitle": "Choose how to continue",
+      "recoveryDescription": "You can retry the personalized guidance, switch to a faster rules-based roadmap, or review your answers first.",
+      "retryAI": "Retry AI guidance",
+      "retryVerification": "Complete the verification above to retry AI guidance.",
+      "useRules": "Use the faster rules-based roadmap",
+      "reviewAnswers": "Review my answers",
+      "phaseLabel": "Guidance generation phases",
+      "generationPhase": "Building your case roadmap",
+      "sourceCheckPhase": "Checking legal sources",
+      "rulesPhase": "Preparing the rules-based roadmap"
     },
     "privacy": {
       "title": "Your Privacy is Protected",

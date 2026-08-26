@@ -2746,7 +2746,19 @@ export default {
       "complete": "Completado",
       "cancel": "Cancelar",
       "timedOutTitle": "Esto está tardando más de lo esperado",
-      "timedOut": "La solicitud tardó demasiado. Por favor verifique su conexión e intente de nuevo."
+      "timedOut": "La solicitud de orientación tardó demasiado en terminar. Sus respuestas siguen aquí, así que puede intentarlo de nuevo sin empezar desde cero.",
+      "retryFailedTitle": "No se pudo completar el intento",
+      "retryFailed": "No se pudo completar ese intento. Sus respuestas siguen aquí, así que puede intentarlo de nuevo con una verificación nueva.",
+      "recoveryTitle": "Elija cómo continuar",
+      "recoveryDescription": "Puede volver a intentar la orientación personalizada, cambiar a una guía más rápida basada en reglas o revisar primero sus respuestas.",
+      "retryAI": "Volver a intentar la orientación con IA",
+      "retryVerification": "Complete la verificación anterior para volver a intentar la orientación con IA.",
+      "useRules": "Usar la guía más rápida basada en reglas",
+      "reviewAnswers": "Revisar mis respuestas",
+      "phaseLabel": "Fases de generación de la orientación",
+      "generationPhase": "Creando la guía de su caso",
+      "sourceCheckPhase": "Verificando fuentes legales",
+      "rulesPhase": "Preparando la guía basada en reglas"
     },
     "privacy": {
       "title": "Su Privacidad Está Protegida",
