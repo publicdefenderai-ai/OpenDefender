@@ -90,7 +90,7 @@ vi.mock('@shared/jurisdiction-procedure-rules', async (importOriginal) => {
 });
 
 // ── Imports (after all vi.mock declarations) ──────────────────────────────────
-import { generateClaudeGuidance } from '../server/services/claude-guidance';
+import { generateClaudeGuidance, scopeGuidanceToSelectedCharges } from '../server/services/claude-guidance';
 import { generateEnhancedGuidance } from '../server/services/guidance-engine';
 
 // ── Shared test fixtures ──────────────────────────────────────────────────────
@@ -368,5 +368,147 @@ describe('AI path and fallback path share a consistent required field set', () =
 
     expect(typeof aiResult.overview).toBe('string');
     expect(typeof fallbackResult.overview).toBe('string');
+  });
+});
+
+describe('AI selected-charge scope guard', () => {
+  const nyPossessionCase = {
+    jurisdiction: 'NY',
+    charges: ['ny-possession-of-controlled-substance'],
+    caseStage: 'arraignment',
+    custodyStatus: 'released',
+    hasAttorney: false,
+  };
+
+  it('removes unselected NY sibling-offense and school-zone sentences', () => {
+    const scoped = scopeGuidanceToSelectedCharges({
+      overview: 'The selected charge is possession. Drug trafficking may carry a different penalty. School-zone rules may also apply.',
+      nextSteps: ['Review the possession evidence.', 'Ask about manufacturing defenses.'],
+    }, nyPossessionCase as any);
+
+    expect(scoped.overview).toBe('The selected charge is possession.');
+    expect(scoped.nextSteps).toEqual(['Review the possession evidence.']);
+  });
+
+  it('preserves explicitly selected intent-to-distribute discussion', () => {
+    const scoped = scopeGuidanceToSelectedCharges({
+      overview: 'Possession with intent to sell is a fact counsel should review. Drug trafficking is a separate offense.',
+    }, {
+      ...nyPossessionCase,
+      charges: ['ny-possession-with-intent-to-distribute'],
+    } as any);
+
+    expect(scoped.overview).toContain('intent to sell');
+    expect(scoped.overview).not.toMatch(/drug trafficking/i);
+  });
+
+  it('allows school-zone discussion only after an explicit yes answer', () => {
+    const scoped = scopeGuidanceToSelectedCharges({
+      overview: 'The papers mention school grounds. Confirm the location with counsel.',
+    }, {
+      ...nyPossessionCase,
+      schoolZoneStatus: 'yes',
+    } as any);
+
+    expect(scoped.overview).toContain('school grounds');
+  });
+
+  it('preserves an explicit school-zone yes answer through mandatory PII redaction', async () => {
+    mockMessagesCreate.mockResolvedValue(makeMockApiResponse({
+      ...VALID_CLAUDE_JSON,
+      overview: 'The papers mention school grounds. Confirm the location with counsel.',
+    }));
+
+    const result = await generateClaudeGuidance({
+      ...nyPossessionCase,
+      schoolZoneStatus: 'yes',
+      incidentDescription: 'Call Jordan at 555-0100 about the location.',
+    } as any, 'redaction-school-yes');
+
+    const request = mockMessagesCreate.mock.calls.at(-1)?.[0];
+    expect(request.messages[0].content).toContain('School-zone or location-based drug allegation status: yes.');
+    expect(result.overview).toContain('school grounds');
+  });
+
+  it('suppresses school-zone output through the production path when the answer is unsure', async () => {
+    mockMessagesCreate.mockResolvedValue(makeMockApiResponse({
+      ...VALID_CLAUDE_JSON,
+      overview: 'The papers mention school grounds. General legal information remains available.',
+    }));
+
+    const result = await generateClaudeGuidance({
+      ...nyPossessionCase,
+      schoolZoneStatus: 'unsure',
+    } as any, 'redaction-school-unsure');
+
+    const request = mockMessagesCreate.mock.calls.at(-1)?.[0];
+    expect(request.messages[0].content).toContain('School-zone or location-based drug allegation status: unsure.');
+    expect(result.overview).not.toContain('school grounds');
+    expect(result.overview).toContain('General legal information');
+  });
+
+  it('removes unselected NY degree, statute, and penalty references through the production path', async () => {
+    mockMessagesCreate.mockResolvedValue(makeMockApiResponse({
+      ...VALID_CLAUDE_JSON,
+      overview: 'The selected charge remains possession. The papers also describe § 220.06, Fifth Degree, and a Class D felony. Review the selected charge with counsel.',
+      nextSteps: [
+        'Review the selected charge with counsel.',
+        'The § 220.09 Fourth Degree charge is a Class C felony.',
+        'The selected misdemeanor remains subject to ordinary defense review.',
+      ],
+    }));
+
+    const result = await generateClaudeGuidance({
+      ...nyPossessionCase,
+      schoolZoneStatus: 'no',
+    } as any, 'redaction-ny-degree-scope');
+
+    expect(result.overview).toBe('The selected charge remains possession. Review the selected charge with counsel.');
+    expect(result.nextSteps).toEqual([
+      'Review the selected charge with counsel.',
+      'The selected misdemeanor remains subject to ordinary defense review.',
+    ]);
+    expect(JSON.stringify(result)).not.toMatch(/220\.06|220\.09|fifth degree|fourth degree|class [cd] felony/i);
+  });
+
+  it('keeps selected non-drug charge degree and class language in a multi-charge case', async () => {
+    mockMessagesCreate.mockResolvedValue(makeMockApiResponse({
+      ...VALID_CLAUDE_JSON,
+      overview: 'The selected Assault in the First Degree charge is a Class C felony. The selected possession charge is a misdemeanor.',
+    }));
+
+    const result = await generateClaudeGuidance({
+      ...nyPossessionCase,
+      charges: ['ny-possession-of-controlled-substance', 'ny-assault-in-the-first-degree'],
+    } as any, 'redaction-ny-multicharge-scope');
+
+    expect(result.overview).toContain('Assault in the First Degree');
+    expect(result.overview).toContain('Class C felony');
+  });
+
+  it('scopes every selectable NY drug entry against unselected possession references', async () => {
+    const selectedDrugIds = [
+      'ny-distribution-of-controlled-substance',
+      'ny-manufacturing-controlled-substance',
+      'ny-drug-trafficking',
+      'ny-possession-of-drug-paraphernalia',
+      'ny-drug-school-zone-enhancement',
+    ];
+
+    for (const [index, selectedDrugId] of selectedDrugIds.entries()) {
+      mockMessagesCreate.mockResolvedValue(makeMockApiResponse({
+        ...VALID_CLAUDE_JSON,
+        overview: `Guidance for ${selectedDrugId}. The response also cites § 220.03 possession of a controlled substance.`,
+      }));
+
+      const result = await generateClaudeGuidance({
+        ...nyPossessionCase,
+        charges: [selectedDrugId],
+        schoolZoneStatus: selectedDrugId === 'ny-drug-school-zone-enhancement' ? 'yes' : 'no',
+      } as any, `redaction-ny-drug-scope-${index}`);
+
+      expect(result.overview).toContain(`Guidance for ${selectedDrugId}`);
+      expect(result.overview).not.toContain('220.03');
+    }
   });
 });

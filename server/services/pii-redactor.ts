@@ -69,6 +69,7 @@ interface CaseDetails {
   hasMinorChildren?: boolean | null;
   hasProfessionalLicense?: boolean | null;
   hasHousingAssistance?: boolean | null;
+  schoolZoneStatus?: 'yes' | 'no' | 'unsure';
   civilUrgency?: Record<string, 'none' | 'active' | 'emergency'>;
   [key: string]: unknown;
 }
@@ -359,6 +360,7 @@ export function redactCaseDetails(caseDetails: CaseDetails): RedactionResult {
     hasMinorChildren: caseDetails.hasMinorChildren,
     hasProfessionalLicense: caseDetails.hasProfessionalLicense,
     hasHousingAssistance: caseDetails.hasHousingAssistance,
+    schoolZoneStatus: caseDetails.schoolZoneStatus,
     civilUrgency: caseDetails.civilUrgency,
 
     // Free-text fields — redact PII before sending to Claude

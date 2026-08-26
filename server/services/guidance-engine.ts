@@ -15,6 +15,7 @@ interface CaseData {
   hasMinorChildren?: boolean | null;
   hasProfessionalLicense?: boolean | null;
   hasHousingAssistance?: boolean | null;
+  schoolZoneStatus?: 'yes' | 'no' | 'unsure';
 }
 
 interface GuidanceDeadline {
@@ -742,6 +743,11 @@ function identifyChargeType(charges: string): string {
   return 'default'; // Default for unrecognized charges - now uses 'default' guidance
 }
 
+function isNewYorkDrugChargeId(chargeId: string): boolean {
+  return /^ny-/.test(chargeId) &&
+    /controlled-substance|drug|sale|distribution|trafficking|manufacturing/.test(chargeId);
+}
+
 // New charge-specific guidance functions
 function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any, specificCharges: any[]): string[] {
   const alerts: string[] = [];
@@ -759,6 +765,16 @@ function buildCriticalAlertsForCharges(caseData: CaseData, jurisdictionData: any
   if (jurisdiction === 'SC' && (caseData.caseStage === 'arrest' || caseData.caseStage === 'arraignment')) {
     alerts.push(
       '**SC Preliminary Hearing — Action Required**: In South Carolina, a preliminary hearing will NOT be scheduled automatically. You must actively request it in writing within 10 days of receiving notice. Failing to request within that window forfeits this right entirely (SC Rule 2 SCRCP).'
+    );
+  }
+
+  if (
+    jurisdiction === 'NY' &&
+    specificCharges.some(charge => isNewYorkDrugChargeId(charge.id)) &&
+    caseData.schoolZoneStatus === 'yes'
+  ) {
+    alerts.push(
+      '**New York school-zone information**: You indicated that a school-zone or school-ground fact may be involved. This can create a separate issue under New York law; have counsel confirm the exact location, distance, date, and statute before relying on this information.'
     );
   }
   
@@ -1442,6 +1458,18 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackC
     items.push({
       area: 'Custody Status',
       note: 'Your custody status was not specified. Deadlines and procedural timelines are generally shorter when a defendant is in custody. If you are currently detained, confirm all deadlines with your attorney or the court.',
+    });
+  }
+
+  const chargeIds = Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges];
+  if (
+    jurisdiction === 'NY' &&
+    chargeIds.some(id => isNewYorkDrugChargeId(String(id))) &&
+    (!caseData.schoolZoneStatus || caseData.schoolZoneStatus === 'unsure')
+  ) {
+    items.push({
+      area: 'School-Zone or Proximity Facts',
+      note: 'We do not know whether the facts involve a school, school grounds, or another location-based allegation. Do not assume this applies; ask your attorney to confirm the exact location, distance, date, and statute if the charging papers mention it.',
     });
   }
 

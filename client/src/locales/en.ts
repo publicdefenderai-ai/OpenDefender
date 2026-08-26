@@ -2400,6 +2400,16 @@ export default {
         "submitButton": "Get My Case Support",
         "continue": "Continue"
       },
+      "background": {
+        "schoolZoneQuestion": "Do the charging papers mention a school, school grounds, or another location-based drug allegation?",
+        "schoolZoneDescription": "This is optional. Select yes only if the papers or your attorney identified this issue; do not guess from the charge name alone.",
+        "selectOption": "Select an option",
+        "schoolZoneOptions": {
+          "yes": "Yes, this is mentioned",
+          "no": "No, this is not mentioned",
+          "unsure": "Not sure / prefer not to say"
+        }
+      },
       "additionalDetails": {
         "title": "Tell Us More (Optional)",
         "description": "The more details you provide, the better our AI can tailor guidance to your specific situation. All fields are optional - skip any you're not comfortable sharing.",

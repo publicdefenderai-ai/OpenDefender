@@ -2402,6 +2402,16 @@ export default {
         "submitButton": "Obtener Mi Orientación Legal",
         "continue": "Continuar"
       },
+      "background": {
+        "schoolZoneQuestion": "¿Los documentos de acusación mencionan una escuela, terrenos escolares u otra acusación relacionada con drogas y basada en el lugar?",
+        "schoolZoneDescription": "Esta pregunta es opcional. Seleccione sí solo si los documentos o su abogado identificaron este asunto; no lo suponga basándose únicamente en el nombre del cargo.",
+        "selectOption": "Seleccione una opción",
+        "schoolZoneOptions": {
+          "yes": "Sí, se menciona",
+          "no": "No, no se menciona",
+          "unsure": "No estoy seguro/a o prefiero no decirlo"
+        }
+      },
       "additionalDetails": {
         "title": "Cuéntenos Más (Opcional)",
         "description": "Cuantos más detalles proporcione, mejor podrá la IA adaptar la orientación a su situación específica. Todos los campos son opcionales; omita cualquiera que no se sienta cómodo compartiendo.",

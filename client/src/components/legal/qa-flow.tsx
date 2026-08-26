@@ -45,6 +45,7 @@ interface QAFormData {
   hasMinorChildren: boolean | null;
   hasProfessionalLicense: boolean | null;
   hasHousingAssistance: boolean | null;
+  schoolZoneStatus: string;
 }
 export function QAFlow({
   onComplete,
@@ -466,7 +467,11 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   
   const categoryFiltered = selectedCategory && selectedCategory !== 'all'
     ? availableCharges.filter(charge => 
-        chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id)
+        chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id) ||
+        (selectedCategory === 'Drug Offenses' &&
+          charge.jurisdiction === 'NY' &&
+          /^ny-/.test(charge.id) &&
+          /controlled-substance|drug|sale|distribution|trafficking|manufacturing/.test(charge.id))
       )
     : availableCharges;
 
@@ -484,12 +489,12 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     return charges.sort((a, b) => {
       // Extract base crime name (remove degree indicators)
       const getBaseName = (name: string) => {
-        return name.replace(/\s+(in the\s+)?(First|Second|Third|Fourth|1st|2nd|3rd|4th)\s+(Degree|Class)/i, '').trim();
+        return name.replace(/\s+(in the\s+)?(First|Second|Third|Fourth|Fifth|1st|2nd|3rd|4th|5th)\s+(Degree|Class)/i, '').trim();
       };
       
       // Extract degree from name
       const getDegreeOrder = (name: string) => {
-        const degreeMatch = name.match(/(First|Second|Third|Fourth|1st|2nd|3rd|4th)/i);
+        const degreeMatch = name.match(/(First|Second|Third|Fourth|Fifth|1st|2nd|3rd|4th|5th)/i);
         if (!degreeMatch) return 0; // No degree, sort first
         
         const degree = degreeMatch[1].toLowerCase();
@@ -498,6 +503,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           case 'second': case '2nd': return 2;
           case 'third': case '3rd': return 3;
           case 'fourth': case '4th': return 4;
+          case 'fifth': case '5th': return 5;
           default: return 5;
         }
       };
@@ -1071,6 +1077,17 @@ function StatusStep({ formData, updateFormData, onNext, onPrev, isLast }: any) {
 }
 
 function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
+  const { t } = useTranslation();
+  const isNewYorkDrugCase = formData.jurisdiction === 'NY' && (formData.charges || []).some((id: string) =>
+    /^ny-/.test(id) && /controlled-substance|drug|sale|distribution|trafficking|manufacturing/.test(id)
+  );
+
+  useEffect(() => {
+    if (!isNewYorkDrugCase && formData.schoolZoneStatus) {
+      updateFormData("schoolZoneStatus", "");
+    }
+  }, [isNewYorkDrugCase, formData.schoolZoneStatus, updateFormData]);
+
   return (
     <div className="space-y-6">
       <div>
@@ -1098,6 +1115,30 @@ function BackgroundStep({ formData, updateFormData, onNext, onPrev }: any) {
               </SelectContent>
             </Select>
           </div>
+
+          {isNewYorkDrugCase && (
+            <div>
+              <Label className="mb-1.5 block">
+                {t('legalGuidance.qaFlow.background.schoolZoneQuestion')}
+              </Label>
+              <p className="text-xs text-muted-foreground mb-2">
+                {t('legalGuidance.qaFlow.background.schoolZoneDescription')}
+              </p>
+              <Select
+                value={formData.schoolZoneStatus || ""}
+                onValueChange={(v) => updateFormData("schoolZoneStatus", v)}
+              >
+                <SelectTrigger data-testid="select-school-zone-status">
+                  <SelectValue placeholder={t('legalGuidance.qaFlow.background.selectOption')} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="yes">{t('legalGuidance.qaFlow.background.schoolZoneOptions.yes')}</SelectItem>
+                  <SelectItem value="no">{t('legalGuidance.qaFlow.background.schoolZoneOptions.no')}</SelectItem>
+                  <SelectItem value="unsure">{t('legalGuidance.qaFlow.background.schoolZoneOptions.unsure')}</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          )}
 
           <div>
             <Label className="mb-1.5 block">Have you had prior convictions?</Label>
@@ -1533,4 +1574,5 @@ const EMPTY_FORM_DATA: QAFormData = {
   hasMinorChildren: null,
   hasProfessionalLicense: null,
   hasHousingAssistance: null,
+  schoolZoneStatus: "",
 };

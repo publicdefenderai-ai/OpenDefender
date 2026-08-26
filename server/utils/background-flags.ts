@@ -25,11 +25,13 @@ import { opsLog } from './dev-logger';
 
 export const SUPERVISION_STATUS_VALUES = ['none', 'probation', 'parole', 'both', 'unsure'] as const;
 export const CITIZENSHIP_STATUS_VALUES = ['citizen', 'non_citizen', 'prefer_not'] as const;
+export const SCHOOL_ZONE_STATUS_VALUES = ['yes', 'no', 'unsure'] as const;
 export const CIVIL_URGENCY_FIELDS = ['housing', 'employment', 'dependents', 'immigration'] as const;
 export const CIVIL_URGENCY_LEVELS = ['none', 'active', 'emergency'] as const;
 
 export type SupervisionStatus = typeof SUPERVISION_STATUS_VALUES[number];
 export type CitizenshipStatus = typeof CITIZENSHIP_STATUS_VALUES[number];
+export type SchoolZoneStatus = typeof SCHOOL_ZONE_STATUS_VALUES[number];
 export type CivilUrgencyField = typeof CIVIL_URGENCY_FIELDS[number];
 export type CivilUrgencyLevel = typeof CIVIL_URGENCY_LEVELS[number];
 
@@ -41,6 +43,7 @@ export interface BackgroundFlags {
   hasMinorChildren?: boolean | null;
   hasProfessionalLicense?: boolean | null;
   hasHousingAssistance?: boolean | null;
+  schoolZoneStatus?: SchoolZoneStatus;
 }
 
 function isBooleanOrNull(value: unknown): value is boolean | null {
@@ -71,6 +74,14 @@ export function extractBackgroundFlags(body: Record<string, unknown>): Backgroun
       flags.citizenshipStatus = body.citizenshipStatus as CitizenshipStatus;
     } else {
       dropped.push('citizenshipStatus');
+    }
+  }
+
+  if (body.schoolZoneStatus !== undefined) {
+    if ((SCHOOL_ZONE_STATUS_VALUES as readonly unknown[]).includes(body.schoolZoneStatus)) {
+      flags.schoolZoneStatus = body.schoolZoneStatus as SchoolZoneStatus;
+    } else {
+      dropped.push('schoolZoneStatus');
     }
   }
 

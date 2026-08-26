@@ -421,6 +421,77 @@ describe('CHARGE_CONSEQUENCE_MAP coverage', () => {
   });
 });
 
+describe('New York selected-charge scope', () => {
+  const nyBase = {
+    jurisdiction: 'NY',
+    caseStage: 'arraignment',
+    custodyStatus: 'released',
+    hasAttorney: false,
+    supervisionStatus: 'none',
+    citizenshipStatus: 'citizen',
+    hasMinorChildren: false,
+    hasProfessionalLicense: false,
+    hasHousingAssistance: false,
+  };
+
+  it('exposes degree-based possession choices with official sections and classifications', () => {
+    const expected = [
+      ['ny-possession-of-controlled-substance', '220.03', 'misdemeanor', 'Possession of Controlled Substance'],
+      ['ny-possession-of-controlled-substance-fifth-degree', '220.06', 'felony', 'Fifth Degree'],
+      ['ny-possession-of-controlled-substance-fourth-degree', '220.09', 'felony', 'Fourth Degree'],
+      ['ny-possession-with-intent-to-distribute', '220.16', 'felony', 'Third Degree'],
+      ['ny-possession-of-controlled-substance-second-degree', '220.18', 'felony', 'Second Degree'],
+      ['ny-possession-of-controlled-substance-first-degree', '220.21', 'felony', 'First Degree'],
+    ] as const;
+
+    for (const [id, code, category, namePart] of expected) {
+      const charge = getChargeById(id);
+      expect(charge, `${id} should be in the NY catalog`).toBeDefined();
+      expect(charge).toMatchObject({ code, category });
+      expect(charge!.name).toContain(namePart);
+      expect(getVerifiedCitation(charge!)).toBe(`N.Y. Penal Law § ${code}`);
+    }
+  });
+
+  it('keeps possession-only guidance free of unselected sibling offenses', () => {
+    const result = generateEnhancedGuidance({
+      ...nyBase,
+      charges: ['ny-possession-of-controlled-substance'],
+    });
+    const { uncertainties: _uncertainties, ...guidanceWithoutUncertainties } = result;
+    const text = JSON.stringify(guidanceWithoutUncertainties);
+    expect(text).not.toMatch(/trafficking|distribution|manufacturing/i);
+    expect(text).not.toMatch(/school[- ](?:zone|grounds)|near a school/i);
+  });
+
+  it('adds school-zone information only when the user explicitly supplies it', () => {
+    const withoutAnswer = generateEnhancedGuidance({
+      ...nyBase,
+      charges: ['ny-possession-of-controlled-substance'],
+    });
+    expect(withoutAnswer.uncertainties?.some(item => item.area === 'School-Zone or Proximity Facts')).toBe(true);
+    expect(withoutAnswer.criticalAlerts.some(alert => /school-zone/i.test(alert))).toBe(false);
+
+    const withAnswer = generateEnhancedGuidance({
+      ...nyBase,
+      charges: ['ny-possession-of-controlled-substance'],
+      schoolZoneStatus: 'yes',
+    });
+    expect(withAnswer.criticalAlerts.some(alert => /school-zone/i.test(alert))).toBe(true);
+    expect(withAnswer.uncertainties?.some(item => item.area === 'School-Zone or Proximity Facts')).toBe(false);
+  });
+
+  it('keeps selected intent-to-sell scope distinct from unselected trafficking', () => {
+    const result = generateEnhancedGuidance({
+      ...nyBase,
+      charges: ['ny-possession-with-intent-to-distribute'],
+    });
+    const text = JSON.stringify(result);
+    expect(text).toContain('Criminal Possession of a Controlled Substance in the Third Degree');
+    expect(text).not.toMatch(/drug trafficking|criminal sale of a controlled substance|school[- ]zone/i);
+  });
+});
+
 // ---------------------------------------------------------------------------
 // Corrected statute codes — GA, NC, NJ, VA, AZ (2026-07 batch)
 // ---------------------------------------------------------------------------

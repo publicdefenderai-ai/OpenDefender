@@ -24,6 +24,7 @@ describe('extractBackgroundFlags — valid input passes through unchanged', () =
       hasMinorChildren: false,
       hasProfessionalLicense: null,
       hasHousingAssistance: true,
+      schoolZoneStatus: 'unsure',
     });
 
     expect(result).toEqual({
@@ -34,6 +35,7 @@ describe('extractBackgroundFlags — valid input passes through unchanged', () =
       hasMinorChildren: false,
       hasProfessionalLicense: null,
       hasHousingAssistance: true,
+      schoolZoneStatus: 'unsure',
     });
   });
 

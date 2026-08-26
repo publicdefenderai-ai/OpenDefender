@@ -50,6 +50,7 @@ function guidanceCaseData(caseData: any) {
     custodyStatus: String(caseData.custodyStatus ?? ''),
     hasAttorney: Boolean(caseData.hasAttorney),
     selectedConcerns: Array.isArray(caseData.selectedConcerns) ? caseData.selectedConcerns : undefined,
+    schoolZoneStatus: caseData.schoolZoneStatus,
   };
 }
 

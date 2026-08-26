@@ -2402,6 +2402,16 @@ export default {
         "submitButton": "获取我的法律指导",
         "continue": "继续"
       },
+      "background": {
+        "schoolZoneQuestion": "起诉文件是否提到学校、学校场地或其他与地点有关的毒品指控？",
+        "schoolZoneDescription": "此问题为可选项。只有在起诉文件或律师指出这一问题时才选择“是”；不要仅凭指控名称猜测。",
+        "selectOption": "选择一个选项",
+        "schoolZoneOptions": {
+          "yes": "是，文件中提到了",
+          "no": "否，文件中没有提到",
+          "unsure": "不确定／不愿回答"
+        }
+      },
       "additionalDetails": {
         "title": "补充信息（可选）",
         "description": "您提供的细节越多，AI 就越能为您的具体情况提供有针对性的指导。所有字段均为可选，您可以跳过任何不愿回答的问题。",

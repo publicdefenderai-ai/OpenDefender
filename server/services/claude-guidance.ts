@@ -12,6 +12,7 @@ import { buildCollateralConsequenceContextBlock } from '../../shared/collateral-
 import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 import { getLocusContext, LOCUS_ATTRIBUTION } from './locus-lookup';
+import { getChargeById, getChargesByJurisdiction } from '@shared/criminal-charges';
 
 // Validate Anthropic API credentials - graceful fallback if not configured
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -106,6 +107,7 @@ interface CaseDetails {
   hasMinorChildren?: boolean | null;
   hasProfessionalLicense?: boolean | null;
   hasHousingAssistance?: boolean | null;
+  schoolZoneStatus?: 'yes' | 'no' | 'unsure';
 }
 
 interface ClaudeGuidance {
@@ -193,6 +195,118 @@ interface ClaudeGuidance {
       message: string;
     };
   };
+}
+
+function selectedChargeIds(caseDetails: CaseDetails): string[] {
+  return (Array.isArray(caseDetails.charges) ? caseDetails.charges : [caseDetails.charges])
+    .filter((id): id is string => typeof id === 'string' && id.length > 0);
+}
+
+const NY_DRUG_CHARGES = getChargesByJurisdiction('NY').filter(charge =>
+  /drug|controlled-substance|paraphernalia|marijuana|cannabis|narcotic|cocaine|heroin|fentanyl|meth/i
+    .test(`${charge.id} ${charge.name}`)
+);
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function buildSelectedChargeScope(caseDetails: CaseDetails): string {
+  const selected = selectedChargeIds(caseDetails)
+    .map(id => getChargeById(id))
+    .filter(Boolean)
+    .map(charge => `${charge!.name} (${charge!.code})`);
+
+  if (selected.length === 0) {
+    return 'The specific charges are unknown or were not recognized. Do not infer a specific offense or degree.';
+  }
+
+  const schoolStatus = caseDetails.schoolZoneStatus || 'not answered';
+  return [
+    `Selected charges only: ${selected.join('; ')}`,
+    `School-zone or location-based drug allegation status: ${schoolStatus}.`,
+    'Discuss only the selected charges and facts that are independently relevant to them.',
+    'Do not relabel a selected possession offense as sale, distribution, trafficking, or manufacturing.',
+    'Do not introduce an unselected sibling offense, degree, penalty, or element as though it applies.',
+    schoolStatus === 'yes'
+      ? 'Because a school-zone or school-ground fact was explicitly indicated, explain it only as a separate issue to confirm with counsel; do not assume the enhancement applies.'
+      : 'Do not mention school-zone, school-ground, or proximity enhancements unless the user explicitly indicated that issue.',
+  ].join('\n');
+}
+
+/**
+ * Last-mile guard for AI output. The prompt is the primary scope control, but
+ * generated text is also filtered before it reaches dashboard, print, or PDF
+ * normalization.
+ */
+export function scopeGuidanceToSelectedCharges(data: any, caseDetails: CaseDetails): any {
+  const ids = selectedChargeIds(caseDetails);
+  if (ids.length === 0) return data;
+
+  const allowsSaleOrDistribution = ids.some(id => /sale|distribution|intent-to-distribute/.test(id));
+  const allowsTrafficking = ids.some(id => /trafficking/.test(id));
+  const allowsManufacturing = ids.some(id => /manufacturing/.test(id));
+  const allowsSchoolZone = caseDetails.schoolZoneStatus === 'yes';
+  const blocked: RegExp[] = [];
+
+  // NY drug guidance needs a tighter boundary than broad offense keywords:
+  // otherwise an AI response can still introduce an unselected degree, statute,
+  // or felony class while avoiding words such as "sale" or "trafficking".
+  const selectedNyDrugIds = new Set(
+    ids.filter(id => NY_DRUG_CHARGES.some(charge => charge.id === id))
+  );
+  if (selectedNyDrugIds.size > 0) {
+    const unselectedNyDrugCharges = NY_DRUG_CHARGES
+      .filter(charge => !selectedNyDrugIds.has(charge.id));
+
+    for (const charge of unselectedNyDrugCharges) {
+      const code = escapeRegExp(charge!.code);
+      const name = escapeRegExp(charge!.name);
+      blocked.push(new RegExp(`(?:§|section)?\\s*${code}\\b`, 'i'));
+      blocked.push(new RegExp(`\\b${name}\\b`, 'i'));
+
+      const degree = charge!.name.match(/\b(First|Second|Third|Fourth|Fifth) Degree\b/i)?.[0];
+      const drugContext = '(?:drug|controlled\\s+substance|possession|cannabis|marijuana|paraphernalia)';
+      if (degree) {
+        blocked.push(new RegExp(
+          `\\b${escapeRegExp(degree)}\\b(?=[^.!?]{0,120}\\b${drugContext}\\b)|\\b${drugContext}\\b[^.!?]{0,120}\\b${escapeRegExp(degree)}\\b`,
+          'i'
+        ));
+      }
+
+      const classification = charge!.maxPenalty.match(/\bClass [A-Z](?:-[IV]+)? felony\b/i)?.[0];
+      if (classification) {
+        blocked.push(new RegExp(
+          `\\b${escapeRegExp(classification)}\\b(?=[^.!?]{0,120}\\b${drugContext}\\b)|\\b${drugContext}\\b[^.!?]{0,120}\\b${escapeRegExp(classification)}\\b`,
+          'i'
+        ));
+      }
+    }
+  }
+
+  if (!allowsSaleOrDistribution) {
+    blocked.push(/\b(?:criminal\s+)?sale\s+of\s+(?:a\s+)?controlled\s+substance\b|\b(?:drug\s+)?distribution\b|\bintent\s+to\s+sell\b/i);
+  }
+  if (!allowsTrafficking) blocked.push(/\b(?:drug\s+)?trafficking\b/i);
+  if (!allowsManufacturing) blocked.push(/\bmanufactur(?:e|ing|ed)\b/i);
+  if (!allowsSchoolZone) blocked.push(/\bschool[-\s]?(?:zone|grounds?)\b|\bnear\s+(?:a\s+)?school\b|\bproximity\s+to\s+(?:a\s+)?school\b/i);
+
+  const scopeText = (value: string): string => value
+    .split(/(?<=[.!?])\s+/)
+    .filter(sentence => !blocked.some(pattern => pattern.test(sentence)))
+    .join(' ')
+    .trim();
+
+  const visit = (value: any): any => {
+    if (typeof value === 'string') return scopeText(value);
+    if (Array.isArray(value)) return value.map(visit).filter(item => item !== '');
+    if (value && typeof value === 'object') {
+      return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, visit(item)]));
+    }
+    return value;
+  };
+
+  return visit(data);
 }
 
 function setGuidanceValidation(guidance: ClaudeGuidance, validationResult: ValidationResult): void {
@@ -488,6 +602,7 @@ function buildUserPrompt(caseDetails: CaseDetails, locusContext?: string | null)
   const collateralBlock = buildCollateralConsequenceContextBlock(
     sanitizeInput(caseDetails.jurisdiction, 100)
   );
+  const selectedChargeScope = buildSelectedChargeScope(caseDetails);
 
   // Detect drug-related charges to surface treatment enrollment guidance
   const isDrugCase = !chargesUnknown && /drug|narcotic|controlled.?substance|marijuana|cannabis|cocaine|methamphetamine|heroin|fentanyl|opioid|possession.{0,20}substance/i.test(chargesText);
@@ -516,6 +631,8 @@ The user exported guidance before selecting a case stage. Despite the system pro
 - Do NOT include any stage-specific procedural deadlines (arraignment windows, preliminary hearing timelines, speedy trial clocks, discovery cutoffs). These all depend on a confirmed case stage and fabricating them is harmful.
 - You MAY include one entry in deadlines only if there is a concrete, universally applicable time-sensitive action (e.g. a DMV hearing window for DUI that runs from the arrest date, not the case stage). Use priority "important" and add a note that the user should confirm the exact deadline with an attorney.
 - In the overview and immediateActions, note clearly that the person has not yet selected a case stage and should do so to receive precise deadline guidance.` : ''}`;
+
+  prompt += `\n\nSELECTED CHARGE SCOPE — HARD LIMIT:\n${selectedChargeScope}`;
 
   // Background context for collateral consequences
   const backgroundLines: string[] = [];
@@ -650,6 +767,7 @@ function generateCacheKey(caseDetails: CaseDetails): string {
     hasMinorChildren: caseDetails.hasMinorChildren,
     hasProfessionalLicense: caseDetails.hasProfessionalLicense,
     hasHousingAssistance: caseDetails.hasHousingAssistance,
+    schoolZoneStatus: caseDetails.schoolZoneStatus,
   }));
   return hash.digest('hex');
 }
@@ -1062,6 +1180,8 @@ export async function generateClaudeGuidance(
       throw new Error(`Failed to parse Claude response as JSON: ${parseError instanceof Error ? parseError.message : 'Unknown parse error'}. Response preview: ${responseText.slice(0, 200)}...`);
     }
 
+    parsedData = scopeGuidanceToSelectedCharges(parsedData, processedDetails);
+
     // Validate response structure
     validateClaudeResponse(parsedData);
 
@@ -1311,6 +1431,8 @@ export async function streamClaudeGuidance(
         `Received ${fullText.length} chars. Preview: ${fullText.slice(0, 200)}...`
       );
     }
+
+    parsedData = scopeGuidanceToSelectedCharges(parsedData, processedDetails);
 
     validateClaudeResponse(parsedData);
 
