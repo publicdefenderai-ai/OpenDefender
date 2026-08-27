@@ -103,6 +103,21 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **To update:** For a given state, cross-reference the synthesized charges against the state's current criminal code via its official legislature website. Any corrections to statute citations or penalty ranges should be applied in `shared/criminal-charges.ts`.
 
+**California authority database:** `server/data/california-source-database-seed.ts`
+and the `statute_sources`, `statute_source_snapshots`, `statute_charge_links`,
+and `statute_ingestion_runs` tables store narrow, reference-only provenance for
+the selectable California canonical records. The initial release does not
+automatically crawl or copy California Legislative Information text because the
+site's crawler policy disallows it. It stores official URLs, exact citations
+and subdivisions, retrieval dates, effective-date evidence, and
+`reference_metadata` SHA-256 fingerprints. Reference-only imports leave
+retrieval/check timestamps null and record a separate manifest-import time;
+they do not claim that a source was freshly retrieved or verified. Changed
+references create a review queue entry and do not silently replace the
+currently linked snapshot.
+OpenLaws is explicitly excluded from this database's retrieval and fallback
+paths. See `docs/citation-research/california-source-database.md`.
+
 ---
 
 ## 2b. Citation Verification — State Sentencing Commission Offense Tables

@@ -18,6 +18,7 @@ import { getChargeById, getChargesByJurisdiction, getSelectableCharges, chargeCa
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
+import { californiaSourceDatabase } from "./services/california-source-database";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
@@ -456,6 +457,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Current database-backed provenance for one selectable California charge.
+  // This remains separate from the selector response so a missing/unmigrated
+  // source database can never weaken the canonical charge boundary.
+  app.get("/api/criminal-charges/:chargeId/sources", searchRateLimiter, async (req, res) => {
+    try {
+      const provenance = await californiaSourceDatabase.getChargeProvenance(req.params.chargeId);
+      if (!provenance) {
+        return res.status(404).json({ success: false, error: "Selectable California charge not found" });
+      }
+      res.json({ success: true, provenance });
+    } catch (error) {
+      errLog("Failed to fetch California charge provenance", error);
+      res.status(500).json({ success: false, error: "Failed to fetch California charge provenance" });
+    }
+  });
+
   // Legal Aid Organizations Proximity Search API - Find organizations near a ZIP code
   app.get("/api/legal-aid-organizations/proximity", async (req, res) => {
     try {
@@ -801,6 +818,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Statute Database Seeding endpoints (must come before :jurisdiction)
+  // California's narrow authority database uses official references and
+  // versioned fingerprints; it deliberately does not call OpenLaws.
+  app.post("/api/statutes/sources/california/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await californiaSourceDatabase.seed();
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("California source database seeding failed", error);
+      res.status(500).json({ success: false, error: "California source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/california/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await californiaSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch California source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch California source database status" });
+    }
+  });
+
   // Seed database with stateStatutesSeed data
   // SECURITY: Protected with admin auth and rate limiting
   app.post("/api/statutes/seed", adminRateLimiter, requireAdminAuth, async (req, res) => {

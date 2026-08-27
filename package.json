@@ -16,6 +16,7 @@
     "audit:dependencies": "npm audit --omit=dev --audit-level=moderate",
     "release:verify": "npm run check && npm run audit:dependencies && npm run test:e2e:release",
     "db:push": "drizzle-kit push",
+    "db:seed:california": "tsx scripts/data-review/seed-california-source-database.ts",
     "review:detention": "tsx scripts/data-review/check-detention-facilities.ts",
     "review:consulates": "tsx scripts/data-review/check-consulates.ts",
     "review:legal-aid": "tsx scripts/data-review/check-legal-aid.ts",
