@@ -58,7 +58,15 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
-import { criminalCharges, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
+import {
+  getInstructionRef,
+  getInstructionUrl,
+  getInstructionPaywall,
+} from "@shared/criminal-charges";
+import {
+  resolveGuidanceCharge,
+  type GuidanceChargeClassification,
+} from "@shared/guidance-charge-resolution";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { MockQAList } from "@/components/legal/mock-qa-section";
@@ -549,14 +557,7 @@ function YourChargesSection({
   chargeClassifications,
   jurisdiction,
 }: {
-  chargeClassifications?: Array<{
-    id?: string;
-    name: string;
-    classification: string;
-    /** Internal/legacy field — NOT rendered to users. Only used for DB charge lookup fallback.
-     *  User-visible statute references come from getVerifiedCitation() on the matched DB entry. */
-    code: string;
-  }>;
+  chargeClassifications?: GuidanceChargeClassification[];
   jurisdiction?: string;
 }) {
   const { t, i18n } = useTranslation();
@@ -566,15 +567,19 @@ function YourChargesSection({
   }
 
   // Get plain-language explanations for each charge.
-  // Also look up the original DB entry to carry through dataConfidence and
+  // Resolve the canonical entry to carry through dataConfidence and
   // statuteCitations — required for the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
-    const explanation = getChargeExplanation(classification.name, jurisdiction, i18n.language);
-    // Prefer lookup by unique charge ID (when the backend includes it); fall back
-    // to statute code for backwards-compatibility with older stored guidance records.
-    const dbCharge = classification.id
-      ? criminalCharges.find(c => c.id === classification.id)
-      : criminalCharges.find(c => c.code === classification.code);
+    const dbCharge = resolveGuidanceCharge(classification, jurisdiction);
+    const isCalifornia = jurisdiction?.toUpperCase() === 'CA';
+    const explanation = isCalifornia && !dbCharge
+      ? undefined
+      : getChargeExplanation(
+          dbCharge?.name ?? classification.name,
+          jurisdiction,
+          i18n.language,
+          dbCharge?.id,
+        );
     return {
       name: formatChargeName(classification.name),
       id: classification.id,
@@ -586,6 +591,7 @@ function YourChargesSection({
       instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
       instructionUrl: dbCharge ? getInstructionUrl(dbCharge) : undefined,
       instructionPaywall: dbCharge ? getInstructionPaywall(dbCharge) : undefined,
+      needsReselection: Boolean(jurisdiction?.toUpperCase() === 'CA' && !dbCharge),
       /** True when the plain-language explanation itself is pending attorney review.
        *  Driven by explanation.pendingAttorneyReview — an explicit per-entry flag
        *  distinct from dataConfidence (which reflects statutory-source quality and
@@ -680,9 +686,41 @@ function YourChargesSection({
               </div>
             )}
 
-            {/* Plain Summary - use explanation or fallback */}
+             {charge.needsReselection && (
+               <Alert
+                 variant="default"
+                 className="border-amber-300 bg-amber-50 text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200"
+                 data-testid={`charge-reselection-warning-${index}`}
+               >
+                 <AlertTriangle className="h-4 w-4" />
+                 <AlertDescription>
+                   <span className="font-semibold">
+                     {i18n.language === 'es'
+                       ? 'Se necesita volver a seleccionar el cargo.'
+                       : i18n.language === 'zh'
+                         ? '需要重新选择罪名。'
+                         : 'Charge selection needs to be confirmed.'}
+                   </span>{' '}
+                   {i18n.language === 'es'
+                     ? 'Este registro histórico no coincide con un cargo de California verificable. Seleccione el cargo exacto de la lista actual o pida ayuda a un abogado.'
+                     : i18n.language === 'zh'
+                       ? '此历史记录无法与可核实的加州罪名匹配。请从当前列表中选择确切罪名，或向律师寻求帮助。'
+                       : 'This historical record does not match a verified California charge. Choose the exact charge from the current list or ask an attorney for help.'}
+                 </AlertDescription>
+               </Alert>
+             )}
+
+             {/* Plain Summary - use explanation or fallback */}
             <p className="text-sm text-foreground leading-relaxed">
-              {charge.explanation?.plainSummary || getFallbackDescription(charge)}
+               {charge.explanation?.plainSummary || (
+                 charge.needsReselection
+                   ? (i18n.language === 'es'
+                     ? 'No podemos mostrar información específica de este cargo hasta confirmar el cargo exacto de California.'
+                     : i18n.language === 'zh'
+                       ? '在确认确切的加州罪名之前，我们无法显示此罪名的具体信息。'
+                       : 'We cannot show charge-specific information until the exact California charge is confirmed.')
+                   : getFallbackDescription(charge)
+               )}
             </p>
 
             {/* Jurisdiction-specific detail takes priority over the generic degree context

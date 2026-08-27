@@ -1425,4 +1425,25 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
     },
   },
 
+  "fare-evasion": {
+    es: {
+      draft: true,
+      plainSummary: `El Código Penal de California § 640(c) aborda evitar pagar la tarifa del transporte público en las circunstancias cubiertas por la ley. Importan la conducta exacta, el lugar y la subdivisión aplicable.`,
+      keyTerms: [
+        { plainMeaning: `El pago requerido para usar el servicio de transporte público cubierto.`, example: `Entrar o viajar en un sistema de transporte sin pagar la tarifa requerida` },
+        { plainMeaning: `La conducta y el contexto de transporte específicos que deben coincidir con la subdivisión acusada.`, example: `El documento de acusación identifica el servicio y la conducta alegados bajo § 640(c)` },
+      ],
+      degreeContext: `La clasificación y las consecuencias dependen de la disposición legal exacta y de los hechos. Revise los documentos de acusación y la ley vigente con un abogado defensor penal de California.`,
+    },
+    zh: {
+      draft: true,
+      plainSummary: `加利福尼亚州《刑法典》第640(c)条涉及在法律规定的情况下逃避支付公共交通费用。具体行为、地点和适用的分款都很重要。`,
+      keyTerms: [
+        { plainMeaning: `使用相关公共交通服务所需支付的费用。`, example: `未支付所需车费就进入或乘坐交通系统` },
+        { plainMeaning: `检方必须与所指控分款相对应的具体行为和交通场景。`, example: `起诉文件根据第640(c)条列明所涉交通服务和行为` },
+      ],
+      degreeContext: `分类和后果取决于具体法律规定和事实。请与加利福尼亚州刑事辩护律师一起核对起诉文件和现行法律。`,
+    },
+  },
+
 };

@@ -14,7 +14,7 @@ import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache, getGuidanceCacheKey, startOptionalSourceEnrichment } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
-import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, normalizeChargeId, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, getSelectableCharges, chargeCategories, normalizeChargeId, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -371,7 +371,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       let charges = jurisdiction 
         ? getChargesByJurisdiction(jurisdiction as string)
-        : criminalCharges;
+        : getSelectableCharges();
       
       // Filter by search term (search in both English and Spanish)
       if (search && typeof search === 'string' && search.length > 100) {
@@ -436,6 +436,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           category: charge.category,
           description,
           maxPenalty: charge.maxPenalty,
+          ...(charge.sourceUrls?.length ? { sourceUrls: charge.sourceUrls } : {}),
           ...(instructionRef ? { instructionRef } : {}),
           ...(instructionUrl ? { instructionUrl } : {}),
         };
@@ -447,7 +448,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         count: simplifiedCharges.length,
         totalAvailable: jurisdiction 
           ? getChargesByJurisdiction(jurisdiction as string).length 
-          : criminalCharges.length
+          : getSelectableCharges().length
       });
     } catch (error) {
       errLog("Failed to fetch criminal charges", error);
@@ -1353,7 +1354,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
       const resolvedChargeInput = resolveChargeInput(validatedData.charges);
-      if (resolvedChargeInput.hasUnresolved && resolvedChargeInput.ids.length === 0 && req.body.chargesUnknown !== true) {
+      if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
         return res.status(400).json({
           success: false,
           error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
@@ -1463,7 +1464,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
       const resolvedChargeInput = resolveChargeInput(validatedData.charges);
-      if (resolvedChargeInput.hasUnresolved && resolvedChargeInput.ids.length === 0 && req.body.chargesUnknown !== true) {
+      if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
         sendEvent({
           type: 'error',
           error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
@@ -1619,7 +1620,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
       const resolvedChargeInput = resolveChargeInput(validatedData.charges);
-      if (resolvedChargeInput.hasUnresolved && resolvedChargeInput.ids.length === 0 && req.body.chargesUnknown !== true) {
+      if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
         return res.status(400).json({
           success: false,
           error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
@@ -3463,6 +3464,7 @@ async function generateLegalGuidance(caseData: any) {
       }
       const verifiedCode = getVerifiedCitation(charge);
       return {
+        id: charge.id,
         name: charge.name,
         classification: charge.category,
         // code carries the verified citation when available (used by AI prompt)

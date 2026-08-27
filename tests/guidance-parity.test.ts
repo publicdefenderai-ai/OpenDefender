@@ -80,7 +80,7 @@ function completeGuidance(): GuidanceViewModel {
     courtPreparation: ['PARITYCOURTPREP'],
     avoidActions: ['PARITY_AVOID'],
     timeline: [{ stage: 'PARITY_STAGE', description: 'PARITY_TIMELINE_DESCRIPTION', timeframe: 'PARITY_STAGE_TIME', completed: false }],
-    chargeClassifications: [{ name: 'parity-charge', classification: 'felony', code: '' }],
+     chargeClassifications: [{ id: 'ca-credit-card-fraud', name: 'parity-charge', classification: 'felony', code: '484g' }],
     collateralConsequences: [{ category: 'other', consequence: 'PARITY_COLLATERAL', timing: 'PARITY_COLLATERAL_TIME', actionNote: 'PARITY_COLLATERAL_ACTION' }],
     mockQA: [{ question: 'PARITY_QUESTION', suggestedResponse: 'PARITY_RESPONSE', explanation: 'PARITY_EXPLANATION' }],
     uncertainties: [{ area: 'PARITY_UNCERTAINTY', note: 'PARITY_UNCERTAINTY_NOTE' }],

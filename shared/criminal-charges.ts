@@ -176,6 +176,8 @@ export interface CriminalCharge {
   /** Verified statute citations in standard legal format, e.g. "Ala. Code § 13A-6-2".
    *  Only populated after verification. Use getVerifiedCitation() before displaying. */
   statuteCitations?: string[];
+  /** All primary statute URLs supporting a canonical multi-section record. */
+  sourceUrls?: string[];
   /** Citation verification status. Absent or 'unverified' = never checked.
    *  Only 'high' entries should have citations shown to users. */
   dataConfidence?: 'unverified' | 'low' | 'medium' | 'high';
@@ -189,9 +191,22 @@ export interface CriminalCharge {
 // Always use these functions — never access charge.statuteCitations directly in UI code.
 
 import { CHARGE_CITATIONS } from './criminal-charge-citations';
+import {
+  assertCaliforniaInventoryComplete,
+  getCaliforniaCanonicalCharge,
+  getCaliforniaCanonicalCharges,
+  getCaliforniaCitation,
+  getCaliforniaInstruction,
+  getCaliforniaLegacyDisposition,
+  getCaliforniaSourceUrl,
+  isCaliforniaSelectableId,
+} from './california-authority';
 
 /** True only when the entry has a 'high' confidence citation (overlay or inline). */
 export function isCitationVerified(charge: CriminalCharge): boolean {
+  if (charge.jurisdiction === 'CA') {
+    return Boolean(getCaliforniaCitation(charge.id));
+  }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (overlay) return overlay.confidence === 'high';
   return charge.dataConfidence === 'high' && (charge.statuteCitations?.length ?? 0) > 0;
@@ -201,6 +216,9 @@ export function isCitationVerified(charge: CriminalCharge): boolean {
  *  Checks the overlay file first, then inline statuteCitations[].
  *  Use this instead of accessing charge.statuteCitations directly in UI code. */
 export function getVerifiedCitation(charge: CriminalCharge): string | null {
+  if (charge.jurisdiction === 'CA') {
+    return getCaliforniaCitation(charge.id);
+  }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (overlay && overlay.confidence === 'high') return overlay.citation;
   if (charge.dataConfidence === 'high' && (charge.statuteCitations?.length ?? 0) > 0) {
@@ -211,6 +229,9 @@ export function getVerifiedCitation(charge: CriminalCharge): string | null {
 
 /** True if this charge has an entry in the citation overlay. */
 export function isChargeInOverlay(charge: CriminalCharge): boolean {
+  if (charge.jurisdiction === 'CA') {
+    return Boolean(getCaliforniaCitation(charge.id));
+  }
   return charge.id in CHARGE_CITATIONS;
 }
 
@@ -232,6 +253,9 @@ export function isChargeInOverlay(charge: CriminalCharge): boolean {
  *  - This is correct behavior, not a gap — see getInstructionUrl() for the full policy.
  */
 export function getVerifiedSourceUrl(charge: CriminalCharge): string | null {
+  if (charge.jurisdiction === 'CA') {
+    return getCaliforniaSourceUrl(charge.id);
+  }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (!overlay || overlay.confidence !== 'high') return null;
   const url = overlay.sourceUrl;
@@ -265,6 +289,9 @@ export function getPrimaryStatuteIndex(charge: CriminalCharge): number {
  * citation accuracy — displayed in the UI to help users identify the right source.
  */
 export function getInstructionRef(charge: CriminalCharge): string | null {
+  if (charge.jurisdiction === 'CA') {
+    return getCaliforniaInstruction(charge.id)?.ref ?? null;
+  }
   return CHARGE_CITATIONS[charge.id]?.instructionRef ?? null;
 }
 
@@ -295,6 +322,9 @@ const CALCRIM_LANDING_URL = "https://www.courts.ca.gov/partners/california-jury-
  *          COLJI instructionRef text is shown in UI — no View Law link is correct behavior
  */
 export function getInstructionUrl(charge: CriminalCharge): string | null {
+  if (charge.jurisdiction === 'CA') {
+    return getCaliforniaInstruction(charge.id)?.url ?? null;
+  }
   const explicit = CHARGE_CITATIONS[charge.id]?.instructionUrl;
   if (explicit) return explicit;
 
@@ -331,6 +361,7 @@ const INSTRUCTION_SET_PAYWALL: Record<string, string> = {
  * Returns null for free/open sets or charges with no instructionRef.
  */
 export function getInstructionPaywall(charge: CriminalCharge): string | null {
+  if (charge.jurisdiction === 'CA') return null;
   const ref = CHARGE_CITATIONS[charge.id]?.instructionRef;
   if (!ref) return null;
   for (const [prefix, vendor] of Object.entries(INSTRUCTION_SET_PAYWALL)) {
@@ -94653,6 +94684,13 @@ export const chargeCategories: Record<string, string[]> = {
  */
 export const CHARGE_ID_ALIASES: Record<string, string> = {
   'ny-possession-with-intent-to-distribute': 'ny-possession-of-controlled-substance-third-degree',
+  'ca-felony-murder': 'ca-murder-in-the-first-degree',
+  'ca-domestic-violence-assault': 'ca-domestic-battery',
+  'ca-bank-robbery': 'ca-robbery-in-the-first-degree',
+  'ca-drug-trafficking': 'ca-distribution-of-controlled-substance',
+  'ca-petty-theft-misdemeanor': 'ca-petty-theft',
+  'ca-bad-checks': 'ca-check-fraud',
+  'ca-noise-violation': 'ca-disturbing-the-peace',
 };
 
 /**
@@ -94680,7 +94718,8 @@ export function normalizeChargeId(id: string): string {
 }
 
 export function isChargeIdRequiringReselection(id: string): boolean {
-  return NY_CHARGE_IDS_REQUIRING_RESELECTION.has(id);
+  return NY_CHARGE_IDS_REQUIRING_RESELECTION.has(id) ||
+    getCaliforniaLegacyDisposition(id)?.disposition === 'reselection-required';
 }
 
 export function normalizeChargeIds(ids: string[]): string[];
@@ -94717,12 +94756,45 @@ chargeCategories['NY'] = Array.from(new Set([
   ...NY_DRUG_OFFENSE_IDS,
 ])).filter(id => criminalCharges.some(charge => charge.id === id));
 
+// The national category table is intentionally generated from the legacy
+// catalog. Replace California's entries with the approved release set so
+// enhancements, proceedings, local rules, and unresolved records cannot leak
+// into selector/category surfaces.
+const currentCaliforniaIds = criminalCharges
+  .filter((charge) => charge.jurisdiction === 'CA')
+  .map((charge) => charge.id);
+assertCaliforniaInventoryComplete(currentCaliforniaIds);
+chargeCategories['CA'] = getCaliforniaCanonicalCharges(
+  criminalCharges.filter((charge) => charge.jurisdiction === 'CA'),
+).map((charge) => charge.id);
+
 // Helper functions for charge lookup
 export function getChargeById(id: string): CriminalCharge | undefined {
-  return criminalCharges.find(charge => charge.id === normalizeChargeId(id));
+  const normalizedId = normalizeChargeId(id);
+  const charge = criminalCharges.find(charge => charge.id === normalizedId);
+  if (!charge) return undefined;
+  if (charge.jurisdiction === 'CA') {
+    return isCaliforniaSelectableId(normalizedId)
+      ? getCaliforniaCanonicalCharge(charge)
+      : undefined;
+  }
+  return charge;
 }
 
 export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[] {
-  return criminalCharges.filter(charge => charge.jurisdiction === jurisdiction);
+  const normalizedJurisdiction = jurisdiction.toUpperCase().trim();
+  const charges = criminalCharges.filter(charge => charge.jurisdiction === normalizedJurisdiction);
+  if (normalizedJurisdiction === 'CA') {
+    return getCaliforniaCanonicalCharges(charges);
+  }
+  return charges;
+}
+
+/** Charges safe to expose on an unscoped selector/search surface. */
+export function getSelectableCharges(): CriminalCharge[] {
+  return [
+    ...criminalCharges.filter((charge) => charge.jurisdiction !== 'CA'),
+    ...getChargesByJurisdiction('CA'),
+  ];
 }
 

@@ -3,7 +3,7 @@ import { Router as ExpressRouter } from "express";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { search, getSearchIndexStats } from "./services/search-indexer";
-import { criminalCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
+import { getSelectableCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
 import { openApiSpec } from "./openapi";
 import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
@@ -106,7 +106,7 @@ export function registerV1Routes(app: Express): void {
       const limit = Math.min(parseInt(req.query.limit as string) || 50, 100);
       const offset = parseInt(req.query.offset as string) || 0;
 
-      let filtered = criminalCharges;
+      let filtered = getSelectableCharges();
 
       if (jurisdiction) {
         filtered = filtered.filter(c => 
@@ -240,7 +240,7 @@ export function registerV1Routes(app: Express): void {
       const format = (req.query.format as string) || 'json';
       const jurisdiction = req.query.jurisdiction as string;
 
-      let data = criminalCharges;
+      let data = getSelectableCharges();
       if (jurisdiction) {
         data = data.filter(c => 
           c.jurisdiction.toLowerCase() === jurisdiction.toLowerCase()
@@ -286,7 +286,7 @@ export function registerV1Routes(app: Express): void {
         success: true,
         totalDocuments: stats.totalDocuments,
         byType: stats.documentsByType,
-        jurisdictions: new Set(criminalCharges.map(charge => charge.jurisdiction)).size
+        jurisdictions: new Set(getSelectableCharges().map(charge => charge.jurisdiction)).size
       });
     } catch (error) {
       devLog('api-v1', `Stats error: ${error}`);

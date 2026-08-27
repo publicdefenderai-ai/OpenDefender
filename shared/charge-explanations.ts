@@ -1,6 +1,7 @@
 import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail } from "./charge-explanation-jurisdiction-overlay";
 import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
 import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
+import { getCaliforniaExplanationSlug } from "./california-authority";
 
 export interface LegalTermExplanation {
   term: string;
@@ -3592,8 +3593,37 @@ export const chargeExplanations: ChargeExplanation[] = [
     dataConfidence: "medium",
     lastVerified: "2026-08",
     notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge and California-specific pattern jury instructions (CALCRIM No. 1970); now sourced against the 10 anchor jurisdictions' bad-check statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. The plainSummary/keyTerms/degreeContext text remains California-specific (§§ 476, 476a); advocates in other anchor states should rely on the cited statute for their state: every anchor criminalizes knowingly passing a check without sufficient funds, but grading differs (NY § 190.05 is a flat class B misdemeanor; FL § 832.05 escalates at $150; VA § 18.2-181 becomes felony larceny at $1,000; OH § 2913.11 escalates at $1,000/$7,500/$150,000; GA § 16-9-20 and NC § 14-107 grade by amount with low-value misdemeanors; NJ 2C:21-5 grades from disorderly-persons up at $200/$1,000/$75,000; AZ § 13-1807 is a class 1 misdemeanor, felony at $5,000+ if restitution unpaid; IL grades under its general deceptive-practices ladder). Several anchors (FL, VA, NC, GA) build in statutory notice/cure presumptions similar to California's 'make good' practice. Key remaining risk areas: (1) the entry should clearly state its narrative applies only to California (separate task exists for that display issue); (2) the Prop 47 $950 threshold should be re-verified against post-2024 amendments (Prop 36 (2024) added repeat-theft carve-outs); (3) civil compromise (Pen. § 1377) availability has been narrowed by case law; (4) the CA 'make good' letter/cure practice is not addressed in the entry text. See docs/attorney-review-charge-explanations.md.",
-  }
-];
+   },
+   {
+     chargePattern: /fare.evasion|evasion.of.payment|public.transit.fare/i,
+     slug: "fare-evasion",
+     plainSummary: "California Penal Code § 640(c) addresses avoiding payment of a public-transit fare in the circumstances covered by the statute. The exact conduct, location, and applicable subdivision matter.",
+     keyTerms: [
+       {
+         term: "Required fare",
+         plainMeaning: "The payment required to use the covered public transportation service.",
+         example: "Entering or riding a transit system without paying the fare required for that service",
+       },
+       {
+         term: "Statutory circumstance",
+         plainMeaning: "The specific conduct and transit setting the prosecution must match to the charged subdivision.",
+         example: "The charging document identifies the transit service and conduct alleged under § 640(c)",
+       },
+     ],
+     degreeContext: "The classification and consequences depend on the exact statutory provision and facts. Check the charging document and current statute with a California criminal-defense attorney.",
+     sources: [
+       {
+         citation: "Cal. Penal Code § 640(c)",
+         jurisdiction: "CA",
+         url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=640.",
+       },
+     ],
+     dataConfidence: "medium",
+     lastVerified: "2026-08",
+     pendingAttorneyReview: true,
+     notes: "Sourced to the current California statute; not reviewed by a licensed criminal-defense attorney.",
+   },
+ ];
 
 // Full state name -> postal code, matching the normalization already used in
 // server/services/legal-accuracy-validator.ts and shared/jurisdiction-procedure-rules.ts.
@@ -3646,12 +3676,20 @@ export interface ChargeExplanationWithJurisdiction extends ChargeExplanation {
 export function getChargeExplanation(
   chargeName: string,
   jurisdiction?: string,
-  language?: string
+  language?: string,
+  canonicalChargeId?: string,
 ): ChargeExplanationWithJurisdiction | null {
   const normalizedName = chargeName.toLowerCase().trim();
+  const exactSlug =
+    jurisdiction?.toUpperCase().trim() === "CA" && canonicalChargeId
+      ? getCaliforniaExplanationSlug(canonicalChargeId)
+      : undefined;
 
   for (const explanation of chargeExplanations) {
-    if (explanation.chargePattern.test(normalizedName)) {
+    // California canonical records join by ID first.  The name regex remains
+    // available for generic callers and for non-California legacy surfaces.
+    if (exactSlug && explanation.slug !== exactSlug) continue;
+    if (exactSlug || explanation.chargePattern.test(normalizedName)) {
       // Resolve jurisdiction overlay first
       let resolved: ChargeExplanationWithJurisdiction = explanation;
       if (jurisdiction) {

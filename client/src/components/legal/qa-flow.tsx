@@ -13,7 +13,7 @@ import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, Ale
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories, normalizeChargeIds, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
+import { getChargeById as getCatalogChargeById, getChargesByJurisdiction, chargeCategories, normalizeChargeIds, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall, isChargeIdRequiringReselection } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import { shouldShowCaseStageWarning, QA_FLOW_STATUS_STEP_INDEX } from "./qa-flow-guard";
@@ -486,7 +486,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     : categoryFiltered;
 
   const unresolvedChargeIds = formData.charges.filter(
-    (id: string) => !criminalCharges.some(charge => charge.id === id),
+    (id: string) => isChargeIdRequiringReselection(id) || !getCatalogChargeById(id),
   );
 
   const handleContinue = () => {
@@ -569,7 +569,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   };
   
   const getChargeById = (id: string) => {
-    return criminalCharges.find(charge => charge.id === id);
+    return getCatalogChargeById(id);
   };
 
   const handleChargesUnknownToggle = () => {

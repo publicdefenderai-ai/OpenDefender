@@ -3,7 +3,7 @@ import { LEGAL_SYNONYMS } from "@shared/search-types";
 import { legalGlossaryTerms } from "../../shared/legal-glossary-data";
 import { diversionPrograms } from "../../shared/diversion-programs-data";
 import { expungementRules } from "../../shared/expungement-data";
-import { criminalCharges, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "@shared/criminal-charges";
+import { getSelectableCharges, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "@shared/criminal-charges";
 import { GENERIC_MOCK_QA, PROCEEDING_LABELS, type ProceedingType } from "@shared/mock-qa";
 import { devLog } from "../utils/dev-logger";
 
@@ -361,7 +361,8 @@ export function buildSearchIndex(): void {
   }
   devLog('search', `Indexed ${legalGlossaryTerms.length} glossary terms`);
 
-  for (const charge of criminalCharges) {
+  const selectableCharges = getSelectableCharges();
+  for (const charge of selectableCharges) {
     const instructionRef = getInstructionRef(charge);
     const instructionUrl = getInstructionUrl(charge);
     const citation = getVerifiedCitation(charge) ?? null;
@@ -382,7 +383,7 @@ export function buildSearchIndex(): void {
       ...(instructionUrl ? { instructionUrl } : {}),
     });
   }
-  devLog('search', `Indexed ${criminalCharges.length} criminal charges`);
+  devLog('search', `Indexed ${selectableCharges.length} criminal charges`);
 
   for (const program of diversionPrograms) {
     documents.push({
