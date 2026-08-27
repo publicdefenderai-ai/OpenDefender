@@ -23,6 +23,7 @@ interface ChargesApiResponse {
 let response: ChargesApiResponse;
 let serverAvailable = true;
 let nyResponse: ChargesApiResponse;
+let nyExportResponse: ChargeApiItem[];
 
 beforeAll(async () => {
   try {
@@ -59,6 +60,13 @@ beforeAll(async () => {
   }
 }, 15000);
 
+beforeAll(async () => {
+  if (!serverAvailable) return;
+  const res = await fetch(`${BASE_URL}/api/v1/export/charges?jurisdiction=NY`);
+  if (!res.ok) throw new Error(`GET /api/v1/export/charges?jurisdiction=NY returned ${res.status}`);
+  nyExportResponse = (await res.json()) as ChargeApiItem[];
+});
+
 describe('GET /api/criminal-charges?jurisdiction=NY — canonical possession catalog', () => {
   it('exposes all six NY controlled-substance possession degrees with official names', () => {
     if (!serverAvailable) return;
@@ -88,6 +96,24 @@ describe('GET /api/criminal-charges?jurisdiction=NY — canonical possession cat
     if (!serverAvailable) return;
     expect(nyResponse.charges.some(item => item.id === 'ny-unlawful-possession-of-cannabis-second-degree')).toBe(false);
     expect(nyResponse.charges.some(item => item.name === 'Personal Use of Cannabis')).toBe(false);
+  });
+});
+
+describe('GET /api/v1/export/charges?jurisdiction=NY — runtime eligibility contract', () => {
+  it('exports only NY charges in the completed manifest/current-link boundary', () => {
+    if (!serverAvailable) return;
+    expect(Array.isArray(nyExportResponse)).toBe(true);
+    expect(nyExportResponse.some((item) => item.id === 'ny-auto-burglary')).toBe(false);
+    expect(nyExportResponse.some((item) => item.id === 'ny-grand-theft-in-the-first-degree')).toBe(true);
+  });
+
+  it('applies the same boundary to CSV exports', async () => {
+    if (!serverAvailable) return;
+    const res = await fetch(`${BASE_URL}/api/v1/export/charges?jurisdiction=NY&format=csv`);
+    expect(res.ok).toBe(true);
+    const csv = await res.text();
+    expect(csv).toContain('ny-grand-theft-in-the-first-degree');
+    expect(csv).not.toContain('ny-auto-burglary');
   });
 });
 
@@ -269,6 +295,36 @@ describe('GET /api/v1/search?q=robbery&types=charge — instructionRef/instructi
       flRobbery!.document.instructionUrl,
       'instructionUrl missing from FL robbery v1 search result — field dropped by search indexer or v1 serialization',
     ).toBeTruthy();
+  });
+});
+
+describe('GET /api/v1/search — runtime New York eligibility contract', () => {
+  it('does not return a withheld NY charge while retaining an approved charge', async () => {
+    if (!serverAvailable) return;
+    const withheld = await fetch(`${BASE_URL}/api/v1/search?q=minor&types=charge&limit=50`);
+    expect(withheld.ok).toBe(true);
+    const withheldPayload = await withheld.json() as V1SearchResponse;
+    expect(withheldPayload.results.some((result) => result.document.id === 'charge-ny-minor-in-possession')).toBe(false);
+
+    const retained = await fetch(`${BASE_URL}/api/v1/search?q=grand%20larceny&types=charge&limit=50`);
+    expect(retained.ok).toBe(true);
+    const retainedPayload = await retained.json() as V1SearchResponse;
+    expect(retainedPayload.results.some((result) => result.document.id === 'charge-ny-grand-theft-in-the-first-degree')).toBe(true);
+  });
+});
+
+describe('GET /api/site-search — runtime New York eligibility contract', () => {
+  it('does not return a withheld NY charge while retaining an approved charge', async () => {
+    if (!serverAvailable) return;
+    const withheld = await fetch(`${BASE_URL}/api/site-search?q=minor&types=charge&limit=50`);
+    expect(withheld.ok).toBe(true);
+    const withheldPayload = await withheld.json() as V1SearchResponse;
+    expect(withheldPayload.results.some((result) => result.document.id === 'charge-ny-minor-in-possession')).toBe(false);
+
+    const retained = await fetch(`${BASE_URL}/api/site-search?q=grand%20larceny&types=charge&limit=50`);
+    expect(retained.ok).toBe(true);
+    const retainedPayload = await retained.json() as V1SearchResponse;
+    expect(retainedPayload.results.some((result) => result.document.id === 'charge-ny-grand-theft-in-the-first-degree')).toBe(true);
   });
 });
 

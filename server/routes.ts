@@ -19,6 +19,11 @@ import { translateChargeName, translateDescription } from "../shared/charge-tran
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
 import { californiaSourceDatabase } from "./services/california-source-database";
+import {
+  getCurrentNewYorkSelectableChargeIds,
+  newYorkSourceDatabase,
+} from "./services/new-york-source-database";
+import { fetchNewYorkAuthorityManifest } from "./services/new-york-authority-fetcher";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
@@ -373,6 +378,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       let charges = jurisdiction 
         ? getChargesByJurisdiction(jurisdiction as string)
         : getSelectableCharges();
+      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      const applyNewYorkEligibility = <T extends { jurisdiction: string; id: string }>(items: T[]) =>
+        items.filter((charge) =>
+          charge.jurisdiction !== "NY" || currentNewYorkSelectableIds.has(charge.id),
+        );
+      charges = applyNewYorkEligibility(charges);
       
       // Filter by search term (search in both English and Spanish)
       if (search && typeof search === 'string' && search.length > 100) {
@@ -447,9 +458,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true, 
         charges: simplifiedCharges,
         count: simplifiedCharges.length,
-        totalAvailable: jurisdiction 
-          ? getChargesByJurisdiction(jurisdiction as string).length 
-          : getSelectableCharges().length
+        totalAvailable: jurisdiction
+          ? applyNewYorkEligibility(getChargesByJurisdiction(jurisdiction as string)).length
+          : applyNewYorkEligibility(getSelectableCharges()).length
       });
     } catch (error) {
       errLog("Failed to fetch criminal charges", error);
@@ -457,19 +468,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Current database-backed provenance for one selectable California charge.
+  // Current database-backed provenance for one selectable California or NY charge.
   // This remains separate from the selector response so a missing/unmigrated
   // source database can never weaken the canonical charge boundary.
   app.get("/api/criminal-charges/:chargeId/sources", searchRateLimiter, async (req, res) => {
     try {
-      const provenance = await californiaSourceDatabase.getChargeProvenance(req.params.chargeId);
+      const normalizedCharge = getChargeById(req.params.chargeId);
+      const provenance = normalizedCharge?.jurisdiction === "NY"
+        ? await newYorkSourceDatabase.getChargeProvenance(normalizedCharge.id)
+        : normalizedCharge?.jurisdiction === "CA"
+          ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : null;
       if (!provenance) {
-        return res.status(404).json({ success: false, error: "Selectable California charge not found" });
+        return res.status(404).json({ success: false, error: "Selectable charge provenance not found" });
       }
       res.json({ success: true, provenance });
     } catch (error) {
-      errLog("Failed to fetch California charge provenance", error);
-      res.status(500).json({ success: false, error: "Failed to fetch California charge provenance" });
+      errLog("Failed to fetch charge provenance", error);
+      res.status(500).json({ success: false, error: "Failed to fetch charge provenance" });
     }
   });
 
@@ -730,6 +746,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const language = (lang === 'es' ? 'es' : lang === 'zh' ? 'zh' : 'en') as 'en' | 'es' | 'zh';
       const typeFilters = types ? (types as string).split(',') : undefined;
+      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
       
       const searchResult = search({
         query: query.trim(),
@@ -737,6 +754,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         filters: {
           types: typeFilters as any,
           jurisdiction: jurisdiction as string,
+          // The index is built from the static catalog; keep withheld NY
+          // charges out of site search and its totals as well.
+          chargeIds: [...currentNewYorkSelectableIds].map((id) => `charge-${id}`),
         },
         limit: limit ? parseInt(limit as string, 10) : 20,
         offset: offset ? parseInt(offset as string, 10) : 0,
@@ -837,6 +857,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch California source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch California source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/new-york/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await newYorkSourceDatabase.seed(await fetchNewYorkAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("New York source database seeding failed", error);
+      res.status(500).json({ success: false, error: "New York source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/new-york/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await newYorkSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch New York source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch New York source database status" });
     }
   });
 
@@ -1392,7 +1432,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
-      const resolvedChargeInput = resolveChargeInput(validatedData.charges);
+      const resolvedChargeInput = await resolveChargeInput(validatedData.charges);
       if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
         return res.status(400).json({
           success: false,
@@ -1502,7 +1542,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
-      const resolvedChargeInput = resolveChargeInput(validatedData.charges);
+      const resolvedChargeInput = await resolveChargeInput(validatedData.charges);
       if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
         sendEvent({
           type: 'error',
@@ -1658,7 +1698,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
-      const resolvedChargeInput = resolveChargeInput(validatedData.charges);
+      const resolvedChargeInput = await resolveChargeInput(validatedData.charges);
       if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
         return res.status(400).json({
           success: false,
@@ -3475,18 +3515,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
   return httpServer;
 }
 
-function resolveChargeInput(charges: string[] | string | undefined): {
+async function resolveChargeInput(charges: string[] | string | undefined): Promise<{
   ids: string[];
   hasUnresolved: boolean;
-} {
+}> {
   const normalized = Array.isArray(charges)
     ? normalizeChargeIds(charges)
     : normalizeChargeIds(charges ?? '');
   const ids = Array.isArray(normalized) ? normalized : [normalized];
-  const recognizedIds = ids.filter((id) => Boolean(id) && Boolean(getChargeById(id)));
+  const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+  const isRuntimeSelectable = (id: string) => {
+    const charge = getChargeById(id);
+    return Boolean(charge) && (
+      charge?.jurisdiction !== "NY" ||
+      currentNewYorkSelectableIds.has(id)
+    );
+  };
+  const recognizedIds = ids.filter((id) => Boolean(id) && isRuntimeSelectable(id));
   return {
     ids: recognizedIds,
-    hasUnresolved: ids.some((id) => Boolean(id) && !getChargeById(id)),
+    hasUnresolved: ids.some((id) => Boolean(id) && !isRuntimeSelectable(id)),
   };
 }
 

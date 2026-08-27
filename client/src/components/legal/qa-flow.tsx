@@ -464,9 +464,41 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
+  const [runtimeNewYorkCharges, setRuntimeNewYorkCharges] = useState<any[] | null>(null);
+  const isNewYork = formData.jurisdiction === "NY";
+
+  useEffect(() => {
+    if (!isNewYork) {
+      setRuntimeNewYorkCharges(null);
+      return;
+    }
+
+    let cancelled = false;
+    setRuntimeNewYorkCharges(null);
+    fetch("/api/criminal-charges?jurisdiction=NY&limit=500")
+      .then(async (response) => {
+        if (!response.ok) throw new Error(`NY charge lookup failed (${response.status})`);
+        const payload = await response.json();
+        if (!payload.success || !Array.isArray(payload.charges)) {
+          throw new Error("NY charge lookup returned an invalid response");
+        }
+        if (!cancelled) setRuntimeNewYorkCharges(payload.charges);
+      })
+      .catch(() => {
+        // Do not fall back to the static NY catalog: an unavailable or
+        // incomplete authority manifest must fail closed in the selector.
+        if (!cancelled) setRuntimeNewYorkCharges([]);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isNewYork]);
   
   // Get charges based on selected jurisdiction (includes both state and federal charges)
-  const availableCharges = getChargesByJurisdiction(formData.jurisdiction);
+  const availableCharges = isNewYork
+    ? (runtimeNewYorkCharges ?? [])
+    : getChargesByJurisdiction(formData.jurisdiction);
   
   const categoryFiltered = selectedCategory && selectedCategory !== 'all'
     ? availableCharges.filter(charge => 
@@ -481,14 +513,22 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const filteredCharges = chargeSearchQuery.trim()
     ? categoryFiltered.filter(charge => {
         const q = chargeSearchQuery.toLowerCase();
-        return charge.name.toLowerCase().includes(q) ||
-          charge.code.toLowerCase().includes(q) ||
-          charge.description.toLowerCase().includes(q);
+        const name = typeof charge.name === "string" ? charge.name : "";
+        const code = typeof charge.code === "string" ? charge.code : "";
+        const description = typeof charge.description === "string" ? charge.description : "";
+        return name.toLowerCase().includes(q) ||
+          code.toLowerCase().includes(q) ||
+          description.toLowerCase().includes(q);
       })
     : categoryFiltered;
 
   const unresolvedChargeIds = formData.charges.filter(
-    (id: string) => isChargeIdRequiringReselection(id) || !getCatalogChargeById(id),
+    (id: string) =>
+      isChargeIdRequiringReselection(id) ||
+      !getCatalogChargeById(id) ||
+      (isNewYork &&
+        runtimeNewYorkCharges !== null &&
+        !runtimeNewYorkCharges.some((charge) => charge.id === id)),
   );
 
   const handleContinue = () => {
@@ -817,7 +857,9 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               
               {totalFilteredCharges === 0 && (
                 <p className="text-sm text-muted-foreground text-center py-4">
-                  {t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
+                  {isNewYork && runtimeNewYorkCharges === null
+                    ? "Loading current New York charges…"
+                    : t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
                 </p>
               )}
 
@@ -1073,7 +1115,10 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         </Button>
         <Button
           onClick={handleContinue}
-          disabled={formData.charges.length === 0 && !formData.chargesUnknown}
+            disabled={
+              (formData.charges.length === 0 && !formData.chargesUnknown) ||
+              (isNewYork && runtimeNewYorkCharges === null)
+            }
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"
         >

@@ -65,6 +65,16 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **File:** `shared/criminal-charges.ts`
 
+### New York authority layer
+
+New York's current catalog is backed by the official New York State Senate
+Open Legislation API rather than the legacy in-place statute seeder. The
+versioned importer, source manifest, and disposition contract are documented
+in [`docs/citation-research/new-york-source-database.md`](docs/citation-research/new-york-source-database.md).
+Rows whose sections are missing or resolve to a materially different offense
+are withheld and require exact charge reselection; API verification is not
+attorney approval. OpenLaws is not used for New York retrieval or fallback.
+
 **Total charges:** 7,155 (verified April 2026 against live file) — original base charges plus phases 1–5 as described below. Note: the earlier figure of 7,579 cited in March 2026 did not match the live file; the correct count from the search indexer and direct file analysis is 7,155.
 
 **Phase breakdown:**

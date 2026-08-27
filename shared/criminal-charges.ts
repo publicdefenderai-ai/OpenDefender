@@ -94710,7 +94710,112 @@ export const NY_CHARGE_IDS_REQUIRING_RESELECTION = new Set([
   'ny-marijuana-unlawful-possession',
   'ny-unlawful-possession-of-cannabis-second-degree',
   'ny-drug-school-zone-enhancement',
+  // Rows whose API result is a missing section or a materially different
+  // offense/penalty provision. These remain historical inputs only.
+  'ny-wire-fraud',
+  'ny-mail-fraud',
+  'ny-probation-violation',
+  'ny-open-container-violation',
+  'ny-illegal-fireworks',
+  'ny-juvenile-transfer-adult-court',
+  'ny-juvenile-delinquency-felony',
+  'ny-juvenile-delinquency-misdemeanor',
+  'ny-auto-burglary',
+  'ny-credit-card-fraud',
+  'ny-embezzlement',
+  'ny-failure-to-appear',
+  'ny-driving-without-insurance',
+  'ny-expired-inspection',
+  'ny-truancy',
+  'ny-littering',
+  'ny-hunting-fishing-no-license',
+  'ny-animal-at-large',
+  'ny-illegal-camping',
+  'ny-panhandling',
+  'ny-gang-enhancement',
+  // These labels require elements/grade/penalty that the mapped provision
+  // does not independently establish; keep them as historical inputs only.
+  'ny-bank-robbery',
+  'ny-felon-in-possession-of-firearm',
+  'ny-attempted-murder',
+  'ny-attempted-robbery',
+  'ny-attempted-sexual-assault',
 ]);
+
+/**
+ * The NY Senate API uses the statutory title, while several legacy selector
+ * labels used plain-English aliases. Keep their IDs stable, but expose the
+ * exact official title everywhere a current charge is returned.
+ */
+export const NEW_YORK_CANONICAL_TITLES: Record<string, string> = {
+  "ny-voluntary-manslaughter": "Manslaughter in the first degree",
+  "ny-involuntary-manslaughter": "Manslaughter in the second degree",
+  "ny-vehicular-homicide": "Vehicular manslaughter in the second degree",
+  "ny-felony-murder": "Murder in the second degree",
+  "ny-aggravated-assault": "Aggravated assault upon a police officer or a peace officer",
+  "ny-assault-with-deadly-weapon": "Assault in the first degree",
+  "ny-assault-on-peace-officer": "Assault on a peace officer, police officer, firefighter or emergency medical services professional",
+  "ny-menacing": "Menacing in the third degree",
+  "ny-child-sexual-abuse": "Sexual abuse in the first degree",
+  "ny-sexual-exploitation-of-minor": "Promoting a sexual performance by a child",
+  "ny-grand-theft-in-the-first-degree": "Grand larceny in the first degree",
+  "ny-grand-theft-in-the-second-degree": "Grand larceny in the second degree",
+  "ny-theft-by-receiving": "Criminal possession of stolen property in the third degree",
+  "ny-identity-theft": "Identity theft in the third degree",
+  "ny-bank-robbery": "Robbery in the first degree",
+  "ny-unlawful-carrying-of-weapon": "Criminal possession of a weapon in the fourth degree",
+  "ny-felon-in-possession-of-firearm": "Criminal possession of a weapon in the fourth degree",
+  "ny-discharge-of-firearm-in-city": "Prohibited use of weapons",
+  "ny-possession-of-prohibited-weapon": "Criminal possession of a weapon in the fourth degree",
+  "ny-check-fraud": "Issuing a bad check",
+  "ny-insurance-fraud": "Insurance fraud in the fourth degree",
+  "ny-tax-fraud": "Tax fraud acts",
+  "ny-forgery": "Forgery in the third degree",
+  "ny-computer-fraud": "Unauthorized use of a computer",
+  "ny-public-intoxication": "Appearance in public under the influence of narcotics or a drug other than alcohol",
+  "ny-trespassing": "Trespass",
+  "ny-vandalism": "Criminal mischief in the fourth degree",
+  "ny-dui-first-offense": "Operating a motor vehicle while under the influence of alcohol or drugs",
+  "ny-dui-second-offense": "Operating a motor vehicle while under the influence of alcohol or drugs",
+  "ny-dui-third-offense": "Operating a motor vehicle while under the influence of alcohol or drugs",
+  "ny-hit-and-run": "Leaving scene of an incident without reporting",
+  "ny-theft-of-services": "Theft of services",
+  "ny-aggravated-unlicensed-operation": "Operation while license or privilege is suspended or revoked; aggravated unlicensed operation",
+  "ny-criminal-contempt": "Criminal contempt in the second degree",
+  "ny-criminal-possession-of-stolen-property": "Criminal possession of stolen property in the fifth degree",
+  "ny-harassment": "Harassment in the second degree",
+  "ny-turnstile-jumping": "Theft of services",
+  "ny-open-container": "Consumption or possession of alcoholic beverages in certain motor vehicles",
+  "ny-resisting-arrest": "Resisting arrest",
+  "ny-protective-order-violation": "Criminal contempt in the first degree",
+  "ny-minor-in-possession": "Unlawful possession of an alcoholic beverage with the intent to consume by persons under the age of twenty-one years",
+  "ny-false-info-to-police": "Falsely reporting an incident in the third degree",
+  "ny-harassment-stalking": "Stalking in the fourth degree",
+  "ny-contempt-of-court": "Power of courts to punish for criminal contempts",
+  "ny-solicitation": "Prostitution",
+  "ny-expired-registration": "Registration of motor vehicles; fees; renewals",
+  "ny-failure-to-pay-child-support": "Non-support of a child in the second degree",
+  "ny-noise-violation": "Disorderly conduct",
+  "ny-indecent-exposure": "Exposure of a person",
+  "ny-fake-id": "Criminal possession of a forged instrument in the second degree",
+  "ny-animal-cruelty-misdemeanor": "Overdriving, torturing and injuring animals; failure to provide proper sustenance",
+  "ny-trespass-after-warning": "Criminal trespass in the third degree",
+  "ny-defective-vehicle-equipment": "Equipment",
+  "ny-criminal-attempt": "Attempt to commit a crime",
+  "ny-conspiracy": "Conspiracy in the sixth degree",
+  "ny-aiding-and-abetting": "Criminal liability for conduct of another",
+  "ny-accessory-after-the-fact": "Hindering prosecution; definition of term",
+  "ny-attempted-murder": "Attempt to commit a crime",
+  "ny-attempted-robbery": "Attempt to commit a crime",
+  "ny-attempted-sexual-assault": "Attempt to commit a crime",
+  "ny-criminal-solicitation": "Criminal solicitation in the fifth degree",
+  "ny-hate-crime-enhancement": "Hate crimes",
+  "ny-recidivist-enhancement": "Sentence of imprisonment for persistent violent felony offender; criteria",
+  "ny-firearm-in-felony-enhancement": "Criminal use of a firearm in the first degree",
+  "ny-rico-organized-crime": "Enterprise corruption",
+  "ny-money-laundering": "Money laundering in the first degree",
+  "ny-juvenile-firearm-possession": "Unlawful possession of weapons by persons under sixteen",
+};
 
 export const NY_THIRD_DEGREE_POSSESSION_ID = 'ny-possession-of-controlled-substance-third-degree';
 
@@ -94772,6 +94877,7 @@ chargeCategories['CA'] = getCaliforniaCanonicalCharges(
 // Helper functions for charge lookup
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
+  if (NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId)) return undefined;
   const directCharge = criminalCharges.find(charge => charge.id === normalizedId);
   const canonical = normalizedId.startsWith("ca-")
     ? getCaliforniaCanonicalRecord(normalizedId)
@@ -94787,22 +94893,34 @@ export function getChargeById(id: string): CriminalCharge | undefined {
       ? getCaliforniaCanonicalCharge({ ...charge, id: normalizedId })
       : undefined;
   }
-  return charge;
+  return charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]
+    ? { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] }
+    : charge;
 }
 
 export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[] {
   const normalizedJurisdiction = jurisdiction.toUpperCase().trim();
-  const charges = criminalCharges.filter(charge => charge.jurisdiction === normalizedJurisdiction);
+  const charges = criminalCharges.filter(charge =>
+    charge.jurisdiction === normalizedJurisdiction &&
+    !(normalizedJurisdiction === 'NY' && NY_CHARGE_IDS_REQUIRING_RESELECTION.has(charge.id)),
+  );
   if (normalizedJurisdiction === 'CA') {
     return getCaliforniaCanonicalCharges(charges);
   }
-  return charges;
+  return charges.map((charge) =>
+    charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]
+      ? { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] }
+      : charge,
+  );
 }
 
 /** Charges safe to expose on an unscoped selector/search surface. */
 export function getSelectableCharges(): CriminalCharge[] {
   return [
-    ...criminalCharges.filter((charge) => charge.jurisdiction !== 'CA'),
+    ...criminalCharges.filter((charge) =>
+      charge.jurisdiction !== 'CA' &&
+      !(charge.jurisdiction === 'NY' && NY_CHARGE_IDS_REQUIRING_RESELECTION.has(charge.id)),
+    ),
     ...getChargesByJurisdiction('CA'),
   ];
 }

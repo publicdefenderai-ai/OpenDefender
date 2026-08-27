@@ -1516,6 +1516,12 @@ function runScoring(
   for (const doc of docs) {
     if (filters?.types && !filters.types.includes(doc.type)) continue;
     if (filters?.jurisdiction && doc.jurisdiction && doc.jurisdiction !== filters.jurisdiction) continue;
+    if (
+      doc.type === 'charge' &&
+      doc.jurisdiction === 'NY' &&
+      filters?.chargeIds &&
+      !filters.chargeIds.includes(doc.id)
+    ) continue;
     const { score, matchedTerms } = calculateScore(doc, directTerms, synonymTerms, language);
     if (score >= MIN_SCORE_THRESHOLD) {
       const content = language === 'zh' && doc.contentZh ? doc.contentZh :
