@@ -30047,7 +30047,7 @@ export const criminalCharges: CriminalCharge[] = [
   },
   {
     id: 'ny-possession-of-controlled-substance',
-    name: 'Possession of Controlled Substance',
+    name: 'Criminal Possession of a Controlled Substance in the Seventh Degree',
     code: '220.03',
     jurisdiction: 'NY',
     category: 'misdemeanor',
@@ -30085,7 +30085,7 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Understand search and seizure rights', 'Consider treatment programs']
   },
   {
-    id: 'ny-possession-with-intent-to-distribute',
+    id: 'ny-possession-of-controlled-substance-third-degree',
     name: 'Criminal Possession of a Controlled Substance in the Third Degree',
     code: '220.16',
     jurisdiction: 'NY',
@@ -30124,65 +30124,65 @@ export const criminalCharges: CriminalCharge[] = [
     urgentActions: ['Contact attorney', 'Understand search and seizure rights', 'Consider treatment programs']
   },
   {
-    id: 'ny-distribution-of-controlled-substance',
-    name: 'Distribution of Controlled Substance',
+    id: 'ny-criminal-sale-of-controlled-substance-fifth-degree',
+    name: 'Criminal Sale of a Controlled Substance in the Fifth Degree',
     code: '220.31',
     jurisdiction: 'NY',
     category: 'felony',
-    description: 'Unlawful distribution of controlled substances under New York law',
-    maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
+    description: 'Knowingly and unlawfully selling a controlled substance under New York Penal Law § 220.31',
+    maxPenalty: 'Class D felony; sentencing depends on the charge and record',
     commonDefenses: ['Lack of knowledge', 'Illegal search and seizure', 'Entrapment', 'Medical necessity'],
     evidenceToGather: ['Physical evidence', 'Chain of custody', 'Search warrant validity', 'Laboratory analysis'],
     specificRights: ['Right to challenge search', 'Right to laboratory analysis', 'Right to treatment options'],
     urgentActions: ['Contact attorney', 'Understand search and seizure rights', 'Consider treatment programs']
   },
   {
-    id: 'ny-manufacturing-controlled-substance',
-    name: 'Manufacturing Controlled Substance',
+    id: 'ny-unlawful-manufacture-of-methamphetamine-third-degree',
+    name: 'Unlawful Manufacture of Methamphetamine in the Third Degree',
     code: '220.73',
     jurisdiction: 'NY',
     category: 'felony',
-    description: 'Unlawful production of controlled substances under New York law',
-    maxPenalty: 'Up to life imprisonment and/or substantial fines',
+    description: 'Unlawful manufacture of methamphetamine in the third degree under New York Penal Law § 220.73',
+    maxPenalty: 'Class D felony; sentencing depends on the charge and record',
     commonDefenses: ['Lack of knowledge', 'Illegal search and seizure', 'Entrapment', 'Medical necessity'],
     evidenceToGather: ['Physical evidence', 'Chain of custody', 'Search warrant validity', 'Laboratory analysis'],
     specificRights: ['Right to challenge search', 'Right to laboratory analysis', 'Right to treatment options'],
     urgentActions: ['Contact attorney', 'Understand search and seizure rights', 'Consider treatment programs']
   },
   {
-    id: 'ny-drug-trafficking',
-    name: 'Drug Trafficking',
+    id: 'ny-operating-as-major-trafficker',
+    name: 'Operating as a Major Trafficker',
     code: '220.77',
     jurisdiction: 'NY',
     category: 'felony',
-    description: 'Large-scale drug distribution under New York law',
-    maxPenalty: 'Up to life imprisonment and/or substantial fines',
+    description: 'Operating as a major trafficker under New York Penal Law § 220.77',
+    maxPenalty: 'Class A-I felony; sentencing depends on the charge and record',
     commonDefenses: ['Lack of knowledge', 'Illegal search and seizure', 'Entrapment', 'Medical necessity'],
     evidenceToGather: ['Physical evidence', 'Chain of custody', 'Search warrant validity', 'Laboratory analysis'],
     specificRights: ['Right to challenge search', 'Right to laboratory analysis', 'Right to treatment options'],
     urgentActions: ['Contact attorney', 'Understand search and seizure rights', 'Consider treatment programs']
   },
   {
-    id: 'ny-possession-of-drug-paraphernalia',
-    name: 'Possession of Drug Paraphernalia',
+    id: 'ny-criminally-using-drug-paraphernalia-second-degree',
+    name: 'Criminally Using Drug Paraphernalia in the Second Degree',
     code: '220.50',
     jurisdiction: 'NY',
     category: 'misdemeanor',
-    description: 'Possession of drug-related equipment under New York law',
-    maxPenalty: 'Penalties vary by jurisdiction',
+    description: 'Knowingly possessing or selling specified drug paraphernalia under New York Penal Law § 220.50',
+    maxPenalty: 'Class A misdemeanor; up to 1 year jail and/or fines',
     commonDefenses: ['Lack of knowledge', 'Illegal search and seizure', 'Entrapment', 'Medical necessity'],
     evidenceToGather: ['Physical evidence', 'Chain of custody', 'Search warrant validity', 'Laboratory analysis'],
     specificRights: ['Right to challenge search', 'Right to laboratory analysis', 'Right to treatment options'],
     urgentActions: ['Contact attorney', 'Understand search and seizure rights', 'Consider treatment programs']
   },
   {
-    id: 'ny-maintaining-drug-house',
-    name: 'Maintaining Drug House',
-    code: '221.77',
+    id: 'ny-criminal-nuisance-first-degree',
+    name: 'Criminal Nuisance in the First Degree',
+    code: '240.46',
     jurisdiction: 'NY',
     category: 'felony',
-    description: 'Allowing premises for drug activity under New York law',
-    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
+    description: 'Knowingly maintaining premises where people gather for unlawful controlled-substance sales and deriving benefit from that conduct under New York Penal Law § 240.46',
+    maxPenalty: 'Class E felony; sentencing depends on the charge and record',
     commonDefenses: ['Lack of knowledge', 'Illegal search and seizure', 'Entrapment', 'Medical necessity'],
     evidenceToGather: ['Physical evidence', 'Chain of custody', 'Search warrant validity', 'Laboratory analysis'],
     specificRights: ['Right to challenge search', 'Right to laboratory analysis', 'Right to treatment options'],
@@ -30538,19 +30538,6 @@ export const criminalCharges: CriminalCharge[] = [
     evidenceToGather: ['Communication records', 'Witness statements', 'Video or audio recordings', 'Prior relationship documentation'],
     specificRights: ['Right to challenge subjective claims', 'Right to present context of interactions', 'Right to ACD for first offenses'],
     urgentActions: ['Contact attorney', 'Cease all contact with complainant', 'Preserve any evidence of the interaction']
-  },
-  {
-    id: 'ny-marijuana-unlawful-possession',
-    name: 'Unlawful Possession of Cannabis',
-    code: '222.05',
-    jurisdiction: 'NY',
-    category: 'misdemeanor',
-    description: 'Possession of cannabis in excess of legal limits or in prohibited locations under NY Cannabis Law § 222.05. Note: possession of up to 3 oz is legal for adults 21+ in New York since 2021.',
-    maxPenalty: 'Violation to misdemeanor depending on amount; fines from $50 to $1,000',
-    commonDefenses: ['Amount within legal limit (under 3 oz)', 'Unlawful search and seizure', 'Not in a prohibited location', 'Medical cannabis patient'],
-    evidenceToGather: ['Documentation of amount possessed', 'Medical cannabis card if applicable', 'Evidence of search circumstances', 'Witness statements'],
-    specificRights: ['Right to challenge search and seizure', 'Right to request lab testing of substance', 'Right to present medical authorization'],
-    urgentActions: ['Contact attorney', 'Do not consent to additional searches', 'Document circumstances of the encounter']
   },
   {
     id: 'ny-turnstile-jumping',
@@ -88064,18 +88051,18 @@ const sentencingEnhancementCharges: CriminalCharge[] = [
     statuteCitations: ['State firearm-in-felony enhancement statute; 18 U.S.C. § 924(c) (federal use of firearm during crime of violence or drug trafficking)']
   },
   {
-    id: 'ny-drug-school-zone-enhancement',
-    name: 'Drug Offense in a School Zone (Proximity Enhancement)',
-    code: 'NY drug-free school zone statute',
+    id: 'ny-criminal-sale-of-controlled-substance-near-school-grounds',
+    name: 'Criminal Sale of a Controlled Substance in or Near School Grounds',
+    code: '220.44',
     jurisdiction: 'NY',
     category: 'felony',
-    description: 'A sentencing enhancement that doubles (or more) the penalty for a drug offense committed within a specified distance of a school, school bus stop, playground, public park, or youth center under New York law. The enhancement often applies regardless of whether any minors were present or involved. Zone distances vary by state — commonly 500 feet to 1,000 feet. Many states also suspend driver’s licenses upon conviction.',
-    maxPenalty: 'Typically doubles the maximum sentence for the underlying drug offense; mandatory minimum terms apply in many states; driver’s license suspension often mandatory',
-    commonDefenses: ['The offense did not occur within the prohibited zone — challenge the measurement', 'The location does not qualify as a protected zone under the statute (e.g., a closed or former school)', 'Constitutional challenges where the zone covers such a large urban area that the enhancement has no meaningful deterrent connection to protecting children', 'The underlying drug offense itself should be challenged first — the enhancement falls with it', 'No actual children were endangered and the zone enhancement is disproportionate (used in some mitigation arguments)'],
-    evidenceToGather: ['Precise GPS measurements of where the alleged offense occurred relative to the school or protected zone', 'Records confirming the school or facility was operational and within the statutory definition at the time', 'Maps showing the full extent of the drug-free zone relative to where you were', 'Evidence that the school was not in session or children were not present (relevant for mitigation even if not a defense)', 'Any evidence about the nature of the alleged drug activity'],
-    specificRights: ['Right to challenge the measurement and methodology used to establish you were within the zone', 'Right to a jury finding on the proximity element beyond a reasonable doubt', 'Right to challenge the classification of the location as a qualifying school or protected area', 'Right to present mitigation evidence even if the enhancement technically applies'],
-    urgentActions: ['Contact a criminal defense attorney immediately', 'Do not assume the distance measurement is correct — have your attorney obtain and verify it', 'Document your actual location and any evidence about where the alleged activity occurred', 'Understand that the license suspension from this enhancement may affect your employment'],
-    statuteCitations: ['State drug-free school zone statute; 21 U.S.C. § 860 (federal distribution near schools or colleges)']
+    description: 'Knowingly and unlawfully selling a specified controlled substance in a location covered by New York Penal Law § 220.44, including school grounds or a school bus and qualifying sales within 1,000 feet of certain child-care or educational facilities and publicly accessible areas; the exact statutory location definitions apply.',
+    maxPenalty: 'Class B felony; sentencing depends on the charge and record',
+    commonDefenses: ['The alleged conduct does not satisfy the sale or controlled-substance elements', 'The alleged location, facility, public-area status, or distance does not meet the statute', 'The charging papers do not identify a qualifying location with sufficient specificity', 'Unlawful search and seizure or other defenses supported by the facts'],
+    evidenceToGather: ['Charging papers identifying the alleged seller, controlled substance, sale conduct, and precise location', 'Laboratory and chain-of-custody records for the substance', 'Communications, surveillance, or witness evidence offered to prove a sale', 'Maps, surveys, facility records, and other evidence addressing the statutory location and 1,000-foot measurement'],
+    specificRights: ['Right to challenge the evidence that a sale occurred', 'Right to challenge substance identification, identity, and other required elements', 'Right to challenge whether the alleged location and distance meet the statutory definition', 'Right to counsel and a jury trial as provided by law'],
+    urgentActions: ['Contact a criminal defense attorney immediately', 'Do not discuss the alleged sale with police or investigators without counsel', 'Preserve the charging papers and any communications or records related to the allegation', 'Ask counsel to review the alleged sale, substance, location, facility status, and distance evidence'],
+    statuteCitations: ['N.Y. Penal Law § 220.44']
   },
   {
     id: 'nc-gang-enhancement',
@@ -94659,9 +94646,80 @@ export const chargeCategories: Record<string, string[]> = {
   'Juvenile Proceedings': ['al-juvenile-delinquency-felony', 'ak-juvenile-delinquency-felony', 'az-juvenile-delinquency-felony', 'ar-juvenile-delinquency-felony', 'ca-juvenile-delinquency-felony', 'co-juvenile-delinquency-felony', 'ct-juvenile-delinquency-felony', 'de-juvenile-delinquency-felony', 'dc-juvenile-delinquency-felony', 'fl-juvenile-delinquency-felony', 'ga-juvenile-delinquency-felony', 'hi-juvenile-delinquency-felony', 'id-juvenile-delinquency-felony', 'il-juvenile-delinquency-felony', 'in-juvenile-delinquency-felony', 'ia-juvenile-delinquency-felony', 'ks-juvenile-delinquency-felony', 'ky-juvenile-delinquency-felony', 'la-juvenile-delinquency-felony', 'me-juvenile-delinquency-felony', 'md-juvenile-delinquency-felony', 'ma-juvenile-delinquency-felony', 'mi-juvenile-delinquency-felony', 'mn-juvenile-delinquency-felony', 'ms-juvenile-delinquency-felony', 'mo-juvenile-delinquency-felony', 'mt-juvenile-delinquency-felony', 'ne-juvenile-delinquency-felony', 'nv-juvenile-delinquency-felony', 'nh-juvenile-delinquency-felony', 'nj-juvenile-delinquency-felony', 'nm-juvenile-delinquency-felony', 'ny-juvenile-delinquency-felony', 'nc-juvenile-delinquency-felony', 'nd-juvenile-delinquency-felony', 'oh-juvenile-delinquency-felony', 'ok-juvenile-delinquency-felony', 'or-juvenile-delinquency-felony', 'pa-juvenile-delinquency-felony', 'ri-juvenile-delinquency-felony', 'sc-juvenile-delinquency-felony', 'sd-juvenile-delinquency-felony', 'tn-juvenile-delinquency-felony', 'tx-juvenile-delinquency-felony', 'ut-juvenile-delinquency-felony', 'vt-juvenile-delinquency-felony', 'va-juvenile-delinquency-felony', 'wa-juvenile-delinquency-felony', 'wv-juvenile-delinquency-felony', 'wi-juvenile-delinquency-felony', 'wy-juvenile-delinquency-felony', 'as-juvenile-delinquency-felony', 'gu-juvenile-delinquency-felony', 'mp-juvenile-delinquency-felony', 'pr-juvenile-delinquency-felony', 'vi-juvenile-delinquency-felony', 'federal-juvenile-delinquency', 'al-juvenile-delinquency-misdemeanor', 'ak-juvenile-delinquency-misdemeanor', 'az-juvenile-delinquency-misdemeanor', 'ar-juvenile-delinquency-misdemeanor', 'ca-juvenile-delinquency-misdemeanor', 'co-juvenile-delinquency-misdemeanor', 'ct-juvenile-delinquency-misdemeanor', 'de-juvenile-delinquency-misdemeanor', 'dc-juvenile-delinquency-misdemeanor', 'fl-juvenile-delinquency-misdemeanor', 'ga-juvenile-delinquency-misdemeanor', 'hi-juvenile-delinquency-misdemeanor', 'id-juvenile-delinquency-misdemeanor', 'il-juvenile-delinquency-misdemeanor', 'in-juvenile-delinquency-misdemeanor', 'ia-juvenile-delinquency-misdemeanor', 'ks-juvenile-delinquency-misdemeanor', 'ky-juvenile-delinquency-misdemeanor', 'la-juvenile-delinquency-misdemeanor', 'me-juvenile-delinquency-misdemeanor', 'md-juvenile-delinquency-misdemeanor', 'ma-juvenile-delinquency-misdemeanor', 'mi-juvenile-delinquency-misdemeanor', 'mn-juvenile-delinquency-misdemeanor', 'ms-juvenile-delinquency-misdemeanor', 'mo-juvenile-delinquency-misdemeanor', 'mt-juvenile-delinquency-misdemeanor', 'ne-juvenile-delinquency-misdemeanor', 'nv-juvenile-delinquency-misdemeanor', 'nh-juvenile-delinquency-misdemeanor', 'nj-juvenile-delinquency-misdemeanor', 'nm-juvenile-delinquency-misdemeanor', 'ny-juvenile-delinquency-misdemeanor', 'nc-juvenile-delinquency-misdemeanor', 'nd-juvenile-delinquency-misdemeanor', 'oh-juvenile-delinquency-misdemeanor', 'ok-juvenile-delinquency-misdemeanor', 'or-juvenile-delinquency-misdemeanor', 'pa-juvenile-delinquency-misdemeanor', 'ri-juvenile-delinquency-misdemeanor', 'sc-juvenile-delinquency-misdemeanor', 'sd-juvenile-delinquency-misdemeanor', 'tn-juvenile-delinquency-misdemeanor', 'tx-juvenile-delinquency-misdemeanor', 'ut-juvenile-delinquency-misdemeanor', 'vt-juvenile-delinquency-misdemeanor', 'va-juvenile-delinquency-misdemeanor', 'wa-juvenile-delinquency-misdemeanor', 'wv-juvenile-delinquency-misdemeanor', 'wi-juvenile-delinquency-misdemeanor', 'wy-juvenile-delinquency-misdemeanor', 'as-juvenile-delinquency-misdemeanor', 'gu-juvenile-delinquency-misdemeanor', 'mp-juvenile-delinquency-misdemeanor', 'pr-juvenile-delinquency-misdemeanor', 'vi-juvenile-delinquency-misdemeanor', 'al-juvenile-transfer-adult-court', 'ak-juvenile-transfer-adult-court', 'az-juvenile-transfer-adult-court', 'ar-juvenile-transfer-adult-court', 'ca-juvenile-transfer-adult-court', 'co-juvenile-transfer-adult-court', 'ct-juvenile-transfer-adult-court', 'de-juvenile-transfer-adult-court', 'dc-juvenile-transfer-adult-court', 'fl-juvenile-transfer-adult-court', 'ga-juvenile-transfer-adult-court', 'hi-juvenile-transfer-adult-court', 'id-juvenile-transfer-adult-court', 'il-juvenile-transfer-adult-court', 'in-juvenile-transfer-adult-court', 'ia-juvenile-transfer-adult-court', 'ks-juvenile-transfer-adult-court', 'ky-juvenile-transfer-adult-court', 'la-juvenile-transfer-adult-court', 'me-juvenile-transfer-adult-court', 'md-juvenile-transfer-adult-court', 'ma-juvenile-transfer-adult-court', 'mi-juvenile-transfer-adult-court', 'mn-juvenile-transfer-adult-court', 'ms-juvenile-transfer-adult-court', 'mo-juvenile-transfer-adult-court', 'mt-juvenile-transfer-adult-court', 'ne-juvenile-transfer-adult-court', 'nv-juvenile-transfer-adult-court', 'nh-juvenile-transfer-adult-court', 'nj-juvenile-transfer-adult-court', 'nm-juvenile-transfer-adult-court', 'ny-juvenile-transfer-adult-court', 'nc-juvenile-transfer-adult-court', 'nd-juvenile-transfer-adult-court', 'oh-juvenile-transfer-adult-court', 'ok-juvenile-transfer-adult-court', 'or-juvenile-transfer-adult-court', 'pa-juvenile-transfer-adult-court', 'ri-juvenile-transfer-adult-court', 'sc-juvenile-transfer-adult-court', 'sd-juvenile-transfer-adult-court', 'tn-juvenile-transfer-adult-court', 'tx-juvenile-transfer-adult-court', 'ut-juvenile-transfer-adult-court', 'vt-juvenile-transfer-adult-court', 'va-juvenile-transfer-adult-court', 'wa-juvenile-transfer-adult-court', 'wv-juvenile-transfer-adult-court', 'wi-juvenile-transfer-adult-court', 'wy-juvenile-transfer-adult-court', 'as-juvenile-transfer-adult-court', 'gu-juvenile-transfer-adult-court', 'mp-juvenile-transfer-adult-court', 'pr-juvenile-transfer-adult-court', 'vi-juvenile-transfer-adult-court', 'al-juvenile-firearm-possession', 'ak-juvenile-firearm-possession', 'az-juvenile-firearm-possession', 'ar-juvenile-firearm-possession', 'ca-juvenile-firearm-possession', 'co-juvenile-firearm-possession', 'ct-juvenile-firearm-possession', 'de-juvenile-firearm-possession', 'dc-juvenile-firearm-possession', 'fl-juvenile-firearm-possession', 'ga-juvenile-firearm-possession', 'hi-juvenile-firearm-possession', 'id-juvenile-firearm-possession', 'il-juvenile-firearm-possession', 'in-juvenile-firearm-possession', 'ia-juvenile-firearm-possession', 'ks-juvenile-firearm-possession', 'ky-juvenile-firearm-possession', 'la-juvenile-firearm-possession', 'me-juvenile-firearm-possession', 'md-juvenile-firearm-possession', 'ma-juvenile-firearm-possession', 'mi-juvenile-firearm-possession', 'mn-juvenile-firearm-possession', 'ms-juvenile-firearm-possession', 'mo-juvenile-firearm-possession', 'mt-juvenile-firearm-possession', 'ne-juvenile-firearm-possession', 'nv-juvenile-firearm-possession', 'nh-juvenile-firearm-possession', 'nj-juvenile-firearm-possession', 'nm-juvenile-firearm-possession', 'ny-juvenile-firearm-possession', 'nc-juvenile-firearm-possession', 'nd-juvenile-firearm-possession', 'oh-juvenile-firearm-possession', 'ok-juvenile-firearm-possession', 'or-juvenile-firearm-possession', 'pa-juvenile-firearm-possession', 'ri-juvenile-firearm-possession', 'sc-juvenile-firearm-possession', 'sd-juvenile-firearm-possession', 'tn-juvenile-firearm-possession', 'tx-juvenile-firearm-possession', 'ut-juvenile-firearm-possession', 'vt-juvenile-firearm-possession', 'va-juvenile-firearm-possession', 'wa-juvenile-firearm-possession', 'wv-juvenile-firearm-possession', 'wi-juvenile-firearm-possession', 'wy-juvenile-firearm-possession', 'as-juvenile-firearm-possession', 'gu-juvenile-firearm-possession', 'mp-juvenile-firearm-possession', 'pr-juvenile-firearm-possession', 'vi-juvenile-firearm-possession']
 };
 
+/**
+ * Stable identifiers for charge records that have been renamed after a legal
+ * catalog correction. Legacy IDs are accepted at input boundaries but are
+ * never returned as current catalog records.
+ */
+export const CHARGE_ID_ALIASES: Record<string, string> = {
+  'ny-possession-with-intent-to-distribute': 'ny-possession-of-controlled-substance-third-degree',
+};
+
+/**
+ * Historical NY labels that are intentionally not auto-promoted to a current
+ * offense. They are retained only so saved cases can show a reselect notice;
+ * the user must choose the exact current charge before charge-specific
+ * guidance is generated.
+ */
+export const NY_CHARGE_IDS_REQUIRING_RESELECTION = new Set([
+  'ny-distribution-of-controlled-substance',
+  'ny-manufacturing-controlled-substance',
+  'ny-drug-trafficking',
+  'ny-possession-of-drug-paraphernalia',
+  'ny-maintaining-drug-house',
+  'ny-personal-use-of-cannabis',
+  'ny-marijuana-unlawful-possession',
+  'ny-unlawful-possession-of-cannabis-second-degree',
+  'ny-drug-school-zone-enhancement',
+]);
+
+export const NY_THIRD_DEGREE_POSSESSION_ID = 'ny-possession-of-controlled-substance-third-degree';
+
+export function normalizeChargeId(id: string): string {
+  return CHARGE_ID_ALIASES[id] ?? id;
+}
+
+export function isChargeIdRequiringReselection(id: string): boolean {
+  return NY_CHARGE_IDS_REQUIRING_RESELECTION.has(id);
+}
+
+export function normalizeChargeIds(ids: string[]): string[];
+export function normalizeChargeIds(ids: string): string;
+export function normalizeChargeIds(ids: string | string[]): string | string[] {
+  if (Array.isArray(ids)) {
+    return Array.from(new Set(ids.map(normalizeChargeId)));
+  }
+  return normalizeChargeId(ids);
+}
+
+// Keep the generated category table backward-compatible while ensuring the
+// NY selector and grouped API expose every verified NY drug entry exactly once.
+const NY_DRUG_OFFENSE_IDS = [
+  'ny-possession-of-controlled-substance',
+  'ny-possession-of-controlled-substance-fifth-degree',
+  'ny-possession-of-controlled-substance-fourth-degree',
+  NY_THIRD_DEGREE_POSSESSION_ID,
+  'ny-possession-of-controlled-substance-second-degree',
+  'ny-possession-of-controlled-substance-first-degree',
+  'ny-criminal-sale-of-controlled-substance-fifth-degree',
+  'ny-unlawful-manufacture-of-methamphetamine-third-degree',
+  'ny-operating-as-major-trafficker',
+  'ny-criminally-using-drug-paraphernalia-second-degree',
+  'ny-criminal-nuisance-first-degree',
+  'ny-criminal-sale-of-controlled-substance-near-school-grounds',
+];
+chargeCategories['Drug Offenses'] = Array.from(new Set([
+  ...chargeCategories['Drug Offenses'].map(normalizeChargeId),
+  ...NY_DRUG_OFFENSE_IDS,
+])).filter(id => criminalCharges.some(charge => charge.id === id));
+chargeCategories['NY'] = Array.from(new Set([
+  ...chargeCategories['NY'].map(normalizeChargeId),
+  ...NY_DRUG_OFFENSE_IDS,
+])).filter(id => criminalCharges.some(charge => charge.id === id));
+
 // Helper functions for charge lookup
 export function getChargeById(id: string): CriminalCharge | undefined {
-  return criminalCharges.find(charge => charge.id === id);
+  return criminalCharges.find(charge => charge.id === normalizeChargeId(id));
 }
 
 export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[] {

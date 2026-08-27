@@ -402,6 +402,21 @@ describe('AI selected-charge scope guard', () => {
     expect(scoped.overview).not.toMatch(/drug trafficking/i);
   });
 
+  it('normalizes the legacy NY ID before building the selected-charge scope', async () => {
+    mockMessagesCreate.mockResolvedValue(makeMockApiResponse(VALID_CLAUDE_JSON));
+
+    await generateClaudeGuidance({
+      ...nyPossessionCase,
+      charges: ['ny-possession-with-intent-to-distribute'],
+    } as any, 'legacy-ny-id');
+
+    const request = mockMessagesCreate.mock.calls.at(-1)?.[0];
+    expect(request.messages[0].content).toContain(
+      'Criminal Possession of a Controlled Substance in the Third Degree (220.16)',
+    );
+    expect(request.messages[0].content).not.toContain('Possession with Intent to Distribute');
+  });
+
   it('allows school-zone discussion only after an explicit yes answer', () => {
     const scoped = scopeGuidanceToSelectedCharges({
       overview: 'The papers mention school grounds. Confirm the location with counsel.',
@@ -411,6 +426,25 @@ describe('AI selected-charge scope guard', () => {
     } as any);
 
     expect(scoped.overview).toContain('school grounds');
+  });
+
+  it('preserves the selected school-grounds offense when location status is no or unanswered', () => {
+    const selectedSchoolCharge = 'Criminal Sale of a Controlled Substance in or Near School Grounds (220.44)';
+
+    for (const schoolZoneStatus of ['no', undefined]) {
+      const scoped = scopeGuidanceToSelectedCharges({
+        overview: `The selected charge is ${selectedSchoolCharge}. The separate location details still require confirmation.`,
+      }, {
+        jurisdiction: 'NY',
+        charges: ['ny-criminal-sale-of-controlled-substance-near-school-grounds'],
+        caseStage: 'arraignment',
+        custodyStatus: 'released',
+        hasAttorney: false,
+        ...(schoolZoneStatus ? { schoolZoneStatus } : {}),
+      } as any);
+
+      expect(scoped.overview).toContain(selectedSchoolCharge);
+    }
   });
 
   it('preserves an explicit school-zone yes answer through mandatory PII redaction', async () => {
@@ -488,11 +522,11 @@ describe('AI selected-charge scope guard', () => {
 
   it('scopes every selectable NY drug entry against unselected possession references', async () => {
     const selectedDrugIds = [
-      'ny-distribution-of-controlled-substance',
-      'ny-manufacturing-controlled-substance',
-      'ny-drug-trafficking',
-      'ny-possession-of-drug-paraphernalia',
-      'ny-drug-school-zone-enhancement',
+      'ny-criminal-sale-of-controlled-substance-fifth-degree',
+      'ny-unlawful-manufacture-of-methamphetamine-third-degree',
+      'ny-operating-as-major-trafficker',
+      'ny-criminally-using-drug-paraphernalia-second-degree',
+      'ny-criminal-sale-of-controlled-substance-near-school-grounds',
     ];
 
     for (const [index, selectedDrugId] of selectedDrugIds.entries()) {
@@ -504,7 +538,7 @@ describe('AI selected-charge scope guard', () => {
       const result = await generateClaudeGuidance({
         ...nyPossessionCase,
         charges: [selectedDrugId],
-        schoolZoneStatus: selectedDrugId === 'ny-drug-school-zone-enhancement' ? 'yes' : 'no',
+        schoolZoneStatus: selectedDrugId === 'ny-criminal-sale-of-controlled-substance-near-school-grounds' ? 'yes' : 'no',
       } as any, `redaction-ny-drug-scope-${index}`);
 
       expect(result.overview).toContain(`Guidance for ${selectedDrugId}`);

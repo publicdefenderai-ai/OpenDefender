@@ -1,7 +1,7 @@
 // Enhanced Legal Guidance Generation Engine
 // Implements charge-specific, jurisdiction-specific, and case-stage guidance
 
-import { criminalCharges, getChargeById, getVerifiedCitation } from '../../shared/criminal-charges';
+import { criminalCharges, getChargeById, normalizeChargeId, getVerifiedCitation } from '../../shared/criminal-charges';
 import { JURISDICTION_PROCEDURE_RULES, PRELIMINARY_HEARING_ESTIMATE_JURISDICTIONS, DISCOVERY_DEADLINE_ESTIMATE_JURISDICTIONS } from '../../shared/jurisdiction-procedure-rules';
 
 interface CaseData {
@@ -549,7 +549,7 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
   const jurisdictionData = jurisdictionRules[jurisdiction as keyof typeof jurisdictionRules] || jurisdictionRules['federal'];
   
   // Handle multiple charges - get specific charge data
-  const chargeIds = Array.isArray(charges) ? charges : [charges];
+  const chargeIds = (Array.isArray(charges) ? charges : [charges]).map(normalizeChargeId);
   const specificCharges = chargeIds.map(id => getChargeById(id)).filter(Boolean);
   
   // Identify a charge type for EACH individual charge so that multi-charge inputs
@@ -557,7 +557,12 @@ export function generateEnhancedGuidance(caseData: CaseData): EnhancedGuidance {
   // Each element of chargeIds is matched independently; the results are deduplicated
   // before being passed to consequence / uncertainty builders.
   const chargeTypeList: string[] = Array.from(
-    new Set(chargeIds.map(id => identifyChargeType(id.toLowerCase())))
+    new Set(chargeIds.map(id => {
+      const charge = getChargeById(id);
+      return identifyChargeType(
+        `${id} ${charge?.name ?? ''} ${charge?.description ?? ''}`.toLowerCase(),
+      );
+    }))
   );
   // Keep a single "fallback" type for legacy helpers that still expect one value.
   // We prefer the first non-default type so that specific guidance wins over the
@@ -744,8 +749,10 @@ function identifyChargeType(charges: string): string {
 }
 
 function isNewYorkDrugChargeId(chargeId: string): boolean {
-  return /^ny-/.test(chargeId) &&
-    /controlled-substance|drug|sale|distribution|trafficking|manufacturing/.test(chargeId);
+  const charge = getChargeById(chargeId);
+  return charge?.jurisdiction === 'NY' &&
+    /controlled substance|drug|sale|distribution|traffick|manufactur|paraphernalia|cannabis|narcotic/i
+      .test(`${chargeId} ${charge.name} ${charge.description}`);
 }
 
 // New charge-specific guidance functions
@@ -1461,7 +1468,8 @@ function buildUncertainties(caseData: CaseData, jurisdictionData: any, fallbackC
     });
   }
 
-  const chargeIds = Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges];
+  const chargeIds = (Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges])
+    .map(normalizeChargeId);
   if (
     jurisdiction === 'NY' &&
     chargeIds.some(id => isNewYorkDrugChargeId(String(id))) &&

@@ -13,7 +13,7 @@ import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, Ale
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
+import { criminalCharges, getChargesByJurisdiction, chargeCategories, normalizeChargeIds, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import { shouldShowCaseStageWarning, QA_FLOW_STATUS_STEP_INDEX } from "./qa-flow-guard";
@@ -63,6 +63,7 @@ export function QAFlow({
   const [formData, setFormData] = useState<QAFormData>(() => ({
     ...EMPTY_FORM_DATA,
     ...initialData,
+    charges: normalizeChargeIds(initialData?.charges ?? EMPTY_FORM_DATA.charges),
   }));
 
   const baseSteps = [
@@ -96,13 +97,13 @@ export function QAFlow({
         setShowCaseStageWarning(true);
         return;
       }
-      onComplete({ ...formData, captchaToken });
+      onComplete({ ...formData, charges: normalizeChargeIds(formData.charges), captchaToken });
     }
   };
 
   const handleCaseStageWarningConfirm = () => {
     setShowCaseStageWarning(false);
-    onComplete({ ...formData, captchaToken });
+    onComplete({ ...formData, charges: normalizeChargeIds(formData.charges), captchaToken });
   };
 
   const handleCaseStageWarningCancel = () => {
@@ -483,6 +484,23 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           charge.description.toLowerCase().includes(q);
       })
     : categoryFiltered;
+
+  const unresolvedChargeIds = formData.charges.filter(
+    (id: string) => !criminalCharges.some(charge => charge.id === id),
+  );
+
+  const handleContinue = () => {
+    if (unresolvedChargeIds.length > 0) {
+      const recognizedCharges = formData.charges.filter(
+        (id: string) => !unresolvedChargeIds.includes(id),
+      );
+      updateFormData("charges", recognizedCharges);
+      if (recognizedCharges.length === 0) {
+        updateFormData("chargesUnknown", true);
+      }
+    }
+    onNext();
+  };
   
   // Custom sorting function to group crimes with degrees together
   const sortChargesWithDegrees = (charges: any[]) => {
@@ -568,6 +586,19 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.caseDetails.title')}</h3>
 
         <div className="space-y-4">
+          {unresolvedChargeIds.length > 0 && (
+            <div
+              className="flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-amber-100"
+              role="alert"
+              data-testid="legacy-charge-reselection-notice"
+            >
+              <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
+              <p className="text-sm leading-relaxed">
+                {t('legalGuidance.qaFlow.caseDetails.legacyChargeNotice')}
+              </p>
+            </div>
+          )}
+
           {/* Selected Charges */}
           {!formData.chargesUnknown && formData.charges.length > 0 && (
             <div className="mb-4">
@@ -976,7 +1007,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.caseDetails.back')}
         </Button>
         <Button
-          onClick={onNext}
+          onClick={handleContinue}
           disabled={formData.charges.length === 0 && !formData.chargesUnknown}
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"

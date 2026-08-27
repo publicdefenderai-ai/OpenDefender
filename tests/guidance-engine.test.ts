@@ -1,6 +1,13 @@
 import { describe, it, expect } from 'vitest';
 import { generateEnhancedGuidance, CHARGE_KEYWORDS, CHARGE_CONSEQUENCE_MAP, KNOWN_JURISDICTIONS, stampEstimateDeadlines } from '../server/services/guidance-engine';
-import { criminalCharges, getChargeById, getVerifiedCitation } from '../shared/criminal-charges';
+import {
+  criminalCharges,
+  chargeCategories,
+  getChargeById,
+  getVerifiedCitation,
+  normalizeChargeId,
+  NY_THIRD_DEGREE_POSSESSION_ID,
+} from '../shared/criminal-charges';
 import { CHARGE_CITATIONS } from '../shared/criminal-charge-citations';
 
 const baseCase = {
@@ -436,10 +443,10 @@ describe('New York selected-charge scope', () => {
 
   it('exposes degree-based possession choices with official sections and classifications', () => {
     const expected = [
-      ['ny-possession-of-controlled-substance', '220.03', 'misdemeanor', 'Possession of Controlled Substance'],
+      ['ny-possession-of-controlled-substance', '220.03', 'misdemeanor', 'Seventh Degree'],
       ['ny-possession-of-controlled-substance-fifth-degree', '220.06', 'felony', 'Fifth Degree'],
       ['ny-possession-of-controlled-substance-fourth-degree', '220.09', 'felony', 'Fourth Degree'],
-      ['ny-possession-with-intent-to-distribute', '220.16', 'felony', 'Third Degree'],
+      [NY_THIRD_DEGREE_POSSESSION_ID, '220.16', 'felony', 'Third Degree'],
       ['ny-possession-of-controlled-substance-second-degree', '220.18', 'felony', 'Second Degree'],
       ['ny-possession-of-controlled-substance-first-degree', '220.21', 'felony', 'First Degree'],
     ] as const;
@@ -450,6 +457,81 @@ describe('New York selected-charge scope', () => {
       expect(charge).toMatchObject({ code, category });
       expect(charge!.name).toContain(namePart);
       expect(getVerifiedCitation(charge!)).toBe(`N.Y. Penal Law § ${code}`);
+    }
+
+    expect(getChargeById('ny-unlawful-possession-of-cannabis-second-degree')).toBeUndefined();
+    expect(normalizeChargeId('ny-unlawful-possession-of-cannabis-second-degree')).toBe(
+      'ny-unlawful-possession-of-cannabis-second-degree',
+    );
+
+    const schoolGrounds = getChargeById('ny-criminal-sale-of-controlled-substance-near-school-grounds');
+    expect(schoolGrounds).toMatchObject({
+      name: 'Criminal Sale of a Controlled Substance in or Near School Grounds',
+      code: '220.44',
+    });
+    const schoolGroundsText = JSON.stringify(schoolGrounds);
+    expect(schoolGroundsText).not.toMatch(/proximity element|license suspension|children were not present|GPS measurements/i);
+    expect(schoolGroundsText).toMatch(/sale|controlled substance|school grounds|school bus|child-care|educational facilities|1,000 feet/i);
+  });
+
+  it('normalizes the legacy intent-to-distribute ID to the canonical third-degree entry', () => {
+    const legacyId = 'ny-possession-with-intent-to-distribute';
+    expect(normalizeChargeId(legacyId)).toBe(NY_THIRD_DEGREE_POSSESSION_ID);
+    expect(getChargeById(legacyId)?.id).toBe(NY_THIRD_DEGREE_POSSESSION_ID);
+    expect(getChargeById(legacyId)?.name).toBe(
+      'Criminal Possession of a Controlled Substance in the Third Degree',
+    );
+  });
+
+  it('does not promote ambiguous historical NY labels into specific offenses', () => {
+    for (const legacyId of [
+      'ny-distribution-of-controlled-substance',
+      'ny-manufacturing-controlled-substance',
+      'ny-drug-trafficking',
+      'ny-possession-of-drug-paraphernalia',
+      'ny-maintaining-drug-house',
+      'ny-personal-use-of-cannabis',
+      'ny-drug-school-zone-enhancement',
+    ]) {
+      expect(normalizeChargeId(legacyId)).toBe(legacyId);
+      expect(getChargeById(legacyId)).toBeUndefined();
+    }
+  });
+
+  it('includes each NY drug entry once in the Drug Offenses category', () => {
+    const expectedDrugIds = [
+      'ny-possession-of-controlled-substance',
+      'ny-possession-of-controlled-substance-fifth-degree',
+      'ny-possession-of-controlled-substance-fourth-degree',
+      NY_THIRD_DEGREE_POSSESSION_ID,
+      'ny-possession-of-controlled-substance-second-degree',
+      'ny-possession-of-controlled-substance-first-degree',
+      'ny-criminal-sale-of-controlled-substance-fifth-degree',
+      'ny-unlawful-manufacture-of-methamphetamine-third-degree',
+      'ny-operating-as-major-trafficker',
+      'ny-criminally-using-drug-paraphernalia-second-degree',
+      'ny-criminal-nuisance-first-degree',
+      'ny-criminal-sale-of-controlled-substance-near-school-grounds',
+    ];
+    const drugCategory = chargeCategories['Drug Offenses'];
+
+    expect(new Set(drugCategory).size).toBe(drugCategory.length);
+    for (const legacyId of [
+      'ny-possession-with-intent-to-distribute',
+      'ny-distribution-of-controlled-substance',
+      'ny-manufacturing-controlled-substance',
+      'ny-drug-trafficking',
+      'ny-possession-of-drug-paraphernalia',
+      'ny-maintaining-drug-house',
+      'ny-marijuana-unlawful-possession',
+      'ny-personal-use-of-cannabis',
+      'ny-drug-school-zone-enhancement',
+    ]) {
+      expect(drugCategory).not.toContain(legacyId);
+    }
+    for (const id of expectedDrugIds) {
+      expect(drugCategory).toContain(id);
+      expect(getChargeById(id)?.jurisdiction).toBe('NY');
     }
   });
 
@@ -486,9 +568,20 @@ describe('New York selected-charge scope', () => {
       ...nyBase,
       charges: ['ny-possession-with-intent-to-distribute'],
     });
-    const text = JSON.stringify(result);
+    const { uncertainties: _uncertainties, ...guidanceWithoutUncertainties } = result;
+    const text = JSON.stringify(guidanceWithoutUncertainties);
     expect(text).toContain('Criminal Possession of a Controlled Substance in the Third Degree');
     expect(text).not.toMatch(/drug trafficking|criminal sale of a controlled substance|school[- ]zone/i);
+  });
+
+  it('uses the canonical third-degree name when the canonical ID is selected', () => {
+    const result = generateEnhancedGuidance({
+      ...nyBase,
+      charges: [NY_THIRD_DEGREE_POSSESSION_ID],
+    });
+    expect(JSON.stringify(result)).toContain(
+      'Criminal Possession of a Controlled Substance in the Third Degree',
+    );
   });
 });
 

@@ -14,7 +14,7 @@ import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache, getGuidanceCacheKey, startOptionalSourceEnrichment } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
-import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, normalizeChargeId, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -1352,6 +1352,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
+      const resolvedChargeInput = resolveChargeInput(validatedData.charges);
+      if (resolvedChargeInput.hasUnresolved && resolvedChargeInput.ids.length === 0 && req.body.chargesUnknown !== true) {
+        return res.status(400).json({
+          success: false,
+          error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
+          requiresReselection: true,
+        });
+      }
+
       // Generate personalized guidance based on case details.
       // These fields are not DB columns on legal_cases, so Zod strips them from
       // validatedData. Re-inject from req.body so the AI prompt sees the full picture
@@ -1360,13 +1369,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // logged rather than reaching the rules engine or the Claude prompt unvalidated.
       const guidanceInput = {
         ...validatedData,
+        charges: resolvedChargeInput.ids,
         // Normalise blank caseStage (screener export before stage selection) to a safe
         // default so neither the rules engine nor Claude receives an empty string.
         caseStage: validatedData.caseStage || 'arrest',
         // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
-        chargesUnknown: req.body.chargesUnknown === true,
+        chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
       const rawGuidance = await generateLegalGuidance(guidanceInput);
@@ -1382,6 +1392,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { incidentDescription: _dropped, ...storableData } = validatedData;
       const legalCase = await storage.createLegalCase({
         ...storableData,
+        charges: resolvedChargeInput.ids,
         guidance,
       });
 
@@ -1451,19 +1462,29 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
+      const resolvedChargeInput = resolveChargeInput(validatedData.charges);
+      if (resolvedChargeInput.hasUnresolved && resolvedChargeInput.ids.length === 0 && req.body.chargesUnknown !== true) {
+        sendEvent({
+          type: 'error',
+          error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
+          requiresReselection: true,
+        });
+        return res.end();
+      }
       // Same field-restoration pattern as the non-streaming route above:
       // preserve background answers Zod stripped so the prompt has them,
       // validated first so an invalid value is dropped and logged rather
       // than reaching the rules engine or the Claude prompt unvalidated.
       const caseDataWithFlags = {
         ...validatedData,
+        charges: resolvedChargeInput.ids,
         // Normalise blank caseStage (screener export before stage selection) to a safe
         // default so neither the rules engine nor Claude receives an empty string.
         caseStage: validatedData.caseStage || 'arrest',
         // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
-        chargesUnknown: req.body.chargesUnknown === true,
+        chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
 
@@ -1543,6 +1564,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { incidentDescription: _droppedStream, ...storableStreamData } = validatedData;
       const legalCase = await storage.createLegalCase({
         ...storableStreamData,
+        charges: resolvedChargeInput.ids,
         guidance,
       });
 
@@ -1596,6 +1618,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
+      const resolvedChargeInput = resolveChargeInput(validatedData.charges);
+      if (resolvedChargeInput.hasUnresolved && resolvedChargeInput.ids.length === 0 && req.body.chargesUnknown !== true) {
+        return res.status(400).json({
+          success: false,
+          error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
+          requiresReselection: true,
+        });
+      }
 
       // Re-inject fields Zod strips (not DB columns) so the engine has the
       // full picture, matching the pattern in the stream route above —
@@ -1603,13 +1633,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // than reaching the rules engine unvalidated.
       const caseDataWithFlags = {
         ...validatedData,
+        charges: resolvedChargeInput.ids,
         // Normalise blank caseStage (screener export before stage selection) to a safe
         // default so neither the rules engine nor Claude receives an empty string.
         caseStage: validatedData.caseStage || 'arrest',
         // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
-        chargesUnknown: req.body.chargesUnknown === true,
+        chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
 
@@ -3404,9 +3435,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
   return httpServer;
 }
 
+function resolveChargeInput(charges: string[] | string | undefined): {
+  ids: string[];
+  hasUnresolved: boolean;
+} {
+  const normalized = Array.isArray(charges)
+    ? normalizeChargeIds(charges)
+    : normalizeChargeIds(charges ?? '');
+  const ids = Array.isArray(normalized) ? normalized : [normalized];
+  const recognizedIds = ids.filter((id) => Boolean(id) && Boolean(getChargeById(id)));
+  return {
+    ids: recognizedIds,
+    hasUnresolved: ids.some((id) => Boolean(id) && !getChargeById(id)),
+  };
+}
+
 async function generateLegalGuidance(caseData: any) {
   // Extract charge classifications first
-  const chargeIds = Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges];
+  const chargeIds = (Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges])
+    .map((id: string) => normalizeChargeId(id));
   const chargeClassifications = chargeIds
     .map((id: string) => {
       const charge = getChargeById(id);

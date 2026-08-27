@@ -2359,6 +2359,7 @@ export default {
       "caseDetails": {
         "title": "¿Qué cargos enfrenta?",
         "selectedCharges": "Cargos Seleccionados:",
+        "legacyChargeNotice": "Una selección de cargo guardada está desactualizada o es demasiado amplia para identificar el delito actual. Elija el cargo exacto de la lista siguiente; hasta entonces, la orientación será general y no específica del cargo.",
         "filterLabel": "Filtrar por Categoría (Opcional)",
         "filterPlaceholder": "Todas las categorías",
         "allCategories": "Todas las categorías",

@@ -22,6 +22,7 @@ interface ChargesApiResponse {
 
 let response: ChargesApiResponse;
 let serverAvailable = true;
+let nyResponse: ChargesApiResponse;
 
 beforeAll(async () => {
   try {
@@ -39,6 +40,55 @@ beforeAll(async () => {
     }
     throw err;
   }
+});
+
+beforeAll(async () => {
+  if (!serverAvailable) return;
+  try {
+    const res = await fetch(`${BASE_URL}/api/criminal-charges?jurisdiction=NY&limit=500`);
+    if (!res.ok) throw new Error(`GET /api/criminal-charges?jurisdiction=NY returned ${res.status}`);
+    nyResponse = (await res.json()) as ChargesApiResponse;
+  } catch (err: unknown) {
+    const code = (err as NodeJS.ErrnoException).code
+      ?? ((err as { cause?: NodeJS.ErrnoException }).cause?.code);
+    if (code === 'ECONNREFUSED' || code === 'ECONNRESET') {
+      serverAvailable = false;
+      return;
+    }
+    throw err;
+  }
+}, 15000);
+
+describe('GET /api/criminal-charges?jurisdiction=NY — canonical possession catalog', () => {
+  it('exposes all six NY controlled-substance possession degrees with official names', () => {
+    if (!serverAvailable) return;
+    const expected = [
+      ['ny-possession-of-controlled-substance', 'Criminal Possession of a Controlled Substance in the Seventh Degree'],
+      ['ny-possession-of-controlled-substance-fifth-degree', 'Criminal Possession of a Controlled Substance in the Fifth Degree'],
+      ['ny-possession-of-controlled-substance-fourth-degree', 'Criminal Possession of a Controlled Substance in the Fourth Degree'],
+      ['ny-possession-of-controlled-substance-third-degree', 'Criminal Possession of a Controlled Substance in the Third Degree'],
+      ['ny-possession-of-controlled-substance-second-degree', 'Criminal Possession of a Controlled Substance in the Second Degree'],
+      ['ny-possession-of-controlled-substance-first-degree', 'Criminal Possession of a Controlled Substance in the First Degree'],
+    ] as const;
+
+    for (const [id, name] of expected) {
+      const charge = nyResponse.charges.find(item => item.id === id);
+      expect(charge, `${id} should be present in the NY API response`).toBeDefined();
+      expect(charge?.name).toBe(name);
+    }
+  });
+
+  it('does not expose the misleading legacy NY ID or label', () => {
+    if (!serverAvailable) return;
+    expect(nyResponse.charges.some(item => item.id === 'ny-possession-with-intent-to-distribute')).toBe(false);
+    expect(nyResponse.charges.some(item => /Possession with Intent to Distribute/i.test(item.name))).toBe(false);
+  });
+
+  it('does not expose a nonexistent standalone NY personal-use cannabis charge', () => {
+    if (!serverAvailable) return;
+    expect(nyResponse.charges.some(item => item.id === 'ny-unlawful-possession-of-cannabis-second-degree')).toBe(false);
+    expect(nyResponse.charges.some(item => item.name === 'Personal Use of Cannabis')).toBe(false);
+  });
 });
 
 describe('GET /api/criminal-charges?jurisdiction=CA — instructionRef/instructionUrl contract', () => {

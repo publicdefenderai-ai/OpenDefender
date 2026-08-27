@@ -1561,7 +1561,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   },
   // ── Drug Distribution / Trafficking / School Zone ─────────────────────────
   {
-    chargePattern: /^(?!.*use.of.(?:a.)?firearm).*(?:drug.traffick|distribution.of.controlled.substance|drug.distribution|drug.offense.*school|school.zone|possession.with.intent.to.distribute|manufacturing.controlled|maintaining.drug.house|promoting.a.detrimental.drug|drug.paraphernalia)/i,
+    chargePattern: /^(?!.*use.of.(?:a.)?firearm).*(?:drug.traffick|distribution.of.controlled.substance|drug.distribution|drug.offense.*school|school.zone|possession.with.intent.to.distribute|manufacturing.controlled|maintaining.drug.house|promoting.a.detrimental.drug|drug.paraphernalia|criminal.sale.of.a.controlled.substance|unlawful.manufacture.of.methamphetamine|operating.as.a.major.trafficker|criminal.nuisance.in.the.first.degree|personal.use.of.cannabis)/i,
     slug: "drug-distribution",
     plainSummary: "Drug distribution and trafficking charges mean the prosecutor believes you were selling, delivering, or moving controlled substances, not just using them. Simple possession of marijuana or cannabis without a prescription in states that still criminalize it is a lesser but related charge. A school zone enhancement adds extra penalties if the drug activity occurred within a set distance of a school. Prosecution must prove you intended to distribute, not just that you personally used the substance.",
     keyTerms: [
@@ -2866,7 +2866,7 @@ export const chargeExplanations: ChargeExplanation[] = [
   },
   // ── Marijuana / Cannabis Possession ───────────────────────────────────────
   {
-    chargePattern: /possession.of.(?:marijuana|cannabis|thc)|marijuana.possession|cannabis.possession|possession.of.small.amount|possession.of.weed|marijuana.over.legal.limit|cannabis.over.legal/i,
+    chargePattern: /possession.of.(?:marijuana|cannabis|thc)|marijuana.possession|cannabis.possession|unlawful.possession.of.cannabis|possession.of.small.amount|possession.of.weed|marijuana.over.legal.limit|cannabis.over.legal/i,
     slug: "marijuana-possession",
     plainSummary: "Marijuana possession means you had cannabis, THC products, or related items and it was either illegal in that state, exceeded the legal personal-use limit, or you were in a prohibited location (like a school zone or a state that doesn't allow recreational use). Even in states that have legalized marijuana, possessing more than the legal personal limit or possessing it in certain places remains a crime. The prosecutor must prove you knowingly had the substance.",
     keyTerms: [
