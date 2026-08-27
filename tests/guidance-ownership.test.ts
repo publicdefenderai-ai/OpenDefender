@@ -311,7 +311,7 @@ describe('GET /api/legal-guidance/:sessionId — ownership enforcement', () => {
   });
 });
 
-describe('DELETE /api/session/:sessionId — explicit guidance deletion', () => {
+describe('DELETE /api/session/:sessionId: explicit guidance deletion', () => {
   it('deletes the record immediately so it cannot be retrieved afterward', async () => {
     const agent = request.agent(testApp);
     const postRes = await agent

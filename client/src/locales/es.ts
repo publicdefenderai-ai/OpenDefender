@@ -1186,7 +1186,7 @@ export default {
           "description": "La organización de salud mental más grande del país — los capítulos locales ofrecen grupos de apoyo, educación y defensa. Línea de ayuda de NAMI disponible de lunes a viernes."
         },
         "goodRx": {
-          "name": "GoodRx — Ahorro en medicamentos recetados",
+          "name": "GoodRx: Ahorro en medicamentos recetados",
           "description": "Herramienta gratuita para comparar precios de medicamentos y encontrar cupones. Puede reducir significativamente los costos de bolsillo si su seguro se ve afectado durante su caso."
         }
       },
@@ -1245,7 +1245,7 @@ export default {
           "Si un programa tiene lista de espera, pida una carta confirmando su lugar en ella. Los tribunales reconocen que solicitó aunque no haya comenzado aún."
         ],
         "findTitle": "Encontrar programas",
-        "findSamhsaLabel": "SAMHSA — findtreatment.gov",
+        "findSamhsaLabel": "SAMHSA: findtreatment.gov",
         "findSamhsa": "El localizador de tratamientos de SAMHSA (findtreatment.gov) es la base de datos nacional más completa de instalaciones licenciadas de tratamiento de drogas y salud mental. Ingrese su código postal para encontrar programas cerca de usted y filtre por tipo de pago (Medicaid, escala móvil, gratuito).",
         "findSamhsaNote": "La disponibilidad y los tiempos de espera cambian con frecuencia. Llame para confirmar antes de contar con un programa específico.",
         "find211": "211 (llamada o texto) lo conecta con recursos locales de tratamiento y a menudo puede encontrar programas con cupos disponibles más rápido que una búsqueda en internet.",

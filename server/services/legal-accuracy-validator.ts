@@ -254,7 +254,7 @@ async function validateCitations(
               devLog('validator', 'Tier 3 OpenLaws confirmed a citation');
             }
           } catch {
-            // OpenLaws unavailable or not configured — proceed to flag
+            // OpenLaws unavailable or not configured; proceed to flag
           }
         }
 

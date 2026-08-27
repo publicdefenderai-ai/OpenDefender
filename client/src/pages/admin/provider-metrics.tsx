@@ -83,7 +83,7 @@ function MetricCard({ summary }: { summary: ProviderSummary }) {
         <div>
           <p className="text-sm font-medium text-slate-500">{providerLabel(summary.provider)}</p>
           <p className="mt-1 text-3xl font-semibold tracking-tight text-slate-900">
-            {summary.availabilityPercent === null ? "—" : `${summary.availabilityPercent}%`}
+            {summary.availabilityPercent === null ? "N/A" : `${summary.availabilityPercent}%`}
           </p>
           <p className="mt-1 text-xs text-slate-500">availability</p>
         </div>

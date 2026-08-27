@@ -64,7 +64,7 @@ function SourceCard({ id, t, language }: { id: DataSourceId; t: (key: string, op
       case "explanations": return `${formatNumber(facts.chargeExplanationsWithSources, language)} of ${formatNumber(facts.chargeExplanations, language)}`;
       case "procedure": return `${formatNumber(facts.procedureJurisdictions, language)} / ${formatNumber(facts.procedureMediumConfidence, language)}`;
       case "collateral": return `${formatNumber(facts.collateralJurisdictions, language)} / ${formatNumber(facts.driversLicenseJurisdictions, language)} / ${formatNumber(facts.immigrationJurisdictions, language)} / ${formatNumber(facts.sexOffenderJurisdictions, language)}`;
-      case "rights": return "—";
+      case "rights": return "N/A";
       case "expungement": return formatNumber(facts.expungementJurisdictions, language);
       case "diversion": return `${formatNumber(facts.diversionPrograms, language)} / ${formatNumber(facts.activeDiversionPrograms, language)}`;
       case "legalAid": return `${formatNumber(facts.legalAidOrganizations, language)} / ${formatNumber(facts.legalAidJurisdictions, language)}`;
@@ -73,10 +73,10 @@ function SourceCard({ id, t, language }: { id: DataSourceId; t: (key: string, op
       case "statuteLinks": return formatNumber(facts.statuteLinkJurisdictions, language);
       case "detention": return `${formatNumber(facts.detentionFacilities, language)} / ${formatNumber(facts.detentionStates, language)}`;
       case "consulates": return formatNumber(facts.consulates, language);
-      case "publicResources": return "—";
-      case "juryInstructions": return "—";
+      case "publicResources": return "N/A";
+      case "juryInstructions": return "N/A";
       case "validation": return "3";
-      case "statistics": return "—";
+      case "statistics": return "N/A";
       case "ai": return "1";
     }
   };

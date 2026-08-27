@@ -632,7 +632,7 @@ The user exported guidance before selecting a case stage. Despite the system pro
 - You MAY include one entry in deadlines only if there is a concrete, universally applicable time-sensitive action (e.g. a DMV hearing window for DUI that runs from the arrest date, not the case stage). Use priority "important" and add a note that the user should confirm the exact deadline with an attorney.
 - In the overview and immediateActions, note clearly that the person has not yet selected a case stage and should do so to receive precise deadline guidance.` : ''}`;
 
-  prompt += `\n\nSELECTED CHARGE SCOPE — HARD LIMIT:\n${selectedChargeScope}`;
+  prompt += `\n\nSELECTED CHARGE SCOPE (HARD LIMIT):\n${selectedChargeScope}`;
 
   // Background context for collateral consequences
   const backgroundLines: string[] = [];

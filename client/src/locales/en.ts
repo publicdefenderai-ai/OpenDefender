@@ -1184,7 +1184,7 @@ export default {
           "description": "The nation's largest mental health organization — local chapters offer support groups, education, and advocacy. NAMI Helpline available Monday through Friday."
         },
         "goodRx": {
-          "name": "GoodRx — Prescription Savings",
+          "name": "GoodRx: Prescription Savings",
           "description": "Free tool to compare prescription drug prices and find coupons. Can significantly reduce out-of-pocket costs if your insurance is disrupted during your case."
         }
       },
@@ -1243,7 +1243,7 @@ export default {
           "If a program has a waitlist, ask for a letter confirming your place on the waitlist. Courts recognize that you applied even if you have not started yet."
         ],
         "findTitle": "Finding programs",
-        "findSamhsaLabel": "SAMHSA — findtreatment.gov",
+        "findSamhsaLabel": "SAMHSA: findtreatment.gov",
         "findSamhsa": "SAMHSA's treatment locator (findtreatment.gov) is the most complete national database of licensed drug treatment and mental health facilities. Enter your ZIP code to find programs near you, filter by payment type (Medicaid, sliding scale, free), and see what services each facility offers.",
         "findSamhsaNote": "Availability and wait times change frequently. Call to confirm before counting on a specific program.",
         "find211": "211 (call or text) connects you to local treatment resources and can often find programs with current openings faster than a web search.",
@@ -4654,7 +4654,7 @@ export default {
     },
     "toolkitCta": {
       "title": "Now use the Family Toolkit",
-      "text": "Collect contact information, look up court records, and track what needs certified mail — all in one place.",
+      "text": "Collect contact information, look up court records, and track what needs certified mail, all in one place.",
       "button": "Open toolkit"
     }
   },
