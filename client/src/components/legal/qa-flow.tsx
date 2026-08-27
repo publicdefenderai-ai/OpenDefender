@@ -14,9 +14,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { motion, AnimatePresence } from "framer-motion";
 import { getChargeById as getCatalogChargeById, getChargesByJurisdiction, chargeCategories, normalizeChargeIds, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall, isChargeIdRequiringReselection } from "@shared/criminal-charges";
+import { getCaliforniaLegacyDisposition, getCaliforniaReselectionOptions } from "@shared/california-authority";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import { shouldShowCaseStageWarning, QA_FLOW_STATUS_STEP_INDEX } from "./qa-flow-guard";
+import { replaceLegacyChargeWithCanonical } from "./qa-flow-reselection";
 
 interface QAFlowProps {
   onComplete: (data: any) => void;
@@ -501,6 +503,16 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     }
     onNext();
   };
+
+  const handleReselection = (legacyId: string, canonicalId: string) => {
+    const updatedCharges = replaceLegacyChargeWithCanonical(
+      formData.charges,
+      legacyId,
+      canonicalId,
+    );
+    updateFormData("charges", updatedCharges);
+    updateFormData("chargesUnknown", false);
+  };
   
   // Custom sorting function to group crimes with degrees together
   const sortChargesWithDegrees = (charges: any[]) => {
@@ -598,6 +610,59 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               </p>
             </div>
           )}
+
+          {unresolvedChargeIds.map((legacyId: string) => {
+            const options = getCaliforniaReselectionOptions(legacyId);
+            if (options.length === 0) return null;
+            const disposition = getCaliforniaLegacyDisposition(legacyId);
+            return (
+              <div
+                key={`reselection-${legacyId}`}
+                className="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-950/20"
+                data-testid={`legacy-charge-options-${legacyId}`}
+              >
+                <div className="mb-3">
+                  <p className="text-sm font-semibold text-amber-950 dark:text-amber-100">
+                    {t('legalGuidance.qaFlow.caseDetails.reselectionTitle')}
+                  </p>
+                  {disposition?.reason && (
+                    <p className="mt-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+                      {disposition.reason}
+                    </p>
+                  )}
+                </div>
+                <div className="grid gap-2">
+                  {options.map((option) => {
+                    const charge = getCatalogChargeById(option.canonicalId);
+                    if (!charge) return null;
+                    const citation = getVerifiedCitation(charge);
+                    return (
+                      <Button
+                        key={option.canonicalId}
+                        type="button"
+                        variant="outline"
+                        className="h-auto justify-between gap-3 whitespace-normal border-amber-300 bg-white p-3 text-left hover:bg-amber-100 dark:border-amber-700 dark:bg-background dark:hover:bg-amber-950/40"
+                        onClick={() => handleReselection(legacyId, option.canonicalId)}
+                        data-testid={`button-reselect-${option.canonicalId}`}
+                      >
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold">{charge.name}</span>
+                          {citation && (
+                            <span className="mt-1 block text-xs font-normal text-muted-foreground">
+                              {citation}
+                            </span>
+                          )}
+                        </span>
+                        <span className="shrink-0 text-xs font-medium text-amber-800 dark:text-amber-200">
+                          {t('legalGuidance.qaFlow.caseDetails.reselectionChoose')}
+                        </span>
+                      </Button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
 
           {/* Selected Charges */}
           {!formData.chargesUnknown && formData.charges.length > 0 && (

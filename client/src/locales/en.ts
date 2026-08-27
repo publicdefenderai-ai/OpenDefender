@@ -2358,6 +2358,8 @@ export default {
         "title": "What charges are you facing?",
         "selectedCharges": "Selected Charges:",
         "legacyChargeNotice": "A saved charge selection is outdated or too broad to identify the current offense. Please choose the exact charge from the list below; until then, support will be general rather than charge-specific.",
+        "reselectionTitle": "Choose the exact charge",
+        "reselectionChoose": "Choose",
         "filterLabel": "Filter by Category (Optional)",
         "filterPlaceholder": "All categories",
         "allCategories": "All categories",

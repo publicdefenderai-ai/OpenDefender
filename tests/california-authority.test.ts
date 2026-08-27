@@ -7,6 +7,7 @@ import {
   getCaliforniaReconciliationInventory,
   getCaliforniaCanonicalRecord,
   getCaliforniaLegacyDisposition,
+  getCaliforniaReselectionOptions,
 } from "../shared/california-authority";
 import {
   getChargeById,
@@ -50,9 +51,9 @@ describe("authoritative California charge release", () => {
   it("exposes only approved California offenses through the selector", () => {
     const charges = getChargesByJurisdiction("CA");
     const activeCanonicalIds = new Set(
-      CALIFORNIA_LEGACY_DISPOSITIONS
-        .filter((entry) => entry.disposition === "retain" || entry.disposition === "rename")
-        .map((entry) => entry.canonicalId),
+      CALIFORNIA_CANONICAL_RECORDS
+        .filter((record) => record.selectable)
+        .map((record) => record.canonicalId),
     );
     expect(charges.length).toBe(activeCanonicalIds.size);
     expect(charges.every((charge) => charge.jurisdiction === "CA")).toBe(true);
@@ -76,6 +77,140 @@ describe("authoritative California charge release", () => {
     expect(CALIFORNIA_CANONICAL_RECORDS.find((record) => record.code === "415")?.penalty).toContain("90 days");
     expect(isChargeIdRequiringReselection("ca-wire-fraud")).toBe(true);
     expect(isChargeIdRequiringReselection("ca-criminally-negligent-homicide")).toBe(true);
+  });
+
+  it("offers exact current choices for every supported ambiguous legacy label", () => {
+    const supportedLegacyIds = [
+      "ca-criminally-negligent-homicide",
+      "ca-vehicular-homicide",
+      "ca-assault-in-the-second-degree",
+      "ca-assault-in-the-third-degree",
+      "ca-rape-in-the-first-degree",
+      "ca-sexual-assault-in-the-second-degree",
+      "ca-sexual-assault-in-the-third-degree",
+      "ca-statutory-rape",
+      "ca-child-sexual-abuse",
+      "ca-grand-theft-in-the-first-degree",
+      "ca-identity-theft",
+      "ca-insurance-fraud",
+      "ca-computer-fraud",
+      "ca-disturbing-the-peace",
+      "ca-dui-first-offense",
+      "ca-failure-to-appear",
+      "ca-protective-order-violation",
+      "ca-open-container",
+      "ca-indecent-exposure",
+      "ca-illegal-fireworks",
+      "ca-conspiracy",
+      "ca-accessory-after-the-fact",
+      "ca-criminal-solicitation",
+    ];
+
+    for (const legacyId of supportedLegacyIds) {
+      const options = getCaliforniaReselectionOptions(legacyId);
+      expect(options.length, legacyId).toBeGreaterThan(0);
+      expect(getCaliforniaLegacyDisposition(legacyId)?.disposition).toBe("reselection-required");
+      for (const option of options) {
+        expect(option.selectable).toBe(true);
+        expect(option.citation).toMatch(/§/);
+        expect(option.sources.length).toBeGreaterThan(0);
+        expect(option.elements.length).toBeGreaterThan(0);
+        expect(option.mentalState.length).toBeGreaterThan(0);
+        expect(option.grading.length).toBeGreaterThan(0);
+        expect(option.penalty.length).toBeGreaterThan(0);
+        expect(getChargeById(option.canonicalId)?.id).toBe(option.canonicalId);
+      }
+    }
+  });
+
+  it("keeps unsupported California records excluded even as exact choices are added", () => {
+    for (const legacyId of [
+      "ca-wire-fraud",
+      "ca-mail-fraud",
+      "ca-probation-violation",
+      "ca-gang-enhancement",
+      "ca-juvenile-delinquency-felony",
+      "ca-animal-at-large",
+    ]) {
+      expect(getCaliforniaReselectionOptions(legacyId)).toEqual([]);
+      expect(getChargeById(legacyId)).toBeUndefined();
+    }
+  });
+
+  it("keeps high-risk exact alternatives tied to the authoritative subdivision", () => {
+    expect(
+      getCaliforniaReselectionOptions("ca-vehicular-homicide").map((record) => record.canonicalId),
+    ).toEqual([
+      "ca-gross-vehicular-manslaughter-191-5-a",
+      "ca-vehicular-manslaughter-191-5-b",
+      "ca-vehicular-manslaughter-192-c1",
+      "ca-vehicular-manslaughter-192-c2",
+      "ca-vehicular-manslaughter-192-c3",
+    ]);
+
+    expect(
+      getCaliforniaReselectionOptions("ca-rape-in-the-first-degree").map((record) => record.canonicalId),
+    ).toEqual([
+      "ca-rape-261-a1",
+      "ca-rape-261-a2",
+      "ca-rape-261-a3",
+      "ca-rape-261-a4",
+      "ca-rape-261-a5",
+      "ca-rape-261-a6",
+      "ca-rape-261-a7",
+    ]);
+
+    const gross = getCaliforniaCanonicalRecord("ca-gross-vehicular-manslaughter-191-5-a");
+    expect(gross?.citation).toBe("Cal. Penal Code § 191.5(a)");
+    expect(gross?.grading).toBe("Felony.");
+    expect(gross?.penalty).toContain("4, 6, or 10 years");
+
+    const intoxicated = getCaliforniaCanonicalRecord("ca-vehicular-manslaughter-191-5-b");
+    expect(intoxicated?.citation).toBe("Cal. Penal Code § 191.5(b)");
+    expect(intoxicated?.grading).toBe("Wobbler.");
+    expect(intoxicated?.penalty).toContain("16 months, 2 years, or 4 years");
+
+    const agricultural = getCaliforniaCanonicalRecord("ca-grand-theft-agricultural-487-b1a");
+    expect(agricultural?.citation).toBe("Cal. Penal Code § 487(b)(1)(A)");
+    expect(agricultural?.elements.join(" ")).toContain("agricultural crops");
+    expect(agricultural?.elements.join(" ")).toContain("$250");
+
+    const firearm = getCaliforniaCanonicalRecord("ca-grand-theft-firearm-487-d2");
+    expect(firearm?.citation).toBe("Cal. Penal Code § 487(d)(2)");
+    expect(firearm?.grading).toBe("Felony.");
+    expect(firearm?.penalty).toContain("16 months, 2 years, or 3 years");
+
+    const withoutGrossNegligence = getCaliforniaCanonicalRecord("ca-vehicular-manslaughter-192-c2");
+    expect(withoutGrossNegligence?.citation).toBe("Cal. Penal Code § 192(c)(2)");
+    expect(withoutGrossNegligence?.grading).toBe("Misdemeanor.");
+    expect(withoutGrossNegligence?.penalty).toContain("§ 193(c)(2)");
+
+    const financialGain = getCaliforniaCanonicalRecord("ca-vehicular-manslaughter-192-c3");
+    expect(financialGain?.citation).toBe("Cal. Penal Code § 192(c)(3)");
+    expect(financialGain?.grading).toBe("Felony.");
+    expect(financialGain?.elements.join(" ")).toContain("financial gain");
+
+    const closeInAge = getCaliforniaCanonicalRecord("ca-unlawful-sexual-intercourse-261-5-b");
+    expect(closeInAge?.citation).toBe("Cal. Penal Code § 261.5(b)");
+    expect(closeInAge?.elements.join(" ")).toContain("not more than 3 years older or younger");
+    expect(closeInAge?.grading).toBe("Misdemeanor.");
+
+    const ageDifference = getCaliforniaCanonicalRecord("ca-unlawful-sexual-intercourse-261-5-c");
+    expect(ageDifference?.citation).toBe("Cal. Penal Code § 261.5(c)");
+    expect(ageDifference?.elements.join(" ")).toContain("more than 3 years younger");
+    expect(ageDifference?.elements.join(" ")).not.toContain("10 years");
+    expect(ageDifference?.grading).toBe("Misdemeanor or felony.");
+
+    expect(getCaliforniaCanonicalRecord("ca-dui-23152-a")?.officialTitle).toBe(
+      "Driving Under the Influence of Alcohol",
+    );
+    expect(getCaliforniaCanonicalRecord("ca-dui-23152-a")?.elements.join(" ")).not.toContain("drug");
+    expect(getCaliforniaCanonicalRecord("ca-dui-23152-f")?.citation).toBe(
+      "Cal. Vehicle Code § 23152(f)",
+    );
+    expect(getCaliforniaCanonicalRecord("ca-dui-23152-g")?.citation).toBe(
+      "Cal. Vehicle Code § 23152(g)",
+    );
   });
 
   it("uses the canonical record as the citation and source authority", () => {

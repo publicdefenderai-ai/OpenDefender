@@ -2360,6 +2360,8 @@ export default {
         "title": "您面临什么指控？",
         "selectedCharges": "已选择的指控：",
         "legacyChargeNotice": "保存的指控选择已过时或过于宽泛，无法确定当前罪名。请从下面的列表中选择确切指控；在此之前，我们只能提供一般性支持，不能提供针对具体指控的支持。",
+        "reselectionTitle": "选择确切指控",
+        "reselectionChoose": "选择",
         "filterLabel": "按类别筛选（可选）",
         "filterPlaceholder": "所有类别",
         "allCategories": "所有类别",

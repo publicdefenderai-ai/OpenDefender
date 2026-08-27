@@ -195,6 +195,7 @@ import {
   assertCaliforniaInventoryComplete,
   getCaliforniaCanonicalCharge,
   getCaliforniaCanonicalCharges,
+  getCaliforniaCanonicalRecord,
   getCaliforniaCitation,
   getCaliforniaInstruction,
   getCaliforniaLegacyDisposition,
@@ -94771,11 +94772,19 @@ chargeCategories['CA'] = getCaliforniaCanonicalCharges(
 // Helper functions for charge lookup
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
-  const charge = criminalCharges.find(charge => charge.id === normalizedId);
+  const directCharge = criminalCharges.find(charge => charge.id === normalizedId);
+  const canonical = normalizedId.startsWith("ca-")
+    ? getCaliforniaCanonicalRecord(normalizedId)
+    : undefined;
+  const charge = directCharge ?? (
+    canonical
+      ? criminalCharges.find((candidate) => candidate.id === canonical.legacyIds[0])
+      : undefined
+  );
   if (!charge) return undefined;
   if (charge.jurisdiction === 'CA') {
     return isCaliforniaSelectableId(normalizedId)
-      ? getCaliforniaCanonicalCharge(charge)
+      ? getCaliforniaCanonicalCharge({ ...charge, id: normalizedId })
       : undefined;
   }
   return charge;
