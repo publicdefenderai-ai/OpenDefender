@@ -34,6 +34,31 @@ import { stateStatuteConfigs } from "../server/data/state-statute-urls";
 import { federalStatutesSeed } from "../server/data/federal-statutes-seed";
 
 const transparency = (locale: typeof en) => locale.translation.home.dataSources.transparency;
+const nySources = (locale: typeof en) => transparency(locale).nySources;
+
+const NY_SOURCE_DISCLOSURE_SECTIONS = {
+  authority: ["authorityTitle", "authorityBody"],
+  failClosed: ["failClosedTitle", "failClosedBody"],
+  aliasAndWithheld: ["catalogTitle", "catalogBody"],
+  attorneyReview: ["reviewTitle", "reviewBody"],
+  disclosureLinks: [
+    "linksTitle",
+    "linksIntro",
+    "apiLink",
+    "officialLink",
+    "inventoryLink",
+    "statuteLink",
+    "disclaimerLink",
+  ],
+} as const;
+
+const NY_SOURCE_DISCLOSURE_LOCALES = [
+  ["en", en],
+  ["es", es],
+  ["zh", zh],
+] as const;
+
+const NY_SOURCE_DISCLOSURE_KEYS = Object.keys(nySources(en)).sort();
 
 describe("data source inventory", () => {
   it("matches maintained dataset counts", () => {
@@ -82,6 +107,46 @@ describe("data source inventory", () => {
         expect(item.freshness, `${id} freshness`).toBeTruthy();
         expect(item.limitation, `${id} limitation`).toBeTruthy();
         expect(item.evidence, `${id} evidence`).toBeTruthy();
+      }
+    }
+  });
+
+  it("keeps every New York source-disclosure key in EN, ES, and ZH", () => {
+    for (const [localeName, locale] of NY_SOURCE_DISCLOSURE_LOCALES) {
+      const disclosure = nySources(locale);
+      const keys = Object.keys(disclosure).sort();
+
+      expect(
+        keys,
+        `${localeName} New York source disclosure keys must match EN`,
+      ).toEqual(NY_SOURCE_DISCLOSURE_KEYS);
+
+      for (const key of NY_SOURCE_DISCLOSURE_KEYS) {
+        const value = disclosure[key as keyof typeof disclosure];
+        expect(
+          typeof value,
+          `${localeName} New York source disclosure "${key}" must be a string`,
+        ).toBe("string");
+        expect(
+          typeof value === "string" ? value.trim() : value,
+          `${localeName} New York source disclosure "${key}" must be non-empty`,
+        ).not.toBe("");
+      }
+    }
+  });
+
+  it("keeps the required New York authority and safety concepts localized", () => {
+    for (const [localeName, locale] of NY_SOURCE_DISCLOSURE_LOCALES) {
+      const disclosure = nySources(locale);
+
+      for (const [concept, keys] of Object.entries(NY_SOURCE_DISCLOSURE_SECTIONS)) {
+        for (const key of keys) {
+          const value = disclosure[key as keyof typeof disclosure];
+          expect(
+            typeof value === "string" ? value.trim() : value,
+            `${localeName} New York ${concept} disclosure "${key}" is missing or empty`,
+          ).not.toBe("");
+        }
       }
     }
   });
