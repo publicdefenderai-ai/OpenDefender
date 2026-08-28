@@ -27,6 +27,8 @@ import { loadTexasAuthorityManifest } from "./data/texas-manifest-loader";
 import {
   texasSourceDatabase,
 } from "./services/texas-source-database";
+import { floridaSourceDatabase } from "./services/florida-source-database";
+import { loadFloridaAuthorityManifest } from "./data/florida-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
@@ -482,6 +484,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ? await newYorkSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "TX"
           ? await texasSourceDatabase.getChargeProvenance(normalizedCharge.id)
+        : normalizedCharge?.jurisdiction === "FL"
+          ? await floridaSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "CA"
           ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : null;
@@ -903,6 +907,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch Texas source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch Texas source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/florida/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await floridaSourceDatabase.seed(loadFloridaAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("Florida source database seeding failed", error);
+      res.status(500).json({ success: false, error: "Florida source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/florida/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await floridaSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch Florida source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch Florida source database status" });
     }
   });
 

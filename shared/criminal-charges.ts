@@ -8201,7 +8201,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-grand-theft-in-the-first-degree',
     name: 'Grand Theft in the First Degree',
-    code: '812.014',
+    code: '812.014(2)(a)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft over $50,000 under Florida law',
@@ -8214,7 +8214,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-grand-theft-in-the-second-degree',
     name: 'Grand Theft in the Second Degree',
-    code: '812.014',
+    code: '812.014(2)(b)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft over $5,000 under Florida law',
@@ -8227,7 +8227,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-grand-theft-in-the-third-degree',
     name: 'Grand Theft in the Third Degree',
-    code: '812.014',
+    code: '812.014(2)(c)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft over $1,000 under Florida law',
@@ -8292,7 +8292,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-embezzlement',
     name: 'Embezzlement',
-    code: '812.014',
+    code: '812.014(2)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Theft by person in position of trust under Florida law',
@@ -8318,7 +8318,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-burglary-in-the-first-degree',
     name: 'Burglary in the First Degree',
-    code: '810.02',
+    code: '810.02(2)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful entry with weapon or injury under Florida law',
@@ -8331,7 +8331,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-burglary-in-the-second-degree',
     name: 'Burglary in the Second Degree',
-    code: '810.02',
+    code: '810.02(3)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Unlawful entry of dwelling under Florida law',
@@ -8383,7 +8383,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-robbery-in-the-first-degree',
     name: 'Robbery in the First Degree',
-    code: '812.13',
+    code: '812.13(2)(a)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Armed robbery with injury under Florida law',
@@ -8396,7 +8396,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-robbery-in-the-second-degree',
     name: 'Robbery in the Second Degree',
-    code: '812.13',
+    code: '812.13(2)(c)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Armed robbery under Florida law',
@@ -8500,7 +8500,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '893.147',
+    code: '893.147(1)',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Florida law',
@@ -8721,7 +8721,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '316.193',
+    code: '316.193(2)(a)',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under Florida law',
@@ -8734,7 +8734,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '316.193',
+    code: '316.193(2)(b)1',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'Driving under influence, felony level under Florida law',
@@ -66657,7 +66657,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'fl-animal-cruelty-misdemeanor',
     name: 'Animal Cruelty (Misdemeanor)',
-    code: '828.12',
+    code: '828.12(1)',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'Negligent or intentional mistreatment, neglect, or abuse of an animal under FL law',
@@ -91972,7 +91972,7 @@ const phase5JuvenileCharges: CriminalCharge[] = [
   {
     id: 'fl-juvenile-delinquency-felony',
     name: 'Juvenile Delinquency Adjudication (Felony-Level Act)',
-    code: '985.03',
+    code: '985.03(9)',
     jurisdiction: 'FL',
     category: 'felony',
     description: 'A juvenile delinquency adjudication for an act that would constitute a felony if committed by an adult under Florida law. This is NOT a criminal conviction — it is a civil adjudication. Juveniles are not "convicted" and do not have a criminal record in the traditional sense. The process takes place in juvenile or family court, not adult criminal court. Records are often sealable or expungeable upon reaching adulthood.',
@@ -91986,7 +91986,7 @@ const phase5JuvenileCharges: CriminalCharge[] = [
   {
     id: 'fl-juvenile-delinquency-misdemeanor',
     name: 'Juvenile Delinquency Adjudication (Misdemeanor-Level Act)',
-    code: '985.03',
+    code: '985.03(9)',
     jurisdiction: 'FL',
     category: 'misdemeanor',
     description: 'A juvenile delinquency adjudication for an act that would constitute a misdemeanor if committed by an adult under Florida law. These cases are handled entirely in juvenile or family court. Most first-time misdemeanor-level adjudications result in informal probation, community service, or diversion rather than detention. Records are generally sealable and do not appear on adult background checks if properly handled.',

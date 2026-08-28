@@ -3,6 +3,7 @@ import { spawn } from "node:child_process";
 const seedScripts = [
   "dist/seed-new-york-source-database.js",
   "dist/seed-texas-source-database.js",
+  "dist/seed-florida-source-database.js",
 ];
 let child;
 

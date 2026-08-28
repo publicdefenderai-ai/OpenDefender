@@ -357,6 +357,27 @@ export default {
           "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
           "chargeLookupBody": "En el selector de cargos de Texas, abra «Ver detalles de la fuente actual» para un cargo seleccionable y consulte su título oficial, cita, enlace TCSS, fechas de obtención y vigencia, disponibilidad del contenido y hash del contenido. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
         },
+        "flSources": {
+          "eyebrow": "Fuentes de cargos de Florida",
+          "title": "Cómo se verifican las fuentes de los cargos de Florida",
+          "intro": "Los registros de cargos de Florida usan las páginas oficiales de estatutos de Florida Legislature Online Sunshine. El manifiesto contiene una disposición para cada una de las 117 filas del catálogo de Florida; solo se publican los registros con respaldo completo y exacto.",
+          "authorityTitle": "Autoridad oficial",
+          "authorityBody": "El importador obtiene el HTML de los estatutos desde leg.state.fl.us, verifica el número de sección y el título oficial, guarda todo el texto devuelto, registra los metadatos de obtención y la evidencia de vigencia disponible, y calcula un hash SHA-256.",
+          "failClosedTitle": "Por qué un cargo puede no estar disponible",
+          "failClosedBody": "El importador falla de forma cerrada si la página no está disponible, falta el ancla o el título, un cargo compuesto no tiene todas sus disposiciones o la etiqueta no tiene una correspondencia revisada explícitamente. Las filas retenidas no aparecen en selección, orientación, búsqueda ni exportaciones de Florida.",
+          "catalogTitle": "Alias y cargos compuestos",
+          "catalogBody": "Las etiquetas de Florida solo pueden usar un alias exacto cuando se verifican el título oficial y todas las disposiciones necesarias. Los cargos compuestos y tentativas conservan enlaces separados; el sistema no infiere una disposición cercana.",
+          "reviewTitle": "La verificación de una fuente no equivale a la aprobación de un abogado",
+          "reviewBody": "La verificación confirma el editor oficial, la sección, el título, el texto, los metadatos y el hash. No significa que un abogado haya aprobado los elementos, el estado mental, la clasificación, las penas o la vigencia; esos campos siguen pendientes de revisión legal.",
+          "linksTitle": "Revise las divulgaciones subyacentes",
+          "linksIntro": "Compare esta explicación con el inventario de fuentes, la divulgación de enlaces legales, las divulgaciones de datos legales y el sitio oficial de estatutos de Florida.",
+          "officialLink": "Sitio oficial de estatutos de Florida",
+          "inventoryLink": "Inventario de fuentes de cargos",
+          "statuteLink": "Divulgación de enlaces legales",
+          "disclaimerLink": "Divulgaciones generales de datos legales",
+          "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
+          "chargeLookupBody": "En el selector de cargos de Florida, abra «Ver detalles de la fuente actual» para ver el título oficial, la cita, el enlace de Online Sunshine, las fechas de obtención y vigencia, la disponibilidad del contenido y el hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
+        },
           "labels": { "coverage": "Cobertura / conteo", "freshness": "Actualización", "sourcePath": "Ruta de la fuente", "sourceType": "Tipo de fuente", "sources": "Fuentes nombradas", "citations": "Formato de cita / referencia", "providerDisclosure": "Divulgación del proveedor", "limitation": "Limitación" },
         "sourceTypes": {
           "primaryLegalText": "Texto legal primario",

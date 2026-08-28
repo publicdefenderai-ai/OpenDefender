@@ -1,19 +1,23 @@
 import { getSelectableCharges } from "@shared/criminal-charges";
-import { getCurrentNewYorkSelectableChargeIds } from "./new-york-source-database";
-import { getCurrentTexasSelectableChargeIds } from "./texas-source-database";
+import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
 
-export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["NY", "TX"]);
+export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["NY", "TX", "FL"]);
 
 export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<string>> {
-  const [newYork, texas] = await Promise.all([
-    getCurrentNewYorkSelectableChargeIds(),
-    getCurrentTexasSelectableChargeIds(),
-  ]);
+  const byJurisdiction = new Map(
+    await Promise.all(
+      [...AUTHORITY_BACKED_JURISDICTIONS].map(async (jurisdiction) => [
+        jurisdiction,
+        await getCurrentJurisdictionAuthoritySelectableChargeIds(jurisdiction),
+      ] as const),
+    ),
+  );
   const allowed = new Set<string>();
   for (const charge of getSelectableCharges()) {
-    if (!AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction) ||
-        (charge.jurisdiction === "NY" && newYork.has(charge.id)) ||
-        (charge.jurisdiction === "TX" && texas.has(charge.id))) {
+    if (
+      !AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction) ||
+      byJurisdiction.get(charge.jurisdiction)?.has(charge.id)
+    ) {
       allowed.add(charge.id);
     }
   }

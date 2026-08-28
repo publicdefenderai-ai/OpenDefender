@@ -5,7 +5,10 @@ import rateLimit from "express-rate-limit";
 import { search, getSearchIndexStats } from "./services/search-indexer";
 import { getSelectableCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
-import { getCurrentAuthoritySelectableChargeIds } from "./services/authority-eligibility";
+import {
+  AUTHORITY_BACKED_JURISDICTIONS,
+  getCurrentAuthoritySelectableChargeIds,
+} from "./services/authority-eligibility";
 import { openApiSpec } from "./openapi";
 import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
 import { diversionPrograms } from "../shared/diversion-programs-data";
@@ -158,7 +161,7 @@ export function registerV1Routes(app: Express): void {
       if (!charge) {
         return res.status(404).json({ success: false, error: 'Charge not found' });
       }
-      if (charge.jurisdiction === "NY" || charge.jurisdiction === "TX") {
+      if (AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction)) {
         const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
         if (!currentAuthoritySelectableIds.has(charge.id)) {
           return res.status(404).json({ success: false, error: 'Charge not found' });

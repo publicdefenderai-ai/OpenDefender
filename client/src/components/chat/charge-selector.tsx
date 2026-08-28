@@ -129,7 +129,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
 
   const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
-  const isAuthorityBacked = ["NY", "TX"].includes(jurisdiction.toUpperCase());
+  const isAuthorityBacked = ["NY", "TX", "FL"].includes(jurisdiction.toUpperCase());
 
   const {
     data: provenance,

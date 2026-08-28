@@ -355,6 +355,27 @@ export default {
           "chargeLookupTitle": "Inspect a charge's current provenance",
           "chargeLookupBody": "In the Texas charge selector, open “View current source details” for a selectable charge to see its official title, citation, TCSS link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
         },
+        "flSources": {
+          "eyebrow": "Florida charge sources",
+          "title": "How Florida charge sources are verified",
+          "intro": "Florida charge records use official Florida Legislature Online Sunshine statute pages. The committed manifest contains one disposition for every 117 Florida catalog rows; only records with complete, exact source support are published.",
+          "authorityTitle": "Official authority",
+          "authorityBody": "The importer retrieves Florida statute HTML from leg.state.fl.us, verifies the section number and official catchline, stores the complete returned text, records retrieval metadata and any effective-date evidence, and computes a SHA-256 content hash.",
+          "failClosedTitle": "Why a charge may be unavailable",
+          "failClosedBody": "The importer fails closed when a page is unavailable, its section anchor or title is missing, a compound charge lacks a required provision, or the catalog label has no explicitly reviewed mapping. Withheld rows do not appear in Florida selection, guidance, search, or exports. A failed refresh does not replace the prior current authority.",
+          "catalogTitle": "Aliases and compound records",
+          "catalogBody": "Florida labels may use an exact alias only when the official title and every required provision are verified. Compound and inchoate records retain separate provision links; the system does not infer an offense or grading section from a nearby citation.",
+          "reviewTitle": "Source verification is not attorney approval",
+          "reviewBody": "Verification confirms the official publisher, section, title, returned text, retrieval metadata, and hash. It does not mean a lawyer approved the elements, mental state, grading, penalties, or currentness interpretation; those fields remain pending attorney review.",
+          "linksTitle": "Review the underlying disclosures",
+          "linksIntro": "Compare this explanation with the maintained source inventory, statute-link disclosure, legal-data disclosures, and Florida's official statute site.",
+          "officialLink": "Florida official statute site",
+          "inventoryLink": "Criminal-charge source inventory",
+          "statuteLink": "Statute-link disclosure",
+          "disclaimerLink": "General legal-data disclosures",
+          "chargeLookupTitle": "Inspect a charge's current provenance",
+          "chargeLookupBody": "In the Florida charge selector, open “View current source details” for a selectable charge to see its official title, citation, Online Sunshine link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
+        },
           "labels": { "coverage": "Coverage / count", "freshness": "Freshness", "sourcePath": "Source path", "sourceType": "Source type", "sources": "Named sources", "citations": "Citation / reference format", "providerDisclosure": "Provider disclosure", "limitation": "Limitation" },
         "sourceTypes": {
           "primaryLegalText": "Primary legal text",
