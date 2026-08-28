@@ -182,10 +182,13 @@ export default function ChatPage() {
       });
       setCurrentStep('emergency_check');
     }
+  }, [openChat, addMessage, setCurrentStep, state.currentStep, state.messages.length]);
+
+  useEffect(() => {
     return () => {
       if (typingTimeoutRef.current) clearTimeout(typingTimeoutRef.current);
     };
-  }, [openChat, addMessage, setCurrentStep, state.currentStep, state.messages.length]);
+  }, []);
 
   // Detect "stuck" state when user returns from another page
   // This happens when the last message has no quick replies and input is locked
