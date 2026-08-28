@@ -1,7 +1,22 @@
 /**
  * Know Your Rights (KYR) Scripts and Materials
  * Bilingual EN/ES content for ICE encounter scenarios
- * Based on ILRC, NILC, and ACLU guidance
+ *
+ * Sources, verified against the live pages 2026-08-27:
+ * - kyrScripts (door, traffic, workplace, public, checkpoint scenarios):
+ *   ILRC, "Know Your Rights When Confronted by ICE" flyer,
+ *   https://www.ilrc.org/community-resources/know-your-rights/know-your-rights-when-confronted-ice-flyer
+ *   and ACLU, "Immigrants' Rights" Know Your Rights hub (scenario accordions:
+ *   "Police or ICE are at my home", "I was stopped by police, ICE, or Border
+ *   Patrol while in transit", "ICE comes to my place of business with a
+ *   search warrant or a subpoena seeking data or records", "I've been
+ *   stopped by police or ICE"), https://www.aclu.org/know-your-rights/immigrants-rights
+ * - warrantInfo (judicial vs. administrative warrant comparison, including
+ *   the concealment-risk note and the I-200/I-205 form identifiers):
+ *   NILC, "Know Your Rights: Warrants" (includes the Judicial /
+ *   Administrative / Blackie's warrant comparison table),
+ *   https://www.nilc.org/resources/know-your-rights-warrants/
+ *   (site returns 403 to automated fetches; verified via user-provided page text)
  */
 
 export interface KYRScript {
@@ -595,27 +610,29 @@ export const warrantInfo: WarrantInfo[] = [
         'Say: "This is not a judicial warrant. I do not consent to your entry."',
         'Do NOT let agents inside',
         'Stay silent - do not answer questions',
-        'You have the RIGHT to refuse entry'
+        'You have the RIGHT to refuse entry',
+        'If the warrant names someone specific who is home, falsely stating they are not there can lead to a separate charge called "concealment" - remaining silent is not the same as actively denying their presence'
       ],
       es: [
         'NO abra la puerta',
         'Diga: "Esta no es una orden judicial. No doy mi consentimiento para su entrada."',
         'NO deje entrar a los agentes',
         'Guarde silencio - no conteste preguntas',
-        'Tiene el DERECHO de rechazar la entrada'
+        'Tiene el DERECHO de rechazar la entrada',
+        'Si la orden nombra a una persona específica que está en casa, decir falsamente que no está ahí puede resultar en un cargo aparte llamado "ocultamiento" - guardar silencio no es lo mismo que negar activamente su presencia'
       ]
     },
     lookFor: {
       en: [
         '"Department of Homeland Security" or "ICE" header',
         'Signature from ICE officer (not a judge)',
-        'Form numbers like I-200, I-205, I-247',
+        'Form numbers like I-200, I-205',
         'No court seal'
       ],
       es: [
         'Encabezado del "Departamento de Seguridad Nacional" o "ICE"',
         'Firma de un oficial de ICE (no un juez)',
-        'Números de formulario como I-200, I-205, I-247',
+        'Números de formulario como I-200, I-205',
         'Sin sello del tribunal'
       ]
     }
