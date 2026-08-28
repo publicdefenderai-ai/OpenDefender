@@ -211,7 +211,7 @@ export default function RaidsToolkit() {
                     href="/immigration-guidance/family-preparedness"
                     className="block text-sm text-primary hover:underline"
                   >
-                    {lang === 'es' ? '→ Plantillas de Poder Notarial' : '→ Power of Attorney Templates'}
+                    {lang === 'es' ? '→ Plantillas de Autorización de Cuidador' : '→ Caregiver Authorization Templates'}
                   </a>
                   <a
                     href="#emergency-card"

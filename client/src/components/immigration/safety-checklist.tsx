@@ -127,8 +127,8 @@ const checklistItems: ChecklistItem[] = [
     id: 'family-1',
     category: 'family',
     text: {
-      en: 'Create a power of attorney for child custody',
-      es: 'Cree un poder notarial para la custodia de los hijos'
+      en: 'Set up a caregiver authorization document so a trusted adult can make school and medical decisions for your child (this does NOT transfer legal custody; requirements vary by state)',
+      es: 'Prepare un documento de autorización de cuidador para que un adulto de confianza pueda tomar decisiones escolares y médicas por su hijo/a (esto NO transfiere la custodia legal; los requisitos varían según el estado)'
     },
     priority: 'critical'
   },

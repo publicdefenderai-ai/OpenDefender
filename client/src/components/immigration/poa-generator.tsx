@@ -119,7 +119,7 @@ export function POAGenerator() {
       <!DOCTYPE html>
       <html>
         <head>
-          <title>${lang === 'es' ? 'Poder Notarial para Custodia' : 'Power of Attorney for Child Custody'} - ${template.stateName}</title>
+          <title>${lang === 'es' ? 'Documento de Autorización de Cuidador' : 'Caregiver Authorization Document'} - ${template.stateName}</title>
           <style>
             body {
               font-family: 'Times New Roman', Times, serif;
@@ -183,6 +183,10 @@ export function POAGenerator() {
               <li>${lang === 'es' ? 'Testigos requeridos:' : 'Witnesses required:'} ${template.witnessesRequired}</li>
               <li>${lang === 'es' ? 'Duración máxima:' : 'Maximum duration:'} ${template.maxDuration}</li>
             </ul>
+            <h4>${lang === 'es' ? 'Advertencias:' : 'Warnings:'}</h4>
+            <ul>
+              ${template.warnings[lang].map(w => `<li>${w}</li>`).join('')}
+            </ul>
           </div>
         </body>
       </html>
@@ -200,7 +204,7 @@ export function POAGenerator() {
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent flex items-center justify-center ring-1 ring-blue-500/20">
             <FileText className="h-5 w-5 text-blue-600 dark:text-blue-400" />
           </div>
-          {lang === 'es' ? 'Generador de Poder Notarial para Custodia' : 'Child Custody Power of Attorney Generator'}
+          {lang === 'es' ? 'Generador de Documentos de Autorización de Cuidador' : 'Caregiver Authorization Document Generator'}
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -210,8 +214,8 @@ export function POAGenerator() {
           <AlertDescription className="text-amber-800 dark:text-amber-200">
             <strong>{lang === 'es' ? 'AVISO IMPORTANTE:' : 'IMPORTANT NOTICE:'}</strong>{' '}
             {lang === 'es'
-              ? 'Este es solo un formulario de plantilla. NO constituye asesoría legal. Siempre consulte con un abogado calificado para su situación específica. Los requisitos legales varían por estado.'
-              : 'This is a template form only. It does NOT constitute legal advice. Always consult with a qualified attorney for your specific situation. Legal requirements vary by state.'}
+              ? 'Este documento autoriza a un cuidador a tomar decisiones escolares y médicas por su hijo/a. NO transfiere la custodia legal; solo un tribunal puede hacer eso. Es solo un formulario de plantilla y NO constituye asesoría legal. Siempre consulte con un abogado calificado para su situación específica. Los requisitos legales varían por estado.'
+              : 'This document authorizes a caregiver to make school and medical decisions for your child. It does NOT transfer legal custody; only a court can do that. It is a template form only and does NOT constitute legal advice. Always consult with a qualified attorney for your specific situation. Legal requirements vary by state.'}
           </AlertDescription>
         </Alert>
 
