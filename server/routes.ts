@@ -20,10 +20,14 @@ import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
 import { californiaSourceDatabase } from "./services/california-source-database";
 import {
-  getCurrentNewYorkSelectableChargeIds,
   newYorkSourceDatabase,
 } from "./services/new-york-source-database";
 import { fetchNewYorkAuthorityManifest } from "./services/new-york-authority-fetcher";
+import { loadTexasAuthorityManifest } from "./data/texas-manifest-loader";
+import {
+  texasSourceDatabase,
+} from "./services/texas-source-database";
+import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
@@ -378,12 +382,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       let charges = jurisdiction 
         ? getChargesByJurisdiction(jurisdiction as string)
         : getSelectableCharges();
-      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
-      const applyNewYorkEligibility = <T extends { jurisdiction: string; id: string }>(items: T[]) =>
-        items.filter((charge) =>
-          charge.jurisdiction !== "NY" || currentNewYorkSelectableIds.has(charge.id),
-        );
-      charges = applyNewYorkEligibility(charges);
+      const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
+      charges = filterAuthorityBackedCharges(charges, currentAuthoritySelectableIds);
       
       // Filter by search term (search in both English and Spanish)
       if (search && typeof search === 'string' && search.length > 100) {
@@ -459,8 +459,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         charges: simplifiedCharges,
         count: simplifiedCharges.length,
         totalAvailable: jurisdiction
-          ? applyNewYorkEligibility(getChargesByJurisdiction(jurisdiction as string)).length
-          : applyNewYorkEligibility(getSelectableCharges()).length
+          ? filterAuthorityBackedCharges(
+            getChargesByJurisdiction(jurisdiction as string),
+            currentAuthoritySelectableIds,
+          ).length
+          : filterAuthorityBackedCharges(getSelectableCharges(), currentAuthoritySelectableIds).length
       });
     } catch (error) {
       errLog("Failed to fetch criminal charges", error);
@@ -468,7 +471,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Current database-backed provenance for one selectable California or NY charge.
+  // Current database-backed provenance for one selectable California, New York,
+  // or Texas charge.
   // This remains separate from the selector response so a missing/unmigrated
   // source database can never weaken the canonical charge boundary.
   app.get("/api/criminal-charges/:chargeId/sources", searchRateLimiter, async (req, res) => {
@@ -476,6 +480,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const normalizedCharge = getChargeById(req.params.chargeId);
       const provenance = normalizedCharge?.jurisdiction === "NY"
         ? await newYorkSourceDatabase.getChargeProvenance(normalizedCharge.id)
+        : normalizedCharge?.jurisdiction === "TX"
+          ? await texasSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "CA"
           ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : null;
@@ -746,7 +752,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const language = (lang === 'es' ? 'es' : lang === 'zh' ? 'zh' : 'en') as 'en' | 'es' | 'zh';
       const typeFilters = types ? (types as string).split(',') : undefined;
-      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
       
       const searchResult = search({
         query: query.trim(),
@@ -754,9 +760,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         filters: {
           types: typeFilters as any,
           jurisdiction: jurisdiction as string,
-          // The index is built from the static catalog; keep withheld NY
+          // The index is built from the static catalog; keep withheld authority
           // charges out of site search and its totals as well.
-          chargeIds: [...currentNewYorkSelectableIds].map((id) => `charge-${id}`),
+          chargeIds: [...currentAuthoritySelectableIds].map((id) => `charge-${id}`),
         },
         limit: limit ? parseInt(limit as string, 10) : 20,
         offset: offset ? parseInt(offset as string, 10) : 0,
@@ -877,6 +883,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch New York source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch New York source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/texas/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await texasSourceDatabase.seed(loadTexasAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("Texas source database seeding failed", error);
+      res.status(500).json({ success: false, error: "Texas source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/texas/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await texasSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch Texas source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch Texas source database status" });
     }
   });
 
@@ -3523,12 +3549,11 @@ async function resolveChargeInput(charges: string[] | string | undefined): Promi
     ? normalizeChargeIds(charges)
     : normalizeChargeIds(charges ?? '');
   const ids = Array.isArray(normalized) ? normalized : [normalized];
-  const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+  const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
   const isRuntimeSelectable = (id: string) => {
     const charge = getChargeById(id);
     return Boolean(charge) && (
-      charge?.jurisdiction !== "NY" ||
-      currentNewYorkSelectableIds.has(id)
+      currentAuthoritySelectableIds.has(id)
     );
   };
   const recognizedIds = ids.filter((id) => Boolean(id) && isRuntimeSelectable(id));

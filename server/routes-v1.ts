@@ -5,7 +5,7 @@ import rateLimit from "express-rate-limit";
 import { search, getSearchIndexStats } from "./services/search-indexer";
 import { getSelectableCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
-import { getCurrentNewYorkSelectableChargeIds } from "./services/new-york-source-database";
+import { getCurrentAuthoritySelectableChargeIds } from "./services/authority-eligibility";
 import { openApiSpec } from "./openapi";
 import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
 import { diversionPrograms } from "../shared/diversion-programs-data";
@@ -79,16 +79,16 @@ export function registerV1Routes(app: Express): void {
         });
       }
 
-      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
       const searchResult = search({
         query: q,
         language: lang === 'es' ? 'es' : 'en',
         filters: {
           ...(types ? { types: types.split(',') as any[] } : {}),
           // Search indexes the static catalog at startup; apply the
-          // authority boundary during scoring so totalResults and grouping
-          // cannot expose withheld NY charges.
-          chargeIds: [...currentNewYorkSelectableIds].map((id) => `charge-${id}`),
+          // authority boundary during scoring so totals cannot expose
+          // withheld NY or TX charges.
+          chargeIds: [...currentAuthoritySelectableIds].map((id) => `charge-${id}`),
         },
       });
 
@@ -114,10 +114,9 @@ export function registerV1Routes(app: Express): void {
       const limit = Math.min(parseInt(req.query.limit as string) || 50, 100);
       const offset = parseInt(req.query.offset as string) || 0;
 
-      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
       let filtered = getSelectableCharges().filter((charge) =>
-        charge.jurisdiction !== "NY" ||
-        currentNewYorkSelectableIds.has(charge.id),
+        currentAuthoritySelectableIds.has(charge.id),
       );
 
       if (jurisdiction) {
@@ -159,9 +158,9 @@ export function registerV1Routes(app: Express): void {
       if (!charge) {
         return res.status(404).json({ success: false, error: 'Charge not found' });
       }
-      if (charge.jurisdiction === "NY") {
-        const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
-        if (!currentNewYorkSelectableIds.has(charge.id)) {
+      if (charge.jurisdiction === "NY" || charge.jurisdiction === "TX") {
+        const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
+        if (!currentAuthoritySelectableIds.has(charge.id)) {
           return res.status(404).json({ success: false, error: 'Charge not found' });
         }
       }
@@ -258,10 +257,9 @@ export function registerV1Routes(app: Express): void {
       const format = (req.query.format as string) || 'json';
       const jurisdiction = req.query.jurisdiction as string;
 
-      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
       let data = getSelectableCharges().filter((charge) =>
-        charge.jurisdiction !== "NY" ||
-        currentNewYorkSelectableIds.has(charge.id),
+        currentAuthoritySelectableIds.has(charge.id),
       );
       if (jurisdiction) {
         data = data.filter(c => 

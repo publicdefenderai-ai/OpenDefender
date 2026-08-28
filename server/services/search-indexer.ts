@@ -1518,7 +1518,6 @@ function runScoring(
     if (filters?.jurisdiction && doc.jurisdiction && doc.jurisdiction !== filters.jurisdiction) continue;
     if (
       doc.type === 'charge' &&
-      doc.jurisdiction === 'NY' &&
       filters?.chargeIds &&
       !filters.chargeIds.includes(doc.id)
     ) continue;

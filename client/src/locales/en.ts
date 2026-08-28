@@ -334,6 +334,27 @@ export default {
           "chargeLookupTitle": "Inspect a charge's current provenance",
           "chargeLookupBody": "In the New York charge selector, open “View current source details” for a selectable charge to see its official title, citation, source link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
         },
+        "txSources": {
+          "eyebrow": "Texas charge sources",
+          "title": "How Texas charge sources are verified",
+          "intro": "Texas charge records use the Texas Legislative Council's TCSS static HTML resources as the official authority path. The manifest covers all 111 catalog rows and publishes only rows with a verified section, title, and required current links.",
+          "authorityTitle": "Official authority",
+          "authorityBody": "The importer retrieves Texas statutes only from tcss.legis.texas.gov/resources. Each section records its TCSS code and section, official title, source URL, retrieved text, effective-date evidence when available, and a SHA-256 content hash.",
+          "failClosedTitle": "Why a charge may be unavailable",
+          "failClosedBody": "If TCSS is unavailable, the section anchor or official title is missing, a compound charge is incomplete, or the title does not match an explicit reviewed alias, the row is withheld. Withheld or pending-review rows do not appear in Texas selection, guidance, search, or exports. A failed refresh never replaces the last current authority.",
+          "catalogTitle": "Aliases and compound records",
+          "catalogBody": "A Texas plain-language label is retained only when it exactly matches the TCSS title or has an explicit reviewed alias mapping. Attempts, enhancements, federal concepts, placeholders, and materially mismatched records require exact reselection rather than an inferred Texas substitute.",
+          "reviewTitle": "TCSS verification is not attorney approval",
+          "reviewBody": "Source verification confirms the official publisher, returned text, title, section, and hash. It does not mean a lawyer has approved the elements, mental state, grading, penalties, or currentness interpretation; those legal fields remain pending attorney review.",
+          "linksTitle": "Review the underlying disclosures",
+          "linksIntro": "Compare this explanation with the maintained source inventory, statute-link disclosure, legal-data disclosures, and the Texas Legislative Council's official resources.",
+          "officialLink": "Example official Texas section",
+          "inventoryLink": "Criminal-charge source inventory",
+          "statuteLink": "Statute-link disclosure",
+          "disclaimerLink": "General legal-data disclosures",
+          "chargeLookupTitle": "Inspect a charge's current provenance",
+          "chargeLookupBody": "In the Texas charge selector, open “View current source details” for a selectable charge to see its official title, citation, TCSS link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
+        },
           "labels": { "coverage": "Coverage / count", "freshness": "Freshness", "sourcePath": "Source path", "sourceType": "Source type", "sources": "Named sources", "citations": "Citation / reference format", "providerDisclosure": "Provider disclosure", "limitation": "Limitation" },
         "sourceTypes": {
           "primaryLegalText": "Primary legal text",

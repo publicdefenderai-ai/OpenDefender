@@ -253,12 +253,38 @@ export function isChargeInOverlay(charge: CriminalCharge): boolean {
  *  - For both states, the instructionRef text (GPJI/COLJI) is the primary UI display.
  *  - This is correct behavior, not a gap — see getInstructionUrl() for the full policy.
  */
+function getTexasTcssSourceUrl(citation: string): string | null {
+  const code = citation.match(/Tex\.\s+(Penal|Transp|Health|Tax|Civ|Code Crim|Alco|Hum|Educ|Occ|Parks|Fam)\.?\s*(?:& Safety|& Rem\.|& Wild\.)?\s*Code/i)?.[1]?.toLowerCase();
+  const codeMap: Record<string, string> = {
+    penal: "PE",
+    transp: "TN",
+    health: "HS",
+    tax: "TX",
+    civ: "CP",
+    "code crim": "CR",
+    alco: "AL",
+    hum: "HR",
+    educ: "ED",
+    occ: "OC",
+    parks: "PW",
+    fam: "FA",
+  };
+  const abbreviation = code ? codeMap[code] : undefined;
+  const section = citation.match(/§§?\s*(\d+[A-Z]?\.\d+|\d+)/i)?.[1];
+  if (!abbreviation || !section) return null;
+  const chapter = section.split(".")[0];
+  return `https://tcss.legis.texas.gov/resources/${abbreviation}/htm/${abbreviation}.${chapter}.htm#${section}`;
+}
+
 export function getVerifiedSourceUrl(charge: CriminalCharge): string | null {
   if (charge.jurisdiction === 'CA') {
     return getCaliforniaSourceUrl(charge.id);
   }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (!overlay || overlay.confidence !== 'high') return null;
+  if (charge.jurisdiction === 'TX') {
+    return getTexasTcssSourceUrl(overlay.citation);
+  }
   const url = overlay.sourceUrl;
   if (!url) return null;
   if (url.includes('law.justia.com')) return null;
@@ -94819,6 +94845,29 @@ export const NEW_YORK_CANONICAL_TITLES: Record<string, string> = {
 
 export const NY_THIRD_DEGREE_POSSESSION_ID = 'ny-possession-of-controlled-substance-third-degree';
 
+/**
+ * TCSS returns statutory titles for the retained Texas authority manifest.
+ * Keep stable catalog IDs, but expose the verified official title for reviewed
+ * aliases just as the NY authority layer does.
+ */
+export const TEXAS_CANONICAL_TITLES: Record<string, string> = {
+  "tx-involuntary-manslaughter": "Manslaughter",
+  "tx-vehicular-homicide": "Intoxication Manslaughter",
+  "tx-statutory-rape": "Sexual Assault",
+  "tx-sexual-exploitation-of-minor": "Sexual Performance by a Child",
+  "tx-identity-theft": "Fraudulent Use or Possession of Identifying Information",
+  "tx-auto-burglary": "Burglary of Vehicles",
+  "tx-unlawful-carrying-of-weapon": "Unlawful Carrying Weapons",
+  "tx-possession-of-prohibited-weapon": "Prohibited Weapons",
+  "tx-dui-first-offense": "Driving While Intoxicated",
+  "tx-dui-second-offense": "Driving While Intoxicated",
+  "tx-criminal-mischief": "Criminal Mischief",
+  "tx-trespass-after-warning": "Criminal Trespass",
+  "tx-aiding-and-abetting": "Criminal Responsibility for Conduct of Another",
+  "tx-accessory-after-the-fact": "Hindering Apprehension or Prosecution",
+  "tx-rico-organized-crime": "Engaging in Organized Criminal Activity",
+};
+
 export function normalizeChargeId(id: string): string {
   return CHARGE_ID_ALIASES[id] ?? id;
 }
@@ -94893,8 +94942,11 @@ export function getChargeById(id: string): CriminalCharge | undefined {
       ? getCaliforniaCanonicalCharge({ ...charge, id: normalizedId })
       : undefined;
   }
-  return charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]
-    ? { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] }
+  if (charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]) {
+    return { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] };
+  }
+  return charge.jurisdiction === 'TX' && TEXAS_CANONICAL_TITLES[charge.id]
+    ? { ...charge, name: TEXAS_CANONICAL_TITLES[charge.id] }
     : charge;
 }
 
@@ -94907,11 +94959,14 @@ export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[]
   if (normalizedJurisdiction === 'CA') {
     return getCaliforniaCanonicalCharges(charges);
   }
-  return charges.map((charge) =>
-    charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]
-      ? { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] }
-      : charge,
-  );
+  return charges.map((charge) => {
+    if (charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]) {
+      return { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] };
+    }
+    return charge.jurisdiction === 'TX' && TEXAS_CANONICAL_TITLES[charge.id]
+      ? { ...charge, name: TEXAS_CANONICAL_TITLES[charge.id] }
+      : charge;
+  });
 }
 
 /** Charges safe to expose on an unscoped selector/search surface. */

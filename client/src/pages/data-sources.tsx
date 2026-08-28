@@ -296,6 +296,83 @@ export default function DataSources() {
             </Card>
           </section>
 
+          <section
+            id="texas-charge-sources"
+            className="mt-10 scroll-mt-24"
+            aria-labelledby="texas-charge-sources-heading"
+          >
+            <Card className="border-teal-200/80 bg-teal-50/40 dark:border-teal-900 dark:bg-teal-950/20">
+              <CardContent className="p-6 sm:p-7">
+                <div className="flex gap-3">
+                  <ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-teal-700 dark:text-teal-300" aria-hidden="true" />
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700 dark:text-teal-300">
+                      {t("home.dataSources.transparency.txSources.eyebrow")}
+                    </p>
+                    <h2 id="texas-charge-sources-heading" className="mt-2 text-2xl font-bold tracking-tight text-foreground">
+                      {t("home.dataSources.transparency.txSources.title")}
+                    </h2>
+                    <p className="mt-3 max-w-4xl text-sm leading-6 text-muted-foreground sm:text-base">
+                      {t("home.dataSources.transparency.txSources.intro")}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 grid gap-4 md:grid-cols-2">
+                  {(["authority", "failClosed", "catalog", "review"] as const).map((key) => (
+                    <div key={key} className="rounded-xl border border-teal-200/70 bg-background/80 p-4 dark:border-teal-900/70">
+                      <h3 className="font-semibold text-foreground">
+                        {t(`home.dataSources.transparency.txSources.${key}Title`)}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                        {t(`home.dataSources.transparency.txSources.${key}Body`)}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 border-t border-teal-200/70 pt-5 dark:border-teal-900/70">
+                  <h3 className="font-semibold text-foreground">
+                    {t("home.dataSources.transparency.txSources.linksTitle")}
+                  </h3>
+                  <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                    {t("home.dataSources.transparency.txSources.linksIntro")}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm">
+                    <a
+                      href="https://tcss.legis.texas.gov/resources/PE/htm/PE.22.htm#22.02"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 font-semibold text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                    >
+                      {t("home.dataSources.transparency.txSources.officialLink")}
+                      <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                      <span className="sr-only">{t("home.dataSources.transparency.opensNewTab")}</span>
+                    </a>
+                    <a href="#criminal-charges" className="font-semibold text-primary underline-offset-4 hover:bg-muted hover:underline">
+                      {t("home.dataSources.transparency.txSources.inventoryLink")}
+                    </a>
+                    <a href="#statute-links" className="font-semibold text-primary underline-offset-4 hover:bg-muted hover:underline">
+                      {t("home.dataSources.transparency.txSources.statuteLink")}
+                    </a>
+                    <Link href="/disclaimers" className="font-semibold text-primary underline-offset-4 hover:bg-muted hover:underline">
+                      {t("home.dataSources.transparency.txSources.disclaimerLink")}
+                    </Link>
+                  </div>
+                  <div className="mt-5 rounded-xl border border-teal-200/70 bg-background/80 p-4 dark:border-teal-900/70">
+                    <h3 className="font-semibold text-foreground">
+                      {t("home.dataSources.transparency.txSources.chargeLookupTitle")}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                      {t("home.dataSources.transparency.txSources.chargeLookupBody")}
+                    </p>
+                    <p className="mt-3 break-all rounded-lg bg-muted/60 px-3 py-2 font-mono text-xs text-foreground">
+                      /api/criminal-charges/:chargeId/sources
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
           <section className="mt-10" aria-labelledby="legend-heading">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
               <div>

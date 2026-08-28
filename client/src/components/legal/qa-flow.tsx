@@ -464,48 +464,50 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
-  const [runtimeNewYorkCharges, setRuntimeNewYorkCharges] = useState<any[] | null>(null);
+  const [runtimeAuthorityCharges, setRuntimeAuthorityCharges] = useState<any[] | null>(null);
   const isNewYork = formData.jurisdiction === "NY";
+  const isTexas = formData.jurisdiction === "TX";
+  const isAuthorityBacked = isNewYork || isTexas;
 
   useEffect(() => {
-    if (!isNewYork) {
-      setRuntimeNewYorkCharges(null);
+    if (!isAuthorityBacked) {
+      setRuntimeAuthorityCharges(null);
       return;
     }
 
     let cancelled = false;
-    setRuntimeNewYorkCharges(null);
-    fetch("/api/criminal-charges?jurisdiction=NY&limit=500")
+    setRuntimeAuthorityCharges(null);
+    fetch(`/api/criminal-charges?jurisdiction=${encodeURIComponent(formData.jurisdiction)}&limit=500`)
       .then(async (response) => {
-        if (!response.ok) throw new Error(`NY charge lookup failed (${response.status})`);
+        if (!response.ok) throw new Error(`${formData.jurisdiction} charge lookup failed (${response.status})`);
         const payload = await response.json();
         if (!payload.success || !Array.isArray(payload.charges)) {
-          throw new Error("NY charge lookup returned an invalid response");
+          throw new Error(`${formData.jurisdiction} charge lookup returned an invalid response`);
         }
-        if (!cancelled) setRuntimeNewYorkCharges(payload.charges);
+        if (!cancelled) setRuntimeAuthorityCharges(payload.charges);
       })
       .catch(() => {
-        // Do not fall back to the static NY catalog: an unavailable or
+        // Do not fall back to the static catalog: an unavailable or
         // incomplete authority manifest must fail closed in the selector.
-        if (!cancelled) setRuntimeNewYorkCharges([]);
+        if (!cancelled) setRuntimeAuthorityCharges([]);
       });
 
     return () => {
       cancelled = true;
     };
-  }, [isNewYork]);
+  }, [isAuthorityBacked, formData.jurisdiction]);
   
   // Get charges based on selected jurisdiction (includes both state and federal charges)
-  const availableCharges = isNewYork
-    ? (runtimeNewYorkCharges ?? [])
+  const availableCharges = isAuthorityBacked
+    ? (runtimeAuthorityCharges ?? [])
     : getChargesByJurisdiction(formData.jurisdiction);
   
   const categoryFiltered = selectedCategory && selectedCategory !== 'all'
     ? availableCharges.filter(charge => 
         chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id) ||
         (selectedCategory === 'Drug Offenses' &&
-          charge.jurisdiction === 'NY' &&
-          /^ny-/.test(charge.id) &&
+          (charge.jurisdiction === 'NY' || charge.jurisdiction === 'TX') &&
+          /^(ny|tx)-/.test(charge.id) &&
           /controlled-substance|drug|sale|distribution|trafficking|manufacturing/.test(charge.id))
       )
     : availableCharges;
@@ -526,9 +528,9 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     (id: string) =>
       isChargeIdRequiringReselection(id) ||
       !getCatalogChargeById(id) ||
-      (isNewYork &&
-        runtimeNewYorkCharges !== null &&
-        !runtimeNewYorkCharges.some((charge) => charge.id === id)),
+      (isAuthorityBacked &&
+        runtimeAuthorityCharges !== null &&
+        !runtimeAuthorityCharges.some((charge) => charge.id === id)),
   );
 
   const handleContinue = () => {
@@ -857,8 +859,8 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               
               {totalFilteredCharges === 0 && (
                 <p className="text-sm text-muted-foreground text-center py-4">
-                  {isNewYork && runtimeNewYorkCharges === null
-                    ? "Loading current New York charges…"
+                  {isAuthorityBacked && runtimeAuthorityCharges === null
+                    ? `Loading current ${formData.jurisdiction} charges…`
                     : t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
                 </p>
               )}
@@ -1117,7 +1119,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           onClick={handleContinue}
             disabled={
               (formData.charges.length === 0 && !formData.chargesUnknown) ||
-              (isNewYork && runtimeNewYorkCharges === null)
+              (isAuthorityBacked && runtimeAuthorityCharges === null)
             }
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"

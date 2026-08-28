@@ -561,6 +561,26 @@ function YourChargesSection({
   jurisdiction?: string;
 }) {
   const { t, i18n } = useTranslation();
+  const normalizedJurisdiction = jurisdiction?.toUpperCase();
+  const isAuthorityBacked = normalizedJurisdiction === "NY" || normalizedJurisdiction === "TX";
+  const { data: currentAuthorityCharges } = useQuery<{ charges?: Array<{ id: string }> }>({
+    queryKey: ["/api/criminal-charges", "guidance-authority", normalizedJurisdiction],
+    queryFn: async () => {
+      const response = await fetch(
+        `/api/criminal-charges?jurisdiction=${encodeURIComponent(normalizedJurisdiction ?? "")}&limit=500`,
+      );
+      if (!response.ok) throw new Error("Current authority could not be loaded");
+      return response.json();
+    },
+    enabled: isAuthorityBacked,
+    staleTime: 0,
+    retry: false,
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+  });
+  const currentAuthorityIds = new Set(
+    currentAuthorityCharges?.charges?.map((charge) => charge.id) ?? [],
+  );
   
   if (!chargeClassifications || chargeClassifications.length === 0) {
     return null;
@@ -570,9 +590,13 @@ function YourChargesSection({
   // Resolve the canonical entry to carry through dataConfidence and
   // statuteCitations — required for the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
-    const dbCharge = resolveGuidanceCharge(classification, jurisdiction);
+    const authorityUnavailable = isAuthorityBacked &&
+      !currentAuthorityIds.has(classification.id ?? "");
+    const dbCharge = authorityUnavailable
+      ? undefined
+      : resolveGuidanceCharge(classification, jurisdiction);
     const isCalifornia = jurisdiction?.toUpperCase() === 'CA';
-    const explanation = isCalifornia && !dbCharge
+    const explanation = (isCalifornia || authorityUnavailable) && !dbCharge
       ? undefined
       : getChargeExplanation(
           dbCharge?.name ?? classification.name,
@@ -591,7 +615,9 @@ function YourChargesSection({
       instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
       instructionUrl: dbCharge ? getInstructionUrl(dbCharge) : undefined,
       instructionPaywall: dbCharge ? getInstructionPaywall(dbCharge) : undefined,
-      needsReselection: Boolean(jurisdiction?.toUpperCase() === 'CA' && !dbCharge),
+      needsReselection: Boolean(
+        (isCalifornia && !dbCharge) || authorityUnavailable,
+      ),
       /** True when the plain-language explanation itself is pending attorney review.
        *  Driven by explanation.pendingAttorneyReview — an explicit per-entry flag
        *  distinct from dataConfidence (which reflects statutory-source quality and
@@ -702,10 +728,10 @@ function YourChargesSection({
                          : 'Charge selection needs to be confirmed.'}
                    </span>{' '}
                    {i18n.language === 'es'
-                     ? 'Este registro histórico no coincide con un cargo de California verificable. Seleccione el cargo exacto de la lista actual o pida ayuda a un abogado.'
+                   ? `Este registro histórico no coincide con la autoridad vigente de ${normalizedJurisdiction ?? 'este estado'}. Seleccione el cargo exacto de la lista actual o pida ayuda a un abogado.`
                      : i18n.language === 'zh'
-                       ? '此历史记录无法与可核实的加州罪名匹配。请从当前列表中选择确切罪名，或向律师寻求帮助。'
-                       : 'This historical record does not match a verified California charge. Choose the exact charge from the current list or ask an attorney for help.'}
+                       ? `此历史记录无法与可核实的${normalizedJurisdiction ?? '该州'}现行法律匹配。请从当前列表中选择确切罪名，或向律师寻求帮助。`
+                       : `This historical record does not match current verified ${normalizedJurisdiction ?? 'state'} authority. Choose the exact charge from the current list or ask an attorney for help.`}
                  </AlertDescription>
                </Alert>
              )}
@@ -715,10 +741,10 @@ function YourChargesSection({
                {charge.explanation?.plainSummary || (
                  charge.needsReselection
                    ? (i18n.language === 'es'
-                     ? 'No podemos mostrar información específica de este cargo hasta confirmar el cargo exacto de California.'
+                     ? `No podemos mostrar información específica de este cargo hasta confirmar el cargo exacto y la autoridad vigente de ${normalizedJurisdiction ?? 'este estado'}.`
                      : i18n.language === 'zh'
-                       ? '在确认确切的加州罪名之前，我们无法显示此罪名的具体信息。'
-                       : 'We cannot show charge-specific information until the exact California charge is confirmed.')
+                       ? `在确认确切的${normalizedJurisdiction ?? '该州'}罪名和现行法律之前，我们无法显示此罪名的具体信息。`
+                       : `We cannot show charge-specific information until the exact charge and current ${normalizedJurisdiction ?? 'state'} authority are confirmed.`)
                    : getFallbackDescription(charge)
                )}
             </p>
@@ -986,6 +1012,25 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     setShowExportWarning(false);
     setIsExporting(true);
     try {
+      const jurisdiction = guidance.caseData?.jurisdiction?.toUpperCase();
+      if (
+        (jurisdiction === "NY" || jurisdiction === "TX") &&
+        guidance.chargeClassifications?.length
+      ) {
+        const authorityResponse = await fetch(
+          `/api/criminal-charges?jurisdiction=${encodeURIComponent(jurisdiction)}&limit=500`,
+        );
+        if (!authorityResponse.ok) {
+          throw new Error("Current charge authority could not be verified");
+        }
+        const authorityPayload = await authorityResponse.json() as {
+          charges?: Array<{ id: string }>;
+        };
+        const currentIds = new Set(authorityPayload.charges?.map((charge) => charge.id) ?? []);
+        if (guidance.chargeClassifications.some((charge) => !currentIds.has(charge.id ?? ""))) {
+          throw new Error("One or more saved charges no longer has current authority");
+        }
+      }
       // Generate PDF entirely on client-side. No data sent to external servers.
       await generateGuidancePDF(guidance, i18n.language);
       // Notify parent that export has been completed

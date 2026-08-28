@@ -336,6 +336,27 @@ export default {
           "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
           "chargeLookupBody": "En el selector de cargos de Nueva York, abra «Ver detalles de la fuente actual» para un cargo seleccionable y consulte su título oficial, cita, enlace de la fuente, fechas de obtención y vigencia, disponibilidad del contenido y hash del contenido. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
         },
+        "txSources": {
+          "eyebrow": "Fuentes de cargos de Texas",
+          "title": "Cómo se verifican las fuentes de los cargos de Texas",
+          "intro": "Los registros de cargos de Texas usan los recursos HTML estáticos TCSS del Consejo Legislativo de Texas como vía de autoridad oficial. El manifiesto cubre las 111 filas del catálogo y publica solo las filas con sección, título y enlaces vigentes verificados.",
+          "authorityTitle": "Autoridad oficial",
+          "authorityBody": "El importador obtiene las leyes de Texas únicamente de tcss.legis.texas.gov/resources. Cada sección registra su código y sección TCSS, título oficial, URL de la fuente, texto obtenido, evidencia de vigencia cuando está disponible y un hash SHA-256.",
+          "failClosedTitle": "Por qué un cargo puede no estar disponible",
+          "failClosedBody": "Si TCSS no está disponible, falta el ancla de sección o el título oficial, una acusación compuesta está incompleta o el título no coincide con un alias revisado explícitamente, la fila queda retenida. Las filas retenidas o pendientes de revisión no aparecen en la selección, orientación, búsqueda ni exportaciones de Texas. Una actualización fallida nunca reemplaza la autoridad vigente anterior.",
+          "catalogTitle": "Alias y registros compuestos",
+          "catalogBody": "Una etiqueta en lenguaje sencillo se conserva solo cuando coincide exactamente con el título TCSS o tiene una asignación de alias revisada explícitamente. Los intentos, mejoras de pena, conceptos federales, marcadores y discrepancias importantes requieren volver a seleccionar el cargo exacto, no inferir un sustituto de Texas.",
+          "reviewTitle": "La verificación TCSS no es aprobación de un abogado",
+          "reviewBody": "La verificación confirma el editor oficial, el texto devuelto, el título, la sección y el hash. No significa que un abogado haya aprobado los elementos, el estado mental, la clasificación, las penas o la interpretación de vigencia; esos campos permanecen pendientes de revisión por abogado.",
+          "linksTitle": "Consulte las divulgaciones subyacentes",
+          "linksIntro": "Compare esta explicación con el inventario de fuentes mantenido, la divulgación de enlaces de estatutos, las divulgaciones de datos legales y los recursos oficiales del Consejo Legislativo de Texas.",
+          "officialLink": "Ejemplo de sección oficial de Texas",
+          "inventoryLink": "Inventario de fuentes de cargos",
+          "statuteLink": "Divulgación de enlaces de estatutos",
+          "disclaimerLink": "Divulgaciones generales de datos legales",
+          "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
+          "chargeLookupBody": "En el selector de cargos de Texas, abra «Ver detalles de la fuente actual» para un cargo seleccionable y consulte su título oficial, cita, enlace TCSS, fechas de obtención y vigencia, disponibilidad del contenido y hash del contenido. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
+        },
           "labels": { "coverage": "Cobertura / conteo", "freshness": "Actualización", "sourcePath": "Ruta de la fuente", "sourceType": "Tipo de fuente", "sources": "Fuentes nombradas", "citations": "Formato de cita / referencia", "providerDisclosure": "Divulgación del proveedor", "limitation": "Limitación" },
         "sourceTypes": {
           "primaryLegalText": "Texto legal primario",

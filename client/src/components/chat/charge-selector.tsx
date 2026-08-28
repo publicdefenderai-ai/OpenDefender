@@ -129,7 +129,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
 
   const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
-  const isNewYork = jurisdiction.toUpperCase() === "NY";
+  const isAuthorityBacked = ["NY", "TX"].includes(jurisdiction.toUpperCase());
 
   const {
     data: provenance,
@@ -146,7 +146,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       const payload = await res.json() as { success: boolean; provenance?: ChargeProvenance };
       return payload.success && payload.provenance ? payload.provenance : null;
     },
-    enabled: isNewYork && Boolean(provenanceChargeId),
+    enabled: isAuthorityBacked && Boolean(provenanceChargeId),
     staleTime: 0,
     retry: false,
     refetchOnWindowFocus: true,
@@ -154,7 +154,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   });
 
   useEffect(() => {
-    if (!provenanceChargeId || isProvenanceLoading || isProvenanceFetching || isProvenanceError || provenance !== null) return;
+    if (!provenanceChargeId || isProvenanceLoading || isProvenanceFetching || provenance !== null) return;
     setUnavailableChargeIds((previous) => {
       const next = new Set(previous);
       next.add(provenanceChargeId);
@@ -344,8 +344,8 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                 charges.map((charge, index) => {
                   const isSelected = selectedCharges.some(c => c.id === charge.id);
                   const isUnavailable = unavailableChargeIds.has(charge.id);
-                  const isProvenanceOpen = isNewYork && provenanceChargeId === charge.id;
-                  const statusMessage = isNewYork ? provenanceStatusMessage(charge.id) : null;
+                  const isProvenanceOpen = isAuthorityBacked && provenanceChargeId === charge.id;
+                  const statusMessage = isAuthorityBacked ? provenanceStatusMessage(charge.id) : null;
                   return (
                     <motion.div
                       key={charge.id}
@@ -405,7 +405,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                           <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
                         </div>
                       </motion.button>
-                      {isNewYork && (
+                      {isAuthorityBacked && (
                         <div className="ml-11 flex flex-wrap items-center gap-x-3 gap-y-1 px-3 pb-2.5">
                           <button
                             type="button"
