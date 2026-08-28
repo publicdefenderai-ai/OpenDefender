@@ -421,7 +421,7 @@ export default function KnowYourRights() {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="/immigration-guidance/family-preparedness">
+                <a href="/immigration-guidance/family-planning">
                   {lang === 'es' ? 'Plan Familiar de Emergencia' : 'Family Emergency Plan'}
                 </a>
               </Button>

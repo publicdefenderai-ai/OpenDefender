@@ -208,7 +208,7 @@ export default function RaidsToolkit() {
                     {lang === 'es' ? '→ Tarjetas Rojas (Conozca Sus Derechos)' : '→ Red Cards (Know Your Rights)'}
                   </a>
                   <a
-                    href="/immigration-guidance/family-preparedness"
+                    href="/immigration-guidance/family-planning"
                     className="block text-sm text-primary hover:underline"
                   >
                     {lang === 'es' ? '→ Plantillas de Autorización de Cuidador' : '→ Caregiver Authorization Templates'}
@@ -280,7 +280,7 @@ export default function RaidsToolkit() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
-                <a href="/immigration-guidance/family-preparedness">
+                <a href="/immigration-guidance/family-planning">
                   {lang === 'es' ? 'Crear Plan Familiar' : 'Create Family Plan'}
                 </a>
               </Button>

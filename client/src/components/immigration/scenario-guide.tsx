@@ -122,12 +122,12 @@ const scenarios: Scenario[] = [
           en: [
             'Say: "Please slide the warrant under the door"',
             'Check if it\'s signed by a JUDGE (not ICE)',
-            'Verify your correct address is on it'
+            'Verify your correct name and address are on it'
           ],
           es: [
             'Diga: "Por favor deslice la orden por debajo de la puerta"',
             'Verifique si está firmada por un JUEZ (no ICE)',
-            'Confirme que su dirección correcta esté en ella'
+            'Confirme que su nombre y dirección correctos estén en ella'
           ]
         },
         dontItems: {
@@ -181,13 +181,13 @@ const scenarios: Scenario[] = [
         'Write down everything that happened (time, agents\' names, what was said)',
         'Contact an immigration lawyer immediately',
         'Report the incident to a local immigrant rights organization',
-        'Do not sign any documents without legal advice'
+        'Do not sign any documents without legal advice - signing something like a voluntary departure form before speaking to a lawyer can lead to deportation without ever seeing a judge'
       ],
       es: [
         'Escriba todo lo que pasó (hora, nombres de agentes, lo que se dijo)',
         'Contacte a un abogado de inmigración inmediatamente',
         'Reporte el incidente a una organización local de derechos de inmigrantes',
-        'No firme ningún documento sin consejo legal'
+        'No firme ningún documento sin consejo legal - firmar algo como una salida voluntaria antes de hablar con un abogado puede resultar en la deportación sin siquiera presentarse ante un juez'
       ]
     }
   },

@@ -3329,7 +3329,7 @@ export default {
           "description": "Designa a alguien para tomar decisiones legales y financieras en su nombre si es detenido.",
           "item1": "Poder general para asuntos financieros",
           "item2": "Poder duradero (sobrevive incapacidad)",
-          "item3": "Debe ser notarizado para ser válido"
+          "item3": "Típicamente debe ser notarizado para ser legalmente válido. Los requisitos varían según el estado."
         },
         "caregiver": {
           "title": "Autorización de Cuidador",
@@ -3343,7 +3343,8 @@ export default {
           "description": "Nombra a su tutor preferido si no puede cuidar a sus hijos a largo plazo.",
           "item1": "Los tribunales consideran pero no siempre siguen",
           "item2": "Nombre tutores de respaldo también",
-          "item3": "Debe ser notarizado"
+          "item3": "La notarización generalmente se requiere. Verifique los requisitos de su estado.",
+          "item4": "En California, también puede nominar a un tutor conjunto que comparta la custodia con usted, una opción ampliada por una ley de 2026 específicamente para padres que enfrentan detención o deportación por motivos migratorios."
         }
       },
       "emergencyPlan": {
@@ -3375,6 +3376,10 @@ export default {
         "propertyText": "Deje una llave extra con un vecino o amigo de confianza. Documente la ubicación de artículos importantes en su hogar.",
         "medical": "Información Médica",
         "medicalText": "Mantenga una lista de medicamentos de los niños, alergias y contactos de médicos con su autorización de cuidador."
+      },
+      "generator": {
+        "title": "Genere Su Documento de Autorización de Cuidador",
+        "description": "Cree a continuación un documento de autorización de cuidador específico para su estado. Este es el mismo documento descrito arriba; no reemplaza una nominación de tutela para custodia a largo plazo."
       },
       "freeHelp": "Ayuda Gratuita Disponible:",
       "freeHelpText": "Muchas organizaciones de defensa de inmigrantes ofrecen asistencia gratuita con la planificación de emergencia familiar. Contacte a su organización local de ayuda legal o grupo de derechos de inmigrantes para ayuda creando estos documentos."

@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { ImmigrationDetailLayout } from "@/components/immigration/immigration-detail-layout";
+import { POAGenerator } from "@/components/immigration/poa-generator";
 
 export default function FamilyPlanning() {
   useScrollToTop();
@@ -103,9 +104,25 @@ export default function FamilyPlanning() {
                     <li>{t('immigration.family.documents.guardianship.item1')}</li>
                     <li>{t('immigration.family.documents.guardianship.item2')}</li>
                     <li>{t('immigration.family.documents.guardianship.item3')}</li>
+                    <li>{t('immigration.family.documents.guardianship.item4')}</li>
                   </ul>
                 </CardContent>
               </Card>
+            </ScrollReveal>
+          </div>
+
+          <div id="generator" className="max-w-4xl mx-auto mt-12 pt-12 border-t border-border">
+            <ScrollReveal>
+              <h3 className="text-xl font-bold text-center mb-2" data-testid="text-generator-title">
+                {t('immigration.family.generator.title')}
+              </h3>
+              <p className="text-muted-foreground text-center mb-8">
+                {t('immigration.family.generator.description')}
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.1}>
+              <POAGenerator />
             </ScrollReveal>
           </div>
         </div>

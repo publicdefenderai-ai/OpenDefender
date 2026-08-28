@@ -549,14 +549,14 @@ export const warrantInfo: WarrantInfo[] = [
       en: [
         'Ask to see the warrant through a window or under the door',
         'Verify it has a judge\'s signature',
-        'Check that your address is correct on the warrant',
+        'Check that your name and address are correct on the warrant',
         'If valid, you must allow entry (but can still remain silent)',
         'Do NOT physically resist'
       ],
       es: [
         'Pida ver la orden a través de una ventana o por debajo de la puerta',
         'Verifique que tenga la firma de un juez',
-        'Compruebe que su dirección sea correcta en la orden',
+        'Compruebe que su nombre y dirección sean correctos en la orden',
         'Si es válida, debe permitir la entrada (pero aún puede guardar silencio)',
         'NO se resista físicamente'
       ]
@@ -565,13 +565,13 @@ export const warrantInfo: WarrantInfo[] = [
       en: [
         'Judge\'s signature (not just an ICE officer)',
         'Court letterhead and seal',
-        'Your correct address',
+        'Your correct name and address',
         'Date (must not be expired)'
       ],
       es: [
         'Firma del juez (no solo un oficial de ICE)',
         'Membrete y sello del tribunal',
-        'Su dirección correcta',
+        'Su nombre y dirección correctos',
         'Fecha (no debe estar vencida)'
       ]
     }

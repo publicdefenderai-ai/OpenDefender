@@ -3341,7 +3341,8 @@ export default {
           "description": "Names your preferred guardian if you can't care for your children long-term.",
           "item1": "Courts consider but don't always follow",
           "item2": "Name backup guardians too",
-          "item3": "Notarization is typically required. Verify requirements in your state."
+          "item3": "Notarization is typically required. Verify requirements in your state.",
+          "item4": "In California, you may also nominate a joint guardian who shares custody with you, an option expanded by a 2026 law specifically for parents facing immigration detention or deportation."
         }
       },
       "emergencyPlan": {
@@ -3373,6 +3374,10 @@ export default {
         "propertyText": "Leave a spare key with a trusted neighbor or friend. Document the location of important items in your home.",
         "medical": "Medical Information",
         "medicalText": "Keep a list of children's medications, allergies, and doctor contacts with your caregiver authorization."
+      },
+      "generator": {
+        "title": "Generate Your Caregiver Authorization Document",
+        "description": "Create a state-specific caregiver authorization document below. This is the same document described above; it does not replace a guardianship nomination for long-term custody."
       },
       "freeHelp": "Free Help Available:",
       "freeHelpText": "Many immigrant advocacy organizations offer free assistance with family emergency planning. Contact your local legal aid organization or immigrant rights group for help creating these documents."
