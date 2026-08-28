@@ -562,7 +562,10 @@ function YourChargesSection({
 }) {
   const { t, i18n } = useTranslation();
   const normalizedJurisdiction = jurisdiction?.toUpperCase();
-  const isAuthorityBacked = normalizedJurisdiction === "NY" || normalizedJurisdiction === "TX";
+  const isAuthorityBacked = normalizedJurisdiction === "NY" ||
+    normalizedJurisdiction === "TX" ||
+    normalizedJurisdiction === "FL" ||
+    normalizedJurisdiction === "PA";
   const { data: currentAuthorityCharges } = useQuery<{ charges?: Array<{ id: string }> }>({
     queryKey: ["/api/criminal-charges", "guidance-authority", normalizedJurisdiction],
     queryFn: async () => {

@@ -129,7 +129,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
 
   const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
-  const isAuthorityBacked = ["NY", "TX", "FL"].includes(jurisdiction.toUpperCase());
+  const isAuthorityBacked = ["NY", "TX", "FL", "PA"].includes(jurisdiction.toUpperCase());
 
   const {
     data: provenance,
@@ -169,7 +169,12 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       setAnnouncement(
         debouncedSearch
           ? t('chat.chargeSelector.noResults', 'No charges found matching your search')
-          : t('chat.chargeSelector.noCharges', 'No charges available')
+          : isAuthorityBacked
+            ? t(
+              "chat.chargeSelector.authorityUnavailable",
+              "Current authority is unavailable. No charges can be selected until the official source is verified.",
+            )
+            : t('chat.chargeSelector.noCharges', 'No charges available')
       );
     } else if (debouncedSearch) {
       setAnnouncement(
@@ -537,7 +542,12 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                 <p className="text-center text-sm text-muted-foreground py-4">
                   {debouncedSearch 
                     ? t('chat.chargeSelector.noResults', 'No charges found matching your search')
-                    : t('chat.chargeSelector.noCharges', 'No charges available')
+                    : isAuthorityBacked
+                      ? t(
+                        "chat.chargeSelector.authorityUnavailable",
+                        "Current authority is unavailable. No charges can be selected until the official source is verified.",
+                      )
+                      : t('chat.chargeSelector.noCharges', 'No charges available')
                   }
                 </p>
               )}

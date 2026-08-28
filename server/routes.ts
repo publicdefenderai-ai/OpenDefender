@@ -30,6 +30,8 @@ import {
 import { AuthoritySourceReviewError } from "./services/authority-source-database";
 import { floridaSourceDatabase } from "./services/florida-source-database";
 import { loadFloridaAuthorityManifest } from "./data/florida-manifest-loader";
+import { pennsylvaniaSourceDatabase } from "./services/pennsylvania-source-database";
+import { loadPennsylvaniaAuthorityManifest } from "./data/pennsylvania-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
@@ -487,6 +489,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ? await texasSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "FL"
           ? await floridaSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : normalizedCharge?.jurisdiction === "PA"
+          ? await pennsylvaniaSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "CA"
           ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : null;
@@ -1020,6 +1024,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch Florida source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch Florida source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/pennsylvania/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await pennsylvaniaSourceDatabase.seed(loadPennsylvaniaAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("Pennsylvania source database seeding failed", error);
+      res.status(500).json({ success: false, error: "Pennsylvania source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/pennsylvania/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await pennsylvaniaSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch Pennsylvania source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch Pennsylvania source database status" });
     }
   });
 
