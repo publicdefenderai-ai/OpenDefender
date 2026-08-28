@@ -280,6 +280,17 @@ export default function DataSources() {
                       {t("home.dataSources.transparency.nySources.disclaimerLink")}
                     </Link>
                   </div>
+                   <div className="mt-5 rounded-xl border border-indigo-200/70 bg-background/80 p-4 dark:border-indigo-900/70">
+                     <h3 className="font-semibold text-foreground">
+                       {t("home.dataSources.transparency.nySources.chargeLookupTitle")}
+                     </h3>
+                     <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                       {t("home.dataSources.transparency.nySources.chargeLookupBody")}
+                     </p>
+                     <p className="mt-3 break-all rounded-lg bg-muted/60 px-3 py-2 font-mono text-xs text-foreground">
+                       /api/criminal-charges/:chargeId/sources
+                     </p>
+                   </div>
                 </div>
               </CardContent>
             </Card>

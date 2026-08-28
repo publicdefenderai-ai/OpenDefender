@@ -332,7 +332,9 @@ export default {
           "officialLink": "纽约州官方法律页面示例",
           "inventoryLink": "刑事指控来源清单",
           "statuteLink": "法条链接披露",
-          "disclaimerLink": "一般法律数据披露"
+          "disclaimerLink": "一般法律数据披露",
+          "chargeLookupTitle": "查看指控的当前来源追溯信息",
+          "chargeLookupBody": "在纽约州指控选择器中，对可选指控打开“查看当前来源详情”，即可查看官方标题、引文、来源链接、获取和现行性日期、来源内容是否可用以及内容哈希。如果当前权威来源不可用，该指控将无法选择，系统也不会显示旧的来源追溯信息。"
         },
           "labels": { "coverage": "覆盖范围 / 数量", "freshness": "更新时间", "sourcePath": "来源路径", "sourceType": "来源类型", "sources": "来源名称", "citations": "引文 / 参考格式", "providerDisclosure": "服务商披露", "limitation": "限制" },
         "sourceTypes": {
@@ -5731,6 +5733,30 @@ export default {
       "noCharges": "没有可用的指控",
       "selectAtLeast": "请至少选择一项指控",
       "continue": "继续，已选 {{count}} 项指控",
+    "unavailableCharge": "{{name}}不可用",
+    "provenance": {
+      "show": "查看当前来源详情",
+      "hide": "隐藏当前来源详情",
+      "loading": "正在加载当前来源详情……",
+      "error": "无法加载当前来源详情。请重试。",
+      "unavailable": "当前来源不可用。在恢复当前权威来源前，无法选择此项指控。",
+      "unavailableShort": "不可用",
+      "officialTitle": "官方标题",
+      "citation": "官方引文",
+      "currentness": "现行性",
+      "current": "当前",
+      "openSource": "打开官方来源",
+      "opensNewTab": "在新标签页打开",
+      "retrieved": "获取日期",
+      "imported": "清单导入日期",
+      "content": "来源内容",
+      "contentAvailable": "可用",
+      "contentUnavailable": "不可用",
+      "hash": "内容哈希",
+      "notAvailable": "不可用",
+      "unknownDate": "未知",
+      "present": "当前"
+    },
       "categories": {
         "all": "全部",
         "felony": "重罪",

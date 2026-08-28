@@ -332,7 +332,9 @@ export default {
           "officialLink": "Ejemplo de página oficial de una ley de Nueva York",
           "inventoryLink": "Inventario de fuentes de cargos",
           "statuteLink": "Divulgación de enlaces de estatutos",
-          "disclaimerLink": "Divulgaciones generales de datos legales"
+          "disclaimerLink": "Divulgaciones generales de datos legales",
+          "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
+          "chargeLookupBody": "En el selector de cargos de Nueva York, abra «Ver detalles de la fuente actual» para un cargo seleccionable y consulte su título oficial, cita, enlace de la fuente, fechas de obtención y vigencia, disponibilidad del contenido y hash del contenido. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
         },
           "labels": { "coverage": "Cobertura / conteo", "freshness": "Actualización", "sourcePath": "Ruta de la fuente", "sourceType": "Tipo de fuente", "sources": "Fuentes nombradas", "citations": "Formato de cita / referencia", "providerDisclosure": "Divulgación del proveedor", "limitation": "Limitación" },
         "sourceTypes": {
@@ -5731,6 +5733,30 @@ export default {
     "noCharges": "No hay cargos disponibles",
     "selectAtLeast": "Seleccione al menos un cargo",
     "continue": "Continuar con {{count}} cargo(s)",
+    "unavailableCharge": "{{name}} no está disponible",
+    "provenance": {
+      "show": "Ver detalles de la fuente actual",
+      "hide": "Ocultar detalles de la fuente actual",
+      "loading": "Cargando los detalles de la fuente actual…",
+      "error": "No se pudieron cargar los detalles de la fuente actual. Inténtelo de nuevo.",
+      "unavailable": "La fuente actual no está disponible. Este cargo no se puede seleccionar hasta que se restaure la autoridad vigente.",
+      "unavailableShort": "No disponible",
+      "officialTitle": "Título oficial",
+      "citation": "Cita oficial",
+      "currentness": "Vigencia",
+      "current": "Vigente",
+      "openSource": "Abrir fuente oficial",
+      "opensNewTab": "se abre en una pestaña nueva",
+      "retrieved": "Obtenido",
+      "imported": "Manifiesto importado",
+      "content": "Contenido de la fuente",
+      "contentAvailable": "Disponible",
+      "contentUnavailable": "No disponible",
+      "hash": "Hash del contenido",
+      "notAvailable": "No disponible",
+      "unknownDate": "Desconocida",
+      "present": "Actualidad"
+    },
     "categories": {
       "all": "Todos",
       "felony": "Delito Grave",

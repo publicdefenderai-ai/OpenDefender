@@ -330,7 +330,9 @@ export default {
           "officialLink": "Example official NY law page",
           "inventoryLink": "Criminal-charge source inventory",
           "statuteLink": "Statute-link disclosure",
-          "disclaimerLink": "General legal-data disclosures"
+          "disclaimerLink": "General legal-data disclosures",
+          "chargeLookupTitle": "Inspect a charge's current provenance",
+          "chargeLookupBody": "In the New York charge selector, open “View current source details” for a selectable charge to see its official title, citation, source link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
         },
           "labels": { "coverage": "Coverage / count", "freshness": "Freshness", "sourcePath": "Source path", "sourceType": "Source type", "sources": "Named sources", "citations": "Citation / reference format", "providerDisclosure": "Provider disclosure", "limitation": "Limitation" },
         "sourceTypes": {
@@ -5725,6 +5727,30 @@ export default {
     "noCharges": "No charges available",
     "selectAtLeast": "Select at least one charge",
     "continue": "Continue with {{count}} charge(s)",
+    "unavailableCharge": "{{name}} is unavailable",
+    "provenance": {
+      "show": "View current source details",
+      "hide": "Hide current source details",
+      "loading": "Loading current source details…",
+      "error": "Current source details could not be loaded. Please try again.",
+      "unavailable": "Current source unavailable. This charge cannot be selected until current authority is restored.",
+      "unavailableShort": "Unavailable",
+      "officialTitle": "Official title",
+      "citation": "Official citation",
+      "currentness": "Currentness",
+      "current": "Current",
+      "openSource": "Open official source",
+      "opensNewTab": "opens in a new tab",
+      "retrieved": "Retrieved",
+      "imported": "Manifest imported",
+      "content": "Source content",
+      "contentAvailable": "Available",
+      "contentUnavailable": "Not available",
+      "hash": "Content hash",
+      "notAvailable": "Not available",
+      "unknownDate": "Unknown",
+      "present": "Present"
+    },
     "categories": {
       "all": "All",
       "felony": "Felony",

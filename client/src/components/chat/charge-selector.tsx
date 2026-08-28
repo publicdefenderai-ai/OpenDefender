@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { JuryInstructionBadge } from "@/components/legal/jury-instruction-badge";
 import { motion } from "framer-motion";
-import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2, Filter } from "lucide-react";
+import { Search, Check, ChevronDown, ChevronUp, Scale, Loader2, Filter, ExternalLink, FileCheck2, ShieldAlert } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
 import { Input } from "@/components/ui/input";
@@ -25,6 +25,31 @@ interface Charge {
   maxPenalty: string;
   instructionRef?: string;
   instructionUrl?: string;
+}
+
+interface ChargeProvenanceSource {
+  citation: string;
+  section: string;
+  sourceUrl: string;
+  publisher: string;
+  sourceType: string;
+  retrievedAt: string | null;
+  manifestImportedAt: string;
+  effectiveDateStart: string | null;
+  effectiveDateEnd: string | null;
+  contentAvailable: boolean;
+  contentHash: string;
+  hashBasis: string;
+  status: string;
+  supportRole: string;
+  subdivision: string | null;
+}
+
+interface ChargeProvenance {
+  chargeId: string;
+  officialTitle: string;
+  citation: string;
+  sources: ChargeProvenanceSource[];
 }
 
 interface ChargeSelectorProps {
@@ -70,6 +95,13 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   const [selectedCharges, setSelectedCharges] = useState<ChargeSelection[]>([]);
   const [isExpanded, setIsExpanded] = useState(true);
   const [announcement, setAnnouncement] = useState("");
+  const [provenanceChargeId, setProvenanceChargeId] = useState<string | null>(null);
+  const [unavailableChargeIds, setUnavailableChargeIds] = useState<Set<string>>(() => new Set());
+
+  useEffect(() => {
+    setProvenanceChargeId(null);
+    setUnavailableChargeIds(new Set());
+  }, [jurisdiction]);
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedSearch(search), 300);
@@ -97,6 +129,39 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
 
   const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
+  const isNewYork = jurisdiction.toUpperCase() === "NY";
+
+  const {
+    data: provenance,
+    isLoading: isProvenanceLoading,
+    isFetching: isProvenanceFetching,
+    isError: isProvenanceError,
+  } = useQuery<ChargeProvenance | null>({
+    queryKey: ['/api/criminal-charges', provenanceChargeId, 'sources'],
+    queryFn: async () => {
+      if (!provenanceChargeId) return null;
+      const res = await fetch(`/api/criminal-charges/${encodeURIComponent(provenanceChargeId)}/sources`);
+      if (res.status === 404) return null;
+      if (!res.ok) throw new Error('Failed to fetch charge provenance');
+      const payload = await res.json() as { success: boolean; provenance?: ChargeProvenance };
+      return payload.success && payload.provenance ? payload.provenance : null;
+    },
+    enabled: isNewYork && Boolean(provenanceChargeId),
+    staleTime: 0,
+    retry: false,
+    refetchOnWindowFocus: true,
+    refetchOnReconnect: true,
+  });
+
+  useEffect(() => {
+    if (!provenanceChargeId || isProvenanceLoading || isProvenanceFetching || isProvenanceError || provenance !== null) return;
+    setUnavailableChargeIds((previous) => {
+      const next = new Set(previous);
+      next.add(provenanceChargeId);
+      return next;
+    });
+    setSelectedCharges((previous) => previous.filter((charge) => charge.id !== provenanceChargeId));
+  }, [isProvenanceError, isProvenanceFetching, isProvenanceLoading, provenance, provenanceChargeId]);
 
   useEffect(() => {
     if (isLoading) return;
@@ -125,6 +190,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
   }, [charges, debouncedSearch, isLoading, t]);
 
   const toggleCharge = (charge: Charge) => {
+    if (unavailableChargeIds.has(charge.id)) return;
     setSelectedCharges(prev => {
       const exists = prev.some(c => c.id === charge.id);
       if (exists) {
@@ -132,6 +198,41 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       }
       return [...prev, { id: charge.id, name: charge.name }];
     });
+  };
+
+  const formatProvenanceDate = (value: string | null, emptyLabel: string) => {
+    if (!value) return emptyLabel;
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return emptyLabel;
+    return new Intl.DateTimeFormat(i18n.language === "zh" ? "zh-CN" : i18n.language, {
+      dateStyle: "medium",
+      timeZone: "UTC",
+    }).format(date);
+  };
+
+  const formatEffectiveDate = (source: ChargeProvenanceSource) => {
+    const start = formatProvenanceDate(source.effectiveDateStart, t("chat.chargeSelector.provenance.unknownDate", "Unknown"));
+    const end = source.effectiveDateEnd
+      ? formatProvenanceDate(source.effectiveDateEnd, t("chat.chargeSelector.provenance.unknownDate", "Unknown"))
+      : t("chat.chargeSelector.provenance.present", "Present");
+    return `${start} – ${end}`;
+  };
+
+  const provenanceStatusMessage = (chargeId: string) => {
+    if (unavailableChargeIds.has(chargeId)) {
+      return t(
+        "chat.chargeSelector.provenance.unavailable",
+        "Current source unavailable. This charge cannot be selected until current authority is restored.",
+      );
+    }
+    if (provenanceChargeId !== chargeId) return null;
+    if (isProvenanceLoading || isProvenanceFetching) {
+      return t("chat.chargeSelector.provenance.loading", "Loading current source details…");
+    }
+    if (isProvenanceError) {
+      return t("chat.chargeSelector.provenance.error", "Current source details could not be loaded. Please try again.");
+    }
+    return null;
   };
 
   const handleSubmit = () => {
@@ -242,6 +343,9 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
               ) : charges.length > 0 ? (
                 charges.map((charge, index) => {
                   const isSelected = selectedCharges.some(c => c.id === charge.id);
+                  const isUnavailable = unavailableChargeIds.has(charge.id);
+                  const isProvenanceOpen = isNewYork && provenanceChargeId === charge.id;
+                  const statusMessage = isNewYork ? provenanceStatusMessage(charge.id) : null;
                   return (
                     <motion.div
                       key={charge.id}
@@ -252,18 +356,22 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                         "w-full rounded-lg text-sm transition-colors",
                         isSelected
                           ? "bg-primary/10 border border-primary/30"
-                          : "hover:bg-muted border border-transparent"
+                          : "hover:bg-muted border border-transparent",
+                        isUnavailable && "border-amber-300/70 bg-amber-50/60 dark:border-amber-800 dark:bg-amber-950/20"
                       )}
                     >
                       <motion.button
                         type="button"
                         onClick={() => toggleCharge(charge)}
+                        disabled={isUnavailable}
                         aria-pressed={isSelected}
                         aria-label={isSelected
                           ? t('chat.chargeSelector.removeCharge', { name: charge.name, defaultValue: `Remove ${charge.name}` })
-                          : t('chat.chargeSelector.addCharge', { name: charge.name, defaultValue: `Add ${charge.name}` })
+                          : isUnavailable
+                            ? t("chat.chargeSelector.unavailableCharge", { name: charge.name, defaultValue: `${charge.name} is unavailable` })
+                            : t('chat.chargeSelector.addCharge', { name: charge.name, defaultValue: `Add ${charge.name}` })
                         }
-                        className="w-full flex items-start gap-3 px-3 pt-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 rounded-lg"
+                        className="w-full flex items-start gap-3 px-3 pt-2.5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 rounded-lg disabled:cursor-not-allowed disabled:opacity-75"
                         data-testid={`charge-option-${charge.id}`}
                       >
                         <div className={cn(
@@ -297,6 +405,115 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                           <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
                         </div>
                       </motion.button>
+                      {isNewYork && (
+                        <div className="ml-11 flex flex-wrap items-center gap-x-3 gap-y-1 px-3 pb-2.5">
+                          <button
+                            type="button"
+                            onClick={() => setProvenanceChargeId((current) => current === charge.id ? null : charge.id)}
+                            aria-expanded={isProvenanceOpen}
+                            aria-controls={`charge-provenance-${charge.id}`}
+                            className="inline-flex items-center gap-1 text-xs font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1 rounded-sm"
+                            data-testid={`button-charge-provenance-${charge.id}`}
+                          >
+                            <FileCheck2 className="h-3.5 w-3.5" aria-hidden="true" />
+                            {isProvenanceOpen
+                              ? t("chat.chargeSelector.provenance.hide", "Hide current source details")
+                              : t("chat.chargeSelector.provenance.show", "View current source details")}
+                          </button>
+                          {isUnavailable && (
+                            <span className="inline-flex items-center gap-1 text-xs font-medium text-amber-700 dark:text-amber-300">
+                              <ShieldAlert className="h-3.5 w-3.5" aria-hidden="true" />
+                              {t("chat.chargeSelector.provenance.unavailableShort", "Unavailable")}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      {isProvenanceOpen && (
+                        <div
+                          id={`charge-provenance-${charge.id}`}
+                          className="mx-3 mb-3 ml-11 rounded-lg border border-indigo-200/80 bg-indigo-50/50 p-3 text-xs dark:border-indigo-900 dark:bg-indigo-950/20"
+                          data-testid={`charge-provenance-${charge.id}`}
+                        >
+                          {statusMessage ? (
+                            <p className={cn(
+                              "flex items-start gap-2 leading-5",
+                              isUnavailable || isProvenanceError ? "text-amber-800 dark:text-amber-200" : "text-muted-foreground",
+                            )}>
+                              {(isUnavailable || isProvenanceError) && <ShieldAlert className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+                              <span>{statusMessage}</span>
+                            </p>
+                          ) : provenance?.chargeId === charge.id ? (
+                            <div className="space-y-3">
+                              <div>
+                                <p className="font-semibold text-foreground">{t("chat.chargeSelector.provenance.officialTitle", "Official title")}</p>
+                                <p className="mt-0.5 leading-5 text-foreground">{provenance.officialTitle}</p>
+                              </div>
+                              <div className="grid gap-3 sm:grid-cols-2">
+                                <div>
+                                  <p className="font-semibold text-foreground">{t("chat.chargeSelector.provenance.citation", "Official citation")}</p>
+                                  <p className="mt-0.5 font-mono leading-5 text-foreground">{provenance.citation}</p>
+                                </div>
+                                <div>
+                                  <p className="font-semibold text-foreground">{t("chat.chargeSelector.provenance.currentness", "Currentness")}</p>
+                                  <p className="mt-0.5 leading-5 text-foreground">
+                                    {provenance.sources.map((source) => formatEffectiveDate(source)).join(" · ")}
+                                  </p>
+                                </div>
+                              </div>
+                              <div className="space-y-3 border-t border-indigo-200/70 pt-3 dark:border-indigo-900/70">
+                                {provenance.sources.map((source, sourceIndex) => (
+                                  <div key={`${source.citation}-${sourceIndex}`} className="space-y-2">
+                                    <div className="flex flex-wrap items-center justify-between gap-2">
+                                      <p className="font-semibold text-foreground">
+                                        {source.supportRole}
+                                        {source.subdivision ? ` · ${source.subdivision}` : ""}
+                                      </p>
+                                      <Badge variant="outline" className="text-[11px]">
+                                        {source.status === "current"
+                                          ? t("chat.chargeSelector.provenance.current", "Current")
+                                          : source.status}
+                                      </Badge>
+                                    </div>
+                                    <a
+                                      href={source.sourceUrl}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-flex max-w-full items-center gap-1 break-all font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-1"
+                                      data-testid={`link-charge-provenance-source-${charge.id}-${sourceIndex}`}
+                                    >
+                                      {t("chat.chargeSelector.provenance.openSource", "Open official source")}
+                                      <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+                                      <span className="sr-only">{t("chat.chargeSelector.provenance.opensNewTab", "opens in a new tab")}</span>
+                                    </a>
+                                    <dl className="grid gap-x-4 gap-y-2 sm:grid-cols-2">
+                                      <div>
+                                        <dt className="font-semibold text-foreground">{t("chat.chargeSelector.provenance.retrieved", "Retrieved")}</dt>
+                                        <dd className="text-muted-foreground">{formatProvenanceDate(source.retrievedAt, t("chat.chargeSelector.provenance.notAvailable", "Not available"))}</dd>
+                                      </div>
+                                      <div>
+                                        <dt className="font-semibold text-foreground">{t("chat.chargeSelector.provenance.imported", "Manifest imported")}</dt>
+                                        <dd className="text-muted-foreground">{formatProvenanceDate(source.manifestImportedAt, t("chat.chargeSelector.provenance.notAvailable", "Not available"))}</dd>
+                                      </div>
+                                      <div>
+                                        <dt className="font-semibold text-foreground">{t("chat.chargeSelector.provenance.content", "Source content")}</dt>
+                                        <dd className="text-muted-foreground">
+                                          {source.contentAvailable
+                                            ? t("chat.chargeSelector.provenance.contentAvailable", "Available")
+                                            : t("chat.chargeSelector.provenance.contentUnavailable", "Not available")}
+                                        </dd>
+                                      </div>
+                                      <div>
+                                        <dt className="font-semibold text-foreground">{t("chat.chargeSelector.provenance.hash", "Content hash")}</dt>
+                                        <dd className="break-all font-mono text-muted-foreground">{source.contentHash} ({source.hashBasis})</dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          ) : null}
+                        </div>
+                      )}
                       {charge.instructionRef && (
                         <div className="ml-11 px-3 pb-2.5">
                           <JuryInstructionBadge
