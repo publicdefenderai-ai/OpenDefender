@@ -14,10 +14,16 @@ import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache, getGuidanceCacheKey, startOptionalSourceEnrichment } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
-import { getChargeById, getChargesByJurisdiction, criminalCharges, chargeCategories, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, getSelectableCharges, chargeCategories, normalizeChargeId, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
+import { californiaSourceDatabase } from "./services/california-source-database";
+import {
+  getCurrentNewYorkSelectableChargeIds,
+  newYorkSourceDatabase,
+} from "./services/new-york-source-database";
+import { fetchNewYorkAuthorityManifest } from "./services/new-york-authority-fetcher";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
@@ -371,7 +377,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       let charges = jurisdiction 
         ? getChargesByJurisdiction(jurisdiction as string)
-        : criminalCharges;
+        : getSelectableCharges();
+      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      const applyNewYorkEligibility = <T extends { jurisdiction: string; id: string }>(items: T[]) =>
+        items.filter((charge) =>
+          charge.jurisdiction !== "NY" || currentNewYorkSelectableIds.has(charge.id),
+        );
+      charges = applyNewYorkEligibility(charges);
       
       // Filter by search term (search in both English and Spanish)
       if (search && typeof search === 'string' && search.length > 100) {
@@ -436,6 +448,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           category: charge.category,
           description,
           maxPenalty: charge.maxPenalty,
+          ...(charge.sourceUrls?.length ? { sourceUrls: charge.sourceUrls } : {}),
           ...(instructionRef ? { instructionRef } : {}),
           ...(instructionUrl ? { instructionUrl } : {}),
         };
@@ -445,13 +458,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
         success: true, 
         charges: simplifiedCharges,
         count: simplifiedCharges.length,
-        totalAvailable: jurisdiction 
-          ? getChargesByJurisdiction(jurisdiction as string).length 
-          : criminalCharges.length
+        totalAvailable: jurisdiction
+          ? applyNewYorkEligibility(getChargesByJurisdiction(jurisdiction as string)).length
+          : applyNewYorkEligibility(getSelectableCharges()).length
       });
     } catch (error) {
       errLog("Failed to fetch criminal charges", error);
       res.status(500).json({ success: false, error: "Failed to fetch criminal charges" });
+    }
+  });
+
+  // Current database-backed provenance for one selectable California or NY charge.
+  // This remains separate from the selector response so a missing/unmigrated
+  // source database can never weaken the canonical charge boundary.
+  app.get("/api/criminal-charges/:chargeId/sources", searchRateLimiter, async (req, res) => {
+    try {
+      const normalizedCharge = getChargeById(req.params.chargeId);
+      const provenance = normalizedCharge?.jurisdiction === "NY"
+        ? await newYorkSourceDatabase.getChargeProvenance(normalizedCharge.id)
+        : normalizedCharge?.jurisdiction === "CA"
+          ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : null;
+      if (!provenance) {
+        return res.status(404).json({ success: false, error: "Selectable charge provenance not found" });
+      }
+      res.json({ success: true, provenance });
+    } catch (error) {
+      errLog("Failed to fetch charge provenance", error);
+      res.status(500).json({ success: false, error: "Failed to fetch charge provenance" });
     }
   });
 
@@ -712,6 +746,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const language = (lang === 'es' ? 'es' : lang === 'zh' ? 'zh' : 'en') as 'en' | 'es' | 'zh';
       const typeFilters = types ? (types as string).split(',') : undefined;
+      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
       
       const searchResult = search({
         query: query.trim(),
@@ -719,6 +754,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         filters: {
           types: typeFilters as any,
           jurisdiction: jurisdiction as string,
+          // The index is built from the static catalog; keep withheld NY
+          // charges out of site search and its totals as well.
+          chargeIds: [...currentNewYorkSelectableIds].map((id) => `charge-${id}`),
         },
         limit: limit ? parseInt(limit as string, 10) : 20,
         offset: offset ? parseInt(offset as string, 10) : 0,
@@ -800,6 +838,48 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Statute Database Seeding endpoints (must come before :jurisdiction)
+  // California's narrow authority database uses official references and
+  // versioned fingerprints; it deliberately does not call OpenLaws.
+  app.post("/api/statutes/sources/california/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await californiaSourceDatabase.seed();
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("California source database seeding failed", error);
+      res.status(500).json({ success: false, error: "California source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/california/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await californiaSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch California source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch California source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/new-york/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await newYorkSourceDatabase.seed(await fetchNewYorkAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("New York source database seeding failed", error);
+      res.status(500).json({ success: false, error: "New York source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/new-york/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await newYorkSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch New York source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch New York source database status" });
+    }
+  });
+
   // Seed database with stateStatutesSeed data
   // SECURITY: Protected with admin auth and rate limiting
   app.post("/api/statutes/seed", adminRateLimiter, requireAdminAuth, async (req, res) => {
@@ -1352,6 +1432,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const validatedData = insertLegalCaseSchema.parse(transformedData);
 
+      const resolvedChargeInput = await resolveChargeInput(validatedData.charges);
+      if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
+        return res.status(400).json({
+          success: false,
+          error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
+          requiresReselection: true,
+        });
+      }
+
       // Generate personalized guidance based on case details.
       // These fields are not DB columns on legal_cases, so Zod strips them from
       // validatedData. Re-inject from req.body so the AI prompt sees the full picture
@@ -1360,13 +1449,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // logged rather than reaching the rules engine or the Claude prompt unvalidated.
       const guidanceInput = {
         ...validatedData,
+        charges: resolvedChargeInput.ids,
         // Normalise blank caseStage (screener export before stage selection) to a safe
         // default so neither the rules engine nor Claude receives an empty string.
         caseStage: validatedData.caseStage || 'arrest',
         // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
-        chargesUnknown: req.body.chargesUnknown === true,
+        chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
       const rawGuidance = await generateLegalGuidance(guidanceInput);
@@ -1382,6 +1472,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { incidentDescription: _dropped, ...storableData } = validatedData;
       const legalCase = await storage.createLegalCase({
         ...storableData,
+        charges: resolvedChargeInput.ids,
         guidance,
       });
 
@@ -1451,19 +1542,29 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
+      const resolvedChargeInput = await resolveChargeInput(validatedData.charges);
+      if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
+        sendEvent({
+          type: 'error',
+          error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
+          requiresReselection: true,
+        });
+        return res.end();
+      }
       // Same field-restoration pattern as the non-streaming route above:
       // preserve background answers Zod stripped so the prompt has them,
       // validated first so an invalid value is dropped and logged rather
       // than reaching the rules engine or the Claude prompt unvalidated.
       const caseDataWithFlags = {
         ...validatedData,
+        charges: resolvedChargeInput.ids,
         // Normalise blank caseStage (screener export before stage selection) to a safe
         // default so neither the rules engine nor Claude receives an empty string.
         caseStage: validatedData.caseStage || 'arrest',
         // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
-        chargesUnknown: req.body.chargesUnknown === true,
+        chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
 
@@ -1543,6 +1644,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const { incidentDescription: _droppedStream, ...storableStreamData } = validatedData;
       const legalCase = await storage.createLegalCase({
         ...storableStreamData,
+        charges: resolvedChargeInput.ids,
         guidance,
       });
 
@@ -1596,6 +1698,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       };
 
       const validatedData = insertLegalCaseSchema.parse(transformedData);
+      const resolvedChargeInput = await resolveChargeInput(validatedData.charges);
+      if (resolvedChargeInput.hasUnresolved && req.body.chargesUnknown !== true) {
+        return res.status(400).json({
+          success: false,
+          error: 'The saved charge selection is outdated or too broad. Please select the exact current charge, or choose "I don’t know what charges I’m facing."',
+          requiresReselection: true,
+        });
+      }
 
       // Re-inject fields Zod strips (not DB columns) so the engine has the
       // full picture, matching the pattern in the stream route above —
@@ -1603,13 +1713,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // than reaching the rules engine unvalidated.
       const caseDataWithFlags = {
         ...validatedData,
+        charges: resolvedChargeInput.ids,
         // Normalise blank caseStage (screener export before stage selection) to a safe
         // default so neither the rules engine nor Claude receives an empty string.
         caseStage: validatedData.caseStage || 'arrest',
         // Signal to buildUserPrompt that the stage was not explicitly chosen — lets
         // Claude avoid fabricating stage-specific deadlines.
         caseStageWasBlank: !validatedData.caseStage,
-        chargesUnknown: req.body.chargesUnknown === true,
+        chargesUnknown: req.body.chargesUnknown === true || resolvedChargeInput.hasUnresolved,
         ...extractBackgroundFlags(req.body),
       };
 
@@ -3404,9 +3515,33 @@ export async function registerRoutes(app: Express): Promise<Server> {
   return httpServer;
 }
 
+async function resolveChargeInput(charges: string[] | string | undefined): Promise<{
+  ids: string[];
+  hasUnresolved: boolean;
+}> {
+  const normalized = Array.isArray(charges)
+    ? normalizeChargeIds(charges)
+    : normalizeChargeIds(charges ?? '');
+  const ids = Array.isArray(normalized) ? normalized : [normalized];
+  const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+  const isRuntimeSelectable = (id: string) => {
+    const charge = getChargeById(id);
+    return Boolean(charge) && (
+      charge?.jurisdiction !== "NY" ||
+      currentNewYorkSelectableIds.has(id)
+    );
+  };
+  const recognizedIds = ids.filter((id) => Boolean(id) && isRuntimeSelectable(id));
+  return {
+    ids: recognizedIds,
+    hasUnresolved: ids.some((id) => Boolean(id) && !isRuntimeSelectable(id)),
+  };
+}
+
 async function generateLegalGuidance(caseData: any) {
   // Extract charge classifications first
-  const chargeIds = Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges];
+  const chargeIds = (Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges])
+    .map((id: string) => normalizeChargeId(id));
   const chargeClassifications = chargeIds
     .map((id: string) => {
       const charge = getChargeById(id);
@@ -3416,6 +3551,7 @@ async function generateLegalGuidance(caseData: any) {
       }
       const verifiedCode = getVerifiedCitation(charge);
       return {
+        id: charge.id,
         name: charge.name,
         classification: charge.category,
         // code carries the verified citation when available (used by AI prompt)

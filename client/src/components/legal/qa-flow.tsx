@@ -13,10 +13,12 @@ import { Lock, ArrowRight, ArrowLeft, X, ExternalLink, Scale, MessageSquare, Ale
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
 import { motion, AnimatePresence } from "framer-motion";
-import { criminalCharges, getChargesByJurisdiction, chargeCategories, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall } from "@shared/criminal-charges";
+import { getChargeById as getCatalogChargeById, getChargesByJurisdiction, chargeCategories, normalizeChargeIds, getVerifiedCitation, isCitationVerified, getVerifiedSourceUrl, isChargeInOverlay, getPrimaryStatuteIndex, getInstructionRef, getInstructionUrl, getInstructionPaywall, isChargeIdRequiringReselection } from "@shared/criminal-charges";
+import { getCaliforniaLegacyDisposition, getCaliforniaReselectionOptions } from "@shared/california-authority";
 import { getStatuteUrl, getOfficialStatuteSite, buildCaLeginfoUrlFromCitation } from "@shared/statute-citation-generator";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import { shouldShowCaseStageWarning, QA_FLOW_STATUS_STEP_INDEX } from "./qa-flow-guard";
+import { replaceLegacyChargeWithCanonical } from "./qa-flow-reselection";
 
 interface QAFlowProps {
   onComplete: (data: any) => void;
@@ -63,6 +65,7 @@ export function QAFlow({
   const [formData, setFormData] = useState<QAFormData>(() => ({
     ...EMPTY_FORM_DATA,
     ...initialData,
+    charges: normalizeChargeIds(initialData?.charges ?? EMPTY_FORM_DATA.charges),
   }));
 
   const baseSteps = [
@@ -96,13 +99,13 @@ export function QAFlow({
         setShowCaseStageWarning(true);
         return;
       }
-      onComplete({ ...formData, captchaToken });
+      onComplete({ ...formData, charges: normalizeChargeIds(formData.charges), captchaToken });
     }
   };
 
   const handleCaseStageWarningConfirm = () => {
     setShowCaseStageWarning(false);
-    onComplete({ ...formData, captchaToken });
+    onComplete({ ...formData, charges: normalizeChargeIds(formData.charges), captchaToken });
   };
 
   const handleCaseStageWarningCancel = () => {
@@ -461,9 +464,41 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
+  const [runtimeNewYorkCharges, setRuntimeNewYorkCharges] = useState<any[] | null>(null);
+  const isNewYork = formData.jurisdiction === "NY";
+
+  useEffect(() => {
+    if (!isNewYork) {
+      setRuntimeNewYorkCharges(null);
+      return;
+    }
+
+    let cancelled = false;
+    setRuntimeNewYorkCharges(null);
+    fetch("/api/criminal-charges?jurisdiction=NY&limit=500")
+      .then(async (response) => {
+        if (!response.ok) throw new Error(`NY charge lookup failed (${response.status})`);
+        const payload = await response.json();
+        if (!payload.success || !Array.isArray(payload.charges)) {
+          throw new Error("NY charge lookup returned an invalid response");
+        }
+        if (!cancelled) setRuntimeNewYorkCharges(payload.charges);
+      })
+      .catch(() => {
+        // Do not fall back to the static NY catalog: an unavailable or
+        // incomplete authority manifest must fail closed in the selector.
+        if (!cancelled) setRuntimeNewYorkCharges([]);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isNewYork]);
   
   // Get charges based on selected jurisdiction (includes both state and federal charges)
-  const availableCharges = getChargesByJurisdiction(formData.jurisdiction);
+  const availableCharges = isNewYork
+    ? (runtimeNewYorkCharges ?? [])
+    : getChargesByJurisdiction(formData.jurisdiction);
   
   const categoryFiltered = selectedCategory && selectedCategory !== 'all'
     ? availableCharges.filter(charge => 
@@ -478,11 +513,46 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const filteredCharges = chargeSearchQuery.trim()
     ? categoryFiltered.filter(charge => {
         const q = chargeSearchQuery.toLowerCase();
-        return charge.name.toLowerCase().includes(q) ||
-          charge.code.toLowerCase().includes(q) ||
-          charge.description.toLowerCase().includes(q);
+        const name = typeof charge.name === "string" ? charge.name : "";
+        const code = typeof charge.code === "string" ? charge.code : "";
+        const description = typeof charge.description === "string" ? charge.description : "";
+        return name.toLowerCase().includes(q) ||
+          code.toLowerCase().includes(q) ||
+          description.toLowerCase().includes(q);
       })
     : categoryFiltered;
+
+  const unresolvedChargeIds = formData.charges.filter(
+    (id: string) =>
+      isChargeIdRequiringReselection(id) ||
+      !getCatalogChargeById(id) ||
+      (isNewYork &&
+        runtimeNewYorkCharges !== null &&
+        !runtimeNewYorkCharges.some((charge) => charge.id === id)),
+  );
+
+  const handleContinue = () => {
+    if (unresolvedChargeIds.length > 0) {
+      const recognizedCharges = formData.charges.filter(
+        (id: string) => !unresolvedChargeIds.includes(id),
+      );
+      updateFormData("charges", recognizedCharges);
+      if (recognizedCharges.length === 0) {
+        updateFormData("chargesUnknown", true);
+      }
+    }
+    onNext();
+  };
+
+  const handleReselection = (legacyId: string, canonicalId: string) => {
+    const updatedCharges = replaceLegacyChargeWithCanonical(
+      formData.charges,
+      legacyId,
+      canonicalId,
+    );
+    updateFormData("charges", updatedCharges);
+    updateFormData("chargesUnknown", false);
+  };
   
   // Custom sorting function to group crimes with degrees together
   const sortChargesWithDegrees = (charges: any[]) => {
@@ -551,7 +621,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   };
   
   const getChargeById = (id: string) => {
-    return criminalCharges.find(charge => charge.id === id);
+    return getCatalogChargeById(id);
   };
 
   const handleChargesUnknownToggle = () => {
@@ -568,6 +638,72 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.caseDetails.title')}</h3>
 
         <div className="space-y-4">
+          {unresolvedChargeIds.length > 0 && (
+            <div
+              className="flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-amber-100"
+              role="alert"
+              data-testid="legacy-charge-reselection-notice"
+            >
+              <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
+              <p className="text-sm leading-relaxed">
+                {t('legalGuidance.qaFlow.caseDetails.legacyChargeNotice')}
+              </p>
+            </div>
+          )}
+
+          {unresolvedChargeIds.map((legacyId: string) => {
+            const options = getCaliforniaReselectionOptions(legacyId);
+            if (options.length === 0) return null;
+            const disposition = getCaliforniaLegacyDisposition(legacyId);
+            return (
+              <div
+                key={`reselection-${legacyId}`}
+                className="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-950/20"
+                data-testid={`legacy-charge-options-${legacyId}`}
+              >
+                <div className="mb-3">
+                  <p className="text-sm font-semibold text-amber-950 dark:text-amber-100">
+                    {t('legalGuidance.qaFlow.caseDetails.reselectionTitle')}
+                  </p>
+                  {disposition?.reason && (
+                    <p className="mt-1 text-xs leading-relaxed text-amber-900 dark:text-amber-200">
+                      {disposition.reason}
+                    </p>
+                  )}
+                </div>
+                <div className="grid gap-2">
+                  {options.map((option) => {
+                    const charge = getCatalogChargeById(option.canonicalId);
+                    if (!charge) return null;
+                    const citation = getVerifiedCitation(charge);
+                    return (
+                      <Button
+                        key={option.canonicalId}
+                        type="button"
+                        variant="outline"
+                        className="h-auto justify-between gap-3 whitespace-normal border-amber-300 bg-white p-3 text-left hover:bg-amber-100 dark:border-amber-700 dark:bg-background dark:hover:bg-amber-950/40"
+                        onClick={() => handleReselection(legacyId, option.canonicalId)}
+                        data-testid={`button-reselect-${option.canonicalId}`}
+                      >
+                        <span className="min-w-0">
+                          <span className="block text-sm font-semibold">{charge.name}</span>
+                          {citation && (
+                            <span className="mt-1 block text-xs font-normal text-muted-foreground">
+                              {citation}
+                            </span>
+                          )}
+                        </span>
+                        <span className="shrink-0 text-xs font-medium text-amber-800 dark:text-amber-200">
+                          {t('legalGuidance.qaFlow.caseDetails.reselectionChoose')}
+                        </span>
+                      </Button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+
           {/* Selected Charges */}
           {!formData.chargesUnknown && formData.charges.length > 0 && (
             <div className="mb-4">
@@ -721,7 +857,9 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
               
               {totalFilteredCharges === 0 && (
                 <p className="text-sm text-muted-foreground text-center py-4">
-                  {t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
+                  {isNewYork && runtimeNewYorkCharges === null
+                    ? "Loading current New York charges…"
+                    : t('legalGuidance.qaFlow.caseDetails.noResults', 'No charges found. Try a different search term or category.')}
                 </p>
               )}
 
@@ -976,8 +1114,11 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
           <ArrowLeft className="mr-2 h-4 w-4" /> {t('legalGuidance.qaFlow.caseDetails.back')}
         </Button>
         <Button
-          onClick={onNext}
-          disabled={formData.charges.length === 0 && !formData.chargesUnknown}
+          onClick={handleContinue}
+            disabled={
+              (formData.charges.length === 0 && !formData.chargesUnknown) ||
+              (isNewYork && runtimeNewYorkCharges === null)
+            }
           className="flex-1 bg-blue-600 text-white font-bold hover:bg-blue-700 hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg"
           data-testid="button-next-case-details"
         >

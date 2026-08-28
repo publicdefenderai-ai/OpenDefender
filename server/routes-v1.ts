@@ -3,8 +3,9 @@ import { Router as ExpressRouter } from "express";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
 import { search, getSearchIndexStats } from "./services/search-indexer";
-import { criminalCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
+import { getSelectableCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
+import { getCurrentNewYorkSelectableChargeIds } from "./services/new-york-source-database";
 import { openApiSpec } from "./openapi";
 import { jsonSchemas, getSchemaList } from "./schemas/api-schemas";
 import { diversionPrograms } from "../shared/diversion-programs-data";
@@ -58,7 +59,7 @@ export function registerV1Routes(app: Express): void {
     res.json(openApiSpec);
   });
 
-  router.get('/search', (req: Request, res: Response) => {
+  router.get('/search', async (req: Request, res: Response) => {
     try {
       const q = req.query.q as string;
       const lang = (req.query.lang as string) || 'en';
@@ -78,10 +79,17 @@ export function registerV1Routes(app: Express): void {
         });
       }
 
+      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
       const searchResult = search({
         query: q,
         language: lang === 'es' ? 'es' : 'en',
-        filters: types ? { types: types.split(',') as any[] } : undefined
+        filters: {
+          ...(types ? { types: types.split(',') as any[] } : {}),
+          // Search indexes the static catalog at startup; apply the
+          // authority boundary during scoring so totalResults and grouping
+          // cannot expose withheld NY charges.
+          chargeIds: [...currentNewYorkSelectableIds].map((id) => `charge-${id}`),
+        },
       });
 
       res.json({
@@ -99,14 +107,18 @@ export function registerV1Routes(app: Express): void {
     }
   });
 
-  router.get('/charges', (req: Request, res: Response) => {
+  router.get('/charges', async (req: Request, res: Response) => {
     try {
       const jurisdiction = req.query.jurisdiction as string;
       const category = req.query.category as string;
       const limit = Math.min(parseInt(req.query.limit as string) || 50, 100);
       const offset = parseInt(req.query.offset as string) || 0;
 
-      let filtered = criminalCharges;
+      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      let filtered = getSelectableCharges().filter((charge) =>
+        charge.jurisdiction !== "NY" ||
+        currentNewYorkSelectableIds.has(charge.id),
+      );
 
       if (jurisdiction) {
         filtered = filtered.filter(c => 
@@ -141,11 +153,17 @@ export function registerV1Routes(app: Express): void {
     }
   });
 
-  router.get('/charges/:id', (req: Request, res: Response) => {
+  router.get('/charges/:id', async (req: Request, res: Response) => {
     try {
       const charge = getChargeById(req.params.id);
       if (!charge) {
         return res.status(404).json({ success: false, error: 'Charge not found' });
+      }
+      if (charge.jurisdiction === "NY") {
+        const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+        if (!currentNewYorkSelectableIds.has(charge.id)) {
+          return res.status(404).json({ success: false, error: 'Charge not found' });
+        }
       }
       const instructionRef = getInstructionRef(charge);
       const instructionUrl = getInstructionUrl(charge);
@@ -235,12 +253,16 @@ export function registerV1Routes(app: Express): void {
     }
   });
 
-  router.get('/export/charges', (req: Request, res: Response) => {
+  router.get('/export/charges', async (req: Request, res: Response) => {
     try {
       const format = (req.query.format as string) || 'json';
       const jurisdiction = req.query.jurisdiction as string;
 
-      let data = criminalCharges;
+      const currentNewYorkSelectableIds = await getCurrentNewYorkSelectableChargeIds();
+      let data = getSelectableCharges().filter((charge) =>
+        charge.jurisdiction !== "NY" ||
+        currentNewYorkSelectableIds.has(charge.id),
+      );
       if (jurisdiction) {
         data = data.filter(c => 
           c.jurisdiction.toLowerCase() === jurisdiction.toLowerCase()
@@ -286,7 +308,7 @@ export function registerV1Routes(app: Express): void {
         success: true,
         totalDocuments: stats.totalDocuments,
         byType: stats.documentsByType,
-        jurisdictions: new Set(criminalCharges.map(charge => charge.jurisdiction)).size
+        jurisdictions: new Set(getSelectableCharges().map(charge => charge.jurisdiction)).size
       });
     } catch (error) {
       devLog('api-v1', `Stats error: ${error}`);

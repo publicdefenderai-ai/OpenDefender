@@ -6,11 +6,11 @@
  */
 export const DATA_SOURCE_FACTS = {
   federalStatutes: 10,
-  charges: 7159,
-  chargeTiers: { felony: 3776, misdemeanor: 3322, infraction: 61 },
+  charges: 7158,
+  chargeTiers: { felony: 3776, misdemeanor: 3321, infraction: 61 },
   chargeJurisdictions: 57,
-  chargeExplanations: 60,
-  chargeExplanationsWithSources: 49,
+  chargeExplanations: 61,
+  chargeExplanationsWithSources: 50,
   chargeExplanationOverlays: 2818,
   procedureJurisdictions: 57,
   procedureHighConfidence: 52,

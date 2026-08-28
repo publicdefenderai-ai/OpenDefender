@@ -158,11 +158,16 @@ npm install
 # Run database migrations
 npm run db:push
 
+# Seed the committed New York authority manifest
+npm run db:seed:new-york
+
 # Start the development server
 npm run dev
 ```
 
-The app runs at `http://localhost:5000`.
+The app runs at `http://localhost:5000`. Production starts deterministically
+from the committed New York manifest before starting the server; it does not
+call the NY Senate API during application startup.
 
 ### Release verification
 

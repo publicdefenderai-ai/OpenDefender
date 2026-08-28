@@ -138,7 +138,7 @@ function makeGuidance(chargeName = 'loitering') {
     avoidActions: [],
     timeline: [],
     chargeClassifications: [
-      { name: chargeName, classification: 'misdemeanor', code: 'TEST-001' },
+      { id: 'ca-credit-card-fraud', name: chargeName, classification: 'misdemeanor', code: '484g' },
     ],
     caseData: {
       jurisdiction: 'CA',

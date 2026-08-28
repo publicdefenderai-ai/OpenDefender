@@ -1,11 +1,11 @@
 {
   "state": "NY",
-  "generatedAt": "2026-06-12T05:45:38.175Z",
+  "generatedAt": "2026-08-27T20:53:41.900Z",
   "source": "NY Open Legislation API (legislation.nysenate.gov)",
   "stats": {
-    "total": 118,
-    "verified": 107,
-    "apiFailed": 7,
+    "total": 121,
+    "verified": 111,
+    "apiFailed": 6,
     "skipped": 4
   },
   "entries": [
@@ -374,7 +374,7 @@
     },
     {
       "chargeId": "ny-possession-of-controlled-substance",
-      "chargeName": "Possession of Controlled Substance",
+      "chargeName": "Criminal Possession of a Controlled Substance in the Seventh Degree",
       "lawId": "PEN",
       "section": "220.03",
       "citation": "N.Y. Penal Law § 220.03",
@@ -384,8 +384,30 @@
       "apiStatus": "verified"
     },
     {
-      "chargeId": "ny-possession-with-intent-to-distribute",
-      "chargeName": "Possession with Intent to Distribute",
+      "chargeId": "ny-possession-of-controlled-substance-fifth-degree",
+      "chargeName": "Criminal Possession of a Controlled Substance in the Fifth Degree",
+      "lawId": "PEN",
+      "section": "220.06",
+      "citation": "N.Y. Penal Law § 220.06",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.06: \"Criminal possession of a controlled substance in the fifth degree\"",
+      "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.06",
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "ny-possession-of-controlled-substance-fourth-degree",
+      "chargeName": "Criminal Possession of a Controlled Substance in the Fourth Degree",
+      "lawId": "PEN",
+      "section": "220.09",
+      "citation": "N.Y. Penal Law § 220.09",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.09: \"Criminal possession of a controlled substance in the fourth degree\"",
+      "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.09",
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "ny-possession-of-controlled-substance-third-degree",
+      "chargeName": "Criminal Possession of a Controlled Substance in the Third Degree",
       "lawId": "PEN",
       "section": "220.16",
       "citation": "N.Y. Penal Law § 220.16",
@@ -395,8 +417,30 @@
       "apiStatus": "verified"
     },
     {
-      "chargeId": "ny-distribution-of-controlled-substance",
-      "chargeName": "Distribution of Controlled Substance",
+      "chargeId": "ny-possession-of-controlled-substance-second-degree",
+      "chargeName": "Criminal Possession of a Controlled Substance in the Second Degree",
+      "lawId": "PEN",
+      "section": "220.18",
+      "citation": "N.Y. Penal Law § 220.18",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.18: \"Criminal possession of a controlled substance in the second degree\"",
+      "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.18",
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "ny-possession-of-controlled-substance-first-degree",
+      "chargeName": "Criminal Possession of a Controlled Substance in the First Degree",
+      "lawId": "PEN",
+      "section": "220.21",
+      "citation": "N.Y. Penal Law § 220.21",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 220.21: \"Criminal possession of a controlled substance in the first degree\"",
+      "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/220.21",
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "ny-criminal-sale-of-controlled-substance-fifth-degree",
+      "chargeName": "Criminal Sale of a Controlled Substance in the Fifth Degree",
       "lawId": "PEN",
       "section": "220.31",
       "citation": "N.Y. Penal Law § 220.31",
@@ -406,8 +450,8 @@
       "apiStatus": "verified"
     },
     {
-      "chargeId": "ny-manufacturing-controlled-substance",
-      "chargeName": "Manufacturing Controlled Substance",
+      "chargeId": "ny-unlawful-manufacture-of-methamphetamine-third-degree",
+      "chargeName": "Unlawful Manufacture of Methamphetamine in the Third Degree",
       "lawId": "PEN",
       "section": "220.73",
       "citation": "N.Y. Penal Law § 220.73",
@@ -417,8 +461,8 @@
       "apiStatus": "verified"
     },
     {
-      "chargeId": "ny-drug-trafficking",
-      "chargeName": "Drug Trafficking",
+      "chargeId": "ny-operating-as-major-trafficker",
+      "chargeName": "Operating as a Major Trafficker",
       "lawId": "PEN",
       "section": "220.77",
       "citation": "N.Y. Penal Law § 220.77",
@@ -428,8 +472,8 @@
       "apiStatus": "verified"
     },
     {
-      "chargeId": "ny-possession-of-drug-paraphernalia",
-      "chargeName": "Possession of Drug Paraphernalia",
+      "chargeId": "ny-criminally-using-drug-paraphernalia-second-degree",
+      "chargeName": "Criminally Using Drug Paraphernalia in the Second Degree",
       "lawId": "PEN",
       "section": "220.50",
       "citation": "N.Y. Penal Law § 220.50",
@@ -439,15 +483,15 @@
       "apiStatus": "verified"
     },
     {
-      "chargeId": "ny-maintaining-drug-house",
-      "chargeName": "Maintaining Drug House",
+      "chargeId": "ny-criminal-nuisance-first-degree",
+      "chargeName": "Criminal Nuisance in the First Degree",
       "lawId": "PEN",
-      "section": "221.77",
-      "citation": "N.Y. Penal Law § 221.77",
-      "confidence": "medium",
-      "source": "NY Open Legislation API — HTTP 404 — needs manual review",
-      "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/221.77",
-      "apiStatus": "api_error"
+      "section": "240.46",
+      "citation": "N.Y. Penal Law § 240.46",
+      "confidence": "high",
+      "source": "NY Open Legislation API — N.Y. Penal Law § 240.46: \"Criminal nuisance in the first degree\"",
+      "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.46",
+      "apiStatus": "verified"
     },
     {
       "chargeId": "ny-unlawful-carrying-of-weapon",
@@ -744,17 +788,6 @@
       "confidence": "high",
       "source": "NY Open Legislation API — N.Y. Penal Law § 240.26: \"Harassment in the second degree\"",
       "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/240.26",
-      "apiStatus": "verified"
-    },
-    {
-      "chargeId": "ny-marijuana-unlawful-possession",
-      "chargeName": "Unlawful Possession of Cannabis",
-      "lawId": "PEN",
-      "section": "222.05",
-      "citation": "N.Y. Penal Law § 222.05",
-      "confidence": "high",
-      "source": "NY Open Legislation API — N.Y. Penal Law § 222.05: \"Personal use of cannabis\"",
-      "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/222.05",
       "apiStatus": "verified"
     },
     {
@@ -1231,8 +1264,8 @@
       "apiStatus": "verified"
     },
     {
-      "chargeId": "ny-drug-school-zone-enhancement",
-      "chargeName": "Drug Offense in a School Zone (Proximity Enhancement)",
+      "chargeId": "ny-criminal-sale-of-controlled-substance-near-school-grounds",
+      "chargeName": "Criminal Sale of a Controlled Substance in or Near School Grounds",
       "lawId": "PEN",
       "section": "220.44",
       "citation": "N.Y. Penal Law § 220.44",

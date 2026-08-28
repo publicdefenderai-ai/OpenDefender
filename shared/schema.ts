@@ -275,6 +275,126 @@ export const insertStatuteSchema = createInsertSchema(statutes).omit({
 export type InsertStatute = z.infer<typeof insertStatuteSchema>;
 export type Statute = typeof statutes.$inferSelect;
 
+/**
+ * Provenance-first authority layer for narrow, jurisdiction-specific statute
+ * datasets. These tables intentionally remain separate from the legacy
+ * `statutes` rows: a source reference or snapshot changing must not overwrite
+ * the text currently used by older statute lookup features.
+ */
+export const statuteSources = pgTable("statute_sources", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sourceKey: text("source_key").notNull().unique(),
+  jurisdiction: text("jurisdiction").notNull(),
+  publisher: text("publisher").notNull(),
+  sourceType: text("source_type").notNull(), // statute | jury_instruction | classification
+  canonicalUrl: text("canonical_url").notNull(),
+  apiIdentifier: text("api_identifier"),
+  accessPolicy: text("access_policy").notNull(), // reference_only | store_text
+  reuseStatus: text("reuse_status").notNull(), // permitted | restricted | not_cleared
+  canStoreContent: boolean("can_store_content").notNull().default(false),
+  lastRetrievedAt: timestamp("last_retrieved_at"),
+  lastCheckedAt: timestamp("last_checked_at"),
+  metadata: jsonb("metadata"),
+  isActive: boolean("is_active").notNull().default(true),
+}, (table) => ({
+  jurisdictionIdx: index("statute_sources_jurisdiction_idx").on(table.jurisdiction),
+  sourceTypeIdx: index("statute_sources_source_type_idx").on(table.sourceType),
+}));
+
+export const statuteSourceSnapshots = pgTable("statute_source_snapshots", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  sourceId: varchar("source_id").notNull().references(() => statuteSources.id, { onDelete: "cascade" }),
+  jurisdiction: text("jurisdiction").notNull(),
+  citation: text("citation").notNull(),
+  section: text("section").notNull(),
+  officialTitle: text("official_title").notNull(),
+  sourceUrl: text("source_url").notNull(),
+  content: text("content"),
+  contentHash: text("content_hash").notNull(),
+  hashBasis: text("hash_basis").notNull(), // source_content | reference_metadata
+  retrievedAt: timestamp("retrieved_at"),
+  manifestImportedAt: timestamp("manifest_imported_at").defaultNow().notNull(),
+  effectiveDateStart: text("effective_date_start"),
+  effectiveDateEnd: text("effective_date_end"),
+  status: text("status").notNull().default("current"), // current | pending_review | superseded
+  requiresReview: boolean("requires_review").notNull().default(false),
+  supersedesSnapshotId: varchar("supersedes_snapshot_id"),
+  metadata: jsonb("metadata"),
+}, (table) => ({
+  sourceCitationIdx: index("statute_snapshots_source_citation_idx").on(table.sourceId, table.citation),
+  jurisdictionStatusIdx: index("statute_snapshots_jurisdiction_status_idx").on(table.jurisdiction, table.status),
+  contentHashUnique: unique("statute_snapshots_content_hash_unique").on(
+    table.sourceId,
+    table.citation,
+    table.officialTitle,
+    table.contentHash,
+  ),
+}));
+
+export const statuteChargeLinks = pgTable("statute_charge_links", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  chargeId: text("charge_id").notNull(),
+  snapshotId: varchar("snapshot_id").notNull().references(() => statuteSourceSnapshots.id, { onDelete: "cascade" }),
+  supportRole: text("support_role").notNull(), // offense | grading | penalty | currentness | jury_instruction
+  citation: text("citation").notNull(),
+  subdivision: text("subdivision"),
+  isCurrent: boolean("is_current").notNull().default(true),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+}, (table) => ({
+  chargeIdx: index("statute_charge_links_charge_idx").on(table.chargeId),
+  snapshotIdx: index("statute_charge_links_snapshot_idx").on(table.snapshotId),
+  chargeSnapshotRoleUnique: unique("statute_charge_links_charge_snapshot_role_unique").on(
+    table.chargeId,
+    table.snapshotId,
+    table.supportRole,
+  ),
+}));
+
+export const statuteIngestionRuns = pgTable("statute_ingestion_runs", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  jurisdiction: text("jurisdiction").notNull(),
+  operation: text("operation").notNull(), // seed | refresh
+  status: text("status").notNull(), // in_progress | completed | failed
+  sourceCount: integer("source_count").notNull().default(0),
+  snapshotCount: integer("snapshot_count").notNull().default(0),
+  linkCount: integer("link_count").notNull().default(0),
+  changeCount: integer("change_count").notNull().default(0),
+  errorCount: integer("error_count").notNull().default(0),
+  startedAt: timestamp("started_at").defaultNow().notNull(),
+  completedAt: timestamp("completed_at"),
+  triggeredBy: text("triggered_by"),
+  errorMessage: text("error_message"),
+  metadata: jsonb("metadata"),
+});
+
+export const insertStatuteSourceSchema = createInsertSchema(statuteSources).omit({
+  id: true,
+});
+
+export const insertStatuteSourceSnapshotSchema = createInsertSchema(statuteSourceSnapshots).omit({
+  id: true,
+});
+
+export const insertStatuteChargeLinkSchema = createInsertSchema(statuteChargeLinks).omit({
+  id: true,
+  createdAt: true,
+});
+
+export const insertStatuteIngestionRunSchema = createInsertSchema(statuteIngestionRuns).omit({
+  id: true,
+  startedAt: true,
+  completedAt: true,
+});
+
+export type InsertStatuteSource = z.infer<typeof insertStatuteSourceSchema>;
+export type StatuteSource = typeof statuteSources.$inferSelect;
+export type InsertStatuteSourceSnapshot = z.infer<typeof insertStatuteSourceSnapshotSchema>;
+export type StatuteSourceSnapshot = typeof statuteSourceSnapshots.$inferSelect;
+export type InsertStatuteChargeLink = z.infer<typeof insertStatuteChargeLinkSchema>;
+export type StatuteChargeLink = typeof statuteChargeLinks.$inferSelect;
+export type InsertStatuteIngestionRun = z.infer<typeof insertStatuteIngestionRunSchema>;
+export type StatuteIngestionRun = typeof statuteIngestionRuns.$inferSelect;
+
 // Statute Scrape Logs - Track when and how we scraped statute data
 export const statuteScrapes = pgTable("statute_scrapes", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),

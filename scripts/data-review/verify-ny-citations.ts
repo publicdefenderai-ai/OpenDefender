@@ -120,7 +120,7 @@ const SECTION_OVERRIDES: Record<string, Override> = {
   'ny-hate-crime-enhancement':      { lawId: 'PEN', section: '485.05' },
   'ny-recidivist-enhancement':      { lawId: 'PEN', section: '70.08' },
   'ny-firearm-in-felony-enhancement': { lawId: 'PEN', section: '265.09' },
-  'ny-drug-school-zone-enhancement':  { lawId: 'PEN', section: '220.44' },
+  'ny-criminal-sale-of-controlled-substance-near-school-grounds': { lawId: 'PEN', section: '220.44' },
   'ny-rico-organized-crime':          { lawId: 'PEN', section: '460.20' },
   'ny-money-laundering':              { lawId: 'PEN', section: '470.20' },
   // Specific subdivision cites (same section, different theory)

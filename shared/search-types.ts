@@ -55,6 +55,7 @@ export interface SearchQuery {
   filters?: {
     types?: SearchContentType[];
     jurisdiction?: string;
+    chargeIds?: string[];
   };
   limit?: number;
   offset?: number;

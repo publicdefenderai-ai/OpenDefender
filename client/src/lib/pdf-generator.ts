@@ -3,6 +3,7 @@ import autoTable from "jspdf-autotable";
 import { getChargeExplanation } from "@shared/charge-explanations";
 import { getDocumentsForPhase, mapCaseStageToPhase, type LegalDocument } from "@shared/legal-documents";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
+import { resolveGuidanceCharge } from "@shared/guidance-charge-resolution";
 
 // jsPDF's built-in fonts (helvetica, times, courier) only cover Latin/WinAnsi glyphs. Chinese
 // text renders as garbage without an embedded CJK font. This lazily fetches a GB2312-subset
@@ -320,6 +321,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     /** Shown before charge explanations whose translation is machine-assisted and not yet reviewed */
     translationDraftWarning: '⚠ Traducción provisional: Esta traducción fue generada automáticamente y aún no ha sido revisada por un profesional legal bilingüe. Verifique términos críticos con su abogado.',
      jurisdictionCoverageWarning: '⚠ Detalle específico del estado aún no verificado: Esta es información general sobre el cargo. Pida a un abogado autorizado que confirme la regla, los plazos y las penas de su caso.',
+     chargeReselectionWarning: '⚠ Se necesita volver a seleccionar el cargo: este registro histórico no coincide con un cargo de California verificable. Seleccione el cargo exacto de la lista actual o pida ayuda a un abogado.',
   } : {
     title: 'Your Case Roadmap',
     generated: 'Generated',
@@ -383,6 +385,7 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
     /** Shown before charge explanations whose translation is machine-assisted and not yet reviewed */
     translationDraftWarning: '⚠ Draft translation: This translation was machine-assisted and has not yet been reviewed by a bilingual legal professional. Verify critical terms with your attorney.',
      jurisdictionCoverageWarning: '⚠ State-specific detail not yet verified: This is general charge information. Ask a licensed attorney to confirm the rule, deadlines, and penalties for your case.',
+     chargeReselectionWarning: '⚠ Charge selection needs to be confirmed: this historical record does not match a verified California charge. Choose the exact charge from the current list or ask an attorney for help.',
   };
 
   // Chinese requires separate overrides for warning strings because the labels
@@ -396,6 +399,9 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
   const jurisdictionCoverageWarningLocalized: string = isChinese
     ? '⚠ 州级具体信息尚未核实：这是一般性的罪名信息。请向持牌律师确认您案件适用的规则、期限和刑罚。'
     : labels.jurisdictionCoverageWarning;
+  const chargeReselectionWarningLocalized: string = isChinese
+    ? '⚠ 需要重新选择罪名：此历史记录无法与可核实的加州罪名匹配。请从当前列表中选择确切罪名，或向律师寻求帮助。'
+    : labels.chargeReselectionWarning;
   const disclosureFooter = isChinese
     ? '一般教育信息；并非法律建议。内容可能不完整、属于估算、已过时或由AI生成。请核实截止日期和引证。'
     : labels.footer;
@@ -583,8 +589,26 @@ export async function generateGuidancePDF(guidance: EnhancedGuidanceData, langua
       doc.text(chargeHeader, margin, yPosition);
       yPosition += 8;
 
-      // Get explanation for this charge
-      const explanation = getChargeExplanation(charge.name, caseData.jurisdiction, language);
+      const resolvedCharge = resolveGuidanceCharge(charge, caseData.jurisdiction);
+      const isCalifornia = caseData.jurisdiction?.toUpperCase() === 'CA';
+      const explanation = isCalifornia && !resolvedCharge
+        ? undefined
+        : getChargeExplanation(
+            resolvedCharge?.name ?? charge.name,
+            caseData.jurisdiction,
+            language,
+            resolvedCharge?.id ?? charge.id,
+          );
+
+      if (caseData.jurisdiction?.toUpperCase() === 'CA' && !resolvedCharge) {
+        checkPageBreak(20);
+        doc.setFontSize(9);
+        doc.setFont(FONT_NAME, isChinese ? 'normal' : 'italic');
+        doc.setTextColor(180, 100, 0);
+        yPosition = addText(chargeReselectionWarningLocalized, margin + 5, yPosition);
+        doc.setTextColor(0, 0, 0);
+        yPosition += 6;
+      }
       
       doc.setFontSize(10);
       doc.setFont(FONT_NAME, 'normal');

@@ -34,6 +34,7 @@ describe('charge explanation catalog coverage', () => {
     ['Sexual Assault in the Second Degree', 'sexual-assault'],
     ['Sexual Assault in the Third Degree', 'sexual-assault'],
     ['Unlawful Possession of Cannabis', 'marijuana-possession'],
+    ['Unlawful Possession of Cannabis in the Second Degree', 'marijuana-possession'],
     ['Statutory Rape', 'sex-offenses-against-minors'],
     ['Use of Firearm During Crime of Violence or Drug Trafficking (Federal)', 'weapons-charges'],
   ])('resolves %s to the intended %s explanation', (chargeName, expectedSlug) => {

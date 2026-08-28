@@ -12,7 +12,7 @@ import { buildCollateralConsequenceContextBlock } from '../../shared/collateral-
 import { CLAUDE_MODEL_SONNET as CLAUDE_MODEL } from '../config/ai-model';
 import { scanGuidanceForDangerContent, stripDangerousItems } from './guidance-safety';
 import { getLocusContext, LOCUS_ATTRIBUTION } from './locus-lookup';
-import { getChargeById, getChargesByJurisdiction } from '@shared/criminal-charges';
+import { getChargeById, getChargesByJurisdiction, normalizeChargeId, NY_THIRD_DEGREE_POSSESSION_ID } from '@shared/criminal-charges';
 
 // Validate Anthropic API credentials - graceful fallback if not configured
 const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -198,13 +198,14 @@ interface ClaudeGuidance {
 }
 
 function selectedChargeIds(caseDetails: CaseDetails): string[] {
-  return (Array.isArray(caseDetails.charges) ? caseDetails.charges : [caseDetails.charges])
-    .filter((id): id is string => typeof id === 'string' && id.length > 0);
+  return Array.from(new Set((Array.isArray(caseDetails.charges) ? caseDetails.charges : [caseDetails.charges])
+    .filter((id): id is string => typeof id === 'string' && id.length > 0)
+    .map(normalizeChargeId)));
 }
 
 const NY_DRUG_CHARGES = getChargesByJurisdiction('NY').filter(charge =>
-  /drug|controlled-substance|paraphernalia|marijuana|cannabis|narcotic|cocaine|heroin|fentanyl|meth/i
-    .test(`${charge.id} ${charge.name}`)
+  /drug|controlled-substance|paraphernalia|marijuana|cannabis|narcotic|cocaine|heroin|fentanyl|meth|traffick|nuisance/i
+    .test(`${charge.id} ${charge.name} ${charge.description}`)
 );
 
 function escapeRegExp(value: string): string {
@@ -243,10 +244,23 @@ export function scopeGuidanceToSelectedCharges(data: any, caseDetails: CaseDetai
   const ids = selectedChargeIds(caseDetails);
   if (ids.length === 0) return data;
 
-  const allowsSaleOrDistribution = ids.some(id => /sale|distribution|intent-to-distribute/.test(id));
-  const allowsTrafficking = ids.some(id => /trafficking/.test(id));
-  const allowsManufacturing = ids.some(id => /manufacturing/.test(id));
+  const allowsDistribution = ids.some(id => /distribution/.test(id));
+  const allowsIntentToSell = ids.some(id =>
+    id === NY_THIRD_DEGREE_POSSESSION_ID || /sale|intent-to-distribute/.test(id)
+  );
+  const allowsTrafficking = ids.some(id => /traffick/.test(id));
+  const allowsManufacturing = ids.some(id => /manufactur/.test(id));
   const allowsSchoolZone = caseDetails.schoolZoneStatus === 'yes';
+  const selectedSchoolChargePatterns = ids
+    .map(id => getChargeById(id))
+    .filter((charge): charge is NonNullable<ReturnType<typeof getChargeById>> =>
+      Boolean(charge && /school|school-grounds|school-zone/.test(`${charge.id} ${charge.name}`))
+    )
+    .flatMap(charge => [
+      new RegExp(`\\b${escapeRegExp(charge.name)}\\b`, 'i'),
+      new RegExp(`(?:§|section)?\\s*${escapeRegExp(charge.code)}\\b`, 'i'),
+    ]);
+  const schoolZonePattern = /\bschool[-\s]?(?:zone|grounds?)\b|\bnear\s+(?:a\s+)?school\b|\bproximity\s+to\s+(?:a\s+)?school\b/i;
   const blocked: RegExp[] = [];
 
   // NY drug guidance needs a tighter boundary than broad offense keywords:
@@ -284,16 +298,24 @@ export function scopeGuidanceToSelectedCharges(data: any, caseDetails: CaseDetai
     }
   }
 
-  if (!allowsSaleOrDistribution) {
-    blocked.push(/\b(?:criminal\s+)?sale\s+of\s+(?:a\s+)?controlled\s+substance\b|\b(?:drug\s+)?distribution\b|\bintent\s+to\s+sell\b/i);
+  if (!allowsIntentToSell) {
+    blocked.push(/\b(?:criminal\s+)?sale\s+of\s+(?:a\s+)?controlled\s+substance\b|\bintent\s+to\s+sell\b/i);
   }
+  if (!allowsDistribution) blocked.push(/\b(?:drug\s+)?distribution\b/i);
   if (!allowsTrafficking) blocked.push(/\b(?:drug\s+)?trafficking\b/i);
   if (!allowsManufacturing) blocked.push(/\bmanufactur(?:e|ing|ed)\b/i);
-  if (!allowsSchoolZone) blocked.push(/\bschool[-\s]?(?:zone|grounds?)\b|\bnear\s+(?:a\s+)?school\b|\bproximity\s+to\s+(?:a\s+)?school\b/i);
+  if (!allowsSchoolZone) blocked.push(schoolZonePattern);
+
+  const selectedSchoolChargeMentioned = (sentence: string): boolean =>
+    selectedSchoolChargePatterns.some(pattern => pattern.test(sentence));
 
   const scopeText = (value: string): string => value
     .split(/(?<=[.!?])\s+/)
-    .filter(sentence => !blocked.some(pattern => pattern.test(sentence)))
+    .filter(sentence => !blocked.some(pattern =>
+      pattern === schoolZonePattern && selectedSchoolChargeMentioned(sentence)
+        ? false
+        : pattern.test(sentence)
+    ))
     .join(' ')
     .trim();
 

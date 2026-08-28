@@ -65,6 +65,16 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **File:** `shared/criminal-charges.ts`
 
+### New York authority layer
+
+New York's current catalog is backed by the official New York State Senate
+Open Legislation API rather than the legacy in-place statute seeder. The
+versioned importer, source manifest, and disposition contract are documented
+in [`docs/citation-research/new-york-source-database.md`](docs/citation-research/new-york-source-database.md).
+Rows whose sections are missing or resolve to a materially different offense
+are withheld and require exact charge reselection; API verification is not
+attorney approval. OpenLaws is not used for New York retrieval or fallback.
+
 **Total charges:** 7,155 (verified April 2026 against live file) — original base charges plus phases 1–5 as described below. Note: the earlier figure of 7,579 cited in March 2026 did not match the live file; the correct count from the search indexer and direct file analysis is 7,155.
 
 **Phase breakdown:**
@@ -103,6 +113,21 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 
 **To update:** For a given state, cross-reference the synthesized charges against the state's current criminal code via its official legislature website. Any corrections to statute citations or penalty ranges should be applied in `shared/criminal-charges.ts`.
 
+**California authority database:** `server/data/california-source-database-seed.ts`
+and the `statute_sources`, `statute_source_snapshots`, `statute_charge_links`,
+and `statute_ingestion_runs` tables store narrow, reference-only provenance for
+the selectable California canonical records. The initial release does not
+automatically crawl or copy California Legislative Information text because the
+site's crawler policy disallows it. It stores official URLs, exact citations
+and subdivisions, retrieval dates, effective-date evidence, and
+`reference_metadata` SHA-256 fingerprints. Reference-only imports leave
+retrieval/check timestamps null and record a separate manifest-import time;
+they do not claim that a source was freshly retrieved or verified. Changed
+references create a review queue entry and do not silently replace the
+currently linked snapshot.
+OpenLaws is explicitly excluded from this database's retrieval and fallback
+paths. See `docs/citation-research/california-source-database.md`.
+
 ---
 
 ## 2b. Citation Verification — State Sentencing Commission Offense Tables
@@ -122,7 +147,7 @@ Statutory text is sourced verbatim from Cornell LII and stored in full (no trunc
 | Missouri | Charge Code Manual | Current (pages 1–116) | 2,730 | PDF pages 13–128; rows identified by charge code format `\d+\.\d-\d{3}[YN]\d{4}` |
 | Delaware | Criminal Benchbook — "Index of Offenses" | 2025 | 615 | Pages 4–26; 609 full entries + 6 split statute entries (11-1471 Video Lottery subdivisions) |
 | Texas | Inventory of Texas Felony Offenses by Category | Current through 85th Legislature (April 2018) | 726 | 706 entries under 24 standard Texas code titles + 20 Vernon's Civil Statutes entries (Racing Act, Securities Act, Sabotage, Sports Bribery, Commodity Markets) |
-| California | Cal. Penal Code / Health & Safety Code / Vehicle Code | 2026 | ~115 | leginfo.legislature.ca.gov; synthesized codes spot-checked against primary statute text across all charge categories; codes confirmed correct (2026-07) |
+| California | Authoritative canonical records across Penal, Health & Safety, Vehicle, Business & Professions, and related codes | 2026-08 | 115 legacy / 49 selectable | `shared/california-authority.ts` reconciles every legacy row against current California Legislative Information text; 49 exact offense records are selectable, 7 legacy aliases normalize, 44 require exact reselection, and 15 are removed as unsupported/non-offense records. Attorney review remains pending. See `docs/citation-research/california-authority.md`. |
 | New York | NY Penal Law / Vehicle & Traffic Law | 2026 | ~118 | legislation.nysenate.gov; synthesized codes confirmed against NY Penal Law (§§ 120–265) and Veh. & Traf. Law (§ 1192); codes correct (2026-07) |
 | Florida | Florida Statutes Title XLVI (Crimes) | 2026 | ~117 | leg.state.fl.us Online Sunshine; all charge codes verified via FL statute verifier script; 45/45 spot-checked sections live (2026-07) |
 | Illinois | ILCS Chapters 5, 40, 625, 705, 720, 730 | 2026 | ~116 | ilga.gov static document server; synthesized codes verified via IL statute verifier script; codes confirmed correct (2026-07) |

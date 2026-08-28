@@ -1,0 +1,2 @@
+ALTER TABLE "statute_source_snapshots" ALTER COLUMN "retrieved_at" DROP NOT NULL;--> statement-breakpoint
+ALTER TABLE "statute_source_snapshots" ADD COLUMN "manifest_imported_at" timestamp DEFAULT now() NOT NULL;
