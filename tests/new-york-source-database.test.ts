@@ -89,6 +89,34 @@ describe("New York authority manifest", () => {
     expect(seed.selectableChargeIds).toEqual([charge.id]);
   });
 
+  it("keeps every source role for a selectable compound charge", () => {
+    const charge = criminalCharges.find((candidate) => candidate.id === "ny-felony-murder")!;
+    const sourceDocument = document("PEN", "125.25", "Murder in the second degree");
+    const record = manifestRecordFromDocuments(
+      charge,
+      [sourceDocument, sourceDocument],
+      importedAt,
+    );
+    const seed = buildNewYorkSourceDatabaseSeed(manifest(record));
+
+    expect(record.disposition).toBe("exact_alias_rename");
+    expect(record.provisions).toHaveLength(2);
+    expect(record.provisions.map((provision) => ({
+      sourceKey: provision.sourceKey,
+      supportRole: provision.supportRole,
+      subdivision: provision.subdivision,
+    }))).toEqual([
+      { sourceKey: "ny:PEN:125.25:125_25_3", supportRole: "offense", subdivision: "125.25(3)" },
+      { sourceKey: "ny:PEN:125.25", supportRole: "grading", subdivision: null },
+    ]);
+    expect(seed.links).toHaveLength(2);
+    expect(seed.links.map((link) => [link.supportRole, link.subdivision])).toEqual([
+      ["offense", "125.25(3)"],
+      ["grading", null],
+    ]);
+    expect(seed.selectableChargeIds).toEqual([charge.id]);
+  });
+
   it("withholds compound attempts until the target offense mapping is exact", () => {
     const charge = criminalCharges.find((candidate) => candidate.id === "ny-attempted-murder")!;
     const record = manifestRecordFromDocuments(

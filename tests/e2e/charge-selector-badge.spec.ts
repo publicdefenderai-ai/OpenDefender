@@ -175,6 +175,78 @@ test.describe("Jury instruction badge — ChargeSelector (chat interface)", () =
     await expect(provenance).toBeVisible();
   });
 
+  test("shows every current source role for a selectable multi-source NY charge and still allows selection", async ({
+    page,
+  }) => {
+    await navigateToChargeSelector(page, "NY");
+
+    const searchInput = page.getByTestId("input-charge-search");
+    await searchInput.waitFor({ state: "visible" });
+    // The current NY display title is the official statutory title. Search
+    // the shared section code; the exact subdivision is shown in provenance.
+    await searchInput.fill("125.25");
+
+    const chargeOption = page.getByTestId(
+      "charge-option-ny-felony-murder",
+    );
+    await chargeOption.waitFor({ state: "visible", timeout: 10000 });
+
+    const provenanceToggle = page.getByTestId(
+      "button-charge-provenance-ny-felony-murder",
+    );
+    await provenanceToggle.click();
+
+    const provenance = page.getByTestId(
+      "charge-provenance-ny-felony-murder",
+    );
+    await expect(provenance).toBeVisible();
+    await expect(provenance).toContainText("Official title");
+    await expect(provenance).toContainText("Murder in the second degree");
+    await expect(provenance).toContainText("Official citation");
+    await expect(provenance).toContainText("N.Y. Penal Law § 125.25");
+    await expect(provenance).toContainText("Currentness");
+    await expect(provenance).toContainText("Retrieved");
+    await expect(provenance).toContainText("Manifest imported");
+    await expect(provenance).toContainText("Source content");
+    await expect(provenance).toContainText("Available");
+    await expect(provenance).toContainText("Content hash");
+    await expect(provenance).toContainText(
+      "0ef3e35a8e07b2198c87f6700837e560147b0ebc523145517f87dcfbb253a4ba",
+    );
+
+    await expect(
+      page.getByTestId("text-charge-provenance-role-ny-felony-murder-0"),
+    ).toHaveText("offense · 125.25(3)");
+    await expect(
+      page.getByTestId("text-charge-provenance-role-ny-felony-murder-1"),
+    ).toHaveText("grading");
+
+    const sourceLinks = provenance.locator(
+      '[data-testid^="link-charge-provenance-source-"]',
+    );
+    await expect(sourceLinks).toHaveCount(2);
+    for (let sourceIndex = 0; sourceIndex < 2; sourceIndex++) {
+      await expect(sourceLinks.nth(sourceIndex)).toBeVisible();
+      await expect(sourceLinks.nth(sourceIndex)).toHaveAttribute(
+        "href",
+        "https://www.nysenate.gov/legislation/laws/PEN/125.25",
+      );
+      await expect(sourceLinks.nth(sourceIndex)).toHaveAttribute("target", "_blank");
+    }
+    await expect(provenance.getByText("Retrieved")).toHaveCount(2);
+    await expect(provenance.getByText("Manifest imported")).toHaveCount(2);
+    await expect(provenance.getByText("Source content")).toHaveCount(2);
+    await expect(provenance.getByText("Content hash")).toHaveCount(2);
+
+    // The disclosure is inline; selecting the charge must not navigate away
+    // or close either source role.
+    await chargeOption.click();
+    await expect(chargeOption).toHaveAttribute("aria-pressed", "true");
+    await expect(page).toHaveURL(/\/chat$/);
+    await expect(provenance).toBeVisible();
+    await expect(sourceLinks).toHaveCount(2);
+  });
+
   test("fails closed when a withheld NY charge has no current provenance", async ({
     page,
   }) => {

@@ -470,8 +470,10 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                                   <div key={`${source.citation}-${sourceIndex}`} className="space-y-2">
                                     <div className="flex flex-wrap items-center justify-between gap-2">
                                       <p className="font-semibold text-foreground">
+                                        <span data-testid={`text-charge-provenance-role-${charge.id}-${sourceIndex}`}>
                                         {source.supportRole}
                                         {source.subdivision ? ` · ${source.subdivision}` : ""}
+                                        </span>
                                       </p>
                                       <Badge variant="outline" className="text-[11px]">
                                         {source.status === "current"

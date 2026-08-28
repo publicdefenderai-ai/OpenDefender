@@ -194,7 +194,12 @@ const SOURCE_OVERRIDES: Record<string, SourceReference[]> = {
     { lawId: "PEN", section: "130.35", supportRole: "grading" },
   ],
   "ny-felony-murder": [
-    { lawId: "PEN", section: "125.25", subdivision: "125.25(3)" },
+    { lawId: "PEN", section: "125.25", subdivision: "125.25(3)", supportRole: "offense" },
+    { lawId: "PEN", section: "125.25", supportRole: "grading" },
+  ],
+  "ny-murder-in-the-second-degree": [
+    { lawId: "PEN", section: "125.25", supportRole: "offense" },
+    { lawId: "PEN", section: "125.25", supportRole: "grading" },
   ],
   "ny-assault-with-deadly-weapon": [
     { lawId: "PEN", section: "120.10", subdivision: "120.10(1)" },
@@ -291,8 +296,15 @@ export function getNewYorkSourceReferences(charge: CriminalCharge): SourceRefere
     : [{ lawId: getLawId(charge.id), section: charge.code }];
 }
 
-export function buildNewYorkSourceKey(lawId: string, section: string): string {
-  return `ny:${lawId}:${section}`;
+export function buildNewYorkSourceKey(
+  lawId: string,
+  section: string,
+  subdivision: string | null = null,
+): string {
+  const subdivisionSuffix = subdivision
+    ? `:${subdivision.replace(/[^a-z0-9]+/gi, "_").replace(/^_|_$/g, "")}`
+    : "";
+  return `ny:${lawId}:${section}${subdivisionSuffix}`;
 }
 
 function citationFor(lawId: string, section: string): string {
@@ -368,7 +380,11 @@ function provisionFromDocument(
   supportRole: NewYorkSupportRole,
   importedAt: Date,
 ): NewYorkProvisionRecord {
-  const sourceKey = buildNewYorkSourceKey(reference.lawId, reference.section);
+  const sourceKey = buildNewYorkSourceKey(
+    reference.lawId,
+    reference.section,
+    reference.subdivision ?? null,
+  );
   const citation = reference.citation ?? citationFor(reference.lawId, reference.section);
   return {
     sourceKey,
@@ -440,7 +456,11 @@ function localProvision(
     effectiveDateStart: null,
   });
   return {
-    sourceKey: buildNewYorkSourceKey(reference.lawId, reference.section),
+    sourceKey: buildNewYorkSourceKey(
+      reference.lawId,
+      reference.section,
+      reference.subdivision ?? null,
+    ),
     lawId: reference.lawId,
     section: reference.section,
     citation,

@@ -127,6 +127,58 @@
             "manifestImportedAt": "2026-08-27T22:04:26.720Z",
             "attorneyReview": "pending"
           }
+        },
+        {
+          "sourceKey": "ny:PEN:125.25",
+          "lawId": "PEN",
+          "section": "125.25",
+          "citation": "N.Y. Penal Law § 125.25",
+          "officialTitle": "Murder in the second degree",
+          "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.25",
+          "content": "§ 125.25 Murder in the second degree.\\n  A person is guilty of murder in the second degree when:\\n  1. With intent to cause the death of another person, he causes the\\ndeath of such person or of a third person; except that in any\\nprosecution under this subdivision, it is an affirmative defense that:\\n  (a) (i) The defendant acted under the influence of extreme emotional\\ndisturbance for which there was a reasonable explanation or excuse, the\\nreasonableness of which is to be determined from the viewpoint of a\\nperson in the defendant's situation under the circumstances as the\\ndefendant believed them to be. Nothing contained in this paragraph shall\\nconstitute a defense to a prosecution for, or preclude a conviction of,\\nmanslaughter in the first degree or any other crime. (ii) It shall not\\nbe a \"reasonable explanation or excuse\" pursuant to subparagraph (i) of\\nthis paragraph when the defendant's conduct resulted from the discovery,\\nknowledge or disclosure of the victim's sexual orientation, sex, gender,\\ngender identity, gender expression or sex assigned at birth; or\\n  (b) The defendant's conduct consisted of causing or aiding, without\\nthe use of duress or deception, another person to commit suicide.\\nNothing contained in this paragraph shall constitute a defense to a\\nprosecution for, or preclude a conviction of, manslaughter in the second\\ndegree or any other crime; or\\n  2. Under circumstances evincing a depraved indifference to human life,\\nhe recklessly engages in conduct which creates a grave risk of death to\\nanother person, and thereby causes the death of another person; or\\n  3. Acting either alone or with one or more other persons, he commits\\nor attempts to commit robbery, burglary, kidnapping, arson, rape in the\\nfirst degree, a crime formerly defined in section 130.50 of this title,\\nthe crime of sexual abuse in the first degree, aggravated sexual abuse,\\nescape in the first degree, or escape in the second degree, and, in the\\ncourse of and in furtherance of such crime or of immediate flight\\ntherefrom, he, or another participant, if there be any, causes the death\\nof a person other than one of the participants; except that in any\\nprosecution under this subdivision, in which the defendant was not the\\nonly participant in the underlying crime, it is an affirmative defense\\nthat the defendant:\\n  (a) Did not commit the homicidal act or in any way solicit, request,\\ncommand, importune, cause or aid the commission thereof; and\\n  (b) Was not armed with a deadly weapon, or any instrument, article or\\nsubstance readily capable of causing death or serious physical injury\\nand of a sort not ordinarily carried in public places by law-abiding\\npersons; and\\n  (c) Had no reasonable ground to believe that any other participant was\\narmed with such a weapon, instrument, article or substance; and\\n  (d) Had no reasonable ground to believe that any other participant\\nintended to engage in conduct likely to result in death or serious\\nphysical injury; or\\n  4. Under circumstances evincing a depraved indifference to human life,\\nand being eighteen years old or more the defendant recklessly engages in\\nconduct which creates a grave risk of serious physical injury or death\\nto another person less than eleven years old and thereby causes the\\ndeath of such person; or\\n  5. Being eighteen years old or more, while in the course of committing\\nrape in the first, second or third degree, a crime formerly defined in\\nsection 130.50, 130.45 or 130.40 of this title, the crime of sexual\\nabuse in the first degree, aggravated sexual abuse in the first, second,\\nthird or fourth degree, or incest in the first, second or third degree,\\nagainst a person less than fourteen years old, he or she intentionally\\ncauses the death of such person.\\n  Murder in the second degree is a class A-I felony.\\n",
+          "contentHash": "0ef3e35a8e07b2198c87f6700837e560147b0ebc523145517f87dcfbb253a4ba",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-27T22:04:26.720Z",
+          "effectiveDateStart": "2024-09-06",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "ny-murder-in-the-second-degree",
+            "catalogLabel": "Murder in the Second Degree",
+            "catalogCode": "125.25",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "mentalState": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "currentnessEvidence": {
+              "activeDate": "2024-09-06",
+              "publishedDates": [
+                "2014-09-22",
+                "2019-07-05",
+                "2024-02-02",
+                "2024-09-06"
+              ]
+            },
+            "fingerprint": "f8a390d501a888189bf598625da64dc7c0cf478b4721d0deb6597cee63acf96d",
+            "apiIdentifier": "PEN/125.25",
+            "apiLawName": "Penal",
+            "manifestImportedAt": "2026-08-27T22:04:26.720Z",
+            "attorneyReview": "pending"
+          }
         }
       ],
       "apiStatus": "verified"
@@ -387,7 +439,7 @@
       "canonicalTitle": "Murder in the second degree",
       "provisions": [
         {
-          "sourceKey": "ny:PEN:125.25",
+          "sourceKey": "ny:PEN:125.25:125_25_3",
           "lawId": "PEN",
           "section": "125.25",
           "citation": "N.Y. Penal Law § 125.25",
@@ -401,6 +453,58 @@
           "effectiveDateEnd": null,
           "supportRole": "offense",
           "subdivision": "125.25(3)",
+          "metadata": {
+            "chargeId": "ny-felony-murder",
+            "catalogLabel": "Felony Murder",
+            "catalogCode": "125.25",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "mentalState": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "text"
+            },
+            "currentnessEvidence": {
+              "activeDate": "2024-09-06",
+              "publishedDates": [
+                "2014-09-22",
+                "2019-07-05",
+                "2024-02-02",
+                "2024-09-06"
+              ]
+            },
+            "fingerprint": "f8a390d501a888189bf598625da64dc7c0cf478b4721d0deb6597cee63acf96d",
+            "apiIdentifier": "PEN/125.25",
+            "apiLawName": "Penal",
+            "manifestImportedAt": "2026-08-27T22:04:26.720Z",
+            "attorneyReview": "pending"
+          }
+        },
+        {
+          "sourceKey": "ny:PEN:125.25",
+          "lawId": "PEN",
+          "section": "125.25",
+          "citation": "N.Y. Penal Law § 125.25",
+          "officialTitle": "Murder in the second degree",
+          "sourceUrl": "https://www.nysenate.gov/legislation/laws/PEN/125.25",
+          "content": "§ 125.25 Murder in the second degree.\\n  A person is guilty of murder in the second degree when:\\n  1. With intent to cause the death of another person, he causes the\\ndeath of such person or of a third person; except that in any\\nprosecution under this subdivision, it is an affirmative defense that:\\n  (a) (i) The defendant acted under the influence of extreme emotional\\ndisturbance for which there was a reasonable explanation or excuse, the\\nreasonableness of which is to be determined from the viewpoint of a\\nperson in the defendant's situation under the circumstances as the\\ndefendant believed them to be. Nothing contained in this paragraph shall\\nconstitute a defense to a prosecution for, or preclude a conviction of,\\nmanslaughter in the first degree or any other crime. (ii) It shall not\\nbe a \"reasonable explanation or excuse\" pursuant to subparagraph (i) of\\nthis paragraph when the defendant's conduct resulted from the discovery,\\nknowledge or disclosure of the victim's sexual orientation, sex, gender,\\ngender identity, gender expression or sex assigned at birth; or\\n  (b) The defendant's conduct consisted of causing or aiding, without\\nthe use of duress or deception, another person to commit suicide.\\nNothing contained in this subdivision shall constitute a defense to a\\nprosecution for, or preclude a conviction of, manslaughter in the second\\ndegree or any other crime; or\\n  2. Under circumstances evincing a depraved indifference to human life,\\nhe recklessly engages in conduct which creates a grave risk of death to\\nanother person, and thereby causes the death of another person; or\\n  3. Acting either alone or with one or more other persons, he commits\\nor attempts to commit robbery, burglary, kidnapping, arson, rape in the\\nfirst degree, a crime formerly defined in section 130.50 of this title,\\nthe crime of sexual abuse in the first degree, aggravated sexual abuse,\\nescape in the first degree, or escape in the second degree, and, in the\\ncourse of and in furtherance of such crime or of immediate flight\\ntherefrom, he, or another participant, if there be any, causes the death\\nof a person other than one of the participants; except that in any\\nprosecution under this subdivision, in which the defendant was not the\\nonly participant in the underlying crime, it is an affirmative defense\\nthat the defendant:\\n  (a) Did not commit the homicidal act or in any way solicit, request,\\ncommand, importune, cause or aid the commission thereof; and\\n  (b) Was not armed with a deadly weapon, or any instrument, article or\\nsubstance readily capable of causing death or serious physical injury\\nand of a sort not ordinarily carried in public places by law-abiding\\npersons; and\\n  (c) Had no reasonable ground to believe that any other participant was\\narmed with such a weapon, instrument, article or substance; and\\n  (d) Had no reasonable ground to believe that any other participant\\nintended to engage in conduct likely to result in death or serious\\nphysical injury; or\\n  4. Under circumstances evincing a depraved indifference to human life,\\nand being eighteen years old or more the defendant recklessly engages in\\nconduct which creates a grave risk of serious physical injury or death\\nto another person less than eleven years old and thereby causes the\\ndeath of such person; or\\n  5. Being eighteen years old or more, while in the course of committing\\nrape in the first, second or third degree, a crime formerly defined in\\nsection 130.50, 130.45 or 130.40 of this title, the crime of sexual\\nabuse in the first degree, aggravated sexual abuse in the first, second,\\nthird or fourth degree, or incest in the first, second or third degree,\\nagainst a person less than fourteen years old, he or she intentionally\\ncauses the death of such person.\\n  Murder in the second degree is a class A-I felony.\\n",
+          "contentHash": "0ef3e35a8e07b2198c87f6700837e560147b0ebc523145517f87dcfbb253a4ba",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-27T22:04:26.720Z",
+          "effectiveDateStart": "2024-09-06",
+          "effectiveDateEnd": null,
+          "supportRole": "grading",
+          "subdivision": null,
           "metadata": {
             "chargeId": "ny-felony-murder",
             "catalogLabel": "Felony Murder",
