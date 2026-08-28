@@ -118,6 +118,24 @@ describe.skipIf(!runIntegration)("New York source database persistence", () => {
       expect(repeated.success).toBe(true);
       expect((await getCurrentNewYorkSelectableChargeIds()).has(chargeId)).toBe(false);
       expect(await getNewYorkChargeProvenance(chargeId)).toBeNull();
+
+      const failedRefresh = makeSeed(firstCitation, "hash-initial");
+      failedRefresh.snapshots = [];
+      failedRefresh.links = [];
+      failedRefresh.selectableChargeIds = [];
+      failedRefresh.catalogRecords = failedRefresh.catalogRecords.map((record) => ({
+        ...record,
+        disposition: "require_exact_reselection" as const,
+        dispositionReason: "The official NY source did not return the section.",
+        provisions: [],
+        apiStatus: "api_error" as const,
+        error: "API request failed",
+      }));
+      const failed = await seedNewYorkSourceDatabase(failedRefresh);
+      runIds.push(failed.runId);
+      expect(failed.success).toBe(true);
+      expect((await getCurrentNewYorkSelectableChargeIds()).has(chargeId)).toBe(false);
+      expect(await getNewYorkChargeProvenance(chargeId)).toBeNull();
     } finally {
       for (const runId of runIds) {
         await db.delete(statuteIngestionRuns).where(eq(statuteIngestionRuns.id, runId));
