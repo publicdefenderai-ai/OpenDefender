@@ -22,6 +22,20 @@
       "when": 1787863600910,
       "tag": "0002_wide_deadpool",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1787948621977,
+      "tag": "0003_texas_source_review_decisions",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1787948924192,
+      "tag": "0004_source_review_integrity",
+      "breakpoints": true
     }
   ]
 }

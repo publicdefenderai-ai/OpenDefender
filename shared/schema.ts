@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { pgTable, text, varchar, timestamp, jsonb, boolean, unique, real, integer, index, primaryKey } from "drizzle-orm/pg-core";
+import { pgTable, text, varchar, timestamp, jsonb, boolean, unique, uniqueIndex, real, integer, index, primaryKey, check } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
@@ -329,6 +329,34 @@ export const statuteSourceSnapshots = pgTable("statute_source_snapshots", {
     table.officialTitle,
     table.contentHash,
   ),
+  currentSnapshotUnique: uniqueIndex("statute_snapshots_one_current_per_source_citation")
+    .on(table.sourceId, table.citation)
+    .where(sql`${table.status} = 'current'`),
+}));
+
+/**
+ * Immutable audit trail for human decisions about source snapshots. This table
+ * intentionally does not cascade from snapshots: a review decision must remain
+ * auditable even if test data or a future retention job removes a snapshot.
+ */
+export const statuteSourceReviewDecisions = pgTable("statute_source_review_decisions", {
+  id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
+  snapshotId: varchar("snapshot_id").notNull(),
+  jurisdiction: text("jurisdiction").notNull(),
+  decision: text("decision").notNull(), // approve | reject
+  reviewer: text("reviewer").notNull(),
+  note: text("note").notNull().default(""),
+  snapshotHash: text("snapshot_hash").notNull(),
+  previousSnapshotId: varchar("previous_snapshot_id"),
+  decidedAt: timestamp("decided_at").defaultNow().notNull(),
+}, (table) => ({
+  snapshotIdx: index("statute_source_review_decisions_snapshot_idx").on(table.snapshotId),
+  jurisdictionDateIdx: index("statute_source_review_decisions_jurisdiction_date_idx")
+    .on(table.jurisdiction, table.decidedAt),
+  decisionCheck: check(
+    "statute_source_review_decisions_decision_check",
+    sql`${table.decision} in ('approve', 'reject')`,
+  ),
 }));
 
 export const statuteChargeLinks = pgTable("statute_charge_links", {
@@ -375,6 +403,11 @@ export const insertStatuteSourceSnapshotSchema = createInsertSchema(statuteSourc
   id: true,
 });
 
+export const insertStatuteSourceReviewDecisionSchema = createInsertSchema(statuteSourceReviewDecisions).omit({
+  id: true,
+  decidedAt: true,
+});
+
 export const insertStatuteChargeLinkSchema = createInsertSchema(statuteChargeLinks).omit({
   id: true,
   createdAt: true,
@@ -390,6 +423,8 @@ export type InsertStatuteSource = z.infer<typeof insertStatuteSourceSchema>;
 export type StatuteSource = typeof statuteSources.$inferSelect;
 export type InsertStatuteSourceSnapshot = z.infer<typeof insertStatuteSourceSnapshotSchema>;
 export type StatuteSourceSnapshot = typeof statuteSourceSnapshots.$inferSelect;
+export type InsertStatuteSourceReviewDecision = z.infer<typeof insertStatuteSourceReviewDecisionSchema>;
+export type StatuteSourceReviewDecision = typeof statuteSourceReviewDecisions.$inferSelect;
 export type InsertStatuteChargeLink = z.infer<typeof insertStatuteChargeLinkSchema>;
 export type StatuteChargeLink = typeof statuteChargeLinks.$inferSelect;
 export type InsertStatuteIngestionRun = z.infer<typeof insertStatuteIngestionRunSchema>;
@@ -436,6 +471,7 @@ export const statuteUpdateQueue = pgTable("statute_update_queue", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   jurisdiction: text("jurisdiction").notNull(), // State or 'federal'
   citation: text("citation").notNull(), // Statute citation that needs updating
+  snapshotId: varchar("snapshot_id"), // Exact source snapshot awaiting review, when source_change
   reason: text("reason").notNull(), // 'legiscan_bill', 'scheduled_refresh', 'manual'
   triggeredBy: text("triggered_by"), // LegiScan bill ID or other trigger
   priority: text("priority").notNull().default('normal'), // 'high', 'normal', 'low'
@@ -445,7 +481,9 @@ export const statuteUpdateQueue = pgTable("statute_update_queue", {
   errorMessage: text("error_message"),
   queuedAt: timestamp("queued_at").defaultNow(),
   completedAt: timestamp("completed_at"),
-});
+}, (table) => ({
+  snapshotIdx: index("statute_update_queue_snapshot_idx").on(table.snapshotId),
+}));
 
 // Insert schemas
 export const insertStatuteScrapeSchema = createInsertSchema(statuteScrapes).omit({

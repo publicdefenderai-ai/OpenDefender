@@ -27,6 +27,7 @@ import { loadTexasAuthorityManifest } from "./data/texas-manifest-loader";
 import {
   texasSourceDatabase,
 } from "./services/texas-source-database";
+import { AuthoritySourceReviewError } from "./services/authority-source-database";
 import { floridaSourceDatabase } from "./services/florida-source-database";
 import { loadFloridaAuthorityManifest } from "./data/florida-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
@@ -909,6 +910,98 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ success: false, error: "Failed to fetch Texas source database status" });
     }
   });
+
+  const pendingTexasSnapshotsHandler = async (_req: Request, res: Response) => {
+    try {
+      const snapshots = await texasSourceDatabase.getPendingSnapshots();
+      return res.json({ success: true, snapshots });
+    } catch (error) {
+      errLog("Failed to fetch pending Texas source snapshots", error);
+      return res.status(500).json({
+        success: false,
+        error: "Failed to fetch pending Texas source snapshots",
+      });
+    }
+  };
+  app.get(
+    "/api/statutes/sources/texas/pending-review",
+    adminRateLimiter,
+    requireAdminAuth,
+    pendingTexasSnapshotsHandler,
+  );
+  // Short alias retained for API clients that use the resource name directly.
+  app.get(
+    "/api/statutes/sources/texas/pending",
+    adminRateLimiter,
+    requireAdminAuth,
+    pendingTexasSnapshotsHandler,
+  );
+
+  const texasReviewDecisionsHandler = async (_req: Request, res: Response) => {
+    try {
+      const decisions = await texasSourceDatabase.getReviewDecisions();
+      return res.json({ success: true, decisions });
+    } catch (error) {
+      errLog("Failed to fetch Texas source review decisions", error);
+      return res.status(500).json({
+        success: false,
+        error: "Failed to fetch Texas source review decisions",
+      });
+    }
+  };
+  app.get(
+    "/api/statutes/sources/texas/review-decisions",
+    adminRateLimiter,
+    requireAdminAuth,
+    texasReviewDecisionsHandler,
+  );
+
+  const texasSnapshotReviewHandler = async (req: Request, res: Response) => {
+    const { decision, reviewer, note } = req.body as {
+      decision?: unknown;
+      reviewer?: unknown;
+      note?: unknown;
+    };
+    if ((decision !== "approve" && decision !== "reject") ||
+        typeof reviewer !== "string" ||
+        (note !== undefined && typeof note !== "string")) {
+      return res.status(400).json({
+        success: false,
+        error: "decision, reviewer, and optional note are required",
+      });
+    }
+    try {
+      const result = await texasSourceDatabase.reviewSnapshot({
+        snapshotId: req.params.snapshotId,
+        decision,
+        reviewer,
+        note,
+      });
+      return res.json({ success: true, ...result });
+    } catch (error) {
+      if (error instanceof AuthoritySourceReviewError) {
+        return res.status(error.statusCode).json({ success: false, error: error.message });
+      }
+      errLog("Failed to review Texas source snapshot", error);
+      return res.status(500).json({
+        success: false,
+        error: "Failed to review Texas source snapshot",
+      });
+    }
+  };
+  app.post(
+    "/api/statutes/sources/texas/review/:snapshotId",
+    attorneyReviewWriteLimiter,
+    requireAdminAuth,
+    texasSnapshotReviewHandler,
+  );
+  // Alias for clients that model the pending snapshot as the route resource.
+  app.post(
+    "/api/statutes/sources/texas/pending-review/:snapshotId",
+    attorneyReviewWriteLimiter,
+    requireAdminAuth,
+    texasSnapshotReviewHandler,
+  );
 
   app.post("/api/statutes/sources/florida/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
     try {

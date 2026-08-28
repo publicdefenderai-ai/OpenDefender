@@ -1,9 +1,13 @@
 import {
   getAuthorityChargeProvenance,
+  getAuthoritySourceReviewDecisions,
   getAuthoritySourceDatabaseStatus,
   getCurrentAuthoritySelectableChargeIds,
+  getPendingAuthoritySourceSnapshots,
+  reviewAuthoritySourceSnapshot,
   seedAuthoritySourceDatabase,
   type AuthoritySourceDatabaseResult,
+  type AuthoritySourceReviewInput,
 } from "./authority-source-database";
 import {
   buildTexasSourceDatabaseSeed,
@@ -28,8 +32,25 @@ export async function getTexasChargeProvenance(chargeId: string) {
   return getAuthorityChargeProvenance("TX", chargeId);
 }
 
+export async function getPendingTexasSourceSnapshots() {
+  return getPendingAuthoritySourceSnapshots("TX");
+}
+
+export async function getTexasSourceReviewDecisions() {
+  return getAuthoritySourceReviewDecisions("TX");
+}
+
+export async function reviewTexasSourceSnapshot(
+  input: Omit<AuthoritySourceReviewInput, "jurisdiction">,
+) {
+  return reviewAuthoritySourceSnapshot({ ...input, jurisdiction: "TX" });
+}
+
 export const texasSourceDatabase = {
   seed: seedTexasSourceDatabase,
   getStatus: getTexasSourceDatabaseStatus,
   getChargeProvenance: getTexasChargeProvenance,
+  getPendingSnapshots: getPendingTexasSourceSnapshots,
+  getReviewDecisions: getTexasSourceReviewDecisions,
+  reviewSnapshot: reviewTexasSourceSnapshot,
 };

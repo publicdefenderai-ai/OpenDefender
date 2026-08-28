@@ -3,6 +3,7 @@ import { randomUUID } from "node:crypto";
 import {
   statuteChargeLinks,
   statuteIngestionRuns,
+  statuteSourceReviewDecisions,
   statuteSourceSnapshots,
   statuteSources,
   statuteUpdateQueue,
@@ -114,6 +115,56 @@ export interface AuthoritySourceDatabaseResult {
   selectableChargeCount: number;
   catalogRecordCount: number;
   message: string;
+}
+
+export interface PendingAuthoritySourceSnapshot {
+  id: string;
+  sourceKey: string;
+  jurisdiction: string;
+  publisher: string;
+  citation: string;
+  section: string;
+  officialTitle: string;
+  sourceUrl: string;
+  contentHash: string;
+  hashBasis: string;
+  retrievedAt: Date | null;
+  manifestImportedAt: Date;
+  effectiveDateStart: string | null;
+  effectiveDateEnd: string | null;
+  supersedesSnapshotId: string | null;
+  metadata: unknown;
+}
+
+export type AuthoritySourceReviewDecision = "approve" | "reject";
+
+export interface AuthoritySourceReviewInput {
+  jurisdiction: string;
+  snapshotId: string;
+  decision: AuthoritySourceReviewDecision;
+  reviewer: string;
+  note?: string;
+}
+
+export interface AuthoritySourceReviewResult {
+  decision: AuthoritySourceReviewDecision;
+  snapshot: PendingAuthoritySourceSnapshot & {
+    status: "current" | "superseded";
+    requiresReview: boolean;
+  };
+  affectedChargeIds: string[];
+  restoredLinkCount: number;
+  auditId: string;
+}
+
+export class AuthoritySourceReviewError extends Error {
+  constructor(
+    message: string,
+    public readonly statusCode: 400 | 404 | 409,
+  ) {
+    super(message);
+    this.name = "AuthoritySourceReviewError";
+  }
 }
 
 function linkKey(
@@ -367,7 +418,7 @@ export async function seedAuthoritySourceDatabase(
           pendingSnapshotKeys.add(key);
           snapshotInserted++;
           changeCount++;
-          await queueAuthorityChange(tx, seed.jurisdiction, snapshot.citation, runId,
+          await queueAuthorityChange(tx, seed.jurisdiction, snapshot.citation, runId, duplicate.id,
             `Official ${seed.jurisdiction} source metadata changed; attorney review is required before promotion.`);
           continue;
         }
@@ -378,6 +429,15 @@ export async function seedAuthoritySourceDatabase(
           continue;
         }
         if (current && currentFingerprint !== fingerprint) {
+          const restorableLinks = await tx.select({
+            chargeId: statuteChargeLinks.chargeId,
+            supportRole: statuteChargeLinks.supportRole,
+            citation: statuteChargeLinks.citation,
+            subdivision: statuteChargeLinks.subdivision,
+          }).from(statuteChargeLinks).where(and(
+            eq(statuteChargeLinks.snapshotId, current.id),
+            eq(statuteChargeLinks.isCurrent, true),
+          ));
           const [pending] = await tx.insert(statuteSourceSnapshots).values({
             sourceId,
             jurisdiction: snapshot.jurisdiction,
@@ -395,14 +455,19 @@ export async function seedAuthoritySourceDatabase(
             status: "pending_review",
             requiresReview: true,
             supersedesSnapshotId: current.id,
-            metadata: snapshot.metadata,
+            metadata: {
+              ...snapshot.metadata,
+              authorityReview: {
+                restorableLinks,
+              },
+            },
           }).returning({ id: statuteSourceSnapshots.id });
           if (!pending) throw new Error(`Unable to record changed ${seed.jurisdiction} snapshot ${snapshot.citation}`);
           activeSnapshotIds.set(key, current.id);
           pendingSnapshotKeys.add(key);
           snapshotInserted++;
           changeCount++;
-          await queueAuthorityChange(tx, seed.jurisdiction, snapshot.citation, runId,
+          await queueAuthorityChange(tx, seed.jurisdiction, snapshot.citation, runId, pending.id,
             `Official ${seed.jurisdiction} source content changed; attorney review is required before promotion.`);
           continue;
         }
@@ -542,6 +607,7 @@ async function queueAuthorityChange(
   jurisdiction: string,
   citation: string,
   runId: string,
+  snapshotId: string,
   message: string,
 ): Promise<void> {
   const [existing] = await tx.select({ id: statuteUpdateQueue.id })
@@ -554,6 +620,7 @@ async function queueAuthorityChange(
     await tx.insert(statuteUpdateQueue).values({
       jurisdiction,
       citation,
+      snapshotId,
       reason: "source_change",
       triggeredBy: runId,
       priority: "high",
@@ -613,6 +680,328 @@ export async function getAuthoritySourceDatabaseStatus(jurisdiction: string) {
       errorCount: lastRun[0].errorCount,
     } : null,
   };
+}
+
+/**
+ * Return review-safe metadata for pending snapshots. Source text is excluded
+ * deliberately: reviewers need the exact hash, title, and official link before
+ * deciding, while the authority content remains server-side.
+ */
+export async function getPendingAuthoritySourceSnapshots(
+  jurisdiction: string,
+): Promise<PendingAuthoritySourceSnapshot[]> {
+  const rows = await db.select({
+    id: statuteSourceSnapshots.id,
+    sourceKey: statuteSources.sourceKey,
+    jurisdiction: statuteSourceSnapshots.jurisdiction,
+    publisher: statuteSources.publisher,
+    citation: statuteSourceSnapshots.citation,
+    section: statuteSourceSnapshots.section,
+    officialTitle: statuteSourceSnapshots.officialTitle,
+    sourceUrl: statuteSourceSnapshots.sourceUrl,
+    contentHash: statuteSourceSnapshots.contentHash,
+    hashBasis: statuteSourceSnapshots.hashBasis,
+    retrievedAt: statuteSourceSnapshots.retrievedAt,
+    manifestImportedAt: statuteSourceSnapshots.manifestImportedAt,
+    effectiveDateStart: statuteSourceSnapshots.effectiveDateStart,
+    effectiveDateEnd: statuteSourceSnapshots.effectiveDateEnd,
+    supersedesSnapshotId: statuteSourceSnapshots.supersedesSnapshotId,
+    metadata: statuteSourceSnapshots.metadata,
+  }).from(statuteSourceSnapshots)
+    .innerJoin(statuteSources, eq(statuteSourceSnapshots.sourceId, statuteSources.id))
+    .where(and(
+      eq(statuteSourceSnapshots.jurisdiction, jurisdiction),
+      eq(statuteSourceSnapshots.status, "pending_review"),
+      eq(statuteSourceSnapshots.requiresReview, true),
+    ))
+    .orderBy(desc(statuteSourceSnapshots.manifestImportedAt));
+  return rows;
+}
+
+export async function getAuthoritySourceReviewDecisions(
+  jurisdiction: string,
+) {
+  return db.select({
+    id: statuteSourceReviewDecisions.id,
+    snapshotId: statuteSourceReviewDecisions.snapshotId,
+    jurisdiction: statuteSourceReviewDecisions.jurisdiction,
+    decision: statuteSourceReviewDecisions.decision,
+    reviewer: statuteSourceReviewDecisions.reviewer,
+    note: statuteSourceReviewDecisions.note,
+    snapshotHash: statuteSourceReviewDecisions.snapshotHash,
+    previousSnapshotId: statuteSourceReviewDecisions.previousSnapshotId,
+    decidedAt: statuteSourceReviewDecisions.decidedAt,
+  }).from(statuteSourceReviewDecisions)
+    .where(eq(statuteSourceReviewDecisions.jurisdiction, jurisdiction))
+    .orderBy(desc(statuteSourceReviewDecisions.decidedAt));
+}
+
+/**
+ * Promote or reject one exact pending snapshot. Every state transition,
+ * affected-link update, queue completion, and audit record is committed in a
+ * single transaction so a reviewer can never publish a partially restored
+ * charge.
+ */
+export async function reviewAuthoritySourceSnapshot(
+  input: AuthoritySourceReviewInput,
+): Promise<AuthoritySourceReviewResult> {
+  if (!input.snapshotId || input.snapshotId.length > 200) {
+    throw new AuthoritySourceReviewError("Invalid snapshotId", 400);
+  }
+  if (!input.jurisdiction || input.jurisdiction.length > 10) {
+    throw new AuthoritySourceReviewError("Invalid jurisdiction", 400);
+  }
+  if (input.decision !== "approve" && input.decision !== "reject") {
+    throw new AuthoritySourceReviewError("Decision must be approve or reject", 400);
+  }
+  if (!input.reviewer.trim() || input.reviewer.length > 200) {
+    throw new AuthoritySourceReviewError("Reviewer is required", 400);
+  }
+  if ((input.note ?? "").length > 10000) {
+    throw new AuthoritySourceReviewError("Review note is too long", 400);
+  }
+
+  return db.transaction(async (tx) => {
+    // Serialize decisions within a jurisdiction. Pending snapshots can be
+    // created by successive imports before either is reviewed; locking before
+    // the read ensures only one can replace a given current predecessor.
+    await tx.execute(sql`SELECT pg_advisory_xact_lock(
+      hashtextextended(${input.jurisdiction}, 0)
+    )`);
+
+    const [pending] = await tx.select({
+      id: statuteSourceSnapshots.id,
+      sourceKey: statuteSources.sourceKey,
+      jurisdiction: statuteSourceSnapshots.jurisdiction,
+      publisher: statuteSources.publisher,
+      citation: statuteSourceSnapshots.citation,
+      section: statuteSourceSnapshots.section,
+      officialTitle: statuteSourceSnapshots.officialTitle,
+      sourceUrl: statuteSourceSnapshots.sourceUrl,
+      contentHash: statuteSourceSnapshots.contentHash,
+      hashBasis: statuteSourceSnapshots.hashBasis,
+      retrievedAt: statuteSourceSnapshots.retrievedAt,
+      manifestImportedAt: statuteSourceSnapshots.manifestImportedAt,
+      effectiveDateStart: statuteSourceSnapshots.effectiveDateStart,
+      effectiveDateEnd: statuteSourceSnapshots.effectiveDateEnd,
+      status: statuteSourceSnapshots.status,
+      requiresReview: statuteSourceSnapshots.requiresReview,
+      supersedesSnapshotId: statuteSourceSnapshots.supersedesSnapshotId,
+      metadata: statuteSourceSnapshots.metadata,
+    }).from(statuteSourceSnapshots)
+      .innerJoin(statuteSources, eq(statuteSourceSnapshots.sourceId, statuteSources.id))
+      .where(and(
+        eq(statuteSourceSnapshots.id, input.snapshotId),
+        eq(statuteSourceSnapshots.jurisdiction, input.jurisdiction),
+      )).limit(1);
+
+    if (!pending) {
+      throw new AuthoritySourceReviewError("Pending snapshot not found", 404);
+    }
+    if (pending.status !== "pending_review" || !pending.requiresReview) {
+      throw new AuthoritySourceReviewError(
+        "Snapshot has already been reviewed or is not pending review",
+        409,
+      );
+    }
+
+    const previous = pending.supersedesSnapshotId
+      ? (await tx.select({
+        id: statuteSourceSnapshots.id,
+        status: statuteSourceSnapshots.status,
+      }).from(statuteSourceSnapshots).where(
+        eq(statuteSourceSnapshots.id, pending.supersedesSnapshotId),
+      ).limit(1))[0]
+      : undefined;
+    if (input.decision === "approve" &&
+        (!previous || previous.status !== "current")) {
+      throw new AuthoritySourceReviewError(
+        "Pending snapshot does not have a current predecessor to replace",
+        409,
+      );
+    }
+
+    const predecessorLinks = previous
+      ? await tx.select({
+        id: statuteChargeLinks.id,
+        chargeId: statuteChargeLinks.chargeId,
+        supportRole: statuteChargeLinks.supportRole,
+        citation: statuteChargeLinks.citation,
+        subdivision: statuteChargeLinks.subdivision,
+        isCurrent: statuteChargeLinks.isCurrent,
+      }).from(statuteChargeLinks).where(
+        eq(statuteChargeLinks.snapshotId, previous.id),
+      )
+      : [];
+    const storedRestorableLinks = (
+      pending.metadata as { authorityReview?: { restorableLinks?: unknown } } | null
+    )?.authorityReview?.restorableLinks;
+    const previousLinks = Array.isArray(storedRestorableLinks)
+      ? storedRestorableLinks.filter((link): link is {
+        chargeId: string;
+        supportRole: string;
+        citation: string;
+        subdivision: string | null;
+      } => Boolean(link && typeof link === "object" &&
+        typeof (link as { chargeId?: unknown }).chargeId === "string" &&
+        typeof (link as { supportRole?: unknown }).supportRole === "string" &&
+        typeof (link as { citation?: unknown }).citation === "string" &&
+        ((link as { subdivision?: unknown }).subdivision === null ||
+          typeof (link as { subdivision?: unknown }).subdivision === "string")))
+      : predecessorLinks.filter((link) => link.isCurrent).map((link) => ({
+        chargeId: link.chargeId,
+        supportRole: link.supportRole,
+        citation: link.citation,
+        subdivision: link.subdivision,
+      }));
+    const restorablePredecessorIds = predecessorLinks
+      .filter((link) => previousLinks.some((candidate) =>
+        candidate.chargeId === link.chargeId &&
+        candidate.supportRole === link.supportRole &&
+        candidate.citation === link.citation &&
+        candidate.subdivision === link.subdivision,
+      ))
+      .map((link) => link.id);
+
+    if (input.decision === "approve" && previous) {
+      const [retiredPrevious] = await tx.update(statuteSourceSnapshots).set({
+        status: "superseded",
+        requiresReview: false,
+      }).where(and(
+        eq(statuteSourceSnapshots.id, previous.id),
+        eq(statuteSourceSnapshots.status, "current"),
+      )).returning({ id: statuteSourceSnapshots.id });
+      if (!retiredPrevious) {
+        throw new AuthoritySourceReviewError(
+          "The current predecessor changed before this review completed",
+          409,
+        );
+      }
+    }
+
+    // Conditional update makes duplicate/concurrent reviewer submissions
+    // fail closed rather than applying links twice.
+    const [reviewedSnapshot] = await tx.update(statuteSourceSnapshots).set({
+      status: input.decision === "approve" ? "current" : "superseded",
+      requiresReview: false,
+    }).where(and(
+      eq(statuteSourceSnapshots.id, pending.id),
+      eq(statuteSourceSnapshots.status, "pending_review"),
+      eq(statuteSourceSnapshots.requiresReview, true),
+    )).returning({
+      id: statuteSourceSnapshots.id,
+      status: statuteSourceSnapshots.status,
+      requiresReview: statuteSourceSnapshots.requiresReview,
+    });
+    if (!reviewedSnapshot) {
+      throw new AuthoritySourceReviewError(
+        "Snapshot was reviewed by another reviewer",
+        409,
+      );
+    }
+
+    let restoredLinkCount = 0;
+    if (previous) {
+      if (input.decision === "approve") {
+        if (restorablePredecessorIds.length > 0) {
+          await tx.update(statuteChargeLinks).set({ isCurrent: false }).where(
+            inArray(statuteChargeLinks.id, restorablePredecessorIds),
+          );
+        }
+      }
+
+      if (input.decision === "approve") {
+        // The predecessor's links are the authoritative set of affected
+        // charge/support-role relationships. No unrelated jurisdiction links
+        // are touched.
+        for (const link of previousLinks) {
+          const inserted = await tx.insert(statuteChargeLinks).values({
+            chargeId: link.chargeId,
+            snapshotId: pending.id,
+            supportRole: link.supportRole,
+            citation: link.citation,
+            subdivision: link.subdivision,
+            isCurrent: true,
+          }).onConflictDoUpdate({
+            target: [
+              statuteChargeLinks.chargeId,
+              statuteChargeLinks.snapshotId,
+              statuteChargeLinks.supportRole,
+            ],
+            set: {
+              citation: link.citation,
+              subdivision: link.subdivision,
+              isCurrent: true,
+            },
+          });
+          if ((inserted.rowCount ?? 0) > 0) {
+            restoredLinkCount++;
+          }
+        }
+      }
+      if (input.decision === "reject") {
+        if (restorablePredecessorIds.length > 0) {
+          await tx.update(statuteChargeLinks).set({ isCurrent: true }).where(
+            inArray(statuteChargeLinks.id, restorablePredecessorIds),
+          );
+        }
+        restoredLinkCount = previousLinks.length;
+      }
+    }
+
+    await tx.update(statuteUpdateQueue).set({
+      status: "completed",
+      completedAt: new Date(),
+      errorMessage: input.decision === "reject"
+        ? input.note || "Pending source snapshot rejected; prior current snapshot retained."
+        : null,
+    }).where(and(
+      eq(statuteUpdateQueue.jurisdiction, input.jurisdiction),
+      eq(statuteUpdateQueue.citation, pending.citation),
+      eq(statuteUpdateQueue.snapshotId, pending.id),
+      eq(statuteUpdateQueue.status, "pending"),
+    ));
+
+    const [audit] = await tx.insert(statuteSourceReviewDecisions).values({
+      snapshotId: pending.id,
+      jurisdiction: pending.jurisdiction,
+      decision: input.decision,
+      reviewer: input.reviewer.trim(),
+      note: input.note ?? "",
+      snapshotHash: pending.contentHash,
+      previousSnapshotId: pending.supersedesSnapshotId,
+    }).returning({
+      id: statuteSourceReviewDecisions.id,
+    });
+    if (!audit) throw new Error("Unable to record source review decision");
+
+    return {
+      decision: input.decision,
+      snapshot: {
+        id: pending.id,
+        sourceKey: pending.sourceKey,
+        jurisdiction: pending.jurisdiction,
+        publisher: pending.publisher,
+        citation: pending.citation,
+        section: pending.section,
+        officialTitle: pending.officialTitle,
+        sourceUrl: pending.sourceUrl,
+        contentHash: pending.contentHash,
+        hashBasis: pending.hashBasis,
+        retrievedAt: pending.retrievedAt,
+        manifestImportedAt: pending.manifestImportedAt,
+        effectiveDateStart: pending.effectiveDateStart,
+        effectiveDateEnd: pending.effectiveDateEnd,
+        supersedesSnapshotId: pending.supersedesSnapshotId,
+        metadata: pending.metadata,
+        status: reviewedSnapshot.status as "current" | "superseded",
+        requiresReview: reviewedSnapshot.requiresReview,
+      },
+      affectedChargeIds: [...new Set(previousLinks.map((link) => link.chargeId))],
+      restoredLinkCount,
+      auditId: audit.id,
+    };
+  });
 }
 
 export async function getAuthorityChargeProvenance(
