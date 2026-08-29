@@ -1,4 +1,4 @@
-import { and, desc, eq, sql } from "drizzle-orm";
+import { and, desc, eq, inArray, sql } from "drizzle-orm";
 import { randomUUID } from "node:crypto";
 import { db } from "../db";
 import {
@@ -74,6 +74,90 @@ export interface CaliforniaChargeProvenance {
     hashBasis: string;
     status: string;
   }>;
+}
+
+type CaliforniaCurrentProvenanceRow = CaliforniaChargeProvenance["sources"][number];
+type CaliforniaEvidenceRow = Pick<
+  CaliforniaCurrentProvenanceRow,
+  "sourceUrl" | "citation"
+> & {
+  supportRole: string;
+  subdivision: string | null;
+};
+
+function supportRoleForSourceKind(kind: "statute" | "jury-instruction" | "classification") {
+  switch (kind) {
+    case "jury-instruction":
+      return "jury_instruction";
+    case "classification":
+      return "grading";
+    case "statute":
+      return "offense";
+  }
+}
+
+function provenanceKey(source: {
+  sourceUrl: string;
+  supportRole: string;
+  citation: string;
+  subdivision: string | null;
+}): string {
+  return [
+    source.sourceUrl,
+    source.supportRole,
+    source.citation,
+    source.subdivision ?? "",
+  ].join("|");
+}
+
+function hasCompleteCaliforniaEvidence(
+  record: NonNullable<ReturnType<typeof getCaliforniaCanonicalRecord>>,
+  rows: CaliforniaEvidenceRow[],
+): boolean {
+  const expected = new Set(record.sources.map((source) => provenanceKey({
+    sourceUrl: source.url,
+    supportRole: supportRoleForSourceKind(source.kind),
+    citation: record.citation,
+    subdivision: record.code,
+  })));
+  const actual = new Set(rows.map((row) => provenanceKey(row)));
+
+  return expected.size > 0 &&
+    rows.length === expected.size &&
+    actual.size === expected.size &&
+    [...expected].every((key) => actual.has(key));
+}
+
+async function getCurrentCaliforniaProvenanceRows(
+  chargeId: string,
+): Promise<Array<CaliforniaCurrentProvenanceRow & CaliforniaEvidenceRow>> {
+  return db
+    .select({
+      citation: statuteSourceSnapshots.citation,
+      section: statuteSourceSnapshots.section,
+      sourceUrl: statuteSourceSnapshots.sourceUrl,
+      publisher: statuteSources.publisher,
+      sourceType: statuteSources.sourceType,
+      retrievedAt: statuteSourceSnapshots.retrievedAt,
+      manifestImportedAt: statuteSourceSnapshots.manifestImportedAt,
+      effectiveDateStart: statuteSourceSnapshots.effectiveDateStart,
+      effectiveDateEnd: statuteSourceSnapshots.effectiveDateEnd,
+      contentAvailable: sql<boolean>`${statuteSourceSnapshots.content} is not null`,
+      contentHash: statuteSourceSnapshots.contentHash,
+      hashBasis: statuteSourceSnapshots.hashBasis,
+      status: statuteSourceSnapshots.status,
+      supportRole: statuteChargeLinks.supportRole,
+      subdivision: statuteChargeLinks.subdivision,
+    })
+    .from(statuteChargeLinks)
+    .innerJoin(statuteSourceSnapshots, eq(statuteChargeLinks.snapshotId, statuteSourceSnapshots.id))
+    .innerJoin(statuteSources, eq(statuteSourceSnapshots.sourceId, statuteSources.id))
+    .where(and(
+      eq(statuteChargeLinks.chargeId, chargeId),
+      eq(statuteChargeLinks.isCurrent, true),
+      eq(statuteSourceSnapshots.jurisdiction, "CA"),
+      eq(statuteSourceSnapshots.status, "current"),
+    ));
 }
 
 function snapshotKey(snapshot: CaliforniaSnapshotSeed): string {
@@ -470,34 +554,11 @@ export async function getCaliforniaChargeProvenance(
   const record = getCaliforniaCanonicalRecord(chargeId);
   if (!record || !record.selectable) return null;
 
-  const rows = await db
-    .select({
-      citation: statuteSourceSnapshots.citation,
-      section: statuteSourceSnapshots.section,
-      sourceUrl: statuteSourceSnapshots.sourceUrl,
-      publisher: statuteSources.publisher,
-      sourceType: statuteSources.sourceType,
-      retrievedAt: statuteSourceSnapshots.retrievedAt,
-      manifestImportedAt: statuteSourceSnapshots.manifestImportedAt,
-      effectiveDateStart: statuteSourceSnapshots.effectiveDateStart,
-      effectiveDateEnd: statuteSourceSnapshots.effectiveDateEnd,
-      contentAvailable: sql<boolean>`${statuteSourceSnapshots.content} is not null`,
-      contentHash: statuteSourceSnapshots.contentHash,
-      hashBasis: statuteSourceSnapshots.hashBasis,
-      status: statuteSourceSnapshots.status,
-    })
-    .from(statuteChargeLinks)
-    .innerJoin(statuteSourceSnapshots, eq(statuteChargeLinks.snapshotId, statuteSourceSnapshots.id))
-    .innerJoin(statuteSources, eq(statuteSourceSnapshots.sourceId, statuteSources.id))
-    .where(and(
-      eq(statuteChargeLinks.chargeId, record.canonicalId),
-      eq(statuteChargeLinks.isCurrent, true),
-      eq(statuteSourceSnapshots.status, "current"),
-    ));
+  const rows = await getCurrentCaliforniaProvenanceRows(record.canonicalId);
 
   // A charge is not provenance-safe if a current link disappeared during a
   // partial seed. Never return partial authority to guidance or exports.
-  if (rows.length !== record.sources.length) return null;
+  if (!hasCompleteCaliforniaEvidence(record, rows)) return null;
 
   return {
     chargeId: record.canonicalId,
@@ -505,6 +566,67 @@ export async function getCaliforniaChargeProvenance(
     citation: record.citation,
     sources: rows,
   };
+}
+
+/**
+ * Return only California canonical charges whose complete committed source
+ * evidence is still present in the database. The latest completed seed defines
+ * the release boundary; the current-link check prevents a partial seed from
+ * making an incomplete record available through another route.
+ */
+export async function getCurrentCaliforniaSelectableChargeIds(): Promise<Set<string>> {
+  const [latestRun] = await db
+    .select({ metadata: statuteIngestionRuns.metadata })
+    .from(statuteIngestionRuns)
+    .where(and(
+      eq(statuteIngestionRuns.jurisdiction, "CA"),
+      eq(statuteIngestionRuns.status, "completed"),
+    ))
+    .orderBy(desc(statuteIngestionRuns.startedAt))
+    .limit(1);
+  if (!latestRun) return new Set();
+
+  const metadata = latestRun.metadata as { selectableChargeIds?: unknown } | null;
+  const candidateIds = Array.isArray(metadata?.selectableChargeIds)
+    ? metadata.selectableChargeIds.filter((value): value is string => typeof value === "string")
+    : [];
+  if (candidateIds.length === 0) return new Set();
+
+  const currentRows = await db
+    .select({
+      chargeId: statuteChargeLinks.chargeId,
+      citation: statuteSourceSnapshots.citation,
+      sourceUrl: statuteSourceSnapshots.sourceUrl,
+      supportRole: statuteChargeLinks.supportRole,
+      subdivision: statuteChargeLinks.subdivision,
+    })
+    .from(statuteChargeLinks)
+    .innerJoin(statuteSourceSnapshots, eq(statuteChargeLinks.snapshotId, statuteSourceSnapshots.id))
+    .where(and(
+      inArray(statuteChargeLinks.chargeId, candidateIds),
+      eq(statuteChargeLinks.isCurrent, true),
+      eq(statuteSourceSnapshots.jurisdiction, "CA"),
+      eq(statuteSourceSnapshots.status, "current"),
+    ));
+  const rowsByCharge = new Map<string, CaliforniaEvidenceRow[]>();
+  for (const row of currentRows) {
+    const rows = rowsByCharge.get(row.chargeId) ?? [];
+    rows.push({
+      citation: row.citation,
+      sourceUrl: row.sourceUrl,
+      supportRole: row.supportRole,
+      subdivision: row.subdivision,
+    });
+    rowsByCharge.set(row.chargeId, rows);
+  }
+
+  return new Set(candidateIds.filter((chargeId) => {
+    const record = getCaliforniaCanonicalRecord(chargeId);
+    return Boolean(
+      record?.selectable &&
+      hasCompleteCaliforniaEvidence(record, rowsByCharge.get(chargeId) ?? []),
+    );
+  }));
 }
 
 export const californiaSourceDatabase = {

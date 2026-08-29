@@ -254,7 +254,10 @@ describe.skipIf(!runIntegration)("California source database persistence", () =>
       statuteSourceSnapshots,
     } = await import("@shared/schema");
     const { and, eq } = await import("drizzle-orm");
-    const { getCaliforniaChargeProvenance } = await import("../server/services/california-source-database");
+    const {
+      getCaliforniaChargeProvenance,
+      getCurrentCaliforniaSelectableChargeIds,
+    } = await import("../server/services/california-source-database");
     const { registerRoutes } = await import("../server/routes");
     const { registerV1Routes } = await import("../server/routes-v1");
 
@@ -418,6 +421,7 @@ describe.skipIf(!runIntegration)("California source database persistence", () =>
         )[0]!.id));
 
       expect(await getCaliforniaChargeProvenance(charge!.canonicalId)).toBeNull();
+      expect(await getCurrentCaliforniaSelectableChargeIds()).not.toContain(charge!.canonicalId);
 
       const provenanceResponse = await request(testApp)
         .get(`/api/criminal-charges/${charge!.canonicalId}/sources`)
@@ -441,10 +445,60 @@ describe.skipIf(!runIntegration)("California source database persistence", () =>
         requiresReselection: true,
       });
 
+      const selectorResponse = await request(testApp)
+        .get(`/api/criminal-charges?jurisdiction=CA&limit=500`)
+        .expect(200);
+      expect(selectorResponse.body.charges.some((selected: { id: string }) => selected.id === charge!.canonicalId)).toBe(false);
+
+      const v1SelectorResponse = await request(testApp)
+        .get(`/api/v1/charges?jurisdiction=CA&limit=100`)
+        .expect(200);
+      expect(v1SelectorResponse.body.data.some((selected: { id: string }) => selected.id === charge!.canonicalId)).toBe(false);
+
+      const previousNodeEnv = process.env.NODE_ENV;
+      process.env.NODE_ENV = "development";
+      let aiGuidanceResponse;
+      try {
+        aiGuidanceResponse = await request(testApp)
+          .post("/api/legal-guidance")
+          .send({
+            jurisdiction: "CA",
+            charges: [charge!.canonicalId],
+            caseStage: "arrest",
+            custodyStatus: "in_custody",
+          })
+          .expect(400);
+      } finally {
+        process.env.NODE_ENV = previousNodeEnv;
+      }
+      expect(aiGuidanceResponse.body).toMatchObject({
+        success: false,
+        requiresReselection: true,
+      });
+
       const exportResponse = await request(testApp)
         .get(`/api/v1/export/charges?jurisdiction=CA`)
         .expect(200);
       expect(exportResponse.body.some((exported: { id: string }) => exported.id === charge!.canonicalId)).toBe(false);
+
+      await db
+        .update(statuteChargeLinks)
+        .set({ isCurrent: true })
+        .where(eq(statuteChargeLinks.chargeId, charge!.canonicalId));
+      expect(await getCaliforniaChargeProvenance(charge!.canonicalId)).not.toBeNull();
+      expect(await getCurrentCaliforniaSelectableChargeIds()).toContain(charge!.canonicalId);
+      const restoredSelector = await request(testApp)
+        .get(`/api/criminal-charges?jurisdiction=CA&limit=500`)
+        .expect(200);
+      expect(restoredSelector.body.charges.some((selected: { id: string }) => selected.id === charge!.canonicalId)).toBe(true);
+      const restoredV1Selector = await request(testApp)
+        .get(`/api/v1/charges?jurisdiction=CA&limit=100`)
+        .expect(200);
+      expect(restoredV1Selector.body.data.some((selected: { id: string }) => selected.id === charge!.canonicalId)).toBe(true);
+      const restoredExport = await request(testApp)
+        .get(`/api/v1/export/charges?jurisdiction=CA`)
+        .expect(200);
+      expect(restoredExport.body.some((exported: { id: string }) => exported.id === charge!.canonicalId)).toBe(true);
     } finally {
       await db.delete(statuteIngestionRuns).where(eq(statuteIngestionRuns.id, fixtureRunId));
       await db.delete(statuteChargeLinks).where(eq(statuteChargeLinks.chargeId, charge!.canonicalId));
@@ -456,11 +510,12 @@ describe.skipIf(!runIntegration)("California source database persistence", () =>
       }
     }
 
-    expect(await db
+    const restoredLinks = await db
       .select()
       .from(statuteChargeLinks)
-      .where(eq(statuteChargeLinks.chargeId, charge!.canonicalId)))
-      .toEqual(existingLinks);
+      .where(eq(statuteChargeLinks.chargeId, charge!.canonicalId));
+    expect(restoredLinks).toHaveLength(existingLinks.length);
+    expect(restoredLinks).toEqual(expect.arrayContaining(existingLinks));
     expect(await getCaliforniaChargeProvenance(charge!.canonicalId)).not.toBeNull();
   }, 30_000);
 });
