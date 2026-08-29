@@ -441,6 +441,27 @@ export default {
           "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
           "chargeLookupBody": "En el selector de cargos de Illinois, abra «Ver detalles de la fuente actual» para ver el título oficial, la cita exacta de ILCS, el enlace, las fechas de obtención y vigencia, la disponibilidad del contenido y el hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
         },
+        "ohSources": {
+          "eyebrow": "Fuentes de cargos de Ohio",
+          "title": "Cómo se verifican las fuentes de cargos de Ohio",
+          "intro": "Los cargos de Ohio utilizan las páginas oficiales de secciones del Ohio Revised Code de la Comisión de Servicios Legislativos de Ohio. El manifiesto conserva las 115 filas del catálogo, pero solo publica registros con respaldo legal completo y exacto.",
+          "authorityTitle": "Fuente oficial",
+          "authorityBody": "El importador obtiene las secciones exactas del Ohio Revised Code desde codes.ohio.gov, verifica la identidad de la sección y el título oficial, conserva el texto completo, registra la fecha de vigencia y los metadatos de obtención, y calcula un hash SHA-256.",
+          "failClosedTitle": "Por qué un cargo puede no estar disponible",
+          "failClosedBody": "Si una sección oficial no está disponible, falta la sección o el título, falta una subdivisión requerida, el código del catálogo no respalda exactamente la cita o la etiqueta es materialmente distinta, la fila se retiene. Las filas retenidas de Ohio no aparecen en selección, orientación, búsqueda ni exportaciones.",
+          "catalogTitle": "Identidades exactas y alias",
+          "catalogBody": "Una etiqueta de Ohio se conserva solo cuando coincide con el título oficial. No se publican alias de Ohio sin una correspondencia documentada, específica del cargo y aprobada por un abogado. Los conceptos federales, las etiquetas del Código Penal Modelo, las tentativas, los registros compuestos, las secciones inferidas y las citas de fuentes secundarias permanecen retenidos.",
+          "reviewTitle": "Verificar la fuente no equivale a aprobación legal",
+          "reviewBody": "La verificación confirma el editor oficial, la sección, el título, el texto completo, la evidencia de vigencia, los metadatos de obtención y el hash. No significa que un abogado haya aprobado los elementos, el estado mental, la clasificación, las penas o la interpretación de vigencia; esos campos siguen pendientes de revisión legal.",
+          "linksTitle": "Consulte las divulgaciones relacionadas",
+          "linksIntro": "Compare esta explicación con el inventario de fuentes, la divulgación de enlaces legales, las divulgaciones generales de datos legales y los recursos oficiales del Ohio Revised Code.",
+          "officialLink": "Ohio Revised Code — Ohio Laws",
+          "inventoryLink": "Inventario de fuentes de cargos",
+          "statuteLink": "Divulgación de enlaces legales",
+          "disclaimerLink": "Divulgaciones generales de datos legales",
+          "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
+          "chargeLookupBody": "En el selector de cargos de Ohio, abra «Ver detalles de la fuente actual» para ver el título oficial, la cita exacta del Ohio Revised Code, el enlace, las fechas de obtención y vigencia, la disponibilidad del contenido y el hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
+        },
           "labels": { "coverage": "Cobertura / conteo", "freshness": "Actualización", "sourcePath": "Ruta de la fuente", "sourceType": "Tipo de fuente", "sources": "Fuentes nombradas", "citations": "Formato de cita / referencia", "providerDisclosure": "Divulgación del proveedor", "limitation": "Limitación" },
         "sourceTypes": {
           "primaryLegalText": "Texto legal primario",

@@ -441,6 +441,27 @@ export default {
           "chargeLookupTitle": "查看指控的当前来源追溯信息",
           "chargeLookupBody": "在伊利诺伊州指控选择器中，对可选指控打开“查看当前来源详情”，即可查看官方标题、精确 ILCS 引文、来源链接、获取和现行性日期、来源内容是否可用以及内容哈希。如果当前权威来源不可用，该指控将无法选择，系统也不会显示旧的来源追溯信息。"
         },
+        "ohSources": {
+          "eyebrow": "俄亥俄州指控来源",
+          "title": "俄亥俄州指控来源如何核验",
+          "intro": "俄亥俄州指控记录使用俄亥俄州立法服务委员会官方 Ohio Revised Code 条款页面。已提交的清单保留目录中的全部 115 条记录，但只有具有完整、精确法条依据的记录才会发布。",
+          "authorityTitle": "官方依据",
+          "authorityBody": "导入程序从 codes.ohio.gov 获取精确的 Ohio Revised Code 条款，核对条款身份和官方标题，保存完整返回文本，记录生效日期和获取元数据，并计算 SHA-256 内容哈希。",
+          "failClosedTitle": "为什么某项指控可能不可用",
+          "failClosedBody": "如果官方条款不可用、缺少条款或标题、缺少必需分款、目录代码不能精确支持所引法条，或标签存在实质差异，该记录就会被暂缓。被暂缓的俄亥俄州记录不会出现在指控选择、指导、搜索或导出中。",
+          "catalogTitle": "精确身份与别名",
+          "catalogBody": "俄亥俄州标签只有在与官方标题一致时才会保留。没有记录在案、针对具体指控且经律师批准的对应关系，不会发布俄亥俄州别名。联邦概念、《示范刑法典》标签、未遂、复合记录、推断条款和仅有次级来源的引文仍会被暂缓。",
+          "reviewTitle": "来源核验不等于律师批准",
+          "reviewBody": "核验确认官方发布方、条款、标题、完整返回文本、生效日期证据、获取元数据和哈希。这并不表示律师已经批准构成要件、主观心理状态、罪名等级、刑罚或现行性解释；这些字段仍标记为待律师审查。",
+          "linksTitle": "查看相关披露",
+          "linksIntro": "您可以将此说明与维护中的来源清单、法条链接披露、法律数据披露以及 Ohio Revised Code 官方资源进行对照。",
+          "officialLink": "Ohio Revised Code — Ohio Laws",
+          "inventoryLink": "刑事指控来源清单",
+          "statuteLink": "法条链接披露",
+          "disclaimerLink": "一般法律数据披露",
+          "chargeLookupTitle": "查看指控的当前来源追溯信息",
+          "chargeLookupBody": "在俄亥俄州指控选择器中，对可选指控打开“查看当前来源详情”，即可查看官方标题、精确 Ohio Revised Code 引文、来源链接、获取和生效日期、来源内容是否可用以及内容哈希。如果当前权威来源不可用，该指控将无法选择，系统也不会显示旧的来源追溯信息。"
+        },
           "labels": { "coverage": "覆盖范围 / 数量", "freshness": "更新时间", "sourcePath": "来源路径", "sourceType": "来源类型", "sources": "来源名称", "citations": "引文 / 参考格式", "providerDisclosure": "服务商披露", "limitation": "限制" },
         "sourceTypes": {
           "primaryLegalText": "主要法律文本",

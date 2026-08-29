@@ -36,6 +36,8 @@ import { southCarolinaSourceDatabase } from "./services/south-carolina-source-da
 import { loadSouthCarolinaAuthorityManifest } from "./data/south-carolina-manifest-loader";
 import { illinoisSourceDatabase } from "./services/illinois-source-database";
 import { loadIllinoisAuthorityManifest } from "./data/illinois-manifest-loader";
+import { ohioSourceDatabase } from "./services/ohio-source-database";
+import { loadOhioAuthorityManifest } from "./data/ohio-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
@@ -499,6 +501,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ? await southCarolinaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : normalizedCharge?.jurisdiction === "IL"
           ? await illinoisSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : normalizedCharge?.jurisdiction === "OH"
+          ? await ohioSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "CA"
           ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : null;
@@ -1092,6 +1096,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch Illinois source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch Illinois source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/ohio/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await ohioSourceDatabase.seed(loadOhioAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("Ohio source database seeding failed", error);
+      res.status(500).json({ success: false, error: "Ohio source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/ohio/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await ohioSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch Ohio source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch Ohio source database status" });
     }
   });
 

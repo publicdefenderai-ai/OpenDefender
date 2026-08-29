@@ -439,6 +439,27 @@ export default {
           "chargeLookupTitle": "Inspect a charge's current provenance",
           "chargeLookupBody": "In the Illinois charge selector, open “View current source details” for a selectable charge to see its official title, exact ILCS citation, source link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
         },
+        "ohSources": {
+          "eyebrow": "Ohio charge sources",
+          "title": "How Ohio charge sources are verified",
+          "intro": "Ohio charge records use the Ohio Legislative Service Commission's official Ohio Revised Code section pages. The committed manifest preserves all 115 catalog rows, but publishes only records with complete, exact statutory support.",
+          "authorityTitle": "Official authority",
+          "authorityBody": "The importer retrieves exact Ohio Revised Code sections from codes.ohio.gov, verifies the section identity and official catchline, stores the complete returned text, records the effective date and retrieval metadata, and calculates a SHA-256 content hash.",
+          "failClosedTitle": "Why a charge may be unavailable",
+          "failClosedBody": "If an official section is unavailable, the section or catchline is missing, a required subdivision is absent, the catalog code does not exactly support the citation, or the label is materially different, the row is withheld. Withheld Ohio rows do not appear in selection, guidance, search, or exports.",
+          "catalogTitle": "Exact identities and aliases",
+          "catalogBody": "An Ohio label is retained only when it matches the official catchline. No Ohio aliases are published without a documented, charge-specific attorney-approved mapping. Federal concepts, Model Penal Code labels, attempts, compound records, inferred sections, and secondary-only citations remain withheld.",
+          "reviewTitle": "Source verification is not attorney approval",
+          "reviewBody": "Verification confirms the official publisher, section, catchline, complete returned text, effective-date evidence, retrieval metadata, and hash. It does not mean a lawyer approved the elements, mental state, grading, penalties, or currentness interpretation; those fields remain pending attorney review.",
+          "linksTitle": "Review the underlying disclosures",
+          "linksIntro": "Compare this explanation with the maintained source inventory, statute-link disclosure, legal-data disclosures, and Ohio's official Revised Code resources.",
+          "officialLink": "Ohio Revised Code — Ohio Laws",
+          "inventoryLink": "Criminal-charge source inventory",
+          "statuteLink": "Statute-link disclosure",
+          "disclaimerLink": "General legal-data disclosures",
+          "chargeLookupTitle": "Inspect a charge's current provenance",
+          "chargeLookupBody": "In the Ohio charge selector, open “View current source details” for a selectable charge to see its official catchline, exact Ohio Revised Code citation, source link, retrieval and effective dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
+        },
           "labels": { "coverage": "Coverage / count", "freshness": "Freshness", "sourcePath": "Source path", "sourceType": "Source type", "sources": "Named sources", "citations": "Citation / reference format", "providerDisclosure": "Provider disclosure", "limitation": "Limitation" },
         "sourceTypes": {
           "primaryLegalText": "Primary legal text",

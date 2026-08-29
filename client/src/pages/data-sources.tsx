@@ -530,6 +530,58 @@ export default function DataSources() {
           </section>
 
           <section
+            id="ohio-charge-sources"
+            className="mt-10 scroll-mt-24"
+            aria-labelledby="ohio-charge-sources-heading"
+          >
+            <Card className="border-sky-200/80 bg-sky-50/40 dark:border-sky-900 dark:bg-sky-950/20">
+              <CardContent className="p-6 sm:p-7">
+                <div className="flex gap-3">
+                  <ShieldCheck className="mt-1 h-5 w-5 shrink-0 text-sky-700 dark:text-sky-300" aria-hidden="true" />
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">
+                      {t("home.dataSources.transparency.ohSources.eyebrow")}
+                    </p>
+                    <h2 id="ohio-charge-sources-heading" className="mt-2 text-2xl font-bold tracking-tight text-foreground">
+                      {t("home.dataSources.transparency.ohSources.title")}
+                    </h2>
+                    <p className="mt-3 max-w-4xl text-sm leading-6 text-muted-foreground sm:text-base">
+                      {t("home.dataSources.transparency.ohSources.intro")}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 grid gap-4 md:grid-cols-2">
+                  {(["authority", "failClosed", "catalog", "review"] as const).map((key) => (
+                    <div key={key} className="rounded-xl border border-sky-200/70 bg-background/80 p-4 dark:border-sky-900/70">
+                      <h3 className="font-semibold text-foreground">{t(`home.dataSources.transparency.ohSources.${key}Title`)}</h3>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">{t(`home.dataSources.transparency.ohSources.${key}Body`)}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-6 border-t border-sky-200/70 pt-5 dark:border-sky-900/70">
+                  <h3 className="font-semibold text-foreground">{t("home.dataSources.transparency.ohSources.linksTitle")}</h3>
+                  <p className="mt-1 text-sm leading-6 text-muted-foreground">{t("home.dataSources.transparency.ohSources.linksIntro")}</p>
+                  <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm">
+                    <a href="https://codes.ohio.gov/ohio-revised-code" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-semibold text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+                      {t("home.dataSources.transparency.ohSources.officialLink")}
+                      <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                      <span className="sr-only">{t("home.dataSources.transparency.opensNewTab")}</span>
+                    </a>
+                    <a href="#criminal-charges" className="font-semibold text-primary underline-offset-4 hover:bg-muted hover:underline">{t("home.dataSources.transparency.ohSources.inventoryLink")}</a>
+                    <a href="#statute-links" className="font-semibold text-primary underline-offset-4 hover:bg-muted hover:underline">{t("home.dataSources.transparency.ohSources.statuteLink")}</a>
+                    <Link href="/disclaimers" className="font-semibold text-primary underline-offset-4 hover:bg-muted hover:underline">{t("home.dataSources.transparency.ohSources.disclaimerLink")}</Link>
+                  </div>
+                  <div className="mt-5 rounded-xl border border-sky-200/70 bg-background/80 p-4 dark:border-sky-900/70">
+                    <h3 className="font-semibold text-foreground">{t("home.dataSources.transparency.ohSources.chargeLookupTitle")}</h3>
+                    <p className="mt-2 text-sm leading-6 text-muted-foreground">{t("home.dataSources.transparency.ohSources.chargeLookupBody")}</p>
+                    <p className="mt-3 break-all rounded-lg bg-muted/60 px-3 py-2 font-mono text-xs text-foreground">/api/criminal-charges/:chargeId/sources</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+
+          <section
             id="pennsylvania-charge-sources"
             className="mt-10 scroll-mt-24"
             aria-labelledby="pennsylvania-charge-sources-heading"
