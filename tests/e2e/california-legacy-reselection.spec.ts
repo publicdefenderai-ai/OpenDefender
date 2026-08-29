@@ -3,6 +3,24 @@ import { expect, test, type Page } from "@playwright/test";
 const validChargeId = "ca-robbery-in-the-first-degree";
 const supportedLegacyId = "ca-vehicular-homicide";
 const supportedCanonicalId = "ca-gross-vehicular-manslaughter-191-5-a";
+const multiSupportedLegacyCases = [
+  {
+    legacyId: supportedLegacyId,
+    canonicalIds: [
+      supportedCanonicalId,
+      "ca-vehicular-manslaughter-191-5-b",
+    ],
+    selectedCanonicalId: supportedCanonicalId,
+  },
+  {
+    legacyId: "ca-sexual-assault-in-the-second-degree",
+    canonicalIds: [
+      "ca-sexual-penetration-289-a1a",
+      "ca-sexual-penetration-289-a1b",
+    ],
+    selectedCanonicalId: "ca-sexual-penetration-289-a1b",
+  },
+] as const;
 
 const additionalSupportedLegacyCases = [
   {
@@ -224,6 +242,69 @@ test.describe("saved California legacy charge recovery", () => {
     await submitRemainingSteps(page);
     await expect.poll(recovery.getRetryBody).toMatchObject({
       charges: [validChargeId, supportedCanonicalId],
+    });
+  });
+
+  test("resolves multiple legacy families independently and preserves all saved charges", async ({
+    page,
+  }) => {
+    test.setTimeout(60_000);
+
+    const legacyIds = multiSupportedLegacyCases.map(({ legacyId }) => legacyId);
+    const recovery = await openRecoveryWithSavedCharges(page, legacyIds);
+    await expect.poll(() => recovery.getInitialBody()?.charges).toEqual([
+      ...legacyIds,
+      validChargeId,
+    ]);
+
+    for (const { legacyId, canonicalIds } of multiSupportedLegacyCases) {
+      await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toBeVisible();
+      for (const canonicalId of canonicalIds) {
+        await expect(page.getByTestId(`button-reselect-${canonicalId}`)).toBeVisible();
+      }
+    }
+
+    const firstCase = multiSupportedLegacyCases[0];
+    const secondCase = multiSupportedLegacyCases[1];
+    await page
+      .getByTestId(`button-reselect-${firstCase.selectedCanonicalId}`)
+      .click();
+
+    await expect(
+      page.getByTestId(`legacy-charge-options-${firstCase.legacyId}`),
+    ).toHaveCount(0);
+    await expect(
+      page.getByTestId(`legacy-charge-options-${secondCase.legacyId}`),
+    ).toBeVisible();
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+    await expect(
+      page.getByTestId(`button-remove-charge-${firstCase.selectedCanonicalId}`),
+    ).toBeVisible();
+    await expect(
+      page.getByTestId(`button-remove-charge-${secondCase.legacyId}`),
+    ).toHaveCount(0);
+
+    await page
+      .getByTestId(`button-reselect-${secondCase.selectedCanonicalId}`)
+      .click();
+    await expect(
+      page.getByTestId(`legacy-charge-options-${secondCase.legacyId}`),
+    ).toHaveCount(0);
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+    for (const { selectedCanonicalId } of multiSupportedLegacyCases) {
+      await expect(
+        page.getByTestId(`button-remove-charge-${selectedCanonicalId}`),
+      ).toBeVisible();
+    }
+
+    recovery.releaseInitialRequest();
+    await submitRemainingSteps(page);
+    await expect.poll(recovery.getRetryBody).toMatchObject({
+      charges: [
+        validChargeId,
+        firstCase.selectedCanonicalId,
+        secondCase.selectedCanonicalId,
+      ],
     });
   });
 
