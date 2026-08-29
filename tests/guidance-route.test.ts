@@ -62,7 +62,11 @@ const MOCK_RULES_GUIDANCE = {
 // Storage (db connection)
 vi.mock('../server/storage', () => ({
   storage: {
-    createLegalCase: vi.fn().mockResolvedValue({ id: 'test-id', guidance: {}, sessionId: 'sess' }),
+    createLegalCase: vi.fn().mockImplementation(async (legalCase: { guidance?: unknown; sessionId?: string }) => ({
+      id: 'test-id',
+      guidance: legalCase.guidance ?? {},
+      sessionId: legalCase.sessionId ?? 'sess',
+    })),
     getLegalCase: vi.fn().mockResolvedValue(null),
     getLegalCasesBySession: vi.fn().mockResolvedValue([]),
     deleteLegalCase: vi.fn().mockResolvedValue(undefined),
@@ -200,6 +204,13 @@ const VALID_BODY = {
   caseStage: 'arraignment',
 };
 
+function parseSseEvents(body: string): Array<Record<string, any>> {
+  return body
+    .split('\n\n')
+    .filter((event) => event.startsWith('data: '))
+    .map((event) => JSON.parse(event.slice('data: '.length)));
+}
+
 // =============================================================================
 describe('POST /api/legal-guidance/rules — response envelope shape', () => {
   it('returns 200 with { success: true, sessionId, guidance } envelope', async () => {
@@ -279,6 +290,46 @@ describe('POST /api/legal-guidance/rules — response envelope shape', () => {
     expect(res.body.sessionId).toMatch(
       /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i,
     );
+  });
+});
+
+// =============================================================================
+describe('POST /api/legal-guidance/stream — exact California subdivision identity', () => {
+  it('keeps the canonical charge identity and citation in the complete SSE event without calling AI', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', '');
+
+    try {
+      const res = await request(testApp)
+        .post('/api/legal-guidance/stream')
+        .send({
+          ...VALID_BODY,
+          charges: ['ca-gross-vehicular-manslaughter-191-5-a'],
+        })
+        .expect(200);
+
+      const events = parseSseEvents(res.text);
+      const completeEvent = events.find((event) => event.type === 'complete');
+
+      expect(completeEvent).toBeDefined();
+      expect(events.at(-1)?.type).toBe('complete');
+      expect(completeEvent?.success).toBe(true);
+
+      const guidance = completeEvent?.guidance;
+      expect(guidance.chargeClassifications).toEqual([
+        expect.objectContaining({
+          id: 'ca-gross-vehicular-manslaughter-191-5-a',
+          name: 'Gross Vehicular Manslaughter While Intoxicated',
+          code: 'Cal. Penal Code § 191.5(a)',
+          verifiedCitation: 'Cal. Penal Code § 191.5(a)',
+        }),
+      ]);
+      expect(JSON.stringify(guidance)).not.toContain('ca-vehicular-homicide');
+
+      const { streamClaudeGuidance } = await import('../server/services/claude-guidance');
+      expect(streamClaudeGuidance).not.toHaveBeenCalled();
+    } finally {
+      vi.unstubAllEnvs();
+    }
   });
 });
 
