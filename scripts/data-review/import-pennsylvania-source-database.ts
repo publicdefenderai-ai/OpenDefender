@@ -10,6 +10,7 @@ import { criminalCharges } from "../../shared/criminal-charges";
 import { CHARGE_CITATIONS } from "../../shared/criminal-charge-citations";
 import {
   buildPennsylvaniaManifestRecord,
+  buildPennsylvaniaOfficialSourceUrl,
   buildPennsylvaniaSourceUrl,
   parsePennsylvaniaCitation,
   type PennsylvaniaAuthorityManifest,
@@ -24,9 +25,32 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchHtml(url: string): Promise<{ html: string; url: string } | { error: string }> {
+interface RequestLimiter {
+  lastRequestAt: number | null;
+}
+
+async function waitForRateLimit(limiter: RequestLimiter): Promise<void> {
+  if (limiter.lastRequestAt !== null) {
+    const remaining = RATE_LIMIT_MS - (Date.now() - limiter.lastRequestAt);
+    if (remaining > 0) await sleep(remaining);
+  }
+  limiter.lastRequestAt = Date.now();
+}
+
+function retryDelay(response: Response, attempt: number): number {
+  const retryAfter = Number.parseInt(response.headers.get("retry-after") ?? "", 10);
+  return Number.isFinite(retryAfter) && retryAfter >= 0
+    ? Math.min(retryAfter * 1000, 10_000)
+    : 2_000 * (attempt + 1);
+}
+
+async function fetchHtml(
+  url: string,
+  limiter: RequestLimiter,
+): Promise<{ html: string; url: string } | { error: string }> {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
+      await waitForRateLimit(limiter);
       const response = await fetch(url, {
         signal: AbortSignal.timeout(30000),
         headers: {
@@ -34,8 +58,9 @@ async function fetchHtml(url: string): Promise<{ html: string; url: string } | {
           Accept: "text/html, */*",
         },
       });
-      if (response.status === 429 && attempt < MAX_RETRIES) {
-        await sleep(2000 * (attempt + 1));
+      const retryable = response.status === 429 || response.status >= 500;
+      if (!response.ok && retryable && attempt < MAX_RETRIES) {
+        await sleep(retryDelay(response, attempt));
         continue;
       }
       if (!response.ok) return { error: `HTTP ${response.status}` };
@@ -60,6 +85,7 @@ function decodeHtml(value: string): string {
     .replace(/<[^>]+>/g, "")
     .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) => String.fromCodePoint(parseInt(hex, 16)))
     .replace(/&#(\d+);/g, (_, decimal: string) => String.fromCodePoint(Number(decimal)))
+    .replace(/&sect;/gi, "§")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, "\"")
     .replace(/&#39;|&apos;/g, "'")
@@ -71,12 +97,23 @@ function decodeHtml(value: string): string {
 }
 
 function sourceFrameUrl(html: string, sourceUrl: string): string | null {
-  const frame = html.match(/<(?:frame|iframe)\b[^>]*\bsrc\s*=\s*["']([^"']+)["']/i)?.[1];
-  return frame ? new URL(frame, sourceUrl).toString() : null;
+  const frame = html.match(/<(?:frame|iframe)\b[^>]*\bsrc\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s>]+))/i);
+  const frameSource = frame?.[1] ?? frame?.[2] ?? frame?.[3];
+  if (!frameSource) return null;
+  try {
+    return new URL(frameSource, sourceUrl).toString();
+  } catch {
+    return null;
+  }
 }
 
 function sectionMarker(section: string): RegExp {
-  return new RegExp(`(?:^|§\\s*)${section.replace(".", "\\.")}\\s*(?=\\.)`, "im");
+  const escapedSection = escapeRegex(section);
+  return new RegExp(`(?:^|§\\s*)${escapedSection}\\s*(?=\\.)`, "im");
+}
+
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
 export function extractPennsylvaniaDocument(
@@ -87,8 +124,9 @@ export function extractPennsylvaniaDocument(
 ): PennsylvaniaSourceDocument | null {
   const text = decodeHtml(html);
   if (!sectionMarker(section).test(text)) return null;
+  const escapedSection = escapeRegex(section);
   const titleMatch = text.match(new RegExp(
-    `(?:^|§\\s*)${section.replace(".", "\\.")}\\s*[.]\\s*([^\\n.]{2,160})`,
+    `(?:^|§\\s*)${escapedSection}\\s*[.]\\s*([^\\n.]{2,160})`,
     "im",
   ));
   if (!titleMatch) return null;
@@ -109,6 +147,22 @@ export function extractPennsylvaniaDocument(
 const EFFECTIVE_DATE_PATTERN =
   /\b(?:effective|eff\.?)\s+(January|February|March|April|May|June|July|August|September|October|November|December|Jan|Feb|Mar|Apr|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)\.?\s+(\d{1,2}),\s+(\d{4})/gi;
 
+const PENNSYLVANIA_OFFICIAL_HOSTS = new Set([
+  "www.palegis.us",
+  "palegis.us",
+  "www.legis.state.pa.us",
+  "legis.state.pa.us",
+]);
+
+function isPennsylvaniaOfficialUrl(value: string): boolean {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && PENNSYLVANIA_OFFICIAL_HOSTS.has(url.hostname.toLowerCase());
+  } catch {
+    return false;
+  }
+}
+
 export function extractLatestEffectiveDate(text: string): string | null {
   const dates = [...text.matchAll(EFFECTIVE_DATE_PATTERN)].map((match) => {
     const value = `${match[1]} ${match[2]}, ${match[3]}`;
@@ -118,31 +172,55 @@ export function extractLatestEffectiveDate(text: string): string | null {
   return dates[0]?.value ?? null;
 }
 
-async function fetchDocument(
+export async function fetchPennsylvaniaDocument(
   reference: PennsylvaniaSourceReference,
   retrievedAt: Date,
+  limiter: RequestLimiter = { lastRequestAt: null },
 ): Promise<PennsylvaniaSourceDocument | null> {
-  const url = buildPennsylvaniaSourceUrl(reference.title, reference.section);
-  const page = await fetchHtml(url);
-  if ("error" in page) return null;
-  let document = extractPennsylvaniaDocument(page.html, reference.section, url, retrievedAt);
-  const frameUrl = sourceFrameUrl(page.html, page.url);
-  if (!document && frameUrl) {
-    const frame = await fetchHtml(frameUrl);
-    if (!("error" in frame)) {
-      document = extractPennsylvaniaDocument(frame.html, reference.section, frameUrl, retrievedAt);
-      // The wrapper is the canonical official link stored in the manifest.
-      // The frame is an implementation detail of the legislature's site.
-      if (document) document = { ...document, sourceUrl: url };
+  const canonicalUrl = buildPennsylvaniaSourceUrl(reference.title, reference.section);
+  const retrievalUrls = [
+    buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section),
+    canonicalUrl,
+  ];
+
+  for (const retrievalUrl of retrievalUrls) {
+    const page = await fetchHtml(retrievalUrl, limiter);
+    if ("error" in page) continue;
+    if (!isPennsylvaniaOfficialUrl(page.url)) continue;
+    let document = extractPennsylvaniaDocument(
+      page.html,
+      reference.section,
+      canonicalUrl,
+      retrievedAt,
+    );
+    if (document) return document;
+
+    // The legacy site used a frameset, and a migrated page may still expose
+    // one while redirecting. Traverse only same-authority official URLs and
+    // retain the canonical manifest URL on any successful document.
+    const frameUrl = sourceFrameUrl(page.html, page.url);
+    if (frameUrl && isPennsylvaniaOfficialUrl(frameUrl)) {
+      const frame = await fetchHtml(frameUrl, limiter);
+      if (!("error" in frame)) {
+        if (!isPennsylvaniaOfficialUrl(frame.url)) continue;
+        document = extractPennsylvaniaDocument(
+          frame.html,
+          reference.section,
+          canonicalUrl,
+          retrievedAt,
+        );
+        if (document) return document;
+      }
     }
   }
-  return document;
+  return null;
 }
 
 export async function main(): Promise<void> {
   const importedAt = new Date();
   const charges = criminalCharges.filter((charge) => charge.jurisdiction === "PA");
   const documentCache = new Map<string, PennsylvaniaSourceDocument | null>();
+  const requestLimiter: RequestLimiter = { lastRequestAt: null };
   let requests = 0;
 
   for (const charge of charges) {
@@ -150,8 +228,7 @@ export async function main(): Promise<void> {
     for (const reference of references) {
       const key = `${reference.title}:${reference.section}`;
       if (documentCache.has(key)) continue;
-      if (requests > 0) await sleep(RATE_LIMIT_MS);
-      const document = await fetchDocument(reference, importedAt);
+      const document = await fetchPennsylvaniaDocument(reference, importedAt, requestLimiter);
       requests++;
       documentCache.set(key, document);
       if (document) console.log(`[OK] ${reference.title} Pa.C.S. § ${reference.section} — ${document.title}`);

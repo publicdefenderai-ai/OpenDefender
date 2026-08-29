@@ -15,6 +15,8 @@ export const PENNSYLVANIA_MANIFEST_SOURCE =
   "Pennsylvania General Assembly Consolidated Statutes (legis.state.pa.us)";
 export const PENNSYLVANIA_SOURCE_BASE =
   "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm";
+export const PENNSYLVANIA_OFFICIAL_SOURCE_BASE =
+  "https://www.palegis.us/statutes/consolidated/view-statute";
 
 export interface PennsylvaniaAuthorityManifest {
   jurisdiction: "PA";
@@ -169,6 +171,17 @@ function chapterAndSection(section: string): { chapter: string; section: string 
 export function buildPennsylvaniaSourceUrl(title: string, section: string): string {
   const parts = chapterAndSection(section);
   return `${PENNSYLVANIA_SOURCE_BASE}?txtType=HTM&ttl=${encodeURIComponent(title)}&div=0&chpt=${encodeURIComponent(parts.chapter)}&sctn=${encodeURIComponent(parts.section)}&subsctn=0`;
+}
+
+/**
+ * PAlegis.us replaced the legacy General Assembly host, but the legacy URL
+ * remains the stable citation URL in the authority manifest. Keep this
+ * retrieval URL separate from buildPennsylvaniaSourceUrl so refreshing the
+ * manifest does not rewrite its canonical links.
+ */
+export function buildPennsylvaniaOfficialSourceUrl(title: string, section: string): string {
+  const parts = chapterAndSection(section);
+  return `${PENNSYLVANIA_OFFICIAL_SOURCE_BASE}?txtType=HTM&ttl=${encodeURIComponent(title)}&div=0&chpt=${encodeURIComponent(parts.chapter)}&sctn=${encodeURIComponent(parts.section)}&subsctn=0`;
 }
 
 function provisionFromDocument(

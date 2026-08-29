@@ -5,6 +5,7 @@ import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 import { loadPennsylvaniaAuthorityManifest } from "../server/data/pennsylvania-manifest-loader";
 import {
   buildPennsylvaniaManifestRecord,
+  buildPennsylvaniaOfficialSourceUrl,
   buildPennsylvaniaSourceDatabaseSeed,
   buildPennsylvaniaSourceKey,
   buildPennsylvaniaSourceUrl,
@@ -12,7 +13,10 @@ import {
   validatePennsylvaniaManifestRecord,
   type PennsylvaniaSourceDocument,
 } from "../server/data/pennsylvania-source-database-seed";
-import { extractPennsylvaniaDocument } from "../scripts/data-review/import-pennsylvania-source-database";
+import {
+  extractPennsylvaniaDocument,
+  fetchPennsylvaniaDocument,
+} from "../scripts/data-review/import-pennsylvania-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
@@ -61,6 +65,9 @@ describe("Pennsylvania authority manifest", () => {
     expect(parsePennsylvaniaCitation("18 U.S.C. § 2113")).toEqual([]);
     expect(buildPennsylvaniaSourceUrl("18", "2502")).toContain("&chpt=25&sctn=2");
     expect(buildPennsylvaniaSourceUrl("18", "3124.1")).toContain("&chpt=31&sctn=24.1");
+    expect(buildPennsylvaniaOfficialSourceUrl("18", "2502")).toBe(
+      "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=18&div=0&chpt=25&sctn=2&subsctn=0",
+    );
     expect(buildPennsylvaniaSourceKey("18", "3124.1", "(a)")).toBe("pa:18:3124.1:a");
   });
 
@@ -142,6 +149,12 @@ describe("Pennsylvania authority manifest", () => {
       buildPennsylvaniaSourceUrl("18", "2502"),
       importedAt,
     )).toMatchObject({ section: "2502", title: "Murder" });
+    expect(extractPennsylvaniaDocument(
+      "<html><body><h1>Section 2502.0 - Title 18 - CRIMES AND OFFENSES</h1><div>&sect; 2502.&nbsp;&nbsp;Murder.</div><div>(a) A criminal homicide constitutes murder.</div></body></html>",
+      "2502",
+      buildPennsylvaniaOfficialSourceUrl("18", "2502"),
+      importedAt,
+    )).toMatchObject({ section: "2502", title: "Murder" });
   });
 
   it("keeps the official wrapper URL canonical when section content comes from a frame", () => {
@@ -161,6 +174,34 @@ describe("Pennsylvania authority manifest", () => {
     );
     expect(record.provisions[0].sourceUrl).toBe(wrapperUrl);
     expect(validatePennsylvaniaManifestRecord(record)).toBeNull();
+  });
+
+  it("retrieves migrated PAlegis HTML while retaining the legacy canonical URL", async () => {
+    const officialUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
+    const canonicalUrl = buildPennsylvaniaSourceUrl("18", "2502");
+    const originalFetch = globalThis.fetch;
+    const requestedUrls: string[] = [];
+    globalThis.fetch = (async (input: string | URL | Request) => {
+      requestedUrls.push(String(input));
+      return new Response(
+        "<html><body><h1>Section 2502.0 - Title 18 - CRIMES AND OFFENSES</h1><div>&sect; 2502.&nbsp;&nbsp;Murder.</div><div>(a) A criminal homicide constitutes murder under these statutory elements and penalties.</div></body></html>",
+        { status: 200, headers: { "content-type": "text/html" } },
+      );
+    }) as typeof fetch;
+    try {
+      const parsed = await fetchPennsylvaniaDocument(
+        { title: "18", section: "2502", subdivision: null },
+        importedAt,
+      );
+      expect(requestedUrls).toEqual([officialUrl]);
+      expect(parsed).toMatchObject({
+        section: "2502",
+        title: "Murder",
+        sourceUrl: canonicalUrl,
+      });
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
   });
 
   it("uses the existing citation overlay as input without trusting its secondary source URLs", () => {
