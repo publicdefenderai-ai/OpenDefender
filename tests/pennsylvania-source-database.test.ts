@@ -25,12 +25,12 @@ import {
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
-function document(section: string, title: string): PennsylvaniaSourceDocument {
+function document(section: string, title: string, lawTitle = "18"): PennsylvaniaSourceDocument {
   return {
     section,
     title,
     text: `§ ${section}. ${title}.\nA person commits an offense when the statutory elements are met. This is complete official section text for the test.`,
-    sourceUrl: buildPennsylvaniaSourceUrl("18", section),
+    sourceUrl: buildPennsylvaniaSourceUrl(lawTitle, section),
     retrievedAt: importedAt,
     effectiveDateStart: null,
   };
@@ -80,6 +80,35 @@ describe("Pennsylvania authority manifest", () => {
     expect(buildPennsylvaniaSourceKey("18", "3124.1", "(a)")).toBe("pa:18:3124.1:a");
   });
 
+  it("keeps representative hyphenated sections exact across parsing and official URL routing", () => {
+    const references = [
+      { title: "3", section: "459-305", chapter: "459", routedSection: "305" },
+      { title: "24", section: "13-1333", chapter: "13", routedSection: "1333" },
+      { title: "47", section: "4-406", chapter: "4", routedSection: "406" },
+    ];
+
+    for (const reference of references) {
+      expect(parsePennsylvaniaCitation(
+        `${reference.title} Pa. Cons. Stat. § ${reference.section}`,
+      )).toEqual([{
+        title: reference.title,
+        section: reference.section,
+        subdivision: null,
+      }]);
+      expect(buildPennsylvaniaSourceUrl(reference.title, reference.section)).toBe(
+        `https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=${reference.title}&div=0&chpt=${reference.chapter}&sctn=${reference.routedSection}&subsctn=0`,
+      );
+      expect(buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section)).toBe(
+        `https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=${reference.title}&div=0&chpt=${reference.chapter}&sctn=${reference.routedSection}&subsctn=0`,
+      );
+      expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).toContainEqual({
+        title: reference.title,
+        section: reference.section,
+        subdivision: null,
+      });
+    }
+  });
+
   it("stores verbatim official text and content hashes for a verified exact mapping", () => {
     const charge = criminalCharges.find((candidate) => candidate.id === "pa-aggravated-assault")!;
     const text = "§ 2702. Aggravated assault.\nA person commits an offense when the statutory elements are met.";
@@ -117,6 +146,29 @@ describe("Pennsylvania authority manifest", () => {
     expect(validatePennsylvaniaManifestRecord(tampered)).toContain("not an exact verified Pennsylvania match");
   });
 
+  it("keeps a supported section selectable only when its section and subdivision match", () => {
+    const charge = criminalCharges.find((candidate) => candidate.id === "pa-murder-in-the-first-degree")!;
+    const record = buildPennsylvaniaManifestRecord(
+      charge,
+      [document("2502", "Murder")],
+      importedAt,
+    );
+    expect(record.disposition).toBe("exact_alias_rename");
+    expect(validatePennsylvaniaManifestRecord(record)).toBeNull();
+
+    const wrongSection = {
+      ...record,
+      provisions: [{ ...record.provisions[0], section: "2503" }],
+    };
+    expect(validatePennsylvaniaManifestRecord(wrongSection)).toContain("not an exact verified Pennsylvania match");
+
+    const wrongSubdivision = {
+      ...record,
+      provisions: [{ ...record.provisions[0], subdivision: "(b)" }],
+    };
+    expect(validatePennsylvaniaManifestRecord(wrongSubdivision)).toContain("not an exact verified Pennsylvania match");
+  });
+
   it("accepts explicit aliases but withholds mismatches and incomplete compounds", () => {
     const murder = criminalCharges.find((candidate) => candidate.id === "pa-murder-in-the-first-degree")!;
     expect(buildPennsylvaniaManifestRecord(murder, [document("2502", "Murder")], importedAt).disposition)
@@ -135,6 +187,12 @@ describe("Pennsylvania authority manifest", () => {
 
     const federal = criminalCharges.find((candidate) => candidate.id === "pa-bank-robbery")!;
     expect(buildPennsylvaniaManifestRecord(federal, [], importedAt).disposition).toBe("require_exact_reselection");
+
+    const unconsolidated = criminalCharges.find(
+      (candidate) => candidate.id === "pa-distribution-of-controlled-substance",
+    )!;
+    expect(buildPennsylvaniaManifestRecord(unconsolidated, [], importedAt).disposition)
+      .toBe("require_exact_reselection");
   });
 
   it("extracts a section from official HTML and rejects missing or error pages", () => {
@@ -316,5 +374,7 @@ describe("Pennsylvania authority manifest", () => {
     expect(parsePennsylvaniaCitation(
       CHARGE_CITATIONS["pa-sexual-assault-in-the-second-degree"]?.citation ?? "",
     )).toEqual([{ title: "18", section: "3124.1", subdivision: null }]);
+    expect(parsePennsylvaniaCitation("35 Pa. Stat. § 780-113(a)(30)")).toEqual([]);
+    expect(parsePennsylvaniaCitation("72 P.S. § 7354")).toEqual([]);
   });
 });
