@@ -3,6 +3,7 @@ import { expect, test, type Page } from "@playwright/test";
 const validChargeId = "ca-robbery-in-the-first-degree";
 const supportedLegacyId = "ca-vehicular-homicide";
 const supportedCanonicalId = "ca-gross-vehicular-manslaughter-191-5-a";
+const guidanceRecoveryStorageKey = "open-defender:case-guidance-recovery";
 const multiSupportedLegacyCases = [
   {
     legacyId: supportedLegacyId,
@@ -415,5 +416,47 @@ test.describe("saved California legacy charge recovery", () => {
     await expect(page.getByTestId(`checkbox-charge-${validChargeId}`)).toBeChecked();
 
     recovery.releaseInitialRequest();
+  });
+
+  test("clears timed-out recovery before a new screener starts", async ({ page }) => {
+    test.setTimeout(60_000);
+
+    const recovery = await openRecoveryWithSavedCharges(page, [supportedLegacyId]);
+
+    const storedRecovery = await page.evaluate((storageKey) => {
+      const value = window.sessionStorage.getItem(storageKey);
+      return value ? JSON.parse(value) : null;
+    }, guidanceRecoveryStorageKey);
+    expect(storedRecovery).toMatchObject({
+      guidanceTimedOut: false,
+      reviewingTimedOutAnswers: true,
+      pendingGuidanceData: {
+        jurisdiction: "CA",
+        charges: [supportedLegacyId, validChargeId],
+        caseStage: "pretrial",
+      },
+    });
+
+    await page.getByRole("button", { name: "Clear My Session" }).click();
+    await expect(page.getByRole("dialog")).toBeVisible();
+    await page.getByTestId("button-confirm-clear-session").click();
+    await expect(page.getByTestId("button-start-guidance")).toBeVisible();
+    await expect(page.getByRole("alert")).toHaveCount(0);
+    await expect
+      .poll(() => page.evaluate((storageKey) => window.sessionStorage.getItem(storageKey), guidanceRecoveryStorageKey))
+      .toBeNull();
+
+    recovery.releaseInitialRequest();
+    await page.reload();
+
+    await expect(page.getByTestId("button-start-guidance")).toBeVisible();
+    await expect(page.getByTestId("button-review-guidance-answers")).toHaveCount(0);
+    await expect(page.getByRole("alert")).toHaveCount(0);
+    await page.getByTestId("button-start-guidance").click();
+    await expect(page.getByTestId("qa-step-circle-1")).toHaveClass(/bg-gray-700/);
+    await page
+      .getByRole("button", { name: /Personalized AI Guidance.*Continue with AI Guidance/i })
+      .click();
+    await expect(page.getByTestId("select-jurisdiction")).toBeVisible();
   });
 });
