@@ -6,6 +6,8 @@ import {
   CALIFORNIA_SOURCE_MANIFEST,
   getCaliforniaReconciliationInventory,
   getCaliforniaCanonicalRecord,
+  getCaliforniaCitation,
+  getCaliforniaSourceUrl,
   getCaliforniaLegacyDisposition,
   getCaliforniaReselectionOptions,
 } from "../shared/california-authority";
@@ -256,6 +258,34 @@ describe("authoritative California charge release", () => {
         expect(section, source.citation).toBeDefined();
         expect(source.url).toContain(`sectionNum=${section}`);
       }
+    }
+  });
+
+  it("keeps representative subdivision identity, citation, and source link together for exports", () => {
+    const representatives = [
+      "ca-gross-vehicular-manslaughter-191-5-a",
+      "ca-grand-theft-agricultural-487-b1a",
+      "ca-dui-23152-f",
+      "ca-burglary-in-the-first-degree",
+    ];
+
+    for (const canonicalId of representatives) {
+      const record = getCaliforniaCanonicalRecord(canonicalId);
+      const charge = getChargeById(canonicalId);
+      const sourceUrl = getCaliforniaSourceUrl(canonicalId);
+
+      expect(record, canonicalId).toBeDefined();
+      expect(charge?.id, canonicalId).toBe(canonicalId);
+      expect(charge?.name, canonicalId).toBe(record?.officialTitle);
+      expect(getCaliforniaCitation(canonicalId), canonicalId).toBe(record?.citation);
+      expect(getVerifiedCitation(charge!), canonicalId).toBe(record?.citation);
+      expect(sourceUrl, canonicalId).toContain("leginfo.legislature.ca.gov");
+      expect(getVerifiedSourceUrl(charge!), canonicalId).toBe(sourceUrl);
+
+      const url = new URL(sourceUrl!);
+      const section = record!.code.match(/\d+(?:\.\d+)*/)?.[0];
+      expect(url.searchParams.get("sectionNum"), canonicalId).toBe(section);
+      expect(url.searchParams.get("lawCode"), canonicalId).toBe(record!.lawCode);
     }
   });
 

@@ -64,6 +64,10 @@ type EnhancedGuidanceData = GuidanceViewModel;
 
 // Utility function to format charge names in plain English
 const formatChargeName = (name: string): string => {
+  // Canonical authority records already carry their official human-readable
+  // title, including titles with hyphenated words. Only slug-shaped labels
+  // without whitespace need title-casing.
+  if (/\s/.test(name)) return name;
   return name
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())

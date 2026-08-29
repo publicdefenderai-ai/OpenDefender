@@ -11,6 +11,7 @@ import {
 import { buildGuidanceChatSummary } from '../shared/guidance-chat-summary';
 import { GuidancePrintPlan } from '../client/src/components/legal/guidance-print-plan';
 import { renderGuidanceRichText } from '../client/src/components/legal/guidance-rich-text';
+import { getChargeById, getVerifiedCitation } from '../shared/criminal-charges';
 
 const { rendered, mockDoc, mockGetChargeExplanation } = vi.hoisted(() => {
   const rendered: string[] = [];
@@ -243,6 +244,29 @@ describe('normalized guidance surface parity', () => {
     expect(css).toContain('.guidance-print-plan');
   });
 
+  it('preserves canonical California subdivision names and citations in browser print', () => {
+    const charge = getChargeById('ca-dui-23152-f')!;
+    const guidance = normalizeGuidance({
+      ...completeGuidance(),
+      chargeClassifications: [{
+        id: charge.id,
+        name: charge.name,
+        classification: charge.category,
+        code: getVerifiedCitation(charge)!,
+        verifiedCitation: getVerifiedCitation(charge),
+      }],
+      caseData: {
+        ...completeGuidance().caseData,
+        jurisdiction: 'CA',
+      },
+    });
+
+    const markup = renderToStaticMarkup(React.createElement(GuidancePrintPlan, { guidance }));
+    expect(markup).toContain('Driving Under the Influence of a Drug');
+    expect(markup).toContain('Cal. Vehicle Code § 23152(f)');
+    expect(markup).not.toContain('DUI First Offense');
+  });
+
   it('never prints an internal charge code unless it has a verified citation', () => {
     const guidance = normalizeGuidance({
       ...completeGuidance(),
@@ -279,7 +303,7 @@ describe('normalized guidance surface parity', () => {
     rendered.length = 0;
     await generateGuidancePDF(guidance, 'en');
     const pdf = rendered.join('\n');
-    expect(pdf).toContain('Claude title charge');
+    expect(pdf).toContain('Claude Title Charge');
     expect(pdf).not.toContain('CLAUDE_INTERNAL_CODE');
   });
 

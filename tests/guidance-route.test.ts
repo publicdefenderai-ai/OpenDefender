@@ -239,6 +239,26 @@ describe('POST /api/legal-guidance/rules — response envelope shape', () => {
     expect(new Date(res.body.guidance.generatedAt).getTime()).toBeGreaterThan(0);
   });
 
+  it('returns canonical California subdivision identity and citation in guidance classifications', async () => {
+    const res = await request(testApp)
+      .post('/api/legal-guidance/rules')
+      .send({
+        ...VALID_BODY,
+        charges: ['ca-gross-vehicular-manslaughter-191-5-a'],
+      })
+      .expect(200);
+
+    expect(res.body.guidance.chargeClassifications).toEqual([
+      expect.objectContaining({
+        id: 'ca-gross-vehicular-manslaughter-191-5-a',
+        name: 'Gross Vehicular Manslaughter While Intoxicated',
+        code: 'Cal. Penal Code § 191.5(a)',
+        verifiedCitation: 'Cal. Penal Code § 191.5(a)',
+      }),
+    ]);
+    expect(res.body.guidance.chargeClassifications[0].id).not.toBe('ca-vehicular-homicide');
+  });
+
   it('uses a client-supplied sessionId when one is provided', async () => {
     const sessionId = 'client-session-abc-123';
     const res = await request(testApp)

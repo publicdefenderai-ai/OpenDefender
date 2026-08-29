@@ -95,6 +95,7 @@ vi.stubGlobal('setTimeout', vi.fn());
 
 // ── Import after mocks ────────────────────────────────────────────────────────
 import { generateGuidancePDF } from '../client/src/lib/pdf-generator';
+import { getChargeById, getVerifiedCitation } from '../shared/criminal-charges';
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -286,5 +287,36 @@ describe('generateGuidancePDF — charge summary row citation logic', () => {
     // Second charge — unverified
     expect(rows[1]).toBe('Assault Second Degree - MISDEMEANOR');
     expect(rows[1]).not.toContain('(');
+  });
+
+  it('preserves canonical California subdivision names and citations in PDF charge lines', () => {
+    const chargeIds = [
+      'ca-gross-vehicular-manslaughter-191-5-a',
+      'ca-grand-theft-agricultural-487-b1a',
+      'ca-burglary-in-the-first-degree',
+    ];
+    const charges = chargeIds.map((id) => {
+      const charge = getChargeById(id);
+      expect(charge?.id).toBe(id);
+      return {
+        name: charge!.name,
+        classification: charge!.category,
+        code: getVerifiedCitation(charge!)!,
+        verifiedCitation: getVerifiedCitation(charge!),
+      };
+    });
+
+    generateGuidancePDF(makeGuidance(charges), 'en');
+
+    const rows = chargeRows();
+    expect(rows).toHaveLength(3);
+    expect(rows[0]).toContain('Gross Vehicular Manslaughter While Intoxicated');
+    expect(rows[0]).toContain('Cal. Penal Code § 191.5(a)');
+    expect(rows[0]).not.toContain('Vehicular Homicide');
+    expect(rows[1]).toContain('Grand Theft of Specified Agricultural Crops');
+    expect(rows[1]).toContain('Cal. Penal Code § 487(b)(1)(A)');
+    expect(rows[1]).not.toContain('Grand Theft In The First Degree');
+    expect(rows[2]).toContain('First-Degree Burglary');
+    expect(rows[2]).toContain('Cal. Penal Code §§ 459, 460(a)');
   });
 });
