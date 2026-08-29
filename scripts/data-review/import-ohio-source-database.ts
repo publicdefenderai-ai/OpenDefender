@@ -146,7 +146,7 @@ export async function main(): Promise<void> {
         errors.set(reference.section, "Official Ohio page did not contain the expected complete section structure");
         console.error(`[FAIL] ${reference.section}: ${"error" in response ? response.error : "invalid section structure"}`);
       } else {
-        console.log(`[OK] ${reference.section} — ${document.title}`);
+        console.log(`[OK] ${reference.section}: ${document.title}`);
       }
     }
   }

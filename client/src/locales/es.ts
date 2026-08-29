@@ -455,7 +455,7 @@ export default {
           "reviewBody": "La verificación confirma el editor oficial, la sección, el título, el texto completo, la evidencia de vigencia, los metadatos de obtención y el hash. No significa que un abogado haya aprobado los elementos, el estado mental, la clasificación, las penas o la interpretación de vigencia; esos campos siguen pendientes de revisión legal.",
           "linksTitle": "Consulte las divulgaciones relacionadas",
           "linksIntro": "Compare esta explicación con el inventario de fuentes, la divulgación de enlaces legales, las divulgaciones generales de datos legales y los recursos oficiales del Ohio Revised Code.",
-          "officialLink": "Ohio Revised Code — Ohio Laws",
+          "officialLink": "Ohio Revised Code: Ohio Laws",
           "inventoryLink": "Inventario de fuentes de cargos",
           "statuteLink": "Divulgación de enlaces legales",
           "disclaimerLink": "Divulgaciones generales de datos legales",

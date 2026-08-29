@@ -939,8 +939,8 @@ describe('Synthesized-code guard — audited jurisdictions (hard-failing)', () =
     'VA:20-61', // Va. Code § 20-61 (criminal nonsupport/failure to support) —
                 // Title 20 (Domestic Relations) predates the decimal-dot chapter
                 // scheme used by newer VA titles (e.g. 18.2-57.2, 46.2-341).
-    'PA:459-305', // 3 Pa. Cons. Stat. § 459-305 — reviewed hyphenated Dog Law section.
-    'PA:4-406', // 47 Pa. Cons. Stat. § 4-406 — reviewed hyphenated Liquor Code section.
+    'PA:459-305', // 3 Pa. Cons. Stat. § 459-305: reviewed hyphenated Dog Law section.
+    'PA:4-406', // 47 Pa. Cons. Stat. § 4-406: reviewed hyphenated Liquor Code section.
   ]);
 
   it('no charge in an audited jurisdiction carries a synthesized-pattern code', () => {

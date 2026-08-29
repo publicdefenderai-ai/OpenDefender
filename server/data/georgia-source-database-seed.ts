@@ -12,7 +12,7 @@ import {
 export const GEORGIA_SOURCE_POLICY = "official_georgia_code_text_required";
 export const GEORGIA_SOURCE_PUBLISHER = "Georgia General Assembly";
 export const GEORGIA_MANIFEST_SOURCE =
-  "Georgia General Assembly — official codified section text unavailable via public API";
+  "Georgia General Assembly: official codified section text unavailable via public API";
 export const GEORGIA_SOURCE_BASE = "https://www.legis.ga.gov";
 
 export interface GeorgiaAuthorityManifest {

@@ -455,7 +455,7 @@ export default {
           "reviewBody": "核验确认官方发布方、条款、标题、完整返回文本、生效日期证据、获取元数据和哈希。这并不表示律师已经批准构成要件、主观心理状态、罪名等级、刑罚或现行性解释；这些字段仍标记为待律师审查。",
           "linksTitle": "查看相关披露",
           "linksIntro": "您可以将此说明与维护中的来源清单、法条链接披露、法律数据披露以及 Ohio Revised Code 官方资源进行对照。",
-          "officialLink": "Ohio Revised Code — Ohio Laws",
+          "officialLink": "Ohio Revised Code: Ohio Laws",
           "inventoryLink": "刑事指控来源清单",
           "statuteLink": "法条链接披露",
           "disclaimerLink": "一般法律数据披露",

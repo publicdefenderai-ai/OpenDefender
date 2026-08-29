@@ -119,7 +119,7 @@ describe('GET /api/v1/export/charges?jurisdiction=NY — runtime eligibility con
   });
 });
 
-describe('GET /api/criminal-charges?jurisdiction=CA — instructionRef/instructionUrl contract', () => {
+describe('GET /api/criminal-charges?jurisdiction=CA: instructionRef/instructionUrl contract', () => {
   it('returns success: true and a charges array', () => {
     if (!serverAvailable || !californiaAuthorityAvailable) return;
     expect(response.success).toBe(true);
@@ -221,7 +221,7 @@ beforeAll(async () => {
   }
 }, 15000);
 
-describe('GET /api/v1/search?q=robbery&types=charge — instructionRef/instructionUrl contract', () => {
+describe('GET /api/v1/search?q=robbery&types=charge: instructionRef/instructionUrl contract', () => {
   it('returns success: true and a results array with at least one charge', () => {
     if (!serverAvailable) return;
     expect(v1Response.success).toBe(true);
@@ -335,7 +335,7 @@ beforeAll(async () => {
   }
 }, 10000);
 
-describe('GET /api/criminal-charges — citation field contract', () => {
+describe('GET /api/criminal-charges: citation field contract', () => {
   it('every CA charge in the response has a `citation` field (string or null, never undefined)', () => {
     if (!serverAvailable || !californiaAuthorityAvailable) return;
     const missing = response.charges.filter(

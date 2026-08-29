@@ -11,7 +11,7 @@ import {
 
 export const OHIO_SOURCE_POLICY = "official_ohio_revised_code";
 export const OHIO_SOURCE_PUBLISHER = "Ohio Legislative Service Commission";
-export const OHIO_MANIFEST_SOURCE = "Ohio Laws — codes.ohio.gov";
+export const OHIO_MANIFEST_SOURCE = "Ohio Laws: codes.ohio.gov";
 export const OHIO_SOURCE_BASE = "https://codes.ohio.gov/ohio-revised-code";
 
 export interface OhioAuthorityManifest {

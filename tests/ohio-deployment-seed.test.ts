@@ -7,7 +7,7 @@ describe("committed Ohio deployment seed", () => {
     const manifest = loadOhioAuthorityManifest();
     const seed = buildOhioSourceDatabaseSeed(manifest);
 
-    expect(manifest.source).toBe("Ohio Laws — codes.ohio.gov");
+    expect(manifest.source).toBe("Ohio Laws: codes.ohio.gov");
     expect(manifest.catalogRecords).toHaveLength(115);
     expect(seed.selectableChargeIds).toHaveLength(13);
     expect(seed.sources.every((source) =>

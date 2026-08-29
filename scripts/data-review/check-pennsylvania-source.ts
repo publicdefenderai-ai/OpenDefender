@@ -23,7 +23,7 @@ export async function main(): Promise<void> {
     const prefix = page.ok ? "[OK]" : "[FAIL]";
     const write = page.ok ? console.log : console.error;
     write(
-      `${prefix} ${page.source} — Title ${page.reference.title} § ${page.reference.section} — ${page.requestedUrl}`,
+      `${prefix} ${page.source}, Title ${page.reference.title} § ${page.reference.section}: ${page.requestedUrl}`,
     );
     for (const failure of page.failures) {
       if (!page.ok) console.error(`       ${failure}`);

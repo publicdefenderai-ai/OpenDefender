@@ -453,7 +453,7 @@ export default {
           "reviewBody": "Verification confirms the official publisher, section, catchline, complete returned text, effective-date evidence, retrieval metadata, and hash. It does not mean a lawyer approved the elements, mental state, grading, penalties, or currentness interpretation; those fields remain pending attorney review.",
           "linksTitle": "Review the underlying disclosures",
           "linksIntro": "Compare this explanation with the maintained source inventory, statute-link disclosure, legal-data disclosures, and Ohio's official Revised Code resources.",
-          "officialLink": "Ohio Revised Code — Ohio Laws",
+          "officialLink": "Ohio Revised Code: Ohio Laws",
           "inventoryLink": "Criminal-charge source inventory",
           "statuteLink": "Statute-link disclosure",
           "disclaimerLink": "General legal-data disclosures",
