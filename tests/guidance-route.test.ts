@@ -153,6 +153,7 @@ vi.mock('../server/config/ai-model', () => ({
 // Route-specific service mocks
 vi.mock('../server/services/guidance-engine', () => ({
   generateEnhancedGuidance: vi.fn().mockReturnValue(MOCK_RULES_GUIDANCE),
+  stampEstimateDeadlines: vi.fn().mockImplementation((_jurisdiction: string, deadlines: unknown) => deadlines),
 }));
 vi.mock('../server/services/pii-redactor', () => ({
   redactCaseDetails: vi.fn().mockImplementation((data: unknown) => ({
@@ -212,6 +213,24 @@ const EXPECTED_CHARGE_IDENTITY = [{
   code: 'Cal. Penal Code § 191.5(a)',
   verifiedCitation: 'Cal. Penal Code § 191.5(a)',
 }];
+
+const MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE = {
+  ...MOCK_RULES_GUIDANCE,
+  overview: 'Mock AI guidance with intentionally incorrect charge metadata.',
+  chargeClassifications: [{
+    id: 'ai-invented-charge-id',
+    name: 'AI-Invented Charge Name',
+    title: 'AI-Invented Charge Title',
+    classification: 'AI-invented classification',
+    code: 'AI § 999.9',
+    verifiedCitation: 'AI § 999.9',
+    maxPenalty: 'AI-invented penalty',
+  }],
+  usageMetrics: {
+    ...MOCK_RULES_GUIDANCE.usageMetrics,
+    model: 'claude-test',
+  },
+};
 
 function parseSseEvents(body: string): Array<Record<string, any>> {
   return body
@@ -359,6 +378,58 @@ describe('legal guidance routes — canonical charge parity', () => {
       expect(generateClaudeGuidance).not.toHaveBeenCalled();
       expect(streamClaudeGuidance).not.toHaveBeenCalled();
     } finally {
+      vi.unstubAllEnvs();
+    }
+  });
+
+  it('keeps catalog-owned charge identity when AI returns a drifting title or citation', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', 'test-anthropic-key');
+
+    const { generateClaudeGuidance, streamClaudeGuidance } = await import('../server/services/claude-guidance');
+    (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+    (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+
+    try {
+      const body = {
+        ...VALID_BODY,
+        charges: [CANONICAL_SUBDIVISION_CHARGE],
+        // The ordinary route only uses AI when there is personalized case
+        // context; the stream route is AI-enabled for every valid request.
+        incidentDescription: 'Mock case context for the AI route test.',
+      };
+
+      const ordinaryResponse = await request(testApp)
+        .post('/api/legal-guidance')
+        .send(body)
+        .expect(200);
+      const streamResponse = await request(testApp)
+        .post('/api/legal-guidance/stream')
+        .send(body)
+        .expect(200);
+
+      const streamCompleteEvent = parseSseEvents(streamResponse.text)
+        .find((event) => event.type === 'complete');
+      expect(streamCompleteEvent?.success).toBe(true);
+
+      for (const guidance of [
+        ordinaryResponse.body.guidance,
+        streamCompleteEvent?.guidance,
+      ]) {
+        expect(guidance.generatedBy).toBe('claude-ai');
+        expect(chargeIdentity(guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+        expect(JSON.stringify(guidance)).not.toContain('ai-invented-charge-id');
+        expect(JSON.stringify(guidance)).not.toContain('AI § 999.9');
+      }
+
+      expect(generateClaudeGuidance).toHaveBeenCalledTimes(1);
+      expect(streamClaudeGuidance).toHaveBeenCalledTimes(1);
+    } finally {
+      (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+      (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
       vi.unstubAllEnvs();
     }
   });
