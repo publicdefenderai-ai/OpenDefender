@@ -460,6 +460,27 @@ export default {
           "chargeLookupTitle": "Inspect a charge's current provenance",
           "chargeLookupBody": "In the Ohio charge selector, open “View current source details” for a selectable charge to see its official catchline, exact Ohio Revised Code citation, source link, retrieval and effective dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
         },
+        "gaSources": {
+          "eyebrow": "Georgia charge sources",
+          "title": "Why Georgia charges are currently withheld",
+          "intro": "The Georgia inventory preserves all 129 catalog rows, but no Georgia row is published as current authority yet. The Georgia General Assembly public API exposes code-title metadata, not the complete current codified section text needed for a trustworthy match.",
+          "authorityTitle": "Official-source boundary",
+          "authorityBody": "The review checked the Georgia General Assembly's public API and official code-access path. The public API does not provide a stable per-section text document, while the Official Code of Georgia Annotated section service requires authenticated Lexis access. No secondary site is used as a substitute.",
+          "failClosedTitle": "Why every current row is withheld",
+          "failClosedBody": "Until exact official section identity, matching title, complete text, currentness metadata, a current official link, and provenance can be verified, every Georgia row remains unavailable. Withheld rows do not appear in charge selection, guidance, search, or exports.",
+          "catalogTitle": "No secondary-source substitution",
+          "catalogBody": "Justia, OpenLaws, pattern jury instructions, Model Penal Code descriptions, training-data mappings, inferred sections, compound records, federal concepts, and placeholders are not treated as Georgia statutory authority.",
+          "reviewTitle": "A source limitation is not a legal conclusion",
+          "reviewBody": "This boundary means only that the current public source contract cannot support a verified catalog record. It is not legal advice and does not determine whether a Georgia offense exists or applies; attorneys should consult the current official code.",
+          "linksTitle": "Review the underlying disclosures",
+          "linksIntro": "Use the Georgia General Assembly's official site for current legislative information. The catalog will publish a Georgia charge only after the required official section evidence is available.",
+          "officialLink": "Georgia General Assembly",
+          "inventoryLink": "Criminal-charge source inventory",
+          "statuteLink": "Statute-link disclosure",
+          "disclaimerLink": "General legal-data disclosures",
+          "chargeLookupTitle": "Inspect Georgia authority status",
+          "chargeLookupBody": "The Georgia status endpoint reports the committed manifest boundary. Because all current Georgia rows are withheld, the charge provenance endpoint returns no current authority instead of exposing legacy or secondary links."
+        },
           "labels": { "coverage": "Coverage / count", "freshness": "Freshness", "sourcePath": "Source path", "sourceType": "Source type", "sources": "Named sources", "citations": "Citation / reference format", "providerDisclosure": "Provider disclosure", "limitation": "Limitation" },
         "sourceTypes": {
           "primaryLegalText": "Primary legal text",

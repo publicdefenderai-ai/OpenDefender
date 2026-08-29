@@ -462,6 +462,27 @@ export default {
           "chargeLookupTitle": "查看指控的当前来源追溯信息",
           "chargeLookupBody": "在俄亥俄州指控选择器中，对可选指控打开“查看当前来源详情”，即可查看官方标题、精确 Ohio Revised Code 引文、来源链接、获取和生效日期、来源内容是否可用以及内容哈希。如果当前权威来源不可用，该指控将无法选择，系统也不会显示旧的来源追溯信息。"
         },
+        "gaSources": {
+          "eyebrow": "佐治亚州指控来源",
+          "title": "为什么佐治亚州指控目前被暂缓",
+          "intro": "佐治亚州清单保留目录中的全部 129 条记录，但目前没有任何记录作为现行权威发布。佐治亚州议会公开 API 只提供法典标题元数据，没有可信匹配所需的完整现行编纂条文文本。",
+          "authorityTitle": "官方来源边界",
+          "authorityBody": "核查包括佐治亚州议会公开 API 和官方法典访问路径。公开 API 没有稳定的逐条款文本文件，而 Official Code of Georgia Annotated 条款服务需要经过认证的 Lexis 访问。不会用任何次级网站替代官方文本。",
+          "failClosedTitle": "为什么每条现行记录都被暂缓",
+          "failClosedBody": "在能够核实官方条款的精确身份、匹配标题、完整文本、现行性元数据、当前官方链接和来源追溯信息之前，所有佐治亚州记录都保持不可用。暂缓记录不会出现在指控选择、指导、搜索或导出中。",
+          "catalogTitle": "不以次级来源替代",
+          "catalogBody": "Justia、OpenLaws、示范陪审团指示、示范刑法典描述、训练数据映射、推断条款、复合记录、联邦概念和占位记录都不会被当作佐治亚州成文法权威。",
+          "reviewTitle": "来源限制不是法律结论",
+          "reviewBody": "这个边界只表示当前公开来源合同不足以验证目录记录。这不是法律建议，也不判断佐治亚州罪名是否存在或适用；律师应查阅当前官方法典。",
+          "linksTitle": "查看相关披露",
+          "linksIntro": "现行立法信息请使用佐治亚州议会官方站点。只有在具备所需官方条款证据后，目录才会发布佐治亚州指控。",
+          "officialLink": "佐治亚州议会",
+          "inventoryLink": "刑事指控来源清单",
+          "statuteLink": "法条链接披露",
+          "disclaimerLink": "一般法律数据披露",
+          "chargeLookupTitle": "查看佐治亚州权威状态",
+          "chargeLookupBody": "佐治亚州状态 endpoint 报告已提交清单的边界。由于所有当前佐治亚州记录都被暂缓，指控来源追溯 endpoint 不返回现行权威，而不会暴露旧链接或次级链接。"
+        },
           "labels": { "coverage": "覆盖范围 / 数量", "freshness": "更新时间", "sourcePath": "来源路径", "sourceType": "来源类型", "sources": "来源名称", "citations": "引文 / 参考格式", "providerDisclosure": "服务商披露", "limitation": "限制" },
         "sourceTypes": {
           "primaryLegalText": "主要法律文本",

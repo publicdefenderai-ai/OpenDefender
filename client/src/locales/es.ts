@@ -462,6 +462,27 @@ export default {
           "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
           "chargeLookupBody": "En el selector de cargos de Ohio, abra «Ver detalles de la fuente actual» para ver el título oficial, la cita exacta del Ohio Revised Code, el enlace, las fechas de obtención y vigencia, la disponibilidad del contenido y el hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
         },
+        "gaSources": {
+          "eyebrow": "Fuentes de cargos de Georgia",
+          "title": "Por qué los cargos de Georgia están retenidos actualmente",
+          "intro": "El inventario de Georgia conserva las 129 filas del catálogo, pero ninguna se publica todavía como autoridad vigente. La API pública de la Asamblea General de Georgia muestra metadatos de títulos, no el texto codificado completo necesario para una correspondencia confiable.",
+          "authorityTitle": "Límite de la fuente oficial",
+          "authorityBody": "La revisión comprobó la API pública de la Asamblea General de Georgia y la vía oficial de acceso al código. La API pública no ofrece un documento estable de texto por sección y el servicio del Official Code of Georgia Annotated requiere acceso autenticado de Lexis. No se usa ningún sitio secundario como sustituto.",
+          "failClosedTitle": "Por qué se retiene cada fila actual",
+          "failClosedBody": "Hasta que se puedan verificar la identidad exacta de la sección oficial, el título coincidente, el texto completo, los metadatos de vigencia, un enlace oficial actual y la procedencia, cada fila de Georgia permanece no disponible. Las filas retenidas no aparecen en selección de cargos, orientación, búsquedas ni exportaciones.",
+          "catalogTitle": "Sin sustitución por fuentes secundarias",
+          "catalogBody": "Justia, OpenLaws, instrucciones modelo para jurados, descripciones del Model Penal Code, correspondencias de datos de entrenamiento, secciones inferidas, registros compuestos, conceptos federales y marcadores de posición no se tratan como autoridad estatutaria de Georgia.",
+          "reviewTitle": "Una limitación de fuente no es una conclusión legal",
+          "reviewBody": "Este límite solo significa que el contrato público actual de fuentes no permite verificar un registro del catálogo. No es asesoramiento legal ni determina si existe o aplica un delito de Georgia; los abogados deben consultar el código oficial vigente.",
+          "linksTitle": "Consulte las divulgaciones subyacentes",
+          "linksIntro": "Use el sitio oficial de la Asamblea General de Georgia para la información legislativa vigente. El catálogo publicará un cargo de Georgia solo cuando exista la evidencia oficial de sección requerida.",
+          "officialLink": "Asamblea General de Georgia",
+          "inventoryLink": "Inventario de fuentes de cargos",
+          "statuteLink": "Divulgación de enlaces legales",
+          "disclaimerLink": "Divulgaciones generales de datos legales",
+          "chargeLookupTitle": "Consulte el estado de autoridad de Georgia",
+          "chargeLookupBody": "El endpoint de estado de Georgia informa el límite del manifiesto comprometido. Como todas las filas actuales de Georgia están retenidas, el endpoint de procedencia no devuelve autoridad vigente en lugar de exponer enlaces antiguos o secundarios."
+        },
           "labels": { "coverage": "Cobertura / conteo", "freshness": "Actualización", "sourcePath": "Ruta de la fuente", "sourceType": "Tipo de fuente", "sources": "Fuentes nombradas", "citations": "Formato de cita / referencia", "providerDisclosure": "Divulgación del proveedor", "limitation": "Limitación" },
         "sourceTypes": {
           "primaryLegalText": "Texto legal primario",
