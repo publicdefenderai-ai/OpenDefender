@@ -170,6 +170,12 @@ vi.mock('../server/services/cost-tracker', () => ({
     daily: { limit: 10, spent: 0, remaining: 10 },
   }),
 }));
+vi.mock('../server/services/authority-eligibility', () => ({
+  getCurrentAuthoritySelectableChargeIds: vi.fn().mockResolvedValue(
+    new Set(['ca-gross-vehicular-manslaughter-191-5-a']),
+  ),
+  filterAuthorityBackedCharges: vi.fn().mockImplementation((items: Array<{ id: string }>) => items),
+}));
 vi.mock('../server/services/captcha-verification', () => ({
   isCaptchaRequired: vi.fn().mockReturnValue(false),
   verifyCaptcha: vi.fn().mockResolvedValue({ success: true }),
