@@ -1,8 +1,105 @@
 import { describe, expect, it } from "vitest";
 import express from "express";
 import request from "supertest";
+import type { AuthoritySourceDatabaseSeed } from "../server/services/authority-source-database";
 
 const runIntegration = process.env.RUN_TEXAS_SOURCE_DB_INTEGRATION === "1";
+
+function makeTexasIntegrationSeed(
+  contentHash: string,
+  {
+    chargeId,
+    sourceKey,
+    importedAt,
+    effectiveDateStart = "September 1, 2025",
+  }: {
+    chargeId: string;
+    sourceKey: string;
+    importedAt: Date;
+    effectiveDateStart?: string;
+  },
+): AuthoritySourceDatabaseSeed {
+  const sourceUrl = "https://tcss.legis.texas.gov/resources/PE/htm/PE.22.htm#22.02";
+  const citation = "Tex. Penal Code § 22.02";
+  const fingerprint = `${contentHash}:${effectiveDateStart}`;
+
+  return {
+    jurisdiction: "TX",
+    sourcePolicy: "integration_test",
+    sources: [{
+      sourceKey,
+      jurisdiction: "TX",
+      publisher: "Texas Legislative Council TCSS",
+      sourceType: "statute",
+      canonicalUrl: sourceUrl,
+      apiIdentifier: "PE/22.02",
+      accessPolicy: "store_text",
+      reuseStatus: "permitted",
+      canStoreContent: true,
+      lastRetrievedAt: importedAt,
+      lastCheckedAt: importedAt,
+      metadata: { integrationTest: true },
+    }],
+    snapshots: [{
+      sourceKey,
+      jurisdiction: "TX",
+      citation,
+      section: "PE/22.02",
+      officialTitle: "AGGRAVATED ASSAULT.",
+      sourceUrl,
+      content: `integration test source text ${contentHash}`,
+      contentHash,
+      hashBasis: "source_content",
+      retrievedAt: importedAt,
+      manifestImportedAt: importedAt,
+      effectiveDateStart,
+      effectiveDateEnd: null,
+      status: "current",
+      requiresReview: false,
+      supersedesSnapshotId: null,
+      metadata: {
+        integrationTest: true,
+        fingerprint,
+      },
+    }],
+    links: [{
+      chargeId,
+      snapshotKey: sourceKey,
+      supportRole: "offense",
+      citation,
+      subdivision: null,
+    }],
+    catalogRecords: [{
+      chargeId,
+      catalogLabel: "Integration Test Charge",
+      catalogCode: "PE 22.02",
+      catalogCategory: "Assault",
+      disposition: "retain",
+      dispositionReason: "Integration test",
+      canonicalTitle: "AGGRAVATED ASSAULT.",
+      provisions: [{
+        sourceKey,
+        lawId: "PE",
+        section: "22.02",
+        citation,
+        officialTitle: "AGGRAVATED ASSAULT.",
+        sourceUrl,
+        content: `integration test source text ${contentHash}`,
+        contentHash,
+        hashBasis: "source_content",
+        retrievedAt: importedAt,
+        effectiveDateStart,
+        effectiveDateEnd: null,
+        supportRole: "offense",
+        subdivision: null,
+        metadata: { fingerprint },
+      }],
+      apiStatus: "verified",
+    }],
+    selectableChargeIds: [chargeId],
+    generatedAt: importedAt,
+  };
+}
 
 describe.skipIf(!runIntegration)("Texas source database persistence", () => {
   it("fails closed when a current TCSS snapshot changes and enters pending review", async () => {
@@ -30,81 +127,11 @@ describe.skipIf(!runIntegration)("Texas source database persistence", () => {
     const makeSeed = (
       contentHash: string,
       effectiveDateStart = "September 1, 2025",
-    ) => ({
-      jurisdiction: "TX",
-      sourcePolicy: "integration_test",
-      sources: [{
-        sourceKey,
-        jurisdiction: "TX",
-        publisher: "Texas Legislative Council TCSS",
-        sourceType: "statute",
-        canonicalUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.22.htm#22.02",
-        apiIdentifier: "PE/22.02",
-        accessPolicy: "store_text",
-        reuseStatus: "permitted",
-        canStoreContent: true,
-        lastRetrievedAt: importedAt,
-        lastCheckedAt: importedAt,
-        metadata: { integrationTest: true },
-      }],
-      snapshots: [{
-        sourceKey,
-        jurisdiction: "TX",
-        citation: "Tex. Penal Code § 22.02",
-        section: "PE/22.02",
-        officialTitle: "AGGRAVATED ASSAULT.",
-        sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.22.htm#22.02",
-        content: `integration test source text ${contentHash}`,
-        contentHash,
-        hashBasis: "source_content",
-        retrievedAt: importedAt,
-        manifestImportedAt: importedAt,
-        effectiveDateStart,
-        effectiveDateEnd: null,
-        status: "current",
-        requiresReview: false,
-        supersedesSnapshotId: null,
-        metadata: {
-          integrationTest: true,
-          fingerprint: `${contentHash}:${effectiveDateStart}`,
-        },
-      }],
-      links: [{
-        chargeId,
-        snapshotKey: sourceKey,
-        supportRole: "offense",
-        citation: "Tex. Penal Code § 22.02",
-        subdivision: null,
-      }],
-      catalogRecords: [{
-        chargeId,
-        catalogLabel: "Integration Test Charge",
-        catalogCode: "PE 22.02",
-        catalogCategory: "Assault",
-        disposition: "retain",
-        dispositionReason: "Integration test",
-        canonicalTitle: "AGGRAVATED ASSAULT.",
-        provisions: [{
-          sourceKey,
-          lawId: "PE",
-          section: "22.02",
-          citation: "Tex. Penal Code § 22.02",
-          officialTitle: "AGGRAVATED ASSAULT.",
-          sourceUrl: "https://tcss.legis.texas.gov/resources/PE/htm/PE.22.htm#22.02",
-          content: `integration test source text ${contentHash}`,
-          contentHash,
-          hashBasis: "source_content",
-          retrievedAt: importedAt,
-          effectiveDateStart,
-          effectiveDateEnd: null,
-          supportRole: "offense",
-          subdivision: null,
-          metadata: { fingerprint: `${contentHash}:${effectiveDateStart}` },
-        }],
-        apiStatus: "verified",
-      }],
-      selectableChargeIds: [chargeId],
-      generatedAt: importedAt,
+    ) => makeTexasIntegrationSeed(contentHash, {
+      chargeId,
+      sourceKey,
+      importedAt,
+      effectiveDateStart,
     });
 
     try {
@@ -291,14 +318,32 @@ describe.skipIf(!runIntegration)("Texas source database persistence", () => {
           // Review decisions are append-only in production. Integration
           // teardown uses a narrowly scoped privileged fixture cleanup and
           // immediately restores the trigger.
-          await db.execute(sql`ALTER TABLE statute_source_review_decisions
-            DISABLE TRIGGER statute_source_review_decisions_append_only`);
+          await db.execute(sql`DO $$
+            BEGIN
+              IF EXISTS (
+                SELECT 1 FROM pg_trigger
+                WHERE tgrelid = 'statute_source_review_decisions'::regclass
+                  AND tgname = 'statute_source_review_decisions_append_only'
+              ) THEN
+                ALTER TABLE statute_source_review_decisions
+                  DISABLE TRIGGER statute_source_review_decisions_append_only;
+              END IF;
+            END $$`);
           try {
             await db.delete(statuteSourceReviewDecisions)
               .where(inArray(statuteSourceReviewDecisions.snapshotId, snapshotIds));
           } finally {
-            await db.execute(sql`ALTER TABLE statute_source_review_decisions
-              ENABLE TRIGGER statute_source_review_decisions_append_only`);
+            await db.execute(sql`DO $$
+              BEGIN
+                IF EXISTS (
+                  SELECT 1 FROM pg_trigger
+                  WHERE tgrelid = 'statute_source_review_decisions'::regclass
+                    AND tgname = 'statute_source_review_decisions_append_only'
+                ) THEN
+                  ALTER TABLE statute_source_review_decisions
+                    ENABLE TRIGGER statute_source_review_decisions_append_only;
+                END IF;
+              END $$`);
           }
           await db.delete(statuteChargeLinks)
             .where(inArray(statuteChargeLinks.snapshotId, snapshotIds));
@@ -309,6 +354,223 @@ describe.skipIf(!runIntegration)("Texas source database persistence", () => {
       }
       await db.delete(statuteUpdateQueue)
         .where(eq(statuteUpdateQueue.citation, "Tex. Penal Code § 22.02"));
+      for (const runId of runIds) {
+        await db.delete(statuteIngestionRuns)
+          .where(eq(statuteIngestionRuns.id, runId));
+      }
+    }
+  }, 30_000);
+
+  it("serializes competing approvals so only one pending predecessor can become current", async () => {
+    const { db } = await import("../server/db");
+    const {
+      statuteChargeLinks,
+      statuteIngestionRuns,
+      statuteSourceReviewDecisions,
+      statuteSourceSnapshots,
+      statuteSources,
+      statuteUpdateQueue,
+    } = await import("@shared/schema");
+    const { and, eq, inArray, sql } = await import("drizzle-orm");
+    const {
+      getPendingAuthoritySourceSnapshots,
+      reviewAuthoritySourceSnapshot,
+      seedAuthoritySourceDatabase,
+    } = await import("../server/services/authority-source-database");
+
+    const chargeId = "tx-integration-competing-approvals";
+    const sourceKey = "tx:integration:competing-approvals";
+    const citation = "Tex. Penal Code § 22.02";
+    const runIds: string[] = [];
+
+    const makeSeed = (contentHash: string, importedAt: Date) =>
+      makeTexasIntegrationSeed(contentHash, { chargeId, sourceKey, importedAt });
+
+    try {
+      const initial = await seedAuthoritySourceDatabase(makeSeed(
+        "hash-competing-initial",
+        new Date("2026-08-28T00:00:00.000Z"),
+      ));
+      runIds.push(initial.runId);
+      expect(initial.success).toBe(true);
+
+      const firstImport = await seedAuthoritySourceDatabase(makeSeed(
+        "hash-competing-first",
+        new Date("2026-08-28T01:00:00.000Z"),
+      ));
+      runIds.push(firstImport.runId);
+      expect(firstImport.success).toBe(true);
+      expect(firstImport.changeCount).toBeGreaterThan(0);
+
+      const secondImport = await seedAuthoritySourceDatabase(makeSeed(
+        "hash-competing-second",
+        new Date("2026-08-28T02:00:00.000Z"),
+      ));
+      runIds.push(secondImport.runId);
+      expect(secondImport.success).toBe(true);
+      expect(secondImport.changeCount).toBeGreaterThan(0);
+
+      const pendingSnapshots = await getPendingAuthoritySourceSnapshots("TX");
+      const firstPending = pendingSnapshots.find(
+        (snapshot) => snapshot.contentHash === "hash-competing-first",
+      );
+      const secondPending = pendingSnapshots.find(
+        (snapshot) => snapshot.contentHash === "hash-competing-second",
+      );
+      expect(pendingSnapshots.map((snapshot) => snapshot.contentHash)).toEqual(
+        expect.arrayContaining(["hash-competing-first", "hash-competing-second"]),
+      );
+      expect(firstPending).toBeDefined();
+      expect(secondPending).toBeDefined();
+      expect(firstPending?.supersedesSnapshotId).toBeTruthy();
+      expect(secondPending?.supersedesSnapshotId).toBe(firstPending?.supersedesSnapshotId);
+
+      const attempts = await Promise.allSettled([
+        reviewAuthoritySourceSnapshot({
+          jurisdiction: "TX",
+          snapshotId: firstPending!.id,
+          decision: "approve",
+          reviewer: "competing-reviewer-one",
+          note: "Approved first competing snapshot.",
+        }),
+        reviewAuthoritySourceSnapshot({
+          jurisdiction: "TX",
+          snapshotId: secondPending!.id,
+          decision: "approve",
+          reviewer: "competing-reviewer-two",
+          note: "Approved second competing snapshot.",
+        }),
+      ]);
+      const successfulAttempts = attempts.filter(
+        (attempt) => attempt.status === "fulfilled",
+      );
+      const rejectedAttempts = attempts.filter(
+        (attempt) => attempt.status === "rejected",
+      );
+      expect(successfulAttempts).toHaveLength(1);
+      expect(rejectedAttempts).toHaveLength(1);
+      const rejectedAttempt = rejectedAttempts[0];
+      if (rejectedAttempt.status === "rejected") {
+        expect(rejectedAttempt.reason).toMatchObject({
+          name: "AuthoritySourceReviewError",
+          statusCode: 409,
+          message: "Pending snapshot does not have a current predecessor to replace",
+        });
+      }
+
+      const winnerId = successfulAttempts[0].status === "fulfilled"
+        ? successfulAttempts[0].value.snapshot.id
+        : "";
+      const loserId = winnerId === firstPending!.id ? secondPending!.id : firstPending!.id;
+      const predecessorId = firstPending!.supersedesSnapshotId!;
+      expect([firstPending!.id, secondPending!.id]).toContain(winnerId);
+
+      const snapshotRows = await db.select({
+        id: statuteSourceSnapshots.id,
+        contentHash: statuteSourceSnapshots.contentHash,
+        status: statuteSourceSnapshots.status,
+        requiresReview: statuteSourceSnapshots.requiresReview,
+        supersedesSnapshotId: statuteSourceSnapshots.supersedesSnapshotId,
+      }).from(statuteSourceSnapshots)
+        .innerJoin(statuteSources, eq(statuteSourceSnapshots.sourceId, statuteSources.id))
+        .where(eq(statuteSources.sourceKey, sourceKey));
+      expect(snapshotRows).toHaveLength(3);
+      expect(snapshotRows).toEqual(expect.arrayContaining([
+        expect.objectContaining({
+          id: predecessorId,
+          contentHash: "hash-competing-initial",
+          status: "superseded",
+          requiresReview: false,
+        }),
+        expect.objectContaining({
+          id: winnerId,
+          status: "current",
+          requiresReview: false,
+        }),
+        expect.objectContaining({
+          id: loserId,
+          status: "pending_review",
+          requiresReview: true,
+          supersedesSnapshotId: predecessorId,
+        }),
+      ]));
+      expect(snapshotRows.filter((snapshot) => snapshot.status === "current")).toHaveLength(1);
+
+      const linkRows = await db.select({
+        snapshotId: statuteChargeLinks.snapshotId,
+        isCurrent: statuteChargeLinks.isCurrent,
+      }).from(statuteChargeLinks)
+        .where(eq(statuteChargeLinks.chargeId, chargeId));
+      expect(linkRows).toHaveLength(2);
+      expect(linkRows).toEqual(expect.arrayContaining([
+        { snapshotId: predecessorId, isCurrent: false },
+        { snapshotId: winnerId, isCurrent: true },
+      ]));
+      expect(linkRows.some((link) => link.snapshotId === loserId)).toBe(false);
+
+      const auditRows = await db.select({
+        snapshotId: statuteSourceReviewDecisions.snapshotId,
+        decision: statuteSourceReviewDecisions.decision,
+        snapshotHash: statuteSourceReviewDecisions.snapshotHash,
+        previousSnapshotId: statuteSourceReviewDecisions.previousSnapshotId,
+      }).from(statuteSourceReviewDecisions)
+        .where(inArray(statuteSourceReviewDecisions.snapshotId, [
+          firstPending!.id,
+          secondPending!.id,
+        ]));
+      expect(auditRows).toEqual([{
+        snapshotId: winnerId,
+        decision: "approve",
+        snapshotHash: winnerId === firstPending!.id
+          ? "hash-competing-first"
+          : "hash-competing-second",
+        previousSnapshotId: predecessorId,
+      }]);
+    } finally {
+      const sourceRows = await db.select({ id: statuteSources.id })
+        .from(statuteSources).where(eq(statuteSources.sourceKey, sourceKey));
+      const sourceIds = sourceRows.map((row) => row.id);
+      if (sourceIds.length > 0) {
+        const snapshotRows = await db.select({ id: statuteSourceSnapshots.id })
+          .from(statuteSourceSnapshots).where(eq(statuteSourceSnapshots.sourceId, sourceIds[0]));
+        const snapshotIds = snapshotRows.map((row) => row.id);
+        if (snapshotIds.length > 0) {
+          await db.execute(sql`DO $$
+            BEGIN
+              IF EXISTS (
+                SELECT 1 FROM pg_trigger
+                WHERE tgrelid = 'statute_source_review_decisions'::regclass
+                  AND tgname = 'statute_source_review_decisions_append_only'
+              ) THEN
+                ALTER TABLE statute_source_review_decisions
+                  DISABLE TRIGGER statute_source_review_decisions_append_only;
+              END IF;
+            END $$`);
+          try {
+            await db.delete(statuteSourceReviewDecisions)
+              .where(inArray(statuteSourceReviewDecisions.snapshotId, snapshotIds));
+          } finally {
+            await db.execute(sql`DO $$
+              BEGIN
+                IF EXISTS (
+                  SELECT 1 FROM pg_trigger
+                  WHERE tgrelid = 'statute_source_review_decisions'::regclass
+                    AND tgname = 'statute_source_review_decisions_append_only'
+                ) THEN
+                  ALTER TABLE statute_source_review_decisions
+                    ENABLE TRIGGER statute_source_review_decisions_append_only;
+                END IF;
+              END $$`);
+          }
+          await db.delete(statuteChargeLinks)
+            .where(inArray(statuteChargeLinks.snapshotId, snapshotIds));
+        }
+        await db.delete(statuteSourceSnapshots)
+          .where(eq(statuteSourceSnapshots.sourceId, sourceIds[0]));
+        await db.delete(statuteSources).where(eq(statuteSources.id, sourceIds[0]));
+      }
+      await db.delete(statuteUpdateQueue)
+        .where(eq(statuteUpdateQueue.citation, citation));
       for (const runId of runIds) {
         await db.delete(statuteIngestionRuns)
           .where(eq(statuteIngestionRuns.id, runId));
