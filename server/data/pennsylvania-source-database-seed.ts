@@ -124,7 +124,7 @@ function parseSectionToken(value: string): {
   section: string;
   subdivision: string | null;
 } | null {
-  const match = value.trim().match(/^(\d+(?:\.\d+)?)([\s\S]*)$/);
+  const match = value.trim().match(/^(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)([\s\S]*)$/);
   if (!match) return null;
   return {
     section: match[1],
@@ -160,6 +160,10 @@ export function buildPennsylvaniaSourceKey(
 }
 
 function chapterAndSection(section: string): { chapter: string; section: string } {
+  const hyphenated = section.match(/^(\d+)-(\d+(?:\.\d+)?)$/);
+  if (hyphenated) {
+    return { chapter: hyphenated[1], section: hyphenated[2] };
+  }
   const base = Number(section.split(".")[0]);
   const chapter = Math.floor(base / 100);
   const remainder = section.includes(".")

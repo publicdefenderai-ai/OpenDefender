@@ -18,6 +18,8 @@ import {
   extractPennsylvaniaDocument,
   fetchPennsylvaniaDocument,
   PENNSYLVANIA_RETRIEVAL_SOURCE,
+  PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE,
+  PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES,
   validatePennsylvaniaSourceContract,
 } from "../scripts/data-review/import-pennsylvania-source-database";
 
@@ -66,8 +68,12 @@ describe("Pennsylvania authority manifest", () => {
     ]);
     expect(parsePennsylvaniaCitation("35 Pa. Stat. § 780-113(a)(16)")).toEqual([]);
     expect(parsePennsylvaniaCitation("18 U.S.C. § 2113")).toEqual([]);
+    expect(parsePennsylvaniaCitation("47 Pa. Cons. Stat. § 4-406")).toEqual([
+      { title: "47", section: "4-406", subdivision: null },
+    ]);
     expect(buildPennsylvaniaSourceUrl("18", "2502")).toContain("&chpt=25&sctn=2");
     expect(buildPennsylvaniaSourceUrl("18", "3124.1")).toContain("&chpt=31&sctn=24.1");
+    expect(buildPennsylvaniaSourceUrl("47", "4-406")).toContain("&chpt=4&sctn=406");
     expect(buildPennsylvaniaOfficialSourceUrl("18", "2502")).toBe(
       "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=18&div=0&chpt=25&sctn=2&subsctn=0",
     );
@@ -207,14 +213,19 @@ describe("Pennsylvania authority manifest", () => {
     }
   });
 
-  it("checks a representative PAlegis page without following redirects", async () => {
-    const officialUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
+  it("checks one representative PAlegis page per title without following redirects", async () => {
     const originalFetch = globalThis.fetch;
+    const requestedUrls: string[] = [];
     let requestInit: RequestInit | undefined;
     globalThis.fetch = (async (input: string | URL | Request, init?: RequestInit) => {
+      const requestedUrl = String(input);
+      requestedUrls.push(requestedUrl);
       requestInit = init;
+      const reference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find(
+        (candidate) => buildPennsylvaniaOfficialSourceUrl(candidate.title, candidate.section) === requestedUrl,
+      )!;
       return new Response(
-        "<html><body><h1>Section 2502.0 - Title 18 - CRIMES AND OFFENSES</h1><div>&sect; 2502.&nbsp;&nbsp;Murder.</div><div>(a) A criminal homicide constitutes murder under these statutory elements and penalties.</div></body></html>",
+        `<html><body><h1>Section ${reference.section}.0 - Title ${reference.title} - REPRESENTATIVE</h1><div>&sect; ${reference.section}.&nbsp;&nbsp;Representative section.</div><div>A person commits an offense when the statutory elements are met. This is complete official section text for the contract test.</div></body></html>`,
         {
           status: 200,
           headers: { "content-type": "text/html; charset=utf-8" },
@@ -226,13 +237,45 @@ describe("Pennsylvania authority manifest", () => {
       expect(result).toMatchObject({
         ok: true,
         source: PENNSYLVANIA_RETRIEVAL_SOURCE,
-        requestedUrl: officialUrl,
+        requestedUrl: buildPennsylvaniaOfficialSourceUrl(
+          PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.title,
+          PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.section,
+        ),
       });
+      expect(result.pages).toHaveLength(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.length);
+      expect(requestedUrls).toEqual(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.map((reference) =>
+        buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section),
+      ));
       expect(requestInit?.redirect).toBe("manual");
       expect(requestInit?.headers).toMatchObject({ Accept: "text/html" });
     } finally {
       globalThis.fetch = originalFetch;
     }
+  });
+
+  it("reports the affected official URL when one title's page contract fails", async () => {
+    const brokenReference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find((reference) => reference.title === "42")!;
+    const brokenUrl = buildPennsylvaniaOfficialSourceUrl(brokenReference.title, brokenReference.section);
+    const result = await checkPennsylvaniaSourceContract(async (input) => {
+      const requestedUrl = String(input);
+      const reference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find(
+        (candidate) => buildPennsylvaniaOfficialSourceUrl(candidate.title, candidate.section) === requestedUrl,
+      )!;
+      const html = reference === brokenReference
+        ? "<html><body><h1>Updated statute viewer</h1></body></html>"
+        : `<html><body><h1>Section ${reference.section}.0 - Title ${reference.title} - REPRESENTATIVE</h1><div>&sect; ${reference.section}.&nbsp;&nbsp;Representative section.</div><div>A person commits an offense when the statutory elements are met. This is complete official section text for the contract test.</div></body></html>`;
+      return new Response(html, {
+        status: 200,
+        headers: { "content-type": "text/html" },
+      });
+    });
+
+    expect(result.ok).toBe(false);
+    expect(result.pages).toHaveLength(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.length);
+    expect(result.failures.some((failure) =>
+      failure.includes(`Title 42 § ${brokenReference.section}`) &&
+      failure.includes(brokenUrl),
+    )).toBe(true);
   });
 
   it("flags redirects and never treats a legacy or secondary response as official", () => {
