@@ -134,6 +134,20 @@ export interface PendingAuthoritySourceSnapshot {
   effectiveDateEnd: string | null;
   supersedesSnapshotId: string | null;
   metadata: unknown;
+  predecessor: {
+    id: string;
+    contentHash: string;
+    hashBasis: string;
+    citation: string;
+    section: string;
+    officialTitle: string;
+    sourceUrl: string;
+    retrievedAt: Date | null;
+    manifestImportedAt: Date;
+    effectiveDateStart: string | null;
+    effectiveDateEnd: string | null;
+    status: "current" | "superseded";
+  } | null;
 }
 
 export type AuthoritySourceReviewDecision = "approve" | "reject";
@@ -715,7 +729,42 @@ export async function getPendingAuthoritySourceSnapshots(
       eq(statuteSourceSnapshots.requiresReview, true),
     ))
     .orderBy(desc(statuteSourceSnapshots.manifestImportedAt));
-  return rows;
+
+  const predecessorIds = rows
+    .map((row) => row.supersedesSnapshotId)
+    .filter((id): id is string => Boolean(id));
+  const predecessors = predecessorIds.length === 0
+    ? []
+    : await db.select({
+      id: statuteSourceSnapshots.id,
+      contentHash: statuteSourceSnapshots.contentHash,
+      hashBasis: statuteSourceSnapshots.hashBasis,
+      citation: statuteSourceSnapshots.citation,
+      section: statuteSourceSnapshots.section,
+      officialTitle: statuteSourceSnapshots.officialTitle,
+      sourceUrl: statuteSourceSnapshots.sourceUrl,
+      retrievedAt: statuteSourceSnapshots.retrievedAt,
+      manifestImportedAt: statuteSourceSnapshots.manifestImportedAt,
+      effectiveDateStart: statuteSourceSnapshots.effectiveDateStart,
+      effectiveDateEnd: statuteSourceSnapshots.effectiveDateEnd,
+      status: statuteSourceSnapshots.status,
+    }).from(statuteSourceSnapshots).where(and(
+      eq(statuteSourceSnapshots.jurisdiction, jurisdiction),
+      inArray(statuteSourceSnapshots.id, predecessorIds),
+    ));
+  const predecessorById = new Map(predecessors.map((predecessor) => [predecessor.id, predecessor]));
+
+  return rows.map((row) => ({
+    ...row,
+    predecessor: row.supersedesSnapshotId
+      ? (() => {
+        const predecessor = predecessorById.get(row.supersedesSnapshotId);
+        return predecessor
+          ? { ...predecessor, status: predecessor.status as "current" | "superseded" }
+          : null;
+      })()
+      : null,
+  }));
 }
 
 export async function getAuthoritySourceReviewDecisions(
@@ -994,6 +1043,7 @@ export async function reviewAuthoritySourceSnapshot(
         effectiveDateEnd: pending.effectiveDateEnd,
         supersedesSnapshotId: pending.supersedesSnapshotId,
         metadata: pending.metadata,
+        predecessor: null,
         status: reviewedSnapshot.status as "current" | "superseded",
         requiresReview: reviewedSnapshot.requiresReview,
       },

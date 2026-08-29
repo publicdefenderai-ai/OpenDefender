@@ -75,6 +75,7 @@ const HousingSupport = lazy(() => import("@/pages/support/housing"));
 const AdminCitationReview = lazy(() => import("@/pages/admin/citation-review"));
 const AdminAttorneyReview = lazy(() => import("@/pages/admin/attorney-review"));
 const AdminProviderMetrics = lazy(() => import("@/pages/admin/provider-metrics"));
+const AdminTexasSourceReview = lazy(() => import("@/pages/admin/texas-source-review"));
 const FamilyCareSupport = lazy(() => import("@/pages/support/family-care"));
 const ReputationSupport = lazy(() => import("@/pages/support/reputation"));
 const ReentrySupport = lazy(() => import("@/pages/support/reentry"));
@@ -175,6 +176,7 @@ function Router() {
       <Route path="/admin/citation-review" component={AdminCitationReview} />
       <Route path="/admin/attorney-review" component={AdminAttorneyReview} />
       <Route path="/admin/provider-metrics" component={AdminProviderMetrics} />
+      <Route path="/admin/texas-source-review" component={AdminTexasSourceReview} />
       <Route component={NotFound} />
     </Switch>
   );
