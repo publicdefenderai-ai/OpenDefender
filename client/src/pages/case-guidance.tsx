@@ -49,6 +49,50 @@ import {
 
 type EnhancedGuidanceResult = GuidanceViewModel;
 
+const GUIDANCE_RECOVERY_STORAGE_KEY = 'open-defender:case-guidance-recovery';
+
+interface StoredGuidanceRecovery {
+  pendingGuidanceData: any;
+  guidanceTimedOut: boolean;
+  guidanceRecoveryError: boolean;
+  reviewingTimedOutAnswers: boolean;
+}
+
+function readStoredGuidanceRecovery(): StoredGuidanceRecovery | null {
+  if (typeof window === 'undefined') return null;
+
+  try {
+    const stored = window.sessionStorage.getItem(GUIDANCE_RECOVERY_STORAGE_KEY);
+    if (!stored) return null;
+
+    const parsed = JSON.parse(stored) as Partial<StoredGuidanceRecovery>;
+    if (
+      !parsed.pendingGuidanceData ||
+      typeof parsed.pendingGuidanceData !== 'object' ||
+      (!parsed.guidanceTimedOut && !parsed.reviewingTimedOutAnswers)
+    ) {
+      return null;
+    }
+
+    return {
+      pendingGuidanceData: parsed.pendingGuidanceData as Record<string, unknown>,
+      guidanceTimedOut: parsed.guidanceTimedOut === true,
+      guidanceRecoveryError: parsed.guidanceRecoveryError === true,
+      reviewingTimedOutAnswers: parsed.reviewingTimedOutAnswers === true,
+    };
+  } catch {
+    return null;
+  }
+}
+
+function clearStoredGuidanceRecovery() {
+  try {
+    window.sessionStorage.removeItem(GUIDANCE_RECOVERY_STORAGE_KEY);
+  } catch {
+    // Session storage may be unavailable in privacy-restricted browsers.
+  }
+}
+
 function PublicDefenderOfficeCard({ office }: { office: PublicDefenderOffice }) {
   const { t } = useTranslation();
   
@@ -242,15 +286,26 @@ export default function CaseGuidance() {
   useScrollToTop();
   const { t, i18n } = useTranslation();
   const { toast } = useToast();
-  const [showQAFlow, setShowQAFlow] = useState(false);
+  const [storedGuidanceRecovery] = useState(readStoredGuidanceRecovery);
+  const [showQAFlow, setShowQAFlow] = useState(
+    () => storedGuidanceRecovery?.reviewingTimedOutAnswers === true,
+  );
   const [guidanceResult, setGuidanceResult] = useState<EnhancedGuidanceResult | null>(null);
   const [guidanceMode, setGuidanceMode] = useState<'ai' | 'rules'>('ai');
   const [isStreaming, setIsStreaming] = useState(false);
   const [streamProgress, setStreamProgress] = useState(0);
-  const [pendingGuidanceData, setPendingGuidanceData] = useState<any | null>(null);
-  const [guidanceTimedOut, setGuidanceTimedOut] = useState(false);
-  const [guidanceRecoveryError, setGuidanceRecoveryError] = useState(false);
-  const [reviewingTimedOutAnswers, setReviewingTimedOutAnswers] = useState(false);
+  const [pendingGuidanceData, setPendingGuidanceData] = useState<any | null>(
+    () => storedGuidanceRecovery?.pendingGuidanceData ?? null,
+  );
+  const [guidanceTimedOut, setGuidanceTimedOut] = useState(
+    () => storedGuidanceRecovery?.guidanceTimedOut === true,
+  );
+  const [guidanceRecoveryError, setGuidanceRecoveryError] = useState(
+    () => storedGuidanceRecovery?.guidanceRecoveryError === true,
+  );
+  const [reviewingTimedOutAnswers, setReviewingTimedOutAnswers] = useState(
+    () => storedGuidanceRecovery?.reviewingTimedOutAnswers === true,
+  );
   const [retryCaptchaToken, setRetryCaptchaToken] = useState<string | null>(null);
   const [retryCaptchaAttempt, setRetryCaptchaAttempt] = useState(0);
   const abortControllerRef = useRef<AbortController | null>(null);
@@ -261,6 +316,35 @@ export default function CaseGuidance() {
   const { data: aiStatus } = useAIAvailability();
   const aiUnavailable = aiStatus && aiStatus.available === false;
   const { registerGuard, unregisterGuard } = useNavigationGuard();
+
+  // Keep timeout recovery in the current browser tab so a full reload does
+  // not discard edited answers. It is cleared as soon as recovery is no
+  // longer active, preserving the session-only privacy boundary.
+  useEffect(() => {
+    if (!pendingGuidanceData || (!guidanceTimedOut && !reviewingTimedOutAnswers)) {
+      clearStoredGuidanceRecovery();
+      return;
+    }
+
+    try {
+      window.sessionStorage.setItem(
+        GUIDANCE_RECOVERY_STORAGE_KEY,
+        JSON.stringify({
+          pendingGuidanceData,
+          guidanceTimedOut,
+          guidanceRecoveryError,
+          reviewingTimedOutAnswers,
+        } satisfies StoredGuidanceRecovery),
+      );
+    } catch {
+      // Session storage may be unavailable in privacy-restricted browsers.
+    }
+  }, [
+    pendingGuidanceData,
+    guidanceTimedOut,
+    guidanceRecoveryError,
+    reviewingTimedOutAnswers,
+  ]);
 
   // Exit warning state
   const [showExitWarning, setShowExitWarning] = useState(false);
@@ -612,6 +696,10 @@ export default function CaseGuidance() {
     setReviewingTimedOutAnswers(true);
     setShowQAFlow(true);
   };
+
+  const handleTimedOutAnswersChange = useCallback((data: any) => {
+    setPendingGuidanceData(data);
+  }, []);
 
   const handleNewSession = async () => {
     if (isClearingSession) return;
@@ -968,6 +1056,9 @@ export default function CaseGuidance() {
             }
             initialData={reviewingTimedOutAnswers ? pendingGuidanceData : undefined}
             reviewAnswers={reviewingTimedOutAnswers}
+            onFormDataChange={
+              reviewingTimedOutAnswers ? handleTimedOutAnswersChange : undefined
+            }
           />
         </main>
         <Footer />

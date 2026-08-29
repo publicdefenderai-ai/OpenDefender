@@ -7,6 +7,7 @@ import {
   buildCaliforniaReferenceHash,
   buildCaliforniaSourceKey,
   buildCaliforniaSourceDatabaseSeed,
+  validateCaliforniaSourceDatabaseSeed,
 } from "../server/data/california-source-database-seed";
 
 const retrievedAt = new Date("2026-08-27T12:00:00.000Z");
@@ -25,6 +26,45 @@ describe("California source database manifest", () => {
     expect(seed.snapshots.every((snapshot) => snapshot.jurisdiction === "CA")).toBe(true);
     expect(seed.selectableChargeIds).not.toContain("ca-wire-fraud");
     expect(seed.selectableChargeIds).not.toContain("ca-gang-enhancement");
+    expect(seed.catalogRecords).toHaveLength(99);
+    expect(seed.legacyInventory).toHaveLength(115);
+    expect(seed.audit.inventory).toMatchObject({
+      legacyRecordCount: 115,
+      retainedCount: 49,
+      aliasCount: 7,
+      reselectionRequiredCount: 44,
+      removedCount: 15,
+      withheldCount: 59,
+    });
+    expect(seed.audit.provenance).toMatchObject({
+      sourceCount: seed.sources.length,
+      snapshotCount: seed.snapshots.length,
+      linkCount: seed.links.length,
+      accessPolicy: "reference_only",
+      reuseStatus: "not_cleared",
+      contentStored: false,
+    });
+    expect(seed.audit.currentness).toMatchObject({
+      status: "current",
+      currentSnapshotCount: seed.snapshots.length,
+      allSourcesMarkedCurrentLawText: true,
+      verificationMethod: "committed_authority_manifest",
+    });
+  });
+
+  it("treats the typed legacy inventory as a fail-closed committed boundary", () => {
+    expect(validateCaliforniaSourceDatabaseSeed(seed)).toEqual([]);
+    const tampered = {
+      ...seed,
+      legacyInventory: seed.legacyInventory.map((entry) =>
+        entry.legacyId === "ca-wire-fraud"
+          ? { ...entry, disposition: "retain" as const, selectable: true }
+          : entry,
+      ),
+    };
+    expect(validateCaliforniaSourceDatabaseSeed(tampered)).toContain(
+      "California legacy disposition changed for ca-wire-fraud",
+    );
   });
 
   it("retains exact charge citations and subdivision metadata", () => {

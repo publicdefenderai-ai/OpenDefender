@@ -185,6 +185,19 @@ export interface CriminalCharge {
   lastVerified?: string;
 }
 
+/** Canonical charge data shared by every guidance generation route. */
+export interface GuidanceChargeClassification {
+  id: string;
+  name: string;
+  classification: CriminalCharge['category'];
+  /** Verified citation for the AI prompt; omitted when the citation is unverified. */
+  code?: string;
+  /** Dedicated verified citation field consumed by document generators. */
+  verifiedCitation: string | null;
+  title: string;
+  maxPenalty: string;
+}
+
 // ── Citation helpers ──────────────────────────────────────────────────────────
 // These helpers check the citations overlay (criminal-charge-citations.ts) first,
 // then fall back to inline statuteCitations[] on the charge object.
@@ -72195,7 +72208,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-animal-at-large',
     name: 'Animal at Large / Leash Law Violation',
-    code: '3-459-305',
+    code: '459-305',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Allowing a dog or other domestic animal to roam at large without restraint or control in violation of local leash laws under PA law',
@@ -78162,7 +78175,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-truancy',
     name: 'Truancy / Chronic Absenteeism',
-    code: '24-13-1327',
+    code: '13-1333',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'A minor failing to attend school as required by compulsory education laws, or a parent/guardian failing to ensure school attendance under PA law',
@@ -78201,7 +78214,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-alcohol-in-park',
     name: 'Possession of Alcohol in Park / Prohibited Area',
-    code: '18-6308',
+    code: '4-406',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Possessing or consuming alcoholic beverages in a public park, beach, playground, or other designated alcohol-free zone under PA law',
@@ -94948,6 +94961,40 @@ export function getChargeById(id: string): CriminalCharge | undefined {
   return charge.jurisdiction === 'TX' && TEXAS_CANONICAL_TITLES[charge.id]
     ? { ...charge, name: TEXAS_CANONICAL_TITLES[charge.id] }
     : charge;
+}
+
+/**
+ * Build the canonical charge payload used by legal guidance.
+ *
+ * Keep this next to the charge catalog so every guidance route gets the same
+ * normalized ID, official title, category, and verified subdivision citation.
+ * Unrecognized IDs are omitted; callers can retain their existing route-specific
+ * handling for requests that contain no recognized charges.
+ */
+export function classifyChargesForGuidance(
+  charges: string[] | string | undefined,
+): GuidanceChargeClassification[] {
+  const chargeIds = (Array.isArray(charges) ? charges : [charges])
+    .filter((id): id is string => typeof id === 'string')
+    .map(normalizeChargeId);
+
+  return chargeIds
+    .map((id) => {
+      const charge = getChargeById(id);
+      if (!charge) return null;
+
+      const verifiedCitation = getVerifiedCitation(charge);
+      return {
+        id: charge.id,
+        name: charge.name,
+        classification: charge.category,
+        ...(verifiedCitation ? { code: verifiedCitation } : {}),
+        verifiedCitation,
+        title: charge.name,
+        maxPenalty: charge.maxPenalty,
+      };
+    })
+    .filter((classification): classification is GuidanceChargeClassification => classification !== null);
 }
 
 export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[] {

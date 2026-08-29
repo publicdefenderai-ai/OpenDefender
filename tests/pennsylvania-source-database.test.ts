@@ -14,18 +14,23 @@ import {
   type PennsylvaniaSourceDocument,
 } from "../server/data/pennsylvania-source-database-seed";
 import {
+  checkPennsylvaniaSourceContract,
   extractPennsylvaniaDocument,
   fetchPennsylvaniaDocument,
+  PENNSYLVANIA_RETRIEVAL_SOURCE,
+  PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE,
+  PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES,
+  validatePennsylvaniaSourceContract,
 } from "../scripts/data-review/import-pennsylvania-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
-function document(section: string, title: string): PennsylvaniaSourceDocument {
+function document(section: string, title: string, lawTitle = "18"): PennsylvaniaSourceDocument {
   return {
     section,
     title,
     text: `§ ${section}. ${title}.\nA person commits an offense when the statutory elements are met. This is complete official section text for the test.`,
-    sourceUrl: buildPennsylvaniaSourceUrl("18", section),
+    sourceUrl: buildPennsylvaniaSourceUrl(lawTitle, section),
     retrievedAt: importedAt,
     effectiveDateStart: null,
   };
@@ -63,12 +68,75 @@ describe("Pennsylvania authority manifest", () => {
     ]);
     expect(parsePennsylvaniaCitation("35 Pa. Stat. § 780-113(a)(16)")).toEqual([]);
     expect(parsePennsylvaniaCitation("18 U.S.C. § 2113")).toEqual([]);
+    expect(parsePennsylvaniaCitation("47 Pa. Cons. Stat. § 4-406")).toEqual([
+      { title: "47", section: "4-406", subdivision: null },
+    ]);
     expect(buildPennsylvaniaSourceUrl("18", "2502")).toContain("&chpt=25&sctn=2");
     expect(buildPennsylvaniaSourceUrl("18", "3124.1")).toContain("&chpt=31&sctn=24.1");
+    expect(buildPennsylvaniaSourceUrl("47", "4-406")).toContain("&chpt=4&sctn=406");
     expect(buildPennsylvaniaOfficialSourceUrl("18", "2502")).toBe(
       "https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=18&div=0&chpt=25&sctn=2&subsctn=0",
     );
     expect(buildPennsylvaniaSourceKey("18", "3124.1", "(a)")).toBe("pa:18:3124.1:a");
+  });
+
+  it("keeps representative hyphenated sections exact across parsing and official URL routing", () => {
+    const references = [
+      { title: "3", section: "459-305", chapter: "459", routedSection: "305" },
+      { title: "24", section: "13-1333", chapter: "13", routedSection: "1333" },
+      { title: "47", section: "4-406", chapter: "4", routedSection: "406" },
+    ];
+
+    for (const reference of references) {
+      expect(parsePennsylvaniaCitation(
+        `${reference.title} Pa. Cons. Stat. § ${reference.section}`,
+      )).toEqual([{
+        title: reference.title,
+        section: reference.section,
+        subdivision: null,
+      }]);
+      expect(buildPennsylvaniaSourceUrl(reference.title, reference.section)).toBe(
+        `https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=${reference.title}&div=0&chpt=${reference.chapter}&sctn=${reference.routedSection}&subsctn=0`,
+      );
+      expect(buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section)).toBe(
+        `https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=${reference.title}&div=0&chpt=${reference.chapter}&sctn=${reference.routedSection}&subsctn=0`,
+      );
+      expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).toContainEqual({
+        title: reference.title,
+        section: reference.section,
+        subdivision: null,
+      });
+    }
+  });
+
+  it("keeps hyphenated catalog codes aligned to their cited sections", () => {
+    const expected = [
+      { chargeId: "pa-animal-at-large", code: "459-305", citation: "3 Pa. Cons. Stat. § 459-305" },
+      { chargeId: "pa-truancy", code: "13-1333", citation: "24 Pa. Cons. Stat. § 13-1333" },
+      { chargeId: "pa-alcohol-in-park", code: "4-406", citation: "47 Pa. Cons. Stat. § 4-406" },
+    ];
+
+    for (const item of expected) {
+      const charge = criminalCharges.find((candidate) => candidate.id === item.chargeId)!;
+      expect(charge.code).toBe(item.code);
+      expect(CHARGE_CITATIONS[charge.id]?.citation).toBe(item.citation);
+      expect(parsePennsylvaniaCitation(item.citation)).toEqual([{
+        title: item.citation.split(" ")[0],
+        section: item.code,
+        subdivision: null,
+      }]);
+    }
+  });
+
+  it("does not promote the corrected hyphenated rows without an official consolidated provision", () => {
+    const manifest = loadPennsylvaniaAuthorityManifest();
+    for (const chargeId of ["pa-animal-at-large", "pa-truancy", "pa-alcohol-in-park"]) {
+      const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId)!;
+      expect(record.disposition).toBe("require_exact_reselection");
+      expect(record.provisions).toHaveLength(0);
+      expect(record.apiStatus).toBe("api_error");
+      expect(record.dispositionReason).toContain("could not be verified");
+    }
   });
 
   it("stores verbatim official text and content hashes for a verified exact mapping", () => {
@@ -108,6 +176,29 @@ describe("Pennsylvania authority manifest", () => {
     expect(validatePennsylvaniaManifestRecord(tampered)).toContain("not an exact verified Pennsylvania match");
   });
 
+  it("keeps a supported section selectable only when its section and subdivision match", () => {
+    const charge = criminalCharges.find((candidate) => candidate.id === "pa-murder-in-the-first-degree")!;
+    const record = buildPennsylvaniaManifestRecord(
+      charge,
+      [document("2502", "Murder")],
+      importedAt,
+    );
+    expect(record.disposition).toBe("exact_alias_rename");
+    expect(validatePennsylvaniaManifestRecord(record)).toBeNull();
+
+    const wrongSection = {
+      ...record,
+      provisions: [{ ...record.provisions[0], section: "2503" }],
+    };
+    expect(validatePennsylvaniaManifestRecord(wrongSection)).toContain("not an exact verified Pennsylvania match");
+
+    const wrongSubdivision = {
+      ...record,
+      provisions: [{ ...record.provisions[0], subdivision: "(b)" }],
+    };
+    expect(validatePennsylvaniaManifestRecord(wrongSubdivision)).toContain("not an exact verified Pennsylvania match");
+  });
+
   it("accepts explicit aliases but withholds mismatches and incomplete compounds", () => {
     const murder = criminalCharges.find((candidate) => candidate.id === "pa-murder-in-the-first-degree")!;
     expect(buildPennsylvaniaManifestRecord(murder, [document("2502", "Murder")], importedAt).disposition)
@@ -126,6 +217,12 @@ describe("Pennsylvania authority manifest", () => {
 
     const federal = criminalCharges.find((candidate) => candidate.id === "pa-bank-robbery")!;
     expect(buildPennsylvaniaManifestRecord(federal, [], importedAt).disposition).toBe("require_exact_reselection");
+
+    const unconsolidated = criminalCharges.find(
+      (candidate) => candidate.id === "pa-distribution-of-controlled-substance",
+    )!;
+    expect(buildPennsylvaniaManifestRecord(unconsolidated, [], importedAt).disposition)
+      .toBe("require_exact_reselection");
   });
 
   it("extracts a section from official HTML and rejects missing or error pages", () => {
@@ -204,11 +301,110 @@ describe("Pennsylvania authority manifest", () => {
     }
   });
 
+  it("checks one representative PAlegis page per title without following redirects", async () => {
+    const originalFetch = globalThis.fetch;
+    const requestedUrls: string[] = [];
+    let requestInit: RequestInit | undefined;
+    globalThis.fetch = (async (input: string | URL | Request, init?: RequestInit) => {
+      const requestedUrl = String(input);
+      requestedUrls.push(requestedUrl);
+      requestInit = init;
+      const reference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find(
+        (candidate) => buildPennsylvaniaOfficialSourceUrl(candidate.title, candidate.section) === requestedUrl,
+      )!;
+      return new Response(
+        `<html><body><h1>Section ${reference.section}.0 - Title ${reference.title} - REPRESENTATIVE</h1><div>&sect; ${reference.section}.&nbsp;&nbsp;Representative section.</div><div>A person commits an offense when the statutory elements are met. This is complete official section text for the contract test.</div></body></html>`,
+        {
+          status: 200,
+          headers: { "content-type": "text/html; charset=utf-8" },
+        },
+      );
+    }) as typeof fetch;
+    try {
+      const result = await checkPennsylvaniaSourceContract();
+      expect(result).toMatchObject({
+        ok: true,
+        source: PENNSYLVANIA_RETRIEVAL_SOURCE,
+        requestedUrl: buildPennsylvaniaOfficialSourceUrl(
+          PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.title,
+          PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.section,
+        ),
+      });
+      expect(result.pages).toHaveLength(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.length);
+      expect(requestedUrls).toEqual(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.map((reference) =>
+        buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section),
+      ));
+      expect(requestInit?.redirect).toBe("manual");
+      expect(requestInit?.headers).toMatchObject({ Accept: "text/html" });
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  });
+
+  it("reports the affected official URL when one title's page contract fails", async () => {
+    const brokenReference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find((reference) => reference.title === "42")!;
+    const brokenUrl = buildPennsylvaniaOfficialSourceUrl(brokenReference.title, brokenReference.section);
+    const result = await checkPennsylvaniaSourceContract(async (input) => {
+      const requestedUrl = String(input);
+      const reference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find(
+        (candidate) => buildPennsylvaniaOfficialSourceUrl(candidate.title, candidate.section) === requestedUrl,
+      )!;
+      const html = reference === brokenReference
+        ? "<html><body><h1>Updated statute viewer</h1></body></html>"
+        : `<html><body><h1>Section ${reference.section}.0 - Title ${reference.title} - REPRESENTATIVE</h1><div>&sect; ${reference.section}.&nbsp;&nbsp;Representative section.</div><div>A person commits an offense when the statutory elements are met. This is complete official section text for the contract test.</div></body></html>`;
+      return new Response(html, {
+        status: 200,
+        headers: { "content-type": "text/html" },
+      });
+    });
+
+    expect(result.ok).toBe(false);
+    expect(result.pages).toHaveLength(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.length);
+    expect(result.failures.some((failure) =>
+      failure.includes(`Title 42 § ${brokenReference.section}`) &&
+      failure.includes(brokenUrl),
+    )).toBe(true);
+  });
+
+  it("flags redirects and never treats a legacy or secondary response as official", () => {
+    const requestedUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
+    const result = validatePennsylvaniaSourceContract({
+      requestedUrl,
+      responseStatus: 302,
+      responseUrl: requestedUrl,
+      redirectLocation: "https://www.legis.state.pa.us/legacy-statute",
+      contentType: "text/html",
+      html: "",
+    });
+    expect(result.ok).toBe(false);
+    expect(result.failures.join(" ")).toContain("unexpected redirect");
+    expect(result.failures.join(" ")).toContain("official PAlegis.us");
+  });
+
+  it("flags missing section markers and changed PAlegis HTML structure", () => {
+    const requestedUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
+    const result = validatePennsylvaniaSourceContract({
+      requestedUrl,
+      responseStatus: 200,
+      responseUrl: requestedUrl,
+      redirectLocation: null,
+      contentType: "text/html",
+      html: "<html><body><main><h1>Updated statute viewer</h1><p>Content moved.</p></main></body></html>",
+    });
+    expect(result.ok).toBe(false);
+    expect(result.failures).toEqual(expect.arrayContaining([
+      "PAlegis HTML structure changed: expected an HTML/body shell and a Title 18 section heading",
+      "PAlegis page is missing the expected § 2502 section marker",
+    ]));
+  });
+
   it("uses the existing citation overlay as input without trusting its secondary source URLs", () => {
     expect(CHARGE_CITATIONS["pa-sexual-assault-in-the-second-degree"]?.sourceUrl)
       .toContain("openlaws.us");
     expect(parsePennsylvaniaCitation(
       CHARGE_CITATIONS["pa-sexual-assault-in-the-second-degree"]?.citation ?? "",
     )).toEqual([{ title: "18", section: "3124.1", subdivision: null }]);
+    expect(parsePennsylvaniaCitation("35 Pa. Stat. § 780-113(a)(30)")).toEqual([]);
+    expect(parsePennsylvaniaCitation("72 P.S. § 7354")).toEqual([]);
   });
 });

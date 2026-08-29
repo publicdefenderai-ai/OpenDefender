@@ -28,6 +28,7 @@ interface QAFlowProps {
   clearSessionDialog?: ReactNode;
   initialData?: Partial<QAFormData>;
   reviewAnswers?: boolean;
+  onFormDataChange?: (data: QAFormData) => void;
 }
 
 interface QAFormData {
@@ -57,6 +58,7 @@ export function QAFlow({
   clearSessionDialog,
   initialData,
   reviewAnswers = false,
+  onFormDataChange,
 }: QAFlowProps) {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
@@ -67,6 +69,10 @@ export function QAFlow({
     ...initialData,
     charges: normalizeChargeIds(initialData?.charges ?? EMPTY_FORM_DATA.charges),
   }));
+
+  useEffect(() => {
+    onFormDataChange?.(formData);
+  }, [formData, onFormDataChange]);
 
   const baseSteps = [
     { title: t('legalGuidance.qaFlow.steps.consent'),           component: ConsentStep },
@@ -465,7 +471,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
   const [runtimeAuthorityCharges, setRuntimeAuthorityCharges] = useState<any[] | null>(null);
-  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL"].includes(formData.jurisdiction);
+  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA"].includes(formData.jurisdiction);
 
   useEffect(() => {
     if (!isAuthorityBacked) {
@@ -504,8 +510,8 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     ? availableCharges.filter(charge => 
         chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id) ||
         (selectedCategory === 'Drug Offenses' &&
-          (charge.jurisdiction === 'NY' || charge.jurisdiction === 'TX' || charge.jurisdiction === 'IL') &&
-          /^(ny|tx|il)-/.test(charge.id) &&
+          (charge.jurisdiction === 'NY' || charge.jurisdiction === 'TX' || charge.jurisdiction === 'IL' || charge.jurisdiction === 'OH' || charge.jurisdiction === 'GA') &&
+          /^(ny|tx|il|oh|ga)-/.test(charge.id) &&
           /controlled-substance|drug|sale|distribution|trafficking|manufacturing/.test(charge.id))
       )
     : availableCharges;

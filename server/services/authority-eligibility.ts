@@ -1,14 +1,17 @@
 import { getSelectableCharges } from "@shared/criminal-charges";
 import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
+import { getCurrentCaliforniaSelectableChargeIds } from "./california-source-database";
 
-export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["NY", "TX", "FL", "PA", "SC", "IL"]);
+export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["CA", "NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA"]);
 
 export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<string>> {
   const byJurisdiction = new Map(
     await Promise.all(
       [...AUTHORITY_BACKED_JURISDICTIONS].map(async (jurisdiction) => [
         jurisdiction,
-        await getCurrentJurisdictionAuthoritySelectableChargeIds(jurisdiction),
+        jurisdiction === "CA"
+          ? await getCurrentCaliforniaSelectableChargeIds()
+          : await getCurrentJurisdictionAuthoritySelectableChargeIds(jurisdiction),
       ] as const),
     ),
   );

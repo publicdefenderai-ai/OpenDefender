@@ -1924,13 +1924,14 @@
     {
       "chargeId": "pa-animal-at-large",
       "catalogLabel": "Animal at Large / Leash Law Violation",
-      "catalogCode": "3-459-305",
+      "catalogCode": "459-305",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "Official Pennsylvania General Assembly section 3-459-305 could not be verified.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "verified"
+      "apiStatus": "api_error",
+      "error": "Official Pennsylvania General Assembly section 3-459-305 could not be verified."
     },
     {
       "chargeId": "pa-animal-cruelty-misdemeanor",
@@ -2001,13 +2002,14 @@
     {
       "chargeId": "pa-truancy",
       "catalogLabel": "Truancy / Chronic Absenteeism",
-      "catalogCode": "24-13-1327",
+      "catalogCode": "13-1333",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "Official Pennsylvania General Assembly section 24-13-1333 could not be verified.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "verified"
+      "apiStatus": "api_error",
+      "error": "Official Pennsylvania General Assembly section 24-13-1333 could not be verified."
     },
     {
       "chargeId": "pa-littering",
@@ -2034,13 +2036,14 @@
     {
       "chargeId": "pa-alcohol-in-park",
       "catalogLabel": "Possession of Alcohol in Park / Prohibited Area",
-      "catalogCode": "18-6308",
+      "catalogCode": "4-406",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "Official Pennsylvania General Assembly section 47-4-406 could not be verified.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "verified"
+      "apiStatus": "api_error",
+      "error": "Official Pennsylvania General Assembly section 47-4-406 could not be verified."
     },
     {
       "chargeId": "pa-hunting-fishing-no-license",

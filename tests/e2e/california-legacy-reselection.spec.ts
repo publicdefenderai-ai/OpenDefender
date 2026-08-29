@@ -3,6 +3,25 @@ import { expect, test, type Page } from "@playwright/test";
 const validChargeId = "ca-robbery-in-the-first-degree";
 const supportedLegacyId = "ca-vehicular-homicide";
 const supportedCanonicalId = "ca-gross-vehicular-manslaughter-191-5-a";
+const guidanceRecoveryStorageKey = "open-defender:case-guidance-recovery";
+const multiSupportedLegacyCases = [
+  {
+    legacyId: supportedLegacyId,
+    canonicalIds: [
+      supportedCanonicalId,
+      "ca-vehicular-manslaughter-191-5-b",
+    ],
+    selectedCanonicalId: supportedCanonicalId,
+  },
+  {
+    legacyId: "ca-sexual-assault-in-the-second-degree",
+    canonicalIds: [
+      "ca-sexual-penetration-289-a1a",
+      "ca-sexual-penetration-289-a1b",
+    ],
+    selectedCanonicalId: "ca-sexual-penetration-289-a1b",
+  },
+] as const;
 
 const additionalSupportedLegacyCases = [
   {
@@ -104,7 +123,9 @@ async function openRecoveryWithSavedCharges(
     // gives this browser test a realistic persisted legacy selection without
     // making stale IDs selectable in the production UI.
     const originalStringify = JSON.stringify;
-    let hasInjectedSavedLegacyIds = false;
+    const injectionMarker = "california-legacy-reselection-fixture-injected";
+    let hasInjectedSavedLegacyIds =
+      window.sessionStorage.getItem(injectionMarker) === "true";
     JSON.stringify = function stringifyWithSavedLegacyIds(
       value: unknown,
       replacer?: ((key: string, value: unknown) => unknown) | null,
@@ -122,6 +143,7 @@ async function openRecoveryWithSavedCharges(
         !hasInjectedSavedLegacyIds
       ) {
         hasInjectedSavedLegacyIds = true;
+        window.sessionStorage.setItem(injectionMarker, "true");
         payload.charges.splice(
           0,
           payload.charges.length,
@@ -227,6 +249,103 @@ test.describe("saved California legacy charge recovery", () => {
     });
   });
 
+  test("resolves multiple legacy families independently and preserves all saved charges", async ({
+    page,
+  }) => {
+    test.setTimeout(60_000);
+
+    const legacyIds = multiSupportedLegacyCases.map(({ legacyId }) => legacyId);
+    const recovery = await openRecoveryWithSavedCharges(page, legacyIds);
+    await expect.poll(() => recovery.getInitialBody()?.charges).toEqual([
+      ...legacyIds,
+      validChargeId,
+    ]);
+
+    for (const { legacyId, canonicalIds } of multiSupportedLegacyCases) {
+      await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toBeVisible();
+      for (const canonicalId of canonicalIds) {
+        await expect(page.getByTestId(`button-reselect-${canonicalId}`)).toBeVisible();
+      }
+    }
+
+    const firstCase = multiSupportedLegacyCases[0];
+    const secondCase = multiSupportedLegacyCases[1];
+    await page
+      .getByTestId(`button-reselect-${firstCase.selectedCanonicalId}`)
+      .click();
+
+    await expect(
+      page.getByTestId(`legacy-charge-options-${firstCase.legacyId}`),
+    ).toHaveCount(0);
+    await expect(
+      page.getByTestId(`legacy-charge-options-${secondCase.legacyId}`),
+    ).toBeVisible();
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+    await expect(
+      page.getByTestId(`button-remove-charge-${firstCase.selectedCanonicalId}`),
+    ).toBeVisible();
+    await expect(
+      page.getByTestId(`button-remove-charge-${secondCase.legacyId}`),
+    ).toHaveCount(0);
+
+    await page
+      .getByTestId(`button-reselect-${secondCase.selectedCanonicalId}`)
+      .click();
+    await expect(
+      page.getByTestId(`legacy-charge-options-${secondCase.legacyId}`),
+    ).toHaveCount(0);
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+    for (const { selectedCanonicalId } of multiSupportedLegacyCases) {
+      await expect(
+        page.getByTestId(`button-remove-charge-${selectedCanonicalId}`),
+      ).toBeVisible();
+    }
+
+    // Leave Case Details and return to it to verify that resolving one
+    // legacy charge does not cause another resolved selection to be lost.
+    await page.getByTestId("button-next-case-details").click();
+    await expect(page.getByTestId("select-case-stage")).toBeVisible();
+    await page.getByTestId("button-prev-status").click();
+    await expect(page.getByTestId("button-next-case-details")).toBeVisible();
+    for (const { legacyId, selectedCanonicalId } of multiSupportedLegacyCases) {
+      await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toHaveCount(0);
+      await expect(
+        page.getByTestId(`button-remove-charge-${selectedCanonicalId}`),
+      ).toBeVisible();
+    }
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+
+    // A full reload is a separate persistence boundary from moving between
+    // QAFlow steps. Recovery should reopen with the edited canonical charges.
+    await page.reload();
+    await expect(page.getByTestId("qa-step-circle-7")).toHaveClass(/bg-gray-700/);
+    await page.getByRole("button", { name: /^Back/ }).click();
+    await expect(page.getByTestId("qa-step-circle-6")).toHaveClass(/bg-gray-700/);
+    await page.getByRole("button", { name: /^Back/ }).click();
+    await expect(page.getByTestId("qa-step-circle-5")).toHaveClass(/bg-gray-700/);
+    await page.getByTestId("button-prev-background").click();
+    await expect(page.getByTestId("qa-step-circle-4")).toHaveClass(/bg-gray-700/);
+    await page.getByTestId("button-prev-status").click();
+    await expect(page.getByTestId("qa-step-circle-3")).toHaveClass(/bg-gray-700/);
+    for (const { legacyId, selectedCanonicalId } of multiSupportedLegacyCases) {
+      await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toHaveCount(0);
+      await expect(
+        page.getByTestId(`button-remove-charge-${selectedCanonicalId}`),
+      ).toBeVisible();
+    }
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+
+    recovery.releaseInitialRequest();
+    await submitRemainingSteps(page);
+    await expect.poll(recovery.getRetryBody).toMatchObject({
+      charges: [
+        validChargeId,
+        firstCase.selectedCanonicalId,
+        secondCase.selectedCanonicalId,
+      ],
+    });
+  });
+
   for (const {
     label,
     legacyId,
@@ -297,5 +416,47 @@ test.describe("saved California legacy charge recovery", () => {
     await expect(page.getByTestId(`checkbox-charge-${validChargeId}`)).toBeChecked();
 
     recovery.releaseInitialRequest();
+  });
+
+  test("clears timed-out recovery before a new screener starts", async ({ page }) => {
+    test.setTimeout(60_000);
+
+    const recovery = await openRecoveryWithSavedCharges(page, [supportedLegacyId]);
+
+    const storedRecovery = await page.evaluate((storageKey) => {
+      const value = window.sessionStorage.getItem(storageKey);
+      return value ? JSON.parse(value) : null;
+    }, guidanceRecoveryStorageKey);
+    expect(storedRecovery).toMatchObject({
+      guidanceTimedOut: false,
+      reviewingTimedOutAnswers: true,
+      pendingGuidanceData: {
+        jurisdiction: "CA",
+        charges: [supportedLegacyId, validChargeId],
+        caseStage: "pretrial",
+      },
+    });
+
+    await page.getByRole("button", { name: "Clear My Session" }).click();
+    await expect(page.getByRole("dialog")).toBeVisible();
+    await page.getByTestId("button-confirm-clear-session").click();
+    await expect(page.getByTestId("button-start-guidance")).toBeVisible();
+    await expect(page.getByRole("alert")).toHaveCount(0);
+    await expect
+      .poll(() => page.evaluate((storageKey) => window.sessionStorage.getItem(storageKey), guidanceRecoveryStorageKey))
+      .toBeNull();
+
+    recovery.releaseInitialRequest();
+    await page.reload();
+
+    await expect(page.getByTestId("button-start-guidance")).toBeVisible();
+    await expect(page.getByTestId("button-review-guidance-answers")).toHaveCount(0);
+    await expect(page.getByRole("alert")).toHaveCount(0);
+    await page.getByTestId("button-start-guidance").click();
+    await expect(page.getByTestId("qa-step-circle-1")).toHaveClass(/bg-gray-700/);
+    await page
+      .getByRole("button", { name: /Personalized AI Guidance.*Continue with AI Guidance/i })
+      .click();
+    await expect(page.getByTestId("select-jurisdiction")).toBeVisible();
   });
 });

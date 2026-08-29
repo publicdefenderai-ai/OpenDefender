@@ -14,7 +14,7 @@ import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache, getGuidanceCacheKey, startOptionalSourceEnrichment } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
-import { getChargeById, getChargesByJurisdiction, getSelectableCharges, chargeCategories, normalizeChargeId, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, getSelectableCharges, chargeCategories, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation, classifyChargesForGuidance } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -36,6 +36,10 @@ import { southCarolinaSourceDatabase } from "./services/south-carolina-source-da
 import { loadSouthCarolinaAuthorityManifest } from "./data/south-carolina-manifest-loader";
 import { illinoisSourceDatabase } from "./services/illinois-source-database";
 import { loadIllinoisAuthorityManifest } from "./data/illinois-manifest-loader";
+import { ohioSourceDatabase } from "./services/ohio-source-database";
+import { loadOhioAuthorityManifest } from "./data/ohio-manifest-loader";
+import { georgiaSourceDatabase } from "./services/georgia-source-database";
+import { loadGeorgiaAuthorityManifest } from "./data/georgia-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
@@ -499,6 +503,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ? await southCarolinaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : normalizedCharge?.jurisdiction === "IL"
           ? await illinoisSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : normalizedCharge?.jurisdiction === "OH"
+          ? await ohioSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : normalizedCharge?.jurisdiction === "GA"
+          ? await georgiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "CA"
           ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : null;
@@ -1092,6 +1100,46 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch Illinois source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch Illinois source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/ohio/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await ohioSourceDatabase.seed(loadOhioAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("Ohio source database seeding failed", error);
+      res.status(500).json({ success: false, error: "Ohio source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/ohio/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await ohioSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch Ohio source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch Ohio source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/georgia/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await georgiaSourceDatabase.seed(loadGeorgiaAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("Georgia source database seeding failed", error);
+      res.status(500).json({ success: false, error: "Georgia source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/georgia/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await georgiaSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch Georgia source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch Georgia source database status" });
     }
   });
 
@@ -1783,26 +1831,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ...extractBackgroundFlags(req.body),
       };
 
-      // Charge lookup (same guard logic as generateLegalGuidance)
+      // Use the catalog-owned classifier so streaming and non-streaming
+      // guidance cannot diverge on canonical IDs or verified citations.
       const chargeIds = Array.isArray(caseDataWithFlags.charges) ? caseDataWithFlags.charges : [caseDataWithFlags.charges];
-      const chargeClassifications = chargeIds
-        .map((id: string) => {
-          const charge = getChargeById(id);
-          if (!charge) return null;
-          const verifiedCode = getVerifiedCitation(charge);
-          return {
-            id: charge.id,
-            name: charge.name,
-            classification: charge.category,
-            // code carries the verified citation when available (used by AI prompt)
-            ...(verifiedCode ? { code: verifiedCode } : {}),
-            // verifiedCitation is the dedicated field consumed by the PDF generator
-            verifiedCitation: verifiedCode ?? null,
-            title: charge.name,
-            maxPenalty: charge.maxPenalty,
-          };
-        })
-        .filter(Boolean);
+      const chargeClassifications = classifyChargesForGuidance(caseDataWithFlags.charges);
 
       if (chargeClassifications.length === 0 && chargeIds.length > 0 && chargeIds[0] !== '') {
         sendEvent({ type: 'error', error: 'None of the provided charge IDs were recognized.' });
@@ -1939,29 +1971,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         ...extractBackgroundFlags(req.body),
       };
 
-      // Charge classification — same guard logic as the stream route.
+      // Use the catalog-owned classifier so every guidance route shares the
+      // same canonical IDs, official titles, and verified citations.
       const chargeIds = Array.isArray(caseDataWithFlags.charges)
         ? caseDataWithFlags.charges
         : [caseDataWithFlags.charges];
-
-      const chargeClassifications = chargeIds
-        .map((id: string) => {
-          const charge = getChargeById(id);
-          if (!charge) return null;
-          const verifiedCode = getVerifiedCitation(charge);
-          return {
-            id: charge.id,
-            name: charge.name,
-            classification: charge.category,
-            // code carries the verified citation when available (used by AI prompt)
-            ...(verifiedCode ? { code: verifiedCode } : {}),
-            // verifiedCitation is the dedicated field consumed by the PDF generator
-            verifiedCitation: verifiedCode ?? null,
-            title: charge.name,
-            maxPenalty: charge.maxPenalty,
-          };
-        })
-        .filter(Boolean);
+      const chargeClassifications = classifyChargesForGuidance(caseDataWithFlags.charges);
 
       if (chargeClassifications.length === 0 && chargeIds.length > 0 && chargeIds[0] !== '') {
         return res.status(400).json({ success: false, error: 'None of the provided charge IDs were recognized.' });
@@ -3755,28 +3770,8 @@ async function resolveChargeInput(charges: string[] | string | undefined): Promi
 async function generateLegalGuidance(caseData: any) {
   // Extract charge classifications first
   const chargeIds = (Array.isArray(caseData.charges) ? caseData.charges : [caseData.charges])
-    .map((id: string) => normalizeChargeId(id));
-  const chargeClassifications = chargeIds
-    .map((id: string) => {
-      const charge = getChargeById(id);
-      if (!charge) {
-        opsLog('guidance', `Warning: Charge ID "${id}" not found in database`);
-        return null;
-      }
-      const verifiedCode = getVerifiedCitation(charge);
-      return {
-        id: charge.id,
-        name: charge.name,
-        classification: charge.category,
-        // code carries the verified citation when available (used by AI prompt)
-        ...(verifiedCode ? { code: verifiedCode } : {}),
-        // verifiedCitation is the dedicated field consumed by the PDF generator
-        verifiedCitation: verifiedCode ?? null,
-        title: charge.name,
-        maxPenalty: charge.maxPenalty,
-      };
-    })
-    .filter(Boolean);
+    .filter((id: unknown): id is string => typeof id === 'string');
+  const chargeClassifications = classifyChargesForGuidance(chargeIds);
   
   // Log if we couldn't find all charges
   if (chargeClassifications.length !== chargeIds.length) {
