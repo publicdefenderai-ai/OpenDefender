@@ -397,6 +397,27 @@ export default {
           "chargeLookupTitle": "Inspect a charge's current provenance",
           "chargeLookupBody": "In the Pennsylvania charge selector, open “View current source details” for a selectable charge to see its official title, citation, source link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
         },
+        "scSources": {
+          "eyebrow": "South Carolina charge sources",
+          "title": "How South Carolina charge sources are verified",
+          "intro": "South Carolina charge records use the South Carolina Legislature's official Code of Laws chapter pages. The committed manifest preserves all 128 catalog rows, but publishes only records with complete, exact statutory support.",
+          "authorityTitle": "Official authority",
+          "authorityBody": "The importer retrieves South Carolina Code sections from scstatehouse.gov, verifies the section marker, official catchline, complete returned text, history evidence, requested subdivisions, retrieval metadata, and a SHA-256 content hash.",
+          "failClosedTitle": "Why a charge may be unavailable",
+          "failClosedBody": "If the official chapter page is unavailable, a section or title is missing, a compound charge is incomplete, the catalog code does not exactly match the citation, or the mapping is materially different, the row is withheld. Withheld South Carolina rows do not appear in selection, guidance, search, or exports.",
+          "catalogTitle": "Catalog labels and aliases",
+          "catalogBody": "A South Carolina plain-language label is retained only when it exactly matches the official catchline. An alias requires documented attorney approval for that specific charge; until then it is withheld. Federal concepts, Model Penal Code labels, unsupported enhancements, inferred sections, and secondary-only citations remain withheld.",
+          "reviewTitle": "Source verification is not attorney approval",
+          "reviewBody": "Verification confirms the official publisher, section, title, complete returned text, history evidence, retrieval metadata, and hash. It does not mean a lawyer approved the elements, mental state, grading, penalties, or currentness interpretation; those fields remain pending attorney review.",
+          "linksTitle": "Review the underlying disclosures",
+          "linksIntro": "Compare this explanation with the maintained source inventory, statute-link disclosure, legal-data disclosures, and South Carolina's official Code of Laws pages.",
+          "officialLink": "South Carolina official Code of Laws",
+          "inventoryLink": "Criminal-charge source inventory",
+          "statuteLink": "Statute-link disclosure",
+          "disclaimerLink": "General legal-data disclosures",
+          "chargeLookupTitle": "Inspect a charge's current provenance",
+          "chargeLookupBody": "In the South Carolina charge selector, open “View current source details” for a selectable charge to see its official title, citation, Code of Laws link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
+        },
           "labels": { "coverage": "Coverage / count", "freshness": "Freshness", "sourcePath": "Source path", "sourceType": "Source type", "sources": "Named sources", "citations": "Citation / reference format", "providerDisclosure": "Provider disclosure", "limitation": "Limitation" },
         "sourceTypes": {
           "primaryLegalText": "Primary legal text",

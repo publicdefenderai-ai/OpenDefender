@@ -465,7 +465,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
   const [runtimeAuthorityCharges, setRuntimeAuthorityCharges] = useState<any[] | null>(null);
-  const isAuthorityBacked = ["NY", "TX", "FL", "PA"].includes(formData.jurisdiction);
+  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC"].includes(formData.jurisdiction);
 
   useEffect(() => {
     if (!isAuthorityBacked) {

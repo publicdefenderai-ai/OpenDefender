@@ -399,6 +399,27 @@ export default {
           "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
           "chargeLookupBody": "En el selector de cargos de Pensilvania, abra «Ver detalles de la fuente actual» para un cargo seleccionable y consulte su título oficial, cita, enlace, fechas de obtención y vigencia, disponibilidad del contenido y hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
         },
+        "scSources": {
+          "eyebrow": "Fuentes de cargos de Carolina del Sur",
+          "title": "Cómo se verifican las fuentes de los cargos de Carolina del Sur",
+          "intro": "Los registros de cargos de Carolina del Sur usan las páginas oficiales por capítulo del Código de Leyes de la Legislatura de Carolina del Sur. El manifiesto conserva las 128 filas del catálogo, pero solo publica registros con respaldo legal completo y exacto.",
+          "authorityTitle": "Autoridad oficial",
+          "authorityBody": "El importador obtiene las secciones del Código de Carolina del Sur desde scstatehouse.gov, verifica el marcador de sección, el título oficial, el texto completo, la evidencia histórica, las subdivisiones solicitadas, los metadatos de obtención y un hash SHA-256.",
+          "failClosedTitle": "Por qué un cargo puede no estar disponible",
+          "failClosedBody": "Si la página oficial del capítulo no está disponible, falta la sección o el título, un cargo compuesto está incompleto, el código del catálogo no coincide exactamente con la cita o la correspondencia es sustancialmente distinta, la fila queda retenida. Las filas retenidas no aparecen en selección, orientación, búsqueda ni exportaciones.",
+          "catalogTitle": "Etiquetas y alias del catálogo",
+          "catalogBody": "Una etiqueta en lenguaje sencillo de Carolina del Sur se conserva solo cuando coincide exactamente con el título oficial. Un alias requiere aprobación legal documentada para ese cargo específico; hasta entonces queda retenido. Los conceptos federales, las etiquetas del Código Penal Modelo, los aumentos no respaldados, las secciones inferidas y las citas exclusivamente secundarias quedan retenidos.",
+          "reviewTitle": "La verificación de una fuente no equivale a la aprobación de un abogado",
+          "reviewBody": "La verificación confirma el editor oficial, la sección, el título, el texto completo, la evidencia histórica, los metadatos y el hash. No significa que un abogado haya aprobado los elementos, el estado mental, la clasificación, las penas o la vigencia; esos campos siguen pendientes de revisión legal.",
+          "linksTitle": "Revise las divulgaciones subyacentes",
+          "linksIntro": "Compare esta explicación con el inventario de fuentes, la divulgación de enlaces legales, las divulgaciones de datos legales y las páginas oficiales del Código de Leyes de Carolina del Sur.",
+          "officialLink": "Código de Leyes oficial de Carolina del Sur",
+          "inventoryLink": "Inventario de fuentes de cargos",
+          "statuteLink": "Divulgación de enlaces legales",
+          "disclaimerLink": "Divulgaciones generales de datos legales",
+          "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
+          "chargeLookupBody": "En el selector de cargos de Carolina del Sur, abra «Ver detalles de la fuente actual» para ver el título oficial, la cita, el enlace al Código de Leyes, las fechas de obtención y vigencia, la disponibilidad del contenido y el hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
+        },
           "labels": { "coverage": "Cobertura / conteo", "freshness": "Actualización", "sourcePath": "Ruta de la fuente", "sourceType": "Tipo de fuente", "sources": "Fuentes nombradas", "citations": "Formato de cita / referencia", "providerDisclosure": "Divulgación del proveedor", "limitation": "Limitación" },
         "sourceTypes": {
           "primaryLegalText": "Texto legal primario",
