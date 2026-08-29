@@ -243,31 +243,15 @@ describe('GET /api/v1/search?q=robbery&types=charge — instructionRef/instructi
     ).toBeGreaterThan(0);
   });
 
-  it('charge-il-robbery-in-the-second-degree is present with instructionRef "IPI-CR 14.01"', () => {
+  it('withholds Illinois robbery until the official title mapping is reviewed', () => {
     if (!serverAvailable) return;
     const ilRobbery = v1Response.results.find(
       r => r.document.id === 'charge-il-robbery-in-the-second-degree',
     );
     expect(
       ilRobbery,
-      'charge-il-robbery-in-the-second-degree missing from /api/v1/search?q=robbery results — charge ID or search scoring may have changed',
-    ).toBeDefined();
-    expect(
-      ilRobbery!.document.instructionRef,
-      'instructionRef missing from IL robbery result — field dropped by search indexer or v1 serialization',
-    ).toBe('IPI-CR 14.01');
-  });
-
-  it('charge-il-robbery-in-the-second-degree instructionUrl points to illinoiscourts.gov', () => {
-    if (!serverAvailable) return;
-    const ilRobbery = v1Response.results.find(
-      r => r.document.id === 'charge-il-robbery-in-the-second-degree',
-    );
-    expect(ilRobbery).toBeDefined();
-    expect(
-      ilRobbery!.document.instructionUrl,
-      'instructionUrl missing from IL robbery v1 search result',
-    ).toMatch(/illinoiscourts\.gov/);
+      'a materially broader official catchline must not be silently promoted as the exact Illinois catalog charge',
+    ).toBeUndefined();
   });
 
   it('charge-fl-robbery-in-the-first-degree is present with instructionRef "FSJI 15.1"', () => {

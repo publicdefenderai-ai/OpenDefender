@@ -1,7 +1,7 @@
 import { getSelectableCharges } from "@shared/criminal-charges";
 import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
 
-export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["NY", "TX", "FL", "PA", "SC"]);
+export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["NY", "TX", "FL", "PA", "SC", "IL"]);
 
 export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<string>> {
   const byJurisdiction = new Map(

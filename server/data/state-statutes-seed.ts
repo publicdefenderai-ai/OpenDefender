@@ -23641,4 +23641,9 @@ export const stateStatutesSeed = [
     sourceApi: 'state_website',
     isActive: true,
   },
-];
+].filter((statute) => {
+  // Illinois is served only by the verified ILGA authority database. The
+  // older synthesized Illinois rows below must never become a fallback source
+  // for statute browsing or seeding.
+  return statute.jurisdiction !== 'IL';
+});

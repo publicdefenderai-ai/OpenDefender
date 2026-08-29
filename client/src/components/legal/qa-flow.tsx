@@ -465,7 +465,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
   const [runtimeAuthorityCharges, setRuntimeAuthorityCharges] = useState<any[] | null>(null);
-  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC"].includes(formData.jurisdiction);
+  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL"].includes(formData.jurisdiction);
 
   useEffect(() => {
     if (!isAuthorityBacked) {
@@ -504,8 +504,8 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     ? availableCharges.filter(charge => 
         chargeCategories[selectedCategory as keyof typeof chargeCategories]?.includes(charge.id) ||
         (selectedCategory === 'Drug Offenses' &&
-          (charge.jurisdiction === 'NY' || charge.jurisdiction === 'TX') &&
-          /^(ny|tx)-/.test(charge.id) &&
+          (charge.jurisdiction === 'NY' || charge.jurisdiction === 'TX' || charge.jurisdiction === 'IL') &&
+          /^(ny|tx|il)-/.test(charge.id) &&
           /controlled-substance|drug|sale|distribution|trafficking|manufacturing/.test(charge.id))
       )
     : availableCharges;

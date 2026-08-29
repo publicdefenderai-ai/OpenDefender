@@ -418,6 +418,27 @@ export default {
           "chargeLookupTitle": "Inspect a charge's current provenance",
           "chargeLookupBody": "In the South Carolina charge selector, open “View current source details” for a selectable charge to see its official title, citation, Code of Laws link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
         },
+        "ilSources": {
+          "eyebrow": "Illinois charge sources",
+          "title": "How Illinois charge sources are verified",
+          "intro": "Illinois charge records use the Illinois General Assembly's official Illinois Compiled Statutes static documents. The committed manifest preserves all 116 catalog rows, but publishes only records with complete, exact statutory support.",
+          "authorityTitle": "Official authority",
+          "authorityBody": "The importer retrieves exact Illinois Compiled Statutes sections from ilga.gov, verifies the section identity and official catchline, stores the complete returned text, records retrieval and effective-date evidence when available, and calculates a SHA-256 content hash.",
+          "failClosedTitle": "Why a charge may be unavailable",
+          "failClosedBody": "If an official static document is unavailable, the section or title is missing, a required subdivision is absent, the catalog code does not exactly support the cited identity, or the mapping is materially different, the row is withheld. Withheld Illinois rows do not appear in selection, guidance, search, or exports.",
+          "catalogTitle": "Exact identities and aliases",
+          "catalogBody": "An Illinois label is retained only when it matches the official catchline. An alias requires a documented, charge-specific attorney-approved mapping; until then it is withheld. Federal concepts, Model Penal Code labels, attempts, compound records, inferred sections, and secondary-only citations are not substituted.",
+          "reviewTitle": "Source verification is not attorney approval",
+          "reviewBody": "Verification confirms the official publisher, chapter, Act, section, catchline, complete returned text, retrieval metadata, and hash. It does not mean a lawyer approved the elements, mental state, grading, penalties, or currentness interpretation; those fields remain pending attorney review.",
+          "linksTitle": "Review the underlying disclosures",
+          "linksIntro": "Compare this explanation with the maintained source inventory, statute-link disclosure, legal-data disclosures, and the Illinois General Assembly's official resources.",
+          "officialLink": "Illinois General Assembly Illinois Compiled Statutes",
+          "inventoryLink": "Criminal-charge source inventory",
+          "statuteLink": "Statute-link disclosure",
+          "disclaimerLink": "General legal-data disclosures",
+          "chargeLookupTitle": "Inspect a charge's current provenance",
+          "chargeLookupBody": "In the Illinois charge selector, open “View current source details” for a selectable charge to see its official title, exact ILCS citation, source link, retrieval and currentness dates, content availability, and content hash. If current authority is unavailable, the charge is not selectable and no older provenance is shown."
+        },
           "labels": { "coverage": "Coverage / count", "freshness": "Freshness", "sourcePath": "Source path", "sourceType": "Source type", "sources": "Named sources", "citations": "Citation / reference format", "providerDisclosure": "Provider disclosure", "limitation": "Limitation" },
         "sourceTypes": {
           "primaryLegalText": "Primary legal text",

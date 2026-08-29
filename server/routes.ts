@@ -34,6 +34,8 @@ import { pennsylvaniaSourceDatabase } from "./services/pennsylvania-source-datab
 import { loadPennsylvaniaAuthorityManifest } from "./data/pennsylvania-manifest-loader";
 import { southCarolinaSourceDatabase } from "./services/south-carolina-source-database";
 import { loadSouthCarolinaAuthorityManifest } from "./data/south-carolina-manifest-loader";
+import { illinoisSourceDatabase } from "./services/illinois-source-database";
+import { loadIllinoisAuthorityManifest } from "./data/illinois-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
 import rateLimit from "express-rate-limit";
@@ -495,6 +497,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           ? await pennsylvaniaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : normalizedCharge?.jurisdiction === "SC"
           ? await southCarolinaSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : normalizedCharge?.jurisdiction === "IL"
+          ? await illinoisSourceDatabase.getChargeProvenance(normalizedCharge.id)
         : normalizedCharge?.jurisdiction === "CA"
           ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : null;
@@ -1068,6 +1072,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       errLog("Failed to fetch South Carolina source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch South Carolina source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/illinois/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await illinoisSourceDatabase.seed(loadIllinoisAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("Illinois source database seeding failed", error);
+      res.status(500).json({ success: false, error: "Illinois source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/illinois/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await illinoisSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch Illinois source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch Illinois source database status" });
     }
   });
 

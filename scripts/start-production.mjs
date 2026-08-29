@@ -6,6 +6,7 @@ const seedScripts = [
   "dist/seed-florida-source-database.js",
   "dist/seed-pennsylvania-source-database.js",
   "dist/seed-south-carolina-source-database.js",
+  "dist/seed-illinois-source-database.js",
 ];
 let child;
 

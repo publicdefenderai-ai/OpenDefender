@@ -177,10 +177,8 @@ const pennsylvaniaConfig: StateStatuteUrlConfig = {
 
 /**
  * Illinois - ilga.gov
- * URL pattern varies by act type:
- * - Criminal Code (720 ILCS 5): /legislation/ilcs/ilcs4.asp?DocName=072000050HArt%2E+{article}&ActID=1876&ChapterID=53
- * - Vehicle Code (625 ILCS 5): /legislation/ilcs/ilcs3.asp?ActID=1815&ChapterID=49
- * - Controlled Substances (720 ILCS 570): /legislation/ilcs/ilcs3.asp?ActID=1941&ChapterID=53
+ * Exact per-section documents are used for Illinois authority-backed records:
+ * /legislation/ilcs/documents/{chapter:04d}{act:04d}0K{section}.htm
  */
 interface IllinoisActMapping {
   actId: string;
@@ -208,33 +206,17 @@ const illinoisConfig: StateStatuteUrlConfig = {
     'Domestic Violence Act': '750-60',
   },
   generateUrl: (codeName: string, section: string) => {
-    // Illinois ILCS format: 720 ILCS 5/12-1 -> section = "720-5/12-1"
-    // Parse the section to extract chapter, act, and article
+    // Illinois ILCS format: 720 ILCS 5/12-1 -> section = "720-5/12-1".
     const parts = section.split('/');
     const chapterAct = parts[0]; // e.g., "720-5"
     const sectionPart = parts[1] || ''; // e.g., "12-1" or "12-3.05"
-    
-    const mapping = illinoisActMappings[chapterAct];
-    if (!mapping) {
-      // Fallback to main search page
-      return `https://www.ilga.gov/legislation/ilcs/ilcs.asp`;
+    const [chapterNum, actNum] = chapterAct.split('-');
+    if (chapterNum && actNum && sectionPart) {
+      return `https://www.ilga.gov/legislation/ilcs/documents/${chapterNum.padStart(4, '0')}${actNum.padStart(4, '0')}0K${sectionPart}.htm`;
     }
-
-    if (mapping.type === 'ilcs4') {
-      // Criminal Code uses article-based URLs
-      // Extract article number from section (e.g., "12-1" -> article 12)
-      const articleMatch = sectionPart.match(/^(\d+)/);
-      const article = articleMatch ? articleMatch[1] : '1';
-      const chapterNum = chapterAct.split('-')[0]; // "720"
-      const actNum = chapterAct.split('-')[1]; // "5"
-      const docName = `0${chapterNum}000${actNum}0HArt%2E+${article}`;
-      return `https://www.ilga.gov/legislation/ilcs/ilcs4.asp?DocName=${docName}&ActID=${mapping.actId}&ChapterID=${mapping.chapterId}`;
-    } else {
-      // Other acts use simpler ilcs3 URLs
-      return `https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=${mapping.actId}&ChapterID=${mapping.chapterId}`;
-    }
+    return `https://www.ilga.gov/legislation/ilcs/ilcs.asp`;
   },
-  notes: 'Illinois General Assembly - ILCS database with article-level URLs for Criminal Code.',
+  notes: 'Illinois General Assembly - exact per-section ILCS static documents.',
 };
 
 /**

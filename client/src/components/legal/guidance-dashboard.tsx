@@ -570,7 +570,8 @@ function YourChargesSection({
     normalizedJurisdiction === "TX" ||
     normalizedJurisdiction === "FL" ||
     normalizedJurisdiction === "PA" ||
-    normalizedJurisdiction === "SC";
+    normalizedJurisdiction === "SC" ||
+    normalizedJurisdiction === "IL";
   const { data: currentAuthorityCharges } = useQuery<{ charges?: Array<{ id: string }> }>({
     queryKey: ["/api/criminal-charges", "guidance-authority", normalizedJurisdiction],
     queryFn: async () => {
@@ -1022,7 +1023,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
     try {
       const jurisdiction = guidance.caseData?.jurisdiction?.toUpperCase();
       if (
-        (jurisdiction === "NY" || jurisdiction === "TX") &&
+        ["NY", "TX", "FL", "PA", "SC", "IL"].includes(jurisdiction) &&
         guidance.chargeClassifications?.length
       ) {
         const authorityResponse = await fetch(

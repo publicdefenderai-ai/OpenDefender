@@ -420,6 +420,27 @@ export default {
           "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
           "chargeLookupBody": "En el selector de cargos de Carolina del Sur, abra «Ver detalles de la fuente actual» para ver el título oficial, la cita, el enlace al Código de Leyes, las fechas de obtención y vigencia, la disponibilidad del contenido y el hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
         },
+        "ilSources": {
+          "eyebrow": "Fuentes de cargos de Illinois",
+          "title": "Cómo se verifican las fuentes de cargos de Illinois",
+          "intro": "Los cargos de Illinois utilizan los documentos estáticos oficiales de los Illinois Compiled Statutes de la Asamblea General de Illinois. El manifiesto conserva las 116 filas del catálogo, pero solo publica registros con respaldo legal completo y exacto.",
+          "authorityTitle": "Fuente oficial",
+          "authorityBody": "El importador obtiene las secciones exactas de los Illinois Compiled Statutes desde ilga.gov, verifica la identidad de la sección y el título oficial, conserva el texto completo, registra la obtención y la evidencia de vigencia cuando está disponible, y calcula un hash SHA-256.",
+          "failClosedTitle": "Por qué un cargo puede no estar disponible",
+          "failClosedBody": "Si el documento oficial no está disponible, falta la sección o el título, falta una subdivisión requerida, el código del catálogo no respalda exactamente la identidad citada o la correspondencia es materialmente distinta, la fila se retiene. Las filas retenidas no aparecen en selección, orientación, búsqueda ni exportaciones.",
+          "catalogTitle": "Identidades exactas y alias",
+          "catalogBody": "Una etiqueta de Illinois se conserva solo cuando coincide con el título oficial. Un alias requiere una correspondencia documentada, específica del cargo y aprobada por un abogado; hasta entonces se retiene. No se sustituyen conceptos federales, etiquetas del Código Penal Modelo, tentativas, registros compuestos, secciones inferidas ni citas de fuentes secundarias.",
+          "reviewTitle": "Verificar la fuente no equivale a aprobación legal",
+          "reviewBody": "La verificación confirma el editor oficial, capítulo, Act, sección, título, texto completo, metadatos de obtención y hash. No significa que un abogado haya aprobado los elementos, el estado mental, la clasificación, las penas o la interpretación de vigencia; esos campos siguen pendientes de revisión legal.",
+          "linksTitle": "Consulte las divulgaciones relacionadas",
+          "linksIntro": "Compare esta explicación con el inventario de fuentes, la divulgación de enlaces legales, las divulgaciones generales de datos legales y los recursos oficiales de la Asamblea General de Illinois.",
+          "officialLink": "Illinois Compiled Statutes de la Asamblea General de Illinois",
+          "inventoryLink": "Inventario de fuentes de cargos",
+          "statuteLink": "Divulgación de enlaces legales",
+          "disclaimerLink": "Divulgaciones generales de datos legales",
+          "chargeLookupTitle": "Consulte la procedencia actual de un cargo",
+          "chargeLookupBody": "En el selector de cargos de Illinois, abra «Ver detalles de la fuente actual» para ver el título oficial, la cita exacta de ILCS, el enlace, las fechas de obtención y vigencia, la disponibilidad del contenido y el hash. Si la autoridad actual no está disponible, el cargo no se puede seleccionar y no se muestra una procedencia anterior."
+        },
           "labels": { "coverage": "Cobertura / conteo", "freshness": "Actualización", "sourcePath": "Ruta de la fuente", "sourceType": "Tipo de fuente", "sources": "Fuentes nombradas", "citations": "Formato de cita / referencia", "providerDisclosure": "Divulgación del proveedor", "limitation": "Limitación" },
         "sourceTypes": {
           "primaryLegalText": "Texto legal primario",

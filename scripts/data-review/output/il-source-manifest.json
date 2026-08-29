@@ -1,0 +1,1934 @@
+{
+  "jurisdiction": "IL",
+  "generatedAt": "2026-08-29T16:15:43.282Z",
+  "source": "Illinois General Assembly Illinois Compiled Statutes (ilga.gov)",
+  "catalogRecords": [
+    {
+      "chargeId": "il-murder-in-the-first-degree",
+      "catalogLabel": "Murder in the First Degree",
+      "catalogCode": "5/9-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"First degree murder\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "First degree murder",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-murder-in-the-second-degree",
+      "catalogLabel": "Murder in the Second Degree",
+      "catalogCode": "5/9-2",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Second degree murder\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Second degree murder",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-involuntary-manslaughter",
+      "catalogLabel": "Involuntary Manslaughter",
+      "catalogCode": "5/9-3",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Involuntary Manslaughter and Reckless Homicide\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Involuntary Manslaughter and Reckless Homicide",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-vehicular-homicide",
+      "catalogLabel": "Reckless Homicide",
+      "catalogCode": "5/9-3",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Involuntary Manslaughter and Reckless Homicide\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Involuntary Manslaughter and Reckless Homicide",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-felony-murder",
+      "catalogLabel": "Felony Murder",
+      "catalogCode": "5/9-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"First degree murder\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "First degree murder",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-assault-in-the-first-degree",
+      "catalogLabel": "Aggravated Battery",
+      "catalogCode": "5/12-3.05",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Aggravated battery",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/12-3.05",
+          "lawId": "720-5",
+          "section": "12-3.05",
+          "citation": "720 ILCS 5/12-3.05",
+          "officialTitle": "Aggravated battery",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-3.05.htm",
+          "content": "720 ILCS 5/12-3.05\n(720 ILCS 5/12-3.05) (was 720 ILCS 5/12-4)\nSec. 12-3.05. Aggravated battery.\n(a) Offense based on injury. A person commits aggravated battery when, in committing a battery, other than by the discharge of a firearm, he or she knowingly does any of the following:\n(1) Causes great bodily harm or permanent disability\nor disfigurement.\n(2) Causes severe and permanent disability, great\nbodily harm, or disfigurement by means of a caustic or flammable substance, a poisonous gas, a deadly biological or chemical contaminant or agent, a radioactive substance, or a bomb or explosive compound.\n(3) Causes great bodily harm or permanent disability\nor disfigurement to an individual whom the person knows to be a peace officer, community policing volunteer, fireman, private security officer, correctional institution employee, or Department of Human Services employee supervising or controlling sexually dangerous persons or sexually violent persons:\n(i) performing his or her official duties;\n(ii) battered to prevent performance of his or\nher official duties; or\n(iii) battered in retaliation for performing his\nor her official duties.\n(4) Causes great bodily harm or permanent disability\nor disfigurement to an individual 60 years of age or older.\n(5) Strangles another individual.\n(b) Offense based on injury to a child or person with an intellectual disability. A person who is at least 18 years of age commits aggravated battery when, in committing a battery, he or she knowingly and without legal justification by any means:\n(1) causes great bodily harm or permanent disability\nor disfigurement to any child under the age of 13 years, or to any person with a severe or profound intellectual disability; or\n(2) causes bodily harm or disability or disfigurement\nto any child under the age of 13 years or to any person with a severe or profound intellectual disability.\n(c) Offense based on location of conduct. A person commits aggravated battery when, in committing a battery, other than by the discharge of a firearm, he or she is or the person battered is on or about a public way, public property, a public place of accommodation or amusement, a sports venue, or a domestic violence shelter, or in a church, synagogue, mosque, or other building, structure, or place used for religious worship.\n(d) Offense based on status of victim. A person commits aggravated battery when, in committing a battery, other than by discharge of a firearm, he or she knows the individual battered to be any of the following:\n(1) A person 60 years of age or older.\n(2) A person who is pregnant or has a physical\ndisability.\n(3) A teacher or school employee upon school grounds\nor grounds adjacent to a school or in any part of a building used for school purposes.\n(4) A peace officer, community policing volunteer,\nfireman, private security officer, correctional institution employee, or Department of Human Services employee supervising or controlling sexually dangerous persons or sexually violent persons:\n(i) performing his or her official duties;\n(ii) battered to prevent performance of his or\nher official duties; or\n(iii) battered in retaliation for performing his\nor her official duties.\n(5) A judge, emergency management worker, emergency\nmedical services personnel, or utility worker:\n(i) performing his or her official duties;\n(ii) battered to prevent performance of his or\nher official duties; or\n(iii) battered in retaliation for performing his\nor her official duties.\n(6) An officer or employee of the State of Illinois,\na unit of local government, or a school district, while performing his or her official duties.\n(7) A transit employee performing his or her official\nduties, or a transit passenger.\n(8) A taxi driver on duty.\n(9) A merchant who detains the person for an alleged\ncommission of retail theft under Section 16-26 of this Code and the person without legal justification by any means causes bodily harm to the merchant.\n(10) A person authorized to serve process under\nSection 2-202 of the Code of Civil Procedure or a special process server appointed by the circuit court while that individual is in the performance of his or her duties as a process server.\n(11) A nurse while in the performance of his or her\nduties as a nurse.\n(12) A merchant: (i) while performing his or her\nduties, including, but not limited to, relaying directions for healthcare or safety from his or her supervisor or employer or relaying health or safety guidelines, recommendations, regulations, or rules from a federal, State, or local public health agency; and (ii) during a disaster declared by the Governor, or a state of emergency declared by the mayor of the municipality in which the merchant is located, due to a public health emergency and for a period of 6 months after such declaration.\n(e) Offense based on use of a firearm. A person commits aggravated battery when, in committing a battery, he or she knowingly does any of the following:\n(1) Discharges a firearm, other than a machine gun or\na firearm equipped with a silencer, and causes any injury to another person.\n(2) Discharges a firearm, other than a machine gun or\na firearm equipped with a silencer, and causes any injury to a person he or she knows to be a peace officer, community policing volunteer, person summoned by a police officer, fireman, private security officer, correctional institution employee, or emergency management worker:\n(i) performing his or her official duties;\n(ii) battered to prevent performance of his or\nher official duties; or\n(iii) battered in retaliation for performing his\nor her official duties.\n(3) Discharges a firearm, other than a machine gun or\na firearm equipped with a silencer, and causes any injury to a person he or she knows to be emergency medical services personnel:\n(i) performing his or her official duties;\n(ii) battered to prevent performance of his or\nher official duties; or\n(iii) battered in retaliation for performing his\nor her official duties.\n(4) Discharges a firearm and causes any injury to a\nperson he or she knows to be a teacher, a student in a school, or a school employee, and the teacher, student, or employee is upon school grounds or grounds adjacent to a school or in any part of a building used for school purposes.\n(5) Discharges a machine gun or a firearm equipped\nwith a silencer, and causes any injury to another person.\n(6) Discharges a machine gun or a firearm equipped\nwith a silencer, and causes any injury to a person he or she knows to be a peace officer, community policing volunteer, person summoned by a police officer, fireman, private security officer, correctional institution employee or emergency management worker:\n(i) performing his or her official duties;\n(ii) battered to prevent performance of his or\nher official duties; or\n(iii) battered in retaliation for performing his\nor her official duties.\n(7) Discharges a machine gun or a firearm equipped\nwith a silencer, and causes any injury to a person he or she knows to be emergency medical services personnel:\n(i) performing his or her official duties;\n(ii) battered to prevent performance of his or\nher official duties; or\n(iii) battered in retaliation for performing his\nor her official duties.\n(8) Discharges a machine gun or a firearm equipped\nwith a silencer, and causes any injury to a person he or she knows to be a teacher, or a student in a school, or a school employee, and the teacher, student, or employee is upon school grounds or grounds adjacent to a school or in any part of a building used for school purposes.\n(f) Offense based on use of a weapon or device. A person commits aggravated battery when, in committing a battery, he or she does any of the following:\n(1) Uses a deadly weapon other than by discharge of a\nfirearm, or uses an air rifle as defined in Section 24.8-0.1 of this Code.\n(2) Wears a hood, robe, or mask to conceal his or her\nidentity.\n(3) Knowingly and without lawful justification shines\nor flashes a laser gunsight or other laser device attached to a firearm, or used in concert with a firearm, so that the laser beam strikes upon or against the person of another.\n(4) Knowingly video or audio records the offense with\nthe intent to disseminate the recording.\n(g) Offense based on certain conduct. A person commits aggravated battery when, other than by discharge of a firearm, he or she does any of the following:\n(1) Violates Section 401 of the Illinois Controlled\nSubstances Act by unlawfully delivering a controlled substance to another and any user experiences great bodily harm or permanent disability as a result of the injection, inhalation, or ingestion of any amount of the controlled substance.\n(2) Knowingly administers to an individual or causes\nhim or her to take, without his or her consent or by threat or deception, and for other than medical purposes, any intoxicating, poisonous, stupefying, narcotic, anesthetic, or controlled substance, or gives to another person any food containing any substance or object intended to cause physical injury if eaten.\n(3) Knowingly causes or attempts to cause a\ncorrectional institution employee or Department of Human Services employee to come into contact with blood, seminal fluid, urine, or feces by throwing, tossing, or expelling the fluid or material, and the person is an inmate of a penal institution or is a sexually dangerous person or sexually violent person in the custody of the Department of Human Services.\n(h) Sentence. Unless otherwise provided, aggravated battery is a Class 3 felony.\nAggravated battery as defined in subdivision (a)(4), (d)(4), or (g)(3) is a Class 2 felony.\nAggravated battery as defined in subdivision (a)(3) or (g)(1) is a Class 1 felony.\nAggravated battery as defined in subdivision (a)(1) is a Class 1 felony when the aggravated battery was intentional and involved the infliction of torture, as defined in paragraph (10) of subsection (b-5) of Section 5-8-1 of the Unified Code of Corrections, as the infliction of or subjection to extreme physical pain, motivated by an intent to increase or prolong the pain, suffering, or agony of the victim.\nAggravated battery as defined in subdivision (a)(1) is a Class 2 felony when the person causes great bodily harm or permanent disability to an individual whom the person knows to be a member of a congregation engaged in prayer or other religious activities at a church, synagogue, mosque, or other building, structure, or place used for religious worship.\nAggravated battery under subdivision (a)(5) is a\nClass 1 felony if:\n(A) the person used or attempted to use a dangerous\ninstrument while committing the offense;\n(B) the person caused great bodily harm or permanent\ndisability or disfigurement to the other person while committing the offense; or\n(C) the person has been previously convicted of a\nviolation of subdivision (a)(5) under the laws of this State or laws similar to subdivision (a)(5) of any other state.\nAggravated battery as defined in subdivision (e)(1) is a Class X felony.\nAggravated battery as defined in subdivision (a)(2) is a Class X felony for which a person shall be sentenced to a term of imprisonment of a minimum of 6 years and a maximum of 45 years.\nAggravated battery as defined in subdivision (e)(5) is a Class X felony for which a person shall be sentenced to a term of imprisonment of a minimum of 12 years and a maximum of 45 years.\nAggravated battery as defined in subdivision (e)(2), (e)(3), or (e)(4) is a Class X felony for which a person shall be sentenced to a term of imprisonment of a minimum of 15 years and a maximum of 60 years.\nAggravated battery as defined in subdivision (e)(6), (e)(7), or (e)(8) is a Class X felony for which a person shall be sentenced to a term of imprisonment of a minimum of 20 years and a maximum of 60 years.\nAggravated battery as defined in subdivision (b)(1) is a Class X felony, except that:\n(1) if the person committed the offense while armed\nwith a firearm, 15 years shall be added to the term of imprisonment imposed by the court;\n(2) if, during the commission of the offense, the\nperson personally discharged a firearm, 20 years shall be added to the term of imprisonment imposed by the court;\n(3) if, during the commission of the offense, the\nperson personally discharged a firearm that proximately caused great bodily harm, permanent disability, permanent disfigurement, or death to another person, 25 years or up to a term of natural life shall be added to the term of imprisonment imposed by the court.\n(i) Definitions. In this Section:\n\"Building or other structure used to provide shelter\" has the meaning ascribed to \"shelter\" in Section 1 of the Domestic Violence Shelters Act.\n\"Domestic violence\" has the meaning ascribed to it in Section 103 of the Illinois Domestic Violence Act of 1986.\n\"Domestic violence shelter\" means any building or other structure used to provide shelter or other services to victims or to the dependent children of victims of domestic violence pursuant to the Illinois Domestic Violence Act of 1986 or the Domestic Violence Shelters Act, or any place within 500 feet of such a building or other structure in the case of a person who is going to or from such a building or other structure.\n\"Firearm\" has the meaning provided under Section 1.1\nof the Firearm Owners Identification Card Act, and does\nnot include an air rifle as defined by Section 24.8-0.1 of this Code.\n\"Machine gun\" has the meaning ascribed to it in Section 24-1 of this Code.\n\"Merchant\" has the meaning ascribed to it in Section 16-0.1 of this Code.\n\"Strangle\" means\nintentionally impeding the normal breathing or circulation of the blood of an individual by applying pressure on the throat\nor neck of that individual or by blocking the nose or mouth of\nthat individual.\n(Source: P.A. 103-51, eff. 1-1-24.)",
+          "contentHash": "b8eae42c037d394ff7b7a309cb2c3fba9d8a8d17b07fc73f6d9dc5ecd55020e3",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2024-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-assault-in-the-first-degree",
+            "catalogLabel": "Aggravated Battery",
+            "catalogCode": "5/12-3.05",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "12-3.05",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 103-51, eff. 1-1-24.)",
+              "effectiveDateStart": "2024-01-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "7c1541b0ae5c96166c8c5d2a9fca5cebbd4721b53a319b6e5336e1bfd5dab28b",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-assault-in-the-second-degree",
+      "catalogLabel": "Battery",
+      "catalogCode": "5/12-3",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Battery",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/12-3",
+          "lawId": "720-5",
+          "section": "12-3",
+          "citation": "720 ILCS 5/12-3",
+          "officialTitle": "Battery",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-3.htm",
+          "content": "720 ILCS 5/12-3\n(720 ILCS 5/12-3) (from Ch. 38, par. 12-3)\nSec. 12-3. Battery.\n(a) A person commits battery if he or she knowingly without\nlegal justification by any means (1) causes bodily harm to an\nindividual or (2) makes physical contact of an insulting or provoking\nnature with an individual.\n(b) Sentence.\nBattery is a Class A misdemeanor.\n(Source: P.A. 96-1551, eff. 7-1-11.)",
+          "contentHash": "ac1d375c68317f30016d58988e2cff5eed66c32a9c8951065aad9903378cca18",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2011-07-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-assault-in-the-second-degree",
+            "catalogLabel": "Battery",
+            "catalogCode": "5/12-3",
+            "catalogClassification": "misdemeanor",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "12-3",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 96-1551, eff. 7-1-11.)",
+              "effectiveDateStart": "2011-07-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "7e1fab9adb62e88f8a956dd91a47303a06f30955eaa57a507ef38137b443a04f",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-assault-in-the-third-degree",
+      "catalogLabel": "Assault",
+      "catalogCode": "5/12-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Assault",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/12-1",
+          "lawId": "720-5",
+          "section": "12-1",
+          "citation": "720 ILCS 5/12-1",
+          "officialTitle": "Assault",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-1.htm",
+          "content": "720 ILCS 5/12-1\n(720 ILCS 5/12-1) (from Ch. 38, par. 12-1)\nSec. 12-1. Assault.\n(a) A person commits an assault when, without lawful authority, he\nor she knowingly engages in conduct which places another in reasonable apprehension of\nreceiving a battery.\n(b) Sentence. Assault is a Class C misdemeanor.\n(c) In addition to any other sentence that may be imposed, a court shall\norder any person convicted of assault to perform community service for not less\nthan 30 and not more than 120 hours, if community service is available in the\njurisdiction and is funded and approved by the county board of the county where\nthe offense was committed. In addition, whenever any person is placed on\nsupervision for an alleged offense under this Section, the supervision shall be\nconditioned upon the performance of the community service.\nThis subsection does not apply when the court imposes a sentence of\nincarceration.\n(Source: P.A. 96-1551, eff. 7-1-11.)",
+          "contentHash": "07d506aa81b2686d542960ca92214343b802a01c07086529242f05e219d85f10",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2011-07-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-assault-in-the-third-degree",
+            "catalogLabel": "Assault",
+            "catalogCode": "5/12-1",
+            "catalogClassification": "misdemeanor",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "12-1",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 96-1551, eff. 7-1-11.)",
+              "effectiveDateStart": "2011-07-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "1f904986f5735617f2ad0b403b6596842da67d46ad43233ed5273f73e61ff90e",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-aggravated-assault",
+      "catalogLabel": "Aggravated Assault",
+      "catalogCode": "5/12-2",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Aggravated assault",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/12-2",
+          "lawId": "720-5",
+          "section": "12-2",
+          "citation": "720 ILCS 5/12-2",
+          "officialTitle": "Aggravated assault",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-2.htm",
+          "content": "720 ILCS 5/12-2\n(720 ILCS 5/12-2) (from Ch. 38, par. 12-2)\nSec. 12-2. Aggravated assault.\n(a) Offense based on location of conduct. A person commits aggravated assault when he or she commits an assault against an individual who is on or about a public way, public property, a public place of accommodation or amusement, or a sports venue, or in a church, synagogue, mosque, or other building, structure, or place used for religious worship.\n(b) Offense based on status of victim. A person commits aggravated assault when, in committing an assault, he or she knows the individual assaulted to be any of the following:\n(1) A person with a physical disability or a person\n60 years of age or older and the assault is without legal justification.\n(2) A teacher or school employee upon school grounds\nor grounds adjacent to a school or in any part of a building used for school purposes.\n(3) A park district employee upon park grounds or\ngrounds adjacent to a park or in any part of a building used for park purposes.\n(4) A community policing volunteer, private security\nofficer, or utility worker:\n(i) performing his or her official duties;\n(ii) assaulted to prevent performance of his or\nher official duties; or\n(iii) assaulted in retaliation for performing his\nor her official duties.\n(4.1) A peace officer, fireman, emergency management\nworker, or emergency medical services personnel:\n(i) performing his or her official duties;\n(ii) assaulted to prevent performance of his or\nher official duties; or\n(iii) assaulted in retaliation for performing his\nor her official duties.\n(5) A correctional officer or probation officer:\n(i) performing his or her official duties;\n(ii) assaulted to prevent performance of his or\nher official duties; or\n(iii) assaulted in retaliation for performing\nhis or her official duties.\n(6) A correctional institution employee, a county\njuvenile detention center employee who provides direct and continuous supervision of residents of a juvenile detention center, including a county juvenile detention center employee who supervises recreational activity for residents of a juvenile detention center, or a Department of Human Services employee, Department of Human Services officer, or employee of a subcontractor of the Department of Human Services supervising or controlling sexually dangerous persons or sexually violent persons:\n(i) performing his or her official duties;\n(ii) assaulted to prevent performance of his or\nher official duties; or\n(iii) assaulted in retaliation for performing his\nor her official duties.\n(7) An employee of the State of Illinois, a municipal\ncorporation therein, or a political subdivision thereof, performing his or her official duties.\n(8) A transit employee performing his or her official\nduties, or a transit passenger.\n(9) A sports official or coach actively participating\nin any level of athletic competition within a sports venue, on an indoor playing field or outdoor playing field, or within the immediate vicinity of such a facility or field.\n(10) A person authorized to serve process under\nSection 2-202 of the Code of Civil Procedure or a special process server appointed by the circuit court, while that individual is in the performance of his or her duties as a process server.\n(c) Offense based on use of firearm, device, or motor vehicle. A person commits aggravated assault when, in committing an assault, he or she does any of the following:\n(1) Uses a deadly weapon, an air rifle as defined in\nSection 24.8-0.1 of this Act, or any device manufactured and designed to be substantially similar in appearance to a firearm, other than by discharging a firearm.\n(2) Discharges a firearm, other than from a motor\nvehicle.\n(3) Discharges a firearm from a motor vehicle.\n(4) Wears a hood, robe, or mask to conceal his or her\nidentity.\n(5) Knowingly and without lawful justification shines\nor flashes a laser gun sight or other laser device attached to a firearm, or used in concert with a firearm, so that the laser beam strikes near or in the immediate vicinity of any person.\n(6) Uses a firearm, other than by discharging the\nfirearm, against a peace officer, community policing volunteer, fireman, private security officer, emergency management worker, emergency medical services personnel, employee of a police department, employee of a sheriff's department, or traffic control municipal employee:\n(i) performing his or her official duties;\n(ii) assaulted to prevent performance of his or\nher official duties; or\n(iii) assaulted in retaliation for performing his\nor her official duties.\n(7) Without justification operates a motor vehicle in\na manner which places a person, other than a person listed in subdivision (b)(4), in reasonable apprehension of being struck by the moving motor vehicle.\n(8) Without justification operates a motor vehicle in\na manner which places a person listed in subdivision (b)(4), in reasonable apprehension of being struck by the moving motor vehicle.\n(9) Knowingly video or audio records the offense\nwith the intent to disseminate the recording.\n(d) Sentence. Aggravated assault as defined in subdivision (a), (b)(1), (b)(2), (b)(3), (b)(4), (b)(7), (b)(8), (b)(9), (c)(1), (c)(4), or (c)(9) is a Class A misdemeanor, except that aggravated assault as defined in subdivision (b)(4) and (b)(7) is a Class 4 felony if a Category I, Category II, or Category III weapon is used in the commission of the assault. Aggravated assault as defined in subdivision (b)(4.1), (b)(5), (b)(6), (b)(10), (c)(2), (c)(5), (c)(6), or (c)(7) is a Class 4 felony. Aggravated assault as defined in subdivision (c)(3) or (c)(8) is a Class 3 felony.\n(e) For the purposes of this Section, \"Category I weapon\", \"Category II weapon\", and \"Category III weapon\" have the meanings ascribed to those terms in Section 33A-1 of this Code.\n(Source: P.A. 101-223, eff. 1-1-20; 102-558, eff. 8-20-21.)",
+          "contentHash": "a07b8f45ca773cc647d3a4e41ea2b291b364853ecadeb28c24cc2cb2051a60fe",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2021-08-20",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-aggravated-assault",
+            "catalogLabel": "Aggravated Assault",
+            "catalogCode": "5/12-2",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "12-2",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 101-223, eff. 1-1-20; 102-558, eff. 8-20-21.)",
+              "effectiveDateStart": "2021-08-20",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "e4fdcd18fe033db3f1c1f95a2c61f2d8c50f8ee275eb4116ba5cf428c3144102",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-assault-on-peace-officer",
+      "catalogLabel": "Assault on Peace Officer",
+      "catalogCode": "5/12-3.05",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-rape-in-the-first-degree",
+      "catalogLabel": "Aggravated Criminal Sexual Assault",
+      "catalogCode": "5/11-1.30",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-rape-in-the-second-degree",
+      "catalogLabel": "Criminal Sexual Assault",
+      "catalogCode": "5/11-1.20",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Criminal sexual assault",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/11-1.20",
+          "lawId": "720-5",
+          "section": "11-1.20",
+          "citation": "720 ILCS 5/11-1.20",
+          "officialTitle": "Criminal sexual assault",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K11-1.20.htm",
+          "content": "720 ILCS 5/11-1.20\n(720 ILCS 5/11-1.20) (was 720 ILCS 5/12-13)\nSec. 11-1.20. Criminal sexual assault.\n(a) A person commits criminal sexual assault if that person commits an act of sexual penetration and:\n(1) uses force or threat of force;\n(2) knows that the victim is unable to understand the\nnature of the act or is unable to give knowing consent;\n(3) is a family member of the victim, and the victim\nis under 18 years of age; or\n(4) is 17 years of age or over and holds a position\nof trust, authority, or supervision in relation to the victim, and the victim is at least 13 years of age but under 18 years of age.\n(b) Sentence.\n(1) Criminal sexual assault is a Class 1 felony,\nexcept that:\n(A) A person who is convicted of the offense of\ncriminal sexual assault as defined in paragraph (a)(1) or (a)(2) after having previously been convicted of the offense of criminal sexual assault or the offense of exploitation of a child, or who is convicted of the offense of criminal sexual assault as defined in paragraph (a)(1) or (a)(2) after having previously been convicted under the laws of this State or any other state of an offense that is substantially equivalent to the offense of criminal sexual assault or to the offense of exploitation of a child, commits a Class X felony for which the person shall be sentenced to a term of imprisonment of not less than 30 years and not more than 60 years, except that if the person is under the age of 18 years at the time of the offense, he or she shall be sentenced under Section 5-4.5-105 of the Unified Code of Corrections. The commission of the second or subsequent offense is required to have been after the initial conviction for this paragraph (A) to apply.\n(B) A person who has attained the age of 18 years\nat the time of the commission of the offense and who is convicted of the offense of criminal sexual assault as defined in paragraph (a)(1) or (a)(2) after having previously been convicted of the offense of aggravated criminal sexual assault or the offense of predatory criminal sexual assault of a child, or who is convicted of the offense of criminal sexual assault as defined in paragraph (a)(1) or (a)(2) after having previously been convicted under the laws of this State or any other state of an offense that is substantially equivalent to the offense of aggravated criminal sexual assault or the offense of predatory criminal sexual assault of a child shall be sentenced to a term of natural life imprisonment. The commission of the second or subsequent offense is required to have been after the initial conviction for this paragraph (B) to apply. An offender under the age of 18 years at the time of the commission of the offense covered by this subparagraph (B) shall be sentenced under Section 5-4.5-105 of the Unified Code of Corrections.\n(C) A second or subsequent conviction for a\nviolation of paragraph (a)(3) or (a)(4) or under any similar statute of this State or any other state for any offense involving criminal sexual assault that is substantially equivalent to or more serious than the sexual assault prohibited under paragraph (a)(3) or (a)(4) is a Class X felony.\n(Source: P.A. 99-69, eff. 1-1-16.)",
+          "contentHash": "f176f6fa90f2957fbbbf8765a263febdb249a16ba522f8a1bddbc2e701b8f324",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2016-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-rape-in-the-second-degree",
+            "catalogLabel": "Criminal Sexual Assault",
+            "catalogCode": "5/11-1.20",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "11-1.20",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 99-69, eff. 1-1-16.)",
+              "effectiveDateStart": "2016-01-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "90fbad09ef21c644e2ab80d0a5af67eaba47ca44f2a1f544753d87f94cbaaaa2",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-sexual-assault-in-the-third-degree",
+      "catalogLabel": "Criminal Sexual Abuse",
+      "catalogCode": "5/11-1.50",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Criminal sexual abuse",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/11-1.50",
+          "lawId": "720-5",
+          "section": "11-1.50",
+          "citation": "720 ILCS 5/11-1.50",
+          "officialTitle": "Criminal sexual abuse",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K11-1.50.htm",
+          "content": "720 ILCS 5/11-1.50\n(720 ILCS 5/11-1.50) (was 720 ILCS 5/12-15)\nSec. 11-1.50. Criminal sexual abuse.\n(a) A person commits criminal sexual abuse if that person:\n(1) commits an act of sexual conduct by the use of\nforce or threat of force; or\n(2) commits an act of sexual conduct and knows that\nthe victim is unable to understand the nature of the act or is unable to give knowing consent.\n(b) A person commits criminal sexual abuse if\nthat person is under 17 years of age and commits an act of sexual\npenetration or sexual conduct with a victim who is at least 9 years of age\nbut under 17 years of age.\n(c) A person commits criminal sexual abuse if that person commits an\nact of sexual penetration or sexual conduct with a victim who is at least\n13 years of age but under 17 years of age and the person is less than 5\nyears older than the victim.\n(d) Sentence. Criminal sexual abuse\nfor a violation of subsection (b) or\n(c) of this Section\nis a Class A misdemeanor.\nCriminal sexual abuse for a violation of paragraph (1) or (2)\nof subsection (a) of this Section is a Class 4 felony.\nA second\nor subsequent conviction\nfor a violation of subsection (a) of this Section is a Class 2 felony.\nFor purposes of this\nSection it is a second or subsequent conviction if\nthe accused has at any\ntime been convicted under this Section or under any similar statute of this\nState or any other state for any offense involving sexual abuse or sexual\nassault that is substantially equivalent to or more serious than the sexual\nabuse prohibited under this Section.\n(Source: P.A. 96-1551, eff. 7-1-11.)",
+          "contentHash": "11f589b3f5520a612318e659853ea27787675b06cd39b731d8f5c215c5b36faa",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2011-07-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-sexual-assault-in-the-third-degree",
+            "catalogLabel": "Criminal Sexual Abuse",
+            "catalogCode": "5/11-1.50",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "11-1.50",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 96-1551, eff. 7-1-11.)",
+              "effectiveDateStart": "2011-07-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "2a1418b32f86f2c9c54e60f0a5726f76095b015baf357251e4cd208ef946841e",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-statutory-rape",
+      "catalogLabel": "Statutory Rape",
+      "catalogCode": "5/11-1.40",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-child-sexual-abuse",
+      "catalogLabel": "Child Sexual Abuse",
+      "catalogCode": "5/11-1.60",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-sexual-exploitation-of-minor",
+      "catalogLabel": "Sexual Exploitation of Minor",
+      "catalogCode": "5/11-20.1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois static document did not contain the complete requested section.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "api_error",
+      "error": "The official Illinois static document did not contain the complete requested section."
+    },
+    {
+      "chargeId": "il-petty-theft",
+      "catalogLabel": "Petty Theft",
+      "catalogCode": "5/16-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Theft\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Theft",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-theft-by-receiving",
+      "catalogLabel": "Theft by Receiving",
+      "catalogCode": "5/16-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Theft\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Theft",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-identity-theft",
+      "catalogLabel": "Identity Theft",
+      "catalogCode": "5/16-30",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Identity theft; aggravated identity theft\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Identity theft; aggravated identity theft",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-credit-card-fraud",
+      "catalogLabel": "Credit Card Fraud",
+      "catalogCode": "5/17-31",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-embezzlement",
+      "catalogLabel": "Embezzlement",
+      "catalogCode": "5/16-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Theft\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Theft",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-shoplifting",
+      "catalogLabel": "Shoplifting",
+      "catalogCode": "5/16-25",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Retail theft\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Retail theft",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-residential-burglary",
+      "catalogLabel": "Residential Burglary",
+      "catalogCode": "5/19-3",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Residential burglary",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/19-3",
+          "lawId": "720-5",
+          "section": "19-3",
+          "citation": "720 ILCS 5/19-3",
+          "officialTitle": "Residential burglary",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K19-3.htm",
+          "content": "720 ILCS 5/19-3\n(720 ILCS 5/19-3) (from Ch. 38, par. 19-3)\nSec. 19-3. Residential burglary.\n(a) A person commits\nresidential burglary when he or she knowingly and without authority enters or knowingly\nand without authority remains within the\ndwelling place of another, or any part thereof, with the intent to commit\ntherein a felony or theft. This offense includes the offense of\nburglary as defined in Section 19-1.\n(a-5) A person commits\nresidential burglary when he or she falsely represents himself or herself, including but not limited to falsely representing himself or herself to be a representative of any unit of government or a construction, telecommunications, or utility company, for the purpose of gaining entry to the dwelling place of another, with the intent to commit\ntherein a felony or theft or to facilitate the commission therein of a felony or theft by another.\n(b) Sentence. Residential burglary is a Class 1 felony.\n(Source: P.A. 96-1113, eff. 1-1-11; 97-1108, eff. 1-1-13.)",
+          "contentHash": "6bb136f4b59086564ad885a9fdab662bd84a7b2ab68c92f30a7fa3a312f6a1de",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2013-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-residential-burglary",
+            "catalogLabel": "Residential Burglary",
+            "catalogCode": "5/19-3",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "19-3",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 96-1113, eff. 1-1-11; 97-1108, eff. 1-1-13.)",
+              "effectiveDateStart": "2013-01-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "fc26e475c59c2271ab42380a066c0429ce559426cce3ef00cfc0c7ecc181813b",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-commercial-burglary",
+      "catalogLabel": "Commercial Burglary",
+      "catalogCode": "5/19-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Burglary\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Burglary",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-auto-burglary",
+      "catalogLabel": "Auto Burglary",
+      "catalogCode": "5/21-2",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-robbery-in-the-first-degree",
+      "catalogLabel": "Robbery in the First Degree",
+      "catalogCode": "5/18-2",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Armed robbery\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Armed robbery",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-robbery-in-the-second-degree",
+      "catalogLabel": "Robbery",
+      "catalogCode": "5/18-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Robbery; aggravated robbery\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Robbery; aggravated robbery",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-carjacking",
+      "catalogLabel": "Carjacking",
+      "catalogCode": "5/18-3",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-bank-robbery",
+      "catalogLabel": "Bank Robbery",
+      "catalogCode": "18 U.S.C. § 2113",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-possession-of-controlled-substance",
+      "catalogLabel": "Possession of Controlled Substance",
+      "catalogCode": "570/402",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Except as otherwise authorized by this Act, it is unlawful for\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Except as otherwise authorized by this Act, it is unlawful for",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-possession-with-intent-to-distribute",
+      "catalogLabel": "Possession with Intent to Distribute",
+      "catalogCode": "5/570/401",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-distribution-of-controlled-substance",
+      "catalogLabel": "Distribution of Controlled Substance",
+      "catalogCode": "570/401",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Manufacture or delivery, or possession with intent to\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Manufacture or delivery, or possession with intent to",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-manufacturing-controlled-substance",
+      "catalogLabel": "Manufacturing Controlled Substance",
+      "catalogCode": "570/401",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Manufacture or delivery, or possession with intent to\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Manufacture or delivery, or possession with intent to",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-drug-trafficking",
+      "catalogLabel": "Drug Trafficking",
+      "catalogCode": "5/570/401.1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-possession-of-drug-paraphernalia",
+      "catalogLabel": "Possession of Drug Paraphernalia",
+      "catalogCode": "5/600/3.5",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-maintaining-drug-house",
+      "catalogLabel": "Maintaining Drug House",
+      "catalogCode": "5/570/405",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-unlawful-carrying-of-weapon",
+      "catalogLabel": "Unlawful Carrying of Weapon",
+      "catalogCode": "5/24-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Unlawful possession of weapons\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Unlawful possession of weapons",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-felon-in-possession-of-firearm",
+      "catalogLabel": "Felon in Possession of Firearm",
+      "catalogCode": "5/24-1.1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Unlawful possession of weapons by felons or persons in the custody of the Department of Corrections facilities\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Unlawful possession of weapons by felons or persons in the custody of the Department of Corrections facilities",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-discharge-of-firearm-in-city",
+      "catalogLabel": "Discharge of Firearm in City",
+      "catalogCode": "5/24-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-possession-of-prohibited-weapon",
+      "catalogLabel": "Possession of Prohibited Weapon",
+      "catalogCode": "5/24-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Unlawful possession of weapons\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Unlawful possession of weapons",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-wire-fraud",
+      "catalogLabel": "Wire Fraud",
+      "catalogCode": "5/23-99",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-mail-fraud",
+      "catalogLabel": "Mail Fraud",
+      "catalogCode": "5/3-14",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-check-fraud",
+      "catalogLabel": "Check Fraud",
+      "catalogCode": "5/17-1",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Deceptive practices\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Deceptive practices",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-insurance-fraud",
+      "catalogLabel": "Insurance Fraud",
+      "catalogCode": "5/17-10.5",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Insurance fraud",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/17-10.5",
+          "lawId": "720-5",
+          "section": "17-10.5",
+          "citation": "720 ILCS 5/17-10.5",
+          "officialTitle": "Insurance fraud",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K17-10.5.htm",
+          "content": "720 ILCS 5/17-10.5\n(720 ILCS 5/17-10.5)\nSec. 17-10.5. Insurance fraud.\n(a) Insurance fraud.\n(1) A person commits insurance fraud when he or she\nknowingly obtains, attempts to obtain, or causes to be obtained, by deception, control over the property of an insurance company or self-insured entity by the making of a false claim or by causing a false claim to be made on any policy of insurance issued by an insurance company or by the making of a false claim or by causing a false claim to be made to a self-insured entity, intending to deprive an insurance company or self-insured entity permanently of the use and benefit of that property.\n(2) A person commits health care benefits fraud\nagainst a provider, other than a governmental unit or agency, when he or she knowingly obtains or attempts to obtain, by deception, health care benefits and that obtaining or attempt to obtain health care benefits does not involve control over property of the provider.\n(b) Aggravated insurance fraud.\n(1) A person commits aggravated insurance fraud on a\nprivate entity when he or she commits insurance fraud 3 or more times within an 18-month period arising out of separate incidents or transactions.\n(2) A person commits being an organizer of an\naggravated insurance fraud on a private entity conspiracy if aggravated insurance fraud on a private entity forms the basis for a charge of conspiracy under Section 8-2 of this Code and the person occupies a position of organizer, supervisor, financer, or other position of management within the conspiracy.\n(c) Conspiracy to commit insurance fraud. If aggravated insurance fraud on a private entity forms the basis for charges of conspiracy under Section 8-2 of this Code, the person or persons with whom the accused is alleged to have agreed to commit the 3 or more violations of this Section need not be the same person or persons for each violation, as long as the accused was a part of the common scheme or plan to engage in each of the 3 or more alleged violations.\nIf aggravated insurance fraud on a private entity forms the basis for a charge of conspiracy under Section 8-2 of this Code, and the accused occupies a position of organizer, supervisor, financer, or other position of management within the conspiracy, the person or persons with whom the accused is alleged to have agreed to commit the 3 or more violations of this Section need not be the same person or persons for each violation as long as the accused occupied a position of organizer, supervisor, financer, or other position of management in each of the 3 or more alleged violations.\n(d) Sentence.\n(1) A violation of paragraph (a)(1) in which the\nvalue of the property obtained, attempted to be obtained, or caused to be obtained is $300 or less is a Class A misdemeanor.\n(2) A violation of paragraph (a)(1) in which the\nvalue of the property obtained, attempted to be obtained, or caused to be obtained is more than $300 but not more than $10,000 is a Class 3 felony.\n(3) A violation of paragraph (a)(1) in which the\nvalue of the property obtained, attempted to be obtained, or caused to be obtained is more than $10,000 but not more than $100,000 is a Class 2 felony.\n(4) A violation of paragraph (a)(1) in which the\nvalue of the property obtained, attempted to be obtained, or caused to be obtained is more than $100,000 is a Class 1 felony.\n(5) A violation of paragraph (a)(2) is a Class A\nmisdemeanor.\n(6) A violation of paragraph (b)(1) is a Class 1\nfelony, regardless of the value of the property obtained, attempted to be obtained, or caused to be obtained.\n(7) A violation of paragraph (b)(2) is a Class X\nfelony.\n(8) A person convicted of insurance fraud, vendor\nfraud, or a federal criminal violation associated with defrauding the Medicaid program shall be ordered to pay monetary restitution to the insurance company or self-insured entity or any other person for any financial loss sustained as a result of a violation of this Section, including any court costs and attorney's fees. An order of restitution shall include expenses incurred and paid by the State of Illinois or an insurance company or self-insured entity in connection with any medical evaluation or treatment services.\n(9) Notwithstanding Section 8-5 of this Code, a\nperson may be convicted and sentenced both for the offense of conspiracy to commit insurance fraud or the offense of being an organizer of an aggravated insurance fraud conspiracy and for any other offense that is the object of the conspiracy.\n(e) Civil damages for insurance fraud.\n(1) A person who knowingly obtains, attempts to\nobtain, or causes to be obtained, by deception, control over the property of any insurance company by the making of a false claim or by causing a false claim to be made on a policy of insurance issued by an insurance company, or by the making of a false claim or by causing a false claim to be made to a self-insured entity, intending to deprive an insurance company or self-insured entity permanently of the use and benefit of that property, shall be civilly liable to the insurance company or self-insured entity that paid the claim or against whom the claim was made or to the subrogee of that insurance company or self-insured entity in an amount equal to either 3 times the value of the property wrongfully obtained or, if no property was wrongfully obtained, twice the value of the property attempted to be obtained, whichever amount is greater, plus reasonable attorney's fees.\n(2) An insurance company or self-insured entity that\nbrings an action against a person under paragraph (1) of this subsection in bad faith shall be liable to that person for twice the value of the property claimed, plus reasonable attorney's fees. In determining whether an insurance company or self-insured entity acted in bad faith, the court shall relax the rules of evidence to allow for the introduction of any facts or other information on which the insurance company or self-insured entity may have relied in bringing an action under paragraph (1) of this subsection.\n(f) Determination of property value. For the purposes of this Section, if the exact value of the property\nattempted to be obtained is either not alleged by the claimant or not\nspecifically set by the terms of a policy of insurance, the value\nof the\nproperty shall be the fair market replacement value of the property claimed to\nbe lost, the reasonable costs of reimbursing a vendor or other claimant for\nservices to be rendered, or both.\n(g) Actions by State licensing agencies.\n(1) All State licensing agencies, the Illinois State\nPolice, and the Department of Financial and Professional Regulation shall coordinate enforcement efforts relating to acts of insurance fraud.\n(2) If a person who is licensed or registered under\nthe laws of the State of Illinois to engage in a business or profession is convicted of or pleads guilty to engaging in an act of insurance fraud, the Illinois State Police must forward to each State agency by which the person is licensed or registered a copy of the conviction or plea and all supporting evidence.\n(3) Any agency that receives information under this\nSection shall, not later than 6 months after the date on which it receives the information, publicly report the final action taken against the convicted person, including but not limited to the revocation or suspension of the license or any other disciplinary action taken.\n(h) Definitions. For the purposes of this Section, \"obtain\", \"obtains control\", \"deception\", \"property\", and \"permanent deprivation\" have the meanings ascribed to those terms in Article 15 of this Code.\n(Source: P.A. 96-1551, eff. 7-1-11; 97-1150, eff. 1-25-13.)",
+          "contentHash": "1db9a8c92965db6e2f8083754cf277449fa5dc8eb81e5d610b14004bb8cef538",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2013-01-25",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-insurance-fraud",
+            "catalogLabel": "Insurance Fraud",
+            "catalogCode": "5/17-10.5",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "17-10.5",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 96-1551, eff. 7-1-11; 97-1150, eff. 1-25-13.)",
+              "effectiveDateStart": "2013-01-25",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "77ecd29247f5439ca7fe9f2827c40ae66996e70ab8cf0fbaad1d17f09f1ab79f",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-tax-fraud",
+      "catalogLabel": "Tax Fraud",
+      "catalogCode": "5/1301",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-forgery",
+      "catalogLabel": "Forgery",
+      "catalogCode": "5/17-3",
+      "catalogCategory": "felony",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Forgery",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/17-3",
+          "lawId": "720-5",
+          "section": "17-3",
+          "citation": "720 ILCS 5/17-3",
+          "officialTitle": "Forgery",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K17-3.htm",
+          "content": "720 ILCS 5/17-3\n(720 ILCS 5/17-3) (from Ch. 38, par. 17-3)\nSec. 17-3. Forgery.\n(a) A person commits forgery when, with intent to defraud, he or she knowingly:\n(1) makes a false document or alters any document to\nmake it false and that document is apparently capable of defrauding another; or\n(2) issues or delivers such document knowing it to\nhave been thus made or altered; or\n(3) possesses, with intent to issue or deliver, any\nsuch document knowing it to have been thus made or altered; or\n(4) unlawfully uses the digital signature, as defined\nin the Financial Institutions Electronic Documents and Digital Signature Act, of another; or\n(5) unlawfully creates an electronic signature of\nanother person, as that term is defined in the Uniform Electronic Transactions Act.\n(b) (Blank).\n(c) A document apparently capable of defrauding another includes, but is\nnot limited to, one by which any right, obligation or power with reference\nto any person or property may be created, transferred, altered or\nterminated. A document includes any record or electronic record as those\nterms are defined in the Electronic Commerce Security Act. For purposes of this Section, a document also includes a Universal Price Code Label or coin.\n(c-5) For purposes of this Section, \"false document\" or \"document that is false\" includes, but is not limited to, a document whose contents are false in some material way, or that purports to have been made by another or at another time, or with different provisions, or by authority of one who did not give such authority.\n(d) Sentence.\n(1) Except as provided in paragraphs (2) and (3),\nforgery is a Class 3 felony.\n(2) Forgery is a Class 4 felony when only one\nUniversal Price Code Label is forged.\n(3) Forgery is a Class A misdemeanor when an academic\ndegree or coin is forged.\n(e) It is not a violation of this Section if a false academic degree explicitly states \"for novelty purposes only\".\n(Source: P.A. 102-38, eff. 6-25-21.)",
+          "contentHash": "7b0ddafdbb2979f018a2bbe9fed6ea3ec10b6b0ae6f6391f96c3318629b2398c",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2021-06-25",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-forgery",
+            "catalogLabel": "Forgery",
+            "catalogCode": "5/17-3",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "17-3",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 102-38, eff. 6-25-21.)",
+              "effectiveDateStart": "2021-06-25",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "39e3ba5b0ec657a068ca1436a5fe3ca8f8847b8113a6afb346299ffdbf2e6864",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-computer-fraud",
+      "catalogLabel": "Computer Fraud",
+      "catalogCode": "5/17-50",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-disorderly-conduct",
+      "catalogLabel": "Disorderly Conduct",
+      "catalogCode": "5/26-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Disorderly conduct",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/26-1",
+          "lawId": "720-5",
+          "section": "26-1",
+          "citation": "720 ILCS 5/26-1",
+          "officialTitle": "Disorderly conduct",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K26-1.htm",
+          "content": "720 ILCS 5/26-1\n(720 ILCS 5/26-1) (from Ch. 38, par. 26-1)\nSec. 26-1. Disorderly conduct.\n(a) A person commits disorderly conduct when he or she knowingly:\n(1) Does any act in such unreasonable manner as to\nalarm or disturb another and to provoke a breach of the peace;\n(2) Transmits or causes to be transmitted in any\nmanner to the fire department of any city, town, village or fire protection district a false alarm of fire, knowing at the time of the transmission that there is no reasonable ground for believing that the fire exists;\n(3) Transmits or causes to be transmitted in any\nmanner to another a false alarm to the effect that a bomb or other explosive of any nature or a container holding poison gas, a deadly biological or chemical contaminant, or radioactive substance is concealed in a place where its explosion or release would endanger human life, knowing at the time of the transmission that there is no reasonable ground for believing that the bomb, explosive or a container holding poison gas, a deadly biological or chemical contaminant, or radioactive substance is concealed in the place;\n(3.5) Transmits or causes to be transmitted in any\nmanner a threat of destruction of a school building or school property, or a threat of violence, death, or bodily harm directed against persons at a school, school function, or school event, whether or not school is in session;\n(4) Transmits or causes to be transmitted in any\nmanner to any peace officer, public officer or public employee a report to the effect that an offense will be committed, is being committed, or has been committed, knowing at the time of the transmission that there is no reasonable ground for believing that the offense will be committed, is being committed, or has been committed;\n(5) Transmits or causes to be transmitted in any\nmanner a false report to any public safety agency without the reasonable grounds necessary to believe that transmitting the report is necessary for the safety and welfare of the public;\n(6) Calls or texts the number \"911\" or transmits or\ncauses to be transmitted in any manner to a public safety agency or public safety answering point for the purpose of making or transmitting a false alarm or complaint and reporting information when, at the time the call, text, or transmission is made, the person knows there is no reasonable ground for making the call, text, or transmission and further knows that the call, text, or transmission could result in the emergency response of any public safety agency;\n(7) Transmits or causes to be transmitted in any\nmanner a false report to the Department of Children and Family Services under Section 4 of the Abused and Neglected Child Reporting Act;\n(8) Transmits or causes to be transmitted in any\nmanner a false report to the Department of Public Health under the Nursing Home Care Act, the Specialized Mental Health Rehabilitation Act of 2013, the ID/DD Community Care Act, or the MC/DD Act;\n(9) Transmits or causes to be transmitted in any\nmanner to the police department or fire department of any municipality or fire protection district, or any privately owned and operated ambulance service, a false request for an ambulance, emergency medical technician-ambulance or emergency medical technician-paramedic knowing at the time there is no reasonable ground for believing that the assistance is required;\n(10) Transmits or causes to be transmitted in any\nmanner a false report under Article II of Public Act 83-1432;\n(11) Enters upon the property of another and for a\nlewd or unlawful purpose deliberately looks into a dwelling on the property through any window or other opening in it; or\n(12) While acting as a collection agency as defined\nin the Collection Agency Act or as an employee of the collection agency, and while attempting to collect an alleged debt, makes a telephone call to the alleged debtor which is designed to harass, annoy or intimidate the alleged debtor.\n(b) Sentence. A violation of subsection (a)(1) of this Section\nis a Class C misdemeanor. A violation of subsection (a)(5) or (a)(11) of this Section is a Class A misdemeanor. A violation of subsection\n(a)(8) or (a)(10) of this Section is a Class B misdemeanor. A violation of\nsubsection (a)(2), (a)(3.5), (a)(4), (a)(6), (a)(7), or (a)(9) of this Section is a Class 4\nfelony. A\nviolation of subsection (a)(3) of this Section is a Class 3 felony, for which\na fine of not less than $3,000 and no more than $10,000 shall be assessed in\naddition to any other penalty imposed.\nA violation of subsection (a)(12) of this Section is a Business Offense and\nshall be punished by a fine not to exceed $3,000. A second or subsequent\nviolation of subsection (a)(7) or (a)(5) of this Section is a Class\n4 felony. A third or subsequent violation of subsection (a)(11) of this Section\nis a Class 4 felony.\n(c) In addition to any other sentence that may be imposed, a court shall\norder any person convicted of disorderly conduct to perform community service\nfor not less than 30 and not more than 120 hours, if community service is\navailable in the jurisdiction and is funded and approved by the county board of\nthe county where the offense was committed. In addition, whenever any person\nis placed on supervision for an alleged offense under this Section, the\nsupervision shall be conditioned upon the performance of the community service.\nThis subsection does not apply when the court imposes a sentence of\nincarceration.\n(d) In addition to any other sentence that may be imposed, the court shall\norder any person convicted of disorderly conduct under paragraph (3) of subsection (a) involving a false alarm of a threat that a bomb or explosive device has been placed in a school that requires an emergency response to reimburse the unit of government that employs the emergency response officer or officers that were dispatched to the school for the cost of the response. If the court determines that the person convicted of disorderly conduct that requires an emergency response to a school is indigent, the provisions of this subsection (d) do not apply.\n(e) In addition to any other sentence that may be imposed, the court shall\norder any person convicted of disorderly conduct under paragraph (3.5) or (6) of subsection (a) to reimburse the public agency for the reasonable costs of the emergency response by the public agency up to $10,000. If the court determines that the person convicted of disorderly conduct under paragraph (3.5) or (6) of subsection (a) is indigent, the provisions of this subsection (e) do not apply.\n(f) For the purposes of this Section, \"emergency response\" means any condition that results in, or could result in, the response of a public official in an authorized emergency vehicle, any condition that jeopardizes or could jeopardize public safety and results in, or could result in, the evacuation of any area, building, structure, vehicle, or of any other place that any person may enter, or any incident requiring a response by a police officer, a firefighter, a State Fire Marshal employee, or an ambulance.\n(Source: P.A. 103-366, eff. 1-1-24.)",
+          "contentHash": "ce302ef350326703f78ded00b00f267ca152ddac3d94d1029813eaa0940fd090",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2024-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-disorderly-conduct",
+            "catalogLabel": "Disorderly Conduct",
+            "catalogCode": "5/26-1",
+            "catalogClassification": "misdemeanor",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "26-1",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 103-366, eff. 1-1-24.)",
+              "effectiveDateStart": "2024-01-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "955cad6e38cd0f915360014a91dbcf7b4dd5fe5e6645fa85ce13ff5b344e6e96",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-public-intoxication",
+      "catalogLabel": "Public Intoxication",
+      "catalogCode": "5/26-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-loitering",
+      "catalogLabel": "Loitering",
+      "catalogCode": "5/26-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Disorderly conduct\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Disorderly conduct",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-dui-first-offense",
+      "catalogLabel": "DUI First Offense",
+      "catalogCode": "5/625-5/11-501",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-dui-second-offense",
+      "catalogLabel": "DUI Second Offense",
+      "catalogCode": "5/11-501",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Driving while under the influence of alcohol, other drug or drugs, intoxicating compound or compounds or any combination thereof\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Driving while under the influence of alcohol, other drug or drugs, intoxicating compound or compounds or any combination thereof",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-dui-third-offense",
+      "catalogLabel": "DUI Third Offense",
+      "catalogCode": "5/11-501",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Driving while under the influence of alcohol, other drug or drugs, intoxicating compound or compounds or any combination thereof\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Driving while under the influence of alcohol, other drug or drugs, intoxicating compound or compounds or any combination thereof",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-reckless-driving",
+      "catalogLabel": "Reckless Driving",
+      "catalogCode": "5/11-503",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Reckless driving; aggravated reckless driving\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Reckless driving; aggravated reckless driving",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-hit-and-run",
+      "catalogLabel": "Hit and Run",
+      "catalogCode": "5/625-5/11-401",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-driving-while-suspended",
+      "catalogLabel": "Driving While Suspended",
+      "catalogCode": "5/625-5/6-303",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-retail-theft",
+      "catalogLabel": "Retail Theft",
+      "catalogCode": "5/16-25",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Retail theft",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/16-25",
+          "lawId": "720-5",
+          "section": "16-25",
+          "citation": "720 ILCS 5/16-25",
+          "officialTitle": "Retail theft",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K16-25.htm",
+          "content": "720 ILCS 5/16-25\n(720 ILCS 5/16-25)\nSec. 16-25. Retail theft.\n(a) A person commits retail theft when he or she knowingly:\n(1) Takes possession of, carries away, transfers or\ncauses to be carried away or transferred any merchandise displayed, held, stored or offered for sale in a retail mercantile establishment with the intention of retaining such merchandise or with the intention of depriving the merchant permanently of the possession, use or benefit of such merchandise without paying the full retail value of such merchandise; or\n(2) Alters, transfers, or removes any label, price\ntag, marking, indicia of value or any other markings which aid in determining value affixed to any merchandise displayed, held, stored or offered for sale in a retail mercantile establishment and attempts to purchase such merchandise at less than the full retail value with the intention of depriving the merchant of the full retail value of such merchandise; or\n(3) Transfers any merchandise displayed, held, stored\nor offered for sale in a retail mercantile establishment from the container in or on which such merchandise is displayed to any other container with the intention of depriving the merchant of the full retail value of such merchandise; or\n(4) Under-rings with the intention of depriving the\nmerchant of the full retail value of the merchandise; or\n(5) Removes a shopping cart from the premises of a\nretail mercantile establishment without the consent of the merchant given at the time of such removal with the intention of depriving the merchant permanently of the possession, use or benefit of such cart; or\n(6) Represents to a merchant that he, she, or another\nis the lawful owner of property, knowing that such representation is false, and conveys or attempts to convey that property to a merchant who is the owner of the property in exchange for money, merchandise credit or other property of the merchant; or\n(7) Uses or possesses any theft detection shielding\ndevice or theft detection device remover with the intention of using such device to deprive the merchant permanently of the possession, use or benefit of any merchandise displayed, held, stored or offered for sale in a retail mercantile establishment without paying the full retail value of such merchandise; or\n(8) Obtains or exerts unauthorized control over\nproperty of the owner and thereby intends to deprive the owner permanently of the use or benefit of the property when a lessee of the personal property of another fails to return it to the owner, or if the lessee fails to pay the full retail value of such property to the lessor in satisfaction of any contractual provision requiring such, within 10 days after written demand from the owner for its return. A notice in writing, given after the expiration of the leasing agreement, by registered mail, to the lessee at the address given by the lessee and shown on the leasing agreement shall constitute proper demand.\n(b) Theft by emergency exit. A person commits theft by emergency exit when he or she commits a retail theft as defined in subdivisions (a)(1) through (a)(8) of this Section and to facilitate the theft he or she leaves the retail mercantile establishment by use of a designated emergency exit.\n(c) Permissive inference. If any person:\n(1) conceals upon his or her person or among his or\nher belongings unpurchased merchandise displayed, held, stored or offered for sale in a retail mercantile establishment; and\n(2) removes that merchandise beyond the last known\nstation for receiving payments for that merchandise in that retail mercantile establishment,\nthen the trier of fact may infer that the person possessed, carried\naway or transferred such merchandise with the intention of retaining it\nor with the intention of depriving the merchant permanently of the\npossession, use or benefit of such merchandise without paying the full\nretail value of such merchandise.\nTo \"conceal\" merchandise means that, although there may be some notice of its presence, that merchandise is not visible through ordinary observation.\n(d) Venue. Multiple thefts committed by the same person as part of a continuing course of conduct in different jurisdictions that have been aggregated in one jurisdiction may be prosecuted in any jurisdiction in which one or more of the thefts occurred.\n(e) For the purposes of this Section, \"theft detection shielding device\" means any laminated or coated bag or device designed and intended to shield merchandise from detection by an electronic or magnetic theft alarm sensor.\n(f) Sentence.\n(1) A violation of any of subdivisions (a)(1) through\n(a)(6) and (a)(8) of this Section, the full retail value of which does not exceed $300 for property other than motor fuel or $150 for motor fuel, is a Class A misdemeanor. A violation of subdivision (a)(7) of this Section is a Class A misdemeanor for a first offense and a Class 4 felony for a second or subsequent offense. Theft by emergency exit of property, the full retail value of which does not exceed $300, is a Class 4 felony.\n(2) A person who has been convicted of retail theft\nof property under any of subdivisions (a)(1) through (a)(6) and (a)(8) of this Section, the full retail value of which does not exceed $300 for property other than motor fuel or $150 for motor fuel, and who has been previously convicted of any type of theft, robbery, armed robbery, burglary, residential burglary, possession of burglary tools, home invasion, unlawful use of a credit card, or forgery is guilty of a Class 4 felony. A person who has been convicted of theft by emergency exit of property, the full retail value of which does not exceed $300, and who has been previously convicted of any type of theft, robbery, armed robbery, burglary, residential burglary, possession of burglary tools, home invasion, unlawful use of a credit card, or forgery is guilty of a Class 3 felony.\n(3) Any retail theft of property under any of\nsubdivisions (a)(1) through (a)(6) and (a)(8) of this Section, the full retail value of which exceeds $300 for property other than motor fuel or $150 for motor fuel in a single transaction, or in separate transactions committed by the same person as part of a continuing course of conduct from one or more mercantile establishments over a period of one year, is a Class 3 felony. Theft by emergency exit of property, the full retail value of which exceeds $300 in a single transaction, or in separate transactions committed by the same person as part of a continuing course of conduct from one or more mercantile establishments over a period of one year, is a Class 2 felony. When a charge of retail theft of property or theft by emergency exit of property, the full value of which exceeds $300, is brought, the value of the property involved is an element of the offense to be resolved by the trier of fact as either exceeding or not exceeding $300.\n(Source: P.A. 97-597, eff. 1-1-12.)",
+          "contentHash": "4e6babbf4e9e0d7f0ae2a743441974f45ced2b1b7cf69f71896f5492456627dd",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2012-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-retail-theft",
+            "catalogLabel": "Retail Theft",
+            "catalogCode": "5/16-25",
+            "catalogClassification": "misdemeanor",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "16-25",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 97-597, eff. 1-1-12.)",
+              "effectiveDateStart": "2012-01-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "0521455225ba5d21c9224811fb2b80d732957d2e49a6284a094b0fec1553bac6",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-domestic-battery",
+      "catalogLabel": "Domestic Battery",
+      "catalogCode": "5/12-3.2",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Domestic battery",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/12-3.2",
+          "lawId": "720-5",
+          "section": "12-3.2",
+          "citation": "720 ILCS 5/12-3.2",
+          "officialTitle": "Domestic battery",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K12-3.2.htm",
+          "content": "720 ILCS 5/12-3.2\n(720 ILCS 5/12-3.2) (from Ch. 38, par. 12-3.2)\nSec. 12-3.2. Domestic battery.\n(a) A person commits domestic battery if he or she knowingly\nwithout legal justification by any means:\n(1) causes bodily harm to any family or household\nmember;\n(2) makes physical contact of an insulting or\nprovoking nature with any family or household member.\n(b) Sentence. Domestic battery is a Class A misdemeanor.\nDomestic battery is a Class 4 felony if the defendant has any\nprior\nconviction under this Code for violation\nof an order of protection (Section 12-3.4 or 12-30), or any prior conviction under the\nlaw of another jurisdiction for an offense which is substantially similar.\nDomestic battery is a Class 4 felony\nif the\ndefendant has any prior conviction under this Code for first degree murder\n(Section 9-1), attempt to\ncommit first degree murder (Section 8-4), aggravated domestic battery (Section\n12-3.3), aggravated battery\n(Section 12-3.05 or 12-4), heinous battery (Section 12-4.1), aggravated battery with a\nfirearm (Section 12-4.2), aggravated battery with a machine gun or a firearm equipped with a silencer (Section 12-4.2-5), aggravated battery of a child (Section 12-4.3),\naggravated battery of\nan unborn child (subsection (a-5) of Section 12-3.1, or Section 12-4.4), aggravated battery of a senior citizen\n(Section 12-4.6), stalking (Section 12-7.3), aggravated stalking (Section\n12-7.4), criminal sexual assault (Section 11-1.20 or 12-13), aggravated criminal sexual\nassault\n(Section 11-1.30 or 12-14), kidnapping (Section 10-1), aggravated kidnapping (Section 10-2),\npredatory criminal sexual assault of a child (Section 11-1.40 or 12-14.1), aggravated\ncriminal sexual abuse (Section 11-1.60 or 12-16), unlawful restraint (Section 10-3),\naggravated unlawful restraint (Section 10-3.1), aggravated arson (Section\n20-1.1), or aggravated discharge of a firearm\n(Section 24-1.2), or any prior conviction under the law of another\njurisdiction for any offense that is substantially similar to the offenses\nlisted in this Section, when any of these\noffenses have been committed\nagainst a\nfamily or household member. Domestic battery is a Class 4 felony if the defendant has one\nor 2 prior\nconvictions under this Code for domestic battery (Section 12-3.2), or one or 2 prior convictions under the law of another jurisdiction for any offense which is substantially similar. Domestic battery is a Class 3 felony if the defendant had 3 prior convictions under this Code for domestic battery (Section 12-3.2), or 3 prior convictions under the law of another jurisdiction for any offense which is substantially similar. Domestic battery is a Class 2 felony if the defendant had 4 or more prior convictions under this Code for domestic battery (Section 12-3.2), or 4 or more prior convictions under the law of another jurisdiction for any offense which is substantially similar. In addition to any other\nsentencing alternatives, for any second or subsequent conviction of violating this\nSection, the\noffender shall be mandatorily sentenced to a minimum of 72\nconsecutive hours of\nimprisonment. The imprisonment shall not be subject to suspension, nor shall\nthe person be eligible for probation in order to reduce the sentence.\n(c) Domestic battery committed in the presence of a child. In addition to\nany other sentencing alternatives, a defendant who commits, in the presence of\na child, a felony domestic battery (enhanced under subsection\n(b)), aggravated domestic battery (Section 12-3.3),\naggravated battery (Section 12-3.05 or 12-4), unlawful restraint (Section\n10-3), or aggravated unlawful restraint (Section 10-3.1) against a family or\nhousehold member shall be required to serve a mandatory minimum imprisonment\nof 10 days or perform 300 hours of community service, or both. The defendant\nshall further be liable for the cost of any counseling required for the child\nat the discretion of the court in accordance\nwith subsection (b) of Section 5-5-6 of the Unified Code of Corrections.\nFor purposes of this Section, \"child\" means a person under 18\nyears of age\nwho is the defendant's or victim's child or step-child or who is a minor child\nresiding\nwithin or visiting the household of the defendant or victim.\n(d) Upon conviction of domestic battery, the court shall advise the defendant orally or in writing, substantially as follows: \"An individual convicted of domestic battery may be subject to federal criminal penalties for possessing, transporting, shipping, or receiving any firearm or ammunition in violation of the federal Gun Control Act of 1968 (18 U.S.C. 922(g)(8) and (9)).\" A notation shall be made in the court file that the admonition was given.\n(Source: P.A. 97-1109, eff. 1-1-13; 98-187, eff. 1-1-14; 98-994, eff. 1-1-15.)",
+          "contentHash": "087f592122e620d0bb202d72deb6ee8c2452c115bc9f12cfa60e7248fe2b756b",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2015-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-domestic-battery",
+            "catalogLabel": "Domestic Battery",
+            "catalogCode": "5/12-3.2",
+            "catalogClassification": "misdemeanor",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "12-3.2",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 97-1109, eff. 1-1-13; 98-187, eff. 1-1-14; 98-994, eff. 1-1-15.)",
+              "effectiveDateStart": "2015-01-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "a8fc873ba68ddd85120464c28341146e2b1ca7fc7ff5e26829a28e7ced48375a",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-driving-on-suspended-license",
+      "catalogLabel": "Driving on a Suspended or Revoked License",
+      "catalogCode": "625/5-6-303",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-possession-of-cannabis",
+      "catalogLabel": "Possession of Cannabis (Over Legal Limit)",
+      "catalogCode": "705/10-10",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-criminal-trespass-to-land",
+      "catalogLabel": "Criminal Trespass to Land",
+      "catalogCode": "5/21-3",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Criminal trespass to real property\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Criminal trespass to real property",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-aggravated-speeding",
+      "catalogLabel": "Aggravated Speeding (26+ MPH Over)",
+      "catalogCode": "625/5-11-601.5",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-criminal-damage-to-property",
+      "catalogLabel": "Criminal Damage to Property",
+      "catalogCode": "5/21-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Criminal damage to property",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/21-1",
+          "lawId": "720-5",
+          "section": "21-1",
+          "citation": "720 ILCS 5/21-1",
+          "officialTitle": "Criminal damage to property",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K21-1.htm",
+          "content": "720 ILCS 5/21-1\n(720 ILCS 5/21-1) (from Ch. 38, par. 21-1)\nSec. 21-1. Criminal damage to property.\n(a) A person commits criminal damage to property when he or she:\n(1) knowingly damages any property of another;\n(2) recklessly by means of fire or explosive damages\nproperty of another;\n(3) knowingly starts a fire on the land of another;\n(4) knowingly injures a domestic animal of another\nwithout his or her consent;\n(5) knowingly deposits on the land or in the building\nof another any stink bomb or any offensive smelling compound and thereby intends to interfere with the use by another of the land or building;\n(6) knowingly damages any property, other than as\ndescribed in paragraph (2) of subsection (a) of Section 20-1, with intent to defraud an insurer;\n(7) knowingly shoots a firearm at any portion of a\nrailroad train;\n(8) knowingly, without proper authorization, cuts,\ninjures, damages, defaces, destroys, or tampers with any fire hydrant or any public or private fire fighting equipment, or any apparatus appertaining to fire fighting equipment; or\n(9) intentionally, without proper authorization,\nopens any fire hydrant.\n(b) When the charge of criminal damage to property exceeding a specified\nvalue is brought, the extent of the damage is an element of the offense to\nbe resolved by the trier of fact as either exceeding or not exceeding\nthe specified value.\n(c) It is an affirmative defense to a violation of paragraph (1), (3), or (5) of subsection (a) of this Section that the owner of the property or land damaged consented to the damage.\n(d) Sentence.\n(1) A violation of subsection (a) shall have the\nfollowing penalties:\n(A) A violation of paragraph (8) or (9) is a\nClass B misdemeanor.\n(B) A violation of paragraph (1), (2), (3), (5),\nor (6) is a Class A misdemeanor when the damage to property does not exceed $500.\n(C) A violation of paragraph (1), (2), (3), (5),\nor (6) is a Class 4 felony when the damage to property does not exceed $500 and the damage occurs to property of a school or place of worship or to farm equipment or immovable items of agricultural production, including but not limited to grain elevators, grain bins, and barns or property which memorializes or honors an individual or group of police officers, fire fighters, members of the United States Armed Forces, National Guard, or veterans.\n(D) A violation of paragraph (4) is a Class 4\nfelony when the damage to property does not exceed $10,000.\n(E) A violation of paragraph (7) is a Class 4\nfelony.\n(F) A violation of paragraph (1), (2), (3), (5)\nor (6) is a Class 4 felony when the damage to property exceeds $500 but does not exceed $10,000.\n(G) A violation of paragraphs (1) through (6) is\na Class 3 felony when the damage to property exceeds $500 but does not exceed $10,000 and the damage occurs to property of a school or place of worship or to farm equipment or immovable items of agricultural production, including but not limited to grain elevators, grain bins, and barns or property which memorializes or honors an individual or group of police officers, fire fighters, members of the United States Armed Forces, National Guard, or veterans.\n(H) A violation of paragraphs (1) through (6) is\na Class 3 felony when the damage to property exceeds $10,000 but does not exceed $100,000.\n(I) A violation of paragraphs (1) through (6) is\na Class 2 felony when the damage to property exceeds $10,000 but does not exceed $100,000 and the damage occurs to property of a school or place of worship or to farm equipment or immovable items of agricultural production, including but not limited to grain elevators, grain bins, and barns or property which memorializes or honors an individual or group of police officers, fire fighters, members of the United States Armed Forces, National Guard, or veterans.\n(J) A violation of paragraphs (1) through (6) is\na Class 2 felony when the damage to property exceeds $100,000. A violation of paragraphs (1) through (6) is a Class 1 felony when the damage to property exceeds $100,000 and the damage occurs to property of a school or place of worship or to farm equipment or immovable items of agricultural production, including but not limited to grain elevators, grain bins, and barns or property which memorializes or honors an individual or group of police officers, fire fighters, members of the United States Armed Forces, National Guard, or veterans.\n(2) When the damage to property exceeds $10,000, the\ncourt shall impose upon the offender a fine equal to the value of the damages to the property.\n(3) In addition to any other sentence that may be\nimposed, a court shall order any person convicted of criminal damage to property to perform community service for not less than 30 and not more than 120 hours, if community service is available in the jurisdiction and is funded and approved by the county board of the county where the offense was committed. In addition, whenever any person is placed on supervision for an alleged offense under this Section, the supervision shall be conditioned upon the performance of the community service.\nThe community service requirement does not apply when\nthe court imposes a sentence of incarceration.\n(4) In addition to any criminal penalties imposed\nfor a violation of this Section, if a person is convicted of or placed on supervision for knowingly damaging or destroying crops of another, including crops intended for personal, commercial, research, or developmental purposes, the person is liable in a civil action to the owner of any crops damaged or destroyed for money damages up to twice the market value of the crops damaged or destroyed.\n(5) For the purposes of this subsection (d), \"farm\nequipment\" means machinery or other equipment used in farming.\n(Source: P.A. 98-315, eff. 1-1-14; 99-631, eff. 1-1-17.)",
+          "contentHash": "b479b5df654ee7fda479c7e85476068926a26edbaa9fa5a3b039abaafd73586b",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-29T16:15:43.282Z",
+          "effectiveDateStart": "2017-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-criminal-damage-to-property",
+            "catalogLabel": "Criminal Damage to Property",
+            "catalogCode": "5/21-1",
+            "catalogClassification": "misdemeanor",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "21-1",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 98-315, eff. 1-1-14; 99-631, eff. 1-1-17.)",
+              "effectiveDateStart": "2017-01-01",
+              "retrievedAt": "2026-08-29T16:15:43.282Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "03f2dfe0e9c67e2f11534e14045099354d560cbf826e3188af08e7bbde92c54c",
+            "manifestImportedAt": "2026-08-29T16:15:43.282Z"
+          }
+        }
+      ],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-reckless-conduct",
+      "catalogLabel": "Reckless Conduct",
+      "catalogCode": "5/12-5",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Reckless\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Reckless",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-violation-of-order-of-protection",
+      "catalogLabel": "Violation of Order of Protection",
+      "catalogCode": "5/12-3.4",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Violation of an order of protection\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Violation of an order of protection",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-failure-to-appear",
+      "catalogLabel": "Failure to Appear",
+      "catalogCode": "720-5/32-10",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Violation of conditions of pretrial release\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Violation of conditions of pretrial release",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-probation-violation",
+      "catalogLabel": "Probation Violation",
+      "catalogCode": "730-5/5-6-4",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Violation, modification or revocation of probation, of\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Violation, modification or revocation of probation, of",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-resisting-arrest",
+      "catalogLabel": "Resisting Arrest / Obstruction",
+      "catalogCode": "720-5/31-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Resisting or obstructing a peace officer, firefighter, or correctional\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Resisting or obstructing a peace officer, firefighter, or correctional",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-protective-order-violation",
+      "catalogLabel": "Violation of Protective Order",
+      "catalogCode": "720-5/12-3.4",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Violation of an order of protection\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Violation of an order of protection",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-open-container",
+      "catalogLabel": "Open Container Violation",
+      "catalogCode": "625-5/11-502",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Transportation or possession of alcoholic liquor in\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Transportation or possession of alcoholic liquor in",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-minor-in-possession",
+      "catalogLabel": "Minor in Possession of Alcohol",
+      "catalogCode": "5/235-5/6-20",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-false-info-to-police",
+      "catalogLabel": "Providing False Information to Police",
+      "catalogCode": "5/31-4.5",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-harassment",
+      "catalogLabel": "Harassment / Stalking",
+      "catalogCode": "5/12-7.3",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-contempt-of-court",
+      "catalogLabel": "Contempt of Court",
+      "catalogCode": "720-5/32-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-bad-checks",
+      "catalogLabel": "Writing Bad Checks / Worthless Checks",
+      "catalogCode": "720-5/17-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Deceptive practices\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Deceptive practices",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-solicitation",
+      "catalogLabel": "Solicitation / Prostitution",
+      "catalogCode": "720-5/11-14",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-driving-without-insurance",
+      "catalogLabel": "Driving Without Insurance",
+      "catalogCode": "625-5/3-707",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Operation of uninsured motor vehicle - penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Operation of uninsured motor vehicle - penalty",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-reckless-driving-criminal",
+      "catalogLabel": "Reckless/Careless Driving (Criminal)",
+      "catalogCode": "625-5/11-503",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Reckless driving; aggravated reckless driving\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Reckless driving; aggravated reckless driving",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-expired-registration",
+      "catalogLabel": "Driving with Expired Registration",
+      "catalogCode": "625-5/3-701",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-expired-inspection",
+      "catalogLabel": "Driving with Expired/No Inspection",
+      "catalogCode": "625-5/13-101",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-failure-to-pay-child-support",
+      "catalogLabel": "Criminal Nonsupport / Failure to Pay Child Support",
+      "catalogCode": "750-16/15",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-noise-violation",
+      "catalogLabel": "Noise Violation / Disturbing the Peace by Noise",
+      "catalogCode": "720-5/26-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Disorderly conduct\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Disorderly conduct",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-indecent-exposure",
+      "catalogLabel": "Indecent Exposure / Public Urination",
+      "catalogCode": "720-5/11-30",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Public indecency\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Public indecency",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-fake-id",
+      "catalogLabel": "Possession of Fake/Fraudulent ID",
+      "catalogCode": "625-5/6-301.2",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-animal-at-large",
+      "catalogLabel": "Animal at Large / Leash Law Violation",
+      "catalogCode": "510-5/15",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-animal-cruelty-misdemeanor",
+      "catalogLabel": "Animal Cruelty (Misdemeanor)",
+      "catalogCode": "510-70/3.01",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Cruel treatment\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Cruel treatment",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-illegal-camping",
+      "catalogLabel": "Illegal Camping / Sleeping in Public",
+      "catalogCode": "720-5/26-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-panhandling",
+      "catalogLabel": "Panhandling / Aggressive Solicitation",
+      "catalogCode": "720-5/26-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Disorderly conduct\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Disorderly conduct",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-unregistered-vehicle",
+      "catalogLabel": "Operating Unregistered / Uninsured Vehicle",
+      "catalogCode": "625-5/3-702",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-curfew-violation",
+      "catalogLabel": "Curfew Violation",
+      "catalogCode": "720-555/1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-trespass-after-warning",
+      "catalogLabel": "Trespass After Warning / Return After Ban",
+      "catalogCode": "720-5/21-3",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"Criminal trespass to real property\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "Criminal trespass to real property",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-defective-vehicle-equipment",
+      "catalogLabel": "Defective Vehicle Equipment / Broken Taillight",
+      "catalogCode": "625-5/12-201",
+      "catalogCategory": "infraction",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-truancy",
+      "catalogLabel": "Truancy / Chronic Absenteeism",
+      "catalogCode": "105-26/2-1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-littering",
+      "catalogLabel": "Littering / Illegal Dumping",
+      "catalogCode": "415-105/4",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The official Illinois title \"No person shall dump, deposit, drop, throw, discard, leave, cause or\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "canonicalTitle": "No person shall dump, deposit, drop, throw, discard, leave, cause or",
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-illegal-fireworks",
+      "catalogLabel": "Illegal Discharge of Fireworks",
+      "catalogCode": "425-35/2",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-alcohol-in-park",
+      "catalogLabel": "Possession of Alcohol in Park / Prohibited Area",
+      "catalogCode": "235-5/5-12",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-hunting-fishing-no-license",
+      "catalogLabel": "Fishing / Hunting Without a License",
+      "catalogCode": "520-5/2.1",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-criminal-attempt",
+      "catalogLabel": "Criminal Attempt",
+      "catalogCode": "MPC § 5.01 / IL attempt statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-conspiracy",
+      "catalogLabel": "Criminal Conspiracy",
+      "catalogCode": "MPC § 5.03 / IL conspiracy statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-aiding-and-abetting",
+      "catalogLabel": "Aiding and Abetting / Accomplice Liability",
+      "catalogCode": "MPC § 2.06 / IL accomplice statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-accessory-after-the-fact",
+      "catalogLabel": "Accessory After the Fact",
+      "catalogCode": "MPC § 2.07 / IL accessory statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-attempted-murder",
+      "catalogLabel": "Attempted Murder",
+      "catalogCode": "IL attempted murder statute / MPC § 5.01",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-attempted-robbery",
+      "catalogLabel": "Attempted Robbery",
+      "catalogCode": "IL attempted robbery statute / MPC § 5.01",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-attempted-sexual-assault",
+      "catalogLabel": "Attempted Sexual Assault",
+      "catalogCode": "IL attempted sexual assault statute / MPC § 5.01",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-criminal-solicitation",
+      "catalogLabel": "Criminal Solicitation",
+      "catalogCode": "MPC § 5.02 / IL solicitation statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-gang-enhancement",
+      "catalogLabel": "Criminal Street Gang Enhancement",
+      "catalogCode": "IL gang enhancement statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-hate-crime-enhancement",
+      "catalogLabel": "Hate Crime Enhancement",
+      "catalogCode": "IL hate crime statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-recidivist-enhancement",
+      "catalogLabel": "Prior Felony / Recidivist Sentencing Enhancement",
+      "catalogCode": "IL habitual offender / recidivist statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-firearm-in-felony-enhancement",
+      "catalogLabel": "Use of a Firearm in Commission of a Felony",
+      "catalogCode": "IL firearm enhancement statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-drug-school-zone-enhancement",
+      "catalogLabel": "Drug Offense in a School Zone (Proximity Enhancement)",
+      "catalogCode": "IL drug-free school zone statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-rico-organized-crime",
+      "catalogLabel": "RICO / Organized Crime (Racketeering)",
+      "catalogCode": "IL organized crime / racketeering statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-money-laundering",
+      "catalogLabel": "Money Laundering",
+      "catalogCode": "IL money laundering statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-juvenile-delinquency-felony",
+      "catalogLabel": "Juvenile Delinquency Adjudication (Felony-Level Act)",
+      "catalogCode": "705 ILCS 405/1-3",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-juvenile-delinquency-misdemeanor",
+      "catalogLabel": "Juvenile Delinquency Adjudication (Misdemeanor-Level Act)",
+      "catalogCode": "705 ILCS 405/1-3",
+      "catalogCategory": "misdemeanor",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-juvenile-transfer-adult-court",
+      "catalogLabel": "Juvenile Transfer to Adult Court (Waiver Hearing)",
+      "catalogCode": "IL Juvenile Court Act — transfer / waiver provisions",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    },
+    {
+      "chargeId": "il-juvenile-firearm-possession",
+      "catalogLabel": "Juvenile Firearm Possession",
+      "catalogCode": "IL juvenile firearm possession statute",
+      "catalogCategory": "felony",
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
+      "canonicalTitle": null,
+      "provisions": [],
+      "apiStatus": "verified"
+    }
+  ]
+}
