@@ -72208,7 +72208,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-animal-at-large',
     name: 'Animal at Large / Leash Law Violation',
-    code: '3-459-305',
+    code: '459-305',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Allowing a dog or other domestic animal to roam at large without restraint or control in violation of local leash laws under PA law',
@@ -78175,7 +78175,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-truancy',
     name: 'Truancy / Chronic Absenteeism',
-    code: '24-13-1327',
+    code: '13-1333',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'A minor failing to attend school as required by compulsory education laws, or a parent/guardian failing to ensure school attendance under PA law',
@@ -78214,7 +78214,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'pa-alcohol-in-park',
     name: 'Possession of Alcohol in Park / Prohibited Area',
-    code: '18-6308',
+    code: '4-406',
     jurisdiction: 'PA',
     category: 'misdemeanor',
     description: 'Possessing or consuming alcoholic beverages in a public park, beach, playground, or other designated alcohol-free zone under PA law',

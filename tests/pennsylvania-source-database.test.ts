@@ -109,6 +109,36 @@ describe("Pennsylvania authority manifest", () => {
     }
   });
 
+  it("keeps hyphenated catalog codes aligned to their cited sections", () => {
+    const expected = [
+      { chargeId: "pa-animal-at-large", code: "459-305", citation: "3 Pa. Cons. Stat. § 459-305" },
+      { chargeId: "pa-truancy", code: "13-1333", citation: "24 Pa. Cons. Stat. § 13-1333" },
+      { chargeId: "pa-alcohol-in-park", code: "4-406", citation: "47 Pa. Cons. Stat. § 4-406" },
+    ];
+
+    for (const item of expected) {
+      const charge = criminalCharges.find((candidate) => candidate.id === item.chargeId)!;
+      expect(charge.code).toBe(item.code);
+      expect(CHARGE_CITATIONS[charge.id]?.citation).toBe(item.citation);
+      expect(parsePennsylvaniaCitation(item.citation)).toEqual([{
+        title: item.citation.split(" ")[0],
+        section: item.code,
+        subdivision: null,
+      }]);
+    }
+  });
+
+  it("does not promote the corrected hyphenated rows without an official consolidated provision", () => {
+    const manifest = loadPennsylvaniaAuthorityManifest();
+    for (const chargeId of ["pa-animal-at-large", "pa-truancy", "pa-alcohol-in-park"]) {
+      const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId)!;
+      expect(record.disposition).toBe("require_exact_reselection");
+      expect(record.provisions).toHaveLength(0);
+      expect(record.apiStatus).toBe("api_error");
+      expect(record.dispositionReason).toContain("could not be verified");
+    }
+  });
+
   it("stores verbatim official text and content hashes for a verified exact mapping", () => {
     const charge = criminalCharges.find((candidate) => candidate.id === "pa-aggravated-assault")!;
     const text = "§ 2702. Aggravated assault.\nA person commits an offense when the statutory elements are met.";
