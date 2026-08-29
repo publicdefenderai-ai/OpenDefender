@@ -231,7 +231,7 @@ export async function main(): Promise<void> {
       const document = await fetchPennsylvaniaDocument(reference, importedAt, requestLimiter);
       requests++;
       documentCache.set(key, document);
-      if (document) console.log(`[OK] ${reference.title} Pa.C.S. § ${reference.section} — ${document.title}`);
+      if (document) console.log(`[OK] ${reference.title} Pa.C.S. § ${reference.section}: ${document.title}`);
       else console.error(`[FAIL] ${reference.title} Pa.C.S. § ${reference.section}`);
     }
   }

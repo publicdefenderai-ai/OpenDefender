@@ -283,7 +283,7 @@ export async function main(): Promise<void> {
         : null;
       cache.set(referenceKey, document);
       if (document) {
-        console.log(`[OK] ${reference.section}${reference.subdivision ?? ""} — ${document.title}`);
+        console.log(`[OK] ${reference.section}${reference.subdivision ?? ""}: ${document.title}`);
       } else {
         const error = `Official page did not contain the expected section${reference.subdivision ? ` and subdivision ${reference.subdivision}` : ""} structure`;
         errors.set(referenceKey, error);
@@ -310,7 +310,7 @@ export async function main(): Promise<void> {
         : undefined,
     );
     console.log(
-      `[${record.disposition}] ${record.chargeId}${record.canonicalTitle ? ` — ${record.canonicalTitle}` : ""}`,
+      `[${record.disposition}] ${record.chargeId}${record.canonicalTitle ? `: ${record.canonicalTitle}` : ""}`,
     );
     return record;
   });

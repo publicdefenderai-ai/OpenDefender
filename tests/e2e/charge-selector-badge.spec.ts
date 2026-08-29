@@ -30,7 +30,7 @@ async function navigateToChargeSelector(page: any, stateCode = "CA") {
   await caseRoadmap.waitFor({ state: "visible", timeout: 10000 });
   await caseRoadmap.click();
 
-  // StateSelector appears — choose the requested jurisdiction
+  // StateSelector appears: choose the requested jurisdiction
   const stateOption = page.getByTestId(`state-option-${stateCode}`);
   await stateOption.waitFor({ state: "visible", timeout: 10000 });
   await stateOption.click();

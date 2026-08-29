@@ -186,7 +186,7 @@ export async function main(): Promise<void> {
         : undefined,
     );
     console.log(
-      `[${record.disposition}] ${record.chargeId}${record.canonicalTitle ? ` — ${record.canonicalTitle}` : ""}`,
+      `[${record.disposition}] ${record.chargeId}${record.canonicalTitle ? `: ${record.canonicalTitle}` : ""}`,
     );
     return record;
   });

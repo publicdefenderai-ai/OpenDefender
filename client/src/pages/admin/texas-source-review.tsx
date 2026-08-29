@@ -79,7 +79,7 @@ function useAdminNoIndex() {
 }
 
 function formatDate(value: string | null | undefined) {
-  if (!value) return "—";
+  if (!value) return "N/A";
   const date = new Date(value);
   return Number.isNaN(date.getTime())
     ? value
@@ -671,7 +671,7 @@ export default function TexasSourceReview() {
                       <td className="px-4 py-3">
                         <code className="font-mono text-xs text-slate-700" title={decision.snapshotHash}>{shortHash(decision.snapshotHash)}</code>
                       </td>
-                      <td className="max-w-sm whitespace-pre-wrap px-4 py-3 text-slate-600">{decision.note || "—"}</td>
+                      <td className="max-w-sm whitespace-pre-wrap px-4 py-3 text-slate-600">{decision.note || "N/A"}</td>
                     </tr>
                   ))}
                 </tbody>

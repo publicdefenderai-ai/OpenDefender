@@ -294,7 +294,7 @@ describe('POST /api/legal-guidance/rules — response envelope shape', () => {
 });
 
 // =============================================================================
-describe('POST /api/legal-guidance/stream — exact California subdivision identity', () => {
+describe('POST /api/legal-guidance/stream: exact California subdivision identity', () => {
   it('keeps the canonical charge identity and citation in the complete SSE event without calling AI', async () => {
     vi.stubEnv('ANTHROPIC_API_KEY', '');
 

@@ -42,7 +42,7 @@ function makeExportDocument(): GeneratedDocument {
     const charge = getChargeById(id)!;
     const citation = getVerifiedCitation(charge)!;
     const sourceUrl = getVerifiedSourceUrl(charge)!;
-    return `${charge.name}: ${citation} — Source: ${sourceUrl}`;
+    return `${charge.name}: ${citation}; Source: ${sourceUrl}`;
   });
 
   return {
