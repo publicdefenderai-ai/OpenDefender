@@ -23,7 +23,11 @@ async function main(): Promise<void> {
       sources: seed.sources.length,
       snapshots: seed.snapshots.length,
       links: seed.links.length,
+      coverage: seed.audit,
+      catalogRecords: seed.catalogRecords.length,
+      legacyInventory: seed.legacyInventory.length,
       selectableCharges: seed.selectableChargeIds.length,
+      withheldLegacyRecords: seed.audit.inventory.withheldCount,
       storedTextSnapshots: seed.snapshots.filter((snapshot) => snapshot.content !== null).length,
       openLawsReferences: [...seed.sources, ...seed.snapshots]
         .filter((entry) => JSON.stringify(entry).toLowerCase().includes("openlaws"))

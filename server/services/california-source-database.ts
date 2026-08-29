@@ -9,7 +9,9 @@ import {
   statuteUpdateQueue,
 } from "@shared/schema";
 import {
+  assertCaliforniaSourceDatabaseSeed,
   buildCaliforniaSourceDatabaseSeed,
+  type CaliforniaSourceDatabaseAudit,
   type CaliforniaSourceDatabaseSeed,
   type CaliforniaSnapshotSeed,
   type CaliforniaSourceSeed,
@@ -26,6 +28,10 @@ export interface CaliforniaSourceDatabaseResult {
   changeCount: number;
   linkCount: number;
   errorCount: number;
+  selectableChargeCount: number;
+  catalogRecordCount: number;
+  withheldLegacyRecordCount: number;
+  audit: CaliforniaSourceDatabaseAudit;
   message: string;
 }
 
@@ -36,6 +42,9 @@ export interface CaliforniaSourceDatabaseStatus {
   pendingReviewCount: number;
   linkedChargeCount: number;
   selectableChargeCount: number;
+  catalogRecordCount: number;
+  withheldLegacyRecordCount: number;
+  audit: CaliforniaSourceDatabaseAudit;
   lastRun: {
     id: string;
     status: string;
@@ -95,6 +104,7 @@ function sourceValues(source: CaliforniaSourceSeed) {
 export async function seedCaliforniaSourceDatabase(
   seed: CaliforniaSourceDatabaseSeed = buildCaliforniaSourceDatabaseSeed(),
 ): Promise<CaliforniaSourceDatabaseResult> {
+  assertCaliforniaSourceDatabaseSeed(seed);
   const runId = randomUUID();
   const startedAt = new Date();
   let snapshotInserted = 0;
@@ -110,7 +120,12 @@ export async function seedCaliforniaSourceDatabase(
     sourceCount: seed.sources.length,
     metadata: {
       sourcePolicy: "reference_only",
+      catalogRecordCount: seed.catalogRecords.length,
       selectableChargeCount: seed.selectableChargeIds.length,
+      selectableChargeIds: seed.selectableChargeIds,
+      catalogRecords: seed.catalogRecords,
+      legacyInventory: seed.legacyInventory,
+      audit: seed.audit,
       generatedAt: seed.generatedAt.toISOString(),
     },
   });
@@ -328,6 +343,10 @@ export async function seedCaliforniaSourceDatabase(
       changeCount,
       linkCount,
       errorCount: 0,
+      selectableChargeCount: seed.selectableChargeIds.length,
+      catalogRecordCount: seed.catalogRecords.length,
+      withheldLegacyRecordCount: seed.audit.inventory.withheldCount,
+      audit: seed.audit,
       message,
     };
   } catch (error) {
@@ -351,6 +370,10 @@ export async function seedCaliforniaSourceDatabase(
       changeCount,
       linkCount,
       errorCount: 1,
+      selectableChargeCount: seed.selectableChargeIds.length,
+      catalogRecordCount: seed.catalogRecords.length,
+      withheldLegacyRecordCount: seed.audit.inventory.withheldCount,
+      audit: seed.audit,
       message,
     };
   }
@@ -392,6 +415,7 @@ export async function getCaliforniaSourceDatabaseStatus(): Promise<CaliforniaSou
       completedAt: statuteIngestionRuns.completedAt,
       changeCount: statuteIngestionRuns.changeCount,
       errorCount: statuteIngestionRuns.errorCount,
+      metadata: statuteIngestionRuns.metadata,
     })
       .from(statuteIngestionRuns)
       .where(eq(statuteIngestionRuns.jurisdiction, "CA"))
@@ -399,14 +423,40 @@ export async function getCaliforniaSourceDatabaseStatus(): Promise<CaliforniaSou
       .limit(1),
   ]);
 
+  const metadata = lastRun[0]?.metadata as {
+    selectableChargeCount?: number;
+    catalogRecordCount?: number;
+    audit?: CaliforniaSourceDatabaseAudit;
+  } | null;
+  const audit = metadata?.audit ?? buildCaliforniaSourceDatabaseSeed(new Date(0)).audit;
+
   return {
     sourceCount: Number(sourceCount[0]?.count ?? 0),
     snapshotCount: Number(snapshotCount[0]?.count ?? 0),
     currentSnapshotCount: Number(currentSnapshotCount[0]?.count ?? 0),
     pendingReviewCount: Number(pendingReviewCount[0]?.count ?? 0),
     linkedChargeCount: Number(linkedChargeCount[0]?.count ?? 0),
-    selectableChargeCount: buildCaliforniaSourceDatabaseSeed(new Date(0)).selectableChargeIds.length,
-    lastRun: lastRun[0] ?? null,
+    selectableChargeCount: Number(
+      metadata?.selectableChargeCount ??
+        buildCaliforniaSourceDatabaseSeed(new Date(0)).selectableChargeIds.length,
+    ),
+    catalogRecordCount: Number(
+      metadata?.catalogRecordCount ?? audit.canonical.selectableRecordCount,
+    ),
+    withheldLegacyRecordCount: Number(
+      metadata?.audit?.inventory?.withheldCount ?? audit.inventory.withheldCount,
+    ),
+    audit,
+    lastRun: lastRun[0]
+      ? {
+          id: lastRun[0].id,
+          status: lastRun[0].status,
+          startedAt: lastRun[0].startedAt,
+          completedAt: lastRun[0].completedAt,
+          changeCount: lastRun[0].changeCount,
+          errorCount: lastRun[0].errorCount,
+        }
+      : null,
   };
 }
 
@@ -444,6 +494,10 @@ export async function getCaliforniaChargeProvenance(
       eq(statuteChargeLinks.isCurrent, true),
       eq(statuteSourceSnapshots.status, "current"),
     ));
+
+  // A charge is not provenance-safe if a current link disappeared during a
+  // partial seed. Never return partial authority to guidance or exports.
+  if (rows.length !== record.sources.length) return null;
 
   return {
     chargeId: record.canonicalId,
