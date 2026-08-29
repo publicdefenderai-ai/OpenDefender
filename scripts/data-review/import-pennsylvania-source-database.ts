@@ -76,7 +76,7 @@ function sourceFrameUrl(html: string, sourceUrl: string): string | null {
 }
 
 function sectionMarker(section: string): RegExp {
-  return new RegExp(`(?:§\\s*)?${section.replace(".", "\\.")}(?=\\.|\\s|$)`, "i");
+  return new RegExp(`(?:^|§\\s*)${section.replace(".", "\\.")}\\s*(?=\\.)`, "im");
 }
 
 export function extractPennsylvaniaDocument(
@@ -88,8 +88,8 @@ export function extractPennsylvaniaDocument(
   const text = decodeHtml(html);
   if (!sectionMarker(section).test(text)) return null;
   const titleMatch = text.match(new RegExp(
-    `(?:§\\s*)?${section.replace(".", "\\.")}\\s*[.]\\s*([^\\n.]{2,160})`,
-    "i",
+    `(?:^|§\\s*)${section.replace(".", "\\.")}\\s*[.]\\s*([^\\n.]{2,160})`,
+    "im",
   ));
   if (!titleMatch) return null;
   const title = titleMatch[1].replace(/\s+/g, " ").trim();

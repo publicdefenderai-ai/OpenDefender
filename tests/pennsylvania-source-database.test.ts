@@ -28,20 +28,25 @@ function document(section: string, title: string): PennsylvaniaSourceDocument {
 }
 
 describe("Pennsylvania authority manifest", () => {
-  it("preserves every Pennsylvania catalog row and fails closed until official text is verified", () => {
+  it("preserves every Pennsylvania catalog row and publishes only exact official matches", () => {
     const manifest = loadPennsylvaniaAuthorityManifest();
     const seed = buildPennsylvaniaSourceDatabaseSeed(manifest);
     const count = criminalCharges.filter((charge) => charge.jurisdiction === "PA").length;
     expect(count).toBe(112);
     expect(manifest.catalogRecords).toHaveLength(count);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(count);
-    expect(manifest.catalogRecords.every((record) =>
-      record.disposition === "require_exact_reselection" &&
-      record.provisions.length === 0)).toBe(true);
-    expect(seed.sources).toEqual([]);
-    expect(seed.snapshots).toEqual([]);
-    expect(seed.links).toEqual([]);
-    expect(seed.selectableChargeIds).toEqual([]);
+    const selectable = manifest.catalogRecords.filter((record) =>
+      record.disposition === "retain" || record.disposition === "exact_alias_rename");
+    const withheld = manifest.catalogRecords.filter((record) =>
+      record.disposition === "require_exact_reselection");
+    expect(selectable).toHaveLength(25);
+    expect(selectable.every((record) => record.provisions.length > 0)).toBe(true);
+    expect(withheld).toHaveLength(87);
+    expect(withheld.every((record) => record.provisions.length === 0)).toBe(true);
+    expect(seed.sources).toHaveLength(25);
+    expect(seed.snapshots).toHaveLength(25);
+    expect(seed.links).toHaveLength(25);
+    expect(seed.selectableChargeIds).toHaveLength(25);
   });
 
   it("parses consolidated citations and applies Pennsylvania chapter traversal", () => {
@@ -131,6 +136,12 @@ describe("Pennsylvania authority manifest", () => {
       "https://example.invalid",
       importedAt,
     )).toBeNull();
+    expect(extractPennsylvaniaDocument(
+      "<html><body>Section 2502.0 - Title 18 - CRIMES AND OFFENSES<br>§ 2502.  Murder.<br>(a) A criminal homicide constitutes murder.</body></html>",
+      "2502",
+      buildPennsylvaniaSourceUrl("18", "2502"),
+      importedAt,
+    )).toMatchObject({ section: "2502", title: "Murder" });
   });
 
   it("keeps the official wrapper URL canonical when section content comes from a frame", () => {
