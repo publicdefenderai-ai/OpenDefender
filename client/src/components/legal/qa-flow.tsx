@@ -28,6 +28,7 @@ interface QAFlowProps {
   clearSessionDialog?: ReactNode;
   initialData?: Partial<QAFormData>;
   reviewAnswers?: boolean;
+  onFormDataChange?: (data: QAFormData) => void;
 }
 
 interface QAFormData {
@@ -57,6 +58,7 @@ export function QAFlow({
   clearSessionDialog,
   initialData,
   reviewAnswers = false,
+  onFormDataChange,
 }: QAFlowProps) {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
@@ -67,6 +69,10 @@ export function QAFlow({
     ...initialData,
     charges: normalizeChargeIds(initialData?.charges ?? EMPTY_FORM_DATA.charges),
   }));
+
+  useEffect(() => {
+    onFormDataChange?.(formData);
+  }, [formData, onFormDataChange]);
 
   const baseSteps = [
     { title: t('legalGuidance.qaFlow.steps.consent'),           component: ConsentStep },

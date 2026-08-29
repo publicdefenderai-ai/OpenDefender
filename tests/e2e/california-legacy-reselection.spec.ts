@@ -122,7 +122,9 @@ async function openRecoveryWithSavedCharges(
     // gives this browser test a realistic persisted legacy selection without
     // making stale IDs selectable in the production UI.
     const originalStringify = JSON.stringify;
-    let hasInjectedSavedLegacyIds = false;
+    const injectionMarker = "california-legacy-reselection-fixture-injected";
+    let hasInjectedSavedLegacyIds =
+      window.sessionStorage.getItem(injectionMarker) === "true";
     JSON.stringify = function stringifyWithSavedLegacyIds(
       value: unknown,
       replacer?: ((key: string, value: unknown) => unknown) | null,
@@ -140,6 +142,7 @@ async function openRecoveryWithSavedCharges(
         !hasInjectedSavedLegacyIds
       ) {
         hasInjectedSavedLegacyIds = true;
+        window.sessionStorage.setItem(injectionMarker, "true");
         payload.charges.splice(
           0,
           payload.charges.length,
@@ -303,6 +306,26 @@ test.describe("saved California legacy charge recovery", () => {
     await expect(page.getByTestId("select-case-stage")).toBeVisible();
     await page.getByTestId("button-prev-status").click();
     await expect(page.getByTestId("button-next-case-details")).toBeVisible();
+    for (const { legacyId, selectedCanonicalId } of multiSupportedLegacyCases) {
+      await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toHaveCount(0);
+      await expect(
+        page.getByTestId(`button-remove-charge-${selectedCanonicalId}`),
+      ).toBeVisible();
+    }
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+
+    // A full reload is a separate persistence boundary from moving between
+    // QAFlow steps. Recovery should reopen with the edited canonical charges.
+    await page.reload();
+    await expect(page.getByTestId("qa-step-circle-7")).toHaveClass(/bg-gray-700/);
+    await page.getByRole("button", { name: /^Back/ }).click();
+    await expect(page.getByTestId("qa-step-circle-6")).toHaveClass(/bg-gray-700/);
+    await page.getByRole("button", { name: /^Back/ }).click();
+    await expect(page.getByTestId("qa-step-circle-5")).toHaveClass(/bg-gray-700/);
+    await page.getByTestId("button-prev-background").click();
+    await expect(page.getByTestId("qa-step-circle-4")).toHaveClass(/bg-gray-700/);
+    await page.getByTestId("button-prev-status").click();
+    await expect(page.getByTestId("qa-step-circle-3")).toHaveClass(/bg-gray-700/);
     for (const { legacyId, selectedCanonicalId } of multiSupportedLegacyCases) {
       await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toHaveCount(0);
       await expect(
