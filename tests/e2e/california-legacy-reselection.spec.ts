@@ -4,6 +4,47 @@ const validChargeId = "ca-robbery-in-the-first-degree";
 const supportedLegacyId = "ca-vehicular-homicide";
 const supportedCanonicalId = "ca-gross-vehicular-manslaughter-191-5-a";
 
+const additionalSupportedLegacyCases = [
+  {
+    label: "sexual-assault",
+    legacyId: "ca-sexual-assault-in-the-second-degree",
+    canonicalIds: [
+      "ca-sexual-penetration-289-a1a",
+      "ca-sexual-penetration-289-a1b",
+    ],
+    selectedCanonicalId: "ca-sexual-penetration-289-a1b",
+  },
+  {
+    label: "fraud",
+    legacyId: "ca-insurance-fraud",
+    canonicalIds: [
+      "ca-insurance-fraud-550-a1",
+      "ca-insurance-fraud-550-b1",
+    ],
+    selectedCanonicalId: "ca-insurance-fraud-550-b1",
+  },
+  {
+    label: "DUI",
+    legacyId: "ca-dui-first-offense",
+    canonicalIds: [
+      "ca-dui-23152-a",
+      "ca-dui-23152-b",
+      "ca-dui-23152-f",
+      "ca-dui-23152-g",
+    ],
+    selectedCanonicalId: "ca-dui-23152-f",
+  },
+  {
+    label: "procedural",
+    legacyId: "ca-failure-to-appear",
+    canonicalIds: [
+      "ca-failure-to-appear-1320-a",
+      "ca-failure-to-appear-1320-b",
+    ],
+    selectedCanonicalId: "ca-failure-to-appear-1320-b",
+  },
+] as const;
+
 /**
  * The current selector intentionally does not expose legacy California IDs.
  * This fixture simulates an older saved screener by adding those IDs to the
@@ -15,6 +56,7 @@ async function openRecoveryWithSavedCharges(
   legacyIds: string[],
 ): Promise<{
   releaseInitialRequest: () => void;
+  getInitialBody: () => Record<string, unknown> | undefined;
   getRetryBody: () => Record<string, unknown> | undefined;
 }> {
   await page.route("**/api/captcha/config", async (route) => {
@@ -184,6 +226,45 @@ test.describe("saved California legacy charge recovery", () => {
       charges: [validChargeId, supportedCanonicalId],
     });
   });
+
+  for (const {
+    label,
+    legacyId,
+    canonicalIds,
+    selectedCanonicalId,
+  } of additionalSupportedLegacyCases) {
+    test(`opens the current ${label} exact-choice panel and preserves unrelated charges`, async ({
+      page,
+    }) => {
+      test.setTimeout(60_000);
+
+      const recovery = await openRecoveryWithSavedCharges(page, [legacyId]);
+      await expect.poll(() => recovery.getInitialBody()?.charges).toEqual([
+        legacyId,
+        validChargeId,
+      ]);
+
+      const options = page.getByTestId(`legacy-charge-options-${legacyId}`);
+      await expect(options).toBeVisible();
+      for (const canonicalId of canonicalIds) {
+        await expect(page.getByTestId(`button-reselect-${canonicalId}`)).toBeVisible();
+      }
+
+      await page.getByTestId(`button-reselect-${selectedCanonicalId}`).click();
+      await expect(options).toHaveCount(0);
+      await expect(page.getByTestId(`button-remove-charge-${legacyId}`)).toHaveCount(0);
+      await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+      await expect(
+        page.getByTestId(`button-remove-charge-${selectedCanonicalId}`),
+      ).toBeVisible();
+
+      recovery.releaseInitialRequest();
+      await submitRemainingSteps(page);
+      await expect.poll(recovery.getRetryBody).toMatchObject({
+        charges: [validChargeId, selectedCanonicalId],
+      });
+    });
+  }
 
   test("does not silently convert unsupported, enhancement, juvenile, or non-criminal legacy IDs", async ({
     page,
