@@ -204,11 +204,30 @@ const VALID_BODY = {
   caseStage: 'arraignment',
 };
 
+const CANONICAL_SUBDIVISION_CHARGE = 'ca-gross-vehicular-manslaughter-191-5-a';
+const EXPECTED_CHARGE_IDENTITY = [{
+  id: CANONICAL_SUBDIVISION_CHARGE,
+  name: 'Gross Vehicular Manslaughter While Intoxicated',
+  title: 'Gross Vehicular Manslaughter While Intoxicated',
+  code: 'Cal. Penal Code § 191.5(a)',
+  verifiedCitation: 'Cal. Penal Code § 191.5(a)',
+}];
+
 function parseSseEvents(body: string): Array<Record<string, any>> {
   return body
     .split('\n\n')
     .filter((event) => event.startsWith('data: '))
     .map((event) => JSON.parse(event.slice('data: '.length)));
+}
+
+function chargeIdentity(guidance: Record<string, any>) {
+  return guidance.chargeClassifications.map((classification: Record<string, any>) => ({
+    id: classification.id,
+    name: classification.name,
+    title: classification.title,
+    code: classification.code,
+    verifiedCitation: classification.verifiedCitation,
+  }));
 }
 
 // =============================================================================
@@ -294,6 +313,58 @@ describe('POST /api/legal-guidance/rules — response envelope shape', () => {
 });
 
 // =============================================================================
+describe('legal guidance routes — canonical charge parity', () => {
+  it('returns the same canonical subdivision identity from ordinary, streaming, and rules routes without AI', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', '');
+
+    const { generateClaudeGuidance, streamClaudeGuidance } = await import('../server/services/claude-guidance');
+    (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+    (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+
+    try {
+      const body = {
+        ...VALID_BODY,
+        charges: [CANONICAL_SUBDIVISION_CHARGE],
+      };
+
+      const ordinaryResponse = await request(testApp)
+        .post('/api/legal-guidance')
+        .send(body)
+        .expect(200);
+      const rulesResponse = await request(testApp)
+        .post('/api/legal-guidance/rules')
+        .send(body)
+        .expect(200);
+      const streamResponse = await request(testApp)
+        .post('/api/legal-guidance/stream')
+        .send(body)
+        .expect(200);
+
+      const streamCompleteEvent = parseSseEvents(streamResponse.text)
+        .find((event) => event.type === 'complete');
+      expect(streamCompleteEvent).toBeDefined();
+      expect(streamCompleteEvent?.success).toBe(true);
+
+      const routeIdentities = [
+        chargeIdentity(ordinaryResponse.body.guidance),
+        chargeIdentity(rulesResponse.body.guidance),
+        chargeIdentity(streamCompleteEvent?.guidance),
+      ];
+
+      for (const identity of routeIdentities) {
+        expect(identity).toEqual(EXPECTED_CHARGE_IDENTITY);
+      }
+      expect(routeIdentities[1]).toEqual(routeIdentities[0]);
+      expect(routeIdentities[2]).toEqual(routeIdentities[0]);
+      expect(generateClaudeGuidance).not.toHaveBeenCalled();
+      expect(streamClaudeGuidance).not.toHaveBeenCalled();
+    } finally {
+      vi.unstubAllEnvs();
+    }
+  });
+});
+
+// =============================================================================
 describe('POST /api/legal-guidance/stream — exact California subdivision identity', () => {
   it('keeps the canonical charge identity and citation in the complete SSE event without calling AI', async () => {
     vi.stubEnv('ANTHROPIC_API_KEY', '');
@@ -303,7 +374,7 @@ describe('POST /api/legal-guidance/stream — exact California subdivision ident
         .post('/api/legal-guidance/stream')
         .send({
           ...VALID_BODY,
-          charges: ['ca-gross-vehicular-manslaughter-191-5-a'],
+          charges: [CANONICAL_SUBDIVISION_CHARGE],
         })
         .expect(200);
 
@@ -317,7 +388,7 @@ describe('POST /api/legal-guidance/stream — exact California subdivision ident
       const guidance = completeEvent?.guidance;
       expect(guidance.chargeClassifications).toEqual([
         expect.objectContaining({
-          id: 'ca-gross-vehicular-manslaughter-191-5-a',
+          id: CANONICAL_SUBDIVISION_CHARGE,
           name: 'Gross Vehicular Manslaughter While Intoxicated',
           code: 'Cal. Penal Code § 191.5(a)',
           verifiedCitation: 'Cal. Penal Code § 191.5(a)',
