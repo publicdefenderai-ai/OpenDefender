@@ -153,6 +153,15 @@ const PENNSYLVANIA_OFFICIAL_HOSTS = new Set([
   "www.legis.state.pa.us",
   "legis.state.pa.us",
 ]);
+const PENNSYLVANIA_PALEGIS_HOSTS = new Set(["www.palegis.us", "palegis.us"]);
+
+export const PENNSYLVANIA_RETRIEVAL_SOURCE =
+  "Pennsylvania General Assembly Consolidated Statutes (palegis.us)";
+export const PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE: PennsylvaniaSourceReference = {
+  title: "18",
+  section: "2502",
+  subdivision: null,
+};
 
 function isPennsylvaniaOfficialUrl(value: string): boolean {
   try {
@@ -163,6 +172,99 @@ function isPennsylvaniaOfficialUrl(value: string): boolean {
   }
 }
 
+interface PennsylvaniaSourceContractPage {
+  requestedUrl: string;
+  responseStatus: number;
+  responseUrl: string;
+  redirectLocation: string | null;
+  contentType: string;
+  html: string;
+}
+
+export interface PennsylvaniaSourceContractResult {
+  ok: boolean;
+  source: typeof PENNSYLVANIA_RETRIEVAL_SOURCE;
+  requestedUrl: string;
+  responseUrl: string;
+  failures: string[];
+}
+
+function isPennsylvaniaPalegisUrl(value: string): boolean {
+  try {
+    const url = new URL(value);
+    return url.protocol === "https:" && PENNSYLVANIA_PALEGIS_HOSTS.has(url.hostname.toLowerCase());
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Validate the small, release-time contract for the migrated PAlegis source.
+ * This intentionally checks only a representative official page; it must not
+ * fall back to the legacy host or a secondary authority when the contract
+ * changes.
+ */
+export function validatePennsylvaniaSourceContract(
+  page: PennsylvaniaSourceContractPage,
+): PennsylvaniaSourceContractResult {
+  const failures: string[] = [];
+  const expectedUrl = buildPennsylvaniaOfficialSourceUrl(
+    PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.title,
+    PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.section,
+  );
+
+  if (page.requestedUrl !== expectedUrl) {
+    failures.push(`contract requested an unexpected URL: ${page.requestedUrl}`);
+  }
+  if (page.responseStatus >= 300 && page.responseStatus < 400) {
+    let redirectedTo = "an unspecified location";
+    if (page.redirectLocation) {
+      try {
+        redirectedTo = new URL(page.redirectLocation, page.requestedUrl).toString();
+      } catch {
+        redirectedTo = page.redirectLocation;
+      }
+    }
+    failures.push(`official PAlegis.us source returned an unexpected redirect to ${redirectedTo}`);
+  } else if (page.responseStatus !== 200) {
+    failures.push(`official source returned HTTP ${page.responseStatus}`);
+  }
+  if (page.responseUrl !== page.requestedUrl) {
+    failures.push(`unexpected final URL ${page.responseUrl}`);
+  }
+  if (!isPennsylvaniaPalegisUrl(page.responseUrl)) {
+    failures.push(`response did not remain on official PAlegis.us: ${page.responseUrl}`);
+  }
+  if (!/\btext\/html\b/i.test(page.contentType)) {
+    failures.push(`expected text/html response, received ${page.contentType || "no content type"}`);
+  }
+
+  const hasHtmlShell = /<html\b/i.test(page.html) && /<body\b/i.test(page.html);
+  const hasStatuteHeading = /<h[1-3]\b[^>]*>\s*Section\s+2502(?:\.0)?\s*-\s*Title\s+18\b/i.test(page.html);
+  if (!hasHtmlShell || !hasStatuteHeading) {
+    failures.push("PAlegis HTML structure changed: expected an HTML/body shell and a Title 18 section heading");
+  }
+  if (!sectionMarker(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.section).test(decodeHtml(page.html))) {
+    failures.push("PAlegis page is missing the expected § 2502 section marker");
+  }
+  if (!extractPennsylvaniaDocument(
+    page.html,
+    PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.section,
+    page.responseUrl,
+    new Date(),
+  )) {
+    failures.push("PAlegis page no longer contains extractable § 2502 official section content");
+  }
+
+  return {
+    ok: failures.length === 0,
+    source: PENNSYLVANIA_RETRIEVAL_SOURCE,
+    requestedUrl: page.requestedUrl,
+    responseUrl: page.responseUrl,
+    failures,
+  };
+}
+
 export function extractLatestEffectiveDate(text: string): string | null {
   const dates = [...text.matchAll(EFFECTIVE_DATE_PATTERN)].map((match) => {
     const value = `${match[1]} ${match[2]}, ${match[3]}`;
@@ -170,6 +272,44 @@ export function extractLatestEffectiveDate(text: string): string | null {
     return { value, time };
   }).filter((date) => Number.isFinite(date.time)).sort((a, b) => b.time - a.time);
   return dates[0]?.value ?? null;
+}
+
+export async function checkPennsylvaniaSourceContract(
+  fetchImpl: typeof fetch = fetch,
+): Promise<PennsylvaniaSourceContractResult> {
+  const requestedUrl = buildPennsylvaniaOfficialSourceUrl(
+    PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.title,
+    PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE.section,
+  );
+  try {
+    const response = await fetchImpl(requestedUrl, {
+      redirect: "manual",
+      signal: AbortSignal.timeout(30000),
+      headers: {
+        "User-Agent": "OpenDefender-PennsylvaniaSourceContract/1.0",
+        Accept: "text/html",
+      },
+    });
+    const html = response.status >= 200 && response.status < 300
+      ? await response.text()
+      : "";
+    return validatePennsylvaniaSourceContract({
+      requestedUrl,
+      responseStatus: response.status,
+      responseUrl: response.url || requestedUrl,
+      redirectLocation: response.headers.get("location"),
+      contentType: response.headers.get("content-type") ?? "",
+      html,
+    });
+  } catch (error) {
+    return {
+      ok: false,
+      source: PENNSYLVANIA_RETRIEVAL_SOURCE,
+      requestedUrl,
+      responseUrl: requestedUrl,
+      failures: [`request to official PAlegis.us source failed: ${error instanceof Error ? error.message : String(error)}`],
+    };
+  }
 }
 
 export async function fetchPennsylvaniaDocument(

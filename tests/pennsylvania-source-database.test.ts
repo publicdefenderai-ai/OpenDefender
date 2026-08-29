@@ -14,8 +14,11 @@ import {
   type PennsylvaniaSourceDocument,
 } from "../server/data/pennsylvania-source-database-seed";
 import {
+  checkPennsylvaniaSourceContract,
   extractPennsylvaniaDocument,
   fetchPennsylvaniaDocument,
+  PENNSYLVANIA_RETRIEVAL_SOURCE,
+  validatePennsylvaniaSourceContract,
 } from "../scripts/data-review/import-pennsylvania-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
@@ -202,6 +205,66 @@ describe("Pennsylvania authority manifest", () => {
     } finally {
       globalThis.fetch = originalFetch;
     }
+  });
+
+  it("checks a representative PAlegis page without following redirects", async () => {
+    const officialUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
+    const originalFetch = globalThis.fetch;
+    let requestInit: RequestInit | undefined;
+    globalThis.fetch = (async (input: string | URL | Request, init?: RequestInit) => {
+      requestInit = init;
+      return new Response(
+        "<html><body><h1>Section 2502.0 - Title 18 - CRIMES AND OFFENSES</h1><div>&sect; 2502.&nbsp;&nbsp;Murder.</div><div>(a) A criminal homicide constitutes murder under these statutory elements and penalties.</div></body></html>",
+        {
+          status: 200,
+          headers: { "content-type": "text/html; charset=utf-8" },
+        },
+      );
+    }) as typeof fetch;
+    try {
+      const result = await checkPennsylvaniaSourceContract();
+      expect(result).toMatchObject({
+        ok: true,
+        source: PENNSYLVANIA_RETRIEVAL_SOURCE,
+        requestedUrl: officialUrl,
+      });
+      expect(requestInit?.redirect).toBe("manual");
+      expect(requestInit?.headers).toMatchObject({ Accept: "text/html" });
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+  });
+
+  it("flags redirects and never treats a legacy or secondary response as official", () => {
+    const requestedUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
+    const result = validatePennsylvaniaSourceContract({
+      requestedUrl,
+      responseStatus: 302,
+      responseUrl: requestedUrl,
+      redirectLocation: "https://www.legis.state.pa.us/legacy-statute",
+      contentType: "text/html",
+      html: "",
+    });
+    expect(result.ok).toBe(false);
+    expect(result.failures.join(" ")).toContain("unexpected redirect");
+    expect(result.failures.join(" ")).toContain("official PAlegis.us");
+  });
+
+  it("flags missing section markers and changed PAlegis HTML structure", () => {
+    const requestedUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
+    const result = validatePennsylvaniaSourceContract({
+      requestedUrl,
+      responseStatus: 200,
+      responseUrl: requestedUrl,
+      redirectLocation: null,
+      contentType: "text/html",
+      html: "<html><body><main><h1>Updated statute viewer</h1><p>Content moved.</p></main></body></html>",
+    });
+    expect(result.ok).toBe(false);
+    expect(result.failures).toEqual(expect.arrayContaining([
+      "PAlegis HTML structure changed: expected an HTML/body shell and a Title 18 section heading",
+      "PAlegis page is missing the expected § 2502 section marker",
+    ]));
   });
 
   it("uses the existing citation overlay as input without trusting its secondary source URLs", () => {
