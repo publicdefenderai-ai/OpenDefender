@@ -297,6 +297,20 @@ test.describe("saved California legacy charge recovery", () => {
       ).toBeVisible();
     }
 
+    // Leave Case Details and return to it to verify that resolving one
+    // legacy charge does not cause another resolved selection to be lost.
+    await page.getByTestId("button-next-case-details").click();
+    await expect(page.getByTestId("select-case-stage")).toBeVisible();
+    await page.getByTestId("button-prev-status").click();
+    await expect(page.getByTestId("button-next-case-details")).toBeVisible();
+    for (const { legacyId, selectedCanonicalId } of multiSupportedLegacyCases) {
+      await expect(page.getByTestId(`legacy-charge-options-${legacyId}`)).toHaveCount(0);
+      await expect(
+        page.getByTestId(`button-remove-charge-${selectedCanonicalId}`),
+      ).toBeVisible();
+    }
+    await expect(page.getByTestId(`button-remove-charge-${validChargeId}`)).toBeVisible();
+
     recovery.releaseInitialRequest();
     await submitRemainingSteps(page);
     await expect.poll(recovery.getRetryBody).toMatchObject({
