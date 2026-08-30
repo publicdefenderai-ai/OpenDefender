@@ -78,7 +78,16 @@ function guidanceCaseData(caseData: any) {
   };
 }
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export interface RegisterRoutesDependencies {
+  buildPublicSourceCoverageReport?: typeof buildPublicSourceCoverageReport;
+}
+
+export async function registerRoutes(
+  app: Express,
+  dependencies: RegisterRoutesDependencies = {},
+): Promise<Server> {
+  const buildSourceCoverageReport =
+    dependencies.buildPublicSourceCoverageReport ?? buildPublicSourceCoverageReport;
   const mitigationPolishMaxBodyBytes = getMitigationPolishMaxBodyBytes(process.env);
 
   // ============================================================================
@@ -1186,7 +1195,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     requireAdminAuth,
     (_req, res) => {
       try {
-        res.json({ success: true, ...buildPublicSourceCoverageReport() });
+        res.json({ success: true, ...buildSourceCoverageReport() });
       } catch (error) {
         errLog("Failed to build public-source coverage report", error);
         res.status(500).json({

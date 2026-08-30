@@ -22,6 +22,11 @@
 import { describe, it, expect, vi, beforeAll, afterEach } from 'vitest';
 import request from 'supertest';
 import express from 'express';
+import {
+  CURRENT_PUBLIC_SOURCE_JURISDICTIONS,
+  HIGH_PUBLIC_SOURCE_COVERAGE_TARGET,
+} from '../server/data/public-source-coverage';
+import type { PublicSourceCoverageReport } from '../server/data/public-source-coverage';
 
 // ── Hoisted in-memory persistence for the saved-guidance boundary ─────────────
 const { caseStore } = vi.hoisted(() => ({
@@ -590,5 +595,129 @@ describe('POST /api/legal-guidance/rules — error handling', () => {
     expect(res.body.success).toBe(false);
     expect(typeof res.body.error).toBe('string');
     expect(res.body.stack).toBeUndefined();
+  });
+});
+
+// =============================================================================
+describe('GET /api/admin/source-coverage — authenticated readiness gate', () => {
+  const ADMIN_TEST_TOKEN = 'source-coverage-test-token';
+  const REPORT_KEYS = [
+    'target',
+    'jurisdictions',
+    'belowTargetJurisdictions',
+    'nextHighestValueCoverageTargets',
+  ];
+  const ROW_KEYS = [
+    'jurisdiction',
+    'source',
+    'manifestGeneratedAt',
+    'catalogRows',
+    'selectableRows',
+    'withheldRows',
+    'rowsWithExplicitWithheldReason',
+    'catalogAccountingRate',
+    'rowsWithOfficialResponse',
+    'officialResponseRate',
+    'officialResponsePercentage',
+    'publishableRate',
+    'coveragePercentage',
+    'selectableCoveragePercentage',
+    'sources',
+    'snapshots',
+    'links',
+    'officialSourceAvailability',
+    'gapBreakdown',
+    'gapCounts',
+    'staleRows',
+    'status',
+    'blocker',
+    'manifestPath',
+    'seedScriptPath',
+  ];
+
+  async function makeSourceCoverageApp(
+    buildReport: () => PublicSourceCoverageReport,
+  ) {
+    const { registerRoutes } = await import('../server/routes');
+    const app = express();
+    app.use(express.json());
+    await registerRoutes(app, { buildPublicSourceCoverageReport: buildReport });
+    return app;
+  }
+
+  it('returns the complete coverage schema for a valid admin request', async () => {
+    const previousAdminToken = process.env.ADMIN_TOKEN;
+    process.env.ADMIN_TOKEN = ADMIN_TEST_TOKEN;
+
+    try {
+      const res = await request(testApp)
+        .get('/api/admin/source-coverage')
+        .set('x-admin-api-key', ADMIN_TEST_TOKEN)
+        .expect(200);
+
+      expect(res.body.success).toBe(true);
+      expect(Object.keys(res.body).sort()).toEqual(['belowTargetJurisdictions', 'jurisdictions', 'nextHighestValueCoverageTargets', 'success', 'target'].sort());
+      expect(Object.keys(res.body.target).sort()).toEqual(
+        ['catalogAccountingRate', 'officialResponseRate'].sort(),
+      );
+      expect(res.body.target).toEqual(HIGH_PUBLIC_SOURCE_COVERAGE_TARGET);
+      expect(res.body.jurisdictions).toHaveLength(CURRENT_PUBLIC_SOURCE_JURISDICTIONS.length);
+      expect(res.body.jurisdictions.map((row: { jurisdiction: string }) => row.jurisdiction)).toEqual(
+        [...CURRENT_PUBLIC_SOURCE_JURISDICTIONS],
+      );
+
+      for (const row of res.body.jurisdictions) {
+        expect(Object.keys(row).sort()).toEqual(ROW_KEYS.sort());
+      }
+      for (const target of res.body.nextHighestValueCoverageTargets) {
+        expect(Object.keys(target).sort()).toEqual([
+          'jurisdiction',
+          'rows',
+          'coveragePercentage',
+          'officialResponsePercentage',
+          'kind',
+          'reason',
+          'nextStep',
+        ].sort());
+      }
+      expect(Object.keys(res.body).filter((key) => !REPORT_KEYS.includes(key))).toEqual(['success']);
+    } finally {
+      if (previousAdminToken === undefined) delete process.env.ADMIN_TOKEN;
+      else process.env.ADMIN_TOKEN = previousAdminToken;
+    }
+  });
+
+  it.each([
+    [
+      'missing-manifest',
+      'Missing committed FL public-source manifest: /private/fixture/source-manifest.json',
+    ],
+    [
+      'seed-failure',
+      'Technical seed failure for TX: seed selectable rows do not match the committed manifest',
+    ],
+  ])('returns a safe 500 when the readiness builder reports a %s failure', async (_name, failureMessage) => {
+    const previousAdminToken = process.env.ADMIN_TOKEN;
+    process.env.ADMIN_TOKEN = ADMIN_TEST_TOKEN;
+
+    try {
+      const app = await makeSourceCoverageApp(() => {
+        throw new Error(failureMessage);
+      });
+      const res = await request(app)
+        .get('/api/admin/source-coverage')
+        .set('x-admin-api-key', ADMIN_TEST_TOKEN)
+        .expect(500);
+
+      expect(res.body).toEqual({
+        success: false,
+        error: 'Source coverage report is unavailable',
+      });
+      expect(JSON.stringify(res.body)).not.toContain(failureMessage);
+      expect(res.body.stack).toBeUndefined();
+    } finally {
+      if (previousAdminToken === undefined) delete process.env.ADMIN_TOKEN;
+      else process.env.ADMIN_TOKEN = previousAdminToken;
+    }
   });
 });
