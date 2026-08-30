@@ -1,4 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
+import {
+  CALIFORNIA_CANONICAL_RECORDS,
+  CALIFORNIA_LEGACY_DISPOSITIONS,
+} from "../../shared/california-authority";
 
 const MOBILE_LANGUAGES = ["en", "es", "zh"] as const;
 const PHONE_VIEWPORTS = [
@@ -197,6 +201,42 @@ test.describe("intent navigation and accessibility", () => {
           result.document?.id === "charge-ca-grand-theft-in-the-first-degree",
       ),
     ).toBe(false);
+
+    const currentCaliforniaIds = CALIFORNIA_CANONICAL_RECORDS
+      .filter((record) => record.selectable)
+      .map((record) => record.canonicalId);
+    const currentCaliforniaIdSet = new Set(currentCaliforniaIds);
+    const withheldCaliforniaIds = CALIFORNIA_LEGACY_DISPOSITIONS
+      .map((entry) => entry.legacyId)
+      .filter((id) => !currentCaliforniaIdSet.has(id));
+
+    const allCaliforniaResponse = await page.request.get(
+      "/api/site-search?q=CA&types=charge&jurisdiction=CA&limit=500",
+    );
+    expect(allCaliforniaResponse.ok()).toBe(true);
+    const allCaliforniaPayload = await allCaliforniaResponse.json() as {
+      results: Array<{ document?: { id?: string } }>;
+    };
+    const searchableCaliforniaIds = new Set(
+      allCaliforniaPayload.results
+        .map((result) => result.document?.id)
+        .filter((id): id is string => typeof id === "string")
+        .map((id) => id.replace(/^charge-/, "")),
+    );
+
+    const missingCurrentIds = currentCaliforniaIds
+      .filter((id) => !searchableCaliforniaIds.has(id));
+    expect(
+      missingCurrentIds,
+      "Current California authority IDs missing from charge search",
+    ).toEqual([]);
+
+    const leakedWithheldIds = withheldCaliforniaIds
+      .filter((id) => searchableCaliforniaIds.has(id));
+    expect(
+      leakedWithheldIds,
+      "Withheld California authority IDs returned by charge search",
+    ).toEqual([]);
   });
 
   test("mobile resource tools render their initial states without overflow", async ({ page }) => {

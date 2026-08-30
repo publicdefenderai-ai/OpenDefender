@@ -1603,7 +1603,9 @@ export function search(query: SearchQuery): SearchResponse {
     glossary: 3,
     court: 2,
     mock_qa: 2,
-    charge: chargesOnlyFilter ? 50 : 3,
+    charge: chargesOnlyFilter
+      ? Math.max(50, Number.isFinite(query.limit ?? 50) ? query.limit ?? 50 : 50)
+      : 3,
   };
 
   // Group from ALL scored results so each category gets its best matches
