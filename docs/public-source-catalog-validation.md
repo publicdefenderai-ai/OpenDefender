@@ -48,6 +48,20 @@ The same report is available to authenticated administrators at
 and deterministic seed builders on every request; it does not make a live
 legislative-source request.
 
+Before release, run the source-seed determinism guard with:
+
+```text
+npm run review:source-seed-determinism
+```
+
+The guard runs each of the nine jurisdiction seed commands in `--dry-run` mode
+twice and compares their stdout byte-for-byte. It uses California's documented
+fixed timestamp input,
+`--imported-at 1970-01-01T00:00:00.000Z`, and removes database environment
+variables from the child processes. The dry runs therefore inspect committed
+data only; they do not connect to a database or government source. A mismatch
+fails with the jurisdiction name.
+
 ## Catalog matrix
 
 The eight JSON manifests below each load from
@@ -90,6 +104,7 @@ ranked list to select the next coverage work.
 
 - `npm run check`
 - `npm run review:source-coverage`
+- `npm run review:source-seed-determinism`
 - `npm run build`
 - `npm test` — 57 active test files passed; 1,279 tests passed. Nine
   integration files remain skipped unless their explicit environment guards
@@ -99,16 +114,13 @@ ranked list to select the next coverage work.
 - Development integration boundary pass with the explicit authority and
   persistence guards enabled — 8 files, 19 tests passed. One test file was
   skipped by its own guard.
-- Two-pass dry-run loading of all nine seed commands. The eight
-  committed-manifest commands and the California reference-only command
-  produced byte-identical summaries across both passes. California uses the
-  fixed dry-run timestamp `1970-01-01T00:00:00.000Z` by default; use
-  `--imported-at <ISO-8601 timestamp>` to compare against another fixed
-  release timestamp:
-
-  ```text
-  npx tsx scripts/data-review/seed-{california,florida,georgia,illinois,new-york,ohio,pennsylvania,south-carolina,texas}-source-database.ts --dry-run
-  ```
+- Two-pass dry-run loading of all nine seed commands through
+  `npm run review:source-seed-determinism`. The eight committed-manifest
+  commands and the California reference-only command produced byte-identical
+  summaries across both passes. California uses the fixed dry-run timestamp
+  `1970-01-01T00:00:00.000Z`; use `--imported-at <ISO-8601 timestamp>` with
+  the California seed command to compare against another fixed release
+  timestamp.
 
 - Direct development API checks:
   - site search returns the Data Sources and Methodology result for
