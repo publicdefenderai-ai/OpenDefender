@@ -1,6 +1,8 @@
 import {
   CALIFORNIA_CANONICAL_RECORDS,
 } from "@shared/california-authority";
+import { existsSync } from "node:fs";
+import { resolve } from "node:path";
 import {
   buildCaliforniaSourceDatabaseSeed,
 } from "./california-source-database-seed";
@@ -84,11 +86,42 @@ export type PublicSourceCoverageStatus =
   | "blocked"
   | "below_target";
 
+export type PublicSourceCoverageGapKind =
+  | "source_access"
+  | "missing_import"
+  | "stale_record"
+  | "incomplete_text"
+  | "technical_seed_failure"
+  | "identity_review";
+
+export type OfficialSourceAvailability =
+  | "available"
+  | "partial"
+  | "unavailable";
+
 export interface PublicSourceAccessBlocker {
   kind: "source_access";
   source: string;
   summary: string;
   evidence: string;
+  nextStep: string;
+}
+
+export interface PublicSourceCoverageGap {
+  kind: PublicSourceCoverageGapKind;
+  rows: number;
+  chargeIds: string[];
+  summary: string;
+  nextStep: string;
+}
+
+export interface PublicSourceCoverageTarget {
+  jurisdiction: CurrentPublicSourceJurisdiction;
+  rows: number;
+  coveragePercentage: number;
+  officialResponsePercentage: number;
+  kind: PublicSourceCoverageGapKind;
+  reason: string;
   nextStep: string;
 }
 
@@ -137,6 +170,18 @@ export interface PublicSourceCoverageReportRow {
   catalogAccountingRate: number;
   officialResponseRate: number;
   publishableRate: number;
+  /** Selectable rows / catalog rows, expressed as a percentage. */
+  coveragePercentage: number;
+  /** Catalog rows with an official source response, expressed as a percentage. */
+  officialResponsePercentage: number;
+  /** Selectable rows / catalog rows, expressed as a percentage. */
+  selectableCoveragePercentage: number;
+  officialSourceAvailability: OfficialSourceAvailability;
+  gapBreakdown: PublicSourceCoverageGap[];
+  gapCounts: Record<PublicSourceCoverageGapKind, number>;
+  staleRows: number;
+  manifestPath: string | null;
+  seedScriptPath: string;
   status: PublicSourceCoverageStatus;
   blocker: PublicSourceAccessBlocker | null;
 }
@@ -145,6 +190,7 @@ export interface PublicSourceCoverageReport {
   target: typeof HIGH_PUBLIC_SOURCE_COVERAGE_TARGET;
   jurisdictions: PublicSourceCoverageReportRow[];
   belowTargetJurisdictions: CurrentPublicSourceJurisdiction[];
+  nextHighestValueCoverageTargets: PublicSourceCoverageTarget[];
 }
 
 export interface PublicSourceCoverageTargetCheck {
@@ -167,16 +213,22 @@ export function isPublicSourceCoverageTargetMet(
 }
 
 interface CoverageCatalogRecord {
+  chargeId: string;
   disposition: "retain" | "exact_alias_rename" | "require_exact_reselection" | "remove";
   dispositionReason: string;
-  provisions: unknown[];
+  provisions: CoverageProvision[];
   apiStatus: string;
+}
+
+interface CoverageProvision {
+  retrievedAt?: Date | string | null;
 }
 
 interface CoverageSeedCounts {
   sources: readonly unknown[];
   snapshots: readonly unknown[];
   links: readonly unknown[];
+  catalogRecords: readonly { chargeId: string }[];
   selectableChargeIds: readonly string[];
 }
 
@@ -187,7 +239,84 @@ interface CoverageInput {
   records: CoverageCatalogRecord[];
   seed: CoverageSeedCounts;
   rowsWithOfficialResponse: number;
+  officialResponseIds: ReadonlySet<string>;
+  expectedManifestPath: string | null;
+  expectedSeedScriptPath: string;
 }
+
+export const COVERAGE_REGISTRY: Record<
+  CurrentPublicSourceJurisdiction,
+  { manifestPath: string | null; seedScriptPath: string }
+> = {
+  CA: {
+    manifestPath: null,
+    seedScriptPath: "scripts/data-review/seed-california-source-database.ts",
+  },
+  FL: {
+    manifestPath: "scripts/data-review/output/fl-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-florida-source-database.ts",
+  },
+  GA: {
+    manifestPath: "scripts/data-review/output/ga-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-georgia-source-database.ts",
+  },
+  IL: {
+    manifestPath: "scripts/data-review/output/il-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-illinois-source-database.ts",
+  },
+  NY: {
+    manifestPath: "scripts/data-review/output/ny-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-new-york-source-database.ts",
+  },
+  OH: {
+    manifestPath: "scripts/data-review/output/oh-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-ohio-source-database.ts",
+  },
+  PA: {
+    manifestPath: "scripts/data-review/output/pa-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-pennsylvania-source-database.ts",
+  },
+  SC: {
+    manifestPath: "scripts/data-review/output/sc-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-south-carolina-source-database.ts",
+  },
+  TX: {
+    manifestPath: "scripts/data-review/output/tx-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-texas-source-database.ts",
+  },
+};
+
+const STALE_RECORD_MAX_AGE_DAYS = 180;
+
+const GAP_DETAILS: Record<
+  PublicSourceCoverageGapKind,
+  { summary: string; nextStep: string }
+> = {
+  source_access: {
+    summary: "The official source did not provide a usable response for this row.",
+    nextStep: "Restore the official source contract and re-run the source importer.",
+  },
+  missing_import: {
+    summary: "The row is in the catalog but has no imported source record.",
+    nextStep: "Add the row to the committed manifest and repeat seed validation.",
+  },
+  stale_record: {
+    summary: "The source record is older than the current freshness window.",
+    nextStep: "Re-fetch the official source and regenerate the manifest.",
+  },
+  incomplete_text: {
+    summary: "An official response does not contain complete text for the requested provision.",
+    nextStep: "Re-fetch the complete official section before considering publication.",
+  },
+  technical_seed_failure: {
+    summary: "The source import or seed recorded a technical error for this row.",
+    nextStep: "Resolve the importer or seed error, then regenerate the committed manifest.",
+  },
+  identity_review: {
+    summary: "Source material exists, but the catalog identity is not exact enough to publish.",
+    nextStep: "Review the exact section, subdivision, and catalog mapping before publication.",
+  },
+};
 
 function isSelectable(record: CoverageCatalogRecord): boolean {
   return (
@@ -195,6 +324,77 @@ function isSelectable(record: CoverageCatalogRecord): boolean {
       record.disposition === "exact_alias_rename") &&
     record.provisions.length > 0
   );
+}
+
+function registryFor(jurisdiction: CurrentPublicSourceJurisdiction) {
+  const entry = COVERAGE_REGISTRY[jurisdiction];
+  if (!entry) {
+    throw new Error(`Missing public-source coverage registry entry for ${jurisdiction}`);
+  }
+  return entry;
+}
+
+/**
+ * Keep the report's scope honest. A new jurisdiction must be added to the
+ * registry and have both its committed manifest and deterministic seed
+ * command before it can silently enter the coverage matrix.
+ */
+export function assertPublicSourceCoverageRegistry(): void {
+  const configured = Object.keys(COVERAGE_REGISTRY).sort();
+  const expected = [...CURRENT_PUBLIC_SOURCE_JURISDICTIONS].sort();
+  if (configured.join(",") !== expected.join(",")) {
+    throw new Error(
+      `Public-source coverage registry does not match current jurisdictions (expected ${expected.join(",")}, got ${configured.join(",")})`,
+    );
+  }
+
+  for (const jurisdiction of CURRENT_PUBLIC_SOURCE_JURISDICTIONS) {
+    const entry = registryFor(jurisdiction);
+    if (entry.manifestPath && !existsSync(resolve(process.cwd(), entry.manifestPath))) {
+      throw new Error(
+        `Missing committed ${jurisdiction} public-source manifest: ${entry.manifestPath}`,
+      );
+    }
+    if (!existsSync(resolve(process.cwd(), entry.seedScriptPath))) {
+      throw new Error(
+        `Missing ${jurisdiction} public-source seed command: ${entry.seedScriptPath}`,
+      );
+    }
+  }
+}
+
+function assertSeedMatchesManifest(input: CoverageInput): void {
+  const expectedSelectableIds = input.records
+    .filter(isSelectable)
+    .map((record) => record.chargeId);
+  const actualSelectableIds = [...input.seed.selectableChargeIds];
+  const actualSelectableSet = new Set(actualSelectableIds);
+  if (
+    actualSelectableSet.size !== actualSelectableIds.length ||
+    actualSelectableSet.size !== expectedSelectableIds.length ||
+    expectedSelectableIds.some((id) => !actualSelectableSet.has(id))
+  ) {
+    throw new Error(
+      `Technical seed failure for ${input.jurisdiction}: seed selectable rows do not match the committed manifest`,
+    );
+  }
+
+  const seedCatalogIds = input.seed.catalogRecords.map((record) => record.chargeId);
+  const manifestIds = input.records.map((record) => record.chargeId);
+  const seedCatalogSet = new Set(seedCatalogIds);
+  if (
+    seedCatalogSet.size !== seedCatalogIds.length ||
+    seedCatalogSet.size !== manifestIds.length ||
+    manifestIds.some((id) => !seedCatalogSet.has(id))
+  ) {
+    // California intentionally seeds only its publishable reference rows; its
+    // withheld legacy inventory is kept in the typed canonical source file.
+    if (input.jurisdiction !== "CA") {
+      throw new Error(
+        `Technical seed failure for ${input.jurisdiction}: seed catalog rows do not match the committed manifest`,
+      );
+    }
+  }
 }
 
 function buildManifestInput(
@@ -206,7 +406,13 @@ function buildManifestInput(
   rowsWithOfficialResponse = records.filter((record) =>
     record.apiStatus === "verified" || record.apiStatus === "local_ordinance"
   ).length,
+  officialResponseIds = new Set(
+    records
+      .filter((record) => hasOfficialResponse(record))
+      .map((record) => record.chargeId),
+  ),
 ): CoverageInput {
+  const registry = registryFor(jurisdiction);
   return {
     jurisdiction,
     source,
@@ -214,6 +420,9 @@ function buildManifestInput(
     records,
     seed,
     rowsWithOfficialResponse,
+    officialResponseIds,
+    expectedManifestPath: registry.manifestPath,
+    expectedSeedScriptPath: registry.seedScriptPath,
   };
 }
 
@@ -243,6 +452,7 @@ function buildCoverageInputs(): CoverageInput[] {
       buildGeorgiaSourceDatabaseSeed(georgia),
       // Georgia's API title metadata is not an official section-text response.
       0,
+      new Set(),
     ),
     buildManifestInput(
       "IL",
@@ -298,6 +508,7 @@ function buildCaliforniaInput(): CoverageInput {
   );
   const records: CoverageCatalogRecord[] = CALIFORNIA_CANONICAL_RECORDS.map((record) =>
     selectableById.get(record.canonicalId) ?? {
+      chargeId: record.canonicalId,
       disposition: "require_exact_reselection",
       dispositionReason: "Canonical California record is withheld by the release boundary.",
       provisions: [],
@@ -314,10 +525,85 @@ function buildCaliforniaInput(): CoverageInput {
     rowsWithOfficialResponse: CALIFORNIA_CANONICAL_RECORDS.filter(
       (record) => record.sources.length > 0,
     ).length,
+    officialResponseIds: new Set(
+      CALIFORNIA_CANONICAL_RECORDS.filter((record) => record.sources.length > 0)
+        .map((record) => record.canonicalId),
+    ),
+    expectedManifestPath: null,
+    expectedSeedScriptPath: registryFor("CA").seedScriptPath,
   };
 }
 
+function hasOfficialResponse(record: CoverageCatalogRecord): boolean {
+  return record.apiStatus === "verified" || record.apiStatus === "local_ordinance";
+}
+
+function isStale(record: CoverageCatalogRecord, now = new Date()): boolean {
+  const retrievedAt = record.provisions
+    .map((provision) => provision.retrievedAt)
+    .filter((value): value is Date | string => Boolean(value))
+    .map((value) => (value instanceof Date ? value : new Date(value)))
+    .filter((value) => !Number.isNaN(value.getTime()))
+    .sort((a, b) => b.getTime() - a.getTime())[0];
+  if (!retrievedAt) return false;
+  const maxAgeMs = STALE_RECORD_MAX_AGE_DAYS * 24 * 60 * 60 * 1000;
+  return now.getTime() - retrievedAt.getTime() > maxAgeMs;
+}
+
+function classifyGap(
+  record: CoverageCatalogRecord,
+  input: CoverageInput,
+): PublicSourceCoverageGapKind {
+  if (
+    !input.officialResponseIds.has(record.chargeId) &&
+    PUBLIC_SOURCE_ACCESS_BLOCKERS[input.jurisdiction]
+  ) {
+    return "source_access";
+  }
+  if (record.apiStatus === "placeholder" || record.apiStatus === "withheld") {
+    return "missing_import";
+  }
+  if (record.apiStatus === "api_error") {
+    return "technical_seed_failure";
+  }
+  if (
+    /complete|incomplete|section text|unavailable|could not be verified/i.test(
+      record.dispositionReason,
+    )
+  ) {
+    return "incomplete_text";
+  }
+  return "identity_review";
+}
+
+function buildGapBreakdown(
+  input: CoverageInput,
+  staleIds: string[],
+): PublicSourceCoverageGap[] {
+  const idsByKind = new Map<PublicSourceCoverageGapKind, string[]>();
+  for (const record of input.records) {
+    if (!isSelectable(record)) {
+      const kind = classifyGap(record, input);
+      const ids = idsByKind.get(kind) ?? [];
+      ids.push(record.chargeId);
+      idsByKind.set(kind, ids);
+    }
+  }
+  if (staleIds.length > 0) idsByKind.set("stale_record", staleIds);
+
+  return (
+    Object.keys(GAP_DETAILS) as PublicSourceCoverageGapKind[]
+  ).map((kind) => ({
+    kind,
+    rows: idsByKind.get(kind)?.length ?? 0,
+    chargeIds: idsByKind.get(kind) ?? [],
+    summary: GAP_DETAILS[kind].summary,
+    nextStep: GAP_DETAILS[kind].nextStep,
+  }));
+}
+
 function buildReportRow(input: CoverageInput): PublicSourceCoverageReportRow {
+  assertSeedMatchesManifest(input);
   const catalogRows = input.records.length;
   const selectableRows = input.seed.selectableChargeIds.length;
   const withheldRows = input.records.filter((record) => !isSelectable(record)).length;
@@ -329,6 +615,15 @@ function buildReportRow(input: CoverageInput): PublicSourceCoverageReportRow {
   const officialResponseRate =
     catalogRows === 0 ? 0 : input.rowsWithOfficialResponse / catalogRows;
   const publishableRate = catalogRows === 0 ? 0 : selectableRows / catalogRows;
+  const coveragePercentage = publishableRate * 100;
+  const officialResponsePercentage = officialResponseRate * 100;
+  const staleIds = input.records
+    .filter((record) => isStale(record))
+    .map((record) => record.chargeId);
+  const gapBreakdown = buildGapBreakdown(input, staleIds);
+  const gapCounts = Object.fromEntries(
+    gapBreakdown.map((gap) => [gap.kind, gap.rows]),
+  ) as Record<PublicSourceCoverageGapKind, number>;
   const blocker = PUBLIC_SOURCE_ACCESS_BLOCKERS[input.jurisdiction] ?? null;
   const meetsTarget = isPublicSourceCoverageTargetMet({
     catalogAccountingRate,
@@ -357,12 +652,63 @@ function buildReportRow(input: CoverageInput): PublicSourceCoverageReportRow {
     catalogAccountingRate,
     officialResponseRate,
     publishableRate,
+    coveragePercentage,
+    officialResponsePercentage,
+    selectableCoveragePercentage: coveragePercentage,
+    officialSourceAvailability:
+      input.rowsWithOfficialResponse === 0
+        ? "unavailable"
+        : input.rowsWithOfficialResponse === catalogRows
+          ? "available"
+          : "partial",
+    gapBreakdown,
+    gapCounts,
+    staleRows: staleIds.length,
+    manifestPath: input.expectedManifestPath,
+    seedScriptPath: input.expectedSeedScriptPath,
     status,
     blocker,
   };
 }
 
+function buildCoverageTargets(
+  jurisdictions: PublicSourceCoverageReportRow[],
+): PublicSourceCoverageTarget[] {
+  return jurisdictions
+    .filter((row) => row.withheldRows > 0)
+    .map((row) => {
+      const actionableGaps = row.gapBreakdown.filter(
+        (gap) =>
+          gap.kind !== "stale_record" &&
+          gap.kind !== "source_access",
+      );
+      const primaryGap =
+        row.blocker && row.officialSourceAvailability !== "available"
+          ? row.gapBreakdown.find((gap) => gap.kind === "source_access")
+          : actionableGaps.sort((a, b) => b.rows - a.rows)[0];
+      const kind = primaryGap?.kind ?? (row.blocker ? "source_access" : "identity_review");
+      return {
+        jurisdiction: row.jurisdiction,
+        rows: row.withheldRows,
+        coveragePercentage: row.coveragePercentage,
+        officialResponsePercentage: row.officialResponsePercentage,
+        kind,
+        reason: primaryGap?.summary ?? "Withheld rows need coverage work before expansion.",
+        nextStep:
+          row.blocker?.nextStep ??
+          primaryGap?.nextStep ??
+          "Review withheld rows and regenerate the coverage report.",
+      };
+    })
+    .sort((a, b) => {
+      const aBlocked = a.kind === "source_access" ? 1 : 0;
+      const bBlocked = b.kind === "source_access" ? 1 : 0;
+      return bBlocked - aBlocked || b.rows - a.rows || a.coveragePercentage - b.coveragePercentage;
+    });
+}
+
 export function buildPublicSourceCoverageReport(): PublicSourceCoverageReport {
+  assertPublicSourceCoverageRegistry();
   const inputs = [buildCaliforniaInput(), ...buildCoverageInputs()];
   const jurisdictions = CURRENT_PUBLIC_SOURCE_JURISDICTIONS.map((jurisdiction) => {
     const input = inputs.find((candidate) => candidate.jurisdiction === jurisdiction);
@@ -375,5 +721,6 @@ export function buildPublicSourceCoverageReport(): PublicSourceCoverageReport {
     belowTargetJurisdictions: jurisdictions
       .filter((row) => row.status !== "meets_target")
       .map((row) => row.jurisdiction),
+    nextHighestValueCoverageTargets: buildCoverageTargets(jurisdictions),
   };
 }

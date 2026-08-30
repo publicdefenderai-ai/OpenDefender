@@ -43,6 +43,11 @@ a documented source-access blocker. Blockers are surfaced in the report for
 diagnosis; they are not treated as a passing release exception and must be
 resolved before expanding the catalog.
 
+The same report is available to authenticated administrators at
+`GET /api/admin/source-coverage`. It is generated from the committed manifests
+and deterministic seed builders on every request; it does not make a live
+legislative-source request.
+
 ## Catalog matrix
 
 The eight JSON manifests below each load from
@@ -64,9 +69,20 @@ reference-only canonical seed and does not use a JSON manifest.
 All retained records carry verified authority provisions. Withheld records
 carry no publishable provisions and are excluded from the selectable charge
 boundary, but remain in the inventory with their explicit reason. The
-publishable-rate column is not used to disguise a source-access gap: it is the
-separate exact-identity publication boundary that can be expanded from the
-official responses without using secondary or inferred authority.
+`coveragePercentage`/`selectableCoveragePercentage` fields show the
+publishable-rate boundary explicitly. The report also includes
+`officialSourceAvailability` (`available`, `partial`, or `unavailable`) and a
+six-part `gapBreakdown` for source access, missing imports, stale records,
+incomplete text, technical seed failures, and identity review. These categories
+are intentionally separate: a complete source response that still needs exact
+identity review is not counted as a source-access failure.
+
+`nextHighestValueCoverageTargets` ranks all current jurisdictions with withheld
+rows. Source-access blockers appear first; the remaining targets are ordered by
+the number of rows that can be improved by completing the existing official
+source/import review. This is the expansion gate: do not begin another
+jurisdiction while the command reports below-target jurisdictions, and use the
+ranked list to select the next coverage work.
 
 ## Checks run
 

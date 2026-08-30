@@ -42,6 +42,7 @@ import { georgiaSourceDatabase } from "./services/georgia-source-database";
 import { loadGeorgiaAuthorityManifest } from "./data/georgia-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
+import { buildPublicSourceCoverageReport } from "./data/public-source-coverage";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
 import { attorneySessionManager } from "./services/attorney-docs/session-manager";
@@ -1175,6 +1176,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/admin/verify-key", adminRateLimiter, requireAdminAuth, (_req, res) => {
     res.json({ ok: true });
   });
+
+  // Admin-only: expose the deterministic source-readiness gate used before
+  // opening another jurisdiction. This reads committed manifests and seeds;
+  // it never calls a legislative source from an HTTP request.
+  app.get(
+    "/api/admin/source-coverage",
+    adminRateLimiter,
+    requireAdminAuth,
+    (_req, res) => {
+      try {
+        res.json({ success: true, ...buildPublicSourceCoverageReport() });
+      } catch (error) {
+        errLog("Failed to build public-source coverage report", error);
+        res.status(500).json({
+          success: false,
+          error: "Source coverage report is unavailable",
+        });
+      }
+    },
+  );
 
   // GET /api/admin/provider-metrics
   // Returns aggregate provider availability and latency only. The underlying

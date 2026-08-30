@@ -2,12 +2,17 @@ import { describe, expect, it } from "vitest";
 import { main as runCoverageCheck } from "../scripts/data-review/check-public-source-coverage";
 import {
   buildPublicSourceCoverageReport,
+  assertPublicSourceCoverageRegistry,
   CURRENT_PUBLIC_SOURCE_JURISDICTIONS,
   HIGH_PUBLIC_SOURCE_COVERAGE_TARGET,
   isPublicSourceCoverageTargetMet,
 } from "../server/data/public-source-coverage";
 
 describe("public-source coverage gate", () => {
+  it("requires a committed manifest and seed command for every configured jurisdiction", () => {
+    expect(() => assertPublicSourceCoverageRegistry()).not.toThrow();
+  });
+
   it("accounts for every current jurisdiction and every catalog row", () => {
     const report = buildPublicSourceCoverageReport();
 
@@ -23,6 +28,22 @@ describe("public-source coverage gate", () => {
       expect(row.withheldRows).toBe(row.catalogRows - row.selectableRows);
       expect(row.rowsWithExplicitWithheldReason).toBe(row.withheldRows);
       expect(row.catalogAccountingRate).toBe(1);
+      expect(row.coveragePercentage).toBeCloseTo(
+        (row.selectableRows / row.catalogRows) * 100,
+      );
+      expect(row.selectableCoveragePercentage).toBe(row.coveragePercentage);
+      expect(row.officialResponsePercentage).toBeCloseTo(
+        (row.rowsWithOfficialResponse / row.catalogRows) * 100,
+      );
+      expect(row.officialSourceAvailability).toMatch(
+        /^(available|partial|unavailable)$/,
+      );
+      expect(row.gapCounts).toEqual(
+        Object.fromEntries(row.gapBreakdown.map((gap) => [gap.kind, gap.rows])),
+      );
+      expect(row.gapBreakdown).toHaveLength(6);
+      expect(row.manifestPath || row.jurisdiction === "CA").toBeTruthy();
+      expect(row.seedScriptPath).toContain("scripts/data-review/seed-");
       expect(row.status).toBe(
         row.officialResponseRate >= HIGH_PUBLIC_SOURCE_COVERAGE_TARGET.officialResponseRate
           ? "meets_target"
@@ -42,10 +63,34 @@ describe("public-source coverage gate", () => {
     expect(pennsylvania.status).toBe("blocked");
     expect(pennsylvania.blocker?.kind).toBe("source_access");
     expect(pennsylvania.blocker?.nextStep).toContain("official PA source probe");
+    expect(georgia.officialSourceAvailability).toBe("unavailable");
+    expect(pennsylvania.officialSourceAvailability).toBe("partial");
 
     for (const row of report.jurisdictions) {
       expect(row.publishableRate).toBeLessThanOrEqual(row.officialResponseRate);
       if (row.status === "blocked") expect(row.blocker).not.toBeNull();
+    }
+  });
+
+  it("ranks every current low-publication jurisdiction by actionable coverage work", () => {
+    const report = buildPublicSourceCoverageReport();
+
+    expect(report.nextHighestValueCoverageTargets).toHaveLength(
+      CURRENT_PUBLIC_SOURCE_JURISDICTIONS.length,
+    );
+    expect(report.nextHighestValueCoverageTargets[0]).toMatchObject({
+      jurisdiction: "GA",
+      kind: "source_access",
+      rows: 129,
+    });
+    expect(report.nextHighestValueCoverageTargets.map((target) => target.rows)).toEqual(
+      [129, 87, 126, 103, 102, 92, 78, 27, 21],
+    );
+    for (const target of report.nextHighestValueCoverageTargets) {
+      expect(target.coveragePercentage).toBeGreaterThanOrEqual(0);
+      expect(target.officialResponsePercentage).toBeGreaterThanOrEqual(0);
+      expect(target.reason).toBeTruthy();
+      expect(target.nextStep).toBeTruthy();
     }
   });
 

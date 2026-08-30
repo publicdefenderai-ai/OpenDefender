@@ -35,11 +35,25 @@ export function main(args = process.argv.slice(2)): number {
     );
     for (const row of report.jurisdictions) {
       const blocker = row.blocker ? ` — blocker: ${row.blocker.summary}` : "";
+      const nonZeroGaps = row.gapBreakdown
+        .filter((gap) => gap.rows > 0)
+        .map((gap) => `${gap.kind}=${gap.rows}`)
+        .join(", ");
       console.log(
         `${row.jurisdiction}: ${row.status}; ` +
-          `official responses ${Math.round(row.officialResponseRate * 100)}%; ` +
-          `publishable ${Math.round(row.publishableRate * 100)}%; ` +
-          `withheld ${row.withheldRows}/${row.catalogRows}${blocker}`,
+          `coverage ${row.coveragePercentage.toFixed(1)}%; ` +
+          `official source ${row.officialSourceAvailability} ` +
+          `(${row.officialResponsePercentage.toFixed(1)}%); ` +
+          `selectable ${row.selectableRows}/${row.catalogRows}; ` +
+          `withheld ${row.withheldRows}${nonZeroGaps ? ` [${nonZeroGaps}]` : ""}${blocker}`,
+      );
+    }
+    console.log("\nNext highest-value coverage targets:");
+    for (const target of report.nextHighestValueCoverageTargets) {
+      console.log(
+        `${target.jurisdiction}: ${target.rows} rows; ` +
+          `${target.kind}; ${target.coveragePercentage.toFixed(1)}% selectable; ` +
+          `${target.nextStep}`,
       );
     }
     if (args.includes("--write")) console.log(`Wrote ${OUTPUT_PATH}`);
