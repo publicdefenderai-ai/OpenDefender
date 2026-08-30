@@ -237,6 +237,30 @@ test.describe("intent navigation and accessibility", () => {
       leakedWithheldIds,
       "Withheld California authority IDs returned by charge search",
     ).toEqual([]);
+
+    const publicChargeSearchResponse = await page.request.get(
+      "/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500",
+    );
+    expect(publicChargeSearchResponse.ok()).toBe(true);
+    const publicChargeSearchPayload = await publicChargeSearchResponse.json() as {
+      results: Array<{ document?: { id?: string; jurisdiction?: string } }>;
+    };
+    const publicSearchCaliforniaIds = new Set(
+      publicChargeSearchPayload.results
+        .map((result) => result.document?.id)
+        .filter((id): id is string => typeof id === "string")
+        .map((id) => id.replace(/^charge-/, "")),
+    );
+    expect(
+      publicSearchCaliforniaIds,
+      "Public v1 charge search did not return every current California authority ID",
+    ).toEqual(currentCaliforniaIdSet);
+    expect(
+      publicChargeSearchPayload.results.every(
+        (result) => result.document?.jurisdiction === "CA",
+      ),
+      "Public v1 charge search returned a result outside the requested jurisdiction",
+    ).toBe(true);
   });
 
   test("mobile resource tools render their initial states without overflow", async ({ page }) => {

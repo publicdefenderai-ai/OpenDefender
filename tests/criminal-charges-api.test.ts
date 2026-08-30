@@ -1,4 +1,5 @@
 import { describe, it, expect, beforeAll } from 'vitest';
+import { CALIFORNIA_CANONICAL_RECORDS } from '../shared/california-authority';
 
 const BASE_URL = 'http://localhost:5000';
 
@@ -296,6 +297,29 @@ describe('GET /api/v1/search — runtime New York eligibility contract', () => {
     expect(retained.ok).toBe(true);
     const retainedPayload = await retained.json() as V1SearchResponse;
     expect(retainedPayload.results.some((result) => result.document.id === 'charge-ny-grand-theft-in-the-first-degree')).toBe(true);
+  });
+});
+
+describe('GET /api/v1/search — California charge completeness contract', () => {
+  it('returns every current California charge when the requested limit covers the catalog', async () => {
+    if (!serverAvailable || !californiaAuthorityAvailable) return;
+
+    const res = await fetch(
+      `${BASE_URL}/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500`,
+    );
+    expect(res.ok).toBe(true);
+    const payload = await res.json() as V1SearchResponse;
+    const returnedIds = payload.results
+      .map((result) => result.document.id)
+      .filter((id) => id.startsWith('charge-'))
+      .map((id) => id.replace(/^charge-/, ''));
+    const expectedIds = CALIFORNIA_CANONICAL_RECORDS
+      .filter((record) => record.selectable)
+      .map((record) => record.canonicalId);
+
+    expect(returnedIds).toHaveLength(expectedIds.length);
+    expect(new Set(returnedIds)).toEqual(new Set(expectedIds));
+    expect(payload.results.every((result) => result.document.id.startsWith('charge-ca-'))).toBe(true);
   });
 });
 

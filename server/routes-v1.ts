@@ -67,6 +67,7 @@ export function registerV1Routes(app: Express): void {
       const q = req.query.q as string;
       const lang = (req.query.lang as string) || 'en';
       const types = req.query.types as string;
+      const jurisdiction = req.query.jurisdiction as string | undefined;
       // When the caller filters to charges only, raise the default limit so
       // all relevant charges can be returned (not just the first 20).
       // A charge-only search is a deliberate charge lookup — the caller wants
@@ -88,11 +89,13 @@ export function registerV1Routes(app: Express): void {
         language: lang === 'es' ? 'es' : 'en',
         filters: {
           ...(types ? { types: types.split(',') as any[] } : {}),
+          ...(jurisdiction ? { jurisdiction } : {}),
           // Search indexes the static catalog at startup; apply the
           // authority boundary during scoring so totals cannot expose
           // withheld NY or TX charges.
           chargeIds: [...currentAuthoritySelectableIds].map((id) => `charge-${id}`),
         },
+        limit,
       });
 
       res.json({
