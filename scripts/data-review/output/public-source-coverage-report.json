@@ -276,8 +276,8 @@
     },
     {
       "jurisdiction": "GA",
-      "source": "Georgia General Assembly — official codified section text unavailable via public API",
-      "manifestGeneratedAt": "2026-08-29T20:46:05.143Z",
+      "source": "Georgia General Assembly — official Lexis text is human-accessible but not safely automatable",
+      "manifestGeneratedAt": "2026-08-30T07:10:17.118Z",
       "catalogRows": 129,
       "rowsWithOfficialResponse": 0,
       "selectableRows": 0,
@@ -481,10 +481,10 @@
       "status": "blocked",
       "blocker": {
         "kind": "source_access",
-        "source": "Georgia General Assembly public API",
-        "summary": "The public API exposes legislative metadata and code-title names, but not current codified section text.",
-        "evidence": "The committed Georgia importer receives no public official section document satisfying its exact URL, document-identity, complete-text, and currentness contract.",
-        "nextStep": "Use a stable public Georgia section-text endpoint when the General Assembly publishes one; do not substitute secondary sources or authenticated-only annotated-code access."
+        "source": "Georgia General Assembly public Lexis access page",
+        "summary": "Official section results are human-accessible, but complete-document automation is restricted and required identity/currentness evidence is unavailable to the importer.",
+        "evidence": "The stable TOC lookup renders official citations and snippets. Unattended complete-document requests require browser cookie/human-verification state, while result rows omit pddocid/pddocfullpath and History currentness evidence.",
+        "nextStep": "Obtain an automatable complete-document contract from the Georgia Code Revision Commission; use Justia and public mirrors for discovery only, never selectable authority."
       }
     },
     {
@@ -1503,7 +1503,7 @@
       "officialResponsePercentage": 0,
       "kind": "source_access",
       "reason": "The official source did not provide a usable response for this row.",
-      "nextStep": "Use a stable public Georgia section-text endpoint when the General Assembly publishes one; do not substitute secondary sources or authenticated-only annotated-code access."
+      "nextStep": "Obtain an automatable complete-document contract from the Georgia Code Revision Commission; use Justia and public mirrors for discovery only, never selectable authority."
     },
     {
       "jurisdiction": "PA",

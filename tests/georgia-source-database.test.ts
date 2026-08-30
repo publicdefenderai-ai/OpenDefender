@@ -9,6 +9,7 @@ import {
   buildGeorgiaSourceKey,
   buildGeorgiaOfficialDocumentId,
   buildGeorgiaOfficialSectionUrl,
+  GEORGIA_SECONDARY_SOURCE_OPTIONS,
   parseGeorgiaCitation,
   validateGeorgiaManifestRecord,
 } from "../server/data/georgia-source-database-seed";
@@ -38,6 +39,32 @@ describe("Georgia authority manifest", () => {
     expect(seed.snapshots).toHaveLength(0);
     expect(seed.links).toHaveLength(0);
     expect(seed.selectableChargeIds).toHaveLength(0);
+  });
+
+  it("documents the public Lexis automation restriction without treating it as importable", async () => {
+    const { GEORGIA_PUBLIC_ACCESS_CONTRACT } = await import(
+      "../server/data/georgia-source-database-seed"
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.endpoint).toBe(
+      "https://www.lexisnexis.com/hottopics/gacode/",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.sectionLookupEndpoint).toBe(
+      "https://advance.lexis.com/container/",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.sectionIdentityField).toBe(
+      "pddocid / urn:contentItem",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.currentnessEvidence).toBe(
+      "History amendment notes on the rendered section page",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.accessFinding).toContain(
+      "cookie/human-verification",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.status).toBe("automation_restricted");
+    expect(GEORGIA_SECONDARY_SOURCE_OPTIONS).toHaveLength(3);
+    expect(GEORGIA_SECONDARY_SOURCE_OPTIONS.every((source) =>
+      source.role === "discovery_only"
+    )).toBe(true);
   });
 
   it("parses only one exact Georgia Code section identity", () => {

@@ -59,7 +59,8 @@ describe("public-source coverage gate", () => {
 
     expect(georgia.status).toBe("blocked");
     expect(georgia.blocker?.kind).toBe("source_access");
-    expect(georgia.blocker?.evidence).toContain("no public official section document");
+    expect(georgia.blocker?.evidence).toContain("cookie/human-verification");
+    expect(georgia.blocker?.evidence).toContain("omit pddocid/pddocfullpath");
     expect(pennsylvania.status).toBe("blocked");
     expect(pennsylvania.blocker?.kind).toBe("source_access");
     expect(pennsylvania.blocker?.nextStep).toContain("official PA source probe");

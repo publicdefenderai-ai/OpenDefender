@@ -1,7 +1,7 @@
 {
   "jurisdiction": "GA",
-  "generatedAt": "2026-08-29T20:46:05.143Z",
-  "source": "Georgia General Assembly — official codified section text unavailable via public API",
+  "generatedAt": "2026-08-30T07:10:17.118Z",
+  "source": "Georgia General Assembly — official Lexis text is human-accessible but not safely automatable",
   "catalogRecords": [
     {
       "chargeId": "ga-murder-in-the-first-degree",
@@ -9,11 +9,11 @@
       "catalogCode": "16-5-1",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-murder-in-the-second-degree",
@@ -25,7 +25,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-voluntary-manslaughter",
@@ -33,11 +33,11 @@
       "catalogCode": "16-5-2",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-involuntary-manslaughter",
@@ -45,11 +45,11 @@
       "catalogCode": "16-5-3",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-criminally-negligent-homicide",
@@ -61,7 +61,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-vehicular-homicide",
@@ -69,11 +69,11 @@
       "catalogCode": "40-6-393",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-felony-murder",
@@ -85,7 +85,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-assault-in-the-first-degree",
@@ -93,11 +93,11 @@
       "catalogCode": "16-5-21",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-assault-in-the-second-degree",
@@ -105,11 +105,11 @@
       "catalogCode": "16-5-20",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-assault-in-the-third-degree",
@@ -121,7 +121,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-aggravated-assault",
@@ -129,11 +129,11 @@
       "catalogCode": "16-5-21",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-assault-with-deadly-weapon",
@@ -145,7 +145,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-domestic-violence-assault",
@@ -157,7 +157,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-assault-on-peace-officer",
@@ -169,7 +169,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-menacing",
@@ -181,7 +181,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-rape-in-the-first-degree",
@@ -189,11 +189,11 @@
       "catalogCode": "16-6-1",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-rape-in-the-second-degree",
@@ -201,11 +201,11 @@
       "catalogCode": "16-6-1",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-sexual-assault-in-the-first-degree",
@@ -217,7 +217,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-sexual-assault-in-the-second-degree",
@@ -225,11 +225,11 @@
       "catalogCode": "16-6-22.1",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-sexual-assault-in-the-third-degree",
@@ -241,7 +241,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-statutory-rape",
@@ -249,11 +249,11 @@
       "catalogCode": "16-6-3",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-child-sexual-abuse",
@@ -261,11 +261,11 @@
       "catalogCode": "16-6-4",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-sexual-exploitation-of-minor",
@@ -273,11 +273,11 @@
       "catalogCode": "16-12-100",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-grand-theft-in-the-first-degree",
@@ -289,7 +289,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-grand-theft-in-the-second-degree",
@@ -301,7 +301,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-petty-theft",
@@ -309,11 +309,11 @@
       "catalogCode": "16-8-2",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-theft-by-receiving",
@@ -321,11 +321,11 @@
       "catalogCode": "16-8-7",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-identity-theft",
@@ -333,11 +333,11 @@
       "catalogCode": "16-9-121",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-credit-card-fraud",
@@ -349,7 +349,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-embezzlement",
@@ -357,11 +357,11 @@
       "catalogCode": "16-8-4",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-shoplifting",
@@ -369,11 +369,11 @@
       "catalogCode": "16-8-14",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-burglary-in-the-first-degree",
@@ -381,11 +381,11 @@
       "catalogCode": "16-7-1(a)",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-burglary-in-the-second-degree",
@@ -393,11 +393,11 @@
       "catalogCode": "16-7-1(b)",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-residential-burglary",
@@ -409,7 +409,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-commercial-burglary",
@@ -421,7 +421,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-auto-burglary",
@@ -433,7 +433,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-robbery-in-the-first-degree",
@@ -441,11 +441,11 @@
       "catalogCode": "16-8-41",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-robbery-in-the-second-degree",
@@ -453,11 +453,11 @@
       "catalogCode": "16-8-40",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-carjacking",
@@ -465,11 +465,11 @@
       "catalogCode": "16-5-44.1",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-bank-robbery",
@@ -477,11 +477,11 @@
       "catalogCode": "16-8-41",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-possession-of-controlled-substance",
@@ -493,7 +493,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-possession-with-intent-to-distribute",
@@ -505,7 +505,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-distribution-of-controlled-substance",
@@ -517,7 +517,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-manufacturing-controlled-substance",
@@ -529,7 +529,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-drug-trafficking",
@@ -537,11 +537,11 @@
       "catalogCode": "16-13-31",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-possession-of-drug-paraphernalia",
@@ -553,7 +553,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-maintaining-drug-house",
@@ -565,7 +565,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-unlawful-carrying-of-weapon",
@@ -573,11 +573,11 @@
       "catalogCode": "16-11-126",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-felon-in-possession-of-firearm",
@@ -585,11 +585,11 @@
       "catalogCode": "16-11-131",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-discharge-of-firearm-in-city",
@@ -597,11 +597,11 @@
       "catalogCode": "16-11-103",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-possession-of-prohibited-weapon",
@@ -613,7 +613,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-wire-fraud",
@@ -625,7 +625,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-mail-fraud",
@@ -633,11 +633,11 @@
       "catalogCode": "16-9-100",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-check-fraud",
@@ -645,11 +645,11 @@
       "catalogCode": "16-9-20",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-insurance-fraud",
@@ -657,11 +657,11 @@
       "catalogCode": "33-1-9",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-tax-fraud",
@@ -673,7 +673,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-forgery",
@@ -681,11 +681,11 @@
       "catalogCode": "16-9-1",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-computer-fraud",
@@ -693,11 +693,11 @@
       "catalogCode": "16-9-93",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-disorderly-conduct",
@@ -705,11 +705,11 @@
       "catalogCode": "16-11-39",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-public-intoxication",
@@ -717,11 +717,11 @@
       "catalogCode": "16-11-41",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-disturbing-the-peace",
@@ -733,7 +733,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-trespassing",
@@ -741,11 +741,11 @@
       "catalogCode": "16-7-21",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-vandalism",
@@ -757,7 +757,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-loitering",
@@ -765,11 +765,11 @@
       "catalogCode": "16-11-36",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-dui-first-offense",
@@ -777,11 +777,11 @@
       "catalogCode": "40-6-391",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-dui-second-offense",
@@ -793,7 +793,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-dui-third-offense",
@@ -805,7 +805,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-reckless-driving",
@@ -813,11 +813,11 @@
       "catalogCode": "40-6-390",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-hit-and-run",
@@ -825,11 +825,11 @@
       "catalogCode": "40-6-270",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-driving-while-suspended",
@@ -837,11 +837,11 @@
       "catalogCode": "40-5-121",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-theft-by-shoplifting",
@@ -849,11 +849,11 @@
       "catalogCode": "16-8-14",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-simple-battery",
@@ -861,11 +861,11 @@
       "catalogCode": "16-5-23",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-dui-less-safe",
@@ -877,7 +877,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-possession-marijuana-less-than-oz",
@@ -885,11 +885,11 @@
       "catalogCode": "16-13-2",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-criminal-trespass",
@@ -897,11 +897,11 @@
       "catalogCode": "16-7-21",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-family-violence-battery",
@@ -909,11 +909,11 @@
       "catalogCode": "16-5-23.1",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-driving-without-license",
@@ -921,11 +921,11 @@
       "catalogCode": "40-5-20",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-obstruction-of-officer",
@@ -933,11 +933,11 @@
       "catalogCode": "16-10-24",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-criminal-damage-second-degree",
@@ -945,11 +945,11 @@
       "catalogCode": "16-7-23",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-failure-to-appear",
@@ -961,7 +961,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-probation-violation",
@@ -969,11 +969,11 @@
       "catalogCode": "42-8-34.1",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-resisting-arrest",
@@ -981,11 +981,11 @@
       "catalogCode": "16-10-24",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-protective-order-violation",
@@ -993,11 +993,11 @@
       "catalogCode": "16-5-95",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-open-container",
@@ -1005,11 +1005,11 @@
       "catalogCode": "40-6-253",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-minor-in-possession",
@@ -1017,11 +1017,11 @@
       "catalogCode": "3-3-23",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-false-info-to-police",
@@ -1029,11 +1029,11 @@
       "catalogCode": "16-10-26",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-harassment",
@@ -1045,7 +1045,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-contempt-of-court",
@@ -1053,11 +1053,11 @@
       "catalogCode": "15-1-4",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-bad-checks",
@@ -1065,11 +1065,11 @@
       "catalogCode": "16-9-20",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-solicitation",
@@ -1081,7 +1081,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-driving-without-insurance",
@@ -1093,7 +1093,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-expired-registration",
@@ -1101,11 +1101,11 @@
       "catalogCode": "40-2-8",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-expired-inspection",
@@ -1117,7 +1117,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-failure-to-pay-child-support",
@@ -1129,7 +1129,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-noise-violation",
@@ -1141,7 +1141,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-indecent-exposure",
@@ -1149,11 +1149,11 @@
       "catalogCode": "16-6-8",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-fake-id",
@@ -1165,7 +1165,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-animal-at-large",
@@ -1177,7 +1177,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-animal-cruelty-misdemeanor",
@@ -1189,7 +1189,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-illegal-camping",
@@ -1201,7 +1201,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-panhandling",
@@ -1209,11 +1209,11 @@
       "catalogCode": "16-11-36",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-unregistered-vehicle",
@@ -1225,7 +1225,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-curfew-violation",
@@ -1237,7 +1237,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-trespass-after-warning",
@@ -1245,11 +1245,11 @@
       "catalogCode": "16-7-21",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-defective-vehicle-equipment",
@@ -1261,7 +1261,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-truancy",
@@ -1269,11 +1269,11 @@
       "catalogCode": "20-2-690.1",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-littering",
@@ -1281,11 +1281,11 @@
       "catalogCode": "16-7-43",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-illegal-fireworks",
@@ -1293,11 +1293,11 @@
       "catalogCode": "25-10-2",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-alcohol-in-park",
@@ -1309,7 +1309,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-hunting-fishing-no-license",
@@ -1317,11 +1317,11 @@
       "catalogCode": "27-2-2",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.",
+      "dispositionReason": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-criminal-attempt",
@@ -1333,7 +1333,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-conspiracy",
@@ -1345,7 +1345,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-aiding-and-abetting",
@@ -1357,7 +1357,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-accessory-after-the-fact",
@@ -1369,7 +1369,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-attempted-murder",
@@ -1381,7 +1381,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-attempted-robbery",
@@ -1393,7 +1393,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-attempted-sexual-assault",
@@ -1405,7 +1405,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-criminal-solicitation",
@@ -1417,7 +1417,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-gang-enhancement",
@@ -1429,7 +1429,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-hate-crime-enhancement",
@@ -1441,7 +1441,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-recidivist-enhancement",
@@ -1453,7 +1453,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-firearm-in-felony-enhancement",
@@ -1465,7 +1465,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-drug-school-zone-enhancement",
@@ -1477,7 +1477,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-rico-organized-crime",
@@ -1489,7 +1489,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-money-laundering",
@@ -1501,7 +1501,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-juvenile-delinquency-felony",
@@ -1513,7 +1513,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-juvenile-delinquency-misdemeanor",
@@ -1525,7 +1525,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-juvenile-transfer-adult-court",
@@ -1537,7 +1537,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     },
     {
       "chargeId": "ga-juvenile-firearm-possession",
@@ -1549,7 +1549,7 @@
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified",
-      "error": "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract."
+      "error": "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority."
     }
   ]
 }

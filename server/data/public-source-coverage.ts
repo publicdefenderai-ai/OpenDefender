@@ -135,13 +135,13 @@ export const PUBLIC_SOURCE_ACCESS_BLOCKERS: Partial<
 > = {
   GA: {
     kind: "source_access",
-    source: "Georgia General Assembly public API",
+    source: "Georgia General Assembly public Lexis access page",
     summary:
-      "The public API exposes legislative metadata and code-title names, but not current codified section text.",
+      "Official section results are human-accessible, but complete-document automation is restricted and required identity/currentness evidence is unavailable to the importer.",
     evidence:
-      "The committed Georgia importer receives no public official section document satisfying its exact URL, document-identity, complete-text, and currentness contract.",
+      "The stable TOC lookup renders official citations and snippets. Unattended complete-document requests require browser cookie/human-verification state, while result rows omit pddocid/pddocfullpath and History currentness evidence.",
     nextStep:
-      "Use a stable public Georgia section-text endpoint when the General Assembly publishes one; do not substitute secondary sources or authenticated-only annotated-code access.",
+      "Obtain an automatable complete-document contract from the Georgia Code Revision Commission; use Justia and public mirrors for discovery only, never selectable authority.",
   },
   PA: {
     kind: "source_access",
@@ -450,7 +450,7 @@ function buildCoverageInputs(): CoverageInput[] {
       georgia.generatedAt,
       georgia.catalogRecords,
       buildGeorgiaSourceDatabaseSeed(georgia),
-      // Georgia's API title metadata is not an official section-text response.
+      // Dynamic Lexis page metadata is not a repeatable official section-text response.
       0,
       new Set(),
     ),
