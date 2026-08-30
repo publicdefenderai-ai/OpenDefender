@@ -3,6 +3,11 @@ import { readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
+const releaseCheckAdminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN;
+if (!releaseCheckAdminToken) {
+  throw new Error("Release production harness requires its in-memory admin token fixture");
+}
+
 // These values exist solely to prove that the production artifact honors the
 // required startup checks. They are intentionally not production credentials.
 const releaseCheckAuthorityManifestFiles = [
@@ -147,6 +152,7 @@ const releaseCheckEnv = {
   SESSION_SECRET: "release-gate-session-secret-not-for-production",
   TURNSTILE_SECRET_KEY: "release-gate-turnstile-secret-not-for-production",
   TURNSTILE_SITE_KEY: "release-gate-turnstile-site-key-not-for-production",
+  ADMIN_TOKEN: releaseCheckAdminToken,
   DATABASE_URL: "postgresql://release_check:release_check@127.0.0.1:6543/release_check",
   RELEASE_CHECK: "true",
   RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS: JSON.stringify(
