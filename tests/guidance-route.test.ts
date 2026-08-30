@@ -19,9 +19,14 @@
  * response shaping untouched.
  */
 
-import { describe, it, expect, vi, beforeAll } from 'vitest';
+import { describe, it, expect, vi, beforeAll, afterEach } from 'vitest';
 import request from 'supertest';
 import express from 'express';
+
+// ── Hoisted in-memory persistence for the saved-guidance boundary ─────────────
+const { caseStore } = vi.hoisted(() => ({
+  caseStore: {} as Record<string, any>,
+}));
 
 // ── Required top-level fields the guidance dashboard reads ────────────────────
 const REQUIRED_GUIDANCE_FIELDS = [
@@ -62,13 +67,24 @@ const MOCK_RULES_GUIDANCE = {
 // Storage (db connection)
 vi.mock('../server/storage', () => ({
   storage: {
-    createLegalCase: vi.fn().mockImplementation(async (legalCase: { guidance?: unknown; sessionId?: string }) => ({
-      id: 'test-id',
-      guidance: legalCase.guidance ?? {},
-      sessionId: legalCase.sessionId ?? 'sess',
-    })),
-    getLegalCase: vi.fn().mockResolvedValue(null),
+    createLegalCase: vi.fn().mockImplementation(async (legalCase: {
+      guidance?: unknown;
+      sessionId?: string;
+      [key: string]: unknown;
+    }) => {
+      const record = {
+        ...legalCase,
+        id: 'test-id',
+        guidance: legalCase.guidance ?? {},
+        sessionId: legalCase.sessionId ?? 'sess',
+        createdAt: new Date(),
+      };
+      caseStore[record.sessionId] = record;
+      return record;
+    }),
+    getLegalCase: vi.fn().mockImplementation(async (sessionId: string) => caseStore[sessionId] ?? null),
     getLegalCasesBySession: vi.fn().mockResolvedValue([]),
+    updateLegalCaseGuidance: vi.fn().mockResolvedValue(undefined),
     deleteLegalCase: vi.fn().mockResolvedValue(undefined),
     deleteExpiredCases: vi.fn().mockResolvedValue(0),
     createLegalResource: vi.fn().mockResolvedValue({}),
@@ -203,6 +219,12 @@ beforeAll(async () => {
   testApp.use(express.json());
   await registerRoutes(testApp);
 }, 30_000);
+
+afterEach(() => {
+  for (const key of Object.keys(caseStore)) {
+    delete caseStore[key];
+  }
+});
 
 // ── Minimal valid request body (rules route schema) ───────────────────────────
 const VALID_BODY = {
@@ -436,6 +458,53 @@ describe('legal guidance routes — canonical charge parity', () => {
     } finally {
       (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
       (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+      vi.unstubAllEnvs();
+    }
+  });
+
+  it('keeps the canonical charge identity when saved AI guidance is retrieved', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', 'test-anthropic-key');
+
+    const { generateClaudeGuidance } = await import('../server/services/claude-guidance');
+    (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+
+    try {
+      const sessionId = 'saved-ai-guidance-session';
+      const createResponse = await request(testApp)
+        .post('/api/legal-guidance')
+        .send({
+          ...VALID_BODY,
+          sessionId,
+          charges: [CANONICAL_SUBDIVISION_CHARGE],
+          incidentDescription: 'Mock case context for the saved-guidance test.',
+        })
+        .expect(200);
+
+      expect(createResponse.body.guidance.generatedBy).toBe('claude-ai');
+      expect(chargeIdentity(createResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+
+      // A separate request models the advocate returning to the saved session.
+      const savedResponse = await request(testApp)
+        .get(`/api/legal-guidance/${sessionId}`)
+        .expect(200);
+
+      expect(savedResponse.body.success).toBe(true);
+      expect(chargeIdentity(savedResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(savedResponse.body.guidance.chargeClassifications[0]).toEqual(
+        expect.objectContaining({
+          id: CANONICAL_SUBDIVISION_CHARGE,
+          title: 'Gross Vehicular Manslaughter While Intoxicated',
+          verifiedCitation: 'Cal. Penal Code § 191.5(a)',
+        }),
+      );
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI § 999.9');
+      expect(generateClaudeGuidance).toHaveBeenCalledTimes(1);
+    } finally {
+      (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
       vi.unstubAllEnvs();
     }
   });
