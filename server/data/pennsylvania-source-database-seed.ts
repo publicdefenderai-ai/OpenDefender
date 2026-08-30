@@ -18,6 +18,20 @@ export const PENNSYLVANIA_SOURCE_BASE =
 export const PENNSYLVANIA_OFFICIAL_SOURCE_BASE =
   "https://www.palegis.us/statutes/consolidated/view-statute";
 
+/**
+ * These reviewed catalog rows point to official Pennsylvania General Assembly
+ * unconsolidated-statute pages. The current product policy accepts only
+ * consolidated-statute pages, so keep these rows auditable but unavailable
+ * until an approved source-policy exception and exact mappings exist.
+ */
+export const PENNSYLVANIA_UNCONSOLIDATED_LEGACY_CHARGE_IDS = new Set([
+  "pa-animal-at-large",
+  "pa-truancy",
+  "pa-alcohol-in-park",
+]);
+export const PENNSYLVANIA_UNCONSOLIDATED_LEGACY_REASON =
+  "The reviewed Pennsylvania section is published through an official unconsolidated statute page, which is outside the approved consolidated-statutes source policy; no secondary or inferred substitute is accepted.";
+
 export interface PennsylvaniaAuthorityManifest {
   jurisdiction: "PA";
   generatedAt: Date;
@@ -118,6 +132,14 @@ function codeSupportsPennsylvaniaReferences(
     codeSection === reference.section &&
     codeSubdivision === reference.subdivision,
   );
+}
+
+function sourceDocumentMatchesReference(
+  document: PennsylvaniaSourceDocument,
+  reference: PennsylvaniaSourceReference,
+): boolean {
+  return document.section === reference.section &&
+    document.sourceUrl === buildPennsylvaniaSourceUrl(reference.title, reference.section);
 }
 
 function parseSectionToken(value: string): {
@@ -254,7 +276,9 @@ export function buildPennsylvaniaManifestRecord(
       ...base,
       disposition: "require_exact_reselection",
       dispositionReason: error ??
-        "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+        (PENNSYLVANIA_UNCONSOLIDATED_LEGACY_CHARGE_IDS.has(charge.id)
+          ? PENNSYLVANIA_UNCONSOLIDATED_LEGACY_REASON
+          : "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted."),
       canonicalTitle: null,
       provisions: [],
       apiStatus: error ? "api_error" : "placeholder",
@@ -281,6 +305,17 @@ export function buildPennsylvaniaManifestRecord(
       provisions: [],
       apiStatus: "api_error",
       error: error ?? "Missing required Pennsylvania statutory provision",
+    };
+  }
+  if (documents.some((document, index) => !sourceDocumentMatchesReference(document, references[index]))) {
+    return {
+      ...base,
+      disposition: "require_exact_reselection",
+      dispositionReason:
+        "Every Pennsylvania authority provision must come from its exact official consolidated-statute URL; secondary, unconsolidated, or inferred source URLs are not accepted.",
+      canonicalTitle: null,
+      provisions: [],
+      apiStatus: "verified",
     };
   }
   const mismatch = documents.find((document) => !titleMatches(charge, document.title));

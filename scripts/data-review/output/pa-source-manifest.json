@@ -1927,11 +1927,10 @@
       "catalogCode": "459-305",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "Official Pennsylvania General Assembly section 3-459-305 could not be verified.",
+      "dispositionReason": "The reviewed Pennsylvania section is published through an official unconsolidated statute page, which is outside the approved consolidated-statutes source policy; no secondary or inferred substitute is accepted.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "api_error",
-      "error": "Official Pennsylvania General Assembly section 3-459-305 could not be verified."
+      "apiStatus": "placeholder"
     },
     {
       "chargeId": "pa-animal-cruelty-misdemeanor",
@@ -2005,11 +2004,10 @@
       "catalogCode": "13-1333",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "Official Pennsylvania General Assembly section 24-13-1333 could not be verified.",
+      "dispositionReason": "The reviewed Pennsylvania section is published through an official unconsolidated statute page, which is outside the approved consolidated-statutes source policy; no secondary or inferred substitute is accepted.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "api_error",
-      "error": "Official Pennsylvania General Assembly section 24-13-1333 could not be verified."
+      "apiStatus": "placeholder"
     },
     {
       "chargeId": "pa-littering",
@@ -2039,11 +2037,10 @@
       "catalogCode": "4-406",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "Official Pennsylvania General Assembly section 47-4-406 could not be verified.",
+      "dispositionReason": "The reviewed Pennsylvania section is published through an official unconsolidated statute page, which is outside the approved consolidated-statutes source policy; no secondary or inferred substitute is accepted.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "api_error",
-      "error": "Official Pennsylvania General Assembly section 47-4-406 could not be verified."
+      "apiStatus": "placeholder"
     },
     {
       "chargeId": "pa-hunting-fishing-no-license",

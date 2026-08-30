@@ -10,6 +10,7 @@ import {
   buildPennsylvaniaSourceKey,
   buildPennsylvaniaSourceUrl,
   parsePennsylvaniaCitation,
+  PENNSYLVANIA_UNCONSOLIDATED_LEGACY_REASON,
   validatePennsylvaniaManifestRecord,
   type PennsylvaniaSourceDocument,
 } from "../server/data/pennsylvania-source-database-seed";
@@ -67,6 +68,9 @@ describe("Pennsylvania authority manifest", () => {
       { title: "18", section: "3701", subdivision: null },
     ]);
     expect(parsePennsylvaniaCitation("35 Pa. Stat. § 780-113(a)(16)")).toEqual([]);
+    expect(parsePennsylvaniaCitation("3 P.S. § 459-305")).toEqual([]);
+    expect(parsePennsylvaniaCitation("24 P.S. § 13-1333")).toEqual([]);
+    expect(parsePennsylvaniaCitation("47 P.S. § 4-406")).toEqual([]);
     expect(parsePennsylvaniaCitation("18 U.S.C. § 2113")).toEqual([]);
     expect(parsePennsylvaniaCitation("47 Pa. Cons. Stat. § 4-406")).toEqual([
       { title: "47", section: "4-406", subdivision: null },
@@ -101,41 +105,45 @@ describe("Pennsylvania authority manifest", () => {
       expect(buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section)).toBe(
         `https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=${reference.title}&div=0&chpt=${reference.chapter}&sctn=${reference.routedSection}&subsctn=0`,
       );
-      expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).toContainEqual({
-        title: reference.title,
-        section: reference.section,
-        subdivision: null,
-      });
+      if (reference.title === "3" || reference.title === "24") {
+        expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).not.toContainEqual({
+          title: reference.title,
+          section: reference.section,
+          subdivision: null,
+        });
+      } else {
+        expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).toContainEqual({
+          title: reference.title,
+          section: reference.section,
+          subdivision: null,
+        });
+      }
     }
   });
 
   it("keeps hyphenated catalog codes aligned to their cited sections", () => {
     const expected = [
-      { chargeId: "pa-animal-at-large", code: "459-305", citation: "3 Pa. Cons. Stat. § 459-305" },
-      { chargeId: "pa-truancy", code: "13-1333", citation: "24 Pa. Cons. Stat. § 13-1333" },
-      { chargeId: "pa-alcohol-in-park", code: "4-406", citation: "47 Pa. Cons. Stat. § 4-406" },
+      { chargeId: "pa-animal-at-large", code: "459-305", citation: "3 P.S. § 459-305" },
+      { chargeId: "pa-truancy", code: "13-1333", citation: "24 P.S. § 13-1333" },
+      { chargeId: "pa-alcohol-in-park", code: "4-406", citation: "47 P.S. § 4-406" },
     ];
 
     for (const item of expected) {
       const charge = criminalCharges.find((candidate) => candidate.id === item.chargeId)!;
       expect(charge.code).toBe(item.code);
       expect(CHARGE_CITATIONS[charge.id]?.citation).toBe(item.citation);
-      expect(parsePennsylvaniaCitation(item.citation)).toEqual([{
-        title: item.citation.split(" ")[0],
-        section: item.code,
-        subdivision: null,
-      }]);
+      expect(parsePennsylvaniaCitation(item.citation)).toEqual([]);
     }
   });
 
-  it("does not promote the corrected hyphenated rows without an official consolidated provision", () => {
+  it("withholds reviewed unconsolidated legacy rows with an explicit source-policy reason", () => {
     const manifest = loadPennsylvaniaAuthorityManifest();
     for (const chargeId of ["pa-animal-at-large", "pa-truancy", "pa-alcohol-in-park"]) {
       const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId)!;
       expect(record.disposition).toBe("require_exact_reselection");
       expect(record.provisions).toHaveLength(0);
-      expect(record.apiStatus).toBe("api_error");
-      expect(record.dispositionReason).toContain("could not be verified");
+      expect(record.apiStatus).toBe("placeholder");
+      expect(record.dispositionReason).toBe(PENNSYLVANIA_UNCONSOLIDATED_LEGACY_REASON);
     }
   });
 
@@ -174,6 +182,17 @@ describe("Pennsylvania authority manifest", () => {
       provisions: [{ ...record.provisions[0], citation: "18 Pa. Cons. Stat. § 2703" }],
     };
     expect(validatePennsylvaniaManifestRecord(tampered)).toContain("not an exact verified Pennsylvania match");
+  });
+
+  it("rejects secondary source URLs before they can create a selectable record", () => {
+    const charge = criminalCharges.find((candidate) => candidate.id === "pa-aggravated-assault")!;
+    const record = buildPennsylvaniaManifestRecord(charge, [{
+      ...document("2702", "Aggravated assault"),
+      sourceUrl: "https://law.justia.com/codes/pennsylvania/section-2702/",
+    }], importedAt);
+    expect(record.disposition).toBe("require_exact_reselection");
+    expect(record.provisions).toEqual([]);
+    expect(record.dispositionReason).toContain("exact official consolidated-statute URL");
   });
 
   it("keeps a supported section selectable only when its section and subdivision match", () => {
