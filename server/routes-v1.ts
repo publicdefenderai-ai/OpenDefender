@@ -15,6 +15,7 @@ import { diversionPrograms } from "../shared/diversion-programs-data";
 import { legalGlossaryTerms } from "../shared/legal-glossary-data";
 import { expungementRules } from "../shared/expungement-data";
 import type { DiversionProgram, ExpungementRule, GlossaryTerm } from "@shared/schema";
+import { getSearchResultLimitPolicy } from "./config/search-result-limits";
 
 const PUBLIC_API_CORS_OPTIONS = {
   origin: true,
@@ -68,15 +69,7 @@ export function registerV1Routes(app: Express): void {
       const lang = (req.query.lang as string) || 'en';
       const types = req.query.types as string;
       const jurisdiction = req.query.jurisdiction as string | undefined;
-      // When the caller filters to charges only, raise the default limit so
-      // all relevant charges can be returned (not just the first 20).
-      // A charge-only search is a deliberate charge lookup — the caller wants
-      // comprehensive results, not a mixed cross-type list capped at 20.
-      const chargesOnlySearch = types === 'charge';
-      const defaultLimit = chargesOnlySearch ? 50 : 20;
-      // Keep mixed-content searches bounded, but allow the public charge
-      // endpoint to return the complete authority set requested by callers.
-      const maxLimit = chargesOnlySearch ? 500 : 100;
+      const { default: defaultLimit, max: maxLimit } = getSearchResultLimitPolicy(types);
       const limit = Math.min(parseInt(req.query.limit as string) || defaultLimit, maxLimit);
 
       if (!q || q.length < 2 || q.length > 100) {
