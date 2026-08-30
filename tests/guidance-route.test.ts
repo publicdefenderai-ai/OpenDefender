@@ -513,6 +513,56 @@ describe('legal guidance routes — canonical charge parity', () => {
       vi.unstubAllEnvs();
     }
   });
+
+  it('keeps the canonical charge identity when saved streaming AI guidance is retrieved', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', 'test-anthropic-key');
+
+    const { streamClaudeGuidance } = await import('../server/services/claude-guidance');
+    (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+
+    try {
+      const sessionId = 'saved-stream-guidance-session';
+      const createResponse = await request(testApp)
+        .post('/api/legal-guidance/stream')
+        .send({
+          ...VALID_BODY,
+          sessionId,
+          charges: [CANONICAL_SUBDIVISION_CHARGE],
+          incidentDescription: 'Mock case context for the saved-stream-guidance test.',
+        })
+        .expect(200);
+
+      const completeEvent = parseSseEvents(createResponse.text)
+        .find((event) => event.type === 'complete');
+      expect(completeEvent?.success).toBe(true);
+      expect(completeEvent?.guidance.generatedBy).toBe('claude-ai');
+      expect(chargeIdentity(completeEvent?.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+
+      // A separate request models the advocate returning to the saved stream session.
+      const savedResponse = await request(testApp)
+        .get(`/api/legal-guidance/${sessionId}`)
+        .expect(200);
+
+      expect(savedResponse.body.success).toBe(true);
+      expect(chargeIdentity(savedResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(savedResponse.body.guidance.chargeClassifications[0]).toEqual(
+        expect.objectContaining({
+          id: CANONICAL_SUBDIVISION_CHARGE,
+          title: 'Gross Vehicular Manslaughter While Intoxicated',
+          verifiedCitation: 'Cal. Penal Code § 191.5(a)',
+        }),
+      );
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI § 999.9');
+      expect(streamClaudeGuidance).toHaveBeenCalledTimes(1);
+    } finally {
+      (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+      vi.unstubAllEnvs();
+    }
+  });
 });
 
 // =============================================================================
