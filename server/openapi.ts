@@ -93,8 +93,8 @@ For integration support or to report issues, please open an issue on our GitHub 
             name: "limit",
             in: "query",
             required: false,
-            description: "Maximum results to return (1-50)",
-            schema: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+            description: "Maximum results to return. Charge-only searches (types=charge) default to 50 results and allow up to 500 results. Mixed-content searches default to 20 results and remain capped at 100.",
+            schema: { type: "integer", minimum: 1, maximum: 500, default: 20 }
           }
         ],
         responses: {
