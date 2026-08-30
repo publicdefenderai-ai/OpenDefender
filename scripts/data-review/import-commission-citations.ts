@@ -35,6 +35,7 @@
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
+import { pathToFileURL } from 'node:url';
 import { JSDOM } from 'jsdom';
 
 // Load .env from project root so GOVINFO_API_KEY and other keys are available
@@ -598,18 +599,14 @@ function postJson(url: string, body: string, headers: Record<string, string> = {
 // Columns vary by severity level section header.
 // We match our FL entries by base section number.
 
-interface CommissionEntry {
+export interface CommissionEntry {
   section: string;       // base section, e.g. "782.04"
   description: string;   // offense name from commission table
   classification: string; // degree / level / OGS
   sourceUrl: string;     // direct URL to the official source
 }
 
-async function fetchFLCommissionTable(): Promise<Map<string, CommissionEntry>> {
-  const tableUrl = 'https://www.flsenate.gov/Laws/Statutes/2024/921.0022';
-  console.log(`Fetching: ${tableUrl}`);
-
-  const html = await fetchHtml(tableUrl);
+export function parseFloridaCommissionTable(html: string): Map<string, CommissionEntry> {
   const dom = new JSDOM(html);
   const doc = dom.window.document;
 
@@ -648,7 +645,6 @@ async function fetchFLCommissionTable(): Promise<Map<string, CommissionEntry>> {
   // If table parsing found nothing, try a broader approach: look for any text
   // matching the FL statute section pattern in the full HTML
   if (map.size < 10) {
-    console.log('  Table parsing yielded few results — trying regex extraction from HTML...');
     const sectionRe = /(\d{3}\.\d+(?:\([^)]*\))*)/g;
     let m: RegExpExecArray | null;
     while ((m = sectionRe.exec(html)) !== null) {
@@ -665,6 +661,18 @@ async function fetchFLCommissionTable(): Promise<Map<string, CommissionEntry>> {
     }
   }
 
+  return map;
+}
+
+async function fetchFLCommissionTable(): Promise<Map<string, CommissionEntry>> {
+  const tableUrl = 'https://www.flsenate.gov/Laws/Statutes/2024/921.0022';
+  console.log(`Fetching: ${tableUrl}`);
+
+  const html = await fetchHtml(tableUrl);
+  const map = parseFloridaCommissionTable(html);
+  if (map.size < 10) {
+    console.log('  Table parsing yielded few results — regex extraction found all available sections.');
+  }
   console.log(`  Found ${map.size} FL sections in commission table.`);
   return map;
 }
@@ -1370,7 +1378,9 @@ async function main(): Promise<void> {
   process.exit(1);
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+}
