@@ -152,6 +152,13 @@ describe("California source database manifest", () => {
     );
   });
 
+  it("produces byte-identical seeds when the import timestamp is fixed", () => {
+    const first = buildCaliforniaSourceDatabaseSeed(retrievedAt);
+    const second = buildCaliforniaSourceDatabaseSeed(new Date(retrievedAt.getTime()));
+
+    expect(JSON.stringify(first)).toBe(JSON.stringify(second));
+  });
+
   it("does not turn a later manifest import into a retrieval or verification event", () => {
     const earlier = buildCaliforniaSourceDatabaseSeed(new Date("2026-08-27T12:00:00.000Z"));
     const later = buildCaliforniaSourceDatabaseSeed(new Date("2026-09-01T12:00:00.000Z"));
@@ -162,5 +169,20 @@ describe("California source database manifest", () => {
     expect(later.sources[0].lastCheckedAt).toBeNull();
     expect(later.snapshots[0].retrievedAt).toBeNull();
     expect(later.snapshots[0].manifestImportedAt).not.toEqual(earlier.snapshots[0].manifestImportedAt);
+    expect({
+      ...later,
+      generatedAt: earlier.generatedAt,
+      audit: {
+        ...later.audit,
+        currentness: {
+          ...later.audit.currentness,
+          manifestImportedAt: earlier.audit.currentness.manifestImportedAt,
+        },
+      },
+      snapshots: later.snapshots.map((snapshot) => ({
+        ...snapshot,
+        manifestImportedAt: earlier.snapshots[0].manifestImportedAt,
+      })),
+    }).toEqual(earlier);
   });
 });

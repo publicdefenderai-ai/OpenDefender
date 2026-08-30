@@ -100,8 +100,11 @@ ranked list to select the next coverage work.
   persistence guards enabled — 8 files, 19 tests passed. One test file was
   skipped by its own guard.
 - Two-pass dry-run loading of all nine seed commands. The eight
-  committed-manifest commands produced byte-identical summaries across both
-  passes:
+  committed-manifest commands and the California reference-only command
+  produced byte-identical summaries across both passes. California uses the
+  fixed dry-run timestamp `1970-01-01T00:00:00.000Z` by default; use
+  `--imported-at <ISO-8601 timestamp>` to compare against another fixed
+  release timestamp:
 
   ```text
   npx tsx scripts/data-review/seed-{california,florida,georgia,illinois,new-york,ohio,pennsylvania,south-carolina,texas}-source-database.ts --dry-run
@@ -164,22 +167,14 @@ environment/source-contract limitations.
    with a database-backed release fixture or a safe hermetic search fixture
    before claiming production search parity.
 
-2. **California dry-run metadata is not byte-stable.** Its seed builder
-   intentionally receives `new Date()` and records that value as
-   `manifestImportedAt`; the underlying canonical records, links, hashes, and
-   counts are stable, but the complete dry-run JSON changes between runs.
-   Either validate California with a fixed import timestamp or make the
-   reference-only import timestamp an explicit input before treating the
-   entire catalog as deterministic.
-
-3. **Deployment/runtime test matrix is incomplete.** Illinois has no dedicated
+2. **Deployment/runtime test matrix is incomplete.** Illinois has no dedicated
    deployment-seed test. Pennsylvania and South Carolina have neither a
    deployment-seed test nor a runtime-boundary integration test. New York has
    no dedicated runtime-boundary integration test. Their source manifest
    tests passed, but their startup and HTTP boundary paths are not covered at
    the same depth as Florida, Georgia, Ohio, and Texas.
 
-4. **Production startup relies on a separate script list.** The production
+3. **Production startup relies on a separate script list.** The production
    launcher explicitly runs the eight JSON-manifest seed bundles, while
    California remains an admin-triggered reference-only seed endpoint.
    This is currently consistent with the source policy, but it should remain a
