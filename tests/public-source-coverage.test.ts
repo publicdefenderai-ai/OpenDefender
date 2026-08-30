@@ -52,6 +52,30 @@ describe("public-source coverage gate", () => {
     }
   });
 
+  it("returns a canonical, isolated readiness summary on repeated calls", () => {
+    const first = buildPublicSourceCoverageReport();
+    const expected = JSON.stringify(first);
+
+    // Returned values must not retain references to module-level readiness
+    // configuration or become sensitive to a consumer's iteration order.
+    first.target.catalogAccountingRate = 0;
+    first.jurisdictions
+      .find((row) => row.jurisdiction === "GA")!
+      .blocker!.summary = "mutated by caller";
+    for (const row of first.jurisdictions) {
+      for (const gap of row.gapBreakdown) gap.chargeIds.reverse();
+    }
+
+    const second = buildPublicSourceCoverageReport();
+    expect(JSON.stringify(second)).toBe(expected);
+    expect(buildPublicSourceCoverageReport()).toEqual(second);
+    for (const row of second.jurisdictions) {
+      for (const gap of row.gapBreakdown) {
+        expect(gap.chargeIds).toEqual([...gap.chargeIds].sort());
+      }
+    }
+  });
+
   it("keeps source access blockers concrete and separate from publication coverage", () => {
     const report = buildPublicSourceCoverageReport();
     const georgia = report.jurisdictions.find((row) => row.jurisdiction === "GA")!;

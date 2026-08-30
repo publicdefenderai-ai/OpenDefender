@@ -61,12 +61,12 @@ import {
  * withheld row when the official material is available but the catalog
  * identity is ambiguous.
  */
-export const HIGH_PUBLIC_SOURCE_COVERAGE_TARGET = {
+export const HIGH_PUBLIC_SOURCE_COVERAGE_TARGET = Object.freeze({
   catalogAccountingRate: 1,
   officialResponseRate: 0.9,
-} as const;
+} as const);
 
-export const CURRENT_PUBLIC_SOURCE_JURISDICTIONS = [
+export const CURRENT_PUBLIC_SOURCE_JURISDICTIONS = Object.freeze([
   "CA",
   "FL",
   "GA",
@@ -76,7 +76,7 @@ export const CURRENT_PUBLIC_SOURCE_JURISDICTIONS = [
   "PA",
   "SC",
   "TX",
-] as const;
+] as const);
 
 export type CurrentPublicSourceJurisdiction =
   (typeof CURRENT_PUBLIC_SOURCE_JURISDICTIONS)[number];
@@ -93,6 +93,15 @@ export type PublicSourceCoverageGapKind =
   | "incomplete_text"
   | "technical_seed_failure"
   | "identity_review";
+
+const PUBLIC_SOURCE_COVERAGE_GAP_KINDS: readonly PublicSourceCoverageGapKind[] = [
+  "source_access",
+  "missing_import",
+  "stale_record",
+  "incomplete_text",
+  "technical_seed_failure",
+  "identity_review",
+];
 
 export type OfficialSourceAvailability =
   | "available"
@@ -130,10 +139,10 @@ export interface PublicSourceCoverageTarget {
  * explicit so a low response rate cannot be mistaken for a completed
  * jurisdiction or silently converted into inferred authority.
  */
-export const PUBLIC_SOURCE_ACCESS_BLOCKERS: Partial<
-  Record<CurrentPublicSourceJurisdiction, PublicSourceAccessBlocker>
-> = {
-  GA: {
+export const PUBLIC_SOURCE_ACCESS_BLOCKERS: Readonly<
+  Partial<Record<CurrentPublicSourceJurisdiction, Readonly<PublicSourceAccessBlocker>>>
+> = Object.freeze({
+  GA: Object.freeze({
     kind: "source_access",
     source: "Georgia General Assembly public Lexis access page",
     summary:
@@ -142,8 +151,8 @@ export const PUBLIC_SOURCE_ACCESS_BLOCKERS: Partial<
       "The stable TOC lookup renders official citations and snippets. Unattended complete-document requests require browser cookie/human-verification state, while result rows omit pddocid/pddocfullpath and History currentness evidence.",
     nextStep:
       "Obtain an automatable complete-document contract from the Georgia Code Revision Commission; use Justia and public mirrors for discovery only, never selectable authority.",
-  },
-  PA: {
+  }),
+  PA: Object.freeze({
     kind: "source_access",
     source: "Pennsylvania General Assembly consolidated-statute source",
     summary:
@@ -152,8 +161,8 @@ export const PUBLIC_SOURCE_ACCESS_BLOCKERS: Partial<
       "The committed Pennsylvania manifest records unavailable and placeholder rows rather than inferring authority from a secondary source.",
     nextStep:
       "Re-run the official PA source probe after the missing section routes or consolidated-statute source contract are restored, then regenerate the manifest.",
-  },
-};
+  }),
+} as const);
 
 export interface PublicSourceCoverageReportRow {
   jurisdiction: CurrentPublicSourceJurisdiction;
@@ -244,47 +253,44 @@ interface CoverageInput {
   expectedSeedScriptPath: string;
 }
 
-export const COVERAGE_REGISTRY: Record<
-  CurrentPublicSourceJurisdiction,
-  { manifestPath: string | null; seedScriptPath: string }
-> = {
-  CA: {
+export const COVERAGE_REGISTRY = Object.freeze({
+  CA: Object.freeze({
     manifestPath: null,
     seedScriptPath: "scripts/data-review/seed-california-source-database.ts",
-  },
-  FL: {
+  }),
+  FL: Object.freeze({
     manifestPath: "scripts/data-review/output/fl-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-florida-source-database.ts",
-  },
-  GA: {
+  }),
+  GA: Object.freeze({
     manifestPath: "scripts/data-review/output/ga-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-georgia-source-database.ts",
-  },
-  IL: {
+  }),
+  IL: Object.freeze({
     manifestPath: "scripts/data-review/output/il-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-illinois-source-database.ts",
-  },
-  NY: {
+  }),
+  NY: Object.freeze({
     manifestPath: "scripts/data-review/output/ny-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-new-york-source-database.ts",
-  },
-  OH: {
+  }),
+  OH: Object.freeze({
     manifestPath: "scripts/data-review/output/oh-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-ohio-source-database.ts",
-  },
-  PA: {
+  }),
+  PA: Object.freeze({
     manifestPath: "scripts/data-review/output/pa-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-pennsylvania-source-database.ts",
-  },
-  SC: {
+  }),
+  SC: Object.freeze({
     manifestPath: "scripts/data-review/output/sc-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-south-carolina-source-database.ts",
-  },
-  TX: {
+  }),
+  TX: Object.freeze({
     manifestPath: "scripts/data-review/output/tx-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-texas-source-database.ts",
-  },
-};
+  }),
+} as const);
 
 const STALE_RECORD_MAX_AGE_DAYS = 180;
 
@@ -576,6 +582,19 @@ function classifyGap(
   return "identity_review";
 }
 
+function copyAccessBlocker(
+  blocker: Readonly<PublicSourceAccessBlocker> | undefined,
+): PublicSourceAccessBlocker | null {
+  if (!blocker) return null;
+  return {
+    kind: blocker.kind,
+    source: blocker.source,
+    summary: blocker.summary,
+    evidence: blocker.evidence,
+    nextStep: blocker.nextStep,
+  };
+}
+
 function buildGapBreakdown(
   input: CoverageInput,
   staleIds: string[],
@@ -591,12 +610,12 @@ function buildGapBreakdown(
   }
   if (staleIds.length > 0) idsByKind.set("stale_record", staleIds);
 
-  return (
-    Object.keys(GAP_DETAILS) as PublicSourceCoverageGapKind[]
-  ).map((kind) => ({
+  return PUBLIC_SOURCE_COVERAGE_GAP_KINDS.map((kind) => ({
     kind,
     rows: idsByKind.get(kind)?.length ?? 0,
-    chargeIds: idsByKind.get(kind) ?? [],
+    // Manifests are arrays today, but a report must remain reproducible if an
+    // importer changes its record insertion order.
+    chargeIds: [...(idsByKind.get(kind) ?? [])].sort(),
     summary: GAP_DETAILS[kind].summary,
     nextStep: GAP_DETAILS[kind].nextStep,
   }));
@@ -624,7 +643,9 @@ function buildReportRow(input: CoverageInput): PublicSourceCoverageReportRow {
   const gapCounts = Object.fromEntries(
     gapBreakdown.map((gap) => [gap.kind, gap.rows]),
   ) as Record<PublicSourceCoverageGapKind, number>;
-  const blocker = PUBLIC_SOURCE_ACCESS_BLOCKERS[input.jurisdiction] ?? null;
+  const blocker = copyAccessBlocker(
+    PUBLIC_SOURCE_ACCESS_BLOCKERS[input.jurisdiction],
+  );
   const meetsTarget = isPublicSourceCoverageTargetMet({
     catalogAccountingRate,
     officialResponseRate,
@@ -685,7 +706,9 @@ function buildCoverageTargets(
       const primaryGap =
         row.blocker && row.officialSourceAvailability !== "available"
           ? row.gapBreakdown.find((gap) => gap.kind === "source_access")
-          : actionableGaps.sort((a, b) => b.rows - a.rows)[0];
+          : [...actionableGaps].sort(
+              (a, b) => b.rows - a.rows || a.kind.localeCompare(b.kind),
+            )[0];
       const kind = primaryGap?.kind ?? (row.blocker ? "source_access" : "identity_review");
       return {
         jurisdiction: row.jurisdiction,
@@ -703,7 +726,12 @@ function buildCoverageTargets(
     .sort((a, b) => {
       const aBlocked = a.kind === "source_access" ? 1 : 0;
       const bBlocked = b.kind === "source_access" ? 1 : 0;
-      return bBlocked - aBlocked || b.rows - a.rows || a.coveragePercentage - b.coveragePercentage;
+      return (
+        bBlocked - aBlocked ||
+        b.rows - a.rows ||
+        a.coveragePercentage - b.coveragePercentage ||
+        a.jurisdiction.localeCompare(b.jurisdiction)
+      );
     });
 }
 
@@ -716,7 +744,12 @@ export function buildPublicSourceCoverageReport(): PublicSourceCoverageReport {
     return buildReportRow(input);
   });
   return {
-    target: HIGH_PUBLIC_SOURCE_COVERAGE_TARGET,
+    // A fresh value prevents a caller mutating one report from changing a
+    // later readiness result through this exported constant.
+    target: {
+      catalogAccountingRate: HIGH_PUBLIC_SOURCE_COVERAGE_TARGET.catalogAccountingRate,
+      officialResponseRate: HIGH_PUBLIC_SOURCE_COVERAGE_TARGET.officialResponseRate,
+    },
     jurisdictions,
     belowTargetJurisdictions: jurisdictions
       .filter((row) => row.status !== "meets_target")

@@ -30,6 +30,7 @@ const testProcess = spawn(
     "playwright.release.config.ts",
     "tests/e2e/navigation-accessibility.spec.ts",
     "tests/e2e/export-release-gate.spec.ts",
+    "tests/e2e/authority-boundary-release.spec.ts",
   ],
   {
     env: {
