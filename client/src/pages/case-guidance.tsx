@@ -701,6 +701,21 @@ export default function CaseGuidance() {
     setPendingGuidanceData(data);
   }, []);
 
+  const handleCancelQAFlow = () => {
+    const wasReviewingTimedOutAnswers = reviewingTimedOutAnswers;
+
+    setShowQAFlow(false);
+    setReviewingTimedOutAnswers(false);
+
+    if (wasReviewingTimedOutAnswers) {
+      setPendingGuidanceData(null);
+      setGuidanceTimedOut(false);
+      setGuidanceRecoveryError(false);
+      setRetryCaptchaToken(null);
+      clearStoredGuidanceRecovery();
+    }
+  };
+
   const handleNewSession = async () => {
     if (isClearingSession) return;
     setIsClearingSession(true);
@@ -1009,10 +1024,7 @@ export default function CaseGuidance() {
         <main className="editorial-workspace max-w-7xl mx-auto px-4 py-8">
           <QAFlow
             onComplete={handleQAComplete}
-            onCancel={() => {
-              setShowQAFlow(false);
-              setReviewingTimedOutAnswers(false);
-            }}
+            onCancel={handleCancelQAFlow}
             onFindLawyer={() => {
               setShowQAFlow(false);
               setShowPublicDefenderModal(true);

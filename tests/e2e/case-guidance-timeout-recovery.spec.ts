@@ -111,6 +111,12 @@ test.describe("case guidance timeout recovery", () => {
     await page.getByRole("button", { name: /^Back/ }).click();
     await expect(page.getByTestId("select-jurisdiction")).toContainText("California");
 
+    await page.getByTestId("button-cancel-qa").click();
+    await expect(page.getByTestId("button-start-guidance")).toBeVisible();
+    await expect.poll(() =>
+      page.evaluate(() => sessionStorage.getItem("open-defender:case-guidance-recovery")),
+    ).toBeNull();
+
     releaseFirstRequest?.();
   });
 });
