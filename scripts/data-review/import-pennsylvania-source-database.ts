@@ -1,7 +1,8 @@
 /**
  * Import Pennsylvania catalog citations from the official Pennsylvania
- * General Assembly Consolidated Statutes site. This is the only command that
- * calls the government source; production seeding uses the committed manifest.
+ * General Assembly statutes site. Approved unconsolidated legacy rows use
+ * their explicit act/chapter/section mappings; production seeding uses the
+ * committed manifest.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -12,7 +13,11 @@ import {
   buildPennsylvaniaManifestRecord,
   buildPennsylvaniaOfficialSourceUrl,
   buildPennsylvaniaSourceUrl,
+  getPennsylvaniaApprovedLegacyProvision,
+  getPennsylvaniaReferences,
+  PENNSYLVANIA_MANIFEST_SOURCE,
   parsePennsylvaniaCitation,
+  PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS,
   type PennsylvaniaAuthorityManifest,
   type PennsylvaniaSourceDocument,
   type PennsylvaniaSourceReference,
@@ -141,6 +146,38 @@ export function extractPennsylvaniaDocument(
     sourceUrl,
     retrievedAt,
     effectiveDateStart: extractLatestEffectiveDate(body),
+  };
+}
+
+export function extractPennsylvaniaLegacyDocument(
+  html: string,
+  provision: (typeof PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS)[string],
+  sourceUrl: string,
+  retrievedAt: Date,
+): PennsylvaniaSourceDocument | null {
+  const text = decodeHtml(html).replace(/\u00a0/g, " ");
+  const normalizedText = text.replace(/\s+/g, " ");
+  const sectionNumber = provision.section.split("-").at(-1) ?? provision.section;
+  const sectionPattern = new RegExp(
+    `(?:^|\\n)\\s*Section\\s+${escapeRegex(sectionNumber)}\\s*[.]`,
+    "im",
+  );
+  if (!sectionPattern.test(text)) return null;
+  if (provision.requiredContent.some((required) =>
+    !normalizedText.toLowerCase().includes(required.toLowerCase()),
+  )) return null;
+  if (
+    text.length < 120 ||
+    /page cannot be found|invalid section|error occurred/i.test(text)
+  ) return null;
+  const start = text.search(sectionPattern);
+  return {
+    title: provision.sectionTitle,
+    section: provision.section,
+    text: text.slice(Math.max(0, start), Math.min(text.length, start + 50000)).trim(),
+    sourceUrl,
+    retrievedAt,
+    effectiveDateStart: extractLatestEffectiveDate(text),
   };
 }
 
@@ -390,6 +427,17 @@ export async function fetchPennsylvaniaDocument(
   retrievedAt: Date,
   limiter: RequestLimiter = { lastRequestAt: null },
 ): Promise<PennsylvaniaSourceDocument | null> {
+  const legacy = getPennsylvaniaApprovedLegacyProvision(reference);
+  if (legacy) {
+    const page = await fetchHtml(legacy.retrievalUrl, limiter);
+    if ("error" in page || page.url !== legacy.retrievalUrl) return null;
+    return extractPennsylvaniaLegacyDocument(
+      page.html,
+      legacy,
+      legacy.canonicalUrl,
+      retrievedAt,
+    );
+  }
   const canonicalUrl = buildPennsylvaniaSourceUrl(reference.title, reference.section);
   const retrievalUrls = [
     buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section),
@@ -437,26 +485,27 @@ export async function main(): Promise<void> {
   let requests = 0;
 
   for (const charge of charges) {
-    const references = parsePennsylvaniaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+    const references = getPennsylvaniaReferences(charge.id);
     for (const reference of references) {
-      const key = `${reference.title}:${reference.section}`;
+      const key = `${reference.sourceKind ?? "consolidated"}:${reference.title}:${reference.section}`;
       if (documentCache.has(key)) continue;
       const document = await fetchPennsylvaniaDocument(reference, importedAt, requestLimiter);
       requests++;
       documentCache.set(key, document);
-      if (document) console.log(`[OK] ${reference.title} Pa.C.S. § ${reference.section} — ${document.title}`);
-      else console.error(`[FAIL] ${reference.title} Pa.C.S. § ${reference.section}`);
+      const label = reference.sourceKind === "unconsolidated" ? "P.S." : "Pa.C.S.";
+      if (document) console.log(`[OK] ${reference.title} ${label} § ${reference.section} — ${document.title}`);
+      else console.error(`[FAIL] ${reference.title} ${label} § ${reference.section}`);
     }
   }
 
   const records = charges.map((charge) => {
-    const references = parsePennsylvaniaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+    const references = getPennsylvaniaReferences(charge.id);
     const documents = references.flatMap((reference) => {
-      const document = documentCache.get(`${reference.title}:${reference.section}`);
+      const document = documentCache.get(`${reference.sourceKind ?? "consolidated"}:${reference.title}:${reference.section}`);
       return document ? [document] : [];
     });
     const missing = references.find((reference) =>
-      !documentCache.get(`${reference.title}:${reference.section}`),
+      !documentCache.get(`${reference.sourceKind ?? "consolidated"}:${reference.title}:${reference.section}`),
     );
     return buildPennsylvaniaManifestRecord(
       charge,
@@ -470,7 +519,7 @@ export async function main(): Promise<void> {
   const manifest: PennsylvaniaAuthorityManifest = {
     jurisdiction: "PA",
     generatedAt: importedAt,
-    source: "Pennsylvania General Assembly Consolidated Statutes (legis.state.pa.us)",
+    source: PENNSYLVANIA_MANIFEST_SOURCE,
     catalogRecords: records,
   };
   const outputPath = path.join(process.cwd(), "scripts/data-review/output/pa-source-manifest.json");

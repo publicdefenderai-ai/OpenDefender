@@ -12,7 +12,7 @@ async function main(): Promise<void> {
     console.log(JSON.stringify({
       jurisdiction: "PA",
       mode: "dry-run",
-      sourcePolicy: "official_pennsylvania_consolidated_statutes_manifest",
+      sourcePolicy: "official_pennsylvania_statutes_with_legacy_publication_gate",
       manifestRecords: manifest.catalogRecords.length,
       sources: seed.sources.length,
       snapshots: seed.snapshots.length,

@@ -9,28 +9,114 @@ import {
   type AuthoritySourceSeed,
 } from "../services/authority-source-database";
 
-export const PENNSYLVANIA_SOURCE_POLICY = "official_pennsylvania_consolidated_statutes";
+export const PENNSYLVANIA_SOURCE_POLICY =
+  "official_pennsylvania_statutes_with_legacy_publication_gate";
 export const PENNSYLVANIA_SOURCE_PUBLISHER = "Pennsylvania General Assembly";
 export const PENNSYLVANIA_MANIFEST_SOURCE =
-  "Pennsylvania General Assembly Consolidated Statutes (legis.state.pa.us)";
+  "Pennsylvania General Assembly Official Statutes (legis.state.pa.us and palegis.us)";
 export const PENNSYLVANIA_SOURCE_BASE =
   "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm";
 export const PENNSYLVANIA_OFFICIAL_SOURCE_BASE =
   "https://www.palegis.us/statutes/consolidated/view-statute";
 
 /**
- * These reviewed catalog rows point to official Pennsylvania General Assembly
- * unconsolidated-statute pages. The current product policy accepts only
- * consolidated-statute pages, so keep these rows auditable but unavailable
- * until an approved source-policy exception and exact mappings exist.
+ * Approved official retrieval paths for legacy provisions. These mappings do
+ * not approve publication: each remains behind the substantive attorney
+ * review gate below until the catalog charge is confirmed to match the text.
+ * No title, section, subdivision, or URL may be inferred from a nearby
+ * provision or a secondary citation.
  */
-export const PENNSYLVANIA_UNCONSOLIDATED_LEGACY_CHARGE_IDS = new Set([
-  "pa-animal-at-large",
-  "pa-truancy",
-  "pa-alcohol-in-park",
-]);
+export interface PennsylvaniaApprovedLegacyProvision {
+  chargeId: string;
+  statuteTitle: string;
+  actYear: string;
+  actNumber: string;
+  title: string;
+  section: string;
+  subdivision: string | null;
+  sectionTitle: string;
+  canonicalUrl: string;
+  retrievalUrl: string;
+  requiredContent: readonly string[];
+  publicationApproved: boolean;
+}
+
+export const PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS: Record<
+  string,
+  PennsylvaniaApprovedLegacyProvision
+> = {
+  "pa-animal-at-large": {
+    chargeId: "pa-animal-at-large",
+    statuteTitle: "DOG LAW",
+    actYear: "1982",
+    actNumber: "0225.",
+    title: "3",
+    section: "459-305",
+    subdivision: null,
+    sectionTitle: "Confinement and housing of dogs not part of a kennel",
+    canonicalUrl:
+      "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?actNum=0225.&sessInd=0&sessYr=1982&smthLwInd=0&chpt=3&sctn=5",
+    retrievalUrl:
+      "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?actNum=0225.&sessInd=0&sessYr=1982&smthLwInd=0&chpt=3&sctn=5",
+    requiredContent: [
+      "Section 305.",
+      "Confinement and housing of dogs not part of a kennel",
+      "Confinement and control",
+      "Housing",
+    ],
+    publicationApproved: false,
+  },
+  "pa-truancy": {
+    chargeId: "pa-truancy",
+    statuteTitle: "PUBLIC SCHOOL CODE OF 1949",
+    actYear: "1949",
+    actNumber: "0014.",
+    title: "24",
+    section: "13-1333",
+    subdivision: null,
+    sectionTitle: "Procedure When Child is Truant",
+    canonicalUrl:
+      "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?actNum=0014.&sessInd=0&sessYr=1949&smthLwInd=0&chpt=13&sctn=33",
+    retrievalUrl:
+      "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?actNum=0014.&sessInd=0&sessYr=1949&smthLwInd=0&chpt=13&sctn=33",
+    requiredContent: [
+      "Section 1333.",
+      "Procedure When Child is Truant",
+      "When a child is truant",
+      "compulsory school attendance",
+    ],
+    publicationApproved: false,
+  },
+  "pa-alcohol-in-park": {
+    chargeId: "pa-alcohol-in-park",
+    statuteTitle: "LIQUOR CODE",
+    actYear: "1951",
+    actNumber: "0021.",
+    title: "47",
+    section: "4-406",
+    subdivision: null,
+    sectionTitle: "Sales by Liquor Licensees; Restrictions",
+    canonicalUrl:
+      "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?actNum=0021.&sessInd=0&sessYr=1951&smthLwInd=0&chpt=4&sctn=6",
+    retrievalUrl:
+      "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?actNum=0021.&sessInd=0&sessYr=1951&smthLwInd=0&chpt=4&sctn=6",
+    requiredContent: [
+      "Section 406.",
+      "Sales by Liquor Licensees; Restrictions",
+      "Every hotel, restaurant or club liquor licensee",
+      "Sunday",
+    ],
+    publicationApproved: false,
+  },
+};
+
+export const PENNSYLVANIA_UNCONSOLIDATED_LEGACY_CHARGE_IDS = new Set(
+  Object.keys(PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS),
+);
 export const PENNSYLVANIA_UNCONSOLIDATED_LEGACY_REASON =
-  "The reviewed Pennsylvania section is published through an official unconsolidated statute page, which is outside the approved consolidated-statutes source policy; no secondary or inferred substitute is accepted.";
+  "The exact official unconsolidated-statute retrieval path is approved, but publication remains withheld until attorney review confirms that the legacy text substantively supports this catalog charge; secondary, inferred, nearby, and alternate citations are rejected.";
+
+export type PennsylvaniaSourceKind = "consolidated" | "unconsolidated";
 
 export interface PennsylvaniaAuthorityManifest {
   jurisdiction: "PA";
@@ -43,6 +129,7 @@ export interface PennsylvaniaSourceReference {
   title: string;
   section: string;
   subdivision: string | null;
+  sourceKind?: PennsylvaniaSourceKind;
 }
 
 export interface PennsylvaniaSourceDocument {
@@ -67,6 +154,11 @@ function referenceHash(value: unknown): string {
  * is intentionally narrow and can be expanded only after legal review.
  */
 export const PENNSYLVANIA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
+  "pa-animal-at-large": [
+    "Confinement and housing of dogs not part of a kennel",
+  ],
+  "pa-truancy": ["Procedure When Child is Truant"],
+  "pa-alcohol-in-park": ["Sales by Liquor Licensees; Restrictions"],
   "pa-murder-in-the-first-degree": ["Murder"],
   "pa-murder-in-the-second-degree": ["Murder"],
   "pa-vehicular-homicide": ["Homicide by vehicle"],
@@ -124,7 +216,7 @@ function codeSupportsPennsylvaniaReferences(
   charge: CriminalCharge,
   references: PennsylvaniaSourceReference[],
 ): boolean {
-  const code = charge.code.match(/^(\d+(?:\.\d+)?)([\s\S]*)$/);
+  const code = charge.code.match(/^(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)([\s\S]*)$/);
   if (!code) return false;
   const codeSection = code[1];
   const codeSubdivision = code[2].trim() || null;
@@ -139,7 +231,10 @@ function sourceDocumentMatchesReference(
   reference: PennsylvaniaSourceReference,
 ): boolean {
   return document.section === reference.section &&
-    document.sourceUrl === buildPennsylvaniaSourceUrl(reference.title, reference.section);
+    document.sourceUrl === (
+      getPennsylvaniaApprovedLegacyProvision(reference)?.canonicalUrl ??
+      buildPennsylvaniaSourceUrl(reference.title, reference.section)
+    );
 }
 
 function parseSectionToken(value: string): {
@@ -155,8 +250,9 @@ function parseSectionToken(value: string): {
 }
 
 /**
- * Only consolidated Pennsylvania citations are accepted. P.S., federal,
- * MPC, and unconsolidated citations must be withheld rather than substituted.
+ * Catalog citations remain consolidated-statute citations. The three reviewed
+ * legacy source mappings are added explicitly by getPennsylvaniaReferences().
+ * P.S., federal, MPC, and other unconsolidated citations are not inferred.
  */
 export function parsePennsylvaniaCitation(citation: string): PennsylvaniaSourceReference[] {
   const match = citation.match(
@@ -168,6 +264,33 @@ export function parsePennsylvaniaCitation(citation: string): PennsylvaniaSourceR
     .map((part) => parseSectionToken(part.replace(/\.$/, "")))
     .filter((part): part is { section: string; subdivision: string | null } => Boolean(part))
     .map((part) => ({ title: match[1], ...part }));
+}
+
+export function getPennsylvaniaReferences(
+  chargeId: string,
+): PennsylvaniaSourceReference[] {
+  const legacy = PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS[chargeId];
+  if (legacy) {
+    return [{
+      title: legacy.title,
+      section: legacy.section,
+      subdivision: legacy.subdivision,
+      sourceKind: "unconsolidated",
+    }];
+  }
+  return parsePennsylvaniaCitation(CHARGE_CITATIONS[chargeId]?.citation ?? "");
+}
+
+export function getPennsylvaniaApprovedLegacyProvision(
+  reference: PennsylvaniaSourceReference,
+): PennsylvaniaApprovedLegacyProvision | null {
+  if (reference.sourceKind !== "unconsolidated") return null;
+  return Object.values(PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS)
+    .find((provision) =>
+      provision.title === reference.title &&
+      provision.section === reference.section &&
+      provision.subdivision === reference.subdivision,
+    ) ?? null;
 }
 
 export function buildPennsylvaniaSourceKey(
@@ -218,7 +341,9 @@ function provisionFromDocument(
   importedAt: Date,
 ): AuthorityProvisionSeed {
   const sourceKey = buildPennsylvaniaSourceKey(reference.title, reference.section, reference.subdivision);
-  const citation = `${reference.title} Pa. Cons. Stat. § ${reference.section}${reference.subdivision ?? ""}`;
+  const citation = reference.sourceKind === "unconsolidated"
+    ? `${reference.title} P.S. § ${reference.section}${reference.subdivision ?? ""}`
+    : `${reference.title} Pa. Cons. Stat. § ${reference.section}${reference.subdivision ?? ""}`;
   const contentHash = createHash("sha256").update(document.text).digest("hex");
   return {
     sourceKey,
@@ -240,9 +365,21 @@ function provisionFromDocument(
       catalogLabel: charge.name,
       catalogCode: charge.code,
       catalogClassification: charge.category,
-      elements: { basis: "verbatim_official_text", source: "pennsylvania_general_assembly_html" },
-      grading: { basis: "verbatim_official_text", source: "pennsylvania_general_assembly_html" },
-      penalty: { basis: "verbatim_official_text", source: "pennsylvania_general_assembly_html" },
+      elements: {
+        basis: "verbatim_official_text",
+        source: "pennsylvania_general_assembly_html",
+        sourceKind: reference.sourceKind ?? "consolidated",
+      },
+      grading: {
+        basis: "verbatim_official_text",
+        source: "pennsylvania_general_assembly_html",
+        sourceKind: reference.sourceKind ?? "consolidated",
+      },
+      penalty: {
+        basis: "verbatim_official_text",
+        source: "pennsylvania_general_assembly_html",
+        sourceKind: reference.sourceKind ?? "consolidated",
+      },
       currentnessEvidence: { effectiveDateStart: document.effectiveDateStart },
       attorneyReview: "pending",
       fingerprint: referenceHash({
@@ -270,7 +407,7 @@ export function buildPennsylvaniaManifestRecord(
     catalogCode: charge.code,
     catalogCategory: charge.category,
   };
-  const references = parsePennsylvaniaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+  const references = getPennsylvaniaReferences(charge.id);
   if (references.length === 0) {
     return {
       ...base,
@@ -296,6 +433,19 @@ export function buildPennsylvaniaManifestRecord(
       apiStatus: "verified",
     };
   }
+  const unapprovedLegacy = references
+    .map((reference) => getPennsylvaniaApprovedLegacyProvision(reference))
+    .find((provision) => provision && !provision.publicationApproved);
+  if (unapprovedLegacy) {
+    return {
+      ...base,
+      disposition: "require_exact_reselection",
+      dispositionReason: PENNSYLVANIA_UNCONSOLIDATED_LEGACY_REASON,
+      canonicalTitle: null,
+      provisions: [],
+      apiStatus: "verified",
+    };
+  }
   if (documents.length !== references.length) {
     return {
       ...base,
@@ -312,7 +462,7 @@ export function buildPennsylvaniaManifestRecord(
       ...base,
       disposition: "require_exact_reselection",
       dispositionReason:
-        "Every Pennsylvania authority provision must come from its exact official consolidated-statute URL; secondary, unconsolidated, or inferred source URLs are not accepted.",
+        "Every Pennsylvania authority provision must come from its exact official consolidated-statute URL or exact approved official unconsolidated-statute URL; secondary, inferred, nearby, or alternate source URLs are not accepted.",
       canonicalTitle: null,
       provisions: [],
       apiStatus: "verified",
@@ -356,9 +506,15 @@ export function validatePennsylvaniaManifestRecord(record: AuthorityCatalogRecor
     record.catalogCategory !== charge.category
   ) return "Manifest catalog identity does not match the current Pennsylvania catalog";
 
-  const references = parsePennsylvaniaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+  const references = getPennsylvaniaReferences(charge.id);
   const selectable = record.disposition === "retain" || record.disposition === "exact_alias_rename";
   if (!selectable) return record.provisions.length === 0 ? null : "Withheld Pennsylvania records must not carry provisions";
+  const unapprovedLegacy = references
+    .map((reference) => getPennsylvaniaApprovedLegacyProvision(reference))
+    .find((provision) => provision && !provision.publicationApproved);
+  if (unapprovedLegacy) {
+    return "Pennsylvania legacy provisions are not attorney-approved for publication";
+  }
   if (
     record.apiStatus !== "verified" ||
     record.provisions.length !== references.length ||
@@ -378,8 +534,15 @@ export function validatePennsylvaniaManifestRecord(record: AuthorityCatalogRecor
       provision.section !== reference.section ||
       provision.subdivision !== reference.subdivision ||
       provision.sourceKey !== buildPennsylvaniaSourceKey(reference.title, reference.section, reference.subdivision) ||
-      provision.citation !== `${reference.title} Pa. Cons. Stat. § ${reference.section}${reference.subdivision ?? ""}` ||
-      provision.sourceUrl !== buildPennsylvaniaSourceUrl(reference.title, reference.section) ||
+      provision.citation !== (
+        reference.sourceKind === "unconsolidated"
+          ? `${reference.title} P.S. § ${reference.section}${reference.subdivision ?? ""}`
+          : `${reference.title} Pa. Cons. Stat. § ${reference.section}${reference.subdivision ?? ""}`
+      ) ||
+      provision.sourceUrl !== (
+        getPennsylvaniaApprovedLegacyProvision(reference)?.canonicalUrl ??
+        buildPennsylvaniaSourceUrl(reference.title, reference.section)
+      ) ||
       provision.hashBasis !== "source_content" ||
       typeof provision.content !== "string" ||
       provision.content.length === 0 ||
@@ -405,6 +568,11 @@ export function buildPennsylvaniaSourceDatabaseSeed(
   const links: AuthorityChargeLinkSeed[] = [];
   for (const record of manifest.catalogRecords) {
     if (record.disposition !== "retain" && record.disposition !== "exact_alias_rename") continue;
+    const references = getPennsylvaniaReferences(record.chargeId);
+    if (references.some((reference) => {
+      const legacy = getPennsylvaniaApprovedLegacyProvision(reference);
+      return legacy !== null && !legacy.publicationApproved;
+    })) continue;
     for (const provision of record.provisions) {
       if (!sources.has(provision.sourceKey)) {
         sources.set(provision.sourceKey, {
@@ -465,7 +633,11 @@ export function buildPennsylvaniaSourceDatabaseSeed(
     selectableChargeIds: manifest.catalogRecords
       .filter((record) =>
         (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
-        record.provisions.length > 0,
+        record.provisions.length > 0 &&
+        !getPennsylvaniaReferences(record.chargeId).some((reference) => {
+          const legacy = getPennsylvaniaApprovedLegacyProvision(reference);
+          return legacy !== null && !legacy.publicationApproved;
+        }),
       )
       .map((record) => record.chargeId),
     generatedAt: manifest.generatedAt,

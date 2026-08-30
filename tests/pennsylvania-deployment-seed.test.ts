@@ -23,7 +23,10 @@ describe("committed Pennsylvania deployment seed", () => {
         source.accessPolicy === "store_text" &&
         source.reuseStatus === "permitted" &&
         source.canStoreContent &&
-        source.canonicalUrl.startsWith("https://www.legis.state.pa.us/");
+        (
+          source.canonicalUrl.startsWith("https://www.legis.state.pa.us/") ||
+          source.canonicalUrl.startsWith("https://www.palegis.us/statutes/unconsolidated/")
+        );
     })).toBe(true);
     expect(seed.snapshots.every((snapshot) =>
       snapshot.metadata.attorneyReview === "pending",

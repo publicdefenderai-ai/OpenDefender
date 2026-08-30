@@ -20,7 +20,7 @@ describe("public-source coverage gate", () => {
     expect(report.jurisdictions.map((row) => row.jurisdiction)).toEqual(
       [...CURRENT_PUBLIC_SOURCE_JURISDICTIONS],
     );
-    expect(report.belowTargetJurisdictions).toEqual(["GA", "PA"]);
+    expect(report.belowTargetJurisdictions).toEqual(["GA"]);
 
     for (const row of report.jurisdictions) {
       expect(row.catalogRows).toBeGreaterThan(0);
@@ -85,7 +85,7 @@ describe("public-source coverage gate", () => {
     expect(georgia.blocker?.kind).toBe("source_access");
     expect(georgia.blocker?.evidence).toContain("cookie/human-verification");
     expect(georgia.blocker?.evidence).toContain("omit pddocid/pddocfullpath");
-    expect(pennsylvania.status).toBe("blocked");
+    expect(pennsylvania.status).toBe("meets_target");
     expect(pennsylvania.blocker?.kind).toBe("source_access");
     expect(pennsylvania.blocker?.nextStep).toContain("official PA source probe");
     expect(georgia.officialSourceAvailability).toBe("unavailable");
