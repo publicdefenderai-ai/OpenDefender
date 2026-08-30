@@ -153,6 +153,34 @@ test.describe("intent navigation and accessibility", () => {
     await expect(combobox).toBeFocused();
   });
 
+  test("release search keeps withheld authority charges out of results", async ({ page }) => {
+    test.skip(!process.env.RELEASE_CHECK_PORT, "Release-only authority eligibility regression");
+
+    const withheldResponse = await page.request.get(
+      "/api/site-search?q=minor&types=charge&limit=50",
+    );
+    expect(withheldResponse.ok()).toBe(true);
+    const withheldPayload = await withheldResponse.json();
+    expect(
+      withheldPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ny-minor-in-possession",
+      ),
+    ).toBe(false);
+
+    const retainedResponse = await page.request.get(
+      "/api/site-search?q=grand%20larceny&types=charge&limit=50",
+    );
+    expect(retainedResponse.ok()).toBe(true);
+    const retainedPayload = await retainedResponse.json();
+    expect(
+      retainedPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ny-grand-theft-in-the-first-degree",
+      ),
+    ).toBe(true);
+  });
+
   test("mobile resource tools render their initial states without overflow", async ({ page }) => {
     await page.setViewportSize({ width: 360, height: 800 });
 
