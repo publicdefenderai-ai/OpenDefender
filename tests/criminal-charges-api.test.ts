@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeAll } from 'vitest';
 import { CALIFORNIA_CANONICAL_RECORDS } from '../shared/california-authority';
+import { openApiSpec } from '../server/openapi';
 
 const BASE_URL = 'http://localhost:5000';
 
@@ -198,6 +199,28 @@ interface V1SearchResponse {
   results: V1SearchResult[];
   meta: { totalResults: number; queryTime: number; suggestions: string[] };
 }
+
+describe('GET /api/v1/search — result-limit documentation contract', () => {
+  it('documents the charge-only and mixed-content defaults and caps', () => {
+    const limitParameter = openApiSpec.paths['/search'].get.parameters.find(
+      (parameter) => parameter.name === 'limit',
+    );
+
+    expect(limitParameter).toBeDefined();
+    expect(limitParameter?.description).toMatch(
+      /Charge-only searches \(types=charge\) default to 50 results and allow up to 500 results\./,
+    );
+    expect(limitParameter?.description).toMatch(
+      /Mixed-content searches default to 20 results and remain capped at 100\./,
+    );
+    expect(limitParameter?.schema).toMatchObject({
+      type: 'integer',
+      minimum: 1,
+      maximum: 500,
+      default: 20,
+    });
+  });
+});
 
 let v1Response: V1SearchResponse;
 
