@@ -179,6 +179,24 @@ test.describe("intent navigation and accessibility", () => {
           result.document?.id === "charge-ny-grand-theft-in-the-first-degree",
       ),
     ).toBe(true);
+
+    const californiaResponse = await page.request.get(
+      "/api/site-search?q=grand%20theft&types=charge&limit=50",
+    );
+    expect(californiaResponse.ok()).toBe(true);
+    const californiaPayload = await californiaResponse.json();
+    expect(
+      californiaPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ca-grand-theft-487-a",
+      ),
+    ).toBe(true);
+    expect(
+      californiaPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ca-grand-theft-in-the-first-degree",
+      ),
+    ).toBe(false);
   });
 
   test("mobile resource tools render their initial states without overflow", async ({ page }) => {

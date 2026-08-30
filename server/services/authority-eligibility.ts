@@ -1,4 +1,5 @@
 import { getSelectableCharges } from "@shared/criminal-charges";
+import { CALIFORNIA_CANONICAL_RECORDS } from "@shared/california-authority";
 import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
 import { getCurrentCaliforniaSelectableChargeIds } from "./california-source-database";
 
@@ -32,6 +33,25 @@ function getReleaseCheckSelectableChargeIds(): Set<string> | undefined {
     }
     fixtureIds.add(id);
   }
+
+  const expectedCaliforniaIds = new Set(
+    CALIFORNIA_CANONICAL_RECORDS
+      .filter((record) => record.selectable)
+      .map((record) => record.canonicalId),
+  );
+  const fixtureCaliforniaIds = new Set(
+    [...fixtureIds].filter((id) => catalogById.get(id)?.jurisdiction === "CA"),
+  );
+  const missingCaliforniaIds = [...expectedCaliforniaIds]
+    .filter((id) => !fixtureCaliforniaIds.has(id));
+  const unexpectedCaliforniaIds = [...fixtureCaliforniaIds]
+    .filter((id) => !expectedCaliforniaIds.has(id));
+  if (missingCaliforniaIds.length > 0 || unexpectedCaliforniaIds.length > 0) {
+    throw new Error(
+      `Release-check California authority fixture is out of sync: missing=${missingCaliforniaIds.join(",") || "none"}, unexpected=${unexpectedCaliforniaIds.join(",") || "none"}`,
+    );
+  }
+
   return fixtureIds;
 }
 
