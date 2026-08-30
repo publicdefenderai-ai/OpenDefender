@@ -40,7 +40,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { criminalCharges, getChargeConfidence, isCitationVerified } from '../../shared/criminal-charges';
+import { criminalCharges } from '../../shared/criminal-charges';
 import type { CriminalCharge } from '../../shared/criminal-charges';
 import { CHARGE_CITATIONS } from '../../shared/criminal-charge-citations';
 
@@ -55,6 +55,13 @@ try {
 } catch { /* .env not present — keys must be set in environment */ }
 
 // ── CLI argument parsing ──────────────────────────────────────────────────────
+
+/** Returns the confidence level for a charge, defaulting to 'unverified'. */
+function getChargeConfidence(
+  charge: CriminalCharge
+): 'unverified' | 'low' | 'medium' | 'high' {
+  return charge.dataConfidence ?? 'unverified';
+}
 
 const args = process.argv.slice(2);
 const INCLUDE_PENDING = args.includes('--all');

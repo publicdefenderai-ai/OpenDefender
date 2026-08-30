@@ -43,6 +43,7 @@ interface VerificationResult {
   status: string;
   needsManualReview: boolean;
   reason?: string;
+  checkedAt?: string;
 }
 
 interface Report {

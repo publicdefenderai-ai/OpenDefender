@@ -160,16 +160,18 @@ function hasFloridaSubdivision(html: string, subdivision: string): boolean {
   const nearestBlockAncestor = (node: FloridaHtmlNode): FloridaHtmlNode | null => {
     let current = node.parent;
     while (current) {
-      if ([...blockClasses].some((className) => hasClass(current, className))) return current;
-      current = current.parent;
+      const ancestor = current;
+      if ([...blockClasses].some((className) => hasClass(ancestor, className))) return ancestor;
+      current = ancestor.parent;
     }
     return null;
   };
   const nearestSubsectionAncestor = (node: FloridaHtmlNode): FloridaHtmlNode | null => {
     let current = node.parent;
     while (current) {
-      if (hasClass(current, "Subsection")) return current;
-      current = current.parent;
+      const ancestor = current;
+      if (hasClass(ancestor, "Subsection")) return ancestor;
+      current = ancestor.parent;
     }
     return null;
   };
@@ -184,8 +186,9 @@ function hasFloridaSubdivision(html: string, subdivision: string): boolean {
     const blocks: FloridaHtmlNode[] = [];
     let current = node.parent;
     while (current) {
-      if ([...blockClasses].some((className) => hasClass(current, className))) blocks.push(current);
-      current = current.parent;
+      const ancestor = current;
+      if ([...blockClasses].some((className) => hasClass(ancestor, className))) blocks.push(ancestor);
+      current = ancestor.parent;
     }
     const path: string[] = [];
     for (const block of blocks.reverse()) {
