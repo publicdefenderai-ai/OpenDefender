@@ -1,4 +1,8 @@
 import { expect, test } from "@playwright/test";
+import {
+  CALIFORNIA_CANONICAL_RECORDS,
+  CALIFORNIA_LEGACY_DISPOSITIONS,
+} from "../../shared/california-authority";
 
 type JurisdictionBoundary = {
   name: string;
@@ -58,6 +62,39 @@ async function expectChargePresence(
 }
 
 test.describe("authority boundary release gate", () => {
+  test("public v1 charge search returns all current California authority without withheld IDs", async ({ page }) => {
+    const currentCaliforniaIds = CALIFORNIA_CANONICAL_RECORDS
+      .filter((record) => record.selectable)
+      .map((record) => record.canonicalId);
+    const currentCaliforniaIdSet = new Set(currentCaliforniaIds);
+    const withheldCaliforniaIds = CALIFORNIA_LEGACY_DISPOSITIONS
+      .map((entry) => entry.legacyId)
+      .filter((id) => !currentCaliforniaIdSet.has(id));
+
+    const searchResponse = await page.request.get(
+      "/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500",
+    );
+    expect(searchResponse.ok()).toBe(true);
+    const searchPayload = await searchResponse.json() as SearchPayload;
+    const returnedIds = new Set(
+      searchPayload.results
+        .map((result) => result.document?.id)
+        .filter((id): id is string => typeof id === "string")
+        .map((id) => id.replace(/^charge-/, "")),
+    );
+
+    expect(
+      returnedIds,
+      "Public v1 charge search did not return every current California authority ID",
+    ).toEqual(currentCaliforniaIdSet);
+    for (const chargeId of withheldCaliforniaIds) {
+      expect(
+        returnedIds.has(chargeId),
+        `Public v1 charge search returned withheld California authority: ${chargeId}`,
+      ).toBe(false);
+    }
+  });
+
   for (const boundary of boundaries) {
     test(`${boundary.name} keeps withheld authority out of release APIs`, async ({ page }) => {
       const chargesResponse = await page.request.get(

@@ -74,7 +74,10 @@ export function registerV1Routes(app: Express): void {
       // comprehensive results, not a mixed cross-type list capped at 20.
       const chargesOnlySearch = types === 'charge';
       const defaultLimit = chargesOnlySearch ? 50 : 20;
-      const limit = Math.min(parseInt(req.query.limit as string) || defaultLimit, 100);
+      // Keep mixed-content searches bounded, but allow the public charge
+      // endpoint to return the complete authority set requested by callers.
+      const maxLimit = chargesOnlySearch ? 500 : 100;
+      const limit = Math.min(parseInt(req.query.limit as string) || defaultLimit, maxLimit);
 
       if (!q || q.length < 2 || q.length > 100) {
         return res.status(400).json({
