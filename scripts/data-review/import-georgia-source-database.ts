@@ -1,13 +1,14 @@
 /**
  * Build Georgia's committed authority manifest.
  *
- * The General Assembly's public Lexis TOC search does render codified section
- * results. This is an automation restriction rather than a total access
- * failure: complete documents require browser cookie/human-verification state,
- * while result rows omit the durable pddocid and currentness evidence required
- * by the manifest. Never substitute secondary mirrors for selectable
- * authority: every current Georgia catalog row remains withheld until the
- * official complete-document contract is independently repeatable.
+ * The General Assembly's official API exposes title metadata, while its public
+ * Lexis TOC search renders codified section results. This is an automation
+ * restriction rather than a total access failure: complete documents require
+ * browser cookie/human-verification state, while result rows omit the durable
+ * pddocid and currentness evidence required by the manifest. Never substitute
+ * secondary mirrors for selectable authority: every current Georgia catalog row
+ * remains withheld until the official complete-document contract is
+ * independently repeatable.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -20,7 +21,7 @@ import {
 } from "../../server/data/georgia-source-database-seed";
 
 export const GEORGIA_OFFICIAL_SOURCE_LIMITATION =
-  "Georgia's official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.";
+  "Georgia's official General Assembly API exposes only title metadata through georgia-code/titles and requires a site-issued bearer token; it has no public section-text endpoint. The official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.";
 
 export function buildGeorgiaAuthorityManifest(
   generatedAt = new Date(),

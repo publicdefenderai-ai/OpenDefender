@@ -48,6 +48,17 @@ describe("Georgia authority manifest", () => {
     expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.endpoint).toBe(
       "https://www.lexisnexis.com/hottopics/gacode/",
     );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.officialSiteApiBase).toBe(
+      "https://www.legis.ga.gov/api/",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.titleMetadataEndpoint).toBe(
+      "https://www.legis.ga.gov/api/georgia-code/titles",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.titleMetadataResponse).toContain(
+      "no codified section text",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.sectionTextEndpoint).toBeNull();
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.requiresSiteIssuedBearerToken).toBe(true);
     expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.sectionLookupEndpoint).toBe(
       "https://advance.lexis.com/container/",
     );
@@ -60,7 +71,12 @@ describe("Georgia authority manifest", () => {
     expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.accessFinding).toContain(
       "cookie/human-verification",
     );
-    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.status).toBe("automation_restricted");
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.accessFinding).toContain(
+      "title metadata",
+    );
+    expect(GEORGIA_PUBLIC_ACCESS_CONTRACT.status).toBe(
+      "no_public_section_contract",
+    );
     expect(GEORGIA_SECONDARY_SOURCE_OPTIONS).toHaveLength(3);
     expect(GEORGIA_SECONDARY_SOURCE_OPTIONS.every((source) =>
       source.role === "discovery_only"

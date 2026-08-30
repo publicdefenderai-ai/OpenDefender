@@ -144,11 +144,11 @@ export const PUBLIC_SOURCE_ACCESS_BLOCKERS: Readonly<
 > = Object.freeze({
   GA: Object.freeze({
     kind: "source_access",
-    source: "Georgia General Assembly public Lexis access page",
+    source: "Georgia General Assembly API and public Lexis access page",
     summary:
-      "Official section results are human-accessible, but complete-document automation is restricted and required identity/currentness evidence is unavailable to the importer.",
+      "The official API returns title metadata only; official section results are human-accessible through Lexis, but complete-document automation is restricted and required identity/currentness evidence is unavailable to the importer.",
     evidence:
-      "The stable TOC lookup renders official citations and snippets. Unattended complete-document requests require browser cookie/human-verification state, while result rows omit pddocid/pddocfullpath and History currentness evidence.",
+      "The official georgia-code/titles API requires a site-issued bearer token and returns title identifiers/names without section text. The Lexis TOC lookup renders official citations and snippets, but unattended complete-document requests require browser cookie/human-verification state, while result rows omit pddocid/pddocfullpath and History currentness evidence.",
     nextStep:
       "Obtain an automatable complete-document contract from the Georgia Code Revision Commission; use Justia and public mirrors for discovery only, never selectable authority.",
   }),
