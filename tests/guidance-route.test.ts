@@ -27,10 +27,12 @@ import {
   HIGH_PUBLIC_SOURCE_COVERAGE_TARGET,
 } from '../server/data/public-source-coverage';
 import type { PublicSourceCoverageReport } from '../server/data/public-source-coverage';
+import { storage } from '../server/storage';
 
 // ── Hoisted in-memory persistence for the saved-guidance boundary ─────────────
-const { caseStore } = vi.hoisted(() => ({
+const { caseStore, enrichmentUpdateCallbacks } = vi.hoisted(() => ({
   caseStore: {} as Record<string, any>,
+  enrichmentUpdateCallbacks: [] as Array<() => Promise<void> | void>,
 }));
 
 // ── Required top-level fields the guidance dashboard reads ────────────────────
@@ -89,7 +91,11 @@ vi.mock('../server/storage', () => ({
     }),
     getLegalCase: vi.fn().mockImplementation(async (sessionId: string) => caseStore[sessionId] ?? null),
     getLegalCasesBySession: vi.fn().mockResolvedValue([]),
-    updateLegalCaseGuidance: vi.fn().mockResolvedValue(undefined),
+    updateLegalCaseGuidance: vi.fn().mockImplementation(async (sessionId: string, guidance: unknown) => {
+      if (caseStore[sessionId]) {
+        caseStore[sessionId].guidance = guidance;
+      }
+    }),
     deleteLegalCase: vi.fn().mockResolvedValue(undefined),
     deleteExpiredCases: vi.fn().mockResolvedValue(0),
     createLegalResource: vi.fn().mockResolvedValue({}),
@@ -208,7 +214,12 @@ vi.mock('../server/services/claude-guidance', () => ({
   testClaudeConnection: vi.fn().mockResolvedValue({ ok: true }),
   clearSessionCache: vi.fn(),
   getGuidanceCacheKey: vi.fn().mockReturnValue('test-cache-key'),
-  startOptionalSourceEnrichment: vi.fn(),
+  startOptionalSourceEnrichment: vi.fn().mockImplementation((...args: unknown[]) => {
+    const onUpdated = args[4] as (() => Promise<void> | void) | undefined;
+    if (onUpdated) {
+      enrichmentUpdateCallbacks.push(onUpdated);
+    }
+  }),
 }));
 vi.mock('../shared/playbooks/index', () => ({
   getPlaybooks: vi.fn().mockReturnValue([]),
@@ -229,6 +240,7 @@ afterEach(() => {
   for (const key of Object.keys(caseStore)) {
     delete caseStore[key];
   }
+  enrichmentUpdateCallbacks.length = 0;
 });
 
 // ── Minimal valid request body (rules route schema) ───────────────────────────
@@ -558,6 +570,60 @@ describe('legal guidance routes — canonical charge parity', () => {
       expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI-Invented Charge Title');
       expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI § 999.9');
       expect(streamClaudeGuidance).toHaveBeenCalledTimes(1);
+    } finally {
+      (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+      vi.unstubAllEnvs();
+    }
+  });
+
+  it('keeps the canonical charge identity after optional enrichment updates saved streaming guidance', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', 'test-anthropic-key');
+
+    const { streamClaudeGuidance } = await import('../server/services/claude-guidance');
+    const updateLegalCaseGuidance = vi.mocked(storage.updateLegalCaseGuidance);
+    updateLegalCaseGuidance.mockClear();
+    (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+
+    try {
+      const sessionId = 'stream-enrichment-canonical-session';
+      const createResponse = await request(testApp)
+        .post('/api/legal-guidance/stream')
+        .send({
+          ...VALID_BODY,
+          sessionId,
+          charges: [CANONICAL_SUBDIVISION_CHARGE],
+          incidentDescription: 'Mock case context for the enrichment test.',
+        })
+        .expect(200);
+
+      const completeEvent = parseSseEvents(createResponse.text)
+        .find((event) => event.type === 'complete');
+      expect(completeEvent?.success).toBe(true);
+      expect(chargeIdentity(completeEvent?.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(enrichmentUpdateCallbacks).toHaveLength(1);
+
+      // Complete the optional enrichment after the streaming response has
+      // already been returned, as happens in production.
+      await enrichmentUpdateCallbacks[0]();
+
+      expect(updateLegalCaseGuidance).toHaveBeenCalledWith(sessionId, expect.any(Object));
+      const updatedGuidance = updateLegalCaseGuidance.mock.calls.at(-1)?.[1] as Record<string, any>;
+      expect(chargeIdentity(updatedGuidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(JSON.stringify(updatedGuidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(updatedGuidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(updatedGuidance)).not.toContain('AI § 999.9');
+
+      const savedResponse = await request(testApp)
+        .get(`/api/legal-guidance/${sessionId}`)
+        .expect(200);
+
+      expect(savedResponse.body.success).toBe(true);
+      expect(chargeIdentity(savedResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI § 999.9');
     } finally {
       (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
       vi.unstubAllEnvs();
