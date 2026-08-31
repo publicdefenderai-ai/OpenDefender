@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { criminalCharges } from "../shared/criminal-charges";
@@ -23,6 +23,7 @@ import {
   extractPennsylvaniaDocument,
   extractPennsylvaniaLegacyDocument,
   fetchPennsylvaniaDocument,
+  refreshPennsylvaniaManifest,
   PENNSYLVANIA_RETRIEVAL_SOURCE,
   PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE,
   PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES,
@@ -603,6 +604,118 @@ describe("Pennsylvania authority manifest", () => {
       expect.objectContaining({ attempt: 1, kind: "connection", retrying: true }),
       expect.objectContaining({ attempt: 2, kind: "http", status: 200, retrying: false }),
     ]);
+  });
+
+  it("preserves the last manifest when every refresh failure is transport-only", async () => {
+    const temporaryDirectory = mkdtempSync(join(tmpdir(), "pa-refresh-"));
+    const temporaryManifest = join(temporaryDirectory, "manifest.json");
+    const committedManifest = readFileSync(
+      "scripts/data-review/output/pa-source-manifest.json",
+      "utf8",
+    );
+    writeFileSync(temporaryManifest, committedManifest);
+
+    try {
+      const result = await refreshPennsylvaniaManifest({
+        importedAt,
+        outputPath: temporaryManifest,
+        rateLimitMs: 0,
+        fetchImpl: async () => {
+          throw new Error("temporary PAlegis connection outage");
+        },
+        requestOptions: {
+          maxRetries: 0,
+          retryTransportDelay: () => 0,
+        },
+      });
+
+      expect(result).toMatchObject({
+        preservedManifest: true,
+        wroteManifest: false,
+        transportFailures: expect.any(Number),
+        officialPageFailures: 0,
+        contentContractFailures: 0,
+      });
+      expect(result.transportFailures).toBeGreaterThan(0);
+      expect(readFileSync(temporaryManifest, "utf8")).toBe(committedManifest);
+    } finally {
+      rmSync(temporaryDirectory, { recursive: true, force: true });
+    }
+  });
+
+  it("replaces the manifest after a refresh retrieves verified official content", async () => {
+    const temporaryDirectory = mkdtempSync(join(tmpdir(), "pa-refresh-"));
+    const temporaryManifest = join(temporaryDirectory, "manifest.json");
+    const existingManifest = loadPennsylvaniaAuthorityManifest();
+    const documentsBySourceKey = new Map(
+      existingManifest.catalogRecords.flatMap((record) =>
+        record.provisions.map((provision) => [provision.sourceKey, provision] as const),
+      ),
+    );
+    const referencesByUrl = new Map(
+      criminalCharges
+        .filter((charge) => charge.jurisdiction === "PA")
+        .flatMap((charge) => getPennsylvaniaReferences(charge.id))
+        .flatMap((reference) => [
+          [buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section), reference] as const,
+          [buildPennsylvaniaSourceUrl(reference.title, reference.section), reference] as const,
+        ]),
+    );
+
+    const htmlForRequest = (input: string): string => {
+      const url = new URL(input);
+      const title = url.searchParams.get("ttl") ?? "";
+      const chapter = url.searchParams.get("chpt") ?? "";
+      const section = url.searchParams.get("sctn") ?? "";
+      const reference = referencesByUrl.get(input);
+      const requestedSection = reference?.section ?? section;
+      const matchingProvision = [...documentsBySourceKey.values()].find((provision) =>
+        provision.lawId === title &&
+        (() => {
+          const sourceUrl = new URL(provision.sourceUrl);
+          return sourceUrl.searchParams.get("chpt") === chapter &&
+            sourceUrl.searchParams.get("sctn") === section;
+        })(),
+      );
+      if (!matchingProvision) {
+        const approved = Object.values(PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS)
+          .find((candidate) => candidate.retrievalUrl === input);
+        if (approved) {
+          return `<html><body><div>Section ${approved.section.split("-").at(-1)}. ${approved.sectionTitle}.</div><div>${approved.requiredContent.join(" ")}.</div></body></html>`;
+        }
+        return `<html><body><h1>Section ${requestedSection}.0 - Title ${title} - TEST</h1><div>§ ${requestedSection}. Representative official section.</div><div>This is complete official section text for the refresh test and contains the requested statutory content.</div></body></html>`;
+      }
+      return `<html><body><h1>Section ${requestedSection}.0 - Title ${title} - TEST</h1><div>§ ${requestedSection}. ${matchingProvision.officialTitle}.</div><div>${matchingProvision.content}</div></body></html>`;
+    };
+
+    try {
+      const result = await refreshPennsylvaniaManifest({
+        importedAt,
+        outputPath: temporaryManifest,
+        rateLimitMs: 0,
+        requestOptions: { maxRetries: 0 },
+        fetchImpl: async (input) => new Response(htmlForRequest(String(input)), {
+          status: 200,
+          headers: { "content-type": "text/html" },
+        }),
+      });
+
+      expect(result).toMatchObject({
+        preservedManifest: false,
+        wroteManifest: true,
+        transportFailures: 0,
+        officialPageFailures: 0,
+        contentContractFailures: 0,
+      });
+      const refreshedManifest = JSON.parse(readFileSync(temporaryManifest, "utf8"));
+      expect(refreshedManifest.generatedAt).toBe(importedAt.toISOString());
+      expect(refreshedManifest.catalogRecords).toHaveLength(existingManifest.catalogRecords.length);
+      expect(refreshedManifest.catalogRecords.filter((record: { disposition: string }) =>
+        record.disposition === "retain" || record.disposition === "exact_alias_rename",
+      )).toHaveLength(25);
+    } finally {
+      rmSync(temporaryDirectory, { recursive: true, force: true });
+    }
   });
 
   it("flags redirects and never treats a legacy or secondary response as official", () => {

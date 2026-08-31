@@ -34,11 +34,13 @@ function sleep(ms: number): Promise<void> {
 
 interface RequestLimiter {
   lastRequestAt: number | null;
+  minIntervalMs?: number;
 }
 
 async function waitForRateLimit(limiter: RequestLimiter): Promise<void> {
   if (limiter.lastRequestAt !== null) {
-    const remaining = RATE_LIMIT_MS - (Date.now() - limiter.lastRequestAt);
+    const remaining =
+      (limiter.minIntervalMs ?? RATE_LIMIT_MS) - (Date.now() - limiter.lastRequestAt);
     if (remaining > 0) await sleep(remaining);
   }
   limiter.lastRequestAt = Date.now();
@@ -80,6 +82,17 @@ export interface PennsylvaniaRequestOptions {
   timeoutMs?: number;
   retryDelay?: (response: Response, attempt: number) => number;
   retryTransportDelay?: (attempt: number) => number;
+}
+
+export type PennsylvaniaDocumentFailureKind =
+  | "transport"
+  | "official-page"
+  | "content-contract";
+
+export interface PennsylvaniaDocumentRefreshResult {
+  document: PennsylvaniaSourceDocument | null;
+  failureKind?: PennsylvaniaDocumentFailureKind;
+  failure?: string;
 }
 
 function transportErrorKind(error: unknown): PennsylvaniaTransportErrorKind {
@@ -216,20 +229,28 @@ async function requestPennsylvaniaSource(
 async function fetchHtml(
   url: string,
   limiter: RequestLimiter,
-): Promise<{ html: string; url: string } | { error: string }> {
+  fetchImpl: typeof fetch = fetch,
+  options: PennsylvaniaRequestOptions = {},
+): Promise<
+  { html: string; url: string } |
+  { error: string; failureKind: "transport" | "official-page" }
+> {
   await waitForRateLimit(limiter);
-  const request = await requestPennsylvaniaSource(url, fetch, {
+  const request = await requestPennsylvaniaSource(url, fetchImpl, {
     headers: {
       "User-Agent": "OpenDefender-PennsylvaniaAuthorityImporter/1.0",
       Accept: "text/html, */*",
     },
-  }, { retryDelay });
-  if ("error" in request) return request;
+  }, { ...options, retryDelay: options.retryDelay ?? retryDelay });
+  if ("error" in request) {
+    return { ...request, failureKind: "transport" };
+  }
   if (!request.response.ok) {
     return {
       error:
         `official Pennsylvania source request returned HTTP ${request.response.status} ` +
         `after ${request.attempts} attempt(s)`,
+      failureKind: "official-page",
     };
   }
   return { html: request.html, url: request.response.url || url };
@@ -594,75 +615,212 @@ export async function fetchPennsylvaniaDocument(
   retrievedAt: Date,
   limiter: RequestLimiter = { lastRequestAt: null },
 ): Promise<PennsylvaniaSourceDocument | null> {
+  return (await fetchPennsylvaniaDocumentWithResult(reference, retrievedAt, limiter)).document;
+}
+
+async function fetchPennsylvaniaDocumentWithResult(
+  reference: PennsylvaniaSourceReference,
+  retrievedAt: Date,
+  limiter: RequestLimiter,
+  fetchImpl: typeof fetch = fetch,
+  options: PennsylvaniaRequestOptions = {},
+): Promise<PennsylvaniaDocumentRefreshResult> {
   const legacy = getPennsylvaniaApprovedLegacyProvision(reference);
   if (legacy) {
-    const page = await fetchHtml(legacy.retrievalUrl, limiter);
-    if ("error" in page || page.url !== legacy.retrievalUrl) return null;
-    return extractPennsylvaniaLegacyDocument(
+    const page = await fetchHtml(legacy.retrievalUrl, limiter, fetchImpl, options);
+    if ("error" in page) return page;
+    if (page.url !== legacy.retrievalUrl) {
+      return {
+        document: null,
+        failureKind: "official-page",
+        failure: `official Pennsylvania legacy source returned an unexpected URL: ${page.url}`,
+      };
+    }
+    const document = extractPennsylvaniaLegacyDocument(
       page.html,
       legacy,
       legacy.canonicalUrl,
       retrievedAt,
     );
+    return document
+      ? { document }
+      : {
+        document: null,
+        failureKind: "content-contract",
+        failure: `official Pennsylvania legacy source did not contain the expected section ${legacy.section}`,
+      };
   }
   const canonicalUrl = buildPennsylvaniaSourceUrl(reference.title, reference.section);
   const retrievalUrls = [
     buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section),
     canonicalUrl,
   ];
+  const failures: Array<{
+    kind: PennsylvaniaDocumentFailureKind;
+    message: string;
+  }> = [];
 
   for (const retrievalUrl of retrievalUrls) {
-    const page = await fetchHtml(retrievalUrl, limiter);
-    if ("error" in page) continue;
-    if (!isPennsylvaniaOfficialUrl(page.url)) continue;
+    const page = await fetchHtml(retrievalUrl, limiter, fetchImpl, options);
+    if ("error" in page) {
+      failures.push({ kind: page.failureKind, message: page.error });
+      continue;
+    }
+    if (!isPennsylvaniaOfficialUrl(page.url)) {
+      failures.push({
+        kind: "official-page",
+        message: `official Pennsylvania source returned a non-official URL: ${page.url}`,
+      });
+      continue;
+    }
     let document = extractPennsylvaniaDocument(
       page.html,
       reference.section,
       canonicalUrl,
       retrievedAt,
     );
-    if (document) return document;
+    if (document) return { document };
+    failures.push({
+      kind: "content-contract",
+      message: `official Pennsylvania source did not contain extractable section ${reference.title}-${reference.section}`,
+    });
 
     // The legacy site used a frameset, and a migrated page may still expose
     // one while redirecting. Traverse only same-authority official URLs and
     // retain the canonical manifest URL on any successful document.
     const frameUrl = sourceFrameUrl(page.html, page.url);
     if (frameUrl && isPennsylvaniaOfficialUrl(frameUrl)) {
-      const frame = await fetchHtml(frameUrl, limiter);
-      if (!("error" in frame)) {
-        if (!isPennsylvaniaOfficialUrl(frame.url)) continue;
-        document = extractPennsylvaniaDocument(
-          frame.html,
-          reference.section,
-          canonicalUrl,
-          retrievedAt,
-        );
-        if (document) return document;
+      const frame = await fetchHtml(frameUrl, limiter, fetchImpl, options);
+      if ("error" in frame) {
+        failures.push({ kind: frame.failureKind, message: frame.error });
+        continue;
       }
+      if (!isPennsylvaniaOfficialUrl(frame.url)) {
+        failures.push({
+          kind: "official-page",
+          message: `official Pennsylvania frame returned a non-official URL: ${frame.url}`,
+        });
+        continue;
+      }
+      document = extractPennsylvaniaDocument(
+        frame.html,
+        reference.section,
+        canonicalUrl,
+        retrievedAt,
+      );
+      if (document) return { document };
+      failures.push({
+        kind: "content-contract",
+        message: `official Pennsylvania frame did not contain extractable section ${reference.title}-${reference.section}`,
+      });
     }
   }
-  return null;
+  const failureKind = failures.every(({ kind }) => kind === "transport")
+    ? "transport"
+    : failures.some(({ kind }) => kind === "content-contract")
+      ? "content-contract"
+      : "official-page";
+  return {
+    document: null,
+    failureKind,
+    failure: failures.map(({ message }) => message).join(" "),
+  };
 }
 
-export async function main(): Promise<void> {
-  const importedAt = new Date();
+export interface PennsylvaniaManifestRefreshOptions {
+  importedAt?: Date;
+  outputPath?: string;
+  fetchImpl?: typeof fetch;
+  requestOptions?: PennsylvaniaRequestOptions;
+  rateLimitMs?: number;
+}
+
+export interface PennsylvaniaManifestRefreshSummary {
+  outputPath: string;
+  catalogRecords: number;
+  retained: number;
+  withheld: number;
+  sources: number;
+  snapshots: number;
+  requests: number;
+  transportFailures: number;
+  officialPageFailures: number;
+  contentContractFailures: number;
+  wroteManifest: boolean;
+  preservedManifest: boolean;
+}
+
+export async function refreshPennsylvaniaManifest(
+  options: PennsylvaniaManifestRefreshOptions = {},
+): Promise<PennsylvaniaManifestRefreshSummary> {
+  const importedAt = options.importedAt ?? new Date();
   const charges = criminalCharges.filter((charge) => charge.jurisdiction === "PA");
   const documentCache = new Map<string, PennsylvaniaSourceDocument | null>();
-  const requestLimiter: RequestLimiter = { lastRequestAt: null };
+  const requestLimiter: RequestLimiter = {
+    lastRequestAt: null,
+    minIntervalMs: options.rateLimitMs,
+  };
   let requests = 0;
+  let transportFailures = 0;
+  let officialPageFailures = 0;
+  let contentContractFailures = 0;
 
   for (const charge of charges) {
     const references = getPennsylvaniaReferences(charge.id);
     for (const reference of references) {
       const key = `${reference.sourceKind ?? "consolidated"}:${reference.title}:${reference.section}`;
       if (documentCache.has(key)) continue;
-      const document = await fetchPennsylvaniaDocument(reference, importedAt, requestLimiter);
+      const result = await fetchPennsylvaniaDocumentWithResult(
+        reference,
+        importedAt,
+        requestLimiter,
+        options.fetchImpl,
+        options.requestOptions,
+      );
       requests++;
-      documentCache.set(key, document);
+      documentCache.set(key, result.document);
+      if (result.failureKind) {
+        if (result.failureKind === "transport") transportFailures++;
+        if (result.failureKind === "official-page") officialPageFailures++;
+        if (result.failureKind === "content-contract") contentContractFailures++;
+      }
       const label = reference.sourceKind === "unconsolidated" ? "P.S." : "Pa.C.S.";
-      if (document) console.log(`[OK] ${reference.title} ${label} § ${reference.section} — ${document.title}`);
-      else console.error(`[FAIL] ${reference.title} ${label} § ${reference.section}`);
+      if (result.document) {
+        console.log(`[OK] ${reference.title} ${label} § ${reference.section} — ${result.document.title}`);
+      } else {
+        console.error(
+          `[FAIL][${result.failureKind}] ${reference.title} ${label} § ${reference.section}` +
+          (result.failure ? ` — ${result.failure}` : ""),
+        );
+      }
     }
+  }
+
+  const outputPath = options.outputPath ??
+    path.join(process.cwd(), "scripts/data-review/output/pa-source-manifest.json");
+  const transportOnlyFailure =
+    transportFailures > 0 &&
+    officialPageFailures === 0 &&
+    contentContractFailures === 0;
+  if (transportOnlyFailure) {
+    console.error(
+      `[PRESERVED] Pennsylvania manifest was not replaced: ${transportFailures} ` +
+      "source reference(s) failed during transport. Retry after official-source access is restored.",
+    );
+    return {
+      outputPath,
+      catalogRecords: charges.length,
+      retained: 0,
+      withheld: 0,
+      sources: 0,
+      snapshots: 0,
+      requests,
+      transportFailures,
+      officialPageFailures,
+      contentContractFailures,
+      wroteManifest: false,
+      preservedManifest: true,
+    };
   }
 
   const records = charges.map((charge) => {
@@ -689,10 +847,9 @@ export async function main(): Promise<void> {
     source: PENNSYLVANIA_MANIFEST_SOURCE,
     catalogRecords: records,
   };
-  const outputPath = path.join(process.cwd(), "scripts/data-review/output/pa-source-manifest.json");
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2));
-  console.log(JSON.stringify({
+  const summary = {
     outputPath,
     catalogRecords: records.length,
     retained: records.filter((record) =>
@@ -703,7 +860,19 @@ export async function main(): Promise<void> {
       record.provisions.map((provision) => provision.sourceKey))).size,
     snapshots: records.reduce((sum, record) => sum + record.provisions.length, 0),
     requests,
-  }, null, 2));
+    transportFailures,
+    officialPageFailures,
+    contentContractFailures,
+    wroteManifest: true,
+    preservedManifest: false,
+  };
+  console.log(JSON.stringify(summary, null, 2));
+  return summary;
+}
+
+export async function main(): Promise<void> {
+  const result = await refreshPennsylvaniaManifest();
+  if (result.preservedManifest) process.exitCode = 1;
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))) {
