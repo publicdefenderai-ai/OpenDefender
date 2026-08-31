@@ -21,9 +21,21 @@ import {
   type SouthCarolinaSourceAudit,
   type SouthCarolinaSourceDocument,
 } from "../../server/data/south-carolina-source-database-seed";
+import { loadSouthCarolinaAuthorityManifest } from "../../server/data/south-carolina-manifest-loader";
 
 const RATE_LIMIT_MS = 700;
 const MAX_RETRIES = 3;
+const SOUTH_CAROLINA_FINDING_CODES: SouthCarolinaAuditFindingCode[] = [
+  "official_source_verified",
+  "citation_not_parseable",
+  "catalog_code_mismatch",
+  "official_fetch_failure",
+  "section_not_found",
+  "content_missing",
+  "history_missing",
+  "subdivision_not_found",
+  "official_title_mismatch",
+];
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -148,6 +160,225 @@ export interface SouthCarolinaDocumentInspection {
   contentEvidence: boolean;
   contentHash: string | null;
   findings: SouthCarolinaAuditFinding[];
+}
+
+export interface SouthCarolinaCatalogReferenceInventory {
+  section: string;
+  subdivision: string | null;
+  citation: string;
+  officialUrl: string;
+}
+
+export interface SouthCarolinaCatalogRowInventory {
+  chargeId: string;
+  catalogLabel: string;
+  catalogCode: string;
+  catalogCategory: string;
+  citation: string;
+  references: SouthCarolinaCatalogReferenceInventory[];
+}
+
+/**
+ * This is the network-independent portion of the importer output. Keeping it
+ * separate from retrieved document content makes catalog edits detectable
+ * without re-fetching the official source during validation.
+ */
+export function getSouthCarolinaCatalogReferenceInventory(): SouthCarolinaCatalogRowInventory[] {
+  return criminalCharges
+    .filter((charge) => charge.jurisdiction === "SC")
+    .map((charge) => {
+      const citation = CHARGE_CITATIONS[charge.id]?.citation ?? "";
+      return {
+        chargeId: charge.id,
+        catalogLabel: charge.name,
+        catalogCode: charge.code,
+        catalogCategory: charge.category,
+        citation,
+        references: parseSouthCarolinaCitation(citation).map((reference) => ({
+          section: reference.section,
+          subdivision: reference.subdivision,
+          citation: `S.C. Code Ann. § ${reference.section}${reference.subdivision ?? ""}`,
+          officialUrl: buildSouthCarolinaSourceUrl(reference.section),
+        })),
+      };
+    });
+}
+
+function getManifestCatalogReferenceInventory(
+  records: SouthCarolinaManifestRecord[],
+): SouthCarolinaCatalogRowInventory[] {
+  return records.map((record) => ({
+    chargeId: record.chargeId,
+    catalogLabel: record.catalogLabel,
+    catalogCode: record.catalogCode,
+    catalogCategory: record.catalogCategory,
+    citation: record.sourceAudit.citation,
+    references: record.sourceAudit.references.map((reference) => ({
+      section: reference.section,
+      subdivision: reference.subdivision,
+      citation: reference.citation,
+      officialUrl: reference.officialUrl,
+    })),
+  }));
+}
+
+function buildSouthCarolinaAudit(
+  records: SouthCarolinaManifestRecord[],
+): NonNullable<SouthCarolinaAuthorityManifest["audit"]> {
+  const allFindings = records.flatMap((record) => record.auditFindings);
+  const references = records.flatMap((record) => record.sourceAudit.references);
+  const findingCounts = Object.fromEntries(
+    SOUTH_CAROLINA_FINDING_CODES.map((code) => [
+      code,
+      allFindings.filter((finding) => finding.code === code).length,
+    ]),
+  ) as Record<SouthCarolinaAuditFindingCode, number>;
+  const buildClassificationSummary = (classification: "mechanical" | "structural") => {
+    const findings = allFindings.filter((finding) => finding.classification === classification);
+    return {
+      findingCodes: SOUTH_CAROLINA_FINDING_CODES.filter((code) =>
+        findings.some((finding) => finding.code === code)),
+      affectedRows: new Set(
+        records
+          .filter((record) => record.auditFindings.some((finding) =>
+            finding.classification === classification))
+          .map((record) => record.chargeId),
+      ).size,
+      affectedReferences: findings.filter((finding) => finding.reference !== null).length,
+    };
+  };
+  return {
+    schemaVersion: 1,
+    catalogRowCount: records.length,
+    parsedReferenceCount: references.length,
+    successfulOfficialRetrievals: references.filter((reference) => reference.fetchStatus === "success").length,
+    completeSectionExtractions: references.filter(
+      (reference) => reference.sectionExtractionStatus === "complete",
+    ).length,
+    findingCounts,
+    mechanical: buildClassificationSummary("mechanical"),
+    structural: buildClassificationSummary("structural"),
+  };
+}
+
+function formatInventoryValue(value: unknown): string {
+  return JSON.stringify(value);
+}
+
+function compareSouthCarolinaInventory(
+  expected: SouthCarolinaCatalogRowInventory[],
+  actual: SouthCarolinaCatalogRowInventory[],
+): string[] {
+  const issues: string[] = [];
+  const expectedById = new Map(expected.map((row) => [row.chargeId, row]));
+  const actualById = new Map(actual.map((row) => [row.chargeId, row]));
+
+  for (const row of expected) {
+    const actualRow = actualById.get(row.chargeId);
+    if (!actualRow) {
+      issues.push(`missing catalog row ${row.chargeId}`);
+      continue;
+    }
+    for (const field of ["catalogLabel", "catalogCode", "catalogCategory", "citation"] as const) {
+      if (actualRow[field] !== row[field]) {
+        issues.push(
+          `catalog row ${row.chargeId} ${field} changed ` +
+          `from ${formatInventoryValue(actualRow[field])} to ${formatInventoryValue(row[field])}`,
+        );
+      }
+    }
+    if (actualRow.references.length !== row.references.length) {
+      issues.push(
+        `parsed reference inventory for ${row.chargeId} changed ` +
+        `from ${actualRow.references.length} to ${row.references.length} references`,
+      );
+      continue;
+    }
+    row.references.forEach((reference, index) => {
+      const actualReference = actualRow.references[index];
+      if (
+        actualReference.section !== reference.section ||
+        actualReference.subdivision !== reference.subdivision ||
+        actualReference.citation !== reference.citation
+      ) {
+        issues.push(
+          `parsed reference inventory for ${row.chargeId} at position ${index + 1} changed ` +
+          `from ${formatInventoryValue(actualReference)} to ${formatInventoryValue(reference)}`,
+        );
+      } else if (actualReference.officialUrl !== reference.officialUrl) {
+        issues.push(
+          `official URL for ${row.chargeId} reference ${reference.section} changed ` +
+          `from ${actualReference.officialUrl} to ${reference.officialUrl}`,
+        );
+      }
+    });
+  }
+  for (const row of actual) {
+    if (!expectedById.has(row.chargeId)) {
+      issues.push(`unexpected catalog row ${row.chargeId}`);
+    }
+  }
+  return issues;
+}
+
+function compareSouthCarolinaAudit(
+  expected: NonNullable<SouthCarolinaAuthorityManifest["audit"]>,
+  actual: NonNullable<SouthCarolinaAuthorityManifest["audit"]> | undefined,
+): string[] {
+  if (!actual) return ["audit summary is missing"];
+  const issues: string[] = [];
+  const expectedJson = JSON.stringify(expected);
+  const actualJson = JSON.stringify(actual);
+  if (expectedJson === actualJson) return issues;
+
+  for (const field of [
+    "catalogRowCount",
+    "parsedReferenceCount",
+    "successfulOfficialRetrievals",
+    "completeSectionExtractions",
+  ] as const) {
+    if (actual[field] !== expected[field]) {
+      issues.push(
+        `audit count ${field} changed from ${actual[field]} to ${expected[field]}`,
+      );
+    }
+  }
+  if (JSON.stringify(actual.findingCounts) !== JSON.stringify(expected.findingCounts)) {
+    issues.push("audit finding counts changed");
+  }
+  for (const classification of ["mechanical", "structural"] as const) {
+    if (JSON.stringify(actual[classification]) !== JSON.stringify(expected[classification])) {
+      issues.push(`audit ${classification} summary changed`);
+    }
+  }
+  return issues;
+}
+
+export function findSouthCarolinaManifestDrift(
+  manifest: Pick<SouthCarolinaAuthorityManifest, "catalogRecords" | "audit">,
+): string[] {
+  const inventoryIssues = compareSouthCarolinaInventory(
+    getSouthCarolinaCatalogReferenceInventory(),
+    getManifestCatalogReferenceInventory(manifest.catalogRecords),
+  );
+  const auditIssues = compareSouthCarolinaAudit(
+    buildSouthCarolinaAudit(manifest.catalogRecords),
+    manifest.audit,
+  );
+  return [...inventoryIssues, ...auditIssues];
+}
+
+export function assertSouthCarolinaManifestIsCurrent(
+  manifest: Pick<SouthCarolinaAuthorityManifest, "catalogRecords" | "audit">,
+): void {
+  const issues = findSouthCarolinaManifestDrift(manifest);
+  if (issues.length === 0) return;
+  throw new Error(
+    "South Carolina authority manifest is stale. Regenerate it with " +
+    "`npx tsx scripts/data-review/import-south-carolina-source-database.ts` " +
+    "and review the committed report before continuing:\n" +
+    issues.map((issue) => `- ${issue}`).join("\n"),
+  );
 }
 
 export function inspectSouthCarolinaDocument(
@@ -502,50 +733,12 @@ export async function refreshSouthCarolinaManifest(
     return summary;
   }
 
-  const findingCodes: SouthCarolinaAuditFindingCode[] = [
-    "official_source_verified",
-    "citation_not_parseable",
-    "catalog_code_mismatch",
-    "official_fetch_failure",
-    "section_not_found",
-    "content_missing",
-    "history_missing",
-    "subdivision_not_found",
-    "official_title_mismatch",
-  ];
-  const allFindings = records.flatMap((record) => record.auditFindings);
-  const findingCounts = Object.fromEntries(
-    findingCodes.map((code) => [code, allFindings.filter((finding) => finding.code === code).length]),
-  ) as Record<SouthCarolinaAuditFindingCode, number>;
-  const references = records.flatMap((record) => record.sourceAudit.references);
-  const buildClassificationSummary = (classification: "mechanical" | "structural") => {
-    const findings = allFindings.filter((finding) => finding.classification === classification);
-    return {
-      findingCodes: findingCodes.filter((code) => findings.some((finding) => finding.code === code)),
-      affectedRows: new Set(
-        records.filter((record) => record.auditFindings.some((finding) => finding.classification === classification))
-          .map((record) => record.chargeId),
-      ).size,
-      affectedReferences: findings.filter((finding) => finding.reference !== null).length,
-    };
-  };
   const manifest: SouthCarolinaAuthorityManifest = {
     jurisdiction: "SC",
     generatedAt: importedAt,
     source: "South Carolina Legislature Code of Laws (scstatehouse.gov)",
     catalogRecords: records,
-    audit: {
-      schemaVersion: 1,
-      catalogRowCount: records.length,
-      parsedReferenceCount: references.length,
-      successfulOfficialRetrievals: references.filter((reference) => reference.fetchStatus === "success").length,
-      completeSectionExtractions: references.filter(
-        (reference) => reference.sectionExtractionStatus === "complete",
-      ).length,
-      findingCounts,
-      mechanical: buildClassificationSummary("mechanical"),
-      structural: buildClassificationSummary("structural"),
-    },
+    audit: buildSouthCarolinaAudit(records),
   };
   const selectable = records.filter((record) =>
     record.disposition === "retain" || record.disposition === "exact_alias_rename",
@@ -585,7 +778,18 @@ export async function main(): Promise<void> {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch((error) => {
+  const run = process.argv.includes("--check")
+    ? (() => {
+        const manifestPath = path.resolve(
+          process.cwd(),
+          "scripts/data-review/output/sc-source-manifest.json",
+        );
+        const manifest = loadSouthCarolinaAuthorityManifest(manifestPath);
+        assertSouthCarolinaManifestIsCurrent(manifest);
+        console.log(`South Carolina authority manifest is current: ${manifestPath}`);
+      })()
+    : main();
+  Promise.resolve(run).catch((error) => {
     console.error("South Carolina authority import failed:", error);
     process.exitCode = 1;
   });

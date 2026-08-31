@@ -21,7 +21,10 @@ import {
 } from "../server/data/south-carolina-source-database-seed";
 import { loadSouthCarolinaAuthorityManifest } from "../server/data/south-carolina-manifest-loader";
 import {
+  assertSouthCarolinaManifestIsCurrent,
   extractSouthCarolinaDocument,
+  findSouthCarolinaManifestDrift,
+  getSouthCarolinaCatalogReferenceInventory,
   inspectSouthCarolinaDocument,
   refreshSouthCarolinaManifest,
 } from "../scripts/data-review/import-south-carolina-source-database";
@@ -400,6 +403,53 @@ describe("South Carolina authority manifest", () => {
     expect(Object.keys(manifest.audit!.findingCounts).sort()).toEqual([...findingCodes].sort());
     expect(manifest.audit!.mechanical.findingCodes).not.toContain("catalog_code_mismatch");
     expect(manifest.audit!.structural.findingCodes).toContain("catalog_code_mismatch");
+  });
+
+  it("detects catalog, parsed-reference, official-URL, and audit drift", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    expect(findSouthCarolinaManifestDrift(manifest)).toEqual([]);
+    expect(() => assertSouthCarolinaManifestIsCurrent(manifest)).not.toThrow();
+    expect(getSouthCarolinaCatalogReferenceInventory()).toHaveLength(128);
+
+    const staleRow = structuredClone(manifest);
+    staleRow.catalogRecords[0].catalogLabel = "Changed catalog label";
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleRow)).toThrow(
+      /catalog row sc-murder-in-the-first-degree catalogLabel changed/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleRow)).toThrow(/Regenerate/i);
+
+    const staleReference = structuredClone(manifest);
+    staleReference.catalogRecords[0].sourceAudit.references[0].section = "16-3-11";
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleReference)).toThrow(
+      /parsed reference inventory/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleReference)).toThrow(/Regenerate/i);
+
+    const staleUrl = structuredClone(manifest);
+    staleUrl.catalogRecords[0].sourceAudit.references[0].officialUrl = "https://example.test/stale";
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleUrl)).toThrow(
+      /official URL/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleUrl)).toThrow(/Regenerate/i);
+
+    const staleAudit = structuredClone(manifest);
+    staleAudit.audit!.parsedReferenceCount++;
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleAudit)).toThrow(
+      /audit count parsedReferenceCount/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(staleAudit)).toThrow(/Regenerate/i);
+
+    const citation = CHARGE_CITATIONS["sc-murder-in-the-first-degree"]!;
+    const originalCitation = citation.citation;
+    try {
+      citation.citation = "S.C. Code Ann. § 16-3-11";
+      expect(() => assertSouthCarolinaManifestIsCurrent(manifest)).toThrow(
+        /parsed reference inventory/i,
+      );
+      expect(() => assertSouthCarolinaManifestIsCurrent(manifest)).toThrow(/Regenerate/i);
+    } finally {
+      citation.citation = originalCitation;
+    }
   });
 
   it("stores complete official text and rejects wrong, compound, and incomplete mappings", () => {
