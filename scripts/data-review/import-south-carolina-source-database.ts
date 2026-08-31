@@ -22,10 +22,18 @@ function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchChapter(url: string): Promise<{ html: string } | { error: string }> {
+type SouthCarolinaChapterResult =
+  | { html: string }
+  | { error: string; failureKind: "transport" | "official-page" };
+
+async function fetchChapter(
+  url: string,
+  fetchImpl: typeof fetch = fetch,
+  retryDelayMs = 1000,
+): Promise<SouthCarolinaChapterResult> {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
-      const response = await fetch(url, {
+      const response = await fetchImpl(url, {
         signal: AbortSignal.timeout(30000),
         headers: {
           "User-Agent": "OpenDefender-SouthCarolinaAuthorityImporter/1.0",
@@ -36,17 +44,25 @@ async function fetchChapter(url: string): Promise<{ html: string } | { error: st
         await sleep(1500 * (attempt + 1));
         continue;
       }
-      if (!response.ok) return { error: `HTTP ${response.status}` };
+      if (!response.ok) {
+        return { error: `HTTP ${response.status}`, failureKind: "official-page" };
+      }
       return { html: await response.text() };
     } catch (error) {
       if (attempt < MAX_RETRIES) {
-        await sleep(1000 * (attempt + 1));
+        await sleep(retryDelayMs * (attempt + 1));
         continue;
       }
-      return { error: error instanceof Error ? error.message : String(error) };
+      return {
+        error: error instanceof Error ? error.message : String(error),
+        failureKind: "transport",
+      };
     }
   }
-  return { error: "South Carolina source request exhausted retries" };
+  return {
+    error: "South Carolina source request exhausted retries",
+    failureKind: "transport",
+  };
 }
 
 function decodeHtml(value: string): string {
@@ -134,11 +150,89 @@ export function extractSouthCarolinaDocument(
   };
 }
 
-export async function main(): Promise<void> {
-  const importedAt = new Date();
+export interface SouthCarolinaManifestRefreshOptions {
+  importedAt?: Date;
+  outputPath?: string;
+  fetchImpl?: typeof fetch;
+  rateLimitMs?: number;
+  retryDelayMs?: number;
+}
+
+export interface SouthCarolinaManifestRefreshAlert {
+  type: "transport-outage";
+  severity: "warning";
+  failureKind: "transport";
+  transportFailures: number;
+  message: string;
+  preservedSnapshot: {
+    outputPath: string;
+    generatedAt: string;
+  } | null;
+}
+
+export interface SouthCarolinaManifestRefreshSummary {
+  outputPath: string;
+  catalogRecords: number;
+  retained: number;
+  withheld: number;
+  sources: number;
+  snapshots: number;
+  requests: number;
+  transportFailures: number;
+  officialPageFailures: number;
+  contentContractFailures: number;
+  wroteManifest: boolean;
+  preservedManifest: boolean;
+  alert: SouthCarolinaManifestRefreshAlert | null;
+}
+
+interface PreviousSouthCarolinaManifest {
+  generatedAt: string;
+  catalogRecords: unknown[];
+}
+
+function readPreviousSouthCarolinaManifest(
+  outputPath: string,
+): PreviousSouthCarolinaManifest | null {
+  try {
+    const raw = JSON.parse(fs.readFileSync(outputPath, "utf8")) as {
+      generatedAt?: unknown;
+      catalogRecords?: unknown;
+    };
+    if (
+      typeof raw.generatedAt !== "string" ||
+      raw.generatedAt.length === 0 ||
+      !Array.isArray(raw.catalogRecords)
+    ) {
+      throw new Error("The existing South Carolina manifest is incomplete");
+    }
+    return {
+      generatedAt: raw.generatedAt,
+      catalogRecords: raw.catalogRecords,
+    };
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw new Error(
+      `Cannot inspect the existing South Carolina manifest at ${outputPath}: ` +
+      `${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+}
+
+export async function refreshSouthCarolinaManifest(
+  options: SouthCarolinaManifestRefreshOptions = {},
+): Promise<SouthCarolinaManifestRefreshSummary> {
+  const importedAt = options.importedAt ?? new Date();
   const charges = criminalCharges.filter((charge) => charge.jurisdiction === "SC");
-  const chapterCache = new Map<string, { html: string } | { error: string }>();
+  const chapterCache = new Map<string, SouthCarolinaChapterResult>();
   const documentCache = new Map<string, SouthCarolinaSourceDocument | null>();
+  const fetchImpl = options.fetchImpl ?? fetch;
+  const rateLimitMs = options.rateLimitMs ?? RATE_LIMIT_MS;
+  const retryDelayMs = options.retryDelayMs ?? 1000;
+  let requests = 0;
+  let transportFailures = 0;
+  let officialPageFailures = 0;
+  let contentContractFailures = 0;
   const records = [];
 
   for (const charge of charges) {
@@ -152,9 +246,14 @@ export async function main(): Promise<void> {
         const url = buildSouthCarolinaSourceUrl(reference.section);
         let chapter = chapterCache.get(url);
         if (!chapter) {
-          chapter = await fetchChapter(url);
+          chapter = await fetchChapter(url, fetchImpl, retryDelayMs);
           chapterCache.set(url, chapter);
-          await sleep(RATE_LIMIT_MS);
+          requests++;
+          if ("error" in chapter) {
+            if (chapter.failureKind === "transport") transportFailures++;
+            else officialPageFailures++;
+          }
+          await sleep(rateLimitMs);
         }
         document = "html" in chapter
           ? extractSouthCarolinaDocument(
@@ -166,12 +265,62 @@ export async function main(): Promise<void> {
           )
           : null;
         documentCache.set(cacheKey, document);
-        if (!document) error = "The official South Carolina chapter page did not contain the complete requested section and history.";
-        if ("error" in chapter) error = `Official South Carolina source unavailable: ${chapter.error}`;
+        if (!document) {
+          if ("error" in chapter) {
+            error = `Official South Carolina source unavailable: ${chapter.error}`;
+          } else {
+            error = "The official South Carolina chapter page did not contain the complete requested section and history.";
+            contentContractFailures++;
+          }
+        }
       }
       if (document) documents.push(document);
     }
     records.push(buildSouthCarolinaManifestRecord(charge, documents, importedAt, error));
+  }
+
+  const outputPath = options.outputPath ??
+    path.resolve(process.cwd(), "scripts/data-review/output/sc-source-manifest.json");
+  const transportOnlyFailure =
+    transportFailures > 0 &&
+    officialPageFailures === 0 &&
+    contentContractFailures === 0;
+  if (transportOnlyFailure) {
+    const previousManifest = readPreviousSouthCarolinaManifest(outputPath);
+    const preservedSnapshot = previousManifest
+      ? { outputPath, generatedAt: previousManifest.generatedAt }
+      : null;
+    const alert: SouthCarolinaManifestRefreshAlert = {
+      type: "transport-outage",
+      severity: "warning",
+      failureKind: "transport",
+      transportFailures,
+      message:
+        `South Carolina source transport outage left the existing manifest snapshot ` +
+        `${previousManifest ? `from ${previousManifest.generatedAt} ` : ""}` +
+        `active at ${outputPath}. No manifest changes were written; retry after ` +
+        "official-source access is restored. Official-page and content-contract " +
+        "failures are reported separately and do not trigger this preservation alert.",
+      preservedSnapshot,
+    };
+    const summary: SouthCarolinaManifestRefreshSummary = {
+      outputPath,
+      catalogRecords: charges.length,
+      retained: 0,
+      withheld: 0,
+      sources: 0,
+      snapshots: 0,
+      requests,
+      transportFailures,
+      officialPageFailures,
+      contentContractFailures,
+      wroteManifest: false,
+      preservedManifest: true,
+      alert,
+    };
+    console.error(`[ALERT][${alert.type}] ${alert.message}`);
+    console.log(JSON.stringify(summary, null, 2));
+    return summary;
   }
 
   const manifest: SouthCarolinaAuthorityManifest = {
@@ -180,20 +329,41 @@ export async function main(): Promise<void> {
     source: "South Carolina Legislature Code of Laws (scstatehouse.gov)",
     catalogRecords: records,
   };
-  const outputPath = path.resolve(process.cwd(), "scripts/data-review/output/sc-source-manifest.json");
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");
   const selectable = records.filter((record) =>
     record.disposition === "retain" || record.disposition === "exact_alias_rename",
   );
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");
+  const summary: SouthCarolinaManifestRefreshSummary = {
+    outputPath,
+    catalogRecords: records.length,
+    retained: selectable.length,
+    withheld: records.length - selectable.length,
+    sources: new Set(records.flatMap((record) =>
+      record.provisions.map((provision) => provision.sourceKey))).size,
+    snapshots: records.reduce((sum, record) => sum + record.provisions.length, 0),
+    requests,
+    transportFailures,
+    officialPageFailures,
+    contentContractFailures,
+    wroteManifest: true,
+    preservedManifest: false,
+    alert: null,
+  };
   console.log(JSON.stringify({
     jurisdiction: "SC",
     manifestRecords: records.length,
     selectableCharges: selectable.length,
     withheldCharges: records.length - selectable.length,
     fetchedChapters: chapterCache.size,
-    outputPath,
+    ...summary,
   }, null, 2));
+  return summary;
+}
+
+export async function main(): Promise<void> {
+  const result = await refreshSouthCarolinaManifest();
+  if (result.preservedManifest) process.exitCode = 1;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

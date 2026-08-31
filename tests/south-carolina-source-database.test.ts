@@ -15,7 +15,10 @@ import {
   type SouthCarolinaSourceDocument,
 } from "../server/data/south-carolina-source-database-seed";
 import { loadSouthCarolinaAuthorityManifest } from "../server/data/south-carolina-manifest-loader";
-import { extractSouthCarolinaDocument } from "../scripts/data-review/import-south-carolina-source-database";
+import {
+  extractSouthCarolinaDocument,
+  refreshSouthCarolinaManifest,
+} from "../scripts/data-review/import-south-carolina-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
@@ -159,5 +162,43 @@ describe("South Carolina authority manifest", () => {
     expect(provision?.sourceUrl).toBe(buildSouthCarolinaSourceUrl("16-13-110"));
     expect(provision?.sourceUrl).not.toContain("justia.com");
     expect(provision?.sourceUrl).not.toContain("openlaws.us");
+  });
+
+  it("preserves the previous manifest during an all-transport source outage", async () => {
+    const directory = mkdtempSync(join(tmpdir(), "south-carolina-refresh-"));
+    const outputPath = join(directory, "sc-source-manifest.json");
+    const previous = readFileSync(
+      "scripts/data-review/output/sc-source-manifest.json",
+      "utf8",
+    );
+    writeFileSync(outputPath, previous);
+    let requestCount = 0;
+
+    try {
+      const summary = await refreshSouthCarolinaManifest({
+        outputPath,
+        fetchImpl: (async () => {
+          requestCount++;
+          throw new Error("simulated connection reset");
+        }) as typeof fetch,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+      });
+
+      expect(requestCount).toBeGreaterThan(0);
+      expect(summary).toMatchObject({
+        wroteManifest: false,
+        preservedManifest: true,
+        officialPageFailures: 0,
+        contentContractFailures: 0,
+      });
+      expect(summary.alert).toMatchObject({
+        type: "transport-outage",
+        failureKind: "transport",
+      });
+      expect(readFileSync(outputPath, "utf8")).toBe(previous);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
   });
 });

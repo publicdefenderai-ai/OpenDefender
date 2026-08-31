@@ -1,6 +1,6 @@
 {
   "jurisdiction": "SC",
-  "generatedAt": "2026-08-29T16:05:22.547Z",
+  "generatedAt": "2026-08-31T05:45:36.773Z",
   "source": "South Carolina Legislature Code of Laws (scstatehouse.gov)",
   "catalogRecords": [
     {
@@ -352,7 +352,7 @@
           "content": "SECTION 16-13-110. Shoplifting\n(A) A person is guilty of shoplifting if he:\n(1) takes possession of, carries away, transfers from one person to another or from one area of a store or other retail mercantile establishment to another area, or causes to be carried away or transferred any merchandise displayed, held, stored, or offered for sale by any store or other retail mercantile establishment with the intention of depriving the merchant of the possession, use, or benefit of the merchandise without paying the full retail value;\n(2) alters, transfers, or removes any label, price tag marking, indicia of value, or any other markings which aid in determining value affixed to any merchandise displayed, held, stored, or offered for sale in a store or other retail mercantile establishment and attempts to purchase the merchandise personally or in consort with another at less than the full retail value with the intention of depriving the merchant of the full retail value of the merchandise;\n(3) transfers any merchandise displayed, held, stored, or offered for sale by any store or other retail mercantile establishment from the container in which it is displayed to any other container with intent to deprive the merchant of the full retail value.\n(B) A person who violates the provisions of this section is guilty of a:\n(1) misdemeanor triable in magistrates court or municipal court, notwithstanding the provisions of Sections 22-3-540, 22-3-545, 22-3-550, and 14-25-65, and, upon conviction, must be fined not more than one thousand dollars or imprisoned not more than thirty days if the value of the shoplifted merchandise is two thousand dollars or less;\n(2) felony and, upon conviction, must be fined not more than one thousand dollars or imprisoned not more than five years, or both, if the value of the shoplifted merchandise is more than two thousand dollars but less than ten thousand dollars;\n(3) felony and, upon conviction, must be imprisoned not more than ten years if the value of the shoplifted merchandise is ten thousand dollars or more.\nHISTORY: 1962 Code SECTION 16-359.1; 1956 (49) 1770; 1978 Act No. 507 SECTION 2; 1985 Act No. 67; 1993 Act No. 171, SECTION 8; 1993 Act No. 184, SECTION 111; 2010 Act No. 273, SECTION 16.K, eff June 2, 2010.",
           "contentHash": "ad14cc3acff0127dfe63fc969f495c6bcf7f5793bcf611fb99eb5351f6d554be",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-08-29T16:05:22.547Z",
+          "retrievedAt": "2026-08-31T05:45:36.773Z",
           "effectiveDateStart": "June 2, 2010",
           "effectiveDateEnd": null,
           "supportRole": "offense",
@@ -380,8 +380,8 @@
               "effectiveDateStart": "June 2, 2010"
             },
             "attorneyReview": "pending",
-            "fingerprint": "fdb56ab266e2080d697b6225294ee43393e07e9ddc9a9c30369c8210f121863a",
-            "manifestImportedAt": "2026-08-29T16:05:22.547Z"
+            "fingerprint": "aa2bb29c67b52f839662d1a6b936b221e09e6e8b4c012dbe1c4bc44b947f990f",
+            "manifestImportedAt": "2026-08-31T05:45:36.773Z"
           }
         }
       ],
@@ -693,7 +693,7 @@
           "content": "SECTION 16-13-10. Forgery\n(A) It is unlawful for a person to:\n(1) falsely make, forge, or counterfeit; cause or procure to be falsely made, forged, or counterfeited; or wilfully act or assist in the false making, forging, or counterfeiting of any writing or instrument of writing;\n(2) utter or publish as true any false, forged, or counterfeited writing or instrument of writing;\n(3) falsely make, forge, counterfeit, alter, change, deface, or erase; or cause or procure to be falsely made, forged, counterfeited, altered, changed, defaced, or erased any record or plat of land; or\n(4) willingly act or assist in any of the premises, with an intention to defraud any person.\n(B) A person who violates the provisions of this section is guilty of a:\n(1) felony and, upon conviction, must be fined in the discretion of the court or imprisoned not more than ten years, or both, if the amount of the forgery is ten thousand dollars or more;\n(2) felony and, upon conviction, must be fined in the discretion of the court or imprisoned not more than five years, or both, if the amount of the forgery is less than ten thousand dollars.\n(C) If the forgery does not involve a dollar amount, the person is guilty of a misdemeanor under the jurisdiction of the magistrates or municipal court, notwithstanding the provisions of Sections 22-3-540, 22-3-545, 22-3-550, and 14-25-65, and, upon conviction, must be fined in the discretion of the court or imprisoned not more than three years, or both.\nHISTORY: 1962 Code SECTION 16-351; 1952 Code SECTION 16-351; 1942 Code SECTION 1211; 1932 Code SECTION 1211; Cr. C. '22 SECTION 99; Cr. C. '12 SECTION 528; Cr. C. '02 SECTION 373; G. S. 2527; R. S. 295; 1736-7 (3) 470-1 SECTIONS 3-7; 1783 (4) 543; 1801 (5) 397; 1845 (11) 341; 1930 (36) 1203; 1993 Act No. 184, SECTION 106; 1995 Act No. 7, Part I SECTION 5; 2010 Act No. 273, SECTION 16.D, eff June 2, 2010.",
           "contentHash": "27d05ffd26d3e25e448acdc91cc0f27edaaf57e25aac1547b64b1ed4f14d9c65",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-08-29T16:05:22.547Z",
+          "retrievedAt": "2026-08-31T05:45:36.773Z",
           "effectiveDateStart": "June 2, 2010",
           "effectiveDateEnd": null,
           "supportRole": "offense",
@@ -721,8 +721,8 @@
               "effectiveDateStart": "June 2, 2010"
             },
             "attorneyReview": "pending",
-            "fingerprint": "94442811d1a89dda5e2b630882d17c0a19d8878a49859fb5533e48968bc2c9fa",
-            "manifestImportedAt": "2026-08-29T16:05:22.547Z"
+            "fingerprint": "85e288621dbb4e49a1238be0aff38ea1ef3fbf98243ef97dfe98739699b20512",
+            "manifestImportedAt": "2026-08-31T05:45:36.773Z"
           }
         }
       ],
