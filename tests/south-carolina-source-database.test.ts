@@ -12,11 +12,13 @@ import {
   buildSouthCarolinaSourceUrl,
   parseSouthCarolinaCitation,
   validateSouthCarolinaManifestRecord,
+  type SouthCarolinaAuditFindingCode,
   type SouthCarolinaSourceDocument,
 } from "../server/data/south-carolina-source-database-seed";
 import { loadSouthCarolinaAuthorityManifest } from "../server/data/south-carolina-manifest-loader";
 import {
   extractSouthCarolinaDocument,
+  inspectSouthCarolinaDocument,
   refreshSouthCarolinaManifest,
 } from "../scripts/data-review/import-south-carolina-source-database";
 
@@ -93,6 +95,91 @@ describe("South Carolina authority manifest", () => {
       url,
       importedAt,
     )).toBeNull();
+  });
+
+  it("records independent section, history, and subdivision audit findings", () => {
+    const inspection = inspectSouthCarolinaDocument(
+      `<span class="SectionNumber">SECTION 16-3-50.</span>
+       Manslaughter.<br><br>(A) Complete official statutory text.`,
+      "16-3-50",
+      buildSouthCarolinaSourceUrl("16-3-50"),
+      importedAt,
+      "(B)",
+    );
+    expect(inspection.sectionExtractionStatus).toBe("incomplete");
+    expect(inspection.officialTitle).toBe("Manslaughter");
+    expect(inspection.contentEvidence).toBe(true);
+    expect(inspection.historyEvidence).toBe(false);
+    expect(inspection.contentHash).toMatch(/^[a-f0-9]{64}$/);
+    expect(inspection.findings.map((finding) => finding.code)).toEqual([
+      "history_missing",
+      "subdivision_not_found",
+    ]);
+  });
+
+  it("does not treat a history-only section as statutory content", () => {
+    const inspection = inspectSouthCarolinaDocument(
+      `<span class="SectionNumber">SECTION 16-3-50.</span>
+       Manslaughter.<br><br>HISTORY: 1962 Code Section 16-51.`,
+      "16-3-50",
+      buildSouthCarolinaSourceUrl("16-3-50"),
+      importedAt,
+    );
+    expect(inspection.document).toBeNull();
+    expect(inspection.sectionExtractionStatus).toBe("incomplete");
+    expect(inspection.historyEvidence).toBe(true);
+    expect(inspection.contentEvidence).toBe(false);
+    expect(inspection.contentHash).toBeNull();
+    expect(inspection.findings.map((finding) => finding.code)).toEqual(["content_missing"]);
+  });
+
+  it("commits one detailed audit entry for every catalog row and parsed reference", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const findingCodes: SouthCarolinaAuditFindingCode[] = [
+      "official_source_verified",
+      "citation_not_parseable",
+      "catalog_code_mismatch",
+      "official_fetch_failure",
+      "section_not_found",
+      "content_missing",
+      "history_missing",
+      "subdivision_not_found",
+      "official_title_mismatch",
+    ];
+    const references = manifest.catalogRecords.flatMap((record) => record.sourceAudit.references);
+    const findings = manifest.catalogRecords.flatMap((record) => record.auditFindings);
+
+    expect(manifest.audit).toMatchObject({
+      schemaVersion: 1,
+      catalogRowCount: 128,
+      parsedReferenceCount: 130,
+      successfulOfficialRetrievals: 130,
+      completeSectionExtractions: 123,
+    });
+    expect(manifest.catalogRecords.every((record) => {
+      const parsed = parseSouthCarolinaCitation(CHARGE_CITATIONS[record.chargeId]?.citation ?? "");
+      return record.sourceAudit.references.length === parsed.length &&
+        record.sourceAudit.references.every((reference, index) =>
+          reference.section === parsed[index].section &&
+          reference.subdivision === parsed[index].subdivision &&
+          reference.officialUrl === buildSouthCarolinaSourceUrl(reference.section),
+        );
+    })).toBe(true);
+    expect(references).toHaveLength(130);
+    expect(references.filter((reference) => reference.fetchStatus === "success")).toHaveLength(130);
+    expect(references.filter((reference) => reference.sectionExtractionStatus === "complete")).toHaveLength(123);
+    expect(references.filter((reference) => reference.sectionExtractionStatus === "section_not_found")).toHaveLength(6);
+    expect(references.filter((reference) => reference.contentHash !== null)).toHaveLength(124);
+    expect(findings.some((finding) => finding.code === "catalog_code_mismatch")).toBe(true);
+    expect(findings.some((finding) => finding.code === "official_title_mismatch")).toBe(true);
+    expect(findings.some((finding) => finding.code === "section_not_found")).toBe(true);
+    expect(findings.some((finding) => finding.code === "subdivision_not_found")).toBe(true);
+    expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-criminally-negligent-homicide")?.auditFindings.map(
+      (finding) => finding.code,
+    )).toEqual(["official_source_verified", "official_title_mismatch", "catalog_code_mismatch"]);
+    expect(Object.keys(manifest.audit!.findingCounts).sort()).toEqual([...findingCodes].sort());
+    expect(manifest.audit!.mechanical.findingCodes).not.toContain("catalog_code_mismatch");
+    expect(manifest.audit!.structural.findingCodes).toContain("catalog_code_mismatch");
   });
 
   it("stores complete official text and rejects wrong, compound, and incomplete mappings", () => {

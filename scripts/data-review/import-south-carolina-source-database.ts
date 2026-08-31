@@ -5,13 +5,20 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 import { criminalCharges } from "../../shared/criminal-charges";
 import { CHARGE_CITATIONS } from "../../shared/criminal-charge-citations";
 import {
   buildSouthCarolinaManifestRecord,
   buildSouthCarolinaSourceUrl,
+  matchesSouthCarolinaCatalogTitle,
   parseSouthCarolinaCitation,
   type SouthCarolinaAuthorityManifest,
+  type SouthCarolinaAuditFinding,
+  type SouthCarolinaAuditFindingCode,
+  type SouthCarolinaManifestRecord,
+  type SouthCarolinaReferenceAudit,
+  type SouthCarolinaSourceAudit,
   type SouthCarolinaSourceDocument,
 } from "../../server/data/south-carolina-source-database-seed";
 
@@ -117,12 +124,48 @@ export function extractSouthCarolinaDocument(
   retrievedAt: Date,
   subdivision: string | null = null,
 ): SouthCarolinaSourceDocument | null {
+  return inspectSouthCarolinaDocument(html, section, sourceUrl, retrievedAt, subdivision).document;
+}
+
+export interface SouthCarolinaDocumentInspection {
+  document: SouthCarolinaSourceDocument | null;
+  sectionExtractionStatus: "complete" | "section_not_found" | "incomplete" | "not_attempted";
+  officialTitle: string | null;
+  historyEvidence: boolean;
+  contentEvidence: boolean;
+  contentHash: string | null;
+  findings: SouthCarolinaAuditFinding[];
+}
+
+export function inspectSouthCarolinaDocument(
+  html: string,
+  section: string,
+  sourceUrl: string,
+  retrievedAt: Date,
+  subdivision: string | null = null,
+): SouthCarolinaDocumentInspection {
   const marker = new RegExp(
     `<span[^>]*>\\s*SECTION\\s+${section.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\.\\s*</span>`,
     "i",
   );
   const match = marker.exec(html);
-  if (!match) return null;
+  const reference = `${section}${subdivision ?? ""}`;
+  if (!match) {
+    return {
+      document: null,
+      sectionExtractionStatus: "section_not_found",
+      officialTitle: null,
+      historyEvidence: false,
+      contentEvidence: false,
+      contentHash: null,
+      findings: [{
+        code: "section_not_found",
+        classification: "mechanical",
+        message: `The official South Carolina chapter page did not contain section ${section}.`,
+        reference,
+      }],
+    };
+  }
   const nextMarker = /<span[^>]*>\s*SECTION\s+\d+-\d+-\d+\.\s*<\/span>/gi;
   nextMarker.lastIndex = match.index + match[0].length;
   const next = nextMarker.exec(html);
@@ -130,23 +173,78 @@ export function extractSouthCarolinaDocument(
   const decoded = decodeHtml(rawBlock);
   const [titleLine, ...rest] = decoded.split("\n").map((line) => line.trim()).filter(Boolean);
   const title = titleLine?.replace(/[.;\s]+$/, "").trim();
-  if (!title || !rest.length) return null;
-  const text = `SECTION ${section}. ${title}\n${rest.join("\n")}`.trim();
+  const text = title && rest.length
+    ? `SECTION ${section}. ${title}\n${rest.join("\n")}`.trim()
+    : null;
+  const historyEvidence = text !== null && /\bHISTORY:/i.test(text);
+  const contentEvidence = rest.join("\n").replace(/\bHISTORY\s*:[\s\S]*$/i, "").trim().length > 0;
   const subdivisionParts = subdivision
     ? [...subdivision.matchAll(/\(([a-z0-9]+)\)|\b(\d+)\b/gi)]
       .map((item) => (item[1] ?? item[2]).toLowerCase())
     : [];
-  if (
-    !/\bHISTORY:/i.test(text) ||
-    !subdivisionParts.every((part) => new RegExp(`\\(${part}\\)|\\b${part}[.)]`, "i").test(text))
-  ) return null;
+  const subdivisionEvidence = text !== null &&
+    subdivisionParts.length > 0 &&
+    subdivisionParts.every((part) =>
+      new RegExp(`\\(${part}\\)|\\b${part}[.)]`, "i").test(text),
+    );
+  const findings: SouthCarolinaAuditFinding[] = [];
+  if (!title || !contentEvidence) {
+    findings.push({
+      code: "content_missing",
+      classification: "mechanical",
+      message: `Section ${section} was found, but its official title or statutory content could not be extracted.`,
+      reference,
+    });
+  }
+  if (!historyEvidence) {
+    findings.push({
+      code: "history_missing",
+      classification: "mechanical",
+      message: `Section ${section} was found, but no HISTORY evidence was extracted from the official text.`,
+      reference,
+    });
+  }
+  if (subdivision && !subdivisionEvidence) {
+    findings.push({
+      code: "subdivision_not_found",
+      classification: "mechanical",
+      message: `The requested subdivision ${subdivision} was not found in the extracted official section text.`,
+      reference,
+    });
+  }
+  const complete = Boolean(
+    title &&
+    text &&
+    contentEvidence &&
+    historyEvidence &&
+    (subdivisionParts.length === 0 || subdivisionEvidence),
+  );
+  if (complete) {
+    findings.push({
+      code: "official_source_verified",
+      classification: "success",
+      message: "Official South Carolina source was retrieved with complete section and history/content evidence.",
+      reference,
+    });
+  }
+  const document = complete && title && text
+    ? {
+        section,
+        title,
+        text,
+        sourceUrl,
+        retrievedAt,
+        effectiveDateStart: extractLatestSouthCarolinaEffectiveDate(text),
+      }
+    : null;
   return {
-    section,
-    title,
-    text,
-    sourceUrl,
-    retrievedAt,
-    effectiveDateStart: extractLatestSouthCarolinaEffectiveDate(text),
+    document,
+    sectionExtractionStatus: complete ? "complete" : "incomplete",
+    officialTitle: title ?? null,
+    historyEvidence,
+    contentEvidence,
+    contentHash: contentEvidence && text ? createHash("sha256").update(text).digest("hex") : null,
+    findings,
   };
 }
 
@@ -225,7 +323,7 @@ export async function refreshSouthCarolinaManifest(
   const importedAt = options.importedAt ?? new Date();
   const charges = criminalCharges.filter((charge) => charge.jurisdiction === "SC");
   const chapterCache = new Map<string, SouthCarolinaChapterResult>();
-  const documentCache = new Map<string, SouthCarolinaSourceDocument | null>();
+  const documentCache = new Map<string, SouthCarolinaDocumentInspection>();
   const fetchImpl = options.fetchImpl ?? fetch;
   const rateLimitMs = options.rateLimitMs ?? RATE_LIMIT_MS;
   const retryDelayMs = options.retryDelayMs ?? 1000;
@@ -233,18 +331,21 @@ export async function refreshSouthCarolinaManifest(
   let transportFailures = 0;
   let officialPageFailures = 0;
   let contentContractFailures = 0;
-  const records = [];
+  const records: SouthCarolinaManifestRecord[] = [];
 
   for (const charge of charges) {
-    const references = parseSouthCarolinaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+    const citation = CHARGE_CITATIONS[charge.id]?.citation ?? "";
+    const references = parseSouthCarolinaCitation(citation);
     let error: string | undefined;
     const documents: SouthCarolinaSourceDocument[] = [];
+    const referenceAudits: SouthCarolinaReferenceAudit[] = [];
     for (const reference of references) {
       const cacheKey = `${reference.section}|${reference.subdivision ?? ""}`;
-      let document = documentCache.get(cacheKey);
-      if (document === undefined) {
+      let inspection = documentCache.get(cacheKey);
+      let chapter: SouthCarolinaChapterResult | undefined;
+      if (inspection === undefined) {
         const url = buildSouthCarolinaSourceUrl(reference.section);
-        let chapter = chapterCache.get(url);
+        chapter = chapterCache.get(url);
         if (!chapter) {
           chapter = await fetchChapter(url, fetchImpl, retryDelayMs);
           chapterCache.set(url, chapter);
@@ -255,17 +356,25 @@ export async function refreshSouthCarolinaManifest(
           }
           await sleep(rateLimitMs);
         }
-        document = "html" in chapter
-          ? extractSouthCarolinaDocument(
+        inspection = "html" in chapter
+          ? inspectSouthCarolinaDocument(
             chapter.html,
             reference.section,
             url,
             importedAt,
             reference.subdivision,
           )
-          : null;
-        documentCache.set(cacheKey, document);
-        if (!document) {
+          : {
+            document: null,
+            sectionExtractionStatus: "not_attempted",
+            officialTitle: null,
+            historyEvidence: false,
+            contentEvidence: false,
+            contentHash: null,
+            findings: [],
+          };
+        documentCache.set(cacheKey, inspection);
+        if (!inspection.document) {
           if ("error" in chapter) {
             error = `Official South Carolina source unavailable: ${chapter.error}`;
           } else {
@@ -274,9 +383,64 @@ export async function refreshSouthCarolinaManifest(
           }
         }
       }
-      if (document) documents.push(document);
+      const url = buildSouthCarolinaSourceUrl(reference.section);
+      const cachedChapter = chapter ?? chapterCache.get(url);
+      const fetchStatus = cachedChapter
+        ? "html" in cachedChapter
+          ? "success"
+          : cachedChapter.failureKind === "transport"
+            ? "transport_failure"
+            : "official_page_failure"
+        : "not_attempted";
+      const fetchError = cachedChapter && "error" in cachedChapter ? cachedChapter.error : null;
+      const auditFindings = [...inspection.findings];
+      if (fetchError) {
+        auditFindings.unshift({
+          code: "official_fetch_failure",
+          classification: "mechanical",
+          message: `Official South Carolina source request failed: ${fetchError}.`,
+          reference: `${reference.section}${reference.subdivision ?? ""}`,
+        });
+      }
+      if (inspection.document && (
+        !matchesSouthCarolinaCatalogTitle(charge, inspection.document.title)
+      )) {
+        auditFindings.push({
+          code: "official_title_mismatch",
+          classification: "structural",
+          message: `The official South Carolina title "${inspection.document.title}" is not an exact or explicitly reviewed mapping for the catalog label.`,
+          reference: `${reference.section}${reference.subdivision ?? ""}`,
+        });
+      }
+      referenceAudits.push({
+        section: reference.section,
+        subdivision: reference.subdivision,
+        citation: `S.C. Code Ann. § ${reference.section}${reference.subdivision ?? ""}`,
+        officialUrl: url,
+        fetchStatus,
+        fetchError,
+        retrievedAt: fetchStatus === "success" ? importedAt.toISOString() : null,
+        sectionExtractionStatus: inspection.sectionExtractionStatus,
+        officialTitle: inspection.officialTitle,
+        historyEvidence: inspection.historyEvidence,
+        contentEvidence: inspection.contentEvidence,
+        contentHash: inspection.contentHash,
+        findings: auditFindings,
+      });
+      if (inspection.document) documents.push(inspection.document);
     }
-    records.push(buildSouthCarolinaManifestRecord(charge, documents, importedAt, error));
+    const sourceAudit: SouthCarolinaSourceAudit = {
+      citation,
+      references: referenceAudits,
+      findings: referenceAudits.flatMap((audit) => audit.findings),
+    };
+    records.push(buildSouthCarolinaManifestRecord(
+      charge,
+      documents,
+      importedAt,
+      error,
+      sourceAudit,
+    ));
   }
 
   const outputPath = options.outputPath ??
@@ -323,11 +487,50 @@ export async function refreshSouthCarolinaManifest(
     return summary;
   }
 
+  const findingCodes: SouthCarolinaAuditFindingCode[] = [
+    "official_source_verified",
+    "citation_not_parseable",
+    "catalog_code_mismatch",
+    "official_fetch_failure",
+    "section_not_found",
+    "content_missing",
+    "history_missing",
+    "subdivision_not_found",
+    "official_title_mismatch",
+  ];
+  const allFindings = records.flatMap((record) => record.auditFindings);
+  const findingCounts = Object.fromEntries(
+    findingCodes.map((code) => [code, allFindings.filter((finding) => finding.code === code).length]),
+  ) as Record<SouthCarolinaAuditFindingCode, number>;
+  const references = records.flatMap((record) => record.sourceAudit.references);
+  const buildClassificationSummary = (classification: "mechanical" | "structural") => {
+    const findings = allFindings.filter((finding) => finding.classification === classification);
+    return {
+      findingCodes: findingCodes.filter((code) => findings.some((finding) => finding.code === code)),
+      affectedRows: new Set(
+        records.filter((record) => record.auditFindings.some((finding) => finding.classification === classification))
+          .map((record) => record.chargeId),
+      ).size,
+      affectedReferences: findings.filter((finding) => finding.reference !== null).length,
+    };
+  };
   const manifest: SouthCarolinaAuthorityManifest = {
     jurisdiction: "SC",
     generatedAt: importedAt,
     source: "South Carolina Legislature Code of Laws (scstatehouse.gov)",
     catalogRecords: records,
+    audit: {
+      schemaVersion: 1,
+      catalogRowCount: records.length,
+      parsedReferenceCount: references.length,
+      successfulOfficialRetrievals: references.filter((reference) => reference.fetchStatus === "success").length,
+      completeSectionExtractions: references.filter(
+        (reference) => reference.sectionExtractionStatus === "complete",
+      ).length,
+      findingCounts,
+      mechanical: buildClassificationSummary("mechanical"),
+      structural: buildClassificationSummary("structural"),
+    },
   };
   const selectable = records.filter((record) =>
     record.disposition === "retain" || record.disposition === "exact_alias_rename",

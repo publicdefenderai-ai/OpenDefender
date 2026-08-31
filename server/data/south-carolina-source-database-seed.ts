@@ -19,7 +19,8 @@ export interface SouthCarolinaAuthorityManifest {
   jurisdiction: "SC";
   generatedAt: Date;
   source: typeof SOUTH_CAROLINA_MANIFEST_SOURCE;
-  catalogRecords: AuthorityCatalogRecord[];
+  catalogRecords: SouthCarolinaManifestRecord[];
+  audit?: SouthCarolinaManifestAudit;
 }
 
 export interface SouthCarolinaSourceReference {
@@ -34,6 +35,76 @@ export interface SouthCarolinaSourceDocument {
   sourceUrl: string;
   retrievedAt: Date;
   effectiveDateStart: string | null;
+}
+
+export type SouthCarolinaAuditClassification =
+  | "mechanical"
+  | "structural"
+  | "success";
+
+export type SouthCarolinaAuditFindingCode =
+  | "official_source_verified"
+  | "citation_not_parseable"
+  | "catalog_code_mismatch"
+  | "official_fetch_failure"
+  | "section_not_found"
+  | "content_missing"
+  | "history_missing"
+  | "subdivision_not_found"
+  | "official_title_mismatch";
+
+export interface SouthCarolinaAuditFinding {
+  code: SouthCarolinaAuditFindingCode;
+  classification: SouthCarolinaAuditClassification;
+  message: string;
+  reference: string | null;
+}
+
+export interface SouthCarolinaReferenceAudit {
+  section: string;
+  subdivision: string | null;
+  citation: string;
+  officialUrl: string;
+  fetchStatus: "success" | "official_page_failure" | "transport_failure" | "not_attempted";
+  fetchError: string | null;
+  retrievedAt: string | null;
+  sectionExtractionStatus: "complete" | "section_not_found" | "incomplete" | "not_attempted";
+  officialTitle: string | null;
+  historyEvidence: boolean;
+  contentEvidence: boolean;
+  contentHash: string | null;
+  findings: SouthCarolinaAuditFinding[];
+}
+
+export interface SouthCarolinaSourceAudit {
+  citation: string;
+  references: SouthCarolinaReferenceAudit[];
+  findings: SouthCarolinaAuditFinding[];
+}
+
+export interface SouthCarolinaManifestRecord extends AuthorityCatalogRecord {
+  dispositionReasons: string[];
+  auditFindings: SouthCarolinaAuditFinding[];
+  sourceAudit: SouthCarolinaSourceAudit;
+}
+
+export interface SouthCarolinaManifestAudit {
+  schemaVersion: 1;
+  catalogRowCount: number;
+  parsedReferenceCount: number;
+  successfulOfficialRetrievals: number;
+  completeSectionExtractions: number;
+  findingCounts: Record<SouthCarolinaAuditFindingCode, number>;
+  mechanical: {
+    findingCodes: SouthCarolinaAuditFindingCode[];
+    affectedRows: number;
+    affectedReferences: number;
+  };
+  structural: {
+    findingCodes: SouthCarolinaAuditFindingCode[];
+    affectedRows: number;
+    affectedReferences: number;
+  };
 }
 
 function normalizeTitle(value: string): string {
@@ -89,7 +160,7 @@ function codeSupportsReferences(
   return references.every((reference) => charge.code === reference.section);
 }
 
-function titleMatches(charge: CriminalCharge, title: string): boolean {
+export function matchesSouthCarolinaCatalogTitle(charge: CriminalCharge, title: string): boolean {
   const normalized = normalizeTitle(title);
   return normalized === normalizeTitle(charge.name) ||
     (SOUTH_CAROLINA_EXACT_TITLE_ALIASES[charge.id] ?? [])
@@ -162,7 +233,8 @@ export function buildSouthCarolinaManifestRecord(
   documents: SouthCarolinaSourceDocument[],
   importedAt: Date,
   error?: string,
-): AuthorityCatalogRecord {
+  sourceAudit?: SouthCarolinaSourceAudit,
+): SouthCarolinaManifestRecord {
   const base = {
     chargeId: charge.id,
     catalogLabel: charge.name,
@@ -170,52 +242,94 @@ export function buildSouthCarolinaManifestRecord(
     catalogCategory: charge.category,
   };
   const references = parseSouthCarolinaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+  const audit = sourceAudit ?? buildFallbackSouthCarolinaSourceAudit(charge, documents, importedAt);
+  const auditFindings = [...audit.findings];
+  if (references.length === 0) {
+    auditFindings.push({
+      code: "citation_not_parseable",
+      classification: "structural",
+      message:
+        "The catalog citation is not an exact South Carolina Code citation; federal, MPC, inferred, and compound-only substitutes are withheld.",
+      reference: null,
+    });
+  } else if (!codeSupportsReferences(charge, references)) {
+    auditFindings.push({
+      code: "catalog_code_mismatch",
+      classification: "structural",
+      message: "The catalog code does not exactly support every cited South Carolina statutory section.",
+      reference: null,
+    });
+  }
+  const dispositionReasons = [...new Set(
+    auditFindings
+      .filter((finding) => finding.classification !== "success")
+      .map((finding) => finding.message),
+  )];
   if (references.length === 0) {
     return {
       ...base,
       disposition: "require_exact_reselection",
-      dispositionReason: error ??
-        "The catalog citation is not an exact South Carolina Code citation; federal, MPC, inferred, and compound-only substitutes are withheld.",
+      dispositionReason: error ?? dispositionReasons[0],
+      dispositionReasons: error && !dispositionReasons.includes(error)
+        ? [error, ...dispositionReasons]
+        : dispositionReasons,
       canonicalTitle: null,
       provisions: [],
       apiStatus: error ? "api_error" : "placeholder",
       ...(error ? { error } : {}),
+      auditFindings,
+      sourceAudit: audit,
     };
   }
   if (!codeSupportsReferences(charge, references)) {
     return {
       ...base,
       disposition: "require_exact_reselection",
-      dispositionReason: "The catalog code does not exactly support every cited South Carolina statutory section.",
+      dispositionReason: dispositionReasons[0] ?? "The catalog code does not exactly support every cited South Carolina statutory section.",
+      dispositionReasons,
       canonicalTitle: null,
       provisions: [],
       apiStatus: "verified",
+      auditFindings,
+      sourceAudit: audit,
     };
   }
   if (documents.length !== references.length) {
+    if (error && !dispositionReasons.includes(error)) dispositionReasons.unshift(error);
     return {
       ...base,
       disposition: "require_exact_reselection",
-      dispositionReason: error ?? "One or more required South Carolina statutory provisions could not be verified.",
+      dispositionReason: dispositionReasons[0] ?? "One or more required South Carolina statutory provisions could not be verified.",
+      dispositionReasons,
       canonicalTitle: null,
       provisions: [],
       apiStatus: "api_error",
       error: error ?? "Missing required South Carolina statutory provision",
+      auditFindings,
+      sourceAudit: audit,
     };
   }
   if (documents.some((document, index) =>
-    !titleMatches(charge, document.title) || !hasSubdivision(document.text, references[index].subdivision),
+    !matchesSouthCarolinaCatalogTitle(charge, document.title) || !hasSubdivision(document.text, references[index].subdivision),
   )) {
-    const mismatch = documents.find((document) => !titleMatches(charge, document.title));
+    const mismatch = documents.find((document) => !matchesSouthCarolinaCatalogTitle(charge, document.title));
+    if (dispositionReasons.length === 0) {
+      dispositionReasons.push(
+        mismatch
+          ? `The official South Carolina title "${mismatch.title}" is not an exact or explicitly reviewed mapping for the catalog label.`
+          : "A required South Carolina subdivision was not found in the complete official section text.",
+      );
+    }
     return {
       ...base,
       disposition: "require_exact_reselection",
-      dispositionReason: mismatch
-        ? `The official South Carolina title "${mismatch.title}" is not an exact or explicitly reviewed mapping for the catalog label.`
-        : "A required South Carolina subdivision was not found in the complete official section text.",
+      dispositionReason: dispositionReasons[0],
+      dispositionReasons,
       canonicalTitle: mismatch?.title ?? null,
       provisions: [],
       apiStatus: "verified",
+      auditFindings,
+      sourceAudit: audit,
     };
   }
   const provisions = documents.map((document, index) =>
@@ -233,6 +347,85 @@ export function buildSouthCarolinaManifestRecord(
     canonicalTitle: documents[0].title,
     provisions,
     apiStatus: "verified",
+    dispositionReasons: dispositionReasons.length > 0
+      ? dispositionReasons
+      : [hasAlias
+        ? "The official South Carolina title is supported by an explicit reviewed alias mapping."
+        : "Catalog label matches the official South Carolina title."],
+    auditFindings,
+    sourceAudit: audit,
+  };
+}
+
+function buildFallbackSouthCarolinaSourceAudit(
+  charge: CriminalCharge,
+  documents: SouthCarolinaSourceDocument[],
+  importedAt: Date,
+): SouthCarolinaSourceAudit {
+  const citation = CHARGE_CITATIONS[charge.id]?.citation ?? "";
+  const references = parseSouthCarolinaCitation(citation);
+  const audits = references.map((reference, index): SouthCarolinaReferenceAudit => {
+    const document = documents[index];
+    const referenceLabel = `${reference.section}${reference.subdivision ?? ""}`;
+    if (!document) {
+      return {
+        section: reference.section,
+        subdivision: reference.subdivision,
+        citation: `S.C. Code Ann. § ${referenceLabel}`,
+        officialUrl: buildSouthCarolinaSourceUrl(reference.section),
+        fetchStatus: "not_attempted",
+        fetchError: null,
+        retrievedAt: null,
+        sectionExtractionStatus: "incomplete",
+        officialTitle: null,
+        historyEvidence: false,
+        contentEvidence: false,
+        contentHash: null,
+        findings: [],
+      };
+    }
+    const findings: SouthCarolinaAuditFinding[] = [{
+      code: "official_source_verified",
+      classification: "success",
+      message: "Official South Carolina source was retrieved with complete section and history/content evidence.",
+      reference: referenceLabel,
+    }];
+    if (!matchesSouthCarolinaCatalogTitle(charge, document.title)) {
+      findings.push({
+        code: "official_title_mismatch",
+        classification: "structural",
+        message: `The official South Carolina title "${document.title}" is not an exact or explicitly reviewed mapping for the catalog label.`,
+        reference: referenceLabel,
+      });
+    }
+    if (!hasSubdivision(document.text, reference.subdivision)) {
+      findings.push({
+        code: "subdivision_not_found",
+        classification: "mechanical",
+        message: "A required South Carolina subdivision was not found in the complete official section text.",
+        reference: referenceLabel,
+      });
+    }
+    return {
+      section: reference.section,
+      subdivision: reference.subdivision,
+      citation: `S.C. Code Ann. § ${referenceLabel}`,
+        officialUrl: buildSouthCarolinaSourceUrl(reference.section),
+      fetchStatus: "success",
+      fetchError: null,
+      retrievedAt: document.retrievedAt.toISOString(),
+      sectionExtractionStatus: "complete",
+      officialTitle: document.title,
+      historyEvidence: /\bHISTORY:/i.test(document.text),
+      contentEvidence: document.text.trim().length > 0,
+      contentHash: createHash("sha256").update(document.text).digest("hex"),
+      findings,
+    };
+  });
+  return {
+    citation,
+    references: audits,
+    findings: audits.flatMap((audit) => audit.findings),
   };
 }
 
@@ -268,7 +461,7 @@ export function validateSouthCarolinaManifestRecord(record: AuthorityCatalogReco
       provision.sourceKey !== buildSouthCarolinaSourceKey(reference.section, reference.subdivision) ||
       provision.citation !== `S.C. Code Ann. § ${reference.section}${reference.subdivision ?? ""}` ||
       provision.sourceUrl !== buildSouthCarolinaSourceUrl(reference.section) ||
-      !titleMatches(charge, provision.officialTitle) ||
+      !matchesSouthCarolinaCatalogTitle(charge, provision.officialTitle) ||
       !hasSubdivision(provision.content ?? "", reference.subdivision) ||
       provision.hashBasis !== "source_content" ||
       typeof provision.content !== "string" ||
