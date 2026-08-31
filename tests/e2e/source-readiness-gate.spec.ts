@@ -1,8 +1,9 @@
 import { expect, test, type Page } from "@playwright/test";
+import { CURRENT_PUBLIC_SOURCE_JURISDICTIONS } from "../../shared/public-source-coverage";
 
 const ADMIN_TOKEN = process.env.RELEASE_CHECK_ADMIN_TOKEN?.trim();
 
-const CURRENT_JURISDICTIONS = ["CA", "FL", "GA", "IL", "NY", "OH", "PA", "SC", "TX"] as const;
+const CURRENT_JURISDICTIONS = CURRENT_PUBLIC_SOURCE_JURISDICTIONS;
 const EXPECTED_TARGET_ORDER = ["GA", "PA", "SC", "OH", "IL", "FL", "TX", "NY", "CA"] as const;
 const EXPECTED_GATE_LABELS: Record<(typeof CURRENT_JURISDICTIONS)[number], "Ready" | "Blocked"> = {
   CA: "Ready",

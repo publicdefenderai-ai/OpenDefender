@@ -54,6 +54,16 @@ import {
 import {
   buildTexasSourceDatabaseSeed,
 } from "./texas-source-database-seed";
+import {
+  CURRENT_PUBLIC_SOURCE_JURISDICTIONS,
+  type CurrentPublicSourceJurisdiction,
+} from "@shared/public-source-coverage";
+export {
+  CURRENT_PUBLIC_SOURCE_JURISDICTIONS,
+} from "@shared/public-source-coverage";
+export type {
+  CurrentPublicSourceJurisdiction,
+} from "@shared/public-source-coverage";
 /**
  * "High public-source coverage" measures whether the public-source import
  * reached the catalog rows, not whether every row is safe to publish under the
@@ -65,21 +75,6 @@ export const HIGH_PUBLIC_SOURCE_COVERAGE_TARGET = Object.freeze({
   catalogAccountingRate: 1,
   officialResponseRate: 0.9,
 } as const);
-
-export const CURRENT_PUBLIC_SOURCE_JURISDICTIONS = Object.freeze([
-  "CA",
-  "FL",
-  "GA",
-  "IL",
-  "NY",
-  "OH",
-  "PA",
-  "SC",
-  "TX",
-] as const);
-
-export type CurrentPublicSourceJurisdiction =
-  (typeof CURRENT_PUBLIC_SOURCE_JURISDICTIONS)[number];
 
 export type PublicSourceCoverageStatus =
   | "meets_target"
@@ -290,7 +285,10 @@ export const COVERAGE_REGISTRY = Object.freeze({
     manifestPath: "scripts/data-review/output/tx-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-texas-source-database.ts",
   }),
-} as const);
+} as const satisfies Record<
+  CurrentPublicSourceJurisdiction,
+  { manifestPath: string | null; seedScriptPath: string }
+>);
 
 const STALE_RECORD_MAX_AGE_DAYS = 180;
 

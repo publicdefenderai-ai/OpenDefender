@@ -43,7 +43,6 @@ const sourceSeedFiles = [
   "seed-texas-source-database.ts",
 ];
 
-const expectedJurisdictions = ["CA", "FL", "GA", "IL", "NY", "OH", "PA", "SC", "TX"];
 const expectedReportKeys = [
   "target",
   "jurisdictions",
@@ -218,13 +217,18 @@ async function checkSuccessfulReadiness() {
     if (sortedKeys(body).join(",") !== [...expectedReportKeys, "success"].sort().join(",")) {
       throw new Error("Authenticated source-readiness response has an unexpected top-level envelope");
     }
+    const jurisdictions = body.jurisdictions;
     if (
-      JSON.stringify(body.jurisdictions?.map((row) => row.jurisdiction)) !==
-      JSON.stringify(expectedJurisdictions)
+      !Array.isArray(jurisdictions) ||
+      jurisdictions.length === 0 ||
+      jurisdictions.some(
+        (row) => !row || typeof row.jurisdiction !== "string" || row.jurisdiction.trim() === "",
+      ) ||
+      new Set(jurisdictions.map((row) => row.jurisdiction)).size !== jurisdictions.length
     ) {
-      throw new Error("Authenticated source-readiness response has an unexpected jurisdiction set");
+      throw new Error("Authenticated source-readiness response has an invalid jurisdiction set");
     }
-    for (const row of body.jurisdictions) {
+    for (const row of jurisdictions) {
       if (sortedKeys(row).join(",") !== expectedRowKeys.sort().join(",")) {
         throw new Error(`Source-readiness row for ${row.jurisdiction} has an unexpected envelope`);
       }

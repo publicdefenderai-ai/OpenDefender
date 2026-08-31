@@ -11,6 +11,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { CURRENT_PUBLIC_SOURCE_JURISDICTIONS } from "@shared/public-source-coverage";
 
 // Prevent search engines from indexing this internal admin tool.
 function useAdminNoIndex() {
@@ -372,7 +373,6 @@ interface SourceReadinessReport {
   nextHighestValueCoverageTargets: SourceReadinessTarget[];
 }
 
-const CURRENT_SOURCE_JURISDICTIONS = ["CA", "FL", "GA", "IL", "NY", "OH", "PA", "SC", "TX"];
 const SOURCE_GAP_KINDS: SourceGapKind[] = [
   "source_access",
   "missing_import",
@@ -433,9 +433,9 @@ function isSourceReadinessReport(value: unknown): value is SourceReadinessReport
     .map((row) => (isRecord(row) && typeof row.jurisdiction === "string" ? row.jurisdiction : null))
     .filter((jurisdiction): jurisdiction is string => jurisdiction !== null);
   if (
-    jurisdictionsInReport.length !== CURRENT_SOURCE_JURISDICTIONS.length ||
-    new Set(jurisdictionsInReport).size !== CURRENT_SOURCE_JURISDICTIONS.length ||
-    CURRENT_SOURCE_JURISDICTIONS.some((jurisdiction) => !jurisdictionsInReport.includes(jurisdiction))
+    jurisdictionsInReport.length !== CURRENT_PUBLIC_SOURCE_JURISDICTIONS.length ||
+    new Set(jurisdictionsInReport).size !== CURRENT_PUBLIC_SOURCE_JURISDICTIONS.length ||
+    CURRENT_PUBLIC_SOURCE_JURISDICTIONS.some((jurisdiction) => !jurisdictionsInReport.includes(jurisdiction))
   ) {
     return false;
   }
