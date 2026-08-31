@@ -79,6 +79,37 @@ function row(page: Page, label: string) {
   return page.getByText(label, { exact: true }).locator("..");
 }
 
+async function establishVerifiedAttorneySession(page: Page) {
+  await page.goto("/attorney/verify");
+
+  const verification = await page.evaluate(async () => {
+    const response = await fetch("/api/attorney/verify", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include",
+      body: JSON.stringify({
+        attestations: {
+          isLicensedAttorney: true,
+          actingOnBehalfOfClient: true,
+          understandsPrivilegeRequirements: true,
+          acceptsDisclosures: true,
+        },
+      }),
+    });
+
+    return {
+      status: response.status,
+      body: await response.json(),
+    };
+  });
+
+  expect(
+    verification.status,
+    `Attorney verification failed: ${JSON.stringify(verification.body)}`,
+  ).toBe(200);
+  expect(verification.body.success).toBe(true);
+}
+
 for (const viewport of VIEWPORTS) {
   test.describe(`professional workspaces at ${viewport.name} width`, () => {
     test.use({ viewport: { width: viewport.width, height: viewport.height } });
@@ -245,6 +276,10 @@ for (const viewport of VIEWPORTS) {
     test("attorney workspace URLs remain reachable without starting generation", async ({
       page,
     }) => {
+      test.skip(
+        process.env.ATTORNEY_PORTAL_ENABLED === "true",
+        "Disabled-portal redirect coverage is only valid when the portal is disabled",
+      );
       const diagnostics = watchBrowserDiagnostics(page);
 
       for (const route of ["/attorney/documents", "/attorney/playbooks"]) {
@@ -253,6 +288,86 @@ for (const viewport of VIEWPORTS) {
         await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
         await expectHealthyLayout(page, route, diagnostics);
       }
+    });
+  });
+}
+
+
+for (const viewport of VIEWPORTS) {
+  test.describe(`verified attorney workspaces at ${viewport.name} width`, () => {
+    test.skip(
+      process.env.ATTORNEY_PORTAL_ENABLED !== "true",
+      "Authenticated attorney workspace coverage requires ATTORNEY_PORTAL_ENABLED=true",
+    );
+    test.use({ viewport: { width: viewport.width, height: viewport.height } });
+
+    test.beforeEach(async ({ page }) => {
+      // AttorneyProvider intentionally ends sessions on a real document unload.
+      // Keep this multi-route test in one authenticated session so it can
+      // exercise each workspace instead of logging out between page.goto calls.
+      await page.addInitScript(() => {
+        Object.defineProperty(navigator, "sendBeacon", {
+          configurable: true,
+          value: () => true,
+        });
+      });
+    });
+
+    test("opens documents, a template wizard, playbooks, and a playbook detail without generation", async ({
+      page,
+    }) => {
+      const diagnostics = watchBrowserDiagnostics(page);
+      let generationRequests = 0;
+      page.on("request", (request) => {
+        if (
+          request.method() === "POST" &&
+          request.url().endsWith("/api/attorney/documents/generate")
+        ) {
+          generationRequests += 1;
+        }
+      });
+
+      await establishVerifiedAttorneySession(page);
+
+      await page.goto("/attorney/documents");
+      await expect(
+        page.getByRole("heading", { name: "Document Generation" }),
+      ).toBeVisible();
+      const firstTemplate = page.getByRole("link", { name: /^Draft / }).first();
+      await expect(firstTemplate).toBeVisible();
+      await expectHealthyLayout(page, "/attorney/documents", diagnostics);
+
+      await firstTemplate.click();
+      await expect(page).toHaveURL(/\/attorney\/documents\/[^/]+$/);
+      await expect(
+        page.getByRole("heading", { name: "Filing Context" }),
+      ).toBeVisible();
+      await expectHealthyLayout(page, "/attorney/documents/:templateId", diagnostics);
+
+      await page.goto("/attorney/playbooks");
+      await expect(
+        page.getByRole("heading", { name: "Case Playbooks" }),
+      ).toBeVisible();
+      const arraignmentPlaybook = page.getByText("Arraignment & First Appearance", {
+        exact: true,
+      });
+      await expect(arraignmentPlaybook).toBeVisible();
+      await expectHealthyLayout(page, "/attorney/playbooks", diagnostics);
+
+      await arraignmentPlaybook.click();
+      await expect(page).toHaveURL(/\/attorney\/playbooks\/arraignment$/);
+      await expect(
+        page.getByRole("heading", { name: "Arraignment & First Appearance" }),
+      ).toBeVisible();
+      await expect(
+        page.getByRole("heading", { name: /^Stages?$/ }),
+      ).toBeVisible();
+      await expectHealthyLayout(page, "/attorney/playbooks/:playbookId", diagnostics);
+
+      expect(
+        generationRequests,
+        "Workspace navigation must not invoke paid document generation",
+      ).toBe(0);
     });
   });
 }

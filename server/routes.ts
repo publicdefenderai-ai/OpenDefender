@@ -2575,6 +2575,16 @@ export async function registerRoutes(
     next();
   };
 
+  // Public runtime config keeps the client route gate aligned with the
+  // server-side feature flag even when a production bundle was built earlier.
+  app.get("/api/attorney/config", (_req, res) => {
+    res.setHeader("Cache-Control", "no-store");
+    res.json({
+      success: true,
+      enabled: isAttorneyPortalEnabled(process.env),
+    });
+  });
+
   // Create verified attorney session
   app.post("/api/attorney/verify", requireAttorneyPortalEnabled, attorneyVerificationRateLimiter, async (req, res) => {
     try {

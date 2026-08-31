@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Switch, Route, Redirect, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
@@ -19,7 +19,15 @@ import { Loader2, X } from "lucide-react";
 import ChatPage from "@/pages/chat";
 import LegalGlossaryPage from "@/pages/legal-glossary";
 import DocumentSummarizerPage from "@/pages/document-summarizer";
+import { checkAttorneyPortalConfig } from "@/lib/attorney-api";
 import "./i18n";
+
+const AttorneyPortal = lazy(() => import("@/pages/attorney"));
+const AttorneyVerify = lazy(() => import("@/pages/attorney/verify"));
+const AttorneyDocuments = lazy(() => import("@/pages/attorney/documents"));
+const DocumentWizard = lazy(() => import("@/pages/attorney/document-wizard"));
+const AttorneyPlaybooks = lazy(() => import("@/pages/attorney/playbooks"));
+const PlaybookDetail = lazy(() => import("@/pages/attorney/playbook-detail"));
 
 const NotFound = lazy(() => import("@/pages/not-found"));
 const Home = lazy(() => import("@/pages/home"));
@@ -53,7 +61,9 @@ const Statutes = lazy(() => import("@/pages/statutes"));
 const DocumentLibrary = lazy(() => import("@/pages/document-library"));
 const Resources = lazy(() => import("@/pages/resources"));
 const LetterGeneratorPage = lazy(() => import("@/pages/letter-generator"));
-// Attorney tool pages removed from public router — all /attorney/* redirect to /directory
+// Attorney tool pages are only included in builds with the server-side portal
+// feature flag enabled. Route access is resolved from the running server so a
+// prebuilt client cannot drift from the server-side gate.
 const ApiDocs = lazy(() => import("@/pages/api-docs"));
 const Widgets = lazy(() => import("@/pages/widgets"));
 const TechDocs = lazy(() => import("@/pages/tech-docs"));
@@ -93,6 +103,27 @@ const MitigationBuilder = lazy(() => import("@/pages/for-advocates/mitigation-bu
 const IntakeChecklist = lazy(() => import("@/pages/for-advocates/intake-checklist"));
 
 function Router() {
+  const [location] = useLocation();
+  const [attorneyPortalEnabled, setAttorneyPortalEnabled] = useState<boolean | null>(null);
+  const isAttorneyPath = location === "/attorney" || location.startsWith("/attorney/");
+
+  useEffect(() => {
+    if (!isAttorneyPath || attorneyPortalEnabled !== null) return;
+
+    let isActive = true;
+    checkAttorneyPortalConfig().then((enabled) => {
+      if (isActive) setAttorneyPortalEnabled(enabled);
+    });
+
+    return () => {
+      isActive = false;
+    };
+  }, [isAttorneyPath, attorneyPortalEnabled]);
+
+  if (isAttorneyPath && attorneyPortalEnabled === null) {
+    return <RouteLoading />;
+  }
+
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -158,12 +189,25 @@ function Router() {
       <Route path="/support/court-logistics/bail-preparation" component={BailPreparation} />
       <Route path="/document-summarizer" component={DocumentSummarizerPage} />
       <Route path="/letter-generator" component={LetterGeneratorPage} />
-      <Route path="/attorney"><Redirect to="/directory" /></Route>
-      <Route path="/attorney/verify"><Redirect to="/directory" /></Route>
-      <Route path="/attorney/documents"><Redirect to="/directory" /></Route>
-      <Route path="/attorney/documents/:templateId"><Redirect to="/directory" /></Route>
-      <Route path="/attorney/playbooks"><Redirect to="/directory" /></Route>
-      <Route path="/attorney/playbooks/:playbookId"><Redirect to="/directory" /></Route>
+      {attorneyPortalEnabled === true ? (
+        <>
+          <Route path="/attorney/documents/:templateId" component={DocumentWizard} />
+          <Route path="/attorney/documents" component={AttorneyDocuments} />
+          <Route path="/attorney/playbooks/:playbookId" component={PlaybookDetail} />
+          <Route path="/attorney/playbooks" component={AttorneyPlaybooks} />
+          <Route path="/attorney/verify" component={AttorneyVerify} />
+          <Route path="/attorney" component={AttorneyPortal} />
+        </>
+      ) : (
+        <>
+          <Route path="/attorney"><Redirect to="/directory" /></Route>
+          <Route path="/attorney/verify"><Redirect to="/directory" /></Route>
+          <Route path="/attorney/documents"><Redirect to="/directory" /></Route>
+          <Route path="/attorney/documents/:templateId"><Redirect to="/directory" /></Route>
+          <Route path="/attorney/playbooks"><Redirect to="/directory" /></Route>
+          <Route path="/attorney/playbooks/:playbookId"><Redirect to="/directory" /></Route>
+        </>
+      )}
       <Route path="/api-docs" component={ApiDocs} />
       <Route path="/widgets" component={Widgets} />
       <Route path="/tech-docs" component={TechDocs} />
