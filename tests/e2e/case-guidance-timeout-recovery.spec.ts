@@ -45,6 +45,65 @@ async function completeScreener(page: import("@playwright/test").Page) {
 }
 
 test.describe("case guidance timeout recovery", () => {
+  test("clears saved answers after a successful retry and does not reopen recovery on reload", async ({ page }) => {
+    test.setTimeout(60_000);
+
+    await page.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+
+    let streamRequestCount = 0;
+    let releaseFirstRequest: (() => void) | undefined;
+    await page.route("**/api/legal-guidance/stream", async (route) => {
+      streamRequestCount += 1;
+      if (streamRequestCount === 1) {
+        await new Promise<void>((resolve) => {
+          releaseFirstRequest = resolve;
+        });
+        return;
+      }
+
+      await route.fulfill({
+        status: 200,
+        contentType: "text/event-stream",
+        body: `data: ${JSON.stringify({
+          type: "complete",
+          success: true,
+          sessionId: "successful-retry-session",
+          guidance,
+        })}\n\n`,
+      });
+    });
+
+    await page.clock.install();
+    await page.goto("/case-guidance");
+    await completeScreener(page);
+
+    await page.clock.runFor(120_000);
+    await expect(page.getByRole("alert")).toContainText("Your answers are still here");
+    await expect.poll(() =>
+      page.evaluate(() => sessionStorage.getItem("open-defender:case-guidance-recovery")),
+    ).not.toBeNull();
+
+    await page.getByTestId("button-retry-ai-guidance").click();
+    await expect.poll(() => streamRequestCount).toBe(2);
+    await expect(page.getByTestId("text-guidance-overview")).toContainText(guidance.overview);
+    await expect.poll(() =>
+      page.evaluate(() => sessionStorage.getItem("open-defender:case-guidance-recovery")),
+    ).toBeNull();
+
+    await page.reload();
+    await expect(page.getByTestId("button-start-guidance")).toBeVisible();
+    await expect(page.getByTestId("button-review-guidance-answers")).toHaveCount(0);
+    await expect(page.getByRole("alert")).toHaveCount(0);
+
+    releaseFirstRequest?.();
+  });
+
   test("keeps answers after a rejected retry and ignores rapid duplicate activation", async ({ page }) => {
     test.setTimeout(60_000);
 

@@ -638,6 +638,9 @@ export default function CaseGuidance() {
         // Then set the complete guidance result in one atomic update
         // This ensures the guidance dashboard receives complete, stable data
         setGuidanceResult(guidanceData);
+        // A successful retry has completed recovery; do not let a later reload
+        // reopen the obsolete timeout state with the old answers.
+        clearStoredGuidanceRecovery();
         // Reset export state for new guidance session
         setHasExported(false);
       } else {
