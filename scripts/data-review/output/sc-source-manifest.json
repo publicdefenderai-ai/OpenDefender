@@ -1,6 +1,6 @@
 {
   "jurisdiction": "SC",
-  "generatedAt": "2026-08-31T17:02:50.170Z",
+  "generatedAt": "2026-08-31T17:28:08.072Z",
   "source": "South Carolina Legislature Code of Laws (scstatehouse.gov)",
   "catalogRecords": [
     {
@@ -40,7 +40,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "\"Murder\" defined",
             "historyEvidence": true,
@@ -115,7 +115,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "\"Murder\" defined",
             "historyEvidence": true,
@@ -190,7 +190,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Manslaughter",
             "historyEvidence": true,
@@ -265,7 +265,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Involuntary manslaughter; \"criminal negligence\" defined",
             "historyEvidence": true,
@@ -309,12 +309,11 @@
       "catalogCode": "16-3-60",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Involuntary manslaughter; \"criminal negligence\" defined\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Involuntary manslaughter; \"criminal negligence\" defined\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Involuntary manslaughter; \"criminal negligence\" defined",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -322,49 +321,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "56-5-2910"
+          "reference": "16-3-60"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "56-5-2910"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Involuntary manslaughter; \"criminal negligence\" defined\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "16-3-60"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 56-5-2910",
+        "citation": "S.C. Code Ann. § 16-3-60",
         "references": [
           {
-            "section": "56-5-2910",
+            "section": "16-3-60",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 56-5-2910",
-            "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
+            "citation": "S.C. Code Ann. § 16-3-60",
+            "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations",
+            "officialTitle": "Involuntary manslaughter; \"criminal negligence\" defined",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "50ede3eba8fd3cf4a86fdca1acf2127b2de4d570a6b354064be626b5a13cd30e",
+            "contentHash": "854e9044c7fe368bc2f985dc7ce69eea8be5670e9788807afac2549fde58276a",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "56-5-2910"
+                "reference": "16-3-60"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "56-5-2910"
+                "message": "The official South Carolina title \"Involuntary manslaughter; \"criminal negligence\" defined\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "16-3-60"
               }
             ]
           }
@@ -374,13 +367,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "56-5-2910"
+            "reference": "16-3-60"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "56-5-2910"
+            "message": "The official South Carolina title \"Involuntary manslaughter; \"criminal negligence\" defined\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "16-3-60"
           }
         ]
       }
@@ -388,15 +381,14 @@
     {
       "chargeId": "sc-vehicular-homicide",
       "catalogLabel": "Vehicular Homicide",
-      "catalogCode": "56-5-2945",
+      "catalogCode": "56-5-2910",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -411,12 +403,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "56-5-2910"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -429,7 +415,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Reckless vehicular homicide; penalties; revocation of driver's license; reinstatement of license; conditions; consequences for subsequent violations",
             "historyEvidence": true,
@@ -504,7 +490,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "\"Murder\" defined",
             "historyEvidence": true,
@@ -579,7 +565,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Assault and battery; definitions; degrees of offenses",
             "historyEvidence": true,
@@ -654,7 +640,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Assault and battery; definitions; degrees of offenses",
             "historyEvidence": true,
@@ -729,7 +715,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Assault and battery; definitions; degrees of offenses",
             "historyEvidence": true,
@@ -804,7 +790,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Assault and battery; definitions; degrees of offenses",
             "historyEvidence": true,
@@ -879,7 +865,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Assault and battery; definitions; degrees of offenses",
             "historyEvidence": true,
@@ -954,7 +940,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c025.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Acts prohibited; penalties",
             "historyEvidence": true,
@@ -998,60 +984,71 @@
       "catalogCode": "16-9-320",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina chapter page did not contain section 16-3-629.",
+      "dispositionReason": "The official South Carolina title \"Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina chapter page did not contain section 16-3-629.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
         {
-          "code": "section_not_found",
-          "classification": "mechanical",
-          "message": "The official South Carolina chapter page did not contain section 16-3-629.",
-          "reference": "16-3-629"
+          "code": "official_source_verified",
+          "classification": "success",
+          "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+          "reference": "16-9-320"
         },
         {
-          "code": "catalog_code_mismatch",
+          "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "16-9-320"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 16-3-629",
+        "citation": "S.C. Code Ann. § 16-9-320",
         "references": [
           {
-            "section": "16-3-629",
+            "section": "16-9-320",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 16-3-629",
-            "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
+            "citation": "S.C. Code Ann. § 16-9-320",
+            "officialUrl": "https://www.scstatehouse.gov/code/t16c009.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
-            "sectionExtractionStatus": "section_not_found",
-            "officialTitle": null,
-            "historyEvidence": false,
-            "contentEvidence": false,
-            "contentHash": null,
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
+            "sectionExtractionStatus": "complete",
+            "officialTitle": "Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process",
+            "historyEvidence": true,
+            "contentEvidence": true,
+            "contentHash": "2e969dbad9b1597a7fc84ac32c495ae5bdca30b295c8fd43f17dc3c2aacf7abf",
             "findings": [
               {
-                "code": "section_not_found",
-                "classification": "mechanical",
-                "message": "The official South Carolina chapter page did not contain section 16-3-629.",
-                "reference": "16-3-629"
+                "code": "official_source_verified",
+                "classification": "success",
+                "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+                "reference": "16-9-320"
+              },
+              {
+                "code": "official_title_mismatch",
+                "classification": "structural",
+                "message": "The official South Carolina title \"Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "16-9-320"
               }
             ]
           }
         ],
         "findings": [
           {
-            "code": "section_not_found",
-            "classification": "mechanical",
-            "message": "The official South Carolina chapter page did not contain section 16-3-629.",
-            "reference": "16-3-629"
+            "code": "official_source_verified",
+            "classification": "success",
+            "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+            "reference": "16-9-320"
+          },
+          {
+            "code": "official_title_mismatch",
+            "classification": "structural",
+            "message": "The official South Carolina title \"Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "16-9-320"
           }
         ]
       }
@@ -1100,7 +1097,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Threatening life, person or family of public official or public employee; punishment",
             "historyEvidence": true,
@@ -1175,7 +1172,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct in the first degree",
             "historyEvidence": true,
@@ -1250,7 +1247,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct in the second degree",
             "historyEvidence": true,
@@ -1325,7 +1322,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct in the first degree",
             "historyEvidence": true,
@@ -1400,7 +1397,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct in the second degree",
             "historyEvidence": true,
@@ -1475,7 +1472,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct in the third degree",
             "historyEvidence": true,
@@ -1550,7 +1547,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct with a minor; aggravating and mitigating circumstances; penalties; repeat offenders",
             "historyEvidence": true,
@@ -1625,7 +1622,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct with a minor; aggravating and mitigating circumstances; penalties; repeat offenders",
             "historyEvidence": true,
@@ -1700,7 +1697,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c015.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "First degree sexual exploitation of a minor defined; presumptions; defenses; penalties",
             "historyEvidence": true,
@@ -1775,7 +1772,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Petit larceny; grand larceny",
             "historyEvidence": true,
@@ -1850,7 +1847,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Petit larceny; grand larceny",
             "historyEvidence": true,
@@ -1925,7 +1922,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Petit larceny; grand larceny",
             "historyEvidence": true,
@@ -2000,7 +1997,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Receiving stolen goods, chattels, or other property; receiving or possessing property represented by law enforcement as stolen; penalties",
             "historyEvidence": true,
@@ -2041,15 +2038,14 @@
     {
       "chargeId": "sc-identity-theft",
       "catalogLabel": "Identity Theft",
-      "catalogCode": "16-13-500",
+      "catalogCode": "16-13-510",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Financial identity fraud or identity fraud; penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Financial identity fraud or identity fraud; penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Financial identity fraud or identity fraud; penalty\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Financial identity fraud or identity fraud; penalty",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -2064,12 +2060,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Financial identity fraud or identity fraud; penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-13-510"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -2082,7 +2072,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Financial identity fraud or identity fraud; penalty",
             "historyEvidence": true,
@@ -2157,7 +2147,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c014.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Financial transaction card fraud",
             "historyEvidence": true,
@@ -2198,15 +2188,14 @@
     {
       "chargeId": "sc-embezzlement",
       "catalogLabel": "Embezzlement",
-      "catalogCode": "16-13-210",
+      "catalogCode": "16-13-230",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Breach of trust with fraudulent intent\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Breach of trust with fraudulent intent\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Breach of trust with fraudulent intent\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Breach of trust with fraudulent intent",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -2221,12 +2210,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Breach of trust with fraudulent intent\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-13-230"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -2239,7 +2222,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Breach of trust with fraudulent intent",
             "historyEvidence": true,
@@ -2296,7 +2279,7 @@
           "content": "SECTION 16-13-110. Shoplifting\n(A) A person is guilty of shoplifting if he:\n(1) takes possession of, carries away, transfers from one person to another or from one area of a store or other retail mercantile establishment to another area, or causes to be carried away or transferred any merchandise displayed, held, stored, or offered for sale by any store or other retail mercantile establishment with the intention of depriving the merchant of the possession, use, or benefit of the merchandise without paying the full retail value;\n(2) alters, transfers, or removes any label, price tag marking, indicia of value, or any other markings which aid in determining value affixed to any merchandise displayed, held, stored, or offered for sale in a store or other retail mercantile establishment and attempts to purchase the merchandise personally or in consort with another at less than the full retail value with the intention of depriving the merchant of the full retail value of the merchandise;\n(3) transfers any merchandise displayed, held, stored, or offered for sale by any store or other retail mercantile establishment from the container in which it is displayed to any other container with intent to deprive the merchant of the full retail value.\n(B) A person who violates the provisions of this section is guilty of a:\n(1) misdemeanor triable in magistrates court or municipal court, notwithstanding the provisions of Sections 22-3-540, 22-3-545, 22-3-550, and 14-25-65, and, upon conviction, must be fined not more than one thousand dollars or imprisoned not more than thirty days if the value of the shoplifted merchandise is two thousand dollars or less;\n(2) felony and, upon conviction, must be fined not more than one thousand dollars or imprisoned not more than five years, or both, if the value of the shoplifted merchandise is more than two thousand dollars but less than ten thousand dollars;\n(3) felony and, upon conviction, must be imprisoned not more than ten years if the value of the shoplifted merchandise is ten thousand dollars or more.\nHISTORY: 1962 Code SECTION 16-359.1; 1956 (49) 1770; 1978 Act No. 507 SECTION 2; 1985 Act No. 67; 1993 Act No. 171, SECTION 8; 1993 Act No. 184, SECTION 111; 2010 Act No. 273, SECTION 16.K, eff June 2, 2010.",
           "contentHash": "ad14cc3acff0127dfe63fc969f495c6bcf7f5793bcf611fb99eb5351f6d554be",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-08-31T17:02:50.170Z",
+          "retrievedAt": "2026-08-31T17:28:08.072Z",
           "effectiveDateStart": "June 2, 2010",
           "effectiveDateEnd": null,
           "supportRole": "offense",
@@ -2324,8 +2307,8 @@
               "effectiveDateStart": "June 2, 2010"
             },
             "attorneyReview": "pending",
-            "fingerprint": "2328468000adc4ea0d56c55e7292d4e73e40b1c0cb1388c6a73c1bccab27888f",
-            "manifestImportedAt": "2026-08-31T17:02:50.170Z"
+            "fingerprint": "6fbbc267d5ca7b63c52878141ccab712559e47e12a0d12d982b9683b8f8311e7",
+            "manifestImportedAt": "2026-08-31T17:28:08.072Z"
           }
         }
       ],
@@ -2351,7 +2334,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Shoplifting",
             "historyEvidence": true,
@@ -2414,7 +2397,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Burglary; first degree",
             "historyEvidence": true,
@@ -2489,7 +2472,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Burglary; second degree",
             "historyEvidence": true,
@@ -2533,12 +2516,11 @@
       "catalogCode": "16-11-313",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Burglary; third degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Burglary; third degree\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Burglary; third degree",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -2546,49 +2528,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "16-11-312(B)"
+          "reference": "16-11-313"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "16-11-312(B)"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Burglary; third degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "16-11-313"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 16-11-312(B)",
+        "citation": "S.C. Code Ann. § 16-11-313",
         "references": [
           {
-            "section": "16-11-312",
-            "subdivision": "(B)",
-            "citation": "S.C. Code Ann. § 16-11-312(B)",
+            "section": "16-11-313",
+            "subdivision": null,
+            "citation": "S.C. Code Ann. § 16-11-313",
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Burglary; second degree",
+            "officialTitle": "Burglary; third degree",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "01334783d6841a8088ef53b7494e671c9324b0245c79f2b1c58caf122eb4626a",
+            "contentHash": "3fec8520a89cfc88034da41771ea46a481acff5a42ac4bad96b0f81d100ced4a",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "16-11-312(B)"
+                "reference": "16-11-313"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "16-11-312(B)"
+                "message": "The official South Carolina title \"Burglary; third degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "16-11-313"
               }
             ]
           }
@@ -2598,13 +2574,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "16-11-312(B)"
+            "reference": "16-11-313"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "16-11-312(B)"
+            "message": "The official South Carolina title \"Burglary; third degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "16-11-313"
           }
         ]
       }
@@ -2646,7 +2622,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Burglary; first degree",
             "historyEvidence": true,
@@ -2721,7 +2697,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Burglary; second degree",
             "historyEvidence": true,
@@ -2762,15 +2738,14 @@
     {
       "chargeId": "sc-auto-burglary",
       "catalogLabel": "Auto Burglary",
-      "catalogCode": "16-11-382",
+      "catalogCode": "16-13-160",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Breaking into motor vehicles or tanks, pumps and other containers where fuel or lubricants are stored\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Breaking into motor vehicles or tanks, pumps and other containers where fuel or lubricants are stored\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Breaking into motor vehicles or tanks, pumps and other containers where fuel or lubricants are stored",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -2778,49 +2753,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "16-11-312(B)"
+          "reference": "16-13-160"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "16-11-312(B)"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Breaking into motor vehicles or tanks, pumps and other containers where fuel or lubricants are stored\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "16-13-160"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 16-11-312(B)",
+        "citation": "S.C. Code Ann. § 16-13-160",
         "references": [
           {
-            "section": "16-11-312",
-            "subdivision": "(B)",
-            "citation": "S.C. Code Ann. § 16-11-312(B)",
-            "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
+            "section": "16-13-160",
+            "subdivision": null,
+            "citation": "S.C. Code Ann. § 16-13-160",
+            "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Burglary; second degree",
+            "officialTitle": "Breaking into motor vehicles or tanks, pumps and other containers where fuel or lubricants are stored",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "01334783d6841a8088ef53b7494e671c9324b0245c79f2b1c58caf122eb4626a",
+            "contentHash": "31741b02e35f0022554471a723d9524c93416178d02d56a1a1ed672dae62845c",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "16-11-312(B)"
+                "reference": "16-13-160"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "16-11-312(B)"
+                "message": "The official South Carolina title \"Breaking into motor vehicles or tanks, pumps and other containers where fuel or lubricants are stored\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "16-13-160"
               }
             ]
           }
@@ -2830,13 +2799,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "16-11-312(B)"
+            "reference": "16-13-160"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Burglary; second degree\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "16-11-312(B)"
+            "message": "The official South Carolina title \"Breaking into motor vehicles or tanks, pumps and other containers where fuel or lubricants are stored\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "16-13-160"
           }
         ]
       }
@@ -2878,7 +2847,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Robbery and attempted robbery while armed with deadly weapon",
             "historyEvidence": true,
@@ -2953,7 +2922,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Common law robbery classified as felony; penalty",
             "historyEvidence": true,
@@ -3028,7 +2997,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Felony of carjacking; penalties",
             "historyEvidence": true,
@@ -3103,7 +3072,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Robbery and attempted robbery while armed with deadly weapon",
             "historyEvidence": true,
@@ -3178,7 +3147,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Prohibited acts A; penalties",
             "historyEvidence": true,
@@ -3253,7 +3222,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Prohibited acts A; penalties",
             "historyEvidence": true,
@@ -3328,7 +3297,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Prohibited acts A; penalties",
             "historyEvidence": true,
@@ -3403,7 +3372,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Prohibited acts A; penalties",
             "historyEvidence": true,
@@ -3478,7 +3447,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Possession, manufacture, and trafficking of methamphetamine and cocaine base and other controlled substances; penalties",
             "historyEvidence": true,
@@ -3553,7 +3522,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Unlawful to advertise for sale, manufacture, possess, sell or deliver, or to possess with intent to sell or deliver, paraphernalia",
             "historyEvidence": true,
@@ -3624,7 +3593,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "section_not_found",
             "officialTitle": null,
             "historyEvidence": false,
@@ -3687,7 +3656,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c023.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Unlawful carrying of handgun; exceptions",
             "historyEvidence": true,
@@ -3731,12 +3700,11 @@
       "catalogCode": "16-23-500",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Sale or delivery of handgun to and possession by certain persons unlawful; stolen handguns\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Unlawful possession of a firearm by a person convicted of violent offense; confiscation; return of firearm to innocent owner\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Sale or delivery of handgun to and possession by certain persons unlawful; stolen handguns\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Unlawful possession of a firearm by a person convicted of violent offense; confiscation; return of firearm to innocent owner\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Unlawful possession of a firearm by a person convicted of violent offense; confiscation; return of firearm to innocent owner",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -3744,49 +3712,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "16-23-30"
+          "reference": "16-23-500"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Sale or delivery of handgun to and possession by certain persons unlawful; stolen handguns\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "16-23-30"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Unlawful possession of a firearm by a person convicted of violent offense; confiscation; return of firearm to innocent owner\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "16-23-500"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 16-23-30",
+        "citation": "S.C. Code Ann. § 16-23-500",
         "references": [
           {
-            "section": "16-23-30",
+            "section": "16-23-500",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 16-23-30",
+            "citation": "S.C. Code Ann. § 16-23-500",
             "officialUrl": "https://www.scstatehouse.gov/code/t16c023.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Sale or delivery of handgun to and possession by certain persons unlawful; stolen handguns",
+            "officialTitle": "Unlawful possession of a firearm by a person convicted of violent offense; confiscation; return of firearm to innocent owner",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "db6d88058e03618e32794eba62cb5de63a92f301291cbf57099602ef9c1b322e",
+            "contentHash": "5d6bd12e52e84a6ed653422c7f8dd72023e0a17dfb97f1c06cfc925c1b20cee9",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "16-23-30"
+                "reference": "16-23-500"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Sale or delivery of handgun to and possession by certain persons unlawful; stolen handguns\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "16-23-30"
+                "message": "The official South Carolina title \"Unlawful possession of a firearm by a person convicted of violent offense; confiscation; return of firearm to innocent owner\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "16-23-500"
               }
             ]
           }
@@ -3796,13 +3758,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "16-23-30"
+            "reference": "16-23-500"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Sale or delivery of handgun to and possession by certain persons unlawful; stolen handguns\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "16-23-30"
+            "message": "The official South Carolina title \"Unlawful possession of a firearm by a person convicted of violent offense; confiscation; return of firearm to innocent owner\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "16-23-500"
           }
         ]
       }
@@ -3844,7 +3806,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c023.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Discharging firearms at or into dwellings, structures, enclosures, vehicles or equipment; penalties",
             "historyEvidence": true,
@@ -3885,15 +3847,14 @@
     {
       "chargeId": "sc-possession-of-prohibited-weapon",
       "catalogLabel": "Possession of Prohibited Weapon",
-      "catalogCode": "16-23-20",
+      "catalogCode": "16-23-230",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Unlawful storing, keeping, or possessing of machine gun, military firearm, or sawed-off shotgun or rifle\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Unlawful storing, keeping, or possessing of machine gun, military firearm, or sawed-off shotgun or rifle\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Unlawful storing, keeping, or possessing of machine gun, military firearm, or sawed-off shotgun or rifle\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Unlawful storing, keeping, or possessing of machine gun, military firearm, or sawed-off shotgun or rifle",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -3908,12 +3869,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Unlawful storing, keeping, or possessing of machine gun, military firearm, or sawed-off shotgun or rifle\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-23-230"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -3926,7 +3881,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c023.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Unlawful storing, keeping, or possessing of machine gun, military firearm, or sawed-off shotgun or rifle",
             "historyEvidence": true,
@@ -3967,15 +3922,14 @@
     {
       "chargeId": "sc-wire-fraud",
       "catalogLabel": "Wire Fraud",
-      "catalogCode": "16-13-385",
+      "catalogCode": "16-13-240",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Obtaining signature or property by false pretenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Obtaining signature or property by false pretenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Obtaining signature or property by false pretenses\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Obtaining signature or property by false pretenses",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -3990,12 +3944,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Obtaining signature or property by false pretenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-13-240"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -4008,7 +3956,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Obtaining signature or property by false pretenses",
             "historyEvidence": true,
@@ -4049,29 +3997,24 @@
     {
       "chargeId": "sc-mail-fraud",
       "catalogLabel": "Mail Fraud",
-      "catalogCode": "16-13-385",
+      "catalogCode": "16-13-240",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The requested subdivision (A) was not found in the extracted official section text.",
+      "dispositionReason": "The official South Carolina chapter page did not contain the complete requested section and history.",
       "dispositionReasons": [
-        "The requested subdivision (A) was not found in the extracted official section text.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina chapter page did not contain the complete requested section and history.",
+        "The requested subdivision (A) was not found in the extracted official section text."
       ],
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "verified",
+      "apiStatus": "api_error",
+      "error": "The official South Carolina chapter page did not contain the complete requested section and history.",
       "auditFindings": [
         {
           "code": "subdivision_not_found",
           "classification": "mechanical",
           "message": "The requested subdivision (A) was not found in the extracted official section text.",
           "reference": "16-13-240(A)"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -4084,7 +4027,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "incomplete",
             "officialTitle": "Obtaining signature or property by false pretenses",
             "historyEvidence": true,
@@ -4147,7 +4090,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t34c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Drawing and uttering fraudulent check, draft, or other written order",
             "historyEvidence": true,
@@ -4222,7 +4165,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t38c055.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal penalties for making false statement or misrepresentation, or assisting, abetting, soliciting or conspiring to do so; restitution to victims",
             "historyEvidence": true,
@@ -4266,60 +4209,71 @@
       "catalogCode": "12-54-44",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina chapter page did not contain section 12-54-40.",
+      "dispositionReason": "The official South Carolina title \"Criminal penalties applicable to every tax or revenue law requiring return or statement filing with department\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina chapter page did not contain section 12-54-40.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Criminal penalties applicable to every tax or revenue law requiring return or statement filing with department\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Criminal penalties applicable to every tax or revenue law requiring return or statement filing with department",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
         {
-          "code": "section_not_found",
-          "classification": "mechanical",
-          "message": "The official South Carolina chapter page did not contain section 12-54-40.",
-          "reference": "12-54-40(b)(4)"
+          "code": "official_source_verified",
+          "classification": "success",
+          "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+          "reference": "12-54-44"
         },
         {
-          "code": "catalog_code_mismatch",
+          "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Criminal penalties applicable to every tax or revenue law requiring return or statement filing with department\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "12-54-44"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 12-54-40(b)(4)",
+        "citation": "S.C. Code Ann. § 12-54-44",
         "references": [
           {
-            "section": "12-54-40",
-            "subdivision": "(b)(4)",
-            "citation": "S.C. Code Ann. § 12-54-40(b)(4)",
+            "section": "12-54-44",
+            "subdivision": null,
+            "citation": "S.C. Code Ann. § 12-54-44",
             "officialUrl": "https://www.scstatehouse.gov/code/t12c054.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
-            "sectionExtractionStatus": "section_not_found",
-            "officialTitle": null,
-            "historyEvidence": false,
-            "contentEvidence": false,
-            "contentHash": null,
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
+            "sectionExtractionStatus": "complete",
+            "officialTitle": "Criminal penalties applicable to every tax or revenue law requiring return or statement filing with department",
+            "historyEvidence": true,
+            "contentEvidence": true,
+            "contentHash": "512dca95987788b5995054c2ca117641148f091ae916c836ad5c58152927a672",
             "findings": [
               {
-                "code": "section_not_found",
-                "classification": "mechanical",
-                "message": "The official South Carolina chapter page did not contain section 12-54-40.",
-                "reference": "12-54-40(b)(4)"
+                "code": "official_source_verified",
+                "classification": "success",
+                "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+                "reference": "12-54-44"
+              },
+              {
+                "code": "official_title_mismatch",
+                "classification": "structural",
+                "message": "The official South Carolina title \"Criminal penalties applicable to every tax or revenue law requiring return or statement filing with department\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "12-54-44"
               }
             ]
           }
         ],
         "findings": [
           {
-            "code": "section_not_found",
-            "classification": "mechanical",
-            "message": "The official South Carolina chapter page did not contain section 12-54-40.",
-            "reference": "12-54-40(b)(4)"
+            "code": "official_source_verified",
+            "classification": "success",
+            "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+            "reference": "12-54-44"
+          },
+          {
+            "code": "official_title_mismatch",
+            "classification": "structural",
+            "message": "The official South Carolina title \"Criminal penalties applicable to every tax or revenue law requiring return or statement filing with department\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "12-54-44"
           }
         ]
       }
@@ -4343,7 +4297,7 @@
           "content": "SECTION 16-13-10. Forgery\n(A) It is unlawful for a person to:\n(1) falsely make, forge, or counterfeit; cause or procure to be falsely made, forged, or counterfeited; or wilfully act or assist in the false making, forging, or counterfeiting of any writing or instrument of writing;\n(2) utter or publish as true any false, forged, or counterfeited writing or instrument of writing;\n(3) falsely make, forge, counterfeit, alter, change, deface, or erase; or cause or procure to be falsely made, forged, counterfeited, altered, changed, defaced, or erased any record or plat of land; or\n(4) willingly act or assist in any of the premises, with an intention to defraud any person.\n(B) A person who violates the provisions of this section is guilty of a:\n(1) felony and, upon conviction, must be fined in the discretion of the court or imprisoned not more than ten years, or both, if the amount of the forgery is ten thousand dollars or more;\n(2) felony and, upon conviction, must be fined in the discretion of the court or imprisoned not more than five years, or both, if the amount of the forgery is less than ten thousand dollars.\n(C) If the forgery does not involve a dollar amount, the person is guilty of a misdemeanor under the jurisdiction of the magistrates or municipal court, notwithstanding the provisions of Sections 22-3-540, 22-3-545, 22-3-550, and 14-25-65, and, upon conviction, must be fined in the discretion of the court or imprisoned not more than three years, or both.\nHISTORY: 1962 Code SECTION 16-351; 1952 Code SECTION 16-351; 1942 Code SECTION 1211; 1932 Code SECTION 1211; Cr. C. '22 SECTION 99; Cr. C. '12 SECTION 528; Cr. C. '02 SECTION 373; G. S. 2527; R. S. 295; 1736-7 (3) 470-1 SECTIONS 3-7; 1783 (4) 543; 1801 (5) 397; 1845 (11) 341; 1930 (36) 1203; 1993 Act No. 184, SECTION 106; 1995 Act No. 7, Part I SECTION 5; 2010 Act No. 273, SECTION 16.D, eff June 2, 2010.",
           "contentHash": "27d05ffd26d3e25e448acdc91cc0f27edaaf57e25aac1547b64b1ed4f14d9c65",
           "hashBasis": "source_content",
-          "retrievedAt": "2026-08-31T17:02:50.170Z",
+          "retrievedAt": "2026-08-31T17:28:08.072Z",
           "effectiveDateStart": "June 2, 2010",
           "effectiveDateEnd": null,
           "supportRole": "offense",
@@ -4371,8 +4325,8 @@
               "effectiveDateStart": "June 2, 2010"
             },
             "attorneyReview": "pending",
-            "fingerprint": "13ef6528bd2c0e32ba9652612ee66cf10c4f93b3dec2c0d5941d359141fb1614",
-            "manifestImportedAt": "2026-08-31T17:02:50.170Z"
+            "fingerprint": "f61b33174faf386a285073c1e0e6fbe9fbcad3879971eedbd6853a734d93fe07",
+            "manifestImportedAt": "2026-08-31T17:28:08.072Z"
           }
         }
       ],
@@ -4398,7 +4352,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Forgery",
             "historyEvidence": true,
@@ -4461,7 +4415,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c016.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Computer crime offenses; penalties",
             "historyEvidence": true,
@@ -4536,7 +4490,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Public disorderly conduct; conditional discharge for first-time offenders",
             "historyEvidence": true,
@@ -4577,15 +4531,14 @@
     {
       "chargeId": "sc-public-intoxication",
       "catalogLabel": "Public Intoxication",
-      "catalogCode": "61-6-4720",
+      "catalogCode": "16-17-530",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Public disorderly conduct; conditional discharge for first-time offenders\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Public disorderly conduct; conditional discharge for first-time offenders\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Public disorderly conduct; conditional discharge for first-time offenders\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Public disorderly conduct; conditional discharge for first-time offenders",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -4600,12 +4553,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Public disorderly conduct; conditional discharge for first-time offenders\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-17-530"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -4618,7 +4565,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Public disorderly conduct; conditional discharge for first-time offenders",
             "historyEvidence": true,
@@ -4693,7 +4640,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "School disturbances by nonstudents; penalties",
             "historyEvidence": true,
@@ -4768,7 +4715,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Entering premises after warning or refusing to leave on request; jurisdiction and enforcement",
             "historyEvidence": true,
@@ -4843,7 +4790,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Malicious injury to animals and other personal property",
             "historyEvidence": true,
@@ -4925,7 +4872,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "School disturbances by nonstudents; penalties",
             "historyEvidence": true,
@@ -5000,7 +4947,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Operating motor vehicle while under influence of alcohol or drugs; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution",
             "historyEvidence": true,
@@ -5041,15 +4988,14 @@
     {
       "chargeId": "sc-dui-second-offense",
       "catalogLabel": "DUI Second Offense",
-      "catalogCode": "56-5-2930",
+      "catalogCode": "56-5-2933",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -5064,12 +5010,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "56-5-2933(b)"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -5082,7 +5022,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution",
             "historyEvidence": true,
@@ -5123,15 +5063,14 @@
     {
       "chargeId": "sc-dui-third-offense",
       "catalogLabel": "DUI Third Offense",
-      "catalogCode": "56-5-2930",
+      "catalogCode": "56-5-2933",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -5146,12 +5085,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "56-5-2933(c)"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -5164,7 +5097,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Driving with an unlawful alcohol concentration; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution",
             "historyEvidence": true,
@@ -5239,7 +5172,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Reckless driving; penalties; suspension of driver's license for second or subsequent offense",
             "historyEvidence": true,
@@ -5314,7 +5247,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Duties of drivers involved in accident resulting in death or personal injury; moving or removing vehicles",
             "historyEvidence": true,
@@ -5389,7 +5322,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Penalties for driving while license cancelled, suspended or revoked; route restricted license",
             "historyEvidence": true,
@@ -5464,7 +5397,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Petit larceny; grand larceny",
             "historyEvidence": true,
@@ -5539,7 +5472,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Assault and battery; definitions; degrees of offenses",
             "historyEvidence": true,
@@ -5614,7 +5547,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c025.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Acts prohibited; penalties",
             "historyEvidence": true,
@@ -5689,7 +5622,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Malicious injury to animals and other personal property",
             "historyEvidence": true,
@@ -5764,7 +5697,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Penalties for driving while license cancelled, suspended or revoked; route restricted license",
             "historyEvidence": true,
@@ -5839,7 +5772,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c013.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Shoplifting",
             "historyEvidence": true,
@@ -5880,15 +5813,14 @@
     {
       "chargeId": "sc-failure-to-appear",
       "catalogLabel": "Failure to Appear",
-      "catalogCode": "17-15-100",
+      "catalogCode": "17-15-90",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Wilful failure to appear; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Wilful failure to appear; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Wilful failure to appear; penalties\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Wilful failure to appear; penalties",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -5903,12 +5835,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Wilful failure to appear; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "17-15-90"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -5921,7 +5847,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t17c015.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Wilful failure to appear; penalties",
             "historyEvidence": true,
@@ -5965,12 +5891,11 @@
       "catalogCode": "24-21-460",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Conditions of probation\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Court action when terms of probation violated\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Conditions of probation\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Court action when terms of probation violated\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Court action when terms of probation violated",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -5978,49 +5903,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "24-21-430"
+          "reference": "24-21-460"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Conditions of probation\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "24-21-430"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Court action when terms of probation violated\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "24-21-460"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 24-21-430",
+        "citation": "S.C. Code Ann. § 24-21-460",
         "references": [
           {
-            "section": "24-21-430",
+            "section": "24-21-460",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 24-21-430",
+            "citation": "S.C. Code Ann. § 24-21-460",
             "officialUrl": "https://www.scstatehouse.gov/code/t24c021.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Conditions of probation",
+            "officialTitle": "Court action when terms of probation violated",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "e355f349606d76a3646e94ffde185e9483a96509eba690130b96ab22f191e794",
+            "contentHash": "b230795092e40a1fd2a0c1b5de494582869106bf9dc50a88e2039b70c2672cdf",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "24-21-430"
+                "reference": "24-21-460"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Conditions of probation\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "24-21-430"
+                "message": "The official South Carolina title \"Court action when terms of probation violated\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "24-21-460"
               }
             ]
           }
@@ -6030,13 +5949,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "24-21-430"
+            "reference": "24-21-460"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Conditions of probation\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "24-21-430"
+            "message": "The official South Carolina title \"Court action when terms of probation violated\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "24-21-460"
           }
         ]
       }
@@ -6078,7 +5997,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c009.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Opposing or resisting law enforcement officer serving process; assaulting officer engaged in serving process",
             "historyEvidence": true,
@@ -6153,7 +6072,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c025.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Acts prohibited; penalties",
             "historyEvidence": true,
@@ -6228,7 +6147,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t61c004.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Open containers in motor vehicle",
             "historyEvidence": true,
@@ -6303,7 +6222,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t63c019.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Beer and wine purchase, consumption, or possession",
             "historyEvidence": true,
@@ -6378,7 +6297,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Making false complaint to law enforcement officer; giving false information to rescue squad or fire department; misrepresenting identity to law enforcement officer during traffic stop or to avoid arrest or criminal charge",
             "historyEvidence": true,
@@ -6453,7 +6372,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Definitions",
             "historyEvidence": true,
@@ -6494,15 +6413,14 @@
     {
       "chargeId": "sc-contempt-of-court",
       "catalogLabel": "Contempt of Court",
-      "catalogCode": "14-25-15",
+      "catalogCode": "14-25-65",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Maximum penalties that court may impose; restitution; contempt\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Maximum penalties that court may impose; restitution; contempt\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Maximum penalties that court may impose; restitution; contempt\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Maximum penalties that court may impose; restitution; contempt",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -6517,12 +6435,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Maximum penalties that court may impose; restitution; contempt\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "14-25-65"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -6535,7 +6447,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t14c025.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Maximum penalties that court may impose; restitution; contempt",
             "historyEvidence": true,
@@ -6610,7 +6522,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t34c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Drawing and uttering fraudulent check, draft, or other written order",
             "historyEvidence": true,
@@ -6654,12 +6566,11 @@
       "catalogCode": "16-15-90",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Prostitution; further unlawful acts\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Prostitution; lewdness, assignation and prostitution generally\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Prostitution; further unlawful acts\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Prostitution; lewdness, assignation and prostitution generally\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Prostitution; lewdness, assignation and prostitution generally",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -6667,49 +6578,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "16-15-100"
+          "reference": "16-15-90"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Prostitution; further unlawful acts\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "16-15-100"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Prostitution; lewdness, assignation and prostitution generally\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "16-15-90"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 16-15-100",
+        "citation": "S.C. Code Ann. § 16-15-90",
         "references": [
           {
-            "section": "16-15-100",
+            "section": "16-15-90",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 16-15-100",
+            "citation": "S.C. Code Ann. § 16-15-90",
             "officialUrl": "https://www.scstatehouse.gov/code/t16c015.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Prostitution; further unlawful acts",
+            "officialTitle": "Prostitution; lewdness, assignation and prostitution generally",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "c43f69e82f0a5a1bf19cad45fb3a594395d1d7fae3c7794a1235c5c46a03bf61",
+            "contentHash": "ca0049f9cb46a72bbd9c89b79e24e1a718dff787c8d06d4759bf720197aba3a0",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "16-15-100"
+                "reference": "16-15-90"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Prostitution; further unlawful acts\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "16-15-100"
+                "message": "The official South Carolina title \"Prostitution; lewdness, assignation and prostitution generally\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "16-15-90"
               }
             ]
           }
@@ -6719,13 +6624,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "16-15-100"
+            "reference": "16-15-90"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Prostitution; further unlawful acts\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "16-15-100"
+            "message": "The official South Carolina title \"Prostitution; lewdness, assignation and prostitution generally\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "16-15-90"
           }
         ]
       }
@@ -6768,7 +6673,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c009.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "section_not_found",
             "officialTitle": null,
             "historyEvidence": false,
@@ -6831,7 +6736,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Reckless driving; penalties; suspension of driver's license for second or subsequent offense",
             "historyEvidence": true,
@@ -6872,15 +6777,14 @@
     {
       "chargeId": "sc-expired-registration",
       "catalogLabel": "Driving with Expired Registration",
-      "catalogCode": "56-3-1230",
+      "catalogCode": "56-3-110",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Vehicles required to be registered and licensed\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Vehicles required to be registered and licensed\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Vehicles required to be registered and licensed\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Vehicles required to be registered and licensed",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -6895,12 +6799,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Vehicles required to be registered and licensed\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "56-3-110"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -6913,7 +6811,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Vehicles required to be registered and licensed",
             "historyEvidence": true,
@@ -6995,7 +6893,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Time when motorcycle lights must be turned on",
             "historyEvidence": true,
@@ -7070,7 +6968,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t63c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Obligation to support",
             "historyEvidence": true,
@@ -7145,7 +7043,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Public disorderly conduct; conditional discharge for first-time offenders",
             "historyEvidence": true,
@@ -7220,7 +7118,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c015.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Indecent exposure; breastfeeding",
             "historyEvidence": true,
@@ -7264,12 +7162,11 @@
       "catalogCode": "56-1-510",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Alcoholic beverages purchase, consumption, or possession\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Unlawful use of license; fraudulent application\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Alcoholic beverages purchase, consumption, or possession\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Unlawful use of license; fraudulent application\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Unlawful use of license; fraudulent application",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -7277,49 +7174,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "63-19-2450"
+          "reference": "56-1-510"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Alcoholic beverages purchase, consumption, or possession\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "63-19-2450"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Unlawful use of license; fraudulent application\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "56-1-510"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 63-19-2450",
+        "citation": "S.C. Code Ann. § 56-1-510",
         "references": [
           {
-            "section": "63-19-2450",
+            "section": "56-1-510",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 63-19-2450",
-            "officialUrl": "https://www.scstatehouse.gov/code/t63c019.php",
+            "citation": "S.C. Code Ann. § 56-1-510",
+            "officialUrl": "https://www.scstatehouse.gov/code/t56c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Alcoholic beverages purchase, consumption, or possession",
+            "officialTitle": "Unlawful use of license; fraudulent application",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "e7f615b74a378b6bce9268a6604ad9145f1d9e3e60158a518d83678e619c99e2",
+            "contentHash": "baa1aa927b1782b0ed6cfe2b47e7678630c9156364efdc92a7ad645aa9db99a3",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "63-19-2450"
+                "reference": "56-1-510"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Alcoholic beverages purchase, consumption, or possession\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "63-19-2450"
+                "message": "The official South Carolina title \"Unlawful use of license; fraudulent application\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "56-1-510"
               }
             ]
           }
@@ -7329,13 +7220,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "63-19-2450"
+            "reference": "56-1-510"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Alcoholic beverages purchase, consumption, or possession\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "63-19-2450"
+            "message": "The official South Carolina title \"Unlawful use of license; fraudulent application\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "56-1-510"
           }
         ]
       }
@@ -7343,15 +7234,14 @@
     {
       "chargeId": "sc-animal-at-large",
       "catalogLabel": "Animal at Large / Leash Law Violation",
-      "catalogCode": "47-3-20",
+      "catalogCode": "47-3-110",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Liability for attacks by dogs, provoked attacks, trained law enforcement dogs\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Liability for attacks by dogs, provoked attacks, trained law enforcement dogs\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Liability for attacks by dogs, provoked attacks, trained law enforcement dogs\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Liability for attacks by dogs, provoked attacks, trained law enforcement dogs",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -7366,12 +7256,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Liability for attacks by dogs, provoked attacks, trained law enforcement dogs\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "47-3-110"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -7384,7 +7268,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t47c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Liability for attacks by dogs, provoked attacks, trained law enforcement dogs",
             "historyEvidence": true,
@@ -7459,7 +7343,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t47c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Ill-treatment of animals generally; penalties",
             "historyEvidence": true,
@@ -7541,7 +7425,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Notice of trespassing; purple paint",
             "historyEvidence": true,
@@ -7616,7 +7500,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Public disorderly conduct; conditional discharge for first-time offenders",
             "historyEvidence": true,
@@ -7691,7 +7575,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Vehicles required to be registered and licensed",
             "historyEvidence": true,
@@ -7773,7 +7657,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Punishment for murder; review by Supreme Court of imposition of death penalty",
             "historyEvidence": true,
@@ -7848,7 +7732,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Entering premises after warning or refusing to leave on request; jurisdiction and enforcement",
             "historyEvidence": true,
@@ -7930,7 +7814,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t56c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Time when motorcycle lights must be turned on",
             "historyEvidence": true,
@@ -7971,15 +7855,14 @@
     {
       "chargeId": "sc-truancy",
       "catalogLabel": "Truancy / Chronic Absenteeism",
-      "catalogCode": "59-65-10",
+      "catalogCode": "59-65-20",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Penalty for failure to enroll or cause child to attend school\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Penalty for failure to enroll or cause child to attend school\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Penalty for failure to enroll or cause child to attend school\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Penalty for failure to enroll or cause child to attend school",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -7994,12 +7877,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Penalty for failure to enroll or cause child to attend school\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "59-65-20"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -8012,7 +7889,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t59c065.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Penalty for failure to enroll or cause child to attend school",
             "historyEvidence": true,
@@ -8087,7 +7964,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Dumping litter on private or public property prohibited; exceptions; responsibility for removal; penalties",
             "historyEvidence": true,
@@ -8128,63 +8005,74 @@
     {
       "chargeId": "sc-illegal-fireworks",
       "catalogLabel": "Illegal Discharge of Fireworks",
-      "catalogCode": "23-35-45",
+      "catalogCode": "23-35-130",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina chapter page did not contain section 23-35-120.",
+      "dispositionReason": "The official South Carolina title \"Manufacture, storage, transportation or possession of certain fireworks illegal; storage and assembly of public display material; penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina chapter page did not contain section 23-35-120.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Manufacture, storage, transportation or possession of certain fireworks illegal; storage and assembly of public display material; penalty\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Manufacture, storage, transportation or possession of certain fireworks illegal; storage and assembly of public display material; penalty",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
         {
-          "code": "section_not_found",
-          "classification": "mechanical",
-          "message": "The official South Carolina chapter page did not contain section 23-35-120.",
-          "reference": "23-35-120"
+          "code": "official_source_verified",
+          "classification": "success",
+          "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+          "reference": "23-35-130"
         },
         {
-          "code": "catalog_code_mismatch",
+          "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Manufacture, storage, transportation or possession of certain fireworks illegal; storage and assembly of public display material; penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "23-35-130"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 23-35-120",
+        "citation": "S.C. Code Ann. § 23-35-130",
         "references": [
           {
-            "section": "23-35-120",
+            "section": "23-35-130",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 23-35-120",
+            "citation": "S.C. Code Ann. § 23-35-130",
             "officialUrl": "https://www.scstatehouse.gov/code/t23c035.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
-            "sectionExtractionStatus": "section_not_found",
-            "officialTitle": null,
-            "historyEvidence": false,
-            "contentEvidence": false,
-            "contentHash": null,
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
+            "sectionExtractionStatus": "complete",
+            "officialTitle": "Manufacture, storage, transportation or possession of certain fireworks illegal; storage and assembly of public display material; penalty",
+            "historyEvidence": true,
+            "contentEvidence": true,
+            "contentHash": "f13fb4c129c2c6a05a17f54017319187bf51b94a7c798bddc5cf6d72dfffde33",
             "findings": [
               {
-                "code": "section_not_found",
-                "classification": "mechanical",
-                "message": "The official South Carolina chapter page did not contain section 23-35-120.",
-                "reference": "23-35-120"
+                "code": "official_source_verified",
+                "classification": "success",
+                "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+                "reference": "23-35-130"
+              },
+              {
+                "code": "official_title_mismatch",
+                "classification": "structural",
+                "message": "The official South Carolina title \"Manufacture, storage, transportation or possession of certain fireworks illegal; storage and assembly of public display material; penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "23-35-130"
               }
             ]
           }
         ],
         "findings": [
           {
-            "code": "section_not_found",
-            "classification": "mechanical",
-            "message": "The official South Carolina chapter page did not contain section 23-35-120.",
-            "reference": "23-35-120"
+            "code": "official_source_verified",
+            "classification": "success",
+            "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+            "reference": "23-35-130"
+          },
+          {
+            "code": "official_title_mismatch",
+            "classification": "structural",
+            "message": "The official South Carolina title \"Manufacture, storage, transportation or possession of certain fireworks illegal; storage and assembly of public display material; penalty\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "23-35-130"
           }
         ]
       }
@@ -8233,7 +8121,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t61c006.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Consumption of alcoholic liquor in public conveyance",
             "historyEvidence": true,
@@ -8277,12 +8165,11 @@
       "catalogCode": "50-9-10",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina title \"Hunting and fishing licenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
+      "dispositionReason": "The official South Carolina title \"Unlicensed activities; violations; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Hunting and fishing licenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Unlicensed activities; violations; penalties\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Unlicensed activities; violations; penalties",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -8290,49 +8177,43 @@
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-          "reference": "50-9-510"
+          "reference": "50-9-10"
         },
         {
           "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The official South Carolina title \"Hunting and fishing licenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
-          "reference": "50-9-510"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Unlicensed activities; violations; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "50-9-10"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 50-9-510",
+        "citation": "S.C. Code Ann. § 50-9-10",
         "references": [
           {
-            "section": "50-9-510",
+            "section": "50-9-10",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 50-9-510",
+            "citation": "S.C. Code Ann. § 50-9-10",
             "officialUrl": "https://www.scstatehouse.gov/code/t50c009.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
-            "officialTitle": "Hunting and fishing licenses",
+            "officialTitle": "Unlicensed activities; violations; penalties",
             "historyEvidence": true,
             "contentEvidence": true,
-            "contentHash": "66b341ccdd142ef121eb237547d3527577769d4107b441716001d8fef42384f3",
+            "contentHash": "fa66bb7c25af95014e9e1a542ffe52b2a5a7eda3bde916700ddf791566e1e529",
             "findings": [
               {
                 "code": "official_source_verified",
                 "classification": "success",
                 "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-                "reference": "50-9-510"
+                "reference": "50-9-10"
               },
               {
                 "code": "official_title_mismatch",
                 "classification": "structural",
-                "message": "The official South Carolina title \"Hunting and fishing licenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
-                "reference": "50-9-510"
+                "message": "The official South Carolina title \"Unlicensed activities; violations; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "50-9-10"
               }
             ]
           }
@@ -8342,13 +8223,13 @@
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
-            "reference": "50-9-510"
+            "reference": "50-9-10"
           },
           {
             "code": "official_title_mismatch",
             "classification": "structural",
-            "message": "The official South Carolina title \"Hunting and fishing licenses\" is not an exact or explicitly reviewed mapping for the catalog label.",
-            "reference": "50-9-510"
+            "message": "The official South Carolina title \"Unlicensed activities; violations; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "50-9-10"
           }
         ]
       }
@@ -8356,15 +8237,14 @@
     {
       "chargeId": "sc-criminal-attempt",
       "catalogLabel": "Criminal Attempt",
-      "catalogCode": "MPC § 5.01 / SC attempt statute",
+      "catalogCode": "16-1-80",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Offense of attempt punished as principal offense\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Offense of attempt punished as principal offense\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Offense of attempt punished as principal offense\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Offense of attempt punished as principal offense",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -8379,12 +8259,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Offense of attempt punished as principal offense\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-1-80"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -8397,7 +8271,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Offense of attempt punished as principal offense",
             "historyEvidence": true,
@@ -8438,15 +8312,14 @@
     {
       "chargeId": "sc-conspiracy",
       "catalogLabel": "Criminal Conspiracy",
-      "catalogCode": "MPC § 5.03 / SC conspiracy statute",
+      "catalogCode": "16-17-410",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Conspiracy\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Conspiracy\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Conspiracy\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Conspiracy",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -8461,12 +8334,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Conspiracy\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-17-410"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -8479,7 +8346,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c017.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Conspiracy",
             "historyEvidence": true,
@@ -8520,15 +8387,14 @@
     {
       "chargeId": "sc-aiding-and-abetting",
       "catalogLabel": "Aiding and Abetting / Accomplice Liability",
-      "catalogCode": "MPC § 2.06 / SC accomplice statute",
+      "catalogCode": "16-1-40",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Accessory\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Accessory\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Accessory\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Accessory",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -8543,12 +8409,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Accessory\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-1-40"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -8561,7 +8421,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Accessory",
             "historyEvidence": true,
@@ -8643,7 +8503,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c009.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Taking money or reward to compound or conceal offense",
             "historyEvidence": true,
@@ -8684,28 +8544,65 @@
     {
       "chargeId": "sc-attempted-murder",
       "catalogLabel": "Attempted Murder",
-      "catalogCode": "SC attempted murder statute / MPC § 5.01",
+      "catalogCode": "16-3-29",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited South Carolina statutory section.",
-      "dispositionReasons": [
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official South Carolina title.",
+      "canonicalTitle": "Attempted murder",
+      "provisions": [
+        {
+          "sourceKey": "sc:statute:16-3-29",
+          "lawId": "SC",
+          "section": "16-3-29",
+          "citation": "S.C. Code Ann. § 16-3-29",
+          "officialTitle": "Attempted murder",
+          "sourceUrl": "https://www.scstatehouse.gov/code/t16c003.php",
+          "content": "SECTION 16-3-29. Attempted murder\nA person who, with intent to kill, attempts to kill another person with malice aforethought, either expressed or implied, commits the offense of attempted murder. A person who violates this section is guilty of a felony, and, upon conviction, must be imprisoned for not more than thirty years. A sentence imposed pursuant to this section may not be suspended nor may probation be granted.\nHISTORY: 2010 Act No. 273, SECTION 6.A, eff June 2, 2010.\nEditor's Note\n2010 Act No. 273, SECTION 7.C, provides:\n\"Wherever in the 1976 Code of Laws reference is made to the common law offense of assault and battery of a high and aggravated nature, it means assault and battery with intent to kill, as contained in repealed Section 16-3-620, and, except for references in Section 16-1-60 and Section 17-25-45, wherever in the 1976 Code reference is made to assault and battery with intent to kill, it means attempted murder as defined in Section 16-3-29.\"",
+          "contentHash": "e92ec04e96d28af8fadd254639c8ea020477f7d4a92a593080d2d2acb874e557",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-08-31T17:28:08.072Z",
+          "effectiveDateStart": "June 2, 2010",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "sc-attempted-murder",
+            "catalogLabel": "Attempted Murder",
+            "catalogCode": "16-3-29",
+            "catalogClassification": "felony",
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "south_carolina_code_of_laws_html"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "south_carolina_code_of_laws_html"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "south_carolina_code_of_laws_html"
+            },
+            "currentnessEvidence": {
+              "officialChapterPage": true,
+              "historyPresent": true,
+              "effectiveDateStart": "June 2, 2010"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "15943340526313db751f22a30bb999e5993e1a310e4cdccd55f09b7fda11cf91",
+            "manifestImportedAt": "2026-08-31T17:28:08.072Z"
+          }
+        }
       ],
-      "canonicalTitle": null,
-      "provisions": [],
       "apiStatus": "verified",
+      "dispositionReasons": [
+        "Catalog label matches the official South Carolina title."
+      ],
       "auditFindings": [
         {
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
           "reference": "16-3-29"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -8718,7 +8615,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Attempted murder",
             "historyEvidence": true,
@@ -8801,7 +8698,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Offense of attempt punished as principal offense",
             "historyEvidence": true,
@@ -8829,7 +8726,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c011.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Robbery and attempted robbery while armed with deadly weapon",
             "historyEvidence": true,
@@ -8936,7 +8833,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c001.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Offense of attempt punished as principal offense",
             "historyEvidence": true,
@@ -8964,7 +8861,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Criminal sexual conduct in the first degree",
             "historyEvidence": true,
@@ -9058,7 +8955,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c003.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Manslaughter",
             "historyEvidence": true,
@@ -9140,7 +9037,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c008.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Definitions",
             "historyEvidence": true,
@@ -9222,7 +9119,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c005.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Conspiracy against civil rights",
             "historyEvidence": true,
@@ -9263,15 +9160,14 @@
     {
       "chargeId": "sc-recidivist-enhancement",
       "catalogLabel": "Prior Felony / Recidivist Sentencing Enhancement",
-      "catalogCode": "SC habitual offender / recidivist statute",
+      "catalogCode": "17-25-45",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Life sentence for person convicted for certain crimes\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Life sentence for person convicted for certain crimes\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Life sentence for person convicted for certain crimes\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Life sentence for person convicted for certain crimes",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -9286,12 +9182,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Life sentence for person convicted for certain crimes\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "17-25-45"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -9304,7 +9194,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t17c025.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Life sentence for person convicted for certain crimes",
             "historyEvidence": true,
@@ -9345,15 +9235,14 @@
     {
       "chargeId": "sc-firearm-in-felony-enhancement",
       "catalogLabel": "Use of a Firearm in Commission of a Felony",
-      "catalogCode": "SC firearm enhancement statute",
+      "catalogCode": "16-23-490",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Additional punishment for possession of firearm or knife during commission of, or attempt to commit, violent crime\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Additional punishment for possession of firearm or knife during commission of, or attempt to commit, violent crime\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Additional punishment for possession of firearm or knife during commission of, or attempt to commit, violent crime\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Additional punishment for possession of firearm or knife during commission of, or attempt to commit, violent crime",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -9368,12 +9257,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Additional punishment for possession of firearm or knife during commission of, or attempt to commit, violent crime\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "16-23-490"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -9386,7 +9269,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c023.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Additional punishment for possession of firearm or knife during commission of, or attempt to commit, violent crime",
             "historyEvidence": true,
@@ -9427,15 +9310,14 @@
     {
       "chargeId": "sc-drug-school-zone-enhancement",
       "catalogLabel": "Drug Offense in a School Zone (Proximity Enhancement)",
-      "catalogCode": "SC drug-free school zone statute",
+      "catalogCode": "44-53-445",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Distribution of controlled substance within proximity of school\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Distribution of controlled substance within proximity of school\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Distribution of controlled substance within proximity of school\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Distribution of controlled substance within proximity of school",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -9450,12 +9332,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Distribution of controlled substance within proximity of school\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "44-53-445"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -9468,7 +9344,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Distribution of controlled substance within proximity of school",
             "historyEvidence": true,
@@ -9550,7 +9426,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c019.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Betting on elections",
             "historyEvidence": true,
@@ -9591,63 +9467,74 @@
     {
       "chargeId": "sc-money-laundering",
       "catalogLabel": "Money Laundering",
-      "catalogCode": "SC money laundering statute",
+      "catalogCode": "44-53-475",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina chapter page did not contain section 44-53-476.",
+      "dispositionReason": "The official South Carolina title \"Financial transactions, monetary instruments, or financial institutions involving property or proceeds of unlawful activities in narcotic drugs or controlled substances; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina chapter page did not contain section 44-53-476.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Financial transactions, monetary instruments, or financial institutions involving property or proceeds of unlawful activities in narcotic drugs or controlled substances; penalties\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Financial transactions, monetary instruments, or financial institutions involving property or proceeds of unlawful activities in narcotic drugs or controlled substances; penalties",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
         {
-          "code": "section_not_found",
-          "classification": "mechanical",
-          "message": "The official South Carolina chapter page did not contain section 44-53-476.",
-          "reference": "44-53-476"
+          "code": "official_source_verified",
+          "classification": "success",
+          "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+          "reference": "44-53-475"
         },
         {
-          "code": "catalog_code_mismatch",
+          "code": "official_title_mismatch",
           "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
+          "message": "The official South Carolina title \"Financial transactions, monetary instruments, or financial institutions involving property or proceeds of unlawful activities in narcotic drugs or controlled substances; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
+          "reference": "44-53-475"
         }
       ],
       "sourceAudit": {
-        "citation": "S.C. Code Ann. § 44-53-476",
+        "citation": "S.C. Code Ann. § 44-53-475",
         "references": [
           {
-            "section": "44-53-476",
+            "section": "44-53-475",
             "subdivision": null,
-            "citation": "S.C. Code Ann. § 44-53-476",
+            "citation": "S.C. Code Ann. § 44-53-475",
             "officialUrl": "https://www.scstatehouse.gov/code/t44c053.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
-            "sectionExtractionStatus": "section_not_found",
-            "officialTitle": null,
-            "historyEvidence": false,
-            "contentEvidence": false,
-            "contentHash": null,
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
+            "sectionExtractionStatus": "complete",
+            "officialTitle": "Financial transactions, monetary instruments, or financial institutions involving property or proceeds of unlawful activities in narcotic drugs or controlled substances; penalties",
+            "historyEvidence": true,
+            "contentEvidence": true,
+            "contentHash": "f71b05e77ca8b4abb3d948cb7425fb4bc33beafb9c3a23d9ad24b3670a2c8ce9",
             "findings": [
               {
-                "code": "section_not_found",
-                "classification": "mechanical",
-                "message": "The official South Carolina chapter page did not contain section 44-53-476.",
-                "reference": "44-53-476"
+                "code": "official_source_verified",
+                "classification": "success",
+                "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+                "reference": "44-53-475"
+              },
+              {
+                "code": "official_title_mismatch",
+                "classification": "structural",
+                "message": "The official South Carolina title \"Financial transactions, monetary instruments, or financial institutions involving property or proceeds of unlawful activities in narcotic drugs or controlled substances; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
+                "reference": "44-53-475"
               }
             ]
           }
         ],
         "findings": [
           {
-            "code": "section_not_found",
-            "classification": "mechanical",
-            "message": "The official South Carolina chapter page did not contain section 44-53-476.",
-            "reference": "44-53-476"
+            "code": "official_source_verified",
+            "classification": "success",
+            "message": "Official South Carolina source was retrieved with complete section and history/content evidence.",
+            "reference": "44-53-475"
+          },
+          {
+            "code": "official_title_mismatch",
+            "classification": "structural",
+            "message": "The official South Carolina title \"Financial transactions, monetary instruments, or financial institutions involving property or proceeds of unlawful activities in narcotic drugs or controlled substances; penalties\" is not an exact or explicitly reviewed mapping for the catalog label.",
+            "reference": "44-53-475"
           }
         ]
       }
@@ -9696,7 +9583,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t63c019.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Definitions",
             "historyEvidence": true,
@@ -9778,7 +9665,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t63c019.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Definitions",
             "historyEvidence": true,
@@ -9819,15 +9706,14 @@
     {
       "chargeId": "sc-juvenile-transfer-adult-court",
       "catalogLabel": "Juvenile Transfer to Adult Court (Waiver Hearing)",
-      "catalogCode": "SC Juvenile Court Act — transfer / waiver provisions",
+      "catalogCode": "63-19-1210",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
       "dispositionReason": "The official South Carolina title \"Transfer of jurisdiction\" is not an exact or explicitly reviewed mapping for the catalog label.",
       "dispositionReasons": [
-        "The official South Carolina title \"Transfer of jurisdiction\" is not an exact or explicitly reviewed mapping for the catalog label.",
-        "The catalog code does not exactly support every cited South Carolina statutory section."
+        "The official South Carolina title \"Transfer of jurisdiction\" is not an exact or explicitly reviewed mapping for the catalog label."
       ],
-      "canonicalTitle": null,
+      "canonicalTitle": "Transfer of jurisdiction",
       "provisions": [],
       "apiStatus": "verified",
       "auditFindings": [
@@ -9842,12 +9728,6 @@
           "classification": "structural",
           "message": "The official South Carolina title \"Transfer of jurisdiction\" is not an exact or explicitly reviewed mapping for the catalog label.",
           "reference": "63-19-1210"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited South Carolina statutory section.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -9860,7 +9740,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t63c019.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Transfer of jurisdiction",
             "historyEvidence": true,
@@ -9942,7 +9822,7 @@
             "officialUrl": "https://www.scstatehouse.gov/code/t16c023.php",
             "fetchStatus": "success",
             "fetchError": null,
-            "retrievedAt": "2026-08-31T17:02:50.170Z",
+            "retrievedAt": "2026-08-31T17:28:08.072Z",
             "sectionExtractionStatus": "complete",
             "officialTitle": "Sale or delivery of handgun to and possession by certain persons unlawful; stolen handguns",
             "historyEvidence": true,
@@ -9986,33 +9866,33 @@
     "catalogRowCount": 128,
     "parsedReferenceCount": 130,
     "successfulOfficialRetrievals": 130,
-    "completeSectionExtractions": 123,
+    "completeSectionExtractions": 127,
     "findingCounts": {
-      "official_source_verified": 123,
+      "official_source_verified": 127,
       "citation_not_parseable": 0,
-      "catalog_code_mismatch": 52,
+      "catalog_code_mismatch": 18,
       "official_fetch_failure": 0,
-      "section_not_found": 6,
+      "section_not_found": 2,
       "content_missing": 0,
       "history_missing": 0,
       "subdivision_not_found": 1,
-      "official_title_mismatch": 120
+      "official_title_mismatch": 124
     },
     "mechanical": {
       "findingCodes": [
         "section_not_found",
         "subdivision_not_found"
       ],
-      "affectedRows": 7,
-      "affectedReferences": 7
+      "affectedRows": 3,
+      "affectedReferences": 3
     },
     "structural": {
       "findingCodes": [
         "catalog_code_mismatch",
         "official_title_mismatch"
       ],
-      "affectedRows": 125,
-      "affectedReferences": 120
+      "affectedRows": 123,
+      "affectedReferences": 124
     }
   }
 }

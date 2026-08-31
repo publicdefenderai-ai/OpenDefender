@@ -3,7 +3,11 @@ import { createHash } from "node:crypto";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import { criminalCharges } from "../shared/criminal-charges";
+import {
+  criminalCharges,
+  getVerifiedCitation,
+  SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS,
+} from "../shared/criminal-charges";
 import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 import {
   buildSouthCarolinaManifestRecord,
@@ -23,6 +27,75 @@ import {
 } from "../scripts/data-review/import-south-carolina-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
+
+const correctedSouthCarolinaSections: Record<string, string> = {
+  "sc-criminally-negligent-homicide": "16-3-60",
+  "sc-vehicular-homicide": "56-5-2910",
+  "sc-assault-on-peace-officer": "16-9-320",
+  "sc-identity-theft": "16-13-510",
+  "sc-embezzlement": "16-13-230",
+  "sc-auto-burglary": "16-13-160",
+  "sc-felon-in-possession-of-firearm": "16-23-500",
+  "sc-possession-of-prohibited-weapon": "16-23-230",
+  "sc-wire-fraud": "16-13-240",
+  "sc-mail-fraud": "16-13-240",
+  "sc-tax-fraud": "12-54-44",
+  "sc-illegal-fireworks": "23-35-130",
+  "sc-public-intoxication": "16-17-530",
+  "sc-dui-second-offense": "56-5-2933",
+  "sc-dui-third-offense": "56-5-2933",
+  "sc-failure-to-appear": "17-15-90",
+  "sc-contempt-of-court": "14-25-65",
+  "sc-expired-registration": "56-3-110",
+  "sc-truancy": "59-65-20",
+  "sc-hunting-fishing-no-license": "50-9-10",
+  "sc-solicitation": "16-15-90",
+  "sc-fake-id": "56-1-510",
+  "sc-criminal-attempt": "16-1-80",
+  "sc-conspiracy": "16-17-410",
+  "sc-aiding-and-abetting": "16-1-40",
+  "sc-attempted-murder": "16-3-29",
+  "sc-recidivist-enhancement": "17-25-45",
+  "sc-firearm-in-felony-enhancement": "16-23-490",
+  "sc-drug-school-zone-enhancement": "44-53-445",
+  "sc-juvenile-transfer-adult-court": "63-19-1210",
+  "sc-money-laundering": "44-53-475",
+};
+
+const correctedSouthCarolinaScope: Record<string, { officialTitle: string; catalogDescription: string }> = {
+  "sc-criminally-negligent-homicide": {
+    officialTitle: "criminal negligence",
+    catalogDescription: "death",
+  },
+  "sc-vehicular-homicide": {
+    officialTitle: "reckless vehicular homicide",
+    catalogDescription: "reckless",
+  },
+  "sc-assault-on-peace-officer": {
+    officialTitle: "assaulting officer",
+    catalogDescription: "law enforcement officer",
+  },
+  "sc-auto-burglary": {
+    officialTitle: "breaking into motor vehicles",
+    catalogDescription: "vehicle",
+  },
+  "sc-felon-in-possession-of-firearm": {
+    officialTitle: "unlawful possession of a firearm",
+    catalogDescription: "firearm",
+  },
+  "sc-illegal-fireworks": {
+    officialTitle: "fireworks illegal",
+    catalogDescription: "fireworks",
+  },
+  "sc-money-laundering": {
+    officialTitle: "financial transactions",
+    catalogDescription: "financial transaction",
+  },
+  "sc-attempted-murder": {
+    officialTitle: "attempted murder",
+    catalogDescription: "killing",
+  },
+};
 
 function document(section: string, title: string, subdivision?: string): SouthCarolinaSourceDocument {
   return {
@@ -44,17 +117,19 @@ describe("South Carolina authority manifest", () => {
     expect(count).toBe(128);
     expect(manifest.catalogRecords).toHaveLength(count);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(count);
-    expect(seed.sources).toHaveLength(2);
-    expect(seed.snapshots).toHaveLength(2);
-    expect(seed.links).toHaveLength(2);
-    expect(seed.selectableChargeIds).toHaveLength(2);
+    expect(seed.sources).toHaveLength(3);
+    expect(seed.snapshots).toHaveLength(3);
+    expect(seed.links).toHaveLength(3);
+    expect(seed.selectableChargeIds).toHaveLength(3);
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(126);
+      record.disposition === "require_exact_reselection")).toHaveLength(125);
     expect(manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection").every((record) => record.provisions.length === 0)).toBe(true);
     expect(seed.selectableChargeIds).not.toContain("sc-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("sc-voluntary-manslaughter");
     expect(seed.selectableChargeIds).toContain("sc-shoplifting");
+    expect(seed.selectableChargeIds).toContain("sc-attempted-murder");
+    expect(new Set(seed.selectableChargeIds)).toEqual(SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS);
   });
 
   it("accepts only exact South Carolina Code citations and constructs official chapter URLs", () => {
@@ -71,6 +146,64 @@ describe("South Carolina authority manifest", () => {
     expect(buildSouthCarolinaSourceUrl("16-3-600")).toBe(
       "https://www.scstatehouse.gov/code/t16c003.php",
     );
+  });
+
+  it("keeps each corrected catalog citation on its exact current section", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+
+    for (const [chargeId, section] of Object.entries(correctedSouthCarolinaSections)) {
+      const charge = criminalCharges.find((candidate) => candidate.id === chargeId);
+      const citation = CHARGE_CITATIONS[chargeId]?.citation ?? "";
+      const parsed = parseSouthCarolinaCitation(citation);
+      const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId);
+
+      expect(charge?.code, chargeId).toBe(section);
+      expect(parsed[0]?.section, chargeId).toBe(section);
+      expect(parsed).toHaveLength(1);
+      expect(record?.sourceAudit.references[0]?.section, chargeId).toBe(section);
+      expect(record?.auditFindings.some((finding) => finding.code === "catalog_code_mismatch"), chargeId)
+        .toBe(false);
+    }
+  });
+
+  it("does not treat a corrected section as an exact offense when its scope is broader or narrower", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+
+    for (const [chargeId, scope] of Object.entries(correctedSouthCarolinaScope)) {
+      const charge = criminalCharges.find((candidate) => candidate.id === chargeId);
+      const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId);
+      const officialTitle = record?.sourceAudit.references[0]?.officialTitle?.toLowerCase() ?? "";
+
+      expect(officialTitle, chargeId).toContain(scope.officialTitle);
+      expect(charge?.description.toLowerCase(), chargeId).toContain(scope.catalogDescription);
+    }
+
+    expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-vehicular-homicide")?.disposition)
+      .toBe("require_exact_reselection");
+    expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-auto-burglary")?.disposition)
+      .toBe("require_exact_reselection");
+    expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-money-laundering")?.disposition)
+      .toBe("require_exact_reselection");
+    expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-attempted-murder")?.disposition)
+      .toBe("retain");
+  });
+
+  it("never exposes an SC citation for a manifest-withheld row", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const retainedIds = new Set(
+      manifest.catalogRecords
+        .filter((record) => record.disposition === "retain" || record.disposition === "exact_alias_rename")
+        .map((record) => record.chargeId),
+    );
+
+    for (const charge of criminalCharges.filter((candidate) => candidate.jurisdiction === "SC")) {
+      const citation = getVerifiedCitation(charge);
+      if (retainedIds.has(charge.id)) {
+        expect(citation, charge.id).toBe(CHARGE_CITATIONS[charge.id]?.citation);
+      } else {
+        expect(citation, charge.id).toBeNull();
+      }
+    }
   });
 
   it("extracts one section from a long chapter page and rejects missing history or subdivisions", () => {
@@ -154,7 +287,7 @@ describe("South Carolina authority manifest", () => {
       catalogRowCount: 128,
       parsedReferenceCount: 130,
       successfulOfficialRetrievals: 130,
-      completeSectionExtractions: 123,
+      completeSectionExtractions: 127,
     });
     expect(manifest.catalogRecords.every((record) => {
       const parsed = parseSouthCarolinaCitation(CHARGE_CITATIONS[record.chargeId]?.citation ?? "");
@@ -167,16 +300,16 @@ describe("South Carolina authority manifest", () => {
     })).toBe(true);
     expect(references).toHaveLength(130);
     expect(references.filter((reference) => reference.fetchStatus === "success")).toHaveLength(130);
-    expect(references.filter((reference) => reference.sectionExtractionStatus === "complete")).toHaveLength(123);
-    expect(references.filter((reference) => reference.sectionExtractionStatus === "section_not_found")).toHaveLength(6);
-    expect(references.filter((reference) => reference.contentHash !== null)).toHaveLength(124);
+    expect(references.filter((reference) => reference.sectionExtractionStatus === "complete")).toHaveLength(127);
+    expect(references.filter((reference) => reference.sectionExtractionStatus === "section_not_found")).toHaveLength(2);
+    expect(references.filter((reference) => reference.contentHash !== null)).toHaveLength(128);
     expect(findings.some((finding) => finding.code === "catalog_code_mismatch")).toBe(true);
     expect(findings.some((finding) => finding.code === "official_title_mismatch")).toBe(true);
     expect(findings.some((finding) => finding.code === "section_not_found")).toBe(true);
     expect(findings.some((finding) => finding.code === "subdivision_not_found")).toBe(true);
     expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-criminally-negligent-homicide")?.auditFindings.map(
       (finding) => finding.code,
-    )).toEqual(["official_source_verified", "official_title_mismatch", "catalog_code_mismatch"]);
+    )).toEqual(["official_source_verified", "official_title_mismatch"]);
     expect(Object.keys(manifest.audit!.findingCounts).sort()).toEqual([...findingCodes].sort());
     expect(manifest.audit!.mechanical.findingCodes).not.toContain("catalog_code_mismatch");
     expect(manifest.audit!.structural.findingCodes).toContain("catalog_code_mismatch");

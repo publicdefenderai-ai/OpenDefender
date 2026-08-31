@@ -14,10 +14,10 @@ describe("committed South Carolina deployment seed", () => {
     expect(manifest.source).toBe(SOUTH_CAROLINA_MANIFEST_SOURCE);
     expect(manifest.catalogRecords).toHaveLength(128);
     expect(seed.sourcePolicy).toBe(SOUTH_CAROLINA_SOURCE_POLICY);
-    expect(seed.selectableChargeIds).toHaveLength(2);
-    expect(seed.sources).toHaveLength(2);
-    expect(seed.snapshots).toHaveLength(2);
-    expect(seed.links).toHaveLength(2);
+    expect(seed.selectableChargeIds).toHaveLength(3);
+    expect(seed.sources).toHaveLength(3);
+    expect(seed.snapshots).toHaveLength(3);
+    expect(seed.links).toHaveLength(3);
     expect(seed.sources.every((source) => {
       return source.publisher === "South Carolina Legislature" &&
         source.accessPolicy === "store_text" &&

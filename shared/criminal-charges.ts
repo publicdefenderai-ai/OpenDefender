@@ -216,10 +216,25 @@ import {
   isCaliforniaSelectableId,
 } from './california-authority';
 
+/**
+ * SC authority is loaded from the committed manifest on the server, but
+ * citation helpers are also used by synchronous consumers such as the search
+ * index. Keep this fail-closed list synchronized with that manifest so a
+ * withheld SC row cannot expose its overlay citation through a legacy path.
+ */
+export const SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS = new Set([
+  'sc-shoplifting',
+  'sc-forgery',
+  'sc-attempted-murder',
+]);
+
 /** True only when the entry has a 'high' confidence citation (overlay or inline). */
 export function isCitationVerified(charge: CriminalCharge): boolean {
   if (charge.jurisdiction === 'CA') {
     return Boolean(getCaliforniaCitation(charge.id));
+  }
+  if (charge.jurisdiction === 'SC' && !SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(charge.id)) {
+    return false;
   }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (overlay) return overlay.confidence === 'high';
@@ -232,6 +247,9 @@ export function isCitationVerified(charge: CriminalCharge): boolean {
 export function getVerifiedCitation(charge: CriminalCharge): string | null {
   if (charge.jurisdiction === 'CA') {
     return getCaliforniaCitation(charge.id);
+  }
+  if (charge.jurisdiction === 'SC' && !SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(charge.id)) {
+    return null;
   }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (overlay && overlay.confidence === 'high') return overlay.citation;
@@ -37035,7 +37053,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-vehicular-homicide',
     name: 'Vehicular Homicide',
-    code: '56-5-2945',
+    code: '56-5-2910',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Death caused by vehicle while intoxicated or reckless under South Carolina law',
@@ -37321,7 +37339,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-identity-theft',
     name: 'Identity Theft',
-    code: '16-13-500',
+    code: '16-13-510',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Using another person\'s identifying information under South Carolina law',
@@ -37347,7 +37365,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-embezzlement',
     name: 'Embezzlement',
-    code: '16-13-210',
+    code: '16-13-230',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Theft by person in position of trust under South Carolina law',
@@ -37438,7 +37456,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-auto-burglary',
     name: 'Auto Burglary',
-    code: '16-11-382',
+    code: '16-13-160',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Unlawful entry of vehicle under South Carolina law',
@@ -37633,7 +37651,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-possession-of-prohibited-weapon',
     name: 'Possession of Prohibited Weapon',
-    code: '16-23-20',
+    code: '16-23-230',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Possession of illegal weapon under South Carolina law',
@@ -37646,7 +37664,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-wire-fraud',
     name: 'Wire Fraud',
-    code: '16-13-385',
+    code: '16-13-240',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Fraud using electronic communications under South Carolina law',
@@ -37659,7 +37677,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-mail-fraud',
     name: 'Mail Fraud',
-    code: '16-13-385',
+    code: '16-13-240',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Fraud using postal service under South Carolina law',
@@ -37750,7 +37768,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-public-intoxication',
     name: 'Public Intoxication',
-    code: '61-6-4720',
+    code: '16-17-530',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under South Carolina law',
@@ -37828,7 +37846,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-dui-second-offense',
     name: 'DUI Second Offense',
-    code: '56-5-2930',
+    code: '56-5-2933',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Driving under influence, repeat offense under South Carolina law',
@@ -37841,7 +37859,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-dui-third-offense',
     name: 'DUI Third Offense',
-    code: '56-5-2930',
+    code: '56-5-2933',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Driving under influence, felony level under South Carolina law',
@@ -62457,7 +62475,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-failure-to-appear',
     name: 'Failure to Appear',
-    code: '17-15-100',
+    code: '17-15-90',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Willful failure to appear in court as required after being released on bail or personal recognizance under SC law',
@@ -62561,7 +62579,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-contempt-of-court',
     name: 'Contempt of Court',
-    code: '14-25-15',
+    code: '14-25-65',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Willful disobedience of a court order, disrespectful behavior in court, or failure to comply with court directives under SC law',
@@ -72507,7 +72525,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-expired-registration',
     name: 'Driving with Expired Registration',
-    code: '56-3-1230',
+    code: '56-3-110',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Operating a motor vehicle with an expired registration or without valid registration tags under SC law',
@@ -72585,7 +72603,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-animal-at-large',
     name: 'Animal at Large / Leash Law Violation',
-    code: '47-3-20',
+    code: '47-3-110',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Allowing a dog or other domestic animal to roam at large without restraint or control in violation of local leash laws under SC law',
@@ -78305,7 +78323,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-truancy',
     name: 'Truancy / Chronic Absenteeism',
-    code: '59-65-10',
+    code: '59-65-20',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'A minor failing to attend school as required by compulsory education laws, or a parent/guardian failing to ensure school attendance under SC law',
@@ -78331,7 +78349,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'sc-illegal-fireworks',
     name: 'Illegal Discharge of Fireworks',
-    code: '23-35-45',
+    code: '23-35-130',
     jurisdiction: 'SC',
     category: 'misdemeanor',
     description: 'Possessing, selling, or discharging fireworks in violation of local or state fireworks regulations under SC law',
@@ -81660,7 +81678,7 @@ const inchoatePhase1Charges: CriminalCharge[] = [
   {
     id: 'sc-criminal-attempt',
     name: 'Criminal Attempt',
-    code: 'MPC § 5.01 / SC attempt statute',
+    code: '16-1-80',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Taking a substantial step toward committing a crime with the intent to complete it under South Carolina law. The attempt charge carries one degree less punishment than the completed offense in most cases.',
@@ -81674,7 +81692,7 @@ const inchoatePhase1Charges: CriminalCharge[] = [
   {
     id: 'sc-conspiracy',
     name: 'Criminal Conspiracy',
-    code: 'MPC § 5.03 / SC conspiracy statute',
+    code: '16-17-410',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'An agreement between two or more people to commit a crime, plus an overt act in furtherance of that agreement, under South Carolina law. Each co-conspirator is responsible for acts of all others done in furtherance of the conspiracy.',
@@ -81688,7 +81706,7 @@ const inchoatePhase1Charges: CriminalCharge[] = [
   {
     id: 'sc-aiding-and-abetting',
     name: 'Aiding and Abetting / Accomplice Liability',
-    code: 'MPC § 2.06 / SC accomplice statute',
+    code: '16-1-40',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Helping, encouraging, or assisting another person to commit a crime under South Carolina law. An aider and abettor is treated as equally guilty as the principal who committed the offense.',
@@ -84863,7 +84881,7 @@ const inchoatePhase2Charges: CriminalCharge[] = [
   {
     id: 'sc-attempted-murder',
     name: 'Attempted Murder',
-    code: 'SC attempted murder statute / MPC § 5.01',
+    code: '16-3-29',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Taking a substantial step toward killing another person with the intent to cause death under South Carolina law. One of the most seriously charged attempt offenses, often carrying sentences nearly as severe as completed murder.',
@@ -88656,7 +88674,7 @@ const sentencingEnhancementCharges: CriminalCharge[] = [
   {
     id: 'sc-recidivist-enhancement',
     name: 'Prior Felony / Recidivist Sentencing Enhancement',
-    code: 'SC habitual offender / recidivist statute',
+    code: '17-25-45',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'A sentencing enhancement that dramatically increases punishment based on prior felony convictions under South Carolina law. Commonly called "three-strikes" laws, habitual offender statutes, or repeat offender enhancements. The enhancement applies automatically in many states once prior convictions are established. Some states impose mandatory life sentences after a certain number of strike offenses.',
@@ -88670,7 +88688,7 @@ const sentencingEnhancementCharges: CriminalCharge[] = [
   {
     id: 'sc-firearm-in-felony-enhancement',
     name: 'Use of a Firearm in Commission of a Felony',
-    code: 'SC firearm enhancement statute',
+    code: '16-23-490',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'A sentencing enhancement — and sometimes a separate charge — that adds mandatory additional prison time when a firearm is used, displayed, or discharged during the commission of a felony under South Carolina law. Many states impose mandatory consecutive terms (the enhancement time cannot be served at the same time as the base sentence). Discharging a firearm or causing great bodily injury typically triggers higher tiers.',
@@ -88684,7 +88702,7 @@ const sentencingEnhancementCharges: CriminalCharge[] = [
   {
     id: 'sc-drug-school-zone-enhancement',
     name: 'Drug Offense in a School Zone (Proximity Enhancement)',
-    code: 'SC drug-free school zone statute',
+    code: '44-53-445',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'A sentencing enhancement that doubles (or more) the penalty for a drug offense committed within a specified distance of a school, school bus stop, playground, public park, or youth center under South Carolina law. The enhancement often applies regardless of whether any minors were present or involved. Zone distances vary by state — commonly 500 feet to 1,000 feet. Many states also suspend driver’s licenses upon conviction.',
@@ -90964,7 +90982,7 @@ const phase4WhiteCollarCharges: CriminalCharge[] = [
   {
     id: 'sc-money-laundering',
     name: 'Money Laundering',
-    code: 'SC money laundering statute',
+    code: '44-53-475',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'Knowingly engaging in a financial transaction with the proceeds of a specified unlawful activity with the intent to conceal the source, promote criminal activity, or evade taxes under South Carolina law. Money laundering charges often accompany underlying fraud, drug, or organized crime charges. Structuring transactions to avoid reporting thresholds (smurfing) is a separate but related offense.',
@@ -93749,7 +93767,7 @@ const phase5JuvenileCharges: CriminalCharge[] = [
   {
     id: 'sc-juvenile-transfer-adult-court',
     name: 'Juvenile Transfer to Adult Court (Waiver Hearing)',
-    code: 'SC Juvenile Court Act — transfer / waiver provisions',
+    code: '63-19-1210',
     jurisdiction: 'SC',
     category: 'felony',
     description: 'A proceeding in which the juvenile court considers transferring (waiving) jurisdiction over a juvenile to adult criminal court under South Carolina law. If transferred, the juvenile will be prosecuted as an adult and faces adult criminal penalties, including a permanent criminal record. Transfer is typically available for serious felonies and for older juveniles. There are three types: judicial waiver (judge decides), prosecutorial direct file (prosecutor chooses the court), and statutory exclusion (mandatory adult prosecution for certain offenses).',
