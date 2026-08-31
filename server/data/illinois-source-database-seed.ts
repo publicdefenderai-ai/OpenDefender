@@ -20,7 +20,8 @@ export interface IllinoisAuthorityManifest {
   jurisdiction: "IL";
   generatedAt: Date;
   source: typeof ILLINOIS_MANIFEST_SOURCE;
-  catalogRecords: AuthorityCatalogRecord[];
+  catalogRecords: IllinoisManifestRecord[];
+  audit?: IllinoisManifestAudit;
 }
 
 export interface IllinoisSourceReference {
@@ -42,6 +43,77 @@ export interface IllinoisSourceDocument {
   sourceEvidence: string | null;
 }
 
+export type IllinoisAuditClassification = "mechanical" | "structural" | "success";
+
+export type IllinoisAuditFindingCode =
+  | "official_source_verified"
+  | "citation_not_parseable"
+  | "catalog_code_mismatch"
+  | "official_fetch_failure"
+  | "section_not_found"
+  | "content_missing"
+  | "source_evidence_missing"
+  | "subdivision_not_found"
+  | "official_title_mismatch";
+
+export interface IllinoisAuditFinding {
+  code: IllinoisAuditFindingCode;
+  classification: IllinoisAuditClassification;
+  message: string;
+  reference: string | null;
+}
+
+export interface IllinoisReferenceAudit {
+  chapter: string;
+  act: string;
+  section: string;
+  subdivision: string | null;
+  citation: string;
+  officialUrl: string;
+  fetchStatus: "success" | "official_page_failure" | "transport_failure" | "not_attempted";
+  fetchError: string | null;
+  retrievedAt: string | null;
+  sectionExtractionStatus: "complete" | "section_not_found" | "incomplete" | "not_attempted";
+  officialTitle: string | null;
+  sourceEvidence: string | null;
+  effectiveDateStart: string | null;
+  contentEvidence: boolean;
+  contentHash: string | null;
+  findings: IllinoisAuditFinding[];
+}
+
+export interface IllinoisSourceAudit {
+  citation: string;
+  references: IllinoisReferenceAudit[];
+  rowFindings: IllinoisAuditFinding[];
+  findings: IllinoisAuditFinding[];
+}
+
+export interface IllinoisManifestRecord extends AuthorityCatalogRecord {
+  dispositionReasons: string[];
+  auditFindings: IllinoisAuditFinding[];
+  sourceAudit: IllinoisSourceAudit;
+}
+
+export interface IllinoisManifestAudit {
+  schemaVersion: 1;
+  catalogRowCount: number;
+  parsedReferenceCount: number;
+  successfulOfficialRetrievals: number;
+  completeSectionExtractions: number;
+  findingCounts: Record<IllinoisAuditFindingCode, number>;
+  mechanical: {
+    findingCodes: IllinoisAuditFindingCode[];
+    affectedRows: number;
+    affectedReferences: number;
+  };
+  structural: {
+    findingCodes: IllinoisAuditFindingCode[];
+    affectedRows: number;
+    affectedReferences: number;
+  };
+}
+
 function normalizeTitle(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
@@ -55,7 +127,18 @@ function referenceHash(value: unknown): string {
  * charge-specific approval. A related ILCS catchline alone is not enough to
  * publish a materially different catalog label.
  */
-export const ILLINOIS_EXACT_TITLE_ALIASES: Record<string, string[]> = {};
+export const ILLINOIS_EXACT_TITLE_ALIASES: Record<string, string[]> = {
+  // These mappings are limited to the exact ILGA section identity already
+  // cited by the catalog. They document common-name/order/catchline variants,
+  // not legal equivalence between different offenses.
+  "il-murder-in-the-first-degree": ["First degree murder"],
+  "il-murder-in-the-second-degree": ["Second degree murder"],
+  "il-involuntary-manslaughter": ["Involuntary Manslaughter and Reckless Homicide"],
+  "il-felony-murder": ["First degree murder"],
+  "il-identity-theft": ["Identity theft; aggravated identity theft"],
+  "il-shoplifting": ["Retail theft"],
+  "il-rape-in-the-first-degree": ["Aggravated criminal sexual assault"],
+};
 
 function parseSectionToken(
   token: string,
@@ -136,6 +219,22 @@ function titleMatches(charge: CriminalCharge, title: string): boolean {
   return normalized === normalizeTitle(charge.name) ||
     (ILLINOIS_EXACT_TITLE_ALIASES[charge.id] ?? [])
       .some((alias) => normalized === normalizeTitle(alias));
+}
+
+function cloneFinding(finding: IllinoisAuditFinding): IllinoisAuditFinding {
+  return { ...finding };
+}
+
+function cloneSourceAudit(sourceAudit: IllinoisSourceAudit): IllinoisSourceAudit {
+  return {
+    citation: sourceAudit.citation,
+    references: sourceAudit.references.map((reference) => ({
+      ...reference,
+      findings: reference.findings.map(cloneFinding),
+    })),
+    rowFindings: sourceAudit.rowFindings.map(cloneFinding),
+    findings: sourceAudit.findings.map(cloneFinding),
+  };
 }
 
 function hasSubdivision(text: string, subdivision: string | null): boolean {
@@ -219,7 +318,8 @@ export function buildIllinoisManifestRecord(
   documents: IllinoisSourceDocument[],
   importedAt: Date,
   error?: string,
-): AuthorityCatalogRecord {
+  sourceAudit?: IllinoisSourceAudit,
+): IllinoisManifestRecord {
   const base = {
     chargeId: charge.id,
     catalogLabel: charge.name,
@@ -227,55 +327,120 @@ export function buildIllinoisManifestRecord(
     catalogCategory: charge.category,
   };
   const references = parseIllinoisCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+  const audit = cloneSourceAudit(
+    sourceAudit ?? buildFallbackIllinoisSourceAudit(charge, documents),
+  );
+  const auditFindings = [...audit.findings];
   if (references.length === 0) {
-    return {
+    const finding: IllinoisAuditFinding = {
+      code: "citation_not_parseable",
+      classification: "structural",
+      message:
+        "The catalog citation is not an exact Illinois Compiled Statutes citation; federal, MPC, inferred, and compound-only substitutes are withheld.",
+      reference: null,
+    };
+    audit.rowFindings.push(finding);
+    audit.findings.push(finding);
+    auditFindings.push(finding);
+  } else if (!codeSupportsReferences(charge, references)) {
+    const finding: IllinoisAuditFinding = {
+      code: "catalog_code_mismatch",
+      classification: "structural",
+      message: "The catalog code does not exactly support every cited Illinois statutory identity.",
+      reference: null,
+    };
+    audit.rowFindings.push(finding);
+    audit.findings.push(finding);
+    auditFindings.push(finding);
+  }
+  const dispositionReasons = [...new Set(
+    auditFindings
+      .filter((finding) => finding.classification !== "success")
+      .map((finding) => finding.message),
+  )];
+  const withError = (record: Omit<IllinoisManifestRecord, "auditFindings" | "sourceAudit" | "dispositionReasons">) => ({
+    ...record,
+    dispositionReasons: error && !dispositionReasons.includes(error)
+      ? [error, ...dispositionReasons]
+      : dispositionReasons,
+    auditFindings,
+    sourceAudit: audit,
+  });
+
+  if (references.length === 0) {
+    return withError({
       ...base,
       disposition: "require_exact_reselection",
       dispositionReason: error ??
+        dispositionReasons[0] ??
         "The catalog citation is not an exact Illinois statutory citation; federal, MPC, inferred, and compound-only substitutes are withheld.",
       canonicalTitle: null,
       provisions: [],
       apiStatus: error ? "api_error" : "placeholder",
       ...(error ? { error } : {}),
-    };
+    });
   }
   if (!codeSupportsReferences(charge, references)) {
-    return {
+    return withError({
       ...base,
       disposition: "require_exact_reselection",
-      dispositionReason: "The catalog code does not exactly support every cited Illinois statutory identity.",
+      dispositionReason: dispositionReasons[0] ??
+        "The catalog code does not exactly support every cited Illinois statutory identity.",
       canonicalTitle: null,
       provisions: [],
       apiStatus: "verified",
-    };
+    });
   }
   if (documents.length !== references.length) {
-    return {
+    return withError({
       ...base,
       disposition: "require_exact_reselection",
-      dispositionReason: error ??
+      dispositionReason: error ?? dispositionReasons[0] ??
         "One or more required Illinois statutory provisions could not be verified.",
       canonicalTitle: null,
       provisions: [],
       apiStatus: "api_error",
       error: error ?? "Missing required Illinois statutory provision",
-    };
+    });
   }
   const mismatch = documents.find((document, index) =>
     !titleMatches(charge, document.title) ||
-    !hasSubdivision(document.text, references[index].subdivision),
+    !hasSubdivision(document.text, references[index].subdivision) ||
+    !document.sourceEvidence ||
+    !document.effectiveDateStart,
   );
   if (mismatch) {
-    return {
+    const mismatchIndex = documents.indexOf(mismatch);
+    const reason = !titleMatches(charge, mismatch.title)
+      ? `The official Illinois title "${mismatch.title}" is not an exact or explicitly reviewed mapping for the catalog label.`
+      : !hasSubdivision(mismatch.text, references[mismatchIndex].subdivision)
+        ? "A required Illinois subdivision was not found in the complete official section text."
+        : !mismatch.sourceEvidence
+          ? "The official Illinois section did not include source/history evidence for currentness."
+          : "The official Illinois section did not include a parseable effective date for currentness.";
+    const findingCode: IllinoisAuditFindingCode = !titleMatches(charge, mismatch.title)
+      ? "official_title_mismatch"
+      : !hasSubdivision(mismatch.text, references[mismatchIndex].subdivision)
+        ? "subdivision_not_found"
+        : "source_evidence_missing";
+    const finding: IllinoisAuditFinding = {
+      code: findingCode,
+      classification: "structural",
+      message: reason,
+      reference: audit.references[mismatchIndex]?.citation ?? null,
+    };
+    audit.findings.push(finding);
+    audit.references[mismatchIndex]?.findings.push(finding);
+    auditFindings.push(finding);
+    if (!dispositionReasons.includes(reason)) dispositionReasons.push(reason);
+    return withError({
       ...base,
       disposition: "require_exact_reselection",
-      dispositionReason: !titleMatches(charge, mismatch.title)
-        ? `The official Illinois title "${mismatch.title}" is not an exact or explicitly reviewed mapping for the catalog label.`
-        : "A required Illinois subdivision was not found in the complete official section text.",
+      dispositionReason: dispositionReasons[0] ?? reason,
       canonicalTitle: mismatch.title,
       provisions: [],
       apiStatus: "verified",
-    };
+    });
   }
   const provisions = documents.map((document, index) =>
     provisionFromDocument(charge, references[index], document, index, importedAt),
@@ -283,7 +448,21 @@ export function buildIllinoisManifestRecord(
   const hasAlias = documents.some((document) =>
     normalizeTitle(document.title) !== normalizeTitle(charge.name),
   );
-  return {
+  if (hasAlias) {
+    documents.forEach((document, index) => {
+      if (normalizeTitle(document.title) === normalizeTitle(charge.name)) return;
+      const finding: IllinoisAuditFinding = {
+        code: "official_title_mismatch",
+        classification: "success",
+        message: `The official Illinois title "${document.title}" is accepted by an explicit charge-specific alias mapping.`,
+        reference: audit.references[index]?.citation ?? null,
+      };
+      audit.findings.push(finding);
+      audit.references[index]?.findings.push(finding);
+      auditFindings.push(finding);
+    });
+  }
+  return withError({
     ...base,
     disposition: hasAlias ? "exact_alias_rename" : "retain",
     dispositionReason: hasAlias
@@ -292,6 +471,92 @@ export function buildIllinoisManifestRecord(
     canonicalTitle: documents[0].title,
     provisions,
     apiStatus: "verified",
+  });
+}
+
+function buildFallbackIllinoisSourceAudit(
+  charge: CriminalCharge,
+  documents: IllinoisSourceDocument[],
+): IllinoisSourceAudit {
+  const citation = CHARGE_CITATIONS[charge.id]?.citation ?? "";
+  const references = parseIllinoisCitation(citation);
+  const audits = references.map((reference, index): IllinoisReferenceAudit => {
+    const document = documents[index];
+    const referenceLabel = `${reference.chapter} ILCS ${reference.act}/${reference.section}${reference.subdivision ?? ""}`;
+    if (!document) {
+      return {
+        chapter: reference.chapter,
+        act: reference.act,
+        section: reference.section,
+        subdivision: reference.subdivision,
+        citation: referenceLabel,
+        officialUrl: buildIllinoisSourceUrl(reference.chapter, reference.act, reference.section),
+        fetchStatus: "not_attempted",
+        fetchError: null,
+        retrievedAt: null,
+        sectionExtractionStatus: "incomplete",
+        officialTitle: null,
+        sourceEvidence: null,
+        effectiveDateStart: null,
+        contentEvidence: false,
+        contentHash: null,
+        findings: [],
+      };
+    }
+    const findings: IllinoisAuditFinding[] = [{
+      code: "official_source_verified",
+      classification: "success",
+      message: "Official Illinois source was retrieved with complete section and currentness evidence.",
+      reference: referenceLabel,
+    }];
+    if (!titleMatches(charge, document.title)) {
+      findings.push({
+        code: "official_title_mismatch",
+        classification: "structural",
+        message: `The official Illinois title "${document.title}" is not an exact or explicitly reviewed mapping for the catalog label.`,
+        reference: referenceLabel,
+      });
+    }
+    if (!hasSubdivision(document.text, reference.subdivision)) {
+      findings.push({
+        code: "subdivision_not_found",
+        classification: "mechanical",
+        message: "A required Illinois subdivision was not found in the complete official section text.",
+        reference: referenceLabel,
+      });
+    }
+    if (!document.sourceEvidence) {
+      findings.push({
+        code: "source_evidence_missing",
+        classification: "mechanical",
+        message: "The official Illinois section did not include source/history evidence for currentness.",
+        reference: referenceLabel,
+      });
+    }
+    return {
+      chapter: reference.chapter,
+      act: reference.act,
+      section: reference.section,
+      subdivision: reference.subdivision,
+      citation: referenceLabel,
+      officialUrl: buildIllinoisSourceUrl(reference.chapter, reference.act, reference.section),
+      fetchStatus: "success",
+      fetchError: null,
+      retrievedAt: document.retrievedAt.toISOString(),
+      sectionExtractionStatus: "complete",
+      officialTitle: document.title,
+      sourceEvidence: document.sourceEvidence,
+      effectiveDateStart: document.effectiveDateStart,
+      contentEvidence: document.text.trim().length > 0,
+      contentHash: createHash("sha256").update(document.text).digest("hex"),
+      findings,
+    };
+  });
+  return {
+    citation,
+    references: audits,
+    rowFindings: [],
+    findings: audits.flatMap((audit) => audit.findings),
   };
 }
 
@@ -333,6 +598,8 @@ export function validateIllinoisManifestRecord(
 
   for (const [index, provision] of record.provisions.entries()) {
     const reference = references[index];
+    const currentnessEvidence = provision.metadata?.currentnessEvidence as
+      { sourceEvidence?: unknown } | undefined;
     if (
       !reference ||
       provision.lawId !== `${reference.chapter}-${reference.act}` ||
@@ -358,7 +625,10 @@ export function validateIllinoisManifestRecord(
       provision.content.length === 0 ||
       provision.contentHash !== createHash("sha256").update(provision.content).digest("hex") ||
       !provision.retrievedAt ||
-      Number.isNaN(provision.retrievedAt.getTime())
+      Number.isNaN(provision.retrievedAt.getTime()) ||
+      !provision.effectiveDateStart ||
+      typeof currentnessEvidence?.sourceEvidence !== "string" ||
+      currentnessEvidence.sourceEvidence.length === 0
     ) return `Manifest authority provision ${index + 1} is not an exact verified Illinois match`;
   }
   return null;
