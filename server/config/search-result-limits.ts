@@ -24,5 +24,5 @@ export function getSearchResultLimitDescription(): string {
   const chargeOnly = SEARCH_RESULT_LIMITS.chargeOnly;
   const mixedContent = SEARCH_RESULT_LIMITS.mixedContent;
 
-  return `Maximum results to return. Charge-only searches (types=charge) default to ${chargeOnly.default} results and allow up to ${chargeOnly.max} results. Mixed-content searches default to ${mixedContent.default} results and remain capped at ${mixedContent.max}.`;
+  return `Maximum requested results after relevance grouping. Charge-only searches (types=charge) default to ${chargeOnly.default} results and allow up to ${chargeOnly.max} results. Mixed-content searches default to ${mixedContent.default} results and accept a requested limit up to ${mixedContent.max}, but the shared search service returns only its relevance-grouped result set, which may be smaller than requested.`;
 }
