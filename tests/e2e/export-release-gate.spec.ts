@@ -89,6 +89,7 @@ test.describe("browser export release gate", () => {
       });
     });
 
+    await page.clock.install();
     await page.goto("/for-advocates/mitigation-builder");
     await page.getByLabel("Client name or identifier").fill("Release Gate Test");
     const caseNumber = "2024-CR-00512/A (Superior Court) #LONG-CASE-0000000000000000";
@@ -142,9 +143,14 @@ test.describe("browser export release gate", () => {
     await polishButton.click();
     await expect.poll(() => polishRequestCount).toBe(1);
     await expect(polishButton).toBeHidden();
-    const cooldownButton = page.getByRole("button", { name: /Please wait/ });
+    const cooldownButton = page.getByRole("button", { name: /Regenerate in \d+s…/ });
     await expect(cooldownButton).toBeVisible();
     await expect(cooldownButton).toBeDisabled();
+    await page.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await expect(page.getByRole("button", { name: /Regenerate in \d+s…/ })).toBeDisabled();
+    expect(polishRequestCount).toBe(1);
+    await page.clock.runFor(30_000);
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
     await expect(page.getByRole("checkbox")).toBeVisible();
     await page.getByRole("checkbox").check();
 

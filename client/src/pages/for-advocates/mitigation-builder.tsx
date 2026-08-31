@@ -750,7 +750,7 @@ function triggerDownload(blob: Blob, filename: string) {
 
 /* ─── Polish with AI panel ─── */
 
-const POLISH_COOLDOWN_MS = 5_000;
+const POLISH_COOLDOWN_MS = 30_000;
 
 type PolishState =
   | { status: "idle" }
@@ -767,6 +767,7 @@ function PolishPanel({ form }: { form: FormState }) {
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
   const [captchaAttempt, setCaptchaAttempt] = useState(0);
   const [polishCooldown, setPolishCooldown] = useState(false);
+  const [polishCooldownSeconds, setPolishCooldownSeconds] = useState(0);
   const [polishDailyCount, setPolishDailyCount] = useState(() =>
     readPolishDailyUsage(
       typeof window === "undefined" ? null : window.localStorage,
@@ -783,6 +784,28 @@ function PolishPanel({ form }: { form: FormState }) {
       }
     };
   }, []);
+
+  const startPolishCooldown = () => {
+    const cooldownEndsAt = Date.now() + POLISH_COOLDOWN_MS;
+    const updateCooldown = () => {
+      const remainingMs = Math.max(0, cooldownEndsAt - Date.now());
+      if (remainingMs === 0) {
+        polishCooldownRef.current = false;
+        polishCooldownTimerRef.current = null;
+        setPolishCooldown(false);
+        setPolishCooldownSeconds(0);
+        return;
+      }
+
+      setPolishCooldownSeconds(Math.ceil(remainingMs / 1000));
+      polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
+    };
+
+    polishCooldownRef.current = true;
+    setPolishCooldown(true);
+    setPolishCooldownSeconds(Math.ceil(POLISH_COOLDOWN_MS / 1000));
+    polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
+  };
 
   const handlePolish = async () => {
     if (polishRequestInFlightRef.current || polishCooldownRef.current) return;
@@ -855,13 +878,7 @@ function PolishPanel({ form }: { form: FormState }) {
       setCaptchaAttempt((n) => n + 1);
     } finally {
       polishRequestInFlightRef.current = false;
-      polishCooldownRef.current = true;
-      setPolishCooldown(true);
-      polishCooldownTimerRef.current = setTimeout(() => {
-        polishCooldownRef.current = false;
-        polishCooldownTimerRef.current = null;
-        setPolishCooldown(false);
-      }, POLISH_COOLDOWN_MS);
+      startPolishCooldown();
     }
   };
 
@@ -1138,7 +1155,7 @@ function PolishPanel({ form }: { form: FormState }) {
             {polishDailyCount >= POLISH_DAILY_LIMIT
               ? "Daily limit reached"
               : polishCooldown
-                ? "Please wait…"
+                ? `${polish.status === "idle" ? "Generate narrative" : "Regenerate"} in ${polishCooldownSeconds}s…`
                 : polish.status === "idle"
                   ? "Generate narrative"
                   : "Regenerate"}
