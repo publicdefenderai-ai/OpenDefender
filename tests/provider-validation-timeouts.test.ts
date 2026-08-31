@@ -77,5 +77,8 @@ describe('fast legal validation', () => {
     });
     expect(searchByCitation).not.toHaveBeenCalled();
     expect(validateWithCaseLaw).not.toHaveBeenCalled();
-  }, 15_000);
+  // The validator dynamically imports the full charge catalog; its cold
+  // module load can exceed 15 seconds during post-merge test concurrency even
+  // though the validation operation itself completes in milliseconds.
+  }, 30_000);
 });
