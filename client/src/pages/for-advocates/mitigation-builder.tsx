@@ -40,6 +40,11 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
+import {
+  consumePolishDailyUsage,
+  POLISH_DAILY_LIMIT,
+  readPolishDailyUsage,
+} from "@/lib/mitigation-polish-rate-limit";
 
 /* ─── Types ─── */
 
@@ -762,6 +767,11 @@ function PolishPanel({ form }: { form: FormState }) {
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
   const [captchaAttempt, setCaptchaAttempt] = useState(0);
   const [polishCooldown, setPolishCooldown] = useState(false);
+  const [polishDailyCount, setPolishDailyCount] = useState(() =>
+    readPolishDailyUsage(
+      typeof window === "undefined" ? null : window.localStorage,
+    ).count,
+  );
   const polishRequestInFlightRef = useRef(false);
   const polishCooldownRef = useRef(false);
   const polishCooldownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -778,6 +788,27 @@ function PolishPanel({ form }: { form: FormState }) {
     if (polishRequestInFlightRef.current || polishCooldownRef.current) return;
     if (captchaRequired && !captchaToken) {
       setPolish({ status: "error", message: "Please complete the verification below before generating." });
+      return;
+    }
+    const storage = typeof window === "undefined" ? null : window.localStorage;
+    const currentDailyUsage = readPolishDailyUsage(storage);
+    if (currentDailyUsage.count >= POLISH_DAILY_LIMIT) {
+      setPolishDailyCount(currentDailyUsage.count);
+      setPolish({
+        status: "error",
+        message: "Daily AI draft limit reached on this browser. Please try again tomorrow.",
+      });
+      return;
+    }
+    const dailyUsage = consumePolishDailyUsage(
+      storage,
+    );
+    setPolishDailyCount(dailyUsage.count);
+    if (dailyUsage.count !== currentDailyUsage.count + 1) {
+      setPolish({
+        status: "error",
+        message: "Daily AI draft limit reached on this browser. Please try again tomorrow.",
+      });
       return;
     }
     polishRequestInFlightRef.current = true;
@@ -1104,7 +1135,13 @@ function PolishPanel({ form }: { form: FormState }) {
             className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-[var(--editorial-signal)] hover:opacity-90 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Sparkles className="h-3.5 w-3.5" />
-            {polishCooldown ? "Please wait…" : polish.status === "idle" ? "Generate narrative" : "Regenerate"}
+            {polishDailyCount >= POLISH_DAILY_LIMIT
+              ? "Daily limit reached"
+              : polishCooldown
+                ? "Please wait…"
+                : polish.status === "idle"
+                  ? "Generate narrative"
+                  : "Regenerate"}
           </button>
         )}
       </div>
@@ -1113,6 +1150,7 @@ function PolishPanel({ form }: { form: FormState }) {
       <div className="px-4 py-2.5 bg-[var(--editorial-signal-soft)] border-b border-[var(--editorial-signal)]/20">
         <p className="text-[11px] text-foreground leading-relaxed">
           <span className="font-semibold">Field-locked:</span> Claude will only use information you entered; empty fields are skipped and nothing is inferred. Output is unlabeled prose; your structured summary above remains unchanged. Anthropic may retain API data for up to 30 days under its standard terms.
+          <span className="block mt-1">AI drafts used today on this browser: {polishDailyCount} of {POLISH_DAILY_LIMIT}.</span>
         </p>
       </div>
 
