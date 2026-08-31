@@ -85,6 +85,15 @@ test.describe("case guidance timeout recovery", () => {
     await expect(page.getByTestId("button-retry-ai-guidance")).toBeEnabled();
     await expect(page.getByTestId("button-use-rules-guidance")).toBeVisible();
     await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
+    await expect.poll(() =>
+      page.evaluate(() => {
+        const stored = sessionStorage.getItem("open-defender:case-guidance-recovery");
+        return stored ? JSON.parse(stored) : null;
+      }),
+    ).toMatchObject({
+      guidanceTimedOut: true,
+      reviewingTimedOutAnswers: false,
+    });
 
     await page.getByTestId("button-retry-ai-guidance").dblclick();
     await expect.poll(() => streamRequestCount).toBe(2);
@@ -116,6 +125,11 @@ test.describe("case guidance timeout recovery", () => {
     await expect.poll(() =>
       page.evaluate(() => sessionStorage.getItem("open-defender:case-guidance-recovery")),
     ).toBeNull();
+
+    await page.reload();
+    await expect(page.getByTestId("button-start-guidance")).toBeVisible();
+    await expect(page.getByTestId("button-review-guidance-answers")).toHaveCount(0);
+    await expect(page.getByRole("alert")).toHaveCount(0);
 
     releaseFirstRequest?.();
   });
