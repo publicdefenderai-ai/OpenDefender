@@ -25,6 +25,8 @@ import {
 
 const RATE_LIMIT_MS = 900;
 const MAX_RETRIES = 3;
+const SOURCE_REQUEST_TIMEOUT_MS = 30_000;
+const CONTRACT_RETRY_DELAY_MS = 1_000;
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -49,36 +51,188 @@ function retryDelay(response: Response, attempt: number): number {
     : 2_000 * (attempt + 1);
 }
 
+export type PennsylvaniaTransportErrorKind =
+  "timeout" | "dns" | "tls" | "connection" | "network";
+
+export interface PennsylvaniaRequestDiagnostic {
+  attempt: number;
+  elapsedMs: number;
+  kind: "http" | PennsylvaniaTransportErrorKind;
+  status?: number;
+  message: string;
+  retrying: boolean;
+}
+
+interface PennsylvaniaRequestSuccess {
+  response: Response;
+  html: string;
+  attempts: number;
+  diagnostics: PennsylvaniaRequestDiagnostic[];
+}
+
+interface PennsylvaniaRequestFailure {
+  error: string;
+  diagnostics: PennsylvaniaRequestDiagnostic[];
+}
+
+export interface PennsylvaniaRequestOptions {
+  maxRetries?: number;
+  timeoutMs?: number;
+  retryDelay?: (response: Response, attempt: number) => number;
+  retryTransportDelay?: (attempt: number) => number;
+}
+
+function transportErrorKind(error: unknown): PennsylvaniaTransportErrorKind {
+  const errorWithCause = error as { code?: unknown; cause?: { code?: unknown } } | null;
+  const code = String(errorWithCause?.code ?? errorWithCause?.cause?.code ?? "").toUpperCase();
+  const message = error instanceof Error ? error.message : String(error);
+  if (
+    (error instanceof Error && (error.name === "AbortError" || error.name === "TimeoutError")) ||
+    /timed out|timeout|aborted/i.test(message)
+  ) {
+    return "timeout";
+  }
+  if (code.includes("ENOTFOUND") || code.includes("EAI_AGAIN")) return "dns";
+  if (code.includes("CERT") || code.includes("TLS") || code.includes("SSL")) return "tls";
+  if (
+    code.includes("ECONN") ||
+    code.includes("EPIPE") ||
+    code.includes("UND_ERR_SOCKET") ||
+    /socket|connection|reset/i.test(message)
+  ) {
+    return "connection";
+  }
+  return "network";
+}
+
+function describeError(error: unknown): string {
+  const errorWithCause = error as { code?: unknown; cause?: { code?: unknown } } | null;
+  const code = errorWithCause?.code ?? errorWithCause?.cause?.code;
+  const message = error instanceof Error ? error.message : String(error);
+  return `${transportErrorKind(error)}${code ? ` (${String(code)})` : ""}: ${message}`;
+}
+
+async function requestPennsylvaniaSource(
+  url: string,
+  fetchImpl: typeof fetch,
+  init: RequestInit,
+  options: PennsylvaniaRequestOptions = {},
+): Promise< PennsylvaniaRequestSuccess | PennsylvaniaRequestFailure> {
+  const maxRetries = options.maxRetries ?? MAX_RETRIES;
+  const timeoutMs = options.timeoutMs ?? SOURCE_REQUEST_TIMEOUT_MS;
+  const diagnostics: PennsylvaniaRequestDiagnostic[] = [];
+
+  for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    const startedAt = Date.now();
+    try {
+      const response = await fetchImpl(url, {
+        ...init,
+        signal: AbortSignal.timeout(timeoutMs),
+      });
+      const retryable = response.status === 429 || response.status >= 500;
+      const retrying = retryable && attempt < maxRetries;
+      diagnostics.push({
+        attempt: attempt + 1,
+        elapsedMs: Date.now() - startedAt,
+        kind: "http",
+        status: response.status,
+        message: `HTTP ${response.status}`,
+        retrying,
+      });
+      if (retrying) {
+        await sleep(
+          options.retryDelay?.(response, attempt) ??
+            retryDelay(response, attempt),
+        );
+        continue;
+      }
+      try {
+        return {
+          response,
+          html: response.status >= 200 && response.status < 300
+            ? await response.text()
+            : "",
+          attempts: attempt + 1,
+          diagnostics,
+        };
+      } catch (error) {
+        const bodyMessage = `response body failed: ${describeError(error)}`;
+        const bodyRetrying = attempt < maxRetries;
+        diagnostics.push({
+          attempt: attempt + 1,
+          elapsedMs: Date.now() - startedAt,
+          kind: transportErrorKind(error),
+          message: bodyMessage,
+          retrying: bodyRetrying,
+        });
+        if (bodyRetrying) {
+          await sleep(
+            options.retryTransportDelay?.(attempt) ??
+              CONTRACT_RETRY_DELAY_MS * (attempt + 1),
+          );
+          continue;
+        }
+        return {
+          error:
+            `transport failure after ${attempt + 1} attempt(s) while reading ${url}: ` +
+            `${bodyMessage}. Retry from the supported Pennsylvania refresh environment; ` +
+            "no source content was accepted.",
+          diagnostics,
+        };
+      }
+    } catch (error) {
+      const retrying = attempt < maxRetries;
+      diagnostics.push({
+        attempt: attempt + 1,
+        elapsedMs: Date.now() - startedAt,
+        kind: transportErrorKind(error),
+        message: describeError(error),
+        retrying,
+      });
+      if (retrying) {
+        await sleep(
+          options.retryTransportDelay?.(attempt) ??
+            CONTRACT_RETRY_DELAY_MS * (attempt + 1),
+        );
+        continue;
+      }
+      const last = diagnostics.at(-1)!;
+      return {
+        error:
+          `transport failure after ${attempt + 1} attempt(s) (${last.kind}) for ${url}: ` +
+          `${last.message}. Retry from the supported Pennsylvania refresh environment; ` +
+          "no source content was accepted.",
+        diagnostics,
+      };
+    }
+  }
+
+  return {
+    error: `Pennsylvania source request exhausted retries for ${url}`,
+    diagnostics,
+  };
+}
+
 async function fetchHtml(
   url: string,
   limiter: RequestLimiter,
 ): Promise<{ html: string; url: string } | { error: string }> {
-  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
-    try {
-      await waitForRateLimit(limiter);
-      const response = await fetch(url, {
-        signal: AbortSignal.timeout(30000),
-        headers: {
-          "User-Agent": "OpenDefender-PennsylvaniaAuthorityImporter/1.0",
-          Accept: "text/html, */*",
-        },
-      });
-      const retryable = response.status === 429 || response.status >= 500;
-      if (!response.ok && retryable && attempt < MAX_RETRIES) {
-        await sleep(retryDelay(response, attempt));
-        continue;
-      }
-      if (!response.ok) return { error: `HTTP ${response.status}` };
-      return { html: await response.text(), url: response.url || url };
-    } catch (error) {
-      if (attempt < MAX_RETRIES) {
-        await sleep(1500 * (attempt + 1));
-        continue;
-      }
-      return { error: error instanceof Error ? error.message : String(error) };
-    }
+  await waitForRateLimit(limiter);
+  const request = await requestPennsylvaniaSource(url, fetch, {
+    headers: {
+      "User-Agent": "OpenDefender-PennsylvaniaAuthorityImporter/1.0",
+      Accept: "text/html, */*",
+    },
+  }, { retryDelay });
+  if ("error" in request) return request;
+  if (!request.response.ok) {
+    return {
+      error:
+        `official Pennsylvania source request returned HTTP ${request.response.status} ` +
+        `after ${request.attempts} attempt(s)`,
+    };
   }
-  return { error: "Pennsylvania source request exhausted retries" };
+  return { html: request.html, url: request.response.url || url };
 }
 
 function decodeHtml(value: string): string {
@@ -270,6 +424,8 @@ export interface PennsylvaniaSourceContractPageResult {
   requestedUrl: string;
   responseUrl: string;
   failures: string[];
+  failureKind?: "transport" | "http" | "redirect" | "content-type" | "html-contract";
+  diagnostics?: PennsylvaniaRequestDiagnostic[];
 }
 
 function isPennsylvaniaPalegisUrl(value: string): boolean {
@@ -344,6 +500,16 @@ export function validatePennsylvaniaSourceContract(
     failures.push(`PAlegis page no longer contains extractable § ${reference.section} official section content`);
   }
 
+  const failureKind =
+    page.responseStatus >= 300 && page.responseStatus < 400
+      ? "redirect"
+      : page.responseStatus !== 200
+        ? "http"
+        : !/\btext\/html\b/i.test(page.contentType)
+          ? "content-type"
+          : failures.length > 0
+            ? "html-contract"
+            : undefined;
   return {
     ok: failures.length === 0,
     source: PENNSYLVANIA_RETRIEVAL_SOURCE,
@@ -351,6 +517,7 @@ export function validatePennsylvaniaSourceContract(
     requestedUrl: page.requestedUrl,
     responseUrl: page.responseUrl,
     failures,
+    ...(failureKind ? { failureKind } : {}),
   };
 }
 
@@ -365,44 +532,44 @@ export function extractLatestEffectiveDate(text: string): string | null {
 
 export async function checkPennsylvaniaSourceContract(
   fetchImpl: typeof fetch = fetch,
+  options: PennsylvaniaRequestOptions = {},
 ): Promise<PennsylvaniaSourceContractResult> {
   const pages: PennsylvaniaSourceContractPageResult[] = [];
   for (const reference of PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES) {
     const requestedUrl = buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section);
-    try {
-      const response = await fetchImpl(requestedUrl, {
-        redirect: "manual",
-        signal: AbortSignal.timeout(30000),
-        headers: {
-          "User-Agent": "OpenDefender-PennsylvaniaSourceContract/1.0",
-          Accept: "text/html",
-        },
-      });
-      const html = response.status >= 200 && response.status < 300
-        ? await response.text()
-        : "";
-      pages.push(validatePennsylvaniaSourceContract({
-        requestedUrl,
-        responseStatus: response.status,
-        responseUrl: response.url || requestedUrl,
-        redirectLocation: response.headers.get("location"),
-        contentType: response.headers.get("content-type") ?? "",
-        html,
-      }, reference));
-    } catch (error) {
+    const request = await requestPennsylvaniaSource(requestedUrl, fetchImpl, {
+      redirect: "manual",
+      headers: {
+        "User-Agent": "OpenDefender-PennsylvaniaSourceContract/1.0",
+        Accept: "text/html",
+      },
+    }, options);
+    if ("error" in request) {
       pages.push({
         ok: false,
         source: PENNSYLVANIA_RETRIEVAL_SOURCE,
         reference,
         requestedUrl,
         responseUrl: requestedUrl,
-        failures: [
-          `request to official PAlegis.us source failed: ${
-            error instanceof Error ? error.message : String(error)
-          }`,
-        ],
+        failureKind: "transport",
+        failures: [request.error],
+        diagnostics: request.diagnostics,
       });
+      continue;
     }
+    const response = request.response;
+    const validation = validatePennsylvaniaSourceContract({
+      requestedUrl,
+      responseStatus: response.status,
+      responseUrl: response.url || requestedUrl,
+      redirectLocation: response.headers.get("location"),
+      contentType: response.headers.get("content-type") ?? "",
+      html: request.html,
+    }, reference);
+    pages.push({
+      ...validation,
+      diagnostics: request.diagnostics,
+    });
   }
 
   const firstPage = pages.find((page) =>

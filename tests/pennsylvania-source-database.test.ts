@@ -544,6 +544,67 @@ describe("Pennsylvania authority manifest", () => {
     )).toBe(true);
   });
 
+  it("retries transport failures and reports timeout diagnostics without accepting content", async () => {
+    let attempts = 0;
+    const result = await checkPennsylvaniaSourceContract(async () => {
+      attempts++;
+      const error = new Error("connect timed out");
+      Object.assign(error, { code: "ETIMEDOUT" });
+      throw error;
+    }, {
+      maxRetries: 2,
+      timeoutMs: 25,
+      retryTransportDelay: () => 0,
+    });
+
+    expect(attempts).toBe(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.length * 3);
+    expect(result.ok).toBe(false);
+    expect(result.pages[0]).toMatchObject({
+      failureKind: "transport",
+      diagnostics: [
+        { attempt: 1, kind: "timeout", retrying: true },
+        { attempt: 2, kind: "timeout", retrying: true },
+        { attempt: 3, kind: "timeout", retrying: false },
+      ],
+    });
+    expect(result.pages[0].failures[0]).toContain("Retry from the supported Pennsylvania refresh environment");
+    expect(result.pages[0].failures[0]).toContain("no source content was accepted");
+  });
+
+  it("retries a transient connection failure on the same PAlegis URL", async () => {
+    const attemptsByUrl = new Map<string, number>();
+    const requestedUrls: string[] = [];
+    const result = await checkPennsylvaniaSourceContract(async (input) => {
+      const requestedUrl = String(input);
+      requestedUrls.push(requestedUrl);
+      const attempts = (attemptsByUrl.get(requestedUrl) ?? 0) + 1;
+      attemptsByUrl.set(requestedUrl, attempts);
+      if (attempts === 1) {
+        throw new Error("socket reset by peer");
+      }
+      const reference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find(
+        (candidate) => buildPennsylvaniaOfficialSourceUrl(candidate.title, candidate.section) === requestedUrl,
+      )!;
+      return new Response(
+        `<html><body><h1>Section ${reference.section}.0 - Title ${reference.title} - REPRESENTATIVE</h1><div>&sect; ${reference.section}.&nbsp;&nbsp;Representative section.</div><div>A person commits an offense when the statutory elements are met. This is complete official section text for the contract test.</div></body></html>`,
+        { status: 200, headers: { "content-type": "text/html" } },
+      );
+    }, {
+      maxRetries: 1,
+      retryTransportDelay: () => 0,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(requestedUrls).toEqual(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.flatMap((reference) => {
+      const requestedUrl = buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section);
+      return [requestedUrl, requestedUrl];
+    }));
+    expect(result.pages[0].diagnostics).toEqual([
+      expect.objectContaining({ attempt: 1, kind: "connection", retrying: true }),
+      expect.objectContaining({ attempt: 2, kind: "http", status: 200, retrying: false }),
+    ]);
+  });
+
   it("flags redirects and never treats a legacy or secondary response as official", () => {
     const requestedUrl = buildPennsylvaniaOfficialSourceUrl("18", "2502");
     const result = validatePennsylvaniaSourceContract({
