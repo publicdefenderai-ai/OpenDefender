@@ -28,6 +28,10 @@ import {
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
+function readFixture(name: string): string {
+  return readFileSync(join("tests", "fixtures", "south-carolina", name), "utf8");
+}
+
 const correctedSouthCarolinaSections: Record<string, string> = {
   "sc-criminally-negligent-homicide": "16-3-60",
   "sc-vehicular-homicide": "56-5-2910",
@@ -250,6 +254,83 @@ describe("South Carolina authority manifest", () => {
     ]);
   });
 
+  it("supports the official styled section markers used by current SC chapter pages", () => {
+    const inspection = inspectSouthCarolinaDocument(
+      readFixture("official-section-with-style-span.html"),
+      "44-53-415",
+      buildSouthCarolinaSourceUrl("44-53-415"),
+      importedAt,
+    );
+
+    expect(inspection).toMatchObject({
+      sectionExtractionStatus: "complete",
+      officialTitle: "Maintaining premises for drug activity",
+      historyEvidence: true,
+      contentEvidence: true,
+      contentHash: expect.stringMatching(/^[a-f0-9]{64}$/),
+    });
+    expect(inspection.document?.text).toContain("(A) A person who knowingly permits");
+    expect(inspection.findings.map((finding) => finding.code)).toEqual([
+      "official_source_verified",
+    ]);
+  });
+
+  it("reports a found section with content but no history as incomplete", () => {
+    const inspection = inspectSouthCarolinaDocument(
+      readFixture("official-section-without-history.html"),
+      "16-3-50",
+      buildSouthCarolinaSourceUrl("16-3-50"),
+      importedAt,
+    );
+
+    expect(inspection.document).toBeNull();
+    expect(inspection.sectionExtractionStatus).toBe("incomplete");
+    expect(inspection.contentEvidence).toBe(true);
+    expect(inspection.historyEvidence).toBe(false);
+    expect(inspection.findings.map((finding) => finding.code)).toEqual([
+      "history_missing",
+    ]);
+  });
+
+  it("reports an unsupported subdivision without promoting the section", () => {
+    const inspection = inspectSouthCarolinaDocument(
+      readFixture("official-section-without-subdivision.html"),
+      "16-13-240",
+      buildSouthCarolinaSourceUrl("16-13-240"),
+      importedAt,
+      "(A)",
+    );
+
+    expect(inspection.document).toBeNull();
+    expect(inspection.sectionExtractionStatus).toBe("incomplete");
+    expect(inspection.contentEvidence).toBe(true);
+    expect(inspection.historyEvidence).toBe(true);
+    expect(inspection.findings.map((finding) => finding.code)).toEqual([
+      "subdivision_not_found",
+    ]);
+  });
+
+  it("keeps an absent official section distinct from incomplete evidence", () => {
+    const inspection = inspectSouthCarolinaDocument(
+      readFixture("official-section-absent.html"),
+      "44-53-415",
+      buildSouthCarolinaSourceUrl("44-53-415"),
+      importedAt,
+    );
+
+    expect(inspection).toMatchObject({
+      document: null,
+      sectionExtractionStatus: "section_not_found",
+      officialTitle: null,
+      historyEvidence: false,
+      contentEvidence: false,
+      contentHash: null,
+    });
+    expect(inspection.findings.map((finding) => finding.code)).toEqual([
+      "section_not_found",
+    ]);
+  });
+
   it("does not treat a history-only section as statutory content", () => {
     const inspection = inspectSouthCarolinaDocument(
       `<span class="SectionNumber">SECTION 16-3-50.</span>
@@ -310,6 +391,12 @@ describe("South Carolina authority manifest", () => {
     expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-criminally-negligent-homicide")?.auditFindings.map(
       (finding) => finding.code,
     )).toEqual(["official_source_verified", "official_title_mismatch"]);
+    expect(manifest.catalogRecords.find((record) => record.chargeId === "sc-maintaining-drug-house"))
+      .toMatchObject({
+        disposition: "require_exact_reselection",
+        dispositionReason: "The official South Carolina chapter page did not contain section 44-53-415.",
+        provisions: [],
+      });
     expect(Object.keys(manifest.audit!.findingCounts).sort()).toEqual([...findingCodes].sort());
     expect(manifest.audit!.mechanical.findingCodes).not.toContain("catalog_code_mismatch");
     expect(manifest.audit!.structural.findingCodes).toContain("catalog_code_mismatch");

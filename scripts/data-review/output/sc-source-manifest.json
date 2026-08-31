@@ -3566,15 +3566,14 @@
       "catalogCode": "44-53-415",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The official South Carolina chapter page did not contain the complete requested section and history.",
+      "dispositionReason": "The official South Carolina chapter page did not contain section 44-53-415.",
       "dispositionReasons": [
-        "The official South Carolina chapter page did not contain the complete requested section and history.",
         "The official South Carolina chapter page did not contain section 44-53-415."
       ],
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "api_error",
-      "error": "The official South Carolina chapter page did not contain the complete requested section and history.",
+      "error": "The official South Carolina chapter page did not contain section 44-53-415.",
       "auditFindings": [
         {
           "code": "section_not_found",

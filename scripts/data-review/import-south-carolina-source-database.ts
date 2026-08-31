@@ -101,6 +101,19 @@ const MONTH_NAMES: Record<string, string> = {
   dec: "December", december: "December",
 };
 
+const SECTION_MARKER_TAG =
+  "(?:span|strong|b|p|div|h1|h2|h3|h4|h5|h6)";
+
+function buildSouthCarolinaSectionMarker(section?: string): RegExp {
+  const sectionPattern = section
+    ? section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    : "\\d+-\\d+-\\d+";
+  return new RegExp(
+    `<${SECTION_MARKER_TAG}\\b[^>]*>\\s*SECTION\\s+${sectionPattern}\\.\\s*</${SECTION_MARKER_TAG}>`,
+    section ? "i" : "gi",
+  );
+}
+
 export function extractLatestSouthCarolinaEffectiveDate(text: string): string | null {
   const dates = [...text.matchAll(EFFECTIVE_DATE_PATTERN)]
     .map((match) => {
@@ -144,10 +157,7 @@ export function inspectSouthCarolinaDocument(
   retrievedAt: Date,
   subdivision: string | null = null,
 ): SouthCarolinaDocumentInspection {
-  const marker = new RegExp(
-    `<span[^>]*>\\s*SECTION\\s+${section.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&")}\\.\\s*</span>`,
-    "i",
-  );
+  const marker = buildSouthCarolinaSectionMarker(section);
   const match = marker.exec(html);
   const reference = `${section}${subdivision ?? ""}`;
   if (!match) {
@@ -166,7 +176,7 @@ export function inspectSouthCarolinaDocument(
       }],
     };
   }
-  const nextMarker = /<span[^>]*>\s*SECTION\s+\d+-\d+-\d+\.\s*<\/span>/gi;
+  const nextMarker = buildSouthCarolinaSectionMarker();
   nextMarker.lastIndex = match.index + match[0].length;
   const next = nextMarker.exec(html);
   const rawBlock = html.slice(match.index + match[0].length, next?.index ?? html.length);
@@ -182,11 +192,13 @@ export function inspectSouthCarolinaDocument(
     ? [...subdivision.matchAll(/\(([a-z0-9]+)\)|\b(\d+)\b/gi)]
       .map((item) => (item[1] ?? item[2]).toLowerCase())
     : [];
-  const subdivisionEvidence = text !== null &&
-    subdivisionParts.length > 0 &&
-    subdivisionParts.every((part) =>
-      new RegExp(`\\(${part}\\)|\\b${part}[.)]`, "i").test(text),
-    );
+  const subdivisionEvidence = !subdivision
+    ? true
+    : subdivisionParts.length > 0 &&
+      text !== null &&
+      subdivisionParts.every((part) =>
+        new RegExp(`\\(${part}\\)|\\b${part}[.)]`, "i").test(text),
+      );
   const findings: SouthCarolinaAuditFinding[] = [];
   if (!title || !contentEvidence) {
     findings.push({
@@ -196,7 +208,7 @@ export function inspectSouthCarolinaDocument(
       reference,
     });
   }
-  if (!historyEvidence) {
+  if (title && contentEvidence && !historyEvidence) {
     findings.push({
       code: "history_missing",
       classification: "mechanical",
@@ -204,7 +216,7 @@ export function inspectSouthCarolinaDocument(
       reference,
     });
   }
-  if (subdivision && !subdivisionEvidence) {
+  if (subdivision && title && contentEvidence && !subdivisionEvidence) {
     findings.push({
       code: "subdivision_not_found",
       classification: "mechanical",
@@ -217,7 +229,7 @@ export function inspectSouthCarolinaDocument(
     text &&
     contentEvidence &&
     historyEvidence &&
-    (subdivisionParts.length === 0 || subdivisionEvidence),
+    (!subdivision || subdivisionEvidence),
   );
   if (complete) {
     findings.push({
@@ -378,7 +390,10 @@ export async function refreshSouthCarolinaManifest(
           if ("error" in chapter) {
             error = `Official South Carolina source unavailable: ${chapter.error}`;
           } else {
-            error = "The official South Carolina chapter page did not contain the complete requested section and history.";
+            error = inspection.findings.find((finding) =>
+              finding.classification === "mechanical",
+            )?.message ??
+              "The official South Carolina chapter page did not contain the complete requested section and history.";
             contentContractFailures++;
           }
         }
