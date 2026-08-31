@@ -18,10 +18,12 @@ import {
   PENNSYLVANIA_MANIFEST_SOURCE,
   parsePennsylvaniaCitation,
   PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS,
+  validatePennsylvaniaManifestRecord,
   type PennsylvaniaAuthorityManifest,
   type PennsylvaniaSourceDocument,
   type PennsylvaniaSourceReference,
 } from "../../server/data/pennsylvania-source-database-seed";
+import type { AuthorityCatalogRecord } from "../../server/services/authority-source-database";
 
 const RATE_LIMIT_MS = 900;
 const MAX_RETRIES = 3;
@@ -735,6 +737,27 @@ export interface PennsylvaniaManifestRefreshOptions {
   rateLimitMs?: number;
 }
 
+export interface PennsylvaniaCatalogRowPreview {
+  chargeId: string;
+  catalogLabel: string;
+  catalogCode: string;
+  catalogCategory: string;
+  disposition: AuthorityCatalogRecord["disposition"];
+}
+
+export interface PennsylvaniaCatalogDispositionChange {
+  chargeId: string;
+  catalogLabel: string;
+  previousDisposition: AuthorityCatalogRecord["disposition"];
+  nextDisposition: AuthorityCatalogRecord["disposition"];
+}
+
+export interface PennsylvaniaCatalogDiff {
+  added: PennsylvaniaCatalogRowPreview[];
+  removed: PennsylvaniaCatalogRowPreview[];
+  dispositionChanged: PennsylvaniaCatalogDispositionChange[];
+}
+
 export interface PennsylvaniaManifestRefreshSummary {
   outputPath: string;
   catalogRecords: number;
@@ -748,6 +771,85 @@ export interface PennsylvaniaManifestRefreshSummary {
   contentContractFailures: number;
   wroteManifest: boolean;
   preservedManifest: boolean;
+  catalogDiff: PennsylvaniaCatalogDiff | null;
+}
+
+function catalogRowPreview(record: AuthorityCatalogRecord): PennsylvaniaCatalogRowPreview {
+  return {
+    chargeId: record.chargeId,
+    catalogLabel: record.catalogLabel,
+    catalogCode: record.catalogCode,
+    catalogCategory: record.catalogCategory,
+    disposition: record.disposition,
+  };
+}
+
+export function diffPennsylvaniaCatalogRecords(
+  previousRecords: AuthorityCatalogRecord[],
+  nextRecords: AuthorityCatalogRecord[],
+): PennsylvaniaCatalogDiff {
+  const previousById = new Map(previousRecords.map((record) => [record.chargeId, record]));
+  const nextById = new Map(nextRecords.map((record) => [record.chargeId, record]));
+  const added: PennsylvaniaCatalogRowPreview[] = [];
+  const removed: PennsylvaniaCatalogRowPreview[] = [];
+  const dispositionChanged: PennsylvaniaCatalogDispositionChange[] = [];
+
+  for (const record of nextRecords) {
+    const previous = previousById.get(record.chargeId);
+    if (!previous) {
+      added.push(catalogRowPreview(record));
+    } else if (previous.disposition !== record.disposition) {
+      dispositionChanged.push({
+        chargeId: record.chargeId,
+        catalogLabel: record.catalogLabel,
+        previousDisposition: previous.disposition,
+        nextDisposition: record.disposition,
+      });
+    }
+  }
+  for (const record of previousRecords) {
+    if (!nextById.has(record.chargeId)) removed.push(catalogRowPreview(record));
+  }
+
+  return { added, removed, dispositionChanged };
+}
+
+function readPreviousPennsylvaniaCatalogRecords(outputPath: string): AuthorityCatalogRecord[] {
+  try {
+    const raw = JSON.parse(fs.readFileSync(outputPath, "utf8")) as {
+      catalogRecords?: unknown;
+    };
+    if (!Array.isArray(raw.catalogRecords)) {
+      throw new Error("The existing Pennsylvania manifest has no catalog records");
+    }
+    return raw.catalogRecords as AuthorityCatalogRecord[];
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return [];
+    throw new Error(
+      `Cannot preview against the existing Pennsylvania manifest at ${outputPath}: ` +
+      `${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+}
+
+function reportPennsylvaniaCatalogDiff(diff: PennsylvaniaCatalogDiff): void {
+  if (diff.added.length === 0 && diff.removed.length === 0 && diff.dispositionChanged.length === 0) {
+    console.log("[PREVIEW] Pennsylvania catalog has no added, removed, or disposition-changed rows.");
+    return;
+  }
+  console.log("[PREVIEW] Pennsylvania catalog changes:");
+  for (const row of diff.added) {
+    console.log(`  [ADDED] ${row.chargeId} — ${row.catalogLabel} (${row.disposition})`);
+  }
+  for (const row of diff.removed) {
+    console.log(`  [REMOVED] ${row.chargeId} — ${row.catalogLabel} (${row.disposition})`);
+  }
+  for (const row of diff.dispositionChanged) {
+    console.log(
+      `  [DISPOSITION] ${row.chargeId} — ${row.catalogLabel}: ` +
+      `${row.previousDisposition} -> ${row.nextDisposition}`,
+    );
+  }
 }
 
 export async function refreshPennsylvaniaManifest(
@@ -820,6 +922,7 @@ export async function refreshPennsylvaniaManifest(
       contentContractFailures,
       wroteManifest: false,
       preservedManifest: true,
+      catalogDiff: null,
     };
   }
 
@@ -841,12 +944,29 @@ export async function refreshPennsylvaniaManifest(
         : undefined,
     );
   });
+  const validationErrors = records
+    .map((record) => ({
+      chargeId: record.chargeId,
+      error: validatePennsylvaniaManifestRecord(record),
+    }))
+    .filter((entry): entry is { chargeId: string; error: string } => Boolean(entry.error));
+  if (validationErrors.length > 0) {
+    throw new Error(
+      "Pennsylvania refresh produced records that failed exact-source validation: " +
+      validationErrors.map(({ chargeId, error }) => `${chargeId}: ${error}`).join(" "),
+    );
+  }
   const manifest: PennsylvaniaAuthorityManifest = {
     jurisdiction: "PA",
     generatedAt: importedAt,
     source: PENNSYLVANIA_MANIFEST_SOURCE,
     catalogRecords: records,
   };
+  const catalogDiff = diffPennsylvaniaCatalogRecords(
+    readPreviousPennsylvaniaCatalogRecords(outputPath),
+    records,
+  );
+  reportPennsylvaniaCatalogDiff(catalogDiff);
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2));
   const summary = {
@@ -865,6 +985,7 @@ export async function refreshPennsylvaniaManifest(
     contentContractFailures,
     wroteManifest: true,
     preservedManifest: false,
+    catalogDiff,
   };
   console.log(JSON.stringify(summary, null, 2));
   return summary;

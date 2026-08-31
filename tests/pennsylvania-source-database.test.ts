@@ -20,6 +20,7 @@ import {
 } from "../server/data/pennsylvania-source-database-seed";
 import {
   checkPennsylvaniaSourceContract,
+  diffPennsylvaniaCatalogRecords,
   extractPennsylvaniaDocument,
   extractPennsylvaniaLegacyDocument,
   fetchPennsylvaniaDocument,
@@ -63,6 +64,41 @@ describe("Pennsylvania authority manifest", () => {
     expect(seed.snapshots).toHaveLength(25);
     expect(seed.links).toHaveLength(25);
     expect(seed.selectableChargeIds).toHaveLength(25);
+  });
+
+  it("previews added, removed, and disposition-changed catalog rows", () => {
+    const currentRecords = loadPennsylvaniaAuthorityManifest().catalogRecords;
+    const removedRecord = currentRecords[0];
+    const changedRecord = currentRecords.find((record) => record.disposition === "retain")!;
+    const addedRecord = {
+      ...currentRecords[1],
+      chargeId: "pa-preview-only",
+      catalogLabel: "Preview-only charge",
+      disposition: "require_exact_reselection" as const,
+    };
+    const proposedRecords = currentRecords
+      .filter((record) => record.chargeId !== removedRecord.chargeId)
+      .map((record) => record.chargeId === changedRecord.chargeId
+        ? { ...record, disposition: "require_exact_reselection" as const, provisions: [] }
+        : record);
+    proposedRecords.push(addedRecord);
+
+    const diff = diffPennsylvaniaCatalogRecords(currentRecords, proposedRecords);
+
+    expect(diff.added).toEqual([expect.objectContaining({
+      chargeId: "pa-preview-only",
+      disposition: "require_exact_reselection",
+    })]);
+    expect(diff.removed).toEqual([expect.objectContaining({
+      chargeId: removedRecord.chargeId,
+      disposition: removedRecord.disposition,
+    })]);
+    expect(diff.dispositionChanged).toEqual([{
+      chargeId: changedRecord.chargeId,
+      catalogLabel: changedRecord.catalogLabel,
+      previousDisposition: changedRecord.disposition,
+      nextDisposition: "require_exact_reselection",
+    }]);
   });
 
   it("parses consolidated citations and applies Pennsylvania chapter traversal", () => {
@@ -647,6 +683,7 @@ describe("Pennsylvania authority manifest", () => {
     const temporaryDirectory = mkdtempSync(join(tmpdir(), "pa-refresh-"));
     const temporaryManifest = join(temporaryDirectory, "manifest.json");
     const existingManifest = loadPennsylvaniaAuthorityManifest();
+    writeFileSync(temporaryManifest, JSON.stringify(existingManifest, null, 2));
     const documentsBySourceKey = new Map(
       existingManifest.catalogRecords.flatMap((record) =>
         record.provisions.map((provision) => [provision.sourceKey, provision] as const),
@@ -706,6 +743,11 @@ describe("Pennsylvania authority manifest", () => {
         transportFailures: 0,
         officialPageFailures: 0,
         contentContractFailures: 0,
+        catalogDiff: {
+          added: [],
+          removed: [],
+          dispositionChanged: [],
+        },
       });
       const refreshedManifest = JSON.parse(readFileSync(temporaryManifest, "utf8"));
       expect(refreshedManifest.generatedAt).toBe(importedAt.toISOString());
