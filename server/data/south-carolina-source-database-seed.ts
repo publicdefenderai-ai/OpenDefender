@@ -116,10 +116,88 @@ function referenceHash(value: unknown): string {
 }
 
 /**
- * Alias mappings are intentionally empty until each one has documented,
- * charge-specific attorney approval. A related catchline alone is not enough.
+ * These are charge-specific common-name/catchline mappings reviewed against
+ * the committed SC source report. They are intentionally limited to rows whose
+ * exact catalog citation (including any subdivision) identifies the offense.
+ * A broad section heading, a compound citation, or a related catchline alone
+ * is not enough to publish a row.
  */
-export const SOUTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {};
+export const SOUTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
+  "sc-voluntary-manslaughter": ["Manslaughter"],
+  "sc-involuntary-manslaughter": [
+    "Involuntary manslaughter; \"criminal negligence\" defined",
+  ],
+  "sc-criminally-negligent-homicide": [
+    "Involuntary manslaughter; \"criminal negligence\" defined",
+  ],
+  "sc-rape-in-the-first-degree": ["Criminal sexual conduct in the first degree"],
+  "sc-rape-in-the-second-degree": ["Criminal sexual conduct in the second degree"],
+  "sc-sexual-assault-in-the-first-degree": [
+    "Criminal sexual conduct in the first degree",
+  ],
+  "sc-sexual-assault-in-the-second-degree": [
+    "Criminal sexual conduct in the second degree",
+  ],
+  "sc-sexual-assault-in-the-third-degree": [
+    "Criminal sexual conduct in the third degree",
+  ],
+  "sc-statutory-rape": [
+    "Criminal sexual conduct with a minor; aggravating and mitigating circumstances; penalties; repeat offenders",
+  ],
+  "sc-theft-by-receiving": [
+    "Receiving stolen goods, chattels, or other property; receiving or possessing property represented by law enforcement as stolen; penalties",
+  ],
+  "sc-identity-theft": ["Financial identity fraud or identity fraud; penalty"],
+  "sc-credit-card-fraud": ["Financial transaction card fraud"],
+  "sc-embezzlement": ["Breach of trust with fraudulent intent"],
+  "sc-burglary-in-the-first-degree": ["Burglary; first degree"],
+  "sc-burglary-in-the-second-degree": ["Burglary; second degree"],
+  "sc-burglary-in-the-third-degree": ["Burglary; third degree"],
+  "sc-carjacking": ["Felony of carjacking; penalties"],
+  "sc-possession-of-drug-paraphernalia": [
+    "Unlawful to advertise for sale, manufacture, possess, sell or deliver, or to possess with intent to sell or deliver, paraphernalia",
+  ],
+  "sc-check-fraud": [
+    "Drawing and uttering fraudulent check, draft, or other written order",
+  ],
+  "sc-insurance-fraud": [
+    "Criminal penalties for making false statement or misrepresentation, or assisting, abetting, soliciting or conspiring to do so; restitution to victims",
+  ],
+  "sc-disorderly-conduct": [
+    "Public disorderly conduct; conditional discharge for first-time offenders",
+  ],
+  "sc-dui-first-offense": [
+    "Operating motor vehicle while under influence of alcohol or drugs; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution",
+  ],
+  "sc-reckless-driving": [
+    "Reckless driving; penalties; suspension of driver's license for second or subsequent offense",
+  ],
+  "sc-driving-while-suspended": [
+    "Penalties for driving while license cancelled, suspended or revoked; route restricted license",
+  ],
+  "sc-driving-under-suspension": [
+    "Penalties for driving while license cancelled, suspended or revoked; route restricted license",
+  ],
+  "sc-petit-larceny": ["Petit larceny; grand larceny"],
+  "sc-assault-and-battery-third-degree": [
+    "Assault and battery; definitions; degrees of offenses",
+  ],
+  "sc-domestic-violence-third-degree": ["Acts prohibited; penalties"],
+  "sc-malicious-injury-to-property": [
+    "Malicious injury to animals and other personal property",
+  ],
+  "sc-failure-to-appear": ["Wilful failure to appear; penalties"],
+  "sc-probation-violation": ["Court action when terms of probation violated"],
+  "sc-open-container": ["Open containers in motor vehicle"],
+  "sc-animal-cruelty-misdemeanor": ["Ill-treatment of animals generally; penalties"],
+  "sc-truancy": ["Penalty for failure to enroll or cause child to attend school"],
+  "sc-littering": [
+    "Dumping litter on private or public property prohibited; exceptions; responsibility for removal; penalties",
+  ],
+  "sc-criminal-attempt": ["Offense of attempt punished as principal offense"],
+  "sc-conspiracy": ["Conspiracy"],
+  "sc-juvenile-transfer-adult-court": ["Transfer of jurisdiction"],
+};
 
 export function parseSouthCarolinaCitation(citation: string): SouthCarolinaSourceReference[] {
   const match = citation.match(/^S\.C\.\s+Code\s+Ann\.\s+§§?\s*(.+)$/i);

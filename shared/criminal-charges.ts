@@ -221,11 +221,51 @@ import {
  * citation helpers are also used by synchronous consumers such as the search
  * index. Keep this fail-closed list synchronized with that manifest so a
  * withheld SC row cannot expose its overlay citation through a legacy path.
+ * These IDs are backed by the official source snapshots, even when the
+ * separate citation overlay still carries a secondary-source confidence.
  */
 export const SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS = new Set([
+  'sc-voluntary-manslaughter',
+  'sc-involuntary-manslaughter',
+  'sc-criminally-negligent-homicide',
+  'sc-rape-in-the-first-degree',
+  'sc-rape-in-the-second-degree',
+  'sc-sexual-assault-in-the-first-degree',
+  'sc-sexual-assault-in-the-second-degree',
+  'sc-sexual-assault-in-the-third-degree',
+  'sc-statutory-rape',
+  'sc-theft-by-receiving',
+  'sc-identity-theft',
+  'sc-credit-card-fraud',
+  'sc-embezzlement',
+  'sc-burglary-in-the-first-degree',
+  'sc-burglary-in-the-second-degree',
+  'sc-burglary-in-the-third-degree',
+  'sc-carjacking',
+  'sc-possession-of-drug-paraphernalia',
+  'sc-check-fraud',
+  'sc-insurance-fraud',
+  'sc-disorderly-conduct',
+  'sc-dui-first-offense',
+  'sc-reckless-driving',
+  'sc-driving-while-suspended',
+  'sc-petit-larceny',
+  'sc-assault-and-battery-third-degree',
+  'sc-domestic-violence-third-degree',
+  'sc-malicious-injury-to-property',
+  'sc-driving-under-suspension',
+  'sc-failure-to-appear',
+  'sc-probation-violation',
+  'sc-open-container',
+  'sc-animal-cruelty-misdemeanor',
+  'sc-truancy',
+  'sc-littering',
+  'sc-criminal-attempt',
+  'sc-conspiracy',
   'sc-shoplifting',
   'sc-forgery',
   'sc-attempted-murder',
+  'sc-juvenile-transfer-adult-court',
 ]);
 
 /** True only when the entry has a 'high' confidence citation (overlay or inline). */
@@ -233,8 +273,8 @@ export function isCitationVerified(charge: CriminalCharge): boolean {
   if (charge.jurisdiction === 'CA') {
     return Boolean(getCaliforniaCitation(charge.id));
   }
-  if (charge.jurisdiction === 'SC' && !SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(charge.id)) {
-    return false;
+  if (charge.jurisdiction === 'SC') {
+    return SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(charge.id);
   }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (overlay) return overlay.confidence === 'high';
@@ -248,8 +288,9 @@ export function getVerifiedCitation(charge: CriminalCharge): string | null {
   if (charge.jurisdiction === 'CA') {
     return getCaliforniaCitation(charge.id);
   }
-  if (charge.jurisdiction === 'SC' && !SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(charge.id)) {
-    return null;
+  if (charge.jurisdiction === 'SC') {
+    if (!SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(charge.id)) return null;
+    return CHARGE_CITATIONS[charge.id]?.citation ?? null;
   }
   const overlay = CHARGE_CITATIONS[charge.id];
   if (overlay && overlay.confidence === 'high') return overlay.citation;
