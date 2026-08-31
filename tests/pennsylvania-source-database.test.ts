@@ -671,8 +671,20 @@ describe("Pennsylvania authority manifest", () => {
         transportFailures: expect.any(Number),
         officialPageFailures: 0,
         contentContractFailures: 0,
+        alert: {
+          type: "transport-outage",
+          severity: "warning",
+          failureKind: "transport",
+          transportFailures: expect.any(Number),
+          preservedSnapshot: {
+            outputPath: temporaryManifest,
+            generatedAt: expect.any(String),
+          },
+        },
       });
       expect(result.transportFailures).toBeGreaterThan(0);
+      expect(result.alert?.message).toContain("transport outage");
+      expect(result.alert?.message).toContain("Official-page and content-contract failures");
       expect(readFileSync(temporaryManifest, "utf8")).toBe(committedManifest);
     } finally {
       rmSync(temporaryDirectory, { recursive: true, force: true });
@@ -743,6 +755,7 @@ describe("Pennsylvania authority manifest", () => {
         transportFailures: 0,
         officialPageFailures: 0,
         contentContractFailures: 0,
+        alert: null,
         catalogDiff: {
           added: [],
           removed: [],

@@ -630,7 +630,13 @@ async function fetchPennsylvaniaDocumentWithResult(
   const legacy = getPennsylvaniaApprovedLegacyProvision(reference);
   if (legacy) {
     const page = await fetchHtml(legacy.retrievalUrl, limiter, fetchImpl, options);
-    if ("error" in page) return page;
+    if ("error" in page) {
+      return {
+        document: null,
+        failureKind: page.failureKind,
+        failure: page.error,
+      };
+    }
     if (page.url !== legacy.retrievalUrl) {
       return {
         document: null,
@@ -758,6 +764,20 @@ export interface PennsylvaniaCatalogDiff {
   dispositionChanged: PennsylvaniaCatalogDispositionChange[];
 }
 
+export interface PennsylvaniaPreservedSnapshot {
+  outputPath: string;
+  generatedAt: string;
+}
+
+export interface PennsylvaniaManifestRefreshAlert {
+  type: "transport-outage";
+  severity: "warning";
+  failureKind: "transport";
+  transportFailures: number;
+  message: string;
+  preservedSnapshot: PennsylvaniaPreservedSnapshot | null;
+}
+
 export interface PennsylvaniaManifestRefreshSummary {
   outputPath: string;
   catalogRecords: number;
@@ -772,6 +792,7 @@ export interface PennsylvaniaManifestRefreshSummary {
   wroteManifest: boolean;
   preservedManifest: boolean;
   catalogDiff: PennsylvaniaCatalogDiff | null;
+  alert: PennsylvaniaManifestRefreshAlert | null;
 }
 
 function catalogRowPreview(record: AuthorityCatalogRecord): PennsylvaniaCatalogRowPreview {
@@ -814,22 +835,38 @@ export function diffPennsylvaniaCatalogRecords(
   return { added, removed, dispositionChanged };
 }
 
-function readPreviousPennsylvaniaCatalogRecords(outputPath: string): AuthorityCatalogRecord[] {
+interface PennsylvaniaPreviousManifest {
+  generatedAt: string;
+  catalogRecords: AuthorityCatalogRecord[];
+}
+
+function readPreviousPennsylvaniaManifest(outputPath: string): PennsylvaniaPreviousManifest | null {
   try {
     const raw = JSON.parse(fs.readFileSync(outputPath, "utf8")) as {
+      generatedAt?: unknown;
       catalogRecords?: unknown;
     };
     if (!Array.isArray(raw.catalogRecords)) {
       throw new Error("The existing Pennsylvania manifest has no catalog records");
     }
-    return raw.catalogRecords as AuthorityCatalogRecord[];
+    if (typeof raw.generatedAt !== "string" || raw.generatedAt.length === 0) {
+      throw new Error("The existing Pennsylvania manifest has no generatedAt timestamp");
+    }
+    return {
+      generatedAt: raw.generatedAt,
+      catalogRecords: raw.catalogRecords as AuthorityCatalogRecord[],
+    };
   } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") return [];
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
     throw new Error(
       `Cannot preview against the existing Pennsylvania manifest at ${outputPath}: ` +
       `${error instanceof Error ? error.message : String(error)}`,
     );
   }
+}
+
+function readPreviousPennsylvaniaCatalogRecords(outputPath: string): AuthorityCatalogRecord[] {
+  return readPreviousPennsylvaniaManifest(outputPath)?.catalogRecords ?? [];
 }
 
 function reportPennsylvaniaCatalogDiff(diff: PennsylvaniaCatalogDiff): void {
@@ -905,11 +942,24 @@ export async function refreshPennsylvaniaManifest(
     officialPageFailures === 0 &&
     contentContractFailures === 0;
   if (transportOnlyFailure) {
-    console.error(
-      `[PRESERVED] Pennsylvania manifest was not replaced: ${transportFailures} ` +
-      "source reference(s) failed during transport. Retry after official-source access is restored.",
-    );
-    return {
+    const previousManifest = readPreviousPennsylvaniaManifest(outputPath);
+    const preservedSnapshot = previousManifest
+      ? { outputPath, generatedAt: previousManifest.generatedAt }
+      : null;
+    const alert: PennsylvaniaManifestRefreshAlert = {
+      type: "transport-outage",
+      severity: "warning",
+      failureKind: "transport",
+      transportFailures,
+      message:
+        `Pennsylvania source transport outage left the existing manifest snapshot ` +
+        `${previousManifest ? `from ${previousManifest.generatedAt} ` : ""}` +
+        `active at ${outputPath}. No manifest changes were written; retry after ` +
+        "official-source access is restored. Official-page and content-contract " +
+        "failures are reported separately and do not trigger this preservation alert.",
+      preservedSnapshot,
+    };
+    const summary = {
       outputPath,
       catalogRecords: charges.length,
       retained: 0,
@@ -923,7 +973,11 @@ export async function refreshPennsylvaniaManifest(
       wroteManifest: false,
       preservedManifest: true,
       catalogDiff: null,
+      alert,
     };
+    console.error(`[ALERT][${alert.type}] ${alert.message}`);
+    console.log(JSON.stringify(summary, null, 2));
+    return summary;
   }
 
   const records = charges.map((charge) => {
@@ -986,6 +1040,7 @@ export async function refreshPennsylvaniaManifest(
     wroteManifest: true,
     preservedManifest: false,
     catalogDiff,
+    alert: null,
   };
   console.log(JSON.stringify(summary, null, 2));
   return summary;
