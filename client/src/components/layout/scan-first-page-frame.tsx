@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import type { ElementType, ReactNode } from "react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
@@ -41,6 +42,75 @@ interface PageSectionNavProps {
   accentClassName?: string;
 }
 
+function useActiveSection(items: PageSectionNavItem[]) {
+  const sectionIds = items.map(({ id }) => id).join("|");
+  const [activeId, setActiveId] = useState(items[0]?.id ?? "");
+
+  useEffect(() => {
+    const ids = sectionIds.split("|").filter(Boolean);
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((section): section is HTMLElement => section !== null);
+
+    if (sections.length === 0) return;
+
+    const setActiveFromHash = () => {
+      const hashId = window.location.hash.slice(1);
+      if (hashId && ids.includes(hashId)) {
+        setActiveId(hashId);
+      }
+    };
+
+    setActiveFromHash();
+
+    const updateActiveSection = () => {
+      const anchor = window.innerHeight * 0.25;
+      const measuredSections = sections.map((section) => ({
+        section,
+        rect: section.getBoundingClientRect(),
+      }));
+      const currentSection = measuredSections
+        .filter(({ rect }) => rect.top <= anchor)
+        .at(-1);
+      const nearbySection = measuredSections.find(
+        ({ rect }) => rect.bottom > window.innerHeight * 0.1 && rect.top < window.innerHeight * 0.4,
+      );
+
+      setActiveId((currentSection ?? nearbySection)?.section.id ?? ids[0]);
+    };
+
+    if (typeof IntersectionObserver === "undefined") {
+      updateActiveSection();
+      window.addEventListener("scroll", updateActiveSection, { passive: true });
+    } else {
+      const observer = new IntersectionObserver(updateActiveSection, {
+        rootMargin: "-20% 0px -65% 0px",
+        threshold: [0, 1],
+      });
+      sections.forEach((section) => observer.observe(section));
+
+      window.addEventListener("resize", updateActiveSection);
+      window.addEventListener("scroll", updateActiveSection, { passive: true });
+      window.addEventListener("hashchange", setActiveFromHash);
+
+      return () => {
+        observer.disconnect();
+        window.removeEventListener("resize", updateActiveSection);
+        window.removeEventListener("scroll", updateActiveSection);
+        window.removeEventListener("hashchange", setActiveFromHash);
+      };
+    }
+
+    window.addEventListener("hashchange", setActiveFromHash);
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("hashchange", setActiveFromHash);
+    };
+  }, [sectionIds]);
+
+  return [activeId, setActiveId] as const;
+}
+
 /**
  * A quiet, responsive contents rail: a horizontal scroller on small screens
  * and a sticky list on larger screens. It is optional and only rendered by
@@ -51,6 +121,7 @@ export function PageSectionNav({
   ariaLabel,
   accentClassName = "text-primary",
 }: PageSectionNavProps) {
+  const [activeId, setActiveId] = useActiveSection(items);
   if (items.length < 2) return null;
 
   return (
@@ -63,16 +134,23 @@ export function PageSectionNav({
           {ariaLabel}
         </span>
         <div className="flex min-w-0 gap-1.5 overflow-x-auto no-scrollbar lg:flex-wrap lg:gap-x-5 lg:gap-y-2">
-          {items.map(({ id, label, icon: Icon }) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:rounded-md lg:px-2 lg:py-1 ${accentClassName}`}
-            >
-              {Icon && <Icon className="h-3.5 w-3.5" aria-hidden="true" />}
-              {label}
-            </a>
-          ))}
+          {items.map(({ id, label, icon: Icon }) => {
+            const isActive = activeId === id;
+            return (
+              <a
+                key={id}
+                href={`#${id}`}
+                aria-current={isActive ? "location" : undefined}
+                onClick={() => setActiveId(id)}
+                className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:rounded-md lg:px-2 lg:py-1 ${
+                  isActive ? "bg-muted text-foreground font-semibold" : accentClassName
+                }`}
+              >
+                {Icon && <Icon className="h-3.5 w-3.5" aria-hidden="true" />}
+                {label}
+              </a>
+            );
+          })}
         </div>
       </div>
     </nav>
