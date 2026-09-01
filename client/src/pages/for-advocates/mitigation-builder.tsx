@@ -776,6 +776,8 @@ function PolishPanel({ form }: { form: FormState }) {
   const polishRequestInFlightRef = useRef(false);
   const polishCooldownRef = useRef(false);
   const polishCooldownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const filledFieldCount = Object.values(form).filter((value) => value.trim() !== "").length;
+  const previousFilledFieldCountRef = useRef(filledFieldCount);
 
   useEffect(() => {
     return () => {
@@ -784,6 +786,21 @@ function PolishPanel({ form }: { form: FormState }) {
       }
     };
   }, []);
+
+  useEffect(() => {
+    if (previousFilledFieldCountRef.current === filledFieldCount) return;
+    previousFilledFieldCountRef.current = filledFieldCount;
+
+    if (polishCooldownTimerRef.current) {
+      clearTimeout(polishCooldownTimerRef.current);
+      polishCooldownTimerRef.current = null;
+    }
+    if (!polishCooldownRef.current) return;
+
+    polishCooldownRef.current = false;
+    setPolishCooldown(false);
+    setPolishCooldownSeconds(0);
+  }, [filledFieldCount]);
 
   const startPolishCooldown = () => {
     const cooldownEndsAt = Date.now() + POLISH_COOLDOWN_MS;

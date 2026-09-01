@@ -146,7 +146,7 @@ test.describe("browser export release gate", () => {
     const cooldownButton = page.getByRole("button", { name: /Regenerate in \d+s…/ });
     await expect(cooldownButton).toBeVisible();
     await expect(cooldownButton).toBeDisabled();
-    await page.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await page.getByLabel("Time in community").fill("12 years in the community, updated");
     await expect(page.getByRole("button", { name: /Regenerate in \d+s…/ })).toBeDisabled();
     expect(polishRequestCount).toBe(1);
     await page.clock.runFor(30_000);
@@ -203,5 +203,57 @@ test.describe("browser export release gate", () => {
     expect(printDocument).toContain("overflow-wrap: anywhere");
     expect(printDocument).toContain('content: "DRAFT";');
     expect(printDocument).toContain('content: "Page " counter(page) " of " counter(pages);');
+  });
+
+  test("throttles failed AI polish requests until the filled-field count changes", async ({ page }) => {
+    const consoleErrors: string[] = [];
+    page.on("console", (message) => {
+      if (message.type() === "error") consoleErrors.push(message.text());
+    });
+
+    await page.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+    let polishRequestCount = 0;
+    await page.route("**/api/mitigation/polish", async (route) => {
+      polishRequestCount += 1;
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: false,
+          error: "Release gate polish failure",
+        }),
+      });
+    });
+
+    await page.clock.install();
+    await page.goto("/for-advocates/mitigation-builder");
+    await page.getByLabel("Client name or identifier").fill("Failed Polish Release Gate Test");
+    await page
+      .getByPlaceholder("e.g. Bail hearing, diversion application, sentencing memo")
+      .fill("Bail hearing");
+    await page.getByLabel("Time in community").fill("12 years in the community");
+    await expect(page.getByText("Summary output")).toBeVisible();
+    const consoleErrorsBeforePolish = consoleErrors.length;
+
+    const polishButton = page.getByRole("button", { name: "Generate narrative", exact: true });
+    await polishButton.click();
+    await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(page.getByText("Release gate polish failure")).toBeVisible();
+
+    const cooldownButton = page.getByRole("button", { name: /Regenerate in \d+s…/ });
+    await expect(cooldownButton).toBeVisible();
+    await expect(cooldownButton).toBeDisabled();
+    await expect(cooldownButton).toContainText("30s");
+
+    await page.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    expect(polishRequestCount).toBe(1);
+    expect(consoleErrors.slice(consoleErrorsBeforePolish)).toEqual([]);
   });
 });
