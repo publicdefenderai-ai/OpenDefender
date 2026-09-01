@@ -19,7 +19,9 @@ import {
   type IllinoisReferenceAudit,
   type IllinoisSourceAudit,
   type IllinoisSourceDocument,
+  type IllinoisFreshnessOutcome,
 } from "../../server/data/illinois-source-database-seed";
+import { loadIllinoisAuthorityManifest } from "../../server/data/illinois-manifest-loader";
 
 const RATE_LIMIT_MS = 400;
 const MAX_RETRIES = 3;
@@ -34,10 +36,14 @@ type IllinoisFetchResult =
   | { html: string }
   | { error: string; failureKind: "transport" | "official-page" };
 
-async function fetchDocument(url: string): Promise<IllinoisFetchResult> {
+async function fetchDocument(
+  url: string,
+  fetchImpl: typeof fetch = fetch,
+  retryDelayMs = 1000,
+): Promise<IllinoisFetchResult> {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
-      const response = await fetch(url, {
+      const response = await fetchImpl(url, {
         signal: AbortSignal.timeout(30000),
         headers: { "User-Agent": UA, Accept: "text/html, */*" },
       });
@@ -58,7 +64,7 @@ async function fetchDocument(url: string): Promise<IllinoisFetchResult> {
       return { html };
     } catch (error) {
       if (attempt < MAX_RETRIES) {
-        await sleep(1000 * (attempt + 1));
+        await sleep(retryDelayMs * (attempt + 1));
         continue;
       }
       return {
@@ -268,14 +274,228 @@ export function extractIllinoisDocument(
   ).document;
 }
 
-export async function main(): Promise<void> {
-  const importedAt = new Date();
+export interface IllinoisManifestRefreshOptions {
+  outputPath?: string;
+  importedAt?: Date;
+  fetchImpl?: typeof fetch;
+  rateLimitMs?: number;
+  retryDelayMs?: number;
+  checkOnly?: boolean;
+}
+
+export interface IllinoisManifestRefreshSummary {
+  outputPath: string;
+  catalogRecords: number;
+  retained: number;
+  withheld: number;
+  requests: number;
+  transportFailures: number;
+  officialPageFailures: number;
+  incompleteSections: number;
+  changedSections: number;
+  stillCurrentSections: number;
+  unavailableSections: number;
+  wroteManifest: boolean;
+  preservedManifest: boolean;
+  refreshBlocked: boolean;
+  freshness: {
+    checkedAt: string;
+    outcomeCounts: Record<IllinoisFreshnessOutcome, number>;
+  };
+}
+
+export function getIllinoisRefreshExitCode(
+  result: Pick<IllinoisManifestRefreshSummary, "refreshBlocked" | "preservedManifest">,
+  checkOnly: boolean,
+): number {
+  return result.refreshBlocked || (!checkOnly && result.preservedManifest) ? 1 : 0;
+}
+
+interface PreviousIllinoisManifest {
+  generatedAt: string;
+  catalogRecords: IllinoisManifestRecord[];
+}
+
+function readPreviousIllinoisManifest(outputPath: string): PreviousIllinoisManifest | null {
+  try {
+    const manifest = loadIllinoisAuthorityManifest(outputPath);
+    return {
+      generatedAt: manifest.generatedAt.toISOString(),
+      catalogRecords: manifest.catalogRecords,
+    };
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
+    throw new Error(
+      `Cannot inspect the existing Illinois manifest at ${outputPath}: ` +
+      `${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+}
+
+function findPreviousReference(
+  records: IllinoisManifestRecord[],
+  reference: IllinoisReferenceAudit,
+): IllinoisReferenceAudit | undefined {
+  return records
+    .flatMap((record) => record.sourceAudit.references)
+    .find((candidate) =>
+      candidate.citation === reference.citation &&
+      candidate.officialUrl === reference.officialUrl &&
+      candidate.subdivision === reference.subdivision);
+}
+
+export function getIllinoisFreshnessOutcome(
+  current: IllinoisReferenceAudit,
+  previous: IllinoisReferenceAudit | undefined,
+): IllinoisFreshnessOutcome {
+  if (current.fetchStatus !== "success") return "unavailable";
+  if (
+    current.sectionExtractionStatus !== "complete" ||
+    !current.contentEvidence ||
+    !current.contentHash
+  ) return "incomplete";
+  if (!previous) return "still_current";
+  if (!previous.contentHash) return "changed";
+  if (previous.contentHash === current.contentHash) {
+    return "still_current";
+  }
+  return "changed";
+}
+
+function annotateIllinoisFreshness(
+  records: IllinoisManifestRecord[],
+  previousRecords: IllinoisManifestRecord[],
+): Record<IllinoisFreshnessOutcome, number> {
+  const counts: Record<IllinoisFreshnessOutcome, number> = {
+    changed: 0,
+    unavailable: 0,
+    incomplete: 0,
+    still_current: 0,
+  };
+  for (const record of records) {
+    for (const reference of record.sourceAudit.references) {
+      const previous = findPreviousReference(previousRecords, reference);
+      const outcome = getIllinoisFreshnessOutcome(reference, previous);
+      reference.freshnessOutcome = outcome;
+      reference.previousContentHash = previous?.contentHash ?? null;
+      reference.previousRetrievedAt = previous?.retrievedAt ?? null;
+      counts[outcome]++;
+    }
+  }
+  return counts;
+}
+
+function hasUnsafeIllinoisRefreshFailure(
+  records: IllinoisManifestRecord[],
+  previousRecords: IllinoisManifestRecord[],
+): boolean {
+  return records.some((record) =>
+    record.sourceAudit.references.some((reference) => {
+      if (
+        reference.freshnessOutcome === "unavailable" ||
+        reference.freshnessOutcome === "changed"
+      ) return true;
+      if (reference.freshnessOutcome !== "incomplete") return false;
+      const previous = findPreviousReference(previousRecords, reference);
+      return !previous || (
+        previous.fetchStatus === "success" &&
+        previous.sectionExtractionStatus === "complete" &&
+        Boolean(previous.contentHash)
+      );
+    }),
+  );
+}
+
+function buildIllinoisAudit(
+  records: IllinoisManifestRecord[],
+  checkedAt: string,
+): NonNullable<IllinoisAuthorityManifest["audit"]> {
+  const findingCodes: IllinoisAuditFindingCode[] = [
+    "official_source_verified",
+    "citation_not_parseable",
+    "catalog_code_mismatch",
+    "official_fetch_failure",
+    "section_not_found",
+    "content_missing",
+    "source_evidence_missing",
+    "subdivision_not_found",
+    "official_title_mismatch",
+  ];
+  const references = records.flatMap((record) => record.sourceAudit.references);
+  const findingCounts = Object.fromEntries(
+    findingCodes.map((code) => [
+      code,
+      records.reduce((count, record) =>
+        count + record.auditFindings.filter((finding) => finding.code === code).length, 0),
+    ]),
+  ) as Record<IllinoisAuditFindingCode, number>;
+  const classifications = ["mechanical", "structural"] as const;
+  const classificationSummary = Object.fromEntries(classifications.map((classification) => [
+    classification,
+    {
+      findingCodes: findingCodes.filter((code) =>
+        records.some((record) => record.auditFindings.some((finding) =>
+          finding.code === code && finding.classification === classification))),
+      affectedRows: records.filter((record) =>
+        record.auditFindings.some((finding) => finding.classification === classification)).length,
+      affectedReferences: records.reduce((count, record) =>
+        count + record.sourceAudit.references.filter((reference) =>
+          reference.findings.some((finding) => finding.classification === classification)).length, 0),
+    },
+  ]));
+  const outcomeCounts: Record<IllinoisFreshnessOutcome, number> = {
+    changed: 0,
+    unavailable: 0,
+    incomplete: 0,
+    still_current: 0,
+  };
+  for (const reference of references) {
+    const outcome = reference.freshnessOutcome ?? (
+      reference.fetchStatus !== "success"
+        ? "unavailable"
+        : reference.sectionExtractionStatus === "complete" && reference.contentHash
+          ? "still_current"
+          : "incomplete"
+    );
+    outcomeCounts[outcome]++;
+  }
+  return {
+    schemaVersion: 1,
+    catalogRowCount: records.length,
+    parsedReferenceCount: references.length,
+    successfulOfficialRetrievals: references.filter((reference) =>
+      reference.fetchStatus === "success").length,
+    completeSectionExtractions: references.filter((reference) =>
+      reference.sectionExtractionStatus === "complete").length,
+    findingCounts,
+    mechanical: classificationSummary.mechanical,
+    structural: classificationSummary.structural,
+    freshness: { checkedAt, outcomeCounts },
+  };
+}
+
+export async function refreshIllinoisManifest(
+  options: IllinoisManifestRefreshOptions = {},
+): Promise<IllinoisManifestRefreshSummary> {
+  const importedAt = options.importedAt ?? new Date();
   const charges = criminalCharges.filter((charge) => charge.jurisdiction === "IL");
+  const outputPath = options.outputPath ?? path.resolve(
+    process.cwd(),
+    "scripts/data-review/output/il-source-manifest.json",
+  );
+  const previousManifest = readPreviousIllinoisManifest(outputPath);
   const documentCache = new Map<string, {
     response: IllinoisFetchResult;
     inspection: IllinoisDocumentInspection | null;
   }>();
   const records: IllinoisManifestRecord[] = [];
+  const fetchImpl = options.fetchImpl ?? fetch;
+  const rateLimitMs = options.rateLimitMs ?? RATE_LIMIT_MS;
+  const retryDelayMs = options.retryDelayMs ?? 1000;
+  let requests = 0;
+  let transportFailures = 0;
+  let officialPageFailures = 0;
+  let incompleteSections = 0;
 
   for (const charge of charges) {
     const citation = CHARGE_CITATIONS[charge.id]?.citation ?? "";
@@ -297,7 +517,8 @@ export async function main(): Promise<void> {
           reference.act,
           reference.section,
         );
-        const response = await fetchDocument(url);
+        const response = await fetchDocument(url, fetchImpl, retryDelayMs);
+        requests++;
         const inspection = "html" in response
           ? inspectIllinoisDocument(
             response.html,
@@ -316,8 +537,12 @@ export async function main(): Promise<void> {
         }
         if ("error" in response) {
           error = `Official Illinois source unavailable: ${response.error}`;
+          if (response.failureKind === "transport") transportFailures++;
+          else officialPageFailures++;
+        } else if (!inspection?.document) {
+          incompleteSections++;
         }
-        await sleep(RATE_LIMIT_MS);
+        await sleep(rateLimitMs);
       }
       const url = buildIllinoisSourceUrl(
         reference.chapter,
@@ -363,55 +588,18 @@ export async function main(): Promise<void> {
     records.push(buildIllinoisManifestRecord(charge, documents, importedAt, error, sourceAudit));
   }
 
-  const findingCodes: IllinoisAuditFindingCode[] = [
-    "official_source_verified",
-    "citation_not_parseable",
-    "catalog_code_mismatch",
-    "official_fetch_failure",
-    "section_not_found",
-    "content_missing",
-    "source_evidence_missing",
-    "subdivision_not_found",
-    "official_title_mismatch",
-  ];
-  const findingCounts = Object.fromEntries(
-    findingCodes.map((code) => [
-      code,
-      records.reduce((count, record) =>
-        count + record.auditFindings.filter((finding) => finding.code === code).length, 0),
-    ]),
-  ) as Record<IllinoisAuditFindingCode, number>;
-  const audit = {
-    schemaVersion: 1 as const,
-    catalogRowCount: records.length,
-    parsedReferenceCount: records.reduce((count, record) => count + record.sourceAudit.references.length, 0),
-    successfulOfficialRetrievals: records.reduce((count, record) =>
-      count + record.sourceAudit.references.filter((reference) => reference.fetchStatus === "success").length, 0),
-    completeSectionExtractions: records.reduce((count, record) =>
-      count + record.sourceAudit.references.filter((reference) =>
-        reference.sectionExtractionStatus === "complete").length, 0),
-    findingCounts,
-    mechanical: {
-      findingCodes: findingCodes.filter((code) =>
-        records.some((record) => record.auditFindings.some((finding) =>
-          finding.code === code && finding.classification === "mechanical"))),
-      affectedRows: records.filter((record) =>
-        record.auditFindings.some((finding) => finding.classification === "mechanical")).length,
-      affectedReferences: records.reduce((count, record) =>
-        count + record.sourceAudit.references.filter((reference) =>
-          reference.findings.some((finding) => finding.classification === "mechanical")).length, 0),
-    },
-    structural: {
-      findingCodes: findingCodes.filter((code) =>
-        records.some((record) => record.auditFindings.some((finding) =>
-          finding.code === code && finding.classification === "structural"))),
-      affectedRows: records.filter((record) =>
-        record.auditFindings.some((finding) => finding.classification === "structural")).length,
-      affectedReferences: records.reduce((count, record) =>
-        count + record.sourceAudit.references.filter((reference) =>
-          reference.findings.some((finding) => finding.classification === "structural")).length, 0),
-    },
-  };
+  const outcomeCounts = annotateIllinoisFreshness(
+    records,
+    previousManifest?.catalogRecords ?? [],
+  );
+  const audit = buildIllinoisAudit(records, importedAt.toISOString());
+  const hasRefreshFailure = hasUnsafeIllinoisRefreshFailure(
+    records,
+    previousManifest?.catalogRecords ?? [],
+  );
+  const shouldWrite = !options.checkOnly && !hasRefreshFailure;
+  const selectable = records.filter((record) =>
+    record.disposition === "retain" || record.disposition === "exact_alias_rename");
   const manifest: IllinoisAuthorityManifest = {
     jurisdiction: "IL",
     generatedAt: importedAt,
@@ -419,23 +607,41 @@ export async function main(): Promise<void> {
     catalogRecords: records,
     audit,
   };
-  const outputPath = path.resolve(
-    process.cwd(),
-    "scripts/data-review/output/il-source-manifest.json",
-  );
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");
-  const selectable = records.filter((record) =>
-    record.disposition === "retain" || record.disposition === "exact_alias_rename",
-  );
+  if (shouldWrite) {
+    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+    fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");
+  }
+  const summary: IllinoisManifestRefreshSummary = {
+    outputPath,
+    catalogRecords: records.length,
+    retained: selectable.length,
+    withheld: records.length - selectable.length,
+    requests,
+    transportFailures,
+    officialPageFailures,
+    incompleteSections: outcomeCounts.incomplete,
+    changedSections: outcomeCounts.changed,
+    stillCurrentSections: outcomeCounts.still_current,
+    unavailableSections: outcomeCounts.unavailable,
+    wroteManifest: shouldWrite,
+    preservedManifest: !shouldWrite,
+    refreshBlocked: hasRefreshFailure,
+    freshness: { checkedAt: importedAt.toISOString(), outcomeCounts },
+  };
   console.log(JSON.stringify({
     jurisdiction: "IL",
-    manifestRecords: records.length,
-    selectableCharges: selectable.length,
-    withheldCharges: records.length - selectable.length,
+    ...summary,
     fetchedDocuments: documentCache.size,
-    outputPath,
   }, null, 2));
+  return summary;
+}
+
+export async function main(): Promise<void> {
+  const checkOnly = process.argv.includes("--check");
+  const result = await refreshIllinoisManifest({
+    checkOnly,
+  });
+  process.exitCode = getIllinoisRefreshExitCode(result, checkOnly);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

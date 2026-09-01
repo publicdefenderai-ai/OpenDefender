@@ -11,6 +11,7 @@ import {
   type IllinoisAuditFindingCode,
   type IllinoisManifestAudit,
   type IllinoisManifestRecord,
+  type IllinoisFreshnessOutcome,
 } from "./illinois-source-database-seed";
 
 export const ILLINOIS_MANIFEST_PATH = resolve(
@@ -59,7 +60,7 @@ function hasSameFindingMultiset(
   return counts.size === 0;
 }
 
-function deriveIllinoisAudit(records: IllinoisManifestRecord[]) {
+function deriveIllinoisAudit(records: IllinoisManifestRecord[], checkedAt?: string) {
   const findingCounts = Object.fromEntries(
     AUDIT_FINDING_CODES.map((code) => [
       code,
@@ -81,6 +82,28 @@ function deriveIllinoisAudit(records: IllinoisManifestRecord[]) {
           reference.findings.some((finding) => finding.classification === classification)).length, 0),
     },
   ]));
+  const freshnessOutcomes: IllinoisFreshnessOutcome[] = [
+    "changed",
+    "unavailable",
+    "incomplete",
+    "still_current",
+  ];
+  const outcomeCounts = Object.fromEntries(
+    freshnessOutcomes.map((outcome) => [
+      outcome,
+      records.reduce((count, record) =>
+        count + record.sourceAudit.references.filter((reference) => {
+          const inferred = reference.freshnessOutcome ?? (
+            reference.fetchStatus !== "success"
+              ? "unavailable"
+              : reference.sectionExtractionStatus === "complete" && reference.contentHash
+                ? "still_current"
+                : "incomplete"
+          );
+          return inferred === outcome;
+        }).length, 0),
+    ]),
+  ) as Record<IllinoisFreshnessOutcome, number>;
   return {
     schemaVersion: 1 as const,
     catalogRowCount: records.length,
@@ -95,6 +118,9 @@ function deriveIllinoisAudit(records: IllinoisManifestRecord[]) {
     findingCounts,
     mechanical: classificationSummary.mechanical,
     structural: classificationSummary.structural,
+    ...(checkedAt ? {
+      freshness: { checkedAt, outcomeCounts },
+    } : {}),
   };
 }
 
@@ -198,8 +224,13 @@ export function loadIllinoisAuthorityManifest(
     const validationError = validateIllinoisManifestRecord(record);
     if (validationError) throw new Error(`${record.chargeId}: ${validationError}`);
   }
-  const derivedAudit = deriveIllinoisAudit(catalogRecords);
-  if (JSON.stringify(derivedAudit) !== JSON.stringify(raw.audit)) {
+  const derivedAudit = deriveIllinoisAudit(catalogRecords, generatedAt.toISOString());
+  const { freshness: _derivedFreshness, ...derivedLegacyAudit } = derivedAudit;
+  const { freshness: _manifestFreshness, ...manifestLegacyAudit } = raw.audit;
+  const auditMatches = raw.audit.freshness
+    ? JSON.stringify(derivedAudit) === JSON.stringify(raw.audit)
+    : JSON.stringify(derivedLegacyAudit) === JSON.stringify(manifestLegacyAudit);
+  if (!auditMatches) {
     throw new Error("The committed Illinois manifest has inconsistent audit aggregates");
   }
   return {

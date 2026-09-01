@@ -45,6 +45,12 @@ export interface IllinoisSourceDocument {
 
 export type IllinoisAuditClassification = "mechanical" | "structural" | "success";
 
+export type IllinoisFreshnessOutcome =
+  | "changed"
+  | "unavailable"
+  | "incomplete"
+  | "still_current";
+
 export type IllinoisAuditFindingCode =
   | "official_source_verified"
   | "citation_not_parseable"
@@ -79,6 +85,9 @@ export interface IllinoisReferenceAudit {
   effectiveDateStart: string | null;
   contentEvidence: boolean;
   contentHash: string | null;
+  freshnessOutcome?: IllinoisFreshnessOutcome;
+  previousContentHash?: string | null;
+  previousRetrievedAt?: string | null;
   findings: IllinoisAuditFinding[];
 }
 
@@ -111,6 +120,10 @@ export interface IllinoisManifestAudit {
     findingCodes: IllinoisAuditFindingCode[];
     affectedRows: number;
     affectedReferences: number;
+  };
+  freshness?: {
+    checkedAt: string;
+    outcomeCounts: Record<IllinoisFreshnessOutcome, number>;
   };
 }
 

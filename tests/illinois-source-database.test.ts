@@ -18,7 +18,11 @@ import {
 import { loadIllinoisAuthorityManifest } from "../server/data/illinois-manifest-loader";
 import {
   extractIllinoisDocument,
+  getIllinoisFreshnessOutcome,
+  getIllinoisRefreshExitCode,
   inspectIllinoisDocument,
+  refreshIllinoisManifest,
+  type IllinoisManifestRefreshSummary,
 } from "../scripts/data-review/import-illinois-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
@@ -39,6 +43,132 @@ function document(section: string, title: string, subdivision?: string): Illinoi
 }
 
 describe("Illinois authority manifest", () => {
+  it("does not treat check-only's intentional no-write state as a failure", () => {
+    const summary = {
+      preservedManifest: true,
+      refreshBlocked: false,
+      freshness: {
+        outcomeCounts: {
+          changed: 0,
+          unavailable: 0,
+          incomplete: 0,
+          still_current: 1,
+        },
+      },
+    } as IllinoisManifestRefreshSummary;
+    expect(getIllinoisRefreshExitCode(summary, true)).toBe(0);
+    expect(getIllinoisRefreshExitCode(summary, false)).toBe(1);
+  });
+
+  it("classifies source hashes and response contracts deterministically", () => {
+    const base: IllinoisReferenceAudit = {
+      chapter: "720",
+      act: "5",
+      section: "12-3",
+      subdivision: null,
+      citation: "720 ILCS 5/12-3",
+      officialUrl: buildIllinoisSourceUrl("720", "5", "12-3"),
+      fetchStatus: "success",
+      fetchError: null,
+      retrievedAt: importedAt.toISOString(),
+      sectionExtractionStatus: "complete",
+      officialTitle: "Battery",
+      sourceEvidence: "(Source: P.A. 99-1, eff. 1-1-16.)",
+      effectiveDateStart: "2016-01-01",
+      contentEvidence: true,
+      contentHash: "same",
+      findings: [],
+    };
+
+    expect(getIllinoisFreshnessOutcome(base, { ...base })).toBe("still_current");
+    expect(getIllinoisFreshnessOutcome(
+      { ...base, contentHash: "new" },
+      base,
+    )).toBe("changed");
+    expect(getIllinoisFreshnessOutcome(
+      base,
+      { ...base, contentHash: null },
+    )).toBe("changed");
+    expect(getIllinoisFreshnessOutcome(
+      { ...base, fetchStatus: "transport_failure", contentHash: null },
+      base,
+    )).toBe("unavailable");
+    expect(getIllinoisFreshnessOutcome(
+      { ...base, sectionExtractionStatus: "incomplete", contentHash: null },
+      base,
+    )).toBe("incomplete");
+  });
+
+  it("preserves the committed manifest during an ILGA transport outage", async () => {
+    const directory = mkdtempSync(join(tmpdir(), "illinois-refresh-"));
+    const outputPath = join(directory, "il-source-manifest.json");
+    const previous = readFileSync("scripts/data-review/output/il-source-manifest.json", "utf8");
+    writeFileSync(outputPath, previous);
+
+    try {
+      const summary = await refreshIllinoisManifest({
+        outputPath,
+        fetchImpl: (async () => {
+          throw new Error("simulated ILGA outage");
+        }) as typeof fetch,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+        importedAt,
+      });
+
+      expect(summary).toMatchObject({
+        wroteManifest: false,
+        preservedManifest: true,
+        unavailableSections: expect.any(Number),
+      });
+      expect(summary.unavailableSections).toBeGreaterThan(0);
+      expect(readFileSync(outputPath, "utf8")).toBe(previous);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
+  it("preserves the prior manifest and reports changed hashes", async () => {
+    const directory = mkdtempSync(join(tmpdir(), "illinois-refresh-"));
+    const outputPath = join(directory, "il-source-manifest.json");
+    const previous = readFileSync("scripts/data-review/output/il-source-manifest.json", "utf8");
+    writeFileSync(outputPath, previous);
+    const fetchImpl = (async (url: string) => {
+      const section = url.match(/K(.+)\.htm$/)?.[1] ?? "unknown";
+      const subdivisionMarkers = [
+        ...Array.from({ length: 26 }, (_, index) => `(${String.fromCharCode(97 + index)})`),
+        ...Array.from({ length: 20 }, (_, index) => `(${index + 1})`),
+      ].join(" ");
+      return new Response(
+        `<html><body><code>Sec. ${section}. Current section.</code><br>` +
+        `<code>${subdivisionMarkers} Updated official text for ${section}.</code><br>` +
+        "<code>(Source: P.A. 99-1, eff. 1-1-16.)</code>" +
+        "</body></html>",
+      );
+    }) as typeof fetch;
+
+    try {
+      const summary = await refreshIllinoisManifest({
+        outputPath,
+        fetchImpl,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+        importedAt,
+      });
+
+      expect(summary.wroteManifest).toBe(false);
+      expect(summary.preservedManifest).toBe(true);
+      expect(summary.refreshBlocked).toBe(true);
+      expect(summary.changedSections).toBeGreaterThan(0);
+      expect(summary.freshness.outcomeCounts).toMatchObject({
+        changed: summary.changedSections,
+      });
+      expect(readFileSync(outputPath, "utf8")).toBe(previous);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
   it("preserves every catalog row and publishes only exact current ILGA matches", () => {
     const manifest = loadIllinoisAuthorityManifest();
     const seed = buildIllinoisSourceDatabaseSeed(manifest);
