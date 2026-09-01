@@ -61,14 +61,10 @@ for (const shutdownSignal of ["SIGINT", "SIGTERM"]) {
   });
 }
 
-seedAuthorityDatabases()
-  .then(() => {
-    console.log(
-      `[production-start] Authority seed refresh completed; starting HTTP server.`,
-    );
-    startServer();
-  })
-  .catch((error) => {
-    console.error("[production-start] Authority seed refresh failed:", error);
-    process.exitCode = 1;
-  });
+startServer();
+console.log(
+  `[production-start] HTTP server starting before ${seedScripts.length}-jurisdiction authority seed refresh.`,
+);
+seedAuthorityDatabases().catch((error) => {
+  console.error("[production-start] Authority seed refresh failed:", error);
+});
