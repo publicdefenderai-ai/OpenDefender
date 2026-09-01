@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { runProductionStartup } from "../scripts/start-production.mjs";
+import { createProductionEnv, runProductionStartup } from "../scripts/start-production.mjs";
 
 describe("production startup", () => {
   afterEach(() => {
@@ -23,6 +23,13 @@ describe("production startup", () => {
     expect(launch).toHaveBeenCalledOnce();
     await Promise.resolve();
     expect(onFailure).toHaveBeenCalledOnce();
+  });
+
+  it("forces production mode for spawned processes", () => {
+    expect(createProductionEnv({ NODE_ENV: "development", PORT: "5000" })).toEqual({
+      NODE_ENV: "production",
+      PORT: "5000",
+    });
   });
 
   it("launches HTTP before an asynchronous authority seed completes", async () => {

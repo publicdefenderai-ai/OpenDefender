@@ -16,10 +16,14 @@ const seedScripts = [
 let currentSeed;
 let server;
 
+export function createProductionEnv(env = process.env) {
+  return { ...env, NODE_ENV: "production" };
+}
+
 function runSeed(script) {
   return new Promise((resolve, reject) => {
     currentSeed = spawn(process.execPath, [script], {
-      env: process.env,
+      env: createProductionEnv(),
       stdio: "inherit",
     });
     currentSeed.on("error", reject);
@@ -43,7 +47,7 @@ async function seedAuthorityDatabases() {
 
 function startServer() {
   server = spawn(process.execPath, ["dist/index.js"], {
-    env: process.env,
+    env: createProductionEnv(),
     stdio: "inherit",
   });
   server.on("error", (error) => {
