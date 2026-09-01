@@ -499,6 +499,139 @@ export interface SouthCarolinaManifestRefreshOptions {
   retryDelayMs?: number;
 }
 
+export interface SouthCarolinaWithheldReferenceRecovery {
+  chargeId: string;
+  catalogLabel: string;
+  section: string;
+  subdivision: string | null;
+  previousDisposition: SouthCarolinaManifestRecord["disposition"];
+  previousSectionExtractionStatus: SouthCarolinaReferenceAudit["sectionExtractionStatus"];
+  currentSectionExtractionStatus: SouthCarolinaReferenceAudit["sectionExtractionStatus"];
+  previousOfficialTitle: string | null;
+  currentOfficialTitle: string | null;
+  previousFindingCodes: SouthCarolinaAuditFindingCode[];
+  currentFindingCodes: SouthCarolinaAuditFindingCode[];
+}
+
+const SOUTH_CAROLINA_REAPPEARED_REFERENCE_REVIEW_REASON =
+  "Official section or subdivision evidence reappeared since the previous refresh; exact title, scope, history, and attorney review checks are required before publication.";
+
+function isSelectableSouthCarolinaDisposition(
+  disposition: SouthCarolinaManifestRecord["disposition"],
+): boolean {
+  return disposition === "retain" || disposition === "exact_alias_rename";
+}
+
+function southCarolinaReferenceKey(
+  chargeId: string,
+  reference: Pick<SouthCarolinaReferenceAudit, "section" | "subdivision">,
+): string {
+  return `${chargeId}|${reference.section}|${reference.subdivision ?? ""}`;
+}
+
+/**
+ * Finds official references that were withheld in the prior manifest because
+ * their section or requested subdivision was not complete, but are now
+ * complete in the refresh. These are review candidates, not publish events.
+ */
+export function diffSouthCarolinaWithheldReferences(
+  previousRecords: SouthCarolinaManifestRecord[],
+  nextRecords: SouthCarolinaManifestRecord[],
+): SouthCarolinaWithheldReferenceRecovery[] {
+  const previousByReference = new Map<string, {
+    record: SouthCarolinaManifestRecord;
+    reference: SouthCarolinaReferenceAudit;
+  }>();
+  for (const record of previousRecords) {
+    for (const reference of record.sourceAudit.references) {
+      previousByReference.set(southCarolinaReferenceKey(record.chargeId, reference), {
+        record,
+        reference,
+      });
+    }
+  }
+
+  const recoveries: SouthCarolinaWithheldReferenceRecovery[] = [];
+  for (const record of nextRecords) {
+    for (const reference of record.sourceAudit.references) {
+      if (reference.sectionExtractionStatus !== "complete") continue;
+      const previous = previousByReference.get(southCarolinaReferenceKey(record.chargeId, reference));
+      if (
+        !previous ||
+        isSelectableSouthCarolinaDisposition(previous.record.disposition) ||
+        previous.reference.sectionExtractionStatus === "complete"
+      ) continue;
+      recoveries.push({
+        chargeId: record.chargeId,
+        catalogLabel: record.catalogLabel,
+        section: reference.section,
+        subdivision: reference.subdivision,
+        previousDisposition: previous.record.disposition,
+        previousSectionExtractionStatus: previous.reference.sectionExtractionStatus,
+        currentSectionExtractionStatus: reference.sectionExtractionStatus,
+        previousOfficialTitle: previous.reference.officialTitle,
+        currentOfficialTitle: reference.officialTitle,
+        previousFindingCodes: previous.reference.findings.map((finding) => finding.code),
+        currentFindingCodes: reference.findings.map((finding) => finding.code),
+      });
+    }
+  }
+  return recoveries;
+}
+
+function reportSouthCarolinaWithheldReferenceRecoveries(
+  recoveries: SouthCarolinaWithheldReferenceRecovery[],
+): void {
+  if (recoveries.length === 0) {
+    console.log("[REVIEW] South Carolina has no previously withheld references with newly complete official evidence.");
+    return;
+  }
+  console.log("[REVIEW] South Carolina previously withheld references with newly complete official evidence:");
+  for (const recovery of recoveries) {
+    console.log(
+      `  [REVIEW REQUIRED] ${recovery.chargeId} — ${recovery.catalogLabel}: ` +
+      `§ ${recovery.section}${recovery.subdivision ?? ""} ` +
+      `(${recovery.previousSectionExtractionStatus} -> ${recovery.currentSectionExtractionStatus}); ` +
+      "held from publication pending exact title, scope, history, and attorney review",
+    );
+  }
+}
+
+function holdSouthCarolinaRecoveriesForReview(
+  records: SouthCarolinaManifestRecord[],
+  recoveries: SouthCarolinaWithheldReferenceRecovery[],
+  previousRecords: SouthCarolinaManifestRecord[],
+): void {
+  const recoveryKeys = new Set(
+    recoveries.map((recovery) => southCarolinaReferenceKey(recovery.chargeId, recovery)),
+  );
+  const priorReviewHoldKeys = new Set(
+    previousRecords
+      .filter((record) =>
+        !isSelectableSouthCarolinaDisposition(record.disposition) &&
+        record.dispositionReasons.includes(SOUTH_CAROLINA_REAPPEARED_REFERENCE_REVIEW_REASON)
+      )
+      .flatMap((record) => record.sourceAudit.references.map((reference) =>
+        southCarolinaReferenceKey(record.chargeId, reference)
+      )),
+  );
+  for (const record of records) {
+    if (!record.sourceAudit.references.some((reference) =>
+      recoveryKeys.has(southCarolinaReferenceKey(record.chargeId, reference)) ||
+      priorReviewHoldKeys.has(southCarolinaReferenceKey(record.chargeId, reference))
+    )) continue;
+    record.disposition = "require_exact_reselection";
+    record.dispositionReason = SOUTH_CAROLINA_REAPPEARED_REFERENCE_REVIEW_REASON;
+    record.dispositionReasons = [
+      SOUTH_CAROLINA_REAPPEARED_REFERENCE_REVIEW_REASON,
+      ...record.dispositionReasons.filter(
+        (reason) => reason !== SOUTH_CAROLINA_REAPPEARED_REFERENCE_REVIEW_REASON,
+      ),
+    ];
+    record.provisions = [];
+  }
+}
+
 export interface SouthCarolinaManifestRefreshAlert {
   type: "transport-outage";
   severity: "warning";
@@ -524,12 +657,13 @@ export interface SouthCarolinaManifestRefreshSummary {
   contentContractFailures: number;
   wroteManifest: boolean;
   preservedManifest: boolean;
+  recoveredWithheldReferences: SouthCarolinaWithheldReferenceRecovery[] | null;
   alert: SouthCarolinaManifestRefreshAlert | null;
 }
 
 interface PreviousSouthCarolinaManifest {
   generatedAt: string;
-  catalogRecords: unknown[];
+  catalogRecords: SouthCarolinaManifestRecord[];
 }
 
 function readPreviousSouthCarolinaManifest(
@@ -549,7 +683,7 @@ function readPreviousSouthCarolinaManifest(
     }
     return {
       generatedAt: raw.generatedAt,
-      catalogRecords: raw.catalogRecords,
+      catalogRecords: raw.catalogRecords as SouthCarolinaManifestRecord[],
     };
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") return null;
@@ -565,6 +699,9 @@ export async function refreshSouthCarolinaManifest(
 ): Promise<SouthCarolinaManifestRefreshSummary> {
   const importedAt = options.importedAt ?? new Date();
   const charges = criminalCharges.filter((charge) => charge.jurisdiction === "SC");
+  const outputPath = options.outputPath ??
+    path.resolve(process.cwd(), "scripts/data-review/output/sc-source-manifest.json");
+  const previousManifest = readPreviousSouthCarolinaManifest(outputPath);
   const chapterCache = new Map<string, SouthCarolinaChapterResult>();
   const documentCache = new Map<string, SouthCarolinaDocumentInspection>();
   const fetchImpl = options.fetchImpl ?? fetch;
@@ -574,7 +711,7 @@ export async function refreshSouthCarolinaManifest(
   let transportFailures = 0;
   let officialPageFailures = 0;
   let contentContractFailures = 0;
-  const records: SouthCarolinaManifestRecord[] = [];
+  let records: SouthCarolinaManifestRecord[] = [];
 
   for (const charge of charges) {
     const citation = CHARGE_CITATIONS[charge.id]?.citation ?? "";
@@ -689,14 +826,11 @@ export async function refreshSouthCarolinaManifest(
     ));
   }
 
-  const outputPath = options.outputPath ??
-    path.resolve(process.cwd(), "scripts/data-review/output/sc-source-manifest.json");
   const transportOnlyFailure =
     transportFailures > 0 &&
     officialPageFailures === 0 &&
     contentContractFailures === 0;
   if (transportOnlyFailure) {
-    const previousManifest = readPreviousSouthCarolinaManifest(outputPath);
     const preservedSnapshot = previousManifest
       ? { outputPath, generatedAt: previousManifest.generatedAt }
       : null;
@@ -726,12 +860,23 @@ export async function refreshSouthCarolinaManifest(
       contentContractFailures,
       wroteManifest: false,
       preservedManifest: true,
+      recoveredWithheldReferences: null,
       alert,
     };
     console.error(`[ALERT][${alert.type}] ${alert.message}`);
     console.log(JSON.stringify(summary, null, 2));
     return summary;
   }
+
+  const recoveredWithheldReferences = previousManifest
+    ? diffSouthCarolinaWithheldReferences(previousManifest.catalogRecords, records)
+    : [];
+  reportSouthCarolinaWithheldReferenceRecoveries(recoveredWithheldReferences);
+  holdSouthCarolinaRecoveriesForReview(
+    records,
+    recoveredWithheldReferences,
+    previousManifest?.catalogRecords ?? [],
+  );
 
   const manifest: SouthCarolinaAuthorityManifest = {
     jurisdiction: "SC",
@@ -759,6 +904,7 @@ export async function refreshSouthCarolinaManifest(
     contentContractFailures,
     wroteManifest: true,
     preservedManifest: false,
+    recoveredWithheldReferences,
     alert: null,
   };
   console.log(JSON.stringify({

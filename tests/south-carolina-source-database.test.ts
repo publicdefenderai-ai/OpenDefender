@@ -22,6 +22,7 @@ import {
 import { loadSouthCarolinaAuthorityManifest } from "../server/data/south-carolina-manifest-loader";
 import {
   assertSouthCarolinaManifestIsCurrent,
+  diffSouthCarolinaWithheldReferences,
   extractSouthCarolinaDocument,
   findSouthCarolinaManifestDrift,
   getSouthCarolinaCatalogReferenceInventory,
@@ -560,6 +561,163 @@ describe("South Carolina authority manifest", () => {
       expect(() => assertSouthCarolinaManifestIsCurrent(manifest)).toThrow(/Regenerate/i);
     } finally {
       citation.citation = originalCitation;
+    }
+  });
+
+  it("reports newly complete official evidence for references that were previously withheld", () => {
+    const current = loadSouthCarolinaAuthorityManifest();
+    const previous = structuredClone(current);
+    const previousRecord = previous.catalogRecords.find(
+      (record) => record.chargeId === "sc-maintaining-drug-house",
+    )!;
+    const previousReference = previousRecord.sourceAudit.references[0];
+    previousReference.sectionExtractionStatus = "section_not_found";
+    previousReference.officialTitle = null;
+    previousReference.findings = [{
+      code: "section_not_found",
+      classification: "mechanical",
+      message: "The official South Carolina chapter page did not contain section 44-53-415.",
+      reference: "44-53-415",
+    }];
+    const nextRecord = structuredClone(previousRecord);
+    nextRecord.sourceAudit.references[0] = {
+      ...previousReference,
+      sectionExtractionStatus: "complete",
+      officialTitle: "Maintaining premises for drug activity",
+      findings: [{
+        code: "official_source_verified",
+        classification: "success",
+        message: "Official South Carolina source was retrieved with complete section and history/content evidence.",
+        reference: "44-53-415",
+      }],
+    };
+    nextRecord.sourceAudit.findings = nextRecord.sourceAudit.references[0].findings;
+    const next = current.catalogRecords.map((record) =>
+      record.chargeId === nextRecord.chargeId ? nextRecord : record,
+    );
+
+    expect(diffSouthCarolinaWithheldReferences(previous.catalogRecords, next)).toEqual([
+      expect.objectContaining({
+        chargeId: "sc-maintaining-drug-house",
+        section: "44-53-415",
+        subdivision: null,
+        previousDisposition: "require_exact_reselection",
+        previousSectionExtractionStatus: "section_not_found",
+        currentSectionExtractionStatus: "complete",
+        previousOfficialTitle: null,
+        currentOfficialTitle: "Maintaining premises for drug activity",
+      }),
+    ]);
+  });
+
+  it("does not report a withheld row when its complete section evidence was already present", () => {
+    const current = loadSouthCarolinaAuthorityManifest();
+    const previous = structuredClone(current);
+    const previousRecord = previous.catalogRecords.find(
+      (record) => record.chargeId === "sc-murder-in-the-first-degree",
+    )!;
+    previousRecord.disposition = "require_exact_reselection";
+    expect(diffSouthCarolinaWithheldReferences(previous.catalogRecords, current.catalogRecords)).toEqual([]);
+  });
+
+  it("reports restored subdivision evidence and keeps the refreshed row withheld", async () => {
+    const current = loadSouthCarolinaAuthorityManifest();
+    const previous = structuredClone(current);
+    const previousRecord = previous.catalogRecords.find(
+      (record) => record.chargeId === "sc-mail-fraud",
+    )!;
+    expect(previousRecord.sourceAudit.references[0].sectionExtractionStatus).toBe("incomplete");
+    expect(previousRecord.sourceAudit.references[0].subdivision).toBe("(A)");
+
+    const next = structuredClone(current);
+    const nextRecord = next.catalogRecords.find(
+      (record) => record.chargeId === "sc-mail-fraud",
+    )!;
+    nextRecord.sourceAudit.references[0] = {
+      ...nextRecord.sourceAudit.references[0],
+      sectionExtractionStatus: "complete",
+      officialTitle: "Obtaining signature or property by false pretenses",
+      contentEvidence: true,
+      historyEvidence: true,
+      contentHash: "a".repeat(64),
+      findings: [{
+        code: "official_source_verified",
+        classification: "success",
+        message: "Official South Carolina source was retrieved with complete section and history/content evidence.",
+        reference: "16-13-240(A)",
+      }],
+    };
+
+    const recoveries = diffSouthCarolinaWithheldReferences(previous.catalogRecords, next.catalogRecords);
+    expect(recoveries).toEqual([
+      expect.objectContaining({
+        chargeId: "sc-mail-fraud",
+        subdivision: "(A)",
+        previousSectionExtractionStatus: "incomplete",
+        currentSectionExtractionStatus: "complete",
+      }),
+    ]);
+
+    const directory = mkdtempSync(join(tmpdir(), "south-carolina-refresh-"));
+    const outputPath = join(directory, "sc-source-manifest.json");
+    writeFileSync(outputPath, JSON.stringify(previous));
+    try {
+      const summary = await refreshSouthCarolinaManifest({
+        outputPath,
+        fetchImpl: (async () => ({
+          ok: true,
+          status: 200,
+          text: async () => readFixture("official-section-with-style-span.html"),
+        })) as typeof fetch,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+      });
+      expect(summary.recoveredWithheldReferences).toEqual([
+        expect.objectContaining({
+          chargeId: "sc-maintaining-drug-house",
+          section: "44-53-415",
+          previousSectionExtractionStatus: "section_not_found",
+          currentSectionExtractionStatus: "complete",
+        }),
+      ]);
+
+      const refreshed = JSON.parse(readFileSync(outputPath, "utf8"));
+      const refreshedRecord = refreshed.catalogRecords.find(
+        (record: { chargeId: string }) => record.chargeId === "sc-maintaining-drug-house",
+      );
+      expect(refreshedRecord).toMatchObject({
+        disposition: "require_exact_reselection",
+        provisions: [],
+        dispositionReason: expect.stringContaining("attorney review"),
+      });
+      expect(refreshedRecord.sourceAudit.references[0]).toMatchObject({
+        section: "44-53-415",
+        sectionExtractionStatus: "complete",
+        officialTitle: "Maintaining premises for drug activity",
+      });
+
+      const secondSummary = await refreshSouthCarolinaManifest({
+        outputPath,
+        fetchImpl: (async () => ({
+          ok: true,
+          status: 200,
+          text: async () => readFixture("official-section-with-style-span.html"),
+        })) as typeof fetch,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+      });
+      expect(secondSummary.recoveredWithheldReferences).toEqual([]);
+      const refreshedAgain = JSON.parse(readFileSync(outputPath, "utf8"));
+      const refreshedAgainRecord = refreshedAgain.catalogRecords.find(
+        (record: { chargeId: string }) => record.chargeId === "sc-maintaining-drug-house",
+      );
+      expect(refreshedAgainRecord).toMatchObject({
+        disposition: "require_exact_reselection",
+        provisions: [],
+        dispositionReason: expect.stringContaining("attorney review"),
+      });
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
     }
   });
 
