@@ -589,7 +589,7 @@ function reportSouthCarolinaWithheldReferenceRecoveries(
   console.log("[REVIEW] South Carolina previously withheld references with newly complete official evidence:");
   for (const recovery of recoveries) {
     console.log(
-      `  [REVIEW REQUIRED] ${recovery.chargeId} — ${recovery.catalogLabel}: ` +
+      `  [REVIEW REQUIRED] ${recovery.chargeId}: ${recovery.catalogLabel}: ` +
       `§ ${recovery.section}${recovery.subdivision ?? ""} ` +
       `(${recovery.previousSectionExtractionStatus} -> ${recovery.currentSectionExtractionStatus}); ` +
       "held from publication pending exact title, scope, history, and attorney review",

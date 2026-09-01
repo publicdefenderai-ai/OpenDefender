@@ -715,7 +715,7 @@ describe('POST /api/legal-guidance/rules — error handling', () => {
 });
 
 // =============================================================================
-describe('GET /api/admin/source-coverage — authenticated readiness gate', () => {
+describe('GET /api/admin/source-coverage: authenticated readiness gate', () => {
   const ADMIN_TEST_TOKEN = 'source-coverage-test-token';
   const REPORT_KEYS = [
     'target',

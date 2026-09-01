@@ -671,7 +671,7 @@ async function fetchFLCommissionTable(): Promise<Map<string, CommissionEntry>> {
   const html = await fetchHtml(tableUrl);
   const map = parseFloridaCommissionTable(html);
   if (map.size < 10) {
-    console.log('  Table parsing yielded few results — regex extraction found all available sections.');
+    console.log('  Table parsing yielded few results: regex extraction found all available sections.');
   }
   console.log(`  Found ${map.size} FL sections in commission table.`);
   return map;

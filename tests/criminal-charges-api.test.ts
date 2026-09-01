@@ -201,7 +201,7 @@ interface V1SearchResponse {
   meta: { totalResults: number; queryTime: number; suggestions: string[] };
 }
 
-describe('GET /api/v1/search — result-limit documentation contract', () => {
+describe('GET /api/v1/search: result-limit documentation contract', () => {
   it('documents the charge-only and mixed-content defaults and caps', () => {
     const limitParameter = openApiSpec.paths['/search'].get.parameters.find(
       (parameter) => parameter.name === 'limit',
@@ -223,7 +223,7 @@ describe('GET /api/v1/search — result-limit documentation contract', () => {
   });
 });
 
-describe('GET /api/v1/search — mixed-content result-set contract', () => {
+describe('GET /api/v1/search: mixed-content result-set contract', () => {
   it('does not expand the relevance-grouped result set when limit exceeds the default', async () => {
     if (!serverAvailable) return;
 
@@ -343,7 +343,7 @@ describe('GET /api/v1/search — runtime New York eligibility contract', () => {
   });
 });
 
-describe('GET /api/v1/search — California charge completeness contract', () => {
+describe('GET /api/v1/search: California charge completeness contract', () => {
   it('returns every current California charge when the requested limit covers the catalog', async () => {
     if (!serverAvailable || !californiaAuthorityAvailable) return;
 

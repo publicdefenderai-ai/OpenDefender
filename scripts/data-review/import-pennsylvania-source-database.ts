@@ -876,14 +876,14 @@ function reportPennsylvaniaCatalogDiff(diff: PennsylvaniaCatalogDiff): void {
   }
   console.log("[PREVIEW] Pennsylvania catalog changes:");
   for (const row of diff.added) {
-    console.log(`  [ADDED] ${row.chargeId} — ${row.catalogLabel} (${row.disposition})`);
+    console.log(`  [ADDED] ${row.chargeId}: ${row.catalogLabel} (${row.disposition})`);
   }
   for (const row of diff.removed) {
-    console.log(`  [REMOVED] ${row.chargeId} — ${row.catalogLabel} (${row.disposition})`);
+    console.log(`  [REMOVED] ${row.chargeId}: ${row.catalogLabel} (${row.disposition})`);
   }
   for (const row of diff.dispositionChanged) {
     console.log(
-      `  [DISPOSITION] ${row.chargeId} — ${row.catalogLabel}: ` +
+      `  [DISPOSITION] ${row.chargeId}: ${row.catalogLabel}: ` +
       `${row.previousDisposition} -> ${row.nextDisposition}`,
     );
   }

@@ -1338,7 +1338,7 @@ export default function AdminAttorneyReview() {
           </div>
         )}
 
-        {/* Source readiness report — fail closed if the authenticated report is unavailable. */}
+        {/* Source readiness report: fail closed if the authenticated report is unavailable. */}
         {loadingReadiness ? (
           <section
             className="rounded-xl border border-indigo-200 bg-indigo-50/60 px-4 py-5"
@@ -1361,7 +1361,7 @@ export default function AdminAttorneyReview() {
               <span className="mt-0.5 shrink-0 text-lg font-bold text-red-700" aria-hidden="true">!</span>
               <div>
                 <h2 id="source-readiness-unavailable-heading" className="text-sm font-bold text-red-900">
-                  Source readiness unavailable — expansion gate blocked
+                  Source readiness unavailable: expansion gate blocked
                 </h2>
                 <p className="mt-1 text-sm leading-relaxed text-red-800">
                   The complete source-readiness report could not be loaded. No jurisdiction should be treated as ready until
@@ -1380,12 +1380,12 @@ export default function AdminAttorneyReview() {
           </section>
         )}
 
-        {/* Attorney checklist launch gate — separate from the source expansion gate above. */}
+        {/* Attorney checklist launch gate: separate from the source expansion gate above. */}
         <div className={`rounded-xl border-2 p-4 sm:p-5 ${allHighCleared ? "border-green-300 bg-green-50" : "border-red-200 bg-red-50"}`}>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 gap-2">
             <div className="min-w-0">
               <h2 className="font-bold text-gray-900 text-sm sm:text-base">
-                {allHighCleared ? "✅ Attorney checklist cleared — ready for attorney review gate" : "🔴 Attorney review gate blocked — HIGH-risk items pending"}
+                {allHighCleared ? "✅ Attorney checklist cleared, ready for attorney review gate" : "🔴 Attorney review gate blocked, HIGH-risk items pending"}
               </h2>
               <p className="text-sm text-gray-600 mt-0.5">All 9 HIGH-risk items must be cleared before the site goes public.</p>
             </div>

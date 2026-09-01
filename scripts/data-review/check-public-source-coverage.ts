@@ -34,7 +34,7 @@ export function main(args = process.argv.slice(2)): number {
         `${report.target.officialResponseRate * 100}% official responses`,
     );
     for (const row of report.jurisdictions) {
-      const blocker = row.blocker ? ` — blocker: ${row.blocker.summary}` : "";
+      const blocker = row.blocker ? `: blocker: ${row.blocker.summary}` : "";
       const nonZeroGaps = row.gapBreakdown
         .filter((gap) => gap.rows > 0)
         .map((gap) => `${gap.kind}=${gap.rows}`)

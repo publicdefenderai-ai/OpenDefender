@@ -34,7 +34,7 @@ export async function main(): Promise<void> {
         const status = diagnostic.status ? ` ${diagnostic.status}` : "";
         console.error(
           `       attempt ${diagnostic.attempt}: ${diagnostic.kind}${status} ` +
-          `after ${diagnostic.elapsedMs}ms — ${diagnostic.message}${retry}`,
+          `after ${diagnostic.elapsedMs}ms: ${diagnostic.message}${retry}`,
         );
       }
     }

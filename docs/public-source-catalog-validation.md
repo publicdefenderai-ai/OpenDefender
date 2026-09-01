@@ -6,7 +6,7 @@ application and source-access integrity check, not a manual legal review.
 
 ## Gate result
 
-**BLOCKED — do not open another jurisdiction yet.**
+**BLOCKED: do not open another jurisdiction yet.**
 
 Every current jurisdiction now has a complete catalog-row inventory and a
 repeatable public-source coverage report. Seven jurisdictions meet the
@@ -106,13 +106,13 @@ ranked list to select the next coverage work.
 - `npm run review:source-coverage`
 - `npm run review:source-seed-determinism`
 - `npm run build`
-- `npm test` — 57 active test files passed; 1,279 tests passed. Nine
+- `npm test`: 57 active test files passed; 1,279 tests passed. Nine
   integration files remain skipped unless their explicit environment guards
   are enabled.
-- Targeted source and deployment tests for all nine jurisdictions — 14 files,
+- Targeted source and deployment tests for all nine jurisdictions: 14 files,
   75 tests passed.
 - Development integration boundary pass with the explicit authority and
-  persistence guards enabled — 8 files, 19 tests passed. One test file was
+  persistence guards enabled: 8 files, 19 tests passed. One test file was
   skipped by its own guard.
 - Two-pass dry-run loading of all nine seed commands through
   `npm run review:source-seed-determinism`. The eight committed-manifest
