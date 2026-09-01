@@ -40,6 +40,8 @@ import { ohioSourceDatabase } from "./services/ohio-source-database";
 import { loadOhioAuthorityManifest } from "./data/ohio-manifest-loader";
 import { georgiaSourceDatabase } from "./services/georgia-source-database";
 import { loadGeorgiaAuthorityManifest } from "./data/georgia-manifest-loader";
+import { northCarolinaSourceDatabase } from "./services/north-carolina-source-database";
+import { loadNorthCarolinaAuthorityManifest } from "./data/north-carolina-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
 import { buildPublicSourceCoverageReport } from "./data/public-source-coverage";
@@ -517,7 +519,9 @@ export async function registerRoutes(
           ? await ohioSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : normalizedCharge?.jurisdiction === "GA"
           ? await georgiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
-        : normalizedCharge?.jurisdiction === "CA"
+          : normalizedCharge?.jurisdiction === "NC"
+          ? await northCarolinaSourceDatabase.getChargeProvenance(normalizedCharge.id)
+          : normalizedCharge?.jurisdiction === "CA"
           ? await californiaSourceDatabase.getChargeProvenance(normalizedCharge.id)
           : null;
       if (!provenance) {
@@ -1150,6 +1154,26 @@ export async function registerRoutes(
     } catch (error) {
       errLog("Failed to fetch Georgia source database status", error);
       res.status(500).json({ success: false, error: "Failed to fetch Georgia source database status" });
+    }
+  });
+
+  app.post("/api/statutes/sources/north-carolina/seed", adminRateLimiter, requireAdminAuth, async (_req, res) => {
+    try {
+      const result = await northCarolinaSourceDatabase.seed(loadNorthCarolinaAuthorityManifest());
+      res.status(result.success ? 200 : 500).json(result);
+    } catch (error) {
+      errLog("North Carolina source database seeding failed", error);
+      res.status(500).json({ success: false, error: "North Carolina source database seeding failed" });
+    }
+  });
+
+  app.get("/api/statutes/sources/north-carolina/status", searchRateLimiter, async (_req, res) => {
+    try {
+      const status = await northCarolinaSourceDatabase.getStatus();
+      res.json({ success: true, ...status });
+    } catch (error) {
+      errLog("Failed to fetch North Carolina source database status", error);
+      res.status(500).json({ success: false, error: "Failed to fetch North Carolina source database status" });
     }
   });
 

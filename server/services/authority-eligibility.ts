@@ -3,7 +3,7 @@ import { CALIFORNIA_CANONICAL_RECORDS } from "@shared/california-authority";
 import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
 import { getCurrentCaliforniaSelectableChargeIds } from "./california-source-database";
 
-export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["CA", "NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA"]);
+export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["CA", "NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "NC"]);
 
 function getReleaseCheckSelectableChargeIds(): Set<string> | undefined {
   if (process.env.RELEASE_CHECK !== "true") return undefined;

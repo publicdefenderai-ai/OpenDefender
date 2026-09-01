@@ -11,6 +11,7 @@ export const CURRENT_PUBLIC_SOURCE_JURISDICTIONS = Object.freeze([
   "GA",
   "IL",
   "NY",
+  "NC",
   "OH",
   "PA",
   "SC",
