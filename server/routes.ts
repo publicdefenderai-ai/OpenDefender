@@ -42,6 +42,7 @@ import { georgiaSourceDatabase } from "./services/georgia-source-database";
 import { loadGeorgiaAuthorityManifest } from "./data/georgia-manifest-loader";
 import { getCurrentAuthoritySelectableChargeIds, filterAuthorityBackedCharges } from "./services/authority-eligibility";
 import { openLawsClient } from "./services/openlaws-client";
+import { buildPublicSourceCoverageReport } from "./data/public-source-coverage";
 import rateLimit from "express-rate-limit";
 import { devLog, opsLog, errLog } from "./utils/dev-logger";
 import { attorneySessionManager } from "./services/attorney-docs/session-manager";
@@ -77,7 +78,16 @@ function guidanceCaseData(caseData: any) {
   };
 }
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export interface RegisterRoutesDependencies {
+  buildPublicSourceCoverageReport?: typeof buildPublicSourceCoverageReport;
+}
+
+export async function registerRoutes(
+  app: Express,
+  dependencies: RegisterRoutesDependencies = {},
+): Promise<Server> {
+  const buildSourceCoverageReport =
+    dependencies.buildPublicSourceCoverageReport ?? buildPublicSourceCoverageReport;
   const mitigationPolishMaxBodyBytes = getMitigationPolishMaxBodyBytes(process.env);
 
   // ============================================================================
@@ -1175,6 +1185,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/admin/verify-key", adminRateLimiter, requireAdminAuth, (_req, res) => {
     res.json({ ok: true });
   });
+
+  // Admin-only: expose the deterministic source-readiness gate used before
+  // opening another jurisdiction. This reads committed manifests and seeds;
+  // it never calls a legislative source from an HTTP request.
+  app.get(
+    "/api/admin/source-coverage",
+    adminRateLimiter,
+    requireAdminAuth,
+    (_req, res) => {
+      try {
+        res.json({ success: true, ...buildSourceCoverageReport() });
+      } catch (error) {
+        errLog("Failed to build public-source coverage report", error);
+        res.status(500).json({
+          success: false,
+          error: "Source coverage report is unavailable",
+        });
+      }
+    },
+  );
 
   // GET /api/admin/provider-metrics
   // Returns aggregate provider availability and latency only. The underlying
@@ -2544,6 +2574,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
     next();
   };
+
+  // Public runtime config keeps the client route gate aligned with the
+  // server-side feature flag even when a production bundle was built earlier.
+  app.get("/api/attorney/config", (_req, res) => {
+    res.setHeader("Cache-Control", "no-store");
+    res.json({
+      success: true,
+      enabled: isAttorneyPortalEnabled(process.env),
+    });
+  });
 
   // Create verified attorney session
   app.post("/api/attorney/verify", requireAttorneyPortalEnabled, attorneyVerificationRateLimiter, async (req, res) => {

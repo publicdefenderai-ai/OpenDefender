@@ -11,6 +11,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { CURRENT_PUBLIC_SOURCE_JURISDICTIONS } from "@shared/public-source-coverage";
 
 // Prevent search engines from indexing this internal admin tool.
 function useAdminNoIndex() {
@@ -296,6 +297,492 @@ type StoredState = Record<string, ItemState>;
 
 function defaultItemState(): ItemState {
   return { status: "pending", reviewedBy: "", reviewedDate: "", notes: "" };
+}
+
+// ── Source readiness report ────────────────────────────────────────────────────
+
+type SourceAvailability = "available" | "partial" | "unavailable";
+type SourceGateStatus = "meets_target" | "blocked" | "below_target";
+type SourceGapKind =
+  | "source_access"
+  | "missing_import"
+  | "stale_record"
+  | "incomplete_text"
+  | "technical_seed_failure"
+  | "identity_review";
+
+interface SourceReadinessGap {
+  kind: SourceGapKind;
+  rows: number;
+  chargeIds: string[];
+  summary: string;
+  nextStep: string;
+}
+
+interface SourceReadinessRow {
+  jurisdiction: string;
+  source: string;
+  manifestGeneratedAt: string;
+  catalogRows: number;
+  rowsWithOfficialResponse: number;
+  selectableRows: number;
+  withheldRows: number;
+  rowsWithExplicitWithheldReason: number;
+  sources: number;
+  snapshots: number;
+  links: number;
+  catalogAccountingRate: number;
+  officialResponseRate: number;
+  publishableRate: number;
+  coveragePercentage: number;
+  officialResponsePercentage: number;
+  selectableCoveragePercentage: number;
+  officialSourceAvailability: SourceAvailability;
+  gapBreakdown: SourceReadinessGap[];
+  gapCounts: Record<SourceGapKind, number>;
+  staleRows: number;
+  manifestPath: string | null;
+  seedScriptPath: string;
+  status: SourceGateStatus;
+  blocker: {
+    kind: "source_access";
+    source: string;
+    summary: string;
+    evidence: string;
+    nextStep: string;
+  } | null;
+}
+
+interface SourceReadinessTarget {
+  jurisdiction: string;
+  rows: number;
+  coveragePercentage: number;
+  officialResponsePercentage: number;
+  kind: SourceGapKind;
+  reason: string;
+  nextStep: string;
+}
+
+interface SourceReadinessReport {
+  target: {
+    catalogAccountingRate: number;
+    officialResponseRate: number;
+  };
+  jurisdictions: SourceReadinessRow[];
+  belowTargetJurisdictions: string[];
+  nextHighestValueCoverageTargets: SourceReadinessTarget[];
+}
+
+const SOURCE_GAP_KINDS: SourceGapKind[] = [
+  "source_access",
+  "missing_import",
+  "stale_record",
+  "incomplete_text",
+  "technical_seed_failure",
+  "identity_review",
+];
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function isFiniteNumber(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+function isNonNegativeInteger(value: unknown): value is number {
+  return isFiniteNumber(value) && Number.isInteger(value) && value >= 0;
+}
+
+function isSourceGapKind(value: unknown): value is SourceGapKind {
+  return typeof value === "string" && SOURCE_GAP_KINDS.includes(value as SourceGapKind);
+}
+
+function approximatelyEqual(left: number, right: number): boolean {
+  return Math.abs(left - right) < 0.0001;
+}
+
+/**
+ * The report is a launch-gate input, so do not render a partial response as
+ * though it were complete. This deliberately checks the fields the workspace
+ * displays rather than trusting a TypeScript cast on JSON from the server.
+ */
+function isSourceReadinessReport(value: unknown): value is SourceReadinessReport {
+  if (!isRecord(value) || value.success !== true) return false;
+  const target = value.target;
+  const jurisdictions = value.jurisdictions;
+  const targets = value.nextHighestValueCoverageTargets;
+  if (
+    !isRecord(target) ||
+    !isFiniteNumber(target.catalogAccountingRate) ||
+    !isFiniteNumber(target.officialResponseRate) ||
+    target.catalogAccountingRate < 0 ||
+    target.catalogAccountingRate > 1 ||
+    target.officialResponseRate < 0 ||
+    target.officialResponseRate > 1 ||
+    !Array.isArray(jurisdictions) ||
+    !Array.isArray(value.belowTargetJurisdictions) ||
+    !Array.isArray(targets)
+  ) {
+    return false;
+  }
+  const targetCatalogRate = target.catalogAccountingRate;
+  const targetOfficialRate = target.officialResponseRate;
+
+  const jurisdictionsInReport = jurisdictions
+    .map((row) => (isRecord(row) && typeof row.jurisdiction === "string" ? row.jurisdiction : null))
+    .filter((jurisdiction): jurisdiction is string => jurisdiction !== null);
+  if (
+    jurisdictionsInReport.length !== CURRENT_PUBLIC_SOURCE_JURISDICTIONS.length ||
+    new Set(jurisdictionsInReport).size !== CURRENT_PUBLIC_SOURCE_JURISDICTIONS.length ||
+    CURRENT_PUBLIC_SOURCE_JURISDICTIONS.some((jurisdiction) => !jurisdictionsInReport.includes(jurisdiction))
+  ) {
+    return false;
+  }
+
+  const validRows = jurisdictions.every((row) => {
+    if (!isRecord(row)) return false;
+    const gaps = row.gapBreakdown;
+    const gapKinds = Array.isArray(gaps)
+      ? gaps.map((gap) => (isRecord(gap) ? gap.kind : null))
+      : [];
+    const gapCounts = row.gapCounts;
+    const blocker = row.blocker;
+    if (
+      !isNonNegativeInteger(row.catalogRows) ||
+      !isNonNegativeInteger(row.rowsWithOfficialResponse) ||
+      !isNonNegativeInteger(row.selectableRows) ||
+      !isNonNegativeInteger(row.withheldRows) ||
+      !isNonNegativeInteger(row.rowsWithExplicitWithheldReason) ||
+      !isNonNegativeInteger(row.sources) ||
+      !isNonNegativeInteger(row.snapshots) ||
+      !isNonNegativeInteger(row.links) ||
+      !isNonNegativeInteger(row.staleRows) ||
+      !isFiniteNumber(row.catalogAccountingRate) ||
+      !isFiniteNumber(row.officialResponseRate) ||
+      !isFiniteNumber(row.publishableRate) ||
+      !isFiniteNumber(row.coveragePercentage) ||
+      !isFiniteNumber(row.officialResponsePercentage) ||
+      !isFiniteNumber(row.selectableCoveragePercentage)
+    ) {
+      return false;
+    }
+    const catalogRows = row.catalogRows;
+    const selectableRows = row.selectableRows;
+    const withheldRows = row.withheldRows;
+    const rowsWithOfficialResponse = row.rowsWithOfficialResponse;
+    const hasValidGapCounts =
+      isRecord(gapCounts) &&
+      SOURCE_GAP_KINDS.every(
+        (kind) => isNonNegativeInteger(gapCounts[kind]),
+      );
+    const hasValidBlocker =
+      blocker === null ||
+      (isRecord(blocker) &&
+        blocker.kind === "source_access" &&
+        typeof blocker.source === "string" &&
+        blocker.source.trim().length > 0 &&
+        typeof blocker.summary === "string" &&
+        blocker.summary.trim().length > 0 &&
+        typeof blocker.evidence === "string" &&
+        blocker.evidence.trim().length > 0 &&
+        typeof blocker.nextStep === "string" &&
+        blocker.nextStep.trim().length > 0);
+    const meetsTarget =
+      row.catalogAccountingRate >= targetCatalogRate &&
+      row.officialResponseRate >= targetOfficialRate &&
+      row.rowsWithExplicitWithheldReason === row.withheldRows;
+    const expectedStatus: SourceGateStatus = meetsTarget
+      ? "meets_target"
+      : blocker !== null && row.rowsWithExplicitWithheldReason === row.withheldRows
+        ? "blocked"
+        : "below_target";
+    return (
+      typeof row.jurisdiction === "string" &&
+      row.jurisdiction.trim().length > 0 &&
+      typeof row.source === "string" &&
+      row.source.trim().length > 0 &&
+      typeof row.manifestGeneratedAt === "string" &&
+      typeof row.seedScriptPath === "string" &&
+      row.seedScriptPath.trim().length > 0 &&
+      (row.manifestPath === null || typeof row.manifestPath === "string") &&
+      catalogRows > 0 &&
+      rowsWithOfficialResponse <= catalogRows &&
+      selectableRows + withheldRows === catalogRows &&
+      row.rowsWithExplicitWithheldReason === withheldRows &&
+      approximatelyEqual(row.catalogAccountingRate, (selectableRows + withheldRows) / catalogRows) &&
+      approximatelyEqual(row.officialResponseRate, rowsWithOfficialResponse / catalogRows) &&
+      approximatelyEqual(row.publishableRate, selectableRows / catalogRows) &&
+      approximatelyEqual(row.coveragePercentage, (selectableRows / catalogRows) * 100) &&
+      approximatelyEqual(row.officialResponsePercentage, (rowsWithOfficialResponse / catalogRows) * 100) &&
+      approximatelyEqual(row.selectableCoveragePercentage, row.coveragePercentage) &&
+      (row.officialSourceAvailability === "available" ||
+        row.officialSourceAvailability === "partial" ||
+        row.officialSourceAvailability === "unavailable") &&
+      (row.status === "meets_target" ||
+        row.status === "blocked" ||
+        row.status === "below_target") &&
+      row.status === expectedStatus &&
+      Array.isArray(gaps) &&
+      gaps.length === SOURCE_GAP_KINDS.length &&
+      gapKinds.every(isSourceGapKind) &&
+      new Set(gapKinds).size === SOURCE_GAP_KINDS.length &&
+      SOURCE_GAP_KINDS.every((kind) => gapKinds.includes(kind)) &&
+      gaps.every(
+        (gap) =>
+          isRecord(gap) &&
+          isSourceGapKind(gap.kind) &&
+          isNonNegativeInteger(gap.rows) &&
+          Array.isArray(gap.chargeIds) &&
+          gap.chargeIds.every((chargeId) => typeof chargeId === "string") &&
+          typeof gap.summary === "string" &&
+          gap.summary.trim().length > 0 &&
+          typeof gap.nextStep === "string" &&
+          gap.nextStep.trim().length > 0 &&
+          isRecord(gapCounts) &&
+          gapCounts[gap.kind] === gap.rows
+      ) &&
+      hasValidGapCounts &&
+      hasValidBlocker
+    );
+  }) && targets.every((target) =>
+    isRecord(target) &&
+    typeof target.jurisdiction === "string" &&
+    target.jurisdiction.trim().length > 0 &&
+    isNonNegativeInteger(target.rows) &&
+    isFiniteNumber(target.coveragePercentage) &&
+    isFiniteNumber(target.officialResponsePercentage) &&
+    isSourceGapKind(target.kind) &&
+    typeof target.reason === "string" &&
+    target.reason.trim().length > 0 &&
+    typeof target.nextStep === "string" &&
+    target.nextStep.trim().length > 0
+  );
+  if (!validRows) return false;
+
+  const rows = jurisdictions as SourceReadinessRow[];
+  const rowByJurisdiction = new Map(rows.map((row) => [row.jurisdiction, row]));
+  const belowTarget = value.belowTargetJurisdictions as unknown[];
+  const belowTargetSet = new Set(belowTarget);
+  const expectedBelowTarget = rows
+    .filter((row) => row.status !== "meets_target")
+    .map((row) => row.jurisdiction);
+  const targetsByJurisdiction = new Map(
+    (targets as unknown[]).map((target) => [
+      isRecord(target) ? target.jurisdiction : "",
+      target,
+    ]),
+  );
+  const expectedTargets = rows.filter((row) => row.withheldRows > 0);
+  return (
+    belowTarget.every((jurisdiction) => typeof jurisdiction === "string") &&
+    belowTargetSet.size === expectedBelowTarget.length &&
+    expectedBelowTarget.every((jurisdiction) => belowTargetSet.has(jurisdiction)) &&
+    targets.length === expectedTargets.length &&
+    targetsByJurisdiction.size === expectedTargets.length &&
+    expectedTargets.every((row) => {
+      const target = targetsByJurisdiction.get(row.jurisdiction);
+      return (
+        isRecord(target) &&
+        target.rows === row.withheldRows &&
+        approximatelyEqual(target.coveragePercentage as number, row.coveragePercentage) &&
+        approximatelyEqual(
+        target.officialResponsePercentage as number,
+          row.officialResponsePercentage,
+        ) &&
+        typeof target.nextStep === "string" &&
+        target.nextStep.trim().length > 0 &&
+        rowByJurisdiction.has(row.jurisdiction)
+      );
+    })
+  );
+}
+
+async function fetchSourceReadiness(adminKey: string): Promise<SourceReadinessReport> {
+  let response: Response;
+  try {
+    response = await fetch("/api/admin/source-coverage", {
+      headers: { "x-admin-api-key": adminKey },
+    });
+  } catch {
+    throw new Error("The source readiness report could not be reached.");
+  }
+
+  let body: unknown;
+  try {
+    body = await response.json();
+  } catch {
+    throw new Error("The source readiness report returned an unreadable response.");
+  }
+
+  if (!response.ok || !isSourceReadinessReport(body)) {
+    throw new Error(
+      response.status === 401 || response.status === 403
+        ? "Your admin access is no longer valid."
+        : "The source readiness report is unavailable.",
+    );
+  }
+  return body;
+}
+
+function formatPercent(value: number): string {
+  return `${value.toFixed(1)}%`;
+}
+
+function sourceGapLabel(kind: string): string {
+  return kind
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+function sourceAvailabilityLabel(availability: SourceAvailability): string {
+  return availability.charAt(0).toUpperCase() + availability.slice(1);
+}
+
+function SourceGateBadge({ status }: { status: SourceGateStatus }) {
+  const config: Record<SourceGateStatus, { label: string; className: string }> = {
+    meets_target: {
+      label: "Ready",
+      className: "border-green-200 bg-green-50 text-green-800",
+    },
+    blocked: {
+      label: "Blocked",
+      className: "border-red-200 bg-red-50 text-red-800",
+    },
+    below_target: {
+      label: "Below target",
+      className: "border-yellow-200 bg-yellow-50 text-yellow-800",
+    },
+  };
+  const item = config[status];
+  return (
+    <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-semibold ${item.className}`}>
+      {item.label}
+    </span>
+  );
+}
+
+function SourceReadinessSection({ report }: { report: SourceReadinessReport }) {
+  const readyCount = report.jurisdictions.filter((row) => row.status === "meets_target").length;
+  const blockedCount = report.jurisdictions.filter((row) => row.status === "blocked").length;
+
+  return (
+    <section className="space-y-4" aria-labelledby="source-readiness-heading">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="h-3 w-3 rounded-full bg-indigo-600" />
+            <h2 id="source-readiness-heading" className="text-sm font-bold uppercase tracking-wide text-gray-700">
+              Source readiness gate
+            </h2>
+          </div>
+          <p className="mt-1 max-w-3xl text-sm leading-relaxed text-gray-600">
+            Current public-source coverage for every jurisdiction in the expansion gate. A jurisdiction is ready only when
+            catalog accounting is {formatPercent(report.target.catalogAccountingRate * 100)}, official-source response is at least {formatPercent(report.target.officialResponseRate * 100)},
+            and every withheld row has a documented reason.
+          </p>
+        </div>
+        <div className="grid shrink-0 grid-cols-2 gap-2 text-center sm:min-w-[190px]">
+          <div className="rounded-lg border border-green-200 bg-green-50 px-3 py-2">
+            <div className="text-xl font-bold text-green-800">{readyCount}</div>
+            <div className="text-xs text-green-700">Ready</div>
+          </div>
+          <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-2">
+            <div className="text-xl font-bold text-red-800">{blockedCount}</div>
+            <div className="text-xs text-red-700">Blocked</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[980px] text-left text-sm">
+            <caption className="sr-only">Source readiness by current jurisdiction</caption>
+            <thead className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
+              <tr>
+                <th scope="col" className="px-4 py-3 font-semibold">Jurisdiction</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Total</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Selectable</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Withheld</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Coverage</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Source availability</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Gap categories</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Gate</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {report.jurisdictions.map((row) => {
+                const gaps = row.gapBreakdown.filter((gap) => gap.rows > 0);
+                return (
+                  <tr key={row.jurisdiction} className="align-top">
+                    <th scope="row" className="whitespace-nowrap px-4 py-3 font-semibold text-gray-900">{row.jurisdiction}</th>
+                    <td className="px-4 py-3 text-gray-700">{row.catalogRows.toLocaleString()}</td>
+                    <td className="px-4 py-3 text-gray-700">{row.selectableRows.toLocaleString()}</td>
+                    <td className="px-4 py-3 text-gray-700">{row.withheldRows.toLocaleString()}</td>
+                    <td className="whitespace-nowrap px-4 py-3 font-semibold text-gray-900">
+                      {formatPercent(row.coveragePercentage)}
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="font-medium text-gray-800">{sourceAvailabilityLabel(row.officialSourceAvailability)}</div>
+                      <div className="text-xs text-gray-500">{formatPercent(row.officialResponsePercentage)} response</div>
+                    </td>
+                    <td className="max-w-[280px] px-4 py-3">
+                      {gaps.length === 0 ? (
+                        <span className="text-gray-500">None</span>
+                      ) : (
+                        <div className="flex flex-wrap gap-1.5">
+                          {gaps.map((gap) => (
+                            <span key={gap.kind} className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700">
+                              {sourceGapLabel(gap.kind)}: {gap.rows.toLocaleString()}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </td>
+                    <td className="px-4 py-3"><SourceGateBadge status={row.status} /></td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="rounded-xl border border-indigo-200 bg-indigo-50/60">
+        <div className="border-b border-indigo-100 px-4 py-4 sm:px-5">
+          <h3 className="font-semibold text-gray-900">Ranked next-highest-value targets</h3>
+          <p className="mt-1 text-sm text-gray-600">
+            Prioritized by withheld rows and source-access blockers. Each target includes the next documented action; these are
+            operational steps, not a substitute for legal review.
+          </p>
+        </div>
+        <ol className="divide-y divide-indigo-100">
+          {report.nextHighestValueCoverageTargets.map((target, index) => (
+            <li key={`${target.jurisdiction}-${target.kind}`} className="px-4 py-4 sm:px-5">
+              <div className="flex items-start gap-3">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-xs font-bold text-white">
+                  {index + 1}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <h4 className="font-semibold text-gray-900">{target.jurisdiction}</h4>
+                    <span className="text-xs text-gray-600">
+                      {target.rows.toLocaleString()} withheld · {formatPercent(target.coveragePercentage)} coverage · {sourceGapLabel(target.kind)}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm text-gray-700">{target.reason}</p>
+                  <p className="mt-2 text-sm text-indigo-900">
+                    <span className="font-semibold">Next step:</span> {target.nextStep}
+                  </p>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  );
 }
 
 // Server-side API helpers — all reads/writes go through the server so the
@@ -634,6 +1121,9 @@ export default function AdminAttorneyReview() {
   const [checking, setChecking] = useState(true);
   const [loadingStatus, setLoadingStatus] = useState(false);
   const [itemStates, setItemStates] = useState<StoredState>({});
+  const [loadingReadiness, setLoadingReadiness] = useState(false);
+  const [sourceReadiness, setSourceReadiness] = useState<SourceReadinessReport | null>(null);
+  const [sourceReadinessError, setSourceReadinessError] = useState("");
   // Track in-flight saves to show a saving indicator
   const [saving, setSaving] = useState(false);
   // Show a banner when a save fails so the user isn't misled
@@ -642,12 +1132,35 @@ export default function AdminAttorneyReview() {
   // Load server-side status once authenticated.
   async function loadFromServer(key: string) {
     setLoadingStatus(true);
-    try {
-      const fetched = await fetchAllStatus(key);
-      setItemStates(fetched);
-    } finally {
-      setLoadingStatus(false);
+    setLoadingReadiness(true);
+    setSourceReadinessError("");
+
+    const [statusResult, readinessResult] = await Promise.allSettled([
+      fetchAllStatus(key),
+      fetchSourceReadiness(key),
+    ]);
+
+    if (statusResult.status === "fulfilled") {
+      setItemStates(statusResult.value);
     }
+
+    if (readinessResult.status === "fulfilled") {
+      setSourceReadiness(readinessResult.value);
+    } else {
+      setSourceReadiness(null);
+      const errorMessage =
+        readinessResult.reason instanceof Error
+          ? readinessResult.reason.message
+          : "The source readiness report is unavailable.";
+      setSourceReadinessError(errorMessage);
+      if (errorMessage === "Your admin access is no longer valid.") {
+        sessionStorage.removeItem("adminKey");
+        setAdminKey("");
+        setAuthed(false);
+      }
+    }
+    setLoadingStatus(false);
+    setLoadingReadiness(false);
   }
 
   useEffect(() => {
@@ -825,12 +1338,54 @@ export default function AdminAttorneyReview() {
           </div>
         )}
 
-        {/* Launch readiness bar */}
+        {/* Source readiness report — fail closed if the authenticated report is unavailable. */}
+        {loadingReadiness ? (
+          <section
+            className="rounded-xl border border-indigo-200 bg-indigo-50/60 px-4 py-5"
+            aria-label="Source readiness"
+            aria-busy="true"
+          >
+            <p className="text-sm font-semibold text-indigo-900">Loading source readiness report…</p>
+            <p className="mt-1 text-xs text-indigo-800">The expansion gate will remain unavailable until the complete report loads.</p>
+          </section>
+        ) : sourceReadiness ? (
+          <SourceReadinessSection report={sourceReadiness} />
+        ) : (
+          <section
+            className="rounded-xl border-2 border-red-300 bg-red-50 px-4 py-5"
+            role="alert"
+            data-testid="source-readiness-unavailable"
+            aria-labelledby="source-readiness-unavailable-heading"
+          >
+            <div className="flex items-start gap-3">
+              <span className="mt-0.5 shrink-0 text-lg font-bold text-red-700" aria-hidden="true">!</span>
+              <div>
+                <h2 id="source-readiness-unavailable-heading" className="text-sm font-bold text-red-900">
+                  Source readiness unavailable — expansion gate blocked
+                </h2>
+                <p className="mt-1 text-sm leading-relaxed text-red-800">
+                  The complete source-readiness report could not be loaded. No jurisdiction should be treated as ready until
+                  the report is available again.
+                </p>
+                <p className="mt-2 text-xs text-red-700">{sourceReadinessError}</p>
+                <button
+                  type="button"
+                  onClick={() => void loadFromServer(adminKey)}
+                  className="mt-3 rounded-lg border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-800 hover:bg-red-100"
+                >
+                  Try again
+                </button>
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Attorney checklist launch gate — separate from the source expansion gate above. */}
         <div className={`rounded-xl border-2 p-4 sm:p-5 ${allHighCleared ? "border-green-300 bg-green-50" : "border-red-200 bg-red-50"}`}>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3 gap-2">
             <div className="min-w-0">
               <h2 className="font-bold text-gray-900 text-sm sm:text-base">
-                {allHighCleared ? "✅ HIGH-Risk Items Cleared — Ready for Launch Gate" : "🔴 Launch Blocked — HIGH-Risk Items Pending"}
+                {allHighCleared ? "✅ Attorney checklist cleared — ready for attorney review gate" : "🔴 Attorney review gate blocked — HIGH-risk items pending"}
               </h2>
               <p className="text-sm text-gray-600 mt-0.5">All 9 HIGH-risk items must be cleared before the site goes public.</p>
             </div>

@@ -30,6 +30,10 @@ interface CheckResult {
   note?: string;
 }
 
+type DiversionProgramWithUrl = (typeof diversionPrograms)[number] & {
+  contact: { url: string };
+};
+
 async function checkUrl(
   url: string
 ): Promise<{ method: "HEAD" | "GET"; status: number | "TIMEOUT" | "ERROR"; ok: boolean; note?: string }> {
@@ -81,7 +85,18 @@ async function checkUrl(
 }
 
 async function main() {
-  const withUrl = diversionPrograms.filter((p) => p.contact?.url);
+  const withUrl = diversionPrograms.filter(
+    (program): program is DiversionProgramWithUrl => {
+      const contact = program.contact;
+      return (
+        typeof contact === "object" &&
+        contact !== null &&
+        "url" in contact &&
+        typeof contact.url === "string" &&
+        contact.url.length > 0
+      );
+    },
+  );
 
   console.log(`\nOpenDefender – Diversion Program Link Checker`);
   console.log(`Checking ${withUrl.length} program URLs…\n`);
@@ -90,7 +105,7 @@ async function main() {
   let broken = 0;
 
   for (const program of withUrl) {
-    const url = program.contact!.url!;
+    const url = program.contact.url;
     const { method, status, ok, note } = await checkUrl(url);
 
     const result: CheckResult = {

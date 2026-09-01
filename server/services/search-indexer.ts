@@ -1603,7 +1603,9 @@ export function search(query: SearchQuery): SearchResponse {
     glossary: 3,
     court: 2,
     mock_qa: 2,
-    charge: chargesOnlyFilter ? 50 : 3,
+    charge: chargesOnlyFilter
+      ? Math.max(50, Number.isFinite(query.limit ?? 50) ? query.limit ?? 50 : 50)
+      : 3,
   };
 
   // Group from ALL scored results so each category gets its best matches
@@ -1640,6 +1642,13 @@ export function search(query: SearchQuery): SearchResponse {
     ...mainTypes.flatMap(t => groupedResults[t]),
     ...pinnedTypes.flatMap(t => groupedResults[t]),
   ];
+  // Mixed-content searches intentionally return the relevance-grouped set rather
+  // than expanding every group to fill a larger requested limit. The API route
+  // applies the same upper bound defensively; keeping it here also makes the
+  // shared service contract consistent for its other callers.
+  const responseResults = query.limit === undefined || !Number.isFinite(query.limit)
+    ? flatResults
+    : flatResults.slice(0, Math.max(0, query.limit));
 
   const suggestions: string[] = [];
   if (results.length === 0) {
@@ -1655,7 +1664,7 @@ export function search(query: SearchQuery): SearchResponse {
 
   return {
     query: query.query,
-    results: flatResults,
+    results: responseResults,
     totalCount: results.length,
     groupedResults,
     suggestions: suggestions.slice(0, 5),

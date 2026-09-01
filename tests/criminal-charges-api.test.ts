@@ -1,4 +1,7 @@
 import { describe, it, expect, beforeAll } from 'vitest';
+import { CALIFORNIA_CANONICAL_RECORDS } from '../shared/california-authority';
+import { openApiSpec } from '../server/openapi';
+import { SEARCH_RESULT_LIMITS } from '../server/config/search-result-limits';
 
 const BASE_URL = 'http://localhost:5000';
 
@@ -198,6 +201,47 @@ interface V1SearchResponse {
   meta: { totalResults: number; queryTime: number; suggestions: string[] };
 }
 
+describe('GET /api/v1/search — result-limit documentation contract', () => {
+  it('documents the charge-only and mixed-content defaults and caps', () => {
+    const limitParameter = openApiSpec.paths['/search'].get.parameters.find(
+      (parameter) => parameter.name === 'limit',
+    );
+
+    expect(limitParameter).toBeDefined();
+    expect(limitParameter?.description).toMatch(
+      /Charge-only searches \(types=charge\) default to 50 results and allow up to 500 results\./,
+    );
+    expect(limitParameter?.description).toMatch(
+      /Mixed-content searches default to 20 results and accept a requested limit up to 100, but the shared search service returns only its relevance-grouped result set, which may be smaller than requested\./,
+    );
+    expect(limitParameter?.schema).toMatchObject({
+      type: 'integer',
+      minimum: 1,
+      maximum: 500,
+      default: 20,
+    });
+  });
+});
+
+describe('GET /api/v1/search — mixed-content result-set contract', () => {
+  it('does not expand the relevance-grouped result set when limit exceeds the default', async () => {
+    if (!serverAvailable) return;
+
+    const defaultRes = await fetch(`${BASE_URL}/api/v1/search?q=court`);
+    expect(defaultRes.ok).toBe(true);
+    const defaultPayload = await defaultRes.json() as V1SearchResponse;
+
+    const expandedRes = await fetch(`${BASE_URL}/api/v1/search?q=court&limit=100`);
+    expect(expandedRes.ok).toBe(true);
+    const expandedPayload = await expandedRes.json() as V1SearchResponse;
+
+    expect(expandedPayload.meta.totalResults).toBeGreaterThan(SEARCH_RESULT_LIMITS.mixedContent.default);
+    expect(expandedPayload.results.length).toBeLessThan(SEARCH_RESULT_LIMITS.mixedContent.max);
+    expect(expandedPayload.results.map((result) => result.document.id))
+      .toEqual(defaultPayload.results.map((result) => result.document.id));
+  });
+});
+
 let v1Response: V1SearchResponse;
 
 beforeAll(async () => {
@@ -296,6 +340,29 @@ describe('GET /api/v1/search — runtime New York eligibility contract', () => {
     expect(retained.ok).toBe(true);
     const retainedPayload = await retained.json() as V1SearchResponse;
     expect(retainedPayload.results.some((result) => result.document.id === 'charge-ny-grand-theft-in-the-first-degree')).toBe(true);
+  });
+});
+
+describe('GET /api/v1/search — California charge completeness contract', () => {
+  it('returns every current California charge when the requested limit covers the catalog', async () => {
+    if (!serverAvailable || !californiaAuthorityAvailable) return;
+
+    const res = await fetch(
+      `${BASE_URL}/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500`,
+    );
+    expect(res.ok).toBe(true);
+    const payload = await res.json() as V1SearchResponse;
+    const returnedIds = payload.results
+      .map((result) => result.document.id)
+      .filter((id) => id.startsWith('charge-'))
+      .map((id) => id.replace(/^charge-/, ''));
+    const expectedIds = CALIFORNIA_CANONICAL_RECORDS
+      .filter((record) => record.selectable)
+      .map((record) => record.canonicalId);
+
+    expect(returnedIds).toHaveLength(expectedIds.length);
+    expect(new Set(returnedIds)).toEqual(new Set(expectedIds));
+    expect(payload.results.every((result) => result.document.id.startsWith('charge-ca-'))).toBe(true);
   });
 });
 

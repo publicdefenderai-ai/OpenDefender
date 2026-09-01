@@ -1,11 +1,14 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { criminalCharges } from "@shared/criminal-charges";
-import type { AuthorityCatalogRecord } from "../services/authority-source-database";
+import { CHARGE_CITATIONS } from "@shared/criminal-charge-citations";
 import {
   SOUTH_CAROLINA_MANIFEST_SOURCE,
+  parseSouthCarolinaCitation,
   validateSouthCarolinaManifestRecord,
   type SouthCarolinaAuthorityManifest,
+  type SouthCarolinaManifestAudit,
+  type SouthCarolinaManifestRecord,
 } from "./south-carolina-source-database-seed";
 
 export const SOUTH_CAROLINA_MANIFEST_PATH = resolve(
@@ -20,7 +23,8 @@ export function loadSouthCarolinaAuthorityManifest(
     jurisdiction?: string;
     generatedAt?: string;
     source?: string;
-    catalogRecords?: AuthorityCatalogRecord[];
+    catalogRecords?: SouthCarolinaManifestRecord[];
+    audit?: SouthCarolinaManifestAudit;
   };
   if (
     raw.jurisdiction !== "SC" ||
@@ -38,6 +42,15 @@ export function loadSouthCarolinaAuthorityManifest(
     ids.size !== expectedIds.length ||
     expectedIds.some((id) => !ids.has(id))
   ) throw new Error("The committed South Carolina manifest must contain exactly one record for every current South Carolina catalog row");
+  if (
+    !raw.audit ||
+    raw.audit.schemaVersion !== 1 ||
+    raw.audit.catalogRowCount !== raw.catalogRecords.length ||
+    raw.audit.parsedReferenceCount !== raw.catalogRecords.reduce(
+      (count, record) => count + (record.sourceAudit?.references?.length ?? 0),
+      0,
+    )
+  ) throw new Error("The committed South Carolina manifest is missing its complete source audit");
 
   const dispositions = new Set(["retain", "exact_alias_rename", "require_exact_reselection", "remove"]);
   const catalogRecords = raw.catalogRecords.map((record) => ({
@@ -48,7 +61,7 @@ export function loadSouthCarolinaAuthorityManifest(
         retrievedAt: provision.retrievedAt ? new Date(provision.retrievedAt) : null,
       }))
       : [],
-  }));
+  })) as SouthCarolinaManifestRecord[];
   for (const record of catalogRecords) {
     if (
       typeof record.catalogLabel !== "string" ||
@@ -58,6 +71,16 @@ export function loadSouthCarolinaAuthorityManifest(
       !dispositions.has(record.disposition) ||
       !Array.isArray(record.provisions)
     ) throw new Error(`The committed South Carolina manifest has an invalid record for ${record.chargeId}`);
+    const references = record.sourceAudit?.references;
+    if (
+      !record.sourceAudit ||
+      !Array.isArray(references) ||
+      references.length !== parseSouthCarolinaCitation(
+        CHARGE_CITATIONS[record.chargeId]?.citation ?? "",
+      ).length ||
+      !Array.isArray(record.auditFindings) ||
+      !Array.isArray(record.dispositionReasons)
+    ) throw new Error(`The committed South Carolina manifest has an incomplete source audit for ${record.chargeId}`);
     if (
       (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
       record.provisions.length === 0
@@ -75,5 +98,6 @@ export function loadSouthCarolinaAuthorityManifest(
     generatedAt,
     source: SOUTH_CAROLINA_MANIFEST_SOURCE,
     catalogRecords,
+    audit: raw.audit,
   };
 }

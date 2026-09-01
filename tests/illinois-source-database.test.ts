@@ -12,10 +12,18 @@ import {
   buildIllinoisSourceUrl,
   parseIllinoisCitation,
   validateIllinoisManifestRecord,
+  type IllinoisSourceAudit,
   type IllinoisSourceDocument,
 } from "../server/data/illinois-source-database-seed";
 import { loadIllinoisAuthorityManifest } from "../server/data/illinois-manifest-loader";
-import { extractIllinoisDocument } from "../scripts/data-review/import-illinois-source-database";
+import {
+  extractIllinoisDocument,
+  getIllinoisFreshnessOutcome,
+  getIllinoisRefreshExitCode,
+  inspectIllinoisDocument,
+  refreshIllinoisManifest,
+  type IllinoisManifestRefreshSummary,
+} from "../scripts/data-review/import-illinois-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
@@ -35,6 +43,132 @@ function document(section: string, title: string, subdivision?: string): Illinoi
 }
 
 describe("Illinois authority manifest", () => {
+  it("does not treat check-only's intentional no-write state as a failure", () => {
+    const summary = {
+      preservedManifest: true,
+      refreshBlocked: false,
+      freshness: {
+        outcomeCounts: {
+          changed: 0,
+          unavailable: 0,
+          incomplete: 0,
+          still_current: 1,
+        },
+      },
+    } as IllinoisManifestRefreshSummary;
+    expect(getIllinoisRefreshExitCode(summary, true)).toBe(0);
+    expect(getIllinoisRefreshExitCode(summary, false)).toBe(1);
+  });
+
+  it("classifies source hashes and response contracts deterministically", () => {
+    const base: IllinoisReferenceAudit = {
+      chapter: "720",
+      act: "5",
+      section: "12-3",
+      subdivision: null,
+      citation: "720 ILCS 5/12-3",
+      officialUrl: buildIllinoisSourceUrl("720", "5", "12-3"),
+      fetchStatus: "success",
+      fetchError: null,
+      retrievedAt: importedAt.toISOString(),
+      sectionExtractionStatus: "complete",
+      officialTitle: "Battery",
+      sourceEvidence: "(Source: P.A. 99-1, eff. 1-1-16.)",
+      effectiveDateStart: "2016-01-01",
+      contentEvidence: true,
+      contentHash: "same",
+      findings: [],
+    };
+
+    expect(getIllinoisFreshnessOutcome(base, { ...base })).toBe("still_current");
+    expect(getIllinoisFreshnessOutcome(
+      { ...base, contentHash: "new" },
+      base,
+    )).toBe("changed");
+    expect(getIllinoisFreshnessOutcome(
+      base,
+      { ...base, contentHash: null },
+    )).toBe("changed");
+    expect(getIllinoisFreshnessOutcome(
+      { ...base, fetchStatus: "transport_failure", contentHash: null },
+      base,
+    )).toBe("unavailable");
+    expect(getIllinoisFreshnessOutcome(
+      { ...base, sectionExtractionStatus: "incomplete", contentHash: null },
+      base,
+    )).toBe("incomplete");
+  });
+
+  it("preserves the committed manifest during an ILGA transport outage", async () => {
+    const directory = mkdtempSync(join(tmpdir(), "illinois-refresh-"));
+    const outputPath = join(directory, "il-source-manifest.json");
+    const previous = readFileSync("scripts/data-review/output/il-source-manifest.json", "utf8");
+    writeFileSync(outputPath, previous);
+
+    try {
+      const summary = await refreshIllinoisManifest({
+        outputPath,
+        fetchImpl: (async () => {
+          throw new Error("simulated ILGA outage");
+        }) as typeof fetch,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+        importedAt,
+      });
+
+      expect(summary).toMatchObject({
+        wroteManifest: false,
+        preservedManifest: true,
+        unavailableSections: expect.any(Number),
+      });
+      expect(summary.unavailableSections).toBeGreaterThan(0);
+      expect(readFileSync(outputPath, "utf8")).toBe(previous);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
+  it("preserves the prior manifest and reports changed hashes", async () => {
+    const directory = mkdtempSync(join(tmpdir(), "illinois-refresh-"));
+    const outputPath = join(directory, "il-source-manifest.json");
+    const previous = readFileSync("scripts/data-review/output/il-source-manifest.json", "utf8");
+    writeFileSync(outputPath, previous);
+    const fetchImpl = (async (url: string) => {
+      const section = url.match(/K(.+)\.htm$/)?.[1] ?? "unknown";
+      const subdivisionMarkers = [
+        ...Array.from({ length: 26 }, (_, index) => `(${String.fromCharCode(97 + index)})`),
+        ...Array.from({ length: 20 }, (_, index) => `(${index + 1})`),
+      ].join(" ");
+      return new Response(
+        `<html><body><code>Sec. ${section}. Current section.</code><br>` +
+        `<code>${subdivisionMarkers} Updated official text for ${section}.</code><br>` +
+        "<code>(Source: P.A. 99-1, eff. 1-1-16.)</code>" +
+        "</body></html>",
+      );
+    }) as typeof fetch;
+
+    try {
+      const summary = await refreshIllinoisManifest({
+        outputPath,
+        fetchImpl,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+        importedAt,
+      });
+
+      expect(summary.wroteManifest).toBe(false);
+      expect(summary.preservedManifest).toBe(true);
+      expect(summary.refreshBlocked).toBe(true);
+      expect(summary.changedSections).toBeGreaterThan(0);
+      expect(summary.freshness.outcomeCounts).toMatchObject({
+        changed: summary.changedSections,
+      });
+      expect(readFileSync(outputPath, "utf8")).toBe(previous);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
   it("preserves every catalog row and publishes only exact current ILGA matches", () => {
     const manifest = loadIllinoisAuthorityManifest();
     const seed = buildIllinoisSourceDatabaseSeed(manifest);
@@ -43,15 +177,100 @@ describe("Illinois authority manifest", () => {
     expect(ilCount).toBe(116);
     expect(manifest.catalogRecords).toHaveLength(ilCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ilCount);
-    expect(seed.sources).toHaveLength(13);
-    expect(seed.snapshots).toHaveLength(13);
-    expect(seed.links).toHaveLength(13);
-    expect(seed.selectableChargeIds).toHaveLength(13);
+    expect(seed.sources).toHaveLength(21);
+    expect(seed.snapshots).toHaveLength(22);
+    expect(seed.links).toHaveLength(22);
+    expect(seed.selectableChargeIds).toHaveLength(22);
     expect(seed.selectableChargeIds).toContain("il-aggravated-assault");
-    expect(seed.selectableChargeIds).not.toContain("il-murder-in-the-first-degree");
+    expect(seed.selectableChargeIds).toContain("il-possession-of-drug-paraphernalia");
+    expect(seed.selectableChargeIds).toContain("il-money-laundering");
     expect(seed.selectableChargeIds).not.toContain("il-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(103);
+      record.disposition === "require_exact_reselection")).toHaveLength(94);
+    expect(manifest.audit).toMatchObject({
+      schemaVersion: 1,
+      catalogRowCount: 116,
+      parsedReferenceCount: 119,
+      successfulOfficialRetrievals: 119,
+      completeSectionExtractions: 112,
+    });
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "il-murder-in-the-first-degree")).toMatchObject({
+      disposition: "exact_alias_rename",
+      canonicalTitle: "First degree murder",
+    });
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "il-commercial-burglary")?.disposition)
+      .toBe("require_exact_reselection");
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "il-possession-of-drug-paraphernalia")).toMatchObject({
+      disposition: "retain",
+      catalogCode: "600/3.5",
+      canonicalTitle: "Possession of drug paraphernalia",
+    });
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "il-money-laundering")).toMatchObject({
+      disposition: "retain",
+      catalogCode: "5/29B-1",
+      canonicalTitle: "Money laundering",
+    });
+  });
+
+  it("records each source outcome and rejects a manifest with missing audit metadata", () => {
+    const manifest = loadIllinoisAuthorityManifest();
+    const withheld = manifest.catalogRecords.find((record) =>
+      record.chargeId === "il-public-intoxication")!;
+    expect(withheld.sourceAudit.references[0]).toMatchObject({
+      fetchStatus: "success",
+      sectionExtractionStatus: "section_not_found",
+      officialTitle: null,
+    });
+    expect(withheld.auditFindings.some((finding) => finding.code === "section_not_found")).toBe(true);
+
+    const raw = JSON.parse(readFileSync(
+      "scripts/data-review/output/il-source-manifest.json",
+      "utf8",
+    ));
+    delete raw.audit;
+    const directory = mkdtempSync(join(tmpdir(), "illinois-manifest-audit-"));
+    const manifestPath = join(directory, "manifest.json");
+    writeFileSync(manifestPath, JSON.stringify(raw));
+    try {
+      expect(() => loadIllinoisAuthorityManifest(manifestPath)).toThrow(
+        "missing its complete source audit",
+      );
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
+  it("fails closed when a selectable row carries a mechanical or structural finding", () => {
+    const raw = JSON.parse(readFileSync(
+      "scripts/data-review/output/il-source-manifest.json",
+      "utf8",
+    ));
+    const record = raw.catalogRecords.find(
+      (candidate: { chargeId: string }) => candidate.chargeId === "il-aggravated-assault",
+    );
+    const adverse = {
+      code: "catalog_code_mismatch",
+      classification: "structural",
+      message: "Injected adverse audit finding",
+      reference: null,
+    };
+    record.sourceAudit.rowFindings.push(adverse);
+    record.sourceAudit.findings.push(adverse);
+    record.auditFindings.push(adverse);
+    const directory = mkdtempSync(join(tmpdir(), "illinois-manifest-adverse-"));
+    const manifestPath = join(directory, "manifest.json");
+    writeFileSync(manifestPath, JSON.stringify(raw));
+    try {
+      expect(() => loadIllinoisAuthorityManifest(manifestPath)).toThrow(
+        "has adverse audit findings",
+      );
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
   });
 
   it("parses exact ILCS identities and constructs per-section ILGA URLs", () => {
@@ -98,6 +317,34 @@ describe("Illinois authority manifest", () => {
       .toBeNull();
   });
 
+  it("classifies incomplete official text separately from an absent section", () => {
+    const url = buildIllinoisSourceUrl("720", "5", "12-3");
+    const incomplete = inspectIllinoisDocument(
+      "<html><body><code>Sec. 12-3. Battery.</code></body></html>",
+      "720",
+      "5",
+      "12-3",
+      url,
+      importedAt,
+    );
+    expect(incomplete.document).toBeNull();
+    expect(incomplete.sectionExtractionStatus).toBe("incomplete");
+    expect(incomplete.findings.map((finding) => finding.code)).toEqual(
+      expect.arrayContaining(["content_missing", "source_evidence_missing"]),
+    );
+
+    const absent = inspectIllinoisDocument(
+      "<html><body><code>Sec. 12-99. Missing.</code></body></html>",
+      "720",
+      "5",
+      "12-3",
+      url,
+      importedAt,
+    );
+    expect(absent.sectionExtractionStatus).toBe("section_not_found");
+    expect(absent.findings.map((finding) => finding.code)).toContain("section_not_found");
+  });
+
   it("stores official text hashes and withholds mismatched or federal records", () => {
     const charge = criminalCharges.find((candidate) => candidate.id === "il-aggravated-assault")!;
     const text = "(720 ILCS 5/12-2)\nSec. 12-2. Aggravated assault.\n(a) Complete official text.";
@@ -125,6 +372,66 @@ describe("Illinois authority manifest", () => {
     const federalRecord = buildIllinoisManifestRecord(federal, [], importedAt);
     expect(federalRecord.disposition).toBe("require_exact_reselection");
     expect(federalRecord.provisions).toEqual([]);
+  });
+
+  it("does not leak a shared section finding between a safe alias and a withheld row", () => {
+    const aliasCharge = criminalCharges.find((candidate) =>
+      candidate.id === "il-involuntary-manslaughter")!;
+    const withheldCharge = criminalCharges.find((candidate) =>
+      candidate.id === "il-vehicular-homicide")!;
+    const sourceFinding = {
+      code: "official_source_verified" as const,
+      classification: "success" as const,
+      message: "Official Illinois source was retrieved with complete section and currentness evidence.",
+      reference: "720 ILCS 5/9-3",
+    };
+    const sharedAudit: IllinoisSourceAudit = {
+      citation: "720 ILCS 5/9-3",
+      references: [{
+        chapter: "720",
+        act: "5",
+        section: "9-3",
+        subdivision: null,
+        citation: "720 ILCS 5/9-3",
+        officialUrl: buildIllinoisSourceUrl("720", "5", "9-3"),
+        fetchStatus: "success",
+        fetchError: null,
+        retrievedAt: importedAt.toISOString(),
+        sectionExtractionStatus: "complete",
+        officialTitle: "Involuntary Manslaughter and Reckless Homicide",
+        sourceEvidence: "(Source: P.A. 99-1, eff. 1-1-16.)",
+        effectiveDateStart: "2016-01-01",
+        contentEvidence: true,
+        contentHash: null,
+        findings: [sourceFinding],
+      }],
+      rowFindings: [],
+      findings: [sourceFinding],
+    };
+    const sourceDocument = document("9-3", "Involuntary Manslaughter and Reckless Homicide");
+    const alias = buildIllinoisManifestRecord(
+      aliasCharge,
+      [sourceDocument],
+      importedAt,
+      undefined,
+      sharedAudit,
+    );
+    const withheld = buildIllinoisManifestRecord(
+      withheldCharge,
+      [sourceDocument],
+      importedAt,
+      undefined,
+      sharedAudit,
+    );
+
+    expect(alias.disposition).toBe("exact_alias_rename");
+    expect(alias.auditFindings.some((finding) =>
+      finding.classification === "structural")).toBe(false);
+    expect(withheld.disposition).toBe("require_exact_reselection");
+    expect(withheld.auditFindings.some((finding) =>
+      finding.code === "official_title_mismatch" &&
+      finding.classification === "structural")).toBe(true);
+    expect(sharedAudit.findings).toEqual([sourceFinding]);
   });
 
   it("rejects a tampered selectable manifest record at load time", () => {

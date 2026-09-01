@@ -1,4 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
+import {
+  CALIFORNIA_CANONICAL_RECORDS,
+  CALIFORNIA_LEGACY_DISPOSITIONS,
+} from "../../shared/california-authority";
 
 const MOBILE_LANGUAGES = ["en", "es", "zh"] as const;
 const PHONE_VIEWPORTS = [
@@ -151,6 +155,112 @@ test.describe("intent navigation and accessibility", () => {
     await combobox.press("ArrowDown");
     await expect(combobox).toHaveAttribute("aria-activedescendant", /search-result-\d+/);
     await expect(combobox).toBeFocused();
+  });
+
+  test("release search keeps withheld authority charges out of results", async ({ page }) => {
+    test.skip(!process.env.RELEASE_CHECK_PORT, "Release-only authority eligibility regression");
+
+    const withheldResponse = await page.request.get(
+      "/api/site-search?q=minor&types=charge&limit=50",
+    );
+    expect(withheldResponse.ok()).toBe(true);
+    const withheldPayload = await withheldResponse.json();
+    expect(
+      withheldPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ny-minor-in-possession",
+      ),
+    ).toBe(false);
+
+    const retainedResponse = await page.request.get(
+      "/api/site-search?q=grand%20larceny&types=charge&limit=50",
+    );
+    expect(retainedResponse.ok()).toBe(true);
+    const retainedPayload = await retainedResponse.json();
+    expect(
+      retainedPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ny-grand-theft-in-the-first-degree",
+      ),
+    ).toBe(true);
+
+    const californiaResponse = await page.request.get(
+      "/api/site-search?q=grand%20theft&types=charge&limit=50",
+    );
+    expect(californiaResponse.ok()).toBe(true);
+    const californiaPayload = await californiaResponse.json();
+    expect(
+      californiaPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ca-grand-theft-487-a",
+      ),
+    ).toBe(true);
+    expect(
+      californiaPayload.results.some(
+        (result: { document?: { id?: string } }) =>
+          result.document?.id === "charge-ca-grand-theft-in-the-first-degree",
+      ),
+    ).toBe(false);
+
+    const currentCaliforniaIds = CALIFORNIA_CANONICAL_RECORDS
+      .filter((record) => record.selectable)
+      .map((record) => record.canonicalId);
+    const currentCaliforniaIdSet = new Set(currentCaliforniaIds);
+    const withheldCaliforniaIds = CALIFORNIA_LEGACY_DISPOSITIONS
+      .map((entry) => entry.legacyId)
+      .filter((id) => !currentCaliforniaIdSet.has(id));
+
+    const allCaliforniaResponse = await page.request.get(
+      "/api/site-search?q=CA&types=charge&jurisdiction=CA&limit=500",
+    );
+    expect(allCaliforniaResponse.ok()).toBe(true);
+    const allCaliforniaPayload = await allCaliforniaResponse.json() as {
+      results: Array<{ document?: { id?: string } }>;
+    };
+    const searchableCaliforniaIds = new Set(
+      allCaliforniaPayload.results
+        .map((result) => result.document?.id)
+        .filter((id): id is string => typeof id === "string")
+        .map((id) => id.replace(/^charge-/, "")),
+    );
+
+    const missingCurrentIds = currentCaliforniaIds
+      .filter((id) => !searchableCaliforniaIds.has(id));
+    expect(
+      missingCurrentIds,
+      "Current California authority IDs missing from charge search",
+    ).toEqual([]);
+
+    const leakedWithheldIds = withheldCaliforniaIds
+      .filter((id) => searchableCaliforniaIds.has(id));
+    expect(
+      leakedWithheldIds,
+      "Withheld California authority IDs returned by charge search",
+    ).toEqual([]);
+
+    const publicChargeSearchResponse = await page.request.get(
+      "/api/v1/search?q=CA&types=charge&jurisdiction=CA&limit=500",
+    );
+    expect(publicChargeSearchResponse.ok()).toBe(true);
+    const publicChargeSearchPayload = await publicChargeSearchResponse.json() as {
+      results: Array<{ document?: { id?: string; jurisdiction?: string } }>;
+    };
+    const publicSearchCaliforniaIds = new Set(
+      publicChargeSearchPayload.results
+        .map((result) => result.document?.id)
+        .filter((id): id is string => typeof id === "string")
+        .map((id) => id.replace(/^charge-/, "")),
+    );
+    expect(
+      publicSearchCaliforniaIds,
+      "Public v1 charge search did not return every current California authority ID",
+    ).toEqual(currentCaliforniaIdSet);
+    expect(
+      publicChargeSearchPayload.results.every(
+        (result) => result.document?.jurisdiction === "CA",
+      ),
+      "Public v1 charge search returned a result outside the requested jurisdiction",
+    ).toBe(true);
   });
 
   test("mobile resource tools render their initial states without overflow", async ({ page }) => {

@@ -5,6 +5,7 @@ import {
   chargeCategories,
   getChargeById,
   getVerifiedCitation,
+  SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS,
   normalizeChargeId,
   NY_THIRD_DEGREE_POSSESSION_ID,
 } from '../shared/criminal-charges';
@@ -1314,7 +1315,10 @@ describe('getVerifiedCitation guard — chargeClassifications code field', () =>
 
   it('every CHARGE_CITATIONS entry with confidence=high produces a code field in chargeClassification', () => {
     const highConfidenceIds = Object.entries(CHARGE_CITATIONS)
-      .filter(([, rec]) => rec.confidence === 'high')
+      .filter(([id, rec]) =>
+        rec.confidence === 'high' &&
+        !(id.startsWith('sc-') && !SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(id)),
+      )
       .map(([id]) => id);
 
     // There must be at least some high-confidence entries for this test to be meaningful.

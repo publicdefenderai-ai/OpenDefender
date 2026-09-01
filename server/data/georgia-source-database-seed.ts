@@ -12,8 +12,48 @@ import {
 export const GEORGIA_SOURCE_POLICY = "official_georgia_code_text_required";
 export const GEORGIA_SOURCE_PUBLISHER = "Georgia General Assembly";
 export const GEORGIA_MANIFEST_SOURCE =
-  "Georgia General Assembly: official codified section text unavailable via public API";
-export const GEORGIA_SOURCE_BASE = "https://www.legis.ga.gov";
+  "Georgia General Assembly: official section text endpoint not publicly available";
+export const GEORGIA_SOURCE_BASE =
+  "https://www.lexisnexis.com/hottopics/gacode/";
+export const GEORGIA_PUBLIC_ACCESS_CONTRACT = {
+  endpoint: GEORGIA_SOURCE_BASE,
+  officialSiteApiBase: "https://www.legis.ga.gov/api/",
+  titleMetadataEndpoint: "https://www.legis.ga.gov/api/georgia-code/titles",
+  sectionLookupEndpoint: "https://advance.lexis.com/container/",
+  publisher:
+    "Georgia Code Revision Commission on behalf of the Georgia General Assembly",
+  deliveryProvider: "LexisNexis",
+  titleMetadataResponse:
+    "Official title identifiers and names only; no codified section text is returned",
+  sectionTextEndpoint: null,
+  requiresSiteIssuedBearerToken: true,
+  sectionIdentityField: "pddocid / urn:contentItem",
+  sectionPathField: "pddocfullpath",
+  currentnessEvidence: "History amendment notes on the rendered section page",
+  accessFinding:
+    "The official General Assembly API exposes only title metadata through georgia-code/titles and requires a site-issued bearer token. Lexis TOC results are publicly renderable, but complete section retrieval requires browser cookie/human-verification state and the result list omits durable document identity and currentness fields.",
+  status: "no_public_section_contract",
+} as const;
+export const GEORGIA_SECONDARY_SOURCE_OPTIONS = [
+  {
+    source: "Justia Georgia Code",
+    role: "discovery_only",
+    reason:
+      "Year-labelled section text is accessible, but Justia is not the Georgia Code Revision Commission's publication contract.",
+  },
+  {
+    source: "Public.Resource.Org / UniCourt cic-code-ga",
+    role: "discovery_only",
+    reason:
+      "The structured HTML repository is a third-party mirror of discrete releases, not the current official publication endpoint.",
+  },
+  {
+    source: "Internet Archive OCGA scans",
+    role: "discovery_only",
+    reason:
+      "Archived volumes can corroborate historical wording but do not establish a current official section identity.",
+  },
+] as const;
 
 export interface GeorgiaAuthorityManifest {
   jurisdiction: "GA";
@@ -40,25 +80,27 @@ export interface GeorgiaSourceDocument {
 }
 
 /**
- * Georgia's public General Assembly API exposes legislation metadata and code
- * title names, but not the current codified section text. The authenticated
- * Official Code of Georgia Annotated service is not a usable public import
- * contract, so no aliases are approved here.
+ * The public Lexis page is useful for human research, but its complete
+ * documents require browser verification state and its result list lacks the
+ * identity/currentness fields required for an import. The official General
+ * Assembly API currently exposes title metadata only. No aliases are approved
+ * until an official, public section-text contract is safely automatable.
  */
 export const GEORGIA_EXACT_TITLE_ALIASES: Record<string, string[]> = {};
 
 /**
- * This is deliberately a narrow, reserved contract. The currently observed
- * public Georgia API does not expose this route, so no imported record can
- * satisfy it today. If Georgia publishes a stable section endpoint, the
- * importer must prove this exact URL and document ID before publication.
+ * This is deliberately a narrow, reserved contract. Neither the official
+ * title-metadata API nor the public Lexis page currently exposes a stable
+ * section route, so no imported record can satisfy it today. Keep this
+ * deterministic shape so a future importer cannot accidentally accept a
+ * secondary URL.
  */
 export function buildGeorgiaOfficialDocumentId(section: string): string {
   return `ga-code-section:${section}`;
 }
 
 export function buildGeorgiaOfficialSectionUrl(section: string): string {
-  return `${GEORGIA_SOURCE_BASE}/api/georgia-code/sections/${section}`;
+  return `${GEORGIA_SOURCE_BASE}#section-${encodeURIComponent(section)}`;
 }
 
 function normalizeTitle(value: string): string {

@@ -1,7 +1,7 @@
 {
   "jurisdiction": "PA",
   "generatedAt": "2026-08-29T15:33:25.338Z",
-  "source": "Pennsylvania General Assembly Consolidated Statutes (legis.state.pa.us)",
+  "source": "Pennsylvania General Assembly Official Statutes (legis.state.pa.us and palegis.us)",
   "catalogRecords": [
     {
       "chargeId": "pa-murder-in-the-first-degree",
@@ -1927,11 +1927,10 @@
       "catalogCode": "459-305",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "Official Pennsylvania General Assembly section 3-459-305 could not be verified.",
+      "dispositionReason": "The exact official unconsolidated-statute retrieval path is approved, but publication remains withheld until attorney review confirms that the legacy text substantively supports this catalog charge; secondary, inferred, nearby, and alternate citations are rejected.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "api_error",
-      "error": "Official Pennsylvania General Assembly section 3-459-305 could not be verified."
+      "apiStatus": "verified"
     },
     {
       "chargeId": "pa-animal-cruelty-misdemeanor",
@@ -2005,11 +2004,10 @@
       "catalogCode": "13-1333",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "Official Pennsylvania General Assembly section 24-13-1333 could not be verified.",
+      "dispositionReason": "The exact official unconsolidated-statute retrieval path is approved, but publication remains withheld until attorney review confirms that the legacy text substantively supports this catalog charge; secondary, inferred, nearby, and alternate citations are rejected.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "api_error",
-      "error": "Official Pennsylvania General Assembly section 24-13-1333 could not be verified."
+      "apiStatus": "verified"
     },
     {
       "chargeId": "pa-littering",
@@ -2039,11 +2037,10 @@
       "catalogCode": "4-406",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "Official Pennsylvania General Assembly section 47-4-406 could not be verified.",
+      "dispositionReason": "The exact official unconsolidated-statute retrieval path is approved, but publication remains withheld until attorney review confirms that the legacy text substantively supports this catalog charge; secondary, inferred, nearby, and alternate citations are rejected.",
       "canonicalTitle": null,
       "provisions": [],
-      "apiStatus": "api_error",
-      "error": "Official Pennsylvania General Assembly section 47-4-406 could not be verified."
+      "apiStatus": "verified"
     },
     {
       "chargeId": "pa-hunting-fishing-no-license",

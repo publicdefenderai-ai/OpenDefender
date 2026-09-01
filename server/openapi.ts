@@ -1,3 +1,5 @@
+import { getSearchResultLimitDescription, SEARCH_RESULT_LIMITS } from "./config/search-result-limits";
+
 export const openApiSpec = {
   openapi: "3.0.3",
   info: {
@@ -93,8 +95,13 @@ For integration support or to report issues, please open an issue on our GitHub 
             name: "limit",
             in: "query",
             required: false,
-            description: "Maximum results to return (1-50)",
-            schema: { type: "integer", minimum: 1, maximum: 50, default: 20 }
+            description: getSearchResultLimitDescription(),
+            schema: {
+              type: "integer",
+              minimum: 1,
+              maximum: SEARCH_RESULT_LIMITS.chargeOnly.max,
+              default: SEARCH_RESULT_LIMITS.mixedContent.default
+            }
           }
         ],
         responses: {

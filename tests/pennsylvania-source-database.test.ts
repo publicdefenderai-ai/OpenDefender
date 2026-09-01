@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { tmpdir } from "node:os";
 import { criminalCharges } from "../shared/criminal-charges";
 import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 import { loadPennsylvaniaAuthorityManifest } from "../server/data/pennsylvania-manifest-loader";
@@ -9,14 +12,19 @@ import {
   buildPennsylvaniaSourceDatabaseSeed,
   buildPennsylvaniaSourceKey,
   buildPennsylvaniaSourceUrl,
+  getPennsylvaniaReferences,
+  PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS,
   parsePennsylvaniaCitation,
   validatePennsylvaniaManifestRecord,
   type PennsylvaniaSourceDocument,
 } from "../server/data/pennsylvania-source-database-seed";
 import {
   checkPennsylvaniaSourceContract,
+  diffPennsylvaniaCatalogRecords,
   extractPennsylvaniaDocument,
+  extractPennsylvaniaLegacyDocument,
   fetchPennsylvaniaDocument,
+  refreshPennsylvaniaManifest,
   PENNSYLVANIA_RETRIEVAL_SOURCE,
   PENNSYLVANIA_SOURCE_CONTRACT_REFERENCE,
   PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES,
@@ -58,6 +66,41 @@ describe("Pennsylvania authority manifest", () => {
     expect(seed.selectableChargeIds).toHaveLength(25);
   });
 
+  it("previews added, removed, and disposition-changed catalog rows", () => {
+    const currentRecords = loadPennsylvaniaAuthorityManifest().catalogRecords;
+    const removedRecord = currentRecords[0];
+    const changedRecord = currentRecords.find((record) => record.disposition === "retain")!;
+    const addedRecord = {
+      ...currentRecords[1],
+      chargeId: "pa-preview-only",
+      catalogLabel: "Preview-only charge",
+      disposition: "require_exact_reselection" as const,
+    };
+    const proposedRecords = currentRecords
+      .filter((record) => record.chargeId !== removedRecord.chargeId)
+      .map((record) => record.chargeId === changedRecord.chargeId
+        ? { ...record, disposition: "require_exact_reselection" as const, provisions: [] }
+        : record);
+    proposedRecords.push(addedRecord);
+
+    const diff = diffPennsylvaniaCatalogRecords(currentRecords, proposedRecords);
+
+    expect(diff.added).toEqual([expect.objectContaining({
+      chargeId: "pa-preview-only",
+      disposition: "require_exact_reselection",
+    })]);
+    expect(diff.removed).toEqual([expect.objectContaining({
+      chargeId: removedRecord.chargeId,
+      disposition: removedRecord.disposition,
+    })]);
+    expect(diff.dispositionChanged).toEqual([{
+      chargeId: changedRecord.chargeId,
+      catalogLabel: changedRecord.catalogLabel,
+      previousDisposition: changedRecord.disposition,
+      nextDisposition: "require_exact_reselection",
+    }]);
+  });
+
   it("parses consolidated citations and applies Pennsylvania chapter traversal", () => {
     expect(parsePennsylvaniaCitation("18 Pa.C.S. § 2502(a)")).toEqual([
       { title: "18", section: "2502", subdivision: "(a)" },
@@ -67,6 +110,9 @@ describe("Pennsylvania authority manifest", () => {
       { title: "18", section: "3701", subdivision: null },
     ]);
     expect(parsePennsylvaniaCitation("35 Pa. Stat. § 780-113(a)(16)")).toEqual([]);
+    expect(parsePennsylvaniaCitation("3 P.S. § 459-305")).toEqual([]);
+    expect(parsePennsylvaniaCitation("24 P.S. § 13-1333")).toEqual([]);
+    expect(parsePennsylvaniaCitation("47 P.S. § 4-406")).toEqual([]);
     expect(parsePennsylvaniaCitation("18 U.S.C. § 2113")).toEqual([]);
     expect(parsePennsylvaniaCitation("47 Pa. Cons. Stat. § 4-406")).toEqual([
       { title: "47", section: "4-406", subdivision: null },
@@ -101,42 +147,140 @@ describe("Pennsylvania authority manifest", () => {
       expect(buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section)).toBe(
         `https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=${reference.title}&div=0&chpt=${reference.chapter}&sctn=${reference.routedSection}&subsctn=0`,
       );
-      expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).toContainEqual({
-        title: reference.title,
-        section: reference.section,
-        subdivision: null,
-      });
+      if (reference.title === "3" || reference.title === "24") {
+        expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).not.toContainEqual({
+          title: reference.title,
+          section: reference.section,
+          subdivision: null,
+        });
+      } else {
+        expect(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES).toContainEqual({
+          title: reference.title,
+          section: reference.section,
+          subdivision: null,
+        });
+      }
     }
   });
 
   it("keeps hyphenated catalog codes aligned to their cited sections", () => {
     const expected = [
-      { chargeId: "pa-animal-at-large", code: "459-305", citation: "3 Pa. Cons. Stat. § 459-305" },
-      { chargeId: "pa-truancy", code: "13-1333", citation: "24 Pa. Cons. Stat. § 13-1333" },
-      { chargeId: "pa-alcohol-in-park", code: "4-406", citation: "47 Pa. Cons. Stat. § 4-406" },
+      { chargeId: "pa-animal-at-large", code: "459-305", citation: "3 P.S. § 459-305" },
+      { chargeId: "pa-truancy", code: "13-1333", citation: "24 P.S. § 13-1333" },
+      { chargeId: "pa-alcohol-in-park", code: "4-406", citation: "47 P.S. § 4-406" },
     ];
 
     for (const item of expected) {
       const charge = criminalCharges.find((candidate) => candidate.id === item.chargeId)!;
       expect(charge.code).toBe(item.code);
       expect(CHARGE_CITATIONS[charge.id]?.citation).toBe(item.citation);
-      expect(parsePennsylvaniaCitation(item.citation)).toEqual([{
-        title: item.citation.split(" ")[0],
-        section: item.code,
-        subdivision: null,
-      }]);
+      expect(parsePennsylvaniaCitation(item.citation)).toEqual([]);
     }
   });
 
-  it("does not promote the corrected hyphenated rows without an official consolidated provision", () => {
+  it("withholds legacy mappings until attorney review confirms the charge match", () => {
     const manifest = loadPennsylvaniaAuthorityManifest();
-    for (const chargeId of ["pa-animal-at-large", "pa-truancy", "pa-alcohol-in-park"]) {
+    for (const [chargeId, approved] of Object.entries(
+      PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS,
+    )) {
       const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId)!;
+      expect(getPennsylvaniaReferences(chargeId)).toEqual([{
+        title: approved.title,
+        section: approved.section,
+        subdivision: approved.subdivision,
+        sourceKind: "unconsolidated",
+      }]);
+      expect(approved.publicationApproved).toBe(false);
       expect(record.disposition).toBe("require_exact_reselection");
+      expect(record.apiStatus).toBe("verified");
+      expect(record.canonicalTitle).toBeNull();
       expect(record.provisions).toHaveLength(0);
-      expect(record.apiStatus).toBe("api_error");
-      expect(record.dispositionReason).toContain("could not be verified");
+      expect(record.dispositionReason).toContain("attorney review");
+      expect(validatePennsylvaniaManifestRecord(record)).toBeNull();
+
+      const charge = criminalCharges.find((candidate) => candidate.id === chargeId)!;
+      const fetched = document(approved.section, approved.sectionTitle, approved.title);
+      expect(buildPennsylvaniaManifestRecord(charge, [fetched], importedAt)).toMatchObject({
+        disposition: "require_exact_reselection",
+        provisions: [],
+        apiStatus: "verified",
+      });
     }
+  });
+
+  it("rejects an attorney-unapproved legacy record at validation, loading, and seed boundaries", () => {
+    const manifest = loadPennsylvaniaAuthorityManifest();
+    const approved = PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS["pa-animal-at-large"];
+    const withheld = manifest.catalogRecords.find((record) => record.chargeId === approved.chargeId)!;
+    const content = `Section 305. ${approved.sectionTitle}. Confinement and control. Housing.`;
+    const selectableRecord = {
+      ...withheld,
+      disposition: "exact_alias_rename" as const,
+      canonicalTitle: approved.sectionTitle,
+      provisions: [{
+        sourceKey: buildPennsylvaniaSourceKey(approved.title, approved.section, approved.subdivision),
+        lawId: approved.title,
+        section: approved.section,
+        citation: `${approved.title} P.S. § ${approved.section}`,
+        officialTitle: approved.sectionTitle,
+        sourceUrl: approved.canonicalUrl,
+        content,
+        contentHash: createHash("sha256").update(content).digest("hex"),
+        hashBasis: "source_content" as const,
+        retrievedAt: importedAt,
+        effectiveDateStart: null,
+        effectiveDateEnd: null,
+        supportRole: "offense" as const,
+        subdivision: approved.subdivision,
+        metadata: {},
+      }],
+      apiStatus: "verified" as const,
+    };
+    expect(validatePennsylvaniaManifestRecord(selectableRecord)).toContain("not attorney-approved");
+    expect(buildPennsylvaniaSourceDatabaseSeed({
+      ...manifest,
+      catalogRecords: [selectableRecord],
+    })).toMatchObject({
+      sources: [],
+      snapshots: [],
+      links: [],
+      selectableChargeIds: [],
+    });
+
+    const temporaryDirectory = mkdtempSync(join(tmpdir(), "pa-manifest-"));
+    const temporaryManifest = join(temporaryDirectory, "manifest.json");
+    writeFileSync(temporaryManifest, JSON.stringify({
+      ...manifest,
+      catalogRecords: manifest.catalogRecords.map((record) =>
+        record.chargeId === approved.chargeId ? selectableRecord : record),
+    }));
+    try {
+      expect(() => loadPennsylvaniaAuthorityManifest(temporaryManifest)).toThrow(
+        "not attorney-approved",
+      );
+    } finally {
+      rmSync(temporaryDirectory, { recursive: true, force: true });
+    }
+  });
+
+  it("rejects a legacy provision when its exact official URL or content is not supplied", () => {
+    const approved = PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS["pa-animal-at-large"];
+    const charge = criminalCharges.find((candidate) => candidate.id === approved.chargeId)!;
+    const wrongUrl = buildPennsylvaniaSourceUrl(approved.title, approved.section);
+    const wrongUrlRecord = buildPennsylvaniaManifestRecord(charge, [{
+      ...document(approved.section, approved.sectionTitle, approved.title),
+      sourceUrl: wrongUrl,
+    }], importedAt);
+    expect(wrongUrlRecord.disposition).toBe("require_exact_reselection");
+    expect(wrongUrlRecord.provisions).toEqual([]);
+
+    const wrongContent = `<html><body>Section 305. ${approved.sectionTitle}.<br>Unrelated neighboring provision.</body></html>`;
+    expect(extractPennsylvaniaLegacyDocument(
+      wrongContent,
+      approved,
+      approved.canonicalUrl,
+      importedAt,
+    )).toBeNull();
   });
 
   it("stores verbatim official text and content hashes for a verified exact mapping", () => {
@@ -174,6 +318,17 @@ describe("Pennsylvania authority manifest", () => {
       provisions: [{ ...record.provisions[0], citation: "18 Pa. Cons. Stat. § 2703" }],
     };
     expect(validatePennsylvaniaManifestRecord(tampered)).toContain("not an exact verified Pennsylvania match");
+  });
+
+  it("rejects secondary source URLs before they can create a selectable record", () => {
+    const charge = criminalCharges.find((candidate) => candidate.id === "pa-aggravated-assault")!;
+    const record = buildPennsylvaniaManifestRecord(charge, [{
+      ...document("2702", "Aggravated assault"),
+      sourceUrl: "https://law.justia.com/codes/pennsylvania/section-2702/",
+    }], importedAt);
+    expect(record.disposition).toBe("require_exact_reselection");
+    expect(record.provisions).toEqual([]);
+    expect(record.dispositionReason).toContain("exact official consolidated-statute URL");
   });
 
   it("keeps a supported section selectable only when its section and subdivision match", () => {
@@ -252,6 +407,66 @@ describe("Pennsylvania authority manifest", () => {
       buildPennsylvaniaOfficialSourceUrl("18", "2502"),
       importedAt,
     )).toMatchObject({ section: "2502", title: "Murder" });
+  });
+
+  it("extracts approved legacy content only when every source-content check passes", () => {
+    const approved = PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS["pa-animal-at-large"];
+    const html = `<html><body><h1>Section 305 - Act of Dec. 7, 1982 - DOG LAW</h1><div>Section 305. Confinement and housing of dogs not part of a<br>kennel.</div><div>(a) Confinement and control.--It shall be unlawful for the owner or keeper of any dog.</div><div>(b) Housing.--It shall be unlawful for the owner or keeper of a dog.</div></body></html>`;
+    expect(extractPennsylvaniaLegacyDocument(
+      html,
+      approved,
+      approved.canonicalUrl,
+      importedAt,
+    )).toMatchObject({
+      section: "459-305",
+      title: approved.sectionTitle,
+      sourceUrl: approved.canonicalUrl,
+    });
+    expect(extractPennsylvaniaLegacyDocument(
+      html.replace("Confinement and control", "Different heading"),
+      approved,
+      approved.canonicalUrl,
+      importedAt,
+    )).toBeNull();
+  });
+
+  it("retrieves an approved legacy page only from its exact PAlegis URL", async () => {
+    const approved = PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS["pa-animal-at-large"];
+    const reference = getPennsylvaniaReferences(approved.chargeId)[0];
+    const html = `<html><body><div>Section 305. Confinement and housing of dogs not part of a<br>kennel.</div><div>(a) Confinement and control.--It shall be unlawful for the owner or keeper of any dog.</div><div>(b) Housing.--It shall be unlawful for the owner or keeper of a dog.</div></body></html>`;
+    const originalFetch = globalThis.fetch;
+    const requestedUrls: string[] = [];
+    globalThis.fetch = (async (input: string | URL | Request) => {
+      requestedUrls.push(String(input));
+      return new Response(html, {
+        status: 200,
+        headers: { "content-type": "text/html" },
+      });
+    }) as typeof fetch;
+    try {
+      const parsed = await fetchPennsylvaniaDocument(reference, importedAt);
+      expect(requestedUrls).toEqual([approved.retrievalUrl]);
+      expect(parsed).toMatchObject({
+        title: approved.sectionTitle,
+        section: approved.section,
+        sourceUrl: approved.canonicalUrl,
+      });
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
+
+    globalThis.fetch = (async () => ({
+      ok: true,
+      status: 200,
+      url: "https://law.justia.com/codes/pennsylvania/section-459-305/",
+      headers: new Headers({ "content-type": "text/html" }),
+      text: async () => html,
+    })) as typeof fetch;
+    try {
+      await expect(fetchPennsylvaniaDocument(reference, importedAt)).resolves.toBeNull();
+    } finally {
+      globalThis.fetch = originalFetch;
+    }
   });
 
   it("keeps the official wrapper URL canonical when section content comes from a frame", () => {
@@ -364,6 +579,198 @@ describe("Pennsylvania authority manifest", () => {
       failure.includes(`Title 42 § ${brokenReference.section}`) &&
       failure.includes(brokenUrl),
     )).toBe(true);
+  });
+
+  it("retries transport failures and reports timeout diagnostics without accepting content", async () => {
+    let attempts = 0;
+    const result = await checkPennsylvaniaSourceContract(async () => {
+      attempts++;
+      const error = new Error("connect timed out");
+      Object.assign(error, { code: "ETIMEDOUT" });
+      throw error;
+    }, {
+      maxRetries: 2,
+      timeoutMs: 25,
+      retryTransportDelay: () => 0,
+    });
+
+    expect(attempts).toBe(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.length * 3);
+    expect(result.ok).toBe(false);
+    expect(result.pages[0]).toMatchObject({
+      failureKind: "transport",
+      diagnostics: [
+        { attempt: 1, kind: "timeout", retrying: true },
+        { attempt: 2, kind: "timeout", retrying: true },
+        { attempt: 3, kind: "timeout", retrying: false },
+      ],
+    });
+    expect(result.pages[0].failures[0]).toContain("Retry from the supported Pennsylvania refresh environment");
+    expect(result.pages[0].failures[0]).toContain("no source content was accepted");
+  });
+
+  it("retries a transient connection failure on the same PAlegis URL", async () => {
+    const attemptsByUrl = new Map<string, number>();
+    const requestedUrls: string[] = [];
+    const result = await checkPennsylvaniaSourceContract(async (input) => {
+      const requestedUrl = String(input);
+      requestedUrls.push(requestedUrl);
+      const attempts = (attemptsByUrl.get(requestedUrl) ?? 0) + 1;
+      attemptsByUrl.set(requestedUrl, attempts);
+      if (attempts === 1) {
+        throw new Error("socket reset by peer");
+      }
+      const reference = PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.find(
+        (candidate) => buildPennsylvaniaOfficialSourceUrl(candidate.title, candidate.section) === requestedUrl,
+      )!;
+      return new Response(
+        `<html><body><h1>Section ${reference.section}.0 - Title ${reference.title} - REPRESENTATIVE</h1><div>&sect; ${reference.section}.&nbsp;&nbsp;Representative section.</div><div>A person commits an offense when the statutory elements are met. This is complete official section text for the contract test.</div></body></html>`,
+        { status: 200, headers: { "content-type": "text/html" } },
+      );
+    }, {
+      maxRetries: 1,
+      retryTransportDelay: () => 0,
+    });
+
+    expect(result.ok).toBe(true);
+    expect(requestedUrls).toEqual(PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES.flatMap((reference) => {
+      const requestedUrl = buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section);
+      return [requestedUrl, requestedUrl];
+    }));
+    expect(result.pages[0].diagnostics).toEqual([
+      expect.objectContaining({ attempt: 1, kind: "connection", retrying: true }),
+      expect.objectContaining({ attempt: 2, kind: "http", status: 200, retrying: false }),
+    ]);
+  });
+
+  it("preserves the last manifest when every refresh failure is transport-only", async () => {
+    const temporaryDirectory = mkdtempSync(join(tmpdir(), "pa-refresh-"));
+    const temporaryManifest = join(temporaryDirectory, "manifest.json");
+    const committedManifest = readFileSync(
+      "scripts/data-review/output/pa-source-manifest.json",
+      "utf8",
+    );
+    writeFileSync(temporaryManifest, committedManifest);
+
+    try {
+      const result = await refreshPennsylvaniaManifest({
+        importedAt,
+        outputPath: temporaryManifest,
+        rateLimitMs: 0,
+        fetchImpl: async () => {
+          throw new Error("temporary PAlegis connection outage");
+        },
+        requestOptions: {
+          maxRetries: 0,
+          retryTransportDelay: () => 0,
+        },
+      });
+
+      expect(result).toMatchObject({
+        preservedManifest: true,
+        wroteManifest: false,
+        transportFailures: expect.any(Number),
+        officialPageFailures: 0,
+        contentContractFailures: 0,
+        alert: {
+          type: "transport-outage",
+          severity: "warning",
+          failureKind: "transport",
+          transportFailures: expect.any(Number),
+          preservedSnapshot: {
+            outputPath: temporaryManifest,
+            generatedAt: expect.any(String),
+          },
+        },
+      });
+      expect(result.transportFailures).toBeGreaterThan(0);
+      expect(result.alert?.message).toContain("transport outage");
+      expect(result.alert?.message).toContain("Official-page and content-contract failures");
+      expect(readFileSync(temporaryManifest, "utf8")).toBe(committedManifest);
+    } finally {
+      rmSync(temporaryDirectory, { recursive: true, force: true });
+    }
+  });
+
+  it("replaces the manifest after a refresh retrieves verified official content", async () => {
+    const temporaryDirectory = mkdtempSync(join(tmpdir(), "pa-refresh-"));
+    const temporaryManifest = join(temporaryDirectory, "manifest.json");
+    const existingManifest = loadPennsylvaniaAuthorityManifest();
+    writeFileSync(temporaryManifest, JSON.stringify(existingManifest, null, 2));
+    const documentsBySourceKey = new Map(
+      existingManifest.catalogRecords.flatMap((record) =>
+        record.provisions.map((provision) => [provision.sourceKey, provision] as const),
+      ),
+    );
+    const referencesByUrl = new Map(
+      criminalCharges
+        .filter((charge) => charge.jurisdiction === "PA")
+        .flatMap((charge) => getPennsylvaniaReferences(charge.id))
+        .flatMap((reference) => [
+          [buildPennsylvaniaOfficialSourceUrl(reference.title, reference.section), reference] as const,
+          [buildPennsylvaniaSourceUrl(reference.title, reference.section), reference] as const,
+        ]),
+    );
+
+    const htmlForRequest = (input: string): string => {
+      const url = new URL(input);
+      const title = url.searchParams.get("ttl") ?? "";
+      const chapter = url.searchParams.get("chpt") ?? "";
+      const section = url.searchParams.get("sctn") ?? "";
+      const reference = referencesByUrl.get(input);
+      const requestedSection = reference?.section ?? section;
+      const matchingProvision = [...documentsBySourceKey.values()].find((provision) =>
+        provision.lawId === title &&
+        (() => {
+          const sourceUrl = new URL(provision.sourceUrl);
+          return sourceUrl.searchParams.get("chpt") === chapter &&
+            sourceUrl.searchParams.get("sctn") === section;
+        })(),
+      );
+      if (!matchingProvision) {
+        const approved = Object.values(PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS)
+          .find((candidate) => candidate.retrievalUrl === input);
+        if (approved) {
+          return `<html><body><div>Section ${approved.section.split("-").at(-1)}. ${approved.sectionTitle}.</div><div>${approved.requiredContent.join(" ")}.</div></body></html>`;
+        }
+        return `<html><body><h1>Section ${requestedSection}.0 - Title ${title} - TEST</h1><div>§ ${requestedSection}. Representative official section.</div><div>This is complete official section text for the refresh test and contains the requested statutory content.</div></body></html>`;
+      }
+      return `<html><body><h1>Section ${requestedSection}.0 - Title ${title} - TEST</h1><div>§ ${requestedSection}. ${matchingProvision.officialTitle}.</div><div>${matchingProvision.content}</div></body></html>`;
+    };
+
+    try {
+      const result = await refreshPennsylvaniaManifest({
+        importedAt,
+        outputPath: temporaryManifest,
+        rateLimitMs: 0,
+        requestOptions: { maxRetries: 0 },
+        fetchImpl: async (input) => new Response(htmlForRequest(String(input)), {
+          status: 200,
+          headers: { "content-type": "text/html" },
+        }),
+      });
+
+      expect(result).toMatchObject({
+        preservedManifest: false,
+        wroteManifest: true,
+        transportFailures: 0,
+        officialPageFailures: 0,
+        contentContractFailures: 0,
+        alert: null,
+        catalogDiff: {
+          added: [],
+          removed: [],
+          dispositionChanged: [],
+        },
+      });
+      const refreshedManifest = JSON.parse(readFileSync(temporaryManifest, "utf8"));
+      expect(refreshedManifest.generatedAt).toBe(importedAt.toISOString());
+      expect(refreshedManifest.catalogRecords).toHaveLength(existingManifest.catalogRecords.length);
+      expect(refreshedManifest.catalogRecords.filter((record: { disposition: string }) =>
+        record.disposition === "retain" || record.disposition === "exact_alias_rename",
+      )).toHaveLength(25);
+    } finally {
+      rmSync(temporaryDirectory, { recursive: true, force: true });
+    }
   });
 
   it("flags redirects and never treats a legacy or secondary response as official", () => {

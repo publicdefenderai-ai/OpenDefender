@@ -19,9 +19,21 @@
  * response shaping untouched.
  */
 
-import { describe, it, expect, vi, beforeAll } from 'vitest';
+import { describe, it, expect, vi, beforeAll, afterEach } from 'vitest';
 import request from 'supertest';
 import express from 'express';
+import {
+  CURRENT_PUBLIC_SOURCE_JURISDICTIONS,
+  HIGH_PUBLIC_SOURCE_COVERAGE_TARGET,
+} from '../server/data/public-source-coverage';
+import type { PublicSourceCoverageReport } from '../server/data/public-source-coverage';
+import { storage } from '../server/storage';
+
+// ── Hoisted in-memory persistence for the saved-guidance boundary ─────────────
+const { caseStore, enrichmentUpdateCallbacks } = vi.hoisted(() => ({
+  caseStore: {} as Record<string, any>,
+  enrichmentUpdateCallbacks: [] as Array<() => Promise<void> | void>,
+}));
 
 // ── Required top-level fields the guidance dashboard reads ────────────────────
 const REQUIRED_GUIDANCE_FIELDS = [
@@ -62,13 +74,28 @@ const MOCK_RULES_GUIDANCE = {
 // Storage (db connection)
 vi.mock('../server/storage', () => ({
   storage: {
-    createLegalCase: vi.fn().mockImplementation(async (legalCase: { guidance?: unknown; sessionId?: string }) => ({
-      id: 'test-id',
-      guidance: legalCase.guidance ?? {},
-      sessionId: legalCase.sessionId ?? 'sess',
-    })),
-    getLegalCase: vi.fn().mockResolvedValue(null),
+    createLegalCase: vi.fn().mockImplementation(async (legalCase: {
+      guidance?: unknown;
+      sessionId?: string;
+      [key: string]: unknown;
+    }) => {
+      const record = {
+        ...legalCase,
+        id: 'test-id',
+        guidance: legalCase.guidance ?? {},
+        sessionId: legalCase.sessionId ?? 'sess',
+        createdAt: new Date(),
+      };
+      caseStore[record.sessionId] = record;
+      return record;
+    }),
+    getLegalCase: vi.fn().mockImplementation(async (sessionId: string) => caseStore[sessionId] ?? null),
     getLegalCasesBySession: vi.fn().mockResolvedValue([]),
+    updateLegalCaseGuidance: vi.fn().mockImplementation(async (sessionId: string, guidance: unknown) => {
+      if (caseStore[sessionId]) {
+        caseStore[sessionId].guidance = guidance;
+      }
+    }),
     deleteLegalCase: vi.fn().mockResolvedValue(undefined),
     deleteExpiredCases: vi.fn().mockResolvedValue(0),
     createLegalResource: vi.fn().mockResolvedValue({}),
@@ -187,7 +214,12 @@ vi.mock('../server/services/claude-guidance', () => ({
   testClaudeConnection: vi.fn().mockResolvedValue({ ok: true }),
   clearSessionCache: vi.fn(),
   getGuidanceCacheKey: vi.fn().mockReturnValue('test-cache-key'),
-  startOptionalSourceEnrichment: vi.fn(),
+  startOptionalSourceEnrichment: vi.fn().mockImplementation((...args: unknown[]) => {
+    const onUpdated = args[4] as (() => Promise<void> | void) | undefined;
+    if (onUpdated) {
+      enrichmentUpdateCallbacks.push(onUpdated);
+    }
+  }),
 }));
 vi.mock('../shared/playbooks/index', () => ({
   getPlaybooks: vi.fn().mockReturnValue([]),
@@ -203,6 +235,13 @@ beforeAll(async () => {
   testApp.use(express.json());
   await registerRoutes(testApp);
 }, 30_000);
+
+afterEach(() => {
+  for (const key of Object.keys(caseStore)) {
+    delete caseStore[key];
+  }
+  enrichmentUpdateCallbacks.length = 0;
+});
 
 // ── Minimal valid request body (rules route schema) ───────────────────────────
 const VALID_BODY = {
@@ -439,6 +478,157 @@ describe('legal guidance routes: canonical charge parity', () => {
       vi.unstubAllEnvs();
     }
   });
+
+  it('keeps the canonical charge identity when saved AI guidance is retrieved', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', 'test-anthropic-key');
+
+    const { generateClaudeGuidance } = await import('../server/services/claude-guidance');
+    (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+
+    try {
+      const sessionId = 'saved-ai-guidance-session';
+      const createResponse = await request(testApp)
+        .post('/api/legal-guidance')
+        .send({
+          ...VALID_BODY,
+          sessionId,
+          charges: [CANONICAL_SUBDIVISION_CHARGE],
+          incidentDescription: 'Mock case context for the saved-guidance test.',
+        })
+        .expect(200);
+
+      expect(createResponse.body.guidance.generatedBy).toBe('claude-ai');
+      expect(chargeIdentity(createResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+
+      // A separate request models the advocate returning to the saved session.
+      const savedResponse = await request(testApp)
+        .get(`/api/legal-guidance/${sessionId}`)
+        .expect(200);
+
+      expect(savedResponse.body.success).toBe(true);
+      expect(chargeIdentity(savedResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(savedResponse.body.guidance.chargeClassifications[0]).toEqual(
+        expect.objectContaining({
+          id: CANONICAL_SUBDIVISION_CHARGE,
+          title: 'Gross Vehicular Manslaughter While Intoxicated',
+          verifiedCitation: 'Cal. Penal Code § 191.5(a)',
+        }),
+      );
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI § 999.9');
+      expect(generateClaudeGuidance).toHaveBeenCalledTimes(1);
+    } finally {
+      (generateClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+      vi.unstubAllEnvs();
+    }
+  });
+
+  it('keeps the canonical charge identity when saved streaming AI guidance is retrieved', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', 'test-anthropic-key');
+
+    const { streamClaudeGuidance } = await import('../server/services/claude-guidance');
+    (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+
+    try {
+      const sessionId = 'saved-stream-guidance-session';
+      const createResponse = await request(testApp)
+        .post('/api/legal-guidance/stream')
+        .send({
+          ...VALID_BODY,
+          sessionId,
+          charges: [CANONICAL_SUBDIVISION_CHARGE],
+          incidentDescription: 'Mock case context for the saved-stream-guidance test.',
+        })
+        .expect(200);
+
+      const completeEvent = parseSseEvents(createResponse.text)
+        .find((event) => event.type === 'complete');
+      expect(completeEvent?.success).toBe(true);
+      expect(completeEvent?.guidance.generatedBy).toBe('claude-ai');
+      expect(chargeIdentity(completeEvent?.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+
+      // A separate request models the advocate returning to the saved stream session.
+      const savedResponse = await request(testApp)
+        .get(`/api/legal-guidance/${sessionId}`)
+        .expect(200);
+
+      expect(savedResponse.body.success).toBe(true);
+      expect(chargeIdentity(savedResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(savedResponse.body.guidance.chargeClassifications[0]).toEqual(
+        expect.objectContaining({
+          id: CANONICAL_SUBDIVISION_CHARGE,
+          title: 'Gross Vehicular Manslaughter While Intoxicated',
+          verifiedCitation: 'Cal. Penal Code § 191.5(a)',
+        }),
+      );
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI § 999.9');
+      expect(streamClaudeGuidance).toHaveBeenCalledTimes(1);
+    } finally {
+      (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+      vi.unstubAllEnvs();
+    }
+  });
+
+  it('keeps the canonical charge identity after optional enrichment updates saved streaming guidance', async () => {
+    vi.stubEnv('ANTHROPIC_API_KEY', 'test-anthropic-key');
+
+    const { streamClaudeGuidance } = await import('../server/services/claude-guidance');
+    const updateLegalCaseGuidance = vi.mocked(storage.updateLegalCaseGuidance);
+    updateLegalCaseGuidance.mockClear();
+    (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockResolvedValueOnce(
+      MOCK_AI_GUIDANCE_WITH_DRIFTING_CHARGE,
+    );
+
+    try {
+      const sessionId = 'stream-enrichment-canonical-session';
+      const createResponse = await request(testApp)
+        .post('/api/legal-guidance/stream')
+        .send({
+          ...VALID_BODY,
+          sessionId,
+          charges: [CANONICAL_SUBDIVISION_CHARGE],
+          incidentDescription: 'Mock case context for the enrichment test.',
+        })
+        .expect(200);
+
+      const completeEvent = parseSseEvents(createResponse.text)
+        .find((event) => event.type === 'complete');
+      expect(completeEvent?.success).toBe(true);
+      expect(chargeIdentity(completeEvent?.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(enrichmentUpdateCallbacks).toHaveLength(1);
+
+      // Complete the optional enrichment after the streaming response has
+      // already been returned, as happens in production.
+      await enrichmentUpdateCallbacks[0]();
+
+      expect(updateLegalCaseGuidance).toHaveBeenCalledWith(sessionId, expect.any(Object));
+      const updatedGuidance = updateLegalCaseGuidance.mock.calls.at(-1)?.[1] as Record<string, any>;
+      expect(chargeIdentity(updatedGuidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(JSON.stringify(updatedGuidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(updatedGuidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(updatedGuidance)).not.toContain('AI § 999.9');
+
+      const savedResponse = await request(testApp)
+        .get(`/api/legal-guidance/${sessionId}`)
+        .expect(200);
+
+      expect(savedResponse.body.success).toBe(true);
+      expect(chargeIdentity(savedResponse.body.guidance)).toEqual(EXPECTED_CHARGE_IDENTITY);
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('ai-invented-charge-id');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI-Invented Charge Title');
+      expect(JSON.stringify(savedResponse.body.guidance)).not.toContain('AI § 999.9');
+    } finally {
+      (streamClaudeGuidance as ReturnType<typeof vi.fn>).mockClear();
+      vi.unstubAllEnvs();
+    }
+  });
 });
 
 // =============================================================================
@@ -521,5 +711,129 @@ describe('POST /api/legal-guidance/rules — error handling', () => {
     expect(res.body.success).toBe(false);
     expect(typeof res.body.error).toBe('string');
     expect(res.body.stack).toBeUndefined();
+  });
+});
+
+// =============================================================================
+describe('GET /api/admin/source-coverage — authenticated readiness gate', () => {
+  const ADMIN_TEST_TOKEN = 'source-coverage-test-token';
+  const REPORT_KEYS = [
+    'target',
+    'jurisdictions',
+    'belowTargetJurisdictions',
+    'nextHighestValueCoverageTargets',
+  ];
+  const ROW_KEYS = [
+    'jurisdiction',
+    'source',
+    'manifestGeneratedAt',
+    'catalogRows',
+    'selectableRows',
+    'withheldRows',
+    'rowsWithExplicitWithheldReason',
+    'catalogAccountingRate',
+    'rowsWithOfficialResponse',
+    'officialResponseRate',
+    'officialResponsePercentage',
+    'publishableRate',
+    'coveragePercentage',
+    'selectableCoveragePercentage',
+    'sources',
+    'snapshots',
+    'links',
+    'officialSourceAvailability',
+    'gapBreakdown',
+    'gapCounts',
+    'staleRows',
+    'status',
+    'blocker',
+    'manifestPath',
+    'seedScriptPath',
+  ];
+
+  async function makeSourceCoverageApp(
+    buildReport: () => PublicSourceCoverageReport,
+  ) {
+    const { registerRoutes } = await import('../server/routes');
+    const app = express();
+    app.use(express.json());
+    await registerRoutes(app, { buildPublicSourceCoverageReport: buildReport });
+    return app;
+  }
+
+  it('returns the complete coverage schema for a valid admin request', async () => {
+    const previousAdminToken = process.env.ADMIN_TOKEN;
+    process.env.ADMIN_TOKEN = ADMIN_TEST_TOKEN;
+
+    try {
+      const res = await request(testApp)
+        .get('/api/admin/source-coverage')
+        .set('x-admin-api-key', ADMIN_TEST_TOKEN)
+        .expect(200);
+
+      expect(res.body.success).toBe(true);
+      expect(Object.keys(res.body).sort()).toEqual(['belowTargetJurisdictions', 'jurisdictions', 'nextHighestValueCoverageTargets', 'success', 'target'].sort());
+      expect(Object.keys(res.body.target).sort()).toEqual(
+        ['catalogAccountingRate', 'officialResponseRate'].sort(),
+      );
+      expect(res.body.target).toEqual(HIGH_PUBLIC_SOURCE_COVERAGE_TARGET);
+      expect(res.body.jurisdictions).toHaveLength(CURRENT_PUBLIC_SOURCE_JURISDICTIONS.length);
+      expect(res.body.jurisdictions.map((row: { jurisdiction: string }) => row.jurisdiction)).toEqual(
+        [...CURRENT_PUBLIC_SOURCE_JURISDICTIONS],
+      );
+
+      for (const row of res.body.jurisdictions) {
+        expect(Object.keys(row).sort()).toEqual(ROW_KEYS.sort());
+      }
+      for (const target of res.body.nextHighestValueCoverageTargets) {
+        expect(Object.keys(target).sort()).toEqual([
+          'jurisdiction',
+          'rows',
+          'coveragePercentage',
+          'officialResponsePercentage',
+          'kind',
+          'reason',
+          'nextStep',
+        ].sort());
+      }
+      expect(Object.keys(res.body).filter((key) => !REPORT_KEYS.includes(key))).toEqual(['success']);
+    } finally {
+      if (previousAdminToken === undefined) delete process.env.ADMIN_TOKEN;
+      else process.env.ADMIN_TOKEN = previousAdminToken;
+    }
+  });
+
+  it.each([
+    [
+      'missing-manifest',
+      'Missing committed FL public-source manifest: /private/fixture/source-manifest.json',
+    ],
+    [
+      'seed-failure',
+      'Technical seed failure for TX: seed selectable rows do not match the committed manifest',
+    ],
+  ])('returns a safe 500 when the readiness builder reports a %s failure', async (_name, failureMessage) => {
+    const previousAdminToken = process.env.ADMIN_TOKEN;
+    process.env.ADMIN_TOKEN = ADMIN_TEST_TOKEN;
+
+    try {
+      const app = await makeSourceCoverageApp(() => {
+        throw new Error(failureMessage);
+      });
+      const res = await request(app)
+        .get('/api/admin/source-coverage')
+        .set('x-admin-api-key', ADMIN_TEST_TOKEN)
+        .expect(500);
+
+      expect(res.body).toEqual({
+        success: false,
+        error: 'Source coverage report is unavailable',
+      });
+      expect(JSON.stringify(res.body)).not.toContain(failureMessage);
+      expect(res.body.stack).toBeUndefined();
+    } finally {
+      if (previousAdminToken === undefined) delete process.env.ADMIN_TOKEN;
+      else process.env.ADMIN_TOKEN = previousAdminToken;
+    }
   });
 });

@@ -28,6 +28,21 @@ export async function main(): Promise<void> {
     for (const failure of page.failures) {
       if (!page.ok) console.error(`       ${failure}`);
     }
+    if (!page.ok && page.diagnostics) {
+      for (const diagnostic of page.diagnostics) {
+        const retry = diagnostic.retrying ? "; retrying" : "";
+        const status = diagnostic.status ? ` ${diagnostic.status}` : "";
+        console.error(
+          `       attempt ${diagnostic.attempt}: ${diagnostic.kind}${status} ` +
+          `after ${diagnostic.elapsedMs}ms — ${diagnostic.message}${retry}`,
+        );
+      }
+    }
+    if (!page.ok && page.failureKind === "transport") {
+      console.error(
+        "       Transport failure does not authorize a source change; rerun from the supported refresh environment.",
+      );
+    }
   }
   if (!result.ok) process.exitCode = 1;
 }

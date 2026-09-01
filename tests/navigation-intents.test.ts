@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { getIntentDestinations } from "../client/src/components/navigation/intent-navigation";
 import { buildSearchIndex, search } from "../server/services/search-indexer";
+import { getChargeById, getVerifiedCitation } from "../shared/criminal-charges";
 
 const translate = ((_key: string, fallback: string) => fallback) as any;
 
@@ -50,5 +51,31 @@ describe("trusted-source search", () => {
       "Criminal Charges Database",
       "AI Guidance",
     ]));
+  });
+
+  it("does not expose withheld SC citations through search while retaining exact rows", () => {
+    const withheldCharge = getChargeById("sc-felon-in-possession-of-firearm");
+    const retainedCharge = getChargeById("sc-attempted-murder");
+    expect(withheldCharge).toBeDefined();
+    expect(retainedCharge).toBeDefined();
+    expect(getVerifiedCitation(withheldCharge!)).toBeNull();
+    expect(getVerifiedCitation(retainedCharge!)).toBe("S.C. Code Ann. § 16-3-29");
+
+    buildSearchIndex();
+    const withheldResult = search({
+      query: "felon possession firearm",
+      language: "en",
+      filters: { types: ["charge"], jurisdiction: "SC" },
+      limit: 50,
+    }).results.find((result) => result.document.id === "charge-sc-felon-in-possession-of-firearm");
+    const retainedResult = search({
+      query: "attempted murder",
+      language: "en",
+      filters: { types: ["charge"], jurisdiction: "SC" },
+      limit: 50,
+    }).results.find((result) => result.document.id === "charge-sc-attempted-murder");
+
+    expect(withheldResult?.document.citation).toBeNull();
+    expect(retainedResult?.document.citation).toBe("S.C. Code Ann. § 16-3-29");
   });
 });

@@ -638,6 +638,9 @@ export default function CaseGuidance() {
         // Then set the complete guidance result in one atomic update
         // This ensures the guidance dashboard receives complete, stable data
         setGuidanceResult(guidanceData);
+        // A successful retry has completed recovery; do not let a later reload
+        // reopen the obsolete timeout state with the old answers.
+        clearStoredGuidanceRecovery();
         // Reset export state for new guidance session
         setHasExported(false);
       } else {
@@ -700,6 +703,21 @@ export default function CaseGuidance() {
   const handleTimedOutAnswersChange = useCallback((data: any) => {
     setPendingGuidanceData(data);
   }, []);
+
+  const handleCancelQAFlow = () => {
+    const wasReviewingTimedOutAnswers = reviewingTimedOutAnswers;
+
+    setShowQAFlow(false);
+    setReviewingTimedOutAnswers(false);
+
+    if (wasReviewingTimedOutAnswers) {
+      setPendingGuidanceData(null);
+      setGuidanceTimedOut(false);
+      setGuidanceRecoveryError(false);
+      setRetryCaptchaToken(null);
+      clearStoredGuidanceRecovery();
+    }
+  };
 
   const handleNewSession = async () => {
     if (isClearingSession) return;
@@ -1009,10 +1027,7 @@ export default function CaseGuidance() {
         <main className="editorial-workspace max-w-7xl mx-auto px-4 py-8">
           <QAFlow
             onComplete={handleQAComplete}
-            onCancel={() => {
-              setShowQAFlow(false);
-              setReviewingTimedOutAnswers(false);
-            }}
+            onCancel={handleCancelQAFlow}
             onFindLawyer={() => {
               setShowQAFlow(false);
               setShowPublicDefenderModal(true);

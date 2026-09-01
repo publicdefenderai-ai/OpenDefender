@@ -24,6 +24,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { pathToFileURL } from 'node:url';
 
 const DRY_RUN = process.argv.includes('--dry-run');
 
@@ -34,7 +35,7 @@ if (BATCH !== null && (isNaN(BATCH) || BATCH < 1 || BATCH > 10)) {
   process.exit(1);
 }
 
-interface VerificationResult {
+export interface VerificationResult {
   chargeId: string;
   chargeName: string;
   jurisdiction: string;
@@ -43,9 +44,10 @@ interface VerificationResult {
   status: string;
   needsManualReview: boolean;
   reason?: string;
+  checkedAt?: string;
 }
 
-interface Report {
+export interface Report {
   runAt: string;
   totalChecked: number;
   okCount: number;
@@ -72,7 +74,7 @@ function findEntryBlock(source: string, chargeId: string): { start: number; end:
 /**
  * Promotes a single entry from medium → high, and updates the source field.
  */
-function promoteEntry(source: string, chargeId: string, verifiedMonth: string): {
+export function promoteEntry(source: string, chargeId: string, verifiedMonth: string): {
   source: string;
   promoted: boolean;
 } {
@@ -103,7 +105,7 @@ function promoteEntry(source: string, chargeId: string, verifiedMonth: string): 
  * Demotes a single entry to a target confidence level and updates the source field.
  * Used for not_found → needs_review and repealed → low.
  */
-function demoteEntry(
+export function demoteEntry(
   source: string,
   chargeId: string,
   targetConfidence: 'needs_review' | 'low',
@@ -133,6 +135,62 @@ function demoteEntry(
   };
 }
 
+export function parseVerificationReport(value: unknown): Report {
+  if (!value || typeof value !== 'object') {
+    throw new Error('Invalid citation verification report: expected an object');
+  }
+
+  const report = value as Record<string, unknown>;
+  if (
+    typeof report.runAt !== 'string' ||
+    !Number.isInteger(report.totalChecked) ||
+    !Number.isInteger(report.okCount) ||
+    !Number.isInteger(report.needsReviewCount) ||
+    !Array.isArray(report.results)
+  ) {
+    throw new Error('Invalid citation verification report: missing required report fields');
+  }
+
+  const results = report.results.map((value, index): VerificationResult => {
+    if (!value || typeof value !== 'object') {
+      throw new Error(`Invalid citation verification result at index ${index}`);
+    }
+
+    const result = value as Record<string, unknown>;
+    if (
+      typeof result.chargeId !== 'string' ||
+      typeof result.chargeName !== 'string' ||
+      typeof result.jurisdiction !== 'string' ||
+      (typeof result.citation !== 'string' && result.citation !== null) ||
+      typeof result.currentConfidence !== 'string' ||
+      typeof result.status !== 'string' ||
+      typeof result.needsManualReview !== 'boolean'
+    ) {
+      throw new Error(`Invalid citation verification result at index ${index}: missing required fields`);
+    }
+
+    return {
+      chargeId: result.chargeId,
+      chargeName: result.chargeName,
+      jurisdiction: result.jurisdiction,
+      citation: result.citation,
+      currentConfidence: result.currentConfidence,
+      status: result.status,
+      needsManualReview: result.needsManualReview,
+      ...(typeof result.reason === 'string' ? { reason: result.reason } : {}),
+      ...(typeof result.checkedAt === 'string' ? { checkedAt: result.checkedAt } : {}),
+    };
+  });
+
+  return {
+    runAt: report.runAt,
+    totalChecked: report.totalChecked as number,
+    okCount: report.okCount as number,
+    needsReviewCount: report.needsReviewCount as number,
+    results,
+  };
+}
+
 function main(): void {
   // Determine report path — batch-specific or shared
   const reportFilename = BATCH !== null
@@ -157,7 +215,7 @@ function main(): void {
     process.exit(1);
   }
 
-  const report = JSON.parse(fs.readFileSync(reportPath, 'utf-8')) as Report;
+  const report = parseVerificationReport(JSON.parse(fs.readFileSync(reportPath, 'utf-8')));
   const verifiedMonth = new Date().toISOString().slice(0, 7); // YYYY-MM
 
   const verified    = report.results.filter(r => r.status === 'verified');
@@ -341,4 +399,6 @@ function main(): void {
   }
 }
 
-main();
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main();
+}

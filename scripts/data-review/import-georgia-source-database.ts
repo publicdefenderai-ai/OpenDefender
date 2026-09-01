@@ -1,12 +1,14 @@
 /**
  * Build Georgia's committed authority manifest.
  *
- * The Georgia General Assembly public API exposes legislation metadata and
- * code-title names, but not codified section text. The current Official Code
- * of Georgia Annotated section service requires authenticated Lexis access.
- * Never substitute Justia, OpenLaws, jury instructions, or training data:
- * every current Georgia catalog row is therefore withheld until an official
- * section-text contract is available.
+ * The General Assembly's official API exposes title metadata, while its public
+ * Lexis TOC search renders codified section results. This is an automation
+ * restriction rather than a total access failure: complete documents require
+ * browser cookie/human-verification state, while result rows omit the durable
+ * pddocid and currentness evidence required by the manifest. Never substitute
+ * secondary mirrors for selectable authority: every current Georgia catalog row
+ * remains withheld until the official complete-document contract is
+ * independently repeatable.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -19,7 +21,7 @@ import {
 } from "../../server/data/georgia-source-database-seed";
 
 export const GEORGIA_OFFICIAL_SOURCE_LIMITATION =
-  "The Georgia General Assembly public API exposes legislation metadata and code-title names, but not current codified section text; the authenticated Official Code of Georgia Annotated service is not a public section-document contract.";
+  "Georgia's official General Assembly API exposes only title metadata through georgia-code/titles and requires a site-issued bearer token; it has no public section-text endpoint. The official Lexis TOC search is publicly human-accessible and renders codified section results, but unattended complete-document retrieval requires browser cookie/human-verification state and result rows omit durable urn:contentItem identity and currentness fields. Justia, Public.Resource.Org/UniCourt, Internet Archive, and other secondary or authenticated-only sources may support discovery only and remain outside selectable authority.";
 
 export function buildGeorgiaAuthorityManifest(
   generatedAt = new Date(),

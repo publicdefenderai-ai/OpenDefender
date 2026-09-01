@@ -123,6 +123,28 @@ export async function checkAttorneySession(): Promise<AttorneySessionResponse> {
 }
 
 /**
+ * Check whether the attorney portal is enabled by the running server.
+ * This must be runtime-derived so a prebuilt client cannot drift from the
+ * server-side feature flag.
+ */
+export async function checkAttorneyPortalConfig(): Promise<boolean> {
+  try {
+    const response = await fetch(`${API_BASE}/config`, {
+      method: "GET",
+      credentials: "include",
+      cache: "no-store",
+    });
+
+    if (!response.ok) return false;
+
+    const data = await response.json();
+    return data.success === true && data.enabled === true;
+  } catch {
+    return false;
+  }
+}
+
+/**
  * End the current attorney session
  */
 export async function endAttorneySession(): Promise<{ success: boolean; error?: string }> {
