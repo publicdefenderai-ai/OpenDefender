@@ -63,27 +63,39 @@ for (const shutdownSignal of ["SIGINT", "SIGTERM"]) {
   });
 }
 
-export async function runProductionStartup({
+export function runProductionStartup({
   seed = seedAuthorityDatabases,
   launch = startServer,
-  onFailure = () => {
-    process.exitCode = 1;
-  },
+  onFailure = () => {},
 } = {}) {
-  try {
-    await seed();
-  } catch (error) {
-    console.error("[production-start] Authority seed refresh failed; HTTP server will not start:", error);
-    onFailure(error);
-    return false;
-  }
   launch();
   console.log(
-    `[production-start] HTTP server starting after ${seedScripts.length}-jurisdiction authority seed refresh.`,
+    `[production-start] HTTP server starting before ${seedScripts.length}-jurisdiction authority seed refresh.`,
   );
+
+  const handleSeedFailure = (error) => {
+    console.error(
+      "[production-start] Authority seed refresh failed; HTTP server remains available:",
+      error,
+    );
+    onFailure(error);
+  };
+
+  try {
+    Promise.resolve(seed())
+      .then(() => {
+        console.log(
+          `[production-start] Authority seed refresh completed for ${seedScripts.length} jurisdictions.`,
+        );
+      })
+      .catch(handleSeedFailure);
+  } catch (error) {
+    handleSeedFailure(error);
+  }
+
   return true;
 }
 
 if (fileURLToPath(import.meta.url) === resolve(process.argv[1] ?? "")) {
-  void runProductionStartup();
+  runProductionStartup();
 }

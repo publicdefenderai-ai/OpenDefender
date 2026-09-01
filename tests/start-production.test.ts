@@ -1,41 +1,49 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { runProductionStartup } from "../scripts/start-production.mjs";
 
-describe("production startup authority gate", () => {
+describe("production startup", () => {
   afterEach(() => {
     vi.restoreAllMocks();
   });
 
-  it("does not launch HTTP when an authority seed fails", async () => {
+  it("starts HTTP even when an authority seed fails", async () => {
     const launch = vi.fn();
     const onFailure = vi.fn();
     vi.spyOn(console, "error").mockImplementation(() => undefined);
 
-    const started = await runProductionStartup({
-      seed: async () => {
+    const started = runProductionStartup({
+      seed: () => {
         throw new Error("simulated seed failure");
       },
       launch,
       onFailure,
     });
 
-    expect(started).toBe(false);
-    expect(launch).not.toHaveBeenCalled();
+    expect(started).toBe(true);
+    expect(launch).toHaveBeenCalledOnce();
+    await Promise.resolve();
     expect(onFailure).toHaveBeenCalledOnce();
   });
 
-  it("launches HTTP only after every authority seed succeeds", async () => {
+  it("launches HTTP before an asynchronous authority seed completes", async () => {
     const events: string[] = [];
-    const started = await runProductionStartup({
-      seed: async () => {
-        events.push("seed-complete");
-      },
+    let finishSeed!: () => void;
+    const started = runProductionStartup({
+      seed: () =>
+        new Promise<void>((resolve) => {
+          events.push("seed-started");
+          finishSeed = resolve;
+        }),
       launch: () => {
         events.push("http-started");
       },
     });
 
     expect(started).toBe(true);
-    expect(events).toEqual(["seed-complete", "http-started"]);
+    expect(events).toEqual(["http-started", "seed-started"]);
+
+    finishSeed();
+    await Promise.resolve();
+    expect(events).toEqual(["http-started", "seed-started"]);
   });
 });
