@@ -13,6 +13,8 @@ import {
   buildSouthCarolinaSourceUrl,
   matchesSouthCarolinaCatalogTitle,
   parseSouthCarolinaCitation,
+  SOUTH_CAROLINA_EXACT_TITLE_ALIASES,
+  validateSouthCarolinaManifestRecord,
   type SouthCarolinaAuthorityManifest,
   type SouthCarolinaAuditFinding,
   type SouthCarolinaAuditFindingCode,
@@ -354,6 +356,37 @@ function compareSouthCarolinaAudit(
   return issues;
 }
 
+function compareSouthCarolinaApprovedAliases(
+  manifest: Pick<SouthCarolinaAuthorityManifest, "catalogRecords">,
+): string[] {
+  const recordsById = new Map(manifest.catalogRecords.map((record) => [record.chargeId, record]));
+  const issues: string[] = [];
+  for (const [chargeId, aliases] of Object.entries(SOUTH_CAROLINA_EXACT_TITLE_ALIASES)) {
+    const record = recordsById.get(chargeId);
+    const aliasTitles = new Set(aliases.map((alias) => alias.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()));
+    const currentAliases = new Set(
+      record?.provisions
+        .map((provision) => provision.officialTitle.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim())
+        .filter((title) => aliasTitles.has(title)),
+    );
+    const validationError = record
+      ? validateSouthCarolinaManifestRecord(record)
+      : "missing South Carolina catalog row";
+    if (
+      !record ||
+      !isSelectableSouthCarolinaDisposition(record.disposition) ||
+      currentAliases.size !== aliases.length ||
+      validationError
+    ) {
+      issues.push(
+        `approved South Carolina title alias mapping for ${chargeId} does not match the current official title, ` +
+        `exact citation, and required subdivision evidence${validationError ? ` (${validationError})` : ""}`,
+      );
+    }
+  }
+  return issues;
+}
+
 export function findSouthCarolinaManifestDrift(
   manifest: Pick<SouthCarolinaAuthorityManifest, "catalogRecords" | "audit">,
 ): string[] {
@@ -365,7 +398,7 @@ export function findSouthCarolinaManifestDrift(
     buildSouthCarolinaAudit(manifest.catalogRecords),
     manifest.audit,
   );
-  return [...inventoryIssues, ...auditIssues];
+  return [...inventoryIssues, ...auditIssues, ...compareSouthCarolinaApprovedAliases(manifest)];
 }
 
 export function assertSouthCarolinaManifestIsCurrent(

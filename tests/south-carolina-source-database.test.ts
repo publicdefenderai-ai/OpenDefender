@@ -779,6 +779,54 @@ describe("South Carolina authority manifest", () => {
     expect(incomplete.provisions).toEqual([]);
   });
 
+  it("fails closed when an approved alias no longer matches the current official title", () => {
+    const charge = criminalCharges.find((candidate) => candidate.id === "sc-voluntary-manslaughter")!;
+    const staleTitle = buildSouthCarolinaManifestRecord(
+      charge,
+      [document("16-3-50", "Manslaughter (amended)")],
+      importedAt,
+    );
+
+    expect(staleTitle.disposition).toBe("require_exact_reselection");
+    expect(staleTitle.provisions).toEqual([]);
+    expect(staleTitle.auditFindings).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        code: "official_title_mismatch",
+        classification: "structural",
+        reference: "16-3-50",
+      }),
+    ]));
+  });
+
+  it("rejects a selectable record when audited title evidence drifts from its provision", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const record = structuredClone(manifest.catalogRecords.find(
+      (candidate) => candidate.chargeId === "sc-voluntary-manslaughter",
+    )!);
+    record.sourceAudit.references[0].officialTitle = "Manslaughter (amended)";
+
+    expect(validateSouthCarolinaManifestRecord(record)).toBe(
+      "Manifest authority provision 1 is not an exact verified South Carolina match",
+    );
+  });
+
+  it("names an affected charge when a committed alias no longer matches its official evidence", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const staleManifest = structuredClone(manifest);
+    const record = staleManifest.catalogRecords.find(
+      (candidate) => candidate.chargeId === "sc-voluntary-manslaughter",
+    )!;
+    record.provisions[0].officialTitle = "Manslaughter (amended)";
+    record.canonicalTitle = "Manslaughter (amended)";
+    record.sourceAudit.references[0].officialTitle = "Manslaughter (amended)";
+
+    expect(findSouthCarolinaManifestDrift(staleManifest)).toEqual(
+      expect.arrayContaining([
+        expect.stringMatching(/sc-voluntary-manslaughter.*official title/i),
+      ]),
+    );
+  });
+
   it("rejects a tampered selectable manifest record at load time", () => {
     const manifest = JSON.parse(readFileSync(
       "scripts/data-review/output/sc-source-manifest.json",

@@ -245,6 +245,12 @@ export function matchesSouthCarolinaCatalogTitle(charge: CriminalCharge, title: 
       .some((alias) => normalized === normalizeTitle(alias));
 }
 
+function isSouthCarolinaSelectableDisposition(
+  disposition: SouthCarolinaManifestRecord["disposition"],
+): boolean {
+  return disposition === "retain" || disposition === "exact_alias_rename";
+}
+
 function hasSubdivision(text: string, subdivision: string | null): boolean {
   if (!subdivision) return true;
   const parts = [...subdivision.matchAll(/\(([a-z0-9]+)\)|\b(\d+)\b/gi)]
@@ -517,30 +523,54 @@ export function validateSouthCarolinaManifestRecord(record: AuthorityCatalogReco
   ) return "Manifest catalog identity does not match the current South Carolina catalog";
 
   const references = parseSouthCarolinaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
-  const selectable = record.disposition === "retain" || record.disposition === "exact_alias_rename";
+  const scRecord = record as SouthCarolinaManifestRecord;
+  const selectable = isSouthCarolinaSelectableDisposition(record.disposition);
   if (!selectable) {
     return record.provisions.length === 0 ? null : "Withheld South Carolina records must not carry authority provisions";
   }
   if (
     record.apiStatus !== "verified" ||
     record.provisions.length !== references.length ||
-    !codeSupportsReferences(charge, references)
+    !codeSupportsReferences(charge, references) ||
+    !scRecord.sourceAudit ||
+    scRecord.sourceAudit.citation !== CHARGE_CITATIONS[charge.id]?.citation ||
+    scRecord.sourceAudit.references.length !== references.length
   ) return "Selectable South Carolina record does not have complete exact statutory support";
   if (record.canonicalTitle !== record.provisions[0]?.officialTitle) {
     return "Manifest canonical title does not match its first authority provision";
   }
   for (const [index, provision] of record.provisions.entries()) {
     const reference = references[index];
+    const referenceAudit = scRecord.sourceAudit.references[index];
+    const expectedCitation = reference
+      ? `S.C. Code Ann. § ${reference.section}${reference.subdivision ?? ""}`
+      : null;
     if (
       !reference ||
+      !referenceAudit ||
       provision.lawId !== "SC" ||
       provision.section !== reference.section ||
       provision.subdivision !== reference.subdivision ||
       provision.sourceKey !== buildSouthCarolinaSourceKey(reference.section, reference.subdivision) ||
-      provision.citation !== `S.C. Code Ann. § ${reference.section}${reference.subdivision ?? ""}` ||
+      provision.citation !== expectedCitation ||
       provision.sourceUrl !== buildSouthCarolinaSourceUrl(reference.section) ||
+      referenceAudit.section !== reference.section ||
+      referenceAudit.subdivision !== reference.subdivision ||
+      referenceAudit.citation !== expectedCitation ||
+      referenceAudit.officialUrl !== buildSouthCarolinaSourceUrl(reference.section) ||
+      referenceAudit.fetchStatus !== "success" ||
+      referenceAudit.sectionExtractionStatus !== "complete" ||
+      !referenceAudit.officialTitle ||
+      referenceAudit.officialTitle !== provision.officialTitle ||
+      referenceAudit.contentHash !== provision.contentHash ||
+      !referenceAudit.contentEvidence ||
+      !referenceAudit.historyEvidence ||
+      referenceAudit.findings.length === 0 ||
+      referenceAudit.findings.some((finding) => finding.classification !== "success") ||
       !matchesSouthCarolinaCatalogTitle(charge, provision.officialTitle) ||
       !hasSubdivision(provision.content ?? "", reference.subdivision) ||
+      !new RegExp(`^SECTION\\s+${reference.section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\.`, "i")
+        .test(provision.content ?? "") ||
       provision.hashBasis !== "source_content" ||
       typeof provision.content !== "string" ||
       provision.content.length === 0 ||
@@ -565,7 +595,11 @@ export function buildSouthCarolinaSourceDatabaseSeed(
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
   const links: AuthorityChargeLinkSeed[] = [];
   for (const record of manifest.catalogRecords) {
-    if (record.disposition !== "retain" && record.disposition !== "exact_alias_rename") continue;
+    if (!isSouthCarolinaSelectableDisposition(record.disposition)) continue;
+    const validationError = validateSouthCarolinaManifestRecord(record);
+    if (validationError) {
+      throw new Error(`${record.chargeId}: ${validationError}`);
+    }
     for (const provision of record.provisions) {
       if (!sources.has(provision.sourceKey)) {
         sources.set(provision.sourceKey, {
