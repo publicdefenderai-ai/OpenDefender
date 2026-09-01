@@ -2,6 +2,11 @@ import { createHash } from "node:crypto";
 import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
 import { CHARGE_CITATIONS } from "@shared/criminal-charge-citations";
 import {
+  isSouthCarolinaAliasApproved,
+  isSouthCarolinaOfficialTitleApproved,
+  SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS,
+} from "@shared/south-carolina-title-alias-review";
+import {
   type AuthorityCatalogRecord,
   type AuthorityChargeLinkSeed,
   type AuthorityProvisionSeed,
@@ -116,88 +121,62 @@ function referenceHash(value: unknown): string {
 }
 
 /**
- * These are charge-specific common-name/catchline mappings reviewed against
+ * These are charge-specific common-name/catchline proposals identified against
  * the committed SC source report. They are intentionally limited to rows whose
  * exact catalog citation (including any subdivision) identifies the offense.
  * A broad section heading, a compound citation, or a related catchline alone
- * is not enough to publish a row.
+ * is not enough to publish a row, and no proposal is publishable without the
+ * attorney decision ledger below.
  */
 export const SOUTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
   "sc-voluntary-manslaughter": ["Manslaughter"],
-  "sc-involuntary-manslaughter": [
-    "Involuntary manslaughter; \"criminal negligence\" defined",
-  ],
-  "sc-criminally-negligent-homicide": [
-    "Involuntary manslaughter; \"criminal negligence\" defined",
-  ],
-  "sc-rape-in-the-first-degree": ["Criminal sexual conduct in the first degree"],
-  "sc-rape-in-the-second-degree": ["Criminal sexual conduct in the second degree"],
-  "sc-sexual-assault-in-the-first-degree": [
-    "Criminal sexual conduct in the first degree",
-  ],
-  "sc-sexual-assault-in-the-second-degree": [
-    "Criminal sexual conduct in the second degree",
-  ],
-  "sc-sexual-assault-in-the-third-degree": [
-    "Criminal sexual conduct in the third degree",
-  ],
-  "sc-statutory-rape": [
-    "Criminal sexual conduct with a minor; aggravating and mitigating circumstances; penalties; repeat offenders",
-  ],
-  "sc-theft-by-receiving": [
-    "Receiving stolen goods, chattels, or other property; receiving or possessing property represented by law enforcement as stolen; penalties",
-  ],
-  "sc-identity-theft": ["Financial identity fraud or identity fraud; penalty"],
-  "sc-credit-card-fraud": ["Financial transaction card fraud"],
-  "sc-embezzlement": ["Breach of trust with fraudulent intent"],
-  "sc-burglary-in-the-first-degree": ["Burglary; first degree"],
-  "sc-burglary-in-the-second-degree": ["Burglary; second degree"],
-  "sc-burglary-in-the-third-degree": ["Burglary; third degree"],
-  "sc-carjacking": ["Felony of carjacking; penalties"],
+  "sc-involuntary-manslaughter": ["Involuntary manslaughter; \"criminal negligence\""],
+  "sc-criminally-negligent-homicide": ["Involuntary Manslaughter; \"Criminal Negligence\" Defined"],
+  "sc-rape-in-the-first-degree": ["Criminal Sexual Conduct in the First Degree"],
+  "sc-rape-in-the-second-degree": ["Criminal Sexual Conduct in the Second Degree"],
+  "sc-sexual-assault-in-the-first-degree": ["Criminal Sexual Conduct in the First Degree"],
+  "sc-sexual-assault-in-the-second-degree": ["Criminal Sexual Conduct in the Second Degree"],
+  "sc-sexual-assault-in-the-third-degree": ["Criminal Sexual Conduct in the Third Degree"],
+  "sc-theft-by-receiving": ["Receiving stolen goods, chattels, or other property"],
+  "sc-identity-theft": ["Financial identity fraud or identity fraud"],
+  "sc-credit-card-fraud": ["Financial Transaction Card Fraud"],
+  "sc-embezzlement": ["Breach Of Trust With Fraudulent Intent"],
+  "sc-burglary-in-the-first-degree": ["Burglary; First Degree"],
+  "sc-burglary-in-the-second-degree": ["Burglary; Second Degree"],
+  "sc-burglary-in-the-third-degree": ["Burglary; Third Degree"],
+  "sc-carjacking": ["Felony Carjacking"],
   "sc-possession-of-drug-paraphernalia": [
-    "Unlawful to advertise for sale, manufacture, possess, sell or deliver, or to possess with intent to sell or deliver, paraphernalia",
+    "Advertise, Manufacture, Possess, Sell, Deliver, or Possess with Intent to Distribute Paraphernalia",
   ],
-  "sc-check-fraud": [
-    "Drawing and uttering fraudulent check, draft, or other written order",
-  ],
-  "sc-insurance-fraud": [
-    "Criminal penalties for making false statement or misrepresentation, or assisting, abetting, soliciting or conspiring to do so; restitution to victims",
-  ],
-  "sc-disorderly-conduct": [
-    "Public disorderly conduct; conditional discharge for first-time offenders",
-  ],
-  "sc-dui-first-offense": [
-    "Operating motor vehicle while under influence of alcohol or drugs; penalties; enrollment in Alcohol and Drug Safety Action Program; prosecution",
-  ],
-  "sc-reckless-driving": [
-    "Reckless driving; penalties; suspension of driver's license for second or subsequent offense",
-  ],
-  "sc-driving-while-suspended": [
-    "Penalties for driving while license cancelled, suspended or revoked; route restricted license",
-  ],
-  "sc-driving-under-suspension": [
-    "Penalties for driving while license cancelled, suspended or revoked; route restricted license",
-  ],
-  "sc-petit-larceny": ["Petit larceny; grand larceny"],
-  "sc-assault-and-battery-third-degree": [
-    "Assault and battery; definitions; degrees of offenses",
-  ],
-  "sc-domestic-violence-third-degree": ["Acts prohibited; penalties"],
-  "sc-malicious-injury-to-property": [
-    "Malicious injury to animals and other personal property",
-  ],
-  "sc-failure-to-appear": ["Wilful failure to appear; penalties"],
-  "sc-probation-violation": ["Court action when terms of probation violated"],
-  "sc-open-container": ["Open containers in motor vehicle"],
-  "sc-animal-cruelty-misdemeanor": ["Ill-treatment of animals generally; penalties"],
-  "sc-truancy": ["Penalty for failure to enroll or cause child to attend school"],
-  "sc-littering": [
-    "Dumping litter on private or public property prohibited; exceptions; responsibility for removal; penalties",
-  ],
-  "sc-criminal-attempt": ["Offense of attempt punished as principal offense"],
+  "sc-check-fraud": ["Check Fraud"],
+  "sc-insurance-fraud": ["False Statement or Misrepresentation with Intent to Injure or Defraud"],
+  "sc-dui-first-offense": ["Driving Under the Influence"],
+  "sc-reckless-driving": ["Reckless Driving"],
+  "sc-driving-while-suspended": ["Driving While Suspended"],
+  "sc-driving-under-suspension": ["Driving While Suspended"],
+  "sc-petit-larceny": ["Petit Larceny"],
+  "sc-assault-and-battery-third-degree": ["Assault and Battery, Third Degree"],
+  "sc-domestic-violence-third-degree": ["Domestic Violence, Third Degree"],
+  "sc-malicious-injury-to-property": ["Malicious Injury to Animals and Other Personal Property"],
+  "sc-failure-to-appear": ["Wilful Failure to Appear"],
+  "sc-open-container": ["Open Containers in Motor Vehicle"],
+  "sc-animal-cruelty-misdemeanor": ["Ill Treatment of Animals"],
+  "sc-truancy": ["Failure to Enroll/Attend School"],
   "sc-conspiracy": ["Conspiracy"],
-  "sc-juvenile-transfer-adult-court": ["Transfer of jurisdiction"],
 };
+
+/**
+ * Alias proposals are not legal approval. Keep the proposals in the runtime
+ * authority source so an attorney can review each one against its exact
+ * citation and subdivision, but do not accept one until this ledger contains
+ * an explicit, attributable decision.
+ */
+export {
+  isSouthCarolinaAliasApproved,
+  isSouthCarolinaOfficialTitleApproved,
+  SOUTH_CAROLINA_PRIVATE_REVIEW_RECORD_ID,
+  SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS,
+} from "@shared/south-carolina-title-alias-review";
 
 export function parseSouthCarolinaCitation(citation: string): SouthCarolinaSourceReference[] {
   const match = citation.match(/^S\.C\.\s+Code\s+Ann\.\s+§§?\s*(.+)$/i);
@@ -241,8 +220,10 @@ function codeSupportsReferences(
 export function matchesSouthCarolinaCatalogTitle(charge: CriminalCharge, title: string): boolean {
   const normalized = normalizeTitle(title);
   return normalized === normalizeTitle(charge.name) ||
-    (SOUTH_CAROLINA_EXACT_TITLE_ALIASES[charge.id] ?? [])
-      .some((alias) => normalized === normalizeTitle(alias));
+    (SOUTH_CAROLINA_EXACT_TITLE_ALIASES[charge.id] ?? []).some((alias) =>
+      isSouthCarolinaAliasApproved(charge.id, alias) &&
+      isSouthCarolinaOfficialTitleApproved(charge.id, title),
+    );
 }
 
 function isSouthCarolinaSelectableDisposition(

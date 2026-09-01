@@ -205,6 +205,10 @@ export interface GuidanceChargeClassification {
 
 import { CHARGE_CITATIONS } from './criminal-charge-citations';
 import {
+  SOUTH_CAROLINA_APPROVED_ALIAS_CHARGE_IDS,
+  SOUTH_CAROLINA_NON_ALIAS_EXACT_SOURCE_CHARGE_IDS,
+} from './south-carolina-title-alias-review';
+import {
   assertCaliforniaInventoryComplete,
   getCaliforniaCanonicalCharge,
   getCaliforniaCanonicalCharges,
@@ -225,47 +229,8 @@ import {
  * separate citation overlay still carries a secondary-source confidence.
  */
 export const SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS = new Set([
-  'sc-voluntary-manslaughter',
-  'sc-involuntary-manslaughter',
-  'sc-criminally-negligent-homicide',
-  'sc-rape-in-the-first-degree',
-  'sc-rape-in-the-second-degree',
-  'sc-sexual-assault-in-the-first-degree',
-  'sc-sexual-assault-in-the-second-degree',
-  'sc-sexual-assault-in-the-third-degree',
-  'sc-statutory-rape',
-  'sc-theft-by-receiving',
-  'sc-identity-theft',
-  'sc-credit-card-fraud',
-  'sc-embezzlement',
-  'sc-burglary-in-the-first-degree',
-  'sc-burglary-in-the-second-degree',
-  'sc-burglary-in-the-third-degree',
-  'sc-carjacking',
-  'sc-possession-of-drug-paraphernalia',
-  'sc-check-fraud',
-  'sc-insurance-fraud',
-  'sc-disorderly-conduct',
-  'sc-dui-first-offense',
-  'sc-reckless-driving',
-  'sc-driving-while-suspended',
-  'sc-petit-larceny',
-  'sc-assault-and-battery-third-degree',
-  'sc-domestic-violence-third-degree',
-  'sc-malicious-injury-to-property',
-  'sc-driving-under-suspension',
-  'sc-failure-to-appear',
-  'sc-probation-violation',
-  'sc-open-container',
-  'sc-animal-cruelty-misdemeanor',
-  'sc-truancy',
-  'sc-littering',
-  'sc-criminal-attempt',
-  'sc-conspiracy',
-  'sc-shoplifting',
-  'sc-forgery',
-  'sc-attempted-murder',
-  'sc-juvenile-transfer-adult-court',
+  ...SOUTH_CAROLINA_NON_ALIAS_EXACT_SOURCE_CHARGE_IDS,
+  ...SOUTH_CAROLINA_APPROVED_ALIAS_CHARGE_IDS,
 ]);
 
 /** True only when the entry has a 'high' confidence citation (overlay or inline). */
