@@ -12,8 +12,10 @@ import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 import {
   buildSouthCarolinaManifestRecord,
   buildSouthCarolinaSourceDatabaseSeed,
+  buildSouthCarolinaTitleAliasReviewTracker,
   buildSouthCarolinaSourceKey,
   buildSouthCarolinaSourceUrl,
+  isSouthCarolinaReviewedAliasMappingApproved,
   matchesSouthCarolinaCatalogTitle,
   parseSouthCarolinaCitation,
   SOUTH_CAROLINA_EXACT_TITLE_ALIASES,
@@ -188,6 +190,96 @@ describe("South Carolina authority manifest", () => {
       expect(SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(chargeId), chargeId).toBe(false);
     }
   });
+
+it("builds the attorney tracker from all review proposals and fails closed for stale mappings", () => {
+  const manifest = loadSouthCarolinaAuthorityManifest();
+  const tracker = buildSouthCarolinaTitleAliasReviewTracker(manifest);
+
+  expect(tracker.entries).toHaveLength(39);
+  expect(tracker.counts).toEqual({
+    total: 39,
+    approved: 32,
+    rejected: 7,
+    pending: 0,
+    selectable: 32,
+    withheld: 7,
+  });
+
+  for (const [chargeId, aliases] of Object.entries(SOUTH_CAROLINA_EXACT_TITLE_ALIASES)) {
+    for (const alias of aliases) {
+      const entry = tracker.entries.find(
+        (candidate) => candidate.chargeId === chargeId && candidate.proposedAlias === alias,
+      );
+      expect(entry, `${chargeId}:${alias}`).toMatchObject({
+        catalogLabel: expect.any(String),
+        officialSection: expect.any(String),
+        officialTitle: expect.any(String),
+        citation: expect.stringContaining("S.C. Code Ann."),
+        sourceUrl: expect.stringContaining("scstatehouse.gov"),
+        decision: "approve",
+        reviewer: expect.any(String),
+        reviewedAt: "2026-09-01",
+        rationale: expect.any(String),
+        reviewRecordId: SOUTH_CAROLINA_PRIVATE_REVIEW_RECORD_ID,
+        selectable: true,
+      });
+      expect(entry?.subdivision === null || typeof entry?.subdivision === "string").toBe(true);
+    }
+  }
+
+  const staleManifest = {
+    ...manifest,
+    catalogRecords: manifest.catalogRecords.map((record) =>
+      record.chargeId === "sc-voluntary-manslaughter"
+        ? { ...record, disposition: "require_exact_reselection", provisions: [] as typeof record.provisions }
+        : record,
+    ),
+  };
+  const staleTracker = buildSouthCarolinaTitleAliasReviewTracker(staleManifest);
+  const staleEntry = staleTracker.entries.find(
+    (entry) =>
+      entry.chargeId === "sc-voluntary-manslaughter" &&
+      entry.proposedAlias === "Manslaughter",
+  );
+  expect(staleEntry).toMatchObject({
+    decision: "approve",
+    selectable: false,
+    withheldReason: expect.stringContaining("manifest"),
+  });
+});
+
+it("rejects a changed reviewed citation or subdivision before South Carolina seeding", () => {
+  const manifest = loadSouthCarolinaAuthorityManifest();
+  const original = manifest.catalogRecords.find(
+    (record) => record.chargeId === "sc-voluntary-manslaughter",
+  );
+  expect(original).toBeDefined();
+  const changed = {
+    ...original!,
+    provisions: original!.provisions.map((provision) => ({
+      ...provision,
+      citation: "S.C. Code Ann. § 16-3-51",
+      subdivision: "(A)",
+    })),
+  };
+  expect(
+    isSouthCarolinaReviewedAliasMappingApproved(
+      "sc-voluntary-manslaughter",
+      "Manslaughter",
+      changed.provisions[0].officialTitle,
+      changed.provisions[0].citation,
+      changed.provisions[0].subdivision,
+    ),
+  ).toBe(false);
+  expect(() =>
+    buildSouthCarolinaSourceDatabaseSeed({
+      ...manifest,
+      catalogRecords: manifest.catalogRecords.map((record) =>
+        record.chargeId === changed.chargeId ? changed : record,
+      ),
+    }),
+  ).toThrow(/sc-voluntary-manslaughter:.*exact verified South Carolina match/);
+});
 
   it("keeps the shared citation allow-list synchronized with the approved review source", () => {
     expect(SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS).toEqual(new Set(

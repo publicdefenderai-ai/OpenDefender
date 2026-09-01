@@ -3,8 +3,11 @@ import { criminalCharges, type CriminalCharge } from "@shared/criminal-charges";
 import { CHARGE_CITATIONS } from "@shared/criminal-charge-citations";
 import {
   isSouthCarolinaAliasApproved,
+  isSouthCarolinaReviewedAliasMappingApproved,
   isSouthCarolinaOfficialTitleApproved,
   SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS,
+  type SouthCarolinaTitleAliasReviewTracker,
+  type SouthCarolinaTitleAliasReviewTrackerEntry,
 } from "@shared/south-carolina-title-alias-review";
 import {
   type AuthorityCatalogRecord,
@@ -173,10 +176,134 @@ export const SOUTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
  */
 export {
   isSouthCarolinaAliasApproved,
+  isSouthCarolinaReviewedAliasMappingApproved,
   isSouthCarolinaOfficialTitleApproved,
   SOUTH_CAROLINA_PRIVATE_REVIEW_RECORD_ID,
   SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS,
 } from "@shared/south-carolina-title-alias-review";
+
+function getTrackerReference(record: SouthCarolinaManifestRecord) {
+  const provision = record.provisions[0];
+  const reference = record.sourceAudit.references[0];
+  return {
+    section: provision?.section ?? reference?.section ?? null,
+    subdivision: provision?.subdivision ?? reference?.subdivision ?? null,
+    citation: provision?.citation ?? reference?.citation ?? null,
+    officialTitle: provision?.officialTitle ?? reference?.officialTitle ?? record.canonicalTitle ?? null,
+    sourceUrl: provision?.sourceUrl ?? reference?.officialUrl ?? null,
+  };
+}
+
+/**
+ * Builds the admin-only alias review view from the same committed manifest
+ * used by the authority seed. Rejected and historical proposals remain in the
+ * tracker, but only a current alias with a complete, matching approval and an
+ * exact_alias_rename manifest disposition is selectable.
+ */
+export function buildSouthCarolinaTitleAliasReviewTracker(
+  manifest: SouthCarolinaAuthorityManifest,
+): SouthCarolinaTitleAliasReviewTracker {
+  const entries: SouthCarolinaTitleAliasReviewTrackerEntry[] = [];
+
+  for (const [chargeId, decisions] of Object.entries(SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS)) {
+    const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId);
+    const charge = criminalCharges.find((candidate) => candidate.id === chargeId);
+    if (!record || !charge) continue;
+
+    for (const [proposedAlias, decision] of Object.entries(decisions)) {
+      const reference = getTrackerReference(record);
+      const currentAlias = (SOUTH_CAROLINA_EXACT_TITLE_ALIASES[chargeId] ?? []).some(
+        (alias) => normalizeTitle(alias) === normalizeTitle(proposedAlias),
+      );
+      const decisionHasRequiredApprovalData = Boolean(
+        decision.decision === "approve" &&
+        decision.reviewer?.trim() &&
+        decision.reviewedAt &&
+        !Number.isNaN(new Date(decision.reviewedAt).getTime()) &&
+        decision.note?.trim() &&
+        decision.reviewRecordId?.trim() &&
+        decision.officialTitle?.trim() &&
+        decision.citation?.trim() &&
+        "subdivision" in decision,
+      );
+      const manifestMatchesReview = Boolean(
+        reference.officialTitle &&
+        reference.citation &&
+        isSouthCarolinaReviewedAliasMappingApproved(
+          chargeId,
+          proposedAlias,
+          reference.officialTitle,
+          reference.citation,
+          reference.subdivision,
+        ) &&
+        reference.sourceUrl,
+      );
+      const selectable = Boolean(
+        currentAlias &&
+        record.disposition === "exact_alias_rename" &&
+        record.provisions.length > 0 &&
+        decisionHasRequiredApprovalData &&
+        manifestMatchesReview &&
+        isSouthCarolinaAliasApproved(chargeId, proposedAlias) &&
+        reference.officialTitle &&
+        isSouthCarolinaOfficialTitleApproved(chargeId, reference.officialTitle),
+      );
+
+      let withheldReason: string | null = null;
+      if (!selectable) {
+        if (!currentAlias) {
+          withheldReason = "This proposal is not in the current South Carolina alias allow-list.";
+        } else if (decision.decision === "reject") {
+          withheldReason = "Attorney review rejected this mapping.";
+        } else if (!decisionHasRequiredApprovalData) {
+          withheldReason = "Approval is incomplete; reviewer, date, rationale, and mapping details are required.";
+        } else if (record.disposition !== "exact_alias_rename" || record.provisions.length === 0) {
+          withheldReason = `The committed manifest withholds this mapping (${record.disposition}).`;
+        } else if (!manifestMatchesReview) {
+          withheldReason = "The manifest mapping changed after review; re-review is required.";
+        } else {
+          withheldReason = "The mapping is withheld by the South Carolina authority gate.";
+        }
+      }
+
+      entries.push({
+        id: `${chargeId}:${proposedAlias}`,
+        chargeId,
+        catalogLabel: charge.name,
+        catalogCode: charge.code,
+        proposedAlias,
+        officialSection: reference.section,
+        subdivision: reference.subdivision,
+        officialTitle: reference.officialTitle,
+        citation: reference.citation,
+        sourceUrl: reference.sourceUrl,
+        decision: decision.decision,
+        reviewer: decision.reviewer ?? null,
+        reviewedAt: decision.reviewedAt ?? null,
+        rationale: decision.note ?? "",
+        reviewRecordId: decision.reviewRecordId ?? null,
+        disposition: record.disposition,
+        selectable,
+        withheldReason,
+      });
+    }
+  }
+
+  const counts = {
+    total: entries.length,
+    approved: entries.filter((entry) => entry.decision === "approve").length,
+    rejected: entries.filter((entry) => entry.decision === "reject").length,
+    pending: entries.filter((entry) => entry.decision === "pending").length,
+    selectable: entries.filter((entry) => entry.selectable).length,
+    withheld: entries.filter((entry) => !entry.selectable).length,
+  };
+
+  return {
+    manifestGeneratedAt: manifest.generatedAt.toISOString(),
+    entries,
+    counts,
+  };
+}
 
 export function parseSouthCarolinaCitation(citation: string): SouthCarolinaSourceReference[] {
   const match = citation.match(/^S\.C\.\s+Code\s+Ann\.\s+§§?\s*(.+)$/i);
@@ -549,6 +676,16 @@ export function validateSouthCarolinaManifestRecord(record: AuthorityCatalogReco
       referenceAudit.findings.length === 0 ||
       referenceAudit.findings.some((finding) => finding.classification !== "success") ||
       !matchesSouthCarolinaCatalogTitle(charge, provision.officialTitle) ||
+      (record.disposition === "exact_alias_rename" &&
+        !(SOUTH_CAROLINA_EXACT_TITLE_ALIASES[record.chargeId] ?? []).some((proposedAlias) =>
+          isSouthCarolinaReviewedAliasMappingApproved(
+            record.chargeId,
+            proposedAlias,
+            provision.officialTitle,
+            provision.citation,
+            provision.subdivision,
+          ),
+        )) ||
       !hasSubdivision(provision.content ?? "", reference.subdivision) ||
       !new RegExp(`^SECTION\\s+${reference.section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\.`, "i")
         .test(provision.content ?? "") ||

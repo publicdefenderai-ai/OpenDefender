@@ -9,6 +9,42 @@ export interface SouthCarolinaTitleAliasReviewDecision {
   reviewRecordId?: string;
 }
 
+export type SouthCarolinaAliasTrackerDecision = "approve" | "reject" | "pending";
+
+export interface SouthCarolinaTitleAliasReviewTrackerEntry {
+  id: string;
+  chargeId: string;
+  catalogLabel: string;
+  catalogCode: string;
+  proposedAlias: string;
+  officialSection: string | null;
+  subdivision: string | null;
+  officialTitle: string | null;
+  citation: string | null;
+  sourceUrl: string | null;
+  decision: SouthCarolinaAliasTrackerDecision;
+  reviewer: string | null;
+  reviewedAt: string | null;
+  rationale: string;
+  reviewRecordId: string | null;
+  disposition: string;
+  selectable: boolean;
+  withheldReason: string | null;
+}
+
+export interface SouthCarolinaTitleAliasReviewTracker {
+  manifestGeneratedAt: string;
+  entries: SouthCarolinaTitleAliasReviewTrackerEntry[];
+  counts: {
+    total: number;
+    approved: number;
+    rejected: number;
+    pending: number;
+    selectable: number;
+    withheld: number;
+  };
+}
+
 /**
  * Alias proposals are not legal approval. An attorney must add an
  * attributable decision here before an alias can become a verified citation.
@@ -499,6 +535,26 @@ export function isSouthCarolinaOfficialTitleApproved(
     typeof decision.citation === "string" &&
     "subdivision" in decision &&
     normalizeTitle(decision.officialTitle) === normalizeTitle(officialTitle),
+  );
+}
+
+export function isSouthCarolinaReviewedAliasMappingApproved(
+  chargeId: string,
+  proposedAlias: string,
+  officialTitle: string,
+  citation: string,
+  subdivision: string | null,
+): boolean {
+  const decision = Object.entries(SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS[chargeId] ?? [])
+    .find(([alias]) => normalizeTitle(alias) === normalizeTitle(proposedAlias))?.[1];
+  return Boolean(
+    decision?.decision === "approve" &&
+    hasCompleteReviewDecision(decision) &&
+    decision.officialTitle &&
+    decision.citation &&
+    normalizeTitle(decision.officialTitle) === normalizeTitle(officialTitle) &&
+    decision.citation === citation &&
+    (decision.subdivision ?? null) === (subdivision ?? null),
   );
 }
 

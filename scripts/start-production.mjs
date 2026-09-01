@@ -1,4 +1,6 @@
 import { spawn } from "node:child_process";
+import { fileURLToPath } from "node:url";
+import { resolve } from "node:path";
 
 const seedScripts = [
   "dist/seed-new-york-source-database.js",
@@ -61,10 +63,27 @@ for (const shutdownSignal of ["SIGINT", "SIGTERM"]) {
   });
 }
 
-startServer();
-console.log(
-  `[production-start] HTTP server starting before ${seedScripts.length}-jurisdiction authority seed refresh.`,
-);
-seedAuthorityDatabases().catch((error) => {
-  console.error("[production-start] Authority seed refresh failed:", error);
-});
+export async function runProductionStartup({
+  seed = seedAuthorityDatabases,
+  launch = startServer,
+  onFailure = () => {
+    process.exitCode = 1;
+  },
+} = {}) {
+  try {
+    await seed();
+  } catch (error) {
+    console.error("[production-start] Authority seed refresh failed; HTTP server will not start:", error);
+    onFailure(error);
+    return false;
+  }
+  launch();
+  console.log(
+    `[production-start] HTTP server starting after ${seedScripts.length}-jurisdiction authority seed refresh.`,
+  );
+  return true;
+}
+
+if (fileURLToPath(import.meta.url) === resolve(process.argv[1] ?? "")) {
+  void runProductionStartup();
+}

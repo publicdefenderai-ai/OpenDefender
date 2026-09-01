@@ -34,6 +34,7 @@ import { pennsylvaniaSourceDatabase } from "./services/pennsylvania-source-datab
 import { loadPennsylvaniaAuthorityManifest } from "./data/pennsylvania-manifest-loader";
 import { southCarolinaSourceDatabase } from "./services/south-carolina-source-database";
 import { loadSouthCarolinaAuthorityManifest } from "./data/south-carolina-manifest-loader";
+import { buildSouthCarolinaTitleAliasReviewTracker } from "./data/south-carolina-source-database-seed";
 import { illinoisSourceDatabase } from "./services/illinois-source-database";
 import { loadIllinoisAuthorityManifest } from "./data/illinois-manifest-loader";
 import { ohioSourceDatabase } from "./services/ohio-source-database";
@@ -1225,6 +1226,29 @@ export async function registerRoutes(
         res.status(500).json({
           success: false,
           error: "Source coverage report is unavailable",
+        });
+      }
+    },
+  );
+
+  // Admin-only: expose the South Carolina alias decision ledger alongside the
+  // exact manifest evidence counsel needs to review each proposed mapping.
+  // This intentionally returns metadata only, never stored statute text.
+  app.get(
+    "/api/admin/south-carolina-title-alias-review",
+    adminRateLimiter,
+    requireAdminAuth,
+    (_req, res) => {
+      try {
+        res.json({
+          success: true,
+          ...buildSouthCarolinaTitleAliasReviewTracker(loadSouthCarolinaAuthorityManifest()),
+        });
+      } catch (error) {
+        errLog("Failed to build South Carolina title alias review tracker", error);
+        res.status(500).json({
+          success: false,
+          error: "South Carolina title alias review tracker is unavailable",
         });
       }
     },
