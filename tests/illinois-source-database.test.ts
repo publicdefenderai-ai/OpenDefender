@@ -177,14 +177,16 @@ describe("Illinois authority manifest", () => {
     expect(ilCount).toBe(116);
     expect(manifest.catalogRecords).toHaveLength(ilCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ilCount);
-    expect(seed.sources).toHaveLength(19);
-    expect(seed.snapshots).toHaveLength(20);
-    expect(seed.links).toHaveLength(20);
-    expect(seed.selectableChargeIds).toHaveLength(20);
+    expect(seed.sources).toHaveLength(21);
+    expect(seed.snapshots).toHaveLength(22);
+    expect(seed.links).toHaveLength(22);
+    expect(seed.selectableChargeIds).toHaveLength(22);
     expect(seed.selectableChargeIds).toContain("il-aggravated-assault");
+    expect(seed.selectableChargeIds).toContain("il-possession-of-drug-paraphernalia");
+    expect(seed.selectableChargeIds).toContain("il-money-laundering");
     expect(seed.selectableChargeIds).not.toContain("il-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(96);
+      record.disposition === "require_exact_reselection")).toHaveLength(94);
     expect(manifest.audit).toMatchObject({
       schemaVersion: 1,
       catalogRowCount: 116,
@@ -200,6 +202,18 @@ describe("Illinois authority manifest", () => {
     expect(manifest.catalogRecords.find((record) =>
       record.chargeId === "il-commercial-burglary")?.disposition)
       .toBe("require_exact_reselection");
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "il-possession-of-drug-paraphernalia")).toMatchObject({
+      disposition: "retain",
+      catalogCode: "600/3.5",
+      canonicalTitle: "Possession of drug paraphernalia",
+    });
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "il-money-laundering")).toMatchObject({
+      disposition: "retain",
+      catalogCode: "5/29B-1",
+      canonicalTitle: "Money laundering",
+    });
   });
 
   it("records each source outcome and rejects a manifest with missing audit metadata", () => {

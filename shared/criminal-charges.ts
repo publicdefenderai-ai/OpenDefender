@@ -12251,7 +12251,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'il-possession-of-drug-paraphernalia',
     name: 'Possession of Drug Paraphernalia',
-    code: '5/600/3.5',
+    code: '600/3.5',
     jurisdiction: 'IL',
     category: 'misdemeanor',
     description: 'Possession of drug-related equipment under Illinois law',
@@ -90267,7 +90267,7 @@ const phase4WhiteCollarCharges: CriminalCharge[] = [
   {
     id: 'il-money-laundering',
     name: 'Money Laundering',
-    code: 'IL money laundering statute',
+    code: '5/29B-1',
     jurisdiction: 'IL',
     category: 'felony',
     description: 'Knowingly engaging in a financial transaction with the proceeds of a specified unlawful activity with the intent to conceal the source, promote criminal activity, or evade taxes under Illinois law. Money laundering charges often accompany underlying fraud, drug, or organized crime charges. Structuring transactions to avoid reporting thresholds (smurfing) is a separate but related offense.',

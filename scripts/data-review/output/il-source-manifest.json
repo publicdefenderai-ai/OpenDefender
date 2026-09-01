@@ -3328,28 +3328,70 @@
     {
       "chargeId": "il-possession-of-drug-paraphernalia",
       "catalogLabel": "Possession of Drug Paraphernalia",
-      "catalogCode": "5/600/3.5",
+      "catalogCode": "600/3.5",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
-      "canonicalTitle": null,
-      "provisions": [],
-      "apiStatus": "verified",
-      "dispositionReasons": [
-        "The catalog code does not exactly support every cited Illinois statutory identity."
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Possession of drug paraphernalia",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-600/3.5",
+          "lawId": "720-600",
+          "section": "3.5",
+          "citation": "720 ILCS 600/3.5",
+          "officialTitle": "Possession of drug paraphernalia",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072006000K3.5.htm",
+          "content": "(720 ILCS 600/3.5)\nSec. 3.5. Possession of drug paraphernalia.\n(a) A person who knowingly possesses an item of drug paraphernalia\nwith\nthe intent to use it in ingesting, inhaling, or\notherwise introducing\na controlled substance into the human body, or in preparing a\ncontrolled substance\nfor that use, is guilty of a Class A misdemeanor for which the court\nshall impose a minimum fine of $750 in addition to any other penalty prescribed\nfor a Class A\nmisdemeanor. This subsection (a) does not apply to a person who is legally\nauthorized to possess\nhypodermic syringes or needles under the Hypodermic Syringes and Needles Act.\n(b) In determining intent under subsection (a), the trier of fact may take\ninto consideration the proximity of the controlled substances to\ndrug\nparaphernalia or the presence of a controlled substance on the drug\nparaphernalia.\n(Source: P.A. 101-593, eff. 12-4-19.)",
+          "contentHash": "bc9bc1436ca90741195c3b705ba5c1e97e3ac4523c2076903df592217334fccf",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-09-01T00:55:14.365Z",
+          "effectiveDateStart": "2019-12-04",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-possession-of-drug-paraphernalia",
+            "catalogLabel": "Possession of Drug Paraphernalia",
+            "catalogCode": "600/3.5",
+            "catalogClassification": "misdemeanor",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "600",
+              "section": "3.5",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 101-593, eff. 12-4-19.)",
+              "effectiveDateStart": "2019-12-04",
+              "retrievedAt": "2026-09-01T00:55:14.365Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "76b172b97fc683a6d9885a6aa97a37c22e7a14f788dda8f2b30c5086dded8551",
+            "manifestImportedAt": "2026-09-01T00:55:14.365Z"
+          }
+        }
       ],
+      "apiStatus": "verified",
+      "dispositionReasons": [],
       "auditFindings": [
         {
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official Illinois source was retrieved with complete section and currentness evidence.",
           "reference": "720 ILCS 600/3.5"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited Illinois statutory identity.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -3384,26 +3426,13 @@
             "previousRetrievedAt": "2026-08-31T18:20:32.151Z"
           }
         ],
-        "rowFindings": [
-          {
-            "code": "catalog_code_mismatch",
-            "classification": "structural",
-            "message": "The catalog code does not exactly support every cited Illinois statutory identity.",
-            "reference": null
-          }
-        ],
+        "rowFindings": [],
         "findings": [
           {
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official Illinois source was retrieved with complete section and currentness evidence.",
             "reference": "720 ILCS 600/3.5"
-          },
-          {
-            "code": "catalog_code_mismatch",
-            "classification": "structural",
-            "message": "The catalog code does not exactly support every cited Illinois statutory identity.",
-            "reference": null
           }
         ]
       }
@@ -10002,28 +10031,70 @@
     {
       "chargeId": "il-money-laundering",
       "catalogLabel": "Money Laundering",
-      "catalogCode": "IL money laundering statute",
+      "catalogCode": "5/29B-1",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Illinois statutory identity.",
-      "canonicalTitle": null,
-      "provisions": [],
-      "apiStatus": "verified",
-      "dispositionReasons": [
-        "The catalog code does not exactly support every cited Illinois statutory identity."
+      "disposition": "retain",
+      "dispositionReason": "Catalog label matches the official Illinois title.",
+      "canonicalTitle": "Money laundering",
+      "provisions": [
+        {
+          "sourceKey": "il:statute:720-5/29B-1",
+          "lawId": "720-5",
+          "section": "29B-1",
+          "citation": "720 ILCS 5/29B-1",
+          "officialTitle": "Money laundering",
+          "sourceUrl": "https://www.ilga.gov/legislation/ilcs/documents/072000050K29B-1.htm",
+          "content": "(720 ILCS 5/29B-1) (from Ch. 38, par. 29B-1)\nSec. 29B-1. Money laundering.\n(a) A person commits the offense of money laundering:\n(1) when, knowing that the property involved in a\nfinancial transaction represents the proceeds of some form of unlawful activity, he or she conducts or attempts to conduct the financial transaction which in fact involves criminally derived property:\n(A) with the intent to promote the carrying on\nof the unlawful activity from which the criminally derived property was obtained; or\n(B) where he or she knows or reasonably should\nknow that the financial transaction is designed in whole or in part:\n(i) to conceal or disguise the nature, the\nlocation, the source, the ownership or the control of the criminally derived property; or\n(ii) to avoid a transaction reporting\nrequirement under State law; or\n(1.5) when he or she transports, transmits, or\ntransfers, or attempts to transport, transmit, or transfer a monetary instrument:\n(A) with the intent to promote the carrying on of\nthe unlawful activity from which the criminally derived property was obtained; or\n(B) knowing, or having reason to know, that the\nfinancial transaction is designed in whole or in part:\n(i) to conceal or disguise the nature, the\nlocation, the source, the ownership or the control of the criminally derived property; or\n(ii) to avoid a transaction reporting\nrequirement under State law; or\n(2) when, with the intent to:\n(A) promote the carrying on of a specified\ncriminal activity as defined in this Article; or\n(B) conceal or disguise the nature, location,\nsource, ownership, or control of property believed to be the proceeds of a specified criminal activity as defined in this Article; or\n(C) avoid a transaction reporting requirement\nunder State law,\nhe or she conducts or attempts to conduct a financial\ntransaction involving property he or she believes to be the proceeds of specified criminal activity or property used to conduct or facilitate specified criminal activity as defined in this Article.\n(b) (Blank).\n(c) Sentence.\n(1) Laundering of criminally derived property of a\nvalue not exceeding $10,000 is a Class 3 felony;\n(2) Laundering of criminally derived property of a\nvalue exceeding $10,000 but not exceeding $100,000 is a Class 2 felony;\n(3) Laundering of criminally derived property of a\nvalue exceeding $100,000 but not exceeding $500,000 is a Class 1 felony;\n(4) Money laundering in violation of subsection\n(a) (2) of this Section is a Class X felony;\n(5) Laundering of criminally derived property of a\nvalue exceeding $500,000 is a Class 1 non-probationable felony;\n(6) In a prosecution under clause (a) (1.5) (B) (ii) of\nthis Section, the sentences are as follows:\n(A) Laundering of property of a value not\nexceeding $10,000 is a Class 3 felony;\n(B) Laundering of property of a value exceeding\n$10,000 but not exceeding $100,000 is a Class 2 felony;\n(C) Laundering of property of a value exceeding\n$100,000 but not exceeding $500,000 is a Class 1 felony;\n(D) Laundering of property of a value exceeding\n$500,000 is a Class 1 non-probationable felony.\n(Source: P.A. 99-480, eff. 9-9-15; 100-512, eff. 7-1-18; 100-699, eff. 8-3-18; 100-759, eff. 1-1-19; 100-1163, eff. 12-20-18.)",
+          "contentHash": "e9f7c384b21f3cbcbc611be690b35a61376d6c81cca6bae0336352fc4e92cf04",
+          "hashBasis": "source_content",
+          "retrievedAt": "2026-09-01T00:55:14.365Z",
+          "effectiveDateStart": "2019-01-01",
+          "effectiveDateEnd": null,
+          "supportRole": "offense",
+          "subdivision": null,
+          "metadata": {
+            "chargeId": "il-money-laundering",
+            "catalogLabel": "Money Laundering",
+            "catalogCode": "5/29B-1",
+            "catalogClassification": "felony",
+            "ilcsIdentity": {
+              "chapter": "720",
+              "act": "5",
+              "section": "29B-1",
+              "subdivision": null
+            },
+            "elements": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "grading": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "penalty": {
+              "basis": "verbatim_official_text",
+              "source": "ilga_static_document"
+            },
+            "currentnessEvidence": {
+              "officialStaticDocument": true,
+              "sourceEvidence": "(Source: P.A. 99-480, eff. 9-9-15; 100-512, eff. 7-1-18; 100-699, eff. 8-3-18; 100-759, eff. 1-1-19; 100-1163, eff. 12-20-18.)",
+              "effectiveDateStart": "2019-01-01",
+              "retrievedAt": "2026-09-01T00:55:14.365Z"
+            },
+            "attorneyReview": "pending",
+            "fingerprint": "96afc5dd758540a2dd3d1345ecccade2036004e3f687a76fbbcd87e62fd15669",
+            "manifestImportedAt": "2026-09-01T00:55:14.365Z"
+          }
+        }
       ],
+      "apiStatus": "verified",
+      "dispositionReasons": [],
       "auditFindings": [
         {
           "code": "official_source_verified",
           "classification": "success",
           "message": "Official Illinois source was retrieved with complete section and currentness evidence.",
           "reference": "720 ILCS 5/29B-1"
-        },
-        {
-          "code": "catalog_code_mismatch",
-          "classification": "structural",
-          "message": "The catalog code does not exactly support every cited Illinois statutory identity.",
-          "reference": null
         }
       ],
       "sourceAudit": {
@@ -10058,26 +10129,13 @@
             "previousRetrievedAt": "2026-08-31T18:20:32.151Z"
           }
         ],
-        "rowFindings": [
-          {
-            "code": "catalog_code_mismatch",
-            "classification": "structural",
-            "message": "The catalog code does not exactly support every cited Illinois statutory identity.",
-            "reference": null
-          }
-        ],
+        "rowFindings": [],
         "findings": [
           {
             "code": "official_source_verified",
             "classification": "success",
             "message": "Official Illinois source was retrieved with complete section and currentness evidence.",
             "reference": "720 ILCS 5/29B-1"
-          },
-          {
-            "code": "catalog_code_mismatch",
-            "classification": "structural",
-            "message": "The catalog code does not exactly support every cited Illinois statutory identity.",
-            "reference": null
           }
         ]
       }
@@ -10424,7 +10482,7 @@
     "findingCounts": {
       "official_source_verified": 112,
       "citation_not_parseable": 0,
-      "catalog_code_mismatch": 57,
+      "catalog_code_mismatch": 55,
       "official_fetch_failure": 0,
       "section_not_found": 2,
       "content_missing": 1,
@@ -10446,7 +10504,7 @@
         "catalog_code_mismatch",
         "official_title_mismatch"
       ],
-      "affectedRows": 96,
+      "affectedRows": 94,
       "affectedReferences": 39
     },
     "freshness": {
