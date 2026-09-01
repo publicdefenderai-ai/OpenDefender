@@ -564,6 +564,29 @@ describe("South Carolina authority manifest", () => {
     }
   });
 
+  it("identifies missing and unexpected committed catalog rows before publication", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+
+    const missingRow = structuredClone(manifest);
+    missingRow.catalogRecords = missingRow.catalogRecords.filter(
+      (record) => record.chargeId !== "sc-shoplifting",
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(missingRow)).toThrow(
+      /missing catalog row sc-shoplifting/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(missingRow)).toThrow(/Regenerate/i);
+
+    const unexpectedRow = structuredClone(manifest);
+    unexpectedRow.catalogRecords.push({
+      ...unexpectedRow.catalogRecords[0],
+      chargeId: "sc-unexpected-charge-row",
+    });
+    expect(() => assertSouthCarolinaManifestIsCurrent(unexpectedRow)).toThrow(
+      /unexpected catalog row sc-unexpected-charge-row/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(unexpectedRow)).toThrow(/Regenerate/i);
+  });
+
   it("reports newly complete official evidence for references that were previously withheld", () => {
     const current = loadSouthCarolinaAuthorityManifest();
     const previous = structuredClone(current);
