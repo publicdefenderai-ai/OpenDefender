@@ -24,10 +24,19 @@ describe("North Carolina authority manifest", () => {
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(count);
     expect(manifest.audit.catalogRowCount).toBe(count);
     expect(manifest.audit.parsedReferenceCount).toBe(133);
-    expect(seed.selectableChargeIds).toHaveLength(6);
+    expect(seed.selectableChargeIds).toHaveLength(12);
+    expect(seed.selectableChargeIds).toEqual(expect.arrayContaining([
+      "nc-dwi",
+      "nc-failure-to-appear",
+      "nc-bad-checks",
+      "nc-driving-without-insurance",
+      "nc-open-container",
+      "nc-animal-cruelty-misdemeanor",
+    ]));
+    expect(seed.selectableChargeIds).not.toContain("nc-robbery-in-the-first-degree");
     expect(manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection",
-    )).toHaveLength(124);
+    )).toHaveLength(118);
     expect(manifest.catalogRecords
       .filter((record) => record.disposition === "require_exact_reselection")
       .every((record) => record.provisions.length === 0)).toBe(true);

@@ -143,11 +143,20 @@ function codeSupportsReferences(
 }
 
 /**
- * North Carolina rows intentionally have no automatic aliases. Common names
- * are not treated as legal equivalents to an official catchline without a
- * charge-specific review.
+ * These are charge-specific mappings, not automatic synonyms. Each alias is
+ * limited to a catalog row whose code exactly matches the cited section and
+ * whose official catchline identifies the same offense.
  */
-export const NORTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {};
+export const NORTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
+  "nc-dwi": ["Impaired driving"],
+  "nc-failure-to-appear": ["Penalties for failure to appear"],
+  "nc-bad-checks": ["Worthless checks; multiple presentment of checks"],
+  "nc-driving-without-insurance": [
+    "Operation of motor vehicle without financial responsibility a misdemeanor",
+  ],
+  "nc-open-container": ["Transporting an open container of alcoholic beverage"],
+  "nc-animal-cruelty-misdemeanor": ["Cruelty to animals; construction of section"],
+};
 
 export function matchesNorthCarolinaCatalogTitle(
   charge: CriminalCharge,
