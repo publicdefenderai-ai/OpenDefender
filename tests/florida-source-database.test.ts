@@ -44,6 +44,19 @@ describe("Florida authority manifest", () => {
     expect(seed.links).toHaveLength(25);
     expect(seed.selectableChargeIds).toHaveLength(25);
     expect(seed.selectableChargeIds).toContain("fl-aggravated-assault");
+    const robbery = manifest.catalogRecords.find(
+      (record) => record.chargeId === "fl-robbery-in-the-first-degree",
+    );
+    expect(robbery).toMatchObject({
+      catalogCode: "812.13(2)(a)",
+      disposition: "exact_alias_rename",
+      canonicalTitle: "Robbery",
+    });
+    expect(seed.selectableChargeIds).toContain("fl-robbery-in-the-first-degree");
+    expect(CHARGE_CITATIONS["fl-robbery-in-the-first-degree"]).toMatchObject({
+      instructionRef: "FSJI 15.1",
+      instructionUrl: expect.any(String),
+    });
     expect(seed.selectableChargeIds).not.toEqual(expect.arrayContaining([
       "fl-attempted-murder",
       "fl-noise-violation",

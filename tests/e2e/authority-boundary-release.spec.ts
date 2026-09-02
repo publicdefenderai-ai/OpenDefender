@@ -62,6 +62,34 @@ async function expectChargePresence(
 }
 
 test.describe("authority boundary release gate", () => {
+  test("public v1 charge search returns Florida first-degree robbery with its jury instruction", async ({ page }) => {
+    const searchResponse = await page.request.get(
+      "/api/v1/search?q=robbery&types=charge&limit=20",
+    );
+    expect(searchResponse.ok()).toBe(true);
+    const searchPayload = await searchResponse.json() as SearchPayload & {
+      results: Array<{
+        document?: {
+          id?: string;
+          instructionRef?: string;
+          instructionUrl?: string;
+        };
+      }>;
+    };
+    const floridaRobbery = searchPayload.results.find(
+      (result) => result.document?.id === "charge-fl-robbery-in-the-first-degree",
+    );
+    expect(floridaRobbery, "Florida first-degree robbery must remain in public charge search").toBeDefined();
+    expect(floridaRobbery?.document?.instructionRef).toBe("FSJI 15.1");
+    expect(floridaRobbery?.document?.instructionUrl).toBeTruthy();
+    expect(
+      searchPayload.results.some(
+        (result) => result.document?.id === "charge-il-robbery-in-the-second-degree",
+      ),
+      "withheld Illinois robbery must remain out of public charge search",
+    ).toBe(false);
+  });
+
   test("public v1 charge search returns all current California authority without withheld IDs", async ({ page }) => {
     const currentCaliforniaIds = CALIFORNIA_CANONICAL_RECORDS
       .filter((record) => record.selectable)
