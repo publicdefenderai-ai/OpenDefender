@@ -10,9 +10,12 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-const adminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN;
+const adminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN?.trim();
 if (!adminToken) {
   throw new Error("Release source-readiness check requires its in-memory admin token fixture");
+}
+if (adminToken === process.env.ADMIN_TOKEN) {
+  throw new Error("Release source-readiness check fixture must not reuse the production admin token");
 }
 
 const artifactPath = resolve(process.cwd(), "dist/index.js");

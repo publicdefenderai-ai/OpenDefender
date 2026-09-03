@@ -3,9 +3,12 @@ import { readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-const releaseCheckAdminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN;
+const releaseCheckAdminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN?.trim();
 if (!releaseCheckAdminToken) {
   throw new Error("Release production harness requires its in-memory admin token fixture");
+}
+if (releaseCheckAdminToken === process.env.ADMIN_TOKEN) {
+  throw new Error("Release production harness fixture must not reuse the production admin token");
 }
 
 // These values exist solely to prove that the production artifact honors the
