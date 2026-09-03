@@ -109,7 +109,7 @@ describe("public-source coverage gate", () => {
       rows: 129,
     });
     expect(report.nextHighestValueCoverageTargets.map((target) => target.rows)).toEqual(
-      [129, 87, 118, 102, 94, 93, 92, 78, 27, 21],
+      [129, 87, 102, 94, 93, 92, 78, 60, 27, 21],
     );
     for (const target of report.nextHighestValueCoverageTargets) {
       expect(target.coveragePercentage).toBeGreaterThanOrEqual(0);

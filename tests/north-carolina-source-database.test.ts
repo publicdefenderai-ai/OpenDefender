@@ -24,7 +24,7 @@ describe("North Carolina authority manifest", () => {
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(count);
     expect(manifest.audit.catalogRowCount).toBe(count);
     expect(manifest.audit.parsedReferenceCount).toBe(133);
-    expect(seed.selectableChargeIds).toHaveLength(12);
+    expect(seed.selectableChargeIds).toHaveLength(70);
     expect(seed.selectableChargeIds).toEqual(expect.arrayContaining([
       "nc-dwi",
       "nc-failure-to-appear",
@@ -33,10 +33,19 @@ describe("North Carolina authority manifest", () => {
       "nc-open-container",
       "nc-animal-cruelty-misdemeanor",
     ]));
-    expect(seed.selectableChargeIds).not.toContain("nc-robbery-in-the-first-degree");
+    expect(seed.selectableChargeIds).toContain("nc-robbery-in-the-first-degree");
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "nc-robbery-in-the-first-degree",
+    )?.attorneyReview?.decision).toBe("approve");
+    expect(manifest.catalogRecords.find((record) =>
+      record.chargeId === "nc-recidivist-enhancement",
+    )?.attorneyReview?.note).toContain("separate charge");
     expect(manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection",
-    )).toHaveLength(118);
+    )).toHaveLength(30);
+    expect(manifest.catalogRecords.filter((record) =>
+      record.disposition === "remove",
+    )).toHaveLength(30);
     expect(manifest.catalogRecords
       .filter((record) => record.disposition === "require_exact_reselection")
       .every((record) => record.provisions.length === 0)).toBe(true);

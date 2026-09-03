@@ -8,6 +8,13 @@ import {
   type AuthoritySourceDatabaseSeed,
   type AuthoritySourceSeed,
 } from "../services/authority-source-database";
+import {
+  getNorthCarolinaAttorneyReviewDecision,
+  isNorthCarolinaAttorneyReviewApproved,
+  isNorthCarolinaAttorneyReviewPublishable,
+  type NorthCarolinaAttorneyReviewDecision,
+} from "./north-carolina-title-attorney-review";
+import { getNorthCarolinaTitleReviewAction } from "@shared/north-carolina-title-review-actions";
 
 export const NORTH_CAROLINA_SOURCE_POLICY = "official_north_carolina_general_statutes";
 export const NORTH_CAROLINA_SOURCE_PUBLISHER = "North Carolina General Assembly";
@@ -82,6 +89,7 @@ export interface NorthCarolinaManifestRecord extends AuthorityCatalogRecord {
   dispositionReasons: string[];
   auditFindings: NorthCarolinaAuditFinding[];
   sourceAudit: NorthCarolinaSourceAudit;
+  attorneyReview?: NorthCarolinaAttorneyReviewDecision;
 }
 
 export interface NorthCarolinaManifestAudit {
@@ -148,6 +156,12 @@ function codeSupportsReferences(
  * whose official catchline identifies the same offense.
  */
 export const NORTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
+  "nc-murder-in-the-first-degree": [
+    "Murder in the first and second degree defined; punishment",
+  ],
+  "nc-burglary-in-the-first-degree": ["First and second degree burglary"],
+  "nc-residential-burglary": ["First and second degree burglary"],
+  "nc-burglary-in-the-second-degree": ["Breaking or entering buildings generally"],
   "nc-dwi": ["Impaired driving"],
   "nc-failure-to-appear": ["Penalties for failure to appear"],
   "nc-bad-checks": ["Worthless checks; multiple presentment of checks"],
@@ -161,11 +175,23 @@ export const NORTH_CAROLINA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
 export function matchesNorthCarolinaCatalogTitle(
   charge: CriminalCharge,
   title: string,
+  reference?: NorthCarolinaSourceReference,
 ): boolean {
   const normalized = normalizeTitle(title);
-  return normalized === normalizeTitle(charge.name) ||
+  if (normalized === normalizeTitle(charge.name) ||
     (NORTH_CAROLINA_EXACT_TITLE_ALIASES[charge.id] ?? [])
-      .some((alias) => normalized === normalizeTitle(alias));
+      .some((alias) => normalized === normalizeTitle(alias))) {
+    return true;
+  }
+  return Boolean(
+    reference &&
+    isNorthCarolinaAttorneyReviewApproved(
+      charge.id,
+      title,
+      `N.C. Gen. Stat. § ${reference.section}${reference.subdivision ?? ""}`,
+      reference.subdivision,
+    ),
+  );
 }
 
 function subdivisionParts(value: string): string[] {
@@ -218,7 +244,9 @@ function provisionFromDocument(
         historyPresent: true,
         retrievedAt: document.retrievedAt.toISOString(),
       },
-      attorneyReview: "pending",
+      ...(getNorthCarolinaAttorneyReviewDecision(charge.id)
+        ? { attorneyReview: getNorthCarolinaAttorneyReviewDecision(charge.id) }
+        : { attorneyReview: "pending" }),
       fingerprint: referenceHash({
         sourceKey,
         citation,
@@ -245,6 +273,8 @@ export function buildNorthCarolinaManifestRecord(
     catalogCode: charge.code,
     catalogCategory: charge.category,
   };
+  const attorneyReview = getNorthCarolinaAttorneyReviewDecision(charge.id);
+  const reviewAction = getNorthCarolinaTitleReviewAction(charge.id);
   const references = parseNorthCarolinaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
   const auditFindings = [...sourceAudit.findings];
   if (references.length === 0) {
@@ -271,13 +301,20 @@ export function buildNorthCarolinaManifestRecord(
   )];
   const withheld = (reason: string, apiStatus: "verified" | "api_error" | "placeholder") => ({
     ...base,
-    disposition: "require_exact_reselection" as const,
-    dispositionReason: reason,
-    dispositionReasons: [reason, ...reasons.filter((item) => item !== reason)],
+    disposition: reviewAction?.action === "remove"
+      ? ("remove" as const)
+      : ("require_exact_reselection" as const),
+    dispositionReason: reviewAction?.reason ?? reason,
+    dispositionReasons: [
+      ...(reviewAction ? [reviewAction.reason] : []),
+      reason,
+      ...reasons.filter((item) => item !== reason && item !== reviewAction?.reason),
+    ],
     canonicalTitle: documents[0]?.title ?? null,
     provisions: [],
     apiStatus,
     ...(error ? { error } : {}),
+    ...(attorneyReview ? { attorneyReview } : {}),
     auditFindings,
     sourceAudit,
   });
@@ -295,14 +332,22 @@ export function buildNorthCarolinaManifestRecord(
     "api_error",
   );
   const mismatch = documents.find((document, index) =>
-    !matchesNorthCarolinaCatalogTitle(charge, document.title) ||
+    !matchesNorthCarolinaCatalogTitle(charge, document.title, references[index]) ||
     !hasSubdivision(document.text, references[index].subdivision),
   );
   if (mismatch) {
-    const reason = !matchesNorthCarolinaCatalogTitle(charge, mismatch.title)
+    const mismatchReference = references[documents.indexOf(mismatch)];
+    const reason = !matchesNorthCarolinaCatalogTitle(charge, mismatch.title, mismatchReference)
       ? `The official North Carolina title "${mismatch.title}" is not an exact or explicitly reviewed mapping for the catalog label.`
       : "A required North Carolina subdivision was not found in the complete official section text.";
     return withheld(reason, "verified");
+  }
+  if (attorneyReview && !isNorthCarolinaAttorneyReviewPublishable(charge.id)) {
+    return withheld(
+      reviewAction?.reason ??
+        `Attorney review for this row is recorded but publication is held: ${attorneyReview.note}`,
+      "verified",
+    );
   }
 
   const provisions = documents.map((document, index) =>
@@ -322,13 +367,14 @@ export function buildNorthCarolinaManifestRecord(
     canonicalTitle: provisions[0].officialTitle,
     provisions,
     apiStatus: "verified" as const,
+    ...(attorneyReview ? { attorneyReview } : {}),
     auditFindings,
     sourceAudit,
   };
 }
 
 export function validateNorthCarolinaManifestRecord(
-  record: AuthorityCatalogRecord,
+  record: AuthorityCatalogRecord & Partial<Pick<NorthCarolinaManifestRecord, "attorneyReview">>,
 ): string | null {
   const charge = criminalCharges.find((candidate) => candidate.id === record.chargeId);
   if (!charge || charge.jurisdiction !== "NC") return "Unknown North Carolina catalog charge";
@@ -344,6 +390,14 @@ export function validateNorthCarolinaManifestRecord(
     return record.provisions.length === 0
       ? null
       : "Withheld North Carolina records must not carry authority provisions";
+  }
+  if (
+    record.attorneyReview &&
+    (!isNorthCarolinaAttorneyReviewPublishable(record.chargeId) ||
+      (record.attorneyReview.decision !== "approve" &&
+        getNorthCarolinaTitleReviewAction(record.chargeId)?.action !== "publish"))
+  ) {
+    return "Attorney-reviewed North Carolina record is not publishable";
   }
   if (
     record.apiStatus !== "verified" ||
@@ -368,7 +422,7 @@ export function validateNorthCarolinaManifestRecord(
       provision.sourceKey !== buildNorthCarolinaSourceKey(reference.section, reference.subdivision) ||
       provision.citation !== `N.C. Gen. Stat. § ${reference.section}${reference.subdivision ?? ""}` ||
       provision.sourceUrl !== buildNorthCarolinaSourceUrl(reference.section) ||
-      !matchesNorthCarolinaCatalogTitle(charge, provision.officialTitle) ||
+      !matchesNorthCarolinaCatalogTitle(charge, provision.officialTitle, reference) ||
       !hasSubdivision(provision.content ?? "", reference.subdivision) ||
       provision.hashBasis !== "source_content" ||
       typeof provision.content !== "string" ||

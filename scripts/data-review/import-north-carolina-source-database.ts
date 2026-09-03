@@ -15,6 +15,7 @@ import {
   type NorthCarolinaAuthorityManifest,
   type NorthCarolinaAuditFinding,
   type NorthCarolinaAuditFindingCode,
+  type NorthCarolinaManifestAudit,
   type NorthCarolinaManifestRecord,
   type NorthCarolinaReferenceAudit,
   type NorthCarolinaSourceAudit,
@@ -124,6 +125,16 @@ export interface NorthCarolinaDocumentInspection {
   contentHash: string | null;
   findings: NorthCarolinaAuditFinding[];
 }
+
+type NorthCarolinaNotAttemptedInspection = {
+  document: null;
+  sectionExtractionStatus: "not_attempted";
+  officialTitle: null;
+  historyEvidence: false;
+  contentEvidence: false;
+  contentHash: null;
+  findings: NorthCarolinaAuditFinding[];
+};
 
 export function inspectNorthCarolinaDocument(
   html: string,
@@ -305,7 +316,7 @@ export async function refreshNorthCarolinaManifest(
   const fetchImpl = options.fetchImpl ?? fetch;
   const referenceCache = new Map<string, {
     result: FetchResult;
-    inspection: NorthCarolinaDocumentInspection;
+    inspection: NorthCarolinaDocumentInspection | NorthCarolinaNotAttemptedInspection;
   }>();
   const rateLimitMs = options.rateLimitMs ?? RATE_LIMIT_MS;
   const retryDelayMs = options.retryDelayMs ?? 1000;
@@ -332,7 +343,7 @@ export async function refreshNorthCarolinaManifest(
           if (result.failureKind === "transport") transportFailures++;
           else officialPageFailures++;
         }
-        const inspection = "html" in result
+        const inspection: NorthCarolinaDocumentInspection | NorthCarolinaNotAttemptedInspection = "html" in result
           ? inspectNorthCarolinaDocument(result.html, reference.section, url, importedAt, reference.subdivision)
           : {
               document: null,
@@ -343,8 +354,9 @@ export async function refreshNorthCarolinaManifest(
               contentHash: null,
               findings: [] as NorthCarolinaAuditFinding[],
             };
-        cached = { result, inspection };
-        referenceCache.set(key, cached);
+        const entry = { result, inspection };
+        cached = entry;
+        referenceCache.set(key, entry);
         if (!inspection.document) {
           error = "error" in result
             ? `Official North Carolina source unavailable: ${result.error}`
@@ -352,6 +364,9 @@ export async function refreshNorthCarolinaManifest(
           if ("html" in result) contentContractFailures++;
         }
         await sleep(rateLimitMs);
+      }
+      if (!cached) {
+        throw new Error(`North Carolina source cache failed for ${key}`);
       }
       const findings = [...cached.inspection.findings];
       if ("error" in cached.result) {
@@ -363,7 +378,11 @@ export async function refreshNorthCarolinaManifest(
         });
       }
       if (cached.inspection.document &&
-          !matchesNorthCarolinaCatalogTitle(charge, cached.inspection.document.title)) {
+          !matchesNorthCarolinaCatalogTitle(
+            charge,
+            cached.inspection.document.title,
+            reference,
+          )) {
         findings.push({
           code: "official_title_mismatch",
           classification: "structural",

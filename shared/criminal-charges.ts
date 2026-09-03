@@ -208,6 +208,7 @@ import {
   SOUTH_CAROLINA_APPROVED_ALIAS_CHARGE_IDS,
   SOUTH_CAROLINA_NON_ALIAS_EXACT_SOURCE_CHARGE_IDS,
 } from './south-carolina-title-alias-review';
+import { getNorthCarolinaApprovedDisplayName } from './north-carolina-approved-display-names';
 import {
   assertCaliforniaInventoryComplete,
   getCaliforniaCanonicalCharge,
@@ -30767,7 +30768,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-assault-in-the-second-degree',
     name: 'Assault in the Second Degree',
-    code: '14-32.4',
+    code: '14-32.1',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Reckless serious bodily injury under North Carolina law',
@@ -30897,7 +30898,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-sexual-assault-in-the-second-degree',
     name: 'Sexual Assault in the Second Degree',
-    code: '14-27.27',
+    code: '14-27.26',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Sexual contact without consent under North Carolina law',
@@ -30910,7 +30911,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-sexual-assault-in-the-third-degree',
     name: 'Sexual Assault in the Third Degree',
-    code: '14-27.33',
+    code: '14-27.27',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Sexual contact with person under 16 under North Carolina law',
@@ -30923,7 +30924,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-statutory-rape',
     name: 'Statutory Rape',
-    code: '14-27.25',
+    code: '14-27.30',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Sexual intercourse with minor under North Carolina law',
@@ -31001,7 +31002,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-theft-by-receiving',
     name: 'Theft by Receiving',
-    code: '14-71.1',
+    code: '14-71',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Receiving stolen property under North Carolina law',
@@ -31027,7 +31028,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-credit-card-fraud',
     name: 'Credit Card Fraud',
-    code: '14-113.8',
+    code: '14-113.9',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Unauthorized use of credit card under North Carolina law',
@@ -31078,11 +31079,11 @@ export const criminalCharges: CriminalCharge[] = [
   },
   {
     id: 'nc-burglary-in-the-second-degree',
-    name: 'Burglary in the Second Degree',
-    code: '14-52',
+    name: 'Breaking and Entering - General',
+    code: '14-54',
     jurisdiction: 'NC',
     category: 'felony',
-    description: 'Unlawful entry of dwelling under North Carolina law',
+    description: 'Breaking or entering a building under North Carolina law',
     maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
@@ -31091,12 +31092,12 @@ export const criminalCharges: CriminalCharge[] = [
   },
   {
     id: 'nc-residential-burglary',
-    name: 'Residential Burglary',
+    name: 'Burglary in the Second Degree',
     code: '14-51',
     jurisdiction: 'NC',
     category: 'felony',
-    description: 'Burglary of occupied dwelling under North Carolina law',
-    maxPenalty: 'Up to 20 years imprisonment and/or substantial fines',
+    description: 'Second-degree burglary under North Carolina law',
+    maxPenalty: 'Up to 10 years imprisonment and/or substantial fines',
     commonDefenses: ['Consult with attorney for applicable defenses'],
     evidenceToGather: ['Gather all relevant documentation and evidence'],
     specificRights: ['Constitutional rights apply to all criminal cases'],
@@ -31352,7 +31353,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-check-fraud',
     name: 'Check Fraud',
-    code: '14-107',
+    code: '14-106',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Fraudulent use of checks under North Carolina law',
@@ -31430,7 +31431,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-public-intoxication',
     name: 'Public Intoxication',
-    code: '14-443',
+    code: '14-444',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Being intoxicated in public under North Carolina law',
@@ -31469,7 +31470,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-vandalism',
     name: 'Vandalism',
-    code: '14-144',
+    code: '14-127',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Destruction of property under North Carolina law',
@@ -31482,7 +31483,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-loitering',
     name: 'Loitering',
-    code: '14-159.14',
+    code: '14-132',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Remaining in place without purpose under North Carolina law',
@@ -71257,7 +71258,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-fake-id',
     name: 'Possession of Fake/Fraudulent ID',
-    code: '14-100.1',
+    code: '18B-302',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Possessing, displaying, or using a fraudulent, altered, or counterfeit identification document under NC law',
@@ -71270,7 +71271,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-animal-at-large',
     name: 'Animal at Large / Leash Law Violation',
-    code: '67-4.2',
+    code: '67-12',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Allowing a dog or other domestic animal to roam at large without restraint or control in violation of local leash laws under NC law',
@@ -71348,7 +71349,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-trespass-after-warning',
     name: 'Trespass After Warning / Return After Ban',
-    code: '14-159.12',
+    code: '14-134.3',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Returning to or remaining on property after receiving a formal trespass warning or being banned from the premises under NC law',
@@ -77913,7 +77914,7 @@ export const criminalCharges: CriminalCharge[] = [
   {
     id: 'nc-alcohol-in-park',
     name: 'Possession of Alcohol in Park / Prohibited Area',
-    code: '18B-300',
+    code: '18B-301',
     jurisdiction: 'NC',
     category: 'misdemeanor',
     description: 'Possessing or consuming alcoholic beverages in a public park, beach, playground, or other designated alcohol-free zone under NC law',
@@ -81320,7 +81321,7 @@ const inchoatePhase1Charges: CriminalCharge[] = [
   {
     id: 'nc-aiding-and-abetting',
     name: 'Aiding and Abetting / Accomplice Liability',
-    code: 'MPC § 2.06 / NC accomplice statute',
+    code: '14-5.2',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Helping, encouraging, or assisting another person to commit a crime under North Carolina law. An aider and abettor is treated as equally guilty as the principal who committed the offense.',
@@ -81334,7 +81335,7 @@ const inchoatePhase1Charges: CriminalCharge[] = [
   {
     id: 'nc-accessory-after-the-fact',
     name: 'Accessory After the Fact',
-    code: 'MPC § 2.07 / NC accessory statute',
+    code: '14-7',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Helping a person you know has committed a felony to escape arrest, trial, or punishment under North Carolina law. This is a separate offense from the underlying crime — you do not have to be present when the crime is committed.',
@@ -88162,7 +88163,7 @@ const sentencingEnhancementCharges: CriminalCharge[] = [
   {
     id: 'nc-gang-enhancement',
     name: 'Criminal Street Gang Enhancement',
-    code: 'NC gang enhancement statute',
+    code: '14-50.22',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'A sentencing enhancement — not a standalone charge — that adds additional prison time when the underlying offense was committed for the benefit of, at the direction of, or in association with a criminal street gang under North Carolina law. A conviction can also result in gang registration databases. The prosecution must prove gang membership or association and that the crime furthered gang activity.',
@@ -88176,7 +88177,7 @@ const sentencingEnhancementCharges: CriminalCharge[] = [
   {
     id: 'nc-hate-crime-enhancement',
     name: 'Hate Crime Enhancement',
-    code: 'NC hate crime statute',
+    code: '14-3',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'A sentencing enhancement that increases punishment when the prosecution proves the underlying crime was motivated in whole or in part by bias against the victim’s race, color, religion, national origin, sex, sexual orientation, gender identity, or disability under North Carolina law. Some states cover additional protected categories. The enhancement applies on top of the base offense.',
@@ -88218,7 +88219,7 @@ const sentencingEnhancementCharges: CriminalCharge[] = [
   {
     id: 'nc-drug-school-zone-enhancement',
     name: 'Drug Offense in a School Zone (Proximity Enhancement)',
-    code: 'NC drug-free school zone statute',
+    code: '90-95',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'A sentencing enhancement that doubles (or more) the penalty for a drug offense committed within a specified distance of a school, school bus stop, playground, public park, or youth center under North Carolina law. The enhancement often applies regardless of whether any minors were present or involved. Zone distances vary by state — commonly 500 feet to 1,000 feet. Many states also suspend driver’s licenses upon conviction.',
@@ -90778,7 +90779,7 @@ const phase4WhiteCollarCharges: CriminalCharge[] = [
   {
     id: 'nc-rico-organized-crime',
     name: 'RICO / Organized Crime (Racketeering)',
-    code: 'NC organized crime / racketeering statute',
+    code: '75D-4',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Participating in, conducting, or conspiring to conduct a pattern of racketeering activity through an enterprise under North Carolina law. Most states have enacted their own "mini-RICO" statutes modeled on the federal law. A single prosecution can cover years of criminal activity and multiple defendants. Conviction also triggers civil forfeiture of all assets connected to the enterprise.',
@@ -93395,7 +93396,7 @@ const phase5JuvenileCharges: CriminalCharge[] = [
   {
     id: 'nc-juvenile-firearm-possession',
     name: 'Juvenile Firearm Possession',
-    code: 'NC juvenile firearm possession statute',
+    code: '14-269.2',
     jurisdiction: 'NC',
     category: 'felony',
     description: 'Possession of a firearm by a person under the age of 18 (or 21 for handguns in some states) under North Carolina law. Even in juvenile court, firearm possession is treated seriously and may trigger mandatory minimum detention periods. In many states, juvenile firearm possession is a statutory exclusion offense — meaning it may be automatically prosecuted in adult court depending on the specific circumstances and the juvenile’s age.',
@@ -94961,6 +94962,12 @@ chargeCategories['CA'] = getCaliforniaCanonicalCharges(
 ).map((charge) => charge.id);
 
 // Helper functions for charge lookup
+function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
+  if (charge.jurisdiction !== 'NC') return charge;
+  const displayName = getNorthCarolinaApprovedDisplayName(charge.id);
+  return displayName ? { ...charge, name: displayName } : charge;
+}
+
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
   if (NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId)) return undefined;
@@ -94982,9 +94989,10 @@ export function getChargeById(id: string): CriminalCharge | undefined {
   if (charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]) {
     return { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] };
   }
-  return charge.jurisdiction === 'TX' && TEXAS_CANONICAL_TITLES[charge.id]
-    ? { ...charge, name: TEXAS_CANONICAL_TITLES[charge.id] }
-    : charge;
+  if (charge.jurisdiction === 'TX' && TEXAS_CANONICAL_TITLES[charge.id]) {
+    return { ...charge, name: TEXAS_CANONICAL_TITLES[charge.id] };
+  }
+  return withAuthorityDisplayName(charge);
 }
 
 /**
@@ -95034,9 +95042,10 @@ export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[]
     if (charge.jurisdiction === 'NY' && NEW_YORK_CANONICAL_TITLES[charge.id]) {
       return { ...charge, name: NEW_YORK_CANONICAL_TITLES[charge.id] };
     }
-    return charge.jurisdiction === 'TX' && TEXAS_CANONICAL_TITLES[charge.id]
-      ? { ...charge, name: TEXAS_CANONICAL_TITLES[charge.id] }
-      : charge;
+    if (charge.jurisdiction === 'TX' && TEXAS_CANONICAL_TITLES[charge.id]) {
+      return { ...charge, name: TEXAS_CANONICAL_TITLES[charge.id] };
+    }
+    return withAuthorityDisplayName(charge);
   });
 }
 
@@ -95046,7 +95055,7 @@ export function getSelectableCharges(): CriminalCharge[] {
     ...criminalCharges.filter((charge) =>
       charge.jurisdiction !== 'CA' &&
       !(charge.jurisdiction === 'NY' && NY_CHARGE_IDS_REQUIRING_RESELECTION.has(charge.id)),
-    ),
+    ).map(withAuthorityDisplayName),
     ...getChargesByJurisdiction('CA'),
   ];
 }
