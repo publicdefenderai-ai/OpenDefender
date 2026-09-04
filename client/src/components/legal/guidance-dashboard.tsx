@@ -24,6 +24,7 @@ import {
   ArrowRight,
   Gavel,
   X,
+  AlertCircle,
   Building,
   HelpCircle,
   ThumbsUp,
@@ -75,6 +76,7 @@ import { renderGuidanceRichText } from "@/components/legal/guidance-rich-text";
 import { getStateCourtInfo, getCourtLocatorUrl } from "@shared/state-court-websites";
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
+import { getLiveStatuteErrorKey } from "@/lib/live-statute-errors";
 
 interface PrecedentCase {
   id: string;
@@ -477,12 +479,13 @@ interface LiveStatuteResult {
 }
 
 function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; citation: string }) {
+  const { t } = useTranslation();
   const [showStatute, setShowStatute] = useState(false);
   const [fetchEnabled, setFetchEnabled] = useState(false);
 
   const encodedCitation = encodeURIComponent(citation);
 
-  const { data: liveData, isLoading } = useQuery<LiveStatuteResult>({
+  const { data: liveData, isLoading, error: liveError } = useQuery<LiveStatuteResult>({
     queryKey: [`/api/openlaws/citation/${encodedCitation}`],
     enabled: fetchEnabled,
   });
@@ -522,6 +525,15 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
               <Loader2 className="h-4 w-4 animate-spin" />
               Fetching statute from OpenLaws...
             </div>
+          ) : liveError || liveData?.error ? (
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>
+                {t(`statutes.errors.${getLiveStatuteErrorKey(liveError, liveData?.error)}`, {
+                  citation,
+                })}
+              </AlertDescription>
+            </Alert>
           ) : liveData?.success && liveData.statute ? (
             <div className="space-y-2">
               <div className="flex items-start justify-between gap-2">

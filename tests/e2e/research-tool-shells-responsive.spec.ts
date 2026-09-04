@@ -109,6 +109,54 @@ async function stubResearchServiceOutages(page: Page) {
       }),
     });
   });
+
+  await page.route("**/api/openlaws/citation/**", async (route) => {
+    await route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: false,
+        error: "OpenLaws provider unavailable",
+      }),
+    });
+  });
+}
+
+async function stubStatuteCardProviderOutage(page: Page) {
+  await page.unroute("**/api/statutes/federal**");
+  await page.route("**/api/statutes/federal**", async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: true,
+        jurisdiction: "federal",
+        count: 1,
+        statutes: [
+          {
+            title: "Battery",
+            citation: "Cal. Penal Code § 242",
+            summary: "Responsive shell fixture",
+          },
+        ],
+        source: "responsive-shell-fixture",
+      }),
+    });
+  });
+}
+
+async function stubCitationNotFound(page: Page) {
+  await page.unroute("**/api/openlaws/citation/**");
+  await page.route("**/api/openlaws/citation/**", async (route) => {
+    await route.fulfill({
+      status: 404,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: false,
+        error: "Statute not found",
+      }),
+    });
+  });
 }
 
 async function expectEditorialOpening(page: Page) {
@@ -188,6 +236,42 @@ for (const viewport of VIEWPORTS) {
       await expect(
         page.getByText("Statute search is temporarily unavailable. Please try again later."),
       ).toBeVisible();
+      await page.getByTestId("tab-lookup").click();
+      await page.getByTestId("input-citation-lookup").fill("Cal. Penal Code § 242");
+      await page.getByTestId("button-citation-lookup").click();
+      await expect(
+        page.getByText(
+          "The official-text provider is temporarily unavailable. Please try the citation lookup again later.",
+        ),
+      ).toBeVisible();
+      await expectNoHorizontalOverflow(page);
+
+      await stubStatuteCardProviderOutage(page);
+      await page.goto("/statutes");
+      await expect(page.getByTestId("button-full-text-cal--penal-code---242")).toBeVisible();
+      await page.getByTestId("button-full-text-cal--penal-code---242").click();
+      await expect(
+        page.getByText(
+          "The official-text provider is temporarily unavailable. Please try the citation lookup again later.",
+        ),
+      ).toBeVisible();
+      await expectNoHorizontalOverflow(page);
+
+      await stubCitationNotFound(page);
+      await page.goto("/statutes");
+      await page.getByTestId("tab-lookup").click();
+      await page.getByTestId("input-citation-lookup").fill("Cal. Penal Code § 999999");
+      await page.getByTestId("button-citation-lookup").click();
+      await expect(
+        page.getByText(
+          'No statute found for "Cal. Penal Code § 999999". Try adjusting the citation format or check that the citation is correct.',
+        ),
+      ).toBeVisible();
+      await expect(
+        page.getByText(
+          "The official-text provider is temporarily unavailable. Please try the citation lookup again later.",
+        ),
+      ).toHaveCount(0);
       await expectNoHorizontalOverflow(page);
 
       await page.goto("/court-records");

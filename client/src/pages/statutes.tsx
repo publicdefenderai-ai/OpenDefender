@@ -12,6 +12,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
+import { getLiveStatuteErrorKey } from "@/lib/live-statute-errors";
 import { Search, BookOpen, ExternalLink, AlertCircle, Loader2, ChevronDown, ChevronUp, Zap, FileText } from "lucide-react";
 
 interface Statute {
@@ -143,7 +144,11 @@ export default function StatutesPage() {
     enabled: !!selectedState,
   });
 
-  const { data: citationResult, isLoading: loadingCitation } = useQuery<LiveStatuteLookup>({
+  const {
+    data: citationResult,
+    isLoading: loadingCitation,
+    error: citationError,
+  } = useQuery<LiveStatuteLookup>({
     queryKey: [`/api/openlaws/citation/${encodeURIComponent(activeCitation)}`],
     enabled: !!activeCitation,
   });
@@ -351,7 +356,18 @@ export default function StatutesPage() {
                 </div>
               )}
 
-              {citationResult && !loadingCitation && (
+              {!loadingCitation && (citationError || citationResult?.error) && (
+                <Alert variant="destructive">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>
+                    {t(`statutes.errors.${getLiveStatuteErrorKey(citationError, citationResult?.error)}`, {
+                      citation: activeCitation,
+                    })}
+                  </AlertDescription>
+                </Alert>
+              )}
+
+              {citationResult && !loadingCitation && !citationError && !citationResult.error && (
                 citationResult.success && citationResult.statute ? (
                   <Card className="editorial-card" data-testid="card-citation-result">
                     <CardHeader>
@@ -404,7 +420,7 @@ export default function StatutesPage() {
                   <Alert variant="destructive">
                     <AlertCircle className="h-4 w-4" />
                     <AlertDescription>
-                      No statute found for "{activeCitation}". Try adjusting the citation format or check that the citation is correct.
+                      {t('statutes.errors.citationNotFound', { citation: activeCitation })}
                     </AlertDescription>
                   </Alert>
                 )
@@ -427,12 +443,17 @@ export default function StatutesPage() {
 }
 
 function StatuteCard({ statute }: { statute: Statute }) {
+  const { t } = useTranslation();
   const [showFullText, setShowFullText] = useState(false);
   const [fetchEnabled, setFetchEnabled] = useState(false);
 
   const citationKey = (statute.citation || 'unknown').replace(/[^a-z0-9]/gi, '-').toLowerCase();
 
-  const { data: liveData, isLoading: loadingLive } = useQuery<LiveStatuteLookup>({
+  const {
+    data: liveData,
+    isLoading: loadingLive,
+    error: liveError,
+  } = useQuery<LiveStatuteLookup>({
     queryKey: [`/api/openlaws/citation/${encodeURIComponent(statute.citation || '')}`],
     enabled: fetchEnabled && !!statute.citation,
   });
@@ -446,6 +467,7 @@ function StatuteCard({ statute }: { statute: Statute }) {
 
   const liveContent = liveData?.statute?.content;
   const hasContent = statute.content || liveContent;
+  const liveFailureKey = getLiveStatuteErrorKey(liveError, liveData?.error);
 
   return (
     <Card className="editorial-card" data-testid={`card-statute-${citationKey}`}>
@@ -541,6 +563,16 @@ function StatuteCard({ statute }: { statute: Statute }) {
                       Live text via OpenLaws · {liveData?.statute?.jurisdiction} Statutes
                     </p>
                   </div>
+                ) : liveError || liveData?.error ? (
+                  <Alert variant="destructive">
+                    <AlertCircle className="h-4 w-4" />
+                    <AlertDescription>
+                      {t(`statutes.errors.${liveFailureKey}`, { citation: statute.citation })}
+                      {liveFailureKey !== 'citationFailed' && statute.url && (
+                        <> <a href={statute.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">View the official source.</a></>
+                      )}
+                    </AlertDescription>
+                  </Alert>
                 ) : statute.content ? (
                   <div className="bg-muted/50 rounded-lg p-4 text-sm leading-relaxed whitespace-pre-wrap border border-border/50 max-h-80 overflow-y-auto">
                     {statute.content}
