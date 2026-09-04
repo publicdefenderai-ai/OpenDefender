@@ -614,7 +614,6 @@ export default {
     "forDevelopers": "For Developers",
     "viewOnGithub": "View on GitHub",
     "viewOnX": "Follow on X",
-    "privacyNotice": "Privacy matters. Your case information is held temporarily and generally expires within 24 hours. See our Privacy Policy.",
     "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice.",
     "legalDisclaimer": "General legal information only — not a substitute for professional legal advice. Always consult a qualified attorney for your specific situation."
   },
