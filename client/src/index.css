@@ -1769,6 +1769,37 @@ a:focus-visible,
     box-shadow: 0 2px 8px color-mix(in srgb, var(--editorial-ink) 7%, transparent);
   }
 
+  .editorial-start-card {
+    background: var(--card);
+    border: 1px solid var(--editorial-rule);
+    border-top: 3px solid var(--editorial-signal);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--editorial-ink) 7%, transparent);
+    transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+  }
+
+  .editorial-start-card:hover {
+    border-color: var(--editorial-signal);
+    box-shadow: 0 4px 12px color-mix(in srgb, var(--editorial-ink) 10%, transparent);
+  }
+
+  .editorial-start-card-urgent {
+    border-top-color: var(--editorial-urgency);
+    background: color-mix(in srgb, var(--card) 96%, var(--editorial-urgency));
+  }
+
+  .editorial-start-card-case {
+    border-top-color: var(--editorial-signal);
+  }
+
+  .editorial-start-card-support {
+    border-top-color: var(--editorial-ink-soft);
+  }
+
+  .editorial-start-card-advocate {
+    border-top-color: var(--editorial-signal);
+    background: color-mix(in srgb, var(--card) 94%, var(--editorial-signal));
+  }
+
   .editorial-path-card-urgent {
     border-left-color: var(--editorial-urgency);
     background: color-mix(in srgb, var(--card) 94%, var(--editorial-urgency));
