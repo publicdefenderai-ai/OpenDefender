@@ -3783,6 +3783,11 @@ export default {
       "incomplete": "Los resultados mostrados pueden estar incompletos."
     }
   },
+  "statutes": {
+    "errors": {
+      "loadFailed": "La búsqueda de estatutos no está disponible temporalmente. Inténtelo de nuevo más tarde."
+    }
+  },
   "recapExtensions": {
     "hero": {
       "title": "Extensiones de Navegador RECAP",

@@ -3781,6 +3781,11 @@ export default {
       "incomplete": "Results shown may be incomplete."
     }
   },
+  "statutes": {
+    "errors": {
+      "loadFailed": "Statute search is temporarily unavailable. Please try again later."
+    }
+  },
   "recapExtensions": {
     "hero": {
       "title": "RECAP Browser Extensions",

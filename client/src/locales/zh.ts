@@ -3782,6 +3782,11 @@ export default {
       "incomplete": "显示的结果可能不完整。"
     }
   },
+  "statutes": {
+    "errors": {
+      "loadFailed": "法规搜索暂时不可用。请稍后重试。"
+    }
+  },
   "recapExtensions": {
     "hero": {
       "title": "RECAP 浏览器扩展",

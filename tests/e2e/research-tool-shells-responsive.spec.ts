@@ -46,9 +46,9 @@ async function expectNoHorizontalOverflow(page: Page) {
 }
 
 async function stubInitialServiceRequests(page: Page) {
-  // These routes only cover requests made while mounting the initial shells.
-  // Search, upload, citation lookup, and court/statute provider calls remain
-  // disabled because none of the tests interact with those controls.
+  // These routes cover the shared startup requests and the successful statute
+  // response used by the normal shell test. Outage-specific provider fixtures
+  // are installed separately by stubResearchServiceOutages.
   await page.route("**/api/attorney/session", async (route) => {
     await route.fulfill({
       status: 200,
@@ -80,6 +80,32 @@ async function stubInitialServiceRequests(page: Page) {
         count: 0,
         statutes: [],
         source: "responsive-shell-fixture",
+      }),
+    });
+  });
+}
+
+
+async function stubResearchServiceOutages(page: Page) {
+  await page.unroute("**/api/statutes/federal**");
+  await page.route("**/api/statutes/federal**", async (route) => {
+    await route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: false,
+        error: "Statute service unavailable",
+      }),
+    });
+  });
+
+  await page.route("**/api/court-records/search**", async (route) => {
+    await route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: false,
+        error: "Court records service unavailable",
       }),
     });
   });
@@ -152,6 +178,26 @@ for (const viewport of VIEWPORTS) {
           caret: "hide",
         });
       }
+    });
+
+    test("explain research service outages without overflow", async ({ page }) => {
+      await stubResearchServiceOutages(page);
+
+      await page.goto("/statutes");
+      await expectEditorialOpening(page);
+      await expect(
+        page.getByText("Statute search is temporarily unavailable. Please try again later."),
+      ).toBeVisible();
+      await expectNoHorizontalOverflow(page);
+
+      await page.goto("/court-records");
+      await expectEditorialOpening(page);
+      await page.getByTestId("input-search-term").fill("service outage fixture");
+      await page.getByTestId("button-search").click();
+      await expect(
+        page.getByText("Search failed. Please try again or refine your search criteria."),
+      ).toBeVisible();
+      await expectNoHorizontalOverflow(page);
     });
   });
 }

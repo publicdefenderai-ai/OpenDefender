@@ -126,11 +126,19 @@ export default function StatutesPage() {
       : `/api/statutes/${selectedState}`
     : '';
 
-  const { data: federalStatutes, isLoading: loadingFederal } = useQuery<StatuteSearchResult>({
+  const {
+    data: federalStatutes,
+    isLoading: loadingFederal,
+    error: federalError,
+  } = useQuery<StatuteSearchResult>({
     queryKey: [federalUrl],
   });
 
-  const { data: stateStatutes, isLoading: loadingState } = useQuery<StatuteSearchResult>({
+  const {
+    data: stateStatutes,
+    isLoading: loadingState,
+    error: stateError,
+  } = useQuery<StatuteSearchResult>({
     queryKey: [stateUrl],
     enabled: !!selectedState,
   });
@@ -219,6 +227,11 @@ export default function StatutesPage() {
                   </Card>
                 ))}
               </div>
+            ) : federalError ? (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{t('statutes.errors.loadFailed')}</AlertDescription>
+              </Alert>
             ) : federalStatutes?.error ? (
               <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
@@ -277,6 +290,11 @@ export default function StatutesPage() {
                   </Card>
                 ))}
               </div>
+            ) : stateError ? (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{t('statutes.errors.loadFailed')}</AlertDescription>
+              </Alert>
             ) : stateStatutes?.error ? (
               <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
