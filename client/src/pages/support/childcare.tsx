@@ -234,7 +234,7 @@ function NeedsCardSection() {
             </CardHeader>
             <CardContent>
               <div className="bg-muted/40 dark:bg-muted/20 rounded-lg p-4 border border-border/40">
-                <pre className="whitespace-pre-wrap text-sm text-foreground font-sans leading-loose">
+                <pre className="whitespace-pre-wrap break-words text-sm text-foreground font-sans leading-loose">
                   {template}
                 </pre>
               </div>

@@ -127,7 +127,7 @@ export function PageSectionNav({
   return (
     <nav
       aria-label={ariaLabel}
-      className="border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
+      className="overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
     >
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5 lg:gap-8 lg:py-4">
         <span className="hidden shrink-0 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground lg:block">
@@ -142,7 +142,7 @@ export function PageSectionNav({
                 href={`#${id}`}
                 aria-current={isActive ? "location" : undefined}
                 onClick={() => setActiveId(id)}
-                className={`inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:rounded-md lg:px-2 lg:py-1 ${
+                className={`inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:min-h-0 lg:rounded-md lg:px-2 lg:py-1 ${
                   isActive ? "bg-muted text-foreground font-semibold" : accentClassName
                 }`}
               >

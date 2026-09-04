@@ -236,11 +236,11 @@ function TransportationCommsSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="flex gap-2 mb-6" role="tablist">
+          <div className="flex flex-wrap gap-2 mb-6" role="tablist">
             <Button
               variant={activeTab === "email" ? "default" : "outline"}
               onClick={() => setActiveTab("email")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "email"}
             >
@@ -250,7 +250,7 @@ function TransportationCommsSection() {
             <Button
               variant={activeTab === "call" ? "default" : "outline"}
               onClick={() => setActiveTab("call")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "call"}
             >

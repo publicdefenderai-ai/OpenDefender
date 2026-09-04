@@ -30,9 +30,9 @@ function TemplateCard({ label, body }: { label: string; body: string }) {
   return (
     <Card>
       <CardHeader className="pb-2">
-        <div className="flex items-center justify-between gap-2">
-          <CardTitle className="text-sm font-semibold text-foreground">{label}</CardTitle>
-          <div className="flex gap-2 flex-shrink-0">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <CardTitle className="min-w-0 flex-1 text-sm font-semibold text-foreground">{label}</CardTitle>
+          <div className="flex flex-wrap gap-2">
             <Button variant="outline" size="sm" className="h-7 text-xs gap-1" onClick={handleCopy}>
               {copied ? <Check className="h-3 w-3" /> : <Copy className="h-3 w-3" />}
               {copied ? "Copied!" : "Copy"}
@@ -59,12 +59,12 @@ function TreatmentConnectionSection() {
   const angerQuestions: string[] = Array.isArray(rawAnger) ? rawAnger : [];
 
   return (
-    <section className="py-10 md:py-14 bg-muted/20 border-t border-border/30" id="treatment-connection">
+    <section className="break-words py-10 md:py-14 bg-muted/20 border-t border-border/30" id="treatment-connection">
       <div className="max-w-4xl mx-auto px-4">
         <ScrollReveal>
-          <div className="flex items-center gap-3 mb-2">
+          <div className="flex min-w-0 items-start gap-3 mb-2">
             <ClipboardCheck className="h-5 w-5 text-teal-600" />
-            <h2 className="text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
+            <h2 className="min-w-0 break-words text-xl font-bold text-foreground">{t(`${ns}.sectionTitle`)}</h2>
           </div>
           <p className="text-muted-foreground mb-6 max-w-3xl">{t(`${ns}.sectionSubtitle`)}</p>
         </ScrollReveal>
@@ -104,8 +104,8 @@ function TreatmentConnectionSection() {
             <div className="space-y-3">
               <Card>
                 <CardContent className="pt-4">
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
+                  <div className="flex min-w-0 items-start justify-between gap-2">
+                    <div className="min-w-0 flex-1">
                       <p className="text-sm font-semibold text-foreground mb-1">SAMHSA Treatment Locator — findtreatment.gov</p>
                       <p className="text-sm text-muted-foreground leading-relaxed">{t(`${ns}.findSamhsa`)}</p>
                       <p className="text-xs text-muted-foreground italic mt-1">{t(`${ns}.findSamhsaNote`)}</p>

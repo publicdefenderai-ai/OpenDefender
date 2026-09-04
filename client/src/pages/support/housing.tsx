@@ -202,7 +202,7 @@ function HousingInstabilitySection() {
           </li>
           <li className="flex items-start gap-2">
             <span className="font-semibold text-foreground flex-shrink-0">HUD emergency resources</span>
-            <span>Visit <a href="https://www.hud.gov/topics/homelessness" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium">hud.gov/topics/homelessness</a> to find emergency housing assistance programs in your area.</span>
+            <span className="min-w-0 break-words">Visit <a href="https://www.hud.gov/topics/homelessness" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 font-medium break-words">hud.gov/topics/homelessness</a> to find emergency housing assistance programs in your area.</span>
           </li>
           <li className="flex items-start gap-2">
             <span className="font-semibold text-foreground flex-shrink-0">Keep a mailing address</span>
@@ -256,11 +256,11 @@ function HousingNetworkSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="flex gap-2 mb-6" role="tablist">
+          <div className="flex flex-wrap gap-2 mb-6" role="tablist">
             <Button
               variant={activeTab === "written" ? "default" : "outline"}
               onClick={() => setActiveTab("written")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "written"}
             >
@@ -270,7 +270,7 @@ function HousingNetworkSection() {
             <Button
               variant={activeTab === "call" ? "default" : "outline"}
               onClick={() => setActiveTab("call")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "call"}
             >

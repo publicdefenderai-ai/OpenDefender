@@ -404,7 +404,7 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="text-muted-foreground mb-4">{copy.inventory.subtitle}</p>
             <Card>
-              <CardContent className="p-0 overflow-hidden">
+              <CardContent className="p-0 overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-border bg-muted/40">

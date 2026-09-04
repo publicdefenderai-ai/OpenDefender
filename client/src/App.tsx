@@ -259,7 +259,7 @@ function BetaBanner() {
           </span>
           <p className="min-w-0 max-w-full overflow-hidden text-sm text-muted-foreground truncate sm:whitespace-normal">
             <span className="hidden sm:inline">{t('beta.messageFull')}</span>
-            <span className="sm:hidden block truncate">{t('beta.messageShort')}</span>
+            <span className="sm:hidden block min-w-0 max-w-full truncate">{t('beta.messageShort')}</span>
           </p>
         </div>
         <button

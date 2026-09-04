@@ -107,15 +107,15 @@ function ActionCard({ item, index, theme }: { item: ActionItem; index: number; t
           </span>
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-2 flex-wrap mb-1.5">
-              <h4 className="font-semibold text-[15px] text-foreground leading-snug">{item.title}</h4>
-              <div className="flex gap-1.5 flex-shrink-0">
+              <h4 className="min-w-0 flex-1 font-semibold text-[15px] text-foreground leading-snug">{item.title}</h4>
+              <div className="flex min-w-0 max-w-full flex-wrap gap-1.5">
                 {item.priority && (
-                  <Badge variant="secondary" className={`text-xs ${priorityConfig[item.priority].color}`}>
+                  <Badge variant="secondary" className={`max-w-full whitespace-normal break-words text-left text-xs ${priorityConfig[item.priority].color}`}>
                     {priorityConfig[item.priority].label}
                   </Badge>
                 )}
                 {item.timeframe && (
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="max-w-full whitespace-normal break-words text-left text-xs">
                     {item.timeframe}
                   </Badge>
                 )}
@@ -148,7 +148,7 @@ function ResourceCard({ resource, theme }: { resource: ExternalResource; theme: 
     <Card className="editorial-card-interactive h-full">
       <CardContent className="p-5 h-full flex flex-col">
         <div className="flex items-start justify-between gap-2 mb-2">
-          <h4 className="font-semibold text-[15px] text-foreground leading-snug">{resource.name}</h4>
+          <h4 className="min-w-0 flex-1 font-semibold text-[15px] text-foreground leading-snug">{resource.name}</h4>
           <div className="flex gap-1.5 flex-shrink-0 flex-wrap justify-end">
             {resource.free && (
               <Badge variant="secondary" className="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs whitespace-nowrap">
@@ -403,9 +403,9 @@ export function ResourcePageTemplate({
                         <div className="flex flex-wrap gap-3">
                           {relatedLinks.map((link, index) => (
                             <Link key={index} href={link.href}>
-                              <Button asChild variant="outline" size="sm" className="group">
-                                <span>
-                                  {link.label}
+                              <Button asChild variant="outline" size="sm" className="group h-auto min-h-11 max-w-full whitespace-normal px-3 py-2 text-left">
+                                <span className="inline-flex min-w-0 items-center gap-1 whitespace-normal">
+                                  <span className="min-w-0 break-words">{link.label}</span>
                                   <ArrowRight className="h-4 w-4 ml-1 transition-transform group-hover:translate-x-1" />
                                 </span>
                               </Button>

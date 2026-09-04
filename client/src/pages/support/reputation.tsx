@@ -600,11 +600,11 @@ function ReputationCommsSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="flex gap-2 mb-6" role="tablist">
+          <div className="flex flex-wrap gap-2 mb-6" role="tablist">
             <Button
               variant={activeTab === "written" ? "default" : "outline"}
               onClick={() => setActiveTab("written")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "written"}
             >
@@ -614,7 +614,7 @@ function ReputationCommsSection() {
             <Button
               variant={activeTab === "conversation" ? "default" : "outline"}
               onClick={() => setActiveTab("conversation")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "conversation"}
             >
