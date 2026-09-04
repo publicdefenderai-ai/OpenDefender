@@ -245,20 +245,18 @@ export default function ImmigrationGuidance() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section - Vivid Gradient Style */}
-      <section className="vivid-header-amber text-white py-16 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-primary/[0.04]" />
-        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+      <section className="editorial-page-intro py-12 lg:py-20">
+        <div className="editorial-page-intro-inner max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight text-white" data-testid="text-immigration-hero-title">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight" data-testid="text-immigration-hero-title">
               {t('immigration.hero.title1')}<br />
-              <span className="text-white/80">{t('immigration.hero.title2')}</span>
+              <span className="text-[var(--editorial-signal)]">{t('immigration.hero.title2')}</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-4xl mx-auto leading-relaxed" data-testid="text-immigration-hero-subtitle">
+            <p className="text-lg md:text-xl max-w-4xl leading-relaxed" data-testid="text-immigration-hero-subtitle">
               {t('immigration.hero.subtitle')}
             </p>
           </motion.div>
@@ -266,7 +264,7 @@ export default function ImmigrationGuidance() {
       </section>
 
       {/* Critical Alert - Below Hero */}
-      <div className="max-w-4xl mx-auto px-4 -mt-8 relative z-20 mb-4">
+      <div className="max-w-4xl mx-auto px-4 mt-6 mb-4">
         <Alert className="bg-red-600 border-red-700 text-white shadow-lg">
           <AlertTriangle className="h-5 w-5 text-white" />
           <AlertDescription className="text-white font-semibold" data-testid="alert-critical-rights">

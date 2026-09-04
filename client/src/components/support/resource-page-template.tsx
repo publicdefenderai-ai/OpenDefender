@@ -285,16 +285,15 @@ export function ResourcePageTemplate({
   return (
     <ScanFirstPageFrame>
 
-        {/* Hero */}
-        <section className={`${theme.heroClass} editorial-hero overflow-hidden`}>
-          <div className={`max-w-6xl mx-auto px-4 vivid-header-content flex items-stretch gap-0 ${heroImage ? 'min-h-[220px] md:min-h-[260px]' : 'py-10 md:py-14'}`}>
+        <section className="editorial-page-intro editorial-hero overflow-hidden">
+          <div className={`editorial-page-intro-inner max-w-6xl mx-auto px-4 flex items-stretch gap-0 ${heroImage ? 'min-h-[220px] md:min-h-[260px]' : 'py-10 md:py-14'}`}>
             <div className={`flex flex-col justify-center py-10 md:py-14 ${heroImage ? 'flex-1 md:max-w-[58%]' : 'w-full max-w-4xl'}`}>
               <Link href="/support">
                 <Button
                   asChild
                   variant="ghost"
                   size="sm"
-                  className="mb-5 text-white/70 hover:text-white hover:bg-white/10 self-start"
+                  className="mb-5 text-muted-foreground hover:text-foreground hover:bg-muted self-start"
                 >
                   <span>
                     <ChevronLeft className="h-4 w-4 mr-1" />
@@ -303,16 +302,16 @@ export function ResourcePageTemplate({
                 </Button>
               </Link>
               <div className="flex items-center gap-3 mb-3">
-                <Icon className="h-6 w-6 text-white/80" strokeWidth={1.75} />
-                <h1 className="text-3xl md:text-4xl font-bold text-white">{categoryLabel}</h1>
+                <Icon className="h-6 w-6 text-[var(--editorial-signal)]" strokeWidth={1.75} />
+                <h1 className="text-3xl md:text-4xl font-bold">{categoryLabel}</h1>
               </div>
-              <p className="text-base md:text-lg text-white/75 leading-relaxed max-w-2xl">
+              <p className="text-base md:text-lg text-[var(--editorial-ink-soft)] leading-relaxed max-w-2xl">
                 {overview}
               </p>
             </div>
             {heroImage && (
               <div className="hidden md:block flex-shrink-0 w-[42%] relative">
-                <div className="absolute inset-y-0 left-0 w-16 z-10" style={{ background: 'linear-gradient(to right, hsl(222 55% 12%), transparent)' }} />
+                <div className="absolute inset-y-0 left-0 w-16 z-10" style={{ background: 'linear-gradient(to right, var(--editorial-paper), transparent)' }} />
                 <img
                   src={heroImage}
                   alt=""

@@ -283,14 +283,12 @@ export default function Resources() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="vivid-header-teal py-10 md:py-14">
-        <div className="max-w-3xl mx-auto px-4 vivid-header-content text-center">
-          <Scale className="h-8 w-8 text-white/80 mx-auto mb-3" />
-          <h1 className="text-3xl md:text-4xl font-bold mb-3 text-white">
+      <section className="editorial-page-intro editorial-finder-intro py-10 md:py-14">
+        <div className="editorial-page-intro-inner max-w-3xl mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">
             {t('resources.hero.title', { defaultValue: 'Find Legal Help' })}
           </h1>
-          <p className="text-base text-white/80 max-w-xl mx-auto">
+          <p className="text-base max-w-xl">
             {t('resources.hero.subtitle', { defaultValue: 'Free and low-cost legal representation near you — search by ZIP code.' })}
           </p>
         </div>
@@ -303,7 +301,7 @@ export default function Resources() {
             <div className="grid sm:grid-cols-2 gap-4 mb-10">
               {/* Public Defender card */}
               <Card
-                className="cursor-pointer group hover:shadow-md hover:-translate-y-0.5 transition-all border-indigo-200 dark:border-indigo-800/60 bg-indigo-50/60 dark:bg-indigo-900/10"
+                 className="editorial-finder-card cursor-pointer group"
                 onClick={() => setShowPublicDefenderModal(true)}
                 onKeyDown={(event) => {
                   if (event.key === "Enter" || event.key === " ") {
@@ -317,14 +315,14 @@ export default function Resources() {
                 data-testid="card-public-defender"
               >
                 <CardContent className="p-5">
-                  <UserCheck className="h-6 w-6 text-indigo-600 dark:text-indigo-400 mb-3" strokeWidth={1.75} />
+                   <UserCheck className="h-6 w-6 text-[var(--editorial-signal)] mb-3" strokeWidth={1.75} />
                   <p className="font-semibold text-foreground mb-1">
                     {t('resources.publicDefender.title', { defaultValue: 'Find a Public Defender' })}
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                     {t('resources.publicDefender.description', { defaultValue: 'Search for public defender offices near you by ZIP code. Free legal representation if you can\'t afford an attorney.' })}
                   </p>
-                  <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 flex items-center gap-1">
+                   <p className="text-sm font-semibold text-primary flex items-center gap-1">
                     Search by ZIP <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </p>
                 </CardContent>
@@ -332,7 +330,7 @@ export default function Resources() {
 
               {/* Legal Aid card */}
               <Card
-                className="cursor-pointer group hover:shadow-md hover:-translate-y-0.5 transition-all border-rose-200 dark:border-rose-800/60 bg-rose-50/60 dark:bg-rose-900/10"
+                 className="editorial-finder-card cursor-pointer group"
                 onClick={() => setShowLegalAidModal(true)}
                 onKeyDown={(event) => {
                   if (event.key === "Enter" || event.key === " ") {
@@ -346,14 +344,14 @@ export default function Resources() {
                 data-testid="card-legal-aid"
               >
                 <CardContent className="p-5">
-                  <Heart className="h-6 w-6 text-rose-600 dark:text-rose-400 mb-3" strokeWidth={1.75} />
+                   <Heart className="h-6 w-6 text-[var(--editorial-signal)] mb-3" strokeWidth={1.75} />
                   <p className="font-semibold text-foreground mb-1">
                     {t('resources.legalAid.title', { defaultValue: 'Find Legal Aid' })}
                   </p>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                     {t('resources.legalAid.description', { defaultValue: 'Find nonprofit legal aid organizations providing free or low-cost legal help in your community.' })}
                   </p>
-                  <p className="text-sm font-semibold text-rose-600 dark:text-rose-400 flex items-center gap-1">
+                   <p className="text-sm font-semibold text-primary flex items-center gap-1">
                     Search by ZIP <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </p>
                 </CardContent>

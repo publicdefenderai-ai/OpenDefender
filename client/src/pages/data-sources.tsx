@@ -164,12 +164,12 @@ export default function DataSources() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        <section className="border-b border-border bg-muted/30">
-          <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">{t("home.dataSources.transparency.eyebrow")}</p>
+        <section className="editorial-page-intro">
+          <div className="editorial-page-intro-inner mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+            <p className="editorial-kicker">{t("home.dataSources.transparency.eyebrow")}</p>
             <div className="mt-3 max-w-3xl">
-              <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">{t("home.dataSources.transparency.heading")}</h1>
-              <p className="mt-5 text-base leading-7 text-muted-foreground sm:text-lg">{t("home.dataSources.transparency.intro")}</p>
+              <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">{t("home.dataSources.transparency.heading")}</h1>
+              <p className="mt-5 text-base leading-7 sm:text-lg">{t("home.dataSources.transparency.intro")}</p>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-2"><Info className="h-4 w-4 text-primary" aria-hidden="true" />{t("home.dataSources.transparency.reviewed")}</span>

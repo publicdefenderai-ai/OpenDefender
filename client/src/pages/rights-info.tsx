@@ -62,22 +62,21 @@ export default function RightsInfo() {
         currentPage={t('rights.hero.title')} 
       />
 
-      {/* Hero Section - Vivid Header */}
-      <section className="vivid-header py-16 md:py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content">
+      <section className="editorial-page-intro py-12 md:py-16 lg:py-20">
+        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white" data-testid="heading-rights-title">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-5" data-testid="heading-rights-title">
                 {t('rights.hero.title')}
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6" data-testid="text-rights-subtitle">
+              <p className="text-lg md:text-xl max-w-3xl mb-6" data-testid="text-rights-subtitle">
                 {t('rights.hero.subtitle')}
               </p>
               <ShareButton 
                 title={t('rights.hero.title')}
                 text={t('share.rightsDescription', 'Learn about your constitutional rights - important information everyone should know.')}
                 variant="outline"
-                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
+                className="bg-transparent border-[var(--editorial-signal)] text-foreground hover:bg-[var(--editorial-signal-soft)]"
                 data-testid="button-share-rights"
               />
             </div>

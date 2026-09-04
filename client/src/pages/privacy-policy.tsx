@@ -18,22 +18,19 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section with Colored Header */}
-      <section className="vivid-header py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-white">
+      <section className="editorial-page-intro py-12 md:py-16">
+        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4">
+          <p className="editorial-kicker mb-3">{t('privacyPolicy.hero.lastUpdated')}</p>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-5">
             {t('privacyPolicy.hero.title')}
           </h1>
-          <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg max-w-2xl">
             {t('privacyPolicy.hero.subtitle')}
-          </p>
-          <p className="text-sm text-white/60 mt-2">
-            {t('privacyPolicy.hero.lastUpdated')}
           </p>
         </div>
       </section>
       
-      <main className="max-w-4xl mx-auto px-4 py-12 md:py-16">
+      <main className="editorial-document max-w-4xl mx-auto px-4 py-12 md:py-16">
 
         {/* Core Principles */}
         <ScrollReveal>

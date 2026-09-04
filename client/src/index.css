@@ -1515,6 +1515,87 @@ a:focus-visible,
     background: var(--editorial-paper);
   }
 
+  /* Shared document opening: a quiet, left-aligned handoff into content.
+     This replaces the page-by-page colored hero treatment while keeping the
+     existing route copy and hierarchy intact. */
+  .editorial-page-intro {
+    background: var(--editorial-paper);
+    border-bottom: 1px solid var(--editorial-rule);
+    color: var(--editorial-ink);
+  }
+
+  .editorial-page-intro-inner {
+    color: var(--editorial-ink);
+  }
+
+  .editorial-page-intro-inner p:not(.editorial-kicker) {
+    color: var(--editorial-ink-soft);
+  }
+
+  .editorial-page-intro .editorial-kicker {
+    color: var(--editorial-signal);
+  }
+
+  .editorial-document {
+    background: var(--editorial-paper);
+  }
+
+  .editorial-document > div > h2,
+  .editorial-document > section h2 {
+    border-bottom: 1px solid var(--editorial-rule);
+    padding-bottom: 0.75rem;
+  }
+
+  .editorial-document .rounded-xl,
+  .editorial-document .rounded-lg {
+    border-radius: var(--radius);
+  }
+
+  .editorial-document .rounded-xl.border,
+  .editorial-document .rounded-lg.border {
+    border-color: var(--editorial-rule);
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--editorial-ink) 5%, transparent);
+  }
+
+  .editorial-document table {
+    min-width: 34rem;
+  }
+
+  .editorial-document .overflow-hidden {
+    overflow-x: auto;
+  }
+
+  .editorial-directory-category {
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--editorial-ink) 5%, transparent);
+  }
+
+  .editorial-directory-category > div:first-child {
+    background: var(--editorial-paper-deep);
+  }
+
+  .editorial-directory-icon {
+    background: var(--editorial-signal);
+  }
+
+  .editorial-finder-card {
+    border: 1px solid var(--editorial-rule);
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--editorial-ink) 5%, transparent);
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  }
+
+  .editorial-finder-card:hover {
+    border-color: var(--editorial-signal);
+    box-shadow: 0 5px 16px color-mix(in srgb, var(--editorial-ink) 10%, transparent);
+    transform: none;
+  }
+
+  .editorial-page-intro + .editorial-reading,
+  .editorial-page-intro + section {
+    border-top: 0;
+  }
+
   /* Immigration detail pages are rendered inside the shared editorial frame.
      Scope this treatment so legacy page markup gets the same quiet card
      surface without changing cards elsewhere in the application. */
