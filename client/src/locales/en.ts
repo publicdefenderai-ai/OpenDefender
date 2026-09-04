@@ -614,6 +614,7 @@ export default {
     "forDevelopers": "For Developers",
     "viewOnGithub": "View on GitHub",
     "viewOnX": "Follow on X",
+    "privacyFirst": "Privacy First",
     "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice.",
     "legalDisclaimer": "General legal information only — not a substitute for professional legal advice. Always consult a qualified attorney for your specific situation."
   },

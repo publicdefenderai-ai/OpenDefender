@@ -616,6 +616,7 @@ export default {
     "forDevelopers": "开发者资源",
     "viewOnGithub": "在 GitHub 上查看",
     "viewOnX": "在 X 上关注",
+    "privacyFirst": "隐私优先",
     "copyright": "© 2026 OpenDefender。不能替代专业法律建议。",
     "legalDisclaimer": "仅为一般性法律信息——不能替代专业法律建议。如有疑问，请就您的具体情况咨询合格律师。"
   },

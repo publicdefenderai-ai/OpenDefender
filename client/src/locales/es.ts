@@ -616,6 +616,7 @@ export default {
     "forDevelopers": "Para Desarrolladores",
     "viewOnGithub": "Ver en GitHub",
     "viewOnX": "Seguir en X",
+    "privacyFirst": "Privacidad primero",
     "copyright": "© 2026 Defensor Público IA. No sustituye el asesoramiento legal profesional.",
     "legalDisclaimer": "Solo información legal general — no sustituye el asesoramiento legal profesional. Consulte siempre a un abogado calificado para su situación específica."
   },
