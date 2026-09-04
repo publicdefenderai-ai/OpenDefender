@@ -1317,7 +1317,7 @@ export default function CaseGuidance() {
       )}
 
       {/* Hero Section */}
-      <section id="understand-charges" className="vivid-header py-16 md:py-20 lg:py-24 scroll-mt-24">
+      <section id="understand-charges" className="vivid-header editorial-guidance-hero py-16 md:py-20 lg:py-24 scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
           <ScrollReveal>
             <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-5 md:mb-6" data-testid="heading-case-title">
@@ -1331,7 +1331,7 @@ export default function CaseGuidance() {
               onClick={handleStartQA}
               size="lg"
               disabled={!!aiUnavailable}
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-lg shadow-lg"
+              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-sm shadow-none"
               data-testid="button-start-guidance"
             >
               {t('case.hero.startButton')}

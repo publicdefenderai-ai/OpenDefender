@@ -162,30 +162,27 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero — always dark, high contrast */}
-      <section className="relative pt-14 pb-12 md:pt-20 md:pb-16 overflow-hidden texture-grain bg-slate-900 dark:bg-[hsl(192,55%,11%)]">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800/90 to-teal-900/50 dark:from-[hsl(192,60%,10%)] dark:via-[hsl(196,50%,13%)] dark:to-[hsl(210,42%,17%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-500/10 dark:from-teal-300/30 via-transparent to-transparent" />
-        <div className="absolute inset-0 texture-mesh opacity-30" />
-
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      {/* Hero — orientation first, with a quieter editorial opening */}
+      <section className="editorial-home-hero relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-[1.55rem] sm:text-[2.5rem] md:text-[3.75rem] font-normal mb-6 tracking-tight text-white" style={{ lineHeight: '1.15' }}>
+            <p className="editorial-kicker mb-5">OpenDefender</p>
+            <h1 className="font-display text-[2.15rem] sm:text-[3rem] md:text-[4.25rem] font-normal mb-6 tracking-tight" style={{ lineHeight: '1.08' }}>
               {t("home.hero.headlinePart1")}
               <br />
-              <strong className="font-bold text-white">{t("home.hero.headlinePart3")}</strong>
+              <strong className="font-bold">{t("home.hero.headlinePart3")}</strong>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl mb-8 text-muted-foreground max-w-2xl leading-relaxed">
               {t("home.hero.subtitle")}
             </p>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-start justify-center">
               <button
                 onClick={handleUrgentHelp}
-                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 active:bg-teal-600 text-white font-bold text-base transition-colors shadow-lg shadow-teal-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="editorial-primary-action focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {t("home.hero.primaryCta")} <ArrowRight className="h-4 w-4" />
               </button>
