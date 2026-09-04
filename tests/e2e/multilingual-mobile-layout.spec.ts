@@ -1,6 +1,9 @@
 import { expect, test, type Page } from "@playwright/test";
 
-const MOBILE_VIEWPORT = { width: 375, height: 812 };
+const MOBILE_VIEWPORTS = [
+  { name: "375px", viewport: { width: 375, height: 812 } },
+  { name: "320px", viewport: { width: 320, height: 812 } },
+] as const;
 
 const LANGUAGES = [
   { code: "es", name: "Spanish" },
@@ -75,24 +78,29 @@ async function expectMobileNavigationTargets(page: Page, route: string) {
 }
 
 for (const language of LANGUAGES) {
-  test(`${language.name} public routes stay usable at 375px`, async ({ page }) => {
-    await page.setViewportSize(MOBILE_VIEWPORT);
-    await page.addInitScript(
-      (locale) => {
-        window.localStorage.setItem("i18nextLng", locale);
+  for (const mobileViewport of MOBILE_VIEWPORTS) {
+    test(
+      `${language.name} public routes stay usable at ${mobileViewport.name}`,
+      async ({ page }) => {
+        await page.setViewportSize(mobileViewport.viewport);
+        await page.addInitScript(
+          (locale) => {
+            window.localStorage.setItem("i18nextLng", locale);
+          },
+          language.code,
+        );
+
+        for (const route of AUDITED_ROUTES) {
+          await page.goto(route);
+          await expect(page.locator("main h1").first()).toBeVisible({
+            timeout: 15_000,
+          });
+          await page.waitForTimeout(350);
+
+          await expectNoDocumentHorizontalOverflow(page, route);
+          await expectMobileNavigationTargets(page, route);
+        }
       },
-      language.code,
     );
-
-    for (const route of AUDITED_ROUTES) {
-      await page.goto(route);
-      await expect(page.locator("main h1").first()).toBeVisible({
-        timeout: 15_000,
-      });
-      await page.waitForTimeout(350);
-
-      await expectNoDocumentHorizontalOverflow(page, route);
-      await expectMobileNavigationTargets(page, route);
-    }
-  });
+  }
 }

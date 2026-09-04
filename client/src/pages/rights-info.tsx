@@ -150,8 +150,11 @@ export default function RightsInfo() {
                   {t('rights.printableCards.description')}
                 </p>
               </div>
-              <Link href="/quick-reference-cards">
-                <Button className="shrink-0" data-testid="button-open-printable-rights-cards">
+              <Link href="/quick-reference-cards" className="w-full sm:w-auto">
+                <Button
+                  className="h-auto min-h-10 w-full shrink-0 whitespace-normal text-center sm:w-auto"
+                  data-testid="button-open-printable-rights-cards"
+                >
                   <Printer className="h-4 w-4 mr-2" />
                   {t('rights.printableCards.button')}
                 </Button>

@@ -84,9 +84,9 @@ function TemplateCard({
   return (
     <Card className="border border-border/60 dark:border-border/40 shadow-sm">
       <CardHeader className="pb-3">
-        <div className="flex items-center justify-between flex-wrap gap-2">
+        <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
-          <div className="flex gap-2">
+          <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:justify-end">
             <Button
               variant="outline"
               size="sm"
@@ -199,12 +199,12 @@ function NeedsCardSection() {
         <ScrollReveal>
           <Card className="border border-pink-200 dark:border-pink-800 shadow-sm">
             <CardHeader className="pb-3">
-              <div className="flex items-center justify-between flex-wrap gap-2">
+              <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <CardTitle className="text-base font-semibold flex items-center gap-2">
                   <Heart className="h-4 w-4 text-pink-600 dark:text-pink-400" />
                   {t("support.childcare.needsCard.sectionTitle")}
                 </CardTitle>
-                <div className="flex gap-2">
+                <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:justify-end">
                   <Button
                     variant="outline"
                     size="sm"
