@@ -63,17 +63,17 @@ export default function CourtRecords() {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="vivid-header-teal py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">{t('courtRecords.hero.title')}</h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
+      {/* Editorial opening */}
+      <section className="editorial-page-intro py-12 md:py-16">
+        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">{t('courtRecords.hero.title')}</h1>
+          <p className="text-lg md:text-xl max-w-3xl">
             {t('courtRecords.hero.subtitle')}
           </p>
         </div>
       </section>
       
-      <div className="container mx-auto px-4 py-8 max-w-7xl">
+      <div className="editorial-workspace container mx-auto px-4 py-8 max-w-7xl">
         <div className="mb-8">
           <Alert className="mb-6">
             <AlertCircle className="h-4 w-4" />
@@ -85,7 +85,7 @@ export default function CourtRecords() {
           </Alert>
         </div>
 
-        <Card className="mb-8">
+        <Card className="editorial-card mb-8">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Search className="w-5 h-5" />
@@ -168,7 +168,7 @@ export default function CourtRecords() {
         {isLoading && (
           <div className="space-y-4">
             {[1, 2, 3].map((i) => (
-              <Card key={i}>
+              <Card key={i} className="editorial-card">
                 <CardHeader>
                   <Skeleton className="h-6 w-3/4" />
                   <Skeleton className="h-4 w-1/2 mt-2" />
@@ -229,7 +229,7 @@ export default function CourtRecords() {
                 </h3>
                 <div className="space-y-4">
                   {(data as any).recap.results.map((result: any, idx: number) => (
-                    <Card key={`recap-${result.id}-${idx}`} className="hover:shadow-lg transition-shadow">
+                    <Card key={`recap-${result.id}-${idx}`} className="editorial-card editorial-card-interactive">
                       <CardHeader>
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
@@ -301,7 +301,7 @@ export default function CourtRecords() {
                 </h3>
                 <div className="space-y-4">
                   {(data as any).opinions.results.map((result: any, idx: number) => (
-                    <Card key={`opinion-${result.id}-${idx}`} className="hover:shadow-lg transition-shadow">
+                    <Card key={`opinion-${result.id}-${idx}`} className="editorial-card editorial-card-interactive">
                       <CardHeader>
                         <CardTitle className="text-lg mb-2" data-testid={`text-opinion-name-${idx}`}>
                           {result.caseName || result.caseNameFull || result.case_name}
@@ -349,7 +349,7 @@ export default function CourtRecords() {
             )}
 
             {((data as any)?.recap?.count || 0) === 0 && ((data as any)?.opinions?.count || 0) === 0 && (
-              <Card>
+              <Card className="editorial-card">
                 <CardContent className="py-12 text-center">
                   <AlertCircle className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{t('courtRecords.results.noResults')}</h3>
@@ -371,7 +371,7 @@ export default function CourtRecords() {
         )}
 
         {!hasSearched && !isLoading && (
-          <Card>
+          <Card className="editorial-card">
             <CardContent className="py-12 text-center">
               <Search className="w-12 h-12 mx-auto text-muted-foreground mb-4" />
               <h3 className="text-lg font-semibold mb-2">{t('courtRecords.searchParams.title')}</h3>

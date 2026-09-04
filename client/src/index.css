@@ -1501,6 +1501,16 @@ a:focus-visible,
     text-transform: uppercase;
   }
 
+  .editorial-tool-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid color-mix(in srgb, var(--editorial-signal) 42%, var(--editorial-rule));
+    border-radius: var(--radius);
+    background: var(--editorial-signal-soft);
+    color: var(--editorial-signal);
+  }
+
   .editorial-rule {
     border-top: 1px solid var(--editorial-rule);
   }

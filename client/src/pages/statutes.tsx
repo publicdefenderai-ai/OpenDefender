@@ -159,17 +159,23 @@ export default function StatutesPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 container mx-auto px-4 py-8 max-w-7xl">
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="heading-statutes">
+      {/* Editorial opening */}
+      <section className="editorial-page-intro py-10 md:py-14">
+        <div className="editorial-page-intro-inner max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="editorial-tool-icon w-12 h-12 mb-5">
+            <BookOpen className="h-6 w-6" />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-statutes">
             Criminal Laws & Statutes
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg max-w-3xl">
             Search and browse federal and state criminal statutes
           </p>
         </div>
+      </section>
 
-        <div className="mb-6">
+      <main className="editorial-workspace flex-1 container mx-auto px-4 py-8 max-w-7xl">
+        <div className="editorial-surface rounded-lg p-4 mb-6">
           <div className="flex flex-col gap-3 mb-4 sm:flex-row">
             <div className="flex-1">
               <Input
@@ -201,7 +207,7 @@ export default function StatutesPage() {
             {loadingFederal ? (
               <div className="space-y-4">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i}>
+                  <Card key={i} className="editorial-card">
                     <CardHeader>
                       <Skeleton className="h-5 w-3/4" />
                       <Skeleton className="h-4 w-1/2 mt-1" />
@@ -259,7 +265,7 @@ export default function StatutesPage() {
             ) : loadingState ? (
               <div className="space-y-4">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i}>
+                  <Card key={i} className="editorial-card">
                     <CardHeader>
                       <Skeleton className="h-5 w-3/4" />
                       <Skeleton className="h-4 w-1/2 mt-1" />
@@ -329,7 +335,7 @@ export default function StatutesPage() {
 
               {citationResult && !loadingCitation && (
                 citationResult.success && citationResult.statute ? (
-                  <Card data-testid="card-citation-result">
+                  <Card className="editorial-card" data-testid="card-citation-result">
                     <CardHeader>
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1">
@@ -387,7 +393,7 @@ export default function StatutesPage() {
               )}
 
               {!activeCitation && !loadingCitation && (
-                <div className="rounded-lg border border-dashed border-border p-8 text-center text-muted-foreground">
+                <div className="editorial-surface rounded-lg border-dashed p-8 text-center text-muted-foreground">
                   <BookOpen className="h-10 w-10 mx-auto mb-3 opacity-40" />
                   <p className="text-sm">Enter a citation above to retrieve live statute text from OpenLaws</p>
                 </div>
@@ -424,7 +430,7 @@ function StatuteCard({ statute }: { statute: Statute }) {
   const hasContent = statute.content || liveContent;
 
   return (
-    <Card data-testid={`card-statute-${citationKey}`}>
+    <Card className="editorial-card" data-testid={`card-statute-${citationKey}`}>
       <CardHeader>
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">

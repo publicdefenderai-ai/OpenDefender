@@ -21,24 +21,21 @@ export default function DocumentSummarizerPage() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative py-8 md:py-12 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-cyan-100/50 to-cyan-50 dark:from-cyan-950 dark:via-cyan-900/50 dark:to-cyan-950" />
-
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
+      {/* Editorial opening */}
+      <section className="editorial-page-intro py-10 md:py-14">
+        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center"
           >
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-600 rounded-2xl mb-4">
-              <FileSearch className="h-8 w-8 text-white" />
+            <div className="editorial-tool-icon w-12 h-12 mb-5">
+              <FileSearch className="h-6 w-6" />
             </div>
-            <h1 className="text-3xl sm:text-4xl font-bold mb-3 text-foreground">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3">
               {t('privacyPolicy.documentSummarizer.tool.title')}
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl">
               {t('privacyPolicy.documentSummarizer.tool.description')}
             </p>
           </motion.div>
@@ -46,7 +43,7 @@ export default function DocumentSummarizerPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-8 md:py-12">
+      <section className="editorial-workspace py-8 md:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Back Button */}
           <div className="mb-6">
@@ -62,7 +59,7 @@ export default function DocumentSummarizerPage() {
           <Suspense
             fallback={
               <div
-                className="flex min-h-56 items-center justify-center rounded-lg border border-border bg-card px-4"
+                className="editorial-surface flex min-h-56 items-center justify-center rounded-lg px-4"
                 role="status"
                 aria-live="polite"
               >

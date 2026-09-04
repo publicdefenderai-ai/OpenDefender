@@ -95,22 +95,21 @@ export default function LegalGlossary() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section - Purple Vivid Header */}
-      <section className="vivid-header-purple py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 vivid-header-content">
+      {/* Editorial opening */}
+      <section className="editorial-page-intro py-12 md:py-16 lg:py-20">
+        <div className="editorial-page-intro-inner max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <div className="w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-              <BookOpen className="h-8 w-8 text-white" />
+            <div className="editorial-tool-icon w-12 h-12 mb-5">
+              <BookOpen className="h-6 w-6" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               {t('legalGlossary.hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/85 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl max-w-3xl">
               {t('legalGlossary.hero.subtitle')}
             </p>
           </motion.div>
@@ -287,7 +286,7 @@ export default function LegalGlossary() {
                 </CardContent>
               </Card>
             ) : (
-              <Card>
+              <Card className="editorial-card">
                 <CardContent className="p-12 text-center">
                   <BookOpen className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                   <h3 className="text-lg font-semibold mb-2">{t('legalGlossary.results.noResults', { defaultValue: 'No terms found' })}</h3>
@@ -307,7 +306,7 @@ export default function LegalGlossary() {
           {/* Quick Navigation */}
           <ScrollReveal delay={0.3}>
             <div className="mt-12 grid md:grid-cols-2 gap-6">
-              <Card className="hover:shadow-lg transition-all duration-300">
+              <Card className="editorial-card editorial-card-interactive">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3">Need Case Support?</h3>
                   <p className="text-muted-foreground text-sm mb-4">
@@ -320,7 +319,7 @@ export default function LegalGlossary() {
                   </Link>
                 </CardContent>
               </Card>
-              <Card className="hover:shadow-lg transition-all duration-300">
+              <Card className="editorial-card editorial-card-interactive">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-3">Know Your Rights</h3>
                   <p className="text-muted-foreground text-sm mb-4">
