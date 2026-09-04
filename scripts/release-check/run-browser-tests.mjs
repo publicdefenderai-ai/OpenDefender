@@ -62,6 +62,7 @@ const testProcess = spawn(
     "tests/e2e/export-release-gate.spec.ts",
     "tests/e2e/authority-boundary-release.spec.ts",
     "tests/e2e/source-readiness-gate.spec.ts",
+    "tests/e2e/multilingual-mobile-layout.spec.ts",
   ],
   {
     env: {
