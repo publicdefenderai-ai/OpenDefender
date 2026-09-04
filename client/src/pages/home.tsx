@@ -170,7 +170,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="editorial-kicker mb-5">OpenDefender</p>
             <h1 className="font-display text-[2.15rem] sm:text-[3rem] md:text-[4.25rem] font-normal mb-6 tracking-tight" style={{ lineHeight: '1.08' }}>
               {t("home.hero.headlinePart1")}
               <br />
