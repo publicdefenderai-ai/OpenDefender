@@ -60,6 +60,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import {
+  getVerifiedCitation,
   getInstructionRef,
   getInstructionUrl,
   getInstructionPaywall,
@@ -519,16 +520,16 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
       </Button>
 
       {showStatute && (
-        <div className="mt-3 rounded-lg border border-border bg-muted/30 p-4">
+        <div className="mt-3 min-w-0 rounded-lg border border-border bg-muted/30 p-4">
           {isLoading ? (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Loader2 className="h-4 w-4 animate-spin" />
               Fetching statute from OpenLaws...
             </div>
           ) : liveError || liveData?.error ? (
-            <Alert variant="destructive">
+            <Alert variant="destructive" className="min-w-0">
               <AlertCircle className="h-4 w-4" />
-              <AlertDescription>
+              <AlertDescription className="min-w-0 break-words">
                 {t(`statutes.errors.${getLiveStatuteErrorKey(liveError, liveData?.error)}`, {
                   citation,
                 })}
@@ -610,14 +611,15 @@ function YourChargesSection({
   }
 
   // Get plain-language explanations for each charge.
-  // Resolve the canonical entry to carry through dataConfidence and
-  // statuteCitations — required for the "Read the Law" button guard.
+  // Resolve the canonical entry to carry through the verified citation and
+  // jury-instruction metadata required by the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
     const authorityUnavailable = isAuthorityBacked &&
       !currentAuthorityIds.has(classification.id ?? "");
     const dbCharge = authorityUnavailable
       ? undefined
       : resolveGuidanceCharge(classification, jurisdiction);
+    const verifiedCitation = dbCharge ? getVerifiedCitation(dbCharge) : null;
     const isCalifornia = jurisdiction?.toUpperCase() === 'CA';
     const explanation = (isCalifornia || authorityUnavailable) && !dbCharge
       ? undefined
@@ -633,8 +635,7 @@ function YourChargesSection({
       code: classification.code,
       classification: classification.classification,
       explanation,
-      dataConfidence: dbCharge?.dataConfidence,
-      statuteCitations: dbCharge?.statuteCitations,
+      verifiedCitation,
       instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
       instructionUrl: dbCharge ? getInstructionUrl(dbCharge) : undefined,
       instructionPaywall: dbCharge ? getInstructionPaywall(dbCharge) : undefined,
@@ -824,11 +825,11 @@ function YourChargesSection({
               </div>
             )}
 
-            {/* Read the Law — only shown when citation is OpenLaws-verified (dataConfidence: 'high') */}
-            {jurisdiction && charge.dataConfidence === 'high' && charge.statuteCitations?.length && (
+            {/* Read the Law — only shown when the canonical citation gate verifies it. */}
+            {jurisdiction && charge.verifiedCitation && (
               <ChargeReadTheLaw
                 jurisdiction={jurisdiction}
-                citation={charge.statuteCitations[0]}
+                citation={charge.verifiedCitation}
               />
             )}
 
@@ -1071,7 +1072,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
   return (
     <>
       <GuidancePrintPlan guidance={guidance} language={i18n.language} />
-      <div className="max-w-6xl mx-auto p-6 space-y-6 print:hidden">
+      <div className="w-full min-w-0 max-w-6xl mx-auto p-6 space-y-6 print:hidden">
       {/* Case Summary Header */}
       <Card className="border-l-4 border-l-primary">
         <CardHeader>
@@ -1767,14 +1768,14 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       </Card>
 
       {/* Expandable Sections */}
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid min-w-0 md:grid-cols-2 gap-6">
         {/* Local Resources */}
         <Collapsible defaultOpen>
           <CollapsibleTrigger asChild>
-            <Card className="cursor-pointer hover:bg-muted/50 border-border">
+            <Card className="min-w-0 cursor-pointer hover:bg-muted/50 border-border">
               <CardHeader>
                 <CardTitle className="flex items-center justify-between text-foreground">
-                  <div className="flex items-center gap-2">
+                  <div className="min-w-0 flex items-center gap-2 break-words">
                     <Users className="h-5 w-5 text-muted-foreground" />
                     {t('legalGuidance.dashboard.localResources.title')}
                   </div>
