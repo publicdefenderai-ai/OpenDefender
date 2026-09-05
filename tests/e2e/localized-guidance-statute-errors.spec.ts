@@ -72,6 +72,27 @@ async function mockCitationError(page: Page, status: 400 | 404, error: string) {
   });
 }
 
+async function mockVerifiedCitation(page: Page) {
+  await page.route("**/api/openlaws/citation/**", async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: true,
+        statute: {
+          title: "Murder in the First Degree",
+          citation: "Fla. Stat. § 782.04(1)",
+          content:
+            "A person is guilty of murder in the first degree if the killing is premeditated.",
+          jurisdiction: "FL",
+          section: "782.04(1)",
+          url: "https://openlaws.example/statutes/fl/782.04/1",
+        },
+      }),
+    });
+  });
+}
+
 async function openQAFlow(page: Page) {
   await page.goto("/case-guidance");
   await page.getByTestId("button-start-guidance").click();
@@ -141,6 +162,30 @@ async function expectNoHorizontalOverflow(page: Page) {
   ).toBeLessThanOrEqual(dimensions.viewportWidth + 1);
 }
 
+async function expectReadableWithinMobileViewport(
+  page: Page,
+  element: ReturnType<Page["locator"]>,
+) {
+  const dimensions = await element.evaluate((node) => {
+    const rect = node.getBoundingClientRect();
+    return {
+      viewportWidth: window.innerWidth,
+      left: Math.round(rect.left),
+      right: Math.round(rect.right),
+      scrollWidth: node.scrollWidth,
+      clientWidth: node.clientWidth,
+    };
+  });
+
+  expect(dimensions.left, JSON.stringify(dimensions)).toBeGreaterThanOrEqual(0);
+  expect(dimensions.right, JSON.stringify(dimensions)).toBeLessThanOrEqual(
+    dimensions.viewportWidth,
+  );
+  expect(dimensions.scrollWidth, JSON.stringify(dimensions)).toBeLessThanOrEqual(
+    dimensions.clientWidth + 1,
+  );
+}
+
 for (const language of LOCALIZED_ERRORS) {
   for (const errorCase of [
     {
@@ -182,4 +227,43 @@ for (const language of LOCALIZED_ERRORS) {
       },
     );
   }
+}
+
+for (const language of LOCALIZED_ERRORS) {
+  test(
+    `${language.name} guidance opens verified live statute text on mobile`,
+    async ({ page }) => {
+      await page.setViewportSize(MOBILE_VIEWPORT);
+      await page.addInitScript(
+        (locale) => window.localStorage.setItem("i18nextLng", locale),
+        language.code,
+      );
+      await mockGuidanceStream(page);
+      await mockVerifiedCitation(page);
+
+      await openQAFlow(page);
+      await selectJurisdiction(page);
+      await selectCharge(page);
+      await completeStatus(page);
+
+      await expect(page.getByTestId("button-close-dashboard")).toBeVisible({
+        timeout: 30_000,
+      });
+      await page.getByRole("button", { name: "Read the Law" }).click();
+
+      const statuteCard = page
+        .getByText("Source: OpenLaws · Live statute text")
+        .locator("..")
+        .locator("..");
+      await expect(statuteCard).toContainText("Murder in the First Degree");
+      await expect(statuteCard).toContainText("Fla. Stat. § 782.04(1)");
+      await expect(statuteCard).toContainText(
+        "A person is guilty of murder in the first degree if the killing is premeditated.",
+      );
+      await expect(
+        statuteCard.getByRole("link", { name: "View on OpenLaws" }),
+      ).toHaveAttribute("href", "https://openlaws.example/statutes/fl/782.04/1");
+      await expectReadableWithinMobileViewport(page, statuteCard);
+    },
+  );
 }
