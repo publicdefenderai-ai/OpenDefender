@@ -3798,6 +3798,14 @@ export default {
     }
   },
   "statutes": {
+    "liveText": {
+      "readLaw": "Leer la ley",
+      "hideStatuteText": "Ocultar texto del estatuto",
+      "fetching": "Obteniendo el estatuto de OpenLaws...",
+      "viewOnOpenLaws": "Ver en OpenLaws",
+      "source": "Fuente: OpenLaws · Texto del estatuto en vivo",
+      "unavailable": "El texto completo del estatuto no está disponible para esta cita ({{citation}}). Consulte a su abogado para conocer el texto exacto del estatuto."
+    },
     "errors": {
       "loadFailed": "La búsqueda de estatutos no está disponible temporalmente. Inténtelo de nuevo más tarde.",
       "citationFailed": "El proveedor del texto oficial no está disponible temporalmente. Vuelva a intentar la consulta de citas más tarde.",

@@ -3797,6 +3797,14 @@ export default {
     }
   },
   "statutes": {
+    "liveText": {
+      "readLaw": "阅读法律",
+      "hideStatuteText": "隐藏法规文本",
+      "fetching": "正在从 OpenLaws 获取法规……",
+      "viewOnOpenLaws": "在 OpenLaws 中查看",
+      "source": "来源：OpenLaws · 实时法规文本",
+      "unavailable": "此引文（{{citation}}）没有可用的完整法规文本。请咨询律师以了解法规的准确措辞。"
+    },
     "errors": {
       "loadFailed": "法规搜索暂时不可用。请稍后重试。",
       "citationFailed": "官方文本服务商暂时不可用。请稍后重试引文查询。",

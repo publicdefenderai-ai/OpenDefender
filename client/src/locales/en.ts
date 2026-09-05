@@ -3796,6 +3796,14 @@ export default {
     }
   },
   "statutes": {
+    "liveText": {
+      "readLaw": "Read the Law",
+      "hideStatuteText": "Hide Statute Text",
+      "fetching": "Fetching statute from OpenLaws...",
+      "viewOnOpenLaws": "View on OpenLaws",
+      "source": "Source: OpenLaws · Live statute text",
+      "unavailable": "Full statute text not available for this citation ({{citation}}). Check with your attorney for the exact statute language."
+    },
     "errors": {
       "loadFailed": "Statute search is temporarily unavailable. Please try again later.",
       "citationFailed": "The official-text provider is temporarily unavailable. Please try the citation lookup again later.",

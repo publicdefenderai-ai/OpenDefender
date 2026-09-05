@@ -6,6 +6,9 @@ const LOCALIZED_ERRORS = [
   {
     code: "es",
     name: "Spanish",
+    readLaw: "Leer la ley",
+    source: "Fuente: OpenLaws · Texto del estatuto en vivo",
+    viewOnOpenLaws: "Ver en OpenLaws",
     invalidCitation:
       "No se reconoce ese formato de cita. Pruebe un formato estándar y vuelva a buscar.",
     citationNotFound:
@@ -14,6 +17,9 @@ const LOCALIZED_ERRORS = [
   {
     code: "zh",
     name: "Chinese",
+    readLaw: "阅读法律",
+    source: "来源：OpenLaws · 实时法规文本",
+    viewOnOpenLaws: "在 OpenLaws 中查看",
     invalidCitation: "无法识别该引文格式。请尝试标准格式后重新搜索。",
     citationNotFound:
       "未找到“Fla. Stat. § 782.04(1)”对应的法规。请调整引文格式或检查引文是否正确。",
@@ -220,8 +226,8 @@ for (const language of LOCALIZED_ERRORS) {
         await expect(page.getByTestId("button-close-dashboard")).toBeVisible({
           timeout: 30_000,
         });
-        await expect(page.getByRole("button", { name: "Read the Law" })).toBeVisible();
-        await page.getByRole("button", { name: "Read the Law" }).click();
+        await expect(page.getByRole("button", { name: language.readLaw })).toBeVisible();
+        await page.getByRole("button", { name: language.readLaw }).click();
         await expect(page.getByText(errorCase.message)).toBeVisible();
         await expectNoHorizontalOverflow(page);
       },
@@ -249,10 +255,10 @@ for (const language of LOCALIZED_ERRORS) {
       await expect(page.getByTestId("button-close-dashboard")).toBeVisible({
         timeout: 30_000,
       });
-      await page.getByRole("button", { name: "Read the Law" }).click();
+      await page.getByRole("button", { name: language.readLaw }).click();
 
       const statuteCard = page
-        .getByText("Source: OpenLaws · Live statute text")
+        .getByText(language.source)
         .locator("..")
         .locator("..");
       await expect(statuteCard).toContainText("Murder in the First Degree");
@@ -261,7 +267,7 @@ for (const language of LOCALIZED_ERRORS) {
         "A person is guilty of murder in the first degree if the killing is premeditated.",
       );
       await expect(
-        statuteCard.getByRole("link", { name: "View on OpenLaws" }),
+        statuteCard.getByRole("link", { name: language.viewOnOpenLaws }),
       ).toHaveAttribute("href", "https://openlaws.example/statutes/fl/782.04/1");
       await expectReadableWithinMobileViewport(page, statuteCard);
     },

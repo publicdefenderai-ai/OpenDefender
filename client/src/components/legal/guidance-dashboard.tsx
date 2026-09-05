@@ -509,12 +509,12 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
         {showStatute ? (
           <>
             <ChevronUp className="h-3.5 w-3.5 mr-1" />
-            Hide Statute Text
+            {t("statutes.liveText.hideStatuteText")}
           </>
         ) : (
           <>
             <ChevronDown className="h-3.5 w-3.5 mr-1" />
-            Read the Law
+            {t("statutes.liveText.readLaw")}
           </>
         )}
       </Button>
@@ -524,7 +524,7 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
           {isLoading ? (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Loader2 className="h-4 w-4 animate-spin" />
-              Fetching statute from OpenLaws...
+              {t("statutes.liveText.fetching")}
             </div>
           ) : liveError || liveData?.error ? (
             <Alert variant="destructive" className="min-w-0">
@@ -548,7 +548,7 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:text-primary/80 shrink-0"
-                    aria-label="View on OpenLaws"
+                    aria-label={t("statutes.liveText.viewOnOpenLaws")}
                   >
                     <ExternalLink className="h-4 w-4" />
                   </a>
@@ -557,11 +557,11 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
               <div className="text-xs text-muted-foreground leading-relaxed whitespace-pre-wrap max-h-48 overflow-y-auto font-mono bg-background rounded p-2 border border-border/50">
                 {liveData.statute.content}
               </div>
-              <p className="text-xs text-muted-foreground">Source: OpenLaws · Live statute text</p>
+              <p className="text-xs text-muted-foreground">{t("statutes.liveText.source")}</p>
             </div>
           ) : (
             <p className="text-sm text-muted-foreground">
-              Full statute text not available for this citation ({citation}). Check with your attorney for the exact statute language.
+              {t("statutes.liveText.unavailable", { citation })}
             </p>
           )}
         </div>
