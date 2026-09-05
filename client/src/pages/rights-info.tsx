@@ -77,7 +77,11 @@ export default function RightsInfo() {
                 {t('rights.hero.nextStepDescription', 'Start with the quick reference, then open the detail that fits your situation.')}
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-                <Button asChild className="w-full sm:w-auto gap-2" data-testid="button-start-rights">
+                <Button
+                  asChild
+                  className="w-full h-auto min-h-11 sm:w-auto max-w-full flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
+                  data-testid="button-start-rights"
+                >
                   <a href="#quick-rights">
                     {t('rights.hero.nextStep', 'See the quick rights reference')}
                     <ArrowRight className="h-4 w-4" />

@@ -129,11 +129,11 @@ export function PageSectionNav({
       aria-label={ariaLabel}
       className="overflow-hidden border-b border-border/60 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80"
     >
-      <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2.5 lg:gap-8 lg:py-4">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-3 px-4 py-2.5 lg:gap-8 lg:py-4">
         <span className="hidden shrink-0 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground lg:block">
           {ariaLabel}
         </span>
-        <div className="flex min-w-0 gap-1.5 overflow-x-auto no-scrollbar lg:flex-wrap lg:gap-x-5 lg:gap-y-2">
+        <div className="flex min-w-0 flex-1 flex-wrap gap-1.5 lg:gap-x-5 lg:gap-y-2">
           {items.map(({ id, label, icon: Icon }) => {
             const isActive = activeId === id;
             return (
@@ -142,7 +142,7 @@ export function PageSectionNav({
                 href={`#${id}`}
                 aria-current={isActive ? "location" : undefined}
                 onClick={() => setActiveId(id)}
-                className={`inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:min-h-0 lg:rounded-md lg:px-2 lg:py-1 ${
+                className={`inline-flex min-h-11 max-w-full items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium leading-snug whitespace-normal break-words transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring lg:min-h-0 lg:rounded-md lg:px-2 lg:py-1 ${
                   isActive ? "bg-muted text-foreground font-semibold" : accentClassName
                 }`}
               >

@@ -291,7 +291,12 @@ export default function Resources() {
           <p className="text-base max-w-xl">
             {t('resources.hero.subtitle', { defaultValue: 'Free and low-cost legal representation near you — search by ZIP code.' })}
           </p>
-          <Button asChild size="lg" className="mt-5 gap-2">
+          <Button
+            asChild
+            size="lg"
+            className="mt-5 max-w-full h-auto min-h-11 flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
+            data-testid="button-start-resources"
+          >
             <a href="#resource-finders">
               {t('resources.hero.nextStep', 'Search for help by ZIP code')}
               <ArrowRight className="h-4 w-4" />

@@ -1335,7 +1335,7 @@ export default function CaseGuidance() {
               onClick={handleStartQA}
               size="lg"
               disabled={!!aiUnavailable}
-              className="bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-sm shadow-none"
+              className="max-w-full h-auto min-h-11 flex-wrap justify-center whitespace-normal break-words text-center leading-snug bg-white text-primary hover:bg-white/90 font-semibold px-8 py-3 rounded-sm shadow-none"
               data-testid="button-start-guidance"
             >
               {t('case.hero.startButton')}

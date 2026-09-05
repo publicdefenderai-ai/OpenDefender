@@ -93,7 +93,12 @@ export default function CaseTimeline() {
               <p className="text-lg md:text-xl max-w-3xl">
                 {t("caseTimeline.subtitle", "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.")}
               </p>
-              <Button asChild size="lg" className="mt-6 gap-2">
+              <Button
+                asChild
+                size="lg"
+                className="mt-6 max-w-full h-auto min-h-11 flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
+                data-testid="button-start-timeline"
+              >
                 <a href="#timeline-stages">
                   {t("caseTimeline.nextStep", "Choose your current stage")}
                   <ChevronDown className="h-4 w-4" />
