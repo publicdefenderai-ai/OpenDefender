@@ -751,6 +751,60 @@ function triggerDownload(blob: Blob, filename: string) {
 /* ─── Polish with AI panel ─── */
 
 const POLISH_COOLDOWN_MS = 30_000;
+const POLISH_COOLDOWN_STORAGE_KEY = "opendefender:mitigation-polish-cooldown";
+
+interface PersistedPolishCooldown {
+  endsAt: number;
+  filledFieldCount: number;
+}
+
+function readActivePolishCooldown(filledFieldCount: number): number | null {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const raw = window.localStorage.getItem(POLISH_COOLDOWN_STORAGE_KEY);
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw) as Partial<PersistedPolishCooldown>;
+    if (
+      typeof parsed.endsAt !== "number" ||
+      !Number.isFinite(parsed.endsAt) ||
+      !Number.isInteger(parsed.filledFieldCount) ||
+      parsed.filledFieldCount !== filledFieldCount ||
+      parsed.endsAt <= Date.now()
+    ) {
+      window.localStorage.removeItem(POLISH_COOLDOWN_STORAGE_KEY);
+      return null;
+    }
+
+    return parsed.endsAt;
+  } catch {
+    return null;
+  }
+}
+
+function persistPolishCooldown(endsAt: number, filledFieldCount: number) {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.localStorage.setItem(
+      POLISH_COOLDOWN_STORAGE_KEY,
+      JSON.stringify({ endsAt, filledFieldCount }),
+    );
+  } catch {
+    // The in-memory cooldown remains authoritative if browser storage is unavailable.
+  }
+}
+
+function clearPersistedPolishCooldown() {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.localStorage.removeItem(POLISH_COOLDOWN_STORAGE_KEY);
+  } catch {
+    // Ignore unavailable browser storage.
+  }
+}
 
 type PolishState =
   | { status: "idle" }
@@ -766,17 +820,22 @@ function PolishPanel({ form }: { form: FormState }) {
   const [polishDocxLoading, setPolishDocxLoading] = useState(false);
   const { token: captchaToken, setToken: setCaptchaToken, isRequired: captchaRequired, reset: resetCaptcha } = useCaptcha();
   const [captchaAttempt, setCaptchaAttempt] = useState(0);
-  const [polishCooldown, setPolishCooldown] = useState(false);
-  const [polishCooldownSeconds, setPolishCooldownSeconds] = useState(0);
   const [polishDailyCount, setPolishDailyCount] = useState(() =>
     readPolishDailyUsage(
       typeof window === "undefined" ? null : window.localStorage,
     ).count,
   );
-  const polishRequestInFlightRef = useRef(false);
-  const polishCooldownRef = useRef(false);
-  const polishCooldownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const filledFieldCount = Object.values(form).filter((value) => value.trim() !== "").length;
+  const initialCooldownEndsAt = readActivePolishCooldown(filledFieldCount);
+  const [polishCooldown, setPolishCooldown] = useState(initialCooldownEndsAt !== null);
+  const [polishCooldownSeconds, setPolishCooldownSeconds] = useState(() =>
+    initialCooldownEndsAt === null
+      ? 0
+      : Math.ceil((initialCooldownEndsAt - Date.now()) / 1000),
+  );
+  const polishRequestInFlightRef = useRef(false);
+  const polishCooldownRef = useRef(initialCooldownEndsAt !== null);
+  const polishCooldownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const previousFilledFieldCountRef = useRef(filledFieldCount);
 
   useEffect(() => {
@@ -788,9 +847,31 @@ function PolishPanel({ form }: { form: FormState }) {
   }, []);
 
   useEffect(() => {
+    if (initialCooldownEndsAt === null) return;
+
+    const updateCooldown = () => {
+      const remainingMs = Math.max(0, initialCooldownEndsAt - Date.now());
+      if (remainingMs === 0) {
+        clearPersistedPolishCooldown();
+        polishCooldownRef.current = false;
+        polishCooldownTimerRef.current = null;
+        setPolishCooldown(false);
+        setPolishCooldownSeconds(0);
+        return;
+      }
+
+      setPolishCooldownSeconds(Math.ceil(remainingMs / 1000));
+      polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
+    };
+
+    updateCooldown();
+  }, []);
+
+  useEffect(() => {
     if (previousFilledFieldCountRef.current === filledFieldCount) return;
     previousFilledFieldCountRef.current = filledFieldCount;
 
+    clearPersistedPolishCooldown();
     if (polishCooldownTimerRef.current) {
       clearTimeout(polishCooldownTimerRef.current);
       polishCooldownTimerRef.current = null;
@@ -804,9 +885,16 @@ function PolishPanel({ form }: { form: FormState }) {
 
   const startPolishCooldown = () => {
     const cooldownEndsAt = Date.now() + POLISH_COOLDOWN_MS;
+    persistPolishCooldown(cooldownEndsAt, filledFieldCount);
+
+    if (polishCooldownTimerRef.current) {
+      clearTimeout(polishCooldownTimerRef.current);
+    }
+
     const updateCooldown = () => {
       const remainingMs = Math.max(0, cooldownEndsAt - Date.now());
       if (remainingMs === 0) {
+        clearPersistedPolishCooldown();
         polishCooldownRef.current = false;
         polishCooldownTimerRef.current = null;
         setPolishCooldown(false);
