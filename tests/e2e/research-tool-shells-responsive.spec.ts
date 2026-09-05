@@ -5,6 +5,20 @@ const VIEWPORTS = [
   { name: "mobile", width: 390, height: 844 },
 ] as const;
 
+const LOCALIZED_STATUTE_OUTAGES = [
+  {
+    code: "es",
+    name: "Spanish",
+    message:
+      "El proveedor del texto oficial no está disponible temporalmente. Vuelva a intentar la consulta de citas más tarde.",
+  },
+  {
+    code: "zh",
+    name: "Chinese",
+    message: "官方文本服务商暂时不可用。请稍后重试引文查询。",
+  },
+] as const;
+
 async function expectNoHorizontalOverflow(page: Page) {
   // Wait for the authored intro and route transitions to settle before
   // measuring transformed elements.
@@ -110,6 +124,10 @@ async function stubResearchServiceOutages(page: Page) {
     });
   });
 
+  await stubCitationProviderOutage(page);
+}
+
+async function stubCitationProviderOutage(page: Page) {
   await page.route("**/api/openlaws/citation/**", async (route) => {
     await route.fulfill({
       status: 503,
@@ -283,5 +301,29 @@ for (const viewport of VIEWPORTS) {
       ).toBeVisible();
       await expectNoHorizontalOverflow(page);
     });
+
+    for (const language of LOCALIZED_STATUTE_OUTAGES) {
+      test(
+        `${language.name} live statute outage guidance remains visible without overflow`,
+        async ({ page }) => {
+          await page.addInitScript(
+            (locale) => window.localStorage.setItem("i18nextLng", locale),
+            language.code,
+          );
+          await stubCitationProviderOutage(page);
+
+          await page.goto("/statutes");
+          await expectEditorialOpening(page);
+          await page.getByTestId("tab-lookup").click();
+          await page
+            .getByTestId("input-citation-lookup")
+            .fill("Cal. Penal Code § 242");
+          await page.getByTestId("button-citation-lookup").click();
+
+          await expect(page.getByText(language.message)).toBeVisible();
+          await expectNoHorizontalOverflow(page);
+        },
+      );
+    }
   });
 }
