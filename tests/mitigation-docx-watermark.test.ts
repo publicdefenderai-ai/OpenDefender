@@ -65,6 +65,50 @@ function fixtureParagraphs(text: string) {
   ];
 }
 
+function crc32(contents: Buffer): number {
+  let crc = 0xffffffff;
+
+  for (const byte of contents) {
+    crc ^= byte;
+    for (let bit = 0; bit < 8; bit += 1) {
+      crc = (crc >>> 1) ^ (crc & 1 ? 0xedb88320 : 0);
+    }
+  }
+
+  return (crc ^ 0xffffffff) >>> 0;
+}
+
+function expectValidPng(contents: Buffer) {
+  expect(contents.subarray(0, 8)).toEqual(
+    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+  );
+
+  let offset = 8;
+  let sawIend = false;
+
+  while (offset + 12 <= contents.length) {
+    const length = contents.readUInt32BE(offset);
+    const type = contents.toString("ascii", offset + 4, offset + 8);
+    const dataStart = offset + 8;
+    const crcStart = dataStart + length;
+    const chunkEnd = crcStart + 4;
+
+    expect(chunkEnd).toBeLessThanOrEqual(contents.length);
+    const data = contents.subarray(dataStart, crcStart);
+    const actualCrc = contents.readUInt32BE(crcStart);
+    expect(actualCrc).toBe(crc32(Buffer.concat([Buffer.from(type, "ascii"), data])));
+
+    offset = chunkEnd;
+    if (type === "IEND") {
+      sawIend = true;
+      break;
+    }
+  }
+
+  expect(sawIend).toBe(true);
+  expect(offset).toBe(contents.length);
+}
+
 describe("mitigation DOCX DRAFT watermark", () => {
   it.each([
     ["standard", createMitigationDraftDocument(fixtureParagraphs("Standard mitigation draft"))],
@@ -90,8 +134,6 @@ describe("mitigation DOCX DRAFT watermark", () => {
     expect(pngEntry).toBeDefined();
     expect(entries).toEqual(expect.arrayContaining(mediaTargets));
     expect(extractDocxEntry(contents, svgEntry!).toString("utf8")).toContain("DRAFT");
-    expect(extractDocxEntry(contents, pngEntry!).subarray(0, 8)).toEqual(
-      Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
-    );
+    expectValidPng(extractDocxEntry(contents, pngEntry!));
   });
 });
