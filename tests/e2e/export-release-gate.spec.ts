@@ -305,7 +305,7 @@ test.describe("browser export release gate", () => {
     expect(pageErrors).toEqual([]);
   });
 
-  test("synchronizes AI polish cooldowns across open builder tabs", async ({ context }) => {
+  test("synchronizes AI polish cooldowns and daily usage across open builder tabs", async ({ context }) => {
     const page = await context.newPage();
     const secondPage = await context.newPage();
     const consoleErrors: string[] = [];
@@ -362,6 +362,8 @@ test.describe("browser export release gate", () => {
 
     await page.getByRole("button", { name: "Generate narrative", exact: true }).click();
     await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(page.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
     await expect(
       secondPage.getByRole("button", { name: /(?:Generate narrative|Regenerate) in \d+s…/ }),
     ).toBeDisabled();
@@ -372,13 +374,27 @@ test.describe("browser export release gate", () => {
 
     await page.getByRole("button", { name: "Regenerate", exact: true }).click();
     await expect.poll(() => polishRequestCount).toBe(2);
+    await expect(page.getByText("AI drafts used today on this browser: 2 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 2 of 20.")).toBeVisible();
     await expect(
       secondPage.getByRole("button", { name: /(?:Generate narrative|Regenerate) in \d+s…/ }),
     ).toBeDisabled();
 
+    for (let expectedUsage = 3; expectedUsage <= 20; expectedUsage += 1) {
+      await page.clock.fastForward(30_000);
+      await page.getByRole("button", { name: "Regenerate", exact: true }).click();
+      await expect.poll(() => polishRequestCount).toBe(expectedUsage);
+    }
+
+    await expect(page.getByText("AI drafts used today on this browser: 20 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 20 of 20.")).toBeVisible();
+    await Promise.all([page.clock.fastForward(30_000), secondPage.clock.fastForward(30_000)]);
+    await expect(page.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
+    await expect(secondPage.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
+
     await secondPage.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
-    await expect(secondPage.getByRole("button", { name: "Generate narrative", exact: true })).toBeEnabled();
-    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    await expect(secondPage.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
+    await expect(page.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
     expect(consoleErrors).toEqual([]);
     expect(pageErrors).toEqual([]);
   });

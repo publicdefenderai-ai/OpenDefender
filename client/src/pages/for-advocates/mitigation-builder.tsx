@@ -33,6 +33,7 @@ import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import {
   consumePolishDailyUsage,
   POLISH_DAILY_LIMIT,
+  POLISH_DAILY_USAGE_STORAGE_KEY,
   readPolishDailyUsage,
 } from "@/lib/mitigation-polish-rate-limit";
 import {
@@ -811,6 +812,13 @@ function PolishPanel({ form }: { form: FormState }) {
 
   useEffect(() => {
     const handleStorageChange = (event: StorageEvent) => {
+      if (event.key === POLISH_DAILY_USAGE_STORAGE_KEY) {
+        setPolishDailyCount(
+          readPolishDailyUsage(window.localStorage).count,
+        );
+        return;
+      }
+
       if (event.key !== POLISH_COOLDOWN_STORAGE_KEY) return;
 
       if (!event.newValue) {
@@ -1183,7 +1191,11 @@ function PolishPanel({ form }: { form: FormState }) {
           <button
             type="button"
             onClick={handlePolish}
-            disabled={!!(captchaRequired && !captchaToken) || polishCooldown}
+            disabled={
+              !!(captchaRequired && !captchaToken) ||
+              polishCooldown ||
+              polishDailyCount >= POLISH_DAILY_LIMIT
+            }
             className="min-h-[44px] flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-md bg-[var(--editorial-signal)] hover:opacity-90 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <Sparkles className="h-3.5 w-3.5" />
