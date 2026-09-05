@@ -356,6 +356,25 @@ for (const viewport of VIEWPORTS) {
           await expectNoHorizontalOverflow(page);
         },
       );
+
+      test(
+        `${language.name} opened statute card outage guidance remains visible without overflow`,
+        async ({ page }) => {
+          await page.addInitScript(
+            (locale) => window.localStorage.setItem("i18nextLng", locale),
+            language.code,
+          );
+          await stubStatuteCardProviderOutage(page);
+          await stubCitationProviderOutage(page);
+
+          await page.goto("/statutes");
+          await expectEditorialOpening(page);
+          await page.getByTestId("button-full-text-cal--penal-code---242").click();
+
+          await expect(page.getByText(language.message)).toBeVisible();
+          await expectNoHorizontalOverflow(page);
+        },
+      );
     }
 
     for (const language of LOCALIZED_STATUTE_ERRORS) {
