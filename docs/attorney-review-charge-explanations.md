@@ -377,20 +377,21 @@ The 16 entries below already existed in `shared/charge-explanations.ts`; this pa
 **Pattern:** `/check.{0,20}fraud|bad.{0,5}check|insufficient.{0,10}funds.{0,10}check|476a?(\b|$)|...`
 
 **Plain summary:**
-> Check fraud under California law covers two related offenses. The most common is Penal Code § 476a: writing, passing, or using a check when you knew your account didn't have enough money…
+> Check fraud or a bad-check charge generally concerns using, creating, or passing a check with the knowledge and intent required by the applicable law. The exact offense name, elements, grading, and defenses vary by jurisdiction…
 
 **Key terms:**
-- *Intent to Defraud*: trying to obtain money/goods/services with a check you knew was worthless
-- *Insufficient Funds (§ 476a)*: account balance too low to cover the check amount
-- *Fictitious or Forged Check (§ 476)*: check on nonexistent, closed, or someone else's account
-- *Making, Drawing, Uttering, or Delivering*: any step in creating or passing the check counts
-- *Wobbler*: can be filed as misdemeanor or felony depending on amount and record
+- *Required Knowledge and Intent*: the knowledge and intent required by the applicable jurisdiction
+- *Account or Check Status*: insufficient funds, a closed or nonexistent account, or a forged check, depending on the offense
+- *Amount and Circumstances*: amount, number of checks, prior record, victim, and other facts can affect grading
+- *Creating, Issuing, or Passing*: the charged conduct may include writing, signing, issuing, delivering, depositing, or passing
+- *State-Specific Classification*: misdemeanor, felony, fraud, larceny, or another classification depends on the jurisdiction
 
 **Degree context:**
-> § 476a wobbler: misdemeanor = up to 1 year county jail; felony = up to 3 years county jail. Checks over $950 and repeat offenses more likely filed as felony. Diversion/civil compromise sometimes available.
+> Classification, penalties, notice or cure requirements, restitution, and diversion vary widely. Some states grade bad checks by amount; others use a flat misdemeanor, a fraud or larceny statute, or separate rules for forged and insufficient-funds checks. California's § 476a threshold and repeat-offense rules appear only in the California overlay and must be re-verified against current law.
 
 **Attorney attention points:**
-- *This entry is explicitly California-specific*: confirm the chargePattern does not accidentally match non-CA charges and serve CA law to advocates in other states
+- *Jurisdiction boundary*: confirm the shared text stays state-neutral, while California Penal Code §§ 476 and 476a appear only through the California jurisdiction overlay
+- Confirm "bad check" and "check fraud" searches for non-California advocates show the applicable-law warning and the selected state's overlay rather than California wording
 - Prop 47's $950 threshold has been the subject of ongoing reform efforts: verify it is still in effect
 - Civil compromise under Penal Code § 1377 availability should be verified with a CA criminal defense practitioner
 - The "make good" / 30-day demand letter that many CA prosecutors require before filing is not mentioned

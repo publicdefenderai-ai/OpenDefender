@@ -58,6 +58,26 @@ describe("jurisdiction-scoped case guidance", () => {
     expect(visibleGenericText(result!)).not.toMatch(/\bCalifornia\b|\bFlorida\b|\bOhio\b/i);
   });
 
+  it("does not leak California check-fraud wording for non-California advocates", () => {
+    for (const language of ["en", "es", "zh"]) {
+      const result = getChargeExplanation("bad check", "Texas", language);
+      expect(result, `${language} did not resolve`).not.toBeNull();
+      const text = visibleGenericText(result!);
+
+      expect(text).not.toMatch(/California|加利福尼亚|476a|476\b|wobbler|可变罪/i);
+      expect(text).toMatch(/applicable law|ley aplicable|适用.{0,2}法律/i);
+      expect(result!.jurisdictionDetail?.citation).toContain("Tex.");
+    }
+  });
+
+  it("keeps California-specific check-fraud detail behind the California overlay", () => {
+    const result = getChargeExplanation("476a", "CA", "en");
+    expect(result).not.toBeNull();
+    expect(result!.jurisdictionDetail?.citation).toBe("Cal. Penal Code § 476a");
+    expect(result!.jurisdictionDetail?.keyRule).toContain("Proposition 47");
+    expect(visibleGenericText(result!)).not.toContain("California law covers two related offenses");
+  });
+
   it("preserves the comparative research view when no state is selected", () => {
     const result = getChargeExplanation("first degree murder", undefined, "en");
     expect(result).not.toBeNull();

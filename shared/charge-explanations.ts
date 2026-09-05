@@ -3541,42 +3541,41 @@ export const chargeExplanations: ChargeExplanation[] = [
     lastVerified: "2026-08",
     notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted, now sourced against the 10 anchor jurisdictions' juvenile jurisdiction and transfer statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. Sourcing confirmed the transfer-mechanism split across anchors: FL is the standout: prosecutors may 'direct file' many cases in adult court without any judicial hearing (§ 985.557); AZ similarly gives prosecutors charging discretion and mandates adult prosecution for some 15-17-year-old offenses (§ 13-501); CA moved the opposite direction: after Prop 57 (2016) only a judge may order transfer, prosecutors cannot direct file (Welf. & Inst. § 707); OH has both mandatory and discretionary judicial transfer (§ 2152.12); NY handles 16-17-year-olds through a Youth Part of adult court under Raise the Age rather than classic waiver. Juvenile jurisdiction age ceilings also vary (GA and TX-style age-16 cutoffs vs. 17 in most anchors), so the entry correctly avoids a universal rule. Remaining risk areas: (1) expungement/sealing eligibility is highly state-specific; (2) juvenile sex-offense adjudications can trigger registration; (3) direct-file vs. waiver distinction should be surfaced to advocates per-state via the jurisdiction overlay. See docs/attorney-review-charge-explanations.md.",
   },
-  // ── California Check Fraud ─────────────────────────────────────────────────
-  // Based on CALCRIM No. 1970 (Cal. Penal Code § 476a) and Cal. Penal Code § 476.
-  // § 476a: writing/passing a check knowing there are insufficient funds + intent to defraud.
-  // § 476:  making/passing a check on a fictitious, closed, or forged account.
+  // ── Check Fraud / Bad Check ────────────────────────────────────────────────
+  // The display text is jurisdiction-neutral. State-specific rules, including
+  // California Penal Code §§ 476 and 476a, come from the jurisdiction overlay.
   {
     chargePattern: /check.{0,20}fraud|bad.{0,5}check|insufficient.{0,10}funds.{0,10}check|476a?(\b|$)|writing.{0,10}bad.{0,5}check|passing.{0,10}bad.{0,5}check|forged.{0,10}check/i,
     slug: "check-fraud",
-    plainSummary: "Check fraud under California law covers two related offenses. The most common is Penal Code § 476a: writing, passing, or using a check when you knew your account didn't have enough money to cover it, and doing so to get money or something of value. The second is Penal Code § 476: making or passing a check on a fictitious account, a closed account, or one you had no right to use, or forging a signature on a check. The critical word in both charges is 'knowing': the prosecutor must prove you were aware the check wouldn't clear. Accidentally miscounting your balance or a bank error is not a crime under these statutes.",
+    plainSummary: "Check fraud or a bad-check charge generally concerns using, creating, or passing a check with the knowledge and intent required by the applicable law. The account status, check amount, alleged purpose, and any required notice or repayment opportunity can affect the charge. The exact offense name, elements, grading, and defenses vary by jurisdiction; do not apply another state's check law to this case.",
     keyTerms: [
       {
-        term: "Intent to Defraud",
-        plainMeaning: "You were trying to obtain money, goods, or services by using a check you knew was worthless or would bounce",
-        example: "Writing a check for rent knowing your account was already overdrawn, or using a check on an account you knew was closed"
+        term: "Required Knowledge and Intent",
+        plainMeaning: "The prosecution generally must prove the knowledge and intent specified by the applicable law, which may include knowing the check would not be honored and intending to obtain something of value",
+        example: "The charging law may require proof that you knew the account lacked funds when you issued or passed the check"
       },
       {
-        term: "Insufficient Funds (§ 476a)",
-        plainMeaning: "Your bank account did not have enough money to cover the full amount of the check at the time you wrote or passed it",
-        example: "A $600 check written when your account balance was $40"
+        term: "Account or Check Status",
+        plainMeaning: "The account may have lacked sufficient funds, been closed or nonexistent, or belonged to someone else, depending on the offense charged",
+        example: "A statute may distinguish an ordinary insufficient-funds check from a check drawn on a closed account or bearing a forged signature"
       },
       {
-        term: "Fictitious or Forged Check (§ 476)",
-        plainMeaning: "Using a check on an account that doesn't exist, was closed, or belongs to someone else, or signing someone else's name without permission",
-        example: "Writing a check on a bank account you closed last year, or signing your employer's name on a business check without authorization"
+        term: "Amount and Circumstances",
+        plainMeaning: "The check amount, number of checks, prior record, victim, and surrounding facts may affect the charge level and available defenses",
+        example: "The same conduct may be graded differently for a small first-time check than for multiple checks or a larger amount"
       },
       {
-        term: "Making, Drawing, Uttering, or Delivering",
-        plainMeaning: "Any step in creating or passing the check counts. You don't have to be the one who wrote it to be charged",
-        example: "Handing a bad check to a cashier, depositing someone else's check knowing it's bad, or endorsing a fraudulent check for cash"
+        term: "Creating, Issuing, or Passing",
+        plainMeaning: "The charged conduct may include writing, signing, issuing, delivering, depositing, or passing a check, depending on the jurisdiction",
+        example: "A statute may cover both the person who writes the check and someone who knowingly passes it to a business"
       },
       {
-        term: "Wobbler",
-        plainMeaning: "This offense can be filed as either a misdemeanor or a felony. The prosecutor decides based on the dollar amount, your prior record, and the circumstances",
-        example: "A first offense involving a small amount is often charged as a misdemeanor; a pattern of bad checks or a large amount is more likely a felony"
+        term: "State-Specific Classification",
+        plainMeaning: "Whether the charge is a misdemeanor, felony, or another offense and what penalties apply depend on the jurisdiction and facts",
+        example: "Some states use amount-based thresholds, while others use a flat classification or a different fraud or larceny statute"
       }
     ],
-    degreeContext: "Check fraud under § 476a is a 'wobbler': charged as a misdemeanor it carries up to one year in county jail; as a felony, up to three years in county jail (under California's realignment). Prosecutors weigh the dollar amount of the check, whether there was a pattern of multiple bad checks, and your prior criminal record. Checks over $950 and repeat offenses are significantly more likely to be filed as felonies. Diversion programs and civil compromise (repaying what's owed) are sometimes available for first-time offenders. The forgery variant under § 476 carries the same sentencing range but is more seriously viewed because it involves deliberate falsification rather than an account with no money.",
+    degreeContext: "Classification, penalties, notice or cure requirements, restitution rules, and diversion options vary widely by jurisdiction. Some states grade bad checks by amount; others use a flat misdemeanor, a fraud or larceny statute, or separate rules for forged and insufficient-funds checks. Confirm the exact statute and current consequences with a licensed attorney in the jurisdiction of the case.",
     sources: [
       { citation: "Cal. Penal Code § 476a (insufficient funds); § 476 (fictitious/forged checks)", jurisdiction: "CA", url: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=476a." },
       { citation: "N.Y. Penal Law § 190.05 (issuing a bad check)", jurisdiction: "NY", url: "https://www.nysenate.gov/legislation/laws/PEN/190.05" },
@@ -3592,7 +3591,7 @@ export const chargeExplanations: ChargeExplanation[] = [
     pendingAttorneyReview: true,
     dataConfidence: "medium",
     lastVerified: "2026-08",
-    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted from general legal knowledge and California-specific pattern jury instructions (CALCRIM No. 1970); now sourced against the 10 anchor jurisdictions' bad-check statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. The plainSummary/keyTerms/degreeContext text remains California-specific (§§ 476, 476a); advocates in other anchor states should rely on the cited statute for their state: every anchor criminalizes knowingly passing a check without sufficient funds, but grading differs (NY § 190.05 is a flat class B misdemeanor; FL § 832.05 escalates at $150; VA § 18.2-181 becomes felony larceny at $1,000; OH § 2913.11 escalates at $1,000/$7,500/$150,000; GA § 16-9-20 and NC § 14-107 grade by amount with low-value misdemeanors; NJ 2C:21-5 grades from disorderly-persons up at $200/$1,000/$75,000; AZ § 13-1807 is a class 1 misdemeanor, felony at $5,000+ if restitution unpaid; IL grades under its general deceptive-practices ladder). Several anchors (FL, VA, NC, GA) build in statutory notice/cure presumptions similar to California's 'make good' practice. Key remaining risk areas: (1) the entry should clearly state its narrative applies only to California (separate task exists for that display issue); (2) the Prop 47 $950 threshold should be re-verified against post-2024 amendments (Prop 36 (2024) added repeat-theft carve-outs); (3) civil compromise (Pen. § 1377) availability has been narrowed by case law; (4) the CA 'make good' letter/cure practice is not addressed in the entry text. See docs/attorney-review-charge-explanations.md.",
+    notes: "⚠ PENDING ATTORNEY REVIEW (added 2026-08): AI-drafted and sourced against the anchor jurisdictions' bad-check statutes (2026-08 sourcing pass). Not reviewed by a licensed criminal defense attorney. The shared summary is intentionally jurisdiction-neutral; selected-state detail comes from the jurisdiction overlay. Grading, notice/cure rules, restitution, and diversion differ substantially by state. California-specific §§ 476 and 476a rules, including the current treatment of amount thresholds and prior convictions, must be read only from the California overlay and current statute. See docs/attorney-review-charge-explanations.md.",
    },
    {
      chargePattern: /fare.evasion|evasion.of.payment|public.transit.fare/i,
