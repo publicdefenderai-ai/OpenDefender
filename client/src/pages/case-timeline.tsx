@@ -14,6 +14,7 @@ import {
   HandMetal,
   DollarSign,
   Calendar,
+  ChevronDown,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -92,12 +93,18 @@ export default function CaseTimeline() {
               <p className="text-lg md:text-xl max-w-3xl">
                 {t("caseTimeline.subtitle", "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.")}
               </p>
+              <Button asChild size="lg" className="mt-6 gap-2">
+                <a href="#timeline-stages">
+                  {t("caseTimeline.nextStep", "Choose your current stage")}
+                  <ChevronDown className="h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-background">
+      <section id="timeline-stages" className="py-12 md:py-16 bg-background scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4">
           <ScrollReveal>
             <div className="mb-8 text-center">

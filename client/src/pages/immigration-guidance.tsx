@@ -259,6 +259,12 @@ export default function ImmigrationGuidance() {
             <p className="text-lg md:text-xl max-w-4xl leading-relaxed" data-testid="text-immigration-hero-subtitle">
               {t('immigration.hero.subtitle')}
             </p>
+            <Button asChild className="mt-6 gap-2">
+              <a href="#rapid-response">
+                {t('immigration.hero.nextStep', 'See emergency resources')}
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
           </motion.div>
         </div>
       </section>

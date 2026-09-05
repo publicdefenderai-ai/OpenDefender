@@ -21,6 +21,7 @@ import {
   ScanFirstPageFrame,
 } from "@/components/layout/scan-first-page-frame";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { Button } from "@/components/ui/button";
 import {
   getCourtFeesForState, courtFeesByState,
   ALL_STATE_CODES, NATIONAL_ASSISTANCE_ORGS,
@@ -180,6 +181,12 @@ export default function FinancesSupport() {
             <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
               {t('support.finances.overview')}
             </p>
+            <Button asChild className="mt-6 gap-2">
+              <a href="#quick-actions">
+                {t('support.finances.nextStep', 'Start with quick actions')}
+                <ChevronDown className="h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </section>

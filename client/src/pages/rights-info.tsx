@@ -19,6 +19,7 @@ import {
   Smartphone,
   CheckCircle,
   ChevronDown,
+  ArrowRight,
   User,
   Printer,
 } from "lucide-react";
@@ -72,13 +73,24 @@ export default function RightsInfo() {
               <p className="text-lg md:text-xl max-w-3xl mb-6" data-testid="text-rights-subtitle">
                 {t('rights.hero.subtitle')}
               </p>
-              <ShareButton 
-                title={t('rights.hero.title')}
-                text={t('share.rightsDescription', 'Learn about your constitutional rights - important information everyone should know.')}
-                variant="outline"
-                className="bg-transparent border-[var(--editorial-signal)] text-foreground hover:bg-[var(--editorial-signal-soft)]"
-                data-testid="button-share-rights"
-              />
+              <p className="text-sm font-medium text-muted-foreground mb-4">
+                {t('rights.hero.nextStepDescription', 'Start with the quick reference, then open the detail that fits your situation.')}
+              </p>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <Button asChild className="w-full sm:w-auto gap-2" data-testid="button-start-rights">
+                  <a href="#quick-rights">
+                    {t('rights.hero.nextStep', 'See the quick rights reference')}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
+                <ShareButton
+                  title={t('rights.hero.title')}
+                  text={t('share.rightsDescription', 'Learn about your constitutional rights - important information everyone should know.')}
+                  variant="outline"
+                  className="bg-transparent border-[var(--editorial-signal)] text-foreground hover:bg-[var(--editorial-signal-soft)]"
+                  data-testid="button-share-rights"
+                />
+              </div>
             </div>
           </ScrollReveal>
         </div>

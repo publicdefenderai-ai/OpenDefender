@@ -1182,6 +1182,30 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
         </CardHeader>
       </Card>
 
+      <Card className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="guidance-next-step">
+        <CardContent className="p-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary mb-1">
+              {t('legalGuidance.dashboard.nextStep.label', 'Start here')}
+            </p>
+            <h2 className="font-semibold text-foreground">
+              {t('legalGuidance.dashboard.nextStep.title', 'Review your practical next steps')}
+            </h2>
+            <p className="text-sm text-muted-foreground mt-1">
+              {t('legalGuidance.dashboard.nextStep.description', 'Start with the practical plan, then use the timeline and deadlines to prepare for what comes next.')}
+            </p>
+          </div>
+          <Button
+            onClick={() => document.getElementById('practical-action-plan')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            className="w-full sm:w-auto shrink-0"
+            data-testid="button-guidance-next-step"
+          >
+            {t('legalGuidance.dashboard.nextStep.button', 'View practical plan')}
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Button>
+        </CardContent>
+      </Card>
+
       {/* (Attorney notice folded into Urgent Takeaways below) */}
 
       {/* Safety flag notice — shown when server stripped dangerous content */}
@@ -1429,7 +1453,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
       {/* Practical support is intentionally separate from case-specific legal information. */}
-      <Card className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="practical-action-plan">
+      <Card id="practical-action-plan" className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="practical-action-plan">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-foreground">

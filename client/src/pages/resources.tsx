@@ -291,11 +291,17 @@ export default function Resources() {
           <p className="text-base max-w-xl">
             {t('resources.hero.subtitle', { defaultValue: 'Free and low-cost legal representation near you — search by ZIP code.' })}
           </p>
+          <Button asChild size="lg" className="mt-5 gap-2">
+            <a href="#resource-finders">
+              {t('resources.hero.nextStep', 'Search for help by ZIP code')}
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </section>
 
       {/* Two finder cards */}
-      <section className="py-10 md:py-14">
+      <section id="resource-finders" className="py-10 md:py-14 scroll-mt-24">
         <div className="max-w-3xl mx-auto px-4">
           <ScrollReveal>
             <div className="grid sm:grid-cols-2 gap-4 mb-10">

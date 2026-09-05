@@ -467,6 +467,12 @@ export default function FirstTwentyFourHours() {
           <p className="text-base md:text-lg max-w-2xl leading-relaxed">
             {t('first24Hours.subtitle')}
           </p>
+          <Button asChild className="mt-6 gap-2">
+            <a href="#step-before-arrest">
+              {t('first24Hours.nextStep', 'Start with the first step')}
+              <ChevronDownIcon className="h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </section>
 

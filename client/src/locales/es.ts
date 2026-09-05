@@ -668,6 +668,7 @@ export default {
     },
     "backToSupport": "Volver a Apoyo",
     "startHere": "Comience Aquí",
+    "nextStep": "Comience con el primer paso",
     "practicalSteps": "Pasos prácticos",
     "helpfulResources": "Recursos Útiles",
     "pageSections": "En esta página",
@@ -862,6 +863,7 @@ export default {
         "faqs": "Preguntas frecuentes y consejos"
       },
       "overview": "Los casos legales pueden afectar sus finanzas a través de honorarios de abogados, multas, tiempo de trabajo perdido y más. Entender sus opciones para manejar estos costos puede reducir el estrés y ayudarle a concentrarse en su caso.",
+      "nextStep": "Comience con las acciones rápidas",
       "actions": {
         "assessCosts": {
           "title": "Evalúe los costos potenciales",
@@ -2713,6 +2715,12 @@ export default {
       "newSession": "Iniciar una nueva sesión",
       "close": "Cerrar",
       "exportPDF": "Exportar PDF",
+      "nextStep": {
+        "label": "Comience aquí",
+        "title": "Revise sus próximos pasos prácticos",
+        "description": "Comience con el plan práctico y luego use la línea de tiempo y los plazos para prepararse para lo que sigue.",
+        "button": "Ver el plan práctico"
+      },
       "summary": {
         "charges": "Cargos",
         "jurisdiction": "Su Estado",
@@ -2890,6 +2898,9 @@ export default {
       "subtitle": "Obtenga Orientación Personalizada",
       "description": "Responda algunas preguntas sobre su situación para recibir orientación legal personalizada, próximos pasos y recursos específicos para su caso y jurisdicción.",
       "startButton": "Iniciar Evaluación Personalizada",
+      "startHere": "Comience aquí",
+      "alternativeStartPrefix": "O comience con la guía de",
+      "alternativeStartLabel": "las primeras 24 horas",
       "privacyNote": "Sus respuestas se guardan temporalmente en memoria y generalmente caducan en 24 horas"
     },
     "howItWorks": {
@@ -2986,7 +2997,9 @@ export default {
   "rights": {
     "hero": {
       "title": "Conozca sus Derechos Legales",
-      "subtitle": "Entender sus derechos constitucionales y legales es el primer paso para protegerse dentro del sistema de justicia penal."
+      "subtitle": "Entender sus derechos constitucionales y legales es el primer paso para protegerse dentro del sistema de justicia penal.",
+      "nextStep": "Vea la referencia rápida de derechos",
+      "nextStepDescription": "Comience con la referencia rápida y luego abra el detalle que corresponda a su situación."
     },
     "quickRights": {
       "title": "Derechos Esenciales que Todos Deben Conocer",
@@ -3117,7 +3130,8 @@ export default {
     "hero": {
       "title1": "Cumplimiento de Inmigración",
       "title2": "Conozca sus Derechos",
-      "subtitle": "Información esencial sobre derechos tanto para ciudadanos como para no ciudadanos durante encuentros con ICE y procesos de deportación"
+      "subtitle": "Información esencial sobre derechos tanto para ciudadanos como para no ciudadanos durante encuentros con ICE y procesos de deportación",
+      "nextStep": "Vea los recursos de emergencia"
     },
     "criticalAlert": {
       "title": "CRÍTICO:",
@@ -4223,6 +4237,7 @@ export default {
   "caseTimeline": {
     "title": "Línea de Tiempo y Proceso del Caso",
     "subtitle": "Siga las etapas de un caso penal de principio a fin. Seleccione su etapa actual para ver qué esperar y cuáles son sus derechos.",
+    "nextStep": "Elija su etapa actual",
     "selectStage": "Seleccione una etapa para saber qué sucede y cuáles son sus derechos",
     "yourRights": "Sus Derechos",
     "whatToKnow": "Lo Que Debe Saber",
@@ -6077,6 +6092,7 @@ export default {
   "first24Hours": {
     "title": "Sus Primeras 24 Horas",
     "subtitle": "Desde el arresto hasta su primera comparecencia ante el tribunal — las decisiones tomadas al inicio de un caso pueden tener consecuencias duraderas.",
+    "nextStep": "Comience con el primer paso",
     "alert": "Una regla aplica a cada paso a continuación: No discuta los hechos de su caso con nadie excepto su abogado — ni con la policía, ni con familiares, ni con compañeros de celda, ni por teléfono de la cárcel.",
     "relatedGuides": "Guías relacionadas",
     "disclaimer": "Esta guía proporciona información legal general únicamente. No constituye asesoramiento legal y el uso de esta guía no crea una relación abogado-cliente. La información aquí no está protegida por el privilegio abogado-cliente. Las leyes y procedimientos varían según el estado. Consulte a un abogado autorizado sobre su situación específica.",
@@ -7711,7 +7727,8 @@ export default {
   "resources": {
     "hero": {
       "title": "Recursos Legales",
-      "subtitle": "Herramientas e información para ayudarle a navegar el sistema legal"
+      "subtitle": "Herramientas e información para ayudarle a navegar el sistema legal",
+      "nextStep": "Buscar ayuda por código postal"
     },
     "legalAid": {
       "title": "Organizaciones de Asistencia Legal",

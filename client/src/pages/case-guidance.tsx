@@ -17,7 +17,8 @@ import {
   Mail,
   HardDrive as HardDriveIcon,
   Trash2,
-  EyeOff
+  EyeOff,
+  ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -1320,6 +1321,9 @@ export default function CaseGuidance() {
       <section id="understand-charges" className="vivid-header editorial-guidance-hero py-16 md:py-20 lg:py-24 scroll-mt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content text-center">
           <ScrollReveal>
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] opacity-75 mb-4">
+              {t('case.hero.startHere', 'Start here')}
+            </p>
             <h1 className="text-3xl md:text-4xl font-black tracking-tight mb-5 md:mb-6" data-testid="heading-case-title">
               {t('case.hero.title')}
             </h1>
@@ -1335,11 +1339,12 @@ export default function CaseGuidance() {
               data-testid="button-start-guidance"
             >
               {t('case.hero.startButton')}
+              <ArrowRight className="h-4 w-4 ml-2" />
             </Button>
             <p className="mt-4 text-sm opacity-70">
-              Or start with the{" "}
+              {t('case.hero.alternativeStartPrefix', 'Or start with the')}{" "}
               <Link href="/first-24-hours" className="underline underline-offset-2 hover:opacity-90">
-                First 24 Hours guide
+                {t('case.hero.alternativeStartLabel', 'First 24 Hours guide')}
               </Link>.
             </p>
           </ScrollReveal>

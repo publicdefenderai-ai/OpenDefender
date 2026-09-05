@@ -308,6 +308,12 @@ export function ResourcePageTemplate({
               <p className="text-base md:text-lg text-[var(--editorial-ink-soft)] leading-relaxed max-w-2xl">
                 {overview}
               </p>
+              <Button asChild className="mt-5 gap-2 self-start">
+                <a href="#section-start-here">
+                  {t('support.nextStep', 'Start with the first step')}
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </a>
+              </Button>
             </div>
             {heroImage && (
               <div className="hidden md:block flex-shrink-0 w-[42%] relative">

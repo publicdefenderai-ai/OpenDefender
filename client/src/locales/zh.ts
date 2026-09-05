@@ -668,6 +668,7 @@ export default {
     },
     "backToSupport": "返回支持资源",
     "startHere": "从这里开始",
+    "nextStep": "从第一步开始",
     "practicalSteps": "实用步骤",
     "helpfulResources": "有用资源",
     "pageSections": "本页内容",
@@ -862,6 +863,7 @@ export default {
         "faqs": "常见问题与建议"
       },
       "overview": "法律案件可能通过律师费、罚款、误工损失等多种方式给财务带来压力。了解管理这些费用的方案，可以减轻压力，帮助你专注于案件。",
+      "nextStep": "从快速操作开始",
       "actions": {
         "assessCosts": {
           "title": "评估潜在费用",
@@ -2713,6 +2715,12 @@ export default {
       "newSession": "开始新会话",
       "close": "关闭",
       "exportPDF": "导出PDF",
+      "nextStep": {
+        "label": "从这里开始",
+        "title": "查看您的实用下一步",
+        "description": "先查看实用计划，然后使用时间线和截止日期为接下来的事项做好准备。",
+        "button": "查看实用计划"
+      },
       "summary": {
         "charges": "指控",
         "jurisdiction": "你的州",
@@ -2890,6 +2898,9 @@ export default {
       "subtitle": "获取个性化指导",
       "description": "回答几个关于你情况的问题，获取法律帮助、下一步建议和案件相关资源。",
       "startButton": "开始使用",
+      "startHere": "从这里开始",
+      "alternativeStartPrefix": "或者从",
+      "alternativeStartLabel": "最初 24 小时指南开始",
       "privacyNote": "你的回答暂存在服务器内存中，通常在24小时内过期"
     },
     "howItWorks": {
@@ -2986,7 +2997,9 @@ export default {
   "rights": {
     "hero": {
       "title": "了解你的法律权利",
-      "subtitle": "了解你的法律权利是在法律系统中保护自己的第一步。"
+      "subtitle": "了解你的法律权利是在法律系统中保护自己的第一步。",
+      "nextStep": "查看权利速查参考",
+      "nextStepDescription": "先查看速查参考，然后打开与您情况相关的详细内容。"
     },
     "quickRights": {
       "title": "每个人都应知道的基本权利",
@@ -3117,7 +3130,8 @@ export default {
     "hero": {
       "title1": "移民执法",
       "title2": "了解你的权利",
-      "subtitle": "在ICE遭遇和驱逐出境程序中，公民和非公民都需要了解的基本权利信息"
+      "subtitle": "在ICE遭遇和驱逐出境程序中，公民和非公民都需要了解的基本权利信息",
+      "nextStep": "查看紧急资源"
     },
     "criticalAlert": {
       "title": "关键提示：",
@@ -4222,6 +4236,7 @@ export default {
   "caseTimeline": {
     "title": "案件时间线与诉讼流程",
     "subtitle": "从头到尾跟踪刑事案件的各个阶段。选择您当前的阶段，了解会发生什么以及您的权利。",
+    "nextStep": "选择您当前的阶段",
     "selectStage": "选择一个阶段，了解会发生什么以及您有什么权利",
     "yourRights": "您的权利",
     "whatToKnow": "须知事项",
@@ -6077,6 +6092,7 @@ export default {
   "first24Hours": {
     "title": "逮捕后的前24小时",
     "subtitle": "从逮捕到第一次出庭——案件初期做出的决定可能产生深远的后果。",
+    "nextStep": "从第一步开始",
     "alert": "以下每个步骤都适用一条规则：除您的律师外，不要与任何人讨论案件事实——不要与警察、家人、狱友交谈，也不要通过监狱电话透露任何信息。",
     "relatedGuides": "相关指南",
     "disclaimer": "本指南仅提供一般性法律信息，不构成法律建议。使用本指南不产生律师-客户关系，本网站的信息不受律师-客户特权保护。法律和程序因州而异。请就您的具体情况咨询持牌律师。",
@@ -7711,7 +7727,8 @@ export default {
   "resources": {
     "hero": {
       "title": "法律资源",
-      "subtitle": "帮助您了解法律体系的工具和信息"
+      "subtitle": "帮助您了解法律体系的工具和信息",
+      "nextStep": "按邮政编码查找帮助"
     },
     "legalAid": {
       "title": "法律援助组织",
