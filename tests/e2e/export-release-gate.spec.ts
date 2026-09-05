@@ -304,4 +304,82 @@ test.describe("browser export release gate", () => {
     expect(consoleErrors.slice(consoleErrorsBeforePolish)).toEqual(["Failed to load resource: net::ERR_FAILED"]);
     expect(pageErrors).toEqual([]);
   });
+
+  test("synchronizes AI polish cooldowns across open builder tabs", async ({ context }) => {
+    const page = await context.newPage();
+    const secondPage = await context.newPage();
+    const consoleErrors: string[] = [];
+    const pageErrors: Error[] = [];
+
+    for (const currentPage of [page, secondPage]) {
+      currentPage.on("console", (message) => {
+        if (message.type() === "error") consoleErrors.push(message.text());
+      });
+      currentPage.on("pageerror", (error) => pageErrors.push(error));
+    }
+
+    await context.route("**/api/attorney/session", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ isVerified: false }),
+      });
+    });
+    await context.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+    let polishRequestCount = 0;
+    await context.route("**/api/mitigation/polish", async (route) => {
+      polishRequestCount += 1;
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: false,
+          error: "Cross-tab release gate polish failure",
+        }),
+      });
+    });
+
+    await Promise.all([page.clock.install(), secondPage.clock.install()]);
+    await Promise.all([
+      page.goto("/for-advocates/mitigation-builder"),
+      secondPage.goto("/for-advocates/mitigation-builder"),
+    ]);
+
+    for (const currentPage of [page, secondPage]) {
+      await currentPage.getByLabel("Client name or identifier").fill("Cross-tab Polish Release Gate Test");
+      await currentPage
+        .getByPlaceholder("e.g. Bail hearing, diversion application, sentencing memo")
+        .fill("Bail hearing");
+      await currentPage.getByLabel("Time in community").fill("12 years in the community");
+      await expect(currentPage.getByText("Summary output")).toBeVisible();
+    }
+
+    await page.getByRole("button", { name: "Generate narrative", exact: true }).click();
+    await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(
+      secondPage.getByRole("button", { name: /(?:Generate narrative|Regenerate) in \d+s…/ }),
+    ).toBeDisabled();
+
+    await page.clock.fastForward(30_000);
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    await expect(secondPage.getByRole("button", { name: "Generate narrative", exact: true })).toBeEnabled();
+
+    await page.getByRole("button", { name: "Regenerate", exact: true }).click();
+    await expect.poll(() => polishRequestCount).toBe(2);
+    await expect(
+      secondPage.getByRole("button", { name: /(?:Generate narrative|Regenerate) in \d+s…/ }),
+    ).toBeDisabled();
+
+    await secondPage.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await expect(secondPage.getByRole("button", { name: "Generate narrative", exact: true })).toBeEnabled();
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    expect(consoleErrors).toEqual([]);
+    expect(pageErrors).toEqual([]);
+  });
 });

@@ -763,6 +763,39 @@ function PolishPanel({ form }: { form: FormState }) {
   const polishCooldownTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const previousFilledFieldCountRef = useRef(filledFieldCount);
 
+  const clearInMemoryPolishCooldown = () => {
+    if (polishCooldownTimerRef.current) {
+      clearTimeout(polishCooldownTimerRef.current);
+      polishCooldownTimerRef.current = null;
+    }
+    polishCooldownRef.current = false;
+    setPolishCooldown(false);
+    setPolishCooldownSeconds(0);
+  };
+
+  const schedulePolishCooldown = (cooldownEndsAt: number) => {
+    if (polishCooldownTimerRef.current) {
+      clearTimeout(polishCooldownTimerRef.current);
+    }
+
+    const updateCooldown = () => {
+      const remainingMs = Math.max(0, cooldownEndsAt - Date.now());
+      if (remainingMs === 0) {
+        clearPersistedPolishCooldown();
+        clearInMemoryPolishCooldown();
+        return;
+      }
+
+      setPolishCooldownSeconds(Math.ceil(remainingMs / 1000));
+      polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
+    };
+
+    polishCooldownRef.current = true;
+    setPolishCooldown(true);
+    setPolishCooldownSeconds(Math.ceil(Math.max(0, cooldownEndsAt - Date.now()) / 1000));
+    polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
+  };
+
   useEffect(() => {
     return () => {
       if (polishCooldownTimerRef.current) {
@@ -773,68 +806,53 @@ function PolishPanel({ form }: { form: FormState }) {
 
   useEffect(() => {
     if (initialCooldownEndsAt === null) return;
+    schedulePolishCooldown(initialCooldownEndsAt);
+  }, []);
 
-    const updateCooldown = () => {
-      const remainingMs = Math.max(0, initialCooldownEndsAt - Date.now());
-      if (remainingMs === 0) {
-        clearPersistedPolishCooldown();
-        polishCooldownRef.current = false;
-        polishCooldownTimerRef.current = null;
-        setPolishCooldown(false);
-        setPolishCooldownSeconds(0);
+  useEffect(() => {
+    const handleStorageChange = (event: StorageEvent) => {
+      if (event.key !== POLISH_COOLDOWN_STORAGE_KEY) return;
+
+      if (!event.newValue) {
+        clearInMemoryPolishCooldown();
         return;
       }
 
-      setPolishCooldownSeconds(Math.ceil(remainingMs / 1000));
-      polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
+      try {
+        const parsed = JSON.parse(event.newValue) as Partial<PersistedPolishCooldown>;
+        if (
+          typeof parsed.endsAt !== "number" ||
+          !Number.isFinite(parsed.endsAt) ||
+          !Number.isInteger(parsed.filledFieldCount) ||
+          parsed.filledFieldCount !== filledFieldCount ||
+          parsed.endsAt <= Date.now()
+        ) {
+          clearInMemoryPolishCooldown();
+          return;
+        }
+
+        schedulePolishCooldown(parsed.endsAt);
+      } catch {
+        clearInMemoryPolishCooldown();
+      }
     };
 
-    updateCooldown();
-  }, []);
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, [filledFieldCount]);
 
   useEffect(() => {
     if (previousFilledFieldCountRef.current === filledFieldCount) return;
     previousFilledFieldCountRef.current = filledFieldCount;
 
     clearPersistedPolishCooldown();
-    if (polishCooldownTimerRef.current) {
-      clearTimeout(polishCooldownTimerRef.current);
-      polishCooldownTimerRef.current = null;
-    }
-    if (!polishCooldownRef.current) return;
-
-    polishCooldownRef.current = false;
-    setPolishCooldown(false);
-    setPolishCooldownSeconds(0);
+    clearInMemoryPolishCooldown();
   }, [filledFieldCount]);
 
   const startPolishCooldown = () => {
     const cooldownEndsAt = Date.now() + POLISH_COOLDOWN_MS;
     persistPolishCooldown(cooldownEndsAt, filledFieldCount);
-
-    if (polishCooldownTimerRef.current) {
-      clearTimeout(polishCooldownTimerRef.current);
-    }
-
-    const updateCooldown = () => {
-      const remainingMs = Math.max(0, cooldownEndsAt - Date.now());
-      if (remainingMs === 0) {
-        clearPersistedPolishCooldown();
-        polishCooldownRef.current = false;
-        polishCooldownTimerRef.current = null;
-        setPolishCooldown(false);
-        setPolishCooldownSeconds(0);
-        return;
-      }
-
-      setPolishCooldownSeconds(Math.ceil(remainingMs / 1000));
-      polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
-    };
-
-    polishCooldownRef.current = true;
-    setPolishCooldown(true);
-    setPolishCooldownSeconds(Math.ceil(POLISH_COOLDOWN_MS / 1000));
-    polishCooldownTimerRef.current = setTimeout(updateCooldown, 1000);
+    schedulePolishCooldown(cooldownEndsAt);
   };
 
   const handlePolish = async () => {
