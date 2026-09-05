@@ -11,11 +11,14 @@ const LOCALIZED_STATUTE_OUTAGES = [
     name: "Spanish",
     message:
       "El proveedor del texto oficial no está disponible temporalmente. Vuelva a intentar la consulta de citas más tarde.",
+    stateMessage:
+      "La búsqueda de estatutos no está disponible temporalmente. Inténtelo de nuevo más tarde.",
   },
   {
     code: "zh",
     name: "Chinese",
     message: "官方文本服务商暂时不可用。请稍后重试引文查询。",
+    stateMessage: "法规搜索暂时不可用。请稍后重试。",
   },
 ] as const;
 
@@ -176,6 +179,19 @@ async function stubStatuteCardProviderOutage(page: Page) {
           },
         ],
         source: "responsive-shell-fixture",
+      }),
+    });
+  });
+}
+
+async function stubStateStatuteProviderOutage(page: Page) {
+  await page.route("**/api/statutes/CA**", async (route) => {
+    await route.fulfill({
+      status: 503,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: false,
+        error: "State statute service unavailable",
       }),
     });
   });
@@ -353,6 +369,26 @@ for (const viewport of VIEWPORTS) {
           await page.getByTestId("button-citation-lookup").click();
 
           await expect(page.getByText(language.message)).toBeVisible();
+          await expectNoHorizontalOverflow(page);
+        },
+      );
+
+      test(
+        `${language.name} state statute browse outage guidance remains visible without overflow`,
+        async ({ page }) => {
+          await page.addInitScript(
+            (locale) => window.localStorage.setItem("i18nextLng", locale),
+            language.code,
+          );
+          await stubStateStatuteProviderOutage(page);
+
+          await page.goto("/statutes");
+          await expectEditorialOpening(page);
+          await page.getByTestId("tab-state").click();
+          await page.getByTestId("select-state").click();
+          await page.getByRole("option", { name: "California" }).click();
+
+          await expect(page.getByText(language.stateMessage)).toBeVisible();
           await expectNoHorizontalOverflow(page);
         },
       );
