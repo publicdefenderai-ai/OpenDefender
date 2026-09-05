@@ -67,6 +67,14 @@ function escapeRegExp(value: string) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
+type LocalizedCtaContext = {
+  language: string;
+  route: string;
+  testId: string;
+  label: string;
+  expectedDestination: string;
+};
+
 async function installStableGuidanceStatus(page: Page) {
   await page.route("**/api/ai/status", async (route) => {
     await route.fulfill({
@@ -77,22 +85,26 @@ async function installStableGuidanceStatus(page: Page) {
   });
 }
 
+function describeLocalizedCta(context: LocalizedCtaContext) {
+  return `${context.language} ${context.route} CTA "${context.label}" ` +
+    `(expected ${context.expectedDestination})`;
+}
+
 async function expectLocalizedMobileCta(
   page: Page,
-  route: string,
-  testId: string,
-  label: string,
+  context: LocalizedCtaContext,
 ) {
-  const cta = page.getByTestId(testId);
+  const cta = page.getByTestId(context.testId);
+  const description = describeLocalizedCta(context);
 
   await expect(
     cta,
-    `${route} is missing its localized primary CTA`,
+    `${description} is missing its localized primary CTA`,
   ).toBeVisible();
   await expect(
     cta,
-    `${route} primary CTA label is not localized as expected`,
-  ).toContainText(label);
+    `${description} is not localized as expected`,
+  ).toContainText(context.label);
 
   const metrics = await cta.evaluate((element) => {
     const rect = element.getBoundingClientRect();
@@ -107,15 +119,15 @@ async function expectLocalizedMobileCta(
 
   expect(
     metrics.left,
-    `${route} CTA "${metrics.text}" starts outside the phone viewport`,
+    `${description} "${metrics.text}" starts outside the phone viewport`,
   ).toBeGreaterThanOrEqual(-1);
   expect(
     metrics.right,
-    `${route} CTA "${metrics.text}" extends beyond the ${PHONE_VIEWPORT.width}px viewport`,
+    `${description} "${metrics.text}" extends beyond the ${PHONE_VIEWPORT.width}px viewport`,
   ).toBeLessThanOrEqual(PHONE_VIEWPORT.width + 1);
   expect(
     metrics.scrollWidth,
-    `${route} CTA "${metrics.text}" clips or overflows its localized label`,
+    `${description} "${metrics.text}" clips or overflows its localized label`,
   ).toBeLessThanOrEqual(metrics.clientWidth + 1);
 }
 
@@ -136,12 +148,20 @@ for (const language of LANGUAGES) {
 
       await expectLocalizedMobileCta(
         page,
-        "/case-guidance",
-        "button-start-guidance",
-        language.labels.guidance,
+        {
+          language: language.name,
+          route: "/case-guidance",
+          testId: "button-start-guidance",
+          label: language.labels.guidance,
+          expectedDestination: "questionnaire",
+        },
       );
       await page.getByTestId("button-start-guidance").click();
-      await expect(page.getByTestId("qa-step-indicator")).toBeVisible();
+      await expect(
+        page.getByTestId("qa-step-indicator"),
+        `${language.name} /case-guidance CTA "${language.labels.guidance}" ` +
+          "did not reach the questionnaire",
+      ).toBeVisible();
     });
 
     test(`${language.name} anchored page CTAs reach their intended sections`, async ({
@@ -157,9 +177,13 @@ for (const language of LANGUAGES) {
         await expect(page.locator("h1").first()).toBeVisible();
         await expectLocalizedMobileCta(
           page,
-          action.route,
-          action.testId,
-          language.labels[action.labelKey],
+          {
+            language: language.name,
+            route: action.route,
+            testId: action.testId,
+            label: language.labels[action.labelKey],
+            expectedDestination: `hash "${action.hash}"`,
+          },
         );
 
         await page.getByTestId(action.testId).click();
@@ -167,8 +191,14 @@ for (const language of LANGUAGES) {
           new RegExp(
             `${escapeRegExp(action.route)}${escapeRegExp(action.hash)}$`,
           ),
+          `${language.name} ${action.route} CTA "${language.labels[action.labelKey]}" ` +
+            `did not reach expected hash "${action.hash}"`,
         );
-        await expect(page.locator(action.hash)).toBeVisible();
+        await expect(
+          page.locator(action.hash),
+          `${language.name} ${action.route} CTA "${language.labels[action.labelKey]}" ` +
+            `expected hash "${action.hash}" section is not visible`,
+        ).toBeVisible();
       }
     });
 
@@ -185,16 +215,26 @@ for (const language of LANGUAGES) {
         await expect(page.locator("h1").first()).toBeVisible();
         await expectLocalizedMobileCta(
           page,
-          route,
-          "button-start-here",
-          language.labels.support,
+          {
+            language: language.name,
+            route,
+            testId: "button-start-here",
+            label: language.labels.support,
+            expectedDestination: 'hash "#section-start-here"',
+          },
         );
 
         await page.getByTestId("button-start-here").click();
         await expect(page).toHaveURL(
           new RegExp(`${escapeRegExp(route)}#section-start-here$`),
+          `${language.name} ${route} CTA "${language.labels.support}" ` +
+            'did not reach expected hash "#section-start-here"',
         );
-        await expect(page.locator("#section-start-here")).toBeVisible();
+        await expect(
+          page.locator("#section-start-here"),
+          `${language.name} ${route} CTA "${language.labels.support}" ` +
+            'expected hash "#section-start-here" section is not visible',
+        ).toBeVisible();
       }
     });
   });
