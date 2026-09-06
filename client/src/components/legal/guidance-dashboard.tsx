@@ -504,6 +504,7 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
         onClick={handleToggle}
         className="text-primary hover:text-primary/80 p-0 h-auto font-medium text-sm"
         aria-expanded={showStatute}
+        data-testid="live-statute-toggle"
       >
         <BookOpen className="h-3.5 w-3.5 mr-1.5" />
         {showStatute ? (
@@ -520,7 +521,10 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
       </Button>
 
       {showStatute && (
-        <div className="mt-3 min-w-0 rounded-lg border border-border bg-muted/30 p-4">
+        <div
+          className="mt-3 min-w-0 rounded-lg border border-border bg-muted/30 p-4"
+          data-testid="live-statute-panel"
+        >
           {isLoading ? (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Loader2 className="h-4 w-4 animate-spin" />
