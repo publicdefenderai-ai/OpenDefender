@@ -19,6 +19,7 @@ import {
   Smartphone,
   CheckCircle,
   ChevronDown,
+  ArrowRight,
   User,
   Printer,
 } from "lucide-react";
@@ -62,24 +63,38 @@ export default function RightsInfo() {
         currentPage={t('rights.hero.title')} 
       />
 
-      {/* Hero Section - Vivid Header */}
-      <section className="vivid-header py-16 md:py-20 lg:py-24">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 vivid-header-content">
+      <section className="editorial-page-intro py-12 md:py-16 lg:py-20">
+        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4 sm:px-6">
           <ScrollReveal>
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white" data-testid="heading-rights-title">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-5" data-testid="heading-rights-title">
                 {t('rights.hero.title')}
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto mb-6" data-testid="text-rights-subtitle">
+              <p className="text-lg md:text-xl max-w-3xl mb-6" data-testid="text-rights-subtitle">
                 {t('rights.hero.subtitle')}
               </p>
-              <ShareButton 
-                title={t('rights.hero.title')}
-                text={t('share.rightsDescription', 'Learn about your constitutional rights - important information everyone should know.')}
-                variant="outline"
-                className="bg-white/10 border-white/30 text-white hover:bg-white/20"
-                data-testid="button-share-rights"
-              />
+              <p className="text-sm font-medium text-muted-foreground mb-4">
+                {t('rights.hero.nextStepDescription', 'Start with the quick reference, then open the detail that fits your situation.')}
+              </p>
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <Button
+                  asChild
+                  className="w-full h-auto min-h-11 sm:w-auto max-w-full flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
+                  data-testid="button-start-rights"
+                >
+                  <a href="#quick-rights">
+                    {t('rights.hero.nextStep', 'See the quick rights reference')}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
+                <ShareButton
+                  title={t('rights.hero.title')}
+                  text={t('share.rightsDescription', 'Learn about your constitutional rights - important information everyone should know.')}
+                  variant="outline"
+                  className="bg-transparent border-[var(--editorial-signal)] text-foreground hover:bg-[var(--editorial-signal-soft)]"
+                  data-testid="button-share-rights"
+                />
+              </div>
             </div>
           </ScrollReveal>
         </div>
@@ -151,8 +166,11 @@ export default function RightsInfo() {
                   {t('rights.printableCards.description')}
                 </p>
               </div>
-              <Link href="/quick-reference-cards">
-                <Button className="shrink-0" data-testid="button-open-printable-rights-cards">
+              <Link href="/quick-reference-cards" className="w-full sm:w-auto">
+                <Button
+                  className="h-auto min-h-10 w-full shrink-0 whitespace-normal text-center sm:w-auto"
+                  data-testid="button-open-printable-rights-cards"
+                >
                   <Printer className="h-4 w-4 mr-2" />
                   {t('rights.printableCards.button')}
                 </Button>

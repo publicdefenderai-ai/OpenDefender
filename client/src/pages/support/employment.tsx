@@ -68,9 +68,9 @@ function TemplateCard({ label, subject, body, t }: { label: string; subject?: st
   return (
     <Card className="border border-border/60 dark:border-border/40 shadow-sm">
       <CardHeader className="pb-3">
-        <div className="flex items-center justify-between flex-wrap gap-2">
+        <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
-          <div className="flex gap-2">
+          <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:justify-end">
             <Button
               variant="outline"
               size="sm"
@@ -160,8 +160,8 @@ function CourtTimeOffSection() {
               <p className="text-sm font-semibold text-foreground mb-0.5">Need something tailored to your exact situation?</p>
               <p className="text-xs text-muted-foreground">The templates below are a good starting point. Our letter generator creates a personalized draft based on your specific circumstances.</p>
             </div>
-            <a href="/letter-generator" className="flex-shrink-0">
-              <Button size="sm" variant="outline" className="whitespace-nowrap gap-1.5">
+            <a href="/letter-generator" className="w-full sm:w-auto sm:flex-shrink-0">
+              <Button size="sm" variant="outline" className="h-auto min-h-11 w-full max-w-full whitespace-normal gap-1.5 text-left sm:w-auto">
                 <Sparkles className="h-3.5 w-3.5" />
                 Generate a personalized letter
               </Button>
@@ -170,11 +170,11 @@ function CourtTimeOffSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="flex gap-2 mb-6" role="tablist" aria-label="Template type">
+          <div className="flex flex-wrap gap-2 mb-6" role="tablist" aria-label="Template type">
             <Button
               variant={activeTab === 'email' ? 'default' : 'outline'}
               onClick={() => setActiveTab('email')}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               id="email-tab"
               aria-selected={activeTab === 'email'}
@@ -186,7 +186,7 @@ function CourtTimeOffSection() {
             <Button
               variant={activeTab === 'call' ? 'default' : 'outline'}
               onClick={() => setActiveTab('call')}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               id="call-tab"
               aria-selected={activeTab === 'call'}

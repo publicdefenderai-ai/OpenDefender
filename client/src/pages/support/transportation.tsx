@@ -76,9 +76,9 @@ function TemplateCard({
   return (
     <Card className="border border-border/60 dark:border-border/40 shadow-sm">
       <CardHeader className="pb-3">
-        <div className="flex items-center justify-between flex-wrap gap-2">
+        <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between">
           <CardTitle className="text-base font-semibold">{label}</CardTitle>
-          <div className="flex gap-2">
+          <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:justify-end">
             <Button
               variant="outline"
               size="sm"
@@ -236,11 +236,11 @@ function TransportationCommsSection() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="flex gap-2 mb-6" role="tablist">
+          <div className="flex flex-wrap gap-2 mb-6" role="tablist">
             <Button
               variant={activeTab === "email" ? "default" : "outline"}
               onClick={() => setActiveTab("email")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "email"}
             >
@@ -250,7 +250,7 @@ function TransportationCommsSection() {
             <Button
               variant={activeTab === "call" ? "default" : "outline"}
               onClick={() => setActiveTab("call")}
-              className="gap-2"
+              className="h-auto min-h-11 max-w-full whitespace-normal gap-2 text-left"
               role="tab"
               aria-selected={activeTab === "call"}
             >

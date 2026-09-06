@@ -10,9 +10,12 @@ import {
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 
-const adminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN;
+const adminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN?.trim();
 if (!adminToken) {
   throw new Error("Release source-readiness check requires its in-memory admin token fixture");
+}
+if (adminToken === process.env.ADMIN_TOKEN) {
+  throw new Error("Release source-readiness check fixture must not reuse the production admin token");
 }
 
 const artifactPath = resolve(process.cwd(), "dist/index.js");
@@ -25,6 +28,7 @@ const sourceManifestFiles = [
   "ga-source-manifest.json",
   "il-source-manifest.json",
   "ny-source-manifest.json",
+  "nc-source-manifest.json",
   "oh-source-manifest.json",
   "pa-source-manifest.json",
   "sc-source-manifest.json",
@@ -37,6 +41,7 @@ const sourceSeedFiles = [
   "seed-georgia-source-database.ts",
   "seed-illinois-source-database.ts",
   "seed-new-york-source-database.ts",
+  "seed-north-carolina-source-database.ts",
   "seed-ohio-source-database.ts",
   "seed-pennsylvania-source-database.ts",
   "seed-south-carolina-source-database.ts",

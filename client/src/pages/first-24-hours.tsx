@@ -17,14 +17,14 @@ import { FacilityLookupWidget } from "@/components/legal/facility-lookup-widget"
 
 // Step color palettes keyed by step number
 const STEP_COLORS: Record<number, { border: string; iconBg: string; iconText: string; activeBg: string }> = {
-  0: { border: "border-slate-300 dark:border-slate-600",  iconBg: "bg-slate-100 dark:bg-slate-800/50", iconText: "text-slate-600 dark:text-slate-400", activeBg: "bg-slate-50/60 dark:bg-slate-900/20" },
-  1: { border: "border-red-200 dark:border-red-800/60",    iconBg: "bg-red-100 dark:bg-red-900/50",    iconText: "text-red-600 dark:text-red-400",    activeBg: "bg-red-50/60 dark:bg-red-900/10" },
-  2: { border: "border-orange-200 dark:border-orange-800/60", iconBg: "bg-orange-100 dark:bg-orange-900/50", iconText: "text-orange-600 dark:text-orange-400", activeBg: "bg-orange-50/60 dark:bg-orange-900/10" },
-  3: { border: "border-yellow-200 dark:border-yellow-800/60", iconBg: "bg-yellow-100 dark:bg-yellow-900/50", iconText: "text-yellow-600 dark:text-yellow-400", activeBg: "bg-yellow-50/60 dark:bg-yellow-900/10" },
-  4: { border: "border-green-200 dark:border-green-800/60",  iconBg: "bg-green-100 dark:bg-green-900/50",  iconText: "text-green-600 dark:text-green-400",  activeBg: "bg-green-50/60 dark:bg-green-900/10" },
-  5: { border: "border-blue-200 dark:border-blue-800/60",   iconBg: "bg-blue-100 dark:bg-blue-900/50",   iconText: "text-blue-600 dark:text-blue-400",   activeBg: "bg-blue-50/60 dark:bg-blue-900/10" },
-  6: { border: "border-purple-200 dark:border-purple-800/60", iconBg: "bg-purple-100 dark:bg-purple-900/50", iconText: "text-purple-600 dark:text-purple-400", activeBg: "bg-purple-50/60 dark:bg-purple-900/10" },
-  7: { border: "border-indigo-200 dark:border-indigo-800/60", iconBg: "bg-indigo-100 dark:bg-indigo-900/50", iconText: "text-indigo-600 dark:text-indigo-400", activeBg: "bg-indigo-50/60 dark:bg-indigo-900/10" },
+  0: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-muted-foreground", activeBg: "bg-muted/40" },
+  1: { border: "border-red-200 dark:border-red-800/60", iconBg: "bg-red-50 dark:bg-red-950/30", iconText: "text-red-700 dark:text-red-300", activeBg: "bg-red-50/40 dark:bg-red-950/20" },
+  2: { border: "border-[var(--editorial-rule)]", iconBg: "bg-[var(--editorial-signal-soft)]", iconText: "text-[var(--editorial-signal)]", activeBg: "bg-[var(--editorial-signal-soft)]/50" },
+  3: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
+  4: { border: "border-[var(--editorial-rule)]", iconBg: "bg-[var(--editorial-signal-soft)]", iconText: "text-[var(--editorial-signal)]", activeBg: "bg-[var(--editorial-signal-soft)]/50" },
+  5: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
+  6: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
+  7: { border: "border-[var(--editorial-rule)]", iconBg: "bg-muted", iconText: "text-[var(--editorial-ink-soft)]", activeBg: "bg-muted/40" },
 };
 
 interface StepProps {
@@ -453,21 +453,26 @@ export default function FirstTwentyFourHours() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      <section className="vivid-header-alt py-14 md:py-18">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight mb-5 text-white">
+      <section className="editorial-page-intro py-12 md:py-16">
+        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
             {t('first24Hours.title')}
           </h1>
-          <div className="flex items-center justify-center gap-4 mb-5">
-            <span className="h-px w-10 bg-amber-300/50 flex-shrink-0" />
-            <p className="editorial-kicker !text-amber-200 text-lg md:text-xl tracking-[0.12em]">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="h-px w-10 bg-[var(--editorial-signal)] flex-shrink-0" />
+            <p className="text-base md:text-lg font-medium text-[var(--editorial-signal)]">
               {t('first24Hours.tagline')}
             </p>
-            <span className="h-px w-10 bg-amber-300/50 flex-shrink-0" />
           </div>
-          <p className="text-base md:text-lg text-white/75 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg max-w-2xl leading-relaxed">
             {t('first24Hours.subtitle')}
           </p>
+          <Button asChild className="mt-6 gap-2">
+            <a href="#step-before-arrest">
+              {t('first24Hours.nextStep', 'Start with the first step')}
+              <ChevronDownIcon className="h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </section>
 

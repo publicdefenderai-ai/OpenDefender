@@ -32,9 +32,9 @@ function assertDevelopmentEnvironment() {
     );
   }
 
-  if (!process.env.DATABASE_URL) {
+  if (!(process.env.NEON_DATABASE_URL || process.env.DATABASE_URL)) {
     throw new Error(
-      "Authority boundary validation requires the development DATABASE_URL; no database was selected.",
+      "Authority boundary validation requires NEON_DATABASE_URL or DATABASE_URL; no database was selected.",
     );
   }
 }

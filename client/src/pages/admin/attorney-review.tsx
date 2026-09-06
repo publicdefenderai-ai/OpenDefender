@@ -12,6 +12,10 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import { CURRENT_PUBLIC_SOURCE_JURISDICTIONS } from "@shared/public-source-coverage";
+import type {
+  SouthCarolinaTitleAliasReviewTracker,
+  SouthCarolinaTitleAliasReviewTrackerEntry,
+} from "@shared/south-carolina-title-alias-review";
 
 // Prevent search engines from indexing this internal admin tool.
 function useAdminNoIndex() {
@@ -625,6 +629,71 @@ async function fetchSourceReadiness(adminKey: string): Promise<SourceReadinessRe
   return body;
 }
 
+function isSouthCarolinaAliasReviewTracker(
+  value: unknown,
+): value is SouthCarolinaTitleAliasReviewTracker {
+  if (!isRecord(value) || value.success !== true || typeof value.manifestGeneratedAt !== "string") return false;
+  if (!Array.isArray(value.entries) || !isRecord(value.counts)) return false;
+  const counts = value.counts;
+  const countKeys = ["total", "approved", "rejected", "pending", "selectable", "withheld"];
+  if (countKeys.some((key) => !isNonNegativeInteger(counts[key]))) return false;
+  const total = counts.total as number;
+  const selectable = counts.selectable as number;
+  const withheld = counts.withheld as number;
+  if (total !== value.entries.length || selectable + withheld !== total) return false;
+  return value.entries.every((entry): entry is SouthCarolinaTitleAliasReviewTrackerEntry => {
+    if (!isRecord(entry)) return false;
+    return (
+      typeof entry.id === "string" &&
+      typeof entry.chargeId === "string" &&
+      typeof entry.catalogLabel === "string" &&
+      typeof entry.catalogCode === "string" &&
+      typeof entry.proposedAlias === "string" &&
+      (entry.officialSection === null || typeof entry.officialSection === "string") &&
+      (entry.subdivision === null || typeof entry.subdivision === "string") &&
+      (entry.officialTitle === null || typeof entry.officialTitle === "string") &&
+      (entry.citation === null || typeof entry.citation === "string") &&
+      (entry.sourceUrl === null || typeof entry.sourceUrl === "string") &&
+      (entry.decision === "approve" || entry.decision === "reject" || entry.decision === "pending") &&
+      (entry.reviewer === null || typeof entry.reviewer === "string") &&
+      (entry.reviewedAt === null || typeof entry.reviewedAt === "string") &&
+      typeof entry.rationale === "string" &&
+      (entry.reviewRecordId === null || typeof entry.reviewRecordId === "string") &&
+      typeof entry.disposition === "string" &&
+      typeof entry.selectable === "boolean" &&
+      (entry.withheldReason === null || typeof entry.withheldReason === "string")
+    );
+  });
+}
+
+async function fetchSouthCarolinaAliasReview(
+  adminKey: string,
+): Promise<SouthCarolinaTitleAliasReviewTracker> {
+  let response: Response;
+  try {
+    response = await fetch("/api/admin/south-carolina-title-alias-review", {
+      headers: { "x-admin-api-key": adminKey },
+    });
+  } catch {
+    throw new Error("The South Carolina alias review tracker could not be reached.");
+  }
+
+  let body: unknown;
+  try {
+    body = await response.json();
+  } catch {
+    throw new Error("The South Carolina alias review tracker returned an unreadable response.");
+  }
+  if (!response.ok || !isSouthCarolinaAliasReviewTracker(body)) {
+    throw new Error(
+      response.status === 401 || response.status === 403
+        ? "Your admin access is no longer valid."
+        : "The South Carolina alias review tracker is unavailable.",
+    );
+  }
+  return body;
+}
+
 function formatPercent(value: number): string {
   return `${value.toFixed(1)}%`;
 }
@@ -780,6 +849,151 @@ function SourceReadinessSection({ report }: { report: SourceReadinessReport }) {
             </li>
           ))}
         </ol>
+      </div>
+    </section>
+  );
+}
+
+function SouthCarolinaAliasReviewSection({
+  tracker,
+}: {
+  tracker: SouthCarolinaTitleAliasReviewTracker;
+}) {
+  const decisionStyles: Record<
+    SouthCarolinaTitleAliasReviewTrackerEntry["decision"],
+    { label: string; className: string }
+  > = {
+    approve: { label: "Approved", className: "border-green-200 bg-green-50 text-green-800" },
+    reject: { label: "Rejected", className: "border-red-200 bg-red-50 text-red-800" },
+    pending: { label: "Pending", className: "border-yellow-200 bg-yellow-50 text-yellow-800" },
+  };
+
+  return (
+    <section
+      className="space-y-4"
+      aria-labelledby="south-carolina-alias-review-heading"
+      data-testid="sc-alias-review-tracker"
+    >
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="h-3 w-3 rounded-full bg-rose-600" />
+            <h2
+              id="south-carolina-alias-review-heading"
+              className="text-sm font-bold uppercase tracking-wide text-gray-700"
+            >
+              South Carolina title-alias review
+            </h2>
+          </div>
+          <p className="mt-1 max-w-4xl text-sm leading-relaxed text-gray-600">
+            Review ledger for every proposed South Carolina title mapping. Evidence below is read from the committed
+            source manifest generated on {new Date(tracker.manifestGeneratedAt).toLocaleDateString()}.
+            An alias is selectable only when its current mapping, official title, citation, subdivision, reviewer,
+            date, rationale, and approval record all match.
+          </p>
+        </div>
+        <div className="grid shrink-0 grid-cols-3 gap-2 text-center">
+          <div className="rounded-lg border border-green-200 bg-green-50 px-3 py-2">
+            <div className="text-xl font-bold text-green-800">{tracker.counts.selectable}</div>
+            <div className="text-xs text-green-700">Selectable</div>
+          </div>
+          <div className="rounded-lg border border-yellow-200 bg-yellow-50 px-3 py-2">
+            <div className="text-xl font-bold text-yellow-800">{tracker.counts.pending}</div>
+            <div className="text-xs text-yellow-700">Pending</div>
+          </div>
+          <div className="rounded-lg border border-red-200 bg-red-50 px-3 py-2">
+            <div className="text-xl font-bold text-red-800">{tracker.counts.withheld}</div>
+            <div className="text-xs text-red-700">Withheld</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+        <strong>Fail-closed rule:</strong> approved is not the same as selectable. Pending, rejected, incomplete, or
+        changed mappings remain withheld from the public charge catalog until the committed review data and manifest
+        agree.
+      </div>
+
+      <div className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[1420px] text-left text-sm">
+            <caption className="sr-only">South Carolina title alias attorney review tracker</caption>
+            <thead className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
+              <tr>
+                <th scope="col" className="px-4 py-3 font-semibold">Catalog charge</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Proposed alias</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Official manifest evidence</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Decision record</th>
+                <th scope="col" className="px-4 py-3 font-semibold">Availability</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {tracker.entries.map((entry) => {
+                const decision = decisionStyles[entry.decision];
+                return (
+                  <tr key={entry.id} className="align-top" data-testid={`sc-alias-review-entry-${entry.chargeId}`}>
+                    <th scope="row" className="max-w-[210px] px-4 py-4 font-semibold text-gray-900">
+                      {entry.catalogLabel}
+                      <div className="mt-1 font-mono text-xs font-normal text-gray-500">{entry.catalogCode}</div>
+                    </th>
+                    <td className="max-w-[290px] px-4 py-4 text-gray-800">{entry.proposedAlias}</td>
+                    <td className="max-w-[410px] px-4 py-4">
+                      {entry.officialSection && entry.officialTitle && entry.sourceUrl ? (
+                        <>
+                          <div className="font-semibold text-gray-900">
+                            § {entry.officialSection}
+                            <span className="ml-2 font-normal text-gray-600">
+                              {entry.subdivision ?? "Whole section"}
+                            </span>
+                          </div>
+                          <div className="mt-1 text-gray-800">{entry.officialTitle}</div>
+                          <div className="mt-1 text-xs text-gray-500">{entry.citation ?? "Citation unavailable"}</div>
+                          <a
+                            href={entry.sourceUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 inline-block break-all text-xs font-medium text-indigo-700 underline hover:text-indigo-900"
+                          >
+                            Open official source
+                          </a>
+                        </>
+                      ) : (
+                        <span className="text-red-700">Manifest evidence unavailable</span>
+                      )}
+                    </td>
+                    <td className="max-w-[390px] px-4 py-4">
+                      <span className={`inline-flex rounded-full border px-2.5 py-1 text-xs font-semibold ${decision.className}`}>
+                        {decision.label}
+                      </span>
+                      <dl className="mt-2 space-y-1 text-xs text-gray-700">
+                        <div><dt className="inline font-semibold">Reviewer:</dt>{" "}{entry.reviewer ?? "Not recorded"}</div>
+                        <div><dt className="inline font-semibold">Date:</dt>{" "}{entry.reviewedAt ?? "Not recorded"}</div>
+                        <div><dt className="inline font-semibold">Review record:</dt>{" "}{entry.reviewRecordId ?? "Not recorded"}</div>
+                        <div><dt className="inline font-semibold">Rationale:</dt>{" "}{entry.rationale || "Not recorded"}</div>
+                      </dl>
+                    </td>
+                    <td className="px-4 py-4">
+                      {entry.selectable ? (
+                        <span className="inline-flex rounded-full border border-green-200 bg-green-50 px-2.5 py-1 text-xs font-semibold text-green-800">
+                          Selectable
+                        </span>
+                      ) : (
+                        <>
+                          <span className="inline-flex rounded-full border border-red-200 bg-red-50 px-2.5 py-1 text-xs font-semibold text-red-800">
+                            Withheld
+                          </span>
+                          <p className="mt-2 max-w-[220px] text-xs leading-relaxed text-red-700">
+                            {entry.withheldReason ?? "Review data is incomplete."}
+                          </p>
+                        </>
+                      )}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   );
@@ -1124,6 +1338,9 @@ export default function AdminAttorneyReview() {
   const [loadingReadiness, setLoadingReadiness] = useState(false);
   const [sourceReadiness, setSourceReadiness] = useState<SourceReadinessReport | null>(null);
   const [sourceReadinessError, setSourceReadinessError] = useState("");
+  const [loadingAliasReview, setLoadingAliasReview] = useState(false);
+  const [aliasReview, setAliasReview] = useState<SouthCarolinaTitleAliasReviewTracker | null>(null);
+  const [aliasReviewError, setAliasReviewError] = useState("");
   // Track in-flight saves to show a saving indicator
   const [saving, setSaving] = useState(false);
   // Show a banner when a save fails so the user isn't misled
@@ -1133,11 +1350,14 @@ export default function AdminAttorneyReview() {
   async function loadFromServer(key: string) {
     setLoadingStatus(true);
     setLoadingReadiness(true);
+    setLoadingAliasReview(true);
     setSourceReadinessError("");
+    setAliasReviewError("");
 
-    const [statusResult, readinessResult] = await Promise.allSettled([
+    const [statusResult, readinessResult, aliasReviewResult] = await Promise.allSettled([
       fetchAllStatus(key),
       fetchSourceReadiness(key),
+      fetchSouthCarolinaAliasReview(key),
     ]);
 
     if (statusResult.status === "fulfilled") {
@@ -1159,8 +1379,24 @@ export default function AdminAttorneyReview() {
         setAuthed(false);
       }
     }
+    if (aliasReviewResult.status === "fulfilled") {
+      setAliasReview(aliasReviewResult.value);
+    } else {
+      setAliasReview(null);
+      const errorMessage =
+        aliasReviewResult.reason instanceof Error
+          ? aliasReviewResult.reason.message
+          : "The South Carolina alias review tracker is unavailable.";
+      setAliasReviewError(errorMessage);
+      if (errorMessage === "Your admin access is no longer valid.") {
+        sessionStorage.removeItem("adminKey");
+        setAdminKey("");
+        setAuthed(false);
+      }
+    }
     setLoadingStatus(false);
     setLoadingReadiness(false);
+    setLoadingAliasReview(false);
   }
 
   useEffect(() => {
@@ -1377,6 +1613,44 @@ export default function AdminAttorneyReview() {
                 </button>
               </div>
             </div>
+          </section>
+        )}
+
+        {loadingAliasReview ? (
+          <section
+            className="rounded-xl border border-rose-200 bg-rose-50/60 px-4 py-5"
+            aria-label="South Carolina title-alias review"
+            aria-busy="true"
+          >
+            <p className="text-sm font-semibold text-rose-900">Loading South Carolina alias review tracker…</p>
+            <p className="mt-1 text-xs text-rose-800">
+              Alias availability will remain withheld until the complete review ledger loads.
+            </p>
+          </section>
+        ) : aliasReview ? (
+          <SouthCarolinaAliasReviewSection tracker={aliasReview} />
+        ) : (
+          <section
+            className="rounded-xl border-2 border-red-300 bg-red-50 px-4 py-5"
+            role="alert"
+            data-testid="sc-alias-review-unavailable"
+            aria-labelledby="sc-alias-review-unavailable-heading"
+          >
+            <h2 id="sc-alias-review-unavailable-heading" className="text-sm font-bold text-red-900">
+              South Carolina alias review unavailable: aliases remain withheld
+            </h2>
+            <p className="mt-1 text-sm leading-relaxed text-red-800">
+              The complete alias decision ledger could not be loaded. Do not treat any South Carolina title alias as
+              selectable until the tracker is available again.
+            </p>
+            <p className="mt-2 text-xs text-red-700">{aliasReviewError}</p>
+            <button
+              type="button"
+              onClick={() => void loadFromServer(adminKey)}
+              className="mt-3 rounded-lg border border-red-300 bg-white px-3 py-1.5 text-xs font-semibold text-red-800 hover:bg-red-100"
+            >
+              Try again
+            </button>
           </section>
         )}
 

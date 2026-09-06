@@ -37,6 +37,12 @@ import {
   buildOhioSourceDatabaseSeed,
 } from "./ohio-source-database-seed";
 import {
+  loadNorthCarolinaAuthorityManifest,
+} from "./north-carolina-manifest-loader";
+import {
+  buildNorthCarolinaSourceDatabaseSeed,
+} from "./north-carolina-source-database-seed";
+import {
   loadPennsylvaniaAuthorityManifest,
 } from "./pennsylvania-manifest-loader";
 import {
@@ -273,6 +279,10 @@ export const COVERAGE_REGISTRY = Object.freeze({
     manifestPath: "scripts/data-review/output/oh-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-ohio-source-database.ts",
   }),
+  NC: Object.freeze({
+    manifestPath: "scripts/data-review/output/nc-source-manifest.json",
+    seedScriptPath: "scripts/data-review/seed-north-carolina-source-database.ts",
+  }),
   PA: Object.freeze({
     manifestPath: "scripts/data-review/output/pa-source-manifest.json",
     seedScriptPath: "scripts/data-review/seed-pennsylvania-source-database.ts",
@@ -435,6 +445,7 @@ function buildCoverageInputs(): CoverageInput[] {
   const illinois = loadIllinoisAuthorityManifest();
   const newYork = loadNewYorkAuthorityManifest();
   const ohio = loadOhioAuthorityManifest();
+  const northCarolina = loadNorthCarolinaAuthorityManifest();
   const pennsylvania = loadPennsylvaniaAuthorityManifest();
   const southCarolina = loadSouthCarolinaAuthorityManifest();
   const texas = loadTexasAuthorityManifest();
@@ -478,6 +489,13 @@ function buildCoverageInputs(): CoverageInput[] {
       ohio.generatedAt,
       ohio.catalogRecords,
       buildOhioSourceDatabaseSeed(ohio),
+    ),
+    buildManifestInput(
+      "NC",
+      northCarolina.source,
+      northCarolina.generatedAt,
+      northCarolina.catalogRecords,
+      buildNorthCarolinaSourceDatabaseSeed(northCarolina),
     ),
     buildManifestInput(
       "PA",

@@ -12,9 +12,15 @@ import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 import {
   buildSouthCarolinaManifestRecord,
   buildSouthCarolinaSourceDatabaseSeed,
+  buildSouthCarolinaTitleAliasReviewTracker,
   buildSouthCarolinaSourceKey,
   buildSouthCarolinaSourceUrl,
+  isSouthCarolinaReviewedAliasMappingApproved,
+  matchesSouthCarolinaCatalogTitle,
   parseSouthCarolinaCitation,
+  SOUTH_CAROLINA_EXACT_TITLE_ALIASES,
+  SOUTH_CAROLINA_PRIVATE_REVIEW_RECORD_ID,
+  SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS,
   validateSouthCarolinaManifestRecord,
   type SouthCarolinaAuditFindingCode,
   type SouthCarolinaSourceDocument,
@@ -125,22 +131,171 @@ describe("South Carolina authority manifest", () => {
     expect(count).toBe(128);
     expect(manifest.catalogRecords).toHaveLength(count);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(count);
-    expect(seed.sources).toHaveLength(37);
-    expect(seed.snapshots).toHaveLength(41);
-    expect(seed.links).toHaveLength(41);
-    expect(seed.selectableChargeIds).toHaveLength(41);
+    expect(seed.sources).toHaveLength(31);
+    expect(seed.snapshots).toHaveLength(35);
+    expect(seed.links).toHaveLength(35);
+    expect(seed.selectableChargeIds).toHaveLength(35);
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(87);
+      record.disposition === "require_exact_reselection")).toHaveLength(93);
     expect(manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection").every((record) => record.provisions.length === 0)).toBe(true);
     expect(seed.selectableChargeIds).not.toContain("sc-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).toContain("sc-voluntary-manslaughter");
+    expect(seed.selectableChargeIds).toContain("sc-domestic-violence-third-degree");
     expect(seed.selectableChargeIds).not.toContain("sc-vehicular-homicide");
     expect(seed.selectableChargeIds).not.toContain("sc-auto-burglary");
     expect(seed.selectableChargeIds).not.toContain("sc-money-laundering");
     expect(seed.selectableChargeIds).toContain("sc-shoplifting");
     expect(seed.selectableChargeIds).toContain("sc-attempted-murder");
     expect(new Set(seed.selectableChargeIds)).toEqual(SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS);
+  });
+
+  it("publishes only aliases with a complete attorney decision and withholds rejected proposals", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const aliasIds = Object.keys(SOUTH_CAROLINA_EXACT_TITLE_ALIASES);
+
+    expect(aliasIds).toHaveLength(32);
+    expect(Object.keys(SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS)).toHaveLength(38);
+    for (const chargeId of aliasIds) {
+      const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId);
+      expect(record, chargeId).toMatchObject({
+        disposition: "exact_alias_rename",
+      });
+      for (const alias of SOUTH_CAROLINA_EXACT_TITLE_ALIASES[chargeId]) {
+        expect(SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS[chargeId][alias], `${chargeId}:${alias}`)
+          .toMatchObject({
+            decision: "approve",
+            reviewer: "Attorney reviewer (private source)",
+            reviewedAt: "2026-09-01",
+            reviewRecordId: SOUTH_CAROLINA_PRIVATE_REVIEW_RECORD_ID,
+            officialTitle: expect.any(String),
+            citation: expect.stringContaining("S.C. Code Ann."),
+          });
+      }
+      expect(SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(chargeId), chargeId).toBe(true);
+    }
+    for (const chargeId of [
+      "sc-statutory-rape",
+      "sc-disorderly-conduct",
+      "sc-probation-violation",
+      "sc-littering",
+      "sc-criminal-attempt",
+      "sc-juvenile-transfer-adult-court",
+    ]) {
+      expect(manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId), chargeId)
+        .toMatchObject({
+          disposition: "require_exact_reselection",
+          provisions: [],
+        });
+      expect(SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS.has(chargeId), chargeId).toBe(false);
+    }
+  });
+
+it("builds the attorney tracker from all review proposals and fails closed for stale mappings", () => {
+  const manifest = loadSouthCarolinaAuthorityManifest();
+  const tracker = buildSouthCarolinaTitleAliasReviewTracker(manifest);
+
+  expect(tracker.entries).toHaveLength(39);
+  expect(tracker.counts).toEqual({
+    total: 39,
+    approved: 32,
+    rejected: 7,
+    pending: 0,
+    selectable: 32,
+    withheld: 7,
+  });
+
+  for (const [chargeId, aliases] of Object.entries(SOUTH_CAROLINA_EXACT_TITLE_ALIASES)) {
+    for (const alias of aliases) {
+      const entry = tracker.entries.find(
+        (candidate) => candidate.chargeId === chargeId && candidate.proposedAlias === alias,
+      );
+      expect(entry, `${chargeId}:${alias}`).toMatchObject({
+        catalogLabel: expect.any(String),
+        officialSection: expect.any(String),
+        officialTitle: expect.any(String),
+        citation: expect.stringContaining("S.C. Code Ann."),
+        sourceUrl: expect.stringContaining("scstatehouse.gov"),
+        decision: "approve",
+        reviewer: expect.any(String),
+        reviewedAt: "2026-09-01",
+        rationale: expect.any(String),
+        reviewRecordId: SOUTH_CAROLINA_PRIVATE_REVIEW_RECORD_ID,
+        selectable: true,
+      });
+      expect(entry?.subdivision === null || typeof entry?.subdivision === "string").toBe(true);
+    }
+  }
+
+  const staleManifest = {
+    ...manifest,
+    catalogRecords: manifest.catalogRecords.map((record) =>
+      record.chargeId === "sc-voluntary-manslaughter"
+        ? { ...record, disposition: "require_exact_reselection", provisions: [] as typeof record.provisions }
+        : record,
+    ),
+  };
+  const staleTracker = buildSouthCarolinaTitleAliasReviewTracker(staleManifest);
+  const staleEntry = staleTracker.entries.find(
+    (entry) =>
+      entry.chargeId === "sc-voluntary-manslaughter" &&
+      entry.proposedAlias === "Manslaughter",
+  );
+  expect(staleEntry).toMatchObject({
+    decision: "approve",
+    selectable: false,
+    withheldReason: expect.stringContaining("manifest"),
+  });
+});
+
+it("rejects a changed reviewed citation or subdivision before South Carolina seeding", () => {
+  const manifest = loadSouthCarolinaAuthorityManifest();
+  const original = manifest.catalogRecords.find(
+    (record) => record.chargeId === "sc-voluntary-manslaughter",
+  );
+  expect(original).toBeDefined();
+  const changed = {
+    ...original!,
+    provisions: original!.provisions.map((provision) => ({
+      ...provision,
+      citation: "S.C. Code Ann. § 16-3-51",
+      subdivision: "(A)",
+    })),
+  };
+  expect(
+    isSouthCarolinaReviewedAliasMappingApproved(
+      "sc-voluntary-manslaughter",
+      "Manslaughter",
+      changed.provisions[0].officialTitle,
+      changed.provisions[0].citation,
+      changed.provisions[0].subdivision,
+    ),
+  ).toBe(false);
+  expect(() =>
+    buildSouthCarolinaSourceDatabaseSeed({
+      ...manifest,
+      catalogRecords: manifest.catalogRecords.map((record) =>
+        record.chargeId === changed.chargeId ? changed : record,
+      ),
+    }),
+  ).toThrow(/sc-voluntary-manslaughter:.*exact verified South Carolina match/);
+});
+
+  it("keeps the shared citation allow-list synchronized with the approved review source", () => {
+    expect(SOUTH_CAROLINA_EXACT_SOURCE_CHARGE_IDS).toEqual(new Set(
+      ["sc-shoplifting", "sc-forgery", "sc-attempted-murder", ...Object.keys(SOUTH_CAROLINA_EXACT_TITLE_ALIASES)],
+    ));
+    expect(Object.values(SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS)
+      .flatMap((decisions) => Object.values(decisions))
+      .filter((decision) => decision.decision === "approve")
+      .every((decision) =>
+        decision.reviewer === "Attorney reviewer (private source)" &&
+        decision.reviewedAt === "2026-09-01" &&
+        decision.reviewRecordId === SOUTH_CAROLINA_PRIVATE_REVIEW_RECORD_ID &&
+        typeof decision.officialTitle === "string" &&
+        typeof decision.citation === "string" &&
+        "subdivision" in decision,
+      )).toBe(true);
   });
 
   it("accepts only exact South Carolina Code citations and constructs official chapter URLs", () => {
@@ -318,6 +473,28 @@ describe("South Carolina authority manifest", () => {
         expect(citation, charge.id).toBeNull();
       }
     }
+  });
+
+  it("routes a reviewed alias to its verified citation without promoting a rejected proposal", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const approvedCharge = criminalCharges.find((charge) => charge.id === "sc-voluntary-manslaughter")!;
+    const rejectedCharge = criminalCharges.find((charge) => charge.id === "sc-statutory-rape")!;
+    const approvedRecord = manifest.catalogRecords.find(
+      (record) => record.chargeId === approvedCharge.id,
+    )!;
+    const rejectedRecord = manifest.catalogRecords.find(
+      (record) => record.chargeId === rejectedCharge.id,
+    )!;
+
+    expect(approvedRecord.disposition).toBe("exact_alias_rename");
+    expect(matchesSouthCarolinaCatalogTitle(approvedCharge, "Manslaughter")).toBe(true);
+    expect(getVerifiedCitation(approvedCharge)).toBe("S.C. Code Ann. § 16-3-50");
+    expect(rejectedRecord.disposition).toBe("require_exact_reselection");
+    expect(matchesSouthCarolinaCatalogTitle(
+      rejectedCharge,
+      "Criminal Sexual Conduct with a Minor; Aggravating and Mitigating Circumstances; Penalties; Repeat Offenders",
+    )).toBe(false);
+    expect(getVerifiedCitation(rejectedCharge)).toBeNull();
   });
 
   it("extracts one section from a long chapter page and rejects missing history or subdivisions", () => {
@@ -564,6 +741,29 @@ describe("South Carolina authority manifest", () => {
     }
   });
 
+  it("identifies missing and unexpected committed catalog rows before publication", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+
+    const missingRow = structuredClone(manifest);
+    missingRow.catalogRecords = missingRow.catalogRecords.filter(
+      (record) => record.chargeId !== "sc-shoplifting",
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(missingRow)).toThrow(
+      /missing catalog row sc-shoplifting/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(missingRow)).toThrow(/Regenerate/i);
+
+    const unexpectedRow = structuredClone(manifest);
+    unexpectedRow.catalogRecords.push({
+      ...unexpectedRow.catalogRecords[0],
+      chargeId: "sc-unexpected-charge-row",
+    });
+    expect(() => assertSouthCarolinaManifestIsCurrent(unexpectedRow)).toThrow(
+      /unexpected catalog row sc-unexpected-charge-row/i,
+    );
+    expect(() => assertSouthCarolinaManifestIsCurrent(unexpectedRow)).toThrow(/Regenerate/i);
+  });
+
   it("reports newly complete official evidence for references that were previously withheld", () => {
     const current = loadSouthCarolinaAuthorityManifest();
     const previous = structuredClone(current);
@@ -754,6 +954,95 @@ describe("South Carolina authority manifest", () => {
     const incomplete = buildSouthCarolinaManifestRecord(charge, [], importedAt, "Official source unavailable");
     expect(incomplete.disposition).toBe("require_exact_reselection");
     expect(incomplete.provisions).toEqual([]);
+  });
+
+  it("fails closed when an approved alias no longer matches the current official title", () => {
+    const charge = criminalCharges.find((candidate) => candidate.id === "sc-voluntary-manslaughter")!;
+    const staleTitle = buildSouthCarolinaManifestRecord(
+      charge,
+      [document("16-3-50", "Manslaughter (amended)")],
+      importedAt,
+    );
+
+    expect(staleTitle.disposition).toBe("require_exact_reselection");
+    expect(staleTitle.provisions).toEqual([]);
+    expect(staleTitle.auditFindings).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        code: "official_title_mismatch",
+        classification: "structural",
+        reference: "16-3-50",
+      }),
+    ]));
+  });
+
+  it("rejects a selectable record when audited title evidence drifts from its provision", () => {
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const record = structuredClone(manifest.catalogRecords.find(
+      (candidate) => candidate.chargeId === "sc-shoplifting",
+    )!);
+    record.sourceAudit.references[0].officialTitle = "Shoplifting (amended)";
+
+    expect(validateSouthCarolinaManifestRecord(record)).toBe(
+      "Manifest authority provision 1 is not an exact verified South Carolina match",
+    );
+  });
+
+  it("names an affected charge when an explicitly approved alias no longer matches its official evidence", () => {
+    const chargeId = "sc-voluntary-manslaughter";
+    const manifest = loadSouthCarolinaAuthorityManifest();
+    const staleManifest = structuredClone(manifest);
+    const decisions = SOUTH_CAROLINA_TITLE_ALIAS_REVIEW_DECISIONS as Record<string, Record<string, {
+      decision: "approve";
+      reviewer: string;
+      reviewedAt: string;
+      note: string;
+      officialTitle?: string;
+      citation?: string;
+      subdivision?: string | null;
+      reviewRecordId?: string;
+    }>>;
+    const previousDecisions = decisions[chargeId];
+    decisions[chargeId] = {
+      Manslaughter: {
+        decision: "approve",
+        reviewer: "Synthetic reviewer",
+        reviewedAt: "2026-09-01",
+        note: "Test-only approval for stale evidence handling.",
+        reviewRecordId: "synthetic-test-review",
+      },
+    };
+    try {
+      const record = staleManifest.catalogRecords.find(
+        (candidate) => candidate.chargeId === chargeId,
+      )!;
+      record.disposition = "exact_alias_rename";
+      record.provisions = [{
+        ...document("16-3-50", "Manslaughter"),
+        sourceKey: "sc:statute:16-3-50",
+        lawId: "SC",
+        citation: "S.C. Code Ann. § 16-3-50",
+        officialTitle: "Manslaughter (amended)",
+        sourceUrl: buildSouthCarolinaSourceUrl("16-3-50"),
+        contentHash: createHash("sha256").update(
+          document("16-3-50", "Manslaughter").text,
+        ).digest("hex"),
+        hashBasis: "source_content",
+        effectiveDateEnd: null,
+        supportRole: "offense",
+        subdivision: null,
+        metadata: {},
+      }];
+      record.canonicalTitle = "Manslaughter (amended)";
+      record.sourceAudit.references[0].officialTitle = "Manslaughter (amended)";
+
+      expect(findSouthCarolinaManifestDrift(staleManifest)).toEqual(
+        expect.arrayContaining([
+          expect.stringMatching(/sc-voluntary-manslaughter.*official title/i),
+        ]),
+      );
+    } finally {
+      decisions[chargeId] = previousDecisions;
+    }
   });
 
   it("rejects a tampered selectable manifest record at load time", () => {

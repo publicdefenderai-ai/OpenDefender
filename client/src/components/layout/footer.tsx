@@ -19,9 +19,9 @@ export function Footer() {
             <p className="text-gray-300 text-sm leading-relaxed mb-4">
               {t('footer.tagline')}
             </p>
-            <div className="flex items-start gap-1.5 text-gray-400 text-xs leading-relaxed mb-6">
-              <BrandShieldIcon size={13} light className="mt-0.5 opacity-60" />
-              <span>{t('footer.privacyNotice')}</span>
+            <div className="flex items-center gap-1.5 text-gray-400 text-xs leading-relaxed mb-6">
+              <BrandShieldIcon size={13} light className="opacity-60" />
+              <span>{t('footer.privacyFirst')}</span>
             </div>
             <div className="flex items-center gap-4">
               <a

@@ -9,7 +9,6 @@ import {
   MessageSquare,
   Phone,
   Heart,
-  Briefcase,
   Sunrise,
 } from "lucide-react";
 import { Link } from "wouter";
@@ -145,16 +144,44 @@ export default function Home() {
       border: "border-teal-200 dark:border-teal-800/50",
       color: "text-teal-700 dark:text-teal-400",
     },
+  ];
+
+  const quickStarts = [
     {
-      Icon: Briefcase,
-      title: t("home.secondary.lifeSupport.title"),
+      badge: doors[0].badge,
+      headline: doors[0].headline,
+      desc: doors[0].desc,
+      cta: doors[0].cta,
+      link: doors[0].link,
+      links: doors[0].links,
+      tone: doors[0].tone,
+    },
+    {
+      badge: doors[1].badge,
+      headline: doors[1].headline,
+      desc: doors[1].desc,
+      cta: doors[1].cta,
+      link: doors[1].link,
+      links: doors[1].links,
+      tone: doors[1].tone,
+    },
+    {
+      badge: doors[2].badge,
+      headline: doors[2].headline,
+      desc: doors[2].desc,
+      cta: doors[2].cta,
+      link: doors[2].link,
+      links: doors[2].links,
+      tone: doors[2].tone,
+    },
+    {
+      badge: t("home.secondary.lifeSupport.title"),
+      headline: t("home.secondary.lifeSupport.title"),
       desc: t("home.secondary.lifeSupport.desc"),
       cta: t("home.secondary.lifeSupport.cta"),
-      href: "/for-advocates",
-      accent: "#6d28d9",
-      bg: "bg-violet-50/60 dark:bg-violet-900/10",
-      border: "border-violet-200 dark:border-violet-800/50",
-      color: "text-violet-700 dark:text-violet-400",
+      link: "/for-advocates",
+      links: [],
+      tone: "advocate",
     },
   ];
 
@@ -162,30 +189,26 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero — always dark, high contrast */}
-      <section className="relative pt-14 pb-12 md:pt-20 md:pb-16 overflow-hidden texture-grain bg-slate-900 dark:bg-[hsl(192,55%,11%)]">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800/90 to-teal-900/50 dark:from-[hsl(192,60%,10%)] dark:via-[hsl(196,50%,13%)] dark:to-[hsl(210,42%,17%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-teal-500/10 dark:from-teal-300/30 via-transparent to-transparent" />
-        <div className="absolute inset-0 texture-mesh opacity-30" />
-
-        <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      {/* Hero — orientation first, with a quieter editorial opening */}
+      <section className="editorial-home-hero relative pt-12 pb-10 md:pt-20 md:pb-14 overflow-hidden">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-display text-[1.55rem] sm:text-[2.5rem] md:text-[3.75rem] font-normal mb-6 tracking-tight text-white" style={{ lineHeight: '1.15' }}>
+            <h1 className="font-display text-[2.15rem] sm:text-[3rem] md:text-[4.25rem] font-normal mb-6 tracking-tight" style={{ lineHeight: '1.08' }}>
               {t("home.hero.headlinePart1")}
               <br />
-              <strong className="font-bold text-white">{t("home.hero.headlinePart3")}</strong>
+              <strong className="font-bold">{t("home.hero.headlinePart3")}</strong>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-8 text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl mb-8 text-muted-foreground max-w-2xl leading-relaxed">
               {t("home.hero.subtitle")}
             </p>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-start justify-center">
               <button
                 onClick={handleUrgentHelp}
-                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-xl bg-teal-500 hover:bg-teal-400 active:bg-teal-600 text-white font-bold text-base transition-colors shadow-lg shadow-teal-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="editorial-primary-action focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
               >
                 {t("home.hero.primaryCta")} <ArrowRight className="h-4 w-4" />
               </button>
@@ -194,95 +217,90 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Three Doors */}
+      {/* Starting points */}
       <section className="pt-10 pb-6 md:pt-14 md:pb-8 bg-white dark:bg-background border-t border-border/20" id="paths">
         <div className="max-w-6xl mx-auto px-4">
           <ScrollReveal>
-            <h2 className="text-xl font-bold text-center text-foreground mb-6 tracking-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-foreground tracking-tight mb-7">
               {t("home.doors.sectionLabel")}
             </h2>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
-            {doors.map((door, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+            {quickStarts.map((point, i) => (
               <motion.div
-                key={door.link}
-                initial={{ opacity: 0, y: 28 }}
+                key={point.link}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.12, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ delay: i * 0.08, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
                 className="group h-full"
               >
-                <div
-                  className={`editorial-path-card editorial-path-card-${door.tone} relative flex flex-col overflow-hidden
-                    h-full min-h-[360px]`}
-                >
-                  <div className="relative z-10 flex flex-col flex-1 p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      {door.pulsing && (
-                        <span className="editorial-urgency-dot" aria-hidden="true">
-                        </span>
-                      )}
-                      <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase leading-tight">
-                        {door.badge}
-                      </span>
-                    </div>
+                <div className={`editorial-start-card editorial-start-card-${point.tone} h-full flex flex-col p-5 md:p-6`}>
+                  <div className="flex items-center justify-between gap-3 mb-4">
+                    <span className="text-[11px] font-semibold tracking-wider text-muted-foreground uppercase leading-tight">
+                      {point.badge}
+                    </span>
+                    <span className="text-xs font-mono text-muted-foreground/60" aria-hidden="true">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
 
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3 leading-snug">
-                      {door.headline}
-                    </h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 leading-snug">
+                    {point.headline}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5 max-w-xl">
+                    {point.desc}
+                  </p>
 
-                    <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">
-                      {door.desc}
-                    </p>
+                  <Link
+                    href={point.link}
+                    className="editorial-path-action inline-flex items-center gap-2 px-0 py-2 text-sm font-semibold transition-colors w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    {point.cta}
+                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                  </Link>
 
-                    <Link
-                      href={door.link}
-                      className="editorial-path-action inline-flex items-center gap-2 px-4 py-2.5 text-sm font-semibold transition-colors mb-5 w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                    >
-                      {door.cta}
-                      <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-                    </Link>
-
-                    <div className="flex flex-col gap-2 border-t border-border pt-4">
-                      {door.links.map((link) => (
+                  {point.links.length > 0 && (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1.5 border-t border-border pt-3 mt-3">
+                      {point.links.map((link) => (
                         <Link
                           key={link.href}
                           href={link.href}
-                          className="text-xs text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                          className="text-xs text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                         >
                           <ArrowRight className="h-2.5 w-2.5 opacity-60 flex-shrink-0" aria-hidden="true" />
                           {link.label}
                         </Link>
                       ))}
                     </div>
-                  </div>
+                  )}
                 </div>
               </motion.div>
             ))}
           </div>
 
-          {/* Secondary paths 2×2 */}
           <ScrollReveal delay={0.15}>
             <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mt-10 mb-4">
               {t("home.secondary.title")}
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {secondaryPaths.map(({ Icon, title, desc, cta, href }) => (
-                <Link key={href} href={href} className="flex">
-                  <div className="editorial-secondary-path flex items-start gap-3.5 p-4 cursor-pointer h-full w-full">
-                    <Icon className="h-4 w-4 mt-0.5 flex-shrink-0 text-[var(--editorial-signal)]" strokeWidth={1.75} aria-hidden="true" />
-                    <div className="min-w-0">
-                      <p className="font-semibold text-foreground text-sm leading-snug">{title}</p>
-                      <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{desc}</p>
-                      <p className="text-xs font-semibold text-[var(--editorial-signal)] flex items-center gap-1 mt-2">
-                        {cta} <ArrowRight className="h-2.5 w-2.5" aria-hidden="true" />
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
           </ScrollReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {secondaryPaths.map(({ Icon, title, desc, cta, href }) => (
+              <Link key={href} href={href} className="flex">
+                <div className="editorial-secondary-path flex items-start gap-3.5 p-4 cursor-pointer h-full w-full">
+                  <Icon className="h-4 w-4 mt-0.5 flex-shrink-0 text-[var(--editorial-signal)]" strokeWidth={1.75} aria-hidden="true" />
+                  <div className="min-w-0">
+                    <p className="font-semibold text-foreground text-sm leading-snug">{title}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed mt-0.5">{desc}</p>
+                    <p className="text-xs font-semibold text-[var(--editorial-signal)] flex items-center gap-1 mt-2">
+                      {cta} <ArrowRight className="h-2.5 w-2.5" aria-hidden="true" />
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
 
           {/* Search bar */}
           <ScrollReveal delay={0.2}>
@@ -390,7 +408,6 @@ export default function Home() {
       <DisclosureNotice className="mx-4 mb-6 rounded-xl border border-border/60 bg-muted/20 md:mx-auto md:max-w-6xl" />
       <Footer />
 
-      {/* Urgent Help Modal */}
       <Dialog open={urgentHelpOpen} onOpenChange={(open) => { setUrgentHelpOpen(open); if (!open) setUrgentSituation(null); }}>
         <DialogContent className="max-w-[95vw] md:max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0 [&>button:first-of-type]:text-white/80 [&>button:first-of-type]:hover:bg-white/20 [&>button:first-of-type]:focus:ring-white/40">
 

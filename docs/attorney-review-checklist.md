@@ -431,6 +431,26 @@ For a sample of jurisdictions **not** in the 9 already re-verified this cycle (s
 
 ---
 
+### M-8 · South Carolina Catalog Title-Alias Decisions
+
+**Risk:** Medium. South Carolina catalog labels that differ from the official Code of Laws title can affect which charge an advocate selects and which authority citation is shown. The alias review tracker at `/admin/attorney-review` lists all 39 committed proposal rows across 38 charge mappings, including the 32 current aliases and seven rejected mappings that remain withheld.
+
+**Content location:**
+- `server/data/south-carolina-source-database-seed.ts`: `SOUTH_CAROLINA_EXACT_TITLE_ALIASES` and the fail-closed manifest/approval checks
+- `shared/south-carolina-title-alias-review.ts`: attributable approval ledger (decision, reviewer, date, rationale, and review-record ID)
+- `scripts/data-review/output/sc-source-manifest.json`: committed official section, subdivision, title, citation, and source URL
+- `client/src/pages/admin/attorney-review.tsx`: authenticated South Carolina title-alias review tracker
+- `docs/south-carolina-alias-attorney-review.csv`: review worksheet export
+
+**Legal question for attorney:**
+For each proposed alias, does the catalog charge correspond to the official section and required subdivision shown in the committed manifest? Are the approved title mappings accurate and are the rejected or changed mappings correctly withheld? Does every approval include an attributable reviewer, review date, rationale, and a review-record identifier sufficient for an audit trail?
+
+**Cleared:** ☐
+**Reviewed by:** _______________  **Date:** _______________
+**Attorney notes:** _______________________________________________
+
+---
+
 ## Items Out of Scope for This Review
 
 The following are tracked elsewhere or are purely technical:
@@ -465,6 +485,7 @@ The following are tracked elsewhere or are purely technical:
 | M-5 Intake Checklist | | | |
 | M-6 Privacy Policy | | | |
 | M-7 Jurisdiction Procedure Deadlines | | | |
+| M-8 South Carolina Catalog Title-Alias Decisions | | | |
 
 **Overall launch authorization:**
 All HIGH-risk items cleared: ☐

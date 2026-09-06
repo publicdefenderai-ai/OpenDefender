@@ -11,8 +11,12 @@ import { CHARGE_CITATIONS } from "../../shared/criminal-charge-citations";
 import {
   buildSouthCarolinaManifestRecord,
   buildSouthCarolinaSourceUrl,
+  isSouthCarolinaAliasApproved,
+  isSouthCarolinaOfficialTitleApproved,
   matchesSouthCarolinaCatalogTitle,
   parseSouthCarolinaCitation,
+  SOUTH_CAROLINA_EXACT_TITLE_ALIASES,
+  validateSouthCarolinaManifestRecord,
   type SouthCarolinaAuthorityManifest,
   type SouthCarolinaAuditFinding,
   type SouthCarolinaAuditFindingCode,
@@ -354,6 +358,47 @@ function compareSouthCarolinaAudit(
   return issues;
 }
 
+function compareSouthCarolinaApprovedAliases(
+  manifest: Pick<SouthCarolinaAuthorityManifest, "catalogRecords">,
+): string[] {
+  const recordsById = new Map(manifest.catalogRecords.map((record) => [record.chargeId, record]));
+  const issues: string[] = [];
+  for (const [chargeId, aliases] of Object.entries(SOUTH_CAROLINA_EXACT_TITLE_ALIASES)) {
+    const record = recordsById.get(chargeId);
+    const approvedAliases = aliases.filter((alias) =>
+      isSouthCarolinaAliasApproved(chargeId, alias),
+    );
+    if (approvedAliases.length === 0) {
+      if (record && isSelectableSouthCarolinaDisposition(record.disposition)) {
+        issues.push(
+          `pending South Carolina title alias mapping for ${chargeId} must remain withheld until attorney review`,
+        );
+      }
+      continue;
+    }
+    const currentAliases = new Set(
+      record?.provisions
+        .map((provision) => provision.officialTitle)
+        .filter((title) => isSouthCarolinaOfficialTitleApproved(chargeId, title)),
+    );
+    const validationError = record
+      ? validateSouthCarolinaManifestRecord(record)
+      : "missing South Carolina catalog row";
+    if (
+      !record ||
+      !isSelectableSouthCarolinaDisposition(record.disposition) ||
+      currentAliases.size !== approvedAliases.length ||
+      validationError
+    ) {
+      issues.push(
+        `approved South Carolina title alias mapping for ${chargeId} does not match the current official title, ` +
+        `exact citation, and required subdivision evidence${validationError ? ` (${validationError})` : ""}`,
+      );
+    }
+  }
+  return issues;
+}
+
 export function findSouthCarolinaManifestDrift(
   manifest: Pick<SouthCarolinaAuthorityManifest, "catalogRecords" | "audit">,
 ): string[] {
@@ -365,7 +410,7 @@ export function findSouthCarolinaManifestDrift(
     buildSouthCarolinaAudit(manifest.catalogRecords),
     manifest.audit,
   );
-  return [...inventoryIssues, ...auditIssues];
+  return [...inventoryIssues, ...auditIssues, ...compareSouthCarolinaApprovedAliases(manifest)];
 }
 
 export function assertSouthCarolinaManifestIsCurrent(

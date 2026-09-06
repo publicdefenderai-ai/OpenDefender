@@ -614,7 +614,7 @@ export default {
     "forDevelopers": "For Developers",
     "viewOnGithub": "View on GitHub",
     "viewOnX": "Follow on X",
-    "privacyNotice": "Privacy matters. Your case information is held temporarily and generally expires within 24 hours. See our Privacy Policy.",
+    "privacyFirst": "Privacy First",
     "copyright": "© 2026 OpenDefender. Not a substitute for professional legal advice.",
     "legalDisclaimer": "General legal information only — not a substitute for professional legal advice. Always consult a qualified attorney for your specific situation."
   },
@@ -666,6 +666,7 @@ export default {
     },
     "backToSupport": "Back to Support",
     "startHere": "Start Here",
+    "nextStep": "Start with the first step",
     "practicalSteps": "Practical steps",
     "helpfulResources": "Helpful Resources",
     "pageSections": "On this page",
@@ -860,6 +861,7 @@ export default {
         "faqs": "FAQs & Tips"
       },
       "overview": "Legal cases can strain your finances through attorney fees, fines, lost work time, and more. Understanding your options for managing these costs can reduce stress and help you focus on your case.",
+      "nextStep": "Start with quick actions",
       "actions": {
         "assessCosts": {
           "title": "Assess potential costs",
@@ -2711,6 +2713,12 @@ export default {
       "newSession": "Start New Session",
       "close": "Close",
       "exportPDF": "Export PDF",
+      "nextStep": {
+        "label": "Start here",
+        "title": "Review your practical next steps",
+        "description": "Start with the practical plan, then use the timeline and deadlines to prepare for what comes next.",
+        "button": "View practical plan"
+      },
       "summary": {
         "charges": "Charges",
         "jurisdiction": "Your State",
@@ -2888,6 +2896,9 @@ export default {
       "subtitle": "Understand Your Charges and Case Process",
       "description": "Tell us your state, charges, and where you are in the process. Get a plain-language overview of what typically happens at your stage.",
       "startButton": "Get Started",
+      "startHere": "Start here",
+      "alternativeStartPrefix": "Or start with the",
+      "alternativeStartLabel": "First 24 Hours guide",
       "privacyNote": "Your responses are held temporarily in server memory and generally expire within 24 hours"
     },
     "howItWorks": {
@@ -2984,7 +2995,9 @@ export default {
   "rights": {
     "hero": {
       "title": "Know Your Legal Rights",
-      "subtitle": "Understanding your legal rights is the first step in protecting yourself in the legal system."
+      "subtitle": "Understanding your legal rights is the first step in protecting yourself in the legal system.",
+      "nextStep": "See the quick rights reference",
+      "nextStepDescription": "Start with the quick reference, then open the detail that fits your situation."
     },
     "quickRights": {
       "title": "Essential Rights Everyone Should Know",
@@ -3115,7 +3128,8 @@ export default {
     "hero": {
       "title1": "Immigration Enforcement",
       "title2": "Know Your Rights",
-      "subtitle": "Essential rights information for both citizens and non-citizens during ICE encounters and deportation proceedings"
+      "subtitle": "Essential rights information for both citizens and non-citizens during ICE encounters and deportation proceedings",
+      "nextStep": "See emergency resources"
     },
     "criticalAlert": {
       "title": "CRITICAL:",
@@ -3781,6 +3795,22 @@ export default {
       "incomplete": "Results shown may be incomplete."
     }
   },
+  "statutes": {
+    "liveText": {
+      "readLaw": "Read the Law",
+      "hideStatuteText": "Hide Statute Text",
+      "fetching": "Fetching statute from OpenLaws...",
+      "viewOnOpenLaws": "View on OpenLaws",
+      "source": "Source: OpenLaws · Live statute text",
+      "unavailable": "Full statute text not available for this citation ({{citation}}). Check with your attorney for the exact statute language."
+    },
+    "errors": {
+      "loadFailed": "Statute search is temporarily unavailable. Please try again later.",
+      "citationFailed": "The official-text provider is temporarily unavailable. Please try the citation lookup again later.",
+      "invalidCitation": "That citation format isn't recognized. Try a standard citation format and search again.",
+      "citationNotFound": "No statute found for \"{{citation}}\". Try adjusting the citation format or check that the citation is correct."
+    }
+  },
   "recapExtensions": {
     "hero": {
       "title": "RECAP Browser Extensions",
@@ -4213,6 +4243,7 @@ export default {
   "caseTimeline": {
     "title": "Case Timeline & Process",
     "subtitle": "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.",
+    "nextStep": "Choose your current stage",
     "selectStage": "Select a stage to learn what happens and what your rights are",
     "yourRights": "Your Rights",
     "whatToKnow": "What to Know",
@@ -6063,6 +6094,7 @@ export default {
   "first24Hours": {
     "title": "Your First 24 Hours",
     "subtitle": "From arrest through your first court appearance. Decisions made early in a case can have lasting consequences.",
+    "nextStep": "Start with the first step",
     "alert": "One rule applies to every step below: Do not discuss the facts of your case with anyone except your attorney. Not police, not family, not cellmates, and not on the jail phone.",
     "relatedGuides": "Related guides",
     "disclaimer": "This guide provides general legal information only. It is not legal advice, and no attorney-client relationship is formed by using it. Information here is not protected by attorney-client privilege. Laws and procedures vary by state. Consult a licensed attorney about your specific situation.",
@@ -7697,7 +7729,8 @@ export default {
   "resources": {
     "hero": {
       "title": "Legal Resources",
-      "subtitle": "Tools and information to help you navigate the legal system"
+      "subtitle": "Tools and information to help you navigate the legal system",
+      "nextStep": "Search for help by ZIP code"
     },
     "legalAid": {
       "title": "Legal Aid Organizations",

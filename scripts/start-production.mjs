@@ -1,4 +1,6 @@
 import { spawn } from "node:child_process";
+import { fileURLToPath } from "node:url";
+import { resolve } from "node:path";
 
 const seedScripts = [
   "dist/seed-new-york-source-database.js",
@@ -9,39 +11,95 @@ const seedScripts = [
   "dist/seed-illinois-source-database.js",
   "dist/seed-ohio-source-database.js",
   "dist/seed-georgia-source-database.js",
+  "dist/seed-north-carolina-source-database.js",
 ];
-let child;
+let currentSeed;
+let server;
 
-function runSeed(index) {
-  child = spawn(process.execPath, [seedScripts[index]], {
-    env: process.env,
-    stdio: "inherit",
-  });
-  child.on("exit", (code, signal) => {
-    if (signal || code !== 0) {
-      process.exitCode = signal ? 1 : (code ?? 1);
-      return;
-    }
-    if (index + 1 < seedScripts.length) {
-      runSeed(index + 1);
-      return;
-    }
+export function createProductionEnv(env = process.env) {
+  return { ...env, NODE_ENV: "production" };
+}
 
-    const server = spawn(process.execPath, ["dist/index.js"], {
-      env: process.env,
+function runSeed(script) {
+  return new Promise((resolve, reject) => {
+    currentSeed = spawn(process.execPath, [script], {
+      env: createProductionEnv(),
       stdio: "inherit",
     });
-    for (const serverSignal of ["SIGINT", "SIGTERM"]) {
-      process.on(serverSignal, () => server.kill(serverSignal));
-    }
-    server.on("exit", (serverCode, serverSignal) => {
-      process.exitCode = serverSignal ? 1 : (serverCode ?? 1);
+    currentSeed.on("error", reject);
+    currentSeed.on("exit", (code, signal) => {
+      currentSeed = undefined;
+      if (signal || code !== 0) {
+        reject(new Error(`${script} exited with ${signal ?? `code ${code ?? "unknown"}`}`));
+        return;
+      }
+      resolve();
     });
   });
 }
 
-for (const seedSignal of ["SIGINT", "SIGTERM"]) {
-  process.on(seedSignal, () => child?.kill(seedSignal));
+async function seedAuthorityDatabases() {
+  for (const script of seedScripts) {
+    await runSeed(script);
+  }
+  console.log(`[production-start] Authority seed refresh completed for ${seedScripts.length} jurisdictions.`);
 }
 
-runSeed(0);
+function startServer() {
+  server = spawn(process.execPath, ["dist/index.js"], {
+    env: createProductionEnv(),
+    stdio: "inherit",
+  });
+  server.on("error", (error) => {
+    console.error("[production-start] Failed to start HTTP server:", error);
+    process.exitCode = 1;
+  });
+  server.on("exit", (code, signal) => {
+    if (currentSeed) currentSeed.kill("SIGTERM");
+    process.exitCode = signal ? 1 : (code ?? 1);
+  });
+}
+
+for (const shutdownSignal of ["SIGINT", "SIGTERM"]) {
+  process.on(shutdownSignal, () => {
+    currentSeed?.kill(shutdownSignal);
+    server?.kill(shutdownSignal);
+  });
+}
+
+export function runProductionStartup({
+  seed = seedAuthorityDatabases,
+  launch = startServer,
+  onFailure = () => {},
+} = {}) {
+  launch();
+  console.log(
+    `[production-start] HTTP server starting before ${seedScripts.length}-jurisdiction authority seed refresh.`,
+  );
+
+  const handleSeedFailure = (error) => {
+    console.error(
+      "[production-start] Authority seed refresh failed; HTTP server remains available:",
+      error,
+    );
+    onFailure(error);
+  };
+
+  try {
+    Promise.resolve(seed())
+      .then(() => {
+        console.log(
+          `[production-start] Authority seed refresh completed for ${seedScripts.length} jurisdictions.`,
+        );
+      })
+      .catch(handleSeedFailure);
+  } catch (error) {
+    handleSeedFailure(error);
+  }
+
+  return true;
+}
+
+if (fileURLToPath(import.meta.url) === resolve(process.argv[1] ?? "")) {
+  runProductionStartup();
+}

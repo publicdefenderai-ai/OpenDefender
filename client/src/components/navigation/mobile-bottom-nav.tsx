@@ -56,7 +56,7 @@ export function MobileBottomNav() {
 
   return (
     <nav
-      className="editorial-mobile-nav fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-t border-border md:hidden safe-area-bottom"
+      className="editorial-mobile-nav fixed bottom-0 left-0 right-0 z-40 border-t md:hidden safe-area-bottom"
       role="navigation"
       aria-label={t("nav.mobileNavigation", "Mobile navigation")}
     >

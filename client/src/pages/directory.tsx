@@ -48,13 +48,13 @@ function ResourceLink({ resource, index = 0 }: { resource: ResourceItem; index?:
 function InventoryCategory({ cat, idx }: { cat: CategorySection; idx: number }) {
   return (
     <ScrollReveal delay={idx * 0.05}>
-      <div className="bg-background rounded-xl border border-border overflow-hidden shadow-sm">
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-border" style={{ background: cat.accentBg }}>
-          <div className="w-6 h-6 rounded flex items-center justify-center flex-shrink-0" style={{ background: cat.accent }}>
+      <div className="editorial-directory-category bg-background rounded-md border border-border overflow-hidden">
+        <div className="flex items-center gap-2 px-4 py-3 border-b border-border">
+          <div className="editorial-directory-icon w-6 h-6 rounded flex items-center justify-center flex-shrink-0">
             <cat.icon className="w-3.5 h-3.5 text-white" />
           </div>
           <div>
-            <div className="text-sm font-semibold" style={{ color: cat.accent }}>{cat.title}</div>
+            <div className="text-sm font-semibold text-foreground">{cat.title}</div>
             <div className="text-[10px] text-muted-foreground">{cat.description}</div>
           </div>
         </div>
@@ -179,19 +179,14 @@ export default function Directory() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="vivid-header-alt py-10 md:py-14">
-        <div className="max-w-3xl mx-auto px-4 vivid-header-content">
+      <section className="editorial-page-intro editorial-directory-intro py-10 md:py-14">
+        <div className="editorial-page-intro-inner max-w-3xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center">
-              <div className="flex items-center justify-center gap-2 mb-3">
-                <Shield className="w-5 h-5 text-blue-300" />
-                <span className="text-blue-200 text-sm font-semibold tracking-wide uppercase">OpenDefender</span>
-              </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-white leading-tight">
+            <div>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 leading-tight">
                 {t("directory.hero.title")}
               </h1>
-              <p className="text-base md:text-lg text-white/80 max-w-xl mx-auto">
+              <p className="text-base md:text-lg max-w-xl">
                 {t("directory.hero.subtitle")}
               </p>
             </div>

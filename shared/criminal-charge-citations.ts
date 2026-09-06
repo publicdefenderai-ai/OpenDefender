@@ -810,7 +810,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     instructionRef: "Miss. Model JI (Crim.) 12-1",
   },
   "nc-murder-in-the-first-degree": {
-    citation: "N.C. Gen. Stat. § 14-17",
+    citation: "N.C. Gen. Stat. § 14-17(a)",
     confidence: "high",
     lastVerified: "2026-04",
     source: "North Carolina General Statutes — ncleg.gov",
@@ -6563,7 +6563,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     instructionUrl: "https://www.nycourts.gov/judges/cji/2-PenalLaw/140/140.30.pdf",
   },
   "nc-burglary-in-the-first-degree": {
-    citation: "N.C. Gen. Stat. § 14-51",
+    citation: "N.C. Gen. Stat. § 14-51(a)",
     confidence: "high",
     lastVerified: "2026-04",
     source: "North Carolina General Statutes — ncleg.gov",
@@ -15839,7 +15839,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "nh-residential-burglary": { citation: "N.H. Rev. Stat. Ann. § 635:1(I)(b)", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Hampshire burglary (dwelling)", sourceUrl: "https://law.justia.com/codes/new-hampshire/section-635-1/", instructionRef: "N.H. Crim. JI §635:1-a",},
   "nj-residential-burglary": { citation: "N.J. Stat. Ann. § 2C:18-2(b)(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Jersey burglary (residential structure, second degree)", sourceUrl: "https://law.justia.com/codes/new-jersey/section-2c-18-2/" },
   "nm-residential-burglary": { citation: "N.M. Stat. Ann. § 30-16-3", confidence: "medium", lastVerified: "2026-04", source: "Training data — New Mexico burglary (residential) or breaking and entering", sourceUrl: "https://law.justia.com/codes/new-mexico/section-30-16-3/", instructionRef: "UJI 14-1410", instructionUrl: "https://nmsupremecourt.nmcourts.gov/",},
-  "nc-residential-burglary": { citation: "N.C. Gen. Stat. § 14-51", confidence: "high", lastVerified: "2026-04", source: "North Carolina General Statutes — ncleg.gov", sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-51.html" },
+  "nc-residential-burglary": { citation: "N.C. Gen. Stat. § 14-51(b)", confidence: "high", lastVerified: "2026-04", source: "North Carolina General Statutes — ncleg.gov", sourceUrl: "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_14/GS_14-51.html" },
   "nd-residential-burglary": { citation: "N.D. Cent. Code § 12.1-22-02(1)", confidence: "medium", lastVerified: "2026-04", source: "Training data — North Dakota burglary (inhabited building)", sourceUrl: "https://law.justia.com/codes/north-dakota/section-12-1-22-02/", instructionRef: "N.D. JI (Crim.) A-6-2",},
   "ok-residential-burglary": { citation: "Okla. Stat. tit. 21, § 1431", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oklahoma burglary first degree (dwelling)", sourceUrl: "https://law.justia.com/codes/oklahoma/section-1431/" },
   "or-residential-burglary": { citation: "Or. Rev. Stat. § 164.225", confidence: "medium", lastVerified: "2026-04", source: "Training data — Oregon burglary first degree (residential building)", sourceUrl: "https://www.oregonlegislature.gov/bills_laws/ors/ors164.html", instructionRef: "UCJI 1641" },
@@ -19208,7 +19208,7 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   "pa-public-drunkenness": { citation: "18 Pa. Cons. Stat. § 5505", confidence: "high", lastVerified: "2026-06", source: "Pennsylvania Consolidated Statutes — api.openlaws.us", sourceUrl: "https://static.openlaws.us/laws/pa/stat/title_18/part_ii/article_f/chapter_55/subchapter_a/section_5505" },
 
   "sc-assault-and-battery-third-degree": { citation: "S.C. Code Ann. § 16-3-600(E)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-3-600/", instructionRef: "SC Req. to Charge Crim. § 4-3" },
-  "sc-domestic-violence-third-degree": { citation: "S.C. Code Ann. § 16-25-20(C)", confidence: "high", lastVerified: "2026-04", source: "OpenLaws verified 2026-04", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-25-20/", instructionRef: "SC Req. to Charge Crim. § 4-20" },
+  "sc-domestic-violence-third-degree": { citation: "S.C. Code Ann. § 16-25-20(D)", confidence: "high", lastVerified: "2026-09", source: "South Carolina Legislature Code of Laws (scstatehouse.gov)", sourceUrl: "https://www.scstatehouse.gov/code/t16c025.php", instructionRef: "SC Req. to Charge Crim. § 4-20" },
   "sc-malicious-injury-to-property": { citation: "S.C. Code Ann. § 16-11-510", confidence: "high", lastVerified: "2026-08", source: "South Carolina Legislature Code of Laws (scstatehouse.gov)", sourceUrl: "https://www.scstatehouse.gov/code/t16c011.php" },
   "sc-shoplifting-under-2000": { citation: "S.C. Code Ann. § 16-13-110", confidence: "medium", lastVerified: "2026-04", source: "Training data — South Carolina shoplifting under $2,000", sourceUrl: "https://law.justia.com/codes/south-carolina/section-16-13-110/" },
 

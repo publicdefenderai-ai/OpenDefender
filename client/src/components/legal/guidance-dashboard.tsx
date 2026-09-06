@@ -24,6 +24,7 @@ import {
   ArrowRight,
   Gavel,
   X,
+  AlertCircle,
   Building,
   HelpCircle,
   ThumbsUp,
@@ -59,6 +60,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { generateGuidancePDF } from "@/lib/pdf-generator";
 import {
+  getVerifiedCitation,
   getInstructionRef,
   getInstructionUrl,
   getInstructionPaywall,
@@ -75,6 +77,7 @@ import { renderGuidanceRichText } from "@/components/legal/guidance-rich-text";
 import { getStateCourtInfo, getCourtLocatorUrl } from "@shared/state-court-websites";
 import { BrandShieldIcon } from "@/components/brand-logo";
 import { normalizeGuidance, type GuidanceViewModel } from "@shared/guidance-view-model";
+import { getLiveStatuteErrorKey } from "@/lib/live-statute-errors";
 
 interface PrecedentCase {
   id: string;
@@ -412,14 +415,14 @@ function CollateralConsequencesCard({
     <Collapsible defaultOpen>
       <CollapsibleTrigger asChild>
         <Card className="cursor-pointer hover:bg-muted/50 border-amber-200 dark:border-amber-800">
-          <CardHeader>
-            <CardTitle className="flex items-center justify-between text-foreground">
-              <div className="flex items-center gap-2">
-                <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+          <CardHeader className="min-w-0">
+            <CardTitle className="flex min-w-0 items-center justify-between gap-3 text-foreground">
+              <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
+                <AlertTriangle className="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
                 Beyond the Sentence: What Else May Be at Risk
-                <Badge variant="secondary" className="text-xs">{items.length}</Badge>
+                <Badge variant="secondary" className="shrink-0 text-xs">{items.length}</Badge>
               </div>
-              <ChevronDown className="h-4 w-4 text-muted-foreground" />
+              <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
             </CardTitle>
           </CardHeader>
         </Card>
@@ -436,10 +439,10 @@ function CollateralConsequencesCard({
                 const IconComp = meta.Icon;
                 return (
                   <div key={i} className="p-3 rounded-lg border border-amber-100 dark:border-amber-900/40 bg-amber-50/40 dark:bg-amber-900/10">
-                    <div className="flex items-center gap-2 mb-1">
+                    <div className="flex min-w-0 items-center gap-2 mb-1">
                       <IconComp className={`h-3.5 w-3.5 ${meta.color} flex-shrink-0`} />
-                      <span className="text-xs font-semibold text-foreground">{meta.label}</span>
-                      <Badge variant="outline" className="text-xs ml-auto">{item.timing}</Badge>
+                      <span className="min-w-0 break-words text-xs font-semibold text-foreground">{meta.label}</span>
+                      <Badge variant="outline" className="ml-auto shrink-0 text-xs">{item.timing}</Badge>
                     </div>
                     <p className="text-sm text-foreground mb-1">{item.consequence}</p>
                     <p className="text-xs text-muted-foreground italic">{item.actionNote}</p>
@@ -447,10 +450,10 @@ function CollateralConsequencesCard({
                 );
               })}
             </div>
-            <div className="pt-3 flex items-center justify-between">
-              <p className="text-xs text-muted-foreground">These risks vary by state and charge. Verify with your attorney.</p>
+            <div className="flex flex-col items-start gap-2 pt-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="min-w-0 text-xs text-muted-foreground">These risks vary by state and charge. Verify with your attorney.</p>
               <Link href="/collateral-consequences">
-                <Button variant="outline" size="sm" className="text-xs gap-1 h-7">
+                <Button variant="outline" size="sm" className="h-7 shrink-0 gap-1 text-xs">
                   Full Guide <ExternalLink className="h-3 w-3" />
                 </Button>
               </Link>
@@ -477,12 +480,13 @@ interface LiveStatuteResult {
 }
 
 function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; citation: string }) {
+  const { t } = useTranslation();
   const [showStatute, setShowStatute] = useState(false);
   const [fetchEnabled, setFetchEnabled] = useState(false);
 
   const encodedCitation = encodeURIComponent(citation);
 
-  const { data: liveData, isLoading } = useQuery<LiveStatuteResult>({
+  const { data: liveData, isLoading, error: liveError } = useQuery<LiveStatuteResult>({
     queryKey: [`/api/openlaws/citation/${encodedCitation}`],
     enabled: fetchEnabled,
   });
@@ -500,28 +504,41 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
         onClick={handleToggle}
         className="text-primary hover:text-primary/80 p-0 h-auto font-medium text-sm"
         aria-expanded={showStatute}
+        data-testid="live-statute-toggle"
       >
         <BookOpen className="h-3.5 w-3.5 mr-1.5" />
         {showStatute ? (
           <>
             <ChevronUp className="h-3.5 w-3.5 mr-1" />
-            Hide Statute Text
+            {t("statutes.liveText.hideStatuteText")}
           </>
         ) : (
           <>
             <ChevronDown className="h-3.5 w-3.5 mr-1" />
-            Read the Law
+            {t("statutes.liveText.readLaw")}
           </>
         )}
       </Button>
 
       {showStatute && (
-        <div className="mt-3 rounded-lg border border-border bg-muted/30 p-4">
+        <div
+          className="mt-3 min-w-0 rounded-lg border border-border bg-muted/30 p-4"
+          data-testid="live-statute-panel"
+        >
           {isLoading ? (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Loader2 className="h-4 w-4 animate-spin" />
-              Fetching statute from OpenLaws...
+              {t("statutes.liveText.fetching")}
             </div>
+          ) : liveError || liveData?.error ? (
+            <Alert variant="destructive" className="min-w-0">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription className="min-w-0 break-words">
+                {t(`statutes.errors.${getLiveStatuteErrorKey(liveError, liveData?.error)}`, {
+                  citation,
+                })}
+              </AlertDescription>
+            </Alert>
           ) : liveData?.success && liveData.statute ? (
             <div className="space-y-2">
               <div className="flex items-start justify-between gap-2">
@@ -535,7 +552,7 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:text-primary/80 shrink-0"
-                    aria-label="View on OpenLaws"
+                    aria-label={t("statutes.liveText.viewOnOpenLaws")}
                   >
                     <ExternalLink className="h-4 w-4" />
                   </a>
@@ -544,11 +561,11 @@ function ChargeReadTheLaw({ jurisdiction, citation }: { jurisdiction: string; ci
               <div className="text-xs text-muted-foreground leading-relaxed whitespace-pre-wrap max-h-48 overflow-y-auto font-mono bg-background rounded p-2 border border-border/50">
                 {liveData.statute.content}
               </div>
-              <p className="text-xs text-muted-foreground">Source: OpenLaws · Live statute text</p>
+              <p className="text-xs text-muted-foreground">{t("statutes.liveText.source")}</p>
             </div>
           ) : (
             <p className="text-sm text-muted-foreground">
-              Full statute text not available for this citation ({citation}). Check with your attorney for the exact statute language.
+              {t("statutes.liveText.unavailable", { citation })}
             </p>
           )}
         </div>
@@ -598,14 +615,15 @@ function YourChargesSection({
   }
 
   // Get plain-language explanations for each charge.
-  // Resolve the canonical entry to carry through dataConfidence and
-  // statuteCitations — required for the "Read the Law" button guard.
+  // Resolve the canonical entry to carry through the verified citation and
+  // jury-instruction metadata required by the "Read the Law" button guard.
   const chargesWithExplanations = chargeClassifications.map(classification => {
     const authorityUnavailable = isAuthorityBacked &&
       !currentAuthorityIds.has(classification.id ?? "");
     const dbCharge = authorityUnavailable
       ? undefined
       : resolveGuidanceCharge(classification, jurisdiction);
+    const verifiedCitation = dbCharge ? getVerifiedCitation(dbCharge) : null;
     const isCalifornia = jurisdiction?.toUpperCase() === 'CA';
     const explanation = (isCalifornia || authorityUnavailable) && !dbCharge
       ? undefined
@@ -621,8 +639,7 @@ function YourChargesSection({
       code: classification.code,
       classification: classification.classification,
       explanation,
-      dataConfidence: dbCharge?.dataConfidence,
-      statuteCitations: dbCharge?.statuteCitations,
+      verifiedCitation,
       instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
       instructionUrl: dbCharge ? getInstructionUrl(dbCharge) : undefined,
       instructionPaywall: dbCharge ? getInstructionPaywall(dbCharge) : undefined,
@@ -665,8 +682,8 @@ function YourChargesSection({
           >
             {/* Charge Header */}
             <div className="flex items-start justify-between gap-3">
-              <div>
-                <h4 className="font-semibold text-foreground text-lg">{charge.name}</h4>
+              <div className="min-w-0">
+                <h4 className="break-words font-semibold text-foreground text-lg">{charge.name}</h4>
               </div>
               <Badge 
                 variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
@@ -682,7 +699,7 @@ function YourChargesSection({
             {charge.explanationPendingReview && (
               <div className="flex items-start gap-2 p-2.5 rounded-md bg-amber-50 border border-amber-200 dark:bg-amber-950/30 dark:border-amber-800">
                 <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-                <p className="text-xs text-amber-800 dark:text-amber-300 leading-snug">
+                <p className="min-w-0 text-xs text-amber-800 dark:text-amber-300 leading-snug">
                   <span className="font-semibold">
                     {t('guidance.yourCharges.pendingReviewWarning.title', 'Not yet attorney-reviewed.')}
                   </span>{" "}
@@ -696,7 +713,7 @@ function YourChargesSection({
             {charge.explanation?.translationDraft && (
               <div className="flex items-start gap-2 p-2.5 rounded-md bg-blue-50 border border-blue-200 dark:bg-blue-950/30 dark:border-blue-800">
                 <AlertTriangle className="h-4 w-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
-                <p className="text-xs text-blue-800 dark:text-blue-300 leading-snug">
+                <p className="min-w-0 text-xs text-blue-800 dark:text-blue-300 leading-snug">
                   <span className="font-semibold">
                     {t('guidance.yourCharges.translationDraftWarning.title', 'Provisional translation.')}
                   </span>{" "}
@@ -714,7 +731,7 @@ function YourChargesSection({
                 data-testid={`charge-jurisdiction-coverage-${index}`}
               >
                 <AlertTriangle className="h-4 w-4 text-slate-600 dark:text-slate-300 shrink-0 mt-0.5" />
-                <p className="text-xs text-slate-700 dark:text-slate-300 leading-snug">
+                <p className="min-w-0 text-xs text-slate-700 dark:text-slate-300 leading-snug">
                   <span className="font-semibold">
                     {t('guidance.yourCharges.jurisdictionCoverageWarning.title', 'State-specific detail not yet verified.')}
                   </span>{' '}
@@ -730,7 +747,7 @@ function YourChargesSection({
                  data-testid={`charge-reselection-warning-${index}`}
                >
                  <AlertTriangle className="h-4 w-4" />
-                 <AlertDescription>
+                  <AlertDescription className="min-w-0">
                    <span className="font-semibold">
                      {i18n.language === 'es'
                        ? 'Se necesita volver a seleccionar el cargo.'
@@ -812,11 +829,11 @@ function YourChargesSection({
               </div>
             )}
 
-            {/* Read the Law — only shown when citation is OpenLaws-verified (dataConfidence: 'high') */}
-            {jurisdiction && charge.dataConfidence === 'high' && charge.statuteCitations?.length && (
+            {/* Read the Law — only shown when the canonical citation gate verifies it. */}
+            {jurisdiction && charge.verifiedCitation && (
               <ChargeReadTheLaw
                 jurisdiction={jurisdiction}
-                citation={charge.statuteCitations[0]}
+                citation={charge.verifiedCitation}
               />
             )}
 
@@ -1059,7 +1076,10 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
   return (
     <>
       <GuidancePrintPlan guidance={guidance} language={i18n.language} />
-      <div className="max-w-6xl mx-auto p-6 space-y-6 print:hidden">
+      <div
+        className="w-full min-w-0 max-w-6xl mx-auto overflow-x-hidden p-6 space-y-6 print:hidden"
+        data-testid="guidance-dashboard"
+      >
       {/* Case Summary Header */}
       <Card className="border-l-4 border-l-primary">
         <CardHeader>
@@ -1168,6 +1188,30 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             </div>
           </div>
         </CardHeader>
+      </Card>
+
+      <Card className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="guidance-next-step">
+        <CardContent className="p-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="min-w-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary mb-1">
+              {t('legalGuidance.dashboard.nextStep.label', 'Start here')}
+            </p>
+            <h2 className="font-semibold text-foreground">
+              {t('legalGuidance.dashboard.nextStep.title', 'Review your practical next steps')}
+            </h2>
+            <p className="text-sm text-muted-foreground mt-1">
+              {t('legalGuidance.dashboard.nextStep.description', 'Start with the practical plan, then use the timeline and deadlines to prepare for what comes next.')}
+            </p>
+          </div>
+          <Button
+            onClick={() => document.getElementById('practical-action-plan')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            className="w-full sm:w-auto shrink-0"
+            data-testid="button-guidance-next-step"
+          >
+            {t('legalGuidance.dashboard.nextStep.button', 'View practical plan')}
+            <ArrowRight className="h-4 w-4 ml-2" />
+          </Button>
+        </CardContent>
       </Card>
 
       {/* (Attorney notice folded into Urgent Takeaways below) */}
@@ -1417,7 +1461,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       <DocumentsSection caseStage={guidance.caseData.caseStage} guardedNavigate={guardedNavigate} />
 
       {/* Practical support is intentionally separate from case-specific legal information. */}
-      <Card className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="practical-action-plan">
+      <Card id="practical-action-plan" className="editorial-card border-l-4 border-l-primary bg-primary/[0.03]" data-testid="practical-action-plan">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-foreground">
@@ -1731,18 +1775,18 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       </Card>
 
       {/* Expandable Sections */}
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid min-w-0 md:grid-cols-2 gap-6">
         {/* Local Resources */}
-        <Collapsible defaultOpen>
+        <Collapsible defaultOpen className="min-w-0">
           <CollapsibleTrigger asChild>
-            <Card className="cursor-pointer hover:bg-muted/50 border-border">
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between text-foreground">
-                  <div className="flex items-center gap-2">
-                    <Users className="h-5 w-5 text-muted-foreground" />
+            <Card className="min-w-0 cursor-pointer hover:bg-muted/50 border-border">
+              <CardHeader className="min-w-0">
+                <CardTitle className="flex min-w-0 items-center justify-between gap-3 text-foreground">
+                  <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
+                    <Users className="h-5 w-5 shrink-0 text-muted-foreground" />
                     {t('legalGuidance.dashboard.localResources.title')}
                   </div>
-                  <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                  <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
                 </CardTitle>
               </CardHeader>
             </Card>
@@ -1758,9 +1802,9 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                       className="w-full justify-start h-auto py-4 px-4"
                       onClick={onShowPublicDefender}
                     >
-                      <div className="flex items-start gap-3 w-full">
+                      <div className="flex min-w-0 w-full items-start gap-3">
                         <MapPin className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
-                        <div className="flex-1 text-left">
+                        <div className="min-w-0 flex-1 text-left">
                           <div className="font-semibold text-base mb-1">Public Defender Office</div>
                           <p className="text-sm text-muted-foreground">
                             Search for public defender offices near you
@@ -1777,9 +1821,9 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                     className="w-full justify-start h-auto py-4 px-4"
                     onClick={() => guardedNavigate('/resources')}
                   >
-                    <div className="flex items-start gap-3 w-full">
+                    <div className="flex min-w-0 w-full items-start gap-3">
                       <HelpCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <div className="flex-1 text-left">
+                      <div className="min-w-0 flex-1 text-left">
                         <div className="font-semibold text-base mb-1">Legal Aid</div>
                         <p className="text-sm text-muted-foreground">
                           Find legal aid organizations and free legal services
@@ -1795,9 +1839,9 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                     className="w-full justify-start h-auto py-4 px-4"
                     onClick={() => guardedNavigate('/court-locator')}
                   >
-                    <div className="flex items-start gap-3 w-full">
+                    <div className="flex min-w-0 w-full items-start gap-3">
                       <Building className="h-5 w-5 text-purple-600 mt-0.5 flex-shrink-0" />
-                      <div className="flex-1 text-left">
+                      <div className="min-w-0 flex-1 text-left">
                         <div className="font-semibold text-base mb-1">Court Self-Help Center</div>
                         <p className="text-sm text-muted-foreground">
                           Find local courthouses and court information
@@ -1814,16 +1858,16 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
         {/* Evidence — Discuss With Attorney */}
         {guidance.evidenceToGather.length > 0 && (
-          <Collapsible defaultOpen data-guidance-section="evidenceToGather">
+          <Collapsible defaultOpen data-guidance-section="evidenceToGather" className="min-w-0">
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <FileText className="h-5 w-5 text-amber-600" />
+                <CardHeader className="min-w-0">
+                  <CardTitle className="flex min-w-0 items-center justify-between gap-3">
+                    <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
+                      <FileText className="h-5 w-5 shrink-0 text-amber-600" />
                       {t('legalGuidance.dashboard.evidenceToGather.title')}
                     </div>
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-4 w-4 shrink-0" />
                   </CardTitle>
                 </CardHeader>
               </Card>
@@ -1841,7 +1885,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                     {guidance.evidenceToGather.map((evidence, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-amber-600 mt-1">•</span>
-                        <span className="text-sm">{evidence}</span>
+                        <span className="min-w-0 text-sm">{evidence}</span>
                       </li>
                     ))}
                   </ul>
@@ -1853,16 +1897,16 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
         {/* Warnings & Court Preparation — merged into one collapsible */}
         {(guidance.warnings.length > 0 || guidance.courtPreparation.length > 0) && (
-          <Collapsible defaultOpen>
+          <Collapsible defaultOpen className="min-w-0">
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <AlertTriangle className="h-5 w-5 text-red-600" />
+                <CardHeader className="min-w-0">
+                  <CardTitle className="flex min-w-0 items-center justify-between gap-3">
+                    <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
+                      <AlertTriangle className="h-5 w-5 shrink-0 text-red-600" />
                       {t('legalGuidance.dashboard.warningsAndPrep.title', 'Warnings & Court Preparation')}
                     </div>
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-4 w-4 shrink-0" />
                   </CardTitle>
                 </CardHeader>
               </Card>
@@ -1879,7 +1923,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                         {guidance.warnings.map((warning, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-red-600 mt-1">•</span>
-                            <span className="text-sm">{renderGuidanceRichText(warning, guardedNavigate)}</span>
+                            <span className="min-w-0 text-sm">{renderGuidanceRichText(warning, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1894,7 +1938,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                         {guidance.courtPreparation.map((preparation, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-orange-600 mt-1">•</span>
-                            <span className="text-sm">{renderGuidanceRichText(preparation, guardedNavigate)}</span>
+                            <span className="min-w-0 text-sm">{renderGuidanceRichText(preparation, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1925,16 +1969,16 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
         {/* Actions to Avoid */}
         {guidance.avoidActions.length > 0 && (
-          <Collapsible defaultOpen data-guidance-section="avoidActions">
+          <Collapsible defaultOpen data-guidance-section="avoidActions" className="min-w-0">
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <X className="h-5 w-5 text-red-500" />
+                <CardHeader className="min-w-0">
+                  <CardTitle className="flex min-w-0 items-center justify-between gap-3">
+                    <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
+                      <X className="h-5 w-5 shrink-0 text-red-500" />
                       {t('legalGuidance.dashboard.actionsToAvoid.title')}
                     </div>
-                    <ChevronDown className="h-4 w-4" />
+                    <ChevronDown className="h-4 w-4 shrink-0" />
                   </CardTitle>
                 </CardHeader>
               </Card>
@@ -1949,7 +1993,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                     {guidance.avoidActions.map((action, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-red-500 mt-1">•</span>
-                        <span className="text-sm">{renderGuidanceRichText(action, guardedNavigate)}</span>
+                        <span className="min-w-0 text-sm">{renderGuidanceRichText(action, guardedNavigate)}</span>
                       </li>
                     ))}
                   </ul>
@@ -1961,17 +2005,17 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
 
         {/* Areas of Uncertainty */}
         {guidance.uncertainties && guidance.uncertainties.length > 0 && (
-          <Collapsible defaultOpen data-guidance-section="uncertainties">
+          <Collapsible defaultOpen data-guidance-section="uncertainties" className="min-w-0">
             <CollapsibleTrigger asChild>
               <Card className="cursor-pointer hover:bg-muted/50 border-amber-200 dark:border-amber-800" data-testid="collapsible-uncertainties">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between text-foreground">
-                    <div className="flex items-center gap-2">
-                      <HelpCircle className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                <CardHeader className="min-w-0">
+                  <CardTitle className="flex min-w-0 items-center justify-between gap-3 text-foreground">
+                    <div className="flex min-w-0 flex-1 items-center gap-2 break-words">
+                      <HelpCircle className="h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400" />
                       Areas of Uncertainty
-                      <Badge variant="secondary" className="text-xs">{guidance.uncertainties.length}</Badge>
+                      <Badge variant="secondary" className="shrink-0 text-xs">{guidance.uncertainties.length}</Badge>
                     </div>
-                    <ChevronDown className="h-4 w-4 text-muted-foreground" />
+                    <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
                   </CardTitle>
                 </CardHeader>
               </Card>
@@ -2098,8 +2142,8 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
       {/* Privacy Notice */}
       <Card className="border-blue-200 bg-blue-50 dark:bg-blue-900/20">
         <CardContent className="pt-6">
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex-1">
+          <div className="flex flex-col items-stretch gap-4 sm:flex-row sm:items-start sm:justify-between">
+            <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2 mb-3">
                 <BrandShieldIcon size={20} />
                 <h3 className="font-semibold text-blue-800 dark:text-blue-200">
@@ -2127,7 +2171,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
             <Button
               variant="ghost"
               size="sm"
-              className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 shrink-0"
+              className="w-full shrink-0 self-start text-xs text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 sm:w-auto"
               onClick={() => { setFlagSubmitted(false); setFlagReason(''); setShowFlagDialog(true); }}
               data-testid="btn-flag-response"
             >

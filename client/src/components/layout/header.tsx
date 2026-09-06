@@ -311,7 +311,7 @@ export function Header() {
                                       )}
                                     >
                                       {Icon && (
-                                        <div className={cn("w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5", item.iconBgClass)}>
+                                        <div className={cn("editorial-menu-icon w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5", item.iconBgClass)}>
                                           <Icon className={cn("w-4 h-4", item.iconColorClass)} />
                                         </div>
                                       )}

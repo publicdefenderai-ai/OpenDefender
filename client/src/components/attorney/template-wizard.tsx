@@ -47,7 +47,9 @@ import {
 } from "@/lib/attorney-api";
 import { TurnstileCaptcha, useCaptcha } from "@/components/captcha/turnstile";
 import { useAIAvailability } from "@/hooks/use-legal-data";
+import { getLiveStatuteErrorKey } from "@/lib/live-statute-errors";
 import type { DocumentTemplate, TemplateSection } from "@shared/templates/schema";
+import { useTranslation } from "react-i18next";
 
 interface TemplateWizardProps {
   template: DocumentTemplate;
@@ -66,14 +68,16 @@ interface LiveStatuteResult {
     url?: string;
     section: string;
   };
+  error?: string;
 }
 
 function StatuteLookupWidget() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [citationInput, setCitationInput] = useState('');
   const [activeCitation, setActiveCitation] = useState('');
 
-  const { data: liveData, isLoading } = useQuery<LiveStatuteResult>({
+  const { data: liveData, isLoading, error: liveError } = useQuery<LiveStatuteResult>({
     queryKey: [`/api/openlaws/citation/${encodeURIComponent(activeCitation)}`],
     enabled: !!activeCitation,
   });
@@ -133,7 +137,18 @@ function StatuteLookupWidget() {
             </div>
           )}
 
-          {liveData && !isLoading && (
+          {!isLoading && (liveError || liveData?.error) && (
+            <Alert variant="destructive">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>
+                {t(`statutes.errors.${getLiveStatuteErrorKey(liveError, liveData?.error)}`, {
+                  citation: activeCitation,
+                })}
+              </AlertDescription>
+            </Alert>
+          )}
+
+          {liveData && !isLoading && !liveError && !liveData.error && (
             liveData.success && liveData.statute ? (
               <div className="rounded-md border border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-950/20 p-3 space-y-1.5">
                 <div className="flex items-start justify-between gap-2">

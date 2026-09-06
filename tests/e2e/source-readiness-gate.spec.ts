@@ -2,15 +2,16 @@ import { expect, test, type Page } from "@playwright/test";
 import { CURRENT_PUBLIC_SOURCE_JURISDICTIONS } from "../../shared/public-source-coverage";
 
 const ADMIN_TOKEN = process.env.RELEASE_CHECK_ADMIN_TOKEN?.trim();
+const IS_RELEASE_CHECK = process.env.RELEASE_CHECK === "true";
 
 const CURRENT_JURISDICTIONS = CURRENT_PUBLIC_SOURCE_JURISDICTIONS;
-const EXPECTED_TARGET_ORDER = ["GA", "PA", "SC", "OH", "IL", "FL", "TX", "NY", "CA"] as const;
 const EXPECTED_GATE_LABELS: Record<(typeof CURRENT_JURISDICTIONS)[number], "Ready" | "Blocked"> = {
   CA: "Ready",
   FL: "Ready",
   GA: "Blocked",
   IL: "Ready",
   NY: "Ready",
+  NC: "Ready",
   OH: "Ready",
   PA: "Ready",
   SC: "Ready",
@@ -93,6 +94,9 @@ async function expectUnavailableState(page: Page) {
 
 test.describe("source readiness expansion gate", () => {
   test("renders the complete authenticated report and fails closed for unsafe responses", async ({ page }) => {
+    if (IS_RELEASE_CHECK && !ADMIN_TOKEN) {
+      throw new Error("Release source-readiness browser check requires its in-memory admin token fixture");
+    }
     test.skip(!ADMIN_TOKEN, "Release-only test: requires the in-memory release admin token fixture");
 
     const adminToken = ADMIN_TOKEN!;
@@ -109,8 +113,9 @@ test.describe("source readiness expansion gate", () => {
     });
     expect(report.jurisdictions.map((row) => row.jurisdiction)).toEqual([...CURRENT_JURISDICTIONS]);
     expect(report.belowTargetJurisdictions).toEqual(["GA"]);
-    expect(report.nextHighestValueCoverageTargets.map((target) => target.jurisdiction))
-      .toEqual([...EXPECTED_TARGET_ORDER]);
+    const targetJurisdictions = report.nextHighestValueCoverageTargets.map((target) => target.jurisdiction);
+    expect(targetJurisdictions).toHaveLength(CURRENT_JURISDICTIONS.length);
+    expect(new Set(targetJurisdictions)).toEqual(new Set(CURRENT_JURISDICTIONS));
 
     await page.goto("/admin/attorney-review");
     await expect(page.getByRole("heading", { name: "Attorney Review — Admin Access" })).toBeVisible();

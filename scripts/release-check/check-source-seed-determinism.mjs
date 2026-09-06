@@ -10,6 +10,7 @@ const seedCommands = [
   { script: "db:seed:georgia", jurisdiction: "Georgia", args: ["--dry-run"] },
   { script: "db:seed:illinois", jurisdiction: "Illinois", args: ["--dry-run"] },
   { script: "db:seed:new-york", jurisdiction: "New York", args: ["--dry-run"] },
+  { script: "db:seed:north-carolina", jurisdiction: "North Carolina", args: ["--dry-run"] },
   { script: "db:seed:ohio", jurisdiction: "Ohio", args: ["--dry-run"] },
   { script: "db:seed:pennsylvania", jurisdiction: "Pennsylvania", args: ["--dry-run"] },
   {

@@ -12,6 +12,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Separator } from "@/components/ui/separator";
+import { getLiveStatuteErrorKey } from "@/lib/live-statute-errors";
 import { Search, BookOpen, ExternalLink, AlertCircle, Loader2, ChevronDown, ChevronUp, Zap, FileText } from "lucide-react";
 
 interface Statute {
@@ -126,16 +127,28 @@ export default function StatutesPage() {
       : `/api/statutes/${selectedState}`
     : '';
 
-  const { data: federalStatutes, isLoading: loadingFederal } = useQuery<StatuteSearchResult>({
+  const {
+    data: federalStatutes,
+    isLoading: loadingFederal,
+    error: federalError,
+  } = useQuery<StatuteSearchResult>({
     queryKey: [federalUrl],
   });
 
-  const { data: stateStatutes, isLoading: loadingState } = useQuery<StatuteSearchResult>({
+  const {
+    data: stateStatutes,
+    isLoading: loadingState,
+    error: stateError,
+  } = useQuery<StatuteSearchResult>({
     queryKey: [stateUrl],
     enabled: !!selectedState,
   });
 
-  const { data: citationResult, isLoading: loadingCitation } = useQuery<LiveStatuteLookup>({
+  const {
+    data: citationResult,
+    isLoading: loadingCitation,
+    error: citationError,
+  } = useQuery<LiveStatuteLookup>({
     queryKey: [`/api/openlaws/citation/${encodeURIComponent(activeCitation)}`],
     enabled: !!activeCitation,
   });
@@ -159,17 +172,23 @@ export default function StatutesPage() {
     <div className="min-h-screen flex flex-col bg-background">
       <Header />
 
-      <main className="flex-1 container mx-auto px-4 py-8 max-w-7xl">
-        <div className="mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4" data-testid="heading-statutes">
+      {/* Editorial opening */}
+      <section className="editorial-page-intro py-10 md:py-14">
+        <div className="editorial-page-intro-inner max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="editorial-tool-icon w-12 h-12 mb-5">
+            <BookOpen className="h-6 w-6" />
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4" data-testid="heading-statutes">
             Criminal Laws & Statutes
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg max-w-3xl">
             Search and browse federal and state criminal statutes
           </p>
         </div>
+      </section>
 
-        <div className="mb-6">
+      <main className="editorial-workspace flex-1 container mx-auto px-4 py-8 max-w-7xl">
+        <div className="editorial-surface rounded-lg p-4 mb-6">
           <div className="flex flex-col gap-3 mb-4 sm:flex-row">
             <div className="flex-1">
               <Input
@@ -201,7 +220,7 @@ export default function StatutesPage() {
             {loadingFederal ? (
               <div className="space-y-4">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i}>
+                  <Card key={i} className="editorial-card">
                     <CardHeader>
                       <Skeleton className="h-5 w-3/4" />
                       <Skeleton className="h-4 w-1/2 mt-1" />
@@ -213,6 +232,11 @@ export default function StatutesPage() {
                   </Card>
                 ))}
               </div>
+            ) : federalError ? (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{t('statutes.errors.loadFailed')}</AlertDescription>
+              </Alert>
             ) : federalStatutes?.error ? (
               <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
@@ -259,7 +283,7 @@ export default function StatutesPage() {
             ) : loadingState ? (
               <div className="space-y-4">
                 {[1, 2, 3].map((i) => (
-                  <Card key={i}>
+                  <Card key={i} className="editorial-card">
                     <CardHeader>
                       <Skeleton className="h-5 w-3/4" />
                       <Skeleton className="h-4 w-1/2 mt-1" />
@@ -271,6 +295,11 @@ export default function StatutesPage() {
                   </Card>
                 ))}
               </div>
+            ) : stateError ? (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{t('statutes.errors.loadFailed')}</AlertDescription>
+              </Alert>
             ) : stateStatutes?.error ? (
               <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
@@ -327,9 +356,20 @@ export default function StatutesPage() {
                 </div>
               )}
 
-              {citationResult && !loadingCitation && (
+              {!loadingCitation && (citationError || citationResult?.error) && (
+                <Alert variant="destructive">
+                  <AlertCircle className="h-4 w-4" />
+                  <AlertDescription>
+                    {t(`statutes.errors.${getLiveStatuteErrorKey(citationError, citationResult?.error)}`, {
+                      citation: activeCitation,
+                    })}
+                  </AlertDescription>
+                </Alert>
+              )}
+
+              {citationResult && !loadingCitation && !citationError && !citationResult.error && (
                 citationResult.success && citationResult.statute ? (
-                  <Card data-testid="card-citation-result">
+                  <Card className="editorial-card" data-testid="card-citation-result">
                     <CardHeader>
                       <div className="flex items-start justify-between gap-4">
                         <div className="flex-1">
@@ -380,14 +420,14 @@ export default function StatutesPage() {
                   <Alert variant="destructive">
                     <AlertCircle className="h-4 w-4" />
                     <AlertDescription>
-                      No statute found for "{activeCitation}". Try adjusting the citation format or check that the citation is correct.
+                      {t('statutes.errors.citationNotFound', { citation: activeCitation })}
                     </AlertDescription>
                   </Alert>
                 )
               )}
 
               {!activeCitation && !loadingCitation && (
-                <div className="rounded-lg border border-dashed border-border p-8 text-center text-muted-foreground">
+                <div className="editorial-surface rounded-lg border-dashed p-8 text-center text-muted-foreground">
                   <BookOpen className="h-10 w-10 mx-auto mb-3 opacity-40" />
                   <p className="text-sm">Enter a citation above to retrieve live statute text from OpenLaws</p>
                 </div>
@@ -403,12 +443,17 @@ export default function StatutesPage() {
 }
 
 function StatuteCard({ statute }: { statute: Statute }) {
+  const { t } = useTranslation();
   const [showFullText, setShowFullText] = useState(false);
   const [fetchEnabled, setFetchEnabled] = useState(false);
 
   const citationKey = (statute.citation || 'unknown').replace(/[^a-z0-9]/gi, '-').toLowerCase();
 
-  const { data: liveData, isLoading: loadingLive } = useQuery<LiveStatuteLookup>({
+  const {
+    data: liveData,
+    isLoading: loadingLive,
+    error: liveError,
+  } = useQuery<LiveStatuteLookup>({
     queryKey: [`/api/openlaws/citation/${encodeURIComponent(statute.citation || '')}`],
     enabled: fetchEnabled && !!statute.citation,
   });
@@ -422,9 +467,10 @@ function StatuteCard({ statute }: { statute: Statute }) {
 
   const liveContent = liveData?.statute?.content;
   const hasContent = statute.content || liveContent;
+  const liveFailureKey = getLiveStatuteErrorKey(liveError, liveData?.error);
 
   return (
-    <Card data-testid={`card-statute-${citationKey}`}>
+    <Card className="editorial-card" data-testid={`card-statute-${citationKey}`}>
       <CardHeader>
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
@@ -517,6 +563,16 @@ function StatuteCard({ statute }: { statute: Statute }) {
                       Live text via OpenLaws · {liveData?.statute?.jurisdiction} Statutes
                     </p>
                   </div>
+                ) : liveError || liveData?.error ? (
+                  <Alert variant="destructive">
+                    <AlertCircle className="h-4 w-4" />
+                    <AlertDescription>
+                      {t(`statutes.errors.${liveFailureKey}`, { citation: statute.citation })}
+                      {liveFailureKey !== 'citationFailed' && statute.url && (
+                        <> <a href={statute.url} target="_blank" rel="noopener noreferrer" className="text-primary underline">View the official source.</a></>
+                      )}
+                    </AlertDescription>
+                  </Alert>
                 ) : statute.content ? (
                   <div className="bg-muted/50 rounded-lg p-4 text-sm leading-relaxed whitespace-pre-wrap border border-border/50 max-h-80 overflow-y-auto">
                     {statute.content}

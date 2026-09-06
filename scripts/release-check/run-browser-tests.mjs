@@ -6,11 +6,21 @@ const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 const command = process.platform === "win32" ? "npx.cmd" : "npx";
 const releaseCheckAdminToken = randomBytes(32).toString("hex");
 
+function releaseCheckEnvironment() {
+  const safeEnvironment = Object.fromEntries(
+    Object.entries(process.env).filter(([name]) =>
+      !/(?:KEY|TOKEN|SECRET|PASSWORD|PASS|CREDENTIAL|DATABASE|PAT)$/i.test(name)
+    ),
+  );
+  return {
+    ...safeEnvironment,
+    RELEASE_CHECK: "true",
+    RELEASE_CHECK_ADMIN_TOKEN: releaseCheckAdminToken,
+  };
+}
+
 const buildProcess = spawnSync(npmCommand, ["run", "build"], {
-  env: {
-    ...process.env,
-    NODE_ENV: "production",
-  },
+  env: { ...releaseCheckEnvironment(), NODE_ENV: "production" },
   stdio: "inherit",
 });
 
@@ -27,10 +37,7 @@ const sourceReadinessProcess = spawnSync(
   process.execPath,
   ["scripts/release-check/check-source-readiness.mjs"],
   {
-    env: {
-      ...process.env,
-      RELEASE_CHECK_ADMIN_TOKEN: releaseCheckAdminToken,
-    },
+    env: releaseCheckEnvironment(),
     stdio: "inherit",
   },
 );
@@ -55,13 +62,14 @@ const testProcess = spawn(
     "tests/e2e/export-release-gate.spec.ts",
     "tests/e2e/authority-boundary-release.spec.ts",
     "tests/e2e/source-readiness-gate.spec.ts",
+    "tests/e2e/multilingual-mobile-layout.spec.ts",
+    "tests/e2e/localized-mobile-actions.spec.ts",
   ],
   {
     env: {
-      ...process.env,
+      ...releaseCheckEnvironment(),
       RELEASE_CHECK_PORT: releasePort,
       PLAYWRIGHT_BASE_URL: `http://127.0.0.1:${releasePort}`,
-      RELEASE_CHECK_ADMIN_TOKEN: releaseCheckAdminToken,
     },
     stdio: "inherit",
   },

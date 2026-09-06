@@ -146,7 +146,7 @@ test.describe("browser export release gate", () => {
     const cooldownButton = page.getByRole("button", { name: /Regenerate in \d+s…/ });
     await expect(cooldownButton).toBeVisible();
     await expect(cooldownButton).toBeDisabled();
-    await page.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await page.getByLabel("Time in community").fill("12 years in the community, updated");
     await expect(page.getByRole("button", { name: /Regenerate in \d+s…/ })).toBeDisabled();
     expect(polishRequestCount).toBe(1);
     await page.clock.runFor(30_000);
@@ -203,5 +203,199 @@ test.describe("browser export release gate", () => {
     expect(printDocument).toContain("overflow-wrap: anywhere");
     expect(printDocument).toContain('content: "DRAFT";');
     expect(printDocument).toContain('content: "Page " counter(page) " of " counter(pages);');
+  });
+
+  test("throttles failed AI polish requests until the filled-field count changes", async ({ page }) => {
+    const consoleErrors: string[] = [];
+    page.on("console", (message) => {
+      if (message.type() === "error") consoleErrors.push(message.text());
+    });
+
+    await page.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+    let polishRequestCount = 0;
+    await page.route("**/api/mitigation/polish", async (route) => {
+      polishRequestCount += 1;
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: false,
+          error: "Release gate polish failure",
+        }),
+      });
+    });
+
+    await page.clock.install();
+    await page.goto("/for-advocates/mitigation-builder");
+    await page.getByLabel("Client name or identifier").fill("Failed Polish Release Gate Test");
+    await page
+      .getByPlaceholder("e.g. Bail hearing, diversion application, sentencing memo")
+      .fill("Bail hearing");
+    await page.getByLabel("Time in community").fill("12 years in the community");
+    await expect(page.getByText("Summary output")).toBeVisible();
+    const consoleErrorsBeforePolish = consoleErrors.length;
+
+    const polishButton = page.getByRole("button", { name: "Generate narrative", exact: true });
+    await polishButton.click();
+    await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(page.getByText("Release gate polish failure")).toBeVisible();
+
+    const cooldownButton = page.getByRole("button", { name: /Regenerate in \d+s…/ });
+    await expect(cooldownButton).toBeVisible();
+    await expect(cooldownButton).toBeDisabled();
+    await expect(cooldownButton).toContainText("30s");
+
+    await page.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    expect(polishRequestCount).toBe(1);
+    expect(consoleErrors.slice(consoleErrorsBeforePolish)).toEqual([]);
+  });
+
+  test("throttles network-failed AI polish requests until the filled-field count changes", async ({ page }) => {
+    const consoleErrors: string[] = [];
+    const pageErrors: Error[] = [];
+    page.on("console", (message) => {
+      if (message.type() === "error") consoleErrors.push(message.text());
+    });
+    page.on("pageerror", (error) => pageErrors.push(error));
+
+    await page.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+    let polishRequestCount = 0;
+    await page.route("**/api/mitigation/polish", async (route) => {
+      polishRequestCount += 1;
+      await route.abort("failed");
+    });
+
+    await page.clock.install();
+    await page.goto("/for-advocates/mitigation-builder");
+    await page.getByLabel("Client name or identifier").fill("Network Failed Polish Release Gate Test");
+    await page
+      .getByPlaceholder("e.g. Bail hearing, diversion application, sentencing memo")
+      .fill("Bail hearing");
+    await page.getByLabel("Time in community").fill("12 years in the community");
+    await expect(page.getByText("Summary output")).toBeVisible();
+    const consoleErrorsBeforePolish = consoleErrors.length;
+
+    const polishButton = page.getByRole("button", { name: "Generate narrative", exact: true });
+    await polishButton.click();
+    await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(page.getByText("Network error. Please try again.")).toBeVisible();
+
+    const cooldownButton = page.getByRole("button", { name: /Regenerate in \d+s…/ });
+    await expect(cooldownButton).toBeVisible();
+    await expect(cooldownButton).toBeDisabled();
+    await expect(cooldownButton).toContainText("30s");
+
+    await page.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    expect(polishRequestCount).toBe(1);
+    expect(consoleErrors.slice(consoleErrorsBeforePolish)).toEqual(["Failed to load resource: net::ERR_FAILED"]);
+    expect(pageErrors).toEqual([]);
+  });
+
+  test("synchronizes AI polish cooldowns and daily usage across open builder tabs", async ({ context }) => {
+    const page = await context.newPage();
+    const secondPage = await context.newPage();
+    const consoleErrors: string[] = [];
+    const pageErrors: Error[] = [];
+
+    for (const currentPage of [page, secondPage]) {
+      currentPage.on("console", (message) => {
+        if (message.type() === "error") consoleErrors.push(message.text());
+      });
+      currentPage.on("pageerror", (error) => pageErrors.push(error));
+    }
+
+    await context.route("**/api/attorney/session", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ isVerified: false }),
+      });
+    });
+    await context.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+    let polishRequestCount = 0;
+    await context.route("**/api/mitigation/polish", async (route) => {
+      polishRequestCount += 1;
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: false,
+          error: "Cross-tab release gate polish failure",
+        }),
+      });
+    });
+
+    await Promise.all([page.clock.install(), secondPage.clock.install()]);
+    await Promise.all([
+      page.goto("/for-advocates/mitigation-builder"),
+      secondPage.goto("/for-advocates/mitigation-builder"),
+    ]);
+
+    for (const currentPage of [page, secondPage]) {
+      await currentPage.getByLabel("Client name or identifier").fill("Cross-tab Polish Release Gate Test");
+      await currentPage
+        .getByPlaceholder("e.g. Bail hearing, diversion application, sentencing memo")
+        .fill("Bail hearing");
+      await currentPage.getByLabel("Time in community").fill("12 years in the community");
+      await expect(currentPage.getByText("Summary output")).toBeVisible();
+    }
+
+    await page.getByRole("button", { name: "Generate narrative", exact: true }).click();
+    await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(page.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
+    await expect(
+      secondPage.getByRole("button", { name: /(?:Generate narrative|Regenerate) in \d+s…/ }),
+    ).toBeDisabled();
+
+    await page.clock.fastForward(30_000);
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    await expect(secondPage.getByRole("button", { name: "Generate narrative", exact: true })).toBeEnabled();
+
+    await page.getByRole("button", { name: "Regenerate", exact: true }).click();
+    await expect.poll(() => polishRequestCount).toBe(2);
+    await expect(page.getByText("AI drafts used today on this browser: 2 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 2 of 20.")).toBeVisible();
+    await expect(
+      secondPage.getByRole("button", { name: /(?:Generate narrative|Regenerate) in \d+s…/ }),
+    ).toBeDisabled();
+
+    for (let expectedUsage = 3; expectedUsage <= 20; expectedUsage += 1) {
+      await page.clock.fastForward(30_000);
+      await page.getByRole("button", { name: "Regenerate", exact: true }).click();
+      await expect.poll(() => polishRequestCount).toBe(expectedUsage);
+    }
+
+    await expect(page.getByText("AI drafts used today on this browser: 20 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 20 of 20.")).toBeVisible();
+    await Promise.all([page.clock.fastForward(30_000), secondPage.clock.fastForward(30_000)]);
+    await expect(page.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
+    await expect(secondPage.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
+
+    await secondPage.getByPlaceholder("e.g. Mother, two siblings, spouse").fill("Mother and spouse");
+    await expect(secondPage.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
+    await expect(page.getByRole("button", { name: "Daily limit reached", exact: true })).toBeDisabled();
+    expect(consoleErrors).toEqual([]);
+    expect(pageErrors).toEqual([]);
   });
 });

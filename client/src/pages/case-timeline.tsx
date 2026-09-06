@@ -14,6 +14,7 @@ import {
   HandMetal,
   DollarSign,
   Calendar,
+  ChevronDown,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -82,22 +83,33 @@ export default function CaseTimeline() {
         currentPage={t("caseTimeline.title", "Case Timeline & Process")}
       />
 
-      <section className="vivid-header py-16 md:py-20">
-        <div className="max-w-4xl mx-auto px-4 vivid-header-content">
+      <section className="editorial-page-intro py-12 md:py-16">
+        <div className="editorial-page-intro-inner max-w-4xl mx-auto px-4">
           <ScrollReveal>
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-5">
                 {t("caseTimeline.title", "Case Timeline & Process")}
               </h1>
-              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl max-w-3xl">
                 {t("caseTimeline.subtitle", "Follow the stages of a criminal case from start to finish. Select your current stage to see what to expect and your rights.")}
               </p>
+              <Button
+                asChild
+                size="lg"
+                className="mt-6 max-w-full h-auto min-h-11 flex-wrap justify-center gap-2 whitespace-normal break-words text-center leading-snug"
+                data-testid="button-start-timeline"
+              >
+                <a href="#timeline-stages">
+                  {t("caseTimeline.nextStep", "Choose your current stage")}
+                  <ChevronDown className="h-4 w-4" />
+                </a>
+              </Button>
             </div>
           </ScrollReveal>
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-background">
+      <section id="timeline-stages" className="py-12 md:py-16 bg-background scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4">
           <ScrollReveal>
             <div className="mb-8 text-center">
@@ -129,11 +141,11 @@ export default function CaseTimeline() {
                         className={`
                           relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold
                           transition-all duration-300 shrink-0
-                          ${isActive
-                            ? "bg-blue-600 text-white ring-4 ring-blue-200 dark:ring-blue-800 scale-110"
+                           ${isActive
+                             ? "bg-[var(--editorial-signal)] text-white ring-4 ring-[var(--editorial-signal-soft)] scale-110"
                             : isPast
-                              ? "bg-blue-500 text-white"
-                              : "bg-muted text-muted-foreground group-hover:bg-blue-100 dark:group-hover:bg-blue-900/40 group-hover:text-blue-700 dark:group-hover:text-blue-300"
+                               ? "bg-[var(--editorial-ink-soft)] text-white"
+                               : "bg-muted text-muted-foreground group-hover:bg-[var(--editorial-signal-soft)] group-hover:text-[var(--editorial-signal)]"
                           }
                           group-focus-visible:ring-2 group-focus-visible:ring-ring group-focus-visible:ring-offset-2
                         `}
@@ -142,7 +154,7 @@ export default function CaseTimeline() {
                       </div>
                       <span
                         className={`text-xs md:text-sm font-medium transition-colors md:text-center md:max-w-[100px]
-                          ${isActive ? "text-blue-700 dark:text-blue-300" : "text-muted-foreground group-hover:text-foreground"}
+                           ${isActive ? "text-[var(--editorial-signal)]" : "text-muted-foreground group-hover:text-foreground"}
                         `}
                       >
                         {t(`caseTimeline.stages.${stage.id}.title`, stage.id)}

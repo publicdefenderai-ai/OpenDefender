@@ -14,6 +14,7 @@ export const FLORIDA_SOURCE_BASE = "https://www.leg.state.fl.us/statutes/index.c
 export const FLORIDA_SOURCE_PUBLISHER = "Florida Legislature Online Sunshine";
 export const FLORIDA_MANIFEST_SOURCE =
   "Florida Legislature Online Sunshine (leg.state.fl.us/statutes)";
+export const FLORIDA_PUBLIC_ROBBERY_CHARGE_ID = "fl-robbery-in-the-first-degree";
 
 export interface FloridaSourceDocument {
   section: string;
@@ -451,6 +452,26 @@ export function buildFloridaSourceDatabaseSeed(
     }
   }
 
+  const selectableChargeIds = manifest.catalogRecords
+    .filter((record) =>
+      (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
+      record.provisions.length > 0,
+    )
+    .map((record) => record.chargeId);
+  const expectedFloridaChargeIds = criminalCharges
+    .filter((charge) => charge.jurisdiction === "FL")
+    .map((charge) => charge.id);
+  const isCompleteManifest =
+    manifest.catalogRecords.length === expectedFloridaChargeIds.length &&
+    expectedFloridaChargeIds.every((chargeId) =>
+      manifest.catalogRecords.some((record) => record.chargeId === chargeId),
+    );
+  if (isCompleteManifest && !selectableChargeIds.includes(FLORIDA_PUBLIC_ROBBERY_CHARGE_ID)) {
+    throw new Error(
+      `Florida authority seed must retain ${FLORIDA_PUBLIC_ROBBERY_CHARGE_ID} for public charge search`,
+    );
+  }
+
   return {
     jurisdiction: "FL",
     sourcePolicy: FLORIDA_SOURCE_POLICY,
@@ -458,12 +479,7 @@ export function buildFloridaSourceDatabaseSeed(
     snapshots,
     links,
     catalogRecords: manifest.catalogRecords,
-    selectableChargeIds: manifest.catalogRecords
-      .filter((record) =>
-        (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
-        record.provisions.length > 0,
-      )
-      .map((record) => record.chargeId),
+    selectableChargeIds,
     generatedAt: manifest.generatedAt,
   };
 }
