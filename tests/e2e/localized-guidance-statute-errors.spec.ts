@@ -1,6 +1,11 @@
 import { expect, test, type Page } from "@playwright/test";
 
 const MOBILE_VIEWPORT = { width: 320, height: 812 } as const;
+const COMPACT_VIEWPORT = { width: 280, height: 812 } as const;
+const ENGLISH_GUIDANCE_VIEWPORTS = [
+  ["320px", MOBILE_VIEWPORT],
+  ["compact 280px", COMPACT_VIEWPORT],
+] as const;
 
 const LOCALIZED_ERRORS = [
   {
@@ -30,7 +35,10 @@ const LOCALIZED_ERRORS = [
   },
 ] as const;
 
-async function mockGuidanceStream(page: Page) {
+async function mockGuidanceStream(
+  page: Page,
+  overrides: Record<string, unknown> = {},
+) {
   const guidance = {
     overview: "Test overview for localized live statute errors.",
     criticalAlerts: [],
@@ -52,6 +60,7 @@ async function mockGuidanceStream(page: Page) {
         classification: "felony",
       },
     ],
+    ...overrides,
   };
 
   await page.route("**/api/legal-guidance/stream", async (route) => {
@@ -69,6 +78,125 @@ async function mockGuidanceStream(page: Page) {
         guidance,
       })}\n\n`,
     });
+  });
+}
+
+const LONG_CHARGE_NAME =
+  "Aggravated first degree murder with extended sentencing allegations";
+const LONG_WARNING =
+  "Do not discuss the facts of this case with investigators, witnesses, or anyone else before speaking with a licensed criminal defense attorney because even a well-intended explanation can be misunderstood, repeated out of context, or used to make decisions about your case.";
+
+for (const [viewportName, viewport] of ENGLISH_GUIDANCE_VIEWPORTS) {
+  test(`English guidance stays readable at ${viewportName} with long optional content`, async ({
+    page,
+  }) => {
+    await page.setViewportSize(viewport);
+  await page.addInitScript((locale) => window.localStorage.setItem("i18nextLng", locale), "en");
+  await mockGuidanceStream(page, {
+    overview:
+      "This intentionally long overview checks that English guidance remains readable when a charge title, warning, and optional sections all contain substantial content.",
+    warnings: [LONG_WARNING],
+    evidenceToGather: [
+      "Preserve all messages, call logs, photographs, recordings, and documents that may help your attorney understand the timeline and explain what happened.",
+    ],
+    courtPreparation: [
+      "Write down every question you want to ask your attorney about the hearing, possible defenses, deadlines, and what to expect when you arrive at court.",
+    ],
+    avoidActions: [
+      "Do not delete, edit, or move potentially relevant records even if they seem embarrassing, incomplete, or unrelated until your attorney has reviewed them.",
+    ],
+    uncertainties: [
+      {
+        area: "County-level procedure",
+        note: "Local filing rules, hearing procedures, and scheduling practices may differ, so confirm the details with your attorney and the court handling your case.",
+      },
+    ],
+    chargeClassifications: [
+      {
+        id: "fl-murder-in-the-first-degree",
+        code: "782.04(1)",
+        name: LONG_CHARGE_NAME,
+        classification: "felony",
+      },
+    ],
+    validation: {
+      confidenceScore: 0.8,
+      isValid: true,
+      summary: "Stress-test validation content.",
+      checksPerformed: 5,
+      checksPassed: 5,
+      issues: [],
+    },
+  });
+
+  await openQAFlow(page);
+  await selectJurisdiction(page);
+  await selectCharge(page);
+  await completeStatus(page);
+
+  await expect(page.getByTestId("button-close-dashboard")).toBeVisible({
+    timeout: 30_000,
+  });
+  const dashboard = page.getByTestId("guidance-dashboard");
+  await expect(dashboard.getByTestId("text-guidance-overview")).toContainText(
+    "This intentionally long overview",
+  );
+  const warningsContent = dashboard.locator('[data-guidance-section="warnings"]');
+  const longWarningItem = warningsContent.locator("li").filter({ hasText: LONG_WARNING });
+  const longChargeHeading = dashboard
+    .locator('[data-guidance-section="charges"]')
+    .getByRole("heading", { name: LONG_CHARGE_NAME });
+  await expect(longWarningItem).toBeVisible();
+  await expect(longChargeHeading).toBeVisible();
+  await expectReadableWithinMobileViewport(page, longWarningItem);
+  await expectReadableWithinMobileViewport(page, longChargeHeading);
+
+  const evidenceSection = dashboard.locator('[data-guidance-section="evidenceToGather"]');
+  const evidenceTrigger = evidenceSection.getByText(
+    "Evidence topics to review with a lawyer",
+  );
+  const evidenceItem = evidenceSection
+    .locator("li")
+    .filter({ hasText: "Preserve all messages, call logs" });
+  await expect(evidenceTrigger).toBeVisible();
+  await evidenceTrigger.click();
+  await expect(evidenceItem).toBeHidden();
+  await evidenceTrigger.click();
+  await expect(evidenceItem).toBeVisible();
+  await expectReadableWithinMobileViewport(page, evidenceItem);
+
+  const warningsSection = dashboard.getByText("Warnings & Court Preparation");
+  await expect(warningsSection).toBeVisible();
+  await warningsSection.click();
+  await expect(longWarningItem).toBeHidden();
+  await warningsSection.click();
+  await expect(longWarningItem).toBeVisible();
+  await expectReadableWithinMobileViewport(page, longWarningItem);
+
+  const uncertaintySection = dashboard.getByTestId("collapsible-uncertainties");
+  const uncertaintyContent = dashboard.locator(
+    '[data-guidance-section="uncertainties"]',
+  );
+  const uncertaintyNote = uncertaintyContent
+    .getByText(
+      "Local filing rules, hearing procedures, and scheduling practices may differ, so confirm the details with your attorney and the court handling your case.",
+    )
+    .locator("..");
+  await expect(uncertaintySection).toBeVisible();
+  await uncertaintySection.click();
+  await expect(uncertaintyContent.getByText("County-level procedure")).toBeHidden();
+  await uncertaintySection.click();
+  await expect(uncertaintyContent.getByText("County-level procedure")).toBeVisible();
+  await expectReadableWithinMobileViewport(page, uncertaintyNote);
+
+  const avoidItem = dashboard
+    .locator('[data-guidance-section="avoidActions"]')
+    .locator("li")
+    .filter({ hasText: "Do not delete, edit, or move potentially relevant records" });
+  await expect(avoidItem).toBeVisible();
+  await expectReadableWithinMobileViewport(page, avoidItem);
+
+  await expectNoHorizontalOverflow(page);
   });
 }
 

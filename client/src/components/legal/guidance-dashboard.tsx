@@ -682,8 +682,8 @@ function YourChargesSection({
           >
             {/* Charge Header */}
             <div className="flex items-start justify-between gap-3">
-              <div>
-                <h4 className="font-semibold text-foreground text-lg">{charge.name}</h4>
+              <div className="min-w-0">
+                <h4 className="break-words font-semibold text-foreground text-lg">{charge.name}</h4>
               </div>
               <Badge 
                 variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
@@ -699,7 +699,7 @@ function YourChargesSection({
             {charge.explanationPendingReview && (
               <div className="flex items-start gap-2 p-2.5 rounded-md bg-amber-50 border border-amber-200 dark:bg-amber-950/30 dark:border-amber-800">
                 <AlertTriangle className="h-4 w-4 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
-                <p className="text-xs text-amber-800 dark:text-amber-300 leading-snug">
+                <p className="min-w-0 text-xs text-amber-800 dark:text-amber-300 leading-snug">
                   <span className="font-semibold">
                     {t('guidance.yourCharges.pendingReviewWarning.title', 'Not yet attorney-reviewed.')}
                   </span>{" "}
@@ -713,7 +713,7 @@ function YourChargesSection({
             {charge.explanation?.translationDraft && (
               <div className="flex items-start gap-2 p-2.5 rounded-md bg-blue-50 border border-blue-200 dark:bg-blue-950/30 dark:border-blue-800">
                 <AlertTriangle className="h-4 w-4 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
-                <p className="text-xs text-blue-800 dark:text-blue-300 leading-snug">
+                <p className="min-w-0 text-xs text-blue-800 dark:text-blue-300 leading-snug">
                   <span className="font-semibold">
                     {t('guidance.yourCharges.translationDraftWarning.title', 'Provisional translation.')}
                   </span>{" "}
@@ -731,7 +731,7 @@ function YourChargesSection({
                 data-testid={`charge-jurisdiction-coverage-${index}`}
               >
                 <AlertTriangle className="h-4 w-4 text-slate-600 dark:text-slate-300 shrink-0 mt-0.5" />
-                <p className="text-xs text-slate-700 dark:text-slate-300 leading-snug">
+                <p className="min-w-0 text-xs text-slate-700 dark:text-slate-300 leading-snug">
                   <span className="font-semibold">
                     {t('guidance.yourCharges.jurisdictionCoverageWarning.title', 'State-specific detail not yet verified.')}
                   </span>{' '}
@@ -747,7 +747,7 @@ function YourChargesSection({
                  data-testid={`charge-reselection-warning-${index}`}
                >
                  <AlertTriangle className="h-4 w-4" />
-                 <AlertDescription>
+                  <AlertDescription className="min-w-0">
                    <span className="font-semibold">
                      {i18n.language === 'es'
                        ? 'Se necesita volver a seleccionar el cargo.'
@@ -1076,7 +1076,10 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
   return (
     <>
       <GuidancePrintPlan guidance={guidance} language={i18n.language} />
-      <div className="w-full min-w-0 max-w-6xl mx-auto overflow-x-hidden p-6 space-y-6 print:hidden">
+      <div
+        className="w-full min-w-0 max-w-6xl mx-auto overflow-x-hidden p-6 space-y-6 print:hidden"
+        data-testid="guidance-dashboard"
+      >
       {/* Case Summary Header */}
       <Card className="border-l-4 border-l-primary">
         <CardHeader>
@@ -1882,7 +1885,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                     {guidance.evidenceToGather.map((evidence, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-amber-600 mt-1">•</span>
-                        <span className="text-sm">{evidence}</span>
+                        <span className="min-w-0 text-sm">{evidence}</span>
                       </li>
                     ))}
                   </ul>
@@ -1920,7 +1923,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                         {guidance.warnings.map((warning, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-red-600 mt-1">•</span>
-                            <span className="text-sm">{renderGuidanceRichText(warning, guardedNavigate)}</span>
+                            <span className="min-w-0 text-sm">{renderGuidanceRichText(warning, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1935,7 +1938,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                         {guidance.courtPreparation.map((preparation, index) => (
                           <li key={index} className="flex items-start gap-2">
                             <span className="text-orange-600 mt-1">•</span>
-                            <span className="text-sm">{renderGuidanceRichText(preparation, guardedNavigate)}</span>
+                            <span className="min-w-0 text-sm">{renderGuidanceRichText(preparation, guardedNavigate)}</span>
                           </li>
                         ))}
                       </ul>
@@ -1990,7 +1993,7 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                     {guidance.avoidActions.map((action, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <span className="text-red-500 mt-1">•</span>
-                        <span className="text-sm">{renderGuidanceRichText(action, guardedNavigate)}</span>
+                        <span className="min-w-0 text-sm">{renderGuidanceRichText(action, guardedNavigate)}</span>
                       </li>
                     ))}
                   </ul>
