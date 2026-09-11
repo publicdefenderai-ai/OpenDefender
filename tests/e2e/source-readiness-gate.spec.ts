@@ -117,10 +117,20 @@ test.describe("source readiness expansion gate", () => {
     expect(targetJurisdictions).toHaveLength(CURRENT_JURISDICTIONS.length);
     expect(new Set(targetJurisdictions)).toEqual(new Set(CURRENT_JURISDICTIONS));
 
+    let attorneyReviewStatusRequests = 0;
+    await page.route("**/api/admin/attorney-review-status", async (route) => {
+      attorneyReviewStatusRequests += 1;
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ success: true, items: {} }),
+      });
+    });
     await page.goto("/admin/attorney-review");
     await expect(page.getByRole("heading", { name: "Attorney Review — Admin Access" })).toBeVisible();
     await page.getByPlaceholder("Admin API key (ADMIN_TOKEN)").fill(adminToken);
     await page.getByRole("button", { name: "Access Checklist" }).click();
+    await expect.poll(() => attorneyReviewStatusRequests).toBeGreaterThan(0);
 
     const readinessTable = page.getByRole("table", {
       name: "Source readiness by current jurisdiction",
@@ -202,14 +212,6 @@ test.describe("source readiness expansion gate", () => {
         body: JSON.stringify({ ok: true }),
       });
     });
-    await page.route("**/api/admin/attorney-review-status", async (route) => {
-      await route.fulfill({
-        status: 200,
-        contentType: "application/json",
-        body: JSON.stringify({ success: true, items: {} }),
-      });
-    });
-
     await page.route("**/api/admin/source-coverage", async (route) => {
       await route.fulfill({
         status: 500,

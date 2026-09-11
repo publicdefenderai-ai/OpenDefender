@@ -166,7 +166,46 @@ const releaseCheckEnv = {
 
 const server = spawn(process.execPath, ["dist/index.js"], {
   env: releaseCheckEnv,
-  stdio: "inherit",
+  stdio: ["ignore", "pipe", "pipe"],
+});
+
+let releaseCheckFailed = false;
+let stderrBuffer = "";
+const expectedReleaseCheckErrors = [
+  "Anthropic API key not set - AI guidance will use rule-based fallback",
+  "Anthropic API key not set for document summarizer",
+  "ANTHROPIC_API_KEY not set — mitigation polish will be unavailable",
+];
+function inspectStderrLine(line) {
+  if (
+    !releaseCheckFailed &&
+    line.includes("[ERROR]") &&
+    !expectedReleaseCheckErrors.some((message) => line.includes(message))
+  ) {
+    releaseCheckFailed = true;
+    console.error("[release-check] Production server emitted an unexpected error log; failing verification.");
+    server.kill("SIGTERM");
+  }
+}
+
+server.stdout.on("data", (chunk) => {
+  process.stdout.write(chunk);
+});
+server.stderr.on("data", (chunk) => {
+  process.stderr.write(chunk);
+
+  // Unexpected production error logs are fail-fast in release verification.
+  // A browser assertion can pass while a route catches and logs a database
+  // failure, so leaving the server alive would make the release gate green
+  // despite an unhealthy runtime. The missing Anthropic key is an intentional
+  // release fixture because the browser gate stubs AI requests.
+  stderrBuffer += chunk.toString("utf8");
+  const lines = stderrBuffer.split(/\r?\n/);
+  stderrBuffer = lines.pop() ?? "";
+  for (const line of lines) {
+    inspectStderrLine(line);
+    if (releaseCheckFailed) break;
+  }
 });
 
 for (const signal of ["SIGINT", "SIGTERM"]) {
@@ -174,7 +213,8 @@ for (const signal of ["SIGINT", "SIGTERM"]) {
 }
 
 server.on("exit", (code, signal) => {
-  if (signal) {
+  if (stderrBuffer) inspectStderrLine(stderrBuffer);
+  if (releaseCheckFailed || signal) {
     process.exitCode = 1;
     return;
   }
