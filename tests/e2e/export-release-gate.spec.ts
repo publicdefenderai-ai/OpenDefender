@@ -398,4 +398,87 @@ test.describe("browser export release gate", () => {
     expect(consoleErrors).toEqual([]);
     expect(pageErrors).toEqual([]);
   });
+
+  test("resets AI daily usage across open builder tabs at local midnight", async ({ context }) => {
+    const page = await context.newPage();
+    const secondPage = await context.newPage();
+    const consoleErrors: string[] = [];
+    const pageErrors: Error[] = [];
+
+    for (const currentPage of [page, secondPage]) {
+      currentPage.on("console", (message) => {
+        if (message.type() === "error") consoleErrors.push(message.text());
+      });
+      currentPage.on("pageerror", (error) => pageErrors.push(error));
+    }
+
+    await context.route("**/api/attorney/session", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ isVerified: false }),
+      });
+    });
+    await context.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+    let polishRequestCount = 0;
+    await context.route("**/api/mitigation/polish", async (route) => {
+      polishRequestCount += 1;
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: true,
+          polishedText: "The advocate reports twelve years in the community.",
+        }),
+      });
+    });
+
+    const midnight = new Date(2026, 8, 11, 23, 59, 30);
+    await Promise.all([
+      page.clock.install({ time: midnight }),
+      secondPage.clock.install({ time: midnight }),
+    ]);
+    await Promise.all([
+      page.goto("/for-advocates/mitigation-builder"),
+      secondPage.goto("/for-advocates/mitigation-builder"),
+    ]);
+
+    for (const currentPage of [page, secondPage]) {
+      await currentPage.getByLabel("Client name or identifier").fill("Midnight Polish Release Gate Test");
+      await currentPage
+        .getByPlaceholder("e.g. Bail hearing, diversion application, sentencing memo")
+        .fill("Bail hearing");
+      await currentPage.getByLabel("Time in community").fill("12 years in the community");
+      await expect(currentPage.getByText("Summary output")).toBeVisible();
+    }
+
+    await page.getByRole("button", { name: "Generate narrative", exact: true }).click();
+    await expect.poll(() => polishRequestCount).toBe(1);
+    await expect(page.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
+
+    await Promise.all([
+      page.clock.fastForward(30_000),
+      secondPage.clock.fastForward(30_000),
+    ]);
+    await expect(page.getByText("AI drafts used today on this browser: 0 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 0 of 20.")).toBeVisible();
+    await expect(page.getByRole("button", { name: "Regenerate", exact: true })).toBeEnabled();
+    await expect(
+      secondPage.getByRole("button", { name: "Generate narrative", exact: true }),
+    ).toBeEnabled();
+
+    await page.getByRole("button", { name: "Regenerate", exact: true }).click();
+    await expect.poll(() => polishRequestCount).toBe(2);
+    await expect(page.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
+    await expect(secondPage.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
+    expect(consoleErrors).toEqual([]);
+    expect(pageErrors).toEqual([]);
+  });
 });

@@ -850,6 +850,28 @@ function PolishPanel({ form }: { form: FormState }) {
   }, [filledFieldCount]);
 
   useEffect(() => {
+    let dailyUsageRolloverTimer: ReturnType<typeof setTimeout> | null = null;
+
+    const scheduleDailyUsageRefresh = () => {
+      const nextLocalMidnight = new Date();
+      nextLocalMidnight.setHours(24, 0, 0, 0);
+      const delay = Math.max(1, nextLocalMidnight.getTime() - Date.now());
+
+      dailyUsageRolloverTimer = setTimeout(() => {
+        setPolishDailyCount(readPolishDailyUsage(window.localStorage).count);
+        scheduleDailyUsageRefresh();
+      }, delay);
+    };
+
+    scheduleDailyUsageRefresh();
+    return () => {
+      if (dailyUsageRolloverTimer) {
+        clearTimeout(dailyUsageRolloverTimer);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     if (previousFilledFieldCountRef.current === filledFieldCount) return;
     previousFilledFieldCountRef.current = filledFieldCount;
 
