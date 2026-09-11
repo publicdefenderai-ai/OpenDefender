@@ -323,6 +323,10 @@ export default function CaseGuidance() {
   // longer active, preserving the session-only privacy boundary.
   useEffect(() => {
     if (!pendingGuidanceData || (!guidanceTimedOut && !reviewingTimedOutAnswers)) {
+      // Keep the previous recovery record while a retry is in flight. If the
+      // rules request fails (or the tab reloads before it finishes), the
+      // answers must still be available for recovery.
+      if (guidanceAttemptInFlightRef.current && pendingGuidanceData) return;
       clearStoredGuidanceRecovery();
       return;
     }

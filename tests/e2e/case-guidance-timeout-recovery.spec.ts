@@ -158,6 +158,83 @@ test.describe("case guidance timeout recovery", () => {
     releaseFirstRequest?.();
   });
 
+  test("keeps saved answers when the rules-based roadmap fails and restores them after reload", async ({ page }) => {
+    test.setTimeout(60_000);
+
+    await page.route("**/api/captcha/config", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ required: false, siteKey: null }),
+      });
+    });
+
+    let releaseFirstRequest: (() => void) | undefined;
+    await page.route("**/api/legal-guidance/stream", async (route) => {
+      await new Promise<void>((resolve) => {
+        releaseFirstRequest = resolve;
+      });
+    });
+    await page.route("**/api/legal-guidance/rules", async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: false,
+          error: "Rules guidance unavailable",
+        }),
+      });
+    });
+
+    await page.clock.install();
+    await page.goto("/case-guidance");
+    await completeScreener(page);
+
+    await page.clock.runFor(120_000);
+    await expect(page.getByRole("alert")).toContainText("Your answers are still here");
+    await expect.poll(() =>
+      page.evaluate(() => sessionStorage.getItem("open-defender:case-guidance-recovery")),
+    ).not.toBeNull();
+
+    await page.getByTestId("button-use-rules-guidance").click();
+    await page.clock.runFor(600);
+    await expect(page.getByRole("alert")).toContainText("retry could not be completed");
+    await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
+    await expect.poll(() =>
+      page.evaluate(() => {
+        const stored = sessionStorage.getItem("open-defender:case-guidance-recovery");
+        return stored ? JSON.parse(stored) : null;
+      }),
+    ).toMatchObject({
+      guidanceTimedOut: true,
+      guidanceRecoveryError: true,
+      reviewingTimedOutAnswers: false,
+      pendingGuidanceData: {
+        jurisdiction: "CA",
+        chargesUnknown: true,
+        caseStage: "pretrial",
+      },
+    });
+
+    await page.reload();
+    await expect(page.getByRole("alert")).toContainText("retry could not be completed");
+    await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
+    await page.getByTestId("button-review-guidance-answers").click();
+
+    const unknownCharges = page.getByRole("checkbox", {
+      name: "I don't know what charges I'm facing",
+      exact: true,
+    });
+    for (let step = 0; step < 7 && (await unknownCharges.count()) === 0; step += 1) {
+      await page.getByRole("button", { name: /^Back/ }).click();
+    }
+    await expect(unknownCharges).toBeChecked();
+    await page.getByRole("button", { name: /^Back/ }).click();
+    await expect(page.getByTestId("select-jurisdiction")).toContainText("California");
+
+    releaseFirstRequest?.();
+  });
+
   test("keeps answers after a rejected retry and ignores rapid duplicate activation", async ({ page }) => {
     test.setTimeout(60_000);
 
