@@ -8,6 +8,7 @@ import { Link } from "wouter";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
+import { validateDocxImageEntries } from "@/lib/docx-export-validation";
 
 /* -- Types ---------------------------------------------------------------- */
 
@@ -482,7 +483,9 @@ function OutputPanel({ output, flags }: { output: string; flags: IntakeFlag[] })
           children: buildDocxParagraphs(output, flags),
         }],
       });
-      triggerDownload(await Packer.toBlob(doc), "client-intake-record-draft.docx");
+      const blob = await Packer.toBlob(doc);
+      await validateDocxImageEntries(blob, "client intake record");
+      triggerDownload(blob, "client-intake-record-draft.docx");
     } finally { setDocxLoading(false); }
   };
 

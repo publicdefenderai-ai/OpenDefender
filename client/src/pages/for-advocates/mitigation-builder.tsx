@@ -40,6 +40,7 @@ import {
   createAiPolishedMitigationDraftDocument,
   createMitigationDraftDocument,
 } from "@/lib/mitigation-docx";
+import { validateDocxImageEntries } from "@/lib/docx-export-validation";
 
 /* ─── Types ─── */
 
@@ -980,6 +981,7 @@ function PolishPanel({ form }: { form: FormState }) {
     try {
       const doc = createAiPolishedMitigationDraftDocument(buildPolishDocxParagraphs(editedText, form));
       const blob = await Packer.toBlob(doc);
+      await validateDocxImageEntries(blob, "AI-polished mitigation draft");
       const safeName = form.clientName
         ? `mitigation-polished-draft-${form.clientName.replace(/[^a-z0-9]/gi, "-").toLowerCase()}.docx`
         : "mitigation-polished-draft.docx";
@@ -1389,6 +1391,7 @@ function OutputPanel({ output, form }: { output: string; form: FormState }) {
     try {
       const doc = createMitigationDraftDocument(buildDocxParagraphs(output, form));
       const blob = await Packer.toBlob(doc);
+      await validateDocxImageEntries(blob, "standard mitigation draft");
       triggerDownload(blob, "mitigation-summary-draft.docx");
     } finally {
       setDocxLoading(false);

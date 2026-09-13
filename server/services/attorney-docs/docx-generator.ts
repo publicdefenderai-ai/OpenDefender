@@ -21,6 +21,7 @@ import {
 import type { GeneratedDocument, GeneratedSection } from "./document-generator";
 import { resolveFormattingRules, type CourtFormattingRules } from "./formatting-rules";
 import { devLog, errLog } from "../../utils/dev-logger";
+import { validateDocxImageEntries } from "../../../client/src/lib/docx-export-validation";
 
 // ============================================================================
 // Types
@@ -181,6 +182,7 @@ export async function generateDocx(
 
     // Generate buffer
     const buffer = await Packer.toBuffer(doc);
+    await validateDocxImageEntries(buffer, `${document.templateId} (${document.jurisdiction})`);
     devLog('docx', `Generated document: ${buffer.length} bytes`);
 
     return buffer;

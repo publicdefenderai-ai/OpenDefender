@@ -5,6 +5,7 @@ import {
   createAiPolishedMitigationDraftDocument,
   createMitigationDraftDocument,
 } from "../client/src/lib/mitigation-docx";
+import { validateDocxImageEntries } from "../client/src/lib/docx-export-validation";
 
 function listDocxEntries(contents: Buffer): string[] {
   const entries: string[] = [];
@@ -65,48 +66,18 @@ function fixtureParagraphs(text: string) {
   ];
 }
 
-function crc32(contents: Buffer): number {
-  let crc = 0xffffffff;
+function makeStoredDocxEntry(entryName: string, payload: Buffer): Buffer {
+  const name = Buffer.from(entryName, "utf8");
+  const header = Buffer.alloc(30);
+  header.writeUInt32LE(0x04034b50, 0);
+  header.writeUInt16LE(20, 4);
+  header.writeUInt16LE(0, 6);
+  header.writeUInt16LE(0, 8);
+  header.writeUInt32LE(payload.length, 18);
+  header.writeUInt32LE(payload.length, 22);
+  header.writeUInt16LE(name.length, 26);
 
-  for (const byte of contents) {
-    crc ^= byte;
-    for (let bit = 0; bit < 8; bit += 1) {
-      crc = (crc >>> 1) ^ (crc & 1 ? 0xedb88320 : 0);
-    }
-  }
-
-  return (crc ^ 0xffffffff) >>> 0;
-}
-
-function expectValidPng(contents: Buffer) {
-  expect(contents.subarray(0, 8)).toEqual(
-    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
-  );
-
-  let offset = 8;
-  let sawIend = false;
-
-  while (offset + 12 <= contents.length) {
-    const length = contents.readUInt32BE(offset);
-    const type = contents.toString("ascii", offset + 4, offset + 8);
-    const dataStart = offset + 8;
-    const crcStart = dataStart + length;
-    const chunkEnd = crcStart + 4;
-
-    expect(chunkEnd).toBeLessThanOrEqual(contents.length);
-    const data = contents.subarray(dataStart, crcStart);
-    const actualCrc = contents.readUInt32BE(crcStart);
-    expect(actualCrc).toBe(crc32(Buffer.concat([Buffer.from(type, "ascii"), data])));
-
-    offset = chunkEnd;
-    if (type === "IEND") {
-      sawIend = true;
-      break;
-    }
-  }
-
-  expect(sawIend).toBe(true);
-  expect(offset).toBe(contents.length);
+  return Buffer.concat([header, name, payload]);
 }
 
 describe("mitigation DOCX DRAFT watermark", () => {
@@ -118,6 +89,7 @@ describe("mitigation DOCX DRAFT watermark", () => {
     ],
   ])("embeds an anchored behind-content DRAFT watermark in the %s export", async (_variant, document) => {
     const contents = await Packer.toBuffer(document);
+    await validateDocxImageEntries(contents, `${_variant} mitigation draft`);
     const entries = listDocxEntries(contents);
     const headerXml = extractDocxEntry(contents, "word/header1.xml").toString("utf8");
     const headerRelationshipsXml = extractDocxEntry(contents, "word/_rels/header1.xml.rels").toString("utf8");
@@ -134,6 +106,23 @@ describe("mitigation DOCX DRAFT watermark", () => {
     expect(pngEntry).toBeDefined();
     expect(entries).toEqual(expect.arrayContaining(mediaTargets));
     expect(extractDocxEntry(contents, svgEntry!).toString("utf8")).toContain("DRAFT");
-    expectValidPng(extractDocxEntry(contents, pngEntry!));
+  });
+
+  it.each([
+    [
+      "PNG",
+      "word/media/image1.png",
+      Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+    ],
+    ["SVG", "word/media/image2.svg", Buffer.from("<svg xmlns=\"http://www.w3.org/2000/svg\">")],
+    ["unsupported image", "word/media/image3.jpg", Buffer.from([0xff, 0xd8, 0xff, 0xd9])],
+  ])("identifies a malformed %s entry and its export variant", async (_format, entryName, payload) => {
+    const contents = makeStoredDocxEntry(entryName, payload);
+
+    await expect(
+      validateDocxImageEntries(contents, "AI-polished mitigation draft"),
+    ).rejects.toThrow(
+      `DOCX export "AI-polished mitigation draft" contains malformed embedded image "${entryName}"`,
+    );
   });
 });
