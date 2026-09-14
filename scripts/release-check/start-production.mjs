@@ -2,14 +2,7 @@ import { spawn } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
-
-const releaseCheckAdminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN?.trim();
-if (!releaseCheckAdminToken) {
-  throw new Error("Release production harness requires its in-memory admin token fixture");
-}
-if (releaseCheckAdminToken === process.env.ADMIN_TOKEN) {
-  throw new Error("Release production harness fixture must not reuse the production admin token");
-}
+import { fileURLToPath } from "node:url";
 
 // These values exist solely to prove that the production artifact honors the
 // required startup checks. They are intentionally not production credentials.
@@ -130,93 +123,144 @@ const releaseCheckCaliforniaSelectableChargeIds = [
   "ca-criminal-solicitation-653f-b",
 ];
 
-const releaseCheckAuthoritySelectableChargeIds = [...new Set([
-  ...releaseCheckAuthorityManifestFiles.flatMap((fileName) => {
-    const manifestPath = resolve(process.cwd(), "scripts/data-review/output", fileName);
-    const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
-    if (!Array.isArray(manifest.catalogRecords)) {
-      throw new Error(`Release-check authority manifest has no catalog records: ${fileName}`);
-    }
-    return manifest.catalogRecords
-      .filter((record) =>
-        (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
-        Array.isArray(record.provisions) &&
-        record.provisions.length > 0 &&
-        typeof record.chargeId === "string",
-      )
-      .map((record) => record.chargeId);
-  }),
-  ...releaseCheckCaliforniaSelectableChargeIds,
-])];
+function getReleaseCheckAuthoritySelectableChargeIds() {
+  return [...new Set([
+    ...releaseCheckAuthorityManifestFiles.flatMap((fileName) => {
+      const manifestPath = resolve(process.cwd(), "scripts/data-review/output", fileName);
+      const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+      if (!Array.isArray(manifest.catalogRecords)) {
+        throw new Error(`Release-check authority manifest has no catalog records: ${fileName}`);
+      }
+      return manifest.catalogRecords
+        .filter((record) =>
+          (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
+          Array.isArray(record.provisions) &&
+          record.provisions.length > 0 &&
+          typeof record.chargeId === "string",
+        )
+        .map((record) => record.chargeId);
+    }),
+    ...releaseCheckCaliforniaSelectableChargeIds,
+  ])];
+}
 
-const releaseCheckEnv = {
-  NODE_ENV: "production",
-  PORT: process.env.PORT ?? "5000",
-  SESSION_SECRET: "release-gate-session-secret-not-for-production",
-  TURNSTILE_SECRET_KEY: "release-gate-turnstile-secret-not-for-production",
-  TURNSTILE_SITE_KEY: "release-gate-turnstile-site-key-not-for-production",
-  ADMIN_TOKEN: releaseCheckAdminToken,
-  DATABASE_URL: "postgresql://release_check:release_check@127.0.0.1:6543/release_check",
-  RELEASE_CHECK: "true",
-  RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS: JSON.stringify(
-    releaseCheckAuthoritySelectableChargeIds,
-  ),
-  DOTENV_CONFIG_PATH: join(tmpdir(), "opendefender-release-check-no-env"),
-};
+function createReleaseCheckEnv() {
+  const releaseCheckAdminToken = process.env.RELEASE_CHECK_ADMIN_TOKEN?.trim();
+  if (!releaseCheckAdminToken) {
+    throw new Error("Release production harness requires its in-memory admin token fixture");
+  }
+  if (releaseCheckAdminToken === process.env.ADMIN_TOKEN) {
+    throw new Error("Release production harness fixture must not reuse the production admin token");
+  }
 
-const server = spawn(process.execPath, ["dist/index.js"], {
-  env: releaseCheckEnv,
-  stdio: ["ignore", "pipe", "pipe"],
-});
+  return {
+    NODE_ENV: "production",
+    PORT: process.env.PORT ?? "5000",
+    SESSION_SECRET: "release-gate-session-secret-not-for-production",
+    TURNSTILE_SECRET_KEY: "release-gate-turnstile-secret-not-for-production",
+    TURNSTILE_SITE_KEY: "release-gate-turnstile-site-key-not-for-production",
+    ADMIN_TOKEN: releaseCheckAdminToken,
+    DATABASE_URL: "postgresql://release_check:release_check@127.0.0.1:6543/release_check",
+    RELEASE_CHECK: "true",
+    RELEASE_CHECK_AUTHORITY_SELECTABLE_CHARGE_IDS: JSON.stringify(
+      getReleaseCheckAuthoritySelectableChargeIds(),
+    ),
+    DOTENV_CONFIG_PATH: join(tmpdir(), "opendefender-release-check-no-env"),
+  };
+}
 
-let releaseCheckFailed = false;
-let stderrBuffer = "";
 const expectedReleaseCheckErrors = [
   "Anthropic API key not set - AI guidance will use rule-based fallback",
   "Anthropic API key not set for document summarizer",
   "ANTHROPIC_API_KEY not set — mitigation polish will be unavailable",
 ];
-function inspectStderrLine(line) {
-  if (
-    !releaseCheckFailed &&
-    line.includes("[ERROR]") &&
-    !expectedReleaseCheckErrors.some((message) => line.includes(message))
-  ) {
-    releaseCheckFailed = true;
-    console.error("[release-check] Production server emitted an unexpected error log; failing verification.");
-    server.kill("SIGTERM");
-  }
+
+/**
+ * Run the release server and fail verification when it emits an unexpected
+ * production error. The command/args overrides keep this process boundary
+ * directly testable with a controlled child-process fixture.
+ */
+export function runReleaseServer({
+  command = process.execPath,
+  args = ["dist/index.js"],
+  env = createReleaseCheckEnv(),
+  stdout = process.stdout,
+  stderr = process.stderr,
+} = {}) {
+  const server = spawn(command, args, {
+    env,
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+
+  return new Promise((resolve) => {
+    let releaseCheckFailed = false;
+    let stderrBuffer = "";
+    const signalHandlers = new Map();
+
+    function inspectStderrLine(line) {
+      if (
+        !releaseCheckFailed &&
+        line.includes("[ERROR]") &&
+        !expectedReleaseCheckErrors.some((message) => line.includes(message))
+      ) {
+        releaseCheckFailed = true;
+        stderr.write(
+          "[release-check] Production server emitted an unexpected error log; failing verification.\n",
+        );
+        server.kill("SIGTERM");
+      }
+    }
+
+    server.stdout.on("data", (chunk) => {
+      stdout.write(chunk);
+    });
+    server.stderr.on("data", (chunk) => {
+      stderr.write(chunk);
+
+      // Unexpected production error logs are fail-fast in release verification.
+      // A browser assertion can pass while a route catches and logs a database
+      // failure, so leaving the server alive would make the release gate green
+      // despite an unhealthy runtime. The missing Anthropic key is an intentional
+      // release fixture because the browser gate stubs AI requests.
+      stderrBuffer += chunk.toString("utf8");
+      const lines = stderrBuffer.split(/\r?\n/);
+      stderrBuffer = lines.pop() ?? "";
+      for (const line of lines) {
+        inspectStderrLine(line);
+        if (releaseCheckFailed) break;
+      }
+    });
+
+    server.on("error", (error) => {
+      stderr.write(`[release-check] Failed to start production server: ${error.message}\n`);
+      releaseCheckFailed = true;
+    });
+
+    server.on("exit", (code, signal) => {
+      for (const [shutdownSignal, handler] of signalHandlers) {
+        process.removeListener(shutdownSignal, handler);
+      }
+      if (stderrBuffer) inspectStderrLine(stderrBuffer);
+      resolve({
+        code: releaseCheckFailed || signal ? 1 : (code ?? 1),
+        releaseCheckFailed,
+        signal,
+      });
+    });
+
+    for (const shutdownSignal of ["SIGINT", "SIGTERM"]) {
+      const handler = () => server.kill(shutdownSignal);
+      signalHandlers.set(shutdownSignal, handler);
+      process.on(shutdownSignal, handler);
+    }
+  });
 }
 
-server.stdout.on("data", (chunk) => {
-  process.stdout.write(chunk);
-});
-server.stderr.on("data", (chunk) => {
-  process.stderr.write(chunk);
-
-  // Unexpected production error logs are fail-fast in release verification.
-  // A browser assertion can pass while a route catches and logs a database
-  // failure, so leaving the server alive would make the release gate green
-  // despite an unhealthy runtime. The missing Anthropic key is an intentional
-  // release fixture because the browser gate stubs AI requests.
-  stderrBuffer += chunk.toString("utf8");
-  const lines = stderrBuffer.split(/\r?\n/);
-  stderrBuffer = lines.pop() ?? "";
-  for (const line of lines) {
-    inspectStderrLine(line);
-    if (releaseCheckFailed) break;
-  }
-});
-
-for (const signal of ["SIGINT", "SIGTERM"]) {
-  process.on(signal, () => server.kill(signal));
+async function main() {
+  const result = await runReleaseServer();
+  process.exitCode = result.code;
 }
 
-server.on("exit", (code, signal) => {
-  if (stderrBuffer) inspectStderrLine(stderrBuffer);
-  if (releaseCheckFailed || signal) {
-    process.exitCode = 1;
-    return;
-  }
-  process.exitCode = code ?? 1;
-});
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  await main();
+}
