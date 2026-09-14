@@ -12,6 +12,14 @@ const EXTRA_NARROW_MOBILE_VIEWPORT = {
 
 const LOCALIZED_STATUTE_OUTAGES = [
   {
+    code: "en",
+    name: "English",
+    message:
+      "The official-text provider is temporarily unavailable. Please try the citation lookup again later.",
+    stateMessage:
+      "Statute search is temporarily unavailable. Please try again later.",
+  },
+  {
     code: "es",
     name: "Spanish",
     message:
@@ -232,6 +240,20 @@ async function stubStateStatuteResponseError(page: Page) {
       body: JSON.stringify({
         success: false,
         error: "State statute provider returned an error",
+      }),
+    });
+  });
+}
+
+async function stubFederalStatuteResponseError(page: Page) {
+  await page.unroute("**/api/statutes/federal**");
+  await page.route("**/api/statutes/federal**", async (route) => {
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: false,
+        error: "Federal statute provider returned an error",
       }),
     });
   });
@@ -464,6 +486,26 @@ for (const viewport of VIEWPORTS) {
     });
 
     for (const language of LOCALIZED_STATUTE_OUTAGES) {
+      test(
+        `${language.name} federal statute response errors use localized guidance without overflow`,
+        async ({ page }) => {
+          await page.addInitScript(
+            (locale) => window.localStorage.setItem("i18nextLng", locale),
+            language.code,
+          );
+          await stubFederalStatuteResponseError(page);
+
+          await page.goto("/statutes");
+          await expectEditorialOpening(page);
+
+          await expect(page.getByText(language.stateMessage)).toBeVisible();
+          await expect(
+            page.getByText("Federal statute provider returned an error"),
+          ).toHaveCount(0);
+          await expectNoHorizontalOverflow(page);
+        },
+      );
+
       test(
         `${language.name} live statute outage guidance remains visible without overflow`,
         async ({ page }) => {
@@ -744,6 +786,26 @@ test.describe("localized state statute errors at an extra-narrow mobile width", 
   });
 
   for (const language of LOCALIZED_STATUTE_OUTAGES) {
+    test(
+      `${language.name} federal statute response errors remain visible without horizontal overflow`,
+      async ({ page }) => {
+        await page.addInitScript(
+          (locale) => window.localStorage.setItem("i18nextLng", locale),
+          language.code,
+        );
+        await stubFederalStatuteResponseError(page);
+
+        await page.goto("/statutes");
+        await expectEditorialOpening(page);
+
+        await expect(page.getByText(language.stateMessage)).toBeVisible();
+        await expect(
+          page.getByText("Federal statute provider returned an error"),
+        ).toHaveCount(0);
+        await expectNoHorizontalOverflow(page);
+      },
+    );
+
     test(
       `${language.name} opened statute card outage guidance remains visible without horizontal overflow`,
       async ({ page }) => {

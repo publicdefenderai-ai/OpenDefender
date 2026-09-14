@@ -249,7 +249,7 @@ export default function StatutesPage() {
             ) : federalStatutes?.error ? (
               <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
-                <AlertDescription>{federalStatutes.error}</AlertDescription>
+                <AlertDescription>{t('statutes.errors.loadFailed')}</AlertDescription>
               </Alert>
             ) : (
               <>
