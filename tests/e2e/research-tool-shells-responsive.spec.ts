@@ -75,6 +75,10 @@ const LOCALIZED_STATUTE_LOADING = [
   },
 ] as const;
 
+const FULL_TEXT_RELOAD_LANGUAGES = LOCALIZED_STATUTE_OUTAGES.filter(
+  (language) => language.code === "es" || language.code === "zh",
+);
+
 async function expectNoHorizontalOverflow(page: Page) {
   // Wait for the authored intro and route transitions to settle before
   // measuring transformed elements.
@@ -353,6 +357,43 @@ async function stubDelayedCitationLookup(page: Page) {
           jurisdiction: "California",
           title: "Battery",
           content: "A person who commits battery is guilty under this section.",
+          section: "242",
+        },
+      }),
+    });
+  });
+}
+
+async function stubRecoveringStatuteCardProvider(page: Page) {
+  let requestCount = 0;
+
+  await page.route("**/api/openlaws/citation/**", async (route) => {
+    requestCount += 1;
+
+    if (requestCount === 1) {
+      await route.fulfill({
+        status: 503,
+        contentType: "application/json",
+        body: JSON.stringify({
+          success: false,
+          error: "OpenLaws provider unavailable",
+        }),
+      });
+      return;
+    }
+
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify({
+        success: true,
+        statute: {
+          id: "responsive-shell-recovered-statute",
+          citation: "Cal. Penal Code § 242",
+          jurisdiction: "California",
+          title: "Battery",
+          content:
+            "Recovered full statute text after the provider became available.",
           section: "242",
         },
       }),
@@ -660,6 +701,39 @@ for (const viewport of VIEWPORTS) {
 
           await expect(page.getByText(language.message)).toBeVisible();
           await expect(page.getByRole("alert")).toContainText(language.message);
+          await expectNoHorizontalOverflow(page);
+        },
+      );
+    }
+
+    for (const language of FULL_TEXT_RELOAD_LANGUAGES) {
+      test(
+        `${language.name} opened statute text recovers after a page reload without overflow`,
+        async ({ page }) => {
+          await page.addInitScript(
+            (locale) => window.localStorage.setItem("i18nextLng", locale),
+            language.code,
+          );
+          await stubStatuteCardProviderOutage(page);
+          await stubRecoveringStatuteCardProvider(page);
+
+          await page.goto("/statutes");
+          await expectEditorialOpening(page);
+          await page
+            .getByTestId("button-full-text-cal--penal-code---242")
+            .click();
+
+          await expect(page.getByText(language.message)).toBeVisible();
+          await expectNoHorizontalOverflow(page);
+
+          await page.reload();
+          await expectEditorialOpening(page);
+          await expect(
+            page.getByText(
+              "Recovered full statute text after the provider became available.",
+            ),
+          ).toBeVisible();
+          await expect(page.getByText(language.message)).toHaveCount(0);
           await expectNoHorizontalOverflow(page);
         },
       );

@@ -53,6 +53,8 @@ interface LiveStatuteLookup {
   error?: string;
 }
 
+const OPEN_STATUTE_STORAGE_PREFIX = 'open-defender:opened-statute:';
+
 const US_STATES = [
   { code: 'AL', name: 'Alabama' },
   { code: 'AK', name: 'Alaska' },
@@ -493,10 +495,19 @@ export default function StatutesPage() {
 
 function StatuteCard({ statute }: { statute: Statute }) {
   const { t } = useTranslation();
-  const [showFullText, setShowFullText] = useState(false);
-  const [fetchEnabled, setFetchEnabled] = useState(false);
-
   const citationKey = (statute.citation || 'unknown').replace(/[^a-z0-9]/gi, '-').toLowerCase();
+  const openedStatuteStorageKey = `${OPEN_STATUTE_STORAGE_PREFIX}${citationKey}`;
+  const wasOpened = () => {
+    if (typeof window === 'undefined') return false;
+
+    try {
+      return window.sessionStorage.getItem(openedStatuteStorageKey) === 'true';
+    } catch {
+      return false;
+    }
+  };
+  const [showFullText, setShowFullText] = useState(wasOpened);
+  const [fetchEnabled, setFetchEnabled] = useState(wasOpened);
 
   const {
     data: liveData,
@@ -511,7 +522,19 @@ function StatuteCard({ statute }: { statute: Statute }) {
     if (!showFullText) {
       setFetchEnabled(true);
     }
-    setShowFullText(prev => !prev);
+
+    const nextShowFullText = !showFullText;
+    setShowFullText(nextShowFullText);
+
+    try {
+      if (nextShowFullText) {
+        window.sessionStorage.setItem(openedStatuteStorageKey, 'true');
+      } else {
+        window.sessionStorage.removeItem(openedStatuteStorageKey);
+      }
+    } catch {
+      // Keep the card usable when browser storage is unavailable.
+    }
   };
 
   const liveContent = liveData?.statute?.content;
