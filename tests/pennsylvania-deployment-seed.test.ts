@@ -14,10 +14,10 @@ describe("committed Pennsylvania deployment seed", () => {
     expect(manifest.source).toBe(PENNSYLVANIA_MANIFEST_SOURCE);
     expect(manifest.catalogRecords).toHaveLength(112);
     expect(seed.sourcePolicy).toBe(PENNSYLVANIA_SOURCE_POLICY);
-    expect(seed.selectableChargeIds).toHaveLength(22);
-    expect(seed.sources).toHaveLength(22);
-    expect(seed.snapshots).toHaveLength(22);
-    expect(seed.links).toHaveLength(22);
+    expect(seed.selectableChargeIds).toHaveLength(43);
+    expect(seed.sources).toHaveLength(43);
+    expect(seed.snapshots).toHaveLength(43);
+    expect(seed.links).toHaveLength(43);
     expect(seed.sources.every((source) => {
       return source.publisher === "Pennsylvania General Assembly" &&
         source.accessPolicy === "store_text" &&

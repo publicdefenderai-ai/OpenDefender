@@ -1,7 +1,21 @@
 #!/bin/bash
 set -e
 npm install
-npm run db:push
+
+# The workspace exposes both DATABASE_URL (the managed development database)
+# and, in some environments, NEON_DATABASE_URL from an older connection setup.
+# drizzle.config.ts prefers the latter, but it can be stale and cause the
+# schema pull to retry until post-merge setup is killed. Prefer the managed
+# development URL for this dev-only merge hook without changing the app's
+# runtime connection selection.
+if [ -n "${DATABASE_URL:-}" ]; then
+  echo "[post-merge] Applying schema to the managed development database."
+  timeout --signal=TERM --kill-after=10s 60s env -u NEON_DATABASE_URL npm run db:push
+else
+  echo "[post-merge] DATABASE_URL is not set; using the configured fallback."
+  timeout --signal=TERM --kill-after=10s 60s npm run db:push
+fi
+
 # Exclude live-server integration tests — these require a running app + database
 # and will time out / fail in beforeAll during headless post-merge execution:
 #   criminal-charges-api.test.ts  — HTTP calls to localhost:5000
