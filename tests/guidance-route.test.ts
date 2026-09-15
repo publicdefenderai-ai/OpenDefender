@@ -749,6 +749,9 @@ describe('GET /api/admin/source-coverage: authenticated readiness gate', () => {
     'blocker',
     'manifestPath',
     'seedScriptPath',
+    'mappingClassificationCounts',
+    'automatedCandidateRows',
+    'unresolvedMappingRows',
   ];
 
   async function makeSourceCoverageApp(

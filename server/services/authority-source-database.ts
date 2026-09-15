@@ -10,6 +10,10 @@ import {
 } from "@shared/schema";
 import { db } from "../db";
 import { errLog, opsLog } from "../utils/dev-logger";
+import type {
+  AuthorityEvidenceRecord,
+  AuthorityMappingDecision,
+} from "./authority-offense-evidence";
 
 export type AuthoritySupportRole =
   | "offense"
@@ -34,6 +38,7 @@ export interface AuthorityProvisionSeed {
   supportRole: AuthoritySupportRole;
   subdivision: string | null;
   metadata: Record<string, unknown>;
+  evidence?: AuthorityEvidenceRecord;
 }
 
 export interface AuthorityCatalogRecord {
@@ -47,6 +52,7 @@ export interface AuthorityCatalogRecord {
   provisions: AuthorityProvisionSeed[];
   apiStatus: "verified" | "api_error" | "placeholder";
   error?: string;
+  mapping?: AuthorityMappingDecision;
 }
 
 export interface AuthoritySourceSeed {

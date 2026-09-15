@@ -8,6 +8,12 @@ import {
   type AuthoritySourceDatabaseSeed,
   type AuthoritySourceSeed,
 } from "../services/authority-source-database";
+import {
+  annotateSharedAuthorityMappings,
+  buildAuthorityEvidence,
+  classifyAuthorityMapping,
+  type AuthorityEvidenceDocument,
+} from "../services/authority-offense-evidence";
 
 export const OHIO_SOURCE_POLICY = "official_ohio_revised_code";
 export const OHIO_SOURCE_PUBLISHER = "Ohio Legislative Service Commission";
@@ -106,6 +112,18 @@ function provisionFromDocument(
   const sourceKey = buildOhioSourceKey(reference.section, reference.subdivision);
   const citation = `Ohio Rev. Code Ann. § ${reference.section}${reference.subdivision ?? ""}`;
   const contentHash = createHash("sha256").update(document.text).digest("hex");
+  const evidence = buildAuthorityEvidence({
+    sourceKey,
+    lawId: "ORC",
+    section: reference.section,
+    subdivision: reference.subdivision,
+    citation,
+    sourceUrl: document.sourceUrl,
+    officialTitle: document.title,
+    text: document.text,
+    contentHash,
+    effectiveDateStart: document.effectiveDateStart,
+  });
   return {
     sourceKey,
     lawId: "ORC",
@@ -121,6 +139,7 @@ function provisionFromDocument(
     effectiveDateEnd: null,
     supportRole: "offense",
     subdivision: reference.subdivision,
+    evidence,
     metadata: {
       chargeId: charge.id,
       catalogLabel: charge.name,
@@ -134,6 +153,7 @@ function provisionFromDocument(
         effectiveDateStart: document.effectiveDateStart,
         retrievedAt: document.retrievedAt.toISOString(),
       },
+      evidence,
       attorneyReview: "pending",
       fingerprint: referenceHash({
         sourceKey,
@@ -156,6 +176,55 @@ export interface OhioSourceDocument {
   sourceUrl: string;
   retrievedAt: Date;
   effectiveDateStart: string | null;
+  reference?: OhioSourceReference;
+}
+
+function referenceForOhioDocument(
+  document: OhioSourceDocument,
+  references: OhioSourceReference[],
+  index: number,
+): OhioSourceReference | undefined {
+  return document.reference ?? references.find((reference) =>
+    reference.section === document.section &&
+    (!reference.subdivision || hasSubdivision(document.text, reference.subdivision)),
+  ) ?? references[index];
+}
+
+function buildOhioMapping(
+  charge: CriminalCharge,
+  references: OhioSourceReference[],
+  documents: OhioSourceDocument[],
+): ReturnType<typeof classifyAuthorityMapping> {
+  return classifyAuthorityMapping({
+    catalogLabel: charge.name,
+    catalogCode: charge.code,
+    references,
+    documents: documents.map((document, index): AuthorityEvidenceDocument => {
+      const reference = referenceForOhioDocument(document, references, index);
+      const citation = reference
+        ? `Ohio Rev. Code Ann. § ${reference.section}${reference.subdivision ?? ""}`
+        : `Ohio Rev. Code Ann. § ${document.section}`;
+      return {
+        sourceKey: reference
+          ? buildOhioSourceKey(reference.section, reference.subdivision)
+          : buildOhioSourceKey(document.section),
+        lawId: "ORC",
+        section: reference?.section ?? document.section,
+        subdivision: reference?.subdivision ?? null,
+        citation,
+        sourceUrl: document.sourceUrl,
+        officialTitle: document.title,
+        text: document.text,
+        contentHash: createHash("sha256").update(document.text).digest("hex"),
+        effectiveDateStart: document.effectiveDateStart,
+      };
+    }),
+    codeIdentityMatches: codeSupportsReferences(charge, references),
+    approvedAlias: documents.some((document) =>
+      normalizeTitle(document.title) !== normalizeTitle(charge.name) &&
+      titleMatches(charge, document.title),
+    ),
+  });
 }
 
 export function buildOhioManifestRecord(
@@ -171,6 +240,7 @@ export function buildOhioManifestRecord(
     catalogCategory: charge.category,
   };
   const references = parseOhioCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
+  const mapping = buildOhioMapping(charge, references, documents);
   if (references.length === 0) {
     return {
       ...base,
@@ -180,6 +250,7 @@ export function buildOhioManifestRecord(
       canonicalTitle: null,
       provisions: [],
       apiStatus: error ? "api_error" : "placeholder",
+      mapping,
       ...(error ? { error } : {}),
     };
   }
@@ -191,6 +262,7 @@ export function buildOhioManifestRecord(
       canonicalTitle: null,
       provisions: [],
       apiStatus: "verified",
+      mapping,
     };
   }
   if (documents.length !== references.length) {
@@ -203,6 +275,7 @@ export function buildOhioManifestRecord(
       provisions: [],
       apiStatus: "api_error",
       error: error ?? "Missing required Ohio statutory provision",
+      mapping,
     };
   }
   const mismatch = documents.find((document, index) =>
@@ -219,6 +292,7 @@ export function buildOhioManifestRecord(
       canonicalTitle: mismatch.title,
       provisions: [],
       apiStatus: "verified",
+      mapping,
     };
   }
   const provisions = documents.map((document, index) =>
@@ -236,6 +310,7 @@ export function buildOhioManifestRecord(
     canonicalTitle: provisions[0].officialTitle,
     provisions,
     apiStatus: "verified",
+    mapping,
   };
 }
 
@@ -263,6 +338,11 @@ export function validateOhioManifestRecord(
     record.provisions.length !== references.length ||
     !codeSupportsReferences(charge, references)
   ) return "Selectable Ohio record does not have complete exact statutory support";
+  if (
+    record.mapping &&
+    record.mapping.classification !== "exact_match" &&
+    record.mapping.classification !== "approved_alias"
+  ) return "Selectable Ohio record does not have an exact or approved-alias mapping";
 
   const alias = record.provisions.some((provision) =>
     normalizeTitle(provision.officialTitle) !== normalizeTitle(charge.name),
@@ -302,6 +382,7 @@ export function validateOhioManifestRecord(
 export function buildOhioSourceDatabaseSeed(
   manifest: OhioAuthorityManifest,
 ): AuthoritySourceDatabaseSeed {
+  annotateSharedAuthorityMappings(manifest.catalogRecords);
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
   const links: AuthorityChargeLinkSeed[] = [];

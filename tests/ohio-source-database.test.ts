@@ -4,6 +4,7 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
 import { criminalCharges } from "../shared/criminal-charges";
+import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 import {
   buildOhioManifestRecord,
   buildOhioSourceDatabaseSeed,
@@ -119,6 +120,13 @@ describe("Ohio authority manifest", () => {
     const compound = criminalCharges.find((candidate) => candidate.id === "oh-attempted-robbery")!;
     expect(buildOhioManifestRecord(compound, [], importedAt).disposition)
       .toBe("require_exact_reselection");
+    const compoundReferences = parseOhioCitation(CHARGE_CITATIONS[compound.id].citation);
+    const partialCompound = buildOhioManifestRecord(compound, [
+      document(compoundReferences[1].section, "Robbery"),
+    ], importedAt);
+    expect(partialCompound.mapping?.classification).toBe("incomplete_evidence");
+    expect(partialCompound.mapping?.candidateEvidence[0].sectionIdentity.section)
+      .toBe(compoundReferences[1].section);
 
     const federal = criminalCharges.find((candidate) => candidate.id === "oh-bank-robbery")!;
     expect(buildOhioManifestRecord(federal, [], importedAt).disposition)

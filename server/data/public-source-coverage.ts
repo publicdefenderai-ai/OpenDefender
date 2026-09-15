@@ -64,6 +64,7 @@ import {
   CURRENT_PUBLIC_SOURCE_JURISDICTIONS,
   type CurrentPublicSourceJurisdiction,
 } from "@shared/public-source-coverage";
+import type { AuthorityMappingClassification } from "../services/authority-offense-evidence";
 export {
   CURRENT_PUBLIC_SOURCE_JURISDICTIONS,
 } from "@shared/public-source-coverage";
@@ -177,6 +178,9 @@ export interface PublicSourceCoverageReportRow {
   sources: number;
   snapshots: number;
   links: number;
+  mappingClassificationCounts: Record<string, number>;
+  automatedCandidateRows: number;
+  unresolvedMappingRows: number;
   catalogAccountingRate: number;
   officialResponseRate: number;
   publishableRate: number;
@@ -229,6 +233,10 @@ interface CoverageCatalogRecord {
   provisions: CoverageProvision[];
   apiStatus: string;
   error?: string;
+  mapping?: {
+    classification: AuthorityMappingClassification;
+    candidateEvidence?: readonly unknown[];
+  };
 }
 
 interface CoverageProvision {
@@ -665,6 +673,20 @@ function buildReportRow(input: CoverageInput): PublicSourceCoverageReportRow {
   const gapCounts = Object.fromEntries(
     gapBreakdown.map((gap) => [gap.kind, gap.rows]),
   ) as Record<PublicSourceCoverageGapKind, number>;
+  const mappingClassificationCounts: Record<string, number> = {};
+  for (const record of input.records) {
+    const classification = record.mapping?.classification ?? "unclassified";
+    mappingClassificationCounts[classification] =
+      (mappingClassificationCounts[classification] ?? 0) + 1;
+  }
+  const automatedCandidateRows = input.records.filter((record) =>
+    (record.mapping?.candidateEvidence?.length ?? 0) > 0,
+  ).length;
+  const unresolvedMappingRows = input.records.filter((record) =>
+    record.mapping &&
+    ["semantic_conflict", "citation_identity_conflict", "missing_section", "incomplete_evidence"]
+      .includes(record.mapping.classification),
+  ).length;
   const blocker = copyAccessBlocker(
     PUBLIC_SOURCE_ACCESS_BLOCKERS[input.jurisdiction],
   );
@@ -692,6 +714,9 @@ function buildReportRow(input: CoverageInput): PublicSourceCoverageReportRow {
     sources: input.seed.sources.length,
     snapshots: input.seed.snapshots.length,
     links: input.seed.links.length,
+    mappingClassificationCounts,
+    automatedCandidateRows,
+    unresolvedMappingRows,
     catalogAccountingRate,
     officialResponseRate,
     publishableRate,

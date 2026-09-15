@@ -9,8 +9,14 @@ describe("Ohio attorney review queue", () => {
       "utf8",
     ));
     const queue = buildOhioAttorneyReviewQueue(manifest);
-    expect(queue.rows).toHaveLength(102);
+    expect(queue.rows).toHaveLength(63);
+    expect(queue.rows.length).toBeLessThan(manifest.catalogRecords.filter(
+      (record: { disposition: string }) => record.disposition === "require_exact_reselection",
+    ).length);
     expect(queue.rows.every((row) => row.currentDisposition === "require_exact_reselection")).toBe(true);
+    expect(queue.rows.every((row) =>
+      ["semantic_conflict", "shared_citation"].includes(row.mappingClassification),
+    )).toBe(true);
     expect(queue.decisionOptions).toContain("other");
   });
 

@@ -372,6 +372,16 @@ describe("Illinois authority manifest", () => {
     const federalRecord = buildIllinoisManifestRecord(federal, [], importedAt);
     expect(federalRecord.disposition).toBe("require_exact_reselection");
     expect(federalRecord.provisions).toEqual([]);
+
+    const compound = criminalCharges.find((candidate) =>
+      candidate.id === "il-attempted-robbery")!;
+    const compoundReferences = parseIllinoisCitation(CHARGE_CITATIONS[compound.id].citation);
+    const partialCompound = buildIllinoisManifestRecord(compound, [
+      document(compoundReferences[1].section, "Robbery"),
+    ], importedAt);
+    expect(partialCompound.mapping?.classification).toBe("incomplete_evidence");
+    expect(partialCompound.mapping?.candidateEvidence[0].sectionIdentity.section)
+      .toBe(compoundReferences[1].section);
   });
 
   it("does not leak a shared section finding between a safe alias and a withheld row", () => {

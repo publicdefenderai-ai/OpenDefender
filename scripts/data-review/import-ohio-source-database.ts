@@ -15,6 +15,7 @@ import {
   type OhioAuthorityManifest,
   type OhioSourceDocument,
 } from "../../server/data/ohio-source-database-seed";
+import { annotateSharedAuthorityMappings } from "../../server/services/authority-offense-evidence";
 
 const RATE_LIMIT_MS = 700;
 const MAX_RETRIES = 3;
@@ -155,7 +156,7 @@ export async function main(): Promise<void> {
     const references = parseOhioCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
     const documents = references.flatMap((reference) => {
       const document = documentCache.get(reference.section);
-      return document ? [document] : [];
+      return document ? [{ ...document, reference }] : [];
     });
     const missing = references.find((reference) => !documentCache.get(reference.section));
     return buildOhioManifestRecord(
@@ -167,6 +168,7 @@ export async function main(): Promise<void> {
         : undefined,
     );
   });
+  annotateSharedAuthorityMappings(catalogRecords);
   const manifest: OhioAuthorityManifest = {
     jurisdiction: "OH",
     generatedAt: importedAt,

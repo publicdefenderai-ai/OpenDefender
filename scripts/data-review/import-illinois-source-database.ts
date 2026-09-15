@@ -22,6 +22,7 @@ import {
   type IllinoisFreshnessOutcome,
 } from "../../server/data/illinois-source-database-seed";
 import { loadIllinoisAuthorityManifest } from "../../server/data/illinois-manifest-loader";
+import { annotateSharedAuthorityMappings } from "../../server/services/authority-offense-evidence";
 
 const RATE_LIMIT_MS = 400;
 const MAX_RETRIES = 3;
@@ -281,6 +282,11 @@ export interface IllinoisManifestRefreshOptions {
   rateLimitMs?: number;
   retryDelayMs?: number;
   checkOnly?: boolean;
+  /**
+   * Persist only hash-stable mapping evidence while leaving the prior
+   * authority manifest intact when a normal refresh is blocked.
+   */
+  evidenceOnly?: boolean;
 }
 
 export interface IllinoisManifestRefreshSummary {
@@ -404,6 +410,27 @@ function hasUnsafeIllinoisRefreshFailure(
       );
     }),
   );
+}
+
+function mergeStableMappingEvidence(
+  previousManifest: PreviousIllinoisManifest,
+  refreshedRecords: IllinoisManifestRecord[],
+): IllinoisManifestRecord[] {
+  const refreshedById = new Map(refreshedRecords.map((record) => [record.chargeId, record]));
+  return previousManifest.catalogRecords.map((previous) => {
+    const refreshed = refreshedById.get(previous.chargeId);
+    const stable = Boolean(
+      refreshed?.sourceAudit.references.length &&
+      refreshed.sourceAudit.references.every((reference) =>
+        reference.freshnessOutcome === "still_current" &&
+        reference.sectionExtractionStatus === "complete" &&
+        Boolean(reference.contentHash),
+      ),
+    );
+    return stable && refreshed?.mapping
+      ? { ...previous, mapping: refreshed.mapping }
+      : previous;
+  });
 }
 
 function buildIllinoisAudit(
@@ -577,7 +604,9 @@ export async function refreshIllinoisManifest(
         contentHash: inspection?.contentHash ?? null,
         findings,
       });
-      if (inspection?.document) documents.push(inspection.document);
+      if (inspection?.document) {
+        documents.push({ ...inspection.document, reference });
+      }
     }
     const sourceAudit: IllinoisSourceAudit = {
       citation,
@@ -593,19 +622,31 @@ export async function refreshIllinoisManifest(
     previousManifest?.catalogRecords ?? [],
   );
   const audit = buildIllinoisAudit(records, importedAt.toISOString());
+  annotateSharedAuthorityMappings(records);
   const hasRefreshFailure = hasUnsafeIllinoisRefreshFailure(
     records,
     previousManifest?.catalogRecords ?? [],
   );
-  const shouldWrite = !options.checkOnly && !hasRefreshFailure;
+  const evidenceOnlyManifestRecords =
+    options.evidenceOnly && previousManifest && hasRefreshFailure
+      ? mergeStableMappingEvidence(previousManifest, records)
+      : null;
+  const shouldWrite = !options.checkOnly && (
+    !hasRefreshFailure ||
+    Boolean(evidenceOnlyManifestRecords)
+  );
   const selectable = records.filter((record) =>
     record.disposition === "retain" || record.disposition === "exact_alias_rename");
   const manifest: IllinoisAuthorityManifest = {
     jurisdiction: "IL",
-    generatedAt: importedAt,
+    generatedAt: evidenceOnlyManifestRecords && previousManifest
+      ? new Date(previousManifest.generatedAt)
+      : importedAt,
     source: "Illinois General Assembly Illinois Compiled Statutes (ilga.gov)",
-    catalogRecords: records,
-    audit,
+    catalogRecords: evidenceOnlyManifestRecords ?? records,
+    audit: evidenceOnlyManifestRecords && previousManifest
+      ? (loadIllinoisAuthorityManifest(outputPath).audit ?? audit)
+      : audit,
   };
   if (shouldWrite) {
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
@@ -638,8 +679,10 @@ export async function refreshIllinoisManifest(
 
 export async function main(): Promise<void> {
   const checkOnly = process.argv.includes("--check");
+  const evidenceOnly = process.argv.includes("--evidence-only");
   const result = await refreshIllinoisManifest({
     checkOnly,
+    evidenceOnly,
   });
   process.exitCode = getIllinoisRefreshExitCode(result, checkOnly);
 }

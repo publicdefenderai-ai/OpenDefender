@@ -8,6 +8,12 @@ import {
   type AuthoritySourceDatabaseSeed,
   type AuthoritySourceSeed,
 } from "../services/authority-source-database";
+import {
+  annotateSharedAuthorityMappings,
+  buildAuthorityEvidence,
+  classifyAuthorityMapping,
+  type AuthorityEvidenceDocument,
+} from "../services/authority-offense-evidence";
 
 export const ILLINOIS_SOURCE_POLICY = "official_illinois_compiled_statutes";
 export const ILLINOIS_SOURCE_PUBLISHER = "Illinois General Assembly";
@@ -41,6 +47,7 @@ export interface IllinoisSourceDocument {
   retrievedAt: Date;
   effectiveDateStart: string | null;
   sourceEvidence: string | null;
+  reference?: IllinoisSourceReference;
 }
 
 export type IllinoisAuditClassification = "mechanical" | "structural" | "success";
@@ -276,6 +283,19 @@ function provisionFromDocument(
   const citation =
     `${reference.chapter} ILCS ${reference.act}/${reference.section}${reference.subdivision ?? ""}`;
   const contentHash = createHash("sha256").update(document.text).digest("hex");
+  const evidence = buildAuthorityEvidence({
+    sourceKey,
+    lawId: `${reference.chapter}-${reference.act}`,
+    section: reference.section,
+    subdivision: reference.subdivision,
+    citation,
+    sourceUrl: document.sourceUrl,
+    officialTitle: document.title,
+    text: document.text,
+    contentHash,
+    effectiveDateStart: document.effectiveDateStart,
+    sourceEvidence: document.sourceEvidence,
+  });
   return {
     sourceKey,
     lawId: `${reference.chapter}-${reference.act}`,
@@ -291,6 +311,7 @@ function provisionFromDocument(
     effectiveDateEnd: null,
     supportRole: index === 0 ? "offense" : "grading",
     subdivision: reference.subdivision,
+    evidence,
     metadata: {
       chargeId: charge.id,
       catalogLabel: charge.name,
@@ -311,6 +332,7 @@ function provisionFromDocument(
         effectiveDateStart: document.effectiveDateStart,
         retrievedAt: document.retrievedAt.toISOString(),
       },
+      evidence,
       attorneyReview: "pending",
       fingerprint: referenceHash({
         sourceKey,
@@ -324,6 +346,56 @@ function provisionFromDocument(
       manifestImportedAt: importedAt.toISOString(),
     },
   };
+}
+
+function referenceForIllinoisDocument(
+  document: IllinoisSourceDocument,
+  references: IllinoisSourceReference[],
+  index: number,
+): IllinoisSourceReference | undefined {
+  return document.reference ?? references.find((reference) =>
+    reference.chapter === document.chapter &&
+    reference.act === document.act &&
+    reference.section === document.section &&
+    (!reference.subdivision || hasSubdivision(document.text, reference.subdivision)),
+  ) ?? references[index];
+}
+
+function buildIllinoisMapping(
+  charge: CriminalCharge,
+  references: IllinoisSourceReference[],
+  documents: IllinoisSourceDocument[],
+): ReturnType<typeof classifyAuthorityMapping> {
+  return classifyAuthorityMapping({
+    catalogLabel: charge.name,
+    catalogCode: charge.code,
+    references,
+    documents: documents.map((document, index): AuthorityEvidenceDocument => {
+      const reference = referenceForIllinoisDocument(document, references, index);
+      const chapter = reference?.chapter ?? document.chapter;
+      const act = reference?.act ?? document.act;
+      const section = reference?.section ?? document.section;
+      const subdivision = reference?.subdivision ?? null;
+      return {
+        sourceKey: buildIllinoisSourceKey(chapter, act, section, subdivision),
+        lawId: `${chapter}-${act}`,
+        section,
+        subdivision,
+        citation: `${chapter} ILCS ${act}/${section}${subdivision ?? ""}`,
+        sourceUrl: document.sourceUrl,
+        officialTitle: document.title,
+        text: document.text,
+        contentHash: createHash("sha256").update(document.text).digest("hex"),
+        effectiveDateStart: document.effectiveDateStart,
+        sourceEvidence: document.sourceEvidence,
+      };
+    }),
+    codeIdentityMatches: codeSupportsReferences(charge, references),
+    approvedAlias: documents.some((document) =>
+      normalizeTitle(document.title) !== normalizeTitle(charge.name) &&
+      titleMatches(charge, document.title),
+    ),
+  });
 }
 
 export function buildIllinoisManifestRecord(
@@ -343,6 +415,7 @@ export function buildIllinoisManifestRecord(
   const audit = cloneSourceAudit(
     sourceAudit ?? buildFallbackIllinoisSourceAudit(charge, documents),
   );
+  const mapping = buildIllinoisMapping(charge, references, documents);
   const auditFindings = [...audit.findings];
   if (references.length === 0) {
     const finding: IllinoisAuditFinding = {
@@ -390,6 +463,7 @@ export function buildIllinoisManifestRecord(
       canonicalTitle: null,
       provisions: [],
       apiStatus: error ? "api_error" : "placeholder",
+      mapping,
       ...(error ? { error } : {}),
     });
   }
@@ -402,6 +476,7 @@ export function buildIllinoisManifestRecord(
       canonicalTitle: null,
       provisions: [],
       apiStatus: "verified",
+      mapping,
     });
   }
   if (documents.length !== references.length) {
@@ -414,6 +489,7 @@ export function buildIllinoisManifestRecord(
       provisions: [],
       apiStatus: "api_error",
       error: error ?? "Missing required Illinois statutory provision",
+      mapping,
     });
   }
   const mismatch = documents.find((document, index) =>
@@ -453,6 +529,7 @@ export function buildIllinoisManifestRecord(
       canonicalTitle: mismatch.title,
       provisions: [],
       apiStatus: "verified",
+      mapping,
     });
   }
   const provisions = documents.map((document, index) =>
@@ -484,6 +561,7 @@ export function buildIllinoisManifestRecord(
     canonicalTitle: documents[0].title,
     provisions,
     apiStatus: "verified",
+    mapping,
   });
 }
 
@@ -650,6 +728,7 @@ export function validateIllinoisManifestRecord(
 export function buildIllinoisSourceDatabaseSeed(
   manifest: IllinoisAuthorityManifest,
 ): AuthoritySourceDatabaseSeed {
+  annotateSharedAuthorityMappings(manifest.catalogRecords);
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
   const links: AuthorityChargeLinkSeed[] = [];

@@ -35,6 +35,7 @@ export interface OhioAttorneyReviewQueueRow {
   officialTitle: string | null;
   currentDisposition: AuthorityCatalogRecord["disposition"];
   currentDispositionReason: string;
+  mappingClassification: string;
   reviewFocus:
     | "shared-citation-cluster"
     | "official-title-mismatch"
@@ -138,7 +139,11 @@ export function buildOhioAttorneyReviewQueue(
   manifest: QueueManifest,
 ): OhioAttorneyReviewQueue {
   const withheld = manifest.catalogRecords.filter((record) =>
-    record.disposition === "require_exact_reselection",
+    record.disposition === "require_exact_reselection" &&
+    (!record.mapping || [
+      "semantic_conflict",
+      "shared_citation",
+    ].includes(record.mapping.classification)),
   );
   const byCitation = new Map<string, string[]>();
   for (const record of manifest.catalogRecords) {
@@ -172,6 +177,7 @@ export function buildOhioAttorneyReviewQueue(
       officialTitle: record.canonicalTitle,
       currentDisposition: record.disposition,
       currentDispositionReason: record.dispositionReason,
+      mappingClassification: record.mapping?.classification ?? "legacy_unclassified",
       reviewFocus: focus,
       relatedChargeIds,
       possibleDuplicate,
@@ -224,6 +230,7 @@ export function writeOhioAttorneyReviewQueue(
     "decision",
     "otherDetails",
     "note",
+    "mappingClassification",
     "currentDispositionReason",
   ];
   const lines = [
@@ -247,6 +254,7 @@ export function writeOhioAttorneyReviewQueue(
       row.decision,
       row.otherDetails,
       row.note,
+      row.mappingClassification,
       row.currentDispositionReason,
     ].map(csvCell).join(",")),
   ];
