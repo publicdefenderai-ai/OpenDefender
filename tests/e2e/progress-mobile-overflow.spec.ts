@@ -141,6 +141,10 @@ test.describe("shared progress indicator on mobile", () => {
       );
       await expect(timelineSection).toBeVisible();
       const progress = timelineSection.getByRole("progressbar");
+      await expect(progress).toHaveAttribute(
+        "aria-valuenow",
+        String(scenario.percent),
+      );
       const indicator = progress.locator(":scope > div");
       const expectedTranslation =
         scenario.percent === 100 ? "0" : `-${100 - scenario.percent}`;
