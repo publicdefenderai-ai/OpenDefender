@@ -2943,6 +2943,8 @@ export default {
       "timedOut": "La solicitud de orientación tardó demasiado en terminar. Sus respuestas siguen aquí, así que puede intentarlo de nuevo sin empezar desde cero.",
       "retryFailedTitle": "No se pudo completar el intento",
       "retryFailed": "No se pudo completar ese intento. Sus respuestas siguen aquí, así que puede intentarlo de nuevo con una verificación nueva.",
+      "offlineRecoveryTitle": "Parece que no tiene conexión a internet",
+      "offlineRecovery": "No pudimos completar la recuperación porque su dispositivo está sin conexión. Conéctese a internet y vuelva a intentarlo. Sus respuestas siguen aquí.",
       "recoveryTitle": "Elija cómo continuar",
       "recoveryDescription": "Puede volver a intentar la orientación personalizada, cambiar a una guía más rápida basada en reglas o revisar primero sus respuestas.",
       "retryAI": "Volver a intentar la orientación con IA",

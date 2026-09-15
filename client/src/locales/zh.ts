@@ -2943,6 +2943,8 @@ export default {
       "timedOut": "案件指导请求完成时间过长。你的回答仍然保留着，因此无需重新开始即可重试。",
       "retryFailedTitle": "重试未能完成",
       "retryFailed": "这次尝试未能完成。你的回答仍然保留着，因此可以通过新的验证再次尝试。",
+      "offlineRecoveryTitle": "您的设备似乎处于离线状态",
+      "offlineRecovery": "由于您的设备没有网络连接，我们无法完成恢复。请重新连接互联网后再试。您的回答仍然保留着。",
       "recoveryTitle": "选择如何继续",
       "recoveryDescription": "你可以重试个性化指导，改用更快的规则路线图，或先查看你的回答。",
       "retryAI": "重试 AI 指导",

@@ -196,9 +196,10 @@ test.describe("case guidance timeout recovery", () => {
       page.evaluate(() => sessionStorage.getItem("open-defender:case-guidance-recovery")),
     ).not.toBeNull();
 
+    await page.context().setOffline(true);
     await page.getByTestId("button-use-rules-guidance").click();
     await page.clock.runFor(600);
-    await expect(page.getByRole("alert")).toContainText("retry could not be completed");
+    await expect(page.getByRole("alert")).toContainText("appear to be offline");
     await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
     await expect.poll(() =>
       page.evaluate(() => {
@@ -208,6 +209,7 @@ test.describe("case guidance timeout recovery", () => {
     ).toMatchObject({
       guidanceTimedOut: true,
       guidanceRecoveryError: true,
+      guidanceRecoveryOffline: true,
       reviewingTimedOutAnswers: false,
       pendingGuidanceData: {
         jurisdiction: "CA",
@@ -216,8 +218,9 @@ test.describe("case guidance timeout recovery", () => {
       },
     });
 
+    await page.context().setOffline(false);
     await page.reload();
-    await expect(page.getByRole("alert")).toContainText("retry could not be completed");
+    await expect(page.getByRole("alert")).toContainText("appear to be offline");
     await expect(page.getByTestId("button-review-guidance-answers")).toBeVisible();
     await page.getByTestId("button-review-guidance-answers").click();
 

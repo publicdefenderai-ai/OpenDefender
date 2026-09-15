@@ -56,6 +56,7 @@ interface StoredGuidanceRecovery {
   pendingGuidanceData: any;
   guidanceTimedOut: boolean;
   guidanceRecoveryError: boolean;
+  guidanceRecoveryOffline: boolean;
   reviewingTimedOutAnswers: boolean;
 }
 
@@ -79,6 +80,7 @@ function readStoredGuidanceRecovery(): StoredGuidanceRecovery | null {
       pendingGuidanceData: parsed.pendingGuidanceData as Record<string, unknown>,
       guidanceTimedOut: parsed.guidanceTimedOut === true,
       guidanceRecoveryError: parsed.guidanceRecoveryError === true,
+      guidanceRecoveryOffline: parsed.guidanceRecoveryOffline === true,
       reviewingTimedOutAnswers: parsed.reviewingTimedOutAnswers === true,
     };
   } catch {
@@ -304,6 +306,9 @@ export default function CaseGuidance() {
   const [guidanceRecoveryError, setGuidanceRecoveryError] = useState(
     () => storedGuidanceRecovery?.guidanceRecoveryError === true,
   );
+  const [guidanceRecoveryOffline, setGuidanceRecoveryOffline] = useState(
+    () => storedGuidanceRecovery?.guidanceRecoveryOffline === true,
+  );
   const [reviewingTimedOutAnswers, setReviewingTimedOutAnswers] = useState(
     () => storedGuidanceRecovery?.reviewingTimedOutAnswers === true,
   );
@@ -338,6 +343,7 @@ export default function CaseGuidance() {
           pendingGuidanceData,
           guidanceTimedOut,
           guidanceRecoveryError,
+          guidanceRecoveryOffline,
           reviewingTimedOutAnswers,
         } satisfies StoredGuidanceRecovery),
       );
@@ -348,6 +354,7 @@ export default function CaseGuidance() {
     pendingGuidanceData,
     guidanceTimedOut,
     guidanceRecoveryError,
+    guidanceRecoveryOffline,
     reviewingTimedOutAnswers,
   ]);
 
@@ -565,6 +572,7 @@ export default function CaseGuidance() {
     setPendingGuidanceData(caseData);
     setGuidanceTimedOut(false);
     setGuidanceRecoveryError(false);
+    setGuidanceRecoveryOffline(false);
     setReviewingTimedOutAnswers(false);
     setRetryCaptchaToken(null);
     setGuidanceMode(mode);
@@ -653,6 +661,7 @@ export default function CaseGuidance() {
         console.error("API returned unsuccessful result:", result);
         setGuidanceTimedOut(true);
         setGuidanceRecoveryError(true);
+        setGuidanceRecoveryOffline(typeof navigator !== 'undefined' && !navigator.onLine);
         setRetryCaptchaToken(null);
         setRetryCaptchaAttempt((attempt) => attempt + 1);
         toast({
@@ -670,6 +679,7 @@ export default function CaseGuidance() {
         console.error("Failed to generate guidance:", error);
         setGuidanceTimedOut(true);
         setGuidanceRecoveryError(true);
+        setGuidanceRecoveryOffline(typeof navigator !== 'undefined' && !navigator.onLine);
         setRetryCaptchaToken(null);
         setRetryCaptchaAttempt((attempt) => attempt + 1);
         toast({
@@ -701,6 +711,7 @@ export default function CaseGuidance() {
   const handleReviewTimedOutAnswers = () => {
     setGuidanceTimedOut(false);
     setGuidanceRecoveryError(false);
+    setGuidanceRecoveryOffline(false);
     setReviewingTimedOutAnswers(true);
     setShowQAFlow(true);
   };
@@ -719,6 +730,7 @@ export default function CaseGuidance() {
       setPendingGuidanceData(null);
       setGuidanceTimedOut(false);
       setGuidanceRecoveryError(false);
+      setGuidanceRecoveryOffline(false);
       setRetryCaptchaToken(null);
       clearStoredGuidanceRecovery();
     }
@@ -737,6 +749,7 @@ export default function CaseGuidance() {
       setPendingGuidanceData(null);
       setGuidanceTimedOut(false);
       setGuidanceRecoveryError(false);
+      setGuidanceRecoveryOffline(false);
       setReviewingTimedOutAnswers(false);
       setRetryCaptchaToken(null);
       setRetryCaptchaAttempt((attempt) => attempt + 1);
@@ -756,6 +769,8 @@ export default function CaseGuidance() {
   const handleStartQA = () => {
     setPendingGuidanceData(null);
     setGuidanceTimedOut(false);
+    setGuidanceRecoveryError(false);
+    setGuidanceRecoveryOffline(false);
     setReviewingTimedOutAnswers(false);
       setRetryCaptchaToken(null);
     setShowQAFlow(true);
@@ -779,6 +794,7 @@ export default function CaseGuidance() {
       setPendingGuidanceData(null);
       setGuidanceTimedOut(false);
       setGuidanceRecoveryError(false);
+      setGuidanceRecoveryOffline(false);
       setReviewingTimedOutAnswers(false);
       setShowQAFlow(false);
       setHasExported(false);
@@ -922,12 +938,16 @@ export default function CaseGuidance() {
                 >
                   <Clock className="h-5 w-5" />
                   <AlertTitle>
-                    {guidanceRecoveryError
+                    {guidanceRecoveryOffline
+                      ? t('case.loading.offlineRecoveryTitle', 'You appear to be offline')
+                      : guidanceRecoveryError
                       ? t('case.loading.retryFailedTitle', 'That retry could not be completed')
                       : t('case.loading.timedOutTitle', 'Taking longer than usual')}
                   </AlertTitle>
                   <AlertDescription className="mt-2 text-amber-900 dark:text-amber-100">
-                    {guidanceRecoveryError
+                    {guidanceRecoveryOffline
+                      ? t('case.loading.offlineRecovery', "We couldn't complete that recovery because your device is offline. Reconnect to the internet, then try again. Your answers are still here.")
+                      : guidanceRecoveryError
                       ? t('case.loading.retryFailed', 'That attempt could not be completed. Your answers are still here, so you can try again with a new verification.')
                       : t('case.loading.timedOut', 'The guidance request took too long to finish. Your answers are still here, so you can try again without starting over.')}
                   </AlertDescription>

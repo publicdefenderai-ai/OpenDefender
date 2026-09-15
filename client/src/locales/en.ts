@@ -2941,6 +2941,8 @@ export default {
       "timedOut": "The guidance request took too long to finish. Your answers are still here, so you can try again without starting over.",
       "retryFailedTitle": "That retry could not be completed",
       "retryFailed": "That attempt could not be completed. Your answers are still here, so you can try again with a new verification.",
+      "offlineRecoveryTitle": "You appear to be offline",
+      "offlineRecovery": "We couldn't complete that recovery because your device is offline. Reconnect to the internet, then try again. Your answers are still here.",
       "recoveryTitle": "Choose how to continue",
       "recoveryDescription": "You can retry the personalized guidance, switch to a faster rules-based roadmap, or review your answers first.",
       "retryAI": "Retry AI guidance",
