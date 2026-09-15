@@ -3,6 +3,16 @@ import {
   parseFloridaCommissionTable,
   type CommissionEntry,
 } from "../scripts/data-review/import-commission-citations";
+import {
+  buildOfficialComparisonReport,
+  fetchOfficialDocuments,
+  isOfficialPromotionEligible,
+  loadOfficialFixture,
+  parseCitationSections,
+  parseMichiganOfficialDocument,
+  parseMinnesotaOfficialDocument,
+  parseVirginiaOfficialDocument,
+} from "../scripts/data-review/official-code-verifier";
 import { extractFloridaDocument, extractLatestFloridaEffectiveDate } from "../scripts/data-review/import-florida-source-database";
 import {
   parseVerificationReport,
@@ -12,6 +22,94 @@ import {
 const IMPORTED_AT = new Date("2026-08-30T00:00:00.000Z");
 
 describe("source importer parser fixtures", () => {
+  it("replays official MN, VA, and MI fixtures with source hashes and currentness evidence", () => {
+    const fixtureDir = "tests/fixtures/official-code";
+    for (const state of ["MN", "VA", "MI"] as const) {
+      const documents = loadOfficialFixture(state, fixtureDir);
+      expect(documents.size).toBeGreaterThan(0);
+      for (const document of documents.values()) {
+        expect(document.sourceHash).toMatch(/^[a-f0-9]{64}$/);
+        expect(document.currentness.status).toBe(state === "MN" ? "stale" : "verified");
+        expect(document.text.length).toBeGreaterThan(20);
+        expect(document.sourceTransport).toBe("fixture");
+      }
+    }
+  });
+
+  it("does not turn subsection qualifiers into fake statute sections", () => {
+    expect(parseCitationSections("Minn. Stat. §§ 609.17, subd. 4, 609.24")).toEqual([
+      "609.17",
+      "609.24",
+    ]);
+  });
+
+  it("surfaces Michigan TLS failures without weakening certificate verification", async () => {
+    const result = await fetchOfficialDocuments("MI", ["750.321"], {
+      fetchImpl: async () => {
+        throw new Error("fetch failed: UNABLE_TO_VERIFY_LEAF_SIGNATURE");
+      },
+    });
+    expect(result.documents.size).toBe(0);
+    expect(result.errors["750.321"]).toContain("UNABLE_TO_VERIFY_LEAF_SIGNATURE");
+  });
+
+  it("extracts official titles from each state adapter and preserves Michigan's independent instruction source", () => {
+    expect(parseMinnesotaOfficialDocument(
+      "<p>2024 Minnesota Statutes</p><h1>609.185 MURDER IN THE FIRST DEGREE.</h1><p>Elements.</p>",
+      "609.185",
+    ).title).toBe("MURDER IN THE FIRST DEGREE");
+    expect(parseVirginiaOfficialDocument(
+      "<div id=\"printStuff\"><div id=\"printHeader\">Code of Virginia</div><div id=\"printDate\">9/15/2026</div></div><article id=\"vacode\"><h2><span>§ 18.2-32</span>. First and second degree murder defined; punishment.</h2><section class=\"body editable\"><p>Elements.</p></section></article>",
+      "18.2-32",
+    )).toMatchObject({
+      title: "First and second degree murder defined; punishment",
+      currentness: {
+        status: "verified",
+        editionYear: 2026,
+        evidence: "printDate 9/15/2026",
+      },
+    });
+    expect(parseMichiganOfficialDocument(
+      "<p>Michigan Compiled Laws, current through 2026 Michigan Public Acts</p><h1>750.316 Murder.</h1><p>Elements.</p>",
+      "750.316",
+      undefined,
+      undefined,
+      { reference: "CJI2d 16.1", sourceUrl: "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/" },
+    ).instructionEvidence).toMatchObject({
+      reference: "CJI2d 16.1",
+      independentSource: true,
+    });
+  });
+
+  it("ranks exact mappings, likely aliases, shared citations, and unresolved results with reason codes", () => {
+    const documents = loadOfficialFixture("VA", "tests/fixtures/official-code");
+    const report = buildOfficialComparisonReport("VA", [
+      { id: "va-murder-in-the-first-degree", name: "Murder in the first degree", citation: "Va. Code Ann. § 18.2-32" },
+      { id: "va-murder-in-the-second-degree", name: "Murder in the second degree", citation: "Va. Code Ann. § 18.2-32" },
+      { id: "va-trespassing", name: "Trespassing", citation: "Va. Code Ann. § 18.2-119" },
+      { id: "va-land-entry", name: "Land entry", citation: "Va. Code Ann. § 18.2-119" },
+      { id: "va-missing", name: "Missing section", citation: "Va. Code Ann. § 18.2-999" },
+    ], documents);
+
+    expect(report.summary.compoundOrSharedCitations).toBe(1);
+    expect(report.mappings.find((mapping) => mapping.chargeId === "va-trespassing")).toMatchObject({
+      mappingClass: "exact",
+      reasonCode: "official_section_and_title_match",
+      sourceHash: expect.stringMatching(/^[a-f0-9]{64}$/),
+    });
+    expect(report.mappings.find((mapping) => mapping.chargeId === "va-missing")).toMatchObject({
+      mappingClass: "unresolved",
+      reasonCode: "official_section_not_found",
+    });
+    expect(report.unresolved).toEqual([
+      expect.objectContaining({ chargeId: "va-missing", reasonCode: "official_section_not_found" }),
+    ]);
+    expect(isOfficialPromotionEligible(report.mappings.find((mapping) =>
+      mapping.chargeId === "va-trespassing"))).toBe(true);
+    expect(isOfficialPromotionEligible(report.mappings.find((mapping) =>
+      mapping.chargeId === "va-land-entry"))).toBe(false);
+  });
+
   it("parses Florida commission rows and tolerates missing optional descriptions", () => {
     const html = `
       <table>

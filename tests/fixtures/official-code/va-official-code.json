@@ -1,0 +1,17 @@
+{
+  "state": "VA",
+  "sources": [
+    {
+      "section": "18.2-32",
+      "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-32/",
+      "html": "<html><head><title>§ 18.2-32. First and second degree murder defined; punishment</title></head><body><div id=\"printStuff\"><div id=\"printHeader\">Code of Virginia<br/>Title 18.2. Crimes and Offenses Generally</div><div id=\"printDate\">9/15/2026</div></div><article id=\"vacode\"><h2><span id=\"v0\">§ 18.2-32</span>. First and second degree murder defined; punishment.</h2><section class=\"body editable\"><p>Murder by poison, lying in wait, imprisonment, starving, or by any willful, deliberate, and premeditated killing is murder of the first degree.</p></section></article></body></html>",
+      "sourceHash": "038715c13675acc9bbd40b8e0737018429101de418adc93a2ccb80ba05fe2519"
+    },
+    {
+      "section": "18.2-119",
+      "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-119/",
+      "html": "<html><head><title>§ 18.2-119. Trespass after having been forbidden to do so.</title></head><body><div id=\"printStuff\"><div id=\"printHeader\">Code of Virginia<br/>Title 18.2. Crimes and Offenses Generally</div><div id=\"printDate\">9/15/2026</div></div><article id=\"vacode\"><h2><span id=\"v0\">§ 18.2-119</span>. Trespass after having been forbidden to do so.</h2><section class=\"body editable\"><p>If any person without authority goes upon or remains upon the lands, buildings, or premises of another after having been forbidden to do so, he is guilty of a trespass.</p></section></article></body></html>",
+      "sourceHash": "7c74ad2c71a1bc020d2ac0e1da2852ea3e842c9f1a453c9e855a4c8be53d3c23"
+    }
+  ]
+}

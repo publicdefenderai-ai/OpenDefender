@@ -1,12 +1,9 @@
 {
   "state": "VA",
-  "runAt": "2026-09-15T05:19:09.323Z",
-  "commissionSource": "Virginia Code Annotated — law.lis.virginia.gov",
+  "runAt": "2026-09-15T15:36:35.610Z",
+  "commissionSource": "Virginia Legislative Information System",
   "commissionTableUrl": "https://law.lis.virginia.gov/vacode/title18.2/",
-  "promoted": [
-    "va-attempted-robbery",
-    "va-attempted-sexual-assault"
-  ],
+  "promoted": [],
   "urlAdded": [],
   "notInCommissionTable": [],
   "alreadyHigh": [
@@ -115,6 +112,8 @@
     "va-illegal-fireworks",
     "va-alcohol-in-park",
     "va-hunting-fishing-no-license",
+    "va-attempted-robbery",
+    "va-attempted-sexual-assault",
     "va-solicitation",
     "va-rico-organized-crime",
     "va-juvenile-delinquency-felony",
@@ -138,5 +137,3039 @@
     "va-domestic-assault-battery",
     "va-destruction-of-property",
     "va-obstruction-of-justice"
-  ]
+  ],
+  "officialComparison": {
+    "schemaVersion": 1,
+    "state": "VA",
+    "generatedAt": "2026-09-15T15:36:35.600Z",
+    "officialSource": {
+      "publisher": "Virginia Legislative Information System",
+      "adapter": "Virginia Code per-section adapter",
+      "transportPolicy": "Official law.lis.virginia.gov source over default verified HTTPS"
+    },
+    "sourceDocuments": [
+      {
+        "section": "18.2-119",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-119/",
+        "sourceHash": "7c74ad2c71a1bc020d2ac0e1da2852ea3e842c9f1a453c9e855a4c8be53d3c23",
+        "retrievedAt": "2026-09-15T00:00:00.000Z",
+        "sourceTransport": "fixture",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        }
+      },
+      {
+        "section": "18.2-32",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-32/",
+        "sourceHash": "038715c13675acc9bbd40b8e0737018429101de418adc93a2ccb80ba05fe2519",
+        "retrievedAt": "2026-09-15T00:00:00.000Z",
+        "sourceTransport": "fixture",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        }
+      }
+    ],
+    "mappings": [
+      {
+        "chargeId": "va-murder-in-the-first-degree",
+        "citation": "Va. Code Ann. § 18.2-32",
+        "section": "18.2-32",
+        "sections": [
+          "18.2-32"
+        ],
+        "catalogTitle": "murder in the first degree",
+        "mappingClass": "exact",
+        "score": 100,
+        "reasonCode": "official_section_and_title_match",
+        "reason": "Section 18.2-32 and its official title support the catalog mapping.",
+        "sourceHash": "038715c13675acc9bbd40b8e0737018429101de418adc93a2ccb80ba05fe2519",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-32/",
+        "officialTitle": "First and second degree murder defined; punishment",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-murder-in-the-second-degree",
+        "citation": "Va. Code Ann. § 18.2-32",
+        "section": "18.2-32",
+        "sections": [
+          "18.2-32"
+        ],
+        "catalogTitle": "murder in the second degree",
+        "mappingClass": "exact",
+        "score": 100,
+        "reasonCode": "official_section_and_title_match",
+        "reason": "Section 18.2-32 and its official title support the catalog mapping.",
+        "sourceHash": "038715c13675acc9bbd40b8e0737018429101de418adc93a2ccb80ba05fe2519",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-32/",
+        "officialTitle": "First and second degree murder defined; punishment",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-felony-murder",
+        "citation": "Va. Code Ann. § 18.2-33",
+        "section": "18.2-33",
+        "catalogTitle": "felony murder",
+        "sections": [
+          "18.2-33"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-33.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-33/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-voluntary-manslaughter",
+        "citation": "Va. Code Ann. § 18.2-35",
+        "section": "18.2-35",
+        "catalogTitle": "voluntary manslaughter",
+        "sections": [
+          "18.2-35"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-35.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-35/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-involuntary-manslaughter",
+        "citation": "Va. Code Ann. § 18.2-36",
+        "section": "18.2-36",
+        "catalogTitle": "involuntary manslaughter",
+        "sections": [
+          "18.2-36"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-36.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-36/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-vehicular-homicide",
+        "citation": "Va. Code Ann. § 18.2-36.1",
+        "section": "18.2-36.1",
+        "catalogTitle": "vehicular homicide",
+        "sections": [
+          "18.2-36.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-36.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-36.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-attempted-murder",
+        "citation": "Va. Code Ann. § 18.2-25",
+        "section": "18.2-25",
+        "catalogTitle": "attempted murder",
+        "sections": [
+          "18.2-25"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-25.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-25/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-trespassing",
+        "citation": "Va. Code Ann. § 18.2-119",
+        "section": "18.2-119",
+        "sections": [
+          "18.2-119"
+        ],
+        "catalogTitle": "trespassing",
+        "mappingClass": "exact",
+        "score": 100,
+        "reasonCode": "official_section_and_title_match",
+        "reason": "Section 18.2-119 and its official title support the catalog mapping.",
+        "sourceHash": "7c74ad2c71a1bc020d2ac0e1da2852ea3e842c9f1a453c9e855a4c8be53d3c23",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-119/",
+        "officialTitle": "Trespass after having been forbidden to do so",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-disorderly-conduct",
+        "citation": "Va. Code Ann. § 18.2-415",
+        "section": "18.2-415",
+        "catalogTitle": "disorderly conduct",
+        "sections": [
+          "18.2-415"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-415/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-public-intoxication",
+        "citation": "Va. Code Ann. § 18.2-388",
+        "section": "18.2-388",
+        "catalogTitle": "public intoxication",
+        "sections": [
+          "18.2-388"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-388.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-388/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-resisting-arrest",
+        "citation": "Va. Code Ann. § 18.2-460",
+        "section": "18.2-460",
+        "catalogTitle": "resisting arrest",
+        "sections": [
+          "18.2-460"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-460.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-460/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-failure-to-appear",
+        "citation": "Va. Code Ann. § 19.2-128",
+        "section": "19.2-128",
+        "catalogTitle": "failure to appear",
+        "sections": [
+          "19.2-128"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 19.2-128.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/19.2-128/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-petty-theft",
+        "citation": "Va. Code Ann. § 18.2-96",
+        "section": "18.2-96",
+        "catalogTitle": "petty theft",
+        "sections": [
+          "18.2-96"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-96.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-96/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-dui-first-offense",
+        "citation": "Va. Code Ann. § 18.2-266",
+        "section": "18.2-266",
+        "catalogTitle": "dui first offense",
+        "sections": [
+          "18.2-266"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-266.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-266/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-aggravated-assault",
+        "citation": "Va. Code Ann. § 18.2-51",
+        "section": "18.2-51",
+        "catalogTitle": "aggravated assault",
+        "sections": [
+          "18.2-51"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-51.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-51/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-domestic-violence-assault",
+        "citation": "Va. Code Ann. § 18.2-57.2",
+        "section": "18.2-57.2",
+        "catalogTitle": "domestic violence assault",
+        "sections": [
+          "18.2-57.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-57.2/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-robbery-in-the-first-degree",
+        "citation": "Va. Code Ann. § 18.2-58",
+        "section": "18.2-58",
+        "catalogTitle": "robbery in the first degree",
+        "sections": [
+          "18.2-58"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-58/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-robbery-in-the-second-degree",
+        "citation": "Va. Code Ann. § 18.2-58.1",
+        "section": "18.2-58.1",
+        "catalogTitle": "robbery in the second degree",
+        "sections": [
+          "18.2-58.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-58.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-burglary-in-the-first-degree",
+        "citation": "Va. Code Ann. § 18.2-89",
+        "section": "18.2-89",
+        "catalogTitle": "burglary in the first degree",
+        "sections": [
+          "18.2-89"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-89.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-89/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-burglary-in-the-second-degree",
+        "citation": "Va. Code Ann. § 18.2-91",
+        "section": "18.2-91",
+        "catalogTitle": "burglary in the second degree",
+        "sections": [
+          "18.2-91"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-91.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-91/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-possession-of-controlled-substance",
+        "citation": "Va. Code Ann. § 18.2-250",
+        "section": "18.2-250",
+        "catalogTitle": "possession of controlled substance",
+        "sections": [
+          "18.2-250"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-250.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-250/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-shoplifting",
+        "citation": "Va. Code Ann. § 18.2-103",
+        "section": "18.2-103",
+        "catalogTitle": "shoplifting",
+        "sections": [
+          "18.2-103"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-103.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-103/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-grand-theft-in-the-first-degree",
+        "citation": "Va. Code Ann. § 18.2-95",
+        "section": "18.2-95",
+        "catalogTitle": "grand theft in the first degree",
+        "sections": [
+          "18.2-95"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-95.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-95/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-grand-theft-in-the-second-degree",
+        "citation": "Va. Code Ann. § 18.2-95",
+        "section": "18.2-95",
+        "catalogTitle": "grand theft in the second degree",
+        "sections": [
+          "18.2-95"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-95.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-95/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-sexual-assault-in-the-first-degree",
+        "citation": "Va. Code Ann. § 18.2-61",
+        "section": "18.2-61",
+        "catalogTitle": "sexual assault in the first degree",
+        "sections": [
+          "18.2-61"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-61.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-61/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-rape-in-the-first-degree",
+        "citation": "Va. Code Ann. § 18.2-61",
+        "section": "18.2-61",
+        "catalogTitle": "rape in the first degree",
+        "sections": [
+          "18.2-61"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-61.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-61/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-vandalism",
+        "citation": "Va. Code Ann. § 18.2-137",
+        "section": "18.2-137",
+        "catalogTitle": "vandalism",
+        "sections": [
+          "18.2-137"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-137.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-137/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-harassment",
+        "citation": "Va. Code Ann. § 18.2-186.3",
+        "section": "18.2-186.3",
+        "catalogTitle": "harassment",
+        "sections": [
+          "18.2-186.3"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-186.3.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-186.3/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-drug-trafficking",
+        "citation": "Va. Code Ann. § 18.2-248",
+        "section": "18.2-248",
+        "catalogTitle": "drug trafficking",
+        "sections": [
+          "18.2-248"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-248/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-possession-with-intent-to-distribute",
+        "citation": "Va. Code Ann. § 18.2-248",
+        "section": "18.2-248",
+        "catalogTitle": "possession with intent to distribute",
+        "sections": [
+          "18.2-248"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-248/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-loitering",
+        "citation": "Va. Code Ann. § 18.2-176",
+        "section": "18.2-176",
+        "catalogTitle": "loitering",
+        "sections": [
+          "18.2-176"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-176.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-176/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-petit-larceny",
+        "citation": "Va. Code Ann. § 18.2-96",
+        "section": "18.2-96",
+        "catalogTitle": "petit larceny",
+        "sections": [
+          "18.2-96"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-96.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-96/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-possession-marijuana",
+        "citation": "Va. Code Ann. § 4.1-1100",
+        "section": "4.1-1100",
+        "catalogTitle": "possession marijuana",
+        "sections": [
+          "4.1-1100"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-1100.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/4.1-1100/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-distribution-of-controlled-substance",
+        "citation": "Va. Code Ann. § 18.2-248",
+        "section": "18.2-248",
+        "catalogTitle": "distribution of controlled substance",
+        "sections": [
+          "18.2-248"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-248/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-manufacturing-controlled-substance",
+        "citation": "Va. Code Ann. § 18.2-248(A)",
+        "section": "18.2-248",
+        "catalogTitle": "manufacturing controlled substance",
+        "sections": [
+          "18.2-248"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-248/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-possession-of-drug-paraphernalia",
+        "citation": "Va. Code Ann. § 54.1-3466",
+        "section": "54.1-3466",
+        "catalogTitle": "possession of drug paraphernalia",
+        "sections": [
+          "54.1-3466"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 54.1-3466.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/54.1-3466/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-maintaining-drug-house",
+        "citation": "Va. Code Ann. § 18.2-258",
+        "section": "18.2-258",
+        "catalogTitle": "maintaining drug house",
+        "sections": [
+          "18.2-258"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-258.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-258/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-dui-second-offense",
+        "citation": "Va. Code Ann. § 18.2-270(B)",
+        "section": "18.2-270",
+        "catalogTitle": "dui second offense",
+        "sections": [
+          "18.2-270"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-270.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-270/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-dui-third-offense",
+        "citation": "Va. Code Ann. § 18.2-270(C)",
+        "section": "18.2-270",
+        "catalogTitle": "dui third offense",
+        "sections": [
+          "18.2-270"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-270.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-270/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-unlawful-carrying-of-weapon",
+        "citation": "Va. Code Ann. § 18.2-308",
+        "section": "18.2-308",
+        "catalogTitle": "unlawful carrying of weapon",
+        "sections": [
+          "18.2-308"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-308.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-308/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-felon-in-possession-of-firearm",
+        "citation": "Va. Code Ann. § 18.2-308.2",
+        "section": "18.2-308.2",
+        "catalogTitle": "felon in possession of firearm",
+        "sections": [
+          "18.2-308.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-308.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-308.2/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-discharge-of-firearm-in-city",
+        "citation": "Va. Code Ann. § 18.2-280",
+        "section": "18.2-280",
+        "catalogTitle": "discharge of firearm in city",
+        "sections": [
+          "18.2-280"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-280.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-280/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-possession-of-prohibited-weapon",
+        "citation": "Va. Code Ann. § 18.2-288",
+        "section": "18.2-288",
+        "catalogTitle": "possession of prohibited weapon",
+        "sections": [
+          "18.2-288"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-288.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-288/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-assault-on-peace-officer",
+        "citation": "Va. Code Ann. § 18.2-57(C)",
+        "section": "18.2-57",
+        "catalogTitle": "assault on peace officer",
+        "sections": [
+          "18.2-57"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-57/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-criminal-attempt",
+        "citation": "Va. Code Ann. § 18.2-25",
+        "section": "18.2-25",
+        "catalogTitle": "criminal attempt",
+        "sections": [
+          "18.2-25"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-25.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-25/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-conspiracy",
+        "citation": "Va. Code Ann. § 18.2-22",
+        "section": "18.2-22",
+        "catalogTitle": "conspiracy",
+        "sections": [
+          "18.2-22"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-22.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-22/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-aiding-and-abetting",
+        "citation": "Va. Code Ann. § 18.2-18",
+        "section": "18.2-18",
+        "catalogTitle": "aiding and abetting",
+        "sections": [
+          "18.2-18"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-18.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-18/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-accessory-after-the-fact",
+        "citation": "Va. Code Ann. § 18.2-19",
+        "section": "18.2-19",
+        "catalogTitle": "accessory after the fact",
+        "sections": [
+          "18.2-19"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-19.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-19/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-criminal-solicitation",
+        "citation": "Va. Code Ann. § 18.2-29",
+        "section": "18.2-29",
+        "catalogTitle": "criminal solicitation",
+        "sections": [
+          "18.2-29"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-29.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-29/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-gang-enhancement",
+        "citation": "Va. Code Ann. § 18.2-46.3",
+        "section": "18.2-46.3",
+        "catalogTitle": "gang enhancement",
+        "sections": [
+          "18.2-46.3"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-46.3.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-46.3/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-hate-crime-enhancement",
+        "citation": "Va. Code Ann. § 18.2-57(B)",
+        "section": "18.2-57",
+        "catalogTitle": "hate crime enhancement",
+        "sections": [
+          "18.2-57"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-57/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-recidivist-enhancement",
+        "citation": "Va. Code Ann. § 19.2-297.1",
+        "section": "19.2-297.1",
+        "catalogTitle": "recidivist enhancement",
+        "sections": [
+          "19.2-297.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 19.2-297.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/19.2-297.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-firearm-in-felony-enhancement",
+        "citation": "Va. Code Ann. § 18.2-53.1",
+        "section": "18.2-53.1",
+        "catalogTitle": "firearm in felony enhancement",
+        "sections": [
+          "18.2-53.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-53.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-53.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-drug-school-zone-enhancement",
+        "citation": "Va. Code Ann. § 18.2-255.2",
+        "section": "18.2-255.2",
+        "catalogTitle": "drug school zone enhancement",
+        "sections": [
+          "18.2-255.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-255.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-255.2/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-money-laundering",
+        "citation": "Va. Code Ann. § 18.2-246.2",
+        "section": "18.2-246.2",
+        "catalogTitle": "money laundering",
+        "sections": [
+          "18.2-246.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-246.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-246.2/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-wire-fraud",
+        "citation": "Va. Code Ann. § 18.2-178",
+        "section": "18.2-178",
+        "catalogTitle": "wire fraud",
+        "sections": [
+          "18.2-178"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-178.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-178/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-mail-fraud",
+        "citation": "Va. Code Ann. § 18.2-178.1",
+        "section": "18.2-178.1",
+        "catalogTitle": "mail fraud",
+        "sections": [
+          "18.2-178.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-178.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-178.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-check-fraud",
+        "citation": "Va. Code Ann. § 18.2-181",
+        "section": "18.2-181",
+        "catalogTitle": "check fraud",
+        "sections": [
+          "18.2-181"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-181.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-181/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-insurance-fraud",
+        "citation": "Va. Code Ann. § 38.2-512",
+        "section": "38.2-512",
+        "catalogTitle": "insurance fraud",
+        "sections": [
+          "38.2-512"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 38.2-512.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/38.2-512/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-tax-fraud",
+        "citation": "Va. Code Ann. § 58.1-1817",
+        "section": "58.1-1817",
+        "catalogTitle": "tax fraud",
+        "sections": [
+          "58.1-1817"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 58.1-1817.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/58.1-1817/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-identity-theft",
+        "citation": "Va. Code Ann. § 18.2-186.3",
+        "section": "18.2-186.3",
+        "catalogTitle": "identity theft",
+        "sections": [
+          "18.2-186.3"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-186.3.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-186.3/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-computer-fraud",
+        "citation": "Va. Code Ann. § 18.2-152.3",
+        "section": "18.2-152.3",
+        "catalogTitle": "computer fraud",
+        "sections": [
+          "18.2-152.3"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-152.3.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-152.3/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-credit-card-fraud",
+        "citation": "Va. Code Ann. § 18.2-195",
+        "section": "18.2-195",
+        "catalogTitle": "credit card fraud",
+        "sections": [
+          "18.2-195"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-195.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-195/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-embezzlement",
+        "citation": "Va. Code Ann. § 18.2-111",
+        "section": "18.2-111",
+        "catalogTitle": "embezzlement",
+        "sections": [
+          "18.2-111"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-111.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-111/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-assault-in-the-first-degree",
+        "citation": "Va. Code Ann. § 18.2-51",
+        "section": "18.2-51",
+        "catalogTitle": "assault in the first degree",
+        "sections": [
+          "18.2-51"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-51.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-51/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-assault-with-deadly-weapon",
+        "citation": "Va. Code Ann. § 18.2-51",
+        "section": "18.2-51",
+        "catalogTitle": "assault with deadly weapon",
+        "sections": [
+          "18.2-51"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-51.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-51/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-assault-in-the-second-degree",
+        "citation": "Va. Code Ann. § 18.2-57",
+        "section": "18.2-57",
+        "catalogTitle": "assault in the second degree",
+        "sections": [
+          "18.2-57"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-57/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-assault-in-the-third-degree",
+        "citation": "Va. Code Ann. § 18.2-57(A)",
+        "section": "18.2-57",
+        "catalogTitle": "assault in the third degree",
+        "sections": [
+          "18.2-57"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-57/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-menacing",
+        "citation": "Va. Code Ann. § 18.2-60",
+        "section": "18.2-60",
+        "catalogTitle": "menacing",
+        "sections": [
+          "18.2-60"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-60.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-60/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-carjacking",
+        "citation": "Va. Code Ann. § 18.2-58.1",
+        "section": "18.2-58.1",
+        "catalogTitle": "carjacking",
+        "sections": [
+          "18.2-58.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-58.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-bank-robbery",
+        "citation": "Va. Code Ann. § 18.2-58",
+        "section": "18.2-58",
+        "catalogTitle": "bank robbery",
+        "sections": [
+          "18.2-58"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-58/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-reckless-driving",
+        "citation": "Va. Code Ann. § 46.2-852",
+        "section": "46.2-852",
+        "catalogTitle": "reckless driving",
+        "sections": [
+          "46.2-852"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-852.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-852/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-hit-and-run",
+        "citation": "Va. Code Ann. § 46.2-894",
+        "section": "46.2-894",
+        "catalogTitle": "hit and run",
+        "sections": [
+          "46.2-894"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-894.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-894/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-forgery",
+        "citation": "Va. Code Ann. § 18.2-172",
+        "section": "18.2-172",
+        "catalogTitle": "forgery",
+        "sections": [
+          "18.2-172"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-172.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-172/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-residential-burglary",
+        "citation": "Va. Code Ann. § 18.2-89",
+        "section": "18.2-89",
+        "catalogTitle": "residential burglary",
+        "sections": [
+          "18.2-89"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-89.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-89/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-commercial-burglary",
+        "citation": "Va. Code Ann. § 18.2-91",
+        "section": "18.2-91",
+        "catalogTitle": "commercial burglary",
+        "sections": [
+          "18.2-91"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-91.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-91/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-auto-burglary",
+        "citation": "Va. Code Ann. § 18.2-92",
+        "section": "18.2-92",
+        "catalogTitle": "auto burglary",
+        "sections": [
+          "18.2-92"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-92.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-92/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-contempt-of-court",
+        "citation": "Va. Code Ann. § 18.2-456",
+        "section": "18.2-456",
+        "catalogTitle": "contempt of court",
+        "sections": [
+          "18.2-456"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-456.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-456/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-protective-order-violation",
+        "citation": "Va. Code Ann. § 16.1-253.2",
+        "section": "16.1-253.2",
+        "catalogTitle": "protective order violation",
+        "sections": [
+          "16.1-253.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-253.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/16.1-253.2/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-probation-violation",
+        "citation": "Va. Code Ann. § 19.2-306",
+        "section": "19.2-306",
+        "catalogTitle": "probation violation",
+        "sections": [
+          "19.2-306"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 19.2-306.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/19.2-306/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-child-sexual-abuse",
+        "citation": "Va. Code Ann. § 18.2-67.3",
+        "section": "18.2-67.3",
+        "catalogTitle": "child sexual abuse",
+        "sections": [
+          "18.2-67.3"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-67.3.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-67.3/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-sexual-exploitation-of-minor",
+        "citation": "Va. Code Ann. § 18.2-374.1",
+        "section": "18.2-374.1",
+        "catalogTitle": "sexual exploitation of minor",
+        "sections": [
+          "18.2-374.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-374.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-374.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-theft-by-receiving",
+        "citation": "Va. Code Ann. § 18.2-108",
+        "section": "18.2-108",
+        "catalogTitle": "theft by receiving",
+        "sections": [
+          "18.2-108"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-108.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-108/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-statutory-rape",
+        "citation": "Va. Code Ann. § 18.2-63",
+        "section": "18.2-63",
+        "catalogTitle": "statutory rape",
+        "sections": [
+          "18.2-63"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-63.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-63/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-open-container",
+        "citation": "Va. Code Ann. § 18.2-323.1",
+        "section": "18.2-323.1",
+        "catalogTitle": "open container",
+        "sections": [
+          "18.2-323.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-323.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-323.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-minor-in-possession",
+        "citation": "Va. Code Ann. § 4.1-305",
+        "section": "4.1-305",
+        "catalogTitle": "minor in possession",
+        "sections": [
+          "4.1-305"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-305.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/4.1-305/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-false-info-to-police",
+        "citation": "Va. Code Ann. § 18.2-461",
+        "section": "18.2-461",
+        "catalogTitle": "false info to police",
+        "sections": [
+          "18.2-461"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-461.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-461/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-driving-without-insurance",
+        "citation": "Va. Code Ann. § 46.2-706",
+        "section": "46.2-706",
+        "catalogTitle": "driving without insurance",
+        "sections": [
+          "46.2-706"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-706.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-706/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-expired-registration",
+        "citation": "Va. Code Ann. § 46.2-600",
+        "section": "46.2-600",
+        "catalogTitle": "expired registration",
+        "sections": [
+          "46.2-600"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-600.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-600/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-expired-inspection",
+        "citation": "Va. Code Ann. § 46.2-1157",
+        "section": "46.2-1157",
+        "catalogTitle": "expired inspection",
+        "sections": [
+          "46.2-1157"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-1157.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-1157/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-failure-to-pay-child-support",
+        "citation": "Va. Code Ann. § 20-61",
+        "section": "20-61",
+        "catalogTitle": "failure to pay child support",
+        "sections": [
+          "20-61"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 20-61.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/20-61/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-noise-violation",
+        "citation": "Va. Code Ann. § 18.2-415",
+        "section": "18.2-415",
+        "catalogTitle": "noise violation",
+        "sections": [
+          "18.2-415"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-415/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-indecent-exposure",
+        "citation": "Va. Code Ann. § 18.2-387",
+        "section": "18.2-387",
+        "catalogTitle": "indecent exposure",
+        "sections": [
+          "18.2-387"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-387.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-387/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-fake-id",
+        "citation": "Va. Code Ann. § 4.1-306",
+        "section": "4.1-306",
+        "catalogTitle": "fake id",
+        "sections": [
+          "4.1-306"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-306.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/4.1-306/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-animal-at-large",
+        "citation": "Va. Code Ann. § 3.2-6543",
+        "section": "3.2-6543",
+        "catalogTitle": "animal at large",
+        "sections": [
+          "3.2-6543"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 3.2-6543.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/3.2-6543/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-animal-cruelty-misdemeanor",
+        "citation": "Va. Code Ann. § 3.2-6570",
+        "section": "3.2-6570",
+        "catalogTitle": "animal cruelty misdemeanor",
+        "sections": [
+          "3.2-6570"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 3.2-6570.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/3.2-6570/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-illegal-camping",
+        "citation": "Va. Code Ann. § 18.2-119",
+        "section": "18.2-119",
+        "sections": [
+          "18.2-119"
+        ],
+        "catalogTitle": "illegal camping",
+        "mappingClass": "compound_shared",
+        "score": 85,
+        "reasonCode": "shared_official_section_multiple_catalog_labels",
+        "reason": "Section 18.2-119 is shared by multiple catalog labels and requires compound-citation review.",
+        "sourceHash": "7c74ad2c71a1bc020d2ac0e1da2852ea3e842c9f1a453c9e855a4c8be53d3c23",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-119/",
+        "officialTitle": "Trespass after having been forbidden to do so",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-panhandling",
+        "citation": "Va. Code Ann. § 18.2-415",
+        "section": "18.2-415",
+        "catalogTitle": "panhandling",
+        "sections": [
+          "18.2-415"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-415/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-curfew-violation",
+        "citation": "Va. Code Ann. § 16.1-228",
+        "section": "16.1-228",
+        "catalogTitle": "curfew violation",
+        "sections": [
+          "16.1-228"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-228.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/16.1-228/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-defective-vehicle-equipment",
+        "citation": "Va. Code Ann. § 46.2-1003",
+        "section": "46.2-1003",
+        "catalogTitle": "defective vehicle equipment",
+        "sections": [
+          "46.2-1003"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-1003.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-1003/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-truancy",
+        "citation": "Va. Code Ann. § 22.1-258",
+        "section": "22.1-258",
+        "catalogTitle": "truancy",
+        "sections": [
+          "22.1-258"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 22.1-258.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/22.1-258/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-littering",
+        "citation": "Va. Code Ann. § 33.2-802",
+        "section": "33.2-802",
+        "catalogTitle": "littering",
+        "sections": [
+          "33.2-802"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 33.2-802.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/33.2-802/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-illegal-fireworks",
+        "citation": "Va. Code Ann. § 59.1-148.3",
+        "section": "59.1-148.3",
+        "catalogTitle": "illegal fireworks",
+        "sections": [
+          "59.1-148.3"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 59.1-148.3.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/59.1-148.3/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-alcohol-in-park",
+        "citation": "Va. Code Ann. § 4.1-308",
+        "section": "4.1-308",
+        "catalogTitle": "alcohol in park",
+        "sections": [
+          "4.1-308"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-308.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/4.1-308/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-hunting-fishing-no-license",
+        "citation": "Va. Code Ann. § 29.1-303",
+        "section": "29.1-303",
+        "catalogTitle": "hunting fishing no license",
+        "sections": [
+          "29.1-303"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 29.1-303.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/29.1-303/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-attempted-robbery",
+        "citation": "Va. Code Ann. §§ 18.2-26, 18.2-58",
+        "section": "18.2-26",
+        "catalogTitle": "attempted robbery",
+        "sections": [
+          "18.2-26",
+          "18.2-58"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-26.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-26/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-attempted-sexual-assault",
+        "citation": "Va. Code Ann. §§ 18.2-26, 18.2-61",
+        "section": "18.2-26",
+        "catalogTitle": "attempted sexual assault",
+        "sections": [
+          "18.2-26",
+          "18.2-61"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-26.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-26/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-solicitation",
+        "citation": "Va. Code Ann. § 18.2-346",
+        "section": "18.2-346",
+        "catalogTitle": "solicitation",
+        "sections": [
+          "18.2-346"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-346.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-346/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-rico-organized-crime",
+        "citation": "Va. Code Ann. § 18.2-514",
+        "section": "18.2-514",
+        "catalogTitle": "rico organized crime",
+        "sections": [
+          "18.2-514"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-514.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-514/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-juvenile-delinquency-felony",
+        "citation": "Va. Code Ann. § 16.1-228",
+        "section": "16.1-228",
+        "catalogTitle": "juvenile delinquency felony",
+        "sections": [
+          "16.1-228"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-228.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/16.1-228/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-juvenile-delinquency-misdemeanor",
+        "citation": "Va. Code Ann. § 16.1-228",
+        "section": "16.1-228",
+        "catalogTitle": "juvenile delinquency misdemeanor",
+        "sections": [
+          "16.1-228"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-228.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/16.1-228/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-juvenile-transfer-adult-court",
+        "citation": "Va. Code Ann. § 16.1-269.1",
+        "section": "16.1-269.1",
+        "catalogTitle": "juvenile transfer adult court",
+        "sections": [
+          "16.1-269.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-269.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/16.1-269.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-juvenile-firearm-possession",
+        "citation": "Va. Code Ann. § 18.2-308.7",
+        "section": "18.2-308.7",
+        "catalogTitle": "juvenile firearm possession",
+        "sections": [
+          "18.2-308.7"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-308.7.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-308.7/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-sexual-assault-in-the-third-degree",
+        "citation": "Va. Code Ann. § 18.2-67.4",
+        "section": "18.2-67.4",
+        "catalogTitle": "sexual assault in the third degree",
+        "sections": [
+          "18.2-67.4"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-67.4.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-67.4/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-sexual-assault-in-the-second-degree",
+        "citation": "Va. Code Ann. § 18.2-67.1",
+        "section": "18.2-67.1",
+        "catalogTitle": "sexual assault in the second degree",
+        "sections": [
+          "18.2-67.1"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-67.1.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-67.1/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-unregistered-vehicle",
+        "citation": "Va. Code Ann. § 46.2-600",
+        "section": "46.2-600",
+        "catalogTitle": "unregistered vehicle",
+        "sections": [
+          "46.2-600"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-600.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-600/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-trespass-after-warning",
+        "citation": "Va. Code Ann. § 18.2-119",
+        "section": "18.2-119",
+        "sections": [
+          "18.2-119"
+        ],
+        "catalogTitle": "trespass after warning",
+        "mappingClass": "likely_alias",
+        "score": 70,
+        "reasonCode": "official_section_match_likely_alias",
+        "reason": "Section 18.2-119 exists officially; the catalog label is a likely alias of \"Trespass after having been forbidden to do so\".",
+        "sourceHash": "7c74ad2c71a1bc020d2ac0e1da2852ea3e842c9f1a453c9e855a4c8be53d3c23",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-119/",
+        "officialTitle": "Trespass after having been forbidden to do so",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-rape-in-the-second-degree",
+        "citation": "Va. Code Ann. § 18.2-61",
+        "section": "18.2-61",
+        "catalogTitle": "rape in the second degree",
+        "sections": [
+          "18.2-61"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-61.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-61/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-bad-checks",
+        "citation": "Va. Code Ann. § 18.2-181",
+        "section": "18.2-181",
+        "catalogTitle": "bad checks",
+        "sections": [
+          "18.2-181"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-181.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-181/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-disturbing-the-peace",
+        "citation": "Va. Code Ann. § 18.2-415",
+        "section": "18.2-415",
+        "catalogTitle": "disturbing the peace",
+        "sections": [
+          "18.2-415"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-415/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-driving-while-suspended",
+        "citation": "Va. Code Ann. § 46.2-301",
+        "section": "46.2-301",
+        "catalogTitle": "driving while suspended",
+        "sections": [
+          "46.2-301"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-301.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-301/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-reckless-driving-criminal",
+        "citation": "Va. Code Ann. § 46.2-852",
+        "section": "46.2-852",
+        "catalogTitle": "reckless driving criminal",
+        "sections": [
+          "46.2-852"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-852.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-852/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-criminally-negligent-homicide",
+        "citation": "Va. Code Ann. § 18.2-36",
+        "section": "18.2-36",
+        "catalogTitle": "criminally negligent homicide",
+        "sections": [
+          "18.2-36"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-36.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-36/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-driving-on-suspended-license",
+        "citation": "Va. Code Ann. § 46.2-301",
+        "section": "46.2-301",
+        "catalogTitle": "driving on suspended license",
+        "sections": [
+          "46.2-301"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-301.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/46.2-301/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-dui",
+        "citation": "Va. Code Ann. § 18.2-266",
+        "section": "18.2-266",
+        "catalogTitle": "dui",
+        "sections": [
+          "18.2-266"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-266.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-266/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-trespass",
+        "citation": "Va. Code Ann. § 18.2-119",
+        "section": "18.2-119",
+        "sections": [
+          "18.2-119"
+        ],
+        "catalogTitle": "trespass",
+        "mappingClass": "exact",
+        "score": 100,
+        "reasonCode": "official_section_and_title_match",
+        "reason": "Section 18.2-119 and its official title support the catalog mapping.",
+        "sourceHash": "7c74ad2c71a1bc020d2ac0e1da2852ea3e842c9f1a453c9e855a4c8be53d3c23",
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-119/",
+        "officialTitle": "Trespass after having been forbidden to do so",
+        "currentness": {
+          "status": "verified",
+          "evidence": "printDate 9/15/2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-assault-and-battery",
+        "citation": "Va. Code Ann. § 18.2-57",
+        "section": "18.2-57",
+        "catalogTitle": "assault and battery",
+        "sections": [
+          "18.2-57"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-57/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-domestic-assault-battery",
+        "citation": "Va. Code Ann. § 18.2-57.2",
+        "section": "18.2-57.2",
+        "catalogTitle": "domestic assault battery",
+        "sections": [
+          "18.2-57.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-57.2/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-destruction-of-property",
+        "citation": "Va. Code Ann. § 18.2-137",
+        "section": "18.2-137",
+        "catalogTitle": "destruction of property",
+        "sections": [
+          "18.2-137"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-137.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-137/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "va-obstruction-of-justice",
+        "citation": "Va. Code Ann. § 18.2-460",
+        "section": "18.2-460",
+        "catalogTitle": "obstruction of justice",
+        "sections": [
+          "18.2-460"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-460.",
+        "sourceHash": null,
+        "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-460/",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      }
+    ],
+    "unresolved": [
+      {
+        "chargeId": "va-felony-murder",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-33."
+      },
+      {
+        "chargeId": "va-voluntary-manslaughter",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-35."
+      },
+      {
+        "chargeId": "va-involuntary-manslaughter",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-36."
+      },
+      {
+        "chargeId": "va-vehicular-homicide",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-36.1."
+      },
+      {
+        "chargeId": "va-attempted-murder",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-25."
+      },
+      {
+        "chargeId": "va-disorderly-conduct",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415."
+      },
+      {
+        "chargeId": "va-public-intoxication",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-388."
+      },
+      {
+        "chargeId": "va-resisting-arrest",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-460."
+      },
+      {
+        "chargeId": "va-failure-to-appear",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 19.2-128."
+      },
+      {
+        "chargeId": "va-petty-theft",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-96."
+      },
+      {
+        "chargeId": "va-dui-first-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-266."
+      },
+      {
+        "chargeId": "va-aggravated-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-51."
+      },
+      {
+        "chargeId": "va-domestic-violence-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.2."
+      },
+      {
+        "chargeId": "va-robbery-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58."
+      },
+      {
+        "chargeId": "va-robbery-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58.1."
+      },
+      {
+        "chargeId": "va-burglary-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-89."
+      },
+      {
+        "chargeId": "va-burglary-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-91."
+      },
+      {
+        "chargeId": "va-possession-of-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-250."
+      },
+      {
+        "chargeId": "va-shoplifting",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-103."
+      },
+      {
+        "chargeId": "va-grand-theft-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-95."
+      },
+      {
+        "chargeId": "va-grand-theft-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-95."
+      },
+      {
+        "chargeId": "va-sexual-assault-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-61."
+      },
+      {
+        "chargeId": "va-rape-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-61."
+      },
+      {
+        "chargeId": "va-vandalism",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-137."
+      },
+      {
+        "chargeId": "va-harassment",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-186.3."
+      },
+      {
+        "chargeId": "va-drug-trafficking",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248."
+      },
+      {
+        "chargeId": "va-possession-with-intent-to-distribute",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248."
+      },
+      {
+        "chargeId": "va-loitering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-176."
+      },
+      {
+        "chargeId": "va-petit-larceny",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-96."
+      },
+      {
+        "chargeId": "va-possession-marijuana",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-1100."
+      },
+      {
+        "chargeId": "va-distribution-of-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248."
+      },
+      {
+        "chargeId": "va-manufacturing-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-248."
+      },
+      {
+        "chargeId": "va-possession-of-drug-paraphernalia",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 54.1-3466."
+      },
+      {
+        "chargeId": "va-maintaining-drug-house",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-258."
+      },
+      {
+        "chargeId": "va-dui-second-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-270."
+      },
+      {
+        "chargeId": "va-dui-third-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-270."
+      },
+      {
+        "chargeId": "va-unlawful-carrying-of-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-308."
+      },
+      {
+        "chargeId": "va-felon-in-possession-of-firearm",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-308.2."
+      },
+      {
+        "chargeId": "va-discharge-of-firearm-in-city",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-280."
+      },
+      {
+        "chargeId": "va-possession-of-prohibited-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-288."
+      },
+      {
+        "chargeId": "va-assault-on-peace-officer",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57."
+      },
+      {
+        "chargeId": "va-criminal-attempt",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-25."
+      },
+      {
+        "chargeId": "va-conspiracy",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-22."
+      },
+      {
+        "chargeId": "va-aiding-and-abetting",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-18."
+      },
+      {
+        "chargeId": "va-accessory-after-the-fact",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-19."
+      },
+      {
+        "chargeId": "va-criminal-solicitation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-29."
+      },
+      {
+        "chargeId": "va-gang-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-46.3."
+      },
+      {
+        "chargeId": "va-hate-crime-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57."
+      },
+      {
+        "chargeId": "va-recidivist-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 19.2-297.1."
+      },
+      {
+        "chargeId": "va-firearm-in-felony-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-53.1."
+      },
+      {
+        "chargeId": "va-drug-school-zone-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-255.2."
+      },
+      {
+        "chargeId": "va-money-laundering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-246.2."
+      },
+      {
+        "chargeId": "va-wire-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-178."
+      },
+      {
+        "chargeId": "va-mail-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-178.1."
+      },
+      {
+        "chargeId": "va-check-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-181."
+      },
+      {
+        "chargeId": "va-insurance-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 38.2-512."
+      },
+      {
+        "chargeId": "va-tax-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 58.1-1817."
+      },
+      {
+        "chargeId": "va-identity-theft",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-186.3."
+      },
+      {
+        "chargeId": "va-computer-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-152.3."
+      },
+      {
+        "chargeId": "va-credit-card-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-195."
+      },
+      {
+        "chargeId": "va-embezzlement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-111."
+      },
+      {
+        "chargeId": "va-assault-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-51."
+      },
+      {
+        "chargeId": "va-assault-with-deadly-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-51."
+      },
+      {
+        "chargeId": "va-assault-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57."
+      },
+      {
+        "chargeId": "va-assault-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57."
+      },
+      {
+        "chargeId": "va-menacing",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-60."
+      },
+      {
+        "chargeId": "va-carjacking",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58.1."
+      },
+      {
+        "chargeId": "va-bank-robbery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-58."
+      },
+      {
+        "chargeId": "va-reckless-driving",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-852."
+      },
+      {
+        "chargeId": "va-hit-and-run",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-894."
+      },
+      {
+        "chargeId": "va-forgery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-172."
+      },
+      {
+        "chargeId": "va-residential-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-89."
+      },
+      {
+        "chargeId": "va-commercial-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-91."
+      },
+      {
+        "chargeId": "va-auto-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-92."
+      },
+      {
+        "chargeId": "va-contempt-of-court",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-456."
+      },
+      {
+        "chargeId": "va-protective-order-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-253.2."
+      },
+      {
+        "chargeId": "va-probation-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 19.2-306."
+      },
+      {
+        "chargeId": "va-child-sexual-abuse",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-67.3."
+      },
+      {
+        "chargeId": "va-sexual-exploitation-of-minor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-374.1."
+      },
+      {
+        "chargeId": "va-theft-by-receiving",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-108."
+      },
+      {
+        "chargeId": "va-statutory-rape",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-63."
+      },
+      {
+        "chargeId": "va-open-container",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-323.1."
+      },
+      {
+        "chargeId": "va-minor-in-possession",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-305."
+      },
+      {
+        "chargeId": "va-false-info-to-police",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-461."
+      },
+      {
+        "chargeId": "va-driving-without-insurance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-706."
+      },
+      {
+        "chargeId": "va-expired-registration",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-600."
+      },
+      {
+        "chargeId": "va-expired-inspection",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-1157."
+      },
+      {
+        "chargeId": "va-failure-to-pay-child-support",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 20-61."
+      },
+      {
+        "chargeId": "va-noise-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415."
+      },
+      {
+        "chargeId": "va-indecent-exposure",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-387."
+      },
+      {
+        "chargeId": "va-fake-id",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-306."
+      },
+      {
+        "chargeId": "va-animal-at-large",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 3.2-6543."
+      },
+      {
+        "chargeId": "va-animal-cruelty-misdemeanor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 3.2-6570."
+      },
+      {
+        "chargeId": "va-panhandling",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415."
+      },
+      {
+        "chargeId": "va-curfew-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-228."
+      },
+      {
+        "chargeId": "va-defective-vehicle-equipment",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-1003."
+      },
+      {
+        "chargeId": "va-truancy",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 22.1-258."
+      },
+      {
+        "chargeId": "va-littering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 33.2-802."
+      },
+      {
+        "chargeId": "va-illegal-fireworks",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 59.1-148.3."
+      },
+      {
+        "chargeId": "va-alcohol-in-park",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 4.1-308."
+      },
+      {
+        "chargeId": "va-hunting-fishing-no-license",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 29.1-303."
+      },
+      {
+        "chargeId": "va-attempted-robbery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-26."
+      },
+      {
+        "chargeId": "va-attempted-sexual-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-26."
+      },
+      {
+        "chargeId": "va-solicitation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-346."
+      },
+      {
+        "chargeId": "va-rico-organized-crime",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-514."
+      },
+      {
+        "chargeId": "va-juvenile-delinquency-felony",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-228."
+      },
+      {
+        "chargeId": "va-juvenile-delinquency-misdemeanor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-228."
+      },
+      {
+        "chargeId": "va-juvenile-transfer-adult-court",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 16.1-269.1."
+      },
+      {
+        "chargeId": "va-juvenile-firearm-possession",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-308.7."
+      },
+      {
+        "chargeId": "va-sexual-assault-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-67.4."
+      },
+      {
+        "chargeId": "va-sexual-assault-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-67.1."
+      },
+      {
+        "chargeId": "va-unregistered-vehicle",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-600."
+      },
+      {
+        "chargeId": "va-rape-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-61."
+      },
+      {
+        "chargeId": "va-bad-checks",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-181."
+      },
+      {
+        "chargeId": "va-disturbing-the-peace",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-415."
+      },
+      {
+        "chargeId": "va-driving-while-suspended",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-301."
+      },
+      {
+        "chargeId": "va-reckless-driving-criminal",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-852."
+      },
+      {
+        "chargeId": "va-criminally-negligent-homicide",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-36."
+      },
+      {
+        "chargeId": "va-driving-on-suspended-license",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 46.2-301."
+      },
+      {
+        "chargeId": "va-dui",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-266."
+      },
+      {
+        "chargeId": "va-assault-and-battery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57."
+      },
+      {
+        "chargeId": "va-domestic-assault-battery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-57.2."
+      },
+      {
+        "chargeId": "va-destruction-of-property",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-137."
+      },
+      {
+        "chargeId": "va-obstruction-of-justice",
+        "reasonCode": "official_section_not_found",
+        "reason": "No VA official source document was available for section 18.2-460."
+      }
+    ],
+    "summary": {
+      "totalCatalogEntries": 130,
+      "exactMappings": 4,
+      "likelyAliases": 1,
+      "compoundOrSharedCitations": 1,
+      "unresolved": 124,
+      "currentnessVerifiedDocuments": 2
+    }
+  }
 }

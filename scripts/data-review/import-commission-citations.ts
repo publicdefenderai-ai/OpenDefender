@@ -37,6 +37,15 @@ import path from 'path';
 import https from 'https';
 import { pathToFileURL } from 'node:url';
 import { JSDOM } from 'jsdom';
+import { CHARGE_CITATIONS } from '../../shared/criminal-charge-citations';
+import {
+  buildOfficialComparisonReport,
+  fetchOfficialDocuments,
+  isOfficialPromotionEligible,
+  parseCitationSections,
+  type OfficialCodeState,
+  type OfficialComparisonReport,
+} from './official-code-verifier';
 
 // Load .env from project root so GOVINFO_API_KEY and other keys are available
 // when the script is run via `npx tsx` (which doesn't auto-source .env).
@@ -51,6 +60,9 @@ try {
 
 const DRY_RUN = process.argv.includes('--dry-run');
 const GENERATE_URLS = process.argv.includes('--generate-urls');
+const REPLAY_FIXTURES = process.argv.includes('--replay-fixtures');
+const FIXTURE_DIR = path.join(process.cwd(), 'tests/fixtures/official-code');
+const SOURCE_CACHE_DIR = path.join(process.cwd(), '.cache/official-code');
 
 const stateArgIdx = process.argv.indexOf('--state');
 const STATE_MODE: string | null = stateArgIdx !== -1 ? (process.argv[stateArgIdx + 1] ?? '').toLowerCase() : null;
@@ -1184,7 +1196,7 @@ async function fetchFederalStatuteMap(fedEntries: ChargeEntry[]): Promise<Map<st
 
 async function runStateCommission(state: string): Promise<void> {
   console.log(`\n=== Commission Import: ${state.toUpperCase()} ===`);
-  console.log(`Mode: ${DRY_RUN ? 'DRY-RUN' : 'LIVE'}`);
+  console.log(`Mode: ${DRY_RUN || REPLAY_FIXTURES ? 'DRY-RUN' : 'LIVE'}`);
   console.log('');
 
   // Parse overlay entries first — new state scrapers need stateEntries as input
@@ -1195,6 +1207,8 @@ async function runStateCommission(state: string): Promise<void> {
   let commissionMap: Map<string, CommissionEntry>;
   let commissionName: string;
   let commissionTableUrl: string;
+  let officialComparison: OfficialComparisonReport | undefined;
+  let officialSourceErrors: Record<string, string> = {};
 
   try {
     switch (state) {
@@ -1209,6 +1223,48 @@ async function runStateCommission(state: string): Promise<void> {
         commissionTableUrl = 'https://www.law.cornell.edu/regulations/pennsylvania/204-Pa-Code-SS-303-15';
         break;
       case 'mn':
+      case 'va':
+      case 'mi': {
+        const officialState = state.toUpperCase() as OfficialCodeState;
+        const officialEntries = stateEntries.map((entry) => ({
+          id: entry.id,
+          citation: entry.citation,
+          instructionRef: CHARGE_CITATIONS[entry.id]?.instructionRef,
+          instructionUrl: CHARGE_CITATIONS[entry.id]?.instructionUrl,
+        }));
+        const sections = stateEntries.flatMap((entry) => parseCitationSections(entry.citation));
+        const fetched = await fetchOfficialDocuments(officialState, sections, {
+          cacheDir: REPLAY_FIXTURES ? undefined : SOURCE_CACHE_DIR,
+          fixtureDir: REPLAY_FIXTURES ? FIXTURE_DIR : undefined,
+        });
+        officialSourceErrors = fetched.errors;
+        officialComparison = buildOfficialComparisonReport(
+          officialState,
+          officialEntries,
+          fetched.documents,
+        );
+        commissionMap = new Map([...fetched.documents.entries()].map(([section, document]) => [
+          section,
+          {
+            section,
+            description: document.title,
+            classification: `${officialComparison!.officialSource.publisher} § ${section}`,
+            sourceUrl: document.sourceUrl,
+          },
+        ]));
+        commissionName = officialComparison.officialSource.publisher;
+        commissionTableUrl = state === 'mn'
+          ? 'https://www.revisor.mn.gov/statutes/'
+          : state === 'va'
+            ? 'https://law.lis.virginia.gov/vacode/title18.2/'
+            : 'https://www.legislature.mi.gov/Laws/MCL';
+        break;
+      }
+      /*
+       * Kept below as a reference for the legacy chapter scraper. The
+       * evidence adapters above are the path used for MN/VA/MI verification.
+       */
+      case 'mn-legacy':
         commissionMap = await fetchMNStatuteMap(stateEntries);
         commissionName = `Minnesota Statutes (2024) — revisor.mn.gov`;
         commissionTableUrl = 'https://www.revisor.mn.gov/statutes/';
@@ -1222,11 +1278,6 @@ async function runStateCommission(state: string): Promise<void> {
         commissionMap = await fetchWAStatuteMap(stateEntries);
         commissionName = `Washington Revised Code — app.leg.wa.gov`;
         commissionTableUrl = 'https://app.leg.wa.gov/rcw/';
-        break;
-      case 'va':
-        commissionMap = await fetchVAStatuteMap(stateEntries);
-        commissionName = `Virginia Code Annotated — law.lis.virginia.gov`;
-        commissionTableUrl = 'https://law.lis.virginia.gov/vacode/title18.2/';
         break;
       case 'federal':
         commissionMap = await fetchFederalStatuteMap(stateEntries);
@@ -1257,6 +1308,8 @@ async function runStateCommission(state: string): Promise<void> {
     urlAdded: [] as string[],
     notInCommissionTable: [] as string[],
     alreadyHigh: [] as string[],
+    ...(officialComparison ? { officialComparison } : {}),
+    ...(Object.keys(officialSourceErrors).length > 0 ? { sourceErrors: officialSourceErrors } : {}),
   };
 
   for (const entry of stateEntries) {
@@ -1271,7 +1324,12 @@ async function runStateCommission(state: string): Promise<void> {
       if (titleM) mapKey = `${titleM[1]}:${base}`;
     }
 
-    const inTable = mapKey ? commissionMap.has(mapKey) : false;
+    const officialMapping = officialComparison?.mappings.find((mapping) => mapping.chargeId === entry.id);
+    const officialPromotionAllowed = !officialComparison ||
+      isOfficialPromotionEligible(officialMapping);
+    const inTable = mapKey
+      ? commissionMap.has(mapKey) && officialPromotionAllowed
+      : false;
     const commEntry = mapKey ? commissionMap.get(mapKey) : undefined;
 
     const statUrl = commEntry?.sourceUrl ?? generateSourceUrl(state, entry.citation) ?? commissionTableUrl;
@@ -1290,7 +1348,7 @@ async function runStateCommission(state: string): Promise<void> {
         sourceUrl: commEntry.sourceUrl,
       };
 
-      if (DRY_RUN) {
+      if (DRY_RUN || REPLAY_FIXTURES) {
         console.log(`  DRY-RUN PROMOTE: ${entry.id}`);
         console.log(`    section: ${base} → found in commission table`);
         console.log(`    url: ${commEntry.sourceUrl}`);
@@ -1306,7 +1364,7 @@ async function runStateCommission(state: string): Promise<void> {
       if (!entry.hasSourceUrl) {
         const updates: EntryUpdates = { sourceUrl: statUrl };
 
-        if (DRY_RUN) {
+        if (DRY_RUN || REPLAY_FIXTURES) {
           console.log(`  DRY-RUN URL-ONLY: ${entry.id} → ${statUrl}`);
         } else {
           const result = applyUpdatesToOverlay(source, entry.id, updates);
@@ -1320,14 +1378,14 @@ async function runStateCommission(state: string): Promise<void> {
     }
   }
 
-  if (!DRY_RUN) {
+  if (!DRY_RUN && !REPLAY_FIXTURES) {
     fs.writeFileSync(OVERLAY_PATH, source, 'utf-8');
   }
 
   // Summary
   console.log(`\n=== Results: ${state.toUpperCase()} ===`);
-  console.log(`Promoted to high (in commission table): ${DRY_RUN ? '(dry-run)' : report.promoted.length}`);
-  console.log(`sourceUrl added (not in table):         ${DRY_RUN ? '(dry-run)' : report.urlAdded.length}`);
+  console.log(`Promoted to high (in commission table): ${DRY_RUN || REPLAY_FIXTURES ? '(dry-run)' : report.promoted.length}`);
+  console.log(`sourceUrl added (not in table):         ${DRY_RUN || REPLAY_FIXTURES ? '(dry-run)' : report.urlAdded.length}`);
   console.log(`Already high / skipped:                 ${report.alreadyHigh.length}`);
   console.log(`Not found in commission table:          ${report.notInCommissionTable.length}`);
 
@@ -1344,6 +1402,33 @@ async function runStateCommission(state: string): Promise<void> {
   const reportPath = path.join(OUTPUT_DIR, `commission-import-${state}-report.json`);
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   console.log(`\nReport: ${reportPath}`);
+
+  if (officialComparison) {
+    const comparisonReports = (['mn', 'va', 'mi'] as const)
+      .map((jurisdiction) => {
+        const stateReportPath = path.join(OUTPUT_DIR, `commission-import-${jurisdiction}-report.json`);
+        if (!fs.existsSync(stateReportPath)) return null;
+        const stateReport = JSON.parse(fs.readFileSync(stateReportPath, 'utf8')) as {
+          officialComparison?: OfficialComparisonReport;
+        };
+        return stateReport.officialComparison ?? null;
+      })
+      .filter((candidate): candidate is OfficialComparisonReport => Boolean(candidate));
+    const comparisonPath = path.join(OUTPUT_DIR, 'commission-import-comparison-report.json');
+    fs.writeFileSync(comparisonPath, JSON.stringify({
+      schemaVersion: 1,
+      generatedAt: new Date().toISOString(),
+      states: comparisonReports,
+      summary: {
+        totalCatalogEntries: comparisonReports.reduce((sum, item) => sum + item.summary.totalCatalogEntries, 0),
+        exactMappings: comparisonReports.reduce((sum, item) => sum + item.summary.exactMappings, 0),
+        likelyAliases: comparisonReports.reduce((sum, item) => sum + item.summary.likelyAliases, 0),
+        compoundOrSharedCitations: comparisonReports.reduce((sum, item) => sum + item.summary.compoundOrSharedCitations, 0),
+        unresolved: comparisonReports.reduce((sum, item) => sum + item.summary.unresolved, 0),
+      },
+    }, null, 2));
+    console.log(`Comparison report: ${comparisonPath}`);
+  }
 }
 
 // ── Entry point ───────────────────────────────────────────────────────────────
@@ -1370,11 +1455,13 @@ async function main(): Promise<void> {
   console.error('  --state fl                   Import from FL Criminal Punishment Code table');
   console.error('  --state pa                   Import from PA OGS table (Cornell LII)');
   console.error('  --state mn                   Import from MN Statutes (revisor.mn.gov chapters)');
+  console.error('  --state mi                   Verify Michigan Compiled Laws plus court jury-instruction evidence');
   console.error('  --state nc                   Import from NC General Statutes (ncleg.gov per-section)');
   console.error('  --state wa                   Import from WA Revised Code (app.leg.wa.gov chapters)');
   console.error('  --state va                   Import from VA Code (law.lis.virginia.gov per-section)');
   console.error('  --state federal              Verify federal citations via GovInfo (requires GOVINFO_API_KEY)');
   console.error('  --dry-run                    Preview changes without writing');
+  console.error('  --replay-fixtures            Run MN/VA/MI adapters against committed HTML fixtures without network or writes');
   process.exit(1);
 }
 

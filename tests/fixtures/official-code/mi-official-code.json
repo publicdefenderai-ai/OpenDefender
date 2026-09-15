@@ -1,0 +1,17 @@
+{
+  "state": "MI",
+  "sources": [
+    {
+      "section": "750.321",
+      "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-321",
+      "html": "<html><head><title>Michigan Compiled Laws § 750.321</title></head><body><p>Michigan Compiled Laws, current through 2026 Michigan Public Acts</p><h1>750.321 Manslaughter.</h1><p>Any person who shall commit the crime of manslaughter shall be guilty of a felony.</p></body></html>",
+      "sourceHash": "fc0645f853c3ce3e788036e0fbe1a77256ea2d96919061a4cbf7c5dc7e92d595"
+    },
+    {
+      "section": "750.552",
+      "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-552",
+      "html": "<html><head><title>Michigan Compiled Laws § 750.552</title></head><body><p>Michigan Compiled Laws, current through 2026 Michigan Public Acts</p><h1>750.552 Willful trespass.</h1><p>A person who willfully enters the lands or premises of another without permission is guilty of trespass.</p></body></html>",
+      "sourceHash": "ddf631e528bda11fc381ad6c7de99fe771ee1c069d610e0cba6a517edc29ce4f"
+    }
+  ]
+}

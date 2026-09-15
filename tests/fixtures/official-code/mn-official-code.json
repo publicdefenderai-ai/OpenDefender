@@ -1,0 +1,17 @@
+{
+  "state": "MN",
+  "sources": [
+    {
+      "section": "609.185",
+      "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.185",
+      "html": "<html><head><title>2024 Minnesota Statutes</title></head><body><p>2024 Minnesota Statutes</p><h1>609.185 MURDER IN THE FIRST DEGREE.</h1><p>A person who causes the death of another with intent to effect the death of that person or another is guilty of murder in the first degree.</p><p>Source: https://www.revisor.mn.gov/statutes/cite/609.185</p></body></html>",
+      "sourceHash": "7f968b9098e7b85dcfe7a37ea70721a77d79129fc940420280f2dad74863981a"
+    },
+    {
+      "section": "609.52",
+      "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+      "html": "<html><head><title>2024 Minnesota Statutes</title></head><body><p>2024 Minnesota Statutes</p><h1>609.52 THEFT.</h1><p>Whoever intentionally and without claim of right takes or exercises control over movable property of another may be guilty of theft.</p><p>Source: https://www.revisor.mn.gov/statutes/cite/609.52</p></body></html>",
+      "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857"
+    }
+  ]
+}

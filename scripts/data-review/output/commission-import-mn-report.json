@@ -1,14 +1,9 @@
 {
   "state": "MN",
-  "runAt": "2026-09-15T05:18:13.759Z",
-  "commissionSource": "Minnesota Statutes (2024) — revisor.mn.gov",
+  "runAt": "2026-09-15T15:36:34.047Z",
+  "commissionSource": "Minnesota Revisor of Statutes",
   "commissionTableUrl": "https://www.revisor.mn.gov/statutes/",
-  "promoted": [
-    "mn-failure-to-appear",
-    "mn-domestic-violence-assault",
-    "mn-carjacking",
-    "mn-forgery"
-  ],
+  "promoted": [],
   "urlAdded": [],
   "notInCommissionTable": [],
   "alreadyHigh": [
@@ -21,9 +16,11 @@
     "mn-trespassing",
     "mn-disorderly-conduct",
     "mn-resisting-arrest",
+    "mn-failure-to-appear",
     "mn-petty-theft",
     "mn-dui-first-offense",
     "mn-aggravated-assault",
+    "mn-domestic-violence-assault",
     "mn-robbery-in-the-first-degree",
     "mn-robbery-in-the-second-degree",
     "mn-burglary-in-the-first-degree",
@@ -77,9 +74,11 @@
     "mn-assault-in-the-second-degree",
     "mn-assault-in-the-third-degree",
     "mn-menacing",
+    "mn-carjacking",
     "mn-bank-robbery",
     "mn-reckless-driving",
     "mn-hit-and-run",
+    "mn-forgery",
     "mn-residential-burglary",
     "mn-commercial-burglary",
     "mn-auto-burglary",
@@ -139,5 +138,3105 @@
     "mn-assault-fifth-degree",
     "mn-possession-small-amount-marijuana",
     "mn-driving-after-revocation"
-  ]
+  ],
+  "officialComparison": {
+    "schemaVersion": 1,
+    "state": "MN",
+    "generatedAt": "2026-09-15T15:36:34.037Z",
+    "officialSource": {
+      "publisher": "Minnesota Revisor of Statutes",
+      "adapter": "Minnesota Statutes chapter/section adapter",
+      "transportPolicy": "Official revisor.mn.gov source over default verified HTTPS"
+    },
+    "sourceDocuments": [
+      {
+        "section": "609.185",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.185",
+        "sourceHash": "7f968b9098e7b85dcfe7a37ea70721a77d79129fc940420280f2dad74863981a",
+        "retrievedAt": "2026-09-15T00:00:00.000Z",
+        "sourceTransport": "fixture",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        }
+      },
+      {
+        "section": "609.52",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "retrievedAt": "2026-09-15T00:00:00.000Z",
+        "sourceTransport": "fixture",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        }
+      }
+    ],
+    "mappings": [
+      {
+        "chargeId": "mn-murder-in-the-first-degree",
+        "citation": "Minn. Stat. § 609.185",
+        "section": "609.185",
+        "sections": [
+          "609.185"
+        ],
+        "catalogTitle": "murder in the first degree",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.185 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "7f968b9098e7b85dcfe7a37ea70721a77d79129fc940420280f2dad74863981a",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.185",
+        "officialTitle": "MURDER IN THE FIRST DEGREE",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-murder-in-the-second-degree",
+        "citation": "Minn. Stat. § 609.19",
+        "section": "609.19",
+        "catalogTitle": "murder in the second degree",
+        "sections": [
+          "609.19"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.19.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.19",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-murder-in-the-third-degree",
+        "citation": "Minn. Stat. § 609.195",
+        "section": "609.195",
+        "catalogTitle": "murder in the third degree",
+        "sections": [
+          "609.195"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.195.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.195",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-voluntary-manslaughter",
+        "citation": "Minn. Stat. § 609.20",
+        "section": "609.20",
+        "catalogTitle": "voluntary manslaughter",
+        "sections": [
+          "609.20"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.20.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.20",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-involuntary-manslaughter",
+        "citation": "Minn. Stat. § 609.205",
+        "section": "609.205",
+        "catalogTitle": "involuntary manslaughter",
+        "sections": [
+          "609.205"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.205.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.205",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-vehicular-homicide",
+        "citation": "Minn. Stat. § 609.2112",
+        "section": "609.2112",
+        "catalogTitle": "vehicular homicide",
+        "sections": [
+          "609.2112"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2112.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.2112",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-trespassing",
+        "citation": "Minn. Stat. § 609.605",
+        "section": "609.605",
+        "catalogTitle": "trespassing",
+        "sections": [
+          "609.605"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.605",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-disorderly-conduct",
+        "citation": "Minn. Stat. § 609.72",
+        "section": "609.72",
+        "catalogTitle": "disorderly conduct",
+        "sections": [
+          "609.72"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.72",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-resisting-arrest",
+        "citation": "Minn. Stat. § 609.50",
+        "section": "609.50",
+        "catalogTitle": "resisting arrest",
+        "sections": [
+          "609.50"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.50.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.50",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-failure-to-appear",
+        "citation": "Minn. Stat. § 609.49",
+        "section": "609.49",
+        "catalogTitle": "failure to appear",
+        "sections": [
+          "609.49"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.49.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.49",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-petty-theft",
+        "citation": "Minn. Stat. § 609.52",
+        "section": "609.52",
+        "sections": [
+          "609.52"
+        ],
+        "catalogTitle": "petty theft",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "officialTitle": "THEFT",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-dui-first-offense",
+        "citation": "Minn. Stat. § 169A.20",
+        "section": "169A.20",
+        "catalogTitle": "dui first offense",
+        "sections": [
+          "169A.20"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.20.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169A.20",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-aggravated-assault",
+        "citation": "Minn. Stat. § 609.225",
+        "section": "609.225",
+        "catalogTitle": "aggravated assault",
+        "sections": [
+          "609.225"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.225.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.225",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-domestic-violence-assault",
+        "citation": "Minn. Stat. § 609.2242, subd. 4",
+        "section": "609.2242",
+        "catalogTitle": "domestic violence assault",
+        "sections": [
+          "609.2242"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2242.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.2242",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-robbery-in-the-first-degree",
+        "citation": "Minn. Stat. § 609.245",
+        "section": "609.245",
+        "catalogTitle": "robbery in the first degree",
+        "sections": [
+          "609.245"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.245.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.245",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-robbery-in-the-second-degree",
+        "citation": "Minn. Stat. § 609.24",
+        "section": "609.24",
+        "catalogTitle": "robbery in the second degree",
+        "sections": [
+          "609.24"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.24.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.24",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-burglary-in-the-first-degree",
+        "citation": "Minn. Stat. § 609.582(1)",
+        "section": "609.582",
+        "catalogTitle": "burglary in the first degree",
+        "sections": [
+          "609.582"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.582",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-burglary-in-the-second-degree",
+        "citation": "Minn. Stat. § 609.582(2)",
+        "section": "609.582",
+        "catalogTitle": "burglary in the second degree",
+        "sections": [
+          "609.582"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.582",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-possession-of-controlled-substance",
+        "citation": "Minn. Stat. § 152.025",
+        "section": "152.025",
+        "catalogTitle": "possession of controlled substance",
+        "sections": [
+          "152.025"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.025.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.025",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-shoplifting",
+        "citation": "Minn. Stat. § 609.52",
+        "section": "609.52",
+        "sections": [
+          "609.52"
+        ],
+        "catalogTitle": "shoplifting",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "officialTitle": "THEFT",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-grand-theft-in-the-first-degree",
+        "citation": "Minn. Stat. § 609.52(3)(a)(1)",
+        "section": "609.52",
+        "sections": [
+          "609.52"
+        ],
+        "catalogTitle": "grand theft in the first degree",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "officialTitle": "THEFT",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-grand-theft-in-the-second-degree",
+        "citation": "Minn. Stat. § 609.52(3)(a)(2)",
+        "section": "609.52",
+        "sections": [
+          "609.52"
+        ],
+        "catalogTitle": "grand theft in the second degree",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "officialTitle": "THEFT",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-sexual-assault-in-the-first-degree",
+        "citation": "Minn. Stat. § 609.342",
+        "section": "609.342",
+        "catalogTitle": "sexual assault in the first degree",
+        "sections": [
+          "609.342"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.342.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.342",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-rape-in-the-first-degree",
+        "citation": "Minn. Stat. § 609.342",
+        "section": "609.342",
+        "catalogTitle": "rape in the first degree",
+        "sections": [
+          "609.342"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.342.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.342",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-vandalism",
+        "citation": "Minn. Stat. § 609.595",
+        "section": "609.595",
+        "catalogTitle": "vandalism",
+        "sections": [
+          "609.595"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.595.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.595",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-harassment",
+        "citation": "Minn. Stat. § 609.749",
+        "section": "609.749",
+        "catalogTitle": "harassment",
+        "sections": [
+          "609.749"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.749.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.749",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-drug-trafficking",
+        "citation": "Minn. Stat. § 152.021",
+        "section": "152.021",
+        "catalogTitle": "drug trafficking",
+        "sections": [
+          "152.021"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.021.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.021",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-possession-with-intent-to-distribute",
+        "citation": "Minn. Stat. § 152.022",
+        "section": "152.022",
+        "catalogTitle": "possession with intent to distribute",
+        "sections": [
+          "152.022"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.022.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.022",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-loitering",
+        "citation": "Minn. Stat. § 609.725",
+        "section": "609.725",
+        "catalogTitle": "loitering",
+        "sections": [
+          "609.725"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.725.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.725",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-public-intoxication",
+        "citation": "Minn. Stat. § 340A.902",
+        "section": "340A.902",
+        "catalogTitle": "public intoxication",
+        "sections": [
+          "340A.902"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.902.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/340A.902",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-burglary-in-the-third-degree",
+        "citation": "Minn. Stat. § 609.582(3)",
+        "section": "609.582",
+        "catalogTitle": "burglary in the third degree",
+        "sections": [
+          "609.582"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.582",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-distribution-of-controlled-substance",
+        "citation": "Minn. Stat. § 152.021(1)",
+        "section": "152.021",
+        "catalogTitle": "distribution of controlled substance",
+        "sections": [
+          "152.021"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.021.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.021",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-manufacturing-controlled-substance",
+        "citation": "Minn. Stat. § 152.021(2)(a)",
+        "section": "152.021",
+        "catalogTitle": "manufacturing controlled substance",
+        "sections": [
+          "152.021"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.021.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.021",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-possession-of-drug-paraphernalia",
+        "citation": "Minn. Stat. § 152.092",
+        "section": "152.092",
+        "catalogTitle": "possession of drug paraphernalia",
+        "sections": [
+          "152.092"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.092.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.092",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-maintaining-drug-house",
+        "citation": "Minn. Stat. § 152.025(2)(3)",
+        "section": "152.025",
+        "catalogTitle": "maintaining drug house",
+        "sections": [
+          "152.025"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.025.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.025",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-dui-second-offense",
+        "citation": "Minn. Stat. § 169A.25",
+        "section": "169A.25",
+        "catalogTitle": "dui second offense",
+        "sections": [
+          "169A.25"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.25.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169A.25",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-dui-third-offense",
+        "citation": "Minn. Stat. § 169A.24",
+        "section": "169A.24",
+        "catalogTitle": "dui third offense",
+        "sections": [
+          "169A.24"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.24.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169A.24",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-unlawful-carrying-of-weapon",
+        "citation": "Minn. Stat. § 624.714",
+        "section": "624.714",
+        "catalogTitle": "unlawful carrying of weapon",
+        "sections": [
+          "624.714"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.714.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/624.714",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-felon-in-possession-of-firearm",
+        "citation": "Minn. Stat. § 624.713",
+        "section": "624.713",
+        "catalogTitle": "felon in possession of firearm",
+        "sections": [
+          "624.713"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.713.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/624.713",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-discharge-of-firearm-in-city",
+        "citation": "Minn. Stat. § 609.66(1)(a)(3)",
+        "section": "609.66",
+        "catalogTitle": "discharge of firearm in city",
+        "sections": [
+          "609.66"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.66.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.66",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-possession-of-prohibited-weapon",
+        "citation": "Minn. Stat. § 609.67",
+        "section": "609.67",
+        "catalogTitle": "possession of prohibited weapon",
+        "sections": [
+          "609.67"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.67.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.67",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-assault-on-peace-officer",
+        "citation": "Minn. Stat. § 609.2231(1)",
+        "section": "609.2231",
+        "catalogTitle": "assault on peace officer",
+        "sections": [
+          "609.2231"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2231.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.2231",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-criminal-attempt",
+        "citation": "Minn. Stat. § 609.17",
+        "section": "609.17",
+        "catalogTitle": "criminal attempt",
+        "sections": [
+          "609.17"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.17",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-conspiracy",
+        "citation": "Minn. Stat. § 609.175",
+        "section": "609.175",
+        "catalogTitle": "conspiracy",
+        "sections": [
+          "609.175"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.175.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.175",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-aiding-and-abetting",
+        "citation": "Minn. Stat. § 609.05",
+        "section": "609.05",
+        "catalogTitle": "aiding and abetting",
+        "sections": [
+          "609.05"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.05.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.05",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-accessory-after-the-fact",
+        "citation": "Minn. Stat. § 609.495",
+        "section": "609.495",
+        "catalogTitle": "accessory after the fact",
+        "sections": [
+          "609.495"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.495.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.495",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-criminal-solicitation",
+        "citation": "Minn. Stat. § 609.195",
+        "section": "609.195",
+        "catalogTitle": "criminal solicitation",
+        "sections": [
+          "609.195"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.195.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.195",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-gang-enhancement",
+        "citation": "Minn. Stat. § 609.229",
+        "section": "609.229",
+        "catalogTitle": "gang enhancement",
+        "sections": [
+          "609.229"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.229.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.229",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-hate-crime-enhancement",
+        "citation": "Minn. Stat. § 609.2231(4)",
+        "section": "609.2231",
+        "catalogTitle": "hate crime enhancement",
+        "sections": [
+          "609.2231"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2231.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.2231",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-recidivist-enhancement",
+        "citation": "Minn. Stat. § 609.108",
+        "section": "609.108",
+        "catalogTitle": "recidivist enhancement",
+        "sections": [
+          "609.108"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.108.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.108",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-firearm-in-felony-enhancement",
+        "citation": "Minn. Stat. § 609.11",
+        "section": "609.11",
+        "catalogTitle": "firearm in felony enhancement",
+        "sections": [
+          "609.11"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.11.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.11",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-drug-school-zone-enhancement",
+        "citation": "Minn. Stat. § 152.022(2)(3)",
+        "section": "152.022",
+        "catalogTitle": "drug school zone enhancement",
+        "sections": [
+          "152.022"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.022.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.022",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-money-laundering",
+        "citation": "Minn. Stat. § 609.322",
+        "section": "609.322",
+        "catalogTitle": "money laundering",
+        "sections": [
+          "609.322"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.322.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.322",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-wire-fraud",
+        "citation": "Minn. Stat. § 609.52(2)(a)(3)",
+        "section": "609.52",
+        "sections": [
+          "609.52"
+        ],
+        "catalogTitle": "wire fraud",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "officialTitle": "THEFT",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-mail-fraud",
+        "citation": "Minn. Stat. § 609.27",
+        "section": "609.27",
+        "catalogTitle": "mail fraud",
+        "sections": [
+          "609.27"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.27.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.27",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-check-fraud",
+        "citation": "Minn. Stat. § 609.535",
+        "section": "609.535",
+        "catalogTitle": "check fraud",
+        "sections": [
+          "609.535"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.535.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.535",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-insurance-fraud",
+        "citation": "Minn. Stat. § 609.611",
+        "section": "609.611",
+        "catalogTitle": "insurance fraud",
+        "sections": [
+          "609.611"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.611.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.611",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-tax-fraud",
+        "citation": "Minn. Stat. § 289A.63",
+        "section": "289A.63",
+        "catalogTitle": "tax fraud",
+        "sections": [
+          "289A.63"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 289A.63.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/289A.63",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-identity-theft",
+        "citation": "Minn. Stat. § 609.527",
+        "section": "609.527",
+        "catalogTitle": "identity theft",
+        "sections": [
+          "609.527"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.527.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.527",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-computer-fraud",
+        "citation": "Minn. Stat. § 609.87",
+        "section": "609.87",
+        "catalogTitle": "computer fraud",
+        "sections": [
+          "609.87"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.87.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.87",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-credit-card-fraud",
+        "citation": "Minn. Stat. § 609.821",
+        "section": "609.821",
+        "catalogTitle": "credit card fraud",
+        "sections": [
+          "609.821"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.821.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.821",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-embezzlement",
+        "citation": "Minn. Stat. § 609.52(2)(a)(4)",
+        "section": "609.52",
+        "sections": [
+          "609.52"
+        ],
+        "catalogTitle": "embezzlement",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "officialTitle": "THEFT",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-assault-in-the-first-degree",
+        "citation": "Minn. Stat. § 609.221",
+        "section": "609.221",
+        "catalogTitle": "assault in the first degree",
+        "sections": [
+          "609.221"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.221.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.221",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-assault-with-deadly-weapon",
+        "citation": "Minn. Stat. § 609.222",
+        "section": "609.222",
+        "catalogTitle": "assault with deadly weapon",
+        "sections": [
+          "609.222"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.222.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.222",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-assault-in-the-second-degree",
+        "citation": "Minn. Stat. § 609.222",
+        "section": "609.222",
+        "catalogTitle": "assault in the second degree",
+        "sections": [
+          "609.222"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.222.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.222",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-assault-in-the-third-degree",
+        "citation": "Minn. Stat. § 609.223",
+        "section": "609.223",
+        "catalogTitle": "assault in the third degree",
+        "sections": [
+          "609.223"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.223.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.223",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-menacing",
+        "citation": "Minn. Stat. § 609.713",
+        "section": "609.713",
+        "catalogTitle": "menacing",
+        "sections": [
+          "609.713"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.713.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.713",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-carjacking",
+        "citation": "Minn. Stat. § 609.247, subd. 2",
+        "section": "609.247",
+        "catalogTitle": "carjacking",
+        "sections": [
+          "609.247"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.247.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.247",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-bank-robbery",
+        "citation": "Minn. Stat. § 609.245",
+        "section": "609.245",
+        "catalogTitle": "bank robbery",
+        "sections": [
+          "609.245"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.245.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.245",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-reckless-driving",
+        "citation": "Minn. Stat. § 169.13",
+        "section": "169.13",
+        "catalogTitle": "reckless driving",
+        "sections": [
+          "169.13"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.13.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169.13",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-hit-and-run",
+        "citation": "Minn. Stat. § 169.09",
+        "section": "169.09",
+        "catalogTitle": "hit and run",
+        "sections": [
+          "169.09"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.09.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169.09",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-forgery",
+        "citation": "Minn. Stat. § 609.63",
+        "section": "609.63",
+        "catalogTitle": "forgery",
+        "sections": [
+          "609.63"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.63.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.63",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-residential-burglary",
+        "citation": "Minn. Stat. § 609.582(1)(a)",
+        "section": "609.582",
+        "catalogTitle": "residential burglary",
+        "sections": [
+          "609.582"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.582",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-commercial-burglary",
+        "citation": "Minn. Stat. § 609.582(2)(a)",
+        "section": "609.582",
+        "catalogTitle": "commercial burglary",
+        "sections": [
+          "609.582"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.582",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-auto-burglary",
+        "citation": "Minn. Stat. § 609.582(4)",
+        "section": "609.582",
+        "catalogTitle": "auto burglary",
+        "sections": [
+          "609.582"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.582",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-contempt-of-court",
+        "citation": "Minn. Stat. § 588.01",
+        "section": "588.01",
+        "catalogTitle": "contempt of court",
+        "sections": [
+          "588.01"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 588.01.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/588.01",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-protective-order-violation",
+        "citation": "Minn. Stat. § 518B.01(14)",
+        "section": "518B.01",
+        "catalogTitle": "protective order violation",
+        "sections": [
+          "518B.01"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 518B.01.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/518B.01",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-probation-violation",
+        "citation": "Minn. Stat. § 609.14",
+        "section": "609.14",
+        "catalogTitle": "probation violation",
+        "sections": [
+          "609.14"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.14.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.14",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-child-sexual-abuse",
+        "citation": "Minn. Stat. § 609.342",
+        "section": "609.342",
+        "catalogTitle": "child sexual abuse",
+        "sections": [
+          "609.342"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.342.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.342",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-sexual-exploitation-of-minor",
+        "citation": "Minn. Stat. § 617.246",
+        "section": "617.246",
+        "catalogTitle": "sexual exploitation of minor",
+        "sections": [
+          "617.246"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 617.246.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/617.246",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-theft-by-receiving",
+        "citation": "Minn. Stat. § 609.53",
+        "section": "609.53",
+        "catalogTitle": "theft by receiving",
+        "sections": [
+          "609.53"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.53.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.53",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-statutory-rape",
+        "citation": "Minn. Stat. § 609.344",
+        "section": "609.344",
+        "catalogTitle": "statutory rape",
+        "sections": [
+          "609.344"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.344.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.344",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-open-container",
+        "citation": "Minn. Stat. § 169A.35",
+        "section": "169A.35",
+        "catalogTitle": "open container",
+        "sections": [
+          "169A.35"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.35.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169A.35",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-minor-in-possession",
+        "citation": "Minn. Stat. § 340A.503(1)",
+        "section": "340A.503",
+        "catalogTitle": "minor in possession",
+        "sections": [
+          "340A.503"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.503.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/340A.503",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-false-info-to-police",
+        "citation": "Minn. Stat. § 609.505",
+        "section": "609.505",
+        "catalogTitle": "false info to police",
+        "sections": [
+          "609.505"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.505.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.505",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-driving-without-insurance",
+        "citation": "Minn. Stat. § 169.792",
+        "section": "169.792",
+        "catalogTitle": "driving without insurance",
+        "sections": [
+          "169.792"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.792.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169.792",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-expired-registration",
+        "citation": "Minn. Stat. § 168.09",
+        "section": "168.09",
+        "catalogTitle": "expired registration",
+        "sections": [
+          "168.09"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 168.09.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/168.09",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-expired-inspection",
+        "citation": "Minn. Stat. § 169.781",
+        "section": "169.781",
+        "catalogTitle": "expired inspection",
+        "sections": [
+          "169.781"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.781.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169.781",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-failure-to-pay-child-support",
+        "citation": "Minn. Stat. § 609.375",
+        "section": "609.375",
+        "catalogTitle": "failure to pay child support",
+        "sections": [
+          "609.375"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.375.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.375",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-noise-violation",
+        "citation": "Minn. Stat. § 609.72(1)(3)",
+        "section": "609.72",
+        "catalogTitle": "noise violation",
+        "sections": [
+          "609.72"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.72",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-indecent-exposure",
+        "citation": "Minn. Stat. § 617.23",
+        "section": "617.23",
+        "catalogTitle": "indecent exposure",
+        "sections": [
+          "617.23"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 617.23.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/617.23",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-fake-id",
+        "citation": "Minn. Stat. § 340A.703",
+        "section": "340A.703",
+        "catalogTitle": "fake id",
+        "sections": [
+          "340A.703"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.703.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/340A.703",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-animal-at-large",
+        "citation": "Minn. Stat. § 347.03",
+        "section": "347.03",
+        "catalogTitle": "animal at large",
+        "sections": [
+          "347.03"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 347.03.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/347.03",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-animal-cruelty-misdemeanor",
+        "citation": "Minn. Stat. § 343.21(2)",
+        "section": "343.21",
+        "catalogTitle": "animal cruelty misdemeanor",
+        "sections": [
+          "343.21"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 343.21.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/343.21",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-illegal-camping",
+        "citation": "Minn. Stat. § 609.605(1)(b)(3)",
+        "section": "609.605",
+        "catalogTitle": "illegal camping",
+        "sections": [
+          "609.605"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.605",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-panhandling",
+        "citation": "Minn. Stat. § 609.72(1)",
+        "section": "609.72",
+        "catalogTitle": "panhandling",
+        "sections": [
+          "609.72"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.72",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-curfew-violation",
+        "citation": "Minn. Stat. § 260C.143",
+        "section": "260C.143",
+        "catalogTitle": "curfew violation",
+        "sections": [
+          "260C.143"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260C.143.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/260C.143",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-defective-vehicle-equipment",
+        "citation": "Minn. Stat. § 169.47",
+        "section": "169.47",
+        "catalogTitle": "defective vehicle equipment",
+        "sections": [
+          "169.47"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.47.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169.47",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-truancy",
+        "citation": "Minn. Stat. § 260C.007(6)(c)",
+        "section": "260C.007",
+        "catalogTitle": "truancy",
+        "sections": [
+          "260C.007"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260C.007.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/260C.007",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-littering",
+        "citation": "Minn. Stat. § 609.68",
+        "section": "609.68",
+        "catalogTitle": "littering",
+        "sections": [
+          "609.68"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.68.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.68",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-illegal-fireworks",
+        "citation": "Minn. Stat. § 624.20",
+        "section": "624.20",
+        "catalogTitle": "illegal fireworks",
+        "sections": [
+          "624.20"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.20.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/624.20",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-alcohol-in-park",
+        "citation": "Minn. Stat. § 340A.503(2)",
+        "section": "340A.503",
+        "catalogTitle": "alcohol in park",
+        "sections": [
+          "340A.503"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.503.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/340A.503",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-hunting-fishing-no-license",
+        "citation": "Minn. Stat. § 97A.421",
+        "section": "97A.421",
+        "catalogTitle": "hunting fishing no license",
+        "sections": [
+          "97A.421"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 97A.421.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/97A.421",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-attempted-robbery",
+        "citation": "Minn. Stat. §§ 609.17, 609.24",
+        "section": "609.17",
+        "catalogTitle": "attempted robbery",
+        "sections": [
+          "609.17",
+          "609.24"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.17",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-attempted-sexual-assault",
+        "citation": "Minn. Stat. §§ 609.17, 609.342",
+        "section": "609.17",
+        "catalogTitle": "attempted sexual assault",
+        "sections": [
+          "609.17",
+          "609.342"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.17",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-solicitation",
+        "citation": "Minn. Stat. § 609.324",
+        "section": "609.324",
+        "catalogTitle": "solicitation",
+        "sections": [
+          "609.324"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.324.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.324",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-rico-organized-crime",
+        "citation": "Minn. Stat. § 609.903",
+        "section": "609.903",
+        "catalogTitle": "rico organized crime",
+        "sections": [
+          "609.903"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.903.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.903",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-juvenile-delinquency-felony",
+        "citation": "Minn. Stat. § 260B.101(1)",
+        "section": "260B.101",
+        "catalogTitle": "juvenile delinquency felony",
+        "sections": [
+          "260B.101"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260B.101.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/260B.101",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-juvenile-delinquency-misdemeanor",
+        "citation": "Minn. Stat. § 260B.101(1)",
+        "section": "260B.101",
+        "catalogTitle": "juvenile delinquency misdemeanor",
+        "sections": [
+          "260B.101"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260B.101.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/260B.101",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-juvenile-transfer-adult-court",
+        "citation": "Minn. Stat. § 260B.125",
+        "section": "260B.125",
+        "catalogTitle": "juvenile transfer adult court",
+        "sections": [
+          "260B.125"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260B.125.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/260B.125",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-juvenile-firearm-possession",
+        "citation": "Minn. Stat. § 624.713",
+        "section": "624.713",
+        "catalogTitle": "juvenile firearm possession",
+        "sections": [
+          "624.713"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.713.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/624.713",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-sexual-assault-in-the-third-degree",
+        "citation": "Minn. Stat. § 609.344",
+        "section": "609.344",
+        "catalogTitle": "sexual assault in the third degree",
+        "sections": [
+          "609.344"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.344.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.344",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-sexual-assault-in-the-second-degree",
+        "citation": "Minn. Stat. § 609.343",
+        "section": "609.343",
+        "catalogTitle": "sexual assault in the second degree",
+        "sections": [
+          "609.343"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.343.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.343",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-unregistered-vehicle",
+        "citation": "Minn. Stat. § 168.09",
+        "section": "168.09",
+        "catalogTitle": "unregistered vehicle",
+        "sections": [
+          "168.09"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 168.09.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/168.09",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-trespass-after-warning",
+        "citation": "Minn. Stat. § 609.605",
+        "section": "609.605",
+        "catalogTitle": "trespass after warning",
+        "sections": [
+          "609.605"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.605",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-rape-in-the-second-degree",
+        "citation": "Minn. Stat. § 609.343",
+        "section": "609.343",
+        "catalogTitle": "rape in the second degree",
+        "sections": [
+          "609.343"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.343.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.343",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-bad-checks",
+        "citation": "Minn. Stat. § 609.535",
+        "section": "609.535",
+        "catalogTitle": "bad checks",
+        "sections": [
+          "609.535"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.535.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.535",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-disturbing-the-peace",
+        "citation": "Minn. Stat. § 609.72",
+        "section": "609.72",
+        "catalogTitle": "disturbing the peace",
+        "sections": [
+          "609.72"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.72",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-driving-while-suspended",
+        "citation": "Minn. Stat. § 171.24",
+        "section": "171.24",
+        "catalogTitle": "driving while suspended",
+        "sections": [
+          "171.24"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 171.24.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/171.24",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-reckless-driving-criminal",
+        "citation": "Minn. Stat. § 169.13",
+        "section": "169.13",
+        "catalogTitle": "reckless driving criminal",
+        "sections": [
+          "169.13"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.13.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169.13",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-attempted-murder",
+        "citation": "Minn. Stat. §§ 609.17, 609.185",
+        "section": "609.17",
+        "catalogTitle": "attempted murder",
+        "sections": [
+          "609.17",
+          "609.185"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.17",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-felony-murder",
+        "citation": "Minn. Stat. § 609.185(a)(3)",
+        "section": "609.185",
+        "sections": [
+          "609.185"
+        ],
+        "catalogTitle": "felony murder",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.185 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "7f968b9098e7b85dcfe7a37ea70721a77d79129fc940420280f2dad74863981a",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.185",
+        "officialTitle": "MURDER IN THE FIRST DEGREE",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-criminally-negligent-homicide",
+        "citation": "Minn. Stat. § 609.21",
+        "section": "609.21",
+        "catalogTitle": "criminally negligent homicide",
+        "sections": [
+          "609.21"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.21.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.21",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-trespass",
+        "citation": "Minn. Stat. § 609.605",
+        "section": "609.605",
+        "catalogTitle": "trespass",
+        "sections": [
+          "609.605"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.605",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-dwi",
+        "citation": "Minn. Stat. § 169A.20",
+        "section": "169A.20",
+        "catalogTitle": "dwi",
+        "sections": [
+          "169A.20"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.20.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/169A.20",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-criminal-damage-to-property",
+        "citation": "Minn. Stat. § 609.595",
+        "section": "609.595",
+        "catalogTitle": "criminal damage to property",
+        "sections": [
+          "609.595"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.595.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.595",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-domestic-assault",
+        "citation": "Minn. Stat. § 609.2242",
+        "section": "609.2242",
+        "catalogTitle": "domestic assault",
+        "sections": [
+          "609.2242"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2242.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.2242",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-theft-under-500",
+        "citation": "Minn. Stat. § 609.52(3)(5)",
+        "section": "609.52",
+        "sections": [
+          "609.52"
+        ],
+        "catalogTitle": "theft under 500",
+        "mappingClass": "unresolved",
+        "score": 30,
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run.",
+        "sourceHash": "a57d4330884b629e3ce24e047c567ee002a645092780bc16f4f4139d7b943857",
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.52",
+        "officialTitle": "THEFT",
+        "currentness": {
+          "status": "stale",
+          "evidence": "2024 Minnesota Statutes",
+          "editionYear": 2024
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-assault-fifth-degree",
+        "citation": "Minn. Stat. § 609.224",
+        "section": "609.224",
+        "catalogTitle": "assault fifth degree",
+        "sections": [
+          "609.224"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.224.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.224",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-possession-small-amount-marijuana",
+        "citation": "Minn. Stat. § 152.027(4)",
+        "section": "152.027",
+        "catalogTitle": "possession small amount marijuana",
+        "sections": [
+          "152.027"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.027.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/152.027",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mn-driving-after-revocation",
+        "citation": "Minn. Stat. § 171.24(2)",
+        "section": "171.24",
+        "catalogTitle": "driving after revocation",
+        "sections": [
+          "171.24"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 171.24.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/171.24",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      }
+    ],
+    "unresolved": [
+      {
+        "chargeId": "mn-murder-in-the-first-degree",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.185 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-murder-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.19."
+      },
+      {
+        "chargeId": "mn-murder-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.195."
+      },
+      {
+        "chargeId": "mn-voluntary-manslaughter",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.20."
+      },
+      {
+        "chargeId": "mn-involuntary-manslaughter",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.205."
+      },
+      {
+        "chargeId": "mn-vehicular-homicide",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2112."
+      },
+      {
+        "chargeId": "mn-trespassing",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605."
+      },
+      {
+        "chargeId": "mn-disorderly-conduct",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72."
+      },
+      {
+        "chargeId": "mn-resisting-arrest",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.50."
+      },
+      {
+        "chargeId": "mn-failure-to-appear",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.49."
+      },
+      {
+        "chargeId": "mn-petty-theft",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-dui-first-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.20."
+      },
+      {
+        "chargeId": "mn-aggravated-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.225."
+      },
+      {
+        "chargeId": "mn-domestic-violence-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2242."
+      },
+      {
+        "chargeId": "mn-robbery-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.245."
+      },
+      {
+        "chargeId": "mn-robbery-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.24."
+      },
+      {
+        "chargeId": "mn-burglary-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582."
+      },
+      {
+        "chargeId": "mn-burglary-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582."
+      },
+      {
+        "chargeId": "mn-possession-of-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.025."
+      },
+      {
+        "chargeId": "mn-shoplifting",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-grand-theft-in-the-first-degree",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-grand-theft-in-the-second-degree",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-sexual-assault-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.342."
+      },
+      {
+        "chargeId": "mn-rape-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.342."
+      },
+      {
+        "chargeId": "mn-vandalism",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.595."
+      },
+      {
+        "chargeId": "mn-harassment",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.749."
+      },
+      {
+        "chargeId": "mn-drug-trafficking",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.021."
+      },
+      {
+        "chargeId": "mn-possession-with-intent-to-distribute",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.022."
+      },
+      {
+        "chargeId": "mn-loitering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.725."
+      },
+      {
+        "chargeId": "mn-public-intoxication",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.902."
+      },
+      {
+        "chargeId": "mn-burglary-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582."
+      },
+      {
+        "chargeId": "mn-distribution-of-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.021."
+      },
+      {
+        "chargeId": "mn-manufacturing-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.021."
+      },
+      {
+        "chargeId": "mn-possession-of-drug-paraphernalia",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.092."
+      },
+      {
+        "chargeId": "mn-maintaining-drug-house",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.025."
+      },
+      {
+        "chargeId": "mn-dui-second-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.25."
+      },
+      {
+        "chargeId": "mn-dui-third-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.24."
+      },
+      {
+        "chargeId": "mn-unlawful-carrying-of-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.714."
+      },
+      {
+        "chargeId": "mn-felon-in-possession-of-firearm",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.713."
+      },
+      {
+        "chargeId": "mn-discharge-of-firearm-in-city",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.66."
+      },
+      {
+        "chargeId": "mn-possession-of-prohibited-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.67."
+      },
+      {
+        "chargeId": "mn-assault-on-peace-officer",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2231."
+      },
+      {
+        "chargeId": "mn-criminal-attempt",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17."
+      },
+      {
+        "chargeId": "mn-conspiracy",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.175."
+      },
+      {
+        "chargeId": "mn-aiding-and-abetting",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.05."
+      },
+      {
+        "chargeId": "mn-accessory-after-the-fact",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.495."
+      },
+      {
+        "chargeId": "mn-criminal-solicitation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.195."
+      },
+      {
+        "chargeId": "mn-gang-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.229."
+      },
+      {
+        "chargeId": "mn-hate-crime-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2231."
+      },
+      {
+        "chargeId": "mn-recidivist-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.108."
+      },
+      {
+        "chargeId": "mn-firearm-in-felony-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.11."
+      },
+      {
+        "chargeId": "mn-drug-school-zone-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.022."
+      },
+      {
+        "chargeId": "mn-money-laundering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.322."
+      },
+      {
+        "chargeId": "mn-wire-fraud",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-mail-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.27."
+      },
+      {
+        "chargeId": "mn-check-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.535."
+      },
+      {
+        "chargeId": "mn-insurance-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.611."
+      },
+      {
+        "chargeId": "mn-tax-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 289A.63."
+      },
+      {
+        "chargeId": "mn-identity-theft",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.527."
+      },
+      {
+        "chargeId": "mn-computer-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.87."
+      },
+      {
+        "chargeId": "mn-credit-card-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.821."
+      },
+      {
+        "chargeId": "mn-embezzlement",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-assault-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.221."
+      },
+      {
+        "chargeId": "mn-assault-with-deadly-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.222."
+      },
+      {
+        "chargeId": "mn-assault-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.222."
+      },
+      {
+        "chargeId": "mn-assault-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.223."
+      },
+      {
+        "chargeId": "mn-menacing",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.713."
+      },
+      {
+        "chargeId": "mn-carjacking",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.247."
+      },
+      {
+        "chargeId": "mn-bank-robbery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.245."
+      },
+      {
+        "chargeId": "mn-reckless-driving",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.13."
+      },
+      {
+        "chargeId": "mn-hit-and-run",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.09."
+      },
+      {
+        "chargeId": "mn-forgery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.63."
+      },
+      {
+        "chargeId": "mn-residential-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582."
+      },
+      {
+        "chargeId": "mn-commercial-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582."
+      },
+      {
+        "chargeId": "mn-auto-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.582."
+      },
+      {
+        "chargeId": "mn-contempt-of-court",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 588.01."
+      },
+      {
+        "chargeId": "mn-protective-order-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 518B.01."
+      },
+      {
+        "chargeId": "mn-probation-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.14."
+      },
+      {
+        "chargeId": "mn-child-sexual-abuse",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.342."
+      },
+      {
+        "chargeId": "mn-sexual-exploitation-of-minor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 617.246."
+      },
+      {
+        "chargeId": "mn-theft-by-receiving",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.53."
+      },
+      {
+        "chargeId": "mn-statutory-rape",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.344."
+      },
+      {
+        "chargeId": "mn-open-container",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.35."
+      },
+      {
+        "chargeId": "mn-minor-in-possession",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.503."
+      },
+      {
+        "chargeId": "mn-false-info-to-police",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.505."
+      },
+      {
+        "chargeId": "mn-driving-without-insurance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.792."
+      },
+      {
+        "chargeId": "mn-expired-registration",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 168.09."
+      },
+      {
+        "chargeId": "mn-expired-inspection",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.781."
+      },
+      {
+        "chargeId": "mn-failure-to-pay-child-support",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.375."
+      },
+      {
+        "chargeId": "mn-noise-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72."
+      },
+      {
+        "chargeId": "mn-indecent-exposure",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 617.23."
+      },
+      {
+        "chargeId": "mn-fake-id",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.703."
+      },
+      {
+        "chargeId": "mn-animal-at-large",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 347.03."
+      },
+      {
+        "chargeId": "mn-animal-cruelty-misdemeanor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 343.21."
+      },
+      {
+        "chargeId": "mn-illegal-camping",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605."
+      },
+      {
+        "chargeId": "mn-panhandling",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72."
+      },
+      {
+        "chargeId": "mn-curfew-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260C.143."
+      },
+      {
+        "chargeId": "mn-defective-vehicle-equipment",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.47."
+      },
+      {
+        "chargeId": "mn-truancy",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260C.007."
+      },
+      {
+        "chargeId": "mn-littering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.68."
+      },
+      {
+        "chargeId": "mn-illegal-fireworks",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.20."
+      },
+      {
+        "chargeId": "mn-alcohol-in-park",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 340A.503."
+      },
+      {
+        "chargeId": "mn-hunting-fishing-no-license",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 97A.421."
+      },
+      {
+        "chargeId": "mn-attempted-robbery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17."
+      },
+      {
+        "chargeId": "mn-attempted-sexual-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17."
+      },
+      {
+        "chargeId": "mn-solicitation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.324."
+      },
+      {
+        "chargeId": "mn-rico-organized-crime",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.903."
+      },
+      {
+        "chargeId": "mn-juvenile-delinquency-felony",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260B.101."
+      },
+      {
+        "chargeId": "mn-juvenile-delinquency-misdemeanor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260B.101."
+      },
+      {
+        "chargeId": "mn-juvenile-transfer-adult-court",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 260B.125."
+      },
+      {
+        "chargeId": "mn-juvenile-firearm-possession",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 624.713."
+      },
+      {
+        "chargeId": "mn-sexual-assault-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.344."
+      },
+      {
+        "chargeId": "mn-sexual-assault-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.343."
+      },
+      {
+        "chargeId": "mn-unregistered-vehicle",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 168.09."
+      },
+      {
+        "chargeId": "mn-trespass-after-warning",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605."
+      },
+      {
+        "chargeId": "mn-rape-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.343."
+      },
+      {
+        "chargeId": "mn-bad-checks",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.535."
+      },
+      {
+        "chargeId": "mn-disturbing-the-peace",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.72."
+      },
+      {
+        "chargeId": "mn-driving-while-suspended",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 171.24."
+      },
+      {
+        "chargeId": "mn-reckless-driving-criminal",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169.13."
+      },
+      {
+        "chargeId": "mn-attempted-murder",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.17."
+      },
+      {
+        "chargeId": "mn-felony-murder",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.185 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-criminally-negligent-homicide",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.21."
+      },
+      {
+        "chargeId": "mn-trespass",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.605."
+      },
+      {
+        "chargeId": "mn-dwi",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 169A.20."
+      },
+      {
+        "chargeId": "mn-criminal-damage-to-property",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.595."
+      },
+      {
+        "chargeId": "mn-domestic-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.2242."
+      },
+      {
+        "chargeId": "mn-theft-under-500",
+        "reasonCode": "currentness_evidence_stale",
+        "reason": "Section 609.52 has dated source evidence from 2024, which is too old for the current verification run."
+      },
+      {
+        "chargeId": "mn-assault-fifth-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 609.224."
+      },
+      {
+        "chargeId": "mn-possession-small-amount-marijuana",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 152.027."
+      },
+      {
+        "chargeId": "mn-driving-after-revocation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MN official source document was available for section 171.24."
+      }
+    ],
+    "summary": {
+      "totalCatalogEntries": 131,
+      "exactMappings": 0,
+      "likelyAliases": 0,
+      "compoundOrSharedCitations": 0,
+      "unresolved": 131,
+      "currentnessVerifiedDocuments": 0
+    }
+  }
 }

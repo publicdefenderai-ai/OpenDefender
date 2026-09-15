@@ -1,0 +1,3402 @@
+{
+  "state": "MI",
+  "runAt": "2026-09-15T15:36:37.130Z",
+  "commissionSource": "Michigan Legislature",
+  "commissionTableUrl": "https://www.legislature.mi.gov/Laws/MCL",
+  "promoted": [],
+  "urlAdded": [],
+  "notInCommissionTable": [
+    "mi-murder-in-the-second-degree (750.317)",
+    "mi-voluntary-manslaughter (750.321)",
+    "mi-involuntary-manslaughter (750.321)",
+    "mi-vehicular-homicide (257.625)",
+    "mi-attempted-murder (750.91)",
+    "mi-disorderly-conduct (750.167)",
+    "mi-public-intoxication (750.167)",
+    "mi-resisting-arrest (750.479)",
+    "mi-petty-theft (750.356)",
+    "mi-aggravated-assault (750.81a)",
+    "mi-possession-of-controlled-substance (333.7403)",
+    "mi-shoplifting (750.356c)",
+    "mi-grand-theft-in-the-first-degree (750.356)",
+    "mi-grand-theft-in-the-second-degree (750.356)",
+    "mi-sexual-assault-in-the-first-degree (750.520b)",
+    "mi-vandalism (750.377a)",
+    "mi-harassment (750.411s)",
+    "mi-loitering (750.167)",
+    "mi-failure-to-appear (750.199a)",
+    "mi-possession-marijuana (333.7403)",
+    "mi-distribution-of-controlled-substance (333.7401)",
+    "mi-manufacturing-controlled-substance (333.7401)",
+    "mi-possession-of-drug-paraphernalia (333.7451)",
+    "mi-maintaining-drug-house (333.7405)",
+    "mi-unlawful-carrying-of-weapon (750.227)",
+    "mi-felon-in-possession-of-firearm (750.224f)",
+    "mi-discharge-of-firearm-in-city (750.234e)",
+    "mi-possession-of-prohibited-weapon (750.224)",
+    "mi-assault-on-peace-officer (750.81d)",
+    "mi-criminal-attempt (750.92)",
+    "mi-conspiracy (750.157a)",
+    "mi-aiding-and-abetting (767.39)",
+    "mi-accessory-after-the-fact (750.505)",
+    "mi-criminal-solicitation (750.157b)",
+    "mi-gang-enhancement (750.411u)",
+    "mi-hate-crime-enhancement (750.147b)",
+    "mi-recidivist-enhancement (769.10)",
+    "mi-firearm-in-felony-enhancement (750.227b)",
+    "mi-drug-school-zone-enhancement (333.7410)",
+    "mi-money-laundering (750.411k)",
+    "mi-wire-fraud (750.218)",
+    "mi-mail-fraud (750.218)",
+    "mi-check-fraud (750.131)",
+    "mi-insurance-fraud (500.4503)",
+    "mi-tax-fraud (205.27a)",
+    "mi-identity-theft (445.65)",
+    "mi-computer-fraud (752.796)",
+    "mi-credit-card-fraud (750.157q)",
+    "mi-embezzlement (750.174)",
+    "mi-menacing (750.81)",
+    "mi-carjacking (750.529a)",
+    "mi-bank-robbery (750.531)",
+    "mi-reckless-driving (257.626)",
+    "mi-hit-and-run (257.617)",
+    "mi-forgery (750.248)",
+    "mi-residential-burglary (750.110a)",
+    "mi-commercial-burglary (750.110)",
+    "mi-auto-burglary (750.356a)",
+    "mi-contempt-of-court (600.1711)",
+    "mi-protective-order-violation (600.2950)",
+    "mi-probation-violation (771.4)",
+    "mi-child-sexual-abuse (750.520b)",
+    "mi-sexual-exploitation-of-minor (750.145c)",
+    "mi-theft-by-receiving (750.535)",
+    "mi-statutory-rape (750.520d)",
+    "mi-open-container (257.624a)",
+    "mi-minor-in-possession (436.1703)",
+    "mi-false-info-to-police (750.479c)",
+    "mi-driving-without-insurance (500.3102)",
+    "mi-expired-registration (257.255)",
+    "mi-expired-inspection (257.683)",
+    "mi-failure-to-pay-child-support (750.165)",
+    "mi-noise-violation (750.170)",
+    "mi-indecent-exposure (750.335a)",
+    "mi-fake-id (436.1703)",
+    "mi-animal-at-large (287.262)",
+    "mi-animal-cruelty-misdemeanor (750.50)",
+    "mi-illegal-camping (750.552)",
+    "mi-panhandling (750.167)",
+    "mi-curfew-violation (722.751)",
+    "mi-defective-vehicle-equipment (257.683)",
+    "mi-truancy (380.1561)",
+    "mi-littering (324.8901)",
+    "mi-illegal-fireworks (28.457)",
+    "mi-alcohol-in-park (436.1915)",
+    "mi-hunting-fishing-no-license (324.43504)",
+    "mi-attempted-robbery (750.92)",
+    "mi-solicitation (750.449a)",
+    "mi-rico-organized-crime (750.159i)",
+    "mi-juvenile-delinquency-felony (712A.2)",
+    "mi-juvenile-delinquency-misdemeanor (712A.2)",
+    "mi-juvenile-transfer-adult-court (712A.4)",
+    "mi-juvenile-firearm-possession (750.234f)",
+    "mi-sexual-assault-in-the-third-degree (750.520d)",
+    "mi-sexual-assault-in-the-second-degree (750.520c)",
+    "mi-unregistered-vehicle (257.216)",
+    "mi-trespass-after-warning (750.552)",
+    "mi-bad-checks (750.131)",
+    "mi-disturbing-the-peace (750.167)",
+    "mi-driving-while-suspended (257.904)",
+    "mi-reckless-driving-criminal (257.626)",
+    "mi-criminally-negligent-homicide (750.324)",
+    "mi-malicious-destruction-of-property (750.377a)",
+    "mi-retail-fraud-third-degree (750.356d)",
+    "mi-owi (257.625)",
+    "mi-disorderly-person (750.167)",
+    "mi-driving-while-license-suspended (257.904)",
+    "mi-larceny-under-200 (750.356)"
+  ],
+  "alreadyHigh": [
+    "mi-murder-in-the-first-degree",
+    "mi-dui-first-offense",
+    "mi-domestic-violence-assault",
+    "mi-robbery-in-the-first-degree",
+    "mi-robbery-in-the-second-degree",
+    "mi-burglary-in-the-first-degree",
+    "mi-burglary-in-the-second-degree",
+    "mi-rape-in-the-first-degree",
+    "mi-drug-trafficking",
+    "mi-possession-with-intent-to-distribute",
+    "mi-dui-second-offense",
+    "mi-dui-third-offense",
+    "mi-assault-in-the-first-degree",
+    "mi-assault-with-deadly-weapon",
+    "mi-assault-in-the-second-degree",
+    "mi-assault-in-the-third-degree",
+    "mi-attempted-sexual-assault",
+    "mi-rape-in-the-second-degree",
+    "mi-felony-murder",
+    "mi-assault-and-battery",
+    "mi-domestic-violence"
+  ],
+  "officialComparison": {
+    "schemaVersion": 1,
+    "state": "MI",
+    "generatedAt": "2026-09-15T15:36:37.121Z",
+    "officialSource": {
+      "publisher": "Michigan Legislature",
+      "adapter": "Michigan Compiled Laws per-section adapter",
+      "transportPolicy": "Official legislature.mi.gov source over default verified HTTPS; no TLS bypass"
+    },
+    "sourceDocuments": [
+      {
+        "section": "750.321",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-321",
+        "sourceHash": "fc0645f853c3ce3e788036e0fbe1a77256ea2d96919061a4cbf7c5dc7e92d595",
+        "retrievedAt": "2026-09-15T00:00:00.000Z",
+        "sourceTransport": "fixture",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        }
+      },
+      {
+        "section": "750.552",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-552",
+        "sourceHash": "ddf631e528bda11fc381ad6c7de99fe771ee1c069d610e0cba6a517edc29ce4f",
+        "retrievedAt": "2026-09-15T00:00:00.000Z",
+        "sourceTransport": "fixture",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        }
+      }
+    ],
+    "mappings": [
+      {
+        "chargeId": "mi-murder-in-the-first-degree",
+        "citation": "Mich. Comp. Laws § 750.316",
+        "section": "750.316",
+        "catalogTitle": "murder in the first degree",
+        "sections": [
+          "750.316"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.316.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-316",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 16.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-murder-in-the-second-degree",
+        "citation": "Mich. Comp. Laws § 750.317",
+        "section": "750.317",
+        "catalogTitle": "murder in the second degree",
+        "sections": [
+          "750.317"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.317.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-317",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 16.5",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-voluntary-manslaughter",
+        "citation": "Mich. Comp. Laws § 750.321",
+        "section": "750.321",
+        "sections": [
+          "750.321"
+        ],
+        "catalogTitle": "voluntary manslaughter",
+        "mappingClass": "likely_alias",
+        "score": 70,
+        "reasonCode": "official_section_match_likely_alias",
+        "reason": "Section 750.321 exists officially; the catalog label is a likely alias of \"Manslaughter\".",
+        "sourceHash": "fc0645f853c3ce3e788036e0fbe1a77256ea2d96919061a4cbf7c5dc7e92d595",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-321",
+        "officialTitle": "Manslaughter",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": {
+          "reference": "CJI2d 16.9",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-involuntary-manslaughter",
+        "citation": "Mich. Comp. Laws § 750.321",
+        "section": "750.321",
+        "sections": [
+          "750.321"
+        ],
+        "catalogTitle": "involuntary manslaughter",
+        "mappingClass": "likely_alias",
+        "score": 70,
+        "reasonCode": "official_section_match_likely_alias",
+        "reason": "Section 750.321 exists officially; the catalog label is a likely alias of \"Manslaughter\".",
+        "sourceHash": "fc0645f853c3ce3e788036e0fbe1a77256ea2d96919061a4cbf7c5dc7e92d595",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-321",
+        "officialTitle": "Manslaughter",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": {
+          "reference": "CJI2d 16.10",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-vehicular-homicide",
+        "citation": "Mich. Comp. Laws § 257.625",
+        "section": "257.625",
+        "catalogTitle": "vehicular homicide",
+        "sections": [
+          "257.625"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 16.16",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-attempted-murder",
+        "citation": "Mich. Comp. Laws § 750.91",
+        "section": "750.91",
+        "catalogTitle": "attempted murder",
+        "sections": [
+          "750.91"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.91.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-91",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 9.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-trespassing",
+        "citation": "Mich. Comp. Laws § 750.552",
+        "section": "750.552",
+        "sections": [
+          "750.552"
+        ],
+        "catalogTitle": "trespassing",
+        "mappingClass": "exact",
+        "score": 100,
+        "reasonCode": "official_section_and_title_match",
+        "reason": "Section 750.552 and its official title support the catalog mapping.",
+        "sourceHash": "ddf631e528bda11fc381ad6c7de99fe771ee1c069d610e0cba6a517edc29ce4f",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-552",
+        "officialTitle": "Willful trespass",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": {
+          "reference": "CJI2d 33.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-disorderly-conduct",
+        "citation": "Mich. Comp. Laws § 750.167",
+        "section": "750.167",
+        "catalogTitle": "disorderly conduct",
+        "sections": [
+          "750.167"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-167",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-public-intoxication",
+        "citation": "Mich. Comp. Laws § 750.167",
+        "section": "750.167",
+        "catalogTitle": "public intoxication",
+        "sections": [
+          "750.167"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-167",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-resisting-arrest",
+        "citation": "Mich. Comp. Laws § 750.479",
+        "section": "750.479",
+        "catalogTitle": "resisting arrest",
+        "sections": [
+          "750.479"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.479.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-479",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-petty-theft",
+        "citation": "Mich. Comp. Laws § 750.356",
+        "section": "750.356",
+        "catalogTitle": "petty theft",
+        "sections": [
+          "750.356"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-dui-first-offense",
+        "citation": "Mich. Comp. Laws § 257.625",
+        "section": "257.625",
+        "catalogTitle": "dui first offense",
+        "sections": [
+          "257.625"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 15.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-aggravated-assault",
+        "citation": "Mich. Comp. Laws § 750.81a",
+        "section": "750.81a",
+        "catalogTitle": "aggravated assault",
+        "sections": [
+          "750.81a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.6",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-domestic-violence-assault",
+        "citation": "Mich. Comp. Laws § 750.81",
+        "section": "750.81",
+        "catalogTitle": "domestic violence assault",
+        "sections": [
+          "750.81"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.6b",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-robbery-in-the-first-degree",
+        "citation": "Mich. Comp. Laws § 750.529",
+        "section": "750.529",
+        "catalogTitle": "robbery in the first degree",
+        "sections": [
+          "750.529"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.529.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-529",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 18.3",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-robbery-in-the-second-degree",
+        "citation": "Mich. Comp. Laws § 750.530",
+        "section": "750.530",
+        "catalogTitle": "robbery in the second degree",
+        "sections": [
+          "750.530"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.530.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-530",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 18.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-burglary-in-the-first-degree",
+        "citation": "Mich. Comp. Laws § 750.110a(2)",
+        "section": "750.110a",
+        "catalogTitle": "burglary in the first degree",
+        "sections": [
+          "750.110a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-110a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 25.2a",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-burglary-in-the-second-degree",
+        "citation": "Mich. Comp. Laws § 750.110",
+        "section": "750.110",
+        "catalogTitle": "burglary in the second degree",
+        "sections": [
+          "750.110"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-110",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 25.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-possession-of-controlled-substance",
+        "citation": "Mich. Comp. Laws § 333.7403",
+        "section": "333.7403",
+        "catalogTitle": "possession of controlled substance",
+        "sections": [
+          "333.7403"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7403.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7403",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 12.3",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-shoplifting",
+        "citation": "Mich. Comp. Laws § 750.356c",
+        "section": "750.356c",
+        "catalogTitle": "shoplifting",
+        "sections": [
+          "750.356c"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356c.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356c",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 22.10",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-grand-theft-in-the-first-degree",
+        "citation": "Mich. Comp. Laws § 750.356(2)",
+        "section": "750.356",
+        "catalogTitle": "grand theft in the first degree",
+        "sections": [
+          "750.356"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-grand-theft-in-the-second-degree",
+        "citation": "Mich. Comp. Laws § 750.356(3)",
+        "section": "750.356",
+        "catalogTitle": "grand theft in the second degree",
+        "sections": [
+          "750.356"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-sexual-assault-in-the-first-degree",
+        "citation": "Mich. Comp. Laws § 750.520b",
+        "section": "750.520b",
+        "catalogTitle": "sexual assault in the first degree",
+        "sections": [
+          "750.520b"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520b.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520b",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-rape-in-the-first-degree",
+        "citation": "Mich. Comp. Laws § 750.520b",
+        "section": "750.520b",
+        "catalogTitle": "rape in the first degree",
+        "sections": [
+          "750.520b"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520b.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520b",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-vandalism",
+        "citation": "Mich. Comp. Laws § 750.377a",
+        "section": "750.377a",
+        "catalogTitle": "vandalism",
+        "sections": [
+          "750.377a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.377a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-377a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 32.5",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-harassment",
+        "citation": "Mich. Comp. Laws § 750.411s",
+        "section": "750.411s",
+        "catalogTitle": "harassment",
+        "sections": [
+          "750.411s"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.411s.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-411s",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 18.5",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-drug-trafficking",
+        "citation": "Mich. Comp. Laws § 333.7401(2)(a)(i)",
+        "section": "333.7401",
+        "catalogTitle": "drug trafficking",
+        "sections": [
+          "333.7401"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7401",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 12.5",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-possession-with-intent-to-distribute",
+        "citation": "Mich. Comp. Laws § 333.7401",
+        "section": "333.7401",
+        "catalogTitle": "possession with intent to distribute",
+        "sections": [
+          "333.7401"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7401",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 12.5",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-loitering",
+        "citation": "Mich. Comp. Laws § 750.167(1)(f)",
+        "section": "750.167",
+        "catalogTitle": "loitering",
+        "sections": [
+          "750.167"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-167",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.5",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-failure-to-appear",
+        "citation": "Mich. Comp. Laws § 750.199a",
+        "section": "750.199a",
+        "catalogTitle": "failure to appear",
+        "sections": [
+          "750.199a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.199a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-199a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-possession-marijuana",
+        "citation": "Mich. Comp. Laws § 333.7403(2)(d)",
+        "section": "333.7403",
+        "catalogTitle": "possession marijuana",
+        "sections": [
+          "333.7403"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7403.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7403",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 12.3",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-distribution-of-controlled-substance",
+        "citation": "Mich. Comp. Laws § 333.7401",
+        "section": "333.7401",
+        "catalogTitle": "distribution of controlled substance",
+        "sections": [
+          "333.7401"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7401",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-manufacturing-controlled-substance",
+        "citation": "Mich. Comp. Laws § 333.7401(1)",
+        "section": "333.7401",
+        "catalogTitle": "manufacturing controlled substance",
+        "sections": [
+          "333.7401"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7401",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-possession-of-drug-paraphernalia",
+        "citation": "Mich. Comp. Laws § 333.7451",
+        "section": "333.7451",
+        "catalogTitle": "possession of drug paraphernalia",
+        "sections": [
+          "333.7451"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7451.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7451",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 12.4",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-maintaining-drug-house",
+        "citation": "Mich. Comp. Laws § 333.7405(1)(d)",
+        "section": "333.7405",
+        "catalogTitle": "maintaining drug house",
+        "sections": [
+          "333.7405"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7405.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7405",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 12.6",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-dui-second-offense",
+        "citation": "Mich. Comp. Laws § 257.625(9)",
+        "section": "257.625",
+        "catalogTitle": "dui second offense",
+        "sections": [
+          "257.625"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 15.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-dui-third-offense",
+        "citation": "Mich. Comp. Laws § 257.625(9)(c)",
+        "section": "257.625",
+        "catalogTitle": "dui third offense",
+        "sections": [
+          "257.625"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 15.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-unlawful-carrying-of-weapon",
+        "citation": "Mich. Comp. Laws § 750.227",
+        "section": "750.227",
+        "catalogTitle": "unlawful carrying of weapon",
+        "sections": [
+          "750.227"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.227.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-227",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-felon-in-possession-of-firearm",
+        "citation": "Mich. Comp. Laws § 750.224f",
+        "section": "750.224f",
+        "catalogTitle": "felon in possession of firearm",
+        "sections": [
+          "750.224f"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.224f.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-224f",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-discharge-of-firearm-in-city",
+        "citation": "Mich. Comp. Laws § 750.234e",
+        "section": "750.234e",
+        "catalogTitle": "discharge of firearm in city",
+        "sections": [
+          "750.234e"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.234e.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-234e",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-possession-of-prohibited-weapon",
+        "citation": "Mich. Comp. Laws § 750.224",
+        "section": "750.224",
+        "catalogTitle": "possession of prohibited weapon",
+        "sections": [
+          "750.224"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.224.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-224",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-assault-on-peace-officer",
+        "citation": "Mich. Comp. Laws § 750.81d",
+        "section": "750.81d",
+        "catalogTitle": "assault on peace officer",
+        "sections": [
+          "750.81d"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81d.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81d",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.7",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-criminal-attempt",
+        "citation": "Mich. Comp. Laws § 750.92",
+        "section": "750.92",
+        "catalogTitle": "criminal attempt",
+        "sections": [
+          "750.92"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.92.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-92",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-conspiracy",
+        "citation": "Mich. Comp. Laws § 750.157a",
+        "section": "750.157a",
+        "catalogTitle": "conspiracy",
+        "sections": [
+          "750.157a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.157a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-157a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-aiding-and-abetting",
+        "citation": "Mich. Comp. Laws § 767.39",
+        "section": "767.39",
+        "catalogTitle": "aiding and abetting",
+        "sections": [
+          "767.39"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 767.39.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-767-39",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-accessory-after-the-fact",
+        "citation": "Mich. Comp. Laws § 750.505",
+        "section": "750.505",
+        "catalogTitle": "accessory after the fact",
+        "sections": [
+          "750.505"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.505.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-505",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-criminal-solicitation",
+        "citation": "Mich. Comp. Laws § 750.157b",
+        "section": "750.157b",
+        "catalogTitle": "criminal solicitation",
+        "sections": [
+          "750.157b"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.157b.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-157b",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-gang-enhancement",
+        "citation": "Mich. Comp. Laws § 750.411u",
+        "section": "750.411u",
+        "catalogTitle": "gang enhancement",
+        "sections": [
+          "750.411u"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.411u.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-411u",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-hate-crime-enhancement",
+        "citation": "Mich. Comp. Laws § 750.147b",
+        "section": "750.147b",
+        "catalogTitle": "hate crime enhancement",
+        "sections": [
+          "750.147b"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.147b.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-147b",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-recidivist-enhancement",
+        "citation": "Mich. Comp. Laws § 769.10",
+        "section": "769.10",
+        "catalogTitle": "recidivist enhancement",
+        "sections": [
+          "769.10"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 769.10.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-769-10",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-firearm-in-felony-enhancement",
+        "citation": "Mich. Comp. Laws § 750.227b",
+        "section": "750.227b",
+        "catalogTitle": "firearm in felony enhancement",
+        "sections": [
+          "750.227b"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.227b.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-227b",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-drug-school-zone-enhancement",
+        "citation": "Mich. Comp. Laws § 333.7410",
+        "section": "333.7410",
+        "catalogTitle": "drug school zone enhancement",
+        "sections": [
+          "333.7410"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7410.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-333-7410",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 12.16",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-money-laundering",
+        "citation": "Mich. Comp. Laws § 750.411k",
+        "section": "750.411k",
+        "catalogTitle": "money laundering",
+        "sections": [
+          "750.411k"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.411k.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-411k",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-wire-fraud",
+        "citation": "Mich. Comp. Laws § 750.218",
+        "section": "750.218",
+        "catalogTitle": "wire fraud",
+        "sections": [
+          "750.218"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.218.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-218",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-mail-fraud",
+        "citation": "Mich. Comp. Laws § 750.218(6)",
+        "section": "750.218",
+        "catalogTitle": "mail fraud",
+        "sections": [
+          "750.218"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.218.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-218",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-check-fraud",
+        "citation": "Mich. Comp. Laws § 750.131",
+        "section": "750.131",
+        "catalogTitle": "check fraud",
+        "sections": [
+          "750.131"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.131.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-131",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-insurance-fraud",
+        "citation": "Mich. Comp. Laws § 500.4503",
+        "section": "500.4503",
+        "catalogTitle": "insurance fraud",
+        "sections": [
+          "500.4503"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 500.4503.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-500-4503",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-tax-fraud",
+        "citation": "Mich. Comp. Laws § 205.27a(6)",
+        "section": "205.27a",
+        "catalogTitle": "tax fraud",
+        "sections": [
+          "205.27a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 205.27a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-205-27a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-identity-theft",
+        "citation": "Mich. Comp. Laws § 445.65",
+        "section": "445.65",
+        "catalogTitle": "identity theft",
+        "sections": [
+          "445.65"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 445.65.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-445-65",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-computer-fraud",
+        "citation": "Mich. Comp. Laws § 752.796",
+        "section": "752.796",
+        "catalogTitle": "computer fraud",
+        "sections": [
+          "752.796"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 752.796.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-752-796",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-credit-card-fraud",
+        "citation": "Mich. Comp. Laws § 750.157q",
+        "section": "750.157q",
+        "catalogTitle": "credit card fraud",
+        "sections": [
+          "750.157q"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.157q.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-157q",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-embezzlement",
+        "citation": "Mich. Comp. Laws § 750.174",
+        "section": "750.174",
+        "catalogTitle": "embezzlement",
+        "sections": [
+          "750.174"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.174.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-174",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-assault-in-the-first-degree",
+        "citation": "Mich. Comp. Laws § 750.84",
+        "section": "750.84",
+        "catalogTitle": "assault in the first degree",
+        "sections": [
+          "750.84"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.84.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-84",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.9",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-assault-with-deadly-weapon",
+        "citation": "Mich. Comp. Laws § 750.82",
+        "section": "750.82",
+        "catalogTitle": "assault with deadly weapon",
+        "sections": [
+          "750.82"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.82.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-82",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.9",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-assault-in-the-second-degree",
+        "citation": "Mich. Comp. Laws § 750.81",
+        "section": "750.81",
+        "catalogTitle": "assault in the second degree",
+        "sections": [
+          "750.81"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.2",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-assault-in-the-third-degree",
+        "citation": "Mich. Comp. Laws § 750.81(1)",
+        "section": "750.81",
+        "catalogTitle": "assault in the third degree",
+        "sections": [
+          "750.81"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.2",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-menacing",
+        "citation": "Mich. Comp. Laws § 750.81",
+        "section": "750.81",
+        "catalogTitle": "menacing",
+        "sections": [
+          "750.81"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-carjacking",
+        "citation": "Mich. Comp. Laws § 750.529a",
+        "section": "750.529a",
+        "catalogTitle": "carjacking",
+        "sections": [
+          "750.529a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.529a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-529a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-bank-robbery",
+        "citation": "Mich. Comp. Laws § 750.531",
+        "section": "750.531",
+        "catalogTitle": "bank robbery",
+        "sections": [
+          "750.531"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.531.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-531",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 18.5",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-reckless-driving",
+        "citation": "Mich. Comp. Laws § 257.626",
+        "section": "257.626",
+        "catalogTitle": "reckless driving",
+        "sections": [
+          "257.626"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.626.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-626",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-hit-and-run",
+        "citation": "Mich. Comp. Laws § 257.617",
+        "section": "257.617",
+        "catalogTitle": "hit and run",
+        "sections": [
+          "257.617"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.617.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-617",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-forgery",
+        "citation": "Mich. Comp. Laws § 750.248",
+        "section": "750.248",
+        "catalogTitle": "forgery",
+        "sections": [
+          "750.248"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.248.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-248",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-residential-burglary",
+        "citation": "Mich. Comp. Laws § 750.110a",
+        "section": "750.110a",
+        "catalogTitle": "residential burglary",
+        "sections": [
+          "750.110a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-110a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 25.2a",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-commercial-burglary",
+        "citation": "Mich. Comp. Laws § 750.110",
+        "section": "750.110",
+        "catalogTitle": "commercial burglary",
+        "sections": [
+          "750.110"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-110",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 25.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-auto-burglary",
+        "citation": "Mich. Comp. Laws § 750.356a",
+        "section": "750.356a",
+        "catalogTitle": "auto burglary",
+        "sections": [
+          "750.356a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 23.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-contempt-of-court",
+        "citation": "Mich. Comp. Laws § 600.1711",
+        "section": "600.1711",
+        "catalogTitle": "contempt of court",
+        "sections": [
+          "600.1711"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 600.1711.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-600-1711",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-protective-order-violation",
+        "citation": "Mich. Comp. Laws § 600.2950(23)",
+        "section": "600.2950",
+        "catalogTitle": "protective order violation",
+        "sections": [
+          "600.2950"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 600.2950.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-600-2950",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-probation-violation",
+        "citation": "Mich. Comp. Laws § 771.4",
+        "section": "771.4",
+        "catalogTitle": "probation violation",
+        "sections": [
+          "771.4"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 771.4.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-771-4",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-child-sexual-abuse",
+        "citation": "Mich. Comp. Laws § 750.520b",
+        "section": "750.520b",
+        "catalogTitle": "child sexual abuse",
+        "sections": [
+          "750.520b"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520b.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520b",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.1",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-sexual-exploitation-of-minor",
+        "citation": "Mich. Comp. Laws § 750.145c",
+        "section": "750.145c",
+        "catalogTitle": "sexual exploitation of minor",
+        "sections": [
+          "750.145c"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.145c.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-145c",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.8",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-theft-by-receiving",
+        "citation": "Mich. Comp. Laws § 750.535",
+        "section": "750.535",
+        "catalogTitle": "theft by receiving",
+        "sections": [
+          "750.535"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.535.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-535",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-statutory-rape",
+        "citation": "Mich. Comp. Laws § 750.520d",
+        "section": "750.520d",
+        "catalogTitle": "statutory rape",
+        "sections": [
+          "750.520d"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520d.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520d",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.11",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-open-container",
+        "citation": "Mich. Comp. Laws § 257.624a",
+        "section": "257.624a",
+        "catalogTitle": "open container",
+        "sections": [
+          "257.624a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.624a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-624a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-minor-in-possession",
+        "citation": "Mich. Comp. Laws § 436.1703",
+        "section": "436.1703",
+        "catalogTitle": "minor in possession",
+        "sections": [
+          "436.1703"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 436.1703.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-436-1703",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-false-info-to-police",
+        "citation": "Mich. Comp. Laws § 750.479c",
+        "section": "750.479c",
+        "catalogTitle": "false info to police",
+        "sections": [
+          "750.479c"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.479c.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-479c",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-driving-without-insurance",
+        "citation": "Mich. Comp. Laws § 500.3102",
+        "section": "500.3102",
+        "catalogTitle": "driving without insurance",
+        "sections": [
+          "500.3102"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 500.3102.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-500-3102",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-expired-registration",
+        "citation": "Mich. Comp. Laws § 257.255",
+        "section": "257.255",
+        "catalogTitle": "expired registration",
+        "sections": [
+          "257.255"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.255.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-255",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-expired-inspection",
+        "citation": "Mich. Comp. Laws § 257.683",
+        "section": "257.683",
+        "catalogTitle": "expired inspection",
+        "sections": [
+          "257.683"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.683.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-683",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-failure-to-pay-child-support",
+        "citation": "Mich. Comp. Laws § 750.165",
+        "section": "750.165",
+        "catalogTitle": "failure to pay child support",
+        "sections": [
+          "750.165"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.165.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-165",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-noise-violation",
+        "citation": "Mich. Comp. Laws § 750.170",
+        "section": "750.170",
+        "catalogTitle": "noise violation",
+        "sections": [
+          "750.170"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.170.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-170",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-indecent-exposure",
+        "citation": "Mich. Comp. Laws § 750.335a",
+        "section": "750.335a",
+        "catalogTitle": "indecent exposure",
+        "sections": [
+          "750.335a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.335a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-335a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-fake-id",
+        "citation": "Mich. Comp. Laws § 436.1703(3)",
+        "section": "436.1703",
+        "catalogTitle": "fake id",
+        "sections": [
+          "436.1703"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 436.1703.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-436-1703",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-animal-at-large",
+        "citation": "Mich. Comp. Laws § 287.262",
+        "section": "287.262",
+        "catalogTitle": "animal at large",
+        "sections": [
+          "287.262"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 287.262.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-287-262",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-animal-cruelty-misdemeanor",
+        "citation": "Mich. Comp. Laws § 750.50(2)",
+        "section": "750.50",
+        "catalogTitle": "animal cruelty misdemeanor",
+        "sections": [
+          "750.50"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.50.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-50",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-illegal-camping",
+        "citation": "Mich. Comp. Laws § 750.552",
+        "section": "750.552",
+        "sections": [
+          "750.552"
+        ],
+        "catalogTitle": "illegal camping",
+        "mappingClass": "compound_shared",
+        "score": 85,
+        "reasonCode": "shared_official_section_multiple_catalog_labels",
+        "reason": "Section 750.552 is shared by multiple catalog labels and requires compound-citation review.",
+        "sourceHash": "ddf631e528bda11fc381ad6c7de99fe771ee1c069d610e0cba6a517edc29ce4f",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-552",
+        "officialTitle": "Willful trespass",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-panhandling",
+        "citation": "Mich. Comp. Laws § 750.167(1)(c)",
+        "section": "750.167",
+        "catalogTitle": "panhandling",
+        "sections": [
+          "750.167"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-167",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-curfew-violation",
+        "citation": "Mich. Comp. Laws § 722.751",
+        "section": "722.751",
+        "catalogTitle": "curfew violation",
+        "sections": [
+          "722.751"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 722.751.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-722-751",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-defective-vehicle-equipment",
+        "citation": "Mich. Comp. Laws § 257.683",
+        "section": "257.683",
+        "catalogTitle": "defective vehicle equipment",
+        "sections": [
+          "257.683"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.683.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-683",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-truancy",
+        "citation": "Mich. Comp. Laws § 380.1561",
+        "section": "380.1561",
+        "catalogTitle": "truancy",
+        "sections": [
+          "380.1561"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 380.1561.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-380-1561",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-littering",
+        "citation": "Mich. Comp. Laws § 324.8901",
+        "section": "324.8901",
+        "catalogTitle": "littering",
+        "sections": [
+          "324.8901"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 324.8901.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-324-8901",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-illegal-fireworks",
+        "citation": "Mich. Comp. Laws § 28.457",
+        "section": "28.457",
+        "catalogTitle": "illegal fireworks",
+        "sections": [
+          "28.457"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 28.457.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-28-457",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-alcohol-in-park",
+        "citation": "Mich. Comp. Laws § 436.1915",
+        "section": "436.1915",
+        "catalogTitle": "alcohol in park",
+        "sections": [
+          "436.1915"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 436.1915.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-436-1915",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-hunting-fishing-no-license",
+        "citation": "Mich. Comp. Laws § 324.43504",
+        "section": "324.43504",
+        "catalogTitle": "hunting fishing no license",
+        "sections": [
+          "324.43504"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 324.43504.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-324-43504",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-attempted-robbery",
+        "citation": "Mich. Comp. Laws §§ 750.92, 750.530",
+        "section": "750.92",
+        "catalogTitle": "attempted robbery",
+        "sections": [
+          "750.92",
+          "750.530"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.92.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-92",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 18.06",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-attempted-sexual-assault",
+        "citation": "Mich. Comp. Laws §§ 750.92, 750.520b",
+        "section": "750.92",
+        "catalogTitle": "attempted sexual assault",
+        "sections": [
+          "750.92",
+          "750.520b"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.92.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-92",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.31",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-solicitation",
+        "citation": "Mich. Comp. Laws § 750.449a",
+        "section": "750.449a",
+        "catalogTitle": "solicitation",
+        "sections": [
+          "750.449a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.449a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-449a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-rico-organized-crime",
+        "citation": "Mich. Comp. Laws § 750.159i",
+        "section": "750.159i",
+        "catalogTitle": "rico organized crime",
+        "sections": [
+          "750.159i"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.159i.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-159i",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-juvenile-delinquency-felony",
+        "citation": "Mich. Comp. Laws § 712A.2(a)(1)",
+        "section": "712A.2",
+        "catalogTitle": "juvenile delinquency felony",
+        "sections": [
+          "712A.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 712A.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-712A-2",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-juvenile-delinquency-misdemeanor",
+        "citation": "Mich. Comp. Laws § 712A.2(a)(1)",
+        "section": "712A.2",
+        "catalogTitle": "juvenile delinquency misdemeanor",
+        "sections": [
+          "712A.2"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 712A.2.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-712A-2",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-juvenile-transfer-adult-court",
+        "citation": "Mich. Comp. Laws § 712A.4",
+        "section": "712A.4",
+        "catalogTitle": "juvenile transfer adult court",
+        "sections": [
+          "712A.4"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 712A.4.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-712A-4",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-juvenile-firearm-possession",
+        "citation": "Mich. Comp. Laws § 750.234f",
+        "section": "750.234f",
+        "catalogTitle": "juvenile firearm possession",
+        "sections": [
+          "750.234f"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.234f.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-234f",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-sexual-assault-in-the-third-degree",
+        "citation": "Mich. Comp. Laws § 750.520d",
+        "section": "750.520d",
+        "catalogTitle": "sexual assault in the third degree",
+        "sections": [
+          "750.520d"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520d.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520d",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.21",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-sexual-assault-in-the-second-degree",
+        "citation": "Mich. Comp. Laws § 750.520c",
+        "section": "750.520c",
+        "catalogTitle": "sexual assault in the second degree",
+        "sections": [
+          "750.520c"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520c.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520c",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.3",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-unregistered-vehicle",
+        "citation": "Mich. Comp. Laws § 257.216",
+        "section": "257.216",
+        "catalogTitle": "unregistered vehicle",
+        "sections": [
+          "257.216"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.216.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-216",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-trespass-after-warning",
+        "citation": "Mich. Comp. Laws § 750.552",
+        "section": "750.552",
+        "sections": [
+          "750.552"
+        ],
+        "catalogTitle": "trespass after warning",
+        "mappingClass": "likely_alias",
+        "score": 70,
+        "reasonCode": "official_section_match_likely_alias",
+        "reason": "Section 750.552 exists officially; the catalog label is a likely alias of \"Willful trespass\".",
+        "sourceHash": "ddf631e528bda11fc381ad6c7de99fe771ee1c069d610e0cba6a517edc29ce4f",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-552",
+        "officialTitle": "Willful trespass",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-rape-in-the-second-degree",
+        "citation": "Mich. Comp. Laws § 750.520c",
+        "section": "750.520c",
+        "catalogTitle": "rape in the second degree",
+        "sections": [
+          "750.520c"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520c.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-520c",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 20.2",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-bad-checks",
+        "citation": "Mich. Comp. Laws § 750.131",
+        "section": "750.131",
+        "catalogTitle": "bad checks",
+        "sections": [
+          "750.131"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.131.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-131",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-disturbing-the-peace",
+        "citation": "Mich. Comp. Laws § 750.167",
+        "section": "750.167",
+        "catalogTitle": "disturbing the peace",
+        "sections": [
+          "750.167"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-167",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-driving-while-suspended",
+        "citation": "Mich. Comp. Laws § 257.904",
+        "section": "257.904",
+        "catalogTitle": "driving while suspended",
+        "sections": [
+          "257.904"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.904.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-904",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-reckless-driving-criminal",
+        "citation": "Mich. Comp. Laws § 257.626",
+        "section": "257.626",
+        "catalogTitle": "reckless driving criminal",
+        "sections": [
+          "257.626"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.626.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-626",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-felony-murder",
+        "citation": "Mich. Comp. Laws § 750.316(1)(b)",
+        "section": "750.316",
+        "catalogTitle": "felony murder",
+        "sections": [
+          "750.316"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.316.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-316",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 16.4",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-criminally-negligent-homicide",
+        "citation": "Mich. Comp. Laws § 750.324",
+        "section": "750.324",
+        "catalogTitle": "criminally negligent homicide",
+        "sections": [
+          "750.324"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.324.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-324",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 16.21",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-trespass",
+        "citation": "Mich. Comp. Laws § 750.552",
+        "section": "750.552",
+        "sections": [
+          "750.552"
+        ],
+        "catalogTitle": "trespass",
+        "mappingClass": "exact",
+        "score": 100,
+        "reasonCode": "official_section_and_title_match",
+        "reason": "Section 750.552 and its official title support the catalog mapping.",
+        "sourceHash": "ddf631e528bda11fc381ad6c7de99fe771ee1c069d610e0cba6a517edc29ce4f",
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-552",
+        "officialTitle": "Willful trespass",
+        "currentness": {
+          "status": "verified",
+          "evidence": "current through 2026",
+          "editionYear": 2026
+        },
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-malicious-destruction-of-property",
+        "citation": "Mich. Comp. Laws § 750.377a",
+        "section": "750.377a",
+        "catalogTitle": "malicious destruction of property",
+        "sections": [
+          "750.377a"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.377a.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-377a",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-assault-and-battery",
+        "citation": "Mich. Comp. Laws § 750.81",
+        "section": "750.81",
+        "catalogTitle": "assault and battery",
+        "sections": [
+          "750.81"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.03",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-retail-fraud-third-degree",
+        "citation": "Mich. Comp. Laws § 750.356d",
+        "section": "750.356d",
+        "catalogTitle": "retail fraud third degree",
+        "sections": [
+          "750.356d"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356d.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356d",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-owi",
+        "citation": "Mich. Comp. Laws § 257.625",
+        "section": "257.625",
+        "catalogTitle": "owi",
+        "sections": [
+          "257.625"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-625",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 15.01",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-domestic-violence",
+        "citation": "Mich. Comp. Laws § 750.81(2)",
+        "section": "750.81",
+        "catalogTitle": "domestic violence",
+        "sections": [
+          "750.81"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-81",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": {
+          "reference": "CJI2d 17.16",
+          "sourceUrl": "https://www.courts.michigan.gov/rules-administrative-orders-and-jury-instructions/current-rules-and-jury-instructions/model-criminal-jury-instructions2/",
+          "independentSource": true
+        }
+      },
+      {
+        "chargeId": "mi-disorderly-person",
+        "citation": "Mich. Comp. Laws § 750.167",
+        "section": "750.167",
+        "catalogTitle": "disorderly person",
+        "sections": [
+          "750.167"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-167",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-driving-while-license-suspended",
+        "citation": "Mich. Comp. Laws § 257.904",
+        "section": "257.904",
+        "catalogTitle": "driving while license suspended",
+        "sections": [
+          "257.904"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.904.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-257-904",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      },
+      {
+        "chargeId": "mi-larceny-under-200",
+        "citation": "Mich. Comp. Laws § 750.356(5)",
+        "section": "750.356",
+        "catalogTitle": "larceny under 200",
+        "sections": [
+          "750.356"
+        ],
+        "mappingClass": "unresolved",
+        "score": 0,
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356.",
+        "sourceHash": null,
+        "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-356",
+        "officialTitle": null,
+        "currentness": null,
+        "instructionEvidence": null
+      }
+    ],
+    "unresolved": [
+      {
+        "chargeId": "mi-murder-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.316."
+      },
+      {
+        "chargeId": "mi-murder-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.317."
+      },
+      {
+        "chargeId": "mi-vehicular-homicide",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625."
+      },
+      {
+        "chargeId": "mi-attempted-murder",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.91."
+      },
+      {
+        "chargeId": "mi-disorderly-conduct",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167."
+      },
+      {
+        "chargeId": "mi-public-intoxication",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167."
+      },
+      {
+        "chargeId": "mi-resisting-arrest",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.479."
+      },
+      {
+        "chargeId": "mi-petty-theft",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356."
+      },
+      {
+        "chargeId": "mi-dui-first-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625."
+      },
+      {
+        "chargeId": "mi-aggravated-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81a."
+      },
+      {
+        "chargeId": "mi-domestic-violence-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81."
+      },
+      {
+        "chargeId": "mi-robbery-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.529."
+      },
+      {
+        "chargeId": "mi-robbery-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.530."
+      },
+      {
+        "chargeId": "mi-burglary-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110a."
+      },
+      {
+        "chargeId": "mi-burglary-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110."
+      },
+      {
+        "chargeId": "mi-possession-of-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7403."
+      },
+      {
+        "chargeId": "mi-shoplifting",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356c."
+      },
+      {
+        "chargeId": "mi-grand-theft-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356."
+      },
+      {
+        "chargeId": "mi-grand-theft-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356."
+      },
+      {
+        "chargeId": "mi-sexual-assault-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520b."
+      },
+      {
+        "chargeId": "mi-rape-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520b."
+      },
+      {
+        "chargeId": "mi-vandalism",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.377a."
+      },
+      {
+        "chargeId": "mi-harassment",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.411s."
+      },
+      {
+        "chargeId": "mi-drug-trafficking",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401."
+      },
+      {
+        "chargeId": "mi-possession-with-intent-to-distribute",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401."
+      },
+      {
+        "chargeId": "mi-loitering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167."
+      },
+      {
+        "chargeId": "mi-failure-to-appear",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.199a."
+      },
+      {
+        "chargeId": "mi-possession-marijuana",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7403."
+      },
+      {
+        "chargeId": "mi-distribution-of-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401."
+      },
+      {
+        "chargeId": "mi-manufacturing-controlled-substance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7401."
+      },
+      {
+        "chargeId": "mi-possession-of-drug-paraphernalia",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7451."
+      },
+      {
+        "chargeId": "mi-maintaining-drug-house",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7405."
+      },
+      {
+        "chargeId": "mi-dui-second-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625."
+      },
+      {
+        "chargeId": "mi-dui-third-offense",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625."
+      },
+      {
+        "chargeId": "mi-unlawful-carrying-of-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.227."
+      },
+      {
+        "chargeId": "mi-felon-in-possession-of-firearm",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.224f."
+      },
+      {
+        "chargeId": "mi-discharge-of-firearm-in-city",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.234e."
+      },
+      {
+        "chargeId": "mi-possession-of-prohibited-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.224."
+      },
+      {
+        "chargeId": "mi-assault-on-peace-officer",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81d."
+      },
+      {
+        "chargeId": "mi-criminal-attempt",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.92."
+      },
+      {
+        "chargeId": "mi-conspiracy",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.157a."
+      },
+      {
+        "chargeId": "mi-aiding-and-abetting",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 767.39."
+      },
+      {
+        "chargeId": "mi-accessory-after-the-fact",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.505."
+      },
+      {
+        "chargeId": "mi-criminal-solicitation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.157b."
+      },
+      {
+        "chargeId": "mi-gang-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.411u."
+      },
+      {
+        "chargeId": "mi-hate-crime-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.147b."
+      },
+      {
+        "chargeId": "mi-recidivist-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 769.10."
+      },
+      {
+        "chargeId": "mi-firearm-in-felony-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.227b."
+      },
+      {
+        "chargeId": "mi-drug-school-zone-enhancement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 333.7410."
+      },
+      {
+        "chargeId": "mi-money-laundering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.411k."
+      },
+      {
+        "chargeId": "mi-wire-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.218."
+      },
+      {
+        "chargeId": "mi-mail-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.218."
+      },
+      {
+        "chargeId": "mi-check-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.131."
+      },
+      {
+        "chargeId": "mi-insurance-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 500.4503."
+      },
+      {
+        "chargeId": "mi-tax-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 205.27a."
+      },
+      {
+        "chargeId": "mi-identity-theft",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 445.65."
+      },
+      {
+        "chargeId": "mi-computer-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 752.796."
+      },
+      {
+        "chargeId": "mi-credit-card-fraud",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.157q."
+      },
+      {
+        "chargeId": "mi-embezzlement",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.174."
+      },
+      {
+        "chargeId": "mi-assault-in-the-first-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.84."
+      },
+      {
+        "chargeId": "mi-assault-with-deadly-weapon",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.82."
+      },
+      {
+        "chargeId": "mi-assault-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81."
+      },
+      {
+        "chargeId": "mi-assault-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81."
+      },
+      {
+        "chargeId": "mi-menacing",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81."
+      },
+      {
+        "chargeId": "mi-carjacking",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.529a."
+      },
+      {
+        "chargeId": "mi-bank-robbery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.531."
+      },
+      {
+        "chargeId": "mi-reckless-driving",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.626."
+      },
+      {
+        "chargeId": "mi-hit-and-run",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.617."
+      },
+      {
+        "chargeId": "mi-forgery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.248."
+      },
+      {
+        "chargeId": "mi-residential-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110a."
+      },
+      {
+        "chargeId": "mi-commercial-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.110."
+      },
+      {
+        "chargeId": "mi-auto-burglary",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356a."
+      },
+      {
+        "chargeId": "mi-contempt-of-court",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 600.1711."
+      },
+      {
+        "chargeId": "mi-protective-order-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 600.2950."
+      },
+      {
+        "chargeId": "mi-probation-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 771.4."
+      },
+      {
+        "chargeId": "mi-child-sexual-abuse",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520b."
+      },
+      {
+        "chargeId": "mi-sexual-exploitation-of-minor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.145c."
+      },
+      {
+        "chargeId": "mi-theft-by-receiving",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.535."
+      },
+      {
+        "chargeId": "mi-statutory-rape",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520d."
+      },
+      {
+        "chargeId": "mi-open-container",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.624a."
+      },
+      {
+        "chargeId": "mi-minor-in-possession",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 436.1703."
+      },
+      {
+        "chargeId": "mi-false-info-to-police",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.479c."
+      },
+      {
+        "chargeId": "mi-driving-without-insurance",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 500.3102."
+      },
+      {
+        "chargeId": "mi-expired-registration",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.255."
+      },
+      {
+        "chargeId": "mi-expired-inspection",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.683."
+      },
+      {
+        "chargeId": "mi-failure-to-pay-child-support",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.165."
+      },
+      {
+        "chargeId": "mi-noise-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.170."
+      },
+      {
+        "chargeId": "mi-indecent-exposure",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.335a."
+      },
+      {
+        "chargeId": "mi-fake-id",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 436.1703."
+      },
+      {
+        "chargeId": "mi-animal-at-large",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 287.262."
+      },
+      {
+        "chargeId": "mi-animal-cruelty-misdemeanor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.50."
+      },
+      {
+        "chargeId": "mi-panhandling",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167."
+      },
+      {
+        "chargeId": "mi-curfew-violation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 722.751."
+      },
+      {
+        "chargeId": "mi-defective-vehicle-equipment",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.683."
+      },
+      {
+        "chargeId": "mi-truancy",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 380.1561."
+      },
+      {
+        "chargeId": "mi-littering",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 324.8901."
+      },
+      {
+        "chargeId": "mi-illegal-fireworks",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 28.457."
+      },
+      {
+        "chargeId": "mi-alcohol-in-park",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 436.1915."
+      },
+      {
+        "chargeId": "mi-hunting-fishing-no-license",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 324.43504."
+      },
+      {
+        "chargeId": "mi-attempted-robbery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.92."
+      },
+      {
+        "chargeId": "mi-attempted-sexual-assault",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.92."
+      },
+      {
+        "chargeId": "mi-solicitation",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.449a."
+      },
+      {
+        "chargeId": "mi-rico-organized-crime",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.159i."
+      },
+      {
+        "chargeId": "mi-juvenile-delinquency-felony",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 712A.2."
+      },
+      {
+        "chargeId": "mi-juvenile-delinquency-misdemeanor",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 712A.2."
+      },
+      {
+        "chargeId": "mi-juvenile-transfer-adult-court",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 712A.4."
+      },
+      {
+        "chargeId": "mi-juvenile-firearm-possession",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.234f."
+      },
+      {
+        "chargeId": "mi-sexual-assault-in-the-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520d."
+      },
+      {
+        "chargeId": "mi-sexual-assault-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520c."
+      },
+      {
+        "chargeId": "mi-unregistered-vehicle",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.216."
+      },
+      {
+        "chargeId": "mi-rape-in-the-second-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.520c."
+      },
+      {
+        "chargeId": "mi-bad-checks",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.131."
+      },
+      {
+        "chargeId": "mi-disturbing-the-peace",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167."
+      },
+      {
+        "chargeId": "mi-driving-while-suspended",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.904."
+      },
+      {
+        "chargeId": "mi-reckless-driving-criminal",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.626."
+      },
+      {
+        "chargeId": "mi-felony-murder",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.316."
+      },
+      {
+        "chargeId": "mi-criminally-negligent-homicide",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.324."
+      },
+      {
+        "chargeId": "mi-malicious-destruction-of-property",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.377a."
+      },
+      {
+        "chargeId": "mi-assault-and-battery",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81."
+      },
+      {
+        "chargeId": "mi-retail-fraud-third-degree",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356d."
+      },
+      {
+        "chargeId": "mi-owi",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.625."
+      },
+      {
+        "chargeId": "mi-domestic-violence",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.81."
+      },
+      {
+        "chargeId": "mi-disorderly-person",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.167."
+      },
+      {
+        "chargeId": "mi-driving-while-license-suspended",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 257.904."
+      },
+      {
+        "chargeId": "mi-larceny-under-200",
+        "reasonCode": "official_section_not_found",
+        "reason": "No MI official source document was available for section 750.356."
+      }
+    ],
+    "summary": {
+      "totalCatalogEntries": 131,
+      "exactMappings": 2,
+      "likelyAliases": 3,
+      "compoundOrSharedCitations": 1,
+      "unresolved": 125,
+      "currentnessVerifiedDocuments": 2
+    }
+  }
+}
