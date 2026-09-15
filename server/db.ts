@@ -1,11 +1,17 @@
-import { Pool, neonConfig } from '@neondatabase/serverless';
-import { drizzle } from 'drizzle-orm/neon-serverless';
-import ws from "ws";
+import { Pool } from "pg";
+import { drizzle } from "drizzle-orm/node-postgres";
 import * as schema from "@shared/schema";
 
-neonConfig.webSocketConstructor = ws;
-
-const databaseUrl = process.env.NEON_DATABASE_URL ?? process.env.DATABASE_URL;
+const databaseUrl =
+  process.env.DATABASE_URL ??
+  process.env.NEON_DATABASE_URL ??
+  (process.env.PGHOST &&
+  process.env.PGPORT &&
+  process.env.PGUSER &&
+  process.env.PGPASSWORD &&
+  process.env.PGDATABASE
+    ? `postgresql://${encodeURIComponent(process.env.PGUSER)}:${encodeURIComponent(process.env.PGPASSWORD)}@${process.env.PGHOST}:${process.env.PGPORT}/${process.env.PGDATABASE}?sslmode=require`
+    : undefined);
 
 if (!databaseUrl) {
   throw new Error(
