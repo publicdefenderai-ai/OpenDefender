@@ -30,6 +30,10 @@ import {
   PENNSYLVANIA_SOURCE_CONTRACT_REFERENCES,
   validatePennsylvaniaSourceContract,
 } from "../scripts/data-review/import-pennsylvania-source-database";
+import {
+  assertPennsylvaniaAttorneyReviewCoverage,
+  getPennsylvaniaAttorneyReviewDecision,
+} from "../shared/pennsylvania-attorney-review";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
@@ -56,14 +60,16 @@ describe("Pennsylvania authority manifest", () => {
       record.disposition === "retain" || record.disposition === "exact_alias_rename");
     const withheld = manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection");
-    expect(selectable).toHaveLength(25);
+    expect(selectable).toHaveLength(22);
     expect(selectable.every((record) => record.provisions.length > 0)).toBe(true);
-    expect(withheld).toHaveLength(87);
+    expect(withheld).toHaveLength(64);
     expect(withheld.every((record) => record.provisions.length === 0)).toBe(true);
-    expect(seed.sources).toHaveLength(25);
-    expect(seed.snapshots).toHaveLength(25);
-    expect(seed.links).toHaveLength(25);
-    expect(seed.selectableChargeIds).toHaveLength(25);
+    expect(manifest.catalogRecords.filter((record) => record.disposition === "remove")).toHaveLength(26);
+    expect(seed.sources).toHaveLength(22);
+    expect(seed.snapshots).toHaveLength(22);
+    expect(seed.links).toHaveLength(22);
+    expect(seed.selectableChargeIds).toHaveLength(22);
+    assertPennsylvaniaAttorneyReviewCoverage();
   });
 
   it("previews added, removed, and disposition-changed catalog rows", () => {
@@ -178,7 +184,7 @@ describe("Pennsylvania authority manifest", () => {
     }
   });
 
-  it("withholds legacy mappings until attorney review confirms the charge match", () => {
+  it("applies attorney review decisions to legacy mappings", () => {
     const manifest = loadPennsylvaniaAuthorityManifest();
     for (const [chargeId, approved] of Object.entries(
       PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS,
@@ -190,27 +196,39 @@ describe("Pennsylvania authority manifest", () => {
         subdivision: approved.subdivision,
         sourceKind: "unconsolidated",
       }]);
-      expect(approved.publicationApproved).toBe(false);
-      expect(record.disposition).toBe("require_exact_reselection");
+      const review = getPennsylvaniaAttorneyReviewDecision(chargeId)!;
+      expect(approved.publicationApproved).toBe(chargeId === "pa-animal-at-large");
+      expect(record.disposition).toBe(review.action === "remove" ? "remove" : "require_exact_reselection");
       expect(record.apiStatus).toBe("verified");
       expect(record.canonicalTitle).toBeNull();
       expect(record.provisions).toHaveLength(0);
-      expect(record.dispositionReason).toContain("attorney review");
+      if (review.note) {
+        expect(record.dispositionReason).toContain(review.note);
+      } else {
+        expect(record.dispositionReason).toEqual(expect.any(String));
+      }
       expect(validatePennsylvaniaManifestRecord(record)).toBeNull();
 
       const charge = criminalCharges.find((candidate) => candidate.id === chargeId)!;
-      const fetched = document(approved.section, approved.sectionTitle, approved.title);
-      expect(buildPennsylvaniaManifestRecord(charge, [fetched], importedAt)).toMatchObject({
-        disposition: "require_exact_reselection",
-        provisions: [],
-        apiStatus: "verified",
-      });
+      const fetched = {
+        ...document(approved.section, approved.sectionTitle, approved.title),
+        sourceUrl: approved.canonicalUrl,
+      };
+      const rebuilt = buildPennsylvaniaManifestRecord(charge, [fetched], importedAt);
+      expect(rebuilt.apiStatus).toBe("verified");
+      if (chargeId === "pa-animal-at-large") {
+        expect(rebuilt.disposition).toBe("exact_alias_rename");
+        expect(rebuilt.provisions).toHaveLength(1);
+      } else {
+        expect(rebuilt.disposition).toBe("remove");
+        expect(rebuilt.provisions).toEqual([]);
+      }
     }
   });
 
-  it("rejects an attorney-unapproved legacy record at validation, loading, and seed boundaries", () => {
+  it("rejects a review-withheld legacy record at validation, loading, and seed boundaries", () => {
     const manifest = loadPennsylvaniaAuthorityManifest();
-    const approved = PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS["pa-animal-at-large"];
+    const approved = PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS["pa-alcohol-in-park"];
     const withheld = manifest.catalogRecords.find((record) => record.chargeId === approved.chargeId)!;
     const content = `Section 305. ${approved.sectionTitle}. Confinement and control. Housing.`;
     const selectableRecord = {
@@ -236,7 +254,7 @@ describe("Pennsylvania authority manifest", () => {
       }],
       apiStatus: "verified" as const,
     };
-    expect(validatePennsylvaniaManifestRecord(selectableRecord)).toContain("not attorney-approved");
+    expect(validatePennsylvaniaManifestRecord(selectableRecord)).toContain("does not authorize");
     expect(buildPennsylvaniaSourceDatabaseSeed({
       ...manifest,
       catalogRecords: [selectableRecord],
@@ -256,7 +274,7 @@ describe("Pennsylvania authority manifest", () => {
     }));
     try {
       expect(() => loadPennsylvaniaAuthorityManifest(temporaryManifest)).toThrow(
-        "not attorney-approved",
+        "does not authorize",
       );
     } finally {
       rmSync(temporaryDirectory, { recursive: true, force: true });
@@ -378,6 +396,54 @@ describe("Pennsylvania authority manifest", () => {
     )!;
     expect(buildPennsylvaniaManifestRecord(unconsolidated, [], importedAt).disposition)
       .toBe("require_exact_reselection");
+  });
+
+  it("keeps attorney-noted subcharges, reclassifications, and duplicates out of selection", () => {
+    const manifest = loadPennsylvaniaAuthorityManifest();
+    const expected: Record<string, string> = {
+      "pa-child-sexual-abuse": "split",
+      "pa-sexual-exploitation-of-minor": "split",
+      "pa-rape-in-the-first-degree": "split",
+      "pa-trespass-after-warning": "split",
+      "pa-illegal-camping": "split",
+      "pa-auto-burglary": "reclassify",
+      "pa-discharge-of-firearm-in-city": "reclassify",
+      "pa-dui-first-offense": "hold",
+      "pa-check-fraud": "deduplicate",
+      "pa-firearm-in-felony-enhancement": "remove",
+    };
+    for (const [chargeId, action] of Object.entries(expected)) {
+      expect(getPennsylvaniaAttorneyReviewDecision(chargeId)?.action).toBe(action);
+      const record = manifest.catalogRecords.find((candidate) => candidate.chargeId === chargeId)!;
+      expect(record.provisions).toEqual([]);
+      expect(record.disposition).toBe(
+        action === "remove" || action === "deduplicate"
+          ? "remove"
+          : "require_exact_reselection",
+      );
+    }
+  });
+
+  it("uses reviewed exact corrections only when the official section is complete", () => {
+    const cases = [
+      ["pa-bank-robbery", "3701", "Robbery", "18 Pa. Cons. Stat. § 3701(a)(1)(vi)"],
+      ["pa-burglary-in-the-second-degree", "3502", "Burglary", "18 Pa. Cons. Stat. § 3502(a)(4)"],
+      ["pa-robbery-in-the-first-degree", "3701", "Robbery", "18 Pa. Cons. Stat. § 3701"],
+      ["pa-solicitation", "5902", "Prostitution", "18 Pa. Cons. Stat. § 5902"],
+    ] as const;
+    for (const [chargeId, section, title, citation] of cases) {
+      const charge = criminalCharges.find((candidate) => candidate.id === chargeId)!;
+      const record = buildPennsylvaniaManifestRecord(
+        charge,
+        [document(section, title)],
+        importedAt,
+      );
+      expect(record.disposition).toBe("exact_alias_rename");
+      expect(record.provisions[0]).toMatchObject({
+        section,
+        citation,
+      });
+    }
   });
 
   it("extracts a section from official HTML and rejects missing or error pages", () => {
@@ -759,7 +825,20 @@ describe("Pennsylvania authority manifest", () => {
         catalogDiff: {
           added: [],
           removed: [],
-          dispositionChanged: [],
+          dispositionChanged: expect.arrayContaining([
+            {
+              chargeId: "pa-animal-at-large",
+              catalogLabel: "Animal at Large / Leash Law Violation",
+              previousDisposition: "require_exact_reselection",
+              nextDisposition: "exact_alias_rename",
+            },
+            {
+              chargeId: "pa-assault-on-peace-officer",
+              catalogLabel: "Assault on Peace Officer",
+              previousDisposition: "require_exact_reselection",
+              nextDisposition: "exact_alias_rename",
+            },
+          ]),
         },
       });
       const refreshedManifest = JSON.parse(readFileSync(temporaryManifest, "utf8"));
@@ -767,7 +846,7 @@ describe("Pennsylvania authority manifest", () => {
       expect(refreshedManifest.catalogRecords).toHaveLength(existingManifest.catalogRecords.length);
       expect(refreshedManifest.catalogRecords.filter((record: { disposition: string }) =>
         record.disposition === "retain" || record.disposition === "exact_alias_rename",
-      )).toHaveLength(25);
+      )).toHaveLength(24);
     } finally {
       rmSync(temporaryDirectory, { recursive: true, force: true });
     }

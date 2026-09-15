@@ -8,6 +8,13 @@ import {
   type AuthoritySourceDatabaseSeed,
   type AuthoritySourceSeed,
 } from "../services/authority-source-database";
+import {
+  getPennsylvaniaAttorneyReviewCitation,
+  getPennsylvaniaAttorneyReviewDecision,
+  getPennsylvaniaAttorneyReviewDisplayName,
+  getPennsylvaniaAttorneyReviewSubdivision,
+  isPennsylvaniaAttorneyReviewPublishable,
+} from "@shared/pennsylvania-attorney-review";
 
 export const PENNSYLVANIA_SOURCE_POLICY =
   "official_pennsylvania_statutes_with_legacy_publication_gate";
@@ -64,7 +71,7 @@ export const PENNSYLVANIA_APPROVED_UNCONSOLIDATED_LEGACY_PROVISIONS: Record<
       "Confinement and control",
       "Housing",
     ],
-    publicationApproved: false,
+    publicationApproved: true,
   },
   "pa-truancy": {
     chargeId: "pa-truancy",
@@ -177,6 +184,7 @@ export const PENNSYLVANIA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
   "pa-burglary-in-the-first-degree": ["Burglary"],
   "pa-burglary-in-the-second-degree": ["Burglary"],
   "pa-auto-burglary": ["Robbery"],
+  "pa-bank-robbery": ["Robbery"],
   "pa-robbery-in-the-first-degree": ["Robbery"],
   "pa-robbery-in-the-second-degree": ["Robbery"],
   "pa-carjacking": ["Robbery of motor vehicle"],
@@ -208,6 +216,7 @@ export const PENNSYLVANIA_EXACT_TITLE_ALIASES: Record<string, string[]> = {
 function titleMatches(charge: CriminalCharge, title: string): boolean {
   const normalized = normalizeTitle(title);
   return normalized === normalizeTitle(charge.name) ||
+    normalized === normalizeTitle(getPennsylvaniaAttorneyReviewDisplayName(charge.id) ?? "") ||
     (PENNSYLVANIA_EXACT_TITLE_ALIASES[charge.id] ?? [])
       .some((alias) => normalized === normalizeTitle(alias));
 }
@@ -216,6 +225,13 @@ function codeSupportsPennsylvaniaReferences(
   charge: CriminalCharge,
   references: PennsylvaniaSourceReference[],
 ): boolean {
+  const attorneyReview = getPennsylvaniaAttorneyReviewDecision(charge.id);
+  if (
+    attorneyReview?.decision === "Approved" &&
+    attorneyReview.action === "publish"
+  ) {
+    return true;
+  }
   const code = charge.code.match(/^(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)([\s\S]*)$/);
   if (!code) return false;
   const codeSection = code[1];
@@ -277,6 +293,19 @@ export function getPennsylvaniaReferences(
       subdivision: legacy.subdivision,
       sourceKind: "unconsolidated",
     }];
+  }
+  const reviewedCitation = getPennsylvaniaAttorneyReviewCitation(chargeId);
+  if (reviewedCitation) {
+    const parsed = parsePennsylvaniaCitation(reviewedCitation);
+    if (parsed.length > 0) {
+      const subdivision = getPennsylvaniaAttorneyReviewSubdivision(chargeId);
+      return parsed.map((reference) => ({
+        ...reference,
+        subdivision: subdivision === undefined
+          ? reference.subdivision
+          : subdivision,
+      }));
+    }
   }
   return parsePennsylvaniaCitation(CHARGE_CITATIONS[chargeId]?.citation ?? "");
 }
@@ -381,7 +410,7 @@ function provisionFromDocument(
         sourceKind: reference.sourceKind ?? "consolidated",
       },
       currentnessEvidence: { effectiveDateStart: document.effectiveDateStart },
-      attorneyReview: "pending",
+      attorneyReview: getPennsylvaniaAttorneyReviewDecision(charge.id) ?? "pending",
       fingerprint: referenceHash({
         sourceKey,
         citation,
@@ -407,7 +436,23 @@ export function buildPennsylvaniaManifestRecord(
     catalogCode: charge.code,
     catalogCategory: charge.category,
   };
+  const attorneyReview = getPennsylvaniaAttorneyReviewDecision(charge.id);
   const references = getPennsylvaniaReferences(charge.id);
+  const reviewReason = attorneyReview?.note ??
+    "Attorney review did not authorize this catalog row for direct publication.";
+  if (attorneyReview && !isPennsylvaniaAttorneyReviewPublishable(charge.id)) {
+    const remove = attorneyReview.action === "remove" ||
+      attorneyReview.action === "deduplicate";
+    return {
+      ...base,
+      disposition: remove ? "remove" : "require_exact_reselection",
+      dispositionReason: reviewReason,
+      canonicalTitle: null,
+      provisions: [],
+      apiStatus: error ? "api_error" : references.length > 0 ? "verified" : "placeholder",
+      ...(error ? { error } : {}),
+    };
+  }
   if (references.length === 0) {
     return {
       ...base,
@@ -479,6 +524,16 @@ export function buildPennsylvaniaManifestRecord(
       apiStatus: "verified",
     };
   }
+  if (attorneyReview?.decision !== "Approved") {
+    return {
+      ...base,
+      disposition: "remove",
+      dispositionReason: reviewReason,
+      canonicalTitle: null,
+      provisions: [],
+      apiStatus: "verified",
+    };
+  }
   const provisions = documents.map((document, index) =>
     provisionFromDocument(charge, references[index], document, index, importedAt),
   );
@@ -509,6 +564,9 @@ export function validatePennsylvaniaManifestRecord(record: AuthorityCatalogRecor
   const references = getPennsylvaniaReferences(charge.id);
   const selectable = record.disposition === "retain" || record.disposition === "exact_alias_rename";
   if (!selectable) return record.provisions.length === 0 ? null : "Withheld Pennsylvania records must not carry provisions";
+  if (!isPennsylvaniaAttorneyReviewPublishable(record.chargeId)) {
+    return "Pennsylvania attorney review does not authorize this record for publication";
+  }
   const unapprovedLegacy = references
     .map((reference) => getPennsylvaniaApprovedLegacyProvision(reference))
     .find((provision) => provision && !provision.publicationApproved);

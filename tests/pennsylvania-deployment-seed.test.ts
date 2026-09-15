@@ -14,10 +14,10 @@ describe("committed Pennsylvania deployment seed", () => {
     expect(manifest.source).toBe(PENNSYLVANIA_MANIFEST_SOURCE);
     expect(manifest.catalogRecords).toHaveLength(112);
     expect(seed.sourcePolicy).toBe(PENNSYLVANIA_SOURCE_POLICY);
-    expect(seed.selectableChargeIds).toHaveLength(25);
-    expect(seed.sources).toHaveLength(25);
-    expect(seed.snapshots).toHaveLength(25);
-    expect(seed.links).toHaveLength(25);
+    expect(seed.selectableChargeIds).toHaveLength(22);
+    expect(seed.sources).toHaveLength(22);
+    expect(seed.snapshots).toHaveLength(22);
+    expect(seed.links).toHaveLength(22);
     expect(seed.sources.every((source) => {
       return source.publisher === "Pennsylvania General Assembly" &&
         source.accessPolicy === "store_text" &&
@@ -28,8 +28,12 @@ describe("committed Pennsylvania deployment seed", () => {
           source.canonicalUrl.startsWith("https://www.palegis.us/statutes/unconsolidated/")
         );
     })).toBe(true);
-    expect(seed.snapshots.every((snapshot) =>
-      snapshot.metadata.attorneyReview === "pending",
-    )).toBe(true);
+    expect(seed.snapshots.every((snapshot) => {
+      const review = snapshot.metadata.attorneyReview as {
+        decision?: string;
+        action?: string;
+      };
+      return review.decision === "Approved" && review.action === "publish";
+    })).toBe(true);
   });
 });

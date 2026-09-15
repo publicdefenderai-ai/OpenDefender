@@ -47,7 +47,12 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-murder-in-the-first-degree",
+              "decision": "Approved",
+              "action": "publish",
+              "approvedDisplayName": "Murder of  the First Degree"
+            },
             "fingerprint": "794f72444100a33a991aae1c7c8f245e249f45f0f07c6e83d3c05529f6f890b3",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -99,7 +104,12 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-murder-in-the-second-degree",
+              "decision": "Approved",
+              "action": "publish",
+              "approvedDisplayName": "Murder of the Second Degree"
+            },
             "fingerprint": "7a8cf865fd86026b028be3e6671648450f2147077d5bee40aa880f232bf59b83",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -151,7 +161,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-voluntary-manslaughter",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "27e26812d9bf08310c6e1b2655158a325cda761bbf9c7c502766d3a760b48822",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -203,7 +217,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-involuntary-manslaughter",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "d8ed7b23971bd87e191d4a3def9a406f18aae17f0ea2eb7efab74a22064df11e",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -266,7 +284,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": "Jan 1, 2014"
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-aggravated-assault",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "fc394c0aefd67f6cdc428faa798d4517607471570951e4cc44aeb9bb023b308a",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -301,51 +323,10 @@
       "catalogLabel": "Rape",
       "catalogCode": "3121",
       "catalogCategory": "felony",
-      "disposition": "retain",
-      "dispositionReason": "Catalog label matches the official Pennsylvania title.",
-      "canonicalTitle": "Rape",
-      "provisions": [
-        {
-          "sourceKey": "pa:18:3121",
-          "lawId": "18",
-          "section": "3121",
-          "citation": "18 Pa. Cons. Stat. § 3121",
-          "officialTitle": "Rape",
-          "sourceUrl": "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&div=0&chpt=31&sctn=21&subsctn=0",
-          "content": "3121.  Rape.\n\n3122.  Statutory rape (Repealed).\n\n3122.1. Statutory sexual assault.\n\n3123.  Involuntary deviate sexual intercourse.\n\n3124.  Voluntary deviate sexual intercourse (Repealed).\n\n3124.1. Sexual assault.\n\n3124.2. Institutional sexual assault.\n\n3124.3. Sexual assault by sports official, volunteer or employee of nonprofit association.\n\n3125.  Aggravated indecent assault.\n\n3126.  Indecent assault.\n\n3127.  Indecent exposure.\n\n3128.  Spousal sexual assault (Repealed).\n\n3129.  Sexual intercourse with animal.\n\n3130.  Conduct relating to sex offenders.\n\n3131.  Unlawful dissemination of intimate image.\n\n3132.  Female mutilation.\n\n3133.  Sexual extortion.\n\n18c3121s\n\n§ 3121.  Rape.\n\n(a)  Offense defined.-- A person commits a felony of the first degree when the person engages in sexual intercourse\nwith a complainant:\n\n(1)  By forcible compulsion.\n\n(2)  By threat of forcible compulsion that would prevent resistance by a person of reasonable\nresolution.\n\n(3)  Who is unconscious or where the person knows that the complainant is unaware that\nthe sexual intercourse is occurring.\n\n(4)  Where the person has substantially impaired the complainant's power to appraise or\ncontrol his or her conduct by administering or employing, without the knowledge of\nthe complainant, drugs, intoxicants or other means for the purpose of preventing resistance.\n\n(5)  Who suffers from a mental disability which renders the complainant incapable of consent.\n\n(6)  (Deleted by amendment).\n\n(b)  Additional penalties.-- In addition to the penalty provided for by subsection (a), a person may be sentenced\nto an additional term not to exceed ten years' confinement and an additional amount\nnot to exceed $100,000 where the person engages in sexual intercourse with a complainant\nand has substantially impaired the complainant's power to appraise or control his\nor her conduct by administering or employing, without the knowledge of the complainant,\nany substance for the purpose of preventing resistance through the inducement of euphoria,\nmemory loss and any other effect of this substance.\n\n(c)  Rape of a child.-- A person commits the offense of rape of a child, a felony of the first degree, when\nthe person engages in sexual intercourse with a complainant who is less than 13 years\nof age.\n\n(d)  Rape of a child with serious bodily injury.-- A person commits the offense of rape of a child resulting in serious bodily injury,\na felony of the first degree, when the person violates this section and the complainant\nis under 13 years of age and suffers serious bodily injury in the course of the offense.\n\n(e)  Sentences.-- Notwithstanding the provisions of section 1103 (relating to sentence of imprisonment\nfor felony), a person convicted of an offense under:\n\n(1)  Subsection (c) shall be sentenced to a term of imprisonment which shall be fixed by\nthe court at not more than 40 years.\n\n(2)  Subsection (d) shall be sentenced up to a maximum term of life imprisonment.\n\n18c3121v\n\n(Dec. 21, 1984, P.L.1210, No.230, eff. 60 days; Mar. 31, 1995, 1st Sp.Sess., P.L.985,\nNo.10, eff. 60 days; Dec. 19, 1997, P.L.621, No.65, eff. 60 days; Dec. 9, 2002, P.L.1350,\nNo.162, eff. 60 days; Dec. 16, 2002, P.L.1953, No.226, eff. 60 days)\n\n2002 Amendments.  Act 226 overlooked the amendment by Act 162, but the amendments do not conflict in\nsubstance (except for the designation of the offenses in subsecs. (c) and (d) as felonies\nof the first degree, as to which Act 162 has been given effect) and both have been\ngiven effect in setting forth the text of section 3121.\n\nEffective Date.  After February 6, 2003, and before February 14, 2003, section 3121 will reflect only\nthe amendment by Act 162, as follows:\n\n§ 3121.  Rape.\n\n(a)  Offense defined.--A person commits a felony of the first degree when the person engages\nin sexual intercourse with a complainant:\n\n(1)  By forcible compulsion.\n\n(2)  By threat of forcible compulsion that would prevent resistance by a person of reasonable\nresolution.\n\n(3)  Who is unconscious or where the person knows that the complainant is unaware that\nthe sexual intercourse is occurring.\n\n(4)  Where the person has substantially impaired the complainant's power to appraise or\ncontrol his or her conduct by administering or employing, without the knowledge of\nthe complainant, drugs, intoxicants or other means for the purpose of preventing resistance.\n\n(5)  Who suffers from a mental disability which renders the complainant incapable of consent.\n\n(b)  Additional penalties.--In addition to the penalty provided for by subsection (a),\na person may be sentenced to an additional term not to exceed ten years' confinement\nand an additional amount not to exceed $100,000 where the person engages in sexual\nintercourse with a complainant and has substantially impaired the complainant's power\nto appraise or control his or her conduct by administering or employing, without the\nknowledge of the complainant, any substance for the purpose of preventing resistance\nthrough the inducement of euphoria, memory loss and any other effect of this substance.\n\n(c)  Rape of a child.--A person commits a felony of the first degree when the person engages\nin sexual intercourse with a complainant who is less than 13 years of age.\n\n(d)  Rape of a child with serious bodily injury.--A person commits a felony of the first\ndegree when the person engages in sexual intercourse with a complainant who is less\nthan 13 years of age and the complainant suffers serious bodily injury in the course\nof the offense.\n\n(e)  Sentences.--Notwithstanding the provisions of section 1103 (relating to sentence of\nimprisonment for felony), a person convicted of an offense under:\n\n(1)  Subsection (c) shall be sentenced to a term of imprisonment which shall be fixed by\nthe court at not more than 40 years.\n\n(2)  Subsection (d) shall be sentenced up to a maximum term of life imprisonment.\n\nCross References.  Section 3121 is referred to in sections 1111, 2709.1, 2714, 3122.1, 3124.1, 3124.2,\n3124.3, 3125, 3141, 5702, 5708, 6105, 9122, 9123, 9158 of this title; sections 4321,\n5329, 6303, 6304, 6344, 6702, 6711 of Title 23 (Domestic Relations); sections 5551,\n5552, 6302, 6358, 6402, 6403, 9717, 9718, 9720.2, 9799.12, 9799.14, 9799.17, 9799.24,\n9799.55, 9799.58 of Title 42 (Judiciary and Judicial Procedure); sections 6139, 7122\nof Title 61 (Prisons and Parole).\n\nBack to Consolidated Statutes",
-          "contentHash": "205cd706d5bda910a06235beef64a2ab5d32ce67e80203a09e250d21be4c7f44",
-          "hashBasis": "source_content",
-          "retrievedAt": "2026-08-29T15:33:25.338Z",
-          "effectiveDateStart": null,
-          "effectiveDateEnd": null,
-          "supportRole": "offense",
-          "subdivision": null,
-          "metadata": {
-            "chargeId": "pa-rape-in-the-first-degree",
-            "catalogLabel": "Rape",
-            "catalogCode": "3121",
-            "catalogClassification": "felony",
-            "elements": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "grading": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "penalty": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "currentnessEvidence": {
-              "effectiveDateStart": null
-            },
-            "attorneyReview": "pending",
-            "fingerprint": "d7adcd10d0efad0c2493fd50d152a05fc3fe88f451406a650a4a33477a5bb7f7",
-            "manifestImportedAt": "2026-08-29T15:33:25.338Z"
-          }
-        }
-      ],
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "There are some sub charges: Rape of a child (c) and Rape of a child with serious bodily injury (d)",
+      "canonicalTitle": null,
+      "provisions": [],
       "apiStatus": "verified"
     },
     {
@@ -404,7 +385,12 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-sexual-assault-in-the-third-degree",
+              "decision": "Approved",
+              "action": "publish",
+              "approvedDisplayName": "Indecent Assault"
+            },
             "fingerprint": "e01774a8fcb0c36587ca240d02d1612358302c7081fc274a33989fbcee4435b8",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -430,7 +416,7 @@
       "catalogCode": "3126",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "There are sub offenses, three different ones: (b) - Photographing, videotaping, depicting on computer or filming sexual acts; (c) Dissemination of photographs, videotapes, computer depictions and films; and (d) Child sexual abuse material",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -440,51 +426,10 @@
       "catalogLabel": "Sexual Exploitation of Minor",
       "catalogCode": "6312",
       "catalogCategory": "felony",
-      "disposition": "exact_alias_rename",
-      "dispositionReason": "The official Pennsylvania title is supported by an explicit reviewed alias mapping.",
-      "canonicalTitle": "Sexual abuse of children",
-      "provisions": [
-        {
-          "sourceKey": "pa:18:6312",
-          "lawId": "18",
-          "section": "6312",
-          "citation": "18 Pa. Cons. Stat. § 6312",
-          "officialTitle": "Sexual abuse of children",
-          "sourceUrl": "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&div=0&chpt=63&sctn=12&subsctn=0",
-          "content": "§ 6312.  Sexual abuse of children.\n\n(a)  Definition.--(Deleted by amendment).\n\n(b)  Photographing, videotaping, depicting on computer or filming sexual acts.--\n\n(1)  Any person who causes or knowingly permits a child under the age of 18 years to engage\nin a prohibited sexual act or in the simulation of such act commits an offense if\nsuch person knows, has reason to know or intends that such act may be photographed,\nvideotaped, depicted on computer or filmed.\n\n(2)  Any person who knowingly photographs, videotapes, depicts on computer or films a child\nunder the age of 18 years engaging in a prohibited sexual act or in the simulation\nof such an act commits an offense.\n\n(c)  Dissemination of photographs, videotapes, computer depictions and films.-- Any person who knowingly sells, distributes, delivers, disseminates, transfers, displays\nor exhibits to others, or who possesses for the purpose of sale, distribution, delivery,\ndissemination, transfer, display or exhibition to others, any child sexual abuse material\nor artificially generated child sexual abuse material commits an offense.\n\n(d)  Child sexual abuse material.-- Any person who intentionally views or knowingly possesses or controls any child sexual\nabuse material or artificially generated child sexual abuse material commits an offense.\n\n(d.1)  Grading.-- The offenses shall be graded as follows:\n\n(1)  Except as provided in paragraph (3), an offense under subsection (b) is a felony of\nthe second degree.\n\n(2)  (i)  Except as provided in paragraph (3), a first offense under subsection (c) or (d) is\na felony of the third degree.\n\n(ii)  A second or subsequent offense under subsection (c) or (d) is a felony of the second\ndegree.\n\n(3)  When a person commits an offense graded under paragraph (1) or (2)(i), the grading\nof the offense shall be one grade higher than the grade specified in paragraph (1)\nor (2)(i) if:\n\n(i)  indecent contact with the child as defined in section 3101 (relating to definitions)\nis depicted; or\n\n(ii)  the child depicted is under 10 years of age or prepubescent.\n\n(e)  Evidence of age.-- In the event a person involved in a prohibited sexual act is alleged to be a child\nunder the age of 18 years, competent expert testimony shall be sufficient to establish\nthe age of said person.\n\n(e.1)  Mistake as to age.-- Under subsection (b) only, it is no defense that the defendant did not know the age\nof the child. Neither a misrepresentation of age by the child nor a bona fide belief\nthat the person is over the specified age shall be a defense.\n\n(f)  Exceptions.-- This section does not apply to any of the following:\n\n(1)  Any material that is viewed, possessed, controlled, brought or caused to be brought\ninto this Commonwealth, or presented, for a bona fide educational, scientific, governmental\nor judicial purpose.\n\n(2)  Conduct prohibited under section 6321 (relating to transmission of sexually explicit\nimages by minor), unless the conduct is specifically excluded by section 6321(d).\n\n(3)  An individual under 18 years of age who knowingly views, photographs, videotapes,\ndepicts on a computer or films or possesses or intentionally views a visual depiction\nor an artificially generated depiction as defined in section 6321 of himself alone\nin a state of nudity as defined in section 6321.\n\n(4)  An artificial intelligence developer or its authorized employee or contractor, who,\nupon obtaining actual knowledge of the existence of artificially generated child sexual\nabuse material, as soon as reasonably possible reports the artificially generated\nchild sexual abuse material to the National Center for Missing and Exploited Children,\nor any successor entity, in compliance with 18 U.S.C. § 2258A (relating to reporting\nrequirements of providers) and 18 U.S.C. § 2258B (relating to limited liability for\nthe reporting, storage, and handling of certain visual depictions of apparent child\npornography to the National Center for Missing & Exploited Children).\n\n(f.1)  Criminal action.--\n\n(1)  A district attorney shall have the authority to investigate and to institute criminal\nproceedings for any violation of this section.\n\n(2)  In addition to the authority conferred upon the Attorney General by the act of October\n15, 1980 (P.L.950, No.164), known as the Commonwealth Attorneys Act, the Attorney\nGeneral shall have the authority to investigate and to institute criminal proceedings\nfor any violation of this section or any series of violations of this section involving\nmore than one county of this Commonwealth or involving any county of this Commonwealth\nand another state. No person charged with a violation of this section by the Attorney\nGeneral shall have standing to challenge the authority of the Attorney General to\ninvestigate or prosecute the case, and, if any such challenge is made, the challenge\nshall be dismissed and no relief shall be available in the courts of this Commonwealth\nto the person making the challenge.\n\n(g)  Definitions.-- As used in this section, the following words and phrases shall have the meanings given\nto them in this subsection:\n\n\"Artificial intelligence.\"  As defined in section 3131 (relating to unlawful dissemination of intimate image).\n\n\"Artificial intelligence developer.\"  A person that designs, codes or produces an artificial intelligence system and makes\nthe system commercially available whether for payment or free of charge.\n\n\"Artificially generated child sexual abuse material.\"  A book, magazine, pamphlet, slide, photograph, videotape, film, computer depiction\nor other material:\n\n(1)  that appears to authentically depict a child under 18 years of age engaging in a prohibited\nsexual act or in the simulation of such act that did not occur in reality; and\n\n(2)  the production of which was substantially dependent upon technical means, including\nartificial intelligence or photo editing software, rather than the ability of another\nperson to physically impersonate the child.\n\n\"Child sexual abuse material.\"  A book, magazine, pamphlet, slide, photograph, film, videotape, computer depiction\nor other material depicting a child under 18 years of age engaging in a prohibited\nsexual act or in the simulation of a prohibited sexual act.\n\n\"Intentionally views.\"  The deliberate, purposeful, voluntary viewing of material containing an artificially\ngenerated depiction or depicting a child under 18 years of age engaging in a prohibited\nsexual act or in the simulation of such act. The term shall not include the accidental\nor inadvertent viewing of such material.\n\n\"Photo editing software.\"  As defined in section 3131.\n\n\"Prohibited sexual act.\"  Sexual intercourse as defined in section 3101 (relating to definitions), masturbation,\nsadism, masochism, bestiality, fellatio, cunnilingus, lewd exhibition of the genitals\nor nudity if such nudity is depicted for the purpose of sexual stimulation or gratification\nof any person who might view such depiction.\n\n18c6312v\n\n(Oct. 26, 1977, P.L.212, No.62, eff. 60 days; Dec. 19, 1988, P.L.1275, No.158, eff.\n60 days; Mar. 31, 1995, 1st Sp.Sess., P.L.985, No.10, eff. 60 days; Nov. 20, 2002,\nP.L.1104, No.134, eff. 60 days; July 14, 2009, P.L.63, No.15, eff. 60 days; Oct. 7,\n2010, P.L.482, No.69, eff. 60 days; Oct. 25, 2012, P.L.1623, No.198, eff. 60 days;\nDec. 18, 2013, P.L.1163, No.105, eff. Jan. 1, 2014; June 30, 2021, P.L.249, No.53,\neff. 60 days; Oct. 29, 2024, P.L.1095, No.125, eff. 60 days)\n\n2024 Amendment.  Act 125 amended subsecs. (c), (d), (f)(3) and (g) and added subsec. (f)(4).\n\n2021 Amendment.  Act 53 amended subsec. (d.1).\n\n2013 Amendment.  Act 105 amended subsecs. (b), (c) and (d) and added subsec. (d.1).\n\n2012 Amendment.  Act 198 amended subsec. (f).\n\n2010 Amendment.  Act 69 added subsec. (f.1).\n\n2009 Amendment.  Act 15 amended subsecs. (d) hdg. and (1) and (f), added subsec. (g) and deleted subsec.\n(a).\n\nCross References.  Section 6312 is referred to in sections 3051, 3104, 3131, 5743.1, 6318, 6321, 7621,\n7626, 7627, 9158 of this title; section 2106 of Title 20 (Decedents, Estates and Fiduciaries);\nsections 5329, 6303, 6344, 6388, 6702 of Title 23 (Domestic Relations); sections 5552,\n5920, 5985.1, 5993, 62A03, 6302, 9718.1, 9720.5, 9799.14, 9799.55 of Title 42 (Judiciary\nand Judicial Procedure); section 3113 of Title 63 (Professions and Occupations (State\nLicensed)).\n\nBack to Consolidated Statutes",
-          "contentHash": "3da05b1557170b4de4800906421a24cf45b21d42233c3ecf88af22191781aabd",
-          "hashBasis": "source_content",
-          "retrievedAt": "2026-08-29T15:33:25.338Z",
-          "effectiveDateStart": "Jan 1, 2014",
-          "effectiveDateEnd": null,
-          "supportRole": "offense",
-          "subdivision": null,
-          "metadata": {
-            "chargeId": "pa-sexual-exploitation-of-minor",
-            "catalogLabel": "Sexual Exploitation of Minor",
-            "catalogCode": "6312",
-            "catalogClassification": "felony",
-            "elements": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "grading": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "penalty": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "currentnessEvidence": {
-              "effectiveDateStart": "Jan 1, 2014"
-            },
-            "attorneyReview": "pending",
-            "fingerprint": "09cb9dd631b95360a98b6c27eab3bebdb37355056000d214237a2b920e1934c1",
-            "manifestImportedAt": "2026-08-29T15:33:25.338Z"
-          }
-        }
-      ],
+      "disposition": "require_exact_reselection",
+      "dispositionReason": "There are sub offenses, three different ones: (b) - Photographing, videotaping, depicting on computer or filming sexual acts; (c) Dissemination of photographs, videotapes, computer depictions and films; and (d) Child sexual abuse material",
+      "canonicalTitle": null,
+      "provisions": [],
       "apiStatus": "verified"
     },
     {
@@ -531,7 +476,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-petty-theft",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "faa8fe03f6a4029ad0be91ff504c8270cb3434860d92672731afb08294b11a90",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -583,7 +532,12 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-theft-by-receiving",
+              "decision": "Approved",
+              "action": "publish",
+              "approvedDisplayName": "Receiving stolen property"
+            },
             "fingerprint": "402da73f5b355e28b2d8d4a7c530a8921c692135eb15b7b070806544edc94d34",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -635,7 +589,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-identity-theft",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "0612b8d3e4ed2ab6323c637560291d778932744296cc709405556ffd32240415",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -687,7 +645,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-credit-card-fraud",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "9756fc4727664cecfadf8afd54a149b59f3968d7cf2fb6c333cf9d3d05b0b399",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -712,7 +674,7 @@
       "catalogCode": "3502",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "(a)(4) is Second Degree (the next row)",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -734,7 +696,7 @@
       "catalogCode": "3502",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "This is approved for Robbery, not for Auto Burglary. Robbery of a vehicle is 18 Pa. Cons. Stat. § 3702",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -755,8 +717,8 @@
       "catalogLabel": "Robbery in the Second Degree",
       "catalogCode": "3701",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is the entire provision just for Robbery. There is no distinction between 1st and 2nd degree",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -805,7 +767,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-carjacking",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "90e5c9bc57269134cc6a6d256c58420f2bf9def7f23d299e2f39c5e440fbc7ce",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -830,7 +796,7 @@
       "catalogCode": "35-780-113",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -841,7 +807,7 @@
       "catalogCode": "35-780-113(a)(30)",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "dispositionReason": "Repeat of row 36",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -852,7 +818,7 @@
       "catalogCode": "35-780-113(a)(30)",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -863,7 +829,7 @@
       "catalogCode": "35 P.S. §780-113(a)(14)",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -874,7 +840,7 @@
       "catalogCode": "7508",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -885,7 +851,7 @@
       "catalogCode": "35-780-113(a)(32)",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -895,8 +861,8 @@
       "catalogLabel": "Maintaining Drug House",
       "catalogCode": "35-780-113",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "disposition": "remove",
+      "dispositionReason": "This is not a drug house charge, this is about mislabelled or unlabeled drugs",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -945,7 +911,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": "July 1, 1987"
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-unlawful-carrying-of-weapon",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "fd1d7005ad804e6c58ee7442ae1477fe501497525eac24daa7166e52d2120071",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -997,7 +967,12 @@
             "currentnessEvidence": {
               "effectiveDateStart": "Feb 1, 2004"
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-felon-in-possession-of-firearm",
+              "decision": "Approved",
+              "action": "publish",
+              "approvedDisplayName": "Illegal Possession, Use, Manfacture, Control, Sale, or Transfer of a Firearm"
+            },
             "fingerprint": "fcf96f3dfe289af34c051e3f21206c4650618b6664756eaf77f93952283ee545",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1011,7 +986,7 @@
       "catalogCode": "908",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "Approved for Carrying Firearm During Emergency. This is not discharge",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1054,51 +1029,10 @@
       "catalogLabel": "Check Fraud",
       "catalogCode": "4105",
       "catalogCategory": "felony",
-      "disposition": "exact_alias_rename",
-      "dispositionReason": "The official Pennsylvania title is supported by an explicit reviewed alias mapping.",
-      "canonicalTitle": "Bad checks",
-      "provisions": [
-        {
-          "sourceKey": "pa:18:4105",
-          "lawId": "18",
-          "section": "4105",
-          "citation": "18 Pa. Cons. Stat. § 4105",
-          "officialTitle": "Bad checks",
-          "sourceUrl": "https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=18&div=0&chpt=41&sctn=5&subsctn=0",
-          "content": "§ 4105.  Bad checks.\n\n(a)  Offense defined.--\n\n(1)  A person commits an offense if he issues or passes a check or similar sight order\nfor the payment of money, knowing that it will not be honored by the drawee.\n\n(2)  A person commits an offense if he, knowing that it will not be honored by the drawee,\nissues or passes a check or similar sight order for the payment of money when the\ndrawee is located within this Commonwealth. A violation of this paragraph shall occur\nwithout regard to whether the location of the issuance or passing of the check or\nsimilar sight order is within or outside of this Commonwealth. It shall be no defense\nto a violation of this section that some or all of the acts constituting the offense\noccurred outside of this Commonwealth.\n\n(b)  Presumptions.-- For the purposes of this section as well as in any prosecution for theft committed\nby means of a bad check, the following shall apply:\n\n(1)  An issuer is presumed to know that the check or order (other than a post-dated check\nor order) would not be paid, if:\n\n(i)  payment was refused because the issuer had no such account with the drawee at the\ntime the check or order was issued; or\n\n(ii)  payment was refused by the drawee for lack of funds, upon presentation within 30 days\nafter issue, and the issuer failed to make good within ten days after receiving notice\nof that refusal.\n\nNotice of refusal may be given to the issuer orally or in writing by any person. Proof\nthat notice was sent by registered or certified mail, regardless of whether a receipt\nwas requested or returned, to the address printed on the check or, if none, then to\nthe issuer's last known address, shall raise a presumption that the notice was received.\n\n(2)  A check or order stamped \"NSF\" or \"insufficient funds\" shall raise a presumption that\npayment was refused by the drawee for lack of funds.\n\n(3)  A check or order stamped \"account closed\" or \"no such account\" or \"counterfeit\" shall\nraise a presumption that payment was refused by the drawee because the issuer had\nno such account with the drawee at the time the check or order was issued.\n\n(c)  Grading.--\n\n(1)  An offense under this section is:\n\n(i)  a summary offense if the check or order is less than $200;\n\n(ii)  a misdemeanor of the third degree if the check or order is $200 or more but less than\n$500;\n\n(iii)  a misdemeanor of the second degree if the check or order is $500 or more but less\nthan $1,000;\n\n(iv)  a misdemeanor of the first degree if the check or order is $1,000 or more but is less\nthan $75,000; or\n\n(v)  a felony of the third degree if the check or order is $75,000 or more.\n\n(2)  When the offense is a third or subsequent offense within a five-year period, regardless\nof the amount of the check or order and regardless of the grading of the prior offenses,\nan offense under this section is a misdemeanor of the first degree unless the amount\nof the check or order involved in the third or subsequent offense is $75,000 or more,\nthen the offense is a felony of the third degree.\n\n(d)  Venue.-- An offense under subsection (a) may be deemed to have been committed at either the\nplace where the defendant issues or passes the bad check or similar sight order for\nthe payment of money or the place where the financial institution upon which the bad\ncheck or similar sight order for the payment of money was drawn is located.\n\n(e)  Costs.-- Upon conviction under this section the sentence shall include an order for the issuer\nor passer to reimburse the payee or such other party as the circumstances may indicate\nfor:\n\n(1)  The face amount of the check.\n\n(2)  Interest at the legal rate on the face amount of the check from the date of dishonor\nby the drawee.\n\n(3)  A service charge if written notice of the service charge was conspicuously displayed\non the payee's premises when the check was issued. The service charge shall not exceed\n$50 unless the payee is charged fees in excess of $50 by financial institutions as\na result of such bad check or similar sight order for the payment of money. If the\npayee is charged fees in excess of $50, then the service charge shall not exceed the\nactual amount of the fees.\n\n18c4105v\n\n(July 6, 1984, P.L.647, No.134, eff. 90 days; Dec. 20, 1996, P.L.1531, No.201, eff.\n60 days; June 22, 2000, P.L.382, No.50, eff. 60 days; Dec. 18, 2007, P.L.462, No.70,\neff. 60 days)\n\n2007 Amendment.  Act 70 amended subsec. (e).\n\n1996 Amendment.  Act 201 amended subsecs. (b) and (c).\n\nCross References.  Section 4105 is referred to in section 6122 of Title 7 (Banks and Banking); sections\n3573, 3575, 8304 of Title 42 (Judiciary and Judicial Procedure); section 2303 of Title\n44 (Law and Justice).\n\nBack to Consolidated Statutes",
-          "contentHash": "c49b2c604ae188a6c149ef2686d8e2d5c1d210acd4c6993b1d46556b1eb19ea9",
-          "hashBasis": "source_content",
-          "retrievedAt": "2026-08-29T15:33:25.338Z",
-          "effectiveDateStart": null,
-          "effectiveDateEnd": null,
-          "supportRole": "offense",
-          "subdivision": null,
-          "metadata": {
-            "chargeId": "pa-check-fraud",
-            "catalogLabel": "Check Fraud",
-            "catalogCode": "4105",
-            "catalogClassification": "felony",
-            "elements": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "grading": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "penalty": {
-              "basis": "verbatim_official_text",
-              "source": "pennsylvania_general_assembly_html"
-            },
-            "currentnessEvidence": {
-              "effectiveDateStart": null
-            },
-            "attorneyReview": "pending",
-            "fingerprint": "8cc35849a6b4c3a2bb08db7f9b3bdf054b60451c2590db901e473feaca66913b",
-            "manifestImportedAt": "2026-08-29T15:33:25.338Z"
-          }
-        }
-      ],
+      "disposition": "remove",
+      "dispositionReason": "Already covered in row 13",
+      "canonicalTitle": null,
+      "provisions": [],
       "apiStatus": "verified"
     },
     {
@@ -1145,7 +1079,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-insurance-fraud",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "5768a9298455605b12a00127f4e7307c694151b0ea08c1ca0fc0535c083854e1",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1158,8 +1096,8 @@
       "catalogLabel": "Tax Fraud",
       "catalogCode": "7354",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "disposition": "remove",
+      "dispositionReason": "Not in the official code",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -1208,7 +1146,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-forgery",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "43981cea485dc3467e1592e254a6e26d4eb8a9cc3b656ec700d4f9149dac8b97",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1271,7 +1213,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-disorderly-conduct",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "1796d6a3659ec6ca02de189e15aebd5953e0e72a0c6abc1aabae6dc042d202dc",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1323,7 +1269,12 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-vandalism",
+              "decision": "Approved",
+              "action": "publish",
+              "approvedDisplayName": "Criminal Mischief"
+            },
             "fingerprint": "235f4f8327675302dc7d4e4f96cedfb3c77514a94491e0119e71d8b696566b90",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1358,8 +1309,8 @@
       "catalogLabel": "DUI Second Offense",
       "catalogCode": "75-3802",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is just regular DUI - see row 37",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1369,8 +1320,8 @@
       "catalogLabel": "DUI Third Offense",
       "catalogCode": "75-3802",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is just regular DUI - see row 37",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1419,7 +1370,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": "Apr 1, 1992"
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-reckless-driving",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "867c9f1969a2fba844f94ba183ac6520f80639285afa42db4395ef61f7714430",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1443,8 +1398,8 @@
       "catalogLabel": "Driving While Suspended",
       "catalogCode": "75-1543",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "Duplicate of the previous row, we only need one",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1493,7 +1448,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-retail-theft",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "32227f7abb72a90f0e0b7f19c7ef20e648d57ee3cd107c2fb67398b26b996cf3",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1545,7 +1504,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": "Jan 1, 2014"
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-simple-assault",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "abb7d1d9605d238bdd963b450b14d671de53fd5fb28a2135747c729550f28bd2",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1558,9 +1521,9 @@
       "catalogLabel": "DUI - General Impairment",
       "catalogCode": "3802(a)",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The official Pennsylvania title \"Driving under influence of alcohol or controlled substance\" is not an exact or explicitly reviewed mapping for the catalog label.",
-      "canonicalTitle": "Driving under influence of alcohol or controlled substance",
+      "disposition": "remove",
+      "dispositionReason": "This is just regular DUI - see row 37",
+      "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
     },
@@ -1570,7 +1533,7 @@
       "catalogCode": "13-a30",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1619,7 +1582,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-criminal-trespass",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "a1ac8cffe0d8b740753a890b1df5bb633d9d2dfa6e1b2230d9bf1b3b11d23e8b",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1632,9 +1599,9 @@
       "catalogLabel": "Theft by Unlawful Taking",
       "catalogCode": "3921",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The official Pennsylvania title \"Theft by unlawful taking or disposition\" is not an exact or explicitly reviewed mapping for the catalog label.",
-      "canonicalTitle": "Theft by unlawful taking or disposition",
+      "disposition": "remove",
+      "dispositionReason": "Repeat of row 80",
+      "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
     },
@@ -1682,7 +1649,11 @@
             "currentnessEvidence": {
               "effectiveDateStart": null
             },
-            "attorneyReview": "pending",
+            "attorneyReview": {
+              "chargeId": "pa-harassment",
+              "decision": "Approved",
+              "action": "publish"
+            },
             "fingerprint": "d1181d42a83ebb88f22ce5f980ea6ad967e142a465f6e176387e52c041caeea5",
             "manifestImportedAt": "2026-08-29T15:33:25.338Z"
           }
@@ -1772,8 +1743,8 @@
       "catalogLabel": "Minor in Possession of Alcohol",
       "catalogCode": "18-6308",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This provision/section has not been implemented - see https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=47",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1794,8 +1765,8 @@
       "catalogLabel": "Harassment / Stalking",
       "catalogCode": "18-2709",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "Duplicate of the previous row, we only need one",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1849,8 +1820,8 @@
       "catalogLabel": "Reckless/Careless Driving (Criminal)",
       "catalogCode": "75-3736",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "Repeat of row 91",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1882,8 +1853,8 @@
       "catalogLabel": "Criminal Nonsupport / Failure to Pay Child Support",
       "catalogCode": "23-4354",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "18 Pa. Cons. Stat. § 4322 has been repealed, and the content is now in Chapter 43 of Title 23",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1893,8 +1864,8 @@
       "catalogLabel": "Noise Violation / Disturbing the Peace by Noise",
       "catalogCode": "18-5503",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "Repeat of row 30",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1949,7 +1920,7 @@
       "catalogCode": "18-5505",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "There are separate charges in the subsections for type of tresspass: simple tresspass (b.1); agricultural trespasser (b.2), and agricultural biosecurity area trespasser (b.3)",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1959,8 +1930,8 @@
       "catalogLabel": "Panhandling / Aggressive Solicitation",
       "catalogCode": "18-5503",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "Repeat of row 30",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1970,8 +1941,8 @@
       "catalogLabel": "Curfew Violation",
       "catalogCode": "18-5507",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -1982,7 +1953,7 @@
       "catalogCode": "18-3503",
       "catalogCategory": "misdemeanor",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "There are separate charges in the subsections for type of tresspass: simple tresspass (b.1); agricultural trespasser (b.2), and agricultural biosecurity area trespasser (b.3)",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2003,8 +1974,8 @@
       "catalogLabel": "Truancy / Chronic Absenteeism",
       "catalogCode": "13-1333",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The exact official unconsolidated-statute retrieval path is approved, but publication remains withheld until attorney review confirms that the legacy text substantively supports this catalog charge; secondary, inferred, nearby, and alternate citations are rejected.",
+      "disposition": "remove",
+      "dispositionReason": "This iis a procedural provisions regarding how to deal with truancy",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2025,8 +1996,8 @@
       "catalogLabel": "Illegal Discharge of Fireworks",
       "catalogCode": "35-1271",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This provision does not appear in the PA code",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2036,8 +2007,8 @@
       "catalogLabel": "Possession of Alcohol in Park / Prohibited Area",
       "catalogCode": "4-406",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The exact official unconsolidated-statute retrieval path is approved, but publication remains withheld until attorney review confirms that the legacy text substantively supports this catalog charge; secondary, inferred, nearby, and alternate citations are rejected.",
+      "disposition": "remove",
+      "dispositionReason": "This is not an open container offense provision, this is simply requirements for sellers of alcoholic beverages",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2058,8 +2029,8 @@
       "catalogLabel": "Criminal Attempt",
       "catalogCode": "MPC § 5.01 / PA attempt statute",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "See row 9 - this attaches to other crimes",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2102,8 +2073,8 @@
       "catalogLabel": "Attempted Murder",
       "catalogCode": "PA attempted murder statute / MPC § 5.01",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This provision is not attempted murder. It is the general provision of attempt, which can be applied to a number of different crimes. I am not sure if this should be a standalone offense, which is why I have rejected it. Most likely attempt is added on to other potential charges",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2114,7 +2085,7 @@
       "catalogCode": "PA attempted robbery statute / MPC § 5.01",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "901 is not a provision for attempted robbery. Is the thinking here to combine the general criminal attempt provision with the robbery provision? That's not precise enough in my opinion.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2125,7 +2096,7 @@
       "catalogCode": "PA attempted sexual assault statute / MPC § 5.01",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "901 is not a provision for sexual assault, same issue as the previous row.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2147,7 +2118,7 @@
       "catalogCode": "PA gang enhancement statute",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "dispositionReason": "Please double check this one - is this just punishments for rackateering or the crime itself",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2168,8 +2139,8 @@
       "catalogLabel": "Prior Felony / Recidivist Sentencing Enhancement",
       "catalogCode": "PA habitual offender / recidivist statute",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is not a charge on its own, its added sentencing for repeat offenders",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2179,8 +2150,8 @@
       "catalogLabel": "Use of a Firearm in Commission of a Felony",
       "catalogCode": "PA firearm enhancement statute",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is just a sentencing provision, not the crime itself",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2191,7 +2162,7 @@
       "catalogCode": "PA drug-free school zone statute",
       "catalogCategory": "felony",
       "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog citation is not an exact Pennsylvania Consolidated Statutes citation; no unconsolidated, federal, or inferred substitute is accepted.",
+      "dispositionReason": "Attorney review requires structural correction before publication.",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "placeholder"
@@ -2223,8 +2194,8 @@
       "catalogLabel": "Juvenile Delinquency Adjudication (Felony-Level Act)",
       "catalogCode": "PA Juvenile Court Act / Family Code",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is a definitions provision for juvenile matters, not the crimes themselves",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2234,8 +2205,8 @@
       "catalogLabel": "Juvenile Delinquency Adjudication (Misdemeanor-Level Act)",
       "catalogCode": "PA Juvenile Court Act / Family Code",
       "catalogCategory": "misdemeanor",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is a definitions provision for juvenile matters, not the crimes themselves",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
@@ -2245,8 +2216,8 @@
       "catalogLabel": "Juvenile Transfer to Adult Court (Waiver Hearing)",
       "catalogCode": "PA Juvenile Court Act — transfer / waiver provisions",
       "catalogCategory": "felony",
-      "disposition": "require_exact_reselection",
-      "dispositionReason": "The catalog code does not exactly support every cited Pennsylvania statutory section and subdivision.",
+      "disposition": "remove",
+      "dispositionReason": "This is not a charge, this is a procedural provision regarding transfer of proceedings for juveniles",
       "canonicalTitle": null,
       "provisions": [],
       "apiStatus": "verified"
