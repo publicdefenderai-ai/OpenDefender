@@ -853,22 +853,41 @@ function PolishPanel({ form }: { form: FormState }) {
   useEffect(() => {
     let dailyUsageRolloverTimer: ReturnType<typeof setTimeout> | null = null;
 
+    const refreshDailyUsage = () => {
+      setPolishDailyCount(readPolishDailyUsage(window.localStorage).count);
+    };
+
     const scheduleDailyUsageRefresh = () => {
       const nextLocalMidnight = new Date();
       nextLocalMidnight.setHours(24, 0, 0, 0);
       const delay = Math.max(1, nextLocalMidnight.getTime() - Date.now());
 
       dailyUsageRolloverTimer = setTimeout(() => {
-        setPolishDailyCount(readPolishDailyUsage(window.localStorage).count);
+        refreshDailyUsage();
         scheduleDailyUsageRefresh();
       }, delay);
     };
 
+    const handleResume = () => {
+      refreshDailyUsage();
+      if (dailyUsageRolloverTimer) {
+        clearTimeout(dailyUsageRolloverTimer);
+      }
+      scheduleDailyUsageRefresh();
+    };
+
     scheduleDailyUsageRefresh();
+    document.addEventListener("visibilitychange", handleResume);
+    window.addEventListener("focus", handleResume);
+    window.addEventListener("pageshow", handleResume);
+
     return () => {
       if (dailyUsageRolloverTimer) {
         clearTimeout(dailyUsageRolloverTimer);
       }
+      document.removeEventListener("visibilitychange", handleResume);
+      window.removeEventListener("focus", handleResume);
+      window.removeEventListener("pageshow", handleResume);
     };
   }, []);
 

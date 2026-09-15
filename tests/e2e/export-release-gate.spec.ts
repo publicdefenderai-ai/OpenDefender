@@ -399,7 +399,7 @@ test.describe("browser export release gate", () => {
     expect(pageErrors).toEqual([]);
   });
 
-  test("resets AI daily usage across open builder tabs at local midnight", async ({ context }) => {
+  test("resets AI daily usage across open builder tabs after a suspended multi-day jump", async ({ context }) => {
     const page = await context.newPage();
     const secondPage = await context.newPage();
     const consoleErrors: string[] = [];
@@ -463,9 +463,11 @@ test.describe("browser export release gate", () => {
     await expect(page.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
     await expect(secondPage.getByText("AI drafts used today on this browser: 1 of 20.")).toBeVisible();
 
+    // fastForward models a suspended tab: it jumps across multiple midnights
+    // while due timers fire at most once when the browser resumes.
     await Promise.all([
-      page.clock.fastForward(30_000),
-      secondPage.clock.fastForward(30_000),
+      page.clock.fastForward(3 * 24 * 60 * 60 * 1000),
+      secondPage.clock.fastForward(3 * 24 * 60 * 60 * 1000),
     ]);
     await expect(page.getByText("AI drafts used today on this browser: 0 of 20.")).toBeVisible();
     await expect(secondPage.getByText("AI drafts used today on this browser: 0 of 20.")).toBeVisible();
