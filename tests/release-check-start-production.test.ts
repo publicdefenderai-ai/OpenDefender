@@ -66,4 +66,33 @@ describe("release server error propagation", () => {
       "[release-check] Production server emitted an unexpected error log; failing verification.",
     );
   });
+
+  it("fails closed while preserving a server spawn error", async () => {
+    const stdout = captureOutput();
+    const stderr = captureOutput();
+    const missingCommand = resolve(
+      process.cwd(),
+      "scripts/release-check/fixtures/release-server-does-not-exist",
+    );
+
+    const result = await runReleaseServer({
+      command: missingCommand,
+      args: [],
+      env: {
+        NODE_ENV: "test",
+        RELEASE_CHECK: "true",
+      },
+      stdout: stdout.stream,
+      stderr: stderr.stream,
+    });
+
+    expect(result).toMatchObject({
+      code: 1,
+      releaseCheckFailed: true,
+      signal: null,
+    });
+    expect(stderr.read()).toContain(
+      `[release-check] Failed to start production server: spawn ${missingCommand} ENOENT`,
+    );
+  });
 });

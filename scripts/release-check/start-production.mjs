@@ -195,6 +195,7 @@ export function runReleaseServer({
   return new Promise((resolve) => {
     let releaseCheckFailed = false;
     let stderrBuffer = "";
+    let settled = false;
     const signalHandlers = new Map();
 
     function inspectStderrLine(line) {
@@ -231,12 +232,9 @@ export function runReleaseServer({
       }
     });
 
-    server.on("error", (error) => {
-      stderr.write(`[release-check] Failed to start production server: ${error.message}\n`);
-      releaseCheckFailed = true;
-    });
-
-    server.on("exit", (code, signal) => {
+    function finish(code, signal) {
+      if (settled) return;
+      settled = true;
       for (const [shutdownSignal, handler] of signalHandlers) {
         process.removeListener(shutdownSignal, handler);
       }
@@ -246,6 +244,16 @@ export function runReleaseServer({
         releaseCheckFailed,
         signal,
       });
+    }
+
+    server.on("error", (error) => {
+      stderr.write(`[release-check] Failed to start production server: ${error.message}\n`);
+      releaseCheckFailed = true;
+      finish(1, null);
+    });
+
+    server.on("exit", (code, signal) => {
+      finish(code, signal);
     });
 
     for (const shutdownSignal of ["SIGINT", "SIGTERM"]) {
