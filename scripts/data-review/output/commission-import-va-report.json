@@ -1,9 +1,15 @@
 {
   "state": "VA",
-  "runAt": "2026-04-23T19:51:14.228Z",
+  "runAt": "2026-09-15T05:19:09.323Z",
   "commissionSource": "Virginia Code Annotated — law.lis.virginia.gov",
   "commissionTableUrl": "https://law.lis.virginia.gov/vacode/title18.2/",
   "promoted": [
+    "va-attempted-robbery",
+    "va-attempted-sexual-assault"
+  ],
+  "urlAdded": [],
+  "notInCommissionTable": [],
+  "alreadyHigh": [
     "va-murder-in-the-first-degree",
     "va-murder-in-the-second-degree",
     "va-felony-murder",
@@ -109,8 +115,6 @@
     "va-illegal-fireworks",
     "va-alcohol-in-park",
     "va-hunting-fishing-no-license",
-    "va-attempted-robbery",
-    "va-attempted-sexual-assault",
     "va-solicitation",
     "va-rico-organized-crime",
     "va-juvenile-delinquency-felony",
@@ -134,8 +138,5 @@
     "va-domestic-assault-battery",
     "va-destruction-of-property",
     "va-obstruction-of-justice"
-  ],
-  "urlAdded": [],
-  "notInCommissionTable": [],
-  "alreadyHigh": []
+  ]
 }

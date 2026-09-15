@@ -1,9 +1,17 @@
 {
   "state": "MN",
-  "runAt": "2026-04-23T19:48:46.570Z",
+  "runAt": "2026-09-15T05:18:13.759Z",
   "commissionSource": "Minnesota Statutes (2024) — revisor.mn.gov",
   "commissionTableUrl": "https://www.revisor.mn.gov/statutes/",
   "promoted": [
+    "mn-failure-to-appear",
+    "mn-domestic-violence-assault",
+    "mn-carjacking",
+    "mn-forgery"
+  ],
+  "urlAdded": [],
+  "notInCommissionTable": [],
+  "alreadyHigh": [
     "mn-murder-in-the-first-degree",
     "mn-murder-in-the-second-degree",
     "mn-murder-in-the-third-degree",
@@ -13,11 +21,9 @@
     "mn-trespassing",
     "mn-disorderly-conduct",
     "mn-resisting-arrest",
-    "mn-failure-to-appear",
     "mn-petty-theft",
     "mn-dui-first-offense",
     "mn-aggravated-assault",
-    "mn-domestic-violence-assault",
     "mn-robbery-in-the-first-degree",
     "mn-robbery-in-the-second-degree",
     "mn-burglary-in-the-first-degree",
@@ -71,11 +77,9 @@
     "mn-assault-in-the-second-degree",
     "mn-assault-in-the-third-degree",
     "mn-menacing",
-    "mn-carjacking",
     "mn-bank-robbery",
     "mn-reckless-driving",
     "mn-hit-and-run",
-    "mn-forgery",
     "mn-residential-burglary",
     "mn-commercial-burglary",
     "mn-auto-burglary",
@@ -135,8 +139,5 @@
     "mn-assault-fifth-degree",
     "mn-possession-small-amount-marijuana",
     "mn-driving-after-revocation"
-  ],
-  "urlAdded": [],
-  "notInCommissionTable": [],
-  "alreadyHigh": []
+  ]
 }
