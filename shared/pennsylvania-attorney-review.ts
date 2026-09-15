@@ -11,7 +11,8 @@ export type PennsylvaniaAttorneyReviewAction =
   | "split"
   | "reclassify"
   | "deduplicate"
-  | "remove";
+  | "remove"
+  | "other";
 
 export interface PennsylvaniaAttorneyReviewDecision {
   chargeId: string;

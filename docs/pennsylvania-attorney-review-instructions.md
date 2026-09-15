@@ -24,7 +24,7 @@ exact official-source verification.
      citation is wrong or incomplete.
    - `correctedSubdivision`: the exact subsection or paragraph, if applicable.
    - `decision`: enter exactly one of `publish`, `correct`, `split`,
-     `reclassify`, `deduplicate`, `hold`, or `remove`.
+     `reclassify`, `deduplicate`, `hold`, `remove`, or `other`.
    - `reviewer`: attorney or reviewer name.
    - `reviewedAt`: review date in `YYYY-MM-DD` format.
    - `note`: brief rationale, including the official section/subdivision
@@ -47,6 +47,8 @@ exact official-source verification.
 - `hold`: the mapping may be useful but cannot be approved yet because exact
   authority or substantive support is unresolved.
 - `remove`: the row should not appear in the Pennsylvania catalog.
+- `other`: use only when none of the decisions above accurately describes the
+  legal outcome; explain the outcome and the required next step in `note`.
 
 Every row needs a decision. A `publish` decision is not a bulk approval: it
 will still be checked against the exact official section, title, subdivision,
