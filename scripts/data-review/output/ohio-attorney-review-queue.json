@@ -27,8 +27,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-murder-in-the-second-degree",
@@ -46,8 +51,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-criminally-negligent-homicide",
@@ -63,8 +73,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-vehicular-homicide",
@@ -80,8 +95,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-felony-murder",
@@ -99,8 +119,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-assault-with-deadly-weapon",
@@ -116,8 +141,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-assault-on-peace-officer",
@@ -133,8 +163,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-sexual-assault-in-the-second-degree",
@@ -150,8 +185,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-statutory-rape",
@@ -167,8 +207,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-child-sexual-abuse",
@@ -186,8 +231,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-sexual-exploitation-of-minor",
@@ -203,8 +253,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-petty-theft",
@@ -224,8 +279,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-theft-by-receiving",
@@ -241,8 +301,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-identity-theft",
@@ -258,8 +323,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-credit-card-fraud",
@@ -275,8 +345,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-embezzlement",
@@ -292,8 +367,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-shoplifting",
@@ -313,8 +393,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-burglary-in-the-first-degree",
@@ -330,8 +415,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-residential-burglary",
@@ -349,8 +439,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-commercial-burglary",
@@ -368,8 +463,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-auto-burglary",
@@ -389,8 +489,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-carjacking",
@@ -409,8 +514,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-bank-robbery",
@@ -429,8 +539,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-possession-of-controlled-substance",
@@ -448,8 +563,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-possession-with-intent-to-distribute",
@@ -465,8 +585,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-distribution-of-controlled-substance",
@@ -484,8 +609,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-manufacturing-controlled-substance",
@@ -501,8 +631,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-drug-trafficking",
@@ -520,8 +655,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-possession-of-drug-paraphernalia",
@@ -537,8 +677,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-maintaining-drug-house",
@@ -554,8 +699,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-unlawful-carrying-of-weapon",
@@ -571,8 +721,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-felon-in-possession-of-firearm",
@@ -588,8 +743,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-discharge-of-firearm-in-city",
@@ -605,8 +765,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-possession-of-prohibited-weapon",
@@ -622,8 +787,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-wire-fraud",
@@ -643,8 +813,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-mail-fraud",
@@ -660,8 +835,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-check-fraud",
@@ -677,8 +857,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-tax-fraud",
@@ -694,8 +879,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-forgery",
@@ -711,8 +901,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-computer-fraud",
@@ -728,8 +923,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-public-intoxication",
@@ -748,8 +948,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-loitering",
@@ -765,8 +970,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-dui-first-offense",
@@ -784,8 +994,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-dui-second-offense",
@@ -801,8 +1016,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-dui-third-offense",
@@ -818,8 +1038,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-reckless-driving",
@@ -837,8 +1062,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-hit-and-run",
@@ -854,8 +1084,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-assault-simple",
@@ -871,8 +1106,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-ovi",
@@ -890,8 +1130,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-possession-marijuana",
@@ -909,8 +1154,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-criminal-damaging",
@@ -926,8 +1176,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-driving-under-suspension",
@@ -943,8 +1198,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-failure-to-appear",
@@ -960,8 +1220,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-probation-violation",
@@ -977,8 +1242,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-resisting-arrest",
@@ -994,8 +1264,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-protective-order-violation",
@@ -1011,8 +1286,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-open-container",
@@ -1030,8 +1310,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-minor-in-possession",
@@ -1047,8 +1332,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-false-info-to-police",
@@ -1064,8 +1354,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-harassment",
@@ -1081,8 +1376,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-contempt-of-court",
@@ -1098,8 +1398,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-solicitation",
@@ -1115,8 +1420,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-driving-without-insurance",
@@ -1132,8 +1442,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-reckless-driving-criminal",
@@ -1151,8 +1466,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-expired-registration",
@@ -1170,8 +1490,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-expired-inspection",
@@ -1187,8 +1512,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-failure-to-pay-child-support",
@@ -1204,8 +1534,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-noise-violation",
@@ -1221,8 +1556,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-indecent-exposure",
@@ -1238,8 +1578,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-fake-id",
@@ -1255,8 +1600,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-animal-at-large",
@@ -1272,8 +1622,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-animal-cruelty-misdemeanor",
@@ -1289,8 +1644,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-illegal-camping",
@@ -1308,8 +1668,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-panhandling",
@@ -1328,8 +1693,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-unregistered-vehicle",
@@ -1347,8 +1717,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-curfew-violation",
@@ -1364,8 +1739,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-trespass-after-warning",
@@ -1381,8 +1761,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-defective-vehicle-equipment",
@@ -1398,8 +1783,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-truancy",
@@ -1415,8 +1805,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-littering",
@@ -1432,8 +1827,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-illegal-fireworks",
@@ -1449,8 +1849,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "Does the official Ohio title cover this catalog offense, or should the row be renamed or reclassified?",
       "recommendedAction": "correct-or-reclassify",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-alcohol-in-park",
@@ -1468,8 +1873,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-hunting-fishing-no-license",
@@ -1485,8 +1895,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-criminal-attempt",
@@ -1504,8 +1919,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-conspiracy",
@@ -1521,8 +1941,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-aiding-and-abetting",
@@ -1540,8 +1965,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-accessory-after-the-fact",
@@ -1557,8 +1987,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-attempted-murder",
@@ -1576,8 +2011,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-attempted-robbery",
@@ -1593,8 +2033,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-attempted-sexual-assault",
@@ -1610,8 +2055,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-criminal-solicitation",
@@ -1629,8 +2079,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-gang-enhancement",
@@ -1646,8 +2101,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-hate-crime-enhancement",
@@ -1663,8 +2123,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-recidivist-enhancement",
@@ -1680,8 +2145,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-firearm-in-felony-enhancement",
@@ -1697,8 +2167,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-drug-school-zone-enhancement",
@@ -1714,8 +2189,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-rico-organized-crime",
@@ -1731,8 +2211,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-money-laundering",
@@ -1748,8 +2233,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-juvenile-delinquency-felony",
@@ -1767,8 +2257,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-juvenile-delinquency-misdemeanor",
@@ -1786,8 +2281,13 @@
       "possibleDuplicate": true,
       "reviewQuestion": "Are these distinct Ohio offenses/subsections, or should one row be the canonical catalog entry?",
       "recommendedAction": "deduplicate-or-split",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-juvenile-transfer-adult-court",
@@ -1803,8 +2303,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     },
     {
       "chargeId": "oh-juvenile-firearm-possession",
@@ -1820,8 +2325,13 @@
       "possibleDuplicate": false,
       "reviewQuestion": "What exact Ohio Revised Code section and subsection supports this row, if any?",
       "recommendedAction": "correct-or-hold",
+      "approvedDisplayName": "",
+      "correctedCitation": "",
+      "correctedSubdivision": "",
+      "canonicalChargeId": "",
       "decision": "",
-      "otherDetails": ""
+      "otherDetails": "",
+      "note": ""
     }
   ]
 }

@@ -37,5 +37,19 @@ manifest reason, and review question are generated automatically. The
 reviewer should only supply the decision and any correction or explanation
 needed for that decision.
 
+## Input columns
+
+Leave these blank unless the selected decision needs them:
+
+- `decision` — one of the options above.
+- `approvedDisplayName` — only if the public catalog name should change.
+- `correctedCitation` — only if the exact Ohio citation changes.
+- `correctedSubdivision` — only when a subsection or paragraph is required.
+- `canonicalChargeId` — required for `deduplicate` or a `reclassify` target.
+- `otherDetails` — required when `decision` is `other`.
+- `note` — brief legal rationale for non-publish decisions.
+
+The other columns are evidence and should not be edited.
+
 Reviewer identity and dates belong in the private review record, not in the
 committed runtime manifest.

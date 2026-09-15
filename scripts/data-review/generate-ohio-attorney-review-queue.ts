@@ -50,8 +50,13 @@ export interface OhioAttorneyReviewQueueRow {
     | "correct-or-hold"
     | "hold-or-remove"
     | "other";
+  approvedDisplayName: "";
+  correctedCitation: "";
+  correctedSubdivision: "";
+  canonicalChargeId: "";
   decision: "";
   otherDetails: "";
+  note: "";
 }
 
 export interface OhioAttorneyReviewQueue {
@@ -172,8 +177,13 @@ export function buildOhioAttorneyReviewQueue(
       possibleDuplicate,
       reviewQuestion: reviewQuestion(focus),
       recommendedAction: recommendedAction(focus),
+      approvedDisplayName: "",
+      correctedCitation: "",
+      correctedSubdivision: "",
+      canonicalChargeId: "",
       decision: "",
       otherDetails: "",
+      note: "",
     };
   });
 
@@ -207,8 +217,13 @@ export function writeOhioAttorneyReviewQueue(
     "possibleDuplicate",
     "reviewQuestion",
     "recommendedAction",
+    "approvedDisplayName",
+    "correctedCitation",
+    "correctedSubdivision",
+    "canonicalChargeId",
     "decision",
     "otherDetails",
+    "note",
     "currentDispositionReason",
   ];
   const lines = [
@@ -225,8 +240,13 @@ export function writeOhioAttorneyReviewQueue(
       String(row.possibleDuplicate),
       row.reviewQuestion,
       row.recommendedAction,
+      row.approvedDisplayName,
+      row.correctedCitation,
+      row.correctedSubdivision,
+      row.canonicalChargeId,
       row.decision,
       row.otherDetails,
+      row.note,
       row.currentDispositionReason,
     ].map(csvCell).join(",")),
   ];
