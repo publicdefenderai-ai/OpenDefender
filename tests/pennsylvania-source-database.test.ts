@@ -60,15 +60,15 @@ describe("Pennsylvania authority manifest", () => {
       record.disposition === "retain" || record.disposition === "exact_alias_rename");
     const withheld = manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection");
-    expect(selectable).toHaveLength(22);
+    expect(selectable).toHaveLength(43);
     expect(selectable.every((record) => record.provisions.length > 0)).toBe(true);
-    expect(withheld).toHaveLength(64);
+    expect(withheld).toHaveLength(43);
     expect(withheld.every((record) => record.provisions.length === 0)).toBe(true);
     expect(manifest.catalogRecords.filter((record) => record.disposition === "remove")).toHaveLength(26);
-    expect(seed.sources).toHaveLength(22);
-    expect(seed.snapshots).toHaveLength(22);
-    expect(seed.links).toHaveLength(22);
-    expect(seed.selectableChargeIds).toHaveLength(22);
+    expect(seed.sources).toHaveLength(43);
+    expect(seed.snapshots).toHaveLength(43);
+    expect(seed.links).toHaveLength(43);
+    expect(seed.selectableChargeIds).toHaveLength(43);
     assertPennsylvaniaAttorneyReviewCoverage();
   });
 
@@ -198,10 +198,21 @@ describe("Pennsylvania authority manifest", () => {
       }]);
       const review = getPennsylvaniaAttorneyReviewDecision(chargeId)!;
       expect(approved.publicationApproved).toBe(chargeId === "pa-animal-at-large");
-      expect(record.disposition).toBe(review.action === "remove" ? "remove" : "require_exact_reselection");
+      expect(record.disposition).toBe(
+        approved.publicationApproved
+          ? "exact_alias_rename"
+          : review.action === "remove"
+            ? "remove"
+            : "require_exact_reselection",
+      );
       expect(record.apiStatus).toBe("verified");
-      expect(record.canonicalTitle).toBeNull();
-      expect(record.provisions).toHaveLength(0);
+      if (approved.publicationApproved) {
+        expect(record.canonicalTitle).toBe(approved.sectionTitle);
+        expect(record.provisions).toHaveLength(1);
+      } else {
+        expect(record.canonicalTitle).toBeNull();
+        expect(record.provisions).toHaveLength(0);
+      }
       if (review.note) {
         expect(record.dispositionReason).toContain(review.note);
       } else {
@@ -825,20 +836,7 @@ describe("Pennsylvania authority manifest", () => {
         catalogDiff: {
           added: [],
           removed: [],
-          dispositionChanged: expect.arrayContaining([
-            {
-              chargeId: "pa-animal-at-large",
-              catalogLabel: "Animal at Large / Leash Law Violation",
-              previousDisposition: "require_exact_reselection",
-              nextDisposition: "exact_alias_rename",
-            },
-            {
-              chargeId: "pa-assault-on-peace-officer",
-              catalogLabel: "Assault on Peace Officer",
-              previousDisposition: "require_exact_reselection",
-              nextDisposition: "exact_alias_rename",
-            },
-          ]),
+          dispositionChanged: [],
         },
       });
       const refreshedManifest = JSON.parse(readFileSync(temporaryManifest, "utf8"));
@@ -846,7 +844,7 @@ describe("Pennsylvania authority manifest", () => {
       expect(refreshedManifest.catalogRecords).toHaveLength(existingManifest.catalogRecords.length);
       expect(refreshedManifest.catalogRecords.filter((record: { disposition: string }) =>
         record.disposition === "retain" || record.disposition === "exact_alias_rename",
-      )).toHaveLength(24);
+      )).toHaveLength(43);
     } finally {
       rmSync(temporaryDirectory, { recursive: true, force: true });
     }
