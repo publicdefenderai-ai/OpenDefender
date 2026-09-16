@@ -11,6 +11,7 @@ import {
   buildOhioSourceUrl,
   parseOhioCitation,
 } from "../../server/data/ohio-source-database-seed";
+import type { AuthorityEvidenceRecord } from "../../server/services/authority-offense-evidence";
 import type { AuthorityCatalogRecord } from "../../server/services/authority-source-database";
 
 export const OHIO_REVIEW_DECISION_OPTIONS = [
@@ -36,6 +37,9 @@ export interface OhioAttorneyReviewQueueRow {
   currentDisposition: AuthorityCatalogRecord["disposition"];
   currentDispositionReason: string;
   mappingClassification: string;
+  mappingConfidence: string | null;
+  mappingRationale: string | null;
+  evidence: AuthorityEvidenceRecord[];
   reviewFocus:
     | "shared-citation-cluster"
     | "official-title-mismatch"
@@ -178,6 +182,9 @@ export function buildOhioAttorneyReviewQueue(
       currentDisposition: record.disposition,
       currentDispositionReason: record.dispositionReason,
       mappingClassification: record.mapping?.classification ?? "legacy_unclassified",
+      mappingConfidence: record.mapping?.confidence ?? null,
+      mappingRationale: record.mapping?.rationale ?? null,
+      evidence: record.mapping?.candidateEvidence ?? [],
       reviewFocus: focus,
       relatedChargeIds,
       possibleDuplicate,
@@ -231,6 +238,15 @@ export function writeOhioAttorneyReviewQueue(
     "otherDetails",
     "note",
     "mappingClassification",
+    "mappingConfidence",
+    "mappingRationale",
+    "evidenceSection",
+    "evidenceSubdivision",
+    "evidenceCurrentness",
+    "evidenceGrading",
+    "evidencePenalty",
+    "evidenceQuotedSpans",
+    "evidenceSourceHash",
     "currentDispositionReason",
   ];
   const lines = [
@@ -255,6 +271,22 @@ export function writeOhioAttorneyReviewQueue(
       row.otherDetails,
       row.note,
       row.mappingClassification,
+      row.mappingConfidence,
+      row.mappingRationale,
+      row.evidence.map((item) => item.sectionIdentity.section).join(";"),
+      row.evidence.map((item) => item.sectionIdentity.subdivision ?? "").join(";"),
+      row.evidence.map((item) => [
+        item.currentness.effectiveDateStart
+          ? `effective ${item.currentness.effectiveDateStart}`
+          : "",
+        item.currentness.sourceEvidence ?? "",
+      ].filter(Boolean).join(" | ")).join(";"),
+      row.evidence.map((item) => item.gradingLanguage ?? "").join(";"),
+      row.evidence.map((item) => item.penaltyLanguage ?? "").join(";"),
+      row.evidence.map((item) => item.evidenceSpans
+        .map((span) => `${span.kind}: ${span.quote}`)
+        .join(" | ")).join(";"),
+      row.evidence.map((item) => item.sourceHash).join(";"),
       row.currentDispositionReason,
     ].map(csvCell).join(",")),
   ];

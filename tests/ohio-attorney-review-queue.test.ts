@@ -17,6 +17,11 @@ describe("Ohio attorney review queue", () => {
     expect(queue.rows.every((row) =>
       ["semantic_conflict", "shared_citation"].includes(row.mappingClassification),
     )).toBe(true);
+    expect(queue.rows.every((row) =>
+      row.evidence.length > 0 &&
+      row.evidence[0].evidenceSpans.some((span) => span.kind === "currentness") &&
+      row.evidence[0].evidenceSpans.some((span) => span.kind === "offense"),
+    )).toBe(true);
     expect(queue.decisionOptions).toContain("other");
   });
 

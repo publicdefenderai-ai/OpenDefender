@@ -33,9 +33,21 @@ Choose exactly one:
   `otherDetails` and identify the next action.
 
 The source URL, official title, citation, duplicate candidates, current
-manifest reason, and review question are generated automatically. The
-reviewer should only supply the decision and any correction or explanation
-needed for that decision.
+manifest reason, review question, and evidence fields are generated
+automatically. The reviewer should only supply the decision and any
+correction or explanation needed for that decision.
+
+The evidence fields are extracted from the hash-bound official Ohio text:
+
+- `evidenceSection` and `evidenceSubdivision` identify the exact Revised Code
+  provision.
+- `evidenceCurrentness` records the effective date or official currentness
+  statement.
+- `evidenceGrading` and `evidencePenalty` show the extracted grading and
+  penalty language when present.
+- `evidenceQuotedSpans` gives the title, currentness, grading, penalty,
+  subdivision, and bounded offense-text quotes with their evidence kinds.
+- `evidenceSourceHash` binds the quotes to the retrieved official text.
 
 ## Input columns
 
@@ -49,7 +61,10 @@ Leave these blank unless the selected decision needs them:
 - `otherDetails` — required when `decision` is `other`.
 - `note` — brief legal rationale for non-publish decisions.
 
-The other columns are evidence and should not be edited.
+The other columns are evidence and should not be edited. A completed worksheet
+does not publish a mapping by itself: any later import must still pass the
+existing exact Ohio section, subdivision, currentness, complete-text, hash,
+and title-mapping checks.
 
 Reviewer identity and dates belong in the private review record, not in the
 committed runtime manifest.
