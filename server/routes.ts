@@ -53,7 +53,7 @@ import { attorneyVerificationRequestSchema } from "../shared/attorney/attestatio
 import { getTemplates, getTemplate, generateDocument, getGeneratedDocument, clearSessionDocuments } from "./services/attorney-docs/document-generator";
 import { getPlaybooks, getPlaybook } from "../shared/playbooks/index";
 import { generateDocx } from "./services/attorney-docs/docx-generator";
-import { search, buildSearchIndex, getSearchIndexStats } from "./services/search-indexer";
+import { addChargesToSearchIndex, search, buildSearchIndex, getSearchIndexStats } from "./services/search-indexer";
 import { z } from "zod";
 import multer from "multer";
 import { summarizeDocument, validateFile, getSupportedFileTypes, createSummaryBatch, getSummaryBatchStatus, cancelSummaryBatch, redactDocumentPII } from "./services/document-summarizer";
@@ -793,6 +793,11 @@ export async function registerRoutes(
       const language = (lang === 'es' ? 'es' : lang === 'zh' ? 'zh' : 'en') as 'en' | 'es' | 'zh';
       const typeFilters = types ? (types as string).split(',') : undefined;
       const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
+      addChargesToSearchIndex(
+        getChargesByJurisdiction("PA").filter((charge) =>
+          currentAuthoritySelectableIds.has(charge.id),
+        ),
+      );
       
       const searchResult = search({
         query: query.trim(),
@@ -800,8 +805,8 @@ export async function registerRoutes(
         filters: {
           types: typeFilters as any,
           jurisdiction: jurisdiction as string,
-          // The index is built from the static catalog; keep withheld authority
-          // charges out of site search and its totals as well.
+          // Keep withheld authority charges out of site search and its totals
+          // as well.
           chargeIds: [...currentAuthoritySelectableIds].map((id) => `charge-${id}`),
         },
         limit: limit ? parseInt(limit as string, 10) : 20,

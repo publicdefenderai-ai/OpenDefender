@@ -3,7 +3,14 @@ import { LEGAL_SYNONYMS } from "@shared/search-types";
 import { legalGlossaryTerms } from "../../shared/legal-glossary-data";
 import { diversionPrograms } from "../../shared/diversion-programs-data";
 import { expungementRules } from "../../shared/expungement-data";
-import { getSelectableCharges, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "@shared/criminal-charges";
+import {
+  getSelectableCharges,
+  getInstructionRef,
+  getInstructionUrl,
+  getVerifiedCitation,
+  type CriminalCharge,
+} from "@shared/criminal-charges";
+import { getPennsylvaniaAttorneyReviewDisplayName } from "../../shared/pennsylvania-attorney-review";
 import { GENERIC_MOCK_QA, PROCEEDING_LABELS, type ProceedingType } from "@shared/mock-qa";
 import { devLog } from "../utils/dev-logger";
 
@@ -362,27 +369,7 @@ export function buildSearchIndex(): void {
   devLog('search', `Indexed ${legalGlossaryTerms.length} glossary terms`);
 
   const selectableCharges = getSelectableCharges();
-  for (const charge of selectableCharges) {
-    const instructionRef = getInstructionRef(charge);
-    const instructionUrl = getInstructionUrl(charge);
-    const citation = getVerifiedCitation(charge) ?? null;
-    const baseAlias = extractChargeBaseAlias(charge.name);
-    documents.push({
-      id: `charge-${charge.id}`,
-      type: 'charge',
-      title: charge.name,
-      titleEs: charge.nameEs,
-      content: `${charge.description}. Common defenses: ${charge.commonDefenses.join(', ')}. Maximum penalty: ${charge.maxPenalty}`,
-      contentEs: charge.descriptionEs,
-      tags: [charge.category, charge.jurisdiction],
-      aliases: [],
-      jurisdiction: charge.jurisdiction,
-      url: `/case-guidance?charge=${encodeURIComponent(charge.name)}`,
-      citation,
-      ...(instructionRef ? { instructionRef } : {}),
-      ...(instructionUrl ? { instructionUrl } : {}),
-    });
-  }
+  documents.push(...createChargeSearchDocuments(selectableCharges));
   devLog('search', `Indexed ${selectableCharges.length} criminal charges`);
 
   for (const program of diversionPrograms) {
@@ -1502,6 +1489,73 @@ export function buildSearchIndex(): void {
   indexReady = true;
   const elapsed = Date.now() - startTime;
   devLog('search', `Search index built: ${documents.length} documents, ${fuzzyVocabulary.size} vocab words in ${elapsed}ms`);
+}
+
+function createChargeSearchDocument(charge: CriminalCharge): SearchDocument {
+  const instructionRef = getInstructionRef(charge);
+  const instructionUrl = getInstructionUrl(charge);
+  const citation = getVerifiedCitation(charge) ?? null;
+  const aliases = getChargeSearchAliases(charge);
+  return {
+    id: `charge-${charge.id}`,
+    type: 'charge',
+    title: charge.name,
+    titleEs: charge.nameEs,
+    content: `${charge.description}. Common defenses: ${charge.commonDefenses.join(', ')}. Maximum penalty: ${charge.maxPenalty}`,
+    contentEs: charge.descriptionEs,
+    tags: [charge.category, charge.jurisdiction],
+    aliases,
+    jurisdiction: charge.jurisdiction,
+    url: `/case-guidance?charge=${encodeURIComponent(charge.name)}`,
+    citation,
+    ...(instructionRef ? { instructionRef } : {}),
+    ...(instructionUrl ? { instructionUrl } : {}),
+  };
+}
+
+function getChargeSearchAliases(charge: CriminalCharge): string[] {
+  const aliases = new Set<string>();
+  const baseAlias = extractChargeBaseAlias(charge.name);
+  if (baseAlias) aliases.add(baseAlias);
+
+  // Pennsylvania's reviewed display name is the authoritative alias for
+  // exact title renames such as "Solicitation" -> "Prostitution". Keep the
+  // catalog title as the primary title so existing links remain stable.
+  if (charge.jurisdiction === "PA") {
+    const reviewedDisplayName = getPennsylvaniaAttorneyReviewDisplayName(charge.id);
+    if (reviewedDisplayName) aliases.add(reviewedDisplayName);
+  }
+
+  return [...aliases];
+}
+
+function createChargeSearchDocuments(charges: CriminalCharge[]): SearchDocument[] {
+  return charges.map(createChargeSearchDocument);
+}
+
+/**
+ * Add authority-published catalog rows that were not present in the static
+ * selectable catalog when the process started. The caller still supplies the
+ * runtime authority boundary when searching; this only makes those rows
+ * discoverable after publication.
+ */
+export function addChargesToSearchIndex(charges: CriminalCharge[]): void {
+  if (!indexReady) {
+    buildSearchIndex();
+  }
+
+  const indexedChargeIds = new Set(
+    searchIndex
+      .filter((document) => document.type === 'charge')
+      .map((document) => document.id),
+  );
+  const newDocuments = createChargeSearchDocuments(
+    charges.filter((charge) => !indexedChargeIds.has(`charge-${charge.id}`)),
+  );
+  if (newDocuments.length === 0) return;
+
+  searchIndex.push(...newDocuments);
+  buildFuzzyVocabulary();
 }
 
 function runScoring(

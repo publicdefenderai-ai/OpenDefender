@@ -87,15 +87,15 @@ describe.skipIf(!runIntegration)("Pennsylvania runtime authority boundary", () =
     }
   });
 
-  it("applies the same boundary to v1 search and rules guidance", async () => {
+  it("keeps published Pennsylvania aliases discoverable while excluding withheld rows", async () => {
     const searchResponse = await fetch(
-      `${BASE_URL}/api/v1/search?q=robbery&types=charge&limit=100`,
+      `${BASE_URL}/api/v1/search?q=prostitution&types=charge&jurisdiction=PA&limit=100`,
     );
     expect(searchResponse.ok).toBe(true);
     const payload = await searchResponse.json() as {
       results: Array<{ document: { id: string } }>;
     };
-    expect(payload.results.some((result) => result.document.id === "charge-pa-robbery-in-the-first-degree")).toBe(true);
+    expect(payload.results.some((result) => result.document.id === "charge-pa-solicitation")).toBe(true);
     expect(payload.results.some((result) => result.document.id === "charge-pa-attempted-robbery")).toBe(false);
 
     for (const chargeId of representativeWithheldChargeIds) {

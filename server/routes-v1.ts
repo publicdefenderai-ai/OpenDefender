@@ -2,8 +2,15 @@ import type { Express, Request, Response } from "express";
 import { Router as ExpressRouter } from "express";
 import cors from "cors";
 import rateLimit from "express-rate-limit";
-import { search, getSearchIndexStats } from "./services/search-indexer";
-import { getSelectableCharges, getChargeById, getInstructionRef, getInstructionUrl, getVerifiedCitation } from "../shared/criminal-charges";
+import { addChargesToSearchIndex, search, getSearchIndexStats } from "./services/search-indexer";
+import {
+  getSelectableCharges,
+  getChargesByJurisdiction,
+  getChargeById,
+  getInstructionRef,
+  getInstructionUrl,
+  getVerifiedCitation,
+} from "../shared/criminal-charges";
 import { devLog } from "./utils/dev-logger";
 import {
   AUTHORITY_BACKED_JURISDICTIONS,
@@ -80,15 +87,19 @@ export function registerV1Routes(app: Express): void {
       }
 
       const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
+      addChargesToSearchIndex(
+        getChargesByJurisdiction("PA").filter((charge) =>
+          currentAuthoritySelectableIds.has(charge.id),
+        ),
+      );
       const searchResult = search({
         query: q,
         language: lang === 'es' ? 'es' : 'en',
         filters: {
           ...(types ? { types: types.split(',') as any[] } : {}),
           ...(jurisdiction ? { jurisdiction } : {}),
-          // Search indexes the static catalog at startup; apply the
-          // authority boundary during scoring so totals cannot expose
-          // withheld NY or TX charges.
+          // Apply the authority boundary during scoring so totals cannot
+          // expose withheld authority-backed charges.
           chargeIds: [...currentAuthoritySelectableIds].map((id) => `charge-${id}`),
         },
         limit,
