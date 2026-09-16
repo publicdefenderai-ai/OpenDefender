@@ -8,11 +8,13 @@ const publishedCorrectedChargeIds = [
   "pa-robbery-in-the-first-degree",
   "pa-solicitation",
 ] as const;
-const expectedPublishedChargeIds = new Set(
-  manifest.catalogRecords
-    .filter((record) => record.disposition === "retain" || record.disposition === "exact_alias_rename")
-    .map((record) => record.chargeId),
-);
+const selectableRecords = manifest.catalogRecords
+  .filter((record) => record.disposition === "retain" || record.disposition === "exact_alias_rename");
+const selectableChargeIds = selectableRecords.map((record) => record.chargeId);
+const expectedPublishedChargeIds = new Set(selectableChargeIds);
+const withheldChargeIds = manifest.catalogRecords
+  .filter((record) => record.disposition !== "retain" && record.disposition !== "exact_alias_rename")
+  .map((record) => record.chargeId);
 const representativeWithheldChargeIds = [
   "pa-burglary-in-the-first-degree",
   "pa-attempted-robbery",
@@ -59,8 +61,8 @@ describe.skipIf(!runIntegration)("Pennsylvania runtime authority boundary", () =
     }
   });
 
-  it("publishes only current Pennsylvania provenance", async () => {
-    for (const chargeId of ["pa-aggravated-assault", ...publishedCorrectedChargeIds]) {
+  it("publishes current Pennsylvania provenance for every selectable manifest row", async () => {
+    for (const chargeId of selectableChargeIds) {
       const current = await fetch(`${BASE_URL}/api/criminal-charges/${chargeId}/sources`);
       expect(current.ok, chargeId).toBe(true);
       const currentPayload = await current.json() as {
@@ -69,19 +71,31 @@ describe.skipIf(!runIntegration)("Pennsylvania runtime authority boundary", () =
             publisher: string;
             sourceUrl: string;
             contentAvailable: boolean;
+            status: string;
           }>;
         };
       };
-      expect(currentPayload.provenance?.sources?.[0], chargeId).toMatchObject({
-        publisher: "Pennsylvania General Assembly",
-        contentAvailable: true,
-      });
-      expect(currentPayload.provenance?.sources?.[0]?.sourceUrl, chargeId).toMatch(
-        /^https:\/\/www\.legis\.state\.pa\.us\/cfdocs\/legis\/LI\/consCheck\.cfm/,
-      );
+      const sources = currentPayload.provenance?.sources ?? [];
+      expect(sources.length, chargeId).toBeGreaterThan(0);
+      const manifestRecord = selectableRecords.find((record) => record.chargeId === chargeId);
+      expect(manifestRecord, chargeId).toBeDefined();
+      expect(
+        sources.map((source) => source.sourceUrl).sort(),
+        chargeId,
+      ).toEqual(manifestRecord?.provisions.map((provision) => provision.sourceUrl).sort());
+      for (const source of sources) {
+        expect(source, chargeId).toMatchObject({
+          publisher: "Pennsylvania General Assembly",
+          contentAvailable: true,
+          status: "current",
+        });
+        expect(source.sourceUrl, chargeId).toMatch(
+          /^https:\/\/(?:www\.legis\.state\.pa\.us\/cfdocs\/legis\/LI\/consCheck\.cfm|www\.palegis\.us\/statutes\/(?:consolidated|unconsolidated)\/)/,
+        );
+      }
     }
 
-    for (const chargeId of representativeWithheldChargeIds) {
+    for (const chargeId of withheldChargeIds) {
       const withheld = await fetch(`${BASE_URL}/api/criminal-charges/${chargeId}/sources`);
       expect(withheld.status, chargeId).toBe(404);
     }
