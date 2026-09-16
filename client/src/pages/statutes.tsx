@@ -109,6 +109,40 @@ const US_STATES = [
   { code: 'WY', name: 'Wyoming' },
 ];
 
+interface StatuteResponseErrorAlertProps {
+  onRetry?: () => void;
+  isRetrying?: boolean;
+}
+
+function StatuteResponseErrorAlert({
+  onRetry,
+  isRetrying = false,
+}: StatuteResponseErrorAlertProps) {
+  const { t } = useTranslation();
+
+  return (
+    <Alert variant="destructive" data-testid="statute-response-error">
+      <AlertCircle className="h-4 w-4" />
+      <AlertDescription className={onRetry ? "flex flex-col items-start gap-3 sm:flex-row sm:items-center" : undefined}>
+        <span>{t('statutes.errors.loadFailed')}</span>
+        {onRetry && (
+          <Button
+            type="button"
+            variant="outline"
+            onClick={onRetry}
+            disabled={isRetrying}
+            className="w-full sm:w-auto"
+            data-testid="button-retry-state-statutes"
+          >
+            {isRetrying && <Loader2 className="h-4 w-4 animate-spin" />}
+            {t('statutes.errors.retry')}
+          </Button>
+        )}
+      </AlertDescription>
+    </Alert>
+  );
+}
+
 export default function StatutesPage() {
   const { t } = useTranslation();
   const [selectedState, setSelectedState] = useState<string>('');
@@ -243,16 +277,8 @@ export default function StatutesPage() {
                   </Card>
                 ))}
               </div>
-            ) : federalError ? (
-              <Alert variant="destructive">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>{t('statutes.errors.loadFailed')}</AlertDescription>
-              </Alert>
-            ) : federalStatutes?.error ? (
-              <Alert variant="destructive">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>{t('statutes.errors.loadFailed')}</AlertDescription>
-              </Alert>
+            ) : federalError || federalStatutes?.error ? (
+              <StatuteResponseErrorAlert />
             ) : (
               <>
                 <div className="mb-4 text-sm text-muted-foreground">
@@ -306,42 +332,11 @@ export default function StatutesPage() {
                   </Card>
                 ))}
               </div>
-            ) : stateError ? (
-              <Alert variant="destructive">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-                  <span>{t('statutes.errors.loadFailed')}</span>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={handleStateRetry}
-                    disabled={fetchingState}
-                    className="w-full sm:w-auto"
-                    data-testid="button-retry-state-statutes"
-                  >
-                    {fetchingState && <Loader2 className="h-4 w-4 animate-spin" />}
-                    {t('statutes.errors.retry')}
-                  </Button>
-                </AlertDescription>
-              </Alert>
-            ) : stateStatutes?.error ? (
-              <Alert variant="destructive">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-                  <span>{t('statutes.errors.loadFailed')}</span>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={handleStateRetry}
-                    disabled={fetchingState}
-                    className="w-full sm:w-auto"
-                    data-testid="button-retry-state-statutes"
-                  >
-                    {fetchingState && <Loader2 className="h-4 w-4 animate-spin" />}
-                    {t('statutes.errors.retry')}
-                  </Button>
-                </AlertDescription>
-              </Alert>
+            ) : stateError || stateStatutes?.error ? (
+              <StatuteResponseErrorAlert
+                onRetry={handleStateRetry}
+                isRetrying={fetchingState}
+              />
             ) : (
               <>
                 <div className="mb-4 text-sm text-muted-foreground">

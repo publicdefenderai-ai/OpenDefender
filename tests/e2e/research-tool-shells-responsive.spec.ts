@@ -539,6 +539,9 @@ for (const viewport of VIEWPORTS) {
           await page.goto("/statutes");
           await expectEditorialOpening(page);
 
+          await expect(page.getByTestId("statute-response-error")).toContainText(
+            language.stateMessage,
+          );
           await expect(page.getByText(language.stateMessage)).toBeVisible();
           await expect(
             page.getByText("Federal statute provider returned an error"),
@@ -585,7 +588,11 @@ for (const viewport of VIEWPORTS) {
           await page.getByTestId("select-state").click();
           await page.getByRole("option", { name: "California" }).click();
 
+          await expect(page.getByTestId("statute-response-error")).toContainText(
+            language.stateMessage,
+          );
           await expect(page.getByText(language.stateMessage)).toBeVisible();
+          await expect(page.getByTestId("button-retry-state-statutes")).toBeVisible();
           await expectNoHorizontalOverflow(page);
         },
       );
@@ -872,6 +879,9 @@ test.describe("localized state statute errors at an extra-narrow mobile width", 
         await page.goto("/statutes");
         await expectEditorialOpening(page);
 
+        await expect(page.getByTestId("statute-response-error")).toContainText(
+          language.stateMessage,
+        );
         await expect(page.getByText(language.stateMessage)).toBeVisible();
         await expect(
           page.getByText("Federal statute provider returned an error"),
@@ -915,7 +925,11 @@ test.describe("localized state statute errors at an extra-narrow mobile width", 
         await page.getByTestId("select-state").click();
         await page.getByRole("option", { name: "California" }).click();
 
+        await expect(page.getByTestId("statute-response-error")).toContainText(
+          language.stateMessage,
+        );
         await expect(page.getByText(language.stateMessage)).toBeVisible();
+        await expect(page.getByTestId("button-retry-state-statutes")).toBeVisible();
         await expect(
           page.getByText("State statute provider returned an error"),
         ).toHaveCount(0);
