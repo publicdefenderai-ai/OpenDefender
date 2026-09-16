@@ -635,8 +635,6 @@ export async function refreshIllinoisManifest(
     !hasRefreshFailure ||
     Boolean(evidenceOnlyManifestRecords)
   );
-  const selectable = records.filter((record) =>
-    record.disposition === "retain" || record.disposition === "exact_alias_rename");
   const manifest: IllinoisAuthorityManifest = {
     jurisdiction: "IL",
     generatedAt: evidenceOnlyManifestRecords && previousManifest
@@ -648,15 +646,17 @@ export async function refreshIllinoisManifest(
       ? (loadIllinoisAuthorityManifest(outputPath).audit ?? audit)
       : audit,
   };
+  const manifestSelectable = manifest.catalogRecords.filter((record) =>
+    record.disposition === "retain" || record.disposition === "exact_alias_rename");
   if (shouldWrite) {
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
     fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");
   }
   const summary: IllinoisManifestRefreshSummary = {
     outputPath,
-    catalogRecords: records.length,
-    retained: selectable.length,
-    withheld: records.length - selectable.length,
+    catalogRecords: manifest.catalogRecords.length,
+    retained: manifestSelectable.length,
+    withheld: manifest.catalogRecords.length - manifestSelectable.length,
     requests,
     transportFailures,
     officialPageFailures,

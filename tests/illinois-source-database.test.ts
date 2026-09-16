@@ -169,6 +169,132 @@ describe("Illinois authority manifest", () => {
     }
   });
 
+  it("keeps the prior authority manifest during a blocked replay with nine withheld rows", async () => {
+    const directory = mkdtempSync(join(tmpdir(), "illinois-evidence-only-"));
+    const outputPath = join(directory, "il-source-manifest.json");
+    const previous = JSON.parse(readFileSync(
+      "scripts/data-review/output/il-source-manifest.json",
+      "utf8",
+    ));
+    const priorGeneratedAt = previous.generatedAt;
+    const priorAudit = structuredClone(previous.audit);
+    const priorRecords = new Map(
+      previous.catalogRecords.map((record: { chargeId: string }) =>
+        [record.chargeId, structuredClone(record)] as const),
+    );
+
+    const withheldChargeIds = [
+      "il-murder-in-the-second-degree",
+      "il-assault-in-the-second-degree",
+      "il-assault-in-the-third-degree",
+      "il-aggravated-assault",
+      "il-rape-in-the-first-degree",
+      "il-sexual-assault-in-the-third-degree",
+      "il-identity-theft",
+      "il-residential-burglary",
+      "il-possession-of-drug-paraphernalia",
+    ];
+    const withheldUrls = new Set(
+      withheldChargeIds.map((chargeId) => {
+        const record = previous.catalogRecords.find(
+          (candidate: { chargeId: string }) => candidate.chargeId === chargeId,
+        );
+        return record.sourceAudit.references[0].officialUrl;
+      }),
+    );
+    const changedChargeId = "il-insurance-fraud";
+    const changedRecord = previous.catalogRecords.find(
+      (candidate: { chargeId: string }) => candidate.chargeId === changedChargeId,
+    );
+    const changedUrl = changedRecord.sourceAudit.references[0].officialUrl;
+    const stableChargeId = "il-money-laundering";
+    const stableRecord = previous.catalogRecords.find(
+      (candidate: { chargeId: string }) => candidate.chargeId === stableChargeId,
+    );
+    const stablePrior = priorRecords.get(stableChargeId)!;
+    delete stablePrior.mapping;
+    const stablePreviousMapping = stableRecord.mapping;
+    writeFileSync(outputPath, JSON.stringify(previous));
+    function replayHtml(url: string, mode: "complete" | "changed" | "incomplete"): string {
+      const section = url.match(/K(.+)\.htm$/)?.[1] ?? "unknown";
+      if (mode === "incomplete") {
+        return `<html><body><code>Sec. ${section}. Incomplete replay.</code></body></html>`;
+      }
+      const provision = previous.catalogRecords
+        .flatMap((record: { provisions: Array<{ sourceUrl: string; content: string }> }) =>
+          record.provisions)
+        .find((candidate: { sourceUrl: string }) => candidate.sourceUrl === url);
+      const content = provision?.content ??
+        `Sec. ${section}. Current official section.\n(a) Current official text.\n` +
+        "(Source: P.A. 99-1, eff. 1-1-16.)";
+      const replayContent = mode === "changed"
+        ? `${content}\nReplay changed this section.`
+        : content;
+      return `<html><body><code>${replayContent.replaceAll("&", "&amp;")}</code></body></html>`;
+    }
+
+    const fetchImpl = (async (url: string) => {
+      const mode = withheldUrls.has(url)
+        ? "incomplete"
+        : url === changedUrl
+          ? "changed"
+          : "complete";
+      return new Response(replayHtml(url, mode));
+    }) as typeof fetch;
+
+    try {
+      const summary = await refreshIllinoisManifest({
+        outputPath,
+        fetchImpl,
+        rateLimitMs: 0,
+        retryDelayMs: 0,
+        importedAt: new Date("2026-09-16T00:00:00.000Z"),
+        evidenceOnly: true,
+      });
+
+      expect(summary).toMatchObject({
+        wroteManifest: true,
+        preservedManifest: false,
+        refreshBlocked: true,
+        catalogRecords: previous.catalogRecords.length,
+      });
+      expect(summary.freshness.outcomeCounts.incomplete)
+        .toBeGreaterThanOrEqual(withheldChargeIds.length);
+      expect(summary.changedSections).toBeGreaterThanOrEqual(1);
+
+      const refreshed = JSON.parse(readFileSync(outputPath, "utf8"));
+      expect(refreshed.generatedAt).toBe(priorGeneratedAt);
+      expect(refreshed.audit).toEqual(priorAudit);
+      expect(refreshed.catalogRecords).toHaveLength(previous.catalogRecords.length);
+      for (const chargeId of withheldChargeIds) {
+        expect(refreshed.catalogRecords.find(
+          (record: { chargeId: string }) => record.chargeId === chargeId,
+        )).toEqual(priorRecords.get(chargeId));
+      }
+      expect(refreshed.catalogRecords.find(
+        (record: { chargeId: string }) => record.chargeId === changedChargeId,
+      )).toEqual(priorRecords.get(changedChargeId));
+
+      const stableRefreshed = refreshed.catalogRecords.find(
+        (record: { chargeId: string }) => record.chargeId === stableChargeId,
+      );
+      expect(stableRefreshed).toMatchObject({
+        ...stablePrior,
+        mapping: stablePreviousMapping,
+      });
+      expect(stableRefreshed.provisions).toEqual(stablePrior.provisions);
+      expect(stableRefreshed.disposition).toBe(stablePrior.disposition);
+
+      const manifest = loadIllinoisAuthorityManifest(outputPath);
+      const seed = buildIllinoisSourceDatabaseSeed(manifest);
+      expect(summary.retained).toBe(seed.selectableChargeIds.length);
+      expect(summary.retained + summary.withheld).toBe(summary.catalogRecords);
+      expect(seed.selectableChargeIds).toHaveLength(22);
+    } finally {
+      rmSync(directory, { recursive: true, force: true });
+    }
+  });
+
   it("preserves every catalog row and publishes only exact current ILGA matches", () => {
     const manifest = loadIllinoisAuthorityManifest();
     const seed = buildIllinoisSourceDatabaseSeed(manifest);
