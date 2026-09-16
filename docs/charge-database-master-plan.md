@@ -3,11 +3,11 @@
 
 Planning baseline: September 16, 2026
 
-Status: Proposed execution framework for approval. Ohio is the selected pilot. This document does not authorize publication, data migration, or changes to legal eligibility rules.
+Status: Ohio pilot authorized. National schedule and effort estimates withdrawn at the user's direction. Reissue this memo after the Ohio pilot provides measured throughput and review requirements.
 
 Purpose: Build and maintain a source-derived, auditable criminal-charge database that supports accurate Case Guidance across all 57 currently represented jurisdictions: 50 states, the District of Columbia, five territories, and federal law.
 
-Planning outlook: Approximately 9–12 months for the recommended staffed rollout; 12–18 months in an adverse source-access or legal-review scenario. These are planning ranges, not delivery commitments. Re-estimate after Ohio.
+Planning outlook: No current national or Ohio delivery estimate. Prior calendar, staffing-based effort, and review-hour estimates were not empirically grounded and must not be used as commitments.
 
 ## Executive decisions
 
@@ -183,11 +183,11 @@ Global averages must not conceal a weak jurisdiction. Release jurisdictions inde
 
 ## Pilot scope and sequence
 
-Weeks 1–3: establish the source universe, reconcile the current Ohio catalog, define schemas and release gates, and instrument the baseline. Begin code-wide discovery and current-law checks.
+First: establish the source universe, reconcile the current Ohio catalog, define schemas and release gates, and instrument the baseline. Begin code-wide discovery and current-law checks.
 
-Weeks 4–6: extract felony candidates and priority misdemeanors; resolve definitions and sentencing dependencies; build structured identities, variant handling, and the exception ledger. Test source-derived Aggravated Murder naming without assuming the old generic record is equivalent.
+Next: extract felony candidates and priority misdemeanors; resolve definitions and sentencing dependencies; build structured identities, variant handling, and the exception ledger. Test source-derived Aggravated Murder naming without assuming the old generic record is equivalent.
 
-Weeks 7–9: complete the agreed inventory sweep, adjudicate important exceptions, run quality sampling, connect the verified records to Case Guidance, and rehearse an amendment and a source outage. Timing may extend if the discovered inventory or legal exception rate is larger than assumed.
+Then: complete the agreed inventory sweep, adjudicate important exceptions, run quality sampling, connect the verified records to Case Guidance, and rehearse an amendment and a source outage. Measure execution and external waiting separately.
 
 ## Required outputs
 
@@ -208,42 +208,15 @@ Measure extraction failures by cause, percentage requiring actual legal judgment
 
 At the pilot review, decide whether the next wave is ready. If penalty resolution or multi-offense parsing remains unreliable, improve the shared system before multiplying the defect across jurisdictions. Start source-access reconnaissance elsewhere during Ohio, but do not scale unproven publication rules.
 
-# 8. National rollout, milestones, and estimates
+# 8. National rollout: schedule withdrawn pending Ohio
 
-## Recommended staffing and calendar assumptions
+All prior calendar ranges, engineering person-week estimates, legal-review hour estimates, and staffing-derived forecasts are withdrawn. They were not based on measured performance of this project's agent-assisted workflow.
 
-Assume three experienced engineering/data contributors using agents, one QA/data-operations contributor, a legal lead available roughly 8–16 hours weekly during active review, and access to jurisdiction-qualified reviewers for exceptions. Product decisions must be available promptly.
+The rollout sequence remains: Ohio; the nine other existing authority states; the remaining 40 states; DC, five territories, and federal law; national reconciliation and stabilization. Independent work can overlap once the shared method is validated. A blocked source must not prevent unrelated jurisdictions from progressing.
 
-Assume permitted source access, infrastructure already available, and shared components reused. Estimates include retrieval engineering, extraction, integration, testing, and remediation—not just agent execution time. Legal and source-access waiting periods can dominate elapsed time.
+Use the Ohio pilot to measure retrieval and extraction throughput, correction effort, true legal-exception frequency, review effort, runtime integration work, and source-access delays separately. Distinguish verified database availability from historical-law expansion, broader guidance enhancements, and ongoing operating work.
 
-| Milestone | Target window from kickoff | Completion evidence |
-| --- | --- | --- |
-| Foundation and national source register | Weeks 1–3 | Scope, ownership, baseline, schema, release rules |
-| Ohio pilot | Weeks 2–9 | Pilot gates passed; measured national forecast |
-| Existing authority-state wave | Weeks 10–20 | CA, NY, TX, FL, PA, SC, IL, GA, NC reconciled and expanded |
-| Remaining 40 states, in four cohorts | Weeks 16–40 | Approximately 10 states per cohort; separate state sign-offs |
-| DC, five territories, and federal | Weeks 20–48 | Seven separately scoped releases; source work begins earlier |
-| National acceptance and stabilization | Weeks 44–52 | All jurisdiction statuses reconciled; two successful maintenance cycles |
-
-Windows overlap; they are not additive promises. Source-blocked states can remain partial while independent states progress. Prioritize within cohorts by user demand, source readiness, complexity, and reuse—not alphabetically. Do not let one inaccessible publisher block national progress.
-
-## Effort model
-
-| Work package | Engineering/data person-weeks |
-| --- | --- |
-| Shared foundation | 4–6 |
-| Ohio pilot beyond foundation | 6–9 |
-| Nine existing authority states | 12–20 |
-| Remaining 40 states | 40–65 |
-| Seven non-state jurisdictions | 14–24 |
-| Cross-cutting integration and stabilization | 6–10 |
-| Total planning range | 82–134 |
-
-Person-weeks measure effort, not elapsed time; three contributors can execute some work concurrently. Budget approximately 25–40 QA/data-operations person-weeks and 400–800 legal-review hours separately, including roughly 30–60 legal hours for Ohio. These are preliminary allowances, not quotes; penalty complexity and required quality samples may increase them.
-
-Recommended scenario: first Ohio release around weeks 7–9; broad national availability grows incrementally; target national acceptance around weeks 44–52. Source and legal delays may extend completion to 12–18 months. A single engineering contributor with part-time QA/legal support should plan approximately 18–30 months or longer, not the staffed schedule.
-
-Reforecast at the Ohio exit, after the first three replication states, and monthly thereafter. Use observed hours per provision, exception rate, source complexity, and legal turnaround. Do not convert these estimates into fixed dates until staffing and pilot throughput are confirmed.
+Reissue this memo only after those measurements support a defensible forecast. No replacement national deadline is proposed now.
 
 # 9. Currentness and continuing legal maintenance
 
@@ -281,7 +254,7 @@ Do not allow a freshness badge to remain current indefinitely. Initial policy: f
 
 ## Steady-state operating budget
 
-After national rollout, reserve approximately 0.5–1 engineering/data-operations FTE, 0.5 QA/content-operations FTE, and 8–16 legal-review hours weekly, plus surge capacity around legislative effective dates or major court decisions. Re-estimate after two maintenance cycles.
+Set the operating budget after measuring Ohio's monitoring, exception handling, and maintenance cycles. Prior numerical staffing and review-hour assumptions are withdrawn. Named ownership and surge coverage remain requirements.
 
 Track retrieval and model costs per jurisdiction, storage growth, review hours, queue age, adapter failures, and publication delays. Agent usage is not a substitute for accountable ownership.
 
@@ -306,7 +279,7 @@ At national acceptance, require all 57 jurisdictions to have explicit status, no
 
 ## Immediate next decision
 
-Approve the Ohio-first architecture, scope definitions, proposed quality gates, and staffing assumptions. Then commission the foundation and pilot as a bounded implementation effort. Reconcile existing project work before scheduling it. No national deadline should be treated as committed until Ohio supplies measured throughput and review demand.
+The user has authorized proceeding with the Ohio-first pilot. Reconcile existing project work, execute the measured pilot, and reassess the national memo afterward. Proposed quality thresholds remain subject to validation; no withdrawn staffing or schedule assumption is an approved commitment.
 
 ## Evidence and estimate limitations
 

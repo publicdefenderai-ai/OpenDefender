@@ -122,6 +122,14 @@ const releaseCheckCaliforniaSelectableChargeIds = [
   "ca-criminal-solicitation-653f-a",
   "ca-criminal-solicitation-653f-b",
 ];
+// The Ohio manifest on disk is the legacy ledger; these source-first IDs are
+// composed by the server loader only while its short-lived refresh receipt is
+// valid. authority-eligibility applies that same runtime receipt gate before
+// honoring this release fixture.
+const releaseCheckOhioSourceFirstChargeIds = [
+  "oh-orc-2903-01-aggravated-murder",
+  "oh-orc-2903-02-murder",
+];
 
 function getReleaseCheckAuthoritySelectableChargeIds() {
   return [...new Set([
@@ -140,6 +148,7 @@ function getReleaseCheckAuthoritySelectableChargeIds() {
         )
         .map((record) => record.chargeId);
     }),
+    ...releaseCheckOhioSourceFirstChargeIds,
     ...releaseCheckCaliforniaSelectableChargeIds,
   ])];
 }

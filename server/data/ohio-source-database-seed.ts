@@ -14,6 +14,14 @@ import {
   classifyAuthorityMapping,
   type AuthorityEvidenceDocument,
 } from "../services/authority-offense-evidence";
+import {
+  OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS,
+  validateOhioChapter2903Document,
+  type OhioChapter2903OfficialDocument,
+  type OhioChapter2903PilotSourceRecord,
+  type OhioChapter2903SupportRole,
+} from "./ohio-chapter-2903-source";
+import { isOhioChapter2903PilotFresh } from "./ohio-chapter-2903-refresh";
 
 export const OHIO_SOURCE_POLICY = "official_ohio_revised_code";
 export const OHIO_SOURCE_PUBLISHER = "Ohio Legislative Service Commission";
@@ -227,6 +235,158 @@ function buildOhioMapping(
   });
 }
 
+function provisionFromOhioChapter2903Document(
+  charge: CriminalCharge,
+  document: OhioChapter2903OfficialDocument,
+  supportRole: OhioChapter2903SupportRole,
+  importedAt: Date,
+): AuthorityProvisionSeed {
+  const extractionError = validateOhioChapter2903Document(document);
+  if (extractionError) throw new Error(extractionError);
+  const sourceKey = buildOhioSourceKey(document.section, document.subdivision);
+  const evidence = buildAuthorityEvidence({
+    sourceKey,
+    lawId: "ORC",
+    section: document.section,
+    subdivision: document.subdivision,
+    citation: document.citation,
+    sourceUrl: document.sourceUrl,
+    officialTitle: document.title,
+    text: document.text,
+    contentHash: document.contentHash,
+    effectiveDateStart: document.effectiveDateStart,
+    sourceEvidence: `Effective: ${document.effectiveDateStart}`,
+  });
+  return {
+    sourceKey,
+    lawId: "ORC",
+    section: document.section,
+    citation: document.citation,
+    officialTitle: document.title,
+    sourceUrl: document.sourceUrl,
+    content: document.text,
+    contentHash: document.contentHash,
+    hashBasis: "source_content",
+    retrievedAt: document.retrievedAt,
+    effectiveDateStart: document.effectiveDateStart,
+    effectiveDateEnd: null,
+    supportRole,
+    subdivision: document.subdivision,
+    evidence,
+    metadata: {
+      chargeId: charge.id,
+      catalogLabel: charge.name,
+      catalogCode: charge.code,
+      catalogClassification: charge.category,
+      sourceFirstPilot: "ohio_chapter_2903",
+      sourceExtraction: {
+        sourceHash: document.contentHash,
+        quotedSpans: document.quotedSpans,
+      },
+      elements: {
+        basis: "exact_pinned_official_quote",
+        source: "ohio_laws_section_html",
+      },
+      grading: {
+        basis: "exact_pinned_official_quote",
+        source: "ohio_laws_section_html",
+      },
+      penalty: {
+        basis: supportRole === "penalty"
+          ? "exact_pinned_official_quote"
+          : "separate_penalty_dependency",
+        source: "ohio_laws_section_html",
+      },
+      currentnessEvidence: {
+        officialSectionPage: true,
+        effectiveDateStart: document.effectiveDateStart,
+        retrievedAt: document.retrievedAt.toISOString(),
+      },
+      evidence,
+      attorneyReview: "pending",
+      fingerprint: referenceHash({
+        sourceKey,
+        citation: document.citation,
+        officialTitle: document.title,
+        sourceUrl: document.sourceUrl,
+        contentHash: document.contentHash,
+        effectiveDateStart: document.effectiveDateStart,
+        importedAt: importedAt.toISOString(),
+      }),
+      manifestImportedAt: importedAt.toISOString(),
+    },
+  };
+}
+
+function ohioChapter2903Mapping(
+  charge: CriminalCharge,
+  source: OhioChapter2903PilotSourceRecord,
+) {
+  return classifyAuthorityMapping({
+    catalogLabel: charge.name,
+    catalogCode: charge.code,
+    references: [{ section: source.offense.section, subdivision: source.offense.subdivision }],
+    documents: [{
+      sourceKey: buildOhioSourceKey(source.offense.section, source.offense.subdivision),
+      lawId: "ORC",
+      section: source.offense.section,
+      subdivision: source.offense.subdivision,
+      citation: source.offense.citation,
+      sourceUrl: source.offense.sourceUrl,
+      officialTitle: source.offense.title,
+      text: source.offense.text,
+      contentHash: source.offense.contentHash,
+      effectiveDateStart: source.offense.effectiveDateStart,
+      sourceEvidence: `Effective: ${source.offense.effectiveDateStart}`,
+    }],
+    codeIdentityMatches: charge.code === source.offense.section,
+    approvedAlias: false,
+  });
+}
+
+/**
+ * Produce canonical records only from the small, independently extracted
+ * Chapter 2903 pilot. These IDs are source-first records, not corrected names
+ * for old degree-labelled entries.
+ */
+export function buildOhioChapter2903PilotManifestRecords(
+  importedAt: Date,
+): AuthorityCatalogRecord[] {
+  return OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((source) => {
+    const charge = criminalCharges.find((candidate) => candidate.id === source.chargeId);
+    if (!charge || charge.jurisdiction !== "OH") {
+      throw new Error(`Ohio Chapter 2903 source-first catalog row is missing: ${source.chargeId}`);
+    }
+    const mapping = ohioChapter2903Mapping(charge, source);
+    if (
+      mapping.classification !== "exact_match" ||
+      source.canonicalTitle !== charge.name ||
+      source.offense.title !== charge.name
+    ) {
+      throw new Error(`Ohio Chapter 2903 source-first mapping is not exact: ${source.chargeId}`);
+    }
+    return {
+      chargeId: charge.id,
+      catalogLabel: charge.name,
+      catalogCode: charge.code,
+      catalogCategory: charge.category,
+      disposition: "retain",
+      dispositionReason:
+        "New source-first canonical record: exact official title, offense text, currentness marker, and separate penalty dependency are pinned to the official Ohio Laws extraction.",
+      canonicalTitle: source.canonicalTitle,
+      provisions: [
+        provisionFromOhioChapter2903Document(charge, source.offense, "offense", importedAt),
+        provisionFromOhioChapter2903Document(charge, source.penalty, "penalty", importedAt),
+        ...(source.penaltyFine
+          ? [provisionFromOhioChapter2903Document(charge, source.penaltyFine, "penalty", importedAt)]
+          : []),
+      ],
+      apiStatus: "verified",
+      mapping,
+    };
+  });
+}
+
 export function buildOhioManifestRecord(
   charge: CriminalCharge,
   documents: OhioSourceDocument[],
@@ -314,6 +474,65 @@ export function buildOhioManifestRecord(
   };
 }
 
+function validateOhioChapter2903PilotManifestRecord(
+  record: AuthorityCatalogRecord,
+  source: OhioChapter2903PilotSourceRecord,
+): string | null {
+  const charge = criminalCharges.find((candidate) => candidate.id === record.chargeId);
+  if (
+    !charge ||
+    charge.jurisdiction !== "OH" ||
+    record.catalogLabel !== charge.name ||
+    record.catalogCode !== charge.code ||
+    record.catalogCategory !== charge.category ||
+    record.disposition !== "retain" ||
+    record.apiStatus !== "verified" ||
+    record.canonicalTitle !== source.canonicalTitle ||
+    record.provisions.length !== (source.penaltyFine ? 3 : 2) ||
+    record.mapping?.classification !== "exact_match"
+  ) return "Source-first Ohio Chapter 2903 catalog identity is incomplete or changed";
+
+  const expected = [
+    { document: source.offense, supportRole: "offense" as const },
+    { document: source.penalty, supportRole: "penalty" as const },
+    ...(source.penaltyFine
+      ? [{ document: source.penaltyFine, supportRole: "penalty" as const }]
+      : []),
+  ];
+  for (const [index, expectedProvision] of expected.entries()) {
+    const provision = record.provisions[index];
+    const document = expectedProvision.document;
+    const sourceKey = buildOhioSourceKey(document.section, document.subdivision);
+    const extraction = provision?.metadata?.sourceExtraction as {
+      sourceHash?: unknown;
+      quotedSpans?: unknown;
+    } | undefined;
+    if (
+      !provision ||
+      validateOhioChapter2903Document(document) !== null ||
+      provision.sourceKey !== sourceKey ||
+      provision.lawId !== "ORC" ||
+      provision.section !== document.section ||
+      provision.subdivision !== document.subdivision ||
+      provision.citation !== document.citation ||
+      provision.officialTitle !== document.title ||
+      provision.sourceUrl !== document.sourceUrl ||
+      provision.content !== document.text ||
+      provision.contentHash !== document.contentHash ||
+      provision.hashBasis !== "source_content" ||
+      provision.supportRole !== expectedProvision.supportRole ||
+      !provision.retrievedAt ||
+      provision.retrievedAt.getTime() !== document.retrievedAt.getTime() ||
+      provision.effectiveDateStart !== document.effectiveDateStart ||
+      provision.effectiveDateEnd !== null ||
+      provision.evidence?.sourceHash !== document.contentHash ||
+      extraction?.sourceHash !== document.contentHash ||
+      JSON.stringify(extraction.quotedSpans) !== JSON.stringify(document.quotedSpans)
+    ) return `Source-first Ohio Chapter 2903 provision ${index + 1} is not the pinned official evidence`;
+  }
+  return null;
+}
+
 export function validateOhioManifestRecord(
   record: AuthorityCatalogRecord,
 ): string | null {
@@ -324,6 +543,13 @@ export function validateOhioManifestRecord(
     record.catalogCode !== charge.code ||
     record.catalogCategory !== charge.category
   ) return "Manifest catalog identity does not match the current Ohio catalog";
+
+  const sourceFirstPilot = OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.find(
+    (candidate) => candidate.chargeId === record.chargeId,
+  );
+  if (sourceFirstPilot) {
+    return validateOhioChapter2903PilotManifestRecord(record, sourceFirstPilot);
+  }
 
   const references = parseOhioCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
   const selectable =
@@ -381,13 +607,22 @@ export function validateOhioManifestRecord(
 
 export function buildOhioSourceDatabaseSeed(
   manifest: OhioAuthorityManifest,
+  now: Date = new Date(),
 ): AuthoritySourceDatabaseSeed {
-  annotateSharedAuthorityMappings(manifest.catalogRecords);
+  const sourceFirstIds = new Set(
+    OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
+  );
+  // A manifest supplied directly to this builder must not bypass the same
+  // live receipt boundary that the loader uses.
+  const records = isOhioChapter2903PilotFresh(now)
+    ? manifest.catalogRecords
+    : manifest.catalogRecords.filter((record) => !sourceFirstIds.has(record.chargeId));
+  annotateSharedAuthorityMappings(records);
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
   const links: AuthorityChargeLinkSeed[] = [];
 
-  for (const record of manifest.catalogRecords) {
+  for (const record of records) {
     if (record.disposition !== "retain" && record.disposition !== "exact_alias_rename") continue;
     for (const provision of record.provisions) {
       if (!sources.has(provision.sourceKey)) {
@@ -444,8 +679,8 @@ export function buildOhioSourceDatabaseSeed(
     sources: [...sources.values()],
     snapshots,
     links,
-    catalogRecords: manifest.catalogRecords,
-    selectableChargeIds: manifest.catalogRecords
+    catalogRecords: records,
+    selectableChargeIds: records
       .filter((record) =>
         (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
         record.provisions.length > 0,

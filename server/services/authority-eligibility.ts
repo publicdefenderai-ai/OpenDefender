@@ -2,8 +2,19 @@ import { getSelectableCharges } from "@shared/criminal-charges";
 import { CALIFORNIA_CANONICAL_RECORDS } from "@shared/california-authority";
 import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
 import { getCurrentCaliforniaSelectableChargeIds } from "./california-source-database";
+import { isOhioChapter2903PilotFresh } from "../data/ohio-chapter-2903-refresh";
+import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
 
 export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["CA", "NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "NC"]);
+const OHIO_CHAPTER_2903_PILOT_IDS = new Set(
+  OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id),
+);
+
+function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }): boolean {
+  return charge.jurisdiction !== "OH" ||
+    !OHIO_CHAPTER_2903_PILOT_IDS.has(charge.id) ||
+    isOhioChapter2903PilotFresh();
+}
 
 function getReleaseCheckSelectableChargeIds(): Set<string> | undefined {
   if (process.env.RELEASE_CHECK !== "true") return undefined;
@@ -62,7 +73,7 @@ export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<stri
       getSelectableCharges()
         .filter((charge) =>
           !AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction) ||
-          releaseCheckSelectableIds.has(charge.id),
+          (releaseCheckSelectableIds.has(charge.id) && canUseAuthorityCharge(charge)),
         )
         .map((charge) => charge.id),
     );
@@ -82,7 +93,8 @@ export async function getCurrentAuthoritySelectableChargeIds(): Promise<Set<stri
   for (const charge of getSelectableCharges()) {
     if (
       !AUTHORITY_BACKED_JURISDICTIONS.has(charge.jurisdiction) ||
-      byJurisdiction.get(charge.jurisdiction)?.has(charge.id)
+      (byJurisdiction.get(charge.jurisdiction)?.has(charge.id) &&
+        canUseAuthorityCharge(charge))
     ) {
       allowed.add(charge.id);
     }

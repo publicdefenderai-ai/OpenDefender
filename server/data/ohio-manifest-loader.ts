@@ -3,10 +3,13 @@ import { resolve } from "node:path";
 import { criminalCharges } from "@shared/criminal-charges";
 import type { AuthorityCatalogRecord } from "../services/authority-source-database";
 import {
+  buildOhioChapter2903PilotManifestRecords,
   OHIO_MANIFEST_SOURCE,
   validateOhioManifestRecord,
   type OhioAuthorityManifest,
 } from "./ohio-source-database-seed";
+import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "./ohio-chapter-2903-source";
+import { isOhioChapter2903PilotFresh } from "./ohio-chapter-2903-refresh";
 
 export const OHIO_MANIFEST_PATH = resolve(
   process.cwd(),
@@ -15,6 +18,7 @@ export const OHIO_MANIFEST_PATH = resolve(
 
 export function loadOhioAuthorityManifest(
   manifestPath: string = OHIO_MANIFEST_PATH,
+  now: Date = new Date(),
 ): OhioAuthorityManifest {
   const raw = JSON.parse(readFileSync(manifestPath, "utf8")) as {
     jurisdiction?: string;
@@ -32,12 +36,44 @@ export function loadOhioAuthorityManifest(
   if (!raw.generatedAt || Number.isNaN(generatedAt.getTime())) {
     throw new Error("The committed Ohio manifest has an invalid generation timestamp");
   }
+  const sourceFirstIds = new Set(
+    OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
+  );
+  if (raw.catalogRecords.some((record) => sourceFirstIds.has(record.chargeId))) {
+    throw new Error(
+      "The legacy Ohio manifest must not shadow a source-first Chapter 2903 canonical record",
+    );
+  }
+  const sourceFirstGeneratedAt = new Date(Math.max(
+    ...OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.flatMap((record) => [
+      record.offense.retrievedAt.getTime(),
+      record.penalty.retrievedAt.getTime(),
+      ...(record.penaltyFine ? [record.penaltyFine.retrievedAt.getTime()] : []),
+    ]),
+  ));
+  // The older generated manifest remains the complete legacy accounting
+  // ledger. The bounded pilot is composed here from its separately pinned
+  // official extraction, so the checked-in selector manifest never becomes a
+  // vehicle for an unsourced name-only rename.
+  const manifestGeneratedAt = generatedAt > sourceFirstGeneratedAt
+    ? generatedAt
+    : sourceFirstGeneratedAt;
+  const pilotFresh = isOhioChapter2903PilotFresh(now);
+  const recordsWithPilot = [
+    ...raw.catalogRecords,
+    ...(pilotFresh
+      ? buildOhioChapter2903PilotManifestRecords(manifestGeneratedAt)
+      : []),
+  ];
   const expectedIds = criminalCharges
-    .filter((charge) => charge.jurisdiction === "OH")
+    .filter((charge) =>
+      charge.jurisdiction === "OH" &&
+      (pilotFresh || !sourceFirstIds.has(charge.id))
+    )
     .map((charge) => charge.id);
-  const ids = new Set(raw.catalogRecords.map((record) => record.chargeId));
+  const ids = new Set(recordsWithPilot.map((record) => record.chargeId));
   if (
-    ids.size !== raw.catalogRecords.length ||
+    ids.size !== recordsWithPilot.length ||
     ids.size !== expectedIds.length ||
     expectedIds.some((id) => !ids.has(id))
   ) throw new Error(
@@ -50,7 +86,7 @@ export function loadOhioAuthorityManifest(
     "require_exact_reselection",
     "remove",
   ]);
-  const catalogRecords = raw.catalogRecords.map((record) => ({
+  const catalogRecords = recordsWithPilot.map((record) => ({
     ...record,
     provisions: Array.isArray(record.provisions)
       ? record.provisions.map((provision) => ({
@@ -83,7 +119,7 @@ export function loadOhioAuthorityManifest(
   }
   return {
     jurisdiction: "OH",
-    generatedAt,
+    generatedAt: manifestGeneratedAt,
     source: OHIO_MANIFEST_SOURCE,
     catalogRecords,
   };

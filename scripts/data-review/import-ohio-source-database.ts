@@ -16,6 +16,7 @@ import {
   type OhioSourceDocument,
 } from "../../server/data/ohio-source-database-seed";
 import { annotateSharedAuthorityMappings } from "../../server/services/authority-offense-evidence";
+import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../../server/data/ohio-chapter-2903-source";
 
 const RATE_LIMIT_MS = 700;
 const MAX_RETRIES = 3;
@@ -124,9 +125,21 @@ export function extractOhioDocument(
   };
 }
 
+export function getOhioLegacyManifestCharges() {
+  // These two records are composed only from the separately pinned pilot
+  // extraction after its live refresh receipt is valid. Never write them into
+  // the legacy manifest that the loader protects from source-first shadowing.
+  const sourceFirstIds = new Set(
+    OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
+  );
+  return criminalCharges.filter((charge) =>
+    charge.jurisdiction === "OH" && !sourceFirstIds.has(charge.id)
+  );
+}
+
 export async function main(): Promise<void> {
   const importedAt = new Date();
-  const charges = criminalCharges.filter((charge) => charge.jurisdiction === "OH");
+  const charges = getOhioLegacyManifestCharges();
   const documentCache = new Map<string, OhioSourceDocument | null>();
   const errors = new Map<string, string>();
   let requests = 0;

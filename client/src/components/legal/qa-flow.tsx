@@ -472,6 +472,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
   const [runtimeAuthorityCharges, setRuntimeAuthorityCharges] = useState<any[] | null>(null);
   const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA"].includes(formData.jurisdiction);
+  const isOhio = formData.jurisdiction?.toUpperCase() === "OH";
 
   useEffect(() => {
     if (!isAuthorityBacked) {
@@ -644,6 +645,19 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
         <h3 className="text-lg font-semibold mb-4">{t('legalGuidance.qaFlow.caseDetails.title')}</h3>
 
         <div className="space-y-4">
+          {isOhio && (
+            <div
+              className="flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-amber-100"
+              role="note"
+              data-testid="ohio-partial-coverage-notice"
+            >
+              <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
+              <p className="text-sm leading-relaxed">
+                {t('legalGuidance.qaFlow.caseDetails.ohioCoverageNotice')}
+              </p>
+            </div>
+          )}
+
           {unresolvedChargeIds.length > 0 && (
             <div
               className="flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-amber-100"

@@ -3,9 +3,28 @@ import { createHash } from "node:crypto";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { tmpdir } from "node:os";
-import { criminalCharges } from "../shared/criminal-charges";
+import {
+  CHARGE_ID_ALIASES,
+  classifyChargesForGuidance,
+  criminalCharges,
+  getChargeById,
+  getChargesByJurisdiction,
+  getSelectableCharges,
+  isChargeIdRequiringReselection,
+  normalizeChargeId,
+} from "../shared/criminal-charges";
 import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 import {
+  OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION,
+  OHIO_CHAPTER_2903_PILOT_CHARGES,
+} from "../shared/ohio-chapter-2903-catalog";
+import {
+  OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS,
+  validateOhioChapter2903Document,
+} from "../server/data/ohio-chapter-2903-source";
+import { validateOhioChapter2903RefreshReceipt } from "../server/data/ohio-chapter-2903-refresh";
+import {
+  buildOhioChapter2903PilotManifestRecords,
   buildOhioManifestRecord,
   buildOhioSourceDatabaseSeed,
   buildOhioSourceKey,
@@ -16,6 +35,7 @@ import {
 } from "../server/data/ohio-source-database-seed";
 import { loadOhioAuthorityManifest } from "../server/data/ohio-manifest-loader";
 import { extractOhioDocument } from "../scripts/data-review/import-ohio-source-database";
+import { getOhioLegacyManifestCharges } from "../scripts/data-review/import-ohio-source-database";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
 
@@ -37,19 +57,163 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(115);
+    expect(ohioCount).toBe(117);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(13);
-    expect(seed.snapshots).toHaveLength(13);
-    expect(seed.links).toHaveLength(13);
-    expect(seed.selectableChargeIds).toHaveLength(13);
+    expect(seed.sources).toHaveLength(18);
+    expect(seed.snapshots).toHaveLength(18);
+    expect(seed.links).toHaveLength(18);
+    expect(seed.selectableChargeIds).toHaveLength(15);
     expect(seed.selectableChargeIds).toContain("oh-aggravated-assault");
     expect(seed.selectableChargeIds).toContain("oh-criminal-trespass");
     expect(seed.selectableChargeIds).not.toContain("oh-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("oh-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection")).toHaveLength(102);
+  });
+
+  it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
+    const manifest = loadOhioAuthorityManifest();
+    const sourceFirstIds = OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id);
+
+    expect(sourceFirstIds).toEqual([
+      "oh-orc-2903-01-aggravated-murder",
+      "oh-orc-2903-02-murder",
+    ]);
+    expect(getChargeById(sourceFirstIds[0])?.name).toBe("Aggravated murder");
+    expect(getChargeById(sourceFirstIds[1])?.name).toBe("Murder");
+    expect(getSelectableCharges().map((charge) => charge.id)).toEqual(
+      expect.arrayContaining(sourceFirstIds),
+    );
+    expect(getChargesByJurisdiction("OH").map((charge) => charge.id)).toEqual(
+      expect.arrayContaining(sourceFirstIds),
+    );
+    expect(classifyChargesForGuidance(sourceFirstIds)).toEqual([
+      expect.objectContaining({
+        id: "oh-orc-2903-01-aggravated-murder",
+        name: "Aggravated murder",
+        verifiedCitation: "Ohio Rev. Code Ann. § 2903.01",
+      }),
+      expect.objectContaining({
+        id: "oh-orc-2903-02-murder",
+        name: "Murder",
+        verifiedCitation: "Ohio Rev. Code Ann. § 2903.02",
+      }),
+    ]);
+
+    for (const legacyId of OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION) {
+      expect(CHARGE_ID_ALIASES[legacyId], `${legacyId} must not alias a new source-first ID`)
+        .toBeUndefined();
+      expect(normalizeChargeId(legacyId)).toBe(legacyId);
+      expect(isChargeIdRequiringReselection(legacyId)).toBe(true);
+      expect(getChargeById(legacyId)).toBeUndefined();
+      expect(getSelectableCharges().some((charge) => charge.id === legacyId)).toBe(false);
+      expect(getChargesByJurisdiction("OH").some((charge) => charge.id === legacyId)).toBe(false);
+      const legacyRecord = manifest.catalogRecords.find((record) => record.chargeId === legacyId);
+      expect(legacyRecord?.disposition).toBe("require_exact_reselection");
+      expect(legacyRecord?.provisions).toEqual([]);
+    }
+  });
+
+  it("keeps the importer legacy-only and composes the pilot only after a current receipt", () => {
+    const legacyImportIds = getOhioLegacyManifestCharges().map((charge) => charge.id);
+    expect(legacyImportIds).toHaveLength(115);
+    expect(legacyImportIds).not.toEqual(expect.arrayContaining(
+      OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id),
+    ));
+
+    const expectedReceipt = {
+      schemaVersion: 1,
+      checkedAt: "2026-09-16T22:58:10.000Z",
+      expiresAt: "2026-09-23T22:58:10.000Z",
+      documents: [
+        ...new Map(OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.flatMap((record) =>
+          [record.offense, record.penalty, record.penaltyFine].filter(Boolean).map((document) => [
+            document.section,
+            {
+              section: document.section,
+              title: document.title,
+              sourceUrl: document.sourceUrl,
+              contentHash: document.contentHash,
+              effectiveDateStart: document.effectiveDateStart,
+            },
+          ] as const),
+        )).values(),
+      ].sort((a, b) => a.section.localeCompare(b.section)),
+    };
+    expect(validateOhioChapter2903RefreshReceipt(expectedReceipt, new Date("2026-09-17T00:00:00.000Z"))).toBeNull();
+    expect(validateOhioChapter2903RefreshReceipt(expectedReceipt, new Date("2026-09-24T00:00:00.000Z")))
+      .toMatch(/expired/);
+    expect(loadOhioAuthorityManifest(undefined, new Date("2026-09-24T00:00:00.000Z")).catalogRecords)
+      .toHaveLength(115);
+
+    const currentManifest = loadOhioAuthorityManifest();
+    expect(buildOhioSourceDatabaseSeed(currentManifest, new Date("2026-09-24T00:00:00.000Z"))
+      .selectableChargeIds).not.toEqual(expect.arrayContaining(
+        OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id),
+      ));
+  });
+
+  it("pins complete official offense and sentencing extracts, including the separate penalty dependency", () => {
+    const pilotRecords = buildOhioChapter2903PilotManifestRecords(
+      new Date("2026-09-16T22:58:10.000Z"),
+    );
+    const seed = buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest());
+
+    for (const source of OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS) {
+      expect(validateOhioChapter2903Document(source.offense)).toBeNull();
+      expect(validateOhioChapter2903Document(source.penalty)).toBeNull();
+      if (source.penaltyFine) expect(validateOhioChapter2903Document(source.penaltyFine)).toBeNull();
+
+      const record = pilotRecords.find((candidate) => candidate.chargeId === source.chargeId)!;
+      expect(record).toBeDefined();
+      expect(record.canonicalTitle).toBe(source.canonicalTitle);
+      expect(record.mapping?.classification).toBe("exact_match");
+      expect(record.provisions.map((provision) => provision.supportRole)).toEqual([
+        "offense",
+        "penalty",
+        ...(source.penaltyFine ? ["penalty"] : []),
+      ]);
+      expect(record.provisions[0].citation).toBe(source.offense.citation);
+      expect(record.provisions[1].citation).toBe(source.penalty.citation);
+      if (source.penaltyFine) expect(record.provisions[2].citation).toBe(source.penaltyFine.citation);
+      expect(record.provisions[1].content).toContain(
+        source.penalty.quotedSpans.find((span) => span.kind === "penalty")!.quote,
+      );
+      expect(record.provisions[1].metadata.sourceExtraction).toMatchObject({
+        sourceHash: source.penalty.contentHash,
+        quotedSpans: source.penalty.quotedSpans,
+      });
+      expect(seed.links.filter((link) => link.chargeId === source.chargeId)).toEqual([
+        expect.objectContaining({
+          supportRole: "offense",
+          citation: source.offense.citation,
+        }),
+        expect.objectContaining({
+          supportRole: "penalty",
+          citation: source.penalty.citation,
+        }),
+        ...(source.penaltyFine ? [expect.objectContaining({
+          supportRole: "penalty",
+          citation: source.penaltyFine.citation,
+        })] : []),
+      ]);
+      expect(validateOhioManifestRecord(record)).toBeNull();
+    }
+  });
+
+  it("fails closed when a pinned source quote, content hash, or penalty link is tampered", () => {
+    const source = OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS[0];
+    expect(validateOhioChapter2903Document({
+      ...source.offense,
+      text: source.offense.text.replace("prior calculation and design", "changed words"),
+    })).toMatch(/Content hash/);
+
+    const record = structuredClone(buildOhioChapter2903PilotManifestRecords(
+      new Date("2026-09-16T22:58:10.000Z"),
+    )[0]);
+    record.provisions[1].citation = "Ohio Rev. Code Ann. § 2929.02(B)(1)";
+    expect(validateOhioManifestRecord(record)).toMatch(/pinned official evidence/);
   });
 
   it("parses only exact Ohio Revised Code identities", () => {

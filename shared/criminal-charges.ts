@@ -205,6 +205,10 @@ export interface GuidanceChargeClassification {
 
 import { CHARGE_CITATIONS } from './criminal-charge-citations';
 import {
+  OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION,
+  OHIO_CHAPTER_2903_PILOT_CHARGES,
+} from './ohio-chapter-2903-catalog';
+import {
   SOUTH_CAROLINA_APPROVED_ALIAS_CHARGE_IDS,
   SOUTH_CAROLINA_NON_ALIAS_EXACT_SOURCE_CHARGE_IDS,
 } from './south-carolina-title-alias-review';
@@ -94656,6 +94660,10 @@ const phase5JuvenileCharges: CriminalCharge[] = [
 
 ];
 criminalCharges.push(...phase5JuvenileCharges);
+// Source-first Ohio records are maintained separately from this generated
+// legacy catalog. They are intentionally new IDs, never aliases for the
+// older degree-labelled Ohio homicide rows.
+criminalCharges.push(...OHIO_CHAPTER_2903_PILOT_CHARGES);
 
 
 export const chargeCategories: Record<string, string[]> = {
@@ -94912,6 +94920,7 @@ export function normalizeChargeId(id: string): string {
 
 export function isChargeIdRequiringReselection(id: string): boolean {
   return NY_CHARGE_IDS_REQUIRING_RESELECTION.has(id) ||
+    OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(id) ||
     getCaliforniaLegacyDisposition(id)?.disposition === 'reselection-required';
 }
 
@@ -94961,6 +94970,17 @@ chargeCategories['CA'] = getCaliforniaCanonicalCharges(
   criminalCharges.filter((charge) => charge.jurisdiction === 'CA'),
 ).map((charge) => charge.id);
 
+// Keep the state grouping aligned with the same no-alias Ohio selector
+// boundary used below. The canonical source-first records are additive and
+// the historical degree labels remain visible only to persisted-case
+// reselection handling.
+chargeCategories['OH'] = Array.from(new Set([
+  ...chargeCategories['OH'].filter((id) =>
+    !OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(id),
+  ),
+  ...OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id),
+])).filter((id) => criminalCharges.some((charge) => charge.id === id));
+
 // Helper functions for charge lookup
 function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
   if (charge.jurisdiction !== 'NC') return charge;
@@ -94970,7 +94990,10 @@ function withAuthorityDisplayName(charge: CriminalCharge): CriminalCharge {
 
 export function getChargeById(id: string): CriminalCharge | undefined {
   const normalizedId = normalizeChargeId(id);
-  if (NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId)) return undefined;
+  if (
+    NY_CHARGE_IDS_REQUIRING_RESELECTION.has(normalizedId) ||
+    OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(normalizedId)
+  ) return undefined;
   const directCharge = criminalCharges.find(charge => charge.id === normalizedId);
   const canonical = normalizedId.startsWith("ca-")
     ? getCaliforniaCanonicalRecord(normalizedId)
@@ -95033,7 +95056,8 @@ export function getChargesByJurisdiction(jurisdiction: string): CriminalCharge[]
   const normalizedJurisdiction = jurisdiction.toUpperCase().trim();
   const charges = criminalCharges.filter(charge =>
     charge.jurisdiction === normalizedJurisdiction &&
-    !(normalizedJurisdiction === 'NY' && NY_CHARGE_IDS_REQUIRING_RESELECTION.has(charge.id)),
+    !(normalizedJurisdiction === 'NY' && NY_CHARGE_IDS_REQUIRING_RESELECTION.has(charge.id)) &&
+    !(normalizedJurisdiction === 'OH' && OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(charge.id)),
   );
   if (normalizedJurisdiction === 'CA') {
     return getCaliforniaCanonicalCharges(charges);
@@ -95054,7 +95078,8 @@ export function getSelectableCharges(): CriminalCharge[] {
   return [
     ...criminalCharges.filter((charge) =>
       charge.jurisdiction !== 'CA' &&
-      !(charge.jurisdiction === 'NY' && NY_CHARGE_IDS_REQUIRING_RESELECTION.has(charge.id)),
+      !(charge.jurisdiction === 'NY' && NY_CHARGE_IDS_REQUIRING_RESELECTION.has(charge.id)) &&
+      !(charge.jurisdiction === 'OH' && OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(charge.id)),
     ).map(withAuthorityDisplayName),
     ...getChargesByJurisdiction('CA'),
   ];

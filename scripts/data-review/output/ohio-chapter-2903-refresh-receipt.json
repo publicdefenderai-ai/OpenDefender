@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-16T23:15:46.277Z",
+  "expiresAt": "2026-09-23T23:15:46.277Z",
+  "documents": [
+    {
+      "section": "2903.01",
+      "title": "Aggravated murder",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.01",
+      "contentHash": "98a8094c5635e8b7619106d4f1fc6a0d7774afee7cd9ea9dffe506d5bf8d38eb",
+      "effectiveDateStart": "2019-03-20"
+    },
+    {
+      "section": "2903.02",
+      "title": "Murder",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.02",
+      "contentHash": "7d59b3044eafc9f0ce7a7621fdd1cece55e244ab9a2780daa6189ff17eb36f2b",
+      "effectiveDateStart": "1998-06-30"
+    },
+    {
+      "section": "2929.02",
+      "title": "Murder penalties",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.02",
+      "contentHash": "39f02e6be755c5468918b00b181496de70718f5ed267d7efb412038e6dbf04c7",
+      "effectiveDateStart": "2021-04-12"
+    }
+  ]
+}

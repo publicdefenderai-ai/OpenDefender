@@ -2530,6 +2530,7 @@ export default {
       "caseDetails": {
         "title": "¿Qué cargos enfrenta?",
         "selectedCharges": "Cargos Seleccionados:",
+        "ohioCoverageNotice": "La lista de cargos de Ohio todavía se está completando. Es posible que falten muchos delitos. Si su cargo no aparece en la lista, no seleccione otro delito como sustituto.",
         "legacyChargeNotice": "Una selección de cargo guardada está desactualizada o es demasiado amplia para identificar el delito actual. Elija el cargo exacto de la lista siguiente; hasta entonces, la orientación será general y no específica del cargo.",
         "reselectionTitle": "Elija el cargo exacto",
         "reselectionChoose": "Elegir",
@@ -5908,6 +5909,7 @@ export default {
     "title": "Seleccionar Cargos",
     "selected": "seleccionado(s)",
     "available": "disponibles",
+    "ohioCoverageNotice": "La lista de cargos de Ohio todavía se está completando. Es posible que falten muchos delitos. Si su cargo no aparece en la lista, no seleccione otro delito como sustituto.",
     "searchPlaceholder": "Buscar todos los cargos...",
     "loading": "Cargando cargos...",
     "noResults": "No se encontraron cargos que coincidan con su búsqueda",

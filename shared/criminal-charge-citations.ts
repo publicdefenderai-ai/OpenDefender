@@ -2167,6 +2167,22 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
   },
 
   // — Ohio —
+  "oh-orc-2903-01-aggravated-murder": {
+    citation: "Ohio Rev. Code Ann. § 2903.01",
+    alternateCitations: ["Ohio Rev. Code Ann. § 2929.02(A)"],
+    confidence: "high",
+    lastVerified: "2026-09",
+    source: "Ohio Legislative Service Commission — pinned codes.ohio.gov extraction",
+    sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2903.01",
+  },
+  "oh-orc-2903-02-murder": {
+    citation: "Ohio Rev. Code Ann. § 2903.02",
+    alternateCitations: ["Ohio Rev. Code Ann. § 2929.02(B)(1)"],
+    confidence: "high",
+    lastVerified: "2026-09",
+    source: "Ohio Legislative Service Commission — pinned codes.ohio.gov extraction",
+    sourceUrl: "https://codes.ohio.gov/ohio-revised-code/section-2903.02",
+  },
   "oh-murder-in-the-first-degree": {
     citation: "Ohio Rev. Code Ann. § 2903.01",
     confidence: "high",

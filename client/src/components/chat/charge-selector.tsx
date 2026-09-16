@@ -129,7 +129,8 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
 
   const charges = (data?.charges || []).sort((a, b) => a.name.localeCompare(b.name));
   const totalAvailable = data?.totalAvailable || 0;
-  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC"].includes(jurisdiction.toUpperCase());
+  const isAuthorityBacked = ["NY", "TX", "FL", "PA", "SC", "OH"].includes(jurisdiction.toUpperCase());
+  const isOhio = jurisdiction.toUpperCase() === "OH";
 
   const {
     data: provenance,
@@ -289,6 +290,19 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
 
       {isExpanded && (
         <>
+          {isOhio && (
+            <div
+              className="flex items-start gap-3 rounded-lg border border-amber-300 bg-amber-50 p-4 text-amber-900 dark:border-amber-700 dark:bg-amber-950/20 dark:text-amber-100"
+              role="note"
+              data-testid="ohio-partial-coverage-notice"
+            >
+              <ShieldAlert className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
+              <p className="text-sm leading-relaxed">
+                {t('chat.chargeSelector.ohioCoverageNotice')}
+              </p>
+            </div>
+          )}
+
           <div className="p-3 space-y-3 border-b border-border">
             <div className="relative">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />

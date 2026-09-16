@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { resolveGuidanceCharge } from "../shared/guidance-charge-resolution";
+import {
+  OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION,
+  OHIO_CHAPTER_2903_PILOT_CHARGES,
+} from "../shared/ohio-chapter-2903-catalog";
 
 describe("guidance dashboard canonical charge resolution", () => {
   it("uses the canonical California record for a catalog-selected legacy charge ID", () => {
@@ -43,5 +47,44 @@ describe("guidance dashboard canonical charge resolution", () => {
       classification: "felony",
       code: "370",
     }, "CA")).toBeUndefined();
+  });
+
+  it("fails closed for every Ohio legacy ID in dashboard and PDF guidance resolution", () => {
+    const legacyCodes: Record<string, string> = {
+      "oh-murder-in-the-first-degree": "2903.01",
+      "oh-murder-in-the-second-degree": "2903.02",
+      "oh-felony-murder": "2903.02",
+    };
+
+    for (const id of OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION) {
+      expect(resolveGuidanceCharge({
+        id,
+        name: "Historical Ohio homicide label",
+        classification: "felony",
+        code: legacyCodes[id],
+      }, "OH")).toBeUndefined();
+    }
+
+    // Older persisted guidance can contain only the statute code. That shape
+    // must not recover the raw degree-labelled Ohio row either.
+    expect(resolveGuidanceCharge({
+      name: "Murder in the First Degree",
+      classification: "felony",
+      code: "2903.01",
+    }, "OH")).toBeUndefined();
+  });
+
+  it("still resolves the canonical source-first Ohio pilot IDs", () => {
+    for (const pilotCharge of OHIO_CHAPTER_2903_PILOT_CHARGES) {
+      expect(resolveGuidanceCharge({
+        id: pilotCharge.id,
+        name: pilotCharge.name,
+        classification: pilotCharge.category,
+        code: pilotCharge.code,
+      }, "OH")).toMatchObject({
+        id: pilotCharge.id,
+        name: pilotCharge.name,
+      });
+    }
   });
 });

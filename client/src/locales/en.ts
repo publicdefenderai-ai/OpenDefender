@@ -2528,6 +2528,7 @@ export default {
       "caseDetails": {
         "title": "What charges are you facing?",
         "selectedCharges": "Selected Charges:",
+        "ohioCoverageNotice": "Ohio’s charge list is still being populated. Many offenses may be missing. If your charge is not listed, do not select a different offense as a substitute.",
         "legacyChargeNotice": "A saved charge selection is outdated or too broad to identify the current offense. Please choose the exact charge from the list below; until then, support will be general rather than charge-specific.",
         "reselectionTitle": "Choose the exact charge",
         "reselectionChoose": "Choose",
@@ -5902,6 +5903,7 @@ export default {
     "title": "Select Charges",
     "selected": "selected",
     "available": "available",
+    "ohioCoverageNotice": "Ohio’s charge list is still being populated. Many offenses may be missing. If your charge is not listed, do not select a different offense as a substitute.",
     "searchPlaceholder": "Search all charges...",
     "loading": "Loading charges...",
     "noResults": "No charges found matching your search",

@@ -2530,6 +2530,7 @@ export default {
       "caseDetails": {
         "title": "您面临什么指控？",
         "selectedCharges": "已选择的指控：",
+        "ohioCoverageNotice": "俄亥俄州的指控列表仍在补充中。列表中可能缺少许多罪名。如果列表中没有您的指控，请勿选择其他罪名代替。",
         "legacyChargeNotice": "保存的指控选择已过时或过于宽泛，无法确定当前罪名。请从下面的列表中选择确切指控；在此之前，我们只能提供一般性支持，不能提供针对具体指控的支持。",
         "reselectionTitle": "选择确切指控",
         "reselectionChoose": "选择",
@@ -5908,6 +5909,7 @@ export default {
       "title": "选择指控",
       "selected": "已选",
       "available": "可选",
+      "ohioCoverageNotice": "俄亥俄州的指控列表仍在补充中。列表中可能缺少许多罪名。如果列表中没有您的指控，请勿选择其他罪名代替。",
       "searchPlaceholder": "搜索所有指控……",
       "loading": "正在加载指控……",
       "noResults": "未找到匹配的指控",

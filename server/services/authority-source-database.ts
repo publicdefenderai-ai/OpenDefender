@@ -10,6 +10,8 @@ import {
 } from "@shared/schema";
 import { db } from "../db";
 import { errLog, opsLog } from "../utils/dev-logger";
+import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
+import { isOhioChapter2903PilotFresh } from "../data/ohio-chapter-2903-refresh";
 import type {
   AuthorityEvidenceRecord,
   AuthorityMappingDecision,
@@ -220,6 +222,13 @@ export async function getCurrentAuthoritySelectableChargeIds(
       ? metadata.selectableChargeIds.filter((value): value is string => typeof value === "string")
       : [],
   );
+  // This lower-level boundary also protects direct provenance callers; the
+  // API selector's separate freshness filter is not sufficient for those.
+  if (jurisdiction === "OH" && !isOhioChapter2903PilotFresh()) {
+    for (const charge of OHIO_CHAPTER_2903_PILOT_CHARGES) {
+      selectable.delete(charge.id);
+    }
+  }
   if (selectable.size === 0) return selectable;
 
   const expected = new Map<string, Set<string>>();
