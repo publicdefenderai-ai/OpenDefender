@@ -58,19 +58,20 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(122);
+    expect(ohioCount).toBe(123);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(40);
-    expect(seed.snapshots).toHaveLength(55);
-    expect(seed.links).toHaveLength(55);
+    expect(seed.sources).toHaveLength(50);
+    expect(seed.snapshots).toHaveLength(71);
+    expect(seed.links).toHaveLength(71);
     expect(seed.selectableChargeIds).toHaveLength(18);
-    expect(seed.selectableChargeIds).toContain("oh-aggravated-assault");
+    expect(seed.selectableChargeIds).toContain("oh-orc-2903-12-aggravated-assault");
+    expect(seed.selectableChargeIds).not.toContain("oh-aggravated-assault");
     expect(seed.selectableChargeIds).toContain("oh-criminal-trespass");
     expect(seed.selectableChargeIds).not.toContain("oh-murder-in-the-first-degree");
     expect(seed.selectableChargeIds).not.toContain("oh-bank-robbery");
     expect(manifest.catalogRecords.filter((record) =>
-      record.disposition === "require_exact_reselection")).toHaveLength(104);
+      record.disposition === "require_exact_reselection")).toHaveLength(105);
   });
 
   it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
@@ -85,6 +86,7 @@ describe("Ohio authority manifest", () => {
       "oh-orc-2903-14-negligent-assault",
       "oh-orc-2903-03-voluntary-manslaughter",
       "oh-orc-2903-04-involuntary-manslaughter",
+      "oh-orc-2903-12-aggravated-assault",
     ]);
     expect(getChargeById(sourceFirstIds[0])?.name).toBe("Aggravated murder");
     expect(getChargeById(sourceFirstIds[1])?.name).toBe("Murder");

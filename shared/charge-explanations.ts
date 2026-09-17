@@ -3,6 +3,7 @@ import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translati
 import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
 import { getCaliforniaExplanationSlug } from "./california-authority";
 import { OHIO_MANSLAUGHTER_EXPLANATIONS } from "./ohio-manslaughter-explanations";
+import { OHIO_AGGRAVATED_ASSAULT_EXPLANATION } from "./ohio-aggravated-assault";
 
 export interface LegalTermExplanation {
   term: string;
@@ -48,6 +49,7 @@ export interface ChargeExplanation {
 }
 
 export const chargeExplanations: ChargeExplanation[] = [
+  OHIO_AGGRAVATED_ASSAULT_EXPLANATION,
   ...OHIO_MANSLAUGHTER_EXPLANATIONS,
   {
     chargePattern: /^reckless homicide$/i, slug: "reckless-homicide",

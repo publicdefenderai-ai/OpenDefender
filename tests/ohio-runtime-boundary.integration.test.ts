@@ -29,7 +29,8 @@ describe.skipIf(!runIntegration)("Ohio runtime authority boundary", () => {
 
   it("filters withheld rows from the charge API and v1 export", async () => {
     expect(charges.success).toBe(true);
-    expect(charges.charges.some((charge) => charge.id === "oh-aggravated-assault")).toBe(true);
+    expect(charges.charges.some((charge) => charge.id === "oh-orc-2903-12-aggravated-assault")).toBe(true);
+    expect(charges.charges.some((charge) => charge.id === "oh-aggravated-assault")).toBe(false);
     for (const chargeId of withheldOhioIds) {
       expect(charges.charges.some((charge) => charge.id === chargeId), chargeId).toBe(false);
     }
@@ -37,14 +38,15 @@ describe.skipIf(!runIntegration)("Ohio runtime authority boundary", () => {
     const exportResponse = await fetch(`${BASE_URL}/api/v1/export/charges?jurisdiction=OH`);
     expect(exportResponse.ok).toBe(true);
     const exported = await exportResponse.json() as Array<{ id: string }>;
-    expect(exported.some((charge) => charge.id === "oh-aggravated-assault")).toBe(true);
+    expect(exported.some((charge) => charge.id === "oh-orc-2903-12-aggravated-assault")).toBe(true);
+    expect(exported.some((charge) => charge.id === "oh-aggravated-assault")).toBe(false);
     for (const chargeId of withheldOhioIds) {
       expect(exported.some((charge) => charge.id === chargeId), chargeId).toBe(false);
     }
   });
 
   it("publishes only current Ohio Laws provenance", async () => {
-    const current = await fetch(`${BASE_URL}/api/criminal-charges/oh-aggravated-assault/sources`);
+    const current = await fetch(`${BASE_URL}/api/criminal-charges/oh-orc-2903-12-aggravated-assault/sources`);
     expect(current.ok).toBe(true);
     const payload = await current.json() as {
       provenance?: { sources?: Array<{ publisher: string; sourceUrl: string; contentAvailable: boolean }> };

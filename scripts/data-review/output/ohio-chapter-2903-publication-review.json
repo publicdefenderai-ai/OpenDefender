@@ -7,8 +7,8 @@
     "offenseCandidates": 24,
     "supportingProvisions": 14,
     "structuralInterpretationSections": 2,
-    "sourceFirstConfiguredRecords": 7,
-    "withheldOffenseBearingSections": 19,
+    "sourceFirstConfiguredRecords": 8,
+    "withheldOffenseBearingSections": 18,
     "explicitlyGroupedNamedUnits": 8,
     "namingTranscriptionReviewRequests": 0
   },
@@ -795,8 +795,10 @@
       "sourceHash": "1c06d4dfeeaf9d67b2d426acd447eacd0b5ed1e44fa1943e128c3ce849603fe0",
       "effectiveDate": "2019-03-22",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-12-aggravated-assault"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -834,8 +836,7 @@
         }
       ],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {

@@ -2,6 +2,8 @@
 
 Date: September 16, 2026 (Pacific). Development only.
 
+**Subsequent batch:** See `docs/ohio-assault-batch.md` for aggravated assault. The current source-first total is eight; this document preserves the earlier manslaughter results.
+
 ## Scope and result
 
 This batch replaces the two inherited Ohio manslaughter selections with independently source-derived, section-level records:

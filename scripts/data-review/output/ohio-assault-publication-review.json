@@ -1,0 +1,207 @@
+{
+  "reportKind": "evidence_review_not_runtime_approval",
+  "rows": [
+    {
+      "section": "2903.11",
+      "title": "Felonious assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.11",
+      "effectiveDate": "2019-03-22",
+      "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01",
+      "status": "withheld_from_source_first_publication",
+      "configuredId": null,
+      "operativeEvidence": [
+        {
+          "quote": "(A) No person shall knowingly do either of the following:",
+          "start": 59,
+          "end": 116,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(1) Cause serious physical harm to another or to another's unborn;",
+          "start": 117,
+          "end": 183,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(2) Cause or attempt to cause physical harm to another or to another's unborn by means of a deadly weapon or dangerous ordnance.",
+          "start": 184,
+          "end": 312,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(B) No person, with knowledge that the person has tested positive as a carrier of a virus that causes acquired immunodeficiency syndrome, shall knowingly do any of the following:",
+          "start": 313,
+          "end": 491,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(1) Engage in sexual conduct with another person without disclosing that knowledge to the other person prior to engaging in the sexual conduct;",
+          "start": 492,
+          "end": 635,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(2) Engage in sexual conduct with a person whom the offender knows or has reasonable cause to believe lacks the mental capacity to appreciate the significance of the knowledge that the offender has tested positive as a carrier of a virus that causes acquired immunodeficiency syndrome;",
+          "start": 636,
+          "end": 921,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(3) Engage in sexual conduct with a person under eighteen years of age who is not the spouse of the offender.",
+          "start": 922,
+          "end": 1031,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(C) The prosecution of a person under this section does not preclude prosecution of that person under section 2907.02 of the Revised Code.",
+          "start": 1032,
+          "end": 1170,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(D)(1)(a) Whoever violates this section is guilty of felonious assault. Except as otherwise provided in this division or division (D)(1)(b) of this section, felonious assault is a felony of the second degree. If the victim of a violation of division (A) of this section is a peace officer or an investigator of the bureau of criminal identification and investigation, felonious assault is a felony of the first degree.",
+          "start": 1171,
+          "end": 1589,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(b) Regardless of whether the felonious assault is a felony of the first or second degree under division (D)(1)(a) of this section, if the offender also is convicted of or pleads guilty to a specification as described in section 2941.1423 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, except as otherwise provided in this division or unless a longer prison term is required under any other provision of law, the court shall sentence the offender to a mandatory prison term as provided in division (B)(8) of section 2929.14 of the Revised Code. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, and if the victim suffered serious physical harm as a result of the commission of the offense, felonious assault is a felony of the first degree, and the court, pursuant to division (F) of section 2929.13 of the Revised Code, shall impose as a mandatory prison term one of the definite prison terms prescribed for a felony of the first degree in division (A)(1)(b) of section 2929.14 of the Revised Code, except that if the violation is committed on or after the effective date of this amendment, the court shall impose as the minimum prison term for the offense a mandatory prison term that is one of the minimum terms prescribed for a felony of the first degree in division (A)(1)(a) of section 2929.14 of the Revised Code.",
+          "start": 1590,
+          "end": 3059,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(2) In addition to any other sanctions imposed pursuant to division (D)(1) of this section for felonious assault committed in violation of division (A)(1) or (2) of this section, if the offender also is convicted of or pleads guilty to a specification of the type described in section 2941.1425 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, the court shall sentence the offender to a mandatory prison term under division (B)(9) of section 2929.14 of the Revised Code.",
+          "start": 3060,
+          "end": 3600,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(3) If the victim of a felonious assault committed in violation of division (A) of this section is a child under ten years of age and if the offender also is convicted of or pleads guilty to a specification of the type described in section 2941.1426 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, in addition to any other sanctions imposed pursuant to division (D)(1) of this section, the court shall sentence the offender to a mandatory prison term pursuant to division (B)(10) of section 2929.14 of the Revised Code.",
+          "start": 3601,
+          "end": 4191,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(4) In addition to any other sanctions imposed pursuant to division (D)(1) of this section for felonious assault committed in violation of division (A)(2) of this section, if the deadly weapon used in the commission of the violation is a motor vehicle, the court shall impose upon the offender a class two suspension of the offender's driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege as specified in division (A)(2) of section 4510.02 of the Revised Code.",
+          "start": 4192,
+          "end": 4732,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(E) As used in this section:",
+          "start": 4733,
+          "end": 4761,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(1) \"Deadly weapon\" and \"dangerous ordnance\" have the same meanings as in section 2923.11 of the Revised Code.",
+          "start": 4762,
+          "end": 4872,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(2) \"Motor vehicle\" has the same meaning as in section 4501.01 of the Revised Code.",
+          "start": 4873,
+          "end": 4956,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(3) \"Peace officer\" has the same meaning as in section 2935.01 of the Revised Code.",
+          "start": 4957,
+          "end": 5040,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(4) \"Sexual conduct\" has the same meaning as in section 2907.01 of the Revised Code, except that, as used in this section, it does not include the insertion of an instrument, apparatus, or other object that is not a part of the body into the vaginal or anal opening of another, unless the offender knew at the time of the insertion that the instrument, apparatus, or other object carried the offender's bodily fluid.",
+          "start": 5041,
+          "end": 5457,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(5) \"Investigator of the bureau of criminal identification and investigation\" means an investigator of the bureau of criminal identification and investigation who is commissioned by the superintendent of the bureau as a special agent for the purpose of assisting law enforcement officers or providing emergency assistance to peace officers pursuant to authority granted under section 109.541 of the Revised Code.",
+          "start": 5458,
+          "end": 5870,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(6) \"Investigator\" has the same meaning as in section 109.541 of the Revised Code.",
+          "start": 5871,
+          "end": 5953,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        },
+        {
+          "quote": "(F) The provisions of division (D)(2) of this section and of division (F)(20) of section 2929.13, divisions (B)(9) and (C)(6) of section 2929.14, and section 2941.1425 of the Revised Code shall be known as \"Judy's Law.\"",
+          "start": 5954,
+          "end": 6173,
+          "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01"
+        }
+      ],
+      "nextChecks": [
+        "Reconcile division (A) harm/weapon paths and division (B) separately; do not reduce the entire section to assault with a weapon.",
+        "Preserve the modified sexual-conduct definition in (E)(4), rather than importing § 2907.01 without the local exception.",
+        "Resolve first/second-degree grading, protected-victim serious-harm rule and offense-date-dependent indefinite terms.",
+        "Resolve §§ 2941.1423, 2941.1425 and 2941.1426 prerequisites and their § 2929.14 sentencing interactions.",
+        "Resolve division (D)(4)'s motor-vehicle weapon and class-two suspension conditions.",
+        "Evaluate the designated-offense/specification framework in §§ 2971.01, 2941.147, 2941.148 and 2971.03.",
+        "Keep legacy synthesized labels separate; using (E)(5) as another offense's definition cannot activate this section."
+      ]
+    },
+    {
+      "section": "2903.12",
+      "title": "Aggravated assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.12",
+      "effectiveDate": "2019-03-22",
+      "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0",
+      "status": "source_first_configured_requires_runtime_check",
+      "configuredId": "oh-orc-2903-12-aggravated-assault",
+      "operativeEvidence": [
+        {
+          "quote": "(A) No person, while under the influence of sudden passion or in a sudden fit of rage, either of which is brought on by serious provocation occasioned by the victim that is reasonably sufficient to incite the person into using deadly force, shall knowingly:",
+          "start": 60,
+          "end": 317,
+          "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0"
+        },
+        {
+          "quote": "(1) Cause serious physical harm to another or to another's unborn;",
+          "start": 318,
+          "end": 384,
+          "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0"
+        },
+        {
+          "quote": "(2) Cause or attempt to cause physical harm to another or to another's unborn by means of a deadly weapon or dangerous ordnance, as defined in section 2923.11 of the Revised Code.",
+          "start": 385,
+          "end": 564,
+          "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0"
+        },
+        {
+          "quote": "(B) Whoever violates this section is guilty of aggravated assault. Except as otherwise provided in this division, aggravated assault is a felony of the fourth degree. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, aggravated assault is a felony of the third degree. Regardless of whether the offense is a felony of the third or fourth degree under this division, if the offender also is convicted of or pleads guilty to a specification as described in section 2941.1423 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, except as otherwise provided in this division, the court shall sentence the offender to a mandatory prison term as provided in division (B)(8) of section 2929.14 of the Revised Code. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, and if the victim suffered serious physical harm as a result of the commission of the offense, aggravated assault is a felony of the third degree, and the court, pursuant to division (F) of section 2929.13 of the Revised Code, shall impose as a mandatory prison term one of the definite prison terms prescribed in division (A)(3)(b) of section 2929.14 of the Revised Code for a felony of the third degree.",
+          "start": 565,
+          "end": 1949,
+          "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0"
+        },
+        {
+          "quote": "(C) As used in this section:",
+          "start": 1950,
+          "end": 1978,
+          "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0"
+        },
+        {
+          "quote": "(1) \"Investigator of the bureau of criminal identification and investigation\" has the same meaning as in section 2903.11 of the Revised Code.",
+          "start": 1979,
+          "end": 2120,
+          "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0"
+        },
+        {
+          "quote": "(2) \"Peace officer\" has the same meaning as in section 2935.01 of the Revised Code.",
+          "start": 2121,
+          "end": 2204,
+          "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0"
+        }
+      ],
+      "nextChecks": [
+        "Check live availability, provenance and currentness; section-level selection is not an allegation-specific sentencing calculator."
+      ]
+    }
+  ]
+}

@@ -14,6 +14,7 @@ const document = createOhioEvidenceReader(
     "4511.19": "144bfefd79506d5e81b83dec2dc823c2e1485afb17e3feaa597a30266c8d7572",
     "2929.13": "7bca69aa68f4140838a5ec30c0cd59cc0d5a8bd75f920ef890bb34d1d7a507a7",
   });
+export { document as ohioManslaughterDocument };
 
 const firstDegree = common("2929.14", "(A)(1)", [
   ["penalty", "(A) Except"], ["penalty", "(1)(a) For a felony of the first degree"],

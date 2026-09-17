@@ -28,6 +28,18 @@ export interface ChargeTranslationEntry {
 }
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
+  "ohio-aggravated-assault": {
+    es: {
+      draft: true, keyTerms: [],
+      plainSummary: "Aggravated assault en Ohio (sección 2903.12) no es simplemente una etiqueta genérica para una agresión grave. Exige actuar a sabiendas bajo pasión o ira repentina causada por una provocación grave de la víctima razonablemente suficiente para incitar al uso de fuerza mortal. La conducta consiste en causar daño físico grave, o causar o intentar causar daño físico con un arma mortal o material peligroso, a otra persona o al ser no nacido de otra persona. Estar enojado por sí solo no cumple las condiciones legales. Importan las definiciones y las excepciones relativas al embarazo.",
+      degreeContext: "La clasificación básica es de cuarto grado (prisión ordinaria de 6 a 18 meses; multa básica de hasta $5,000). Si la víctima es un agente del orden o un investigador del BCI que cumpla la definición legal, es de tercer grado (penas ordinarias de 9, 12, 18, 24, 30 o 36 meses; multa básica de hasta $10,000). El daño físico grave a tal víctima exige una de esas penas de tercer grado. Una especificación válida de conocimiento del embarazo exige seis meses o una pena prevista para el grado de delito grave aplicable, sujeta a la regla para víctimas protegidas; no añade seis meses a la pena. Los rangos ordinarios no predicen la pena total.",
+    },
+    zh: {
+      draft: true, keyTerms: [],
+      plainSummary: "俄亥俄州的 Aggravated assault（第2903.12条）并非严重袭击的泛称。该罪要求在受到受害人严重挑衅而突然激愤或暴怒、且该挑衅足以合理地促使使用致命武力的情况下，明知地实施法定行为：对他人或他人的未出生胎儿造成严重身体伤害，或使用致命武器或危险军械造成或企图造成身体伤害。仅仅生气并不满足法定条件。须考虑相关定义及妊娠相关例外。",
+      degreeContext: "基本罪行属于四级重罪（普通监禁期限为6至18个月；基本罚金最高为5,000美元）。若受害人为治安执法人员或符合法定定义的BCI调查员，则属于三级重罪（普通刑期为9、12、18、24、30或36个月；基本罚金最高为10,000美元）。对这类受害人造成严重身体伤害时，必须判处上述三级重罪刑期之一。符合条件的明知受害人怀孕的附加指控要求判处六个月或适用重罪等级规定的刑期，但须服从受保护受害人的规则；这不是在原刑期上另加六个月。普通范围并非总刑罚预测。",
+    },
+  },
   "ohio-voluntary-manslaughter": {
     es: {
       draft: true, keyTerms: [],
