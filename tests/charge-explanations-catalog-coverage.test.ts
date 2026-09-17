@@ -20,6 +20,8 @@ describe('charge explanation catalog coverage', () => {
   });
 
   it.each([
+    ['Aggravated murder', 'aggravated-murder'],
+    ['Murder', 'murder'],
     ['Aggravated Criminal Sexual Assault', 'sexual-assault'],
     ['Armed Career Criminal Act (Federal Three-Strikes)', 'recidivist-enhancement'],
     ['Domestic Assault in the Third Degree', 'domestic-violence'],
@@ -39,5 +41,16 @@ describe('charge explanation catalog coverage', () => {
     ['Use of Firearm During Crime of Violence or Drug Trafficking (Federal)', 'weapons-charges'],
   ])('resolves %s to the intended %s explanation', (chargeName, expectedSlug) => {
     expect(getChargeExplanation(chargeName)?.slug).toBe(expectedSlug);
+  });
+
+  it.each(['Aggravated murder', 'Murder'])('localizes %s without assigning a legacy degree', (name) => {
+    const english = getChargeExplanation(name, 'OH', 'en');
+    for (const language of ['es', 'zh']) {
+      const localized = getChargeExplanation(name, 'OH', language);
+      expect(localized?.slug).toBe(english?.slug);
+      expect(localized?.plainSummary).not.toBe(english?.plainSummary);
+      expect(localized?.translationDraft).toBe(true);
+      expect(localized?.pendingAttorneyReview).toBe(true);
+    }
   });
 });

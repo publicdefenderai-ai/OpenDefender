@@ -28,6 +28,30 @@ export interface ChargeTranslationEntry {
 }
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
+  "aggravated-murder": {
+    es: {
+      draft: true,
+      plainSummary: "Aggravated murder es un cargo de homicidio que implica circunstancias especificadas por la ley aplicable. Los requisitos exactos dependen de la jurisdicción y de la disposición citada. Compare la cita legal con la que figura en su documento de acusación; no suponga que este nombre equivale a asesinato en primer grado.",
+      keyTerms: [],
+    },
+    zh: {
+      draft: true,
+      plainSummary: "Aggravated murder（加重谋杀）是一项涉及适用法律所规定情形的杀人指控。具体构成要件取决于司法管辖区和所引用的法律条款。请核对指控文件上的法律条款；不要假定这一名称与一级谋杀可以互换。",
+      keyTerms: [],
+    },
+  },
+  "murder": {
+    es: {
+      draft: true,
+      plainSummary: "Murder es un cargo de homicidio cuyos requisitos exactos dependen de la jurisdicción y de la disposición citada. El nombre Murder no establece por sí solo una clasificación de primer o segundo grado. Use la cita legal de su documento de acusación para identificar el delito aplicable y consulte a su abogado defensor sobre sus elementos y posibles penas.",
+      keyTerms: [],
+    },
+    zh: {
+      draft: true,
+      plainSummary: "Murder（谋杀）是一项杀人指控，其具体构成要件取决于司法管辖区和所引用的法律条款。名为 Murder 的指控本身并不能确定其属于一级或二级。请使用指控文件上的法律条款来确定适用的罪名，并就其构成要件和可能的处罚咨询辩护律师。",
+      keyTerms: [],
+    },
+  },
 
   "murder-in-the-first-degree": {
     es: {

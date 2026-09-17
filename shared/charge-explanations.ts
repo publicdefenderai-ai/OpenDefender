@@ -46,6 +46,20 @@ export interface ChargeExplanation {
 
 export const chargeExplanations: ChargeExplanation[] = [
   {
+    chargePattern: /^aggravated murder$/i,
+    slug: "aggravated-murder",
+    plainSummary: "Aggravated murder is a homicide charge involving circumstances specified by the applicable statute. The exact requirements depend on the jurisdiction and cited provision. Match the statutory citation on your charging document; do not assume this name is interchangeable with first-degree murder.",
+    keyTerms: [],
+    pendingAttorneyReview: true,
+  },
+  {
+    chargePattern: /^murder$/i,
+    slug: "murder",
+    plainSummary: "Murder is a homicide charge whose exact requirements depend on the jurisdiction and cited provision. A charge named Murder does not by itself establish a first- or second-degree classification. Use the statutory citation on your charging document to identify the applicable offense and consult defense counsel about its elements and possible penalties.",
+    keyTerms: [],
+    pendingAttorneyReview: true,
+  },
+  {
     chargePattern: /murder.*first.*degree|first.*degree.*murder/i,
     slug: "murder-in-the-first-degree",
     plainSummary: "First degree murder is the most serious homicide charge, but what makes a killing 'first degree' is not the same in every state. In many states, including California, Florida, and Virginia, it means the killing was planned ahead of time ('premeditated') or happened during another serious felony like robbery or rape. In New York, first degree murder does not turn on planning at all. It requires an intentional killing plus one of a specific list of aggravating facts, such as killing a police officer or committing a killing for hire. Some states, including Ohio, do not use the term 'first degree murder' at all and call the most serious murder charge 'aggravated murder' instead.",
