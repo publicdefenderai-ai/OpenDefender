@@ -2,6 +2,8 @@
 
 September 16, 2026 (Pacific); development only.
 
+**Subsequent batch:** `docs/ohio-felonious-assault-batch.md` records the later source-first activation of felonious assault. The current total is nine source-first and nineteen selectable Ohio records. This document preserves the preceding aggravated-assault batch.
+
 ## Activated scope
 
 Aggravated assault, § 2903.12, is represented by a new source-first section-level record. It replaces the inherited `oh-aggravated-assault` selection without silently migrating saved cases.

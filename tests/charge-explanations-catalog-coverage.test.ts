@@ -3,11 +3,14 @@ import { getChargeExplanation } from '../shared/charge-explanations';
 import { criminalCharges } from '../shared/criminal-charges';
 
 describe('charge explanation catalog coverage', () => {
-  it('has an explanation for every distinct charge name in the catalog', () => {
-    const chargeNames = [...new Set(criminalCharges.map((charge) => charge.name))].sort();
-    const unmatchedChargeNames = chargeNames.filter(
-      (chargeName) => getChargeExplanation(chargeName) === null,
-    );
+  it('has an explanation for every distinct charge name within its catalog jurisdiction', () => {
+    // A jurisdiction-specific statutory name must not require a generic
+    // explanation that could accidentally export that state's law elsewhere.
+    const charges = [...new Map(criminalCharges.map(charge =>
+      [`${charge.jurisdiction}:${charge.name}`, charge])).values()];
+    const unmatchedChargeNames = charges.filter(
+      charge => getChargeExplanation(charge.name, charge.jurisdiction) === null,
+    ).map(charge => `${charge.jurisdiction}: ${charge.name}`).sort();
 
     expect(
       unmatchedChargeNames,

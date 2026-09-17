@@ -5,7 +5,7 @@ import { OHIO_AGGRAVATED_ASSAULT_SOURCE as source } from "../server/data/ohio-as
 import { getChargeExplanation } from "../shared/charge-explanations";
 import { getChargeById, classifyChargesForGuidance } from "../shared/criminal-charges";
 import { resolveGuidanceCharge } from "../shared/guidance-charge-resolution";
-import { ohioChapter2903Evidence, OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../server/data/ohio-chapter-2903-source";
+import { ohioChapter2903Evidence } from "../server/data/ohio-chapter-2903-source";
 import { buildOhioChapter2903PilotManifestRecords, buildOhioSourceDatabaseSeed, validateOhioManifestRecord } from "../server/data/ohio-source-database-seed";
 import { loadOhioAuthorityManifest } from "../server/data/ohio-manifest-loader";
 import { OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH, validateOhioChapter2903RefreshReceipt } from "../server/data/ohio-chapter-2903-refresh";
@@ -44,7 +44,7 @@ describe("source-first Ohio aggravated assault", () => {
     const investigator = evidence.find(row => row.document.section === "2903.11")!;
     expect(investigator.document.subdivision).toBe("(E)(5)");
     expect(investigator.document.quotedSpans.some(span => span.quote.includes("commissioned"))).toBe(true);
-    expect(OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.some(row => row.offense.section === "2903.11")).toBe(false);
+    expect(source.offense.section).toBe("2903.12");
     const oathException = evidence.find(row => row.document.section === "2935.081")!;
     expect(oathException.document.quotedSpans.some(span => span.quote.startsWith("(A) As used in this section"))).toBe(true);
   });

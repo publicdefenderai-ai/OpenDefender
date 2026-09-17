@@ -15,7 +15,7 @@ describe("Ohio Chapter 2903 continuation", () => {
     const review = buildChapterPublicationReview(discovery);
     expect(review.summary).toMatchObject({
       examinedSections: 40, offenseCandidates: 24, supportingProvisions: 14,
-      sourceFirstConfiguredRecords: 8, withheldOffenseBearingSections: 18,
+      sourceFirstConfiguredRecords: 9, withheldOffenseBearingSections: 17,
       namingTranscriptionReviewRequests: 0,
     });
     const registration = review.rows.find(row => row.section === "2903.43")!;

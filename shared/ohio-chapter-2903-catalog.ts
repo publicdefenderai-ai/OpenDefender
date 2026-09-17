@@ -14,6 +14,7 @@ import type { CriminalCharge } from "./criminal-charges";
 import { OHIO_CHAPTER_2903_ADDITIONAL_CHARGES } from "./ohio-chapter-2903-additional-catalog";
 import { OHIO_MANSLAUGHTER_CHARGES } from "./ohio-manslaughter-catalog";
 import { OHIO_AGGRAVATED_ASSAULT_CHARGE } from "./ohio-aggravated-assault";
+import { OHIO_FELONIOUS_ASSAULT_CHARGE } from "./ohio-felonious-assault";
 
 export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   {
@@ -89,9 +90,12 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_CHAPTER_2903_ADDITIONAL_CHARGES,
   ...OHIO_MANSLAUGHTER_CHARGES,
   OHIO_AGGRAVATED_ASSAULT_CHARGE,
+  OHIO_FELONIOUS_ASSAULT_CHARGE,
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
+  "oh-assault-with-deadly-weapon",
+  "oh-assault-on-peace-officer",
   "oh-aggravated-assault",
   "oh-voluntary-manslaughter",
   "oh-involuntary-manslaughter",

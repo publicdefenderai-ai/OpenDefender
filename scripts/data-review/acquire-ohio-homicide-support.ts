@@ -10,7 +10,8 @@ async function main() {
   const manslaughter = process.argv.includes("--manslaughter");
   const assault = process.argv.includes("--assault");
   const assaultDefinitions = process.argv.includes("--assault-definitions");
-  const sections = assaultDefinitions ? ["109.54", "2935.081"] : assault ? [
+  const feloniousDefinitions = process.argv.includes("--felonious-assault-definitions");
+  const sections = feloniousDefinitions ? ["2929.01"] : assaultDefinitions ? ["109.54", "2935.081"] : assault ? [
     "2903.11", "2903.12", "2901.01", "2935.01", "109.541",
     "2907.01", "4501.01", "2941.1423", "2941.1425", "2941.1426",
   ] : manslaughter ? [
@@ -42,7 +43,9 @@ async function main() {
     console.log(`${section}: ${document.title} (${document.effectiveDateStart})`);
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
-  writeFileSync(assaultDefinitions
+  writeFileSync(feloniousDefinitions
+    ? "scripts/data-review/output/ohio-felonious-assault-definition-evidence.json"
+    : assaultDefinitions
     ? "scripts/data-review/output/ohio-assault-definition-evidence.json"
     : assault
     ? "scripts/data-review/output/ohio-assault-support-evidence.json"

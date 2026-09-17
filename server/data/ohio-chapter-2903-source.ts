@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { OHIO_CHAPTER_2903_ADDITIONAL_SOURCE_RECORDS } from "./ohio-chapter-2903-additional-source";
 import { OHIO_MANSLAUGHTER_SOURCE_RECORDS } from "./ohio-manslaughter-source";
 import { OHIO_AGGRAVATED_ASSAULT_SOURCE } from "./ohio-assault-source";
+import { OHIO_FELONIOUS_ASSAULT_SOURCE } from "./ohio-felonious-assault-source";
 
 export type OhioChapter2903SupportRole = "offense" | "penalty";
 
@@ -214,6 +215,7 @@ export const OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS: readonly OhioChapter2903Pil
   ...OHIO_CHAPTER_2903_ADDITIONAL_SOURCE_RECORDS,
   ...OHIO_MANSLAUGHTER_SOURCE_RECORDS,
   OHIO_AGGRAVATED_ASSAULT_SOURCE,
+  OHIO_FELONIOUS_ASSAULT_SOURCE,
 ];
 
 export function ohioChapter2903Evidence(source: OhioChapter2903PilotSourceRecord): {

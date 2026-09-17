@@ -7,8 +7,8 @@
     "offenseCandidates": 24,
     "supportingProvisions": 14,
     "structuralInterpretationSections": 2,
-    "sourceFirstConfiguredRecords": 8,
-    "withheldOffenseBearingSections": 18,
+    "sourceFirstConfiguredRecords": 9,
+    "withheldOffenseBearingSections": 17,
     "explicitlyGroupedNamedUnits": 8,
     "namingTranscriptionReviewRequests": 0
   },
@@ -724,8 +724,10 @@
       "sourceHash": "9c6ca00f4b327dd1ac586055e19212c1572fc312d99266fc0076829a827cf96b",
       "effectiveDate": "2019-03-22",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-11-felonious-assault"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -784,8 +786,7 @@
         }
       ],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {

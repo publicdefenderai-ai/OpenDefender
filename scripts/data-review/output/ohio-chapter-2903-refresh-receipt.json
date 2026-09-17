@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-17T04:41:50.113Z",
-  "expiresAt": "2026-09-24T04:41:50.113Z",
+  "checkedAt": "2026-09-17T04:56:28.255Z",
+  "expiresAt": "2026-09-24T04:56:28.255Z",
   "documents": [
     {
       "section": "109.54",
@@ -102,11 +102,25 @@
       "effectiveDateStart": "1996-09-06"
     },
     {
+      "section": "2907.01",
+      "title": "Sex offenses general definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.01",
+      "contentHash": "0231566d337eda04cb7ba1697265fe81eea30062ba5e02e50415f3fd74cb702b",
+      "effectiveDateStart": "2025-03-21"
+    },
+    {
       "section": "2923.11",
       "title": "Weapons control definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.11",
       "contentHash": "aa1de5ed1cafc9d5bd97493367b5890e851e466f7dad5c2d92767b98d33cb44a",
       "effectiveDateStart": "2019-03-28"
+    },
+    {
+      "section": "2929.01",
+      "title": "Penalties and sentencing general definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.01",
+      "contentHash": "03652e46d045e9dd83f4c67c1bcddf66ea04bf8fddc89c68cbec357fe6af8df9",
+      "effectiveDateStart": "2023-04-04"
     },
     {
       "section": "2929.02",
@@ -179,6 +193,20 @@
       "effectiveDateStart": "2023-04-04"
     },
     {
+      "section": "2941.1425",
+      "title": "Use of accelerant in committing violent felony",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.1425",
+      "contentHash": "ea3376b1dfd5a47eaa632e8a16b37f092dd009fb6c3f7293faeccca3061224e0",
+      "effectiveDateStart": "2017-10-17"
+    },
+    {
+      "section": "2941.1426",
+      "title": "Imposition of mandatory sentence under R.C. 2929.14",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.1426",
+      "contentHash": "c05e7e1a8ea4312a9f481973769a94abc12d80a9e4a5f12295b8949a427af640",
+      "effectiveDateStart": "2019-03-20"
+    },
+    {
       "section": "2941.147",
       "title": "Sexual motivation specification",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.147",
@@ -205,6 +233,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2971.03",
       "contentHash": "fe1ba29445fa38ca1a64b02f88719f1da68f8c0d4841f1352fa85eb806c6800e",
       "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "4501.01",
+      "title": "Motor vehicles definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4501.01",
+      "contentHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+      "effectiveDateStart": "2025-06-30"
     },
     {
       "section": "4510.02",

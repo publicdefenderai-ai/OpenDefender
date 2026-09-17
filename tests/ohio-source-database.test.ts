@@ -58,13 +58,13 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(123);
+    expect(ohioCount).toBe(124);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(50);
-    expect(seed.snapshots).toHaveLength(71);
-    expect(seed.links).toHaveLength(71);
-    expect(seed.selectableChargeIds).toHaveLength(18);
+    expect(seed.sources).toHaveLength(60);
+    expect(seed.snapshots).toHaveLength(98);
+    expect(seed.links).toHaveLength(98);
+    expect(seed.selectableChargeIds).toHaveLength(19);
     expect(seed.selectableChargeIds).toContain("oh-orc-2903-12-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("oh-aggravated-assault");
     expect(seed.selectableChargeIds).toContain("oh-criminal-trespass");
@@ -87,6 +87,7 @@ describe("Ohio authority manifest", () => {
       "oh-orc-2903-03-voluntary-manslaughter",
       "oh-orc-2903-04-involuntary-manslaughter",
       "oh-orc-2903-12-aggravated-assault",
+      "oh-orc-2903-11-felonious-assault",
     ]);
     expect(getChargeById(sourceFirstIds[0])?.name).toBe("Aggravated murder");
     expect(getChargeById(sourceFirstIds[1])?.name).toBe("Murder");
