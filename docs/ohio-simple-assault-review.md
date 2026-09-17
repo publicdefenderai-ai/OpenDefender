@@ -2,6 +2,8 @@
 
 Reviewed September 16, 2026, Pacific time.
 
+Subsequent progress is recorded in `ohio-three-charge-batch.md`: twelve source-first records and twenty-two selectable Ohio charges. The counts below describe this earlier review. The §2903.13 authority issue remains unresolved.
+
 ## Result
 
 The official current assault page was acquired, together with 16 supporting pages. One of the 18 requested pages, § 3727.01, consistently redirected to the official “number not found” route. The acquisition command preserved successful evidence and returned a nonzero exit status. It did not update runtime approval.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-17T04:56:28.255Z",
-  "expiresAt": "2026-09-24T04:56:28.255Z",
+  "checkedAt": "2026-09-17T06:57:28.598Z",
+  "expiresAt": "2026-09-24T06:57:28.598Z",
   "documents": [
     {
       "section": "109.54",
@@ -23,6 +23,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.01",
       "contentHash": "08b4bb21dd02617e54825a9e6f2ea6b218b9fb6893591dff3d3d2f83393c8149",
       "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2901.21",
+      "title": "Criminal liability, culpability",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.21",
+      "contentHash": "f5a0445be0d9e6471277a96849e2b5631bcf4e1c54f3cdc46f3f430012677cf7",
+      "effectiveDateStart": "2015-03-23"
     },
     {
       "section": "2901.22",
@@ -102,11 +109,39 @@
       "effectiveDateStart": "1996-09-06"
     },
     {
+      "section": "2903.15",
+      "title": "Permitting child abuse",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.15",
+      "contentHash": "905320fe43ec3ad62ea088d8f6a8543128b03660c05ead28efc404f6a1aae2ec",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2903.18",
+      "title": "Strangulation",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.18",
+      "contentHash": "75dd392102d31ca1c9056ea17a84a6d5417a4eb755483587f7743b5208b78003",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2903.21",
+      "title": "Aggravated menacing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.21",
+      "contentHash": "f44a3b3ba086388087ecc1083a16aa1ee56042c06281db88f53d79b03643f3db",
+      "effectiveDateStart": "2014-09-17"
+    },
+    {
       "section": "2907.01",
       "title": "Sex offenses general definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.01",
       "contentHash": "0231566d337eda04cb7ba1697265fe81eea30062ba5e02e50415f3fd74cb702b",
       "effectiveDateStart": "2025-03-21"
+    },
+    {
+      "section": "2919.25",
+      "title": "Domestic violence",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.25",
+      "contentHash": "21999c9671f0de43ec4e21da6a1f43d1f2d7fdec9cba7ac036a1d9fa9b0bd239",
+      "effectiveDateStart": "2025-03-20"
     },
     {
       "section": "2923.11",
@@ -235,6 +270,13 @@
       "effectiveDateStart": "2021-04-12"
     },
     {
+      "section": "3113.31",
+      "title": "Domestic violence definitions; hearings",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3113.31",
+      "contentHash": "38da18a7adf19248ec9c16251631c47332caf19bc00cf9e61f8cea77621eceb9",
+      "effectiveDateStart": "2023-03-23"
+    },
+    {
       "section": "4501.01",
       "title": "Motor vehicles definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4501.01",
@@ -254,6 +296,20 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.19",
       "contentHash": "144bfefd79506d5e81b83dec2dc823c2e1485afb17e3feaa597a30266c8d7572",
       "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "5153.01",
+      "title": "County children services definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5153.01",
+      "contentHash": "f2b062c8e9ed1334658a30e02cae48eee21facd3e8fe02cbd0fa2582d072885d",
+      "effectiveDateStart": "2025-01-01"
+    },
+    {
+      "section": "5153.02",
+      "title": "Who may serve as county public children services agency",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5153.02",
+      "contentHash": "5ff13b9756e72cdc39bb2d3b96c1ebeccc7b49219705966c1c2c1b2252fccae3",
+      "effectiveDateStart": "2000-07-01"
     }
   ]
 }

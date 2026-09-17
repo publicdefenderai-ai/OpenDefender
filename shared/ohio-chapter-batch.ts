@@ -1,0 +1,42 @@
+import type { CriminalCharge } from "./criminal-charges";
+import type { ChargeExplanation } from "./charge-explanations";
+
+const records = [
+  {
+    section: "2903.21", slug: "aggravated-menacing", name: "Aggravated menacing", category: "misdemeanor" as const,
+    summary: "Ohio § 2903.21 prohibits knowingly causing another to believe that the offender will cause serious physical harm to that person or their property, their unborn, or a member of their immediate family. The belief can be based on words or conduct directed at or identifying the person's employer or an organization to which they belong, including a governmental employer. This is a belief-of-serious-harm offense, not a requirement that a weapon be displayed or an injury actually occur. Statutory harm definitions and pregnancy-related exceptions matter.",
+    es: "La sección 2903.21 de Ohio prohíbe causar a sabiendas que otra persona crea que el autor causará daño físico grave a ella, a su propiedad, a su ser no nacido o a un miembro de su familia inmediata. Esa creencia puede basarse en palabras o conducta dirigidas a, o que identifiquen, al empleador de la persona o a una organización a la que pertenezca, incluido un empleador gubernamental. El delito se refiere a la creencia de daño grave; no exige exhibir un arma ni causar una lesión real. Importan las definiciones legales de daño y las excepciones relativas al embarazo.",
+    penalty: "Ordinarily a first-degree misdemeanor: up to 180 days in jail and a fine up to $1,000. It is a fifth-degree felony when the victim is an officer or employee of a public children services agency or private child placing agency and the offense relates to actual or anticipated official duties. It is a fourth-degree felony if there is also a qualifying prior offense-of-violence conviction or guilty plea involving such an agency victim and such duties. Ordinary prison ranges, if imposed, are 6–12 months (F5) or 6–18 months (F4), with fine ceilings of $2,500 or $5,000 respectively. These are conditional base limits, not fixed fines or a prediction of total punishment.",
+  },
+  {
+    section: "2903.15", slug: "permitting-child-abuse", name: "Permitting child abuse", category: "felony" as const,
+    summary: "Ohio § 2903.15 addresses a parent, guardian, custodian or person having custody of a child under eighteen, or a child with a mental or physical disability under twenty-one, causing serious physical harm or death as a proximate result of permitting abuse, torture, corporal punishment or other physical discipline, or cruel or prolonged physical restraint. Culpability also requires analysis under § 2901.21; do not assume automatic strict liability. The statute provides an affirmative defense only when both conditions are met: no readily available means to prevent the harm or death, and timely, reasonable steps to summon aid. This is not a guarantee that the defense applies in a particular case.",
+    es: "La sección 2903.15 de Ohio se refiere al padre, madre, tutor, custodio o persona que tiene la custodia de un menor de dieciocho años, o de una persona con discapacidad mental o física menor de veintiún años, que causa daño físico grave o muerte como resultado próximo de permitir abuso, tortura, castigo corporal u otra disciplina física, o restricción física cruel o prolongada. La culpabilidad también requiere análisis según la sección 2901.21; no suponga responsabilidad estricta automática. La ley prevé una defensa afirmativa solo cuando se cumplen ambas condiciones: no había medios fácilmente disponibles para prevenir el daño o la muerte, y se tomaron medidas oportunas y razonables para pedir auxilio. Esto no garantiza que la defensa se aplique en un caso concreto.",
+    penalty: "Serious physical harm is third-degree; death is first-degree. Ordinary F3 prison terms, if imposed, are 9, 12, 18, 24, 30 or 36 months, with a fine up to $10,000. For F1 conduct on or after March 22, 2019, ordinary minimum terms are 3–11 years, with an indefinite maximum under § 2929.144; for one qualifying felony, maximum equals minimum plus 50%. The F1 fine ceiling is $20,000. Earlier conduct, prior convictions, specifications and other sanctions require separate review. These are not fixed fines, guaranteed sentences or universal total maximums.",
+  },
+  {
+    section: "2903.18", slug: "strangulation", name: "Strangulation", category: "felony" as const,
+    summary: "Ohio § 2903.18 defines strangulation or suffocation as impeding normal breathing or blood circulation by pressure to the throat or neck, or by covering the nose and mouth. Knowing conduct under (B)(1) causes serious physical harm; (B)(2) creates a substantial risk of serious physical harm; (B)(3) causes or creates a substantial risk of physical harm. Visible injury is not required by every branch. The statute provides an affirmative defense for an act done as part of a medical or other procedure undertaken to aid or benefit the victim. Family/household and dating relationships use specific statutory definitions; casual acquaintance is not a dating relationship, and this section's former-dating window is twelve months.",
+    es: "La sección 2903.18 de Ohio define estrangulación o asfixia como impedir la respiración normal o la circulación sanguínea mediante presión en la garganta o el cuello, o cubriendo la nariz y la boca. La conducta realizada a sabiendas bajo (B)(1) causa daño físico grave; bajo (B)(2) crea un riesgo sustancial de daño físico grave; bajo (B)(3) causa o crea un riesgo sustancial de daño físico. No todas las variantes exigen una lesión visible. La ley prevé una defensa afirmativa para un acto realizado como parte de un procedimiento médico u otro procedimiento destinado a ayudar o beneficiar a la víctima. Las relaciones familiares, del hogar y de pareja tienen definiciones legales específicas; un contacto casual no es una relación de pareja, y esta sección considera las relaciones de pareja anteriores dentro de los últimos doce meses.",
+    penalty: "(B)(1) is F2; (B)(2) is F3. Within (B)(3), the base is F5, elevated to F4 for a qualifying family/household or current/former dating victim. Within that same (B)(3) branch, F3 applies if that relationship AND a prior felony offense-of-violence conviction or guilty plea are present, OR if the offender knew the victim was pregnant. The known-pregnancy alternative does not require that relationship or a prior conviction. Ordinary prison terms, if imposed: F2 minimum 2–8 years with an indefinite maximum under § 2929.144 (one qualifying felony: minimum plus 50%); F3 9, 12, 18, 24, 30 or 36 months; F4 6–18 months; F5 6–12 months. Fine ceilings are $15,000/$10,000/$5,000/$2,500 respectively. The F2 range describes conduct on or after March 22, 2019, not historical certification. Other allegations and aggregate sentences require separate review; these are not fixed fines or universal total maximums.",
+  },
+];
+
+export const OHIO_CHAPTER_BATCH_CHARGES: CriminalCharge[] = records.map(row => ({
+  id: `oh-orc-${row.section.replace(".", "-")}-${row.slug}`,
+  name: row.name, nameEs: row.name, jurisdiction: "OH", category: row.category, code: row.section,
+  description: row.summary, descriptionEs: row.es, maxPenalty: row.penalty,
+  commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
+  statuteCitations: [`Ohio Rev. Code Ann. § ${row.section}`],
+  sourceUrls: [`https://codes.ohio.gov/ohio-revised-code/section-${row.section}`],
+  dataConfidence: "high", lastVerified: "2026-09",
+}));
+export const OHIO_CHAPTER_BATCH_EXPLANATIONS: ChargeExplanation[] = records.map(row => ({
+  jurisdiction: "OH", slug: `ohio-${row.slug}`, chargePattern: new RegExp(`^${row.name}$`, "i"),
+  plainSummary: row.summary, degreeContext: row.penalty, keyTerms: [], pendingAttorneyReview: true,
+  sources: [row.section, ...(row.category === "misdemeanor"
+    ? ["2929.24", "2929.28", "2929.14", "2929.18", "2903.09"]
+    : ["2929.14", "2929.18", "2929.144", ...(row.section === "2903.15" ? ["2901.21"] : ["2919.25", "3113.31"])])].map(section => ({
+    jurisdiction: "OH", citation: `Ohio Rev. Code § ${section}`, url: `https://codes.ohio.gov/ohio-revised-code/section-${section}`,
+  })),
+}));

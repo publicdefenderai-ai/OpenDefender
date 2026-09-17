@@ -13,6 +13,8 @@
  * term name (term.term) stays in English so it matches court documents.
  */
 
+import { OHIO_CHAPTER_BATCH_TRANSLATIONS } from "./ohio-chapter-batch-translations";
+
 export interface ChargeExplanationLocale {
   plainSummary: string;
   /** Positionally aligned with the English keyTerms array. */
@@ -28,6 +30,7 @@ export interface ChargeTranslationEntry {
 }
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
+  ...OHIO_CHAPTER_BATCH_TRANSLATIONS,
   "ohio-felonious-assault": {
     es: {
       draft: true, keyTerms: [],

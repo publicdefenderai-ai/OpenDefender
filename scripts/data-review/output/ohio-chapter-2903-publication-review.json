@@ -7,8 +7,8 @@
     "offenseCandidates": 24,
     "supportingProvisions": 14,
     "structuralInterpretationSections": 2,
-    "sourceFirstConfiguredRecords": 9,
-    "withheldOffenseBearingSections": 17,
+    "sourceFirstConfiguredRecords": 12,
+    "withheldOffenseBearingSections": 14,
     "explicitlyGroupedNamedUnits": 8,
     "namingTranscriptionReviewRequests": 0
   },
@@ -1118,8 +1118,10 @@
       "sourceHash": "b72b7210bf3e957763eb7b32ba232f1eb9933896fbe5fa48eb4a55b699543eeb",
       "effectiveDate": "2023-04-06",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-15-permitting-child-abuse"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -1131,8 +1133,7 @@
       ],
       "crossReferences": [],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {
@@ -1172,8 +1173,10 @@
       "sourceHash": "208605832ba16f42c0ba2080b846292031a113f90d30dd55b3a32f514b6ccbb5",
       "effectiveDate": "2023-04-04",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-18-strangulation"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -1214,8 +1217,7 @@
         }
       ],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {
@@ -1225,8 +1227,10 @@
       "sourceHash": "cef9db2d74c2976f77c2cefc9e546cf86dd5cfcb81e22fc1122610a3658c5523",
       "effectiveDate": "2014-09-17",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-21-aggravated-menacing"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -1238,8 +1242,7 @@
       ],
       "crossReferences": [],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {

@@ -12,7 +12,11 @@ async function main() {
   const assaultDefinitions = process.argv.includes("--assault-definitions");
   const feloniousDefinitions = process.argv.includes("--felonious-assault-definitions");
   const simpleAssault = process.argv.includes("--simple-assault");
-  const sections = simpleAssault ? [
+  const chapterBatch = process.argv.includes("--chapter-batch");
+  const sections = chapterBatch ? [
+    "2903.15", "2903.18", "2903.21", "2919.25", "3113.31",
+    "2901.21", "5153.01", "5153.02", "5103.02",
+  ] : simpleAssault ? [
     "2903.13", "2903.10", "2903.33", "3937.41", "742.01", "4765.01",
     "146.01", "2967.27", "2967.01", "2305.234", "3727.01", "2941.25",
     "3311.77", "3319.08", "3319.22", "3319.311", "3301.07", "3301.071",
@@ -59,7 +63,9 @@ async function main() {
     }
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
-  writeFileSync(simpleAssault
+  writeFileSync(chapterBatch
+    ? "scripts/data-review/output/ohio-chapter-batch-evidence.json"
+    : simpleAssault
     ? "scripts/data-review/output/ohio-simple-assault-evidence.json"
     : feloniousDefinitions
     ? "scripts/data-review/output/ohio-felonious-assault-definition-evidence.json"

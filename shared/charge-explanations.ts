@@ -5,6 +5,7 @@ import { getCaliforniaExplanationSlug } from "./california-authority";
 import { OHIO_MANSLAUGHTER_EXPLANATIONS } from "./ohio-manslaughter-explanations";
 import { OHIO_AGGRAVATED_ASSAULT_EXPLANATION } from "./ohio-aggravated-assault";
 import { OHIO_FELONIOUS_ASSAULT_EXPLANATION } from "./ohio-felonious-assault";
+import { OHIO_CHAPTER_BATCH_EXPLANATIONS } from "./ohio-chapter-batch";
 
 export interface LegalTermExplanation {
   term: string;
@@ -50,6 +51,7 @@ export interface ChargeExplanation {
 }
 
 export const chargeExplanations: ChargeExplanation[] = [
+  ...OHIO_CHAPTER_BATCH_EXPLANATIONS,
   OHIO_FELONIOUS_ASSAULT_EXPLANATION,
   OHIO_AGGRAVATED_ASSAULT_EXPLANATION,
   ...OHIO_MANSLAUGHTER_EXPLANATIONS,
