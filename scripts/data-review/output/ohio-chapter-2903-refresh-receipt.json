@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-17T14:41:06.615Z",
-  "expiresAt": "2026-09-24T14:41:06.615Z",
+  "checkedAt": "2026-09-17T18:39:09.096Z",
+  "expiresAt": "2026-09-24T18:39:09.096Z",
   "documents": [
     {
       "section": "109.54",
@@ -149,6 +149,27 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.32",
       "contentHash": "1f081bc0d78bdc4fd2723ba467a4a9fa4c640ab5a5f6386de05e7491bf13f6c6",
       "effectiveDateStart": "2019-04-05"
+    },
+    {
+      "section": "2903.33",
+      "title": "Patient abuse and neglect in care facilities definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.33",
+      "contentHash": "9903e3bf0a68c9748264ae54d551cf0dd4a9e004e2ab2270ccb21e18cc8bc36e",
+      "effectiveDateStart": "2013-09-29"
+    },
+    {
+      "section": "2903.34",
+      "title": "Patient abuse or neglect",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.34",
+      "contentHash": "bdb27abe731aa47309305e838889879ef6349e0cd4d220985b4f2f53702a59de",
+      "effectiveDateStart": "1996-07-01"
+    },
+    {
+      "section": "2903.35",
+      "title": "Filing false patient abuse or neglect complaints",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.35",
+      "contentHash": "909331931fea781441522b9764ddbba71be4d0a18c029f9b5ebc4131d39a9eb5",
+      "effectiveDateStart": "1986-09-17"
     },
     {
       "section": "2907.01",
@@ -305,6 +326,13 @@
       "effectiveDateStart": "2023-03-23"
     },
     {
+      "section": "3701.01",
+      "title": "Department of health definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3701.01",
+      "contentHash": "27b9fa3187142ca467cd932cad2a21a56656735d1af2ead6ef58e95d4d0f1a1c",
+      "effectiveDateStart": "2000-10-10"
+    },
+    {
       "section": "3719.01",
       "title": "Controlled substances definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3719.01",
@@ -317,6 +345,20 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3719.011",
       "contentHash": "9e79fe1560a6114c3a9b5a4208bfdbc495f61e967a2e85b995e31ddbd2b3cd01",
       "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "3721.01",
+      "title": "Nursing home and residential care facility definitions and classifications",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3721.01",
+      "contentHash": "b06ad5222ad4cac94c9afa0a2ee493d8523f680310569abdbb84b9ad5d22fc4b",
+      "effectiveDateStart": "2025-03-20"
+    },
+    {
+      "section": "3721.10",
+      "title": "Residents' rights definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3721.10",
+      "contentHash": "a57d84917a9a96c311b08d6fdf832480f0de9f41aaa378486c4391cde7f358cd",
+      "effectiveDateStart": "2017-04-06"
     },
     {
       "section": "4501.01",
@@ -345,6 +387,34 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4729.01",
       "contentHash": "a312e6c912b331423e392f28b6cf2d413cba35b493ed8e12cda804db34346b2b",
       "effectiveDateStart": "2026-06-09"
+    },
+    {
+      "section": "5119.14",
+      "title": "Department of behavioral health powers and duties generally",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5119.14",
+      "contentHash": "ab071f5adf50e5c2966764ce47a5b5d862a1759fbb7070dff0b462c39cd039e7",
+      "effectiveDateStart": "2025-09-30"
+    },
+    {
+      "section": "5119.34",
+      "title": "Inspecting and licensing of residential facilities",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5119.34",
+      "contentHash": "d2cdce708cb52224363abcade6264194f5a1d1af9fbda992d9f8bea498adeabc",
+      "effectiveDateStart": "2025-09-30"
+    },
+    {
+      "section": "5123.03",
+      "title": "Management of institutions and facilities",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5123.03",
+      "contentHash": "47848aa04a5af56e61f0e08397bbf57a197d2b635f7269a6248ebd5ec4436212",
+      "effectiveDateStart": "2016-10-12"
+    },
+    {
+      "section": "5123.19",
+      "title": "Operation of residential facilities",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5123.19",
+      "contentHash": "b3c0e1a675f73066fdab17b0a679774cf2f961d663551cb084ac1bd8f9fb772e",
+      "effectiveDateStart": "2023-10-03"
     },
     {
       "section": "5153.01",

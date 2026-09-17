@@ -1069,6 +1069,15 @@ export async function reviewAuthoritySourceSnapshot(
   });
 }
 
+export function selectPrimaryAuthoritySource<T extends { citation: string; supportRole: string }>(
+  rows: readonly T[],
+  expectedCitation?: string,
+): T | undefined {
+  return expectedCitation
+    ? rows.find(row => row.supportRole === "offense" && row.citation === expectedCitation)
+    : rows[0];
+}
+
 export async function getAuthorityChargeProvenance(
   jurisdiction: string,
   chargeId: string,
@@ -1106,11 +1115,17 @@ export async function getAuthorityChargeProvenance(
       eq(statuteSourceSnapshots.jurisdiction, jurisdiction),
       eq(statuteSourceSnapshots.status, "current"),
     ));
-  if (rows.length === 0) return null;
+  // SQL row order does not identify the offense: definitions also have the
+  // "offense" support role. Use the reviewed pilot's exact primary citation.
+  const expectedCitation = jurisdiction === "OH"
+    ? OHIO_CHAPTER_2903_PILOT_CHARGES.find(charge => charge.id === chargeId)?.statuteCitations?.[0]
+    : undefined;
+  const primary = selectPrimaryAuthoritySource(rows, expectedCitation);
+  if (!primary) return null;
   return {
     chargeId,
-    officialTitle: rows[0].officialTitle,
-    citation: rows[0].citation,
-    sources: rows,
+    officialTitle: primary.officialTitle,
+    citation: primary.citation,
+    sources: [primary, ...rows.filter(row => row !== primary)],
   };
 }

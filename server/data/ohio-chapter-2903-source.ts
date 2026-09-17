@@ -5,6 +5,7 @@ import { OHIO_AGGRAVATED_ASSAULT_SOURCE } from "./ohio-assault-source";
 import { OHIO_FELONIOUS_ASSAULT_SOURCE } from "./ohio-felonious-assault-source";
 import { OHIO_CHAPTER_BATCH_SOURCES } from "./ohio-chapter-batch-source";
 import { OHIO_HAZING_AND_PROTECTION_SOURCES } from "./ohio-hazing-and-protection-source";
+import { OHIO_PATIENT_CARE_SOURCES } from "./ohio-patient-care-source";
 
 export type OhioChapter2903SupportRole = "offense" | "penalty";
 
@@ -31,6 +32,8 @@ export interface OhioChapter2903OfficialDocument {
 export interface OhioChapter2903PilotSourceRecord {
   chargeId: string;
   canonicalTitle: string;
+  /** Explicit source-first names stated in an operative guilt clause, not inferred aliases. */
+  nameBasis?: "operative_clause";
   offense: OhioChapter2903OfficialDocument;
   penalty: OhioChapter2903OfficialDocument;
   penaltyFine?: OhioChapter2903OfficialDocument;
@@ -220,6 +223,7 @@ export const OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS: readonly OhioChapter2903Pil
   OHIO_FELONIOUS_ASSAULT_SOURCE,
   ...OHIO_CHAPTER_BATCH_SOURCES,
   ...OHIO_HAZING_AND_PROTECTION_SOURCES,
+  ...OHIO_PATIENT_CARE_SOURCES,
 ];
 
 export function ohioChapter2903Evidence(source: OhioChapter2903PilotSourceRecord): {

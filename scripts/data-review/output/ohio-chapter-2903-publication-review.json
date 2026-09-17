@@ -7,8 +7,8 @@
     "offenseCandidates": 24,
     "supportingProvisions": 14,
     "structuralInterpretationSections": 2,
-    "sourceFirstConfiguredRecords": 15,
-    "withheldOffenseBearingSections": 11,
+    "sourceFirstConfiguredRecords": 19,
+    "withheldOffenseBearingSections": 9,
     "explicitlyGroupedNamedUnits": 8,
     "namingTranscriptionReviewRequests": 0
   },
@@ -1427,8 +1427,12 @@
       "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745",
       "effectiveDate": "1996-07-01",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-34-a1-patient-abuse",
+        "oh-orc-2903-34-a2-gross-patient-neglect",
+        "oh-orc-2903-34-a3-patient-neglect"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [
         {
           "name": "Patient abuse",
@@ -1483,9 +1487,7 @@
       ],
       "crossReferences": [],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence.",
-        "Explicit statutory names and conduct groupings extracted; do not create one offense per subparagraph or mistake grades for new names."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {
@@ -1495,8 +1497,10 @@
       "sourceHash": "f91e65890dfca634a6dcd57bb360cbe725723ce1ef95a13692dfd82b32350ddf",
       "effectiveDate": "1986-09-17",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-35-filing-false-patient-abuse-or-neglect-complaints"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -1514,8 +1518,7 @@
         }
       ],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {

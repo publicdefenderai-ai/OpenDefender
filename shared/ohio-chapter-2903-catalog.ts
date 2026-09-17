@@ -17,6 +17,7 @@ import { OHIO_AGGRAVATED_ASSAULT_CHARGE } from "./ohio-aggravated-assault";
 import { OHIO_FELONIOUS_ASSAULT_CHARGE } from "./ohio-felonious-assault";
 import { OHIO_CHAPTER_BATCH_CHARGES } from "./ohio-chapter-batch";
 import { OHIO_HAZING_AND_PROTECTION_CHARGES } from "./ohio-hazing-and-protection";
+import { OHIO_PATIENT_CARE_BATCH } from "./ohio-patient-care";
 
 export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   {
@@ -95,6 +96,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   OHIO_FELONIOUS_ASSAULT_CHARGE,
   ...OHIO_CHAPTER_BATCH_CHARGES,
   ...OHIO_HAZING_AND_PROTECTION_CHARGES,
+  ...OHIO_PATIENT_CARE_BATCH.charges,
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([

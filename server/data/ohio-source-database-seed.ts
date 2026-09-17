@@ -319,11 +319,23 @@ function provisionFromOhioChapter2903Document(
   };
 }
 
+/** Only an explicit, pinned guilt clause tied to the exact conduct subdivision can
+ * establish a name different from the section heading. No legacy alias approval. */
+export function hasOhioOperativeNameEvidence(source: OhioChapter2903PilotSourceRecord): boolean {
+  if (source.nameBasis !== "operative_clause" || !source.offense.subdivision ||
+      validateOhioChapter2903Document(source.offense) !== null) return false;
+  const declaration = `Whoever violates division ${source.offense.subdivision} of this section is guilty of ${source.canonicalTitle.toLowerCase()},`;
+  return source.offense.quotedSpans.some(span =>
+    span.kind === "grading" &&
+    /^\([A-Z]\) Whoever violates division /.test(span.quote) &&
+    span.quote.slice(span.quote.indexOf("Whoever")).startsWith(declaration));
+}
+
 function ohioChapter2903Mapping(
   charge: CriminalCharge,
   source: OhioChapter2903PilotSourceRecord,
 ) {
-  return classifyAuthorityMapping({
+  const mapping = classifyAuthorityMapping({
     catalogLabel: charge.name,
     catalogCode: charge.code,
     references: [{ section: source.offense.section, subdivision: source.offense.subdivision }],
@@ -343,6 +355,12 @@ function ohioChapter2903Mapping(
     codeIdentityMatches: charge.code === source.offense.section,
     approvedAlias: false,
   });
+  if (charge.code === source.offense.section && charge.name === source.canonicalTitle &&
+      hasOhioOperativeNameEvidence(source)) {
+    return { ...mapping, classification: "exact_match" as const,
+      rationale: "The exact statutory offense name and conduct subdivision are stated together in the separately pinned operative guilt clause; the original section heading is preserved." };
+  }
+  return mapping;
 }
 
 /**
@@ -362,7 +380,7 @@ export function buildOhioChapter2903PilotManifestRecords(
     if (
       mapping.classification !== "exact_match" ||
       source.canonicalTitle !== charge.name ||
-      source.offense.title !== charge.name
+      (source.offense.title !== charge.name && !hasOhioOperativeNameEvidence(source))
     ) {
       throw new Error(`Ohio Chapter 2903 source-first mapping is not exact: ${source.chargeId}`);
     }
@@ -373,7 +391,7 @@ export function buildOhioChapter2903PilotManifestRecords(
       catalogCategory: charge.category,
       disposition: "retain",
       dispositionReason:
-        "New source-first canonical record: exact official title, offense text, currentness marker, and separate penalty dependency are pinned to the official Ohio Laws extraction.",
+        "New source-first canonical record: exact official heading or explicitly named operative offense, offense text, currentness marker, and separate penalty dependency are pinned to the official Ohio Laws extraction.",
       canonicalTitle: source.canonicalTitle,
       provisions: ohioChapter2903Evidence(source).map(({ document, supportRole }) =>
         provisionFromOhioChapter2903Document(charge, document, supportRole, importedAt)),
@@ -485,7 +503,8 @@ function validateOhioChapter2903PilotManifestRecord(
     record.apiStatus !== "verified" ||
     record.canonicalTitle !== source.canonicalTitle ||
     record.provisions.length !== ohioChapter2903Evidence(source).length ||
-    record.mapping?.classification !== "exact_match"
+    record.mapping?.classification !== "exact_match" ||
+    JSON.stringify(record.mapping) !== JSON.stringify(ohioChapter2903Mapping(charge, source))
   ) return "Source-first Ohio Chapter 2903 catalog identity is incomplete or changed";
 
   const expected = ohioChapter2903Evidence(source);
