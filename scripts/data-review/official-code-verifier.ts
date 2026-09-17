@@ -292,6 +292,34 @@ export function parseCitationSections(citation: string): string[] {
     .filter((section): section is string => Boolean(section));
 }
 
+function citationHasMalformedCompound(citation: string, sections: string[]): boolean {
+  if (!citation.match(/§§/)) return false;
+  const marker = citation.match(/§§\s*([^;]+)/)?.[1] ?? "";
+  if (!marker.trim()) return true;
+
+  const sectionPartPattern = /^\d[\dA-Za-z]*(?:[.:-][\dA-Za-z]+)*$/;
+  const qualifierPattern = /^(?:subd(?:ivision)?\.?|subsection|subsec(?:tion)?|para(?:graph)?\.?)\s*[\w().-]+$/i;
+  const parts = marker.split(",").map((part) => part.trim()).filter(Boolean);
+  let sectionCount = 0;
+  let sawSupportedQualifier = false;
+  for (const part of parts) {
+    if (sectionPartPattern.test(part)) {
+      sectionCount += 1;
+      continue;
+    }
+    if (qualifierPattern.test(part)) {
+      if (sectionCount === 0) return true;
+      sawSupportedQualifier = true;
+      continue;
+    }
+    return true;
+  }
+
+  // §§ is plural. A single section is only accepted when the citation uses
+  // the explicitly supported subdivision/paragraph qualifier grammar above.
+  return sectionCount < 2 && !sawSupportedQualifier || sectionCount !== sections.length;
+}
+
 function officialSourceUrl(state: OfficialCodeState, section: string): string {
   if (state === "MN") return `https://www.revisor.mn.gov/statutes/cite/${section}`;
   if (state === "VA") return `https://law.lis.virginia.gov/vacode/${section}/`;
@@ -337,7 +365,10 @@ export function buildOfficialComparisonReport(
   entries: OfficialCatalogEntry[],
   documents: Map<string, OfficialCodeDocument>,
   generatedAt = new Date(),
-  options: { cacheStatus?: Record<string, OfficialCacheDecision> } = {},
+  options: {
+    cacheStatus?: Record<string, OfficialCacheDecision>;
+    sourceErrors?: Record<string, string>;
+  } = {},
 ): OfficialComparisonReport {
   const bySection = new Map<string, OfficialCatalogEntry[]>();
   for (const entry of entries) {
@@ -360,6 +391,7 @@ export function buildOfficialComparisonReport(
     const overlap = [...titleWords].filter((word) => officialWords.has(word)).length;
     const overlapRatio = titleWords.size ? overlap / titleWords.size : 0;
     const instructionEvidence = document?.instructionEvidence ?? instructionFor(entry, state) ?? null;
+    const malformedCompound = citationHasMalformedCompound(entry.citation, sections);
 
     if (!section) {
       return {
@@ -370,12 +402,30 @@ export function buildOfficialComparisonReport(
         sourceHash: null, sourceUrl: null, officialTitle: null, currentness: null, instructionEvidence,
       };
     }
+    if (malformedCompound) {
+      return {
+        chargeId: entry.id, citation: entry.citation, section, catalogTitle: title,
+        sections,
+        mappingClass: "unresolved", score: 0, reasonCode: "citation_compound_malformed",
+        reason: "The catalog citation contains a malformed compound section reference.",
+        sourceHash: document?.sourceHash ?? null,
+        sourceUrl: document?.sourceUrl ?? officialSourceUrl(state, section),
+        officialTitle: document?.title || null,
+        currentness: document?.currentness ?? null,
+        instructionEvidence,
+      };
+    }
     if (!document) {
       return {
         chargeId: entry.id, citation: entry.citation, section, catalogTitle: title,
         sections,
-        mappingClass: "unresolved", score: 0, reasonCode: "official_section_not_found",
-        reason: `No ${state} official source document was available for section ${section}.`,
+        mappingClass: "unresolved", score: 0,
+        reasonCode: options.sourceErrors?.[section]
+          ? "official_source_transport_failed"
+          : "official_section_not_found",
+        reason: options.sourceErrors?.[section]
+          ? `The ${state} official source could not be retrieved for section ${section}: ${options.sourceErrors[section]}`
+          : `No ${state} official source document was available for section ${section}.`,
         sourceHash: null, sourceUrl: officialSourceUrl(state, section),
         officialTitle: null, currentness: null, instructionEvidence,
       };

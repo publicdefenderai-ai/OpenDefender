@@ -1,0 +1,58 @@
+{
+  "missingHeading": {
+    "MN": {
+      "section": "609.185",
+      "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.185",
+      "html": "<html><body><p>2026 Minnesota Statutes</p><p>A person who causes the death of another is guilty of a crime.</p></body></html>"
+    },
+    "VA": {
+      "section": "18.2-32",
+      "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-32/",
+      "html": "<html><body><div id=\"printHeader\">Code of Virginia</div><div id=\"printDate\">9/15/2026</div><p>Murder by poison is murder of the first degree.</p></body></html>"
+    },
+    "MI": {
+      "section": "750.321",
+      "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-321",
+      "html": "<html><body><p>Michigan Compiled Laws, current through 2026 Michigan Public Acts</p><p>Any person who commits manslaughter is guilty of a felony.</p></body></html>"
+    }
+  },
+  "missingCurrentness": {
+    "MN": {
+      "section": "609.185",
+      "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.185",
+      "html": "<html><body><h1>609.185 MURDER IN THE FIRST DEGREE.</h1><p>A person who causes the death of another is guilty of murder.</p></body></html>"
+    },
+    "VA": {
+      "section": "18.2-32",
+      "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-32/",
+      "html": "<html><body><div id=\"printHeader\">Code of Virginia</div><h2>§ 18.2-32. First and second degree murder defined; punishment.</h2><p>Murder by poison is murder of the first degree.</p></body></html>"
+    },
+    "MI": {
+      "section": "750.321",
+      "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-321",
+      "html": "<html><body><h1>750.321 Manslaughter.</h1><p>Any person who commits manslaughter is guilty of a felony.</p></body></html>"
+    }
+  },
+  "malformedCompound": {
+    "MN": {
+      "section": "609.185",
+      "sourceUrl": "https://www.revisor.mn.gov/statutes/cite/609.185",
+      "html": "<html><body><p>2026 Minnesota Statutes</p><h1>609.185 MURDER IN THE FIRST DEGREE.</h1><p>A person who causes the death of another is guilty of murder.</p></body></html>"
+    },
+    "VA": {
+      "section": "18.2-32",
+      "sourceUrl": "https://law.lis.virginia.gov/vacode/18.2-32/",
+      "html": "<html><body><div id=\"printHeader\">Code of Virginia</div><div id=\"printDate\">9/15/2026</div><h2>§ 18.2-32. First and second degree murder defined; punishment.</h2><p>Murder by poison is murder of the first degree.</p></body></html>"
+    },
+    "MI": {
+      "section": "750.321",
+      "sourceUrl": "https://www.legislature.mi.gov/Laws/MCL?objectName=mcl-750-321",
+      "html": "<html><body><p>Michigan Compiled Laws, current through 2026 Michigan Public Acts</p><h1>750.321 Manslaughter.</h1><p>Any person who commits manslaughter is guilty of a felony.</p></body></html>"
+    }
+  },
+  "transportFailure": {
+    "MN": { "section": "609.185" },
+    "VA": { "section": "18.2-32" },
+    "MI": { "section": "750.321" }
+  }
+}

@@ -1,4 +1,4 @@
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
@@ -53,6 +53,113 @@ describe("source importer parser fixtures", () => {
     });
     expect(result.documents.size).toBe(0);
     expect(result.errors["750.321"]).toContain("UNABLE_TO_VERIFY_LEAF_SIGNATURE");
+  });
+
+  it("fails closed when any adapter loses its official heading or currentness marker", () => {
+    const cases = JSON.parse(readFileSync(
+      "tests/fixtures/official-code/layout-change-cases.json",
+      "utf8",
+    )) as Record<"missingHeading" | "missingCurrentness", Record<"MN" | "VA" | "MI", {
+      section: string;
+      sourceUrl: string;
+      html: string;
+    }>>;
+    const parsers = {
+      MN: parseMinnesotaOfficialDocument,
+      VA: parseVirginiaOfficialDocument,
+      MI: parseMichiganOfficialDocument,
+    } as const;
+
+    for (const state of ["MN", "VA", "MI"] as const) {
+      for (const testCase of ["missingHeading", "missingCurrentness"] as const) {
+        const source = cases[testCase][state];
+        const document = parsers[state](source.html, source.section, source.sourceUrl);
+        const report = buildOfficialComparisonReport(state, [{
+          id: `${state.toLowerCase()}-${testCase}`,
+          citation: `§ ${source.section}`,
+          name: "Expected official title",
+        }], new Map([[source.section, document]]));
+        const mapping = report.mappings[0];
+
+        expect(mapping.mappingClass).toBe("unresolved");
+        expect(mapping.reasonCode).toBe(testCase === "missingHeading"
+          ? "official_title_or_content_missing"
+          : "currentness_evidence_missing");
+        expect(isOfficialPromotionEligible(mapping)).toBe(false);
+      }
+    }
+  });
+
+  it("marks malformed compound citations unresolved for every adapter", () => {
+    const cases = JSON.parse(readFileSync(
+      "tests/fixtures/official-code/layout-change-cases.json",
+      "utf8",
+    )) as { malformedCompound: Record<"MN" | "VA" | "MI", {
+      section: string;
+      sourceUrl: string;
+      html: string;
+    }> };
+    const parsers = {
+      MN: parseMinnesotaOfficialDocument,
+      VA: parseVirginiaOfficialDocument,
+      MI: parseMichiganOfficialDocument,
+    } as const;
+
+    for (const state of ["MN", "VA", "MI"] as const) {
+      const source = cases.malformedCompound[state];
+      const document = parsers[state](source.html, source.section, source.sourceUrl);
+      const malformedCitations = [
+        `§§ ${source.section}`,
+        `§§ ${source.section}, and`,
+        `§§ ${source.section} garbage`,
+        `§§ ${source.section} and ${source.section}-broken`,
+      ];
+
+      for (const [index, citation] of malformedCitations.entries()) {
+        const report = buildOfficialComparisonReport(state, [{
+          id: `${state.toLowerCase()}-malformed-compound-${index}`,
+          citation,
+          name: "Expected official title",
+        }], new Map([[source.section, document]]));
+
+        expect(report.mappings[0]).toMatchObject({
+          mappingClass: "unresolved",
+          reasonCode: "citation_compound_malformed",
+        });
+        expect(isOfficialPromotionEligible(report.mappings[0])).toBe(false);
+      }
+    }
+  });
+
+  it("keeps transport failures reason-coded and ineligible for promotion for every adapter", async () => {
+    const cases = JSON.parse(readFileSync(
+      "tests/fixtures/official-code/layout-change-cases.json",
+      "utf8",
+    )) as { transportFailure: Record<"MN" | "VA" | "MI", { section: string }> };
+
+    for (const state of ["MN", "VA", "MI"] as const) {
+      const section = cases.transportFailure[state].section;
+      const result = await fetchOfficialDocuments(state, [section], {
+        fetchImpl: async () => {
+          throw new Error(`${state} transport unavailable`);
+        },
+      });
+      const report = buildOfficialComparisonReport(state, [{
+        id: `${state.toLowerCase()}-transport-failure`,
+        citation: `§ ${section}`,
+        name: "Expected official title",
+      }], result.documents, new Date(), { sourceErrors: result.errors });
+
+      expect(report.mappings[0]).toMatchObject({
+        mappingClass: "unresolved",
+        reasonCode: "official_source_transport_failed",
+      });
+      expect(report.unresolved[0]).toMatchObject({
+        chargeId: `${state.toLowerCase()}-transport-failure`,
+        reasonCode: "official_source_transport_failed",
+      });
+      expect(isOfficialPromotionEligible(report.mappings[0])).toBe(false);
+    }
   });
 
   it("detects stale cached documents and replaces them instead of replaying them", async () => {

@@ -1244,7 +1244,7 @@ async function runStateCommission(state: string): Promise<void> {
           officialEntries,
           fetched.documents,
           new Date(),
-          { cacheStatus: fetched.cacheStatus },
+          { cacheStatus: fetched.cacheStatus, sourceErrors: fetched.errors },
         );
         for (const [section, decision] of Object.entries(fetched.cacheStatus)) {
           if (decision.previousStatus === 'stale' || decision.previousStatus === 'invalid') {
