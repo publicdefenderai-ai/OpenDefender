@@ -2,6 +2,8 @@
 
 September 17, 2026, UTC; development only. This follows the felonious-assault batch and the withheld simple-assault review.
 
+For subsequent totals, see `ohio-hazing-and-protection-batch.md`. The counts here describe this earlier batch.
+
 ## Added records
 
 | Official section | Official title | Conditional grading |

@@ -4,6 +4,7 @@ import { OHIO_MANSLAUGHTER_SOURCE_RECORDS } from "./ohio-manslaughter-source";
 import { OHIO_AGGRAVATED_ASSAULT_SOURCE } from "./ohio-assault-source";
 import { OHIO_FELONIOUS_ASSAULT_SOURCE } from "./ohio-felonious-assault-source";
 import { OHIO_CHAPTER_BATCH_SOURCES } from "./ohio-chapter-batch-source";
+import { OHIO_HAZING_AND_PROTECTION_SOURCES } from "./ohio-hazing-and-protection-source";
 
 export type OhioChapter2903SupportRole = "offense" | "penalty";
 
@@ -218,6 +219,7 @@ export const OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS: readonly OhioChapter2903Pil
   OHIO_AGGRAVATED_ASSAULT_SOURCE,
   OHIO_FELONIOUS_ASSAULT_SOURCE,
   ...OHIO_CHAPTER_BATCH_SOURCES,
+  ...OHIO_HAZING_AND_PROTECTION_SOURCES,
 ];
 
 export function ohioChapter2903Evidence(source: OhioChapter2903PilotSourceRecord): {

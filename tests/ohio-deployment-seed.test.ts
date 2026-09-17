@@ -8,8 +8,8 @@ describe("committed Ohio deployment seed", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest);
 
     expect(manifest.source).toBe("Ohio Laws: codes.ohio.gov");
-    expect(manifest.catalogRecords).toHaveLength(127);
-    expect(seed.selectableChargeIds).toHaveLength(22);
+    expect(manifest.catalogRecords).toHaveLength(130);
+    expect(seed.selectableChargeIds).toHaveLength(25);
     expect(seed.sources.every((source) =>
       source.canonicalUrl.startsWith("https://codes.ohio.gov/ohio-revised-code/section-"),
     )).toBe(true);

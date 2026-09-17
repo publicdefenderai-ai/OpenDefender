@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-17T06:57:28.598Z",
-  "expiresAt": "2026-09-24T06:57:28.598Z",
+  "checkedAt": "2026-09-17T14:41:06.615Z",
+  "expiresAt": "2026-09-24T14:41:06.615Z",
   "documents": [
     {
       "section": "109.54",
@@ -130,6 +130,27 @@
       "effectiveDateStart": "2014-09-17"
     },
     {
+      "section": "2903.31",
+      "title": "Hazing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.31",
+      "contentHash": "20ac804b640373e1990b6bb7960dd01b5caf2c08abb1d5ee8445a93839366702",
+      "effectiveDateStart": "2021-10-07"
+    },
+    {
+      "section": "2903.311",
+      "title": "Reckless failure to immediately report knowledge of hazing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.311",
+      "contentHash": "12b5d44f561440ab687b8ff0be27676177e0efa342dca202161f48f5b764044b",
+      "effectiveDateStart": "2021-10-07"
+    },
+    {
+      "section": "2903.32",
+      "title": "Female genital mutilation",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.32",
+      "contentHash": "1f081bc0d78bdc4fd2723ba467a4a9fa4c640ab5a5f6386de05e7491bf13f6c6",
+      "effectiveDateStart": "2019-04-05"
+    },
+    {
       "section": "2907.01",
       "title": "Sex offenses general definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.01",
@@ -149,6 +170,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.11",
       "contentHash": "aa1de5ed1cafc9d5bd97493367b5890e851e466f7dad5c2d92767b98d33cb44a",
       "effectiveDateStart": "2019-03-28"
+    },
+    {
+      "section": "2925.01",
+      "title": "Drug offense definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.01",
+      "contentHash": "94de4c8c92ad62726293fb59e34c003194d17fe3d260c27c61bbaed09761dc4e",
+      "effectiveDateStart": "2026-03-20"
     },
     {
       "section": "2929.01",
@@ -277,6 +305,20 @@
       "effectiveDateStart": "2023-03-23"
     },
     {
+      "section": "3719.01",
+      "title": "Controlled substances definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3719.01",
+      "contentHash": "56f01de8568bb3376a9ca471f399f319e5cb2a86746ec6f2ba842e73a745b0ce",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3719.011",
+      "title": "Controlled substances definitions for use in Revised Code",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3719.011",
+      "contentHash": "9e79fe1560a6114c3a9b5a4208bfdbc495f61e967a2e85b995e31ddbd2b3cd01",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
       "section": "4501.01",
       "title": "Motor vehicles definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4501.01",
@@ -296,6 +338,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.19",
       "contentHash": "144bfefd79506d5e81b83dec2dc823c2e1485afb17e3feaa597a30266c8d7572",
       "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "4729.01",
+      "title": "Pharmacists, dangerous drugs definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4729.01",
+      "contentHash": "a312e6c912b331423e392f28b6cf2d413cba35b493ed8e12cda804db34346b2b",
+      "effectiveDateStart": "2026-06-09"
     },
     {
       "section": "5153.01",

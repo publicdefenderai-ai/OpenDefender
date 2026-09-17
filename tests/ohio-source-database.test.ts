@@ -58,13 +58,13 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(127);
+    expect(ohioCount).toBe(130);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(75);
-    expect(seed.snapshots).toHaveLength(138);
-    expect(seed.links).toHaveLength(138);
-    expect(seed.selectableChargeIds).toHaveLength(22);
+    expect(seed.sources).toHaveLength(90);
+    expect(seed.snapshots).toHaveLength(167);
+    expect(seed.links).toHaveLength(167);
+    expect(seed.selectableChargeIds).toHaveLength(25);
     expect(seed.selectableChargeIds).toContain("oh-orc-2903-12-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("oh-aggravated-assault");
     expect(seed.selectableChargeIds).toContain("oh-criminal-trespass");
@@ -91,6 +91,9 @@ describe("Ohio authority manifest", () => {
       "oh-orc-2903-21-aggravated-menacing",
       "oh-orc-2903-15-permitting-child-abuse",
       "oh-orc-2903-18-strangulation",
+      "oh-orc-2903-31-hazing",
+      "oh-orc-2903-311-reckless-failure-to-immediately-report-knowledge-of-hazing",
+      "oh-orc-2903-32-female-genital-mutilation",
     ]);
     expect(getChargeById(sourceFirstIds[0])?.name).toBe("Aggravated murder");
     expect(getChargeById(sourceFirstIds[1])?.name).toBe("Murder");

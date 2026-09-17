@@ -7,13 +7,24 @@ import { writeFileSync } from "node:fs";
 import { extractOhioDocument } from "./import-ohio-source-database";
 
 async function main() {
+  // Reusable named batches keep later chapter expansion out of this flag list.
+  const sectionArg = process.argv.find(arg => arg.startsWith("--sections="))?.slice("--sections=".length);
+  const batchName = process.argv.find(arg => arg.startsWith("--batch-name="))?.slice("--batch-name=".length);
+  const customSections = sectionArg?.split(",");
+  if (sectionArg !== undefined || batchName !== undefined) {
+    if (!batchName || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(batchName) ||
+        !customSections?.length || customSections.some(section => !/^\d{4}\.\d{2,3}$/.test(section)) ||
+        new Set(customSections).size !== customSections.length) {
+      throw new Error("Named acquisition requires --batch-name=<slug> and --sections=<unique comma-separated section IDs>");
+    }
+  }
   const manslaughter = process.argv.includes("--manslaughter");
   const assault = process.argv.includes("--assault");
   const assaultDefinitions = process.argv.includes("--assault-definitions");
   const feloniousDefinitions = process.argv.includes("--felonious-assault-definitions");
   const simpleAssault = process.argv.includes("--simple-assault");
   const chapterBatch = process.argv.includes("--chapter-batch");
-  const sections = chapterBatch ? [
+  const sections = customSections ?? (chapterBatch ? [
     "2903.15", "2903.18", "2903.21", "2919.25", "3113.31",
     "2901.21", "5153.01", "5153.02", "5103.02",
   ] : simpleAssault ? [
@@ -30,7 +41,7 @@ async function main() {
     "2903.03", "2903.041", "2903.05", "2903.14",
     "2901.22", "2903.09", "2923.11",
     "2929.14", "2929.144", "2929.18", "2929.24", "2929.28",
-  ];
+  ]);
   const documents = [];
   const failures: Array<{ section: string; sourceUrl: string; error: string }> = [];
   for (const section of sections) {
@@ -63,7 +74,7 @@ async function main() {
     }
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
-  writeFileSync(chapterBatch
+  writeFileSync(batchName ? `scripts/data-review/output/ohio-${batchName}-evidence.json` : chapterBatch
     ? "scripts/data-review/output/ohio-chapter-batch-evidence.json"
     : simpleAssault
     ? "scripts/data-review/output/ohio-simple-assault-evidence.json"

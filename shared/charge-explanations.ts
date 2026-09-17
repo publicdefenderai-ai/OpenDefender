@@ -6,6 +6,7 @@ import { OHIO_MANSLAUGHTER_EXPLANATIONS } from "./ohio-manslaughter-explanations
 import { OHIO_AGGRAVATED_ASSAULT_EXPLANATION } from "./ohio-aggravated-assault";
 import { OHIO_FELONIOUS_ASSAULT_EXPLANATION } from "./ohio-felonious-assault";
 import { OHIO_CHAPTER_BATCH_EXPLANATIONS } from "./ohio-chapter-batch";
+import { OHIO_HAZING_AND_PROTECTION_EXPLANATIONS } from "./ohio-hazing-and-protection";
 
 export interface LegalTermExplanation {
   term: string;
@@ -52,6 +53,7 @@ export interface ChargeExplanation {
 
 export const chargeExplanations: ChargeExplanation[] = [
   ...OHIO_CHAPTER_BATCH_EXPLANATIONS,
+  ...OHIO_HAZING_AND_PROTECTION_EXPLANATIONS,
   OHIO_FELONIOUS_ASSAULT_EXPLANATION,
   OHIO_AGGRAVATED_ASSAULT_EXPLANATION,
   ...OHIO_MANSLAUGHTER_EXPLANATIONS,

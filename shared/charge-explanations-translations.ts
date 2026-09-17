@@ -14,6 +14,7 @@
  */
 
 import { OHIO_CHAPTER_BATCH_TRANSLATIONS } from "./ohio-chapter-batch-translations";
+import { OHIO_HAZING_AND_PROTECTION_TRANSLATIONS } from "./ohio-hazing-and-protection-translations";
 
 export interface ChargeExplanationLocale {
   plainSummary: string;
@@ -31,6 +32,7 @@ export interface ChargeTranslationEntry {
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
   ...OHIO_CHAPTER_BATCH_TRANSLATIONS,
+  ...OHIO_HAZING_AND_PROTECTION_TRANSLATIONS,
   "ohio-felonious-assault": {
     es: {
       draft: true, keyTerms: [],
