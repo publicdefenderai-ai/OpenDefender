@@ -16,6 +16,7 @@
  *   --state nc                 Fetch NC General Statutes per-section (ncleg.gov).
  *   --state wa                 Fetch WA Revised Code chapter pages (app.leg.wa.gov).
  *   --state va                 Fetch VA Code per-section (law.lis.virginia.gov).
+ *   --state mi                 Fetch Michigan Compiled Laws per-section (legislature.mi.gov).
  *   --state federal            Verify federal citations via GovInfo USCODE structured endpoint.
  *                              Requires GOVINFO_API_KEY in .env.
  *                              Promote verified entries: confidence → "high", sourceUrl set.
@@ -1242,7 +1243,14 @@ async function runStateCommission(state: string): Promise<void> {
           officialState,
           officialEntries,
           fetched.documents,
+          new Date(),
+          { cacheStatus: fetched.cacheStatus },
         );
+        for (const [section, decision] of Object.entries(fetched.cacheStatus)) {
+          if (decision.previousStatus === 'stale' || decision.previousStatus === 'invalid') {
+            console.log(`  Cache ${decision.previousStatus} for ${officialState} § ${section}; fetched a replacement.`);
+          }
+        }
         commissionMap = new Map([...fetched.documents.entries()].map(([section, document]) => [
           section,
           {
@@ -1286,7 +1294,7 @@ async function runStateCommission(state: string): Promise<void> {
         break;
       default:
         console.error(`Commission scraping not yet implemented for: ${state.toUpperCase()}`);
-        console.error('Available: fl, pa, mn, nc, wa, va, federal');
+    console.error('Available: fl, pa, mn, mi, nc, wa, va, federal');
         console.error('For other states, use: --generate-urls --states ' + state);
         process.exit(1);
     }

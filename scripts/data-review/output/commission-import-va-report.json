@@ -1,6 +1,6 @@
 {
   "state": "VA",
-  "runAt": "2026-09-15T15:36:35.610Z",
+  "runAt": "2026-09-17T03:14:26.870Z",
   "commissionSource": "Virginia Legislative Information System",
   "commissionTableUrl": "https://law.lis.virginia.gov/vacode/title18.2/",
   "promoted": [],
@@ -141,7 +141,7 @@
   "officialComparison": {
     "schemaVersion": 1,
     "state": "VA",
-    "generatedAt": "2026-09-15T15:36:35.600Z",
+    "generatedAt": "2026-09-17T03:14:26.861Z",
     "officialSource": {
       "publisher": "Virginia Legislative Information System",
       "adapter": "Virginia Code per-section adapter",
@@ -173,6 +173,16 @@
         }
       }
     ],
+    "cacheStatus": {
+      "18.2-32": {
+        "status": "fixture",
+        "retrievedAt": "2026-09-15T00:00:00.000Z"
+      },
+      "18.2-119": {
+        "status": "fixture",
+        "retrievedAt": "2026-09-15T00:00:00.000Z"
+      }
+    },
     "mappings": [
       {
         "chargeId": "va-murder-in-the-first-degree",

@@ -37,6 +37,7 @@
     "review:ohio-pilot-refresh": "tsx scripts/data-review/refresh-ohio-chapter-2903-pilot.ts",
     "db:seed:north-carolina": "tsx scripts/data-review/seed-north-carolina-source-database.ts",
     "review:north-carolina-source": "tsx scripts/data-review/import-north-carolina-source-database.ts --check",
+    "review:official-code-refresh": "tsx scripts/data-review/refresh-official-code-snapshots.ts",
     "review:detention": "tsx scripts/data-review/check-detention-facilities.ts",
     "review:consulates": "tsx scripts/data-review/check-consulates.ts",
     "review:legal-aid": "tsx scripts/data-review/check-legal-aid.ts",

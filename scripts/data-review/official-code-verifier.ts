@@ -36,12 +36,30 @@ export interface OfficialCodeDocument {
 
 export interface OfficialCodeFixture {
   state: OfficialCodeState;
+  retrievedAt?: string;
   sources: Array<{
     section: string;
     sourceUrl: string;
     html: string;
     sourceHash?: string;
+    retrievedAt?: string;
   }>;
+}
+
+export interface OfficialSourceSnapshot {
+  section: string;
+  sourceUrl: string;
+  html: string;
+  retrievedAt: string;
+}
+
+export type OfficialCacheStatus = "fresh" | "stale" | "invalid" | "missing" | "refreshed" | "fixture";
+
+export interface OfficialCacheDecision {
+  status: OfficialCacheStatus;
+  retrievedAt: string | null;
+  ageMs?: number;
+  previousStatus?: "stale" | "invalid";
 }
 
 export interface OfficialCatalogEntry {
@@ -82,6 +100,7 @@ export interface OfficialComparisonReport {
     OfficialCodeDocument,
     "section" | "sourceUrl" | "sourceHash" | "retrievedAt" | "sourceTransport" | "currentness"
   >>;
+  cacheStatus?: Record<string, OfficialCacheDecision>;
   mappings: OfficialComparisonMapping[];
   unresolved: Array<{
     chargeId: string;
@@ -318,6 +337,7 @@ export function buildOfficialComparisonReport(
   entries: OfficialCatalogEntry[],
   documents: Map<string, OfficialCodeDocument>,
   generatedAt = new Date(),
+  options: { cacheStatus?: Record<string, OfficialCacheDecision> } = {},
 ): OfficialComparisonReport {
   const bySection = new Map<string, OfficialCatalogEntry[]>();
   for (const entry of entries) {
@@ -441,6 +461,7 @@ export function buildOfficialComparisonReport(
       sourceTransport: document.sourceTransport,
       currentness: document.currentness,
     })).sort((a, b) => a.section.localeCompare(b.section)),
+    ...(options.cacheStatus ? { cacheStatus: options.cacheStatus } : {}),
     mappings,
     unresolved,
     summary: {
@@ -467,7 +488,7 @@ export function loadOfficialFixture(state: OfficialCodeState, fixtureDir: string
       source.section,
       source.sourceUrl,
       "fixture",
-      new Date("2026-09-15T00:00:00.000Z"),
+      new Date(source.retrievedAt ?? fixture.retrievedAt ?? "2026-09-15T00:00:00.000Z"),
       undefined,
     );
     if (source.sourceHash && source.sourceHash !== document.sourceHash) {
@@ -486,13 +507,43 @@ export async function fetchOfficialDocuments(
     fixtureDir?: string;
     fetchImpl?: typeof fetch;
     cacheMaxAgeMs?: number;
+    refresh?: boolean;
   } = {},
-): Promise<{ documents: Map<string, OfficialCodeDocument>; errors: Record<string, string> }> {
+): Promise<{
+  documents: Map<string, OfficialCodeDocument>;
+  errors: Record<string, string>;
+  cacheStatus: Record<string, OfficialCacheDecision>;
+  snapshots: Map<string, OfficialSourceSnapshot>;
+}> {
   if (options.fixtureDir) {
-    return { documents: loadOfficialFixture(state, options.fixtureDir), errors: {} };
+    const fixturePath = path.join(options.fixtureDir, `${state.toLowerCase()}-official-code.json`);
+    const fixture = JSON.parse(fs.readFileSync(fixturePath, "utf8")) as OfficialCodeFixture;
+    const documents = loadOfficialFixture(state, options.fixtureDir);
+    const snapshots = new Map(
+      fixture.sources.map((source) => [
+        source.section,
+        {
+          section: source.section,
+          sourceUrl: source.sourceUrl,
+          html: source.html,
+          retrievedAt: source.retrievedAt ?? fixture.retrievedAt ?? "2026-09-15T00:00:00.000Z",
+        },
+      ] as const),
+    );
+    return {
+      documents,
+      errors: {},
+      cacheStatus: Object.fromEntries(fixture.sources.map((source) => [
+        source.section,
+        { status: "fixture", retrievedAt: source.retrievedAt ?? fixture.retrievedAt ?? "2026-09-15T00:00:00.000Z" },
+      ])),
+      snapshots,
+    };
   }
   const documents = new Map<string, OfficialCodeDocument>();
   const errors: Record<string, string> = {};
+  const cacheStatus: Record<string, OfficialCacheDecision> = {};
+  const snapshots = new Map<string, OfficialSourceSnapshot>();
   const fetchImpl = options.fetchImpl ?? fetch;
   const cacheMaxAgeMs = options.cacheMaxAgeMs ?? 7 * 24 * 60 * 60 * 1000;
   for (const section of [...new Set(sections)].sort()) {
@@ -501,18 +552,38 @@ export async function fetchOfficialDocuments(
     try {
       let html: string | null = null;
       let retrievedAt: Date | undefined;
+      let previousStatus: "stale" | "invalid" | undefined;
       if (cachePath && fs.existsSync(cachePath)) {
-        const cached = JSON.parse(fs.readFileSync(cachePath, "utf8")) as {
-          cacheSchemaVersion?: number;
-          html?: string;
-          retrievedAt?: string;
-        };
-        const cacheDate = cached.retrievedAt ? new Date(cached.retrievedAt) : null;
-        if (cached.cacheSchemaVersion === 1 && cached.html && cacheDate && !Number.isNaN(cacheDate.getTime()) &&
-          Date.now() - cacheDate.getTime() <= cacheMaxAgeMs) {
-          html = cached.html;
-          retrievedAt = cacheDate;
+        try {
+          const cached = JSON.parse(fs.readFileSync(cachePath, "utf8")) as {
+            cacheSchemaVersion?: number;
+            html?: string;
+            retrievedAt?: string;
+          };
+          const cacheDate = cached.retrievedAt ? new Date(cached.retrievedAt) : null;
+          const ageMs = cacheDate && !Number.isNaN(cacheDate.getTime())
+            ? Date.now() - cacheDate.getTime()
+            : undefined;
+          const valid = cached.cacheSchemaVersion === 1 && Boolean(cached.html) &&
+            cacheDate !== null && !Number.isNaN(cacheDate.getTime());
+          if (valid && !options.refresh && ageMs !== undefined && ageMs <= cacheMaxAgeMs) {
+            html = cached.html!;
+            retrievedAt = cacheDate!;
+            cacheStatus[section] = { status: "fresh", retrievedAt: cacheDate!.toISOString(), ageMs };
+          } else {
+            previousStatus = valid ? "stale" : "invalid";
+            cacheStatus[section] = {
+              status: previousStatus,
+              retrievedAt: valid ? cacheDate!.toISOString() : null,
+              ...(ageMs === undefined ? {} : { ageMs }),
+            };
+          }
+        } catch {
+          previousStatus = "invalid";
+          cacheStatus[section] = { status: "invalid", retrievedAt: null };
         }
+      } else {
+        cacheStatus[section] = { status: "missing", retrievedAt: null };
       }
       if (!html) {
         const response = await fetchImpl(sourceUrl, {
@@ -533,7 +604,13 @@ export async function fetchOfficialDocuments(
             html,
           }, null, 2));
         }
+        cacheStatus[section] = {
+          status: "refreshed",
+          retrievedAt: retrievedAt.toISOString(),
+          ...(previousStatus ? { previousStatus } : {}),
+        };
       }
+      snapshots.set(section, { section, sourceUrl, html, retrievedAt: retrievedAt!.toISOString() });
       documents.set(section, parseOfficialDocument(
         state,
         html,
@@ -546,5 +623,5 @@ export async function fetchOfficialDocuments(
       errors[section] = error instanceof Error ? error.message : String(error);
     }
   }
-  return { documents, errors };
+  return { documents, errors, cacheStatus, snapshots };
 }

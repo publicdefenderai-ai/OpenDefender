@@ -1,3 +1,5 @@
+import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   parseFloridaCommissionTable,
@@ -51,6 +53,40 @@ describe("source importer parser fixtures", () => {
     });
     expect(result.documents.size).toBe(0);
     expect(result.errors["750.321"]).toContain("UNABLE_TO_VERIFY_LEAF_SIGNATURE");
+  });
+
+  it("detects stale cached documents and replaces them instead of replaying them", async () => {
+    const cacheDir = mkdtempSync(join("/tmp", "official-code-cache-"));
+    const cachePath = join(cacheDir, "mn-609_185.json");
+    writeFileSync(cachePath, JSON.stringify({
+      cacheSchemaVersion: 1,
+      state: "MN",
+      section: "609.185",
+      sourceUrl: "https://www.revisor.mn.gov/statutes/cite/609.185",
+      retrievedAt: "2020-01-01T00:00:00.000Z",
+      html: "<p>2020 Minnesota Statutes</p><h1>609.185 Old title.</h1>",
+    }));
+    let requests = 0;
+    try {
+      const result = await fetchOfficialDocuments("MN", ["609.185"], {
+        cacheDir,
+        fetchImpl: async () => {
+          requests += 1;
+          return new Response("<p>2026 Minnesota Statutes</p><h1>609.185 Current title.</h1>");
+        },
+      });
+      expect(requests).toBe(1);
+      expect(result.cacheStatus["609.185"]).toMatchObject({
+        status: "refreshed",
+        previousStatus: "stale",
+      });
+      expect(result.documents.get("609.185")?.currentness).toMatchObject({
+        status: "verified",
+        editionYear: 2026,
+      });
+    } finally {
+      rmSync(cacheDir, { recursive: true, force: true });
+    }
   });
 
   it("extracts official titles from each state adapter and preserves Michigan's independent instruction source", () => {

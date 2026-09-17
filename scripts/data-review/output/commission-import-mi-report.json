@@ -1,6 +1,6 @@
 {
   "state": "MI",
-  "runAt": "2026-09-15T15:36:37.130Z",
+  "runAt": "2026-09-17T03:14:28.556Z",
   "commissionSource": "Michigan Legislature",
   "commissionTableUrl": "https://www.legislature.mi.gov/Laws/MCL",
   "promoted": [],
@@ -141,7 +141,7 @@
   "officialComparison": {
     "schemaVersion": 1,
     "state": "MI",
-    "generatedAt": "2026-09-15T15:36:37.121Z",
+    "generatedAt": "2026-09-17T03:14:28.546Z",
     "officialSource": {
       "publisher": "Michigan Legislature",
       "adapter": "Michigan Compiled Laws per-section adapter",
@@ -173,6 +173,16 @@
         }
       }
     ],
+    "cacheStatus": {
+      "750.321": {
+        "status": "fixture",
+        "retrievedAt": "2026-09-15T00:00:00.000Z"
+      },
+      "750.552": {
+        "status": "fixture",
+        "retrievedAt": "2026-09-15T00:00:00.000Z"
+      }
+    },
     "mappings": [
       {
         "chargeId": "mi-murder-in-the-first-degree",

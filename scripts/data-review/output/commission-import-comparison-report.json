@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T15:36:37.136Z",
+  "generatedAt": "2026-09-17T03:14:28.562Z",
   "states": [
     {
       "schemaVersion": 1,
       "state": "MN",
-      "generatedAt": "2026-09-15T15:36:34.037Z",
+      "generatedAt": "2026-09-17T03:14:24.971Z",
       "officialSource": {
         "publisher": "Minnesota Revisor of Statutes",
         "adapter": "Minnesota Statutes chapter/section adapter",
@@ -37,6 +37,16 @@
           }
         }
       ],
+      "cacheStatus": {
+        "609.185": {
+          "status": "fixture",
+          "retrievedAt": "2026-09-15T00:00:00.000Z"
+        },
+        "609.52": {
+          "status": "fixture",
+          "retrievedAt": "2026-09-15T00:00:00.000Z"
+        }
+      },
       "mappings": [
         {
           "chargeId": "mn-murder-in-the-first-degree",
@@ -3105,7 +3115,7 @@
     {
       "schemaVersion": 1,
       "state": "VA",
-      "generatedAt": "2026-09-15T15:36:35.600Z",
+      "generatedAt": "2026-09-17T03:14:26.861Z",
       "officialSource": {
         "publisher": "Virginia Legislative Information System",
         "adapter": "Virginia Code per-section adapter",
@@ -3137,6 +3147,16 @@
           }
         }
       ],
+      "cacheStatus": {
+        "18.2-32": {
+          "status": "fixture",
+          "retrievedAt": "2026-09-15T00:00:00.000Z"
+        },
+        "18.2-119": {
+          "status": "fixture",
+          "retrievedAt": "2026-09-15T00:00:00.000Z"
+        }
+      },
       "mappings": [
         {
           "chargeId": "va-murder-in-the-first-degree",
@@ -6139,7 +6159,7 @@
     {
       "schemaVersion": 1,
       "state": "MI",
-      "generatedAt": "2026-09-15T15:36:37.121Z",
+      "generatedAt": "2026-09-17T03:14:28.546Z",
       "officialSource": {
         "publisher": "Michigan Legislature",
         "adapter": "Michigan Compiled Laws per-section adapter",
@@ -6171,6 +6191,16 @@
           }
         }
       ],
+      "cacheStatus": {
+        "750.321": {
+          "status": "fixture",
+          "retrievedAt": "2026-09-15T00:00:00.000Z"
+        },
+        "750.552": {
+          "status": "fixture",
+          "retrievedAt": "2026-09-15T00:00:00.000Z"
+        }
+      },
       "mappings": [
         {
           "chargeId": "mi-murder-in-the-first-degree",
