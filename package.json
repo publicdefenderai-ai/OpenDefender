@@ -35,6 +35,7 @@
     "review:ohio-discovery": "tsx scripts/data-review/discover-ohio-code.ts",
     "review:ohio-chapter-accounting": "tsx scripts/data-review/ohio-discovery/account-chapter-2903.ts",
     "review:ohio-pilot-refresh": "tsx scripts/data-review/refresh-ohio-chapter-2903-pilot.ts",
+    "review:ohio-batch": "tsx scripts/data-review/run-ohio-evidence-batch.ts",
     "db:seed:north-carolina": "tsx scripts/data-review/seed-north-carolina-source-database.ts",
     "review:north-carolina-source": "tsx scripts/data-review/import-north-carolina-source-database.ts --check",
     "review:official-code-refresh": "tsx scripts/data-review/refresh-official-code-snapshots.ts",

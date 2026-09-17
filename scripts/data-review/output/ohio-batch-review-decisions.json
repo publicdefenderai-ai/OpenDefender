@@ -1,0 +1,605 @@
+{
+  "schemaVersion": 1,
+  "decisions": {
+    "1315.55": {
+      "evidenceFingerprint": "61e2af47a1dc8c3d1e2cd3eeee66250e998effcfe985febfa7fb73f35372ea58",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "1533.08": {
+      "evidenceFingerprint": "6304d8302581a4c9baadf6c47acd63740ddb7dd44939efcdd44cb006b4e770ff",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "1533.12": {
+      "evidenceFingerprint": "96e50c3c60821ba5b70e8279a84b1be2cb9bb05abde9b10bdcb47335fbe864a7",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2151.022": {
+      "evidenceFingerprint": "9c276000a5a7a38ff9a29398bf51c7c70d583b3cc98e4544fa5b2380f40ef1a6",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2152.02": {
+      "evidenceFingerprint": "beb1268e0b34265a49c16dee30b5f6432c1f73b3c25b471cfb2a2416b0619317",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2152.12": {
+      "evidenceFingerprint": "4eb33d4952a13fe1863d1a3ee2a83f9926dbf90642d4683295ce30b51b3d1fec",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2705.02": {
+      "evidenceFingerprint": "554952699dd9564d1a0b5e1af91ea816b78838241b42937ef6d3d97e90c356a4",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.01": {
+      "evidenceFingerprint": "978b38c5977171be3bec75846d28e93975aa58c41c5a45d50c4e0f42e6b43489",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.02": {
+      "evidenceFingerprint": "292954e0c295f220b7e559dbdf879cad8fb1fbc84a25edff4a4dadaab37bb640",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.03": {
+      "evidenceFingerprint": "8a49f49742c25bb0761e97e7e417865b483d180cc1c29b58f0497f17faee682d",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.04": {
+      "evidenceFingerprint": "b1a3790bc249744b5376a12f78f25adbfebaa27f60e99880f6179f4f393a6062",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.05": {
+      "evidenceFingerprint": "6f7a9c7295ec42347aecbd8f8123bf5d2f7e2b93480c69d9035c477acf2b588c",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.06": {
+      "evidenceFingerprint": "08544790bca7a99b4ed969e6ddba42cc830544303394619851d075af508c5846",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.08": {
+      "evidenceFingerprint": "af6c0d6d754dded97303fd291158c8b82f436f401542f98359e46c88fd218d0f",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.11": {
+      "evidenceFingerprint": "87f6f87655123710c3ad689a83188cc79b7f15e900019b86508602ab54167dff",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.12": {
+      "evidenceFingerprint": "16d35f69e5c5fd8ad6b3ece8dd7223d15089e59bae4af82bfcba85d69801a8ea",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.13": {
+      "evidenceFingerprint": "7f2569c93b69288836dd37facd42f1d98e48dcee96e0562b7463d0ca9822ad9a",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.16": {
+      "evidenceFingerprint": "6bc80a6744a80723867130a59d3c770aa2f917dbd0dcd42409a28df70ebb5cc8",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.211": {
+      "evidenceFingerprint": "6ddbac30a6fe2dff20813651b9cf37361a024755bacbae770d7681721159b977",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.216": {
+      "evidenceFingerprint": "d8db60c83640a11cc57917f6eea6b0c0c7143d4a8333e4c736c7ece18f97cd09",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.22": {
+      "evidenceFingerprint": "a008663855e790802645ce4b21be33cf8697efbe7d63c6936ee04c87f1b9243d",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.341": {
+      "evidenceFingerprint": "0239f794c60f0a40afdad8b130418a55957e7045e330b5b4328ca9ddccd5b7b7",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2903.43": {
+      "evidenceFingerprint": "478fbd1c065d13e0676f356e428754c071c8a89c3b3dcefc97636294fe8cf309",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.02": {
+      "evidenceFingerprint": "77fa7fdd6b2bc36497287a6272d2194cd7364390fdaf38177a79b723ee7e4d43",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.03": {
+      "evidenceFingerprint": "820b82b1185aff78fe38fcd4c8e00497f4e812b25ca6c8f530462921aa7940c9",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.04": {
+      "evidenceFingerprint": "6d12c9a36e953e723005610cea8979c0a2c23548e7b14912803296c7b44f53db",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.05": {
+      "evidenceFingerprint": "822967470b2ec848f9f1ff732c83b04f6a38535f715e92a42edfc87cc525fdef",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.09": {
+      "evidenceFingerprint": "3aab9bd80becfaf470eb75520ae0201b444bd1cae7d78dfe7cc5939ad036b218",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.24": {
+      "evidenceFingerprint": "267cd809bae6a60d0d49b67748b63c9ff994683540c6feb07bfbec5d70884046",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.25": {
+      "evidenceFingerprint": "097b6ff93f6ccc9a85ae03a5bec389a834c89327827fef57c5091d89a7d4fe41",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2907.321": {
+      "evidenceFingerprint": "70f57c7a6c2eee50352e0b249e7e464c07ee834489b3b5c02b5ee2d92901e6b4",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2909.06": {
+      "evidenceFingerprint": "c20e1c350e6d4c424e047990237a81f4785593c606a9947650ade69ae90ae48e",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2911.01": {
+      "evidenceFingerprint": "93370c8a66183192ce4dafffee04efc1606acfb8be9ca9a856ec723dd6e1b26c",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2911.02": {
+      "evidenceFingerprint": "34ef7c1aff3db864596bfe44b792ded45d903acd4852eb782709623c54437a67",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2911.11": {
+      "evidenceFingerprint": "e1111f94986ac57b77c58ab4fbae1f5934e99ee40b541b7b8b86899aabd92603",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2911.12": {
+      "evidenceFingerprint": "96128a341f08bfd09e340ac1ad480372a28660e1f3e5fe98c320058c2e4db6e7",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2911.13": {
+      "evidenceFingerprint": "2f8a947195cab9ae136fad38efd73588759e418678bb88a38a4cf1d75ed53f24",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2911.21": {
+      "evidenceFingerprint": "2491d492c69c96a2fe1d8bac5c74eabc3af1d51f3ea5a0d880a49960571656bf",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2913.02": {
+      "evidenceFingerprint": "bda876d76b1856dbcffccf70b776f8d320abb68a8bd040318e88cc7229a75fac",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2913.04": {
+      "evidenceFingerprint": "1a143eab4daee40799636f811c285a1ea9b64f44b3a89b70511001bca210740e",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2913.11": {
+      "evidenceFingerprint": "ad114de35537098f76147ef65f29551e48763837ce31ddb33ee4d67dd5a9c966",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2913.21": {
+      "evidenceFingerprint": "f15c5bd215e10d61a2ab9e2c140bf1059d9bbf33a970e112859efb77cd39dac9",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2913.31": {
+      "evidenceFingerprint": "ff9feb2fc24d6337a9ed9d751ce78c582f176cc573bf5049c9d7e2733365bc81",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2913.49": {
+      "evidenceFingerprint": "6b381986403d37abe522652e7b5919a58e274518c8896c1795fbf085fe59f624",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2913.51": {
+      "evidenceFingerprint": "fbf5a8f53c8b09344d5b7ad5b92a65c372429ef38e034f32522562ac70f3d5ca",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2917.11": {
+      "evidenceFingerprint": "5f01b003a9f2bcaafb3c87ac2473d1da2e5542c7a39312175d14c942d34c05fb",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2917.12": {
+      "evidenceFingerprint": "8889050eab95edff57c67515faed8ea859858e5fd695b2f10b6328bafa2b3892",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2917.14": {
+      "evidenceFingerprint": "ca12c94fcb26de6d18a8f7bb3c0b2aa920c05950ed6250204c85c5b06f6f9779",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2917.21": {
+      "evidenceFingerprint": "8476877c500b0a80e1d62a2e105f52b120a346c5b36dad0e6be7784c5c965ab8",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2919.21": {
+      "evidenceFingerprint": "fa0098782cdf295a442d85094ca58cde8507546b2db3a7c7e529e596c102c26a",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2919.27": {
+      "evidenceFingerprint": "8c1c2374617c36ca5a301f1264801e0a8782a13a310c7d9a8129dfe0bfa8f3b0",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2921.13": {
+      "evidenceFingerprint": "b89ca8d61b0d566585c5a4c17e756cdd8df46ba0ec60abf770a2984e140b23ae",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2921.32": {
+      "evidenceFingerprint": "cdeb26f6a6e424ed30ce938dd51b2f99ddcc31dd9273a2fcf7fc7b2dfbb0517e",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2921.33": {
+      "evidenceFingerprint": "bea165babe44fcafad509964473dd12576b2b2e3160f43a7861a9ce9a5f3a7f6",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.01": {
+      "evidenceFingerprint": "566cdc6d87f3bcbbb60bb946a0bf1311d88011c0e0b71d7722e681b3f69de7c1",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.02": {
+      "evidenceFingerprint": "d224f44d2871ba865d888af72229170a10e4d8cd884fac4c8842de5675b62aaa",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.03": {
+      "evidenceFingerprint": "31f5f90594d16cb1af42a08e7eb5a6c63acd447080c8fd9480b4240e75040205",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.12": {
+      "evidenceFingerprint": "33b6af9683443a6b3066096c9f55c285ee27de77d8b3aae6b981d1e3a464ea9e",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.13": {
+      "evidenceFingerprint": "5b7772cd8d5bb92fdc881e9020719d247239050c1a844b43848f4954fc3a1931",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.161": {
+      "evidenceFingerprint": "a7c101ea6c1cf86183332caa85718669453ad3b0338107dabb6271176daaecf1",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.162": {
+      "evidenceFingerprint": "9a7e9b166b6f18192b71c059d309465d548ee7d5eca1c83372d900db659e62ce",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.17": {
+      "evidenceFingerprint": "96bc158e35896c3f17c2d1b27164ec0de0dbf471121366da195d4bc7b5a9c6ed",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.211": {
+      "evidenceFingerprint": "e693fa66e8c9ed58c0efd4ce2abaec2dfd821d9f11c2b1604fc207438f28f9ae",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2923.32": {
+      "evidenceFingerprint": "ed2a6bbcd33bd0a0a055de9a614078738b259b2d711115a7f92db3ac37368dac",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2925.03": {
+      "evidenceFingerprint": "ba27532321fd582882b57f0ce8b971bc88f2cd35898e5d00af5c5d8a89bf975e",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2925.04": {
+      "evidenceFingerprint": "b6543f757ac4f88e942880da6404a1bb0d4cd41e8b6aefd44a15d43fbb56fba1",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2925.05": {
+      "evidenceFingerprint": "5c5ce695843ceb149b8c8fc53f71eac695f98317144eac4d191bb9fbf9ddea5a",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2925.11": {
+      "evidenceFingerprint": "89dde1e6389ad18bd0d55be3cee8524a2c019c73846f36bb4a925d04f9f084b1",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2925.13": {
+      "evidenceFingerprint": "09fa7025d694e64b747b9dfbc4b723355080c6e44432c040af81dd26f2d5766b",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2925.14": {
+      "evidenceFingerprint": "1dfc0a8f21d63f02da9307f07c73a79e8ad3613ae9081ef71993b8b6a29dc6d2",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2927.12": {
+      "evidenceFingerprint": "2dc95a0529f47dc189e1e22dea24cc75136200d333dd56fb81770d85840f6532",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2929.14": {
+      "evidenceFingerprint": "496c0b541c288650ce0bc1bbc04b20a0c17fbc34a7b0bdcea4d95bccd8a1b680",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2937.99": {
+      "evidenceFingerprint": "4747ea57d3b4d3d8d440ed77e99322fe82502c893ba4b518281a8aff7203831f",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2941.142": {
+      "evidenceFingerprint": "bea55803dd760f63e2087cd0f5480e9912b2d48c6a4c964cb9c013740d029edb",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2941.145": {
+      "evidenceFingerprint": "2ec70a76c1b6a216b1af5874028de44aed52f922161fff47a017ee9dc3e1a512",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "2951.08": {
+      "evidenceFingerprint": "138e28ed7a4e0135296857f67a5f97303709e3a24fc3663a6016bf9e081516df",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "3321.38": {
+      "evidenceFingerprint": "befd4feb6f6c441b07872d966365fe1828d89d150a5a6d09d76faff6bc87c40a",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "3704.14": {
+      "evidenceFingerprint": "e40fe5b603f5be536cc69b886d59d2b84adcb88392d50a38878aefa6268b41db",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "3743.65": {
+      "evidenceFingerprint": "e14f97039480779ec8ecbe66ce4c7c05d94794d10c268df7181f920ac1711456",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "3767.32": {
+      "evidenceFingerprint": "de23311901cbafcea4279a1118c0b978499b1ea94ac01a87f4c4e7f667fc845f",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4301.62": {
+      "evidenceFingerprint": "ae05753403381b9755637c930b047e8586e4adad42883eb186655a0b3965b37a",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4301.633": {
+      "evidenceFingerprint": "45f645573f3736bc719ba3b21a0c9f15376264637bfd073550a87ed58801614f",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4301.69": {
+      "evidenceFingerprint": "d057979c53444961803d1c1aea011fa473e1dcd44d966f785f8d4faa4c4f861a",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4503.02": {
+      "evidenceFingerprint": "fa40affa633741c126a9cb6747adb676f1958dbf80d7e1cf2245312c58402868",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4503.11": {
+      "evidenceFingerprint": "729734c61574ec5bf836d65ad045bdb1b7fffc103c53b0798c108792cb808cb7",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4509.101": {
+      "evidenceFingerprint": "e4f48cf9b5832e3f191e66d704ab048752c65243af1d727078ae117a9008bcff",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4510.11": {
+      "evidenceFingerprint": "3c6683c1dc91f729c85979d41b30ffc324b8acb40a82e4403ca7531ae64f1a41",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4511.19": {
+      "evidenceFingerprint": "5ffef9110a73c98cca6fc7a858f3b1c9244de8cd42eda8efbe19a8162979bb9f",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4511.20": {
+      "evidenceFingerprint": "ac1a5c45bf7373bc26d0d0012de5d7942f832d570d138919dea88c9c33ab76af",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4513.01": {
+      "evidenceFingerprint": "44914a084f4f5746a793901b2b47e688c86ba947641597108187e104c3111e04",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4513.02": {
+      "evidenceFingerprint": "16ac634a718af326a321c0f9cf7e263712f8f4884f4fec354a0c35d2bc1eb19d",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4513.221": {
+      "evidenceFingerprint": "fecc6b27082e3c25ef541ba021e3671d387f2d30e54d3afaeacffdb0dd324edc",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "4549.02": {
+      "evidenceFingerprint": "a0c5bac6800999a981d5495009a556f7e857e491d1c91f5d0d45e9a82a6bb571",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "5.01": {
+      "evidenceFingerprint": "e2598fce4fa05b6799797a6017c656f41868d657cf1f110d461d00c29bc533a7",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "5.02": {
+      "evidenceFingerprint": "7348f7e2c395a417c8783bf44b901e65bb8770366167b401bcb2f1fcbda4a664",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "5.03": {
+      "evidenceFingerprint": "6e9f70fab71efa2d48918238ad2087a2aa10220e5630f06e5b4fb914f415fc69",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "5747.18": {
+      "evidenceFingerprint": "03d8245aeb4008e949b44995d47d8f4c74bd3b7067a906b50a3c7b3beb05cce7",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "5747.19": {
+      "evidenceFingerprint": "c956dd42b23e28c983bd56a0ade134dca26c351f24daa50782d3c321791042cd",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "955.22": {
+      "evidenceFingerprint": "bb0ea475bb078ab01f8984c310c469a393f88a2cd151491b311298672f88de78",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    },
+    "959.13": {
+      "evidenceFingerprint": "a5d278e9b6e17fd746d9e77bf0aa5b8fa2517558341556f8b28e29e9a4f39ad7",
+      "decision": "",
+      "exactSubdivisions": "",
+      "note": ""
+    }
+  }
+}
