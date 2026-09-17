@@ -15,14 +15,21 @@ import {
   type OhioAuthorityManifest,
   type OhioSourceDocument,
 } from "../../server/data/ohio-source-database-seed";
-import { annotateSharedAuthorityMappings } from "../../server/services/authority-offense-evidence";
+import {
+  annotateSharedAuthorityMappings,
+  createAuthorityModelResponseGenerator,
+  reviewAuthorityMappingsWithModel,
+  type AuthorityModelMappingReview,
+  type AuthorityModelMappingReviewCase,
+} from "../../server/services/authority-offense-evidence";
+import type { AuthorityCatalogRecord } from "../../server/services/authority-source-database";
 import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../../server/data/ohio-chapter-2903-source";
-
 const RATE_LIMIT_MS = 700;
 const MAX_RETRIES = 3;
 const UA =
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36 OpenDefender-OhioAuthorityImporter/1.0";
 
+const MODEL_REVIEW_FLAG = "--model-review";
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -93,6 +100,25 @@ function parseEffectiveDate(html: string): string | null {
   return Number.isNaN(date.getTime()) ? null : date.toISOString().slice(0, 10);
 }
 
+function unresolvedMappingCases(
+  records: AuthorityCatalogRecord[],
+): AuthorityModelMappingReviewCase[] {
+  return records
+    .filter((record) =>
+      record.mapping &&
+      record.mapping.classification !== "exact_match" &&
+      record.mapping.classification !== "approved_alias" &&
+      record.mapping.candidateEvidence.length > 0,
+    )
+    .map((record) => ({
+      caseId: record.chargeId,
+      catalogLabel: record.catalogLabel,
+      catalogCode: record.catalogCode,
+      mappingClassification: record.mapping!.classification,
+      deterministicConfidence: record.mapping!.confidence,
+      evidence: record.mapping!.candidateEvidence,
+    }));
+}
 export function extractOhioDocument(
   html: string,
   section: string,
@@ -139,6 +165,7 @@ export function getOhioLegacyManifestCharges() {
 
 export async function main(): Promise<void> {
   const importedAt = new Date();
+  const modelReview = process.argv.includes(MODEL_REVIEW_FLAG);
   const charges = getOhioLegacyManifestCharges();
   const documentCache = new Map<string, OhioSourceDocument | null>();
   const errors = new Map<string, string>();
@@ -192,6 +219,13 @@ export async function main(): Promise<void> {
     process.cwd(),
     "scripts/data-review/output/oh-source-manifest.json",
   );
+  const modelReviewResult = modelReview
+    ? await writeModelReview(
+      catalogRecords,
+      path.resolve(process.cwd(), "scripts/data-review/output/ohio-model-mapping-review.json"),
+      importedAt,
+    )
+    : null;
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, JSON.stringify(manifest, null, 2) + "\n");
   const selectable = catalogRecords.filter((record) =>
@@ -205,6 +239,15 @@ export async function main(): Promise<void> {
     requests,
     sectionErrors: Object.fromEntries(errors),
     outputPath,
+    ...(modelReviewResult
+      ? {
+          modelReview: {
+            model: modelReviewResult.model,
+            accepted: modelReviewResult.review.accepted,
+            rejected: modelReviewResult.review.rejected,
+          },
+        }
+      : {}),
   }, null, 2));
 }
 
@@ -213,4 +256,39 @@ if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToP
     console.error("Ohio authority import failed:", error);
     process.exitCode = 1;
   });
+}
+
+function modelResponseGenerator(): {
+  model: string;
+  generate: ReturnType<typeof createAuthorityModelResponseGenerator>["generate"];
+} {
+  try {
+    return createAuthorityModelResponseGenerator();
+  } catch (error) {
+    throw new Error(
+      `${MODEL_REVIEW_FLAG} ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+}
+
+async function writeModelReview(
+  records: AuthorityCatalogRecord[],
+  outputPath: string,
+  generatedAt: Date,
+): Promise<{ model: string; review: AuthorityModelMappingReview }> {
+  const cases = unresolvedMappingCases(records);
+  const configured = cases.length > 0
+    ? modelResponseGenerator()
+    : { model: "not-called", generate: async () => "" };
+  const review = await reviewAuthorityMappingsWithModel(cases, configured.generate);
+  const audit = {
+    jurisdiction: "OH" as const,
+    generatedAt: generatedAt.toISOString(),
+    model: configured.model,
+    optInFlag: MODEL_REVIEW_FLAG,
+    ...review,
+  };
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, JSON.stringify(audit, null, 2) + "\n");
+  return { model: configured.model, review };
 }

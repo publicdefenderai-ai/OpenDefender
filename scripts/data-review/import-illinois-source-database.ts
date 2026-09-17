@@ -22,12 +22,20 @@ import {
   type IllinoisFreshnessOutcome,
 } from "../../server/data/illinois-source-database-seed";
 import { loadIllinoisAuthorityManifest } from "../../server/data/illinois-manifest-loader";
-import { annotateSharedAuthorityMappings } from "../../server/services/authority-offense-evidence";
+import {
+  annotateSharedAuthorityMappings,
+  createAuthorityModelResponseGenerator,
+  reviewAuthorityMappingsWithModel,
+  type AuthorityModelMappingReview,
+  type AuthorityModelMappingReviewCase,
+} from "../../server/services/authority-offense-evidence";
+import type { AuthorityCatalogRecord } from "../../server/services/authority-source-database";
 
 const RATE_LIMIT_MS = 400;
 const MAX_RETRIES = 3;
 const UA =
   "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124.0.0.0 Safari/537.36";
+const MODEL_REVIEW_FLAG = "--model-review";
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -287,6 +295,12 @@ export interface IllinoisManifestRefreshOptions {
    * authority manifest intact when a normal refresh is blocked.
    */
   evidenceOnly?: boolean;
+  /**
+   * Ask the configured model for hash-bound, quoted-span suggestions and
+   * write them to a separate audit artifact. This never changes the manifest.
+   */
+  modelReview?: boolean;
+  modelReviewOutputPath?: string;
 }
 
 export interface IllinoisManifestRefreshSummary {
@@ -410,6 +424,61 @@ function hasUnsafeIllinoisRefreshFailure(
       );
     }),
   );
+}
+
+function unresolvedMappingCases(
+  records: AuthorityCatalogRecord[],
+): AuthorityModelMappingReviewCase[] {
+  return records
+    .filter((record) =>
+      record.mapping &&
+      record.mapping.classification !== "exact_match" &&
+      record.mapping.classification !== "approved_alias" &&
+      record.mapping.candidateEvidence.length > 0,
+    )
+    .map((record) => ({
+      caseId: record.chargeId,
+      catalogLabel: record.catalogLabel,
+      catalogCode: record.catalogCode,
+      mappingClassification: record.mapping!.classification,
+      deterministicConfidence: record.mapping!.confidence,
+      evidence: record.mapping!.candidateEvidence,
+    }));
+}
+
+function modelResponseGenerator(): {
+  model: string;
+  generate: ReturnType<typeof createAuthorityModelResponseGenerator>["generate"];
+} {
+  try {
+    return createAuthorityModelResponseGenerator();
+  } catch (error) {
+    throw new Error(
+      `${MODEL_REVIEW_FLAG} ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+}
+
+async function writeModelReview(
+  records: AuthorityCatalogRecord[],
+  outputPath: string,
+  generatedAt: Date,
+): Promise<{ model: string; review: AuthorityModelMappingReview }> {
+  const cases = unresolvedMappingCases(records);
+  const configured = cases.length > 0
+    ? modelResponseGenerator()
+    : { model: "not-called", generate: async () => "" };
+  const review = await reviewAuthorityMappingsWithModel(cases, configured.generate);
+  const audit = {
+    jurisdiction: "IL" as const,
+    generatedAt: generatedAt.toISOString(),
+    model: configured.model,
+    optInFlag: MODEL_REVIEW_FLAG,
+    ...review,
+  };
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, JSON.stringify(audit, null, 2) + "\n");
+  return { model: configured.model, review };
 }
 
 function mergeStableMappingEvidence(
@@ -646,6 +715,16 @@ export async function refreshIllinoisManifest(
       ? (loadIllinoisAuthorityManifest(outputPath).audit ?? audit)
       : audit,
   };
+  const modelReviewResult = options.modelReview
+    ? await writeModelReview(
+      records,
+      options.modelReviewOutputPath ?? path.resolve(
+        path.dirname(outputPath),
+        "illinois-model-mapping-review.json",
+      ),
+      importedAt,
+    )
+    : null;
   const manifestSelectable = manifest.catalogRecords.filter((record) =>
     record.disposition === "retain" || record.disposition === "exact_alias_rename");
   if (shouldWrite) {
@@ -673,6 +752,15 @@ export async function refreshIllinoisManifest(
     jurisdiction: "IL",
     ...summary,
     fetchedDocuments: documentCache.size,
+    ...(modelReviewResult
+      ? {
+          modelReview: {
+            model: modelReviewResult.model,
+            accepted: modelReviewResult.review.accepted,
+            rejected: modelReviewResult.review.rejected,
+          },
+        }
+      : {}),
   }, null, 2));
   return summary;
 }
@@ -680,9 +768,11 @@ export async function refreshIllinoisManifest(
 export async function main(): Promise<void> {
   const checkOnly = process.argv.includes("--check");
   const evidenceOnly = process.argv.includes("--evidence-only");
+  const modelReview = process.argv.includes(MODEL_REVIEW_FLAG);
   const result = await refreshIllinoisManifest({
     checkOnly,
     evidenceOnly,
+    modelReview,
   });
   process.exitCode = getIllinoisRefreshExitCode(result, checkOnly);
 }

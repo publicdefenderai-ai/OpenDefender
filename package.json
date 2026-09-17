@@ -26,6 +26,8 @@
     "review:pennsylvania-source": "tsx scripts/data-review/check-pennsylvania-source.ts",
     "review:south-carolina-source": "tsx scripts/data-review/import-south-carolina-source-database.ts --check",
     "review:illinois-source": "tsx scripts/data-review/import-illinois-source-database.ts --check",
+    "review:illinois-model-mappings": "tsx scripts/data-review/import-illinois-source-database.ts --model-review",
+    "review:ohio-model-mappings": "tsx scripts/data-review/import-ohio-source-database.ts --model-review",
     "db:seed:south-carolina": "tsx scripts/data-review/seed-south-carolina-source-database.ts",
     "db:seed:illinois": "tsx scripts/data-review/seed-illinois-source-database.ts",
     "db:seed:georgia": "tsx scripts/data-review/seed-georgia-source-database.ts",

@@ -1,4 +1,6 @@
 import { createHash } from "node:crypto";
+import Anthropic from "@anthropic-ai/sdk";
+import { CLAUDE_MODEL_SONNET } from "../config/ai-model";
 
 /**
  * This schema is deliberately separate from the source snapshot schema.
@@ -73,6 +75,111 @@ export interface AuthorityModelMappingProposal {
   proposedSourceKeys: string[];
   confidence: "high" | "medium" | "low";
   quotedSpans: AuthorityEvidenceSpan[];
+}
+
+export const AUTHORITY_MODEL_REVIEW_SCHEMA_VERSION = 1 as const;
+export const AUTHORITY_MODEL_REVIEW_MAX_CASES_PER_REQUEST = 4;
+export const AUTHORITY_MODEL_REVIEW_MAX_PROMPT_LENGTH = 24_000;
+
+/**
+ * This is the only evidence shape that may be sent to the optional model
+ * review. In particular, it intentionally does not include boundedText,
+ * official titles, or source URLs.
+ */
+export interface AuthorityModelEvidenceCandidate {
+  sourceHash: string;
+  sourceKey: string;
+  quotedSpans: AuthorityEvidenceSpan[];
+}
+
+export interface AuthorityModelMappingReviewCase {
+  caseId: string;
+  catalogLabel: string;
+  catalogCode: string;
+  mappingClassification: AuthorityMappingClassification;
+  deterministicConfidence: "high" | "medium" | "low";
+  evidence: AuthorityEvidenceRecord[];
+}
+
+export interface AuthorityModelMappingReviewOutcome {
+  caseId: string;
+  status: "accepted" | "rejected";
+  deterministicConfidence: "high" | "medium" | "low";
+  proposal?: AuthorityModelMappingProposal;
+  rejectionReason?: string;
+}
+
+export interface AuthorityModelMappingReview {
+  schemaVersion: typeof AUTHORITY_MODEL_REVIEW_SCHEMA_VERSION;
+  candidates: number;
+  accepted: number;
+  rejected: number;
+  outcomes: AuthorityModelMappingReviewOutcome[];
+}
+
+export interface AuthorityModelResponse {
+  text: string;
+  stopReason?: string | null;
+}
+
+export interface AuthorityModelClientCredentials {
+  apiKey: string;
+  baseURL?: string;
+}
+
+export function resolveAuthorityModelClientCredentials(
+  environment: Record<string, string | undefined> = process.env,
+): AuthorityModelClientCredentials {
+  const integrationKey = environment.AI_INTEGRATIONS_ANTHROPIC_API_KEY;
+  if (integrationKey) {
+    return {
+      apiKey: integrationKey,
+      ...(environment.AI_INTEGRATIONS_ANTHROPIC_BASE_URL
+        ? { baseURL: environment.AI_INTEGRATIONS_ANTHROPIC_BASE_URL }
+        : {}),
+    };
+  }
+  if (environment.ANTHROPIC_API_KEY) {
+    return { apiKey: environment.ANTHROPIC_API_KEY };
+  }
+  throw new Error(
+    "Authority model review requires a configured Anthropic model key; no key was found.",
+  );
+}
+
+export function createAuthorityModelResponseGenerator(
+  environment: Record<string, string | undefined> = process.env,
+): {
+  model: string;
+  generate: (prompt: string) => Promise<AuthorityModelResponse>;
+} {
+  const credentials = resolveAuthorityModelClientCredentials(environment);
+  const model = environment.AUTHORITY_MODEL_REVIEW_MODEL ?? CLAUDE_MODEL_SONNET;
+  const client = new Anthropic({
+    ...credentials,
+    timeout: 120_000,
+  });
+  return {
+    model,
+    generate: async (prompt: string): Promise<AuthorityModelResponse> => {
+      const response = await client.messages.create({
+        model,
+        max_tokens: 4096,
+        temperature: 0,
+        system:
+          "You are assisting a legal-data auditor. Return only the requested JSON. " +
+          "Do not treat suggestions as legal approval or publication decisions.",
+        messages: [{ role: "user", content: prompt }],
+      });
+      return {
+        text: response.content
+          .filter((block): block is Anthropic.TextBlock => block.type === "text")
+          .map((block) => block.text)
+          .join("\n"),
+        stopReason: response.stop_reason,
+      };
+    },
+  };
 }
 
 export interface AuthorityEvidenceDocument {
@@ -290,6 +397,13 @@ export function validateAuthorityModelMappingProposal(
   proposal: AuthorityModelMappingProposal,
   evidence: AuthorityEvidenceRecord[],
 ): boolean {
+  if (
+    !/^[a-f0-9]{64}$/.test(proposal.sourceHash) ||
+    !["high", "medium", "low"].includes(proposal.confidence) ||
+    !Array.isArray(proposal.proposedSourceKeys) ||
+    !Array.isArray(proposal.quotedSpans)
+  ) return false;
+
   const matchingEvidence = evidence.filter((item) => item.sourceHash === proposal.sourceHash);
   const sourceKeys = new Set(matchingEvidence.map((item) => item.sectionIdentity.sourceKey));
   return matchingEvidence.length > 0 &&
@@ -297,10 +411,22 @@ export function validateAuthorityModelMappingProposal(
     proposal.proposedSourceKeys.every((sourceKey) => sourceKeys.has(sourceKey)) &&
     proposal.quotedSpans.length > 0 &&
     proposal.quotedSpans.every((span) => {
+      if (
+        !span ||
+        typeof span !== "object" ||
+        !["title", "offense", "grading", "penalty", "currentness", "subdivision"].includes(span.kind) ||
+        typeof span.quote !== "string" ||
+        span.quote.length === 0 ||
+        !Number.isInteger(span.start) ||
+        !Number.isInteger(span.end) ||
+        span.start < 0 ||
+        span.end <= span.start
+      ) return false;
       const source = matchingEvidence
         .filter((item) => proposal.proposedSourceKeys.includes(item.sectionIdentity.sourceKey))
         .find((item) =>
         item.evidenceSpans.some((candidate) =>
+          candidate.kind === span.kind &&
           candidate.quote === span.quote &&
           candidate.start === span.start &&
           candidate.end === span.end,
@@ -309,4 +435,247 @@ export function validateAuthorityModelMappingProposal(
       const start = source.boundedText.indexOf(span.quote);
       return start >= 0 && start === span.start && span.end === start + span.quote.length;
     });
+}
+
+function modelEvidenceFor(
+  evidence: AuthorityEvidenceRecord,
+): AuthorityModelEvidenceCandidate {
+  return {
+    sourceHash: evidence.sourceHash,
+    sourceKey: evidence.sectionIdentity.sourceKey,
+    // The complete offense span can be the entire bounded source document.
+    // Keep the model review limited to the short, pre-extracted spans.
+    quotedSpans: evidence.evidenceSpans.filter((span) => span.kind !== "offense"),
+  };
+}
+
+function validationEvidenceFor(
+  evidence: AuthorityEvidenceRecord[],
+): AuthorityEvidenceRecord[] {
+  const modelEvidence = new Set(
+    evidence.flatMap((item) => modelEvidenceFor(item).quotedSpans.map((span) =>
+      `${item.sourceHash}:${span.kind}:${span.start}:${span.end}:${span.quote}`,
+    )),
+  );
+  return evidence.map((item) => ({
+    ...item,
+    evidenceSpans: item.evidenceSpans.filter((span) => modelEvidence.has(
+      `${item.sourceHash}:${span.kind}:${span.start}:${span.end}:${span.quote}`,
+    )),
+  }));
+}
+
+/**
+ * Build a JSON prompt from a deliberately redacted view of the official
+ * evidence. The source hash and source key let a reviewer trace a proposal
+ * back to the official snapshot, while the quoted spans give the model only
+ * bounded evidence to reason over.
+ */
+export function buildAuthorityModelMappingReviewPrompt(
+  cases: AuthorityModelMappingReviewCase[],
+): string {
+  const payload = cases.map((reviewCase) => ({
+    caseId: reviewCase.caseId,
+    catalogLabel: reviewCase.catalogLabel,
+    catalogCode: reviewCase.catalogCode,
+    mappingClassification: reviewCase.mappingClassification,
+    deterministicConfidence: reviewCase.deterministicConfidence,
+    evidence: reviewCase.evidence.map(modelEvidenceFor),
+  }));
+  return [
+    "Return JSON only in the form {\"proposals\":[...]} with no markdown.",
+    "Suggest mappings for unresolved catalog rows using only the supplied quoted official evidence.",
+    "Do not invent source keys, hashes, quotes, offsets, or confidence values.",
+    "A proposal is audit-only. It must not be treated as approval or publication.",
+    "Each proposal must contain caseId and proposal, where proposal has sourceHash,",
+    "proposedSourceKeys, confidence, and quotedSpans.",
+    JSON.stringify({ cases: payload }),
+  ].join("\n");
+}
+
+function parseJsonResponse(rawResponse: string): unknown {
+  const cleaned = rawResponse
+    .replace(/^```(?:json)?\s*/i, "")
+    .replace(/\s*```$/i, "")
+    .trim();
+  return JSON.parse(cleaned);
+}
+
+function batchReviewCases(
+  cases: AuthorityModelMappingReviewCase[],
+): AuthorityModelMappingReviewCase[][] {
+  const batches: AuthorityModelMappingReviewCase[][] = [];
+  let current: AuthorityModelMappingReviewCase[] = [];
+  for (const reviewCase of cases) {
+    const candidate = [...current, reviewCase];
+    if (
+      current.length > 0 &&
+      (candidate.length > AUTHORITY_MODEL_REVIEW_MAX_CASES_PER_REQUEST ||
+        buildAuthorityModelMappingReviewPrompt(candidate).length >
+          AUTHORITY_MODEL_REVIEW_MAX_PROMPT_LENGTH)
+    ) {
+      batches.push(current);
+      current = [reviewCase];
+    } else {
+      current = candidate;
+    }
+  }
+  if (current.length > 0) batches.push(current);
+  return batches;
+}
+
+function isProposal(value: unknown): value is AuthorityModelMappingProposal {
+  if (!value || typeof value !== "object") return false;
+  const proposal = value as Record<string, unknown>;
+  return typeof proposal.sourceHash === "string" &&
+    Array.isArray(proposal.proposedSourceKeys) &&
+    Array.isArray(proposal.quotedSpans) &&
+    ["high", "medium", "low"].includes(proposal.confidence as string);
+}
+
+/**
+ * Parse and validate model output without mutating a deterministic mapping.
+ * Invalid JSON, unknown cases, duplicate cases, and proposals that fail the
+ * hash/span validator are retained as rejected audit outcomes.
+ */
+export function parseAuthorityModelMappingReviewResponse(
+  rawResponse: string,
+  cases: AuthorityModelMappingReviewCase[],
+  options: { truncated?: boolean } = {},
+): AuthorityModelMappingReview {
+  const byCaseId = new Map(cases.map((reviewCase) => [reviewCase.caseId, reviewCase]));
+  const outcomes: AuthorityModelMappingReviewOutcome[] = [];
+  let parsed: unknown;
+  try {
+    parsed = parseJsonResponse(rawResponse);
+  } catch {
+    return {
+      schemaVersion: AUTHORITY_MODEL_REVIEW_SCHEMA_VERSION,
+      candidates: cases.length,
+      accepted: 0,
+      rejected: cases.length,
+      outcomes: cases.map((reviewCase) => ({
+        caseId: reviewCase.caseId,
+        status: "rejected",
+        deterministicConfidence: reviewCase.deterministicConfidence,
+        rejectionReason: options.truncated
+          ? "Model response was truncated before complete JSON."
+          : "Model response was not valid JSON.",
+      })),
+    };
+  }
+
+  const proposals = parsed && typeof parsed === "object" &&
+    Array.isArray((parsed as { proposals?: unknown }).proposals)
+    ? (parsed as { proposals: unknown[] }).proposals
+    : [];
+  const seen = new Set<string>();
+  const outcomeByCaseId = new Map<string, AuthorityModelMappingReviewOutcome>();
+  for (const item of proposals) {
+    if (!item || typeof item !== "object") continue;
+    const candidate = item as Record<string, unknown>;
+    const caseId = typeof candidate.caseId === "string" ? candidate.caseId : null;
+    const reviewCase = caseId ? byCaseId.get(caseId) : undefined;
+    const proposal = candidate.proposal;
+    if (!caseId || !reviewCase) {
+      continue;
+    }
+    if (seen.has(caseId)) {
+      outcomeByCaseId.set(caseId, {
+        caseId: reviewCase.caseId,
+        status: "rejected",
+        deterministicConfidence: reviewCase.deterministicConfidence,
+        rejectionReason: "Model returned more than one proposal for this case.",
+      });
+      continue;
+    }
+    if (!isProposal(proposal)) {
+      seen.add(caseId);
+      outcomeByCaseId.set(caseId, {
+        caseId: reviewCase.caseId,
+        status: "rejected",
+        deterministicConfidence: reviewCase.deterministicConfidence,
+        rejectionReason: "Model returned a malformed proposal.",
+      });
+      continue;
+    }
+    const validCaseId = caseId;
+    seen.add(validCaseId);
+    const valid = validateAuthorityModelMappingProposal(
+      proposal,
+      validationEvidenceFor(reviewCase.evidence),
+    );
+    outcomeByCaseId.set(caseId, valid
+      ? {
+          caseId: reviewCase.caseId,
+          status: "accepted",
+          deterministicConfidence: reviewCase.deterministicConfidence,
+          proposal,
+        }
+      : {
+          caseId: reviewCase.caseId,
+          status: "rejected",
+          deterministicConfidence: reviewCase.deterministicConfidence,
+          rejectionReason: "Proposal failed hash-bound quoted-span validation.",
+        });
+  }
+
+  for (const reviewCase of cases) {
+    if (!outcomeByCaseId.has(reviewCase.caseId)) {
+      outcomeByCaseId.set(reviewCase.caseId, {
+        caseId: reviewCase.caseId,
+        status: "rejected",
+        deterministicConfidence: reviewCase.deterministicConfidence,
+        rejectionReason: options.truncated
+          ? "Model response reached its output limit before this proposal was returned."
+          : "Model did not return a proposal for this unresolved mapping.",
+      });
+    }
+  }
+  outcomes.push(...cases.map((reviewCase) => outcomeByCaseId.get(reviewCase.caseId)!));
+  return {
+    schemaVersion: AUTHORITY_MODEL_REVIEW_SCHEMA_VERSION,
+    candidates: cases.length,
+    accepted: outcomes.filter((outcome) => outcome.status === "accepted").length,
+    rejected: outcomes.filter((outcome) => outcome.status === "rejected").length,
+    outcomes,
+  };
+}
+
+export async function reviewAuthorityMappingsWithModel(
+  cases: AuthorityModelMappingReviewCase[],
+  generateResponse: (prompt: string) => Promise<string | AuthorityModelResponse>,
+): Promise<AuthorityModelMappingReview> {
+  if (cases.length === 0) {
+    return {
+      schemaVersion: AUTHORITY_MODEL_REVIEW_SCHEMA_VERSION,
+      candidates: 0,
+      accepted: 0,
+      rejected: 0,
+      outcomes: [],
+    };
+  }
+  const batchReviews: AuthorityModelMappingReview[] = [];
+  for (const batch of batchReviewCases(cases)) {
+    const generated = await generateResponse(buildAuthorityModelMappingReviewPrompt(batch));
+    const response = typeof generated === "string"
+      ? { text: generated, stopReason: null }
+      : generated;
+    batchReviews.push(parseAuthorityModelMappingReviewResponse(
+      response.text,
+      batch,
+      { truncated: response.stopReason === "max_tokens" || response.stopReason === "length" },
+    ));
+  }
+  const outcomes = cases.map((reviewCase) =>
+    batchReviews.flatMap((review) => review.outcomes)
+      .find((outcome) => outcome.caseId === reviewCase.caseId)!,
+  );
+  return {
+    schemaVersion: AUTHORITY_MODEL_REVIEW_SCHEMA_VERSION,
+    candidates: cases.length,
+    accepted: outcomes.filter((outcome) => outcome.status === "accepted").length,
+    rejected: outcomes.filter((outcome) => outcome.status === "rejected").length,
+    outcomes,
+  };
 }

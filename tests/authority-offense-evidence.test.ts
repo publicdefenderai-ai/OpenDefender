@@ -3,7 +3,11 @@ import { describe, expect, it } from "vitest";
 import {
   AUTHORITY_EVIDENCE_SCHEMA_VERSION,
   buildAuthorityEvidence,
+  buildAuthorityModelMappingReviewPrompt,
   classifyAuthorityMapping,
+  parseAuthorityModelMappingReviewResponse,
+  resolveAuthorityModelClientCredentials,
+  reviewAuthorityMappingsWithModel,
   validateAuthorityModelMappingProposal,
 } from "../server/services/authority-offense-evidence";
 
@@ -101,5 +105,163 @@ describe("authority offense evidence", () => {
       ...proposal,
       proposedSourceKeys: ["test:statute:other"],
     }, [evidence])).toBe(false);
+  });
+
+  it("builds a redacted model prompt and keeps accepted suggestions audit-only", () => {
+    const source = document();
+    const evidence = buildAuthorityEvidence(source);
+    const title = evidence.evidenceSpans.find((span) => span.kind === "title")!;
+    const reviewCase = {
+      caseId: "charge-1",
+      catalogLabel: "A catalog theft label",
+      catalogCode: "1",
+      mappingClassification: "semantic_conflict" as const,
+      deterministicConfidence: "low" as const,
+      evidence: [evidence],
+    };
+    const prompt = buildAuthorityModelMappingReviewPrompt([reviewCase]);
+    expect(prompt).toContain(evidence.sourceHash);
+    expect(prompt).toContain(title.quote);
+    expect(prompt).not.toContain(evidence.boundedText);
+    expect(prompt).not.toContain(evidence.sectionIdentity.sourceUrl);
+
+    const review = parseAuthorityModelMappingReviewResponse(
+      JSON.stringify({
+        proposals: [{
+          caseId: "charge-1",
+          proposal: {
+            sourceHash: evidence.sourceHash,
+            proposedSourceKeys: [evidence.sectionIdentity.sourceKey],
+            confidence: "high",
+            quotedSpans: [title],
+          },
+        }],
+      }),
+      [reviewCase],
+    );
+    expect(review.accepted).toBe(1);
+    expect(review.outcomes[0]).toMatchObject({
+      status: "accepted",
+      deterministicConfidence: "low",
+    });
+    expect(reviewCase.deterministicConfidence).toBe("low");
+  });
+
+  it("rejects model spans that were not included in the redacted prompt evidence", () => {
+    const source = document();
+    const evidence = buildAuthorityEvidence(source);
+    const fullOffenseSpan = evidence.evidenceSpans.find((span) => span.kind === "offense")!;
+    const review = parseAuthorityModelMappingReviewResponse(
+      JSON.stringify({
+        proposals: [{
+          caseId: "charge-1",
+          proposal: {
+            sourceHash: evidence.sourceHash,
+            proposedSourceKeys: [evidence.sectionIdentity.sourceKey],
+            confidence: "high",
+            quotedSpans: [fullOffenseSpan],
+          },
+        }],
+      }),
+      [{
+        caseId: "charge-1",
+        catalogLabel: "A catalog theft label",
+        catalogCode: "1",
+        mappingClassification: "semantic_conflict",
+        deterministicConfidence: "low",
+        evidence: [evidence],
+      }],
+    );
+    expect(review.accepted).toBe(0);
+    expect(review.outcomes[0].rejectionReason).toContain("quoted-span validation");
+  });
+
+  it("batches large reviews and records truncation per affected batch", async () => {
+    const evidence = buildAuthorityEvidence(document());
+    const cases = Array.from({ length: 5 }, (_, index) => ({
+      caseId: `charge-${index}`,
+      catalogLabel: `Catalog label ${index}`,
+      catalogCode: String(index),
+      mappingClassification: "semantic_conflict" as const,
+      deterministicConfidence: "low" as const,
+      evidence: [evidence],
+    }));
+    const prompts: string[] = [];
+    const review = await reviewAuthorityMappingsWithModel(cases, async (prompt) => {
+      prompts.push(prompt);
+      return { text: "{\"proposals\":[]}", stopReason: "end_turn" };
+    });
+    expect(prompts).toHaveLength(2);
+    expect(review.candidates).toBe(5);
+    expect(review.rejected).toBe(5);
+
+    const truncated = await reviewAuthorityMappingsWithModel(
+      [cases[0]],
+      async () => ({ text: "{\"proposals\":[", stopReason: "max_tokens" }),
+    );
+    expect(truncated.outcomes[0].rejectionReason)
+      .toBe("Model response was truncated before complete JSON.");
+  });
+
+  it("rejects a case when the model returns conflicting duplicate proposals", () => {
+    const evidence = buildAuthorityEvidence(document());
+    const title = evidence.evidenceSpans.find((span) => span.kind === "title")!;
+    const review = parseAuthorityModelMappingReviewResponse(
+      JSON.stringify({
+        proposals: [
+          {
+            caseId: "charge-1",
+            proposal: {
+              sourceHash: evidence.sourceHash,
+              proposedSourceKeys: [evidence.sectionIdentity.sourceKey],
+              confidence: "high",
+              quotedSpans: [title],
+            },
+          },
+          {
+            caseId: "charge-1",
+            proposal: {
+              sourceHash: evidence.sourceHash,
+              proposedSourceKeys: [evidence.sectionIdentity.sourceKey],
+              confidence: "low",
+              quotedSpans: [title],
+            },
+          },
+        ],
+      }),
+      [{
+        caseId: "charge-1",
+        catalogLabel: "A catalog theft label",
+        catalogCode: "1",
+        mappingClassification: "semantic_conflict",
+        deterministicConfidence: "low",
+        evidence: [evidence],
+      }],
+    );
+    expect(review.accepted).toBe(0);
+    expect(review.rejected).toBe(1);
+    expect(review.outcomes[0].rejectionReason)
+      .toContain("more than one proposal");
+  });
+
+  it("selects Anthropic credentials atomically when direct and integration settings coexist", () => {
+    expect(resolveAuthorityModelClientCredentials({
+      ANTHROPIC_API_KEY: "direct-key",
+    })).toEqual({ apiKey: "direct-key" });
+    expect(resolveAuthorityModelClientCredentials({
+      AI_INTEGRATIONS_ANTHROPIC_API_KEY: "integration-key",
+      AI_INTEGRATIONS_ANTHROPIC_BASE_URL: "https://integration.example",
+    })).toEqual({
+      apiKey: "integration-key",
+      baseURL: "https://integration.example",
+    });
+    expect(resolveAuthorityModelClientCredentials({
+      ANTHROPIC_API_KEY: "direct-key",
+      AI_INTEGRATIONS_ANTHROPIC_API_KEY: "integration-key",
+      AI_INTEGRATIONS_ANTHROPIC_BASE_URL: "https://integration.example",
+    })).toEqual({
+      apiKey: "integration-key",
+      baseURL: "https://integration.example",
+    });
   });
 });
