@@ -2,6 +2,8 @@
 
 Date: September 16, 2026 (Pacific). Environment: development only.
 
+**Later batch:** `docs/ohio-manslaughter-batch.md` records the subsequent replacement of two inherited manslaughter entries. The source-first total is now seven, with 19 offense-bearing sections remaining. The table below preserves this earlier batch's results.
+
 ## Current accounting
 
 | Measure | Result |

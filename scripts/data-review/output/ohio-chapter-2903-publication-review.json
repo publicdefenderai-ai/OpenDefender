@@ -7,8 +7,8 @@
     "offenseCandidates": 24,
     "supportingProvisions": 14,
     "structuralInterpretationSections": 2,
-    "sourceFirstConfiguredRecords": 5,
-    "withheldOffenseBearingSections": 21,
+    "sourceFirstConfiguredRecords": 7,
+    "withheldOffenseBearingSections": 19,
     "explicitlyGroupedNamedUnits": 8,
     "namingTranscriptionReviewRequests": 0
   },
@@ -119,8 +119,10 @@
       "sourceHash": "9a7b0826d368fe364e75fe9fa57fd3bb324c41e93f42731def486db7489e98cf",
       "effectiveDate": "2013-03-22",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-03-voluntary-manslaughter"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -138,9 +140,7 @@
         }
       ],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence.",
-        "Include division (B) sexual-motivation allegation and § 2971.01 dependency; an ordinary first-degree sentencing range does not settle every specification."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {
@@ -150,8 +150,10 @@
       "sourceHash": "73275f6642f5cfd9ba70481ef972ca800719b8c264bb6a087d1b310b918a538e",
       "effectiveDate": "2004-01-01",
       "disposition": "offense_candidate",
-      "sourceFirstConfiguredIds": [],
-      "status": "withheld_from_source_first_publication",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-04-involuntary-manslaughter"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
       "namedUnits": [],
       "offenseAndGradingEvidence": [
         {
@@ -179,8 +181,7 @@
         }
       ],
       "remainingWork": [
-        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
-        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
       ]
     },
     {

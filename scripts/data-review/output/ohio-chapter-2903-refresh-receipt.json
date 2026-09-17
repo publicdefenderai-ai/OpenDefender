@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-17T03:56:27.212Z",
-  "expiresAt": "2026-09-24T03:56:27.212Z",
+  "checkedAt": "2026-09-17T04:09:24.756Z",
+  "expiresAt": "2026-09-24T04:09:24.756Z",
   "documents": [
     {
       "section": "2901.22",
@@ -23,6 +23,20 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.02",
       "contentHash": "7d59b3044eafc9f0ce7a7621fdd1cece55e244ab9a2780daa6189ff17eb36f2b",
       "effectiveDateStart": "1998-06-30"
+    },
+    {
+      "section": "2903.03",
+      "title": "Voluntary manslaughter",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.03",
+      "contentHash": "e36bd07ee457ba2c40cccce0e4c1751513f486861120e3a2473ee9c196304c8c",
+      "effectiveDateStart": "2013-03-22"
+    },
+    {
+      "section": "2903.04",
+      "title": "Involuntary manslaughter",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.04",
+      "contentHash": "e063106ce2eae8f58ae685c39eff5779324855759962b7cae49019a78f7c00b8",
+      "effectiveDateStart": "2004-01-01"
     },
     {
       "section": "2903.041",
@@ -67,11 +81,25 @@
       "effectiveDateStart": "2021-04-12"
     },
     {
+      "section": "2929.13",
+      "title": "Sanction imposed by degree of felony",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.13",
+      "contentHash": "7bca69aa68f4140838a5ec30c0cd59cc0d5a8bd75f920ef890bb34d1d7a507a7",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
       "section": "2929.14",
       "title": "Definite prison terms",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.14",
       "contentHash": "a2ae7ae19aa5af27cd23a3e8d8bd0ff63feb7fb66f7ed547d3681cff251ef247",
       "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2929.144",
+      "title": "Determination of maximum prison term for qualifying felonies of the first or second degree",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.144",
+      "contentHash": "efa7496015b72ae01ca3eabb7a9405b89b2dda2316f91f890abc5630b5a70150",
+      "effectiveDateStart": "2019-03-22"
     },
     {
       "section": "2929.18",
@@ -93,6 +121,48 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.28",
       "contentHash": "c1468dc2d812517e755b4e1b5156d3393415b2028e0a37f02a20b3922da33561",
       "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2941.147",
+      "title": "Sexual motivation specification",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.147",
+      "contentHash": "28df5c91f10b3412f7df3ade899af887ce1b6ba9bc0f198dfd51a3fc1d867523",
+      "effectiveDateStart": "1997-01-01"
+    },
+    {
+      "section": "2941.148",
+      "title": "Sexually violent predator specification",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.148",
+      "contentHash": "37247513de66003aae3a8fae87bf985dc7b606a6a02071e8ea8fb8ce8d3ea5b6",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2971.01",
+      "title": "Sentencing of sexually violent predator definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2971.01",
+      "contentHash": "17ad0f082dbdf43854eaf1f5af4b667b728677d72a2e88d376f20363787e2ec7",
+      "effectiveDateStart": "2025-03-21"
+    },
+    {
+      "section": "2971.03",
+      "title": "Sentencing for sexually violent predator specification",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2971.03",
+      "contentHash": "fe1ba29445fa38ca1a64b02f88719f1da68f8c0d4841f1352fa85eb806c6800e",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "4510.02",
+      "title": "Definite periods of suspension - suspension classes",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.02",
+      "contentHash": "16e0ca4d8dc66bce26fa3684ccad9deb38aa0fa156b590076a6351dbcb491448",
+      "effectiveDateStart": "2004-01-01"
+    },
+    {
+      "section": "4511.19",
+      "title": "Operating vehicle under the influence of alcohol or drugs - OVI",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.19",
+      "contentHash": "144bfefd79506d5e81b83dec2dc823c2e1485afb17e3feaa597a30266c8d7572",
+      "effectiveDateStart": "2025-04-09"
     }
   ]
 }

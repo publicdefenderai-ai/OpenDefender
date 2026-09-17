@@ -7,7 +7,11 @@ import { writeFileSync } from "node:fs";
 import { extractOhioDocument } from "./import-ohio-source-database";
 
 async function main() {
-  const sections = [
+  const manslaughter = process.argv.includes("--manslaughter");
+  const sections = manslaughter ? [
+    "2903.03", "2903.04", "2971.01", "2971.03", "2941.147",
+    "2941.148", "4510.02", "4511.19", "2929.13",
+  ] : [
     "2903.03", "2903.041", "2903.05", "2903.14",
     "2901.22", "2903.09", "2923.11",
     "2929.14", "2929.144", "2929.18", "2929.24", "2929.28",
@@ -31,9 +35,11 @@ async function main() {
       contentHash: createHash("sha256").update(document.text).digest("hex"),
     });
     console.log(`${section}: ${document.title} (${document.effectiveDateStart})`);
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise(resolve => setTimeout(resolve, 1000));
   }
-  writeFileSync("scripts/data-review/output/ohio-homicide-support-evidence.json",
+  writeFileSync(manslaughter
+    ? "scripts/data-review/output/ohio-manslaughter-support-evidence.json"
+    : "scripts/data-review/output/ohio-homicide-support-evidence.json",
     JSON.stringify({ publicationStatus: "acquisition_only_requires_review", documents }, null, 2) + "\n");
 }
 main().catch(error => { console.error(error); process.exitCode = 1; });

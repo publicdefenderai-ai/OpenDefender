@@ -1,6 +1,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { criminalCharges } from "@shared/criminal-charges";
+import { OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION } from "@shared/ohio-chapter-2903-catalog";
 import type { AuthorityCatalogRecord } from "../services/authority-source-database";
 import {
   buildOhioChapter2903PilotManifestRecords,
@@ -50,6 +51,7 @@ export function loadOhioAuthorityManifest(
       record.penalty.retrievedAt.getTime(),
       ...(record.penaltyFine ? [record.penaltyFine.retrievedAt.getTime()] : []),
       ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
+      ...(record.additionalPenalties ?? []).map(document => document.retrievedAt.getTime()),
     ]),
   ));
   // The older generated manifest remains the complete legacy accounting
@@ -89,7 +91,11 @@ export function loadOhioAuthorityManifest(
   ]);
   const catalogRecords = recordsWithPilot.map((record) => ({
     ...record,
-    provisions: Array.isArray(record.provisions)
+    ...(OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(record.chargeId) ? {
+      disposition: "require_exact_reselection" as const,
+      dispositionReason: "Historical catalog entry retained for audit. Reselect the independently source-derived offense; do not silently migrate a saved case.",
+    } : {}),
+    provisions: OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION.has(record.chargeId) ? [] : Array.isArray(record.provisions)
       ? record.provisions.map((provision) => ({
         ...provision,
         retrievedAt: provision.retrievedAt ? new Date(provision.retrievedAt) : null,

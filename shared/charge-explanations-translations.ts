@@ -28,6 +28,30 @@ export interface ChargeTranslationEntry {
 }
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
+  "ohio-voluntary-manslaughter": {
+    es: {
+      draft: true, keyTerms: [],
+      plainSummary: "Voluntary manslaughter en Ohio exige las condiciones de la sección 2903.03, incluida causar a sabiendas una muerte o la terminación ilícita de un embarazo bajo una pasión o ira repentina provocada por una provocación grave razonablemente suficiente para incitar al uso de fuerza mortal. El apartado (B) contempla la motivación sexual; el apartado (C) lo clasifica como delito grave de primer grado. Estar enojado por sí solo no cumple esas condiciones. La sección 2903.09 contiene las definiciones y excepciones relativas al embarazo.",
+      degreeContext: "Para la pena ordinaria de primer grado, la ley actual distingue entre hechos anteriores al 22 de marzo de 2019 y hechos ocurridos a partir de esa fecha. La regla más reciente fija un mínimo elegido de 3 a 11 años y un máximo de pena indeterminada conforme a la sección 2929.144. No confunda el mínimo con el máximo ni lo trate como la pena de todos los casos. Los antecedentes, las especificaciones adicionales y las consecuencias colaterales requieren revisión separada.",
+    },
+    zh: {
+      draft: true, keyTerms: [],
+      plainSummary: "俄亥俄州的 Voluntary manslaughter 须符合第2903.03条规定的条件，包括在受到严重挑衅而突然激愤或暴怒、且该挑衅足以合理地促使使用致命武力的情况下，明知地造成死亡或非法终止妊娠。(B)款涉及性动机，(C)款将该罪定为一级重罪。仅仅生气并不满足这些法定条件。第2903.09条规定了妊娠相关定义和例外。",
+      degreeContext: "关于一级重罪的普通量刑，现行法律区分2019年3月22日之前及当日或之后的行为。较新的规则要求在3至11年中选定最低刑期，并依第2929.144条确定不定期刑的最高期限。不要把最低刑期当作最高刑期，也不要将其视为所有案件的实际刑罚。既往定罪、附加指控及其他法律后果须另行审查。",
+    },
+  },
+  "ohio-involuntary-manslaughter": {
+    es: {
+      draft: true, keyTerms: [],
+      plainSummary: "Involuntary manslaughter en Ohio, conforme a la sección 2903.04, se refiere a una muerte o terminación ilícita de un embarazo que resulte de manera próxima de cometer o intentar cometer un delito subyacente. El apartado (A), relativo a un delito grave, es de primer grado; el apartado (B), relativo a determinadas infracciones menores con exclusiones expresas, es de tercer grado. No es simplemente otro nombre para Reckless homicide. Importa el delito subyacente exacto, y la sección 2903.09 establece las definiciones y excepciones relativas al embarazo.",
+      degreeContext: "Los dos apartados tienen reglas distintas de prisión y multas ordinarias. Las condiciones relacionadas con intoxicación del apartado (D) exigen prisión y suspensión de licencia de clase uno, de por vida. Para el apartado (A), las especificaciones que cumplan los requisitos pueden activar la sección 2971.03, incluidas penas de cadena perpetua; los rangos ordinarios no son máximos universales. La fecha de los hechos, los antecedentes y todas las alegaciones requieren revisión separada.",
+    },
+    zh: {
+      draft: true, keyTerms: [],
+      plainSummary: "俄亥俄州第2903.04条的 Involuntary manslaughter 涉及实施或企图实施基础违法行为而直接导致死亡或非法终止妊娠。(A)款涉及重罪，属于一级重罪；(B)款涉及特定较轻违法行为并有明确排除项，属于三级重罪。它并不只是 Reckless homicide 的另一个名称。具体基础违法行为十分重要，第2903.09条提供了妊娠相关定义和例外。",
+      degreeContext: "两款适用不同的普通监禁和罚金规则。(D)款中与醉酒或药物影响有关的条件要求监禁及一级终身驾照吊销。对于(A)款，符合条件的附加指控可能触发第2971.03条，包括终身监禁，因此普通刑期范围并非普遍适用的最高刑罚。行为日期、既往定罪及全部指控须另行审查。",
+    },
+  },
   "reckless-homicide": {
     es: { draft: true, keyTerms: [], plainSummary: "Reckless homicide se refiere a causar una muerte con el estado mental de temeridad exigido por la ley. La temeridad no es lo mismo que la negligencia o la intención de matar. Verifique la jurisdicción y la cita legal del documento de acusación; los elementos y las penas exactos dependen de esa ley." },
     zh: { draft: true, keyTerms: [], plainSummary: "Reckless homicide 涉及在具备法律规定的鲁莽心理状态下造成死亡。鲁莽不同于疏忽或杀人意图。请核对指控文件中的司法管辖区和法律条款；具体构成要件及处罚由该法律规定。" },

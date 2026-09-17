@@ -12,6 +12,7 @@
  */
 import type { CriminalCharge } from "./criminal-charges";
 import { OHIO_CHAPTER_2903_ADDITIONAL_CHARGES } from "./ohio-chapter-2903-additional-catalog";
+import { OHIO_MANSLAUGHTER_CHARGES } from "./ohio-manslaughter-catalog";
 
 export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   {
@@ -85,9 +86,12 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
     lastVerified: "2026-09",
   },
   ...OHIO_CHAPTER_2903_ADDITIONAL_CHARGES,
+  ...OHIO_MANSLAUGHTER_CHARGES,
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
+  "oh-voluntary-manslaughter",
+  "oh-involuntary-manslaughter",
   "oh-criminally-negligent-homicide",
   "oh-murder-in-the-first-degree",
   "oh-murder-in-the-second-degree",

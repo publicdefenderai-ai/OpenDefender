@@ -2,6 +2,7 @@ import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail 
 import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
 import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
 import { getCaliforniaExplanationSlug } from "./california-authority";
+import { OHIO_MANSLAUGHTER_EXPLANATIONS } from "./ohio-manslaughter-explanations";
 
 export interface LegalTermExplanation {
   term: string;
@@ -19,6 +20,8 @@ export interface ChargeExplanationSource {
 }
 
 export interface ChargeExplanation {
+  /** Restrict an explanation to this jurisdiction; generic callers skip it. */
+  jurisdiction?: string;
   chargePattern: RegExp;
   /** Stable identifier matching the shared/criminal-charge-citations.ts slug convention
    *  (the part after the state prefix, e.g. "ny-murder-in-the-first-degree" -> this slug is
@@ -45,6 +48,7 @@ export interface ChargeExplanation {
 }
 
 export const chargeExplanations: ChargeExplanation[] = [
+  ...OHIO_MANSLAUGHTER_EXPLANATIONS,
   {
     chargePattern: /^reckless homicide$/i, slug: "reckless-homicide",
     plainSummary: "Reckless homicide concerns causing a death with the legally required reckless mental state. Recklessness is not the same as negligence or an intent to kill. Match the jurisdiction and statutory citation on the charging document; the exact elements and penalties come from that law.",
@@ -3714,6 +3718,9 @@ export function getChargeExplanation(
       : undefined;
 
   for (const explanation of chargeExplanations) {
+    if (explanation.jurisdiction &&
+        normalizeJurisdictionCode(explanation.jurisdiction) !==
+          normalizeJurisdictionCode(jurisdiction ?? "")) continue;
     // California canonical records join by ID first.  The name regex remains
     // available for generic callers and for non-California legacy surfaces.
     if (exactSlug && explanation.slug !== exactSlug) continue;
