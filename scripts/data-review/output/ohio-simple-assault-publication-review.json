@@ -1,0 +1,182 @@
+{
+  "reportKind": "evidence_review_not_runtime_approval",
+  "section": "2903.13",
+  "title": "Assault",
+  "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+  "effectiveDate": "2023-10-03",
+  "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
+  "status": "withheld_from_source_first_publication",
+  "rows": [
+    {
+      "subdivision": "(A)",
+      "reviewLabel": "Knowing physical harm or attempted physical harm",
+      "evidence": {
+        "quote": "(A) No person shall knowingly cause or attempt to cause physical harm to another or to another's unborn.",
+        "start": 49,
+        "end": 153,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(B)",
+      "reviewLabel": "Reckless serious physical harm",
+      "evidence": {
+        "quote": "(B) No person shall recklessly cause serious physical harm to another or to another's unborn.",
+        "start": 154,
+        "end": 247,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(1)",
+      "reviewLabel": "First-degree misdemeanor baseline, subject to exceptions",
+      "evidence": {
+        "quote": "(C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.",
+        "start": 248,
+        "end": 614,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(2)",
+      "reviewLabel": "Caretaker: F4; qualifying prior caretaker conviction: F3",
+      "evidence": {
+        "quote": "(2) Except as otherwise provided in this division, if the offense is committed by a caretaker against a person with a functional impairment under the caretaker's care, assault is a felony of the fourth degree. If the offense is committed by a caretaker against a person with a functional impairment under the caretaker's care, if the offender previously has been convicted of or pleaded guilty to a violation of this section or section 2903.11 or 2903.16 of the Revised Code, and if in relation to the previous conviction the offender was a caretaker and the victim was a person with a functional impairment under the offender's care, assault is a felony of the third degree.",
+        "start": 615,
+        "end": 1290,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(3)",
+      "reviewLabel": "Specified state/DYS institutional custody and employee conditions: F3",
+      "evidence": {
+        "quote": "(3) If the offense occurs in or on the grounds of a state correctional institution or an institution of the department of youth services, the victim of the offense is an employee of the department of rehabilitation and correction or the department of youth services, and the offense is committed by a person incarcerated in the state correctional institution or by a person institutionalized in the department of youth services institution pursuant to a commitment to the department of youth services, assault is a felony of the third degree.",
+        "start": 1291,
+        "end": 1833,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(4)",
+      "reviewLabel": "Specified local custody, supervised-offender and school circumstances: F5",
+      "evidence": {
+        "quote": "(4) If the offense is committed in any of the following circumstances, assault is a felony of the fifth degree:\n(a) The offense occurs in or on the grounds of a local correctional facility, the victim of the offense is an employee of the local correctional facility or a probation department or is on the premises of the facility for business purposes or as a visitor, and the offense is committed by a person who is under custody in the facility subsequent to the person's arrest for any crime or delinquent act, subsequent to the person's being charged with or convicted of any crime, or subsequent to the person's being alleged to be or adjudicated a delinquent child.\n(b) The offense occurs off the grounds of a state correctional institution and off the grounds of an institution of the department of youth services, the victim of the offense is an employee of the department of rehabilitation and correction, the department of youth services, or a probation department, the offense occurs during the employee's official work hours and while the employee is engaged in official work responsibilities, and the offense is committed by a person incarcerated in a state correctional institution or institutionalized in the department of youth services who temporarily is outside of the institution for any purpose, by a parolee, by an offender under transitional control, under a community control sanction, or on an escorted visit, by a person under post-release control, or by an offender under any other type of supervision by a government agency.\n(c) The offense occurs off the grounds of a local correctional facility, the victim of the offense is an employee of the local correctional facility or a probation department, the offense occurs during the employee's official work hours and while the employee is engaged in official work responsibilities, and the offense is committed by a person who is under custody in the facility subsequent to the person's arrest for any crime or delinquent act, subsequent to the person being charged with or convicted of any crime, or subsequent to the person being alleged to be or adjudicated a delinquent child and who temporarily is outside of the facility for any purpose or by a parolee, by an offender under transitional control, under a community control sanction, or on an escorted visit, by a person under post-release control, or by an offender under any other type of supervision by a government agency.\n(d) The victim of the offense is a school teacher or administrator or a school bus operator, and the offense occurs in a school, on school premises, in a school building, on a school bus, or while the victim is outside of school premises or a school bus and is engaged in duties or official responsibilities associated with the victim's employment or position as a school teacher or administrator or a school bus operator, including, but not limited to, driving, accompanying, or chaperoning students at or on class or field trips, athletic events, or other school extracurricular activities or functions outside of school premises.",
+        "start": 1834,
+        "end": 4924,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(5)",
+      "reviewLabel": "Specified on-duty personnel or purposeful emergency-responder targeting: F4",
+      "evidence": {
+        "quote": "(5) If the assault is committed in any of the following circumstances, assault is a felony of the fourth degree:\n(a) The victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, a firefighter, or a person performing emergency medical service, while in the performance of the officer's, investigator's, firefighter's, or person's official duties.\n(b) The victim of the offense is an emergency service responder, the offender knows or reasonably should know that the victim is an emergency service responder, and it is the offender's specific purpose to commit the offense against an emergency service responder.\n(c) The victim of the offense is a family or household member or co-worker of a person who is an emergency service responder, the offender knows or reasonably should know that the victim is a family or household member or co-worker of an emergency service responder, and it is the offender's specific purpose to commit the offense against a family or household member or co-worker of an emergency service responder.",
+        "start": 4925,
+        "end": 6014,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(6)",
+      "reviewLabel": "C5a peace officer/BCI investigator plus serious harm: mandatory F4 term at least twelve months",
+      "evidence": {
+        "quote": "(6) If the offense is a felony of the fourth degree under division (C)(5)(a) of this section, if the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, and if the victim suffered serious physical harm as a result of the commission of the offense, the court, pursuant to division (F) of section 2929.13 of the Revised Code, shall impose as a mandatory prison term one of the prison terms prescribed for a felony of the fourth degree that is at least twelve months in duration.",
+        "start": 6015,
+        "end": 6559,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(7)",
+      "reviewLabel": "Child-services duties: F5; qualifying prior offense of violence: F4",
+      "evidence": {
+        "quote": "(7) If the victim of the offense is an officer or employee of a public children services agency or a private child placing agency and the offense relates to the officer's or employee's performance or anticipated performance of official responsibilities or duties, assault is either a felony of the fifth degree or, if the offender previously has been convicted of or pleaded guilty to an offense of violence, the victim of that prior offense was an officer or employee of a public children services agency or private child placing agency, and that prior offense related to the officer's or employee's performance or anticipated performance of official responsibilities or duties, a felony of the fourth degree.",
+        "start": 6560,
+        "end": 7270,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(8)",
+      "reviewLabel": "Hospital personnel: knowledge, duties and hospital training conditions; M1/$5,000 ceiling or qualifying-prior F5",
+      "evidence": {
+        "quote": "(8) If the victim of the offense is a health care professional of a hospital, a health care worker of a hospital, or a security officer of a hospital whom the offender knows or has reasonable cause to know is a health care professional of a hospital, a health care worker of a hospital, or a security officer of a hospital, if the victim is engaged in the performance of the victim's duties, and if the hospital offers de-escalation or crisis intervention training for such professionals, workers, or officers, assault is one of the following:\n(a) Except as otherwise provided in division (C)(8)(b) of this section, assault committed in the specified circumstances is a misdemeanor of the first degree. Notwithstanding the fine specified in division (A)(2)(a) of section 2929.28 of the Revised Code for a misdemeanor of the first degree, in sentencing the offender under this division and if the court decides to impose a fine, the court may impose upon the offender a fine of not more than five thousand dollars.\n(b) If the offender previously has been convicted of or pleaded guilty to one or more assault or homicide offenses committed against hospital personnel, assault committed in the specified circumstances is a felony of the fifth degree.",
+        "start": 7271,
+        "end": 8519,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(9)",
+      "reviewLabel": "Justice personnel: knowledge and duties conditions; M1/$5,000 ceiling or qualifying-prior F5",
+      "evidence": {
+        "quote": "(9) If the victim of the offense is a judge, magistrate, prosecutor, or court official or employee whom the offender knows or has reasonable cause to know is a judge, magistrate, prosecutor, or court official or employee, and if the victim is engaged in the performance of the victim's duties, assault is one of the following:\n(a) Except as otherwise provided in division (C)(9)(b) of this section, assault committed in the specified circumstances is a misdemeanor of the first degree. In sentencing the offender under this division, if the court decides to impose a fine, notwithstanding the fine specified in division (A)(2)(a) of section 2929.28 of the Revised Code for a misdemeanor of the first degree, the court may impose upon the offender a fine of not more than five thousand dollars.\n(b) If the offender previously has been convicted of or pleaded guilty to one or more assault or homicide offenses committed against justice system personnel, assault committed in the specified circumstances is a felony of the fifth degree.",
+        "start": 8520,
+        "end": 9554,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(C)(10)",
+      "reviewLabel": "Known-pregnancy specification: separate misdemeanor/felony rules; C6 override",
+      "evidence": {
+        "quote": "(10) If an offender who is convicted of or pleads guilty to assault when it is a misdemeanor also is convicted of or pleads guilty to a specification as described in section 2941.1423 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, the court shall sentence the offender to a mandatory jail term as provided in division (F) of section 2929.24 of the Revised Code.\nIf an offender who is convicted of or pleads guilty to assault when it is a felony also is convicted of or pleads guilty to a specification as described in section 2941.1423 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, except as otherwise provided in division (C)(6) of this section, the court shall sentence the offender to a mandatory prison term as provided in division (B)(8) of section 2929.14 of the Revised Code.",
+        "start": 9555,
+        "end": 10482,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(D)",
+      "reviewLabel": "Other prosecutions allowed; same-conduct/same-victim menacing allied-offense rule",
+      "evidence": {
+        "quote": "(D) A prosecution for a violation of this section does not preclude a prosecution of a violation of any other section of the Revised Code. One or more acts, a series of acts, or a course of behavior that can be prosecuted under this section or any other section of the Revised Code may be prosecuted under this section, the other section of the Revised Code, or both sections. However, if an offender is convicted of or pleads guilty to a violation of this section and also is convicted of or pleads guilty to a violation of section 2903.22 of the Revised Code based on the same conduct involving the same victim that was the basis of the violation of this section, the two offenses are allied offenses of similar import under section 2941.25 of the Revised Code.",
+        "start": 10483,
+        "end": 11246,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    },
+    {
+      "subdivision": "(E)",
+      "reviewLabel": "All local definitions, including exclusions and adopted cross-references",
+      "evidence": {
+        "quote": "(E) As used in this section:\n(1) \"Peace officer\" has the same meaning as in section 2935.01 of the Revised Code.\n(2) \"Firefighter\" means any person who is a firefighter as defined in section 3937.41 of the Revised Code and, for purposes of division (E)(21) of this section, also includes a member of a fire department as defined in section 742.01 of the Revised Code.\n(3) \"Emergency medical service\" has the same meaning as in section 4765.01 of the Revised Code.\n(4) \"Local correctional facility\" means a county, multicounty, municipal, municipal-county, or multicounty-municipal jail or workhouse, a minimum security jail established under section 341.23 or 753.21 of the Revised Code, or another county, multicounty, municipal, municipal-county, or multicounty-municipal facility used for the custody of persons arrested for any crime or delinquent act, persons charged with or convicted of any crime, or persons alleged to be or adjudicated a delinquent child.\n(5) \"Employee of a local correctional facility\" means a person who is an employee of the political subdivision or of one or more of the affiliated political subdivisions that operates the local correctional facility and who operates or assists in the operation of the facility.\n(6) \"School teacher or administrator\" means either of the following:\n(a) A person who is employed in the public schools of the state under a contract described in section 3311.77 or 3319.08 of the Revised Code in a position in which the person is required to have a certificate issued pursuant to sections 3319.22 to 3319.311 of the Revised Code.\n(b) A person who is employed by a nonpublic school for which the director of education and workforce prescribes minimum standards under section 3301.07 of the Revised Code and who is certificated in accordance with section 3301.071 of the Revised Code.\n(7) \"Community control sanction\" has the same meaning as in section 2929.01 of the Revised Code.\n(8) \"Escorted visit\" means an escorted visit granted under section 2967.27 of the Revised Code.\n(9) \"Post-release control\" and \"transitional control\" have the same meanings as in section 2967.01 of the Revised Code.\n(10) \"Investigator of the bureau of criminal identification and investigation\" has the same meaning as in section 2903.11 of the Revised Code.\n(11) \"Health care professional\" and \"health care worker\" have the same meanings as in section 2305.234 of the Revised Code.\n(12) \"Assault or homicide offense committed against hospital personnel\" means a violation of this section or of section 2903.01, 2903.02, 2903.03, 2903.04, 2903.041, 2903.11, 2903.12, or 2903.14 of the Revised Code committed in circumstances in which all of the following apply:\n(a) The victim of the offense was a health care professional of a hospital, a health care worker of a hospital, or a security officer of a hospital.\n(b) The offender knew or had reasonable cause to know that the victim was a health care professional of a hospital, a health care worker of a hospital, or a security officer of a hospital.\n(c) The victim was engaged in the performance of the victim's duties.\n(d) The hospital offered de-escalation or crisis intervention training for such professionals, workers, or officers.\n(13) \"De-escalation or crisis intervention training\" means de-escalation or crisis intervention training for health care professionals of a hospital, health care workers of a hospital, and security officers of a hospital to facilitate interaction with patients, members of a patient's family, and visitors, including those with mental impairments.\n(14) \"Assault or homicide offense committed against justice system personnel\" means a violation of this section or of section 2903.01, 2903.02, 2903.03, 2903.04, 2903.041, 2903.11, 2903.12, or 2903.14 of the Revised Code committed in circumstances in which the victim of the offense was a judge, magistrate, prosecutor, or court official or employee whom the offender knew or had reasonable cause to know was a judge, magistrate, prosecutor, or court official or employee, and the victim was engaged in the performance of the victim's duties.\n(15) \"Court official or employee\" means any official or employee of a court created under the constitution or statutes of this state or of a United States court located in this state.\n(16) \"Judge\" means a judge of a court created under the constitution or statutes of this state or of a United States court located in this state.\n(17) \"Magistrate\" means an individual who is appointed by a court of record of this state and who has the powers and may perform the functions specified in Civil Rule 53, Criminal Rule 19, or Juvenile Rule 40, or an individual who is appointed by a United States court located in this state who has similar powers and functions.\n(18) \"Prosecutor\" has the same meaning as in section 2935.01 of the Revised Code.\n(19)(a) \"Hospital\" means, subject to division (E)(19)(b) of this section, an institution classified as a hospital under section 3701.01 of the Revised Code in which are provided to patients diagnostic, medical, surgical, obstetrical, psychiatric, or rehabilitation care or a hospital operated by a health maintenance organization.\n(b) \"Hospital\" does not include any of the following:\n(i) A facility licensed under Chapter 3721. of the Revised Code, a health care facility operated by the department of mental health and addiction services or the department of developmental disabilities, a health maintenance organization that does not operate a hospital, or the office of any private, licensed health care professional, whether organized for individual or group practice;\n(ii) An institution for the sick that is operated exclusively for patients who use spiritual means for healing and for whom the acceptance of medical care is inconsistent with their religious beliefs, accredited by a national accrediting organization, exempt from federal income taxation under section 501 of the \"Internal Revenue Code of 1986,\" 100 Stat. 2085, 26 U.S.C. 1, as amended, and providing twenty-four-hour nursing care pursuant to the exemption in division (E) of section 4723.32 of the Revised Code from the licensing requirements of Chapter 4723. of the Revised Code.\n(20) \"Health maintenance organization\" has the same meaning as in section 3727.01 of the Revised Code.\n(21) \"Emergency service responder\" means any law enforcement officer, first responder, emergency medical technician-basic, emergency medical technician-intermediate, emergency medical technician-paramedic, firefighter, or volunteer firefighter.\n(22) \"Family or household member\" means any of the following:\n(a) Any of the following who is residing or has resided with a person who is employed as an emergency service responder:\n(i) A spouse, a person living as a spouse, or a former spouse of a person who is employed as an emergency service responder;\n(ii) A parent, a foster parent, or a child of a person who is employed as an emergency service responder, or another person related by consanguinity or affinity to a person who is employed as an emergency service responder;\n(iii) A parent or a child of a spouse, person living as a spouse, or former spouse of a person who is employed as an emergency service responder, or another person related by consanguinity or affinity to a spouse, person living as a spouse, or former spouse of a person who is employed as an emergency service responder.\n(b) The natural parent of any child of whom a person who is employed as an emergency service responder is the other natural parent or is the putative other natural parent.\n(23) \"First responder,\" \"emergency medical technician-basic,\" \"emergency medical technician-intermediate,\" and \"emergency medical technician-paramedic\" have the same meanings as in section 4765.01 of the Revised Code.\n(24) \"Volunteer firefighter\" has the same meaning as in section 146.01 of the Revised Code.\n(25) \"Person living as a spouse\" means a person who is living or has lived with a person who is employed as an emergency service responder in a common law marital relationship, who otherwise is cohabiting with a person who is employed as an emergency service responder, or who otherwise has cohabited with a person who is employed as an emergency service responder within five years prior to the date of the alleged commission of the act in question.\n(26) \"Co-worker\" means a person who is employed by the organization or entity that is served by a person who is employed as an emergency service responder.",
+        "start": 11247,
+        "end": 19751,
+        "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+      }
+    }
+  ],
+  "acquisition": {
+    "requestedPages": 18,
+    "acquiredPages": 17,
+    "failures": [
+      {
+        "section": "3727.01",
+        "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3727.01",
+        "error": "3727.01: HTTP 302 -> /ohio-revised-code/number-not-found/section-3727.01"
+      }
+    ]
+  },
+  "unresolvedAuthority": [
+    {
+      "section": "3727.01",
+      "adoptedBy": "2903.13(E)(20)",
+      "affects": "HMO meaning used in hospital definition and exclusions, including the hospital-personnel branch",
+      "officialUrl": "https://codes.ohio.gov/ohio-revised-code/section-3727.01",
+      "secondaryHistoricalLead": "https://law.justia.com/codes/ohio/2023/title-37/chapter-3727/section-3727-01/",
+      "secondaryStatus": "historical_secondary_requires_review_not_current_authority",
+      "question": "The secondary 2023 heading labels repeal effective 2024-09-30 by HB110. Establish official repeal/transition evidence and the legally applicable incorporated definition; do not substitute a present-day hospital or HMO definition by analogy."
+    }
+  ],
+  "remainingChecks": [
+    "Close all adopted definitions and their material exclusions; acquiring direct pages is not proof of transitive closure.",
+    "Preserve both knowing harm/attempt and reckless serious-harm conduct; do not import the weapon element from other assault sections.",
+    "Retain hospital training, knowledge, duty and qualifying-prior conditions, and distinguish hospital from justice-system prior-offense definitions.",
+    "Attach misdemeanor 2929.24/2929.28 and felony 2929.14/2929.18 penalties, 2929.13(F), 2941.1423, pregnancy exceptions and 2941.25 as required runtime evidence.",
+    "Misdemeanor pregnancy specification: at least thirty days under 2929.24(F); felony specification: six months OR the applicable-degree term, subject to C6. Neither is an automatic added six months.",
+    "Review school credential-range and other adopted legal-status boundaries without claiming credential or court-appointment certification.",
+    "Complete EN/ES/ZH explanations and independent review before adding any new canonical runtime record; do not silently remap saved simple-assault cases."
+  ]
+}
