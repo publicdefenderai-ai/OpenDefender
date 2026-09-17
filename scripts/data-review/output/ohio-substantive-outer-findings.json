@@ -1,0 +1,837 @@
+[
+  {
+    "section": "1315.55",
+    "sourceHash": "1222baefa4edbb4dd421b6894e37a2303581719ac7c28b795ba7864a49c14853",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "money laundering",
+        "conduct": "R.C. 1315.55(A)(1)-(5): specified transactions involving proceeds or represented proceeds of corrupt activity.",
+        "grading": "Felony of the third degree under 1315.99(C); additional fine authorized by 1315.55(B).",
+        "evidenceQuotes": [
+          "(1) No person shall conduct or attempt to conduct a transaction knowing that the property involved in the transaction is the proceeds of some form of unlawful activity with the purpose of committing or furthering the commission of corrupt activity.",
+          "(C) Whoever violates division (A) of section 1315.55 of the Revised Code is guilty of money laundering. A violation of division (A)(1), (2), (3), (4), or (5) of that section is a felony of the third degree"
+        ]
+      }
+    ],
+    "resolution": "Source-first charge is expressly named and graded by 1315.99(C); legacy alias approval is unnecessary.",
+    "question": null,
+    "relatedSections": [
+      "1315.99"
+    ]
+  },
+  {
+    "section": "1533.08",
+    "sourceHash": "79d06d3c1b18e1e52f415f729c0e4a9e5c23389abfcde71002fa0d42f97a1ae9",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "failure to carry or exhibit wild animal permit",
+        "conduct": "Permit holder collecting or possessing protected wild animals fails to carry the permit or exhibit it on demand.",
+        "grading": "Not stated in the supplied section or selected references.",
+        "evidenceQuotes": [
+          "Each holder of a permit engaged in collecting or who possesses such wild animals shall carry the permit at all times and shall exhibit it upon demand",
+          "Failure to so carry or exhibit the permit constitutes an offense under this section."
+        ]
+      }
+    ],
+    "resolution": "The offense is explicit but unnamed; use a descriptive source-first name, not the broader section title as conduct. Penalty-source acquisition is a technical follow-up.",
+    "question": null,
+    "relatedSections": [
+      "2935.01",
+      "1533.15"
+    ]
+  },
+  {
+    "section": "1533.12",
+    "sourceHash": "52ff7d9f444849a50cb685a58343af62ef8c8245c17d492dfd4ad77ed0ed8bb6",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Despite the title, this text principally supplies military/veteran/disability licensing rules and exemptions; it does not contain a guilt or penalty division supporting a standalone charge.",
+    "question": null,
+    "relatedSections": [
+      "1533.11",
+      "1533.32"
+    ]
+  },
+  {
+    "section": "2151.022",
+    "sourceHash": "fd6a3f20dc7f9490ba0d72495b66afd8a5a0821e64b462d2f3bcf5d420218387",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Definition only, not a criminal offense section.",
+    "question": null,
+    "relatedSections": [
+      "2907.39",
+      "2923.211",
+      "2925.55",
+      "2151.87"
+    ]
+  },
+  {
+    "section": "2152.02",
+    "sourceHash": "04f134d9e384af38ef39949041be468edb2b28f812f5b8e991c61d1b0862bb8f",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Juvenile-code definitions only; no standalone guilt division.",
+    "question": null,
+    "relatedSections": [
+      "2152.12",
+      "2152.121"
+    ]
+  },
+  {
+    "section": "2152.12",
+    "sourceHash": "9ca23c5963993e93bd7abc2f5e8f9dc64f6705f239035e012895ce7d158dca01",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Transfer/bindover procedure, not an offense. The prohibition on adult prosecution absent transfer does not create a charge.",
+    "question": null,
+    "relatedSections": [
+      "2152.10",
+      "2152.02",
+      "2152.121"
+    ]
+  },
+  {
+    "section": "2705.02",
+    "sourceHash": "85cf00114ba2d2ea4faaebba39902f29904650b89e50aaa97aa66ae16d525180",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Enumerates acts punishable as contempt but does not name or grade a criminal offense: “A person guilty of any of the following acts may be punished as for a contempt”.",
+    "question": null,
+    "relatedSections": [
+      "3109.19",
+      "3111.81",
+      "5101.37",
+      "3111.41"
+    ]
+  },
+  {
+    "section": "2925.03",
+    "sourceHash": "651e899201fee2726fac5ea2b860e320540ed06c800903710a70181e3b329fd1",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "aggravated trafficking in drugs; trafficking in drugs; trafficking in marihuana; trafficking in cocaine; trafficking in L.S.D.; trafficking in heroin; trafficking in hashish; trafficking in a controlled substance analog; trafficking in a fentanyl-related compound",
+        "conduct": "R.C. 2925.03(A)(1)-(2): knowing sale/offer, or specified handling with knowledge or reasonable cause to believe the substance is intended for sale or resale.",
+        "grading": "Explicit drug-, amount-, location-, and circumstance-dependent table in (C)(1)-(11), ranging from minor misdemeanor where specified through first-degree felony.",
+        "evidenceQuotes": [
+          "(1) Sell or offer to sell a controlled substance or a controlled substance analog;",
+          "(C) Whoever violates division (A) of this section is guilty of one of the following:",
+          "(a) Except as otherwise provided in division (C)(1)(b), (c), (d), (e), or (f) of this section, aggravated trafficking in drugs is a felony of the fourth degree"
+        ]
+      }
+    ],
+    "resolution": "All listed statutory names are routine source-first candidates; implement the explicit (C) table as data. Reject false extraction “one of the following:” and correct truncated “trafficking in L” to “trafficking in L.S.D.”",
+    "question": null,
+    "relatedSections": [
+      "2929.13",
+      "2929.14",
+      "2925.38",
+      "3719.01"
+    ]
+  },
+  {
+    "section": "2925.04",
+    "sourceHash": "7cc016535ed099e05d144b635ccb3208273226e99ae85eae5786c23bba866ccd",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "illegal manufacture of drugs",
+        "conduct": "2925.04(A), controlled substance other than marihuana.",
+        "grading": "Explicit (C)(2)-(4) table: generally F2/F1 for schedule I/II or methamphetamine depending on circumstances, and F3/F2 for schedule III-V depending on vicinity.",
+        "evidenceQuotes": [
+          "(A) No person shall knowingly cultivate marihuana or knowingly manufacture or otherwise engage in any part of the production of a controlled substance.",
+          "whoever commits a violation of division (A) of this section that involves any drug other than marihuana is guilty of illegal manufacture of drugs"
+        ]
+      },
+      {
+        "name": "illegal cultivation of marihuana",
+        "conduct": "2925.04(A), knowingly cultivating marihuana.",
+        "grading": "Explicit marihuana amount/vicinity table in (C)(5).",
+        "evidenceQuotes": [
+          "whoever commits a violation of division (A) of this section that involves marihuana is guilty of illegal cultivation of marihuana."
+        ]
+      }
+    ],
+    "resolution": "Two offenses are expressly named. Reject “a specification of the type described in division (A) of section 2941...” as a false offense name; it is sentencing/specification language.",
+    "question": null,
+    "relatedSections": [
+      "2925.03",
+      "2925.041",
+      "2941.1410"
+    ]
+  },
+  {
+    "section": "2925.05",
+    "sourceHash": "c3e1216dcd79e2dc8d9fd3dcf3be41b0ff94045bcd4a6e5035efbfee48028c80",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "aggravated funding of drug trafficking",
+        "conduct": "2925.05(A), schedule I/II except marihuana, at specified threshold.",
+        "grading": "Felony of the first degree; mandatory first-degree felony prison term.",
+        "evidenceQuotes": [
+          "(A) No person shall knowingly provide money or other items of value to another person with the purpose that the recipient of the money or items of value use them to obtain any controlled substance",
+          "whoever violates division (A) of this section is guilty of aggravated funding of drug trafficking, a felony of the first degree"
+        ]
+      },
+      {
+        "name": "funding of drug trafficking",
+        "conduct": "2925.05(A), schedule III, IV, or V at bulk threshold.",
+        "grading": "Felony of the second degree; mandatory second-degree felony prison term.",
+        "evidenceQuotes": [
+          "whoever violates division (A) of this section is guilty of funding of drug trafficking, a felony of the second degree"
+        ]
+      },
+      {
+        "name": "funding of marihuana trafficking",
+        "conduct": "2925.05(A), marihuana at 200 grams or more.",
+        "grading": "Felony of the third degree, with stated prison presumption and repeat-offender rule.",
+        "evidenceQuotes": [
+          "whoever violates division (A) of this section is guilty of funding of marihuana trafficking, a felony of the third degree"
+        ]
+      }
+    ],
+    "resolution": "Three explicit source-first offenses. Reject extracted specification prose as an offense name.",
+    "question": null,
+    "relatedSections": [
+      "2925.04",
+      "2925.03",
+      "2941.1410"
+    ]
+  },
+  {
+    "section": "2925.11",
+    "sourceHash": "48873a120faeac17de6d06cbb50fda7ad3b3aabc725e18a0154de89e27aa7d97",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "aggravated possession of drugs; possession of drugs; possession of marihuana; possession of cocaine; possession of L.S.D.; possession of heroin; possession of hashish; possession of a controlled substance analog; possession of a fentanyl-related compound",
+        "conduct": "R.C. 2925.11(A), subject to (B) exceptions and immunity.",
+        "grading": "Explicit drug/amount tables in (C)(1)-(11), from minor misdemeanor where specified through first-degree felony.",
+        "evidenceQuotes": [
+          "(A) No person shall knowingly obtain, possess, or use a controlled substance or a controlled substance analog.",
+          "(iv) \"Minor drug possession offense\" means a violation of this section that is a misdemeanor or a felony of the fifth degree."
+        ]
+      }
+    ],
+    "resolution": "Use the statutory alternatives in (C), with threshold logic treated as engineering/data work. Reject “one of the following:” and correct truncated “possession of L” to “possession of L.S.D.” Duplicate extracted names should be deduplicated, not treated as new offenses.",
+    "question": null,
+    "relatedSections": [
+      "2913.01",
+      "3719.01",
+      "2925.12",
+      "2925.14"
+    ]
+  },
+  {
+    "section": "2925.13",
+    "sourceHash": "e4b5a3cac01e8a0c94318e8158fa24e014333345d9ad8d7bcb9862451207e472",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "permitting drug abuse",
+        "conduct": "Knowingly permitting a vehicle or premises under the person's specified control to be used for commission of a felony drug abuse offense, under (A) or (B).",
+        "grading": "Misdemeanor of the first degree by default; felony of the fifth degree when (C)(3)(a) or (b) applies.",
+        "evidenceQuotes": [
+          "(C)(1) Whoever violates this section is guilty of permitting drug abuse.",
+          "(2) Except as provided in division (C)(3) of this section, permitting drug abuse is a misdemeanor of the first degree.",
+          "(3) Permitting drug abuse is a felony of the fifth degree"
+        ]
+      }
+    ],
+    "resolution": "Express name, conduct divisions, and grades are source-complete.",
+    "question": null,
+    "relatedSections": [
+      "2925.02",
+      "2925.03",
+      "2925.04",
+      "2925.041"
+    ]
+  },
+  {
+    "section": "2925.14",
+    "sourceHash": "e0ca3c770008911245d2b70a73055b3941849686dc6ad2507052613571479412",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "illegal use or possession of drug paraphernalia",
+        "conduct": "2925.14(C)(1), subject to (D)(2)-(4).",
+        "grading": "Misdemeanor of the fourth degree.",
+        "evidenceQuotes": [
+          "(C)(1) Subject to divisions (D)(2), (3), and (4) of this section, no person shall knowingly use, or possess with purpose to use, drug paraphernalia.",
+          "(F)(1) Whoever violates division (C)(1) of this section is guilty of illegal use or possession of drug paraphernalia, a misdemeanor of the fourth degree."
+        ]
+      },
+      {
+        "name": "dealing in drug paraphernalia",
+        "conduct": "2925.14(C)(2), except juvenile sale under (F)(3).",
+        "grading": "Misdemeanor of the second degree.",
+        "evidenceQuotes": [
+          "(2) No person shall knowingly sell, or possess or manufacture with purpose to sell, drug paraphernalia",
+          "whoever violates division (C)(2) of this section is guilty of dealing in drug paraphernalia, a misdemeanor of the second degree."
+        ]
+      },
+      {
+        "name": "selling drug paraphernalia to juveniles",
+        "conduct": "Violation of (C)(2) by selling to a juvenile.",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "(3) Whoever violates division (C)(2) of this section by selling drug paraphernalia to a juvenile is guilty of selling drug paraphernalia to juveniles, a misdemeanor of the first degree."
+        ]
+      },
+      {
+        "name": "illegal advertising of drug paraphernalia",
+        "conduct": "2925.14(C)(3).",
+        "grading": "Misdemeanor of the second degree.",
+        "evidenceQuotes": [
+          "(4) Whoever violates division (C)(3) of this section is guilty of illegal advertising of drug paraphernalia, a misdemeanor of the second degree."
+        ]
+      }
+    ],
+    "resolution": "Four express candidates; marijuana, overdose-assistance, approved-strip, and licensed-conduct exclusions must remain attached to applicable divisions.",
+    "question": null,
+    "relatedSections": [
+      "3719.172",
+      "2925.11",
+      "4729.261"
+    ]
+  },
+  {
+    "section": "2927.12",
+    "sourceHash": "710556f7816926d9581b28c89b454a556fc26a4177fb84dc6a1eaad59c4501ac",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "ethnic intimidation",
+        "conduct": "Violation of enumerated predicate provisions by reason of another person/group's race, color, religion, or national origin.",
+        "grading": "One degree higher than the predicate offense.",
+        "evidenceQuotes": [
+          "(A) No person shall violate section 2903.21, 2903.22, 2909.06, or 2909.07, or division (A)(3), (4), or (5) of section 2917.21 of the Revised Code by reason of the race, color, religion, or national origin of another person or group of persons.",
+          "Ethnic intimidation is an offense of the next higher degree than the offense the commission of which is a necessary element of ethnic intimidation."
+        ]
+      }
+    ],
+    "resolution": "Explicit derivative offense and grading rule.",
+    "question": null,
+    "relatedSections": [
+      "2903.21",
+      "2903.22",
+      "2909.06",
+      "2909.07",
+      "2917.21"
+    ]
+  },
+  {
+    "section": "2929.14",
+    "sourceHash": "a2ae7ae19aa5af27cd23a3e8d8bd0ff63feb7fb66f7ed547d3681cff251ef247",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Felony sentencing-term statute, not a standalone offense. Reject “a specification of the type described...” as an extracted offense name.",
+    "question": null,
+    "relatedSections": [
+      "2929.144",
+      "2941.141",
+      "2941.145",
+      "2941.1410"
+    ]
+  },
+  {
+    "section": "2937.99",
+    "sourceHash": "5714fcfeb2f147eba50c8ac12a8df135b0880e1d0f267eeb77ae10bb6a22fb9b",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "failure to appear",
+        "conduct": "Failing to appear as required after release under 2937.29.",
+        "grading": "F4 if release concerned a felony charge or felony appeal; M1 if it concerned a misdemeanor charge or witness appearance; (D) traffic exclusions and exceptions apply.",
+        "evidenceQuotes": [
+          "(A) No person shall fail to appear as required, after having been released pursuant to section 2937.29 of the Revised Code.",
+          "(B) If the release was in connection with a felony charge or pending appeal after conviction of a felony, failure to appear is a felony of the fourth degree.",
+          "(C) If the release was in connection with a misdemeanor charge or for appearance as a witness, failure to appear is a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Express standalone offense; title “Penalty” is not the charge name.",
+    "question": null,
+    "relatedSections": [
+      "2937.29",
+      "4511.19",
+      "4549.02",
+      "4549.021"
+    ]
+  },
+  {
+    "section": "2941.142",
+    "sourceHash": "048ff69f0c9e4372a316265aa667b52fab7d129c02ed83b53a896b230fd3e751",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Indictment specification for criminal-gang participation and an additional mandatory term; not an independently named offense.",
+    "question": null,
+    "relatedSections": [
+      "2929.14",
+      "2152.17",
+      "2923.41"
+    ]
+  },
+  {
+    "section": "2941.145",
+    "sourceHash": "dc6f5f1aabe9e7199a3706add05c4c5d17a52c7a5d108e01bc19f2211fbf3c73",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Firearm specification pleading/sentencing provision, not “Use of a Firearm in Commission of a Felony” as an independent offense.",
+    "question": null,
+    "relatedSections": [
+      "2929.14",
+      "2152.17",
+      "2923.11"
+    ]
+  },
+  {
+    "section": "2951.08",
+    "sourceHash": "57ad40b2da5eb0c5be87b93ae8e008031b197a7b7220029375674633dc7ff6cb",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Arrest and hearing procedure for a person under community control; it does not create or grade “probation violation” as an offense.",
+    "question": null,
+    "relatedSections": [
+      "2929.25",
+      "2929.15",
+      "2935.03",
+      "2935.04"
+    ]
+  },
+  {
+    "section": "3321.38",
+    "sourceHash": "c3243f5437a70dd6c1a7ee6c6d190c9c40af992933e43ae8390c993e526decae",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "failure to send child to school",
+        "conduct": "(A) parent/guardian/caregiver of compulsory-school-age child violates an enumerated attendance provision; (D) failure to give court-required bond is a separate prohibited act.",
+        "grading": "For (A), supporting 3321.99 authorizes a fine up to $500 or up to 70 hours community service; supplied text does not state a misdemeanor/felony degree or a (D) penalty.",
+        "evidenceQuotes": [
+          "(A) No parent, guardian, or other person having care of a child of compulsory school age shall violate any provision of section 3321.01, 3321.03, 3321.04, 3321.07, 3321.10, 3321.19, 3321.20, or 3331.14 of the Revised Code.",
+          "Whoever violates division (A) of section 3321.38 of the Revised Code may be fined not more than five hundred dollars or may be ordered to perform not more than seventy hours of community service work."
+        ]
+      }
+    ],
+    "resolution": "Routine source-first candidate. Do not infer a degree absent text; acquiring any (D) penalty is a technical task.",
+    "question": null,
+    "relatedSections": [
+      "3321.99",
+      "2151.23"
+    ]
+  },
+  {
+    "section": "3704.14",
+    "sourceHash": "f73dcd01d8d46695efe2f97a2cca2ef93f368acbb08e60d3e130268514885214",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Administrative authority and contracting requirements for an enhanced vehicle inspection/maintenance program; no guilt division.",
+    "question": null,
+    "relatedSections": [
+      "4513.22",
+      "4501.01"
+    ]
+  },
+  {
+    "section": "3743.65",
+    "sourceHash": "8fb4d32023db3edc1d1b7fc852e68fe1b8b1224fa606ae1b358ec71f26927284",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "violation of fireworks possession, sale, and use restrictions",
+        "conduct": "Distinct prohibitions in (A)-(H), including unauthorized possession/sale/discharge, underage sale/access, 1.3G possession, disabling suppression systems, intoxicated discharge, and discharge on another's property without permission.",
+        "grading": "Not stated in supplied section/references.",
+        "evidenceQuotes": [
+          "(B) Except as provided in sections 3743.45 and 3743.80 of the Revised Code and except for licensed exhibitors of fireworks authorized to conduct a fireworks exhibition pursuant to sections 3743.50 to 3743.55 of the Revised Code, no person shall discharge, ignite, or explode any fireworks in this state.",
+          "(G) No person shall negligently discharge, ignite, or explode fireworks while in possession or control of, or under the influence of, any intoxicating liquor, beer, or controlled substance."
+        ]
+      }
+    ],
+    "resolution": "Use division-specific descriptive records rather than inventing one named offense. Penalty acquisition is technical, not legal ambiguity.",
+    "question": null,
+    "relatedSections": [
+      "3743.44",
+      "3743.45",
+      "3743.80",
+      "3781.108"
+    ]
+  },
+  {
+    "section": "3767.32",
+    "sourceHash": "6f0a1c7388468d5084d87e3a437daf5233863006dafb83c2a990fa2338123aab",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "littering",
+        "conduct": "(A) depositing litter on specified property/waters regardless of intent outside exceptions; (B) knowingly depositing litter without privilege in another's receptacle outside exceptions.",
+        "grading": "Not stated in supplied section/references.",
+        "evidenceQuotes": [
+          "(A) No person, regardless of intent, shall deposit litter or cause litter to be deposited on any public property, on private property not owned by the person, or in or on waters of the state unless one of the following applies:",
+          "(B) No person, without privilege to do so, shall knowingly deposit litter, or cause it to be deposited, in a litter receptacle located on any public property or on any private property not owned by the person unless one of the following applies:"
+        ]
+      }
+    ],
+    "resolution": "Official title supplies the routine name; preserve separate mental states and exceptions. Missing penalty source is technical.",
+    "question": null,
+    "relatedSections": [
+      "1531.13",
+      "1501.24",
+      "1503.09"
+    ]
+  },
+  {
+    "section": "4301.62",
+    "sourceHash": "a54daadcb234b1b03650956cbff623c2ce00bd1e94f4492b9ce288a6de9daf59",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "opened container of beer or intoxicating liquor prohibited at certain premises",
+        "conduct": "Possession of an opened beer/intoxicating-liquor container in the places/circumstances enumerated in (B), subject to detailed exceptions.",
+        "grading": "Not stated in supplied section/references.",
+        "evidenceQuotes": [
+          "(B) No person shall have in the person's possession an opened container of beer or intoxicating liquor in any of the following circumstances:",
+          "(3) In any other public place;"
+        ]
+      }
+    ],
+    "resolution": "Routine source-first candidate; attach (C)-(J) exceptions. Penalty acquisition is technical.",
+    "question": null,
+    "relatedSections": [
+      "4511.01",
+      "4303.201",
+      "4301.171"
+    ]
+  },
+  {
+    "section": "4301.633",
+    "sourceHash": "18b36f1f13ebc41db3db5905ad79fbd98f766e3c5f705a4e959998bfaa5f2f50",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+        "conduct": "Knowingly furnishing false identifying information to obtain alcohol for a person under 21.",
+        "grading": "Not stated in supplied section.",
+        "evidenceQuotes": [
+          "no person shall knowingly furnish any false information as to the name, age, or other identification of any person under twenty-one years of age for the purpose of obtaining or with the intent to obtain, beer or intoxicating liquor for a person under twenty-one years of age"
+        ]
+      }
+    ],
+    "resolution": "Official title is a source-derived candidate; missing penalty source is technical.",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "4301.69",
+    "sourceHash": "e45acf7da53ad6b0b08f45a4a0498d17a8fbc864dc4fc58776579da025f5f453",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "underage persons offenses concerning beer or intoxicating liquor",
+        "conduct": "Division-specific prohibitions in (A), (B), (C), (D)(2), (E)(1), and (F), with stated parental/spousal/guardian, medical, religious, prescription, and diversion provisions.",
+        "grading": "Not stated in supplied section/references.",
+        "evidenceQuotes": [
+          "(A) Except as otherwise provided in this chapter, no person shall sell beer or intoxicating liquor to an underage person, shall buy beer or intoxicating liquor for an underage person, or shall furnish it to an underage person",
+          "(E)(1) No underage person shall knowingly order, pay for, share the cost of, attempt to purchase, possess, or consume any beer or intoxicating liquor in any public or private place.",
+          "(F) No parent, spouse who is not an underage person, or legal guardian of a minor shall knowingly permit the minor to violate this section"
+        ]
+      }
+    ],
+    "resolution": "Create division-specific descriptive candidates rather than treating the umbrella title as one indivisible conduct rule. Missing penalty source is technical.",
+    "question": null,
+    "relatedSections": [
+      "4301.63",
+      "4301.633",
+      "4301.634",
+      "2935.36"
+    ]
+  },
+  {
+    "section": "4503.02",
+    "sourceHash": "c0c1aaafff6e9bd8b870cb489d0860dd8cb7c5d42cc190479a9c63bf18999fe6",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Tax levy and collection provision; no prohibited conduct or guilt division.",
+    "question": null,
+    "relatedSections": [
+      "4503.04",
+      "4503.042",
+      "4503.65"
+    ]
+  },
+  {
+    "section": "4503.11",
+    "sourceHash": "14d6a4d444b8a2570e606e975e88256601d83c2598a09eba6aec836b4198f266",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "failure to file motor-vehicle registration application or pay registration tax",
+        "conduct": "Owner/chauffeur of a vehicle operated on public roads fails annually to apply or pay, subject to listed exceptions.",
+        "grading": "Minor misdemeanor.",
+        "evidenceQuotes": [
+          "(A) Except as provided by sections 4503.103, 4503.107, 4503.173, 4503.41, 4503.43, and 4503.46 of the Revised Code, no person who is the owner or chauffeur of a motor vehicle operated or driven upon the public roads or highways shall fail to file annually the application for registration or to pay the tax therefor.",
+          "(D) Whoever violates this section is guilty of a minor misdemeanor."
+        ]
+      }
+    ],
+    "resolution": "Use descriptive conduct name. Reject extracted “a minor misdemeanor” as an offense name; it is the grade.",
+    "question": null,
+    "relatedSections": [
+      "4503.103",
+      "4503.107",
+      "4503.173"
+    ]
+  },
+  {
+    "section": "4509.101",
+    "sourceHash": "ede00fe3b81f70b0159dafc4a4d9d2e4c27b86049036bae2498a5de8af8e65d9",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Creates a financial-responsibility violation subject to expressly civil penalties, not a criminal offense candidate: “Whoever violates division (A)(1) of this section shall be subject to the following civil penalties”.",
+    "question": null,
+    "relatedSections": [
+      "4510.02",
+      "4510.10"
+    ]
+  },
+  {
+    "section": "4510.11",
+    "sourceHash": "169b66629a4d28a5d3c08cbb83b5adf312f770746662e4a1c460e7bc3dc2ab09",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "driving under suspension or in violation of license restriction",
+        "conduct": "Operating during a non-Chapter-4509 suspension under (A), or operating contrary to a license restriction under (B).",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "(B) No person shall operate any motor vehicle upon a highway or any public or private property used by the public for purposes of vehicular travel or parking in this state in violation of any restriction",
+          "(D)(1) Whoever violates division (A) or (B) of this section is guilty of a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Official title accurately covers the two conduct divisions and explicit grade.",
+    "question": null,
+    "relatedSections": [
+      "4510.111",
+      "4510.16",
+      "4506.10",
+      "4507.14"
+    ]
+  },
+  {
+    "section": "4511.19",
+    "sourceHash": "144bfefd79506d5e81b83dec2dc823c2e1485afb17e3feaa597a30266c8d7572",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "operating a vehicle under the influence of alcohol, a drug of abuse, or a combination of them",
+        "conduct": "4511.19(A)(1)(a)-(i) or (A)(2).",
+        "grading": "(G)(1)(a)-(e) explicit escalating OVI table; baseline M1, with repeat/circumstance felony escalation.",
+        "evidenceQuotes": [
+          "(G)(1) Whoever violates any provision of divisions (A)(1)(a) to (i) or (A)(2) of this section is guilty of operating a vehicle under the influence of alcohol, a drug of abuse, or a combination of them.",
+          "(a) Except as otherwise provided in division (G)(1)(b), (c), (d), or (e) of this section, the offender is guilty of a misdemeanor of the first degree"
+        ]
+      },
+      {
+        "name": "operating a vehicle while under the influence of a listed controlled substance or a listed metabolite of a controlled substance",
+        "conduct": "4511.19(A)(1)(j).",
+        "grading": "Same (G)(1)(a)-(e) escalating table.",
+        "evidenceQuotes": [
+          "Whoever violates division (A)(1)(j) of this section is guilty of operating a vehicle while under the influence of a listed controlled substance or a listed metabolite of a controlled substance."
+        ]
+      },
+      {
+        "name": "operating a vehicle after underage alcohol consumption",
+        "conduct": "4511.19(B).",
+        "grading": "M4 by default; M3 with a qualifying prior within one year.",
+        "evidenceQuotes": [
+          "(H) Whoever violates division (B) of this section is guilty of operating a vehicle after underage alcohol consumption",
+          "(1) Except as otherwise provided in division (H)(2) of this section, the offender is guilty of a misdemeanor of the fourth degree."
+        ]
+      }
+    ],
+    "resolution": "Three express names. The lengthy grading matrix is routine data implementation, not a residual legal ambiguity.",
+    "question": null,
+    "relatedSections": [
+      "4511.191",
+      "4511.192",
+      "4510.02",
+      "2941.1413"
+    ]
+  },
+  {
+    "section": "4511.20",
+    "sourceHash": "76f5d37ace2ae5e17ada17166d587e2dd0d84a8132d6fae867fced8cd2869aa1",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "operation in willful or wanton disregard of safety",
+        "conduct": "Operating a vehicle, trackless trolley, or streetcar on a street/highway in willful or wanton disregard of persons/property safety.",
+        "grading": "Minor misdemeanor; M4 with one predicate traffic prior within one year; M3 with two or more.",
+        "evidenceQuotes": [
+          "(A) No person shall operate a vehicle, trackless trolley, or streetcar on any street or highway in willful or wanton disregard of the safety of persons or property.",
+          "(B) Except as otherwise provided in this division, whoever violates this section is guilty of a minor misdemeanor."
+        ]
+      }
+    ],
+    "resolution": "Use title-derived conduct name. Reject “a minor misdemeanor” as a name; it is the baseline grade.",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "4513.01",
+    "sourceHash": "982916481a61c1e825d24d247689bcb1185c8065677f3f0a32b4c47ba2fd53d8",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Definitions incorporation only: “the definitions set forth in that section apply to this chapter.”",
+    "question": null,
+    "relatedSections": [
+      "4511.01"
+    ]
+  },
+  {
+    "section": "4513.02",
+    "sourceHash": "e399b76a2383f7459b5279156c8cf1f306e4170ea6a5f8368ea803e3a79a1e5c",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "unsafe vehicles",
+        "conduct": "Driving/moving, causing, or knowingly permitting movement on a highway of a vehicle in an unsafe condition endangering a person; section also imposes inspection duties.",
+        "grading": "Minor misdemeanor.",
+        "evidenceQuotes": [
+          "(A) No person shall drive or move, or cause or knowingly permit to be driven or moved, on any highway any vehicle or combination of vehicles which is in such unsafe condition as to endanger any person.",
+          "(H) Whoever violates this section is guilty of a minor misdemeanor."
+        ]
+      }
+    ],
+    "resolution": "Official title is supported. Reject extracted “a minor misdemeanor” as an offense name.",
+    "question": null,
+    "relatedSections": [
+      "4513.01",
+      "119.01",
+      "4513.37"
+    ]
+  },
+  {
+    "section": "4513.221",
+    "sourceHash": "b7468d1ff5a077edd8f652bd9d353c020ddc7bd6d71021429f3f86283160605b",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "violation of local passenger-car or motorcycle noise regulation",
+        "conduct": "Violation of a maximum noise limit adopted under (B) or prohibition authorized under (E).",
+        "grading": "Minor misdemeanor.",
+        "evidenceQuotes": [
+          "(F) Whoever violates any maximum noise limit established as provided in division (B) of this section or any of the prohibitions authorized in division (E) of this section is guilty of a minor misdemeanor."
+        ]
+      }
+    ],
+    "resolution": "Derivative local-rule offense is explicit. Reject “a minor misdemeanor” as a name.",
+    "question": null,
+    "relatedSections": [
+      "505.17"
+    ]
+  },
+  {
+    "section": "4549.02",
+    "sourceHash": "af1c6dcbf33bea3e8a65915ad7f73f692f752ddd4b46e7195c8e591c25cf9a35",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "failure to stop after an accident",
+        "conduct": "Knowledge of a public-road accident/collision followed by failure to stop, remain, and provide/attach required information under (A).",
+        "grading": "M1 baseline; serious physical harm F5 or F4 with knowledge; death F3 or F2 with knowledge.",
+        "evidenceQuotes": [
+          "(B)(1) Whoever violates division (A) of this section is guilty of failure to stop after an accident.",
+          "(2) If the accident or collision results in serious physical harm to a person, failure to stop after an accident is whichever of the following is applicable:",
+          "(3) If the accident or collision results in the death of a person, failure to stop after an accident is whichever of the following is applicable:"
+        ]
+      }
+    ],
+    "resolution": "Express name and result/knowledge grading ladder.",
+    "question": null,
+    "relatedSections": [
+      "4510.02",
+      "4509.01"
+    ]
+  },
+  {
+    "section": "5747.18",
+    "sourceHash": "602648c1dac8aed134f2bd17af63b8c852ee83bd36eaf752a6490ce5f24e3c8f",
+    "classification": "supporting_or_procedure",
+    "candidates": [],
+    "resolution": "Tax-commissioner powers and confidentiality rule; no guilt or grade. Any confidentiality offense would require a separate penalty source.",
+    "question": null,
+    "relatedSections": [
+      "5703.21"
+    ]
+  },
+  {
+    "section": "5747.19",
+    "sourceHash": "d6bc15b48f45e47f370960ec2c929384b66e8626c3dfcaf8194c0f8611a26a28",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "filing incomplete, false, or fraudulent returns",
+        "conduct": "Knowing failure to file, filing/causing filing of incomplete, false, or fraudulent tax material, or aiding/abetting false or fraudulent filing.",
+        "grading": "Not stated in supplied section.",
+        "evidenceQuotes": [
+          "No person shall knowingly fail to file any return or report required to be filed by this chapter, or file or knowingly cause to be filed any incomplete, false, or fraudulent return, report, or statement, or aid or abet another in the filing of any false or fraudulent return, report, or statement."
+        ]
+      }
+    ],
+    "resolution": "Official title supports a routine candidate; do not invent a degree. Penalty-source acquisition is technical.",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "955.22",
+    "sourceHash": "0e7b01075f4ebb1b112f483ad5c586ab6dbdc916b1af22b9ba201801ad9a7d79",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "failure to prevent vicious, dangerous, or nuisance dog act",
+        "conduct": "Division-specific negligent/reckless failures in (B)-(D), with enhanced dangerous/vicious-dog and injury/death variants.",
+        "grading": "(B)(1) M3 first/M2 subsequent; (B)(2) F3; (C)(1) M4 first/M3 subsequent; (C)(2) M1; (D) minor misdemeanor first/M4 subsequent.",
+        "evidenceQuotes": [
+          "(2) No owner, keeper, or harborer of a dangerous or vicious dog, including an animal shelter for dogs, shall negligently fail to prevent the dog from committing a vicious dog act that involves injuring or killing a person. Whoever violates this division is guilty of a felony of the third degree.",
+          "(2) No owner, keeper, or harborer of a dangerous or vicious dog, including an animal shelter for dogs, shall negligently fail to prevent the dog from committing a dangerous dog act that involves injuring a person. Whoever violates this division is guilty of a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Use division-specific variants under the official-title family; grades are explicit.",
+    "question": null,
+    "relatedSections": [
+      "955.11",
+      "955.21",
+      "955.23",
+      "955.24"
+    ]
+  },
+  {
+    "section": "959.13",
+    "sourceHash": "e46d5dcf414e43e705701967c2a260f8d9186ad44b554785c301800fc04be125",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "cruelty to animals",
+        "conduct": "Acts in 959.13(A)(1)-(5), including torture/deprivation/cruel beating, inadequate shelter, cruel conveyance, specified confinement, and excessive livestock detention.",
+        "grading": "Misdemeanor of the second degree under supporting 959.99(D).",
+        "evidenceQuotes": [
+          "(A) No person shall:",
+          "(1) Torture an animal, deprive one of necessary sustenance, unnecessarily or cruelly beat, needlessly mutilate or kill",
+          "(D) Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree."
+        ]
+      }
+    ],
+    "resolution": "Official title, exact conduct divisions, and supporting penalty source yield a routine source-first charge.",
+    "question": null,
+    "relatedSections": [
+      "959.99"
+    ]
+  }
+]

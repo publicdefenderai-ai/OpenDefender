@@ -1,5 +1,7 @@
 # Ohio consolidated evidence and manual-review report
 
+> **Superseded as an attorney handoff.** This is the original acquisition-stage analysis backlog. Use `ohio-focused-manual-review.html` or `ohio-focused-manual-review.csv` for the current three specific legal questions and `ohio-substantive-review.json` for completed analysis.
+
 **Review only. No new charges were approved or published by this batch.**
 
 ## Scope

@@ -1,0 +1,585 @@
+[
+  {
+    "section": "2903.01",
+    "resolution": "An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record.",
+    "candidates": [
+      {
+        "name": "aggravated murder",
+        "conduct": "Existing reviewed source-first conduct scope.",
+        "grading": "Reuse the existing reviewed grading evidence; do not introduce a new grade or alias.",
+        "evidenceQuotes": [
+          "(G) Whoever violates this section is guilty of aggravated murder, and shall be punished as provided in section 2929.02 of the Revised Code."
+        ]
+      }
+    ],
+    "sourceHash": "98a8094c5635e8b7619106d4f1fc6a0d7774afee7cd9ea9dffe506d5bf8d38eb",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2903.02",
+    "resolution": "An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record.",
+    "candidates": [
+      {
+        "name": "murder",
+        "conduct": "Existing reviewed source-first conduct scope.",
+        "grading": "Reuse the existing reviewed grading evidence; do not introduce a new grade or alias.",
+        "evidenceQuotes": [
+          "(D) Whoever violates this section is guilty of murder, and shall be punished as provided in section 2929.02 of the Revised Code."
+        ]
+      }
+    ],
+    "sourceHash": "7d59b3044eafc9f0ce7a7621fdd1cece55e244ab9a2780daa6189ff17eb36f2b",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2903.03",
+    "resolution": "An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record.",
+    "candidates": [
+      {
+        "name": "voluntary manslaughter",
+        "conduct": "Existing reviewed source-first conduct scope.",
+        "grading": "Reuse the existing reviewed grading evidence; do not introduce a new grade or alias.",
+        "evidenceQuotes": [
+          "(C) Whoever violates this section is guilty of voluntary manslaughter, a felony of the first degree."
+        ]
+      }
+    ],
+    "sourceHash": "e36bd07ee457ba2c40cccce0e4c1751513f486861120e3a2473ee9c196304c8c",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2903.04",
+    "resolution": "An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record.",
+    "candidates": [
+      {
+        "name": "involuntary manslaughter",
+        "conduct": "Existing reviewed source-first conduct scope.",
+        "grading": "Reuse the existing reviewed grading evidence; do not introduce a new grade or alias.",
+        "evidenceQuotes": [
+          "(C) Whoever violates this section is guilty of involuntary manslaughter. Violation of division (A) of this section is a felony of the first degree. Violation of division (B) of this section is a felony of the third degree."
+        ]
+      }
+    ],
+    "sourceHash": "e063106ce2eae8f58ae685c39eff5779324855759962b7cae49019a78f7c00b8",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2903.05",
+    "resolution": "An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record.",
+    "candidates": [
+      {
+        "name": "negligent homicide",
+        "conduct": "Existing reviewed source-first conduct scope.",
+        "grading": "Reuse the existing reviewed grading evidence; do not introduce a new grade or alias.",
+        "evidenceQuotes": [
+          "(B) Whoever violates this section is guilty of negligent homicide, a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "sourceHash": "6941264ad0ab8c204d39b5016731f1aa1c704888a29ea704911dc0d5b8117b8f",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2903.11",
+    "resolution": "An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record.",
+    "candidates": [
+      {
+        "name": "felonious assault",
+        "conduct": "Existing reviewed source-first conduct scope.",
+        "grading": "Reuse the existing reviewed grading evidence; do not introduce a new grade or alias.",
+        "evidenceQuotes": [
+          "(D)(1)(a) Whoever violates this section is guilty of felonious assault. Except as otherwise provided in this division or division (D)(1)(b) of this section, felonious assault is a felony of the second degree. If the victim of a violation of division (A) of this section is a peace officer or an investigator of the bureau of criminal identification and investigation, felonious assault is a felony of the first degree."
+        ]
+      }
+    ],
+    "sourceHash": "33bf447290ec7aa5faedc29abdb637402bc4e4c8c18a315514f1d84f5a8d1c01",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2903.12",
+    "resolution": "An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record.",
+    "candidates": [
+      {
+        "name": "aggravated assault",
+        "conduct": "Existing reviewed source-first conduct scope.",
+        "grading": "Reuse the existing reviewed grading evidence; do not introduce a new grade or alias.",
+        "evidenceQuotes": [
+          "(B) Whoever violates this section is guilty of aggravated assault. Except as otherwise provided in this division, aggravated assault is a felony of the fourth degree. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, aggravated assault is a felony of the third degree. Regardless of whether the offense is a felony of the third or fourth degree under this division, if the offender also is convicted of or pleads guilty to a specification as described in section 2941.1423 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, except as otherwise provided in this division, the court shall sentence the offender to a mandatory prison term as provided in division (B)(8) of section 2929.14 of the Revised Code. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, and if the victim suffered serious physical harm as a result of the commission of the offense, aggravated assault is a felony of the third degree, and the court, pursuant to division (F) of section 2929.13 of the Revised Code, shall impose as a mandatory prison term one of the definite prison terms prescribed in division (A)(3)(b) of section 2929.14 of the Revised Code for a felony of the third degree."
+        ]
+      }
+    ],
+    "sourceHash": "520680c85587dac6fb8786fdbfa7d5833e0ffb602d167ff27f668c91046a37b0",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2903.06",
+    "resolution": "Three offense names and their conduct grouping are explicit. Preserve the different (A)(1)/(A)(2) grading branches under one aggravated-vehicular-homicide name; neither every subparagraph nor every enhancement is a separate offense.",
+    "relatedSections": [
+      "2929.14",
+      "2929.142",
+      "1547.11",
+      "4511.19",
+      "4561.15"
+    ],
+    "candidates": [
+      {
+        "name": "aggravated vehicular homicide",
+        "conduct": "(A)(1) or (A)(2); guilt in (B)(1).",
+        "grading": "(A)(1): F2, with the specified F1 branches and mandatory terms in (B)(2)/(E). (A)(2): F3 or the specified F2 enhancement under (B)(3). Preserve the complete conditions.",
+        "evidenceQuotes": [
+          "(B)(1) Whoever violates division (A)(1) or (2) of this section is guilty of aggravated vehicular homicide and shall be punished as provided in divisions (B)(2) and (3) of this section.",
+          "(2)(a) Except as otherwise provided in division (B)(2)(b), (c), or (d) of this section, aggravated vehicular homicide committed in violation of division (A)(1) of this section is a felony of the second degree and the court shall impose a mandatory prison term on the offender as described in division (E) of this section.",
+          "(3) Except as otherwise provided in this division, aggravated vehicular homicide committed in violation of division (A)(2) of this section is a felony of the third degree. Aggravated vehicular homicide committed in violation of division (A)(2) of this section is a felony of the second degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense. The court shall impose a mandatory prison term on the offender when required by division (E) of this section."
+        ]
+      },
+      {
+        "name": "vehicular homicide",
+        "conduct": "(A)(3); guilt and grading in (C).",
+        "grading": "M1; specified licensing/prior-offense circumstances elevate to F4, with applicable mandatory custody under (E).",
+        "evidenceQuotes": [
+          "(C) Whoever violates division (A)(3) of this section is guilty of vehicular homicide. Except as otherwise provided in this division, vehicular homicide is a misdemeanor of the first degree. Vehicular homicide committed in violation of division (A)(3) of this section is a felony of the fourth degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense. The court shall impose a mandatory jail term or a mandatory prison term on the offender when required by division (E) of this section."
+        ]
+      },
+      {
+        "name": "vehicular manslaughter",
+        "conduct": "(A)(4); guilt and grading in (D).",
+        "grading": "M2; specified licensing/prior-offense circumstances elevate to M1.",
+        "evidenceQuotes": [
+          "(D) Whoever violates division (A)(4) of this section is guilty of vehicular manslaughter. Except as otherwise provided in this division, vehicular manslaughter is a misdemeanor of the second degree. Vehicular manslaughter is a misdemeanor of the first degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense."
+        ]
+      }
+    ],
+    "sourceHash": "3bcd8830c6a1af4f7231a8d719805a027174d94ae9100bb2b90653efda8e0db1",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2903.08",
+    "resolution": "Two names and explicit conduct-to-grade branches are routine source data. Aggravated vehicular assault must not be used as an alias for generic reckless driving.",
+    "relatedSections": [
+      "2929.14",
+      "1547.11",
+      "4511.19",
+      "4561.15"
+    ],
+    "candidates": [
+      {
+        "name": "aggravated vehicular assault",
+        "conduct": "(A)(1), with guilt/grade under (B).",
+        "grading": "F3; specified (B) conditions elevate to F2; preserve the mandatory-term provisions of (D).",
+        "evidenceQuotes": [
+          "(B)(1) Whoever violates division (A)(1) of this section is guilty of aggravated vehicular assault. Except as otherwise provided in this division, aggravated vehicular assault is a felony of the third degree. Aggravated vehicular assault is a felony of the second degree if any of the following apply:"
+        ]
+      },
+      {
+        "name": "vehicular assault",
+        "conduct": "(A)(2) or (A)(3), guilt under (C)(1).",
+        "grading": "(A)(2): F4 or specified F3 enhancement. (A)(3): M1 or specified F4 enhancement. Do not combine the two base grades.",
+        "evidenceQuotes": [
+          "(C)(1) Whoever violates division (A)(2) or (3) of this section is guilty of vehicular assault and shall be punished as provided in divisions (C)(2) and (3) of this section.",
+          "(2) Except as otherwise provided in this division, vehicular assault committed in violation of division (A)(2) of this section is a felony of the fourth degree. Vehicular assault committed in violation of division (A)(2) of this section is a felony of the third degree if, at the time of the offense, the offender was driving under a suspension imposed under Chapter 4510. or any other provision of the Revised Code, if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense, or if, in the same course of conduct that resulted in the violation of division (A)(2) of this section, the offender also violated section 4549.02, 4549.021, or 4549.03 of the Revised Code.",
+          "(3) Except as otherwise provided in this division, vehicular assault committed in violation of division (A)(3) of this section is a misdemeanor of the first degree. Vehicular assault committed in violation of division (A)(3) of this section is a felony of the fourth degree if, at the time of the offense, the offender was driving under a suspension imposed under Chapter 4510. or any other provision of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense."
+        ]
+      }
+    ],
+    "sourceHash": "2ad96ed8c8e8b3270c920ea0afd4ca363634219e6d4c6ce813cda952517f49fa",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2903.13",
+    "classification": "specific_legal_question",
+    "resolution": "The basic assault prohibition and statutory grading branches can be transcribed. Isolate the unresolved HMO definition to the hospital-related enhancement; do not ask for generic review of the entire assault statute or use an invented replacement definition.",
+    "question": "For the hospital-related assault enhancement in §2903.13(C)(8), what definition governs an HMO-operated hospital when §2903.13(E)(20) incorporates §3727.01 but that section no longer provides current official text? Identify the controlling authority before applying this enhancement to an HMO-operated facility.",
+    "relatedSections": [
+      "2903.10",
+      "3701.01",
+      "3937.41"
+    ],
+    "candidates": [
+      {
+        "name": "assault",
+        "conduct": "(A) knowingly causing/attempting physical harm or (B) recklessly causing serious physical harm; grading under (C).",
+        "grading": "M1 baseline with the explicit (C) enhancements retained. Hospital/HMO-dependent application is specifically held pending the definition question.",
+        "evidenceQuotes": [
+          "(C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.",
+          "(19)(a) \"Hospital\" means, subject to division (E)(19)(b) of this section, an institution classified as a hospital under section 3701.01 of the Revised Code in which are provided to patients diagnostic, medical, surgical, obstetrical, psychiatric, or rehabilitation care or a hospital operated by a health maintenance organization.",
+          "(20) \"Health maintenance organization\" has the same meaning as in section 3727.01 of the Revised Code."
+        ]
+      }
+    ],
+    "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1"
+  },
+  {
+    "section": "2903.16",
+    "classification": "specific_legal_question",
+    "resolution": "Two names are explicit and §2903.10 supplies caretaker/functionally-impaired definitions, including the care-facility exclusion. The knowing branch is routine. The reckless branch has a specific apparent element/enhancement overlap; do not present its M2 recital as an established available outcome.",
+    "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
+    "relatedSections": [
+      "2903.10",
+      "2903.33",
+      "2901.01",
+      "2901.22"
+    ],
+    "candidates": [
+      {
+        "name": "knowingly failing to provide for a person with a functional impairment",
+        "conduct": "(A): caretaker knowingly fails to provide necessary treatment/care/goods/service, resulting in physical or serious physical harm.",
+        "grading": "(C)(1): M1; F4 when serious physical harm results.",
+        "evidenceQuotes": [
+          "(A) No caretaker shall knowingly fail to provide a person with a functional impairment under the caretaker's care with any treatment, care, goods, or service that is necessary to maintain the health or safety of the person with a functional impairment when this failure results in physical harm or serious physical harm to the person with a functional impairment.",
+          "(C)(1) Whoever violates division (A) of this section is guilty of knowingly failing to provide for a person with a functional impairment, a misdemeanor of the first degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (A) of this section is a felony of the fourth degree."
+        ]
+      },
+      {
+        "name": "recklessly failing to provide for a person with a functional impairment",
+        "conduct": "(B): caretaker recklessly fails to provide necessary treatment/care/goods/service, resulting in serious physical harm.",
+        "grading": "(C)(2) recites M2 and an F4 serious-harm enhancement; the relationship to (B)'s serious-harm element is the specific held question.",
+        "evidenceQuotes": [
+          "(B) No caretaker shall recklessly fail to provide a person with a functional impairment under the caretaker's care with any treatment, care, goods, or service that is necessary to maintain the health or safety of the person with a functional impairment when this failure results in serious physical harm to the person with a functional impairment.",
+          "(2) Whoever violates division (B) of this section is guilty of recklessly failing to provide for a person with a functional impairment, a misdemeanor of the second degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (B) of this section is a felony of the fourth degree."
+        ]
+      }
+    ],
+    "sourceHash": "2c1888663a284724d9fa2e0fcdf51b9165da0bba40a899a85ef1df5879fddd4e"
+  },
+  {
+    "section": "2903.211",
+    "resolution": "One named offense. The M1/F4/F5 alternatives, pattern-of-conduct definitions, sexual-motivation branch and electronic-access exceptions are expressly stated; retain them as source data rather than requesting generic attorney interpretation.",
+    "relatedSections": [
+      "2971.01",
+      "2911.211",
+      "2913.01"
+    ],
+    "candidates": [
+      {
+        "name": "menacing by stalking",
+        "conduct": "(A)(1)-(3), with definitions in (D) and exclusions in (F).",
+        "grading": "(B)(1) M1; (B)(2) specified F4 conditions; (B)(3) child-services-employee branch F5 or specified F4. No blanket single maximum.",
+        "evidenceQuotes": [
+          "(B) Whoever violates this section is guilty of menacing by stalking.",
+          "(1) Except as otherwise provided in divisions (B)(2) and (3) of this section, menacing by stalking is a misdemeanor of the first degree.",
+          "(2) Menacing by stalking is a felony of the fourth degree if any of the following applies:",
+          "(3) If the victim of the offense is an officer or employee of a public children services agency or a private child placing agency and the offense relates to the officer's or employee's performance or anticipated performance of official responsibilities or duties, menacing by stalking is either a felony of the fifth degree or, if the offender previously has been convicted of or pleaded guilty to an offense of violence, the victim of that prior offense was an officer or employee of a public children services agency or private child placing agency, and that prior offense related to the officer's or employee's performance or anticipated performance of official responsibilities or duties, a felony of the fourth degree."
+        ]
+      }
+    ],
+    "sourceHash": "6740e0adc1febba86806f378900631708e09d2cc21c3489ac1a7dbb44dfa4ac9",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2903.216",
+    "resolution": "The statutory offense, consent rules, exceptions and grade conditions are express. Preserve the exceptions instead of treating every tracking device use as illegal.",
+    "relatedSections": [
+      "2903.211",
+      "2913.01",
+      "4749.01"
+    ],
+    "candidates": [
+      {
+        "name": "illegal use of a tracking device or application",
+        "conduct": "The tracking prohibitions in (B), read with definitions/consent rules and the exceptions in (D).",
+        "grading": "(F)(1) M1; specified (F)(2) conditions F4.",
+        "evidenceQuotes": [
+          "(F) Whoever violates this section is guilty of illegal use of a tracking device or application.",
+          "(1) Except as otherwise provided in division (F)(2) of this section, illegal use of a tracking device or application is a misdemeanor of the first degree.",
+          "(2) Illegal use of a tracking device or application is a felony of the fourth degree if any of the following applies:"
+        ]
+      }
+    ],
+    "sourceHash": "ccf718c4688e38f196c3c2f36374bcf277e9b565d992a75b37ee09c1358f6f2e",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2903.22",
+    "resolution": "One named offense with express M4/M1/F4 branches. Only the responder/family/co-worker definitions in §2903.13 are incorporated; the unrelated HMO definition gap does not block menacing.",
+    "relatedSections": [
+      "2903.13",
+      "2941.25"
+    ],
+    "candidates": [
+      {
+        "name": "menacing",
+        "conduct": "(A)(1) threatening-belief conduct, or (A)(2) deadly-weapon display against the specified emergency responder/family/co-worker with the stated knowledge/purpose.",
+        "grading": "(B) M4 baseline; specified child-services/responder circumstances M1; specified qualifying prior and victim/duty conditions F4.",
+        "evidenceQuotes": [
+          "(B) Whoever violates this section is guilty of menacing.",
+          "Except as otherwise provided in this division, menacing is a misdemeanor of the fourth degree. If the victim of the offense is an officer or employee of a public children services agency or a private child placing agency and the offense relates to the officer's or employee's performance or anticipated performance of official responsibilities or duties or if the victim of the offense is an emergency service responder in the performance of the responder's official duties, menacing is one of the following:",
+          "(D) As used in this section:"
+        ]
+      }
+    ],
+    "sourceHash": "ea58e11d6582e597bbc42a83fd27713cc4dc0a71e9c81fd201fc467a60876c32",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2903.341",
+    "resolution": "Patient endangerment is one named offense with two conduct routes, express spiritual-treatment exclusions, affirmative defenses and a clear grade ladder. The chapter-wide definitions and the specifically incorporated developmental-disability definitions are retained; no HMO definition is imported.",
+    "relatedSections": [
+      "2903.33",
+      "5123.01",
+      "5123.50",
+      "2901.01"
+    ],
+    "candidates": [
+      {
+        "name": "patient endangerment",
+        "conduct": "(B) caretaker creates substantial risk; (C) specified owner/operator/administrator/agent condones or knowingly permits prohibited caretaker conduct; preserve (B)-(D) exclusions/defenses.",
+        "grading": "(E)(1) M1; qualifying prior under (E)(2) F4; resulting serious physical harm under (E)(3) F3.",
+        "evidenceQuotes": [
+          "(E)(1) Except as provided in division (E)(2) or (E)(3) of this section, whoever violates division (B) or (C) of this section is guilty of patient endangerment, a misdemeanor of the first degree.",
+          "(2) If the offender previously has been convicted of, or pleaded guilty to, a violation of this section, patient endangerment is a felony of the fourth degree.",
+          "(3) If the violation results in serious physical harm to the person with a developmental disability, patient endangerment is a felony of the third degree."
+        ]
+      }
+    ],
+    "sourceHash": "41ac7152196cb537b18d3d41214e25b5f70465c591880cbc90d83426767d3bf0",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2903.43",
+    "resolution": "Use a clearly marked descriptive conduct label for (I)(1), not the administrative section heading as a supposedly named offense. The F5 penalty and enrollment duties are express; routine source-first construction does not require a naming opinion.",
+    "relatedSections": [
+      "2903.41",
+      "2903.42",
+      "2903.421",
+      "2903.44"
+    ],
+    "candidates": [
+      {
+        "name": "reckless violation of violent-offender database duties",
+        "conduct": "(I)(1): reckless failure to enroll/re-enroll/notify or another reckless VOD-duty violation by an offender actually subject to those duties.",
+        "grading": "(I)(2): F5; also a supervised-release violation in the specified circumstances. Preserve the statutory affirmative-defense provisions.",
+        "evidenceQuotes": [
+          "(I)(1) No violent offender or qualifying out-of-state violent offender who has VOD duties imposed under section 2903.42 or 2903.421 of the Revised Code shall recklessly fail during the ten-year enrollment period or extended enrollment period of the offender to enroll, re-enroll, or notify the sheriff or sheriff's designee of a change of address as required by this section.",
+          "(2) Whoever violates division (I)(1) of this section is guilty of a felony of the fifth degree. If a violent offender or qualifying out-of-state violent offender who violates division (I)(1) of this section is subject to a community control sanction, is on parole, is subject to one or more post-release control sanctions, or is subject to any other type of supervised release at the time of the violation, the violation shall constitute a violation of the terms and conditions of the community control sanction, parole, post-release control sanction, or other type of supervised release."
+        ]
+      }
+    ],
+    "sourceHash": "95b4424628ff239b2315cf626d15b32ed0211824fbd569cebe632ab3e1e500f7",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.02",
+    "resolution": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+    "relatedSections": [
+      "2971.03",
+      "2929.14",
+      "2907.01",
+      "2923.02"
+    ],
+    "candidates": [
+      {
+        "name": "rape",
+        "conduct": "(A)(1)-(2); the attempted-sexual-assault legacy row is not automatically equivalent to completed rape.",
+        "grading": "(B): F1, with the complete special mandatory/life/juvenile sentencing branches preserved. Attempt remains a separate §2923.02 construction.",
+        "evidenceQuotes": [
+          "(B) Whoever violates this section is guilty of rape, a felony of the first degree. If the offender under division (A)(1)(a) of this section substantially impairs the other person's judgment or control by administering any controlled substance, as defined in section 3719.01 of the Revised Code, to the other person surreptitiously or by force, threat of force, or deception, the prison term imposed upon the offender shall be one of the definite prison terms prescribed for a felony of the first degree in division (A)(1)(b) of section 2929.14 of the Revised Code that is not less than five years, except that if the violation is committed on or after March 22, 2019, the court shall impose as the minimum prison term for the offense a mandatory prison term that is one of the minimum terms prescribed for a felony of the first degree in division (A)(1)(a) of section 2929.14 of the Revised Code that is not less than five years. Except as otherwise provided in this division, notwithstanding sections 2929.11 to 2929.14 of the Revised Code, an offender under division (A)(1)(b) of this section shall be sentenced to a prison term or term of life imprisonment pursuant to section 2971.03 of the Revised Code. If an offender is convicted of or pleads guilty to a violation of division (A)(1)(b) of this section, if the offender was less than sixteen years of age at the time the offender committed the violation of that division, and if the offender during or immediately after the commission of the offense did not cause serious physical harm to the victim, the victim was ten years of age or older at the time of the commission of the violation, and the offender has not previously been convicted of or pleaded guilty to a violation of this section or a substantially similar existing or former law of this state, another state, or the United States, the court shall not sentence the offender to a prison term or term of life imprisonment pursuant to section 2971.03 of the Revised Code, and instead the court shall sentence the offender as otherwise provided in this division. If an offender under division (A)(1)(b) of this section previously has been convicted of or pleaded guilty to violating division (A)(1)(b) of this section or to violating an existing or former law of this state, another state, or the United States that is substantially similar to division (A)(1)(b) of this section, if the offender during or immediately after the commission of the offense caused serious physical harm to the victim, or if the victim under division (A)(1)(b) of this section is less than ten years of age, in lieu of sentencing the offender to a prison term or term of life imprisonment pursuant to section 2971.03 of the Revised Code, except as otherwise provided in this division, the court may impose upon the offender a term of life without parole. If the court imposes a term of life without parole pursuant to this division, division (F) of section 2971.03 of the Revised Code applies, and the offender automatically is classified a tier III sex offender/child-victim offender, as described in that division. A court shall not impose a term of life without parole on an offender for rape if the offender was under eighteen years of age at the time of the offense."
+        ]
+      }
+    ],
+    "sourceHash": "4f2f42e81c1486a001be29c1fb02e32a868cdf0f80db6c19d8d345f9139ad200",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.03",
+    "resolution": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+    "relatedSections": [
+      "2907.01",
+      "2929.13"
+    ],
+    "candidates": [
+      {
+        "name": "sexual battery",
+        "conduct": "(A)(1)-(13), with the source's relational/authority/incapacity circumstances and definitions.",
+        "grading": "(B): F3, or F2 for the specified under-13 victim branch with mandatory prison.",
+        "evidenceQuotes": [
+          "(B) Whoever violates this section is guilty of sexual battery."
+        ]
+      }
+    ],
+    "sourceHash": "ac507241723772a27d32187583241bb02fa9508780b6106f3fbed225793845f1",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.04",
+    "resolution": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+    "relatedSections": [
+      "2907.01",
+      "2907.02",
+      "2907.03"
+    ],
+    "candidates": [
+      {
+        "name": "unlawful sexual conduct with a minor",
+        "conduct": "(A): offender age 18 or older, victim at least 13 but under 16, and the specified knowledge/recklessness.",
+        "grading": "(B): explicit F4/M1/F3/F2 age-gap and qualifying-prior branches; retain each condition.",
+        "evidenceQuotes": [
+          "(B) Whoever violates this section is guilty of unlawful sexual conduct with a minor."
+        ]
+      }
+    ],
+    "sourceHash": "99e1cad558c1fcb9d586d54adbdf2ce62adc392aba0bfdfaa3d2f66e08a18dae",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.05",
+    "resolution": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+    "relatedSections": [
+      "2907.01",
+      "2929.13"
+    ],
+    "candidates": [
+      {
+        "name": "gross sexual imposition",
+        "conduct": "(A)(1)-(5) or (B), with stated circumstances, ages and mental states.",
+        "grading": "(C): explicit F4/F3 subdivision and prison-term branches; do not equate all child sexual abuse with this one offense.",
+        "evidenceQuotes": [
+          "(C) Whoever violates this section is guilty of gross sexual imposition."
+        ]
+      }
+    ],
+    "sourceHash": "fe219e4d25e9b16dac6493c692a9e2efbd930ef839776c3a021ce02315d59047",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.09",
+    "resolution": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+    "relatedSections": [
+      "2907.01"
+    ],
+    "candidates": [
+      {
+        "name": "public indecency",
+        "conduct": "(A)(1)-(3) or (B)(1)-(4), with the distinct public/likely-minor-viewer conduct routes.",
+        "grading": "(C)(2)-(5): M4/M3/M2/M1/F5 according to exact conduct, prior count and minor-viewer conditions.",
+        "evidenceQuotes": [
+          "(C)(1) Whoever violates this section is guilty of public indecency and shall be punished as provided in divisions (C)(2), (3), (4), and (5) of this section."
+        ]
+      }
+    ],
+    "sourceHash": "836ea221be8b7ec32692b66c3532a210dff7bcb9c3eece5ceb0fa855647a62da",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.321",
+    "resolution": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+    "relatedSections": [
+      "2907.01",
+      "2907.322",
+      "2907.323"
+    ],
+    "candidates": [
+      {
+        "name": "pandering obscenity involving a minor or impaired person",
+        "conduct": "(A)(1)-(6), subject to (B)'s proper-purpose exception and the minor/impaired-person rules.",
+        "grading": "(C): minor (A)(1)-(4)/(6) F2; impaired-person counterparts F3; (A)(5) F4 or qualifying-prior F3.",
+        "evidenceQuotes": [
+          "(C) Whoever violates this section is guilty of pandering obscenity involving a minor or impaired person. If the offense involves a minor, a violation of division (A)(1), (2), (3), (4), or (6) of this section is a felony of the second degree. If the offense involves an impaired person, a violation of division (A)(1), (2), (3), (4), or (6) of this section is a felony of the third degree. A violation of division (A)(5) of this section is a felony of the fourth degree. If the offender previously has been convicted of or pleaded guilty to a violation of this section or section 2907.322 or 2907.323 of the Revised Code, pandering obscenity involving a minor or impaired person in violation of division (A)(5) of this section is a felony of the third degree."
+        ]
+      }
+    ],
+    "sourceHash": "760cf7c78abd22c74960f8a25b01239a58b9740104e90e99791e48ab30e6551d",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.24",
+    "resolution": "Separate the two expressly named offenses; current post-July-1996 F3 grading must not be replaced by the historical F2 branch.",
+    "relatedSections": [
+      "2907.01"
+    ],
+    "candidates": [
+      {
+        "name": "soliciting",
+        "conduct": "(A): knowingly solicit sexual activity for hire in exchange for receiving value.",
+        "grading": "(C)(1): M3.",
+        "evidenceQuotes": [
+          "(C)(1) Whoever violates division (A) of this section is guilty of soliciting. Soliciting is a misdemeanor of the third degree."
+        ]
+      },
+      {
+        "name": "engaging in solicitation after a positive HIV test",
+        "conduct": "(B): knowledge of a positive carrier test plus conduct violating (A).",
+        "grading": "(C)(2): F3 for conduct on/after July 1, 1996; historical F2 branch retained as historical only.",
+        "evidenceQuotes": [
+          "(2) Whoever violates division (B) of this section is guilty of engaging in solicitation after a positive HIV test. If the offender commits the violation prior to July 1, 1996, engaging in solicitation after a positive HIV test is a felony of the second degree. If the offender commits the violation on or after July 1, 1996, engaging in solicitation after a positive HIV test is a felony of the third degree."
+        ]
+      }
+    ],
+    "sourceHash": "a082e8cc82da24c7b8fe18ddb1545eec48c49530afe5fc1190e8e36f6450f056",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2907.25",
+    "resolution": "Separate the expressly named prostitution and positive-test offenses, retaining the temporal grading distinction rather than creating a generic combined solicitation/prostitution alias.",
+    "relatedSections": [
+      "2907.01"
+    ],
+    "candidates": [
+      {
+        "name": "prostitution",
+        "conduct": "(A): engage in sexual activity for hire.",
+        "grading": "(C)(1): M3.",
+        "evidenceQuotes": [
+          "(C)(1) Whoever violates division (A) of this section is guilty of prostitution, a misdemeanor of the third degree."
+        ]
+      },
+      {
+        "name": "engaging in prostitution after a positive HIV test",
+        "conduct": "(B): knowledge of a positive carrier test while engaging in sexual activity for hire.",
+        "grading": "(C)(2): F3 on/after July 1, 1996; historical F2 branch applies only to earlier conduct.",
+        "evidenceQuotes": [
+          "(2) Whoever violates division (B) of this section is guilty of engaging in prostitution after a positive HIV test. If the offender commits the violation prior to July 1, 1996, engaging in prostitution after a positive HIV test is a felony of the second degree. If the offender commits the violation on or after July 1, 1996, engaging in prostitution after a positive HIV test is a felony of the third degree."
+        ]
+      }
+    ],
+    "sourceHash": "7f344a172cb5d75896b6a6050807c381d688cf2c4f767aff92a8545fb72cc674",
+    "classification": "routine_offense",
+    "question": null
+  },
+  {
+    "section": "2909.06",
+    "resolution": "One expressly named offense with two mental-state/conduct routes and an explicit harm/aircraft enhancement ladder. The shorter legacy label need not be migrated.",
+    "candidates": [
+      {
+        "name": "criminal damaging or endangering",
+        "conduct": "(A)(1) knowingly by any means, or (A)(2) recklessly by listed dangerous means, causing or risking harm to another's property without consent.",
+        "grading": "(B): M2 baseline, M1 for person-harm risk, and the specific aircraft-related F5/F4 circumstances.",
+        "evidenceQuotes": [
+          "(A) No person shall cause, or create a substantial risk of physical harm to any property of another without the other person's consent:",
+          "(B) Whoever violates this section is guilty of criminal damaging or endangering, a misdemeanor of the second degree. If a violation of this section creates a risk of physical harm to any person, criminal damaging or endangering is a misdemeanor of the first degree. If the property involved in a violation of this section is an aircraft, an aircraft engine, propeller, appliance, spare part, or any other equipment or implement used or intended to be used in the operation of an aircraft and if the violation creates a risk of physical harm to any person, criminal damaging or endangering is a felony of the fifth degree. If the property involved in a violation of this section is an aircraft, an aircraft engine, propeller, appliance, spare part, or any other equipment or implement used or intended to be used in the operation of an aircraft and if the violation creates a substantial risk of physical harm to any person or if the property involved in a violation of this section is an occupied aircraft, criminal damaging or endangering is a felony of the fourth degree."
+        ]
+      }
+    ],
+    "sourceHash": "b64a0c038af16a99c8c9c5148d7c969a3ad160dfdb4c0b9e56b537c09c7e6ba4",
+    "classification": "routine_offense",
+    "question": null,
+    "relatedSections": []
+  }
+]

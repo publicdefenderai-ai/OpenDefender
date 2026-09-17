@@ -1,0 +1,832 @@
+[
+  {
+    "section": "2911.01",
+    "sourceHash": "681dbe9ed8dc80ea2c234c4bf9da9c1a59c4fa1af569ea2e8889083aebcdf758",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "aggravated robbery",
+        "conduct": "Divisions (A)(1)-(3) cover specified weapon/ordnance or serious-harm conduct during or immediately after a theft offense; (B) covers specified knowing removal/deprivation of an officer's deadly weapon.",
+        "grading": "Felony of the first degree.",
+        "evidenceQuotes": [
+          "(A) No person, in attempting or committing a theft offense, as defined in section 2913.01 of the Revised Code, or in fleeing immediately after the attempt or offense, shall do any of the following:",
+          "(C) Whoever violates this section is guilty of aggravated robbery, a felony of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Source-first offense and grade are explicit; legacy identity approval is unnecessary.",
+    "question": null,
+    "relatedSections": [
+      "2913.01",
+      "2923.11",
+      "2901.01"
+    ]
+  },
+  {
+    "section": "2911.02",
+    "sourceHash": "932ac78b0bc5ec91502b00ce2985983ff03da054115b62af2439c9b166db0672",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "robbery",
+        "conduct": "During or immediately after a theft offense: (A)(1) possess/control a deadly weapon; (A)(2) inflict, attempt, or threaten physical harm; or (A)(3) use or threaten immediate force.",
+        "grading": "(A)(1)-(2): felony of the second degree; (A)(3): felony of the third degree.",
+        "evidenceQuotes": [
+          "(A) No person, in attempting or committing a theft offense or in fleeing immediately after the attempt or offense, shall do any of the following:",
+          "(B) Whoever violates this section is guilty of robbery. A violation of division (A)(1) or (2) of this section is a felony of the second degree. A violation of division (A)(3) of this section is a felony of the third degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit conduct-to-grade table; routine data work.",
+    "question": null,
+    "relatedSections": [
+      "2913.01",
+      "2923.11"
+    ]
+  },
+  {
+    "section": "2911.11",
+    "sourceHash": "9f71682aadb869016eb39dd1047249ef5a7be8c0aab28fc6a1ea7cce5a3615f6",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "aggravated burglary",
+        "conduct": "By force, stealth, or deception, trespass in the specified occupied structure while a non-accomplice is present, with purpose to commit any criminal offense, plus (A)(1) physical-harm conduct or (A)(2) a deadly weapon/dangerous ordnance.",
+        "grading": "Felony of the first degree.",
+        "evidenceQuotes": [
+          "(A) No person, by force, stealth, or deception, shall trespass in an occupied structure or in a separately secured or separately occupied portion of an occupied structure, when another person other than an accomplice of the offender is present, with purpose to commit in the structure or in the separately secured or separately occupied portion of the structure any criminal offense, if any of the following apply:",
+          "(B) Whoever violates this section is guilty of aggravated burglary, a felony of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit source-first offense.",
+    "question": null,
+    "relatedSections": [
+      "2909.01",
+      "2923.11"
+    ]
+  },
+  {
+    "section": "2911.12",
+    "sourceHash": "5090ce0bb721a4ccd0ef8f4dfeb98216abfcef4810b70292858aa8be7cb7ee56",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "burglary",
+        "conduct": "Division (A)(1)-(3) force/stealth/deception trespass in specified occupied structures with purpose to commit any criminal offense.",
+        "grading": "(A)(1)-(2): felony of the second degree; (A)(3): felony of the third degree.",
+        "evidenceQuotes": [
+          "(A) No person, by force, stealth, or deception, shall do any of the following:",
+          "(D) Whoever violates division (A) of this section is guilty of burglary. A violation of division (A)(1) or (2) of this section is a felony of the second degree. A violation of division (A)(3) of this section is a felony of the third degree."
+        ]
+      },
+      {
+        "name": "trespass in a habitation when a person is present or likely to be present",
+        "conduct": "Division (B): by force, stealth, or deception, trespass in a permanent or temporary habitation when a non-accomplice is present or likely present.",
+        "grading": "Felony of the fourth degree.",
+        "evidenceQuotes": [
+          "(B) No person, by force, stealth, or deception, shall trespass in a permanent or temporary habitation of any person when any person other than an accomplice of the offender is present or likely to be present.",
+          "(E) Whoever violates division (B) of this section is guilty of trespass in a habitation when a person is present or likely to be present, a felony of the fourth degree."
+        ]
+      }
+    ],
+    "resolution": "Two independently named source-first offenses; do not collapse them into one legacy label.",
+    "question": null,
+    "relatedSections": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2911.13",
+    "sourceHash": "49083e92a8d2029c8a4b5fdbdeeb0ea4a87d85e3b0de3b02bf115111cfe46290",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "breaking and entering",
+        "conduct": "(A) force/stealth/deception trespass in an unoccupied structure to commit a theft offense or felony; or (B) trespass on another's land/premises to commit a felony.",
+        "grading": "Felony of the fifth degree.",
+        "evidenceQuotes": [
+          "(A) No person by force, stealth, or deception, shall trespass in an unoccupied structure, with purpose to commit therein any theft offense, as defined in section 2913.01 of the Revised Code, or any felony.",
+          "(C) Whoever violates this section is guilty of breaking and entering, a felony of the fifth degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit source-first offense.",
+    "question": null,
+    "relatedSections": [
+      "2913.01"
+    ]
+  },
+  {
+    "section": "2911.21",
+    "sourceHash": "d987f0479cefd5ba9a2241ecbd712d0fb452bbf1bec9f98a0e57dbe476823526",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "criminal trespass",
+        "conduct": "Division (A)(1)-(5) specifies unprivileged knowing, reckless, or negligent entry/remain/refusal-to-leave conduct, including knowing entry/remain on a critical infrastructure facility.",
+        "grading": "(A)(1)-(4): misdemeanor of the fourth degree; (A)(5): misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "(A) No person, without privilege to do so, shall do any of the following:",
+          "(D)(1) Whoever violates this section is guilty of criminal trespass. Criminal trespass in violation of division (A)(1), (2), (3), or (4) of this section is a misdemeanor of the fourth degree. Criminal trespass in violation of division (A)(5) of this section is a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit conduct-to-grade table; vehicle-related additions are sentencing consequences, not new offense names.",
+    "question": null,
+    "relatedSections": [
+      "1509.01",
+      "4519.01"
+    ]
+  },
+  {
+    "section": "2913.02",
+    "sourceHash": "f86873d5326c0f2efe8e36fe7ab5804932cf7ffd9fc55b4e0eb3ee351882d614",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "theft",
+        "conduct": "Division (A): with purpose to deprive, knowingly obtain/exert control over property or services by one of (A)(1)-(5).",
+        "grading": "Division (B) expressly assigns M1/F5/F4/F3/F2/F1 grades by value, recidivism, protected victim, or property type, with statutory grading names including misdemeanor theft, theft, grand theft, aggravated theft, aggravated theft of $1.5 million or more, theft from a person in a protected class, grand theft of a motor vehicle, theft of drugs, theft of a police dog or horse or an assistance dog, theft of anhydrous ammonia, theft of a special purpose article, and theft of a bulk merchandise container.",
+        "evidenceQuotes": [
+          "(A) No person, with purpose to deprive the owner of property or services, shall knowingly obtain or exert control over either the property or services in any of the following ways:",
+          "(B)(1) Whoever violates this section is guilty of theft.",
+          "(5) If the property stolen is a motor vehicle, a violation of this section is grand theft of a motor vehicle, a felony of the fourth degree."
+        ]
+      }
+    ],
+    "resolution": "Complex but explicit grading/name table; encode literally rather than seeking generic legal confirmation.",
+    "question": null,
+    "relatedSections": [
+      "2913.71",
+      "4737.04",
+      "4737.012",
+      "2913.72"
+    ]
+  },
+  {
+    "section": "2913.04",
+    "sourceHash": "d5ae4b2c3eb945fac7fbf597c0daa8b5417cfa1a6075fe4871c95b7c062cecf1",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "unauthorized use of property",
+        "conduct": "Division (A): knowingly use or operate another's property without authorized consent.",
+        "grading": "M4 baseline; M1/F5/F4/F3 for fraud/property schemes by value; protected-victim table F5/F4/F3/F2.",
+        "evidenceQuotes": [
+          "(A) No person shall knowingly use or operate the property of another without the consent of the owner or person authorized to give consent.",
+          "(F)(1) Whoever violates division (A) of this section is guilty of unauthorized use of property."
+        ]
+      },
+      {
+        "name": "unauthorized use of computer, cable, or telecommunication property",
+        "conduct": "Division (B): knowingly gain/attempt/cause access to specified systems or services without or beyond consent.",
+        "grading": "F5 baseline; specified criminal/fraud purpose and value can produce F4/F3; protected-victim table F5/F4/F3/F2.",
+        "evidenceQuotes": [
+          "(B) No person, in any manner and by any means, including, but not limited to, computer hacking, shall knowingly gain access to, attempt to gain access to, or cause access to be gained to any computer, computer system, computer network, cable service, cable system, telecommunications device, telecommunications service, or information service without the consent of, or beyond the scope of the express or implied consent of, the owner of the computer, computer system, computer network, cable service, cable system, telecommunications device, telecommunications service, or information service or other person authorized to give consent.",
+          "(G)(1) Whoever violates division (B) of this section is guilty of unauthorized use of computer, cable, or telecommunication property, and shall be punished as provided in division (G)(2), (3), or (4) of this section."
+        ]
+      },
+      {
+        "name": "unauthorized use of the law enforcement automated database system",
+        "conduct": "Division (C) prohibited access/attempt/grant/dissemination beyond consent, except as permitted by section 5503.101.",
+        "grading": "Felony of the fifth degree.",
+        "evidenceQuotes": [
+          "(H) Whoever violates division (C) of this section is guilty of unauthorized use of the law enforcement automated database system, a felony of the fifth degree."
+        ]
+      },
+      {
+        "name": "unauthorized use of the Ohio law enforcement gateway",
+        "conduct": "Division (D) prohibited access/attempt/grant/dissemination beyond the superintendent's consent.",
+        "grading": "Felony of the fifth degree.",
+        "evidenceQuotes": [
+          "(I) Whoever violates division (D) of this section is guilty of unauthorized use of the Ohio law enforcement gateway, a felony of the fifth degree."
+        ]
+      }
+    ],
+    "resolution": "Correct false/incomplete extraction “unauthorized use of computer” to the full guilt-clause name; four explicit offenses and explicit grade tables.",
+    "question": null,
+    "relatedSections": [
+      "2913.03",
+      "5503.101",
+      "5503.10",
+      "109.57"
+    ]
+  },
+  {
+    "section": "2913.11",
+    "sourceHash": "bb91b13178b8d5e6a4eeb15ef7bf5e5b9b595048f8300943208266b5f0ef6ccb",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "passing bad checks",
+        "conduct": "Division (B): with purpose to defraud, issue/transfer/cause a check or negotiable instrument knowing dishonor or stop payment.",
+        "grading": "M1 baseline; F5 at stated single/multiple-payee thresholds; F4 at $7,500-$149,999.99; F3 at $150,000+.",
+        "evidenceQuotes": [
+          "(B) No person, with purpose to defraud, shall issue or transfer or cause to be issued or transferred a check or other negotiable instrument, knowing that it will be dishonored or knowing that a person has ordered or will order stop payment on the check or other negotiable instrument.",
+          "(E) Whoever violates this section is guilty of passing bad checks."
+        ]
+      }
+    ],
+    "resolution": "Explicit source-first offense and value table.",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2913.21",
+    "sourceHash": "1515d9b54d6439c35de2bdb4e598cf77d94d410fd4ea105c5cdcc95a8505c676",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "misuse of credit cards",
+        "conduct": "Divisions (A)-(C) enumerate deceptive procurement, prohibited buying/selling or public misuse, fraudulent security/use/furnishing/representation, and purpose-based receipt/possession/control/disposal.",
+        "grading": "(A), (B)(1), or (C): M1 absent protected-victim enhancement; (B)(2)-(4): M1/F5/F4/F3 by 90-day cumulative value; protected elderly/disabled victim under (B)(1)-(2): F5/F4/F3/F2 by debt/value.",
+        "evidenceQuotes": [
+          "(D)(1) Whoever violates this section is guilty of misuse of credit cards.",
+          "(3) Except as otherwise provided in this division or division (D)(4) of this section, a violation of division (B)(2), (3), or (4) of this section is a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit offense with engineering-grade subdivision/value mapping.",
+    "question": null,
+    "relatedSections": [
+      "2921.01"
+    ]
+  },
+  {
+    "section": "2913.31",
+    "sourceHash": "d53397b91af4c872a1890563dba60a7d6a83932174a35fe2d5bfc546ed1400a0",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "forgery",
+        "conduct": "Division (A)(1)-(3): with purpose to defraud or knowledge of facilitating fraud, specified forging, uttering, or possession-to-utter conduct.",
+        "grading": "F5 baseline; F4/F3 by ordinary property/service/loss thresholds; elderly/disabled-victim table F5/F4/F3/F2.",
+        "evidenceQuotes": [
+          "(A) No person, with purpose to defraud, or knowing that the person is facilitating a fraud, shall do any of the following:",
+          "(C)(1)(a) Whoever violates division (A) of this section is guilty of forgery."
+        ]
+      },
+      {
+        "name": "forging identification cards or selling or distributing forged identification cards",
+        "conduct": "Division (B): knowingly forge an identification card or sell/distribute a purported identification card knowing it is forged.",
+        "grading": "Misdemeanor of the first degree; repeat violation remains M1 with mandatory minimum $250 fine.",
+        "evidenceQuotes": [
+          "(B) No person shall knowingly do either of the following:",
+          "(2) (a) Whoever violates division (B) of this section is guilty of forging identification cards or selling or distributing forged identification cards. Except as otherwise provided in this division, forging identification cards or selling or distributing forged identification cards is a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Two independently named source-first offenses.",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2913.49",
+    "sourceHash": "59545088a699505f09d794da47ba021da60c249b4c43274ae1d682ab016647c8",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "identity fraud",
+        "conduct": "Divisions (B)-(E) prohibit specified nonconsensual identifying-information use/possession, aiding/abetting, permitting use with intent to defraud, and fraudulent use by the permitted person.",
+        "grading": "F5/F4/F3/F2 by value; if victim is in protected class, statutory name is “identity fraud against a person in a protected class” and grades are F4/F3/F2/F1 by value.",
+        "evidenceQuotes": [
+          "(B) No person, without the express or implied consent of the other person, shall use, obtain, or possess any personal identifying information of another person with intent to do either of the following:",
+          "(I)(1) Whoever violates this section is guilty of identity fraud.",
+          "(3) If the victim of the offense is an elderly person, disabled adult, active duty service member, or spouse of an active duty service member, a violation of this section is identity fraud against a person in a protected class."
+        ]
+      }
+    ],
+    "resolution": "Explicit base and protected-class grading names; no legal ambiguity in the table.",
+    "question": null,
+    "relatedSections": [
+      "2913.02",
+      "2913.04",
+      "2913.11",
+      "2913.21",
+      "2913.31",
+      "2913.42",
+      "2913.43",
+      "2921.13"
+    ]
+  },
+  {
+    "section": "2913.51",
+    "sourceHash": "ba8001068d9e3f6bc51149aa32b2dff709d34ea3a2a7e7683e8317853bef2ac6",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "receiving stolen property",
+        "conduct": "Receive, retain, or dispose of another's property knowing or having reasonable cause to believe it came from a theft offense.",
+        "grading": "M1 baseline; F5/F4/F3 by value or listed property; division (D) explicitly names receiving a stolen special purchase article/articles or bulk merchandise container/container(s), F5, subject to (C)'s $7,500+ rule.",
+        "evidenceQuotes": [
+          "(A) No person shall receive, retain, or dispose of property of another knowing or having reasonable cause to believe that the property has been obtained through commission of a theft offense.",
+          "(C) Whoever violates this section is guilty of receiving stolen property."
+        ]
+      }
+    ],
+    "resolution": "Explicit offense and property/value grading table.",
+    "question": null,
+    "relatedSections": [
+      "2913.71",
+      "4501.01",
+      "4729.01",
+      "2923.11",
+      "4737.04",
+      "4737.012"
+    ]
+  },
+  {
+    "section": "2917.11",
+    "sourceHash": "1ba0a7b235ba6136b0e05e075f030cee20fb0e8755c11320ac0621992bd4f948",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "disorderly conduct",
+        "conduct": "Division (A) enumerates reckless inconvenience/annoyance/alarm conduct; (B) enumerates specified voluntarily intoxicated public/offensive or harm-risk conduct.",
+        "grading": "Minor misdemeanor baseline; M4 under (E)(3)'s listed circumstances or (E)(4)'s repeated (B) violations.",
+        "evidenceQuotes": [
+          "(A) No person shall recklessly cause inconvenience, annoyance, or alarm to another by doing any of the following:",
+          "(E)(1) Whoever violates this section is guilty of disorderly conduct.",
+          "(2) Except as otherwise provided in divisions (E)(3) and (4) of this section, disorderly conduct is a minor misdemeanor."
+        ]
+      }
+    ],
+    "resolution": "Explicit conduct and enhancement table.",
+    "question": null,
+    "relatedSections": [
+      "2133.21",
+      "2909.04",
+      "2925.01"
+    ]
+  },
+  {
+    "section": "2917.12",
+    "sourceHash": "a33e1ebaf086ca567ccae3dd4b308d4c05066ed8230c193d7d88c443550d9676",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "disturbing a lawful meeting",
+        "conduct": "With purpose to prevent/disrupt a lawful meeting, procession, or gathering, obstruct/interfere with due conduct or make a gesture/display/utterance outraging group sensibilities.",
+        "grading": "M4 baseline; M1 for the religious-worship circumstances in (B)(1)-(2).",
+        "evidenceQuotes": [
+          "(A) No person, with purpose to prevent or disrupt a lawful meeting, procession, or gathering, shall do either of the following:",
+          "(B) Whoever violates this section is guilty of disturbing a lawful meeting. Except as otherwise provided in this division, disturbing a lawful meeting is a misdemeanor of the fourth degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit source-first offense.",
+    "question": null,
+    "relatedSections": [
+      "2913.01"
+    ]
+  },
+  {
+    "section": "2917.14",
+    "sourceHash": "1bcec63ca643d224b6be5bf0cb2a3e0687fea7da0168a823a7828150836719bc",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "unlawfully impeding public passage of an emergency service responder",
+        "conduct": "Without privilege, recklessly make a public passage impassable with unreasonable inconvenience/hazard, where (A)(1) emergency access/response is prevented and (A)(2) the person refuses a responder's request/order to remove or cease.",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "(A) No person, without privilege to do so, shall recklessly obstruct any highway, street, sidewalk, or any other public passage in such a manner as to render the highway, street, sidewalk, or passage impassable without unreasonable inconvenience or hazard if both of the following apply:",
+          "(C) Whoever violates this section is guilty of unlawfully impeding public passage of an emergency service responder, a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit source-first offense.",
+    "question": null,
+    "relatedSections": [
+      "2921.31",
+      "2903.13"
+    ]
+  },
+  {
+    "section": "2917.21",
+    "sourceHash": "e517b9e8a11c4127477ca938cfcb9dacf342685488bb6c6885c0a96557ba052d",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "telecommunications harassment",
+        "conduct": "Divisions (A)(1)-(11) and (B)(1)-(2) enumerate prohibited telecommunications or internet-posting conduct with the specified mental states and purposes.",
+        "grading": "(A)(1)-(3),(5)-(11), or (B): first offense M1, subsequent F5. (A)(4): same baseline, but economic harm yields F5 at $1,000-$7,499.99, F4 at $7,500-$149,999.99, and F3 at $150,000+.",
+        "evidenceQuotes": [
+          "(C)(1) Whoever violates this section is guilty of telecommunications harassment.",
+          "(2) A violation of division (A)(1), (2), (3), (5), (6), (7), (8), (9), (10), or (11) or (B) of this section is a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense."
+        ]
+      }
+    ],
+    "resolution": "Complex but explicit conduct/grade table.",
+    "question": null,
+    "relatedSections": [
+      "2903.21",
+      "2913.01",
+      "2907.01"
+    ]
+  },
+  {
+    "section": "2919.21",
+    "sourceHash": "6a37f854399b7dbd25235ea009b6db0658eadea45ec7479cf32345372767dc41",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "nonsupport of dependents",
+        "conduct": "Divisions (A)-(B) prohibit abandonment or failure to provide legally required/ordered support to specified persons.",
+        "grading": "M1 baseline; for (A)(2) or (B), F5 on specified prior conviction or 26-of-104-week failure, and F4 after prior felony conviction under this section.",
+        "evidenceQuotes": [
+          "(A) No person shall abandon, or fail to provide adequate support to:",
+          "(G)(1) Except as otherwise provided in this division, whoever violates division (A) or (B) of this section is guilty of nonsupport of dependents, a misdemeanor of the first degree."
+        ]
+      },
+      {
+        "name": "contributing to the nonsupport of dependents",
+        "conduct": "Division (C): aid, abet, induce, cause, encourage, or contribute to a child/juvenile-court ward becoming a statutorily defined dependent or neglected child.",
+        "grading": "Misdemeanor of the first degree; each day is a separate offense.",
+        "evidenceQuotes": [
+          "(C) No person shall aid, abet, induce, cause, encourage, or contribute to a child or a ward of the juvenile court becoming a dependent child, as defined in section 2151.04 of the Revised Code, or a neglected child, as defined in section 2151.03 of the Revised Code.",
+          "(3) Whoever violates division (C) of this section is guilty of contributing to the nonsupport of dependents, a misdemeanor of the first degree. Each day of violation of division (C) of this section is a separate offense."
+        ]
+      }
+    ],
+    "resolution": "Two named offenses and their grading branches are explicit. The fragment “nonsupport of dependents by reason of failing...” concerns additional costs/fees under (G)(2), not a new offense. That paragraph expressly cites FORMER §3115.31; it is not an unidentified current conduct or grading dependency. These drafts make no (G)(2) costs/fees claim, so historical acquisition for that separate claim is not a prerequisite.",
+    "question": null,
+    "relatedSections": [
+      "2151.03",
+      "2151.04"
+    ]
+  },
+  {
+    "section": "2919.27",
+    "sourceHash": "b2e7bd5d5450c0d675173bf6a5af877ec5d697afbeb92b1e80ed593aee9e721b",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "violating a protection order",
+        "conduct": "Recklessly violate an order/consent agreement listed in (A)(1)-(3).",
+        "grading": "M1 baseline; F5 for prior listed adjudication/conviction; F3 when violated while committing a felony.",
+        "evidenceQuotes": [
+          "(A) No person shall recklessly violate the terms of any of the following:",
+          "(B)(1) Whoever violates this section is guilty of violating a protection order.",
+          "(4) If the offender violates a protection order or consent agreement while committing a felony offense, violating a protection order is a felony of the third degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit offense and enhancement table.",
+    "question": null,
+    "relatedSections": [
+      "2919.26",
+      "3113.31",
+      "2151.34",
+      "2903.213",
+      "2903.214"
+    ]
+  },
+  {
+    "section": "2921.13",
+    "sourceHash": "fa9ee9e3d318971b4abde3ae99a8651d3fe3ffb9a2f3c0fce1b09cd90cd5e899",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "falsification",
+        "conduct": "Knowingly make/affirm a false statement in the circumstances enumerated in (A)(1)-(8),(10)-(11),(13),(15)-(16).",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "(F)(1) Whoever violates division (A)(1), (2), (3), (4), (5), (6), (7), (8), (10), (11), (13), (15), or (16) of this section is guilty of falsification. Except as otherwise provided in this division, falsification is a misdemeanor of the first degree."
+        ]
+      },
+      {
+        "name": "falsification in a theft offense",
+        "conduct": "Division (A)(9): false statement with purpose to commit or facilitate a theft offense.",
+        "grading": "M1; F5/F4/F3 at $1,000/$7,500/$150,000 thresholds.",
+        "evidenceQuotes": [
+          "(9) The statement is made with purpose to commit or facilitate the commission of a theft offense.",
+          "(2) Whoever violates division (A)(9) of this section is guilty of falsification in a theft offense."
+        ]
+      },
+      {
+        "name": "falsification to purchase a firearm",
+        "conduct": "Division (A)(12) false statement with specified false identity document, or (B) knowingly furnish such document to firearm seller.",
+        "grading": "Felony of the fifth degree.",
+        "evidenceQuotes": [
+          "(3) Whoever violates division (A)(12) or (B) of this section is guilty of falsification to purchase a firearm, a felony of the fifth degree."
+        ]
+      },
+      {
+        "name": "falsification to obtain a concealed handgun license",
+        "conduct": "Division (A)(14) application false statement or (C) knowingly present fictitious/altered handgun-competence certification.",
+        "grading": "Felony of the fourth degree.",
+        "evidenceQuotes": [
+          "(4) Whoever violates division (A)(14) or (C) of this section is guilty of falsification to obtain a concealed handgun license, a felony of the fourth degree."
+        ]
+      },
+      {
+        "name": "falsification regarding a removal proceeding",
+        "conduct": "Violation of division (A) in removal proceedings under the four sections listed in (F)(5).",
+        "grading": "Felony of the third degree.",
+        "evidenceQuotes": [
+          "(5) Whoever violates division (A) of this section in removal proceedings under section 319.26, 321.37, 507.13, or 733.78 of the Revised Code is guilty of falsification regarding a removal proceeding, a felony of the third degree."
+        ]
+      }
+    ],
+    "resolution": "Five express guilt-clause names; map exact conduct divisions rather than legacy composites.",
+    "question": null,
+    "relatedSections": [
+      "2923.11",
+      "2923.125",
+      "2923.1213",
+      "319.26",
+      "321.37",
+      "507.13",
+      "733.78"
+    ]
+  },
+  {
+    "section": "2921.32",
+    "sourceHash": "ebb5aa86e04f941396e68ce16d7457518f455791d6d9f1ca24ad2263acdf479a",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "obstructing justice",
+        "conduct": "With the specified purpose to hinder proceedings/punishment or assist benefit from crime/delinquent act, engage in one of (A)(1)-(6): harbor, provide avoidance means, warn, conceal evidence/induce withholding, communicate false information, or force/intimidation/deception obstruction.",
+        "grading": "If aided act is misdemeanor, same misdemeanor degree; felony baseline F5; qualifying serious offenses F3; terrorism F2 or F1 if nonparticipant death; trafficking in persons F2.",
+        "evidenceQuotes": [
+          "(A) No person, with purpose to hinder the discovery, apprehension, prosecution, conviction, or punishment of another for crime or to assist another to benefit from the commission of a crime, and no person, with purpose to hinder the discovery, apprehension, prosecution, adjudication as a delinquent child, or disposition of a child for an act that if committed by an adult would be a crime or to assist a child to benefit from the commission of an act that if committed by an adult would be a crime, shall do any of the following:",
+          "(C)(1) Whoever violates this section is guilty of obstructing justice."
+        ]
+      }
+    ],
+    "resolution": "Explicit offense and predicate-based grading table.",
+    "question": null,
+    "relatedSections": [
+      "2151.011",
+      "2152.02",
+      "2909.21"
+    ]
+  },
+  {
+    "section": "2921.33",
+    "sourceHash": "5cd9f0492db654c9f3a08202629763ae1d49265df51ee38e4dd4139b374733d1",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "resisting arrest",
+        "conduct": "Recklessly or by force resist/interfere with a lawful arrest; (B) adds officer physical harm; (C) adds deadly-weapon physical harm or brandishing.",
+        "grading": "(A) M2; (B) M1; (C) F4.",
+        "evidenceQuotes": [
+          "(A) No person, recklessly or by force, shall resist or interfere with a lawful arrest of the person or another.",
+          "(D) Whoever violates this section is guilty of resisting arrest. A violation of division (A) of this section is a misdemeanor of the second degree. A violation of division (B) of this section is a misdemeanor of the first degree. A violation of division (C) of this section is a felony of the fourth degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit conduct-to-grade table.",
+    "question": null,
+    "relatedSections": [
+      "2923.11"
+    ]
+  },
+  {
+    "section": "2923.01",
+    "sourceHash": "44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb32",
+    "classification": "specific_legal_question",
+    "candidates": [
+      {
+        "name": "conspiracy",
+        "conduct": "With purpose to commit/promote/facilitate one of the offenses specified in (A), plan/aid planning or agree to facilitating conduct; conviction also requires the substantial overt act described in (B).",
+        "grading": "F1 for aggravated murder/murder/life object; next lesser degree for F1-F4 object; special hazardous-waste penalty; M1 for F5 object.",
+        "evidenceQuotes": [
+          "(A) No person, with purpose to commit or to promote or facilitate the commission of aggravated murder, murder, kidnapping, abduction, compelling prostitution, promoting prostitution, trafficking in persons, aggravated arson, arson, aggravated robbery, robbery, aggravated burglary, burglary, trespassing in a habitation when a person is present or likely to be present, engaging in a pattern of corrupt activity, corrupting another with drugs, a felony drug trafficking, manufacturing, processing, or possession offense, theft of drugs, or illegal processing of drug documents, the commission of a felony offense of unauthorized use of a vehicle, illegally transmitting multiple commercial electronic mail messages or unauthorized access of a computer in violation of section 2923.421 of the Revised Code, or the commission of a violation of any provision of Chapter 3734. of the Revised Code, other than section 3734.18 of the Revised Code, that relates to hazardous wastes, shall do either of the following:",
+          "(J) Whoever violates this section is guilty of conspiracy, which is one of the following:"
+        ]
+      }
+    ],
+    "resolution": "The conspiracy name and general grading algorithm are explicit. However, (A) names email/computer predicate conduct while citing unavailable §2923.421; the matching official offense text is in §2913.421. Hold that predicate-specific application rather than silently correcting the statute's cross-reference. The phrases “conspiring with that other person” and “only one conspiracy” are not additional offense names.",
+    "question": "Which authority governs the email/computer predicate in §2923.01(A)? It cites §2923.421, which the official publisher reports as unavailable, while the named offenses are codified in §2913.421. May §2913.421 supply this conspiracy predicate and its grading, or must that application remain withheld?",
+    "evidenceQuotes": [
+      "(C)(1) Whoever violates division (B) of this section is guilty of illegally transmitting multiple commercial electronic mail messages. Except as otherwise provided in division (C)(2) or (E) of this section, illegally transmitting multiple commercial electronic mail messages is a felony of the fifth degree.",
+      "(2) Except as otherwise provided in division (E) of this section, whoever violates division (D)(1) of this section is guilty of unauthorized access of a computer, a felony of the fourth degree."
+    ],
+    "relatedSections": [
+      "2913.421",
+      "3734.18"
+    ]
+  },
+  {
+    "section": "2923.02",
+    "sourceHash": "5ce3fb0499d214ea0d2512e3f91bb581fa51a75ad3f2562e0d50f642cc714a44",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "attempt to commit an offense",
+        "conduct": "Purposely or knowingly, where that culpability suffices for the target offense, engage in conduct that if successful would constitute/result in the offense.",
+        "grading": "F1 for aggravated murder/murder/life offense; drug-amount rule uses next lower amount range; otherwise next lesser degree; express rules for unclassified and hazardous-waste offenses; attempt of minor misdemeanor or conspiracy is not an offense.",
+        "evidenceQuotes": [
+          "(A) No person, purposely or knowingly, and when purpose or knowledge is sufficient culpability for the commission of an offense, shall engage in conduct that, if successful, would constitute or result in the offense.",
+          "(E)(1) Whoever violates this section is guilty of an attempt to commit an offense.",
+          "An attempt to commit a minor misdemeanor, or to engage in conspiracy, is not an offense under this section."
+        ]
+      }
+    ],
+    "resolution": "Explicit derivative offense and grading algorithm.",
+    "question": null,
+    "relatedSections": [
+      "3734.18",
+      "2925.01"
+    ]
+  },
+  {
+    "section": "2923.03",
+    "sourceHash": "bf43371006c97d80d01d8b68472a2540cfc85bc9d0346b461756571ec394db33",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "complicity in the commission of an offense",
+        "conduct": "With culpability required for the offense, solicit/procure, aid/abet, conspire under 2923.01, or cause an innocent/irresponsible person to commit it; an offense must actually be committed, subject to complicity in attempt.",
+        "grading": "Prosecuted and punished as if a principal offender.",
+        "evidenceQuotes": [
+          "(A) No person, acting with the kind of culpability required for the commission of an offense, shall do any of the following:",
+          "(F) Whoever violates this section is guilty of complicity in the commission of an offense, and shall be prosecuted and punished as if he were a principal offender."
+        ]
+      }
+    ],
+    "resolution": "Explicit derivative offense; principal-offense mapping is routine data logic.",
+    "question": null,
+    "relatedSections": [
+      "2923.01",
+      "2923.02"
+    ]
+  },
+  {
+    "section": "2923.12",
+    "sourceHash": "535a40f5551fe9b5fa85644bcd3bc150549ecd7bf73701d6a00baedc24ebc159",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "carrying concealed weapons",
+        "conduct": "Division (A) knowingly carry/have specified concealed weapon ready at hand; (B) imposes specified duties on concealed-handgun licensees during law-enforcement stops, subject to detailed exclusions/defenses.",
+        "grading": "(A) M1 baseline, F4 for listed recidivism/loaded firearm/dangerous ordnance, F3 aboard aircraft; (B)(1) M2; (B)(2)/(4) M1 or repeat F5; (B)(3) F5; (F)(2)(a) minor misdemeanor; (F)(2)(b) says “a misdemeanor” plus $500 fine without stating a degree; further (F)(6)-(7) special rules apply.",
+        "evidenceQuotes": [
+          "(F)(1) Whoever violates this section is guilty of carrying concealed weapons.",
+          "(a) The offender shall be guilty of a minor misdemeanor if both of the following apply:",
+          "(b) The offender shall be guilty of a misdemeanor and shall be fined five hundred dollars if all of the following apply:"
+        ]
+      }
+    ],
+    "resolution": "Reject extracted “a minor misdemeanor if both of the following apply:” and “a minor misdemeanor” as offense names; both are grading text for carrying concealed weapons. Preserve (F)(2)(b) literally as misdemeanor-degree-unspecified rather than inventing a degree.",
+    "question": null,
+    "relatedSections": [
+      "2923.11",
+      "2923.125",
+      "2923.126",
+      "2923.128",
+      "2923.1213"
+    ]
+  },
+  {
+    "section": "2923.13",
+    "sourceHash": "fb2e6b9b9b30c1c84fb074507032aae315bdaa6fb1b088cb7cec93facda5207c",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "having weapons while under disability",
+        "conduct": "Unless relieved by law/legal process, knowingly acquire, have, carry, or use a firearm/dangerous ordnance while one of (A)(1)-(5) applies.",
+        "grading": "Felony of the third degree.",
+        "evidenceQuotes": [
+          "(A) Unless relieved from disability under operation of law or legal process, no person shall knowingly acquire, have, carry, or use any firearm or dangerous ordnance, if any of the following apply:",
+          "(B) Whoever violates this section is guilty of having weapons while under disability, a felony of the third degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit source-first offense.",
+    "question": null,
+    "relatedSections": [
+      "5122.01"
+    ]
+  },
+  {
+    "section": "2923.161",
+    "sourceHash": "5aac58d68219fbf2d913f080d2bbe3862086ec9a3882432f2c3b7fce6c594948",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "improperly discharging a firearm at or into a habitation, in a school safety zone, or with the intent to cause harm or panic to persons in a school, in a school building, or at a school function or the evacuation of a school function",
+        "conduct": "Without privilege, knowingly discharge as specified in (A)(1)-(3), including habitation, school-safety-zone, and 1,000-foot school conduct with listed harm/panic/evacuation intents.",
+        "grading": "Felony of the second degree.",
+        "evidenceQuotes": [
+          "(A) No person, without privilege to do so, shall knowingly do any of the following:",
+          "(C) Whoever violates this section is guilty of improperly discharging a firearm at or into a habitation, in a school safety zone, or with the intent to cause harm or panic to persons in a school, in a school building, or at a school function or the evacuation of a school function, a felony of the second degree."
+        ]
+      }
+    ],
+    "resolution": "Correct the truncated extraction “improperly discharging a firearm at or into a habitation” to the full guilt-clause name.",
+    "question": null,
+    "relatedSections": [
+      "2909.01"
+    ]
+  },
+  {
+    "section": "2923.162",
+    "sourceHash": "ccd82d4008bedf567ace77f085627e303725b443646e7aeacd9310db7600b38a",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "discharge of a firearm on or near prohibited premises",
+        "conduct": "Division (A)(1)-(3) prohibits specified discharges near cemetery, appurtenant grounds, and upon/over a public road, subject to (B)'s own-land exceptions.",
+        "grading": "(A)(1)-(2) M4; (A)(3) M1 baseline, F3 for substantial person-risk or serious property harm, F2 for physical harm to person, F1 for serious physical harm to person.",
+        "evidenceQuotes": [
+          "(C) Whoever violates this section is guilty of discharge of a firearm on or near prohibited premises.",
+          "A violation of division (A)(1) or (2) of this section is a misdemeanor of the fourth degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit conduct-to-grade table.",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2923.17",
+    "sourceHash": "7a512b8b37b3e4cb0d80a07ea7ca02338cf40dfa40b2a7bc849970dc8842457c",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "unlawful possession of dangerous ordnance",
+        "conduct": "Division (A): knowingly acquire, have, carry, or use dangerous ordnance, subject to (C)'s exceptions.",
+        "grading": "Felony of the fifth degree.",
+        "evidenceQuotes": [
+          "(A) No person shall knowingly acquire, have, carry, or use any dangerous ordnance.",
+          "(D) Whoever violates division (A) of this section is guilty of unlawful possession of dangerous ordnance, a felony of the fifth degree."
+        ]
+      },
+      {
+        "name": "illegally manufacturing or processing explosives",
+        "conduct": "Division (B): manufacture/process an explosive in Ohio without first obtaining the specified license, registration certificate, or permit.",
+        "grading": "Felony of the second degree.",
+        "evidenceQuotes": [
+          "(B) No person shall manufacture or process an explosive at any location in this state unless the person first has been issued a license, certificate of registration, or permit to do so from a fire official of a political subdivision of this state or from the office of the fire marshal.",
+          "(E) Whoever violates division (B) of this section is guilty of illegally manufacturing or processing explosives, a felony of the second degree."
+        ]
+      }
+    ],
+    "resolution": "Two independently named source-first offenses.",
+    "question": null,
+    "relatedSections": [
+      "2923.18",
+      "1533.04",
+      "1533.16"
+    ]
+  },
+  {
+    "section": "2923.211",
+    "sourceHash": "47128ab2b68b85cc57eca6334a8fcdf777e15e839016e5bf307c1180196d2d44",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "underage purchase of a firearm",
+        "conduct": "Person under 18 purchases or attempts to purchase a firearm.",
+        "grading": "Delinquent act that would be a felony of the fourth degree if it could be committed by an adult.",
+        "evidenceQuotes": [
+          "(A) No person under eighteen years of age shall purchase or attempt to purchase a firearm.",
+          "(C) Whoever violates division (A) of this section is guilty of underage purchase of a firearm, a delinquent act that would be a felony of the fourth degree if it could be committed by an adult."
+        ]
+      },
+      {
+        "name": "underage purchase of a handgun",
+        "conduct": "Person under 21 purchases/attempts to purchase a handgun, subject to (B)(1)-(2) trained law-enforcement/military exceptions for persons 18-20.",
+        "grading": "Misdemeanor of the second degree.",
+        "evidenceQuotes": [
+          "Whoever violates division (B) of this section is guilty of underage purchase of a handgun, a misdemeanor of the second degree."
+        ]
+      }
+    ],
+    "resolution": "Add the omitted handgun offense candidate; preserve the firearm violation's express juvenile disposition wording.",
+    "question": null,
+    "relatedSections": []
+  },
+  {
+    "section": "2923.32",
+    "sourceHash": "4c8a72d0b49109f365a9e2d18b878f99335a210a1b3ee8fa23ec106a5f56249f",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "engaging in a pattern of corrupt activity",
+        "conduct": "Division (A)(1)-(3) prohibits conducting/participating in enterprise affairs, acquiring/maintaining enterprise or real-property interests/control, or investing specified proceeds through a pattern of corrupt activity or unlawful-debt collection.",
+        "grading": "Felony of the second degree baseline; felony of the first degree under the listed serious-incident or specification circumstances.",
+        "evidenceQuotes": [
+          "(A)(1) No person employed by, or associated with, any enterprise shall conduct or participate in, directly or indirectly, the affairs of the enterprise through a pattern of corrupt activity or the collection of an unlawful debt.",
+          "(B)(1) Whoever violates this section is guilty of engaging in a pattern of corrupt activity. Except as otherwise provided in this division, engaging in corrupt activity is a felony of the second degree."
+        ]
+      }
+    ],
+    "resolution": "Explicit offense and enhancement conditions; forfeiture/restitution provisions are consequences, not separate offense names.",
+    "question": null,
+    "relatedSections": [
+      "2941.1422",
+      "2929.14",
+      "2929.18",
+      "2923.01",
+      "2981.04",
+      "2981.06"
+    ]
+  }
+]

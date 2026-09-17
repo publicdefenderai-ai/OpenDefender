@@ -1,12 +1,52 @@
 # Ohio batch evidence workflow
 
+## Current handoff: focused substantive review
+
+The current catalog/Chapter 2903 batch has now received substantive analysis.
+Use **`scripts/data-review/output/ohio-focused-manual-review.html`** for the
+readable handoff, or `ohio-focused-manual-review.csv` for the decision sheet.
+The older `ohio-batch-manual-review` files were acquisition-stage analysis prompts,
+not a finished attorney queue.
+
+- 97 prior groups analyzed: 82 routine offense sections, 12 supporting/procedural
+  sections, and three sections with specific unresolved legal questions.
+- 125 structured source-first drafts, with complete source text, conduct/grade
+  summaries, exact evidence spans, and separately hashed supporting sources.
+  Seven analyzed sections already have independent source-first records.
+- The three questions concern §2903.16's reckless-neglect element/grade overlap,
+  §2903.13's incorporated HMO definition, and §2923.01's mismatched computer/email
+  predicate cross-reference.
+- No remaining agent-owned acquisition items in this scoped handoff.
+- No catalog, runtime, database, approval-pin, or published-app changes.
+  The 29 configured selectable charges are unchanged. Drafts are not publication
+  approval, localized explanations, or complete statewide coverage.
+
+Revalidate and regenerate the handoff offline:
+
+```sh
+npx tsx scripts/data-review/run-ohio-substantive-review.ts
+```
+
+The command consumes the recorded `ohio-substantive-findings.json`, rejects changed
+primary/supporting hashes, stale sources, inexact quotations, duplicate identities,
+and incomplete assignment coverage. It does not re-review new text automatically.
+The separate assembly script is a deliberate import of recorded analysis, not a
+source-refresh or approval mechanism.
+
+The substantive pass used 22 bounded HTTP requests for missing penalty/reference
+sources and current cannabis provisions; web research for official repeal context
+was separate. This is not an end-to-end time or Agent-cost claim.
+The targeted test runner reported 40 passing tests across three files; the shell
+deadline expired during runner shutdown. The script/shared/server typecheck passed,
+the complete packet compiled, and the unchanged app rendered.
+
 ## What this completes—and what it does not
 
 This workflow consolidates source acquisition, caching, literal statutory-name extraction, reference triage, evidence packets, and durable review notes. It has been applied to all 134 current Ohio catalog records (105 withheld), plus the nine remaining offense-bearing sections in the Chapter 2903 inventory.
 
 **It is not an automated legal reviewer or a completed Ohio catalog expansion.** It does not approve source pins, create new charge explanations, reconcile ambiguous legacy identities, or publish new selectable charges. Statewide section discovery outside Chapter 2903 remains incomplete. The 29 configured selectable records are unchanged.
 
-The output is a prepared review queue—not a claim that the remaining charges have been substantively verified. The source-first catalog projection added previously remains separate.
+The acquisition-stage output below is historical context, not the current attorney handoff. The focused substantive packet above supersedes its generic questions. Runtime source-first catalog expansion remains separate.
 
 ## Commands
 

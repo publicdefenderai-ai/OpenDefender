@@ -1,0 +1,535 @@
+[
+  {
+    "section": "1533.08",
+    "sourceHash": "79d06d3c1b18e1e52f415f729c0e4a9e5c23389abfcde71002fa0d42f97a1ae9",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "failure to carry or exhibit wild animal permit",
+        "conduct": "A permit holder collecting or possessing protected wild animals fails to carry the permit or exhibit it on demand.",
+        "grading": "Misdemeanor of the fourth degree under the catch-all in 1533.99(F).",
+        "evidenceQuotes": [
+          "[1533.08] Each holder of a permit engaged in collecting or who possesses such wild animals shall carry the permit at all times and shall exhibit it upon demand",
+          "[1533.08] Failure to so carry or exhibit the permit constitutes an offense under this section.",
+          "[1533.99] (F) Whoever violates any section of this chapter for which no penalty is otherwise provided is guilty of a misdemeanor of the fourth degree."
+        ]
+      }
+    ],
+    "resolution": "Complete source-first offense and grade; no residual question.",
+    "question": null,
+    "relatedSections": [
+      "1533.99"
+    ]
+  },
+  {
+    "section": "2705.02",
+    "sourceHash": "85cf00114ba2d2ea4faaebba39902f29904650b89e50aaa97aa66ae16d525180",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "contempt under R.C. 2705.02",
+        "conduct": "Any act enumerated in 2705.02(A)-(H).",
+        "grading": "Contempt sanctions, not an ordinary felony/misdemeanor grade: first offense up to $250 and/or 30 days; second up to $500 and/or 60 days; third or subsequent up to $1,000 and/or 90 days.",
+        "evidenceQuotes": [
+          "[2705.02] A person guilty of any of the following acts may be punished as for a contempt:",
+          "[2705.02] (A) Disobedience of, or resistance to, a lawful writ, process, order, rule, judgment, or command of a court or officer;",
+          "[2705.05] (A) In all contempt proceedings, the court shall conduct a hearing.",
+          "[2705.05] (1) For a first offense, a fine of not more than two hundred fifty dollars, a definite term of imprisonment of not more than thirty days in jail, or both;",
+          "[2705.05] (3) For a third or subsequent offense, a fine of not more than one thousand dollars, a definite term of imprisonment of not more than ninety days in jail, or both."
+        ]
+      }
+    ],
+    "resolution": "Treat as a contempt charge with the special 2705.05 sanction ladder, not as a conventional criminal degree.",
+    "question": null,
+    "relatedSections": [
+      "2705.05"
+    ]
+  },
+  {
+    "section": "2925.03",
+    "sourceHash": "651e899201fee2726fac5ea2b860e320540ed06c800903710a70181e3b329fd1",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "aggravated trafficking in drugs",
+        "conduct": "2925.03(A), schedule I/II category stated in (C)(1).",
+        "grading": "Table in 2925.03(C)(1).",
+        "evidenceQuotes": [
+          "[2925.03] (1) If the drug involved in the violation is any compound, mixture, preparation, or substance included in schedule I or schedule II, with the exception of marihuana, cocaine, L.S.D., heroin, any fentanyl-related compound, hashish, and any controlled substance analog, whoever violates division (A) of this section is guilty of aggravated trafficking in drugs."
+        ]
+      },
+      {
+        "name": "trafficking in drugs",
+        "conduct": "2925.03(A), schedule III-V category in (C)(2).",
+        "grading": "Table in 2925.03(C)(2).",
+        "evidenceQuotes": [
+          "[2925.03] (2) If the drug involved in the violation is any compound, mixture, preparation, or substance included in schedule III, IV, or V, whoever violates division (A) of this section is guilty of trafficking in drugs."
+        ]
+      },
+      {
+        "name": "trafficking in marihuana",
+        "conduct": "2925.03(A), marihuana other than hashish under (C)(3), subject to lawful Chapter 3796 activities.",
+        "grading": "Table in 2925.03(C)(3); (C)(10)(a) routes the specified mixture to this table.",
+        "evidenceQuotes": [
+          "[2925.03] (3) If the drug involved in the violation is marihuana or a compound, mixture, preparation, or substance containing marihuana other than hashish, whoever violates division (A) of this section is guilty of trafficking in marihuana.",
+          "[3796.221] (4) Transfer adult-use and homegrown marijuana to another adult-use consumer if all of the following apply:",
+          "[3796.221] (D) Subject to divisions (B) and (C) of this section, an adult-use consumer is not subject to arrest or criminal prosecution for engaging in any of the activities described in division (A) of this section."
+        ]
+      },
+      {
+        "name": "trafficking in cocaine",
+        "conduct": "2925.03(A), cocaine category in (C)(4).",
+        "grading": "Table in 2925.03(C)(4).",
+        "evidenceQuotes": [
+          "[2925.03] (4) If the drug involved in the violation is cocaine or a compound, mixture, preparation, or substance containing cocaine, whoever violates division (A) of this section is guilty of trafficking in cocaine."
+        ]
+      },
+      {
+        "name": "trafficking in L.S.D.",
+        "conduct": "2925.03(A), L.S.D. category in (C)(5).",
+        "grading": "Table in 2925.03(C)(5).",
+        "evidenceQuotes": [
+          "[2925.03] (5) If the drug involved in the violation is L.S.D. or a compound, mixture, preparation, or substance containing L.S.D., whoever violates division (A) of this section is guilty of trafficking in L.S.D."
+        ]
+      },
+      {
+        "name": "trafficking in heroin",
+        "conduct": "2925.03(A), heroin category in (C)(6).",
+        "grading": "Table in 2925.03(C)(6).",
+        "evidenceQuotes": [
+          "[2925.03] (6) If the drug involved in the violation is heroin or a compound, mixture, preparation, or substance containing heroin, whoever violates division (A) of this section is guilty of trafficking in heroin."
+        ]
+      },
+      {
+        "name": "trafficking in hashish",
+        "conduct": "2925.03(A), hashish category in (C)(7).",
+        "grading": "Table in 2925.03(C)(7).",
+        "evidenceQuotes": [
+          "[2925.03] (7) If the drug involved in the violation is hashish or a compound, mixture, preparation, or substance containing hashish, whoever violates division (A) of this section is guilty of trafficking in hashish."
+        ]
+      },
+      {
+        "name": "trafficking in a controlled substance analog",
+        "conduct": "2925.03(A), analog category in (C)(8).",
+        "grading": "Table in 2925.03(C)(8).",
+        "evidenceQuotes": [
+          "[2925.03] (8) If the drug involved in the violation is a controlled substance analog or compound, mixture, preparation, or substance that contains a controlled substance analog, whoever violates division (A) of this section is guilty of trafficking in a controlled substance analog."
+        ]
+      },
+      {
+        "name": "trafficking in a fentanyl-related compound",
+        "conduct": "2925.03(A), fentanyl category in (C)(9); (C)(10)(b) routes a knowing fentanyl/marihuana mixture here.",
+        "grading": "Table in 2925.03(C)(9).",
+        "evidenceQuotes": [
+          "[2925.03] (9) If the drug involved in the violation is a fentanyl-related compound or a compound, mixture, preparation, or substance containing a fentanyl-related compound and division (C)(10)(a) of this section does not apply to the drug involved, whoever violates division (A) of this section is guilty of trafficking in a fentanyl-related compound."
+        ]
+      }
+    ],
+    "resolution": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+    "question": null,
+    "relatedSections": [
+      "3796.01",
+      "3796.18",
+      "3796.19",
+      "3796.20",
+      "3796.221"
+    ]
+  },
+  {
+    "section": "2925.04",
+    "sourceHash": "7cc016535ed099e05d144b635ccb3208273226e99ae85eae5786c23bba866ccd",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "illegal manufacture of drugs",
+        "conduct": "2925.04(A), controlled substance other than marihuana, subject to authorized licensed processing under Chapter 3796.",
+        "grading": "Explicit table in 2925.04(C)(2)-(4).",
+        "evidenceQuotes": [
+          "[2925.04] (A) No person shall knowingly cultivate marihuana or knowingly manufacture or otherwise engage in any part of the production of a controlled substance.",
+          "[2925.04] (C)(1) Whoever commits a violation of division (A) of this section that involves any drug other than marihuana is guilty of illegal manufacture of drugs",
+          "[3796.19] (b) Subject to division (B) of this section, process medical marijuana and adult-use marijuana into a form described in section 3796.06 of the Revised Code;"
+        ]
+      },
+      {
+        "name": "illegal cultivation of marihuana",
+        "conduct": "2925.04(A), marihuana, excluding home grow and licensed cultivation performed in accordance with Chapter 3796.",
+        "grading": "Explicit table in 2925.04(C)(5); internal personal-use affirmative defense in (F).",
+        "evidenceQuotes": [
+          "[2925.04] whoever commits a violation of division (A) of this section that involves marihuana is guilty of illegal cultivation of marihuana.",
+          "[3796.04] (A) Notwithstanding any conflicting provision of the Revised Code, an adult-use consumer may do all of the following:",
+          "[3796.04] (1) Cultivate, grow, and possess homegrown marijuana plants at the adult-use consumer's primary residence, if all of the following apply:",
+          "[3796.04] (D) Subject to division (B) of this section and divisions (B) and (C) of section 3796.221 of the Revised Code, an adult-use consumer shall not be subject to arrest or criminal prosecution for cultivating, growing, possessing, processing, storing, or using homegrown marijuana, or possessing paraphernalia or accessories that may be used in the administration of adult-use or homegrown marijuana, in accordance with division (A) of this section.",
+          "[3796.18] (a) Cultivate medical marijuana and adult-use marijuana;"
+        ]
+      }
+    ],
+    "resolution": "Both offense names remain valid only outside the literal 2925.04 exceptions and applicable Chapter 3796 authorizations. Home grow must satisfy 3796.04's age, plant-limit, residence, security, visibility, and other restrictions; licensed commercial conduct must stay within license authority.",
+    "question": null,
+    "relatedSections": [
+      "2901.05",
+      "3796.01",
+      "3796.04",
+      "3796.18",
+      "3796.19"
+    ]
+  },
+  {
+    "section": "2925.11",
+    "sourceHash": "48873a120faeac17de6d06cbb50fda7ad3b3aabc725e18a0154de89e27aa7d97",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "aggravated possession of drugs",
+        "conduct": "2925.11(A), schedule I/II category in (C)(1).",
+        "grading": "Table in 2925.11(C)(1).",
+        "evidenceQuotes": [
+          "[2925.11] (1) If the drug involved in the violation is a compound, mixture, preparation, or substance included in schedule I or II, with the exception of marihuana, cocaine, L.S.D., heroin, any fentanyl-related compound, hashish, and any controlled substance analog, whoever violates division (A) of this section is guilty of aggravated possession of drugs."
+        ]
+      },
+      {
+        "name": "possession of drugs",
+        "conduct": "2925.11(A), schedule III-V category in (C)(2); (C)(10)(a) routes its specified mixture here.",
+        "grading": "Table in 2925.11(C)(2).",
+        "evidenceQuotes": [
+          "[2925.11] (2) If the drug involved in the violation is a compound, mixture, preparation, or substance included in schedule III, IV, or V, whoever violates division (A) of this section is guilty of possession of drugs."
+        ]
+      },
+      {
+        "name": "possession of marihuana",
+        "conduct": "2925.11(A), marihuana other than hashish under (C)(3), except Chapter 3796-protected possession/use.",
+        "grading": "Table in 2925.11(C)(3); (C)(9)(a) routes its specified mixture here.",
+        "evidenceQuotes": [
+          "[2925.11] (3) If the drug involved in the violation is marihuana or a compound, mixture, preparation, or substance containing marihuana other than hashish, whoever violates division (A) of this section is guilty of possession of marihuana.",
+          "[3796.221] (2) Possess adult-use marijuana, subject to division (B) of this section;",
+          "[3796.221] (D) Subject to divisions (B) and (C) of this section, an adult-use consumer is not subject to arrest or criminal prosecution for engaging in any of the activities described in division (A) of this section."
+        ]
+      },
+      {
+        "name": "possession of cocaine",
+        "conduct": "2925.11(A), cocaine category in (C)(4).",
+        "grading": "Table in 2925.11(C)(4).",
+        "evidenceQuotes": [
+          "[2925.11] (4) If the drug involved in the violation is cocaine or a compound, mixture, preparation, or substance containing cocaine, whoever violates division (A) of this section is guilty of possession of cocaine."
+        ]
+      },
+      {
+        "name": "possession of L.S.D.",
+        "conduct": "2925.11(A), L.S.D. category in (C)(5).",
+        "grading": "Table in 2925.11(C)(5).",
+        "evidenceQuotes": [
+          "[2925.11] (5) If the drug involved in the violation is L.S.D., whoever violates division (A) of this section is guilty of possession of L.S.D."
+        ]
+      },
+      {
+        "name": "possession of heroin",
+        "conduct": "2925.11(A), heroin category in (C)(6).",
+        "grading": "Table in 2925.11(C)(6).",
+        "evidenceQuotes": [
+          "[2925.11] (6) If the drug involved in the violation is heroin or a compound, mixture, preparation, or substance containing heroin, whoever violates division (A) of this section is guilty of possession of heroin."
+        ]
+      },
+      {
+        "name": "possession of hashish",
+        "conduct": "2925.11(A), hashish category in (C)(7).",
+        "grading": "Table in 2925.11(C)(7).",
+        "evidenceQuotes": [
+          "[2925.11] (7) If the drug involved in the violation is hashish or a compound, mixture, preparation, or substance containing hashish, whoever violates division (A) of this section is guilty of possession of hashish."
+        ]
+      },
+      {
+        "name": "possession of a controlled substance analog",
+        "conduct": "2925.11(A), analog category in (C)(8).",
+        "grading": "Table in 2925.11(C)(8).",
+        "evidenceQuotes": [
+          "[2925.11] (8) If the drug involved is a controlled substance analog or compound, mixture, preparation, or substance that contains a controlled substance analog, whoever violates division (A) of this section is guilty of possession of a controlled substance analog."
+        ]
+      },
+      {
+        "name": "possession of a fentanyl-related compound",
+        "conduct": "2925.11(A), fentanyl category in (C)(11), including knowing mixtures routed by (C)(9)(b) and (C)(10)(b).",
+        "grading": "Table in 2925.11(C)(11).",
+        "evidenceQuotes": [
+          "[2925.11] (11) If the drug involved in the violation is a fentanyl-related compound and neither division (C)(9)(a) nor division (C)(10)(a) of this section applies to the drug involved, or is a compound, mixture, preparation, or substance that contains a fentanyl-related compound or is a combination of a fentanyl-related compound and any other controlled substance and neither division (C)(9)(a) nor division (C)(10)(a) of this section applies to the drug involved, whoever violates division (A) of this section is guilty of possession of a fentanyl-related compound."
+        ]
+      }
+    ],
+    "resolution": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+    "question": null,
+    "relatedSections": [
+      "3796.01",
+      "3796.04",
+      "3796.22",
+      "3796.23",
+      "3796.221"
+    ]
+  },
+  {
+    "section": "2925.14",
+    "sourceHash": "e0ca3c770008911245d2b70a73055b3941849686dc6ad2507052613571479412",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "illegal use or possession of drug paraphernalia",
+        "conduct": "2925.14(C)(1), subject to (D)(2)-(4), including the express marihuana exclusion.",
+        "grading": "Misdemeanor of the fourth degree.",
+        "evidenceQuotes": [
+          "[2925.14] (F)(1) Whoever violates division (C)(1) of this section is guilty of illegal use or possession of drug paraphernalia, a misdemeanor of the fourth degree.",
+          "[2925.14] (2) Division (C)(1) of this section does not apply to a person's use, or possession with purpose to use, any drug paraphernalia that is equipment, a product, or material of any kind that is used by the person, intended by the person for use, or designed for use in storing, containing, concealing, injecting, ingesting, inhaling, or otherwise introducing into the human body marihuana.",
+          "[3796.221] (3) Possess any paraphernalia or accessories that may be used in the administration of adult-use marijuana as specified in rules adopted under section 3796.03 of the Revised Code;"
+        ]
+      },
+      {
+        "name": "dealing in drug paraphernalia",
+        "conduct": "2925.14(C)(2), except the juvenile-sale variant.",
+        "grading": "Misdemeanor of the second degree.",
+        "evidenceQuotes": [
+          "[2925.14] (2) Except as provided in division (F)(3) of this section, whoever violates division (C)(2) of this section is guilty of dealing in drug paraphernalia, a misdemeanor of the second degree.",
+          "[3796.20] (d) Sell paraphernalia that may be used in the administration of adult-use marijuana or medical marijuana as specified in rules adopted under section 3796.03 of the Revised Code;"
+        ]
+      },
+      {
+        "name": "selling drug paraphernalia to juveniles",
+        "conduct": "Violation of 2925.14(C)(2) by selling to a juvenile.",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "[2925.14] (3) Whoever violates division (C)(2) of this section by selling drug paraphernalia to a juvenile is guilty of selling drug paraphernalia to juveniles, a misdemeanor of the first degree."
+        ]
+      },
+      {
+        "name": "illegal advertising of drug paraphernalia",
+        "conduct": "2925.14(C)(3).",
+        "grading": "Misdemeanor of the second degree.",
+        "evidenceQuotes": [
+          "[2925.14] (4) Whoever violates division (C)(3) of this section is guilty of illegal advertising of drug paraphernalia, a misdemeanor of the second degree."
+        ]
+      }
+    ],
+    "resolution": "Apply the primary section's categorical marihuana exclusion to (C)(1), plus Chapter 3796 protections for compliant adult-use, home-grow, patient, caregiver, and licensed-dispensary paraphernalia activity. These protections do not erase the non-marihuana or out-of-scope offenses.",
+    "question": null,
+    "relatedSections": [
+      "3796.04",
+      "3796.20",
+      "3796.22",
+      "3796.23",
+      "3796.221"
+    ]
+  },
+  {
+    "section": "3321.38",
+    "sourceHash": "c3243f5437a70dd6c1a7ee6c6d190c9c40af992933e43ae8390c993e526decae",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "violation of compulsory-school duties under R.C. 3321.38(A)",
+        "conduct": "A parent, guardian, or other caregiver violates one of the attendance provisions enumerated in 3321.38(A).",
+        "grading": "Offense not specifically classified; sanction is a fine up to $500 or up to 70 hours of community service under 3321.99. Do not invent a felony/misdemeanor degree.",
+        "evidenceQuotes": [
+          "[3321.38] (A) No parent, guardian, or other person having care of a child of compulsory school age shall violate any provision of section 3321.01, 3321.03, 3321.04, 3321.07, 3321.10, 3321.19, 3321.20, or 3331.14 of the Revised Code.",
+          "[3321.99] Whoever violates division (A) of section 3321.38 of the Revised Code may be fined not more than five hundred dollars or may be ordered to perform not more than seventy hours of community service work.",
+          "[2901.02] (A) Offenses include aggravated murder, murder, felonies of the first, second, third, fourth, and fifth degree, misdemeanors of the first, second, third, and fourth degree, minor misdemeanors, and offenses not specifically classified."
+        ]
+      }
+    ],
+    "resolution": "Division (A) is complete as an offense not specifically classified with literal sanctions. Division (D)'s failure to give a court-required bond is part of the section's judicial attendance-enforcement mechanism; 3321.99 expressly reaches only (A), so do not create a separate graded criminal candidate from (D).",
+    "question": null,
+    "relatedSections": [
+      "2901.02",
+      "3321.99"
+    ]
+  },
+  {
+    "section": "3743.65",
+    "sourceHash": "8fb4d32023db3edc1d1b7fc852e68fe1b8b1224fa606ae1b358ec71f26927284",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "fireworks possession, sale, or use restriction violation",
+        "conduct": "Division-specific conduct in 3743.65(A)-(H), preserving each exception and mental state.",
+        "grading": "(A)-(E): M1; (F): F5; (G): M1; (H): minor misdemeanor.",
+        "evidenceQuotes": [
+          "[3743.65] (B) Except as provided in sections 3743.45 and 3743.80 of the Revised Code and except for licensed exhibitors of fireworks authorized to conduct a fireworks exhibition pursuant to sections 3743.50 to 3743.55 of the Revised Code, no person shall discharge, ignite, or explode any fireworks in this state.",
+          "[3743.65] (F) Except as otherwise provided in division (J) of section 3743.06 and division (K) of section 3743.19 of the Revised Code, no person shall knowingly disable a fire suppression system",
+          "[3743.99] (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree.",
+          "[3743.99] (E) Whoever violates division (F) of section 3743.65 of the Revised Code is guilty of a felony of the fifth degree.",
+          "[3743.99] (H) Whoever violates division (H) of section 3743.65 of the Revised Code is guilty of a minor misdemeanor."
+        ]
+      }
+    ],
+    "resolution": "Complete literal grading table. Division (G) is M1 under 3743.99(F).",
+    "question": null,
+    "relatedSections": [
+      "3743.99"
+    ]
+  },
+  {
+    "section": "3767.32",
+    "sourceHash": "6f0a1c7388468d5084d87e3a437daf5233863006dafb83c2a990fa2338123aab",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "littering",
+        "conduct": "3767.32(A) deposit regardless of intent and (B) knowing unprivileged deposit in another's receptacle, subject to their listed exceptions.",
+        "grading": "Misdemeanor of the third degree; court may additionally or alternatively require litter removal.",
+        "evidenceQuotes": [
+          "[3767.32] (A) No person, regardless of intent, shall deposit litter or cause litter to be deposited on any public property, on private property not owned by the person, or in or on waters of the state unless one of the following applies:",
+          "[3767.32] (B) No person, without privilege to do so, shall knowingly deposit litter, or cause it to be deposited, in a litter receptacle located on any public property or on any private property not owned by the person unless one of the following applies:",
+          "[3767.99] (C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree."
+        ]
+      }
+    ],
+    "resolution": "Complete source-first name, conduct, exceptions, and grade; corrected section number is 3767.32.",
+    "question": null,
+    "relatedSections": [
+      "3767.99"
+    ]
+  },
+  {
+    "section": "4301.62",
+    "sourceHash": "a54daadcb234b1b03650956cbff623c2ce00bd1e94f4492b9ce288a6de9daf59",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "opened container of beer or intoxicating liquor prohibited at certain premises",
+        "conduct": "Possession in circumstances listed in 4301.62(B), subject to (C)-(J).",
+        "grading": "Minor misdemeanor.",
+        "evidenceQuotes": [
+          "[4301.62] (B) No person shall have in the person's possession an opened container of beer or intoxicating liquor in any of the following circumstances:",
+          "[4301.99] (A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+        ]
+      }
+    ],
+    "resolution": "Complete offense and grade; preserve all location-specific exceptions.",
+    "question": null,
+    "relatedSections": [
+      "4301.99"
+    ]
+  },
+  {
+    "section": "4301.633",
+    "sourceHash": "18b36f1f13ebc41db3db5905ad79fbd98f766e3c5f705a4e959998bfaa5f2f50",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+        "conduct": "Knowingly furnishing false identifying information to obtain alcohol for a person under 21.",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "[4301.633] Except as otherwise provided in this chapter, no person shall knowingly furnish any false information as to the name, age, or other identification of any person under twenty-one years of age for the purpose of obtaining or with the intent to obtain, beer or intoxicating liquor for a person under twenty-one years of age, by purchase, or as a gift.",
+          "[4301.99] (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+        ]
+      }
+    ],
+    "resolution": "Complete source-first offense and grade.",
+    "question": null,
+    "relatedSections": [
+      "4301.99"
+    ]
+  },
+  {
+    "section": "4301.69",
+    "sourceHash": "e45acf7da53ad6b0b08f45a4a0498d17a8fbc864dc4fc58776579da025f5f453",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "selling, buying, or furnishing alcohol to an underage person",
+        "conduct": "4301.69(A), subject to its medical, religious, and supervision exceptions.",
+        "grading": "Unclassified misdemeanor; $500-$1,000 fine and up to six months' imprisonment.",
+        "evidenceQuotes": [
+          "[4301.69] (A) Except as otherwise provided in this chapter, no person shall sell beer or intoxicating liquor to an underage person, shall buy beer or intoxicating liquor for an underage person, or shall furnish it to an underage person",
+          "[4301.99] (I) Whoever violates division (A) of section 4301.69 ... is guilty of a misdemeanor, shall be fined not less than five hundred and not more than one thousand dollars, and, in addition to the fine, may be imprisoned for a definite term of not more than six months."
+        ]
+      },
+      {
+        "name": "allowing underage alcohol possession or consumption",
+        "conduct": "4301.69(B).",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "[4301.69] (B) No person who is the owner or occupant of any public or private place shall knowingly allow any underage person to remain in or on the place while possessing or consuming beer or intoxicating liquor",
+          "[4301.99] (C) Whoever violates ... division (B), (C), (D), or (F) of section 4301.69 ... is guilty of a misdemeanor of the first degree."
+        ]
+      },
+      {
+        "name": "prohibited use of accommodations for underage alcohol or drug consumption",
+        "conduct": "4301.69(C).",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "[4301.69] (C) No person shall engage or use accommodations at a hotel, inn, cabin, campground, or restaurant when the person knows or has reason to know either of the following:"
+        ]
+      },
+      {
+        "name": "underage use of false identification to engage accommodations",
+        "conduct": "4301.69(D)(2).",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "[4301.69] (2) No underage person shall knowingly engage or attempt to engage accommodations at any hotel, inn, cabin, or campground by presenting identification that falsely indicates that the underage person is twenty-one years of age or older for the purpose of violating this section."
+        ]
+      },
+      {
+        "name": "underage alcohol purchase, possession, consumption, or public intoxication",
+        "conduct": "4301.69(E)(1), subject to stated exceptions.",
+        "grading": "Misdemeanor of the third degree; specified motor-vehicle cases involving an offender under 18 also trigger licensing consequences.",
+        "evidenceQuotes": [
+          "[4301.69] (E)(1) No underage person shall knowingly order, pay for, share the cost of, attempt to purchase, possess, or consume any beer or intoxicating liquor in any public or private place.",
+          "[4301.99] (D) Whoever violates ... division (E)(1) of section 4301.69 ... is guilty of a misdemeanor of the third degree."
+        ]
+      },
+      {
+        "name": "permitting a minor to violate specified alcohol laws",
+        "conduct": "4301.69(F).",
+        "grading": "Misdemeanor of the first degree.",
+        "evidenceQuotes": [
+          "[4301.69] (F) No parent, spouse who is not an underage person, or legal guardian of a minor shall knowingly permit the minor to violate this section or section 4301.63, 4301.633, or 4301.634 of the Revised Code."
+        ]
+      }
+    ],
+    "resolution": "Split the umbrella section into its actual prohibited divisions and literal grades. Division (G)'s posting duty is not included as a criminal candidate because 4301.99 does not assign it a penalty.",
+    "question": null,
+    "relatedSections": [
+      "4301.99"
+    ]
+  },
+  {
+    "section": "5747.18",
+    "sourceHash": "602648c1dac8aed134f2bd17af63b8c852ee83bd36eaf752a6490ce5f24e3c8f",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "unauthorized disclosure of confidential tax information",
+        "conduct": "Disclosure of information gained from returns, investigations, hearings, or verifications outside the listed official/statutory/judicial exceptions.",
+        "grading": "Offense not specifically classified; fine of $100-$5,000 under the 5747.99(B) catch-all. No imprisonment is stated, so do not invent a misdemeanor/felony degree.",
+        "evidenceQuotes": [
+          "[5747.18] Any information gained as the result of returns, investigations, hearings, or verifications required or authorized by this chapter is confidential, and no person shall disclose such information, except for official purposes, or as provided by section 3125.43, 4123.271, 4123.591, 4141.163, 4141.28, 4507.023, 5101.182, or 5703.21 of the Revised Code, or in accordance with a proper judicial order.",
+          "[5747.99] (B) Whoever violates any provision of sections 5747.01 to 5747.19 of the Revised Code, or any lawful rule promulgated by the tax commissioner under authority of any provision of those sections, for the violation of which no other penalty is provided in this section, shall be fined not less than one hundred nor more than five thousand dollars.",
+          "[2901.02] (A) Offenses include ... offenses not specifically classified."
+        ]
+      }
+    ],
+    "resolution": "Substantive confidentiality offense with a literal unclassified fine sanction, not merely procedure.",
+    "question": null,
+    "relatedSections": [
+      "2901.02",
+      "5747.99"
+    ]
+  },
+  {
+    "section": "5747.19",
+    "sourceHash": "d6bc15b48f45e47f370960ec2c929384b66e8626c3dfcaf8194c0f8611a26a28",
+    "classification": "routine_offense",
+    "candidates": [
+      {
+        "name": "filing incomplete, false, or fraudulent returns",
+        "conduct": "Knowing failure to file; filing or knowingly causing filing of incomplete, false, or fraudulent tax material; or aiding/abetting false or fraudulent filing.",
+        "grading": "Felony of the fifth degree.",
+        "evidenceQuotes": [
+          "[5747.19] No person shall knowingly fail to file any return or report required to be filed by this chapter, or file or knowingly cause to be filed any incomplete, false, or fraudulent return, report, or statement, or aid or abet another in the filing of any false or fraudulent return, report, or statement.",
+          "[5747.99] (A) Whoever violates section 5747.19 of the Revised Code is guilty of a felony of the fifth degree."
+        ]
+      }
+    ],
+    "resolution": "Complete source-first offense and grade.",
+    "question": null,
+    "relatedSections": [
+      "5747.99"
+    ]
+  }
+]

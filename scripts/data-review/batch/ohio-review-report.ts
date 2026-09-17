@@ -18,13 +18,21 @@ export function extractOffenseUnits(document: BatchDocument) {
   const clauses = quoteLines(document, /\b(?:is|are|shall be) guilty of\b/i);
   return clauses.flatMap(evidence => {
     // Extract only a literal named offense, not an inferred name from a heading.
-    const match = evidence.text.match(/\b(?:is|are|shall be) guilty of\s+(.+?)(?=,|;|\.|\s+and (?:shall|is|the|may)\b|$)/i);
-    if (!match || /^(?:a |an |the )?(?:felony|misdemeanor|violation|offense)\b/i.test(match[1])) return [];
-    return [{
-      name: match[1].trim(),
-      conductReference: evidence.text.match(/Whoever violates (.+?) of this section/i)?.[1] ?? null,
-      evidence,
-    }];
+    // Conditional sentencing statements and conspiracy relationship rules are
+    // not naming clauses. Mixture rerouting clauses repeat an existing name.
+    if (!/\bwhoever (?:violates|commits)\b/i.test(evidence.text)) return [];
+    const matches = evidence.text.matchAll(/\b(?:is|are|shall be) guilty of\s+(.+?)(?=,\s*(?:(?:(?:a|an)\s+)?(?:felony|(?:minor\s+)?misdemeanor)\b|which is\b)|;|\.(?:\s|$)|,?\s+and (?:shall|is|the|may)\b|$)/gi);
+    return [...matches].flatMap(match => {
+      if (/^(?:(?:a|an|the)\s+)?(?:felony|(?:minor\s+)?misdemeanor|violation|offense|specification|one of the following)\b/i.test(match[1])) return [];
+      let name = match[1].trim().replace(/[,:]$/, "");
+      // A sentence-ending period is also part of statutory abbreviations such as L.S.D.
+      if (/(?:\b[A-Z]\.){2,}[A-Z]$/.test(name)) name += ".";
+      return [{
+        name,
+        conductReference: evidence.text.slice(0, match.index).match(/Whoever violates ((?:(?!Whoever violates).)+?) of this section(?:(?!Whoever violates).)*$/i)?.[1] ?? null,
+        evidence,
+      }];
+    });
   });
 }
 
