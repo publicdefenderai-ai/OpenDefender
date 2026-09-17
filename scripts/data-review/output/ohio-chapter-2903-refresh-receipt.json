@@ -1,8 +1,15 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-09-16T23:15:46.277Z",
-  "expiresAt": "2026-09-23T23:15:46.277Z",
+  "checkedAt": "2026-09-17T03:56:27.212Z",
+  "expiresAt": "2026-09-24T03:56:27.212Z",
   "documents": [
+    {
+      "section": "2901.22",
+      "title": "Degrees of culpability attached to mental states",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.22",
+      "contentHash": "a64e2a1a3f81c9e138288712c827a9311fa80665201064dbb3efdd546d2a7b8a",
+      "effectiveDateStart": "2015-03-23"
+    },
     {
       "section": "2903.01",
       "title": "Aggravated murder",
@@ -18,11 +25,74 @@
       "effectiveDateStart": "1998-06-30"
     },
     {
+      "section": "2903.041",
+      "title": "Reckless homicide",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.041",
+      "contentHash": "0ee3f4a32056bb861337e69ec3a5a54a7a2fef7804c5df18e1d03d662c05da2b",
+      "effectiveDateStart": "1999-09-29"
+    },
+    {
+      "section": "2903.05",
+      "title": "Negligent homicide",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.05",
+      "contentHash": "6941264ad0ab8c204d39b5016731f1aa1c704888a29ea704911dc0d5b8117b8f",
+      "effectiveDateStart": "1996-09-06"
+    },
+    {
+      "section": "2903.09",
+      "title": "Unlawful termination of another's pregnancy",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.09",
+      "contentHash": "fca8ade933ae4def112ee7aa6acc0944eb69ab528fa65a9476192ceb688a2c4d",
+      "effectiveDateStart": "2019-03-22"
+    },
+    {
+      "section": "2903.14",
+      "title": "Negligent assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.14",
+      "contentHash": "a58df3f315fc64e7e783c2ecb7210b8ba5a1f70ba2f8e7aa7fcb71a874548b7b",
+      "effectiveDateStart": "1996-09-06"
+    },
+    {
+      "section": "2923.11",
+      "title": "Weapons control definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.11",
+      "contentHash": "aa1de5ed1cafc9d5bd97493367b5890e851e466f7dad5c2d92767b98d33cb44a",
+      "effectiveDateStart": "2019-03-28"
+    },
+    {
       "section": "2929.02",
       "title": "Murder penalties",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.02",
       "contentHash": "39f02e6be755c5468918b00b181496de70718f5ed267d7efb412038e6dbf04c7",
       "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2929.14",
+      "title": "Definite prison terms",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.14",
+      "contentHash": "a2ae7ae19aa5af27cd23a3e8d8bd0ff63feb7fb66f7ed547d3681cff251ef247",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2929.18",
+      "title": "Financial sanctions - felony",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.18",
+      "contentHash": "16be4838aae75376786627fb808779da40c69017e9526ddf1117c55adb14c27d",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2929.24",
+      "title": "Definite jail terms for misdemeanors",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.24",
+      "contentHash": "a21fe423e19a52a85454f69efb36773ebad870c6b8e23866982dda873aae7385",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2929.28",
+      "title": "Financial sanctions - misdemeanor",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.28",
+      "contentHash": "c1468dc2d812517e755b4e1b5156d3393415b2028e0a37f02a20b3922da33561",
+      "effectiveDateStart": "2023-10-03"
     }
   ]
 }

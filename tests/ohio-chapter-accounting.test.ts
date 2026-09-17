@@ -17,8 +17,8 @@ describe("Ohio Chapter 2903 source-first accounting", () => {
     expect(report.rows).toHaveLength(40);
     expect(report.accounting).toMatchObject({
       enumeratedSectionCount: 40,
-      offenseCandidateSectionCount: 23,
-      supportingProvisionCount: 15,
+      offenseCandidateSectionCount: 24,
+      supportingProvisionCount: 14,
       needsLegalInterpretationCount: 2,
       publishedOffenseCount: 0,
       namingReviewCount: 0,
@@ -34,7 +34,8 @@ describe("Ohio Chapter 2903 source-first accounting", () => {
     expect(report.rows.filter((row) => row.disposition === "needs_legal_interpretation")
       .map((row) => row.sectionId)).toEqual(["2903.06", "2903.08"]);
     expect(report.rows.filter((row) => row.disposition === "needs_legal_interpretation")
-      .every((row) => row.legalQuestion?.includes("Do not infer one catalog row per subparagraph."))).toBe(true);
+      .every((row) => row.legalQuestion?.includes("distinct selectable variants") &&
+        row.legalQuestion.includes("no name-transcription review is needed"))).toBe(true);
     expect(report.replayMetrics).toMatchObject({
       hashesValidated: 40,
       definitionsMatched: 40,

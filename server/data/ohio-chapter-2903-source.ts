@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { OHIO_CHAPTER_2903_ADDITIONAL_SOURCE_RECORDS } from "./ohio-chapter-2903-additional-source";
 
 export type OhioChapter2903SupportRole = "offense" | "penalty";
 
@@ -28,6 +29,8 @@ export interface OhioChapter2903PilotSourceRecord {
   offense: OhioChapter2903OfficialDocument;
   penalty: OhioChapter2903OfficialDocument;
   penaltyFine?: OhioChapter2903OfficialDocument;
+  /** Definition provisions supporting offense scope, not extra offenses. */
+  additionalEvidence?: OhioChapter2903OfficialDocument[];
 }
 
 const retrievedAt = new Date("2026-09-16T22:58:10.000Z");
@@ -205,7 +208,19 @@ export const OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS: readonly OhioChapter2903Pil
       ],
     },
   },
+  ...OHIO_CHAPTER_2903_ADDITIONAL_SOURCE_RECORDS,
 ];
+
+export function ohioChapter2903Evidence(source: OhioChapter2903PilotSourceRecord): {
+  document: OhioChapter2903OfficialDocument; supportRole: OhioChapter2903SupportRole;
+}[] {
+  return [
+    { document: source.offense, supportRole: "offense" },
+    { document: source.penalty, supportRole: "penalty" },
+    ...(source.penaltyFine ? [{ document: source.penaltyFine, supportRole: "penalty" as const }] : []),
+    ...(source.additionalEvidence ?? []).map(document => ({ document, supportRole: "offense" as const })),
+  ];
+}
 
 /**
  * An extraction rule is valid only for this exact stored official text. This

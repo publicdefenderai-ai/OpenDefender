@@ -10,10 +10,32 @@ import { fileURLToPath } from "node:url";
 import {
   OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH,
 } from "../../server/data/ohio-chapter-2903-refresh";
-import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../../server/data/ohio-chapter-2903-source";
+import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS, ohioChapter2903Evidence } from "../../server/data/ohio-chapter-2903-source";
 import { extractOhioDocument } from "./import-ohio-source-database";
 
 const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
+const pause = (milliseconds: number) => new Promise(resolve => setTimeout(resolve, milliseconds));
+
+/** Respect official-site throttling; never retry a changed or malformed page. */
+async function fetchOfficial(fetchPage: typeof fetch, url: string): Promise<Response> {
+  for (let attempt = 0; ; attempt++) {
+    const response = await fetchPage(url, {
+      signal: AbortSignal.timeout(30_000),
+      headers: { Accept: "text/html, */*" },
+      redirect: "error",
+    });
+    if (response.status !== 429 || attempt >= 2) return response;
+    const header = response.headers.get("retry-after");
+    const seconds = header && /^\d+$/.test(header) ? Number(header) : null;
+    const date = header ? Date.parse(header) : NaN;
+    const delay = seconds !== null ? seconds * 1000
+      : Number.isFinite(date) ? Math.max(0, date - Date.now()) : 5000 * (attempt + 1);
+    // A long publisher-requested delay belongs to a later operator run.
+    if (delay > 60_000) return response;
+    await response.body?.cancel();
+    await pause(Math.max(1000, delay));
+  }
+}
 
 function writeReceipt(path: string, value: unknown): void {
   const temporaryPath = `${path}.${process.pid}.tmp`;
@@ -28,19 +50,16 @@ export async function refreshOhioChapter2903Pilot(
   try {
   const expected = new Map<string, (typeof OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS)[number]["offense"]>();
   for (const record of OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS) {
-    for (const document of [record.offense, record.penalty, record.penaltyFine]) {
-      if (!document) continue;
+    for (const { document } of ohioChapter2903Evidence(record)) {
       expected.set(document.section, document);
     }
   }
   const checkedAt = new Date();
   const documents = [];
   for (const document of [...expected.values()].sort((a, b) => a.section.localeCompare(b.section))) {
-    const response = await fetchPage(document.sourceUrl, {
-      signal: AbortSignal.timeout(30_000),
-      headers: { Accept: "text/html, */*" },
-      redirect: "error",
-    });
+    // Test fixtures do not make network requests; real runs are serialized.
+    if (fetchPage === fetch) await pause(1000);
+    const response = await fetchOfficial(fetchPage, document.sourceUrl);
     const html = await response.text();
     if (!response.ok) throw new Error(`Official Ohio refresh failed for ${document.section}: HTTP ${response.status}`);
     const extracted = extractOhioDocument(html, document.section, document.sourceUrl, checkedAt);

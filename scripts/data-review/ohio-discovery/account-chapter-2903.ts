@@ -99,8 +99,8 @@ const DEFINITIONS: Record<string, InterpretiveDefinition> = {
   "2903.03": { sourceHash: "9a7b0826d368fe364e75fe9fa57fd3bb324c41e93f42731def486db7489e98cf", disposition: "offense_candidate", basis: "The official text contains a conduct prohibition and expressly calls a violation voluntary manslaughter, a felony of the first degree." },
   "2903.04": { sourceHash: "73275f6642f5cfd9ba70481ef972ca800719b8c264bb6a087d1b310b918a538e", disposition: "offense_candidate", basis: "The official text contains operative prohibitions and expressly grades violations of divisions (A) and (B)." },
   "2903.05": { sourceHash: "5df14364b0e49f3d4af23a6f9815779fb50695ca54d6c439af2a4c26035b6905", disposition: "offense_candidate", basis: "The official text contains an operative prohibition and expressly calls a violation negligent homicide with a degree." },
-  "2903.06": { sourceHash: "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead", disposition: "needs_legal_interpretation", basis: "The official text couples four conduct divisions with three named labels and conditional grades; it supplies offense and grading language but not a safe publication-unit rule.", legalQuestion: "Do divisions (A)(1) through (A)(4), the named labels in (B) through (D), and their conditional degree enhancements represent publishable alternatives, separate offenses, or sentencing variants? Do not infer one catalog row per subparagraph." },
-  "2903.08": { sourceHash: "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab", disposition: "needs_legal_interpretation", basis: "The official text couples conduct divisions to two labels and conditional grades; it supplies offense and grading language but not a safe publication-unit rule.", legalQuestion: "Should division (A)(1)'s aggravated vehicular assault and divisions (A)(2)-(3)'s vehicular assault be represented as alternatives, separate offenses, or sentencing variants, including the conditional grades in (B) and (C)? Do not infer one catalog row per subparagraph." },
+  "2903.06": { sourceHash: "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead", disposition: "needs_legal_interpretation", basis: "Divisions (B), (C), and (D) explicitly name aggravated vehicular homicide, vehicular homicide, and vehicular manslaughter. Their conduct groups have been extracted; conditional grades and sentencing dependencies remain unresolved for publication.", legalQuestion: "Within the three expressly named groups, which conduct and grading conditions need distinct selectable variants, and which mandatory-term and license-suspension dependencies apply to each? Validate the special sentencing references before activation; no name-transcription review is needed." },
+  "2903.08": { sourceHash: "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab", disposition: "needs_legal_interpretation", basis: "Division (B) expressly names aggravated vehicular assault for (A)(1); division (C) names vehicular assault for (A)(2) or (3). These groups have been extracted, but conditional grades and sentencing dependencies remain unresolved for publication.", legalQuestion: "Within the two expressly named groups, which conduct and grading conditions need distinct selectable variants, and which mandatory-term and license-suspension dependencies apply to each? Validate dependency and exception handling before activation; no name-transcription review is needed." },
   "2903.09": { sourceHash: "0dc125e0785220b45e409f3479968a69349d024634d81eb534f00044f0fcc8d9", disposition: "supporting_provision", basis: "The section expressly begins as a definition applicable to listed sections; it contains no section-level guilt-and-grade clause." },
   "2903.10": { sourceHash: "6bc43e91a7ee073e39769251a269daa021e3984e3e81e683ef71c9e35080691d", disposition: "supporting_provision", basis: "The section expressly defines terms for sections 2903.13 and 2903.16; it contains no section-level guilt-and-grade clause." },
   "2903.11": { sourceHash: "9c6ca00f4b327dd1ac586055e19212c1572fc312d99266fc0076829a827cf96b", disposition: "offense_candidate", basis: "The official text contains an operative prohibition and an express felonious-assault guilt and degree clause." },
@@ -122,7 +122,7 @@ const DEFINITIONS: Record<string, InterpretiveDefinition> = {
   "2903.041": { sourceHash: "ed38ff453938ad9f09639bab5fe866ce247c6d307c4f67edcb311c47ac4bc89d", disposition: "offense_candidate", basis: "The official text contains an operative prohibition and expressly calls a violation reckless homicide, a felony of the third degree." },
   "2903.41": { sourceHash: "13143f8dd952a4568a6f320d4a94d7d3490fa989ac97af00a18e6bd05f9820d1", disposition: "supporting_provision", basis: "The section defines terms used by the violent-offender-database provisions and contains no section-level guilt-and-grade clause." },
   "2903.42": { sourceHash: "5db38c4f9fde8cd28b7977ae0ce9cce2afd162aa149e86d5649f4c90ac6e8c77", disposition: "supporting_provision", basis: "The section establishes database enrollment and rebuttal procedures after a qualifying offense; it contains no new guilt-and-grade clause." },
-  "2903.43": { sourceHash: "52cd8cfb17d93c0187bfccd5e93f3c779ff815640505f71a9b3714bd635ff7eb", disposition: "supporting_provision", basis: "The section governs enrollment duties of offenders already subject to VOD duties; it contains no new guilt-and-grade clause." },
+  "2903.43": { sourceHash: "52cd8cfb17d93c0187bfccd5e93f3c779ff815640505f71a9b3714bd635ff7eb", disposition: "offense_candidate", basis: "Division (I)(1) prohibits reckless failure to enroll, re-enroll, or notify a change of address; division (I)(2) expressly makes a violation a fifth-degree felony. Administrative headings must not hide offense-bearing subdivisions." },
   "2903.44": { sourceHash: "04d54f974fd9a9fb668df67ac5dad0432446853cf5a957553ac1ab81e50eefe6", disposition: "supporting_provision", basis: "The section governs enrollment by out-of-state offenders already subject to VOD duties; it contains no new guilt-and-grade clause." },
   "2903.081": { sourceHash: "8af09772290467cf53fbf4fdf7b435b842cad032a2a351f7ab1ee6a25301c5e6", disposition: "supporting_provision", basis: "The section governs warning signs and a construction-zone consequence by reference to another offense; it contains no section-level guilt-and-grade clause." },
   "2903.211": { sourceHash: "64bad11ca2ff1a554a3a7060b8fb3997bad8969c7fafd7abe7acc35cdb710c15", disposition: "offense_candidate", basis: "The official text contains an operative prohibition and an express menacing-by-stalking guilt and grading clause." },
@@ -162,6 +162,9 @@ function titleEvidence(section: DiscoverySection): string {
 }
 
 function operativeEvidence(section: DiscoverySection, disposition: ChapterDisposition): string {
+  if (section.sectionId === "2903.43") {
+    return requireQuote(section, line => line.startsWith("(I)(1) No violent offender"), "offense");
+  }
   if (disposition === "supporting_provision") {
     const quote = sourceLines(section).find((line) =>
       !line.startsWith(`Section ${section.sectionId} |`) && !line.startsWith("Effective:"),
@@ -238,6 +241,12 @@ export function buildOhioChapter2903Accounting(discovery: Discovery): ChapterAcc
     .sort((left, right) => left.sectionId.localeCompare(right.sectionId, undefined, { numeric: true }))
     .map((section) => {
       const definition = DEFINITIONS[section.sectionId];
+      // A neutral administrative heading cannot override an offense clause
+      // buried later in a long section. Signals require review, not publication.
+      if (definition.disposition === "supporting_provision" &&
+          /\b(?:whoever violates|is guilty of|violation of this section is)\b/i.test(section.normalizedText)) {
+        throw new Error(`Fail closed: supporting-only classification conflicts with offense language in ${section.sectionId}.`);
+      }
       const title = titleEvidence(section);
       titleQuotesValidated += 1;
       const operative = operativeEvidence(section, definition.disposition);

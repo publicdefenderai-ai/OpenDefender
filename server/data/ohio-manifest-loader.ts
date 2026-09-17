@@ -49,6 +49,7 @@ export function loadOhioAuthorityManifest(
       record.offense.retrievedAt.getTime(),
       record.penalty.retrievedAt.getTime(),
       ...(record.penaltyFine ? [record.penaltyFine.retrievedAt.getTime()] : []),
+      ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
     ]),
   ));
   // The older generated manifest remains the complete legacy accounting

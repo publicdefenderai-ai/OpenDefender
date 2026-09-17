@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "./ohio-chapter-2903-source";
+import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS, ohioChapter2903Evidence } from "./ohio-chapter-2903-source";
 
 export const OHIO_CHAPTER_2903_REFRESH_RECEIPT_PATH = resolve(
   process.cwd(),
@@ -30,9 +30,7 @@ interface Receipt {
 function expectedDocuments(): ReceiptDocument[] {
   const bySection = new Map<string, ReceiptDocument>();
   for (const record of OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS) {
-    for (const document of [record.offense, record.penalty, record.penaltyFine].filter(
-      (document): document is NonNullable<typeof document> => Boolean(document),
-    )) {
+    for (const { document } of ohioChapter2903Evidence(record)) {
       bySection.set(document.section, {
         section: document.section,
         title: document.title,

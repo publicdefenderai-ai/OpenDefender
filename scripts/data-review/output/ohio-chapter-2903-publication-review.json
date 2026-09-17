@@ -1,0 +1,2364 @@
+{
+  "schemaVersion": 1,
+  "reportKind": "chapter_publication_review_not_a_runtime_catalog",
+  "inputHash": "0ab1865afe15c32730c8380809d02375165b783b560212559441b05884c90810",
+  "summary": {
+    "examinedSections": 40,
+    "offenseCandidates": 24,
+    "supportingProvisions": 14,
+    "structuralInterpretationSections": 2,
+    "sourceFirstConfiguredRecords": 5,
+    "withheldOffenseBearingSections": 21,
+    "explicitlyGroupedNamedUnits": 8,
+    "namingTranscriptionReviewRequests": 0
+  },
+  "rows": [
+    {
+      "section": "2903.01",
+      "heading": "Aggravated murder",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.01",
+      "sourceHash": "3cb91ef5b68bb598e5892cca22005f824b332612a9fb7c98cc99bccf727f6c5e",
+      "effectiveDate": "2019-03-20",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-01-aggravated-murder"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(G) Whoever violates this section is guilty of aggravated murder, and shall be punished as provided in section 2929.02 of the Revised Code.",
+          "start": 1600,
+          "end": 1739,
+          "sourceHash": "3cb91ef5b68bb598e5892cca22005f824b332612a9fb7c98cc99bccf727f6c5e"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2911.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2921.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2921.51",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
+      ]
+    },
+    {
+      "section": "2903.02",
+      "heading": "Murder",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.02",
+      "sourceHash": "2f7644b0d621de04b47839e3e1422e153e12f02345234ffdf08ffb6ef5026d44",
+      "effectiveDate": "1998-06-30",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-02-murder"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) No person shall cause the death of another as a proximate result of the offender's committing or attempting to commit an offense of violence that is a felony of the first or second degree and that is not a violation of section 2903.03 or 2903.04 of the Revised Code.",
+          "start": 157,
+          "end": 427,
+          "sourceHash": "2f7644b0d621de04b47839e3e1422e153e12f02345234ffdf08ffb6ef5026d44"
+        },
+        {
+          "text": "(C) Division (B) of this section does not apply to an offense that becomes a felony of the first or second degree only if the offender previously has been convicted of that offense or another specified offense.",
+          "start": 428,
+          "end": 638,
+          "sourceHash": "2f7644b0d621de04b47839e3e1422e153e12f02345234ffdf08ffb6ef5026d44"
+        },
+        {
+          "text": "(D) Whoever violates this section is guilty of murder, and shall be punished as provided in section 2929.02 of the Revised Code.",
+          "start": 639,
+          "end": 767,
+          "sourceHash": "2f7644b0d621de04b47839e3e1422e153e12f02345234ffdf08ffb6ef5026d44"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2903.03",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.04",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
+      ]
+    },
+    {
+      "section": "2903.03",
+      "heading": "Voluntary manslaughter",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.03",
+      "sourceHash": "9a7b0826d368fe364e75fe9fa57fd3bb324c41e93f42731def486db7489e98cf",
+      "effectiveDate": "2013-03-22",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C) Whoever violates this section is guilty of voluntary manslaughter, a felony of the first degree.",
+          "start": 485,
+          "end": 585,
+          "sourceHash": "9a7b0826d368fe364e75fe9fa57fd3bb324c41e93f42731def486db7489e98cf"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2971.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence.",
+        "Include division (B) sexual-motivation allegation and § 2971.01 dependency; an ordinary first-degree sentencing range does not settle every specification."
+      ]
+    },
+    {
+      "section": "2903.04",
+      "heading": "Involuntary manslaughter",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.04",
+      "sourceHash": "73275f6642f5cfd9ba70481ef972ca800719b8c264bb6a087d1b310b918a538e",
+      "effectiveDate": "2004-01-01",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C) Whoever violates this section is guilty of involuntary manslaughter. Violation of division (A) of this section is a felony of the first degree. Violation of division (B) of this section is a felony of the third degree.",
+          "start": 858,
+          "end": 1080,
+          "sourceHash": "73275f6642f5cfd9ba70481ef972ca800719b8c264bb6a087d1b310b918a538e"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2929.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4510.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4511.19",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.05",
+      "heading": "Negligent homicide",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.05",
+      "sourceHash": "5df14364b0e49f3d4af23a6f9815779fb50695ca54d6c439af2a4c26035b6905",
+      "effectiveDate": "1996-09-06",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-05-negligent-homicide"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of negligent homicide, a misdemeanor of the first degree.",
+          "start": 271,
+          "end": 372,
+          "sourceHash": "5df14364b0e49f3d4af23a6f9815779fb50695ca54d6c439af2a4c26035b6905"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2923.11",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
+      ]
+    },
+    {
+      "section": "2903.06",
+      "heading": "Aggravated vehicular homicide - vehicular homicide - vehicular manslaughter",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.06",
+      "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead",
+      "effectiveDate": "2025-04-09",
+      "disposition": "needs_legal_interpretation",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [
+        {
+          "name": "Aggravated vehicular homicide",
+          "conductDivisions": "(A)(1) or (A)(2)",
+          "evidence": {
+            "text": "(B)(1) Whoever violates division (A)(1) or (2) of this section is guilty of aggravated vehicular homicide and shall be punished as provided in divisions (B)(2) and (3) of this section.",
+            "start": 1978,
+            "end": 2162,
+            "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+          }
+        },
+        {
+          "name": "Vehicular homicide",
+          "conductDivisions": "(A)(3)",
+          "evidence": {
+            "text": "(C) Whoever violates division (A)(3) of this section is guilty of vehicular homicide. Except as otherwise provided in this division, vehicular homicide is a misdemeanor of the first degree. Vehicular homicide committed in violation of division (A)(3) of this section is a felony of the fourth degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense. The court shall impose a mandatory jail term or a mandatory prison term on the offender when required by division (E) of this section.",
+            "start": 8310,
+            "end": 9440,
+            "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+          }
+        },
+        {
+          "name": "Vehicular manslaughter",
+          "conductDivisions": "(A)(4)",
+          "evidence": {
+            "text": "(D) Whoever violates division (A)(4) of this section is guilty of vehicular manslaughter. Except as otherwise provided in this division, vehicular manslaughter is a misdemeanor of the second degree. Vehicular manslaughter is a misdemeanor of the first degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense.",
+            "start": 10591,
+            "end": 11545,
+            "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+          }
+        }
+      ],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B)(1) Whoever violates division (A)(1) or (2) of this section is guilty of aggravated vehicular homicide and shall be punished as provided in divisions (B)(2) and (3) of this section.",
+          "start": 1978,
+          "end": 2162,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(2)(a) Except as otherwise provided in division (B)(2)(b), (c), or (d) of this section, aggravated vehicular homicide committed in violation of division (A)(1) of this section is a felony of the second degree and the court shall impose a mandatory prison term on the offender as described in division (E) of this section.",
+          "start": 2163,
+          "end": 2484,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(b) Except as otherwise provided in division (B)(2)(c) or (d) of this section, aggravated vehicular homicide committed in violation of division (A)(1) of this section is a felony of the first degree, and the court shall impose a mandatory prison term on the offender as described in division (E) of this section, if any of the following apply:",
+          "start": 2485,
+          "end": 2828,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(c) Except as otherwise provided in division (B)(2)(d) of this section, aggravated vehicular homicide committed in violation of division (A)(1) of this section is a felony of the first degree, and the court shall sentence the offender to a mandatory prison term as provided in section 2929.142 of the Revised Code and described in division (E) of this section if any of the following apply:",
+          "start": 3662,
+          "end": 4052,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(d) Aggravated vehicular homicide committed in violation of division (A)(1) of this section is a felony of the first degree, and the court shall sentence the offender to a mandatory prison term as provided in section 2929.142 of the Revised Code and described in division (E) of this section if any of the following apply:",
+          "start": 4577,
+          "end": 4899,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(3) Except as otherwise provided in this division, aggravated vehicular homicide committed in violation of division (A)(2) of this section is a felony of the third degree. Aggravated vehicular homicide committed in violation of division (A)(2) of this section is a felony of the second degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense. The court shall impose a mandatory prison term on the offender when required by division (E) of this section.",
+          "start": 6419,
+          "end": 7517,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(C) Whoever violates division (A)(3) of this section is guilty of vehicular homicide. Except as otherwise provided in this division, vehicular homicide is a misdemeanor of the first degree. Vehicular homicide committed in violation of division (A)(3) of this section is a felony of the fourth degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense. The court shall impose a mandatory jail term or a mandatory prison term on the offender when required by division (E) of this section.",
+          "start": 8310,
+          "end": 9440,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(D) Whoever violates division (A)(4) of this section is guilty of vehicular manslaughter. Except as otherwise provided in this division, vehicular manslaughter is a misdemeanor of the second degree. Vehicular manslaughter is a misdemeanor of the first degree if, at the time of the offense, the offender was driving under a suspension or cancellation imposed under Chapter 4510. or any other provision of the Revised Code or was operating a motor vehicle or motorcycle, did not have a valid driver's license, commercial driver's license, temporary instruction permit, probationary license, or nonresident operating privilege, and was not eligible for renewal of the offender's driver's license or commercial driver's license without examination under section 4507.10 of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense.",
+          "start": 10591,
+          "end": 11545,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(E)(1) The court shall impose a mandatory prison term on an offender who is convicted of or pleads guilty to a violation of division (A)(1) of this section. Except as otherwise provided in this division, the mandatory prison term shall be a definite term from the range of prison terms provided in division (A)(1)(b) of section 2929.14 of the Revised Code for a felony of the first degree or from division (A)(2)(b) of that section for a felony of the second degree, whichever is applicable, except that if the violation is committed on or after March 22, 2019, the court shall impose as the minimum prison term for the offense a mandatory prison term that is one of the minimum terms prescribed for a felony of the first degree in division (A)(1)(a) of section 2929.14 of the Revised Code or one of the terms prescribed for a felony of the second degree in division (A)(2)(a) of that section, whichever is applicable. If division (B)(2)(c) or (d) of this section applies to an offender who is convicted of or pleads guilty to the violation of division (A)(1) of this section, the court shall impose the mandatory prison term pursuant to division (A) or (B) of section 2929.142 of the Revised Code, as applicable. The court shall impose a mandatory jail term of at least fifteen days on an offender who is convicted of or pleads guilty to a misdemeanor violation of division (A)(3)(b) of this section and may impose upon the offender a longer jail term as authorized pursuant to section 2929.24 of the Revised Code.",
+          "start": 12396,
+          "end": 13911,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        },
+        {
+          "text": "(2) The court shall impose a mandatory prison term on an offender who is convicted of or pleads guilty to a violation of division (A)(2) or (3)(a) of this section or a felony violation of division (A)(3)(b) of this section if either division (E)(2)(a) or (b) of this section applies. The mandatory prison term shall be a definite term from the range of prison terms provided in division (A)(3)(a) of section 2929.14 of the Revised Code for a felony of the third degree or from division (A)(4) of that section for a felony of the fourth degree, whichever is applicable. The court shall impose a mandatory prison term on an offender in a category described in this division if either of the following applies:",
+          "start": 13912,
+          "end": 14619,
+          "sourceHash": "1a341a6b549ac2caa86dbd3d2e2833a8d8db9d2b55d65436d2c94453a9c52ead"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "1547.11",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.01",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.02",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.04",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.07",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.08",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.081",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.11",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2923.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.142",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.18",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.24",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4501.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4507.10",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4510.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4510.54",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4511.19",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4511.20",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4511.21",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4561.15",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5501.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence.",
+        "Explicit statutory names and conduct groupings extracted; do not create one offense per subparagraph or mistake grades for new names."
+      ]
+    },
+    {
+      "section": "2903.08",
+      "heading": "Aggravated vehicular assault; vehicular assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.08",
+      "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab",
+      "effectiveDate": "2024-10-24",
+      "disposition": "needs_legal_interpretation",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [
+        {
+          "name": "Aggravated vehicular assault",
+          "conductDivisions": "(A)(1)",
+          "evidence": {
+            "text": "(B)(1) Whoever violates division (A)(1) of this section is guilty of aggravated vehicular assault. Except as otherwise provided in this division, aggravated vehicular assault is a felony of the third degree. Aggravated vehicular assault is a felony of the second degree if any of the following apply:",
+            "start": 2005,
+            "end": 2305,
+            "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab"
+          }
+        },
+        {
+          "name": "Vehicular assault",
+          "conductDivisions": "(A)(2) or (A)(3)",
+          "evidence": {
+            "text": "(C)(1) Whoever violates division (A)(2) or (3) of this section is guilty of vehicular assault and shall be punished as provided in divisions (C)(2) and (3) of this section.",
+            "start": 4798,
+            "end": 4970,
+            "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab"
+          }
+        }
+      ],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B)(1) Whoever violates division (A)(1) of this section is guilty of aggravated vehicular assault. Except as otherwise provided in this division, aggravated vehicular assault is a felony of the third degree. Aggravated vehicular assault is a felony of the second degree if any of the following apply:",
+          "start": 2005,
+          "end": 2305,
+          "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab"
+        },
+        {
+          "text": "(C)(1) Whoever violates division (A)(2) or (3) of this section is guilty of vehicular assault and shall be punished as provided in divisions (C)(2) and (3) of this section.",
+          "start": 4798,
+          "end": 4970,
+          "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab"
+        },
+        {
+          "text": "(2) Except as otherwise provided in this division, vehicular assault committed in violation of division (A)(2) of this section is a felony of the fourth degree. Vehicular assault committed in violation of division (A)(2) of this section is a felony of the third degree if, at the time of the offense, the offender was driving under a suspension imposed under Chapter 4510. or any other provision of the Revised Code, if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense, or if, in the same course of conduct that resulted in the violation of division (A)(2) of this section, the offender also violated section 4549.02, 4549.021, or 4549.03 of the Revised Code.",
+          "start": 4971,
+          "end": 5742,
+          "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab"
+        },
+        {
+          "text": "(3) Except as otherwise provided in this division, vehicular assault committed in violation of division (A)(3) of this section is a misdemeanor of the first degree. Vehicular assault committed in violation of division (A)(3) of this section is a felony of the fourth degree if, at the time of the offense, the offender was driving under a suspension imposed under Chapter 4510. or any other provision of the Revised Code or if the offender previously has been convicted of or pleaded guilty to a violation of this section or any traffic-related homicide, manslaughter, or assault offense.",
+          "start": 6571,
+          "end": 7159,
+          "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab"
+        },
+        {
+          "text": "(4) A mandatory prison term required under division (D)(1) or (2) of this section shall be a definite term from the range of prison terms provided in division (A)(2)(b) of section 2929.14 of the Revised Code for a felony of the second degree, from division (A)(3)(a) of that section for a felony of the third degree, or from division (A)(4) of that section for a felony of the fourth degree, whichever is applicable, except that if the violation is a felony of the second degree committed on or after March 22, 2019, the court shall impose as the minimum prison term for the offense a mandatory prison term that is one of the minimum terms prescribed for a felony of the second degree in division (A)(2)(a) of section 2929.14 of the Revised Code.",
+          "start": 9092,
+          "end": 9838,
+          "sourceHash": "260d4f92320f029f51741f7eb6bfde2ed0c037cb4042fca6729f1c98c6210dab"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "1547.11",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.06",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.081",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.24",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4510.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4511.19",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4549.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4549.021",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4549.03",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4561.15",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5501.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence.",
+        "Explicit statutory names and conduct groupings extracted; do not create one offense per subparagraph or mistake grades for new names."
+      ]
+    },
+    {
+      "section": "2903.09",
+      "heading": "Unlawful termination of another's pregnancy",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.09",
+      "sourceHash": "0dc125e0785220b45e409f3479968a69349d024634d81eb534f00044f0fcc8d9",
+      "effectiveDate": "2019-03-22",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.01",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.02",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.03",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.04",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.05",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.06",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.08",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.11",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.12",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.13",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.14",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.21",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.22",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.12",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.13",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.15",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.151",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.17",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.18",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.10",
+      "heading": "Functionally impaired person, caretaker defined",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.10",
+      "sourceHash": "6bc43e91a7ee073e39769251a269daa021e3984e3e81e683ef71c9e35080691d",
+      "effectiveDate": "2023-04-06",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.13",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.16",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.33",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.11",
+      "heading": "Felonious assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.11",
+      "sourceHash": "9c6ca00f4b327dd1ac586055e19212c1572fc312d99266fc0076829a827cf96b",
+      "effectiveDate": "2019-03-22",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(D)(1)(a) Whoever violates this section is guilty of felonious assault. Except as otherwise provided in this division or division (D)(1)(b) of this section, felonious assault is a felony of the second degree. If the victim of a violation of division (A) of this section is a peace officer or an investigator of the bureau of criminal identification and investigation, felonious assault is a felony of the first degree.",
+          "start": 1171,
+          "end": 1589,
+          "sourceHash": "9c6ca00f4b327dd1ac586055e19212c1572fc312d99266fc0076829a827cf96b"
+        },
+        {
+          "text": "(b) Regardless of whether the felonious assault is a felony of the first or second degree under division (D)(1)(a) of this section, if the offender also is convicted of or pleads guilty to a specification as described in section 2941.1423 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, except as otherwise provided in this division or unless a longer prison term is required under any other provision of law, the court shall sentence the offender to a mandatory prison term as provided in division (B)(8) of section 2929.14 of the Revised Code. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, and if the victim suffered serious physical harm as a result of the commission of the offense, felonious assault is a felony of the first degree, and the court, pursuant to division (F) of section 2929.13 of the Revised Code, shall impose as a mandatory prison term one of the definite prison terms prescribed for a felony of the first degree in division (A)(1)(b) of section 2929.14 of the Revised Code, except that if the violation is committed on or after the effective date of this amendment, the court shall impose as the minimum prison term for the offense a mandatory prison term that is one of the minimum terms prescribed for a felony of the first degree in division (A)(1)(a) of section 2929.14 of the Revised Code.",
+          "start": 1590,
+          "end": 3059,
+          "sourceHash": "9c6ca00f4b327dd1ac586055e19212c1572fc312d99266fc0076829a827cf96b"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2907.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2907.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2923.11",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.13",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2935.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4501.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4510.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.12",
+      "heading": "Aggravated assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.12",
+      "sourceHash": "1c06d4dfeeaf9d67b2d426acd447eacd0b5ed1e44fa1943e128c3ce849603fe0",
+      "effectiveDate": "2019-03-22",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of aggravated assault. Except as otherwise provided in this division, aggravated assault is a felony of the fourth degree. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, aggravated assault is a felony of the third degree. Regardless of whether the offense is a felony of the third or fourth degree under this division, if the offender also is convicted of or pleads guilty to a specification as described in section 2941.1423 of the Revised Code that was included in the indictment, count in the indictment, or information charging the offense, except as otherwise provided in this division, the court shall sentence the offender to a mandatory prison term as provided in division (B)(8) of section 2929.14 of the Revised Code. If the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, and if the victim suffered serious physical harm as a result of the commission of the offense, aggravated assault is a felony of the third degree, and the court, pursuant to division (F) of section 2929.13 of the Revised Code, shall impose as a mandatory prison term one of the definite prison terms prescribed in division (A)(3)(b) of section 2929.14 of the Revised Code for a felony of the third degree.",
+          "start": 565,
+          "end": 1949,
+          "sourceHash": "1c06d4dfeeaf9d67b2d426acd447eacd0b5ed1e44fa1943e128c3ce849603fe0"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2903.11",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2923.11",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.13",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2935.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.13",
+      "heading": "Assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+      "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b",
+      "effectiveDate": "2023-10-03",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.",
+          "start": 248,
+          "end": 614,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(2) Except as otherwise provided in this division, if the offense is committed by a caretaker against a person with a functional impairment under the caretaker's care, assault is a felony of the fourth degree. If the offense is committed by a caretaker against a person with a functional impairment under the caretaker's care, if the offender previously has been convicted of or pleaded guilty to a violation of this section or section 2903.11 or 2903.16 of the Revised Code, and if in relation to the previous conviction the offender was a caretaker and the victim was a person with a functional impairment under the offender's care, assault is a felony of the third degree.",
+          "start": 615,
+          "end": 1290,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(3) If the offense occurs in or on the grounds of a state correctional institution or an institution of the department of youth services, the victim of the offense is an employee of the department of rehabilitation and correction or the department of youth services, and the offense is committed by a person incarcerated in the state correctional institution or by a person institutionalized in the department of youth services institution pursuant to a commitment to the department of youth services, assault is a felony of the third degree.",
+          "start": 1291,
+          "end": 1833,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(4) If the offense is committed in any of the following circumstances, assault is a felony of the fifth degree:",
+          "start": 1834,
+          "end": 1945,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(5) If the assault is committed in any of the following circumstances, assault is a felony of the fourth degree:",
+          "start": 4925,
+          "end": 5037,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(6) If the offense is a felony of the fourth degree under division (C)(5)(a) of this section, if the victim of the offense is a peace officer or an investigator of the bureau of criminal identification and investigation, and if the victim suffered serious physical harm as a result of the commission of the offense, the court, pursuant to division (F) of section 2929.13 of the Revised Code, shall impose as a mandatory prison term one of the prison terms prescribed for a felony of the fourth degree that is at least twelve months in duration.",
+          "start": 6015,
+          "end": 6559,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(7) If the victim of the offense is an officer or employee of a public children services agency or a private child placing agency and the offense relates to the officer's or employee's performance or anticipated performance of official responsibilities or duties, assault is either a felony of the fifth degree or, if the offender previously has been convicted of or pleaded guilty to an offense of violence, the victim of that prior offense was an officer or employee of a public children services agency or private child placing agency, and that prior offense related to the officer's or employee's performance or anticipated performance of official responsibilities or duties, a felony of the fourth degree.",
+          "start": 6560,
+          "end": 7270,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(a) Except as otherwise provided in division (C)(8)(b) of this section, assault committed in the specified circumstances is a misdemeanor of the first degree. Notwithstanding the fine specified in division (A)(2)(a) of section 2929.28 of the Revised Code for a misdemeanor of the first degree, in sentencing the offender under this division and if the court decides to impose a fine, the court may impose upon the offender a fine of not more than five thousand dollars.",
+          "start": 7815,
+          "end": 8284,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(b) If the offender previously has been convicted of or pleaded guilty to one or more assault or homicide offenses committed against hospital personnel, assault committed in the specified circumstances is a felony of the fifth degree.",
+          "start": 8285,
+          "end": 8519,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(a) Except as otherwise provided in division (C)(9)(b) of this section, assault committed in the specified circumstances is a misdemeanor of the first degree. In sentencing the offender under this division, if the court decides to impose a fine, notwithstanding the fine specified in division (A)(2)(a) of section 2929.28 of the Revised Code for a misdemeanor of the first degree, the court may impose upon the offender a fine of not more than five thousand dollars.",
+          "start": 8847,
+          "end": 9313,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        },
+        {
+          "text": "(b) If the offender previously has been convicted of or pleaded guilty to one or more assault or homicide offenses committed against justice system personnel, assault committed in the specified circumstances is a felony of the fifth degree.",
+          "start": 9314,
+          "end": 9554,
+          "sourceHash": "86af661766f63d91804a7a68dc55f484abbc092cc3885f2d0f6b11234e143a1b"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2305.234",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.01",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.02",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.03",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.04",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.041",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.11",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.12",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.14",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.16",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.22",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.13",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.24",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.28",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2935.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2941.25",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2967.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2967.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3301.07",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3301.071",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3311.77",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3319.08",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3319.22",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3319.311",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3701.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3727.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3937.41",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4723.32",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4765.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.14",
+      "heading": "Negligent assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.14",
+      "sourceHash": "37db823060f05b58b8604dd229c3786fd821ff531ab35d0a49830ca5d0a8525e",
+      "effectiveDate": "1996-09-06",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-14-negligent-assault"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of negligent assault, a misdemeanor of the third degree.",
+          "start": 248,
+          "end": 348,
+          "sourceHash": "37db823060f05b58b8604dd229c3786fd821ff531ab35d0a49830ca5d0a8525e"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2923.11",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
+      ]
+    },
+    {
+      "section": "2903.15",
+      "heading": "Permitting child abuse",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.15",
+      "sourceHash": "b72b7210bf3e957763eb7b32ba232f1eb9933896fbe5fa48eb4a55b699543eeb",
+      "effectiveDate": "2023-04-06",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C) Whoever violates this section is guilty of permitting child abuse. If the violation of this section causes serious physical harm to the child, permitting child abuse is a felony of the third degree. If the violation of this section causes the death of the child, permitting child abuse is a felony of the first degree.",
+          "start": 803,
+          "end": 1125,
+          "sourceHash": "b72b7210bf3e957763eb7b32ba232f1eb9933896fbe5fa48eb4a55b699543eeb"
+        }
+      ],
+      "crossReferences": [],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.16",
+      "heading": "Failing to provide for a functionally impaired person",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.16",
+      "sourceHash": "ddd8c72616633332a42876f5f464189901f7a3faaf5c5bab38c860a7c6e6e024",
+      "effectiveDate": "2023-04-06",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C)(1) Whoever violates division (A) of this section is guilty of knowingly failing to provide for a person with a functional impairment, a misdemeanor of the first degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (A) of this section is a felony of the fourth degree.",
+          "start": 807,
+          "end": 1202,
+          "sourceHash": "ddd8c72616633332a42876f5f464189901f7a3faaf5c5bab38c860a7c6e6e024"
+        },
+        {
+          "text": "(2) Whoever violates division (B) of this section is guilty of recklessly failing to provide for a person with a functional impairment, a misdemeanor of the second degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (B) of this section is a felony of the fourth degree.",
+          "start": 1203,
+          "end": 1597,
+          "sourceHash": "ddd8c72616633332a42876f5f464189901f7a3faaf5c5bab38c860a7c6e6e024"
+        }
+      ],
+      "crossReferences": [],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.18",
+      "heading": "Strangulation",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.18",
+      "sourceHash": "208605832ba16f42c0ba2080b846292031a113f90d30dd55b3a32f514b6ccbb5",
+      "effectiveDate": "2023-04-04",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C) Whoever violates this section is guilty of strangulation.",
+          "start": 1112,
+          "end": 1173,
+          "sourceHash": "208605832ba16f42c0ba2080b846292031a113f90d30dd55b3a32f514b6ccbb5"
+        },
+        {
+          "text": "(1) A violation of division (B)(1) of this section is a felony of the second degree.",
+          "start": 1174,
+          "end": 1258,
+          "sourceHash": "208605832ba16f42c0ba2080b846292031a113f90d30dd55b3a32f514b6ccbb5"
+        },
+        {
+          "text": "(2) A violation of division (B)(2) of this section is a felony of the third degree.",
+          "start": 1259,
+          "end": 1342,
+          "sourceHash": "208605832ba16f42c0ba2080b846292031a113f90d30dd55b3a32f514b6ccbb5"
+        },
+        {
+          "text": "(3) A violation of division (B)(3) of this section is a felony of the fifth degree. If the victim of the violation of division (B)(3) of this section is a family or household member, or is a person with whom the offender is or was in a dating relationship, a violation of division (B)(3) of this section is a felony of the fourth degree. If the victim of the offense is a family or household member, or is a person with whom the offender is or was in a dating relationship, and the offender previously has been convicted of or pleaded guilty to a felony offense of violence, or if the offender knew that the victim of the violation was pregnant at the time of the violation, a violation of division (B)(3) of this section is a felony of the third degree.",
+          "start": 1343,
+          "end": 2097,
+          "sourceHash": "208605832ba16f42c0ba2080b846292031a113f90d30dd55b3a32f514b6ccbb5"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2919.25",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3113.31",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.21",
+      "heading": "Aggravated menacing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.21",
+      "sourceHash": "cef9db2d74c2976f77c2cefc9e546cf86dd5cfcb81e22fc1122610a3658c5523",
+      "effectiveDate": "2014-09-17",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of aggravated menacing. Except as otherwise provided in this division, aggravated menacing is a misdemeanor of the first degree. If the victim of the offense is an officer or employee of a public children services agency or a private child placing agency and the offense relates to the officer's or employee's performance or anticipated performance of official responsibilities or duties, aggravated menacing is a felony of the fifth degree or, if the offender previously has been convicted of or pleaded guilty to an offense of violence, the victim of that prior offense was an officer or employee of a public children services agency or private child placing agency, and that prior offense related to the officer's or employee's performance or anticipated performance of official responsibilities or duties, a felony of the fourth degree.",
+          "start": 757,
+          "end": 1641,
+          "sourceHash": "cef9db2d74c2976f77c2cefc9e546cf86dd5cfcb81e22fc1122610a3658c5523"
+        }
+      ],
+      "crossReferences": [],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.22",
+      "heading": "Menacing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.22",
+      "sourceHash": "c3af2204e56ff6f479d231c982b013394a78a4a32c37e831a66179234df45cb9",
+      "effectiveDate": "2023-04-04",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of menacing.",
+          "start": 1663,
+          "end": 1719,
+          "sourceHash": "c3af2204e56ff6f479d231c982b013394a78a4a32c37e831a66179234df45cb9"
+        },
+        {
+          "text": "Except as otherwise provided in this division, menacing is a misdemeanor of the fourth degree. If the victim of the offense is an officer or employee of a public children services agency or a private child placing agency and the offense relates to the officer's or employee's performance or anticipated performance of official responsibilities or duties or if the victim of the offense is an emergency service responder in the performance of the responder's official duties, menacing is one of the following:",
+          "start": 1720,
+          "end": 2228,
+          "sourceHash": "c3af2204e56ff6f479d231c982b013394a78a4a32c37e831a66179234df45cb9"
+        },
+        {
+          "text": "(1) Except as otherwise provided in division (B)(2) of this section, a misdemeanor of the first degree;",
+          "start": 2229,
+          "end": 2332,
+          "sourceHash": "c3af2204e56ff6f479d231c982b013394a78a4a32c37e831a66179234df45cb9"
+        },
+        {
+          "text": "(2) If the offender previously has been convicted of or pleaded guilty to an offense of violence, the victim of that prior offense was an officer or employee of a public children services agency or private child placing agency or an emergency service responder, and that prior offense related to the officer's or employee's performance or anticipated performance of official responsibilities or duties or to the responder's performance of the responder's official duties, a felony of the fourth degree.",
+          "start": 2333,
+          "end": 2835,
+          "sourceHash": "c3af2204e56ff6f479d231c982b013394a78a4a32c37e831a66179234df45cb9"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2903.13",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2941.25",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.31",
+      "heading": "Hazing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.31",
+      "sourceHash": "7f4690e77bee0030614db737c65db3c4a58183e30a8f13eaaff37b8faa8f0b6c",
+      "effectiveDate": "2021-10-07",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(D) Whoever violates this section is guilty of hazing. A violation of division (B)(1) or (2) of this section is a misdemeanor of the second degree. A violation of division (C)(1) or (2) of this section is a felony of the third degree.",
+          "start": 1673,
+          "end": 1907,
+          "sourceHash": "7f4690e77bee0030614db737c65db3c4a58183e30a8f13eaaff37b8faa8f0b6c"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "3719.011",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.32",
+      "heading": "Female genital mutilation",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.32",
+      "sourceHash": "4cd954daba7862a6db757da4ba5f76100cb27092144013444168086e2f43ad68",
+      "effectiveDate": "2019-04-05",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of female genital mutilation, a felony of the second degree. In addition to any prison term authorized by section 2929.14 of the Revised Code and any fine authorized by section 2929.18 of the Revised Code, the court shall impose on the offender an additional fine of up to twenty-five thousand dollars.",
+          "start": 425,
+          "end": 771,
+          "sourceHash": "4cd954daba7862a6db757da4ba5f76100cb27092144013444168086e2f43ad68"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2929.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.18",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.33",
+      "heading": "Patient abuse and neglect in care facilities definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.33",
+      "sourceHash": "0d09cd93d6fdabbf5a26c6f1fad5e45c51d8731d3b82b2f5cda099170ae2105e",
+      "effectiveDate": "2013-09-29",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.36",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3701.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3721.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3721.10",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5119.14",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5119.34",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5123.03",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5123.19",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.34",
+      "heading": "Patient abuse or neglect",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.34",
+      "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745",
+      "effectiveDate": "1996-07-01",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [
+        {
+          "name": "Patient abuse",
+          "conductDivisions": "(A)(1)",
+          "evidence": {
+            "text": "(C) Whoever violates division (A)(1) of this section is guilty of patient abuse, a felony of the fourth degree. If the offender previously has been convicted of, or pleaded guilty to, any violation of this section, patient abuse is a felony of the third degree.",
+            "start": 907,
+            "end": 1168,
+            "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745"
+          }
+        },
+        {
+          "name": "Gross patient neglect",
+          "conductDivisions": "(A)(2)",
+          "evidence": {
+            "text": "(D) Whoever violates division (A)(2) of this section is guilty of gross patient neglect, a misdemeanor of the first degree. If the offender previously has been convicted of, or pleaded guilty to, any violation of this section, gross patient neglect is a felony of the fifth degree.",
+            "start": 1169,
+            "end": 1450,
+            "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745"
+          }
+        },
+        {
+          "name": "Patient neglect",
+          "conductDivisions": "(A)(3)",
+          "evidence": {
+            "text": "(E) Whoever violates division (A)(3) of this section is guilty of patient neglect, a misdemeanor of the second degree. If the offender previously has been convicted of or pleaded guilty to any violation of this section, patient neglect is a felony of the fifth degree.",
+            "start": 1451,
+            "end": 1719,
+            "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745"
+          }
+        }
+      ],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C) Whoever violates division (A)(1) of this section is guilty of patient abuse, a felony of the fourth degree. If the offender previously has been convicted of, or pleaded guilty to, any violation of this section, patient abuse is a felony of the third degree.",
+          "start": 907,
+          "end": 1168,
+          "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745"
+        },
+        {
+          "text": "(D) Whoever violates division (A)(2) of this section is guilty of gross patient neglect, a misdemeanor of the first degree. If the offender previously has been convicted of, or pleaded guilty to, any violation of this section, gross patient neglect is a felony of the fifth degree.",
+          "start": 1169,
+          "end": 1450,
+          "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745"
+        },
+        {
+          "text": "(E) Whoever violates division (A)(3) of this section is guilty of patient neglect, a misdemeanor of the second degree. If the offender previously has been convicted of or pleaded guilty to any violation of this section, patient neglect is a felony of the fifth degree.",
+          "start": 1451,
+          "end": 1719,
+          "sourceHash": "8df500096822e831191ea80f206b632e8afc3be318486634b0e4fef624a26745"
+        }
+      ],
+      "crossReferences": [],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence.",
+        "Explicit statutory names and conduct groupings extracted; do not create one offense per subparagraph or mistake grades for new names."
+      ]
+    },
+    {
+      "section": "2903.35",
+      "heading": "Filing false patient abuse or neglect complaints",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.35",
+      "sourceHash": "f91e65890dfca634a6dcd57bb360cbe725723ce1ef95a13692dfd82b32350ddf",
+      "effectiveDate": "1986-09-17",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of filing a false patient abuse or neglect complaint, a misdemeanor of the first degree.",
+          "start": 346,
+          "end": 478,
+          "sourceHash": "f91e65890dfca634a6dcd57bb360cbe725723ce1ef95a13692dfd82b32350ddf"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2903.34",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.36",
+      "heading": "Whistleblower protection",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.36",
+      "sourceHash": "72b99064c754ea0459a5e7efb95a4eea20ebb7f466a53b999213d28aa04ba4fd",
+      "effectiveDate": "1986-09-17",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.34",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.37",
+      "heading": "License revocation upon conviction",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.37",
+      "sourceHash": "93ed03ce5b97d52132f68c6898c12bd181acc77e4f5ac9c1263ed45f0004bddc",
+      "effectiveDate": "1986-09-17",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.34",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.041",
+      "heading": "Reckless homicide",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.041",
+      "sourceHash": "ed38ff453938ad9f09639bab5fe866ce247c6d307c4f67edcb311c47ac4bc89d",
+      "effectiveDate": "1999-09-29",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [
+        "oh-orc-2903-041-reckless-homicide"
+      ],
+      "status": "source_first_configured_requires_live_runtime_check",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of reckless homicide, a felony of the third degree.",
+          "start": 170,
+          "end": 265,
+          "sourceHash": "ed38ff453938ad9f09639bab5fe866ce247c6d307c4f67edcb311c47ac4bc89d"
+        }
+      ],
+      "crossReferences": [],
+      "remainingWork": [
+        "Verify currentness, runtime availability and charge-specific guidance; no historical-law completeness claim."
+      ]
+    },
+    {
+      "section": "2903.41",
+      "heading": "Definitions related to violent offender database",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.41",
+      "sourceHash": "13143f8dd952a4568a6f320d4a94d7d3490fa989ac97af00a18e6bd05f9820d1",
+      "effectiveDate": "2019-03-20",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(a) A violation of section 2903.01, 2903.02, 2903.03, 2905.01 of the Revised Code or a violation of section 2905.02 of the Revised Code that is a felony of the second degree;",
+          "start": 323,
+          "end": 497,
+          "sourceHash": "13143f8dd952a4568a6f320d4a94d7d3490fa989ac97af00a18e6bd05f9820d1"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2903.01",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.02",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.03",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.42",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.421",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.43",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.44",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2905.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2905.02",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2950.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.42",
+      "heading": "Enrollment in violent offender database; presumption",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.42",
+      "sourceHash": "5db38c4f9fde8cd28b7977ae0ce9cce2afd162aa149e86d5649f4c90ac6e8c77",
+      "effectiveDate": "2019-03-20",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.41",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.421",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5120.114",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.43",
+      "heading": "Offenders who have VOD duties; enrollment",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.43",
+      "sourceHash": "52cd8cfb17d93c0187bfccd5e93f3c779ff815640505f71a9b3714bd635ff7eb",
+      "effectiveDate": "2019-03-20",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(2) Whoever violates division (I)(1) of this section is guilty of a felony of the fifth degree. If a violent offender or qualifying out-of-state violent offender who violates division (I)(1) of this section is subject to a community control sanction, is on parole, is subject to one or more post-release control sanctions, or is subject to any other type of supervised release at the time of the violation, the violation shall constitute a violation of the terms and conditions of the community control sanction, parole, post-release control sanction, or other type of supervised release.",
+          "start": 15566,
+          "end": 16154,
+          "sourceHash": "52cd8cfb17d93c0187bfccd5e93f3c779ff815640505f71a9b3714bd635ff7eb"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2903.41",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.42",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.421",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.44",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2909.13",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2950.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence.",
+        "Use divisions (I)(1)-(2), not the administrative heading, to identify the fifth-degree felony and qualifying enrollment duties."
+      ]
+    },
+    {
+      "section": "2903.44",
+      "heading": "Out-of-state offenders with VOD duties; enrollment",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.44",
+      "sourceHash": "04d54f974fd9a9fb668df67ac5dad0432446853cf5a957553ac1ab81e50eefe6",
+      "effectiveDate": "2019-03-20",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.42",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.421",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.43",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.18",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.28",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.081",
+      "heading": "Warning signs in construction zones",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.081",
+      "sourceHash": "8af09772290467cf53fbf4fdf7b435b842cad032a2a351f7ab1ee6a25301c5e6",
+      "effectiveDate": "2004-06-01",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.06",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.08",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5501.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.211",
+      "heading": "Menacing by stalking",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.211",
+      "sourceHash": "64bad11ca2ff1a554a3a7060b8fb3997bad8969c7fafd7abe7acc35cdb710c15",
+      "effectiveDate": "2016-08-16",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(B) Whoever violates this section is guilty of menacing by stalking.",
+          "start": 1490,
+          "end": 1558,
+          "sourceHash": "64bad11ca2ff1a554a3a7060b8fb3997bad8969c7fafd7abe7acc35cdb710c15"
+        },
+        {
+          "text": "(1) Except as otherwise provided in divisions (B)(2) and (3) of this section, menacing by stalking is a misdemeanor of the first degree.",
+          "start": 1559,
+          "end": 1695,
+          "sourceHash": "64bad11ca2ff1a554a3a7060b8fb3997bad8969c7fafd7abe7acc35cdb710c15"
+        },
+        {
+          "text": "(2) Menacing by stalking is a felony of the fourth degree if any of the following applies:",
+          "start": 1696,
+          "end": 1786,
+          "sourceHash": "64bad11ca2ff1a554a3a7060b8fb3997bad8969c7fafd7abe7acc35cdb710c15"
+        },
+        {
+          "text": "(3) If the victim of the offense is an officer or employee of a public children services agency or a private child placing agency and the offense relates to the officer's or employee's performance or anticipated performance of official responsibilities or duties, menacing by stalking is either a felony of the fifth degree or, if the offender previously has been convicted of or pleaded guilty to an offense of violence, the victim of that prior offense was an officer or employee of a public children services agency or private child placing agency, and that prior offense related to the officer's or employee's performance or anticipated performance of official responsibilities or duties, a felony of the fourth degree.",
+          "start": 4731,
+          "end": 5454,
+          "sourceHash": "64bad11ca2ff1a554a3a7060b8fb3997bad8969c7fafd7abe7acc35cdb710c15"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2133.21",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.213",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.214",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2909.04",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2911.211",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2913.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.271",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2921.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2971.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.212",
+      "heading": "Bail for violations of certain protection orders",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.212",
+      "sourceHash": "ae60d1e3ab21aec8ec492f99e4bea392f9cbc3ed234f85fdbc71d61b49cc93a3",
+      "effectiveDate": "2023-06-30",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.21",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.211",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.213",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.22",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2911.211",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.25",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2933.08",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2937.011",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2945.04",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2950.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.213",
+      "heading": "Motion for and hearing on protection order",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.213",
+      "sourceHash": "3b51cc9a971d786c8d7f62e1e06fe45a62ad7667af1d4be4e723f127153e8540",
+      "effectiveDate": "2023-07-07",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.11",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.12",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.13",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.21",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.211",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.214",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.22",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2911.211",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.25",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.26",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2937.011",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2950.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.214",
+      "heading": "Petition for protection order in menacing by stalking cases",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.214",
+      "sourceHash": "71f05a1894e7b479baf2a0e991fa8e91a1aecaa7c61b0803d613e13d87461f40",
+      "effectiveDate": "2023-04-04",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2151.421",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.211",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.213",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.272",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2950.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.215",
+      "heading": "Protection orders on behalf of organization",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.215",
+      "sourceHash": "c6454b43122b4decb9f19fafc2d1976e31011484953f4d0b7d8d811863e1c0ec",
+      "effectiveDate": "2025-03-20",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.21",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.211",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.213",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.214",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.22",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    },
+    {
+      "section": "2903.216",
+      "heading": "Illegal use of a tracking device or application",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.216",
+      "sourceHash": "6a0abc54e0f3e4dd8ffb95a60d38d676a318d167888f86da101f961c390c9bef",
+      "effectiveDate": "2025-03-20",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(F) Whoever violates this section is guilty of illegal use of a tracking device or application.",
+          "start": 11331,
+          "end": 11426,
+          "sourceHash": "6a0abc54e0f3e4dd8ffb95a60d38d676a318d167888f86da101f961c390c9bef"
+        },
+        {
+          "text": "(1) Except as otherwise provided in division (F)(2) of this section, illegal use of a tracking device or application is a misdemeanor of the first degree.",
+          "start": 11427,
+          "end": 11581,
+          "sourceHash": "6a0abc54e0f3e4dd8ffb95a60d38d676a318d167888f86da101f961c390c9bef"
+        },
+        {
+          "text": "(2) Illegal use of a tracking device or application is a felony of the fourth degree if any of the following applies:",
+          "start": 11582,
+          "end": 11699,
+          "sourceHash": "6a0abc54e0f3e4dd8ffb95a60d38d676a318d167888f86da101f961c390c9bef"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2151.34",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.211",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.213",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2903.214",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2913.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.26",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2919.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.16",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.17",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.20",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.26",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2929.27",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2951.041",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2967.26",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "2967.28",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "3113.31",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4749.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "4749.03",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.311",
+      "heading": "Reckless failure to immediately report knowledge of hazing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.311",
+      "sourceHash": "aa51560429acf06f95a139b02b0445bc9aa7f8fd29959788a0f2edeeeba34747",
+      "effectiveDate": "2021-10-07",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(C) A violation of this section is a misdemeanor of the fourth degree, except that the violation is a misdemeanor of the first degree if the hazing causes serious physical harm.",
+          "start": 707,
+          "end": 884,
+          "sourceHash": "aa51560429acf06f95a139b02b0445bc9aa7f8fd29959788a0f2edeeeba34747"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "2903.31",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.341",
+      "heading": "Patient endangerment",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.341",
+      "sourceHash": "fcde948735bd831e024954ac644feaf73bcd6697a7d1073d2a0b5f25c3f40a96",
+      "effectiveDate": "2023-04-06",
+      "disposition": "offense_candidate",
+      "sourceFirstConfiguredIds": [],
+      "status": "withheld_from_source_first_publication",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [
+        {
+          "text": "(E)(1) Except as provided in division (E)(2) or (E)(3) of this section, whoever violates division (B) or (C) of this section is guilty of patient endangerment, a misdemeanor of the first degree.",
+          "start": 3504,
+          "end": 3698,
+          "sourceHash": "fcde948735bd831e024954ac644feaf73bcd6697a7d1073d2a0b5f25c3f40a96"
+        },
+        {
+          "text": "(2) If the offender previously has been convicted of, or pleaded guilty to, a violation of this section, patient endangerment is a felony of the fourth degree.",
+          "start": 3699,
+          "end": 3858,
+          "sourceHash": "fcde948735bd831e024954ac644feaf73bcd6697a7d1073d2a0b5f25c3f40a96"
+        },
+        {
+          "text": "(3) If the violation results in serious physical harm to the person with a developmental disability, patient endangerment is a felony of the third degree.",
+          "start": 3859,
+          "end": 4013,
+          "sourceHash": "fcde948735bd831e024954ac644feaf73bcd6697a7d1073d2a0b5f25c3f40a96"
+        }
+      ],
+      "crossReferences": [
+        {
+          "section": "5123.01",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        },
+        {
+          "section": "5123.50",
+          "discoveredInChapter": false,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": [
+        "Resolve all applicable elements, grading conditions and penalty dependencies before activation.",
+        "Reconcile legacy IDs without assuming shared citations establish equivalence."
+      ]
+    },
+    {
+      "section": "2903.421",
+      "heading": "Qualifying out-of-state offenders",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.421",
+      "sourceHash": "61a3b527fcae7461bc717158959f342e40a200690e5037b8b7b60c4f61bf5445",
+      "effectiveDate": "2019-03-20",
+      "disposition": "supporting_provision",
+      "sourceFirstConfiguredIds": [],
+      "status": "supporting_provision",
+      "namedUnits": [],
+      "offenseAndGradingEvidence": [],
+      "crossReferences": [
+        {
+          "section": "2903.42",
+          "discoveredInChapter": true,
+          "status": "dependency_requires_claim_specific_validation"
+        }
+      ],
+      "remainingWork": []
+    }
+  ]
+}

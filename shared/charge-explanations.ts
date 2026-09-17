@@ -46,6 +46,21 @@ export interface ChargeExplanation {
 
 export const chargeExplanations: ChargeExplanation[] = [
   {
+    chargePattern: /^reckless homicide$/i, slug: "reckless-homicide",
+    plainSummary: "Reckless homicide concerns causing a death with the legally required reckless mental state. Recklessness is not the same as negligence or an intent to kill. Match the jurisdiction and statutory citation on the charging document; the exact elements and penalties come from that law.",
+    keyTerms: [], pendingAttorneyReview: true,
+  },
+  {
+    chargePattern: /^negligent homicide$/i, slug: "negligent-homicide",
+    plainSummary: "Negligent homicide concerns causing a death with the legally required negligent mental state. Not every accidental death meets the offense's requirements. The cited statute may require a particular means of causing harm, so use the exact statutory citation rather than a similar-sounding charge name.",
+    keyTerms: [], pendingAttorneyReview: true,
+  },
+  {
+    chargePattern: /^negligent assault$/i, slug: "negligent-assault",
+    plainSummary: "Negligent assault concerns causing physical harm with the legally required negligent mental state. The applicable statute determines the required means of harm and protected persons. Do not substitute an intentional or reckless assault charge merely because its name sounds similar.",
+    keyTerms: [], pendingAttorneyReview: true,
+  },
+  {
     chargePattern: /^aggravated murder$/i,
     slug: "aggravated-murder",
     plainSummary: "Aggravated murder is a homicide charge involving circumstances specified by the applicable statute. The exact requirements depend on the jurisdiction and cited provision. Match the statutory citation on your charging document; do not assume this name is interchangeable with first-degree murder.",

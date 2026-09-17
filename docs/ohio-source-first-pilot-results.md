@@ -8,6 +8,8 @@ The national delivery, person-week, and legal-review-hour estimates have been wi
 
 ## What ran
 
+**Continuation correction:** A subsequent full-section review found that § 2903.43(I) creates a fifth-degree felony despite its administrative heading. The current accounting is **24 offense candidates, 14 supporting provisions, and 2 structural-interpretation sections**. The figures below describe the initial slice, not the corrected current inventory. See `docs/ohio-chapter-2903-continuation.md` for the expanded records and remaining work.
+
 - Enumerated the official Ohio Revised Code root and title indexes: 33 titles and 971 chapter links.
 - Enumerated Chapter 2903, Homicide and Assault: 40 distinct section links, including longer section-number suffixes.
 - Retrieved complete official section evidence for all 40, with exact identities, effective dates, source URLs, retrieval times, text fingerprints, and explicit failure accounting.

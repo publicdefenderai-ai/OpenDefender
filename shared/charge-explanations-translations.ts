@@ -28,6 +28,18 @@ export interface ChargeTranslationEntry {
 }
 
 export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEntry> = {
+  "reckless-homicide": {
+    es: { draft: true, keyTerms: [], plainSummary: "Reckless homicide se refiere a causar una muerte con el estado mental de temeridad exigido por la ley. La temeridad no es lo mismo que la negligencia o la intención de matar. Verifique la jurisdicción y la cita legal del documento de acusación; los elementos y las penas exactos dependen de esa ley." },
+    zh: { draft: true, keyTerms: [], plainSummary: "Reckless homicide 涉及在具备法律规定的鲁莽心理状态下造成死亡。鲁莽不同于疏忽或杀人意图。请核对指控文件中的司法管辖区和法律条款；具体构成要件及处罚由该法律规定。" },
+  },
+  "negligent-homicide": {
+    es: { draft: true, keyTerms: [], plainSummary: "Negligent homicide se refiere a causar una muerte con el estado mental de negligencia exigido por la ley. No toda muerte accidental cumple los requisitos del delito. La disposición citada puede exigir un medio específico de causar daño; use la cita legal exacta y no un nombre de cargo parecido." },
+    zh: { draft: true, keyTerms: [], plainSummary: "Negligent homicide 涉及在具备法律规定的疏忽心理状态下造成死亡。并非每一起意外死亡都符合该罪的构成要件。所引用的法律可能要求特定的致害手段，因此请使用准确的法律条款，而不是名称相似的罪名。" },
+  },
+  "negligent-assault": {
+    es: { draft: true, keyTerms: [], plainSummary: "Negligent assault se refiere a causar daño físico con el estado mental de negligencia exigido por la ley. La ley aplicable determina el medio de causar daño y las personas protegidas. No sustituya este cargo por uno de agresión intencional o temeraria solo porque su nombre sea parecido." },
+    zh: { draft: true, keyTerms: [], plainSummary: "Negligent assault 涉及在具备法律规定的疏忽心理状态下造成身体伤害。适用法律决定所要求的致害手段和受保护的人员。不要仅因名称相似就将其替换为故意或鲁莽伤害的指控。" },
+  },
   "aggravated-murder": {
     es: {
       draft: true,

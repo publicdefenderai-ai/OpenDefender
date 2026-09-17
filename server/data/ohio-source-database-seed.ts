@@ -16,6 +16,7 @@ import {
 } from "../services/authority-offense-evidence";
 import {
   OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS,
+  ohioChapter2903Evidence,
   validateOhioChapter2903Document,
   type OhioChapter2903OfficialDocument,
   type OhioChapter2903PilotSourceRecord,
@@ -374,13 +375,8 @@ export function buildOhioChapter2903PilotManifestRecords(
       dispositionReason:
         "New source-first canonical record: exact official title, offense text, currentness marker, and separate penalty dependency are pinned to the official Ohio Laws extraction.",
       canonicalTitle: source.canonicalTitle,
-      provisions: [
-        provisionFromOhioChapter2903Document(charge, source.offense, "offense", importedAt),
-        provisionFromOhioChapter2903Document(charge, source.penalty, "penalty", importedAt),
-        ...(source.penaltyFine
-          ? [provisionFromOhioChapter2903Document(charge, source.penaltyFine, "penalty", importedAt)]
-          : []),
-      ],
+      provisions: ohioChapter2903Evidence(source).map(({ document, supportRole }) =>
+        provisionFromOhioChapter2903Document(charge, document, supportRole, importedAt)),
       apiStatus: "verified",
       mapping,
     };
@@ -488,17 +484,11 @@ function validateOhioChapter2903PilotManifestRecord(
     record.disposition !== "retain" ||
     record.apiStatus !== "verified" ||
     record.canonicalTitle !== source.canonicalTitle ||
-    record.provisions.length !== (source.penaltyFine ? 3 : 2) ||
+    record.provisions.length !== ohioChapter2903Evidence(source).length ||
     record.mapping?.classification !== "exact_match"
   ) return "Source-first Ohio Chapter 2903 catalog identity is incomplete or changed";
 
-  const expected = [
-    { document: source.offense, supportRole: "offense" as const },
-    { document: source.penalty, supportRole: "penalty" as const },
-    ...(source.penaltyFine
-      ? [{ document: source.penaltyFine, supportRole: "penalty" as const }]
-      : []),
-  ];
+  const expected = ohioChapter2903Evidence(source);
   for (const [index, expectedProvision] of expected.entries()) {
     const provision = record.provisions[index];
     const document = expectedProvision.document;

@@ -20,6 +20,7 @@ import {
 } from "../shared/ohio-chapter-2903-catalog";
 import {
   OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS,
+  ohioChapter2903Evidence,
   validateOhioChapter2903Document,
 } from "../server/data/ohio-chapter-2903-source";
 import { validateOhioChapter2903RefreshReceipt } from "../server/data/ohio-chapter-2903-refresh";
@@ -57,13 +58,13 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(117);
+    expect(ohioCount).toBe(120);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(18);
-    expect(seed.snapshots).toHaveLength(18);
-    expect(seed.links).toHaveLength(18);
-    expect(seed.selectableChargeIds).toHaveLength(15);
+    expect(seed.sources).toHaveLength(30);
+    expect(seed.snapshots).toHaveLength(35);
+    expect(seed.links).toHaveLength(35);
+    expect(seed.selectableChargeIds).toHaveLength(18);
     expect(seed.selectableChargeIds).toContain("oh-aggravated-assault");
     expect(seed.selectableChargeIds).toContain("oh-criminal-trespass");
     expect(seed.selectableChargeIds).not.toContain("oh-murder-in-the-first-degree");
@@ -79,6 +80,9 @@ describe("Ohio authority manifest", () => {
     expect(sourceFirstIds).toEqual([
       "oh-orc-2903-01-aggravated-murder",
       "oh-orc-2903-02-murder",
+      "oh-orc-2903-041-reckless-homicide",
+      "oh-orc-2903-05-negligent-homicide",
+      "oh-orc-2903-14-negligent-assault",
     ]);
     expect(getChargeById(sourceFirstIds[0])?.name).toBe("Aggravated murder");
     expect(getChargeById(sourceFirstIds[1])?.name).toBe("Murder");
@@ -88,7 +92,7 @@ describe("Ohio authority manifest", () => {
     expect(getChargesByJurisdiction("OH").map((charge) => charge.id)).toEqual(
       expect.arrayContaining(sourceFirstIds),
     );
-    expect(classifyChargesForGuidance(sourceFirstIds)).toEqual([
+    expect(classifyChargesForGuidance(sourceFirstIds.slice(0, 2))).toEqual([
       expect.objectContaining({
         id: "oh-orc-2903-01-aggravated-murder",
         name: "Aggravated murder",
@@ -128,7 +132,7 @@ describe("Ohio authority manifest", () => {
       expiresAt: "2026-09-23T22:58:10.000Z",
       documents: [
         ...new Map(OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.flatMap((record) =>
-          [record.offense, record.penalty, record.penaltyFine].filter(Boolean).map((document) => [
+          ohioChapter2903Evidence(record).map(({ document }) => [
             document.section,
             {
               section: document.section,
@@ -144,11 +148,12 @@ describe("Ohio authority manifest", () => {
     expect(validateOhioChapter2903RefreshReceipt(expectedReceipt, new Date("2026-09-17T00:00:00.000Z"))).toBeNull();
     expect(validateOhioChapter2903RefreshReceipt(expectedReceipt, new Date("2026-09-24T00:00:00.000Z")))
       .toMatch(/expired/);
-    expect(loadOhioAuthorityManifest(undefined, new Date("2026-09-24T00:00:00.000Z")).catalogRecords)
+    const afterAnyCurrentReceipt = new Date(Date.now() + 8 * 24 * 60 * 60 * 1000);
+    expect(loadOhioAuthorityManifest(undefined, afterAnyCurrentReceipt).catalogRecords)
       .toHaveLength(115);
 
     const currentManifest = loadOhioAuthorityManifest();
-    expect(buildOhioSourceDatabaseSeed(currentManifest, new Date("2026-09-24T00:00:00.000Z"))
+    expect(buildOhioSourceDatabaseSeed(currentManifest, afterAnyCurrentReceipt)
       .selectableChargeIds).not.toEqual(expect.arrayContaining(
         OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id),
       ));
@@ -173,6 +178,7 @@ describe("Ohio authority manifest", () => {
         "offense",
         "penalty",
         ...(source.penaltyFine ? ["penalty"] : []),
+        ...(source.additionalEvidence ?? []).map(() => "offense"),
       ]);
       expect(record.provisions[0].citation).toBe(source.offense.citation);
       expect(record.provisions[1].citation).toBe(source.penalty.citation);
@@ -197,6 +203,9 @@ describe("Ohio authority manifest", () => {
           supportRole: "penalty",
           citation: source.penaltyFine.citation,
         })] : []),
+        ...(source.additionalEvidence ?? []).map(document => expect.objectContaining({
+          supportRole: "offense", citation: document.citation,
+        })),
       ]);
       expect(validateOhioManifestRecord(record)).toBeNull();
     }
