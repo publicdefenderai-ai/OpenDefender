@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 1,
+  "reportHash": "8dcaa98f3e3bb11c06f477fc95c3662965601be145d0aab548e03393bfcc18c2",
+  "decisions": [
+    {
+      "id": "fl-fs-777-04-1-criminal-attempt",
+      "status": "eligible",
+      "reason": "Literal operative offense with complete current grading-exception closure.",
+      "draftHash": "f9f36e6917d32fcfc5a427bc005728c3a823d0f2494628a2c1f85284bed6c1c3",
+      "definitionHash": "13a4e1e8cd51e3799259d8537579f3ab2557d7d31565f04d20dff18f60ff5da2",
+      "approvalHash": "1f86f4d197873467805c814dfcbb009a56f8f1bac394e565b4859d50b976ae96"
+    },
+    {
+      "id": "fl-fs-777-04-2-criminal-solicitation",
+      "status": "eligible",
+      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
+      "draftHash": "1999e98d2366c2854c1c49b776740cb4bc63a7437d9fd137ef0cd3c09170032a",
+      "definitionHash": "682a0988ed78a46fad1c57c590f2378f4f9c4fc0b24b916786352aac153f734a",
+      "approvalHash": "7baf4dd0a47518992c2a7ad466b033b2a18761342c48181d1725039b86232c25"
+    },
+    {
+      "id": "fl-fs-777-04-3-criminal-conspiracy",
+      "status": "eligible",
+      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
+      "draftHash": "dfb4e3f406d3a40a9b6972a7a5a46cdb6a5e312736a5e500f0745911c4c4e554",
+      "definitionHash": "03c8f489665fa98974f3ead1b743dc1df4aac2b5022208a3b2d14b86fb51f678",
+      "approvalHash": "526452bab0cb111ca42b91d63a04ce667ce09b0a15c7aa70756a56b9809980fc"
+    },
+    {
+      "id": "fl-fs-782-07-1-manslaughter",
+      "status": "eligible",
+      "reason": "Subsection (1) supplies the literal offense identity, scoped killing conduct and exclusions, and a complete second-degree felony grade.",
+      "draftHash": "87dd393b58ca520f33ce4a17938df71d7a6e7886bb8564f011458eaa680973ca",
+      "definitionHash": "b179c92f410f7a723b02511a85e31e705b9ea57ecd35574223d79937a2381a44",
+      "approvalHash": "75311a5262a5bcc1254828e82ff161a2a9c1f551fc0b847038b5771fa9734dad"
+    },
+    {
+      "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
+      "status": "eligible",
+      "reason": "Subsection (2) supplies a literal offense identity, death caused by culpable negligence under § 825.102(3), and a complete first-degree felony grade; current § 825.101 closes both victim definitions.",
+      "draftHash": "32e5a4670dffee83c86145c5f0fea8bbcd949feedae9db10c4b05f6d34833550",
+      "definitionHash": "48ad59aec02e90c46f38d56fc335190bf52b35e3e7c8ceeac3d1b47d30926cc2",
+      "approvalHash": "535d585d69193690c7d402fb8ff9ab31201d41498328b30ebd72214518aa17b2"
+    },
+    {
+      "id": "fl-fs-782-07-3-aggravated-manslaughter-of-a-child",
+      "status": "eligible",
+      "reason": "Subsection (3) supplies a literal offense identity, an under-18 death caused by incorporated culpable negligence, and a complete first-degree felony grade.",
+      "draftHash": "6e179e9812ed6bd0bded8413e422d2821ecbdf6b1a430953bb158125643bc02a",
+      "definitionHash": "eb0c70d6ec303a0c49a12be6beb447e18e7bbce06e179450e0370a4a3c5a55fd",
+      "approvalHash": "73eb2b9d1ee50b8dd03c4b865b83e59fbf2c04f26e1e8863080902fccd3cdd2a"
+    },
+    {
+      "id": "fl-fs-782-04-5-murder-in-the-third-degree",
+      "status": "eligible",
+      "reason": "Subsection (5) separately supplies the same literal offense name for a distinct under-18 distribution scope.",
+      "draftHash": "6ffed2d1810471b5cfe31ee5363aa015399c12bdf543219fc1abe8b843b8e9c5",
+      "definitionHash": "e11841fb3713ac06d2d4d0ece306dbc40d03df420214c9771709e90336d1d855",
+      "approvalHash": "499d56a6eadc48be2e48c07afba2200bea3c3adbe7c6ea036c6cb23514122975"
+    },
+    {
+      "id": "fl-fs-782-04-4-murder-in-the-third-degree",
+      "status": "eligible",
+      "reason": "Subsection (4) supplies a literal offense name, conduct boundary, and grade distinct from existing first- and second-degree records.",
+      "draftHash": "e77727b0d2ac76704a90e4575e35789e533ca65d8d5e785223ec84b59c9ec408",
+      "definitionHash": "b1cec094c7045035758011cfa85db5ac159da3a5bd3dd8ec86db19fd0b850d1b",
+      "approvalHash": "45c609673f9a711617ffaef1c0602bdcfad9b24cafd43227771f0d100f201bb4"
+    },
+    {
+      "id": "fl-fs-794-011-2-sexual-battery",
+      "status": "eligible",
+      "reason": "Subsection (2) is a distinct age-defined scope not duplicated by retained subdivisions (3)-(5).",
+      "draftHash": "4672d649f273d73bb053f8ef1bbb1f37c54fde76766583388921106aeccf9358",
+      "definitionHash": "0f59e4de8f61b6942c86de1df7c1cf24647d89b28a27e4426c946bdb84a225b3",
+      "approvalHash": "bc3e320af5eb29a083872791097f71ba7d09c6735ddf20de6a324363cc722bf7"
+    },
+    {
+      "id": "fl-fs-777-03-accessory-after-the-fact",
+      "status": "eligible",
+      "reason": "Clear whole-section offense; current ranking tables close its conditional grades.",
+      "draftHash": "17ddcf1352f4efd68a6399001495902fb167fe931fbb2455cca387cc0298842e",
+      "definitionHash": "8c205dc7c8a504cfad69195e69394488b987ce2e730ef8f0e774b2e06957702d",
+      "approvalHash": "96557502c1bf80d89486d07ff727190f0c122a3f4af9d7d1179fcc402d5c05c8"
+    },
+    {
+      "id": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
+      "status": "eligible",
+      "reason": "The official heading supplies a whole-section identity and the section exhaustively states conduct and repeat grades.",
+      "draftHash": "534e83f91e35b34370f70e9c35253ff5d7e1e6f79cdd358a953e8c1c1dbde82e",
+      "definitionHash": "9f8ed527e468fef38fff89f695c0d28994c00de7fbdfe4b5f58be61da48df39e",
+      "approvalHash": "4cc11e4799c281c39e621b51d6aab3fca4600e95714715f2121a279df73bd9f2"
+    },
+    {
+      "id": "fl-fs-784-011-assault",
+      "status": "eligible",
+      "reason": "Clear whole-section offense with conduct and conditional grades.",
+      "draftHash": "ef7b3f005ea8f06a371e7bb578c4ec611c265cf2977a2fcb2836aad573f334d9",
+      "definitionHash": "d95be317af1dacfc353e28ee6e1a5d4aefd8fa7f926d58a391213c6189ea6ceb",
+      "approvalHash": "cf1f17083b9baa2f963d13558dbe633b2d2e774b9995f41a9b9ed359dc824130"
+    },
+    {
+      "id": "fl-fs-784-03-battery",
+      "status": "eligible",
+      "reason": "The operative clause expressly names battery and its conduct subdivision.",
+      "draftHash": "cdc6178f54221bdfe9f2679be2e286f917fb352d276e73f0aab9cf62f3d931c0",
+      "definitionHash": "3022ffda52a060aa286f21e2d7413c8c20d346f1696854249ad3a195af5dbc30",
+      "approvalHash": "288b0daa2c27660ba6cbafe63f0ac019fef0f042ad889e01a678fb90ada0ba5d"
+    },
+    {
+      "id": "fl-fs-784-048-2-stalking",
+      "status": "eligible",
+      "reason": "Subsection (2) expressly names stalking and states its conduct and grade.",
+      "draftHash": "f90857c0b97da1da8e3b52004710aece1c78dc057b3d0d8fb48809bd5ebc094a",
+      "definitionHash": "9840340e99471fa44b665fb6bf6405c661d0e2eec09150379164b1426108a959",
+      "approvalHash": "d3c7434f69432940027d1979d45b359ec532bff7eb0b544fa20817a22d616081"
+    },
+    {
+      "id": "fl-fs-784-048-3-aggravated-stalking",
+      "status": "eligible",
+      "reason": "Subsection (3) expressly names the credible-threat variant and gives its grade.",
+      "draftHash": "f12299ec89051dbb00428d4c122e61e01b15d6af603e036c78db323cec746490",
+      "definitionHash": "bf33a3fa63947e6b3e7d23861ca63c50a867dff758956821f3281b65f9de0a42",
+      "approvalHash": "d12b4a2382109671598287a638db2c17e9f1899d8848993a1b499d3fed8790f6"
+    },
+    {
+      "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+      "status": "eligible",
+      "reason": "The operative clause supplies a literal offense name; conduct, exceptions, and repeat grading are complete.",
+      "draftHash": "9f1eb329ad6d6b3b597ba0c9294c009d35991c902a00fddd4ebba8ce2e1884f9",
+      "definitionHash": "af3e5dbc57dc425118aff841d7356c57147a1e0483ad5a727b11dd94e2e9dc7f",
+      "approvalHash": "93910585efb9f181e748dfeafc37f94c34b7aae4151b9f08804aa1d05997ed01"
+    },
+    {
+      "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+      "status": "eligible",
+      "reason": "Current section states prohibited status, conduct, exclusions, and conditional grades.",
+      "draftHash": "ec492a611e41a669a71600d0b45d3c867f9ad7339659d984d951877359c9632c",
+      "definitionHash": "1ab4871a91f451c757656448da962b6e8f411a86a4a6eae043e8aa8a82843d13",
+      "approvalHash": "0d5aba7a7ebc877a5180f74025e8467c0cd88c8334d76c7d6afa7753a4b9c2a3"
+    },
+    {
+      "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+      "status": "eligible",
+      "reason": "Clear whole-section possession offense with express state and federal-law exceptions.",
+      "draftHash": "ba5f28b25b1397a634771132fdeee8a9313d6ca15a1341c58097ead9c493f50b",
+      "definitionHash": "393b011efd8c3e5614a37f7a2cc53848289279ccdd0fe53786a9a5bc98ab9c43",
+      "approvalHash": "f7e5c8b08cd5898801fd0b41c1f376be452ac5f2ce1854881e88317a47dbf34b"
+    },
+    {
+      "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+      "status": "eligible",
+      "reason": "Subsection (4) supplies a literal offense name, conduct, and conditional grades.",
+      "draftHash": "afeecb6fae6834a28adc886879d6c74d23c77d622178ae261ac815aacd705b0b",
+      "definitionHash": "aa2f5db54e7c836be8be7b1c1ab07918180b9d0f38336086f20fa5e36268c4ef",
+      "approvalHash": "9be06b6e1bcf8d7f3329f893a7747c2a14d8a0d159cbb9eb1ea44f1363a98268"
+    },
+    {
+      "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+      "status": "eligible",
+      "reason": "Subsection (5) expressly names the offense and exhaustively grades it by ages and priors.",
+      "draftHash": "f13b9060fe0a29952a9f64a628e1767afec20ec6d61de99b5ccfd6b83e5b5270",
+      "definitionHash": "797d5eb6f9c42600df06531c34be3d7aeea6fb96d775d06441ddf1f9c34db4b1",
+      "approvalHash": "16633c0bca0600fff85116a0aa23da116f1b3e00bf41ddcfb51e46821ca444b1"
+    },
+    {
+      "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+      "status": "eligible",
+      "reason": "Subsection (6) supplies a literal name, exact conduct, and age-conditional grades.",
+      "draftHash": "72a84d7979576b14c140b42748230a921333ca5406535edbed76a642bb73efc3",
+      "definitionHash": "448fca56c73f377f5e69d5609c8a3c75854cb0aa2c895520021707d75f9678fe",
+      "approvalHash": "2e8be1b36fbbb4462609a2ff0f89aea66d599871b408090f696e5d2aa42a71dc"
+    },
+    {
+      "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+      "status": "eligible",
+      "reason": "Subsection (7) supplies a literal name, conduct, exception, and age-conditional grades.",
+      "draftHash": "6906ed74acd8762b6d9c7283c8ed0f4a61b106a6e1674ceb16e79b002c9fbbd7",
+      "definitionHash": "8443ecdf8e06aa017a4c94347003f76a66fab0a2c3f1f47e1f9a5adde9019d11",
+      "approvalHash": "76f2a3ec0bd54ac0bb83a4aea18b67f0858f88045c2eff5620b066c87708cdc1"
+    },
+    {
+      "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+      "status": "eligible",
+      "reason": "Paragraph (2)(a) expressly names the offense and states its conditional mandatory minimum.",
+      "draftHash": "f29ed0fe1e8095bf8f8e1993d76a8de83af62c5e26c5267fee853254b2d9992c",
+      "definitionHash": "7c0adab4a1c56f2aa7eed21bdd66ef80d2369f3a669e8270d3cc40f39301a105",
+      "approvalHash": "1fb21bdac9c9f3bebdbdd4b54dd8efd71670330a891082ba45cfcd708732a3a3"
+    },
+    {
+      "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+      "status": "eligible",
+      "reason": "Paragraph (2)(b) expressly names and grades the under-12 offense.",
+      "draftHash": "09adbe600779f2731125be88cb2ca3e8699c4b19e0193fdc05050d3c6ac65ac8",
+      "definitionHash": "10539bf49e5af99b62c15b647f4b6712b933ae97a2b18e5015ddab81b17c2437",
+      "approvalHash": "c90a582bcb39c2ad80633b7ad64d5fcbc9f6972b30482b748d05356ca49a83be"
+    },
+    {
+      "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+      "status": "eligible",
+      "reason": "Subsection (3) expressly names, defines, and grades the offense.",
+      "draftHash": "940d26508b471f4d2e6afe1b6c7dbd7842fdac855600dcec65216f15dd84bbc9",
+      "definitionHash": "5b2f242c926651e76bc0004dd316ec21daf48eb9b3a74c7dfb79af0d1feb3385",
+      "approvalHash": "3349ff3d74d4d9448aaf00bc8b3bb2e945d18ee6c834e536370bf3f68b5fc787"
+    },
+    {
+      "id": "fl-fs-806-13-criminal-mischief",
+      "status": "eligible",
+      "reason": "Subsection (1) expressly names the offense and conditionally grades it.",
+      "draftHash": "35c50c857018010e74db2d3a962249fb9cbabc66d8ed352333b4f3abd8415ea7",
+      "definitionHash": "37c64e8f72425e33b075be443f3a0579719811eada111983d3d90367db66c5f9",
+      "approvalHash": "641473bd5c2791149a31104d72f5f3380335a4d965ba645266e378fab6dd7b0c"
+    },
+    {
+      "id": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
+      "status": "eligible",
+      "reason": "The heading is a clear offense identity and subsections (1)-(2) supply conduct and conditional grades.",
+      "draftHash": "d8f73fa6a0cb7410ee5d4fb765d9d59b60e6861082a18d0a3e6f1c4517b36aff",
+      "definitionHash": "03f5b5f569f5763671b36f0f3d793e623aaa3f95416a2222573d6fef1cc93bd7",
+      "approvalHash": "d5c0583299aa9db157fb32bc4ef4e452dbebf521002a6d8b740648b691184457"
+    },
+    {
+      "id": "fl-fs-812-015-retail-theft",
+      "status": "eligible",
+      "reason": "The statute defines retail theft and subsections (8)-(11) use that identity with complete felony grades.",
+      "draftHash": "9da45dedfde099209a035b6ceb5245b3f9464732c73a75bc2a6fbb23324f7356",
+      "definitionHash": "7db385368c88e2aad08516a8f6b824d3a08e87afbe472f68676cd46547cdeba2",
+      "approvalHash": "67cd248667ba610e0dcb52d80a89d6b074f8fa287de2f944ddb9739949101ca1"
+    },
+    {
+      "id": "fl-fs-812-019-dealing-in-stolen-property",
+      "status": "eligible",
+      "reason": "The clear heading and two guilt clauses support one conditionally graded offense.",
+      "draftHash": "077451cc25650bcc7187e90d69a00848206efabd19c5d6826e75585be7812a25",
+      "definitionHash": "a1368d3f37854d16aeaba5136d43c4d2977dc6853f007c9a0e3aa1220dff4fa0",
+      "approvalHash": "9595c0e8bb09fccf613d7be95639990d231ea614affcdfb68103053fddd3051f"
+    },
+    {
+      "id": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
+      "status": "eligible",
+      "reason": "Subsection (2) expressly names and defines the offense; subsection (3) grades it and subsection (7) supplies exceptions.",
+      "draftHash": "a425d8c5417866bd044fe037ce71610977ff98eaf943aa566694bb9ba26c07be",
+      "definitionHash": "5c14889e256cfad52a3232e5b93664d8f46b4c60b1552accac87d5d10281927d",
+      "approvalHash": "64e4804dee0d2816fd81216acf30bcc9aca071e0af0cc38f0290c7d93a33e78f"
+    },
+    {
+      "id": "fl-fs-817-234-insurance-fraud",
+      "status": "eligible",
+      "reason": "Subsection (1)(a) expressly names insurance fraud and subsection (11) conditionally grades it.",
+      "draftHash": "8c2b8e9d135d0e8facdcceba5308d3f0dd9285e61ae36a067456cc495fa938a9",
+      "definitionHash": "cd68bf2e1106af0864155d32abefbec2cac597878df065b2106c574204d7b24a",
+      "approvalHash": "54634c927e26dff55fd94b00615084d7afc801cafa82803760ba1954217a2353"
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+      "status": "eligible",
+      "reason": "Subsection (2) states an exact offense name, conduct, and threshold grades.",
+      "draftHash": "f53608dca94b3cccb24f0f4779d43ada24f169c3e5eab7b2753cbdae33309ad0",
+      "definitionHash": "41c44b6782bf28ca1d5ade0b785757e48b4c21a44c3051cb4b383a5f2e0f7af4",
+      "approvalHash": "40bdd93c96aee5e5203af48d806c22f327a6e8ab38714dd0bf3add53d9f22205"
+    },
+    {
+      "id": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+      "status": "eligible",
+      "reason": "Subsection (4) states a distinct literal offense name, conduct, and grade.",
+      "draftHash": "ef69b6f2ca9b2b8645c77df3996adbce9dc986278321e091c06b2f4183ff9d1e",
+      "definitionHash": "d657917d4538cf447c811334054f18f2c836ce5fef17a3a46cc399f85f393ab7",
+      "approvalHash": "0ba0a8b84663bce903f464fa7e8e6179a3e8d3720528d6cf0bdf330f9f64540e"
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+      "status": "eligible",
+      "reason": "Subsection (8)(a) gives a distinct literal identity and paragraphs (b)-(c) supply threshold grades.",
+      "draftHash": "e154518beee22b5e50442eb8217573e857e1923a9f5ad05beec3abe0e227ece6",
+      "definitionHash": "040ef8211ff1b2e1af5b46587c952718b3c6b68ea476dc6ec4575b6e5e52d0e9",
+      "approvalHash": "e7a1c4b835d0df23f76699b04521b3f32815bab81f0f19be88fbc48d2b761874"
+    },
+    {
+      "id": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+      "status": "eligible",
+      "reason": "Subsection (9) states the complete literal identity, conduct, and grade.",
+      "draftHash": "ed7a74cfb1effa93f360fc5af74c67fbd9fd1360ae81754d6e65408a24a9cfa6",
+      "definitionHash": "d0708165061bbf7da45ec3c04fa82890651ed8354b409468242bf304e178b955",
+      "approvalHash": "d28b8d32869e627e3853bc68d9c05b94bd67373d9fa018ae370dc42cec1a8a21"
+    },
+    {
+      "id": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+      "status": "eligible",
+      "reason": "The clear heading and conduct are graded by the current expressly incorporated penalty section.",
+      "draftHash": "a4a9c99adb785062366ffd907ac26d748d3b2383cd90f9e9d42a3427e757fe57",
+      "definitionHash": "c046b8daf48def736d69ad8d58d3d63cec22f55f8fc8730f4d6ade751f86f803",
+      "approvalHash": "54410bccf31e5c360e4adc12f0e3f3e2cc5977e9b84d42bc4b6777a39c478353"
+    },
+    {
+      "id": "fl-fs-827-06-nonsupport-of-dependents",
+      "status": "eligible",
+      "reason": "The clear heading and subsections (2)-(3) provide adult conduct and conditional grades.",
+      "draftHash": "fd6ea54cc2de36d2d211cd461bc8fe8630327b2f1221312e6a0bf59582ca3e8a",
+      "definitionHash": "279c01ed96229e61fc0a3ead371e6332495c673952ebe7917a3a2a93a1213ef9",
+      "approvalHash": "f5115b8e92450eb12905aa835bf5d12e038c0ac1cba78b986a8628d052dd1efb"
+    },
+    {
+      "id": "fl-fs-828-12-animal-cruelty",
+      "status": "eligible",
+      "reason": "Subsection (1) expressly names animal cruelty and supplies conduct, grade, and special fine.",
+      "draftHash": "7860f885af173d3b398f022a8110adb35d0dd59e30c076b3054b0bb2a8cb9004",
+      "definitionHash": "7dd33ef2045142a19bfdf63c7c38ba9d456f42581cd6e84030114f28efa805b9",
+      "approvalHash": "e6bb395a390c4666e8abc5e3a8c2896f8b1c297b0055394288373670a97c0858"
+    },
+    {
+      "id": "fl-fs-828-12-aggravated-animal-cruelty",
+      "status": "eligible",
+      "reason": "Subsection (2) expressly names aggravated animal cruelty and supplies conduct, grade, and conditional additions.",
+      "draftHash": "2ad7db87e1764d04009964708d5759c762be3c005a13bfba5468886ff859e805",
+      "definitionHash": "1981042f3ba6f34f8ee959d4068c29aac4b244545706cee9c07664f061577fc0",
+      "approvalHash": "d3d5353f19b14780736618113c64e4d0456679749e33fb127a366a2206bf7fa9"
+    },
+    {
+      "id": "fl-fs-831-01-forgery",
+      "status": "eligible",
+      "reason": "The current section's literal heading identifies forgery, and its single operative sentence supplies complete conduct and a third-degree felony grade.",
+      "draftHash": "8cbc9640e46b04ceec67a33544c587b08870cad3239cd678a049e11100d46eb0",
+      "definitionHash": "fb562c9f5cadecd8d6a5a486a7cfeead1efd1b785c60deb0dcd20b4df97b447c",
+      "approvalHash": "919811848dd91950d0ca3949a2e8a9be8a2011f9c913d7665e221a44886fc443"
+    },
+    {
+      "id": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+      "status": "eligible",
+      "reason": "The clear whole-section heading is supported by operative conduct, exceptions, and conditional grades in subsections (2)-(4).",
+      "draftHash": "86edca83d00f0e25d945ab617be36d8fb51c9366d19d6feb23d87dd5165bf49a",
+      "definitionHash": "5a382ad8fd89ab35d653fa918065d9f3f35851763186a580e74783a5f45927d5",
+      "approvalHash": "6fc87560d2ba88864171970d7c9c6417caf70de4cafb2c44d3db16e45002a598"
+    },
+    {
+      "id": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
+      "status": "eligible",
+      "reason": "The clear heading and operative clauses supply conduct and conditional grades.",
+      "draftHash": "670ab11e6b8e5699c6156ee498cf03bc2faed6b6e753750b694491675053a9b2",
+      "definitionHash": "857f14436f38eee63737a3a34829a9debca132c68af07f954bd974771e8f275f",
+      "approvalHash": "27efbecf36ef7c17f361adf334b522ea789661cb1d1a3e52ba65a54fb1e58e75"
+    },
+    {
+      "id": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
+      "status": "eligible",
+      "reason": "The clear heading and both operative clauses are supported by recovered current officer and animal definitions.",
+      "draftHash": "c62ef7cb0d9823d83c1127657872537e72a23d7da237b46c8cd7a7d38260fcf0",
+      "definitionHash": "9051cb042e54fd7519aaec36bc97243bbe3aae0b6794533a1b814ed510ca3073",
+      "approvalHash": "407f59c50905b3d931c17b01a9b30d3f84a9d73fb649d6dabfdb353746cbf011"
+    },
+    {
+      "id": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
+      "status": "eligible",
+      "reason": "The heading clearly identifies the offense and subsection (1) states conduct and charge-dependent grades.",
+      "draftHash": "1b1c259f40ea50b6b310a5cc7d4f8b1a9385c4f8e42cdbf890f2dd8818f8149f",
+      "definitionHash": "f6b87948c6187e64fab6ddd39a63d41d3c184992df1dd8ab3db5f419435b8594",
+      "approvalHash": "a883670c0cbde9dc93442e15149df3361478632629cdf9053eca9d65f295c462"
+    },
+    {
+      "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
+      "status": "eligible",
+      "reason": "The current section heading supplies a literal identity, and subsection (1) supplies exact conduct and misdemeanor grading at the exact subdivision.",
+      "draftHash": "564ae0c805bb69906b25d5514674dae6e41eb29c9946f8fc7ca23d1100f1313b",
+      "definitionHash": "c5ffc5cb786ffc20559cf401d3d3ec726a81ac1541a3a6c1bc8576a13d30ff47",
+      "approvalHash": "ee40c9dd4b0244b4874e5d170b4a5772b1cb32bfa095957a472fd9d2ccd8e65d"
+    },
+    {
+      "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
+      "status": "eligible",
+      "reason": "Subsection (3)(c)3 expressly names DUI manslaughter and ties that name to the death-causing conduct and conditional felony grades.",
+      "draftHash": "d89df775fd2ef03cdf7ba0aed67f85ae2c012eddd80aba379a91d122d1481470",
+      "definitionHash": "626e3ad346147f089dce3e4a549509450e30f1517477507897b30f79039f02a1",
+      "approvalHash": "ae1e5c3393558da8c7d0d7059b779d2140eee670e590d68d313db971e985409a"
+    },
+    {
+      "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
+      "status": "eligible",
+      "reason": "The exact heading identifies the offense, subsection (4)(a) supplies enumerated willful conduct, and paragraph (c) supplies the same-victim prior-conviction felony condition.",
+      "draftHash": "acebfdffa2d19beca6189a9587e8a94987cb06914dc9c488a119e5a8aea82072",
+      "definitionHash": "30f7411e2d54886db0065a2ce17662e56f0928f178161ba04738708a33d51b4a",
+      "approvalHash": "d148180b89ef1cd163cd67d621658429fd3b9d32a1e00632ca0d213b331cae15"
+    },
+    {
+      "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+      "status": "eligible",
+      "reason": "The operative clause expressly names trafficking in cocaine and ties that name to subsection (1)(b)1 conduct and quantity-based grading.",
+      "draftHash": "1f504552761d3b35c66971f68e6be4605a3598dde745c77cae6bf860ff40f963",
+      "definitionHash": "89af096a7ef708096747cb626e0e6f93c1e1e9d349d1186dfe540f5abf712027",
+      "approvalHash": "c13b405fd9751974e625508c741580ee842bae4d5d8b217e191728c5d00bf31b"
+    },
+    {
+      "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
+      "status": "eligible",
+      "reason": "The exact heading and subsection (3)(c) support a narrowly coded repeat expired-registration misdemeanor, with adjacent noncriminal tiers and exceptions stated conditionally.",
+      "draftHash": "0f227f1c5d17a09d80baf5c8dc0c81b5450b6b0f9ef04899eeeba568a4e3b25c",
+      "definitionHash": "06acfb9ae9f6bd9dba37318eedb74bfc9ea9dc2ac75f0a6081c024fc42fa07be",
+      "approvalHash": "8b384882086c8235b0b1377edc04fef84c97c9ad179587d976a67d36eeca3e1f"
+    },
+    {
+      "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
+      "status": "eligible",
+      "reason": "The exact whole-section official heading supplies the identity, while subsection (2) narrowly supplies the knowing-driving conduct and each conditional misdemeanor or felony grade.",
+      "draftHash": "b230973d8809a6c70dbe849e87c585d4e3c2629c270d753388cf4fa62dc3c971",
+      "definitionHash": "825199ac92a45f0118e11c7c4374baacfc842d90c9d7d48dd46b724b45423afd",
+      "approvalHash": "2ae7e9f2c8aa5ea81f0802b28c30121fd794feb37eff8a42304133a411a4cc3b"
+    },
+    {
+      "id": "fl-fs-403-413-6-b-florida-litter-law",
+      "status": "eligible",
+      "reason": "The statutory short title supplies the same literal identity as the official heading, and the exact code is limited to the mid-quantity noncommercial misdemeanor tier.",
+      "draftHash": "9740fad245baa6a06619afb0b386331756f3b36815f7bc959957d450a409f17d",
+      "definitionHash": "50828dc649a6eb441e10826b92f4567f5b48e195f695abfa2956d2e32cea7271",
+      "approvalHash": "e5774e13c2563683bc31e6a3224f753d28c6b07f279a3315342d39f4950d9ef2"
+    },
+    {
+      "id": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
+      "status": "eligible",
+      "reason": "The official heading literally identifies the subsection (1) beverage-licensing conduct, and subsections (1)-(2) provide conditional misdemeanor and felony grades.",
+      "draftHash": "bd298f04ed34a6702d73ee96fb5ecf3b226c6887aaf68d6c2862b0289fc938e1",
+      "definitionHash": "1e6568589f5a0f3a7b182216bea86ee24b327391dfc894fc241740cbe3b186d5",
+      "approvalHash": "20f4ea6e353692966077b706cb7cf968d1be0d7940725728e4162de555429538"
+    },
+    {
+      "id": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
+      "status": "eligible",
+      "reason": "The whole section defines one misdemeanor under the exact official heading; the manifest's older rows require reselection and are not among the retained or exact-alias records that bar a source-first definition.",
+      "draftHash": "fd1b9b628252be1a49d56beeea4c771b688a607a4d969c59ad29793307e8efce",
+      "definitionHash": "283c628b80b01095b9d1c77b7ee8116e9da4d6aa5c16c75eac657f6d27265b1e",
+      "approvalHash": "dadda48c8806b6b13d73bd870df65074d9812c91385de276968e80c808e98094"
+    },
+    {
+      "id": "fl-fs-316-193-1-driving-under-the-influence",
+      "status": "eligible",
+      "reason": "Subsection (1) expressly names the offense; § 316.193 supplies county-jail terms not exceeding one year for the ordinary tiers, which § 775.08(2) classifies as misdemeanors, while § 316.193 expressly classifies the conditional repeat tiers as third-degree felonies.",
+      "draftHash": "edc49eac2fe94e9b2b90c50d2ba90dcbaec4fef30574565e925f976b0fab42af",
+      "definitionHash": "c719fcbf702708b17969d1cc4b838ca642f13e5b587a333c2ba1e2b51687094d",
+      "approvalHash": "43ff9bff1f9e8312cf47c36aaca7a2a5eeaf70a250f428c25a3d3779664400cd"
+    },
+    {
+      "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+      "status": "eligible",
+      "reason": "Subsection (1)(c)1 expressly names this offense and supplies all three quantity tiers.",
+      "draftHash": "c62f5977f4d1b21e05b223a54ae7b1ad1e26ea740cd9dd163079f8a31944924b",
+      "definitionHash": "12e686906eada671873dd49232df7cc5be81c87122a0105d7dd904c19bfe46f2",
+      "approvalHash": "c73487cffd3ab43bcc5a228b6475a181b94801e39fc4e2052826eb56b3512ea9"
+    },
+    {
+      "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+      "status": "eligible",
+      "reason": "Subsection (1)(c)2 expressly names this offense and supplies all four quantity tiers.",
+      "draftHash": "606ecbec4c56b8ecec331d0ba88778e4f89981eceb754a083e0a353003117ab5",
+      "definitionHash": "7685ad3d7853dc60862f3455f9922fc859dcbcd90b3d4cf98232b7b9a8ba3c93",
+      "approvalHash": "d659d48096a6e13f712bc334a9a304c361d80bb418a4596f536959bcece4f288"
+    },
+    {
+      "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+      "status": "eligible",
+      "reason": "Subsection (1)(c)3 expressly names this offense and supplies all four quantity tiers.",
+      "draftHash": "7bd9d4a3c650575ed82639fb0cb0276c2cf6c3d1c91aacef8c122be98d78c954",
+      "definitionHash": "cacab1ff881aab5d2554d0b911a2779bc4ba7a6d1e1e60a1a5763e2aa5eb4a50",
+      "approvalHash": "bdd8783e3edb1b424bd148473b865626bf37730b915a0252f765e43f3a26c7bd"
+    },
+    {
+      "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+      "status": "eligible",
+      "reason": "Sub-subparagraph (1)(c)4.a expressly names this offense; (1)(c)4.b supplies all quantity tiers.",
+      "draftHash": "829ddb8c5f46646054fdc07e52cb653800aab853e64d8990b5c122835d5d2a9e",
+      "definitionHash": "0554fa717ecc060aec6eefa8d74454025fcabcedc41c92a259398cf9de9bc693",
+      "approvalHash": "ae37bae2cd70470d18c26d1d457cf55a38629ba472c249fed43dcab291e8e407"
+    },
+    {
+      "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+      "status": "eligible",
+      "reason": "Subsection (1)(c)7 expressly names this offense and supplies all three quantity tiers.",
+      "draftHash": "d8b74a33171ea0ce917973c035992eb60b2253a40382b541196f81f762ec3f5b",
+      "definitionHash": "e674b4a838f6e7a5b2ddad6e52c9c07734a8b96a604be404b6999d9677cf3843",
+      "approvalHash": "02d61979dfa4ec41d347b183f19437d0705a73b5e46fd9194f4b39f38a81c60e"
+    },
+    {
+      "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+      "status": "eligible",
+      "reason": "Subsection (1)(d)1 expressly names this offense and supplies all three quantity tiers.",
+      "draftHash": "73165d28565bd8794422522d85de6bbe7384020e3dca273b95a559d29200b320",
+      "definitionHash": "1f5f5321adf2bf489d59b1001fb8c598c653683a9034808245bfb509c5a92252",
+      "approvalHash": "f75f535ba4f198c1244a6673da8e38aef8b3d483ddb1b35111d6c2f9b6d6db06"
+    },
+    {
+      "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+      "status": "eligible",
+      "reason": "Subsection (1)(e)1 expressly names this offense and supplies all three quantity tiers.",
+      "draftHash": "85230ac53ce1abfe4f8ab0c5a0ac4ef23b4f2ed1ceb568ca7059e945318476cf",
+      "definitionHash": "9f109ef564e831748e78729a6f6ec01d173ec99400e147b0193b695b570bf938",
+      "approvalHash": "0573266dd131121d6c7ae214ee771ecec733fb2d231da37ba463ddf4cadf07f4"
+    },
+    {
+      "id": "fl-fs-893-135-1-f-1-trafficking-in-amphetamine",
+      "status": "eligible",
+      "reason": "Subsection (1)(f)1 expressly names the offense and supplies all quantity tiers.",
+      "draftHash": "b472421cbf33c6de27e4c10bacbd8f2463c0a29f1ece36da7faa9b064e1fc731",
+      "definitionHash": "59581ac53229eaf7586cb603cee28217426eac6bbea56817de121afa29ab71b7",
+      "approvalHash": "5ec6c2d7d0c3bd634c29326feee19face5a9f28132a174677ffabfee9bfcfe1e"
+    },
+    {
+      "id": "fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam",
+      "status": "eligible",
+      "reason": "Subsection (1)(g)1 expressly names the offense and supplies all quantity tiers.",
+      "draftHash": "448ae70139b1e69ffacdc8e946a149318113a11ed9e3224a1810590c29926b67",
+      "definitionHash": "11d34fbc67ba31551de5439d4fa551491e051d0da28eb1c523e12b74458790d3",
+      "approvalHash": "108e410ed96c835be19ad526101e1fdbdf4c5ed7a6618e8ee39b3e643c0f8085"
+    },
+    {
+      "id": "fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb",
+      "status": "eligible",
+      "reason": "Subsection (1)(h)1 expressly names the offense and supplies all tiers.",
+      "draftHash": "e52dc7ecd1d69fe0a635ac36502571f2eb8e9eab4efd6212e9becc7c411fa2e3",
+      "definitionHash": "0be5c17abd3de7145dc233584f5b008f54b51166c00e75da7e905c7fa22d853b",
+      "approvalHash": "6b57db9a87c79763888559b8b939dda68741daded21dd0fdd38bf6576bef9b6d"
+    },
+    {
+      "id": "fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl",
+      "status": "eligible",
+      "reason": "Subsection (1)(i)1 expressly names the offense and supplies all tiers.",
+      "draftHash": "905b83b783222d076d3a7c37cd386254b67b1941c6348e1fa699979ad9f78607",
+      "definitionHash": "467bf887c7cb5b15204e53d0d0771a8b68d658776447ffcc0d19c172439669d5",
+      "approvalHash": "4519daaed0ff2420633604952ce66027208c06b44ca7d4dcc844562f6c101b3c"
+    },
+    {
+      "id": "fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol",
+      "status": "eligible",
+      "reason": "Expressly named first-degree felony with three quantity tiers.",
+      "draftHash": "a3f39d0688a8c60ff556917679e353af8efac68c17ee98a4fb396702546255db",
+      "definitionHash": "7a078a36f5f849df34b933c70ec425d0e3ee19b09f70d6b8ec63fab1f9d28e7f",
+      "approvalHash": "334953fc8e3996589f7f58b2e48664acc61f685c6ed9a90326ebb1937490927c"
+    },
+    {
+      "id": "fl-fs-893-135-1-k-1-trafficking-in-phenethylamines",
+      "status": "eligible",
+      "reason": "Expressly named first-degree felony with three quantity tiers.",
+      "draftHash": "90bee4616f030f75640abe5a86bc8c33ada6630d59b9a873d509b7a19338486b",
+      "definitionHash": "4abc927eda2a02d714da14e784ee1e96e6cfc84f2f5577aaec14713806d88136",
+      "approvalHash": "8aa6bf0566b6bda08d74a3c36c8c93f1783fcdbd5713e1eee1e54682a320791d"
+    },
+    {
+      "id": "fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd",
+      "status": "eligible",
+      "reason": "Expressly named first-degree felony with three quantity tiers.",
+      "draftHash": "b657a47f4ca210d8055ec96432e30f55b53b27627953255ad5ff74edff5698f2",
+      "definitionHash": "61341bc84560282dbecb9fb813c525e976c8bb4621bdf0d74a3ea349fb898246",
+      "approvalHash": "5aefe0107107c45fef1823b5f8e975b4caa8d4608c26713cacc7a944f1d3c160"
+    },
+    {
+      "id": "fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids",
+      "status": "eligible",
+      "reason": "Expressly named first-degree felony with four quantity tiers.",
+      "draftHash": "8414d4878eb704ddd877e125da57b70fe98dbfc4dc2b5f96b1f7065166d63617",
+      "definitionHash": "7fe627828fc0607896b3ff98653e4885917bb728d72c67ba6daca5a0bbb9c09f",
+      "approvalHash": "888d37d85717aebb5cdd17baf05315aa1c389c94e57bcd84627bfdd503faad12"
+    },
+    {
+      "id": "fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines",
+      "status": "eligible",
+      "reason": "Expressly named first-degree felony with three quantity tiers.",
+      "draftHash": "f45b0fae3d643473cf7a1de3dbf707aad66ec59d4c4e33fdd6e25d125221866a",
+      "definitionHash": "7ae677ae61331e1beb89143c0c9937f039fe29f2a604bdc8bf066f21f5a0018e",
+      "approvalHash": "249a385140a7a26c5d64db3bc7fc708012ebeceab4d4719d8a3db7781bbd559f"
+    }
+  ]
+}

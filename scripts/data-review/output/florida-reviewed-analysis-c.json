@@ -1,0 +1,937 @@
+[
+  {
+    "id": "fl-section-213.29",
+    "section": "213.29",
+    "status": "held",
+    "reason": "Technical hold: no current Florida Statutes 2026 document for this assigned section is present in the reviewed source cache.",
+    "identity": null,
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [],
+    "notes": "The older catalog label is not current evidence and was not used."
+  },
+  {
+    "id": "fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property",
+    "section": "316.061",
+    "status": "eligible",
+    "reason": "The current section heading supplies a literal identity, and subsection (1) supplies exact conduct and misdemeanor grading at the exact subdivision.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Crashes involving damage to vehicle or property",
+      "sourceHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4"
+    },
+    "conductQuotes": [
+      "The driver of any vehicle involved in a crash resulting only in damage to a vehicle or other property which is driven or attended by any person shall immediately stop such vehicle at the scene of such crash or as close thereto as possible, and shall forthwith return to, and in every event shall remain at, the scene of the crash until he or she has fulfilled the requirements of s. 316.062."
+    ],
+    "gradingQuotes": [
+      "A person who violates this subsection commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      {
+        "section": "316.061",
+        "role": "offense",
+        "contentHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4"
+      },
+      {
+        "section": "316.062",
+        "role": "exception",
+        "contentHash": "3aba09ad1688305730bb8a35ff246e2ed0955f5ffdebf575899ce5fd6176e2fa"
+      }
+    ],
+    "notes": "The code is narrowed to subsection (1); the noncriminal subsection (2) is expressly excluded. Section 316.062 supplies the incorporated duties and autonomous-vehicle exception."
+  },
+  {
+    "id": "fl-section-316.192",
+    "section": "316.192",
+    "status": "duplicate",
+    "reason": "The manifest retains fl-reckless-driving at the same section and scope; an additive record would duplicate that retained record.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Reckless driving",
+      "sourceHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f"
+    },
+    "conductQuotes": [
+      "Any person who drives any vehicle in willful or wanton disregard for the safety of persons or property is guilty of reckless driving."
+    ],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "316.192",
+        "role": "offense",
+        "contentHash": "c84c77491130fea15bd136aefe71861f3779a53fdfc3c3a4128b3dd0d7ea8a6f"
+      }
+    ],
+    "notes": "The retained record is not recreated here."
+  },
+  {
+    "id": "fl-fs-316-193-3-c-3-dui-manslaughter",
+    "section": "316.193",
+    "status": "eligible",
+    "reason": "Subsection (3)(c)3 expressly names DUI manslaughter and ties that name to the death-causing conduct and conditional felony grades.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "The death of any human being or unborn child commits DUI manslaughter, and commits:",
+      "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+    },
+    "conductQuotes": [
+      "The death of any human being or unborn child commits DUI manslaughter, and commits:"
+    ],
+    "gradingQuotes": [
+      "A felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if:",
+      "A felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person has a prior conviction under this subparagraph, s. 327.35(3)(a)3.c., s. 782.071, or s. 782.072.",
+      "A person who is convicted of DUI manslaughter shall be sentenced to a mandatory minimum term of imprisonment of 4 years."
+    ],
+    "requiredSections": [
+      {
+        "section": "316.193",
+        "role": "offense",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "section": "316.193",
+        "role": "definition",
+        "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+      },
+      {
+        "section": "775.021",
+        "role": "definition",
+        "contentHash": "2a605d893dc481376f6e9fd2f989ddd2b5647d24c007da514f6d6cf63d8f7f99"
+      }
+    ],
+    "notes": "Parent conduct support, § 316.193(1): “A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:”; “The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;”; “The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or”; “The person has a breath-alcohol level of 0.08 or more grams of alcohol per 210 liters of breath.” Parent causal support, § 316.193(3): “Who, by reason of such operation, causes or contributes to causing:”. These parent clauses remain whole-section definition support rather than primary-leaf conductQuotes. The incorporated § 775.021 unborn-child meaning is included. The record states classes and the four-year minimum, not uncached general felony penalty sums."
+  },
+  {
+    "id": "fl-section-316.1936",
+    "section": "316.1936",
+    "status": "held",
+    "reason": "The section creates noncriminal moving and nonmoving violations, not a misdemeanor or felony charge; the legacy misdemeanor characterization is not supported by the current text.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Possession of open containers of alcoholic beverages in vehicles prohibited; penalties",
+      "sourceHash": "9df742d1d07a54b0fb430b09e6de2305c5a44569eb4f9c86b76d135c02df1b58"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "316.1936",
+        "role": "offense",
+        "contentHash": "9df742d1d07a54b0fb430b09e6de2305c5a44569eb4f9c86b76d135c02df1b58"
+      }
+    ],
+    "notes": "No ordinary adult criminal charge definition was drafted."
+  },
+  {
+    "id": "fl-section-316.234",
+    "section": "316.234",
+    "status": "held",
+    "reason": "This equipment section does not itself supply a misdemeanor or felony grade, and the broad legacy defective-equipment label does not identify an exact criminal subdivision.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Signal lamps and signal devices",
+      "sourceHash": "0d38ee95a9c6ae49e2530e7c2ec5e0a29f506cc988eb0f83069a391028b8154a"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "316.234",
+        "role": "offense",
+        "contentHash": "0d38ee95a9c6ae49e2530e7c2ec5e0a29f506cc988eb0f83069a391028b8154a"
+      }
+    ],
+    "notes": "No criminal grade was inferred from a general traffic title."
+  },
+  {
+    "id": "fl-section-316.610",
+    "section": "316.610",
+    "status": "held",
+    "reason": "The current text concerns unsafe vehicle condition and inspection authority but does not establish the legacy 'expired/no inspection' criminal identity or a standalone misdemeanor/felony grade.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Safety of vehicle; inspection",
+      "sourceHash": "28b911fe02de71adf5ed413a7e4f3c2569a38642d199de945ba97810557d264a"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "316.610",
+        "role": "offense",
+        "contentHash": "28b911fe02de71adf5ed413a7e4f3c2569a38642d199de945ba97810557d264a"
+      }
+    ],
+    "notes": "No synonym was invented."
+  },
+  {
+    "id": "fl-section-316.646",
+    "section": "316.646",
+    "status": "held",
+    "reason": "Failure to possess or display proof of required security is graded as a nonmoving traffic infraction; the section does not support the legacy misdemeanor label.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Security required; proof of security and display thereof",
+      "sourceHash": "885e2748b9ece7eb0add5f210aedc4b7be6001442c074e1908ab253c97570164"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "316.646",
+        "role": "offense",
+        "contentHash": "885e2748b9ece7eb0add5f210aedc4b7be6001442c074e1908ab253c97570164"
+      }
+    ],
+    "notes": "No ordinary adult criminal charge definition was drafted."
+  },
+  {
+    "id": "fl-section-320.02",
+    "section": "320.02",
+    "status": "held",
+    "reason": "The section contains several differently scoped registration crimes, including false insurance proof and fraudulent registration representations, but no literal offense name identifies a single public charge; the broad legacy unregistered-vehicle label also omits the exact penalty source.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Registration required; application for registration; forms",
+      "sourceHash": "5bc24b280611ec2a72ddd6277bdf86e313141c9c5c625efe4c2cc2d5f7871006"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "320.02",
+        "role": "offense",
+        "contentHash": "5bc24b280611ec2a72ddd6277bdf86e313141c9c5c625efe4c2cc2d5f7871006"
+      }
+    ],
+    "notes": "Held rather than collapsing distinct subsections under an invented offense name."
+  },
+  {
+    "id": "fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties",
+    "section": "320.07",
+    "status": "eligible",
+    "reason": "The exact heading and subsection (3)(c) support a narrowly coded repeat expired-registration misdemeanor, with adjacent noncriminal tiers and exceptions stated conditionally.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Expiration of registration; renewal required; penalties",
+      "sourceHash": "2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d"
+    },
+    "conductQuotes": [
+      "Any person whose motor vehicle or mobile home registration has been expired for more than 6 months, upon a second or subsequent offense, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "gradingQuotes": [
+      "Any person whose motor vehicle or mobile home registration has been expired for more than 6 months, upon a second or subsequent offense, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      {
+        "section": "320.07",
+        "role": "offense",
+        "contentHash": "2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d"
+      },
+      {
+        "section": "320.07",
+        "role": "definition",
+        "contentHash": "2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d"
+      }
+    ],
+    "notes": "Parent conduct support, § 320.07(3): “The operation of any motor vehicle without having attached thereto a registration license plate and validation stickers, or the use of any mobile home without having attached thereto a mobile home sticker, for the current registration period shall subject the owner thereof, if he or she is present, or, if the owner is not present, the operator thereof to the following penalty provisions:”. Excluded adjacent grade, § 320.07(3)(a): “Any person whose motor vehicle or mobile home registration has been expired for a period of 6 months or less commits a noncriminal traffic infraction, punishable as a nonmoving violation as provided in chapter 318.” These are whole-section support, not primary (3)(c) conduct or grading quotes. Subsections (3)(d)-(f) supply the lease, servicemember, and leased-owner limitations included in the summaries."
+  },
+  {
+    "id": "fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified",
+    "section": "322.34",
+    "status": "eligible",
+    "reason": "The exact whole-section official heading supplies the identity, while subsection (2) narrowly supplies the knowing-driving conduct and each conditional misdemeanor or felony grade.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Driving while license suspended, revoked, canceled, or disqualified",
+      "sourceHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
+    },
+    "conductQuotes": [
+      "Any person whose driver license or driving privilege has been canceled, suspended, or revoked as provided by law, or who does not have a driver license or driving privilege but is under suspension or revocation equivalent status as defined in s. 322.01(43), except persons defined in s. 322.264, who, knowing of such cancellation, suspension, revocation, or suspension or revocation equivalent status, drives any motor vehicle upon the highways of this state while such license or privilege is canceled, suspended, or revoked, or while under suspension or revocation equivalent status, commits:"
+    ],
+    "gradingQuotes": [
+      "A misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "A misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, upon a second or subsequent conviction, except as provided in paragraph (c).",
+      "A person convicted of a third or subsequent conviction, except as provided in paragraph (c), must serve a minimum of 10 days in jail.",
+      "A felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, upon a third or subsequent conviction if the current violation of this section or the most recent prior violation of the section is related to driving while license canceled, suspended, revoked, or suspension or revocation equivalent status resulting from a violation of:",
+      "Driving under the influence;",
+      "Refusal to submit to a urine, breath-alcohol, or blood alcohol test;",
+      "A traffic offense causing death or serious bodily injury; or",
+      "Fleeing or eluding."
+    ],
+    "requiredSections": [
+      {
+        "section": "322.34",
+        "role": "offense",
+        "contentHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
+      },
+      {
+        "section": "322.34",
+        "role": "grading",
+        "contentHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b"
+      },
+      {
+        "section": "322.01",
+        "role": "definition",
+        "contentHash": "c407705ecbc5c0eb5e044d38781f8612155ed9ca9c4147b2a6031763e4c5fa88"
+      },
+      {
+        "section": "322.264",
+        "role": "exception",
+        "contentHash": "c4eb707c8a2ed6985eaad76041793b38118aa53e8363663358792e2fd614b22c"
+      }
+    ],
+    "notes": "The record is limited to subsection (2). The nonknowing moving violation, habitual-traffic-offender offense, death/injury offense, commercial-license provisions, and special financial-suspension tiers elsewhere in § 322.34 remain outside this definition."
+  },
+  {
+    "id": "fl-section-322.212",
+    "section": "322.212",
+    "status": "held",
+    "reason": "The section defines multiple independently graded acts involving licenses and identification cards, but its broad heading is not a single offense identity and the operative clauses do not give those acts distinct statutory names.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card",
+      "sourceHash": "ceb3bc7a9cd559c4dffac3ec691035c26b92c9c8ca13c06ab9c7a19c5a27455c"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "322.212",
+        "role": "offense",
+        "contentHash": "ceb3bc7a9cd559c4dffac3ec691035c26b92c9c8ca13c06ab9c7a19c5a27455c"
+      }
+    ],
+    "notes": "Held instead of using the nonliteral legacy label 'fake ID.'"
+  },
+  {
+    "id": "fl-section-379.354",
+    "section": "379.354",
+    "status": "held",
+    "reason": "Technical dependency hold: the current section supplies the license requirement but not the applicable criminal grade, and the necessary current penalty provision is not present in the reviewed cache.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Recreational licenses, permits, and authorization numbers; fees established",
+      "sourceHash": "232b9728dcc526a75a9e0eebff726e9fd144a3680df6f02b7f8af3aebdb79581"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "379.354",
+        "role": "offense",
+        "contentHash": "232b9728dcc526a75a9e0eebff726e9fd144a3680df6f02b7f8af3aebdb79581"
+      }
+    ],
+    "notes": "This is a missing-source hold, not a legal interpretation question."
+  },
+  {
+    "id": "fl-fs-403-413-6-b-florida-litter-law",
+    "section": "403.413",
+    "status": "eligible",
+    "reason": "The statutory short title supplies the same literal identity as the official heading, and the exact code is limited to the mid-quantity noncommercial misdemeanor tier.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Florida Litter Law",
+      "sourceHash": "e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702"
+    },
+    "conductQuotes": [
+      "Any person who dumps litter in violation of subsection (4) in an amount exceeding 15 pounds in weight or 27 cubic feet in volume, but not exceeding 500 pounds in weight or 100 cubic feet in volume and not for commercial purposes is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "gradingQuotes": [
+      "Any person who dumps litter in violation of subsection (4) in an amount exceeding 15 pounds in weight or 27 cubic feet in volume, but not exceeding 500 pounds in weight or 100 cubic feet in volume and not for commercial purposes is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      {
+        "section": "403.413",
+        "role": "offense",
+        "contentHash": "e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702"
+      },
+      {
+        "section": "403.413",
+        "role": "definition",
+        "contentHash": "e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702"
+      }
+    ],
+    "notes": "Parent conduct support, § 403.413(4): “Unless otherwise authorized by law or permit, it is unlawful for any person to dump litter in any manner or amount in or on any of the following areas:”. That parent prohibition and its listed locations remain whole-section definition support rather than primary (6)(b) conductQuotes. The definition excludes the separate small-amount infraction and felony tiers, avoiding unsupported hazardous-waste definition claims."
+  },
+  {
+    "id": "fl-section-562.111",
+    "section": "562.111",
+    "status": "duplicate",
+    "reason": "The reviewed manifest already preserves the exact alias for the under-21 possession offense; the recovered raw text still requires footnote parser repair and no new duplicate row is needed.",
+    "identity": null,
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [],
+    "notes": "The existing alias is preserved. The malformed extraction is not admitted as new evidence."
+  },
+  {
+    "id": "fl-fs-562-12-1-beverages-sold-with-improper-license-or-without-license-or-registration-or-held-with-intent-to-sell-prohibited",
+    "section": "562.12",
+    "status": "eligible",
+    "reason": "The official heading literally identifies the subsection (1) beverage-licensing conduct, and subsections (1)-(2) provide conditional misdemeanor and felony grades.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Beverages sold with improper license, or without license or registration, or held with intent to sell prohibited",
+      "sourceHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b"
+    },
+    "conductQuotes": [
+      "It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "Any person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000."
+    ],
+    "gradingQuotes": [
+      "It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+      "Any person, including a licensee, who unlawfully sells alcoholic beverages at a commercial establishment or keeps and maintains a place where alcoholic beverages are sold or intended to be sold unlawfully commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $5,000 and not more than $10,000.",
+      "Any person, including a licensee, who commits a second or subsequent violation of subsection (1) commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, and must pay a fine of not less than $15,000 and not more than $20,000."
+    ],
+    "requiredSections": [
+      {
+        "section": "562.12",
+        "role": "offense",
+        "contentHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b"
+      },
+      {
+        "section": "562.12",
+        "role": "grading",
+        "contentHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b"
+      }
+    ],
+    "notes": "The exporter-registration offense in subsection (3) is outside this exact charge code."
+  },
+  {
+    "id": "fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence",
+    "section": "741.31",
+    "status": "eligible",
+    "reason": "The exact heading identifies the offense, subsection (4)(a) supplies enumerated willful conduct, and paragraph (c) supplies the same-victim prior-conviction felony condition.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Violation of an injunction for protection against domestic violence",
+      "sourceHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae"
+    },
+    "conductQuotes": [
+      "A person who willfully violates an injunction for protection against domestic violence issued pursuant to s. 741.30, or a foreign protection order accorded full faith and credit pursuant to s. 741.315, by:",
+      "commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c)."
+    ],
+    "gradingQuotes": [
+      "commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, except as provided in paragraph (c).",
+      "A person who has one or more prior convictions for a crime of domestic violence or violation of an injunction or foreign protection order, and who subsequently commits a violation of any injunction or foreign protection order against the same victim, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083 or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "741.31",
+        "role": "offense",
+        "contentHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae"
+      },
+      {
+        "section": "741.31",
+        "role": "grading",
+        "contentHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae"
+      },
+      {
+        "section": "741.30",
+        "role": "definition",
+        "contentHash": "6172a1f323138c9830739c30af5a74bfede5570ec9b5aba52242e86e986ae7a9"
+      },
+      {
+        "section": "741.315",
+        "role": "exception",
+        "contentHash": "2625ce28385057cadc189bcd552d39251d0c024ab3c757f4f70cac8fa90a51de"
+      }
+    ],
+    "notes": "The summaries track all eight listed acts without treating every injunction violation as criminal."
+  },
+  {
+    "id": "fl-section-791.01",
+    "section": "791.01",
+    "status": "support_only",
+    "reason": "This section supplies definitions for the fireworks chapter but contains no operative offense or grade.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Definitions",
+      "sourceHash": "ded196efa1e22b9b4d06cbb397f0ef5aafc9fe3864be505bb718af56d6f56b7d"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "791.01",
+        "role": "definition",
+        "contentHash": "ded196efa1e22b9b4d06cbb397f0ef5aafc9fe3864be505bb718af56d6f56b7d"
+      }
+    ],
+    "notes": "The legacy illegal-discharge label cannot be sourced to a definitions section."
+  },
+  {
+    "id": "fl-section-856.011",
+    "section": "856.011",
+    "status": "duplicate",
+    "reason": "The manifest retains the existing disorderly-intoxication record at this same section and scope.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Disorderly intoxication",
+      "sourceHash": "2fe9b9947943ee75dcd3c4adf5e26c8b0687701ee2eebf9bd261cc6c511c81b5"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "856.011",
+        "role": "offense",
+        "contentHash": "2fe9b9947943ee75dcd3c4adf5e26c8b0687701ee2eebf9bd261cc6c511c81b5"
+      }
+    ],
+    "notes": "No additive duplicate was created."
+  },
+  {
+    "id": "fl-section-856.021",
+    "section": "856.021",
+    "status": "duplicate",
+    "reason": "The manifest preserves an exact alias to 'Loitering or prowling; penalty' for the same section and scope.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Loitering or prowling; penalty",
+      "sourceHash": "03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "856.021",
+        "role": "offense",
+        "contentHash": "03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001"
+      }
+    ],
+    "notes": "The unrelated legacy camping and panhandling labels remain held and are not treated as this offense."
+  },
+  {
+    "id": "fl-fs-877-03-breach-of-the-peace-disorderly-conduct",
+    "section": "877.03",
+    "status": "eligible",
+    "reason": "The whole section defines one misdemeanor under the exact official heading; the manifest's older rows require reselection and are not among the retained or exact-alias records that bar a source-first definition.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Breach of the peace; disorderly conduct",
+      "sourceHash": "813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92"
+    },
+    "conductQuotes": [
+      "Whoever commits such acts as are of a nature to corrupt the public morals, or outrage the sense of public decency, or affect the peace and quiet of persons who may witness them, or engages in brawling or fighting, or engages in such conduct as to constitute a breach of the peace or disorderly conduct, shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "gradingQuotes": [
+      "Whoever commits such acts as are of a nature to corrupt the public morals, or outrage the sense of public decency, or affect the peace and quiet of persons who may witness them, or engages in brawling or fighting, or engages in such conduct as to constitute a breach of the peace or disorderly conduct, shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      {
+        "section": "877.03",
+        "role": "offense",
+        "contentHash": "813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92"
+      }
+    ],
+    "notes": "The nonliteral noise-only legacy label remains held; this definition uses only the complete official identity and statutory scope."
+  },
+  {
+    "id": "fl-section-877.22",
+    "section": "877.22",
+    "status": "held",
+    "reason": "The provision is a juvenile curfew enforcement scheme with civil/procedural consequences rather than an ordinary adult misdemeanor or felony charge.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Minors prohibited in public places and establishments during certain hours; penalty; procedure",
+      "sourceHash": "c1bd6dabfacb0eccfa3d83e3077360676d150b6a352a67c3161b447ba7ba4daf"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "877.22",
+        "role": "offense",
+        "contentHash": "c1bd6dabfacb0eccfa3d83e3077360676d150b6a352a67c3161b447ba7ba4daf"
+      }
+    ],
+    "notes": "No ordinary adult charge was created for juvenile-only curfew procedure."
+  },
+  {
+    "id": "fl-section-893.13",
+    "section": "893.13",
+    "status": "held",
+    "reason": "The section contains many differently scoped controlled-substance acts and grades. The exact cannabis-under-20-grams alias is already preserved, while the remaining broad legacy labels do not select a unique literal guilt name and conduct subdivision.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Prohibited acts; penalties",
+      "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "893.13",
+        "role": "offense",
+        "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291"
+      }
+    ],
+    "notes": "No broad synthesized drug offense was published."
+  },
+  {
+    "id": "fl-fs-893-135-1-b-1-trafficking-in-cocaine",
+    "section": "893.135",
+    "status": "eligible",
+    "reason": "The operative clause expressly names trafficking in cocaine and ties that name to subsection (1)(b)1 conduct and quantity-based grading.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+    },
+    "conductQuotes": [
+      "Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of cocaine, as described in s. 893.03(2)(a)4., or of any mixture containing cocaine, but less than 150 kilograms of cocaine or any such mixture, commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.",
+      "Is 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.",
+      "Is 400 grams or more, but less than 150 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    ],
+    "requiredSections": [
+      {
+        "section": "893.135",
+        "role": "offense",
+        "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+      },
+      {
+        "section": "893.03",
+        "role": "definition",
+        "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+      }
+    ],
+    "notes": "The chapter 893/chapter 499 authorization limitation is stated. Higher-quantity life and capital provisions are outside exact subparagraph (1)(b)1."
+  },
+  {
+    "id": "fl-section-893.147",
+    "section": "893.147",
+    "status": "held",
+    "reason": "The section covers separately graded use/possession, manufacture/delivery, advertising, transport, retail, and specified-machine conduct without distinct operative offense names; the legacy possession row does not authorize a new broad-section definition.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "893.147",
+        "role": "offense",
+        "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      }
+    ],
+    "notes": "Held rather than inventing names for each numbered offense."
+  },
+  {
+    "id": "fl-section-893.1351",
+    "section": "893.1351",
+    "status": "held",
+    "reason": "The current section contains multiple premise-control offenses and aggravating conditions, while the bare-section legacy label does not select an exact conduct subdivision and the clauses do not state a distinct literal offense name.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Ownership, lease, rental, or possession for trafficking in or manufacturing a controlled substance",
+      "sourceHash": "40fbccfa0c0057b55eef155e9c22d0b8eb0a7bd373b61f03c68a0de717e3a906"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "893.1351",
+        "role": "offense",
+        "contentHash": "40fbccfa0c0057b55eef155e9c22d0b8eb0a7bd373b61f03c68a0de717e3a906"
+      }
+    ],
+    "notes": "No broadcode subsection was used."
+  },
+  {
+    "id": "fl-section-948.06",
+    "section": "948.06",
+    "status": "held",
+    "reason": "This section governs arrest, hearing, revocation, modification, and sentencing after an alleged probation or community-control violation; it does not define a standalone substantive misdemeanor or felony.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Violation of probation or community control; revocation; modification; continuance; failure to pay restitution or cost of supervision",
+      "sourceHash": "6e3f62bce9ee9571b6893aee65275fe5a8185fecf1cabac131b8628099af246d"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "948.06",
+        "role": "offense",
+        "contentHash": "6e3f62bce9ee9571b6893aee65275fe5a8185fecf1cabac131b8628099af246d"
+      }
+    ],
+    "notes": "No standalone enhancement/procedure record was drafted."
+  },
+  {
+    "id": "fl-section-985.03",
+    "section": "985.03",
+    "status": "support_only",
+    "reason": "This is a juvenile-justice definitions section and does not create an ordinary adult substantive offense.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Definitions",
+      "sourceHash": "dabe0f1862c073fc46de5a64c8e5776720d4047cac3728ac5b9d967c6ccf7826"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "985.03",
+        "role": "definition",
+        "contentHash": "dabe0f1862c073fc46de5a64c8e5776720d4047cac3728ac5b9d967c6ccf7826"
+      }
+    ],
+    "notes": "The legacy felony-level and misdemeanor-level juvenile adjudication rows are not ordinary adult charges."
+  },
+  {
+    "id": "fl-section-895.03",
+    "section": "895.03",
+    "status": "held",
+    "reason": "The section prohibits four forms of racketeering-related activity but supplies neither a literal offense name nor its grade; although § 895.04 is cached as support, publishing 'Prohibited activities and defense' as one offense would collapse distinct conduct under a non-offense heading.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Prohibited activities and defense",
+      "sourceHash": "f1aaddd94385f1200837e29df51c22051cffa31cffb9797cc65e2cd9a7311bd2"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "895.03",
+        "role": "offense",
+        "contentHash": "f1aaddd94385f1200837e29df51c22051cffa31cffb9797cc65e2cd9a7311bd2"
+      },
+      {
+        "section": "895.04",
+        "role": "grading",
+        "contentHash": "59c1f60fefaebeeb4a1ab9693404fc64d3a96b0ffe20f410e391bc947803b3f6"
+      }
+    ],
+    "notes": "Identity, not routine grading, is the unresolved issue; no synonym such as RICO was invented."
+  },
+  {
+    "id": "fl-section-896.101",
+    "section": "896.101",
+    "status": "held",
+    "reason": "The section's heading encompasses definitions, criminal conduct, civil remedies, warrants, and immunity. Subsection (3) gives several conduct alternatives but no operative literal offense name, so a synthesized 'money laundering' charge was not invented.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Florida Money Laundering Act; definitions; penalties; injunctions; seizure warrants; immunity",
+      "sourceHash": "672e53b9b52889384ac23aaafa6b9a8169fd5dc557d2430dbad5a6b1aa5c8d06"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "896.101",
+        "role": "offense",
+        "contentHash": "672e53b9b52889384ac23aaafa6b9a8169fd5dc557d2430dbad5a6b1aa5c8d06"
+      }
+    ],
+    "notes": "The amount tiers are clear; the hold is the lack of a defensible literal charge identity."
+  },
+  {
+    "id": "fl-section-38.22",
+    "section": "38.22",
+    "status": "held",
+    "reason": "The section grants courts power to punish contempt and sets limits; it does not define a standalone substantive misdemeanor or felony with an exact offense subdivision.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Power to punish contempts",
+      "sourceHash": "b66c3db4c8910b04877f59c9e1598708547d0872d9e8b8c1de9b342aff7ff91b"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "38.22",
+        "role": "offense",
+        "contentHash": "b66c3db4c8910b04877f59c9e1598708547d0872d9e8b8c1de9b342aff7ff91b"
+      }
+    ],
+    "notes": "No procedural contempt power was projected as an ordinary charge."
+  },
+  {
+    "id": "fl-fs-316-193-1-driving-under-the-influence",
+    "section": "316.193",
+    "status": "eligible",
+    "reason": "Subsection (1) expressly names the offense; § 316.193 supplies county-jail terms not exceeding one year for the ordinary tiers, which § 775.08(2) classifies as misdemeanors, while § 316.193 expressly classifies the conditional repeat tiers as third-degree felonies.",
+    "identity": {
+      "kind": "operative_guilt_clause",
+      "quote": "A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:",
+      "sourceHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"
+    },
+    "conductQuotes": [
+      "A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:",
+      "The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;",
+      "The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or",
+      "The person has a breath-alcohol level of 0.08 or more grams of alcohol per 210 liters of breath."
+    ],
+    "gradingQuotes": [
+      "Not less than $500 or more than $1,000 for a first conviction.",
+      "Not less than $1,000 or more than $2,000 for a second conviction; and",
+      "Not more than 6 months for a first conviction.",
+      "Not more than 9 months for a second conviction.",
+      "Any person who is convicted of a third violation of this section for an offense that occurs within 10 years after a prior conviction for a violation of this section commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Any person who is convicted of a third violation of this section for an offense that occurs more than 10 years after the date of a prior conviction for a violation of this section shall be punished by a fine of not less than $2,000 or more than $5,000 and by imprisonment for not more than 12 months.",
+      "Any person who is convicted of a fourth or subsequent violation of this section, regardless of when any prior conviction for a violation of this section occurred, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Not less than $1,000 or more than $2,000 for a first conviction.",
+      "Not less than $2,000 or more than $4,000 for a second conviction.",
+      "Not less than $4,000 for a third or subsequent conviction.",
+      "Not more than 9 months for a first conviction.",
+      "Not more than 12 months for a second conviction.",
+      "The term “misdemeanor” shall mean any criminal offense that is punishable under the laws of this state, or that would be punishable if committed in this state, by a term of imprisonment in a county correctional facility, except an extended term, not in excess of 1 year."
+    ],
+    "requiredSections": [
+      {"section": "316.193", "role": "offense", "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"},
+      {"section": "316.193", "role": "grading", "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f"},
+      {"section": "775.08", "role": "definition", "contentHash": "96a65ca0b053a329b5131dea9d261c044e712261b2d99e3ddeae23a8ee5c6b32"}
+    ],
+    "notes": "Subsection (3) damage, injury, and death offenses are excluded. The misdemeanor classification is an explicit statutory inference from § 775.08(2), not an invented degree designation; the public summaries therefore say misdemeanor without claiming first- or second-degree misdemeanor."
+  },
+  {
+    "id": "fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs",
+    "section": "893.135", "status": "eligible",
+    "reason": "Subsection (1)(c)1 expressly names this offense and supplies all three quantity tiers.",
+    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,", "4 grams or more of any morphine, opium, hydromorphone, or any salt, derivative, isomer, or salt of an isomer thereof, including heroin,"],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 4 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
+      "Is 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $100,000.",
+      "Is 28 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
+    ],
+    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
+    "notes": "The 30-kilogram life/capital branches are outside exact subparagraph (1)(c)1."
+  },
+  {
+    "id": "fl-fs-893-135-1-c-2-trafficking-in-hydrocodone",
+    "section": "893.135", "status": "eligible",
+    "reason": "Subsection (1)(c)2 expressly names this offense and supplies all four quantity tiers.",
+    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,", "28 grams or more of hydrocodone, as described in s. 893.03(2)(a)1.k., codeine, as described in s. 893.03(2)(a)1.g., or any salt thereof,"],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in hydrocodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 28 grams or more, but less than 50 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
+      "Is 50 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.",
+      "Is 100 grams or more, but less than 300 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.",
+      "Is 300 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000."
+    ],
+    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
+    "notes": "All public quantity tiers are quoted."
+  },
+  {
+    "id": "fl-fs-893-135-1-c-3-trafficking-in-oxycodone",
+    "section": "893.135", "status": "eligible",
+    "reason": "Subsection (1)(c)3 expressly names this offense and supplies all four quantity tiers.",
+    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of,", "7 grams or more of oxycodone, as described in s. 893.03(2)(a)1.q., or any salt thereof,"],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in oxycodone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 7 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
+      "Is 14 grams or more, but less than 25 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.",
+      "Is 25 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $500,000.",
+      "Is 100 grams or more, but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $750,000."
+    ],
+    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
+    "notes": "All public quantity tiers are quoted."
+  },
+  {
+    "id": "fl-fs-893-135-1-c-4-a-trafficking-in-dangerous-fentanyl-or-fentanyl-analogues",
+    "section": "893.135", "status": "eligible",
+    "reason": "Sub-subparagraph (1)(c)4.a expressly names this offense; (1)(c)4.b supplies all quantity tiers.",
+    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of:"],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in dangerous fentanyl or fentanyl analogues,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 4 grams or more, but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $50,000.",
+      "Is 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 20 years and shall be ordered to pay a fine of $100,000.",
+      "Is 28 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
+    ],
+    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
+    "notes": "The enhanced minor-sale branch in (1)(c)4.c is expressly excluded from this narrower code."
+  },
+  {
+    "id": "fl-fs-893-135-1-c-7-trafficking-in-xylazine",
+    "section": "893.135", "status": "eligible",
+    "reason": "Subsection (1)(c)7 expressly names this offense and supplies all three quantity tiers.",
+    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes": ["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of xylazine, as described in s. 893.03(1)(c)37., or any salt thereof, or 28 grams or more of any mixture containing any such substance,"],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in xylazine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 28 grams or more, but less than 100 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years and shall be ordered to pay a fine of $50,000.",
+      "Is 100 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years and shall be ordered to pay a fine of $100,000.",
+      "Is 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years and shall be ordered to pay a fine of $500,000."
+    ],
+    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
+    "notes": "All public quantity tiers are quoted."
+  },
+  {
+    "id": "fl-fs-893-135-1-d-1-trafficking-in-phencyclidine",
+    "section": "893.135", "status": "eligible",
+    "reason": "Subsection (1)(d)1 expressly names this offense and supplies all three quantity tiers.",
+    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes": ["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 28 grams or more of phencyclidine,"],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in phencyclidine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.",
+      "Is 200 grams or more, but less than 400 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.",
+      "Is 400 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    ],
+    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
+    "notes": "The summary preserves the broader list by referring to the substances specified in the exact subsection."
+  },
+  {
+    "id": "fl-fs-893-135-1-e-1-trafficking-in-methaqualone",
+    "section": "893.135", "status": "eligible",
+    "reason": "Subsection (1)(e)1 expressly names this offense and supplies all three quantity tiers.",
+    "identity": {"kind": "operative_guilt_clause", "quote": "commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes": ["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 200 grams or more of methaqualone or of any mixture containing methaqualone, as described in s. 893.03(1)(d), commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "gradingQuotes": [
+      "commits a felony of the first degree, which felony shall be known as “trafficking in methaqualone,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Is 200 grams or more, but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.",
+      "Is 5 kilograms or more, but less than 25 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.",
+      "Is 25 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."
+    ],
+    "requiredSections": [{"section": "893.135", "role": "offense", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.135", "role": "grading", "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"}, {"section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],
+    "notes": "All public quantity tiers are quoted."
+  },
+  {
+    "id":"fl-fs-893-135-1-f-1-trafficking-in-amphetamine","section":"893.135","status":"eligible","reason":"Subsection (1)(f)1 expressly names the offense and supplies all quantity tiers.",
+    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 14 grams or more of amphetamine, as described in s. 893.03(2)(c)2., or methamphetamine, as described in s. 893.03(2)(c)5.,"],
+    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in amphetamine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 14 grams or more, but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 28 grams or more, but less than 200 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."],
+    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"All public tiers are quoted."
+  },
+  {
+    "id":"fl-fs-893-135-1-g-1-trafficking-in-flunitrazepam","section":"893.135","status":"eligible","reason":"Subsection (1)(g)1 expressly names the offense and supplies all quantity tiers.",
+    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 4 grams or more of flunitrazepam or any mixture containing flunitrazepam as described in s. 893.03(1)(a) commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in flunitrazepam,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 4 grams or more but less than 14 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 14 grams or more but less than 28 grams, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 28 grams or more but less than 30 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 calendar years and pay a fine of $500,000."],
+    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"The 30-kilogram life/capital branches are outside this exact code."
+  },
+  {
+    "id":"fl-fs-893-135-1-h-1-trafficking-in-gamma-hydroxybutyric-acid-ghb","section":"893.135","status":"eligible","reason":"Subsection (1)(h)1 expressly names the offense and supplies all tiers.",
+    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-hydroxybutyric acid (GHB), as described in s. 893.03(1)(d), or any mixture containing gamma-hydroxybutyric acid (GHB), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in gamma-hydroxybutyric acid (GHB),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."],
+    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"All public tiers are quoted."
+  },
+  {
+    "id":"fl-fs-893-135-1-i-1-trafficking-in-gamma-butyrolactone-gbl","section":"893.135","status":"eligible","reason":"Subsection (1)(i)1 expressly names the offense and supplies all tiers.",
+    "identity":{"kind":"operative_guilt_clause","quote":"commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},
+    "conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of gamma-butyrolactone (GBL), as described in s. 893.03(1)(d), or any mixture containing gamma-butyrolactone (GBL), commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in gamma-butyrolactone (GBL),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 1 kilogram or more but less than 5 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 3 years, and the defendant shall be ordered to pay a fine of $50,000.","Is 5 kilograms or more but less than 10 kilograms, such person shall be sentenced to a mandatory minimum term of imprisonment of 7 years, and the defendant shall be ordered to pay a fine of $100,000.","Is 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $250,000."],
+    "requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"All public tiers are quoted."
+  },
+  {"id":"fl-fs-893-135-1-j-1-trafficking-in-1-4-butanediol","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in 1,4-Butanediol,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 1 kilogram or more of 1,4-Butanediol as described in s. 893.03(1)(d), or of any mixture containing 1,4-Butanediol, commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in 1,4-Butanediol,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 10 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all three tiers."},
+  {"id":"fl-fs-893-135-1-k-1-trafficking-in-phenethylamines","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in phenethylamines,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["A person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, 10 grams or more of a:\na. \nSubstance described in s. 893.03(1)(c)4., 5., 10., 11., 15., 17., 21.-27., 29., 39., 40.-45., 58., 72.-80., 81.-86., 90.-102., 104.-108., 110.-113., 143.-145., 148.-150., 160.-163., 165., or 187.-189., a substituted cathinone, as described in s. 893.03(1)(c)191., or substituted phenethylamine, as described in s. 893.03(1)(c)192.;\n\nb. \nMixture containing any substance described in sub-subparagraph a.; or\n\nc. \nSalt, isomer, ester, or ether or salt of an isomer, ester, or ether of a substance described in sub-subparagraph a.,\n\ncommits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 400 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years and shall be ordered to pay a fine of $250,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"The conduct evidence is one exact contiguous source slice; public text states all three tiers."},
+  {"id":"fl-fs-893-135-1-l-1-trafficking-in-lysergic-acid-diethylamide-lsd","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in lysergic acid diethylamide (LSD),”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["1 gram or more of lysergic acid diethylamide (LSD)"],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in lysergic acid diethylamide (LSD),” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 7 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 calendar years and pay a fine of $500,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all three tiers."},
+  {"id":"fl-fs-893-135-1-m-1-trafficking-in-synthetic-cannabinoids","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with four quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in synthetic cannabinoids,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["280 grams or more of a:"],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in synthetic cannabinoids,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 30 kilograms or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 25 years, and the defendant shall be ordered to pay a fine of $750,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all four tiers."},
+  {"id":"fl-fs-893-135-1-n-1-trafficking-in-n-benzyl-phenethylamines","section":"893.135","status":"eligible","reason":"Expressly named first-degree felony with three quantity tiers.","identity":{"kind":"operative_guilt_clause","quote":"known as “trafficking in n-benzyl phenethylamines,”","sourceHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},"conductQuotes":["14 grams or more of:"],"gradingQuotes":["commits a felony of the first degree, which felony shall be known as “trafficking in n-benzyl phenethylamines,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084.","Is 200 grams or more, such person shall be sentenced to a mandatory minimum term of imprisonment of 15 years, and the defendant shall be ordered to pay a fine of $500,000."],"requiredSections":[{"section":"893.135","role":"offense","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.135","role":"grading","contentHash":"89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"},{"section":"893.03","role":"definition","contentHash":"81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"}],"notes":"Public text states all three tiers."}
+]

@@ -217,6 +217,7 @@ import {
   OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION,
   OHIO_CHAPTER_2903_PILOT_CHARGES,
 } from './ohio-chapter-2903-catalog';
+import { FLORIDA_REVIEWED_BATCH } from './florida-reviewed-batch';
 import {
   SOUTH_CAROLINA_APPROVED_ALIAS_CHARGE_IDS,
   SOUTH_CAROLINA_NON_ALIAS_EXACT_SOURCE_CHARGE_IDS,
@@ -94673,6 +94674,8 @@ criminalCharges.push(...phase5JuvenileCharges);
 // legacy catalog. They are intentionally new IDs, never aliases for the
 // older degree-labelled Ohio homicide rows.
 criminalCharges.push(...OHIO_CHAPTER_2903_PILOT_CHARGES);
+// Additive source-first Florida identities never replace or alias legacy rows.
+criminalCharges.push(...FLORIDA_REVIEWED_BATCH.charges);
 
 
 export const chargeCategories: Record<string, string[]> = {

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-09-18T15:29:48.673Z",
+  "finishedAt": "2026-09-18T15:29:49.332Z",
+  "options": {
+    "acquire": false,
+    "maxRequests": 100,
+    "concurrencyMaximum": 1,
+    "pacingMs": 800,
+    "freshnessDays": 7
+  },
+  "requests": {
+    "successfulNewChapterRequests": 0,
+    "actualHttpRequests": 0
+  },
+  "cumulativeAcquisition": {
+    "ledgerPath": "scripts/data-review/output/florida-batch-acquisition-ledger.json",
+    "totalCollectorHttpRequests": 99,
+    "runs": 2
+  },
+  "seeding": {
+    "seededFromExistingManifest": 0,
+    "timestampsPreserved": true
+  },
+  "currentness": {
+    "currentOfficialEditionObserved": "Florida Statutes 2026",
+    "basis": "Selected edition label read from live official Online Sunshine whole-chapter responses",
+    "olderManifestSeedsRetainedAsHistoricalAcquisitionEvidence": true
+  },
+  "coverage": {
+    "legacyRows": 117,
+    "uniquePrimarySections": 91,
+    "primaryWithEvidence": 69,
+    "primaryBlocked": 22,
+    "supportingRequested": 24,
+    "siblingSectionsEnumerated": 1298,
+    "statewideCompletenessClaim": false
+  },
+  "failures": [
+    {
+      "section": "1003.21",
+      "checkedAt": "2026-09-18T15:26:15.256Z",
+      "message": "Existing Florida parser rejected whole-chapter section 1003.485",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=1000-1099/1003/Sections/1003.21.html"
+    },
+    {
+      "section": "212.15",
+      "checkedAt": "2026-09-18T15:26:15.834Z",
+      "message": "Existing Florida parser rejected whole-chapter section 212.05011",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0212/Sections/0212.15.html"
+    },
+    {
+      "section": "213.29",
+      "checkedAt": "2026-09-18T15:26:16.299Z",
+      "message": "Existing Florida parser rejected whole-chapter section 213.255",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0200-0299/0213/Sections/0213.29.html"
+    },
+    {
+      "section": "320.02",
+      "checkedAt": "2026-09-18T15:26:18.342Z",
+      "message": "Existing Florida parser rejected whole-chapter section 320.072",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.02.html"
+    },
+    {
+      "section": "320.07",
+      "checkedAt": "2026-09-18T15:26:18.362Z",
+      "message": "Existing Florida parser rejected whole-chapter section 320.072",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.07.html"
+    },
+    {
+      "section": "379.354",
+      "checkedAt": "2026-09-18T15:26:19.706Z",
+      "message": "Existing Florida parser rejected whole-chapter section 379.2413",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.354.html"
+    },
+    {
+      "section": "386.04",
+      "checkedAt": "2026-09-18T15:26:21.037Z",
+      "message": "Official chapter did not contain exact requested section 386.04",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0386/Sections/0386.04.html"
+    },
+    {
+      "section": "403.413",
+      "checkedAt": "2026-09-18T15:26:22.379Z",
+      "message": "Existing Florida parser rejected whole-chapter section 403.0855",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0403/Sections/0403.413.html"
+    },
+    {
+      "section": "562.111",
+      "checkedAt": "2026-09-18T15:26:22.642Z",
+      "message": "Existing Florida parser rejected whole-chapter section 562.11",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.111.html"
+    },
+    {
+      "section": "562.12",
+      "checkedAt": "2026-09-18T15:26:22.658Z",
+      "message": "Existing Florida parser rejected whole-chapter section 562.11",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.12.html"
+    },
+    {
+      "section": "627.733",
+      "checkedAt": "2026-09-18T15:26:25.323Z",
+      "message": "Existing Florida parser rejected whole-chapter section 627.410",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0600-0699/0627/Sections/0627.733.html"
+    },
+    {
+      "section": "790.22",
+      "checkedAt": "2026-09-18T15:26:30.329Z",
+      "message": "Existing Florida parser rejected whole-chapter section 790.065",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.22.html"
+    },
+    {
+      "section": "790.221",
+      "checkedAt": "2026-09-18T15:26:30.380Z",
+      "message": "Existing Florida parser rejected whole-chapter section 790.065",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.221.html"
+    },
+    {
+      "section": "790.23",
+      "checkedAt": "2026-09-18T15:26:30.575Z",
+      "message": "Existing Florida parser rejected whole-chapter section 790.065",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.23.html"
+    },
+    {
+      "section": "901.31",
+      "checkedAt": "2026-09-18T15:26:45.477Z",
+      "message": "Existing Florida parser rejected whole-chapter section 901.1503",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0901/Sections/0901.31.html"
+    },
+    {
+      "section": "327.35",
+      "checkedAt": "2026-09-18T15:24:50.442Z",
+      "message": "Official chapter response lacks a Florida Statutes edition label",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0327/Sections/0327.35.html"
+    },
+    {
+      "section": "870.01",
+      "checkedAt": "2026-09-18T15:24:51.007Z",
+      "message": "Official chapter response lacks a Florida Statutes edition label",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0870/Sections/0870.01.html"
+    },
+    {
+      "section": "794.0115",
+      "checkedAt": "2026-09-18T15:24:51.816Z",
+      "message": "Official chapter response lacks a Florida Statutes edition label",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.0115.html"
+    },
+    {
+      "section": "944.275",
+      "checkedAt": "2026-09-18T15:24:52.702Z",
+      "message": "Official chapter response lacks a Florida Statutes edition label",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0944/Sections/0944.275.html"
+    },
+    {
+      "section": "943.10",
+      "checkedAt": "2026-09-18T15:24:54.445Z",
+      "message": "Official chapter response lacks a Florida Statutes edition label",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html"
+    },
+    {
+      "section": "401.23",
+      "checkedAt": "2026-09-18T15:24:55.859Z",
+      "message": "Official chapter response lacks a Florida Statutes edition label",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0401/Sections/0401.23.html"
+    },
+    {
+      "section": "790.001",
+      "checkedAt": "2026-09-18T15:24:57.605Z",
+      "message": "Official chapter response lacks a Florida Statutes edition label",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.001.html"
+    },
+    {
+      "section": "112.191",
+      "checkedAt": "2026-09-18T15:26:49.767Z",
+      "message": "Existing Florida parser rejected whole-chapter section 112.3188",
+      "attemptedUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0112/Sections/0112.191.html"
+    }
+  ],
+  "staleFallbackPermitted": false
+}

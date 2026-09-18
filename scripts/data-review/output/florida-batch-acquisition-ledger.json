@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "jurisdiction": "FL",
+  "runs": [
+    {
+      "command": "npx tsx scripts/data-review/florida-batch-evidence.ts --acquire --max-requests=100",
+      "actualHttpRequests": 55,
+      "result": "edition-label parser rejected responses; no current chapter documents accepted",
+      "failedRefreshRecordsWritten": true
+    },
+    {
+      "command": "npx tsx scripts/data-review/florida-batch-evidence.ts --acquire --max-requests=44",
+      "actualHttpRequests": 44,
+      "officialDocumentAcquisitionWindow": {
+        "firstRetrievedAt": "2026-09-18T15:26:17.364Z",
+        "lastRetrievedAt": "2026-09-18T15:26:48.812Z"
+      },
+      "officialEditionObserved": "Florida Statutes 2026",
+      "result": "current exact documents and chapter siblings cached; unrelated malformed sibling still invalidated some requested chapters"
+    },
+    {
+      "command": "npx tsx scripts/data-review/florida-exact-recovery.ts --max-requests=30",
+      "startedAt": "2026-09-18T15:33:25.199Z",
+      "finishedAt": "2026-09-18T15:34:16.074Z",
+      "mode": "official_exact_section_recovery",
+      "sectionsRequested": [
+        "320.02",
+        "320.07",
+        "379.354",
+        "403.413",
+        "562.111",
+        "562.12",
+        "790.22",
+        "790.221",
+        "790.23",
+        "794.011",
+        "794.05",
+        "790.01",
+        "790.15",
+        "831.01",
+        "856.021",
+        "856.011",
+        "790.001",
+        "943.10",
+        "395.002",
+        "1003.21",
+        "212.15",
+        "627.733",
+        "901.31"
+      ],
+      "actualHttpRequests": 23,
+      "acquired": 22,
+      "failed": 1,
+      "stoppedForRateBlock": false,
+      "rawResponseCache": "scripts/data-review/output/florida-batch-exact-raw-cache.json"
+    },
+    {
+      "command": "npx tsx scripts/data-review/florida-exact-recovery.ts --max-requests=25",
+      "startedAt": "2026-09-18T15:56:29.566Z",
+      "finishedAt": "2026-09-18T15:57:17.700Z",
+      "mode": "official_exact_section_recovery",
+      "sectionsRequested": [
+        "104.091",
+        "379.2431",
+        "849.25",
+        "825.102",
+        "112.191",
+        "401.23",
+        "794.0115",
+        "943.1395",
+        "943.253",
+        "381.986",
+        "776.012",
+        "776.013",
+        "776.031",
+        "776.032",
+        "776.041",
+        "776.05",
+        "776.051",
+        "776.06",
+        "776.07",
+        "776.08",
+        "776.085",
+        "776.09"
+      ],
+      "actualHttpRequests": 22,
+      "acquired": 20,
+      "reused": 0,
+      "failed": 2,
+      "stoppedForRateBlock": false,
+      "reparsedPreviouslyCachedRawResponses": false,
+      "rawResponseCache": "scripts/data-review/output/florida-batch-exact-raw-cache.json"
+    },
+    {
+      "command": "npx tsx scripts/data-review/florida-exact-recovery.ts --reparse-raw --sections=562.111",
+      "startedAt": "2026-09-18T15:57:27.965Z",
+      "finishedAt": "2026-09-18T15:57:28.176Z",
+      "mode": "official_exact_section_recovery",
+      "sectionsRequested": [
+        "562.111"
+      ],
+      "actualHttpRequests": 0,
+      "acquired": 1,
+      "reused": 0,
+      "failed": 0,
+      "stoppedForRateBlock": false,
+      "reparsedPreviouslyCachedRawResponses": true,
+      "rawResponseCache": "scripts/data-review/output/florida-batch-exact-raw-cache.json"
+    },
+    {
+      "command": "npx tsx scripts/data-review/florida-exact-recovery.ts --max-requests=1",
+      "startedAt": "2026-09-18T16:20:48.216Z",
+      "finishedAt": "2026-09-18T16:20:48.664Z",
+      "mode": "official_exact_section_recovery",
+      "sectionsRequested": [
+        "825.101"
+      ],
+      "actualHttpRequests": 1,
+      "acquired": 1,
+      "reused": 0,
+      "failed": 0,
+      "stoppedForRateBlock": false,
+      "reparsedPreviouslyCachedRawResponses": false,
+      "rawResponseCache": "scripts/data-review/output/florida-batch-exact-raw-cache.json"
+    }
+  ],
+  "totalCollectorHttpRequests": 145,
+  "note": "This append-only acquisition accounting is separate from later zero-request offline report regeneration."
+}

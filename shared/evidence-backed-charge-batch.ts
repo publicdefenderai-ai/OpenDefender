@@ -62,7 +62,7 @@ export function projectEvidenceBackedChargeBatch(rows: readonly EvidenceBackedCh
       lastVerified: row.verifiedMonth,
     });
     explanations.push({
-      jurisdiction: row.jurisdiction, slug: row.slug,
+      jurisdiction: row.jurisdiction, canonicalChargeId: row.id, slug: row.slug,
       chargePattern: new RegExp(`^${row.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "i"),
       ...row.text.en, keyTerms: [], pendingAttorneyReview: true,
       sources: row.citations.map(source => ({ jurisdiction: row.jurisdiction, ...source })),

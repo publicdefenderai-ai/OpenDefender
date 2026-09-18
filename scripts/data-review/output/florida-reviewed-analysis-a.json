@@ -1,0 +1,1270 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "fl-fs-777-04-1-criminal-attempt",
+      "section": "777.04",
+      "status": "eligible",
+      "reason": "Literal operative offense with complete current grading-exception closure.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits the offense of criminal attempt",
+        "sourceHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+      },
+      "conductQuotes": [
+        "(1) \nA person who attempts to commit an offense prohibited by law and in such attempt does any act toward the commission of such offense, but fails in the perpetration or is intercepted or prevented in the execution thereof, commits the offense of criminal attempt, ranked for purposes of sentencing as provided in subsection (4). Criminal attempt includes the act of an adult who, with intent to commit an offense prohibited by law, allures, seduces, coaxes, or induces a child under the age of 12 to engage in an offense prohibited by law."
+      ],
+      "gradingQuotes": [
+        "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+      ],
+      "requiredSections": [
+        {
+          "section": "777.04",
+          "role": "offense",
+          "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+        },
+        {
+          "section": "777.04",
+          "role": "grading",
+          "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+        },
+        {
+          "section": "104.091",
+          "role": "exception",
+          "contentHash": "da78538a5794c2676e83b6fe65959cda20328bf2dfbe86b1dced5aa760d319ce"
+        },
+        {
+          "section": "379.2431",
+          "role": "exception",
+          "contentHash": "1149c82fb33f4f25158ac758c4a6c32533f83ae4a46ee7747ea938b423fbdb91"
+        },
+        {
+          "section": "828.125",
+          "role": "exception",
+          "contentHash": "d2fb14e21368b008008c4427b9772841ef05a135d7ffb274925e17b24d065da5"
+        },
+        {
+          "section": "849.25",
+          "role": "exception",
+          "contentHash": "ffb4c9f6afddc8e1221fd2a498755bb6199fac36342a8847c0558e1cadd85f55"
+        },
+        {
+          "section": "893.135",
+          "role": "exception",
+          "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading",
+          "contentHash": "a146ed5c7bf2fc327382ff6270aaf411435bc1c27be9514cc94dfc54511b0da6"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading",
+          "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        }
+      ],
+      "notes": "All intermediate grade branches and renunciation defense remain quoted in the same pinned primary section."
+    },
+    {
+      "id": "fl-fs-777-04-2-criminal-solicitation",
+      "section": "777.04",
+      "status": "eligible",
+      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits the offense of criminal solicitation",
+        "sourceHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+      },
+      "conductQuotes": [
+        "(2) \nA person who solicits another to commit an offense prohibited by law and in the course of such solicitation commands, encourages, hires, or requests another person to engage in specific conduct which would constitute such offense or an attempt to commit such offense commits the offense of criminal solicitation, ranked for purposes of sentencing as provided in subsection (4)."
+      ],
+      "gradingQuotes": [
+        "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+      ],
+      "requiredSections": [
+        {
+          "section": "777.04",
+          "role": "offense",
+          "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+        },
+        {
+          "section": "777.04",
+          "role": "grading",
+          "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+        },
+        {
+          "section": "104.091",
+          "role": "exception",
+          "contentHash": "da78538a5794c2676e83b6fe65959cda20328bf2dfbe86b1dced5aa760d319ce"
+        },
+        {
+          "section": "379.2431",
+          "role": "exception",
+          "contentHash": "1149c82fb33f4f25158ac758c4a6c32533f83ae4a46ee7747ea938b423fbdb91"
+        },
+        {
+          "section": "828.125",
+          "role": "exception",
+          "contentHash": "d2fb14e21368b008008c4427b9772841ef05a135d7ffb274925e17b24d065da5"
+        },
+        {
+          "section": "849.25",
+          "role": "exception",
+          "contentHash": "ffb4c9f6afddc8e1221fd2a498755bb6199fac36342a8847c0558e1cadd85f55"
+        },
+        {
+          "section": "893.135",
+          "role": "exception",
+          "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading",
+          "contentHash": "a146ed5c7bf2fc327382ff6270aaf411435bc1c27be9514cc94dfc54511b0da6"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading",
+          "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        }
+      ],
+      "notes": "Conditional classification is not a universal maximum."
+    },
+    {
+      "id": "fl-fs-777-04-3-criminal-conspiracy",
+      "section": "777.04",
+      "status": "eligible",
+      "reason": "Literal operative offense; same closed grading and exception structure as attempt.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits the offense of criminal conspiracy",
+        "sourceHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+      },
+      "conductQuotes": [
+        "(3) \nA person who agrees, conspires, combines, or confederates with another person or persons to commit any offense commits the offense of criminal conspiracy, ranked for purposes of sentencing as provided in subsection (4)."
+      ],
+      "gradingQuotes": [
+        "(4)(a) \nExcept as otherwise provided in ss. 104.091(2), 379.2431(1), 828.125(2), 849.25(4), 893.135(5), and 921.0022, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is ranked for purposes of sentencing under chapter 921 and determining incentive gain-time eligibility under chapter 944 one level below the ranking under s. 921.0022 or s. 921.0023 of the offense attempted, solicited, or conspired to. If the criminal attempt, criminal solicitation, or criminal conspiracy is of an offense ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, such offense is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(b) \nIf the offense attempted, solicited, or conspired to is a capital felony, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nExcept as otherwise provided in s. 893.135(5), if the offense attempted, solicited, or conspired to is a life felony or a felony of the first degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 828.125(2), or s. 849.25(4), if the offense attempted, solicited, or conspired to is a:\n1. \nFelony of the second degree;\n\n2. \nBurglary that is a felony of the third degree; or\n\n3. \nFelony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023,\n\nthe offense of criminal attempt, criminal solicitation, or criminal conspiracy is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nExcept as otherwise provided in s. 104.091(2), s. 379.2431(1), s. 849.25(4), or paragraph (d), if the offense attempted, solicited, or conspired to is a felony of the third degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(f) \nExcept as otherwise provided in s. 104.091(2), if the offense attempted, solicited, or conspired to is a misdemeanor of the first or second degree, the offense of criminal attempt, criminal solicitation, or criminal conspiracy is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083."
+      ],
+      "requiredSections": [
+        {
+          "section": "777.04",
+          "role": "offense",
+          "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+        },
+        {
+          "section": "777.04",
+          "role": "grading",
+          "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+        },
+        {
+          "section": "104.091",
+          "role": "exception",
+          "contentHash": "da78538a5794c2676e83b6fe65959cda20328bf2dfbe86b1dced5aa760d319ce"
+        },
+        {
+          "section": "379.2431",
+          "role": "exception",
+          "contentHash": "1149c82fb33f4f25158ac758c4a6c32533f83ae4a46ee7747ea938b423fbdb91"
+        },
+        {
+          "section": "828.125",
+          "role": "exception",
+          "contentHash": "d2fb14e21368b008008c4427b9772841ef05a135d7ffb274925e17b24d065da5"
+        },
+        {
+          "section": "849.25",
+          "role": "exception",
+          "contentHash": "ffb4c9f6afddc8e1221fd2a498755bb6199fac36342a8847c0558e1cadd85f55"
+        },
+        {
+          "section": "893.135",
+          "role": "exception",
+          "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading",
+          "contentHash": "a146ed5c7bf2fc327382ff6270aaf411435bc1c27be9514cc94dfc54511b0da6"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading",
+          "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        }
+      ],
+      "notes": "Conditional classification is not a universal maximum."
+    },
+    {
+      "id": "fl-fs-782-07-1-manslaughter",
+      "section": "782.07",
+      "status": "eligible",
+      "reason": "Subsection (1) supplies the literal offense identity, scoped killing conduct and exclusions, and a complete second-degree felony grade.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "is manslaughter",
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      "conductQuotes": [
+        "The killing of a human being by the act, procurement, or culpable negligence of another",
+        "without lawful justification according to the provisions of chapter 776",
+        "such killing shall not be excusable homicide or murder"
+      ],
+      "gradingQuotes": [
+        "is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "offense",
+          "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+        },
+        {
+          "section": "782.07",
+          "role": "grading",
+          "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+        },
+        {
+          "section": "776.012",
+          "role": "justification",
+          "contentHash": "4c82f432745169104e9d97e706f1cc863c9b865cfdbd215340e2c87bbe1647cb"
+        },
+        {
+          "section": "776.013",
+          "role": "justification",
+          "contentHash": "9fc162802b16ff80f2f3594a3cdddfd9c0089011e608b48a203de83018668be1"
+        },
+        {
+          "section": "776.031",
+          "role": "justification",
+          "contentHash": "19a00e10c34d1876fc4feb29ac1901bf96edec719a8b1b5289a80b8c9c3cc084"
+        },
+        {
+          "section": "776.032",
+          "role": "justification",
+          "contentHash": "096c2ee76f0190119db9583677ce9bc92e2ba26757feee2314ca63ba84db8023"
+        },
+        {
+          "section": "776.041",
+          "role": "justification",
+          "contentHash": "99e3f241a9d7bc5a39740a6e0677394b99cf8f9b4c8b45b6b703bb7a53cdba5b"
+        },
+        {
+          "section": "776.05",
+          "role": "justification",
+          "contentHash": "34bb4f7f06619d06d5744a084e464a2c9dc41042800318af015b43e38fbf45fe"
+        },
+        {
+          "section": "776.051",
+          "role": "justification",
+          "contentHash": "9dc0a5e6e6bf54996472e375854a27c2ff4f6f54ef0569a11b64738a7dcda78a"
+        },
+        {
+          "section": "776.06",
+          "role": "justification",
+          "contentHash": "973dda02890b8d8bb21c11c0082396f96a362d86f7c3ba578e25cbc2e5689e39"
+        },
+        {
+          "section": "776.07",
+          "role": "justification",
+          "contentHash": "85c47a2137048b35c12b76e94c2f50268809ef09248917de3d5c1c3f78e35f8f"
+        },
+        {
+          "section": "776.08",
+          "role": "justification",
+          "contentHash": "166b2e2edbd124db3c91bfdf36964c0dda46571bd9f4f855dc2ee40602512a7d"
+        },
+        {
+          "section": "776.085",
+          "role": "justification",
+          "contentHash": "903aba7fb14da11661fbeb026184c44cdd8aec5404c5f8011c7478aa59d29080"
+        },
+        {
+          "section": "776.09",
+          "role": "justification",
+          "contentHash": "529f5a5cf36f99e0e95d66d1521bf1ce91746b2953e87bbf948bac3a9b1533eb"
+        },
+        {
+          "section": "782.03",
+          "role": "exception",
+          "contentHash": "66b49cf07e36ace8fd8a52371d26ff091c127bd13d2e8b2881ff31817aa63680"
+        },
+        {
+          "section": "782.04",
+          "role": "exception",
+          "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        }
+      ],
+      "notes": "Limited to subsection (1); all cached current chapter 776 justification sections and the chapter 782 excusable-homicide and murder exclusions are pinned."
+    },
+    {
+      "id": "fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult",
+      "section": "782.07",
+      "status": "eligible",
+      "reason": "Subsection (2) supplies a literal offense identity, death caused by culpable negligence under § 825.102(3), and a complete first-degree felony grade; current § 825.101 closes both victim definitions.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits aggravated manslaughter of an elderly person or disabled adult",
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      "conductQuotes": [
+        "A person who causes the death of any elderly person or disabled adult by culpable negligence under s. 825.102(3)"
+      ],
+      "gradingQuotes": [
+        "commits aggravated manslaughter of an elderly person or disabled adult, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "offense",
+          "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+        },
+        {
+          "section": "782.07",
+          "role": "grading",
+          "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+        },
+        {
+          "section": "825.101",
+          "role": "definition",
+          "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+        },
+        {
+          "section": "825.102",
+          "role": "definition",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        }
+      ],
+      "notes": "Limited to subsection (2). Incorporated definitions: § 825.101(3): “Disabled adult” means a person 18 years of age or older who suffers from a condition of physical or mental incapacitation due to a developmental disability, organic brain damage, or mental illness, or who has one or more physical or mental limitations that restrict the person’s ability to perform the normal activities of daily living. § 825.101(4): “Elderly person” means a person 60 years of age or older who is suffering from the infirmities of aging as manifested by advanced age or organic brain damage, or other physical, mental, or emotional dysfunctioning, to the extent that the ability of the person to provide adequately for the person’s own care or protection is impaired. § 825.102(3)(a): Neglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult."
+    },
+    {
+      "id": "fl-fs-782-07-3-aggravated-manslaughter-of-a-child",
+      "section": "782.07",
+      "status": "eligible",
+      "reason": "Subsection (3) supplies a literal offense identity, an under-18 death caused by incorporated culpable negligence, and a complete first-degree felony grade.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits aggravated manslaughter of a child",
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      "conductQuotes": [
+        "A person who causes the death of any person under the age of 18 by culpable negligence under s. 827.03(2)(b)"
+      ],
+      "gradingQuotes": [
+        "commits aggravated manslaughter of a child, a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "offense",
+          "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+        },
+        {
+          "section": "782.07",
+          "role": "grading",
+          "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+        },
+        {
+          "section": "827.03",
+          "role": "definition",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        }
+      ],
+      "notes": "Limited to subsection (3); current § 827.03 closes the incorporated subsection (2)(b) culpable-negligence scope."
+    },
+    {
+      "id": "fl-fs-782-04-5-murder-in-the-third-degree",
+      "section": "782.04",
+      "status": "eligible",
+      "reason": "Subsection (5) separately supplies the same literal offense name for a distinct under-18 distribution scope.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "is murder in the third degree",
+        "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      },
+      "conductQuotes": [
+        "(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "gradingQuotes": [
+        "(5)(a) \nAs used in this subsection, the term:\n1. \n“Dangerous fentanyl or fentanyl analogs” means any controlled substance described in s. 893.135(1)(c)4.a.(I)-(VII).\n\n2. \n“Distribute” has the same meaning as in s. 893.02.\n\n(b) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, which resulted from the unlawful distribution by a person less than 18 years of age of any substance or mixture that he or she knew or reasonably should have known contained dangerous fentanyl or fentanyl analogs when such substance or mixture is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user, is murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "782.04",
+          "role": "offense",
+          "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        },
+        {
+          "section": "893.02",
+          "role": "definition",
+          "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+        },
+        {
+          "section": "893.135",
+          "role": "definition",
+          "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f"
+        }
+      ],
+      "notes": "Distinct exact subdivision scope from subsection (4)."
+    },
+    {
+      "id": "fl-fs-782-04-4-murder-in-the-third-degree",
+      "section": "782.04",
+      "status": "eligible",
+      "reason": "Subsection (4) supplies a literal offense name, conduct boundary, and grade distinct from existing first- and second-degree records.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "is murder in the third degree",
+        "sourceHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+      },
+      "conductQuotes": [
+        "(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "gradingQuotes": [
+        "(4) \nThe unlawful killing of a human being, when perpetrated without any design to effect death, by a person engaged in the perpetration of, or in the attempt to perpetrate, any felony other than any:\n(a) \nTrafficking offense prohibited by s. 893.135(1),\n\n(b) \nArson,\n\n(c) \nSexual battery,\n\n(d) \nRobbery,\n\n(e) \nBurglary,\n\n(f) \nKidnapping,\n\n(g) \nEscape,\n\n(h) \nAggravated child abuse,\n\n(i) \nAggravated abuse of an elderly person or disabled adult,\n\n(j) \nAircraft piracy,\n\n(k) \nUnlawful throwing, placing, or discharging of a destructive device or bomb,\n\n(l) \nUnlawful distribution of any substance listed in sub-subparagraphs (1)(a)3.a.-j. by a person 18 years of age or older, when such substance is proven to have caused, or is proven to have been a substantial factor in producing, the death of the user,\n\n(m) \nCarjacking,\n\n(n) \nHome-invasion robbery,\n\n(o) \nAggravated stalking,\n\n(p) \nMurder of another human being,\n\n(q) \nAggravated fleeing or eluding with serious bodily injury or death,\n\n(r) \nResisting an officer with violence to his or her person, or\n\n(s) \nFelony that is an act of terrorism or is in furtherance of an act of terrorism, including a felony under s. 775.30, s. 775.32, s. 775.33, s. 775.34, or s. 775.35,\n\nis murder in the third degree and constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "782.04",
+          "role": "offense",
+          "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45"
+        }
+      ],
+      "notes": "Limited to subsection (4); subsection (5)'s separately conditioned distribution route is not folded into this record."
+    },
+    {
+      "id": "fl-fs-794-011-2-sexual-battery",
+      "section": "794.011",
+      "status": "eligible",
+      "reason": "Subsection (2) is a distinct age-defined scope not duplicated by retained subdivisions (3)-(5).",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Sexual battery",
+        "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+      },
+      "conductQuotes": [
+        "(2)(a) \nA person 18 years of age or older who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a capital felony, punishable as provided in ss. 775.082 and 921.1425. In all capital cases under this section, the procedure set forth in s. 921.1425 shall be followed in order to determine a sentence of death or life imprisonment. If the prosecutor intends to seek the death penalty, the prosecutor must give notice to the defendant and file the notice with the court within 45 days after arraignment. The notice must contain a list of the aggravating factors the state intends to prove and has reason to believe it can prove beyond a reasonable doubt. The court may allow the prosecutor to amend the notice upon a showing of good cause.\n\n(b) \nA person less than 18 years of age who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a life felony, punishable as provided in s. 775.082, s. 775.083, s. 775.084, or s. 794.0115."
+      ],
+      "gradingQuotes": [
+        "(2)(a) \nA person 18 years of age or older who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a capital felony, punishable as provided in ss. 775.082 and 921.1425. In all capital cases under this section, the procedure set forth in s. 921.1425 shall be followed in order to determine a sentence of death or life imprisonment. If the prosecutor intends to seek the death penalty, the prosecutor must give notice to the defendant and file the notice with the court within 45 days after arraignment. The notice must contain a list of the aggravating factors the state intends to prove and has reason to believe it can prove beyond a reasonable doubt. The court may allow the prosecutor to amend the notice upon a showing of good cause.\n\n(b) \nA person less than 18 years of age who commits sexual battery upon, or in an attempt to commit sexual battery injures the sexual organs of, a person less than 12 years of age commits a life felony, punishable as provided in s. 775.082, s. 775.083, s. 775.084, or s. 794.0115."
+      ],
+      "requiredSections": [
+        {
+          "section": "794.011",
+          "role": "offense",
+          "contentHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+        },
+        {
+          "section": "921.1425",
+          "role": "penalty",
+          "contentHash": "3f12910e8649cf859740ec39a810f96319c887c24f5476314ca34e30d9bd0822"
+        }
+      ],
+      "notes": "Exact subsection scope; retained records at subdivisions (3)-(5) were not duplicated."
+    },
+    {
+      "id": "fl-fs-777-03-accessory-after-the-fact",
+      "section": "777.03",
+      "status": "eligible",
+      "reason": "Clear whole-section offense; current ranking tables close its conditional grades.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Accessory after the fact",
+        "sourceHash": "f3042356d8a93432783f06ac32509bb4841877c64c66ddc856d0fbb82e6846f9"
+      },
+      "conductQuotes": [
+        "Any person not standing in the relation of husband or wife, parent or grandparent, child or grandchild, brother or sister, by consanguinity or affinity to the offender, who maintains or assists the principal or an accessory before the fact, or gives the offender any other aid, knowing that the offender had committed a crime and such crime was a third degree felony, or had been an accessory thereto before the fact, with the intent that the offender avoids or escapes detection, arrest, trial, or punishment, is an accessory after the fact.",
+        "Any person who maintains or assists the principal or accessory before the fact, or gives the offender any other aid, knowing that the offender had committed the offense of child abuse, neglect of a child, aggravated child abuse, aggravated manslaughter of a child under 18 years of age, or murder of a child under 18 years of age, or had been an accessory thereto before the fact, with the intent that the offender avoids or escapes detection, arrest, trial, or punishment, is an accessory after the fact unless the court finds that the person is a victim of domestic violence.",
+        "Any person who maintains or assists the principal or an accessory before the fact, or gives the offender any other aid, knowing that the offender had committed a crime and such crime was a capital, life, first degree, or second degree felony, or had been an accessory thereto before the fact, with the intent that the offender avoids or escapes detection, arrest, trial, or punishment, is an accessory after the fact."
+      ],
+      "gradingQuotes": [
+        "If the felony offense committed is a capital felony, the offense of accessory after the fact is a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "If the felony offense committed is a life felony or a felony of the first degree, the offense of accessory after the fact is a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "If the felony offense committed is a felony of the second degree or a felony of the third degree ranked in level 3, 4, 5, 6, 7, 8, 9, or 10 under s. 921.0022 or s. 921.0023, the offense of accessory after the fact is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "If the felony offense committed is a felony of the third degree ranked in level 1 or level 2 under s. 921.0022 or s. 921.0023, the offense of accessory after the fact is a misdemeanor of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "777.03",
+          "role": "offense",
+          "contentHash": "f3042356d8a93432783f06ac32509bb4841877c64c66ddc856d0fbb82e6846f9"
+        },
+        {
+          "section": "777.03",
+          "role": "grading",
+          "contentHash": "f3042356d8a93432783f06ac32509bb4841877c64c66ddc856d0fbb82e6846f9"
+        },
+        {
+          "section": "921.0022",
+          "role": "grading",
+          "contentHash": "a146ed5c7bf2fc327382ff6270aaf411435bc1c27be9514cc94dfc54511b0da6"
+        },
+        {
+          "section": "921.0023",
+          "role": "grading",
+          "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61"
+        }
+      ],
+      "notes": "All conduct and grade branches are quoted; both felony and misdemeanor classifications are operative."
+    },
+    {
+      "id": "fl-fs-796-07-prohibiting-prostitution-and-related-acts",
+      "section": "796.07",
+      "status": "eligible",
+      "reason": "The official heading supplies a whole-section identity and the section exhaustively states conduct and repeat grades.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Prohibiting prostitution and related acts",
+        "sourceHash": "2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7"
+      },
+      "conductQuotes": [
+        "To own, establish, maintain, or operate any place, structure, building, or conveyance for the purpose of lewdness, assignation, or prostitution.",
+        "To offer, or to offer or agree to secure, another for the purpose of prostitution or for any other lewd or indecent act.",
+        "To receive, or to offer or agree to receive, any person into any place, structure, building, or conveyance for the purpose of prostitution, lewdness, or assignation, or to permit any person to remain there for such purpose.",
+        "To direct, take, or transport, or to offer or agree to direct, take, or transport, any person to any place, structure, or building, or to any other person, with knowledge or reasonable cause to believe that the purpose of such directing, taking, or transporting is prostitution, lewdness, or assignation.",
+        "For a person 18 years of age or older to offer to commit, or to commit, or to engage in, prostitution, lewdness, or assignation.",
+        "To solicit, induce, entice, or procure another to commit prostitution, lewdness, or assignation.",
+        "To reside in, enter, or remain in, any place, structure, or building, or to enter or remain in any conveyance, for the purpose of prostitution, lewdness, or assignation.",
+        "To aid, abet, or participate in any of the acts or things enumerated in this subsection.",
+        "To purchase the services of any person engaged in prostitution."
+      ],
+      "gradingQuotes": [
+        "A misdemeanor of the second degree for a first violation, punishable as provided in s. 775.082 or s. 775.083.",
+        "A misdemeanor of the first degree for a second violation, punishable as provided in s. 775.082 or s. 775.083.",
+        "A felony of the third degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "A misdemeanor of the first degree for a first violation, punishable as provided in s. 775.082 or s. 775.083.",
+        "A felony of the third degree for a second violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "A felony of the second degree for a third or subsequent violation, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "A misdemeanor of the second degree for a first violation is reclassified as a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "A misdemeanor of the first degree for a second violation is reclassified as a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "A felony of the third degree for a third or subsequent violation is reclassified as a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "796.07",
+          "role": "offense",
+          "contentHash": "2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7"
+        },
+        {
+          "section": "796.07",
+          "role": "grading",
+          "contentHash": "2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7"
+        }
+      ],
+      "notes": "Evidence covers all subsection (2) conduct, repeat grades, and massage-establishment reclassification."
+    },
+    {
+      "id": "fl-fs-784-011-assault",
+      "section": "784.011",
+      "status": "eligible",
+      "reason": "Clear whole-section offense with conduct and conditional grades.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Assault",
+        "sourceHash": "143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6"
+      },
+      "conductQuotes": [
+        "An “assault” is an intentional, unlawful threat by word or act to do violence to the person of another, coupled with an apparent ability to do so, and doing some act which creates a well-founded fear in such other person that such violence is imminent."
+      ],
+      "gradingQuotes": [
+        "Except as provided in subsection (3), a person who assaults another person commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "A person who assaults another person in furtherance of a riot or an aggravated riot prohibited under s. 870.01 commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+      ],
+      "requiredSections": [
+        {
+          "section": "784.011",
+          "role": "offense",
+          "contentHash": "143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6"
+        }
+      ],
+      "notes": "Source-first replacement, not the legacy Menacing label."
+    },
+    {
+      "id": "fl-fs-784-03-battery",
+      "section": "784.03",
+      "status": "eligible",
+      "reason": "The operative clause expressly names battery and its conduct subdivision.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "The offense of battery occurs when a person:",
+        "sourceHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+      },
+      "conductQuotes": [
+        "Actually and intentionally touches or strikes another person against the will of the other; or",
+        "Intentionally causes bodily harm to another person."
+      ],
+      "gradingQuotes": [
+        "Except as provided in subsection (2) or subsection (3), a person who commits battery commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "A person who has one prior conviction for battery, aggravated battery, felony battery, or resisting an officer with violence under s. 843.01 and who commits any second or subsequent battery commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "A person who commits a battery in furtherance of a riot or an aggravated riot prohibited under s. 870.01 commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "784.03",
+          "role": "offense",
+          "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+        },
+        {
+          "section": "784.03",
+          "role": "grading",
+          "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+        }
+      ],
+      "notes": "Both misdemeanor and felony categories are operative."
+    },
+    {
+      "id": "fl-fs-784-048-2-stalking",
+      "section": "784.048",
+      "status": "eligible",
+      "reason": "Subsection (2) expressly names stalking and states its conduct and grade.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits the offense of stalking",
+        "sourceHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+      },
+      "conductQuotes": [
+        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person commits the offense of stalking, a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+      ],
+      "gradingQuotes": [
+        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person commits the offense of stalking, a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+      ],
+      "requiredSections": [
+        {
+          "section": "784.048",
+          "role": "offense",
+          "contentHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+        },
+        {
+          "section": "784.048",
+          "role": "grading",
+          "contentHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+        }
+      ],
+      "notes": "Definitions are in subsection (1) of the same source."
+    },
+    {
+      "id": "fl-fs-784-048-3-aggravated-stalking",
+      "section": "784.048",
+      "status": "eligible",
+      "reason": "Subsection (3) expressly names the credible-threat variant and gives its grade.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits the offense of aggravated stalking",
+        "sourceHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+      },
+      "conductQuotes": [
+        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person and makes a credible threat to that person commits the offense of aggravated stalking, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "gradingQuotes": [
+        "A person who willfully, maliciously, and repeatedly follows, harasses, or cyberstalks another person and makes a credible threat to that person commits the offense of aggravated stalking, a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "784.048",
+          "role": "offense",
+          "contentHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+        },
+        {
+          "section": "784.048",
+          "role": "grading",
+          "contentHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1"
+        }
+      ],
+      "notes": "Limited to subsection (3), not the other variants."
+    },
+    {
+      "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+      "section": "800.03",
+      "status": "eligible",
+      "reason": "The operative clause supplies a literal offense name; conduct, exceptions, and repeat grading are complete.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "A person commits unlawful exposure of sexual organs by:",
+        "sourceHash": "df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940"
+      },
+      "conductQuotes": [
+        "A person commits unlawful exposure of sexual organs by:",
+        "Exposing or exhibiting his or her sexual organs in public or on the private premises of another, or so near thereto as to be seen from such private premises, in a vulgar or indecent manner; or",
+        "Being naked in public in a vulgar or indecent manner."
+      ],
+      "gradingQuotes": [
+        "Except as provided in paragraph (b), a violation of this section is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.",
+        "A second or subsequent violation of this section is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "800.03",
+          "role": "offense",
+          "contentHash": "df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940"
+        },
+        {
+          "section": "800.03",
+          "role": "exception",
+          "contentHash": "df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940"
+        },
+        {
+          "section": "800.03",
+          "role": "grading",
+          "contentHash": "df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940"
+        }
+      ],
+      "notes": "Primary conduct evidence is confined to subsection (1). The separately declared whole-section exception dependency supplies subsection (3), which excludes breastfeeding and mere nudity at a place set apart for that purpose; the whole-section grading dependency supplies subsection (2)."
+    },
+    {
+      "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+      "section": "790.23",
+      "status": "eligible",
+      "reason": "Current section states prohibited status, conduct, exclusions, and conditional grades.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful",
+        "sourceHash": "7cccddd133508a99f451fe827c60c0d01c22ea27bdd5b266ada759c222d50c1d"
+      },
+      "conductQuotes": [
+        "It is unlawful for any person to own or to have in his or her care, custody, possession, or control any firearm, ammunition, or electric weapon or device, or to carry a concealed weapon, including a tear gas gun or chemical weapon or device, if that person has been:",
+        "Convicted of a felony in the courts of this state;",
+        "Found, in the courts of this state, to have committed a delinquent act that would be a felony if committed by an adult and such person is under 24 years of age;",
+        "Convicted of or found to have committed a crime against the United States which is designated as a felony;",
+        "Found to have committed a delinquent act in another state, territory, or country that would be a felony if committed by an adult and which was punishable by imprisonment for a term exceeding 1 year and such person is under 24 years of age; or",
+        "Found guilty of an offense that is a felony in another state, territory, or country and which was punishable by imprisonment for a term exceeding 1 year."
+      ],
+      "gradingQuotes": [
+        "Except as otherwise provided in subsection (4), any person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "Notwithstanding the provisions of s. 874.04, if the offense described in subsection (1) has been committed by a person who has previously qualified or currently qualifies for the penalty enhancements provided for in s. 874.04, the offense is a felony of the first degree, punishable by a term of years not exceeding life or as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "790.23",
+          "role": "offense",
+          "contentHash": "7cccddd133508a99f451fe827c60c0d01c22ea27bdd5b266ada759c222d50c1d"
+        },
+        {
+          "section": "790.23",
+          "role": "exception",
+          "contentHash": "7cccddd133508a99f451fe827c60c0d01c22ea27bdd5b266ada759c222d50c1d"
+        },
+        {
+          "section": "790.23",
+          "role": "grading",
+          "contentHash": "7cccddd133508a99f451fe827c60c0d01c22ea27bdd5b266ada759c222d50c1d"
+        },
+        {
+          "section": "790.001",
+          "role": "definition",
+          "contentHash": "cd1b42285d13324a3914a699ee10c76b8a46e8beca1199d11cf0cd37c2a2072f"
+        },
+        {
+          "section": "874.04",
+          "role": "grading",
+          "contentHash": "da872aaedc45f61809b1c04ae840b5f53e49e607e4693870a6e4c1dc3acdb647"
+        }
+      ],
+      "notes": "Primary conduct evidence is confined to subsection (1). The separately declared whole-section exception dependency supplies subsection (2), under which the section does not apply after the specified restoration of civil rights and firearm authority or the specified expungement; whole-section grading evidence supplies subsections (3) and (4)."
+    },
+    {
+      "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+      "section": "790.221",
+      "status": "eligible",
+      "reason": "Clear whole-section possession offense with express state and federal-law exceptions.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty",
+        "sourceHash": "e6ed1741c1a29b4614a6ae01ad7b29589a48ce433513d198ccf9420afda2d886"
+      },
+      "conductQuotes": [
+        "It is unlawful for any person to own or to have in his or her care, custody, possession, or control any short-barreled rifle, short-barreled shotgun, or machine gun which is, or may readily be made, operable; but this section shall not apply to antique firearms.",
+        "Firearms in violation hereof which are lawfully owned and possessed under provisions of federal law are excepted."
+      ],
+      "gradingQuotes": [
+        "A person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "790.221",
+          "role": "offense",
+          "contentHash": "e6ed1741c1a29b4614a6ae01ad7b29589a48ce433513d198ccf9420afda2d886"
+        },
+        {
+          "section": "790.001",
+          "role": "definition",
+          "contentHash": "cd1b42285d13324a3914a699ee10c76b8a46e8beca1199d11cf0cd37c2a2072f"
+        }
+      ],
+      "notes": "Exception closure included."
+    },
+    {
+      "id": "fl-fs-800-04-4-lewd-or-lascivious-battery",
+      "section": "800.04",
+      "status": "eligible",
+      "reason": "Subsection (4) supplies a literal offense name, conduct, and conditional grades.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "A person commits lewd or lascivious battery by:",
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      "conductQuotes": [
+        "(4) \nLEWD OR LASCIVIOUS BATTERY.—\n\n(a) \nA person commits lewd or lascivious battery by:\n1. \nEngaging in sexual activity with a person 12 years of age or older but less than 16 years of age; or\n\n2. \nEncouraging, forcing, or enticing any person less than 16 years of age to engage in sadomasochistic abuse, sexual bestiality, prostitution, or any other act involving sexual activity.\n\n(b) \nExcept as provided in paragraph (c), an offender who commits lewd or lascivious battery commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is an offender 18 years of age or older who commits lewd or lascivious battery and was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing that violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section."
+      ],
+      "gradingQuotes": [
+        "(4) \nLEWD OR LASCIVIOUS BATTERY.—\n\n(a) \nA person commits lewd or lascivious battery by:\n1. \nEngaging in sexual activity with a person 12 years of age or older but less than 16 years of age; or\n\n2. \nEncouraging, forcing, or enticing any person less than 16 years of age to engage in sadomasochistic abuse, sexual bestiality, prostitution, or any other act involving sexual activity.\n\n(b) \nExcept as provided in paragraph (c), an offender who commits lewd or lascivious battery commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is an offender 18 years of age or older who commits lewd or lascivious battery and was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing that violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section."
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "800.04",
+          "role": "grading",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        }
+      ],
+      "notes": "The incorporated prior-conviction list remains in paragraph (4)(c)."
+    },
+    {
+      "id": "fl-fs-800-04-5-lewd-or-lascivious-molestation",
+      "section": "800.04",
+      "status": "eligible",
+      "reason": "Subsection (5) expressly names the offense and exhaustively grades it by ages and priors.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "A person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation.",
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      "conductQuotes": [
+        "(5) \nLEWD OR LASCIVIOUS MOLESTATION.—\n\n(a) \nA person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim less than 12 years of age commits a life felony, punishable as provided in s. 775.082(3)(a)4.\n\n(c)1. \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim less than 12 years of age; or\n\n2. \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age\n\ncommits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is 18 years of age or older and commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age and the person was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing the violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section."
+      ],
+      "gradingQuotes": [
+        "(5) \nLEWD OR LASCIVIOUS MOLESTATION.—\n\n(a) \nA person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim less than 12 years of age commits a life felony, punishable as provided in s. 775.082(3)(a)4.\n\n(c)1. \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim less than 12 years of age; or\n\n2. \nAn offender 18 years of age or older who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age\n\ncommits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nAn offender less than 18 years of age who commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(e) \nA person commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084 if the person is 18 years of age or older and commits lewd or lascivious molestation against a victim 12 years of age or older but less than 16 years of age and the person was previously convicted of a violation of:\n1. \nSection 787.01(2) or s. 787.02(2) when the violation involved a victim who was a minor and, in the course of committing the violation, the defendant committed against the minor a sexual battery under chapter 794 or a lewd act under this section or s. 847.0135(5);\n\n2. \nSection 787.01(3)(a)2. or 3.;\n\n3. \nSection 787.02(3)(a)2. or 3.;\n\n4. \nChapter 794, excluding s. 794.011(10);\n\n5. \nSection 825.1025;\n\n6. \nSection 847.0135(5); or\n\n7. \nThis section."
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "800.04",
+          "role": "grading",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        }
+      ],
+      "notes": "Evidence covers all four possible felony grades."
+    },
+    {
+      "id": "fl-fs-800-04-6-lewd-or-lascivious-conduct",
+      "section": "800.04",
+      "status": "eligible",
+      "reason": "Subsection (6) supplies a literal name, exact conduct, and age-conditional grades.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "A person who:\n1. \nIntentionally touches a person under 16 years of age in a lewd or lascivious manner; or\n\n2. \nSolicits a person under 16 years of age to commit a lewd or lascivious act\n\ncommits lewd or lascivious conduct.",
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      "conductQuotes": [
+        "(6) \nLEWD OR LASCIVIOUS CONDUCT.—\n\n(a) \nA person who:\n1. \nIntentionally touches a person under 16 years of age in a lewd or lascivious manner; or\n\n2. \nSolicits a person under 16 years of age to commit a lewd or lascivious act\n\ncommits lewd or lascivious conduct.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious conduct commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits lewd or lascivious conduct commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "gradingQuotes": [
+        "(6) \nLEWD OR LASCIVIOUS CONDUCT.—\n\n(a) \nA person who:\n1. \nIntentionally touches a person under 16 years of age in a lewd or lascivious manner; or\n\n2. \nSolicits a person under 16 years of age to commit a lewd or lascivious act\n\ncommits lewd or lascivious conduct.\n\n(b) \nAn offender 18 years of age or older who commits lewd or lascivious conduct commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits lewd or lascivious conduct commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "800.04",
+          "role": "grading",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        }
+      ],
+      "notes": "Both grading branches are quoted and separately pinned."
+    },
+    {
+      "id": "fl-fs-800-04-7-lewd-or-lascivious-exhibition",
+      "section": "800.04",
+      "status": "eligible",
+      "reason": "Subsection (7) supplies a literal name, conduct, exception, and age-conditional grades.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "commits lewd or lascivious exhibition",
+        "sourceHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+      },
+      "conductQuotes": [
+        "(7) \nLEWD OR LASCIVIOUS EXHIBITION.—\n\n(a) \nA person who:\n1. \nIntentionally masturbates;\n\n2. \nIntentionally exposes the genitals in a lewd or lascivious manner; or\n\n3. \nIntentionally commits any other sexual act that does not involve actual physical or sexual contact with the victim, including, but not limited to, sadomasochistic abuse, sexual bestiality, or the simulation of any act involving sexual activity\n\nin the presence of a victim who is less than 16 years of age, commits lewd or lascivious exhibition.\n\n(b) \nAn offender 18 years of age or older who commits a lewd or lascivious exhibition commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits a lewd or lascivious exhibition commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "gradingQuotes": [
+        "(7) \nLEWD OR LASCIVIOUS EXHIBITION.—\n\n(a) \nA person who:\n1. \nIntentionally masturbates;\n\n2. \nIntentionally exposes the genitals in a lewd or lascivious manner; or\n\n3. \nIntentionally commits any other sexual act that does not involve actual physical or sexual contact with the victim, including, but not limited to, sadomasochistic abuse, sexual bestiality, or the simulation of any act involving sexual activity\n\nin the presence of a victim who is less than 16 years of age, commits lewd or lascivious exhibition.\n\n(b) \nAn offender 18 years of age or older who commits a lewd or lascivious exhibition commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nAn offender less than 18 years of age who commits a lewd or lascivious exhibition commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+      ],
+      "requiredSections": [
+        {
+          "section": "800.04",
+          "role": "offense",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "800.04",
+          "role": "exception",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        },
+        {
+          "section": "800.04",
+          "role": "grading",
+          "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a"
+        }
+      ],
+      "notes": "All three conduct branches and the breastfeeding exception are quoted."
+    },
+    {
+      "id": "fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance",
+      "section": "827.071",
+      "status": "eligible",
+      "reason": "Paragraph (2)(a) expressly names the offense and states its conditional mandatory minimum.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "A person is guilty of the use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child to engage in a sexual performance or, being a parent, legal guardian, or custodian of such child, consents to the participation by such child in a sexual performance.",
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      },
+      "conductQuotes": [
+        "A person is guilty of the use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child to engage in a sexual performance or, being a parent, legal guardian, or custodian of such child, consents to the participation by such child in a sexual performance."
+      ],
+      "gradingQuotes": [
+        "A person who violates this paragraph commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "Except as provided in subsection (7), a person 18 years of age or older at the time of the offense who is convicted of a violation of this paragraph must be sentenced to a mandatory minimum term of imprisonment of 15 years.",
+        "A court is not required to impose a mandatory minimum term of imprisonment for a violation of this section if the court makes the following written findings related to the sexual performance that forms the basis of the violation:",
+        "The child depicted in the sexual performance was 14 years of age or older at the time the sexual performance was created;",
+        "The sexual performance was created with the depicted child’s permission;",
+        "The offender was not more than 4 years older than the depicted child at the time the sexual performance was created; and",
+        "The offender did not promote the sexual performance to any third party."
+      ],
+      "requiredSections": [
+        {
+          "section": "827.071",
+          "role": "offense",
+          "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        },
+        {
+          "section": "827.071",
+          "role": "grading",
+          "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        },
+        {
+          "section": "827.071",
+          "role": "exception",
+          "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        }
+      ],
+      "notes": "All four findings in subsection (7) are quoted."
+    },
+    {
+      "id": "fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance",
+      "section": "827.071",
+      "status": "eligible",
+      "reason": "Paragraph (2)(b) expressly names and grades the under-12 offense.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "A person is guilty of aggravated use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child younger than 12 years of age to engage in a sexual performance.",
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      },
+      "conductQuotes": [
+        "A person is guilty of aggravated use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child younger than 12 years of age to engage in a sexual performance."
+      ],
+      "gradingQuotes": [
+        "A person who violates this paragraph commits a life felony, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "A person 18 years of age or older at the time of the offense who is convicted of a violation of this paragraph must be sentenced to a mandatory minimum term of imprisonment of 25 years."
+      ],
+      "requiredSections": [
+        {
+          "section": "827.071",
+          "role": "offense",
+          "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        }
+      ],
+      "notes": "Subsection (7) by its text applies to a violation of the section, but its findings require a depicted child age 14 or older and therefore cannot be met for this under-12 variant."
+    },
+    {
+      "id": "fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child",
+      "section": "827.071",
+      "status": "eligible",
+      "reason": "Subsection (3) expressly names, defines, and grades the offense.",
+      "identity": {
+        "kind": "operative_guilt_clause",
+        "quote": "A person is guilty of promoting a sexual performance by a child when, knowing the character and content thereof, he or she produces, directs, or promotes any performance which includes sexual conduct by a child.",
+        "sourceHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+      },
+      "conductQuotes": [
+        "A person is guilty of promoting a sexual performance by a child when, knowing the character and content thereof, he or she produces, directs, or promotes any performance which includes sexual conduct by a child."
+      ],
+      "gradingQuotes": [
+        "A person who violates this subsection commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+        "Except as provided in subsection (7), a person 18 years of age or older at the time of the offense who is convicted of a violation of this subsection must be sentenced to a mandatory minimum term of imprisonment of 5 years.",
+        "A court is not required to impose a mandatory minimum term of imprisonment for a violation of this section if the court makes the following written findings related to the sexual performance that forms the basis of the violation:",
+        "The child depicted in the sexual performance was 14 years of age or older at the time the sexual performance was created;",
+        "The sexual performance was created with the depicted child’s permission;",
+        "The offender was not more than 4 years older than the depicted child at the time the sexual performance was created; and",
+        "The offender did not promote the sexual performance to any third party."
+      ],
+      "requiredSections": [
+        {
+          "section": "827.071",
+          "role": "offense",
+          "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        },
+        {
+          "section": "827.071",
+          "role": "grading",
+          "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        },
+        {
+          "section": "827.071",
+          "role": "exception",
+          "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5"
+        }
+      ],
+      "notes": "All four findings in subsection (7) are quoted."
+    }
+  ],
+  "sectionNotes": [
+    {
+      "id": "fl-section-777.011",
+      "section": "777.011",
+      "status": "support_only",
+      "reason": "Principal liability is not a standalone offense.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Principal in first degree",
+        "sourceHash": "a92115981b02db73aa9dcae131623b8e892502b10596e1fa16badd7af7438c57"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "777.011",
+          "role": "definition",
+          "contentHash": "a92115981b02db73aa9dcae131623b8e892502b10596e1fa16badd7af7438c57"
+        }
+      ],
+      "notes": "Support only."
+    },
+    {
+      "id": "fl-section-777.04",
+      "section": "777.04",
+      "status": "support_only",
+      "reason": "The former whole-section source hold is resolved for the three precise reviewed records; no additional whole-section definition is created.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Attempts, solicitation, and conspiracy",
+        "sourceHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "777.04",
+          "role": "offense",
+          "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d"
+        }
+      ],
+      "notes": "Current §§ 104.091, 379.2431, 828.125, 849.25, 893.135, 921.0022, and 921.0023 are cached. Precise attempt, solicitation, and conspiracy entries carry their own evidence."
+    },
+    {
+      "id": "fl-section-782.07",
+      "section": "782.07",
+      "status": "held",
+      "reason": "Residual technical hold only: complete analyst objects for the three defined precise records were not recoverable; the firefighter variant is not publishable from historical-only § 112.191 evidence.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Manslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic",
+        "sourceHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "782.07",
+          "role": "offense",
+          "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c"
+        }
+      ],
+      "notes": "This does not claim the whole section is unreviewed. Current § 825.102, § 827.03, § 401.23, § 943.10, and the inventoried chapter 776 sources are cached; the three definition IDs are separately and explicitly held."
+    },
+    {
+      "id": "fl-section-782.071",
+      "section": "782.071",
+      "status": "duplicate",
+      "reason": "The existing manifest retains the same whole-section vehicular-homicide offense.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Vehicular homicide",
+        "sourceHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "782.071",
+          "role": "offense",
+          "contentHash": "2a82505ef393632a740cc4b659a4a65644cea7fd440b1b1d2f35e36668669698"
+        }
+      ],
+      "notes": "No duplicate definition."
+    },
+    {
+      "id": "fl-section-784.021",
+      "section": "784.021",
+      "status": "duplicate",
+      "reason": "Existing manifest retains aggravated assault at the same whole-section scope.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Aggravated assault",
+        "sourceHash": "d763dc9ee3553d7492eac3235a1ebaf2d2b2f18ae69638a69efe293157518718"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "784.021",
+          "role": "offense",
+          "contentHash": "d763dc9ee3553d7492eac3235a1ebaf2d2b2f18ae69638a69efe293157518718"
+        }
+      ],
+      "notes": "No duplicate definition."
+    },
+    {
+      "id": "fl-section-784.07",
+      "section": "784.07",
+      "status": "support_only",
+      "reason": "This section reclassifies assault or battery against specified personnel and does not create the underlying standalone charge.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences",
+        "sourceHash": "c0297979233b51a92ccc25da4268800f2cfa3e25c524d899e5d42700988d7475"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "784.07",
+          "role": "grading",
+          "contentHash": "c0297979233b51a92ccc25da4268800f2cfa3e25c524d899e5d42700988d7475"
+        }
+      ],
+      "notes": "Enhancement support only."
+    },
+    {
+      "id": "fl-section-790.01",
+      "section": "790.01",
+      "status": "duplicate",
+      "reason": "The existing manifest has an exact alias record at the same section scope.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Carrying of concealed weapons or concealed firearms",
+        "sourceHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "790.01",
+          "role": "offense",
+          "contentHash": "c2d426450b7d801e16ba3144067e07583a9e0be57de1fd8a23937169c441f2e4"
+        }
+      ],
+      "notes": "No duplicate definition."
+    },
+    {
+      "id": "fl-section-790.15",
+      "section": "790.15",
+      "status": "duplicate",
+      "reason": "The existing manifest has an exact alias record at the same section scope.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Discharging firearm in public or on residential property",
+        "sourceHash": "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "790.15",
+          "role": "offense",
+          "contentHash": "ebe4f3293ebf2eeaea5e11a9077cca6915c48219cbcb7efc0f06b314e37735c5"
+        }
+      ],
+      "notes": "No duplicate definition."
+    },
+    {
+      "id": "fl-section-790.22",
+      "section": "790.22",
+      "status": "support_only",
+      "reason": "The criminal possession provision applies to a minor under 18, so no ordinary adult charge was created.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Use of BB guns, air or gas-operated guns, or electric weapons or devices by minor under 16; limitation; possession of firearms by minor under 18 prohibited; penalties",
+        "sourceHash": "905a1023b61f53f6985a66dd8279204312cd34973ace5a8d36d3f0a17fa37c46"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "790.22",
+          "role": "offense",
+          "contentHash": "905a1023b61f53f6985a66dd8279204312cd34973ace5a8d36d3f0a17fa37c46"
+        }
+      ],
+      "notes": "Juvenile-only offense withheld from ordinary adult catalog."
+    },
+    {
+      "id": "fl-section-794.011",
+      "section": "794.011",
+      "status": "support_only",
+      "reason": "The former dependency hold is resolved; this row remains only a section-level note and creates no additional definition.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Sexual battery",
+        "sourceHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "794.011",
+          "role": "offense",
+          "contentHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a"
+        }
+      ],
+      "notes": "Current §§ 794.0115, 943.1395, and 943.253 are available. The precise subsection (2) record is reviewed separately, and retained subdivisions are not duplicated."
+    },
+    {
+      "id": "fl-section-794.05",
+      "section": "794.05",
+      "status": "duplicate",
+      "reason": "Existing manifest retains unlawful sexual activity with certain minors at this section.",
+      "identity": {
+        "kind": "official_heading",
+        "quote": "Unlawful sexual activity with certain minors",
+        "sourceHash": "fc047cfc4928c9b5be484ba2b29ec0a40cf630a21131780260f2324b05de80c6"
+      },
+      "conductQuotes": [],
+      "gradingQuotes": [],
+      "requiredSections": [
+        {
+          "section": "794.05",
+          "role": "offense",
+          "contentHash": "fc047cfc4928c9b5be484ba2b29ec0a40cf630a21131780260f2324b05de80c6"
+        }
+      ],
+      "notes": "No duplicate definition."
+    }
+  ],
+  "repair": {
+    "completeObjectsRecovered": 33,
+    "definitionsAccounted": 25,
+    "eligible": 22,
+    "held": 3,
+    "corruptOriginal": "/tmp/florida-reviewed-analysis-a.json.corrupt"
+  }
+}

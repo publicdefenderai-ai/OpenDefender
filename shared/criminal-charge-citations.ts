@@ -1,3 +1,5 @@
+import { FLORIDA_REVIEWED_DEFINITIONS } from "./florida-reviewed-batch";
+
 /**
  * Criminal Charge Citations Overlay
  *
@@ -19470,3 +19472,14 @@ export const CHARGE_CITATIONS: Record<string, CitationRecord> = {
     instructionUrl: "https://www.courts.ca.gov/partners/california-jury-instructions",
   },
 };
+
+for (const definition of FLORIDA_REVIEWED_DEFINITIONS) {
+  const primary = definition.citations[0];
+  CHARGE_CITATIONS[definition.id] = {
+    citation: primary.citation,
+    confidence: "high",
+    lastVerified: definition.verifiedMonth,
+    source: "Florida Legislature Online Sunshine reviewed source-first report",
+    sourceUrl: primary.url,
+  };
+}

@@ -8,6 +8,13 @@ import {
   type AuthoritySourceDatabaseSeed,
   type AuthoritySourceSeed,
 } from "../services/authority-source-database";
+import { buildAuthorityEvidence } from "../services/authority-offense-evidence";
+import {
+  FLORIDA_REVIEWED_SOURCE_RECORDS,
+  isFloridaReviewedSourceFresh,
+  type FloridaReviewedDocument,
+  type FloridaReviewedSourceRecord,
+} from "./florida-reviewed-source-records";
 
 export const FLORIDA_SOURCE_POLICY = "official_florida_online_sunshine_statutes";
 export const FLORIDA_SOURCE_BASE = "https://www.leg.state.fl.us/statutes/index.cfm";
@@ -241,6 +248,239 @@ function provisionFromDocument(
   };
 }
 
+function reviewedFloridaProvision(
+  charge: CriminalCharge,
+  source: FloridaReviewedSourceRecord,
+  document: FloridaReviewedDocument,
+  supportRole: AuthorityProvisionSeed["supportRole"],
+  dependencyRoles: FloridaReviewedSourceRecord["dependencies"][number]["dependencyRole"][],
+  sourceDependencyRoles: FloridaReviewedSourceRecord["dependencies"][number]["dependencyRole"][],
+  importedAt: Date,
+): AuthorityProvisionSeed {
+  const evidence = buildAuthorityEvidence({
+    sourceKey: document.sourceKey,
+    lawId: "FL",
+    section: document.section,
+    subdivision: document.subdivision,
+    citation: document.citation,
+    sourceUrl: document.sourceUrl,
+    officialTitle: document.title,
+    text: document.text,
+    contentHash: document.contentHash,
+    effectiveDateStart: document.effectiveDateStart,
+  });
+  const fingerprint = referenceHash({
+    sourceKey: document.sourceKey,
+    lawId: "FL",
+    section: document.section,
+    subdivision: document.subdivision,
+    citation: document.citation,
+    officialTitle: document.title,
+    sourceUrl: document.sourceUrl,
+    contentHash: document.contentHash,
+    effectiveDateStart: document.effectiveDateStart,
+    effectiveDateEnd: null,
+  });
+  return {
+    sourceKey: document.sourceKey,
+    lawId: "FL",
+    section: document.section,
+    subdivision: document.subdivision,
+    citation: document.citation,
+    officialTitle: document.title,
+    sourceUrl: document.sourceUrl,
+    content: document.text,
+    contentHash: document.contentHash,
+    hashBasis: "source_content",
+    retrievedAt: new Date(document.retrievedAt),
+    effectiveDateStart: document.effectiveDateStart,
+    effectiveDateEnd: null,
+    supportRole,
+    evidence,
+    metadata: {
+      chargeId: charge.id,
+      catalogLabel: charge.name,
+      catalogCode: charge.code,
+      catalogClassification: charge.category,
+      sourceFirstBatch: "florida_reviewed",
+      reviewedDependencyRole: dependencyRoles[0],
+      reviewedDependencyRoles: dependencyRoles,
+      reviewedSourceDependencyRoles: sourceDependencyRoles,
+      reviewedInterpretation: source.interpretation,
+      reviewedLegalDecision: source.reviewedLegalDecision,
+      sourceExtraction: {
+        sourceHash: document.contentHash,
+        identityEvidence: document.sourceKey === source.offense.sourceKey
+          ? source.identityEvidence
+          : null,
+        conductEvidence: document.sourceKey === source.offense.sourceKey
+          ? source.conductEvidence
+          : [],
+        gradeEvidence: source.gradeEvidence.filter(span =>
+          span.sourceKey === document.sourceKey),
+      },
+      currentnessEvidence: {
+        officialSectionPage: true,
+        effectiveDateStart: document.effectiveDateStart,
+        retrievedAt: document.retrievedAt,
+      },
+      attorneyReview: source.reviewedLegalDecision
+        ? "reviewed_interpretation"
+        : "pending_interpretation",
+      evidence,
+      fingerprint,
+      manifestImportedAt: importedAt.toISOString(),
+    },
+  };
+}
+
+export function groupFloridaReviewedDependenciesForAuthority(
+  source: FloridaReviewedSourceRecord,
+): Array<{
+  document: FloridaReviewedSourceRecord["dependencies"][number];
+  supportRole: AuthorityProvisionSeed["supportRole"];
+  dependencyRoles: FloridaReviewedSourceRecord["dependencies"][number]["dependencyRole"][];
+  sourceDependencyRoles: FloridaReviewedSourceRecord["dependencies"][number]["dependencyRole"][];
+}> {
+  const grouped = new Map<string, {
+    document: FloridaReviewedSourceRecord["dependencies"][number];
+    supportRole: AuthorityProvisionSeed["supportRole"];
+    dependencyRoles: FloridaReviewedSourceRecord["dependencies"][number]["dependencyRole"][];
+    sourceDependencyRoles: FloridaReviewedSourceRecord["dependencies"][number]["dependencyRole"][];
+  }>();
+  const sourceRoles = new Map<string,
+    FloridaReviewedSourceRecord["dependencies"][number]["dependencyRole"][]>();
+  for (const document of source.dependencies) {
+    const roles = sourceRoles.get(document.sourceKey) ?? [];
+    if (!roles.includes(document.dependencyRole)) roles.push(document.dependencyRole);
+    sourceRoles.set(document.sourceKey, roles);
+  }
+  for (const document of source.dependencies) {
+    const key = `${document.sourceKey}|${document.supportRole}`;
+    const existing = grouped.get(key);
+    if (existing) {
+      if (existing.document.contentHash !== document.contentHash ||
+          existing.document.citation !== document.citation ||
+          existing.document.sourceUrl !== document.sourceUrl) {
+        throw new Error(
+          `Florida reviewed dependency ${document.sourceKey} has inconsistent physical evidence`,
+        );
+      }
+      if (!existing.dependencyRoles.includes(document.dependencyRole)) {
+        existing.dependencyRoles.push(document.dependencyRole);
+      }
+      continue;
+    }
+    grouped.set(key, {
+      document,
+      supportRole: document.supportRole,
+      dependencyRoles: [document.dependencyRole],
+      sourceDependencyRoles: sourceRoles.get(document.sourceKey) ?? [document.dependencyRole],
+    });
+  }
+  return [...grouped.values()];
+}
+
+export function buildFloridaReviewedManifestRecords(
+  importedAt: Date,
+): AuthorityCatalogRecord[] {
+  return FLORIDA_REVIEWED_SOURCE_RECORDS.map(source => {
+    const charge = criminalCharges.find(candidate => candidate.id === source.chargeId);
+    if (!charge || charge.jurisdiction !== "FL" || charge.code !== source.code ||
+        charge.name !== source.canonicalTitle) {
+      throw new Error(`Florida reviewed source-first catalog identity is missing: ${source.chargeId}`);
+    }
+    const dependencyGroups = groupFloridaReviewedDependenciesForAuthority(source);
+    return {
+      chargeId: charge.id,
+      catalogLabel: charge.name,
+      catalogCode: charge.code,
+      catalogCategory: charge.category,
+      disposition: "retain",
+      dispositionReason:
+        "Exact source-derived identity and semantic grade are independently approved with every required current authority dependency.",
+      canonicalTitle: source.canonicalTitle,
+      provisions: dependencyGroups.map(group =>
+        reviewedFloridaProvision(
+          charge,
+          source,
+          group.document,
+          group.supportRole,
+          group.dependencyRoles,
+          group.sourceDependencyRoles,
+          importedAt,
+        )),
+      apiStatus: "verified",
+      mapping: {
+        schemaVersion: 1,
+        classification: "exact_match",
+        confidence: "high",
+        rationale:
+          "Exact official heading or hash-bound operative guilt clause; supporting provisions are never primary offense identity.",
+        candidateSourceKeys: dependencyGroups.map(group => group.document.sourceKey),
+        candidateCitations: dependencyGroups.map(group => group.document.citation),
+        candidateEvidence: dependencyGroups.map(({ document }) => buildAuthorityEvidence({
+          sourceKey: document.sourceKey,
+          lawId: "FL",
+          section: document.section,
+          subdivision: document.subdivision,
+          citation: document.citation,
+          sourceUrl: document.sourceUrl,
+          officialTitle: document.title,
+          text: document.text,
+          contentHash: document.contentHash,
+          effectiveDateStart: document.effectiveDateStart,
+        })),
+      },
+    };
+  });
+}
+
+function validateFloridaReviewedManifestRecord(
+  record: AuthorityCatalogRecord,
+  source: FloridaReviewedSourceRecord,
+): string | null {
+  if (record.disposition !== "retain" || record.apiStatus !== "verified" ||
+      record.canonicalTitle !== source.canonicalTitle ||
+      record.mapping?.classification !== "exact_match") {
+    return "Reviewed Florida source-first record is not an exact selectable mapping";
+  }
+  const expected = new Map(groupFloridaReviewedDependenciesForAuthority(source).map(group => [
+    `${group.document.sourceKey}|${group.supportRole}`,
+    group,
+  ]));
+  if (record.provisions.length !== expected.size ||
+      record.provisions.filter(provision => provision.supportRole === "offense").length !== 1) {
+    return "Reviewed Florida source-first dependency set is incomplete";
+  }
+  for (const provision of record.provisions) {
+    const group = expected.get(`${provision.sourceKey}|${provision.supportRole}`);
+    const document = group?.document;
+    if (!group || !document || provision.sourceKey !== document.sourceKey ||
+        provision.lawId !== "FL" || provision.section !== document.section ||
+        provision.subdivision !== document.subdivision ||
+        provision.citation !== document.citation ||
+        provision.officialTitle !== document.title ||
+        provision.sourceUrl !== document.sourceUrl ||
+        provision.content !== document.text ||
+        provision.contentHash !== document.contentHash ||
+        provision.hashBasis !== "source_content" ||
+        provision.supportRole !== document.supportRole ||
+        JSON.stringify(provision.metadata?.reviewedDependencyRoles) !==
+          JSON.stringify(group.dependencyRoles) ||
+        JSON.stringify(provision.metadata?.reviewedSourceDependencyRoles) !==
+          JSON.stringify(group.sourceDependencyRoles) ||
+        provision.effectiveDateStart !== document.effectiveDateStart ||
+        provision.effectiveDateEnd !== null ||
+        !provision.retrievedAt ||
+        provision.retrievedAt.getTime() !== Date.parse(document.retrievedAt) ||
+        createHash("sha256").update(provision.content).digest("hex") !== provision.contentHash) {
+      return `Reviewed Florida dependency ${provision.sourceKey} is not pinned official evidence`;
+    }
+  }
+  return null;
+}
+
 export function buildFloridaManifestRecord(
   charge: CriminalCharge,
   documents: FloridaSourceDocument[],
@@ -336,6 +576,10 @@ export function validateFloridaManifestRecord(
   ) {
     return "Manifest catalog identity does not match the current Florida catalog";
   }
+  const reviewedSource = FLORIDA_REVIEWED_SOURCE_RECORDS.find(
+    candidate => candidate.chargeId === record.chargeId,
+  );
+  if (reviewedSource) return validateFloridaReviewedManifestRecord(record, reviewedSource);
 
   const references = parseFloridaCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
   const selectable =
@@ -395,12 +639,18 @@ export function validateFloridaManifestRecord(
 
 export function buildFloridaSourceDatabaseSeed(
   manifest: FloridaAuthorityManifest,
+  now: Date = new Date(),
 ): AuthoritySourceDatabaseSeed {
+  const records = manifest.catalogRecords.filter(record =>
+    !FLORIDA_REVIEWED_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
+    isFloridaReviewedSourceFresh(now));
   const sources = new Map<string, AuthoritySourceSeed>();
-  const snapshots = [];
+  const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
+  const snapshotIdentities = new Set<string>();
   const links: AuthorityChargeLinkSeed[] = [];
+  const linkIdentities = new Set<string>();
 
-  for (const record of manifest.catalogRecords) {
+  for (const record of records) {
     if (record.disposition !== "retain" && record.disposition !== "exact_alias_rename") continue;
     for (const provision of record.provisions) {
       if (!sources.has(provision.sourceKey)) {
@@ -423,7 +673,10 @@ export function buildFloridaSourceDatabaseSeed(
           },
         });
       }
-      snapshots.push({
+      const snapshotIdentity = [
+        provision.sourceKey, provision.citation, provision.officialTitle, provision.contentHash,
+      ].join("|");
+      if (!snapshotIdentities.has(snapshotIdentity)) snapshots.push({
         sourceKey: provision.sourceKey,
         jurisdiction: "FL" as const,
         citation: provision.citation,
@@ -442,29 +695,41 @@ export function buildFloridaSourceDatabaseSeed(
         supersedesSnapshotId: null,
         metadata: provision.metadata,
       });
-      links.push({
-        chargeId: record.chargeId,
-        snapshotKey: provision.sourceKey,
-        supportRole: provision.supportRole,
-        citation: provision.citation,
-        subdivision: provision.subdivision,
-      });
+      snapshotIdentities.add(snapshotIdentity);
+      const linkIdentity = [
+        record.chargeId,
+        provision.sourceKey,
+        provision.supportRole,
+      ].join("|");
+      if (!linkIdentities.has(linkIdentity)) {
+        links.push({
+          chargeId: record.chargeId,
+          snapshotKey: provision.sourceKey,
+          supportRole: provision.supportRole,
+          citation: provision.citation,
+          subdivision: provision.subdivision,
+        });
+        linkIdentities.add(linkIdentity);
+      }
     }
   }
 
-  const selectableChargeIds = manifest.catalogRecords
+  const selectableChargeIds = records
     .filter((record) =>
       (record.disposition === "retain" || record.disposition === "exact_alias_rename") &&
       record.provisions.length > 0,
     )
     .map((record) => record.chargeId);
+  const reviewedIds = new Set(FLORIDA_REVIEWED_SOURCE_RECORDS.map(source => source.chargeId));
   const expectedFloridaChargeIds = criminalCharges
-    .filter((charge) => charge.jurisdiction === "FL")
+    .filter((charge) => charge.jurisdiction === "FL" && !reviewedIds.has(charge.id))
     .map((charge) => charge.id);
+  const legacyManifestRecords = manifest.catalogRecords
+    .filter(record => !reviewedIds.has(record.chargeId));
   const isCompleteManifest =
-    manifest.catalogRecords.length === expectedFloridaChargeIds.length &&
+    legacyManifestRecords.length === expectedFloridaChargeIds.length &&
     expectedFloridaChargeIds.every((chargeId) =>
-      manifest.catalogRecords.some((record) => record.chargeId === chargeId),
+      legacyManifestRecords.some((record) => record.chargeId === chargeId),
     );
   if (isCompleteManifest && !selectableChargeIds.includes(FLORIDA_PUBLIC_ROBBERY_CHARGE_ID)) {
     throw new Error(
@@ -478,7 +743,7 @@ export function buildFloridaSourceDatabaseSeed(
     sources: [...sources.values()],
     snapshots,
     links,
-    catalogRecords: manifest.catalogRecords,
+    catalogRecords: records,
     selectableChargeIds,
     generatedAt: manifest.generatedAt,
   };

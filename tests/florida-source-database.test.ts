@@ -14,10 +14,13 @@ import {
   buildFloridaSourceDatabaseSeed,
   type FloridaSourceDocument,
 } from "../server/data/florida-source-database-seed";
+import { FLORIDA_REVIEWED_SOURCE_RECORDS } from "../server/data/florida-reviewed-source-records";
+import { FLORIDA_REVIEWED_DEFINITIONS } from "../shared/florida-reviewed-batch";
 import { extractFloridaDocument } from "../scripts/data-review/import-florida-source-database";
 import { CHARGE_CITATIONS } from "../shared/criminal-charge-citations";
 
 const importedAt = new Date("2026-08-28T00:00:00.000Z");
+const legacyOnlyNow = new Date("9999-01-01T00:00:00.000Z");
 
 function document(section: string, title: string): FloridaSourceDocument {
   return {
@@ -31,13 +34,11 @@ function document(section: string, title: string): FloridaSourceDocument {
 }
 
 describe("Florida authority manifest", () => {
-  it("commits every Florida catalog row and preserves fail-closed dispositions", () => {
-    const manifest = loadFloridaAuthorityManifest();
-    const seed = buildFloridaSourceDatabaseSeed(manifest);
-    const flCount = criminalCharges.filter((charge) => charge.jurisdiction === "FL").length;
+  it("keeps the 117-row legacy manifest gate isolated from additive source-first records", () => {
+    const manifest = loadFloridaAuthorityManifest(undefined, legacyOnlyNow);
+    const seed = buildFloridaSourceDatabaseSeed(manifest, legacyOnlyNow);
 
-    expect(manifest.catalogRecords).toHaveLength(flCount);
-    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(flCount);
+    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(117);
     expect(manifest.catalogRecords).toHaveLength(117);
     expect(seed.sources).toHaveLength(25);
     expect(seed.snapshots).toHaveLength(25);
@@ -66,6 +67,30 @@ describe("Florida authority manifest", () => {
     ]));
     expect(manifest.catalogRecords.filter((record) =>
       record.disposition === "require_exact_reselection")).toHaveLength(92);
+  });
+
+  it("adds every currently approved source-first record without publishing held rows", () => {
+    const manifest = loadFloridaAuthorityManifest();
+    const seed = buildFloridaSourceDatabaseSeed(manifest);
+    const approvedIds = new Set(
+      FLORIDA_REVIEWED_SOURCE_RECORDS.map((record) => record.chargeId),
+    );
+    const heldIds = FLORIDA_REVIEWED_DEFINITIONS
+      .map((definition) => definition.id)
+      .filter((id) => !approvedIds.has(id));
+    const legacyIds = seed.selectableChargeIds.filter((id) => !id.startsWith("fl-fs-"));
+
+    expect(approvedIds.size).toBeGreaterThan(0);
+    expect(manifest.catalogRecords).toHaveLength(117 + approvedIds.size);
+    expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size)
+      .toBe(manifest.catalogRecords.length);
+    expect(legacyIds).toHaveLength(25);
+    expect(new Set(seed.selectableChargeIds)).toEqual(
+      new Set([...legacyIds, ...approvedIds]),
+    );
+    expect(seed.catalogRecords.map((record) => record.chargeId))
+      .toEqual(expect.arrayContaining([...approvedIds]));
+    expect(seed.selectableChargeIds.filter((id) => heldIds.includes(id))).toHaveLength(0);
   });
 
   it("stores official Online Sunshine identity, raw-text hashes, and pending review metadata", () => {
@@ -182,7 +207,7 @@ describe("Florida authority manifest", () => {
   });
 
   it("does not trust a tampered selectable manifest record at load time", () => {
-    const manifest = loadFloridaAuthorityManifest();
+    const manifest = loadFloridaAuthorityManifest(undefined, legacyOnlyNow);
     const tampered = JSON.parse(JSON.stringify(manifest));
     const record = tampered.catalogRecords.find(
       (candidate: { chargeId: string }) => candidate.chargeId === "fl-aggravated-assault",

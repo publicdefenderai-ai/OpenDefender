@@ -9,6 +9,8 @@ import { OHIO_CHAPTER_BATCH_EXPLANATIONS } from "./ohio-chapter-batch";
 import { OHIO_HAZING_AND_PROTECTION_EXPLANATIONS } from "./ohio-hazing-and-protection";
 import { OHIO_PATIENT_CARE_BATCH } from "./ohio-patient-care";
 import { OHIO_REVIEWED_BATCH } from "./ohio-reviewed-batch";
+import { FLORIDA_REVIEWED_BATCH } from "./florida-reviewed-batch";
+import { getChargeById } from "./criminal-charges";
 
 export interface LegalTermExplanation {
   term: string;
@@ -26,6 +28,9 @@ export interface ChargeExplanationSource {
 }
 
 export interface ChargeExplanation {
+  /** Exact catalog identity for source-first entries. When callers provide an
+   * ID, lookup must not fall through to another same-name explanation. */
+  canonicalChargeId?: string;
   /** Restrict an explanation to this jurisdiction; generic callers skip it. */
   jurisdiction?: string;
   chargePattern: RegExp;
@@ -54,6 +59,7 @@ export interface ChargeExplanation {
 }
 
 export const chargeExplanations: ChargeExplanation[] = [
+  ...FLORIDA_REVIEWED_BATCH.explanations,
   ...OHIO_CHAPTER_BATCH_EXPLANATIONS,
   ...OHIO_HAZING_AND_PROTECTION_EXPLANATIONS,
   ...OHIO_PATIENT_CARE_BATCH.explanations,
@@ -3723,11 +3729,26 @@ export function getChargeExplanation(
   language?: string,
   canonicalChargeId?: string,
 ): ChargeExplanationWithJurisdiction | null {
-  const normalizedName = chargeName.toLowerCase().trim();
   const exactSlug =
     jurisdiction?.toUpperCase().trim() === "CA" && canonicalChargeId
       ? getCaliforniaExplanationSlug(canonicalChargeId)
       : undefined;
+  const exactCanonicalExplanation = canonicalChargeId
+    ? chargeExplanations.find(explanation =>
+      explanation.canonicalChargeId === canonicalChargeId &&
+      (!jurisdiction || !explanation.jurisdiction ||
+        normalizeJurisdictionCode(explanation.jurisdiction) ===
+          normalizeJurisdictionCode(jurisdiction ?? "")))
+    : undefined;
+  const legacyCharge = canonicalChargeId && !exactCanonicalExplanation && !exactSlug
+    ? getChargeById(canonicalChargeId)
+    : undefined;
+  if (canonicalChargeId && !exactCanonicalExplanation && !exactSlug &&
+      (!legacyCharge ||
+        /^(fl-fs-|oh-orc-)/.test(canonicalChargeId) ||
+        (jurisdiction && normalizeJurisdictionCode(legacyCharge.jurisdiction) !==
+          normalizeJurisdictionCode(jurisdiction)))) return null;
+  const normalizedName = (legacyCharge?.name ?? chargeName).toLowerCase().trim();
 
   for (const explanation of chargeExplanations) {
     if (explanation.jurisdiction &&
@@ -3736,7 +3757,12 @@ export function getChargeExplanation(
     // California canonical records join by ID first.  The name regex remains
     // available for generic callers and for non-California legacy surfaces.
     if (exactSlug && explanation.slug !== exactSlug) continue;
-    if (exactSlug || explanation.chargePattern.test(normalizedName)) {
+    if (exactCanonicalExplanation && explanation !== exactCanonicalExplanation) continue;
+    // Known legacy IDs retain their existing generic explanations, but can
+    // never borrow an ID-bound source-first record with the same display name.
+    if (canonicalChargeId && !exactCanonicalExplanation && explanation.canonicalChargeId) continue;
+    if (exactSlug || exactCanonicalExplanation ||
+        ((!canonicalChargeId || legacyCharge) && explanation.chargePattern.test(normalizedName))) {
       // Resolve jurisdiction overlay first
       let resolved: ChargeExplanationWithJurisdiction = explanation;
       if (jurisdiction) {

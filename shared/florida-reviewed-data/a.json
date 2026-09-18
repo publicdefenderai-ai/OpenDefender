@@ -1,0 +1,277 @@
+[
+  {"id":"fl-fs-777-04-1-criminal-attempt","jurisdiction":"FL","code":"777.04(1)","slug":"fl-fs-777-04-1-criminal-attempt","name":"criminal attempt","names":{"es":"tentativa criminal","zh":"犯罪未遂"},"category":"felony","categories":["felony","misdemeanor"],"verifiedMonth":"2026-09","citations":[{"citation":"Fla. Stat. § 777.04(1)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"},{"citation":"Fla. Stat. § 777.04","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"}],"text":{"en":{"plainSummary":"Acting toward commission of an offense but failing, or being intercepted or prevented, before completing it.","degreeContext":"The grade depends on the attempted offense under subsection (4), ranging from a first-degree felony to a second-degree misdemeanor, subject to the expressly listed special-statute exceptions."},"es":{"plainSummary":"Realizar un acto dirigido a cometer un delito sin consumarlo, o ser interceptado o impedido.","degreeContext":"El grado depende del delito intentado según el apartado (4), desde delito grave de primer grado hasta delito menor de segundo grado, sujeto a las excepciones legales enumeradas."},"zh":{"plainSummary":"为实施犯罪采取行动但未完成，或在实施中被拦截或阻止。","degreeContext":"等级依第(4)款取决于目标犯罪，可从一级重罪至二级轻罪，并受列明的特别法例外限制。"}}},
+  {"id":"fl-fs-777-04-2-criminal-solicitation","jurisdiction":"FL","code":"777.04(2)","slug":"fl-fs-777-04-2-criminal-solicitation","name":"criminal solicitation","names":{"es":"solicitación criminal","zh":"教唆犯罪"},"category":"felony","categories":["felony","misdemeanor"],"verifiedMonth":"2026-09","citations":[{"citation":"Fla. Stat. § 777.04(2)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"},{"citation":"Fla. Stat. § 777.04","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"}],"text":{"en":{"plainSummary":"Soliciting another to commit an offense by commanding, encouraging, hiring, or requesting specific conduct constituting the offense or an attempt.","degreeContext":"The grade depends on the solicited offense under subsection (4), ranging from a first-degree felony to a second-degree misdemeanor, subject to listed exceptions."},"es":{"plainSummary":"Solicitar a otra persona que cometa un delito ordenando, alentando, contratando o pidiendo conducta específica que constituya el delito o su tentativa.","degreeContext":"El grado depende del delito solicitado según el apartado (4), desde delito grave de primer grado hasta delito menor de segundo grado, sujeto a excepciones enumeradas."},"zh":{"plainSummary":"通过命令、鼓励、雇用或请求他人实施构成犯罪或未遂的具体行为而教唆犯罪。","degreeContext":"等级依第(4)款取决于所教唆的犯罪，可从一级重罪至二级轻罪，并受列明例外限制。"}}},
+  {"id":"fl-fs-777-04-3-criminal-conspiracy","jurisdiction":"FL","code":"777.04(3)","slug":"fl-fs-777-04-3-criminal-conspiracy","name":"criminal conspiracy","names":{"es":"conspiración criminal","zh":"共谋犯罪"},"category":"felony","categories":["felony","misdemeanor"],"verifiedMonth":"2026-09","citations":[{"citation":"Fla. Stat. § 777.04(3)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"},{"citation":"Fla. Stat. § 777.04","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html"}],"text":{"en":{"plainSummary":"Agreeing, conspiring, combining, or confederating with another person or persons to commit an offense.","degreeContext":"The grade depends on the conspired offense under subsection (4), ranging from a first-degree felony to a second-degree misdemeanor, subject to listed exceptions."},"es":{"plainSummary":"Acordar, conspirar, combinarse o confederarse con otra persona para cometer un delito.","degreeContext":"El grado depende del delito objeto de conspiración según el apartado (4), desde delito grave de primer grado hasta delito menor de segundo grado, sujeto a excepciones enumeradas."},"zh":{"plainSummary":"与一人或多人达成协议、共谋、联合或结盟以实施犯罪。","degreeContext":"等级依第(4)款取决于共谋目标犯罪，可从一级重罪至二级轻罪，并受列明例外限制。"}}},
+  {"id":"fl-fs-782-07-1-manslaughter","jurisdiction":"FL","code":"782.07(1)","slug":"fl-fs-782-07-1-manslaughter","name":"manslaughter","names":{"es":"homicidio involuntario","zh":"过失杀人"},"category":"felony","verifiedMonth":"2026-09","citations":[{"citation":"Fla. Stat. § 782.07(1)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html"}],"text":{"en":{"plainSummary":"Killing a human being by act, procurement, or culpable negligence, without lawful justification under the inventoried chapter 776 provisions and when the killing is neither excusable homicide nor murder.","degreeContext":"A second-degree felony."},"es":{"plainSummary":"Causar la muerte de una persona por acto, procuración o negligencia culpable, sin justificación legal conforme a las disposiciones inventariadas del capítulo 776 y sin que sea homicidio excusable ni asesinato.","degreeContext":"Delito grave de segundo grado."},"zh":{"plainSummary":"通过行为、促成或可责过失致人死亡，且依已清点的第776章规定无合法正当理由，并且不属于可宽宥杀人或谋杀。","degreeContext":"二级重罪。"}}},
+  {"id":"fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult","jurisdiction":"FL","code":"782.07(2)","slug":"fl-fs-782-07-2-aggravated-manslaughter-of-an-elderly-person-or-disabled-adult","name":"aggravated manslaughter of an elderly person or disabled adult","names":{"es":"homicidio involuntario agravado de persona mayor o adulto discapacitado","zh":"对老年人或残障成年人的加重过失杀人"},"category":"felony","verifiedMonth":"2026-09","citations":[{"citation":"Fla. Stat. § 782.07(2)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html"},{"citation":"Fla. Stat. § 825.102","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"}],"text":{"en":{"plainSummary":"Causing the death of an elderly person or disabled adult by culpable negligence under § 825.102(3).","degreeContext":"A first-degree felony."},"es":{"plainSummary":"Causar por negligencia culpable la muerte de una persona mayor o adulto discapacitado conforme al § 825.102(3).","degreeContext":"Delito grave de primer grado."},"zh":{"plainSummary":"依第825.102(3)条以可责过失造成老年人或残障成年人死亡。","degreeContext":"一级重罪。"}}},
+  {"id":"fl-fs-782-07-3-aggravated-manslaughter-of-a-child","jurisdiction":"FL","code":"782.07(3)","slug":"fl-fs-782-07-3-aggravated-manslaughter-of-a-child","name":"aggravated manslaughter of a child","names":{"es":"homicidio involuntario agravado de un menor","zh":"加重儿童过失杀人"},"category":"felony","verifiedMonth":"2026-09","citations":[{"citation":"Fla. Stat. § 782.07(3)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html"},{"citation":"Fla. Stat. § 827.03","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"}],"text":{"en":{"plainSummary":"Causing the death of a person under 18 by culpable negligence under § 827.03(2)(b).","degreeContext":"A first-degree felony."},"es":{"plainSummary":"Causar por negligencia culpable la muerte de una persona menor de 18 años conforme al § 827.03(2)(b).","degreeContext":"Delito grave de primer grado."},"zh":{"plainSummary":"依第827.03(2)(b)条以可责过失造成18岁以下者死亡。","degreeContext":"一级重罪。"}}},
+  {
+    "id":"fl-fs-782-04-5-murder-in-the-third-degree","jurisdiction":"FL","code":"782.04(5)","slug":"fl-fs-782-04-5-murder-in-the-third-degree","name":"murder in the third degree","names":{"es":"homicidio de tercer grado","zh":"三级谋杀"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 782.04(5)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html"},{"citation":"Fla. Stat. § 893.02","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"},{"citation":"Fla. Stat. § 893.135","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html"}],
+    "text":{"en":{"plainSummary":"An unlawful killing without a design to cause death resulting from distribution by a person under 18 of a substance the person knew or reasonably should have known contained statutorily defined dangerous fentanyl or fentanyl analogs, when the substance caused or substantially contributed to the user's death.","degreeContext":"A second-degree felony. This record is limited to the under-18 distribution route in subsection (5)."},"es":{"plainSummary":"Muerte ilícita sin intención de causarla, resultante de la distribución por una persona menor de 18 años de una sustancia que sabía o razonablemente debía saber que contenía fentanilo peligroso o análogos definidos por ley, cuando causó o contribuyó sustancialmente a la muerte.","degreeContext":"Delito grave de segundo grado. Este registro se limita a la vía de distribución por menores de 18 años del apartado (5)."},"zh":{"plainSummary":"未满18岁者分销其知道或理应知道含有法定危险芬太尼或其类似物的物质，该物质导致或实质促成使用者死亡，且行为人无致死意图而造成非法死亡。","degreeContext":"二级重罪。本记录仅限第(5)款未满18岁分销途径。"}}},
+  {
+    "id":"fl-fs-782-04-4-murder-in-the-third-degree","jurisdiction":"FL","code":"782.04(4)","slug":"fl-fs-782-04-4-murder-in-the-third-degree","name":"murder in the third degree","names":{"es":"homicidio de tercer grado","zh":"三级谋杀"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 782.04(4)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html"}],
+    "text":{"en":{"plainSummary":"An unlawful killing, without a design to cause death, committed while perpetrating or attempting a felony other than the felonies expressly excluded in subsection (4).","degreeContext":"A second-degree felony. This record is limited to subsection (4), not the controlled-substance-distribution route in subsection (5)."},"es":{"plainSummary":"Muerte ilícita, sin intención de causarla, cometida al perpetrar o intentar un delito grave distinto de los expresamente excluidos en el apartado (4).","degreeContext":"Delito grave de segundo grado. Este registro se limita al apartado (4), no a la vía de distribución de sustancias controladas del apartado (5)."},"zh":{"plainSummary":"在实施或企图实施第(4)款明确排除罪名以外的重罪时，在无致死意图的情况下造成非法死亡。","degreeContext":"二级重罪。本记录仅限第(4)款，不包括第(5)款受控物质分销途径。"}}},
+  {
+    "id":"fl-fs-794-011-2-sexual-battery","jurisdiction":"FL","code":"794.011(2)","slug":"fl-fs-794-011-2-sexual-battery","name":"Sexual battery","names":{"es":"Agresión sexual","zh":"性侵害"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 794.011(2)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html"},{"citation":"Fla. Stat. § 921.1425","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1425.html"}],
+    "text":{"en":{"plainSummary":"Committing sexual battery upon a child under 12, or injuring the child's sexual organs while attempting sexual battery, under subsection (2). Sexual battery excludes a bona fide medical act.","degreeContext":"A capital felony when the offender is 18 or older; a life felony when the offender is under 18. Capital-case sentencing follows § 921.1425."},"es":{"plainSummary":"Cometer agresión sexual contra un menor de 12 años, o lesionar sus órganos sexuales al intentar cometerla, conforme al apartado (2). Se excluyen los actos médicos de buena fe.","degreeContext":"Es delito capital si el autor tiene 18 años o más, y delito grave de por vida si es menor de 18. La sentencia capital sigue el § 921.1425."},"zh":{"plainSummary":"依第(2)款对12岁以下儿童实施性侵害，或在企图实施性侵害时伤害其性器官。善意医疗行为不属于性侵害。","degreeContext":"行为人年满18岁时为死刑重罪；未满18岁时为终身重罪。死刑案件量刑依第921.1425条进行。"}}},
+  {
+    "id":"fl-fs-777-03-accessory-after-the-fact","jurisdiction":"FL","code":"777.03","slug":"fl-fs-777-03-accessory-after-the-fact","name":"Accessory after the fact","names":{"es":"Encubridor después del hecho","zh":"事后从犯"},"category":"felony","categories":["felony","misdemeanor"],"verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 777.03","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.03.html"},{"citation":"Fla. Stat. § 921.0022","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0022.html"},{"citation":"Fla. Stat. § 921.0023","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0023.html"}],
+    "text":{"en":{"plainSummary":"Knowing that another committed a qualifying felony, maintaining or assisting that person or giving other aid with intent to help the person avoid detection, arrest, trial, or punishment, subject to the statute's specified family and domestic-violence exceptions.","degreeContext":"The grade depends on the underlying felony: first-degree felony for a capital felony; second-degree felony for a life or first-degree felony; third-degree felony for a second-degree felony or a third-degree felony ranked in levels 3-10; and first-degree misdemeanor for a third-degree felony ranked in levels 1-2."},"es":{"plainSummary":"Sabiendo que otra persona cometió un delito grave aplicable, mantenerla, ayudarla o darle otra asistencia con intención de que evite detección, arresto, juicio o castigo, sujeto a las excepciones familiares y de violencia doméstica especificadas.","degreeContext":"El grado depende del delito subyacente: delito grave de primer grado si es capital; de segundo si es de por vida o de primer grado; de tercer grado si el subyacente es de segundo grado o de tercer grado en niveles 3-10; y delito menor de primer grado si está en niveles 1-2."},"zh":{"plainSummary":"明知他人实施符合条件的重罪，仍维持、协助该人或提供其他帮助，意图使其逃避侦查、逮捕、审判或处罚，但受法定家庭关系和家庭暴力例外限制。","degreeContext":"等级取决于基础重罪：基础罪为死刑重罪时属一级重罪；为终身或一级重罪时属二级重罪；为二级重罪或等级3至10的三级重罪时属三级重罪；为等级1至2的三级重罪时属一级轻罪。"}}},
+  {
+    "id":"fl-fs-796-07-prohibiting-prostitution-and-related-acts","jurisdiction":"FL","code":"796.07","slug":"fl-fs-796-07-prohibiting-prostitution-and-related-acts","name":"Prohibiting prostitution and related acts","names":{"es":"Prohibición de la prostitución y actos relacionados","zh":"禁止卖淫及相关行为"},"category":"misdemeanor","categories":["misdemeanor","felony"],"verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 796.07","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.07.html"}],
+    "text":{"en":{"plainSummary":"Prohibits operating a place for prostitution or lewdness; offering or receiving another for it; knowingly transporting, soliciting, inducing, residing or remaining for that purpose; participating in those acts; an adult offering or engaging in prostitution; or purchasing prostitution services.","degreeContext":"For conduct other than soliciting another under subsection (2)(f), the first violation is a second-degree misdemeanor, the second a first-degree misdemeanor, and the third or later a third-degree felony. Subsection (2)(f) starts as a first-degree misdemeanor, rises to a third-degree felony on the second violation and a second-degree felony thereafter; subsection (2)(a) conduct involving a qualifying massage establishment is reclassified one degree higher."},"es":{"plainSummary":"Prohíbe operar un lugar para prostitución o lascivia; ofrecer o recibir a otra persona para ello; transportarla, solicitarla, inducirla, residir o permanecer con ese fin; participar en esos actos; que un adulto ofrezca o ejerza prostitución; o comprar servicios de prostitución.","degreeContext":"Salvo la solicitud del apartado (2)(f), la primera infracción es delito menor de segundo grado, la segunda de primer grado y la tercera o posterior delito grave de tercer grado. El apartado (2)(f) comienza como delito menor de primer grado, sube a delito grave de tercer grado en la segunda y de segundo grado después; el apartado (2)(a) en un establecimiento de masajes aplicable se reclasifica un grado más alto."},"zh":{"plainSummary":"禁止经营用于卖淫或淫秽行为的场所、为此介绍或接收他人、明知而运送、招揽、诱使或为此居留、参与上述行为、成年人提出或从事卖淫，以及购买卖淫服务。","degreeContext":"除第(2)(f)款招揽他人外，首次为二级轻罪，第二次为一级轻罪，第三次及以后为三级重罪。第(2)(f)款首次为一级轻罪，第二次升为三级重罪，以后为二级重罪；第(2)(a)款涉及符合条件的按摩机构时上调一级。"}}},
+  {
+    "id": "fl-fs-784-011-assault",
+    "jurisdiction": "FL",
+    "code": "784.011",
+    "slug": "fl-fs-784-011-assault",
+    "name": "Assault",
+    "names": {
+      "es": "Agresión",
+      "zh": "袭击"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.011",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.011.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Intentionally and unlawfully threatening violence by word or act, with an apparent ability to carry it out, and acting in a way that creates a well-founded fear that the violence is imminent.",
+        "degreeContext": "Ordinarily a second-degree misdemeanor; it is a first-degree misdemeanor when committed in furtherance of a riot or aggravated riot."
+      },
+      "es": {
+        "plainSummary": "Amenazar intencional e ilícitamente con violencia, mediante palabras o actos y con capacidad aparente para realizarla, y actuar de manera que cause un temor fundado de violencia inminente.",
+        "degreeContext": "Por regla general es un delito menor de segundo grado; es de primer grado cuando se comete para promover un motín o motín agravado."
+      },
+      "zh": {
+        "plainSummary": "故意且非法地以言语或行为威胁对他人实施暴力，表面上有能力实施，并采取行为使对方有充分理由担心暴力即将发生。",
+        "degreeContext": "通常为二级轻罪；为推进骚乱或加重骚乱而实施时，为一级轻罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-03-battery",
+    "jurisdiction": "FL",
+    "code": "784.03(1)(a)",
+    "slug": "fl-fs-784-03-battery",
+    "name": "Battery",
+    "names": {
+      "es": "Agresión física",
+      "zh": "殴打"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.03(1)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Actually and intentionally touching or striking another person against that person's will, or intentionally causing bodily harm to another person.",
+        "degreeContext": "Ordinarily a first-degree misdemeanor. It becomes a third-degree felony for a qualifying second or subsequent battery, or when committed in furtherance of a riot or aggravated riot."
+      },
+      "es": {
+        "plainSummary": "Tocar o golpear efectiva e intencionalmente a otra persona contra su voluntad, o causarle intencionalmente daño corporal.",
+        "degreeContext": "Por regla general es un delito menor de primer grado. Se convierte en delito grave de tercer grado por una segunda o posterior agresión física que reúna los requisitos, o cuando se comete para promover un motín o motín agravado."
+      },
+      "zh": {
+        "plainSummary": "违背他人意愿实际且故意触碰或击打该人，或故意造成他人身体伤害。",
+        "degreeContext": "通常为一级轻罪。符合条件的第二次或后续殴打，或为推进骚乱或加重骚乱而实施时，构成三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-048-2-stalking",
+    "jurisdiction": "FL",
+    "code": "784.048(2)",
+    "slug": "fl-fs-784-048-2-stalking",
+    "name": "Stalking",
+    "names": {
+      "es": "Acecho",
+      "zh": "跟踪骚扰"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.048(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.048",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully, maliciously, and repeatedly following, harassing, or cyberstalking another person, using the statute's definitions of harassment, course of conduct, and cyberstalking.",
+        "degreeContext": "A first-degree misdemeanor. Conduct involving a credible threat or one of the statute's other specified circumstances is separately classified as aggravated stalking."
+      },
+      "es": {
+        "plainSummary": "Seguir, hostigar o ciberacosar a otra persona de forma deliberada, maliciosa y repetida, según las definiciones legales de hostigamiento, patrón de conducta y ciberacoso.",
+        "degreeContext": "Es un delito menor de primer grado. La conducta que incluye una amenaza creíble u otra circunstancia especificada por la ley se clasifica por separado como acecho agravado."
+      },
+      "zh": {
+        "plainSummary": "依照该法对骚扰、持续行为和网络跟踪的定义，故意、恶意且反复地跟随、骚扰或网络跟踪他人。",
+        "degreeContext": "属于一级轻罪。涉及可信威胁或法律规定的其他特定情形时，另行归类为加重跟踪骚扰。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-784-048-3-aggravated-stalking",
+    "jurisdiction": "FL",
+    "code": "784.048(3)",
+    "slug": "fl-fs-784-048-3-aggravated-stalking",
+    "name": "Aggravated stalking",
+    "names": {
+      "es": "Acecho agravado",
+      "zh": "加重跟踪骚扰"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 784.048(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.048",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully, maliciously, and repeatedly following, harassing, or cyberstalking another person while making a credible threat to that person.",
+        "degreeContext": "A third-degree felony under subsection (3). Other aggravated-stalking variants in the same section have different required circumstances and are not included in this record."
+      },
+      "es": {
+        "plainSummary": "Seguir, hostigar o ciberacosar deliberada, maliciosa y repetidamente a otra persona mientras se le hace una amenaza creíble.",
+        "degreeContext": "Es un delito grave de tercer grado conforme al apartado (3). Otras variantes de acecho agravado en la misma sección exigen circunstancias distintas y no se incluyen en este registro."
+      },
+      "zh": {
+        "plainSummary": "故意、恶意且反复地跟随、骚扰或网络跟踪他人，同时对该人作出可信威胁。",
+        "degreeContext": "依第(3)款属于三级重罪。同一法条中的其他加重跟踪骚扰类型要求不同情形，不包含在本记录中。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+    "jurisdiction": "FL",
+    "code": "800.03(1)",
+    "slug": "fl-fs-800-03-1-unlawful-exposure-of-sexual-organs",
+    "name": "Unlawful exposure of sexual organs",
+    "names": {
+      "es": "Exposición ilícita de órganos sexuales",
+      "zh": "非法暴露性器官"
+    },
+    "category": "misdemeanor",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 800.03(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 800.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Exposing sexual organs in public, on another person's private premises, or where visible from those premises, or being naked in public, when done in a vulgar or indecent manner. Breastfeeding and mere nudity at a place set apart for that purpose are excluded.",
+        "degreeContext": "A first violation is a first-degree misdemeanor; a second or subsequent violation is a third-degree felony."
+      },
+      "es": {
+        "plainSummary": "Exponer los órganos sexuales en público, en la propiedad privada de otra persona o donde puedan verse desde ella, o estar desnudo en público, de manera vulgar o indecente. Se excluyen la lactancia y la mera desnudez en un lugar destinado para ese fin.",
+        "degreeContext": "La primera infracción es un delito menor de primer grado; la segunda o posterior es un delito grave de tercer grado."
+      },
+      "zh": {
+        "plainSummary": "以粗俗或不雅方式在公共场所、他人私人场所或可从该场所看到的位置暴露性器官，或在公共场所裸体。母乳喂养以及在专门设置的场所仅仅裸体不在此列。",
+        "degreeContext": "首次违反为一级轻罪；第二次或后续违反为三级重罪。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+    "jurisdiction": "FL",
+    "code": "790.23(1)",
+    "slug": "fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful",
+    "name": "Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful",
+    "names": {"es": "Posesión de arma de fuego, municiones o arma eléctrica por persona prohibida", "zh": "受禁止人员持有枪支、弹药或电击武器装置"},
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Fla. Stat. § 790.23(1)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.23.html"}, {"citation": "Fla. Stat. § 790.23", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.23.html"}],
+    "text": {
+      "en": {"plainSummary": "Owning, possessing, controlling, or having custody of a firearm, ammunition, or electric weapon or device, or carrying a listed concealed weapon, after a qualifying felony conviction or delinquency finding. The section excludes a person whose civil rights and firearm authority were restored or whose qualifying record was expunged as specified.", "degreeContext": "Ordinarily a second-degree felony. It is a first-degree felony with a potential term up to life when the statute's prior or current gang-enhancement qualification applies."},
+      "es": {"plainSummary": "Tener, poseer, controlar o custodiar un arma de fuego, municiones o un arma o dispositivo eléctrico, o portar una de las armas ocultas enumeradas, después de una condena por delito grave o determinación de delincuencia juvenil que reúna los requisitos. La sección excluye a quien recuperó sus derechos civiles y autoridad sobre armas o cuyo antecedente fue eliminado según la ley.", "degreeContext": "Por regla general es un delito grave de segundo grado. Es de primer grado, con posible pena de hasta cadena perpetua, cuando se cumple la condición legal de agravación por pandillas previa o actual."},
+      "zh": {"plainSummary": "在有符合条件的重罪定罪或少年违法认定后，拥有、持有、控制或保管枪支、弹药或电击武器装置，或携带法条列明的隐藏武器。依法恢复公民权和枪支权限者，或符合条件的记录已按规定删除者，不适用本条。", "degreeContext": "通常为二级重罪；符合该法规定的既往或现有帮派加重条件时，为一级重罪，并可能判处最高终身监禁。"}
+    }
+  },
+  {
+    "id": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+    "jurisdiction": "FL",
+    "code": "790.221",
+    "slug": "fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty",
+    "name": "Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty",
+    "names": {"es": "Posesión de rifle de cañón corto, escopeta de cañón corto o ametralladora", "zh": "持有短管步枪、短管霰弹枪或机枪"},
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Fla. Stat. § 790.221", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.221.html"}, {"citation": "Fla. Stat. § 790.001", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.001.html"}],
+    "text": {
+      "en": {"plainSummary": "Owning, possessing, controlling, or having custody of an operable, or readily operable, short-barreled rifle, short-barreled shotgun, or machine gun. Antique firearms and firearms lawfully owned and possessed under federal law are excluded.", "degreeContext": "A second-degree felony when the statutory conduct and weapon definitions apply and neither exception applies."},
+      "es": {"plainSummary": "Tener, poseer, controlar o custodiar un rifle de cañón corto, una escopeta de cañón corto o una ametralladora operable o que pueda hacerse operable fácilmente. Se excluyen las armas antiguas y las armas poseídas legalmente conforme a la ley federal.", "degreeContext": "Es un delito grave de segundo grado cuando se cumplen la conducta y las definiciones legales del arma y no se aplica ninguna excepción."},
+      "zh": {"plainSummary": "拥有、持有、控制或保管可操作或可轻易恢复操作的短管步枪、短管霰弹枪或机枪。古董枪支以及依联邦法律合法拥有和持有的枪支不在此列。", "degreeContext": "当行为和武器符合法定定义且两项例外均不适用时，构成二级重罪。"}
+    }
+  },
+  {
+    "id":"fl-fs-800-04-4-lewd-or-lascivious-battery","jurisdiction":"FL","code":"800.04(4)","slug":"fl-fs-800-04-4-lewd-or-lascivious-battery","name":"lewd or lascivious battery","names":{"es":"agresión sexual lasciva","zh":"淫亵殴打"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 800.04(4)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
+    "text":{"en":{"plainSummary":"Engaging in sexual activity with a person age 12 through 15, or encouraging, forcing, or enticing a person under 16 to engage in the listed sexual acts.","degreeContext":"Ordinarily a second-degree felony; it is a first-degree felony when an offender age 18 or older has a prior conviction listed in subsection (4)(c)."},"es":{"plainSummary":"Realizar actividad sexual con una persona de 12 a 15 años, o alentar, forzar o inducir a una persona menor de 16 años a realizar los actos sexuales enumerados.","degreeContext":"Por regla general es un delito grave de segundo grado; es de primer grado si el autor tiene 18 años o más y una condena previa enumerada en el apartado (4)(c)."},"zh":{"plainSummary":"与12至15岁者发生性活动，或鼓励、强迫、诱使16岁以下者参与法条列明的性行为。","degreeContext":"通常为二级重罪；行为人年满18岁且有第(4)(c)款列明的先前定罪时，为一级重罪。"}}},
+  {
+    "id":"fl-fs-800-04-5-lewd-or-lascivious-molestation","jurisdiction":"FL","code":"800.04(5)","slug":"fl-fs-800-04-5-lewd-or-lascivious-molestation","name":"lewd or lascivious molestation","names":{"es":"tocamiento lascivo","zh":"淫亵猥亵"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 800.04(5)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
+    "text":{"en":{"plainSummary":"Intentionally and lewdly touching specified intimate areas, or clothing covering them, of a person under 16, or forcing or enticing that person to touch the perpetrator that way.","degreeContext":"The grade depends on offender and victim ages and qualifying prior convictions: life felony, first-degree felony, second-degree felony, or third-degree felony under subsection (5)."},"es":{"plainSummary":"Tocar intencional y lascivamente las zonas íntimas especificadas, o la ropa que las cubre, de una persona menor de 16 años, o forzarla o inducirla a tocar así al autor.","degreeContext":"El grado depende de las edades del autor y la víctima y de condenas previas: delito grave de por vida, de primer, segundo o tercer grado según el apartado (5)."},"zh":{"plainSummary":"故意以淫亵方式触碰16岁以下者法定的私密部位或其衣物，或强迫、诱使该人以同样方式触碰行为人。","degreeContext":"等级取决于行为人与被害人年龄及符合条件的先前定罪，依第(5)款可为终身重罪或一、二、三级重罪。"}}},
+  {
+    "id":"fl-fs-800-04-6-lewd-or-lascivious-conduct","jurisdiction":"FL","code":"800.04(6)","slug":"fl-fs-800-04-6-lewd-or-lascivious-conduct","name":"lewd or lascivious conduct","names":{"es":"conducta lasciva","zh":"淫亵行为"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 800.04(6)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
+    "text":{"en":{"plainSummary":"Intentionally touching a person under 16 in a lewd or lascivious manner, or soliciting that person to commit a lewd or lascivious act.","degreeContext":"A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18."},"es":{"plainSummary":"Tocar intencionalmente de manera lasciva a una persona menor de 16 años, o solicitarle que cometa un acto lascivo.","degreeContext":"Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18."},"zh":{"plainSummary":"故意以淫亵方式触碰16岁以下者，或请求该人实施淫亵行为。","degreeContext":"行为人年满18岁时为二级重罪；未满18岁时为三级重罪。"}}},
+  {
+    "id":"fl-fs-800-04-7-lewd-or-lascivious-exhibition","jurisdiction":"FL","code":"800.04(7)","slug":"fl-fs-800-04-7-lewd-or-lascivious-exhibition","name":"lewd or lascivious exhibition","names":{"es":"exhibición lasciva","zh":"淫亵展示"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 800.04(7)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html"}],
+    "text":{"en":{"plainSummary":"In the presence of a person under 16, intentionally masturbating, lewdly exposing the genitals, or intentionally committing another listed noncontact sexual act. Breastfeeding is excluded.","degreeContext":"A second-degree felony when the offender is 18 or older; a third-degree felony when the offender is under 18."},"es":{"plainSummary":"En presencia de una persona menor de 16 años, masturbarse intencionalmente, exponer los genitales de manera lasciva o cometer intencionalmente otro acto sexual sin contacto enumerado. Se excluye la lactancia.","degreeContext":"Es delito grave de segundo grado si el autor tiene 18 años o más, y de tercer grado si es menor de 18."},"zh":{"plainSummary":"在16岁以下者面前故意自慰、以淫亵方式暴露生殖器，或故意实施其他列明的非接触性行为。母乳喂养除外。","degreeContext":"行为人年满18岁时为二级重罪；未满18岁时为三级重罪。"}}},
+  {
+    "id":"fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance","jurisdiction":"FL","code":"827.071(2)(a)","slug":"fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance","name":"use of a child in a sexual performance","names":{"es":"uso de un menor en una actuación sexual","zh":"利用儿童进行性表演"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 827.071(2)(a)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"}],
+    "text":{"en":{"plainSummary":"Knowing the performance's character and content, employing, authorizing, or inducing a child to engage in a sexual performance, or as the child's parent, guardian, or custodian consenting to participation.","degreeContext":"A first-degree felony. An offender age 18 or older generally faces a 15-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made."},"es":{"plainSummary":"Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor a participar en una actuación sexual, o consentir como padre, tutor o custodio.","degreeContext":"Delito grave de primer grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 15 años, salvo que el tribunal formule todos los hallazgos del apartado (7)."},"zh":{"plainSummary":"明知表演的性质和内容，雇用、授权或诱使儿童参与性表演，或作为父母、监护人或保管人同意其参与。","degreeContext":"一级重罪。年满18岁的行为人通常面临15年强制最低刑期，但法院作出第(7)款全部认定时可不适用。"}}},
+  {
+    "id":"fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance","jurisdiction":"FL","code":"827.071(2)(b)","slug":"fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance","name":"aggravated use of a child in a sexual performance","names":{"es":"uso agravado de un menor en una actuación sexual","zh":"加重利用儿童进行性表演"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 827.071(2)(b)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"}],
+    "text":{"en":{"plainSummary":"Knowing the performance's character and content, employing, authorizing, or inducing a child under 12 to engage in a sexual performance.","degreeContext":"A life felony. An offender age 18 or older must receive a 25-year mandatory minimum."},"es":{"plainSummary":"Conociendo el carácter y contenido, emplear, autorizar o inducir a un menor de 12 años a participar en una actuación sexual.","degreeContext":"Delito grave de por vida. El autor de 18 años o más debe recibir un mínimo obligatorio de 25 años."},"zh":{"plainSummary":"明知表演的性质和内容，雇用、授权或诱使12岁以下儿童参与性表演。","degreeContext":"终身重罪。年满18岁的行为人必须判处25年强制最低刑期。"}}},
+  {
+    "id":"fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child","jurisdiction":"FL","code":"827.071(3)","slug":"fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child","name":"promoting a sexual performance by a child","names":{"es":"promoción de una actuación sexual de un menor","zh":"推广儿童性表演"},"category":"felony","verifiedMonth":"2026-09",
+    "citations":[{"citation":"Fla. Stat. § 827.071(3)","url":"https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html"}],
+    "text":{"en":{"plainSummary":"Knowing its character and content, producing, directing, or promoting a performance that includes sexual conduct by a child.","degreeContext":"A second-degree felony. An offender age 18 or older generally faces a 5-year mandatory minimum, but the court need not impose it if all subsection (7) findings are made."},"es":{"plainSummary":"Conociendo su carácter y contenido, producir, dirigir o promover una actuación que incluya conducta sexual de un menor.","degreeContext":"Delito grave de segundo grado. El autor de 18 años o más generalmente enfrenta un mínimo obligatorio de 5 años, salvo que el tribunal formule todos los hallazgos del apartado (7)."},"zh":{"plainSummary":"明知其性质和内容，制作、导演或推广包含儿童性行为的表演。","degreeContext":"二级重罪。年满18岁的行为人通常面临5年强制最低刑期，但法院作出第(7)款全部认定时可不适用。"}}}
+]

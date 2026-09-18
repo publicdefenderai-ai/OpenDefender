@@ -1,0 +1,357 @@
+[
+  {
+    "id": "fl-fs-806-13-criminal-mischief",
+    "jurisdiction": "FL",
+    "code": "806.13(1)",
+    "slug": "fl-fs-806-13-criminal-mischief",
+    "name": "Criminal mischief",
+    "names": { "es": "Daño criminal", "zh": "刑事毁损" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 806.13(1)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html" }],
+    "text": {
+      "en": { "plainSummary": "Willfully and maliciously injuring or damaging another person's real or personal property, including by graffiti or vandalism.", "degreeContext": "The degree depends on the amount and consequences of the damage: second- or first-degree misdemeanor at the lower damage levels, and third-degree felony at $1,000 or more or for a qualifying interruption or impairment. A prior conviction can reclassify a lower-level offense." },
+      "es": { "plainSummary": "Dañar intencional y maliciosamente bienes muebles o inmuebles de otra persona, incluso mediante grafiti o vandalismo.", "degreeContext": "El grado depende del monto y las consecuencias del daño: delito menor de segundo o primer grado en los niveles inferiores y delito grave de tercer grado cuando alcanza $1,000 o más o causa una interrupción o afectación que reúne los requisitos. Una condena anterior puede reclasificar un delito de nivel inferior." },
+      "zh": { "plainSummary": "故意且恶意损伤或损坏他人的不动产或动产，包括涂鸦或其他破坏行为。", "degreeContext": "等级取决于损失金额和后果：较低损失分别可构成二级或一级轻罪；损失达到1,000美元或造成符合条件的中断或损害时为三级重罪。既往定罪可使较低等级的罪名升格。" }
+    }
+  },
+  {
+    "id": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
+    "jurisdiction": "FL",
+    "code": "810.09(1)-(2)",
+    "slug": "fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance",
+    "name": "Trespass on property other than structure or conveyance",
+    "names": { "es": "Entrada ilícita en propiedad que no sea una estructura o medio de transporte", "zh": "非法进入非建筑物或交通工具的地产" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 810.09(1)-(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html" },
+      { "citation": "Fla. Stat. § 810.011", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Willfully entering or remaining, without authorization, on property other than a structure or conveyance after the statutory form of notice, or entering specified unenclosed curtilage with intent to commit another offense.", "degreeContext": "Ordinarily a first-degree misdemeanor. It is a third-degree felony when an enumerated condition applies, including being armed or trespassing on certain designated and properly posted sites." },
+      "es": { "plainSummary": "Entrar o permanecer intencionalmente y sin autorización en una propiedad que no sea una estructura o medio de transporte después del aviso exigido por la ley, o entrar en cierto terreno residencial no cercado con intención de cometer otro delito.", "degreeContext": "Por regla general es un delito menor de primer grado. Es delito grave de tercer grado si se cumple una condición enumerada, como estar armado o entrar ilícitamente en ciertos lugares designados y debidamente señalizados." },
+      "zh": { "plainSummary": "在收到法定形式的禁止通知后，未经授权故意进入或停留在建筑物或交通工具以外的地产，或为实施另一罪行而进入特定的未围合住宅附属区域。", "degreeContext": "通常为一级轻罪。符合列明条件时为三级重罪，包括携带武器，或非法进入某些已指定并依法张贴标志的地点。" }
+    }
+  },
+  {
+    "id": "fl-fs-812-015-retail-theft",
+    "jurisdiction": "FL",
+    "code": "812.015(8)-(11)",
+    "slug": "fl-fs-812-015-retail-theft",
+    "name": "Retail theft",
+    "names": { "es": "Hurto minorista", "zh": "零售盗窃" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 812.015(8)-(11)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html" },
+      { "citation": "Fla. Stat. § 812.015", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Committing retail theft under one of the statute's coordinated, repeated, multi-location, aggregated-value, item-count, or group-participation circumstances.", "degreeContext": "Third-degree felony under subsection (8); second-degree felony under subsection (9), including specified repeat or higher-value conduct; and first-degree felony under subsection (11) for two or more prior convictions under subsections (8) or (9), or possession of a firearm during that offense." },
+      "es": { "plainSummary": "Cometer hurto minorista bajo una de las circunstancias legales de coordinación, repetición, múltiples lugares, valor agregado, cantidad de artículos o participación grupal.", "degreeContext": "Delito grave de tercer grado conforme al inciso (8); de segundo grado conforme al inciso (9), incluso por ciertas reincidencias o mayor valor; y de primer grado conforme al inciso (11) por dos o más condenas anteriores bajo los incisos (8) o (9), o por poseer un arma de fuego durante el delito." },
+      "zh": { "plainSummary": "在法条规定的协同行动、重复实施、多地点、金额合并、物品数量或团伙参与等情形下实施零售盗窃。", "degreeContext": "第(8)款规定为三级重罪；第(9)款所列特定再犯或更高金额等情形为二级重罪；如对第(8)或第(9)款已有两次以上定罪，或犯罪时持有枪支，第(11)款规定为一级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-812-019-dealing-in-stolen-property",
+    "jurisdiction": "FL",
+    "code": "812.019",
+    "slug": "fl-fs-812-019-dealing-in-stolen-property",
+    "name": "Dealing in stolen property",
+    "names": { "es": "Comercio con propiedad robada", "zh": "买卖赃物" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 812.019", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.019.html" },
+      { "citation": "Fla. Stat. § 812.012", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Trafficking, or endeavoring to traffic, in property known or reasonably known to be stolen; the section also covers directing or managing a theft and trafficking in that stolen property.", "degreeContext": "Second-degree felony for trafficking or endeavoring to traffic in property the person knows or should know was stolen. First-degree felony when the person initiates, organizes, plans, finances, directs, manages, or supervises the theft and traffics in the stolen property." },
+      "es": { "plainSummary": "Traficar, o intentar traficar, con propiedad que se sabe o se debe saber que fue robada; la sección también abarca dirigir o administrar el hurto y traficar con esa propiedad.", "degreeContext": "Delito grave de segundo grado por traficar o intentar traficar con propiedad que la persona sabe o debe saber que fue robada. Delito grave de primer grado si inicia, organiza, planea, financia, dirige, administra o supervisa el hurto y trafica con la propiedad robada." },
+      "zh": { "plainSummary": "买卖或企图买卖明知或理应知道是赃物的财产；本条也涵盖指挥或管理盗窃并买卖该赃物。", "degreeContext": "买卖或企图买卖行为人明知或理应知道为赃物的财产，构成二级重罪。发起、组织、策划、资助、指挥、管理或监督盗窃并买卖该赃物的，构成一级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
+    "jurisdiction": "FL",
+    "code": "815.06(2)-(3)",
+    "slug": "fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices",
+    "name": "Offense against users of computers, computer systems, computer networks, or electronic devices",
+    "names": { "es": "Delitos contra usuarios de computadoras, sistemas, redes y dispositivos electrónicos", "zh": "侵害计算机、计算机系统、网络和电子设备用户罪" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 815.06(2)-(3)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html" }],
+    "text": {
+      "en": { "plainSummary": "Willfully and knowingly, without authorization or beyond authorization, accessing a computer or electronic device, disrupting data transmission, damaging specified equipment or systems, introducing a computer contaminant, or conducting surveillance through an inherent device feature.", "degreeContext": "Ordinarily a third-degree felony. It is a second-degree felony when subsection (3)(b)'s damage, fraud, public-service, government-operation, or transit conditions apply, and a first-degree felony when the violation endangers human life or disrupts a system affecting medical equipment used for direct care." },
+      "es": { "plainSummary": "Acceder intencionalmente y a sabiendas, sin autorización o excediéndola, a una computadora o dispositivo; interrumpir datos; dañar equipos o sistemas; introducir un contaminante informático; o vigilar mediante una función incorporada del dispositivo.", "degreeContext": "Por regla general es delito grave de tercer grado. Es de segundo grado cuando se cumplen las condiciones del inciso (3)(b) sobre daños, fraude, servicios públicos, operaciones gubernamentales o transporte, y de primer grado si pone en peligro la vida humana o interrumpe un sistema que afecta equipo médico de atención directa." },
+      "zh": { "plainSummary": "故意且明知地在未经授权或超越授权的情况下访问计算机或电子设备、中断数据传输、损坏指定设备或系统、植入计算机污染程序，或利用设备内置功能进行监控。", "degreeContext": "通常为三级重罪。符合第(3)(b)款关于损失、欺诈、公共服务、政府运作或交通系统的条件时为二级重罪；危及生命或中断影响直接医疗设备的系统时为一级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-817-234-insurance-fraud",
+    "jurisdiction": "FL",
+    "code": "817.234(1)(a)",
+    "slug": "fl-fs-817-234-insurance-fraud",
+    "name": "Insurance fraud",
+    "names": { "es": "Fraude de seguros", "zh": "保险欺诈" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 817.234(1)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html" },
+      { "citation": "Fla. Stat. § 817.234", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html" },
+      { "citation": "Fla. Stat. § 812.012", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "With intent to injure, defraud, or deceive an insurer, knowingly presenting, preparing, or concealing material false, incomplete, or misleading information in support of an insurance claim or application, as specified in subsection (1)(a).", "degreeContext": "The value involved controls the grade under subsection (11): third-degree felony below $20,000, second-degree felony from $20,000 to under $100,000, and first-degree felony at $100,000 or more." },
+      "es": { "plainSummary": "Con intención de perjudicar, defraudar o engañar a una aseguradora, presentar o preparar a sabiendas información material falsa, incompleta o engañosa, u ocultarla, en apoyo de una reclamación o solicitud de seguro según el inciso (1)(a).", "degreeContext": "El valor involucrado determina el grado conforme al inciso (11): delito grave de tercer grado por menos de $20,000, de segundo grado desde $20,000 hasta menos de $100,000 y de primer grado por $100,000 o más." },
+      "zh": { "plainSummary": "意图损害、欺诈或欺骗保险人，依第(1)(a)款在保险理赔或申请中明知地提交、制作或隐瞒重大虚假、不完整或误导性信息。", "degreeContext": "第(11)款按涉及财产价值分级：低于20,000美元为三级重罪；20,000美元以上但低于100,000美元为二级重罪；100,000美元以上为一级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+    "jurisdiction": "FL",
+    "code": "817.568(2)",
+    "slug": "fl-fs-817-568-fraudulent-use-of-personal-identification-information",
+    "name": "Fraudulent use of personal identification information",
+    "names": { "es": "Uso fraudulento de información de identificación personal", "zh": "欺诈使用个人身份信息" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 817.568(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
+      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Willfully and without authorization fraudulently using, or possessing with intent to fraudulently use, another person's personal identification information without consent.", "degreeContext": "Third-degree felony under subsection (2)(a). It becomes a second- or first-degree felony under subsections (2)(b)-(c) at the specified benefit, loss, injury, fraud, or victim-count thresholds, with stated mandatory minimum terms." },
+      "es": { "plainSummary": "Usar fraudulentamente, de manera intencional y sin autorización, la información de identificación personal de otra persona sin consentimiento, o poseerla con intención de usarla fraudulentamente.", "degreeContext": "Delito grave de tercer grado conforme al inciso (2)(a). Pasa a segundo o primer grado bajo los incisos (2)(b)-(c) al alcanzar los umbrales especificados de beneficio, pérdida, lesión, fraude o número de víctimas, con penas mínimas obligatorias indicadas." },
+      "zh": { "plainSummary": "故意且未经授权，在未获同意的情况下欺诈使用他人的个人身份信息，或持有该信息并意图欺诈使用。", "degreeContext": "第(2)(a)款为三级重罪。达到第(2)(b)-(c)款规定的收益、损失、伤害、欺诈金额或受害人数门槛时，升为二级或一级重罪，并适用所列强制最低刑期。" }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+    "jurisdiction": "FL",
+    "code": "817.568(4)",
+    "slug": "fl-fs-817-568-harassment-by-use-of-personal-identification-information",
+    "name": "Harassment by use of personal identification information",
+    "names": { "es": "Acoso mediante el uso de información de identificación personal", "zh": "利用个人身份信息进行骚扰" },
+    "category": "misdemeanor",
+    "categories": ["misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 817.568(4)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
+      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Willfully and without authorization possessing, using, or attempting to use a person's personal identification information without consent for the purpose of harassing that person.", "degreeContext": "First-degree misdemeanor. The section separately provides reclassification when a public record facilitates the offense or when specified false representations are used." },
+      "es": { "plainSummary": "Poseer, usar o intentar usar intencionalmente y sin autorización la información de identificación personal de una persona, sin su consentimiento, con el propósito de acosarla.", "degreeContext": "Delito menor de primer grado. La sección dispone por separado la reclasificación cuando un registro público facilita el delito o se usan ciertas representaciones falsas." },
+      "zh": { "plainSummary": "为骚扰某人，故意且未经授权，在未获同意的情况下持有、使用或企图使用该人的个人身份信息。", "degreeContext": "一级轻罪。本条另规定，如公共记录促成犯罪或使用特定虚假身份陈述，罪名可升格。" }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+    "jurisdiction": "FL",
+    "code": "817.568(8)",
+    "slug": "fl-fs-817-568-fraudulent-use-or-possession-with-intent-to-use-personal-identification-information-of-a-deceased-individual-or-dissolved-business-entity",
+    "name": "Fraudulent use or possession with intent to use personal identification information of a deceased individual or dissolved business entity",
+    "names": { "es": "Uso fraudulento o posesión con intención de usar información de identificación de una persona fallecida o entidad disuelta", "zh": "欺诈使用或意图使用而持有死者或已解散企业实体的身份信息" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 817.568(8)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
+      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Willfully and fraudulently using, or possessing with intent to fraudulently use, personal identification information concerning a deceased individual or dissolved business entity.", "degreeContext": "Third-degree felony under subsection (8)(a). Subsections (8)(b)-(c) provide second- and first-degree felony levels at specified value or number thresholds, with stated mandatory minimum terms." },
+      "es": { "plainSummary": "Usar intencional y fraudulentamente, o poseer con intención de usar fraudulentamente, información de identificación personal de una persona fallecida o entidad comercial disuelta.", "degreeContext": "Delito grave de tercer grado conforme al inciso (8)(a). Los incisos (8)(b)-(c) establecen niveles de segundo y primer grado al alcanzar ciertos umbrales de valor o cantidad, con penas mínimas obligatorias indicadas." },
+      "zh": { "plainSummary": "故意且欺诈地使用死者或已解散企业实体的个人身份信息，或持有该信息并意图欺诈使用。", "degreeContext": "第(8)(a)款为三级重罪。达到第(8)(b)-(c)款规定的金额或数量门槛时为二级或一级重罪，并适用所列强制最低刑期。" }
+    }
+  },
+  {
+    "id": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+    "jurisdiction": "FL",
+    "code": "817.568(9)",
+    "slug": "fl-fs-817-568-fraudulent-creation-or-use-or-possession-with-intent-to-fraudulently-use-counterfeit-or-fictitious-personal-identification-information",
+    "name": "Fraudulent creation or use, or possession with intent to fraudulently use, counterfeit or fictitious personal identification information",
+    "names": { "es": "Creación o uso fraudulento, o posesión con intención de usar, información de identificación personal falsificada o ficticia", "zh": "欺诈制作、使用或意图欺诈使用而持有伪造或虚构的个人身份信息" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 817.568(9)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" },
+      { "citation": "Fla. Stat. § 817.568", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Willfully and fraudulently creating, using, or possessing with intent to fraudulently use counterfeit or fictitious personal identification information, with intent to commit or facilitate a fraud on another person.", "degreeContext": "Third-degree felony. The section excludes lawfully authorized governmental investigative, protective, or intelligence activity." },
+      "es": { "plainSummary": "Crear, usar o poseer intencional y fraudulentamente información de identificación personal falsificada o ficticia, con intención de cometer o facilitar un fraude contra otra persona.", "degreeContext": "Delito grave de tercer grado. La sección excluye actividades gubernamentales de investigación, protección o inteligencia legalmente autorizadas." },
+      "zh": { "plainSummary": "故意且欺诈地制作、使用，或意图欺诈使用而持有伪造或虚构的个人身份信息，并意图对他人实施或协助实施欺诈。", "degreeContext": "三级重罪。本条不适用于依法授权的政府调查、保护或情报活动。" }
+    }
+  },
+  {
+    "id": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+    "jurisdiction": "FL",
+    "code": "817.61",
+    "slug": "fl-fs-817-61-fraudulent-use-of-credit-cards",
+    "name": "Fraudulent use of credit cards",
+    "names": { "es": "Uso fraudulento de tarjetas de crédito", "zh": "欺诈使用信用卡" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 817.61", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.61.html" },
+      { "citation": "Fla. Stat. § 817.67", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "With intent to defraud, using a wrongfully obtained, retained, or forged credit card, or falsely representing cardholder status, to obtain money, goods, services, or another thing of value.", "degreeContext": "First-degree misdemeanor when, in six months, the card is used two or fewer times or the value obtained is under $100. Third-degree felony when it is used more than twice or the value is $100 or more." },
+      "es": { "plainSummary": "Con intención de defraudar, usar una tarjeta de crédito obtenida, retenida o falsificada indebidamente, o afirmar falsamente ser su titular, para obtener dinero, bienes, servicios u otra cosa de valor.", "degreeContext": "Delito menor de primer grado cuando, en seis meses, la tarjeta se usa dos veces o menos o el valor obtenido es menor de $100. Delito grave de tercer grado si se usa más de dos veces o el valor es de $100 o más." },
+      "zh": { "plainSummary": "意图欺诈，使用非法取得、保留或伪造的信用卡，或虚假声称持卡人身份，以取得金钱、商品、服务或其他有价物。", "degreeContext": "六个月内使用不超过两次或取得价值低于100美元的，为一级轻罪；使用超过两次或取得价值达到100美元的，为三级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-827-06-nonsupport-of-dependents",
+    "jurisdiction": "FL",
+    "code": "827.06(2)-(3)",
+    "slug": "fl-fs-827-06-nonsupport-of-dependents",
+    "name": "Nonsupport of dependents",
+    "names": { "es": "Incumplimiento de manutención de dependientes", "zh": "不扶养受扶养人" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 827.06(2)-(3)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.06.html" }],
+    "text": {
+      "en": { "plainSummary": "Willfully failing to provide support the person can provide to a child or spouse whom the person knows he or she is legally obligated to support.", "degreeContext": "First-degree misdemeanor ordinarily. It is a third-degree felony for a fourth or subsequent violation, or when the subsection (2) violation involves support owed for more than one year in an amount of at least $5,000." },
+      "es": { "plainSummary": "No proporcionar intencionalmente la manutención que la persona puede aportar a un hijo o cónyuge a quien sabe que está legalmente obligada a mantener.", "degreeContext": "Por regla general es delito menor de primer grado. Es delito grave de tercer grado en la cuarta infracción o una posterior, o si la infracción del inciso (2) incluye manutención adeudada por más de un año por al menos $5,000." },
+      "zh": { "plainSummary": "明知对某子女或配偶负有法定扶养义务且有能力提供扶养，却故意不提供。", "degreeContext": "通常为一级轻罪。第四次或其后违反，或第(2)款违法涉及拖欠超过一年且金额至少5,000美元时，为三级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-828-12-animal-cruelty",
+    "jurisdiction": "FL",
+    "code": "828.12(1)",
+    "slug": "fl-fs-828-12-animal-cruelty",
+    "name": "Animal cruelty",
+    "names": { "es": "Crueldad animal", "zh": "虐待动物" },
+    "category": "misdemeanor",
+    "categories": ["misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 828.12(1)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.12.html" }],
+    "text": {
+      "en": { "plainSummary": "Unnecessarily overloading, overdriving, tormenting, depriving of necessary sustenance or shelter, mutilating, or killing an animal, causing those acts, or carrying an animal cruelly or inhumanely.", "degreeContext": "First-degree misdemeanor, with a fine of not more than $5,000 stated in this subsection, or both the referenced punishment and fine." },
+      "es": { "plainSummary": "Sobrecargar, exigir, atormentar, privar de alimento o refugio necesario, mutilar o matar innecesariamente a un animal; causar esos actos; o transportar al animal de manera cruel o inhumana.", "degreeContext": "Delito menor de primer grado, con multa de hasta $5,000 indicada en este inciso, o tanto la pena referida como la multa." },
+      "zh": { "plainSummary": "不必要地使动物超负荷、过度驱赶、折磨、剥夺必要食物或住所、残害或杀死动物，促使他人实施这些行为，或以残酷、不人道方式运输动物。", "degreeContext": "一级轻罪；本款规定罚款不超过5,000美元，或同时适用所引用的处罚与该罚款。" }
+    }
+  },
+  {
+    "id": "fl-fs-828-12-aggravated-animal-cruelty",
+    "jurisdiction": "FL",
+    "code": "828.12(2)",
+    "slug": "fl-fs-828-12-aggravated-animal-cruelty",
+    "name": "Aggravated animal cruelty",
+    "names": { "es": "Crueldad animal agravada", "zh": "严重虐待动物" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 828.12(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.12.html" }],
+    "text": {
+      "en": { "plainSummary": "Intentionally acting toward an animal, or failing to act while owning or having custody or control of it, resulting in cruel death or excessive or repeated unnecessary pain or suffering, or causing the same.", "degreeContext": "Third-degree felony, with a fine of not more than $10,000 stated in subsection (2), or both. Knowing and intentional torture or torment and repeat convictions trigger additional conditions stated in subsections (2)(a)-(b)." },
+      "es": { "plainSummary": "Actuar intencionalmente contra un animal, o no actuar siendo su dueño o teniendo su custodia o control, causando una muerte cruel o dolor o sufrimiento innecesario excesivo o repetido, o hacer que ocurra.", "degreeContext": "Delito grave de tercer grado, con multa de hasta $10,000 indicada en el inciso (2), o ambos. La tortura o tormento consciente e intencional y las condenas repetidas activan condiciones adicionales de los incisos (2)(a)-(b)." },
+      "zh": { "plainSummary": "故意对动物实施行为，或作为动物所有人、照管人或控制人而不采取行动，导致动物惨死或遭受过度、反复且不必要的痛苦，或促使他人造成同样结果。", "degreeContext": "三级重罪；第(2)款规定罚款不超过10,000美元，或两者并处。明知且故意的酷刑或折磨以及重复定罪会触发第(2)(a)-(b)款的附加条件。" }
+    }
+  },
+  {
+    "id": "fl-fs-831-01-forgery",
+    "jurisdiction": "FL",
+    "code": "831.01",
+    "slug": "fl-fs-831-01-forgery",
+    "name": "Forgery",
+    "names": { "es": "Falsificación", "zh": "伪造文书" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 831.01", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.01.html" }],
+    "text": {
+      "en": { "plainSummary": "Falsely making, altering, forging, or counterfeiting a public record or one of the certificates, legal instruments, financial instruments, receipts, or transportation documents listed in the section, with intent to injure or defraud a person.", "degreeContext": "Third-degree felony." },
+      "es": { "plainSummary": "Hacer, alterar, falsificar o imitar fraudulentamente un registro público o uno de los certificados, instrumentos jurídicos o financieros, recibos o documentos de transporte enumerados en la sección, con intención de perjudicar o defraudar a una persona.", "degreeContext": "Delito grave de tercer grado." },
+      "zh": { "plainSummary": "意图损害或欺诈他人，虚假制作、变造、伪造或仿造公共记录，或本条所列的证书、法律或金融文书、收据或运输凭证。", "degreeContext": "三级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+    "jurisdiction": "FL",
+    "code": "832.05(2)-(4)",
+    "slug": "fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form",
+    "name": "Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form",
+    "names": { "es": "Emisión de cheques, giros y órdenes de tarjeta de débito sin fondos; pena; deber del girado; prueba; costos; formulario de denuncia", "zh": "签发空头支票、汇票及借记卡付款指令；处罚；付款人义务；证据；费用；控告表格" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 832.05(2)-(4)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0832/Sections/0832.05.html" }],
+    "text": {
+      "en": { "plainSummary": "Knowingly issuing or using a check, draft, written order, or debit card without sufficient funds or credit, cashing or depositing an item with intent to defraud, or knowingly obtaining value through such an unfunded instrument, subject to the section's stated exceptions.", "degreeContext": "Conduct under subsection (2) is generally a first-degree misdemeanor, but is a third-degree felony when the instrument is at least $150 and value is received. Subsection (3) is a third-degree felony. Subsection (4) is a first-degree misdemeanor below $150 and a third-degree felony at $150 or more." },
+      "es": { "plainSummary": "Emitir o usar a sabiendas un cheque, giro, orden escrita o tarjeta de débito sin fondos o crédito suficientes; cobrar o depositar un instrumento con intención de defraudar; u obtener valor a sabiendas mediante ese instrumento, sujeto a las excepciones de la sección.", "degreeContext": "El inciso (2) es generalmente delito menor de primer grado, pero es delito grave de tercer grado si el instrumento es de al menos $150 y se recibe algo de valor. El inciso (3) es delito grave de tercer grado. El inciso (4) es delito menor de primer grado por menos de $150 y delito grave de tercer grado por $150 o más." },
+      "zh": { "plainSummary": "明知资金或信用不足而签发或使用支票、汇票、书面付款指令或借记卡；意图欺诈而兑现或存入票据；或明知无资金保障而以该票据取得有价物，但受本条所列例外限制。", "degreeContext": "第(2)款通常为一级轻罪；票面至少150美元且收款人取得有价物时为三级重罪。第(3)款为三级重罪。第(4)款金额低于150美元为一级轻罪，达到150美元为三级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
+    "jurisdiction": "FL",
+    "code": "837.05",
+    "slug": "fl-fs-837-05-false-reports-to-law-enforcement-authorities",
+    "name": "False reports to law enforcement authorities",
+    "names": { "es": "Informes falsos a las autoridades policiales", "zh": "向执法机关作虚假报告" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 837.05", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.05.html" }],
+    "text": {
+      "en": { "plainSummary": "Knowingly giving false information to a law enforcement officer about the alleged commission of a crime.", "degreeContext": "Ordinarily a first-degree misdemeanor. A qualifying prior violation with corroborated oral or written information, or false information concerning an alleged capital felony, is a third-degree felony." },
+      "es": { "plainSummary": "Dar a sabiendas información falsa a un agente policial sobre la supuesta comisión de un delito.", "degreeContext": "Por regla general es delito menor de primer grado. Una infracción anterior que reúna los requisitos, junto con información oral corroborada o escrita, o información falsa sobre un supuesto delito capital, constituye delito grave de tercer grado." },
+      "zh": { "plainSummary": "明知地向执法人员提供有关被指称犯罪的虚假信息。", "degreeContext": "通常为一级轻罪。符合条件的既往违法加上有佐证的口头或书面信息，或涉及被指称死刑重罪的虚假信息，为三级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
+    "jurisdiction": "FL",
+    "code": "843.01",
+    "slug": "fl-fs-843-01-resisting-obstructing-or-opposing-by-offering-or-doing-violence-to-legally-authorized-person-police-canine-or-police-horse",
+    "name": "Resisting, obstructing, or opposing by offering or doing violence to legally authorized person, police canine, or police horse",
+    "names": { "es": "Resistencia, obstrucción u oposición mediante amenaza o violencia contra persona legalmente autorizada, can policial o caballo policial", "zh": "以威胁或实施暴力抗拒、妨碍或阻挠依法授权人员、警犬或警马" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 843.01", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.01.html" },
+      { "citation": "Fla. Stat. § 943.10", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html" },
+      { "citation": "Fla. Stat. § 843.19", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.19.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Knowingly and willfully resisting, obstructing, or opposing a listed officer or legally authorized person performing official duties by offering or doing violence, or doing so by violence toward a police canine or police horse working with such a person.", "degreeContext": "Each form in subsections (1) and (2) is a third-degree felony." },
+      "es": { "plainSummary": "Resistir, obstruir u oponerse consciente e intencionalmente, mediante amenaza o violencia, a un agente enumerado o persona legalmente autorizada que cumple funciones oficiales, o hacerlo con violencia contra un can o caballo policial que trabaja con esa persona.", "degreeContext": "Cada modalidad de los incisos (1) y (2) es delito grave de tercer grado." },
+      "zh": { "plainSummary": "明知且故意地以威胁或实施暴力抗拒、妨碍或阻挠正在履行职务的列明执法人员或依法授权人员，或对与其协同工作的警犬或警马实施该行为。", "degreeContext": "第(1)和第(2)款的每种行为均为三级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
+    "jurisdiction": "FL",
+    "code": "843.15(1)",
+    "slug": "fl-fs-843-15-failure-of-defendant-on-bail-to-appear",
+    "name": "Failure of defendant on bail to appear",
+    "names": { "es": "Incomparecencia de acusado en libertad bajo fianza", "zh": "保释被告未出庭" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [{ "citation": "Fla. Stat. § 843.15(1)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.15.html" }],
+    "text": {
+      "en": { "plainSummary": "After release under chapter 903, willfully failing to appear before a court or judicial officer as required.", "degreeContext": "Third-degree felony when release was connected to a felony charge, or while awaiting sentence or specified post-conviction review. First-degree misdemeanor when release was connected to a misdemeanor charge." },
+      "es": { "plainSummary": "Después de ser puesto en libertad conforme al capítulo 903, no comparecer intencionalmente ante un tribunal o funcionario judicial cuando se exige.", "degreeContext": "Delito grave de tercer grado si la libertad se relacionaba con un cargo grave, o mientras se esperaba sentencia o cierta revisión posterior a la condena. Delito menor de primer grado si se relacionaba con un cargo menor." },
+      "zh": { "plainSummary": "依第903章获释后，故意不按要求在法院或司法官员面前出庭。", "degreeContext": "因重罪指控获释，或在等待判刑或特定定罪后复审期间未出庭，为三级重罪；因轻罪指控获释而未出庭，为一级轻罪。" }
+    }
+  }
+]
