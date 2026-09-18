@@ -28,11 +28,16 @@ import {
 } from '../server/data/public-source-coverage';
 import type { PublicSourceCoverageReport } from '../server/data/public-source-coverage';
 import { storage } from '../server/storage';
+import {
+  OHIO_REVIEWED_BATCH,
+  OHIO_REVIEWED_DEFINITIONS,
+} from '../shared/ohio-reviewed-batch';
 
 // ── Hoisted in-memory persistence for the saved-guidance boundary ─────────────
-const { caseStore, enrichmentUpdateCallbacks } = vi.hoisted(() => ({
+const { caseStore, enrichmentUpdateCallbacks, authoritySelectableIds } = vi.hoisted(() => ({
   caseStore: {} as Record<string, any>,
   enrichmentUpdateCallbacks: [] as Array<() => Promise<void> | void>,
+  authoritySelectableIds: new Set<string>(['ca-gross-vehicular-manslaughter-191-5-a']),
 }));
 
 // ── Required top-level fields the guidance dashboard reads ────────────────────
@@ -162,6 +167,7 @@ vi.mock('../server/services/document-summarizer', () => ({
 vi.mock('../server/services/search-indexer', () => ({
   search: vi.fn().mockResolvedValue([]),
   buildSearchIndex: vi.fn(),
+  addChargesToSearchIndex: vi.fn(),
   getSearchIndexStats: vi.fn().mockReturnValue({ totalDocuments: 0 }),
 }));
 vi.mock('../server/services/locus-lookup', () => ({
@@ -198,10 +204,13 @@ vi.mock('../server/services/cost-tracker', () => ({
   }),
 }));
 vi.mock('../server/services/authority-eligibility', () => ({
-  getCurrentAuthoritySelectableChargeIds: vi.fn().mockResolvedValue(
-    new Set(['ca-gross-vehicular-manslaughter-191-5-a']),
+  getCurrentAuthoritySelectableChargeIds: vi.fn().mockImplementation(async () =>
+    new Set(authoritySelectableIds),
   ),
-  filterAuthorityBackedCharges: vi.fn().mockImplementation((items: Array<{ id: string }>) => items),
+  filterAuthorityBackedCharges: vi.fn().mockImplementation(
+    (items: Array<{ id: string; jurisdiction: string }>, allowed: Set<string>) =>
+      items.filter(item => item.jurisdiction !== 'OH' || allowed.has(item.id)),
+  ),
 }));
 vi.mock('../server/services/captcha-verification', () => ({
   isCaptchaRequired: vi.fn().mockReturnValue(false),
@@ -241,6 +250,141 @@ afterEach(() => {
     delete caseStore[key];
   }
   enrichmentUpdateCallbacks.length = 0;
+  authoritySelectableIds.clear();
+  authoritySelectableIds.add('ca-gross-vehicular-manslaughter-191-5-a');
+});
+
+describe('Ohio localized criminal-charge API', () => {
+  it.each([
+    ['es-MX', 'es'],
+    ['zh-CN', 'zh'],
+  ] as const)('normalizes %s, searches localized text, and retains canonical identity', async (locale, language) => {
+    const row = OHIO_REVIEWED_DEFINITIONS.find(definition =>
+      OHIO_REVIEWED_BATCH.charges.some(charge => charge.id === definition.id),
+    )!;
+    authoritySelectableIds.clear();
+    authoritySelectableIds.add(row.id);
+
+    const localizedName = language === 'es' ? row.names!.es : row.names!.zh;
+    const localizedDescription = row.text[language].plainSummary;
+    const localizedPenalty = row.text[language].degreeContext;
+    const searchText = localizedName.slice(0, Math.min(localizedName.length, 8));
+    const res = await request(testApp)
+      .get('/api/criminal-charges')
+      .query({ jurisdiction: 'OH', language: locale, search: searchText, limit: 500 })
+      .expect(200);
+
+    expect(res.body.charges).toEqual([
+      expect.objectContaining({
+        id: row.id,
+        canonicalName: row.name,
+        name: localizedName,
+        description: localizedDescription,
+        maxPenalty: localizedPenalty,
+      }),
+    ]);
+  });
+
+  it('filters every authority-withheld Ohio row without writing to a database', async () => {
+    const eligibleIds = new Set(OHIO_REVIEWED_BATCH.charges.map(charge => charge.id));
+    const heldIds = OHIO_REVIEWED_DEFINITIONS
+      .filter(row => !eligibleIds.has(row.id))
+      .map(row => row.id);
+    expect(eligibleIds.size).toBe(105);
+    expect(heldIds).toHaveLength(20);
+
+    authoritySelectableIds.clear();
+    for (const id of eligibleIds) authoritySelectableIds.add(id);
+    const res = await request(testApp)
+      .get('/api/criminal-charges')
+      .query({ jurisdiction: 'OH', limit: 500 })
+      .expect(200);
+    const returnedIds = new Set(res.body.charges.map((charge: { id: string }) => charge.id));
+
+    expect([...eligibleIds].every(id => returnedIds.has(id))).toBe(true);
+    expect(heldIds.every(id => !returnedIds.has(id))).toBe(true);
+  });
+
+  it.each(['felony', 'misdemeanor'])('matches Assault under the %s category filter without adding an inoperative caregiver M2', async category => {
+    const assaultId = 'oh-orc-2903-13-assault';
+    const recklessCaregiverId = 'oh-orc-2903-16-recklessly-failing-to-provide-for-a-person-with-a-functional-impairment';
+    authoritySelectableIds.clear();
+    authoritySelectableIds.add(assaultId);
+    authoritySelectableIds.add(recklessCaregiverId);
+    const res = await request(testApp)
+      .get('/api/criminal-charges')
+      .query({ jurisdiction: 'OH', category, limit: 500 })
+      .expect(200);
+    const byId = new Map(res.body.charges.map((charge: { id: string }) => [charge.id, charge]));
+
+    expect(byId.get(assaultId)).toEqual(expect.objectContaining({
+      category: 'felony',
+      categories: ['felony', 'misdemeanor'],
+    }));
+    if (category === 'misdemeanor') {
+      expect(byId.has(recklessCaregiverId)).toBe(false);
+    } else {
+      expect(byId.get(recklessCaregiverId)).toEqual(expect.objectContaining({ category: 'felony' }));
+      expect((byId.get(recklessCaregiverId) as { categories?: string[] }).categories).toBeUndefined();
+    }
+  });
+});
+
+describe('localized site-search API', () => {
+  it.each([
+    ['es-MX', 'es'],
+    ['zh-CN', 'zh'],
+  ] as const)('normalizes %s before localized scoring and rendering data is returned', async (locale, expected) => {
+    const { search } = await import('../server/services/search-indexer');
+    vi.mocked(search).mockReturnValueOnce({
+      query: '本州',
+      results: [{
+        document: {
+          id: 'charge-oh-fixture',
+          type: 'charge',
+          title: 'Canonical English',
+          titleEs: 'Título',
+          titleZh: '中文名称',
+          content: 'English description',
+          contentEs: 'Descripción',
+          contentZh: '中文说明',
+          tags: [],
+          aliases: [],
+          url: '/case-guidance?charge=Canonical%20English',
+        },
+        score: 100,
+        highlights: [{ field: 'content', snippet: expected === 'zh' ? '中文说明' : 'Descripción' }],
+        matchedTerms: ['本州'],
+      }],
+      totalCount: 1,
+      groupedResults: {
+        charge: [],
+        glossary: [],
+        diversion_program: [],
+        expungement: [],
+        legal_resource: [],
+        court: [],
+        mock_qa: [],
+        rights_info: [],
+      },
+      suggestions: [],
+      searchTimeMs: 1,
+    });
+
+    const res = await request(testApp)
+      .get('/api/site-search')
+      .query({ q: '本州', lang: locale, types: 'charge' })
+      .expect(200);
+
+    expect(search).toHaveBeenLastCalledWith(expect.objectContaining({ language: expected }));
+    expect(res.body.results[0].document).toMatchObject({
+      title: 'Canonical English',
+      titleEs: 'Título',
+      titleZh: '中文名称',
+      contentZh: '中文说明',
+    });
+    expect(res.body.results[0].document.url).toContain('Canonical%20English');
+  });
 });
 
 // ── Minimal valid request body (rules route schema) ───────────────────────────

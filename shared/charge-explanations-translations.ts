@@ -16,6 +16,7 @@
 import { OHIO_CHAPTER_BATCH_TRANSLATIONS } from "./ohio-chapter-batch-translations";
 import { OHIO_HAZING_AND_PROTECTION_TRANSLATIONS } from "./ohio-hazing-and-protection-translations";
 import { OHIO_PATIENT_CARE_BATCH } from "./ohio-patient-care";
+import { OHIO_REVIEWED_BATCH } from "./ohio-reviewed-batch";
 
 export interface ChargeExplanationLocale {
   plainSummary: string;
@@ -35,6 +36,7 @@ export const CHARGE_EXPLANATION_TRANSLATIONS: Record<string, ChargeTranslationEn
   ...OHIO_CHAPTER_BATCH_TRANSLATIONS,
   ...OHIO_HAZING_AND_PROTECTION_TRANSLATIONS,
   ...OHIO_PATIENT_CARE_BATCH.translations,
+  ...OHIO_REVIEWED_BATCH.translations,
   "ohio-felonious-assault": {
     es: {
       draft: true, keyTerms: [],

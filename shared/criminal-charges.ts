@@ -152,6 +152,12 @@ export interface CriminalCharge {
   // Spanish translations (optional - populated incrementally)
   nameEs?: string;
   descriptionEs?: string;
+  // Chinese translations (optional - populated incrementally)
+  nameZh?: string;
+  descriptionZh?: string;
+  // Localized penalty summaries. Callers must fall back to maxPenalty when absent.
+  maxPenaltyEs?: string;
+  maxPenaltyZh?: string;
   id: string;
   name: string;
   /**
@@ -167,6 +173,8 @@ export interface CriminalCharge {
   code: string;
   jurisdiction: string;
   category: 'felony' | 'misdemeanor' | 'infraction';
+  /** All broad grading classes available under statute; primary category remains backward-compatible. */
+  categories?: Array<'felony' | 'misdemeanor' | 'infraction'>;
   description: string;
   maxPenalty: string;
   commonDefenses: string[];
@@ -190,6 +198,7 @@ export interface GuidanceChargeClassification {
   id: string;
   name: string;
   classification: CriminalCharge['category'];
+  categories?: CriminalCharge['categories'];
   /** Verified citation for the AI prompt; omitted when the citation is unverified. */
   code?: string;
   /** Dedicated verified citation field consumed by document generators. */
@@ -95043,6 +95052,7 @@ export function classifyChargesForGuidance(
         id: charge.id,
         name: charge.name,
         classification: charge.category,
+        ...(charge.categories ? { categories: charge.categories } : {}),
         ...(verifiedCitation ? { code: verifiedCitation } : {}),
         verifiedCitation,
         title: charge.name,

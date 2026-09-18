@@ -5,12 +5,14 @@ import { OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION } from "@shared/ohio
 import type { AuthorityCatalogRecord } from "../services/authority-source-database";
 import {
   buildOhioChapter2903PilotManifestRecords,
+  buildOhioReviewedManifestRecords,
   OHIO_MANIFEST_SOURCE,
   validateOhioManifestRecord,
   type OhioAuthorityManifest,
 } from "./ohio-source-database-seed";
 import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "./ohio-chapter-2903-source";
 import { isOhioChapter2903PilotFresh } from "./ohio-chapter-2903-refresh";
+import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "./ohio-reviewed-source";
 
 export const OHIO_MANIFEST_PATH = resolve(
   process.cwd(),
@@ -38,7 +40,10 @@ export function loadOhioAuthorityManifest(
     throw new Error("The committed Ohio manifest has an invalid generation timestamp");
   }
   const sourceFirstIds = new Set(
-    OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
+    [
+      ...OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map(record => record.chargeId),
+      ...OHIO_REVIEWED_SOURCES.map(record => record.chargeId),
+    ],
   );
   if (raw.catalogRecords.some((record) => sourceFirstIds.has(record.chargeId))) {
     throw new Error(
@@ -53,6 +58,10 @@ export function loadOhioAuthorityManifest(
       ...(record.additionalEvidence ?? []).map(document => document.retrievedAt.getTime()),
       ...(record.additionalPenalties ?? []).map(document => document.retrievedAt.getTime()),
     ]),
+    ...OHIO_REVIEWED_SOURCES.flatMap(record => [
+      Date.parse(record.offense.retrievedAt),
+      ...record.dependencies.map(document => Date.parse(document.retrievedAt)),
+    ]),
   ));
   // The older generated manifest remains the complete legacy accounting
   // ledger. The bounded pilot is composed here from its separately pinned
@@ -62,16 +71,19 @@ export function loadOhioAuthorityManifest(
     ? generatedAt
     : sourceFirstGeneratedAt;
   const pilotFresh = isOhioChapter2903PilotFresh(now);
+  const reviewedFresh = isOhioReviewedSourceFresh(now);
   const recordsWithPilot = [
     ...raw.catalogRecords,
     ...(pilotFresh
       ? buildOhioChapter2903PilotManifestRecords(manifestGeneratedAt)
       : []),
+    ...(reviewedFresh ? buildOhioReviewedManifestRecords(manifestGeneratedAt) : []),
   ];
   const expectedIds = criminalCharges
     .filter((charge) =>
       charge.jurisdiction === "OH" &&
-      (pilotFresh || !sourceFirstIds.has(charge.id))
+      (pilotFresh || !OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.some(record => record.chargeId === charge.id)) &&
+      (reviewedFresh || !OHIO_REVIEWED_SOURCES.some(record => record.chargeId === charge.id))
     )
     .map((charge) => charge.id);
   const ids = new Set(recordsWithPilot.map((record) => record.chargeId));

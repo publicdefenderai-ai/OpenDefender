@@ -9,9 +9,17 @@ import {
   buildOhioSourceDatabaseSeed,
   type OhioAuthorityManifest,
 } from "../data/ohio-source-database-seed";
+import {
+  isOhioReviewedSourceFresh,
+  OHIO_REVIEWED_SOURCES,
+} from "../data/ohio-reviewed-source";
 
 export async function getCurrentOhioSelectableChargeIds(): Promise<Set<string>> {
-  return getCurrentAuthoritySelectableChargeIds("OH");
+  const ids = await getCurrentAuthoritySelectableChargeIds("OH");
+  if (!isOhioReviewedSourceFresh()) {
+    for (const source of OHIO_REVIEWED_SOURCES) ids.delete(source.chargeId);
+  }
+  return ids;
 }
 
 export async function seedOhioSourceDatabase(
@@ -25,6 +33,8 @@ export async function getOhioSourceDatabaseStatus() {
 }
 
 export async function getOhioChargeProvenance(chargeId: string) {
+  if (OHIO_REVIEWED_SOURCES.some(source => source.chargeId === chargeId) &&
+      !isOhioReviewedSourceFresh()) return null;
   return getAuthorityChargeProvenance("OH", chargeId);
 }
 

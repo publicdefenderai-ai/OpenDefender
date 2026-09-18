@@ -10,6 +10,7 @@ export type GuidanceChargeClassification = {
   id?: string;
   name: string;
   classification: string;
+  categories?: CriminalCharge["categories"];
   code: string;
 };
 

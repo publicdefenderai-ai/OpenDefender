@@ -3,6 +3,8 @@
  * (roadmap, chat, PDF, and browser print) receives this normalized shape.
  * Keep generation-specific prompt details outside this file.
  */
+import type { CriminalCharge } from "./criminal-charges";
+
 export type GuidanceSectionId =
   | 'criticalAlerts' | 'overview' | 'charges' | 'immediateActions' | 'timeline'
   | 'deadlines' | 'rights' | 'nextSteps' | 'evidenceToGather' | 'warnings'
@@ -80,7 +82,14 @@ export interface GuidanceViewModel {
   courtPreparation: string[];
   avoidActions: string[];
   timeline: GuidanceTimelineItem[];
-  chargeClassifications: Array<{ id?: string; name: string; classification: string; code: string; verifiedCitation?: string | null }>;
+  chargeClassifications: Array<{
+    id?: string;
+    name: string;
+    classification: string;
+    categories?: CriminalCharge["categories"];
+    code: string;
+    verifiedCitation?: string | null;
+  }>;
   mockQA: MockQAItem[];
   collateralConsequences: CollateralConsequence[];
   uncertainties: GuidanceUncertainty[];

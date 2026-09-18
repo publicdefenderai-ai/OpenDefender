@@ -1,0 +1,380 @@
+[
+  {
+    "id": "oh-orc-1315-55-money-laundering", "jurisdiction": "OH", "code": "1315.55", "slug": "ohio-reviewed-1315-55-money-laundering", "name": "Money laundering", "names": {"es": "Lavado de dinero", "zh": "洗钱"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 1315.55", "url": "https://codes.ohio.gov/ohio-revised-code/section-1315.55"}, {"citation": "Ohio Rev. Code Ann. § 1315.99(C)", "url": "https://codes.ohio.gov/ohio-revised-code/section-1315.99"}],
+    "text": {
+      "en": {"plainSummary": "This covers conducting or attempting specified transactions while knowing property is unlawful proceeds, intending to further or conceal corrupt activity or evade reporting; knowingly handling more than $10,000 in corrupt-activity proceeds; or handling property represented by authorized law enforcement as such proceeds with a listed unlawful intent.", "degreeContext": "Third-degree felony (F3). The sentencing court may also impose the special additional fine authorized by §1315.55(B), measured from the transaction property; it is not an automatic fine."},
+      "es": {"plainSummary": "Abarca realizar o intentar transacciones especificadas sabiendo que los bienes son producto de actividad ilícita, con intención de promover u ocultar actividad corrupta o eludir informes; manejar a sabiendas más de $10,000 de producto de actividad corrupta; o manejar con una intención ilícita enumerada bienes que agentes autorizados representan como tal producto.", "degreeContext": "Delito grave de tercer grado (F3). El tribunal sentenciador también puede imponer la multa adicional especial autorizada por §1315.55(B), calculada según los bienes de la transacción; no es automática."},
+      "zh": {"plainSummary": "本罪包括：明知财产属于非法活动所得，仍实施或企图实施特定交易，意图推动或掩饰腐败活动或逃避申报；明知而处理价值超过10,000美元的腐败活动所得；或对经授权执法人员声称属于该类所得的财产，以法条列明的非法意图进行交易。", "degreeContext": "三级重罪（F3）。量刑法院还可依第1315.55(B)款，按交易所涉财产价值判处特别附加罚金；该罚金并非自动适用。"}
+    }
+  },
+  {
+    "id": "oh-orc-1533-08-failure-to-carry-or-exhibit-wild-animal-permit", "jurisdiction": "OH", "code": "1533.08", "slug": "ohio-reviewed-1533-08-failure-to-carry-or-exhibit-wild-animal-permit", "name": "Failure to carry or exhibit wild animal permit", "names": {"es": "No portar o exhibir un permiso de animales silvestres", "zh": "未携带或出示野生动物许可证"}, "category": "misdemeanor", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 1533.08", "url": "https://codes.ohio.gov/ohio-revised-code/section-1533.08"}, {"citation": "Ohio Rev. Code Ann. § 1533.99(F)", "url": "https://codes.ohio.gov/ohio-revised-code/section-1533.99"}],
+    "text": {
+      "en": {"plainSummary": "A holder collecting or possessing legally protected wild animals, nests, or eggs under this permit must carry it and show it on demand to a peace officer or the person lawfully controlling the land. Failing to carry or show it is the offense.", "degreeContext": "Fourth-degree misdemeanor (M4) under Chapter 1533's catch-all penalty because §1533.08 supplies no different grade."},
+      "es": {"plainSummary": "Quien recolecta o posee animales silvestres, nidos o huevos legalmente protegidos bajo este permiso debe portarlo y mostrarlo cuando lo exija un agente del orden o quien controle legalmente el terreno. No portarlo o mostrarlo constituye la infracción.", "degreeContext": "Delito menor de cuarto grado (M4), conforme a la pena supletoria del capítulo 1533 porque §1533.08 no establece otro grado."},
+      "zh": {"plainSummary": "许可证持有人依证采集或持有受法律保护的野生动物、巢或卵时，必须随身携证，并应治安官员或合法控制土地者要求出示。未携带或未出示即构成本项行为。", "degreeContext": "四级轻罪（M4）；因第1533.08条未另定等级，适用第1533章的兜底处罚。"}
+    }
+  },
+  {
+    "id": "oh-orc-2705-02-contempt-under-r-c-2705-02", "jurisdiction": "OH", "code": "2705.02", "slug": "ohio-reviewed-2705-02-contempt-under-r-c-2705-02", "name": "Contempt under R.C. 2705.02", "names": {"es": "Desacato conforme a R.C. 2705.02", "zh": "《修订法典》第2705.02条规定的藐视法庭"}, "category": "infraction", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2705.02", "url": "https://codes.ohio.gov/ohio-revised-code/section-2705.02"}, {"citation": "Ohio Rev. Code Ann. § 2705.05", "url": "https://codes.ohio.gov/ohio-revised-code/section-2705.05"}],
+    "text": {
+      "en": {"plainSummary": "This is a civil-contempt accounting label for the acts listed in §2705.02(A)–(H), including disobeying a lawful court order, disrupting proceedings, refusing to testify when lawfully required, and specified interference with court process. It is not an ordinary criminal offense grade.", "degreeContext": "The special §2705.05 ladder applies: up to $250 and/or 30 days for a first offense, $500 and/or 60 days for a second, and $1,000 and/or 90 days for a third or later offense. These are contempt sanctions, not M1–M4 grades."},
+      "es": {"plainSummary": "Esta es una etiqueta contable de desacato civil para los actos de §2705.02(A)–(H), entre ellos desobedecer una orden judicial lícita, perturbar actuaciones, negarse a declarar cuando la ley lo exige e interferencias especificadas con el proceso judicial. No tiene un grado penal ordinario.", "degreeContext": "Rige la escala especial de §2705.05: hasta $250 y/o 30 días por la primera infracción, $500 y/o 60 días por la segunda y $1,000 y/o 90 días por la tercera o posterior. Son sanciones por desacato, no grados M1–M4."},
+      "zh": {"plainSummary": "这是用于记录第2705.02(A)至(H)款所列行为的民事藐视法庭标签，包括不服从合法法院命令、扰乱诉讼程序、依法应作证而拒绝，以及法条列明的妨碍法院程序行为；它不是按普通刑事罪名分级的罪行。", "degreeContext": "适用第2705.05条特别阶梯：首次最高罚250美元和/或拘押30天；第二次最高500美元和/或60天；第三次及以后最高1,000美元和/或90天。这是藐视法庭制裁，不是M1至M4轻罪等级。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-06-aggravated-vehicular-homicide", "jurisdiction": "OH", "code": "2903.06", "slug": "ohio-reviewed-2903-06-aggravated-vehicular-homicide", "name": "Aggravated vehicular homicide", "names": {"es": "Homicidio vehicular agravado", "zh": "加重车辆杀人"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.06(A)(1)–(2), (B), (E)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.06"}],
+    "text": {
+      "en": {"plainSummary": "Causing another's death while operating or participating in operating a vehicle, motorcycle, watercraft, aircraft, locomotive, or other covered transport: (A)(1) while committing the listed impaired-operation offense, or (A)(2) recklessly. The particular route matters.", "degreeContext": "The impaired-operation route is a second-degree felony (F2), elevated to first-degree felony (F1) by the exact prior-offense, license-status, prior-suspension, or three-or-more OVI conditions in (B)(2). The reckless route is a third-degree felony (F3), elevated to F2 by the specified license status or qualifying prior traffic homicide/assault. Mandatory terms and license suspensions in (B) and (E) apply only when their stated conditions are met."},
+      "es": {"plainSummary": "Causar la muerte de otra persona al operar o participar en la operación de un vehículo, motocicleta, embarcación, aeronave, locomotora u otro transporte cubierto: (A)(1) mientras se comete la infracción enumerada de operación bajo efectos, o (A)(2) temerariamente. La vía concreta importa.", "degreeContext": "La vía por operación bajo efectos es delito grave de segundo grado (F2), elevado a delito grave de primer grado (F1) por las condiciones exactas de antecedentes, licencia, suspensión previa o tres o más OVI de (B)(2). La vía temeraria es delito grave de tercer grado (F3), elevado a F2 por el estado de licencia o antecedente calificado de homicidio/agresión vial. Los términos obligatorios y suspensiones de (B) y (E) rigen solo si se cumplen sus condiciones."},
+      "zh": {"plainSummary": "操作或参与操作车辆、摩托车、船舶、航空器、机车或其他适用交通工具时致人死亡，且属于：(A)(1)同时实施法条列明的受影响驾驶行为，或(A)(2)轻率行事。具体行为路径决定分级。", "degreeContext": "受影响驾驶路径为二级重罪（F2）；符合(B)(2)款所列既往犯罪、驾照状态、既往吊照或三次以上OVI条件时升为一级重罪（F1）。轻率路径为三级重罪（F3）；符合特定驾照状态或既往交通杀人/伤害罪条件时升为F2。(B)、(E)款的强制刑期和吊照仅在各自条件满足时适用。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-06-vehicular-homicide", "jurisdiction": "OH", "code": "2903.06", "slug": "ohio-reviewed-2903-06-vehicular-homicide", "name": "Vehicular homicide", "names": {"es": "Homicidio vehicular", "zh": "车辆杀人"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.06(A)(3), (C), (E)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.06"}],
+    "text": {
+      "en": {"plainSummary": "Negligently causing another's death while operating or participating in operating a covered vehicle, watercraft, aircraft, locomotive, or other transport.", "degreeContext": "Normally a first-degree misdemeanor (M1). It becomes a fourth-degree felony (F4) if the person was under a driving suspension/cancellation, lacked a valid license and was ineligible to renew without examination, or had a qualifying prior traffic homicide, manslaughter, or assault conviction or plea. Section 2903.06(E) requires custody only in its stated circumstances."},
+      "es": {"plainSummary": "Causar por negligencia la muerte de otra persona al operar o participar en la operación de un vehículo, embarcación, aeronave, locomotora u otro transporte cubierto.", "degreeContext": "Normalmente delito menor de primer grado (M1). Pasa a delito grave de cuarto grado (F4) si conducía bajo suspensión/cancelación, carecía de licencia válida y no podía renovarla sin examen, o tenía condena o admisión previa calificada por homicidio, muerte o agresión vial. §2903.06(E) exige privación de libertad solo en sus circunstancias expresas."},
+      "zh": {"plainSummary": "操作或参与操作适用车辆、船舶、航空器、机车或其他交通工具时，因疏忽致人死亡。", "degreeContext": "通常为一级轻罪（M1）。如行为人当时驾照被吊销/撤销，或无有效驾照且未经考试不得续领，或曾因符合条件的交通杀人、过失杀人或伤害罪定罪或认罪，则升为四级重罪（F4）。第2903.06(E)款仅在其明定情形下要求拘禁。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-06-vehicular-manslaughter", "jurisdiction": "OH", "code": "2903.06", "slug": "ohio-reviewed-2903-06-vehicular-manslaughter", "name": "Vehicular manslaughter", "names": {"es": "Homicidio vehicular culposo", "zh": "车辆过失杀人"}, "category": "misdemeanor", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.06(A)(4), (D)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.06"}],
+    "text": {
+      "en": {"plainSummary": "Causing another's death while committing a qualifying minor-misdemeanor traffic offense while operating or participating in operating a covered vehicle or other transport.", "degreeContext": "Normally a second-degree misdemeanor (M2). It becomes a first-degree misdemeanor (M1) for the stated suspension/cancellation condition, the combined no-valid-license and renewal-ineligibility condition, or a qualifying prior traffic homicide, manslaughter, or assault conviction or plea."},
+      "es": {"plainSummary": "Causar la muerte de otra persona mientras se comete una infracción de tránsito calificada como delito menor leve al operar o participar en la operación de un vehículo u otro transporte cubierto.", "degreeContext": "Normalmente delito menor de segundo grado (M2). Pasa a delito menor de primer grado (M1) por la suspensión/cancelación indicada, por carecer de licencia válida y además no poder renovarla sin examen, o por condena o admisión previa calificada de homicidio, muerte o agresión vial."},
+      "zh": {"plainSummary": "操作或参与操作适用车辆或其他交通工具时，在实施符合条件的微轻交通违法过程中致人死亡。", "degreeContext": "通常为二级轻罪（M2）。如存在法条所述吊销/撤销状态、同时无有效驾照且未经考试不得续领，或曾因符合条件的交通杀人、过失杀人或伤害罪定罪或认罪，则升为一级轻罪（M1）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-08-aggravated-vehicular-assault", "jurisdiction": "OH", "code": "2903.08", "slug": "ohio-reviewed-2903-08-aggravated-vehicular-assault", "name": "Aggravated vehicular assault", "names": {"es": "Agresión vehicular agravada", "zh": "加重车辆伤害"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.08(A)(1), (B), (D)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.08"}],
+    "text": {
+      "en": {"plainSummary": "Causing serious physical harm to another while operating or participating in operating covered transport while committing one of the impaired-operation offenses listed in (A)(1). This is not a label for generic reckless driving.", "degreeContext": "Third-degree felony (F3), elevated to second-degree felony (F2) by the exact qualifying prior-offense, license-status, prior-suspension, or three-or-more OVI conditions in (B). Section 2903.08(D) imposes a mandatory prison term and license consequences as specified."},
+      "es": {"plainSummary": "Causar daño físico grave a otra persona al operar o participar en transporte cubierto mientras se comete una de las infracciones enumeradas de operación bajo efectos en (A)(1). No es una etiqueta para conducción temeraria genérica.", "degreeContext": "Delito grave de tercer grado (F3), elevado a delito grave de segundo grado (F2) por las condiciones exactas de antecedentes, licencia, suspensión previa o tres o más OVI de (B). §2903.08(D) impone prisión obligatoria y consecuencias de licencia según lo especificado."},
+      "zh": {"plainSummary": "操作或参与操作适用交通工具时，同时实施(A)(1)款所列受影响驾驶罪，并造成他人严重身体伤害。本罪名不能泛指一般轻率驾驶。", "degreeContext": "三级重罪（F3）；符合(B)款所列既往犯罪、驾照状态、既往吊照或三次以上OVI条件时升为二级重罪（F2）。第2903.08(D)款按其规定要求强制监禁并产生驾照后果。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-08-vehicular-assault", "jurisdiction": "OH", "code": "2903.08", "slug": "ohio-reviewed-2903-08-vehicular-assault", "name": "Vehicular assault", "names": {"es": "Agresión vehicular", "zh": "车辆伤害"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.08(A)(2)–(3), (C)–(E)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.08"}],
+    "text": {
+      "en": {"plainSummary": "This covers causing serious physical harm through reckless operation under (A)(2), or causing serious physical harm through the specified speeding violation in a properly signed construction zone under (A)(3). The routes have different grades.", "degreeContext": "The reckless route is a fourth-degree felony (F4), elevated to third-degree felony (F3) by the specified license status or qualifying prior traffic offense. The construction-zone route is a first-degree misdemeanor (M1), elevated to F4 under its specified license/prior conditions. Mandatory terms in (D) and the sign condition in (E) must be applied as written."},
+      "es": {"plainSummary": "Abarca causar daño físico grave mediante operación temeraria conforme a (A)(2), o mediante la infracción de velocidad especificada en una zona de construcción debidamente señalizada conforme a (A)(3). Las vías tienen grados distintos.", "degreeContext": "La vía temeraria es delito grave de cuarto grado (F4), elevado a delito grave de tercer grado (F3) por el estado de licencia o antecedente vial calificado. La vía de zona de construcción es delito menor de primer grado (M1), elevado a F4 bajo sus condiciones de licencia/antecedentes. Rigen literalmente los términos obligatorios de (D) y el requisito de señales de (E)."},
+      "zh": {"plainSummary": "本罪包括：(A)(2)款以轻率方式操作并造成严重身体伤害；或(A)(3)款在依法设置标志的施工区实施特定超速行为并造成严重身体伤害。两条路径等级不同。", "degreeContext": "轻率路径为四级重罪（F4），符合特定驾照状态或既往交通犯罪条件时升为三级重罪（F3）。施工区路径为一级轻罪（M1），符合其驾照/前科条件时升为F4；(D)款强制刑期和(E)款标志条件须按原文适用。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-13-assault", "jurisdiction": "OH", "code": "2903.13", "slug": "ohio-reviewed-2903-13-assault", "name": "Assault", "names": {"es": "Agresión", "zh": "伤害"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.13", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.13"}, {"citation": "Ohio Admin. Code 3701-12-01(M)", "url": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01"}],
+    "text": {
+      "en": {"plainSummary": "Knowingly causing or attempting physical harm to another or another's unborn, or recklessly causing serious physical harm. Section 2903.13(C) has victim- and duty-specific branches. Under the recorded reviewer interpretation, the cited HMO definition informs the hospital-related branch, but only when that branch's hospital, victim, duty/location, and other conditions are all met—not for every HMO employee.", "degreeContext": "Normally a first-degree misdemeanor (M1). The statute provides different felony levels and custody rules for specified protected victims, duties, locations, harms, and prior convictions; the applicable (C) branch must be identified rather than assigning a blanket maximum grade."},
+      "es": {"plainSummary": "Causar o intentar causar a sabiendas daño físico a otra persona o a su nonato, o causar temerariamente daño físico grave. §2903.13(C) contiene ramas según víctima y función. Según la interpretación registrada del revisor, la definición citada de HMO informa la rama hospitalaria, pero solo si se cumplen todas sus condiciones de hospital, víctima, función/lugar y demás; no para todo empleado de HMO.", "degreeContext": "Normalmente delito menor de primer grado (M1). La ley dispone distintos grados graves y reglas de privación de libertad para víctimas, funciones, lugares, daños y antecedentes especificados; debe identificarse la rama (C) aplicable, no atribuir un máximo general."},
+      "zh": {"plainSummary": "明知地造成或企图造成他人或其未出生胎儿身体伤害，或轻率地造成严重身体伤害。第2903.13(C)款按受害人及职务设置不同分支。依记录的审阅者解释，所引HMO定义可用于医院相关分支，但必须同时满足该分支的医院、受害人、履职/地点及其他条件；不能覆盖所有HMO雇员。", "degreeContext": "通常为一级轻罪（M1）。法条针对特定受保护受害人、职务、地点、伤害及前科规定不同重罪等级和拘禁规则；须确定具体(C)款分支，不得一概采用最高等级。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-16-knowingly-failing-to-provide-for-a-person-with-a-functional-impairment", "jurisdiction": "OH", "code": "2903.16", "slug": "ohio-reviewed-2903-16-knowingly-failing-to-provide-for-a-person-with-a-functional-impairment", "name": "Knowingly failing to provide for a person with a functional impairment", "names": {"es": "Omisión consciente de proveer a una persona con impedimento funcional", "zh": "明知而未照护功能障碍者"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.16(A), (C)(1), (D)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.16"}],
+    "text": {
+      "en": {"plainSummary": "A caretaker knowingly fails to provide treatment, care, goods, or services necessary to maintain the health or safety of a person with a functional impairment, and physical or serious physical harm results. The statutory caretaker and impairment definitions and exclusions control.", "degreeContext": "First-degree misdemeanor (M1) when physical harm results; fourth-degree felony (F4) when serious physical harm results. Any statutory affirmative defense must remain available."},
+      "es": {"plainSummary": "Un cuidador omite a sabiendas tratamiento, atención, bienes o servicios necesarios para mantener la salud o seguridad de una persona con impedimento funcional, y causa daño físico o daño físico grave. Rigen las definiciones y exclusiones legales de cuidador e impedimento.", "degreeContext": "Delito menor de primer grado (M1) si resulta daño físico; delito grave de cuarto grado (F4) si resulta daño físico grave. Se conserva toda defensa afirmativa legal."},
+      "zh": {"plainSummary": "照护者明知而不提供维持功能障碍者健康或安全所必需的治疗、照护、物品或服务，并导致身体伤害或严重身体伤害。适用法定照护者、功能障碍定义及排除规定。", "degreeContext": "造成身体伤害为一级轻罪（M1）；造成严重身体伤害为四级重罪（F4）。法定积极抗辩仍须保留。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-16-recklessly-failing-to-provide-for-a-person-with-a-functional-impairment", "jurisdiction": "OH", "code": "2903.16", "slug": "ohio-reviewed-2903-16-recklessly-failing-to-provide-for-a-person-with-a-functional-impairment", "name": "Recklessly failing to provide for a person with a functional impairment", "names": {"es": "Omisión temeraria de proveer a una persona con impedimento funcional", "zh": "轻率地未照护功能障碍者"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.16(B), (C)(2), (D)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.16"}],
+    "text": {
+      "en": {"plainSummary": "A caretaker recklessly fails to provide treatment, care, goods, or services necessary to maintain a functionally impaired person's health or safety, and serious physical harm results. Definitions, exclusions, and affirmative defenses remain applicable.", "degreeContext": "Fourth-degree felony (F4) under the recorded reviewer interpretation: every (B) violation already requires serious physical harm, so (C)(2)'s serious-harm condition is met. The statute's literal second-degree-misdemeanor (M2) recital is preserved in the source but is not treated as an operative outcome for this branch."},
+      "es": {"plainSummary": "Un cuidador omite temerariamente tratamiento, atención, bienes o servicios necesarios para la salud o seguridad de una persona con impedimento funcional, y causa daño físico grave. Siguen rigiendo definiciones, exclusiones y defensas afirmativas.", "degreeContext": "Delito grave de cuarto grado (F4) según la interpretación registrada: toda infracción de (B) ya exige daño físico grave, por lo que se cumple la condición de (C)(2). La mención literal a delito menor de segundo grado (M2) se conserva en la fuente, pero no como resultado operativo de esta rama."},
+      "zh": {"plainSummary": "照护者轻率地不提供维持功能障碍者健康或安全所必需的治疗、照护、物品或服务，并导致严重身体伤害。定义、排除和积极抗辩仍适用。", "degreeContext": "依记录的审阅者解释为四级重罪（F4）：每一项(B)款违法本已要求严重身体伤害，故满足(C)(2)款条件。法条原文虽提到二级轻罪（M2），来源中仍予保留，但不作为本分支可适用结果。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-211-menacing-by-stalking", "jurisdiction": "OH", "code": "2903.211", "slug": "ohio-reviewed-2903-211-menacing-by-stalking", "name": "Menacing by stalking", "names": {"es": "Amenazas mediante acoso reiterado", "zh": "跟踪威胁"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.211", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.211"}],
+    "text": {
+      "en": {"plainSummary": "Through a statutory pattern of conduct, knowingly causing another to believe the offender will cause physical harm or mental distress; knowingly causing specified mental distress; or, with sexual motivation, trespassing or using an electronic method to cause a reasonable fear of physical harm or mental distress. Statutory electronic-access exceptions and definitions apply.", "degreeContext": "Normally a first-degree misdemeanor (M1). The exact listed conditions—including specified prior offenses, threats of harm, trespass, weapon, protected victim, sexual motivation, or offender history—can make it a fourth-degree felony (F4). The child-services-employee branch is a fifth-degree felony (F5), or F4 under its stated aggravators."},
+      "es": {"plainSummary": "Mediante un patrón legal de conducta, causar a sabiendas que otra persona crea que sufrirá daño físico o angustia mental; causar a sabiendas la angustia mental especificada; o, con motivación sexual, entrar sin permiso o usar medios electrónicos para causar temor razonable de daño físico o angustia. Rigen excepciones electrónicas y definiciones legales.", "degreeContext": "Normalmente delito menor de primer grado (M1). Las condiciones exactas enumeradas—incluidos ciertos antecedentes, amenazas, intrusión, arma, víctima protegida, motivación sexual o historial—pueden convertirlo en delito grave de cuarto grado (F4). La rama de empleado de servicios infantiles es delito grave de quinto grado (F5), o F4 con sus agravantes."},
+      "zh": {"plainSummary": "通过法定连续行为，明知地使他人相信行为人将造成身体伤害或精神痛苦；明知地造成特定精神痛苦；或出于性动机侵入或利用电子方式，使人合理害怕身体伤害或精神痛苦。适用法定电子访问例外及定义。", "degreeContext": "通常为一级轻罪（M1）。法条明确列举的前科、伤害威胁、侵入、武器、受保护受害人、性动机或行为人历史等条件，可使其成为四级重罪（F4）。涉及儿童服务雇员的分支为五级重罪（F5），符合其加重条件时为F4。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-216-illegal-use-of-a-tracking-device-or-application", "jurisdiction": "OH", "code": "2903.216", "slug": "ohio-reviewed-2903-216-illegal-use-of-a-tracking-device-or-application", "name": "Illegal use of a tracking device or application", "names": {"es": "Uso ilegal de un dispositivo o aplicación de rastreo", "zh": "非法使用跟踪设备或应用程序"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.216", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.216"}],
+    "text": {
+      "en": {"plainSummary": "Knowingly installing or using a tracking device or app to track another person or property without consent, or failing to remove it after consent is revoked. Divorce, dissolution, protection orders, and written revocation can trigger statutory revocation rules. Exceptions cover specified lawful officials, parents/guardians, caregivers, businesses, investigators, vehicle interests, owners, aircraft operators, and bail agents only within their stated conditions.", "degreeContext": "Normally a first-degree misdemeanor (M1). It is a fourth-degree felony (F4) for a qualifying prior tracking/stalking offense, specified protection-order status, a prior dangerousness determination, or a history of violence toward the victim."},
+      "es": {"plainSummary": "Instalar o usar a sabiendas un dispositivo o aplicación para rastrear a otra persona o sus bienes sin consentimiento, o no retirarlo al revocarse este. Divorcio, disolución, órdenes de protección y revocación escrita pueden activar reglas legales. Las excepciones para funcionarios, padres/tutores, cuidadores, empresas, investigadores, intereses vehiculares, propietarios, aeronaves y fiadores rigen solo bajo sus condiciones.", "degreeContext": "Normalmente delito menor de primer grado (M1). Es delito grave de cuarto grado (F4) por antecedente calificado de rastreo/acoso, estado especificado bajo orden de protección, determinación previa de peligrosidad o historial de violencia contra la víctima."},
+      "zh": {"plainSummary": "明知而未经同意安装或使用设备/应用程序跟踪他人或其财产，或同意被撤销后仍不移除。离婚、婚姻解消、保护令及书面撤销可触发法定撤销规则。对特定公务人员、父母/监护人、照护者、企业、调查员、车辆权益人、所有人、航空器经营者及保释代理人的例外，仅在各自条件内适用。", "degreeContext": "通常为一级轻罪（M1）。如有符合条件的跟踪/跟踪威胁前科、处于特定保护令约束、曾被认定具有危险性，或对受害人有暴力史，则为四级重罪（F4）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-22-menacing", "jurisdiction": "OH", "code": "2903.22", "slug": "ohio-reviewed-2903-22-menacing", "name": "Menacing", "names": {"es": "Amenazas", "zh": "威胁"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.22", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.22"}],
+    "text": {
+      "en": {"plainSummary": "Knowingly causing another to believe the offender will physically harm that person, property, unborn child, or immediate family; or displaying a deadly weapon to a specified emergency responder, family member, or co-worker while knowing the responder is acting officially and intending to obstruct or impede those duties.", "degreeContext": "Normally a fourth-degree misdemeanor (M4). Specified child-services or emergency-responder circumstances make it a first-degree misdemeanor (M1); a qualifying prior offense plus the statute's victim-and-duty conditions makes the responder branch a fourth-degree felony (F4)."},
+      "es": {"plainSummary": "Causar a sabiendas que otra persona crea que el autor dañará físicamente a esa persona, sus bienes, su nonato o familia inmediata; o mostrar un arma mortal a un socorrista especificado, familiar o compañero, sabiendo que actúa oficialmente y con propósito de obstaculizar sus funciones.", "degreeContext": "Normalmente delito menor de cuarto grado (M4). Circunstancias especificadas de servicios infantiles o socorristas lo hacen delito menor de primer grado (M1); un antecedente calificado junto con las condiciones de víctima y función convierte la rama del socorrista en delito grave de cuarto grado (F4)."},
+      "zh": {"plainSummary": "明知地使他人相信行为人将伤害其本人、财产、未出生胎儿或直系亲属；或明知特定应急人员正在履行公务，仍以阻碍其职责为目的，向该人员、其家属或同事展示致命武器。", "degreeContext": "通常为四级轻罪（M4）。特定儿童服务或应急人员情形升为一级轻罪（M1）；同时有符合条件的前科并满足法定受害人及履职条件时，应急人员分支为四级重罪（F4）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-341-patient-endangerment", "jurisdiction": "OH", "code": "2903.341", "slug": "ohio-reviewed-2903-341-patient-endangerment", "name": "Patient endangerment", "names": {"es": "Puesta en peligro de pacientes", "zh": "危害患者"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.341", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.341"}],
+    "text": {
+      "en": {"plainSummary": "A covered caretaker creates a substantial risk to a covered person's health or safety by violating a duty of care, protection, or support, or a covered owner, operator, administrator, or agent condones or knowingly permits the prohibited conduct. The statute's facility/person definitions, spiritual-treatment exclusions, and affirmative defenses limit both routes.", "degreeContext": "Normally a first-degree misdemeanor (M1); fourth-degree felony (F4) with the qualifying prior conviction or plea; third-degree felony (F3) if serious physical harm results."},
+      "es": {"plainSummary": "Un cuidador cubierto crea riesgo sustancial para la salud o seguridad de una persona cubierta al incumplir un deber de atención, protección o sustento, o un propietario, operador, administrador o agente cubierto tolera o permite a sabiendas la conducta. Las definiciones, exclusiones de tratamiento espiritual y defensas afirmativas limitan ambas vías.", "degreeContext": "Normalmente delito menor de primer grado (M1); delito grave de cuarto grado (F4) con condena o admisión previa calificada; delito grave de tercer grado (F3) si resulta daño físico grave."},
+      "zh": {"plainSummary": "适用范围内的照护者违反照护、保护或供养义务，给适用人员的健康或安全造成重大风险；或适用的所有者、经营者、管理者或代理人纵容或明知而允许该行为。法定机构/人员定义、宗教治疗排除及积极抗辩限制两条路径。", "degreeContext": "通常为一级轻罪（M1）；有符合条件的既往定罪或认罪时为四级重罪（F4）；造成严重身体伤害时为三级重罪（F3）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2903-43-reckless-violation-of-violent-offender-database-duties", "jurisdiction": "OH", "code": "2903.43", "slug": "ohio-reviewed-2903-43-reckless-violation-of-violent-offender-database-duties", "name": "Reckless violation of violent-offender database duties", "names": {"es": "Incumplimiento temerario de deberes del registro de infractores violentos", "zh": "轻率违反暴力犯罪者数据库义务"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2903.43(I)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2903.43"}],
+    "text": {
+      "en": {"plainSummary": "Descriptive conduct label: an offender actually subject to Ohio's violent-offender database duties recklessly fails to enroll, re-enroll, provide a required change notice, or perform another required duty. The section's statutory affirmative defenses remain available.", "degreeContext": "Fifth-degree felony (F5). In the statute's specified circumstances, the conduct is also a violation of a term of the offender's supervised release."},
+      "es": {"plainSummary": "Etiqueta descriptiva de conducta: una persona realmente sujeta a los deberes de la base de datos de infractores violentos de Ohio omite temerariamente inscribirse, reinscribirse, notificar un cambio exigido o cumplir otro deber. Se conservan las defensas afirmativas legales.", "degreeContext": "Delito grave de quinto grado (F5). En las circunstancias especificadas por la ley, también viola una condición de libertad supervisada."},
+      "zh": {"plainSummary": "描述性行为标签：确实负有俄亥俄州暴力犯罪者数据库义务的犯罪者，轻率地未登记、重新登记、提交必要变更通知，或履行其他必要义务。法定积极抗辩仍可适用。", "degreeContext": "五级重罪（F5）。在法条规定的特定情形下，该行为还违反受监督释放条件。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-02-rape", "jurisdiction": "OH", "code": "2907.02", "slug": "ohio-reviewed-2907-02-rape", "name": "Rape", "names": {"es": "Violación", "zh": "强奸"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.02", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.02"}],
+    "text": {
+      "en": {"plainSummary": "Sexual conduct when the offender substantially impairs the other person's ability to resist by force, threat, or a secretly or deceptively administered substance; when the other person is under 13 regardless of knowledge; when the offender knows substantial impairment prevents consent; or when force or threat of force is used. Statutory spousal limits and exceptions must be applied exactly.", "degreeContext": "First-degree felony (F1). Section 2907.02(B) supplies special mandatory, life-sentence, and juvenile-victim branches based on the precise conduct, force, victim age, and serious-harm conditions. Attempt is a separate §2923.02 analysis and is not this completed offense."},
+      "es": {"plainSummary": "Conducta sexual cuando el autor reduce sustancialmente la resistencia mediante fuerza, amenaza o sustancia administrada secreta o engañosamente; cuando la otra persona es menor de 13 años sin importar conocimiento; cuando sabe que una incapacidad sustancial impide consentir; o cuando usa fuerza o amenaza. Deben aplicarse exactamente límites y excepciones conyugales.", "degreeContext": "Delito grave de primer grado (F1). §2907.02(B) contiene ramas especiales obligatorias, de cadena perpetua y víctima juvenil según conducta, fuerza, edad y daño grave exactos. La tentativa exige análisis separado bajo §2923.02 y no es este delito consumado."},
+      "zh": {"plainSummary": "包括以下性交行为：以武力、威胁或秘密/欺骗施用物质实质削弱对方反抗能力；对方未满13岁（无论是否知其年龄）；明知对方因重大障碍无法同意；或使用武力或武力威胁。配偶关系限制与例外须严格适用。", "degreeContext": "一级重罪（F1）。第2907.02(B)款依具体行为、武力、受害人年龄及严重伤害条件规定特别强制刑、无期徒刑和未成年受害人分支。未遂须另依第2923.02条分析，不等同本项既遂罪。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-03-sexual-battery", "jurisdiction": "OH", "code": "2907.03", "slug": "ohio-reviewed-2907-03-sexual-battery", "name": "Sexual battery", "names": {"es": "Agresión sexual", "zh": "性侵害"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.03", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.03"}],
+    "text": {
+      "en": {"plainSummary": "Sexual conduct in one of thirteen specified circumstances involving coercion, substantial impairment, unawareness, mistaken identity, parental or custodial authority, school or institutional authority, detention, clerical counseling, mental-health treatment, or peace-officer status. Each route has its own knowledge, relationship, authority, and age conditions.", "degreeContext": "Normally a third-degree felony (F3). It is a second-degree felony (F2), with the statute's mandatory-prison rule, when the applicable branch involves a victim under 13."},
+      "es": {"plainSummary": "Conducta sexual en una de trece circunstancias especificadas de coacción, incapacidad sustancial, inconsciencia, identidad equivocada, autoridad parental o custodial, escolar o institucional, detención, consejería religiosa, tratamiento de salud mental o condición policial. Cada vía tiene requisitos propios de conocimiento, relación, autoridad y edad.", "degreeContext": "Normalmente delito grave de tercer grado (F3). Es delito grave de segundo grado (F2), con prisión obligatoria legal, cuando la rama aplicable involucra a una víctima menor de 13 años."},
+      "zh": {"plainSummary": "在十三种特定情形之一实施性交，包括胁迫、重大障碍、不知情、身份误认、父母或监护权力、学校或机构权力、羁押、神职辅导、精神健康治疗或治安官员身份。每条路径均有各自的明知、关系、权力和年龄条件。", "degreeContext": "通常为三级重罪（F3）。适用分支涉及未满13岁受害人时，为二级重罪（F2），并适用法定强制监禁规则。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-04-unlawful-sexual-conduct-with-a-minor", "jurisdiction": "OH", "code": "2907.04", "slug": "ohio-reviewed-2907-04-unlawful-sexual-conduct-with-a-minor", "name": "Unlawful sexual conduct with a minor", "names": {"es": "Conducta sexual ilícita con una persona menor", "zh": "与未成年人非法性交"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.04", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.04"}],
+    "text": {
+      "en": {"plainSummary": "A person age 18 or older engages in sexual conduct with someone age 13, 14, or 15 who is not the offender's spouse, when the offender knows the age or is reckless in that regard.", "degreeContext": "Normally a fourth-degree felony (F4). If the offender is under four years older, it is a first-degree misdemeanor (M1); if ten or more years older, a third-degree felony (F3). A qualifying prior sex offense makes it F3, or a second-degree felony (F2) when that prior applies and the offender is ten or more years older."},
+      "es": {"plainSummary": "Una persona de 18 años o más tiene conducta sexual con alguien de 13, 14 o 15 años que no es su cónyuge, sabiendo la edad o actuando temerariamente al respecto.", "degreeContext": "Normalmente delito grave de cuarto grado (F4). Si el autor es menos de cuatro años mayor, es delito menor de primer grado (M1); si es diez o más años mayor, delito grave de tercer grado (F3). Un antecedente sexual calificado lo hace F3, o delito grave de segundo grado (F2) si además es diez o más años mayor."},
+      "zh": {"plainSummary": "年满18岁者与13、14或15岁且非其配偶的人性交，并且知道其年龄或对此轻率不顾。", "degreeContext": "通常为四级重罪（F4）。行为人年长不足4岁时为一级轻罪（M1）；年长10岁以上时为三级重罪（F3）。有符合条件的既往性犯罪时为F3；若同时年长10岁以上则为二级重罪（F2）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-05-gross-sexual-imposition", "jurisdiction": "OH", "code": "2907.05", "slug": "ohio-reviewed-2907-05-gross-sexual-imposition", "name": "Gross sexual imposition", "names": {"es": "Imposición sexual grave", "zh": "严重强制猥亵"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.05", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.05"}],
+    "text": {
+      "en": {"plainSummary": "Sexual contact, causing sexual contact, or causing two others to have sexual contact under specified force, impairment, age-under-13, or treatment circumstances; it also covers knowingly touching the unclothed genitals of a child under 12 with the listed abusive or sexual intent. Each route's mental state and age rule controls.", "degreeContext": "The (A)(1)–(3) and (A)(5) routes are fourth-degree felonies (F4). The under-13 (A)(4) route and under-12 genital-touching (B) route are third-degree felonies (F3), with the prison presumption or mandatory term applying under the exact conditions in (C)."},
+      "es": {"plainSummary": "Contacto sexual, hacer que ocurra o hacer que dos personas lo tengan bajo circunstancias especificadas de fuerza, incapacidad, edad menor de 13 años o tratamiento; también tocar a sabiendas genitales sin ropa de un menor de 12 con la intención abusiva o sexual enumerada. Rigen el estado mental y la edad de cada vía.", "degreeContext": "Las vías (A)(1)–(3) y (A)(5) son delitos graves de cuarto grado (F4). La vía (A)(4) con menor de 13 y la vía (B) de tocar genitales de menor de 12 son delitos graves de tercer grado (F3), con presunción o término obligatorio solo bajo las condiciones exactas de (C)."},
+      "zh": {"plainSummary": "在法定武力、障碍、未满13岁或治疗关系情形下实施性接触、使他人发生性接触，或使两人相互性接触；还包括明知地以法条列明的侮辱、虐待或性目的触摸未满12岁儿童未被衣物遮盖的生殖器。各路径的心理状态及年龄规则分别适用。", "degreeContext": "(A)(1)至(3)及(A)(5)路径为四级重罪（F4）。涉及未满13岁的(A)(4)路径及未满12岁生殖器触摸的(B)路径为三级重罪（F3）；仅在(C)款具体条件下适用监禁推定或强制刑期。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-09-public-indecency", "jurisdiction": "OH", "code": "2907.09", "slug": "ohio-reviewed-2907-09-public-indecency", "name": "Public indecency", "names": {"es": "Indecencia pública", "zh": "公共猥亵"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.09", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.09"}],
+    "text": {
+      "en": {"plainSummary": "Recklessly exposing private parts or engaging in sexual conduct or masturbation where physically proximate people who are not household members are likely to see and be affronted or alarmed; separate (B) routes apply when the person knows the conduct is likely to be viewed by a minor who is not the person's child.", "degreeContext": "Grades range from fourth-degree misdemeanor (M4), third-degree misdemeanor (M3), second-degree misdemeanor (M2), and first-degree misdemeanor (M1) to fifth-degree felony (F5), depending on whether (A) or the knowing minor-viewer route in (B) applies, the conduct type, and the number of qualifying prior convictions."},
+      "es": {"plainSummary": "Exponer temerariamente partes íntimas o realizar conducta sexual o masturbación donde personas físicamente próximas ajenas al hogar probablemente lo vean y se sientan ofendidas o alarmadas; las vías separadas de (B) rigen si se sabe que probablemente lo verá un menor que no es hijo propio.", "degreeContext": "Los grados abarcan delito menor de cuarto grado (M4), tercer grado (M3), segundo grado (M2), primer grado (M1) y delito grave de quinto grado (F5), según rija (A) o la vía consciente de espectador menor en (B), el tipo de conducta y los antecedentes calificados."},
+      "zh": {"plainSummary": "在并非同一家庭成员的近处人员可能看见并感到冒犯或惊恐的场合，轻率地暴露私密部位、实施性交或自慰；如明知并非本人子女的未成年人可能看见，则适用(B)款独立路径。", "degreeContext": "依适用(A)款还是(B)款明知未成年观看路径、具体行为及符合条件的前科次数，等级可为四级轻罪（M4）、三级轻罪（M3）、二级轻罪（M2）、一级轻罪（M1）或五级重罪（F5）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-24-soliciting", "jurisdiction": "OH", "code": "2907.24", "slug": "ohio-reviewed-2907-24-soliciting", "name": "Soliciting", "names": {"es": "Solicitación de actividad sexual pagada", "zh": "招揽有偿性活动"}, "category": "misdemeanor", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.24(A), (C)(1)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.24"}],
+    "text": {
+      "en": {"plainSummary": "Knowingly soliciting another to engage in sexual activity for hire in exchange for the solicitor receiving something of value.", "degreeContext": "Third-degree misdemeanor (M3). This is separate from the positive-HIV-test offense in (B)."},
+      "es": {"plainSummary": "Solicitar a sabiendas que otra persona participe en actividad sexual por pago a cambio de que quien solicita reciba algo de valor.", "degreeContext": "Delito menor de tercer grado (M3). Es distinto del delito de prueba positiva de VIH en (B)."},
+      "zh": {"plainSummary": "明知地招揽他人从事有偿性活动，以换取招揽者收受有价值之物。", "degreeContext": "三级轻罪（M3）。本罪不同于(B)款HIV检测阳性后的独立罪行。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-24-engaging-in-solicitation-after-a-positive-hiv-test", "jurisdiction": "OH", "code": "2907.24", "slug": "ohio-reviewed-2907-24-engaging-in-solicitation-after-a-positive-hiv-test", "name": "Engaging in solicitation after a positive HIV test", "names": {"es": "Solicitación tras una prueba positiva de VIH", "zh": "HIV检测阳性后实施招揽"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.24(B), (C)(2)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.24"}],
+    "text": {
+      "en": {"plainSummary": "Violating the soliciting prohibition while knowing that a test has shown the person is an HIV carrier.", "degreeContext": "For conduct on or after July 1, 1996, third-degree felony (F3). The statute's second-degree-felony (F2) branch is historical and applies only to earlier conduct."},
+      "es": {"plainSummary": "Violar la prohibición de solicitación sabiendo que una prueba ha indicado que la persona es portadora del VIH.", "degreeContext": "Para conducta desde el 1 de julio de 1996, delito grave de tercer grado (F3). La rama de delito grave de segundo grado (F2) es histórica y solo rige conducta anterior."},
+      "zh": {"plainSummary": "明知检测结果表明本人为HIV携带者，仍违反招揽禁令。", "degreeContext": "1996年7月1日及以后实施的行为为三级重罪（F3）。法条中的二级重罪（F2）分支仅属历史规定，只适用于更早行为。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-25-prostitution", "jurisdiction": "OH", "code": "2907.25", "slug": "ohio-reviewed-2907-25-prostitution", "name": "Prostitution", "names": {"es": "Prostitución", "zh": "卖淫"}, "category": "misdemeanor", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.25(A), (C)(1)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.25"}],
+    "text": {
+      "en": {"plainSummary": "Engaging in sexual activity for hire.", "degreeContext": "Third-degree misdemeanor (M3). The positive-HIV-test offense in (B) is separate."},
+      "es": {"plainSummary": "Participar en actividad sexual por pago.", "degreeContext": "Delito menor de tercer grado (M3). El delito de prueba positiva de VIH en (B) es separado."},
+      "zh": {"plainSummary": "从事有偿性活动。", "degreeContext": "三级轻罪（M3）。(B)款HIV检测阳性后的罪行是独立罪行。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-25-engaging-in-prostitution-after-a-positive-hiv-test", "jurisdiction": "OH", "code": "2907.25", "slug": "ohio-reviewed-2907-25-engaging-in-prostitution-after-a-positive-hiv-test", "name": "Engaging in prostitution after a positive HIV test", "names": {"es": "Prostitución tras una prueba positiva de VIH", "zh": "HIV检测阳性后卖淫"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.25(B), (C)(2)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.25"}],
+    "text": {
+      "en": {"plainSummary": "Engaging in sexual activity for hire while knowing that a test has shown the person is an HIV carrier.", "degreeContext": "For conduct on or after July 1, 1996, third-degree felony (F3). The second-degree-felony (F2) branch applies only to pre-July 1996 conduct."},
+      "es": {"plainSummary": "Participar en actividad sexual por pago sabiendo que una prueba ha indicado que la persona es portadora del VIH.", "degreeContext": "Para conducta desde el 1 de julio de 1996, delito grave de tercer grado (F3). La rama de delito grave de segundo grado (F2) solo rige conducta anterior a julio de 1996."},
+      "zh": {"plainSummary": "明知检测结果表明本人为HIV携带者，仍从事有偿性活动。", "degreeContext": "1996年7月1日及以后行为为三级重罪（F3）；二级重罪（F2）分支只适用于1996年7月以前的行为。"}
+    }
+  },
+  {
+    "id": "oh-orc-2907-321-pandering-obscenity-involving-a-minor-or-impaired-person", "jurisdiction": "OH", "code": "2907.321", "slug": "ohio-reviewed-2907-321-pandering-obscenity-involving-a-minor-or-impaired-person", "name": "Pandering obscenity involving a minor or impaired person", "names": {"es": "Difusión de obscenidad que involucra a un menor o persona con impedimento", "zh": "传播涉及未成年人或障碍者的淫秽物品"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2907.321", "url": "https://codes.ohio.gov/ohio-revised-code/section-2907.321"}],
+    "text": {
+      "en": {"plainSummary": "Creating, reproducing, publishing, promoting, advertising, buying, possessing, or controlling obscene material or performances involving a minor or impaired person under the knowledge and purpose requirements in (A)(1)–(6). The proper bona fide medical, scientific, educational, religious, governmental, judicial, or other proper-purpose exception in (B) remains controlling.", "degreeContext": "For minor-related (A)(1)–(4) or (6), second-degree felony (F2); the corresponding impaired-person conduct is third-degree felony (F3). Possession/control under (A)(5) is fourth-degree felony (F4), elevated to F3 by the qualifying prior conviction."},
+      "es": {"plainSummary": "Crear, reproducir, publicar, promover, anunciar, comprar, poseer o controlar material o actuaciones obscenas que involucren a un menor o persona con impedimento bajo los requisitos de conocimiento y propósito de (A)(1)–(6). Sigue rigiendo la excepción de (B) por fin legítimo médico, científico, educativo, religioso, gubernamental, judicial u otro apropiado.", "degreeContext": "Para (A)(1)–(4) o (6) con menor, delito grave de segundo grado (F2); la conducta correspondiente con persona impedida es delito grave de tercer grado (F3). Poseer/controlar bajo (A)(5) es delito grave de cuarto grado (F4), elevado a F3 por antecedente calificado."},
+      "zh": {"plainSummary": "依(A)(1)至(6)款的明知和目的要求，制作、复制、出版、推广、广告、购买、持有或控制涉及未成年人或障碍者的淫秽材料或表演。(B)款关于真正医疗、科学、教育、宗教、政府、司法或其他正当目的的例外仍具控制力。", "degreeContext": "涉及未成年人的(A)(1)至(4)或(6)行为为二级重罪（F2）；相应障碍者行为为三级重罪（F3）。(A)(5)款持有/控制为四级重罪（F4），有符合条件前科时升为F3。"}
+    }
+  },
+  {
+    "id": "oh-orc-2909-06-criminal-damaging-or-endangering", "jurisdiction": "OH", "code": "2909.06", "slug": "ohio-reviewed-2909-06-criminal-damaging-or-endangering", "name": "Criminal damaging or endangering", "names": {"es": "Daño o puesta en peligro criminal", "zh": "刑事毁损或危害"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2909.06", "url": "https://codes.ohio.gov/ohio-revised-code/section-2909.06"}],
+    "text": {
+      "en": {"plainSummary": "Without consent, knowingly causing or creating a substantial risk of physical harm to another's property by any means, or doing so recklessly by fire, explosion, flood, poison gas, poison, radioactive material, caustic or corrosive material, or another inherently dangerous agency or substance.", "degreeContext": "Normally a second-degree misdemeanor (M2); first-degree misdemeanor (M1) if the violation creates a risk of physical harm to a person. The specified aircraft-safety and aircraft-operation circumstances are fifth-degree felony (F5) or fourth-degree felony (F4), respectively."},
+      "es": {"plainSummary": "Sin consentimiento, causar a sabiendas o crear riesgo sustancial de daño físico a bienes ajenos por cualquier medio, o hacerlo temerariamente mediante fuego, explosión, inundación, gas venenoso, veneno, material radiactivo, sustancia cáustica/corrosiva u otro agente inherentemente peligroso.", "degreeContext": "Normalmente delito menor de segundo grado (M2); delito menor de primer grado (M1) si crea riesgo de daño físico a una persona. Las circunstancias especificadas de seguridad y operación de aeronaves son delito grave de quinto grado (F5) o cuarto grado (F4), respectivamente."},
+      "zh": {"plainSummary": "未经同意，以任何方式明知地造成或产生重大风险损害他人财产；或以火、爆炸、洪水、毒气、毒物、放射性材料、腐蚀性材料或其他本质危险的媒介/物质轻率地实施同类行为。", "degreeContext": "通常为二级轻罪（M2）；若产生对人的身体伤害风险，则为一级轻罪（M1）。法条特定航空器安全及航空器运行情形分别为五级重罪（F5）或四级重罪（F4）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2911-01-aggravated-robbery", "jurisdiction": "OH", "code": "2911.01", "slug": "ohio-reviewed-2911-01-aggravated-robbery", "name": "Aggravated robbery", "names": {"es": "Robo agravado", "zh": "加重抢劫"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2911.01", "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.01"}],
+    "text": {
+      "en": {"plainSummary": "During or immediately after attempting or committing theft, having and displaying, brandishing, indicating possession of, or using a deadly weapon; having dangerous ordnance; or inflicting or attempting serious physical harm. It also covers knowingly removing or depriving a law-enforcement officer of a deadly weapon when the officer is acting officially and the offender knows that status.", "degreeContext": "First-degree felony (F1)."},
+      "es": {"plainSummary": "Durante o inmediatamente después de intentar o cometer hurto: tener y mostrar, blandir, indicar posesión o usar un arma mortal; tener artefacto peligroso; o causar o intentar daño físico grave. También abarca quitar o privar a un agente de su arma mortal sabiendo que actúa oficialmente.", "degreeContext": "Delito grave de primer grado (F1)."},
+      "zh": {"plainSummary": "在企图或实施盗窃期间或紧接其后，持有并展示、挥舞、表示持有或使用致命武器；持有危险军械；或造成/企图造成严重身体伤害。还包括明知执法人员正在履职，仍明知地夺取或使其丧失致命武器。", "degreeContext": "一级重罪（F1）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2911-02-robbery", "jurisdiction": "OH", "code": "2911.02", "slug": "ohio-reviewed-2911-02-robbery", "name": "Robbery", "names": {"es": "Robo", "zh": "抢劫"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2911.02", "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.02"}],
+    "text": {
+      "en": {"plainSummary": "During or immediately after attempting or committing theft: possessing or controlling a deadly weapon, inflicting/attempting/threatening physical harm, or using/threatening immediate force.", "degreeContext": "The deadly-weapon and physical-harm routes are second-degree felonies (F2). The immediate-force route is a third-degree felony (F3)."},
+      "es": {"plainSummary": "Durante o inmediatamente después de intentar o cometer hurto: poseer o controlar un arma mortal, causar/intentar/amenazar daño físico, o usar/amenazar fuerza inmediata.", "degreeContext": "Las vías de arma mortal y daño físico son delitos graves de segundo grado (F2). La vía de fuerza inmediata es delito grave de tercer grado (F3)."},
+      "zh": {"plainSummary": "在企图或实施盗窃期间或紧接其后：持有或控制致命武器；造成、企图或威胁身体伤害；或使用、威胁立即使用武力。", "degreeContext": "致命武器及身体伤害路径为二级重罪（F2）；立即武力路径为三级重罪（F3）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2911-11-aggravated-burglary", "jurisdiction": "OH", "code": "2911.11", "slug": "ohio-reviewed-2911-11-aggravated-burglary", "name": "Aggravated burglary", "names": {"es": "Allanamiento agravado", "zh": "加重入室盗窃"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2911.11", "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.11"}],
+    "text": {
+      "en": {"plainSummary": "By force, stealth, or deception, trespassing in an occupied structure where a non-accomplice is present, intending to commit any criminal offense, and either inflicting/attempting/threatening physical harm or having a deadly weapon or dangerous ordnance.", "degreeContext": "First-degree felony (F1)."},
+      "es": {"plainSummary": "Mediante fuerza, sigilo o engaño, entrar sin privilegio en estructura ocupada donde hay una persona no cómplice, con propósito de cometer cualquier delito, y causar/intentar/amenazar daño físico o tener arma mortal o artefacto peligroso.", "degreeContext": "Delito grave de primer grado (F1)."},
+      "zh": {"plainSummary": "以武力、秘密或欺骗方式侵入有非共犯在场的有人建筑，意图实施任何刑事犯罪，并造成、企图或威胁身体伤害，或持有致命武器/危险军械。", "degreeContext": "一级重罪（F1）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2911-12-burglary", "jurisdiction": "OH", "code": "2911.12", "slug": "ohio-reviewed-2911-12-burglary", "name": "Burglary", "names": {"es": "Allanamiento", "zh": "入室盗窃"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2911.12(A), (D)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.12"}],
+    "text": {
+      "en": {"plainSummary": "By force, stealth, or deception, trespassing in an occupied structure with purpose to commit a criminal offense: when a non-accomplice is present or likely present, or in an occupied structure/portion that is another person's habitation while someone is present or likely present.", "degreeContext": "The (A)(1) and (A)(2) presence/likely-presence routes are second-degree felonies (F2). The (A)(3) occupied-structure route is a third-degree felony (F3)."},
+      "es": {"plainSummary": "Mediante fuerza, sigilo o engaño, entrar sin privilegio en estructura ocupada con propósito de cometer un delito: cuando una persona no cómplice está o probablemente estará presente, o en estructura/parte que es habitación ajena cuando alguien está o probablemente estará presente.", "degreeContext": "Las vías (A)(1) y (A)(2) de presencia o presencia probable son delitos graves de segundo grado (F2). La vía de estructura ocupada (A)(3) es delito grave de tercer grado (F3)."},
+      "zh": {"plainSummary": "以武力、秘密或欺骗方式侵入有人建筑并意图实施刑事犯罪：非共犯正在或可能在场；或该建筑/部分是他人住所且有人正在或可能在场。", "degreeContext": "(A)(1)、(A)(2)款在场/可能在场路径为二级重罪（F2）；(A)(3)款有人建筑路径为三级重罪（F3）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2911-12-trespass-in-a-habitation-when-a-person-is-present-or-likely-to-be-present", "jurisdiction": "OH", "code": "2911.12", "slug": "ohio-reviewed-2911-12-trespass-in-a-habitation-when-a-person-is-present-or-likely-to-be-present", "name": "Trespass in a habitation when a person is present or likely to be present", "names": {"es": "Entrada ilícita en habitación con persona presente o probablemente presente", "zh": "有人在场或可能在场时侵入住所"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2911.12(B), (E)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.12"}],
+    "text": {
+      "en": {"plainSummary": "By force, stealth, or deception, trespassing in a permanent or temporary habitation when a non-accomplice is present or likely to be present. Unlike burglary under (A), this route does not state a purpose to commit another criminal offense.", "degreeContext": "Fourth-degree felony (F4)."},
+      "es": {"plainSummary": "Mediante fuerza, sigilo o engaño, entrar sin privilegio en habitación permanente o temporal cuando una persona no cómplice está o probablemente estará presente. A diferencia del allanamiento de (A), esta vía no exige propósito de cometer otro delito.", "degreeContext": "Delito grave de cuarto grado (F4)."},
+      "zh": {"plainSummary": "以武力、秘密或欺骗方式侵入永久或临时住所，且非共犯正在或可能在场。与(A)款入室盗窃不同，本路径不要求意图实施另一犯罪。", "degreeContext": "四级重罪（F4）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2911-13-breaking-and-entering", "jurisdiction": "OH", "code": "2911.13", "slug": "ohio-reviewed-2911-13-breaking-and-entering", "name": "Breaking and entering", "names": {"es": "Entrada forzada", "zh": "破门侵入"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2911.13", "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.13"}],
+    "text": {
+      "en": {"plainSummary": "By force, stealth, or deception, trespassing in an unoccupied structure intending to commit theft or a felony; or trespassing on another's land or premises intending to commit a felony.", "degreeContext": "Fifth-degree felony (F5)."},
+      "es": {"plainSummary": "Mediante fuerza, sigilo o engaño, entrar sin privilegio en estructura desocupada con propósito de cometer hurto o delito grave; o entrar en terreno o local ajeno con propósito de cometer delito grave.", "degreeContext": "Delito grave de quinto grado (F5)."},
+      "zh": {"plainSummary": "以武力、秘密或欺骗方式侵入无人建筑，意图实施盗窃或重罪；或侵入他人土地/场所，意图实施重罪。", "degreeContext": "五级重罪（F5）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2911-21-criminal-trespass", "jurisdiction": "OH", "code": "2911.21", "slug": "ohio-reviewed-2911-21-criminal-trespass", "name": "Criminal trespass", "names": {"es": "Entrada ilícita criminal", "zh": "刑事侵入"}, "category": "misdemeanor", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2911.21", "url": "https://codes.ohio.gov/ohio-revised-code/section-2911.21"}],
+    "text": {
+      "en": {"plainSummary": "Without privilege, knowingly entering or remaining on another's land or premises; knowingly entering restricted land; recklessly entering after notice; negligently failing or refusing to leave after notice; or knowingly entering/remain­ing at a critical infrastructure facility. Statutory privilege, notice, and land-use provisions apply.", "degreeContext": "The (A)(1)–(4) routes are fourth-degree misdemeanors (M4). The critical-infrastructure (A)(5) route is a first-degree misdemeanor (M1). Vehicle-related provisions add specified sentencing consequences rather than another offense name."},
+      "es": {"plainSummary": "Sin privilegio: entrar o permanecer a sabiendas en terreno/local ajeno; entrar en terreno restringido; entrar temerariamente tras aviso; omitir o negarse negligentemente a salir tras aviso; o entrar/permanecer a sabiendas en infraestructura crítica. Rigen privilegio, aviso y disposiciones de uso de terrenos.", "degreeContext": "Las vías (A)(1)–(4) son delitos menores de cuarto grado (M4). La vía de infraestructura crítica (A)(5) es delito menor de primer grado (M1). Las disposiciones vehiculares agregan consecuencias de sentencia, no otro delito."},
+      "zh": {"plainSummary": "无权而明知进入或停留于他人土地/场所；明知进入受限土地；收到通知后轻率进入；收到通知后因疏忽未离开或拒绝离开；或明知进入/停留于关键基础设施。适用法定权限、通知及土地使用规定。", "degreeContext": "(A)(1)至(4)路径为四级轻罪（M4）；关键基础设施(A)(5)路径为一级轻罪（M1）。车辆相关条款增加特定量刑后果，而非另设罪名。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-02-theft", "jurisdiction": "OH", "code": "2913.02", "slug": "ohio-reviewed-2913-02-theft", "name": "Theft", "names": {"es": "Hurto", "zh": "盗窃"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.02", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.02"}],
+    "text": {
+      "en": {"plainSummary": "With purpose to deprive the owner, knowingly obtaining or controlling property or services without consent, beyond consent, by deception, by threat, or by intimidation. The charging branch and property, victim, value, and prior-offense facts matter.", "degreeContext": "The statute ranges from first-degree misdemeanor (M1) through fifth-, fourth-, third-, second-, and first-degree felonies (F5/F4/F3/F2/F1). Exact value bands, recidivism, protected elderly/disabled victims, and special property types control; named branches include grand/aggravated theft, motor-vehicle or drug theft, police/assistance-animal theft, anhydrous-ammonia theft, special-purpose-article theft, and bulk-container theft. No blanket maximum grade applies."},
+      "es": {"plainSummary": "Con propósito de privar al propietario, obtener o controlar a sabiendas bienes o servicios sin consentimiento, excediéndolo, mediante engaño, amenaza o intimidación. Importan la rama acusada y los hechos de bienes, víctima, valor y antecedentes.", "degreeContext": "La ley abarca desde delito menor de primer grado (M1) hasta delitos graves de quinto, cuarto, tercer, segundo y primer grado (F5/F4/F3/F2/F1). Rigen bandas exactas de valor, reincidencia, víctimas mayores/discapacitadas y bienes especiales; incluye ramas de hurto mayor/agravado, vehículo, drogas, animal policial/asistencia, amoníaco anhidro, artículo especial y contenedor a granel. No hay máximo general."},
+      "zh": {"plainSummary": "以剥夺所有人为目的，明知地在未经同意、超出同意范围、通过欺骗、威胁或恐吓的情况下取得或控制财产或服务。指控分支以及财产、受害人、价值和前科事实均重要。", "degreeContext": "法定等级从一级轻罪（M1）至五、四、三、二、一级重罪（F5/F4/F3/F2/F1）。具体金额区间、累犯、老年/残障受害人及特殊财产类型决定等级；特别分支包括重大/加重盗窃、机动车或药品、警用/辅助动物、无水氨、特殊用途物品及散装商品容器盗窃。不得一概采用最高等级。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-04-unauthorized-use-of-property", "jurisdiction": "OH", "code": "2913.04", "slug": "ohio-reviewed-2913-04-unauthorized-use-of-property", "name": "Unauthorized use of property", "names": {"es": "Uso no autorizado de bienes", "zh": "未经授权使用财产"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.04(A), (E)–(F)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.04"}],
+    "text": {
+      "en": {"plainSummary": "Knowingly using or operating another's property without the owner's or authorized person's consent. The incorporated affirmative defenses remain available.", "degreeContext": "Normally a fourth-degree misdemeanor (M4). Fraud-purpose/property-value branches can be first-degree misdemeanor (M1) or fifth-, fourth-, or third-degree felony (F5/F4/F3); when the victim is elderly or a disabled adult, the separate value table runs F5/F4/F3/second-degree felony (F2). Exact statutory thresholds control."},
+      "es": {"plainSummary": "Usar u operar a sabiendas bienes ajenos sin consentimiento del propietario o persona autorizada. Se conservan las defensas afirmativas incorporadas.", "degreeContext": "Normalmente delito menor de cuarto grado (M4). Las ramas de propósito fraudulento/valor pueden ser delito menor de primer grado (M1) o delito grave de quinto, cuarto o tercer grado (F5/F4/F3); con víctima mayor o adulta discapacitada, la tabla separada abarca F5/F4/F3/delito grave de segundo grado (F2). Rigen umbrales exactos."},
+      "zh": {"plainSummary": "明知而未经所有人或授权人同意，使用或操作他人财产。法条援引的积极抗辩仍可适用。", "degreeContext": "通常为四级轻罪（M4）。欺诈目的/财产价值分支可为一级轻罪（M1）或五、四、三级重罪（F5/F4/F3）；受害人为老年人或残障成年人时，独立金额表为F5/F4/F3/二级重罪（F2）。具体法定门槛控制等级。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-04-unauthorized-use-of-computer-cable-or-telecommunication-property", "jurisdiction": "OH", "code": "2913.04", "slug": "ohio-reviewed-2913-04-unauthorized-use-of-computer-cable-or-telecommunication-property", "name": "Unauthorized use of computer, cable, or telecommunication property", "names": {"es": "Uso no autorizado de propiedad informática, de cable o telecomunicaciones", "zh": "未经授权使用计算机、有线或电信财产"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.04(B), (E), (G)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.04"}],
+    "text": {
+      "en": {"plainSummary": "Knowingly gaining, attempting, or causing access—by hacking or any other means—to a computer, system, network, cable service/system, telecommunications device/service, or information service without consent or beyond the scope of consent. Incorporated affirmative defenses apply.", "degreeContext": "Normally a fifth-degree felony (F5). A purpose to commit another crime or specified fraud/property values can make it a fourth- or third-degree felony (F4/F3); the protected elderly/disabled-victim table ranges from F5 through F4/F3 to second-degree felony (F2). Exact purpose and value conditions control."},
+      "es": {"plainSummary": "Obtener, intentar o causar a sabiendas acceso—por piratería u otro medio—a computadora, sistema, red, servicio/sistema de cable, dispositivo/servicio de telecomunicaciones o servicio de información sin consentimiento o excediéndolo. Rigen defensas afirmativas incorporadas.", "degreeContext": "Normalmente delito grave de quinto grado (F5). El propósito de cometer otro delito o valores especificados de fraude/bienes pueden hacerlo delito grave de cuarto o tercer grado (F4/F3); la tabla para víctima mayor/discapacitada va de F5 a F4/F3 y delito grave de segundo grado (F2). Rigen propósito y valor exactos."},
+      "zh": {"plainSummary": "明知而通过黑客或任何其他手段，未经同意或超出同意范围，访问、企图访问或促成访问计算机、系统、网络、有线服务/系统、电信设备/服务或信息服务。适用援引的积极抗辩。", "degreeContext": "通常为五级重罪（F5）。以实施另一犯罪为目的或达到特定欺诈/财产金额时可升为四级或三级重罪（F4/F3）；老年/残障受害人金额表从F5经F4/F3至二级重罪（F2）。具体目的及金额条件控制。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-04-unauthorized-use-of-the-law-enforcement-automated-database-system", "jurisdiction": "OH", "code": "2913.04", "slug": "ohio-reviewed-2913-04-unauthorized-use-of-the-law-enforcement-automated-database-system", "name": "Unauthorized use of the law enforcement automated database system", "names": {"es": "Uso no autorizado del sistema automatizado de datos policiales", "zh": "未经授权使用执法自动数据库系统"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.04(C), (E), (H)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.04"}, {"citation": "Ohio Rev. Code Ann. § 5503.101", "url": "https://codes.ohio.gov/ohio-revised-code/section-5503.101"}],
+    "text": {
+      "en": {"plainSummary": "Except as §5503.101 permits, knowingly accessing, attempting or causing access to, or disseminating information obtained from, the law-enforcement automated database system without or beyond the steering-committee chair's consent. Incorporated affirmative defenses apply.", "degreeContext": "Fifth-degree felony (F5)."},
+      "es": {"plainSummary": "Salvo lo permitido por §5503.101, acceder, intentar o causar acceso a sabiendas, o difundir información obtenida, del sistema automatizado policial sin consentimiento del presidente del comité directivo o excediéndolo. Rigen defensas afirmativas incorporadas.", "degreeContext": "Delito grave de quinto grado (F5)."},
+      "zh": {"plainSummary": "除第5503.101条许可外，明知而未经指导委员会主席同意或超出同意范围，访问、企图或促成访问执法自动数据库系统，或传播从中取得的信息。适用援引的积极抗辩。", "degreeContext": "五级重罪（F5）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-04-unauthorized-use-of-the-ohio-law-enforcement-gateway", "jurisdiction": "OH", "code": "2913.04", "slug": "ohio-reviewed-2913-04-unauthorized-use-of-the-ohio-law-enforcement-gateway", "name": "Unauthorized use of the Ohio law enforcement gateway", "names": {"es": "Uso no autorizado del portal policial de Ohio", "zh": "未经授权使用俄亥俄执法网关"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.04(D), (E), (I)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.04"}],
+    "text": {
+      "en": {"plainSummary": "Knowingly accessing, attempting or causing access to, or disseminating information obtained from, the Ohio law-enforcement gateway without or beyond the bureau superintendent's consent. Incorporated affirmative defenses apply.", "degreeContext": "Fifth-degree felony (F5)."},
+      "es": {"plainSummary": "Acceder, intentar o causar acceso a sabiendas, o difundir información obtenida, del portal policial de Ohio sin consentimiento del superintendente de la oficina o excediéndolo. Rigen defensas afirmativas incorporadas.", "degreeContext": "Delito grave de quinto grado (F5)."},
+      "zh": {"plainSummary": "明知而未经调查局主管同意或超出同意范围，访问、企图或促成访问俄亥俄执法网关，或传播从中取得的信息。适用援引的积极抗辩。", "degreeContext": "五级重罪（F5）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-11-passing-bad-checks", "jurisdiction": "OH", "code": "2913.11", "slug": "ohio-reviewed-2913-11-passing-bad-checks", "name": "Passing bad checks", "names": {"es": "Emisión de cheques sin fondos", "zh": "签发空头支票"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.11", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.11"}],
+    "text": {
+      "en": {"plainSummary": "With purpose to defraud, issuing, transferring, or causing issuance or transfer of a check or negotiable instrument while knowing it will be dishonored or knowing that payment has or will be stopped. The statute's dishonor presumptions and defenses must be applied as written.", "degreeContext": "Normally a first-degree misdemeanor (M1). It becomes a fifth-degree felony (F5) at the statute's single-check or aggregate-payee thresholds, a fourth-degree felony (F4) from $7,500 through $149,999.99, and a third-degree felony (F3) at $150,000 or more."},
+      "es": {"plainSummary": "Con propósito de defraudar, emitir, transferir o hacer emitir/transferir un cheque o instrumento negociable sabiendo que será rechazado o que su pago se ha detenido o se detendrá. Deben aplicarse literalmente presunciones y defensas por rechazo.", "degreeContext": "Normalmente delito menor de primer grado (M1). Pasa a delito grave de quinto grado (F5) en los umbrales legales por cheque o agregado por beneficiario, delito grave de cuarto grado (F4) de $7,500 a $149,999.99 y delito grave de tercer grado (F3) desde $150,000."},
+      "zh": {"plainSummary": "以欺诈为目的，明知支票或可转让票据将被拒付，或明知付款已经/将被停止，仍签发、转让或促使签发/转让。拒付推定及抗辩须按法条适用。", "degreeContext": "通常为一级轻罪（M1）。达到法定单张或同一收款人合计门槛时为五级重罪（F5）；7,500至149,999.99美元为四级重罪（F4）；150,000美元以上为三级重罪（F3）。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-21-misuse-of-credit-cards", "jurisdiction": "OH", "code": "2913.21", "slug": "ohio-reviewed-2913-21-misuse-of-credit-cards", "name": "Misuse of credit cards", "names": {"es": "Uso indebido de tarjetas de crédito", "zh": "滥用信用卡"}, "category": "felony", "categories": ["felony", "misdemeanor"], "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.21", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.21"}],
+    "text": {
+      "en": {"plainSummary": "The statute covers deceptively obtaining a credit card; prohibited buying, selling, or public misuse; fraudulently furnishing, using, representing, or securing a card; and receiving, possessing, controlling, or disposing of a card with a listed criminal purpose. Each subdivision's mental state and conduct must be proved.", "degreeContext": "For (A), (B)(1), or (C), normally a first-degree misdemeanor (M1). For (B)(2)–(4), 90-day cumulative value produces M1 or fifth-, fourth-, or third-degree felony (F5/F4/F3). If an elderly person or disabled adult is the victim under (B)(1)–(2), the debt/value table ranges F5/F4/F3 to second-degree felony (F2). Exact thresholds control."},
+      "es": {"plainSummary": "La ley abarca obtener engañosamente una tarjeta; compra, venta o uso público prohibido; proporcionar, usar, representar o conseguir fraudulentamente una tarjeta; y recibir, poseer, controlar o disponer de ella con propósito criminal enumerado. Deben probarse conducta y estado mental de cada subdivisión.", "degreeContext": "Para (A), (B)(1) o (C), normalmente delito menor de primer grado (M1). Para (B)(2)–(4), el valor acumulado en 90 días produce M1 o delito grave de quinto, cuarto o tercer grado (F5/F4/F3). Con víctima mayor o adulta discapacitada bajo (B)(1)–(2), la tabla de deuda/valor va de F5/F4/F3 a delito grave de segundo grado (F2). Rigen umbrales exactos."},
+      "zh": {"plainSummary": "本条涵盖：欺骗取得信用卡；被禁止的买卖或公开滥用；以欺诈方式提供、使用、声称或取得信用卡；以及以法定犯罪目的接收、持有、控制或处置信用卡。各分款的心理状态和行为均须证明。", "degreeContext": "(A)、(B)(1)或(C)通常为一级轻罪（M1）。(B)(2)至(4)按90日累计价值分为M1或五、四、三级重罪（F5/F4/F3）。(B)(1)至(2)受害人为老年人或残障成年人时，债务/金额表从F5/F4/F3至二级重罪（F2）。具体门槛控制。"}
+    }
+  },
+  {
+    "id": "oh-orc-2913-31-forgery", "jurisdiction": "OH", "code": "2913.31", "slug": "ohio-reviewed-2913-31-forgery", "name": "Forgery", "names": {"es": "Falsificación", "zh": "伪造"}, "category": "felony", "verifiedMonth": "2026-09",
+    "citations": [{"citation": "Ohio Rev. Code Ann. § 2913.31(A), (C)(1)", "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.31"}],
+    "text": {
+      "en": {"plainSummary": "With purpose to defraud, or knowing fraud is being facilitated: forging another's writing without authority; forging a writing so it purports to be genuine when it is not; or uttering, or possessing to utter, a writing known to have been forged. The identification-card offense in (B) is separate.", "degreeContext": "Normally a fifth-degree felony (F5). Ordinary property, services, or victim loss of $7,500–$149,999.99 makes it a fourth-degree felony (F4), and $150,000 or more a third-degree felony (F3). For an elderly or disabled victim, the separate thresholds produce F5/F4/F3 or second-degree felony (F2); elderly victims also trigger the special restitution/fine provision."},
+      "es": {"plainSummary": "Con propósito de defraudar o sabiendo que se facilita fraude: falsificar sin autoridad un escrito ajeno; falsificarlo para aparentar autenticidad; o presentar, o poseer para presentar, un escrito que se sabe falsificado. El delito de tarjetas de identificación de (B) es separado.", "degreeContext": "Normalmente delito grave de quinto grado (F5). Bienes, servicios o pérdida ordinaria de $7,500–$149,999.99 lo hacen delito grave de cuarto grado (F4), y desde $150,000 delito grave de tercer grado (F3). Para víctima mayor o discapacitada, umbrales separados producen F5/F4/F3 o delito grave de segundo grado (F2); víctima mayor también activa restitución/multa especial."},
+      "zh": {"plainSummary": "以欺诈为目的或明知正在协助欺诈：未经授权伪造他人文书；伪造文书使其虚假呈现为真实；或明知文书系伪造仍行使，或为行使而持有。(B)款身份证件罪是独立罪行。", "degreeContext": "通常为五级重罪（F5）。普通财产、服务或受害人损失为7,500至149,999.99美元时为四级重罪（F4），150,000美元以上为三级重罪（F3）。老年或残障受害人适用独立门槛，可为F5/F4/F3或二级重罪（F2）；老年受害人还触发特别赔偿/罚金条款。"}
+    }
+  }
+]

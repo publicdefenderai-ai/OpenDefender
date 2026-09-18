@@ -1,0 +1,1433 @@
+[
+  {
+    "id": "oh-orc-2913-31-forging-identification-cards-or-selling-or-distributing-forged-identification-cards",
+    "jurisdiction": "OH",
+    "code": "2913.31",
+    "slug": "ohio-reviewed-2913-31-forging-identification-cards-or-selling-or-distributing-forged-identification-cards",
+    "name": "Forging identification cards or selling or distributing forged identification cards",
+    "names": {
+      "es": "Falsificar tarjetas de identificación o vender o distribuir tarjetas de identificación falsificadas",
+      "zh": "伪造身份证件或出售、分发伪造的身份证件"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2913.31",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.31"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly forging an identification card, or selling or distributing a purported identification card while knowing it is forged.",
+        "degreeContext": "First-degree misdemeanor (M1). A repeat violation remains M1, but carries a mandatory minimum $250 fine."
+      },
+      "es": {
+        "plainSummary": "Falsificar a sabiendas una tarjeta de identificación, o vender o distribuir una supuesta tarjeta de identificación sabiendo que es falsa.",
+        "degreeContext": "Es un delito menor de primer grado (M1). Una reincidencia sigue siendo M1, pero conlleva una multa mínima obligatoria de $250."
+      },
+      "zh": {
+        "plainSummary": "明知地伪造身份证件，或者在明知所谓身份证件系伪造的情况下出售或分发该证件。",
+        "degreeContext": "一级轻罪（M1）。再次违反仍属M1，但须处至少250美元的强制罚金。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2913-49-identity-fraud",
+    "jurisdiction": "OH",
+    "code": "2913.49",
+    "slug": "ohio-reviewed-2913-49-identity-fraud",
+    "name": "Identity fraud",
+    "names": {
+      "es": "Fraude de identidad",
+      "zh": "身份欺诈"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2913.49",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.49"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Using, possessing, or allowing use of another person’s identifying information without consent, in the ways listed in §2913.49 and with the required fraudulent purpose or knowledge. Aiding or abetting the prohibited use is also covered. The protected-class version applies when the victim fits the statute’s protected class.",
+        "degreeContext": "Ordinary identity fraud ranges from fifth-degree felony (F5) through second-degree felony (F2), based on value. Against a protected-class victim, it ranges from fourth-degree felony (F4) through first-degree felony (F1), also by value; the statutory offense name changes accordingly."
+      },
+      "es": {
+        "plainSummary": "Usar, poseer o permitir el uso de los datos identificativos de otra persona sin su consentimiento, de las formas enumeradas en §2913.49 y con el propósito fraudulento o conocimiento exigido. También abarca ayudar o facilitar el uso prohibido. La modalidad contra una persona de clase protegida se aplica cuando la víctima pertenece a la clase definida por la ley.",
+        "degreeContext": "El fraude de identidad ordinario va de delito grave de quinto grado (F5) a delito grave de segundo grado (F2), según el valor. Contra una víctima de clase protegida va de delito grave de cuarto grado (F4) a delito grave de primer grado (F1), también según el valor; el nombre legal del delito cambia en consecuencia."
+      },
+      "zh": {
+        "plainSummary": "未经同意，以第2913.49条列明的方式并具备所要求的欺诈目的或明知状态，使用、持有或允许使用他人的身份识别信息；帮助或教唆该受禁使用也包括在内。被害人属于法定受保护类别时，适用“针对受保护类别人员的身份欺诈”。",
+        "degreeContext": "普通身份欺诈依涉案价值从五级重罪（F5）至二级重罪（F2）。被害人属于受保护类别时，依价值从四级重罪（F4）至一级重罪（F1），且法定罪名相应改变。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2913-51-receiving-stolen-property",
+    "jurisdiction": "OH",
+    "code": "2913.51",
+    "slug": "ohio-reviewed-2913-51-receiving-stolen-property",
+    "name": "Receiving stolen property",
+    "names": {
+      "es": "Recepción de bienes robados",
+      "zh": "收受赃物"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2913.51",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.51"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Receiving, keeping, or disposing of someone else’s property while knowing, or having reasonable cause to believe, that it was obtained through a theft offense.",
+        "degreeContext": "First-degree misdemeanor (M1) ordinarily. It becomes fifth-, fourth-, or third-degree felony (F5, F4, or F3) according to value or listed property. Receiving stolen special-purchase articles or bulk-merchandise containers is F5, subject to the $7,500-or-more value branch in division (C)."
+      },
+      "es": {
+        "plainSummary": "Recibir, conservar o disponer de bienes ajenos sabiendo, o teniendo causa razonable para creer, que se obtuvieron mediante un delito de hurto.",
+        "degreeContext": "Normalmente es delito menor de primer grado (M1). Pasa a delito grave de quinto, cuarto o tercer grado (F5, F4 o F3) según el valor o el tipo de bien enumerado. Recibir artículos especiales de compra o contenedores de mercancía a granel robados es F5, sujeto a la regla de valor de $7,500 o más de la división (C)."
+      },
+      "zh": {
+        "plainSummary": "明知或有合理理由相信他人财物来源于盗窃犯罪，而收受、留存或处分该财物。",
+        "degreeContext": "通常为一级轻罪（M1）。依财物价值或法定财物种类，可升为五级、四级或三级重罪（F5、F4或F3）。收受被盗的特殊采购物品或散装商品容器属F5，但仍受(C)款7,500美元以上价值分档规则约束。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2917-11-disorderly-conduct",
+    "jurisdiction": "OH",
+    "code": "2917.11",
+    "slug": "ohio-reviewed-2917-11-disorderly-conduct",
+    "name": "Disorderly conduct",
+    "names": {
+      "es": "Conducta desordenada",
+      "zh": "扰乱秩序"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2917.11",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.11"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Recklessly causing inconvenience, annoyance, or alarm through conduct listed in division (A), or engaging in division (B)’s specified public, offensive, or harm-risk conduct while voluntarily intoxicated.",
+        "degreeContext": "Minor misdemeanor ordinarily. It is a fourth-degree misdemeanor (M4) under the circumstances listed in division (E)(3), or for the repeated division (B) violations described in (E)(4)."
+      },
+      "es": {
+        "plainSummary": "Causar temerariamente molestias, fastidio o alarma mediante la conducta enumerada en la división (A), o realizar, estando voluntariamente intoxicado, la conducta pública, ofensiva o riesgosa especificada en la división (B).",
+        "degreeContext": "Normalmente es una infracción menor sin grado. Es delito menor de cuarto grado (M4) en las circunstancias de (E)(3), o por las infracciones repetidas de la división (B) descritas en (E)(4)."
+      },
+      "zh": {
+        "plainSummary": "以(A)款列明的行为轻率地造成不便、烦扰或惊恐，或者在自愿醉酒时实施(B)款规定的公共场所、冒犯性或造成伤害风险的行为。",
+        "degreeContext": "通常为微罪。在(E)(3)列明的情形下，或属于(E)(4)所述反复违反(B)款时，为四级轻罪（M4）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2917-12-disturbing-a-lawful-meeting",
+    "jurisdiction": "OH",
+    "code": "2917.12",
+    "slug": "ohio-reviewed-2917-12-disturbing-a-lawful-meeting",
+    "name": "Disturbing a lawful meeting",
+    "names": {
+      "es": "Perturbación de una reunión lícita",
+      "zh": "扰乱合法集会"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2917.12",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.12"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Acting with the purpose of preventing or disrupting a lawful meeting, procession, or gathering by obstructing or interfering with it, or by a gesture, display, or utterance that outrages the group’s sensibilities.",
+        "degreeContext": "Fourth-degree misdemeanor (M4) ordinarily. It is a first-degree misdemeanor (M1) when either religious-worship circumstance listed in divisions (B)(1)–(2) applies."
+      },
+      "es": {
+        "plainSummary": "Actuar con el propósito de impedir o perturbar una reunión, procesión o concentración lícita, obstruyéndola o interfiriendo con ella, o mediante un gesto, exhibición o expresión que ultraje la sensibilidad del grupo.",
+        "degreeContext": "Normalmente es delito menor de cuarto grado (M4). Es delito menor de primer grado (M1) cuando se da cualquiera de las circunstancias de culto religioso de (B)(1)–(2)."
+      },
+      "zh": {
+        "plainSummary": "以阻止或扰乱合法会议、游行或集会为目的，进行妨碍或干扰，或作出激怒该群体感受的手势、展示或言语。",
+        "degreeContext": "通常为四级轻罪（M4）；符合(B)(1)至(2)任一宗教礼拜情形时，为一级轻罪（M1）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2917-14-unlawfully-impeding-public-passage-of-an-emergency-service-responder",
+    "jurisdiction": "OH",
+    "code": "2917.14",
+    "slug": "ohio-reviewed-2917-14-unlawfully-impeding-public-passage-of-an-emergency-service-responder",
+    "name": "Unlawfully impeding public passage of an emergency service responder",
+    "names": {
+      "es": "Obstrucción ilícita del paso público de un miembro de servicios de emergencia",
+      "zh": "非法阻碍紧急服务人员通行"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2917.14",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.14"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Without privilege, recklessly making a road, sidewalk, or other public passage impassable without unreasonable inconvenience or hazard, when that blocks emergency access or response and the person refuses a responder’s request or order to stop or remove the obstruction.",
+        "degreeContext": "First-degree misdemeanor (M1). Both the emergency-access condition and refusal condition must be present."
+      },
+      "es": {
+        "plainSummary": "Sin privilegio, hacer temerariamente intransitable una vía, acera u otro paso público salvo con inconveniente o peligro irrazonable, cuando ello bloquea el acceso o respuesta de emergencia y la persona se niega a cumplir la petición u orden del miembro de emergencias de cesar o retirar la obstrucción.",
+        "degreeContext": "Delito menor de primer grado (M1). Deben concurrir tanto la condición de acceso de emergencia como la negativa."
+      },
+      "zh": {
+        "plainSummary": "在无权如此行为的情况下，轻率地阻塞道路、人行道或其他公共通道，使人必须承受不合理不便或危险方可通行，且该阻塞妨碍紧急通行或响应，并拒绝紧急服务人员要求或命令其停止或移除障碍。",
+        "degreeContext": "一级轻罪（M1）。必须同时具备妨碍紧急通行和拒绝服从这两个条件。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2917-21-telecommunications-harassment",
+    "jurisdiction": "OH",
+    "code": "2917.21",
+    "slug": "ohio-reviewed-2917-21-telecommunications-harassment",
+    "name": "Telecommunications harassment",
+    "names": {
+      "es": "Acoso por telecomunicaciones",
+      "zh": "电信骚扰"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2917.21",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2917.21"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Using telecommunications or internet postings to engage in one of the specifically prohibited acts in divisions (A)(1)–(11) or (B)(1)–(2), with the knowledge, purpose, or other mental state that the applicable paragraph requires.",
+        "degreeContext": "For most listed paragraphs, a first offense is a first-degree misdemeanor (M1) and a later offense is a fifth-degree felony (F5). Division (A)(4) follows that baseline, but economic harm makes it F5 at $1,000–$7,499.99, fourth-degree felony (F4) at $7,500–$149,999.99, and third-degree felony (F3) at $150,000 or more."
+      },
+      "es": {
+        "plainSummary": "Usar telecomunicaciones o publicaciones en internet para realizar uno de los actos específicamente prohibidos en (A)(1)–(11) o (B)(1)–(2), con el conocimiento, propósito u otro estado mental exigido por el apartado aplicable.",
+        "degreeContext": "Para la mayoría de los apartados, la primera infracción es delito menor de primer grado (M1) y una posterior es delito grave de quinto grado (F5). La división (A)(4) sigue esa base, pero el perjuicio económico la convierte en F5 entre $1,000 y $7,499.99, delito grave de cuarto grado (F4) entre $7,500 y $149,999.99 y delito grave de tercer grado (F3) desde $150,000."
+      },
+      "zh": {
+        "plainSummary": "使用电信手段或互联网发布内容，实施(A)(1)至(11)或(B)(1)至(2)明确禁止的行为之一，并具备相应条款要求的明知、目的或其他主观状态。",
+        "degreeContext": "对大多数列明条款，初犯为一级轻罪（M1），再犯为五级重罪（F5）。(A)(4)通常也适用该规则，但造成经济损失1,000至7,499.99美元为F5，7,500至149,999.99美元为四级重罪（F4），150,000美元以上为三级重罪（F3）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2919-21-nonsupport-of-dependents",
+    "jurisdiction": "OH",
+    "code": "2919.21",
+    "slug": "ohio-reviewed-2919-21-nonsupport-of-dependents",
+    "name": "Nonsupport of dependents",
+    "names": {
+      "es": "Incumplimiento de manutención de dependientes",
+      "zh": "不扶养受扶养人"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2919.21",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2919.21"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Abandoning a person whom the law requires the accused to support, or failing to provide legally or court-ordered support to a spouse, child, or other person covered by divisions (A)–(B).",
+        "degreeContext": "First-degree misdemeanor (M1) ordinarily. For division (A)(2) or (B), it is a fifth-degree felony (F5) after the specified prior conviction or when support was missed for 26 weeks out of 104; it is a fourth-degree felony (F4) after a prior felony conviction under this section."
+      },
+      "es": {
+        "plainSummary": "Abandonar a una persona a quien la ley obliga al acusado a mantener, o no proporcionar la manutención legalmente exigida u ordenada judicialmente a un cónyuge, hijo u otra persona comprendida en (A)–(B).",
+        "degreeContext": "Normalmente es delito menor de primer grado (M1). Para (A)(2) o (B), es delito grave de quinto grado (F5) tras la condena previa especificada o si faltó manutención durante 26 de 104 semanas; es delito grave de cuarto grado (F4) tras una condena grave previa conforme a esta sección."
+      },
+      "zh": {
+        "plainSummary": "遗弃依法应由被告扶养的人，或者不向(A)至(B)款涵盖的配偶、子女或其他人员提供法律要求或法院命令的扶养。",
+        "degreeContext": "通常为一级轻罪（M1）。对于(A)(2)或(B)款，存在法定既往定罪或在104周中有26周未履行扶养义务时，为五级重罪（F5）；曾因本条重罪被定罪时，为四级重罪（F4）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2919-21-contributing-to-the-nonsupport-of-dependents",
+    "jurisdiction": "OH",
+    "code": "2919.21",
+    "slug": "ohio-reviewed-2919-21-contributing-to-the-nonsupport-of-dependents",
+    "name": "Contributing to the nonsupport of dependents",
+    "names": {
+      "es": "Contribución al incumplimiento de manutención de dependientes",
+      "zh": "促成不扶养受扶养人"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2919.21",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2919.21"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Aiding, abetting, inducing, causing, encouraging, or contributing to a child, or a juvenile-court ward, becoming a “dependent child” or “neglected child” as those terms are defined by statute.",
+        "degreeContext": "First-degree misdemeanor (M1). Each day of violation is a separate offense."
+      },
+      "es": {
+        "plainSummary": "Ayudar, facilitar, inducir, causar, fomentar o contribuir a que un menor, o un pupilo del tribunal de menores, se convierta en «menor dependiente» o «menor desatendido» según las definiciones legales.",
+        "degreeContext": "Delito menor de primer grado (M1). Cada día de infracción constituye un delito separado."
+      },
+      "zh": {
+        "plainSummary": "帮助、教唆、诱使、导致、鼓励或促使儿童或少年法院监护对象成为法定“受扶养儿童”或“受忽视儿童”。",
+        "degreeContext": "一级轻罪（M1）。每一违法日均构成一项独立罪行。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2919-27-violating-a-protection-order",
+    "jurisdiction": "OH",
+    "code": "2919.27",
+    "slug": "ohio-reviewed-2919-27-violating-a-protection-order",
+    "name": "Violating a protection order",
+    "names": {
+      "es": "Incumplimiento de una orden de protección",
+      "zh": "违反保护令"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2919.27",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2919.27"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Recklessly violating a protection order or consent agreement of a type listed in divisions (A)(1)–(3).",
+        "degreeContext": "First-degree misdemeanor (M1) ordinarily; fifth-degree felony (F5) with a listed prior adjudication or conviction; third-degree felony (F3) when the order is violated while committing a felony."
+      },
+      "es": {
+        "plainSummary": "Incumplir temerariamente una orden de protección o acuerdo por consentimiento de los tipos enumerados en (A)(1)–(3).",
+        "degreeContext": "Normalmente es delito menor de primer grado (M1); delito grave de quinto grado (F5) con una resolución o condena previa enumerada; delito grave de tercer grado (F3) cuando se incumple la orden al cometer un delito grave."
+      },
+      "zh": {
+        "plainSummary": "轻率地违反(A)(1)至(3)列明类型的保护令或同意协议。",
+        "degreeContext": "通常为一级轻罪（M1）；有法定既往裁判或定罪时为五级重罪（F5）；在实施重罪过程中违反保护令时为三级重罪（F3）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2921-13-falsification",
+    "jurisdiction": "OH",
+    "code": "2921.13",
+    "slug": "ohio-reviewed-2921-13-falsification",
+    "name": "Falsification",
+    "names": {
+      "es": "Falsificación de declaraciones",
+      "zh": "虚假陈述"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2921.13",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2921.13"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly making or affirming a false statement in one of the circumstances specifically listed in divisions (A)(1)–(8), (10)–(11), (13), or (15)–(16). This row does not cover the separately named firearm, theft, concealed-license, or removal-proceeding forms.",
+        "degreeContext": "First-degree misdemeanor (M1) for these listed falsification paragraphs."
+      },
+      "es": {
+        "plainSummary": "Hacer o afirmar a sabiendas una declaración falsa en una de las circunstancias enumeradas en (A)(1)–(8), (10)–(11), (13) o (15)–(16). Esta ficha no abarca las modalidades con nombre propio relativas a armas, hurto, licencia de porte oculto o procedimiento de remoción.",
+        "degreeContext": "Estas modalidades son delito menor de primer grado (M1)."
+      },
+      "zh": {
+        "plainSummary": "在(A)(1)至(8)、(10)至(11)、(13)或(15)至(16)列明的情形之一，明知地作出或确认虚假陈述。本记录不涵盖另有法定罪名的枪支、盗窃、隐蔽携枪许可或免职程序类行为。",
+        "degreeContext": "这些列明的虚假陈述行为属一级轻罪（M1）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2921-13-falsification-in-a-theft-offense",
+    "jurisdiction": "OH",
+    "code": "2921.13",
+    "slug": "ohio-reviewed-2921-13-falsification-in-a-theft-offense",
+    "name": "Falsification in a theft offense",
+    "names": {
+      "es": "Falsificación de declaraciones en un delito de hurto",
+      "zh": "盗窃犯罪中的虚假陈述"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2921.13",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2921.13"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly making a false statement with the purpose of committing or facilitating a theft offense, as specified in division (A)(9).",
+        "degreeContext": "First-degree misdemeanor (M1) below $1,000; fifth-degree felony (F5) from $1,000; fourth-degree felony (F4) from $7,500; and third-degree felony (F3) from $150,000."
+      },
+      "es": {
+        "plainSummary": "Hacer a sabiendas una declaración falsa con el propósito de cometer o facilitar un delito de hurto, conforme a (A)(9).",
+        "degreeContext": "Delito menor de primer grado (M1) por debajo de $1,000; delito grave de quinto grado (F5) desde $1,000; delito grave de cuarto grado (F4) desde $7,500; y delito grave de tercer grado (F3) desde $150,000."
+      },
+      "zh": {
+        "plainSummary": "依(A)(9)款，以实施或促成盗窃犯罪为目的，明知地作出虚假陈述。",
+        "degreeContext": "金额低于1,000美元为一级轻罪（M1）；1,000美元起为五级重罪（F5）；7,500美元起为四级重罪（F4）；150,000美元起为三级重罪（F3）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2921-13-falsification-to-purchase-a-firearm",
+    "jurisdiction": "OH",
+    "code": "2921.13",
+    "slug": "ohio-reviewed-2921-13-falsification-to-purchase-a-firearm",
+    "name": "Falsification to purchase a firearm",
+    "names": {
+      "es": "Falsificación de declaraciones para comprar un arma de fuego",
+      "zh": "为购买枪支作虚假陈述"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2921.13",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2921.13"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Making the division (A)(12) false statement using the specified false identity document, or knowingly furnishing such a document to a firearm seller under division (B).",
+        "degreeContext": "Fifth-degree felony (F5)."
+      },
+      "es": {
+        "plainSummary": "Hacer la declaración falsa de (A)(12) usando el documento de identidad falso especificado, o proporcionar a sabiendas tal documento a un vendedor de armas de fuego conforme a (B).",
+        "degreeContext": "Delito grave de quinto grado (F5)."
+      },
+      "zh": {
+        "plainSummary": "使用法定虚假身份证明作出(A)(12)款所述虚假陈述，或依(B)款明知地向枪支销售者提供该证件。",
+        "degreeContext": "五级重罪（F5）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2921-13-falsification-to-obtain-a-concealed-handgun-license",
+    "jurisdiction": "OH",
+    "code": "2921.13",
+    "slug": "ohio-reviewed-2921-13-falsification-to-obtain-a-concealed-handgun-license",
+    "name": "Falsification to obtain a concealed handgun license",
+    "names": {
+      "es": "Falsificación de declaraciones para obtener una licencia de porte oculto de arma corta",
+      "zh": "为取得隐蔽携带手枪许可证作虚假陈述"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2921.13",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2921.13"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Making the division (A)(14) false statement in a concealed-handgun-license application, or knowingly presenting a fictitious or altered handgun-competence certificate under division (C).",
+        "degreeContext": "Fourth-degree felony (F4)."
+      },
+      "es": {
+        "plainSummary": "Hacer la declaración falsa de (A)(14) en una solicitud de licencia de porte oculto de arma corta, o presentar a sabiendas un certificado ficticio o alterado de competencia con armas cortas conforme a (C).",
+        "degreeContext": "Delito grave de cuarto grado (F4)."
+      },
+      "zh": {
+        "plainSummary": "在隐蔽携带手枪许可证申请中作出(A)(14)款所述虚假陈述，或依(C)款明知地提交虚构或篡改的手枪能力证明。",
+        "degreeContext": "四级重罪（F4）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2921-13-falsification-regarding-a-removal-proceeding",
+    "jurisdiction": "OH",
+    "code": "2921.13",
+    "slug": "ohio-reviewed-2921-13-falsification-regarding-a-removal-proceeding",
+    "name": "Falsification regarding a removal proceeding",
+    "names": {
+      "es": "Falsificación de declaraciones respecto de un procedimiento de remoción",
+      "zh": "免职程序中的虚假陈述"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2921.13",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2921.13"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Violating division (A)’s falsification prohibition in a removal proceeding under one of the four statutes listed in division (F)(5).",
+        "degreeContext": "Third-degree felony (F3) when the falsification occurs in one of those specified removal proceedings."
+      },
+      "es": {
+        "plainSummary": "Infringir la prohibición de falsificación de la división (A) en un procedimiento de remoción regido por uno de los cuatro estatutos enumerados en (F)(5).",
+        "degreeContext": "Es delito grave de tercer grado (F3) cuando la falsificación ocurre en uno de esos procedimientos de remoción especificados."
+      },
+      "zh": {
+        "plainSummary": "在(F)(5)列明的四项法律之一所规定的免职程序中，违反(A)款的虚假陈述禁令。",
+        "degreeContext": "虚假陈述发生于上述特定免职程序之一时，为三级重罪（F3）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2921-32-obstructing-justice",
+    "jurisdiction": "OH",
+    "code": "2921.32",
+    "slug": "ohio-reviewed-2921-32-obstructing-justice",
+    "name": "Obstructing justice",
+    "names": {
+      "es": "Obstrucción de la justicia",
+      "zh": "妨碍司法"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2921.32",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2921.32"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "With the purpose of hindering a proceeding or punishment, or helping another benefit from a crime or delinquent act: harboring the person, providing means to avoid discovery, warning of discovery, concealing evidence or inducing its withholding, giving false information, or obstructing through force, intimidation, or deception.",
+        "degreeContext": "If the aided act is a misdemeanor, the offense has the same misdemeanor degree. A felony predicate ordinarily makes it a fifth-degree felony (F5); listed serious offenses make it a third-degree felony (F3); trafficking in persons makes it a second-degree felony (F2); terrorism is F2, or first-degree felony (F1) if a nonparticipant dies."
+      },
+      "es": {
+        "plainSummary": "Con el propósito de obstaculizar un procedimiento o castigo, o ayudar a otra persona a beneficiarse de un delito o acto de delincuencia: ocultarla, darle medios para evitar ser descubierta, advertirle, ocultar pruebas o inducir su retención, comunicar información falsa u obstruir mediante fuerza, intimidación o engaño.",
+        "degreeContext": "Si el acto auxiliado es delito menor, conserva el mismo grado. Un delito grave subyacente normalmente produce delito grave de quinto grado (F5); los delitos graves enumerados, delito grave de tercer grado (F3); la trata de personas, delito grave de segundo grado (F2); y terrorismo, F2 o delito grave de primer grado (F1) si muere una persona no participante."
+      },
+      "zh": {
+        "plainSummary": "以妨碍诉讼或处罚，或帮助他人从犯罪或少年违法行为中获益为目的，窝藏该人、提供逃避发现的手段、发出警告、隐匿证据或诱使他人不提供证据、提供虚假信息，或以武力、恐吓或欺骗进行阻碍。",
+        "degreeContext": "被帮助的行为为轻罪时，本罪与该轻罪同级。基础行为为重罪时通常属五级重罪（F5）；列明的严重犯罪属三级重罪（F3）；人口贩运属二级重罪（F2）；恐怖主义属F2，如非参与者死亡则为一级重罪（F1）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2921-33-resisting-arrest",
+    "jurisdiction": "OH",
+    "code": "2921.33",
+    "slug": "ohio-reviewed-2921-33-resisting-arrest",
+    "name": "Resisting arrest",
+    "names": {
+      "es": "Resistencia al arresto",
+      "zh": "拒捕"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2921.33",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2921.33"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Recklessly, or by force, resisting or interfering with a lawful arrest. Division (B) covers causing physical harm to an officer; division (C) covers deadly-weapon conduct involving physical harm or brandishing.",
+        "degreeContext": "Division (A) is a second-degree misdemeanor (M2); causing officer physical harm under (B) is a first-degree misdemeanor (M1); the deadly-weapon form in (C) is a fourth-degree felony (F4)."
+      },
+      "es": {
+        "plainSummary": "Resistir u obstaculizar temerariamente, o mediante fuerza, un arresto lícito. La división (B) abarca causar daño físico a un agente; (C), la conducta con arma mortal que implica daño físico o exhibición amenazante.",
+        "degreeContext": "La división (A) es delito menor de segundo grado (M2); causar daño físico al agente conforme a (B) es delito menor de primer grado (M1); la modalidad con arma mortal de (C) es delito grave de cuarto grado (F4)."
+      },
+      "zh": {
+        "plainSummary": "轻率地或使用武力抗拒、妨碍合法逮捕。(B)款涵盖对执法人员造成身体伤害；(C)款涵盖使用致命武器造成身体伤害或挥示武器。",
+        "degreeContext": "(A)款为二级轻罪（M2）；依(B)款造成执法人员身体伤害为一级轻罪（M1）；(C)款使用致命武器的行为为四级重罪（F4）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-01-conspiracy",
+    "jurisdiction": "OH",
+    "code": "2923.01",
+    "slug": "ohio-reviewed-2923-01-conspiracy",
+    "name": "Conspiracy",
+    "names": {
+      "es": "Conspiración",
+      "zh": "共谋"
+    },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.01",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.01"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2913.421",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2913.421"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "With the purpose of committing, promoting, or facilitating one of the offenses listed in division (A), planning or helping plan it, or agreeing to conduct that facilitates it. Conviction also requires the substantial overt act described in division (B). For the listed email/computer predicates, the reviewed interpretation uses §2913.421; the official §2923.01 text prints §2923.421, which appears to be the original source typo.",
+        "degreeContext": "First-degree felony (F1) if the object is aggravated murder, murder, or a life-maximum offense; one degree below an F1–F4 object; first-degree misdemeanor (M1) for an F5 object. A Chapter 3734 hazardous-waste object instead carries §2923.01(J)(3)’s special penalty. For §2913.421 predicates, first determine that predicate’s applicable enhanced degree, then apply this conspiracy rule."
+      },
+      "es": {
+        "plainSummary": "Con el propósito de cometer, promover o facilitar uno de los delitos de (A), planearlo o ayudar a planearlo, o acordar una conducta que lo facilite. La condena exige además el acto manifiesto sustancial de (B). Para los delitos informáticos o de correo electrónico enumerados, la interpretación revisada usa §2913.421; el texto oficial de §2923.01 imprime §2923.421, lo que parece ser el error tipográfico original de la fuente.",
+        "degreeContext": "Es delito grave de primer grado (F1) si el objeto es homicidio agravado, homicidio u otro delito con máximo de cadena perpetua; un grado inferior al delito objeto F1–F4; y delito menor de primer grado (M1) si el objeto es F5. Un delito objeto de residuos peligrosos del capítulo 3734 lleva en cambio la pena especial de §2923.01(J)(3). Para delitos de §2913.421, primero se determina su grado aplicable, incluidos aumentos, y luego se aplica esta regla."
+      },
+      "zh": {
+        "plainSummary": "以实施、推动或促成(A)款列明的某项犯罪为目的，策划、协助策划，或约定实施有助于该罪的行为。定罪还要求(B)款所述的实质性外显行为。对于列明的电子邮件或计算机基础罪，经审阅的解释采用第2913.421条；第2923.01条官方文本印作第2923.421条，这似为原始法源的排印错误。",
+        "degreeContext": "目标罪为加重谋杀、谋杀或最高可判终身监禁的犯罪时，为一级重罪（F1）；目标罪为F1至F4时，低一个等级；目标罪为F5时，为一级轻罪（M1）。目标罪涉及第3734章危险废物时，改用第2923.01(J)(3)款的特别刑罚。对于第2913.421条基础罪，应先确定包括加重情形在内的适用等级，再套用本共谋规则。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-02-attempt-to-commit-an-offense",
+    "jurisdiction": "OH",
+    "code": "2923.02",
+    "slug": "ohio-reviewed-2923-02-attempt-to-commit-an-offense",
+    "name": "Attempt to commit an offense",
+    "names": {
+      "es": "Tentativa de cometer un delito",
+      "zh": "犯罪未遂"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.02",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.02"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Purposely or knowingly engaging in conduct that, if successful, would constitute or result in the target offense, where purpose or knowledge is sufficient culpability for that target.",
+        "degreeContext": "F1 for attempted aggravated murder, murder, or a life-maximum offense. Amount-graded drug attempts use the next lower statutory amount range; otherwise attempt is generally one degree below the target. Unclassified and Chapter 3734 hazardous-waste offenses follow the special rules in §2923.02(E). Attempted minor misdemeanors and attempted conspiracy are not offenses."
+      },
+      "es": {
+        "plainSummary": "Realizar deliberadamente o a sabiendas una conducta que, de tener éxito, constituiría o produciría el delito objeto, cuando el propósito o conocimiento sea culpabilidad suficiente para ese delito.",
+        "degreeContext": "Es F1 por tentativa de homicidio agravado, homicidio o delito con máximo de cadena perpetua. Las tentativas de drogas graduadas por cantidad usan el tramo cuantitativo inmediatamente inferior; por lo demás, la tentativa suele ser un grado inferior al delito objeto. Los delitos sin clasificación y los de residuos peligrosos del capítulo 3734 siguen las reglas especiales de §2923.02(E). La tentativa de infracción menor o de conspiración no constituye delito."
+      },
+      "zh": {
+        "plainSummary": "在故意或明知足以满足目标罪主观要件时，故意或明知地实施一旦成功即会构成或导致目标罪的行为。",
+        "degreeContext": "加重谋杀、谋杀或最高可判终身监禁犯罪的未遂为F1。按毒品数量分级的未遂适用低一档法定数量区间；其他未遂通常比目标罪低一级。未分级罪及第3734章危险废物罪适用第2923.02(E)款特别规则。微罪未遂和共谋未遂不构成犯罪。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-03-complicity-in-the-commission-of-an-offense",
+    "jurisdiction": "OH",
+    "code": "2923.03",
+    "slug": "ohio-reviewed-2923-03-complicity-in-the-commission-of-an-offense",
+    "name": "Complicity in the commission of an offense",
+    "names": {
+      "es": "Complicidad en la comisión de un delito",
+      "zh": "共同实施犯罪"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "With the culpability required for the underlying offense, soliciting or procuring it, aiding or abetting it, conspiring under §2923.01, or causing an innocent or irresponsible person to commit it. The underlying offense must be committed, subject to the statute’s rule for complicity in an attempt.",
+        "degreeContext": "The accomplice may be prosecuted and punished as if a principal offender, so the degree and conditions come from the offense actually committed or attempted; this section supplies no single universal grade."
+      },
+      "es": {
+        "plainSummary": "Con la culpabilidad exigida para el delito subyacente, solicitarlo o procurarlo, ayudarlo o facilitarlo, conspirar conforme a §2923.01 o hacer que lo cometa una persona inocente o irresponsable. El delito subyacente debe cometerse, sujeto a la regla legal sobre complicidad en una tentativa.",
+        "degreeContext": "El cómplice puede ser procesado y castigado como autor principal, por lo que el grado y sus condiciones proceden del delito efectivamente cometido o intentado; esta sección no fija un grado único universal."
+      },
+      "zh": {
+        "plainSummary": "具备基础罪要求的主观罪责，教唆或促成该罪、帮助或教唆、依第2923.01条共谋，或使无辜或无责任能力者实施该罪。基础罪必须实际发生，但须遵守本条关于帮助未遂的规定。",
+        "degreeContext": "共犯可按正犯起诉和处罚，因此等级及条件取决于实际实施或未遂的基础罪；本条没有统一的单一等级。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-12-carrying-concealed-weapons",
+    "jurisdiction": "OH",
+    "code": "2923.12",
+    "slug": "ohio-reviewed-2923-12-carrying-concealed-weapons",
+    "name": "Carrying concealed weapons",
+    "names": {
+      "es": "Porte oculto de armas",
+      "zh": "隐蔽携带武器"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.12",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.12"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly carrying or having ready at hand a concealed weapon listed in division (A), or violating a concealed-handgun licensee’s specified duties during a law-enforcement stop under division (B), subject to the statute’s detailed exclusions and defenses.",
+        "degreeContext": "Division (A) is ordinarily a first-degree misdemeanor (M1), rising to fourth-degree felony (F4) for listed recidivism, a loaded firearm, or dangerous ordnance, and third-degree felony (F3) aboard an aircraft. Division (B) branches include second-degree misdemeanor (M2), M1, F5, and repeat enhancements. Division (F) also includes a minor-misdemeanor branch, a misdemeanor whose degree is not stated, and further special rules; no degree should be inferred for the unspecified branch."
+      },
+      "es": {
+        "plainSummary": "Portar o tener al alcance a sabiendas un arma oculta enumerada en (A), o incumplir los deberes específicos de un titular de licencia de arma corta oculta durante una parada policial conforme a (B), sujeto a las exclusiones y defensas detalladas de la ley.",
+        "degreeContext": "La división (A) es normalmente delito menor de primer grado (M1), pero sube a delito grave de cuarto grado (F4) por reincidencia enumerada, arma cargada o artefacto peligroso, y a delito grave de tercer grado (F3) a bordo de una aeronave. Las ramas de (B) incluyen delito menor de segundo grado (M2), M1, F5 y aumentos por reincidencia. (F) también contiene una infracción menor, un delito menor cuyo grado no se especifica y otras reglas especiales; no debe suponerse grado para la rama no especificada."
+      },
+      "zh": {
+        "plainSummary": "明知地携带或随手可取地持有(A)款列明的隐蔽武器，或者隐蔽携枪许可证持有人在执法拦停时违反(B)款规定的特定义务，但须适用本条详细的排除与抗辩。",
+        "degreeContext": "(A)款通常为一级轻罪（M1）；法定再犯、枪支已装弹或涉及危险军械时升为四级重罪（F4）；在航空器上实施时为三级重罪（F3）。(B)款各分支包括二级轻罪（M2）、M1、F5及再犯加重。(F)款还设有微罪分支、未注明等级的轻罪分支及其他特别规则；不得推定未注明分支的等级。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-13-having-weapons-while-under-disability",
+    "jurisdiction": "OH",
+    "code": "2923.13",
+    "slug": "ohio-reviewed-2923-13-having-weapons-while-under-disability",
+    "name": "Having weapons while under disability",
+    "names": {
+      "es": "Posesión de armas estando sujeto a una incapacidad legal",
+      "zh": "受法律资格限制时持有武器"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.13",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.13"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Unless relieved by law or legal process, knowingly acquiring, having, carrying, or using a firearm or dangerous ordnance while one of the disabilities in divisions (A)(1)–(5) applies.",
+        "degreeContext": "Third-degree felony (F3). The disability and absence of legal relief are elements of this charge description."
+      },
+      "es": {
+        "plainSummary": "Adquirir, tener, portar o usar a sabiendas un arma de fuego o artefacto peligroso mientras concurre una de las incapacidades de (A)(1)–(5), salvo que se haya obtenido alivio por ley o proceso legal.",
+        "degreeContext": "Delito grave de tercer grado (F3). La incapacidad y la falta de alivio legal forman parte de esta descripción."
+      },
+      "zh": {
+        "plainSummary": "在(A)(1)至(5)任一法定资格限制存在时，明知地取得、持有、携带或使用枪支或危险军械，但已依法或经法律程序解除限制的除外。",
+        "degreeContext": "三级重罪（F3）。存在资格限制且未依法解除，是本罪描述的组成条件。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-161-improperly-discharging-a-firearm-at-or-into-a-habitation-in-a-school-safety-zone-or-with-the-intent-to-cause-harm-or-panic-to-persons-in-a-school-in-a-school-building-or-at-a-school-function-or-the-evacuation-of-a-school-function",
+    "jurisdiction": "OH",
+    "code": "2923.161",
+    "slug": "ohio-reviewed-2923-161-improperly-discharging-a-firearm-at-or-into-a-habitation-in-a-school-safety-zone-or-with-the-intent-to-cause-harm-or-panic-to-persons-in-a-school-in-a-school-building-or-at-a-school-function-or-the-evacuation-of-a-school-function",
+    "name": "Improperly discharging a firearm at or into a habitation, in a school safety zone, or with the intent to cause harm or panic to persons in a school, in a school building, or at a school function or the evacuation of a school function",
+    "names": {
+      "es": "Disparo indebido de un arma de fuego contra o dentro de una vivienda, en una zona de seguridad escolar, o con intención de causar daño o pánico en una escuela o función escolar",
+      "zh": "不当向住宅开枪、在学校安全区开枪，或意图在学校或学校活动中造成伤害或恐慌而开枪"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.161",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.161"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Without privilege, knowingly discharging a firearm as specified in divisions (A)(1)–(3): at or into an occupied structure that is a permanent or temporary habitation; in a school safety zone; or within 1,000 feet of school premises with the listed intent to harm, cause panic, or cause evacuation involving a school or school function.",
+        "degreeContext": "Second-degree felony (F2) for any of the three statutory forms; the applicable location and, for division (A)(3), listed intent must be proved."
+      },
+      "es": {
+        "plainSummary": "Sin privilegio, disparar a sabiendas un arma de fuego según (A)(1)–(3): contra o dentro de una estructura ocupada que sea vivienda permanente o temporal; en una zona de seguridad escolar; o a menos de 1,000 pies de un recinto escolar con la intención enumerada de causar daño, pánico o evacuación relacionados con una escuela o función escolar.",
+        "degreeContext": "Delito grave de segundo grado (F2) para cualquiera de las tres modalidades; debe probarse el lugar aplicable y, para (A)(3), la intención enumerada."
+      },
+      "zh": {
+        "plainSummary": "在无权如此行为的情况下，明知地实施(A)(1)至(3)列明的开枪行为：向作为永久或临时住所的有人建筑物开枪或向其内部开枪；在学校安全区开枪；或在距学校场地1,000英尺内，以法定意图造成与学校或学校活动有关的伤害、恐慌或疏散而开枪。",
+        "degreeContext": "三种法定形式均为二级重罪（F2）；须证明相应地点条件，且(A)(3)款还须证明法定意图。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-162-discharge-of-a-firearm-on-or-near-prohibited-premises",
+    "jurisdiction": "OH",
+    "code": "2923.162",
+    "slug": "ohio-reviewed-2923-162-discharge-of-a-firearm-on-or-near-prohibited-premises",
+    "name": "Discharge of a firearm on or near prohibited premises",
+    "names": {
+      "es": "Disparo de un arma de fuego en o cerca de lugares prohibidos",
+      "zh": "在禁区或其附近开枪"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.162",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.162"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Discharging a firearm on or near a cemetery or its grounds, or on, over, or across a public road, as specified in divisions (A)(1)–(3), subject to division (B)’s own-land exceptions.",
+        "degreeContext": "Divisions (A)(1)–(2) are fourth-degree misdemeanors (M4). Division (A)(3) is ordinarily a first-degree misdemeanor (M1), rising to third-degree felony (F3) for substantial risk to a person or serious property harm, second-degree felony (F2) for physical harm to a person, and first-degree felony (F1) for serious physical harm."
+      },
+      "es": {
+        "plainSummary": "Disparar un arma de fuego en o cerca de un cementerio o sus terrenos, o sobre, por encima o a través de una vía pública, conforme a (A)(1)–(3), sujeto a las excepciones de terreno propio de (B).",
+        "degreeContext": "Las divisiones (A)(1)–(2) son delitos menores de cuarto grado (M4). (A)(3) es normalmente delito menor de primer grado (M1), pero sube a delito grave de tercer grado (F3) por riesgo considerable para una persona o daño grave a bienes, a delito grave de segundo grado (F2) por daño físico a una persona y a delito grave de primer grado (F1) por daño físico grave."
+      },
+      "zh": {
+        "plainSummary": "依(A)(1)至(3)款，在墓地或其附属场地内或附近开枪，或在公共道路上、越过或横跨公共道路开枪，但须适用(B)款关于自有土地的例外。",
+        "degreeContext": "(A)(1)至(2)款为四级轻罪（M4）。(A)(3)款通常为一级轻罪（M1）；对人员造成重大风险或对财物造成严重损害时为三级重罪（F3）；造成人身伤害时为二级重罪（F2）；造成严重人身伤害时为一级重罪（F1）。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-17-unlawful-possession-of-dangerous-ordnance",
+    "jurisdiction": "OH",
+    "code": "2923.17",
+    "slug": "ohio-reviewed-2923-17-unlawful-possession-of-dangerous-ordnance",
+    "name": "Unlawful possession of dangerous ordnance",
+    "names": {
+      "es": "Posesión ilícita de artefactos peligrosos",
+      "zh": "非法持有危险军械"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.17",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.17"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly acquiring, having, carrying, or using dangerous ordnance, subject to the specific exceptions in division (C).",
+        "degreeContext": "Fifth-degree felony (F5). Conduct within a division (C) exception is outside this prohibition."
+      },
+      "es": {
+        "plainSummary": "Adquirir, tener, portar o usar a sabiendas artefactos peligrosos, sujeto a las excepciones específicas de (C).",
+        "degreeContext": "Delito grave de quinto grado (F5). La conducta comprendida en una excepción de (C) queda fuera de esta prohibición."
+      },
+      "zh": {
+        "plainSummary": "明知地取得、持有、携带或使用危险军械，但须适用(C)款的特定例外。",
+        "degreeContext": "五级重罪（F5）。符合(C)款例外的行为不在本禁令范围内。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-17-illegally-manufacturing-or-processing-explosives",
+    "jurisdiction": "OH",
+    "code": "2923.17",
+    "slug": "ohio-reviewed-2923-17-illegally-manufacturing-or-processing-explosives",
+    "name": "Illegally manufacturing or processing explosives",
+    "names": {
+      "es": "Fabricación o procesamiento ilegal de explosivos",
+      "zh": "非法制造或加工爆炸物"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.17",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.17"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Manufacturing or processing an explosive in Ohio without first obtaining the license, registration certificate, or permit specified in division (B).",
+        "degreeContext": "Second-degree felony (F2). The offense turns on the required authorization being absent before manufacture or processing."
+      },
+      "es": {
+        "plainSummary": "Fabricar o procesar un explosivo en Ohio sin obtener previamente la licencia, certificado de registro o permiso especificado en (B).",
+        "degreeContext": "Delito grave de segundo grado (F2). El delito depende de que falte la autorización exigida antes de fabricar o procesar."
+      },
+      "zh": {
+        "plainSummary": "未事先取得(B)款规定的许可证、登记证或许可，而在俄亥俄州制造或加工爆炸物。",
+        "degreeContext": "二级重罪（F2）。是否在制造或加工前取得所要求的授权，是本罪的关键条件。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-211-underage-purchase-of-a-firearm",
+    "jurisdiction": "OH",
+    "code": "2923.211",
+    "slug": "ohio-reviewed-2923-211-underage-purchase-of-a-firearm",
+    "name": "Underage purchase of a firearm",
+    "names": {
+      "es": "Compra de un arma de fuego por una persona menor de edad",
+      "zh": "未成年人购买枪支"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.211",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.211"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "A person under age 18 purchasing or attempting to purchase a firearm.",
+        "degreeContext": "The statute calls this a delinquent act that would be a fourth-degree felony (F4) if an adult could commit it. Preserve that juvenile-disposition wording rather than treating it as an ordinary adult conviction."
+      },
+      "es": {
+        "plainSummary": "Que una persona menor de 18 años compre o intente comprar un arma de fuego.",
+        "degreeContext": "La ley lo califica como acto de delincuencia que sería delito grave de cuarto grado (F4) si pudiera cometerlo un adulto. Debe conservarse esa formulación de justicia juvenil, no tratarlo como condena penal ordinaria de adulto."
+      },
+      "zh": {
+        "plainSummary": "未满18周岁的人购买或企图购买枪支。",
+        "degreeContext": "法律将其规定为少年违法行为；若该行为可由成年人实施，则相当于四级重罪（F4）。应保留这一少年司法处置表述，不应视为普通成年人刑事定罪。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-211-underage-purchase-of-a-handgun",
+    "jurisdiction": "OH",
+    "code": "2923.211",
+    "slug": "ohio-reviewed-2923-211-underage-purchase-of-a-handgun",
+    "name": "Underage purchase of a handgun",
+    "names": {
+      "es": "Compra de un arma corta por una persona menor de edad",
+      "zh": "未达法定年龄者购买手枪"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.211",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.211"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "A person under age 21 purchasing or attempting to purchase a handgun. Divisions (B)(1)–(2) exempt qualifying trained law-enforcement or military persons who are ages 18 through 20.",
+        "degreeContext": "Second-degree misdemeanor (M2), unless one of the specific trained law-enforcement or military exceptions applies."
+      },
+      "es": {
+        "plainSummary": "Que una persona menor de 21 años compre o intente comprar un arma corta. Las divisiones (B)(1)–(2) exceptúan a determinadas personas de 18 a 20 años con formación policial o militar que cumplan los requisitos.",
+        "degreeContext": "Delito menor de segundo grado (M2), salvo que se aplique una de las excepciones específicas para personal policial o militar capacitado."
+      },
+      "zh": {
+        "plainSummary": "未满21周岁的人购买或企图购买手枪。(B)(1)至(2)款豁免符合条件且受过训练的18至20岁执法或军事人员。",
+        "degreeContext": "二级轻罪（M2），但符合受训执法或军事人员特定例外的除外。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2923-32-engaging-in-a-pattern-of-corrupt-activity",
+    "jurisdiction": "OH",
+    "code": "2923.32",
+    "slug": "ohio-reviewed-2923-32-engaging-in-a-pattern-of-corrupt-activity",
+    "name": "Engaging in a pattern of corrupt activity",
+    "names": {
+      "es": "Participación en un patrón de actividad corrupta",
+      "zh": "参与连续腐败活动"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2923.32",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2923.32"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2941.1422",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2941.1422"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.14",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.14"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.18",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.18"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Conducting or participating in an enterprise, acquiring or maintaining enterprise or real-property interests or control, or investing specified proceeds through a pattern of corrupt activity or collection of an unlawful debt, as described in divisions (A)(1)–(3).",
+        "degreeContext": "Second-degree felony (F2) ordinarily. It is a first-degree felony (F1) if a corrupt-activity incident is one of the listed serious Ohio, former-law, federal, or out-of-state felonies, or when the §2941.1422 specification applies; that specification also triggers the external mandatory-term and restitution rules cited in §§2929.14(B)(7) and 2929.18(B)(8)."
+      },
+      "es": {
+        "plainSummary": "Dirigir o participar en una empresa, adquirir o mantener intereses o control sobre una empresa o inmuebles, o invertir determinados productos mediante un patrón de actividad corrupta o cobro de deuda ilícita, según (A)(1)–(3).",
+        "degreeContext": "Normalmente es delito grave de segundo grado (F2). Es delito grave de primer grado (F1) si un incidente de actividad corrupta es uno de los delitos graves serios enumerados de Ohio, ley anterior, ley federal u otro estado, o si se aplica la especificación de §2941.1422; esta también activa las reglas externas de pena obligatoria y restitución de §§2929.14(B)(7) y 2929.18(B)(8)."
+      },
+      "zh": {
+        "plainSummary": "依(A)(1)至(3)款，通过连续腐败活动或追收非法债务，经营或参与企业，取得或维持企业或不动产权益或控制权，或投资特定收益。",
+        "degreeContext": "通常为二级重罪（F2）。如某次腐败活动属于法定严重的俄亥俄州、旧法、联邦或外州重罪，或适用第2941.1422条特别指控，则为一级重罪（F1）；该特别指控还触发第2929.14(B)(7)及2929.18(B)(8)条的外部强制刑期和赔偿规则。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-aggravated-trafficking-in-drugs",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-aggravated-trafficking-in-drugs",
+    "name": "Aggravated trafficking in drugs",
+    "names": {
+      "es": "Tráfico agravado de drogas",
+      "zh": "加重贩运毒品"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell a Schedule I or II controlled substance covered by division (C)(1), or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "Fourth-degree felony (F4) at the base tier. Statutory quantity bands and listed vicinity circumstances (school, juvenile, or addiction-services/recovery setting) can raise it through third- and second-degree felony (F3/F2) to first-degree felony (F1); higher bands include presumptive or mandatory prison terms and major-drug-offender treatment as specified in (C)(1)."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas una sustancia controlada de la Lista I o II comprendida en (C)(1), o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "Delito grave de cuarto grado (F4) en el nivel base. Los tramos legales de cantidad y las circunstancias de proximidad enumeradas (escuela, menor o entorno de servicios de adicción/recuperación) pueden elevarlo por delito grave de tercer y segundo grado (F3/F2) hasta delito grave de primer grado (F1); los tramos altos incluyen prisión presunta u obligatoria y tratamiento de gran traficante según (C)(1)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售(C)(1)款涵盖的附表I或II管制物质，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "基础档为四级重罪（F4）。法定数量分档及列明的邻近情形（学校、未成年人或戒瘾服务／康复场所）可使其依次升为三级、二级重罪（F3/F2）直至一级重罪（F1）；依(C)(1)款，较高档次包括推定或强制监禁及重大毒品犯罪人认定。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-drugs",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-drugs",
+    "name": "Trafficking in drugs",
+    "names": {
+      "es": "Tráfico de drogas",
+      "zh": "贩运毒品"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell a Schedule III, IV, or V drug covered by division (C)(2), or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "Fifth-degree felony (F5) at the base tier, generally F4 in a listed vicinity. Increasing statutory bulk-amount multiples raise the offense through F4 and third-degree felony (F3) to second-degree felony (F2), with vicinity enhancements and presumptive or mandatory terms at specified tiers under (C)(2)."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas una droga de la Lista III, IV o V comprendida en (C)(2), o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "Delito grave de quinto grado (F5) en el nivel base, generalmente F4 en una proximidad enumerada. Los múltiplos crecientes de la cantidad a granel elevan el delito por F4 y delito grave de tercer grado (F3) hasta delito grave de segundo grado (F2), con aumentos por proximidad y penas presuntas u obligatorias en los niveles señalados por (C)(2)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售(C)(2)款涵盖的附表III、IV或V毒品，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "基础档为五级重罪（F5），在法定邻近地点通常为F4。随着法定“大宗数量”倍数增加，等级经F4、三级重罪（F3）升至二级重罪（F2）；(C)(2)款在特定档次规定邻近加重及推定或强制刑期。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-marihuana",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-marihuana",
+    "name": "Trafficking in marihuana",
+    "names": {
+      "es": "Tráfico de marihuana",
+      "zh": "贩运大麻"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 3796.18",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-3796.18"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 3796.20",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-3796.20"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell marijuana other than hashish, or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale. Chapter 3796 can authorize qualifying nonremunerated adult transfers and licensed cultivation, processing, transfers, or sales; conduct must remain within that authority.",
+        "degreeContext": "A gift of 20 grams or less is a minor misdemeanor; otherwise the base tier is fifth-degree felony (F5). Quantity bands from 200 grams upward and listed vicinity circumstances raise the grade through fourth- and third-degree felony (F4/F3) and second-degree felony (F2), up to first-degree felony (F1) in the highest vicinity branch, with mandatory terms at specified higher tiers. Division (C)(10)(a) routes its specified mixture here."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas marihuana que no sea hachís, o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa. El capítulo 3796 puede autorizar transferencias adultas sin remuneración y cultivo, procesamiento, transferencia o venta con licencia que cumplan los requisitos; la conducta debe permanecer dentro de esa autorización.",
+        "degreeContext": "Un regalo de 20 gramos o menos es infracción menor; de otro modo el nivel base es delito grave de quinto grado (F5). Los tramos desde 200 gramos y las circunstancias de proximidad elevan el grado por delito grave de cuarto y tercer grado (F4/F3) y delito grave de segundo grado (F2), hasta delito grave de primer grado (F1) en la rama superior de proximidad, con penas obligatorias en determinados niveles altos. (C)(10)(a) asigna aquí su mezcla especificada."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售哈希什以外的大麻，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。 第3796章可授权符合条件的成年人无偿转让及持证种植、加工、转让或销售；行为必须保持在授权范围内。",
+        "degreeContext": "赠与20克以下属微罪；其他基础档为五级重罪（F5）。从200克起的数量分档及法定邻近情形可使等级经四级、三级重罪（F4/F3）及二级重罪（F2），在最高邻近分支升至一级重罪（F1）；特定较高档次有强制刑期。(C)(10)(a)款将其规定的混合物归入本表。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-cocaine",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-cocaine",
+    "name": "Trafficking in cocaine",
+    "names": {
+      "es": "Tráfico de cocaína",
+      "zh": "贩运可卡因"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell cocaine, or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "Fifth-degree felony (F5) at the base tier. Unit-dose or gram thresholds and listed vicinity circumstances raise it through fourth-, third-, and second-degree felony (F4/F3/F2) to first-degree felony (F1); specified higher tiers carry presumptive or mandatory terms and the top tier has major-drug-offender treatment under (C)(4)."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas cocaína, o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "Delito grave de quinto grado (F5) en el nivel base. Los umbrales por dosis o gramos y las circunstancias de proximidad lo elevan por delito grave de cuarto, tercer y segundo grado (F4/F3/F2) hasta delito grave de primer grado (F1); niveles altos determinados llevan penas presuntas u obligatorias y el máximo conlleva tratamiento de gran traficante conforme a (C)(4)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售可卡因，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "基础档为五级重罪（F5）。单位剂量或克数门槛及法定邻近情形可使其经四级、三级、二级重罪（F4/F3/F2）升至一级重罪（F1）；(C)(4)款规定特定较高档有推定或强制刑期，最高档还认定为重大毒品犯罪人。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-l-s-d",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-l-s-d",
+    "name": "Trafficking in L.S.D.",
+    "names": {
+      "es": "Tráfico de L.S.D.",
+      "zh": "贩运L.S.D."
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell L.S.D., or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "Fifth-degree felony (F5) at the base tier. Unit-dose thresholds and listed vicinity circumstances raise it through fourth-, third-, and second-degree felony (F4/F3/F2) to first-degree felony (F1), with presumptive or mandatory terms and major-drug-offender treatment at the tiers specified in (C)(5)."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas L.S.D., o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "Delito grave de quinto grado (F5) en el nivel base. Los umbrales por dosis y las circunstancias de proximidad lo elevan por delito grave de cuarto, tercer y segundo grado (F4/F3/F2) hasta delito grave de primer grado (F1), con penas presuntas u obligatorias y tratamiento de gran traficante en los niveles de (C)(5)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售L.S.D.，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "基础档为五级重罪（F5）。单位剂量门槛及法定邻近情形可使其经四级、三级、二级重罪（F4/F3/F2）升至一级重罪（F1）；(C)(5)款规定的相应档次有推定或强制刑期及重大毒品犯罪人认定。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-heroin",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-heroin",
+    "name": "Trafficking in heroin",
+    "names": {
+      "es": "Tráfico de heroína",
+      "zh": "贩运海洛因"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell heroin, or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "Fifth-degree felony (F5) at the base tier. Unit-dose or gram thresholds and listed vicinity circumstances raise it through fourth-, third-, and second-degree felony (F4/F3/F2) to first-degree felony (F1), with presumptive or mandatory terms and major-drug-offender treatment at specified (C)(6) tiers."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas heroína, o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "Delito grave de quinto grado (F5) en el nivel base. Los umbrales por dosis o gramos y las circunstancias de proximidad lo elevan por delito grave de cuarto, tercer y segundo grado (F4/F3/F2) hasta delito grave de primer grado (F1), con penas presuntas u obligatorias y tratamiento de gran traficante en niveles de (C)(6)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售海洛因，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "基础档为五级重罪（F5）。单位剂量或克数门槛及法定邻近情形可使其经四级、三级、二级重罪（F4/F3/F2）升至一级重罪（F1）；(C)(6)款特定档次有推定或强制刑期及重大毒品犯罪人认定。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-hashish",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-hashish",
+    "name": "Trafficking in hashish",
+    "names": {
+      "es": "Tráfico de hachís",
+      "zh": "贩运哈希什"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell hashish, or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "A gift of a small statutory amount is a minor misdemeanor; otherwise the base tier is fifth-degree felony (F5). Hashish amount bands and listed vicinity circumstances raise it through fourth-, third-, and second-degree felony (F4/F3/F2), up to first-degree felony (F1), with mandatory terms at specified higher tiers under (C)(7)."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas hachís, o prepararlo para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "El regalo de una pequeña cantidad legal es infracción menor; de otro modo el nivel base es delito grave de quinto grado (F5). Los tramos de hachís y las circunstancias de proximidad lo elevan por delito grave de cuarto, tercer y segundo grado (F4/F3/F2) hasta delito grave de primer grado (F1), con penas obligatorias en niveles altos de (C)(7)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售哈希什，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "赠与法定少量哈希什属微罪；其他基础档为五级重罪（F5）。哈希什数量分档及法定邻近情形可使其经四级、三级、二级重罪（F4/F3/F2）升至一级重罪（F1）；(C)(7)款规定的较高档次有强制刑期。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-a-controlled-substance-analog",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-a-controlled-substance-analog",
+    "name": "Trafficking in a controlled substance analog",
+    "names": {
+      "es": "Tráfico de un análogo de sustancia controlada",
+      "zh": "贩运管制物质类似物"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell a controlled-substance analog, or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "Fifth-degree felony (F5) at the base tier. Gram thresholds and listed vicinity circumstances raise it through fourth-, third-, and second-degree felony (F4/F3/F2) to first-degree felony (F1), with presumptive or mandatory terms and major-drug-offender treatment at specified (C)(8) tiers."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas un análogo de sustancia controlada, o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "Delito grave de quinto grado (F5) en el nivel base. Los umbrales por gramos y las circunstancias de proximidad lo elevan por delito grave de cuarto, tercer y segundo grado (F4/F3/F2) hasta delito grave de primer grado (F1), con penas presuntas u obligatorias y tratamiento de gran traficante en niveles de (C)(8)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售管制物质类似物，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "基础档为五级重罪（F5）。克数门槛及法定邻近情形可使其经四级、三级、二级重罪（F4/F3/F2）升至一级重罪（F1）；(C)(8)款特定档次有推定或强制刑期及重大毒品犯罪人认定。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-03-trafficking-in-a-fentanyl-related-compound",
+    "jurisdiction": "OH",
+    "code": "2925.03",
+    "slug": "ohio-reviewed-2925-03-trafficking-in-a-fentanyl-related-compound",
+    "name": "Trafficking in a fentanyl-related compound",
+    "names": {
+      "es": "Tráfico de un compuesto relacionado con el fentanilo",
+      "zh": "贩运芬太尼相关化合物"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.03",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.03"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly selling or offering to sell a fentanyl-related compound, including a knowing fentanyl/marijuana mixture routed to this category by division (C)(10)(b), or preparing it for shipment, transport, delivery, or distribution while knowing or having reasonable cause to believe it is intended for sale or resale.",
+        "degreeContext": "Fifth-degree felony (F5) at the base tier. Unit-dose or gram thresholds and listed vicinity circumstances raise it through fourth-, third-, and second-degree felony (F4/F3/F2) to first-degree felony (F1); specified higher tiers carry presumptive or mandatory terms, and the highest quantity tier carries major-drug-offender treatment under (C)(9)."
+      },
+      "es": {
+        "plainSummary": "Vender u ofrecer vender a sabiendas un compuesto relacionado con el fentanilo, incluida la mezcla conocida de fentanilo y marihuana que (C)(10)(b) asigna a esta categoría, o prepararla para envío, transporte, entrega o distribución sabiendo o teniendo causa razonable para creer que se destina a venta o reventa.",
+        "degreeContext": "Delito grave de quinto grado (F5) en el nivel base. Los umbrales por dosis o gramos y las circunstancias de proximidad lo elevan por delito grave de cuarto, tercer y segundo grado (F4/F3/F2) hasta delito grave de primer grado (F1); niveles altos llevan penas presuntas u obligatorias y el máximo por cantidad conlleva tratamiento de gran traficante conforme a (C)(9)."
+      },
+      "zh": {
+        "plainSummary": "明知地出售或要约出售芬太尼相关化合物，包括(C)(10)(b)款归入本类别的明知芬太尼与大麻混合物，或者在明知或有合理理由相信其将被出售或转售的情况下，为装运、运输、交付或分销而制备该物质。",
+        "degreeContext": "基础档为五级重罪（F5）。单位剂量或克数门槛及法定邻近情形可使其经四级、三级、二级重罪（F4/F3/F2）升至一级重罪（F1）；特定较高档有推定或强制刑期，(C)(9)款最高数量档还认定为重大毒品犯罪人。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-04-illegal-manufacture-of-drugs",
+    "jurisdiction": "OH",
+    "code": "2925.04",
+    "slug": "ohio-reviewed-2925-04-illegal-manufacture-of-drugs",
+    "name": "Illegal manufacture of drugs",
+    "names": {
+      "es": "Fabricación ilegal de drogas",
+      "zh": "非法制造毒品"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.04",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.04"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 3796.18",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-3796.18"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly manufacturing or otherwise engaging in production of a controlled substance other than marijuana, outside §2925.04’s exceptions and any applicable licensed processing authority under Chapter 3796.",
+        "degreeContext": "The table in §2925.04(C)(2)–(4) varies by drug, amount, school-or-juvenile vicinity, methamphetamine-specific conditions, and other listed circumstances, spanning felony degrees including F1–F3 with mandatory terms in specified branches. No single grade applies to every controlled substance."
+      },
+      "es": {
+        "plainSummary": "Fabricar a sabiendas o intervenir de otro modo en la producción de una sustancia controlada que no sea marihuana, fuera de las excepciones de §2925.04 y de toda autorización aplicable de procesamiento con licencia del capítulo 3796.",
+        "degreeContext": "La tabla de §2925.04(C)(2)–(4) varía según droga, cantidad, proximidad de escuela o menor, condiciones específicas de metanfetamina y otras circunstancias, y abarca grados graves, incluidos F1–F3, con penas obligatorias en ramas determinadas. No hay un grado único para toda sustancia."
+      },
+      "zh": {
+        "plainSummary": "明知地制造或以其他方式参与生产大麻以外的管制物质，且不属于第2925.04条例外或第3796章适用的持证加工授权。",
+        "degreeContext": "第2925.04(C)(2)至(4)款按毒品种类、数量、学校或未成年人邻近情形、甲基苯丙胺特定条件及其他法定情形分级，涵盖包括F1至F3在内的重罪等级，特定分支有强制刑期。并非所有管制物质适用同一等级。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-04-illegal-cultivation-of-marihuana",
+    "jurisdiction": "OH",
+    "code": "2925.04",
+    "slug": "ohio-reviewed-2925-04-illegal-cultivation-of-marihuana",
+    "name": "Illegal cultivation of marihuana",
+    "names": {
+      "es": "Cultivo ilegal de marihuana",
+      "zh": "非法种植大麻"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.04",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.04"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 3796.04",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-3796.04"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 3796.18",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-3796.18"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly cultivating marijuana outside §2925.04’s exceptions and Chapter 3796 authorizations. Qualifying adult home grow must comply with §3796.04’s age, primary-residence, plant-limit, security, visibility, and other restrictions; licensed cultivation must remain within license authority.",
+        "degreeContext": "Section 2925.04(C)(5) grades by marijuana amount and school-or-juvenile vicinity, from lower misdemeanor branches through felony degrees up to F2, with mandatory terms at specified high tiers. Division (F) provides a personal-use affirmative defense under its conditions; it is not automatic immunity."
+      },
+      "es": {
+        "plainSummary": "Cultivar marihuana a sabiendas fuera de las excepciones de §2925.04 y autorizaciones del capítulo 3796. El cultivo doméstico adulto debe cumplir la edad, residencia principal, límite de plantas, seguridad, visibilidad y demás restricciones de §3796.04; el cultivo con licencia debe mantenerse dentro de la autorización.",
+        "degreeContext": "§2925.04(C)(5) gradúa según cantidad y proximidad de escuela o menor, desde ramas de delito menor hasta grados graves que llegan a F2, con penas obligatorias en niveles altos determinados. La división (F) ofrece una defensa afirmativa de uso personal bajo sus condiciones; no es inmunidad automática."
+      },
+      "zh": {
+        "plainSummary": "明知地在第2925.04条例外及第3796章授权范围外种植大麻。符合条件的成年人居家种植必须遵守第3796.04条的年龄、主要住所、植株数量、安全、可见性及其他限制；持证种植必须保持在许可范围内。",
+        "degreeContext": "第2925.04(C)(5)款依大麻数量及学校或未成年人邻近情形分级，从较低的轻罪分支至最高F2重罪，特定高档有强制刑期。(F)款在符合条件时提供个人使用积极抗辩，并非自动豁免。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-05-aggravated-funding-of-drug-trafficking",
+    "jurisdiction": "OH",
+    "code": "2925.05",
+    "slug": "ohio-reviewed-2925-05-aggravated-funding-of-drug-trafficking",
+    "name": "Aggravated funding of drug trafficking",
+    "names": {
+      "es": "Financiación agravada del tráfico de drogas",
+      "zh": "加重资助毒品贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.05",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.05"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2941.1410",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2941.1410"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.14",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.14"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly providing money or other value to another person with the purpose of obtaining profit from an offense involving a Schedule I or II substance other than marijuana, when the amount meets §2925.05(A)’s threshold.",
+        "degreeContext": "First-degree felony (F1), with a mandatory F1 prison term. If the violation involves a fentanyl-related compound, division (E)(1) classifies the offender as a major drug offender and requires the maximum F1 mandatory term; the separate §2941.1410 specification can trigger §2929.14(B)(3)’s mandatory term when its conditions are found."
+      },
+      "es": {
+        "plainSummary": "Proporcionar a sabiendas dinero u otro valor a otra persona con el propósito de obtener ganancia de un delito relativo a una sustancia de Lista I o II distinta de marihuana, cuando la cantidad alcanza el umbral de §2925.05(A).",
+        "degreeContext": "Delito grave de primer grado (F1), con pena de prisión F1 obligatoria. Si implica un compuesto relacionado con fentanilo, (E)(1) califica al autor como gran traficante y exige la pena obligatoria máxima F1; la especificación separada de §2941.1410 puede activar la pena obligatoria de §2929.14(B)(3) cuando se cumplen sus condiciones."
+      },
+      "zh": {
+        "plainSummary": "在数量达到第2925.05(A)款门槛时，明知地向他人提供金钱或其他有价物，并以从涉及大麻以外附表I或II物质的犯罪中获利为目的。",
+        "degreeContext": "一级重罪（F1），并须判处F1强制监禁。涉及芬太尼相关化合物时，(E)(1)款将行为人认定为重大毒品犯罪人并要求F1最高强制刑期；符合条件时，另行适用的第2941.1410条特别指控可触发第2929.14(B)(3)条强制刑期。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-2925-05-funding-of-drug-trafficking",
+    "jurisdiction": "OH",
+    "code": "2925.05",
+    "slug": "ohio-reviewed-2925-05-funding-of-drug-trafficking",
+    "name": "Funding of drug trafficking",
+    "names": {
+      "es": "Financiación del tráfico de drogas",
+      "zh": "资助毒品贩运"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 2925.05",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2925.05"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly providing money or other value to another person with the purpose of obtaining profit from an offense involving a Schedule III, IV, or V substance, when the amount meets §2925.05(A)’s bulk threshold.",
+        "degreeContext": "Second-degree felony (F2), with a mandatory F2 prison term. The F1 fentanyl and major-drug-offender branches concern different drug categories or findings and do not turn this Schedule III–V row into a blanket F1 offense."
+      },
+      "es": {
+        "plainSummary": "Proporcionar a sabiendas dinero u otro valor a otra persona con el propósito de obtener ganancia de un delito relativo a una sustancia de Lista III, IV o V, cuando la cantidad alcanza el umbral a granel de §2925.05(A).",
+        "degreeContext": "Delito grave de segundo grado (F2), con pena de prisión F2 obligatoria. Las ramas F1 de fentanilo y gran traficante dependen de otras categorías de droga o determinaciones y no convierten esta ficha de Listas III–V en un delito F1 general."
+      },
+      "zh": {
+        "plainSummary": "在数量达到第2925.05(A)款大宗门槛时，明知地向他人提供金钱或其他有价物，并以从涉及附表III、IV或V物质的犯罪中获利为目的。",
+        "degreeContext": "二级重罪（F2），并须判处F2强制监禁。芬太尼及重大毒品犯罪人相关的F1分支取决于不同毒品类别或认定，不会使本附表III至V记录一概成为F1。"
+      }
+    }
+  }
+]

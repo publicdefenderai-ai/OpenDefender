@@ -466,7 +466,13 @@ function JurisdictionStep({ formData, updateFormData, onNext, onPrev }: any) {
 }
 
 function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const getAvailableCategoryLabel = (charge: {
+    category: string;
+    categories?: string[];
+  }) => (charge.categories ?? [charge.category])
+    .map(category => t(`chat.chargeSelector.categories.${category}`, category))
+    .join(" / ");
   const [selectedCategory, setSelectedCategory] = useState("");
   const [showAllCharges, setShowAllCharges] = useState(true);
   const [chargeSearchQuery, setChargeSearchQuery] = useState("");
@@ -482,7 +488,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
 
     let cancelled = false;
     setRuntimeAuthorityCharges(null);
-    fetch(`/api/criminal-charges?jurisdiction=${encodeURIComponent(formData.jurisdiction)}&limit=500`)
+    fetch(`/api/criminal-charges?jurisdiction=${encodeURIComponent(formData.jurisdiction)}&limit=500&language=${encodeURIComponent(i18n.language)}`)
       .then(async (response) => {
         if (!response.ok) throw new Error(`${formData.jurisdiction} charge lookup failed (${response.status})`);
         const payload = await response.json();
@@ -500,7 +506,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
     return () => {
       cancelled = true;
     };
-  }, [isAuthorityBacked, formData.jurisdiction]);
+  }, [isAuthorityBacked, formData.jurisdiction, i18n.language]);
   
   // Get charges based on selected jurisdiction (includes both state and federal charges)
   const availableCharges = isAuthorityBacked
@@ -762,7 +768,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                           <div className="flex items-center gap-2 mb-1">
                             <span className="font-semibold text-sm">{charge.name}</span>
                             <Badge variant={charge.category === 'felony' ? 'destructive' : 'secondary'} className="text-xs">
-                              {charge.category}
+                              {getAvailableCategoryLabel(charge)}
                             </Badge>
                           </div>
                           {statuteCitation ? (
@@ -927,7 +933,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                 variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
                                 className="text-xs"
                               >
-                                {charge.category}
+                                {getAvailableCategoryLabel(charge)}
                               </Badge>
                             </div>
                             {statuteCitation && (
@@ -1018,7 +1024,7 @@ function CaseDetailsStep({ formData, updateFormData, onNext, onPrev }: any) {
                                 variant={charge.category === 'felony' ? 'destructive' : 'secondary'}
                                 className="text-xs"
                               >
-                                {charge.category}
+                                {getAvailableCategoryLabel(charge)}
                               </Badge>
                             </div>
                             {statuteCitation && (

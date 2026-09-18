@@ -8,13 +8,23 @@ export const jsonSchemas = {
     properties: {
       id: { type: "string", description: "Unique identifier (format: jurisdiction-charge-name)", example: "ca-dui-first-offense" },
       name: { type: "string", description: "Human-readable charge name" },
+      canonicalName: { type: "string", description: "Canonical English charge name used for stable lookup" },
       nameEs: { type: "string", description: "Spanish translation of charge name" },
+      nameZh: { type: "string", description: "Chinese translation of charge name" },
       code: { type: "string", description: "Statute code reference" },
       jurisdiction: { type: "string", description: "Two-letter state code or 'federal'", pattern: "^[A-Z]{2}$|^federal$" },
       category: { type: "string", enum: ["felony", "misdemeanor", "infraction"], description: "Severity classification" },
+      categories: {
+        type: "array",
+        items: { type: "string", enum: ["felony", "misdemeanor", "infraction"] },
+        description: "All broad grading classes available for statute branches"
+      },
       description: { type: "string", description: "Plain-English description of the charge" },
       descriptionEs: { type: "string", description: "Spanish translation of description" },
+      descriptionZh: { type: "string", description: "Chinese translation of description" },
       maxPenalty: { type: "string", description: "Maximum penalty summary" },
+      maxPenaltyEs: { type: "string", description: "Spanish maximum penalty summary" },
+      maxPenaltyZh: { type: "string", description: "Chinese maximum penalty summary" },
       commonDefenses: { type: "array", items: { type: "string" }, description: "List of common legal defenses" },
       evidenceToGather: { type: "array", items: { type: "string" }, description: "Evidence that may help the defense" },
       specificRights: { type: "array", items: { type: "string" }, description: "Rights specific to this charge" },

@@ -649,6 +649,7 @@ function YourChargesSection({
       id: classification.id,
       code: classification.code,
       classification: classification.classification,
+      categories: classification.categories ?? dbCharge?.categories,
       explanation,
       verifiedCitation,
       instructionRef: dbCharge ? getInstructionRef(dbCharge) : undefined,
@@ -700,7 +701,9 @@ function YourChargesSection({
                 variant={charge.classification === 'felony' ? 'destructive' : 'secondary'}
                 className="shrink-0"
               >
-                {charge.classification}
+                {(charge.categories ?? [charge.classification])
+                  .map(category => t(`chat.chargeSelector.categories.${category}`, category))
+                  .join(" / ")}
               </Badge>
             </div>
 
@@ -1170,7 +1173,9 @@ export function GuidanceDashboard({ guidance, onClose, onNewSession, onShowPubli
                           className="text-xs"
                           data-testid={`badge-charge-classification-${idx}`}
                         >
-                          {charge.classification.toUpperCase()}
+                          {(charge.categories ?? [charge.classification])
+                            .map(category => t(`chat.chargeSelector.categories.${category}`, category))
+                            .join(" / ")}
                         </Badge>
                       </div>
                     ))

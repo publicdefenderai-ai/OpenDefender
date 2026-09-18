@@ -775,9 +775,10 @@ export default function ChatPage() {
   const handleChargesSelect = useCallback((charges: ChargeSelection[]) => {
     actions.saveHistoryPoint(); // Save history before this selection
     const chargeNames = charges.map(c => c.name);
+    const displayChargeNames = charges.map(c => c.displayName);
     const chargeIds = charges.map(c => c.id);
     
-    actions.addMessage({ role: 'user', content: chargeNames.join(', ') });
+    actions.addMessage({ role: 'user', content: displayChargeNames.join(', ') });
     actions.updateCaseInfo({ charges: chargeIds, chargeNames });
     setShowChargeSelector(false);
 

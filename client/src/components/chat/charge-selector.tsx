@@ -11,6 +11,9 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
 import { getInstructionPaywall } from "@shared/criminal-charges";
+import { getChargeExplanation } from "@shared/charge-explanations";
+import { toChargeSelection, type ChargeSelection } from "@shared/charge-selection";
+export type { ChargeSelection } from "@shared/charge-selection";
 
 interface Charge {
   id: string;
@@ -20,7 +23,9 @@ interface Charge {
   /** Verified statute citation string, or null when unverified. */
   citation?: string | null;
   name: string;
+  canonicalName: string;
   category: 'felony' | 'misdemeanor' | 'infraction';
+  categories?: Array<'felony' | 'misdemeanor' | 'infraction'>;
   description: string;
   maxPenalty: string;
   instructionRef?: string;
@@ -56,11 +61,6 @@ interface ChargeSelectorProps {
   jurisdiction: string;
   onSelect: (charges: ChargeSelection[]) => void;
 }
-
-export type ChargeSelection = {
-  id: string;
-  name: string;
-};
 
 const CATEGORY_KEYS = ['All', 'felony', 'misdemeanor', 'infraction'] as const;
 
@@ -202,7 +202,7 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
       if (exists) {
         return prev.filter(c => c.id !== charge.id);
       }
-      return [...prev, { id: charge.id, name: charge.name }];
+      return [...prev, toChargeSelection(charge)];
     });
   };
 
@@ -365,6 +365,17 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                   const isUnavailable = unavailableChargeIds.has(charge.id);
                   const isProvenanceOpen = isAuthorityBacked && provenanceChargeId === charge.id;
                   const statusMessage = isAuthorityBacked ? provenanceStatusMessage(charge.id) : null;
+                  const explanationLanguage = i18n.language?.startsWith("es")
+                    ? "es"
+                    : i18n.language?.startsWith("zh")
+                      ? "zh"
+                      : "en";
+                  const localizedExplanation = getChargeExplanation(
+                      charge.canonicalName || charge.name,
+                      jurisdiction,
+                      explanationLanguage,
+                      charge.id,
+                    );
                   return (
                     <motion.div
                       key={charge.id}
@@ -413,15 +424,46 @@ export function ChargeSelector({ jurisdiction, onSelect }: ChargeSelectorProps) 
                                 charge.category === 'infraction' && "border-green-500/50 text-green-600"
                               )}
                             >
-                              {getCategoryLabel(charge.category)}
+                              {(charge.categories ?? [charge.category]).map(getCategoryLabel).join(" / ")}
                             </Badge>
                           </div>
+                          {charge.canonicalName && charge.canonicalName !== charge.name && (
+                            <p className="text-xs text-muted-foreground mt-0.5 break-words">
+                              {charge.canonicalName}
+                            </p>
+                          )}
                           {charge.citation && (
                             <p className="text-xs font-mono text-primary/80 mt-0.5 break-words" data-testid={`charge-citation-${charge.id}`}>
                               {charge.citation}
                             </p>
                           )}
                           <p className="text-xs text-muted-foreground mt-0.5 break-words">{charge.description}</p>
+                          <p className="text-xs text-muted-foreground mt-1 break-words">
+                            <span className="font-medium">
+                              {i18n.language?.startsWith("es")
+                                ? "Clasificación y penas:"
+                                : i18n.language?.startsWith("zh")
+                                  ? "罪名等级与刑罚："
+                                  : "Classification and penalties:"}
+                            </span>{" "}
+                            {charge.maxPenalty}
+                          </p>
+                          {localizedExplanation?.pendingAttorneyReview && (
+                            <p className="text-xs text-amber-700 dark:text-amber-300 mt-1 break-words">
+                              {explanationLanguage === "es"
+                                ? "Pendiente de revisión por un abogado."
+                                : explanationLanguage === "zh"
+                                  ? "尚待律师审阅。"
+                                  : "Pending attorney review."}
+                            </p>
+                          )}
+                          {localizedExplanation?.translationDraft && (
+                            <p className="text-xs text-amber-700 dark:text-amber-300 mt-1 break-words">
+                              {explanationLanguage === "es"
+                                ? "Traducción preliminar pendiente de revisión."
+                                : "此翻译为草稿，尚待审核。"}
+                            </p>
+                          )}
                         </div>
                       </motion.button>
                       {isAuthorityBacked && (

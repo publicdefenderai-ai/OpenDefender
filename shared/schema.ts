@@ -286,7 +286,7 @@ export const statuteSources = pgTable("statute_sources", {
   sourceKey: text("source_key").notNull().unique(),
   jurisdiction: text("jurisdiction").notNull(),
   publisher: text("publisher").notNull(),
-  sourceType: text("source_type").notNull(), // statute | jury_instruction | classification
+  sourceType: text("source_type").notNull(), // statute | administrative_rule | jury_instruction | classification
   canonicalUrl: text("canonical_url").notNull(),
   apiIdentifier: text("api_identifier"),
   accessPolicy: text("access_policy").notNull(), // reference_only | store_text

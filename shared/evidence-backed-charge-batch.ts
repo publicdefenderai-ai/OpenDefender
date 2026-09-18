@@ -11,7 +11,10 @@ export interface EvidenceBackedChargeDefinition {
   code: string;
   slug: string;
   name: string;
+  /** Reviewed display names. English identity remains in `name`. */
+  names?: { es: string; zh: string };
   category: CriminalCharge["category"];
+  categories?: CriminalCharge["category"][];
   verifiedMonth: string;
   citations: Array<{ citation: string; url: string }>;
   text: Record<"en" | "es" | "zh", LocalizedExplanation>;
@@ -26,6 +29,10 @@ export function projectEvidenceBackedChargeBatch(rows: readonly EvidenceBackedCh
   const explanations: ChargeExplanation[] = [];
   for (const row of rows) {
     if (ids.has(row.id) || slugs.has(row.slug) || !row.id.trim() || !row.name.trim() ||
+        (row.names !== undefined && (!row.names.es.trim() || !row.names.zh.trim())) ||
+        (row.categories !== undefined &&
+          (!row.categories.includes(row.category) || new Set(row.categories).size !== row.categories.length ||
+            row.categories.some(category => !["felony", "misdemeanor", "infraction"].includes(category)))) ||
         !row.code.trim() || !row.slug.trim() || !row.jurisdiction.trim() ||
         !/^\d{4}-(0[1-9]|1[0-2])$/.test(row.verifiedMonth) ||
         !row.citations.length ||
@@ -41,9 +48,14 @@ export function projectEvidenceBackedChargeBatch(rows: readonly EvidenceBackedCh
     charges.push({
       id: row.id, jurisdiction: row.jurisdiction, code: row.code, name: row.name,
       // Keep the statutory name available for matching charging paperwork.
-      nameEs: row.name, category: row.category,
+      nameEs: row.names?.es ?? row.name, nameZh: row.names?.zh ?? row.name,
+      category: row.category,
+      ...(row.categories ? { categories: [...row.categories] } : {}),
       description: row.text.en.plainSummary, descriptionEs: row.text.es.plainSummary,
+      descriptionZh: row.text.zh.plainSummary,
       maxPenalty: row.text.en.degreeContext,
+      maxPenaltyEs: row.text.es.degreeContext,
+      maxPenaltyZh: row.text.zh.degreeContext,
       commonDefenses: [], evidenceToGather: [], specificRights: [], urgentActions: [],
       statuteCitations: [row.citations[0].citation],
       sourceUrls: [row.citations[0].url], dataConfidence: "high",

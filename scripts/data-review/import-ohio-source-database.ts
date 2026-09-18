@@ -24,6 +24,7 @@ import {
 } from "../../server/services/authority-offense-evidence";
 import type { AuthorityCatalogRecord } from "../../server/services/authority-source-database";
 import { OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS } from "../../server/data/ohio-chapter-2903-source";
+import { OHIO_REVIEWED_SOURCES } from "../../server/data/ohio-reviewed-source";
 const RATE_LIMIT_MS = 700;
 const MAX_RETRIES = 3;
 const UA =
@@ -156,7 +157,10 @@ export function getOhioLegacyManifestCharges() {
   // extraction after its live refresh receipt is valid. Never write them into
   // the legacy manifest that the loader protects from source-first shadowing.
   const sourceFirstIds = new Set(
-    OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
+    [
+      ...OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map(record => record.chargeId),
+      ...OHIO_REVIEWED_SOURCES.map(record => record.chargeId),
+    ],
   );
   return criminalCharges.filter((charge) =>
     charge.jurisdiction === "OH" && !sourceFirstIds.has(charge.id)

@@ -1,14 +1,15 @@
 /**
- * Bounded source-first Ohio homicide pilot.
+ * Ohio source-first catalog assembled from independently gated batches.
  *
  * These are new canonical records, deliberately separate from the older
  * degree-labelled Ohio rows.  The older IDs are not aliases: a saved case
  * using one must be reselected rather than silently changed into either
  * statutory offense.
  *
- * The complete official text, hashes, extraction spans, and penalty
- * dependencies live server-side in ohio-chapter-2903-source.ts so that the
- * selector bundle carries only the small public catalog payload.
+ * Historical export names remain compatible with the initial Chapter 2903
+ * pilot. The reviewed catalog batch also covers other Ohio chapters. Complete
+ * official text and approval/refresh gates stay server-side; selectors receive
+ * only public summaries, not full statute evidence.
  */
 import type { CriminalCharge } from "./criminal-charges";
 import { OHIO_CHAPTER_2903_ADDITIONAL_CHARGES } from "./ohio-chapter-2903-additional-catalog";
@@ -18,6 +19,7 @@ import { OHIO_FELONIOUS_ASSAULT_CHARGE } from "./ohio-felonious-assault";
 import { OHIO_CHAPTER_BATCH_CHARGES } from "./ohio-chapter-batch";
 import { OHIO_HAZING_AND_PROTECTION_CHARGES } from "./ohio-hazing-and-protection";
 import { OHIO_PATIENT_CARE_BATCH } from "./ohio-patient-care";
+import { OHIO_REVIEWED_BATCH } from "./ohio-reviewed-batch";
 
 export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   {
@@ -97,6 +99,7 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
   ...OHIO_CHAPTER_BATCH_CHARGES,
   ...OHIO_HAZING_AND_PROTECTION_CHARGES,
   ...OHIO_PATIENT_CARE_BATCH.charges,
+  ...OHIO_REVIEWED_BATCH.charges,
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([

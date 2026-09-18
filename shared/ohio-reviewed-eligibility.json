@@ -1,0 +1,756 @@
+{
+  "schemaVersion": 1,
+  "reportHash": "578edaa1a9a2061e2c271ec95f8ddb18a3362e5ed05e1893be3d19bd2e344849",
+  "decisions": [
+    {
+      "id": "oh-orc-1315-55-money-laundering",
+      "section": "1315.55",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Additional prohibited activities\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-1533-08-failure-to-carry-or-exhibit-wild-animal-permit",
+      "section": "1533.08",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Scientific, educational or rehabilitation collection permits\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-2705-02-contempt-under-r-c-2705-02",
+      "section": "2705.02",
+      "status": "held",
+      "reason": "Section 2705.02 identifies acts that may be punished as contempt but does not resolve the civil, criminal, and procedural contempt distinctions needed for an ordinary charge flow; held because this runtime has no contempt-specific scope handling."
+    },
+    {
+      "id": "oh-orc-2903-06-aggravated-vehicular-homicide",
+      "section": "2903.06",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2903-06-vehicular-homicide",
+      "section": "2903.06",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2903-06-vehicular-manslaughter",
+      "section": "2903.06",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2903-08-aggravated-vehicular-assault",
+      "section": "2903.08",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2903-08-vehicular-assault",
+      "section": "2903.08",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2903-13-assault",
+      "section": "2903.13",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2903-16-knowingly-failing-to-provide-for-a-person-with-a-functional-impairment",
+      "section": "2903.16",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2903-16-recklessly-failing-to-provide-for-a-person-with-a-functional-impairment",
+      "section": "2903.16",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2903-211-menacing-by-stalking",
+      "section": "2903.211",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2903-216-illegal-use-of-a-tracking-device-or-application",
+      "section": "2903.216",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2903-22-menacing",
+      "section": "2903.22",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2903-341-patient-endangerment",
+      "section": "2903.341",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2903-43-reckless-violation-of-violent-offender-database-duties",
+      "section": "2903.43",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Offenders who have VOD duties; enrollment\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-2907-02-rape",
+      "section": "2907.02",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2907-03-sexual-battery",
+      "section": "2907.03",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2907-04-unlawful-sexual-conduct-with-a-minor",
+      "section": "2907.04",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2907-05-gross-sexual-imposition",
+      "section": "2907.05",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2907-09-public-indecency",
+      "section": "2907.09",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2907-24-soliciting",
+      "section": "2907.24",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2907-24-engaging-in-solicitation-after-a-positive-hiv-test",
+      "section": "2907.24",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2907-25-prostitution",
+      "section": "2907.25",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2907-25-engaging-in-prostitution-after-a-positive-hiv-test",
+      "section": "2907.25",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2907-321-pandering-obscenity-involving-a-minor-or-impaired-person",
+      "section": "2907.321",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2909-06-criminal-damaging-or-endangering",
+      "section": "2909.06",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2911-01-aggravated-robbery",
+      "section": "2911.01",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2911-02-robbery",
+      "section": "2911.02",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2911-11-aggravated-burglary",
+      "section": "2911.11",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2911-12-burglary",
+      "section": "2911.12",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2911-12-trespass-in-a-habitation-when-a-person-is-present-or-likely-to-be-present",
+      "section": "2911.12",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2911-13-breaking-and-entering",
+      "section": "2911.13",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2911-21-criminal-trespass",
+      "section": "2911.21",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2913-02-theft",
+      "section": "2913.02",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-property",
+      "section": "2913.04",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-computer-cable-or-telecommunication-property",
+      "section": "2913.04",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-the-law-enforcement-automated-database-system",
+      "section": "2913.04",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2913-04-unauthorized-use-of-the-ohio-law-enforcement-gateway",
+      "section": "2913.04",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2913-11-passing-bad-checks",
+      "section": "2913.11",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2913-21-misuse-of-credit-cards",
+      "section": "2913.21",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2913-31-forgery",
+      "section": "2913.31",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2913-31-forging-identification-cards-or-selling-or-distributing-forged-identification-cards",
+      "section": "2913.31",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2913-49-identity-fraud",
+      "section": "2913.49",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2913-51-receiving-stolen-property",
+      "section": "2913.51",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2917-11-disorderly-conduct",
+      "section": "2917.11",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2917-12-disturbing-a-lawful-meeting",
+      "section": "2917.12",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2917-14-unlawfully-impeding-public-passage-of-an-emergency-service-responder",
+      "section": "2917.14",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2917-21-telecommunications-harassment",
+      "section": "2917.21",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2919-21-nonsupport-of-dependents",
+      "section": "2919.21",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2919-21-contributing-to-the-nonsupport-of-dependents",
+      "section": "2919.21",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2919-27-violating-a-protection-order",
+      "section": "2919.27",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2921-13-falsification",
+      "section": "2921.13",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2921-13-falsification-in-a-theft-offense",
+      "section": "2921.13",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2921-13-falsification-to-purchase-a-firearm",
+      "section": "2921.13",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2921-13-falsification-to-obtain-a-concealed-handgun-license",
+      "section": "2921.13",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2921-13-falsification-regarding-a-removal-proceeding",
+      "section": "2921.13",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2921-32-obstructing-justice",
+      "section": "2921.32",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2921-33-resisting-arrest",
+      "section": "2921.33",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2923-01-conspiracy",
+      "section": "2923.01",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2923-02-attempt-to-commit-an-offense",
+      "section": "2923.02",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2923-03-complicity-in-the-commission-of-an-offense",
+      "section": "2923.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2923-12-carrying-concealed-weapons",
+      "section": "2923.12",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2923-13-having-weapons-while-under-disability",
+      "section": "2923.13",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2923-161-improperly-discharging-a-firearm-at-or-into-a-habitation-in-a-school-safety-zone-or-with-the-intent-to-cause-harm-or-panic-to-persons-in-a-school-in-a-school-building-or-at-a-school-function-or-the-evacuation-of-a-school-function",
+      "section": "2923.161",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2923-162-discharge-of-a-firearm-on-or-near-prohibited-premises",
+      "section": "2923.162",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2923-17-unlawful-possession-of-dangerous-ordnance",
+      "section": "2923.17",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2923-17-illegally-manufacturing-or-processing-explosives",
+      "section": "2923.17",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2923-211-underage-purchase-of-a-firearm",
+      "section": "2923.211",
+      "status": "held",
+      "reason": "Division (C) expressly classifies this under-18 conduct as a juvenile delinquent act that would be an F4 only if an adult could commit it; held because the general charge flow has no juvenile-specific adjudication handling and must not present it as an ordinary adult conviction."
+    },
+    {
+      "id": "oh-orc-2923-211-underage-purchase-of-a-handgun",
+      "section": "2923.211",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2923-32-engaging-in-a-pattern-of-corrupt-activity",
+      "section": "2923.32",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-aggravated-trafficking-in-drugs",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-drugs",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-marihuana",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-cocaine",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-l-s-d",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-heroin",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-hashish",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-a-controlled-substance-analog",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-03-trafficking-in-a-fentanyl-related-compound",
+      "section": "2925.03",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-04-illegal-manufacture-of-drugs",
+      "section": "2925.04",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-04-illegal-cultivation-of-marihuana",
+      "section": "2925.04",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-05-aggravated-funding-of-drug-trafficking",
+      "section": "2925.05",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-05-funding-of-drug-trafficking",
+      "section": "2925.05",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-05-funding-of-marihuana-trafficking",
+      "section": "2925.05",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-aggravated-possession-of-drugs",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-drugs",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-marihuana",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-cocaine",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-l-s-d",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-heroin",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-hashish",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-a-controlled-substance-analog",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-11-possession-of-a-fentanyl-related-compound",
+      "section": "2925.11",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-13-permitting-drug-abuse",
+      "section": "2925.13",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2925-14-illegal-use-or-possession-of-drug-paraphernalia",
+      "section": "2925.14",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2925-14-dealing-in-drug-paraphernalia",
+      "section": "2925.14",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-14-selling-drug-paraphernalia-to-juveniles",
+      "section": "2925.14",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2925-14-illegal-advertising-of-drug-paraphernalia",
+      "section": "2925.14",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-2927-12-ethnic-intimidation",
+      "section": "2927.12",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-2937-99-failure-to-appear",
+      "section": "2937.99",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Penalty\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-3321-38-violation-of-compulsory-school-duties-under-r-c-3321-38-a",
+      "section": "3321.38",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Prohibiting failure to send child to school\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-3743-65-fireworks-possession-sale-or-use-restriction-violation",
+      "section": "3743.65",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Possession, sale, and use restrictions\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-3767-32-littering",
+      "section": "3767.32",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises",
+      "section": "4301.62",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-4301-633-furnishing-false-information-to-obtain-beer-or-intoxicating-liquor-for-person-under-twenty-one",
+      "section": "4301.633",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-4301-69-selling-buying-or-furnishing-alcohol-to-an-underage-person",
+      "section": "4301.69",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Underage persons offenses concerning\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4301-69-allowing-underage-alcohol-possession-or-consumption",
+      "section": "4301.69",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Underage persons offenses concerning\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4301-69-prohibited-use-of-accommodations-for-underage-alcohol-or-drug-consumption",
+      "section": "4301.69",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Underage persons offenses concerning\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4301-69-underage-use-of-false-identification-to-engage-accommodations",
+      "section": "4301.69",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Underage persons offenses concerning\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4301-69-underage-alcohol-purchase-possession-consumption-or-public-intoxication",
+      "section": "4301.69",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Underage persons offenses concerning\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4301-69-permitting-a-minor-to-violate-specified-alcohol-laws",
+      "section": "4301.69",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Underage persons offenses concerning\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4503-11-failure-to-file-motor-vehicle-registration-application-or-pay-registration-tax",
+      "section": "4503.11",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Owner required to file application - taxes\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4510-11-driving-under-suspension-or-in-violation-of-license-restriction",
+      "section": "4510.11",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-4511-19-operating-a-vehicle-under-the-influence-of-alcohol-a-drug-of-abuse-or-a-combination-of-them",
+      "section": "4511.19",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-4511-19-operating-a-vehicle-while-under-the-influence-of-a-listed-controlled-substance-or-a-listed-metabolite-of-a-controlled-substance",
+      "section": "4511.19",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-4511-19-operating-a-vehicle-after-underage-alcohol-consumption",
+      "section": "4511.19",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-4511-20-operation-in-willful-or-wanton-disregard-of-safety",
+      "section": "4511.20",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Operation in willful or wanton disregard of the safety of persons or property\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4513-02-unsafe-vehicles",
+      "section": "4513.02",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    },
+    {
+      "id": "oh-orc-4513-221-violation-of-local-passenger-car-or-motorcycle-noise-regulation",
+      "section": "4513.221",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Local regulation of passenger car and motorcycle noise\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-4549-02-failure-to-stop-after-an-accident",
+      "section": "4549.02",
+      "status": "eligible",
+      "reason": "Catalog name is stated in a hash-bound operative guilt clause reviewed for this exact draft."
+    },
+    {
+      "id": "oh-orc-5747-18-unauthorized-disclosure-of-confidential-tax-information",
+      "section": "5747.18",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Powers of tax commissioner\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-5747-19-filing-incomplete-false-or-fraudulent-returns",
+      "section": "5747.19",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Filing incomplete, false, and fraudulent returns\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-955-22-failure-to-prevent-vicious-dangerous-or-nuisance-dog-act",
+      "section": "955.22",
+      "status": "held",
+      "reason": "The reviewed descriptive name is not the official catchline \"Vicious, dangerous, and nuisance dog acts\" and no pinned operative guilt clause states that exact offense identity; held by the canonical identity gate."
+    },
+    {
+      "id": "oh-orc-959-13-cruelty-to-animals",
+      "section": "959.13",
+      "status": "eligible",
+      "reason": "Catalog name exactly matches the pinned official catchline."
+    }
+  ]
+}

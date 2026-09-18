@@ -1,0 +1,1165 @@
+{
+  "schemaVersion": 1,
+  "reportHash": "578edaa1a9a2061e2c271ec95f8ddb18a3362e5ed05e1893be3d19bd2e344849",
+  "checkedAt": "2026-09-18T05:25:02.756Z",
+  "expiresAt": "2026-09-25T05:25:02.756Z",
+  "documents": [
+    {
+      "section": "109.57",
+      "title": "Duties of superintendent",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-109.57",
+      "contentHash": "79a36a0dc58040edac43b9417118f06dbd154f83eb60b3dc3aadb5c2b765176e",
+      "effectiveDateStart": "2025-04-03"
+    },
+    {
+      "section": "119.01",
+      "title": "Administrative procedure definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-119.01",
+      "contentHash": "f1e7cf89ac1bad49353bb278dce6fb3cdc93840b549e5144221f5d2fbf6560b9",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "1509.01",
+      "title": "Division of oil and gas resources management - oil and gas definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1509.01",
+      "contentHash": "b1dc631c6fcb77c0ccfc5504c1574da318364588e91d7b3b17661a94c7b67769",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "1533.04",
+      "title": "Use of suppressor",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1533.04",
+      "contentHash": "5f16abd045c1041ddb010a15634f93b2c76bb23f90a80a35cdb1295781d4e04b",
+      "effectiveDateStart": "2015-03-23"
+    },
+    {
+      "section": "1533.16",
+      "title": "Weapons for taking game birds and wild quadrupeds",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1533.16",
+      "contentHash": "98f3dfebf8757980d5023d02d2a6e708e25385cec854f0af13fae8eabf40756b",
+      "effectiveDateStart": "1994-10-20"
+    },
+    {
+      "section": "1547.11",
+      "title": "Operation, control, or manipulation under influence of alcohol or drug",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1547.11",
+      "contentHash": "ecc47d1071230f1913ca9ccd87de9780f2fa49caf3a5a29b7b13afc0e54b7324",
+      "effectiveDateStart": "2025-03-20"
+    },
+    {
+      "section": "2133.21",
+      "title": "DNR identification and do-not-resuscitate order law definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2133.21",
+      "contentHash": "6d651e44687314143bd5e1105da4d013752938ae73a8d04309bb999431da038b",
+      "effectiveDateStart": "1998-07-09"
+    },
+    {
+      "section": "2151.011",
+      "title": "Juvenile court definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.011",
+      "contentHash": "e340c2c40153b2c2671abfc95b0354dbcedb9b5817c001b6e324bd6695468829",
+      "effectiveDateStart": "2025-01-01"
+    },
+    {
+      "section": "2151.03",
+      "title": "Neglected child defined - failure to provide medical or surgical care for religious reasons",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.03",
+      "contentHash": "90465cdd6d04a76d722644af5d4d9e9e4cfdb9deea4f994c9833f40c03b5c0c0",
+      "effectiveDateStart": "2006-08-03"
+    },
+    {
+      "section": "2151.04",
+      "title": "Dependent child defined",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.04",
+      "contentHash": "56753da90f205f6939d872fcefa2ba7be8a451bda20a6b898871ca345b5cab42",
+      "effectiveDateStart": "1996-08-08"
+    },
+    {
+      "section": "2151.34",
+      "title": "Protection order against a minor",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.34",
+      "contentHash": "625a2c5e1f620f490c864ea949656998689cb1d7aa5602443421a2db2babbc21",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2152.02",
+      "title": "Delinquent children - juvenile traffic offender definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2152.02",
+      "contentHash": "04f134d9e384af38ef39949041be468edb2b28f812f5b8e991c61d1b0862bb8f",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2901.01",
+      "title": "General provisions definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.01",
+      "contentHash": "08b4bb21dd02617e54825a9e6f2ea6b218b9fb6893591dff3d3d2f83393c8149",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2901.05",
+      "title": "Burden of proof - reasonable doubt - self-defense",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.05",
+      "contentHash": "6d816e389a2e5c2a51be779121a5f2377f4d5eb4805c8bdadba623f06068d146",
+      "effectiveDateStart": "2021-04-06"
+    },
+    {
+      "section": "2901.22",
+      "title": "Degrees of culpability attached to mental states",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.22",
+      "contentHash": "a64e2a1a3f81c9e138288712c827a9311fa80665201064dbb3efdd546d2a7b8a",
+      "effectiveDateStart": "2015-03-23"
+    },
+    {
+      "section": "2903.06",
+      "title": "Aggravated vehicular homicide - vehicular homicide - vehicular manslaughter",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.06",
+      "contentHash": "3bcd8830c6a1af4f7231a8d719805a027174d94ae9100bb2b90653efda8e0db1",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2903.08",
+      "title": "Aggravated vehicular assault; vehicular assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.08",
+      "contentHash": "2ad96ed8c8e8b3270c920ea0afd4ca363634219e6d4c6ce813cda952517f49fa",
+      "effectiveDateStart": "2024-10-24"
+    },
+    {
+      "section": "2903.10",
+      "title": "Functionally impaired person, caretaker defined",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.10",
+      "contentHash": "c2e9fa1aada7233e7294232645deb22fab1da94970616ce5f2836f76216a3d6f",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2903.13",
+      "title": "Assault",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+      "contentHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2903.16",
+      "title": "Failing to provide for a functionally impaired person",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.16",
+      "contentHash": "2c1888663a284724d9fa2e0fcdf51b9165da0bba40a899a85ef1df5879fddd4e",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2903.21",
+      "title": "Aggravated menacing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.21",
+      "contentHash": "f44a3b3ba086388087ecc1083a16aa1ee56042c06281db88f53d79b03643f3db",
+      "effectiveDateStart": "2014-09-17"
+    },
+    {
+      "section": "2903.211",
+      "title": "Menacing by stalking",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.211",
+      "contentHash": "6740e0adc1febba86806f378900631708e09d2cc21c3489ac1a7dbb44dfa4ac9",
+      "effectiveDateStart": "2016-08-16"
+    },
+    {
+      "section": "2903.213",
+      "title": "Motion for and hearing on protection order",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.213",
+      "contentHash": "1bc486e6b5176d97a905d074ffa1f5d729ff50437727a2caaf4f1ed67b0b4bbd",
+      "effectiveDateStart": "2023-07-07"
+    },
+    {
+      "section": "2903.214",
+      "title": "Petition for protection order in menacing by stalking cases",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.214",
+      "contentHash": "0b213db5cde8f9883139dce2ce94a6022da7a3f8952ff41688886b8f6db8d804",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2903.216",
+      "title": "Illegal use of a tracking device or application",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.216",
+      "contentHash": "ccf718c4688e38f196c3c2f36374bcf277e9b565d992a75b37ee09c1358f6f2e",
+      "effectiveDateStart": "2025-03-20"
+    },
+    {
+      "section": "2903.22",
+      "title": "Menacing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.22",
+      "contentHash": "ea58e11d6582e597bbc42a83fd27713cc4dc0a71e9c81fd201fc467a60876c32",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2903.33",
+      "title": "Patient abuse and neglect in care facilities definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.33",
+      "contentHash": "9903e3bf0a68c9748264ae54d551cf0dd4a9e004e2ab2270ccb21e18cc8bc36e",
+      "effectiveDateStart": "2013-09-29"
+    },
+    {
+      "section": "2903.341",
+      "title": "Patient endangerment",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.341",
+      "contentHash": "41ac7152196cb537b18d3d41214e25b5f70465c591880cbc90d83426767d3bf0",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2907.01",
+      "title": "Sex offenses general definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.01",
+      "contentHash": "0231566d337eda04cb7ba1697265fe81eea30062ba5e02e50415f3fd74cb702b",
+      "effectiveDateStart": "2025-03-21"
+    },
+    {
+      "section": "2907.02",
+      "title": "Rape",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.02",
+      "contentHash": "4f2f42e81c1486a001be29c1fb02e32a868cdf0f80db6c19d8d345f9139ad200",
+      "effectiveDateStart": "2025-03-21"
+    },
+    {
+      "section": "2907.03",
+      "title": "Sexual battery",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.03",
+      "contentHash": "ac507241723772a27d32187583241bb02fa9508780b6106f3fbed225793845f1",
+      "effectiveDateStart": "2025-03-21"
+    },
+    {
+      "section": "2907.04",
+      "title": "Unlawful sexual conduct with minor",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.04",
+      "contentHash": "99e1cad558c1fcb9d586d54adbdf2ce62adc392aba0bfdfaa3d2f66e08a18dae",
+      "effectiveDateStart": "2024-08-09"
+    },
+    {
+      "section": "2907.05",
+      "title": "Gross sexual imposition",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.05",
+      "contentHash": "fe219e4d25e9b16dac6493c692a9e2efbd930ef839776c3a021ce02315d59047",
+      "effectiveDateStart": "2024-08-09"
+    },
+    {
+      "section": "2907.09",
+      "title": "Public indecency",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.09",
+      "contentHash": "836ea221be8b7ec32692b66c3532a210dff7bcb9c3eece5ceb0fa855647a62da",
+      "effectiveDateStart": "2019-03-20"
+    },
+    {
+      "section": "2907.24",
+      "title": "Soliciting; solicitation after a positive HIV test",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.24",
+      "contentHash": "a082e8cc82da24c7b8fe18ddb1545eec48c49530afe5fc1190e8e36f6450f056",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2907.25",
+      "title": "Prostitution - after positive HIV test",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.25",
+      "contentHash": "7f344a172cb5d75896b6a6050807c381d688cf2c4f767aff92a8545fb72cc674",
+      "effectiveDateStart": "1996-05-30"
+    },
+    {
+      "section": "2907.321",
+      "title": "Pandering obscenity involving a minor or impaired person",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.321",
+      "contentHash": "760cf7c78abd22c74960f8a25b01239a58b9740104e90e99791e48ab30e6551d",
+      "effectiveDateStart": "2019-03-22"
+    },
+    {
+      "section": "2907.322",
+      "title": "Pandering sexually oriented matter involving a minor or impaired person",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.322",
+      "contentHash": "9a28800db084950d062d3e490ac860a2663ae158d636d45cfa97531d2ebaae6c",
+      "effectiveDateStart": "2019-03-22"
+    },
+    {
+      "section": "2907.323",
+      "title": "Illegal use of minor or impaired person in nudity-oriented material or performance",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2907.323",
+      "contentHash": "1abe63e8387f3afa8d45904d27b497b922812359230f1ab1f33f8594de9fae72",
+      "effectiveDateStart": "2019-03-22"
+    },
+    {
+      "section": "2909.01",
+      "title": "Arson and related offenses definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.01",
+      "contentHash": "cc0260395c00f3a235f4721a66340e10678b8b506b1fe9b03b722cf6d7c88f7f",
+      "effectiveDateStart": "2004-09-23"
+    },
+    {
+      "section": "2909.04",
+      "title": "Disrupting public services",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.04",
+      "contentHash": "cb3576c0d0ce9d024412abdb078911a65f851311ab59e7a47e7d02d8bcaeffd3",
+      "effectiveDateStart": "2004-09-23"
+    },
+    {
+      "section": "2909.06",
+      "title": "Criminal damaging or endangering",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.06",
+      "contentHash": "b64a0c038af16a99c8c9c5148d7c969a3ad160dfdb4c0b9e56b537c09c7e6ba4",
+      "effectiveDateStart": "1996-07-01"
+    },
+    {
+      "section": "2909.07",
+      "title": "Criminal mischief",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.07",
+      "contentHash": "046a5f190d56f40614389bb56a037b91687d771cfc947d704fa6e923d85e403d",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2909.21",
+      "title": "Terrorism definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2909.21",
+      "contentHash": "0b5d45e612d2b2f9eaa0dfd66ba5b107219381e96e33f6f5544295ec1d71d3f1",
+      "effectiveDateStart": "2012-09-10"
+    },
+    {
+      "section": "2911.01",
+      "title": "Aggravated robbery",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.01",
+      "contentHash": "681dbe9ed8dc80ea2c234c4bf9da9c1a59c4fa1af569ea2e8889083aebcdf758",
+      "effectiveDateStart": "1997-09-16"
+    },
+    {
+      "section": "2911.02",
+      "title": "Robbery",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.02",
+      "contentHash": "932ac78b0bc5ec91502b00ce2985983ff03da054115b62af2439c9b166db0672",
+      "effectiveDateStart": "1996-07-01"
+    },
+    {
+      "section": "2911.11",
+      "title": "Aggravated burglary",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.11",
+      "contentHash": "9f71682aadb869016eb39dd1047249ef5a7be8c0aab28fc6a1ea7cce5a3615f6",
+      "effectiveDateStart": "1996-07-01"
+    },
+    {
+      "section": "2911.12",
+      "title": "Burglary",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.12",
+      "contentHash": "5090ce0bb721a4ccd0ef8f4dfeb98216abfcef4810b70292858aa8be7cb7ee56",
+      "effectiveDateStart": "2011-09-30"
+    },
+    {
+      "section": "2911.13",
+      "title": "Breaking and entering",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.13",
+      "contentHash": "49083e92a8d2029c8a4b5fdbdeeb0ea4a87d85e3b0de3b02bf115111cfe46290",
+      "effectiveDateStart": "1996-07-01"
+    },
+    {
+      "section": "2911.21",
+      "title": "Criminal trespass",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.21",
+      "contentHash": "d987f0479cefd5ba9a2241ecbd712d0fb452bbf1bec9f98a0e57dbe476823526",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2911.211",
+      "title": "Aggravated trespass",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.211",
+      "contentHash": "3d926391b5fc1540cc1291e9037ba790d3631d86142e0f2c68a9b2a48aa0fce5",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2913.01",
+      "title": "Theft and fraud general definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.01",
+      "contentHash": "6f80d5c22cf38d132e5e041cec09f52110ebd420efde7506741642fea83f3c9f",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "2913.02",
+      "title": "Theft",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.02",
+      "contentHash": "f86873d5326c0f2efe8e36fe7ab5804932cf7ffd9fc55b4e0eb3ee351882d614",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2913.03",
+      "title": "Unauthorized use of a vehicle",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.03",
+      "contentHash": "f9a2435f8eaee29fa2f28fa4020feb2857ed9550c3673d2398c4c0406f102798",
+      "effectiveDateStart": "2011-09-30"
+    },
+    {
+      "section": "2913.04",
+      "title": "Unauthorized use of property - computer, cable, or telecommunication property",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.04",
+      "contentHash": "d5ae4b2c3eb945fac7fbf597c0daa8b5417cfa1a6075fe4871c95b7c062cecf1",
+      "effectiveDateStart": "2018-03-23"
+    },
+    {
+      "section": "2913.11",
+      "title": "Passing bad checks",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.11",
+      "contentHash": "bb91b13178b8d5e6a4eeb15ef7bf5e5b9b595048f8300943208266b5f0ef6ccb",
+      "effectiveDateStart": "2021-09-01"
+    },
+    {
+      "section": "2913.21",
+      "title": "Misuse of credit cards",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.21",
+      "contentHash": "1515d9b54d6439c35de2bdb4e598cf77d94d410fd4ea105c5cdcc95a8505c676",
+      "effectiveDateStart": "2018-11-02"
+    },
+    {
+      "section": "2913.31",
+      "title": "Forgery - Forging identification cards or selling or distributing forged identification cards",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.31",
+      "contentHash": "d53397b91af4c872a1890563dba60a7d6a83932174a35fe2d5bfc546ed1400a0",
+      "effectiveDateStart": "2019-03-20"
+    },
+    {
+      "section": "2913.42",
+      "title": "Tampering with records",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.42",
+      "contentHash": "d159a7bc7b8c2a866d8cc53a7b0ced2050f03266e6c74028be7f44add4c26668",
+      "effectiveDateStart": "2011-09-30"
+    },
+    {
+      "section": "2913.421",
+      "title": "Illegally transmitting multiple commercial electronic mail messages (spamming) - unauthorized access of computer",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.421",
+      "contentHash": "c9899550d6c8c5e8b537935eccb223aea6f1da77cb206d29506d9da0885ec7aa",
+      "effectiveDateStart": "2011-09-30"
+    },
+    {
+      "section": "2913.43",
+      "title": "Securing writings by deception",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.43",
+      "contentHash": "655c463c6da52ea9181a6212ef86dc6b84caad81d6c285a25a7f9befb387f7d2",
+      "effectiveDateStart": "2019-03-20"
+    },
+    {
+      "section": "2913.49",
+      "title": "Identity fraud",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.49",
+      "contentHash": "59545088a699505f09d794da47ba021da60c249b4c43274ae1d682ab016647c8",
+      "effectiveDateStart": "2019-03-20"
+    },
+    {
+      "section": "2913.51",
+      "title": "Receiving stolen property",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.51",
+      "contentHash": "ba8001068d9e3f6bc51149aa32b2dff709d34ea3a2a7e7683e8317853bef2ac6",
+      "effectiveDateStart": "2013-07-01"
+    },
+    {
+      "section": "2913.71",
+      "title": "Felony of fifth degree regardless of the value of the property",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.71",
+      "contentHash": "3030462bb0c6a692c6b5358fc27f7845ca6dd7c1d6bfc47ed28b8eadceab34f5",
+      "effectiveDateStart": "2021-06-30"
+    },
+    {
+      "section": "2913.72",
+      "title": "Evidence of an intent to commit theft of rented property",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2913.72",
+      "contentHash": "7a3ac1acfc2e5d12c75e21a50cd24232b0850c79c35d01da1309be3e0e0f6d49",
+      "effectiveDateStart": "2009-04-07"
+    },
+    {
+      "section": "2917.11",
+      "title": "Disorderly conduct",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.11",
+      "contentHash": "1ba0a7b235ba6136b0e05e075f030cee20fb0e8755c11320ac0621992bd4f948",
+      "effectiveDateStart": "2019-03-22"
+    },
+    {
+      "section": "2917.12",
+      "title": "Disturbing a lawful meeting",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.12",
+      "contentHash": "a33e1ebaf086ca567ccae3dd4b308d4c05066ed8230c193d7d88c443550d9676",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2917.14",
+      "title": "Unlawfully impeding public passage of an emergency service responder",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.14",
+      "contentHash": "1bcec63ca643d224b6be5bf0cb2a3e0687fea7da0168a823a7828150836719bc",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2917.21",
+      "title": "Telecommunications harassment",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2917.21",
+      "contentHash": "e517b9e8a11c4127477ca938cfcb9dacf342685488bb6c6885c0a96557ba052d",
+      "effectiveDateStart": "2016-08-16"
+    },
+    {
+      "section": "2919.21",
+      "title": "Nonsupport or contributing to nonsupport of dependents",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.21",
+      "contentHash": "6a37f854399b7dbd25235ea009b6db0658eadea45ec7479cf32345372767dc41",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2919.26",
+      "title": "Motion for and hearing on protection order",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.26",
+      "contentHash": "baedff1b76faa6936ef854315651f8a4e946560a7f3a5d8afcf3e95b83533f03",
+      "effectiveDateStart": "2023-07-07"
+    },
+    {
+      "section": "2919.27",
+      "title": "Violating protection order",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2919.27",
+      "contentHash": "b2e7bd5d5450c0d675173bf6a5af877ec5d697afbeb92b1e80ed593aee9e721b",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2921.01",
+      "title": "Offenses against justice and public administration general definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.01",
+      "contentHash": "ac3bd3322c69657911b2e086dc39d3528ccb9b60e905fee2bb9b126d7ee6f50f",
+      "effectiveDateStart": "2013-09-29"
+    },
+    {
+      "section": "2921.13",
+      "title": "Falsification - in theft offense - to purchase firearm",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.13",
+      "contentHash": "fa9ee9e3d318971b4abde3ae99a8651d3fe3ffb9a2f3c0fce1b09cd90cd5e899",
+      "effectiveDateStart": "2025-09-30"
+    },
+    {
+      "section": "2921.31",
+      "title": "Obstructing official business",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.31",
+      "contentHash": "437e50fc0156e50dbc635064545e73b5e17aab2f386e2cd2bb5f2d00a0924826",
+      "effectiveDateStart": "2000-03-10"
+    },
+    {
+      "section": "2921.32",
+      "title": "Obstructing justice",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.32",
+      "contentHash": "ebb5aa86e04f941396e68ce16d7457518f455791d6d9f1ca24ad2263acdf479a",
+      "effectiveDateStart": "2012-06-27"
+    },
+    {
+      "section": "2921.33",
+      "title": "Resisting arrest",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2921.33",
+      "contentHash": "5cd9f0492db654c9f3a08202629763ae1d49265df51ee38e4dd4139b374733d1",
+      "effectiveDateStart": "1997-09-16"
+    },
+    {
+      "section": "2923.01",
+      "title": "Conspiracy",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+      "contentHash": "44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb32",
+      "effectiveDateStart": "2011-09-30"
+    },
+    {
+      "section": "2923.02",
+      "title": "Attempt to commit an offense",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.02",
+      "contentHash": "5ce3fb0499d214ea0d2512e3f91bb581fa51a75ad3f2562e0d50f642cc714a44",
+      "effectiveDateStart": "2019-03-20"
+    },
+    {
+      "section": "2923.03",
+      "title": "Complicity",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.03",
+      "contentHash": "bf43371006c97d80d01d8b68472a2540cfc85bc9d0346b461756571ec394db33",
+      "effectiveDateStart": "1986-09-17"
+    },
+    {
+      "section": "2923.11",
+      "title": "Weapons control definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.11",
+      "contentHash": "aa1de5ed1cafc9d5bd97493367b5890e851e466f7dad5c2d92767b98d33cb44a",
+      "effectiveDateStart": "2019-03-28"
+    },
+    {
+      "section": "2923.12",
+      "title": "Carrying concealed weapons",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.12",
+      "contentHash": "535a40f5551fe9b5fa85644bcd3bc150549ecd7bf73701d6a00baedc24ebc159",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2923.1213",
+      "title": "Temporary emergency license",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.1213",
+      "contentHash": "9b2c593f8833a449763138f291ba6fcfe74e8f3098682e05fcbbc4b8a2574c69",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2923.125",
+      "title": "Application and licensing process",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.125",
+      "contentHash": "e792ddad7a60644856b0cec184d725f709ada051bdbaaf17be435abf2b16984d",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2923.126",
+      "title": "Duties of licensed individual",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.126",
+      "contentHash": "f719d79566d5a23c5aa2477166de26084bb003cadfdfcf92af855935ddbf15d6",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2923.128",
+      "title": "Suspension and revocation of license",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.128",
+      "contentHash": "f299a804c3d3ecc3170964205da2c9f017fb3da534c90230ed16a02369171fca",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2923.13",
+      "title": "Having weapons while under disability",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.13",
+      "contentHash": "fb2e6b9b9b30c1c84fb074507032aae315bdaa6fb1b088cb7cec93facda5207c",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "2923.161",
+      "title": "Improperly discharging firearm at or into a habitation, in a school safety zone or with intent to cause harm or panic to persons in a school building or at a school function",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.161",
+      "contentHash": "5aac58d68219fbf2d913f080d2bbe3862086ec9a3882432f2c3b7fce6c594948",
+      "effectiveDateStart": "2002-10-11"
+    },
+    {
+      "section": "2923.162",
+      "title": "Discharge of firearm on or near prohibited premises",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.162",
+      "contentHash": "ccd82d4008bedf567ace77f085627e303725b443646e7aeacd9310db7600b38a",
+      "effectiveDateStart": "2004-06-01"
+    },
+    {
+      "section": "2923.17",
+      "title": "Unlawful possession of dangerous ordnance - illegally manufacturing or processing explosives",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.17",
+      "contentHash": "7a512b8b37b3e4cb0d80a07ea7ca02338cf40dfa40b2a7bc849970dc8842457c",
+      "effectiveDateStart": "2015-03-23"
+    },
+    {
+      "section": "2923.18",
+      "title": "License or temporary permit to possess or use dangerous ordnance",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.18",
+      "contentHash": "af145440ac0cc24fe73099ba7eb891a36ac98b119351d4381e0711497cc93fa3",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2923.211",
+      "title": "Underage purchase of firearm or handgun",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.211",
+      "contentHash": "47128ab2b68b85cc57eca6334a8fcdf777e15e839016e5bf307c1180196d2d44",
+      "effectiveDateStart": "2009-04-07"
+    },
+    {
+      "section": "2923.32",
+      "title": "Engaging in pattern of corrupt activity",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.32",
+      "contentHash": "4c8a72d0b49109f365a9e2d18b878f99335a210a1b3ee8fa23ec106a5f56249f",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.01",
+      "title": "Drug offense definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.01",
+      "contentHash": "94de4c8c92ad62726293fb59e34c003194d17fe3d260c27c61bbaed09761dc4e",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "2925.02",
+      "title": "Corrupting another with drugs",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.02",
+      "contentHash": "7505bb1e0ec9bd0ea6621d5c57dd4c5bc95c15e05de712147632b54910d967b4",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.03",
+      "title": "Trafficking, aggravated trafficking in drugs",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.03",
+      "contentHash": "651e899201fee2726fac5ea2b860e320540ed06c800903710a70181e3b329fd1",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.04",
+      "title": "Illegal manufacture of drugs - illegal cultivation of marihuana - methamphetamine offenses",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.04",
+      "contentHash": "7cc016535ed099e05d144b635ccb3208273226e99ae85eae5786c23bba866ccd",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.041",
+      "title": "Illegal assembly or possession of chemicals for manufacture of drugs",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.041",
+      "contentHash": "a6063a50d3bd9c764ff12076ecdc2ff9559db7c744ee5b88ab7f646c679050bb",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.05",
+      "title": "Funding, aggravated funding of drug or marihuana trafficking",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.05",
+      "contentHash": "c3e1216dcd79e2dc8d9fd3dcf3be41b0ff94045bcd4a6e5035efbfee48028c80",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.11",
+      "title": "Possession of controlled substances",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.11",
+      "contentHash": "48873a120faeac17de6d06cbb50fda7ad3b3aabc725e18a0154de89e27aa7d97",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.13",
+      "title": "Permitting drug abuse",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.13",
+      "contentHash": "e4b5a3cac01e8a0c94318e8158fa24e014333345d9ad8d7bcb9862451207e472",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2925.14",
+      "title": "Illegal use or possession of drug paraphernalia",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2925.14",
+      "contentHash": "e0ca3c770008911245d2b70a73055b3941849686dc6ad2507052613571479412",
+      "effectiveDateStart": "2025-09-30"
+    },
+    {
+      "section": "2927.12",
+      "title": "Ethnic intimidation",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2927.12",
+      "contentHash": "710556f7816926d9581b28c89b454a556fc26a4177fb84dc6a1eaad59c4501ac",
+      "effectiveDateStart": "1987-03-19"
+    },
+    {
+      "section": "2929.13",
+      "title": "Sanction imposed by degree of felony",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.13",
+      "contentHash": "7bca69aa68f4140838a5ec30c0cd59cc0d5a8bd75f920ef890bb34d1d7a507a7",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2929.14",
+      "title": "Definite prison terms",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.14",
+      "contentHash": "a2ae7ae19aa5af27cd23a3e8d8bd0ff63feb7fb66f7ed547d3681cff251ef247",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2929.142",
+      "title": "Aggravated vehicular homicide - mandatory prison term",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.142",
+      "contentHash": "78f147f7be8f6fb69934a2195acfbd800a1320b6d0d3f5b33852c2acf952ebc1",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2929.18",
+      "title": "Financial sanctions - felony",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.18",
+      "contentHash": "16be4838aae75376786627fb808779da40c69017e9526ddf1117c55adb14c27d",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "2941.1410",
+      "title": "Major drug offender specification",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.1410",
+      "contentHash": "2851720f6211e8676483dacea88f38c2fc04a9693a46e387c3e296ed7e298af4",
+      "effectiveDateStart": "2018-10-31"
+    },
+    {
+      "section": "2941.1413",
+      "title": "Mandatory additional prison term for felony OVI violation precluded unless charging instrument specifies prior convictions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.1413",
+      "contentHash": "aa50437dd32f6abfba9558ac701970448bfc64738a37fa635b0ed367f677e5e7",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2941.1422",
+      "title": "Mandatory prison term - furtherance of human trafficking",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.1422",
+      "contentHash": "36e8a77f38006f166ddaba9f53136abd07c2bfed00d064644ef936659160a223",
+      "effectiveDateStart": "2011-09-30"
+    },
+    {
+      "section": "2941.25",
+      "title": "Allied offenses of similar import - multiple counts",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.25",
+      "contentHash": "f372c070c62c2d3f49e7e960e77550cd06bf24e87dd021d22524b051af6227c9",
+      "effectiveDateStart": "1974-01-01"
+    },
+    {
+      "section": "2971.01",
+      "title": "Sentencing of sexually violent predator definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2971.01",
+      "contentHash": "17ad0f082dbdf43854eaf1f5af4b667b728677d72a2e88d376f20363787e2ec7",
+      "effectiveDateStart": "2025-03-21"
+    },
+    {
+      "section": "2971.03",
+      "title": "Sentencing for sexually violent predator specification",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2971.03",
+      "contentHash": "fe1ba29445fa38ca1a64b02f88719f1da68f8c0d4841f1352fa85eb806c6800e",
+      "effectiveDateStart": "2021-04-12"
+    },
+    {
+      "section": "2981.04",
+      "title": "Charging instrument - forfeiture order - amendment",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2981.04",
+      "contentHash": "242a48e33a83c9e5a3e835862b22297f8f4a1cbeb8fb644fdc2b2e205f535f11",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "2981.06",
+      "title": "Seizure of forfeited or other property - disposition",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2981.06",
+      "contentHash": "cea83d3c8a69553004eb0b7e329061710f18fb585a5c3cecc31f137024aa985d",
+      "effectiveDateStart": "2017-04-06"
+    },
+    {
+      "section": "3113.31",
+      "title": "Domestic violence definitions; hearings",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3113.31",
+      "contentHash": "38da18a7adf19248ec9c16251631c47332caf19bc00cf9e61f8cea77621eceb9",
+      "effectiveDateStart": "2023-03-23"
+    },
+    {
+      "section": "319.26",
+      "title": "Allegations against county auditor",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-319.26",
+      "contentHash": "c7e8d1360b23960f201705a02987f9f42aa0213d07bdc3ac1a1ba154dbaf9b8e",
+      "effectiveDateStart": "2017-09-29"
+    },
+    {
+      "section": "321.37",
+      "title": "Allegations against county treasurer",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-321.37",
+      "contentHash": "4e27f7dcfd940be3ce7c02921a6c1a240e87a285a956cab91beaf341f20e1120",
+      "effectiveDateStart": "2017-09-29"
+    },
+    {
+      "section": "3701.01",
+      "title": "Department of health definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3701.01",
+      "contentHash": "27b9fa3187142ca467cd932cad2a21a56656735d1af2ead6ef58e95d4d0f1a1c",
+      "effectiveDateStart": "2000-10-10"
+    },
+    {
+      "section": "3734.18",
+      "title": "Fees - hazardous waste facility management fund",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3734.18",
+      "contentHash": "38d55533d3930f03f1382068e87926d4479929d7fc0c7b16ec9d896004552cbd",
+      "effectiveDateStart": "2011-09-29"
+    },
+    {
+      "section": "3767.32",
+      "title": "Littering",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.32",
+      "contentHash": "6f0a1c7388468d5084d87e3a437daf5233863006dafb83c2a990fa2338123aab",
+      "effectiveDateStart": "2021-01-15"
+    },
+    {
+      "section": "3767.99",
+      "title": "Penalty",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.99",
+      "contentHash": "553a239795e1a8aa47923479f5faa34194f1fc23b37579dd160d9aefb5759cef",
+      "effectiveDateStart": "1980-07-14"
+    },
+    {
+      "section": "3796.01",
+      "title": "Definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.01",
+      "contentHash": "60f1c9a9f54aad655b4bcaaa40094c434f4f99bbd63daf8799e3ac5d89521f42",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3796.04",
+      "title": "Home grow",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.04",
+      "contentHash": "a410c22be29f8b790d6d7b3d5234f7804375a44cf34c66faa6cbd027acf6a451",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3796.18",
+      "title": "Cultivator license",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.18",
+      "contentHash": "da26d11a9247dd23d6a79f35fce77e53c1a949735d76ee0945508ba1c260aee0",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3796.19",
+      "title": "Processor license",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.19",
+      "contentHash": "dc7b489d0267f3a16643e5503f664422bf66ad1c38771825616f4a703cd0f765",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3796.20",
+      "title": "Dispensary license",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.20",
+      "contentHash": "088b345e369e244fa9bef8d7938e8685cd4dacb4c75eb233bb7dab9d4e0c356d",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3796.22",
+      "title": "Rights of registered patient",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.22",
+      "contentHash": "3bb70916b93869fc6b2fd70225f75047c59487e0848df4be074bdfabe72b5dd0",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3796.221",
+      "title": "Rights of adult-use users",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.221",
+      "contentHash": "d702ae13c6e9907faab308bf805e170b35645ec92c948713d0528bbdb8da1c14",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "3796.23",
+      "title": "Rights of caregiver",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3796.23",
+      "contentHash": "9142b4907434999a9e6a41fde242b1f0243410ba7c207cf54860d26db2476867",
+      "effectiveDateStart": "2026-03-20"
+    },
+    {
+      "section": "4301.62",
+      "title": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
+      "contentHash": "a54daadcb234b1b03650956cbff623c2ce00bd1e94f4492b9ce288a6de9daf59",
+      "effectiveDateStart": "2024-04-30"
+    },
+    {
+      "section": "4301.633",
+      "title": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
+      "contentHash": "18b36f1f13ebc41db3db5905ad79fbd98f766e3c5f705a4e959998bfaa5f2f50",
+      "effectiveDateStart": "1987-07-31"
+    },
+    {
+      "section": "4301.99",
+      "title": "Penalty",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "contentHash": "0ccd5829d9f831ea2750d6d074c4e7733e7c30d14d44ee9953a227202a6ef042",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "4501.01",
+      "title": "Motor vehicles definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4501.01",
+      "contentHash": "a58b6c6ea02bbfb84d6380f318ce7f1170741b54e8d188a7f8cf70d87a8d5dea",
+      "effectiveDateStart": "2025-06-30"
+    },
+    {
+      "section": "4506.10",
+      "title": "Physical qualifications for commercial driver's license; Compliance with federal regulations",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4506.10",
+      "contentHash": "9af6fccf52763db8b65741575aab5a1c22e3e5b33191517248ef651fcad48793",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
+      "section": "4507.14",
+      "title": "Registrar to impose restrictions suitable to driving ability",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4507.14",
+      "contentHash": "caedba9292dc6de90b13939e952abd7d4cd8be961fb1d2a761d96a31716b33b3",
+      "effectiveDateStart": "2004-01-01"
+    },
+    {
+      "section": "4509.01",
+      "title": "Financial responsibility definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4509.01",
+      "contentHash": "a1dc7a7bd70ceb573b3c1546fd217b432761bd01a88d61125b1a95a5c5d6f279",
+      "effectiveDateStart": "2021-04-15"
+    },
+    {
+      "section": "4510.02",
+      "title": "Definite periods of suspension - suspension classes",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.02",
+      "contentHash": "16e0ca4d8dc66bce26fa3684ccad9deb38aa0fa156b590076a6351dbcb491448",
+      "effectiveDateStart": "2004-01-01"
+    },
+    {
+      "section": "4510.11",
+      "title": "Driving under suspension or in violation of license restriction",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.11",
+      "contentHash": "169b66629a4d28a5d3c08cbb83b5adf312f770746662e4a1c460e7bc3dc2ab09",
+      "effectiveDateStart": "2012-09-28"
+    },
+    {
+      "section": "4510.111",
+      "title": "Driving under suspended license for failing to appear or pay fine or for default in payment of child support",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.111",
+      "contentHash": "599f564fb107d61344a276a86738d70e3116e2f9a73845a66946d778ae7df523",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "4510.16",
+      "title": "Driving under financial responsibility law suspension or cancellation; driving under a nonpayment of judgment suspension",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.16",
+      "contentHash": "94827120e0b0f8649fc09814b619fd95f6013e87b6256dde73ba2ebf55ff1cce",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "4511.19",
+      "title": "Operating vehicle under the influence of alcohol or drugs - OVI",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.19",
+      "contentHash": "144bfefd79506d5e81b83dec2dc823c2e1485afb17e3feaa597a30266c8d7572",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "4511.191",
+      "title": "Implied consent",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.191",
+      "contentHash": "65f374546ff2eaba834e9f313514a22745966f57033f4084e8ff9a3cbccf7e67",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "4511.192",
+      "title": "Advice to OVI arrestee",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.192",
+      "contentHash": "ef3e8a082eb396f4e24547c5947e7bab2abfa676b95ab2663281fe05793ebb0a",
+      "effectiveDateStart": "2025-03-20"
+    },
+    {
+      "section": "4513.01",
+      "title": "Traffic laws - equipment - load definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.01",
+      "contentHash": "982916481a61c1e825d24d247689bcb1185c8065677f3f0a32b4c47ba2fd53d8",
+      "effectiveDateStart": "2003-04-03"
+    },
+    {
+      "section": "4513.02",
+      "title": "Unsafe vehicles",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.02",
+      "contentHash": "e399b76a2383f7459b5279156c8cf1f306e4170ea6a5f8368ea803e3a79a1e5c",
+      "effectiveDateStart": "2012-09-28"
+    },
+    {
+      "section": "4513.37",
+      "title": "Record of traffic violations",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.37",
+      "contentHash": "e90cda3abbe5d4104e9e4d9e2787febe1e983f4aeb322b6538ad80163a31d5dd",
+      "effectiveDateStart": "2012-01-27"
+    },
+    {
+      "section": "4519.01",
+      "title": "Special vehicle definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4519.01",
+      "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
+      "effectiveDateStart": "2017-06-30"
+    },
+    {
+      "section": "4549.02",
+      "title": "Stopping after accident on public roads or highways",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4549.02",
+      "contentHash": "af1c6dcbf33bea3e8a65915ad7f73f692f752ddd4b46e7195c8e591c25cf9a35",
+      "effectiveDateStart": "2016-09-13"
+    },
+    {
+      "section": "4561.15",
+      "title": "Unsafe operation of aircraft or UAV",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4561.15",
+      "contentHash": "75ec6f5e3d3b4d7da360467e00484af6eac8891aa7d8a089784deb68e0de531b",
+      "effectiveDateStart": "2025-04-09"
+    },
+    {
+      "section": "4729.01",
+      "title": "Pharmacists, dangerous drugs definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4729.01",
+      "contentHash": "a312e6c912b331423e392f28b6cf2d413cba35b493ed8e12cda804db34346b2b",
+      "effectiveDateStart": "2026-06-09"
+    },
+    {
+      "section": "4737.012",
+      "title": "Bulk merchandise containers; record keeping",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4737.012",
+      "contentHash": "47c96fe28c386cd3765cd6d2a10d8cf778b1235f24f4d658a96de9abc92e56da",
+      "effectiveDateStart": "2012-09-28"
+    },
+    {
+      "section": "4737.04",
+      "title": "Scrap metal and merchandise container dealers; exertion of control over certain articles; record keeping",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4737.04",
+      "contentHash": "7469e07007d2a505b4b50e2897f05efc74700c99d64c638c1ce2dec1c241d9d1",
+      "effectiveDateStart": "2013-07-01"
+    },
+    {
+      "section": "4749.01",
+      "title": "Private investigator - security services definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4749.01",
+      "contentHash": "34f61fcd47af4f781c98dab755b22d11e62139b5ffaf93c8670e19b3dddd6eea",
+      "effectiveDateStart": "2025-09-30"
+    },
+    {
+      "section": "507.13",
+      "title": "Allegations of violations",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-507.13",
+      "contentHash": "be3f9bd5806c73f113fc2ab3986e818d72dc8d120dfd4fa808783287d121ebc7",
+      "effectiveDateStart": "2017-09-29"
+    },
+    {
+      "section": "5122.01",
+      "title": "Hospitalization of mentally ill definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5122.01",
+      "contentHash": "b0b75d850e3acdd9d33f144904753661133f334c54d535f6d48d5a9744555cf6",
+      "effectiveDateStart": "2025-09-30"
+    },
+    {
+      "section": "5123.01",
+      "title": "Department of developmental disabilities definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5123.01",
+      "contentHash": "e5afad18ca3b3089011fcadc7bfeba72bad5d8ade4d0f2b30496de31eccce2f5",
+      "effectiveDateStart": "2019-10-17"
+    },
+    {
+      "section": "5123.50",
+      "title": "Registry of employees guilty of abuse, neglect or misappropriation definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5123.50",
+      "contentHash": "7d28e6f3642e5781066f90de3d9c729223ef04ecaca8a19dc9dfd4ddd40e790b",
+      "effectiveDateStart": "2016-10-12"
+    },
+    {
+      "section": "5503.10",
+      "title": "Law enforcement automated data system",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5503.10",
+      "contentHash": "9d4dfb5923f0db4af27723da833d97a29c3221b7600832e25902f68edbcbc7f9",
+      "effectiveDateStart": "1992-11-12"
+    },
+    {
+      "section": "5503.101",
+      "title": "Disclosure of LEADS information to defendant",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5503.101",
+      "contentHash": "999fae975945c1f1818c6bb2687edf46e46cc5b299a83084bd471ac53e7326c5",
+      "effectiveDateStart": "2018-03-23"
+    },
+    {
+      "section": "733.78",
+      "title": "Violations by fiscal officers",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-733.78",
+      "contentHash": "016dda3849553af9813b29a41cffe21d6e4ac4b61d40ce7791cca6f166caece3",
+      "effectiveDateStart": "2017-09-29"
+    },
+    {
+      "section": "959.13",
+      "title": "Cruelty to animals",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.13",
+      "contentHash": "e46d5dcf414e43e705701967c2a260f8d9186ad44b554785c301800fc04be125",
+      "effectiveDateStart": "1977-01-17"
+    },
+    {
+      "section": "959.99",
+      "title": "Violation; penalties",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "contentHash": "96a0f8f6b7a8086fe55175d8468af110d14a6911da88d357d976803de3ff58dd",
+      "effectiveDateStart": "2023-04-06"
+    },
+    {
+      "section": "OAC:3701-12-01",
+      "title": "Definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01",
+      "contentHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680",
+      "effectiveDateStart": "2025-09-22"
+    }
+  ],
+  "metrics": {
+    "requests": 0,
+    "reused": 164,
+    "acquired": 0,
+    "bulkDocumentsCached": 0,
+    "failed": 0,
+    "cachedFailures": 0,
+    "deferred": 0
+  }
+}

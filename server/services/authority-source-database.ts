@@ -61,7 +61,7 @@ export interface AuthoritySourceSeed {
   sourceKey: string;
   jurisdiction: string;
   publisher: string;
-  sourceType: "statute";
+  sourceType: "statute" | "administrative_rule";
   canonicalUrl: string;
   apiIdentifier: string | null;
   accessPolicy: "reference_only" | "store_text";

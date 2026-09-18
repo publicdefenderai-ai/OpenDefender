@@ -23,9 +23,16 @@ import {
   type OhioChapter2903SupportRole,
 } from "./ohio-chapter-2903-source";
 import { isOhioChapter2903PilotFresh } from "./ohio-chapter-2903-refresh";
+import {
+  isOhioReviewedSourceFresh,
+  OHIO_REVIEWED_SOURCES,
+  type OhioReviewedDocument,
+  type OhioReviewedSource,
+} from "./ohio-reviewed-source";
 
 export const OHIO_SOURCE_POLICY = "official_ohio_revised_code";
 export const OHIO_SOURCE_PUBLISHER = "Ohio Legislative Service Commission";
+export const OHIO_DEPARTMENT_OF_HEALTH = "Ohio Department of Health";
 export const OHIO_MANIFEST_SOURCE = "Ohio Laws: codes.ohio.gov";
 export const OHIO_SOURCE_BASE = "https://codes.ohio.gov/ohio-revised-code";
 
@@ -401,6 +408,201 @@ export function buildOhioChapter2903PilotManifestRecords(
   });
 }
 
+function reviewedProvision(
+  charge: CriminalCharge,
+  source: OhioReviewedSource,
+  document: OhioReviewedDocument,
+  importedAt: Date,
+  supportRole: "offense" | "grading" | "penalty",
+): AuthorityProvisionSeed {
+  const isRule = document.section.startsWith("OAC:");
+  const section = isRule ? document.section.slice(4) : document.section;
+  const sourceKey = isRule
+    ? `oh:administrative-rule:${section}`
+    : buildOhioSourceKey(section);
+  const citation = isRule
+    ? `Ohio Admin. Code ${section}`
+    : `Ohio Rev. Code Ann. § ${section}`;
+  const fingerprint = referenceHash({
+    sourceKey, lawId: isRule ? "OAC" : "ORC", section,
+    subdivision: null, citation, officialTitle: document.title,
+    sourceUrl: document.sourceUrl, contentHash: document.contentHash,
+    effectiveDateStart: document.effectiveDateStart, effectiveDateEnd: null,
+  });
+  const evidence = buildAuthorityEvidence({
+    sourceKey, lawId: isRule ? "OAC" : "ORC", section, subdivision: null,
+    citation, sourceUrl: document.sourceUrl, officialTitle: document.title,
+    text: document.text, contentHash: document.contentHash,
+    effectiveDateStart: document.effectiveDateStart,
+  });
+  return {
+    sourceKey, lawId: isRule ? "OAC" : "ORC", section, subdivision: null,
+    citation, officialTitle: document.title, sourceUrl: document.sourceUrl,
+    content: document.text, contentHash: document.contentHash,
+    hashBasis: "source_content", retrievedAt: new Date(document.retrievedAt),
+    effectiveDateStart: document.effectiveDateStart, effectiveDateEnd: null,
+    supportRole, evidence,
+    metadata: {
+      chargeId: charge.id, catalogLabel: charge.name, catalogCode: charge.code,
+      catalogClassification: charge.category,
+      sourceFirstBatch: "ohio_reviewed_125",
+      reviewedDraftSection: source.section,
+      reviewedInterpretation: source.interpretation,
+      reviewedLegalDecision: source.reviewedLegalDecision,
+      sourceExtraction: {
+        sourceHash: document.contentHash,
+        quotedSpans: source.evidence.filter(span => span.section === document.section),
+      },
+      currentnessEvidence: {
+        officialSectionPage: true, effectiveDateStart: document.effectiveDateStart,
+        retrievedAt: document.retrievedAt,
+      },
+      attorneyReview: source.reviewedLegalDecision
+        ? "reviewed_interpretation"
+        : "substantive_source_review_complete",
+      evidence,
+      fingerprint,
+      manifestImportedAt: importedAt.toISOString(),
+    },
+  };
+}
+
+function reviewedSupportRole(
+  source: OhioReviewedSource,
+  document: OhioReviewedDocument,
+): "offense" | "grading" | "penalty" {
+  return document.section === source.section ? "offense"
+    : /^(?:2929|2941|2971|2981)\./.test(document.section) ? "penalty" : "grading";
+}
+
+export function buildOhioReviewedManifestRecords(importedAt: Date): AuthorityCatalogRecord[] {
+  return OHIO_REVIEWED_SOURCES.map(source => {
+    const charge = criminalCharges.find(candidate => candidate.id === source.chargeId);
+    if (!charge || charge.jurisdiction !== "OH" || charge.code !== source.section ||
+        charge.name !== source.canonicalTitle) {
+      throw new Error(`Ohio reviewed source-first catalog identity is missing: ${source.chargeId}`);
+    }
+    const documents = [source.offense, ...source.dependencies]
+      .filter((document, index, rows) =>
+        rows.findIndex(candidate => candidate.section === document.section) === index);
+    const provisions = documents.map(document => reviewedProvision(
+      charge, source, document, importedAt,
+      reviewedSupportRole(source, document),
+    ));
+    const mapping = classifyAuthorityMapping({
+      catalogLabel: charge.name, catalogCode: charge.code,
+      references: [{ section: source.section, subdivision: null }],
+      documents: [{
+        sourceKey: buildOhioSourceKey(source.section), lawId: "ORC",
+        section: source.section, subdivision: null,
+        citation: `Ohio Rev. Code Ann. § ${source.section}`,
+        sourceUrl: source.offense.sourceUrl, officialTitle: source.offense.title,
+        text: source.offense.text, contentHash: source.offense.contentHash,
+        effectiveDateStart: source.offense.effectiveDateStart,
+      }],
+      codeIdentityMatches: true, approvedAlias: false,
+    });
+    return {
+      chargeId: charge.id, catalogLabel: charge.name, catalogCode: charge.code,
+      catalogCategory: charge.category, disposition: "retain",
+      dispositionReason:
+        "Independently source-derived offense identity, conduct, grading, interpretations, and required dependencies are bound to the reviewed substantive report and fresh official-source receipt.",
+      canonicalTitle: source.canonicalTitle, provisions, apiStatus: "verified",
+      mapping: {
+        ...mapping, classification: "exact_match",
+        rationale:
+          "Exact official catchline or exact hash-bound operative guilt-clause identity; descriptive labels without either basis remain withheld.",
+      },
+    };
+  });
+}
+
+function validateOhioReviewedManifestRecord(
+  record: AuthorityCatalogRecord,
+  source: OhioReviewedSource,
+): string | null {
+  if (record.disposition !== "retain" || record.apiStatus !== "verified" ||
+      record.canonicalTitle !== source.canonicalTitle ||
+      record.mapping?.classification !== "exact_match" ||
+      !record.provisions.length) {
+    return "Reviewed Ohio source-first record is not an exact selectable mapping";
+  }
+  const expected = new Map([source.offense, ...source.dependencies]
+    .map(document => [document.section, document]));
+  if (record.provisions.length !== expected.size) {
+    return "Reviewed Ohio source-first dependency set is incomplete";
+  }
+  const seenSourceKeys = new Set<string>();
+  const seenDocumentKeys = new Set<string>();
+  for (const provision of record.provisions) {
+    const key = provision.lawId === "OAC" ? `OAC:${provision.section}` : provision.section;
+    const document = expected.get(key);
+    if (!document) return `Unexpected reviewed Ohio dependency: ${key}`;
+    const isRule = key.startsWith("OAC:");
+    const expectedSection = isRule ? key.slice(4) : key;
+    const expectedSourceKey = isRule
+      ? `oh:administrative-rule:${expectedSection}`
+      : buildOhioSourceKey(expectedSection);
+    const expectedCitation = isRule
+      ? `Ohio Admin. Code ${expectedSection}`
+      : `Ohio Rev. Code Ann. § ${expectedSection}`;
+    const extraction = provision.metadata?.sourceExtraction as {
+      sourceHash?: unknown; quotedSpans?: unknown;
+    } | undefined;
+    const currentness = provision.metadata?.currentnessEvidence as {
+      officialSectionPage?: unknown; effectiveDateStart?: unknown; retrievedAt?: unknown;
+    } | undefined;
+    const expectedFingerprint = referenceHash({
+      sourceKey: expectedSourceKey, lawId: isRule ? "OAC" : "ORC",
+      section: expectedSection, subdivision: null, citation: expectedCitation,
+      officialTitle: document.title, sourceUrl: document.sourceUrl,
+      contentHash: document.contentHash,
+      effectiveDateStart: document.effectiveDateStart, effectiveDateEnd: null,
+    });
+    const expectedEvidence = buildAuthorityEvidence({
+      sourceKey: expectedSourceKey, lawId: isRule ? "OAC" : "ORC",
+      section: expectedSection, subdivision: null, citation: expectedCitation,
+      sourceUrl: document.sourceUrl, officialTitle: document.title,
+      text: document.text, contentHash: document.contentHash,
+      effectiveDateStart: document.effectiveDateStart,
+    });
+    if (seenSourceKeys.has(provision.sourceKey) || seenDocumentKeys.has(key) ||
+        provision.sourceKey !== expectedSourceKey ||
+        provision.lawId !== (isRule ? "OAC" : "ORC") ||
+        provision.section !== expectedSection ||
+        provision.subdivision !== null ||
+        provision.supportRole !== reviewedSupportRole(source, document) ||
+        provision.citation !== expectedCitation ||
+        provision.officialTitle !== document.title ||
+        provision.contentHash !== document.contentHash ||
+        provision.content !== document.text ||
+        provision.sourceUrl !== document.sourceUrl ||
+        provision.effectiveDateStart !== document.effectiveDateStart ||
+        provision.effectiveDateEnd !== null ||
+        !provision.retrievedAt ||
+        provision.retrievedAt.getTime() !== Date.parse(document.retrievedAt) ||
+        provision.hashBasis !== "source_content" ||
+        createHash("sha256").update(provision.content).digest("hex") !== provision.contentHash ||
+        JSON.stringify(provision.evidence) !== JSON.stringify(expectedEvidence) ||
+        provision.metadata?.fingerprint !== expectedFingerprint ||
+        currentness?.officialSectionPage !== true ||
+        currentness?.effectiveDateStart !== document.effectiveDateStart ||
+        currentness?.retrievedAt !== document.retrievedAt ||
+        extraction?.sourceHash !== document.contentHash ||
+        JSON.stringify(extraction.quotedSpans) !== JSON.stringify(
+          source.evidence.filter(span => span.section === document.section),
+        )) {
+      return `Reviewed Ohio dependency ${key} is not the pinned official evidence`;
+    }
+    seenSourceKeys.add(provision.sourceKey);
+    seenDocumentKeys.add(key);
+  }
+  if ([...expected.keys()].some(key => !seenDocumentKeys.has(key))) {
+    return "Reviewed Ohio source-first dependency set is incomplete";
+  }
+  return null;
+}
+
 export function buildOhioManifestRecord(
   charge: CriminalCharge,
   documents: OhioSourceDocument[],
@@ -559,6 +761,10 @@ export function validateOhioManifestRecord(
   if (sourceFirstPilot) {
     return validateOhioChapter2903PilotManifestRecord(record, sourceFirstPilot);
   }
+  const reviewedSource = OHIO_REVIEWED_SOURCES.find(
+    candidate => candidate.chargeId === record.chargeId,
+  );
+  if (reviewedSource) return validateOhioReviewedManifestRecord(record, reviewedSource);
 
   const references = parseOhioCitation(CHARGE_CITATIONS[charge.id]?.citation ?? "");
   const selectable =
@@ -618,28 +824,40 @@ export function buildOhioSourceDatabaseSeed(
   manifest: OhioAuthorityManifest,
   now: Date = new Date(),
 ): AuthoritySourceDatabaseSeed {
-  const sourceFirstIds = new Set(
-    OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.map((record) => record.chargeId),
-  );
   // A manifest supplied directly to this builder must not bypass the same
   // live receipt boundary that the loader uses.
-  const records = isOhioChapter2903PilotFresh(now)
-    ? manifest.catalogRecords
-    : manifest.catalogRecords.filter((record) => !sourceFirstIds.has(record.chargeId));
+  const records = manifest.catalogRecords.filter(record =>
+    (!OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS.some(source => source.chargeId === record.chargeId) ||
+      isOhioChapter2903PilotFresh(now)) &&
+    (!OHIO_REVIEWED_SOURCES.some(source => source.chargeId === record.chargeId) ||
+      isOhioReviewedSourceFresh(now)));
   annotateSharedAuthorityMappings(records);
   const sources = new Map<string, AuthoritySourceSeed>();
   const snapshots: AuthoritySourceDatabaseSeed["snapshots"] = [];
+  const snapshotIdentities = new Set<string>();
   const links: AuthorityChargeLinkSeed[] = [];
 
   for (const record of records) {
     if (record.disposition !== "retain" && record.disposition !== "exact_alias_rename") continue;
     for (const provision of record.provisions) {
+      const isPinnedHealthRule =
+        provision.sourceKey === "oh:administrative-rule:3701-12-01" &&
+        provision.lawId === "OAC" &&
+        provision.section === "3701-12-01";
+      if (provision.lawId === "OAC" && !isPinnedHealthRule) {
+        throw new Error(`Unrecognized Ohio administrative-rule source: ${provision.sourceKey}`);
+      }
+      if (isPinnedHealthRule && provision.supportRole === "offense") {
+        throw new Error("OAC 3701-12-01 is supporting authority and cannot be a primary criminal offense");
+      }
       if (!sources.has(provision.sourceKey)) {
         sources.set(provision.sourceKey, {
           sourceKey: provision.sourceKey,
           jurisdiction: "OH",
-          publisher: OHIO_SOURCE_PUBLISHER,
-          sourceType: "statute",
+          publisher: isPinnedHealthRule
+            ? OHIO_DEPARTMENT_OF_HEALTH
+            : OHIO_SOURCE_PUBLISHER,
+          sourceType: isPinnedHealthRule ? "administrative_rule" : "statute",
           canonicalUrl: provision.sourceUrl,
           apiIdentifier: provision.section,
           accessPolicy: "store_text",
@@ -651,10 +869,18 @@ export function buildOhioSourceDatabaseSeed(
             source: OHIO_MANIFEST_SOURCE,
             section: provision.section,
             attorneyReview: "pending",
+            ...(isPinnedHealthRule ? {
+              issuingAuthority: OHIO_DEPARTMENT_OF_HEALTH,
+              officialProvider: OHIO_SOURCE_PUBLISHER,
+            } : {}),
           },
         });
       }
-      snapshots.push({
+      const snapshotIdentity = [
+        provision.sourceKey, provision.citation, provision.officialTitle,
+        provision.contentHash,
+      ].join("|");
+      if (!snapshotIdentities.has(snapshotIdentity)) snapshots.push({
         sourceKey: provision.sourceKey,
         jurisdiction: "OH",
         citation: provision.citation,
@@ -673,6 +899,7 @@ export function buildOhioSourceDatabaseSeed(
         supersedesSnapshotId: null,
         metadata: provision.metadata,
       });
+      snapshotIdentities.add(snapshotIdentity);
       links.push({
         chargeId: record.chargeId,
         snapshotKey: provision.sourceKey,

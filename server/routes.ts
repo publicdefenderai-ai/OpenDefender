@@ -14,7 +14,7 @@ import { randomUUID, timingSafeEqual } from "crypto";
 import { generateEnhancedGuidance, stampEstimateDeadlines } from "./services/guidance-engine.js";
 import { generateClaudeGuidance, streamClaudeGuidance, testClaudeConnection, clearSessionCache, getGuidanceCacheKey, startOptionalSourceEnrichment } from "./services/claude-guidance.js";
 import { redactCaseDetails } from "./services/pii-redactor.js";
-import { getChargeById, getChargesByJurisdiction, getSelectableCharges, chargeCategories, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation, classifyChargesForGuidance } from "../shared/criminal-charges.js";
+import { getChargeById, getChargesByJurisdiction, getSelectableCharges, chargeCategories, normalizeChargeIds, getInstructionRef, getInstructionUrl, getVerifiedCitation, classifyChargesForGuidance, type CriminalCharge } from "../shared/criminal-charges.js";
 import { translateChargeName, translateDescription } from "../shared/charge-translations.js";
 import { validateLegalGuidance } from "./services/legal-accuracy-validator";
 import { statuteSeeder } from "./services/statute-seeder";
@@ -403,7 +403,11 @@ export async function registerRoutes(
   app.get("/api/criminal-charges", async (req, res) => {
     try {
       const { jurisdiction, search, category, group, limit, language } = req.query;
-      const isSpanish = language === 'es';
+      const requestedLanguage = typeof language === "string" && language.toLowerCase().startsWith("zh")
+        ? "zh"
+        : typeof language === "string" && language.toLowerCase().startsWith("es")
+          ? "es"
+          : "en";
       
       let charges = jurisdiction 
         ? getChargesByJurisdiction(jurisdiction as string)
@@ -411,7 +415,7 @@ export async function registerRoutes(
       const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
       charges = filterAuthorityBackedCharges(charges, currentAuthoritySelectableIds);
       
-      // Filter by search term (search in both English and Spanish)
+        // Search canonical and available localized text regardless of display locale.
       if (search && typeof search === 'string' && search.length > 100) {
         return res.status(400).json({ success: false, error: "Search term too long" });
       }
@@ -426,15 +430,19 @@ export async function registerRoutes(
           
           const nameEs = charge.nameEs || translateChargeName(charge.name) || '';
           const descriptionEs = charge.descriptionEs || translateDescription(charge.description) || '';
-          
+
           return nameEs.toLowerCase().includes(searchLower) ||
-                 descriptionEs.toLowerCase().includes(searchLower);
+                 descriptionEs.toLowerCase().includes(searchLower) ||
+                 (charge.nameZh ?? "").toLowerCase().includes(searchLower) ||
+                 (charge.descriptionZh ?? "").toLowerCase().includes(searchLower);
         });
       }
       
       // Filter by category (felony, misdemeanor, infraction)
       if (category && typeof category === 'string') {
-        charges = charges.filter(charge => charge.category === category);
+        charges = charges.filter(charge =>
+          charge.category === category || charge.categories?.includes(category as CriminalCharge["category"]),
+        );
       }
 
       // Filter by named charge group (e.g. "Public Order", "Violent Crimes")
@@ -451,11 +459,17 @@ export async function registerRoutes(
       const simplifiedCharges = charges.map(charge => {
         let name = charge.name;
         let description = charge.description;
+        let maxPenalty = charge.maxPenalty;
         
-        if (isSpanish) {
+        if (requestedLanguage === "es") {
           // Use direct field translations if available, otherwise use translation functions
           name = charge.nameEs || translateChargeName(charge.name) || charge.name;
           description = charge.descriptionEs || translateDescription(charge.description) || charge.description;
+          maxPenalty = charge.maxPenaltyEs || charge.maxPenalty;
+        } else if (requestedLanguage === "zh") {
+          name = charge.nameZh || charge.name;
+          description = charge.descriptionZh || charge.description;
+          maxPenalty = charge.maxPenaltyZh || charge.maxPenalty;
         }
         
         const instructionRef = getInstructionRef(charge);
@@ -471,9 +485,11 @@ export async function registerRoutes(
            *  no high-confidence citation has been confirmed for this entry. */
           citation: verifiedCitation ?? null,
           name,
+          canonicalName: charge.name,
           category: charge.category,
+          ...(charge.categories ? { categories: charge.categories } : {}),
           description,
-          maxPenalty: charge.maxPenalty,
+          maxPenalty,
           ...(charge.sourceUrls?.length ? { sourceUrls: charge.sourceUrls } : {}),
           ...(instructionRef ? { instructionRef } : {}),
           ...(instructionUrl ? { instructionUrl } : {}),
@@ -790,7 +806,14 @@ export async function registerRoutes(
         return res.status(400).json({ success: false, error: "Query parameter 'q' is required" });
       }
 
-      const language = (lang === 'es' ? 'es' : lang === 'zh' ? 'zh' : 'en') as 'en' | 'es' | 'zh';
+      const requestedSearchLanguage = typeof lang === "string" ? lang.toLowerCase() : "";
+      const language = (
+        requestedSearchLanguage.startsWith("es")
+          ? "es"
+          : requestedSearchLanguage.startsWith("zh")
+            ? "zh"
+            : "en"
+      ) as "en" | "es" | "zh";
       const typeFilters = types ? (types as string).split(',') : undefined;
       const currentAuthoritySelectableIds = await getCurrentAuthoritySelectableChargeIds();
       addChargesToSearchIndex(

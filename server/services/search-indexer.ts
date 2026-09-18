@@ -146,6 +146,16 @@ function expandSynonyms(query: string): ExpandedQuery {
     }
   }
 
+  // Han text commonly arrives without spaces. Add overlapping bigrams so a
+  // natural Chinese phrase can match a localized title or description.
+  for (const run of normalized.match(/\p{Script=Han}+/gu) ?? []) {
+    const characters = Array.from(run);
+    if (characters.length === 1) directSet.add(run);
+    for (let i = 0; i < characters.length - 1; i++) {
+      directSet.add(characters.slice(i, i + 2).join(""));
+    }
+  }
+
   const synonymSet = new Set<string>();
 
   for (const term of [...words, normalized]) {
@@ -254,9 +264,10 @@ function scoreFields(
     // ── Content body (capped low — incidental mentions shouldn't dominate) ──
     if (normalizedContent.includes(nt)) {
       const occurrences = (normalizedContent.match(new RegExp(escapeRegex(nt), 'g')) || []).length;
+      const isHanTerm = /\p{Script=Han}/u.test(nt);
       score += isDirect
-        ? Math.min(occurrences * 4, 18)
-        : Math.min(occurrences * 2, 8);
+        ? Math.min(occurrences * (isHanTerm ? 28 : 4), isHanTerm ? 60 : 18)
+        : Math.min(occurrences * (isHanTerm ? 14 : 2), isHanTerm ? 30 : 8);
       matchedTerms.push(term);
     }
   }
@@ -275,7 +286,11 @@ function calculateScore(
   const content = language === 'zh' && doc.contentZh ? doc.contentZh :
                   language === 'es' && doc.contentEs ? doc.contentEs : doc.content;
   const normalizedTitle = normalizeText(title);
-  const normalizedContent = normalizeText(content);
+  // Search every available locale while preferring the requested locale for
+  // display. This also supports bilingual users and pasted charging text.
+  const normalizedContent = normalizeText(
+    [content, doc.content, doc.contentEs, doc.contentZh].filter(Boolean).join(" "),
+  );
   const normalizedAliases = doc.aliases.map(a => normalizeText(a));
   const normalizedTags = doc.tags.map(t => normalizeText(t));
   const normalizedHeadings = (doc.headings || []).map(h => normalizeText(h));
@@ -1501,8 +1516,14 @@ function createChargeSearchDocument(charge: CriminalCharge): SearchDocument {
     type: 'charge',
     title: charge.name,
     titleEs: charge.nameEs,
-    content: `${charge.description}. Common defenses: ${charge.commonDefenses.join(', ')}. Maximum penalty: ${charge.maxPenalty}`,
-    contentEs: charge.descriptionEs,
+    titleZh: charge.nameZh,
+    content: `${charge.description}. Common defenses: ${charge.commonDefenses.join(', ')}. Maximum penalty: ${charge.maxPenalty}. Code: ${charge.code}`,
+    contentEs: charge.descriptionEs
+      ? `${charge.descriptionEs}. ${charge.maxPenaltyEs ?? charge.maxPenalty}. ${charge.code}`
+      : undefined,
+    contentZh: charge.descriptionZh
+      ? `${charge.descriptionZh}。${charge.maxPenaltyZh ?? charge.maxPenalty}。${charge.code}`
+      : undefined,
     tags: [charge.category, charge.jurisdiction],
     aliases,
     jurisdiction: charge.jurisdiction,
@@ -1515,6 +1536,11 @@ function createChargeSearchDocument(charge: CriminalCharge): SearchDocument {
 
 function getChargeSearchAliases(charge: CriminalCharge): string[] {
   const aliases = new Set<string>();
+  // Codes and localized names remain aliases so users can find a charge even
+  // when the current UI locale differs from the language they typed.
+  aliases.add(charge.code);
+  if (charge.nameEs) aliases.add(charge.nameEs);
+  if (charge.nameZh) aliases.add(charge.nameZh);
   const baseAlias = extractChargeBaseAlias(charge.name);
   if (baseAlias) aliases.add(baseAlias);
 

@@ -158,7 +158,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
   const [focusedIndex, setFocusedIndex] = useState(-1);
   const [activeFilter, setActiveFilter] = useState<SearchContentType | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const resultRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const resultRefs = useRef<(HTMLAnchorElement | null)[]>([]);
   const language: 'en' | 'es' | 'zh' = i18n.language?.startsWith('es') ? 'es' : i18n.language?.startsWith('zh') ? 'zh' : 'en';
 
   useEffect(() => {
@@ -295,11 +295,10 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
   const hasResults = allSections.length > 0;
   const showNoResults = debouncedQuery.length >= 2 && !isLoading && !hasResults;
 
-  let globalIdx = 0;
-
-  // Shared result card renderer used in both the best-matches section and grouped sections
-  function ResultCard({ result }: { result: SearchResult }) {
-    const myIdx = globalIdx++;
+  // Render as a function, not a component declared inside SiteSearch. A new
+  // component type on focus would unmount the pressed link before its click.
+  function renderResultCard(result: SearchResult) {
+    const myIdx = flatResults.findIndex(item => item.document.id === result.document.id);
     const isFocused = myIdx === focusedIndex;
     const Icon = TYPE_ICONS[result.document.type];
     const colorClass = TYPE_COLORS[result.document.type];
@@ -316,21 +315,32 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
     const matchedHeading = findMatchedHeading(result.document.headings, result.matchedTerms);
 
     return (
-      <button
+      <a
         key={result.document.id}
+        href={result.document.url}
         id={`search-result-${myIdx}`}
         role="option"
         tabIndex={-1}
         aria-selected={isFocused}
         ref={el => { resultRefs.current[myIdx] = el; }}
-        onClick={() => handleResultClick(result.document.url)}
+        onClick={(event) => {
+          // Preserve native new-tab/window behavior while using the SPA router
+          // for an ordinary activation. The href is intentionally retained so
+          // mouse and keyboard activation still navigate if JS handling is
+          // interrupted by dialog focus management.
+          if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) {
+            onOpenChange(false);
+            return;
+          }
+          event.preventDefault();
+          handleResultClick(result.document.url);
+        }}
         onFocus={() => setFocusedIndex(myIdx)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter') handleResultClick(result.document.url);
           if (e.key === 'ArrowDown' || e.key === 'ArrowUp') handleKeyDown(e);
           if (e.key === 'Escape') { setFocusedIndex(-1); inputRef.current?.focus(); }
         }}
-        className={`w-full text-left px-3 py-2.5 rounded-lg transition-colors border ${
+        className={`block w-full text-left no-underline text-inherit px-3 py-2.5 rounded-lg transition-colors border ${
           isFocused
             ? 'bg-accent border-border ring-1 ring-ring/30'
             : 'border-transparent hover:bg-accent hover:border-border'
@@ -370,7 +380,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
             )}
           </div>
         </div>
-      </button>
+      </a>
     );
   }
 
@@ -539,7 +549,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                       <div className="flex-1 h-px bg-border" />
                     </div>
                     <div className="space-y-1">
-                      {bestMatches.map(result => <ResultCard key={result.document.id} result={result} />)}
+                      {bestMatches.map(renderResultCard)}
                     </div>
                   </div>
                 )}
@@ -574,7 +584,7 @@ export function SiteSearch({ open, onOpenChange }: SiteSearchProps) {
                       </div>
 
                       <div className="space-y-1">
-                        {results.map(result => <ResultCard key={result.document.id} result={result} />)}
+                        {results.map(renderResultCard)}
                       </div>
                     </div>
                   );

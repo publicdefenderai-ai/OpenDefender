@@ -23,6 +23,7 @@ import {
   ohioChapter2903Evidence,
   validateOhioChapter2903Document,
 } from "../server/data/ohio-chapter-2903-source";
+import { OHIO_REVIEWED_SOURCES } from "../server/data/ohio-reviewed-source";
 import { validateOhioChapter2903RefreshReceipt } from "../server/data/ohio-chapter-2903-refresh";
 import {
   buildOhioChapter2903PilotManifestRecords,
@@ -58,13 +59,20 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(134);
+    expect(ohioCount).toBe(239);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(105);
-    expect(seed.snapshots).toHaveLength(226);
-    expect(seed.links).toHaveLength(226);
-    expect(seed.selectableChargeIds).toHaveLength(29);
+    expect(seed.sources).toHaveLength(251);
+    expect(seed.snapshots).toHaveLength(251);
+    expect(seed.links).toHaveLength(688);
+    expect(seed.selectableChargeIds).toHaveLength(134);
+    expect(seed.catalogRecords.filter(record =>
+      record.provisions.some(provision =>
+        provision.metadata.sourceFirstBatch === "ohio_reviewed_125",
+      ))).toHaveLength(105);
+    expect(seed.selectableChargeIds).toEqual(expect.arrayContaining(
+      OHIO_REVIEWED_SOURCES.map(source => source.chargeId),
+    ));
     expect(seed.selectableChargeIds).toContain("oh-orc-2903-12-aggravated-assault");
     expect(seed.selectableChargeIds).not.toContain("oh-aggravated-assault");
     expect(seed.selectableChargeIds).toContain("oh-criminal-trespass");
@@ -76,7 +84,10 @@ describe("Ohio authority manifest", () => {
 
   it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
     const manifest = loadOhioAuthorityManifest();
-    const sourceFirstIds = OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id);
+    // Keep this assertion scoped to the independently pinned Chapter 2903
+    // pilot. The reviewed 105-record batch has its own accounting/gates.
+    const sourceFirstIds = OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS
+      .map(record => record.chargeId);
 
     expect(sourceFirstIds).toEqual([
       "oh-orc-2903-01-aggravated-murder",
@@ -99,6 +110,10 @@ describe("Ohio authority manifest", () => {
       "oh-orc-2903-34-a3-patient-neglect",
       "oh-orc-2903-35-filing-false-patient-abuse-or-neglect-complaints",
     ]);
+    expect(sourceFirstIds).toHaveLength(19);
+    expect(sourceFirstIds).not.toEqual(expect.arrayContaining(
+      OHIO_REVIEWED_SOURCES.map(source => source.chargeId),
+    ));
     expect(getChargeById(sourceFirstIds[0])?.name).toBe("Aggravated murder");
     expect(getChargeById(sourceFirstIds[1])?.name).toBe("Murder");
     expect(getSelectableCharges().map((charge) => charge.id)).toEqual(
