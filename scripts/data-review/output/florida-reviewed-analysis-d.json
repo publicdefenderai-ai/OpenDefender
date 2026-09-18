@@ -1,0 +1,159 @@
+[
+  {
+    "id": "fl-fs-784-045-1-2-aggravated-battery",
+    "section": "784.045",
+    "status": "eligible",
+    "reason": "The official heading supplies exact identity; subsections (1)-(2) state the alternative aggravated-battery branches and a single felony grade.",
+    "identity": { "kind": "official_heading", "quote": "Aggravated battery", "sourceHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
+    "conductQuotes": [
+      "A person commits aggravated battery who, in committing battery:",
+      "Intentionally or knowingly causes great bodily harm, permanent disability, or permanent disfigurement; or",
+      "Uses a deadly weapon.",
+      "A person commits aggravated battery if the person who was the victim of the battery was pregnant at the time of the offense and the offender knew or should have known that the victim was pregnant."
+    ],
+    "gradingQuotes": ["A person who violates subsection (1) commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "784.045", "role": "offense", "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
+      { "section": "784.045", "role": "grading", "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
+      { "section": "784.045", "role": "justification", "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85" },
+      { "section": "784.03", "role": "definition", "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20" }
+    ],
+    "notes": "Section 784.03 supplies the incorporated battery conduct. Subsection (3)'s riot-related one-level sentencing ranking is described but is not projected as a separate offense or felony degree."
+  },
+  {
+    "id": "fl-fs-806-01-1-arson-in-the-first-degree",
+    "section": "806.01",
+    "status": "eligible",
+    "reason": "Subsection (1) expressly states guilt of arson in the first degree and its first-degree-felony grade.",
+    "identity": { "kind": "operative_guilt_clause", "quote": "is guilty of arson in the first degree, which constitutes a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
+    "conductQuotes": [
+      "Any person who willfully and unlawfully, or while in the commission of any felony, by fire or explosion, damages or causes to be damaged:",
+      "Any dwelling, whether occupied or not, or its contents;",
+      "Any other structure that he or she knew or had reasonable grounds to believe was occupied by a human being,"
+    ],
+    "gradingQuotes": ["is guilty of arson in the first degree, which constitutes a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "806.01", "role": "offense", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
+      { "section": "806.01", "role": "definition", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" }
+    ],
+    "notes": "The whole-section definition dependency pins subsection (3)'s broad definition of structure. The eligible scope retains all three alternatives in subsection (1), including normally occupied structures; selected conduct quotes are evidentiary anchors rather than an exhaustive rewrite."
+  },
+  {
+    "id": "fl-fs-806-01-2-arson-in-the-second-degree",
+    "section": "806.01",
+    "status": "eligible",
+    "reason": "Subsection (2) expressly states guilt of arson in the second degree, complete conduct, and its felony grade.",
+    "identity": { "kind": "operative_guilt_clause", "quote": "is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.", "sourceHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
+    "conductQuotes": ["Any person who willfully and unlawfully, or while in the commission of any felony, by fire or explosion, damages or causes to be damaged any structure, whether the property of himself or herself or another, under any circumstances not referred to in subsection (1), is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "gradingQuotes": ["is guilty of arson in the second degree, which constitutes a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "806.01", "role": "offense", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" },
+      { "section": "806.01", "role": "definition", "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c" }
+    ],
+    "notes": "The branch expressly includes the actor's own structure and is residual to subsection (1). Subsection (3)'s definition of structure is pinned through the whole-section dependency."
+  },
+  {
+    "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+    "section": "812.014",
+    "status": "eligible",
+    "reason": "Paragraph (2)(e) expressly names the under-$40 dwelling or unenclosed-curtilage offense and supplies its base misdemeanor and repeat-conviction felony grades.",
+    "identity": { "kind": "operative_guilt_clause", "quote": "It is petit theft of the first degree and a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, if the property stolen is valued at less than $40 and is taken from a dwelling as defined in s. 810.011(2) or from the unenclosed curtilage of a dwelling pursuant to s. 810.09(1).", "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+    "conductQuotes": [
+      "It is petit theft of the first degree and a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, if the property stolen is valued at less than $40 and is taken from a dwelling as defined in s. 810.011(2) or from the unenclosed curtilage of a dwelling pursuant to s. 810.09(1).",
+      "A person who commits a violation of subparagraph 1. and who has previously been convicted of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "gradingQuotes": [
+      "It is petit theft of the first degree and a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, if the property stolen is valued at less than $40 and is taken from a dwelling as defined in s. 810.011(2) or from the unenclosed curtilage of a dwelling pursuant to s. 810.09(1).",
+      "A person who commits a violation of subparagraph 1. and who has previously been convicted of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      { "section": "812.014", "role": "offense", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "grading", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "exception", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "810.011", "role": "definition", "contentHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d" },
+      { "section": "810.09", "role": "definition", "contentHash": "8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec" }
+    ],
+    "notes": "Subparagraphs (2)(e)2.-3. are retained as conditional felony branches in this family row rather than duplicated. Paragraph (2)(d) governs dwelling or unenclosed-curtilage property beginning at $40 and is pinned as an exception; subsection (4)'s lease-demand limitation also remains in the whole-section source."
+  },
+  {
+    "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+    "section": "812.014",
+    "status": "eligible",
+    "reason": "Current paragraph (2)(f), not former paragraph (2)(e), expressly names and grades ordinary $100-to-under-$750 petit theft while excepting paragraph (2)(d).",
+    "identity": { "kind": "operative_guilt_clause", "quote": "Except as provided in paragraph (d), if the property stolen is valued at $100 or more, but less than $750, the offender commits petit theft of the first degree, punishable as a misdemeanor of the first degree, as provided in s. 775.082 or s. 775.083.", "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+    "conductQuotes": ["Except as provided in paragraph (d), if the property stolen is valued at $100 or more, but less than $750, the offender commits petit theft of the first degree, punishable as a misdemeanor of the first degree, as provided in s. 775.082 or s. 775.083."],
+    "gradingQuotes": ["Except as provided in paragraph (d), if the property stolen is valued at $100 or more, but less than $750, the offender commits petit theft of the first degree, punishable as a misdemeanor of the first degree, as provided in s. 775.082 or s. 775.083."],
+    "requiredSections": [
+      { "section": "812.014", "role": "offense", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "exception", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" }
+    ],
+    "notes": "Paragraph (2)(d) excludes property in this value range taken from a dwelling or its unenclosed curtilage and grades that conduct as grand theft of the third degree. The exception is explicit in all localized degree text; no additional grand-theft row is added."
+  },
+  {
+    "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+    "section": "812.014",
+    "status": "eligible",
+    "reason": "Paragraph (3)(a) expressly names petit theft of the second degree and states its misdemeanor grade; subsection (1) supplies the incorporated theft conduct.",
+    "identity": { "kind": "operative_guilt_clause", "quote": "Theft of any property not specified in subsection (2) is petit theft of the second degree and a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, and as provided in subsection (5), as applicable.", "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+    "conductQuotes": ["Theft of any property not specified in subsection (2) is petit theft of the second degree and a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, and as provided in subsection (5), as applicable."],
+    "gradingQuotes": ["Theft of any property not specified in subsection (2) is petit theft of the second degree and a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, and as provided in subsection (5), as applicable."],
+    "requiredSections": [
+      { "section": "812.014", "role": "offense", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "definition", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "exception", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" }
+    ],
+    "notes": "The definition dependency pins subsection (1); the exception dependency pins subsection (4)'s written-demand rule for leases of at least one year and subsection (5)'s retail-gasoline license suspension. Property specified in subsection (2) is excluded from this branch."
+  },
+  {
+    "id": "fl-fs-812-014-3-b-petit-theft",
+    "section": "812.014",
+    "status": "eligible",
+    "reason": "Paragraph (3)(b) expressly predicates its first-degree-misdemeanor branch on commission of petit theft plus a prior theft conviction.",
+    "identity": { "kind": "operative_guilt_clause", "quote": "A person who commits petit theft and who has previously been convicted of any theft commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.", "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+    "conductQuotes": ["A person who commits petit theft and who has previously been convicted of any theft commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."],
+    "gradingQuotes": ["A person who commits petit theft and who has previously been convicted of any theft commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."],
+    "requiredSections": [
+      { "section": "812.014", "role": "offense", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "definition", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "exception", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" }
+    ],
+    "notes": "The whole-section dependencies pin the underlying theft definition and subsection (4)'s lease-demand limitation. This row is confined to subsection (3) petit theft; the specific under-$40 dwelling or unenclosed-curtilage repeat rule in paragraph (2)(e) is separately represented. Paragraph (3)(c), not this row, supplies the separately represented two-or-more-priors felony branch for subsection (3)."
+  },
+  {
+    "id": "fl-fs-812-014-3-c-petit-theft",
+    "section": "812.014",
+    "status": "eligible",
+    "reason": "Paragraph (3)(c) expressly predicates a distinct third-degree-felony petit-theft branch on two or more prior theft convictions.",
+    "identity": { "kind": "operative_guilt_clause", "quote": "A person who commits petit theft and who has previously been convicted two or more times of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083.", "sourceHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+    "conductQuotes": ["A person who commits petit theft and who has previously been convicted two or more times of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083."],
+    "gradingQuotes": ["A person who commits petit theft and who has previously been convicted two or more times of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083."],
+    "requiredSections": [
+      { "section": "812.014", "role": "offense", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "definition", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" },
+      { "section": "812.014", "role": "exception", "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3" }
+    ],
+    "notes": "The whole-section dependencies pin the underlying theft definition and subsection (4)'s lease-demand limitation. This row is confined to subsection (3); paragraph (2)(e)'s specific dwelling or unenclosed-curtilage repeat branch is separately represented with the same felony degree. No correction of the paragraph's literal penalty references is inferred."
+  },
+  {
+    "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+    "section": "837.02",
+    "status": "eligible",
+    "reason": "The official heading supplies exact identity; subsections (1)-(2) provide the ordinary and capital-felony-prosecution branches with literal felony grades.",
+    "identity": { "kind": "official_heading", "quote": "Perjury in official proceedings", "sourceHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
+    "conductQuotes": [
+      "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding that relates to the prosecution of a capital felony, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "Except as provided in subsection (2), whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding in regard to any material matter, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Whoever makes a false statement, which he or she does not believe to be true, under oath in an official proceeding that relates to the prosecution of a capital felony, commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      { "section": "837.02", "role": "offense", "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
+      { "section": "837.02", "role": "grading", "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
+      { "section": "837.02", "role": "exception", "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5" },
+      { "section": "837.011", "role": "definition", "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583" }
+    ],
+    "notes": "Section 837.011 closes official proceeding, oath, and material matter. Subsection (3) expressly removes knowledge of materiality as an element and mistaken immateriality as a defense. Subsection (2)'s text does not separately say material matter, so the display does not import that condition into the capital-felony branch."
+  }
+]

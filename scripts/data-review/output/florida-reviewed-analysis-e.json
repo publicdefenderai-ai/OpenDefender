@@ -1,0 +1,263 @@
+[
+  {
+    "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",
+    "section": "893.13",
+    "status": "eligible",
+    "reason": "The official section heading supplies the literal identity; paragraph (1)(a) supplies ordinary sale, manufacture, delivery, and possession-with-intent conduct and schedule-dependent criminal grades.",
+    "identity": { "kind": "official_heading", "quote": "Prohibited acts; penalties", "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+    "conductQuotes": ["Except as authorized by this chapter and chapter 499, a person may not sell, manufacture, or deliver, or possess with intent to sell, manufacture, or deliver, a controlled substance."],
+    "gradingQuotes": [
+      "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A controlled substance named or described in s. 893.03(5) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      { "section": "893.13", "role": "offense", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "grading", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "exception", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.02", "role": "definition", "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17" },
+      { "section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1" },
+      { "section": "893.101", "role": "justification", "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa" }
+    ],
+    "notes": "Confined to paragraph (1)(a). Quantity, protected-location, dwelling/minor-presence, overdose-result, and other aggravated branches are intentionally not projected. Subsection (9)'s professional and official exclusions remain applicable."
+  },
+  {
+    "id": "fl-fs-893-13-2-a-prohibited-acts-penalties",
+    "section": "893.13",
+    "status": "eligible",
+    "reason": "The official section heading supplies the literal identity; paragraph (2)(a) supplies purchase and possession-with-intent-to-purchase conduct and schedule-dependent grades.",
+    "identity": { "kind": "official_heading", "quote": "Prohibited acts; penalties", "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+    "conductQuotes": ["Except as authorized by this chapter and chapter 499, a person may not purchase, or possess with intent to purchase, a controlled substance."],
+    "gradingQuotes": [
+      "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A controlled substance named or described in s. 893.03(5) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      { "section": "893.13", "role": "offense", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "grading", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "exception", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.02", "role": "definition", "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17" },
+      { "section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1" },
+      { "section": "893.101", "role": "justification", "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa" }
+    ],
+    "notes": "Confined to paragraph (2)(a); the more-than-10-gram first-degree-felony branch in (2)(b) is not included. Subsection (9) exclusions remain applicable."
+  },
+  {
+    "id": "fl-fs-893-13-3-prohibited-acts-penalties",
+    "code": "893.13(3)",
+    "section": "893.13",
+    "status": "held",
+    "reason": "Technical hold: this cannabis-specific branch depends on the current medical-marijuana exclusion incorporated through § 893.02(3), but current § 381.986 is absent from the official cache.",
+    "identity": { "kind": "official_heading", "quote": "Prohibited acts; penalties", "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      { "section": "893.13", "role": "offense", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.02", "role": "definition", "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17" }
+    ],
+    "notes": "The subsection-specific resin exclusion is visible, but the chapter definition also excludes marijuana handled in conformance with § 381.986. Without that current dependency, comprehensive exception coverage cannot be claimed. This proposed delivery branch would not overlap retained possession subsection (6)(b)."
+  },
+  {
+    "id": "fl-fs-893-13-4-prohibited-acts-penalties",
+    "section": "893.13",
+    "status": "eligible",
+    "reason": "The official heading identifies the section, and subsection (4) supplies the adult-to-minor delivery/use conduct and all schedule-dependent felony grades.",
+    "identity": { "kind": "official_heading", "quote": "Prohibited acts; penalties", "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+    "conductQuotes": ["Except as authorized by this chapter, a person 18 years of age or older may not deliver any controlled substance to a person younger than 18 years of age, use or hire a person younger than 18 years of age as an agent or employee in the sale or delivery of such a substance, or use such person to assist in avoiding detection or apprehension for a violation of this chapter."],
+    "gradingQuotes": [
+      "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "Any other controlled substance, except as lawfully sold, manufactured, or delivered, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      { "section": "893.13", "role": "offense", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "grading", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "exception", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.02", "role": "definition", "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17" },
+      { "section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1" },
+      { "section": "893.101", "role": "justification", "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa" }
+    ],
+    "notes": "This is an adult defendant's criminal branch involving a person under 18, not a juvenile civil offense. The no-suspension, no-deferral, and no-probation consequence is preserved in the definition text."
+  },
+  {
+    "id": "fl-fs-893-13-5-prohibited-acts-penalties",
+    "section": "893.13",
+    "status": "eligible",
+    "reason": "The official heading identifies the section; subsection (5) supplies bringing-into-state conduct, exceptions, and schedule-dependent grades.",
+    "identity": { "kind": "official_heading", "quote": "Prohibited acts; penalties", "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+    "conductQuotes": ["A person may not bring into this state any controlled substance unless the possession of such controlled substance is authorized by this chapter or unless such person is licensed to do so by the appropriate federal agency."],
+    "gradingQuotes": [
+      "A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "A controlled substance named or described in s. 893.03(5) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."
+    ],
+    "requiredSections": [
+      { "section": "893.13", "role": "offense", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "grading", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "exception", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.02", "role": "definition", "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17" },
+      { "section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1" },
+      { "section": "893.101", "role": "justification", "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa" }
+    ],
+    "notes": "Both statutory authorization and appropriate federal licensure exceptions are retained."
+  },
+  {
+    "id": "fl-fs-893-13-6-a-prohibited-acts-penalties",
+    "section": "893.13",
+    "status": "eligible",
+    "reason": "The official section heading supplies literal identity, and paragraph (6)(a) supplies the general non-cannabis actual-or-constructive-possession felony without duplicating the separately maintained paragraph (6)(b) misdemeanor for 20 grams or less of cannabis.",
+    "identity": { "kind": "official_heading", "quote": "Prohibited acts; penalties", "sourceHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+    "conductQuotes": ["A person may not be in actual or constructive possession of a controlled substance unless such controlled substance was lawfully obtained from a practitioner or pursuant to a valid prescription or order of a practitioner while acting in the course of his or her professional practice or to be in actual or constructive possession of a controlled substance except as otherwise authorized by this chapter."],
+    "gradingQuotes": ["A person who violates this provision commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "893.13", "role": "offense", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "grading", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.13", "role": "exception", "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291" },
+      { "section": "893.02", "role": "definition", "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17" },
+      { "section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1" },
+      { "section": "893.101", "role": "justification", "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa" }
+    ],
+    "notes": "Strictly limited to non-cannabis applications of (6)(a). The separately maintained misdemeanor for possession of 20 grams or less of cannabis under (6)(b) is not this record. Paragraphs (6)(c) and (6)(d) separately govern more than 10 grams of specified substances and Schedule V possession. Subsection (9)'s listed medical, scientific, professional, governmental, carrier, distribution, and bona fide law-enforcement exclusions are required exception support. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; § 893.02(3)'s quoted exclusion remains a statutory condition without any determination of who complies."
+  },
+  {
+    "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "section": "893.147",
+    "status": "eligible",
+    "reason": "The official section heading supplies the exact statutory identity; subsection (1) supplies both use-purpose alternatives and misdemeanor grading.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": ["It is unlawful for any person to use, or to possess with intent to use, drug paraphernalia:"],
+    "gradingQuotes": ["Any person who violates this subsection is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.145", "role": "definition", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" }
+    ],
+    "notes": "Section 893.145's complete definition, including its narrow testing-product exclusion, is required. The text creates a criminal misdemeanor; civil forfeiture language in the definition does not replace the criminal grade."
+  },
+  {
+    "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "section": "893.147",
+    "status": "eligible",
+    "reason": "The official section heading supplies the exact statutory identity; subsection (2) supplies conduct, knowledge standard, intended uses, and felony grade.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": ["It is unlawful for any person to deliver, possess with intent to deliver, or manufacture with intent to deliver drug paraphernalia, knowing, or under circumstances where one reasonably should know, that it will be used:"],
+    "gradingQuotes": ["Any person who violates this subsection is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.145", "role": "definition", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" }
+    ],
+    "notes": "Both paragraph (a) handling/concealment and paragraph (b) introduction-into-body purposes are retained."
+  },
+  {
+    "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "section": "893.147",
+    "status": "eligible",
+    "reason": "The official section heading supplies exact statutory identity; paragraph (3)(a) expressly incorporates subsection (2), adds adult/minor ages and delivery, and grades the offense.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": [
+      "Any person 18 years of age or over who violates subsection (2) by delivering drug paraphernalia to a person under 18 years of age is guilty of a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": ["Any person 18 years of age or over who violates subsection (2) by delivering drug paraphernalia to a person under 18 years of age is guilty of a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "justification", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.145", "role": "definition", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" }
+    ],
+    "notes": "Subsection (2) is a required parent-element dependency. This is an adult criminal felony involving a minor recipient, not a civil or juvenile adjudication."
+  },
+  {
+    "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "section": "893.147",
+    "status": "eligible",
+    "reason": "The official section heading supplies exact statutory identity, while paragraph (3)(b) independently states syringe/needle delivery conduct, lawful-dispensation exceptions, and misdemeanor guilt.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": ["It is unlawful for any person to sell or otherwise deliver hypodermic syringes, needles, or other objects which may be used, are intended for use, or are designed for use in parenterally injecting substances into the human body to any person under 18 years of age, except that hypodermic syringes, needles, or other such objects may be lawfully dispensed to a person under 18 years of age by a licensed practitioner, parent, or legal guardian or by a pharmacist pursuant to a valid prescription for same."],
+    "gradingQuotes": ["Any person who violates the provisions of this paragraph is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "exception", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" }
+    ],
+    "notes": "This paragraph is kept separate from (3)(a): it has different conduct, grade, and express practitioner/parent/guardian/pharmacist exception. It is criminal, not a civil juvenile exclusion."
+  },
+  {
+    "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "section": "893.147",
+    "status": "eligible",
+    "reason": "The official section heading supplies exact statutory identity; this subsection (4) draft is deliberately confined in its stated conduct to paragraph (4)(a), avoiding the unavailable definition incorporated only by (4)(b).",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": [
+      "A controlled substance in violation of this chapter; or"
+    ],
+    "gradingQuotes": ["Any person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "justification", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.145", "role": "definition", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" }
+    ],
+    "notes": "The subsection (4) parent supplies the use, possession-with-intent, manufacture-with-intent, knowledge, and transportation elements as same-section supporting justification; the common subsection tail supplies grading. Primary conduct is confined to paragraph (4)(a). Paragraph (4)(b), which incorporates the definition in § 932.701(2)(a)1., is excluded because current § 932.701 is absent from the cache. No uncached definition was inferred."
+  },
+  {
+    "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "section": "893.147",
+    "status": "eligible",
+    "reason": "The exact official section heading identifies the statutory charge, and subsection (5) supplies publication, knowledge, purpose, and misdemeanor guilt in one clause.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": ["It is unlawful for any person to place in any newspaper, magazine, handbill, or other publication any advertisement, knowing, or under circumstances where one reasonably should know, that the purpose of the advertisement, in whole or in part, is to promote the sale of objects designed or intended for use as drug paraphernalia."],
+    "gradingQuotes": ["Any person who violates this subsection is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.145", "role": "definition", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" }
+    ],
+    "notes": "No broader advertising conduct is inferred beyond the listed publication media and statutory purpose."
+  },
+  {
+    "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "section": "893.147",
+    "status": "eligible",
+    "reason": "The exact official section heading identifies the statutory charge; paragraph (6)(a) narrowly enumerates retail items and an exception, and paragraph (6)(b) supplies first and repeat grades.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": ["It is unlawful for a person to knowingly and willfully sell or offer for sale at retail any drug paraphernalia described in s. 893.145(12)(a)-(c) or (g)-(m), other than a pipe that is primarily made of briar, meerschaum, clay, or corn cob."],
+    "gradingQuotes": ["A person who violates paragraph (a) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, and, upon a second or subsequent violation, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.145", "role": "definition", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" },
+      { "section": "893.145", "role": "exception", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" }
+    ],
+    "notes": "Item scope is exactly the incorporated § 893.145(12) subparagraphs. The material exception and repeat-offense reclassification are retained."
+  },
+  {
+    "id": "fl-fs-893-147-7-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "code": "893.147(7)",
+    "section": "893.147",
+    "status": "held",
+    "reason": "Technical hold: subsection (7) incorporates current federal definitions and compliance conditions in 21 U.S.C. §§ 802, 822, and 830, the counterfeit-controlled-substance definition in § 831.31(2), and the § 381.986 licensing exception in paragraph (7)(b)3.; those current dependencies are absent from the official cache.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" }
+    ],
+    "notes": "No federal text, missing § 831.31 definition, or missing § 381.986 licensing terms were invented or fetched. Paragraph (7)(b)3. expressly depends on an active, unencumbered license or permit under § 381.986 or chapter 465 and compliant licensed functions. The record remains held despite the cached primary section and cached § 893.02 because complete exception/definition support is unavailable."
+  },
+  {
+    "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "code": "893.147(4)(b)",
+    "section": "893.147",
+    "status": "held",
+    "reason": "Technical hold: paragraph (4)(b) incorporates the contraband definition in § 932.701(2)(a)1., and current § 932.701 is absent from the official cache.",
+    "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" }
+    ],
+    "notes": "Paragraph (4)(a)'s independently complete controlled-substance branch is eligible; this separate incorporated-contraband branch is held. No missing definition was inferred."
+  }
+]

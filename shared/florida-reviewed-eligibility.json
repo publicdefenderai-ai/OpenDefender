@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "8dcaa98f3e3bb11c06f477fc95c3662965601be145d0aab548e03393bfcc18c2",
+  "reportHash": "5390e4a3a75577094d286eb629624f14c1436d2329226854bea1c1a45bbb98e8",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -561,6 +561,174 @@
       "draftHash": "f45b0fae3d643473cf7a1de3dbf707aad66ec59d4c4e33fdd6e25d125221866a",
       "definitionHash": "7ae677ae61331e1beb89143c0c9937f039fe29f2a604bdc8bf066f21f5a0018e",
       "approvalHash": "249a385140a7a26c5d64db3bc7fc708012ebeceab4d4719d8a3db7781bbd559f"
+    },
+    {
+      "id": "fl-fs-784-045-1-2-aggravated-battery",
+      "status": "eligible",
+      "reason": "The official heading supplies exact identity; subsections (1)-(2) state the alternative aggravated-battery branches and a single felony grade.",
+      "draftHash": "7ebf6065b7380d06a3a7aab78e95aec9d1e52a30a0de1a9e2c12a5c9dec95e9c",
+      "definitionHash": "f63300f5a5fd64ad13027592308795994b4260c89e5c9c8ca68aeba38272bd9b",
+      "approvalHash": "f5a6704d453f2fad3e8aa804df1cef0bc07112a45f670f0bdd7535277da06bfa"
+    },
+    {
+      "id": "fl-fs-806-01-1-arson-in-the-first-degree",
+      "status": "eligible",
+      "reason": "Subsection (1) expressly states guilt of arson in the first degree and its first-degree-felony grade.",
+      "draftHash": "437c071ee85a44419ee89137ac6a477b4f64d32d20f5bd8669df5160d7a07135",
+      "definitionHash": "f4d39bcd8f0af7d70c78b71f0a7a3f55c20738abf7378a6942e375348b7af39f",
+      "approvalHash": "4e0182753b0f83dffffde2c1f4c588e73d176bf373fedea68faed9cf4e20600d"
+    },
+    {
+      "id": "fl-fs-806-01-2-arson-in-the-second-degree",
+      "status": "eligible",
+      "reason": "Subsection (2) expressly states guilt of arson in the second degree, complete conduct, and its felony grade.",
+      "draftHash": "ad82a5e274dcb1b49bfcd3dfccff5498a494dce498acf89dbbe339439db9d225",
+      "definitionHash": "50f2b739eb1ce3b3037cf11337d121d66470ab9ff084e461fff3b1f885e96f76",
+      "approvalHash": "ee5f0b495817f49323f84d5010f85eb7566cdee445f94aa2edf858cebbe29d07"
+    },
+    {
+      "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+      "status": "eligible",
+      "reason": "Paragraph (2)(e) expressly names the under-$40 dwelling or unenclosed-curtilage offense and supplies its base misdemeanor and repeat-conviction felony grades.",
+      "draftHash": "48dadf4122fc95a56c1b15e3e9b8988a1a8ae2c15fc1dce1c207afa25e5ea2e3",
+      "definitionHash": "6ee080c374dd05f8e5612d4396758b224087b0704252ee76de2f4e6e5f86f5c6",
+      "approvalHash": "d7cee5b0a2a73971b2e8afeec5dfda246bd1cf8542ddf9d7fc63cd13005c875c"
+    },
+    {
+      "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+      "status": "eligible",
+      "reason": "Current paragraph (2)(f), not former paragraph (2)(e), expressly names and grades ordinary $100-to-under-$750 petit theft while excepting paragraph (2)(d).",
+      "draftHash": "64d6802d235873354c057323f6d2fa1846aafc34b5cd20622c5bb45c2ce730f9",
+      "definitionHash": "658de022ef6c783c87ccb7bd1aa74bee7657465b0a5e1c23a082ea60c5b2bc8e",
+      "approvalHash": "cf33dee844e30b718552412c2f19936b8b7b154f82b44431da6a94d634c76ef9"
+    },
+    {
+      "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+      "status": "eligible",
+      "reason": "Paragraph (3)(a) expressly names petit theft of the second degree and states its misdemeanor grade; subsection (1) supplies the incorporated theft conduct.",
+      "draftHash": "6e479a9134c0801b768c4fa9d81212956c7d2e6eace62e770481ad53bbdf557a",
+      "definitionHash": "f3a7ae820b5804904ffb657de71ab5dce20c246c2ff685d82535fb0d5a057ad2",
+      "approvalHash": "f0727e11dd54f4197e64454b095113432cbfd7570cf492dc6cecbb9a44a259bb"
+    },
+    {
+      "id": "fl-fs-812-014-3-b-petit-theft",
+      "status": "eligible",
+      "reason": "Paragraph (3)(b) expressly predicates its first-degree-misdemeanor branch on commission of petit theft plus a prior theft conviction.",
+      "draftHash": "abc1f0868bd9197fed616fda8d334c245166b6c9ea04e1be840293e5fe28ad55",
+      "definitionHash": "2eb1a994895af9ddc1c15a92566f5b2fc5a192f1a08b83b8ad3592f2e6a3f9a3",
+      "approvalHash": "1e0434569d97d3ec77cc838e20bee0c5f62091531df08cd6eefce61256b9e064"
+    },
+    {
+      "id": "fl-fs-812-014-3-c-petit-theft",
+      "status": "eligible",
+      "reason": "Paragraph (3)(c) expressly predicates a distinct third-degree-felony petit-theft branch on two or more prior theft convictions.",
+      "draftHash": "65d257af63fa386295b9474ed768f7026311baecae000ed5876bb3f75bafe207",
+      "definitionHash": "9d5af7b25ce814d4c16e2687d0a38df84a9f0b58e3f6e239c90c2b627562b5de",
+      "approvalHash": "2ac5a0ef90d21bee934a9bb302ce7948a06802c524d983e1e27f3bf8e1adc57e"
+    },
+    {
+      "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+      "status": "eligible",
+      "reason": "The official heading supplies exact identity; subsections (1)-(2) provide the ordinary and capital-felony-prosecution branches with literal felony grades.",
+      "draftHash": "6b6700509a8cde7acf05b442d1e37b4aa1dafe978758d37cedf75276edc5034c",
+      "definitionHash": "ce0cb9314526c671dda720d8116eb20144d11fe7283022cb4520817d3bb8a58f",
+      "approvalHash": "4956f563b184c7c6b8260bc7bd5b2d735c6edf62ae9d4075d0d9d99d7262c7ab"
+    },
+    {
+      "id": "fl-fs-893-13-1-a-prohibited-acts-penalties",
+      "status": "eligible",
+      "reason": "The official section heading supplies the literal identity; paragraph (1)(a) supplies ordinary sale, manufacture, delivery, and possession-with-intent conduct and schedule-dependent criminal grades.",
+      "draftHash": "c7424d4d131a85db6813b94b9296bceec330578b9c44e8bbdc6a50af34d9752c",
+      "definitionHash": "c741f8393c6efeb4b95f8a858cd3c38a3ea2e88660d1845796a858b80fd08fe8",
+      "approvalHash": "a8f95cbcdadb393682c19fb9e66ec7f99e9ac3865728c2607a21efd39ecd4932"
+    },
+    {
+      "id": "fl-fs-893-13-2-a-prohibited-acts-penalties",
+      "status": "eligible",
+      "reason": "The official section heading supplies the literal identity; paragraph (2)(a) supplies purchase and possession-with-intent-to-purchase conduct and schedule-dependent grades.",
+      "draftHash": "fcf72c1645155f397ce01e5d57fb97efefb57a04b65addb095279c49e99e1cac",
+      "definitionHash": "f5b61f986d1df3012733a3ec5f05291ee090044a099b1b036ddc0e001785d442",
+      "approvalHash": "b57f899c6b07ee227fb419eba4dbf4412e8ea7caed8a4e22ad4c574e8dea63a8"
+    },
+    {
+      "id": "fl-fs-893-13-4-prohibited-acts-penalties",
+      "status": "eligible",
+      "reason": "The official heading identifies the section, and subsection (4) supplies the adult-to-minor delivery/use conduct and all schedule-dependent felony grades.",
+      "draftHash": "8c08c488efe791ad9f7e1c8c3bcda529289de6d6cf99faf285736a083b10c49f",
+      "definitionHash": "d4f90e96fd0608a35f839acc9d0d75413039decdce54b6a3dfba7f6aab46ee4c",
+      "approvalHash": "88ba12b39fc3c47546a69b98dc45caff525f111498ff2e23a4cf36a491667443"
+    },
+    {
+      "id": "fl-fs-893-13-5-prohibited-acts-penalties",
+      "status": "eligible",
+      "reason": "The official heading identifies the section; subsection (5) supplies bringing-into-state conduct, exceptions, and schedule-dependent grades.",
+      "draftHash": "5f69f463b9ae8bf1ea7e250afe04e100128260f638349430fa57e7f2da968d0e",
+      "definitionHash": "b428d1492cb9580d81637524408a3f8a872ce248ce71c0db1fbb3343bfee444b",
+      "approvalHash": "ebc0d12b430eef602cb3be19e7a227ad318eeca92964becf2234035f125167fe"
+    },
+    {
+      "id": "fl-fs-893-13-6-a-prohibited-acts-penalties",
+      "status": "eligible",
+      "reason": "The official section heading supplies literal identity, and paragraph (6)(a) supplies the general non-cannabis actual-or-constructive-possession felony without duplicating the separately maintained paragraph (6)(b) misdemeanor for 20 grams or less of cannabis.",
+      "draftHash": "5c6ebd43ccbc6bc778f66696ef7c2749e32a2171b01328286c3c70ad17ee82c6",
+      "definitionHash": "bd96ab702c6b2bdebef43c533a0ca3e35c60b6cdb062bd5b7f15648496d682c8",
+      "approvalHash": "ed0f37a758416bc720888f8a316fd9371b1c583476a4eea92318365b34d13d91"
+    },
+    {
+      "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The official section heading supplies the exact statutory identity; subsection (1) supplies both use-purpose alternatives and misdemeanor grading.",
+      "draftHash": "afb7a887984f0736fb9391a16f41480b32e892977b6f2f18e76c19c7655c78b0",
+      "definitionHash": "fd349b8e59208484a90c9c8b14b6ddd9d1dd3e69a004d359f42d8ce024da0e19",
+      "approvalHash": "a0ce06405be6a3244c167ad35c0a71f76506d58dc093db1ff1f3fc8dd3c1534a"
+    },
+    {
+      "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The official section heading supplies the exact statutory identity; subsection (2) supplies conduct, knowledge standard, intended uses, and felony grade.",
+      "draftHash": "dc0b1a519533c0a1fe116dcd9683aa803907a7966ef797d05c13fae98f4a93b4",
+      "definitionHash": "7174007724e468013ae1b8f25be10c77d91e6fa7cc518c8387f94581a62c922a",
+      "approvalHash": "fd0d62f6f5f2fa7b96a76ccdead8f050c4cd586565d961f5a4a83a2912d1d0ca"
+    },
+    {
+      "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The official section heading supplies exact statutory identity; paragraph (3)(a) expressly incorporates subsection (2), adds adult/minor ages and delivery, and grades the offense.",
+      "draftHash": "583da0a3950800474c60bbc51e4f481cbd7b56fb7308e6549772bde65f742045",
+      "definitionHash": "356a303b3ada618d13dea28ca36ee5802c1143b91e4789e9e29ff567e64a2cd5",
+      "approvalHash": "296f663f8d8adab95271d7543ce1024f272e6356e5418d3e933561e9f4ac0d3e"
+    },
+    {
+      "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The official section heading supplies exact statutory identity, while paragraph (3)(b) independently states syringe/needle delivery conduct, lawful-dispensation exceptions, and misdemeanor guilt.",
+      "draftHash": "bd97f44ab6afd537c209df55f24b688c756ba74b0883d70e123128c8d231a7db",
+      "definitionHash": "a515fdd1e95df2272b1747caa65aceb95b0e64b87f16973fb9971c5c61c8dbe6",
+      "approvalHash": "f380a33dc781cac2dcdc2600ebca52cecd4adfaa228dfb1ddce165a396d17c5f"
+    },
+    {
+      "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The official section heading supplies exact statutory identity; this subsection (4) draft is deliberately confined in its stated conduct to paragraph (4)(a), avoiding the unavailable definition incorporated only by (4)(b).",
+      "draftHash": "b1cca0841a1866850a119877c7ff7027cd4e8c3ece1d950bf1ec21bbe2875827",
+      "definitionHash": "945a4f1730d7b51f6fb9d566036ecff4738be3fdbbf9bb6a337bf7357f7232c9",
+      "approvalHash": "d39df8d84a2fdede01050aac0733ac54a526b7d8e6868eb18605b44ef8229506"
+    },
+    {
+      "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The exact official section heading identifies the statutory charge, and subsection (5) supplies publication, knowledge, purpose, and misdemeanor guilt in one clause.",
+      "draftHash": "197d35773951965e6814916fc96686f183b1ffc5ac7ebe431ad2ae89a96ab39f",
+      "definitionHash": "620fd91d52fa7e15d6469a81044f1aee7f1ee296ea337f14a819f837fabbb369",
+      "approvalHash": "23cb105214527798630974a0bdeae6dc164f77b721be593a24a6ecc08b404b2c"
+    },
+    {
+      "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The exact official section heading identifies the statutory charge; paragraph (6)(a) narrowly enumerates retail items and an exception, and paragraph (6)(b) supplies first and repeat grades.",
+      "draftHash": "d954efcd7d982bd053e0e329b5ebf47ef73b59ce0088648d510ab26749c25292",
+      "definitionHash": "25a8f3c035a6365e63eca82d4dd6f6a5cb3c5eab0bf9d4844162c6ecd0e2c842",
+      "approvalHash": "5e6359c895369103994d42aed3c11dbe4d228c3e6d255cddb1ebf496b0ecabd0"
     }
   ]
 }

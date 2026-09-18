@@ -1,0 +1,186 @@
+[
+  {
+    "id": "fl-fs-784-045-1-2-aggravated-battery",
+    "jurisdiction": "FL",
+    "code": "784.045(1)-(2)",
+    "slug": "fl-fs-784-045-1-2-aggravated-battery",
+    "name": "Aggravated battery",
+    "names": { "es": "Agresión física agravada", "zh": "加重殴打" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 784.045(1)-(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html" },
+      { "citation": "Fla. Stat. § 784.045", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html" },
+      { "citation": "Fla. Stat. § 784.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "While committing a battery, intentionally or knowingly causing great bodily harm, permanent disability, or permanent disfigurement, or using a deadly weapon; also, committing battery against a person who was pregnant when the offender knew or should have known of the pregnancy.", "degreeContext": "Second-degree felony. A violation committed in furtherance of a riot or aggravated riot is ranked one level higher for sentencing under chapter 921." },
+      "es": { "plainSummary": "Al cometer una agresión física, causar intencionalmente o a sabiendas lesiones corporales graves, discapacidad permanente o desfiguración permanente, o usar un arma mortal; también, cometer una agresión física contra una persona embarazada cuando el autor sabía o debía haber sabido del embarazo.", "degreeContext": "Delito grave de segundo grado. Si la infracción se comete para promover un disturbio o disturbio agravado, se clasifica un nivel más alto para la imposición de pena conforme al capítulo 921." },
+      "zh": { "plainSummary": "在实施殴打时，故意或明知造成严重身体伤害、永久残疾或永久毁容，或使用致命武器；也包括对当时怀孕的人实施殴打且行为人知道或应当知道其怀孕。", "degreeContext": "二级重罪。为推进暴乱或加重暴乱而实施本条违法行为的，在依第921章量刑时提高一个等级。" }
+    }
+  },
+  {
+    "id": "fl-fs-806-01-1-arson-in-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "806.01(1)",
+    "slug": "fl-fs-806-01-1-arson-in-the-first-degree",
+    "name": "Arson in the first degree",
+    "names": { "es": "Incendio provocado de primer grado", "zh": "一级纵火罪" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 806.01(1)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" },
+      { "citation": "Fla. Stat. § 806.01", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion a dwelling or its contents, a structure or its contents where people are normally present, or another structure the person knew or had reasonable grounds to believe was occupied.", "degreeContext": "First-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft." },
+      "es": { "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, una vivienda o su contenido; una estructura o su contenido donde normalmente hay personas; u otra estructura que la persona sabía o tenía motivos razonables para creer que estaba ocupada.", "degreeContext": "Delito grave de primer grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves." },
+      "zh": { "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏住宅或其中物品、通常有人在场的建筑物或其中物品，或者行为人明知或有合理理由相信有人占用的其他建筑物。", "degreeContext": "一级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。" }
+    }
+  },
+  {
+    "id": "fl-fs-806-01-2-arson-in-the-second-degree",
+    "jurisdiction": "FL",
+    "code": "806.01(2)",
+    "slug": "fl-fs-806-01-2-arson-in-the-second-degree",
+    "name": "Arson in the second degree",
+    "names": { "es": "Incendio provocado de segundo grado", "zh": "二级纵火罪" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 806.01(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" },
+      { "citation": "Fla. Stat. § 806.01", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Willfully and unlawfully, or while committing any felony, damaging by fire or explosion any structure, whether owned by the person or another, under circumstances not covered by first-degree arson.", "degreeContext": "Second-degree felony. The statutory definition of structure includes buildings, roofed enclosures, real property and appurtenances, tents or other portable buildings, and vehicles, vessels, watercraft, or aircraft." },
+      "es": { "plainSummary": "Dañar mediante fuego o explosión, de manera intencional e ilícita o mientras se comete cualquier delito grave, cualquier estructura, sea propia o ajena, en circunstancias no comprendidas en el incendio provocado de primer grado.", "degreeContext": "Delito grave de segundo grado. La definición legal de estructura incluye edificios, recintos techados, bienes inmuebles y sus accesorios, tiendas u otros edificios portátiles, y vehículos terrestres, embarcaciones, medios acuáticos o aeronaves." },
+      "zh": { "plainSummary": "故意且非法地，或在实施任何重罪时，以火灾或爆炸损坏任何建筑物，无论属于本人还是他人，但情形不属于一级纵火罪。", "degreeContext": "二级重罪。法定“建筑物”包括各种建筑、带屋顶的围合区域、不动产及其附属物、帐篷或其他便携建筑，以及车辆、船舶、水上交通工具或航空器。" }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(2)(e)",
+    "slug": "fl-fs-812-014-2-e-petit-theft-of-the-first-degree",
+    "name": "Petit theft of the first degree",
+    "names": { "es": "Hurto menor de primer grado", "zh": "一级轻微盗窃" },
+    "category": "felony",
+    "categories": ["felony", "misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 812.014(2)(e)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
+      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
+      { "citation": "Fla. Stat. § 810.011", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html" },
+      { "citation": "Fla. Stat. § 810.09", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Stealing property valued at less than $40 from a dwelling or from the unenclosed curtilage of a dwelling.", "degreeContext": "First-degree misdemeanor. A person who commits this under-$40 dwelling or curtilage offense after any prior theft conviction commits a third-degree felony; paragraph (2)(e) also states the third-degree-felony grade for two or more prior theft convictions. Property valued at $40 or more taken from a dwelling or its unenclosed curtilage is instead subject to the special grand-theft rules in paragraph (2)(d)." },
+      "es": { "plainSummary": "Hurtar propiedad valorada en menos de $40 de una vivienda o del terreno residencial no cercado que la rodea.", "degreeContext": "Delito menor de primer grado. Quien comete este hurto de menos de $40 en una vivienda o su terreno circundante después de cualquier condena anterior por hurto comete delito grave de tercer grado; el párrafo (2)(e) también establece ese grado grave cuando hay dos o más condenas anteriores. La propiedad valorada en $40 o más tomada de una vivienda o su terreno residencial no cercado queda sujeta, en cambio, a las reglas especiales de hurto mayor del párrafo (2)(d)." },
+      "zh": { "plainSummary": "从住宅或住宅未围合的附属区域盗取价值低于40美元的财产。", "degreeContext": "一级轻罪。曾因任何盗窃被定罪后实施本项住宅或附属区域内低于40美元的盗窃，构成三级重罪；第(2)(e)项也明确规定有两次以上盗窃前科时为三级重罪。从住宅或其未围合附属区域盗取价值40美元以上财产的，改按第(2)(d)项特别规定的重大盗窃规则处理。" }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(2)(f)",
+    "slug": "fl-fs-812-014-2-f-petit-theft-of-the-first-degree",
+    "name": "Petit theft of the first degree",
+    "names": { "es": "Hurto menor de primer grado", "zh": "一级轻微盗窃" },
+    "category": "misdemeanor",
+    "categories": ["misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 812.014(2)(f)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
+      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Stealing property valued at $100 or more but less than $750, except property governed by paragraph (2)(d)'s special dwelling or unenclosed-curtilage rules.", "degreeContext": "First-degree misdemeanor. Under paragraph (2)(d), property in this value range taken from a dwelling or its unenclosed curtilage is grand theft of the third degree, not this petit-theft branch." },
+      "es": { "plainSummary": "Hurtar propiedad valorada en $100 o más pero menos de $750, salvo la propiedad sujeta a las reglas especiales del párrafo (2)(d) para viviendas o su terreno residencial no cercado.", "degreeContext": "Delito menor de primer grado. Conforme al párrafo (2)(d), la propiedad de este valor tomada de una vivienda o su terreno residencial no cercado constituye hurto mayor de tercer grado, no esta modalidad de hurto menor." },
+      "zh": { "plainSummary": "盗取价值100美元以上但低于750美元的财产，但第(2)(d)项关于住宅或住宅未围合附属区域的特别规则所涵盖的财产除外。", "degreeContext": "一级轻罪。依第(2)(d)项，在此金额范围内从住宅或其未围合附属区域盗取财产构成三级重大盗窃，而不属于本轻微盗窃分支。" }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+    "jurisdiction": "FL",
+    "code": "812.014(3)(a)",
+    "slug": "fl-fs-812-014-3-a-petit-theft-of-the-second-degree",
+    "name": "Petit theft of the second degree",
+    "names": { "es": "Hurto menor de segundo grado", "zh": "二级轻微盗窃" },
+    "category": "misdemeanor",
+    "categories": ["misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 812.014(3)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
+      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Knowingly obtaining, using, or endeavoring to obtain or use another's property, with intent temporarily or permanently to deprive the other person of a right or benefit or to appropriate the property to an unauthorized use, when the property is not specified in subsection (2).", "degreeContext": "Second-degree misdemeanor. For retail gasoline taken by driving a vehicle away without paying, subsection (5), when applicable, also requires driver's-license suspension for up to 6 months for the first suspension and 1 year for a second or subsequent suspension." },
+      "es": { "plainSummary": "Obtener, usar o intentar obtener o usar a sabiendas propiedad ajena, con intención temporal o permanente de privar a la otra persona de un derecho o beneficio, o de destinar la propiedad a un uso no autorizado, cuando la propiedad no está especificada en el inciso (2).", "degreeContext": "Delito menor de segundo grado. Cuando se toma gasolina al por menor alejando un vehículo sin pagar, el inciso (5), si corresponde, exige además suspender la licencia de conducir hasta 6 meses por la primera suspensión y por 1 año por la segunda o una posterior." },
+      "zh": { "plainSummary": "明知地取得、使用或企图取得、使用他人财产，意图暂时或永久剥夺他人对财产的权利或利益，或者将财产挪作无权使用者之用，且该财产不属于第(2)款列明的财产。", "degreeContext": "二级轻罪。驾驶车辆离开零售加油场所而未支付油款的，在第(5)款适用时还须吊销驾驶证：首次最长6个月，第二次或其后为1年。" }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-3-b-petit-theft",
+    "jurisdiction": "FL",
+    "code": "812.014(3)(b)",
+    "slug": "fl-fs-812-014-3-b-petit-theft",
+    "name": "Petit theft",
+    "names": { "es": "Hurto menor", "zh": "轻微盗窃" },
+    "category": "misdemeanor",
+    "categories": ["misdemeanor"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 812.014(3)(b)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
+      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted of any theft.", "degreeContext": "First-degree misdemeanor under paragraph (3)(b). The specific under-$40 dwelling or unenclosed-curtilage repeat branch in paragraph (2)(e) is a third-degree felony, and paragraph (3)(c) separately grades the subsection (3) branch after two or more prior theft convictions as a third-degree felony." },
+      "es": { "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de una condena anterior por cualquier hurto.", "degreeContext": "Delito menor de primer grado conforme al párrafo (3)(b). La modalidad específica del párrafo (2)(e), por hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado, es delito grave de tercer grado; el párrafo (3)(c) también clasifica por separado como delito grave de tercer grado la modalidad del inciso (3) después de dos o más condenas anteriores por hurto." },
+      "zh": { "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾因任何盗窃被定罪后再次实施该罪。", "degreeContext": "依第(3)(b)项为一级轻罪。第(2)(e)项关于住宅或未围合附属区域内低于40美元盗窃的特定再犯分支为三级重罪；第(3)(c)项另行将有两次以上盗窃前科后实施的第(3)款分支定为三级重罪。" }
+    }
+  },
+  {
+    "id": "fl-fs-812-014-3-c-petit-theft",
+    "jurisdiction": "FL",
+    "code": "812.014(3)(c)",
+    "slug": "fl-fs-812-014-3-c-petit-theft",
+    "name": "Petit theft",
+    "names": { "es": "Hurto menor", "zh": "轻微盗窃" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 812.014(3)(c)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" },
+      { "citation": "Fla. Stat. § 812.014", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "For petit theft governed by subsection (3), committing the offense after previously being convicted two or more times of any theft.", "degreeContext": "Third-degree felony. Paragraph (2)(e) separately supplies the same felony degree for its specific under-$40 dwelling or unenclosed-curtilage repeat branch." },
+      "es": { "plainSummary": "Para el hurto menor regido por el inciso (3), cometer el delito después de dos o más condenas anteriores por cualquier hurto.", "degreeContext": "Delito grave de tercer grado. El párrafo (2)(e) establece por separado el mismo grado grave para su modalidad específica de hurto repetido de menos de $40 en una vivienda o su terreno residencial no cercado." },
+      "zh": { "plainSummary": "对于第(3)款所规范的轻微盗窃，在曾两次以上因任何盗窃被定罪后再次实施该罪。", "degreeContext": "三级重罪。第(2)(e)项对其特定的住宅或未围合附属区域内低于40美元盗窃再犯分支另行规定相同重罪等级。" }
+    }
+  },
+  {
+    "id": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+    "jurisdiction": "FL",
+    "code": "837.02(1)-(2)",
+    "slug": "fl-fs-837-02-1-2-perjury-in-official-proceedings",
+    "name": "Perjury in official proceedings",
+    "names": { "es": "Perjurio en procedimientos oficiales", "zh": "官方程序中的伪证罪" },
+    "category": "felony",
+    "categories": ["felony"],
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 837.02(1)-(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html" },
+      { "citation": "Fla. Stat. § 837.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html" },
+      { "citation": "Fla. Stat. § 837.011", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Making under oath, in an official proceeding, a false statement the person does not believe to be true regarding a material matter; the capital-felony-prosecution branch does not state a separate materiality requirement.", "degreeContext": "Ordinarily a third-degree felony. It is a second-degree felony when the official proceeding relates to prosecution of a capital felony. Knowledge of materiality is not an element, and a mistaken belief that the statement was immaterial is not a defense." },
+      "es": { "plainSummary": "Hacer bajo juramento, en un procedimiento oficial, una declaración falsa que la persona no cree verdadera respecto de un asunto material; la modalidad relativa al enjuiciamiento de un delito capital no establece por separado un requisito de materialidad.", "degreeContext": "Por regla general, delito grave de tercer grado. Es delito grave de segundo grado cuando el procedimiento oficial se relaciona con el enjuiciamiento de un delito capital. Conocer la materialidad no es un elemento, y creer por error que la declaración no era material no constituye defensa." },
+      "zh": { "plainSummary": "在官方程序中宣誓后，就重大事项作出本人不相信真实的虚假陈述；涉及起诉死刑重罪的分支并未另行规定重大性要求。", "degreeContext": "通常为三级重罪。官方程序涉及起诉死刑重罪时为二级重罪。明知陈述具有重大性并非构成要件，误以为陈述不重大也不构成抗辩。" }
+    }
+  }
+]

@@ -21,9 +21,9 @@ const CACHE_PATH = resolve(ROOT, "scripts/data-review/output/florida-batch-sourc
 const TECHNICAL_HOLDS_PATH = resolve(
   ROOT, "scripts/data-review/output/florida-reviewed-technical-holds.json",
 );
-const DEFINITION_PATHS = ["a", "b", "c"].map(part =>
+const DEFINITION_PATHS = ["a", "b", "c", "d", "e"].map(part =>
   resolve(ROOT, `shared/florida-reviewed-data/${part}.json`));
-const ANALYSIS_PATHS = ["a", "b", "c"].map(part =>
+const ANALYSIS_PATHS = ["a", "b", "c", "d", "e"].map(part =>
   resolve(ROOT, `scripts/data-review/output/florida-reviewed-analysis-${part}.json`));
 const MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 const hashJson = (value: unknown) =>

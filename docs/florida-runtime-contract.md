@@ -113,8 +113,8 @@ rebound. Definitions must provide English, Spanish, and Chinese text,
 applicable `categories`, `pendingAttorneyReview`, and draft-translation
 warnings through the generic evidence-backed batch projection.
 
-`assembleFloridaReviewedReport` consumes the three explicit analyst entry
-arrays at `scripts/data-review/output/florida-reviewed-analysis-{a,b,c}.json`
+`assembleFloridaReviewedReport` consumes the five explicit analyst entry
+arrays at `scripts/data-review/output/florida-reviewed-analysis-{a,b,c,d,e}.json`
 plus `scripts/data-review/output/florida-batch-source-cache.json`. Analyst
 entries have
 `{id,section,status,reason,identity,conductQuotes,gradingQuotes,requiredSections,notes}`;
@@ -152,9 +152,9 @@ holds remain held.
 
 ## Development batch
 
-The assembled batch contains 70 eligible source-first records in English,
+The assembled batches contain 91 eligible source-first records in English,
 Spanish, and Chinese, with no remaining technical holds among those drafts.
-The development seed contains 95 selectable records (25 legacy + 70 additive);
+The development seed contains 116 selectable records (25 legacy + 91 additive);
 the 92 withheld legacy records remain withheld. These are record counts, not a
 claim of statewide completeness or attorney approval.
 
@@ -168,3 +168,21 @@ Source-first explanation slugs use their full canonical IDs. Resolve selected
 records by ID, not display name: distinct statutory branches can have identical
 official names. Keep translation keys separate from generic explanations, and
 retain generic fallback only for recognized legacy records.
+
+The second batch adds 21 records across aggravated battery, arson, petit theft,
+perjury, controlled-substance conduct, and drug paraphernalia. The original 70
+drafts and their source documents remain unchanged. General §893.13 additions
+are expressly limited to non-cannabis applications in all three languages.
+Three additional analyzed branches remain withheld: §893.13(3), §893.147(4)(b),
+and §893.147(7). Their missing current dependencies are recorded in analysis E;
+they are not silently included in neighboring eligible scopes.
+
+Generate the offline coverage inventory with
+`npx tsx scripts/data-review/build-florida-coverage-inventory.ts`.
+It writes JSON, CSV, Markdown, and self-contained HTML under
+`scripts/data-review/output/florida-coverage-inventory.*`.
+The inventory distinguishes 116 selectable records from 115 distinct cited
+scopes, flags the exact §831.01 citation duplication without merging saved-case
+IDs, and keeps the 92 legacy cleanup records separate. Cached sections and cited
+scopes are not counts of distinct offenses; the statewide denominator remains
+unknown. Current reviewed counts use the runtime approval and freshness gates.

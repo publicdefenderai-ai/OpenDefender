@@ -11,7 +11,7 @@ import type { AuthoritySupportRole } from "../services/authority-source-database
 export const FLORIDA_REVIEWED_REPORT_PATH = resolve(
   process.cwd(), "scripts/data-review/output/florida-reviewed-analysis.json",
 );
-export const FLORIDA_REVIEWED_ANALYSIS_PATHS = ["a", "b", "c"].map(part =>
+export const FLORIDA_REVIEWED_ANALYSIS_PATHS = ["a", "b", "c", "d", "e"].map(part =>
   resolve(process.cwd(), `scripts/data-review/output/florida-reviewed-analysis-${part}.json`));
 export const FLORIDA_REVIEWED_SOURCE_CACHE_PATH = resolve(
   process.cwd(), "scripts/data-review/output/florida-batch-source-cache.json",
@@ -635,6 +635,11 @@ export function assembleFloridaReviewedReport(
     if (!section || analysis.section !== section || !primary || !current(primary) ||
         (subdivision && !bounds)) {
       hold("Exact current primary section or deterministic cited-subdivision boundary is unavailable");
+      continue;
+    }
+    if (definition.citations[0].citation !== `Fla. Stat. § ${definition.code}` ||
+        definition.citations[0].url !== primary.sourceUrl) {
+      hold("Public primary citation/code or URL does not exactly match the cited official source");
       continue;
     }
     const required = analysis.requiredSections;

@@ -29,6 +29,12 @@ const representativePatterns = [
   ["DUI", /driving under the influence|dui/i],
   ["property", /criminal mischief|trespass|retail theft|stolen property/i],
   ["homicide", /manslaughter|murder/i],
+  ["aggravated battery", /fl-fs-784-045-/],
+  ["arson", /fl-fs-806-01-1-/],
+  ["petit theft", /fl-fs-812-014-2-f-/],
+  ["perjury", /fl-fs-837-02-/],
+  ["controlled-substance sale", /fl-fs-893-13-1-a-/],
+  ["drug paraphernalia", /fl-fs-893-147-1-/],
 ] as const;
 const representativeDefinitions = representativePatterns.flatMap(([kind, pattern]) => {
   const definition = FLORIDA_REVIEWED_DEFINITIONS.find((candidate) =>
