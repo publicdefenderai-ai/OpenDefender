@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Development-only recovery leads; no runtime activation or legal approval",
+  "collector": {
+    "startedAt": "2026-09-18T21:19:58.115Z",
+    "finishedAt": "2026-09-18T21:20:13.190Z",
+    "requestCount": 5,
+    "retryCount": 0,
+    "perRequestTimeoutMilliseconds": 30000,
+    "responseCharacterLimit": 2000000
+  },
+  "provenanceNotes": [
+    "Florida responses are from the official Florida Senate website's explicitly year-addressed 2026 statute route.",
+    "Federal responses are from the Office of the Law Revision Counsel's official preliminary-edition section route.",
+    "retrievedAt records acquisition time only. Florida edition markers and federal publisher currentthrough metadata are recorded separately as currentness evidence.",
+    "Raw hashes cover the UTF-8 response body exactly as saved by this collector."
+  ],
+  "receipts": [
+    {
+      "id": "fl-381.986",
+      "authority": "Fla. Stat. § 381.986",
+      "requestedUrl": "https://www.flsenate.gov/Laws/Statutes/2026/381.986",
+      "finalUrl": "https://www.flsenate.gov/Laws/Statutes/2026/381.986",
+      "retrievedAt": "2026-09-18T21:19:58.115Z",
+      "httpStatus": 200,
+      "responseHeaders": {
+        "cache-control": "private",
+        "content-length": "229210",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 18 Sep 2026 21:19:57 GMT",
+        "server": "Microsoft-IIS/10.0",
+        "x-aspnet-version": "4.0.30319",
+        "x-aspnetmvc-version": "5.2",
+        "x-frame-options": "SAMEORIGIN",
+        "x-powered-by": "ASP.NET"
+      },
+      "rawBodyFile": "fl-381.986.html",
+      "rawBodyBytes": 229210,
+      "rawBodySha256": "08cd43b0d67b2bbe8b1e2a0f3da740a615d7c617fefcee5411103fac8430bb6c",
+      "evidenceChecks": {
+        "title": true,
+        "edition": true,
+        "section": true
+      },
+      "currentThrough": null,
+      "acceptedAsLead": true
+    },
+    {
+      "id": "fl-39.01",
+      "authority": "Fla. Stat. § 39.01",
+      "requestedUrl": "https://www.flsenate.gov/Laws/Statutes/2026/39.01",
+      "finalUrl": "https://www.flsenate.gov/Laws/Statutes/2026/39.01",
+      "retrievedAt": "2026-09-18T21:19:58.677Z",
+      "httpStatus": 200,
+      "responseHeaders": {
+        "cache-control": "private",
+        "content-length": "111424",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Fri, 18 Sep 2026 21:19:58 GMT",
+        "server": "Microsoft-IIS/10.0",
+        "x-aspnet-version": "4.0.30319",
+        "x-aspnetmvc-version": "5.2",
+        "x-frame-options": "SAMEORIGIN",
+        "x-powered-by": "ASP.NET"
+      },
+      "rawBodyFile": "fl-39.01.html",
+      "rawBodyBytes": 111424,
+      "rawBodySha256": "fdd4bf7dc3bd0126ae87983067b42207d688a77c75b68e5a55c19e628a06d439",
+      "evidenceChecks": {
+        "title": true,
+        "edition": true,
+        "section": true
+      },
+      "currentThrough": null,
+      "acceptedAsLead": true
+    },
+    {
+      "id": "usc-21-802",
+      "authority": "21 U.S.C. § 802",
+      "requestedUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section802&num=0&edition=prelim",
+      "finalUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section802&num=0&edition=prelim",
+      "retrievedAt": "2026-09-18T21:19:58.816Z",
+      "httpStatus": 200,
+      "responseHeaders": {
+        "content-type": "text/html;charset=UTF-8",
+        "date": "Fri, 18 Sep 2026 21:21:55 GMT",
+        "server": "",
+        "transfer-encoding": "chunked",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "rawBodyFile": "usc-21-802.html",
+      "rawBodyBytes": 291535,
+      "rawBodySha256": "496d64307ccdd9b3d30d53d00d1f4495f6e3fe90c2c51a1598fe9e5372100c09",
+      "evidenceChecks": {
+        "title": true,
+        "section": true,
+        "preliminaryEdition": true
+      },
+      "currentThrough": {
+        "dateEncodedByPublisher": "20260413",
+        "publicLawEncodedByPublisher": "119-83"
+      },
+      "acceptedAsLead": true
+    },
+    {
+      "id": "usc-21-822",
+      "authority": "21 U.S.C. § 822",
+      "requestedUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section822&num=0&edition=prelim",
+      "finalUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section822&num=0&edition=prelim",
+      "retrievedAt": "2026-09-18T21:20:11.019Z",
+      "httpStatus": 200,
+      "responseHeaders": {
+        "content-type": "text/html;charset=UTF-8",
+        "date": "Fri, 18 Sep 2026 21:20:11 GMT",
+        "server": "",
+        "transfer-encoding": "chunked",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "rawBodyFile": "usc-21-822.html",
+      "rawBodyBytes": 192573,
+      "rawBodySha256": "4b3f009a3d54105d6f9a7982091a10e13ecd7922411f89cc4958bf588836fe1c",
+      "evidenceChecks": {
+        "title": true,
+        "section": true,
+        "preliminaryEdition": true
+      },
+      "currentThrough": {
+        "dateEncodedByPublisher": "20260413",
+        "publicLawEncodedByPublisher": "119-83"
+      },
+      "acceptedAsLead": true
+    },
+    {
+      "id": "usc-21-830",
+      "authority": "21 U.S.C. § 830",
+      "requestedUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section830&num=0&edition=prelim",
+      "finalUrl": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section830&num=0&edition=prelim",
+      "retrievedAt": "2026-09-18T21:20:12.799Z",
+      "httpStatus": 200,
+      "responseHeaders": {
+        "content-type": "text/html;charset=UTF-8",
+        "date": "Fri, 18 Sep 2026 21:20:12 GMT",
+        "server": "",
+        "transfer-encoding": "chunked",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "rawBodyFile": "usc-21-830.html",
+      "rawBodyBytes": 197168,
+      "rawBodySha256": "eeda5b3f5647ccb2d3e19cb4022d2cda757dd0ef694b213e3b72f3371f9c4365",
+      "evidenceChecks": {
+        "title": true,
+        "section": true,
+        "preliminaryEdition": true
+      },
+      "currentThrough": {
+        "dateEncodedByPublisher": "20260413",
+        "publicLawEncodedByPublisher": "119-83"
+      },
+      "acceptedAsLead": true
+    }
+  ]
+}

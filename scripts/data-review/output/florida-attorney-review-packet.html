@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Florida attorney-review packet — development only</title>
+<style>
+:root{--ink:#172033;--muted:#5c667a;--line:#d7dce5;--blue:#174ea6;--cream:#fff8e6;--red:#9b1c1c;--bg:#f4f6fa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1180px;margin:auto;padding:28px}.hero,.notice,.card,.table-wrap{background:white;border:1px solid var(--line);border-radius:12px;padding:22px;margin-bottom:18px}
+h1{font-size:32px;margin:.2rem 0}h2{margin-top:2.2rem}.eyebrow,.status,.tag{font-size:12px;font-weight:750;letter-spacing:.04em;text-transform:uppercase}
+.notice{background:var(--cream);border-color:#e8c667}.notice strong,.warning{color:var(--red)}.metrics{display:flex;gap:12px;flex-wrap:wrap}
+.metric{background:#edf3ff;border-radius:8px;padding:10px 14px}.metric b{font-size:22px;display:block}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:16px}
+.card{margin:0}.card header{display:flex;justify-content:space-between}.priority{border-top:5px solid var(--blue)}.blocked{border-top:5px solid var(--red)}
+.rank{font-weight:700;color:var(--blue)}.id{font:12px ui-monospace,SFMono-Regular,monospace;overflow-wrap:anywhere;color:var(--muted)}
+.question{border-left:4px solid var(--blue);padding-left:12px}label{display:block;font-weight:700;margin-top:12px}select,textarea,input{width:100%;padding:8px;border:1px solid #aeb6c5;border-radius:5px;background:white}textarea{resize:vertical}
+details{border:1px solid var(--line);border-radius:6px;padding:10px}summary{font-weight:700;cursor:pointer}.table-wrap{overflow:auto;padding:0}
+table{border-collapse:collapse;width:100%;min-width:1050px;font-size:13px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:10px}th{position:sticky;top:0;background:#eaf0fa}
+.muted{color:var(--muted)}.tag{display:inline-block;color:#334a72;background:#eaf0fa;border-radius:4px;padding:2px 5px}.blank{min-height:28px;border-bottom:1px solid #999}.notes{height:62px;margin-top:8px}
+a{color:var(--blue)}footer{color:var(--muted);margin:28px 0}
+@media print{body{background:#fff}main{max-width:none;padding:0}.card,.hero,.notice{break-inside:avoid}.table-wrap{overflow:visible}th{position:static}select,textarea{border:0;border-bottom:1px solid #555}.grid{display:block}.grid .card{margin-bottom:12px}}
+</style></head><body><main>
+<section class="hero"><div class="eyebrow">Focused decision packet · generated 2026-09-18T21:25:47.751Z</div>
+<h1>Florida attorney review</h1>
+<p>Source-first, note-driven review of the newest development batch, legacy holds, and three dependency-blocked branches.</p>
+<div class="metrics"><div class="metric"><b>10</b>new selectable additions first</div><div class="metric"><b>92</b>legacy holds</div><div class="metric"><b>3</b>held branch questions</div></div>
+</section>
+<section class="notice"><strong>No attorney approval yet. Development-only. Nothing in this packet is approved, activated, or publication-ready.</strong>
+<p><b>Refresh outcome incorporated:</b> the worker reported 92 sections identical to the reviewed evidence. The receipt was checked 2026-09-18T21:22:32.321Z and expires 2026-09-25T21:18:23.012Z. The next refresh is due before <b>2026-09-23T21:18:23.012Z</b> and is <b>not scheduled</b>. These bounded dates do not establish freshness after expiry.</p>
+<p><b>Regenerate after later refresh inputs change:</b> run <code>node scripts/data-review/generate-florida-attorney-review-packet.mjs</code>. Confirm the generator reports 10 new selectable additions, 92 legacy rows, 3 held branches, five recovered authorities, and 105 CSV data rows. A reviewer must choose an explicit action and write a note; a decision alone does not activate a record.</p>
+</section>
+<section><h2>Reviewer identity</h2><div class="card"><label>Attorney / reviewer name<input></label><label>Review date<input type="date"></label><label>Overall packet notes<textarea rows="4"></textarea></label></div></section>
+<section><h2>1. Ten actual newly selectable additions</h2><p>Priority 1 is recovered batch E § 893.147(4)(b); priorities 2–10 are the nine selectable batch F records. All ten include EN/ES/ZH text for linguistic and legal review. “Selectable” describes the reviewed development inventory, not attorney approval or activation.</p><div class="grid">
+<article class="card priority">
+  <header><span class="rank">Priority 1</span><span class="status">eligible</span></header>
+  <h3>Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials</h3>
+  <p class="id">fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials</p>
+  <p><strong>Fla. Stat. § 893.147(4)(b)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.147.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The official section heading supplies exact statutory identity; subsection (4)&#39;s parent supplies the conduct, knowledge, and transportation elements, paragraph (4)(b) supplies the narrow incorporated contraband alternative, and the common subsection tail supplies felony grading. Current § 932.701(2)(a)1. supports that alternative without projecting the rest of the contraband-article list.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 893.147(4)(b)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Using, possessing with intent to use, or manufacturing with intent to use drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to transport a contraband article within § 932.701(2)(a)1.&#39;s narcotics-related definition. Third-degree felony. This record is confined to § 932.701(2)(a)1.: a chapter 893 controlled substance, or a substance, device, paraphernalia, currency, or other means of exchange used, attempted to be used, or intended to be used in violation of chapter 893, when the state&#39;s facts clearly suffice to establish probable cause of a nexus between the seized article and narcotics activity. It does not include the other contraband-article categories in § 932.701(2)(a).</p>
+    <p lang="es"><b>ES:</b> Usar, poseer con intención de usar o fabricar con intención de usar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para transportar un bien de contrabando comprendido en la definición relacionada con narcóticos del § 932.701(2)(a)1. Delito grave de tercer grado. Este registro se limita al § 932.701(2)(a)1.: una sustancia controlada conforme al capítulo 893, o una sustancia, dispositivo, parafernalia, moneda u otro medio de intercambio usado, que se intentó usar o destinado a usarse en infracción del capítulo 893, cuando los hechos presentados por el estado sean claramente suficientes para establecer causa probable de un nexo entre el bien incautado y la actividad de narcóticos. No incluye las demás categorías de bienes de contrabando del § 932.701(2)(a).</p>
+    <p lang="zh"><b>ZH:</b> 使用、意图使用而持有，或意图使用而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于运输第932.701(2)(a)1条涉毒定义范围内的违禁物品。 三级重罪。本记录仅限第932.701(2)(a)1条：第893章所定义的受管制物质，或已经、曾试图或意图用于违反第893章的物质、装置、用具、货币或其他交换手段，且州方提出的全部事实明确足以确立合理根据，相信被扣押物品与毒品活动之间存在关联。它不包括第932.701(2)(a)条中的其他违禁物品类别。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 2</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties</h3>
+  <p class="id">fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties</p>
+  <p><strong>Fla. Stat. § 825.102(1)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0825/Sections/0825.102.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies the statutory identity; subsection (1) supplies four abuse alternatives, the knowledge or willfulness requirement, the no-great-harm limitation, an express isolation defense, and the third-degree-felony grade.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 825.102(1)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Knowingly or willfully abusing an elderly person or disabled adult, without causing great bodily harm, permanent disability, or permanent disfigurement. Abuse includes intentionally inflicting injury, an intentional act reasonably expected to cause injury, actively encouraging such an act, or the specified intentional and unauthorized isolation or restriction of family access. Third-degree felony. For the isolation or family-access branch, it is a defense that the defendant reasonably believed the action was necessary to protect the person&#39;s welfare. Section 825.101 supplies the controlling definitions of elderly person and disabled adult.</p>
+    <p lang="es"><b>ES:</b> Abusar a sabiendas o deliberadamente de una persona anciana o un adulto con discapacidad, sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente. El abuso incluye infligir intencionalmente una lesión, realizar un acto intencional del que razonablemente se espere una lesión, alentar activamente tal acto, o el aislamiento o la restricción intencional y sin autoridad del acceso familiar en las circunstancias especificadas. Delito grave de tercer grado. Para la rama de aislamiento o restricción del acceso familiar, es defensa que el acusado creyera razonablemente que la medida era necesaria para proteger el bienestar de la persona. El § 825.101 contiene las definiciones aplicables de persona anciana y adulto con discapacidad.</p>
+    <p lang="zh"><b>ZH:</b> 明知或故意虐待老年人或残障成年人，但未造成严重身体伤害、永久残疾或永久毁容。虐待包括故意造成伤害、实施可合理预期导致伤害的故意行为、积极鼓励他人实施此类行为，或在法定情形下故意且无合法授权地隔离该人或限制其与家人接触。 三级重罪。对于隔离或限制家人接触的分支，被告有合理理由相信该行为为保护该人的福祉所必要，属于一项抗辩。第825.101条规定了老年人和残障成年人的适用定义。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 3</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties</h3>
+  <p class="id">fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties</p>
+  <p><strong>Fla. Stat. § 825.102(2)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0825/Sections/0825.102.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies the statutory identity; subsection (2) supplies three aggravated-abuse alternatives and the first-degree-felony grade, with the incorporated aggravated-battery branch bound to current §§ 784.03 and 784.045.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 825.102(2)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Committing aggravated abuse of an elderly person or disabled adult by committing aggravated battery on the person; willfully torturing, maliciously punishing, or willfully and unlawfully caging the person; or knowingly or willfully abusing the person and thereby causing great bodily harm, permanent disability, or permanent disfigurement. First-degree felony. Section 825.101 defines elderly person and disabled adult. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements.</p>
+    <p lang="es"><b>ES:</b> Cometer abuso agravado de una persona anciana o un adulto con discapacidad mediante agresión física agravada contra la persona; torturarla deliberadamente, castigarla maliciosamente o enjaularla deliberada e ilícitamente; o abusar de ella a sabiendas o deliberadamente y causar así gran daño corporal, discapacidad permanente o desfiguración permanente. Delito grave de primer grado. El § 825.101 define persona anciana y adulto con discapacidad. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada.</p>
+    <p lang="zh"><b>ZH:</b> 通过以下方式加重虐待老年人或残障成年人：对其实施加重殴打；故意折磨、恶意惩罚或故意且非法地将其关入笼中；或者明知或故意虐待并由此造成严重身体伤害、永久残疾或永久毁容。 一级重罪。第825.101条界定老年人及残障成年人。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 4</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties</h3>
+  <p class="id">fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties</p>
+  <p><strong>Fla. Stat. § 825.102(3)(b)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0825/Sections/0825.102.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies the statutory identity; paragraph (3)(b) supplies willful-or-culpably-negligent neglect, the resulting-harm element, and the second-degree-felony grade.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 825.102(3)(b)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Willfully or by culpable negligence neglecting an elderly person or disabled adult and thereby causing great bodily harm, permanent disability, or permanent disfigurement. Second-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult.</p>
+    <p lang="es"><b>ES:</b> Descuidar deliberadamente o por negligencia culpable a una persona anciana o un adulto con discapacidad y causar así gran daño corporal, discapacidad permanente o desfiguración permanente. Delito grave de segundo grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad.</p>
+    <p lang="zh"><b>ZH:</b> 故意或因有罪过的过失疏忽照料老年人或残障成年人，并由此造成严重身体伤害、永久残疾或永久毁容。 二级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 5</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties</h3>
+  <p class="id">fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties</p>
+  <p><strong>Fla. Stat. § 825.102(3)(c)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0825/Sections/0825.102.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies the statutory identity; paragraph (3)(c) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 825.102(3)(c)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Willfully or by culpable negligence neglecting an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement. Third-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult.</p>
+    <p lang="es"><b>ES:</b> Descuidar deliberadamente o por negligencia culpable a una persona anciana o un adulto con discapacidad sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente. Delito grave de tercer grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad.</p>
+    <p lang="zh"><b>ZH:</b> 故意或因有罪过的过失疏忽照料老年人或残障成年人，但未造成严重身体伤害、永久残疾或永久毁容。 三级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 6</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of a child; penalties</h3>
+  <p class="id">fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties</p>
+  <p><strong>Fla. Stat. § 827.03(2)(a)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.03.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies statutory identity; paragraph (2)(a) expressly criminalizes aggravated child abuse and states the first-degree-felony grade, while subsection (1)(a) and current §§ 784.03 and 784.045 close the definition and incorporated aggravated-battery branch.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 827.03(2)(a)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Committing aggravated child abuse by committing aggravated battery on a child; willfully torturing, maliciously punishing, or willfully and unlawfully caging a child; or knowingly or willfully abusing a child and thereby causing great bodily harm, permanent disability, or permanent disfigurement. First-degree felony. Subsection (1)(a) supplies the complete aggravated-child-abuse definition, and § 827.01 defines child as a person under 18. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements.</p>
+    <p lang="es"><b>ES:</b> Cometer abuso infantil agravado mediante agresión física agravada contra un menor; torturarlo deliberadamente, castigarlo maliciosamente o enjaularlo deliberada e ilícitamente; o abusar del menor a sabiendas o deliberadamente y causar así gran daño corporal, discapacidad permanente o desfiguración permanente. Delito grave de primer grado. El inciso (1)(a) contiene la definición completa de abuso infantil agravado y el § 827.01 define menor como una persona de menos de 18 años. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada.</p>
+    <p lang="zh"><b>ZH:</b> 通过以下方式实施加重虐待儿童：对儿童实施加重殴打；故意折磨、恶意惩罚或故意且非法地将儿童关入笼中；或者明知或故意虐待儿童并由此造成严重身体伤害、永久残疾或永久毁容。 一级重罪。第(1)(a)款规定加重虐待儿童的完整定义，第827.01条将儿童界定为未满18岁者。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 7</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of a child; penalties</h3>
+  <p class="id">fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties</p>
+  <p><strong>Fla. Stat. § 827.03(2)(b)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.03.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies statutory identity; paragraph (2)(b) supplies willful-or-culpably-negligent neglect, resulting great harm, and the second-degree-felony grade, with the complete neglect definition retained as a same-section dependency.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 827.03(2)(b)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Willfully or by culpable negligence neglecting a child and thereby causing great bodily harm, permanent disability, or permanent disfigurement. Second-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver.</p>
+    <p lang="es"><b>ES:</b> Descuidar deliberadamente o por negligencia culpable a un menor y causar así gran daño corporal, discapacidad permanente o desfiguración permanente. Delito grave de segundo grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador.</p>
+    <p lang="zh"><b>ZH:</b> 故意或因有罪过的过失疏忽照料儿童，并由此造成严重身体伤害、永久残疾或永久毁容。 二级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 8</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of a child; penalties</h3>
+  <p class="id">fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties</p>
+  <p><strong>Fla. Stat. § 827.03(2)(c)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.03.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies statutory identity; paragraph (2)(c) supplies knowing-or-willful abuse, the no-great-harm limitation, and the third-degree-felony grade, with the complete abuse definition retained as a same-section dependency.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 827.03(2)(c)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Knowingly or willfully abusing a child without causing great bodily harm, permanent disability, or permanent disfigurement. Third-degree felony. Subsection (1)(b) defines child abuse as intentional injury, an intentional act reasonably expected to cause injury, or active encouragement of an act that causes or could reasonably be expected to cause injury; § 827.01 defines child.</p>
+    <p lang="es"><b>ES:</b> Abusar a sabiendas o deliberadamente de un menor sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente. Delito grave de tercer grado. El inciso (1)(b) define el abuso infantil como lesión intencional, un acto intencional del que razonablemente se espere una lesión, o el aliento activo de un acto que cause o pueda razonablemente esperarse que cause una lesión; el § 827.01 define menor.</p>
+    <p lang="zh"><b>ZH:</b> 明知或故意虐待儿童，但未造成严重身体伤害、永久残疾或永久毁容。 三级重罪。第(1)(b)款将虐待儿童界定为故意造成伤害、实施可合理预期导致伤害的故意行为，或积极鼓励实施造成或可合理预期造成伤害的行为；第827.01条界定儿童。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 9</span><span class="status">eligible</span></header>
+  <h3>Abuse, aggravated abuse, and neglect of a child; penalties</h3>
+  <p class="id">fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties</p>
+  <p><strong>Fla. Stat. § 827.03(2)(d)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.03.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies statutory identity; paragraph (2)(d) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade, with the complete neglect definition retained as a same-section dependency.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 827.03(2)(d)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> Willfully or by culpable negligence neglecting a child without causing great bodily harm, permanent disability, or permanent disfigurement. Third-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver.</p>
+    <p lang="es"><b>ES:</b> Descuidar deliberadamente o por negligencia culpable a un menor sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente. Delito grave de tercer grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador.</p>
+    <p lang="zh"><b>ZH:</b> 故意或因有罪过的过失疏忽照料儿童，但未造成严重身体伤害、永久残疾或永久毁容。 三级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties" rows="3"></textarea></label>
+</article>
+<article class="card priority">
+  <header><span class="rank">Priority 10</span><span class="status">eligible</span></header>
+  <h3>Contributing to the delinquency or dependency of a child; penalty</h3>
+  <p class="id">fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty</p>
+  <p><strong>Fla. Stat. § 827.04(3)</strong> · <a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.04.html" target="_blank" rel="noreferrer">Official source</a></p>
+  <p><strong>Existing analyst basis:</strong> The exact official heading supplies statutory identity; subsection (3) independently states the actor and victim ages, impregnation conduct, third-degree-felony grade, separate-prosecution rule, and unavailable defenses.</p>
+  <p class="question"><strong>Attorney question:</strong> Does record fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty accurately state the offense identity, conduct, grade, definitions, exceptions, and defenses at Fla. Stat. § 827.04(3)? If not, specify an exact correction or other catalog action.</p>
+  <details><summary>EN / ES / ZH linguistic-review text</summary>
+    <p><b>EN:</b> A person age 21 or older impregnating a child under age 16. Third-degree felony. The offense applies regardless of whether the person is found to have committed, charged with, or prosecuted for another offense in the same criminal transaction or episode. The victim&#39;s lack of chastity and consent are not defenses.</p>
+    <p lang="es"><b>ES:</b> Una persona de 21 años o más que embaraza a una menor de 16 años. Delito grave de tercer grado. El delito se aplica independientemente de que la persona sea declarada autora, acusada o procesada por otro delito en la misma transacción o episodio penal. Ni la falta de castidad ni el consentimiento de la víctima constituyen defensa.</p>
+    <p lang="zh"><b>ZH:</b> 年满21岁者使未满16岁的儿童怀孕。 三级重罪。无论该人是否因同一犯罪交易或事件中的其他罪行被认定有罪、受到指控或被起诉，本罪均适用。受害者并非贞洁或曾表示同意均不构成抗辩。</p>
+    <p class="warning">Spanish and Chinese text has no fluent-speaker or attorney approval in this packet.</p>
+  </details>
+  
+  <label>Decision
+    <select name="decision-fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty" rows="3"></textarea></label>
+</article></div></section>
+<section><h2>2. Three still-held branches: recovered authority leads</h2><p>All five previously unavailable official sources were recovered. The branches remain held awaiting exact extraction, integration, integrity checks, and legal review; recovery alone does not resolve their semantics. The three federal OLRC responses are preliminary-edition sources representing a publisher boundary of April 13, 2026 / Pub. L. 119-83; their September retrieval time is not a later codification cutoff.</p><div class="grid">
+<article class="card blocked">
+  <header><span class="status">BLOCKED</span></header>
+  <h3>Fla. Stat. § 893.13(3)</h3><p class="id">fl-fs-893-13-3-prohibited-acts-penalties</p>
+  <p><strong>Recovered authorities; work still pending:</strong> Fla. Stat. § 381.986: https://www.flsenate.gov/Laws/Statutes/2026/381.986</p>
+  <p><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.13.html" target="_blank" rel="noreferrer">official source 1</a> · <a href="https://www.flsenate.gov/Laws/Statutes/2026/381.986" target="_blank" rel="noreferrer">official source 2</a></p>
+  <p><strong>Status:</strong> Official 2026 Florida Senate source recovered; awaiting exact extraction of the medical-marijuana exclusion and boundaries, hash integration, integrity checks, and legal review.</p>
+  <p class="question"><strong>Attorney question:</strong> Does current Fla. Stat. § 381.986 resolve every medical-marijuana exclusion applicable to the cannabis-specific § 893.13(3) delivery branch? Identify the exact paragraphs and any limits.</p>
+  
+  <label>Decision
+    <select name="decision-blocked-fl-fs-893-13-3-prohibited-acts-penalties">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-blocked-fl-fs-893-13-3-prohibited-acts-penalties" rows="3"></textarea></label>
+</article>
+<article class="card blocked">
+  <header><span class="status">BLOCKED</span></header>
+  <h3>Fla. Stat. § 893.147(7)</h3><p class="id">fl-fs-893-147-7-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials</p>
+  <p><strong>Recovered authorities; work still pending:</strong> Fla. Stat. § 381.986: https://www.flsenate.gov/Laws/Statutes/2026/381.986 | 21 U.S.C. § 802: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section802&amp;num=0&amp;edition=prelim | 21 U.S.C. § 822: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section822&amp;num=0&amp;edition=prelim | 21 U.S.C. § 830: https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section830&amp;num=0&amp;edition=prelim</p>
+  <p><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.147.html" target="_blank" rel="noreferrer">official source 1</a> · <a href="https://www.flsenate.gov/Laws/Statutes/2026/381.986" target="_blank" rel="noreferrer">official source 2</a> · <a href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section802&amp;num=0&amp;edition=prelim" target="_blank" rel="noreferrer">official source 3</a> · <a href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section822&amp;num=0&amp;edition=prelim" target="_blank" rel="noreferrer">official source 4</a> · <a href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section830&amp;num=0&amp;edition=prelim" target="_blank" rel="noreferrer">official source 5</a></p>
+  <p><strong>Status:</strong> All four official source leads recovered; awaiting narrow subdivision extraction, cross-reference validation, reviewed-hash integration, integrity checks, and legal review. Federal OLRC pages are preliminary and represent law only through April 13, 2026 / Pub. L. 119-83, not the later retrieval date.</p>
+  <p class="question"><strong>Attorney question:</strong> Do the current federal provisions and Fla. Stat. § 381.986 close the definitions, registration/compliance conditions, and licensing exception for § 893.147(7)? Identify exact incorporated scopes; do not approve a partial dependency set.</p>
+  
+  <label>Decision
+    <select name="decision-blocked-fl-fs-893-147-7-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-blocked-fl-fs-893-147-7-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials" rows="3"></textarea></label>
+</article>
+<article class="card blocked">
+  <header><span class="status">BLOCKED</span></header>
+  <h3>Fla. Stat. § 827.04(1)</h3><p class="id">fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty</p>
+  <p><strong>Recovered authorities; work still pending:</strong> Fla. Stat. § 39.01: https://www.flsenate.gov/Laws/Statutes/2026/39.01</p>
+  <p><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.04.html" target="_blank" rel="noreferrer">official source 1</a> · <a href="https://www.flsenate.gov/Laws/Statutes/2026/39.01" target="_blank" rel="noreferrer">official source 2</a></p>
+  <p><strong>Status:</strong> Official 2026 Florida Senate source recovered; awaiting exact dependent-child definition extraction, nested-dependency review, hash integration, integrity checks, and legal review. Cached Fla. Stat. §§ 984.03 and 985.03 did not independently cure this dependency.</p>
+  <p class="question"><strong>Attorney question:</strong> Does current Fla. Stat. § 39.01 supply the controlling dependent-child definition for § 827.04(1), including all relevant conditions and exceptions? Identify the exact subdivision(s).</p>
+  
+  <label>Decision
+    <select name="decision-blocked-fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty">
+      <option value="" selected>— blank; attorney must decide —</option>
+      <option>publish</option><option>hold</option><option>correct</option>
+      <option>split</option><option>reclassify</option><option>deduplicate</option><option>remove</option>
+    </select>
+  </label>
+  <label>Attorney notes<textarea name="notes-blocked-fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty" rows="3"></textarea></label>
+</article></div></section>
+<section><h2>3. Ninety-two legacy holds</h2><p>Each row preserves the manifest’s actual hold reason. Triage tags only organize that reason; they do not add a semantic conclusion. Record a specific action and note.</p>
+<div class="table-wrap"><table><thead><tr><th>Record</th><th>Scope & source</th><th>Actual reason / triage</th><th>Scope-specific question</th><th>Blank decision / notes</th></tr></thead><tbody>
+<tr>
+  <td><b>fl-voluntary-manslaughter</b><br><span class="muted">Voluntary Manslaughter</span></td>
+  <td>Fla. Stat. § 782.07(1)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0782/Sections/0782.07.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 782.07(1), should record fl-voluntary-manslaughter be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-involuntary-manslaughter</b><br><span class="muted">Involuntary Manslaughter</span></td>
+  <td>Fla. Stat. § 782.07(1)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0782/Sections/0782.07.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 782.07(1), should record fl-involuntary-manslaughter be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-criminally-negligent-homicide</b><br><span class="muted">Criminally Negligent Homicide</span></td>
+  <td>Fla. Stat. § 782.07<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0782/Sections/0782.07.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Manslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 782.07 support the legacy label “Criminally Negligent Homicide” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-felony-murder</b><br><span class="muted">Felony Murder</span></td>
+  <td>Fla. Stat. § 782.04(1)(a)2<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0782/Sections/0782.04.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 782.04(1)(a)2, should record fl-felony-murder be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-assault-on-peace-officer</b><br><span class="muted">Assault on Peace Officer</span></td>
+  <td>Fla. Stat. § 784.07<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0784/Sections/0784.07.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 784.07 support the legacy label “Assault on Peace Officer” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-menacing</b><br><span class="muted">Menacing</span></td>
+  <td>Fla. Stat. § 784.011<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0784/Sections/0784.011.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Assault&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 784.011 support the legacy label “Menacing” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-sexual-assault-in-the-second-degree</b><br><span class="muted">Sexual Battery (by Force)</span></td>
+  <td>Fla. Stat. § 794.011(4)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0794/Sections/0794.011.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 794.011(4), should record fl-sexual-assault-in-the-second-degree be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-child-sexual-abuse</b><br><span class="muted">Child Sexual Abuse</span></td>
+  <td>Fla. Stat. § 800.04<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0800/Sections/0800.04.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Lewd or lascivious offenses committed upon or in the presence of persons less than 16 years of age&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 800.04 support the legacy label “Child Sexual Abuse” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-sexual-exploitation-of-minor</b><br><span class="muted">Sexual Exploitation of Minor</span></td>
+  <td>Fla. Stat. § 827.071<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.071.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Sexual performance by a child; child sexual abuse material; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 827.071 support the legacy label “Sexual Exploitation of Minor” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-petty-theft</b><br><span class="muted">Petty Theft</span></td>
+  <td>Fla. Stat. § 812.014<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0812/Sections/0812.014.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Theft&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 812.014 support the legacy label “Petty Theft” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-theft-by-receiving</b><br><span class="muted">Theft by Receiving</span></td>
+  <td>Fla. Stat. § 812.019<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0812/Sections/0812.019.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Dealing in stolen property&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 812.019 support the legacy label “Theft by Receiving” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-identity-theft</b><br><span class="muted">Identity Theft</span></td>
+  <td>Fla. Stat. § 817.568<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0817/Sections/0817.568.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Criminal use of personal identification information&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 817.568 support the legacy label “Identity Theft” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-credit-card-fraud</b><br><span class="muted">Credit Card Fraud</span></td>
+  <td>Fla. Stat. § 817.61<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0817/Sections/0817.61.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Fraudulent use of credit cards&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 817.61 support the legacy label “Credit Card Fraud” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-embezzlement</b><br><span class="muted">Embezzlement</span></td>
+  <td>Fla. Stat. § 812.014(2)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0812/Sections/0812.014.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Theft&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 812.014(2) support the legacy label “Embezzlement” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-shoplifting</b><br><span class="muted">Shoplifting</span></td>
+  <td>Fla. Stat. § 812.015<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0812/Sections/0812.015.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Retail and farm theft; transit fare evasion; mandatory fine; alternative punishment; detention and arrest; exemption from liability for false arrest; resisting arrest; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 812.015 support the legacy label “Shoplifting” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-residential-burglary</b><br><span class="muted">Residential Burglary</span></td>
+  <td>Fla. Stat. § 810.02(2)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0810/Sections/0810.02.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 810.02(2), should record fl-residential-burglary be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-commercial-burglary</b><br><span class="muted">Commercial Burglary</span></td>
+  <td>Fla. Stat. § 810.02(3)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0810/Sections/0810.02.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 810.02(3), should record fl-commercial-burglary be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-auto-burglary</b><br><span class="muted">Auto Burglary</span></td>
+  <td>Fla. Stat. § 810.02(4)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0810/Sections/0810.02.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 810.02(4), should record fl-auto-burglary be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-bank-robbery</b><br><span class="muted">Bank Robbery</span></td>
+  <td>Fla. Stat. § 18 U.S.C. § 2113<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 18 U.S.C. § 2113, should record fl-bank-robbery be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-possession-of-controlled-substance</b><br><span class="muted">Possession of Controlled Substance</span></td>
+  <td>Fla. Stat. § 893.13(6)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.13.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 893.13(6), should record fl-possession-of-controlled-substance be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-possession-with-intent-to-distribute</b><br><span class="muted">Possession with Intent to Distribute</span></td>
+  <td>Fla. Stat. § 893.13(1)(a)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.13.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Prohibited acts; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 893.13(1)(a) support the legacy label “Possession with Intent to Distribute” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-distribution-of-controlled-substance</b><br><span class="muted">Distribution of Controlled Substance</span></td>
+  <td>Fla. Stat. § 893.13(1)(a)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.13.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 893.13(1)(a), should record fl-distribution-of-controlled-substance be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-manufacturing-controlled-substance</b><br><span class="muted">Manufacturing Controlled Substance</span></td>
+  <td>Fla. Stat. § 893.13(1)(a)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.13.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Prohibited acts; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 893.13(1)(a) support the legacy label “Manufacturing Controlled Substance” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-drug-trafficking</b><br><span class="muted">Drug Trafficking</span></td>
+  <td>Fla. Stat. § 893.135<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.135.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Trafficking; mandatory sentences; suspension or reduction of sentences; conspiracy to engage in trafficking&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 893.135 support the legacy label “Drug Trafficking” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-possession-of-drug-paraphernalia</b><br><span class="muted">Possession of Drug Paraphernalia</span></td>
+  <td>Fla. Stat. § 893.147(1)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.147.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 893.147(1) support the legacy label “Possession of Drug Paraphernalia” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-maintaining-drug-house</b><br><span class="muted">Maintaining Drug House</span></td>
+  <td>Fla. Stat. § 893.1351<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0893/Sections/0893.1351.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 893.1351, should record fl-maintaining-drug-house be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-felon-in-possession-of-firearm</b><br><span class="muted">Felon in Possession of Firearm</span></td>
+  <td>Fla. Stat. § 790.23<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0790/Sections/0790.23.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 790.23 support the legacy label “Felon in Possession of Firearm” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-possession-of-prohibited-weapon</b><br><span class="muted">Possession of Prohibited Weapon</span></td>
+  <td>Fla. Stat. § 790.221<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0790/Sections/0790.221.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 790.221 support the legacy label “Possession of Prohibited Weapon” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-wire-fraud</b><br><span class="muted">Wire Fraud</span></td>
+  <td>Fla. Stat. § 969.256<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0900-0999/0969/Sections/0969.256.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 969.256, should record fl-wire-fraud be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-mail-fraud</b><br><span class="muted">Mail Fraud</span></td>
+  <td>Fla. Stat. § 683.650<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0600-0699/0683/Sections/0683.650.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 683.650, should record fl-mail-fraud be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-check-fraud</b><br><span class="muted">Check Fraud</span></td>
+  <td>Fla. Stat. § 832.05<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0832/Sections/0832.05.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 832.05 support the legacy label “Check Fraud” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-insurance-fraud</b><br><span class="muted">Insurance Fraud</span></td>
+  <td>Fla. Stat. § 817.234<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0817/Sections/0817.234.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;False and fraudulent insurance claims&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 817.234 support the legacy label “Insurance Fraud” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-tax-fraud</b><br><span class="muted">Tax Fraud</span></td>
+  <td>Fla. Stat. § 213.29<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0200-0299/0213/Sections/0213.29.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 213.29, should record fl-tax-fraud be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-computer-fraud</b><br><span class="muted">Computer Fraud</span></td>
+  <td>Fla. Stat. § 815.06<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0815/Sections/0815.06.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Offenses against users of computers, computer systems, computer networks, and electronic devices&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 815.06 support the legacy label “Computer Fraud” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-disorderly-conduct</b><br><span class="muted">Disorderly Conduct</span></td>
+  <td>Fla. Stat. § 877.03<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0877/Sections/0877.03.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Breach of the peace; disorderly conduct&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 877.03 support the legacy label “Disorderly Conduct” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-vandalism</b><br><span class="muted">Vandalism</span></td>
+  <td>Fla. Stat. § 806.13<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0806/Sections/0806.13.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Criminal mischief; penalties; penalty for minor&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 806.13 support the legacy label “Vandalism” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-dui-first-offense</b><br><span class="muted">DUI First Offense</span></td>
+  <td>Fla. Stat. § 316.193<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.193.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Driving under the influence; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 316.193 support the legacy label “DUI First Offense” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-dui-second-offense</b><br><span class="muted">DUI Second Offense</span></td>
+  <td>Fla. Stat. § 316.193(2)(a)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.193.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Driving under the influence; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 316.193(2)(a) support the legacy label “DUI Second Offense” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-dui-third-offense</b><br><span class="muted">DUI Third Offense</span></td>
+  <td>Fla. Stat. § 316.193(2)(b)1<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.193.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Driving under the influence; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 316.193(2)(b)1 support the legacy label “DUI Third Offense” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-hit-and-run</b><br><span class="muted">Hit and Run</span></td>
+  <td>Fla. Stat. § 316.061<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.061.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 316.061, should record fl-hit-and-run be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-petit-theft</b><br><span class="muted">Petit Theft (Under $750)</span></td>
+  <td>Fla. Stat. § 812.014(2)(e)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0812/Sections/0812.014.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 812.014(2)(e), should record fl-petit-theft be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-battery</b><br><span class="muted">Simple Battery</span></td>
+  <td>Fla. Stat. § 784.03<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0784/Sections/0784.03.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Battery; felony battery&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 784.03 support the legacy label “Simple Battery” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-domestic-battery</b><br><span class="muted">Domestic Battery</span></td>
+  <td>Fla. Stat. § 784.03(1)(a)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0784/Sections/0784.03.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 784.03(1)(a), should record fl-domestic-battery be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-driving-with-suspended-license</b><br><span class="muted">Driving with a Suspended License (DWLSR)</span></td>
+  <td>Fla. Stat. § 322.34<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0322/Sections/0322.34.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Driving while license suspended, revoked, canceled, or disqualified&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 322.34 support the legacy label “Driving with a Suspended License (DWLSR)” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-violation-of-probation</b><br><span class="muted">Violation of Probation</span></td>
+  <td>Fla. Stat. § 948.06<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0900-0999/0948/Sections/0948.06.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Violation of probation or community control; revocation; modification; continuance; failure to pay restitution or cost of supervision&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 948.06 support the legacy label “Violation of Probation” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-failure-to-appear</b><br><span class="muted">Failure to Appear</span></td>
+  <td>Fla. Stat. § 843.15<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0843/Sections/0843.15.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 843.15, should record fl-failure-to-appear be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-resisting-arrest</b><br><span class="muted">Resisting Arrest / Obstruction</span></td>
+  <td>Fla. Stat. § 843.01<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0843/Sections/0843.01.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 843.01, should record fl-resisting-arrest be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-protective-order-violation</b><br><span class="muted">Violation of Protective Order</span></td>
+  <td>Fla. Stat. § 741.31<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0741/Sections/0741.31.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 741.31, should record fl-protective-order-violation be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-open-container</b><br><span class="muted">Open Container Violation</span></td>
+  <td>Fla. Stat. § 316.1936<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.1936.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 316.1936, should record fl-open-container be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-false-info-to-police</b><br><span class="muted">Providing False Information to Police</span></td>
+  <td>Fla. Stat. § 837.05<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0837/Sections/0837.05.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 837.05, should record fl-false-info-to-police be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-harassment</b><br><span class="muted">Harassment / Stalking</span></td>
+  <td>Fla. Stat. § 784.048<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0784/Sections/0784.048.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Stalking; definitions; penalties&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 784.048 support the legacy label “Harassment / Stalking” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-contempt-of-court</b><br><span class="muted">Contempt of Court</span></td>
+  <td>Fla. Stat. § 38.22<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 38.22, should record fl-contempt-of-court be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-solicitation</b><br><span class="muted">Solicitation / Prostitution</span></td>
+  <td>Fla. Stat. § 796.07<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0796/Sections/0796.07.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Prohibiting prostitution and related acts&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 796.07 support the legacy label “Solicitation / Prostitution” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-driving-without-insurance</b><br><span class="muted">Driving Without Insurance</span></td>
+  <td>Fla. Stat. § 316.646<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.646.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 316.646, should record fl-driving-without-insurance be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-expired-registration</b><br><span class="muted">Driving with Expired Registration</span></td>
+  <td>Fla. Stat. § 320.07<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0320/Sections/0320.07.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 320.07, should record fl-expired-registration be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-expired-inspection</b><br><span class="muted">Driving with Expired/No Inspection</span></td>
+  <td>Fla. Stat. § 316.610<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.610.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Safety of vehicle; inspection&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 316.610 support the legacy label “Driving with Expired/No Inspection” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-failure-to-pay-child-support</b><br><span class="muted">Criminal Nonsupport / Failure to Pay Child Support</span></td>
+  <td>Fla. Stat. § 827.06<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0827/Sections/0827.06.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 827.06, should record fl-failure-to-pay-child-support be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-noise-violation</b><br><span class="muted">Noise Violation / Disturbing the Peace by Noise</span></td>
+  <td>Fla. Stat. § 877.03<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0877/Sections/0877.03.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">current_authority_unavailable</span><br>Florida Legislature section 386.04 could not be verified.</td>
+  <td>What current authority, if any, supports record fl-noise-violation at Fla. Stat. § 877.03? Keep held unless the exact current source and scope are supplied.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-indecent-exposure</b><br><span class="muted">Indecent Exposure / Public Urination</span></td>
+  <td>Fla. Stat. § 800.03<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0800/Sections/0800.03.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Exposure of sexual organs&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 800.03 support the legacy label “Indecent Exposure / Public Urination” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-fake-id</b><br><span class="muted">Possession of Fake/Fraudulent ID</span></td>
+  <td>Fla. Stat. § 322.212<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0322/Sections/0322.212.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 322.212 support the legacy label “Possession of Fake/Fraudulent ID” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-animal-at-large</b><br><span class="muted">Animal at Large / Leash Law Violation</span></td>
+  <td>Fla. Stat. § 767.01<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0767/Sections/0767.01.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Dog owner’s liability for damages to persons, domestic animals, or livestock&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 767.01 support the legacy label “Animal at Large / Leash Law Violation” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-animal-cruelty-misdemeanor</b><br><span class="muted">Animal Cruelty (Misdemeanor)</span></td>
+  <td>Fla. Stat. § 828.12(1)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0828/Sections/0828.12.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Cruelty to animals&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 828.12(1) support the legacy label “Animal Cruelty (Misdemeanor)” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-illegal-camping</b><br><span class="muted">Illegal Camping / Sleeping in Public</span></td>
+  <td>Fla. Stat. § 856.021<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0856/Sections/0856.021.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Loitering or prowling; penalty&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 856.021 support the legacy label “Illegal Camping / Sleeping in Public” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-panhandling</b><br><span class="muted">Panhandling / Aggressive Solicitation</span></td>
+  <td>Fla. Stat. § 856.021<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0856/Sections/0856.021.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Loitering or prowling; penalty&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 856.021 support the legacy label “Panhandling / Aggressive Solicitation” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-unregistered-vehicle</b><br><span class="muted">Operating Unregistered / Uninsured Vehicle</span></td>
+  <td>Fla. Stat. § 320.02<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0320/Sections/0320.02.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Registration required; application for registration; forms&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 320.02 support the legacy label “Operating Unregistered / Uninsured Vehicle” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-curfew-violation</b><br><span class="muted">Curfew Violation</span></td>
+  <td>Fla. Stat. § 877.22<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0877/Sections/0877.22.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Minors prohibited in public places and establishments during certain hours; penalty; procedure&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 877.22 support the legacy label “Curfew Violation” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-trespass-after-warning</b><br><span class="muted">Trespass After Warning / Return After Ban</span></td>
+  <td>Fla. Stat. § 810.09<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0800-0899/0810/Sections/0810.09.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Trespass on property other than structure or conveyance&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 810.09 support the legacy label “Trespass After Warning / Return After Ban” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-defective-vehicle-equipment</b><br><span class="muted">Defective Vehicle Equipment / Broken Taillight</span></td>
+  <td>Fla. Stat. § 316.234<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0316/Sections/0316.234.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 316.234, should record fl-defective-vehicle-equipment be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-truancy</b><br><span class="muted">Truancy / Chronic Absenteeism</span></td>
+  <td>Fla. Stat. § 984.151<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0900-0999/0984/Sections/0984.151.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 984.151, should record fl-truancy be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-littering</b><br><span class="muted">Littering / Illegal Dumping</span></td>
+  <td>Fla. Stat. § 403.413<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0400-0499/0403/Sections/0403.413.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Florida Litter Law&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 403.413 support the legacy label “Littering / Illegal Dumping” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-illegal-fireworks</b><br><span class="muted">Illegal Discharge of Fireworks</span></td>
+  <td>Fla. Stat. § 791.01<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0700-0799/0791/Sections/0791.01.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 791.01, should record fl-illegal-fireworks be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-alcohol-in-park</b><br><span class="muted">Possession of Alcohol in Park / Prohibited Area</span></td>
+  <td>Fla. Stat. § 562.12<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0500-0599/0562/Sections/0562.12.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § 562.12, should record fl-alcohol-in-park be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-hunting-fishing-no-license</b><br><span class="muted">Fishing / Hunting Without a License</span></td>
+  <td>Fla. Stat. § 379.354<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0300-0399/0379/Sections/0379.354.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Recreational licenses, permits, and authorization numbers; fees established&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 379.354 support the legacy label “Fishing / Hunting Without a License” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-criminal-attempt</b><br><span class="muted">Criminal Attempt</span></td>
+  <td>Fla. Stat. § MPC § 5.01 / FL attempt statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § MPC § 5.01 / FL attempt statute, should record fl-criminal-attempt be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-conspiracy</b><br><span class="muted">Criminal Conspiracy</span></td>
+  <td>Fla. Stat. § MPC § 5.03 / FL conspiracy statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § MPC § 5.03 / FL conspiracy statute, should record fl-conspiracy be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-aiding-and-abetting</b><br><span class="muted">Aiding and Abetting / Accomplice Liability</span></td>
+  <td>Fla. Stat. § MPC § 2.06 / FL accomplice statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § MPC § 2.06 / FL accomplice statute, should record fl-aiding-and-abetting be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-accessory-after-the-fact</b><br><span class="muted">Accessory After the Fact</span></td>
+  <td>Fla. Stat. § MPC § 2.07 / FL accessory statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § MPC § 2.07 / FL accessory statute, should record fl-accessory-after-the-fact be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-attempted-murder</b><br><span class="muted">Attempted Murder</span></td>
+  <td>Fla. Stat. § FL attempted murder statute / MPC § 5.01<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL attempted murder statute / MPC § 5.01, should record fl-attempted-murder be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-attempted-robbery</b><br><span class="muted">Attempted Robbery</span></td>
+  <td>Fla. Stat. § FL attempted robbery statute / MPC § 5.01<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL attempted robbery statute / MPC § 5.01, should record fl-attempted-robbery be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-attempted-sexual-assault</b><br><span class="muted">Attempted Sexual Assault</span></td>
+  <td>Fla. Stat. § FL attempted sexual assault statute / MPC § 5.01<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL attempted sexual assault statute / MPC § 5.01, should record fl-attempted-sexual-assault be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-criminal-solicitation</b><br><span class="muted">Criminal Solicitation</span></td>
+  <td>Fla. Stat. § MPC § 5.02 / FL solicitation statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § MPC § 5.02 / FL solicitation statute, should record fl-criminal-solicitation be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-gang-enhancement</b><br><span class="muted">Criminal Street Gang Enhancement</span></td>
+  <td>Fla. Stat. § FL gang enhancement statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL gang enhancement statute, should record fl-gang-enhancement be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-hate-crime-enhancement</b><br><span class="muted">Hate Crime Enhancement</span></td>
+  <td>Fla. Stat. § FL hate crime statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL hate crime statute, should record fl-hate-crime-enhancement be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-recidivist-enhancement</b><br><span class="muted">Prior Felony / Recidivist Sentencing Enhancement</span></td>
+  <td>Fla. Stat. § FL habitual offender / recidivist statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL habitual offender / recidivist statute, should record fl-recidivist-enhancement be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-firearm-in-felony-enhancement</b><br><span class="muted">Use of a Firearm in Commission of a Felony</span></td>
+  <td>Fla. Stat. § FL firearm enhancement statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL firearm enhancement statute, should record fl-firearm-in-felony-enhancement be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-drug-school-zone-enhancement</b><br><span class="muted">Drug Offense in a School Zone (Proximity Enhancement)</span></td>
+  <td>Fla. Stat. § FL drug-free school zone statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL drug-free school zone statute, should record fl-drug-school-zone-enhancement be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-rico-organized-crime</b><br><span class="muted">RICO / Organized Crime (Racketeering)</span></td>
+  <td>Fla. Stat. § FL organized crime / racketeering statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL organized crime / racketeering statute, should record fl-rico-organized-crime be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-money-laundering</b><br><span class="muted">Money Laundering</span></td>
+  <td>Fla. Stat. § FL money laundering statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL money laundering statute, should record fl-money-laundering be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-juvenile-delinquency-felony</b><br><span class="muted">Juvenile Delinquency Adjudication (Felony-Level Act)</span></td>
+  <td>Fla. Stat. § 985.03(9)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0900-0999/0985/Sections/0985.03.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Definitions&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 985.03(9) support the legacy label “Juvenile Delinquency Adjudication (Felony-Level Act)” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-juvenile-delinquency-misdemeanor</b><br><span class="muted">Juvenile Delinquency Adjudication (Misdemeanor-Level Act)</span></td>
+  <td>Fla. Stat. § 985.03(9)<br><a href="https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0900-0999/0985/Sections/0985.03.html" target="_blank" rel="noreferrer">source</a></td>
+  <td><span class="tag">label_to_official_title_identity_unresolved</span><br>The official Florida title &quot;Definitions&quot; is not an exact or explicitly reviewed mapping for the catalog label.</td>
+  <td>Does the official provision at Fla. Stat. § 985.03(9) support the legacy label “Juvenile Delinquency Adjudication (Misdemeanor-Level Act)” at this exact scope? If not, choose correct, split, reclassify, deduplicate, or remove and state the exact mapping.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-juvenile-transfer-adult-court</b><br><span class="muted">Juvenile Transfer to Adult Court (Waiver Hearing)</span></td>
+  <td>Fla. Stat. § FL Juvenile Court Act — transfer / waiver provisions<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL Juvenile Court Act — transfer / waiver provisions, should record fl-juvenile-transfer-adult-court be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr>
+<tr>
+  <td><b>fl-juvenile-firearm-possession</b><br><span class="muted">Juvenile Firearm Possession</span></td>
+  <td>Fla. Stat. § FL juvenile firearm possession statute<br>No source link recorded</td>
+  <td><span class="tag">exact_citation_or_subdivision_mismatch</span><br>The catalog code does not exactly support every cited Florida statutory section and subdivision.</td>
+  <td>For Fla. Stat. § FL juvenile firearm possession statute, should record fl-juvenile-firearm-possession be corrected to an exact reviewed subdivision, split into multiple records, or removed? Supply the exact citation(s) and action.</td>
+  <td><div class="blank">Decision: ____________________</div><div class="blank notes">Notes:</div></td>
+</tr></tbody></table></div></section>
+<footer>Inputs: Florida source manifest, coverage inventory, reviewed batches E/F, localized batch E/F definitions, completed refresh receipt, and recovery findings/acquisition receipt. Evidence excerpts are intentionally omitted; follow source links for full text. CSV companion contains the complete focused queue and blank fields.</footer>
+</main></body></html>

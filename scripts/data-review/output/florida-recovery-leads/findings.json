@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "status": "development_leads_only",
+  "legalApproval": false,
+  "runtimeActivation": false,
+  "currentnessAssessment": {
+    "florida": {
+      "publisher": "The Florida Senate",
+      "editionEvidence": "Each year-addressed response identifies itself in its HTML title, breadcrumb, and page heading as 2026 Florida Statutes.",
+      "retrievalWindow": {
+        "startedAt": "2026-09-18T21:19:58.115Z",
+        "finishedAt": "2026-09-18T21:19:58.816Z"
+      },
+      "caveat": "The 2026 edition identity is publisher evidence separate from retrieval time. Retrieval in September 2026 does not itself establish edition currentness."
+    },
+    "federal": {
+      "publisher": "Office of the Law Revision Counsel, U.S. House of Representatives",
+      "editionEvidence": "Each response is the publisher's preliminary edition and embeds currentthrough:20260413_119-83.",
+      "publisherCurrentThrough": {
+        "date": "2026-04-13",
+        "publicLaw": "119-83"
+      },
+      "retrievalWindow": {
+        "startedAt": "2026-09-18T21:19:58.816Z",
+        "finishedAt": "2026-09-18T21:20:12.799Z"
+      },
+      "caveat": "The preliminary release point, not the later retrieval date, is the federal currentness boundary represented by these responses."
+    }
+  },
+  "authorities": [
+    {
+      "authority": "Fla. Stat. § 381.986",
+      "sourceSupportRecovered": true,
+      "edition": "2026 Florida Statutes",
+      "rawBodyFile": "fl-381.986.html",
+      "sha256": "08cd43b0d67b2bbe8b1e2a0f3da740a615d7c617fefcee5411103fac8430bb6c"
+    },
+    {
+      "authority": "Fla. Stat. § 39.01",
+      "sourceSupportRecovered": true,
+      "edition": "2026 Florida Statutes",
+      "rawBodyFile": "fl-39.01.html",
+      "sha256": "fdd4bf7dc3bd0126ae87983067b42207d688a77c75b68e5a55c19e628a06d439"
+    },
+    {
+      "authority": "21 U.S.C. § 802",
+      "sourceSupportRecovered": true,
+      "edition": "preliminary; publisher metadata current through 2026-04-13 / Pub. L. 119-83",
+      "rawBodyFile": "usc-21-802.html",
+      "sha256": "496d64307ccdd9b3d30d53d00d1f4495f6e3fe90c2c51a1598fe9e5372100c09"
+    },
+    {
+      "authority": "21 U.S.C. § 822",
+      "sourceSupportRecovered": true,
+      "edition": "preliminary; publisher metadata current through 2026-04-13 / Pub. L. 119-83",
+      "rawBodyFile": "usc-21-822.html",
+      "sha256": "4b3f009a3d54105d6f9a7982091a10e13ecd7922411f89cc4958bf588836fe1c"
+    },
+    {
+      "authority": "21 U.S.C. § 830",
+      "sourceSupportRecovered": true,
+      "edition": "preliminary; publisher metadata current through 2026-04-13 / Pub. L. 119-83",
+      "rawBodyFile": "usc-21-830.html",
+      "sha256": "eeda5b3f5647ccb2d3e19cb4022d2cda757dd0ef694b213e3b72f3371f9c4365"
+    }
+  ],
+  "blockedScopes": [
+    {
+      "scope": "Fla. Stat. § 893.13(3)",
+      "newSourceSupport": true,
+      "basis": "The previously missing current-edition § 381.986 dependency now has an official 2026 Florida Senate response.",
+      "stillBlocked": true,
+      "remainingWork": "Extract and validate the exact incorporated medical-marijuana exclusion and all relevant exception boundaries; add the dependency with its reviewed text hash to the shared source cache and analysis; rerun integrity checks; obtain legal/analyst approval."
+    },
+    {
+      "scope": "Fla. Stat. § 893.147(7)",
+      "newSourceSupport": true,
+      "basis": "Official source responses now support all previously missing authorities: § 381.986 and 21 U.S.C. §§ 802, 822, and 830.",
+      "stillBlocked": true,
+      "remainingWork": "Extract only the federally incorporated definitions, registration, and record/reporting provisions and the Florida licensing exception; validate subdivision identities and cross-reference semantics; integrate reviewed hashes; rerun integrity checks; obtain legal/analyst approval."
+    },
+    {
+      "scope": "Fla. Stat. § 827.04(1)",
+      "newSourceSupport": true,
+      "basis": "The previously missing current-edition § 39.01 dependency now has an official 2026 Florida Senate response.",
+      "stillBlocked": true,
+      "remainingWork": "Extract and validate the exact current dependent-child definition and any nested definitions it incorporates; add reviewed dependency hashes; reassess the subsection without projecting unrelated chapter 39 concepts; rerun integrity checks; obtain legal/analyst approval."
+    }
+  ]
+}
