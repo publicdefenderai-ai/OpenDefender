@@ -2,15 +2,17 @@
   "schemaVersion": 1,
   "kind": "substantive_source_analysis_not_runtime_approval",
   "reviewScope": "existing_ohio_catalog_and_remaining_chapter_2903",
-  "generatedAt": "2026-09-17T22:24:22.672Z",
+  "generatedAt": "2026-09-18T05:01:16.515Z",
   "readyForFocusedManualReview": true,
-  "inputHash": "3a4e9719637347752f70398ca05298dbdbd66bdd59925e2264147bbef70004d7",
+  "focusedReviewComplete": true,
+  "inputHash": "cbdeb18cbff850a92720ee729c488d11cb8b0e0ca5e205bee4c93b5b6755f178",
   "summary": {
     "analyzedSections": 97,
-    "routineOffenseSections": 82,
+    "routineOffenseSections": 85,
     "alreadySourceFirstSections": 7,
     "supportingOrProcedureSections": 12,
-    "specificLegalQuestions": 3,
+    "specificLegalQuestions": 0,
+    "resolvedLegalQuestions": 3,
     "technicalWorkItems": 0,
     "preparedDrafts": 125,
     "remainingGenericReviewQuestions": 0,
@@ -774,32 +776,68 @@
     },
     {
       "section": "2903.13",
-      "classification": "specific_legal_question",
-      "resolution": "The basic assault prohibition and statutory grading branches can be transcribed. Isolate the unresolved HMO definition to the hospital-related enhancement; do not ask for generic review of the entire assault statute or use an invented replacement definition.",
-      "question": "For the hospital-related assault enhancement in §2903.13(C)(8), what definition governs an HMO-operated hospital when §2903.13(E)(20) incorporates §3727.01 but that section no longer provides current official text? Identify the controlling authority before applying this enhancement to an HMO-operated facility.",
+      "classification": "routine_offense",
+      "resolution": "Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute.",
+      "question": null,
       "relatedSections": [
         "2903.10",
-        "3701.01"
+        "3701.01",
+        "OAC:3701-12-01"
       ],
       "candidates": [
         {
           "name": "assault",
           "conduct": "(A) knowingly causing/attempting physical harm or (B) recklessly causing serious physical harm; grading under (C).",
-          "grading": "M1 baseline with the explicit (C) enhancements retained. Hospital/HMO-dependent application is specifically held pending the definition question.",
+          "grading": "M1 baseline with the explicit (C) enhancements retained. Apply the hospital/HMO-related branch under the recorded reviewer interpretation using OAC 3701-12-01(M), subject to the full statutory hospital, victim and duty/location conditions.",
           "evidenceQuotes": [
             "(C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.",
             "(19)(a) \"Hospital\" means, subject to division (E)(19)(b) of this section, an institution classified as a hospital under section 3701.01 of the Revised Code in which are provided to patients diagnostic, medical, surgical, obstetrical, psychiatric, or rehabilitation care or a hospital operated by a health maintenance organization.",
-            "(20) \"Health maintenance organization\" has the same meaning as in section 3727.01 of the Revised Code."
+            "(20) \"Health maintenance organization\" has the same meaning as in section 3727.01 of the Revised Code.",
+            "(M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976)."
           ]
         }
       ],
       "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
-      "evidenceQuotes": [],
+      "evidenceQuotes": [
+        "As used in Chapter 3701-12 of the Administrative Code:",
+        "(M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976)."
+      ],
       "relatedSourceHashes": {
         "2903.10": "c2e9fa1aada7233e7294232645deb22fab1da94970616ce5f2836f76216a3d6f",
-        "3701.01": "27b9fa3187142ca467cd932cad2a21a56656735d1af2ead6ef58e95d4d0f1a1c"
+        "3701.01": "27b9fa3187142ca467cd932cad2a21a56656735d1af2ead6ef58e95d4d0f1a1c",
+        "OAC:3701-12-01": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680"
+      },
+      "legalReview": {
+        "question": "For the hospital-related assault enhancement in §2903.13(C)(8), what definition governs an HMO-operated hospital when §2903.13(E)(20) incorporates §3727.01 but that section no longer provides current official text? Identify the controlling authority before applying this enhancement to an HMO-operated facility.",
+        "decision": "HMO definition can be found 3701-12-01(M), and demonstrates that employees of an HMO would be considered employees of a hospirtal ",
+        "note": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01",
+        "disposition": "apply_interpretation_to_draft",
+        "interpretation": "Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute.",
+        "authorityUrls": [
+          "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+          "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01"
+        ],
+        "submission": {
+          "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+          "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+          "importedAt": "2026-09-18T04:59:41.200Z"
+        }
       },
       "evidence": [
+        {
+          "text": "As used in Chapter 3701-12 of the Administrative Code:",
+          "start": 53,
+          "end": 107,
+          "sourceHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680",
+          "section": "OAC:3701-12-01"
+        },
+        {
+          "text": "(M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976).",
+          "start": 5125,
+          "end": 5391,
+          "sourceHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680",
+          "section": "OAC:3701-12-01"
+        },
         {
           "text": "(C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.",
           "start": 248,
@@ -833,9 +871,9 @@
     },
     {
       "section": "2903.16",
-      "classification": "specific_legal_question",
-      "resolution": "Two names are explicit and §2903.10 supplies caretaker/functionally-impaired definitions, including the care-facility exclusion. The knowing branch is routine. The reckless branch has a specific apparent element/enhancement overlap; do not present its M2 recital as an established available outcome.",
-      "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
+      "classification": "routine_offense",
+      "resolution": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+      "question": null,
       "relatedSections": [
         "2903.10",
         "2903.33",
@@ -855,7 +893,7 @@
         {
           "name": "recklessly failing to provide for a person with a functional impairment",
           "conduct": "(B): caretaker recklessly fails to provide necessary treatment/care/goods/service, resulting in serious physical harm.",
-          "grading": "(C)(2) recites M2 and an F4 serious-harm enhancement; the relationship to (B)'s serious-harm element is the specific held question.",
+          "grading": "(B)/(C)(2): F4 under the recorded reviewer interpretation, because every (B) violation requires resulting serious physical harm. M2 is not an available outcome for this branch; retain the literal recital only in source evidence.",
           "evidenceQuotes": [
             "(B) No caretaker shall recklessly fail to provide a person with a functional impairment under the caretaker's care with any treatment, care, goods, or service that is necessary to maintain the health or safety of the person with a functional impairment when this failure results in serious physical harm to the person with a functional impairment.",
             "(2) Whoever violates division (B) of this section is guilty of recklessly failing to provide for a person with a functional impairment, a misdemeanor of the second degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (B) of this section is a felony of the fourth degree."
@@ -869,6 +907,21 @@
         "2903.33": "9903e3bf0a68c9748264ae54d551cf0dd4a9e004e2ab2270ccb21e18cc8bc36e",
         "2901.01": "08b4bb21dd02617e54825a9e6f2ea6b218b9fb6893591dff3d3d2f83393c8149",
         "2901.22": "a64e2a1a3f81c9e138288712c827a9311fa80665201064dbb3efdd546d2a7b8a"
+      },
+      "legalReview": {
+        "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
+        "decision": "Yes, my reading is that by definition any act implcating C(2) requires serious physical harm and thus must be a 4th degree felony. The provision could have been drafted better, ",
+        "note": "",
+        "disposition": "apply_interpretation_to_draft",
+        "interpretation": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+        "authorityUrls": [
+          "https://codes.ohio.gov/ohio-revised-code/section-2903.16"
+        ],
+        "submission": {
+          "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+          "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+          "importedAt": "2026-09-18T04:59:41.200Z"
+        }
       },
       "evidence": [
         {
@@ -2954,20 +3007,20 @@
     {
       "section": "2923.01",
       "sourceHash": "44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb32",
-      "classification": "specific_legal_question",
+      "classification": "routine_offense",
       "candidates": [
         {
           "name": "conspiracy",
-          "conduct": "With purpose to commit/promote/facilitate one of the offenses specified in (A), plan/aid planning or agree to facilitating conduct; conviction also requires the substantial overt act described in (B).",
-          "grading": "F1 for aggravated murder/murder/life object; next lesser degree for F1-F4 object; special hazardous-waste penalty; M1 for F5 object.",
+          "conduct": "With purpose to commit/promote/facilitate one of the offenses specified in (A), plan/aid planning or agree to facilitating conduct; conviction also requires the substantial overt act described in (B). For the named email/computer predicates, use §2913.421 under the recorded reviewer correction; the source itself prints §2923.421.",
+          "grading": "F1 for aggravated murder/murder/life object; next lesser degree for F1-F4 object; special hazardous-waste penalty; M1 for F5 object. For email/computer predicates, determine the applicable §2913.421 degree (including its enhancement branches), then apply (J); do not substitute the predicate's grade directly for the conspiracy grade.",
           "evidenceQuotes": [
             "(A) No person, with purpose to commit or to promote or facilitate the commission of aggravated murder, murder, kidnapping, abduction, compelling prostitution, promoting prostitution, trafficking in persons, aggravated arson, arson, aggravated robbery, robbery, aggravated burglary, burglary, trespassing in a habitation when a person is present or likely to be present, engaging in a pattern of corrupt activity, corrupting another with drugs, a felony drug trafficking, manufacturing, processing, or possession offense, theft of drugs, or illegal processing of drug documents, the commission of a felony offense of unauthorized use of a vehicle, illegally transmitting multiple commercial electronic mail messages or unauthorized access of a computer in violation of section 2923.421 of the Revised Code, or the commission of a violation of any provision of Chapter 3734. of the Revised Code, other than section 3734.18 of the Revised Code, that relates to hazardous wastes, shall do either of the following:",
             "(J) Whoever violates this section is guilty of conspiracy, which is one of the following:"
           ]
         }
       ],
-      "resolution": "The conspiracy name and general grading algorithm are explicit. However, (A) names email/computer predicate conduct while citing unavailable §2923.421; the matching official offense text is in §2913.421. Hold that predicate-specific application rather than silently correcting the statute's cross-reference. The phrases “conspiring with that other person” and “only one conspiracy” are not additional offense names.",
-      "question": "Which authority governs the email/computer predicate in §2923.01(A)? It cites §2923.421, which the official publisher reports as unavailable, while the named offenses are codified in §2913.421. May §2913.421 supply this conspiracy predicate and its grading, or must that application remain withheld?",
+      "resolution": "Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged.",
+      "question": null,
       "evidenceQuotes": [
         "(C)(1) Whoever violates division (B) of this section is guilty of illegally transmitting multiple commercial electronic mail messages. Except as otherwise provided in division (C)(2) or (E) of this section, illegally transmitting multiple commercial electronic mail messages is a felony of the fifth degree.",
         "(2) Except as otherwise provided in division (E) of this section, whoever violates division (D)(1) of this section is guilty of unauthorized access of a computer, a felony of the fourth degree."
@@ -2979,6 +3032,22 @@
       "relatedSourceHashes": {
         "2913.421": "c9899550d6c8c5e8b537935eccb223aea6f1da77cb206d29506d9da0885ec7aa",
         "3734.18": "38d55533d3930f03f1382068e87926d4479929d7fc0c7b16ec9d896004552cbd"
+      },
+      "legalReview": {
+        "question": "Which authority governs the email/computer predicate in §2923.01(A)? It cites §2923.421, which the official publisher reports as unavailable, while the named offenses are codified in §2913.421. May §2913.421 supply this conspiracy predicate and its grading, or must that application remain withheld?",
+        "decision": "Yes, the correct definition appears in 2913.421",
+        "note": "https://codes.ohio.gov/ohio-revised-code/section-2913.421",
+        "disposition": "apply_interpretation_to_draft",
+        "interpretation": "Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged.",
+        "authorityUrls": [
+          "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+          "https://codes.ohio.gov/ohio-revised-code/section-2913.421"
+        ],
+        "submission": {
+          "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+          "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+          "importedAt": "2026-09-18T04:59:41.200Z"
+        }
       },
       "evidence": [
         {
@@ -5684,6 +5753,7 @@
       "conduct": "R.C. 1315.55(A)(1)-(5): specified transactions involving proceeds or represented proceeds of corrupt activity.",
       "grading": "Felony of the third degree under 1315.99(C); additional fine authorized by 1315.55(B).",
       "scopeAndExceptions": "Source-first charge is expressly named and graded by 1315.99(C); legacy alias approval is unnecessary.",
+      "legalReview": null,
       "source": {
         "section": "1315.55",
         "citation": "Ohio Rev. Code Ann. § 1315.55",
@@ -5728,6 +5798,7 @@
       "conduct": "A permit holder collecting or possessing protected wild animals fails to carry the permit or exhibit it on demand.",
       "grading": "Misdemeanor of the fourth degree under the catch-all in 1533.99(F).",
       "scopeAndExceptions": "Complete source-first offense and grade; no residual question.",
+      "legalReview": null,
       "source": {
         "section": "1533.08",
         "citation": "Ohio Rev. Code Ann. § 1533.08",
@@ -5779,6 +5850,7 @@
       "conduct": "Any act enumerated in 2705.02(A)-(H).",
       "grading": "Contempt sanctions, not an ordinary felony/misdemeanor grade: first offense up to $250 and/or 30 days; second up to $500 and/or 60 days; third or subsequent up to $1,000 and/or 90 days.",
       "scopeAndExceptions": "Treat as a contempt charge with the special 2705.05 sanction ladder, not as a conventional criminal degree.",
+      "legalReview": null,
       "source": {
         "section": "2705.02",
         "citation": "Ohio Rev. Code Ann. § 2705.02",
@@ -5844,6 +5916,7 @@
       "conduct": "(A)(1) or (A)(2); guilt in (B)(1).",
       "grading": "(A)(1): F2, with the specified F1 branches and mandatory terms in (B)(2)/(E). (A)(2): F3 or the specified F2 enhancement under (B)(3). Preserve the complete conditions.",
       "scopeAndExceptions": "Three offense names and their conduct grouping are explicit. Preserve the different (A)(1)/(A)(2) grading branches under one aggravated-vehicular-homicide name; neither every subparagraph nor every enhancement is a separate offense.",
+      "legalReview": null,
       "source": {
         "section": "2903.06",
         "citation": "Ohio Rev. Code Ann. § 2903.06",
@@ -6015,6 +6088,7 @@
       "conduct": "(A)(3); guilt and grading in (C).",
       "grading": "M1; specified licensing/prior-offense circumstances elevate to F4, with applicable mandatory custody under (E).",
       "scopeAndExceptions": "Three offense names and their conduct grouping are explicit. Preserve the different (A)(1)/(A)(2) grading branches under one aggravated-vehicular-homicide name; neither every subparagraph nor every enhancement is a separate offense.",
+      "legalReview": null,
       "source": {
         "section": "2903.06",
         "citation": "Ohio Rev. Code Ann. § 2903.06",
@@ -6172,6 +6246,7 @@
       "conduct": "(A)(4); guilt and grading in (D).",
       "grading": "M2; specified licensing/prior-offense circumstances elevate to M1.",
       "scopeAndExceptions": "Three offense names and their conduct grouping are explicit. Preserve the different (A)(1)/(A)(2) grading branches under one aggravated-vehicular-homicide name; neither every subparagraph nor every enhancement is a separate offense.",
+      "legalReview": null,
       "source": {
         "section": "2903.06",
         "citation": "Ohio Rev. Code Ann. § 2903.06",
@@ -6329,6 +6404,7 @@
       "conduct": "(A)(1), with guilt/grade under (B).",
       "grading": "F3; specified (B) conditions elevate to F2; preserve the mandatory-term provisions of (D).",
       "scopeAndExceptions": "Two names and explicit conduct-to-grade branches are routine source data. Aggravated vehicular assault must not be used as an alias for generic reckless driving.",
+      "legalReview": null,
       "source": {
         "section": "2903.08",
         "citation": "Ohio Rev. Code Ann. § 2903.08",
@@ -6460,6 +6536,7 @@
       "conduct": "(A)(2) or (A)(3), guilt under (C)(1).",
       "grading": "(A)(2): F4 or specified F3 enhancement. (A)(3): M1 or specified F4 enhancement. Do not combine the two base grades.",
       "scopeAndExceptions": "Two names and explicit conduct-to-grade branches are routine source data. Aggravated vehicular assault must not be used as an alias for generic reckless driving.",
+      "legalReview": null,
       "source": {
         "section": "2903.08",
         "citation": "Ohio Rev. Code Ann. § 2903.08",
@@ -6601,10 +6678,26 @@
       "jurisdiction": "OH",
       "section": "2903.13",
       "name": "assault",
-      "status": "draft_with_specific_legal_hold",
+      "status": "structured_source_first_draft",
       "conduct": "(A) knowingly causing/attempting physical harm or (B) recklessly causing serious physical harm; grading under (C).",
-      "grading": "M1 baseline with the explicit (C) enhancements retained. Hospital/HMO-dependent application is specifically held pending the definition question.",
-      "scopeAndExceptions": "The basic assault prohibition and statutory grading branches can be transcribed. Isolate the unresolved HMO definition to the hospital-related enhancement; do not ask for generic review of the entire assault statute or use an invented replacement definition.",
+      "grading": "M1 baseline with the explicit (C) enhancements retained. Apply the hospital/HMO-related branch under the recorded reviewer interpretation using OAC 3701-12-01(M), subject to the full statutory hospital, victim and duty/location conditions.",
+      "scopeAndExceptions": "Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute.",
+      "legalReview": {
+        "question": "For the hospital-related assault enhancement in §2903.13(C)(8), what definition governs an HMO-operated hospital when §2903.13(E)(20) incorporates §3727.01 but that section no longer provides current official text? Identify the controlling authority before applying this enhancement to an HMO-operated facility.",
+        "decision": "HMO definition can be found 3701-12-01(M), and demonstrates that employees of an HMO would be considered employees of a hospirtal ",
+        "note": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01",
+        "disposition": "apply_interpretation_to_draft",
+        "interpretation": "Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute.",
+        "authorityUrls": [
+          "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+          "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01"
+        ],
+        "submission": {
+          "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+          "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+          "importedAt": "2026-09-18T04:59:41.200Z"
+        }
+      },
       "source": {
         "section": "2903.13",
         "citation": "Ohio Rev. Code Ann. § 2903.13",
@@ -6633,6 +6726,13 @@
           "end": 17564,
           "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
           "section": "2903.13"
+        },
+        {
+          "text": "(M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976).",
+          "start": 5125,
+          "end": 5391,
+          "sourceHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680",
+          "section": "OAC:3701-12-01"
         }
       ],
       "fullSourceTextReference": "2903.13",
@@ -6736,6 +6836,10 @@
         {
           "section": "3701.01",
           "contentHash": "27b9fa3187142ca467cd932cad2a21a56656735d1af2ead6ef58e95d4d0f1a1c"
+        },
+        {
+          "section": "OAC:3701-12-01",
+          "contentHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680"
         }
       ],
       "legacyMigration": "none_legacy_ids_remain_withheld",
@@ -6746,10 +6850,25 @@
       "jurisdiction": "OH",
       "section": "2903.16",
       "name": "knowingly failing to provide for a person with a functional impairment",
-      "status": "draft_with_specific_legal_hold",
+      "status": "structured_source_first_draft",
       "conduct": "(A): caretaker knowingly fails to provide necessary treatment/care/goods/service, resulting in physical or serious physical harm.",
       "grading": "(C)(1): M1; F4 when serious physical harm results.",
-      "scopeAndExceptions": "Two names are explicit and §2903.10 supplies caretaker/functionally-impaired definitions, including the care-facility exclusion. The knowing branch is routine. The reckless branch has a specific apparent element/enhancement overlap; do not present its M2 recital as an established available outcome.",
+      "scopeAndExceptions": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+      "legalReview": {
+        "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
+        "decision": "Yes, my reading is that by definition any act implcating C(2) requires serious physical harm and thus must be a 4th degree felony. The provision could have been drafted better, ",
+        "note": "",
+        "disposition": "apply_interpretation_to_draft",
+        "interpretation": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+        "authorityUrls": [
+          "https://codes.ohio.gov/ohio-revised-code/section-2903.16"
+        ],
+        "submission": {
+          "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+          "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+          "importedAt": "2026-09-18T04:59:41.200Z"
+        }
+      },
       "source": {
         "section": "2903.16",
         "citation": "Ohio Rev. Code Ann. § 2903.16",
@@ -6836,10 +6955,25 @@
       "jurisdiction": "OH",
       "section": "2903.16",
       "name": "recklessly failing to provide for a person with a functional impairment",
-      "status": "draft_with_specific_legal_hold",
+      "status": "structured_source_first_draft",
       "conduct": "(B): caretaker recklessly fails to provide necessary treatment/care/goods/service, resulting in serious physical harm.",
-      "grading": "(C)(2) recites M2 and an F4 serious-harm enhancement; the relationship to (B)'s serious-harm element is the specific held question.",
-      "scopeAndExceptions": "Two names are explicit and §2903.10 supplies caretaker/functionally-impaired definitions, including the care-facility exclusion. The knowing branch is routine. The reckless branch has a specific apparent element/enhancement overlap; do not present its M2 recital as an established available outcome.",
+      "grading": "(B)/(C)(2): F4 under the recorded reviewer interpretation, because every (B) violation requires resulting serious physical harm. M2 is not an available outcome for this branch; retain the literal recital only in source evidence.",
+      "scopeAndExceptions": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+      "legalReview": {
+        "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
+        "decision": "Yes, my reading is that by definition any act implcating C(2) requires serious physical harm and thus must be a 4th degree felony. The provision could have been drafted better, ",
+        "note": "",
+        "disposition": "apply_interpretation_to_draft",
+        "interpretation": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+        "authorityUrls": [
+          "https://codes.ohio.gov/ohio-revised-code/section-2903.16"
+        ],
+        "submission": {
+          "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+          "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+          "importedAt": "2026-09-18T04:59:41.200Z"
+        }
+      },
       "source": {
         "section": "2903.16",
         "citation": "Ohio Rev. Code Ann. § 2903.16",
@@ -6930,6 +7064,7 @@
       "conduct": "(A)(1)-(3), with definitions in (D) and exclusions in (F).",
       "grading": "(B)(1) M1; (B)(2) specified F4 conditions; (B)(3) child-services-employee branch F5 or specified F4. No blanket single maximum.",
       "scopeAndExceptions": "One named offense. The M1/F4/F5 alternatives, pattern-of-conduct definitions, sexual-motivation branch and electronic-access exceptions are expressly stated; retain them as source data rather than requesting generic attorney interpretation.",
+      "legalReview": null,
       "source": {
         "section": "2903.211",
         "citation": "Ohio Rev. Code Ann. § 2903.211",
@@ -7026,6 +7161,7 @@
       "conduct": "The tracking prohibitions in (B), read with definitions/consent rules and the exceptions in (D).",
       "grading": "(F)(1) M1; specified (F)(2) conditions F4.",
       "scopeAndExceptions": "The statutory offense, consent rules, exceptions and grade conditions are express. Preserve the exceptions instead of treating every tracking device use as illegal.",
+      "legalReview": null,
       "source": {
         "section": "2903.216",
         "citation": "Ohio Rev. Code Ann. § 2903.216",
@@ -7109,6 +7245,7 @@
       "conduct": "(A)(1) threatening-belief conduct, or (A)(2) deadly-weapon display against the specified emergency responder/family/co-worker with the stated knowledge/purpose.",
       "grading": "(B) M4 baseline; specified child-services/responder circumstances M1; specified qualifying prior and victim/duty conditions F4.",
       "scopeAndExceptions": "One named offense with express M4/M1/F4 branches. Only the responder/family/co-worker definitions in §2903.13 are incorporated; the unrelated HMO definition gap does not block menacing.",
+      "legalReview": null,
       "source": {
         "section": "2903.22",
         "citation": "Ohio Rev. Code Ann. § 2903.22",
@@ -7194,6 +7331,7 @@
       "conduct": "(B) caretaker creates substantial risk; (C) specified owner/operator/administrator/agent condones or knowingly permits prohibited caretaker conduct; preserve (B)-(D) exclusions/defenses.",
       "grading": "(E)(1) M1; qualifying prior under (E)(2) F4; resulting serious physical harm under (E)(3) F3.",
       "scopeAndExceptions": "Patient endangerment is one named offense with two conduct routes, express spiritual-treatment exclusions, affirmative defenses and a clear grade ladder. The chapter-wide definitions and the specifically incorporated developmental-disability definitions are retained; no HMO definition is imported.",
+      "legalReview": null,
       "source": {
         "section": "2903.341",
         "citation": "Ohio Rev. Code Ann. § 2903.341",
@@ -7287,6 +7425,7 @@
       "conduct": "(I)(1): reckless failure to enroll/re-enroll/notify or another reckless VOD-duty violation by an offender actually subject to those duties.",
       "grading": "(I)(2): F5; also a supervised-release violation in the specified circumstances. Preserve the statutory affirmative-defense provisions.",
       "scopeAndExceptions": "Use a clearly marked descriptive conduct label for (I)(1), not the administrative section heading as a supposedly named offense. The F5 penalty and enrollment duties are express; routine source-first construction does not require a naming opinion.",
+      "legalReview": null,
       "source": {
         "section": "2903.43",
         "citation": "Ohio Rev. Code Ann. § 2903.43",
@@ -7356,6 +7495,7 @@
       "conduct": "(A)(1)-(2); the attempted-sexual-assault legacy row is not automatically equivalent to completed rape.",
       "grading": "(B): F1, with the complete special mandatory/life/juvenile sentencing branches preserved. Attempt remains a separate §2923.02 construction.",
       "scopeAndExceptions": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+      "legalReview": null,
       "source": {
         "section": "2907.02",
         "citation": "Ohio Rev. Code Ann. § 2907.02",
@@ -7423,6 +7563,7 @@
       "conduct": "(A)(1)-(13), with the source's relational/authority/incapacity circumstances and definitions.",
       "grading": "(B): F3, or F2 for the specified under-13 victim branch with mandatory prison.",
       "scopeAndExceptions": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+      "legalReview": null,
       "source": {
         "section": "2907.03",
         "citation": "Ohio Rev. Code Ann. § 2907.03",
@@ -7488,6 +7629,7 @@
       "conduct": "(A): offender age 18 or older, victim at least 13 but under 16, and the specified knowledge/recklessness.",
       "grading": "(B): explicit F4/M1/F3/F2 age-gap and qualifying-prior branches; retain each condition.",
       "scopeAndExceptions": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+      "legalReview": null,
       "source": {
         "section": "2907.04",
         "citation": "Ohio Rev. Code Ann. § 2907.04",
@@ -7569,6 +7711,7 @@
       "conduct": "(A)(1)-(5) or (B), with stated circumstances, ages and mental states.",
       "grading": "(C): explicit F4/F3 subdivision and prison-term branches; do not equate all child sexual abuse with this one offense.",
       "scopeAndExceptions": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+      "legalReview": null,
       "source": {
         "section": "2907.05",
         "citation": "Ohio Rev. Code Ann. § 2907.05",
@@ -7640,6 +7783,7 @@
       "conduct": "(A)(1)-(3) or (B)(1)-(4), with the distinct public/likely-minor-viewer conduct routes.",
       "grading": "(C)(2)-(5): M4/M3/M2/M1/F5 according to exact conduct, prior count and minor-viewer conditions.",
       "scopeAndExceptions": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+      "legalReview": null,
       "source": {
         "section": "2907.09",
         "citation": "Ohio Rev. Code Ann. § 2907.09",
@@ -7719,6 +7863,7 @@
       "conduct": "(A): knowingly solicit sexual activity for hire in exchange for receiving value.",
       "grading": "(C)(1): M3.",
       "scopeAndExceptions": "Separate the two expressly named offenses; current post-July-1996 F3 grading must not be replaced by the historical F2 branch.",
+      "legalReview": null,
       "source": {
         "section": "2907.24",
         "citation": "Ohio Rev. Code Ann. § 2907.24",
@@ -7790,6 +7935,7 @@
       "conduct": "(B): knowledge of a positive carrier test plus conduct violating (A).",
       "grading": "(C)(2): F3 for conduct on/after July 1, 1996; historical F2 branch retained as historical only.",
       "scopeAndExceptions": "Separate the two expressly named offenses; current post-July-1996 F3 grading must not be replaced by the historical F2 branch.",
+      "legalReview": null,
       "source": {
         "section": "2907.24",
         "citation": "Ohio Rev. Code Ann. § 2907.24",
@@ -7861,6 +8007,7 @@
       "conduct": "(A): engage in sexual activity for hire.",
       "grading": "(C)(1): M3.",
       "scopeAndExceptions": "Separate the expressly named prostitution and positive-test offenses, retaining the temporal grading distinction rather than creating a generic combined solicitation/prostitution alias.",
+      "legalReview": null,
       "source": {
         "section": "2907.25",
         "citation": "Ohio Rev. Code Ann. § 2907.25",
@@ -7932,6 +8079,7 @@
       "conduct": "(B): knowledge of a positive carrier test while engaging in sexual activity for hire.",
       "grading": "(C)(2): F3 on/after July 1, 1996; historical F2 branch applies only to earlier conduct.",
       "scopeAndExceptions": "Separate the expressly named prostitution and positive-test offenses, retaining the temporal grading distinction rather than creating a generic combined solicitation/prostitution alias.",
+      "legalReview": null,
       "source": {
         "section": "2907.25",
         "citation": "Ohio Rev. Code Ann. § 2907.25",
@@ -8003,6 +8151,7 @@
       "conduct": "(A)(1)-(6), subject to (B)'s proper-purpose exception and the minor/impaired-person rules.",
       "grading": "(C): minor (A)(1)-(4)/(6) F2; impaired-person counterparts F3; (A)(5) F4 or qualifying-prior F3.",
       "scopeAndExceptions": "The statutory name and conduct/grade alternatives are explicit. Preserve complete conditions and exceptions in the structured draft; no decision about equivalence to a synthesized legacy label is required.",
+      "legalReview": null,
       "source": {
         "section": "2907.321",
         "citation": "Ohio Rev. Code Ann. § 2907.321",
@@ -8066,6 +8215,7 @@
       "conduct": "(A)(1) knowingly by any means, or (A)(2) recklessly by listed dangerous means, causing or risking harm to another's property without consent.",
       "grading": "(B): M2 baseline, M1 for person-harm risk, and the specific aircraft-related F5/F4 circumstances.",
       "scopeAndExceptions": "One expressly named offense with two mental-state/conduct routes and an explicit harm/aircraft enhancement ladder. The shorter legacy label need not be migrated.",
+      "legalReview": null,
       "source": {
         "section": "2909.06",
         "citation": "Ohio Rev. Code Ann. § 2909.06",
@@ -8123,6 +8273,7 @@
       "conduct": "Divisions (A)(1)-(3) cover specified weapon/ordnance or serious-harm conduct during or immediately after a theft offense; (B) covers specified knowing removal/deprivation of an officer's deadly weapon.",
       "grading": "Felony of the first degree.",
       "scopeAndExceptions": "Source-first offense and grade are explicit; legacy identity approval is unnecessary.",
+      "legalReview": null,
       "source": {
         "section": "2911.01",
         "citation": "Ohio Rev. Code Ann. § 2911.01",
@@ -8193,6 +8344,7 @@
       "conduct": "During or immediately after a theft offense: (A)(1) possess/control a deadly weapon; (A)(2) inflict, attempt, or threaten physical harm; or (A)(3) use or threaten immediate force.",
       "grading": "(A)(1)-(2): felony of the second degree; (A)(3): felony of the third degree.",
       "scopeAndExceptions": "Explicit conduct-to-grade table; routine data work.",
+      "legalReview": null,
       "source": {
         "section": "2911.02",
         "citation": "Ohio Rev. Code Ann. § 2911.02",
@@ -8259,6 +8411,7 @@
       "conduct": "By force, stealth, or deception, trespass in the specified occupied structure while a non-accomplice is present, with purpose to commit any criminal offense, plus (A)(1) physical-harm conduct or (A)(2) a deadly weapon/dangerous ordnance.",
       "grading": "Felony of the first degree.",
       "scopeAndExceptions": "Explicit source-first offense.",
+      "legalReview": null,
       "source": {
         "section": "2911.11",
         "citation": "Ohio Rev. Code Ann. § 2911.11",
@@ -8325,6 +8478,7 @@
       "conduct": "Division (A)(1)-(3) force/stealth/deception trespass in specified occupied structures with purpose to commit any criminal offense.",
       "grading": "(A)(1)-(2): felony of the second degree; (A)(3): felony of the third degree.",
       "scopeAndExceptions": "Two independently named source-first offenses; do not collapse them into one legacy label.",
+      "legalReview": null,
       "source": {
         "section": "2911.12",
         "citation": "Ohio Rev. Code Ann. § 2911.12",
@@ -8403,6 +8557,7 @@
       "conduct": "Division (B): by force, stealth, or deception, trespass in a permanent or temporary habitation when a non-accomplice is present or likely present.",
       "grading": "Felony of the fourth degree.",
       "scopeAndExceptions": "Two independently named source-first offenses; do not collapse them into one legacy label.",
+      "legalReview": null,
       "source": {
         "section": "2911.12",
         "citation": "Ohio Rev. Code Ann. § 2911.12",
@@ -8481,6 +8636,7 @@
       "conduct": "(A) force/stealth/deception trespass in an unoccupied structure to commit a theft offense or felony; or (B) trespass on another's land/premises to commit a felony.",
       "grading": "Felony of the fifth degree.",
       "scopeAndExceptions": "Explicit source-first offense.",
+      "legalReview": null,
       "source": {
         "section": "2911.13",
         "citation": "Ohio Rev. Code Ann. § 2911.13",
@@ -8555,6 +8711,7 @@
       "conduct": "Division (A)(1)-(5) specifies unprivileged knowing, reckless, or negligent entry/remain/refusal-to-leave conduct, including knowing entry/remain on a critical infrastructure facility.",
       "grading": "(A)(1)-(4): misdemeanor of the fourth degree; (A)(5): misdemeanor of the first degree.",
       "scopeAndExceptions": "Explicit conduct-to-grade table; vehicle-related additions are sentencing consequences, not new offense names.",
+      "legalReview": null,
       "source": {
         "section": "2911.21",
         "citation": "Ohio Rev. Code Ann. § 2911.21",
@@ -8621,6 +8778,7 @@
       "conduct": "Division (A): with purpose to deprive, knowingly obtain/exert control over property or services by one of (A)(1)-(5).",
       "grading": "Division (B) expressly assigns M1/F5/F4/F3/F2/F1 grades by value, recidivism, protected victim, or property type, with statutory grading names including misdemeanor theft, theft, grand theft, aggravated theft, aggravated theft of $1.5 million or more, theft from a person in a protected class, grand theft of a motor vehicle, theft of drugs, theft of a police dog or horse or an assistance dog, theft of anhydrous ammonia, theft of a special purpose article, and theft of a bulk merchandise container.",
       "scopeAndExceptions": "Complex but explicit grading/name table; encode literally rather than seeking generic legal confirmation.",
+      "legalReview": null,
       "source": {
         "section": "2913.02",
         "citation": "Ohio Rev. Code Ann. § 2913.02",
@@ -8744,6 +8902,7 @@
       "conduct": "Division (A): knowingly use or operate another's property without authorized consent.",
       "grading": "M4 baseline; M1/F5/F4/F3 for fraud/property schemes by value; protected-victim table F5/F4/F3/F2.",
       "scopeAndExceptions": "Correct false/incomplete extraction “unauthorized use of computer” to the full guilt-clause name; four explicit offenses and explicit grade tables.",
+      "legalReview": null,
       "source": {
         "section": "2913.04",
         "citation": "Ohio Rev. Code Ann. § 2913.04",
@@ -8956,6 +9115,7 @@
       "conduct": "Division (B): knowingly gain/attempt/cause access to specified systems or services without or beyond consent.",
       "grading": "F5 baseline; specified criminal/fraud purpose and value can produce F4/F3; protected-victim table F5/F4/F3/F2.",
       "scopeAndExceptions": "Correct false/incomplete extraction “unauthorized use of computer” to the full guilt-clause name; four explicit offenses and explicit grade tables.",
+      "legalReview": null,
       "source": {
         "section": "2913.04",
         "citation": "Ohio Rev. Code Ann. § 2913.04",
@@ -9168,6 +9328,7 @@
       "conduct": "Division (C) prohibited access/attempt/grant/dissemination beyond consent, except as permitted by section 5503.101.",
       "grading": "Felony of the fifth degree.",
       "scopeAndExceptions": "Correct false/incomplete extraction “unauthorized use of computer” to the full guilt-clause name; four explicit offenses and explicit grade tables.",
+      "legalReview": null,
       "source": {
         "section": "2913.04",
         "citation": "Ohio Rev. Code Ann. § 2913.04",
@@ -9373,6 +9534,7 @@
       "conduct": "Division (D) prohibited access/attempt/grant/dissemination beyond the superintendent's consent.",
       "grading": "Felony of the fifth degree.",
       "scopeAndExceptions": "Correct false/incomplete extraction “unauthorized use of computer” to the full guilt-clause name; four explicit offenses and explicit grade tables.",
+      "legalReview": null,
       "source": {
         "section": "2913.04",
         "citation": "Ohio Rev. Code Ann. § 2913.04",
@@ -9578,6 +9740,7 @@
       "conduct": "Division (B): with purpose to defraud, issue/transfer/cause a check or negotiable instrument knowing dishonor or stop payment.",
       "grading": "M1 baseline; F5 at stated single/multiple-payee thresholds; F4 at $7,500-$149,999.99; F3 at $150,000+.",
       "scopeAndExceptions": "Explicit source-first offense and value table.",
+      "legalReview": null,
       "source": {
         "section": "2913.11",
         "citation": "Ohio Rev. Code Ann. § 2913.11",
@@ -9635,6 +9798,7 @@
       "conduct": "Divisions (A)-(C) enumerate deceptive procurement, prohibited buying/selling or public misuse, fraudulent security/use/furnishing/representation, and purpose-based receipt/possession/control/disposal.",
       "grading": "(A), (B)(1), or (C): M1 absent protected-victim enhancement; (B)(2)-(4): M1/F5/F4/F3 by 90-day cumulative value; protected elderly/disabled victim under (B)(1)-(2): F5/F4/F3/F2 by debt/value.",
       "scopeAndExceptions": "Explicit offense with engineering-grade subdivision/value mapping.",
+      "legalReview": null,
       "source": {
         "section": "2913.21",
         "citation": "Ohio Rev. Code Ann. § 2913.21",
@@ -9709,6 +9873,7 @@
       "conduct": "Division (A)(1)-(3): with purpose to defraud or knowledge of facilitating fraud, specified forging, uttering, or possession-to-utter conduct.",
       "grading": "F5 baseline; F4/F3 by ordinary property/service/loss thresholds; elderly/disabled-victim table F5/F4/F3/F2.",
       "scopeAndExceptions": "Two independently named source-first offenses.",
+      "legalReview": null,
       "source": {
         "section": "2913.31",
         "citation": "Ohio Rev. Code Ann. § 2913.31",
@@ -9818,6 +9983,7 @@
       "conduct": "Division (B): knowingly forge an identification card or sell/distribute a purported identification card knowing it is forged.",
       "grading": "Misdemeanor of the first degree; repeat violation remains M1 with mandatory minimum $250 fine.",
       "scopeAndExceptions": "Two independently named source-first offenses.",
+      "legalReview": null,
       "source": {
         "section": "2913.31",
         "citation": "Ohio Rev. Code Ann. § 2913.31",
@@ -9927,6 +10093,7 @@
       "conduct": "Divisions (B)-(E) prohibit specified nonconsensual identifying-information use/possession, aiding/abetting, permitting use with intent to defraud, and fraudulent use by the permitted person.",
       "grading": "F5/F4/F3/F2 by value; if victim is in protected class, statutory name is “identity fraud against a person in a protected class” and grades are F4/F3/F2/F1 by value.",
       "scopeAndExceptions": "Explicit base and protected-class grading names; no legal ambiguity in the table.",
+      "legalReview": null,
       "source": {
         "section": "2913.49",
         "citation": "Ohio Rev. Code Ann. § 2913.49",
@@ -10030,6 +10197,7 @@
       "conduct": "Receive, retain, or dispose of another's property knowing or having reasonable cause to believe it came from a theft offense.",
       "grading": "M1 baseline; F5/F4/F3 by value or listed property; division (D) explicitly names receiving a stolen special purchase article/articles or bulk merchandise container/container(s), F5, subject to (C)'s $7,500+ rule.",
       "scopeAndExceptions": "Explicit offense and property/value grading table.",
+      "legalReview": null,
       "source": {
         "section": "2913.51",
         "citation": "Ohio Rev. Code Ann. § 2913.51",
@@ -10118,6 +10286,7 @@
       "conduct": "Division (A) enumerates reckless inconvenience/annoyance/alarm conduct; (B) enumerates specified voluntarily intoxicated public/offensive or harm-risk conduct.",
       "grading": "Minor misdemeanor baseline; M4 under (E)(3)'s listed circumstances or (E)(4)'s repeated (B) violations.",
       "scopeAndExceptions": "Explicit conduct and enhancement table.",
+      "legalReview": null,
       "source": {
         "section": "2917.11",
         "citation": "Ohio Rev. Code Ann. § 2917.11",
@@ -10207,6 +10376,7 @@
       "conduct": "With purpose to prevent/disrupt a lawful meeting, procession, or gathering, obstruct/interfere with due conduct or make a gesture/display/utterance outraging group sensibilities.",
       "grading": "M4 baseline; M1 for the religious-worship circumstances in (B)(1)-(2).",
       "scopeAndExceptions": "Explicit source-first offense.",
+      "legalReview": null,
       "source": {
         "section": "2917.12",
         "citation": "Ohio Rev. Code Ann. § 2917.12",
@@ -10269,6 +10439,7 @@
       "conduct": "Without privilege, recklessly make a public passage impassable with unreasonable inconvenience/hazard, where (A)(1) emergency access/response is prevented and (A)(2) the person refuses a responder's request/order to remove or cease.",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Explicit source-first offense.",
+      "legalReview": null,
       "source": {
         "section": "2917.14",
         "citation": "Ohio Rev. Code Ann. § 2917.14",
@@ -10335,6 +10506,7 @@
       "conduct": "Divisions (A)(1)-(11) and (B)(1)-(2) enumerate prohibited telecommunications or internet-posting conduct with the specified mental states and purposes.",
       "grading": "(A)(1)-(3),(5)-(11), or (B): first offense M1, subsequent F5. (A)(4): same baseline, but economic harm yields F5 at $1,000-$7,499.99, F4 at $7,500-$149,999.99, and F3 at $150,000+.",
       "scopeAndExceptions": "Complex but explicit conduct/grade table.",
+      "legalReview": null,
       "source": {
         "section": "2917.21",
         "citation": "Ohio Rev. Code Ann. § 2917.21",
@@ -10411,6 +10583,7 @@
       "conduct": "Divisions (A)-(B) prohibit abandonment or failure to provide legally required/ordered support to specified persons.",
       "grading": "M1 baseline; for (A)(2) or (B), F5 on specified prior conviction or 26-of-104-week failure, and F4 after prior felony conviction under this section.",
       "scopeAndExceptions": "Two named offenses and their grading branches are explicit. The fragment “nonsupport of dependents by reason of failing...” concerns additional costs/fees under (G)(2), not a new offense. That paragraph expressly cites FORMER §3115.31; it is not an unidentified current conduct or grading dependency. These drafts make no (G)(2) costs/fees claim, so historical acquisition for that separate claim is not a prerequisite.",
+      "legalReview": null,
       "source": {
         "section": "2919.21",
         "citation": "Ohio Rev. Code Ann. § 2919.21",
@@ -10511,6 +10684,7 @@
       "conduct": "Division (C): aid, abet, induce, cause, encourage, or contribute to a child/juvenile-court ward becoming a statutorily defined dependent or neglected child.",
       "grading": "Misdemeanor of the first degree; each day is a separate offense.",
       "scopeAndExceptions": "Two named offenses and their grading branches are explicit. The fragment “nonsupport of dependents by reason of failing...” concerns additional costs/fees under (G)(2), not a new offense. That paragraph expressly cites FORMER §3115.31; it is not an unidentified current conduct or grading dependency. These drafts make no (G)(2) costs/fees claim, so historical acquisition for that separate claim is not a prerequisite.",
+      "legalReview": null,
       "source": {
         "section": "2919.21",
         "citation": "Ohio Rev. Code Ann. § 2919.21",
@@ -10611,6 +10785,7 @@
       "conduct": "Recklessly violate an order/consent agreement listed in (A)(1)-(3).",
       "grading": "M1 baseline; F5 for prior listed adjudication/conviction; F3 when violated while committing a felony.",
       "scopeAndExceptions": "Explicit offense and enhancement table.",
+      "legalReview": null,
       "source": {
         "section": "2919.27",
         "citation": "Ohio Rev. Code Ann. § 2919.27",
@@ -10708,6 +10883,7 @@
       "conduct": "Knowingly make/affirm a false statement in the circumstances enumerated in (A)(1)-(8),(10)-(11),(13),(15)-(16).",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Five express guilt-clause names; map exact conduct divisions rather than legacy composites.",
+      "legalReview": null,
       "source": {
         "section": "2921.13",
         "citation": "Ohio Rev. Code Ann. § 2921.13",
@@ -10851,6 +11027,7 @@
       "conduct": "Division (A)(9): false statement with purpose to commit or facilitate a theft offense.",
       "grading": "M1; F5/F4/F3 at $1,000/$7,500/$150,000 thresholds.",
       "scopeAndExceptions": "Five express guilt-clause names; map exact conduct divisions rather than legacy composites.",
+      "legalReview": null,
       "source": {
         "section": "2921.13",
         "citation": "Ohio Rev. Code Ann. § 2921.13",
@@ -11001,6 +11178,7 @@
       "conduct": "Division (A)(12) false statement with specified false identity document, or (B) knowingly furnish such document to firearm seller.",
       "grading": "Felony of the fifth degree.",
       "scopeAndExceptions": "Five express guilt-clause names; map exact conduct divisions rather than legacy composites.",
+      "legalReview": null,
       "source": {
         "section": "2921.13",
         "citation": "Ohio Rev. Code Ann. § 2921.13",
@@ -11144,6 +11322,7 @@
       "conduct": "Division (A)(14) application false statement or (C) knowingly present fictitious/altered handgun-competence certification.",
       "grading": "Felony of the fourth degree.",
       "scopeAndExceptions": "Five express guilt-clause names; map exact conduct divisions rather than legacy composites.",
+      "legalReview": null,
       "source": {
         "section": "2921.13",
         "citation": "Ohio Rev. Code Ann. § 2921.13",
@@ -11287,6 +11466,7 @@
       "conduct": "Violation of division (A) in removal proceedings under the four sections listed in (F)(5).",
       "grading": "Felony of the third degree.",
       "scopeAndExceptions": "Five express guilt-clause names; map exact conduct divisions rather than legacy composites.",
+      "legalReview": null,
       "source": {
         "section": "2921.13",
         "citation": "Ohio Rev. Code Ann. § 2921.13",
@@ -11430,6 +11610,7 @@
       "conduct": "With the specified purpose to hinder proceedings/punishment or assist benefit from crime/delinquent act, engage in one of (A)(1)-(6): harbor, provide avoidance means, warn, conceal evidence/induce withholding, communicate false information, or force/intimidation/deception obstruction.",
       "grading": "If aided act is misdemeanor, same misdemeanor degree; felony baseline F5; qualifying serious offenses F3; terrorism F2 or F1 if nonparticipant death; trafficking in persons F2.",
       "scopeAndExceptions": "Explicit offense and predicate-based grading table.",
+      "legalReview": null,
       "source": {
         "section": "2921.32",
         "citation": "Ohio Rev. Code Ann. § 2921.32",
@@ -11530,6 +11711,7 @@
       "conduct": "Recklessly or by force resist/interfere with a lawful arrest; (B) adds officer physical harm; (C) adds deadly-weapon physical harm or brandishing.",
       "grading": "(A) M2; (B) M1; (C) F4.",
       "scopeAndExceptions": "Explicit conduct-to-grade table.",
+      "legalReview": null,
       "source": {
         "section": "2921.33",
         "citation": "Ohio Rev. Code Ann. § 2921.33",
@@ -11588,10 +11770,26 @@
       "jurisdiction": "OH",
       "section": "2923.01",
       "name": "conspiracy",
-      "status": "draft_with_specific_legal_hold",
-      "conduct": "With purpose to commit/promote/facilitate one of the offenses specified in (A), plan/aid planning or agree to facilitating conduct; conviction also requires the substantial overt act described in (B).",
-      "grading": "F1 for aggravated murder/murder/life object; next lesser degree for F1-F4 object; special hazardous-waste penalty; M1 for F5 object.",
-      "scopeAndExceptions": "The conspiracy name and general grading algorithm are explicit. However, (A) names email/computer predicate conduct while citing unavailable §2923.421; the matching official offense text is in §2913.421. Hold that predicate-specific application rather than silently correcting the statute's cross-reference. The phrases “conspiring with that other person” and “only one conspiracy” are not additional offense names.",
+      "status": "structured_source_first_draft",
+      "conduct": "With purpose to commit/promote/facilitate one of the offenses specified in (A), plan/aid planning or agree to facilitating conduct; conviction also requires the substantial overt act described in (B). For the named email/computer predicates, use §2913.421 under the recorded reviewer correction; the source itself prints §2923.421.",
+      "grading": "F1 for aggravated murder/murder/life object; next lesser degree for F1-F4 object; special hazardous-waste penalty; M1 for F5 object. For email/computer predicates, determine the applicable §2913.421 degree (including its enhancement branches), then apply (J); do not substitute the predicate's grade directly for the conspiracy grade.",
+      "scopeAndExceptions": "Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged.",
+      "legalReview": {
+        "question": "Which authority governs the email/computer predicate in §2923.01(A)? It cites §2923.421, which the official publisher reports as unavailable, while the named offenses are codified in §2913.421. May §2913.421 supply this conspiracy predicate and its grading, or must that application remain withheld?",
+        "decision": "Yes, the correct definition appears in 2913.421",
+        "note": "https://codes.ohio.gov/ohio-revised-code/section-2913.421",
+        "disposition": "apply_interpretation_to_draft",
+        "interpretation": "Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged.",
+        "authorityUrls": [
+          "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+          "https://codes.ohio.gov/ohio-revised-code/section-2913.421"
+        ],
+        "submission": {
+          "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+          "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+          "importedAt": "2026-09-18T04:59:41.200Z"
+        }
+      },
       "source": {
         "section": "2923.01",
         "citation": "Ohio Rev. Code Ann. § 2923.01",
@@ -11700,6 +11898,7 @@
       "conduct": "Purposely or knowingly, where that culpability suffices for the target offense, engage in conduct that if successful would constitute/result in the offense.",
       "grading": "F1 for aggravated murder/murder/life offense; drug-amount rule uses next lower amount range; otherwise next lesser degree; express rules for unclassified and hazardous-waste offenses; attempt of minor misdemeanor or conspiracy is not an offense.",
       "scopeAndExceptions": "Explicit derivative offense and grading algorithm.",
+      "legalReview": null,
       "source": {
         "section": "2923.02",
         "citation": "Ohio Rev. Code Ann. § 2923.02",
@@ -11779,6 +11978,7 @@
       "conduct": "With culpability required for the offense, solicit/procure, aid/abet, conspire under 2923.01, or cause an innocent/irresponsible person to commit it; an offense must actually be committed, subject to complicity in attempt.",
       "grading": "Prosecuted and punished as if a principal offender.",
       "scopeAndExceptions": "Explicit derivative offense; principal-offense mapping is routine data logic.",
+      "legalReview": null,
       "source": {
         "section": "2923.03",
         "citation": "Ohio Rev. Code Ann. § 2923.03",
@@ -11838,6 +12038,7 @@
       "conduct": "Division (A) knowingly carry/have specified concealed weapon ready at hand; (B) imposes specified duties on concealed-handgun licensees during law-enforcement stops, subject to detailed exclusions/defenses.",
       "grading": "(A) M1 baseline, F4 for listed recidivism/loaded firearm/dangerous ordnance, F3 aboard aircraft; (B)(1) M2; (B)(2)/(4) M1 or repeat F5; (B)(3) F5; (F)(2)(a) minor misdemeanor; (F)(2)(b) says “a misdemeanor” plus $500 fine without stating a degree; further (F)(6)-(7) special rules apply.",
       "scopeAndExceptions": "Reject extracted “a minor misdemeanor if both of the following apply:” and “a minor misdemeanor” as offense names; both are grading text for carrying concealed weapons. Preserve (F)(2)(b) literally as misdemeanor-degree-unspecified rather than inventing a degree.",
+      "legalReview": null,
       "source": {
         "section": "2923.12",
         "citation": "Ohio Rev. Code Ann. § 2923.12",
@@ -11989,6 +12190,7 @@
       "conduct": "Unless relieved by law/legal process, knowingly acquire, have, carry, or use a firearm/dangerous ordnance while one of (A)(1)-(5) applies.",
       "grading": "Felony of the third degree.",
       "scopeAndExceptions": "Explicit source-first offense.",
+      "legalReview": null,
       "source": {
         "section": "2923.13",
         "citation": "Ohio Rev. Code Ann. § 2923.13",
@@ -12063,6 +12265,7 @@
       "conduct": "Without privilege, knowingly discharge as specified in (A)(1)-(3), including habitation, school-safety-zone, and 1,000-foot school conduct with listed harm/panic/evacuation intents.",
       "grading": "Felony of the second degree.",
       "scopeAndExceptions": "Correct the truncated extraction “improperly discharging a firearm at or into a habitation” to the full guilt-clause name.",
+      "legalReview": null,
       "source": {
         "section": "2923.161",
         "citation": "Ohio Rev. Code Ann. § 2923.161",
@@ -12125,6 +12328,7 @@
       "conduct": "Division (A)(1)-(3) prohibits specified discharges near cemetery, appurtenant grounds, and upon/over a public road, subject to (B)'s own-land exceptions.",
       "grading": "(A)(1)-(2) M4; (A)(3) M1 baseline, F3 for substantial person-risk or serious property harm, F2 for physical harm to person, F1 for serious physical harm to person.",
       "scopeAndExceptions": "Explicit conduct-to-grade table.",
+      "legalReview": null,
       "source": {
         "section": "2923.162",
         "citation": "Ohio Rev. Code Ann. § 2923.162",
@@ -12206,6 +12410,7 @@
       "conduct": "Division (A): knowingly acquire, have, carry, or use dangerous ordnance, subject to (C)'s exceptions.",
       "grading": "Felony of the fifth degree.",
       "scopeAndExceptions": "Two independently named source-first offenses.",
+      "legalReview": null,
       "source": {
         "section": "2923.17",
         "citation": "Ohio Rev. Code Ann. § 2923.17",
@@ -12292,6 +12497,7 @@
       "conduct": "Division (B): manufacture/process an explosive in Ohio without first obtaining the specified license, registration certificate, or permit.",
       "grading": "Felony of the second degree.",
       "scopeAndExceptions": "Two independently named source-first offenses.",
+      "legalReview": null,
       "source": {
         "section": "2923.17",
         "citation": "Ohio Rev. Code Ann. § 2923.17",
@@ -12378,6 +12584,7 @@
       "conduct": "Person under 18 purchases or attempts to purchase a firearm.",
       "grading": "Delinquent act that would be a felony of the fourth degree if it could be committed by an adult.",
       "scopeAndExceptions": "Add the omitted handgun offense candidate; preserve the firearm violation's express juvenile disposition wording.",
+      "legalReview": null,
       "source": {
         "section": "2923.211",
         "citation": "Ohio Rev. Code Ann. § 2923.211",
@@ -12445,6 +12652,7 @@
       "conduct": "Person under 21 purchases/attempts to purchase a handgun, subject to (B)(1)-(2) trained law-enforcement/military exceptions for persons 18-20.",
       "grading": "Misdemeanor of the second degree.",
       "scopeAndExceptions": "Add the omitted handgun offense candidate; preserve the firearm violation's express juvenile disposition wording.",
+      "legalReview": null,
       "source": {
         "section": "2923.211",
         "citation": "Ohio Rev. Code Ann. § 2923.211",
@@ -12505,6 +12713,7 @@
       "conduct": "Division (A)(1)-(3) prohibits conducting/participating in enterprise affairs, acquiring/maintaining enterprise or real-property interests/control, or investing specified proceeds through a pattern of corrupt activity or unlawful-debt collection.",
       "grading": "Felony of the second degree baseline; felony of the first degree under the listed serious-incident or specification circumstances.",
       "scopeAndExceptions": "Explicit offense and enhancement conditions; forfeiture/restitution provisions are consequences, not separate offense names.",
+      "legalReview": null,
       "source": {
         "section": "2923.32",
         "citation": "Ohio Rev. Code Ann. § 2923.32",
@@ -12587,6 +12796,7 @@
       "conduct": "2925.03(A), schedule I/II category stated in (C)(1).",
       "grading": "Table in 2925.03(C)(1).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -13122,6 +13332,7 @@
       "conduct": "2925.03(A), schedule III-V category in (C)(2).",
       "grading": "Table in 2925.03(C)(2).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -13657,6 +13868,7 @@
       "conduct": "2925.03(A), marihuana other than hashish under (C)(3), subject to lawful Chapter 3796 activities.",
       "grading": "Table in 2925.03(C)(3); (C)(10)(a) routes the specified mixture to this table.",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -14206,6 +14418,7 @@
       "conduct": "2925.03(A), cocaine category in (C)(4).",
       "grading": "Table in 2925.03(C)(4).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -14741,6 +14954,7 @@
       "conduct": "2925.03(A), L.S.D. category in (C)(5).",
       "grading": "Table in 2925.03(C)(5).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -15276,6 +15490,7 @@
       "conduct": "2925.03(A), heroin category in (C)(6).",
       "grading": "Table in 2925.03(C)(6).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -15811,6 +16026,7 @@
       "conduct": "2925.03(A), hashish category in (C)(7).",
       "grading": "Table in 2925.03(C)(7).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -16346,6 +16562,7 @@
       "conduct": "2925.03(A), analog category in (C)(8).",
       "grading": "Table in 2925.03(C)(8).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -16881,6 +17098,7 @@
       "conduct": "2925.03(A), fentanyl category in (C)(9); (C)(10)(b) routes a knowing fentanyl/marihuana mixture here.",
       "grading": "Table in 2925.03(C)(9).",
       "scopeAndExceptions": "Nine distinct statutory names. Marihuana trafficking is not universal: Chapter 3796 authorizes qualifying nonremunerated adult transfers and licensed cultivation, processing, transfer, and sales. For example, 3796.18 states: “a licensed cultivator ... may ... Deliver, transfer, or sell medical marijuana and adult-use marijuana to other license holders”; 3796.20 authorizes a licensed dispensary to “Dispense or sell adult-use marijuana in accordance with division (C) of this section.”",
+      "legalReview": null,
       "source": {
         "section": "2925.03",
         "citation": "Ohio Rev. Code Ann. § 2925.03",
@@ -17416,6 +17634,7 @@
       "conduct": "2925.04(A), controlled substance other than marihuana, subject to authorized licensed processing under Chapter 3796.",
       "grading": "Explicit table in 2925.04(C)(2)-(4).",
       "scopeAndExceptions": "Both offense names remain valid only outside the literal 2925.04 exceptions and applicable Chapter 3796 authorizations. Home grow must satisfy 3796.04's age, plant-limit, residence, security, visibility, and other restrictions; licensed commercial conduct must stay within license authority.",
+      "legalReview": null,
       "source": {
         "section": "2925.04",
         "citation": "Ohio Rev. Code Ann. § 2925.04",
@@ -17591,6 +17810,7 @@
       "conduct": "2925.04(A), marihuana, excluding home grow and licensed cultivation performed in accordance with Chapter 3796.",
       "grading": "Explicit table in 2925.04(C)(5); internal personal-use affirmative defense in (F).",
       "scopeAndExceptions": "Both offense names remain valid only outside the literal 2925.04 exceptions and applicable Chapter 3796 authorizations. Home grow must satisfy 3796.04's age, plant-limit, residence, security, visibility, and other restrictions; licensed commercial conduct must stay within license authority.",
+      "legalReview": null,
       "source": {
         "section": "2925.04",
         "citation": "Ohio Rev. Code Ann. § 2925.04",
@@ -17780,6 +18000,7 @@
       "conduct": "2925.05(A), schedule I/II except marihuana, at specified threshold.",
       "grading": "Felony of the first degree; mandatory first-degree felony prison term.",
       "scopeAndExceptions": "Three explicit source-first offenses. Reject extracted specification prose as an offense name.",
+      "legalReview": null,
       "source": {
         "section": "2925.05",
         "citation": "Ohio Rev. Code Ann. § 2925.05",
@@ -17894,6 +18115,7 @@
       "conduct": "2925.05(A), schedule III, IV, or V at bulk threshold.",
       "grading": "Felony of the second degree; mandatory second-degree felony prison term.",
       "scopeAndExceptions": "Three explicit source-first offenses. Reject extracted specification prose as an offense name.",
+      "legalReview": null,
       "source": {
         "section": "2925.05",
         "citation": "Ohio Rev. Code Ann. § 2925.05",
@@ -18001,6 +18223,7 @@
       "conduct": "2925.05(A), marihuana at 200 grams or more.",
       "grading": "Felony of the third degree, with stated prison presumption and repeat-offender rule.",
       "scopeAndExceptions": "Three explicit source-first offenses. Reject extracted specification prose as an offense name.",
+      "legalReview": null,
       "source": {
         "section": "2925.05",
         "citation": "Ohio Rev. Code Ann. § 2925.05",
@@ -18108,6 +18331,7 @@
       "conduct": "2925.11(A), schedule I/II category in (C)(1).",
       "grading": "Table in 2925.11(C)(1).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -18631,6 +18855,7 @@
       "conduct": "2925.11(A), schedule III-V category in (C)(2); (C)(10)(a) routes its specified mixture here.",
       "grading": "Table in 2925.11(C)(2).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -19154,6 +19379,7 @@
       "conduct": "2925.11(A), marihuana other than hashish under (C)(3), except Chapter 3796-protected possession/use.",
       "grading": "Table in 2925.11(C)(3); (C)(9)(a) routes its specified mixture here.",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -19691,6 +19917,7 @@
       "conduct": "2925.11(A), cocaine category in (C)(4).",
       "grading": "Table in 2925.11(C)(4).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -20214,6 +20441,7 @@
       "conduct": "2925.11(A), L.S.D. category in (C)(5).",
       "grading": "Table in 2925.11(C)(5).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -20737,6 +20965,7 @@
       "conduct": "2925.11(A), heroin category in (C)(6).",
       "grading": "Table in 2925.11(C)(6).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -21260,6 +21489,7 @@
       "conduct": "2925.11(A), hashish category in (C)(7).",
       "grading": "Table in 2925.11(C)(7).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -21783,6 +22013,7 @@
       "conduct": "2925.11(A), analog category in (C)(8).",
       "grading": "Table in 2925.11(C)(8).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -22306,6 +22537,7 @@
       "conduct": "2925.11(A), fentanyl category in (C)(11), including knowing mixtures routed by (C)(9)(b) and (C)(10)(b).",
       "grading": "Table in 2925.11(C)(11).",
       "scopeAndExceptions": "Nine distinct names. Do not apply possession of marihuana universally: 3796.04 protects compliant homegrown marijuana; 3796.221 protects compliant adult-use possession; 3796.22 protects a registered patient's compliant medical possession/use; 3796.23 protects a registered caregiver's compliant possession. Limits remain part of scope, including 3796.221(B)'s two-and-one-half ounces of plant material and fifteen grams of extract.",
+      "legalReview": null,
       "source": {
         "section": "2925.11",
         "citation": "Ohio Rev. Code Ann. § 2925.11",
@@ -22829,6 +23061,7 @@
       "conduct": "Knowingly permitting a vehicle or premises under the person's specified control to be used for commission of a felony drug abuse offense, under (A) or (B).",
       "grading": "Misdemeanor of the first degree by default; felony of the fifth degree when (C)(3)(a) or (b) applies.",
       "scopeAndExceptions": "Express name, conduct divisions, and grades are source-complete.",
+      "legalReview": null,
       "source": {
         "section": "2925.13",
         "citation": "Ohio Rev. Code Ann. § 2925.13",
@@ -22940,6 +23173,7 @@
       "conduct": "2925.14(C)(1), subject to (D)(2)-(4), including the express marihuana exclusion.",
       "grading": "Misdemeanor of the fourth degree.",
       "scopeAndExceptions": "Apply the primary section's categorical marihuana exclusion to (C)(1), plus Chapter 3796 protections for compliant adult-use, home-grow, patient, caregiver, and licensed-dispensary paraphernalia activity. These protections do not erase the non-marihuana or out-of-scope offenses.",
+      "legalReview": null,
       "source": {
         "section": "2925.14",
         "citation": "Ohio Rev. Code Ann. § 2925.14",
@@ -23073,6 +23307,7 @@
       "conduct": "2925.14(C)(2), except the juvenile-sale variant.",
       "grading": "Misdemeanor of the second degree.",
       "scopeAndExceptions": "Apply the primary section's categorical marihuana exclusion to (C)(1), plus Chapter 3796 protections for compliant adult-use, home-grow, patient, caregiver, and licensed-dispensary paraphernalia activity. These protections do not erase the non-marihuana or out-of-scope offenses.",
+      "legalReview": null,
       "source": {
         "section": "2925.14",
         "citation": "Ohio Rev. Code Ann. § 2925.14",
@@ -23199,6 +23434,7 @@
       "conduct": "Violation of 2925.14(C)(2) by selling to a juvenile.",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Apply the primary section's categorical marihuana exclusion to (C)(1), plus Chapter 3796 protections for compliant adult-use, home-grow, patient, caregiver, and licensed-dispensary paraphernalia activity. These protections do not erase the non-marihuana or out-of-scope offenses.",
+      "legalReview": null,
       "source": {
         "section": "2925.14",
         "citation": "Ohio Rev. Code Ann. § 2925.14",
@@ -23318,6 +23554,7 @@
       "conduct": "2925.14(C)(3).",
       "grading": "Misdemeanor of the second degree.",
       "scopeAndExceptions": "Apply the primary section's categorical marihuana exclusion to (C)(1), plus Chapter 3796 protections for compliant adult-use, home-grow, patient, caregiver, and licensed-dispensary paraphernalia activity. These protections do not erase the non-marihuana or out-of-scope offenses.",
+      "legalReview": null,
       "source": {
         "section": "2925.14",
         "citation": "Ohio Rev. Code Ann. § 2925.14",
@@ -23437,6 +23674,7 @@
       "conduct": "Violation of enumerated predicate provisions by reason of another person/group's race, color, religion, or national origin.",
       "grading": "One degree higher than the predicate offense.",
       "scopeAndExceptions": "Explicit derivative offense and grading rule.",
+      "legalReview": null,
       "source": {
         "section": "2927.12",
         "citation": "Ohio Rev. Code Ann. § 2927.12",
@@ -23508,6 +23746,7 @@
       "conduct": "Failing to appear as required after release under 2937.29.",
       "grading": "F4 if release concerned a felony charge or felony appeal; M1 if it concerned a misdemeanor charge or witness appearance; (D) traffic exclusions and exceptions apply.",
       "scopeAndExceptions": "Express standalone offense; title “Penalty” is not the charge name.",
+      "legalReview": null,
       "source": {
         "section": "2937.99",
         "citation": "Ohio Rev. Code Ann. § 2937.99",
@@ -23601,6 +23840,7 @@
       "conduct": "A parent, guardian, or other caregiver violates one of the attendance provisions enumerated in 3321.38(A).",
       "grading": "Offense not specifically classified; sanction is a fine up to $500 or up to 70 hours of community service under 3321.99. Do not invent a felony/misdemeanor degree.",
       "scopeAndExceptions": "Division (A) is complete as an offense not specifically classified with literal sanctions. Division (D)'s failure to give a court-required bond is part of the section's judicial attendance-enforcement mechanism; 3321.99 expressly reaches only (A), so do not create a separate graded criminal candidate from (D).",
+      "legalReview": null,
       "source": {
         "section": "3321.38",
         "citation": "Ohio Rev. Code Ann. § 3321.38",
@@ -23656,6 +23896,7 @@
       "conduct": "Division-specific conduct in 3743.65(A)-(H), preserving each exception and mental state.",
       "grading": "(A)-(E): M1; (F): F5; (G): M1; (H): minor misdemeanor.",
       "scopeAndExceptions": "Complete literal grading table. Division (G) is M1 under 3743.99(F).",
+      "legalReview": null,
       "source": {
         "section": "3743.65",
         "citation": "Ohio Rev. Code Ann. § 3743.65",
@@ -23721,6 +23962,7 @@
       "conduct": "3767.32(A) deposit regardless of intent and (B) knowing unprivileged deposit in another's receptacle, subject to their listed exceptions.",
       "grading": "Misdemeanor of the third degree; court may additionally or alternatively require litter removal.",
       "scopeAndExceptions": "Complete source-first name, conduct, exceptions, and grade; corrected section number is 3767.32.",
+      "legalReview": null,
       "source": {
         "section": "3767.32",
         "citation": "Ohio Rev. Code Ann. § 3767.32",
@@ -23772,6 +24014,7 @@
       "conduct": "Possession in circumstances listed in 4301.62(B), subject to (C)-(J).",
       "grading": "Minor misdemeanor.",
       "scopeAndExceptions": "Complete offense and grade; preserve all location-specific exceptions.",
+      "legalReview": null,
       "source": {
         "section": "4301.62",
         "citation": "Ohio Rev. Code Ann. § 4301.62",
@@ -23816,6 +24059,7 @@
       "conduct": "Knowingly furnishing false identifying information to obtain alcohol for a person under 21.",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Complete source-first offense and grade.",
+      "legalReview": null,
       "source": {
         "section": "4301.633",
         "citation": "Ohio Rev. Code Ann. § 4301.633",
@@ -23860,6 +24104,7 @@
       "conduct": "4301.69(A), subject to its medical, religious, and supervision exceptions.",
       "grading": "Unclassified misdemeanor; $500-$1,000 fine and up to six months' imprisonment.",
       "scopeAndExceptions": "Split the umbrella section into its actual prohibited divisions and literal grades. Division (G)'s posting duty is not included as a criminal candidate because 4301.99 does not assign it a penalty.",
+      "legalReview": null,
       "source": {
         "section": "4301.69",
         "citation": "Ohio Rev. Code Ann. § 4301.69",
@@ -23904,6 +24149,7 @@
       "conduct": "4301.69(B).",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Split the umbrella section into its actual prohibited divisions and literal grades. Division (G)'s posting duty is not included as a criminal candidate because 4301.99 does not assign it a penalty.",
+      "legalReview": null,
       "source": {
         "section": "4301.69",
         "citation": "Ohio Rev. Code Ann. § 4301.69",
@@ -23948,6 +24194,7 @@
       "conduct": "4301.69(C).",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Split the umbrella section into its actual prohibited divisions and literal grades. Division (G)'s posting duty is not included as a criminal candidate because 4301.99 does not assign it a penalty.",
+      "legalReview": null,
       "source": {
         "section": "4301.69",
         "citation": "Ohio Rev. Code Ann. § 4301.69",
@@ -23985,6 +24232,7 @@
       "conduct": "4301.69(D)(2).",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Split the umbrella section into its actual prohibited divisions and literal grades. Division (G)'s posting duty is not included as a criminal candidate because 4301.99 does not assign it a penalty.",
+      "legalReview": null,
       "source": {
         "section": "4301.69",
         "citation": "Ohio Rev. Code Ann. § 4301.69",
@@ -24022,6 +24270,7 @@
       "conduct": "4301.69(E)(1), subject to stated exceptions.",
       "grading": "Misdemeanor of the third degree; specified motor-vehicle cases involving an offender under 18 also trigger licensing consequences.",
       "scopeAndExceptions": "Split the umbrella section into its actual prohibited divisions and literal grades. Division (G)'s posting duty is not included as a criminal candidate because 4301.99 does not assign it a penalty.",
+      "legalReview": null,
       "source": {
         "section": "4301.69",
         "citation": "Ohio Rev. Code Ann. § 4301.69",
@@ -24066,6 +24315,7 @@
       "conduct": "4301.69(F).",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Split the umbrella section into its actual prohibited divisions and literal grades. Division (G)'s posting duty is not included as a criminal candidate because 4301.99 does not assign it a penalty.",
+      "legalReview": null,
       "source": {
         "section": "4301.69",
         "citation": "Ohio Rev. Code Ann. § 4301.69",
@@ -24103,6 +24353,7 @@
       "conduct": "Owner/chauffeur of a vehicle operated on public roads fails annually to apply or pay, subject to listed exceptions.",
       "grading": "Minor misdemeanor.",
       "scopeAndExceptions": "Use descriptive conduct name. Reject extracted “a minor misdemeanor” as an offense name; it is the grade.",
+      "legalReview": null,
       "source": {
         "section": "4503.11",
         "citation": "Ohio Rev. Code Ann. § 4503.11",
@@ -24162,6 +24413,7 @@
       "conduct": "Operating during a non-Chapter-4509 suspension under (A), or operating contrary to a license restriction under (B).",
       "grading": "Misdemeanor of the first degree.",
       "scopeAndExceptions": "Official title accurately covers the two conduct divisions and explicit grade.",
+      "legalReview": null,
       "source": {
         "section": "4510.11",
         "citation": "Ohio Rev. Code Ann. § 4510.11",
@@ -24225,6 +24477,7 @@
       "conduct": "4511.19(A)(1)(a)-(i) or (A)(2).",
       "grading": "(G)(1)(a)-(e) explicit escalating OVI table; baseline M1, with repeat/circumstance felony escalation.",
       "scopeAndExceptions": "Three express names. The lengthy grading matrix is routine data implementation, not a residual legal ambiguity.",
+      "legalReview": null,
       "source": {
         "section": "4511.19",
         "citation": "Ohio Rev. Code Ann. § 4511.19",
@@ -24403,6 +24656,7 @@
       "conduct": "4511.19(A)(1)(j).",
       "grading": "Same (G)(1)(a)-(e) escalating table.",
       "scopeAndExceptions": "Three express names. The lengthy grading matrix is routine data implementation, not a residual legal ambiguity.",
+      "legalReview": null,
       "source": {
         "section": "4511.19",
         "citation": "Ohio Rev. Code Ann. § 4511.19",
@@ -24574,6 +24828,7 @@
       "conduct": "4511.19(B).",
       "grading": "M4 by default; M3 with a qualifying prior within one year.",
       "scopeAndExceptions": "Three express names. The lengthy grading matrix is routine data implementation, not a residual legal ambiguity.",
+      "legalReview": null,
       "source": {
         "section": "4511.19",
         "citation": "Ohio Rev. Code Ann. § 4511.19",
@@ -24752,6 +25007,7 @@
       "conduct": "Operating a vehicle, trackless trolley, or streetcar on a street/highway in willful or wanton disregard of persons/property safety.",
       "grading": "Minor misdemeanor; M4 with one predicate traffic prior within one year; M3 with two or more.",
       "scopeAndExceptions": "Use title-derived conduct name. Reject “a minor misdemeanor” as a name; it is the baseline grade.",
+      "legalReview": null,
       "source": {
         "section": "4511.20",
         "citation": "Ohio Rev. Code Ann. § 4511.20",
@@ -24798,6 +25054,7 @@
       "conduct": "Driving/moving, causing, or knowingly permitting movement on a highway of a vehicle in an unsafe condition endangering a person; section also imposes inspection duties.",
       "grading": "Minor misdemeanor.",
       "scopeAndExceptions": "Official title is supported. Reject extracted “a minor misdemeanor” as an offense name.",
+      "legalReview": null,
       "source": {
         "section": "4513.02",
         "citation": "Ohio Rev. Code Ann. § 4513.02",
@@ -24857,6 +25114,7 @@
       "conduct": "Violation of a maximum noise limit adopted under (B) or prohibition authorized under (E).",
       "grading": "Minor misdemeanor.",
       "scopeAndExceptions": "Derivative local-rule offense is explicit. Reject “a minor misdemeanor” as a name.",
+      "legalReview": null,
       "source": {
         "section": "4513.221",
         "citation": "Ohio Rev. Code Ann. § 4513.221",
@@ -24901,6 +25159,7 @@
       "conduct": "Knowledge of a public-road accident/collision followed by failure to stop, remain, and provide/attach required information under (A).",
       "grading": "M1 baseline; serious physical harm F5 or F4 with knowledge; death F3 or F2 with knowledge.",
       "scopeAndExceptions": "Express name and result/knowledge grading ladder.",
+      "legalReview": null,
       "source": {
         "section": "4549.02",
         "citation": "Ohio Rev. Code Ann. § 4549.02",
@@ -24998,6 +25257,7 @@
       "conduct": "Disclosure of information gained from returns, investigations, hearings, or verifications outside the listed official/statutory/judicial exceptions.",
       "grading": "Offense not specifically classified; fine of $100-$5,000 under the 5747.99(B) catch-all. No imprisonment is stated, so do not invent a misdemeanor/felony degree.",
       "scopeAndExceptions": "Substantive confidentiality offense with a literal unclassified fine sanction, not merely procedure.",
+      "legalReview": null,
       "source": {
         "section": "5747.18",
         "citation": "Ohio Rev. Code Ann. § 5747.18",
@@ -25053,6 +25313,7 @@
       "conduct": "Knowing failure to file; filing or knowingly causing filing of incomplete, false, or fraudulent tax material; or aiding/abetting false or fraudulent filing.",
       "grading": "Felony of the fifth degree.",
       "scopeAndExceptions": "Complete source-first offense and grade.",
+      "legalReview": null,
       "source": {
         "section": "5747.19",
         "citation": "Ohio Rev. Code Ann. § 5747.19",
@@ -25097,6 +25358,7 @@
       "conduct": "Division-specific negligent/reckless failures in (B)-(D), with enhanced dangerous/vicious-dog and injury/death variants.",
       "grading": "(B)(1) M3 first/M2 subsequent; (B)(2) F3; (C)(1) M4 first/M3 subsequent; (C)(2) M1; (D) minor misdemeanor first/M4 subsequent.",
       "scopeAndExceptions": "Use division-specific variants under the official-title family; grades are explicit.",
+      "legalReview": null,
       "source": {
         "section": "955.22",
         "citation": "Ohio Rev. Code Ann. § 955.22",
@@ -25184,6 +25446,7 @@
       "conduct": "Acts in 959.13(A)(1)-(5), including torture/deprivation/cruel beating, inadequate shelter, cruel conveyance, specified confinement, and excessive livestock detention.",
       "grading": "Misdemeanor of the second degree under supporting 959.99(D).",
       "scopeAndExceptions": "Official title, exact conduct divisions, and supporting penalty source yield a routine source-first charge.",
+      "legalReview": null,
       "source": {
         "section": "959.13",
         "citation": "Ohio Rev. Code Ann. § 959.13",
@@ -25227,14 +25490,42 @@
       "runtimePublication": "not_approved"
     }
   ],
-  "manualQuestions": [
+  "manualQuestions": [],
+  "resolvedReviews": [
     {
+      "question": "For the hospital-related assault enhancement in §2903.13(C)(8), what definition governs an HMO-operated hospital when §2903.13(E)(20) incorporates §3727.01 but that section no longer provides current official text? Identify the controlling authority before applying this enhancement to an HMO-operated facility.",
+      "decision": "HMO definition can be found 3701-12-01(M), and demonstrates that employees of an HMO would be considered employees of a hospirtal ",
+      "note": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01",
+      "disposition": "apply_interpretation_to_draft",
+      "interpretation": "Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute.",
+      "authorityUrls": [
+        "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+        "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01"
+      ],
+      "submission": {
+        "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+        "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+        "importedAt": "2026-09-18T04:59:41.200Z"
+      },
       "section": "2903.13",
       "title": "Assault",
-      "question": "For the hospital-related assault enhancement in §2903.13(C)(8), what definition governs an HMO-operated hospital when §2903.13(E)(20) incorporates §3727.01 but that section no longer provides current official text? Identify the controlling authority before applying this enhancement to an HMO-operated facility.",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
       "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
       "evidence": [
+        {
+          "text": "As used in Chapter 3701-12 of the Administrative Code:",
+          "start": 53,
+          "end": 107,
+          "sourceHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680",
+          "section": "OAC:3701-12-01"
+        },
+        {
+          "text": "(M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976).",
+          "start": 5125,
+          "end": 5391,
+          "sourceHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680",
+          "section": "OAC:3701-12-01"
+        },
         {
           "text": "(C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.",
           "start": 248,
@@ -25256,25 +25547,24 @@
           "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
           "section": "2903.13"
         }
-      ],
-      "affectedTargets": [
-        "oh-assault-on-peace-officer",
-        "oh-assault-simple",
-        "ohio-section-2903.13"
-      ],
-      "decision": "",
-      "note": "",
-      "backgroundEvidence": {
-        "sourceUrl": "https://www.legislature.ohio.gov/legislation/134/hb110",
-        "purpose": "Official legislation background for the unresolved incorporated HMO definition; this is not a replacement definition or effective-date determination.",
-        "text": "to repeal sections 3702.11, 3702.12, 3702.13, 3702.14, 3702.141, 3702.15, 3702.16, 3702.18, 3702.19, 3702.20, 3727.01, 3727.02, 3727.03, 3727.04, 3727.05, 3727.06, 3727.07, 3727.99, and 5703.95 of the Revised Code;",
-        "contentHash": "f337b9a9d32717914e4fe3c13f4dfdc050b6173cdbc2dabad159eb9f059c748a"
-      }
+      ]
     },
     {
+      "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
+      "decision": "Yes, my reading is that by definition any act implcating C(2) requires serious physical harm and thus must be a 4th degree felony. The provision could have been drafted better, ",
+      "note": "",
+      "disposition": "apply_interpretation_to_draft",
+      "interpretation": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+      "authorityUrls": [
+        "https://codes.ohio.gov/ohio-revised-code/section-2903.16"
+      ],
+      "submission": {
+        "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+        "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+        "importedAt": "2026-09-18T04:59:41.200Z"
+      },
       "section": "2903.16",
       "title": "Failing to provide for a functionally impaired person",
-      "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.16",
       "sourceHash": "2c1888663a284724d9fa2e0fcdf51b9165da0bba40a899a85ef1df5879fddd4e",
       "evidence": [
@@ -25306,17 +25596,25 @@
           "sourceHash": "2c1888663a284724d9fa2e0fcdf51b9165da0bba40a899a85ef1df5879fddd4e",
           "section": "2903.16"
         }
-      ],
-      "affectedTargets": [
-        "ohio-section-2903.16"
-      ],
-      "decision": "",
-      "note": ""
+      ]
     },
     {
+      "question": "Which authority governs the email/computer predicate in §2923.01(A)? It cites §2923.421, which the official publisher reports as unavailable, while the named offenses are codified in §2913.421. May §2913.421 supply this conspiracy predicate and its grading, or must that application remain withheld?",
+      "decision": "Yes, the correct definition appears in 2913.421",
+      "note": "https://codes.ohio.gov/ohio-revised-code/section-2913.421",
+      "disposition": "apply_interpretation_to_draft",
+      "interpretation": "Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged.",
+      "authorityUrls": [
+        "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+        "https://codes.ohio.gov/ohio-revised-code/section-2913.421"
+      ],
+      "submission": {
+        "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+        "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+        "importedAt": "2026-09-18T04:59:41.200Z"
+      },
       "section": "2923.01",
       "title": "Conspiracy",
-      "question": "Which authority governs the email/computer predicate in §2923.01(A)? It cites §2923.421, which the official publisher reports as unavailable, while the named offenses are codified in §2913.421. May §2913.421 supply this conspiracy predicate and its grading, or must that application remain withheld?",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
       "sourceHash": "44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb32",
       "evidence": [
@@ -25348,12 +25646,7 @@
           "sourceHash": "44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb32",
           "section": "2923.01"
         }
-      ],
-      "affectedTargets": [
-        "oh-conspiracy"
-      ],
-      "decision": "",
-      "note": ""
+      ]
     }
   ],
   "technicalWork": [],
@@ -25683,6 +25976,16 @@
       "effectiveDateStart": "2000-10-10",
       "contentHash": "27b9fa3187142ca467cd932cad2a21a56656735d1af2ead6ef58e95d4d0f1a1c",
       "acquiredFrom": "https://codes.ohio.gov/ohio-revised-code/chapter-3701"
+    },
+    "OAC:3701-12-01": {
+      "section": "OAC:3701-12-01",
+      "title": "Definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01",
+      "acquiredFrom": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01",
+      "effectiveDateStart": "2025-09-22",
+      "retrievedAt": "2026-09-18T04:59:41.200Z",
+      "text": "Rule 3701-12-01 | Definitions.\nEffective: 2025-09-22\nAs used in Chapter 3701-12 of the Administrative Code: (A) \"Actual harm, but not immediate jeopardy deficiency\" means a deficiency that, under 42 C.F.R. 488.404 (2011), either constitutes a pattern of deficiencies resulting in actual harm that is not immediate jeopardy or represents widespread deficiencies resulting in actual harm that is not immediate jeopardy. (B) In division (M) of section 3702.51 of the Revised Code, \"affected person\" means: (1) An applicant for a certificate of need, including an applicant whose application was reviewed comparatively with the application in question; (2) The person that requested the reviewability ruling in question; (3) Any person that resides or regularly uses long-term care facilities within the service area served or to be served by the long-term care services that would be provided under the certificate of need or reviewability ruling in question; (4) Any long-term care facility that is located in the service area where the long-term care services would be provided under the certificate of need or reviewability ruling in question; (5) The person that requested the reviewability ruling in question; or (6) Third-party payers that reimburse long-term care facilities for services in the service area where the long-term care services would be provided under the certificate of need or reviewability ruling in question. (C) \"Affiliated person\" means a corporation, business trust, estate, firm, partnership, association, joint stock company, insurance company, limited liability company, government unit, or other entity that: (1) Has an ownership or beneficial ownership interest, either direct or indirect, of five per cent or more of the voting stock of the holder of a certificate of need; (2) Participates as a general, junior, or limited partner in a partnership with the holder of a certificate of need; (3) Shares a common officer, director, member, trustee, or partner with the holder of a certificate of need; (4) Shares twenty-five per cent or more of its employees with the holder of a certificate of need; (5) Loans twenty-five per cent or more of the total capital needed to implement the activity, either directly or through a loan guarantee or similar arrangement, to the holder of a certificate of need; (6) Locates the site or allows the location of the site of the activity on its campus or on its property; or (7) Enters an agreement with the holder of a certificate of need to use its name as part of the name of the health care facility or service: (a) As part of the implementation of the activity; or (b) In advertising or promotional material that holds the facility or service out as being operated or offered by it or on behalf of it. (D) \"Applicant\" means any person that submits an application for a certificate of need or reviewability determination request and who is designated in the application as the applicant. (E) \"Bed capacity\" means the total number of long-term care beds authorized at a long-term care facility. (F) \"Certificate of need\" means a written approval granted by the director to an applicant to authorize conducting a reviewable activity. (G) \"County nursing home\" has the same meaning as in section 5155.31 of the Revised Code. (H) \"Director\" means the director of health or an authorized designee of the director. (I) \"Existing long-term care facility\" means either of the following: (1) A long-term care facility that is licensed or otherwise authorized to operate in this state in accordance with applicable law, including a county home or a county nursing home that is certified under Title XVIII or Title XIX of the Social Security Act, 49 Stat. 620 (1935), 42 U.S.C. 301, as amended (1981), that is staffed and equipped to provide long-term care services, and is actively providing long-term care services; or (2) A long-term care facility that is licensed or otherwise authorized to operate in this state in accordance with applicable law, including a county home or a county nursing home that is certified under Title XVIII or Title XIX of the Social Security Act, 49 Stat. 620 (1935), 42 U.S.C. 301, as amended (1981), or that has beds reported in an application submitted under section 3722.03 of the Revised Code as skilled nursing beds or long-term care beds and has provided long-term care services for at least three hundred sixty-five consecutive days within the twenty-four months immediately preceding the date a certificate of need application is filed with the director of health. (J) \"Existing bed\" or \"existing long-term care bed\" means a bed from an existing long-term care facility, a bed described in paragraph (O)(5) of this rule, or a bed correctly reported as a long-term care bed pursuant to section 5155.38 of the Revised Code. (K) \"Facility\" means long-term care facility as defined in paragraph (P) of this rule. (L) \"Government unit\" means the state of Ohio and any county, municipal corporation, township, or other political subdivision of the state, or any department, division, board, or other agency of any of the foregoing. (M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976). (N) \"Immediate jeopardy deficiency\" means a deficiency that, under 42 C.F.R. 488.404 (2011), either constitutes a pattern of deficiencies resulting in immediate jeopardy to resident health or safety or represents widespread deficiencies resulting in immediate jeopardy to resident health or safety. (O) \"Long-term care bed\" or \"bed\" means a bed that is categorized as one of the following: (1) A bed that is located in a facility or portion of a facility that is licensed as a nursing home under section 3721.02 of the Revised Code or a facility or portion of a facility licensed by a political subdivision certified under section 3721.09 of the Revised Code; (2) A bed that is located in the portion of any facility, including a county home or county nursing home, that is certified as a skilled nursing facility under the medicare program or a nursing facility under the medicaid program and is included in the authorized maximum certified capacity of that portion of the facility; (3) A bed that is reported in an application submitted under section 3722.03 of the Revised Code as a skilled nursing bed, or a long-term care bed; (4) A bed in a county home or county nursing home that has been certified under section 5155.38 of the Revised Code as having been in operation on July 1, 1993, and is eligible for licensure as a nursing home bed; or (5) A bed held as an approved bed under a certificate of need approved by the director. (P) \"Long-term care facility\" means any of the following: (1) A facility or portion of any facility that is licensed as a nursing home under section 3721.02 of the Revised Code or by a political subdivision certified under section 3721.09 of the Revised Code; (2) The portion of any facility, including a county home or a county nursing home, that is certified as a skilled nursing facility or a nursing facility under Title XVIII or XIX of the Social Security Act; or (3) The portion of any hospital that contains beds reported in an application submitted under section 3722.03 of the Revised Code as skilled nursing beds. (Q) \"New long-term care facility\" means any proposed long-term care facility defined in paragraph (P) of this rule that is not an existing long-term care facility as defined in paragraph (I) of this rule. (R) \"Person\" means any individual, corporation, business trust, estate, firm, partnership, association, joint stock company, limited liability company, insurance company, government unit or other entity. (S) \"Physician\" means a doctor of medicine or osteopathy legally authorized to practice medicine and surgery by the state of Ohio. (T) \"Political subdivision\" means a municipal corporation, township, county, school district, and all other bodies corporate and politic responsible for governmental activities only in the geographic areas smaller than that of the state to which the sovereign immunity of the state attaches. (U) \"Primary service area\" the geographic region, usually comprised of the Ohio zip code in which the long-term care facility is located and contiguous zip codes, from which approximately seventy-five to eighty per cent of the facility's residents currently originate or are expected to originate. (V) \"Principal participant\" means both of the following: (1) A person who has an ownership or controlling interest of at least five per cent in an applicant, in a long-term care facility that is the subject of an application for a certificate of need, or in the owner or operator of the applicant or such a facility; or (2) An officer, director, trustee, or general partner of an applicant, of a long-term care facility that is the subject of an application for a certificate of need, or of the owner or operator of the applicant or such a facility. (W) \"Related person\" means an affiliated person or an individual who, by virtue of blood or adoption, is the spouse, father, mother, sister, brother, half-sister, half-brother, grandmother, grandfather, or first cousin of the holder of a certificate of need. (X) \"Review\" means the process by which the director of health examines a certificate of need application to determine whether a certificate of need for the activity will be granted. (Y) \"Reviewability ruling\" means a ruling issued by the director of health under division (A) of section 3702.52 of the Revised Code as to whether a particular proposed project is or is not a reviewable activity. (Z) \"Secondary service area\" means the geographic region, usually comprised of Ohio zip codes not included in the primary service area, excluding isolated exceptions, from which the facility's remaining residents currently originate or are expected to originate. (AA) \"Service area\" means the current and projected primary and secondary service areas to which the long-term care facility is, or will be, providing long-term care services. (BB) \"State agency\" means the director. (CC) \"Third-party payer\" means a health insuring corporation licensed under Chapter 1751. of the Revised Code, a health maintenance organization as defined in division (I) of section 3702.51 of the Revised Code, an insurance company that issues sickness and accident insurance in conformity with Chapter 3923. of the Revised Code, a state-financed health insurance program under Chapter 3701., 4123., or 5111. of the Revised Code, or any self-insurance plan. (DD) \"To offer\" means, with respect to a long-term care service, that a long-term care facility holds itself out as capable of providing, or as having the means for the provision of, a specified long-term care service. Referral to another provider of health services does not constitute offering of the health service. (EE) \"Ultimate controlling interest\" means a person who holds a majority of the voting power within a corporation, business trust, firm, partnership, association, joint stock company, limited liability company, or insurance company, and is the applicant for a certificate of need. Last updated September 22, 2025 at 7:40 AM",
+      "contentHash": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680"
     },
     "2903.16": {
       "section": "2903.16",

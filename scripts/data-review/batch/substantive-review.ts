@@ -1,5 +1,6 @@
 import { textHash, quoteLines, type BatchDocument, type EvidenceQuote } from "./source-batch";
 import { extractOffenseUnits, type OhioBatchTarget } from "./ohio-review-report";
+import type { ResolvedReview } from "./substantive-responses";
 
 export interface SubstantiveCandidate {
   name: string;
@@ -17,6 +18,7 @@ export interface SubstantiveFinding {
   relatedSections: string[];
   relatedSourceHashes?: Record<string, string>;
   evidenceQuotes?: string[];
+  legalReview?: ResolvedReview;
 }
 
 function bindQuote(document: BatchDocument, quote: string): EvidenceQuote & { section: string } {
@@ -41,6 +43,7 @@ export function compileOhioSubstantiveReview(input: {
   const seen = new Set<string>();
   const drafts: Array<Record<string, unknown>> = [];
   const manualQuestions: Array<Record<string, unknown>> = [];
+  const resolvedReviews: Array<Record<string, unknown>> = [];
   const technicalWork: Array<Record<string, unknown>> = [];
   const now = input.now ?? new Date();
   const sourceReferences = new Map<string, BatchDocument>();
@@ -95,6 +98,12 @@ export function compileOhioSubstantiveReview(input: {
     } else if (finding.question) {
       throw new Error(`Non-legal finding must not masquerade as attorney work: ${finding.section}`);
     }
+    if (finding.legalReview) {
+      resolvedReviews.push({
+        ...finding.legalReview, section: finding.section, title: document.title,
+        sourceUrl: document.sourceUrl, sourceHash: document.contentHash, evidence,
+      });
+    }
     if (finding.classification === "technical_gap" || unavailableRelated.length) {
       technicalWork.push({
         section: finding.section, resolution: finding.resolution,
@@ -116,6 +125,7 @@ export function compileOhioSubstantiveReview(input: {
             : "structured_source_first_draft",
           conduct: candidate.conduct, grading: candidate.grading,
           scopeAndExceptions: finding.resolution,
+          legalReview: finding.legalReview ?? null,
           source: { section: document.section, citation: `Ohio Rev. Code Ann. § ${document.section}`,
             title: document.title, url: document.sourceUrl, contentHash: document.contentHash },
           reviewedEvidence: candidate.evidenceQuotes.map(bindFindingQuote),
@@ -148,6 +158,7 @@ export function compileOhioSubstantiveReview(input: {
     reviewScope: "existing_ohio_catalog_and_remaining_chapter_2903",
     generatedAt: now.toISOString(),
     readyForFocusedManualReview: technicalWork.length === 0,
+    focusedReviewComplete: technicalWork.length === 0 && manualQuestions.length === 0,
     inputHash: textHash(JSON.stringify(findings)),
     summary: {
       analyzedSections: rows.length,
@@ -155,12 +166,13 @@ export function compileOhioSubstantiveReview(input: {
       alreadySourceFirstSections: rows.filter(row => row.existingSourceFirstIds.length).length,
       supportingOrProcedureSections: rows.filter(row => row.classification === "supporting_or_procedure").length,
       specificLegalQuestions: manualQuestions.length,
+      resolvedLegalQuestions: resolvedReviews.length,
       technicalWorkItems: technicalWork.length,
       preparedDrafts: drafts.length,
       remainingGenericReviewQuestions: 0,
       runtimeChargesAdded: 0,
     },
-    rows, drafts, manualQuestions, technicalWork,
+    rows, drafts, manualQuestions, resolvedReviews, technicalWork,
     // Full text is included once, rather than copied into every offense variant.
     sourceEvidence: Object.fromEntries([...sourceReferences].map(([section, document]) => [section, document])),
   };

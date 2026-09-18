@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "submission": {
+    "filePath": "attached_assets/ohio-focused-manual-review_1789707133778.csv",
+    "contentHash": "c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc",
+    "importedAt": "2026-09-18T04:59:41.200Z"
+  },
+  "decisions": [
+    {
+      "section": "2903.13",
+      "sourceHash": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
+      "findingHash": "9ad7b708fc83912de940860342cc50a8c2c49d4c35b3273123c5646c88cd7724",
+      "question": "For the hospital-related assault enhancement in §2903.13(C)(8), what definition governs an HMO-operated hospital when §2903.13(E)(20) incorporates §3727.01 but that section no longer provides current official text? Identify the controlling authority before applying this enhancement to an HMO-operated facility.",
+      "officialSource": "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+      "decision": "HMO definition can be found 3701-12-01(M), and demonstrates that employees of an HMO would be considered employees of a hospirtal ",
+      "note": "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01",
+      "disposition": "apply_interpretation_to_draft",
+      "interpretation": "Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute.",
+      "authorityUrls": [
+        "https://codes.ohio.gov/ohio-revised-code/section-2903.13",
+        "https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01"
+      ],
+      "relatedSections": [
+        "2903.10",
+        "3701.01",
+        "OAC:3701-12-01"
+      ],
+      "candidates": [
+        {
+          "name": "assault",
+          "conduct": "(A) knowingly causing/attempting physical harm or (B) recklessly causing serious physical harm; grading under (C).",
+          "grading": "M1 baseline with the explicit (C) enhancements retained. Apply the hospital/HMO-related branch under the recorded reviewer interpretation using OAC 3701-12-01(M), subject to the full statutory hospital, victim and duty/location conditions.",
+          "evidenceQuotes": [
+            "(C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.",
+            "(19)(a) \"Hospital\" means, subject to division (E)(19)(b) of this section, an institution classified as a hospital under section 3701.01 of the Revised Code in which are provided to patients diagnostic, medical, surgical, obstetrical, psychiatric, or rehabilitation care or a hospital operated by a health maintenance organization.",
+            "(20) \"Health maintenance organization\" has the same meaning as in section 3727.01 of the Revised Code.",
+            "(M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976)."
+          ]
+        }
+      ],
+      "evidenceQuotes": [
+        "As used in Chapter 3701-12 of the Administrative Code:",
+        "(M) \"Health maintenance organization\" or \"HMO\" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the \"Public Health Service Act,\" 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976)."
+      ],
+      "reviewedSourceHashes": {
+        "2903.13": "040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1",
+        "2903.10": "c2e9fa1aada7233e7294232645deb22fab1da94970616ce5f2836f76216a3d6f",
+        "3701.01": "27b9fa3187142ca467cd932cad2a21a56656735d1af2ead6ef58e95d4d0f1a1c",
+        "OAC:3701-12-01": "1da72594cc7d695fd17689dfb0d80fcecc1dfa47885c127704460cb974120680"
+      }
+    },
+    {
+      "section": "2903.16",
+      "sourceHash": "2c1888663a284724d9fa2e0fcdf51b9165da0bba40a899a85ef1df5879fddd4e",
+      "findingHash": "6af9c1121d67286a929195acafbf44322e407c5f9922d880ab7910b5b7f74d0c",
+      "question": "Can the M2 grading recital in §2903.16(C)(2) apply to any violation of (B)? Division (B) already requires resulting serious physical harm, while (C)(2) makes the violation F4 when that same harm results. Confirm whether an M2 outcome exists, or how the reckless branch must be described.",
+      "officialSource": "https://codes.ohio.gov/ohio-revised-code/section-2903.16",
+      "decision": "Yes, my reading is that by definition any act implcating C(2) requires serious physical harm and thus must be a 4th degree felony. The provision could have been drafted better, ",
+      "note": "",
+      "disposition": "apply_interpretation_to_draft",
+      "interpretation": "Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.",
+      "authorityUrls": [
+        "https://codes.ohio.gov/ohio-revised-code/section-2903.16"
+      ],
+      "relatedSections": [
+        "2903.10",
+        "2903.33",
+        "2901.01",
+        "2901.22"
+      ],
+      "candidates": [
+        {
+          "name": "knowingly failing to provide for a person with a functional impairment",
+          "conduct": "(A): caretaker knowingly fails to provide necessary treatment/care/goods/service, resulting in physical or serious physical harm.",
+          "grading": "(C)(1): M1; F4 when serious physical harm results.",
+          "evidenceQuotes": [
+            "(A) No caretaker shall knowingly fail to provide a person with a functional impairment under the caretaker's care with any treatment, care, goods, or service that is necessary to maintain the health or safety of the person with a functional impairment when this failure results in physical harm or serious physical harm to the person with a functional impairment.",
+            "(C)(1) Whoever violates division (A) of this section is guilty of knowingly failing to provide for a person with a functional impairment, a misdemeanor of the first degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (A) of this section is a felony of the fourth degree."
+          ]
+        },
+        {
+          "name": "recklessly failing to provide for a person with a functional impairment",
+          "conduct": "(B): caretaker recklessly fails to provide necessary treatment/care/goods/service, resulting in serious physical harm.",
+          "grading": "(B)/(C)(2): F4 under the recorded reviewer interpretation, because every (B) violation requires resulting serious physical harm. M2 is not an available outcome for this branch; retain the literal recital only in source evidence.",
+          "evidenceQuotes": [
+            "(B) No caretaker shall recklessly fail to provide a person with a functional impairment under the caretaker's care with any treatment, care, goods, or service that is necessary to maintain the health or safety of the person with a functional impairment when this failure results in serious physical harm to the person with a functional impairment.",
+            "(2) Whoever violates division (B) of this section is guilty of recklessly failing to provide for a person with a functional impairment, a misdemeanor of the second degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (B) of this section is a felony of the fourth degree."
+          ]
+        }
+      ],
+      "evidenceQuotes": [],
+      "reviewedSourceHashes": {
+        "2903.16": "2c1888663a284724d9fa2e0fcdf51b9165da0bba40a899a85ef1df5879fddd4e",
+        "2903.10": "c2e9fa1aada7233e7294232645deb22fab1da94970616ce5f2836f76216a3d6f",
+        "2903.33": "9903e3bf0a68c9748264ae54d551cf0dd4a9e004e2ab2270ccb21e18cc8bc36e",
+        "2901.01": "08b4bb21dd02617e54825a9e6f2ea6b218b9fb6893591dff3d3d2f83393c8149",
+        "2901.22": "a64e2a1a3f81c9e138288712c827a9311fa80665201064dbb3efdd546d2a7b8a"
+      }
+    },
+    {
+      "section": "2923.01",
+      "sourceHash": "44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb32",
+      "findingHash": "26f83116e62ba90e4a959bf831d7aba44fefe471fa566e371c8013258d2054df",
+      "question": "Which authority governs the email/computer predicate in §2923.01(A)? It cites §2923.421, which the official publisher reports as unavailable, while the named offenses are codified in §2913.421. May §2913.421 supply this conspiracy predicate and its grading, or must that application remain withheld?",
+      "officialSource": "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+      "decision": "Yes, the correct definition appears in 2913.421",
+      "note": "https://codes.ohio.gov/ohio-revised-code/section-2913.421",
+      "disposition": "apply_interpretation_to_draft",
+      "interpretation": "Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged.",
+      "authorityUrls": [
+        "https://codes.ohio.gov/ohio-revised-code/section-2923.01",
+        "https://codes.ohio.gov/ohio-revised-code/section-2913.421"
+      ],
+      "relatedSections": [
+        "2913.421",
+        "3734.18"
+      ],
+      "candidates": [
+        {
+          "name": "conspiracy",
+          "conduct": "With purpose to commit/promote/facilitate one of the offenses specified in (A), plan/aid planning or agree to facilitating conduct; conviction also requires the substantial overt act described in (B). For the named email/computer predicates, use §2913.421 under the recorded reviewer correction; the source itself prints §2923.421.",
+          "grading": "F1 for aggravated murder/murder/life object; next lesser degree for F1-F4 object; special hazardous-waste penalty; M1 for F5 object. For email/computer predicates, determine the applicable §2913.421 degree (including its enhancement branches), then apply (J); do not substitute the predicate's grade directly for the conspiracy grade.",
+          "evidenceQuotes": [
+            "(A) No person, with purpose to commit or to promote or facilitate the commission of aggravated murder, murder, kidnapping, abduction, compelling prostitution, promoting prostitution, trafficking in persons, aggravated arson, arson, aggravated robbery, robbery, aggravated burglary, burglary, trespassing in a habitation when a person is present or likely to be present, engaging in a pattern of corrupt activity, corrupting another with drugs, a felony drug trafficking, manufacturing, processing, or possession offense, theft of drugs, or illegal processing of drug documents, the commission of a felony offense of unauthorized use of a vehicle, illegally transmitting multiple commercial electronic mail messages or unauthorized access of a computer in violation of section 2923.421 of the Revised Code, or the commission of a violation of any provision of Chapter 3734. of the Revised Code, other than section 3734.18 of the Revised Code, that relates to hazardous wastes, shall do either of the following:",
+            "(J) Whoever violates this section is guilty of conspiracy, which is one of the following:"
+          ]
+        }
+      ],
+      "evidenceQuotes": [
+        "(C)(1) Whoever violates division (B) of this section is guilty of illegally transmitting multiple commercial electronic mail messages. Except as otherwise provided in division (C)(2) or (E) of this section, illegally transmitting multiple commercial electronic mail messages is a felony of the fifth degree.",
+        "(2) Except as otherwise provided in division (E) of this section, whoever violates division (D)(1) of this section is guilty of unauthorized access of a computer, a felony of the fourth degree."
+      ],
+      "reviewedSourceHashes": {
+        "2923.01": "44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb32",
+        "2913.421": "c9899550d6c8c5e8b537935eccb223aea6f1da77cb206d29506d9da0885ec7aa",
+        "3734.18": "38d55533d3930f03f1382068e87926d4479929d7fc0c7b16ec9d896004552cbd"
+      }
+    }
+  ]
+}

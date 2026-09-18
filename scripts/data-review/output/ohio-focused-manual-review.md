@@ -1,18 +1,18 @@
 # Ohio — focused manual review
 
-Ready for focused manual review within the stated scope.
+All focused review responses integrated for this scoped batch; no outstanding manual questions.
 
-Prepared: 2026-09-17T22:24:22.672Z
+Prepared: 2026-09-18T05:01:16.515Z
 
 Scope: the current Ohio catalog plus the remaining Chapter 2903 inventory. This is not a complete statewide inventory, runtime expansion, publication approval, or Spanish/Chinese sign-off.
 
 - 97 prior generic review groups substantively analyzed.
-- 82 routine offense sections; 12 supporting/procedural sections.
+- 85 routine offense sections; 12 supporting/procedural sections.
 - 125 structured source-first drafts; 7 sections already covered by existing source-first records.
-- 3 specific legal questions; 0 remaining agent-owned technical items.
+- 3 resolved legal questions; 0 outstanding specific legal questions; 0 remaining agent-owned technical items.
 - No new runtime charges. Existing selectable records are unchanged. Legacy aliases remain withheld; they are not a manual-review prerequisite for independently supported statutory names.
 
-## Questions requiring a legal decision
+## Resolved legal decisions
 
 ### §2903.13 — Assault
 
@@ -21,17 +21,30 @@ For the hospital-related assault enhancement in §2903.13(C)(8), what definition
 Official source: https://codes.ohio.gov/ohio-revised-code/section-2903.13
 Evidence SHA-256: 040456959beff0885577c0a63334b9480a886ebc5bd37f47360647377ad486b1
 
+> §OAC:3701-12-01: As used in Chapter 3701-12 of the Administrative Code:
+
+> §OAC:3701-12-01: (M) "Health maintenance organization" or "HMO" means a public or private organization organized under the law of any state that is qualified under section 1310(d) of Title XIII of the "Public Health Service Act," 87 Stat. 931 (1973), 42 U.S.C. section 300e-9 (1976).
+
 > §2903.13: (C)(1) Whoever violates this section is guilty of assault, and the court shall sentence the offender as provided in this division and divisions (C)(1), (2), (3), (4), (5), (6), (7), (8), (9), and (10) of this section. Except as otherwise provided in division (C)(2), (3), (4), (5), (6), (7), (8), or (9) of this section, assault is a misdemeanor of the first degree.
 
 > §2903.13: (19)(a) "Hospital" means, subject to division (E)(19)(b) of this section, an institution classified as a hospital under section 3701.01 of the Revised Code in which are provided to patients diagnostic, medical, surgical, obstetrical, psychiatric, or rehabilitation care or a hospital operated by a health maintenance organization.
 
 > §2903.13: (20) "Health maintenance organization" has the same meaning as in section 3727.01 of the Revised Code.
 
-Official legislation background: https://www.legislature.ohio.gov/legislation/134/hb110
-> to repeal sections 3702.11, 3702.12, 3702.13, 3702.14, 3702.141, 3702.15, 3702.16, 3702.18, 3702.19, 3702.20, 3727.01, 3727.02, 3727.03, 3727.04, 3727.05, 3727.06, 3727.07, 3727.99, and 5703.95 of the Revised Code;
+Decision: HMO definition can be found 3701-12-01(M), and demonstrates that employees of an HMO would be considered employees of a hospirtal
+Disposition: apply_interpretation_to_draft
+Interpretation: Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute.
 
-Decision: ______
-Controlling authority / explanation: ______
+Reviewer note (verbatim):
+> https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01
+
+Supporting authority:
+- https://codes.ohio.gov/ohio-revised-code/section-2903.13
+- https://codes.ohio.gov/ohio-administrative-code/rule-3701-12-01
+
+Submitted file: attached_assets/ohio-focused-manual-review_1789707133778.csv
+Submission SHA-256: c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc
+Imported: 2026-09-18T04:59:41.200Z
 
 ### §2903.16 — Failing to provide for a functionally impaired person
 
@@ -48,8 +61,19 @@ Evidence SHA-256: 2c1888663a284724d9fa2e0fcdf51b9165da0bba40a899a85ef1df5879fddd
 
 > §2903.16: (2) Whoever violates division (B) of this section is guilty of recklessly failing to provide for a person with a functional impairment, a misdemeanor of the second degree. If the person with a functional impairment under the offender's care suffers serious physical harm as a result of the violation of this section, a violation of division (B) of this section is a felony of the fourth degree.
 
-Decision: ______
-Controlling authority / explanation: ______
+Decision: Yes, my reading is that by definition any act implcating C(2) requires serious physical harm and thus must be a 4th degree felony. The provision could have been drafted better,
+Disposition: apply_interpretation_to_draft
+Interpretation: Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged.
+
+Reviewer note (verbatim):
+>
+
+Supporting authority:
+- https://codes.ohio.gov/ohio-revised-code/section-2903.16
+
+Submitted file: attached_assets/ohio-focused-manual-review_1789707133778.csv
+Submission SHA-256: c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc
+Imported: 2026-09-18T04:59:41.200Z
 
 ### §2923.01 — Conspiracy
 
@@ -66,8 +90,22 @@ Evidence SHA-256: 44f28b7c3eb81965455434bdff3cc6d4462e62c62879f780724dcd1d6021cb
 
 > §2923.01: (J) Whoever violates this section is guilty of conspiracy, which is one of the following:
 
-Decision: ______
-Controlling authority / explanation: ______
+Decision: Yes, the correct definition appears in 2913.421
+Disposition: apply_interpretation_to_draft
+Interpretation: Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged.
+
+Reviewer note (verbatim):
+> https://codes.ohio.gov/ohio-revised-code/section-2913.421
+
+Supporting authority:
+- https://codes.ohio.gov/ohio-revised-code/section-2923.01
+- https://codes.ohio.gov/ohio-revised-code/section-2913.421
+
+Submitted file: attached_assets/ohio-focused-manual-review_1789707133778.csv
+Submission SHA-256: c5932d912d95fa4e84bc2d578e47492776349a646f879a1f9ea52b8aba426fcc
+Imported: 2026-09-18T04:59:41.200Z
+
+## Outstanding questions requiring a legal decision
 
 
 ## Completed routine analysis
@@ -90,8 +128,8 @@ Controlling authority / explanation: ______
 | 2903.08 | routine_offense | Two names and explicit conduct-to-grade branches are routine source data. Aggravated vehicular assault must not be used as an alias for generic reckless driving. |
 | 2903.11 | routine_offense | An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record. |
 | 2903.12 | routine_offense | An independently verified source-first record already covers this statute. Keep the legacy ID withheld without making legacy-alias reconciliation a prerequisite to the existing statutory record. |
-| 2903.13 | specific_legal_question | The basic assault prohibition and statutory grading branches can be transcribed. Isolate the unresolved HMO definition to the hospital-related enhancement; do not ask for generic review of the entire assault statute or use an invented replacement definition. |
-| 2903.16 | specific_legal_question | Two names are explicit and §2903.10 supplies caretaker/functionally-impaired definitions, including the care-facility exclusion. The knowing branch is routine. The reckless branch has a specific apparent element/enhancement overlap; do not present its M2 recital as an established available outcome. |
+| 2903.13 | routine_offense | Apply the reviewer's interpretation using Ohio Administrative Code 3701-12-01(M) for the HMO definition in the hospital-related assault enhancement. Preserve §2903.13(C)(8)'s victim, duty/location and other statutory conditions and (E)(19)'s hospital scope; do not treat every HMO employee as a hospital employee regardless of those conditions. The administrative rule expressly defines terms for Chapter 3701-12: applying it here is the recorded reviewer's legal interpretation, not an automatic statutory amendment or a claim that the rule itself cross-references the assault statute. |
+| 2903.16 | routine_offense | Apply the reviewer's reading: every violation of the reckless branch (B) already requires serious physical harm, so (C)(2)'s serious-harm condition makes it F4. Do not offer M2 as an available outcome for this branch. Preserve the statute's literal M2 recital as source evidence, not as an operative grading option. The knowing (A)/(C)(1) branch remains M1 or F4 according to resulting harm, with all caretaker definitions and exclusions unchanged. |
 | 2903.211 | routine_offense | One named offense. The M1/F4/F5 alternatives, pattern-of-conduct definitions, sexual-motivation branch and electronic-access exceptions are expressly stated; retain them as source data rather than requesting generic attorney interpretation. |
 | 2903.216 | routine_offense | The statutory offense, consent rules, exceptions and grade conditions are express. Preserve the exceptions instead of treating every tracking device use as illegal. |
 | 2903.22 | routine_offense | One named offense with express M4/M1/F4 branches. Only the responder/family/co-worker definitions in §2903.13 are incorporated; the unrelated HMO definition gap does not block menacing. |
@@ -128,7 +166,7 @@ Controlling authority / explanation: ______
 | 2921.13 | routine_offense | Five express guilt-clause names; map exact conduct divisions rather than legacy composites. |
 | 2921.32 | routine_offense | Explicit offense and predicate-based grading table. |
 | 2921.33 | routine_offense | Explicit conduct-to-grade table. |
-| 2923.01 | specific_legal_question | The conspiracy name and general grading algorithm are explicit. However, (A) names email/computer predicate conduct while citing unavailable §2923.421; the matching official offense text is in §2913.421. Hold that predicate-specific application rather than silently correcting the statute's cross-reference. The phrases “conspiring with that other person” and “only one conspiracy” are not additional offense names. |
+| 2923.01 | routine_offense | Apply the reviewer's correction: use §2913.421 for the email/computer predicates named in §2923.01(A), and apply conspiracy's (J) grading to the applicable predicate degree. Preserve the official conspiracy text's literal §2923.421 citation unchanged in the evidence and label §2913.421 as the reviewer-directed correction, not a publisher correction. Other predicates, the overt-act requirement, defenses and the general grading algorithm remain unchanged. |
 | 2923.02 | routine_offense | Explicit derivative offense and grading algorithm. |
 | 2923.03 | routine_offense | Explicit derivative offense; principal-offense mapping is routine data logic. |
 | 2923.12 | routine_offense | Reject extracted “a minor misdemeanor if both of the following apply:” and “a minor misdemeanor” as offense names; both are grading text for carrying concealed weapons. Preserve (F)(2)(b) literally as misdemeanor-degree-unspecified rather than inventing a degree. |
@@ -176,5 +214,6 @@ Controlling authority / explanation: ______
 
 - ohio-substantive-findings.json: persistent, hash-bound analysis.
 - ohio-substantive-review.json: all drafts, exact quoted spans, complete primary/supporting source text and dispositions.
-- ohio-focused-manual-review.csv: only the specific unresolved legal questions.
+- ohio-substantive-review-decisions.json: durable responses bound to the baseline finding, submitted file, and supporting authority hashes.
+- ohio-focused-manual-review.csv: resolved decisions and outstanding legal questions.
 - The older ohio-batch-manual-review files are pre-analysis acquisition backlog, not the current attorney handoff.

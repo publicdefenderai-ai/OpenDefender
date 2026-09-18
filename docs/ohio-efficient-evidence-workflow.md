@@ -2,20 +2,22 @@
 
 ## Current handoff: focused substantive review
 
-The current catalog/Chapter 2903 batch has now received substantive analysis.
+The current catalog/Chapter 2903 batch has now received substantive analysis
+and all focused review responses have been integrated.
 Use **`scripts/data-review/output/ohio-focused-manual-review.html`** for the
 readable handoff, or `ohio-focused-manual-review.csv` for the decision sheet.
 The older `ohio-batch-manual-review` files were acquisition-stage analysis prompts,
 not a finished attorney queue.
 
-- 97 prior groups analyzed: 82 routine offense sections, 12 supporting/procedural
-  sections, and three sections with specific unresolved legal questions.
+- 97 prior groups analyzed: 85 routine offense sections and 12
+  supporting/procedural sections.
 - 125 structured source-first drafts, with complete source text, conduct/grade
   summaries, exact evidence spans, and separately hashed supporting sources.
   Seven analyzed sections already have independent source-first records.
-- The three questions concern §2903.16's reckless-neglect element/grade overlap,
-  §2903.13's incorporated HMO definition, and §2923.01's mismatched computer/email
-  predicate cross-reference.
+- Three focused legal questions are resolved and zero are pending. The preserved
+  original questions concern §2903.16's reckless-neglect element/grade overlap,
+  §2903.13's incorporated HMO definition, and §2923.01's mismatched
+  computer/email predicate cross-reference.
 - No remaining agent-owned acquisition items in this scoped handoff.
 - No catalog, runtime, database, approval-pin, or published-app changes.
   The 29 configured selectable charges are unchanged. Drafts are not publication
@@ -27,11 +29,21 @@ Revalidate and regenerate the handoff offline:
 npx tsx scripts/data-review/run-ohio-substantive-review.ts
 ```
 
-The command consumes the recorded `ohio-substantive-findings.json`, rejects changed
-primary/supporting hashes, stale sources, inexact quotations, duplicate identities,
-and incomplete assignment coverage. It does not re-review new text automatically.
+The command consumes the recorded `ohio-substantive-findings.json`, applies the
+durable `ohio-substantive-review-decisions.json` without overwriting those baseline
+findings, and rejects changed primary/supporting hashes, stale sources, inexact
+quotations, duplicate identities, and incomplete assignment coverage. It also
+verifies the submitted review file against its recorded content hash. It does not
+re-review new text automatically.
 The separate assembly script is a deliberate import of recorded analysis, not a
 source-refresh or approval mechanism.
+
+The response ledger is hash-bound to each baseline finding, the submitted review
+file, and every supporting authority used for that response. Reruns preserve the
+recorded decisions and verbatim reviewer notes; changed evidence fails closed
+rather than silently rebinding a decision. Integration records scoped legal
+review—it is not bulk publication approval and does not alter the publication
+gate.
 
 The substantive pass used 22 bounded HTTP requests for missing penalty/reference
 sources and current cannabis provisions; web research for official repeal context
@@ -41,6 +53,11 @@ deadline expired during runner shutdown. The script/shared/server typecheck pass
 the complete packet compiled, and the unchanged app rendered.
 
 ## What this completes—and what it does not
+
+Response-integration validation passed 15 targeted tests covering the three
+interpretations, unchanged original text, partial responses, changed authority,
+duplicate decisions, evidence retention, and the publication boundary. The
+script/shared/server typecheck passed, and the unchanged app rendered.
 
 This workflow consolidates source acquisition, caching, literal statutory-name extraction, reference triage, evidence packets, and durable review notes. It has been applied to all 134 current Ohio catalog records (105 withheld), plus the nine remaining offense-bearing sections in the Chapter 2903 inventory.
 
@@ -87,6 +104,10 @@ All generated output is under `scripts/data-review/output/`:
 - `ohio-batch-source-cache.json`: acquisition evidence, not an approval manifest.
 - `ohio-batch-run-receipt.json`: scope, timing, request counts, failures and coverage limits.
 - `ohio-batch-runs/`: prior run packets.
+- `ohio-substantive-review-decisions.json`: focused substantive responses bound
+  to baseline findings, the submitted review file, and reviewed authority hashes.
+- `ohio-substantive-review-authorities.json`: additional supporting-authority
+  documents used by those responses.
 
 Generated CSV/Markdown/packet files are refreshed on rerun. Preserve completed review work in the decision ledger, not by editing those generated files in place. Returned spreadsheets require deliberate transcription/reconciliation into the ledger; there is no automatic spreadsheet-to-publication import.
 
@@ -131,7 +152,10 @@ Two primary groups have direct incorporated-source gaps:
 
 These are not resolved by repeated downloads or by guessing replacement definitions. Their legal effect/current replacement needs to be established before relying on affected summaries. Deeper references beyond the selected acquisition depth remain explicitly listed in the run receipt.
 
-Existing attorney and Spanish/Chinese fluent-speaker sign-off requirements remain. Additional statewide discovery and substantive source-first charge construction are still needed; do not call those completed manual review.
+Other attorney and Spanish/Chinese fluent-speaker sign-off requirements remain.
+Additional statewide discovery and substantive source-first charge construction
+are still needed; do not describe this scoped focused-review completion as
+statewide completion.
 
 ## Measurement and verification
 
