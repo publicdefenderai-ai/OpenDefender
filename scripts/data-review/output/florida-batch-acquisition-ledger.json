@@ -122,8 +122,42 @@
       "stoppedForRateBlock": false,
       "reparsedPreviouslyCachedRawResponses": false,
       "rawResponseCache": "scripts/data-review/output/florida-batch-exact-raw-cache.json"
+    },
+    {
+      "command": "npx tsx scripts/data-review/florida-exact-recovery.ts --sections=381.986,932.701,831.31 --max-requests=3",
+      "startedAt": "2026-09-18T20:07:09.276Z",
+      "finishedAt": "2026-09-18T20:07:14.645Z",
+      "mode": "official_exact_section_recovery",
+      "sectionsRequested": [
+        "381.986",
+        "932.701",
+        "831.31"
+      ],
+      "actualHttpRequests": 3,
+      "acquired": 2,
+      "reused": 0,
+      "failed": 1,
+      "stoppedForRateBlock": false,
+      "reparsedPreviouslyCachedRawResponses": false,
+      "rawResponseCache": "scripts/data-review/output/florida-batch-exact-raw-cache.json"
+    },
+    {
+      "command": "npx tsx scripts/data-review/florida-exact-recovery.ts --whole-chapter --sections=381.986 --max-requests=1",
+      "startedAt": "2026-09-18T20:07:54.148Z",
+      "finishedAt": "2026-09-18T20:07:55.090Z",
+      "mode": "official_whole_chapter_recovery",
+      "sectionsRequested": [
+        "381.986"
+      ],
+      "actualHttpRequests": 1,
+      "acquired": 0,
+      "reused": 0,
+      "failed": 1,
+      "stoppedForRateBlock": false,
+      "reparsedPreviouslyCachedRawResponses": false,
+      "rawResponseCache": "scripts/data-review/output/florida-batch-chapter-raw-cache.json"
     }
   ],
-  "totalCollectorHttpRequests": 145,
+  "totalCollectorHttpRequests": 149,
   "note": "This append-only acquisition accounting is separate from later zero-request offline report regeneration."
 }

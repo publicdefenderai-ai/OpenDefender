@@ -199,7 +199,7 @@ export function buildFloridaCoverageInventory(
   const inputPaths = [cachePath, manifestPath, eligibilityPath];
   const definitionPaths: string[] = [];
   const analysisPaths: string[] = [];
-  for (const part of ["a", "b", "c", "d", "e"]) {
+  for (const part of ["a", "b", "c", "d", "e", "f"]) {
     const definitionPath = resolve(root, `shared/florida-reviewed-data/${part}.json`);
     const analysisPath = resolve(root, `scripts/data-review/output/florida-reviewed-analysis-${part}.json`);
     if (existsSync(definitionPath)) definitionPaths.push(definitionPath);

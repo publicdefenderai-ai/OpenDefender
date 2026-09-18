@@ -8,7 +8,7 @@ describe("Florida coverage inventory", () => {
   const inventory = buildFloridaCoverageInventory();
 
   it("reports cached evidence without inventing a statewide completeness denominator", () => {
-    expect(inventory.summary.cachedOfficialSections).toBe(1424);
+    expect(inventory.summary.cachedOfficialSections).toBe(1426);
     expect(inventory.summary.actualOffenseCount).toBeNull();
     expect(inventory.summary.statewideSectionDenominator).toBeNull();
     expect(inventory.summary.completenessPercentage).toBeNull();
@@ -67,11 +67,11 @@ describe("Florida coverage inventory", () => {
     expect(row?.selectableRecordIds).toContain("fl-fs-831-01-forgery");
   });
 
-  it("keeps the three held E scopes distinct and blocked", () => {
+  it("keeps the remaining held drug and child-law scopes distinct and blocked", () => {
     const expected = [
       ["893.13", "(3)"],
-      ["893.147", "(4)(b)"],
       ["893.147", "(7)"],
+      ["827.04", "(1)"],
     ];
     for (const [section, subdivision] of expected) {
       const row = inventory.rows.find(candidate =>

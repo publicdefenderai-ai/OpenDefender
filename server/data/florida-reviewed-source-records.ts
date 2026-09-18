@@ -11,7 +11,7 @@ import type { AuthoritySupportRole } from "../services/authority-source-database
 export const FLORIDA_REVIEWED_REPORT_PATH = resolve(
   process.cwd(), "scripts/data-review/output/florida-reviewed-analysis.json",
 );
-export const FLORIDA_REVIEWED_ANALYSIS_PATHS = ["a", "b", "c", "d", "e"].map(part =>
+export const FLORIDA_REVIEWED_ANALYSIS_PATHS = ["a", "b", "c", "d", "e", "f"].map(part =>
   resolve(process.cwd(), `scripts/data-review/output/florida-reviewed-analysis-${part}.json`));
 export const FLORIDA_REVIEWED_SOURCE_CACHE_PATH = resolve(
   process.cwd(), "scripts/data-review/output/florida-batch-source-cache.json",

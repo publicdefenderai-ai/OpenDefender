@@ -35,6 +35,9 @@ const representativePatterns = [
   ["perjury", /fl-fs-837-02-/],
   ["controlled-substance sale", /fl-fs-893-13-1-a-/],
   ["drug paraphernalia", /fl-fs-893-147-1-/],
+  ["elder abuse", /fl-fs-825-102-1-/],
+  ["child abuse", /fl-fs-827-03-2-c-/],
+  ["adult impregnation of a child", /fl-fs-827-04-3-/],
 ] as const;
 const representativeDefinitions = representativePatterns.flatMap(([kind, pattern]) => {
   const definition = FLORIDA_REVIEWED_DEFINITIONS.find((candidate) =>

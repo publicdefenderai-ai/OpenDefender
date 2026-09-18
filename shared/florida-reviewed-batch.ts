@@ -3,6 +3,7 @@ import b from "./florida-reviewed-data/b.json";
 import c from "./florida-reviewed-data/c.json";
 import d from "./florida-reviewed-data/d.json";
 import e from "./florida-reviewed-data/e.json";
+import f from "./florida-reviewed-data/f.json";
 import eligibility from "./florida-reviewed-eligibility.json";
 import {
   projectEvidenceBackedChargeBatch,
@@ -20,7 +21,7 @@ const catalogEligibility = eligibility as {
   decisions: CatalogDecision[];
 };
 export const FLORIDA_REVIEWED_DEFINITIONS: EvidenceBackedChargeDefinition[] =
-  [...a, ...b, ...c, ...d, ...e] as EvidenceBackedChargeDefinition[];
+  [...a, ...b, ...c, ...d, ...e, ...f] as EvidenceBackedChargeDefinition[];
 
 const definitions = new Map(FLORIDA_REVIEWED_DEFINITIONS.map(row => [row.id, row]));
 const decisions = new Map(catalogEligibility.decisions.map(row => [row.id, row]));

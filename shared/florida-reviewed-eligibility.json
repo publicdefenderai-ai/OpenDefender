@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "5390e4a3a75577094d286eb629624f14c1436d2329226854bea1c1a45bbb98e8",
+  "reportHash": "dbd923c3c7e226fbf504b501ebf4f33646944b5d090973e89b8c582f93028a6b",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -715,6 +715,14 @@
       "approvalHash": "d39df8d84a2fdede01050aac0733ac54a526b7d8e6868eb18605b44ef8229506"
     },
     {
+      "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "status": "eligible",
+      "reason": "The official section heading supplies exact statutory identity; subsection (4)'s parent supplies the conduct, knowledge, and transportation elements, paragraph (4)(b) supplies the narrow incorporated contraband alternative, and the common subsection tail supplies felony grading. Current § 932.701(2)(a)1. supports that alternative without projecting the rest of the contraband-article list.",
+      "draftHash": "7ac764c74fd5bf1a25eef25e6d25b943ff25b515906008eb8625c33b2986521b",
+      "definitionHash": "fa38bb19625e1de3d6f950bc7e62f2d53fd97499e30fc3719b670309ff5528b7",
+      "approvalHash": "f0b6cd4acdf431a9acd33bef01239f1ffdc6b6790750df4a13faee4304c50745"
+    },
+    {
       "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The exact official section heading identifies the statutory charge, and subsection (5) supplies publication, knowledge, purpose, and misdemeanor guilt in one clause.",
@@ -729,6 +737,78 @@
       "draftHash": "d954efcd7d982bd053e0e329b5ebf47ef73b59ce0088648d510ab26749c25292",
       "definitionHash": "25a8f3c035a6365e63eca82d4dd6f6a5cb3c5eab0bf9d4844162c6ecd0e2c842",
       "approvalHash": "5e6359c895369103994d42aed3c11dbe4d228c3e6d255cddb1ebf496b0ecabd0"
+    },
+    {
+      "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies the statutory identity; subsection (1) supplies four abuse alternatives, the knowledge or willfulness requirement, the no-great-harm limitation, an express isolation defense, and the third-degree-felony grade.",
+      "draftHash": "17247a181e0922696412d22540a328b118447436e815ea77e4993605cee205e1",
+      "definitionHash": "fc0839365eb4cdd10516cdd9ea01a636890a4045799cc0db536f9c93198ac107",
+      "approvalHash": "72800166a408fd789fb10ff12d52056337ffc85232ad2a2eb524a2125a575662"
+    },
+    {
+      "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies the statutory identity; subsection (2) supplies three aggravated-abuse alternatives and the first-degree-felony grade, with the incorporated aggravated-battery branch bound to current §§ 784.03 and 784.045.",
+      "draftHash": "5a5fc017bccf39339058fd7d84a8fd8fe2338971826b7986b2e4a9b5d7b6880f",
+      "definitionHash": "d1239e895d66a6266f8f038d343059eb30fedd0caa792c007a794cfd184ce104",
+      "approvalHash": "f43a4f019f431ed2e869b35f591e256b0cd8a71348cacceb59e44a6e785ba7e6"
+    },
+    {
+      "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies the statutory identity; paragraph (3)(b) supplies willful-or-culpably-negligent neglect, the resulting-harm element, and the second-degree-felony grade.",
+      "draftHash": "196596f6a7b16395fe1affb6147f08785831d6eb51167630b180090a19d256f5",
+      "definitionHash": "6f99f6e8fe23baf8b3bbee22b80b43025fd07899c445fff06061e13ea64a9cc5",
+      "approvalHash": "da7825267546fd89e58faff523dbece91af44f9ad8d23390c9d080fee227659e"
+    },
+    {
+      "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies the statutory identity; paragraph (3)(c) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade.",
+      "draftHash": "482f7acfcb76117fe45d00194c3bad9a8482b41a98f5cdd6fe670d725f996fa4",
+      "definitionHash": "ba255b476ee87e820ae7ecfe95999c743ab14432b1dfa5d5713418bb9158b399",
+      "approvalHash": "28947267f262b2aab1a76fa677343d5c754b2bbafcc00072738384806e9337fd"
+    },
+    {
+      "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies statutory identity; paragraph (2)(a) expressly criminalizes aggravated child abuse and states the first-degree-felony grade, while subsection (1)(a) and current §§ 784.03 and 784.045 close the definition and incorporated aggravated-battery branch.",
+      "draftHash": "2d6bb06cc72b0968a969b847171e7950d830da5576d66d5e2be8c9cf1c48115d",
+      "definitionHash": "d76f54564e0a69d551ec300d3ba04c1da57ba9ef39e8421bc4b07aa44363e564",
+      "approvalHash": "75f180d4b4c6769c15d4804c6f45b8a900b01c3987aaa08cdf78d086e0344b2d"
+    },
+    {
+      "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies statutory identity; paragraph (2)(b) supplies willful-or-culpably-negligent neglect, resulting great harm, and the second-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
+      "draftHash": "bec0be3efd100a360be6c1e0a4d859f5e9fcbe7da28531b02009bd4c9f40691c",
+      "definitionHash": "030d31a97d781d6a6683504e6faede539a87e4746f7c75ba0bf50d3bb2ca76a0",
+      "approvalHash": "e5b823097d98ee5e8d20d1d40fa3a56e3222df81ad6e963be21dc578c5c6392f"
+    },
+    {
+      "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies statutory identity; paragraph (2)(c) supplies knowing-or-willful abuse, the no-great-harm limitation, and the third-degree-felony grade, with the complete abuse definition retained as a same-section dependency.",
+      "draftHash": "9d3ecd38dc46c7920a4ffbcafd70e625e41c7fa2507417091b8646a4be99bbfc",
+      "definitionHash": "8f63d283c456060f16f58171e136d730270f50acfa916697225ccc38daa2f60f",
+      "approvalHash": "d99cc0ffb2aa6761d0bc05999fdbc8247ae7f2e0953067ff1a6972722ddbfd2c"
+    },
+    {
+      "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "status": "eligible",
+      "reason": "The exact official heading supplies statutory identity; paragraph (2)(d) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
+      "draftHash": "76c5569e46f1c16ff7a88eba16787d2aead6a9afa4a8b934841b0b91252955fa",
+      "definitionHash": "5b4220030fa828db5f6b589c44750917e0ab88a64b5b6cdca671dae05c1fcd7f",
+      "approvalHash": "8ade8e14a5d4485d647e2065029f044755d7608d500dd4778bdafd6066df1de5"
+    },
+    {
+      "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+      "status": "eligible",
+      "reason": "The exact official heading supplies statutory identity; subsection (3) independently states the actor and victim ages, impregnation conduct, third-degree-felony grade, separate-prosecution rule, and unavailable defenses.",
+      "draftHash": "41f056b35350265c94672e2218d9e7976bf87f46c43d37d2d2584675911a7d78",
+      "definitionHash": "03b456051df259ba54df3f35f17b447db0ee671f28549bcf425fd9df467a8173",
+      "approvalHash": "de8035a267dab98cb01c68811a30e2817e31df598219ac97e8a15ab23b38301a"
     }
   ]
 }

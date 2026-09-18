@@ -1,6 +1,6 @@
 # Florida coverage inventory
 
-Inventory evidence as of: 2026-09-18T16:20:48.216Z
+Inventory evidence as of: 2026-09-18T20:07:14.452Z
 
 This is a technical evidence/workflow inventory, not a representation of all Florida criminal offenses. The statewide denominator and actual offense count are unknown; no completeness percentage is calculated. Cached, unreviewed sections are **not yet analyzed**. Legacy cleanup holds are not counted as missing offenses.
 
@@ -8,12 +8,12 @@ This is a technical evidence/workflow inventory, not a representation of all Flo
 
 | Measure | Count |
 |---|---:|
-| Cached official sections | 1424 |
-| Current selectable records | 116 |
-| Reviewed selectable records | 91 |
+| Cached official sections | 1426 |
+| Current selectable records | 126 |
+| Reviewed selectable records | 101 |
 | Legacy selectable records | 25 |
 | Legacy cleanup queue | 92 |
-| Distinct selectable cited scopes | 115 |
+| Distinct selectable cited scopes | 125 |
 | Actual offense count | unknown |
 | Statewide section denominator | unknown |
 
@@ -49,17 +49,17 @@ This is a technical evidence/workflow inventory, not a representation of all Flo
 | Fla. Stat. § 893.13(6) | scope | not_yet_analyzed | — | — | This legacy cleanup item has no explicit offense analysis and is not counted as a missing offense. |
 | Fla. Stat. § 893.13(6)(a) | scope | covered | fl-fs-893-13-6-a-prohibited-acts-penalties | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
 | Fla. Stat. § 893.13(6)(b) | scope | covered | fl-possession-of-marijuana-under-20g | — | The current legacy manifest explicitly retains this exact cited scope; no broader section completeness is inferred. |
-| Fla. Stat. § 893.147 | section | partially_covered | fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible, held | One or more cited scopes map to selectable records; no statewide offense denominator or complete branch analysis proves the entire section covered. |
+| Fla. Stat. § 893.147 | section | partially_covered | fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials, fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible, held | One or more cited scopes map to selectable records; no statewide offense denominator or complete branch analysis proves the entire section covered. |
 | Fla. Stat. § 893.147 | scope | blocked | — | held | The section covers separately graded use/possession, manufacture/delivery, advertising, transport, retail, and specified-machine conduct without distinct operative offense names; the legacy possession row does not authorize a new broad-section definition. |
 | Fla. Stat. § 893.147(1) | scope | covered | fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
 | Fla. Stat. § 893.147(2) | scope | covered | fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
 | Fla. Stat. § 893.147(3)(a) | scope | covered | fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
 | Fla. Stat. § 893.147(3)(b) | scope | covered | fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
 | Fla. Stat. § 893.147(4)(a) | scope | covered | fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
-| Fla. Stat. § 893.147(4)(b) | scope | blocked | — | held | Technical hold: paragraph (4)(b) incorporates the contraband definition in § 932.701(2)(a)1., and current § 932.701 is absent from the official cache. |
+| Fla. Stat. § 893.147(4)(b) | scope | covered | fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
 | Fla. Stat. § 893.147(5) | scope | covered | fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
 | Fla. Stat. § 893.147(6) | scope | covered | fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials | eligible | An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses. |
-| Fla. Stat. § 893.147(7) | scope | blocked | — | held | Technical hold: subsection (7) incorporates current federal definitions and compliance conditions in 21 U.S.C. §§ 802, 822, and 830, the counterfeit-controlled-substance definition in § 831.31(2), and the § 381.986 licensing exception in paragraph (7)(b)3.; those current dependencies are absent from the official cache. |
+| Fla. Stat. § 893.147(7) | scope | blocked | — | held | Technical hold: although current § 831.31 is now available, subsection (7) also incorporates current federal definitions and compliance conditions in 21 U.S.C. §§ 802, 822, and 830 and the § 381.986 licensing exception in paragraph (7)(b)3.; those remaining dependencies are absent from the official cache. |
 
 ## Known absences
 
@@ -70,4 +70,4 @@ This is a technical evidence/workflow inventory, not a representation of all Flo
 
 ## Machine-readable detail
 
-The JSON and CSV beside this report contain all 1430 section rows and 180 cited-scope rows, including original retrieval timestamps and content hashes. A duplicate-citation flag is informational only: it does not merge, alias, or delete records (including the legacy/new § 831.01 forgery records).
+The JSON and CSV beside this report contain all 1432 section rows and 190 cited-scope rows, including original retrieval timestamps and content hashes. A duplicate-citation flag is informational only: it does not merge, alias, or delete records (including the legacy/new § 831.01 forgery records).

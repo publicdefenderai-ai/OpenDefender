@@ -5728,6 +5728,83 @@
       "legalReview": null
     },
     {
+      "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "code": "893.147(4)(b)",
+      "citation": "Fla. Stat. § 893.147(4)(b)",
+      "primarySourceKey": "fl:statute:893.147:4_b",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:893.147:4_b",
+        "target": "title",
+        "text": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+        "start": 0,
+        "end": 142,
+        "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:893.147:4_b",
+          "target": "text",
+          "text": "Contraband as defined in s. 932.701(2)(a)1.",
+          "start": 2845,
+          "end": 2888,
+          "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:893.147:4_b",
+          "target": "text",
+          "text": "Any person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2890,
+          "end": 3032,
+          "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:893.147:4_b",
+          "role": "offense",
+          "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+        },
+        {
+          "sourceKey": "fl:statute:893.147",
+          "role": "grading",
+          "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+        },
+        {
+          "sourceKey": "fl:statute:893.147",
+          "role": "justification",
+          "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536"
+        },
+        {
+          "sourceKey": "fl:statute:893.145",
+          "role": "definition",
+          "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0"
+        },
+        {
+          "sourceKey": "fl:statute:932.701",
+          "role": "definition",
+          "contentHash": "bbd401d5df7cfba062191d5f8fa58fcb2d2be49587fc0a7f7678e0b4413389d1"
+        },
+        {
+          "sourceKey": "fl:statute:893.02",
+          "role": "definition",
+          "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17"
+        },
+        {
+          "sourceKey": "fl:statute:893.03",
+          "role": "definition",
+          "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1"
+        }
+      ],
+      "conduct": "Contraband as defined in s. 932.701(2)(a)1.",
+      "grading": "Any person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "This record is confined to paragraph (4)(b) and only § 932.701(2)(a)1.'s narcotics-related definition: a chapter 893 controlled substance, or a substance, device, paraphernalia, currency, or other means of exchange used, attempted to be used, or intended to be used in violation of chapter 893, subject to the stated probable-cause nexus standard. It does not infer or include the other contraband-article categories in § 932.701(2)(a). Section 893.145 supports the parent term “drug paraphernalia”; §§ 893.02 and 893.03 support the incorporated controlled-substance term.",
+      "legalReview": null
+    },
+    {
       "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
       "code": "893.147(5)",
@@ -5853,6 +5930,772 @@
       "conduct": "It is unlawful for a person to knowingly and willfully sell or offer for sale at retail any drug paraphernalia described in s. 893.145(12)(a)-(c) or (g)-(m), other than a pipe that is primarily made of briar, meerschaum, clay, or corn cob.",
       "grading": "A person who violates paragraph (a) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, and, upon a second or subsequent violation, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
       "interpretation": "Item scope is exactly the incorporated § 893.145(12) subparagraphs. The material exception and repeat-offense reclassification are retained.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "code": "825.102(1)",
+      "citation": "Fla. Stat. § 825.102(1)",
+      "primarySourceKey": "fl:statute:825.102:1",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:825.102:1",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+        "start": 0,
+        "end": 86,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:1",
+          "target": "text",
+          "text": "Intentional infliction of physical or psychological injury upon an elderly person or disabled adult;",
+          "start": 164,
+          "end": 264,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102:1",
+          "target": "text",
+          "text": "An intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;",
+          "start": 271,
+          "end": 409,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102:1",
+          "target": "text",
+          "text": "Active encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or",
+          "start": 416,
+          "end": 601,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102:1",
+          "target": "text",
+          "text": "Intentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.",
+          "start": 608,
+          "end": 1277,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102:1",
+          "target": "text",
+          "text": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1279,
+          "end": 1584,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:1",
+          "target": "text",
+          "text": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1279,
+          "end": 1584,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:825.102:1",
+          "role": "offense",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102",
+          "role": "grading",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102",
+          "role": "exception",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.101",
+          "role": "definition",
+          "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "Intentional infliction of physical or psychological injury upon an elderly person or disabled adult;\nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Scope is exactly subsection (1), including all four statutory abuse alternatives and the paragraph (d) defense. It excludes aggravated abuse and both neglect grades. Section 825.101 is required for the victim definitions.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "code": "825.102(2)",
+      "citation": "Fla. Stat. § 825.102(2)",
+      "primarySourceKey": "fl:statute:825.102:2",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:825.102:2",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+        "start": 0,
+        "end": 86,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:2",
+          "target": "text",
+          "text": "Commits aggravated battery on an elderly person or disabled adult;",
+          "start": 1676,
+          "end": 1742,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102:2",
+          "target": "text",
+          "text": "Willfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or",
+          "start": 1749,
+          "end": 1865,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102:2",
+          "target": "text",
+          "text": "Knowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.",
+          "start": 1872,
+          "end": 2069,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:2",
+          "target": "text",
+          "text": "A person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2071,
+          "end": 2250,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:825.102:2",
+          "role": "offense",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102",
+          "role": "grading",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.101",
+          "role": "definition",
+          "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+        },
+        {
+          "sourceKey": "fl:statute:784.03",
+          "role": "definition",
+          "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+        },
+        {
+          "sourceKey": "fl:statute:784.045",
+          "role": "justification",
+          "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "Commits aggravated battery on an elderly person or disabled adult;\nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.",
+      "grading": "A person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Scope is exactly subsection (2). Whole current §§ 784.03 and 784.045 together supply the battery and aggravated-battery elements of the expressly incorporated alternative; neither section alone closes that branch, and no generic-name alias is used.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "code": "825.102(3)(b)",
+      "citation": "Fla. Stat. § 825.102(3)(b)",
+      "primarySourceKey": "fl:statute:825.102:3_b",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:825.102:3_b",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+        "start": 0,
+        "end": 86,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:3_b",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3212,
+          "end": 3540,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:3_b",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3212,
+          "end": 3540,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:825.102:3_b",
+          "role": "offense",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102",
+          "role": "grading",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102",
+          "role": "definition",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.101",
+          "role": "definition",
+          "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Paragraph (3)(a)'s complete neglect definition is a same-section supporting dependency. The cited primary remains paragraph (3)(b), and paragraph (3)(c)'s no-great-harm grade is separate.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "code": "825.102(3)(c)",
+      "citation": "Fla. Stat. § 825.102(3)(c)",
+      "primarySourceKey": "fl:statute:825.102:3_c",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:825.102:3_c",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+        "start": 0,
+        "end": 86,
+        "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:3_c",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3547,
+          "end": 3867,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:825.102:3_c",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3547,
+          "end": 3867,
+          "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:825.102:3_c",
+          "role": "offense",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102",
+          "role": "grading",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.102",
+          "role": "definition",
+          "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+        },
+        {
+          "sourceKey": "fl:statute:825.101",
+          "role": "definition",
+          "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Paragraph (3)(a)'s complete neglect definition is a same-section supporting dependency. The cited primary remains paragraph (3)(c), and paragraph (3)(b)'s resulting-great-harm grade is separate.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "code": "827.03(2)(a)",
+      "citation": "Fla. Stat. § 827.03(2)(a)",
+      "primarySourceKey": "fl:statute:827.03:2_a",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:827.03:2_a",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+        "start": 0,
+        "end": 58,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_a",
+          "target": "text",
+          "text": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2774,
+          "end": 2920,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_a",
+          "target": "text",
+          "text": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2774,
+          "end": 2920,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:827.03:2_a",
+          "role": "offense",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "grading",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "definition",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.01",
+          "role": "definition",
+          "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+        },
+        {
+          "sourceKey": "fl:statute:784.03",
+          "role": "definition",
+          "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+        },
+        {
+          "sourceKey": "fl:statute:784.045",
+          "role": "justification",
+          "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "The cited child paragraph relies on the parent section's express aggravated-child-abuse definition. Current §§ 784.03 and 784.045 together are required for the aggravated-battery alternative; neither section alone closes that branch. The other two alternatives remain stated in § 827.03(1)(a).",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "code": "827.03(2)(b)",
+      "citation": "Fla. Stat. § 827.03(2)(b)",
+      "primarySourceKey": "fl:statute:827.03:2_b",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:827.03:2_b",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+        "start": 0,
+        "end": 58,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_b",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2927,
+          "end": 3200,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_b",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 2927,
+          "end": 3200,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:827.03:2_b",
+          "role": "offense",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "grading",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "definition",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "exception",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.01",
+          "role": "definition",
+          "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Subsection (1)(e)'s definition, including the independent-and-unsupervised-activity limitation and injury-or-risk threshold, is required. Paragraph (2)(d)'s no-great-harm grade is separate.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "code": "827.03(2)(c)",
+      "citation": "Fla. Stat. § 827.03(2)(c)",
+      "primarySourceKey": "fl:statute:827.03:2_c",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:827.03:2_c",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+        "start": 0,
+        "end": 58,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_c",
+          "target": "text",
+          "text": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3207,
+          "end": 3457,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_c",
+          "target": "text",
+          "text": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3207,
+          "end": 3457,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:827.03:2_c",
+          "role": "offense",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "grading",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "definition",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.01",
+          "role": "definition",
+          "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Subsection (1)(b)'s three abuse alternatives and § 827.01's child definition are required. This record does not include aggravated abuse or either neglect branch.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "code": "827.03(2)(d)",
+      "citation": "Fla. Stat. § 827.03(2)(d)",
+      "primarySourceKey": "fl:statute:827.03:2_d",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:827.03:2_d",
+        "target": "title",
+        "text": "Abuse, aggravated abuse, and neglect of a child; penalties",
+        "start": 0,
+        "end": 58,
+        "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_d",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3464,
+          "end": 3729,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:827.03:2_d",
+          "target": "text",
+          "text": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 3464,
+          "end": 3729,
+          "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:827.03:2_d",
+          "role": "offense",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "grading",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "definition",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.03",
+          "role": "exception",
+          "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+        },
+        {
+          "sourceKey": "fl:statute:827.01",
+          "role": "definition",
+          "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "Subsection (1)(e)'s definition, including the independent-and-unsupervised-activity limitation and injury-or-risk threshold, is required. Paragraph (2)(b)'s resulting-great-harm grade is separate.",
+      "legalReview": null
+    },
+    {
+      "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+      "name": "Contributing to the delinquency or dependency of a child; penalty",
+      "code": "827.04(3)",
+      "citation": "Fla. Stat. § 827.04(3)",
+      "primarySourceKey": "fl:statute:827.04:3",
+      "identityEvidence": {
+        "sourceKey": "fl:statute:827.04:3",
+        "target": "title",
+        "text": "Contributing to the delinquency or dependency of a child; penalty",
+        "start": 0,
+        "end": 65,
+        "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      "conductEvidence": [
+        {
+          "sourceKey": "fl:statute:827.04:3",
+          "target": "text",
+          "text": "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1044,
+          "end": 1266,
+          "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+        }
+      ],
+      "gradeEvidence": [
+        {
+          "sourceKey": "fl:statute:827.04:3",
+          "target": "text",
+          "text": "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+          "start": 1044,
+          "end": 1266,
+          "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
+          "category": "felony"
+        }
+      ],
+      "requiredDependencies": [
+        {
+          "sourceKey": "fl:statute:827.04:3",
+          "role": "offense",
+          "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+        },
+        {
+          "sourceKey": "fl:statute:827.04",
+          "role": "grading",
+          "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+        },
+        {
+          "sourceKey": "fl:statute:827.04",
+          "role": "exception",
+          "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+        },
+        {
+          "sourceKey": "fl:statute:827.01",
+          "role": "definition",
+          "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+        },
+        {
+          "sourceKey": "fl:statute:775.082",
+          "role": "penalty",
+          "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+        },
+        {
+          "sourceKey": "fl:statute:775.083",
+          "role": "penalty",
+          "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+        },
+        {
+          "sourceKey": "fl:statute:775.084",
+          "role": "penalty",
+          "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+        }
+      ],
+      "conduct": "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "grading": "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.",
+      "interpretation": "This is the independently complete subsection (3) felony, not subsection (1)'s delinquency/dependency misdemeanor. The same-transaction rule and the express statement that lack of chastity and consent are not defenses are preserved.",
       "legalReview": null
     }
   ],
@@ -8450,6 +9293,38 @@
         }
       ]
     },
+    "fl:statute:893.147:4_b": {
+      "sourceKey": "fl:statute:893.147:4_b",
+      "section": "893.147",
+      "subdivision": "(4)(b)",
+      "citation": "Fla. Stat. § 893.147(4)(b)",
+      "title": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "text": "893.147 \nUse, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials.\n—\n\n(1) \nUSE OR POSSESSION OF DRUG PARAPHERNALIA.—\nIt is unlawful for any person to use, or to possess with intent to use, drug paraphernalia:\n(a) \nTo plant, propagate, cultivate, grow, harvest, manufacture, compound, convert, produce, process, prepare, test, analyze, pack, repack, store, contain, or conceal a controlled substance in violation of this chapter; or\n\n(b) \nTo inject, ingest, inhale, or otherwise introduce into the human body a controlled substance in violation of this chapter.\n\nAny person who violates this subsection is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nMANUFACTURE OR DELIVERY OF DRUG PARAPHERNALIA.—\nIt is unlawful for any person to deliver, possess with intent to deliver, or manufacture with intent to deliver drug paraphernalia, knowing, or under circumstances where one reasonably should know, that it will be used:\n(a) \nTo plant, propagate, cultivate, grow, harvest, manufacture, compound, convert, produce, process, prepare, test, analyze, pack, repack, store, contain, or conceal a controlled substance in violation of this act; or\n\n(b) \nTo inject, ingest, inhale, or otherwise introduce into the human body a controlled substance in violation of this act.\n\nAny person who violates this subsection is guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nDELIVERY OF DRUG PARAPHERNALIA TO A MINOR.—\n\n(a) \nAny person 18 years of age or over who violates subsection (2) by delivering drug paraphernalia to a person under 18 years of age is guilty of a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nIt is unlawful for any person to sell or otherwise deliver hypodermic syringes, needles, or other objects which may be used, are intended for use, or are designed for use in parenterally injecting substances into the human body to any person under 18 years of age, except that hypodermic syringes, needles, or other such objects may be lawfully dispensed to a person under 18 years of age by a licensed practitioner, parent, or legal guardian or by a pharmacist pursuant to a valid prescription for same. Any person who violates the provisions of this paragraph is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(4) \nTRANSPORTATION OF DRUG PARAPHERNALIA.—\nIt is unlawful to use, possess with the intent to use, or manufacture with the intent to use drug paraphernalia, knowing or under circumstances in which one reasonably should know that it will be used to transport:\n(a) \nA controlled substance in violation of this chapter; or\n\n(b) \nContraband as defined in s. 932.701(2)(a)1.\n\nAny person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(5) \nADVERTISEMENT OF DRUG PARAPHERNALIA.—\nIt is unlawful for any person to place in any newspaper, magazine, handbill, or other publication any advertisement, knowing, or under circumstances where one reasonably should know, that the purpose of the advertisement, in whole or in part, is to promote the sale of objects designed or intended for use as drug paraphernalia. Any person who violates this subsection is guilty of a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(6) \nRETAIL SALE OF DRUG PARAPHERNALIA.—\n\n(a) \nIt is unlawful for a person to knowingly and willfully sell or offer for sale at retail any drug paraphernalia described in s. 893.145(12)(a)-(c) or (g)-(m), other than a pipe that is primarily made of briar, meerschaum, clay, or corn cob.\n\n(b) \nA person who violates paragraph (a) commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, and, upon a second or subsequent violation, commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(7) \nTABLETING MACHINES, ENCAPSULATING MACHINES, AND CONTROLLED SUBSTANCE COUNTERFEITING MATERIALS.—\n\n(a) \nExcept as provided in paragraph (b), it is unlawful for any person to possess, purchase, deliver, sell, or possess with intent to sell or deliver a tableting machine, an encapsulating machine, or controlled substance counterfeiting materials knowing, intending, or having reasonable cause to believe that it will be used to manufacture a controlled substance or counterfeit controlled substance.\n\n(b)1. \nA regulated person may possess, purchase, deliver, sell, or possess with intent to deliver or sell a tableting machine or encapsulating machine as part of a regulated transaction with a regular customer or regular importer if he or she is in compliance with 21 U.S.C. s. 830. For purposes of this paragraph, the terms “regulated person,” “regulated transaction,” “regular customer,” and “regular importer” have the same meanings as provided in 21 U.S.C. s. 802.\n\n2. \nA person registered under 21 U.S.C. s. 822 may possess, purchase, deliver, sell, or possess with intent to deliver or sell a tableting machine or encapsulating machine to manufacture a controlled substance pursuant to such registration.\n\n3. \nA person who holds an active, unencumbered license or a permit under s. 381.986 or chapter 465 may possess, purchase, deliver, sell, or possess with intent to sell or deliver a tableting machine or encapsulating machine to manufacture a controlled substance, if such person is performing functions in compliance with or under the authority of that license or permit.\n\n(c) \nFor purposes of this subsection, the term:\n1. \n“Controlled substance” has the same meaning as provided in s. 893.02(4).\n\n2. \n“Controlled substance counterfeiting material” means a punch, die, plate, stone, or other item designed to print, imprint, or reproduce the trademark, trade name, or other identifying mark, imprint, or device of another or any likeness of any of the foregoing upon a drug or container or labeling thereof so as to render such drug a counterfeit controlled substance.\n\n3. \n“Counterfeit controlled substance” has the same meaning as provided in s. 831.31(2).\n\n4. \n“Encapsulating machine” means manual, semiautomatic, or fully automatic equipment that can be used to fill shells or capsules with powdered or granular solids or semisolid material to produce coherent solid tablets.\n\n5. \n“Tableting machine” means manual, semiautomatic, or fully automatic equipment that can be used to compact or mold powdered or granular solids or semisolid material to produce coherent solid tablets.\n\n(d)1. \nExcept as provided in subparagraph 2., a person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n2. \nAny person who violates this subsection knowing, intending, or having reasonable cause to believe that such action will result in the unlawful manufacture of a controlled substance or counterfeit controlled substance that contains:\na. \nA substance controlled under s. 893.03(1);\n\nb. \nCocaine, as described in s. 893.03(2)(a)4.;\n\nc. \nOpium or any synthetic or natural salt, compound, derivative, or preparation of opium;\n\nd. \nMethadone;\n\ne. \nAlfentanil, as described in s. 893.03(2)(b)1.;\n\nf. \nCarfentanil, as described in s. 893.03(2)(b)6.;\n\ng. \nFentanyl, as described in s. 893.03(2)(b)9.;\n\nh. \nSufentanil, as described in s. 893.03(2)(b)30.; or\n\ni. \nA controlled substance analog, as described in s. 893.0356, of any substance specified in sub-subparagraphs a.-h.,\n\ncommits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 80-30; s. 1, ch. 81-149; s. 54, ch. 83-215; s. 1, ch. 85-8; s. 223, ch. 91-224; s. 16, ch. 2000-360; s. 1, ch. 2013-111; s. 49, ch. 2016-105; s. 13, ch. 2018-13.",
+      "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+      "retrievedAt": "2026-09-18T15:26:43.348Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(4)(b)",
+          "start": 2840,
+          "end": 3034
+        }
+      ]
+    },
+    "fl:statute:932.701": {
+      "sourceKey": "fl:statute:932.701",
+      "section": "932.701",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 932.701",
+      "title": "Short title; definitions",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.701.html",
+      "text": "932.701 \nShort title; definitions.\n—\n\n(1) \nSections 932.701-932.7062 shall be known and may be cited as the “Florida Contraband Forfeiture Act.”\n\n(2) \nAs used in the Florida Contraband Forfeiture Act:\n(a) \n“Contraband article” means:\n1. \nAny controlled substance as defined in chapter 893 or any substance, device, paraphernalia, or currency or other means of exchange that was used, was attempted to be used, or was intended to be used in violation of any provision of chapter 893, if the totality of the facts presented by the state is clearly sufficient to meet the state’s burden of establishing probable cause to believe that a nexus exists between the article seized and the narcotics activity, whether or not the use of the contraband article can be traced to a specific narcotics transaction.\n\n2. \nAny equipment, gambling device, apparatus, material of gaming, proceeds, substituted proceeds, real or personal property, Internet domain name, gambling paraphernalia, lottery tickets, money, currency, or other means of exchange which was obtained, received, used, attempted to be used, or intended to be used in violation of the gambling laws of the state, including any violation of chapter 24, part II of chapter 285, chapter 546, chapter 550, chapter 551, or chapter 849.\n\n3. \nAny equipment, liquid or solid, which was being used, is being used, was attempted to be used, or intended to be used in violation of the beverage or tobacco laws of the state.\n\n4. \nAny motor fuel upon which the motor fuel tax has not been paid as required by law.\n\n5. \nAny personal property, including, but not limited to, any vessel, aircraft, item, object, tool, substance, device, weapon, machine, vehicle of any kind, money, securities, books, records, research, negotiable instruments, or currency, which was used or was attempted to be used as an instrumentality in the commission of, or in aiding or abetting in the commission of, any felony, whether or not comprising an element of the felony, or which is acquired by proceeds obtained as a result of a violation of the Florida Contraband Forfeiture Act.\n\n6. \nAny real property, including any right, title, leasehold, or other interest in the whole of any lot or tract of land, which was used, is being used, or was attempted to be used as an instrumentality in the commission of, or in aiding or abetting in the commission of, any felony, or which is acquired by proceeds obtained as a result of a violation of the Florida Contraband Forfeiture Act.\n\n7. \nAny personal property, including, but not limited to, equipment, money, securities, books, records, research, negotiable instruments, currency, or any vessel, aircraft, item, object, tool, substance, device, weapon, machine, or vehicle of any kind in the possession of or belonging to any person who takes aquaculture products in violation of s. 812.014(2)(c).\n\n8. \nAny motor vehicle offered for sale in violation of s. 320.28.\n\n9. \nAny motor vehicle used during the course of committing an offense in violation of s. 322.34(9)(a).\n\n10. \nAny photograph, film, or other recorded image, including an image recorded on videotape, a compact disc, digital tape, or fixed disk, that is recorded in violation of s. 810.145 and is possessed for the purpose of amusement, entertainment, sexual arousal, gratification, or profit, or for the purpose of degrading or abusing another person.\n\n11. \nAny real property, including any right, title, leasehold, or other interest in the whole of any lot or tract of land, which is acquired by proceeds obtained as a result of Medicaid fraud under s. 409.920 or s. 409.9201; any personal property, including, but not limited to, equipment, money, securities, books, records, research, negotiable instruments, or currency; or any vessel, aircraft, item, object, tool, substance, device, weapon, machine, or vehicle of any kind in the possession of or belonging to any person which is acquired by proceeds obtained as a result of Medicaid fraud under s. 409.920 or s. 409.9201.\n\n12. \nAny personal property, including, but not limited to, any vehicle, item, object, tool, device, weapon, machine, money, security, book, or record, that is used or attempted to be used as an instrumentality in the commission of, or in aiding and abetting in the commission of, a person’s third or subsequent violation of s. 509.144, whether or not comprising an element of the offense.\n\n(b) \n“Bona fide lienholder” means the holder of a lien perfected pursuant to applicable law.\n\n(c) \n“Promptly proceed” means to file the complaint within 45 days after seizure.\n\n(d) \n“Complaint” is a petition for forfeiture filed in the civil division of the circuit court by the seizing agency requesting the court to issue a judgment of forfeiture.\n\n(e) \n“Person entitled to notice” means any owner, entity, bona fide lienholder, or person in possession of the property subject to forfeiture when seized, who is known to the seizing agency after a diligent search and inquiry.\n\n(f) \n“Adversarial preliminary hearing” means a hearing in which the seizing agency is required to establish probable cause that the property subject to forfeiture was used in violation of the Florida Contraband Forfeiture Act.\n\n(g) \n“Forfeiture proceeding” means a hearing or trial in which the court or jury determines whether the subject property shall be forfeited.\n\n(h) \n“Claimant” means any party who has proprietary interest in property subject to forfeiture and has standing to challenge such forfeiture, including owners, registered owners, bona fide lienholders, and titleholders.\n\nHistory.\n—\nss. 1, 2, ch. 74-385; s. 1, ch. 80-68; s. 1, ch. 89-148; s. 1, ch. 92-54; s. 1, ch. 95-265; s. 31, ch. 96-247; s. 2, ch. 99-234; s. 69, ch. 99-248; s. 2, ch. 2004-39; s. 15, ch. 2004-344; s. 166, ch. 2008-4; s. 14, ch. 2011-119; s. 1, ch. 2016-179; s. 2, ch. 2018-49; s. 12, ch. 2021-269.\n\n1Note.\n—\nSection 15, ch. 2011-119, provides that “[t]he amendments made to ss. 509.144 and 932.701, Florida Statutes, and the creation of s. 901.1503, Florida Statutes, by this act do not affect or impede the provisions of s. 790.251, Florida Statutes, or any other protection or right guaranteed by the Second Amendment to the United States Constitution.”\n\nNote.\n—\nFormer s. 943.41.",
+      "contentHash": "bbd401d5df7cfba062191d5f8fa58fcb2d2be49587fc0a7f7678e0b4413389d1",
+      "retrievedAt": "2026-09-18T20:07:12.284Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
     "fl:statute:893.147:5": {
       "sourceKey": "fl:statute:893.147:5",
       "section": "893.147",
@@ -8487,6 +9362,242 @@
           "end": 4119
         }
       ]
+    },
+    "fl:statute:825.102:1": {
+      "sourceKey": "fl:statute:825.102:1",
+      "section": "825.102",
+      "subdivision": "(1)",
+      "citation": "Fla. Stat. § 825.102(1)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(1)",
+          "start": 100,
+          "end": 1586
+        }
+      ]
+    },
+    "fl:statute:775.082": {
+      "sourceKey": "fl:statute:775.082",
+      "section": "775.082",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 775.082",
+      "title": "Penalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+      "text": "775.082 \nPenalties; applicability of sentencing structures; mandatory minimum sentences for certain reoffenders previously released from prison.\n—\n\n(1)(a) \nExcept as provided in paragraph (b), a person who has been convicted of a capital felony shall be punished by death if the proceeding held to determine sentence according to the procedure set forth in s. 921.141 results in a determination that such person shall be punished by death, otherwise such person shall be punished by life imprisonment and shall be ineligible for parole.\n\n(b)1. \nA person who actually killed, intended to kill, or attempted to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age shall be punished by a term of imprisonment for life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. If the court finds that life imprisonment is not an appropriate sentence, such person shall be punished by a term of imprisonment of at least 40 years. A person sentenced pursuant to this subparagraph is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(a).\n\n2. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and who is convicted under s. 782.04 of a capital felony, or an offense that was reclassified as a capital felony, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life if, after a sentencing hearing conducted by the court in accordance with s. 921.1401, the court finds that life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\n3. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(a) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(2) \nIn the event the death penalty in a capital felony is held to be unconstitutional by the Florida Supreme Court or the United States Supreme Court, the court having jurisdiction over a person previously sentenced to death for a capital felony shall cause such person to be brought before the court, and the court shall sentence such person to life imprisonment as provided in subsection (1). No sentence of death shall be reduced as a result of a determination that a method of execution is held to be unconstitutional under the State Constitution or the Constitution of the United States.\n\n(3) \nA person who has been convicted of any other designated felony may be punished as follows:\n(a)1. \nFor a life felony committed before October 1, 1983, by a term of imprisonment for life or for a term of at least 30 years.\n\n2. \nFor a life felony committed on or after October 1, 1983, by a term of imprisonment for life or by a term of imprisonment not exceeding 40 years.\n\n3. \nExcept as provided in subparagraph 4., for a life felony committed on or after July 1, 1995, by a term of imprisonment for life or by imprisonment for a term of years not exceeding life imprisonment.\n\n4.a. \nExcept as provided in sub-subparagraph b., for a life felony committed on or after September 1, 2005, which is a violation of s. 800.04(5)(b), by:\n(I) \nA term of imprisonment for life; or\n\n(II) \nA split sentence that is a term of at least 25 years’ imprisonment and not exceeding life imprisonment, followed by probation or community control for the remainder of the person’s natural life, as provided in s. 948.012(4).\n\nb. \nFor a life felony committed on or after July 1, 2008, which is a person’s second or subsequent violation of s. 800.04(5)(b), by a term of imprisonment for life.\n\n5. \nNotwithstanding subparagraphs 1.-4., a person who is convicted under s. 782.04 of an offense that was reclassified as a life felony which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n6. \nFor a life felony committed on or after October 1, 2014, which is a violation of s. 787.06(3)(g), by a term of imprisonment for life.\n\n(b)1. \nFor a felony of the first degree, by a term of imprisonment not exceeding 30 years or, when specifically provided by statute, by imprisonment for a term of years not exceeding life imprisonment.\n\n2. \nNotwithstanding subparagraph 1., a person convicted under s. 782.04 of a first degree felony punishable by a term of years not exceeding life imprisonment, or an offense that was reclassified as a first degree felony punishable by a term of years not exceeding life, which was committed before the person attained 18 years of age may be punished by a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that a term of years equal to life imprisonment is an appropriate sentence.\na. \nA person who actually killed, intended to kill, or attempted to kill the victim and is sentenced to a term of imprisonment of more than 25 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(b).\n\nb. \nA person who did not actually kill, intend to kill, or attempt to kill the victim and is sentenced to a term of imprisonment of more than 15 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(c).\n\nc. \nThe court shall make a written finding as to whether a person is eligible for a sentence review hearing under s. 921.1402(2)(b) or (c). Such a finding shall be based upon whether the person actually killed, intended to kill, or attempted to kill the victim. The court may find that multiple defendants killed, intended to kill, or attempted to kill the victim.\n\n(c) \nNotwithstanding paragraphs (a) and (b), a person convicted of an offense that is not included in s. 782.04 but that is an offense that is a life felony or is punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, or an offense that was reclassified as a life felony or an offense punishable by a term of imprisonment for life or by a term of years not exceeding life imprisonment, which was committed before the person attained 18 years of age may be punished by a term of imprisonment for life or a term of years equal to life imprisonment if the judge conducts a sentencing hearing in accordance with s. 921.1401 and finds that life imprisonment or a term of years equal to life imprisonment is an appropriate sentence. A person who is sentenced to a term of imprisonment of more than 20 years is entitled to a review of his or her sentence in accordance with s. 921.1402(2)(d).\n\n(d) \nFor a felony of the second degree, by a term of imprisonment not exceeding 15 years.\n\n(e) \nFor a felony of the third degree, by a term of imprisonment not exceeding 5 years.\n\n(4) \nA person who has been convicted of a designated misdemeanor may be sentenced as follows:\n(a) \nFor a misdemeanor of the first degree, by a definite term of imprisonment not exceeding 1 year;\n\n(b) \nFor a misdemeanor of the second degree, by a definite term of imprisonment not exceeding 60 days.\n\n(5) \nAny person who has been convicted of a noncriminal violation may not be sentenced to a term of imprisonment nor to any other punishment more severe than a fine, forfeiture, or other civil penalty, except as provided in chapter 316 or by ordinance of any city or county.\n\n(6) \nNothing in this section shall be construed to alter the operation of any statute of this state authorizing a trial court, in its discretion, to impose a sentence of imprisonment for an indeterminate period within minimum and maximum limits as provided by law, except as provided in subsection (1).\n\n(7) \nThis section does not deprive the court of any authority conferred by law to decree a forfeiture of property, suspend or cancel a license, remove a person from office, or impose any other civil penalty. Such a judgment or order may be included in the sentence.\n\n(8)(a) \nThe sentencing guidelines that were effective October 1, 1983, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1983, and before January 1, 1994, and to all felonies, except capital felonies and life felonies, committed before October 1, 1983, when the defendant affirmatively selects to be sentenced pursuant to such provisions.\n\n(b) \nThe 1994 sentencing guidelines, that were effective January 1, 1994, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after January 1, 1994, and before October 1, 1995.\n\n(c) \nThe 1995 sentencing guidelines that were effective October 1, 1995, and any revisions thereto, apply to all felonies, except capital felonies, committed on or after October 1, 1995, and before October 1, 1998.\n\n(d) \nThe Criminal Punishment Code applies to all felonies, except capital felonies, committed on or after October 1, 1998. Any revision to the Criminal Punishment Code applies to sentencing for all felonies, except capital felonies, committed on or after the effective date of the revision.\n\n(e) \nFelonies, except capital felonies, with continuing dates of enterprise shall be sentenced under the sentencing guidelines or the Criminal Punishment Code in effect on the beginning date of the criminal activity.\n\n(9)(a)1. \n“Prison releasee reoffender” means any defendant who commits, or attempts to commit:\na. \nTreason;\n\nb. \nMurder;\n\nc. \nManslaughter;\n\nd. \nSexual battery;\n\ne. \nCarjacking;\n\nf. \nHome-invasion robbery;\n\ng. \nRobbery;\n\nh. \nArson;\n\ni. \nKidnapping;\n\nj. \nAggravated assault with a deadly weapon;\n\nk. \nAggravated battery;\n\nl. \nAggravated stalking;\n\nm. \nAircraft piracy;\n\nn. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\no. \nAny felony that involves the use or threat of physical force or violence against an individual;\n\np. \nArmed burglary;\n\nq. \nBurglary of a dwelling or burglary of an occupied structure;\n\nr. \nAny felony violation of s. 790.07, s. 800.04, s. 827.03, s. 827.071, or s. 847.0135(5); or\n\ns. \nBattery on a law enforcement officer which results in bodily injury;\n\nwithin 3 years after being released from a state correctional facility operated by the Department of Corrections or a private vendor, a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence, or a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n2. \n“Prison releasee reoffender” also means any defendant who commits or attempts to commit any offense listed in sub-subparagraphs 1.a.-s. while the defendant was serving a prison sentence or on escape status from a state correctional facility operated by the Department of Corrections or a private vendor or while the defendant was on escape status from a correctional institution of another state, the District of Columbia, the United States, any possession or territory of the United States, or any foreign jurisdiction, following incarceration for an offense for which the sentence is punishable by more than 1 year in this state.\n\n3. \nIf the state attorney determines that a defendant is a prison releasee reoffender as defined in subparagraph 1., the state attorney may seek to have the court sentence the defendant as a prison releasee reoffender. Upon proof from the state attorney that establishes by a preponderance of the evidence that a defendant is a prison releasee reoffender as defined in this section, such defendant is not eligible for sentencing under the sentencing guidelines and must be sentenced as follows:\na. \nFor a felony punishable by life, by a term of imprisonment for life;\n\nb. \nFor a felony of the first degree, by a term of imprisonment of 30 years;\n\nc. \nFor a felony of the second degree, by a term of imprisonment of 15 years; and\n\nd. \nFor a felony of the third degree, by a term of imprisonment of 5 years.\n\n(b) \nA person sentenced under paragraph (a) shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release. Any person sentenced under paragraph (a) must serve 100 percent of the court-imposed sentence.\n\n(c) \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law, pursuant to s. 775.084 or any other provision of law.\n\n(d)1. \nIt is the intent of the Legislature that offenders previously released from prison or a county detention facility following incarceration for an offense for which the sentence pronounced was a prison sentence who meet the criteria in paragraph (a) be punished to the fullest extent of the law and as provided in this subsection, unless the state attorney determines that extenuating circumstances exist which preclude the just prosecution of the offender, including whether the victim recommends that the offender not be sentenced as provided in this subsection.\n\n2. \nFor every case in which the offender meets the criteria in paragraph (a) and does not receive the mandatory minimum prison sentence, the state attorney must explain the sentencing deviation in writing and place such explanation in the case file maintained by the state attorney.\n\n(10) \nIf a defendant is sentenced for an offense committed on or after July 1, 2009, which is a third degree felony but not a forcible felony as defined in s. 776.08, and excluding any third degree felony violation under chapter 810, and if the total sentence points pursuant to s. 921.0024 are 22 points or fewer, the court must sentence the offender to a nonstate prison sanction. However, if the court makes written findings that a nonstate prison sanction could present a danger to the public, the court may sentence the offender to a state correctional facility pursuant to this section.\n\n(11) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 3, ch. 71-136; ss. 1, 2, ch. 72-118; s. 2, ch. 72-724; s. 5, ch. 74-383; s. 1, ch. 77-174; s. 1, ch. 83-87; s. 1, ch. 94-228; s. 16, ch. 95-184; s. 4, ch. 95-294; s. 2, ch. 97-239; s. 2, ch. 98-3; s. 10, ch. 98-204; s. 2, ch. 99-188; s. 3, ch. 2000-246; s. 1, ch. 2001-239; s. 2, ch. 2002-70; ss. 1, 2, ch. 2002-211; s. 4, ch. 2005-28; s. 13, ch. 2008-172; s. 1, ch. 2008-182; s. 1, ch. 2009-63; s. 2, ch. 2011-200; s. 8, ch. 2014-160; s. 1, ch. 2014-220; s. 1, ch. 2016-13; s. 19, ch. 2016-24; s. 3, ch. 2017-1; s. 21, ch. 2017-37; s. 11, ch. 2017-107; s. 30, ch. 2019-167; s. 1, ch. 2026-149.",
+      "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+      "retrievedAt": "2026-09-18T15:26:27.111Z",
+      "effectiveDateStart": "October 1, 1995",
+      "subdivisionRanges": []
+    },
+    "fl:statute:775.083": {
+      "sourceKey": "fl:statute:775.083",
+      "section": "775.083",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 775.083",
+      "title": "Fines",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+      "text": "775.083 \nFines.\n—\n\n(1) \nA person who has been convicted of an offense other than a capital felony may be sentenced to pay a fine in addition to any punishment described in s. 775.082; when specifically authorized by statute, he or she may be sentenced to pay a fine in lieu of any punishment described in s. 775.082. A person who has been convicted of a noncriminal violation may be sentenced to pay a fine. Fines for designated crimes and for noncriminal violations shall not exceed:\n(a) \n$15,000, when the conviction is of a life felony.\n\n(b) \n$10,000, when the conviction is of a felony of the first or second degree.\n\n(c) \n$5,000, when the conviction is of a felony of the third degree.\n\n(d) \n$1,000, when the conviction is of a misdemeanor of the first degree.\n\n(e) \n$500, when the conviction is of a misdemeanor of the second degree or a noncriminal violation.\n\n(f) \nAny higher amount equal to double the pecuniary gain derived from the offense by the offender or double the pecuniary loss suffered by the victim.\n\n(g) \nAny higher amount specifically authorized by statute.\n\nFines imposed in this subsection shall be deposited by the clerk of the court in the fine and forfeiture fund established pursuant to s. 142.01. If a defendant is unable to pay a fine, the court may defer payment of the fine to a date certain. As used in this subsection, the term “convicted” or “conviction” means a determination of guilt which is the result of a trial or the entry of a plea of guilty or nolo contendere, regardless of whether adjudication is withheld.\n\n(2) \nIn addition to the fines set forth in subsection (1), court costs shall be assessed and collected in each instance a defendant pleads nolo contendere to, or is convicted of, or adjudicated delinquent for, a felony, a misdemeanor, or a criminal traffic offense under state law, or a violation of any municipal or county ordinance if the violation constitutes a misdemeanor under state law. The court costs imposed by this section shall be $50 for a felony and $20 for any other offense and shall be deposited by the clerk of the court into an appropriate county account for disbursement for the purposes provided in this subsection. A county shall account for the funds separately from other county funds as crime prevention funds. The county, in consultation with the sheriff, must expend such funds for crime prevention programs in the county.\n\n(3) \nThe clerk of the court of each county is the entity responsible for collecting payment of fines, fees, service charges, and court costs. Unless otherwise designated by the court, a person who has been ordered to pay court obligations under this section shall immediately contact the clerk to pay fines, fees, service charges, and court costs in full or to apply for enrollment in a payment plan pursuant to s. 28.246(4).\n\n(4) \nThe purpose of this section is to provide uniform penalty authorization for criminal offenses and, to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 4, ch. 71-136; s. 6, ch. 74-383; s. 1, ch. 77-97; s. 1, ch. 77-174; s. 1, ch. 96-408; s. 1810, ch. 97-102; s. 117, ch. 2003-402; s. 5, ch. 2009-6; s. 29, ch. 2010-162; s. 8, ch. 2017-126; s. 13, ch. 2021-116; s. 19, ch. 2021-131.",
+      "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+      "retrievedAt": "2026-09-18T15:26:27.111Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
+    "fl:statute:775.084": {
+      "sourceKey": "fl:statute:775.084",
+      "section": "775.084",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 775.084",
+      "title": "Violent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+      "text": "775.084 \nViolent career criminals; habitual felony offenders and habitual violent felony offenders; three-time violent felony offenders; definitions; procedure; enhanced penalties or mandatory minimum prison terms.\n—\n\n(1) \nAs used in this act:\n(a) \n“Habitual felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(a), if it finds that:\n1. \nThe defendant has previously been convicted of any combination of two or more felonies in this state or other qualified offenses.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for a felony or other qualified offense; or\n\nb. \nWithin 5 years of the date of the conviction of the defendant’s last prior felony or other qualified offense, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for a felony or other qualified offense, whichever is later.\n\n3. \nThe felony for which the defendant is to be sentenced, and one of the two prior felony convictions, is not a violation of s. 893.13 relating to the purchase or the possession of a controlled substance.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(b) \n“Habitual violent felony offender” means a defendant for whom the court may impose an extended term of imprisonment, as provided in paragraph (4)(b), if it finds that:\n1. \nThe defendant has previously been convicted of a felony or an attempt or conspiracy to commit a felony and one or more of such convictions was for:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery; or\n\no. \nAggravated stalking.\n\n2. \nThe felony for which the defendant is to be sentenced was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years of the date of the conviction of the last prior enumerated felony, or within 5 years of the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(c) \n“Three-time violent felony offender” means a defendant for whom the court must impose a mandatory minimum term of imprisonment, as provided in paragraph (4)(c), if it finds that:\n1. \nThe defendant has previously been convicted as an adult two or more times of a felony, or an attempt to commit a felony, and two or more of such convictions were for committing, or attempting to commit, any of the following offenses or combination thereof:\na. \nArson;\n\nb. \nSexual battery;\n\nc. \nRobbery;\n\nd. \nKidnapping;\n\ne. \nAggravated child abuse;\n\nf. \nAggravated abuse of an elderly person or disabled adult;\n\ng. \nAggravated assault with a deadly weapon;\n\nh. \nMurder;\n\ni. \nManslaughter;\n\nj. \nAggravated manslaughter of an elderly person or disabled adult;\n\nk. \nAggravated manslaughter of a child;\n\nl. \nUnlawful throwing, placing, or discharging of a destructive device or bomb;\n\nm. \nArmed burglary;\n\nn. \nAggravated battery;\n\no. \nAggravated stalking;\n\np. \nHome invasion/robbery;\n\nq. \nCarjacking; or\n\nr. \nAn offense which is in violation of a law of any other jurisdiction if the elements of the offense are substantially similar to the elements of any felony offense enumerated in sub-subparagraphs a.-q., or an attempt to commit any such felony offense.\n\n2. \nThe felony for which the defendant is to be sentenced is one of the felonies enumerated in sub-subparagraphs 1.a.-q. and was committed:\na. \nWhile the defendant was serving a prison sentence or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r.; or\n\nb. \nWithin 5 years after the date of the conviction of the last prior offense enumerated in sub-subparagraphs 1.a.-r., or within 5 years after the defendant’s release from a prison sentence, probation, community control, or other sentence imposed as a result of a prior conviction for any offense enumerated in sub-subparagraphs 1.a.-r., whichever is later.\n\n3. \nThe defendant has not received a pardon on the ground of innocence for any crime that is necessary for the operation of this paragraph.\n\n4. \nA conviction of a crime necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(d) \n“Violent career criminal” means a defendant for whom the court must impose imprisonment pursuant to paragraph (4)(d), if it finds that:\n1. \nThe defendant has previously been convicted as an adult three or more times for an offense in this state or other qualified offense that is:\na. \nAny forcible felony, as described in s. 776.08;\n\nb. \nAggravated stalking, as described in s. 784.048(3) and (4);\n\nc. \nAggravated child abuse, as described in s. 827.03(2)(a);\n\nd. \nAggravated abuse of an elderly person or disabled adult, as described in s. 825.102(2);\n\ne. \nLewd or lascivious battery, lewd or lascivious molestation, lewd or lascivious conduct, or lewd or lascivious exhibition, as described in s. 800.04 or s. 847.0135(5);\n\nf. \nEscape, as described in s. 944.40; or\n\ng. \nA felony violation of chapter 790 involving the use or possession of a firearm.\n\n2. \nThe defendant has been incarcerated in a state prison or a federal prison.\n\n3. \nThe primary felony offense for which the defendant is to be sentenced is a felony enumerated in subparagraph 1. and was committed on or after October 1, 1995, and:\na. \nWhile the defendant was serving a prison sentence or other sentence, or court-ordered or lawfully imposed supervision that is imposed as a result of a prior conviction for an enumerated felony; or\n\nb. \nWithin 5 years after the conviction of the last prior enumerated felony, or within 5 years after the defendant’s release from a prison sentence, probation, community control, control release, conditional release, parole, or court-ordered or lawfully imposed supervision or other sentence that is imposed as a result of a prior conviction for an enumerated felony, whichever is later.\n\n4. \nThe defendant has not received a pardon for any felony or other qualified offense that is necessary for the operation of this paragraph.\n\n5. \nA conviction of a felony or other qualified offense necessary to the operation of this paragraph has not been set aside in any postconviction proceeding.\n\n(e) \n“Qualified offense” means any offense, substantially similar in elements and penalties to an offense in this state, which is in violation of a law of any other jurisdiction, whether that of another state, the District of Columbia, the United States or any possession or territory thereof, or any foreign jurisdiction, that was punishable under the law of such jurisdiction at the time of its commission by the defendant by death or imprisonment exceeding 1 year.\n\n(2) \nFor the purposes of this section, the placing of a person on probation or community control without an adjudication of guilt shall be treated as a prior conviction.\n\n(3)(a) \nIn a separate proceeding, the court shall determine if the defendant is a habitual felony offender or a habitual violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a habitual felony offender or a habitual violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a habitual felony offender or a habitual violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a habitual felony offender sanction or a habitual violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a habitual felony offender or a habitual violent felony offender, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a habitual felony offender or a habitual violent felony offender, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a habitual felony offender or a habitual violent felony offender as provided in this subparagraph.\n\n(b) \nIn a separate proceeding, the court shall determine if the defendant is a three-time violent felony offender. The procedure shall be as follows:\n1. \nThe court shall obtain and consider a presentence investigation prior to the imposition of a sentence as a three-time violent felony offender.\n\n2. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n3. \nExcept as provided in subparagraph 1., all evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n4. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable to the extent normally applicable to similar findings.\n\n5. \nFor the purpose of identification of a three-time violent felony offender, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n6. \nFor an offense committed on or after the effective date of this act, if the state attorney pursues a three-time violent felony offender sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a three-time violent felony offender, subject to imprisonment pursuant to this section as provided in paragraph (4)(c).\n\n(c) \nIn a separate proceeding, the court shall determine whether the defendant is a violent career criminal with respect to a primary offense committed on or after October 1, 1995. The procedure shall be as follows:\n1. \nWritten notice shall be served on the defendant and the defendant’s attorney a sufficient time prior to the entry of a plea or prior to the imposition of sentence in order to allow the preparation of a submission on behalf of the defendant.\n\n2. \nAll evidence presented shall be presented in open court with full rights of confrontation, cross-examination, and representation by counsel.\n\n3. \nEach of the findings required as the basis for such sentence shall be found to exist by a preponderance of the evidence and shall be appealable only as provided in paragraph (d).\n\n4. \nFor the purpose of identification, the court shall fingerprint the defendant pursuant to s. 921.241.\n\n5. \nFor an offense committed on or after October 1, 1995, if the state attorney pursues a violent career criminal sanction against the defendant and the court, in a separate proceeding pursuant to this paragraph, determines that the defendant meets the criteria under subsection (1) for imposing such sanction, the court must sentence the defendant as a violent career criminal, subject to imprisonment pursuant to this section unless the court finds that such sentence is not necessary for the protection of the public. If the court finds that it is not necessary for the protection of the public to sentence the defendant as a violent career criminal, the court shall provide written reasons; a written transcript of orally stated reasons is permissible, if filed by the court within 7 days after the date of sentencing. Each month, the court shall submit to the Office of Economic and Demographic Research of the Legislature the written reasons or transcripts in each case in which the court determines not to sentence a defendant as a violent career criminal as provided in this subparagraph.\n\n(d)1. \nA person sentenced under paragraph (4)(d) as a violent career criminal has the right of direct appeal, and either the state or the defendant may petition the trial court to vacate an illegal sentence at any time. However, the determination of the trial court to impose or not to impose a violent career criminal sentence is presumed appropriate and no petition or motion for collateral or other postconviction relief may be considered based on an allegation either by the state or the defendant that such sentence is inappropriate, inadequate, or excessive.\n\n2. \nIt is the intent of the Legislature that, with respect to both direct appeal and collateral review of violent career criminal sentences, all claims of error or illegality be raised at the first opportunity and that no claim should be filed more than 2 years after the judgment and sentence became final, unless it is established that the basis for the claim could not have been ascertained at the time by the exercise of due diligence. Technical violations and mistakes at trials and sentencing proceedings involving violent career criminals that do not affect due process or fundamental fairness are not appealable by either the state or the defendant.\n\n3. \nIt is the intent of the Legislature that no funds, resources, or employees of the state or its political subdivisions be used, directly or indirectly, in appellate or collateral proceedings based on violent career criminal sentencing, except when such use is constitutionally or statutorily mandated.\n\n(4)(a) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10.\n\n(b) \nThe court, in conformity with the procedure established in paragraph (3)(a), may sentence the habitual violent felony offender as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life, and such offender shall not be eligible for release for 15 years.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 30, and such offender shall not be eligible for release for 10 years.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 10, and such offender shall not be eligible for release for 5 years.\n\n(c)1. \nThe court, in conformity with the procedure established in paragraph (3)(b), must sentence the three-time violent felony offender to a mandatory minimum term of imprisonment, as follows:\na. \nIn the case of a felony punishable by life, to a term of imprisonment for life;\n\nb. \nIn the case of a felony of the first degree, to a term of imprisonment of 30 years;\n\nc. \nIn the case of a felony of the second degree, to a term of imprisonment of 15 years; or\n\nd. \nIn the case of a felony of the third degree, to a term of imprisonment of 5 years.\n\n2. \nNothing in this subsection shall prevent a court from imposing a greater sentence of incarceration as authorized by law.\n\n(d) \nThe court, in conformity with the procedure established in paragraph (3)(c), shall sentence the violent career criminal as follows:\n1. \nIn the case of a life felony or a felony of the first degree, for life.\n\n2. \nIn the case of a felony of the second degree, for a term of years not exceeding 40, with a mandatory minimum term of 30 years’ imprisonment.\n\n3. \nIn the case of a felony of the third degree, for a term of years not exceeding 15, with a mandatory minimum term of 10 years’ imprisonment.\n\n(e) \nIf the court finds, pursuant to paragraph (3)(a) or paragraph (3)(c), that it is not necessary for the protection of the public to sentence a defendant who meets the criteria for sentencing as a habitual felony offender, a habitual violent felony offender, or a violent career criminal, with respect to an offense committed on or after October 1, 1995, sentence shall be imposed without regard to this section.\n\n(f) \nAt any time when it appears to the court that the defendant is eligible for sentencing under this section, the court shall make that determination as provided in paragraph (3)(a), paragraph (3)(b), or paragraph (3)(c).\n\n(g) \nA sentence imposed under this section shall not be increased after such imposition.\n\n(h) \nA sentence imposed under this section is not subject to s. 921.002.\n\n(i) \nThe provisions of this section do not apply to capital felonies, and a sentence authorized under this section does not preclude the imposition of the death penalty for a capital felony.\n\n(j) \nThe provisions of s. 947.1405 shall apply to persons sentenced as habitual felony offenders and persons sentenced as habitual violent felony offenders.\n\n(k)1. \nA defendant sentenced under this section as a habitual felony offender, a habitual violent felony offender, or a violent career criminal is eligible for gain-time granted by the Department of Corrections as provided in s. 944.275(4)(b).\n\n2. \nFor an offense committed on or after October 1, 1995, a defendant sentenced under this section as a violent career criminal is not eligible for any form of discretionary early release, other than pardon or executive clemency, or conditional medical release granted pursuant to s. 947.149.\n\n3. \nFor an offense committed on or after July 1, 1999, a defendant sentenced under this section as a three-time violent felony offender shall be released only by expiration of sentence and shall not be eligible for parole, control release, or any form of early release.\n\n(5) \nIn order to be counted as a prior felony for purposes of sentencing under this section, the felony must have resulted in a conviction sentenced separately prior to the current offense and sentenced separately from any other felony conviction that is to be counted as a prior felony.\n\n(6) \nThe purpose of this section is to provide uniform punishment for those crimes made punishable under this section, and to this end, a reference to this section constitutes a general reference under the doctrine of incorporation by reference.\n\nHistory.\n—\ns. 5, ch. 71-136; s. 7, ch. 74-383; s. 1, ch. 75-116; s. 2, ch. 75-298; s. 1, ch. 77-174; s. 6, ch. 88-131; s. 1, ch. 89-280; s. 2, ch. 93-406; s. 2, ch. 95-182; s. 8, ch. 95-195; s. 14, ch. 96-322; s. 44, ch. 96-388; s. 12, ch. 97-78; s. 12, ch. 97-194; s. 11, ch. 98-204; s. 3, ch. 99-188; s. 3, ch. 99-201; s. 3, ch. 2000-246; ss. 1, 2, ch. 2002-210; s. 2, ch. 2003-23; s. 14, ch. 2008-172; s. 10, ch. 2012-155; s. 39, ch. 2016-105; s. 8, ch. 2019-98.",
+      "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+      "retrievedAt": "2026-09-18T15:26:27.111Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
+    "fl:statute:825.102:2": {
+      "sourceKey": "fl:statute:825.102:2",
+      "section": "825.102",
+      "subdivision": "(2)",
+      "citation": "Fla. Stat. § 825.102(2)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(2)",
+          "start": 1586,
+          "end": 2252
+        }
+      ]
+    },
+    "fl:statute:825.102:3_b": {
+      "sourceKey": "fl:statute:825.102:3_b",
+      "section": "825.102",
+      "subdivision": "(3)(b)",
+      "citation": "Fla. Stat. § 825.102(3)(b)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(3)(b)",
+          "start": 3207,
+          "end": 3542
+        }
+      ]
+    },
+    "fl:statute:825.102:3_c": {
+      "sourceKey": "fl:statute:825.102:3_c",
+      "section": "825.102",
+      "subdivision": "(3)(c)",
+      "citation": "Fla. Stat. § 825.102(3)(c)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "text": "825.102 \nAbuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties.\n—\n\n(1) \n“Abuse of an elderly person or disabled adult” means:\n(a) \nIntentional infliction of physical or psychological injury upon an elderly person or disabled adult;\n\n(b) \nAn intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;\n\n(c) \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or\n\n(d) \nIntentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.\n\nA person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(2) \n“Aggravated abuse of an elderly person or disabled adult” occurs when a person:\n(a) \nCommits aggravated battery on an elderly person or disabled adult;\n\n(b) \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or\n\n(c) \nKnowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult.\n\nA person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3)(a) \n“Neglect of an elderly person or disabled adult” means:\n1. \nA caregiver’s failure or omission to provide an elderly person or disabled adult with the care, supervision, and services necessary to maintain the elderly person’s or disabled adult’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the elderly person or disabled adult; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect an elderly person or disabled adult from abuse, neglect, or exploitation by another person.\n\nNeglect of an elderly person or disabled adult may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or psychological injury, or a substantial risk of death, to an elderly person or disabled adult.\n\n(b) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\nHistory.\n—\ns. 3, ch. 95-158; s. 2, ch. 96-322; s. 1, ch. 2008-160; s. 6, ch. 2021-221.",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(3)(c)",
+          "start": 3542,
+          "end": 3955
+        }
+      ]
+    },
+    "fl:statute:827.03:2_a": {
+      "sourceKey": "fl:statute:827.03:2_a",
+      "section": "827.03",
+      "subdivision": "(2)(a)",
+      "citation": "Fla. Stat. § 827.03(2)(a)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(2)(a)",
+          "start": 2769,
+          "end": 2922
+        }
+      ]
+    },
+    "fl:statute:827.01": {
+      "sourceKey": "fl:statute:827.01",
+      "section": "827.01",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 827.01",
+      "title": "Definitions",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html",
+      "text": "827.01 \nDefinitions.\n—\n\nAs used in this chapter:\n(1) \n“Caregiver” means a parent, adult household member, or other person responsible for a child’s welfare.\n\n(2) \n“Child” means any person under the age of 18 years.\n\n(3) \n“Placement” means the giving or transferring of possession or custody of a child by any person to another person for adoption or with the intent or purpose of surrendering the control of the child.\n\nHistory.\n—\ns. 48, ch. 74-383; s. 1, ch. 77-174; s. 7, ch. 96-322.",
+      "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
+    },
+    "fl:statute:827.03:2_b": {
+      "sourceKey": "fl:statute:827.03:2_b",
+      "section": "827.03",
+      "subdivision": "(2)(b)",
+      "citation": "Fla. Stat. § 827.03(2)(b)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(2)(b)",
+          "start": 2922,
+          "end": 3202
+        }
+      ]
+    },
+    "fl:statute:827.03:2_c": {
+      "sourceKey": "fl:statute:827.03:2_c",
+      "section": "827.03",
+      "subdivision": "(2)(c)",
+      "citation": "Fla. Stat. § 827.03(2)(c)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(2)(c)",
+          "start": 3202,
+          "end": 3459
+        }
+      ]
+    },
+    "fl:statute:827.03:2_d": {
+      "sourceKey": "fl:statute:827.03:2_d",
+      "section": "827.03",
+      "subdivision": "(2)(d)",
+      "citation": "Fla. Stat. § 827.03(2)(d)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "text": "827.03 \nAbuse, aggravated abuse, and neglect of a child; penalties.\n—\n\n(1) \nDEFINITIONS.—\nAs used in this section, the term:\n(a) \n“Aggravated child abuse” occurs when a person:\n1. \nCommits aggravated battery on a child;\n\n2. \nWillfully tortures, maliciously punishes, or willfully and unlawfully cages a child; or\n\n3. \nKnowingly or willfully abuses a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child.\n\n(b) \n“Child abuse” means:\n1. \nIntentional infliction of physical or mental injury upon a child;\n\n2. \nAn intentional act that could reasonably be expected to result in physical or mental injury to a child; or\n\n3. \nActive encouragement of any person to commit an act that results or could reasonably be expected to result in physical or mental injury to a child.\n\n(c) \n“Maliciously” means wrongfully, intentionally, and without legal justification or excuse. Maliciousness may be established by circumstances from which one could conclude that a reasonable parent would not have engaged in the damaging acts toward the child for any valid reason and that the primary purpose of the acts was to cause the victim unjustifiable pain or injury.\n\n(d) \n“Mental injury” means injury to the intellectual or psychological capacity of a child as evidenced by a discernible and substantial impairment in the ability of the child to function within the normal range of performance and behavior as supported by expert testimony.\n\n(e) \n“Neglect of a child” means:\n1. \nA caregiver’s willful failure or omission to provide a child with the care, supervision, and services necessary to maintain the child’s physical and mental health, including, but not limited to, food, nutrition, clothing, shelter, supervision, medicine, and medical services that a prudent person would consider essential for the well-being of the child. The term does not include a caregiver allowing a child to engage in independent and unsupervised activities unless allowing such activities constitutes willful and wanton conduct that endangers the health or safety of the child. Such independent and unsupervised activities include, but are not limited to, traveling to or from school or nearby locations by bicycle or on foot, playing outdoors, or remaining at home or any other location for a reasonable period of time; or\n\n2. \nA caregiver’s failure to make a reasonable effort to protect a child from abuse, neglect, or exploitation by another person.\n\nExcept as otherwise provided in this section, neglect of a child may be based on repeated conduct or on a single incident or omission that results in, or could reasonably be expected to result in, serious physical or mental injury, or a substantial risk of death, to a child.\n\n(2) \nOFFENSES.—\n\n(a) \nA person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(b) \nA person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(c) \nA person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(d) \nA person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.\n\n(3) \nEXPERT TESTIMONY.—\n\n(a) \nExcept as provided in paragraph (b), a physician may not provide expert testimony in a criminal child abuse case unless the physician is a physician licensed under chapter 458 or chapter 459 or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(b) \nA physician may not provide expert testimony in a criminal child abuse case regarding mental injury unless the physician is a physician licensed under chapter 458 or chapter 459 who has completed an accredited residency in psychiatry or has obtained certification as an expert witness pursuant to s. 458.3175 or s. 459.0066.\n\n(c) \nA psychologist may not give expert testimony in a criminal child abuse case regarding mental injury unless the psychologist is licensed under chapter 490.\n\n(d) \nThe expert testimony requirements of this subsection apply only to criminal child abuse and neglect cases pursuant to this chapter, dependency cases pursuant to chapter 39, and cases involving sexual battery of a child pursuant to chapter 794 and not to family court cases.\n\nHistory.\n—\ns. 1, ch. 4721, 1899; s. 1, ch. 4971, 1901; GS 3236, 3238; RGS 5069, 5071; s. 1, ch. 9331, 1923; CGL 7171, 7173; s. 1, ch. 65-113; s. 1, ch. 70-8; s. 940, ch. 71-136; s. 49, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 84-238; s. 8, ch. 96-322; s. 16, ch. 99-168; s. 1, ch. 2003-130; s. 9, ch. 2012-155; s. 6, ch. 2015-177; s. 5, ch. 2017-153; s. 2, ch. 2025-167.\n\nNote.\n—\nFormer s. 828.04.",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(2)(d)",
+          "start": 3459,
+          "end": 3731
+        }
+      ]
+    },
+    "fl:statute:827.04:3": {
+      "sourceKey": "fl:statute:827.04:3",
+      "section": "827.04",
+      "subdivision": "(3)",
+      "citation": "Fla. Stat. § 827.04(3)",
+      "title": "Contributing to the delinquency or dependency of a child; penalty",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html",
+      "text": "827.04 \nContributing to the delinquency or dependency of a child; penalty.\n—\n\n(1) \nAny person who:\n(a) \nCommits any act which causes, tends to cause, encourages, or contributes to a child becoming a delinquent or dependent child or a child in need of services; or\n\n(b) \nInduces or endeavors to induce, by act, threat, command, or persuasion, a child to commit or perform any act, follow any course of conduct, or live in a manner that causes or tends to cause such child to become or to remain a dependent or delinquent child or a child in need of services,\n\ncommits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nIt is not necessary for any court exercising juvenile jurisdiction to make an adjudication that any child is delinquent or dependent or a child in need of services in order to prosecute a violation of this section. An adjudication that a child is delinquent or dependent or a child in need of services shall not preclude a subsequent prosecution of a violation of this section.\n\n(3) \nA person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084. A person who impregnates a child in violation of this subsection commits an offense under this subsection regardless of whether the person is found to have committed, or has been charged with or prosecuted for, any other offense committed during the course of the same criminal transaction or episode, including, but not limited to, an offense proscribed under s. 800.04, relating to lewd, lascivious, or indecent assault or act upon any person under 16 years of age. Neither the victim’s lack of chastity nor the victim’s consent is a defense to the crime proscribed under this subsection.\n\nHistory.\n—\ns. 50, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 77-73; s. 1, ch. 77-429; s. 4, ch. 88-151; s. 8, ch. 90-53; s. 2, ch. 96-215; s. 10, ch. 96-322.",
+      "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": [
+        {
+          "subdivision": "(3)",
+          "start": 1039,
+          "end": 2014
+        }
+      ]
+    },
+    "fl:statute:827.04": {
+      "sourceKey": "fl:statute:827.04",
+      "section": "827.04",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 827.04",
+      "title": "Contributing to the delinquency or dependency of a child; penalty",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html",
+      "text": "827.04 \nContributing to the delinquency or dependency of a child; penalty.\n—\n\n(1) \nAny person who:\n(a) \nCommits any act which causes, tends to cause, encourages, or contributes to a child becoming a delinquent or dependent child or a child in need of services; or\n\n(b) \nInduces or endeavors to induce, by act, threat, command, or persuasion, a child to commit or perform any act, follow any course of conduct, or live in a manner that causes or tends to cause such child to become or to remain a dependent or delinquent child or a child in need of services,\n\ncommits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.\n\n(2) \nIt is not necessary for any court exercising juvenile jurisdiction to make an adjudication that any child is delinquent or dependent or a child in need of services in order to prosecute a violation of this section. An adjudication that a child is delinquent or dependent or a child in need of services shall not preclude a subsequent prosecution of a violation of this section.\n\n(3) \nA person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084. A person who impregnates a child in violation of this subsection commits an offense under this subsection regardless of whether the person is found to have committed, or has been charged with or prosecuted for, any other offense committed during the course of the same criminal transaction or episode, including, but not limited to, an offense proscribed under s. 800.04, relating to lewd, lascivious, or indecent assault or act upon any person under 16 years of age. Neither the victim’s lack of chastity nor the victim’s consent is a defense to the crime proscribed under this subsection.\n\nHistory.\n—\ns. 50, ch. 74-383; s. 30, ch. 75-298; s. 1, ch. 77-73; s. 1, ch. 77-429; s. 4, ch. 88-151; s. 8, ch. 90-53; s. 2, ch. 96-215; s. 10, ch. 96-322.",
+      "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "effectiveDateStart": null,
+      "subdivisionRanges": []
     }
   }
 }

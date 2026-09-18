@@ -113,8 +113,8 @@ rebound. Definitions must provide English, Spanish, and Chinese text,
 applicable `categories`, `pendingAttorneyReview`, and draft-translation
 warnings through the generic evidence-backed batch projection.
 
-`assembleFloridaReviewedReport` consumes the five explicit analyst entry
-arrays at `scripts/data-review/output/florida-reviewed-analysis-{a,b,c,d,e}.json`
+`assembleFloridaReviewedReport` consumes the six explicit analyst entry
+arrays at `scripts/data-review/output/florida-reviewed-analysis-{a,b,c,d,e,f}.json`
 plus `scripts/data-review/output/florida-batch-source-cache.json`. Analyst
 entries have
 `{id,section,status,reason,identity,conductQuotes,gradingQuotes,requiredSections,notes}`;
@@ -152,13 +152,13 @@ holds remain held.
 
 ## Development batch
 
-The assembled batches contain 91 eligible source-first records in English,
+The assembled batches contain 101 eligible source-first records in English,
 Spanish, and Chinese, with no remaining technical holds among those drafts.
-The development seed contains 116 selectable records (25 legacy + 91 additive);
+The development seed contains 126 selectable records (25 legacy + 101 additive);
 the 92 withheld legacy records remain withheld. These are record counts, not a
 claim of statewide completeness or attorney approval.
 
-The acquisition ledger records 145 actual HTTP requests and 1,424 cached
+The acquisition ledger records 149 actual HTTP requests and 1,426 cached
 current-edition sections. Assembly and activation reuse that cache without
 refetching it. Unavailable sections and historical-only dependencies remain
 excluded. Freshness still expires seven days after the oldest required source
@@ -173,15 +173,28 @@ The second batch adds 21 records across aggravated battery, arson, petit theft,
 perjury, controlled-substance conduct, and drug paraphernalia. The original 70
 drafts and their source documents remain unchanged. General §893.13 additions
 are expressly limited to non-cannabis applications in all three languages.
-Three additional analyzed branches remain withheld: §893.13(3), §893.147(4)(b),
-and §893.147(7). Their missing current dependencies are recorded in analysis E;
-they are not silently included in neighboring eligible scopes.
+Two additional drug-law branches remain withheld: §893.13(3) and §893.147(7).
+Their missing current dependencies are recorded in analysis E; they are not
+silently included in neighboring eligible scopes.
+
+The next increment adds nine cached-source abuse/neglect records under
+§§825.102, 827.03, and 827.04, plus recovered §893.147(4)(b), narrowly bound to
+§932.701(2)(a)1. Current §§932.701 and 831.31 were recovered in four requests;
+both exact and chapter requests for §381.986 still returned the 2016 edition.
+Section 893.147(7) also needs current federal dependencies. Section 827.04(1)
+remains separately held for missing current §39.01. Incorporated aggravated
+battery in the new abuse records binds both §§784.03 and 784.045.
+
+The read-only freshness preflight and explicit pre-expiry retrieval procedure
+are documented in [florida-refresh-runbook.md](florida-refresh-runbook.md).
+The existing evidence deadline remains September 25, 2026, with a September 23
+review target. No scheduler, reminder, or automatic approval has been installed.
 
 Generate the offline coverage inventory with
 `npx tsx scripts/data-review/build-florida-coverage-inventory.ts`.
 It writes JSON, CSV, Markdown, and self-contained HTML under
 `scripts/data-review/output/florida-coverage-inventory.*`.
-The inventory distinguishes 116 selectable records from 115 distinct cited
+The inventory distinguishes 126 selectable records from 125 distinct cited
 scopes, flags the exact §831.01 citation duplication without merging saved-case
 IDs, and keeps the 92 legacy cleanup records separate. Cached sections and cited
 scopes are not counts of distinct offenses; the statewide denominator remains

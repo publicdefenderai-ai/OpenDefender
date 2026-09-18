@@ -1,0 +1,565 @@
+[
+  {
+    "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "section": "825.102",
+    "status": "eligible",
+    "reason": "The exact official heading supplies the statutory identity; subsection (1) supplies four abuse alternatives, the knowledge or willfulness requirement, the no-great-harm limitation, an express isolation defense, and the third-degree-felony grade.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductQuotes": [
+      "Intentional infliction of physical or psychological injury upon an elderly person or disabled adult;",
+      "An intentional act that could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult;",
+      "Active encouragement of any person to commit an act that results or could reasonably be expected to result in physical or psychological injury to an elderly person or disabled adult; or",
+      "Intentionally, and without lawful authority, isolating or restricting access of an elderly person or a disabled adult to family members for any length of time which could reasonably be expected to result in physical or psychological injury to the elderly person or disabled adult, or with the intent to promote, facilitate, conceal, or disguise some form of criminal activity involving the person or property of the elderly person or disabled adult. It is a defense to a violation of this paragraph that the defendant had reasonable cause to believe that his or her action was necessary to protect the elderly person or disabled adult from danger to his or her welfare.",
+      "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person who knowingly or willfully abuses an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "825.102",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.102",
+        "role": "exception",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Scope is exactly subsection (1), including all four statutory abuse alternatives and the paragraph (d) defense. It excludes aggravated abuse and both neglect grades. Section 825.101 is required for the victim definitions."
+  },
+  {
+    "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "section": "825.102",
+    "status": "eligible",
+    "reason": "The exact official heading supplies the statutory identity; subsection (2) supplies three aggravated-abuse alternatives and the first-degree-felony grade, with the incorporated aggravated-battery branch bound to current §§ 784.03 and 784.045.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductQuotes": [
+      "Commits aggravated battery on an elderly person or disabled adult;",
+      "Willfully tortures, maliciously punishes, or willfully and unlawfully cages, an elderly person or disabled adult; or",
+      "Knowingly or willfully abuses an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult."
+    ],
+    "gradingQuotes": [
+      "A person who commits aggravated abuse of an elderly person or disabled adult commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "825.102",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "section": "784.03",
+        "role": "definition",
+        "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+      },
+      {
+        "section": "784.045",
+        "role": "justification",
+        "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Scope is exactly subsection (2). Whole current §§ 784.03 and 784.045 together supply the battery and aggravated-battery elements of the expressly incorporated alternative; neither section alone closes that branch, and no generic-name alias is used."
+  },
+  {
+    "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "section": "825.102",
+    "status": "eligible",
+    "reason": "The exact official heading supplies the statutory identity; paragraph (3)(b) supplies willful-or-culpably-negligent neglect, the resulting-harm element, and the second-degree-felony grade.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductQuotes": [
+      "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person who willfully or by culpable negligence neglects an elderly person or disabled adult and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "825.102",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.102",
+        "role": "definition",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Paragraph (3)(a)'s complete neglect definition is a same-section supporting dependency. The cited primary remains paragraph (3)(b), and paragraph (3)(c)'s no-great-harm grade is separate."
+  },
+  {
+    "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "section": "825.102",
+    "status": "eligible",
+    "reason": "The exact official heading supplies the statutory identity; paragraph (3)(c) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "sourceHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+    },
+    "conductQuotes": [
+      "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person who willfully or by culpable negligence neglects an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement to the elderly person or disabled adult commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "825.102",
+        "role": "offense",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.102",
+        "role": "grading",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.102",
+        "role": "definition",
+        "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813"
+      },
+      {
+        "section": "825.101",
+        "role": "definition",
+        "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Paragraph (3)(a)'s complete neglect definition is a same-section supporting dependency. The cited primary remains paragraph (3)(c), and paragraph (3)(b)'s resulting-great-harm grade is separate."
+  },
+  {
+    "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "section": "827.03",
+    "status": "eligible",
+    "reason": "The exact official heading supplies statutory identity; paragraph (2)(a) expressly criminalizes aggravated child abuse and states the first-degree-felony grade, while subsection (1)(a) and current §§ 784.03 and 784.045 close the definition and incorporated aggravated-battery branch.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductQuotes": [
+      "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person who commits aggravated child abuse commits a felony of the first degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "827.03",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "section": "784.03",
+        "role": "definition",
+        "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20"
+      },
+      {
+        "section": "784.045",
+        "role": "justification",
+        "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "The cited child paragraph relies on the parent section's express aggravated-child-abuse definition. Current §§ 784.03 and 784.045 together are required for the aggravated-battery alternative; neither section alone closes that branch. The other two alternatives remain stated in § 827.03(1)(a)."
+  },
+  {
+    "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "section": "827.03",
+    "status": "eligible",
+    "reason": "The exact official heading supplies statutory identity; paragraph (2)(b) supplies willful-or-culpably-negligent neglect, resulting great harm, and the second-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductQuotes": [
+      "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person who willfully or by culpable negligence neglects a child and in so doing causes great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "827.03",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "exception",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Subsection (1)(e)'s definition, including the independent-and-unsupervised-activity limitation and injury-or-risk threshold, is required. Paragraph (2)(d)'s no-great-harm grade is separate."
+  },
+  {
+    "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "section": "827.03",
+    "status": "eligible",
+    "reason": "The exact official heading supplies statutory identity; paragraph (2)(c) supplies knowing-or-willful abuse, the no-great-harm limitation, and the third-degree-felony grade, with the complete abuse definition retained as a same-section dependency.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductQuotes": [
+      "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person who knowingly or willfully abuses a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "827.03",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Subsection (1)(b)'s three abuse alternatives and § 827.01's child definition are required. This record does not include aggravated abuse or either neglect branch."
+  },
+  {
+    "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "section": "827.03",
+    "status": "eligible",
+    "reason": "The exact official heading supplies statutory identity; paragraph (2)(d) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "sourceHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+    },
+    "conductQuotes": [
+      "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person who willfully or by culpable negligence neglects a child without causing great bodily harm, permanent disability, or permanent disfigurement to the child commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "827.03",
+        "role": "offense",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "grading",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "definition",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.03",
+        "role": "exception",
+        "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645"
+      },
+      {
+        "section": "827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "Subsection (1)(e)'s definition, including the independent-and-unsupervised-activity limitation and injury-or-risk threshold, is required. Paragraph (2)(b)'s resulting-great-harm grade is separate."
+  },
+  {
+    "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "section": "827.04",
+    "status": "eligible",
+    "reason": "The exact official heading supplies statutory identity; subsection (3) independently states the actor and victim ages, impregnation conduct, third-degree-felony grade, separate-prosecution rule, and unavailable defenses.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Contributing to the delinquency or dependency of a child; penalty",
+      "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+    },
+    "conductQuotes": [
+      "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "gradingQuotes": [
+      "A person 21 years of age or older who impregnates a child under 16 years of age commits an act of child abuse which constitutes a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."
+    ],
+    "requiredSections": [
+      {
+        "section": "827.04",
+        "role": "offense",
+        "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      {
+        "section": "827.04",
+        "role": "grading",
+        "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      {
+        "section": "827.04",
+        "role": "exception",
+        "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      {
+        "section": "827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "section": "775.082",
+        "role": "penalty",
+        "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c"
+      },
+      {
+        "section": "775.083",
+        "role": "penalty",
+        "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7"
+      },
+      {
+        "section": "775.084",
+        "role": "penalty",
+        "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53"
+      }
+    ],
+    "notes": "This is the independently complete subsection (3) felony, not subsection (1)'s delinquency/dependency misdemeanor. The same-transaction rule and the express statement that lack of chastity and consent are not defenses are preserved."
+  },
+  {
+    "id": "fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "code": "827.04(1)",
+    "section": "827.04",
+    "status": "held",
+    "reason": "Technical hold: subsection (1) turns on a child becoming or remaining a dependent child, but the current § 39.01 dependency definition is absent from the official cache; cached §§ 984.03 and 985.03 do not cure that missing dependency.",
+    "identity": {
+      "kind": "official_heading",
+      "quote": "Contributing to the delinquency or dependency of a child; penalty",
+      "sourceHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+    },
+    "conductQuotes": [],
+    "gradingQuotes": [],
+    "requiredSections": [
+      {
+        "section": "827.04",
+        "role": "offense",
+        "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1"
+      },
+      {
+        "section": "827.01",
+        "role": "definition",
+        "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0"
+      },
+      {
+        "section": "984.03",
+        "role": "definition",
+        "contentHash": "51fba2bb53ec20440225c572a70f63a384d099f381856a5edb3822220cc6c3db"
+      },
+      {
+        "section": "985.03",
+        "role": "definition",
+        "contentHash": "dabe0f1862c073fc46de5a64c8e5776720d4047cac3728ac5b9d967c6ccf7826"
+      }
+    ],
+    "notes": "No localized eligible definition was created for this held candidate. Section 39.01 is not present in the cache, so the dependent-child alternative cannot be claimed complete and the subsection is not split into an inferred generic-name alias."
+  }
+]

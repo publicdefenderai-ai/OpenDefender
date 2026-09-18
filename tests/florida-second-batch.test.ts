@@ -23,7 +23,7 @@ const fixtureTime = new Date(Math.max(...Object.values(cache.documents)
 describe("Florida second cached-source batch", () => {
   it("accounts for supported records in all six priority sections with unique exact identities", () => {
     const approved = new Set(FLORIDA_REVIEWED_SOURCE_RECORDS.map(row => row.chargeId));
-    expect(definitions).toHaveLength(21);
+    expect(definitions).toHaveLength(22);
     expect(new Set(definitions.map(row => row.code)).size).toBe(definitions.length);
     for (const row of definitions) {
       expect(approved.has(row.id), row.id).toBe(true);
@@ -53,7 +53,8 @@ describe("Florida second cached-source batch", () => {
     expect(e.some(row => row.code === "893.147(4)")).toBe(false);
     expect(e.some(row => row.code === "893.13(6)(b)")).toBe(false);
     const held = analysisE.filter(row => row.status === "held");
-    expect(held).toHaveLength(3);
+    expect(held).toHaveLength(2);
+    expect(e.some(row => row.code === "893.147(4)(b)")).toBe(true);
     for (const row of held) {
       expect(definitions.some(definition => definition.id === row.id)).toBe(false);
       expect(FLORIDA_REVIEWED_SOURCE_RECORDS.some(record => record.chargeId === row.id)).toBe(false);

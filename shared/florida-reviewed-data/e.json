@@ -202,6 +202,28 @@
     }
   },
   {
+    "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "jurisdiction": "FL",
+    "code": "893.147(4)(b)",
+    "slug": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+    "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+    "names": { "es": "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales", "zh": "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售" },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      { "citation": "Fla. Stat. § 893.147(4)(b)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" },
+      { "citation": "Fla. Stat. § 932.701", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.701.html" },
+      { "citation": "Fla. Stat. § 893.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html" },
+      { "citation": "Fla. Stat. § 893.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html" }
+    ],
+    "text": {
+      "en": { "plainSummary": "Using, possessing with intent to use, or manufacturing with intent to use drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to transport a contraband article within § 932.701(2)(a)1.'s narcotics-related definition.", "degreeContext": "Third-degree felony. This record is confined to § 932.701(2)(a)1.: a chapter 893 controlled substance, or a substance, device, paraphernalia, currency, or other means of exchange used, attempted to be used, or intended to be used in violation of chapter 893, when the state's facts clearly suffice to establish probable cause of a nexus between the seized article and narcotics activity. It does not include the other contraband-article categories in § 932.701(2)(a)." },
+      "es": { "plainSummary": "Usar, poseer con intención de usar o fabricar con intención de usar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para transportar un bien de contrabando comprendido en la definición relacionada con narcóticos del § 932.701(2)(a)1.", "degreeContext": "Delito grave de tercer grado. Este registro se limita al § 932.701(2)(a)1.: una sustancia controlada conforme al capítulo 893, o una sustancia, dispositivo, parafernalia, moneda u otro medio de intercambio usado, que se intentó usar o destinado a usarse en infracción del capítulo 893, cuando los hechos presentados por el estado sean claramente suficientes para establecer causa probable de un nexo entre el bien incautado y la actividad de narcóticos. No incluye las demás categorías de bienes de contrabando del § 932.701(2)(a)." },
+      "zh": { "plainSummary": "使用、意图使用而持有，或意图使用而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于运输第932.701(2)(a)1条涉毒定义范围内的违禁物品。", "degreeContext": "三级重罪。本记录仅限第932.701(2)(a)1条：第893章所定义的受管制物质，或已经、曾试图或意图用于违反第893章的物质、装置、用具、货币或其他交换手段，且州方提出的全部事实明确足以确立合理根据，相信被扣押物品与毒品活动之间存在关联。它不包括第932.701(2)(a)条中的其他违禁物品类别。" }
+    }
+  },
+  {
     "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "jurisdiction": "FL",
     "code": "893.147(5)",

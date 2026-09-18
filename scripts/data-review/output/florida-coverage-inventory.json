@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "jurisdiction": "FL",
-  "inventoryAsOf": "2026-09-18T16:20:48.216Z",
+  "inventoryAsOf": "2026-09-18T20:07:14.452Z",
   "methodology": {
     "unit": "One section row plus cited subdivision/scope rows supported by manifest or explicit analyst records.",
     "caveat": "This is an evidence and workflow inventory, not a keyword-derived list of Florida crimes. A published whole-section record does not prove every offense or branch in that section is covered.",
@@ -9,23 +9,23 @@
     "legacyCleanupQueue": "require_exact_reselection/remove rows are reported separately as cleanup work and are not treated as a missing-offense count."
   },
   "summary": {
-    "cachedOfficialSections": 1424,
-    "sectionRows": 1430,
-    "scopeRows": 180,
-    "currentSelectableRecords": 116,
-    "reviewedSelectableRecords": 91,
+    "cachedOfficialSections": 1426,
+    "sectionRows": 1432,
+    "scopeRows": 190,
+    "currentSelectableRecords": 126,
+    "reviewedSelectableRecords": 101,
     "reviewedRuntimeStatus": "current",
     "reviewedRuntimeBlockReason": null,
     "legacySelectableRecords": 25,
     "legacyCleanupQueueRecords": 92,
-    "distinctSelectableCitedScopes": 115,
+    "distinctSelectableCitedScopes": 125,
     "actualOffenseCount": null,
     "statewideSectionDenominator": null,
     "completenessPercentage": null,
     "classifications": {
-      "covered": 103,
-      "partially_covered": 73,
-      "not_yet_analyzed": 1381,
+      "covered": 113,
+      "partially_covered": 76,
+      "not_yet_analyzed": 1380,
       "blocked": 41,
       "not_standalone_offense": 12
     }
@@ -63,7 +63,7 @@
   "inputs": [
     {
       "path": "scripts/data-review/output/florida-batch-source-cache.json",
-      "sha256": "24c969f3d3bfa48a6086a2aa9d05c9a6d2f65fc329d75d1c1f77eda0103f4a17"
+      "sha256": "c1aa7740f0948089ac92c57841dd05141500d0c024206269d4d37f49d39343ef"
     },
     {
       "path": "scripts/data-review/output/fl-source-manifest.json",
@@ -71,7 +71,7 @@
     },
     {
       "path": "shared/florida-reviewed-eligibility.json",
-      "sha256": "3572cd0b7bdea8552c84e148fc65640653ffb55dc23743576a8c54f1d36e3d7a"
+      "sha256": "ecb25906d33b9284d709ef027c99b057224dd339f23e8b1fe47a89be2ca501ea"
     },
     {
       "path": "shared/florida-reviewed-data/a.json",
@@ -91,7 +91,11 @@
     },
     {
       "path": "shared/florida-reviewed-data/e.json",
-      "sha256": "0f26fe938ab283d1283125ff2dbc16ab8b6e812e5f9b21c3b6d6d263bdce2cad"
+      "sha256": "ba8367bb80a556d786be5d4138753fec1be2137916029009a64eaf93b3a312f9"
+    },
+    {
+      "path": "shared/florida-reviewed-data/f.json",
+      "sha256": "406c80fc1c402a14f5761662537dd37d00631a5174dc78b5367a40bf7f582048"
     },
     {
       "path": "scripts/data-review/output/florida-reviewed-analysis-a.json",
@@ -111,15 +115,19 @@
     },
     {
       "path": "scripts/data-review/output/florida-reviewed-analysis-e.json",
-      "sha256": "0b2d2c4f404bec305ddceff34c27da9c9503e726929e1e6aac3fcc4ef8c789bc"
+      "sha256": "e453ad14b991640bae79e4dc51daed318e03e1bab774f530cda921b3f0d346bf"
+    },
+    {
+      "path": "scripts/data-review/output/florida-reviewed-analysis-f.json",
+      "sha256": "be81919ad969ffbbfa29b6626be9e58ca8c9f4b7633ea1a60da7a1230c8e20ef"
     },
     {
       "path": "scripts/data-review/output/florida-reviewed-analysis.json",
-      "sha256": "8c6068642be5324706862a1286063b08558f7545d9484786f486271970a59884"
+      "sha256": "8ce0eefb9f967e0c77de624539126c2e2776b3bef2395e4c3afcc3736ec3ce82"
     },
     {
       "path": "scripts/data-review/output/florida-reviewed-refresh-receipt.json",
-      "sha256": "83d621ef3fa2d6b2a3b0ce1726624fdcbb713fa7360c31aa18926afebdf818a7"
+      "sha256": "e5770ceb9bb1effd2f75b70ac9f1e7cba4d9e2f9d814157f73f97c5c0801c597"
     }
   ],
   "rows": [
@@ -24751,15 +24759,135 @@
       "subdivision": null,
       "citation": "Fla. Stat. § 825.102",
       "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
-      "classification": "not_yet_analyzed",
-      "classificationBasis": "Official text is cached, but no explicit analysis establishes offense coverage.",
+      "classification": "partially_covered",
+      "classificationBasis": "One or more cited scopes map to selectable records; no statewide offense denominator or complete branch analysis proves the entire section covered.",
       "cacheStatus": "official_current_cache",
       "retrievedAt": "2026-09-18T15:56:36.841Z",
       "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
-      "selectableRecordIds": [],
-      "analysisRecordIds": [],
-      "analysisStatuses": [],
+      "selectableRecordIds": [
+        "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+        "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+        "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+        "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+        "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+        "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+        "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "825.102",
+      "subdivision": "(1)",
+      "citation": "Fla. Stat. § 825.102(1)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "selectableRecordIds": [
+        "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "825.102",
+      "subdivision": "(2)",
+      "citation": "Fla. Stat. § 825.102(2)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "selectableRecordIds": [
+        "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "825.102",
+      "subdivision": "(3)(b)",
+      "citation": "Fla. Stat. § 825.102(3)(b)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "selectableRecordIds": [
+        "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "825.102",
+      "subdivision": "(3)(c)",
+      "citation": "Fla. Stat. § 825.102(3)(c)",
+      "title": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:56:36.841Z",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "selectableRecordIds": [
+        "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
       "legacyCleanupQueueIds": [],
       "duplicateSameCitation": false,
       "potentialScopeOverlap": false,
@@ -24793,15 +24921,135 @@
       "subdivision": null,
       "citation": "Fla. Stat. § 827.03",
       "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
-      "classification": "not_yet_analyzed",
-      "classificationBasis": "Official text is cached, but no explicit analysis establishes offense coverage.",
+      "classification": "partially_covered",
+      "classificationBasis": "One or more cited scopes map to selectable records; no statewide offense denominator or complete branch analysis proves the entire section covered.",
       "cacheStatus": "official_current_cache",
       "retrievedAt": "2026-09-18T15:26:37.447Z",
       "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
-      "selectableRecordIds": [],
-      "analysisRecordIds": [],
-      "analysisStatuses": [],
+      "selectableRecordIds": [
+        "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+        "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+        "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+        "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+        "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+        "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+        "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "827.03",
+      "subdivision": "(2)(a)",
+      "citation": "Fla. Stat. § 827.03(2)(a)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "selectableRecordIds": [
+        "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "827.03",
+      "subdivision": "(2)(b)",
+      "citation": "Fla. Stat. § 827.03(2)(b)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "selectableRecordIds": [
+        "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "827.03",
+      "subdivision": "(2)(c)",
+      "citation": "Fla. Stat. § 827.03(2)(c)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "selectableRecordIds": [
+        "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "827.03",
+      "subdivision": "(2)(d)",
+      "citation": "Fla. Stat. § 827.03(2)(d)",
+      "title": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "selectableRecordIds": [
+        "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
       "legacyCleanupQueueIds": [],
       "duplicateSameCitation": false,
       "potentialScopeOverlap": false,
@@ -24814,15 +25062,75 @@
       "subdivision": null,
       "citation": "Fla. Stat. § 827.04",
       "title": "Contributing to the delinquency or dependency of a child; penalty",
-      "classification": "not_yet_analyzed",
-      "classificationBasis": "Official text is cached, but no explicit analysis establishes offense coverage.",
+      "classification": "partially_covered",
+      "classificationBasis": "One or more cited scopes map to selectable records; no statewide offense denominator or complete branch analysis proves the entire section covered.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html",
+      "selectableRecordIds": [
+        "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+        "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty"
+      ],
+      "analysisStatuses": [
+        "eligible",
+        "held"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "827.04",
+      "subdivision": "(1)",
+      "citation": "Fla. Stat. § 827.04(1)",
+      "title": "Contributing to the delinquency or dependency of a child; penalty",
+      "classification": "blocked",
+      "classificationBasis": "Technical hold: subsection (1) turns on a child becoming or remaining a dependent child, but the current § 39.01 dependency definition is absent from the official cache; cached §§ 984.03 and 985.03 do not cure that missing dependency.",
       "cacheStatus": "official_current_cache",
       "retrievedAt": "2026-09-18T15:26:37.447Z",
       "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html",
       "selectableRecordIds": [],
-      "analysisRecordIds": [],
-      "analysisStatuses": [],
+      "analysisRecordIds": [
+        "fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty"
+      ],
+      "analysisStatuses": [
+        "held"
+      ],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "scope",
+      "section": "827.04",
+      "subdivision": "(3)",
+      "citation": "Fla. Stat. § 827.04(3)",
+      "title": "Contributing to the delinquency or dependency of a child; penalty",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T15:26:37.447Z",
+      "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html",
+      "selectableRecordIds": [
+        "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty"
+      ],
+      "analysisRecordIds": [
+        "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty"
+      ],
+      "analysisStatuses": [
+        "eligible"
+      ],
       "legacyCleanupQueueIds": [],
       "duplicateSameCitation": false,
       "potentialScopeOverlap": false,
@@ -26024,6 +26332,27 @@
       ],
       "legacyCleanupQueueIds": [],
       "duplicateSameCitation": true,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "section",
+      "section": "831.31",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 831.31",
+      "title": "Counterfeit controlled substance; sale, manufacture, delivery, or possession with intent to sell, manufacture, or deliver",
+      "classification": "not_yet_analyzed",
+      "classificationBasis": "Official text is cached, but no explicit analysis establishes offense coverage.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T20:07:14.452Z",
+      "contentHash": "ac48d9e974bd80fc29a9197abfa644f649f3c9ab6a29bec45e8921b23e9fb7af",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.31.html",
+      "selectableRecordIds": [],
+      "analysisRecordIds": [],
+      "analysisStatuses": [],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
       "potentialScopeOverlap": false,
       "priorityArea": false,
       "actualOffenseCount": null
@@ -29767,6 +30096,7 @@
         "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
         "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
         "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+        "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
         "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
         "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials"
       ],
@@ -29962,18 +30292,20 @@
       "subdivision": "(4)(b)",
       "citation": "Fla. Stat. § 893.147(4)(b)",
       "title": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
-      "classification": "blocked",
-      "classificationBasis": "Technical hold: paragraph (4)(b) incorporates the contraband definition in § 932.701(2)(a)1., and current § 932.701 is absent from the official cache.",
+      "classification": "covered",
+      "classificationBasis": "An explicit eligible analyst decision covers this cited scope; it does not establish unenumerated offenses.",
       "cacheStatus": "official_current_cache",
       "retrievedAt": "2026-09-18T15:26:43.348Z",
       "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
-      "selectableRecordIds": [],
+      "selectableRecordIds": [
+        "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials"
+      ],
       "analysisRecordIds": [
         "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials"
       ],
       "analysisStatuses": [
-        "held"
+        "eligible"
       ],
       "legacyCleanupQueueIds": [],
       "duplicateSameCitation": false,
@@ -30042,7 +30374,7 @@
       "citation": "Fla. Stat. § 893.147(7)",
       "title": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
       "classification": "blocked",
-      "classificationBasis": "Technical hold: subsection (7) incorporates current federal definitions and compliance conditions in 21 U.S.C. §§ 802, 822, and 830, the counterfeit-controlled-substance definition in § 831.31(2), and the § 381.986 licensing exception in paragraph (7)(b)3.; those current dependencies are absent from the official cache.",
+      "classificationBasis": "Technical hold: although current § 831.31 is now available, subsection (7) also incorporates current federal definitions and compliance conditions in 21 U.S.C. §§ 802, 822, and 830 and the § 381.986 licensing exception in paragraph (7)(b)3.; those remaining dependencies are absent from the official cache.",
       "cacheStatus": "official_current_cache",
       "retrievedAt": "2026-09-18T15:26:43.348Z",
       "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
@@ -31486,6 +31818,27 @@
       "retrievedAt": "2026-09-18T15:26:48.812Z",
       "contentHash": "e4a36da2e3f908a55f718abe5af118e124f24595edaff77767c0bc60801a17fe",
       "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1427.html",
+      "selectableRecordIds": [],
+      "analysisRecordIds": [],
+      "analysisStatuses": [],
+      "legacyCleanupQueueIds": [],
+      "duplicateSameCitation": false,
+      "potentialScopeOverlap": false,
+      "priorityArea": false,
+      "actualOffenseCount": null
+    },
+    {
+      "rowKind": "section",
+      "section": "932.701",
+      "subdivision": null,
+      "citation": "Fla. Stat. § 932.701",
+      "title": "Short title; definitions",
+      "classification": "not_yet_analyzed",
+      "classificationBasis": "Official text is cached, but no explicit analysis establishes offense coverage.",
+      "cacheStatus": "official_current_cache",
+      "retrievedAt": "2026-09-18T20:07:12.284Z",
+      "contentHash": "bbd401d5df7cfba062191d5f8fa58fcb2d2be49587fc0a7f7678e0b4413389d1",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.701.html",
       "selectableRecordIds": [],
       "analysisRecordIds": [],
       "analysisStatuses": [],

@@ -237,27 +237,36 @@
     "code": "893.147(7)",
     "section": "893.147",
     "status": "held",
-    "reason": "Technical hold: subsection (7) incorporates current federal definitions and compliance conditions in 21 U.S.C. §§ 802, 822, and 830, the counterfeit-controlled-substance definition in § 831.31(2), and the § 381.986 licensing exception in paragraph (7)(b)3.; those current dependencies are absent from the official cache.",
+    "reason": "Technical hold: although current § 831.31 is now available, subsection (7) also incorporates current federal definitions and compliance conditions in 21 U.S.C. §§ 802, 822, and 830 and the § 381.986 licensing exception in paragraph (7)(b)3.; those remaining dependencies are absent from the official cache.",
     "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
     "conductQuotes": [],
     "gradingQuotes": [],
     "requiredSections": [
-      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" }
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "831.31", "role": "definition", "contentHash": "ac48d9e974bd80fc29a9197abfa644f649f3c9ab6a29bec45e8921b23e9fb7af" }
     ],
-    "notes": "No federal text, missing § 831.31 definition, or missing § 381.986 licensing terms were invented or fetched. Paragraph (7)(b)3. expressly depends on an active, unencumbered license or permit under § 381.986 or chapter 465 and compliant licensed functions. The record remains held despite the cached primary section and cached § 893.02 because complete exception/definition support is unavailable."
+    "notes": "Current § 831.31(2)'s counterfeit-controlled-substance definition is supported. No federal text or missing § 381.986 licensing terms were invented or fetched. Paragraph (7)(b)3. expressly depends on an active, unencumbered license or permit under § 381.986 or chapter 465 and compliant licensed functions. The record remains held because complete exception and federal definition support is unavailable."
   },
   {
     "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "code": "893.147(4)(b)",
     "section": "893.147",
-    "status": "held",
-    "reason": "Technical hold: paragraph (4)(b) incorporates the contraband definition in § 932.701(2)(a)1., and current § 932.701 is absent from the official cache.",
+    "status": "eligible",
+    "reason": "The official section heading supplies exact statutory identity; subsection (4)'s parent supplies the conduct, knowledge, and transportation elements, paragraph (4)(b) supplies the narrow incorporated contraband alternative, and the common subsection tail supplies felony grading. Current § 932.701(2)(a)1. supports that alternative without projecting the rest of the contraband-article list.",
     "identity": { "kind": "official_heading", "quote": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials", "sourceHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
-    "conductQuotes": [],
-    "gradingQuotes": [],
-    "requiredSections": [
-      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" }
+    "conductQuotes": [
+      "Contraband as defined in s. 932.701(2)(a)1."
     ],
-    "notes": "Paragraph (4)(a)'s independently complete controlled-substance branch is eligible; this separate incorporated-contraband branch is held. No missing definition was inferred."
+    "gradingQuotes": ["Any person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084."],
+    "requiredSections": [
+      { "section": "893.147", "role": "offense", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "grading", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.147", "role": "justification", "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536" },
+      { "section": "893.145", "role": "definition", "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0" },
+      { "section": "932.701", "role": "definition", "contentHash": "bbd401d5df7cfba062191d5f8fa58fcb2d2be49587fc0a7f7678e0b4413389d1" },
+      { "section": "893.02", "role": "definition", "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17" },
+      { "section": "893.03", "role": "definition", "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1" }
+    ],
+    "notes": "This record is confined to paragraph (4)(b) and only § 932.701(2)(a)1.'s narcotics-related definition: a chapter 893 controlled substance, or a substance, device, paraphernalia, currency, or other means of exchange used, attempted to be used, or intended to be used in violation of chapter 893, subject to the stated probable-cause nexus standard. It does not infer or include the other contraband-article categories in § 932.701(2)(a). Section 893.145 supports the parent term “drug paraphernalia”; §§ 893.02 and 893.03 support the incorporated controlled-substance term."
   }
 ]

@@ -1,0 +1,351 @@
+[
+  {
+    "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "jurisdiction": "FL",
+    "code": "825.102(1)",
+    "slug": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
+      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 825.102(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.101",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly or willfully abusing an elderly person or disabled adult, without causing great bodily harm, permanent disability, or permanent disfigurement. Abuse includes intentionally inflicting injury, an intentional act reasonably expected to cause injury, actively encouraging such an act, or the specified intentional and unauthorized isolation or restriction of family access.",
+        "degreeContext": "Third-degree felony. For the isolation or family-access branch, it is a defense that the defendant reasonably believed the action was necessary to protect the person's welfare. Section 825.101 supplies the controlling definitions of elderly person and disabled adult."
+      },
+      "es": {
+        "plainSummary": "Abusar a sabiendas o deliberadamente de una persona anciana o un adulto con discapacidad, sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente. El abuso incluye infligir intencionalmente una lesión, realizar un acto intencional del que razonablemente se espere una lesión, alentar activamente tal acto, o el aislamiento o la restricción intencional y sin autoridad del acceso familiar en las circunstancias especificadas.",
+        "degreeContext": "Delito grave de tercer grado. Para la rama de aislamiento o restricción del acceso familiar, es defensa que el acusado creyera razonablemente que la medida era necesaria para proteger el bienestar de la persona. El § 825.101 contiene las definiciones aplicables de persona anciana y adulto con discapacidad."
+      },
+      "zh": {
+        "plainSummary": "明知或故意虐待老年人或残障成年人，但未造成严重身体伤害、永久残疾或永久毁容。虐待包括故意造成伤害、实施可合理预期导致伤害的故意行为、积极鼓励他人实施此类行为，或在法定情形下故意且无合法授权地隔离该人或限制其与家人接触。",
+        "degreeContext": "三级重罪。对于隔离或限制家人接触的分支，被告有合理理由相信该行为为保护该人的福祉所必要，属于一项抗辩。第825.101条规定了老年人和残障成年人的适用定义。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "jurisdiction": "FL",
+    "code": "825.102(2)",
+    "slug": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
+      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 825.102(2)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.101",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.045",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Committing aggravated abuse of an elderly person or disabled adult by committing aggravated battery on the person; willfully torturing, maliciously punishing, or willfully and unlawfully caging the person; or knowingly or willfully abusing the person and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
+        "degreeContext": "First-degree felony. Section 825.101 defines elderly person and disabled adult. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements."
+      },
+      "es": {
+        "plainSummary": "Cometer abuso agravado de una persona anciana o un adulto con discapacidad mediante agresión física agravada contra la persona; torturarla deliberadamente, castigarla maliciosamente o enjaularla deliberada e ilícitamente; o abusar de ella a sabiendas o deliberadamente y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
+        "degreeContext": "Delito grave de primer grado. El § 825.101 define persona anciana y adulto con discapacidad. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada."
+      },
+      "zh": {
+        "plainSummary": "通过以下方式加重虐待老年人或残障成年人：对其实施加重殴打；故意折磨、恶意惩罚或故意且非法地将其关入笼中；或者明知或故意虐待并由此造成严重身体伤害、永久残疾或永久毁容。",
+        "degreeContext": "一级重罪。第825.101条界定老年人及残障成年人。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "jurisdiction": "FL",
+    "code": "825.102(3)(b)",
+    "slug": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
+      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 825.102(3)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.101",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully or by culpable negligence neglecting an elderly person or disabled adult and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
+        "degreeContext": "Second-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult."
+      },
+      "es": {
+        "plainSummary": "Descuidar deliberadamente o por negligencia culpable a una persona anciana o un adulto con discapacidad y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
+        "degreeContext": "Delito grave de segundo grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad."
+      },
+      "zh": {
+        "plainSummary": "故意或因有罪过的过失疏忽照料老年人或残障成年人，并由此造成严重身体伤害、永久残疾或永久毁容。",
+        "degreeContext": "二级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "jurisdiction": "FL",
+    "code": "825.102(3)(c)",
+    "slug": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
+      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 825.102(3)(c)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html"
+      },
+      {
+        "citation": "Fla. Stat. § 825.101",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully or by culpable negligence neglecting an elderly person or disabled adult without causing great bodily harm, permanent disability, or permanent disfigurement.",
+        "degreeContext": "Third-degree felony. Subsection (3)(a) defines neglect, including specified caregiver failures and the required injury or substantial-risk threshold; § 825.101 defines caregiver, elderly person, and disabled adult."
+      },
+      "es": {
+        "plainSummary": "Descuidar deliberadamente o por negligencia culpable a una persona anciana o un adulto con discapacidad sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente.",
+        "degreeContext": "Delito grave de tercer grado. El inciso (3)(a) define la negligencia, incluidas las omisiones especificadas del cuidador y el umbral exigido de lesión o riesgo sustancial; el § 825.101 define cuidador, persona anciana y adulto con discapacidad."
+      },
+      "zh": {
+        "plainSummary": "故意或因有罪过的过失疏忽照料老年人或残障成年人，但未造成严重身体伤害、永久残疾或永久毁容。",
+        "degreeContext": "三级重罪。第(3)(a)款界定疏忽照料，包括法定照护者失职以及所要求的伤害或重大风险门槛；第825.101条界定照护者、老年人及残障成年人。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "jurisdiction": "FL",
+    "code": "827.03(2)(a)",
+    "slug": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
+      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.03(2)(a)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 784.045",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Committing aggravated child abuse by committing aggravated battery on a child; willfully torturing, maliciously punishing, or willfully and unlawfully caging a child; or knowingly or willfully abusing a child and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
+        "degreeContext": "First-degree felony. Subsection (1)(a) supplies the complete aggravated-child-abuse definition, and § 827.01 defines child as a person under 18. Sections 784.03 and 784.045 together supply the incorporated battery and aggravated-battery elements."
+      },
+      "es": {
+        "plainSummary": "Cometer abuso infantil agravado mediante agresión física agravada contra un menor; torturarlo deliberadamente, castigarlo maliciosamente o enjaularlo deliberada e ilícitamente; o abusar del menor a sabiendas o deliberadamente y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
+        "degreeContext": "Delito grave de primer grado. El inciso (1)(a) contiene la definición completa de abuso infantil agravado y el § 827.01 define menor como una persona de menos de 18 años. Los §§ 784.03 y 784.045 contienen conjuntamente los elementos incorporados de la agresión física y la agresión física agravada."
+      },
+      "zh": {
+        "plainSummary": "通过以下方式实施加重虐待儿童：对儿童实施加重殴打；故意折磨、恶意惩罚或故意且非法地将儿童关入笼中；或者明知或故意虐待儿童并由此造成严重身体伤害、永久残疾或永久毁容。",
+        "degreeContext": "一级重罪。第(1)(a)款规定加重虐待儿童的完整定义，第827.01条将儿童界定为未满18岁者。第784.03条与第784.045条共同规定所纳入的殴打及加重殴打要件。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "jurisdiction": "FL",
+    "code": "827.03(2)(b)",
+    "slug": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
+      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.03(2)(b)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully or by culpable negligence neglecting a child and thereby causing great bodily harm, permanent disability, or permanent disfigurement.",
+        "degreeContext": "Second-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver."
+      },
+      "es": {
+        "plainSummary": "Descuidar deliberadamente o por negligencia culpable a un menor y causar así gran daño corporal, discapacidad permanente o desfiguración permanente.",
+        "degreeContext": "Delito grave de segundo grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador."
+      },
+      "zh": {
+        "plainSummary": "故意或因有罪过的过失疏忽照料儿童，并由此造成严重身体伤害、永久残疾或永久毁容。",
+        "degreeContext": "二级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "jurisdiction": "FL",
+    "code": "827.03(2)(c)",
+    "slug": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
+      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.03(2)(c)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly or willfully abusing a child without causing great bodily harm, permanent disability, or permanent disfigurement.",
+        "degreeContext": "Third-degree felony. Subsection (1)(b) defines child abuse as intentional injury, an intentional act reasonably expected to cause injury, or active encouragement of an act that causes or could reasonably be expected to cause injury; § 827.01 defines child."
+      },
+      "es": {
+        "plainSummary": "Abusar a sabiendas o deliberadamente de un menor sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente.",
+        "degreeContext": "Delito grave de tercer grado. El inciso (1)(b) define el abuso infantil como lesión intencional, un acto intencional del que razonablemente se espere una lesión, o el aliento activo de un acto que cause o pueda razonablemente esperarse que cause una lesión; el § 827.01 define menor."
+      },
+      "zh": {
+        "plainSummary": "明知或故意虐待儿童，但未造成严重身体伤害、永久残疾或永久毁容。",
+        "degreeContext": "三级重罪。第(1)(b)款将虐待儿童界定为故意造成伤害、实施可合理预期导致伤害的故意行为，或积极鼓励实施造成或可合理预期造成伤害的行为；第827.01条界定儿童。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "jurisdiction": "FL",
+    "code": "827.03(2)(d)",
+    "slug": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "names": {
+      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
+      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.03(2)(d)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Willfully or by culpable negligence neglecting a child without causing great bodily harm, permanent disability, or permanent disfigurement.",
+        "degreeContext": "Third-degree felony. Subsection (1)(e) defines neglect and preserves the independent-activity limitation; § 827.01 defines child and caregiver."
+      },
+      "es": {
+        "plainSummary": "Descuidar deliberadamente o por negligencia culpable a un menor sin causar gran daño corporal, discapacidad permanente ni desfiguración permanente.",
+        "degreeContext": "Delito grave de tercer grado. El inciso (1)(e) define la negligencia y conserva la limitación relativa a las actividades independientes; el § 827.01 define menor y cuidador."
+      },
+      "zh": {
+        "plainSummary": "故意或因有罪过的过失疏忽照料儿童，但未造成严重身体伤害、永久残疾或永久毁容。",
+        "degreeContext": "三级重罪。第(1)(e)款界定疏忽照料并保留关于儿童独立活动的限制；第827.01条界定儿童及照护者。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "jurisdiction": "FL",
+    "code": "827.04(3)",
+    "slug": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "name": "Contributing to the delinquency or dependency of a child; penalty",
+    "names": {
+      "es": "Contribución a la delincuencia o dependencia de un menor; pena",
+      "zh": "促使儿童成为违法或受抚养儿童；处罚"
+    },
+    "category": "felony",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.04(3)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "A person age 21 or older impregnating a child under age 16.",
+        "degreeContext": "Third-degree felony. The offense applies regardless of whether the person is found to have committed, charged with, or prosecuted for another offense in the same criminal transaction or episode. The victim's lack of chastity and consent are not defenses."
+      },
+      "es": {
+        "plainSummary": "Una persona de 21 años o más que embaraza a una menor de 16 años.",
+        "degreeContext": "Delito grave de tercer grado. El delito se aplica independientemente de que la persona sea declarada autora, acusada o procesada por otro delito en la misma transacción o episodio penal. Ni la falta de castidad ni el consentimiento de la víctima constituyen defensa."
+      },
+      "zh": {
+        "plainSummary": "年满21岁者使未满16岁的儿童怀孕。",
+        "degreeContext": "三级重罪。无论该人是否因同一犯罪交易或事件中的其他罪行被认定有罪、受到指控或被起诉，本罪均适用。受害者并非贞洁或曾表示同意均不构成抗辩。"
+      }
+    }
+  }
+]
