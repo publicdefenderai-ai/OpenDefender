@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reportHash": "2a4af60a96f299630b80a92fef790573f87e75cb39e8645c3dad7517da151bf2",
+  "reportHash": "2d632f4116b6a5c3d02fd1cf1b53e791427bd2a8dff1e733e3d342b0156912db",
   "decisions": [
     {
       "id": "fl-fs-777-04-1-criminal-attempt",
@@ -678,137 +678,137 @@
       "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The official section heading supplies the exact statutory identity; subsection (1) supplies both use-purpose alternatives and misdemeanor grading.",
-      "draftHash": "afb7a887984f0736fb9391a16f41480b32e892977b6f2f18e76c19c7655c78b0",
-      "definitionHash": "fd349b8e59208484a90c9c8b14b6ddd9d1dd3e69a004d359f42d8ce024da0e19",
-      "approvalHash": "a0ce06405be6a3244c167ad35c0a71f76506d58dc093db1ff1f3fc8dd3c1534a"
+      "draftHash": "573732bdc95c44491bf65345bf3148acb7a3c21ebcf1e9ca2e2985852ccb9366",
+      "definitionHash": "8d65299469763e2401ee8e04326b9402ed1d7f327d2d6b8fcb1807e7d96e442b",
+      "approvalHash": "3d651d9cfe88c0d39552148443831c387b695fda2ab5c17997bb4aa5a782f9d2"
     },
     {
       "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The official section heading supplies the exact statutory identity; subsection (2) supplies conduct, knowledge standard, intended uses, and felony grade.",
-      "draftHash": "dc0b1a519533c0a1fe116dcd9683aa803907a7966ef797d05c13fae98f4a93b4",
-      "definitionHash": "7174007724e468013ae1b8f25be10c77d91e6fa7cc518c8387f94581a62c922a",
-      "approvalHash": "fd0d62f6f5f2fa7b96a76ccdead8f050c4cd586565d961f5a4a83a2912d1d0ca"
+      "draftHash": "17de59e233c3b65dd0fac40af701941ed0518e66b0dcf98cc42dbadafb4baa31",
+      "definitionHash": "04883cdb3de7c3a03ad28ceddffd4d36254d320c64ec464ce924fee082fe5150",
+      "approvalHash": "9f359db79f6dd71bcdf78446c9b42f4bf08b934dd5872b5694125cc292f9fd9f"
     },
     {
       "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The official section heading supplies exact statutory identity; paragraph (3)(a) expressly incorporates subsection (2), adds adult/minor ages and delivery, and grades the offense.",
-      "draftHash": "583da0a3950800474c60bbc51e4f481cbd7b56fb7308e6549772bde65f742045",
-      "definitionHash": "356a303b3ada618d13dea28ca36ee5802c1143b91e4789e9e29ff567e64a2cd5",
-      "approvalHash": "296f663f8d8adab95271d7543ce1024f272e6356e5418d3e933561e9f4ac0d3e"
+      "draftHash": "a322ea8435dfc827cf50b2f45ae10e0930101771ffde8058363ccaf2e6f732a7",
+      "definitionHash": "1133c99596098156a10cf69d5b99ea14e3fab4abae9b019cd76fb5936a2c5381",
+      "approvalHash": "3ee4d24660e940a379c54a17f54d56b1b3ab5e2ab388c401178d8a9f41d2d155"
     },
     {
       "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The official section heading supplies exact statutory identity, while paragraph (3)(b) independently states syringe/needle delivery conduct, lawful-dispensation exceptions, and misdemeanor guilt.",
-      "draftHash": "bd97f44ab6afd537c209df55f24b688c756ba74b0883d70e123128c8d231a7db",
-      "definitionHash": "a515fdd1e95df2272b1747caa65aceb95b0e64b87f16973fb9971c5c61c8dbe6",
-      "approvalHash": "f380a33dc781cac2dcdc2600ebca52cecd4adfaa228dfb1ddce165a396d17c5f"
+      "draftHash": "4e8faed32e6152950401bc89f81d002a26d50ea55403965f4a447dbb74867ba6",
+      "definitionHash": "e69d3c1d7b0009d02e05911314ad57174bd1b07a36728fac283f9160d50b1d8d",
+      "approvalHash": "3189acd7267c3810e2f5194c7971df3aacb89ba1b3e7ecaed69d142edf17e69d"
     },
     {
       "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The official section heading supplies exact statutory identity; this subsection (4) draft is deliberately confined in its stated conduct to paragraph (4)(a), avoiding the unavailable definition incorporated only by (4)(b).",
-      "draftHash": "b1cca0841a1866850a119877c7ff7027cd4e8c3ece1d950bf1ec21bbe2875827",
-      "definitionHash": "945a4f1730d7b51f6fb9d566036ecff4738be3fdbbf9bb6a337bf7357f7232c9",
-      "approvalHash": "d39df8d84a2fdede01050aac0733ac54a526b7d8e6868eb18605b44ef8229506"
+      "draftHash": "5fc28ece83079a27b9d9cac7ae942447cde919c7f056867f77453f951b5ff4cd",
+      "definitionHash": "56b8d369428eeade6e61cdd8f5409ff8bd1815d0a52d85ae3f57d746df0b43a4",
+      "approvalHash": "32686157fadd03dbecd62660f7fa5b56fc5a6b754a7742ba4ab05703fd5b3fec"
     },
     {
       "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The official section heading supplies exact statutory identity; subsection (4)'s parent supplies the conduct, knowledge, and transportation elements, paragraph (4)(b) supplies the narrow incorporated contraband alternative, and the common subsection tail supplies felony grading. Current § 932.701(2)(a)1. supports that alternative without projecting the rest of the contraband-article list.",
-      "draftHash": "7ac764c74fd5bf1a25eef25e6d25b943ff25b515906008eb8625c33b2986521b",
-      "definitionHash": "fa38bb19625e1de3d6f950bc7e62f2d53fd97499e30fc3719b670309ff5528b7",
-      "approvalHash": "f0b6cd4acdf431a9acd33bef01239f1ffdc6b6790750df4a13faee4304c50745"
+      "draftHash": "f9829a1a359c771810d60df39a1441a19d6b374bef16d002d453b65b0b097630",
+      "definitionHash": "36278ef52df3ce30ef47022784ff258346b30c49eca3a860346f13795dfbcac6",
+      "approvalHash": "d10b6202057a3aac22413c940eeb8eda34899b09b109d0c4c3225016e5984764"
     },
     {
       "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The exact official section heading identifies the statutory charge, and subsection (5) supplies publication, knowledge, purpose, and misdemeanor guilt in one clause.",
-      "draftHash": "197d35773951965e6814916fc96686f183b1ffc5ac7ebe431ad2ae89a96ab39f",
-      "definitionHash": "620fd91d52fa7e15d6469a81044f1aee7f1ee296ea337f14a819f837fabbb369",
-      "approvalHash": "23cb105214527798630974a0bdeae6dc164f77b721be593a24a6ecc08b404b2c"
+      "draftHash": "2361cd9fa3cb6a1011fd8dabf8b9466d7ff4b8543b478997271862f219c7f5c3",
+      "definitionHash": "04ff9a5fef658596622a205fe251c323f4766122043731d0c0c750593ea305b5",
+      "approvalHash": "028e0076046da8df4097f21379022826095c17893efad0e704f3b4ebbf5f5827"
     },
     {
       "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
       "status": "eligible",
       "reason": "The exact official section heading identifies the statutory charge; paragraph (6)(a) narrowly enumerates retail items and an exception, and paragraph (6)(b) supplies first and repeat grades.",
-      "draftHash": "d954efcd7d982bd053e0e329b5ebf47ef73b59ce0088648d510ab26749c25292",
-      "definitionHash": "25a8f3c035a6365e63eca82d4dd6f6a5cb3c5eab0bf9d4844162c6ecd0e2c842",
-      "approvalHash": "5e6359c895369103994d42aed3c11dbe4d228c3e6d255cddb1ebf496b0ecabd0"
+      "draftHash": "b283ce28aed9fbfc36dad9216640ab12ece06719ac7890b417573637c56b2dd1",
+      "definitionHash": "b09dda884876def6ba7d975aa29de25e2f02673fb22b8ca1c1e3636c097f6010",
+      "approvalHash": "7e7a8febe5c7635af11adf5c502aeb29afd987aa924f1609ee730b5df7645509"
     },
     {
       "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies the statutory identity; subsection (1) supplies four abuse alternatives, the knowledge or willfulness requirement, the no-great-harm limitation, an express isolation defense, and the third-degree-felony grade.",
-      "draftHash": "17247a181e0922696412d22540a328b118447436e815ea77e4993605cee205e1",
-      "definitionHash": "fc0839365eb4cdd10516cdd9ea01a636890a4045799cc0db536f9c93198ac107",
-      "approvalHash": "72800166a408fd789fb10ff12d52056337ffc85232ad2a2eb524a2125a575662"
+      "draftHash": "6526a4bf6f905ccdb4265ab44076787e441602a84152f8baf7ab6ecbddf27792",
+      "definitionHash": "b47883d2f922717a036cbcaa279ddcd19f31017f1e431901f49b233d1d019078",
+      "approvalHash": "fa7f9cfca48831c426ad7111a907680d7092b30eaabf071e254960463449186d"
     },
     {
       "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies the statutory identity; subsection (2) supplies three aggravated-abuse alternatives and the first-degree-felony grade, with the incorporated aggravated-battery branch bound to current §§ 784.03 and 784.045.",
-      "draftHash": "5a5fc017bccf39339058fd7d84a8fd8fe2338971826b7986b2e4a9b5d7b6880f",
-      "definitionHash": "d1239e895d66a6266f8f038d343059eb30fedd0caa792c007a794cfd184ce104",
-      "approvalHash": "f43a4f019f431ed2e869b35f591e256b0cd8a71348cacceb59e44a6e785ba7e6"
+      "draftHash": "da1ee31f7487cfc492360bfa6da715e656fcc26b044cd2cca2500eae9e8d7fb9",
+      "definitionHash": "7f437a92074024357f46ab7bfc28a5da0bf164a9ad5a130be42369ba8165d768",
+      "approvalHash": "4722f41d3fe1b241ac6372a38e4efc179756f554fbe4e5ca9126cccb2a539e8c"
     },
     {
       "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies the statutory identity; paragraph (3)(b) supplies willful-or-culpably-negligent neglect, the resulting-harm element, and the second-degree-felony grade.",
-      "draftHash": "196596f6a7b16395fe1affb6147f08785831d6eb51167630b180090a19d256f5",
-      "definitionHash": "6f99f6e8fe23baf8b3bbee22b80b43025fd07899c445fff06061e13ea64a9cc5",
-      "approvalHash": "da7825267546fd89e58faff523dbece91af44f9ad8d23390c9d080fee227659e"
+      "draftHash": "0a23e77dab4803a3796886088b6bbd594317407b74d9b8032e9bc57ddb670470",
+      "definitionHash": "958fc90561b8debb8f14b328653a3b32db40e55152fbb46aaf86005cf52cf982",
+      "approvalHash": "9e9f61030a3395c546e60adf42832c3f95e210b1e0b1cc44d0fad51f6a50fb4b"
     },
     {
       "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies the statutory identity; paragraph (3)(c) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade.",
-      "draftHash": "482f7acfcb76117fe45d00194c3bad9a8482b41a98f5cdd6fe670d725f996fa4",
-      "definitionHash": "ba255b476ee87e820ae7ecfe95999c743ab14432b1dfa5d5713418bb9158b399",
-      "approvalHash": "28947267f262b2aab1a76fa677343d5c754b2bbafcc00072738384806e9337fd"
+      "draftHash": "d8a40d6aacb78630c62192eaad5235844c92a9f01daea90e51a00a409433f627",
+      "definitionHash": "ac6b32f9bf8d1f0135bb531b7e92a263e3366e5937ff3ba381e6e91be9f4098d",
+      "approvalHash": "a93a59c92189ebf1094f6210d2417c4f1615956579a358db24b9f45cc5d0f31f"
     },
     {
       "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies statutory identity; paragraph (2)(a) expressly criminalizes aggravated child abuse and states the first-degree-felony grade, while subsection (1)(a) and current §§ 784.03 and 784.045 close the definition and incorporated aggravated-battery branch.",
-      "draftHash": "2d6bb06cc72b0968a969b847171e7950d830da5576d66d5e2be8c9cf1c48115d",
-      "definitionHash": "d76f54564e0a69d551ec300d3ba04c1da57ba9ef39e8421bc4b07aa44363e564",
-      "approvalHash": "75f180d4b4c6769c15d4804c6f45b8a900b01c3987aaa08cdf78d086e0344b2d"
+      "draftHash": "326900b595e2a5ec5f82498d6e063f4cc59f041798bc51013df8eba370703175",
+      "definitionHash": "0b2208b0372ea17b2a8aff3df70b0484e5938d869172e2d38bcdb6db0a2c3b5b",
+      "approvalHash": "884980dfc8cf1055469470d98bee7f9cabbb14a514786474a0ead267a7d852b6"
     },
     {
       "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies statutory identity; paragraph (2)(b) supplies willful-or-culpably-negligent neglect, resulting great harm, and the second-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
-      "draftHash": "bec0be3efd100a360be6c1e0a4d859f5e9fcbe7da28531b02009bd4c9f40691c",
-      "definitionHash": "030d31a97d781d6a6683504e6faede539a87e4746f7c75ba0bf50d3bb2ca76a0",
-      "approvalHash": "e5b823097d98ee5e8d20d1d40fa3a56e3222df81ad6e963be21dc578c5c6392f"
+      "draftHash": "18eb8b7972be0644858c76ed83d2c54cc7306c2456192476d96a423efd581b75",
+      "definitionHash": "6c6db329594f8e8315856f76009d1c96459f32445ca50f510e4497313926eba3",
+      "approvalHash": "f16c331d95d129464cded337dca0c7d3a073275049119cbae0e687ae571c58a3"
     },
     {
       "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies statutory identity; paragraph (2)(c) supplies knowing-or-willful abuse, the no-great-harm limitation, and the third-degree-felony grade, with the complete abuse definition retained as a same-section dependency.",
-      "draftHash": "9d3ecd38dc46c7920a4ffbcafd70e625e41c7fa2507417091b8646a4be99bbfc",
-      "definitionHash": "8f63d283c456060f16f58171e136d730270f50acfa916697225ccc38daa2f60f",
-      "approvalHash": "d99cc0ffb2aa6761d0bc05999fdbc8247ae7f2e0953067ff1a6972722ddbfd2c"
+      "draftHash": "2d37bbbc621b89c415d962b5d065bf359e70f602afabd82a4641866d72ac1f5c",
+      "definitionHash": "726262f6ad8156ae66685d1c263d65affc8d25330d56ffd0734d62335e51bc25",
+      "approvalHash": "362e7425c6487de727dc184c7a4c09a8b9c264b1f1884b3936a2041646230893"
     },
     {
       "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
       "status": "eligible",
       "reason": "The exact official heading supplies statutory identity; paragraph (2)(d) supplies willful-or-culpably-negligent neglect, the no-great-harm limitation, and the third-degree-felony grade, with the complete neglect definition retained as a same-section dependency.",
-      "draftHash": "76c5569e46f1c16ff7a88eba16787d2aead6a9afa4a8b934841b0b91252955fa",
-      "definitionHash": "5b4220030fa828db5f6b589c44750917e0ab88a64b5b6cdca671dae05c1fcd7f",
-      "approvalHash": "8ade8e14a5d4485d647e2065029f044755d7608d500dd4778bdafd6066df1de5"
+      "draftHash": "b85474ea7eb42d8ed9b07f35380dd3e299e138b865e5cdd4a22a7d58e2ceb8f5",
+      "definitionHash": "1973d345fee19377e2c7ddf95633977644afe43a9e992194540a405aaf8ae81c",
+      "approvalHash": "b61205241f8bce08ecb5a57169a2b888196e0f8b7a77a671756f377b67e0c512"
     },
     {
       "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
       "status": "eligible",
       "reason": "The exact official heading supplies statutory identity; subsection (3) independently states the actor and victim ages, impregnation conduct, third-degree-felony grade, separate-prosecution rule, and unavailable defenses.",
-      "draftHash": "41f056b35350265c94672e2218d9e7976bf87f46c43d37d2d2584675911a7d78",
-      "definitionHash": "03b456051df259ba54df3f35f17b447db0ee671f28549bcf425fd9df467a8173",
-      "approvalHash": "de8035a267dab98cb01c68811a30e2817e31df598219ac97e8a15ab23b38301a"
+      "draftHash": "476418db870c59be57282befbb0dd2bd4fc3d87b9980b1ba266adc16427e9a0c",
+      "definitionHash": "357ae25311848a7be61e87f77a5c97eb9edc26a56281be63f81d11a0c47c0e50",
+      "approvalHash": "96fc393a0c9a6daf2548db7e0c1a2523c2f8a6b3b07a3dec5a6575965cc561ae"
     }
   ]
 }

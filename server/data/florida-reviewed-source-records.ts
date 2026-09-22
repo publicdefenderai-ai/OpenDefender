@@ -317,9 +317,13 @@ export function buildFloridaReviewedSourceRecords(
       }
     }
     const normalizedTitle = normalizeIdentityText(offense.title);
-    const normalizedName = normalizeIdentityText(draft.name);
-    if (normalizedTitle !== normalizedName &&
-        !floridaIdentityQuoteStatesName(draft.name, draft.identityEvidence.text)) {
+    const identityNames = [
+      draft.name,
+      ...(definition.aliases?.en ?? []),
+    ];
+    if (!identityNames.some(name =>
+      normalizedTitle === normalizeIdentityText(name) ||
+      floridaIdentityQuoteStatesName(name, draft.identityEvidence.text))) {
       throw new Error(`Florida reviewed heading/guilt-clause identity failed: ${draft.id}`);
     }
     if (!draft.conductEvidence.length || draft.conductEvidence.some(span =>
@@ -361,7 +365,7 @@ export function buildFloridaReviewedSourceRecords(
     });
     records.push({
       chargeId: draft.id,
-      canonicalTitle: draft.name,
+      canonicalTitle: offense.title,
       code: draft.code,
       citation: draft.citation,
       conduct: draft.conduct,
@@ -699,11 +703,15 @@ export function assembleFloridaReviewedReport(
     const identityLocation = uniqueSpan(identityBody, analysis.identity.quote, identityBounds);
     const conductLocations = analysis.conductQuotes.map(quote =>
       uniqueSpan(primary.text, quote, bounds));
-    const normalizedName = normalizeIdentityText(definition.name);
+    const identityNames = [
+      definition.name,
+      ...(definition.aliases?.en ?? []),
+    ].map(normalizeIdentityText);
     const literalIdentity = analysis.identity.kind === "official_heading"
-      ? normalizeIdentityText(primary.title) === normalizedName &&
+      ? identityNames.includes(normalizeIdentityText(primary.title)) &&
         analysis.identity.quote === primary.title
-      : floridaIdentityQuoteStatesName(definition.name, analysis.identity.quote);
+      : [definition.name, ...(definition.aliases?.en ?? [])].some(name =>
+        floridaIdentityQuoteStatesName(name, analysis.identity!.quote));
     const identityProblems: string[] = [];
     if (analysis.identity.sourceHash !== primary.contentHash) {
       identityProblems.push("identity source hash does not match primary");

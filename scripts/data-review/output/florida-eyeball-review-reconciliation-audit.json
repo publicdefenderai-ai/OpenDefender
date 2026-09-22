@@ -1,0 +1,1147 @@
+{
+  "schemaVersion": 1,
+  "kind": "florida_attorney_review_reconciliation",
+  "sourceReview": {
+    "path": "attached_assets/SA_Review_-_florida-eyeball-review_1790056341586.docx",
+    "sha256": "f963cdf5c7d4d27d1024e9675e4c5bd2d5b320ff27242dec7085304f461adabc",
+    "reviewer": "Shahab Asghar",
+    "reviewerEnteredDate": "9/21/26"
+  },
+  "priorEvidenceAudit": {
+    "path": "scripts/data-review/output/florida-eyeball-review-audit.json",
+    "sha256": "b62e49a1d8254c46178cd4248e0260b56cdf0977e44ab81c388b2adb0d9beaa8"
+  },
+  "policy": {
+    "action": "split",
+    "mappedExistingRecordsBeforeAdding": true,
+    "recordsAdded": 0,
+    "officialHeadingPreservedAsSearchAlias": true,
+    "legalApprovalClaimed": false,
+    "scope": "Structural split reconciliation and display-name clarification only; no broader legal approval.",
+    "item5": "Checkbox blank; explicit decision text applied as split per user instruction.",
+    "item10": "Reviewer reference to (1)(c) and 'over 21' preserved verbatim but not copied as law; official § 827.04(3) and age 21 or older retained."
+  },
+  "items": [
+    {
+      "priority": 1,
+      "reviewedRecordId": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "Split into separate charges as outlined below",
+        "notes": "This provision should not be limited to the transport of contraband. There are seven separate sub charges here: Use or Possession of Drug Paraphernalia (Section 1); Manufacture or Delivery of Drug Paraphernalia (Section 2), Delivery of Drug Paraphernalia to a Minor (Section 3); and Transportation of Drug Paraphernalia (Section 4), Advertisement of Drug Paraphernalia (Section 5), Retail Sale of Drug Paraphernalia (Section 6), and  Tableting Machines, Encapsulating Machines, and Controlled Substance Counterfeiting Materials (Section 7)"
+      },
+      "originalBinding": {
+        "recordHash": "fa38bb19625e1de3d6f950bc7e62f2d53fd97499e30fc3719b670309ff5528b7",
+        "evidenceHash": "167bae56334aa77962c6ab6a67aa54275a6023b59d3e2bc016d42959497ec1c6",
+        "bindingHash": "314bc5d53defe7f0776174ae33e53b0bef15267543515240cd514719ae6794b8"
+      },
+      "catalogMappings": [
+        {
+          "code": "893.147(1)",
+          "status": "existing",
+          "boundary": "Use or possession",
+          "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Use or possession of drug paraphernalia",
+            "es": "Uso o posesión de parafernalia de drogas",
+            "zh": "使用或持有吸毒用具"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "8d65299469763e2401ee8e04326b9402ed1d7f327d2d6b8fcb1807e7d96e442b"
+        },
+        {
+          "code": "893.147(2)",
+          "status": "existing",
+          "boundary": "Manufacture or delivery",
+          "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Manufacture or delivery of drug paraphernalia",
+            "es": "Fabricación o entrega de parafernalia de drogas",
+            "zh": "制造或交付吸毒用具"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "04883cdb3de7c3a03ad28ceddffd4d36254d320c64ec464ce924fee082fe5150"
+        },
+        {
+          "code": "893.147(3)(a)",
+          "status": "existing",
+          "boundary": "Delivery to minor—adult deliverer",
+          "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Delivery of drug paraphernalia to a minor (adult deliverer)",
+            "es": "Entrega de parafernalia de drogas a un menor (persona adulta que entrega)",
+            "zh": "成年人向未成年人交付吸毒用具"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "1133c99596098156a10cf69d5b99ea14e3fab4abae9b019cd76fb5936a2c5381"
+        },
+        {
+          "code": "893.147(3)(b)",
+          "status": "existing",
+          "boundary": "Delivery of injection equipment to minor",
+          "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Delivery of injection equipment to a minor",
+            "es": "Entrega de equipo de inyección a un menor",
+            "zh": "向未成年人交付注射器具"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "e69d3c1d7b0009d02e05911314ad57174bd1b07a36728fac283f9160d50b1d8d"
+        },
+        {
+          "code": "893.147(4)(a)",
+          "status": "existing",
+          "boundary": "Transportation—controlled substance",
+          "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Transportation of a controlled substance using drug paraphernalia",
+            "es": "Transporte de una sustancia controlada mediante parafernalia de drogas",
+            "zh": "使用吸毒用具运输受管制物质"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "56b8d369428eeade6e61cdd8f5409ff8bd1815d0a52d85ae3f57d746df0b43a4"
+        },
+        {
+          "code": "893.147(4)(b)",
+          "status": "existing",
+          "boundary": "Transportation—contraband article",
+          "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Transportation of a contraband article using drug paraphernalia",
+            "es": "Transporte de un bien de contrabando mediante parafernalia de drogas",
+            "zh": "使用吸毒用具运输违禁物品"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "36278ef52df3ce30ef47022784ff258346b30c49eca3a860346f13795dfbcac6"
+        },
+        {
+          "code": "893.147(5)",
+          "status": "existing",
+          "boundary": "Advertisement",
+          "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Advertisement of drug paraphernalia",
+            "es": "Publicidad de parafernalia de drogas",
+            "zh": "吸毒用具广告"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "04ff9a5fef658596622a205fe251c323f4766122043731d0c0c750593ea305b5"
+        },
+        {
+          "code": "893.147(6)",
+          "status": "existing",
+          "boundary": "Retail sale",
+          "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
+          "displayNames": {
+            "en": "Retail sale of drug paraphernalia (first or repeat offense)",
+            "es": "Venta minorista de parafernalia de drogas (primera infracción o reincidencia)",
+            "zh": "零售吸毒用具（初犯或再犯）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
+            ],
+            "es": [
+              "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
+            ],
+            "zh": [
+              "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
+            ]
+          },
+          "reconciledRecordHash": "b09dda884876def6ba7d975aa29de25e2f02673fb22b8ca1c1e3636c097f6010"
+        },
+        {
+          "code": "893.147(7)",
+          "status": "held",
+          "boundary": "Tableting/counterfeiting machines and materials"
+        }
+      ]
+    },
+    {
+      "priority": 2,
+      "reviewedRecordId": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "__________________________________________________________________",
+        "notes": "This section contains different subcharges with different penalties, and thus should be split. These include Abuse of an elderly person or disabled adult (Section 1), Aggravated abuse of an elderly person or disabled adult (Section 2), and Neglect of an elderly person or disabled adult (Section 3)"
+      },
+      "originalBinding": {
+        "recordHash": "fc0839365eb4cdd10516cdd9ea01a636890a4045799cc0db536f9c93198ac107",
+        "evidenceHash": "ebb00e82f8e5e65bc554f2b1dcafa19ddbcbc58ab40c59b7addfb375e8e04516",
+        "bindingHash": "d6ba75dc262cc811b1b6b4df9d11370c7edc3fca44a5a36e8f46bdba40891fc2"
+      },
+      "catalogMappings": [
+        {
+          "code": "825.102(1)",
+          "status": "existing",
+          "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Abuse of an elderly person or disabled adult (no great bodily harm; third-degree felony)",
+            "es": "Abuso de una persona anciana o un adulto con discapacidad (sin gran daño corporal; delito grave de tercer grado)",
+            "zh": "虐待老年人或残障成年人（未造成严重身体伤害；三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "b47883d2f922717a036cbcaa279ddcd19f31017f1e431901f49b233d1d019078"
+        },
+        {
+          "code": "825.102(2)",
+          "status": "existing",
+          "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Aggravated abuse of an elderly person or disabled adult (first-degree felony)",
+            "es": "Abuso agravado de una persona anciana o un adulto con discapacidad (delito grave de primer grado)",
+            "zh": "加重虐待老年人或残障成年人（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "7f437a92074024357f46ab7bfc28a5da0bf164a9ad5a130be42369ba8165d768"
+        },
+        {
+          "code": "825.102(3)(b)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult causing great bodily harm (second-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料老年人或残障成年人并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "958fc90561b8debb8f14b328653a3b32db40e55152fbb46aaf86005cf52cf982"
+        },
+        {
+          "code": "825.102(3)(c)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult without great bodily harm (third-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料老年人或残障成年人但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "ac6b32f9bf8d1f0135bb531b7e92a263e3366e5937ff3ba381e6e91be9f4098d"
+        }
+      ]
+    },
+    {
+      "priority": 3,
+      "reviewedRecordId": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "__________________________________________________________________",
+        "notes": "See my response to the prior question – this whole section should be split accordingly."
+      },
+      "originalBinding": {
+        "recordHash": "d1239e895d66a6266f8f038d343059eb30fedd0caa792c007a794cfd184ce104",
+        "evidenceHash": "bae61d71e86604dc8a68e4f0c7818d5a3c3e822e153174fb77bcfff9c9343228",
+        "bindingHash": "1694e7c83897a35486dccc27a6d7ebeb2e7f037c59fa9cf825d9be428f644044"
+      },
+      "catalogMappings": [
+        {
+          "code": "825.102(1)",
+          "status": "existing",
+          "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Abuse of an elderly person or disabled adult (no great bodily harm; third-degree felony)",
+            "es": "Abuso de una persona anciana o un adulto con discapacidad (sin gran daño corporal; delito grave de tercer grado)",
+            "zh": "虐待老年人或残障成年人（未造成严重身体伤害；三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "b47883d2f922717a036cbcaa279ddcd19f31017f1e431901f49b233d1d019078"
+        },
+        {
+          "code": "825.102(2)",
+          "status": "existing",
+          "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Aggravated abuse of an elderly person or disabled adult (first-degree felony)",
+            "es": "Abuso agravado de una persona anciana o un adulto con discapacidad (delito grave de primer grado)",
+            "zh": "加重虐待老年人或残障成年人（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "7f437a92074024357f46ab7bfc28a5da0bf164a9ad5a130be42369ba8165d768"
+        },
+        {
+          "code": "825.102(3)(b)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult causing great bodily harm (second-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料老年人或残障成年人并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "958fc90561b8debb8f14b328653a3b32db40e55152fbb46aaf86005cf52cf982"
+        },
+        {
+          "code": "825.102(3)(c)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult without great bodily harm (third-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料老年人或残障成年人但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "ac6b32f9bf8d1f0135bb531b7e92a263e3366e5937ff3ba381e6e91be9f4098d"
+        }
+      ]
+    },
+    {
+      "priority": 4,
+      "reviewedRecordId": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "Split per the more detailed answers above.",
+        "notes": "See my response to the prior question – this whole section should be split accordingly."
+      },
+      "originalBinding": {
+        "recordHash": "6f99f6e8fe23baf8b3bbee22b80b43025fd07899c445fff06061e13ea64a9cc5",
+        "evidenceHash": "8f5dd71610aac7fa7821b05c43047a42a44a45205d3bd9f8ef151005a86fd593",
+        "bindingHash": "3c2288c8e924c6f9ec9dc173be68b6998bb0a6f10866eda17bdeb407690c2b45"
+      },
+      "catalogMappings": [
+        {
+          "code": "825.102(1)",
+          "status": "existing",
+          "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Abuse of an elderly person or disabled adult (no great bodily harm; third-degree felony)",
+            "es": "Abuso de una persona anciana o un adulto con discapacidad (sin gran daño corporal; delito grave de tercer grado)",
+            "zh": "虐待老年人或残障成年人（未造成严重身体伤害；三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "b47883d2f922717a036cbcaa279ddcd19f31017f1e431901f49b233d1d019078"
+        },
+        {
+          "code": "825.102(2)",
+          "status": "existing",
+          "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Aggravated abuse of an elderly person or disabled adult (first-degree felony)",
+            "es": "Abuso agravado de una persona anciana o un adulto con discapacidad (delito grave de primer grado)",
+            "zh": "加重虐待老年人或残障成年人（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "7f437a92074024357f46ab7bfc28a5da0bf164a9ad5a130be42369ba8165d768"
+        },
+        {
+          "code": "825.102(3)(b)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult causing great bodily harm (second-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料老年人或残障成年人并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "958fc90561b8debb8f14b328653a3b32db40e55152fbb46aaf86005cf52cf982"
+        },
+        {
+          "code": "825.102(3)(c)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult without great bodily harm (third-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料老年人或残障成年人但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "ac6b32f9bf8d1f0135bb531b7e92a263e3366e5937ff3ba381e6e91be9f4098d"
+        }
+      ]
+    },
+    {
+      "priority": 5,
+      "reviewedRecordId": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": null,
+        "decision": "Split per the more detailed answers above.",
+        "notes": "See my response to the prior question – this whole section should be split accordingly."
+      },
+      "originalBinding": {
+        "recordHash": "ba255b476ee87e820ae7ecfe95999c743ab14432b1dfa5d5713418bb9158b399",
+        "evidenceHash": "dacbcbf76d15a4fe5fe4d61b535f416bfecc123ee7be694962566b8dc38210a9",
+        "bindingHash": "925c2d6d0068e4c4d159e306b94a4ba39d572dbf707d757f4e35b88d76b906bb"
+      },
+      "catalogMappings": [
+        {
+          "code": "825.102(1)",
+          "status": "existing",
+          "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Abuse of an elderly person or disabled adult (no great bodily harm; third-degree felony)",
+            "es": "Abuso de una persona anciana o un adulto con discapacidad (sin gran daño corporal; delito grave de tercer grado)",
+            "zh": "虐待老年人或残障成年人（未造成严重身体伤害；三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "b47883d2f922717a036cbcaa279ddcd19f31017f1e431901f49b233d1d019078"
+        },
+        {
+          "code": "825.102(2)",
+          "status": "existing",
+          "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Aggravated abuse of an elderly person or disabled adult (first-degree felony)",
+            "es": "Abuso agravado de una persona anciana o un adulto con discapacidad (delito grave de primer grado)",
+            "zh": "加重虐待老年人或残障成年人（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "7f437a92074024357f46ab7bfc28a5da0bf164a9ad5a130be42369ba8165d768"
+        },
+        {
+          "code": "825.102(3)(b)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult causing great bodily harm (second-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料老年人或残障成年人并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "958fc90561b8debb8f14b328653a3b32db40e55152fbb46aaf86005cf52cf982"
+        },
+        {
+          "code": "825.102(3)(c)",
+          "status": "existing",
+          "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
+          "displayNames": {
+            "en": "Neglect of an elderly person or disabled adult without great bodily harm (third-degree felony)",
+            "es": "Negligencia de una persona anciana o un adulto con discapacidad sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料老年人或残障成年人但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+            ]
+          },
+          "reconciledRecordHash": "ac6b32f9bf8d1f0135bb531b7e92a263e3366e5937ff3ba381e6e91be9f4098d"
+        }
+      ]
+    },
+    {
+      "priority": 6,
+      "reviewedRecordId": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "Split to separate offenses according to the directions below.",
+        "notes": "This whole section 827.03(2) contains multiple offenses with different punishments and should be split accordingly. 2(a) covers aggravated child abuse, a first degree offense; 2(b) covers willful or negligent child neglect causing harm, disability, or disfigurement, which is a second degree offense; 2(c) covers willful abuse of a child without causing harm, disability or disfigurement, a third degree offense, and 2(d), willful or negligent child neglect not causing harm, disability of disfigurement, a third degree offense."
+      },
+      "originalBinding": {
+        "recordHash": "d76f54564e0a69d551ec300d3ba04c1da57ba9ef39e8421bc4b07aa44363e564",
+        "evidenceHash": "cb3aab406ec8c94db18331d084bdba9428e7f1714f2760316203679437c4e3d4",
+        "bindingHash": "75ed33aaeccab0d4f752b1e74cc5c4124f739f7ed2b568c7676dbc0e1abcfffc"
+      },
+      "catalogMappings": [
+        {
+          "code": "827.03(2)(a)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Aggravated child abuse (first-degree felony)",
+            "es": "Abuso infantil agravado (delito grave de primer grado)",
+            "zh": "加重虐待儿童（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "0b2208b0372ea17b2a8aff3df70b0484e5938d869172e2d38bcdb6db0a2c3b5b"
+        },
+        {
+          "code": "827.03(2)(b)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect causing great bodily harm (second-degree felony)",
+            "es": "Negligencia infantil que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料儿童并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "6c6db329594f8e8315856f76009d1c96459f32445ca50f510e4497313926eba3"
+        },
+        {
+          "code": "827.03(2)(c)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child abuse without great bodily harm (third-degree felony)",
+            "es": "Abuso infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "虐待儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "726262f6ad8156ae66685d1c263d65affc8d25330d56ffd0734d62335e51bc25"
+        },
+        {
+          "code": "827.03(2)(d)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect without great bodily harm (third-degree felony)",
+            "es": "Negligencia infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "1973d345fee19377e2c7ddf95633977644afe43a9e992194540a405aaf8ae81c"
+        }
+      ]
+    },
+    {
+      "priority": 7,
+      "reviewedRecordId": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "Split according to the instructions above",
+        "notes": "This section should be split into separate charges as noted above."
+      },
+      "originalBinding": {
+        "recordHash": "030d31a97d781d6a6683504e6faede539a87e4746f7c75ba0bf50d3bb2ca76a0",
+        "evidenceHash": "1ee07cac784852caf1eee2e39098fe5839b1057f1d326e587e275ce76c050a74",
+        "bindingHash": "62a33dcc85c2aae328b068673d62fd0fba3f715b585ab8057e5c09cf9323283a"
+      },
+      "catalogMappings": [
+        {
+          "code": "827.03(2)(a)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Aggravated child abuse (first-degree felony)",
+            "es": "Abuso infantil agravado (delito grave de primer grado)",
+            "zh": "加重虐待儿童（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "0b2208b0372ea17b2a8aff3df70b0484e5938d869172e2d38bcdb6db0a2c3b5b"
+        },
+        {
+          "code": "827.03(2)(b)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect causing great bodily harm (second-degree felony)",
+            "es": "Negligencia infantil que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料儿童并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "6c6db329594f8e8315856f76009d1c96459f32445ca50f510e4497313926eba3"
+        },
+        {
+          "code": "827.03(2)(c)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child abuse without great bodily harm (third-degree felony)",
+            "es": "Abuso infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "虐待儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "726262f6ad8156ae66685d1c263d65affc8d25330d56ffd0734d62335e51bc25"
+        },
+        {
+          "code": "827.03(2)(d)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect without great bodily harm (third-degree felony)",
+            "es": "Negligencia infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "1973d345fee19377e2c7ddf95633977644afe43a9e992194540a405aaf8ae81c"
+        }
+      ]
+    },
+    {
+      "priority": 8,
+      "reviewedRecordId": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "Split according to the instructions above",
+        "notes": "This section should be split into separate charges as noted above."
+      },
+      "originalBinding": {
+        "recordHash": "8f63d283c456060f16f58171e136d730270f50acfa916697225ccc38daa2f60f",
+        "evidenceHash": "d2395ce3d8353e82f321e7ce959a3b2d3cf922a061a0da2fc269388ae21a39db",
+        "bindingHash": "0af4787cc4376f5abe2e78977e0e6912935cf7d4c6f5c6f8655fffb2e89a2e33"
+      },
+      "catalogMappings": [
+        {
+          "code": "827.03(2)(a)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Aggravated child abuse (first-degree felony)",
+            "es": "Abuso infantil agravado (delito grave de primer grado)",
+            "zh": "加重虐待儿童（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "0b2208b0372ea17b2a8aff3df70b0484e5938d869172e2d38bcdb6db0a2c3b5b"
+        },
+        {
+          "code": "827.03(2)(b)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect causing great bodily harm (second-degree felony)",
+            "es": "Negligencia infantil que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料儿童并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "6c6db329594f8e8315856f76009d1c96459f32445ca50f510e4497313926eba3"
+        },
+        {
+          "code": "827.03(2)(c)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child abuse without great bodily harm (third-degree felony)",
+            "es": "Abuso infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "虐待儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "726262f6ad8156ae66685d1c263d65affc8d25330d56ffd0734d62335e51bc25"
+        },
+        {
+          "code": "827.03(2)(d)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect without great bodily harm (third-degree felony)",
+            "es": "Negligencia infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "1973d345fee19377e2c7ddf95633977644afe43a9e992194540a405aaf8ae81c"
+        }
+      ]
+    },
+    {
+      "priority": 9,
+      "reviewedRecordId": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "Split according to the instructions above",
+        "notes": "This section should be split into separate charges as noted above."
+      },
+      "originalBinding": {
+        "recordHash": "5b4220030fa828db5f6b589c44750917e0ab88a64b5b6cdca671dae05c1fcd7f",
+        "evidenceHash": "b4f64833a36ca6efb0a6a07da4f39e233cb3281d1b3501919c606e118db7838c",
+        "bindingHash": "7de180be44c4eeacf9637d776052d53b884dbb032b2b2885fcc684d15a19103d"
+      },
+      "catalogMappings": [
+        {
+          "code": "827.03(2)(a)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Aggravated child abuse (first-degree felony)",
+            "es": "Abuso infantil agravado (delito grave de primer grado)",
+            "zh": "加重虐待儿童（一级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "0b2208b0372ea17b2a8aff3df70b0484e5938d869172e2d38bcdb6db0a2c3b5b"
+        },
+        {
+          "code": "827.03(2)(b)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect causing great bodily harm (second-degree felony)",
+            "es": "Negligencia infantil que causa gran daño corporal (delito grave de segundo grado)",
+            "zh": "疏忽照料儿童并造成严重身体伤害（二级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "6c6db329594f8e8315856f76009d1c96459f32445ca50f510e4497313926eba3"
+        },
+        {
+          "code": "827.03(2)(c)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child abuse without great bodily harm (third-degree felony)",
+            "es": "Abuso infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "虐待儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "726262f6ad8156ae66685d1c263d65affc8d25330d56ffd0734d62335e51bc25"
+        },
+        {
+          "code": "827.03(2)(d)",
+          "status": "existing",
+          "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
+          "displayNames": {
+            "en": "Child neglect without great bodily harm (third-degree felony)",
+            "es": "Negligencia infantil sin gran daño corporal (delito grave de tercer grado)",
+            "zh": "疏忽照料儿童但未造成严重身体伤害（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Abuse, aggravated abuse, and neglect of a child; penalties"
+            ],
+            "es": [
+              "Abuso, abuso agravado y negligencia de un menor; penas"
+            ],
+            "zh": [
+              "虐待、加重虐待及疏忽照料儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "1973d345fee19377e2c7ddf95633977644afe43a9e992194540a405aaf8ae81c"
+        }
+      ]
+    },
+    {
+      "priority": 10,
+      "reviewedRecordId": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+      "reviewer": "Shahab Asghar",
+      "reviewerEnteredDate": "9/21/26",
+      "appliedAction": "split",
+      "verbatimDecision": {
+        "checkbox": "split",
+        "decision": "Split into two offenses",
+        "notes": "There are two offenses here with different punishments. The first is provided for in parts (1)(a) and (b) of this section, relating to commission of acts which cause, tend to cause, encourage, or contribute to child delinquency, or induces a child to become or remain dependent of delinquent or in need of services. The second, in part (1)(c), covers someone over 21 impregnating someone under 16. Thus this should be split into two separate charges."
+      },
+      "originalBinding": {
+        "recordHash": "03b456051df259ba54df3f35f17b447db0ee671f28549bcf425fd9df467a8173",
+        "evidenceHash": "3c0be28a766d3f22724a4caf9625ac883adff9af56930f6a9f3f04738f792ded",
+        "bindingHash": "53fcb4a5e2a3635d208c847f355570766b29e7fd0d97371c7c2c4f2851d57e4b"
+      },
+      "catalogMappings": [
+        {
+          "code": "827.04(1)",
+          "status": "held",
+          "boundary": "Contributing to delinquency/dependency—dependency definitions unresolved"
+        },
+        {
+          "code": "827.04(3)",
+          "status": "existing",
+          "boundary": "Impregnation—official 2026 numbering and age language retained",
+          "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+          "displayNames": {
+            "en": "Impregnation of a child under 16 by a person age 21 or older (third-degree felony)",
+            "es": "Embarazo de una menor de 16 por una persona de 21 años o más (delito grave de tercer grado)",
+            "zh": "年满21岁者使未满16岁儿童怀孕（三级重罪）"
+          },
+          "officialHeadingAliases": {
+            "en": [
+              "Contributing to the delinquency or dependency of a child; penalty"
+            ],
+            "es": [
+              "Contribución a la delincuencia o dependencia de un menor; pena"
+            ],
+            "zh": [
+              "促使儿童成为违法或受抚养儿童；处罚"
+            ]
+          },
+          "reconciledRecordHash": "357ae25311848a7be61e87f77a5c97eb9edc26a56281be63f81d11a0c47c0e50"
+        }
+      ]
+    }
+  ],
+  "remainingHolds": [
+    {
+      "code": "893.147(7)",
+      "reason": "Recovered source leads do not resolve all incorporated federal definitions, registration/compliance conditions, licensing exceptions, and review boundaries."
+    },
+    {
+      "code": "827.04(1)",
+      "reason": "Current chapter 39 dependency definitions and nested boundaries remain unresolved; reviewer split direction does not approve this branch."
+    }
+  ]
+}

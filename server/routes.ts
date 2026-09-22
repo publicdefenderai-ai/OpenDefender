@@ -416,7 +416,7 @@ export async function registerRoutes(
       charges = filterAuthorityBackedCharges(charges, currentAuthoritySelectableIds);
       
         // Search canonical and available localized text regardless of display locale.
-      if (search && typeof search === 'string' && search.length > 100) {
+      if (search && typeof search === 'string' && search.length > MAX_QUERY_LENGTH) {
         return res.status(400).json({ success: false, error: "Search term too long" });
       }
       if (search && typeof search === 'string') {
@@ -424,6 +424,7 @@ export async function registerRoutes(
         charges = charges.filter(charge => {
           if (charge.name.toLowerCase().includes(searchLower) ||
               charge.description.toLowerCase().includes(searchLower) ||
+              charge.searchAliases?.some(alias => alias.toLowerCase().includes(searchLower)) ||
               charge.code.toLowerCase().includes(searchLower)) {
             return true;
           }

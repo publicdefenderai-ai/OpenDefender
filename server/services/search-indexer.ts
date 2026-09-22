@@ -1536,6 +1536,7 @@ function createChargeSearchDocument(charge: CriminalCharge): SearchDocument {
 
 function getChargeSearchAliases(charge: CriminalCharge): string[] {
   const aliases = new Set<string>();
+  for (const alias of charge.searchAliases ?? []) aliases.add(alias);
   // Codes and localized names remain aliases so users can find a charge even
   // when the current UI locale differs from the language they typed.
   aliases.add(charge.code);

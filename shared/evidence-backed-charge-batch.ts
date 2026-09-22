@@ -13,6 +13,8 @@ export interface EvidenceBackedChargeDefinition {
   name: string;
   /** Reviewed display names. English identity remains in `name`. */
   names?: { es: string; zh: string };
+  /** Reviewed aliases used for search; full official headings belong here when display names are shortened. */
+  aliases?: { en: string[]; es: string[]; zh: string[] };
   category: CriminalCharge["category"];
   categories?: CriminalCharge["category"][];
   verifiedMonth: string;
@@ -30,6 +32,9 @@ export function projectEvidenceBackedChargeBatch(rows: readonly EvidenceBackedCh
   for (const row of rows) {
     if (ids.has(row.id) || slugs.has(row.slug) || !row.id.trim() || !row.name.trim() ||
         (row.names !== undefined && (!row.names.es.trim() || !row.names.zh.trim())) ||
+        (row.aliases !== undefined && ["en", "es", "zh"].some(language =>
+          !row.aliases![language as keyof typeof row.aliases].length ||
+          row.aliases![language as keyof typeof row.aliases].some(alias => !alias.trim()))) ||
         (row.categories !== undefined &&
           (!row.categories.includes(row.category) || new Set(row.categories).size !== row.categories.length ||
             row.categories.some(category => !["felony", "misdemeanor", "infraction"].includes(category)))) ||
@@ -49,6 +54,9 @@ export function projectEvidenceBackedChargeBatch(rows: readonly EvidenceBackedCh
       id: row.id, jurisdiction: row.jurisdiction, code: row.code, name: row.name,
       // Keep the statutory name available for matching charging paperwork.
       nameEs: row.names?.es ?? row.name, nameZh: row.names?.zh ?? row.name,
+      ...(row.aliases ? { searchAliases: [
+        ...row.aliases.en, ...row.aliases.es, ...row.aliases.zh,
+      ] } : {}),
       category: row.category,
       ...(row.categories ? { categories: [...row.categories] } : {}),
       description: row.text.en.plainSummary, descriptionEs: row.text.es.plainSummary,

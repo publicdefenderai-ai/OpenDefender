@@ -154,6 +154,8 @@ export interface CriminalCharge {
   descriptionEs?: string;
   // Chinese translations (optional - populated incrementally)
   nameZh?: string;
+  /** Reviewed alternative labels, including full official headings retained when display names are shortened. */
+  searchAliases?: string[];
   descriptionZh?: string;
   // Localized penalty summaries. Callers must fall back to maxPenalty when absent.
   maxPenaltyEs?: string;

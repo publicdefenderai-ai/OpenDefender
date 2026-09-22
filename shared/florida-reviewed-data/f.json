@@ -4,11 +4,12 @@
     "jurisdiction": "FL",
     "code": "825.102(1)",
     "slug": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "name": "Abuse of an elderly person or disabled adult (no great bodily harm; third-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
-      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      "es": "Abuso de una persona anciana o un adulto con discapacidad (sin gran daño corporal; delito grave de tercer grado)",
+      "zh": "虐待老年人或残障成年人（未造成严重身体伤害；三级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -41,11 +42,12 @@
     "jurisdiction": "FL",
     "code": "825.102(2)",
     "slug": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "name": "Aggravated abuse of an elderly person or disabled adult (first-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
-      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      "es": "Abuso agravado de una persona anciana o un adulto con discapacidad (delito grave de primer grado)",
+      "zh": "加重虐待老年人或残障成年人（一级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -86,11 +88,12 @@
     "jurisdiction": "FL",
     "code": "825.102(3)(b)",
     "slug": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "name": "Neglect of an elderly person or disabled adult causing great bodily harm (second-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
-      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      "es": "Negligencia de una persona anciana o un adulto con discapacidad que causa gran daño corporal (delito grave de segundo grado)",
+      "zh": "疏忽照料老年人或残障成年人并造成严重身体伤害（二级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -123,11 +126,12 @@
     "jurisdiction": "FL",
     "code": "825.102(3)(c)",
     "slug": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+    "name": "Neglect of an elderly person or disabled adult without great bodily harm (third-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas",
-      "zh": "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      "es": "Negligencia de una persona anciana o un adulto con discapacidad sin gran daño corporal (delito grave de tercer grado)",
+      "zh": "疏忽照料老年人或残障成年人但未造成严重身体伤害（三级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -160,11 +164,12 @@
     "jurisdiction": "FL",
     "code": "827.03(2)(a)",
     "slug": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "name": "Aggravated child abuse (first-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
-      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+      "es": "Abuso infantil agravado (delito grave de primer grado)",
+      "zh": "加重虐待儿童（一级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -205,11 +210,12 @@
     "jurisdiction": "FL",
     "code": "827.03(2)(b)",
     "slug": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "name": "Child neglect causing great bodily harm (second-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
-      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+      "es": "Negligencia infantil que causa gran daño corporal (delito grave de segundo grado)",
+      "zh": "疏忽照料儿童并造成严重身体伤害（二级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -242,11 +248,12 @@
     "jurisdiction": "FL",
     "code": "827.03(2)(c)",
     "slug": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "name": "Child abuse without great bodily harm (third-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
-      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+      "es": "Abuso infantil sin gran daño corporal (delito grave de tercer grado)",
+      "zh": "虐待儿童但未造成严重身体伤害（三级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -279,11 +286,12 @@
     "jurisdiction": "FL",
     "code": "827.03(2)(d)",
     "slug": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-    "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+    "name": "Child neglect without great bodily harm (third-degree felony)",
     "names": {
-      "es": "Abuso, abuso agravado y negligencia de un menor; penas",
-      "zh": "虐待、加重虐待及疏忽照料儿童；处罚"
+      "es": "Negligencia infantil sin gran daño corporal (delito grave de tercer grado)",
+      "zh": "疏忽照料儿童但未造成严重身体伤害（三级重罪）"
     },
+    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -316,11 +324,12 @@
     "jurisdiction": "FL",
     "code": "827.04(3)",
     "slug": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
-    "name": "Contributing to the delinquency or dependency of a child; penalty",
+    "name": "Impregnation of a child under 16 by a person age 21 or older (third-degree felony)",
     "names": {
-      "es": "Contribución a la delincuencia o dependencia de un menor; pena",
-      "zh": "促使儿童成为违法或受抚养儿童；处罚"
+      "es": "Embarazo de una menor de 16 por una persona de 21 años o más (delito grave de tercer grado)",
+      "zh": "年满21岁者使未满16岁儿童怀孕（三级重罪）"
     },
+    "aliases": { "en": ["Contributing to the delinquency or dependency of a child; penalty"], "es": ["Contribución a la delincuencia o dependencia de un menor; pena"], "zh": ["促使儿童成为违法或受抚养儿童；处罚"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [

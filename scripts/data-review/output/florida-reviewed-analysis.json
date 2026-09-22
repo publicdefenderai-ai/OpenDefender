@@ -5434,7 +5434,7 @@
     },
     {
       "id": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Use or possession of drug paraphernalia",
       "code": "893.147(1)",
       "citation": "Fla. Stat. § 893.147(1)",
       "primarySourceKey": "fl:statute:893.147:1",
@@ -5491,7 +5491,7 @@
     },
     {
       "id": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Manufacture or delivery of drug paraphernalia",
       "code": "893.147(2)",
       "citation": "Fla. Stat. § 893.147(2)",
       "primarySourceKey": "fl:statute:893.147:2",
@@ -5548,7 +5548,7 @@
     },
     {
       "id": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Delivery of drug paraphernalia to a minor (adult deliverer)",
       "code": "893.147(3)(a)",
       "citation": "Fla. Stat. § 893.147(3)(a)",
       "primarySourceKey": "fl:statute:893.147:3_a",
@@ -5610,7 +5610,7 @@
     },
     {
       "id": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Delivery of injection equipment to a minor",
       "code": "893.147(3)(b)",
       "citation": "Fla. Stat. § 893.147(3)(b)",
       "primarySourceKey": "fl:statute:893.147:3_b",
@@ -5667,7 +5667,7 @@
     },
     {
       "id": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Transportation of a controlled substance using drug paraphernalia",
       "code": "893.147(4)(a)",
       "citation": "Fla. Stat. § 893.147(4)(a)",
       "primarySourceKey": "fl:statute:893.147:4_a",
@@ -5729,7 +5729,7 @@
     },
     {
       "id": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Transportation of a contraband article using drug paraphernalia",
       "code": "893.147(4)(b)",
       "citation": "Fla. Stat. § 893.147(4)(b)",
       "primarySourceKey": "fl:statute:893.147:4_b",
@@ -5806,7 +5806,7 @@
     },
     {
       "id": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Advertisement of drug paraphernalia",
       "code": "893.147(5)",
       "citation": "Fla. Stat. § 893.147(5)",
       "primarySourceKey": "fl:statute:893.147:5",
@@ -5863,7 +5863,7 @@
     },
     {
       "id": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-      "name": "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials",
+      "name": "Retail sale of drug paraphernalia (first or repeat offense)",
       "code": "893.147(6)",
       "citation": "Fla. Stat. § 893.147(6)",
       "primarySourceKey": "fl:statute:893.147:6",
@@ -5934,7 +5934,7 @@
     },
     {
       "id": "fl-fs-825-102-1-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "name": "Abuse of an elderly person or disabled adult (no great bodily harm; third-degree felony)",
       "code": "825.102(1)",
       "citation": "Fla. Stat. § 825.102(1)",
       "primarySourceKey": "fl:statute:825.102:1",
@@ -6043,7 +6043,7 @@
     },
     {
       "id": "fl-fs-825-102-2-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "name": "Aggravated abuse of an elderly person or disabled adult (first-degree felony)",
       "code": "825.102(2)",
       "citation": "Fla. Stat. § 825.102(2)",
       "primarySourceKey": "fl:statute:825.102:2",
@@ -6141,7 +6141,7 @@
     },
     {
       "id": "fl-fs-825-102-3-b-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "name": "Neglect of an elderly person or disabled adult causing great bodily harm (second-degree felony)",
       "code": "825.102(3)(b)",
       "citation": "Fla. Stat. § 825.102(3)(b)",
       "primarySourceKey": "fl:statute:825.102:3_b",
@@ -6218,7 +6218,7 @@
     },
     {
       "id": "fl-fs-825-102-3-c-abuse-aggravated-abuse-and-neglect-of-an-elderly-person-or-disabled-adult-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties",
+      "name": "Neglect of an elderly person or disabled adult without great bodily harm (third-degree felony)",
       "code": "825.102(3)(c)",
       "citation": "Fla. Stat. § 825.102(3)(c)",
       "primarySourceKey": "fl:statute:825.102:3_c",
@@ -6295,7 +6295,7 @@
     },
     {
       "id": "fl-fs-827-03-2-a-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "name": "Aggravated child abuse (first-degree felony)",
       "code": "827.03(2)(a)",
       "citation": "Fla. Stat. § 827.03(2)(a)",
       "primarySourceKey": "fl:statute:827.03:2_a",
@@ -6382,7 +6382,7 @@
     },
     {
       "id": "fl-fs-827-03-2-b-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "name": "Child neglect causing great bodily harm (second-degree felony)",
       "code": "827.03(2)(b)",
       "citation": "Fla. Stat. § 827.03(2)(b)",
       "primarySourceKey": "fl:statute:827.03:2_b",
@@ -6464,7 +6464,7 @@
     },
     {
       "id": "fl-fs-827-03-2-c-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "name": "Child abuse without great bodily harm (third-degree felony)",
       "code": "827.03(2)(c)",
       "citation": "Fla. Stat. § 827.03(2)(c)",
       "primarySourceKey": "fl:statute:827.03:2_c",
@@ -6541,7 +6541,7 @@
     },
     {
       "id": "fl-fs-827-03-2-d-abuse-aggravated-abuse-and-neglect-of-a-child-penalties",
-      "name": "Abuse, aggravated abuse, and neglect of a child; penalties",
+      "name": "Child neglect without great bodily harm (third-degree felony)",
       "code": "827.03(2)(d)",
       "citation": "Fla. Stat. § 827.03(2)(d)",
       "primarySourceKey": "fl:statute:827.03:2_d",
@@ -6623,7 +6623,7 @@
     },
     {
       "id": "fl-fs-827-04-3-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
-      "name": "Contributing to the delinquency or dependency of a child; penalty",
+      "name": "Impregnation of a child under 16 by a person age 21 or older (third-degree felony)",
       "code": "827.04(3)",
       "citation": "Fla. Stat. § 827.04(3)",
       "primarySourceKey": "fl:statute:827.04:3",

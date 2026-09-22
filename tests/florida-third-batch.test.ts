@@ -38,4 +38,19 @@ describe("Florida cached abuse and neglect batch", () => {
     expect(f.some(row => row.code === "827.04(1)")).toBe(false);
     expect(FLORIDA_REVIEWED_SOURCE_RECORDS.some(row => row.chargeId === held[0].id)).toBe(false);
   });
+
+  it("uses distinct reviewed display names while retaining full official headings", () => {
+    expect(new Set(f.map(row => row.name)).size).toBe(f.length);
+    for (const row of f) {
+      expect(row.aliases.en).toHaveLength(1);
+      expect(row.aliases.es).toHaveLength(1);
+      expect(row.aliases.zh).toHaveLength(1);
+      expect(row.aliases.en[0]).not.toBe(row.name);
+      expect(row.names.es).not.toBe(row.aliases.es[0]);
+      expect(row.names.zh).not.toBe(row.aliases.zh[0]);
+    }
+    const impregnation = f.find(row => row.code === "827.04(3)")!;
+    expect(impregnation.name).toContain("age 21 or older");
+    expect(impregnation.citations[0].citation).toBe("Fla. Stat. § 827.04(3)");
+  });
 });

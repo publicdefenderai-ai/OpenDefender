@@ -35,6 +35,10 @@ for (const definition of FLORIDA_REVIEWED_DEFINITIONS) {
   if (!definition.id.startsWith("fl-fs-") || definition.jurisdiction !== "FL" ||
       !decision || !["eligible", "held", "duplicate"].includes(decision.status) ||
       !decision.reason.trim() || !definition.names?.es.trim() || !definition.names?.zh.trim() ||
+      (definition.aliases !== undefined && ["en", "es", "zh"].some(language =>
+        !definition.aliases![language as keyof typeof definition.aliases].length ||
+        definition.aliases![language as keyof typeof definition.aliases]
+          .some(alias => !alias.trim()))) ||
       (definition.categories !== undefined &&
         (!definition.categories.length ||
           new Set(definition.categories).size !== definition.categories.length ||

@@ -387,7 +387,7 @@ export function buildFloridaReviewedManifestRecords(
   return FLORIDA_REVIEWED_SOURCE_RECORDS.map(source => {
     const charge = criminalCharges.find(candidate => candidate.id === source.chargeId);
     if (!charge || charge.jurisdiction !== "FL" || charge.code !== source.code ||
-        charge.name !== source.canonicalTitle) {
+        source.canonicalTitle !== source.offense.title) {
       throw new Error(`Florida reviewed source-first catalog identity is missing: ${source.chargeId}`);
     }
     const dependencyGroups = groupFloridaReviewedDependenciesForAuthority(source);
