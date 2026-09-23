@@ -18,7 +18,8 @@ export const OHIO_AGGRAVATED_ASSAULT_CHARGE: CriminalCharge = {
 };
 
 export const OHIO_AGGRAVATED_ASSAULT_EXPLANATION: ChargeExplanation = {
-  jurisdiction: "OH", chargePattern: /^aggravated assault$/i,
+  jurisdiction: "OH", canonicalChargeId: "oh-orc-2903-12-aggravated-assault",
+  chargePattern: /^aggravated assault$/i,
   slug: "ohio-aggravated-assault",
   plainSummary: "Ohio aggravated assault (§ 2903.12) is not just a generic label for a severe assault. It requires knowing conduct under sudden passion or rage caused by serious victim provocation reasonably sufficient to incite deadly force. The conduct is causing serious physical harm, or causing or attempting physical harm using a deadly weapon or dangerous ordnance, to another or another's unborn. Anger alone does not satisfy the statutory conditions. Definitions and pregnancy-related exceptions matter.",
   degreeContext: "The base offense is fourth-degree (ordinary prison terms of 6–18 months; base fine up to $5,000). A peace-officer or qualifying BCI-investigator victim makes it third-degree (ordinary terms of 9, 12, 18, 24, 30 or 36 months; base fine up to $10,000). Serious physical harm to such a victim requires one of those third-degree terms. A qualifying known-pregnancy specification requires either six months or a term prescribed for the applicable felony degree, subject to the protected-victim rule; it does not add six months to the sentence. Ordinary ranges are not total-sentence predictions.",

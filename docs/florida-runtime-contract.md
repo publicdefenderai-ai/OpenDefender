@@ -158,7 +158,7 @@ The development seed contains 126 selectable records (25 legacy + 101 additive);
 the 92 withheld legacy records remain withheld. These are record counts, not a
 claim of statewide completeness or attorney approval.
 
-The acquisition ledger records 149 actual HTTP requests and 1,426 cached
+The acquisition ledger records 149 actual HTTP requests and 1,431 cached
 current-edition sections. Assembly and activation reuse that cache without
 refetching it. Unavailable sections and historical-only dependencies remain
 excluded. Freshness still expires seven days after the oldest required source

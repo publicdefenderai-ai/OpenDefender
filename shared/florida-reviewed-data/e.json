@@ -5,47 +5,20 @@
     "code": "893.13(1)(a)",
     "slug": "fl-fs-893-13-1-a-prohibited-acts-penalties",
     "name": "Prohibited acts; penalties",
-    "names": {
-      "es": "Actos prohibidos; penas",
-      "zh": "禁止行为；处罚"
-    },
+    "names": { "es": "Actos prohibidos; penas", "zh": "禁止行为；处罚" },
     "category": "felony",
-    "categories": [
-      "felony",
-      "misdemeanor"
-    ],
+    "categories": ["felony", "misdemeanor"],
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.13(1)(a)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.03",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.101",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html"
-      }
+      { "citation": "Fla. Stat. § 893.13(1)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html" },
+      { "citation": "Fla. Stat. § 893.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html" },
+      { "citation": "Fla. Stat. § 893.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html" },
+      { "citation": "Fla. Stat. § 893.101", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "For non-cannabis applications only: except as authorized by chapters 893 and 499, selling, manufacturing, or delivering a controlled substance, or possessing one with intent to sell, manufacture, or deliver it.",
-        "degreeContext": "Second- or third-degree felony, or first-degree misdemeanor, depending on the substance's statutory schedule and subcategory. This ordinary-conduct branch excludes separate aggravated branches. Under § 893.101, knowledge of the substance's illicit nature is not an element; lack of that knowledge is an affirmative defense. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies."
-      },
-      "es": {
-        "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: salvo autorización de los capítulos 893 y 499, vender, fabricar o entregar una sustancia controlada, o poseerla con intención de venderla, fabricarla o entregarla.",
-        "degreeContext": "Delito grave de segundo o tercer grado, o delito menor de primer grado, según la lista y subcategoría legal de la sustancia. Esta rama ordinaria excluye las ramas agravadas separadas. Conforme al § 893.101, conocer la naturaleza ilícita de la sustancia no es un elemento; desconocerla es una defensa afirmativa. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple."
-      },
-      "zh": {
-        "plainSummary": "仅限非大麻情形：除第893章和第499章授权外，出售、制造或交付受管制物质，或意图出售、制造或交付而持有该物质。",
-        "degreeContext": "根据该物质的法定附表及子类别，构成二级或三级重罪，或一级轻罪。本普通行为分支不包括另行规定的加重分支。依第893.101条，知道该物质具有非法性质并非犯罪要件；不知道其非法性质属于积极抗辩。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。"
-      }
+      "en": { "plainSummary": "For non-cannabis applications only: except as authorized by chapters 893 and 499, selling, manufacturing, or delivering a controlled substance, or possessing one with intent to sell, manufacture, or deliver it.", "degreeContext": "Second- or third-degree felony, or first-degree misdemeanor, depending on the substance's statutory schedule and subcategory. This ordinary-conduct branch excludes separate aggravated branches. Under § 893.101, knowledge of the substance's illicit nature is not an element; lack of that knowledge is an affirmative defense. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies." },
+      "es": { "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: salvo autorización de los capítulos 893 y 499, vender, fabricar o entregar una sustancia controlada, o poseerla con intención de venderla, fabricarla o entregarla.", "degreeContext": "Delito grave de segundo o tercer grado, o delito menor de primer grado, según la lista y subcategoría legal de la sustancia. Esta rama ordinaria excluye las ramas agravadas separadas. Conforme al § 893.101, conocer la naturaleza ilícita de la sustancia no es un elemento; desconocerla es una defensa afirmativa. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple." },
+      "zh": { "plainSummary": "仅限非大麻情形：除第893章和第499章授权外，出售、制造或交付受管制物质，或意图出售、制造或交付而持有该物质。", "degreeContext": "根据该物质的法定附表及子类别，构成二级或三级重罪，或一级轻罪。本普通行为分支不包括另行规定的加重分支。依第893.101条，知道该物质具有非法性质并非犯罪要件；不知道其非法性质属于积极抗辩。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。" }
     }
   },
   {
@@ -54,47 +27,20 @@
     "code": "893.13(2)(a)",
     "slug": "fl-fs-893-13-2-a-prohibited-acts-penalties",
     "name": "Prohibited acts; penalties",
-    "names": {
-      "es": "Actos prohibidos; penas",
-      "zh": "禁止行为；处罚"
-    },
+    "names": { "es": "Actos prohibidos; penas", "zh": "禁止行为；处罚" },
     "category": "felony",
-    "categories": [
-      "felony",
-      "misdemeanor"
-    ],
+    "categories": ["felony", "misdemeanor"],
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.13(2)(a)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.03",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.101",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html"
-      }
+      { "citation": "Fla. Stat. § 893.13(2)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html" },
+      { "citation": "Fla. Stat. § 893.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html" },
+      { "citation": "Fla. Stat. § 893.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html" },
+      { "citation": "Fla. Stat. § 893.101", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "For non-cannabis applications only: except as authorized by chapters 893 and 499, purchasing a controlled substance or possessing one with intent to purchase it.",
-        "degreeContext": "Second- or third-degree felony, or first-degree misdemeanor, depending on the substance. The separate more-than-10-gram branch is not included. Under § 893.101, knowledge of illicit nature is not an element; lack of that knowledge is an affirmative defense. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies."
-      },
-      "es": {
-        "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: salvo autorización de los capítulos 893 y 499, comprar una sustancia controlada o poseerla con intención de comprarla.",
-        "degreeContext": "Delito grave de segundo o tercer grado, o delito menor de primer grado, según la sustancia. No se incluye la rama separada de más de 10 gramos. Conforme al § 893.101, conocer la naturaleza ilícita no es un elemento; desconocerla es una defensa afirmativa. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple."
-      },
-      "zh": {
-        "plainSummary": "仅限非大麻情形：除第893章和第499章授权外，购买受管制物质，或意图购买而持有该物质。",
-        "degreeContext": "根据物质种类构成二级或三级重罪，或一级轻罪。不包括另行规定的超过10克分支。依第893.101条，知道其非法性质并非犯罪要件；不知道其非法性质属于积极抗辩。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。"
-      }
+      "en": { "plainSummary": "For non-cannabis applications only: except as authorized by chapters 893 and 499, purchasing a controlled substance or possessing one with intent to purchase it.", "degreeContext": "Second- or third-degree felony, or first-degree misdemeanor, depending on the substance. The separate more-than-10-gram branch is not included. Under § 893.101, knowledge of illicit nature is not an element; lack of that knowledge is an affirmative defense. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies." },
+      "es": { "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: salvo autorización de los capítulos 893 y 499, comprar una sustancia controlada o poseerla con intención de comprarla.", "degreeContext": "Delito grave de segundo o tercer grado, o delito menor de primer grado, según la sustancia. No se incluye la rama separada de más de 10 gramos. Conforme al § 893.101, conocer la naturaleza ilícita no es un elemento; desconocerla es una defensa afirmativa. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple." },
+      "zh": { "plainSummary": "仅限非大麻情形：除第893章和第499章授权外，购买受管制物质，或意图购买而持有该物质。", "degreeContext": "根据物质种类构成二级或三级重罪，或一级轻罪。不包括另行规定的超过10克分支。依第893.101条，知道其非法性质并非犯罪要件；不知道其非法性质属于积极抗辩。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。" }
     }
   },
   {
@@ -103,43 +49,19 @@
     "code": "893.13(4)",
     "slug": "fl-fs-893-13-4-prohibited-acts-penalties",
     "name": "Prohibited acts; penalties",
-    "names": {
-      "es": "Actos prohibidos; penas",
-      "zh": "禁止行为；处罚"
-    },
+    "names": { "es": "Actos prohibidos; penas", "zh": "禁止行为；处罚" },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.13(4)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.03",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.101",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html"
-      }
+      { "citation": "Fla. Stat. § 893.13(4)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html" },
+      { "citation": "Fla. Stat. § 893.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html" },
+      { "citation": "Fla. Stat. § 893.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html" },
+      { "citation": "Fla. Stat. § 893.101", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "For non-cannabis applications only: except as authorized by chapter 893, a person age 18 or older delivering a controlled substance to someone under 18, using or hiring that minor in a sale or delivery, or using the minor to help avoid detection or apprehension for a chapter violation.",
-        "degreeContext": "First-, second-, or third-degree felony depending on the substance. Sentence may not be suspended or deferred, and probation is unavailable. Section 893.101 makes lack of knowledge of illicit nature an affirmative defense, not an element the state must prove. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies."
-      },
-      "es": {
-        "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: salvo autorización del capítulo 893, una persona de 18 años o más que entregue una sustancia controlada a un menor de 18, use o contrate al menor en una venta o entrega, o lo use para ayudar a evitar la detección o aprehensión por una infracción del capítulo.",
-        "degreeContext": "Delito grave de primer, segundo o tercer grado según la sustancia. La sentencia no puede suspenderse ni aplazarse y no procede la libertad a prueba (probation). El § 893.101 hace del desconocimiento de la naturaleza ilícita una defensa afirmativa, no un elemento que el estado deba probar. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple."
-      },
-      "zh": {
-        "plainSummary": "仅限非大麻情形：除第893章授权外，年满18岁者向未满18岁者交付受管制物质，利用或雇用该未成年人参与出售或交付，或利用其协助逃避对本章违法行为的侦查或逮捕。",
-        "degreeContext": "根据物质种类构成一级、二级或三级重罪。不得中止或延期判刑，也不得适用缓刑。第893.101条规定，不知道其非法性质属于积极抗辩，而非州方必须证明的要件。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。"
-      }
+      "en": { "plainSummary": "For non-cannabis applications only: except as authorized by chapter 893, a person age 18 or older delivering a controlled substance to someone under 18, using or hiring that minor in a sale or delivery, or using the minor to help avoid detection or apprehension for a chapter violation.", "degreeContext": "First-, second-, or third-degree felony depending on the substance. Sentence may not be suspended or deferred, and probation is unavailable. Section 893.101 makes lack of knowledge of illicit nature an affirmative defense, not an element the state must prove. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies." },
+      "es": { "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: salvo autorización del capítulo 893, una persona de 18 años o más que entregue una sustancia controlada a un menor de 18, use o contrate al menor en una venta o entrega, o lo use para ayudar a evitar la detección o aprehensión por una infracción del capítulo.", "degreeContext": "Delito grave de primer, segundo o tercer grado según la sustancia. La sentencia no puede suspenderse ni aplazarse y no procede la libertad a prueba (probation). El § 893.101 hace del desconocimiento de la naturaleza ilícita una defensa afirmativa, no un elemento que el estado deba probar. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple." },
+      "zh": { "plainSummary": "仅限非大麻情形：除第893章授权外，年满18岁者向未满18岁者交付受管制物质，利用或雇用该未成年人参与出售或交付，或利用其协助逃避对本章违法行为的侦查或逮捕。", "degreeContext": "根据物质种类构成一级、二级或三级重罪。不得中止或延期判刑，也不得适用缓刑。第893.101条规定，不知道其非法性质属于积极抗辩，而非州方必须证明的要件。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。" }
     }
   },
   {
@@ -148,47 +70,20 @@
     "code": "893.13(5)",
     "slug": "fl-fs-893-13-5-prohibited-acts-penalties",
     "name": "Prohibited acts; penalties",
-    "names": {
-      "es": "Actos prohibidos; penas",
-      "zh": "禁止行为；处罚"
-    },
+    "names": { "es": "Actos prohibidos; penas", "zh": "禁止行为；处罚" },
     "category": "felony",
-    "categories": [
-      "felony",
-      "misdemeanor"
-    ],
+    "categories": ["felony", "misdemeanor"],
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.13(5)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.03",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.101",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html"
-      }
+      { "citation": "Fla. Stat. § 893.13(5)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html" },
+      { "citation": "Fla. Stat. § 893.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html" },
+      { "citation": "Fla. Stat. § 893.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html" },
+      { "citation": "Fla. Stat. § 893.101", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "For non-cannabis applications only: bringing a controlled substance into Florida when possession is not authorized by chapter 893 and the person is not licensed to do so by the appropriate federal agency.",
-        "degreeContext": "Second- or third-degree felony, or first-degree misdemeanor, depending on the substance. Under § 893.101, knowledge of illicit nature is not an element; lack of that knowledge is an affirmative defense. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies."
-      },
-      "es": {
-        "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: introducir una sustancia controlada en Florida cuando su posesión no está autorizada por el capítulo 893 y la persona no tiene licencia de la agencia federal correspondiente para hacerlo.",
-        "degreeContext": "Delito grave de segundo o tercer grado, o delito menor de primer grado, según la sustancia. Conforme al § 893.101, conocer la naturaleza ilícita no es un elemento; desconocerla es una defensa afirmativa. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple."
-      },
-      "zh": {
-        "plainSummary": "仅限非大麻情形：在第893章未授权持有且行为人未获适当联邦机构许可的情况下，将受管制物质带入佛罗里达州。",
-        "degreeContext": "根据物质种类构成二级或三级重罪，或一级轻罪。依第893.101条，知道其非法性质并非犯罪要件；不知道其非法性质属于积极抗辩。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。"
-      }
+      "en": { "plainSummary": "For non-cannabis applications only: bringing a controlled substance into Florida when possession is not authorized by chapter 893 and the person is not licensed to do so by the appropriate federal agency.", "degreeContext": "Second- or third-degree felony, or first-degree misdemeanor, depending on the substance. Under § 893.101, knowledge of illicit nature is not an element; lack of that knowledge is an affirmative defense. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies." },
+      "es": { "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: introducir una sustancia controlada en Florida cuando su posesión no está autorizada por el capítulo 893 y la persona no tiene licencia de la agencia federal correspondiente para hacerlo.", "degreeContext": "Delito grave de segundo o tercer grado, o delito menor de primer grado, según la sustancia. Conforme al § 893.101, conocer la naturaleza ilícita no es un elemento; desconocerla es una defensa afirmativa. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple." },
+      "zh": { "plainSummary": "仅限非大麻情形：在第893章未授权持有且行为人未获适当联邦机构许可的情况下，将受管制物质带入佛罗里达州。", "degreeContext": "根据物质种类构成二级或三级重罪，或一级轻罪。依第893.101条，知道其非法性质并非犯罪要件；不知道其非法性质属于积极抗辩。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。" }
     }
   },
   {
@@ -197,43 +92,19 @@
     "code": "893.13(6)(a)",
     "slug": "fl-fs-893-13-6-a-prohibited-acts-penalties",
     "name": "Prohibited acts; penalties",
-    "names": {
-      "es": "Actos prohibidos; penas",
-      "zh": "禁止行为；处罚"
-    },
+    "names": { "es": "Actos prohibidos; penas", "zh": "禁止行为；处罚" },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.13(6)(a)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.03",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.101",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html"
-      }
+      { "citation": "Fla. Stat. § 893.13(6)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html" },
+      { "citation": "Fla. Stat. § 893.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html" },
+      { "citation": "Fla. Stat. § 893.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html" },
+      { "citation": "Fla. Stat. § 893.101", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "For non-cannabis applications only: actually or constructively possessing a controlled substance that was not lawfully obtained from a practitioner or under a valid practitioner prescription or order and is not otherwise authorized by chapter 893.",
-        "degreeContext": "Third-degree felony under (6)(a). The separately maintained misdemeanor for possession of 20 grams or less of cannabis under (6)(b) is not this record; (6)(c) and (6)(d) are also separate. Subsection (9) supplies listed professional and official exclusions. Under § 893.101, knowledge of illicit nature is not an element; lack of that knowledge is an affirmative defense, with a permissive presumption arising from possession when asserted. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies."
-      },
-      "es": {
-        "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: poseer real o constructivamente una sustancia controlada que no se obtuvo lícitamente de un profesional ni mediante una receta u orden válida emitida en su práctica profesional, y cuya posesión no está autorizada de otro modo por el capítulo 893.",
-        "degreeContext": "Delito grave de tercer grado bajo (6)(a). El delito menor por posesión de 20 gramos o menos de cannabis bajo (6)(b), mantenido por separado, no es este registro; (6)(c) y (6)(d) también son distintos. El inciso (9) contiene exclusiones profesionales y oficiales enumeradas. Según el § 893.101, conocer la naturaleza ilícita no es un elemento; desconocerla es una defensa afirmativa y, al invocarla, la posesión origina una presunción permisiva. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple."
-      },
-      "zh": {
-        "plainSummary": "仅限非大麻情形：实际或推定持有受管制物质，且该物质并非从执业人员处合法取得，也非依据执业人员在专业执业中签发的有效处方或医嘱取得，并且第893章未以其他方式授权持有。",
-        "degreeContext": "依第(6)(a)款构成三级重罪。另行维护的第(6)(b)款持有20克或以下大麻轻罪并非本记录；第(6)(c)、(6)(d)款也属另行规定。第(9)款列有专业及官方用途例外。依第893.101条，知道其非法性质并非要件；不知道属于积极抗辩，主张该抗辩时持有产生许可性推定。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。"
-      }
+      "en": { "plainSummary": "For non-cannabis applications only: actually or constructively possessing a controlled substance that was not lawfully obtained from a practitioner or under a valid practitioner prescription or order and is not otherwise authorized by chapter 893.", "degreeContext": "Third-degree felony under (6)(a). The separately maintained misdemeanor for possession of 20 grams or less of cannabis under (6)(b) is not this record; (6)(c) and (6)(d) are also separate. Subsection (9) supplies listed professional and official exclusions. Under § 893.101, knowledge of illicit nature is not an element; lack of that knowledge is an affirmative defense, with a permissive presumption arising from possession when asserted. Cannabis-specific liability and medical-marijuana compliance are not assessed because current § 381.986 is unavailable; the quoted exclusion in § 893.02(3) remains a statutory condition, but this record does not determine who complies." },
+      "es": { "plainSummary": "Solo para aplicaciones no relacionadas con cannabis: poseer real o constructivamente una sustancia controlada que no se obtuvo lícitamente de un profesional ni mediante una receta u orden válida emitida en su práctica profesional, y cuya posesión no está autorizada de otro modo por el capítulo 893.", "degreeContext": "Delito grave de tercer grado bajo (6)(a). El delito menor por posesión de 20 gramos o menos de cannabis bajo (6)(b), mantenido por separado, no es este registro; (6)(c) y (6)(d) también son distintos. El inciso (9) contiene exclusiones profesionales y oficiales enumeradas. Según el § 893.101, conocer la naturaleza ilícita no es un elemento; desconocerla es una defensa afirmativa y, al invocarla, la posesión origina una presunción permisiva. No se evalúan la responsabilidad específica por cannabis ni el cumplimiento de la ley de marihuana medicinal porque el § 381.986 vigente no está disponible; la exclusión citada del § 893.02(3) sigue siendo una condición legal, pero este registro no determina quién la cumple." },
+      "zh": { "plainSummary": "仅限非大麻情形：实际或推定持有受管制物质，且该物质并非从执业人员处合法取得，也非依据执业人员在专业执业中签发的有效处方或医嘱取得，并且第893章未以其他方式授权持有。", "degreeContext": "依第(6)(a)款构成三级重罪。另行维护的第(6)(b)款持有20克或以下大麻轻罪并非本记录；第(6)(c)、(6)(d)款也属另行规定。第(9)款列有专业及官方用途例外。依第893.101条，知道其非法性质并非要件；不知道属于积极抗辩，主张该抗辩时持有产生许可性推定。由于现行第381.986条不可用，本记录不评估大麻特定责任或医用大麻合规；第893.02(3)条所引排除规定仍是法定条件，但本记录不判断何人符合该条件。" }
     }
   },
   {
@@ -242,46 +113,18 @@
     "code": "893.147(1)",
     "slug": "fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Use or possession of drug paraphernalia",
-    "names": {
-      "es": "Uso o posesión de parafernalia de drogas",
-      "zh": "使用或持有吸毒用具"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Uso o posesión de parafernalia de drogas", "zh": "使用或持有吸毒用具" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "misdemeanor",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(1)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.145",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(1)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "Using, or possessing with intent to use, drug paraphernalia to plant, propagate, cultivate, grow, or harvest; manufacture, compound, convert, produce, process, prepare, test, or analyze; pack, repack, store, contain, or conceal a controlled substance in violation of chapter 893; or to inject, ingest, inhale, or otherwise introduce such a substance into the human body in violation of that chapter.",
-        "degreeContext": "First-degree misdemeanor. Section 893.145 defines drug paraphernalia and excludes qualifying fentanyl/xylazine test products used solely for detection, but not products that measure quantity, weight, or potency."
-      },
-      "es": {
-        "plainSummary": "Usar, o poseer con intención de usar, parafernalia de drogas para plantar, propagar, cultivar, hacer crecer o cosechar; fabricar, componer, convertir, producir, procesar, preparar, probar o analizar; empacar, reempacar, almacenar, contener u ocultar una sustancia controlada en infracción del capítulo 893; o para inyectar, ingerir, inhalar o introducirla de otro modo en el cuerpo humano en infracción de ese capítulo.",
-        "degreeContext": "Delito menor de primer grado. El § 893.145 define la parafernalia de drogas y excluye ciertos productos de prueba de fentanilo/xilazina usados únicamente para detección, pero no los que miden cantidad, peso o potencia."
-      },
-      "zh": {
-        "plainSummary": "使用吸毒用具，或意图使用而持有该用具，以违反第893章的方式种植、繁殖、栽培、生长或收获，制造、配制、转化、生产、加工、制备、检测或分析，包装、重新包装、储存、盛装或隐藏受管制物质；或以违反该章的方式注射、摄入、吸入或以其他方式将其导入人体。",
-        "degreeContext": "一级轻罪。第893.145条界定吸毒用具，并排除仅用于检测的合格芬太尼/赛拉嗪检测产品，但不排除测量数量、重量或效力的产品。"
-      }
+      "en": { "plainSummary": "Using, or possessing with intent to use, drug paraphernalia to plant, propagate, cultivate, grow, or harvest; manufacture, compound, convert, produce, process, prepare, test, or analyze; pack, repack, store, contain, or conceal a controlled substance in violation of chapter 893; or to inject, ingest, inhale, or otherwise introduce such a substance into the human body in violation of that chapter.", "degreeContext": "First-degree misdemeanor. Section 893.145 defines drug paraphernalia and excludes qualifying fentanyl/xylazine test products used solely for detection, but not products that measure quantity, weight, or potency." },
+      "es": { "plainSummary": "Usar, o poseer con intención de usar, parafernalia de drogas para plantar, propagar, cultivar, hacer crecer o cosechar; fabricar, componer, convertir, producir, procesar, preparar, probar o analizar; empacar, reempacar, almacenar, contener u ocultar una sustancia controlada en infracción del capítulo 893; o para inyectar, ingerir, inhalar o introducirla de otro modo en el cuerpo humano en infracción de ese capítulo.", "degreeContext": "Delito menor de primer grado. El § 893.145 define la parafernalia de drogas y excluye ciertos productos de prueba de fentanilo/xilazina usados únicamente para detección, pero no los que miden cantidad, peso o potencia." },
+      "zh": { "plainSummary": "使用吸毒用具，或意图使用而持有该用具，以违反第893章的方式种植、繁殖、栽培、生长或收获，制造、配制、转化、生产、加工、制备、检测或分析，包装、重新包装、储存、盛装或隐藏受管制物质；或以违反该章的方式注射、摄入、吸入或以其他方式将其导入人体。", "degreeContext": "一级轻罪。第893.145条界定吸毒用具，并排除仅用于检测的合格芬太尼/赛拉嗪检测产品，但不排除测量数量、重量或效力的产品。" }
     }
   },
   {
@@ -290,46 +133,18 @@
     "code": "893.147(2)",
     "slug": "fl-fs-893-147-2-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Manufacture or delivery of drug paraphernalia",
-    "names": {
-      "es": "Fabricación o entrega de parafernalia de drogas",
-      "zh": "制造或交付吸毒用具"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Fabricación o entrega de parafernalia de drogas", "zh": "制造或交付吸毒用具" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(2)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.145",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(2)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "Delivering, possessing with intent to deliver, or manufacturing with intent to deliver drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to plant, propagate, cultivate, grow, or harvest; manufacture, compound, convert, produce, process, prepare, test, or analyze; pack, repack, store, contain, or conceal a controlled substance; or to inject, ingest, inhale, or otherwise introduce one into the human body, in violation of the act.",
-        "degreeContext": "Third-degree felony."
-      },
-      "es": {
-        "plainSummary": "Entregar, poseer con intención de entregar o fabricar con intención de entregar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para plantar, propagar, cultivar, hacer crecer o cosechar; fabricar, componer, convertir, producir, procesar, preparar, probar o analizar; empacar, reempacar, almacenar, contener u ocultar una sustancia controlada; o para inyectar, ingerir, inhalar o introducirla de otro modo en el cuerpo humano, en infracción de la ley.",
-        "degreeContext": "Delito grave de tercer grado."
-      },
-      "zh": {
-        "plainSummary": "交付、意图交付而持有，或意图交付而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于违法种植、繁殖、栽培、生长或收获，制造、配制、转化、生产、加工、制备、检测或分析，包装、重新包装、储存、盛装或隐藏受管制物质，或注射、摄入、吸入或以其他方式将其导入人体。",
-        "degreeContext": "三级重罪。"
-      }
+      "en": { "plainSummary": "Delivering, possessing with intent to deliver, or manufacturing with intent to deliver drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to plant, propagate, cultivate, grow, or harvest; manufacture, compound, convert, produce, process, prepare, test, or analyze; pack, repack, store, contain, or conceal a controlled substance; or to inject, ingest, inhale, or otherwise introduce one into the human body, in violation of the act.", "degreeContext": "Third-degree felony." },
+      "es": { "plainSummary": "Entregar, poseer con intención de entregar o fabricar con intención de entregar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para plantar, propagar, cultivar, hacer crecer o cosechar; fabricar, componer, convertir, producir, procesar, preparar, probar o analizar; empacar, reempacar, almacenar, contener u ocultar una sustancia controlada; o para inyectar, ingerir, inhalar o introducirla de otro modo en el cuerpo humano, en infracción de la ley.", "degreeContext": "Delito grave de tercer grado." },
+      "zh": { "plainSummary": "交付、意图交付而持有，或意图交付而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于违法种植、繁殖、栽培、生长或收获，制造、配制、转化、生产、加工、制备、检测或分析，包装、重新包装、储存、盛装或隐藏受管制物质，或注射、摄入、吸入或以其他方式将其导入人体。", "degreeContext": "三级重罪。" }
     }
   },
   {
@@ -338,46 +153,18 @@
     "code": "893.147(3)(a)",
     "slug": "fl-fs-893-147-3-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Delivery of drug paraphernalia to a minor (adult deliverer)",
-    "names": {
-      "es": "Entrega de parafernalia de drogas a un menor (persona adulta que entrega)",
-      "zh": "成年人向未成年人交付吸毒用具"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Entrega de parafernalia de drogas a un menor (persona adulta que entrega)", "zh": "成年人向未成年人交付吸毒用具" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(3)(a)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.145",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(3)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "A person age 18 or older violating subsection (2) by delivering drug paraphernalia to a person under 18.",
-        "degreeContext": "Second-degree felony. This branch incorporates subsection (2)'s knowledge and intended-use elements; it is a criminal offense, not a juvenile civil disposition."
-      },
-      "es": {
-        "plainSummary": "Una persona de 18 años o más que infrinja el inciso (2) al entregar parafernalia de drogas a una persona menor de 18 años.",
-        "degreeContext": "Delito grave de segundo grado. Esta rama incorpora los elementos de conocimiento y uso previsto del inciso (2); es un delito penal, no una medida civil juvenil."
-      },
-      "zh": {
-        "plainSummary": "年满18岁者向未满18岁者交付吸毒用具，从而违反第(2)款。",
-        "degreeContext": "二级重罪。本分支纳入第(2)款的明知及预定用途要件；这是刑事犯罪，并非少年民事处置。"
-      }
+      "en": { "plainSummary": "A person age 18 or older violating subsection (2) by delivering drug paraphernalia to a person under 18.", "degreeContext": "Second-degree felony. This branch incorporates subsection (2)'s knowledge and intended-use elements; it is a criminal offense, not a juvenile civil disposition." },
+      "es": { "plainSummary": "Una persona de 18 años o más que infrinja el inciso (2) al entregar parafernalia de drogas a una persona menor de 18 años.", "degreeContext": "Delito grave de segundo grado. Esta rama incorpora los elementos de conocimiento y uso previsto del inciso (2); es un delito penal, no una medida civil juvenil." },
+      "zh": { "plainSummary": "年满18岁者向未满18岁者交付吸毒用具，从而违反第(2)款。", "degreeContext": "二级重罪。本分支纳入第(2)款的明知及预定用途要件；这是刑事犯罪，并非少年民事处置。" }
     }
   },
   {
@@ -386,42 +173,17 @@
     "code": "893.147(3)(b)",
     "slug": "fl-fs-893-147-3-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Delivery of injection equipment to a minor",
-    "names": {
-      "es": "Entrega de equipo de inyección a un menor",
-      "zh": "向未成年人交付注射器具"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Entrega de equipo de inyección a un menor", "zh": "向未成年人交付注射器具" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "misdemeanor",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(3)(b)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(3)(b)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "Selling or otherwise delivering to a person under 18 a hypodermic syringe, needle, or other object that may be used, is intended for use, or is designed for injecting substances into the human body.",
-        "degreeContext": "First-degree misdemeanor. It does not apply when a licensed practitioner, parent, or legal guardian lawfully dispenses the object to the minor, or when a pharmacist does so under a valid prescription. This is a criminal offense with an express lawful-dispensation exception, not a civil juvenile violation."
-      },
-      "es": {
-        "plainSummary": "Vender o entregar de otro modo a una persona menor de 18 años una jeringa hipodérmica, aguja u otro objeto que pueda usarse, esté destinado o diseñado para inyectar sustancias en el cuerpo humano.",
-        "degreeContext": "Delito menor de primer grado. No se aplica cuando un profesional autorizado, padre, madre o tutor legal entrega lícitamente el objeto al menor, ni cuando un farmacéutico lo hace conforme a una receta válida. Es un delito penal con una excepción expresa de entrega lícita, no una infracción civil juvenil."
-      },
-      "zh": {
-        "plainSummary": "向未满18岁者出售或以其他方式交付可用于、意图用于或设计用于向人体注射物质的皮下注射器、针头或其他物品。",
-        "degreeContext": "一级轻罪。持证执业人员、父母或法定监护人依法向未成年人提供，或药剂师依有效处方提供时不适用。这是设有明确合法提供例外的刑事犯罪，并非少年民事违法。"
-      }
+      "en": { "plainSummary": "Selling or otherwise delivering to a person under 18 a hypodermic syringe, needle, or other object that may be used, is intended for use, or is designed for injecting substances into the human body.", "degreeContext": "First-degree misdemeanor. It does not apply when a licensed practitioner, parent, or legal guardian lawfully dispenses the object to the minor, or when a pharmacist does so under a valid prescription. This is a criminal offense with an express lawful-dispensation exception, not a civil juvenile violation." },
+      "es": { "plainSummary": "Vender o entregar de otro modo a una persona menor de 18 años una jeringa hipodérmica, aguja u otro objeto que pueda usarse, esté destinado o diseñado para inyectar sustancias en el cuerpo humano.", "degreeContext": "Delito menor de primer grado. No se aplica cuando un profesional autorizado, padre, madre o tutor legal entrega lícitamente el objeto al menor, ni cuando un farmacéutico lo hace conforme a una receta válida. Es un delito penal con una excepción expresa de entrega lícita, no una infracción civil juvenil." },
+      "zh": { "plainSummary": "向未满18岁者出售或以其他方式交付可用于、意图用于或设计用于向人体注射物质的皮下注射器、针头或其他物品。", "degreeContext": "一级轻罪。持证执业人员、父母或法定监护人依法向未成年人提供，或药剂师依有效处方提供时不适用。这是设有明确合法提供例外的刑事犯罪，并非少年民事违法。" }
     }
   },
   {
@@ -430,46 +192,18 @@
     "code": "893.147(4)(a)",
     "slug": "fl-fs-893-147-4-a-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Transportation of a controlled substance using drug paraphernalia",
-    "names": {
-      "es": "Transporte de una sustancia controlada mediante parafernalia de drogas",
-      "zh": "使用吸毒用具运输受管制物质"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Transporte de una sustancia controlada mediante parafernalia de drogas", "zh": "使用吸毒用具运输受管制物质" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(4)(a)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.145",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(4)(a)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "Using, possessing with intent to use, or manufacturing with intent to use drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to transport a controlled substance in violation of chapter 893.",
-        "degreeContext": "Third-degree felony. This record is confined to paragraph (4)(a) and does not include paragraph (4)(b)'s separate statutory contraband alternative."
-      },
-      "es": {
-        "plainSummary": "Usar, poseer con intención de usar o fabricar con intención de usar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para transportar una sustancia controlada en infracción del capítulo 893.",
-        "degreeContext": "Delito grave de tercer grado. Este registro se limita al párrafo (4)(a) y no incluye la alternativa separada de bienes de contrabando definidos por ley del párrafo (4)(b)."
-      },
-      "zh": {
-        "plainSummary": "使用、意图使用而持有，或意图使用而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于违反第893章运输受管制物质。",
-        "degreeContext": "三级重罪。本记录仅限第(4)(a)项，不包括第(4)(b)项另行规定的法定违禁品选择分支。"
-      }
+      "en": { "plainSummary": "Using, possessing with intent to use, or manufacturing with intent to use drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to transport a controlled substance in violation of chapter 893.", "degreeContext": "Third-degree felony. This record is confined to paragraph (4)(a) and does not include paragraph (4)(b)'s separate statutory contraband alternative." },
+      "es": { "plainSummary": "Usar, poseer con intención de usar o fabricar con intención de usar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para transportar una sustancia controlada en infracción del capítulo 893.", "degreeContext": "Delito grave de tercer grado. Este registro se limita al párrafo (4)(a) y no incluye la alternativa separada de bienes de contrabando definidos por ley del párrafo (4)(b)." },
+      "zh": { "plainSummary": "使用、意图使用而持有，或意图使用而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于违反第893章运输受管制物质。", "degreeContext": "三级重罪。本记录仅限第(4)(a)项，不包括第(4)(b)项另行规定的法定违禁品选择分支。" }
     }
   },
   {
@@ -478,58 +212,21 @@
     "code": "893.147(4)(b)",
     "slug": "fl-fs-893-147-4-b-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Transportation of a contraband article using drug paraphernalia",
-    "names": {
-      "es": "Transporte de un bien de contrabando mediante parafernalia de drogas",
-      "zh": "使用吸毒用具运输违禁物品"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Transporte de un bien de contrabando mediante parafernalia de drogas", "zh": "使用吸毒用具运输违禁物品" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(4)(b)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.145",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html"
-      },
-      {
-        "citation": "Fla. Stat. § 932.701",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.701.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.03",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(4)(b)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" },
+      { "citation": "Fla. Stat. § 932.701", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.701.html" },
+      { "citation": "Fla. Stat. § 893.02", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html" },
+      { "citation": "Fla. Stat. § 893.03", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "Using, possessing with intent to use, or manufacturing with intent to use drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to transport a contraband article within § 932.701(2)(a)1.'s narcotics-related definition.",
-        "degreeContext": "Third-degree felony. This record is confined to § 932.701(2)(a)1.: a chapter 893 controlled substance, or a substance, device, paraphernalia, currency, or other means of exchange used, attempted to be used, or intended to be used in violation of chapter 893, when the state's facts clearly suffice to establish probable cause of a nexus between the seized article and narcotics activity. It does not include the other contraband-article categories in § 932.701(2)(a)."
-      },
-      "es": {
-        "plainSummary": "Usar, poseer con intención de usar o fabricar con intención de usar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para transportar un bien de contrabando comprendido en la definición relacionada con narcóticos del § 932.701(2)(a)1.",
-        "degreeContext": "Delito grave de tercer grado. Este registro se limita al § 932.701(2)(a)1.: una sustancia controlada conforme al capítulo 893, o una sustancia, dispositivo, parafernalia, moneda u otro medio de intercambio usado, que se intentó usar o destinado a usarse en infracción del capítulo 893, cuando los hechos presentados por el estado sean claramente suficientes para establecer causa probable de un nexo entre el bien incautado y la actividad de narcóticos. No incluye las demás categorías de bienes de contrabando del § 932.701(2)(a)."
-      },
-      "zh": {
-        "plainSummary": "使用、意图使用而持有，或意图使用而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于运输第932.701(2)(a)1条涉毒定义范围内的违禁物品。",
-        "degreeContext": "三级重罪。本记录仅限第932.701(2)(a)1条：第893章所定义的受管制物质，或已经、曾试图或意图用于违反第893章的物质、装置、用具、货币或其他交换手段，且州方提出的全部事实明确足以确立合理根据，相信被扣押物品与毒品活动之间存在关联。它不包括第932.701(2)(a)条中的其他违禁物品类别。"
-      }
+      "en": { "plainSummary": "Using, possessing with intent to use, or manufacturing with intent to use drug paraphernalia, while knowing or under circumstances where one reasonably should know it will be used to transport a contraband article within § 932.701(2)(a)1.'s narcotics-related definition.", "degreeContext": "Third-degree felony. This record is confined to § 932.701(2)(a)1.: a chapter 893 controlled substance, or a substance, device, paraphernalia, currency, or other means of exchange used, attempted to be used, or intended to be used in violation of chapter 893, when the state's facts clearly suffice to establish probable cause of a nexus between the seized article and narcotics activity. It does not include the other contraband-article categories in § 932.701(2)(a)." },
+      "es": { "plainSummary": "Usar, poseer con intención de usar o fabricar con intención de usar parafernalia de drogas, sabiendo o en circunstancias en que razonablemente debería saberse que se usará para transportar un bien de contrabando comprendido en la definición relacionada con narcóticos del § 932.701(2)(a)1.", "degreeContext": "Delito grave de tercer grado. Este registro se limita al § 932.701(2)(a)1.: una sustancia controlada conforme al capítulo 893, o una sustancia, dispositivo, parafernalia, moneda u otro medio de intercambio usado, que se intentó usar o destinado a usarse en infracción del capítulo 893, cuando los hechos presentados por el estado sean claramente suficientes para establecer causa probable de un nexo entre el bien incautado y la actividad de narcóticos. No incluye las demás categorías de bienes de contrabando del § 932.701(2)(a)." },
+      "zh": { "plainSummary": "使用、意图使用而持有，或意图使用而制造吸毒用具，同时明知或在理应知道的情形下，该用具将被用于运输第932.701(2)(a)1条涉毒定义范围内的违禁物品。", "degreeContext": "三级重罪。本记录仅限第932.701(2)(a)1条：第893章所定义的受管制物质，或已经、曾试图或意图用于违反第893章的物质、装置、用具、货币或其他交换手段，且州方提出的全部事实明确足以确立合理根据，相信被扣押物品与毒品活动之间存在关联。它不包括第932.701(2)(a)条中的其他违禁物品类别。" }
     }
   },
   {
@@ -538,46 +235,18 @@
     "code": "893.147(5)",
     "slug": "fl-fs-893-147-5-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Advertisement of drug paraphernalia",
-    "names": {
-      "es": "Publicidad de parafernalia de drogas",
-      "zh": "吸毒用具广告"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Publicidad de parafernalia de drogas", "zh": "吸毒用具广告" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "misdemeanor",
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(5)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.145",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(5)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "Placing an advertisement in a newspaper, magazine, handbill, or other publication while knowing, or under circumstances where one reasonably should know, that its purpose in whole or part is to promote the sale of objects designed or intended for use as drug paraphernalia.",
-        "degreeContext": "First-degree misdemeanor."
-      },
-      "es": {
-        "plainSummary": "Colocar un anuncio en un periódico, revista, volante u otra publicación, sabiendo o en circunstancias en que razonablemente debería saberse que su propósito total o parcial es promover la venta de objetos diseñados o destinados a usarse como parafernalia de drogas.",
-        "degreeContext": "Delito menor de primer grado."
-      },
-      "zh": {
-        "plainSummary": "在报纸、杂志、传单或其他出版物中刊登广告，同时明知或在理应知道的情形下，该广告全部或部分旨在促销设计或意图用作吸毒用具的物品。",
-        "degreeContext": "一级轻罪。"
-      }
+      "en": { "plainSummary": "Placing an advertisement in a newspaper, magazine, handbill, or other publication while knowing, or under circumstances where one reasonably should know, that its purpose in whole or part is to promote the sale of objects designed or intended for use as drug paraphernalia.", "degreeContext": "First-degree misdemeanor." },
+      "es": { "plainSummary": "Colocar un anuncio en un periódico, revista, volante u otra publicación, sabiendo o en circunstancias en que razonablemente debería saberse que su propósito total o parcial es promover la venta de objetos diseñados o destinados a usarse como parafernalia de drogas.", "degreeContext": "Delito menor de primer grado." },
+      "zh": { "plainSummary": "在报纸、杂志、传单或其他出版物中刊登广告，同时明知或在理应知道的情形下，该广告全部或部分旨在促销设计或意图用作吸毒用具的物品。", "degreeContext": "一级轻罪。" }
     }
   },
   {
@@ -586,166 +255,19 @@
     "code": "893.147(6)",
     "slug": "fl-fs-893-147-6-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
     "name": "Retail sale of drug paraphernalia (first or repeat offense)",
-    "names": {
-      "es": "Venta minorista de parafernalia de drogas (primera infracción o reincidencia)",
-      "zh": "零售吸毒用具（初犯或再犯）"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
+    "names": { "es": "Venta minorista de parafernalia de drogas (primera infracción o reincidencia)", "zh": "零售吸毒用具（初犯或再犯）" },
+    "aliases": { "en": ["Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"], "es": ["Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"], "zh": ["吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"] },
     "category": "misdemeanor",
-    "categories": [
-      "misdemeanor",
-      "felony"
-    ],
+    "categories": ["misdemeanor", "felony"],
     "verifiedMonth": "2026-09",
     "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(6)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.145",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html"
-      }
+      { "citation": "Fla. Stat. § 893.147(6)", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html" },
+      { "citation": "Fla. Stat. § 893.145", "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html" }
     ],
     "text": {
-      "en": {
-        "plainSummary": "Knowingly and willfully selling or offering at retail the kinds of drug paraphernalia listed in § 893.145(12)(a)-(c) or (g)-(m), other than a pipe primarily made of briar, meerschaum, clay, or corn cob.",
-        "degreeContext": "First-degree misdemeanor for a first violation; third-degree felony for a second or subsequent violation."
-      },
-      "es": {
-        "plainSummary": "Vender u ofrecer a sabiendas e intencionalmente al por menor los tipos de parafernalia de drogas enumerados en el § 893.145(12)(a)-(c) o (g)-(m), salvo una pipa hecha principalmente de brezo, espuma de mar, arcilla o mazorca de maíz.",
-        "degreeContext": "Delito menor de primer grado por una primera infracción; delito grave de tercer grado por una segunda o posterior."
-      },
-      "zh": {
-        "plainSummary": "明知且故意零售或要约零售第893.145(12)(a)-(c)或(g)-(m)项所列种类的吸毒用具，但主要由石南木、海泡石、黏土或玉米芯制成的烟斗除外。",
-        "degreeContext": "首次违反构成一级轻罪；第二次或以后违反构成三级重罪。"
-      }
-    }
-  },
-  {
-    "id": "fl-fs-893-13-3-prohibited-acts-penalties",
-    "jurisdiction": "FL",
-    "code": "893.13(3)",
-    "slug": "fl-fs-893-13-3-prohibited-acts-penalties",
-    "name": "Delivery of 20 grams or less of cannabis without consideration",
-    "names": {
-      "es": "Entrega sin contraprestación de 20 gramos o menos de cannabis",
-      "zh": "无偿交付20克或以下大麻"
-    },
-    "aliases": {
-      "en": [
-        "Prohibited acts; penalties"
-      ],
-      "es": [
-        "Actos prohibidos; penas"
-      ],
-      "zh": [
-        "禁止行为；处罚"
-      ]
-    },
-    "category": "misdemeanor",
-    "verifiedMonth": "2026-09",
-    "citations": [
-      {
-        "citation": "Fla. Stat. § 893.13(3)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13(3).html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 381.986",
-        "url": "https://www.flsenate.gov/Laws/Statutes/2026/381.986"
-      }
-    ],
-    "text": {
-      "en": {
-        "plainSummary": "Delivering 20 grams or less of cannabis without receiving payment or other consideration.",
-        "degreeContext": "First-degree misdemeanor. Cannabis excludes resin and preparations of resin under subsection (3), and excludes marijuana handled in conformance with § 381.986 under § 893.02(3). Current § 381.986 separately identifies authorized medical-marijuana activities and limits."
-      },
-      "es": {
-        "plainSummary": "Entregar 20 gramos o menos de cannabis sin recibir pago ni otra contraprestación.",
-        "degreeContext": "Delito menor de primer grado. Según el inciso (3), cannabis excluye la resina y sus preparaciones; según el § 893.02(3), también excluye la marihuana manejada conforme al § 381.986. El § 381.986 vigente identifica por separado las actividades autorizadas de marihuana medicinal y sus límites."
-      },
-      "zh": {
-        "plainSummary": "在未收取付款或其他对价的情况下，交付20克或以下大麻。",
-        "degreeContext": "一级轻罪。第(3)款所称大麻不包括树脂及树脂制剂；第893.02(3)条还排除依第381.986条合规处理的医用大麻。现行第381.986条另行规定获准的医用大麻活动及其限制。"
-      }
-    }
-  },
-  {
-    "id": "fl-fs-893-147-7-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-    "jurisdiction": "FL",
-    "code": "893.147(7)",
-    "slug": "fl-fs-893-147-7-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials",
-    "name": "Tableting/counterfeiting machines and materials",
-    "names": {
-      "es": "Máquinas de tabletas o encapsulado y materiales de falsificación",
-      "zh": "压片、封装机器及仿冒材料"
-    },
-    "aliases": {
-      "en": [
-        "Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials"
-      ],
-      "es": [
-        "Uso, posesión, fabricación, entrega, transporte, publicidad o venta minorista de parafernalia de drogas, máquinas específicas y materiales"
-      ],
-      "zh": [
-        "吸毒用具、特定机器及材料的使用、持有、制造、交付、运输、广告或零售"
-      ]
-    },
-    "category": "felony",
-    "verifiedMonth": "2026-09",
-    "citations": [
-      {
-        "citation": "Fla. Stat. § 893.147(7)",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147(7).html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.02",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.03",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html"
-      },
-      {
-        "citation": "Fla. Stat. § 893.0356",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.0356.html"
-      },
-      {
-        "citation": "Fla. Stat. § 831.31",
-        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.31.html"
-      },
-      {
-        "citation": "Fla. Stat. § 381.986",
-        "url": "https://www.flsenate.gov/Laws/Statutes/2026/381.986"
-      }
-    ],
-    "text": {
-      "en": {
-        "plainSummary": "Possessing, purchasing, delivering, selling, or possessing with intent to sell or deliver a tableting machine, encapsulating machine, or controlled-substance counterfeiting material, while knowing, intending, or having reasonable cause to believe it will be used to manufacture a controlled or counterfeit controlled substance.",
-        "degreeContext": "Third-degree felony; second-degree felony when the person has the stated mental state that the action will result in unlawful manufacture involving one of the substances listed in (7)(d)2. Paragraph (7)(b) preserves federal-compliance, federal-registration, and active-license or permit exceptions."
-      },
-      "es": {
-        "plainSummary": "Poseer, comprar, entregar o vender, o poseer con intención de vender o entregar, una máquina de tabletas, una máquina de encapsulado o material para falsificar sustancias controladas, sabiendo, pretendiendo o teniendo causa razonable para creer que se usará para fabricar una sustancia controlada o una sustancia controlada falsificada.",
-        "degreeContext": "Delito grave de tercer grado; delito grave de segundo grado cuando existe el estado mental indicado de que la acción producirá la fabricación ilícita con una sustancia enumerada en (7)(d)2. El párrafo (7)(b) conserva las excepciones por cumplimiento o registro federal y por licencia o permiso activo."
-      },
-      "zh": {
-        "plainSummary": "持有、购买、交付、出售压片机、封装机或受管制物质仿冒材料，或意图出售或交付而持有，并且明知、意图或有合理理由相信其将用于制造受管制物质或仿冒受管制物质。",
-        "degreeContext": "通常构成三级重罪；如行为人具有第(7)(d)2款规定的主观状态，认为该行为将导致使用所列物质进行非法制造，则构成二级重罪。第(7)(b)款保留联邦合规、联邦注册以及有效执照或许可证例外。"
-      }
+      "en": { "plainSummary": "Knowingly and willfully selling or offering at retail the kinds of drug paraphernalia listed in § 893.145(12)(a)-(c) or (g)-(m), other than a pipe primarily made of briar, meerschaum, clay, or corn cob.", "degreeContext": "First-degree misdemeanor for a first violation; third-degree felony for a second or subsequent violation." },
+      "es": { "plainSummary": "Vender u ofrecer a sabiendas e intencionalmente al por menor los tipos de parafernalia de drogas enumerados en el § 893.145(12)(a)-(c) o (g)-(m), salvo una pipa hecha principalmente de brezo, espuma de mar, arcilla o mazorca de maíz.", "degreeContext": "Delito menor de primer grado por una primera infracción; delito grave de tercer grado por una segunda o posterior." },
+      "zh": { "plainSummary": "明知且故意零售或要约零售第893.145(12)(a)-(c)或(g)-(m)项所列种类的吸毒用具，但主要由石南木、海泡石、黏土或玉米芯制成的烟斗除外。", "degreeContext": "首次违反构成一级轻罪；第二次或以后违反构成三级重罪。" }
     }
   }
 ]

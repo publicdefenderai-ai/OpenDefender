@@ -32,7 +32,8 @@ export const OHIO_CHAPTER_BATCH_CHARGES: CriminalCharge[] = records.map(row => (
   dataConfidence: "high", lastVerified: "2026-09",
 }));
 export const OHIO_CHAPTER_BATCH_EXPLANATIONS: ChargeExplanation[] = records.map(row => ({
-  jurisdiction: "OH", slug: `ohio-${row.slug}`, chargePattern: new RegExp(`^${row.name}$`, "i"),
+  jurisdiction: "OH", canonicalChargeId: `oh-orc-${row.section.replace(".", "-")}-${row.slug}`,
+  slug: `ohio-${row.slug}`, chargePattern: new RegExp(`^${row.name}$`, "i"),
   plainSummary: row.summary, degreeContext: row.penalty, keyTerms: [], pendingAttorneyReview: true,
   sources: [row.section, ...(row.category === "misdemeanor"
     ? ["2929.24", "2929.28", "2929.14", "2929.18", "2903.09"]

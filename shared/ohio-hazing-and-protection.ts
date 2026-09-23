@@ -38,7 +38,8 @@ export const OHIO_HAZING_AND_PROTECTION_CHARGES: CriminalCharge[] = records.map(
   dataConfidence: "high", lastVerified: "2026-09",
 }));
 export const OHIO_HAZING_AND_PROTECTION_EXPLANATIONS: ChargeExplanation[] = records.map(row => ({
-  jurisdiction: "OH", slug: `ohio-${row.slug}`, chargePattern: new RegExp(`^${row.name}$`, "i"),
+  jurisdiction: "OH", canonicalChargeId: `oh-orc-${row.section.replace(".", "-")}-${row.slug}`,
+  slug: `ohio-${row.slug}`, chargePattern: new RegExp(`^${row.name}$`, "i"),
   plainSummary: row.summary, degreeContext: row.penalty, keyTerms: [], pendingAttorneyReview: true,
   sources: row.sources.map(section => ({
     jurisdiction: "OH", citation: `Ohio Rev. Code § ${section}`, url: `https://codes.ohio.gov/ohio-revised-code/section-${section}`,

@@ -658,10 +658,11 @@ export function assembleFloridaReviewedReport(
     const ranges = primary ? findSubdivisionRange(primary.text, subdivision) : [];
     const bounds = subdivision ? ranges[0] : undefined;
     const current = (document: FloridaReviewedCacheDocument | undefined) => {
-      const retrievedAt = Date.parse(document?.retrievedAt ?? "");
-      const acceptedEdition = document?.authorityKind === "us_code"
+      if (!document) return false;
+      const retrievedAt = Date.parse(document.retrievedAt ?? "");
+      const acceptedEdition = document.authorityKind === "us_code"
         ? document.edition === "United States Code preliminary 2026-04-13"
-        : document?.edition === "Florida Statutes 2026";
+        : document.edition === "Florida Statutes 2026";
       return acceptedEdition &&
         (document.acquisitionKind === "official_whole_chapter" ||
           document.acquisitionKind === "official_exact_section" ||

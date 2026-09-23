@@ -8,7 +8,7 @@ describe("Florida coverage inventory", () => {
   const inventory = buildFloridaCoverageInventory();
 
   it("reports cached evidence without inventing a statewide completeness denominator", () => {
-    expect(inventory.summary.cachedOfficialSections).toBe(1426);
+    expect(inventory.summary.cachedOfficialSections).toBe(1431);
     expect(inventory.summary.actualOffenseCount).toBeNull();
     expect(inventory.summary.statewideSectionDenominator).toBeNull();
     expect(inventory.summary.completenessPercentage).toBeNull();

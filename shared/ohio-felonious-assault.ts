@@ -36,7 +36,8 @@ export const OHIO_FELONIOUS_ASSAULT_CHARGE: CriminalCharge = {
 };
 
 export const OHIO_FELONIOUS_ASSAULT_EXPLANATION: ChargeExplanation = {
-  jurisdiction: "OH", chargePattern: /^felonious assault$/i, slug: "ohio-felonious-assault",
+  jurisdiction: "OH", canonicalChargeId: "oh-orc-2903-11-felonious-assault",
+  chargePattern: /^felonious assault$/i, slug: "ohio-felonious-assault",
   plainSummary: summary, degreeContext: penalty,
   keyTerms: [], pendingAttorneyReview: true,
   sources: [
