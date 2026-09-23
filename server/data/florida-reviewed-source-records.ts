@@ -29,6 +29,7 @@ export interface FloridaReviewedSubdivisionRange {
 
 export interface FloridaReviewedDocument {
   sourceKey: string;
+  authorityKind?: "florida_statute" | "us_code";
   section: string;
   subdivision: string | null;
   citation: string;
@@ -149,6 +150,20 @@ const expectedSourceKey = (section: string, subdivision: string | null) => {
     : "";
   return `fl:statute:${section}${suffix}`;
 };
+const reviewedSourceKey = (
+  section: string,
+  subdivision: string | null,
+  authorityKind: FloridaReviewedDocument["authorityKind"] = "florida_statute",
+) => authorityKind === "us_code"
+  ? `us:usc:${section.replace(/^21 U\.S\.C\. /, "21:")}`
+  : expectedSourceKey(section, subdivision);
+const isApprovedSourceUrl = (
+  sourceUrl: string,
+  authorityKind: FloridaReviewedDocument["authorityKind"] = "florida_statute",
+) => authorityKind === "us_code"
+  ? sourceUrl.startsWith("https://uscode.house.gov/")
+  : sourceUrl.startsWith("https://www.leg.state.fl.us/statutes/") ||
+    sourceUrl.startsWith("https://www.flsenate.gov/Laws/Statutes/2026/");
 const authorityRole = (role: FloridaReviewedDependencyRole): AuthoritySupportRole =>
   role === "definition" || role === "exception" || role === "justification"
     ? "grading"
@@ -289,8 +304,11 @@ export function buildFloridaReviewedSourceRecords(
         !citation || citation[1] !== offense.section ||
         normalizeSubdivision(citedSubdivision) !== normalizeSubdivision(offense.subdivision) ||
         draft.code !== `${offense.section}${offense.subdivision ?? ""}` ||
-        offense.sourceKey !== expectedSourceKey(offense.section, offense.subdivision) ||
-        !offense.sourceUrl.startsWith("https://www.leg.state.fl.us/statutes/") ||
+        offense.sourceKey !== reviewedSourceKey(
+          offense.section, offense.subdivision, offense.authorityKind,
+        ) ||
+        offense.authorityKind === "us_code" ||
+        !isApprovedSourceUrl(offense.sourceUrl, offense.authorityKind) ||
         !Number.isFinite(Date.parse(offense.retrievedAt)) ||
         !validateSpan(
           draft.identityEvidence,
@@ -349,8 +367,10 @@ export function buildFloridaReviewedSourceRecords(
       const document = report.sourceEvidence[dependency.sourceKey];
       if (!document || dependency.contentHash !== document.contentHash ||
           document.contentHash !== hashText(document.text) ||
-          document.sourceKey !== expectedSourceKey(document.section, document.subdivision) ||
-          !document.sourceUrl.startsWith("https://www.leg.state.fl.us/statutes/") ||
+          document.sourceKey !== reviewedSourceKey(
+            document.section, document.subdivision, document.authorityKind,
+          ) ||
+          !isApprovedSourceUrl(document.sourceUrl, document.authorityKind) ||
           !Number.isFinite(Date.parse(document.retrievedAt)) ||
           ![
             "offense", "grading", "penalty", "definition", "exception", "justification",
@@ -403,6 +423,7 @@ export interface FloridaReviewedAnalysisEntry {
 }
 
 export interface FloridaReviewedCacheDocument {
+  authorityKind?: "florida_statute" | "us_code";
   section: string;
   title: string;
   text: string;
@@ -416,7 +437,8 @@ export interface FloridaReviewedCacheDocument {
   acquisitionKind:
     | "official_whole_chapter"
     | "official_exact_section"
-    | "existing_manifest_seed";
+    | "existing_manifest_seed"
+    | "official_recovered_section";
 }
 
 export interface FloridaReviewedSourceCache {
@@ -572,10 +594,19 @@ function floridaOfficialSectionUrl(section: string): string {
 function cacheDocumentHasExactOfficialIdentity(
   document: FloridaReviewedCacheDocument,
 ): boolean {
+  if (document.authorityKind === "us_code") {
+    const uscSection = document.section.match(/^21 U\.S\.C\. (\d+)$/)?.[1];
+    return Boolean(
+      uscSection &&
+      document.sourceUrl.startsWith("https://uscode.house.gov/view.xhtml?") &&
+      document.text.startsWith(`21 U.S.C. § ${uscSection}\n${document.title}\n—`),
+    );
+  }
   const heading = document.text.match(
     /^([1-9]\d{0,3}\.\d{2,6})\s*\n+(.+?)\n+—/,
   );
-  return document.sourceUrl === floridaOfficialSectionUrl(document.section) &&
+  return (document.sourceUrl === floridaOfficialSectionUrl(document.section) ||
+      document.sourceUrl === `https://www.flsenate.gov/Laws/Statutes/2026/${document.section}`) &&
     heading?.[1] === document.section &&
     heading?.[2]?.replace(/[.;\s]+$/, "").trim() === document.title;
 }
@@ -628,9 +659,13 @@ export function assembleFloridaReviewedReport(
     const bounds = subdivision ? ranges[0] : undefined;
     const current = (document: FloridaReviewedCacheDocument | undefined) => {
       const retrievedAt = Date.parse(document?.retrievedAt ?? "");
-      return document?.edition === "Florida Statutes 2026" &&
+      const acceptedEdition = document?.authorityKind === "us_code"
+        ? document.edition === "United States Code preliminary 2026-04-13"
+        : document?.edition === "Florida Statutes 2026";
+      return acceptedEdition &&
         (document.acquisitionKind === "official_whole_chapter" ||
-          document.acquisitionKind === "official_exact_section") &&
+          document.acquisitionKind === "official_exact_section" ||
+          document.acquisitionKind === "official_recovered_section") &&
         cacheDocumentHasExactOfficialIdentity(document) &&
         document.contentHash === hashText(document.text) &&
         Number.isFinite(retrievedAt) && retrievedAt <= now.getTime() &&
@@ -748,12 +783,17 @@ export function assembleFloridaReviewedReport(
       if (!document) continue;
       const isPrimary = row.role === "offense";
       const documentSubdivision = isPrimary ? subdivision : null;
-      const sourceKey = expectedSourceKey(row.section, documentSubdivision);
+      const sourceKey = reviewedSourceKey(
+        row.section, documentSubdivision, document.authorityKind,
+      );
       const reviewedDocument: FloridaReviewedDocument = {
         sourceKey,
+        ...(document.authorityKind ? { authorityKind: document.authorityKind } : {}),
         section: row.section,
         subdivision: documentSubdivision,
-        citation: `Fla. Stat. § ${row.section}${documentSubdivision ?? ""}`,
+        citation: document.authorityKind === "us_code"
+          ? row.section.replace(/^21 U\.S\.C\. /, "21 U.S.C. § ")
+          : `Fla. Stat. § ${row.section}${documentSubdivision ?? ""}`,
         title: document.title,
         sourceUrl: document.sourceUrl,
         text: document.text,
@@ -871,7 +911,12 @@ export function assembleFloridaReviewedReport(
       })),
       gradeEvidence,
       requiredDependencies: resolved.map(({ row }) => {
-        const sourceKey = expectedSourceKey(row.section, row.role === "offense" ? subdivision : null);
+        const document = cache.documents[row.section];
+        const sourceKey = reviewedSourceKey(
+          row.section,
+          row.role === "offense" ? subdivision : null,
+          document?.authorityKind,
+        );
         return { sourceKey, role: row.role, contentHash: row.contentHash };
       }),
       conduct: analysis.conductQuotes.join("\n"),

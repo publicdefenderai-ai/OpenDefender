@@ -1,0 +1,939 @@
+"ordinal","legacyId","legacyLabel","legacyCode","legacyCategory","classification","coverageExtent","existingExactRecordIds","existingExactCitations","proposedAction","attorneyQuestion","safeMechanical","evidenceCitations","evidenceSourceHashes","supportQuotes"
+"1","fl-voluntary-manslaughter","Voluntary Manslaughter","782.07(1)","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Does Florida recognize a separately selectable voluntary-manslaughter offense, or should users select § 782.07(1) manslaughter without the common-law modifier?","false","Fla. Stat. § 782.07","2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c","782.07 
+Manslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic.
+—
+
+(1) 
+The killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+(2) 
+A person who causes the death of any elderly person or disabled…"
+"2","fl-involuntary-manslaughter","Involuntary Manslaughter","782.07(1)","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Does Florida recognize a separately selectable involuntary-manslaughter offense, or should users select § 782.07(1) manslaughter without the common-law modifier?","false","Fla. Stat. § 782.07","2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c","782.07 
+Manslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic.
+—
+
+(1) 
+The killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+(2) 
+A person who causes the death of any elderly person or disabled…"
+"3","fl-criminally-negligent-homicide","Criminally Negligent Homicide","782.07","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Which Florida offense, if any, is intended by this nonstatutory label?","false","Fla. Stat. § 782.07","2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c","782.07 
+Manslaughter; aggravated manslaughter of an elderly person or disabled adult; aggravated manslaughter of a child; aggravated manslaughter of an officer, a firefighter, an emergency medical technician, or a paramedic.
+—
+
+(1) 
+The killing of a human being by the act, procurement, or culpable negligence of another, without lawful justification according to the provisions of chapter 776 and in cases in which such killing shall not be excusable homicide or murder, according to the provisions of this chapter, is manslaughter, a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+(2) 
+A person who causes the death of any elderly person or disabled…"
+"4","fl-felony-murder","Felony Murder","782.04(1)(a)2","felony","covered_by_existing_exact_record","partial","fl-murder-in-the-first-degree | fl-murder-in-the-second-degree | fl-fs-782-04-4-murder-in-the-third-degree","782.04(1) | 782.04(2) | Fla. Stat. § 782.04(4)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","782.04(1) | 782.04(2) | Fla. Stat. § 782.04(4) | Fla. Stat. § 782.04","1c256b14d82fba90048a3211e57f62c4c54364da26afa9741336029bced23c6a | c89d906a4657ef2f6e64a45ea9acbc074f1ee24fd1e61a01fdad473e74707c67 | 886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45 | 886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45","Murder | Murder | is murder in the third degree | 782.04 
+Murder.
+—
+
+(1)(a) 
+The unlawful killing of a human being:
+1. 
+When perpetrated from a premeditated design to effect the death of the person killed or any human being;
+
+2. 
+When committed by a person engaged in the perpetration of, or in the attempt to perpetrate, any:
+a. 
+Trafficking offense prohibited by s. 893.135(1),
+
+b. 
+Arson,
+
+c. 
+Sexual battery,
+
+d. 
+Robbery,
+
+e. 
+Burglary,
+
+f. 
+Kidnapping,
+
+g. 
+Escape,
+
+h. 
+Aggravated child abuse,
+
+i. 
+Aggravated abuse of an elderly person or disabled adult,
+
+j. 
+Aircraft piracy,
+
+k. 
+Unlawful throwing, placing, or discharging of a destructive device or bomb,
+
+l. 
+Carjacking,
+
+m. 
+Home-invasion robbery,
+
+n. 
+Aggravated stalking,
+
+o. 
+Murder…"
+"5","fl-assault-on-peace-officer","Assault on Peace Officer","784.07","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Should § 784.07 be represented as a reclassification attached to an exact assault/battery predicate rather than as a standalone offense?","false","Fla. Stat. § 784.07","c0297979233b51a92ccc25da4268800f2cfa3e25c524d899e5d42700988d7475","784.07 
+Assault or battery of law enforcement officers and other specified personnel; reclassification of offenses; minimum sentences.
+—
+
+(1) 
+As used in this section, the term:
+(a) 
+“Emergency medical care provider” means an ambulance driver, emergency medical technician, paramedic, registered nurse, physician as defined in s. 401.23, medical director as defined in s. 401.23, or any person authorized by an emergency medical service licensed under chapter 401 who is engaged in the performance of his or her duties. The term “emergency medical care provider” also includes physicians, employees, agents, or volunteers of hospitals as defined in chapter 395, who are employed, under contract, or…"
+"6","fl-menacing","Menacing","784.011","misdemeanor","mechanical_correction","full","fl-fs-784-011-assault","Fla. Stat. § 784.011","Retire the legacy row and route selection to fl-fs-784-011-assault; preserve the source-first display name and exact code.","","true","Fla. Stat. § 784.011 | Fla. Stat. § 784.011","143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6 | 143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6","Assault | 784.011 
+Assault.
+—
+
+(1) 
+An “assault” is an intentional, unlawful threat by word or act to do violence to the person of another, coupled with an apparent ability to do so, and doing some act which creates a well-founded fear in such other person that such violence is imminent.
+
+(2) 
+Except as provided in subsection (3), a person who assaults another person commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.
+
+(3) 
+A person who assaults another person in furtherance of a riot or an aggravated riot prohibited under s. 870.01 commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.
+
+History.
+—
+s. 5, Feb. 10, 1832…"
+"7","fl-sexual-assault-in-the-second-degree","Sexual Battery (by Force)","794.011(4)","felony","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 794.011","b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a","794.011 
+Sexual battery.
+—
+
+(1) 
+As used in this chapter:
+(a) 
+“Consent” means intelligent, knowing, and voluntary consent and does not include coerced submission. “Consent” shall not be deemed or construed to mean the failure by the alleged victim to offer physical resistance to the offender.
+
+(b) 
+“Female genitals” includes the labia minora, labia majora, clitoris, vulva, hymen, and vagina.
+
+(c) 
+“Mentally defective” means a mental disease or defect which renders a person temporarily or permanently incapable of appraising the nature of his or her conduct.
+
+(d) 
+“Mentally incapacitated” means temporarily incapable of appraising or controlling a person’s own conduct due to the influence of…"
+"8","fl-child-sexual-abuse","Child Sexual Abuse","800.04","felony","covered_by_existing_exact_record","partial","fl-fs-800-04-4-lewd-or-lascivious-battery | fl-fs-800-04-5-lewd-or-lascivious-molestation | fl-fs-800-04-6-lewd-or-lascivious-conduct | fl-fs-800-04-7-lewd-or-lascivious-exhibition","Fla. Stat. § 800.04(4) | Fla. Stat. § 800.04(5) | Fla. Stat. § 800.04(6) | Fla. Stat. § 800.04(7)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 800.04(4) | Fla. Stat. § 800.04(5) | Fla. Stat. § 800.04(6) | Fla. Stat. § 800.04(7) | Fla. Stat. § 800.04","be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a | be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a | be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a | be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a | be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a","A person commits lewd or lascivious battery by: | A person who intentionally touches in a lewd or lascivious manner the breasts, genitals, genital area, or buttocks, or the clothing covering them, of a person less than 16 years of age, or forces or entices a person under 16 years of age to so touch the perpetrator, commits lewd or lascivious molestation. | A person who:
+1. 
+Intentionally touches a person under 16 years of age in a lewd or lascivious manner; or
+
+2. 
+Solicits a person under 16 years of age to commit a lewd or lascivious act
+
+commits lewd or lascivious conduct. | commits lewd or lascivious exhibition | 800.04 
+Lewd or lascivious offenses committed upon or in the presence of persons less than 16 years of age.
+—
+
+(1) 
+DEFINITIONS.—
+As used in this section:
+(a) 
+“Coercion” means the use of exploitation, bribes, threats of force, or intimidation to gain cooperation or compliance.
+
+(b) 
+“Consent” means intelligent, knowing, and voluntary consent, and does not include submission by coercion.
+
+(c) 
+“Female genitals” includes the labia minora, labia majora, clitoris, vulva, hymen, and vagina.
+
+(d) 
+“Sexual activity” means the oral, anal, or female genital penetration by, or union with, the sexual organ of another or the anal or female genital penetration of another by any other object; however, s…"
+"9","fl-sexual-exploitation-of-minor","Sexual Exploitation of Minor","827.071","felony","covered_by_existing_exact_record","partial","fl-fs-827-071-2-a-use-of-a-child-in-a-sexual-performance | fl-fs-827-071-2-b-aggravated-use-of-a-child-in-a-sexual-performance | fl-fs-827-071-3-promoting-a-sexual-performance-by-a-child","Fla. Stat. § 827.071(2)(a) | Fla. Stat. § 827.071(2)(b) | Fla. Stat. § 827.071(3)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 827.071(2)(a) | Fla. Stat. § 827.071(2)(b) | Fla. Stat. § 827.071(3) | Fla. Stat. § 827.071","9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5 | 9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5 | 9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5 | 9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5","A person is guilty of the use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child to engage in a sexual performance or, being a parent, legal guardian, or custodian of such child, consents to the participation by such child in a sexual performance. | A person is guilty of aggravated use of a child in a sexual performance if, knowing the character and content thereof, he or she employs, authorizes, or induces a child younger than 12 years of age to engage in a sexual performance. | A person is guilty of promoting a sexual performance by a child when, knowing the character and content thereof, he or she produces, directs, or promotes any performance which includes sexual conduct by a child. | 827.071 
+Sexual performance by a child; child sexual abuse material; penalties.
+—
+
+(1) 
+As used in this section, the following definitions shall apply:
+(a) 
+“Child” or “minor” means any person, whose identity is known or unknown, younger than 18 years of age.
+
+(b) 
+“Child sexual abuse material” means:
+1. 
+Any image depicting a minor engaged in sexual conduct; or
+
+2. 
+Any image that has been created, altered, adapted, or modified by electronic, mechanical, or other means, to portray an identifiable minor engaged in sexual conduct.
+
+(c) 
+“Deviate sexual intercourse” means sexual conduct between persons not married to each other consisting of contact between the penis and the anus, the mouth a…"
+"10","fl-petty-theft","Petty Theft","812.014","misdemeanor","covered_by_existing_exact_record","partial","fl-fs-812-014-2-e-petit-theft-of-the-first-degree | fl-fs-812-014-3-a-petit-theft-of-the-second-degree | fl-fs-812-014-3-b-petit-theft | fl-fs-812-014-3-c-petit-theft","Fla. Stat. § 812.014(2)(e) | Fla. Stat. § 812.014(3)(a) | Fla. Stat. § 812.014(3)(b) | Fla. Stat. § 812.014(3)(c)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 812.014(2)(e) | Fla. Stat. § 812.014(3)(a) | Fla. Stat. § 812.014(3)(b) | Fla. Stat. § 812.014(3)(c) | Fla. Stat. § 812.014","fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3 | fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3 | fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3 | fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3 | fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3","It is petit theft of the first degree and a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083, if the property stolen is valued at less than $40 and is taken from a dwelling as defined in s. 810.011(2) or from the unenclosed curtilage of a dwelling pursuant to s. 810.09(1). | Theft of any property not specified in subsection (2) is petit theft of the second degree and a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083, and as provided in subsection (5), as applicable. | A person who commits petit theft and who has previously been convicted of any theft commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083. | A person who commits petit theft and who has previously been convicted two or more times of any theft commits a felony of the third degree, punishable as provided in s. 775.082 or s. 775.083. | 812.014 
+Theft.
+—
+
+(1) 
+A person commits theft if he or she knowingly obtains or uses, or endeavors to obtain or to use, the property of another with intent to, either temporarily or permanently:
+(a) 
+Deprive the other person of a right to the property or a benefit from the property.
+
+(b) 
+Appropriate the property to his or her own use or to the use of any person not entitled to the use of the property.
+
+(2)(a)1. 
+If the property stolen is valued at $100,000 or more or is a semitrailer that was deployed by a law enforcement officer; or
+
+2. 
+If the property stolen is cargo valued at $50,000 or more that has entered the stream of interstate or intrastate commerce from the shipper’s loading pl…"
+"11","fl-theft-by-receiving","Theft by Receiving","812.019","misdemeanor","mechanical_correction","full","fl-fs-812-019-dealing-in-stolen-property","Fla. Stat. § 812.019","Retire the legacy row and route selection to fl-fs-812-019-dealing-in-stolen-property; preserve the source-first display name and exact code.","","true","Fla. Stat. § 812.019 | Fla. Stat. § 812.019","94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89 | 94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89","Dealing in stolen property | 812.019 
+Dealing in stolen property.
+—
+
+(1) 
+Any person who traffics in, or endeavors to traffic in, property that he or she knows or should know was stolen shall be guilty of a felony of the second degree, punishable as provided in ss. 775.082, 775.083, and 775.084.
+
+(2) 
+Any person who initiates, organizes, plans, finances, directs, manages, or supervises the theft of property and traffics in such stolen property shall be guilty of a felony of the first degree, punishable as provided in ss. 775.082, 775.083, and 775.084.
+
+History.
+—
+s. 7, ch. 77-342; s. 1237, ch. 97-102."
+"12","fl-identity-theft","Identity Theft","817.568","felony","covered_by_existing_exact_record","partial","fl-fs-817-568-fraudulent-use-of-personal-identification-information | fl-fs-817-568-harassment-by-use-of-personal-identification-information","Fla. Stat. § 817.568(2) | Fla. Stat. § 817.568(4)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 817.568(2) | Fla. Stat. § 817.568(4) | Fla. Stat. § 817.568","77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402 | 77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402 | 77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402","Any person who willfully and without authorization fraudulently uses, or possesses with intent to fraudulently use, personal identification information concerning another person without first obtaining that person’s consent, commits the offense of fraudulent use of personal identification information, which is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084. | Any person who willfully and without authorization possesses, uses, or attempts to use personal identification information concerning a person without first obtaining that person’s consent, and who does so for the purpose of harassing that person, commits the offense of harassment by use of personal identification information, which is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083. | 817.568 
+Criminal use of personal identification information.
+—
+
+(1) 
+As used in this section, the term:
+(a) 
+“Access device” means any card, plate, code, account number, electronic serial number, mobile identification number, personal identification number, or other telecommunications service, equipment, or instrument identifier, or other means of account access that can be used, alone or in conjunction with another access device, to obtain money, goods, services, or any other thing of value, or that can be used to initiate a transfer of funds, other than a transfer originated solely by paper instrument.
+
+(b) 
+“Authorization” means empowerment, permission, or competence to act.
+
+(c) 
+“Hara…"
+"13","fl-credit-card-fraud","Credit Card Fraud","817.61","felony","mechanical_correction","full","fl-fs-817-61-fraudulent-use-of-credit-cards","Fla. Stat. § 817.61","Retire the legacy row and route selection to fl-fs-817-61-fraudulent-use-of-credit-cards; preserve the source-first display name and exact code.","","true","Fla. Stat. § 817.61 | Fla. Stat. § 817.61","0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57 | 0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57","Fraudulent use of credit cards | 817.61 
+Fraudulent use of credit cards.
+—
+
+A person who, with intent to defraud the issuer or a person or organization providing money, goods, services, or anything else of value or any other person, uses, for the purpose of obtaining money, goods, services, or anything else of value, a credit card obtained or retained in violation of this part or a credit card which he or she knows is forged, or who obtains money, goods, services, or anything else of value by representing, without the consent of the cardholder, that he or she is the holder of a specified card or by representing that he or she is the holder of a card and such card has not in fact been issued violates this section. A person…"
+"14","fl-embezzlement","Embezzlement","812.014(2)","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Embezzlement” represent?","false","Fla. Stat. § 812.014","fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3","812.014 
+Theft.
+—
+
+(1) 
+A person commits theft if he or she knowingly obtains or uses, or endeavors to obtain or to use, the property of another with intent to, either temporarily or permanently:
+(a) 
+Deprive the other person of a right to the property or a benefit from the property.
+
+(b) 
+Appropriate the property to his or her own use or to the use of any person not entitled to the use of the property.
+
+(2)(a)1. 
+If the property stolen is valued at $100,000 or more or is a semitrailer that was deployed by a law enforcement officer; or
+
+2. 
+If the property stolen is cargo valued at $50,000 or more that has entered the stream of interstate or intrastate commerce from the shipper’s loading pl…"
+"15","fl-shoplifting","Shoplifting","812.015","misdemeanor","mechanical_correction","full","fl-fs-812-015-retail-theft","Fla. Stat. § 812.015(8)-(11)","Retire the legacy row and route selection to fl-fs-812-015-retail-theft; preserve the source-first display name and exact code.","","true","Fla. Stat. § 812.015(8)-(11) | Fla. Stat. § 812.015","291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238 | 291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238","Except as provided in subsection (9) or subsection (11), a person who commits retail theft commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person: | 812.015 
+Retail and farm theft; transit fare evasion; mandatory fine; alternative punishment; detention and arrest; exemption from liability for false arrest; resisting arrest; penalties.
+—
+
+(1) 
+As used in this section:
+(a) 
+“Antishoplifting or inventory control device” means a mechanism or other device designed and operated for the purpose of detecting the removal from a mercantile establishment or similar enclosure, or from a protected area within such an enclosure, of specially marked or tagged merchandise. The term includes any electronic or digital imaging or any video recording or other film used for security purposes and the cash register tape or other record made of the register re…"
+"16","fl-residential-burglary","Residential Burglary","810.02(2)","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Residential Burglary” represent?","false","Fla. Stat. § 810.02","4304135fddba2643ae0244e10af5613fc0c08e2b3e5cff6a1c4bcc9d91acce6d","810.02 
+Burglary.
+—
+
+(1)(a) 
+For offenses committed on or before July 1, 2001, “burglary” means entering or remaining in a dwelling, a structure, or a conveyance with the intent to commit an offense therein, unless the premises are at the time open to the public or the defendant is licensed or invited to enter or remain.
+
+(b) 
+For offenses committed after July 1, 2001, “burglary” means:
+1. 
+Entering a dwelling, a structure, or a conveyance with the intent to commit an offense therein, unless the premises are at the time open to the public or the defendant is licensed or invited to enter; or
+
+2. 
+Notwithstanding a licensed or invited entry, remaining in a dwelling, structure, or conveyance:…"
+"17","fl-commercial-burglary","Commercial Burglary","810.02(3)","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Commercial Burglary” represent?","false","Fla. Stat. § 810.02","4304135fddba2643ae0244e10af5613fc0c08e2b3e5cff6a1c4bcc9d91acce6d","810.02 
+Burglary.
+—
+
+(1)(a) 
+For offenses committed on or before July 1, 2001, “burglary” means entering or remaining in a dwelling, a structure, or a conveyance with the intent to commit an offense therein, unless the premises are at the time open to the public or the defendant is licensed or invited to enter or remain.
+
+(b) 
+For offenses committed after July 1, 2001, “burglary” means:
+1. 
+Entering a dwelling, a structure, or a conveyance with the intent to commit an offense therein, unless the premises are at the time open to the public or the defendant is licensed or invited to enter; or
+
+2. 
+Notwithstanding a licensed or invited entry, remaining in a dwelling, structure, or conveyance:…"
+"18","fl-auto-burglary","Auto Burglary","810.02(4)","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Auto Burglary” represent?","false","Fla. Stat. § 810.02","4304135fddba2643ae0244e10af5613fc0c08e2b3e5cff6a1c4bcc9d91acce6d","810.02 
+Burglary.
+—
+
+(1)(a) 
+For offenses committed on or before July 1, 2001, “burglary” means entering or remaining in a dwelling, a structure, or a conveyance with the intent to commit an offense therein, unless the premises are at the time open to the public or the defendant is licensed or invited to enter or remain.
+
+(b) 
+For offenses committed after July 1, 2001, “burglary” means:
+1. 
+Entering a dwelling, a structure, or a conveyance with the intent to commit an offense therein, unless the premises are at the time open to the public or the defendant is licensed or invited to enter; or
+
+2. 
+Notwithstanding a licensed or invited entry, remaining in a dwelling, structure, or conveyance:…"
+"19","fl-bank-robbery","Bank Robbery","18 U.S.C. § 2113","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","18 U.S.C. § 2113","d7f6fafc1bd925426a2ab63ae301ce8cab2a9aa58a83e393e2015424f5a53468","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"20","fl-possession-of-controlled-substance","Possession of Controlled Substance","893.13(6)","misdemeanor","mechanical_correction","full","fl-fs-893-13-6-a-prohibited-acts-penalties","Fla. Stat. § 893.13(6)(a)","Retire the legacy row and route selection to fl-fs-893-13-6-a-prohibited-acts-penalties; preserve the source-first display name and exact code.","","true","Fla. Stat. § 893.13(6)(a) | Fla. Stat. § 893.13","24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291 | 24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291","Prohibited acts; penalties | 893.13 
+Prohibited acts; penalties.
+—
+
+(1)(a) 
+Except as authorized by this chapter and chapter 499, a person may not sell, manufacture, or deliver, or possess with intent to sell, manufacture, or deliver, a controlled substance. A person who violates this provision with respect to:
+1. 
+A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+2. 
+A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the third degree, pun…"
+"21","fl-possession-with-intent-to-distribute","Possession with Intent to Distribute","893.13(1)(a)","felony","mechanical_correction","full","fl-fs-893-13-1-a-prohibited-acts-penalties","Fla. Stat. § 893.13(1)(a)","Retire the legacy row and route selection to fl-fs-893-13-1-a-prohibited-acts-penalties; preserve the source-first display name and exact code.","","true","Fla. Stat. § 893.13(1)(a) | Fla. Stat. § 893.13","24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291 | 24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291","Prohibited acts; penalties | 893.13 
+Prohibited acts; penalties.
+—
+
+(1)(a) 
+Except as authorized by this chapter and chapter 499, a person may not sell, manufacture, or deliver, or possess with intent to sell, manufacture, or deliver, a controlled substance. A person who violates this provision with respect to:
+1. 
+A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+2. 
+A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the third degree, pun…"
+"22","fl-distribution-of-controlled-substance","Distribution of Controlled Substance","893.13(1)(a)","felony","mechanical_correction","full","fl-fs-893-13-1-a-prohibited-acts-penalties","Fla. Stat. § 893.13(1)(a)","Retire the legacy row and route selection to fl-fs-893-13-1-a-prohibited-acts-penalties; preserve the source-first display name and exact code.","","true","Fla. Stat. § 893.13(1)(a) | Fla. Stat. § 893.13","24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291 | 24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291","Prohibited acts; penalties | 893.13 
+Prohibited acts; penalties.
+—
+
+(1)(a) 
+Except as authorized by this chapter and chapter 499, a person may not sell, manufacture, or deliver, or possess with intent to sell, manufacture, or deliver, a controlled substance. A person who violates this provision with respect to:
+1. 
+A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+2. 
+A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the third degree, pun…"
+"23","fl-manufacturing-controlled-substance","Manufacturing Controlled Substance","893.13(1)(a)","felony","mechanical_correction","full","fl-fs-893-13-1-a-prohibited-acts-penalties","Fla. Stat. § 893.13(1)(a)","Retire the legacy row and route selection to fl-fs-893-13-1-a-prohibited-acts-penalties; preserve the source-first display name and exact code.","","true","Fla. Stat. § 893.13(1)(a) | Fla. Stat. § 893.13","24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291 | 24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291","Prohibited acts; penalties | 893.13 
+Prohibited acts; penalties.
+—
+
+(1)(a) 
+Except as authorized by this chapter and chapter 499, a person may not sell, manufacture, or deliver, or possess with intent to sell, manufacture, or deliver, a controlled substance. A person who violates this provision with respect to:
+1. 
+A controlled substance named or described in s. 893.03(1)(a), (1)(b), (1)(d), (2)(a), (2)(b), or (2)(c)5. commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+2. 
+A controlled substance named or described in s. 893.03(1)(c), (2)(c)1., (2)(c)2., (2)(c)3., (2)(c)6., (2)(c)7., (2)(c)8., (2)(c)9., (2)(c)10., (3), or (4) commits a felony of the third degree, pun…"
+"24","fl-drug-trafficking","Drug Trafficking","893.135","felony","covered_by_existing_exact_record","partial","fl-fs-893-135-1-b-1-trafficking-in-cocaine | fl-fs-893-135-1-c-1-trafficking-in-illegal-drugs","Fla. Stat. § 893.135(1)(b)1. | Fla. Stat. § 893.135(1)(c)1.","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 893.135(1)(b)1. | Fla. Stat. § 893.135(1)(c)1. | Fla. Stat. § 893.135","89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f | 89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f | 89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f","commits a felony of the first degree, which felony shall be known as “trafficking in cocaine,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. | commits a felony of the first degree, which felony shall be known as “trafficking in illegal drugs,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. | 893.135 
+Trafficking; mandatory sentences; suspension or reduction of sentences; conspiracy to engage in trafficking.
+—
+
+(1) 
+Except as authorized in this chapter or in chapter 499 and notwithstanding the provisions of s. 893.13:
+(a) 
+Any person who knowingly sells, purchases, manufactures, delivers, or brings into this state, or who is knowingly in actual or constructive possession of, in excess of 25 pounds of cannabis, or 300 or more cannabis plants, commits a felony of the first degree, which felony shall be known as “trafficking in cannabis,” punishable as provided in s. 775.082, s. 775.083, or s. 775.084. If the quantity of cannabis involved:
+1. 
+Is in excess of 25 pounds, but less th…"
+"25","fl-possession-of-drug-paraphernalia","Possession of Drug Paraphernalia","893.147(1)","misdemeanor","mechanical_correction","full","fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials","Fla. Stat. § 893.147(1)","Retire the legacy row and route selection to fl-fs-893-147-1-use-possession-manufacture-delivery-transportation-advertisement-or-retail-sale-of-drug-paraphernalia-specified-machines-and-materials; preserve the source-first display name and exact code.","","true","Fla. Stat. § 893.147(1) | Fla. Stat. § 893.147","d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536 | d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536","Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials | 893.147 
+Use, possession, manufacture, delivery, transportation, advertisement, or retail sale of drug paraphernalia, specified machines, and materials.
+—
+
+(1) 
+USE OR POSSESSION OF DRUG PARAPHERNALIA.—
+It is unlawful for any person to use, or to possess with intent to use, drug paraphernalia:
+(a) 
+To plant, propagate, cultivate, grow, harvest, manufacture, compound, convert, produce, process, prepare, test, analyze, pack, repack, store, contain, or conceal a controlled substance in violation of this chapter; or
+
+(b) 
+To inject, ingest, inhale, or otherwise introduce into the human body a controlled substance in violation of this chapter.
+
+Any person who violates this subsection is guilty o…"
+"26","fl-maintaining-drug-house","Maintaining Drug House","893.1351","felony","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 893.1351","40fbccfa0c0057b55eef155e9c22d0b8eb0a7bd373b61f03c68a0de717e3a906","893.1351 
+Ownership, lease, rental, or possession for trafficking in or manufacturing a controlled substance.
+—
+
+(1) 
+A person may not own, lease, or rent any place, structure, or part thereof, trailer, or other conveyance with the knowledge that the place, structure, trailer, or conveyance will be used for the purpose of trafficking in a controlled substance, as provided in s. 893.135; for the sale of a controlled substance, as provided in s. 893.13; or for the manufacture of a controlled substance intended for sale or distribution to another. A person who violates this subsection commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+(2) 
+A…"
+"27","fl-felon-in-possession-of-firearm","Felon in Possession of Firearm","790.23","felony","mechanical_correction","full","fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful","Fla. Stat. § 790.23(1)","Retire the legacy row and route selection to fl-fs-790-23-felons-and-delinquents-possession-of-firearms-ammunition-or-electric-weapons-or-devices-unlawful; preserve the source-first display name and exact code.","","true","Fla. Stat. § 790.23(1) | Fla. Stat. § 790.23","7cccddd133508a99f451fe827c60c0d01c22ea27bdd5b266ada759c222d50c1d | 7cccddd133508a99f451fe827c60c0d01c22ea27bdd5b266ada759c222d50c1d","Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful | 790.23 
+Felons and delinquents; possession of firearms, ammunition, or electric weapons or devices unlawful.
+—
+
+(1) 
+It is unlawful for any person to own or to have in his or her care, custody, possession, or control any firearm, ammunition, or electric weapon or device, or to carry a concealed weapon, including a tear gas gun or chemical weapon or device, if that person has been:
+(a) 
+Convicted of a felony in the courts of this state;
+
+(b) 
+Found, in the courts of this state, to have committed a delinquent act that would be a felony if committed by an adult and such person is under 24 years of age;
+
+(c) 
+Convicted of or found to have committed a crime against the United States which is des…"
+"28","fl-possession-of-prohibited-weapon","Possession of Prohibited Weapon","790.221","felony","mechanical_correction","full","fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty","Fla. Stat. § 790.221","Retire the legacy row and route selection to fl-fs-790-221-possession-of-short-barreled-rifle-short-barreled-shotgun-or-machine-gun-penalty; preserve the source-first display name and exact code.","","true","Fla. Stat. § 790.221 | Fla. Stat. § 790.221","e6ed1741c1a29b4614a6ae01ad7b29589a48ce433513d198ccf9420afda2d886 | e6ed1741c1a29b4614a6ae01ad7b29589a48ce433513d198ccf9420afda2d886","Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty | 790.221 
+Possession of short-barreled rifle, short-barreled shotgun, or machine gun; penalty.
+—
+
+(1) 
+It is unlawful for any person to own or to have in his or her care, custody, possession, or control any short-barreled rifle, short-barreled shotgun, or machine gun which is, or may readily be made, operable; but this section shall not apply to antique firearms.
+
+(2) 
+A person who violates this section commits a felony of the second degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+(3) 
+Firearms in violation hereof which are lawfully owned and possessed under provisions of federal law are excepted.
+
+History.
+—
+s. 10, ch. 69-306; s. 1, ch. 89-312; s. 21, ch. 93-406; s…"
+"29","fl-wire-fraud","Wire Fraud","969.256","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","969.256","12d1c278da4d347481b37529656b21bc8eeb51c52fb051862da11c99970cd399","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"30","fl-mail-fraud","Mail Fraud","683.650","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","683.650","e4230e884da5a15be15c25fd6be7a21219fa11eb5a994cc6b08327c3b4906487","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"31","fl-check-fraud","Check Fraud","832.05","felony","covered_by_existing_exact_record","partial","fl-fs-832-05-giving-worthless-checks-drafts-and-debit-card-orders-penalty-duty-of-drawee-evidence-costs-complaint-form","Fla. Stat. § 832.05(2)-(4)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 832.05(2)-(4) | Fla. Stat. § 832.05","f6ee675959afb225bdedeb7bde9a8bc72d4fc8230e7e5e589425f4f8fc5085a2 | f6ee675959afb225bdedeb7bde9a8bc72d4fc8230e7e5e589425f4f8fc5085a2","Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form | 832.05 
+Giving worthless checks, drafts, and debit card orders; penalty; duty of drawee; evidence; costs; complaint form.
+—
+
+(1) 
+PURPOSE.—
+The purpose of this section is to remedy the evil of giving checks, drafts, bills of exchange, debit card orders, and other orders on banks without first providing funds in or credit with the depositories on which the same are made or drawn to pay and satisfy the same, which tends to create the circulation of worthless checks, drafts, bills of exchange, debit card orders, and other orders on banks, bad banking, check kiting, and a mischief to trade and commerce.
+
+(2) 
+WORTHLESS CHECKS, DRAFTS, OR DEBIT CARD ORDERS; PENALTY.—
+
+(a) 
+It is unlawful for any…"
+"32","fl-insurance-fraud","Insurance Fraud","817.234","felony","mechanical_correction","full","fl-fs-817-234-insurance-fraud","Fla. Stat. § 817.234(1)(a)","Retire the legacy row and route selection to fl-fs-817-234-insurance-fraud; preserve the source-first display name and exact code.","","true","Fla. Stat. § 817.234(1)(a) | Fla. Stat. § 817.234","3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5 | 3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5","A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer: | 817.234 
+False and fraudulent insurance claims.
+—
+
+(1)(a) 
+A person commits insurance fraud punishable as provided in subsection (11) if that person, with the intent to injure, defraud, or deceive any insurer:
+1. 
+Presents or causes to be presented any written or oral statement as part of, or in support of, a claim for payment or other benefit pursuant to an insurance policy or a health maintenance organization subscriber or provider contract, knowing that such statement contains any false, incomplete, or misleading information concerning any fact or thing material to such claim;
+
+2. 
+Prepares or makes any written or oral statement that is intended to be presented to any insurer in connecti…"
+"33","fl-tax-fraud","Tax Fraud","213.29","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Tax Fraud” represent?","false","213.29","71f051a0b84dc818fd580fcda26f3b778cefb933fca27b47813fe470cb72171f","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"34","fl-computer-fraud","Computer Fraud","815.06","felony","mechanical_correction","full","fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices","Fla. Stat. § 815.06(2)-(3)","Retire the legacy row and route selection to fl-fs-815-06-offense-against-users-of-computers-computer-systems-computer-networks-or-electronic-devices; preserve the source-first display name and exact code.","","true","Fla. Stat. § 815.06(2)-(3) | Fla. Stat. § 815.06","fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377 | fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377","A person commits an offense against users of computers, computer systems, computer networks, or electronic devices if he or she willfully, knowingly, and without authorization or exceeding authorization: | 815.06 
+Offenses against users of computers, computer systems, computer networks, and electronic devices.
+—
+
+(1) 
+As used in this section, the term “user” means a person with the authority to operate or maintain a computer, computer system, computer network, or electronic device.
+
+(2) 
+A person commits an offense against users of computers, computer systems, computer networks, or electronic devices if he or she willfully, knowingly, and without authorization or exceeding authorization:
+(a) 
+Accesses or causes to be accessed any computer, computer system, computer network, or electronic device with knowledge that such access is unauthorized or the manner of use exceeds authorization;
+
+(b) 
+D…"
+"35","fl-disorderly-conduct","Disorderly Conduct","877.03","misdemeanor","mechanical_correction","full","fl-fs-877-03-breach-of-the-peace-disorderly-conduct","Fla. Stat. § 877.03","Retire the legacy row and route selection to fl-fs-877-03-breach-of-the-peace-disorderly-conduct; preserve the source-first display name and exact code.","","true","Fla. Stat. § 877.03 | Fla. Stat. § 877.03","813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92 | 813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92","Breach of the peace; disorderly conduct | 877.03 
+Breach of the peace; disorderly conduct.
+—
+
+Whoever commits such acts as are of a nature to corrupt the public morals, or outrage the sense of public decency, or affect the peace and quiet of persons who may witness them, or engages in brawling or fighting, or engages in such conduct as to constitute a breach of the peace or disorderly conduct, shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.
+
+History.
+—
+s. 1, ch. 59-325; s. 1147, ch. 71-136; s. 2, ch. 86-174."
+"36","fl-vandalism","Vandalism","806.13","misdemeanor","mechanical_correction","full","fl-fs-806-13-criminal-mischief","Fla. Stat. § 806.13(1)","Retire the legacy row and route selection to fl-fs-806-13-criminal-mischief; preserve the source-first display name and exact code.","","true","Fla. Stat. § 806.13(1) | Fla. Stat. § 806.13","2a26f6fe81a54e875fffe4fec87b9e390243943b9cf092999a9d8c13400852ac | 2a26f6fe81a54e875fffe4fec87b9e390243943b9cf092999a9d8c13400852ac","A person commits the offense of criminal mischief if he or she willfully and maliciously injures or damages by any means any real or personal property belonging to another, including, but not limited to, the placement of graffiti thereon or other acts of vandalism thereto. | 806.13 
+Criminal mischief; penalties; penalty for minor.
+—
+
+(1)(a) 
+A person commits the offense of criminal mischief if he or she willfully and maliciously injures or damages by any means any real or personal property belonging to another, including, but not limited to, the placement of graffiti thereon or other acts of vandalism thereto.
+
+(b)1. 
+If the damage to such property is $200 or less, it is a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.
+
+2. 
+If the damage to such property is greater than $200 but less than $1,000, it is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.
+
+3. 
+If the damage is $1,000 or gre…"
+"37","fl-dui-first-offense","DUI First Offense","316.193","misdemeanor","covered_by_existing_exact_record","partial","fl-fs-316-193-1-driving-under-the-influence","Fla. Stat. § 316.193(1)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 316.193(1) | Fla. Stat. § 316.193","e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f | e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f","A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and: | 316.193 
+Driving under the influence; penalties.
+—
+
+(1) 
+A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:
+(a) 
+The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;
+
+(b) 
+The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or
+
+(c) 
+The person has a breath-alcohol level of 0.08 or more grams of alcohol per 21…"
+"38","fl-dui-second-offense","DUI Second Offense","316.193(2)(a)","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 316.193","e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f","316.193 
+Driving under the influence; penalties.
+—
+
+(1) 
+A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:
+(a) 
+The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;
+
+(b) 
+The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or
+
+(c) 
+The person has a breath-alcohol level of 0.08 or more grams of alcohol per 21…"
+"39","fl-dui-third-offense","DUI Third Offense","316.193(2)(b)1","felony","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 316.193","e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f","316.193 
+Driving under the influence; penalties.
+—
+
+(1) 
+A person is guilty of the offense of driving under the influence and is subject to punishment as provided in subsection (2) if the person is driving or in actual physical control of a vehicle within this state and:
+(a) 
+The person is under the influence of alcoholic beverages, any chemical substance set forth in s. 877.111, or any substance controlled under chapter 893, when affected to the extent that the person’s normal faculties are impaired;
+
+(b) 
+The person has a blood-alcohol level of 0.08 or more grams of alcohol per 100 milliliters of blood; or
+
+(c) 
+The person has a breath-alcohol level of 0.08 or more grams of alcohol per 21…"
+"40","fl-hit-and-run","Hit and Run","316.061","misdemeanor","mechanical_correction","full","fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property","Fla. Stat. § 316.061(1)","Retire the legacy row and route selection to fl-fs-316-061-1-crashes-involving-damage-to-vehicle-or-property; preserve the source-first display name and exact code.","","true","Fla. Stat. § 316.061(1) | Fla. Stat. § 316.061","5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4 | 5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4","Crashes involving damage to vehicle or property | 316.061 
+Crashes involving damage to vehicle or property.
+—
+
+(1) 
+The driver of any vehicle involved in a crash resulting only in damage to a vehicle or other property which is driven or attended by any person shall immediately stop such vehicle at the scene of such crash or as close thereto as possible, and shall forthwith return to, and in every event shall remain at, the scene of the crash until he or she has fulfilled the requirements of s. 316.062. A person who violates this subsection commits a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083. The court may order a driver convicted of a violation of this section, who caused or otherwise contributed…"
+"41","fl-petit-theft","Petit Theft (Under $750)","812.014(2)(e)","misdemeanor","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Petit Theft (Under $750)” represent?","false","Fla. Stat. § 812.014","fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3","812.014 
+Theft.
+—
+
+(1) 
+A person commits theft if he or she knowingly obtains or uses, or endeavors to obtain or to use, the property of another with intent to, either temporarily or permanently:
+(a) 
+Deprive the other person of a right to the property or a benefit from the property.
+
+(b) 
+Appropriate the property to his or her own use or to the use of any person not entitled to the use of the property.
+
+(2)(a)1. 
+If the property stolen is valued at $100,000 or more or is a semitrailer that was deployed by a law enforcement officer; or
+
+2. 
+If the property stolen is cargo valued at $50,000 or more that has entered the stream of interstate or intrastate commerce from the shipper’s loading pl…"
+"42","fl-battery","Simple Battery","784.03","misdemeanor","mechanical_correction","full","fl-fs-784-03-battery","Fla. Stat. § 784.03(1)(a)","Retire the legacy row and route selection to fl-fs-784-03-battery; preserve the source-first display name and exact code.","","true","Fla. Stat. § 784.03(1)(a) | Fla. Stat. § 784.03","c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20 | c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20","The offense of battery occurs when a person: | 784.03 
+Battery; felony battery.
+—
+
+(1)(a) 
+The offense of battery occurs when a person:
+1. 
+Actually and intentionally touches or strikes another person against the will of the other; or
+
+2. 
+Intentionally causes bodily harm to another person.
+
+(b) 
+Except as provided in subsection (2) or subsection (3), a person who commits battery commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.
+
+(2) 
+A person who has one prior conviction for battery, aggravated battery, felony battery, or resisting an officer with violence under s. 843.01 and who commits any second or subsequent battery commits a felony of the third degree, punishable as provided in s. 775.0…"
+"43","fl-domestic-battery","Domestic Battery","784.03(1)(a)","misdemeanor","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Should the catalog model domestic relationship facts separately from § 784.03 battery?","false","Fla. Stat. § 784.03","c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20","784.03 
+Battery; felony battery.
+—
+
+(1)(a) 
+The offense of battery occurs when a person:
+1. 
+Actually and intentionally touches or strikes another person against the will of the other; or
+
+2. 
+Intentionally causes bodily harm to another person.
+
+(b) 
+Except as provided in subsection (2) or subsection (3), a person who commits battery commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.
+
+(2) 
+A person who has one prior conviction for battery, aggravated battery, felony battery, or resisting an officer with violence under s. 843.01 and who commits any second or subsequent battery commits a felony of the third degree, punishable as provided in s. 775.0…"
+"44","fl-driving-with-suspended-license","Driving with a Suspended License (DWLSR)","322.34","misdemeanor","mechanical_correction","full","fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified","Fla. Stat. § 322.34(2)","Retire the legacy row and route selection to fl-fs-322-34-2-driving-while-license-suspended-revoked-canceled-or-disqualified; preserve the source-first display name and exact code.","","true","Fla. Stat. § 322.34(2) | Fla. Stat. § 322.34","9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b | 9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b","Driving while license suspended, revoked, canceled, or disqualified | 322.34 
+Driving while license suspended, revoked, canceled, or disqualified.
+—
+
+(1) 
+Except as provided in subsection (2), any person whose driver license or driving privilege has been canceled, suspended, or revoked, except a “habitual traffic offender” as defined in s. 322.264, who drives a vehicle upon the highways of this state while such license or privilege is canceled, suspended, or revoked is guilty of a moving violation, punishable as provided in chapter 318.
+
+(2) 
+Any person whose driver license or driving privilege has been canceled, suspended, or revoked as provided by law, or who does not have a driver license or driving privilege but is under suspension or revocation equivalen…"
+"45","fl-violation-of-probation","Violation of Probation","948.06","misdemeanor","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Should a revocation proceeding under § 948.06 ever appear in the offense selector?","false","Fla. Stat. § 948.06","6e3f62bce9ee9571b6893aee65275fe5a8185fecf1cabac131b8628099af246d","948.06 
+Violation of probation or community control; revocation; modification; continuance; failure to pay restitution or cost of supervision.
+—
+
+(1)(a) 
+Whenever within the period of probation or community control there are reasonable grounds to believe that a probationer or offender in community control has violated his or her probation or community control in a material respect, any law enforcement officer who is aware of the probationary or community control status of the probationer or offender in community control or any probation officer may arrest or request any county or municipal law enforcement officer to arrest such probationer or offender without warrant wherever found and retu…"
+"46","fl-failure-to-appear","Failure to Appear","843.15","misdemeanor","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Failure to Appear” represent?","false","Fla. Stat. § 843.15","cf7b83030fd86432b4face535308860163812c3b80baedb44da0f97bc812b0d8","843.15 
+Failure of defendant on bail to appear.
+—
+
+(1) 
+Whoever, having been released pursuant to chapter 903, willfully fails to appear before any court or judicial officer as required shall incur a forfeiture of any security which was given or pledged for her or his release and, in addition, shall:
+(a) 
+If she or he was released in connection with a charge of felony or while awaiting sentence or pending review by certiorari after conviction of any offense, be guilty of a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, or;
+
+(b) 
+If she or he was released in connection with a charge of misdemeanor, be guilty of a misdemeanor of the first degree,…"
+"47","fl-resisting-arrest","Resisting Arrest / Obstruction","843.01","misdemeanor","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Resisting Arrest / Obstruction” represent?","false","Fla. Stat. § 843.01","73b17f040c91922032611719813fc53f91c96cb914bb26703521ec185c85160f","843.01 
+Resisting, obstructing, or opposing by offering or doing violence to legally authorized person, police canine, or police horse.
+—
+
+(1) 
+Whoever knowingly and willfully resists, obstructs, or opposes any officer as defined in s. 943.10(1), (2), (3), (6), (7), (8), or (9); member of the Florida Commission on Offender Review or any administrative aide or supervisor employed by the commission; parole and probation supervisor; county probation officer; personnel or representative of the Department of Law Enforcement; or other person legally authorized to execute process in the execution of legal process or engaged in the performance of his or her official duties as described in s. 943.10…"
+"48","fl-protective-order-violation","Violation of Protective Order","741.31","misdemeanor","covered_by_existing_exact_record","partial","fl-fs-741-31-4-a-violation-of-an-injunction-for-protection-against-domestic-violence","Fla. Stat. § 741.31(4)(a)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 741.31(4)(a) | Fla. Stat. § 741.31","f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae | f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae","Violation of an injunction for protection against domestic violence | 741.31 
+Violation of an injunction for protection against domestic violence.
+—
+
+(1) 
+In the event of a violation of the injunction for protection against domestic violence when there has not been an arrest, the petitioner may contact the clerk of the circuit court of the county in which the violation is alleged to have occurred. The clerk shall either assist the petitioner in the preparation of an affidavit in support of the violation or direct the petitioner to the office operated by the court within the circuit that has been designated by the chief judge of that circuit as the central intake point for injunction violations and where the petitioner can receive assistance in the preparation…"
+"49","fl-open-container","Open Container Violation","316.1936","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 316.1936","9df742d1d07a54b0fb430b09e6de2305c5a44569eb4f9c86b76d135c02df1b58","316.1936 
+Possession of open containers of alcoholic beverages in vehicles prohibited; penalties.
+—
+
+(1) 
+As used in this section, the term:
+(a) 
+“Open container” means any container of alcoholic beverage which is immediately capable of being consumed from, or the seal of which has been broken.
+
+(b) 
+“Road” means a way open to travel by the public, including, but not limited to, a street, highway, or alley. The term includes associated sidewalks, the roadbed, the right-of-way, and all culverts, drains, sluices, ditches, water storage areas, embankments, slopes, retaining walls, bridges, tunnels, and viaducts necessary for the maintenance of travel and all ferries used in connection therewit…"
+"50","fl-false-info-to-police","Providing False Information to Police","837.05","misdemeanor","mechanical_correction","full","fl-fs-837-05-false-reports-to-law-enforcement-authorities","Fla. Stat. § 837.05","Retire the legacy row and route selection to fl-fs-837-05-false-reports-to-law-enforcement-authorities; preserve the source-first display name and exact code.","","true","Fla. Stat. § 837.05 | Fla. Stat. § 837.05","10d2fea76549f8dabb0137942a00134b5aec3a6d10c01b3ff8dbfb4c2cd21c7a | 10d2fea76549f8dabb0137942a00134b5aec3a6d10c01b3ff8dbfb4c2cd21c7a","False reports to law enforcement authorities | 837.05 
+False reports to law enforcement authorities.
+—
+
+(1)(a) 
+Except as provided in paragraph (b) or subsection (2), a person who knowingly gives false information to a law enforcement officer concerning the alleged commission of any crime, commits a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.
+
+(b) 
+A person who commits a violation of paragraph (a) commits a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084, if the person has previously been convicted of a violation of paragraph (a) and subparagraph 1. or subparagraph 2. applies:
+1. 
+The information the person gave to the law enforcement officer was commun…"
+"51","fl-harassment","Harassment / Stalking","784.048","misdemeanor","covered_by_existing_exact_record","partial","fl-fs-784-048-2-stalking | fl-fs-784-048-3-aggravated-stalking","Fla. Stat. § 784.048(2) | Fla. Stat. § 784.048(3)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 784.048(2) | Fla. Stat. § 784.048(3) | Fla. Stat. § 784.048","5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1 | 5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1 | 5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1","commits the offense of stalking | commits the offense of aggravated stalking | 784.048 
+Stalking; definitions; penalties.
+—
+
+(1) 
+As used in this section, the term:
+(a) 
+“Harass” means to engage in a course of conduct directed at a specific person which causes substantial emotional distress to that person and serves no legitimate purpose.
+
+(b) 
+“Course of conduct” means a pattern of conduct composed of a series of acts over a period of time, however short, which evidences a continuity of purpose. The term does not include constitutionally protected activity such as picketing or other organized protests.
+
+(c) 
+“Credible threat” means a verbal or nonverbal threat, or a combination of the two, including threats delivered by electronic communication or implied by a patter…"
+"52","fl-contempt-of-court","Contempt of Court","38.22","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 38.22","b66c3db4c8910b04877f59c9e1598708547d0872d9e8b8c1de9b342aff7ff91b","38.22 
+Power to punish contempts.
+—
+
+Every court may punish contempts against it whether such contempts be direct, indirect, or constructive, and in any such proceeding the court shall proceed to hear and determine all questions of law and fact.
+
+History.
+—
+s. 1, Nov. 23, 1828; RS 975; GS 1345; RGS 2534; CGL 4161; s. 1, ch. 23004, 1945; s. 4, ch. 73-334."
+"53","fl-solicitation","Solicitation / Prostitution","796.07","misdemeanor","mechanical_correction","full","fl-fs-796-07-prohibiting-prostitution-and-related-acts","Fla. Stat. § 796.07","Retire the legacy row and route selection to fl-fs-796-07-prohibiting-prostitution-and-related-acts; preserve the source-first display name and exact code.","","true","Fla. Stat. § 796.07 | Fla. Stat. § 796.07","2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7 | 2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7","Prohibiting prostitution and related acts | 796.07 
+Prohibiting prostitution and related acts.
+—
+
+(1) 
+As used in this section:
+(a) 
+“Assignation” means the making of any appointment or engagement for prostitution or lewdness, or any act in furtherance of such appointment or engagement.
+
+(b) 
+“Female genitals” includes the labia minora, labia majora, clitoris, vulva, hymen, and vagina.
+
+(c) 
+“Lewdness” means any indecent or obscene act.
+
+(d) 
+“Prostitution” means the giving or receiving of the body for sexual activity for hire but excludes sexual activity between spouses.
+
+(e) 
+“Sexual activity” means oral, anal, or female genital penetration by, or union with, the sexual organ of another; anal or female genital penetration of anothe…"
+"54","fl-driving-without-insurance","Driving Without Insurance","316.646","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 316.646","885e2748b9ece7eb0add5f210aedc4b7be6001442c074e1908ab253c97570164","316.646 
+Security required; proof of security and display thereof.
+—
+
+(1) 
+Any person required by s. 324.022 to maintain property damage liability security, required by s. 324.023 to maintain liability security for bodily injury or death, or required by s. 627.733 to maintain personal injury protection security on a motor vehicle shall have in his or her immediate possession at all times while operating such motor vehicle proper proof of maintenance of the required security.
+(a) 
+Such proof shall be in a uniform paper or electronic format, as prescribed by the department, a valid insurance policy, an insurance policy binder, a certificate of insurance, or such other proof as may be prescrib…"
+"55","fl-expired-registration","Driving with Expired Registration","320.07","misdemeanor","covered_by_existing_exact_record","partial","fl-fs-320-07-3-c-expiration-of-registration-renewal-required-penalties","Fla. Stat. § 320.07(3)(c)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 320.07(3)(c) | Fla. Stat. § 320.07","2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d | 2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d","Expiration of registration; renewal required; penalties | 320.07 
+Expiration of registration; renewal required; penalties.
+—
+
+(1) 
+The registration of a motor vehicle or mobile home expires at midnight on the last day of the registration or extended registration period, or for a motor vehicle or mobile home owner who is a natural person, at midnight on the owner’s birthday. A vehicle may not be operated on the roads of this state after expiration of the renewal period, or, for a natural person, at midnight on the owner’s birthday, unless the registration has been renewed according to law.
+
+(2) 
+Registration shall be renewed semiannually, annually, or biennially, as provided in this subsection, during the applicable renewal period, upon payment of…"
+"56","fl-expired-inspection","Driving with Expired/No Inspection","316.610","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 316.610","28b911fe02de71adf5ed413a7e4f3c2569a38642d199de945ba97810557d264a","316.610 
+Safety of vehicle; inspection.
+—
+
+It is a violation of this chapter for any person to drive or move, or for the owner or his or her duly authorized representative to cause or knowingly permit to be driven or moved, on any highway any vehicle or combination of vehicles which is in such unsafe condition as to endanger any person or property, or which does not contain those parts or is not at all times equipped with such lamps and other equipment in proper condition and adjustment as required in this chapter, or which is equipped in any manner in violation of this chapter, or for any person to do any act forbidden or fail to perform any act required under this chapter.
+(1) 
+Any police…"
+"57","fl-failure-to-pay-child-support","Criminal Nonsupport / Failure to Pay Child Support","827.06","misdemeanor","mechanical_correction","full","fl-fs-827-06-nonsupport-of-dependents","Fla. Stat. § 827.06(2)-(3)","Retire the legacy row and route selection to fl-fs-827-06-nonsupport-of-dependents; preserve the source-first display name and exact code.","","true","Fla. Stat. § 827.06(2)-(3) | Fla. Stat. § 827.06","b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0 | b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0","Nonsupport of dependents | 827.06 
+Nonsupport of dependents.
+—
+
+(1) 
+The Legislature finds that most parents want to support their children and remain connected to their families. The Legislature also finds that while many parents lack the financial resources and other skills necessary to provide that support, some parents willfully fail to provide support to their children even when they are aware of the obligation and have the ability to do so. The Legislature further finds that existing statutory provisions for civil enforcement of support have not proven sufficiently effective or efficient in gaining adequate support for all children. Recognizing that it is the public policy of this state that children shall be m…"
+"58","fl-noise-violation","Noise Violation / Disturbing the Peace by Noise","877.03","misdemeanor","covered_by_existing_exact_record","partial","fl-fs-877-03-breach-of-the-peace-disorderly-conduct","Fla. Stat. § 877.03","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 877.03 | Fla. Stat. § 877.03","813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92 | 813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92","Breach of the peace; disorderly conduct | 877.03 
+Breach of the peace; disorderly conduct.
+—
+
+Whoever commits such acts as are of a nature to corrupt the public morals, or outrage the sense of public decency, or affect the peace and quiet of persons who may witness them, or engages in brawling or fighting, or engages in such conduct as to constitute a breach of the peace or disorderly conduct, shall be guilty of a misdemeanor of the second degree, punishable as provided in s. 775.082 or s. 775.083.
+
+History.
+—
+s. 1, ch. 59-325; s. 1147, ch. 71-136; s. 2, ch. 86-174."
+"59","fl-indecent-exposure","Indecent Exposure / Public Urination","800.03","misdemeanor","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Indecent Exposure / Public Urination” represent?","false","Fla. Stat. § 800.03","df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940","800.03 
+Exposure of sexual organs.
+—
+
+(1) 
+A person commits unlawful exposure of sexual organs by:
+(a) 
+Exposing or exhibiting his or her sexual organs in public or on the private premises of another, or so near thereto as to be seen from such private premises, in a vulgar or indecent manner; or
+
+(b) 
+Being naked in public in a vulgar or indecent manner.
+
+(2)(a) 
+Except as provided in paragraph (b), a violation of this section is a misdemeanor of the first degree, punishable as provided in s. 775.082 or s. 775.083.
+
+(b) 
+A second or subsequent violation of this section is a felony of the third degree, punishable as provided in s. 775.082, s. 775.083, or s. 775.084.
+
+(3) 
+The exposure of sex…"
+"60","fl-fake-id","Possession of Fake/Fraudulent ID","322.212","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 322.212","ceb3bc7a9cd559c4dffac3ec691035c26b92c9c8ca13c06ab9c7a19c5a27455c","322.212 
+Unauthorized possession of, and other unlawful acts in relation to, driver license or identification card.
+—
+
+(1) 
+It is unlawful for any person to:
+(a) 
+Knowingly have in his or her possession or to display any blank, forged, stolen, fictitious, counterfeit, or unlawfully issued driver license or identification card or any instrument in the similitude of a driver license or identification card unless possession by such person has been duly authorized by the department;
+
+(b) 
+Knowingly have in his or her possession any instrument in the similitude of a driver license issued by the department or its duly authorized agents or those of any state or jurisdiction issuing licenses recogn…"
+"61","fl-animal-at-large","Animal at Large / Leash Law Violation","767.01","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 767.01","20f983d3e5a55899060ee6ee824d0017dd89c1c9071e49e342060fe7f7b8163a","767.01 
+Dog owner’s liability for damages to persons, domestic animals, or livestock.
+—
+
+(1) 
+A dog owner is liable for any damage done by the owner’s dog to a person or to any animal included in the definitions of “domestic animal” and “livestock” as provided by s. 585.01.
+
+(2) 
+If a dog owner has knowledge of the dog’s dangerous propensities, the owner must securely confine the dog in a proper enclosure as defined in s. 767.11.
+
+History.
+—
+RS 2341; ch. 4979, 1901; GS 3142; RGS 4957; CGL 7044; s. 1, ch. 94-339; s. 48, ch. 2024-137; s. 2, ch. 2025-61."
+"62","fl-animal-cruelty-misdemeanor","Animal Cruelty (Misdemeanor)","828.12(1)","misdemeanor","mechanical_correction","full","fl-fs-828-12-animal-cruelty","Fla. Stat. § 828.12(1)","Retire the legacy row and route selection to fl-fs-828-12-animal-cruelty; preserve the source-first display name and exact code.","","true","Fla. Stat. § 828.12(1) | Fla. Stat. § 828.12","979062d1f596a3a8319f65588fc94dcffe3b0044221cf79f59134b0bc1871cee | 979062d1f596a3a8319f65588fc94dcffe3b0044221cf79f59134b0bc1871cee","A person who unnecessarily overloads, overdrives, torments, deprives of necessary sustenance or shelter, or unnecessarily mutilates, or kills any animal, or causes the same to be done, or carries in or upon any vehicle, or otherwise, any animal in a cruel or inhumane manner, commits animal cruelty, a misdemeanor of the first degree, punishable as provided in s. 775.082 or by a fine of not more than $5,000, or both. | 828.12 
+Cruelty to animals.
+—
+
+(1) 
+A person who unnecessarily overloads, overdrives, torments, deprives of necessary sustenance or shelter, or unnecessarily mutilates, or kills any animal, or causes the same to be done, or carries in or upon any vehicle, or otherwise, any animal in a cruel or inhumane manner, commits animal cruelty, a misdemeanor of the first degree, punishable as provided in s. 775.082 or by a fine of not more than $5,000, or both.
+
+(2) 
+A person who intentionally commits an act to any animal, or a person who owns or has the custody or control of any animal and fails to act, which results in the cruel death, or excessive or repeated infliction of unnecessary pain or suffe…"
+"63","fl-illegal-camping","Illegal Camping / Sleeping in Public","856.021","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 856.021","03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001","856.021 
+Loitering or prowling; penalty.
+—
+
+(1) 
+It is unlawful for any person to loiter or prowl in a place, at a time or in a manner not usual for law-abiding individuals, under circumstances that warrant a justifiable and reasonable alarm or immediate concern for the safety of persons or property in the vicinity.
+
+(2) 
+Among the circumstances which may be considered in determining whether such alarm or immediate concern is warranted is the fact that the person takes flight upon appearance of a law enforcement officer, refuses to identify himself or herself, or manifestly endeavors to conceal himself or herself or any object. Unless flight by the person or other circumstance makes it impr…"
+"64","fl-panhandling","Panhandling / Aggressive Solicitation","856.021","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 856.021","03d918ac6fea866f7a21c3a11bfef7f9f673a24537dd8c55a41a01bf674b9001","856.021 
+Loitering or prowling; penalty.
+—
+
+(1) 
+It is unlawful for any person to loiter or prowl in a place, at a time or in a manner not usual for law-abiding individuals, under circumstances that warrant a justifiable and reasonable alarm or immediate concern for the safety of persons or property in the vicinity.
+
+(2) 
+Among the circumstances which may be considered in determining whether such alarm or immediate concern is warranted is the fact that the person takes flight upon appearance of a law enforcement officer, refuses to identify himself or herself, or manifestly endeavors to conceal himself or herself or any object. Unless flight by the person or other circumstance makes it impr…"
+"65","fl-unregistered-vehicle","Operating Unregistered / Uninsured Vehicle","320.02","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 320.02","5bc24b280611ec2a72ddd6277bdf86e313141c9c5c625efe4c2cc2d5f7871006","320.02 
+Registration required; application for registration; forms.
+—
+
+(1) 
+Except as otherwise provided in this chapter, every owner or person in charge of a motor vehicle that is operated or driven on the roads of this state shall register the vehicle in this state. The owner or person in charge shall apply to the department or to its authorized agent for registration of each such vehicle on a form prescribed by the department. A registration is not required for any motor vehicle that is not operated on the roads of this state during the registration period.
+
+(2)(a) 
+The application for registration must include the street address of the owner’s permanent Florida residence or the address…"
+"66","fl-curfew-violation","Curfew Violation","877.22","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 877.22","c1bd6dabfacb0eccfa3d83e3077360676d150b6a352a67c3161b447ba7ba4daf","877.22 
+Minors prohibited in public places and establishments during certain hours; penalty; procedure.
+—
+
+(1)(a) 
+A minor may not be or remain in a public place or establishment between the hours of 11:00 p.m. and 5:00 a.m. of the following day, Sunday through Thursday, except in the case of a legal holiday.
+
+(b) 
+A minor may not be or remain in a public place or establishment between the hours of 12:01 a.m. and 6:00 a.m. on Saturdays, Sundays, and legal holidays.
+
+(2) 
+A minor who has been suspended or expelled from school may not be or remain in a public place, in an establishment, or within 1,000 feet of a school during the hours of 9:00 a.m. to 2:00 p.m. during any school day.
+
+(3) 
+A…"
+"67","fl-trespass-after-warning","Trespass After Warning / Return After Ban","810.09","misdemeanor","mechanical_correction","full","fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance","Fla. Stat. § 810.09(1)-(2)","Retire the legacy row and route selection to fl-fs-810-09-trespass-on-property-other-than-structure-or-conveyance; preserve the source-first display name and exact code.","","true","Fla. Stat. § 810.09(1)-(2) | Fla. Stat. § 810.09","8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec | 8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec","Trespass on property other than structure or conveyance | 810.09 
+Trespass on property other than structure or conveyance.
+—
+
+(1)(a) 
+A person who, without being authorized, licensed, or invited, willfully enters upon or remains in any property other than a structure or conveyance:
+1. 
+As to which notice against entering or remaining is given, either by actual communication to the offender or by posting, fencing, or cultivation as described in s. 810.011; or
+
+2. 
+If the property is the unenclosed curtilage of a dwelling and the offender enters or remains with the intent to commit an offense thereon, other than the offense of trespass,
+
+commits the offense of trespass on property other than a structure or conveyance.
+
+(b) 
+As used in this section,…"
+"68","fl-defective-vehicle-equipment","Defective Vehicle Equipment / Broken Taillight","316.234","infraction","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 316.234","0d38ee95a9c6ae49e2530e7c2ec5e0a29f506cc988eb0f83069a391028b8154a","316.234 
+Signal lamps and signal devices.
+—
+
+(1) 
+Any vehicle may be equipped and, when required under this chapter, shall be equipped with a stop lamp or lamps on the rear of the vehicle which shall display a red or amber light, visible from a distance of not less than 300 feet to the rear in normal sunlight, and which shall be actuated upon application of the service (foot) brake, and which may but need not be incorporated with one or more other rear lamps. An object, material, or covering that alters the stop lamp’s visibility from 300 feet to the rear in normal sunlight may not be placed, displayed, installed, affixed, or applied over a stop lamp.
+
+(2) 
+Any vehicle may be equipped and,…"
+"69","fl-truancy","Truancy / Chronic Absenteeism","984.151","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 984.151","0d302f534f73038aad52e11e5f2ed06b8d4647c44a162cf7f45101f99b9cabb7","984.151 
+Early truancy intervention; truancy petition; judgment.
+—
+
+(1) 
+If the school determines that a student subject to compulsory school attendance has had at least five unexcused absences, or absences for which the reasons are unknown, within a calendar month or 10 unexcused absences, or absences for which the reasons are unknown, within a 90-calendar-day period pursuant to s. 1003.26(1)(b), or has had more than 15 unexcused absences in a 90-calendar-day period, the superintendent of schools or his or her designee may file a truancy petition seeking early truancy intervention.
+
+(2) 
+The petition shall be filed in the circuit in which the student is enrolled in school.
+
+(3) 
+Original j…"
+"70","fl-littering","Littering / Illegal Dumping","403.413","misdemeanor","covered_by_existing_exact_record","partial","fl-fs-403-413-6-b-florida-litter-law","Fla. Stat. § 403.413(6)(b)","Retire the umbrella legacy row; use the enumerated exact records and do not imply coverage beyond them.","","false","Fla. Stat. § 403.413(6)(b) | Fla. Stat. § 403.413","e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702 | e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702","Florida Litter Law | 403.413 
+Florida Litter Law.
+—
+
+(1) 
+SHORT TITLE.—
+This section may be cited as the “Florida Litter Law.”
+
+(2) 
+DEFINITIONS.—
+As used in this section:
+(a) 
+“Aircraft” means a motor vehicle or other vehicle that is used or designed to fly but does not include a parachute or any other device used primarily as safety equipment.
+
+(b) 
+“Commercial purpose” means for the purpose of economic gain.
+
+(c) 
+“Commercial vehicle” means a vehicle that is owned or used by a business, corporation, association, partnership, or sole proprietorship or any other entity conducting business for a commercial purpose.
+
+(d) 
+“Dump” means to dump, throw, discard, place, deposit, drain, discharge, or dispose of. The…"
+"71","fl-illegal-fireworks","Illegal Discharge of Fireworks","791.01","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 791.01","ded196efa1e22b9b4d06cbb397f0ef5aafc9fe3864be505bb718af56d6f56b7d","791.01 
+Definitions.
+—
+
+As used in this chapter, the term:
+(1) 
+“Distributor” means any person engaged in the business of selling sparklers to a wholesaler.
+
+(2) 
+“Division” means the Division of the State Fire Marshal of the Department of Financial Services.
+
+(3) 
+“Explosive compound” means any chemical compound, mixture, or device the primary or common purpose of which is to function by the substantially instantaneous release of gas and heat.
+
+(4)(a) 
+“Fireworks” means and includes any combustible or explosive composition or substance or combination of substances or, except as hereinafter provided, any article prepared for the purpose of producing a visible or audible effect by combustion…"
+"72","fl-alcohol-in-park","Possession of Alcohol in Park / Prohibited Area","562.12","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 562.12","a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b","562.12 
+Beverages sold with improper license, or without license or registration, or held with intent to sell prohibited.
+—
+
+(1)(a) 
+It is unlawful for any person to sell alcoholic beverages without a license, and it is unlawful for any licensee to sell alcoholic beverages except as permitted by her or his license, or to sell such beverages in any manner except that permitted by her or his license; and any licensee or other person who keeps or possesses alcoholic beverages not permitted to be sold by her or his license, or not permitted to be sold without a license, with intent to sell or dispose of same unlawfully, commits a misdemeanor of the second degree, punishable as provided in s. 77…"
+"73","fl-hunting-fishing-no-license","Fishing / Hunting Without a License","379.354","misdemeanor","genuinely_missing_offense","none","","","Author a new exact source-first record for the proven offense branch, with exact subdivision and grading evidence.","","false","Fla. Stat. § 379.354","232b9728dcc526a75a9e0eebff726e9fd144a3680df6f02b7f8af3aebdb79581","379.354 
+Recreational licenses, permits, and authorization numbers; fees established.
+—
+
+(1) 
+LICENSE, PERMIT, OR AUTHORIZATION NUMBER REQUIRED.—
+Except as provided in s. 379.353, no person shall take game, freshwater or saltwater fish, or fur-bearing animals within this state without having first obtained a license, permit, or authorization number and paid the fees set forth in this chapter. Such license, permit, or authorization number shall authorize the person to whom it is issued to take game, freshwater or saltwater fish, or fur-bearing animals, and participate in outdoor recreational activities in accordance with the laws of the state and rules of the commission.
+
+(2) 
+NONTRANSFERABI…"
+"74","fl-criminal-attempt","Criminal Attempt","MPC § 5.01 / FL attempt statute","felony","mechanical_correction","full","fl-fs-777-04-1-criminal-attempt","Fla. Stat. § 777.04(1)","Retire the legacy row and route selection to fl-fs-777-04-1-criminal-attempt; preserve the source-first display name and exact code.","","true","Fla. Stat. § 777.04(1)","b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d","commits the offense of criminal attempt"
+"75","fl-conspiracy","Criminal Conspiracy","MPC § 5.03 / FL conspiracy statute","felony","mechanical_correction","full","fl-fs-777-04-3-criminal-conspiracy","Fla. Stat. § 777.04(3)","Retire the legacy row and route selection to fl-fs-777-04-3-criminal-conspiracy; preserve the source-first display name and exact code.","","true","Fla. Stat. § 777.04(3)","b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d","commits the offense of criminal conspiracy"
+"76","fl-aiding-and-abetting","Aiding and Abetting / Accomplice Liability","MPC § 2.06 / FL accomplice statute","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Which current Florida principal/accessory provision and liability model should replace the MPC placeholder?","false","MPC § 2.06 / FL accomplice statute","c096aa9b8595bf932ed316e5b8ed69dc29433dadf6f67108fdbea60ee724d200","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"77","fl-accessory-after-the-fact","Accessory After the Fact","MPC § 2.07 / FL accessory statute","felony","mechanical_correction","full","fl-fs-777-03-accessory-after-the-fact","Fla. Stat. § 777.03","Retire the legacy row and route selection to fl-fs-777-03-accessory-after-the-fact; preserve the source-first display name and exact code.","","true","Fla. Stat. § 777.03","f3042356d8a93432783f06ac32509bb4841877c64c66ddc856d0fbb82e6846f9","Accessory after the fact"
+"78","fl-attempted-murder","Attempted Murder","FL attempted murder statute / MPC § 5.01","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Should attempt-plus-predicate combinations be generated dynamically rather than stored as standalone charges?","false","FL attempted murder statute / MPC § 5.01","583e44f6ae771c876621934aff5cfb7b036aaf960fed6810cad690a8b40caf8e","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"79","fl-attempted-robbery","Attempted Robbery","FL attempted robbery statute / MPC § 5.01","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Should attempt-plus-predicate combinations be generated dynamically rather than stored as standalone charges?","false","FL attempted robbery statute / MPC § 5.01","e91a8b706903edefab6405a05da72dc445d6ed53645f7e591159c9b1de8d925c","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"80","fl-attempted-sexual-assault","Attempted Sexual Assault","FL attempted sexual assault statute / MPC § 5.01","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Which exact Florida sexual-battery predicate and attempt grade does this label intend?","false","FL attempted sexual assault statute / MPC § 5.01","51d3861b37af9a331c0fd4607f1b094469df3463931ee4c1d772d9164c3eb1bd","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"81","fl-criminal-solicitation","Criminal Solicitation","MPC § 5.02 / FL solicitation statute","felony","mechanical_correction","full","fl-fs-777-04-2-criminal-solicitation","Fla. Stat. § 777.04(2)","Retire the legacy row and route selection to fl-fs-777-04-2-criminal-solicitation; preserve the source-first display name and exact code.","","true","Fla. Stat. § 777.04(2)","b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d","commits the offense of criminal solicitation"
+"82","fl-gang-enhancement","Criminal Street Gang Enhancement","FL gang enhancement statute","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","FL gang enhancement statute","6d27207bf7282e1f6eac484fe8c7452599b96d0369ebbe2ab5b79330d44a8176","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"83","fl-hate-crime-enhancement","Hate Crime Enhancement","FL hate crime statute","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","FL hate crime statute","150bba03a81213e48b8a5b37baaa82f784891b6417cf44144357162f3af73dc6","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"84","fl-recidivist-enhancement","Prior Felony / Recidivist Sentencing Enhancement","FL habitual offender / recidivist statute","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","FL habitual offender / recidivist statute","fa856bd8db9815e973a09ddee5d86d0acf09aa9ca4bcd6b6b0c60656f586555e","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"85","fl-firearm-in-felony-enhancement","Use of a Firearm in Commission of a Felony","FL firearm enhancement statute","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","FL firearm enhancement statute","cc80973b97a823db998916a0ccdb67d4079adc6f1daafb8444f1b54ef19bacc1","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"86","fl-drug-school-zone-enhancement","Drug Offense in a School Zone (Proximity Enhancement)","FL drug-free school zone statute","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","FL drug-free school zone statute","528f8d24e3639e67485a45f2ac794b87099a56f586860ae9f4d5566a2146c076","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"87","fl-rico-organized-crime","RICO / Organized Crime (Racketeering)","FL organized crime / racketeering statute","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “RICO / Organized Crime (Racketeering)” represent?","false","FL organized crime / racketeering statute","eae8b64d58d62ca9b5ca64302a24c3ee36d20df098ae3788dd6aaea92b6f0b5d","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"88","fl-money-laundering","Money Laundering","FL money laundering statute","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","What exact Florida offense and subdivision, if any, should the label “Money Laundering” represent?","false","FL money laundering statute","631fce6f40cf7c1581d3b6200e230a2ff0ec85dc54d1c156f588b5acea5d7e06","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"89","fl-juvenile-delinquency-felony","Juvenile Delinquency Adjudication (Felony-Level Act)","985.03(9)","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 985.03","dabe0f1862c073fc46de5a64c8e5776720d4047cac3728ac5b9d967c6ccf7826","985.03 
+Definitions.
+—
+
+As used in this chapter, the term:
+(1) 
+“Abscond” means to hide, conceal, or absent oneself from the jurisdiction of the court or supervision of the department to avoid prosecution or supervision.
+
+(2) 
+“Addictions receiving facility” means a substance abuse service provider as defined in chapter 397.
+
+(3) 
+“Adjudicatory hearing” means a hearing for the court to determine whether or not the facts support the allegations stated in the petition, as is provided for under s. 985.35 in delinquency cases.
+
+(4) 
+“Adult” means any natural person other than a child.
+
+(5) 
+“Arbitration” means a process whereby a neutral third person or panel, called an arbitrator or an arbitra…"
+"90","fl-juvenile-delinquency-misdemeanor","Juvenile Delinquency Adjudication (Misdemeanor-Level Act)","985.03(9)","misdemeanor","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","Fla. Stat. § 985.03","dabe0f1862c073fc46de5a64c8e5776720d4047cac3728ac5b9d967c6ccf7826","985.03 
+Definitions.
+—
+
+As used in this chapter, the term:
+(1) 
+“Abscond” means to hide, conceal, or absent oneself from the jurisdiction of the court or supervision of the department to avoid prosecution or supervision.
+
+(2) 
+“Addictions receiving facility” means a substance abuse service provider as defined in chapter 397.
+
+(3) 
+“Adjudicatory hearing” means a hearing for the court to determine whether or not the facts support the allegations stated in the petition, as is provided for under s. 985.35 in delinquency cases.
+
+(4) 
+“Adult” means any natural person other than a child.
+
+(5) 
+“Arbitration” means a process whereby a neutral third person or panel, called an arbitrator or an arbitra…"
+"91","fl-juvenile-transfer-adult-court","Juvenile Transfer to Adult Court (Waiver Hearing)","FL Juvenile Court Act — transfer / waiver provisions","felony","nonoffense_or_out_of_scope_candidate","none","","","Remove from the Florida offense catalog or move to a separately labeled procedure/enhancement/infraction workflow after owner confirmation.","","false","FL Juvenile Court Act — transfer / waiver provisions","fa51bcde05637c793a4f08db58de703b60c86a6f06ced146dc08ba5ef22e177b","The catalog code does not exactly support every cited Florida statutory section and subdivision."
+"92","fl-juvenile-firearm-possession","Juvenile Firearm Possession","FL juvenile firearm possession statute","felony","real_legal_question","none","","","Hold for the single narrow attorney question; do not map by heading or citation alone.","Which exact substantive firearm provision is intended, rather than an uncited juvenile-status label?","false","FL juvenile firearm possession statute","8322e6a2bf669d2142fc173c84527fd884a5ec5ac2c3f3936cd777b80c2174a7","The catalog code does not exactly support every cited Florida statutory section and subdivision."

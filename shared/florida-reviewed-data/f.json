@@ -9,7 +9,17 @@
       "es": "Abuso de una persona anciana o un adulto con discapacidad (sin gran daño corporal; delito grave de tercer grado)",
       "zh": "虐待老年人或残障成年人（未造成严重身体伤害；三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -47,7 +57,17 @@
       "es": "Abuso agravado de una persona anciana o un adulto con discapacidad (delito grave de primer grado)",
       "zh": "加重虐待老年人或残障成年人（一级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -93,7 +113,17 @@
       "es": "Negligencia de una persona anciana o un adulto con discapacidad que causa gran daño corporal (delito grave de segundo grado)",
       "zh": "疏忽照料老年人或残障成年人并造成严重身体伤害（二级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -131,7 +161,17 @@
       "es": "Negligencia de una persona anciana o un adulto con discapacidad sin gran daño corporal (delito grave de tercer grado)",
       "zh": "疏忽照料老年人或残障成年人但未造成严重身体伤害（三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"], "es": ["Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"], "zh": ["虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of an elderly person or disabled adult; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de una persona anciana o un adulto con discapacidad; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料老年人或残障成年人；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -169,7 +209,17 @@
       "es": "Abuso infantil agravado (delito grave de primer grado)",
       "zh": "加重虐待儿童（一级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -215,7 +265,17 @@
       "es": "Negligencia infantil que causa gran daño corporal (delito grave de segundo grado)",
       "zh": "疏忽照料儿童并造成严重身体伤害（二级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -253,7 +313,17 @@
       "es": "Abuso infantil sin gran daño corporal (delito grave de tercer grado)",
       "zh": "虐待儿童但未造成严重身体伤害（三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -291,7 +361,17 @@
       "es": "Negligencia infantil sin gran daño corporal (delito grave de tercer grado)",
       "zh": "疏忽照料儿童但未造成严重身体伤害（三级重罪）"
     },
-    "aliases": { "en": ["Abuse, aggravated abuse, and neglect of a child; penalties"], "es": ["Abuso, abuso agravado y negligencia de un menor; penas"], "zh": ["虐待、加重虐待及疏忽照料儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Abuse, aggravated abuse, and neglect of a child; penalties"
+      ],
+      "es": [
+        "Abuso, abuso agravado y negligencia de un menor; penas"
+      ],
+      "zh": [
+        "虐待、加重虐待及疏忽照料儿童；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -329,7 +409,17 @@
       "es": "Embarazo de una menor de 16 por una persona de 21 años o más (delito grave de tercer grado)",
       "zh": "年满21岁者使未满16岁儿童怀孕（三级重罪）"
     },
-    "aliases": { "en": ["Contributing to the delinquency or dependency of a child; penalty"], "es": ["Contribución a la delincuencia o dependencia de un menor; pena"], "zh": ["促使儿童成为违法或受抚养儿童；处罚"] },
+    "aliases": {
+      "en": [
+        "Contributing to the delinquency or dependency of a child; penalty"
+      ],
+      "es": [
+        "Contribución a la delincuencia o dependencia de un menor; pena"
+      ],
+      "zh": [
+        "促使儿童成为违法或受抚养儿童；处罚"
+      ]
+    },
     "category": "felony",
     "verifiedMonth": "2026-09",
     "citations": [
@@ -354,6 +444,66 @@
       "zh": {
         "plainSummary": "年满21岁者使未满16岁的儿童怀孕。",
         "degreeContext": "三级重罪。无论该人是否因同一犯罪交易或事件中的其他罪行被认定有罪、受到指控或被起诉，本罪均适用。受害者并非贞洁或曾表示同意均不构成抗辩。"
+      }
+    }
+  },
+  {
+    "id": "fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "jurisdiction": "FL",
+    "code": "827.04(1)",
+    "slug": "fl-fs-827-04-1-contributing-to-the-delinquency-or-dependency-of-a-child-penalty",
+    "name": "Contributing to child delinquency, dependency, or need for services",
+    "names": {
+      "es": "Contribución a la delincuencia, dependencia o necesidad de servicios de un menor",
+      "zh": "促成儿童违法、受扶养或需要服务"
+    },
+    "aliases": {
+      "en": [
+        "Contributing to the delinquency or dependency of a child; penalty"
+      ],
+      "es": [
+        "Contribución a la delincuencia o dependencia de un menor; pena"
+      ],
+      "zh": [
+        "促成儿童违法或受扶养；处罚"
+      ]
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Fla. Stat. § 827.04(1)",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04(1).html"
+      },
+      {
+        "citation": "Fla. Stat. § 827.01",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html"
+      },
+      {
+        "citation": "Fla. Stat. § 39.01",
+        "url": "https://www.flsenate.gov/Laws/Statutes/2026/39.01"
+      },
+      {
+        "citation": "Fla. Stat. § 984.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0984/Sections/0984.03.html"
+      },
+      {
+        "citation": "Fla. Stat. § 985.03",
+        "url": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0985/Sections/0985.03.html"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Acting in a way that causes, tends to cause, encourages, or contributes to a child becoming delinquent, dependent, or in need of services; or inducing or trying to induce a child, by act, threat, command, or persuasion, to act or live in a way that causes or tends to cause the child to become or remain in one of those statuses.",
+        "degreeContext": "First-degree misdemeanor. Section 39.01(15) supplies the seven alternatives for a court finding that a child is dependent; §§ 984.03 and 985.03 supply the incorporated child-in-need-of-services and delinquency terms. A prior juvenile adjudication is neither required nor a bar to prosecution."
+      },
+      "es": {
+        "plainSummary": "Actuar de modo que cause, tienda a causar, fomente o contribuya a que un menor se vuelva delincuente, dependiente o necesitado de servicios; o inducir o intentar inducirlo, mediante acto, amenaza, orden o persuasión, a actuar o vivir de modo que cause o tienda a causar que adquiera o mantenga uno de esos estados.",
+        "degreeContext": "Delito menor de primer grado. El § 39.01(15) contiene las siete alternativas para que un tribunal determine que un menor es dependiente; los §§ 984.03 y 985.03 contienen los términos incorporados de menor necesitado de servicios y delincuencia. No se requiere una adjudicación juvenil previa ni esta impide el proceso penal."
+      },
+      "zh": {
+        "plainSummary": "实施导致、倾向于导致、鼓励或促成儿童成为违法儿童、受扶养儿童或需要服务儿童的行为；或通过行为、威胁、命令或劝说，诱使或试图诱使儿童以导致或倾向于导致其成为或继续处于上述状态的方式行事或生活。",
+        "degreeContext": "一级轻罪。第39.01(15)条规定法院认定儿童受扶养的七种情形；第984.03及985.03条规定所援引的需要服务儿童和违法儿童术语。起诉不要求先有少年案件裁决，已有裁决也不妨碍起诉。"
       }
     }
   }
