@@ -6,6 +6,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { classifyOhioOffenses } from "../scripts/data-review/classify-ohio-offenses";
 import { OHIO_MECHANICAL_VERDICTS, reconcileOhioCatalog } from "../scripts/data-review/reconcile-ohio-catalog";
 import { validateOhioSnapshot, type OhioCachedChapter, type OhioEnumeration } from "../scripts/data-review/ohio-discovery/snapshot-accounting";
+import { interpretOhioSectionStatus } from "../scripts/data-review/ohio-discovery/section-status";
 
 const hash = (text: string) => createHash("sha256").update(text).digest("hex");
 const temporary: string[] = [];
@@ -53,6 +54,36 @@ function files() {
 }
 
 describe("Ohio section snapshot accounting", () => {
+  it("reports a missing enumeration with an acquisition instruction", () => {
+    const paths = files();
+    expect(() => classifyOhioOffenses({ ...paths, enumerationPath: join(paths.dir, "missing.json") })).toThrow(/Acquire the Ohio code first; no enumeration/);
+  });
+
+  it("validates v2 status evidence and holds future-effective sources and penalty links", () => {
+    const paths = files();
+    paths.chapter.parserVersion = paths.enumeration.parserVersion = 2;
+    paths.chapter.sections[0].effectiveDate = "2027-01-01";
+    for (const row of paths.chapter.sections) {
+      row.sourceStatus = interpretOhioSectionStatus(row.catchline, row.text, row.effectiveDate, "2026-09-23");
+    }
+    paths.enumeration.sections = paths.chapter.sections.map(({ text, ...row }) => ({ ...row, titleNumber: "1", textLength: text.length }));
+    const save = () => {
+      writeFileSync(join(paths.cacheDir, "chapter-102.json"), JSON.stringify(paths.chapter));
+      writeFileSync(paths.enumerationPath, JSON.stringify(paths.enumeration));
+    };
+    save();
+    const report = classifyOhioOffenses(paths);
+    expect(report.sections.find(row => row.section === "102.01")).toMatchObject({ classification: "supporting", externalGrades: [], offences: [] });
+    expect(report.accounting.sourceStatusHolds.map(row => row.section)).toContain("102.01");
+    expect(report.accounting.unresolvedPenaltyTargets.find(row => row.section === "102.01")?.reason).toBe("source_status_unresolved");
+    paths.chapter.sections[0].sourceStatus!.kind = "operative_text";
+    paths.enumeration.sections[0].sourceStatus!.kind = "operative_text";
+    save();
+    expect(() => classifyOhioOffenses(paths)).toThrow(/source status/);
+    paths.chapter.parserVersion = 1; save();
+    expect(() => classifyOhioOffenses(paths)).toThrow(/parser versions/);
+  });
+
   it("retains a penalty-linked duty as unresolved even without recognized prohibition wording", () => {
     const paths = files();
     const result = classifyOhioOffenses(paths);

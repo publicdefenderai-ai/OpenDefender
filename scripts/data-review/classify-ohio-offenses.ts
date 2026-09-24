@@ -25,6 +25,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 import { validateOhioSnapshot, type OhioCachedChapter, type OhioEnumeration } from "./ohio-discovery/snapshot-accounting";
+import { statusSuppressesDiscovery, type OhioSourceStatus } from "./ohio-discovery/section-status";
 import {
   extractOhioOffences,
   extractOhioPenaltyLinkages,
@@ -66,6 +67,7 @@ export interface OhioClassifiedSection {
   contentHash: string;
   classification: OhioSectionClassification;
   repealed: boolean;
+  sourceStatus?: OhioSourceStatus;
   offences: OhioExtractedOffence[];
   /** Grades supplied by a chapter penalty section for this section's conduct. */
   externalGrades: OhioExternalGrade[];
@@ -88,7 +90,9 @@ function classify(
 
 export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPath?: string } = {}) {
   const cacheDir = options.cacheDir ?? SECTION_CACHE_DIR;
-  const enumerationText = fs.readFileSync(options.enumerationPath ?? ENUMERATION_PATH, "utf8");
+  const enumerationPath = options.enumerationPath ?? ENUMERATION_PATH;
+  if (!fs.existsSync(enumerationPath)) throw new Error(`Acquire the Ohio code first; no enumeration at ${enumerationPath}`);
+  const enumerationText = fs.readFileSync(enumerationPath, "utf8");
   const enumeration = JSON.parse(enumerationText) as OhioEnumeration;
   if (!fs.existsSync(cacheDir)) {
     throw new Error(`Acquire the Ohio code first; no cache at ${cacheDir}`);
@@ -106,7 +110,7 @@ export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPa
   const externalGrades = new Map<string, OhioExternalGrade[]>();
   for (const chapter of chapters) {
     for (const section of chapter.sections) {
-      if (section.repealed) continue;
+      if (section.repealed || statusSuppressesDiscovery(section.sourceStatus)) continue;
       for (const linkage of extractOhioPenaltyLinkages(section.text, section.section)) {
         for (const target of linkage.targetSections) {
           const list = externalGrades.get(target) ?? [];
@@ -123,8 +127,9 @@ export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPa
     for (const section of chapter.sections) {
       // A repealed or reserved number stays in the denominator but can never
       // contribute an offense.
-      const offences = section.repealed ? [] : extractOhioOffences(section.text, section.section);
-      const external = section.repealed ? [] : externalGrades.get(section.section) ?? [];
+      const suppressed = section.repealed || statusSuppressesDiscovery(section.sourceStatus);
+      const offences = suppressed ? [] : extractOhioOffences(section.text, section.section);
+      const external = suppressed ? [] : externalGrades.get(section.section) ?? [];
       sections.push({
         section: section.section,
         chapter: section.chapter,
@@ -133,10 +138,11 @@ export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPa
         sourceUrl: section.sourceUrl,
         effectiveDate: section.effectiveDate,
         contentHash: section.contentHash,
-        classification: section.repealed
+        classification: suppressed
           ? "supporting"
           : classify(offences, external, section.text),
         repealed: section.repealed,
+        ...(section.sourceStatus ? { sourceStatus: section.sourceStatus } : {}),
         offences,
         externalGrades: external,
       });
@@ -176,10 +182,10 @@ export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPa
 
   const bySection = new Map(sections.map(row => [row.section, row]));
   const unresolvedPenaltyTargets = [...externalGrades.entries()]
-    .filter(([target]) => !bySection.has(target) || bySection.get(target)!.repealed)
+    .filter(([target]) => !bySection.has(target) || bySection.get(target)!.repealed || statusSuppressesDiscovery(bySection.get(target)!.sourceStatus))
     .map(([target, grades]) => ({
       section: target,
-      reason: bySection.has(target) ? "repealed_or_reserved" : "absent_from_snapshot",
+      reason: !bySection.has(target) ? "absent_from_snapshot" : bySection.get(target)!.repealed ? "repealed_or_reserved" : "source_status_unresolved",
       references: grades,
     })).sort((a, b) => a.section.localeCompare(b.section));
   const accounting = {
@@ -189,6 +195,8 @@ export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPa
     chapters: chapters.length,
     classifiedSections: sections.length,
     unresolvedPenaltyTargets,
+    sourceStatusHolds: sections.filter(row => row.sourceStatus && ["uncertain", "not_yet_effective"].includes(row.sourceStatus.kind))
+      .map(row => ({ section: row.section, sourceStatus: row.sourceStatus })),
     limitations: "Supporting means no recognized offense signal, not a verified non-offense. " +
       "Penalty-linked candidates need conduct and applicability analysis, not automatic publication. " +
       "Snapshot parity does not independently verify publisher completeness or current law.",

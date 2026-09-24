@@ -10,6 +10,7 @@
  */
 import { createHash } from "node:crypto";
 import { JSDOM } from "jsdom";
+import { interpretOhioSectionStatus, statusIsInactive, type OhioSourceStatus } from "./section-status";
 
 export interface OhioParsedSection {
   section: string;
@@ -21,6 +22,7 @@ export interface OhioParsedSection {
   text: string;
   contentHash: string;
   repealed: boolean;
+  sourceStatus: OhioSourceStatus;
 }
 
 const MONTHS = [
@@ -54,16 +56,6 @@ function parseLatestLegislation(info: string): string | null {
 }
 
 /**
- * A repealed or reserved section still occupies an official number. It is kept
- * in the inventory so the denominator stays complete, and flagged so it can
- * never be mistaken for a current offense.
- */
-function looksRepealed(catchline: string, text: string): boolean {
-  return /\b(repealed|renumbered)\b/i.test(catchline) ||
-    (text.length < 240 && /\b(repealed|renumbered|reserved)\b/i.test(text));
-}
-
-/**
  * Parse heading and sections from one DOM.
  *
  * A JSDOM instance for a full chapter page is large and slow to collect, so
@@ -74,13 +66,14 @@ function looksRepealed(catchline: string, text: string): boolean {
 export function parseOhioChapterPage(
   html: string,
   chapterNumber: string,
+  asOf = new Date().toISOString().slice(0, 10),
 ): { heading: string | null; sections: OhioParsedSection[] } {
   const dom = new JSDOM(html);
   try {
     const document = dom.window.document;
     return {
       heading: headingFrom(document, chapterNumber),
-      sections: sectionsFrom(document, chapterNumber),
+      sections: sectionsFrom(document, chapterNumber, asOf),
     };
   } finally {
     dom.window.close();
@@ -90,16 +83,17 @@ export function parseOhioChapterPage(
 export function parseOhioChapterSections(
   html: string,
   chapterNumber: string,
+  asOf = new Date().toISOString().slice(0, 10),
 ): OhioParsedSection[] {
   const dom = new JSDOM(html);
   try {
-    return sectionsFrom(dom.window.document, chapterNumber);
+    return sectionsFrom(dom.window.document, chapterNumber, asOf);
   } finally {
     dom.window.close();
   }
 }
 
-function sectionsFrom(document: Document, chapterNumber: string): OhioParsedSection[] {
+function sectionsFrom(document: Document, chapterNumber: string, asOf: string): OhioParsedSection[] {
   const sections: OhioParsedSection[] = [];
   const seen = new Set<string>();
 
@@ -122,6 +116,8 @@ function sectionsFrom(document: Document, chapterNumber: string): OhioParsedSect
     const infoText = info ? blockText(info) : "";
     const text = body ? blockText(body) : "";
     const catchline = headingMatch[2].replace(/[.\s]+$/, "").trim();
+    const effectiveDate = parseEffectiveDate(infoText);
+    const sourceStatus = interpretOhioSectionStatus(catchline, text, effectiveDate, asOf);
 
     seen.add(section);
     sections.push({
@@ -129,11 +125,12 @@ function sectionsFrom(document: Document, chapterNumber: string): OhioParsedSect
       chapter: chapterNumber,
       catchline,
       sourceUrl: `https://codes.ohio.gov/ohio-revised-code/section-${section}`,
-      effectiveDate: parseEffectiveDate(infoText),
+      effectiveDate,
       latestLegislation: parseLatestLegislation(infoText),
       text,
       contentHash: createHash("sha256").update(text).digest("hex"),
-      repealed: looksRepealed(catchline, text),
+      repealed: statusIsInactive(sourceStatus),
+      sourceStatus,
     });
   }
 
