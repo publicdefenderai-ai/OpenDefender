@@ -16,11 +16,11 @@
  *   adopt_catchline     prohibition with no stated name; the catchline is the name
  *   label_conflict      the section's only offense does not describe the label
  *   compound_ambiguous  compound section, label matches none of the offenses
- *   not_an_offense      the cited section states no prohibition
+ *   discovery_unresolved present section needing further extraction/dependency analysis
  *   section_missing     the cited section is not in the official code
  *
- * Only the last four need a person. Everything above them is mechanical and is
- * reported with the exact statutory evidence that decided it. A rename is taken
+ * Unresolved discovery is engineering/source work before legal referral.
+ * Mechanical matches remain analysis proposals with supporting evidence. A rename is proposed
  * only when one name's content words contain the other's, so a label naming a
  * narrower offense than the section defines is escalated instead of merged.
  *
@@ -30,12 +30,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
 import { criminalCharges } from "../../shared/criminal-charges";
 import { normalizeOffenceName } from "./ohio-discovery/offense-extractor";
 import type { OhioClassifiedSection } from "./classify-ohio-offenses";
 
 const ROOT = process.cwd();
 const INVENTORY_PATH = path.resolve(ROOT, "scripts/data-review/output/ohio-offense-inventory.json");
+const ENUMERATION_PATH = path.resolve(ROOT, "scripts/data-review/output/ohio-code-enumeration.json");
 const OUTPUT_PATH = path.resolve(ROOT, "scripts/data-review/output/ohio-catalog-reconciliation.json");
 const REVIEW_CSV_PATH = path.resolve(ROOT, "scripts/data-review/output/ohio-catalog-manual-review.csv");
 
@@ -48,7 +50,7 @@ export type OhioReconciliationVerdict =
   | "label_conflict"
   | "compound_ambiguous"
   | "citation_candidates"
-  | "not_an_offense"
+  | "discovery_unresolved"
   | "section_missing";
 
 export const OHIO_MECHANICAL_VERDICTS: ReadonlySet<OhioReconciliationVerdict> = new Set([
@@ -119,16 +121,30 @@ function sectionOf(code: unknown): string | null {
   return match ? match[1] : null;
 }
 
-export function reconcileOhioCatalog(): {
+export function reconcileOhioCatalog(options: {
+  inventoryPath?: string;
+  enumerationPath?: string;
+  catalog?: Array<{ id: string; name: string; code?: string; jurisdiction: string }>;
+} = {}): {
   rows: OhioReconciliationRow[];
   totals: Record<string, number>;
 } {
-  if (!fs.existsSync(INVENTORY_PATH)) {
-    throw new Error(`Classify the Ohio code first; no inventory at ${INVENTORY_PATH}`);
+  const inventoryPath = options.inventoryPath ?? INVENTORY_PATH;
+  if (!fs.existsSync(inventoryPath)) {
+    throw new Error(`Classify the Ohio code first; no inventory at ${inventoryPath}`);
   }
-  const inventory = JSON.parse(fs.readFileSync(INVENTORY_PATH, "utf8")) as {
+  const inventory = JSON.parse(fs.readFileSync(inventoryPath, "utf8")) as {
     sections: OhioClassifiedSection[];
+    accounting?: { enumerationHash: string };
   };
+  const enumerationText = fs.readFileSync(options.enumerationPath ?? ENUMERATION_PATH, "utf8");
+  if (inventory.accounting?.enumerationHash !== createHash("sha256").update(enumerationText).digest("hex")) {
+    throw new Error("Reclassify Ohio before reconciliation: inventory is not bound to this enumeration");
+  }
+  const enumeration = JSON.parse(enumerationText) as {
+    sections: Array<{ section: string; catchline: string; sourceUrl: string; repealed: boolean }>;
+  };
+  const enumerated = new Map(enumeration.sections.map(row => [row.section, row]));
   const bySection = new Map(inventory.sections.map(row => [row.section, row]));
 
   // Many catalog rows carry a doctrinal placeholder such as
@@ -146,7 +162,7 @@ export function reconcileOhioCatalog(): {
   }
 
   const rows: OhioReconciliationRow[] = [];
-  for (const charge of criminalCharges.filter(row => row.jurisdiction === "OH")) {
+  for (const charge of (options.catalog ?? criminalCharges).filter(row => row.jurisdiction === "OH")) {
     const section = sectionOf(charge.code);
     const base = {
       chargeId: charge.id,
@@ -162,6 +178,16 @@ export function reconcileOhioCatalog(): {
     };
 
     if (!section || !bySection.has(section)) {
+      const present = section ? enumerated.get(section) : undefined;
+      if (present) {
+        rows.push({ ...base, verdict: "discovery_unresolved",
+          officialCatchline: present.catchline, sourceUrl: present.sourceUrl,
+          reason: present.repealed
+            ? "The section exists in the snapshot but is marked repealed/reserved; investigate temporal applicability."
+            : "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists.",
+        });
+        continue;
+      }
       const named = byOffenceName.get(normalizeOffenceName(charge.name)) ?? [];
       if (named.length === 1) {
         const found = bySection.get(named[0].section)!;
@@ -291,11 +317,12 @@ export function reconcileOhioCatalog(): {
     }
     rows.push({
       ...enriched,
-      verdict: "not_an_offense",
+      verdict: "discovery_unresolved",
       grades: externalGrades,
-      evidence: null,
-      reason: `Section ${section} ("${found.catchline}") states no prohibition and no offense name, ` +
-        "so the citation may be wrong or may point at a definition or penalty provision.",
+      evidence: found.externalGrades[0]?.span.text ?? null,
+      reason: `Section ${section} ("${found.catchline}") has unresolved discovery signals ` +
+        `(${found.classification}). Investigate conduct and penalty applicability before any legal referral. ` +
+        "This is neither an automatic rename nor a finding that no offense exists.",
     });
   }
 
@@ -304,6 +331,7 @@ export function reconcileOhioCatalog(): {
   for (const row of rows) totals[row.verdict] = (totals[row.verdict] ?? 0) + 1;
   totals.mechanical = rows.filter(row => OHIO_MECHANICAL_VERDICTS.has(row.verdict)).length;
   totals.needsReview = rows.length - totals.mechanical;
+  totals.discoveryWork = rows.filter(row => row.verdict === "discovery_unresolved").length;
   return { rows, totals };
 }
 
@@ -321,7 +349,7 @@ function main(): void {
     method: {
       naming: "Statutory names come from each section's own guilt clause.",
       mechanical: [...OHIO_MECHANICAL_VERDICTS],
-      limits: "A mechanical verdict renames a display label. It is not a publication approval.",
+      limits: "Verdicts are analysis proposals, not approved renames or publication. Discovery work needs engineering/source investigation before any legal referral.",
     },
     totals,
     rows,
@@ -340,7 +368,7 @@ function main(): void {
 
   console.log(JSON.stringify(totals, null, 2));
   console.log(`\nWrote ${OUTPUT_PATH}`);
-  console.log(`Wrote ${REVIEW_CSV_PATH} (${review.length} rows needing a person)`);
+  console.log(`Wrote ${REVIEW_CSV_PATH} (${review.length} unresolved rows, including ${totals.discoveryWork} discovery investigations; not an attorney assignment)`);
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))) {
