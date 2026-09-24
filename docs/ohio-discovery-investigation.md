@@ -2,6 +2,11 @@
 
 September 23, 2026. Research findings only; no catalog, approval, database or production changes.
 
+Follow-up: the [source-status repair](ohio-source-status-repair.md) has now
+addressed the status parser defect below. This document preserves the original
+investigation counts; the regenerated JSON reflects the corrected snapshot and
+includes a separate temporal-version research list.
+
 ## What this pass covers
 
 This pass investigates the 154 retained penalty-linked candidates, six unresolved

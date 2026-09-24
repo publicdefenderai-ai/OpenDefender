@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { interpretOhioSectionStatus, OHIO_CHAPTER_PARSER_VERSION, statusIsInactive, type OhioSourceStatus } from "./section-status";
 
 export interface OhioSnapshotSection {
   section: string;
@@ -9,9 +10,11 @@ export interface OhioSnapshotSection {
   text: string;
   contentHash: string;
   repealed: boolean;
+  sourceStatus?: OhioSourceStatus;
 }
 
 export interface OhioCachedChapter {
+  parserVersion?: number;
   chapterNumber: string;
   titleNumber: string;
   retrievedAt: string;
@@ -19,6 +22,7 @@ export interface OhioCachedChapter {
 }
 
 export interface OhioEnumeration {
+  parserVersion?: number;
   schemaVersion: number;
   discoveryKind: string;
   publicationStatus: string;
@@ -51,6 +55,10 @@ export function validateOhioSnapshot(chapters: OhioCachedChapter[], enumeration:
   const seenChapters = new Set<string>();
   const seenSections = new Set<string>();
   for (const chapter of chapters) {
+    if (chapter.parserVersion !== enumeration.parserVersion ||
+        (enumeration.parserVersion !== undefined && enumeration.parserVersion !== OHIO_CHAPTER_PARSER_VERSION)) {
+      throw new Error("Ohio snapshot parser versions differ or are unsupported");
+    }
     const expectedChapter = expectedChapters.get(chapter.chapterNumber);
     if (!expectedChapter || seenChapters.has(chapter.chapterNumber) ||
         chapter.titleNumber !== expectedChapter.titleNumber ||
@@ -60,19 +68,29 @@ export function validateOhioSnapshot(chapters: OhioCachedChapter[], enumeration:
     }
     seenChapters.add(chapter.chapterNumber);
     for (const section of chapter.sections) {
+      if (section.sourceStatus && enumeration.parserVersion === undefined) {
+        throw new Error("Ohio source status requires a versioned parser snapshot");
+      }
       const expected = expectedSections.get(section.section);
       if (!expected || seenSections.has(section.section)) {
         throw new Error(`Ohio cache contains an unexpected or duplicate section: ${section.section}`);
       }
       seenSections.add(section.section);
       const hash = createHash("sha256").update(section.text).digest("hex");
+      if (enumeration.parserVersion !== undefined) {
+        const status = interpretOhioSectionStatus(section.catchline, section.text, section.effectiveDate, chapter.retrievedAt.slice(0, 10));
+        if (JSON.stringify(section.sourceStatus) !== JSON.stringify(status) ||
+            JSON.stringify(expected.sourceStatus) !== JSON.stringify(status) || section.repealed !== statusIsInactive(status)) {
+          throw new Error(`Ohio source status does not match the recorded evidence: ${section.section}`);
+        }
+      }
       if (section.chapter !== chapter.chapterNumber || expected.titleNumber !== chapter.titleNumber ||
           !section.section.startsWith(`${chapter.chapterNumber}.`) ||
           section.sourceUrl !== `https://codes.ohio.gov/ohio-revised-code/section-${section.section}` ||
           section.sourceUrl !== expected.sourceUrl ||
           hash !== section.contentHash || hash !== expected.contentHash ||
           section.text.length !== expected.textLength ||
-          (!section.repealed && !section.text.trim()) ||
+          (!section.repealed && section.sourceStatus?.kind !== "uncertain" && !section.text.trim()) ||
           section.chapter !== expected.chapter || section.catchline !== expected.catchline ||
           section.effectiveDate !== expected.effectiveDate || section.repealed !== expected.repealed) {
         throw new Error(`Ohio section evidence does not match enumeration: ${section.section}`);

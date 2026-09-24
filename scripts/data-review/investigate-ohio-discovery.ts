@@ -135,6 +135,11 @@ export function investigateOhioDiscovery(root = process.cwd()) {
     .map(row => ({ ...cite(row), group: groupStatus(row, replay.accounting.enumerationGeneratedAt),
       recordedRepealed: row.repealed, textLength: row.text.length,
       context: { start: 0, end: Math.min(row.text.length, 200), text: row.text.slice(0, 200) } }));
+  const temporalHolds = replay.accounting.sourceStatusHolds.map(row => ({
+    ...cite(source(row.section)), sourceStatus: row.sourceStatus,
+    disposition: "engineering_version_research_not_attorney_assignment",
+    next: "Retrieve the version effective at the relevant date; do not promote future text or infer the section has no current offense.",
+  }));
   const unresolvedTargets = replay.accounting.unresolvedPenaltyTargets.map(row => ({ ...row,
     group: sources.has(row.section) ? groupStatus(source(row.section), replay.accounting.enumerationGeneratedAt)
       : row.references.every(grade => rangeEndpoint(row.section, grade.span.text)) ? "absent_range_endpoint" : "absent_direct_target",
@@ -149,14 +154,16 @@ export function investigateOhioDiscovery(root = process.cwd()) {
     limitations: ["Groups are research routing, not legal determinations; signal snippets may describe exceptions or administration.",
       "Range endpoints are not offense lists. No range is expanded or assigned a grade by this report.",
       "The status audit flags parser risks; it does not repair the snapshot or certify present-day or historical law.",
+      "Temporal holds identify source versions needing engineering research; they are not findings that the underlying section is inactive.",
       "The 154-candidate, legacy-row and status-audit populations overlap and must not be summed as offenses.",
       "The rest of the legacy unresolved backlog is accounted for but not substantively investigated here."],
     totals: { candidates: candidates.length, candidateGroups: counts(candidates), legacyDiscoveryRows: legacy.length,
       legacyDistinctSections: new Set(legacy.map(row => row.section)).size, legacyGroups: counts(legacy),
       unresolvedTargets: unresolvedTargets.length, targetGroups: counts(unresolvedTargets),
       statusAudit: statusAudit.length, statusGroups: counts(statusAudit), remainingLegacy: remainingLegacy.length,
+      temporalHolds: temporalHolds.length,
       remainingLegacyGroups: counts(remainingLegacy) },
-    candidates, legacy, unresolvedTargets, statusAudit, remainingLegacy };
+    candidates, legacy, unresolvedTargets, statusAudit, temporalHolds, remainingLegacy };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

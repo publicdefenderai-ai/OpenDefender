@@ -20,6 +20,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { OhioOfficialFetcher } from "./ohio-discovery/fetcher";
+import { OHIO_CHAPTER_PARSER_VERSION } from "./ohio-discovery/section-status";
 import {
   parseOhioChapterPage,
   type OhioParsedSection,
@@ -74,6 +75,7 @@ function hashCachedPage(sourceUrl: string): string {
 }
 
 interface ParsedChapterCache {
+  parserVersion?: number;
   retrievedAt: string;
   chapterName?: string | null;
   pageHash?: string;
@@ -81,11 +83,12 @@ interface ParsedChapterCache {
 }
 
 /** Reuse a previously parsed chapter while it is still inside the snapshot window. */
-function readParsedChapter(parsedPath: string): ParsedChapterCache | null {
+export function readParsedChapter(parsedPath: string): ParsedChapterCache | null {
   if (!fs.existsSync(parsedPath)) return null;
   try {
     const parsed = JSON.parse(fs.readFileSync(parsedPath, "utf8")) as ParsedChapterCache;
     const age = Date.now() - new Date(parsed.retrievedAt).getTime();
+    if (parsed.parserVersion !== OHIO_CHAPTER_PARSER_VERSION) return null;
     if (!Array.isArray(parsed.sections) || parsed.sections.length === 0) return null;
     if (!Number.isFinite(age) || age < 0 || age > CACHE_MAX_AGE_MS) return null;
     return parsed;
@@ -169,7 +172,7 @@ export async function acquireOhioCode(options: {
         continue;
       }
       const page = await fetcher.fetchPage(chapter.sourceUrl);
-      const { heading, sections } = parseOhioChapterPage(page.html, chapter.chapterNumber);
+      const { heading, sections } = parseOhioChapterPage(page.html, chapter.chapterNumber, page.retrievedAt.slice(0, 10));
       if (sections.length === 0) {
         // An official chapter page that yields no parsable section is a parser
         // or upstream-format problem. Record it instead of silently dropping
@@ -184,6 +187,7 @@ export async function acquireOhioCode(options: {
       fs.writeFileSync(
         path.join(SECTION_CACHE_DIR, `chapter-${chapter.chapterNumber}.json`),
         JSON.stringify({
+          parserVersion: OHIO_CHAPTER_PARSER_VERSION,
           chapterNumber: chapter.chapterNumber,
           titleNumber: chapter.titleNumber,
           sourceUrl: chapter.sourceUrl,
@@ -227,6 +231,7 @@ export async function acquireOhioCode(options: {
 
   fs.writeFileSync(OUTPUT_PATH, `${JSON.stringify({
     schemaVersion: 1,
+    parserVersion: OHIO_CHAPTER_PARSER_VERSION,
     discoveryKind: "official_ohio_revised_code_section_enumeration",
     publicationStatus: "discovery_only_not_published",
     generatedAt: new Date().toISOString(),

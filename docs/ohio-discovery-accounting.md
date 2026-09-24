@@ -2,6 +2,10 @@
 
 September 23, 2026. Discovery and reconciliation only; no publication or database changes.
 
+Follow-up: see the [source-status repair](ohio-source-status-repair.md) for the
+corrected status counts and replay results. Counts below describe the original
+accounting baseline.
+
 The classifier now retains penalty-linked sections even when their conduct text
 does not match its prohibition patterns. Previously, 154 such sections were
 classified as supporting and omitted from the candidate report. They now have

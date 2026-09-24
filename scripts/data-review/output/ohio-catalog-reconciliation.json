@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "ohio_catalog_reconciliation",
   "publicationStatus": "analysis_only_not_published",
-  "generatedAt": "2026-09-23T22:08:54.944Z",
+  "generatedAt": "2026-09-24T06:00:56.038Z",
   "method": {
     "naming": "Statutory names come from each section's own guilt clause.",
     "mechanical": [
