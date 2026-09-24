@@ -1,0 +1,3109 @@
+{
+  "schemaVersion": 1,
+  "kind": "ohio_penalty_verification_report",
+  "asOf": "2026-09-23",
+  "publicationStatus": "analysis_only_not_approved",
+  "assignment": {
+    "priorityPenaltySources": [
+      "4301.99",
+      "959.99",
+      "3767.99",
+      "3743.99"
+    ],
+    "sourceBatchSections": [
+      "3743.27",
+      "3743.60",
+      "3743.61",
+      "3743.63",
+      "3743.64",
+      "3743.65",
+      "3743.66",
+      "3767.12",
+      "3767.13",
+      "3767.19",
+      "3767.29",
+      "3767.30",
+      "3767.32",
+      "4301.14",
+      "4301.15",
+      "4301.21",
+      "4301.22",
+      "4301.251",
+      "4301.47",
+      "4301.48",
+      "4301.49",
+      "4301.58",
+      "4301.59",
+      "4301.60",
+      "4301.62",
+      "4301.631",
+      "4301.633",
+      "4301.64",
+      "4301.65",
+      "4301.66",
+      "4301.67",
+      "4301.68",
+      "4301.69",
+      "4301.691",
+      "4301.70",
+      "4301.74",
+      "959.02",
+      "959.03",
+      "959.06",
+      "959.09",
+      "959.12",
+      "959.13",
+      "959.131",
+      "959.15",
+      "959.16",
+      "959.17",
+      "959.21"
+    ],
+    "additionalFineSections": [
+      "5589.211",
+      "1321.141",
+      "1321.592",
+      "4712.071"
+    ]
+  },
+  "evidenceBinding": {
+    "enumerationHash": "80695049cd2442fe1546b6c76e5ea35ee7377998646979b9003580889eca2892",
+    "findingsHash": "357c401da226c75c1e244f9471647902b7fff73580f00acc22c5fb557a8e43fc"
+  },
+  "totals": {
+    "analyzedSections": 51,
+    "penaltyMappings": 84,
+    "pinnedAuthorities": 59,
+    "specificHoldSections": 10,
+    "legacyRowsCovered": 10,
+    "approvedForPublication": 0
+  },
+  "limitations": [
+    "Full primary and penalty texts were read; this is recorded statutory analysis, not attorney approval or complete dependency/case-law validation.",
+    "Grade labels do not supply general sentencing ranges, and absence of additionalPenalty is not a certification of penalty completeness.",
+    "Court decisions, administrative rules, local ordinances, source currentness and incorporated definitions remain publication requirements.",
+    "Reference signals do not expand ranges or enumerate all chapter, rule, federal-law or case-law dependencies. Cached means available, not substantively validated."
+  ],
+  "rows": [
+    {
+      "section": "1321.141",
+      "sourceHash": "96c21e6ea92ac49b5d070b82ec93050d3c15e0cf6bc26e6c6efb36f3ff678d26",
+      "conductFinding": "Small-loan licensee makes a loan of $1,000 or less or duration one year or less, or evades that restriction.",
+      "penaltySection": "1321.99",
+      "mappings": [
+        {
+          "conductScope": "A,B,C",
+          "penaltyDivision": "H",
+          "grade": "MM",
+          "qualification": "Mandatory $100-$500 fine; 1321.99(I) expressly supplies strict liability and J preserves administrative/civil sanctions.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1429,
+            "end": 1612,
+            "text": "(H) Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars."
+          }
+        }
+      ],
+      "limits": "Threshold is OR, not AND. Do not use the ordinary minor-misdemeanor fine maximum. Statutory licensing scope/dependencies remain to be validated.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.141",
+      "catchline": "Small loan requirements and restrictions",
+      "penaltySourceHash": "a850e2ac40e7ebfeeedaa365a497379f7ab9dadb3bb891846010c532b6f635f2",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.99",
+      "dependencies": [
+        {
+          "section": "1321.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.01",
+          "sourceHash": "e635049b583f62b18387e32cec565d27fc3f1b17b05975efa21a1a92581a1d0d",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "1321.19",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.19",
+          "sourceHash": "72e06f60fd84e36e70d30d1c12794c522841f94a04f42cbc8ce97e748423ecf5",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "1321.592",
+      "sourceHash": "dac7cc434e79f53509a3c400f31978eb5769e983463e39a3e885dd62402c959f",
+      "conductFinding": "General-loan registrant makes a loan of $1,000 or less or duration one year or less, or evades that restriction.",
+      "penaltySection": "1321.99",
+      "mappings": [
+        {
+          "conductScope": "A,B,C",
+          "penaltyDivision": "H",
+          "grade": "MM",
+          "qualification": "Mandatory $100-$500 fine; 1321.99(I) expressly supplies strict liability and J preserves administrative/civil sanctions.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1429,
+            "end": 1612,
+            "text": "(H) Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars."
+          }
+        }
+      ],
+      "limits": "Preserve registrant actor and OR thresholds; no routine MM fine substitution.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.592",
+      "catchline": "Prohibited general loans by registrants",
+      "penaltySourceHash": "a850e2ac40e7ebfeeedaa365a497379f7ab9dadb3bb891846010c532b6f635f2",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.99",
+      "dependencies": [
+        {
+          "section": "1321.51",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.51",
+          "sourceHash": "2244a2e9437a1d0ac107c277b69a9a4ca3bb20e66592852c42e16d422f4e3975",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "1321.60",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.60",
+          "sourceHash": "82b102ee2145951ccf4587ad78eb5c18dd5265d2bda554e9521ba2482be825ad",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3743.27",
+      "sourceHash": "535297dcd24f3ea71ea973c7e07941a449de72a77913748ee3e36f5862b84fe2",
+      "conductFinding": "Licensed fountain retailers negligently fail to furnish the required safety pamphlet or make safety glasses available.",
+      "penaltySection": "3743.99",
+      "mappings": [
+        {
+          "conductScope": "B,C",
+          "penaltyDivision": "G",
+          "grade": "M2",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 2227,
+            "end": 2440,
+            "text": " (G) Whoever violates division (B) or (C) of section 3743.27 or division (K) or (L) of section 3743.60 or division (K) or (L) of section 3743.61 of the Revised Code is guilty of a misdemeanor of the second degree."
+          }
+        }
+      ],
+      "limits": "Only B/C are graded by this reference; A operational requirements are not swept into this M2 mapping. Resolve 3743.47 and applicable rules before complete element modeling.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.27",
+      "catchline": "Fountain device retailer operations",
+      "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.99",
+      "dependencies": [
+        {
+          "section": "3743.28",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.28",
+          "sourceHash": "ad61504b594424d9cfd8a1dc44d82e96f3594bdb3cc627045e73a8de69a1d46b",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.47",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.47",
+          "sourceHash": "1ca76aaeed801c11f73b6fd6b0611a1db67c555b24f938ba4cc455da6b872a05",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4506.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4506.01",
+          "sourceHash": "1bcba591608f729c0251b00714c6cef4b0474a30603c0d572b0e79c7d88f824e",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3743.60",
+      "sourceHash": "c1d37794c6711a66842b385c1654321f788b0dcd1d5b76631e2c62dcb8403a8b",
+      "conductFinding": "Separate manufacturer licensing, unauthorized operations, compliance, records, orders, smoking, intoxication and safety-information prohibitions.",
+      "penaltySection": "3743.99",
+      "mappings": [
+        {
+          "conductScope": "A,B",
+          "penaltyDivision": "A",
+          "grade": "F3",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 157,
+            "text": "(A) Whoever violates division (A) or (B) of section 3743.60 or division (H) of section 3743.64 of the Revised Code is guilty of a felony of the third degree."
+          }
+        },
+        {
+          "conductScope": "C,D",
+          "penaltyDivision": "B",
+          "grade": "F4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 157,
+            "end": 375,
+            "text": " (B) Whoever violates division (C) or (D) of section 3743.60, division (A), (B), (C), or (D) of section 3743.61, or division (A) or (B) of section 3743.64 of the Revised Code is guilty of a felony of the fourth degree."
+          }
+        },
+        {
+          "conductScope": "E,F,G,H,I,J",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "I rises to F5 for a prior conviction or guilty plea under I of this section or 3743.61.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        },
+        {
+          "conductScope": "I",
+          "penaltyDivision": "C",
+          "grade": "F5",
+          "qualification": "Prior conviction or guilty plea under I of 3743.60 or 3743.61 required.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        },
+        {
+          "conductScope": "K,L",
+          "penaltyDivision": "G",
+          "grade": "M2",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 2227,
+            "end": 2440,
+            "text": " (G) Whoever violates division (B) or (C) of section 3743.27 or division (K) or (L) of section 3743.60 or division (K) or (L) of section 3743.61 of the Revised Code is guilty of a misdemeanor of the second degree."
+          }
+        }
+      ],
+      "limits": "Do not apply the I repeat enhancement to E-H or J. Incorporated licensing, orders, rules and smoking exceptions need separate dependency analysis.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.60",
+      "catchline": "Prohibitions",
+      "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.99",
+      "dependencies": [
+        {
+          "section": "3743.04",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.04",
+          "sourceHash": "dc2b80e03383c8addc38b9b23e8eaf50d10aa20fa76c3f36c5eff07222eed540",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.05",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.05",
+          "sourceHash": "e7b5c1897d1ec64ff2a5b75560752f00d2dcaa74f72199d23b1ef1aabb8c38c8",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.06",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.06",
+          "sourceHash": "e4571070247032c978623b5a171458e6cdc36983b182f0f6a64aa09800f64756",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.07",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.07",
+          "sourceHash": "381f433c34c58f454056ccf7677bd5a75ddfa8060bb99c11efe18206a4607a62",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.08",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.08",
+          "sourceHash": "bfa96f3d358a277b4c66d033e01a8758336c83fda7059e9860ec4de5f2298e3f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.47",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.47",
+          "sourceHash": "1ca76aaeed801c11f73b6fd6b0611a1db67c555b24f938ba4cc455da6b872a05",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.48",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.48",
+          "sourceHash": "9b5692baf055aeb97b8874cf4fc9bd4a74851b54662c5ca01068f3cdf72b440a",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3743.61",
+      "sourceHash": "62b678f9d16aa0e55ca30ebc11eb28a83741c6571f0e95b22582e1658c35df5e",
+      "conductFinding": "Separate wholesaler licensing, structural changes, sales authority, compliance, records, orders, smoking, intoxication and safety-information prohibitions.",
+      "penaltySection": "3743.99",
+      "mappings": [
+        {
+          "conductScope": "A,B,C,D",
+          "penaltyDivision": "B",
+          "grade": "F4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 157,
+            "end": 375,
+            "text": " (B) Whoever violates division (C) or (D) of section 3743.60, division (A), (B), (C), or (D) of section 3743.61, or division (A) or (B) of section 3743.64 of the Revised Code is guilty of a felony of the fourth degree."
+          }
+        },
+        {
+          "conductScope": "E,F,G,H,I,J",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "I rises to F5 for the specified prior smoking/ignition offense.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        },
+        {
+          "conductScope": "I",
+          "penaltyDivision": "C",
+          "grade": "F5",
+          "qualification": "Prior conviction or guilty plea under I of 3743.60 or 3743.61 required.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        },
+        {
+          "conductScope": "K,L",
+          "penaltyDivision": "G",
+          "grade": "M2",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 2227,
+            "end": 2440,
+            "text": " (G) Whoever violates division (B) or (C) of section 3743.27 or division (K) or (L) of section 3743.60 or division (K) or (L) of section 3743.61 of the Revised Code is guilty of a misdemeanor of the second degree."
+          }
+        }
+      ],
+      "limits": "Preserve manufacturer exception in A and incorporated licensing/rules; I escalation does not apply to neighboring divisions.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.61",
+      "catchline": "Wholesaler restrictions",
+      "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.99",
+      "dependencies": [
+        {
+          "section": "3743.04",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.04",
+          "sourceHash": "dc2b80e03383c8addc38b9b23e8eaf50d10aa20fa76c3f36c5eff07222eed540",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.17",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.17",
+          "sourceHash": "055426020e616cdad807b755576d02e855b38ad4b04073cc36b2a4e576f4bced",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.18",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.18",
+          "sourceHash": "ee16e2e65714766056076cc43e04dd4ebd7957ffe76f95c7b7b19d695a5f0310",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.19",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.19",
+          "sourceHash": "a81ee1dd9eea782517f4b9fa45a8585e818cfcdd15dd1b10405ef829d2990d82",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.20",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.20",
+          "sourceHash": "fcc709a8e105f6b1e6d5961949435c52b8a9fe595e96901879ec3c343711835e",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.21",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.21",
+          "sourceHash": "b68f70ba6f60a6739dcd97c3b550298cfa6be6bb2b6ba1aafc614bf2ab37a2cf",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.47",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.47",
+          "sourceHash": "1ca76aaeed801c11f73b6fd6b0611a1db67c555b24f938ba4cc455da6b872a05",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.48",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.48",
+          "sourceHash": "9b5692baf055aeb97b8874cf4fc9bd4a74851b54662c5ca01068f3cdf72b440a",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3743.63",
+      "sourceHash": "3d5adb4aa0fb0ed5cbb7f86c8de5399ba915824f69427320c7f35f8121a30f2b",
+      "conductFinding": "Purchasers obtain possession without complying with requirements, fail specified nonresident export obligations, or give/sell acquired fireworks to others in Ohio.",
+      "penaltySection": "3743.99",
+      "mappings": [
+        {
+          "conductScope": "A,B,C",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        }
+      ],
+      "limits": "B distinguishes 1.3G transportation from 1.4G purchases; investigate 3743.44-.48, especially the 3743.45 exception. No generic ban on all consumer fireworks.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.63",
+      "catchline": "Purchaser restrictions",
+      "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.99",
+      "dependencies": [
+        {
+          "section": "3743.44",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.44",
+          "sourceHash": "d92ca13eef3882f53353502962f03c19a8e552015b6e67accbf92f83e3044b50",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.45",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.45",
+          "sourceHash": "ed657f8e35c35c8f3b79b11651a0ee651b8813494bbaa7a57b27862abf4b3f2c",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.48",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.48",
+          "sourceHash": "9b5692baf055aeb97b8874cf4fc9bd4a74851b54662c5ca01068f3cdf72b440a",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3743.64",
+      "sourceHash": "173590a58c0cbfe15bbd940c2bb9036afb9572957b6257b129419410f2f773b7",
+      "conductFinding": "Exhibitor licensing, exhibition compliance, permits, acquisition, intoxication, employee registration and incident-site disturbance are distinct theories.",
+      "penaltySection": "3743.99",
+      "mappings": [
+        {
+          "conductScope": "A,B",
+          "penaltyDivision": "B",
+          "grade": "F4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 157,
+            "end": 375,
+            "text": " (B) Whoever violates division (C) or (D) of section 3743.60, division (A), (B), (C), or (D) of section 3743.61, or division (A) or (B) of section 3743.64 of the Revised Code is guilty of a felony of the fourth degree."
+          }
+        },
+        {
+          "conductScope": "C",
+          "penaltyDivision": "D",
+          "grade": "M1",
+          "qualification": "Exhibitor/assistant license suspension; revocation instead if serious physical harm to persons or property results.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 952,
+            "end": 1617,
+            "text": " (D) Whoever violates division (C) of section 3743.64 of the Revised Code is guilty of a misdemeanor of the first degree. In addition to any other penalties that may be imposed on a licensed exhibitor of fireworks under this division and unless the third sentence of this division applies, the person's license as an exhibitor of fireworks or as an assistant exhibitor of fireworks shall be suspended. If the violation of division (C) of section 3743.64 of the Revised Code results in serious physical harm to persons or serious physical harm to property, the person's license as an exhibitor of fireworks or as an assistant exhibitor of fireworks shall be revoked."
+          }
+        },
+        {
+          "conductScope": "D,E,F,G",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        },
+        {
+          "conductScope": "H",
+          "penaltyDivision": "A",
+          "grade": "F3",
+          "qualification": "Knowing incident-site disturbance, subject to 3743.541(C).",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 157,
+            "text": "(A) Whoever violates division (A) or (B) of section 3743.60 or division (H) of section 3743.64 of the Revised Code is guilty of a felony of the third degree."
+          }
+        }
+      ],
+      "limits": "Full linked rules, permit conditions and incident-site exception must accompany any release. C licensing sanctions are not discretionary grade defaults.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.64",
+      "catchline": "Fireworks exhibitions and exhibitors - prohibited activities",
+      "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.99",
+      "dependencies": [
+        {
+          "section": "3743.53",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.53",
+          "sourceHash": "6e9ce2f62ac1e209e166544e8af58bc012b4855c01fffec68d73c77be90a45b3",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.54",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.54",
+          "sourceHash": "574542aad304c2b65d8806a8d74425081e787845ef7cbf98ae1f325069cad897",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.541",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.541",
+          "sourceHash": "f6136bf880299bed898e784b666ed642cf684f2518af15ef9a8b74f4a5bbbeda",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.55",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.55",
+          "sourceHash": "5e923428db24dd5c1c9dd820f980b903bc4956dc86d01b2fe650abc2e1053a6e",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.56",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.56",
+          "sourceHash": "edcf4cf0e3b6b6885d7faa37552707ae4a989c1d18a1d1c2b135563e4813fb54",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3743.65",
+      "sourceHash": "73508aea96c68f3b4060cf8fe0584187ba3bcdebde3ab2b28b6e944542d80e91",
+      "conductFinding": "Possession/sale, discharge, theater mixtures, underage sales/access, 1.3G possession, suppression-system disabling, intoxicated discharge and unauthorized property use are distinct.",
+      "penaltySection": "3743.99",
+      "mappings": [
+        {
+          "conductScope": "A,B,C,D,E",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        },
+        {
+          "conductScope": "F",
+          "penaltyDivision": "E",
+          "grade": "F5",
+          "qualification": "Knowing disabling of a fire-suppression system, with statutory exceptions.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1617,
+            "end": 1733,
+            "text": " (E) Whoever violates division (F) of section 3743.65 of the Revised Code is guilty of a felony of the fifth degree."
+          }
+        },
+        {
+          "conductScope": "G",
+          "penaltyDivision": "F",
+          "grade": "M1",
+          "qualification": "Negligent discharge while possessing/controlling or under the influence of alcohol/controlled substances; statute permits simultaneous conviction with specified disorderly conduct.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1733,
+            "end": 2227,
+            "text": " (F) Whoever violates division (G) of section 3743.65 of the Revised Code is guilty of a misdemeanor of the first degree. Notwithstanding any other provision of law to the contrary, a person may be convicted at the same trial or proceeding of a violation of division (G) of section 3743.65 of the Revised Code and a violation of division (B) of section 2917.11 of the Revised Code that constitutes the basis of the charge of the violation of division (G) of section 3743.65 of the Revised Code."
+          }
+        },
+        {
+          "conductScope": "H",
+          "penaltyDivision": "H",
+          "grade": "MM",
+          "qualification": "Negligent discharge on another person's property without permission.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 2440,
+            "end": 2584,
+            "text": " (H) Whoever violates division (H) of section 3743.65 of the Revised Code is guilty of a minor misdemeanor. Last updated July 1, 2022 at 4:02 AM"
+          }
+        }
+      ],
+      "limits": "Legacy Illegal Discharge of Fireworks is too broad for automatic subsection selection. B requires 3743.45 and 3743.80 exceptions; F and H must not inherit M1.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.65",
+      "catchline": "Possession, sale, and use restrictions",
+      "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.99",
+      "dependencies": [
+        {
+          "section": "3743.02",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.02",
+          "sourceHash": "af8bb1ec7ee4c13e4a0ab59f9242059858ae0307e2d17ac709719a45d06c8c0f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.06",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.06",
+          "sourceHash": "e4571070247032c978623b5a171458e6cdc36983b182f0f6a64aa09800f64756",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.08",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.08",
+          "sourceHash": "bfa96f3d358a277b4c66d033e01a8758336c83fda7059e9860ec4de5f2298e3f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.15",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.15",
+          "sourceHash": "cefe79f1fa113ff2291c0f727fb79e62b01b44ad8a2f91cbedd9c747942b414f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.19",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.19",
+          "sourceHash": "a81ee1dd9eea782517f4b9fa45a8585e818cfcdd15dd1b10405ef829d2990d82",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.21",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.21",
+          "sourceHash": "b68f70ba6f60a6739dcd97c3b550298cfa6be6bb2b6ba1aafc614bf2ab37a2cf",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.27",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.27",
+          "sourceHash": "535297dcd24f3ea71ea973c7e07941a449de72a77913748ee3e36f5862b84fe2",
+          "status": "included_authority_not_dependency_closure"
+        },
+        {
+          "section": "3743.40",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.40",
+          "sourceHash": "37192ec96d3cd2c39bad8cd309d51ffca7a4abc42ea49b4d531bdc7c9321803e",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.44",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.44",
+          "sourceHash": "d92ca13eef3882f53353502962f03c19a8e552015b6e67accbf92f83e3044b50",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.45",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.45",
+          "sourceHash": "ed657f8e35c35c8f3b79b11651a0ee651b8813494bbaa7a57b27862abf4b3f2c",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.48",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.48",
+          "sourceHash": "9b5692baf055aeb97b8874cf4fc9bd4a74851b54662c5ca01068f3cdf72b440a",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.50",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.50",
+          "sourceHash": "9ad0d060d80f2f1c5748a8fa91a54b5d2094e3e265740afeb279b677c3850a3e",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.55",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.55",
+          "sourceHash": "5e923428db24dd5c1c9dd820f980b903bc4956dc86d01b2fe650abc2e1053a6e",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.80",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.80",
+          "sourceHash": "54807dcac1abe07c7ea8ff3ccb4bfc6390fb6826f546f1c0cb372276c779b770",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3781.108",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3781.108",
+          "sourceHash": "a2f187c8271d1747b5e068a54fbdfa008d3373da6c18e6cf374c898d52874e60",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [
+        {
+          "chargeId": "oh-illegal-fireworks",
+          "label": "Illegal Discharge of Fireworks",
+          "reconciliationVerdict": "discovery_unresolved",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        }
+      ],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3743.66",
+      "sourceHash": "ee9db1cad9b02455c7b756eb131fb0e1d454117b06775d71471eabb988ddbd17",
+      "conductFinding": "Transport contrary to fire-marshal rules and shipment without required permit or to unauthorized recipients.",
+      "penaltySection": "3743.99",
+      "mappings": [
+        {
+          "conductScope": "A,B",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 375,
+            "end": 952,
+            "text": " (C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree. If the offender previously has been convicted of or pleaded guilty to a violation of division (I) of section 3743.60 or 3743.61 of the Revised Code, a violation of either of these divisions is a felony of the fifth degree."
+          }
+        }
+      ],
+      "limits": "A requires the actual transport rule; B has separate interstate and intrastate shipment formulations and a 1.3G/1.4G definition.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.66",
+      "catchline": "Limiting shipping or transporting",
+      "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.99",
+      "dependencies": [
+        {
+          "section": "3743.03",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.03",
+          "sourceHash": "cc9ae9efca47c360f50c814c3cfb2ec8a8e5594eafa55de16b883c32a9ca82a4",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.16",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.16",
+          "sourceHash": "50b97fb52bf2ea3d420288e4b99a950ce0ee69b8293588ac4249065ead3d16f1",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.40",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.40",
+          "sourceHash": "37192ec96d3cd2c39bad8cd309d51ffca7a4abc42ea49b4d531bdc7c9321803e",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3743.58",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.58",
+          "sourceHash": "690b2bce279b5c1dbbd09ef1db0fcbe42b5c41639de6c118cdb157b44dbb8350",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3767.12",
+      "sourceHash": "152e3fdaa76e3dcd61bf4a8abcd5ff40806de95d1328355c5921216f0a4d47e6",
+      "conductFinding": "Keeping, letting, or knowingly permitting a let house to be a habitual resort for the specified criminal activity.",
+      "penaltySection": "3767.99",
+      "mappings": [
+        {
+          "conductScope": "B conduct paragraph",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 163,
+            "end": 331,
+            "text": "(B) Whoever violates section 3767.12 or 3767.29, or, being an association, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        }
+      ],
+      "limits": "Nuisance-abatement language is not itself the charge. Preserve the differing wording for keep/let/knowingly permit and the A definition.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.12",
+      "catchline": "Habitual resort for thieves, burglars, robbers or persons involved in felonious conduct",
+      "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3767.13",
+      "sourceHash": "d267096585b76c1255e97d1c658b786b2dc936976dc792dba008d1c28a2bafdf",
+      "conductFinding": "Maintaining specified offensive premises, allowing offal/filth, or obstructing/corrupting/diverting waters.",
+      "penaltySection": "3767.99",
+      "mappings": [
+        {
+          "conductScope": "A,B,C",
+          "penaltyDivision": "C",
+          "grade": "M3",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 331,
+            "end": 756,
+            "text": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree. The sentencing court may, in addition to or in lieu of the penalty provided in this division, require a person who violates section 3767.32 of the Revised Code to remove litter from any public or private property, or in or on waters of the state."
+          }
+        }
+      ],
+      "limits": "D exempts qualifying agricultural activities from A/B, not from C. Resolve 519.01 definition and qualification facts.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.13",
+      "catchline": "Prohibited acts",
+      "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.99",
+      "dependencies": [
+        {
+          "section": "519.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-519.01",
+          "sourceHash": "645c468adbd9564d3cb7f05d431e3fa0baa8c146dc1bd8535740021627b5b6d5",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3767.19",
+      "sourceHash": "4bbca315e06093f26ce61898eab6a278e4d73c1b5933ffca53a42a9611c0a853",
+      "conductFinding": "Specified noxious businesses or works within the stated distances of protected state institutions.",
+      "penaltySection": "3767.99",
+      "mappings": [
+        {
+          "conductScope": "conduct paragraphs",
+          "penaltyDivision": "C",
+          "grade": "M3",
+          "qualification": "Each week of operation constitutes a separate offense; knowing-owner property is liable for fines/costs.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 331,
+            "end": 756,
+            "text": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree. The sentencing court may, in addition to or in lieu of the penalty provided in this division, require a person who violates section 3767.32 of the Revised Code to remove litter from any public or private property, or in or on waters of the state."
+          }
+        }
+      ],
+      "limits": "One mile and 120 rods apply to different lists; do not collapse the distances or weekly unit of prosecution.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.19",
+      "catchline": "Prohibition against nuisances when near state institutions",
+      "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3767.29",
+      "sourceHash": "a96f0cd744265e6200e2873035ac24603d50d1efb7caef85c09d6ceed0fc1524",
+      "conductFinding": "Leaving qualifying abandoned airtight containers accessible to children without removing dangerous fastening hardware.",
+      "penaltySection": "3767.99",
+      "mappings": [
+        {
+          "conductScope": "conduct paragraph",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 163,
+            "end": 331,
+            "text": "(B) Whoever violates section 3767.12 or 3767.29, or, being an association, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        }
+      ],
+      "limits": "Preserve capacity/opening thresholds and the dealer, warehouse or repairer building exception.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.29",
+      "catchline": "Prohibition against abandoned refrigerators",
+      "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3767.30",
+      "sourceHash": "9dccd1153dc02097c77252d53223c6c270d47e1987e198e76520cceadf514e0f",
+      "conductFinding": "Protest activities in specified proximity and times of funerals/burials or within proximity of a funeral procession.",
+      "penaltySection": "3767.99",
+      "mappings": [
+        {
+          "conductScope": "association actor",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "Penalty text expressly says association.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 163,
+            "end": 331,
+            "text": "(B) Whoever violates section 3767.12 or 3767.29, or, being an association, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        },
+        {
+          "conductScope": "natural-person actor",
+          "penaltyDivision": "C",
+          "grade": "M3",
+          "qualification": "Penalty text expressly says natural person.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 331,
+            "end": 756,
+            "text": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree. The sentencing court may, in addition to or in lieu of the penalty provided in this division, require a person who violates section 3767.32 of the Revised Code to remove litter from any public or private property, or in or on waters of the state."
+          }
+        }
+      ],
+      "limits": "Do not apply the actor qualification to adjacent littering/nuisance references. Conduct also names corporations; association/corporation treatment and constitutional/enforceability review remain unresolved.",
+      "hold": "actor_and_enforceability_research",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.30",
+      "catchline": "Picketing or protest during funeral or burial service prohibited",
+      "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "3767.32",
+      "sourceHash": "3c9e27db85cd51887727b3f7339a5bfb070ea78dee0e4604fdbf93925588cbbb",
+      "conductFinding": "A prohibits depositing litter on specified property/waters regardless of intent, with exceptions; B separately prohibits knowing, unprivileged use of another's receptacle, with exceptions.",
+      "penaltySection": "3767.99",
+      "mappings": [
+        {
+          "conductScope": "A,B",
+          "penaltyDivision": "C",
+          "grade": "M3",
+          "qualification": "Court may require litter removal in addition to or instead of the division C penalty.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 331,
+            "end": 756,
+            "text": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree. The sentencing court may, in addition to or in lieu of the penalty provided in this division, require a person who violates section 3767.32 of the Revised Code to remove litter from any public or private property, or in or on waters of the state."
+          }
+        }
+      ],
+      "limits": "The natural-person qualification belongs to 3767.30, not 3767.32. Definitions and all A/B exceptions must travel with the charge. Generic illegal dumping is not an automatic alias for every environmental offense.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.32",
+      "catchline": "Littering",
+      "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.99",
+      "dependencies": [
+        {
+          "section": "1501.24",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1501.24",
+          "sourceHash": "ff31afc66f64575800702bed5c4308a542bf972dd246e5f6418851748a2d2778",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "1503.09",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1503.09",
+          "sourceHash": "c634735352c29474ddef6d79eccdeddfce070a8a95ab5eb3eea1339a53c1a354",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "1531.13",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1531.13",
+          "sourceHash": "cbe0284f24b0771fb757dccd39d2dcf053ed6849af0c4d5fd933ab592bfc412a",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "chapter-3734",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        }
+      ],
+      "catalogRows": [
+        {
+          "chargeId": "oh-littering",
+          "label": "Littering / Illegal Dumping",
+          "reconciliationVerdict": "discovery_unresolved",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        },
+        {
+          "chargeId": "oh-orc-3767-32-littering",
+          "label": "Littering",
+          "reconciliationVerdict": "discovery_unresolved",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        }
+      ],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.14",
+      "sourceHash": "726c2555f414090f9c9227b26d68cf41e7f9854149efc9674dedd63dd905b5be",
+      "conductFinding": "Permit holder/employee/agent retail acquisition for resale or possession on permit premises of that liquor.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "B",
+          "penaltyDivision": "D",
+          "grade": "M3",
+          "qualification": "Conduct section requires suspension or revocation of the permit.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1838,
+            "end": 3030,
+            "text": " (D) Whoever violates division (B) of section 4301.14, division (A)(1) or (3) or (B) of section 4301.22, division (E)(1) of section 4301.69, or division (C) or (D) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the third degree. If an offender who violates division (E)(1) of section 4301.69 of the Revised Code was under the age of eighteen years at the time of the offense and the offense occurred while the offender was the operator of or a passenger in a motor vehicle, the court, in addition to any other penalties it imposes upon the offender, shall suspend the offender's temporary instruction permit or probationary driver's license for a period of not less than six months and not more than one year. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        }
+      ],
+      "limits": "A authorizes scarcity-distribution rules; it is not included in the B grade. Preserve permit-holder/employee/agent roles.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.14",
+      "catchline": "Rules for equitable distribution of supplies of spirituous liquor",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.15",
+      "sourceHash": "468691711cf4c8d2a9ea35d66369d025afaf666c017d8629c65109d8b60afb2f",
+      "conductFinding": "Violation of an equitable-distribution rule issued under 4301.14.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "rule violation",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 200,
+            "end": 1526,
+            "text": " (B) Whoever violates section 4301.15, division (A)(2) or (C) of section 4301.22, division (C), (D), (E), (F), (G), (H), or (I) of section 4301.631, or section 4301.64 or 4301.67 of the Revised Code is guilty of a misdemeanor of the fourth degree. If an offender who violates section 4301.64 of the Revised Code was under the age of eighteen years at the time of the offense, the court, in addition to any other penalties it imposes upon the offender, may suspend the offender's temporary instruction permit, probationary driver's license, or driver's license for a period of not less than six months and not more than one year. In lieu of suspending the offender's temporary instruction permit, probationary driver's license, or driver's license, the court instead may require the offender to perform community service for a number of hours determined by the court. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        }
+      ],
+      "limits": "The applicable rule must be identified and its operative version attached; this is not a free-standing ban on all liquor distribution.",
+      "hold": "specific_rule_required",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.15",
+      "catchline": "Violating rules for equitable distribution",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.14",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.14",
+          "sourceHash": "726c2555f414090f9c9227b26d68cf41e7f9854149efc9674dedd63dd905b5be",
+          "status": "included_authority_not_dependency_closure"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.21",
+      "sourceHash": "19a1c8ec66f15d0467037b2336548c3f4868e967ec2c6b7f9b5cdcdffaf7b4ec",
+      "conductFinding": "Seller permits removal of on-premises beer/intoxicating liquor contrary to division D.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "D",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Other A-C/E operational provisions are not assigned this grade. D literally cross-references 4301.62(B)(8), but the snapshot B ends at (5); do not silently substitute C(8).",
+      "hold": "cross_reference_mismatch",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.21",
+      "catchline": "Rules for sale of beer or intoxicating liquor for consumption on the premises",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.10",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.10",
+          "sourceHash": "92fef89bf7c2f53be8da5e577aac7e162838224fcd3b405a99cd062e21efd936",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.22",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.22",
+          "sourceHash": "5034fd343533a1b0c20563265fa21954e3a6193b31ca855f09dac9346d99dd94",
+          "status": "included_authority_not_dependency_closure"
+        },
+        {
+          "section": "4301.62",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
+          "sourceHash": "e05b8c011c5d9c45903ae495ba4edc3a5c8a82157c29af6c766db39bbbbd2ce0",
+          "status": "included_authority_not_dependency_closure"
+        },
+        {
+          "section": "4303.26",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.26",
+          "sourceHash": "a27ce5fd00b30c4046d5ef70ab51a6e398064d8ab660703e72df90b01a38cd2e",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4303.27",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.27",
+          "sourceHash": "9c74e39843f16641aab294194de594700d8935de156e4c71238e66978aa8ee1b",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4303.271",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.271",
+          "sourceHash": "45b6dfa2666f25620ae7b2ad947a5aac7d70bcd8388168fdeb4f0a2f874750de",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "5502.13",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5502.13",
+          "sourceHash": "37759d4107485eb20cac74731c339be1a5919711085902b8e16b920809ab68d0",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "5502.19",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5502.19",
+          "sourceHash": "e2fe8a74f4715c7bc543413e63227d5bbfaeb62e2a3162ba871fbbdfb0d47902",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.22",
+      "sourceHash": "5034fd343533a1b0c20563265fa21954e3a6193b31ca855f09dac9346d99dd94",
+      "conductFinding": "Sales-age, employee handling/service ages, intoxicated sales and Sunday-sale restrictions have distinct penalties.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "A(1)",
+          "penaltyDivision": "H",
+          "grade": "misdemeanor_unspecified_degree",
+          "qualification": "Mandatory $500-$1,000 fine; discretionary imprisonment up to 60 days.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 6395,
+            "end": 6678,
+            "text": " (H) Whoever violates division (A)(1) of section 4301.22 of the Revised Code is guilty of a misdemeanor, shall be fined not less than five hundred and not more than one thousand dollars, and, in addition to the fine, may be imprisoned for a definite term of not more than sixty days."
+          }
+        },
+        {
+          "conductScope": "A(2),C",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 200,
+            "end": 1526,
+            "text": " (B) Whoever violates section 4301.15, division (A)(2) or (C) of section 4301.22, division (C), (D), (E), (F), (G), (H), or (I) of section 4301.631, or section 4301.64 or 4301.67 of the Revised Code is guilty of a misdemeanor of the fourth degree. If an offender who violates section 4301.64 of the Revised Code was under the age of eighteen years at the time of the offense, the court, in addition to any other penalties it imposes upon the offender, may suspend the offender's temporary instruction permit, probationary driver's license, or driver's license for a period of not less than six months and not more than one year. In lieu of suspending the offender's temporary instruction permit, probationary driver's license, or driver's license, the court instead may require the offender to perform community service for a number of hours determined by the court. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        },
+        {
+          "conductScope": "A(3),B",
+          "penaltyDivision": "D",
+          "grade": "M3",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1838,
+            "end": 3030,
+            "text": " (D) Whoever violates division (B) of section 4301.14, division (A)(1) or (3) or (B) of section 4301.22, division (E)(1) of section 4301.69, or division (C) or (D) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the third degree. If an offender who violates division (E)(1) of section 4301.69 of the Revised Code was under the age of eighteen years at the time of the offense and the offense occurred while the offender was the operator of or a passenger in a motor vehicle, the court, in addition to any other penalties it imposes upon the offender, shall suspend the offender's temporary instruction permit or probationary driver's license for a period of not less than six months and not more than one year. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        }
+      ],
+      "limits": "A(4) exempts specified handling; preserve Sunday permits/local restrictions. D-F restrictions have no grade mapped here. Do not convert the custom A(1) misdemeanor to M3 from jail duration alone.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.22",
+      "catchline": "Rules for sales of beer and intoxicating liquor under all classes of permits and from state liquor stores",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.17",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.17",
+          "sourceHash": "5352bf93d86bb45c35ee7c1e50bc0ad230c1bb973b663d8d73591ba6748db113",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.351",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.351",
+          "sourceHash": "d3de2eadd8e34f8471d383a2b3b64e7b49ae1e20e8849de0fbc6aeee24a7758a",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.251",
+      "sourceHash": "c24261c4326ae93d5264917d1deb5c5a62d2f7293dc31142c2485fd7647d216b",
+      "conductFinding": "Consumption or sale on specified premises after service of a valid emergency suspension order.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "post-service prohibition",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Preserve governor/order, area, timing, service and cancellation/continuation facts; administrative duties elsewhere in the section are not generic offenses.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.251",
+      "catchline": "Emergency suspension of retail beer or liquor permits and retail sales of spirituous liquor",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.47",
+      "sourceHash": "de6eb4caf0b23e29d02e3d4df2301918eba7953ab696300895f5ff05fa3b77d1",
+      "conductFinding": "Specified permit holders fail to retain or produce the required three-year transaction records.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "record duties",
+          "penaltyDivision": "A",
+          "grade": "MM",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 200,
+            "text": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+          }
+        }
+      ],
+      "limits": "Preserve permit classes, tax-commissioner demand, and nonproduction beyond the holder's control exception.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.47",
+      "catchline": "Record retention",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.48",
+      "sourceHash": "1b3d04aa0f697231083e8153324b69f02997315a8c415c92cfe442a7ab3bf390",
+      "conductFinding": "False invoice/container entries or presentation of such entries for tax inspection.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "A",
+          "grade": "MM",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 200,
+            "text": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+          }
+        }
+      ],
+      "limits": "Underlying record/container requirements in chapters 4301, 4303 and 4307 still need the applicable provision identified.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.48",
+      "catchline": "False entries on invoices or containers prohibited",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.49",
+      "sourceHash": "3b8dee770519cce9cf564730a88beeaf15a9bc96075ac326c8028abe732f3cc1",
+      "conductFinding": "Hindering inspection of taxed beverage premises or required records.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "both prohibition sentences",
+          "penaltyDivision": "A",
+          "grade": "MM",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 200,
+            "text": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+          }
+        }
+      ],
+      "limits": "Tax and required-record references define scope; do not equate this with every kind of law-enforcement obstruction.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.49",
+      "catchline": "Prevention or hindrance of inspection",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.42",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.42",
+          "sourceHash": "8c0ce64fac93d89467cf2309d318735621caded4204c6a9765fd70b768fe41ab",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.421",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.421",
+          "sourceHash": "636264b3a0e45169ab74d8be0dd149f0c5a1a91abed11bba5eb8558fcad3bdd8",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.424",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.424",
+          "sourceHash": "fdf58314203831450194d4781f92f0e4cfeb9af1c685d788350b9bb7e844e3e9",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.58",
+      "sourceHash": "ce6d59968e3325050dcccf6bd425e71ad8418943f4d92f18837aae97f1f8f1d1",
+      "conductFinding": "Manufacture, sale/possession for sale and acquisition contrary to permit authority.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "B,C,D",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "Conduct section directs permit revocation for C convictions.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Preserve low-alcohol and qualified fundraiser exceptions in E; verify permit and tax/agency authorities before guidance.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.58",
+      "catchline": "Permits required",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "chapter-2915",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        },
+        {
+          "section": "chapter-4303",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.59",
+      "sourceHash": "37ed4b319c023c27820387d2b35984167b21eee5e3818fa9e450f81aa06f73fa",
+      "conductFinding": "False/fraudulent statements about bonded warehouse receipts or represented liquor to promote their sale/purchase.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Preserve commercial purpose and specified statement subjects; this is not general false identification.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.59",
+      "catchline": "False or fraudulent statement in warehouse receipts",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.60",
+      "sourceHash": "e452a666a848932e6d4878c9f7236be923be5e2d8a3edec1e18e17bf58c034aa",
+      "conductFinding": "Transport without an H permit unless a listed purchase/delivery or permit-holder exception applies.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "transport prohibition",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Exceptions cover specified lawful sales/deliveries; do not present all personal alcohol transportation as criminal.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.60",
+      "catchline": "Illegal transportation of beer, intoxicating liquor, or alcohol prohibited",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.62",
+      "sourceHash": "e05b8c011c5d9c45903ae495ba4edc3a5c8a82157c29af6c766db39bbbbd2ce0",
+      "conductFinding": "Opened-container possession in the places and vehicle circumstances listed in B.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "B(1)-(5)",
+          "penaltyDivision": "A",
+          "grade": "MM",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 200,
+            "text": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+          }
+        }
+      ],
+      "limits": "Retain C-J exemptions and incorporated definitions. Open Container can be a search alias; generic Alcohol in Park is broader and needs charge-document confirmation. Closed/resealed containers and authorized areas cannot be ignored.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
+      "catchline": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.171",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.171",
+          "sourceHash": "53d9651b4bec02bc5f18b46ecd119b01c6060301a7574af0386c62521c2e92fa",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.201",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.201",
+          "sourceHash": "2c302d5686dcb1b7747abfbf4985bd31571869a485e08af87d1fa6b159ab8de2",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.82",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.82",
+          "sourceHash": "1fec2cb3b4fa4d9a11db63fe215bad22d1f71031341f0db877480f8282866ed5",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4303.181",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.181",
+          "sourceHash": "d5bae6a2952e580fb3543c740c97680f44f79d9c8931c239d7b6e32ebc63ce10",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4303.185",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.185",
+          "sourceHash": "4c679ccfd1401d7d4940fd242f67438e54930332de336772bc741e3ff336d2a1",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4303.188",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.188",
+          "sourceHash": "2fe88aa65af83fdc609fe2d283c61a8e69892f7d68bc7586a75545f7200320ca",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4303.201",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.201",
+          "sourceHash": "0cd5eb7dbec490e455507ba0f62d5304e360c0804fe51e65cd256e7af37c15a7",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4303.208",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4303.208",
+          "sourceHash": "444b1a7bd54103b8c61550e1bc9a4d6ce6caa93fc78ab54e7e571ac50ab96d37",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4503.24",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4503.24",
+          "sourceHash": "580e3a03b7148d784b7fb26b10631bf424de5f62b05b4e64be8b6be77e97cbe9",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4511.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.01",
+          "sourceHash": "991d4468ed4283ff045ff0401765ccab25296db199db4f25887ad941808fc04f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "chapter-3717",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        }
+      ],
+      "catalogRows": [
+        {
+          "chargeId": "oh-alcohol-in-park",
+          "label": "Possession of Alcohol in Park / Prohibited Area",
+          "reconciliationVerdict": "adopt_catchline",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        },
+        {
+          "chargeId": "oh-open-container",
+          "label": "Open Container Violation",
+          "reconciliationVerdict": "adopt_catchline",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        },
+        {
+          "chargeId": "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises",
+          "label": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+          "reconciliationVerdict": "adopt_catchline",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        }
+      ],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.631",
+      "sourceHash": "21505183c66d975d7d8e93d7f0be3c835fc6642bb3a9af177eea8e84259a5c64",
+      "conductFinding": "Under-eighteen low-alcohol-beverage purchase, attempted acquisition, false information, furnishing, possession/consumption and permitting violations.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "B",
+          "penaltyDivision": "E",
+          "grade": "fine_only",
+          "qualification": "Mandatory fine $25-$100; public-work payment may be allowed.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 3030,
+            "end": 3520,
+            "text": " (E) Whoever violates section 4301.63 or division (B) of section 4301.631 of the Revised Code shall be fined not less than twenty-five nor more than one hundred dollars. The court imposing a fine for a violation of section 4301.63 or division (B) of section 4301.631 of the Revised Code may order that the fine be paid by the performance of public work at a reasonable hourly rate established by the court. The court shall designate the time within which the public work shall be completed."
+          }
+        },
+        {
+          "conductScope": "C,D,E,F,G,H,I",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 200,
+            "end": 1526,
+            "text": " (B) Whoever violates section 4301.15, division (A)(2) or (C) of section 4301.22, division (C), (D), (E), (F), (G), (H), or (I) of section 4301.631, or section 4301.64 or 4301.67 of the Revised Code is guilty of a misdemeanor of the fourth degree. If an offender who violates section 4301.64 of the Revised Code was under the age of eighteen years at the time of the offense, the court, in addition to any other penalties it imposes upon the offender, may suspend the offender's temporary instruction permit, probationary driver's license, or driver's license for a period of not less than six months and not more than one year. In lieu of suspending the offender's temporary instruction permit, probationary driver's license, or driver's license, the court instead may require the offender to perform community service for a number of hours determined by the court. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        }
+      ],
+      "limits": "B purchase is not assigned M4. Preserve physician/religious/family exceptions and explicit restrictions on permit sanctions.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.631",
+      "catchline": "Purchase or consumption low-alcohol beverage by persons under eighteen prohibited",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.633",
+      "sourceHash": "0d0e75cd911322d16b691f5ba729d424a06f5ef6227bc926de5bf70e3d9f3412",
+      "conductFinding": "Knowingly furnishing false identifying information to obtain beer/intoxicating liquor for an under-21 person.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Preserve chapter exceptions and obtaining/intent purpose; do not merge with the underage person's own false-ID conduct.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
+      "catchline": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [
+        {
+          "chargeId": "oh-orc-4301-633-furnishing-false-information-to-obtain-beer-or-intoxicating-liquor-for-person-under-twenty-one",
+          "label": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+          "reconciliationVerdict": "adopt_catchline",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        }
+      ],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.64",
+      "sourceHash": "8df9ed5b3fddf1d979ea88ed02185cc39cbcd7ce9a6fd5c8c60abc840d6b25c3",
+      "conductFinding": "Consumption of beer/intoxicating liquor in a motor vehicle.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "consumption prohibition",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "For offenders under 18, specified discretionary license suspension/delayed eligibility or community service.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 200,
+            "end": 1526,
+            "text": " (B) Whoever violates section 4301.15, division (A)(2) or (C) of section 4301.22, division (C), (D), (E), (F), (G), (H), or (I) of section 4301.631, or section 4301.64 or 4301.67 of the Revised Code is guilty of a misdemeanor of the fourth degree. If an offender who violates section 4301.64 of the Revised Code was under the age of eighteen years at the time of the offense, the court, in addition to any other penalties it imposes upon the offender, may suspend the offender's temporary instruction permit, probationary driver's license, or driver's license for a period of not less than six months and not more than one year. In lieu of suspending the offender's temporary instruction permit, probationary driver's license, or driver's license, the court instead may require the offender to perform community service for a number of hours determined by the court. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        }
+      ],
+      "limits": "Express exception incorporates the chauffeured-limousine persons in 4301.62(D); do not infer every open-container exception applies.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.64",
+      "catchline": "Prohibition against consumption of beer or intoxicating liquor in motor vehicle",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.62",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
+          "sourceHash": "e05b8c011c5d9c45903ae495ba4edc3a5c8a82157c29af6c766db39bbbbd2ce0",
+          "status": "included_authority_not_dependency_closure"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.65",
+      "sourceHash": "fc48b05d86e236114fb2d8abfda6bbc3b5934bb0d591730dfc4475bdf48458bf",
+      "conductFinding": "Sale/offer of an alcohol vaporizing device differs from its purchase/use.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "B",
+          "penaltyDivision": "J",
+          "grade": "M3",
+          "qualification": "Second/subsequent violation within five consecutive years becomes M1.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 6994,
+            "end": 7327,
+            "text": " (J) Whoever violates division (B) of section 4301.65 of the Revised Code is guilty of a misdemeanor of the third degree. For a second or subsequent violation occurring within a period of five consecutive years after the first violation, a person is guilty of a misdemeanor of the first degree. Last updated March 8, 2023 at 12:12 PM"
+          }
+        },
+        {
+          "conductScope": "B",
+          "penaltyDivision": "J",
+          "grade": "M1",
+          "qualification": "Second/subsequent violation within five consecutive years.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 6994,
+            "end": 7327,
+            "text": " (J) Whoever violates division (B) of section 4301.65 of the Revised Code is guilty of a misdemeanor of the third degree. For a second or subsequent violation occurring within a period of five consecutive years after the first violation, a person is guilty of a misdemeanor of the first degree. Last updated March 8, 2023 at 12:12 PM"
+          }
+        },
+        {
+          "conductScope": "C",
+          "penaltyDivision": "A",
+          "grade": "MM",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 200,
+            "text": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+          }
+        }
+      ],
+      "limits": "A defines the device. The discovery list had C but the full penalty section adds the distinct B offense and repeat escalation.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.65",
+      "catchline": "Sale, purchase, or use of alcohol vaporizing device prohibited",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.66",
+      "sourceHash": "aed630aef79e6cd424d01c1f1ff3fd62c2235174a3dfed43ae95aefd7543ff54",
+      "conductFinding": "Hindering specified officials' inspection/search of alcohol premises other than a bona fide private residence.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Preserve actor, premises and residence limitations; application to a particular search is not resolved here.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.66",
+      "catchline": "Obstructing inspection or search of premises prohibited",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.67",
+      "sourceHash": "7c205ce245049bd5a3a2aecdc351efa542206da31ebff4ec3d3cd75db4d632ff",
+      "conductFinding": "Possession of unlawfully acquired spirituous liquor over one liter, or other unlawfully acquired intoxicating liquor/beer.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "B",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 200,
+            "end": 1526,
+            "text": " (B) Whoever violates section 4301.15, division (A)(2) or (C) of section 4301.22, division (C), (D), (E), (F), (G), (H), or (I) of section 4301.631, or section 4301.64 or 4301.67 of the Revised Code is guilty of a misdemeanor of the fourth degree. If an offender who violates section 4301.64 of the Revised Code was under the age of eighteen years at the time of the offense, the court, in addition to any other penalties it imposes upon the offender, may suspend the offender's temporary instruction permit, probationary driver's license, or driver's license for a period of not less than six months and not more than one year. In lieu of suspending the offender's temporary instruction permit, probationary driver's license, or driver's license, the court instead may require the offender to perform community service for a number of hours determined by the court. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        }
+      ],
+      "limits": "The one-liter wording attaches to spirituous liquor; lawful-acquisition provisions must be identified.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.67",
+      "catchline": "Illegal possession of spirituous or intoxicating liquor or beer prohibited",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.68",
+      "sourceHash": "197bf3c5161bd87878b6a11a0b38637fc82859fc8ba87c0e9ebf85e2882b0ae0",
+      "conductFinding": "Sale, offer or possession of intoxicating liquor in a diluted/refilled/partly refilled original container.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Preserve original-container and intoxicating-liquor requirements.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.68",
+      "catchline": "Sale of liquor in diluted, refilled, or partly refilled containers prohibited",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.69",
+      "sourceHash": "c5a5f3d3764427af42fe12c2cc6d33e30210cbf39222bfead001837d04fd851e",
+      "conductFinding": "Separate furnishing, hosting, accommodations, underage conduct, and parental-permission provisions.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "A",
+          "penaltyDivision": "I",
+          "grade": "misdemeanor_unspecified_degree",
+          "qualification": "Mandatory $500-$1,000 fine; discretionary imprisonment up to six months.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 6678,
+            "end": 6994,
+            "text": " (I) Whoever violates division (A) of section 4301.69 or division (H) of section 4301.691 of the Revised Code is guilty of a misdemeanor, shall be fined not less than five hundred and not more than one thousand dollars, and, in addition to the fine, may be imprisoned for a definite term of not more than six months."
+          }
+        },
+        {
+          "conductScope": "B,C,D(2),F",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        },
+        {
+          "conductScope": "E(1)",
+          "penaltyDivision": "D",
+          "grade": "M3",
+          "qualification": "Specified under-18 motor-vehicle circumstances require license sanctions; diversion is addressed in E(2).",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1838,
+            "end": 3030,
+            "text": " (D) Whoever violates division (B) of section 4301.14, division (A)(1) or (3) or (B) of section 4301.22, division (E)(1) of section 4301.69, or division (C) or (D) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the third degree. If an offender who violates division (E)(1) of section 4301.69 of the Revised Code was under the age of eighteen years at the time of the offense and the offense occurred while the offender was the operator of or a passenger in a motor vehicle, the court, in addition to any other penalties it imposes upon the offender, shall suspend the offender's temporary instruction permit or probationary driver's license for a period of not less than six months and not more than one year. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        }
+      ],
+      "limits": "Minor in Possession maps to E(1) only after subsection confirmation, not to all 4301.69. H distinguishes underage (<21) from minor (<18). D(1) is permission to refuse accommodations, not charged conduct; G is not assigned a grade here.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.69",
+      "catchline": "Underage persons offenses concerning",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "2151.27",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.27",
+          "sourceHash": "93d7ab59acd96e3e3df5fc7b0f13b2d444857caf1c0afb63c30d50536a433e89",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "2151.356",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.356",
+          "sourceHash": "65a27073ee6b829eabcbfb86c1664c6cd012224a25722a37d3ef339c166a914f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "2151.358",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2151.358",
+          "sourceHash": "4a8c3c0dbff5c156f4644235398e0bf653c9c3d10b14590803dbc2847ff8a64f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "2935.36",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2935.36",
+          "sourceHash": "b92a3a0f710dee40ff16cf0f18db479d41b941ac637ce3ced7c6a57f379553dd",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "2953.33",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2953.33",
+          "sourceHash": "0ce293b260092bbf4856f619e0aa8d0cb510355ab19bc587f5e5845f39e9f81f",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3719.011",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3719.011",
+          "sourceHash": "abba752770f9222547a0b242d7f46bd4a16e3b648f4780abea77db57caf7b57c",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3731.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3731.01",
+          "sourceHash": "e33c58d716194a4ec534091c7f2b049d71b79fef85874bce6c48cb3db5320956",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.22",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.22",
+          "sourceHash": "5034fd343533a1b0c20563265fa21954e3a6193b31ca855f09dac9346d99dd94",
+          "status": "included_authority_not_dependency_closure"
+        },
+        {
+          "section": "4301.63",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.63",
+          "sourceHash": "18fee8c20fe0ae624d04c6d47f3fe0eac6e0b40f6504e35dc1d19f184ca54f57",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.633",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
+          "sourceHash": "0d0e75cd911322d16b691f5ba729d424a06f5ef6227bc926de5bf70e3d9f3412",
+          "status": "included_authority_not_dependency_closure"
+        },
+        {
+          "section": "4729.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4729.01",
+          "sourceHash": "9ed81b3b1e30a347af3c736e87255ae3913a2533645e418688cc62878339ee02",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [
+        {
+          "chargeId": "oh-minor-in-possession",
+          "label": "Minor in Possession of Alcohol",
+          "reconciliationVerdict": "discovery_unresolved",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        }
+      ],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.691",
+      "sourceHash": "a77f425de8641d9bee2e73b1dc8958604b9a3bf0a83bbad1350e98f3bc9a3d96",
+      "conductFinding": "Alternate drinking-age rules expressly require both federal-mandate repeal/invalidation and secretary-of-state certification.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "B",
+          "penaltyDivision": "A",
+          "grade": "MM",
+          "qualification": "Only if the opening activation conditions are established.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 200,
+            "text": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+          }
+        },
+        {
+          "conductScope": "C,D",
+          "penaltyDivision": "D",
+          "grade": "M3",
+          "qualification": "Only if activation conditions are established.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1838,
+            "end": 3030,
+            "text": " (D) Whoever violates division (B) of section 4301.14, division (A)(1) or (3) or (B) of section 4301.22, division (E)(1) of section 4301.69, or division (C) or (D) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the third degree. If an offender who violates division (E)(1) of section 4301.69 of the Revised Code was under the age of eighteen years at the time of the offense and the offense occurred while the offender was the operator of or a passenger in a motor vehicle, the court, in addition to any other penalties it imposes upon the offender, shall suspend the offender's temporary instruction permit or probationary driver's license for a period of not less than six months and not more than one year. If the offender is fifteen years and six months of age or older and has not been issued a temporary instruction permit or probationary driver's license, the offender shall not be eligible to be issued such a license or permit for a period of six months. If the offender has not attained the age of fifteen years and six months, the offender shall not be eligible to be issued a temporary instruction permit until the offender attains the age of sixteen years."
+          }
+        },
+        {
+          "conductScope": "E,F,G,I",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "Only if activation conditions are established.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        },
+        {
+          "conductScope": "H",
+          "penaltyDivision": "I",
+          "grade": "misdemeanor_unspecified_degree",
+          "qualification": "Conditional activation; mandatory $500-$1,000 fine and discretionary imprisonment up to six months.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 6678,
+            "end": 6994,
+            "text": " (I) Whoever violates division (A) of section 4301.69 or division (H) of section 4301.691 of the Revised Code is guilty of a misdemeanor, shall be fined not less than five hundred and not more than one thousand dollars, and, in addition to the fine, may be imprisoned for a definite term of not more than six months."
+          }
+        }
+      ],
+      "limits": "Do not present the alternate age-19 beer thresholds as current Ohio law merely because this section appears in the code. No certification evidence is in this batch.",
+      "hold": "activation_evidence_required",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.691",
+      "catchline": "Alternate prohibitions if federal mandate relating to a national uniform drinking age of twenty-one is no longer in force",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.22",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.22",
+          "sourceHash": "5034fd343533a1b0c20563265fa21954e3a6193b31ca855f09dac9346d99dd94",
+          "status": "included_authority_not_dependency_closure"
+        },
+        {
+          "section": "4301.637",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.637",
+          "sourceHash": "e992824e34ba56ac25e8e4085e10fc3cca48963e7727f324d66e3537af98e95c",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.69",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.69",
+          "sourceHash": "c5a5f3d3764427af42fe12c2cc6d33e30210cbf39222bfead001837d04fd851e",
+          "status": "included_authority_not_dependency_closure"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.70",
+      "sourceHash": "a2c1cb4a3255759666df3fc0d8c3fba7d9f47de36b8242cc6f7612b9d667566d",
+      "conductFinding": "Residual violations concerning taxed wine/mixed beverages where no other penalty is provided.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "residual violations",
+          "penaltyDivision": "A",
+          "grade": "MM",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 0,
+            "end": 200,
+            "text": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor."
+          }
+        }
+      ],
+      "limits": "The catch-all is conditional on actor/activity, applicable underlying duty and absence of another penalty. Identify the specific underlying provision rather than inventing a generic charge.",
+      "hold": "underlying_duty_required",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.70",
+      "catchline": "Violations not otherwise specified",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "4301.43",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.43",
+          "sourceHash": "fe0139ebacf6bc5bf86b520ac3bdb51fa46d3d4ce9e3a649c257967ad5749331",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.432",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.432",
+          "sourceHash": "56ac04f7a26d7f0065191825cdfc2624498ee6d06fa62cbab52cc93b78454db4",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4301.99",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+          "sourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+          "status": "included_authority_not_dependency_closure"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4301.74",
+      "sourceHash": "6c5c0ce8b722ba152cd61cbebb66ff8f87754c8fdf7ea37e8d1c4bf81c9a1311",
+      "conductFinding": "Disobedience of the specified liquor-nuisance injunction, with a statutory summary contempt procedure.",
+      "penaltySection": "4301.99",
+      "mappings": [
+        {
+          "conductScope": "injunction violation",
+          "penaltyDivision": "C",
+          "grade": "M1",
+          "qualification": "Penalty section lists M1, while conduct provision directs contempt proceedings.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 1526,
+            "end": 1838,
+            "text": " (C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Preserve the distinction between contempt procedure and a separately charged misdemeanor; read 3767.01(C)(3) and 3767.05(D)/(E) before resolving the procedural route.",
+      "hold": "contempt_and_offense_boundary",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.74",
+      "catchline": "Violation of nuisance injunction",
+      "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.99",
+      "dependencies": [
+        {
+          "section": "3767.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.01",
+          "sourceHash": "1a7422563044523202f624b4df5f037c984ca5a93758e96818d24e11405c1427",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "3767.05",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.05",
+          "sourceHash": "f5659c38b37f7d4cd1e0dce6bd8d18a1891e3b2ac54a10b4495aed8875136134",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "4712.071",
+      "sourceHash": "ecb26e5cc887050472a4376927d8448904144684eded52cae59a338a1f3085d9",
+      "conductFinding": "Credit services organization supplies specified services for credit below $5,000, term at most one year, or APR over 28%.",
+      "penaltySection": "4712.99",
+      "mappings": [
+        {
+          "conductScope": "A,B,C thresholds",
+          "penaltyDivision": "B",
+          "grade": "MM",
+          "qualification": "4712.99(B)(1): mandatory $100-$500 fine; B(2): express strict liability.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 285,
+            "end": 888,
+            "text": " (B)(1) Whoever violates section 4712.071 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars. (2) The offense established under section 4712.071 of the Revised Code is a strict liability offense and section 2901.20 of the Revised Code does not apply. The designation of this offense as a strict liability offense shall not be construed to imply that any other offense for which there is no specified degree of culpability, whether in this section or another section of the Revised Code, is not a strict liability offense."
+          }
+        }
+      ],
+      "limits": "Resolve covered services under 4712.01(C)(1) and federal APR definition; do not change less-than-$5,000 to less-than-or-equal.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4712.071",
+      "catchline": "Prohibited extensions of credit",
+      "penaltySourceHash": "9c0df1ae21f1fe8bcf30c341630cdd44e2b856ec63313b60b06cf05c0e075d2c",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4712.99",
+      "dependencies": [
+        {
+          "section": "4712.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4712.01",
+          "sourceHash": "7ff729d6f8a4dba103638e733fa6aa702fcd880b03204ad4abb54c1ac53d92f0",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "5589.211",
+      "sourceHash": "3271517bb5340b19cbeb7d846047dcf79cab286126c89dcf40b40494819dc1a3",
+      "conductFinding": "Railroad company leaves an abandoned-crew train obstructing a public road over five minutes, subject to crew-safety exception.",
+      "penaltySection": "5589.99",
+      "mappings": [
+        {
+          "conductScope": "obstruction prohibition",
+          "penaltyDivision": "E",
+          "grade": "M1",
+          "qualification": "Mandatory $5,000 fine in addition to the stated grade.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 564,
+            "end": 710,
+            "text": "(E) Whoever violates section 5589.211 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined five thousand dollars."
+          }
+        }
+      ],
+      "limits": "Entity actor and service procedure matter. Federal railroad preemption/enforceability research is required before treating this as currently publishable. The official court summary of State v. CSX Transp., Inc., 2022-Ohio-2832, reports preemption of neighboring 5589.21; this does not itself decide 5589.211. https://courtnewsohio.gov/cases/2022/SCO/0817/200608.asp",
+      "hold": "railroad_preemption_research",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5589.211",
+      "catchline": "Abandoned locomotive obstructing street or road",
+      "penaltySourceHash": "c473bc1e7430288c1ebf1ab19ebd4c63b733639e3e1fe672e1b49337057a9875",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5589.99",
+      "dependencies": [
+        {
+          "section": "2935.10",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2935.10",
+          "sourceHash": "807ab0f60fa635746aa33717b0622664829ba2ccec13ff43879e85c33659bb37",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.02",
+      "sourceHash": "fd4a2c72005e98526ef945978811887c7d9993e8fcea103f5873fdf71a22abe4",
+      "conductFinding": "Malicious/willful nonconsensual injury/killing of another's domestic animal, with veterinarian exception.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "conduct provision",
+          "penaltyDivision": "B",
+          "grade": "M2",
+          "qualification": "Unless animal value or injury amount reaches $300.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 99,
+            "end": 446,
+            "text": " (B) Except as otherwise provided in this division, whoever violates section 959.02 of the Revised Code is guilty of a misdemeanor of the second degree. If the value of the animal killed or the injury done amounts to three hundred dollars or more, whoever violates section 959.02 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        },
+        {
+          "conductScope": "conduct provision",
+          "penaltyDivision": "B",
+          "grade": "M1",
+          "qualification": "Animal value or injury amount is $300 or more.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 99,
+            "end": 446,
+            "text": " (B) Except as otherwise provided in this division, whoever violates section 959.02 of the Revised Code is guilty of a misdemeanor of the second degree. If the value of the animal killed or the injury done amounts to three hundred dollars or more, whoever violates section 959.02 of the Revised Code is guilty of a misdemeanor of the first degree."
+          }
+        }
+      ],
+      "limits": "Use the value/injury threshold, not a generic cruelty grade.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.02",
+      "catchline": "Injuring animals",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.03",
+      "sourceHash": "d644dad48965ab2bf613efd880660546b09153a7f7ecaea14d4ac994b9928203",
+      "conductFinding": "Specified poisoning or placement of poisoned food without required consent.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "both conduct clauses",
+          "penaltyDivision": "C",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 446,
+            "end": 644,
+            "text": " (C) Whoever violates section 959.03, 959.06, division (C) of section 959.09, 959.12, or 959.17 or division (A) of section 959.15 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        }
+      ],
+      "limits": "Preserve malicious/willful wording, ownership, consent and veterinarian exception.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.03",
+      "catchline": "Poisoning animals",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.06",
+      "sourceHash": "fa18a34d8aa507b4c5fbb7856b4df7ec475a462ec7a01321f9c16b9f116b9e83",
+      "conductFinding": "Prohibited destruction methods for domestic animals and specified shelter gas-chamber use.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "B,C",
+          "penaltyDivision": "C",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 446,
+            "end": 644,
+            "text": " (C) Whoever violates section 959.03, 959.06, division (C) of section 959.09, 959.12, or 959.17 or division (A) of section 959.15 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        }
+      ],
+      "limits": "F expressly provides strict liability. Preserve C shortage declaration and D/E statutory, veterinary and research exclusions; those depend on external law.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.06",
+      "catchline": "Destruction of domestic animals",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [
+        {
+          "section": "1531.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1531.01",
+          "sourceHash": "98c2418ba541fc5189ef0fd4195fbfe8a3ced1bdf6b96a2f02a821f627a8a225",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "2901.20",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.20",
+          "sourceHash": "7f2be126ade20b6d4d85ec1292a2829f1f52f149d04677331bf70477495f8fd0",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "959.131",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.131",
+          "sourceHash": "eb00b9cbf11272029bdfd6c03ddc3c0cc49561b655d5ef5984e5438a958c1330",
+          "status": "included_authority_not_dependency_closure"
+        },
+        {
+          "section": "chapter-1533",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        },
+        {
+          "section": "chapter-1717",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        },
+        {
+          "section": "chapter-4741",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        },
+        {
+          "section": "chapter-941",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        },
+        {
+          "section": "chapter-945",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        },
+        {
+          "section": "chapter-955",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.09",
+      "sourceHash": "702c9133421ba511da287b119f3022955950d1863e9ee56adcd3322e0f574b3d",
+      "conductFinding": "Knowingly false animal-abuse reports by persons subject to the reporting requirements.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "C",
+          "penaltyDivision": "C",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 446,
+            "end": 644,
+            "text": " (C) Whoever violates section 959.03, 959.06, division (C) of section 959.09, 959.12, or 959.17 or division (A) of section 959.15 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        }
+      ],
+      "limits": "A/B/D reporting procedure, good-faith immunity and fee provisions are not swept into the M4 offense. Determine the reporting duty under 959.07/.08.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.09",
+      "catchline": "Manner of reporting violation; immunity; false reports",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [
+        {
+          "section": "959.07",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.07",
+          "sourceHash": "cfab3a68dff5ea706ac31d1f2b56c31013ce57fa4d49ebd33b1129e66aa76bf4",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "959.08",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.08",
+          "sourceHash": "08e6b9b0f47a4514e982a04442c072c086d0947995c86c2868b95969235f6936",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.12",
+      "sourceHash": "8de008e8df1635f509282eb28317ce0b1e1abd5c945c523aa6e88f3cbde206b9",
+      "conductFinding": "Malicious alteration/defacement of another's listed livestock earmark/brand.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "C",
+          "grade": "M4",
+          "qualification": "Textual mapping proposed; penalty list punctuation needs legal confirmation.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 446,
+            "end": 644,
+            "text": " (C) Whoever violates section 959.03, 959.06, division (C) of section 959.09, 959.12, or 959.17 or division (A) of section 959.15 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        }
+      ],
+      "limits": "This section has no division C. The list's division (C) appears to modify 959.09 only, but the conservative parser retained ambiguity; do not auto-approve this interpretive resolution.",
+      "hold": "list_scope_confirmation",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.12",
+      "catchline": "Alteration of brands",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.13",
+      "sourceHash": "ef80ffc5acc388d03ec5e7d391eb96b63b18cf71f4e5dec48af2ea76048e18f9",
+      "conductFinding": "A(1)-(5) prohibit specified cruelty, deprivation, confinement, transport and livestock detention practices.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "A(1)-(5)",
+          "penaltyDivision": "D",
+          "grade": "M2",
+          "qualification": "Court may order forfeiture/disposition under D and reasonable care/investigation/prosecution reimbursement under E(6)(b).",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 644,
+            "end": 1326,
+            "text": " (D) Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree. In addition, the court may order the offender to forfeit the animal or livestock and may provide for its disposition, including, but not limited to, the sale of the animal or livestock. If an animal or livestock is forfeited and sold pursuant to this division, the proceeds from the sale first shall be applied to pay the expenses incurred with regard to the care of the animal from the time it was taken from the custody of the former owner. The balance of the proceeds from the sale, if any, shall be paid to the former owner of the animal."
+          }
+        }
+      ],
+      "limits": "B allows specified livestock detention extension and dehorning. B/C are not separate M2 offenses. Companion-animal provisions in 959.131 remain distinct.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.13",
+      "catchline": "Cruelty to animals",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [],
+      "catalogRows": [
+        {
+          "chargeId": "oh-animal-cruelty-misdemeanor",
+          "label": "Animal Cruelty (Misdemeanor)",
+          "reconciliationVerdict": "discovery_unresolved",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        },
+        {
+          "chargeId": "oh-orc-959-13-cruelty-to-animals",
+          "label": "Cruelty to animals",
+          "reconciliationVerdict": "discovery_unresolved",
+          "disposition": "source_mapping_available_no_automatic_rename_or_publication"
+        }
+      ],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.131",
+      "sourceHash": "eb00b9cbf11272029bdfd6c03ddc3c0cc49561b655d5ef5984e5438a958c1330",
+      "conductFinding": "Companion-animal cruelty variants differ by actor, culpability, harm and prior offense.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "B,E",
+          "penaltyDivision": "E",
+          "grade": "M1",
+          "qualification": "E(1): first offense; subsequent offense F5. Forfeiture/ownership restrictions, reimbursement and counseling provisions may apply.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1326,
+            "end": 3522,
+            "text": " (E)(1) Whoever violates division (B) or (E) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense. (2) Whoever violates division (C) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (3) Whoever violates section 959.01 of the Revised Code or division (D) of section 959.131 of the Revised Code is guilty of a misdemeanor of the second degree on a first offense and a misdemeanor of the first degree on each subsequent offense. (4) Whoever violates division (F) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (5) Whoever violates division (G) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree. (6)(a) A court may order a person who is convicted of or pleads guilty to a violation of section 959.131 of the Revised Code to forfeit to an impounding agency, as defined in section 959.132 of the Revised Code, any or all of the companion animals in that person's ownership or care. The court also may prohibit or place limitations on the person's ability to own or care for any companion animals for a specified or indefinite period of time. (b) A court may order a person who is convicted of or pleads guilty to a violation of division (A) of section 959.13 or section 959.131 of the Revised Code to reimburse an impounding agency for the reasonable and necessary costs incurred by the agency for the care of an animal or livestock that the agency impounded as a result of the investigation or prosecution of the violation, provided that the costs were not otherwise paid under section 959.132 of the Revised Code. (7) If a court has reason to believe that a person who is convicted of or pleads guilty to a violation of section 959.131 or 959.21 of the Revised Code has a mental or emotional disorder that contributed to the violation, the court may impose as a community control sanction or as a condition of probation a requirement that the offender undergo psychological evaluation or counseling. The court shall order the offender to pay the costs of the evaluation or counseling."
+          }
+        },
+        {
+          "conductScope": "B,E",
+          "penaltyDivision": "E",
+          "grade": "F5",
+          "qualification": "E(1): subsequent offense; same ancillary provisions.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1326,
+            "end": 3522,
+            "text": " (E)(1) Whoever violates division (B) or (E) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense. (2) Whoever violates division (C) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (3) Whoever violates section 959.01 of the Revised Code or division (D) of section 959.131 of the Revised Code is guilty of a misdemeanor of the second degree on a first offense and a misdemeanor of the first degree on each subsequent offense. (4) Whoever violates division (F) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (5) Whoever violates division (G) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree. (6)(a) A court may order a person who is convicted of or pleads guilty to a violation of section 959.131 of the Revised Code to forfeit to an impounding agency, as defined in section 959.132 of the Revised Code, any or all of the companion animals in that person's ownership or care. The court also may prohibit or place limitations on the person's ability to own or care for any companion animals for a specified or indefinite period of time. (b) A court may order a person who is convicted of or pleads guilty to a violation of division (A) of section 959.13 or section 959.131 of the Revised Code to reimburse an impounding agency for the reasonable and necessary costs incurred by the agency for the care of an animal or livestock that the agency impounded as a result of the investigation or prosecution of the violation, provided that the costs were not otherwise paid under section 959.132 of the Revised Code. (7) If a court has reason to believe that a person who is convicted of or pleads guilty to a violation of section 959.131 or 959.21 of the Revised Code has a mental or emotional disorder that contributed to the violation, the court may impose as a community control sanction or as a condition of probation a requirement that the offender undergo psychological evaluation or counseling. The court shall order the offender to pay the costs of the evaluation or counseling."
+          }
+        },
+        {
+          "conductScope": "C",
+          "penaltyDivision": "E",
+          "grade": "F5",
+          "qualification": "E(2): knowing serious physical harm; ancillary provisions may apply.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1326,
+            "end": 3522,
+            "text": " (E)(1) Whoever violates division (B) or (E) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense. (2) Whoever violates division (C) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (3) Whoever violates section 959.01 of the Revised Code or division (D) of section 959.131 of the Revised Code is guilty of a misdemeanor of the second degree on a first offense and a misdemeanor of the first degree on each subsequent offense. (4) Whoever violates division (F) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (5) Whoever violates division (G) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree. (6)(a) A court may order a person who is convicted of or pleads guilty to a violation of section 959.131 of the Revised Code to forfeit to an impounding agency, as defined in section 959.132 of the Revised Code, any or all of the companion animals in that person's ownership or care. The court also may prohibit or place limitations on the person's ability to own or care for any companion animals for a specified or indefinite period of time. (b) A court may order a person who is convicted of or pleads guilty to a violation of division (A) of section 959.13 or section 959.131 of the Revised Code to reimburse an impounding agency for the reasonable and necessary costs incurred by the agency for the care of an animal or livestock that the agency impounded as a result of the investigation or prosecution of the violation, provided that the costs were not otherwise paid under section 959.132 of the Revised Code. (7) If a court has reason to believe that a person who is convicted of or pleads guilty to a violation of section 959.131 or 959.21 of the Revised Code has a mental or emotional disorder that contributed to the violation, the court may impose as a community control sanction or as a condition of probation a requirement that the offender undergo psychological evaluation or counseling. The court shall order the offender to pay the costs of the evaluation or counseling."
+          }
+        },
+        {
+          "conductScope": "D",
+          "penaltyDivision": "E",
+          "grade": "M2",
+          "qualification": "E(3): first offense; subsequent offense M1; ancillary provisions may apply.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1326,
+            "end": 3522,
+            "text": " (E)(1) Whoever violates division (B) or (E) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense. (2) Whoever violates division (C) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (3) Whoever violates section 959.01 of the Revised Code or division (D) of section 959.131 of the Revised Code is guilty of a misdemeanor of the second degree on a first offense and a misdemeanor of the first degree on each subsequent offense. (4) Whoever violates division (F) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (5) Whoever violates division (G) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree. (6)(a) A court may order a person who is convicted of or pleads guilty to a violation of section 959.131 of the Revised Code to forfeit to an impounding agency, as defined in section 959.132 of the Revised Code, any or all of the companion animals in that person's ownership or care. The court also may prohibit or place limitations on the person's ability to own or care for any companion animals for a specified or indefinite period of time. (b) A court may order a person who is convicted of or pleads guilty to a violation of division (A) of section 959.13 or section 959.131 of the Revised Code to reimburse an impounding agency for the reasonable and necessary costs incurred by the agency for the care of an animal or livestock that the agency impounded as a result of the investigation or prosecution of the violation, provided that the costs were not otherwise paid under section 959.132 of the Revised Code. (7) If a court has reason to believe that a person who is convicted of or pleads guilty to a violation of section 959.131 or 959.21 of the Revised Code has a mental or emotional disorder that contributed to the violation, the court may impose as a community control sanction or as a condition of probation a requirement that the offender undergo psychological evaluation or counseling. The court shall order the offender to pay the costs of the evaluation or counseling."
+          }
+        },
+        {
+          "conductScope": "D",
+          "penaltyDivision": "E",
+          "grade": "M1",
+          "qualification": "E(3): subsequent offense; ancillary provisions may apply.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1326,
+            "end": 3522,
+            "text": " (E)(1) Whoever violates division (B) or (E) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense. (2) Whoever violates division (C) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (3) Whoever violates section 959.01 of the Revised Code or division (D) of section 959.131 of the Revised Code is guilty of a misdemeanor of the second degree on a first offense and a misdemeanor of the first degree on each subsequent offense. (4) Whoever violates division (F) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (5) Whoever violates division (G) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree. (6)(a) A court may order a person who is convicted of or pleads guilty to a violation of section 959.131 of the Revised Code to forfeit to an impounding agency, as defined in section 959.132 of the Revised Code, any or all of the companion animals in that person's ownership or care. The court also may prohibit or place limitations on the person's ability to own or care for any companion animals for a specified or indefinite period of time. (b) A court may order a person who is convicted of or pleads guilty to a violation of division (A) of section 959.13 or section 959.131 of the Revised Code to reimburse an impounding agency for the reasonable and necessary costs incurred by the agency for the care of an animal or livestock that the agency impounded as a result of the investigation or prosecution of the violation, provided that the costs were not otherwise paid under section 959.132 of the Revised Code. (7) If a court has reason to believe that a person who is convicted of or pleads guilty to a violation of section 959.131 or 959.21 of the Revised Code has a mental or emotional disorder that contributed to the violation, the court may impose as a community control sanction or as a condition of probation a requirement that the offender undergo psychological evaluation or counseling. The court shall order the offender to pay the costs of the evaluation or counseling."
+          }
+        },
+        {
+          "conductScope": "F",
+          "penaltyDivision": "E",
+          "grade": "F5",
+          "qualification": "E(4): dog-kennel owner/manager/employee; ancillary provisions may apply.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1326,
+            "end": 3522,
+            "text": " (E)(1) Whoever violates division (B) or (E) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense. (2) Whoever violates division (C) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (3) Whoever violates section 959.01 of the Revised Code or division (D) of section 959.131 of the Revised Code is guilty of a misdemeanor of the second degree on a first offense and a misdemeanor of the first degree on each subsequent offense. (4) Whoever violates division (F) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (5) Whoever violates division (G) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree. (6)(a) A court may order a person who is convicted of or pleads guilty to a violation of section 959.131 of the Revised Code to forfeit to an impounding agency, as defined in section 959.132 of the Revised Code, any or all of the companion animals in that person's ownership or care. The court also may prohibit or place limitations on the person's ability to own or care for any companion animals for a specified or indefinite period of time. (b) A court may order a person who is convicted of or pleads guilty to a violation of division (A) of section 959.13 or section 959.131 of the Revised Code to reimburse an impounding agency for the reasonable and necessary costs incurred by the agency for the care of an animal or livestock that the agency impounded as a result of the investigation or prosecution of the violation, provided that the costs were not otherwise paid under section 959.132 of the Revised Code. (7) If a court has reason to believe that a person who is convicted of or pleads guilty to a violation of section 959.131 or 959.21 of the Revised Code has a mental or emotional disorder that contributed to the violation, the court may impose as a community control sanction or as a condition of probation a requirement that the offender undergo psychological evaluation or counseling. The court shall order the offender to pay the costs of the evaluation or counseling."
+          }
+        },
+        {
+          "conductScope": "G",
+          "penaltyDivision": "E",
+          "grade": "M1",
+          "qualification": "E(5): negligent dog-kennel conduct; ancillary provisions may apply.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 1326,
+            "end": 3522,
+            "text": " (E)(1) Whoever violates division (B) or (E) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree on a first offense and a felony of the fifth degree on each subsequent offense. (2) Whoever violates division (C) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (3) Whoever violates section 959.01 of the Revised Code or division (D) of section 959.131 of the Revised Code is guilty of a misdemeanor of the second degree on a first offense and a misdemeanor of the first degree on each subsequent offense. (4) Whoever violates division (F) of section 959.131 of the Revised Code is guilty of a felony of the fifth degree. (5) Whoever violates division (G) of section 959.131 of the Revised Code is guilty of a misdemeanor of the first degree. (6)(a) A court may order a person who is convicted of or pleads guilty to a violation of section 959.131 of the Revised Code to forfeit to an impounding agency, as defined in section 959.132 of the Revised Code, any or all of the companion animals in that person's ownership or care. The court also may prohibit or place limitations on the person's ability to own or care for any companion animals for a specified or indefinite period of time. (b) A court may order a person who is convicted of or pleads guilty to a violation of division (A) of section 959.13 or section 959.131 of the Revised Code to reimburse an impounding agency for the reasonable and necessary costs incurred by the agency for the care of an animal or livestock that the agency impounded as a result of the investigation or prosecution of the violation, provided that the costs were not otherwise paid under section 959.132 of the Revised Code. (7) If a court has reason to believe that a person who is convicted of or pleads guilty to a violation of section 959.131 or 959.21 of the Revised Code has a mental or emotional disorder that contributed to the violation, the court may impose as a community control sanction or as a condition of probation a requirement that the offender undergo psychological evaluation or counseling. The court shall order the offender to pay the costs of the evaluation or counseling."
+          }
+        }
+      ],
+      "limits": "Definitions A and exclusions H are essential. Preserve knowingly/negligently/recklessly differences; do not collapse all animal cruelty to one grade.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.131",
+      "catchline": "Prohibitions concerning companion animals",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [
+        {
+          "section": "1531.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1531.01",
+          "sourceHash": "98c2418ba541fc5189ef0fd4195fbfe8a3ced1bdf6b96a2f02a821f627a8a225",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "1717.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1717.01",
+          "sourceHash": "a6fa6dbdfa3bfa1ee8d736ccc2d0be27b9362e7ccd633cae9d2fc243eed9d7be",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "1717.061",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1717.061",
+          "sourceHash": "c6cb61f49d23c5e185e9157b3f3c83fda3627198dcd53962e05123c29dba7499",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "4741.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4741.01",
+          "sourceHash": "07a3934e3d08756527a89b84754febe8f600a1a84cf5ac5149a6f701d2c07f36",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "956.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-956.01",
+          "sourceHash": "053599fbc759c835b408b3ed4f50f831feed096c20e9d46fc4c228ba72cbd1c4",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "chapter-4741",
+          "sourceUrl": null,
+          "sourceHash": null,
+          "status": "missing_from_snapshot"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.15",
+      "sourceHash": "b079d529bb7643ad2a062abac94b56ae3010b2e389d2c51fb8a4ba0d74643e9c",
+      "conductFinding": "Knowing animal fighting/training conduct, participation-related acts, and specified witnessing/aiding.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "A",
+          "penaltyDivision": "C",
+          "grade": "M4",
+          "qualification": "",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 446,
+            "end": 644,
+            "text": " (C) Whoever violates section 959.03, 959.06, division (C) of section 959.09, 959.12, or 959.17 or division (A) of section 959.15 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        },
+        {
+          "conductScope": "B,C",
+          "penaltyDivision": "I",
+          "grade": "felony_unspecified_degree",
+          "qualification": "Statute labels felony and fine up to $10,000; no degree or prison term inferred.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 4005,
+            "end": 4506,
+            "text": " (I) Whoever violates division (B) or (C) of section 959.15 of the Revised Code is guilty of a felony and shall be fined not more than ten thousand dollars. The Legislative Service Commission presents the text of this section as a composite of the section as amended by multiple acts of the General Assembly. This presentation recognizes the principle stated in R.C. 1.52(B) that amendments are to be harmonized if reasonably capable of simultaneous operation. Last updated February 9, 2023 at 8:56 AM"
+          }
+        }
+      ],
+      "limits": "Do not incorrectly extend the A M4 grade to B/C. 2901.02(D) preserves the express felony classification but does not supply a degree. Research sentencing authority before release.",
+      "hold": "unclassified_felony_sentencing",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.15",
+      "catchline": "Animal fights",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.16",
+      "sourceHash": "feeeebabb0395b1696ba8fb214058d23fba72b4c9dbd7a54a1601b302133e04b",
+      "conductFinding": "Knowing promotion, employment, admission transactions, dog training/possession and specified dogfight attendance/witnessing.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "A",
+          "penaltyDivision": "H",
+          "grade": "F4",
+          "qualification": "First offense; subsequent offense F3. C authorizes dog seizure/impoundment and requires equipment confiscation.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 3825,
+            "end": 4005,
+            "text": " (H) Whoever violates section 959.16 of the Revised Code is guilty of a felony of the fourth degree for a first offense and a felony of the third degree on each subsequent offense."
+          }
+        },
+        {
+          "conductScope": "A",
+          "penaltyDivision": "H",
+          "grade": "F3",
+          "qualification": "Subsequent offense; preserve C seizure/confiscation provisions.",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 3825,
+            "end": 4005,
+            "text": " (H) Whoever violates section 959.16 of the Revised Code is guilty of a felony of the fourth degree for a first offense and a felony of the third degree on each subsequent offense."
+          }
+        }
+      ],
+      "limits": "B investigative authority and C enforcement provisions are not independently charged variants; read 959.161 for impoundment.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.16",
+      "catchline": "Dogfighting offenses",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [
+        {
+          "section": "2935.01",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2935.01",
+          "sourceHash": "33b5921208696224120b439bba21257e7d6c2b19b08c4b45f6aac42e3960e486",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "959.161",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.161",
+          "sourceHash": "f963fc86dd851e80d07bdc4bd004aa6116e714f65ade6859d93e9a49ec2c8116",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.17",
+      "sourceHash": "c446c7cec66143cd227f7b4ce325203ab2a1b0589cb0373a329cac0f04ef0434",
+      "conductFinding": "Use of live birds/fowl as trapshooting targets.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "whole conduct provision",
+          "penaltyDivision": "C",
+          "grade": "M4",
+          "qualification": "Textual mapping proposed; penalty list punctuation needs legal confirmation.",
+          "additionalPenalty": false,
+          "evidence": {
+            "start": 446,
+            "end": 644,
+            "text": " (C) Whoever violates section 959.03, 959.06, division (C) of section 959.09, 959.12, or 959.17 or division (A) of section 959.15 of the Revised Code is guilty of a misdemeanor of the fourth degree."
+          }
+        }
+      ],
+      "limits": "No division C exists here. Same narrow list-scope issue as 959.12; one grouped interpretation question, not a separate transcription request.",
+      "hold": "list_scope_confirmation",
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.17",
+      "catchline": "Trapshooting",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [],
+      "catalogRows": [],
+      "verificationStatus": "source_analysis_recorded_with_specific_hold",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    },
+    {
+      "section": "959.21",
+      "sourceHash": "e6d769802bcc8962605d4040f348f68bb0fe419b36709d925a414a0dd0265cdb",
+      "conductFinding": "Knowing sexual conduct with animals or possession/sale/purchase for that purpose, and organizing/promoting/aiding such acts.",
+      "penaltySection": "959.99",
+      "mappings": [
+        {
+          "conductScope": "B,C",
+          "penaltyDivision": "D",
+          "grade": "M2",
+          "qualification": "Forfeiture/disposition under D and possible counseling with costs under E(7).",
+          "additionalPenalty": true,
+          "evidence": {
+            "start": 644,
+            "end": 1326,
+            "text": " (D) Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree. In addition, the court may order the offender to forfeit the animal or livestock and may provide for its disposition, including, but not limited to, the sale of the animal or livestock. If an animal or livestock is forfeited and sold pursuant to this division, the proceeds from the sale first shall be applied to pay the expenses incurred with regard to the care of the animal from the time it was taken from the custody of the former owner. The balance of the proceeds from the sale, if any, shall be paid to the former owner of the animal."
+          }
+        }
+      ],
+      "limits": "Retain A definitions, purpose and veterinary/animal-husbandry distinction; attempt is defined separately through 2923.02.",
+      "hold": null,
+      "publicationStatus": "not_approved",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.21",
+      "catchline": "Sexual conduct with an animal",
+      "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+      "penaltySourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.99",
+      "dependencies": [
+        {
+          "section": "2923.02",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2923.02",
+          "sourceHash": "7aabf074fdf6d456ef5d5d7f2c6205bdbcfb42d9c8c3f76219caf9dd38e2d1ca",
+          "status": "cached_needs_substantive_review"
+        },
+        {
+          "section": "959.132",
+          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.132",
+          "sourceHash": "c68cdbdefa769dd97788d59deafa5856670fededb805f2a52b52cc3360656b0c",
+          "status": "cached_needs_substantive_review"
+        }
+      ],
+      "catalogRows": [],
+      "verificationStatus": "source_mapping_recorded_pending_release_validation",
+      "remainingReleaseRequirements": [
+        "Resolve relevant incorporated statutes, administrative rules, local exceptions and case law.",
+        "Confirm applicable date, sentencing dependencies and offense/variant boundaries.",
+        "Complete independent review, charging-document search/alias checks and publication approval."
+      ]
+    }
+  ]
+}

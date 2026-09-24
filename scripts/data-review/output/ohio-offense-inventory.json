@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "discoveryKind": "official_ohio_revised_code_offense_inventory",
   "publicationStatus": "discovery_only_not_published",
-  "generatedAt": "2026-09-24T15:43:07.822Z",
+  "generatedAt": "2026-09-24T17:46:55.066Z",
   "source": {
     "publisher": "Ohio Legislative Service Commission",
     "acquisitionKind": "official_whole_chapter"
@@ -17,12 +17,12 @@
     "sections": 33320,
     "repealedOrReserved": 1,
     "named_offense": 416,
-    "externally_graded_prohibition": 244,
+    "externally_graded_prohibition": 243,
     "graded_prohibition": 3,
     "prohibition_only": 1459,
-    "penalty_linked_candidate": 71,
+    "penalty_linked_candidate": 68,
     "local_grade_candidate": 315,
-    "penalty_scope_candidate": 320,
+    "penalty_scope_candidate": 324,
     "penalty_range_candidate": 237,
     "supporting": 30255,
     "namedOffences": 531,
@@ -22666,7 +22666,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.141",
       "effectiveDate": "2018-10-29",
       "contentHash": "96c21e6ea92ac49b5d070b82ec93050d3c15e0cf6bc26e6c6efb36f3ff678d26",
-      "classification": "externally_graded_prohibition",
+      "classification": "penalty_scope_candidate",
       "repealed": false,
       "sourceStatus": {
         "kind": "operative_text",
@@ -22678,13 +22678,14 @@
           "kind": "minor_misdemeanor",
           "degree": null,
           "conditional": false,
+          "additionalPenalty": true,
           "span": {
             "text": "Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
             "start": 1433,
             "end": 1611
           },
           "gradedBy": "1321.99",
-          "requiresApplicabilityReview": false,
+          "requiresApplicabilityReview": true,
           "targetScope": {
             "section": "1321.141",
             "referenceSpans": [
@@ -22695,8 +22696,10 @@
               }
             ],
             "scope": "whole_section",
-            "reviewReasons": [],
-            "requiresApplicabilityReview": false
+            "reviewReasons": [
+              "additional_penalty"
+            ],
+            "requiresApplicabilityReview": true
           },
           "context": {
             "start": 1429,
@@ -22718,7 +22721,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.592",
       "effectiveDate": "2018-10-29",
       "contentHash": "dac7cc434e79f53509a3c400f31978eb5769e983463e39a3e885dd62402c959f",
-      "classification": "penalty_linked_candidate",
+      "classification": "penalty_scope_candidate",
       "repealed": false,
       "sourceStatus": {
         "kind": "operative_text",
@@ -22730,13 +22733,14 @@
           "kind": "minor_misdemeanor",
           "degree": null,
           "conditional": false,
+          "additionalPenalty": true,
           "span": {
             "text": "Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
             "start": 1433,
             "end": 1611
           },
           "gradedBy": "1321.99",
-          "requiresApplicabilityReview": false,
+          "requiresApplicabilityReview": true,
           "targetScope": {
             "section": "1321.592",
             "referenceSpans": [
@@ -22747,8 +22751,10 @@
               }
             ],
             "scope": "whole_section",
-            "reviewReasons": [],
-            "requiresApplicabilityReview": false
+            "reviewReasons": [
+              "additional_penalty"
+            ],
+            "requiresApplicabilityReview": true
           },
           "context": {
             "start": 1429,
@@ -37614,6 +37620,17 @@
                 "start": 6301,
                 "end": 6472
               }
+            },
+            {
+              "kind": "felony",
+              "degree": "second",
+              "conditional": true,
+              "additionalPenalty": true,
+              "span": {
+                "text": "Aggravated vehicular homicide committed in violation of division (A)(2) of this section is a felony of the second degree if, at the time of the offense, the offender was driving under a suspension or",
+                "start": 6473,
+                "end": 6674
+              }
             }
           ],
           "crossReferences": [
@@ -37667,6 +37684,7 @@
               "kind": "felony",
               "degree": "fourth",
               "conditional": true,
+              "additionalPenalty": true,
               "span": {
                 "text": "Vehicular homicide committed in violation of division (A)(3) of this section is a felony of the fourth degree if, at the time of the offense, the offender was driving under a suspension or",
                 "start": 8382,
@@ -37725,6 +37743,7 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": true,
+              "additionalPenalty": true,
               "span": {
                 "text": "Vehicular manslaughter is a misdemeanor of the first degree if, at the time of the offense, the offender was driving under a suspension or",
                 "start": 10672,
@@ -37957,6 +37976,7 @@
               "kind": "felony",
               "degree": "third",
               "conditional": true,
+              "additionalPenalty": true,
               "span": {
                 "text": "Vehicular assault committed in violation of division (A)(2) of this section is a felony of the third degree if, at the time of the offense, the offender was driving under a suspension imp",
                 "start": 5042,
@@ -37971,6 +37991,17 @@
                 "text": "(3) Except as otherwise provided in this division, vehicular assault committed in violation of division (A)(3) of this section is a misdemeanor of the first degree",
                 "start": 6481,
                 "end": 6645
+              }
+            },
+            {
+              "kind": "felony",
+              "degree": "fourth",
+              "conditional": true,
+              "additionalPenalty": true,
+              "span": {
+                "text": "Vehicular assault committed in violation of division (A)(3) of this section is a felony of the fourth degree if, at the time of the offense, the offender was driving under a suspension imp",
+                "start": 6646,
+                "end": 6835
               }
             }
           ],
@@ -38248,6 +38279,17 @@
                 "text": "16 of the Revised Code, and if in relation to the previous conviction the offender was a caretaker and the victim was a person with a functional impairment under the offender's care, assault is a felony of the third degree",
                 "start": 1018,
                 "end": 1240
+              }
+            },
+            {
+              "kind": "felony",
+              "degree": "third",
+              "conditional": false,
+              "additionalPenalty": true,
+              "span": {
+                "text": "itted by a person incarcerated in the state correctional institution or by a person institutionalized in the department of youth services institution pursuant to a commitment to the department of youth services, assault is a felony of the third degree",
+                "start": 1532,
+                "end": 1783
               }
             },
             {
@@ -42884,6 +42926,7 @@
               "kind": "felony",
               "degree": "fifth",
               "conditional": true,
+              "additionalPenalty": true,
               "span": {
                 "text": "Except as otherwise provided in this division, vandalism is a felony of the fifth degree that is punishable by a fine of up to two thousand five hundred dollars in addi",
                 "start": 1787,
@@ -45973,6 +46016,7 @@
               "kind": "felony",
               "degree": "fourth",
               "conditional": true,
+              "additionalPenalty": true,
               "span": {
                 "text": "Except as otherwise provided in this division, counterfeiting is a felony of the fourth degree, and in addition, the court shall impose on the offender a fine from the range",
                 "start": 2510,
@@ -46089,6 +46133,7 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "If the offender previously has been convicted of a violation of division (B) of this section, forging identification cards or selling or distributing forged identification cards is a misdemeanor of the first degree and, in addition, the court shall impose upon the offender a fine of not less t",
                 "start": 3769,
@@ -53569,6 +53614,7 @@
               "kind": "felony",
               "degree": "fourth",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "nse for which the offender was under supervised release detention was aggravated murder, murder, any other offense for which a sentence of life imprisonment was imposed, or a felony of the first or second degree, escape is a felony of the fourth degree",
                 "start": 5517,
@@ -62091,6 +62137,7 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "If the value of the proceeds involved is less than one thousand dollars, receiving proceeds of an offense subject to forfeiture proceedings is a misdemeanor of the first degree",
                 "start": 2492,
@@ -62101,6 +62148,7 @@
               "kind": "felony",
               "degree": "fifth",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "If the value of the proceeds involved is one thousand dollars or more and is less than twenty-five thousand dollars, receiving proceeds of an offense subject to forfeiture proceedings is a felony of the fifth degree",
                 "start": 2670,
@@ -62111,6 +62159,7 @@
               "kind": "felony",
               "degree": "fourth",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "If the value of the proceeds involved is twenty-five thousand dollars or more and is less than one hundred fifty thousand dollars, receiving proceeds of an offense subject to forfeiture proceedings is a felony of the fourth degree",
                 "start": 2887,
@@ -62121,6 +62170,7 @@
               "kind": "felony",
               "degree": "third",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "If the value of the proceeds involved is one hundred fifty thousand dollars or more, receiving proceeds of an offense subject to forfeiture proceedings is a felony of the third degree",
                 "start": 3119,
@@ -64005,6 +64055,7 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": true,
+              "additionalPenalty": true,
               "span": {
                 "text": "(2) Except as otherwise provided in divisions (B)(3), (4), and (5) of this section, interference with or diminishing forfeitable property is a misdemeanor of the first degree",
                 "start": 762,
@@ -64015,6 +64066,7 @@
               "kind": "felony",
               "degree": "fifth",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "(3) If the value of the property is one thousand dollars or more but less than seven thousand five hundred dollars, interference with or diminishing forfeitable property is a felony of the fifth degree",
                 "start": 937,
@@ -64025,6 +64077,7 @@
               "kind": "felony",
               "degree": "fourth",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "(4) If the value of the property is seven thousand five hundred dollars or more but less than one hundred fifty thousand dollars, interference with or diminishing forfeitable property is a felony of the fourth degree",
                 "start": 1139,
@@ -64035,6 +64088,7 @@
               "kind": "felony",
               "degree": "third",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "(5) If the value of the property is one hundred fifty thousand dollars or more, interference with or diminishing forfeitable property is a felony of the third degree",
                 "start": 1356,
@@ -89206,6 +89260,7 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": true,
+              "additionalPenalty": true,
               "span": {
                 "text": "(1) Except as otherwise provided in division (B)(2) or (3) of this section, driving under OVI suspension is a misdemeanor of the first degree",
                 "start": 638,
@@ -89216,6 +89271,7 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "(2) If, within six years of the offense, the offender previously has been convicted of or pleaded guilty to one violation of this section or one equivalent offense, driving under OVI suspension is a misdemeanor of the first degree",
                 "start": 1973,
@@ -101013,7 +101069,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4712.071",
       "effectiveDate": "2018-10-29",
       "contentHash": "ecb26e5cc887050472a4376927d8448904144684eded52cae59a338a1f3085d9",
-      "classification": "penalty_linked_candidate",
+      "classification": "penalty_scope_candidate",
       "repealed": false,
       "sourceStatus": {
         "kind": "operative_text",
@@ -101025,13 +101081,14 @@
           "kind": "minor_misdemeanor",
           "degree": null,
           "conditional": false,
+          "additionalPenalty": true,
           "span": {
             "text": "Whoever violates section 4712.071 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
             "start": 293,
             "end": 459
           },
           "gradedBy": "4712.99",
-          "requiresApplicabilityReview": false,
+          "requiresApplicabilityReview": true,
           "targetScope": {
             "section": "4712.071",
             "referenceSpans": [
@@ -101042,8 +101099,10 @@
               }
             ],
             "scope": "whole_section",
-            "reviewReasons": [],
-            "requiresApplicabilityReview": false
+            "reviewReasons": [
+              "additional_penalty"
+            ],
+            "requiresApplicabilityReview": true
           },
           "context": {
             "start": 286,
@@ -102654,6 +102713,7 @@
             "start": 1019,
             "end": 1124
           },
+          "additionalPenalty": true,
           "gradedBy": "4725.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -102667,6 +102727,7 @@
             ],
             "scope": "whole_section",
             "reviewReasons": [
+              "additional_penalty",
               "conditional_penalty"
             ],
             "requiresApplicabilityReview": true
@@ -104612,6 +104673,7 @@
             "start": 214,
             "end": 366
           },
+          "additionalPenalty": true,
           "gradedBy": "4730.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -104625,6 +104687,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "conditional_penalty",
               "division_qualified"
             ],
@@ -105480,6 +105543,7 @@
             "start": 1014,
             "end": 1152
           },
+          "additionalPenalty": true,
           "gradedBy": "4734.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -105493,6 +105557,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "conditional_penalty",
               "division_qualified"
             ],
@@ -108098,6 +108163,7 @@
             "start": 214,
             "end": 366
           },
+          "additionalPenalty": true,
           "gradedBy": "4760.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -108111,6 +108177,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "conditional_penalty",
               "division_qualified"
             ],
@@ -108460,6 +108527,7 @@
             "start": 214,
             "end": 366
           },
+          "additionalPenalty": true,
           "gradedBy": "4762.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -108473,6 +108541,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "conditional_penalty",
               "division_qualified"
             ],
@@ -109488,6 +109557,7 @@
             "start": 214,
             "end": 366
           },
+          "additionalPenalty": true,
           "gradedBy": "4772.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -109501,6 +109571,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "conditional_penalty",
               "division_qualified"
             ],
@@ -109741,6 +109812,7 @@
             "start": 240,
             "end": 392
           },
+          "additionalPenalty": true,
           "gradedBy": "4774.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -109754,6 +109826,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "conditional_penalty",
               "division_qualified"
             ],
@@ -116637,6 +116710,7 @@
           "kind": "misdemeanor",
           "degree": "first",
           "conditional": false,
+          "additionalPenalty": true,
           "span": {
             "text": "Whoever violates division (A) of section 5589.21 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined one thousand dollars",
             "start": 408,
@@ -116655,6 +116729,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "division_qualified"
             ],
             "requiresApplicabilityReview": true
@@ -116854,7 +116929,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5589.211",
       "effectiveDate": "2000-10-27",
       "contentHash": "3271517bb5340b19cbeb7d846047dcf79cab286126c89dcf40b40494819dc1a3",
-      "classification": "penalty_linked_candidate",
+      "classification": "penalty_scope_candidate",
       "repealed": false,
       "sourceStatus": {
         "kind": "operative_text",
@@ -116866,13 +116941,14 @@
           "kind": "misdemeanor",
           "degree": "first",
           "conditional": false,
+          "additionalPenalty": true,
           "span": {
             "text": "Whoever violates section 5589.211 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined five thousand dollars",
             "start": 568,
             "end": 709
           },
           "gradedBy": "5589.99",
-          "requiresApplicabilityReview": false,
+          "requiresApplicabilityReview": true,
           "targetScope": {
             "section": "5589.211",
             "referenceSpans": [
@@ -116883,8 +116959,10 @@
               }
             ],
             "scope": "whole_section",
-            "reviewReasons": [],
-            "requiresApplicabilityReview": false
+            "reviewReasons": [
+              "additional_penalty"
+            ],
+            "requiresApplicabilityReview": true
           },
           "context": {
             "start": 564,
@@ -118286,6 +118364,7 @@
             "start": 1760,
             "end": 1871
           },
+          "additionalPenalty": true,
           "gradedBy": "5739.99",
           "requiresApplicabilityReview": true,
           "targetScope": {
@@ -118299,6 +118378,7 @@
             ],
             "scope": "division_qualified",
             "reviewReasons": [
+              "additional_penalty",
               "division_qualified"
             ],
             "requiresApplicabilityReview": true

@@ -5,8 +5,8 @@
   "inputs": {
     "enumerationHash": "80695049cd2442fe1546b6c76e5ea35ee7377998646979b9003580889eca2892",
     "enumerationGeneratedAt": "2026-09-24T06:00:19.180Z",
-    "inventoryHash": "3f55856e2f53956f24de7a314d5d0c2cce0c8a7f2af0214f5e1f84556a4a5859",
-    "reconciliationHash": "0bf33ca3cf307af63fd34a51d9a110011927f66f7c4839f005f83e31ff3e4278"
+    "inventoryHash": "e51af2e54b36dd4618f24d618db0a48bfb05b24301ece0301e81b4d5468d60e3",
+    "reconciliationHash": "4b1c3247a5d519099b167667eab16c8f1e4d79dddf1b27de3850664d698801e9"
   },
   "limitations": [
     "Groups are research routing, not legal determinations; signal snippets may describe exceptions or administration.",
@@ -17,9 +17,9 @@
     "The rest of the legacy unresolved backlog is accounted for but not substantively investigated here."
   ],
   "totals": {
-    "candidates": 71,
+    "candidates": 68,
     "candidateGroups": {
-      "broader_prohibition_wording": 52,
+      "broader_prohibition_wording": 49,
       "affirmative_duty_or_administration": 16,
       "other_dependency_context": 3
     },
@@ -57,6 +57,16 @@
       "repeatedClauseReadsAvoidable": 525,
       "affectedSections": 759,
       "affectedCatalogRows": 10
+    },
+    "substantiveAnalysis": {
+      "analyzedSections": 51,
+      "penaltyMappings": 84,
+      "pinnedAuthorities": 59,
+      "specificHoldSections": 10,
+      "legacyRowsCovered": 10,
+      "approvedForPublication": 0,
+      "discoveryRowsWithRecordedAnalysis": 6,
+      "discoveryRowsWithoutRecordedAnalysis": 14
     }
   },
   "candidates": [
@@ -858,65 +868,6 @@
           },
           "sourceHash": "aa6e9ce88cfe759c3f0bac19c23a17e7accbdefb4a07138cd913019f7c129727",
           "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1127.99"
-        }
-      ],
-      "disposition": "engineering_investigation_not_approved"
-    },
-    {
-      "section": "1321.592",
-      "catchline": "Prohibited general loans by registrants",
-      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.592",
-      "contentHash": "dac7cc434e79f53509a3c400f31978eb5769e983463e39a3e885dd62402c959f",
-      "effectiveDate": "2018-10-29",
-      "group": "broader_prohibition_wording",
-      "rangeReferenceCount": 0,
-      "prohibitionSignal": {
-        "start": 18,
-        "end": 207,
-        "text": "shall not make a loan under sections 1321.51 to 1321.60 of the Revised Code that meets either of the following conditions: (1) The amount of the loan is one thousand dollars or less. (2) Th"
-      },
-      "dutySignal": {
-        "start": 18,
-        "end": 203,
-        "text": "shall not make a loan under sections 1321.51 to 1321.60 of the Revised Code that meets either of the following conditions: (1) The amount of the loan is one thousand dollars or less. (2"
-      },
-      "context": {
-        "start": 0,
-        "end": 280,
-        "text": "( A) A registrant shall not make a loan under sections 1321.51 to 1321.60 of the Revised Code that meets either of the following conditions: (1) The amount of the loan is one thousand dollars or less. (2) The loan has a duration of one year or less. (B) A registrant shall not eng"
-      },
-      "penaltyEvidence": [
-        {
-          "kind": "minor_misdemeanor",
-          "degree": null,
-          "conditional": false,
-          "span": {
-            "text": "Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
-            "start": 1433,
-            "end": 1611
-          },
-          "gradedBy": "1321.99",
-          "requiresApplicabilityReview": false,
-          "targetScope": {
-            "section": "1321.592",
-            "referenceSpans": [
-              {
-                "start": 1466,
-                "end": 1478,
-                "text": " or 1321.592"
-              }
-            ],
-            "scope": "whole_section",
-            "reviewReasons": [],
-            "requiresApplicabilityReview": false
-          },
-          "context": {
-            "start": 1429,
-            "end": 1612,
-            "text": "(H) Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars."
-          },
-          "sourceHash": "a850e2ac40e7ebfeeedaa365a497379f7ab9dadb3bb891846010c532b6f635f2",
-          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.99"
         }
       ],
       "disposition": "engineering_investigation_not_approved"
@@ -3065,65 +3016,6 @@
       "disposition": "engineering_investigation_not_approved"
     },
     {
-      "section": "4712.071",
-      "catchline": "Prohibited extensions of credit",
-      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4712.071",
-      "contentHash": "ecb26e5cc887050472a4376927d8448904144684eded52cae59a338a1f3085d9",
-      "effectiveDate": "2018-10-29",
-      "group": "broader_prohibition_wording",
-      "rangeReferenceCount": 0,
-      "prohibitionSignal": {
-        "start": 0,
-        "end": 217,
-        "text": "No credit services organization shall sell, provide, or perform any of the services authorized under division (C)(1) of section 4712.01 of the Revised Code in connection with an extension of credit that meets any of t"
-      },
-      "dutySignal": {
-        "start": 32,
-        "end": 217,
-        "text": "shall sell, provide, or perform any of the services authorized under division (C)(1) of section 4712.01 of the Revised Code in connection with an extension of credit that meets any of t"
-      },
-      "context": {
-        "start": 0,
-        "end": 280,
-        "text": "No credit services organization shall sell, provide, or perform any of the services authorized under division (C)(1) of section 4712.01 of the Revised Code in connection with an extension of credit that meets any of the following conditions: (A) The amount of credit is less than "
-      },
-      "penaltyEvidence": [
-        {
-          "kind": "minor_misdemeanor",
-          "degree": null,
-          "conditional": false,
-          "span": {
-            "text": "Whoever violates section 4712.071 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
-            "start": 293,
-            "end": 459
-          },
-          "gradedBy": "4712.99",
-          "requiresApplicabilityReview": false,
-          "targetScope": {
-            "section": "4712.071",
-            "referenceSpans": [
-              {
-                "start": 310,
-                "end": 326,
-                "text": "section 4712.071"
-              }
-            ],
-            "scope": "whole_section",
-            "reviewReasons": [],
-            "requiresApplicabilityReview": false
-          },
-          "context": {
-            "start": 286,
-            "end": 460,
-            "text": "(B)(1) Whoever violates section 4712.071 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars."
-          },
-          "sourceHash": "9c0df1ae21f1fe8bcf30c341630cdd44e2b856ec63313b60b06cf05c0e075d2c",
-          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4712.99"
-        }
-      ],
-      "disposition": "engineering_investigation_not_approved"
-    },
-    {
       "section": "4725.56",
       "catchline": "Prohibiting payment for referrals",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4725.56",
@@ -4101,65 +3993,6 @@
         }
       ],
       "disposition": "engineering_investigation_not_approved"
-    },
-    {
-      "section": "5589.211",
-      "catchline": "Abandoned locomotive obstructing street or road",
-      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5589.211",
-      "contentHash": "3271517bb5340b19cbeb7d846047dcf79cab286126c89dcf40b40494819dc1a3",
-      "effectiveDate": "2000-10-27",
-      "group": "broader_prohibition_wording",
-      "rangeReferenceCount": 0,
-      "prohibitionSignal": {
-        "start": 0,
-        "end": 205,
-        "text": "No railroad company shall obstruct, or permit or cause to be obstructed, a public street, road, or highway, by permitting any part of a train whose crew has abandoned the locomotive to remain across it for"
-      },
-      "dutySignal": {
-        "start": 20,
-        "end": 205,
-        "text": "shall obstruct, or permit or cause to be obstructed, a public street, road, or highway, by permitting any part of a train whose crew has abandoned the locomotive to remain across it for"
-      },
-      "context": {
-        "start": 0,
-        "end": 280,
-        "text": "No railroad company shall obstruct, or permit or cause to be obstructed, a public street, road, or highway, by permitting any part of a train whose crew has abandoned the locomotive to remain across it for longer than five minutes to the hindrance or inconvenience of travelers or"
-      },
-      "penaltyEvidence": [
-        {
-          "kind": "misdemeanor",
-          "degree": "first",
-          "conditional": false,
-          "span": {
-            "text": "Whoever violates section 5589.211 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined five thousand dollars",
-            "start": 568,
-            "end": 709
-          },
-          "gradedBy": "5589.99",
-          "requiresApplicabilityReview": false,
-          "targetScope": {
-            "section": "5589.211",
-            "referenceSpans": [
-              {
-                "start": 585,
-                "end": 601,
-                "text": "section 5589.211"
-              }
-            ],
-            "scope": "whole_section",
-            "reviewReasons": [],
-            "requiresApplicabilityReview": false
-          },
-          "context": {
-            "start": 564,
-            "end": 710,
-            "text": "(E) Whoever violates section 5589.211 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined five thousand dollars."
-          },
-          "sourceHash": "c473bc1e7430288c1ebf1ab19ebd4c63b733639e3e1fe672e1b49337057a9875",
-          "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5589.99"
-        }
-      ],
-      "disposition": "engineering_investigation_not_approved"
     }
   ],
   "legacy": [
@@ -4280,6 +4113,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "Whoever violates this division is guilty of a misdemeanor of the third degree on a first offense and a misdemeanor of the second degree on each subsequent offense.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4330,6 +4164,13 @@
       ],
       "penaltyRangeIds": [],
       "context": "(D) Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree.",
+      "recordedSourceAnalysis": {
+        "report": "ohio-penalty-verification-batch-one.json",
+        "sourceHash": "ef80ffc5acc388d03ec5e7d391eb96b63b18cf71f4e5dec48af2ea76048e18f9",
+        "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+        "status": "source_mapping_recorded_pending_release_validation",
+        "hold": null
+      },
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4358,6 +4199,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "A person guilty of any of the following acts may be punished as for a contempt: (A) Disobedience of, or resistance to, a lawful writ, process, order, rule, judgment, or command of a court or officer; (B) Misbehavior of an officer of the court in the performance of official duties, or in official transactions; (C) A failure to obey a subpoena duly served, or a refusal to be sworn or to answer as a witness, when lawfully required; (D) The rescue, or attempted rescue, of a person or of property in the custody of an officer by virtue of an order or process of court held by the officer; (E) A failu",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4386,6 +4228,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "As provided in section 4511.01 of the Revised Code, the definitions set forth in that section apply to this chapter.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4426,6 +4269,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(A)(1) No person shall operate, or permit the operation of, a motor vehicle in this state, unless proof of financial responsibility is maintained continuously throughout the registration period with respect to that vehicle, or, in the case of a driver who is not the owner, with respect to that driver's operation of that vehicle. (2) Whoever violates division (A)(1) of this section shall be subject to the following civil penalties: (a) Subject to divisions (A)(2)(b) and (c) of this section, a class (F) suspension of the person's driver's license, commercial driver's license, temporary instructi",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4470,6 +4314,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(H) Whoever violates this section is guilty of a minor misdemeanor.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4514,6 +4359,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(D) Whoever violates this section is guilty of a minor misdemeanor.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4542,6 +4388,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "Except as otherwise provided by division rule, any person desiring to collect or possess wild animals that are protected by law or their nests or eggs for scientific study, school instruction, other educational uses, or rehabilitation shall make an annual application to the chief of the division of wildlife for a wild animal permit on a form furnished by the chief. Each applicant for a wild animal permit, other than an applicant desiring to rehabilitate wild animals, shall pay an annual fee of twenty-five dollars for each permit. No fee shall be charged to an applicant desiring to rehabilitate",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4694,6 +4541,13 @@
       ],
       "penaltyRangeIds": [],
       "context": "(C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree.",
+      "recordedSourceAnalysis": {
+        "report": "ohio-penalty-verification-batch-one.json",
+        "sourceHash": "73508aea96c68f3b4060cf8fe0584187ba3bcdebde3ab2b28b6e944542d80e91",
+        "penaltySourceHash": "9b139d97866fd196e2ab0f294f15785a93a8f14338659d8bcce314d1887a333a",
+        "status": "source_mapping_recorded_pending_release_validation",
+        "hold": null
+      },
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4745,6 +4599,13 @@
       ],
       "penaltyRangeIds": [],
       "context": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree.",
+      "recordedSourceAnalysis": {
+        "report": "ohio-penalty-verification-batch-one.json",
+        "sourceHash": "3c9e27db85cd51887727b3f7339a5bfb070ea78dee0e4604fdbf93925588cbbb",
+        "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+        "status": "source_mapping_recorded_pending_release_validation",
+        "hold": null
+      },
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4829,6 +4690,13 @@
       ],
       "penaltyRangeIds": [],
       "context": "(C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree.",
+      "recordedSourceAnalysis": {
+        "report": "ohio-penalty-verification-batch-one.json",
+        "sourceHash": "c5a5f3d3764427af42fe12c2cc6d33e30210cbf39222bfead001837d04fd851e",
+        "penaltySourceHash": "f4d5f082733a78e70e4b205b53c0b7e471ecf11190df1b627934a48823405576",
+        "status": "source_mapping_recorded_pending_release_validation",
+        "hold": null
+      },
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4888,6 +4756,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(C) A violation of this section is a misdemeanor of the fourth degree, except that the violation is a misdemeanor of the first degree if the hazing causes serious physical harm.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4939,6 +4808,13 @@
       ],
       "penaltyRangeIds": [],
       "context": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree.",
+      "recordedSourceAnalysis": {
+        "report": "ohio-penalty-verification-batch-one.json",
+        "sourceHash": "3c9e27db85cd51887727b3f7339a5bfb070ea78dee0e4604fdbf93925588cbbb",
+        "penaltySourceHash": "6d570ba2199d5ebf7ea96f14aca49d779638c6ed95b5924fa62636e67095969b",
+        "status": "source_mapping_recorded_pending_release_validation",
+        "hold": null
+      },
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -4983,6 +4859,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(D)(1) Whoever violates division (A) or (B) of this section is guilty of a misdemeanor of the first degree.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -5027,6 +4904,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(H) Whoever violates this section is guilty of a minor misdemeanor.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -5077,6 +4955,13 @@
       ],
       "penaltyRangeIds": [],
       "context": "(D) Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree.",
+      "recordedSourceAnalysis": {
+        "report": "ohio-penalty-verification-batch-one.json",
+        "sourceHash": "ef80ffc5acc388d03ec5e7d391eb96b63b18cf71f4e5dec48af2ea76048e18f9",
+        "penaltySourceHash": "a0b7536d12448b69051515cea52a33f1b7b469b1e36faaa8b8248f3bbbc22898",
+        "status": "source_mapping_recorded_pending_release_validation",
+        "hold": null
+      },
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -5105,6 +4990,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(A) During a period of community control, any field officer or probation officer may arrest the person under a community control sanction without a warrant and bring the person before the judge or magistrate before whom the cause was pending. During a period of community control, any peace officer may arrest the person under a community control sanction without a warrant upon the written order of the chief probation officer of the probation agency if the person under a community control sanction is under the supervision of that probation agency or on the order of an officer of the adult parole",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -5179,6 +5065,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(B) Except as otherwise provided in this division, whoever violates this section is guilty of a minor misdemeanor.",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -5219,6 +5106,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "(A) No parent, guardian, or other person having care of a child of compulsory school age shall violate any provision of section 3321.01, 3321.03, 3321.04, 3321.07, 3321.10, 3321.19, 3321.20, or 3331.14 of the Revised Code. The juvenile court, which has exclusive original jurisdiction over any violation of this section pursuant to section 2151.23 of the Revised Code, may require a person convicted of violating this division to give bond in a sum of not more than five hundred dollars with sureties to the approval of the court, conditioned that the person will cause the child under the person's c",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     },
     {
@@ -5247,6 +5135,7 @@
       "externalGrades": [],
       "penaltyRangeIds": [],
       "context": "An annual license tax is hereby levied upon the operation of motor vehicles on the public roads or highways, for the purpose of enforcing and paying the expense of administering the law relative to the registration and operation of such vehicles; planning, constructing, maintaining, and repairing public roads, highways, and streets; maintaining and repairing bridges and viaducts; paying the counties' proportion of the cost and expenses of cooperating with the department of transportation in the planning, improvement, and construction of state highways; paying the counties' portion of the compe",
+      "recordedSourceAnalysis": null,
       "disposition": "research_only_no_catalog_or_review_decision"
     }
   ],
@@ -32644,7 +32533,9 @@
         "end": 1612,
         "text": "(H) Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars."
       },
-      "reviewReasons": [],
+      "reviewReasons": [
+        "additional_penalty"
+      ],
       "ranges": [],
       "targets": [
         {
@@ -32652,7 +32543,7 @@
           "catchline": "Small loan requirements and restrictions",
           "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.141",
           "sourceHash": "96c21e6ea92ac49b5d070b82ec93050d3c15e0cf6bc26e6c6efb36f3ff678d26",
-          "classification": "externally_graded_prohibition",
+          "classification": "penalty_scope_candidate",
           "sourceStatus": {
             "kind": "operative_text",
             "asOf": "2026-09-23"
@@ -32668,13 +32559,14 @@
               "kind": "minor_misdemeanor",
               "degree": null,
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
                 "start": 1433,
                 "end": 1611
               },
               "gradedBy": "1321.99",
-              "requiresApplicabilityReview": false,
+              "requiresApplicabilityReview": true,
               "targetScope": {
                 "section": "1321.141",
                 "referenceSpans": [
@@ -32685,8 +32577,10 @@
                   }
                 ],
                 "scope": "whole_section",
-                "reviewReasons": [],
-                "requiresApplicabilityReview": false
+                "reviewReasons": [
+                  "additional_penalty"
+                ],
+                "requiresApplicabilityReview": true
               },
               "context": {
                 "start": 1429,
@@ -32706,7 +32600,7 @@
           "catchline": "Prohibited general loans by registrants",
           "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1321.592",
           "sourceHash": "dac7cc434e79f53509a3c400f31978eb5769e983463e39a3e885dd62402c959f",
-          "classification": "penalty_linked_candidate",
+          "classification": "penalty_scope_candidate",
           "sourceStatus": {
             "kind": "operative_text",
             "asOf": "2026-09-23"
@@ -32722,13 +32616,14 @@
               "kind": "minor_misdemeanor",
               "degree": null,
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "Whoever violates section 1321.141 or 1321.592 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
                 "start": 1433,
                 "end": 1611
               },
               "gradedBy": "1321.99",
-              "requiresApplicabilityReview": false,
+              "requiresApplicabilityReview": true,
               "targetScope": {
                 "section": "1321.592",
                 "referenceSpans": [
@@ -32739,8 +32634,10 @@
                   }
                 ],
                 "scope": "whole_section",
-                "reviewReasons": [],
-                "requiresApplicabilityReview": false
+                "reviewReasons": [
+                  "additional_penalty"
+                ],
+                "requiresApplicabilityReview": true
               },
               "context": {
                 "start": 1429,
@@ -44295,7 +44192,9 @@
         "end": 460,
         "text": "(B)(1) Whoever violates section 4712.071 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars."
       },
-      "reviewReasons": [],
+      "reviewReasons": [
+        "additional_penalty"
+      ],
       "ranges": [],
       "targets": [
         {
@@ -44303,7 +44202,7 @@
           "catchline": "Prohibited extensions of credit",
           "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4712.071",
           "sourceHash": "ecb26e5cc887050472a4376927d8448904144684eded52cae59a338a1f3085d9",
-          "classification": "penalty_linked_candidate",
+          "classification": "penalty_scope_candidate",
           "sourceStatus": {
             "kind": "operative_text",
             "asOf": "2026-09-23"
@@ -44319,13 +44218,14 @@
               "kind": "minor_misdemeanor",
               "degree": null,
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "Whoever violates section 4712.071 of the Revised Code is guilty of a minor misdemeanor and shall be fined not less than one hundred nor more than five hundred dollars",
                 "start": 293,
                 "end": 459
               },
               "gradedBy": "4712.99",
-              "requiresApplicabilityReview": false,
+              "requiresApplicabilityReview": true,
               "targetScope": {
                 "section": "4712.071",
                 "referenceSpans": [
@@ -44336,8 +44236,10 @@
                   }
                 ],
                 "scope": "whole_section",
-                "reviewReasons": [],
-                "requiresApplicabilityReview": false
+                "reviewReasons": [
+                  "additional_penalty"
+                ],
+                "requiresApplicabilityReview": true
               },
               "context": {
                 "start": 286,
@@ -44368,6 +44270,7 @@
         "text": "(F) Whoever violates section 4725.22 of the Revised Code is guilty of a minor misdemeanor for a first offense; for each subsequent offense, such person shall be fined up to one thousand dollars."
       },
       "reviewReasons": [
+        "additional_penalty",
         "conditional_penalty"
       ],
       "ranges": [],
@@ -44398,6 +44301,7 @@
                 "start": 1019,
                 "end": 1124
               },
+              "additionalPenalty": true,
               "gradedBy": "4725.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -44411,6 +44315,7 @@
                 ],
                 "scope": "whole_section",
                 "reviewReasons": [
+                  "additional_penalty",
                   "conditional_penalty"
                 ],
                 "requiresApplicabilityReview": true
@@ -45054,6 +44959,7 @@
         "text": "(B)(1) Whoever violates division (B)(1), (C)(1), (C)(2), (D), or (E) of section 4730.32 of the Revised Code is guilty of a minor misdemeanor on a first offense; on each subsequent offense the person is guilty of a misdemeanor of the fourth degree, except that an individual guilty of a subsequent offense shall not be subject to imprisonment, but to a fine alone of up to one thousand dollars for each offense."
       },
       "reviewReasons": [
+        "additional_penalty",
         "conditional_penalty",
         "division_qualified"
       ],
@@ -45085,6 +44991,7 @@
                 "start": 214,
                 "end": 366
               },
+              "additionalPenalty": true,
               "gradedBy": "4730.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -45098,6 +45005,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "conditional_penalty",
                   "division_qualified"
                 ],
@@ -45506,6 +45414,7 @@
         "text": "(C) Whoever violates division (A), (B), (C), or (D) of section 4734.32 of the Revised Code is guilty of a minor misdemeanor on a first offense; on each subsequent offense, the person is guilty of a misdemeanor of the fourth degree, except that an individual guilty of a subsequent offense shall not be subject to imprisonment, but to a fine alone of up to one thousand dollars for each offense."
       },
       "reviewReasons": [
+        "additional_penalty",
         "conditional_penalty",
         "division_qualified"
       ],
@@ -45537,6 +45446,7 @@
                 "start": 1014,
                 "end": 1152
               },
+              "additionalPenalty": true,
               "gradedBy": "4734.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -45550,6 +45460,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "conditional_penalty",
                   "division_qualified"
                 ],
@@ -46346,6 +46257,7 @@
         "text": "(B)(1) Whoever violates division (B)(1), (C)(1), (C)(2), (D), or (E) of section 4760.16 of the Revised Code is guilty of a minor misdemeanor on a first offense; on each subsequent offense the person is guilty of a misdemeanor of the fourth degree, except that an individual guilty of a subsequent offense shall not be subject to imprisonment, but to a fine alone of up to one thousand dollars for each offense."
       },
       "reviewReasons": [
+        "additional_penalty",
         "conditional_penalty",
         "division_qualified"
       ],
@@ -46377,6 +46289,7 @@
                 "start": 214,
                 "end": 366
               },
+              "additionalPenalty": true,
               "gradedBy": "4760.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -46390,6 +46303,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "conditional_penalty",
                   "division_qualified"
                 ],
@@ -46886,6 +46800,7 @@
         "text": "(B)(1) Whoever violates division (B)(1), (C)(1), (C)(2), (D), or (E) of section 4762.16 of the Revised Code is guilty of a minor misdemeanor on a first offense; on each subsequent offense the person is guilty of a misdemeanor of the fourth degree, except that an individual guilty of a subsequent offense shall not be subject to imprisonment, but to a fine alone of up to one thousand dollars for each offense."
       },
       "reviewReasons": [
+        "additional_penalty",
         "conditional_penalty",
         "division_qualified"
       ],
@@ -46917,6 +46832,7 @@
                 "start": 214,
                 "end": 366
               },
+              "additionalPenalty": true,
               "gradedBy": "4762.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -46930,6 +46846,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "conditional_penalty",
                   "division_qualified"
                 ],
@@ -47806,6 +47723,7 @@
         "text": "(B)(1) Whoever violates division (B)(1), (C)(1), (C)(2), (D), or (E) of section 4772.23 of the Revised Code is guilty of a minor misdemeanor on a first offense; on each subsequent offense the person is guilty of a misdemeanor of the fourth degree, except that an individual guilty of a subsequent offense shall not be subject to imprisonment, but to a fine alone of up to one thousand dollars for each offense."
       },
       "reviewReasons": [
+        "additional_penalty",
         "conditional_penalty",
         "division_qualified"
       ],
@@ -47837,6 +47755,7 @@
                 "start": 214,
                 "end": 366
               },
+              "additionalPenalty": true,
               "gradedBy": "4772.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -47850,6 +47769,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "conditional_penalty",
                   "division_qualified"
                 ],
@@ -48192,6 +48112,7 @@
         "text": "(B)(1) Whoever violates division (B)(1), (C)(1), (C)(2), (D), or (E) of section 4774.16 of the Revised Code is guilty of a minor misdemeanor on a first offense; on each subsequent offense the person is guilty of a misdemeanor of the fourth degree, except that an individual guilty of a subsequent offense shall not be subject to imprisonment, but to a fine alone of up to one thousand dollars for each offense."
       },
       "reviewReasons": [
+        "additional_penalty",
         "conditional_penalty",
         "division_qualified"
       ],
@@ -48223,6 +48144,7 @@
                 "start": 240,
                 "end": 392
               },
+              "additionalPenalty": true,
               "gradedBy": "4774.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -48236,6 +48158,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "conditional_penalty",
                   "division_qualified"
                 ],
@@ -49948,6 +49871,7 @@
         "text": "(D) Whoever violates division (A) of section 5589.21 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined one thousand dollars."
       },
       "reviewReasons": [
+        "additional_penalty",
         "division_qualified"
       ],
       "ranges": [],
@@ -49973,6 +49897,7 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "Whoever violates division (A) of section 5589.21 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined one thousand dollars",
                 "start": 408,
@@ -49991,6 +49916,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "division_qualified"
                 ],
                 "requiresApplicabilityReview": true
@@ -50023,7 +49949,9 @@
         "end": 710,
         "text": "(E) Whoever violates section 5589.211 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined five thousand dollars."
       },
-      "reviewReasons": [],
+      "reviewReasons": [
+        "additional_penalty"
+      ],
       "ranges": [],
       "targets": [
         {
@@ -50031,7 +49959,7 @@
           "catchline": "Abandoned locomotive obstructing street or road",
           "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-5589.211",
           "sourceHash": "3271517bb5340b19cbeb7d846047dcf79cab286126c89dcf40b40494819dc1a3",
-          "classification": "penalty_linked_candidate",
+          "classification": "penalty_scope_candidate",
           "sourceStatus": {
             "kind": "operative_text",
             "asOf": "2026-09-23"
@@ -50047,13 +49975,14 @@
               "kind": "misdemeanor",
               "degree": "first",
               "conditional": false,
+              "additionalPenalty": true,
               "span": {
                 "text": "Whoever violates section 5589.211 of the Revised Code is guilty of a misdemeanor of the first degree and shall be fined five thousand dollars",
                 "start": 568,
                 "end": 709
               },
               "gradedBy": "5589.99",
-              "requiresApplicabilityReview": false,
+              "requiresApplicabilityReview": true,
               "targetScope": {
                 "section": "5589.211",
                 "referenceSpans": [
@@ -50064,8 +49993,10 @@
                   }
                 ],
                 "scope": "whole_section",
-                "reviewReasons": [],
-                "requiresApplicabilityReview": false
+                "reviewReasons": [
+                  "additional_penalty"
+                ],
+                "requiresApplicabilityReview": true
               },
               "context": {
                 "start": 564,
@@ -50324,6 +50255,7 @@
         "text": "The motor vehicles and goods of any person charged with violating division (A)(2) of section 5739.31 of the Revised Code may be impounded and held pending the disposition of the charge, and may be sold at auction by the county sheriff in the manner prescribed by law to satisfy any fine imposed by this division.(3) Whoever violates division (B) of section 5739.31 of the Revised Code is guilty of a felony of the fourth degree."
       },
       "reviewReasons": [
+        "additional_penalty",
         "division_qualified"
       ],
       "ranges": [],
@@ -50354,6 +50286,7 @@
                 "start": 1760,
                 "end": 1871
               },
+              "additionalPenalty": true,
               "gradedBy": "5739.99",
               "requiresApplicabilityReview": true,
               "targetScope": {
@@ -50367,6 +50300,7 @@
                 ],
                 "scope": "division_qualified",
                 "reviewReasons": [
+                  "additional_penalty",
                   "division_qualified"
                 ],
                 "requiresApplicabilityReview": true

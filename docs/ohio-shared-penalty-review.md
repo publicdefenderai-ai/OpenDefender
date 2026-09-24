@@ -1,5 +1,8 @@
 # Ohio shared penalty review: fewer false flags, larger research batches
 
+**Substantive follow-up:** [The 51-section verification batch](ohio-verification-batch-one.md)
+records the conduct and penalty findings for the first four priority sources and four fine cases.
+
 This batch combines the two PR #3 review findings with shared-source research
 assembly. It uses the unchanged September 23 snapshot. No catalog, runtime,
 reviewed decision, publication gate or production database is changed.

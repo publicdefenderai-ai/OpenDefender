@@ -31,6 +31,8 @@ export interface OhioOffenceGrade {
   kind: OhioOffenceGradeKind;
   degree: string | null;
   conditional: boolean;
+  /** Degree alone does not describe all punishment in the matched context. */
+  additionalPenalty?: true;
   span: OhioTextSpan;
 }
 
@@ -161,6 +163,10 @@ const GRADE_CLAUSE = new RegExp(
   "gi",
 );
 
+export function hasAdditionalOhioPenalty(text: string): boolean {
+  return /\b(?:fined?|fines|forfeit\w*|imprison\w*|incarcerat\w*|suspension|revocation|suspended|revoked|community\s+service)\b/i.test(text);
+}
+
 function gradeFrom(
   kindWord: string | undefined,
   degreeWord: string | undefined,
@@ -175,13 +181,14 @@ function gradeFrom(
       : (kindWord?.toLowerCase() as "felony" | "misdemeanor" | undefined) ?? "unclassified",
     degree: degreeWord ? degreeWord.toLowerCase() : null,
     conditional,
+    ...(hasAdditionalOhioPenalty(matchText) ? { additionalPenalty: true as const } : {}),
     span: { text: normalize(matchText), start, end: start + matchText.length },
   };
 }
 
 function pushGrade(grades: OhioOffenceGrade[], grade: OhioOffenceGrade): void {
-  const key = `${grade.kind}|${grade.degree}|${grade.conditional}`;
-  if (grades.some(existing => `${existing.kind}|${existing.degree}|${existing.conditional}` === key)) return;
+  const key = `${grade.kind}|${grade.degree}|${grade.conditional}|${Boolean(grade.additionalPenalty)}`;
+  if (grades.some(existing => `${existing.kind}|${existing.degree}|${existing.conditional}|${Boolean(existing.additionalPenalty)}` === key)) return;
   grades.push(grade);
 }
 
@@ -354,6 +361,7 @@ const PENALTY_LINKAGE = new RegExp(
 function penaltyTargetScopes(reference: string, referenceStart: number, sentence: string,
   targets: string[]): OhioPenaltyTargetScope[] {
   const shared: string[] = [];
+  if (hasAdditionalOhioPenalty(sentence)) shared.push("additional_penalty");
   if (/\b(?:except|unless|if|when|previously|notwithstanding|provided)\b|\b(?:first|second|third|subsequent)\s+(?:offense|violation)/i.test(sentence)) shared.push("conditional_penalty");
   if (/\bbeing\b/i.test(reference)) shared.push("actor_qualification");
   if (/\b(?:prior\s+to|on\s+or\s+after|before|after)\b|(?<![\d.])\b(?:18|19|20)\d{2}\b(?![\d.])/i.test(sentence)) shared.push("temporal_condition");
@@ -426,7 +434,8 @@ export function extractOhioPenaltyLinkages(
       } })),
       context: { start: sentence.start, end: sentence.start + sentence.text.length, text: sentence.text },
       requiresApplicabilityReview: rangeMatches.length > 0 || targetScopes.some(target => target.requiresApplicabilityReview),
-      grade: gradeFrom(match[2], match[3], match[4], conditional, match[0], start),
+      grade: { ...gradeFrom(match[2], match[3], match[4], conditional, match[0], start),
+        ...(hasAdditionalOhioPenalty(sentence.text) ? { additionalPenalty: true as const } : {}) },
       span: { text: normalize(match[0]), start, end: start + match[0].length },
     });
   }

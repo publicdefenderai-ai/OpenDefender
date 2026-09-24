@@ -1,5 +1,6 @@
 /** Offline triage, not legal determinations or publication decisions. */
 import fs from "node:fs";
+import { verifyOhioBatch, type VerificationBatch } from "./ohio-verification/verify-batch";
 import { groupOhioPenaltyResearch } from "./ohio-discovery/penalty-groups";
 import path from "node:path";
 import { createHash } from "node:crypto";
@@ -109,6 +110,11 @@ export function investigateOhioDiscovery(root = process.cwd(), validatedReplay?:
   const chapters = fs.readdirSync(cacheDir).filter(file => file.endsWith(".json")).sort()
     .map(file => JSON.parse(fs.readFileSync(path.join(cacheDir, file), "utf8")) as OhioCachedChapter);
   const sources = new Map(chapters.flatMap(chapter => chapter.sections.map(section => [section.section, section] as const)));
+  const recordedBatchPath = path.join(root, "scripts/data-review/ohio-verification/batch-one.json");
+  const recordedAnalysis = fs.existsSync(recordedBatchPath)
+    ? verifyOhioBatch(JSON.parse(fs.readFileSync(recordedBatchPath, "utf8")) as VerificationBatch,
+      sources, read("ohio-code-enumeration.json"), reconciliation.rows) : null;
+  const analyzedBySection = new Map(recordedAnalysis?.rows.map(row => [row.section, row]) ?? []);
   const source = (number: string) => {
     const row = sources.get(number);
     if (!row) throw new Error(`Missing investigation evidence: ${number}`);
@@ -152,6 +158,13 @@ export function investigateOhioDiscovery(root = process.cwd(), validatedReplay?:
       section: row.section, group: plan.group, finding: plan.finding, next: plan.next, evidence: anchors,
       localGrades: current?.localGrades ?? [], externalGrades: current?.externalGrades ?? [],
       penaltyRangeIds: current?.penaltyRangeIds ?? [], context: row.evidence,
+      recordedSourceAnalysis: row.section && analyzedBySection.has(row.section) ? {
+        report: "ohio-penalty-verification-batch-one.json",
+        sourceHash: analyzedBySection.get(row.section)!.sourceHash,
+        penaltySourceHash: analyzedBySection.get(row.section)!.penaltySourceHash,
+        status: analyzedBySection.get(row.section)!.verificationStatus,
+        hold: analyzedBySection.get(row.section)!.hold,
+      } : null,
       disposition: "research_only_no_catalog_or_review_decision" };
   });
   const statusAudit = [...sources.values()].filter(row => row.repealed).sort((a, b) => order(a.section, b.section))
@@ -190,7 +203,10 @@ export function investigateOhioDiscovery(root = process.cwd(), validatedReplay?:
       localGradeSections: replay.accounting.localGradeSections.length,
       penaltyRanges: replay.accounting.penaltyRanges.length,
       unresolvedPenaltyRanges: replay.accounting.penaltyRanges.filter(row => row.resolution !== "bounded_by_recorded_order").length,
-      remainingLegacyGroups: counts(remainingLegacy), sharedPenaltyResearch: sharedPenaltyResearch.totals },
+      remainingLegacyGroups: counts(remainingLegacy), sharedPenaltyResearch: sharedPenaltyResearch.totals,
+      substantiveAnalysis: recordedAnalysis ? { ...recordedAnalysis.totals,
+        discoveryRowsWithRecordedAnalysis: legacy.filter(row => row.recordedSourceAnalysis).length,
+        discoveryRowsWithoutRecordedAnalysis: legacy.filter(row => !row.recordedSourceAnalysis).length } : null },
     candidates, legacy, unresolvedTargets, statusAudit, temporalHolds, remainingLegacy,
     sharedPenaltyResearch: sharedPenaltyResearch.groups,
     sharedPenaltySourceBatches: sharedPenaltyResearch.sourceBatches,
