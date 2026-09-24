@@ -1,3 +1,4 @@
+import { ohioEvidenceTestTime } from "./helpers/ohio-evidence-time";
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
 import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -55,8 +56,8 @@ function document(section: string, title: string, body = "(A) Complete official 
 
 describe("Ohio authority manifest", () => {
   it("preserves every Ohio catalog row and publishes only exact current matches", () => {
-    const manifest = loadOhioAuthorityManifest();
-    const seed = buildOhioSourceDatabaseSeed(manifest);
+    const manifest = loadOhioAuthorityManifest(undefined, ohioEvidenceTestTime);
+    const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
     expect(ohioCount).toBe(239);
@@ -83,7 +84,7 @@ describe("Ohio authority manifest", () => {
   });
 
   it("adds only exact source-first statutory names and leaves degree-labelled legacy IDs for reselection", () => {
-    const manifest = loadOhioAuthorityManifest();
+    const manifest = loadOhioAuthorityManifest(undefined, ohioEvidenceTestTime);
     // Keep this assertion scoped to the independently pinned Chapter 2903
     // pilot. The reviewed 105-record batch has its own accounting/gates.
     const sourceFirstIds = OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS
@@ -182,7 +183,7 @@ describe("Ohio authority manifest", () => {
     expect(loadOhioAuthorityManifest(undefined, afterAnyCurrentReceipt).catalogRecords)
       .toHaveLength(115);
 
-    const currentManifest = loadOhioAuthorityManifest();
+    const currentManifest = loadOhioAuthorityManifest(undefined, ohioEvidenceTestTime);
     expect(buildOhioSourceDatabaseSeed(currentManifest, afterAnyCurrentReceipt)
       .selectableChargeIds).not.toEqual(expect.arrayContaining(
         OHIO_CHAPTER_2903_PILOT_CHARGES.map((charge) => charge.id),
@@ -193,7 +194,7 @@ describe("Ohio authority manifest", () => {
     const pilotRecords = buildOhioChapter2903PilotManifestRecords(
       new Date("2026-09-16T22:58:10.000Z"),
     );
-    const seed = buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest());
+    const seed = buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest(undefined, ohioEvidenceTestTime), ohioEvidenceTestTime);
 
     for (const source of OHIO_CHAPTER_2903_PILOT_SOURCE_RECORDS) {
       expect(validateOhioChapter2903Document(source.offense)).toBeNull();

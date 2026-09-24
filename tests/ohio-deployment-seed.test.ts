@@ -1,3 +1,4 @@
+import { ohioEvidenceTestTime } from "./helpers/ohio-evidence-time";
 import { describe, expect, it } from "vitest";
 import { loadOhioAuthorityManifest } from "../server/data/ohio-manifest-loader";
 import { buildOhioSourceDatabaseSeed } from "../server/data/ohio-source-database-seed";
@@ -5,8 +6,8 @@ import { OHIO_REVIEWED_SOURCES } from "../server/data/ohio-reviewed-source";
 
 describe("committed Ohio deployment seed", () => {
   it("loads the committed manifest without live legislative-site access", () => {
-    const manifest = loadOhioAuthorityManifest();
-    const seed = buildOhioSourceDatabaseSeed(manifest);
+    const manifest = loadOhioAuthorityManifest(undefined, ohioEvidenceTestTime);
+    const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
 
     expect(manifest.source).toBe("Ohio Laws: codes.ohio.gov");
     expect(manifest.catalogRecords).toHaveLength(239);
