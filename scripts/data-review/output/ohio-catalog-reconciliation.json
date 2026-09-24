@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "ohio_catalog_reconciliation",
   "publicationStatus": "analysis_only_not_published",
-  "generatedAt": "2026-09-23T19:12:59.812Z",
+  "generatedAt": "2026-09-23T22:08:54.944Z",
   "method": {
     "naming": "Statutory names come from each section's own guilt clause.",
     "mechanical": [
@@ -12,22 +12,22 @@
       "adopt_catchline",
       "resolve_by_name"
     ],
-    "limits": "A mechanical verdict renames a display label. It is not a publication approval."
+    "limits": "Verdicts are analysis proposals, not approved renames or publication. Discovery work needs engineering/source investigation before any legal referral."
   },
   "totals": {
     "catalogRows": 239,
-    "section_missing": 26,
+    "section_missing": 20,
     "exact_match": 125,
     "adopt_catchline": 11,
-    "not_an_offense": 10,
+    "discovery_unresolved": 17,
     "label_conflict": 30,
     "rename_single": 11,
     "rename_compound": 7,
     "compound_ambiguous": 17,
-    "citation_candidates": 1,
     "resolve_by_name": 1,
     "mechanical": 155,
-    "needsReview": 84
+    "needsReview": 84,
+    "discoveryWork": 17
   },
   "rows": [
     {
@@ -104,8 +104,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 955.22 (\"Vicious, dangerous, and nuisance dog acts\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 955.22 (\"Vicious, dangerous, and nuisance dog acts\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-animal-cruelty-misdemeanor",
@@ -387,16 +387,13 @@
       "catalogCode": "2705.02",
       "section": "2705.02",
       "statutoryName": null,
-      "officialCatchline": null,
-      "sourceUrl": null,
-      "candidateNames": [
-        "contempt of court (2101.23)",
-        "contempt of court (2733.29)"
-      ],
+      "officialCatchline": "Acts in contempt of court",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2705.02",
+      "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "citation_candidates",
-      "reason": "The catalog row has no usable citation and 2 sections state an offense named \"Contempt of Court\". Choose the intended section."
+      "verdict": "discovery_unresolved",
+      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
     {
       "chargeId": "oh-credit-card-fraud",
@@ -528,13 +525,13 @@
       "catalogCode": "4513.01",
       "section": "4513.01",
       "statutoryName": null,
-      "officialCatchline": null,
-      "sourceUrl": null,
+      "officialCatchline": "Traffic laws - equipment - load definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.01",
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "section_missing",
-      "reason": "Section 4513.01 is not present in the official code inventory."
+      "verdict": "discovery_unresolved",
+      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
     {
       "chargeId": "oh-discharge-of-firearm-in-city",
@@ -622,8 +619,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 4510.11 (\"Driving under suspension or in violation of license restriction\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4510.11 (\"Driving under suspension or in violation of license restriction\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-driving-without-insurance",
@@ -636,8 +633,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 4509.101 (\"Operating of motor vehicle without proof of financial responsibility\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4509.101 (\"Operating of motor vehicle without proof of financial responsibility\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-drug-school-zone-enhancement",
@@ -762,8 +759,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 4513.02 (\"Unsafe vehicles\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4513.02 (\"Unsafe vehicles\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-expired-registration",
@@ -776,8 +773,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 4503.11 (\"Owner required to file application - taxes\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4503.11 (\"Owner required to file application - taxes\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-failure-to-appear",
@@ -990,13 +987,13 @@
       "catalogCode": "1533.08",
       "section": "1533.08",
       "statutoryName": null,
-      "officialCatchline": null,
-      "sourceUrl": null,
+      "officialCatchline": "Scientific, educational or rehabilitation collection permits",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1533.08",
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "section_missing",
-      "reason": "Section 1533.08 is not present in the official code inventory."
+      "verdict": "discovery_unresolved",
+      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
     {
       "chargeId": "oh-identity-theft",
@@ -1180,8 +1177,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 3767.32 (\"Littering\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 3767.32 (\"Littering\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-loitering",
@@ -1836,13 +1833,13 @@
       "catalogCode": "2903.311",
       "section": "2903.311",
       "statutoryName": null,
-      "officialCatchline": null,
-      "sourceUrl": null,
+      "officialCatchline": "Reckless failure to immediately report knowledge of hazing",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.311",
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "section_missing",
-      "reason": "Section 2903.311 is not present in the official code inventory."
+      "verdict": "discovery_unresolved",
+      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
     {
       "chargeId": "oh-orc-2903-32-female-genital-mutilation",
@@ -3785,8 +3782,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 3767.32 (\"Littering\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 3767.32 (\"Littering\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises",
@@ -3831,8 +3828,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 4510.11 (\"Driving under suspension or in violation of license restriction\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4510.11 (\"Driving under suspension or in violation of license restriction\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4511-19-operating-a-vehicle-after-underage-alcohol-consumption",
@@ -3896,8 +3893,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 4513.02 (\"Unsafe vehicles\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4513.02 (\"Unsafe vehicles\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4549-02-failure-to-stop-after-an-accident",
@@ -4114,13 +4111,13 @@
       "catalogCode": "2951.08",
       "section": "2951.08",
       "statutoryName": null,
-      "officialCatchline": null,
-      "sourceUrl": null,
+      "officialCatchline": "Conditions for arrest of person on probation or under community control sanction",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2951.08",
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "section_missing",
-      "reason": "Section 2951.08 is not present in the official code inventory."
+      "verdict": "discovery_unresolved",
+      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
     {
       "chargeId": "oh-protective-order-violation",
@@ -4198,8 +4195,8 @@
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "not_an_offense",
-      "reason": "Section 4511.20 (\"Operation in willful or wanton disregard of the safety of persons or property\") states no prohibition and no offense name, so the citation may be wrong or may point at a definition or penalty provision."
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4511.20 (\"Operation in willful or wanton disregard of the safety of persons or property\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-reckless-driving-criminal",
@@ -4482,13 +4479,13 @@
       "catalogCode": "3321.38",
       "section": "3321.38",
       "statutoryName": null,
-      "officialCatchline": null,
-      "sourceUrl": null,
+      "officialCatchline": "Prohibiting failure to send child to school",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3321.38",
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "section_missing",
-      "reason": "Section 3321.38 is not present in the official code inventory."
+      "verdict": "discovery_unresolved",
+      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
     {
       "chargeId": "oh-unlawful-carrying-of-weapon",
@@ -4518,13 +4515,13 @@
       "catalogCode": "4503.02",
       "section": "4503.02",
       "statutoryName": null,
-      "officialCatchline": null,
-      "sourceUrl": null,
+      "officialCatchline": "Levy of annual license tax",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4503.02",
       "candidateNames": [],
       "grades": [],
       "evidence": null,
-      "verdict": "section_missing",
-      "reason": "Section 4503.02 is not present in the official code inventory."
+      "verdict": "discovery_unresolved",
+      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
     {
       "chargeId": "oh-vandalism",

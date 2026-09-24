@@ -2,11 +2,8 @@
  * Classify every acquired Ohio Revised Code section and derive the statewide
  * offense inventory from the official text.
  *
- * This answers the question the project has never been able to answer for any
- * jurisdiction: how many criminal offenses does this state actually define, and
- * which of them does the catalog already carry? The denominator comes from the
- * code itself, so an offense the catalog never knew about shows up as a gap
- * rather than staying invisible.
+ * Account for the acquired section universe and surface offense candidates.
+ * Pattern matches are discovery signals, not a certified count of crimes.
  *
  * Classification is evidence-based, never inferred from a catchline:
  *
@@ -14,7 +11,8 @@
  *   graded_prohibition             a prohibition graded in its own section, unnamed
  *   externally_graded_prohibition  a prohibition graded by the chapter penalty section
  *   prohibition_only               a prohibition with no grade located yet
- *   supporting                     definitions, penalties, and procedure
+ *   penalty_linked_candidate       penalty link but no recognized conduct pattern
+ *   supporting                     no recognized offense signal; not proof of absence
  *
  * Discovery and classification only. No catalog, eligibility, or approval file
  * is written.
@@ -25,6 +23,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { createHash } from "node:crypto";
+import { validateOhioSnapshot, type OhioCachedChapter, type OhioEnumeration } from "./ohio-discovery/snapshot-accounting";
 import {
   extractOhioOffences,
   extractOhioPenaltyLinkages,
@@ -38,17 +38,22 @@ import {
 const ROOT = process.cwd();
 const SECTION_CACHE_DIR = path.resolve(ROOT, ".cache/ohio-chapters");
 const OUTPUT_PATH = path.resolve(ROOT, "scripts/data-review/output/ohio-offense-inventory.json");
+const ENUMERATION_PATH = path.resolve(ROOT, "scripts/data-review/output/ohio-code-enumeration.json");
 
 export type OhioSectionClassification =
   | "named_offense"
   | "graded_prohibition"
   | "externally_graded_prohibition"
   | "prohibition_only"
+  | "penalty_linked_candidate"
   | "supporting";
 
 export interface OhioExternalGrade extends OhioOffenceGrade {
   /** The penalty section that states this grade. */
   gradedBy: string;
+  /** Bind the quotation to the penalty source, rather than the target section. */
+  sourceHash: string;
+  sourceUrl: string;
 }
 
 export interface OhioClassifiedSection {
@@ -66,22 +71,6 @@ export interface OhioClassifiedSection {
   externalGrades: OhioExternalGrade[];
 }
 
-interface CachedChapter {
-  chapterNumber: string;
-  titleNumber: string;
-  retrievedAt: string;
-  sections: Array<{
-    section: string;
-    chapter: string;
-    catchline: string;
-    sourceUrl: string;
-    effectiveDate: string | null;
-    text: string;
-    contentHash: string;
-    repealed: boolean;
-  }>;
-}
-
 function classify(
   offences: OhioExtractedOffence[],
   externalGrades: OhioExternalGrade[],
@@ -89,7 +78,7 @@ function classify(
 ): OhioSectionClassification {
   if (offences.length > 0) return "named_offense";
   const prohibition = hasOhioProhibition(text);
-  if (!prohibition) return "supporting";
+  if (!prohibition) return externalGrades.length > 0 ? "penalty_linked_candidate" : "supporting";
   if (hasOhioGradingLanguage(text)) return "graded_prohibition";
   // Ohio's regulatory chapters state conduct here and punishment in the
   // chapter penalty section, so an external grade completes the offense.
@@ -97,19 +86,20 @@ function classify(
   return "prohibition_only";
 }
 
-export function classifyOhioOffenses(): {
-  sections: OhioClassifiedSection[];
-  totals: Record<string, number>;
-} {
-  if (!fs.existsSync(SECTION_CACHE_DIR)) {
-    throw new Error(`Acquire the Ohio code first; no cache at ${SECTION_CACHE_DIR}`);
+export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPath?: string } = {}) {
+  const cacheDir = options.cacheDir ?? SECTION_CACHE_DIR;
+  const enumerationText = fs.readFileSync(options.enumerationPath ?? ENUMERATION_PATH, "utf8");
+  const enumeration = JSON.parse(enumerationText) as OhioEnumeration;
+  if (!fs.existsSync(cacheDir)) {
+    throw new Error(`Acquire the Ohio code first; no cache at ${cacheDir}`);
   }
-  const files = fs.readdirSync(SECTION_CACHE_DIR).filter(name => name.endsWith(".json"));
+  const files = fs.readdirSync(cacheDir).filter(name => name.endsWith(".json")).sort();
   if (files.length === 0) throw new Error("No acquired Ohio chapters found");
 
   const chapters = files.map(file => JSON.parse(
-    fs.readFileSync(path.join(SECTION_CACHE_DIR, file), "utf8"),
-  ) as CachedChapter);
+    fs.readFileSync(path.join(cacheDir, file), "utf8"),
+  ) as OhioCachedChapter);
+  validateOhioSnapshot(chapters, enumeration);
 
   // First pass: read every penalty clause so conduct sections can be graded by
   // the chapter penalty section that punishes them.
@@ -120,7 +110,8 @@ export function classifyOhioOffenses(): {
       for (const linkage of extractOhioPenaltyLinkages(section.text, section.section)) {
         for (const target of linkage.targetSections) {
           const list = externalGrades.get(target) ?? [];
-          list.push({ ...linkage.grade, gradedBy: section.section });
+          list.push({ ...linkage.grade, gradedBy: section.section,
+            sourceHash: section.contentHash, sourceUrl: section.sourceUrl });
           externalGrades.set(target, list);
         }
       }
@@ -162,6 +153,7 @@ export function classifyOhioOffenses(): {
     externally_graded_prohibition: 0,
     graded_prohibition: 0,
     prohibition_only: 0,
+    penalty_linked_candidate: 0,
     supporting: 0,
   };
   for (const row of sections) totals[row.classification]++;
@@ -182,11 +174,30 @@ export function classifyOhioOffenses(): {
     0,
   );
 
-  return { sections, totals };
+  const bySection = new Map(sections.map(row => [row.section, row]));
+  const unresolvedPenaltyTargets = [...externalGrades.entries()]
+    .filter(([target]) => !bySection.has(target) || bySection.get(target)!.repealed)
+    .map(([target, grades]) => ({
+      section: target,
+      reason: bySection.has(target) ? "repealed_or_reserved" : "absent_from_snapshot",
+      references: grades,
+    })).sort((a, b) => a.section.localeCompare(b.section));
+  const accounting = {
+    status: "snapshot_reconciled_not_legal_completeness",
+    enumerationHash: createHash("sha256").update(enumerationText).digest("hex"),
+    enumerationGeneratedAt: enumeration.generatedAt,
+    chapters: chapters.length,
+    classifiedSections: sections.length,
+    unresolvedPenaltyTargets,
+    limitations: "Supporting means no recognized offense signal, not a verified non-offense. " +
+      "Penalty-linked candidates need conduct and applicability analysis, not automatic publication. " +
+      "Snapshot parity does not independently verify publisher completeness or current law.",
+  };
+  return { sections, totals, accounting };
 }
 
 function main(): void {
-  const { sections, totals } = classifyOhioOffenses();
+  const { sections, totals, accounting } = classifyOhioOffenses();
   fs.writeFileSync(OUTPUT_PATH, `${JSON.stringify({
     schemaVersion: 1,
     discoveryKind: "official_ohio_revised_code_offense_inventory",
@@ -198,13 +209,14 @@ function main(): void {
     },
     method: {
       naming: "Offense names are read from the statute's own guilt clause, not the section catchline.",
-      splitting: "A section stating several guilt clauses defines several offenses.",
+      splitting: "Distinct names in guilt clauses are candidates; legal offense boundaries require validation.",
       grading: "Grades are read only from a clause naming that offense; the longest matching name owns it.",
       limits: "A named offense is a publication candidate, not an approved catalog record.",
     },
     totals,
+    accounting,
     // The complete section denominator lives in ohio-code-enumeration.json.
-    // Only offence-bearing sections carry evidence worth committing here.
+    // Retain unresolved signals too. Omission is not a non-offense finding.
     sections: sections.filter(row => row.classification !== "supporting"),
   }, null, 2)}\n`);
   console.log(JSON.stringify(totals, null, 2));

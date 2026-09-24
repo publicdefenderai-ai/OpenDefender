@@ -1,5 +1,11 @@
 # Ohio batch evidence workflow
 
+**September 23 update:** Statewide acquisition and discovery now extend beyond
+the scoped batch below. See [Ohio discovery accounting](ohio-discovery-accounting.md)
+for the current snapshot accounting and remaining discovery work. The historical
+29-record availability and incomplete-enumeration statements below are not the
+current baseline.
+
 ## Current handoff: focused substantive review
 
 The current catalog/Chapter 2903 batch has now received substantive analysis
