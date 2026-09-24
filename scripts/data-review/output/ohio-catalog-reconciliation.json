@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "ohio_catalog_reconciliation",
   "publicationStatus": "analysis_only_not_published",
-  "generatedAt": "2026-09-24T15:43:07.923Z",
+  "generatedAt": "2026-09-24T17:46:55.165Z",
   "method": {
     "naming": "Statutory names come from each section's own guilt clause.",
     "mechanical": [
@@ -157,6 +157,7 @@
       "grades": [
         "misdemeanor first degree (conditional)",
         "felony fourth degree (conditional)",
+        "felony third degree",
         "felony third degree",
         "felony fifth degree",
         "felony fourth degree"
@@ -1501,7 +1502,8 @@
         "felony second degree (conditional)",
         "felony first degree (conditional)",
         "felony first degree",
-        "felony third degree (conditional)"
+        "felony third degree (conditional)",
+        "felony second degree (conditional)"
       ],
       "evidence": "Whoever violates division (A)(1) or (2) of this section is guilty of aggravated vehicular homicide",
       "verdict": "exact_match",
@@ -1584,7 +1586,8 @@
       "grades": [
         "felony fourth degree (conditional)",
         "felony third degree (conditional)",
-        "misdemeanor first degree (conditional)"
+        "misdemeanor first degree (conditional)",
+        "felony fourth degree (conditional)"
       ],
       "evidence": "Whoever violates division (A)(2) or (3) of this section is guilty of vehicular assault",
       "verdict": "exact_match",
@@ -1642,6 +1645,7 @@
       "grades": [
         "misdemeanor first degree (conditional)",
         "felony fourth degree (conditional)",
+        "felony third degree",
         "felony third degree",
         "felony fifth degree",
         "felony fourth degree"
