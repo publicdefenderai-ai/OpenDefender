@@ -86,21 +86,33 @@ export function verifyOhioBatch(batch: VerificationBatch, sources: Map<string, O
       approvedForPublication: 0 }, limitations: batch.limitations, rows };
 }
 
+const HOLD_LABELS: Record<string, string> = {
+  actor_and_enforceability_research: "Confirm covered actors and enforceability",
+  specific_rule_required: "Identify the applicable rule and its effective version",
+  cross_reference_mismatch: "Resolve the mismatched statutory cross-reference",
+  activation_evidence_required: "Verify the conditions that activate this provision",
+  underlying_duty_required: "Identify the underlying duty and applicable penalty",
+  contempt_and_offense_boundary: "Distinguish contempt proceedings from a separate criminal charge",
+  list_scope_confirmation: "Confirm which sections the penalty list covers",
+  unclassified_felony_sentencing: "Resolve sentencing for the felony without a specified degree",
+  railroad_preemption_research: "Resolve federal preemption of the railroad provision",
+};
+
 export function renderOhioBatch(report: ReturnType<typeof verifyOhioBatch>): string {
-  const lines = ["# Ohio substantive verification — batch one", "",
+  const lines = ["# Ohio substantive verification: batch one", "",
     `**${report.totals.analyzedSections} section analyses; ${report.totals.penaltyMappings} penalty mappings; ${report.totals.pinnedAuthorities} pinned authorities.**`, "",
     "Recorded statutory analysis, not attorney approval or completed release validation. No catalog or production changes.", "",
     "A mapped grade is not a complete sentence or a decision about a particular defendant. Each section below retains exceptions, scope limits and release requirements.", "",
     "## Findings", ""];
   for (const row of report.rows) {
-    lines.push(`### §${row.section} — ${row.catchline}`, "", row.conductFinding, "",
+    lines.push(`### §${row.section}: ${row.catchline}`, "", row.conductFinding, "",
       `Sources: [conduct](${row.sourceUrl}), [penalty](${row.penaltySourceUrl}).`, "",
       "| Conduct scope | Grade stated | Penalty provision | Conditions / additional consequences |",
       "| --- | --- | --- | --- |");
     const cell = (text: string) => text.replace(/\|/g, "\\|").replace(/\n/g, " ");
     for (const mapping of row.mappings) lines.push(`| ${cell(mapping.conductScope)} | ${cell(mapping.grade)} | ${row.penaltySection}(${mapping.penaltyDivision}) | ${cell(mapping.qualification || "No further qualification recorded in this mapping; see source and limits below.")} |`);
     lines.push("", `**Limits:** ${row.limits}`, "");
-    if (row.hold) lines.push(`**Specific hold:** ${row.hold}.`, "");
+    if (row.hold) lines.push(`**Specific hold:** ${HOLD_LABELS[row.hold] ?? row.hold.replace(/_/g, " ")}.`, "");
     if (row.catalogRows.length) lines.push(`Linked legacy IDs: ${row.catalogRows.map(item => item.chargeId).join(", ")}.`, "");
     if (row.dependencies.length) lines.push(`Referenced-section signals (not a complete dependency inventory): ${row.dependencies.map(item => `${item.section} (${item.status})`).join("; ")}.`, "");
   }
