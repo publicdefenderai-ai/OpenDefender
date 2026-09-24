@@ -148,17 +148,25 @@ export function reconcileOhioCatalog(options: {
   const enumerated = new Map(enumeration.sections.map(row => [row.section, row]));
   const bySection = new Map(inventory.sections.map(row => [row.section, row]));
   const contexts = new Map<string, string>();
+  let warnedMissingContext = false;
+  const missingContext = (): null => {
+    if (!warnedMissingContext) {
+      console.warn("Ohio source cache is missing or incomplete; some reviewer evidence excerpts will be empty. Restore .cache/ohio-chapters with acquire-ohio-code.ts or reparse-ohio-snapshot.ts before using this artifact for review.");
+      warnedMissingContext = true;
+    }
+    return null;
+  };
   const chapterTexts = new Map<string, Array<{ section: string; text: string }>>();
   const contextFor = (number: string): string | null => {
     if (contexts.has(number)) return contexts.get(number)!;
     const chapter = number.split(".")[0];
     if (!chapterTexts.has(chapter)) {
       const cache = path.join(options.cacheDir ?? path.resolve(ROOT, ".cache/ohio-chapters"), `chapter-${chapter}.json`);
-      if (!fs.existsSync(cache)) return null;
+      if (!fs.existsSync(cache)) return missingContext();
       chapterTexts.set(chapter, JSON.parse(fs.readFileSync(cache, "utf8")).sections);
     }
     const source = chapterTexts.get(chapter)!.find(row => row.section === number);
-    if (!source) return null;
+    if (!source) return missingContext();
     if (createHash("sha256").update(source.text).digest("hex") !== enumerated.get(number)?.contentHash) {
       throw new Error(`Ohio reviewer context does not match enumeration: ${number}`);
     }

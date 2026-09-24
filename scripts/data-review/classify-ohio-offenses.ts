@@ -36,6 +36,7 @@ import {
   extractOhioLocalGrades,
   type OhioLocalGradeEvidence,
   type OhioPenaltyLinkage,
+  type OhioPenaltyTargetScope,
   hasOhioGradingLanguage,
   hasOhioProhibition,
   normalizeOffenceName,
@@ -60,6 +61,7 @@ export type OhioSectionClassification =
   | "supporting";
 
 export interface OhioExternalGrade extends OhioOffenceGrade {
+  targetScope?: OhioPenaltyTargetScope;
   requiresApplicabilityReview?: boolean;
   context?: { text: string; start: number; end: number };
   /** The penalty section that states this grade. */
@@ -173,8 +175,9 @@ export function classifyOhioOffenses(options: { cacheDir?: string; enumerationPa
         }
         for (const target of linkage.targetSections) {
           const list = externalGrades.get(target) ?? [];
+          const targetScope = linkage.targetScopes.find(row => row.section === target)!;
           list.push({ ...linkage.grade, gradedBy: section.section,
-            requiresApplicabilityReview: linkage.requiresApplicabilityReview, context: linkage.context,
+            requiresApplicabilityReview: targetScope.requiresApplicabilityReview, targetScope, context: linkage.context,
             sourceHash: section.contentHash, sourceUrl: section.sourceUrl });
           externalGrades.set(target, list);
         }

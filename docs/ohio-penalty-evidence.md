@@ -1,5 +1,8 @@
 # Ohio penalty evidence and reusable discovery improvements
 
+**Follow-up:** [Shared penalty review](ohio-shared-penalty-review.md) reduces collateral
+scope flags and assembles source-level research batches. Counts below are the PR #3 baseline.
+
 This batch improves offline research against the recorded September 23, 2026
 snapshot. It does not change the application, charge catalog, database, attorney
 decisions or publication approvals. The earlier discovery and source-status
