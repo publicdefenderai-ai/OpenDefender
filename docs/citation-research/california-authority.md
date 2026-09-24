@@ -1,5 +1,7 @@
 # California authoritative charge review
 
+> September 24, 2026: the counts below describe the original legacy reconciliation. The current catalog has 120 canonical records and 99 configured selectable records after explicit reselection alternatives were added. See [the current verification baseline](../california-verification-progress.md). Existing sourcing claims are being rechecked against official source text.
+
 **Review boundary:** California statewide records exposed by the legacy selector, checked August 2026.
 
 The legacy catalog exposed 115 California rows. They are now reconciled through

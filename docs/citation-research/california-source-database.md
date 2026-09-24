@@ -3,6 +3,8 @@
 **Scope:** the selectable California canonical charge records in
 `shared/california-authority.ts`.
 
+> September 24, 2026: an [official bulk research acquisition route](../california-verification-progress.md#acquisition-route) is now documented. This does not change the reference-only runtime seed described below; promotion to content-backed evidence remains separate work.
+
 ## Source policy
 
 The database uses California Legislative Information and California Judicial

@@ -1,0 +1,1036 @@
+{
+  "schemaVersion": 1,
+  "scope": "Offline catalog baseline and research queue; no legal verification or release approval",
+  "selectionBasis": "Engineering priority checklist of existing records, chosen to exercise shared dependencies and precise charge matching; not a frequency-ranked sample or statewide coverage denominator.",
+  "accounting": {
+    "legacyRows": 115,
+    "legacyDispositions": {
+      "retain": 49,
+      "alias": 7,
+      "reselection-required": 44,
+      "remove": 15
+    },
+    "canonicalRows": 120,
+    "configuredSelectableRows": 99,
+    "batchRows": 25,
+    "distinctDeclaredStatuteSources": 21,
+    "newlyVerifiedRows": 0,
+    "deployedAvailability": "public_ui_displayed_99_california_choices_on_2026-09-24; full_id_and_guidance_parity_not_yet_verified"
+  },
+  "limitations": [
+    "Declared currentness is historical catalog metadata, not a new source check or a statute-specific effective date.",
+    "Source requests reflect existing links only. Missing sentencing, definitions, exceptions and case-law dependencies must be added through review.",
+    "Configured selectable records are not necessarily deployed, verified, attorney-approved, or distinct statutory offenses.",
+    "The priority checklist is not a count of all California offenses or a statistical coverage measure."
+  ],
+  "groups": [
+    {
+      "id": "person-and-officer",
+      "chargeIds": [
+        "ca-assault-240",
+        "ca-battery-243-a",
+        "ca-domestic-battery",
+        "ca-assault-with-deadly-weapon",
+        "ca-menacing",
+        "ca-resisting-arrest",
+        "ca-protective-order-273-6-a",
+        "ca-false-info-to-police"
+      ],
+      "researchQuestions": [
+        "Separate conduct provisions from punishment and actor definitions.",
+        "Check subdivision, mental state, alternatives, and additional sanctions before resolving classification."
+      ]
+    },
+    {
+      "id": "public-order",
+      "chargeIds": [
+        "ca-disturbing-the-peace-415-1",
+        "ca-disturbing-the-peace-415-2",
+        "ca-disturbing-the-peace-415-3"
+      ],
+      "researchQuestions": [
+        "Keep the three conduct branches distinct and review constitutional limits and CALCRIM commentary together."
+      ]
+    },
+    {
+      "id": "property",
+      "chargeIds": [
+        "ca-petty-theft",
+        "ca-shoplifting",
+        "ca-grand-theft-487-a",
+        "ca-theft-by-receiving",
+        "ca-burglary-in-the-second-degree",
+        "ca-vandalism"
+      ],
+      "researchQuestions": [
+        "Check current thresholds, prior-conviction exceptions, and amendments; do not transfer a default penalty to an exception.",
+        "Resolve each offense's punishment cross-references and exact charged subdivision."
+      ]
+    },
+    {
+      "id": "drug-possession",
+      "chargeIds": [
+        "ca-possession-of-controlled-substance",
+        "ca-possession-of-drug-paraphernalia"
+      ],
+      "researchQuestions": [
+        "Verify substance definitions, prescription exceptions, prior-conviction rules, and distinct treatment-related provisions."
+      ]
+    },
+    {
+      "id": "driving",
+      "chargeIds": [
+        "ca-dui-23152-a",
+        "ca-dui-23152-b",
+        "ca-dui-23152-f",
+        "ca-dui-23152-g",
+        "ca-reckless-driving",
+        "ca-driving-without-license"
+      ],
+      "researchQuestions": [
+        "Keep alcohol, concentration, drug, and combined theories separate.",
+        "Resolve prior history, injury, probation and license consequences; distinguish ordinary base punishment from additional assessments."
+      ]
+    }
+  ],
+  "sourceRequests": [
+    {
+      "lawCode": "HSC",
+      "section": "11350",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11350&lawCode=HSC",
+      "chargeIds": [
+        "ca-possession-of-controlled-substance"
+      ]
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11364",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11364&lawCode=HSC",
+      "chargeIds": [
+        "ca-possession-of-drug-paraphernalia"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "148",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148&lawCode=PEN",
+      "chargeIds": [
+        "ca-resisting-arrest"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "148.9",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148.9&lawCode=PEN",
+      "chargeIds": [
+        "ca-false-info-to-police"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "240",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=240&lawCode=PEN",
+      "chargeIds": [
+        "ca-assault-240"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243&lawCode=PEN",
+      "chargeIds": [
+        "ca-battery-243-a",
+        "ca-domestic-battery"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "245",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=245&lawCode=PEN",
+      "chargeIds": [
+        "ca-assault-with-deadly-weapon"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "273.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273.6&lawCode=PEN",
+      "chargeIds": [
+        "ca-protective-order-273-6-a"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "415",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=415&lawCode=PEN",
+      "chargeIds": [
+        "ca-disturbing-the-peace-415-1",
+        "ca-disturbing-the-peace-415-2",
+        "ca-disturbing-the-peace-415-3"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "422",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=422&lawCode=PEN",
+      "chargeIds": [
+        "ca-menacing"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "459",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=459&lawCode=PEN",
+      "chargeIds": [
+        "ca-burglary-in-the-second-degree"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "459.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=459.5&lawCode=PEN",
+      "chargeIds": [
+        "ca-shoplifting"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "460",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=460&lawCode=PEN",
+      "chargeIds": [
+        "ca-burglary-in-the-second-degree"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "484",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484&lawCode=PEN",
+      "chargeIds": [
+        "ca-petty-theft"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "487",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487&lawCode=PEN",
+      "chargeIds": [
+        "ca-grand-theft-487-a"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "490.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=490.2&lawCode=PEN",
+      "chargeIds": [
+        "ca-petty-theft"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "496",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=496&lawCode=PEN",
+      "chargeIds": [
+        "ca-theft-by-receiving"
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "594",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=594&lawCode=PEN",
+      "chargeIds": [
+        "ca-vandalism"
+      ]
+    },
+    {
+      "lawCode": "VEH",
+      "section": "12500",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12500&lawCode=VEH",
+      "chargeIds": [
+        "ca-driving-without-license"
+      ]
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23103",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23103&lawCode=VEH",
+      "chargeIds": [
+        "ca-reckless-driving"
+      ]
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23152",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+      "chargeIds": [
+        "ca-dui-23152-a",
+        "ca-dui-23152-b",
+        "ca-dui-23152-f",
+        "ca-dui-23152-g"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-assault-240",
+      "catalogSha256": "35f7359bfc05ae925dbe59e2fe8f95c1da48d89d83380e140a20a8aba254f15f",
+      "lawCode": "PEN",
+      "code": "240",
+      "title": "Assault",
+      "gradingToVerify": "Misdemeanor.",
+      "penaltyToVerify": "Punishable by county jail up to 6 months and/or a fine under Penal Code § 241.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 240",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=240&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 915",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-battery-243-a",
+      "catalogSha256": "b98f22319b6065753693ded612abf269a236618642e150327f2b22c10958d800",
+      "lawCode": "PEN",
+      "code": "243(a)",
+      "title": "Battery",
+      "gradingToVerify": "Misdemeanor.",
+      "penaltyToVerify": "Punishable by county jail up to 6 months and/or a fine under Penal Code § 243(a).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 243",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 960",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-domestic-battery",
+      "catalogSha256": "3052cfb8a1efa876a2bddf6f51a4c944affc4d8fcbc7160577c1439d5e6d5dcc",
+      "lawCode": "PEN",
+      "code": "243(e)(1)",
+      "title": "Battery Against a Spouse, Cohabitant, or Dating Partner",
+      "gradingToVerify": "Misdemeanor",
+      "penaltyToVerify": "Misdemeanor punishable by a fine up to $2,000, county jail up to 1 year, or both under Penal Code § 243(e)(1).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 243",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 841",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-assault-with-deadly-weapon",
+      "catalogSha256": "ad74e7fa932f56d1f5d64e43f26256407a3ded3ccacef1745793ba1504042d2b",
+      "lawCode": "PEN",
+      "code": "245(a)(1)",
+      "title": "Assault with a Deadly Weapon",
+      "gradingToVerify": "Wobbler",
+      "penaltyToVerify": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 2, 3, or 4 years, depending on the charged theory under § 245(a)(1).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 245",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=245&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 875",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-menacing",
+      "catalogSha256": "d9ee5b489c8b0f4d82a4fca68dafb769db8fe393507c7efab0f0c68f48d4ee9e",
+      "lawCode": "PEN",
+      "code": "422",
+      "title": "Criminal Threats",
+      "gradingToVerify": "Wobbler",
+      "penaltyToVerify": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years under § 422.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 422",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=422&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 1300",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-resisting-arrest",
+      "catalogSha256": "77cce1d8a410d8da992816015edf89953355350e70f855b047e6443be9f5fc35",
+      "lawCode": "PEN",
+      "code": "148(a)(1)",
+      "title": "Resisting, Delaying, or Obstructing an Officer",
+      "gradingToVerify": "Misdemeanor",
+      "penaltyToVerify": "Misdemeanor punishable by county jail up to 1 year and/or a fine under Penal Code § 148(a)(1).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 148",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 2656",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-protective-order-273-6-a",
+      "catalogSha256": "8282683e7105f53926d8b6b22f90ba72abfe52377fa9d1318779fbd00cc1254c",
+      "lawCode": "PEN",
+      "code": "273.6(a)",
+      "title": "Violation of a Protective Order",
+      "gradingToVerify": "Misdemeanor.",
+      "penaltyToVerify": "Punishable by county jail up to 1 year and/or a fine under Penal Code § 273.6(a).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 273.6",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273.6&lawCode=PEN",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "person-and-officer",
+      "canonicalId": "ca-false-info-to-police",
+      "catalogSha256": "df7af60ec34063c4e7fdba33c6f0e185d31fe41be2fa7cbdb42aa5086483432a",
+      "lawCode": "PEN",
+      "code": "148.9",
+      "title": "False Identification to a Peace Officer",
+      "gradingToVerify": "Misdemeanor",
+      "penaltyToVerify": "Misdemeanor punishable by county jail up to 6 months and/or a fine under Penal Code § 148.9.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 148.9",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148.9&lawCode=PEN",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "public-order",
+      "canonicalId": "ca-disturbing-the-peace-415-1",
+      "catalogSha256": "bd6b2b546b876379d76f40de8e2df914161df97b93f01287b94908f3267f0279",
+      "lawCode": "PEN",
+      "code": "415(1)",
+      "title": "Disturbing the Peace by Fighting",
+      "gradingToVerify": "Misdemeanor.",
+      "penaltyToVerify": "Punishable by up to 90 days in county jail, a fine up to $400, or both under Penal Code § 415.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 415",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=415&lawCode=PEN",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "public-order",
+      "canonicalId": "ca-disturbing-the-peace-415-2",
+      "catalogSha256": "90f26c57f0fce4dc59be31fa05b2538543a47bfdc87f37e75bc701c3a9a6ffb8",
+      "lawCode": "PEN",
+      "code": "415(2)",
+      "title": "Disturbing the Peace by Loud or Unreasonable Noise",
+      "gradingToVerify": "Misdemeanor.",
+      "penaltyToVerify": "Punishable by up to 90 days in county jail, a fine up to $400, or both under Penal Code § 415.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 415",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=415&lawCode=PEN",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "public-order",
+      "canonicalId": "ca-disturbing-the-peace-415-3",
+      "catalogSha256": "75f33d10c30680ed19f1e4ac96c5eae8a939525ee1571e4be05d9e0e30533556",
+      "lawCode": "PEN",
+      "code": "415(3)",
+      "title": "Disturbing the Peace by Offensive Words",
+      "gradingToVerify": "Misdemeanor.",
+      "penaltyToVerify": "Punishable by up to 90 days in county jail, a fine up to $400, or both under Penal Code § 415.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 415",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=415&lawCode=PEN",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "property",
+      "canonicalId": "ca-petty-theft",
+      "catalogSha256": "3218b0391a481d13950c1c57d77ab5d28c9ea05f65ff3b666811609cd259f6a3",
+      "lawCode": "PEN",
+      "code": "484, 490.2",
+      "title": "Petty Theft",
+      "gradingToVerify": "Misdemeanor or infraction where § 490.2 applies.",
+      "penaltyToVerify": "Generally a misdemeanor punishable by county jail up to 6 months; confirm the applicable § 490.2 value and prior-conviction exceptions.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 484",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 490.2",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=490.2&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 1800",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "property",
+      "canonicalId": "ca-shoplifting",
+      "catalogSha256": "19cd5246b5f120363d97afd61bcd1232a291de57d837ed58a4bc4c27d82fae4e",
+      "lawCode": "PEN",
+      "code": "459.5",
+      "title": "Shoplifting",
+      "gradingToVerify": "Misdemeanor unless a statutory exception applies.",
+      "penaltyToVerify": "Misdemeanor punishable by county jail up to 6 months under Penal Code § 459.5, subject to statutory exceptions.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 459.5",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=459.5&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 1700",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "property",
+      "canonicalId": "ca-grand-theft-487-a",
+      "catalogSha256": "512377a1cbcc8a0726421e4fc8bf225e9800acd587d21ddcd67c8c017aabf6ee",
+      "lawCode": "PEN",
+      "code": "487(a)",
+      "title": "Grand Theft by Value",
+      "gradingToVerify": "Wobbler.",
+      "penaltyToVerify": "May be punished as a misdemeanor or felony; felony imprisonment may be imposed under Penal Code § 1170(h).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 487",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 1801",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "property",
+      "canonicalId": "ca-theft-by-receiving",
+      "catalogSha256": "4961059b59442e746b37509d9c29df0ff41a542de7f951e4ab0b85cd9477c75d",
+      "lawCode": "PEN",
+      "code": "496",
+      "title": "Receiving Stolen Property",
+      "gradingToVerify": "Misdemeanor or felony depending on the value and applicable facts.",
+      "penaltyToVerify": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years under § 496(a).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 496",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=496&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 1750",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "property",
+      "canonicalId": "ca-burglary-in-the-second-degree",
+      "catalogSha256": "9cb3c941c30412cc045b723feb66156d3462f3b31d3cb64d82bd2d07c5df65c9",
+      "lawCode": "PEN",
+      "code": "459, 460(b)",
+      "title": "Second-Degree Burglary",
+      "gradingToVerify": "Wobbler",
+      "penaltyToVerify": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years under § 460(b).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 459",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=459&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 460",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=460&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 1700",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "property",
+      "canonicalId": "ca-vandalism",
+      "catalogSha256": "a4f4477a3a9a3e7d791a1d8072e482f336a9f36d0604823630383fa35aa8ee45",
+      "lawCode": "PEN",
+      "code": "594",
+      "title": "Vandalism",
+      "gradingToVerify": "Misdemeanor or felony depending on damage amount and circumstances.",
+      "penaltyToVerify": "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 16 months, 2 years, or 3 years, depending on damage amount under § 594.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Penal Code § 594",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=594&lawCode=PEN",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 2900",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "drug-possession",
+      "canonicalId": "ca-possession-of-controlled-substance",
+      "catalogSha256": "aee97f4b9c6fb33399ca6fafcc871c2d17789988fbc1dcedf3c030d5f11a72b9",
+      "lawCode": "HSC",
+      "code": "11350",
+      "title": "Possession of a Controlled Substance",
+      "gradingToVerify": "Misdemeanor or felony depending on the substance, history, and statutory exception.",
+      "penaltyToVerify": "Generally a misdemeanor punishable by county jail up to 1 year; a qualifying statutory exception may permit felony punishment under Penal Code § 1170(h), so confirm the substance and record-specific provision under § 11350.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Health & Safety Code § 11350",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11350&lawCode=HSC",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 2375",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "drug-possession",
+      "canonicalId": "ca-possession-of-drug-paraphernalia",
+      "catalogSha256": "34f569b1f0bfedff2c27249daa278565e2f4f2817b2f0b8e7b8a0ff8f14de587",
+      "lawCode": "HSC",
+      "code": "11364",
+      "title": "Possession of Drug Paraphernalia",
+      "gradingToVerify": "Misdemeanor",
+      "penaltyToVerify": "Misdemeanor punishable by county jail up to 6 months and/or a fine under Health and Safety Code § 11364.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Health & Safety Code § 11364",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11364&lawCode=HSC",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "driving",
+      "canonicalId": "ca-dui-23152-a",
+      "catalogSha256": "1b98c99f8a76daf31777c76a8eac3f33ef1bca53289931f1e5262ee7328b9a0c",
+      "lawCode": "VEH",
+      "code": "23152(a)",
+      "title": "Driving Under the Influence of Alcohol",
+      "gradingToVerify": "Misdemeanor for a first offense, subject to prior-offense and aggravating facts.",
+      "penaltyToVerify": "A first offense may include fines, probation, license consequences, and county jail under Vehicle Code §§ 23536 and 23538.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Vehicle Code § 23152",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "driving",
+      "canonicalId": "ca-dui-23152-b",
+      "catalogSha256": "03e2ea9259c91ac6e33fef9447ee01915bca9b3314de4195d62c76deddff9ea9",
+      "lawCode": "VEH",
+      "code": "23152(b)",
+      "title": "Driving With an Alcohol Concentration of 0.08 Percent or More",
+      "gradingToVerify": "Misdemeanor for a first offense, subject to prior-offense and aggravating facts.",
+      "penaltyToVerify": "A first offense may include fines, probation, license consequences, and county jail under Vehicle Code §§ 23536 and 23538.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Vehicle Code § 23152",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "driving",
+      "canonicalId": "ca-dui-23152-f",
+      "catalogSha256": "0515c7b937b4996d8b443d7808bca8fa3b5da487be8866f853a947eb6a109141",
+      "lawCode": "VEH",
+      "code": "23152(f)",
+      "title": "Driving Under the Influence of a Drug",
+      "gradingToVerify": "Misdemeanor for a first offense, subject to prior-offense and aggravating facts.",
+      "penaltyToVerify": "A first offense may include fines, probation, license consequences, and county jail under Vehicle Code §§ 23536 and 23538.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Vehicle Code § 23152",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "driving",
+      "canonicalId": "ca-dui-23152-g",
+      "catalogSha256": "949c039864022c9d02867a1e980244866da976579712e8d7f984ce37648de422",
+      "lawCode": "VEH",
+      "code": "23152(g)",
+      "title": "Driving Under the Combined Influence of Alcohol and a Drug",
+      "gradingToVerify": "Misdemeanor for a first offense, subject to prior-offense and aggravating facts.",
+      "penaltyToVerify": "A first offense may include fines, probation, license consequences, and county jail under Vehicle Code §§ 23536 and 23538.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Vehicle Code § 23152",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "driving",
+      "canonicalId": "ca-reckless-driving",
+      "catalogSha256": "6e9374e350d0cb963303cc83052ccddb702faefbe81c8c7b826ab7cc0a6a48df",
+      "lawCode": "VEH",
+      "code": "23103",
+      "title": "Reckless Driving",
+      "gradingToVerify": "Misdemeanor; certain injury circumstances change punishment.",
+      "penaltyToVerify": "Misdemeanor punishable by 5 to 90 days in county jail and/or a fine under Vehicle Code § 23103; injury-related punishment requires a different charged provision.",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Vehicle Code § 23103",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23103&lawCode=VEH",
+          "currentLawText": true
+        },
+        {
+          "kind": "jury-instruction",
+          "publisher": "California Judicial Council",
+          "citation": "CALCRIM 2200",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    },
+    {
+      "group": "driving",
+      "canonicalId": "ca-driving-without-license",
+      "catalogSha256": "fa653a9eff10703ccdfc8ce1e8f645f52c6546a0412619db9b14be71b5b93d8b",
+      "lawCode": "VEH",
+      "code": "12500(a)",
+      "title": "Driving Without a Valid License",
+      "gradingToVerify": "Misdemeanor under Vehicle Code § 12500(a).",
+      "penaltyToVerify": "Misdemeanor; confirm the current fine and sentencing provisions applicable to Vehicle Code § 12500(a).",
+      "declaredCurrentness": {
+        "status": "current",
+        "evidence": "California Legislative Information current code text, checked 2026-08",
+        "effectiveDate": "2026-08"
+      },
+      "declaredAttorneyReview": "pending",
+      "sources": [
+        {
+          "kind": "statute",
+          "publisher": "California Legislative Information",
+          "citation": "Cal. Vehicle Code § 12500",
+          "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12500&lawCode=VEH",
+          "currentLawText": true
+        }
+      ],
+      "verificationStatus": "not_yet_verified_in_this_batch"
+    }
+  ]
+}

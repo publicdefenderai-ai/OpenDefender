@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "selectionBasis": "Engineering priority checklist of existing records, chosen to exercise shared dependencies and precise charge matching; not a frequency-ranked sample or statewide coverage denominator.",
+  "groups": [
+    {"id":"person-and-officer", "chargeIds":["ca-assault-240","ca-battery-243-a","ca-domestic-battery","ca-assault-with-deadly-weapon","ca-menacing","ca-resisting-arrest","ca-protective-order-273-6-a","ca-false-info-to-police"], "researchQuestions":["Separate conduct provisions from punishment and actor definitions.","Check subdivision, mental state, alternatives, and additional sanctions before resolving classification."]},
+    {"id":"public-order", "chargeIds":["ca-disturbing-the-peace-415-1","ca-disturbing-the-peace-415-2","ca-disturbing-the-peace-415-3"], "researchQuestions":["Keep the three conduct branches distinct and review constitutional limits and CALCRIM commentary together."]},
+    {"id":"property", "chargeIds":["ca-petty-theft","ca-shoplifting","ca-grand-theft-487-a","ca-theft-by-receiving","ca-burglary-in-the-second-degree","ca-vandalism"], "researchQuestions":["Check current thresholds, prior-conviction exceptions, and amendments; do not transfer a default penalty to an exception.","Resolve each offense's punishment cross-references and exact charged subdivision."]},
+    {"id":"drug-possession", "chargeIds":["ca-possession-of-controlled-substance","ca-possession-of-drug-paraphernalia"], "researchQuestions":["Verify substance definitions, prescription exceptions, prior-conviction rules, and distinct treatment-related provisions."]},
+    {"id":"driving", "chargeIds":["ca-dui-23152-a","ca-dui-23152-b","ca-dui-23152-f","ca-dui-23152-g","ca-reckless-driving","ca-driving-without-license"], "researchQuestions":["Keep alcohol, concentration, drug, and combined theories separate.","Resolve prior history, injury, probation and license consequences; distinguish ordinary base punishment from additional assessments."]}
+  ]
+}

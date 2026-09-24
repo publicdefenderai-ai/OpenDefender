@@ -1,0 +1,605 @@
+{
+  "schemaVersion": 1,
+  "archive": {
+    "sourceUrl": "https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip",
+    "retrievedAt": "2026-09-24T22:10:49.174194+00:00",
+    "lastModified": "Mon, 21 Sep 2026 04:26:05 GMT",
+    "bytes": 1279738518,
+    "sha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+    "scope": "official session archive; legal currentness and applicability not yet verified"
+  },
+  "scope": "Acquired source versions only; currentness, applicability, and publication remain unverified",
+  "requestedSections": 21,
+  "matchedSections": 21,
+  "missingSections": [],
+  "sections": [
+    {
+      "lawCode": "HSC",
+      "section": "11350",
+      "versions": [
+        {
+          "id": "HSC11350.20172694",
+          "lawCode": "HSC",
+          "section": "11350.",
+          "opStatutes": "2017",
+          "opChapter": "269",
+          "opSection": "4",
+          "effectiveDate": "2018-01-01 00:00:00",
+          "versionId": "id_32c50a1c-e4ef-11e7-99d3-2f570f4f10eb",
+          "division": "10.",
+          "title": null,
+          "part": null,
+          "chapter": "6.",
+          "article": "1.",
+          "history": "Amended (as amended by Proposition 47) by Stats. 2017, Ch. 269, Sec. 4.   (SB 811)   Effective January 1, 2018.   Note: This section was amended on Nov. 4, 2014, by initiative Prop.47.",
+          "contentMember": "LAW_SECTION_TBL_64532.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-17 01:03:13",
+          "tableRow": 64532,
+          "tableRowSha256": "7021f703e976f593dac1c444e8869ef605c07ef92c228608cc30ccf302c53b6e",
+          "contentSha256": "485a4536da52b5a8a8ab052dd51270f9d63d81cf6bc773182fabc536f121be2a"
+        }
+      ]
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11364",
+      "versions": [
+        {
+          "id": "HSC11364.20256852",
+          "lawCode": "HSC",
+          "section": "11364.",
+          "opStatutes": "2025",
+          "opChapter": "685",
+          "opSection": "2",
+          "effectiveDate": "2026-01-01 00:00:00",
+          "versionId": "id_26732994-c985-11f0-aea3-3b460998bfb4",
+          "division": "10.",
+          "title": null,
+          "part": null,
+          "chapter": "6.",
+          "article": "4.",
+          "history": "Amended (as amended by Stats. 2024, Ch. 701, Sec. 3) by Stats. 2025, Ch. 685, Sec. 2.   (AB 309)   Effective January 1, 2026.",
+          "contentMember": "LAW_SECTION_TBL_103317.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-17 01:03:13",
+          "tableRow": 103317,
+          "tableRowSha256": "06eed7d9ab614c74643f57bbf68885f22a38a44c2b97066e844e39c569ff6a5e",
+          "contentSha256": "730917dff622374a11f638a5230895b0c0d050aecff5213c140afa769a252811"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "148",
+      "versions": [
+        {
+          "id": "PEN148.20151772",
+          "lawCode": "PEN",
+          "section": "148.",
+          "opStatutes": "2015",
+          "opChapter": "177",
+          "opSection": "2",
+          "effectiveDate": "2016-01-01 00:00:00",
+          "versionId": "id_c82f239f-a358-11e5-b6cb-8d365f46d37f",
+          "division": null,
+          "title": "7.",
+          "part": "1.",
+          "chapter": "7.",
+          "article": null,
+          "history": "Amended by Stats. 2015, Ch. 177, Sec. 2.   (SB 411)   Effective January 1, 2016.",
+          "contentMember": "LAW_SECTION_TBL_89277.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:15",
+          "tableRow": 89277,
+          "tableRowSha256": "a2569e580eca4206758b4ae708c3aacb4b8067a9cb6125938345952b1c2daa3e",
+          "contentSha256": "16883ff69e619cd28d32ecbd38be0427b255a7b99bbc28b3fe2bf5d2c4d03e53"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "148.9",
+      "versions": [
+        {
+          "id": "PEN148.9.19987603",
+          "lawCode": "PEN",
+          "section": "148.9.",
+          "opStatutes": "1998",
+          "opChapter": "760",
+          "opSection": "3",
+          "effectiveDate": "1999-01-01 00:00:00",
+          "versionId": "id_6582bf56-2920-11d9-9844-b32bb8dfae52",
+          "division": null,
+          "title": "7.",
+          "part": "1.",
+          "chapter": "7.",
+          "article": null,
+          "history": "Amended by Stats. 1998, Ch. 760, Sec. 3.   Effective January 1, 1999.",
+          "contentMember": "LAW_SECTION_TBL_91546.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:15",
+          "tableRow": 91546,
+          "tableRowSha256": "905336e389f3f5a9feaef9d09fac57ee8a959faff477e0a33f8a96c89d1c56e5",
+          "contentSha256": "de8b7f2074f4070c448bfbb108d29653af89b5467a9eef1056886c0dd87b6e08"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "240",
+      "versions": [
+        {
+          "id": "PEN240.1872",
+          "lawCode": "PEN",
+          "section": "240.",
+          "opStatutes": "1872",
+          "opChapter": null,
+          "opSection": null,
+          "effectiveDate": null,
+          "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+          "division": null,
+          "title": "8.",
+          "part": "1.",
+          "chapter": "9.",
+          "article": null,
+          "history": "Enacted 1872.",
+          "contentMember": "LAW_SECTION_TBL_90091.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:15",
+          "tableRow": 90091,
+          "tableRowSha256": "25b59bdb54be487eada08246babb15c4ae16cd8b746155e6a2546705a8afd5d8",
+          "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243",
+      "versions": [
+        {
+          "id": "PEN243.20249373",
+          "lawCode": "PEN",
+          "section": "243.",
+          "opStatutes": "2024",
+          "opChapter": "937",
+          "opSection": "3",
+          "effectiveDate": "2025-01-01 00:00:00",
+          "versionId": "id_f2fd448b-ac20-11ef-b77a-e14b39306f8a",
+          "division": null,
+          "title": "8.",
+          "part": "1.",
+          "chapter": "9.",
+          "article": null,
+          "history": "Amended by Stats. 2024, Ch. 937, Sec. 3.   (AB 977)   Effective January 1, 2025.",
+          "contentMember": "LAW_SECTION_TBL_90212.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:15",
+          "tableRow": 90212,
+          "tableRowSha256": "6f93ca142e01aec4770dc6e4cf76f91a39fd491c14257380568867e2f55ef2b9",
+          "contentSha256": "86205966d9a8d675b55b23c88588c45ae9a4764a20022d0c79f5c06dd87da960"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "245",
+      "versions": [
+        {
+          "id": "PEN245.20111831",
+          "lawCode": "PEN",
+          "section": "245.",
+          "opStatutes": "2011",
+          "opChapter": "183",
+          "opSection": "1",
+          "effectiveDate": "2012-01-01 00:00:00",
+          "versionId": "id_775e7cbf-30cf-11e1-a5d5-ab3cb917b6aa",
+          "division": null,
+          "title": "8.",
+          "part": "1.",
+          "chapter": "9.",
+          "article": null,
+          "history": "Amended (as amended by Stats. 2010, Ch. 178) by Stats. 2011, Ch. 183, Sec. 1.   (AB 1026)   Effective January 1, 2012.   Amended version operative January 1, 2012, pursuant to Stats. 2010, Ch. 178, Sec. 107.",
+          "contentMember": "LAW_SECTION_TBL_90328.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:15",
+          "tableRow": 90328,
+          "tableRowSha256": "d8a82b0e479b7fa749673a346585d360c209ae6a6953f9efadacd339a0ec4b74",
+          "contentSha256": "36b6f99429f41cf59e6d65ef67b5bbc465503e64be4326449ede7c73fb836f83"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "273.6",
+      "versions": [
+        {
+          "id": "PEN273.6.202219714",
+          "lawCode": "PEN",
+          "section": "273.6.",
+          "opStatutes": "2022",
+          "opChapter": "197",
+          "opSection": "14",
+          "effectiveDate": "2023-01-01 00:00:00",
+          "versionId": "id_cd08a889-6a83-11ed-823c-e74f056edb17",
+          "division": null,
+          "title": "9.",
+          "part": "1.",
+          "chapter": "2.",
+          "article": null,
+          "history": "Amended by Stats. 2022, Ch. 197, Sec. 14.   (SB 1493)   Effective January 1, 2023.",
+          "contentMember": "LAW_SECTION_TBL_90682.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:15",
+          "tableRow": 90682,
+          "tableRowSha256": "1db66be0030be677de522c8b9cecd840aafed54ce9c5513e9deaae2001eb0208",
+          "contentSha256": "5cdd365c4001216abc20292911c91917ee69045eaaf5b7d416987a2b3328c94c"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "415",
+      "versions": [
+        {
+          "id": "PEN415.19831092283",
+          "lawCode": "PEN",
+          "section": "415.",
+          "opStatutes": "1983",
+          "opChapter": "1092",
+          "opSection": "283",
+          "effectiveDate": "1983-09-27 00:00:00",
+          "versionId": "id_678a4f7c-2920-11d9-9844-b32bb8dfae52",
+          "division": null,
+          "title": "11.",
+          "part": "1.",
+          "chapter": null,
+          "article": null,
+          "history": "Amended by Stats. 1983, Ch. 1092, Sec. 283.   Effective September 27, 1983.   Operative January 1, 1984, by Sec. 427 of Ch. 1092.",
+          "contentMember": "LAW_SECTION_TBL_94534.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 94534,
+          "tableRowSha256": "c0258dbd40e6e9456655d068380eda9f8fd221c41cdf969bc59d6622b5c553ba",
+          "contentSha256": "99701812e16b6d2ec5a6e1c56da813949ee5445134a4cc47e4b887623ebd52bf"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "422",
+      "versions": [
+        {
+          "id": "PEN422.20255541",
+          "lawCode": "PEN",
+          "section": "422.",
+          "opStatutes": "2025",
+          "opChapter": "554",
+          "opSection": "1",
+          "effectiveDate": "2026-01-01 00:00:00",
+          "versionId": "id_7c680e9a-c956-11f0-aea3-3b460998bfb4",
+          "division": null,
+          "title": "11.5.",
+          "part": "1.",
+          "chapter": null,
+          "article": null,
+          "history": "Amended by Stats. 2025, Ch. 554, Sec. 1.   (AB 352)   Effective January 1, 2026.",
+          "contentMember": "LAW_SECTION_TBL_90572.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 90572,
+          "tableRowSha256": "040e9d6a537caa6cc794ea02f02b552169a67a7aaa68e8dfbc0c6ca78f995652",
+          "contentSha256": "85d25c44433498cabd317078c34365a18520038050e210446f3cd8ee88b2d035"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "459",
+      "versions": [
+        {
+          "id": "PEN459.20255331",
+          "lawCode": "PEN",
+          "section": "459.",
+          "opStatutes": "2025",
+          "opChapter": "533",
+          "opSection": "1",
+          "effectiveDate": "2026-01-01 00:00:00",
+          "versionId": "id_7e39251e-c956-11f0-aea3-3b460998bfb4",
+          "division": null,
+          "title": "13.",
+          "part": "1.",
+          "chapter": "2.",
+          "article": null,
+          "history": "Amended by Stats. 2025, Ch. 533, Sec. 1.   (AB 468)   Effective January 1, 2026.",
+          "contentMember": "LAW_SECTION_TBL_94535.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 94535,
+          "tableRowSha256": "94b403c2910e3a2590febebc3018c4e92c9dc4dd271b51b5b2e8fa55a1dd137a",
+          "contentSha256": "0b06cd7f628a56fc8823332e3fd862fe0b15d4217e00f063c0087f9de15f25aa"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "459.5",
+      "versions": [
+        {
+          "id": "PEN459.5.20145",
+          "lawCode": "PEN",
+          "section": "459.5.",
+          "opStatutes": "2014",
+          "opChapter": null,
+          "opSection": "5",
+          "effectiveDate": null,
+          "versionId": "id_5575548a-65eb-11e4-b7fe-f60a5c818cd8",
+          "division": null,
+          "title": "13.",
+          "part": "1.",
+          "chapter": "2.",
+          "article": null,
+          "history": "Added November 4, 2014, by initiative Proposition 47, Sec. 5.",
+          "contentMember": "LAW_SECTION_TBL_94536.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 94536,
+          "tableRowSha256": "5eac049eb83b2ab9bd66056ad43b1214f368270cbe1da4192c225a064100d753",
+          "contentSha256": "3d133b665813437f511581122c67df08337a9a239e7e7c177009283408e96c31"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "460",
+      "versions": [
+        {
+          "id": "PEN460.199194215",
+          "lawCode": "PEN",
+          "section": "460.",
+          "opStatutes": "1991",
+          "opChapter": "942",
+          "opSection": "15",
+          "effectiveDate": null,
+          "versionId": "id_67a74cd8-2920-11d9-9844-b32bb8dfae52",
+          "division": null,
+          "title": "13.",
+          "part": "1.",
+          "chapter": "2.",
+          "article": null,
+          "history": "Amended by Stats. 1991, Ch. 942, Sec. 15.",
+          "contentMember": "LAW_SECTION_TBL_94574.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 94574,
+          "tableRowSha256": "35a97391a7f3ae4094fd2dcdf3e438d67f0325fd63ceac3851014b09addb1334",
+          "contentSha256": "2e0449e8688d2a3d25ed7936aec92c233e91a69114c29c51c1aa1895aeda1fab"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "484",
+      "versions": [
+        {
+          "id": "PEN484.20001761",
+          "lawCode": "PEN",
+          "section": "484.",
+          "opStatutes": "2000",
+          "opChapter": "176",
+          "opSection": "1",
+          "effectiveDate": "2001-01-01 00:00:00",
+          "versionId": "id_67b508c6-2920-11d9-9844-b32bb8dfae52",
+          "division": null,
+          "title": "13.",
+          "part": "1.",
+          "chapter": "5.",
+          "article": null,
+          "history": "Amended by Stats. 2000, Ch. 176, Sec. 1.   Effective January 1, 2001.",
+          "contentMember": "LAW_SECTION_TBL_89166.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 89166,
+          "tableRowSha256": "c1291feef708236f894380482c6023bc074d8e3ef13f68db9f442bf243d66dac",
+          "contentSha256": "fc9c0f9bb3c2f28a98a6b0b55b068b8a3b2fdf0ffba16d7a6d9c9d3bea6e0920"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "487",
+      "versions": [
+        {
+          "id": "PEN487.20241682",
+          "lawCode": "PEN",
+          "section": "487.",
+          "opStatutes": "2024",
+          "opChapter": "168",
+          "opSection": "2",
+          "effectiveDate": "2025-01-01 00:00:00",
+          "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+          "division": null,
+          "title": "13.",
+          "part": "1.",
+          "chapter": "5.",
+          "article": null,
+          "history": "Amended by Stats. 2024, Ch. 168, Sec. 2.   (AB 2943)   Effective January 1, 2025.",
+          "contentMember": "LAW_SECTION_TBL_89172.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 89172,
+          "tableRowSha256": "973c4c0c63662e1036e20f9fb670d44fc8d09bffe46ace41c28e8e26f1a1b881",
+          "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "490.2",
+      "versions": [
+        {
+          "id": "PEN490.2.201611.1",
+          "lawCode": "PEN",
+          "section": "490.2.",
+          "opStatutes": "2016",
+          "opChapter": null,
+          "opSection": "11.1",
+          "effectiveDate": null,
+          "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+          "division": null,
+          "title": "13.",
+          "part": "1.",
+          "chapter": "5.",
+          "article": null,
+          "history": "Amended November 8, 2016, by initiative Proposition 63, Sec. 11.1.   Note: This section was added on Nov. 4, 2014, by initiative Prop. 47.",
+          "contentMember": "LAW_SECTION_TBL_94422.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 94422,
+          "tableRowSha256": "25f4a8536014161583220164656ab559d1f019d77ab1627f184372d261f75146",
+          "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "496",
+      "versions": [
+        {
+          "id": "PEN496.20149",
+          "lawCode": "PEN",
+          "section": "496.",
+          "opStatutes": "2014",
+          "opChapter": null,
+          "opSection": "9",
+          "effectiveDate": null,
+          "versionId": "id_745a4414-65eb-11e4-b7fe-f60a5c818cd8",
+          "division": null,
+          "title": "13.",
+          "part": "1.",
+          "chapter": "5.",
+          "article": null,
+          "history": "Amended November 4, 2014, by initiative Proposition 47, Sec. 9.",
+          "contentMember": "LAW_SECTION_TBL_89305.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 89305,
+          "tableRowSha256": "ad01462662f889fc337d8f5d30409c2034d7e421713845c9f044e53465eb22b0",
+          "contentSha256": "f5f3244a9daf84fe647acaad48f66aafba9bd9ab17abdec2c14a982d292a098b"
+        }
+      ]
+    },
+    {
+      "lawCode": "PEN",
+      "section": "594",
+      "versions": [
+        {
+          "id": "PEN594.201115406",
+          "lawCode": "PEN",
+          "section": "594.",
+          "opStatutes": "2011",
+          "opChapter": "15",
+          "opSection": "406",
+          "effectiveDate": "2011-04-04 00:00:00",
+          "versionId": "id_dc1cb9a9-660e-11e0-8fc7-8d05c2a88098",
+          "division": null,
+          "title": "14.",
+          "part": "1.",
+          "chapter": null,
+          "article": null,
+          "history": "Amended by Stats. 2011, Ch. 15, Sec. 406.   (AB 109)   Effective April 4, 2011.   Operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.    Note: This section was amended on March 7, 2000, by initiative Prop. 21.",
+          "contentMember": "LAW_SECTION_TBL_90107.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-21 01:00:16",
+          "tableRow": 90107,
+          "tableRowSha256": "83f0879722d539ca882c57f54ad7d9d57ce60b0a730b65a611aec4242492f624",
+          "contentSha256": "28922dda6bec7ac9649268c2b1a04fa56cc0df4b799641def316f69ada7e9c39"
+        }
+      ]
+    },
+    {
+      "lawCode": "VEH",
+      "section": "12500",
+      "versions": [
+        {
+          "id": "VEH12500.20076303",
+          "lawCode": "VEH",
+          "section": "12500.",
+          "opStatutes": "2007",
+          "opChapter": "630",
+          "opSection": "3",
+          "effectiveDate": "2008-01-01 00:00:00",
+          "versionId": "id_a92195d6-aa48-11dc-9c83-d76b6d9ea03b",
+          "division": "6.",
+          "title": null,
+          "part": null,
+          "chapter": "1.",
+          "article": "1.",
+          "history": "Amended by Stats. 2007, Ch. 630, Sec. 3.   Effective January 1, 2008.",
+          "contentMember": "LAW_SECTION_TBL_144417.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-17 01:04:19",
+          "tableRow": 144417,
+          "tableRowSha256": "a9adcc8203d47dd8c43b5c9e171902182f9d4bcf9ae4e341cd76db2524472961",
+          "contentSha256": "b01e87f5845d62e1eb2783d2985fb85d6639bfc4e9cabf5b657d4accbee6f26a"
+        }
+      ]
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23103",
+      "versions": [
+        {
+          "id": "VEH23103.20106852",
+          "lawCode": "VEH",
+          "section": "23103.",
+          "opStatutes": "2010",
+          "opChapter": "685",
+          "opSection": "2",
+          "effectiveDate": "2011-01-01 00:00:00",
+          "versionId": "id_92c46bfc-10eb-11e0-aa5c-a5112ecb123a",
+          "division": "11.",
+          "title": null,
+          "part": null,
+          "chapter": "12.",
+          "article": "1.",
+          "history": "Amended by Stats. 2010, Ch. 685, Sec. 2.   (AB 2479)   Effective January 1, 2011.",
+          "contentMember": "LAW_SECTION_TBL_142481.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-17 01:04:20",
+          "tableRow": 142481,
+          "tableRowSha256": "03b96df4b9c5be0dcb9e57881f4a1de3defbd750f82fbe18f58864a52d2d03c4",
+          "contentSha256": "f0b459a36414e4bca2c0e805f51e9842f9e6270e998d70fdbf768d2886b81d4f"
+        }
+      ]
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23152",
+      "versions": [
+        {
+          "id": "VEH23152.20167651",
+          "lawCode": "VEH",
+          "section": "23152.",
+          "opStatutes": "2016",
+          "opChapter": "765",
+          "opSection": "1",
+          "effectiveDate": "2017-01-01 00:00:00",
+          "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+          "division": "11.",
+          "title": null,
+          "part": null,
+          "chapter": "12.",
+          "article": "2.",
+          "history": "Amended by Stats. 2016, Ch. 765, Sec. 1.   (AB 2687)   Effective January 1, 2017.",
+          "contentMember": "LAW_SECTION_TBL_141248.lob",
+          "activeFlag": "Y",
+          "transUpdate": "2026-07-17 01:04:20",
+          "tableRow": 141248,
+          "tableRowSha256": "cb2fad580fda9425dffc8a242eba07a2635375a14bc8ed742a85c0db715ec56b",
+          "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+        }
+      ]
+    }
+  ]
+}
