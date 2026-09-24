@@ -1,5 +1,9 @@
 # Ohio source-status repair and repeatable replay
 
+**September 24 follow-up:** See [Ohio penalty evidence](ohio-penalty-evidence.md)
+for the latest extraction, range accounting and single-pass report workflow.
+Counts below describe the earlier scoped work.
+
 This follow-up repairs the acquisition defect identified in the discovery
 investigation. It changes offline research only. It does not update runtime
 charges, attorney decisions, publication eligibility or the production database.

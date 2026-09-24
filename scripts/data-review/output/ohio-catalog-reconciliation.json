@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "ohio_catalog_reconciliation",
   "publicationStatus": "analysis_only_not_published",
-  "generatedAt": "2026-09-24T06:00:56.038Z",
+  "generatedAt": "2026-09-24T14:13:03.489Z",
   "method": {
     "naming": "Statutory names come from each section's own guilt clause.",
     "mechanical": [
@@ -18,16 +18,17 @@
     "catalogRows": 239,
     "section_missing": 20,
     "exact_match": 125,
-    "adopt_catchline": 11,
-    "discovery_unresolved": 17,
+    "discovery_unresolved": 24,
     "label_conflict": 30,
     "rename_single": 11,
     "rename_compound": 7,
     "compound_ambiguous": 17,
+    "citation_candidates": 1,
     "resolve_by_name": 1,
-    "mechanical": 155,
-    "needsReview": 84,
-    "discoveryWork": 17
+    "adopt_catchline": 3,
+    "mechanical": 147,
+    "needsReview": 92,
+    "discoveryWork": 24
   },
   "rows": [
     {
@@ -82,16 +83,16 @@
       "catalogLabel": "Possession of Alcohol in Park / Prohibited Area",
       "catalogCode": "4301.62",
       "section": "4301.62",
-      "statutoryName": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+      "statutoryName": null,
       "officialCatchline": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
       "candidateNames": [],
       "grades": [
         "minor misdemeanor"
       ],
-      "evidence": "Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor",
-      "verdict": "adopt_catchline",
-      "reason": "Section 4301.62 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4301.62 (\"Opened container of beer or intoxicating liquor prohibited at certain premises\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-animal-at-large",
@@ -103,25 +104,25 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-955.22",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "Whoever violates this division is guilty of a misdemeanor of the third degree on a first offense and a misdemeanor of the second degree on each subsequent offense.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 955.22 (\"Vicious, dangerous, and nuisance dog acts\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 955.22 (\"Vicious, dangerous, and nuisance dog acts\") has unresolved discovery signals (local_grade_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-animal-cruelty-misdemeanor",
       "catalogLabel": "Animal Cruelty (Misdemeanor)",
       "catalogCode": "959.13",
       "section": "959.13",
-      "statutoryName": "Cruelty to animals",
+      "statutoryName": null,
       "officialCatchline": "Cruelty to animals",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.13",
       "candidateNames": [],
       "grades": [
         "misdemeanor second degree"
       ],
-      "evidence": "Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree",
-      "verdict": "adopt_catchline",
-      "reason": "Section 959.13 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(D) Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 959.13 (\"Cruelty to animals\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-assault-on-peace-officer",
@@ -391,7 +392,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2705.02",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "A person guilty of any of the following acts may be punished as for a contempt: (A) Disobedience of, or resistance to, a lawful writ, process, order, rule, judgment, or command of a court or officer; (B) Misbehavior of an officer of the court in the performance of official duties, or in official transactions; (C) A failure to obey a subpoena duly served, or a refusal to be sworn or to answer as a witness, when lawfully required; (D) The rescue, or attempted rescue, of a person or of property in the custody of an officer by virtue of an order or process of court held by the officer; (E) A failu",
       "verdict": "discovery_unresolved",
       "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
@@ -529,7 +530,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.01",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "As provided in section 4511.01 of the Revised Code, the definitions set forth in that section apply to this chapter.",
       "verdict": "discovery_unresolved",
       "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
@@ -616,11 +617,13 @@
       "statutoryName": null,
       "officialCatchline": "Driving under suspension or in violation of license restriction",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.11",
-      "candidateNames": [],
+      "candidateNames": [
+        "driving under suspension (4510.111)"
+      ],
       "grades": [],
-      "evidence": null,
-      "verdict": "discovery_unresolved",
-      "reason": "Section 4510.11 (\"Driving under suspension or in violation of license restriction\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "evidence": "(A) Except as provided in division (B) of this section and in sections 4510.111 and 4510.16 of the Revised Code, no person whose driver's or commercial driver's license or permit or nonresident operating privilege has been suspended under any provision of the Revised Code, other than Chapter 4509. of the Revised Code, or under any applicable law in any other jurisdiction in which the person's license or permit was issued, shall operate any motor vehicle upon the public roads and highways or upon any public or private property used by the public for purposes of vehicular travel or parking withi",
+      "verdict": "citation_candidates",
+      "reason": "A unique exact statutory-name match exists elsewhere. The supplied citation remains unchanged pending review; this is not a mechanical correction."
     },
     {
       "chargeId": "oh-driving-without-insurance",
@@ -632,7 +635,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4509.101",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(A)(1) No person shall operate, or permit the operation of, a motor vehicle in this state, unless proof of financial responsibility is maintained continuously throughout the registration period with respect to that vehicle, or, in the case of a driver who is not the owner, with respect to that driver's operation of that vehicle. (2) Whoever violates division (A)(1) of this section shall be subject to the following civil penalties: (a) Subject to divisions (A)(2)(b) and (c) of this section, a class (F) suspension of the person's driver's license, commercial driver's license, temporary instructi",
       "verdict": "discovery_unresolved",
       "reason": "Section 4509.101 (\"Operating of motor vehicle without proof of financial responsibility\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
@@ -758,9 +761,9 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.02",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(H) Whoever violates this section is guilty of a minor misdemeanor.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 4513.02 (\"Unsafe vehicles\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 4513.02 (\"Unsafe vehicles\") has unresolved discovery signals (local_grade_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-expired-registration",
@@ -772,9 +775,9 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4503.11",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(D) Whoever violates this section is guilty of a minor misdemeanor.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 4503.11 (\"Owner required to file application - taxes\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 4503.11 (\"Owner required to file application - taxes\") has unresolved discovery signals (local_grade_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-failure-to-appear",
@@ -991,7 +994,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1533.08",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "Except as otherwise provided by division rule, any person desiring to collect or possess wild animals that are protected by law or their nests or eggs for scientific study, school instruction, other educational uses, or rehabilitation shall make an annual application to the chief of the division of wildlife for a wild animal permit on a form furnished by the chief. Each applicant for a wild animal permit, other than an applicant desiring to rehabilitate wild animals, shall pay an annual fee of twenty-five dollars for each permit. No fee shall be charged to an applicant desiring to rehabilitate",
       "verdict": "discovery_unresolved",
       "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
@@ -1043,7 +1046,7 @@
       "catalogLabel": "Illegal Discharge of Fireworks",
       "catalogCode": "3743.65",
       "section": "3743.65",
-      "statutoryName": "Possession, sale, and use restrictions",
+      "statutoryName": null,
       "officialCatchline": "Possession, sale, and use restrictions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3743.65",
       "candidateNames": [],
@@ -1053,9 +1056,9 @@
         "misdemeanor first degree",
         "minor misdemeanor"
       ],
-      "evidence": "Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree",
-      "verdict": "adopt_catchline",
-      "reason": "Section 3743.65 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(C) Whoever violates division (E), (F), (G), (H), (I), or (J) of section 3743.60, division (E), (F), (G), (H), (I), or (J) of section 3743.61, section 3743.63, division (D), (E), (F), or (G) of section 3743.64, division (A), (B), (C), (D), or (E) of section 3743.65, or section 3743.66 of the Revised Code is guilty of a misdemeanor of the first degree.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 3743.65 (\"Possession, sale, and use restrictions\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-indecent-exposure",
@@ -1175,10 +1178,12 @@
       "officialCatchline": "Littering",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.32",
       "candidateNames": [],
-      "grades": [],
-      "evidence": null,
+      "grades": [
+        "misdemeanor third degree"
+      ],
+      "evidence": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 3767.32 (\"Littering\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 3767.32 (\"Littering\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-loitering",
@@ -1282,7 +1287,7 @@
       "catalogLabel": "Minor in Possession of Alcohol",
       "catalogCode": "4301.69",
       "section": "4301.69",
-      "statutoryName": "Underage persons offenses concerning",
+      "statutoryName": null,
       "officialCatchline": "Underage persons offenses concerning",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.69",
       "candidateNames": [],
@@ -1290,9 +1295,9 @@
         "misdemeanor first degree",
         "misdemeanor third degree"
       ],
-      "evidence": "Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree",
-      "verdict": "adopt_catchline",
-      "reason": "Section 4301.69 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4301.69 (\"Underage persons offenses concerning\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-money-laundering",
@@ -1366,16 +1371,16 @@
       "catalogLabel": "Open Container Violation",
       "catalogCode": "4301.62",
       "section": "4301.62",
-      "statutoryName": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+      "statutoryName": null,
       "officialCatchline": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
       "candidateNames": [],
       "grades": [
         "minor misdemeanor"
       ],
-      "evidence": "Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor",
-      "verdict": "adopt_catchline",
-      "reason": "Section 4301.62 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4301.62 (\"Opened container of beer or intoxicating liquor prohibited at certain premises\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-2903-01-aggravated-murder",
@@ -1837,9 +1842,9 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2903.311",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(C) A violation of this section is a misdemeanor of the fourth degree, except that the violation is a misdemeanor of the first degree if the hazing causes serious physical harm.",
       "verdict": "discovery_unresolved",
-      "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
+      "reason": "Section 2903.311 (\"Reckless failure to immediately report knowledge of hazing\") has unresolved discovery signals (local_grade_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-2903-32-female-genital-mutilation",
@@ -3780,42 +3785,44 @@
       "officialCatchline": "Littering",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3767.32",
       "candidateNames": [],
-      "grades": [],
-      "evidence": null,
+      "grades": [
+        "misdemeanor third degree"
+      ],
+      "evidence": "(C) Whoever violates section 3767.13, 3767.19, or 3767.32 or, being a natural person, violates section 3767.30 of the Revised Code is guilty of a misdemeanor of the third degree.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 3767.32 (\"Littering\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 3767.32 (\"Littering\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises",
       "catalogLabel": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "catalogCode": "4301.62",
       "section": "4301.62",
-      "statutoryName": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+      "statutoryName": null,
       "officialCatchline": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
       "candidateNames": [],
       "grades": [
         "minor misdemeanor"
       ],
-      "evidence": "Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor",
-      "verdict": "adopt_catchline",
-      "reason": "Section 4301.62 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4301.62 (\"Opened container of beer or intoxicating liquor prohibited at certain premises\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4301-633-furnishing-false-information-to-obtain-beer-or-intoxicating-liquor-for-person-under-twenty-one",
       "catalogLabel": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
       "catalogCode": "4301.633",
       "section": "4301.633",
-      "statutoryName": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+      "statutoryName": null,
       "officialCatchline": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
       "candidateNames": [],
       "grades": [
         "misdemeanor first degree"
       ],
-      "evidence": "Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree",
-      "verdict": "adopt_catchline",
-      "reason": "Section 4301.633 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 4301.633 (\"Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4510-11-driving-under-suspension-or-in-violation-of-license-restriction",
@@ -3827,9 +3834,9 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4510.11",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(D)(1) Whoever violates division (A) or (B) of this section is guilty of a misdemeanor of the first degree.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 4510.11 (\"Driving under suspension or in violation of license restriction\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 4510.11 (\"Driving under suspension or in violation of license restriction\") has unresolved discovery signals (local_grade_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4511-19-operating-a-vehicle-after-underage-alcohol-consumption",
@@ -3892,9 +3899,9 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.02",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(H) Whoever violates this section is guilty of a minor misdemeanor.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 4513.02 (\"Unsafe vehicles\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 4513.02 (\"Unsafe vehicles\") has unresolved discovery signals (local_grade_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-orc-4549-02-failure-to-stop-after-an-accident",
@@ -3919,16 +3926,16 @@
       "catalogLabel": "Cruelty to animals",
       "catalogCode": "959.13",
       "section": "959.13",
-      "statutoryName": "Cruelty to animals",
+      "statutoryName": null,
       "officialCatchline": "Cruelty to animals",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-959.13",
       "candidateNames": [],
       "grades": [
         "misdemeanor second degree"
       ],
-      "evidence": "Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree",
-      "verdict": "adopt_catchline",
-      "reason": "Section 959.13 states a graded prohibition without naming the offense, so the official catchline is the display name."
+      "evidence": "(D) Whoever violates division (A) of section 959.13 or section 959.21 of the Revised Code is guilty of a misdemeanor of the second degree.",
+      "verdict": "discovery_unresolved",
+      "reason": "Section 959.13 (\"Cruelty to animals\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-ovi",
@@ -4115,7 +4122,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2951.08",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(A) During a period of community control, any field officer or probation officer may arrest the person under a community control sanction without a warrant and bring the person before the judge or magistrate before whom the cause was pending. During a period of community control, any peace officer may arrest the person under a community control sanction without a warrant upon the written order of the chief probation officer of the probation agency if the person under a community control sanction is under the supervision of that probation agency or on the order of an officer of the adult parole",
       "verdict": "discovery_unresolved",
       "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
@@ -4194,9 +4201,9 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4511.20",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(B) Except as otherwise provided in this division, whoever violates this section is guilty of a minor misdemeanor.",
       "verdict": "discovery_unresolved",
-      "reason": "Section 4511.20 (\"Operation in willful or wanton disregard of the safety of persons or property\") has unresolved discovery signals (prohibition_only). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "reason": "Section 4511.20 (\"Operation in willful or wanton disregard of the safety of persons or property\") has unresolved discovery signals (local_grade_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
     },
     {
       "chargeId": "oh-reckless-driving-criminal",
@@ -4483,7 +4490,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-3321.38",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "(A) No parent, guardian, or other person having care of a child of compulsory school age shall violate any provision of section 3321.01, 3321.03, 3321.04, 3321.07, 3321.10, 3321.19, 3321.20, or 3331.14 of the Revised Code. The juvenile court, which has exclusive original jurisdiction over any violation of this section pursuant to section 2151.23 of the Revised Code, may require a person convicted of violating this division to give bond in a sum of not more than five hundred dollars with sureties to the approval of the court, conditioned that the person will cause the child under the person's c",
       "verdict": "discovery_unresolved",
       "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },
@@ -4519,7 +4526,7 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4503.02",
       "candidateNames": [],
       "grades": [],
-      "evidence": null,
+      "evidence": "An annual license tax is hereby levied upon the operation of motor vehicles on the public roads or highways, for the purpose of enforcing and paying the expense of administering the law relative to the registration and operation of such vehicles; planning, constructing, maintaining, and repairing public roads, highways, and streets; maintaining and repairing bridges and viaducts; paying the counties' proportion of the cost and expenses of cooperating with the department of transportation in the planning, improvement, and construction of state highways; paying the counties' portion of the compe",
       "verdict": "discovery_unresolved",
       "reason": "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists."
     },

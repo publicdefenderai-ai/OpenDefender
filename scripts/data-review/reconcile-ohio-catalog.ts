@@ -125,6 +125,7 @@ export function reconcileOhioCatalog(options: {
   inventoryPath?: string;
   enumerationPath?: string;
   catalog?: Array<{ id: string; name: string; code?: string; jurisdiction: string }>;
+  cacheDir?: string;
 } = {}): {
   rows: OhioReconciliationRow[];
   totals: Record<string, number>;
@@ -142,10 +143,29 @@ export function reconcileOhioCatalog(options: {
     throw new Error("Reclassify Ohio before reconciliation: inventory is not bound to this enumeration");
   }
   const enumeration = JSON.parse(enumerationText) as {
-    sections: Array<{ section: string; catchline: string; sourceUrl: string; repealed: boolean }>;
+    sections: Array<{ section: string; catchline: string; sourceUrl: string; repealed: boolean; contentHash: string }>;
   };
   const enumerated = new Map(enumeration.sections.map(row => [row.section, row]));
   const bySection = new Map(inventory.sections.map(row => [row.section, row]));
+  const contexts = new Map<string, string>();
+  const chapterTexts = new Map<string, Array<{ section: string; text: string }>>();
+  const contextFor = (number: string): string | null => {
+    if (contexts.has(number)) return contexts.get(number)!;
+    const chapter = number.split(".")[0];
+    if (!chapterTexts.has(chapter)) {
+      const cache = path.join(options.cacheDir ?? path.resolve(ROOT, ".cache/ohio-chapters"), `chapter-${chapter}.json`);
+      if (!fs.existsSync(cache)) return null;
+      chapterTexts.set(chapter, JSON.parse(fs.readFileSync(cache, "utf8")).sections);
+    }
+    const source = chapterTexts.get(chapter)!.find(row => row.section === number);
+    if (!source) return null;
+    if (createHash("sha256").update(source.text).digest("hex") !== enumerated.get(number)?.contentHash) {
+      throw new Error(`Ohio reviewer context does not match enumeration: ${number}`);
+    }
+    const excerpt = source.text.slice(0, 600);
+    contexts.set(number, excerpt);
+    return excerpt || null;
+  };
 
   // Many catalog rows carry a doctrinal placeholder such as
   // "MPC § 5.03 / OH conspiracy statute" instead of a citation. Ohio states
@@ -180,9 +200,14 @@ export function reconcileOhioCatalog(options: {
     if (!section || !bySection.has(section)) {
       const present = section ? enumerated.get(section) : undefined;
       if (present) {
-        rows.push({ ...base, verdict: "discovery_unresolved",
+        const alternative = (byOffenceName.get(normalizeOffenceName(charge.name)) ?? []).filter(row => row.section !== section);
+        rows.push({ ...base, verdict: alternative.length === 1 ? "citation_candidates" : "discovery_unresolved",
+          candidateNames: alternative.length === 1 ? [`${alternative[0].name} (${alternative[0].section})`] : [],
           officialCatchline: present.catchline, sourceUrl: present.sourceUrl,
-          reason: present.repealed
+          evidence: contextFor(section!),
+          reason: alternative.length === 1
+            ? "The supplied citation exists but has no extracted offense. A unique exact statutory-name match exists elsewhere; review this suggestion without changing the supplied citation automatically."
+            : present.repealed
             ? "The section exists in the snapshot but is marked repealed/reserved; investigate temporal applicability."
             : "The section exists in the snapshot but has no recognized offense signal. Investigate extraction and dependencies before any legal referral; omission is not proof that no offense exists.",
         });
@@ -239,6 +264,15 @@ export function reconcileOhioCatalog(options: {
       candidateNames: candidates,
     };
     const label = normalizeOffenceName(charge.name);
+    if (found.offences.length === 0) {
+      const alternative = (byOffenceName.get(label) ?? []).filter(row => row.section !== section);
+      if (alternative.length === 1) {
+        rows.push({ ...enriched, verdict: "citation_candidates",
+          candidateNames: [`${alternative[0].name} (${alternative[0].section})`],
+          evidence: contextFor(section), reason: "A unique exact statutory-name match exists elsewhere. The supplied citation remains unchanged pending review; this is not a mechanical correction." });
+        continue;
+      }
+    }
     const matched = found.offences.find(offence => normalizeOffenceName(offence.name) === label);
 
     if (matched) {
@@ -319,7 +353,7 @@ export function reconcileOhioCatalog(options: {
       ...enriched,
       verdict: "discovery_unresolved",
       grades: externalGrades,
-      evidence: found.externalGrades[0]?.span.text ?? null,
+      evidence: found.localGrades?.[0]?.context.text ?? found.externalGrades[0]?.context?.text ?? found.externalGrades[0]?.span.text ?? contextFor(section),
       reason: `Section ${section} ("${found.catchline}") has unresolved discovery signals ` +
         `(${found.classification}). Investigate conduct and penalty applicability before any legal referral. ` +
         "This is neither an automatic rename nor a finding that no offense exists.",
@@ -339,8 +373,8 @@ function csvCell(value: string): string {
   return `"${value.replace(/"/g, '""')}"`;
 }
 
-function main(): void {
-  const { rows, totals } = reconcileOhioCatalog();
+export function writeOhioReconciliation(result = reconcileOhioCatalog()): void {
+  const { rows, totals } = result;
   fs.writeFileSync(OUTPUT_PATH, `${JSON.stringify({
     schemaVersion: 1,
     kind: "ohio_catalog_reconciliation",
@@ -358,11 +392,11 @@ function main(): void {
   const review = rows.filter(row => !OHIO_MECHANICAL_VERDICTS.has(row.verdict));
   fs.writeFileSync(REVIEW_CSV_PATH, [
     ["chargeId", "catalogLabel", "catalogCode", "section", "verdict", "officialCatchline",
-      "candidateNames", "sourceUrl", "reason", "decision", "note"].join(","),
+      "candidateNames", "sourceUrl", "reason", "evidence", "decision", "note"].join(","),
     ...review.map(row => [
       row.chargeId, row.catalogLabel, row.catalogCode, row.section ?? "", row.verdict,
       row.officialCatchline ?? "", row.candidateNames.join(" | "), row.sourceUrl ?? "",
-      row.reason, "", "",
+      row.reason, row.evidence ?? "", "", "",
     ].map(csvCell).join(",")),
   ].join("\n") + "\n");
 
@@ -372,5 +406,5 @@ function main(): void {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url))) {
-  main();
+  writeOhioReconciliation();
 }

@@ -11,8 +11,9 @@
  * The guilt clause states the offense's own name, which is authoritative over
  * the section catchline and over any synthesized catalog label. A section that
  * states several guilt clauses defines several offenses, so the same pass that
- * names an offense also splits compound sections. Grading is read only from a
- * sentence that names the offense, never inferred from the catchline.
+ * names an offense also splits compound sections. Named grades are attributed
+ * by statutory name. Unnamed local grades and external penalty relationships
+ * are separate evidence observations, never names inferred from a catchline.
  *
  * Every returned field carries the exact character span it came from so a
  * reviewer can check it against the hashed source text.
@@ -54,6 +55,9 @@ export interface OhioExtractedOffence {
  */
 export interface OhioPenaltyLinkage {
   targetSections: string[];
+  ranges: Array<{ from: string; to: string; span: OhioTextSpan }>;
+  context: OhioTextSpan;
+  requiresApplicabilityReview: boolean;
   grade: OhioOffenceGrade;
   span: OhioTextSpan;
 }
@@ -291,10 +295,10 @@ export function extractOhioOffences(
  * sentences first, then match inside one sentence at a time. That also stops a
  * clause from collecting section numbers belonging to the previous sentence.
  */
-function sentencesWithOffsets(text: string): Array<{ text: string; start: number }> {
+export function sentencesWithOffsets(text: string): Array<{ text: string; start: number }> {
   const sentences: Array<{ text: string; start: number }> = [];
   let start = 0;
-  const boundary = /\.\s+(?=\(|[A-Z])/g;
+  const boundary = /\.(?:\s+(?=\(|[A-Z])|(?=\([A-Z]\)))/g;
   for (const match of text.matchAll(boundary)) {
     const end = (match.index ?? 0) + 1;
     sentences.push({ text: text.slice(start, end), start });
@@ -302,6 +306,31 @@ function sentencesWithOffsets(text: string): Array<{ text: string; start: number
   }
   if (start < text.length) sentences.push({ text: text.slice(start), start });
   return sentences;
+}
+
+export interface OhioLocalGradeEvidence {
+  kind: OhioOffenceGradeKind;
+  degree: string | null;
+  span: OhioTextSpan;
+  context: OhioTextSpan;
+  applicability: "unresolved";
+}
+
+/** Observe unnamed self/division grades; preserve conditions, never invent a name. */
+export function extractOhioLocalGrades(text: string): OhioLocalGradeEvidence[] {
+  const result: OhioLocalGradeEvidence[] = [];
+  for (const sentence of sentencesWithOffsets(text)) {
+    if (!/\b(?:whoever\s+(?:(?:recklessly|knowingly|purposely|negligently)\s+)?violates|violation\s+of|violates\s+division)\b[\s\S]{0,350}?\bthis\s+(?:section|division)\b[\s\S]{0,800}?\bis\s+(?:guilty\s+of\s+)?(?:a|an)\s+(?:felony|misdemeanor|minor\s+misdemeanor)\b/i.test(sentence.text)) continue;
+    const pattern = new RegExp(String.raw`\b(?:a|an)\s+(?:(felony|misdemeanor)\s+(?:of|in)\s+the\s+(${DEGREE_WORDS})\s+degree|(minor\s+misdemeanor))\b`, "gi");
+    for (const match of sentence.text.matchAll(pattern)) {
+      const start = sentence.start + (match.index ?? 0);
+      result.push({ kind: match[3] ? "minor_misdemeanor" : match[1].toLowerCase() as OhioOffenceGradeKind,
+        degree: match[2]?.toLowerCase() ?? null, span: { start, end: start + match[0].length, text: match[0] },
+        context: { start: sentence.start, end: sentence.start + sentence.text.length, text: sentence.text },
+        applicability: "unresolved" });
+    }
+  }
+  return result;
 }
 
 const PENALTY_LINKAGE = new RegExp(
@@ -325,16 +354,24 @@ export function extractOhioPenaltyLinkages(
   for (const sentence of sentencesWithOffsets(text)) {
     const match = sentence.text.match(PENALTY_LINKAGE);
     if (!match) continue;
-    const targets = [...new Set(
-      [...(match[1] ?? "").matchAll(/\d+\.\d+/g)].map(found => found[0]),
-    )].filter(section => section !== selfSection);
-    if (targets.length === 0) continue;
+    const referenceText = match[1] ?? "";
+    const rangeMatches = [...referenceText.matchAll(/\b(\d+\.\d+)\s+(?:to|through)\s+(\d+\.\d+)\b/gi)];
+    const targets = [...new Set([...referenceText.matchAll(/\d+\.\d+/g)]
+      .filter(found => !rangeMatches.some(range => found.index! >= range.index! && found.index! < range.index! + range[0].length))
+      .map(found => found[0]))].filter(section => section !== selfSection);
+    if (targets.length === 0 && rangeMatches.length === 0) continue;
     const start = sentence.start + (match.index ?? 0);
+    const referenceStart = start + match[0].indexOf(referenceText);
     const conditional = /\bexcept\s+as\s+otherwise\b/i.test(sentence.text) ||
       /\b(if|when|unless)\b/i.test(sentence.text.slice(0, match.index ?? 0)) ||
       /\b(if|when|unless)\b/i.test(match[5] ?? "");
     linkages.push({
       targetSections: targets.sort(),
+      ranges: rangeMatches.map(range => ({ from: range[1], to: range[2], span: {
+        start: referenceStart + range.index!, end: referenceStart + range.index! + range[0].length, text: range[0],
+      } })),
+      context: { start: sentence.start, end: sentence.start + sentence.text.length, text: sentence.text },
+      requiresApplicabilityReview: rangeMatches.length > 0 || /\b(?:division|except|unless|if|when|being|previously)\b|\b(?:first|subsequent)\s+offense/i.test(sentence.text),
       grade: gradeFrom(match[2], match[3], match[4], conditional, match[0], start),
       span: { text: normalize(match[0]), start, end: start + match[0].length },
     });

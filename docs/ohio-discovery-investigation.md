@@ -1,5 +1,9 @@
 # Ohio unresolved discovery investigation
 
+**September 24 follow-up:** See [Ohio penalty evidence](ohio-penalty-evidence.md)
+for the latest extraction, range accounting and single-pass report workflow.
+Counts below describe the earlier scoped work.
+
 September 23, 2026. Research findings only; no catalog, approval, database or production changes.
 
 Follow-up: the [source-status repair](ohio-source-status-repair.md) has now

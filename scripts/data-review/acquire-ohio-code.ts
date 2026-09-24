@@ -97,10 +97,19 @@ export function readParsedChapter(parsedPath: string): ParsedChapterCache | null
   }
 }
 
+export function assertParserUpgradeAllowed(parsedPath: string, allowFetch = false): void {
+  if (!fs.existsSync(parsedPath) || allowFetch) return;
+  const parsed = JSON.parse(fs.readFileSync(parsedPath, "utf8")) as ParsedChapterCache;
+  if (parsed.parserVersion !== OHIO_CHAPTER_PARSER_VERSION) {
+    throw new Error("Ohio parser upgrade requires an explicit choice: replay the recorded snapshot with reparse-ohio-snapshot.ts, or allow acquisition with --allow-parser-upgrade-fetch. No source requests were made.");
+  }
+}
+
 function parseArgs(argv: readonly string[]) {
   const limitIndex = argv.indexOf("--limit");
   const chaptersIndex = argv.indexOf("--chapters");
   return {
+    allowParserUpgradeFetch: argv.includes("--allow-parser-upgrade-fetch"),
     limit: limitIndex >= 0 ? Number(argv[limitIndex + 1]) : undefined,
     chapters: chaptersIndex >= 0
       ? new Set(String(argv[chaptersIndex + 1] ?? "").split(",").map(value => value.trim()).filter(Boolean))
@@ -109,6 +118,7 @@ function parseArgs(argv: readonly string[]) {
 }
 
 export async function acquireOhioCode(options: {
+  allowParserUpgradeFetch?: boolean;
   limit?: number;
   chapters?: Set<string>;
 } = {}): Promise<{
@@ -126,6 +136,11 @@ export async function acquireOhioCode(options: {
   if (options.chapters) chapters = chapters.filter(chapter => options.chapters!.has(chapter.chapterNumber));
   if (options.limit !== undefined) chapters = chapters.slice(0, options.limit);
   if (chapters.length === 0) throw new Error("No chapters selected for acquisition");
+
+  // Preflight every selected cache before starting a fetch or writing outputs.
+  for (const chapter of chapters) {
+    assertParserUpgradeAllowed(path.join(SECTION_CACHE_DIR, `chapter-${chapter.chapterNumber}.json`), options.allowParserUpgradeFetch);
+  }
 
   fs.mkdirSync(SECTION_CACHE_DIR, { recursive: true });
   const fetcher = new OhioOfficialFetcher({

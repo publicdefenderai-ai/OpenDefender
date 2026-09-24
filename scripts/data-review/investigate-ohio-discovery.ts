@@ -84,14 +84,14 @@ function counts(rows: Array<{ group: string }>) {
   }, {});
 }
 
-export function investigateOhioDiscovery(root = process.cwd()) {
+export function investigateOhioDiscovery(root = process.cwd(), validatedReplay?: ReturnType<typeof classifyOhioOffenses>) {
   const read = (name: string) => fs.readFileSync(path.join(root, OUTPUT, name), "utf8");
   const inventoryText = read("ohio-offense-inventory.json");
   const reconciliationText = read("ohio-catalog-reconciliation.json");
   const inventory = JSON.parse(inventoryText);
   const reconciliation = JSON.parse(reconciliationText) as { rows: OhioReconciliationRow[] };
   const cacheDir = path.join(root, ".cache/ohio-chapters");
-  const replay = classifyOhioOffenses({ cacheDir, enumerationPath: path.join(root, OUTPUT, "ohio-code-enumeration.json") });
+  const replay = validatedReplay ?? classifyOhioOffenses({ cacheDir, enumerationPath: path.join(root, OUTPUT, "ohio-code-enumeration.json") });
   if (inventory.accounting.enumerationHash !== replay.accounting.enumerationHash ||
       JSON.stringify(inventory.sections) !== JSON.stringify(replay.sections.filter(row => row.classification !== "supporting")) ||
       JSON.stringify(inventory.accounting.unresolvedPenaltyTargets) !== JSON.stringify(replay.accounting.unresolvedPenaltyTargets)) {
@@ -118,9 +118,28 @@ export function investigateOhioDiscovery(root = process.cwd()) {
     ...cite(source(row.section)), ...groupCandidate(row.section, source(row.section).text, row.externalGrades),
     penaltyEvidence: row.externalGrades, disposition: "engineering_investigation_not_approved",
   }));
+  const classified = new Map(replay.sections.map(row => [row.section, row]));
   const legacy = reconciliation.rows.filter(row => row.verdict === "discovery_unresolved").map(row => {
-    const plan = row.section ? LEGACY[row.section] : undefined;
-    if (!plan) throw new Error(`Untriaged legacy discovery row: ${row.chargeId}`);
+    const current = row.section ? classified.get(row.section) : undefined;
+    let plan = row.section ? LEGACY[row.section] : undefined;
+    if (current?.localGrades?.length) plan = {
+      group: "local_grade_applicability", anchors: [[current.section, current.localGrades[0].span.text]],
+      finding: "Unnamed local grades have been extracted with sentence context. Grade discovery is complete for these observations; division, exception, label and escalation applicability remains unresolved.",
+      next: "Map observed grades to the conduct and conditions. Do not synthesize a statutory name or automatically adopt the catchline.",
+    };
+    else if (current?.classification === "penalty_scope_candidate") plan = {
+      group: "penalty_qualification_applicability", anchors: [],
+      finding: "External penalty evidence is available, including qualifiers. The evidence must be attributed to the correct actor, division and conduct.",
+      next: "Resolve qualification scope before proposing grades or labels; preserve the full source clause.",
+    };
+    else if (current?.penaltyRangeIds?.length) plan = {
+      group: "penalty_range_applicability", anchors: [],
+      finding: "The source section occurs within a recorded penalty range. Membership alone does not establish an offense or assign the range's grade.",
+      next: "Identify conduct, exceptions and other applicable penalty provisions from the linked range evidence.",
+    };
+    if (!plan) plan = { group: "engineering_evidence_review", anchors: [],
+      finding: "New discovery evidence requires engineering triage; this row has not received a substantive legal finding.",
+      next: "Investigate the source excerpt and dependencies before any attorney referral." };
     const anchors = plan.anchors.map(([number, text]) => {
       const section = source(number);
       const start = section.text.indexOf(text);
@@ -129,6 +148,8 @@ export function investigateOhioDiscovery(root = process.cwd()) {
     });
     return { chargeId: row.chargeId, catalogLabel: row.catalogLabel, catalogCode: row.catalogCode,
       section: row.section, group: plan.group, finding: plan.finding, next: plan.next, evidence: anchors,
+      localGrades: current?.localGrades ?? [], externalGrades: current?.externalGrades ?? [],
+      penaltyRangeIds: current?.penaltyRangeIds ?? [], context: row.evidence,
       disposition: "research_only_no_catalog_or_review_decision" };
   });
   const statusAudit = [...sources.values()].filter(row => row.repealed).sort((a, b) => order(a.section, b.section))
@@ -152,22 +173,32 @@ export function investigateOhioDiscovery(root = process.cwd()) {
     inputs: { enumerationHash: replay.accounting.enumerationHash, enumerationGeneratedAt: replay.accounting.enumerationGeneratedAt,
       inventoryHash: sha(inventoryText), reconciliationHash: sha(reconciliationText) },
     limitations: ["Groups are research routing, not legal determinations; signal snippets may describe exceptions or administration.",
-      "Range endpoints are not offense lists. No range is expanded or assigned a grade by this report.",
+      "Range membership follows the recorded publisher order; it is not an offense list and observed grades are not assigned to members.",
       "The status audit flags parser risks; it does not repair the snapshot or certify present-day or historical law.",
       "Temporal holds identify source versions needing engineering research; they are not findings that the underlying section is inactive.",
-      "The 154-candidate, legacy-row and status-audit populations overlap and must not be summed as offenses.",
+      "Candidate, range, legacy-row and status-audit populations overlap and must not be summed as offenses.",
       "The rest of the legacy unresolved backlog is accounted for but not substantively investigated here."],
     totals: { candidates: candidates.length, candidateGroups: counts(candidates), legacyDiscoveryRows: legacy.length,
       legacyDistinctSections: new Set(legacy.map(row => row.section)).size, legacyGroups: counts(legacy),
       unresolvedTargets: unresolvedTargets.length, targetGroups: counts(unresolvedTargets),
       statusAudit: statusAudit.length, statusGroups: counts(statusAudit), remainingLegacy: remainingLegacy.length,
       temporalHolds: temporalHolds.length,
+      scheduledRepeals: replay.accounting.scheduledRepeals.length,
+      localGradeSections: replay.accounting.localGradeSections.length,
+      penaltyRanges: replay.accounting.penaltyRanges.length,
+      unresolvedPenaltyRanges: replay.accounting.penaltyRanges.filter(row => row.resolution !== "bounded_by_recorded_order").length,
       remainingLegacyGroups: counts(remainingLegacy) },
-    candidates, legacy, unresolvedTargets, statusAudit, temporalHolds, remainingLegacy };
+    candidates, legacy, unresolvedTargets, statusAudit, temporalHolds, remainingLegacy,
+    scheduledRepeals: replay.accounting.scheduledRepeals,
+    localGradeSections: replay.accounting.localGradeSections,
+    penaltyRanges: replay.accounting.penaltyRanges };
+}
+
+export function writeOhioInvestigation(report = investigateOhioDiscovery()) {
+  fs.writeFileSync(path.join(OUTPUT, "ohio-discovery-investigation.json"), `${JSON.stringify(report, null, 2)}\n`);
+  console.log(JSON.stringify(report.totals, null, 2));
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const report = investigateOhioDiscovery();
-  fs.writeFileSync(path.join(OUTPUT, "ohio-discovery-investigation.json"), `${JSON.stringify(report, null, 2)}\n`);
-  console.log(JSON.stringify(report.totals, null, 2));
+  writeOhioInvestigation();
 }
