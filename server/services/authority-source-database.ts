@@ -272,10 +272,18 @@ export async function getCurrentAuthoritySelectableChargeIds(
   // the newly required sentencing/definition evidence has actually been seeded.
   if (jurisdiction === "OH") {
     for (const update of commonUpdates) {
-      const source = OHIO_REVIEWED_SOURCES.find(row => row.chargeId === update.id)!;
+      const source = OHIO_REVIEWED_SOURCES.find(row => row.chargeId === update.id);
+      if (!source) {
+        selectable.delete(update.id);
+        continue;
+      }
       const required = expected.get(update.id);
       if (!required) continue;
       for (const document of [source.offense, ...source.dependencies]) {
+        // Match reviewedSupportRole in ohio-source-database-seed: the pinned
+        // dependencies in chapters 2929 (sentencing), 2941 (specifications),
+        // 2971 (sex-offender sentencing), and 2981 (forfeiture) support penalties.
+        // Other supporting documents supply definitions or grading conditions.
         const role = document.section === source.section ? "offense"
           : /^(?:2929|2941|2971|2981)\./.test(document.section) ? "penalty" : "grading";
         required.add(linkKey(update.id, `oh:statute:${document.section}`, role,
