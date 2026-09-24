@@ -78,6 +78,11 @@ do not need that cache, credentials, a database, or network access.
 
 ## Remaining work
 
+The follow-up [investigation](ohio-discovery-investigation.md) groups the retained
+findings and identifies a systematic source-status bug: former-number headings
+and future repeal notices were suppressed by acquisition. The 321 figure above
+is the snapshot's recorded flag count, not a verified count of repealed sections.
+
 Investigate the retained candidates using their linked penalty text and full
 conduct provisions, grouping recurring extraction patterns before requesting
 legal review. Audit penalty-range handling, unusual criminalization language,
