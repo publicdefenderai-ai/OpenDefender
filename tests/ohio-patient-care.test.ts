@@ -1,3 +1,4 @@
+import { ohioEvidenceTestTime } from "./helpers/ohio-evidence-time";
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { OHIO_PATIENT_CARE_BATCH as batch, OHIO_PATIENT_CARE_DEFINITIONS as definitions } from "../shared/ohio-patient-care";
@@ -68,7 +69,7 @@ describe("Ohio patient-care authority", () => {
         quotedSpans: source.offense.quotedSpans.filter(span => span.kind !== "grading") } };
       expect(hasOhioOperativeNameEvidence(noGrade)).toBe(false);
     }
-    const seed = buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest());
+    const seed = buildOhioSourceDatabaseSeed(loadOhioAuthorityManifest(undefined, ohioEvidenceTestTime), ohioEvidenceTestTime);
     const keys = sources.slice(0, 3).map(source =>
       seed.links.find(link => link.chargeId === source.chargeId && link.supportRole === "offense")?.snapshotKey);
     expect(keys.every(Boolean)).toBe(true);

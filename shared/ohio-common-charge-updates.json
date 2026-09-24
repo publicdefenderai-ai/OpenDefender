@@ -1,0 +1,230 @@
+[
+  {
+    "id": "oh-orc-3767-32-littering",
+    "jurisdiction": "OH",
+    "code": "3767.32",
+    "slug": "ohio-reviewed-3767-32-littering",
+    "name": "Littering",
+    "names": {
+      "es": "Arrojar basura",
+      "zh": "乱扔垃圾"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 3767.32",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-3767.32"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 3767.99(C)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-3767.99"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.24",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.24"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.28",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.28"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Regardless of intent, depositing litter on public property, another's private property, or state waters outside the listed receptacle, collection, ownership, and authorized-removal exceptions; or knowingly and without privilege putting litter in another public or private receptacle outside the listed exceptions. Division (A) includes an exception for a permit or license covering the litter under Chapter 3734 or 6111. Division (B) has separate privilege, collection and routine-travel/passersby exceptions. Check the alleged subsection and any actual permit; lack of intent is not a universal defense.",
+        "degreeContext": "Third-degree misdemeanor: ordinary adult limits are up to 60 days in jail and a fine up to $500. The court may additionally or instead order litter removal. These are limits for this offense, not a prediction of the sentence or total case consequences."
+      },
+      "es": {
+        "plainSummary": "Sin importar la intención, depositar basura en propiedad pública, propiedad privada ajena o aguas estatales fuera de las excepciones enumeradas de receptáculos, recolección, propiedad y retiro autorizado; o depositarla a sabiendas y sin privilegio en un receptáculo público o privado ajeno fuera de las excepciones. La división (A) contempla un permiso o licencia que cubra la basura según el capítulo 3734 o 6111. La división (B) tiene excepciones distintas de autorización, recolección y residuos de viajes rutinarios o transeúntes. Revise la subdivisión y el permiso concreto; la falta de intención no es una defensa universal.",
+        "degreeContext": "Delito menor de tercer grado: los límites ordinarios para adultos son hasta 60 días de cárcel y una multa de hasta $500. El tribunal puede además, o en su lugar, ordenar la limpieza de basura. Estos límites corresponden a este delito; no predicen la sentencia ni las consecuencias totales del caso."
+      },
+      "zh": {
+        "plainSummary": "无论是否有意，在不属于所列容器、收集、所有权或授权清除例外时，将垃圾置于公共财产、他人私有财产或州水域；或者明知且无权地将垃圾投入他人的公共或私人容器，并且不属于所列例外。 (A)款包括第3734章或6111章下涵盖该垃圾的许可例外。(B)款另有使用权限、收集及日常出行或路过者垃圾等例外。应核对具体分款及实际许可；无意并非通用抗辩。",
+        "degreeContext": "三级轻罪：成年人通常最高可被判60天监禁及500美元罚款。法院也可另行或替代命令清除垃圾。这些是本罪的限度，并非对实际判刑或案件全部后果的预测。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises",
+    "jurisdiction": "OH",
+    "code": "4301.62",
+    "slug": "ohio-reviewed-4301-62-opened-container-of-beer-or-intoxicating-liquor-prohibited-at-certain-premises",
+    "name": "Opened container of beer or intoxicating liquor prohibited at certain premises",
+    "names": {
+      "es": "Envase abierto de cerveza o licor prohibido en determinados lugares",
+      "zh": "在特定场所持有已开启的啤酒或烈酒容器"
+    },
+    "category": "infraction",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.62",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.62"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.99(A)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.99"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.01",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.01"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.24",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.24"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.28",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.28"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.27",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.27"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Possessing an opened beer or intoxicating-liquor container in one of the places or vehicles listed in §4301.62(B). The many location-specific exceptions in (C)-(J); including qualifying permit premises, events, outdoor refreshment areas, passengers, and certain stored containers; must be checked before treating possession as prohibited. A stationary vehicle or placing a container in a trunk is not, by itself, a universal exemption. Preserve the exact location, vehicle use, container condition and any venue/event permission for review.",
+        "degreeContext": "Minor misdemeanor under §4301.99(A): ordinarily a fine up to $150 and no jail term for this offense. Up to 30 hours of community service may replace all or part of the fine under §2929.27(D). Costs and other authorized sanctions are separate. Confirm the Ohio state citation; a local ordinance or another alcohol offense can have different rules."
+      },
+      "es": {
+        "plainSummary": "Poseer un envase abierto de cerveza o licor en uno de los lugares o vehículos enumerados en §4301.62(B). Antes de considerar prohibida la posesión deben revisarse las numerosas excepciones de (C)-(J), incluidas las relativas a establecimientos autorizados, eventos, áreas de consumo al aire libre, pasajeros y ciertos envases guardados. Un vehículo estacionado o colocar el envase en el maletero no constituye por sí solo una excepción universal. Conserve los datos del lugar exacto, uso del vehículo, estado del envase y permiso del establecimiento o evento para su revisión.",
+        "degreeContext": "Delito menor de grado mínimo según §4301.99(A): normalmente una multa de hasta $150, sin pena de cárcel por este delito. Según §2929.27(D), hasta 30 horas de servicio comunitario pueden sustituir toda o parte de la multa. Las costas y otras sanciones autorizadas son aparte. Confirme la cita estatal de Ohio; una ordenanza local u otro delito relacionado con alcohol puede tener reglas distintas."
+      },
+      "zh": {
+        "plainSummary": "在第4301.62(B)款列举的地点或车辆中持有已开启的啤酒或烈酒容器。在认定违法前，必须核对(C)-(J)款众多针对地点的例外，包括符合条件的持证场所、活动、户外饮酒区、乘客及某些存放容器。 车辆停着或把容器放入后备箱，本身并非通用例外。应保留具体地点、车辆用途、容器状况及场所或活动许可信息供核查。",
+        "degreeContext": "依第4301.99(A)款为最低级轻罪：通常罚款最高150美元，本罪不处监禁。依第2929.27(D)款，可用最多30小时社区服务替代全部或部分罚款。诉讼费用及其他依法可施加的制裁另计。请核对俄亥俄州法条；地方条例或其他酒类罪名的规则可能不同。"
+      }
+    },
+    "aliases": {
+      "en": [
+        "Open container",
+        "Opened container of beer or intoxicating liquor"
+      ],
+      "es": [
+        "Envase abierto de alcohol"
+      ],
+      "zh": [
+        "开封酒类容器"
+      ]
+    }
+  },
+  {
+    "id": "oh-orc-4301-633-furnishing-false-information-to-obtain-beer-or-intoxicating-liquor-for-person-under-twenty-one",
+    "jurisdiction": "OH",
+    "code": "4301.633",
+    "slug": "ohio-reviewed-4301-633-furnishing-false-information-to-obtain-beer-or-intoxicating-liquor-for-person-under-twenty-one",
+    "name": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
+    "names": {
+      "es": "Suministro de información falsa para obtener alcohol para una persona menor de veintiún años",
+      "zh": "提供虚假信息为未满二十一岁者取得酒类"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.633",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.633"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.99(C)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.99"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.01",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.01"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.61",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.61"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.611",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.611"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 4301.639",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-4301.639"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.24",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.24"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.28",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.28"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Knowingly giving false information about the name, age, or other identity of a person under 21, for the purpose or with the intent of obtaining beer or intoxicating liquor for that person by purchase or gift, except as otherwise provided in the chapter. This differs from using false identification for one’s own purchase under §4301.634. Any identification-reliance defense under §§4301.611 or 4301.639 requires its own actor and factual conditions; it does not automatically excuse knowingly providing false information.",
+        "degreeContext": "First-degree misdemeanor: ordinary adult limits are up to 180 days in jail and a fine up to $1,000. Knowledge and purpose or intent are required; inaccurate information alone is not enough. Do not apply the special false-ID penalties in §4301.634 to this separate offense."
+      },
+      "es": {
+        "plainSummary": "Dar a sabiendas información falsa sobre nombre, edad u otra identidad de una persona menor de 21 años, con el propósito o intención de obtener para ella cerveza o licor mediante compra o regalo, salvo lo dispuesto de otro modo en el capítulo. Es distinto del uso de identificación falsa para una compra propia según §4301.634. Toda defensa basada en confiar en una identificación según §§4301.611 o 4301.639 exige sus propias condiciones personales y fácticas; no excusa automáticamente proporcionar información falsa a sabiendas.",
+        "degreeContext": "Delito menor de primer grado: los límites ordinarios para adultos son hasta 180 días de cárcel y una multa de hasta $1,000. Se requieren conocimiento y propósito o intención; la información inexacta por sí sola no basta. No aplique las penas especiales de identificación falsa de §4301.634 a este delito distinto."
+      },
+      "zh": {
+        "plainSummary": "明知地提供未满21岁者的姓名、年龄或其他身份虚假信息，目的是或意图通过购买或赠与为该人取得啤酒或烈酒，但本章另有规定的除外。 这不同于第4301.634条下为自己购买而使用假证件。第4301.611或4301.639条的信赖证件抗辩须符合各自适用对象及事实条件；不会自动免除明知提供虚假信息的责任。",
+        "degreeContext": "一级轻罪：成年人通常最高可被判180天监禁及1,000美元罚款。须有明知及目的或意图；仅信息不准确并不足够。不得将第4301.634条的特殊假证件处罚套用于本罪。"
+      }
+    }
+  },
+  {
+    "id": "oh-orc-959-13-cruelty-to-animals",
+    "jurisdiction": "OH",
+    "code": "959.13",
+    "slug": "ohio-reviewed-959-13-cruelty-to-animals",
+    "name": "Cruelty to animals",
+    "names": {
+      "es": "Crueldad hacia los animales",
+      "zh": "虐待动物"
+    },
+    "category": "misdemeanor",
+    "verifiedMonth": "2026-09",
+    "citations": [
+      {
+        "citation": "Ohio Rev. Code Ann. § 959.13(A)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-959.13"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 959.99(D)",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-959.99"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 1717.01",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-1717.01"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2901.21",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2901.21"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2901.22",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2901.22"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.24",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.24"
+      },
+      {
+        "citation": "Ohio Rev. Code Ann. § 2929.28",
+        "url": "https://codes.ohio.gov/ohio-revised-code/section-2929.28"
+      }
+    ],
+    "text": {
+      "en": {
+        "plainSummary": "Ohio §959.13(A)(1)-(5) covers specified cruelty, deprivation of sustenance, cruel beating, needless mutilation or killing, confinement without sufficient wholesome food and water, inadequate shelter, cruel transport, enclosure without exercise or fresh air for specified animals, feeding cows food that produces unwholesome milk, and excessive or overcrowded livestock detention. The definitions in §1717.01 and the culpability rules in §§2901.21–2901.22 matter; do not assume strict liability merely because this section omits a mental-state word. Check the specific subdivision with counsel. The pre-slaughter exception is specific to (A)(2); (B) addresses a qualified written livestock-detention extension and dehorning. Companion-animal charges under §959.131 are separate.",
+        "degreeContext": "Second-degree misdemeanor under §959.99(D): ordinary adult limits are up to 90 days in jail and a fine up to $750. The court may order forfeiture and disposition of an animal or livestock and, when §959.99(E)(6)(b) applies, reimbursement of qualifying impoundment costs. Do not treat every animal-care dispute as this offense or apply another animal-cruelty statute’s penalties."
+      },
+      "es": {
+        "plainSummary": "La sección 959.13(A)(1)-(5) de Ohio abarca actos específicos de crueldad, privación de sustento, golpes crueles, mutilación o muerte innecesaria, confinamiento sin alimento sano y agua suficientes, refugio inadecuado, transporte cruel, encierro sin ejercicio o aire fresco para ciertos animales, alimentación de vacas que produce leche insalubre y retención excesiva o hacinamiento del ganado. Importan las definiciones de §1717.01 y las reglas de culpabilidad de §§2901.21–2901.22; no suponga responsabilidad objetiva solo porque esta sección no expresa un estado mental. Revise la subdivisión concreta con su abogado. La excepción previa al sacrificio corresponde a (A)(2); (B) contempla una extensión escrita y condicionada de retención del ganado y el descornado. Los cargos bajo §959.131 son distintos.",
+        "degreeContext": "Delito menor de segundo grado según §959.99(D): los límites ordinarios para adultos son hasta 90 días de cárcel y una multa de hasta $750. El tribunal puede ordenar el decomiso y disposición del animal o ganado y, cuando corresponda §959.99(E)(6)(b), el reembolso de gastos de custodia admisibles. No toda disputa de cuidado animal constituye este delito ni se le aplican automáticamente penas de otro estatuto de crueldad animal."
+      },
+      "zh": {
+        "plainSummary": "俄亥俄州第959.13(A)(1)-(5)款涵盖指定的虐待、剥夺食物、残酷殴打、不必要的肢解或杀死、禁闭期间食物和水不足、庇护不足、残酷运输、特定动物缺乏运动或新鲜空气、给奶牛喂食导致奶不健康的食物，以及牲畜扣留过久或过度拥挤。 第1717.01条的定义及第2901.21至2901.22条的主观要件规则很重要；不能仅因本条未写明主观状态就假定严格责任。应与律师核对具体分款。屠宰前例外仅针对(A)(2)；(B)涉及符合条件的书面牲畜扣留延期及去角。第959.131条的伴侣动物指控属于另一法条。",
+        "degreeContext": "依第959.99(D)款为二级轻罪：成年人通常最高可被判90天监禁及750美元罚款。法院可命令没收并处置动物或牲畜；符合第959.99(E)(6)(b)款时，还可命令偿付符合条件的扣留照护费用。并非所有动物照护争议都构成本罪，也不能自动适用其他虐待动物法条的处罚。"
+      }
+    }
+  }
+]

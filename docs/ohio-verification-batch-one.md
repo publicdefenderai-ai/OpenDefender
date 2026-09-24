@@ -5,6 +5,8 @@ This follow-up reads and records the conduct and penalty relationships for the
 47 assigned sections linked to §§4301.99, 959.99, 3767.99 and 3743.99, plus the four
 mandatory-fine cases identified in review: §§5589.211, 1321.141, 1321.592 and 4712.071.
 
+The [current progress page](ohio-progress.md) and [dependency follow-up](../scripts/data-review/output/ohio-dependency-review.md) connect this analysis to proposed catalog changes and focused legal questions.
+
 ## What is completed
 
 - 51 section-level conduct analyses and 84 subsection/condition-specific penalty

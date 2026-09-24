@@ -3,11 +3,12 @@
  * compares official text with reviewed hashes; it can never update those pins
  * or grant publication approval.
  */
-import { existsSync, readFileSync, renameSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   OHIO_REVIEWED_MAX_AGE_MS,
+  OHIO_REVIEWED_CURRENT_REVIEW_HASH,
   OHIO_REVIEWED_RECEIPT_PATH,
   OHIO_REVIEWED_SOURCES,
   ohioReviewedExpectedDocuments,
@@ -17,13 +18,20 @@ import { createOhioBulkAcquirer } from "./batch/ohio-bulk-source";
 import { runSourceBatch, type SourceCache } from "./batch/source-batch";
 
 const output = resolve("scripts/data-review/output");
-const cachePath = resolve(output, "ohio-batch-source-cache.json");
+const cachePath = resolve(".cache/ohio-reviewed-refresh.json");
+const historicalCachePath = resolve(output, "ohio-batch-source-cache.json");
 const evidencePath = resolve(output, "ohio-reviewed-refresh-evidence.json");
 const atomicJson = (path: string, value: unknown) => {
   const temporary = `${path}.${process.pid}.tmp`;
   writeFileSync(temporary, JSON.stringify(value, null, 2) + "\n");
   renameSync(temporary, path);
 };
+
+export function ohioRefreshExpiry(documents: Array<{ retrievedAt: string }>): string {
+  const times = documents.map(document => Date.parse(document.retrievedAt));
+  if (!times.length || times.some(time => !Number.isFinite(time))) throw new Error("Missing source acquisition time");
+  return new Date(Math.min(...times) + OHIO_REVIEWED_MAX_AGE_MS).toISOString();
+}
 
 export async function refreshOhioReviewedSources(args = process.argv.slice(2)) {
   for (const arg of args) {
@@ -38,17 +46,22 @@ export async function refreshOhioReviewedSources(args = process.argv.slice(2)) {
   const now = new Date();
   const cache: SourceCache = existsSync(cachePath)
     ? JSON.parse(readFileSync(cachePath, "utf8"))
-    : { schemaVersion: 1, documents: {}, failures: {} };
+    : JSON.parse(readFileSync(historicalCachePath, "utf8"));
   // Supplemental reviewed authorities (including OAC 3701-12-01) participate
   // in the same seven-day cache boundary without being misrouted to ORC.
   for (const name of [
+    "ohio-common-charge-evidence.json",
     "ohio-substantive-supplemental-evidence.json",
     "ohio-substantive-review-authorities.json",
   ]) {
     const value = JSON.parse(readFileSync(resolve(output, name), "utf8")) as {
       documents?: SourceCache["documents"];
     };
-    Object.assign(cache.documents, value.documents ?? {});
+    for (const [section, document] of Object.entries(value.documents ?? {})) {
+      if (!cache.documents[section] || Date.parse(document.retrievedAt) > Date.parse(cache.documents[section].retrievedAt)) {
+        cache.documents[section] = document;
+      }
+    }
   }
   const expected = ohioReviewedExpectedDocuments();
   const pins = Object.fromEntries(expected.map(document => [document.section, document.contentHash]));
@@ -97,11 +110,15 @@ export async function refreshOhioReviewedSources(args = process.argv.slice(2)) {
     });
     throw new Error(`Ohio reviewed refresh blocked: ${blocked.map(row => row.section).join(", ")}`);
   }
+  for (const [section, document] of batch.documents) cache.documents[section] = document;
+  mkdirSync(resolve(".cache"), { recursive: true });
+  atomicJson(cachePath, cache);
   atomicJson(OHIO_REVIEWED_RECEIPT_PATH, {
     schemaVersion: 1, reportHash:
-      JSON.parse(readFileSync(resolve("shared/ohio-reviewed-eligibility.json"), "utf8")).reportHash,
+      OHIO_REVIEWED_CURRENT_REVIEW_HASH,
     checkedAt: now.toISOString(),
-    expiresAt: new Date(now.getTime() + OHIO_REVIEWED_MAX_AGE_MS).toISOString(),
+    // A cache check must not grant another seven days to older acquisitions.
+    expiresAt: ohioRefreshExpiry(expected.map(document => batch.documents.get(document.section)!)),
     documents: expected,
     metrics: batch.metrics,
   });

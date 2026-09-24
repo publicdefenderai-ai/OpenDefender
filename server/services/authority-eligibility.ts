@@ -3,6 +3,7 @@ import { CALIFORNIA_CANONICAL_RECORDS } from "@shared/california-authority";
 import { getCurrentAuthoritySelectableChargeIds as getCurrentJurisdictionAuthoritySelectableChargeIds } from "./authority-source-database";
 import { getCurrentCaliforniaSelectableChargeIds } from "./california-source-database";
 import { isOhioChapter2903PilotFresh } from "../data/ohio-chapter-2903-refresh";
+import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "../data/ohio-reviewed-source";
 import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
 
 export const AUTHORITY_BACKED_JURISDICTIONS = new Set(["CA", "NY", "TX", "FL", "PA", "SC", "IL", "OH", "GA", "NC"]);
@@ -11,6 +12,7 @@ const OHIO_CHAPTER_2903_PILOT_IDS = new Set(
 );
 
 function canUseAuthorityCharge(charge: { id: string; jurisdiction: string }): boolean {
+  if (charge.jurisdiction === "OH" && OHIO_REVIEWED_SOURCES.some(source => source.chargeId === charge.id) && !isOhioReviewedSourceFresh()) return false;
   return charge.jurisdiction !== "OH" ||
     !OHIO_CHAPTER_2903_PILOT_IDS.has(charge.id) ||
     isOhioChapter2903PilotFresh();

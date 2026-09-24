@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "reportHash": "578edaa1a9a2061e2c271ec95f8ddb18a3362e5ed05e1893be3d19bd2e344849",
-  "checkedAt": "2026-09-18T05:25:02.756Z",
-  "expiresAt": "2026-09-25T05:25:02.756Z",
+  "reportHash": "2a444c126225073cc70c36592cf7738324e61f5edb4c3a02cdca4ec9bf68dcc6",
+  "checkedAt": "2026-09-24T21:16:17.153Z",
+  "expiresAt": "2026-10-01T21:11:44.566Z",
   "documents": [
     {
       "section": "109.57",
@@ -16,13 +16,6 @@
       "title": "Administrative procedure definitions",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-119.01",
       "contentHash": "f1e7cf89ac1bad49353bb278dce6fb3cdc93840b549e5144221f5d2fbf6560b9",
-      "effectiveDateStart": "2023-10-03"
-    },
-    {
-      "section": "1509.01",
-      "title": "Division of oil and gas resources management - oil and gas definitions",
-      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1509.01",
-      "contentHash": "b1dc631c6fcb77c0ccfc5504c1574da318364588e91d7b3b17661a94c7b67769",
       "effectiveDateStart": "2023-10-03"
     },
     {
@@ -45,6 +38,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1547.11",
       "contentHash": "ecc47d1071230f1913ca9ccd87de9780f2fa49caf3a5a29b7b13afc0e54b7324",
       "effectiveDateStart": "2025-03-20"
+    },
+    {
+      "section": "1717.01",
+      "title": "Humane society definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-1717.01",
+      "contentHash": "f06422e6a4fc2e55eb8fefbe20b4db37f7fb344e8537522104081526faca0c69",
+      "effectiveDateStart": "2021-03-31"
     },
     {
       "section": "2133.21",
@@ -101,6 +101,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.05",
       "contentHash": "6d816e389a2e5c2a51be779121a5f2377f4d5eb4805c8bdadba623f06068d146",
       "effectiveDateStart": "2021-04-06"
+    },
+    {
+      "section": "2901.21",
+      "title": "Criminal liability, culpability",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2901.21",
+      "contentHash": "f5a0445be0d9e6471277a96849e2b5631bcf4e1c54f3cdc46f3f430012677cf7",
+      "effectiveDateStart": "2015-03-23"
     },
     {
       "section": "2901.22",
@@ -346,13 +353,6 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.13",
       "contentHash": "49083e92a8d2029c8a4b5fdbdeeb0ea4a87d85e3b0de3b02bf115111cfe46290",
       "effectiveDateStart": "1996-07-01"
-    },
-    {
-      "section": "2911.21",
-      "title": "Criminal trespass",
-      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2911.21",
-      "contentHash": "d987f0479cefd5ba9a2241ecbd712d0fb452bbf1bec9f98a0e57dbe476823526",
-      "effectiveDateStart": "2021-04-12"
     },
     {
       "section": "2911.211",
@@ -754,6 +754,27 @@
       "effectiveDateStart": "2023-10-03"
     },
     {
+      "section": "2929.24",
+      "title": "Definite jail terms for misdemeanors",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.24",
+      "contentHash": "a21fe423e19a52a85454f69efb36773ebad870c6b8e23866982dda873aae7385",
+      "effectiveDateStart": "2023-04-04"
+    },
+    {
+      "section": "2929.27",
+      "title": "Nonresidential sanctions - misdemeanor",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.27",
+      "contentHash": "d4c2a9055e076ac18463c59d7af9a4f6e4e8dec4f21470e675e27033d5f26747",
+      "effectiveDateStart": "2011-09-23"
+    },
+    {
+      "section": "2929.28",
+      "title": "Financial sanctions - misdemeanor",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2929.28",
+      "contentHash": "c1468dc2d812517e755b4e1b5156d3393415b2028e0a37f02a20b3922da33561",
+      "effectiveDateStart": "2023-10-03"
+    },
+    {
       "section": "2941.1410",
       "title": "Major drug offender specification",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-2941.1410",
@@ -915,6 +936,27 @@
       "effectiveDateStart": "2026-03-20"
     },
     {
+      "section": "4301.01",
+      "title": "Liquor control definitions",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.01",
+      "contentHash": "68a389433ec7bea035610265d584d9c74ef2f9956b71187c7584627df0391475",
+      "effectiveDateStart": "2022-03-23"
+    },
+    {
+      "section": "4301.61",
+      "title": "Transaction scans to check the validity of driver's or commercial driver's license or identification card",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.61",
+      "contentHash": "e41ff3c51965b81366b82e5bc9f361ebd7e7becb38500d99baa0f0b7b5156106",
+      "effectiveDateStart": "2015-09-29"
+    },
+    {
+      "section": "4301.611",
+      "title": "Transaction scan as affirmative defense where age of purchaser is element of crime",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.611",
+      "contentHash": "67e1c294e512886ecda23e7eb735d34e9168d4f831b41f59eed056b3a7ddeafa",
+      "effectiveDateStart": "2000-09-21"
+    },
+    {
       "section": "4301.62",
       "title": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
@@ -927,6 +969,13 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
       "contentHash": "18b36f1f13ebc41db3db5905ad79fbd98f766e3c5f705a4e959998bfaa5f2f50",
       "effectiveDateStart": "1987-07-31"
+    },
+    {
+      "section": "4301.639",
+      "title": "False identification accepted in good faith",
+      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.639",
+      "contentHash": "bc95f945c2d79a8db94c6e08a6fecb9074159a6f7a28cd3c80ab13eb418dc060",
+      "effectiveDateStart": "2015-09-29"
     },
     {
       "section": "4301.99",
@@ -1032,13 +1081,6 @@
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4513.37",
       "contentHash": "e90cda3abbe5d4104e9e4d9e2787febe1e983f4aeb322b6538ad80163a31d5dd",
       "effectiveDateStart": "2012-01-27"
-    },
-    {
-      "section": "4519.01",
-      "title": "Special vehicle definitions",
-      "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4519.01",
-      "contentHash": "cd3957abbdba4a58d834d9084a5103c4217421acdcbd1f1d81166b8f113c7f95",
-      "effectiveDateStart": "2017-06-30"
     },
     {
       "section": "4549.02",
@@ -1155,7 +1197,7 @@
   ],
   "metrics": {
     "requests": 0,
-    "reused": 164,
+    "reused": 170,
     "acquired": 0,
     "bulkDocumentsCached": 0,
     "failed": 0,

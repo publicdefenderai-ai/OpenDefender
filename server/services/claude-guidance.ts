@@ -364,7 +364,10 @@ function startOptionalSourceEnrichment(
   onUpdated?: () => Promise<void> | void,
 ): void {
   const generation = cacheGeneration;
-  void validateLegalGuidance(guidance, context)
+  // Synthetic release checks must not contact live enrichment providers.
+  void validateLegalGuidance(guidance, context, {
+    includeExternalSources: process.env.RELEASE_CHECK !== "true",
+  })
     .then(async (validationResult) => {
       if (generation !== cacheGeneration) return;
       setGuidanceValidation(guidance, validationResult);

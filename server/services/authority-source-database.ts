@@ -12,6 +12,9 @@ import { db } from "../db";
 import { errLog, opsLog } from "../utils/dev-logger";
 import { OHIO_CHAPTER_2903_PILOT_CHARGES } from "@shared/ohio-chapter-2903-catalog";
 import { isOhioChapter2903PilotFresh } from "../data/ohio-chapter-2903-refresh";
+import { isOhioReviewedSourceFresh, OHIO_REVIEWED_SOURCES } from "../data/ohio-reviewed-source";
+import sourceChangeHolds from "@shared/ohio-source-change-holds.json";
+import commonUpdates from "@shared/ohio-common-charge-updates.json";
 import type {
   AuthorityEvidenceRecord,
   AuthorityMappingDecision,
@@ -224,10 +227,14 @@ export async function getCurrentAuthoritySelectableChargeIds(
   );
   // This lower-level boundary also protects direct provenance callers; the
   // API selector's separate freshness filter is not sufficient for those.
+  if (jurisdiction === "OH") for (const hold of sourceChangeHolds) selectable.delete(hold.id);
   if (jurisdiction === "OH" && !isOhioChapter2903PilotFresh()) {
     for (const charge of OHIO_CHAPTER_2903_PILOT_CHARGES) {
       selectable.delete(charge.id);
     }
+  }
+  if (jurisdiction === "OH" && !isOhioReviewedSourceFresh()) {
+    for (const source of OHIO_REVIEWED_SOURCES) selectable.delete(source.chargeId);
   }
   if (selectable.size === 0) return selectable;
 
@@ -258,6 +265,30 @@ export async function getCurrentAuthoritySelectableChargeIds(
         }
       }
       expected.set(record.chargeId, required);
+    }
+  }
+
+  // Old completed ingestion runs must not serve corrected summaries until
+  // the newly required sentencing/definition evidence has actually been seeded.
+  if (jurisdiction === "OH") {
+    for (const update of commonUpdates) {
+      const source = OHIO_REVIEWED_SOURCES.find(row => row.chargeId === update.id);
+      if (!source) {
+        selectable.delete(update.id);
+        continue;
+      }
+      const required = expected.get(update.id);
+      if (!required) continue;
+      for (const document of [source.offense, ...source.dependencies]) {
+        // Match reviewedSupportRole in ohio-source-database-seed: the pinned
+        // dependencies in chapters 2929 (sentencing), 2941 (specifications),
+        // 2971 (sex-offender sentencing), and 2981 (forfeiture) support penalties.
+        // Other supporting documents supply definitions or grading conditions.
+        const role = document.section === source.section ? "offense"
+          : /^(?:2929|2941|2971|2981)\./.test(document.section) ? "penalty" : "grading";
+        required.add(linkKey(update.id, `oh:statute:${document.section}`, role,
+          `Ohio Rev. Code Ann. § ${document.section}`, null));
+      }
     }
   }
 

@@ -127,6 +127,7 @@ const releaseCheckCaliforniaSelectableChargeIds = [
 // valid. authority-eligibility applies that same runtime receipt gate before
 // honoring this release fixture.
 const releaseCheckOhioSourceFirstChargeIds = [
+  ...JSON.parse(readFileSync(resolve(process.cwd(), "shared/ohio-common-charge-updates.json"), "utf8")).map(row => row.id),
   "oh-orc-2903-01-aggravated-murder",
   "oh-orc-2903-02-murder",
 ];
@@ -134,6 +135,9 @@ const releaseCheckOhioSourceFirstChargeIds = [
 function getReleaseCheckAuthoritySelectableChargeIds() {
   return [...new Set([
     ...releaseCheckAuthorityManifestFiles.flatMap((fileName) => {
+      // Ohio's on-disk ledger predates canonical reselection. Use the bounded
+      // source-first smoke fixture above, never its retired legacy IDs.
+      if (fileName === "oh-source-manifest.json") return [];
       const manifestPath = resolve(process.cwd(), "scripts/data-review/output", fileName);
       const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
       if (!Array.isArray(manifest.catalogRecords)) {

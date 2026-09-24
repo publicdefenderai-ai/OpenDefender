@@ -260,7 +260,8 @@ app.use((req, res, next) => {
   server.listen({
     port,
     host: "0.0.0.0",
-    reusePort: true,
+    // SO_REUSEPORT is unsupported by Node on macOS; Replit runs on Linux.
+    reusePort: process.platform === "linux",
   }, () => {
     log(`serving on port ${port}`);
   });
