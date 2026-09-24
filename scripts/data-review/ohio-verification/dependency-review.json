@@ -738,7 +738,15 @@
       "authorityIds": [
         "phelps"
       ],
-      "publicationStatus": "not_approved"
+      "publicationStatus": "not_approved",
+      "attorneyResponse": {
+        "recordedOn": "2026-09-24",
+        "source": "project_owner_attorney_review_in_conversation",
+        "outcome": "approved_with_holds",
+        "decision": "Approve stationary-service-only candidates and exclusion of the severed procession branch. Keep corporate grading unresolved. Where there is material uncertainty whether conduct supports a misdemeanor charge at all, default to excluding that disputed candidate from active guidance pending resolution.",
+        "remaining": "Check subsequent treatment and the injunction before release. Do not infer corporate grading or suppress separately supported variants.",
+        "publicationApproval": false
+      }
     },
     {
       "id": "specific_rule_required",
@@ -798,7 +806,15 @@
       "authorityIds": [
         "old-container"
       ],
-      "publicationStatus": "not_approved"
+      "publicationStatus": "not_approved",
+      "attorneyResponse": {
+        "recordedOn": "2026-09-24",
+        "source": "project_owner_attorney_review_in_conversation",
+        "outcome": "interpretation_recorded",
+        "decision": "Preserve the literal reference to 4301.62(B)(8). Treat 4301.62(C)(8) as the likely intended exception, explicitly labeled as interpretation, without rewriting statutory text. Track the apparent cross-reference error in the source-anomaly inventory.",
+        "remaining": "Complete legislative-history/source work; do not promote likely intent to a confirmed statutory correction.",
+        "publicationApproval": false
+      }
     },
     {
       "id": "activation_evidence_required",
@@ -891,7 +907,15 @@
         }
       ],
       "authorityIds": [],
-      "publicationStatus": "not_approved"
+      "publicationStatus": "not_approved",
+      "attorneyResponse": {
+        "recordedOn": "2026-09-24",
+        "source": "project_owner_attorney_review_in_conversation",
+        "outcome": "guidance_direction_recorded",
+        "decision": "Keep Case Guidance simple. Guidance may explain different procedural scenarios, including contempt, without assuming an ordinary misdemeanor route from the statutory grade alone.",
+        "remaining": "Design and validate scenario-based guidance before integration. This response does not establish that both routes are legally available or approve an automatic routing rule.",
+        "publicationApproval": false
+      }
     },
     {
       "id": "list_scope_confirmation",
@@ -929,7 +953,15 @@
       "authorityIds": [
         "old-animal-list"
       ],
-      "publicationStatus": "not_approved"
+      "publicationStatus": "not_approved",
+      "attorneyResponse": {
+        "recordedOn": "2026-09-24",
+        "source": "project_owner_attorney_review_in_conversation",
+        "outcome": "interpretation_approved",
+        "decision": "Approve whole-section fourth-degree misdemeanor mappings for both 959.12 and 959.17. The division-(C) qualifier in the shared penalty list applies only to 959.09.",
+        "remaining": "Record this as a scoped human interpretation; complete remaining elements and publication checks separately.",
+        "publicationApproval": false
+      }
     },
     {
       "id": "unclassified_felony_sentencing",
@@ -974,7 +1006,15 @@
         "animal-history",
         "animal-reenactment"
       ],
-      "publicationStatus": "not_approved"
+      "publicationStatus": "not_approved",
+      "attorneyResponse": {
+        "recordedOn": "2026-09-24",
+        "source": "project_owner_attorney_review_in_conversation",
+        "outcome": "uncertainty_retained",
+        "decision": "Use an unclassified-felony label (degree unspecified). Explain that the statute expressly provides a fine up to $10,000, while whether incarceration is authorized and its range remain unresolved. The reviewer could not locate another provision resolving those questions. Be explicit about the gap.",
+        "remaining": "Do not describe this as fine-only, infer an F1-F5 degree, or represent incarceration as either authorized or unavailable. Validate uncertainty wording before integration.",
+        "publicationApproval": false
+      }
     },
     {
       "id": "railroad_preemption_research",
@@ -1004,7 +1044,15 @@
       "authorityIds": [
         "csx"
       ],
-      "publicationStatus": "not_approved"
+      "publicationStatus": "not_approved",
+      "attorneyResponse": {
+        "recordedOn": "2026-09-24",
+        "source": "project_owner_attorney_review_in_conversation",
+        "outcome": "uncertainty_retained",
+        "decision": "Retain unresolved enforceability status. Do not assume the neighboring-section preemption ruling conclusively decides this section.",
+        "remaining": "Keep held from active guidance pending enforceability resolution; preserve the statute and penalty as source evidence.",
+        "publicationApproval": false
+      }
     }
   ],
   "catalogProposals": [

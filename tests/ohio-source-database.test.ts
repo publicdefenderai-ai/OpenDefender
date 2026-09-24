@@ -60,17 +60,17 @@ describe("Ohio authority manifest", () => {
     const seed = buildOhioSourceDatabaseSeed(manifest, ohioEvidenceTestTime);
     const ohioCount = criminalCharges.filter((charge) => charge.jurisdiction === "OH").length;
 
-    expect(ohioCount).toBe(239);
+    expect(ohioCount).toBe(238);
     expect(manifest.catalogRecords).toHaveLength(ohioCount);
     expect(new Set(manifest.catalogRecords.map((record) => record.chargeId)).size).toBe(ohioCount);
-    expect(seed.sources).toHaveLength(251);
-    expect(seed.snapshots).toHaveLength(251);
-    expect(seed.links).toHaveLength(688);
-    expect(seed.selectableChargeIds).toHaveLength(134);
+    expect(seed.sources).toHaveLength(257);
+    expect(seed.snapshots).toHaveLength(257);
+    expect(seed.links).toHaveLength(702);
+    expect(seed.selectableChargeIds).toHaveLength(133);
     expect(seed.catalogRecords.filter(record =>
       record.provisions.some(provision =>
         provision.metadata.sourceFirstBatch === "ohio_reviewed_125",
-      ))).toHaveLength(105);
+      ))).toHaveLength(104);
     expect(seed.selectableChargeIds).toEqual(expect.arrayContaining(
       OHIO_REVIEWED_SOURCES.map(source => source.chargeId),
     ));

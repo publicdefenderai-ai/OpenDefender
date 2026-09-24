@@ -20,7 +20,8 @@ describe("reviewed Ohio source-first batch", () => {
     expect(eligibility.decisions.filter(row => row.status === "eligible")).toHaveLength(105);
     expect(eligibility.decisions.filter(row => row.status === "held")).toHaveLength(20);
     expect(eligibility.decisions.filter(row => row.status === "duplicate")).toHaveLength(0);
-    expect(OHIO_REVIEWED_SOURCES).toHaveLength(105);
+    expect(OHIO_REVIEWED_SOURCES).toHaveLength(104);
+    expect(OHIO_REVIEWED_SOURCES.some(row => row.chargeId === "oh-orc-2911-21-criminal-trespass")).toBe(false);
     expect(eligibility.decisions.find(row =>
       row.id === "oh-orc-2923-211-underage-purchase-of-a-firearm")?.reason)
       .toContain("juvenile delinquent act");

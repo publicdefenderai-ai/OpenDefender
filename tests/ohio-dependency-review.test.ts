@@ -18,7 +18,7 @@ describe("Ohio dependency research handoff", () => {
     const { run } = fixture();
     expect(run()).toEqual({ sectionsAccountedFor: 51, sharedResearchModules: 6, addedPinnedStatutes: 25,
       catalogEntriesWithProposals: 10, sourceBasedEntriesAlreadyPresent: 4, proposedSectionGroups: 6,
-      attorneyQuestions: 6, agentResearchHolds: 3, dependenciesFullyClosed: 0, approvedForPublication: 0, runtimeChanges: 0 });
+      attorneyQuestions: 0, attorneyResponsesRecorded: 6, agentResearchHolds: 3, dependenciesFullyClosed: 0, approvedForPublication: 0, runtimeChanges: 0 });
   });
   it.each(["source text", "quote", "source substitution", "lost reference", "missing section", "duplicate migration", "changed catalog", "changed citation", "eligibility drift", "publication", "closed dependency", "unaccounted hold", "external approval"])("rejects %s rather than silently carrying research forward", mutation => {
     const { review, definitions, run } = fixture();
@@ -36,6 +36,18 @@ describe("Ohio dependency research handoff", () => {
     if (mutation === "unaccounted hold") review.holdReviews.pop();
     if (mutation === "external approval") review.externalAuthorities[0].verification = "pinned_approved";
     expect(run).toThrow();
+  });
+  it("does not allow a scoped attorney response to authorize publication", () => {
+    const { review, run } = fixture();
+    Object.assign(review.holdReviews.find(h => h.attorneyResponse)!.attorneyResponse!, { publicationApproval: true });
+    expect(run).toThrow(/Invalid scoped attorney response/);
+  });
+  it("renders recorded decisions while retaining the original questions and remaining work", () => {
+    const { review, run } = fixture();
+    const markdown = renderDependencyReview(review, run());
+    expect(markdown.match(/Attorney response recorded/g)).toHaveLength(6);
+    expect(markdown).toContain("whether incarceration is authorized and its range remain unresolved");
+    expect(markdown).toContain("does not establish that both routes are legally available");
   });
   it("rejects an updated upstream batch without pretending prior judgments cover it", () => {
     const { review, definitions } = fixture();

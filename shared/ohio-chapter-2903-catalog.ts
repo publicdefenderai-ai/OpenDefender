@@ -103,6 +103,14 @@ export const OHIO_CHAPTER_2903_PILOT_CHARGES: CriminalCharge[] = [
 ];
 
 export const OHIO_CHAPTER_2903_LEGACY_IDS_REQUIRING_RESELECTION = new Set([
+  // Older common-charge IDs have materially different scope/penalty claims.
+  // Keep saved IDs intact and require an explicit source-backed selection.
+  "oh-open-container",
+  "oh-alcohol-in-park",
+  "oh-littering",
+  "oh-animal-cruelty-misdemeanor",
+  "oh-illegal-fireworks",
+  "oh-minor-in-possession",
   "oh-assault-with-deadly-weapon",
   "oh-assault-on-peace-officer",
   "oh-aggravated-assault",

@@ -3,6 +3,7 @@ import type { VerificationBatch } from "./verify-batch";
 import { extractOhioCrossReferences } from "../ohio-discovery/offense-extractor";
 
 export interface DependencyEvidence { section: string; sourceHash: string; start: number; end: number; text: string }
+interface AttorneyResponse { recordedOn: string; source: string; outcome: string; decision: string; remaining: string; publicationApproval: false }
 interface ResearchItem { evidence: DependencyEvidence[]; authorityIds?: string[] }
 export interface DependencyReview {
   schemaVersion: number; kind: string; asOf: string; researchedOn: string;
@@ -10,7 +11,7 @@ export interface DependencyReview {
   sources: VerificationBatch["sources"];
   modules: Array<ResearchItem & { id: string; title: string; sections: string[]; finding: string; remaining: string; status: string }>;
   externalAuthorities: Array<{ id: string; title: string; url: string; pinpoint: string; finding: string; excerpt: string; limit: string; checkedOn: string; verification: string }>;
-  holdReviews: Array<ResearchItem & { id: string; sections: string[]; status: string; finding: string; proposal: string; question: string; publicationStatus: string }>;
+  holdReviews: Array<ResearchItem & { id: string; sections: string[]; status: string; finding: string; proposal: string; question: string; publicationStatus: string; attorneyResponse?: AttorneyResponse }>;
   catalogProposals: Array<ResearchItem & { section: string; title: string; legacyIds: string[]; scopeCandidates: string[]; grade: string; proposedChange: string; penaltyFinding: string; exceptions: string; remaining: string; status: string }>;
   catalogBaseline: Array<{ id: string; section: string; kind: string; path: string; definitionHash: string; baselineDefinition: string; citationOverride: string | null; existingEligibility: string; runtimeAvailability: string }>;
   coverage: Array<{ section: string; moduleIds: string[]; proposalSection: string | null; holdIds: string[]; remaining: string; referenceSignals: Array<{ section: string; sourceUrl: string | null; sourceHash: string | null; status: string }>; dependencyStatus: string; publicationStatus: string }>;
@@ -56,6 +57,10 @@ export function validateDependencyReview(review: DependencyReview, baseText: str
   const expectedHolds = [...new Set(base.findings.flatMap(row => row.hold ? [row.hold] : []))];
   requireTrue(sameSet(review.holdReviews.map(row => row.id), expectedHolds), "Incomplete hold accounting");
   for (const hold of review.holdReviews) {
+    if (hold.attorneyResponse) {
+      const response = hold.attorneyResponse;
+      requireTrue(hold.status === "attorney_judgment" && response.source === "project_owner_attorney_review_in_conversation" && /^\d{4}-\d{2}-\d{2}$/.test(response.recordedOn) && response.recordedOn >= review.researchedOn && response.publicationApproval === false && ["approved_with_holds", "interpretation_recorded", "guidance_direction_recorded", "interpretation_approved", "uncertainty_retained"].includes(response.outcome) && response.decision.trim() && response.remaining.trim(), `Invalid scoped attorney response: ${hold.id}`);
+    }
     requireTrue(sameSet(hold.sections, base.findings.filter(row => row.hold === hold.id).map(row => row.section)) && ["agent_research", "attorney_judgment"].includes(hold.status) && hold.publicationStatus === "not_approved" && hold.question.trim() && hold.finding.trim() && hold.proposal.trim(), `Invalid hold disposition: ${hold.id}`);
   }
   for (const module of review.modules) {
@@ -83,7 +88,8 @@ export function validateDependencyReview(review: DependencyReview, baseText: str
   return { sectionsAccountedFor: review.coverage.length, sharedResearchModules: review.modules.length,
     addedPinnedStatutes: Object.keys(review.sources).length, catalogEntriesWithProposals: review.catalogBaseline.length,
     sourceBasedEntriesAlreadyPresent: review.catalogBaseline.filter(row => row.kind === "existing_source_based_definition").length,
-    proposedSectionGroups: review.catalogProposals.length, attorneyQuestions: review.holdReviews.filter(row => row.status === "attorney_judgment").length,
+    proposedSectionGroups: review.catalogProposals.length, attorneyQuestions: review.holdReviews.filter(row => row.status === "attorney_judgment" && !row.attorneyResponse).length,
+    attorneyResponsesRecorded: review.holdReviews.filter(row => row.attorneyResponse).length,
     agentResearchHolds: review.holdReviews.filter(row => row.status === "agent_research").length,
     dependenciesFullyClosed: 0, approvedForPublication: 0, runtimeChanges: 0 };
 }
@@ -107,9 +113,10 @@ export function renderDependencyReview(review: DependencyReview, totals: ReturnT
   }
   lines.push("## Shared research", "");
   for (const m of review.modules) lines.push(`### ${m.title}`, "", `Applies as a research topic to ${m.sections.length} assigned sections. This is not complete dependency closure.`, "", m.finding, "", `**Remaining:** ${m.remaining}`, "", `Sources: ${links(m)}.`, "");
-  lines.push("## Attorney decisions", "", "These six questions concern held expansion candidates. They do not block work on the ten catalog entries above. No transcription or 51-section audit is requested. A response can approve the proposed interpretation, correct it, or keep it held with a reason; none grants publication approval. External case/history references still require release-quality source pinning and subsequent-treatment checks.", "");
+  lines.push("## Attorney decisions", "", "These six review items concern held expansion candidates. Recorded responses below supersede the original proposed treatment where they differ; the original questions remain for context. They do not block work on the ten catalog entries above. No transcription or 51-section audit is requested. A response can approve the proposed interpretation, correct it, or keep it held with a reason; none grants publication approval. External case/history references still require release-quality source pinning and subsequent-treatment checks.", "");
   for (const h of review.holdReviews.filter(h => h.status === "attorney_judgment")) {
     lines.push(`### ${h.sections.map(s => `§${s}`).join(", ")}`, "", h.finding, "", `**Proposed treatment:** ${h.proposal}`, "", `**Question:** ${h.question}`, "", `Statutes: ${links(h)}.`, ...authorities(h), "");
+    if (h.attorneyResponse) lines.push(`**Attorney response recorded ${h.attorneyResponse.recordedOn}:** ${h.attorneyResponse.decision}`, "", `**Remaining after response:** ${h.attorneyResponse.remaining}`, "", "This scoped response is not publication approval.", "");
     for (const span of h.evidence.slice(0, 2)) {
       const excerpt = span.text.length > 900 ? span.text.slice(0, 900) + " [excerpt ends; see linked statute]" : span.text;
       lines.push(`Key statutory excerpt, §${span.section}:`, "", `> ${excerpt.replace(/\n/g, " ").trimEnd()}`, "");

@@ -173,7 +173,7 @@ Sources: [§1321.01](https://codes.ohio.gov/ohio-revised-code/section-1321.01), 
 
 ## Attorney decisions
 
-These six questions concern held expansion candidates. They do not block work on the ten catalog entries above. No transcription or 51-section audit is requested. A response can approve the proposed interpretation, correct it, or keep it held with a reason; none grants publication approval. External case/history references still require release-quality source pinning and subsequent-treatment checks.
+These six review items concern held expansion candidates. Recorded responses below supersede the original proposed treatment where they differ; the original questions remain for context. They do not block work on the ten catalog entries above. No transcription or 51-section audit is requested. A response can approve the proposed interpretation, correct it, or keep it held with a reason; none grants publication approval. External case/history references still require release-quality source pinning and subsequent-treatment checks.
 
 ### §3767.30
 
@@ -185,6 +185,12 @@ These six questions concern held expansion candidates. They do not block work on
 
 Statutes: [§3767.99](https://codes.ohio.gov/ohio-revised-code/section-3767.99), [§3767.30](https://codes.ohio.gov/ohio-revised-code/section-3767.30), [§3767.01](https://codes.ohio.gov/ohio-revised-code/section-3767.01).
 - [Phelps-Roper v. Strickland, 539 F.3d 356 (6th Cir. 2008)](https://www.govinfo.gov/content/pkg/USCOURTS-ca6-07-03600/pdf/USCOURTS-ca6-07-03600-0.pdf), pp. 1–3, 14. The Sixth Circuit upheld the stationary funeral-protest restriction. Page 3 records that the district court severed the funeral-procession restriction as unconstitutional and that the state did not cross-appeal. These two portions cannot be described as uniformly upheld. **Limit:** Obtain subsequent-treatment confirmation and the operative injunction before publication; no current citator certification is claimed.
+
+**Attorney response recorded 2026-09-24:** Approve stationary-service-only candidates and exclusion of the severed procession branch. Keep corporate grading unresolved. Where there is material uncertainty whether conduct supports a misdemeanor charge at all, default to excluding that disputed candidate from active guidance pending resolution.
+
+**Remaining after response:** Check subsequent treatment and the injunction before release. Do not infer corporate grading or suppress separately supported variants.
+
+This scoped response is not publication approval.
 
 Key statutory excerpt, §3767.99:
 
@@ -205,6 +211,12 @@ D cites 4301.62(B)(8). Both the snapshot and inspected September 2016 composite 
 Statutes: [§4301.21](https://codes.ohio.gov/ohio-revised-code/section-4301.21), [§4301.62](https://codes.ohio.gov/ohio-revised-code/section-4301.62).
 - [4301.62, historical version effective September 28, 2016](https://codes.ohio.gov/ohio-revised-code/section-4301.62/9-28-2016), B(1)–(5), C(8). This historical composite also locates the market exception in C(8), while B ends at (5). The mismatch in 4301.21(D) is not resolved by using this earlier version. **Limit:** Do not correct the literal statutory reference automatically; an enrolled-act chain and interpretation are needed.
 
+**Attorney response recorded 2026-09-24:** Preserve the literal reference to 4301.62(B)(8). Treat 4301.62(C)(8) as the likely intended exception, explicitly labeled as interpretation, without rewriting statutory text. Track the apparent cross-reference error in the source-anomaly inventory.
+
+**Remaining after response:** Complete legislative-history/source work; do not promote likely intent to a confirmed statutory correction.
+
+This scoped response is not publication approval.
+
 Key statutory excerpt, §4301.21:
 
 > (D) E xcept as provided in division (B)(8) of section 4301.62 of the Revised Code, the seller shall not permit the purchaser to remove beer or intoxicating liquor so sold from the premises.
@@ -222,6 +234,12 @@ Key statutory excerpt, §4301.62:
 **Question:** Should a 4301.74 allegation use a distinct contempt route, an ordinary M1 route, or document-dependent routing? Which charging document/order distinguishes the routes so Case Guidance does not give the wrong case stages?
 
 Statutes: [§4301.74](https://codes.ohio.gov/ohio-revised-code/section-4301.74), [§4301.99](https://codes.ohio.gov/ohio-revised-code/section-4301.99), [§3767.01](https://codes.ohio.gov/ohio-revised-code/section-3767.01), [§3767.05](https://codes.ohio.gov/ohio-revised-code/section-3767.05).
+
+**Attorney response recorded 2026-09-24:** Keep Case Guidance simple. Guidance may explain different procedural scenarios, including contempt, without assuming an ordinary misdemeanor route from the statutory grade alone.
+
+**Remaining after response:** Design and validate scenario-based guidance before integration. This response does not establish that both routes are legally available or approve an automatic routing rule.
+
+This scoped response is not publication approval.
 
 Key statutory excerpt, §4301.74:
 
@@ -241,6 +259,12 @@ Neither target has a division C. The older 959.99(C) list directly grades both e
 
 Statutes: [§959.99](https://codes.ohio.gov/ohio-revised-code/section-959.99), [§959.12](https://codes.ohio.gov/ohio-revised-code/section-959.12), [§959.17](https://codes.ohio.gov/ohio-revised-code/section-959.17).
 - [959.99(C), historical version effective September 29, 2013](https://codes.ohio.gov/ohio-revised-code/section-959.99/9-29-2013), division C. The earlier list directly assigned M4 to 959.12 and 959.17 before the division-C reference to 959.09 appeared. This supports the proposed whole-section reading of those two current targets. **Limit:** Historical corroboration only; the current compound list still requires a recorded interpretive decision.
+
+**Attorney response recorded 2026-09-24:** Approve whole-section fourth-degree misdemeanor mappings for both 959.12 and 959.17. The division-(C) qualifier in the shared penalty list applies only to 959.09.
+
+**Remaining after response:** Record this as a scoped human interpretation; complete remaining elements and publication checks separately.
+
+This scoped response is not publication approval.
 
 Key statutory excerpt, §959.99:
 
@@ -262,6 +286,12 @@ Statutes: [§959.99](https://codes.ohio.gov/ohio-revised-code/section-959.99), [
 - [LSC analysis, Sub. S.B. 331 as passed, 131st GA](https://www.legislature.ohio.gov/download?format=pdf&key=6356), p. 20, animal fighting; corroborating fiscal note key=6286, p. 6. The legislative analysis describes B/C animal-fighting conduct as a felony with a fine up to $10,000; it does not provide a felony degree. The historical material supports retaining the express classification rather than inferring F5. **Limit:** Search-index text inspected; direct PDF retrieval failed. This is a research lead, not pinned operative evidence or a substitute for current 959.99(I).
 - [LSC analysis, H.B. 24 as reported by Senate Agriculture and Natural Resources, 133rd GA](https://www.legislature.ohio.gov/download?format=pdf&key=14944), pp. 18–19, animal fighting and reenactment. The analysis discusses reenactment following the S.B. 331 single-subject/severability litigation. Historical versions cannot be assumed uniform across dates and appellate districts. **Limit:** Search-index text inspected; direct PDF retrieval failed. Obtain the enrolled act and final analysis before a historical-law determination.
 
+**Attorney response recorded 2026-09-24:** Use an unclassified-felony label (degree unspecified). Explain that the statute expressly provides a fine up to $10,000, while whether incarceration is authorized and its range remain unresolved. The reviewer could not locate another provision resolving those questions. Be explicit about the gap.
+
+**Remaining after response:** Do not describe this as fine-only, infer an F1-F5 degree, or represent incarceration as either authorized or unavailable. Validate uncertainty wording before integration.
+
+This scoped response is not publication approval.
+
 Key statutory excerpt, §959.99:
 
 > (I) Whoever violates division (B) or (C) of section 959.15 of the Revised Code is guilty of a felony and shall be fined not more than ten thousand dollars.
@@ -280,6 +310,12 @@ The reviewed CSX judgment concerns 5589.21. The lead and concurring opinions use
 
 Statutes: [§5589.211](https://codes.ohio.gov/ohio-revised-code/section-5589.211), [§5589.99](https://codes.ohio.gov/ohio-revised-code/section-5589.99).
 - [State v. CSX Transp., Inc., 168 Ohio St.3d 543, 2022-Ohio-2832](https://www.supremecourt.ohio.gov/rod/docs/pdf/0/2022/2022-Ohio-2832.pdf), paragraphs 32–35, 51 and judgment vote. The court reinstated dismissal of 5589.21 charges on federal-preemption grounds. The lead opinion and concurrence in judgment used different federal statutes. Neither the judgment nor the lead rationale should be silently extended to 5589.211. **Limit:** 5589.211 concerns an abandoned locomotive with a crew-safety exception. Its enforceability remains a separate legal question; no holding specific to that section was located in this bounded search.
+
+**Attorney response recorded 2026-09-24:** Retain unresolved enforceability status. Do not assume the neighboring-section preemption ruling conclusively decides this section.
+
+**Remaining after response:** Keep held from active guidance pending enforceability resolution; preserve the statute and penalty as source evidence.
+
+This scoped response is not publication approval.
 
 Key statutory excerpt, §5589.211:
 
