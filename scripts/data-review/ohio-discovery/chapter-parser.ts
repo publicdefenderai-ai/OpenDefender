@@ -66,7 +66,7 @@ function parseLatestLegislation(info: string): string | null {
 export function parseOhioChapterPage(
   html: string,
   chapterNumber: string,
-  asOf = new Date().toISOString().slice(0, 10),
+  asOf: string,
 ): { heading: string | null; sections: OhioParsedSection[] } {
   const dom = new JSDOM(html);
   try {
@@ -83,7 +83,7 @@ export function parseOhioChapterPage(
 export function parseOhioChapterSections(
   html: string,
   chapterNumber: string,
-  asOf = new Date().toISOString().slice(0, 10),
+  asOf: string,
 ): OhioParsedSection[] {
   const dom = new JSDOM(html);
   try {

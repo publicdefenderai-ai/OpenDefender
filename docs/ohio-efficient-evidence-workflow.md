@@ -1,5 +1,9 @@
 # Ohio batch evidence workflow
 
+**September 24 follow-up:** See [Ohio penalty evidence](ohio-penalty-evidence.md)
+for the latest extraction, range accounting and single-pass report workflow.
+Counts below describe the earlier scoped work.
+
 **September 23 update:** Statewide acquisition and discovery now extend beyond
 the scoped batch below. See [Ohio discovery accounting](ohio-discovery-accounting.md)
 for the current snapshot accounting and remaining discovery work. The historical
