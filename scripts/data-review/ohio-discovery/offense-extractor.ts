@@ -53,8 +53,17 @@ export interface OhioExtractedOffence {
  * numbered `.99`, grades it. Without this link those offenses look ungraded, and
  * their catchline name would be the only thing left to publish.
  */
+export interface OhioPenaltyTargetScope {
+  section: string;
+  referenceSpans: OhioTextSpan[];
+  scope: "whole_section" | "division_qualified" | "ambiguous_reference";
+  reviewReasons: string[];
+  requiresApplicabilityReview: boolean;
+}
+
 export interface OhioPenaltyLinkage {
   targetSections: string[];
+  targetScopes: OhioPenaltyTargetScope[];
   ranges: Array<{ from: string; to: string; span: OhioTextSpan }>;
   context: OhioTextSpan;
   requiresApplicabilityReview: boolean;
@@ -341,6 +350,49 @@ const PENALTY_LINKAGE = new RegExp(
   "i",
 );
 
+/** Resolve only explicit list grammar; uncertain inheritance stays reviewable. */
+function penaltyTargetScopes(reference: string, referenceStart: number, sentence: string,
+  targets: string[]): OhioPenaltyTargetScope[] {
+  const shared: string[] = [];
+  if (/\b(?:except|unless|if|when|previously|notwithstanding|provided)\b|\b(?:first|second|third|subsequent)\s+(?:offense|violation)/i.test(sentence)) shared.push("conditional_penalty");
+  if (/\bbeing\b/i.test(reference)) shared.push("actor_qualification");
+  if (/\b(?:prior\s+to|on\s+or\s+after|before|after)\b|(?<![\d.])\b(?:18|19|20)\d{2}\b(?![\d.])/i.test(sentence)) shared.push("temporal_condition");
+  // Unknown reference wording may describe rules, conduct or an actor rather
+  // than a direct offense. Do not clear its hold simply because a number is bare.
+  const unexplained = reference.replace(/\d+\.\d+/g, " ").replace(/\([a-z0-9]+\)/gi, " ")
+    .replace(/\b(?:divisions?|sections?|of|the|revised|code|or|and|to|through|violates)\b/gi, " ")
+    .replace(/[\s,;]+/g, "");
+  if (unexplained) shared.push("unparsed_reference_qualification");
+  let previousEnd = 0;
+  let inherited: OhioPenaltyTargetScope["scope"] = "ambiguous_reference";
+  const byTarget = new Map<string, OhioPenaltyTargetScope>();
+  for (const match of reference.matchAll(/\d+\.\d+/g)) {
+    const gap = reference.slice(previousEnd, match.index!);
+    const start = referenceStart + previousEnd;
+    const end = referenceStart + match.index! + match[0].length;
+    let scope: OhioPenaltyTargetScope["scope"];
+    if (/\bdivisions?\b/i.test(gap)) scope = "division_qualified";
+    else if (/\bsections?\s*$/i.test(gap) && !/\bof\s+sections?\s*$/i.test(gap)) scope = "whole_section";
+    else if (/\bof\s+sections?\s*$/i.test(gap) && inherited === "division_qualified") scope = "division_qualified";
+    else if (/^[\s,]*(?:(?:or|and)\s*)?$/i.test(gap) && inherited === "whole_section") scope = "whole_section";
+    else scope = "ambiguous_reference";
+    inherited = scope;
+    previousEnd = match.index! + match[0].length;
+    if (!targets.includes(match[0])) continue;
+    const prior = byTarget.get(match[0]);
+    const reasons = [...shared, ...(scope === "whole_section" ? [] : [scope])];
+    const referenceSpan = { start, end, text: reference.slice(start - referenceStart, end - referenceStart) };
+    if (prior) {
+      prior.referenceSpans.push(referenceSpan);
+      prior.reviewReasons = [...new Set([...prior.reviewReasons, ...reasons])];
+      if (prior.scope !== scope) prior.scope = "ambiguous_reference";
+      prior.requiresApplicabilityReview = prior.reviewReasons.length > 0;
+    } else byTarget.set(match[0], { section: match[0], referenceSpans: [referenceSpan], scope,
+      reviewReasons: reasons, requiresApplicabilityReview: reasons.length > 0 });
+  }
+  return [...byTarget.values()];
+}
+
 /**
  * Read a chapter penalty section and attach its grades to the conduct sections
  * it punishes. Only sections other than the penalty section itself are
@@ -362,16 +414,18 @@ export function extractOhioPenaltyLinkages(
     if (targets.length === 0 && rangeMatches.length === 0) continue;
     const start = sentence.start + (match.index ?? 0);
     const referenceStart = start + match[0].indexOf(referenceText);
+    const targetScopes = penaltyTargetScopes(referenceText, referenceStart, sentence.text, targets);
     const conditional = /\bexcept\s+as\s+otherwise\b/i.test(sentence.text) ||
       /\b(if|when|unless)\b/i.test(sentence.text.slice(0, match.index ?? 0)) ||
       /\b(if|when|unless)\b/i.test(match[5] ?? "");
     linkages.push({
       targetSections: targets.sort(),
+      targetScopes,
       ranges: rangeMatches.map(range => ({ from: range[1], to: range[2], span: {
         start: referenceStart + range.index!, end: referenceStart + range.index! + range[0].length, text: range[0],
       } })),
       context: { start: sentence.start, end: sentence.start + sentence.text.length, text: sentence.text },
-      requiresApplicabilityReview: rangeMatches.length > 0 || /\b(?:division|except|unless|if|when|being|previously)\b|\b(?:first|subsequent)\s+offense/i.test(sentence.text),
+      requiresApplicabilityReview: rangeMatches.length > 0 || targetScopes.some(target => target.requiresApplicabilityReview),
       grade: gradeFrom(match[2], match[3], match[4], conditional, match[0], start),
       span: { text: normalize(match[0]), start, end: start + match[0].length },
     });

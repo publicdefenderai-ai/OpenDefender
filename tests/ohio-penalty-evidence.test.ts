@@ -1,8 +1,9 @@
+import { groupOhioPenaltyResearch } from "../scripts/data-review/ohio-discovery/penalty-groups";
 import { createHash } from "node:crypto";
-import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from "node:fs";
+import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { extractOhioLocalGrades, extractOhioOffences, extractOhioPenaltyLinkages } from "../scripts/data-review/ohio-discovery/offense-extractor";
 import { resolveRecordedRange } from "../scripts/data-review/recorded-range";
 import { classifyOhioOffenses } from "../scripts/data-review/classify-ohio-offenses";
@@ -129,6 +130,35 @@ describe("Evidence pipeline safety and reviewer usability", () => {
       ] }).rows;
       expect(rows.every(row => row.evidence && !OHIO_MECHANICAL_VERDICTS.has(row.verdict))).toBe(true);
       expect(rows.find(row => row.chargeId === "wrong")).toMatchObject({ verdict: "citation_candidates", section: "102.011", statutoryName: null, candidateNames: ["example offense (102.03)"] });
+    } finally { rmSync(f.dir, { recursive: true, force: true }); }
+  });
+  it("warns once when missing source caches leave reviewer excerpts unavailable", () => {
+    const f = fixture(); const warning = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      rmSync(f.cacheDir, { recursive: true, force: true });
+      const result = reconcileOhioCatalog({ ...f, catalog: [
+        { id: "one", name: "Old label", code: "102.011", jurisdiction: "OH" },
+        { id: "two", name: "Other label", code: "102.02", jurisdiction: "OH" },
+      ] });
+      expect(result.rows.every(row => row.evidence === null)).toBe(true);
+      expect(warning).toHaveBeenCalledTimes(1);
+      expect(warning.mock.calls[0][0]).toMatch(/some reviewer evidence excerpts.*acquire-ohio-code/);
+    } finally { warning.mockRestore(); rmSync(f.dir, { recursive: true, force: true }); }
+  });
+  it("groups range evidence once while preserving definition and held-version targets", () => {
+    const f = fixture();
+    try {
+      const chapter = JSON.parse(readFileSync(join(f.cacheDir, "chapter-102.json"), "utf8"));
+      const sources = new Map<string, any>(chapter.sections.map((row: any) => [row.section, row]));
+      const result = groupOhioPenaltyResearch(f.report.sections, f.report.accounting.penaltyRanges, sources, []);
+      expect(result.totals).toMatchObject({ clauseGroups: 1, targetRelationships: 3, repeatedClauseReadsAvoidable: 2 });
+      expect(result.sourceBatches[0].clauseIds).toEqual([result.groups[0].id]);
+      const group = result.groups[0];
+      expect(group.targets.find(row => row.section === "102.011")?.directEvidence).toEqual([]);
+      expect(group.targets.find(row => row.section === "102.02")?.sourceStatus?.kind).toBe("not_yet_effective");
+      for (const target of group.targets) expect(target.context.text).toBe(sources.get(target.section).text.slice(target.context.start, target.context.end));
+      sources.get("102.99").text += "changed";
+      expect(() => groupOhioPenaltyResearch(f.report.sections, f.report.accounting.penaltyRanges, sources, [])).toThrow(/does not match/);
     } finally { rmSync(f.dir, { recursive: true, force: true }); }
   });
   it("stops parser upgrades before acquisition unless network fallback was explicitly chosen", () => {

@@ -1,5 +1,6 @@
 /** Offline triage, not legal determinations or publication decisions. */
 import fs from "node:fs";
+import { groupOhioPenaltyResearch } from "./ohio-discovery/penalty-groups";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
@@ -100,6 +101,7 @@ export function investigateOhioDiscovery(root = process.cwd(), validatedReplay?:
   const reconciled = reconcileOhioCatalog({
     inventoryPath: path.join(root, OUTPUT, "ohio-offense-inventory.json"),
     enumerationPath: path.join(root, OUTPUT, "ohio-code-enumeration.json"),
+    cacheDir,
   });
   if (JSON.stringify(reconciliation.rows) !== JSON.stringify(reconciled.rows)) {
     throw new Error("Investigation requires reconciliation matching the inventory and current catalog");
@@ -169,6 +171,7 @@ export function investigateOhioDiscovery(root = process.cwd(), validatedReplay?:
   const remainingLegacy = reconciliation.rows.filter(row => !OHIO_MECHANICAL_VERDICTS.has(row.verdict) && row.verdict !== "discovery_unresolved")
     .map(row => ({ chargeId: row.chargeId, catalogLabel: row.catalogLabel, section: row.section,
       group: row.verdict, reason: row.reason, disposition: "existing_backlog_not_substantively_investigated_in_this_pass" }));
+  const sharedPenaltyResearch = groupOhioPenaltyResearch(replay.sections, replay.accounting.penaltyRanges, sources, reconciliation.rows);
   return { schemaVersion: 1, kind: "ohio_discovery_investigation", publicationStatus: "research_only_not_published",
     inputs: { enumerationHash: replay.accounting.enumerationHash, enumerationGeneratedAt: replay.accounting.enumerationGeneratedAt,
       inventoryHash: sha(inventoryText), reconciliationHash: sha(reconciliationText) },
@@ -187,8 +190,10 @@ export function investigateOhioDiscovery(root = process.cwd(), validatedReplay?:
       localGradeSections: replay.accounting.localGradeSections.length,
       penaltyRanges: replay.accounting.penaltyRanges.length,
       unresolvedPenaltyRanges: replay.accounting.penaltyRanges.filter(row => row.resolution !== "bounded_by_recorded_order").length,
-      remainingLegacyGroups: counts(remainingLegacy) },
+      remainingLegacyGroups: counts(remainingLegacy), sharedPenaltyResearch: sharedPenaltyResearch.totals },
     candidates, legacy, unresolvedTargets, statusAudit, temporalHolds, remainingLegacy,
+    sharedPenaltyResearch: sharedPenaltyResearch.groups,
+    sharedPenaltySourceBatches: sharedPenaltyResearch.sourceBatches,
     scheduledRepeals: replay.accounting.scheduledRepeals,
     localGradeSections: replay.accounting.localGradeSections,
     penaltyRanges: replay.accounting.penaltyRanges };

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "kind": "ohio_catalog_reconciliation",
   "publicationStatus": "analysis_only_not_published",
-  "generatedAt": "2026-09-24T14:13:03.489Z",
+  "generatedAt": "2026-09-24T15:43:07.923Z",
   "method": {
     "naming": "Statutory names come from each section's own guilt clause.",
     "mechanical": [
@@ -18,17 +18,17 @@
     "catalogRows": 239,
     "section_missing": 20,
     "exact_match": 125,
-    "discovery_unresolved": 24,
+    "adopt_catchline": 7,
+    "discovery_unresolved": 20,
     "label_conflict": 30,
     "rename_single": 11,
     "rename_compound": 7,
     "compound_ambiguous": 17,
     "citation_candidates": 1,
     "resolve_by_name": 1,
-    "adopt_catchline": 3,
-    "mechanical": 147,
-    "needsReview": 92,
-    "discoveryWork": 24
+    "mechanical": 151,
+    "needsReview": 88,
+    "discoveryWork": 20
   },
   "rows": [
     {
@@ -83,16 +83,16 @@
       "catalogLabel": "Possession of Alcohol in Park / Prohibited Area",
       "catalogCode": "4301.62",
       "section": "4301.62",
-      "statutoryName": null,
+      "statutoryName": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "officialCatchline": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
       "candidateNames": [],
       "grades": [
         "minor misdemeanor"
       ],
-      "evidence": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor.",
-      "verdict": "discovery_unresolved",
-      "reason": "Section 4301.62 (\"Opened container of beer or intoxicating liquor prohibited at certain premises\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "evidence": "Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor",
+      "verdict": "adopt_catchline",
+      "reason": "Section 4301.62 states a graded prohibition without naming the offense, so the official catchline is the display name."
     },
     {
       "chargeId": "oh-animal-at-large",
@@ -1371,16 +1371,16 @@
       "catalogLabel": "Open Container Violation",
       "catalogCode": "4301.62",
       "section": "4301.62",
-      "statutoryName": null,
+      "statutoryName": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "officialCatchline": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
       "candidateNames": [],
       "grades": [
         "minor misdemeanor"
       ],
-      "evidence": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor.",
-      "verdict": "discovery_unresolved",
-      "reason": "Section 4301.62 (\"Opened container of beer or intoxicating liquor prohibited at certain premises\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "evidence": "Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor",
+      "verdict": "adopt_catchline",
+      "reason": "Section 4301.62 states a graded prohibition without naming the offense, so the official catchline is the display name."
     },
     {
       "chargeId": "oh-orc-2903-01-aggravated-murder",
@@ -3797,32 +3797,32 @@
       "catalogLabel": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "catalogCode": "4301.62",
       "section": "4301.62",
-      "statutoryName": null,
+      "statutoryName": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "officialCatchline": "Opened container of beer or intoxicating liquor prohibited at certain premises",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.62",
       "candidateNames": [],
       "grades": [
         "minor misdemeanor"
       ],
-      "evidence": "(A) Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor.",
-      "verdict": "discovery_unresolved",
-      "reason": "Section 4301.62 (\"Opened container of beer or intoxicating liquor prohibited at certain premises\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "evidence": "Whoever violates section 4301.47, 4301.48, 4301.49, 4301.62, or 4301.70 or division (C) of section 4301.65 or division (B) of section 4301.691 of the Revised Code is guilty of a minor misdemeanor",
+      "verdict": "adopt_catchline",
+      "reason": "Section 4301.62 states a graded prohibition without naming the offense, so the official catchline is the display name."
     },
     {
       "chargeId": "oh-orc-4301-633-furnishing-false-information-to-obtain-beer-or-intoxicating-liquor-for-person-under-twenty-one",
       "catalogLabel": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
       "catalogCode": "4301.633",
       "section": "4301.633",
-      "statutoryName": null,
+      "statutoryName": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
       "officialCatchline": "Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one",
       "sourceUrl": "https://codes.ohio.gov/ohio-revised-code/section-4301.633",
       "candidateNames": [],
       "grades": [
         "misdemeanor first degree"
       ],
-      "evidence": "(C) Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree.",
-      "verdict": "discovery_unresolved",
-      "reason": "Section 4301.633 (\"Furnishing false information to obtain beer or intoxicating liquor for person under twenty-one\") has unresolved discovery signals (penalty_scope_candidate). Investigate conduct and penalty applicability before any legal referral. This is neither an automatic rename nor a finding that no offense exists."
+      "evidence": "Whoever violates division (D) of section 4301.21, section 4301.251, 4301.58, 4301.59, 4301.60, 4301.633, 4301.66, 4301.68, or 4301.74, division (B), (C), (D), or (F) of section 4301.69, or division (E), (F), (G), or (I) of section 4301.691 of the Revised Code is guilty of a misdemeanor of the first degree",
+      "verdict": "adopt_catchline",
+      "reason": "Section 4301.633 states a graded prohibition without naming the offense, so the official catchline is the display name."
     },
     {
       "chargeId": "oh-orc-4510-11-driving-under-suspension-or-in-violation-of-license-restriction",
