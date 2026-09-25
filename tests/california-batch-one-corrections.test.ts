@@ -6,7 +6,7 @@ import { readCaliforniaReview, validateCaliforniaReview } from "../scripts/data-
 
 describe("California bounded correction delivery", () => {
   it("binds all corrections to preserved source bytes and accounts for unfinished records", () => {
-    expect(validateCaliforniaReview(readCaliforniaReview())).toEqual({ batchRecords: 25, corrections: 11, pending: 14, sections: 57, versions: 58 });
+    expect(validateCaliforniaReview(readCaliforniaReview())).toEqual({ batchRecords: 25, corrections: 19, pending: 6, sections: 58, versions: 59 });
   });
   it("rejects changed source bytes", () => {
     const review = readCaliforniaReview();
@@ -18,14 +18,37 @@ describe("California bounded correction delivery", () => {
     review.records.find(row => row.id === "ca-menacing")!.correctionSources = ["PEN:422"];
     expect(() => validateCaliforniaReview(review)).toThrow("Correction evidence incomplete");
   });
+  it("rejects a missing Health and Safety Code punishment source", () => {
+    const review = readCaliforniaReview();
+    delete review.documents["HSC:11374"];
+    expect(() => validateCaliforniaReview(review)).toThrow("Missing dependency: HSC:11374");
+  });
+  it("keeps ordinary theft and possession classifications separate from their exceptional paths", () => {
+    const theft = getChargeById("ca-petty-theft")!;
+    expect(theft.category).toBe("misdemeanor");
+    expect(theft.categories).toEqual(["misdemeanor", "infraction", "felony"]);
+    expect(theft.description).toContain("$50 or less");
+    expect(theft.description).toContain("no theft-related prior conviction");
+    expect(theft.maxPenalty).toContain("separate repeat-theft path");
+    const possession = getChargeById("ca-possession-of-controlled-substance")!;
+    expect(possession.category).toBe("misdemeanor");
+    expect(possession.categories).toEqual(["misdemeanor", "felony"]);
+    expect(possession.maxPenalty).toContain("not a §11395 sentencing calculation");
+    const paraphernalia = getChargeById("ca-possession-of-drug-paraphernalia")!;
+    expect(paraphernalia.maxPenalty).toContain("§11374");
+    expect(paraphernalia.maxPenalty).toContain("15–180 days");
+    expect(paraphernalia.description).toContain("personal-use needles or syringes");
+    expect(paraphernalia.description).toContain("checking services");
+    expect(getChargeExplanation(paraphernalia.name, "CA", "en", paraphernalia.id)?.plainSummary).toBe(paraphernalia.description);
+  });
   it("does not silently choose a version for corrected law", () => {
     const review = readCaliforniaReview();
     review.documents["PEN:18.5"].push(structuredClone(review.documents["PEN:18.5"][0]));
     expect(() => validateCaliforniaReview(review)).toThrow("unresolved source versions");
   });
-  it("does not let pending property or DUI work become approved through a status edit", () => {
+  it("does not let pending DUI work become approved through a status edit", () => {
     const review = readCaliforniaReview();
-    review.records.find(row => row.id === "ca-petty-theft")!.status = "bounded_correction_proposed";
+    review.records.find(row => row.id === "ca-dui-23152-a")!.status = "bounded_correction_proposed";
     expect(() => validateCaliforniaReview(review)).toThrow("Unreviewed record promoted");
   });
   it("delivers exact summaries and penalties in every supported language", () => {

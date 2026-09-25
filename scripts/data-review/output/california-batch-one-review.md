@@ -1,11 +1,11 @@
 # California batch one: corrections and remaining work
 
-25 existing records accounted for: 11 bounded corrections proposed; 14 remain in research. 57 source sections (58 versions) retained. No new charges published.
+25 existing records accounted for: 19 bounded corrections proposed; 6 remain in research. 58 source sections (59 versions) retained. No new charges published.
 
 Archive: https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip; modified Mon, 21 Sep 2026 04:26:05 GMT; acquired 2026-09-24T22:10:49.174194+00:00.
 
 - Source acquisition at the archived version is not a live refresh of every dependency.
-- All 25 records accounted; only 11 bounded corrections proposed. Attorney review remains pending.
+- All 25 records accounted; 19 bounded corrections proposed. Attorney review remains pending.
 - Multiple source versions are retained; no last-row-wins version selection.
 - Shared research dependencies are not automatically all publication dependencies.
 - Runtime source database remains reference-only; this research bundle does not pretend its XML has been seeded.
@@ -167,51 +167,146 @@ Remaining work: Bounded penalty/category and scope correction only; complete ele
 
 ## ca-petty-theft
 
-Research pending.
+Theft meeting the petty-theft rules in §§484 and 490.2, ordinarily involving property worth $950 or less. Firearm theft is excluded from §490.2. An infraction is a narrow option under §490.1 for property worth $50 or less with no theft-related prior conviction; it is not the default. Check any prior-conviction allegation and the exact charging statute, including §666.1.
 
-Remaining work: Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes.
+Ordinary misdemeanor petty theft: up to 6 months in county jail, a base fine up to $1,000, or both (§490). If charged as a qualifying §490.1 infraction: no jail and a fine up to $250. Specified serious prior convictions can permit felony punishment under §§490.2 and 1170(h). Section 666.1 creates a separate repeat-theft path; do not apply the ordinary maximum to that charge. Restitution, assessments, and other consequences require separate review.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:19.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.6.)
+- [PEN:19.7](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.7.)
+- [PEN:290](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=290.)
+- [PEN:484](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484.)
+- [PEN:488](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=488.)
+- [PEN:490](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=490.)
+- [PEN:490.1](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=490.1.)
+- [PEN:490.2](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=490.2.)
+- [PEN:666.1](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=666.1.)
+- [PEN:667](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-shoplifting
 
-Research pending.
+Entering a commercial establishment during regular business hours with intent to commit larceny involving property worth $950 or less (§459.5). The statute distinguishes this from burglary and bars charging both shoplifting and burglary or theft of the same property. Specified priors and a separately alleged §666.1 charge need their own review.
 
-Remaining work: Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes.
+Ordinary misdemeanor shoplifting: up to 6 months in county jail, a base fine up to $1,000, or both under §19. Section 459.5 permits felony punishment under §1170(h) for specified serious priors. A §666.1 repeat-theft allegation is a separate sentencing path and is not covered by the ordinary maximum. Restitution and other financial consequences may apply.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:19](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.)
+- [PEN:290](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=290.)
+- [PEN:459.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.5.)
+- [PEN:666.1](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=666.1.)
+- [PEN:667](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-grand-theft-487-a
 
-Research pending.
+Grand theft by value under §487(a): the alleged theft exceeds $950, subject to the statute’s exceptions. This is not the separate firearm or livestock theft branch. Related acts may raise aggregation issues under §487(e), which require case-specific review.
 
-Remaining work: Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes.
+For this non-firearm, non-livestock branch, §489(c) allows misdemeanor county jail up to 364 days (§18.5) or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years when no different term applies. Eligibility determines county jail versus state prison; enhancements, fines, and restitution require separate review.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [PEN:484](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=484.)
+- [PEN:487](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=487.)
+- [PEN:489](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=489.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-theft-by-receiving
 
-Research pending.
+Section 496(a) addresses buying, receiving, concealing, selling, or withholding stolen property with knowledge of its stolen character, including specified assistance. Section 496(b) separately addresses certain dealers who fail to make a reasonable inquiry. Confirm the charged subdivision; mere possession alone does not establish the required facts.
 
-Remaining work: Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes.
+Under §496(a), property worth $950 or less is a misdemeanor with county jail up to 364 days unless specified serious prior convictions apply. Otherwise misdemeanor jail up to 364 days or felony imprisonment under §1170(h) may apply; the ordinary felony terms are 16 months, 2 years, or 3 years, with custody location subject to eligibility. Dealer, attempt, fine, restitution, and civil-liability rules require separate review; §496(c) also provides a civil damages remedy.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [PEN:290](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=290.)
+- [PEN:496](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=496.)
+- [PEN:667](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-burglary-in-the-second-degree
 
-Research pending.
+Entry into a place covered by §459 with the required intent to commit theft or a felony, outside first-degree burglary under §460. Qualifying entry into an open commercial establishment involving $950 or less may instead fall under the shoplifting rules in §459.5. Confirm the location, intent at entry, and exact charging document.
 
-Remaining work: Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes.
+Section 461(b), not §460 alone, supplies the punishment: misdemeanor county jail up to 364 days (§18.5), or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. Eligibility determines county jail versus state prison; enhancements, fines, and restitution require separate review.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [PEN:459](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.)
+- [PEN:459.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=459.5.)
+- [PEN:460](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=460.)
+- [PEN:461](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=461.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-vandalism
 
-Research pending.
+Maliciously defacing, damaging, or destroying property not solely one’s own under §594. The amount of damage, any qualifying prior conviction, and the charged provision matter. Graffiti cleanup, repair, or replacement can be ordered in addition to punishment.
 
-Remaining work: Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes.
+Under §594, damage below $400 generally permits county jail up to 364 days, a base fine up to $1,000, or both; a qualifying prior can raise that fine to $5,000. At $400 or more, misdemeanor jail or felony imprisonment under §1170(h) may apply, with a fine up to $10,000, or up to $50,000 when damage reaches $10,000, or both fine and imprisonment. Ordinary §1170(h) terms are 16 months, 2 years, or 3 years, subject to eligibility. Cleanup, restitution, and other consequences may also apply.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [PEN:594](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=594.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-possession-of-controlled-substance
 
-Research pending.
+Knowing possession of a substance covered by §11350, without the required prescription or another applicable authorization. The section also protects authorized delivery to the prescription holder or lawful disposal under its specific conditions. Confirm the substance and subdivision; the separate §11395 treatment-mandated offense is not automatically the same charge.
 
-Remaining work: Review substance schedules, prescription/authorized-possession exceptions, prior convictions and §11395 separate offense; do not equate all possession with felony grading.
+Ordinarily a misdemeanor with county jail up to 364 days (§18.5). Specified serious priors instead trigger felony punishment under §1170(h), ordinarily 16 months, 2 years, or 3 years, with custody location subject to eligibility. Section 11350(b) permits an additional fine up to $70 with ability-to-pay consideration. Felony probation ordinarily requires a $1,000 first-offense or $2,000 subsequent-offense minimum fine or community service, with statutory exceptions. Other charges, assessments, treatment, and diversion require separate review; this is not a §11395 sentencing calculation.
+
+Supporting sources:
+
+- [HSC:11054](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11054.)
+- [HSC:11055](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11055.)
+- [HSC:11056](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11056.)
+- [HSC:11350](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11350.)
+- [HSC:11395](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11395.)
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [PEN:290](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=290.)
+- [PEN:667](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=667.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-possession-of-drug-paraphernalia
 
-Research pending.
+Possession of covered equipment for unlawfully injecting or smoking specified controlled substances (§11364), with the required knowledge. Current exceptions include personal-use needles or syringes, safely containerized needles or syringes, and people obtaining qualifying controlled-substance checking services. An object’s association with drugs alone does not resolve those exceptions.
 
-Remaining work: Review substance schedules, prescription/authorized-possession exceptions, prior convictions and §11395 separate offense; do not equate all possession with felony grading.
+The misdemeanor penalty comes from HSC §11374: a base fine of $30–$500, imprisonment of 15–180 days, or both. This describes the statutory punishment range, not a prediction that jail must be imposed. Probation, diversion, assessments, and other case-specific consequences require separate review.
+
+Supporting sources:
+
+- [HSC:11054](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11054.)
+- [HSC:11055](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11055.)
+- [HSC:11364](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11364.)
+- [HSC:11374](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11374.)
+
+Remaining work: Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed.
 
 ## ca-dui-23152-a
 

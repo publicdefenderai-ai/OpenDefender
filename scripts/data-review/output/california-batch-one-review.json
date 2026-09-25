@@ -1515,6 +1515,32 @@
         "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>A violation of any of the following provisions is a misdemeanor, and not an infraction:</p><p>(a)<span class=\"EnSpace\"/>Division 5 (commencing with Section 11100), relating to occupational licensing and business regulations.</p><p>(b)<span class=\"EnSpace\"/>Section 12515, subdivision (b), relating to persons under 21 years of age driving, and the employment of those persons to drive, vehicles engaged in interstate commerce or transporting hazardous substances or wastes.</p><p>(c)<span class=\"EnSpace\"/>Section 12517, relating to a special driver’s certificate to operate a schoolbus or school pupil activity bus.</p><p>(d)<span class=\"EnSpace\"/>Section 12517.45, relating to a special driver’s certificate\n\t\t\t\t  and vehicle inspection for the transportation of pupils to or from school-related activities by a passenger charter-party carrier as defined in subdivision (k) of Section 545.</p><p>(e)<span class=\"EnSpace\"/>Section 12519, subdivision (a), relating to a special driver’s certificate to operate a farm labor vehicle.</p><p>(f)<span class=\"EnSpace\"/>Section 12520, relating to a special driver’s certificate to operate a tow truck.</p><p>(g)<span class=\"EnSpace\"/>Section 12951, subdivision (b), relating to refusal to display license.</p><p>(h)<span class=\"EnSpace\"/>Section 13004, relating to unlawful use of an identification card.</p><p>(i)<span class=\"EnSpace\"/>Section 13004.1, relating to identification documents.</p><p>(j)<span class=\"EnSpace\"/>Sections 14601, 14601.1, 14601.2, and 14601.5,\n\t\t\t\t  relating to driving with a suspended or revoked driver’s license.</p><p>(k)<span class=\"EnSpace\"/>Section 14604, relating to unlawful use of a vehicle.</p><p>(l)<span class=\"EnSpace\"/>Section 14610, relating to unlawful use of a driver’s license.</p><p>(m)<span class=\"EnSpace\"/>Section 14610.1, relating to identification documents.</p><p>(n)<span class=\"EnSpace\"/>Section 15501, relating to use of false or fraudulent license by a minor.</p></caml:Content>",
         "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.11."
       }
+    ],
+    "HSC:11374": [
+      {
+        "id": "HSC11374.19721407",
+        "lawCode": "HSC",
+        "section": "11374.",
+        "opStatutes": "1972",
+        "opChapter": "1407",
+        "opSection": null,
+        "effectiveDate": null,
+        "versionId": "id_f606dceb-291f-11d9-8b50-d28ad8cc76ba",
+        "division": "10.",
+        "title": null,
+        "part": null,
+        "chapter": "6.",
+        "article": "4.",
+        "history": "Added by Stats. 1972, Ch. 1407.",
+        "contentMember": "LAW_SECTION_TBL_103528.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:03:13",
+        "tableRow": 103528,
+        "tableRowSha256": "42c8215243a4b5f9e5c3417aaf791207016b0ba8ab9794e534f5d9ec1a91993e",
+        "contentSha256": "12b7cef13f480a64dde5fce8eb8a34a0c333a4d6e749c85a27048fef9ba32dcc",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Every person who violates or fails to comply with any provision of this division, except one for which a penalty is otherwise in this division specifically provided, is guilty of a misdemeanor punishable by a fine in a sum not less than thirty dollars ($30) nor more than five hundred dollars ($500), or by imprisonment for not less than 15 nor more than 180 days, or by both.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11374."
+      }
     ]
   },
   "records": [
@@ -1789,7 +1815,7 @@
       "id": "ca-petty-theft",
       "baselineSha256": "3218b0391a481d13950c1c57d77ab5d28c9ea05f65ff3b666811609cd259f6a3",
       "group": "property",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "PEN:484",
         "PEN:490.2"
@@ -1807,15 +1833,28 @@
         "PEN:290",
         "PEN:1170"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:19.6",
+        "PEN:19.7",
+        "PEN:290",
+        "PEN:484",
+        "PEN:488",
+        "PEN:490",
+        "PEN:490.1",
+        "PEN:490.2",
+        "PEN:666.1",
+        "PEN:667"
+      ],
+      "correctionSha256": "3455f979b033914d1ff04ddce1fe543acbb5b307572080fae59d5384f1b7580d",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-shoplifting",
       "baselineSha256": "19cd5246b5f120363d97afd61bcd1232a291de57d837ed58a4bc4c27d82fae4e",
       "group": "property",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "PEN:459.5"
       ],
@@ -1832,15 +1871,22 @@
         "PEN:290",
         "PEN:1170"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:19",
+        "PEN:290",
+        "PEN:459.5",
+        "PEN:666.1",
+        "PEN:667"
+      ],
+      "correctionSha256": "787f4c61e48ff9f55a2ccddd19b3e61dbb13a8df41b2f652ebc7a33a2ec9391f",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-grand-theft-487-a",
       "baselineSha256": "512377a1cbcc8a0726421e4fc8bf225e9800acd587d21ddcd67c8c017aabf6ee",
       "group": "property",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "PEN:487"
       ],
@@ -1857,15 +1903,22 @@
         "PEN:290",
         "PEN:1170"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "PEN:484",
+        "PEN:487",
+        "PEN:489"
+      ],
+      "correctionSha256": "4ef4e435de020de7ea3e7ba8852002d5a55550b27939dd6ae5097e0611dc6045",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-theft-by-receiving",
       "baselineSha256": "4961059b59442e746b37509d9c29df0ff41a542de7f951e4ab0b85cd9477c75d",
       "group": "property",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "PEN:496"
       ],
@@ -1882,15 +1935,22 @@
         "PEN:290",
         "PEN:1170"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "PEN:290",
+        "PEN:496",
+        "PEN:667"
+      ],
+      "correctionSha256": "b85b3af3038665a0d389957aab5ddb3baac2c5f9a1013e6d94ed9f2df8eba338",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-burglary-in-the-second-degree",
       "baselineSha256": "9cb3c941c30412cc045b723feb66156d3462f3b31d3cb64d82bd2d07c5df65c9",
       "group": "property",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "PEN:459",
         "PEN:460"
@@ -1908,15 +1968,23 @@
         "PEN:290",
         "PEN:1170"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "PEN:459",
+        "PEN:459.5",
+        "PEN:460",
+        "PEN:461"
+      ],
+      "correctionSha256": "8a6c14c727944a8fcd95920a5e93e574d2a1edfde12026d9556e88436a02161d",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-vandalism",
       "baselineSha256": "a4f4477a3a9a3e7d791a1d8072e482f336a9f36d0604823630383fa35aa8ee45",
       "group": "property",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "PEN:594"
       ],
@@ -1933,15 +2001,20 @@
         "PEN:290",
         "PEN:1170"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review thresholds and prior-conviction exceptions, §666.1 distinct identity, and correct statutory punishment cross-references before proposing changes."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "PEN:594"
+      ],
+      "correctionSha256": "21e9cb2ce1123d4d50bbc46e7bcdf7c2c72c8126894f953cc7a15a43c5b03296",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-possession-of-controlled-substance",
       "baselineSha256": "aee97f4b9c6fb33399ca6fafcc871c2d17789988fbc1dcedf3c030d5f11a72b9",
       "group": "drug-possession",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "HSC:11350"
       ],
@@ -1956,15 +2029,26 @@
         "HSC:11056",
         "HSC:11395"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review substance schedules, prescription/authorized-possession exceptions, prior convictions and §11395 separate offense; do not equate all possession with felony grading."
+      "correctionSources": [
+        "HSC:11054",
+        "HSC:11055",
+        "HSC:11056",
+        "HSC:11350",
+        "HSC:11395",
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "PEN:290",
+        "PEN:667"
+      ],
+      "correctionSha256": "8a50dadee39d405f5a3b532b30148c715b3579d435d24a0b93888646c4f58774",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-possession-of-drug-paraphernalia",
       "baselineSha256": "34f569b1f0bfedff2c27249daa278565e2f4f2817b2f0b8e7b8a0ff8f14de587",
       "group": "drug-possession",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "HSC:11364"
       ],
@@ -1979,9 +2063,14 @@
         "HSC:11056",
         "HSC:11395"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Review substance schedules, prescription/authorized-possession exceptions, prior convictions and §11395 separate offense; do not equate all possession with felony grading."
+      "correctionSources": [
+        "HSC:11054",
+        "HSC:11055",
+        "HSC:11364",
+        "HSC:11374"
+      ],
+      "correctionSha256": "4956cf1be9c1015e8d0cf6f5356089f420111214912c11815f9f0691188447d9",
+      "remainingWork": "Bounded penalty/category and statutory-scope correction only; complete case-law, enhancement, diversion, and independent legal review remain. No new repeat-offender charge is published and no statewide completeness is claimed."
     },
     {
       "id": "ca-dui-23152-a",
@@ -2160,7 +2249,7 @@
   ],
   "limits": [
     "Source acquisition at the archived version is not a live refresh of every dependency.",
-    "All 25 records accounted; only 11 bounded corrections proposed. Attorney review remains pending.",
+    "All 25 records accounted; 19 bounded corrections proposed. Attorney review remains pending.",
     "Multiple source versions are retained; no last-row-wins version selection.",
     "Shared research dependencies are not automatically all publication dependencies.",
     "Runtime source database remains reference-only; this research bundle does not pretend its XML has been seeded."

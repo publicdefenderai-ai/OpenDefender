@@ -4,7 +4,7 @@ import fs from "node:fs";
 import { fileURLToPath } from "node:url";
 import corrections from "../../../shared/california-batch-one-corrections.json";
 import baseline from "../output/california-batch-one-baseline.json";
-import { getCaliforniaCanonicalRecord } from "../../../shared/california-authority";
+import { getCaliforniaCanonicalRecord, getCaliforniaCorrectionDependencies } from "../../../shared/california-authority";
 
 interface Document {
   lawCode: string; section: string; versionId: string; effectiveDate: string | null;
@@ -55,16 +55,20 @@ export function validateCaliforniaReview(review: CaliforniaReview) {
     }
     if (row.status !== "bounded_correction_proposed" || row.correctionSha256 !== hash(JSON.stringify(correction))) throw new Error(`Correction changed: ${row.id}`);
     correctedIds.add(row.id);
-    const expectedSources = [...new Set([...row.primarySources, ...correction.supportingSections.map(section => `PEN:${section}`)])].sort();
+    const dependencies = getCaliforniaCorrectionDependencies(correction);
+    const expectedSources = [...new Set([...row.primarySources, ...dependencies.map(({ lawCode, section }) => `${lawCode}:${section}`)])].sort();
     if (JSON.stringify([...row.correctionSources].sort()) !== JSON.stringify(expectedSources)) throw new Error(`Correction evidence incomplete: ${row.id}`);
     if (row.correctionSources.some(key => review.documents[key].length !== 1)) throw new Error(`Correction has unresolved source versions: ${row.id}`);
     const record = getCaliforniaCanonicalRecord(row.id);
     if (!record || record.penalty !== correction.penalty.en || JSON.stringify(record.categories) !== JSON.stringify(correction.categories)) throw new Error(`Catalog correction drift: ${row.id}`);
-    for (const section of correction.supportingSections) {
-      if (!record.sources.some(source => source.kind === "classification" && source.citation === `Cal. Penal Code § ${section}`)) throw new Error(`Runtime dependency missing: ${row.id}/${section}`);
+    for (const { lawCode, section } of dependencies) {
+      if (!record.sources.some(source => {
+        const url = new URL(source.url);
+        return source.kind === "classification" && url.searchParams.get("lawCode") === lawCode && url.searchParams.get("sectionNum")?.replace(/\.$/, "") === section;
+      })) throw new Error(`Runtime dependency missing: ${row.id}/${lawCode}:${section}`);
     }
   }
-  if (correctedIds.size !== corrections.length || correctedIds.size !== 11) throw new Error("Correction coverage changed");
+  if (correctedIds.size !== corrections.length || correctedIds.size !== 19) throw new Error("Correction coverage changed");
   return { batchRecords: review.records.length, corrections: correctedIds.size, pending: review.records.length - correctedIds.size, sections: Object.keys(review.documents).length, versions: Object.values(review.documents).reduce((sum, rows) => sum + rows.length, 0) };
 }
 export function renderCaliforniaReview(review: CaliforniaReview) {
