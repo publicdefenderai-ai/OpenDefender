@@ -1,0 +1,324 @@
+{
+  "schemaVersion": 1,
+  "scope": "Historical pre-correction baseline; six-record shared-source reuse batch",
+  "records": [
+    {
+      "record": {
+        "canonicalId": "ca-assault-on-peace-officer",
+        "officialTitle": "Assault on a Peace Officer",
+        "code": "241(c)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 241(c)",
+        "classification": "offense",
+        "elements": [
+          "The defendant committed an assault",
+          "The alleged victim was a peace officer performing duties",
+          "The defendant knew or reasonably should have known the victim was a peace officer"
+        ],
+        "mentalState": "Willful assault plus the required knowledge of protected status.",
+        "grading": "Misdemeanor under § 241(c); related battery statutes can carry different grading.",
+        "penalty": "Misdemeanor punishable by a fine up to $2,000, county jail up to 1 year, or both under Penal Code § 241(c).",
+        "juryInstruction": {
+          "ref": "CALCRIM 945",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-assault-on-peace-officer"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 241",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 945",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "be333cf5788e8324c93c6429e6a110129e914ee8dcd479a1deb858395c3068cf"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-burglary-in-the-first-degree",
+        "officialTitle": "First-Degree Burglary",
+        "code": "459, 460(a)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code §§ 459, 460(a)",
+        "classification": "offense",
+        "elements": [
+          "The defendant entered a building or qualifying structure",
+          "The defendant entered with intent to commit theft or a felony",
+          "The structure was an inhabited dwelling or other first-degree location"
+        ],
+        "mentalState": "Intent to commit theft or a felony at the time of entry.",
+        "grading": "Felony",
+        "penalty": "State-prison term is generally two, four, or six years, subject to statutory variations.",
+        "juryInstruction": {
+          "ref": "CALCRIM 1700",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-burglary-in-the-first-degree"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 459",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=459&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 460",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=460&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1700",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "eca0ccbc4a5953ffa4c77ea4dba208aae9ba4a1dffec0e863da0d5dfc3b11251"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-dui-second-offense",
+        "officialTitle": "Driving Under the Influence — Second Offense",
+        "code": "23152; 23540",
+        "lawCode": "VEH",
+        "citation": "Cal. Vehicle Code §§ 23152, 23540",
+        "classification": "offense",
+        "elements": [
+          "The defendant committed a § 23152 offense",
+          "The defendant had a qualifying prior DUI conviction within the statutory period"
+        ],
+        "mentalState": "General intent to drive; the prior conviction is a sentencing or grading fact.",
+        "grading": "Misdemeanor with repeat-offender penalties unless another statute applies.",
+        "penalty": "Repeat-offender penalties include increased jail, fines, license consequences, and programs; exact terms depend on the record.",
+        "juryInstruction": {
+          "ref": "CALCRIM 2110",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-dui-second-offense"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 23152",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 23540",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23540&lawCode=VEH",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2110",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "536e8035bebfcfc8114ff055e0ba4ef74e73e90dc59507fdce7361789b81bc46"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-dui-third-offense",
+        "officialTitle": "Driving Under the Influence — Third Offense",
+        "code": "23152; 23546",
+        "lawCode": "VEH",
+        "citation": "Cal. Vehicle Code §§ 23152, 23546",
+        "classification": "offense",
+        "elements": [
+          "The defendant committed a § 23152 offense",
+          "The defendant had two qualifying prior DUI convictions within the statutory period"
+        ],
+        "mentalState": "General intent to drive; the prior convictions are sentencing or grading facts.",
+        "grading": "Misdemeanor repeat-offender offense unless another statute applies.",
+        "penalty": "Repeat-offender penalties include increased jail, fines, license consequences, and programs; exact terms depend on the record.",
+        "juryInstruction": {
+          "ref": "CALCRIM 2120",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "disposition": "retain",
+        "legacyIds": [
+          "ca-dui-third-offense"
+        ],
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 23152",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+            "currentLawText": true
+          },
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Vehicle Code § 23546",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23546&lawCode=VEH",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 2120",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "70bf4d4c5f72667cde90ac44aa70de8f09282484394306c594e758b2e9af7ad2"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-grand-theft-agricultural-487-b1a",
+        "officialTitle": "Grand Theft of Specified Agricultural Crops",
+        "code": "487(b)(1)(A)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 487(b)(1)(A)",
+        "classification": "offense",
+        "elements": [
+          "The defendant took one of the agricultural crops specified in Penal Code § 487(b)(1)(A)",
+          "The value of the crop exceeded $250",
+          "The defendant intended to permanently deprive the owner"
+        ],
+        "mentalState": "Intent to permanently deprive the owner of possession.",
+        "grading": "Wobbler.",
+        "penalty": "May be punished as a misdemeanor or felony under Penal Code §§ 487(b)(1)(A) and 489; felony imprisonment may be imposed under Penal Code § 1170(h).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1801",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-grand-theft-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 487",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1801",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "49de3f6c42a5f450e23f21a48bccdda0c6460217866a9d3cae8da2b460b71876"
+    },
+    {
+      "record": {
+        "canonicalId": "ca-grand-theft-firearm-487-d2",
+        "officialTitle": "Grand Theft of a Firearm",
+        "code": "487(d)(2)",
+        "lawCode": "PEN",
+        "citation": "Cal. Penal Code § 487(d)(2)",
+        "classification": "offense",
+        "elements": [
+          "The defendant took a firearm belonging to another",
+          "The defendant intended to permanently deprive the owner of the firearm"
+        ],
+        "mentalState": "Intent to permanently deprive the owner of possession.",
+        "grading": "Felony.",
+        "penalty": "Punishable by 16 months, 2 years, or 3 years in state prison under Penal Code § 489(a).",
+        "juryInstruction": {
+          "ref": "CALCRIM 1801",
+          "url": "https://www.courts.ca.gov/partners/california-jury-instructions"
+        },
+        "legacyIds": [
+          "ca-grand-theft-in-the-first-degree"
+        ],
+        "disposition": "retain",
+        "sources": [
+          {
+            "kind": "statute",
+            "publisher": "California Legislative Information",
+            "citation": "Cal. Penal Code § 487",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487&lawCode=PEN",
+            "currentLawText": true
+          },
+          {
+            "kind": "jury-instruction",
+            "publisher": "California Judicial Council",
+            "citation": "CALCRIM 1801",
+            "url": "https://www.courts.ca.gov/partners/california-jury-instructions",
+            "currentLawText": true
+          }
+        ],
+        "currentness": {
+          "status": "current",
+          "evidence": "California Legislative Information current code text, checked 2026-08",
+          "effectiveDate": "2026-08"
+        },
+        "attorneyReview": "pending",
+        "selectable": true
+      },
+      "catalogSha256": "259303c6d32b2b1387c7ed5cfba0a9f15bb2591d3d44d277e199a7dbca7af1b1"
+    }
+  ]
+}

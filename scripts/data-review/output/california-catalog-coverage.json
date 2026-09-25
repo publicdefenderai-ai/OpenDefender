@@ -5,8 +5,8 @@
     "canonicalRecords": 120,
     "configuredSelectable": 99,
     "withheldCanonicalLabels": 21,
-    "boundedCorrectionPass": 25,
-    "awaitingCorrectionPass": 74,
+    "boundedCorrectionPass": 31,
+    "awaitingCorrectionPass": 68,
     "legacyRows": 115,
     "legacyDispositions": {
       "retain": 49,
@@ -17,19 +17,19 @@
     "retainedResearchSections": 64,
     "retainedResearchVersions": 65,
     "distinctSelectablePrimarySections": 69,
-    "remainingSharedSourceGroups": 44,
-    "remainingPrimarySections": 52,
-    "remainingRecordsWithAllPrimaryTextAlreadyRetained": 6,
+    "remainingSharedSourceGroups": 40,
+    "remainingPrimarySections": 45,
+    "remainingRecordsWithAllPrimaryTextAlreadyRetained": 0,
     "acquiredSelectablePrimarySections": 69,
     "selectableRecordsWithAllPrimaryTextAcquired": 99,
-    "totalAcquiredSectionsIncludingDependencies": 109,
-    "totalAcquiredVersionsIncludingDependencies": 110,
+    "totalAcquiredSectionsIncludingDependencies": 111,
+    "totalAcquiredVersionsIncludingDependencies": 113,
     "statewideOffenseDenominator": null,
     "statewideCoveragePercent": null,
     "liveDeploymentParity": "not_verified_by_this_offline_report"
   },
   "limits": [
-    "25 corrected records are not 25 fully certified offenses. Independent legal review, case law, and record-specific exceptions remain.",
+    "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
     "99 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
     "The legacy inventory overlaps the canonical inventory and must not be added to it.",
     "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
@@ -51,24 +51,17 @@
     {
       "lawCode": "PEN",
       "selectable": 79,
-      "corrected": 17,
-      "awaitingCorrection": 62
+      "corrected": 21,
+      "awaitingCorrection": 58
     },
     {
       "lawCode": "VEH",
       "selectable": 12,
-      "corrected": 6,
-      "awaitingCorrection": 6
+      "corrected": 8,
+      "awaitingCorrection": 4
     }
   ],
-  "recommendedReuseBatch": [
-    "ca-assault-on-peace-officer",
-    "ca-burglary-in-the-first-degree",
-    "ca-dui-second-offense",
-    "ca-dui-third-offense",
-    "ca-grand-theft-agricultural-487-b1a",
-    "ca-grand-theft-firearm-487-d2"
-  ],
+  "recommendedReuseBatch": [],
   "statutoryUniverse": [
     {
       "lawCode": "BPC",
@@ -1034,22 +1027,6 @@
       ]
     },
     {
-      "id": "PEN:487",
-      "recordIds": [
-        "ca-grand-theft-agricultural-487-b1a",
-        "ca-grand-theft-firearm-487-d2"
-      ],
-      "primaryKeys": [
-        "PEN:487"
-      ],
-      "retainedPrimaryKeys": [
-        "PEN:487"
-      ],
-      "acquiredPrimaryKeys": [
-        "PEN:487"
-      ]
-    },
-    {
       "id": "PEN:502",
       "recordIds": [
         "ca-computer-crime-502-c1",
@@ -1117,28 +1094,6 @@
       "retainedPrimaryKeys": [],
       "acquiredPrimaryKeys": [
         "PEN:653f"
-      ]
-    },
-    {
-      "id": "VEH:23152+VEH:23540+VEH:23546",
-      "recordIds": [
-        "ca-dui-second-offense",
-        "ca-dui-third-offense"
-      ],
-      "primaryKeys": [
-        "VEH:23152",
-        "VEH:23540",
-        "VEH:23546"
-      ],
-      "retainedPrimaryKeys": [
-        "VEH:23152",
-        "VEH:23540",
-        "VEH:23546"
-      ],
-      "acquiredPrimaryKeys": [
-        "VEH:23152",
-        "VEH:23540",
-        "VEH:23546"
       ]
     },
     {
@@ -1273,21 +1228,6 @@
       ]
     },
     {
-      "id": "PEN:241",
-      "recordIds": [
-        "ca-assault-on-peace-officer"
-      ],
-      "primaryKeys": [
-        "PEN:241"
-      ],
-      "retainedPrimaryKeys": [
-        "PEN:241"
-      ],
-      "acquiredPrimaryKeys": [
-        "PEN:241"
-      ]
-    },
-    {
       "id": "PEN:246.3",
       "recordIds": [
         "ca-discharge-of-firearm-in-city"
@@ -1391,24 +1331,6 @@
       "retainedPrimaryKeys": [],
       "acquiredPrimaryKeys": [
         "PEN:374.4"
-      ]
-    },
-    {
-      "id": "PEN:459+PEN:460",
-      "recordIds": [
-        "ca-burglary-in-the-first-degree"
-      ],
-      "primaryKeys": [
-        "PEN:459",
-        "PEN:460"
-      ],
-      "retainedPrimaryKeys": [
-        "PEN:459",
-        "PEN:460"
-      ],
-      "acquiredPrimaryKeys": [
-        "PEN:459",
-        "PEN:460"
       ]
     },
     {
@@ -1653,7 +1575,7 @@
       "citation": "Cal. Penal Code § 241(c)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:241"
       ],
@@ -1663,7 +1585,7 @@
       "acquiredPrimaryKeys": [
         "PEN:241"
       ],
-      "catalogSha256": "be333cf5788e8324c93c6429e6a110129e914ee8dcd479a1deb858395c3068cf",
+      "catalogSha256": "d64978df23f9666e25f64cd7e002ddc541fc9ac3bdc11a526e27b346f60a4ac9",
       "attorneyReview": "pending"
     },
     {
@@ -1906,7 +1828,7 @@
       "citation": "Cal. Penal Code §§ 459, 460(a)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:459",
         "PEN:460"
@@ -1919,7 +1841,7 @@
         "PEN:459",
         "PEN:460"
       ],
-      "catalogSha256": "eca0ccbc4a5953ffa4c77ea4dba208aae9ba4a1dffec0e863da0d5dfc3b11251",
+      "catalogSha256": "264bbeb27984112cf05cbc30e8ae7107c2719031406aef13639d126b1733ff25",
       "attorneyReview": "pending"
     },
     {
@@ -2321,7 +2243,7 @@
       "citation": "Cal. Vehicle Code §§ 23152, 23540",
       "lawCode": "VEH",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "VEH:23152",
         "VEH:23540"
@@ -2334,7 +2256,7 @@
         "VEH:23152",
         "VEH:23540"
       ],
-      "catalogSha256": "536e8035bebfcfc8114ff055e0ba4ef74e73e90dc59507fdce7361789b81bc46",
+      "catalogSha256": "cab716d516a51d6194f7c35d103b01708af2cedc06306b56b1a1be575533168b",
       "attorneyReview": "pending"
     },
     {
@@ -2343,7 +2265,7 @@
       "citation": "Cal. Vehicle Code §§ 23152, 23546",
       "lawCode": "VEH",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "VEH:23152",
         "VEH:23546"
@@ -2356,7 +2278,7 @@
         "VEH:23152",
         "VEH:23546"
       ],
-      "catalogSha256": "70bf4d4c5f72667cde90ac44aa70de8f09282484394306c594e758b2e9af7ad2",
+      "catalogSha256": "d27cdf99d63ff0174f8a69637bf26bead1a38443d513ead117feda9553966c25",
       "attorneyReview": "pending"
     },
     {
@@ -3203,7 +3125,7 @@
       "citation": "Cal. Penal Code § 487(b)(1)(A)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:487"
       ],
@@ -3213,7 +3135,7 @@
       "acquiredPrimaryKeys": [
         "PEN:487"
       ],
-      "catalogSha256": "49de3f6c42a5f450e23f21a48bccdda0c6460217866a9d3cae8da2b460b71876",
+      "catalogSha256": "420ef347fbfbc10ca54a5ae9e5ede354ab297cd06421c38ecd04bf7105b80f70",
       "attorneyReview": "pending"
     },
     {
@@ -3222,7 +3144,7 @@
       "citation": "Cal. Penal Code § 487(d)(2)",
       "lawCode": "PEN",
       "selectable": true,
-      "status": "awaiting_statutory_correction_pass",
+      "status": "bounded_correction_pass",
       "primaryKeys": [
         "PEN:487"
       ],
@@ -3232,7 +3154,7 @@
       "acquiredPrimaryKeys": [
         "PEN:487"
       ],
-      "catalogSha256": "259303c6d32b2b1387c7ed5cfba0a9f15bb2591d3d44d277e199a7dbca7af1b1",
+      "catalogSha256": "830e4df3b8d61dc9e4265498784afec6a761cd2b0315afb4495aa4bccd6673b5",
       "attorneyReview": "pending"
     },
     {

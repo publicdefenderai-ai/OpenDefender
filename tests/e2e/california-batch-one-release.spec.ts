@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { readFileSync } from "node:fs";
-const corrections = JSON.parse(readFileSync("shared/california-batch-one-corrections.json", "utf8")) as Array<{ id: string; categories: string[]; penalty: { en: string } }>;
+const corrections = ["shared/california-batch-one-corrections.json", "shared/california-batch-two-corrections.json"].flatMap(path => JSON.parse(readFileSync(path, "utf8"))) as Array<{ id: string; categories: string[]; penalty: { en: string } }>;
 
 test("California corrections reach the production catalog and rules guidance", async ({ request }) => {
   const response = await request.get("/api/criminal-charges?jurisdiction=CA&limit=500");
@@ -21,7 +21,7 @@ test("California corrections reach the production catalog and rules guidance", a
   const guidance = (await responseGuidance.json()).guidance;
   expect(guidance.generatedBy).toBe("rule-based");
   expect(guidance.chargeClassifications[0].maxPenalty).toBe(row.penalty.en);
-  const ids = ["ca-petty-theft", "ca-possession-of-controlled-substance", "ca-dui-23152-f", "ca-driving-without-license"];
+  const ids = ["ca-petty-theft", "ca-possession-of-controlled-substance", "ca-dui-third-offense", "ca-grand-theft-firearm-487-d2"];
   const classified = await request.post("/api/legal-guidance/rules", {
     headers: { Origin: process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:5001" },
     data: { jurisdiction: "CA", charges: ids, caseStage: "arrest", custodyStatus: "in_custody" },
@@ -55,6 +55,7 @@ for (const [id, search, label] of [
   ["ca-possession-of-controlled-substance", "11350", "Misdemeanor / Felony"],
   ["ca-driving-without-license", "12500(a)", "Infraction / Misdemeanor"],
   ["ca-dui-23152-f", "23152(f)", "Misdemeanor / Felony"],
+  ["ca-grand-theft-agricultural-487-b1a", "487(b)(1)(A)", "Misdemeanor / Felony"],
 ]) {
   test(`California selector preserves classification alternatives for ${id}`, async ({ page }) => {
     await page.route("**/api/ai/status", route => route.fulfill({ json: { available: true } }));

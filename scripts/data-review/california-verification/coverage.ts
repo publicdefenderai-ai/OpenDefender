@@ -3,7 +3,8 @@ import fs from "node:fs";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { CALIFORNIA_CANONICAL_RECORDS, CALIFORNIA_LEGACY_DISPOSITIONS } from "../../../shared/california-authority";
-import corrections from "../../../shared/california-batch-one-corrections.json";
+import { CALIFORNIA_CHARGE_CORRECTIONS as corrections } from "../../../shared/california-corrections";
+import { readCaliforniaReuseReview, validateCaliforniaReuseReview } from "./reuse-review";
 import { readCaliforniaReview, validateCaliforniaReview } from "./review";
 
 interface SourceExpansion {
@@ -24,10 +25,12 @@ export function validateCaliforniaSourceExpansion(expansion: SourceExpansion, re
 export function buildCaliforniaCoverage() {
   const review = readCaliforniaReview();
   const verifiedAccounting = validateCaliforniaReview(review);
+  const reuse = readCaliforniaReuseReview();
+  const reuseAccounting = validateCaliforniaReuseReview(reuse);
   const expansionPath = new URL("../output/california-catalog-source-expansion.json", import.meta.url);
   const expansion: SourceExpansion | null = fs.existsSync(expansionPath) ? JSON.parse(fs.readFileSync(expansionPath, "utf8")) : null;
   if (expansion) validateCaliforniaSourceExpansion(expansion, review);
-  const acquiredKeys = new Set([...Object.keys(review.documents), ...Object.keys(expansion?.documents ?? {})]);
+  const acquiredKeys = new Set([...Object.keys(review.documents), ...Object.keys(reuse.documents), ...Object.keys(expansion?.documents ?? {})]);
   const corrected = new Set(corrections.map(row => row.id));
   const requests = new Map<string, { lawCode: string; section: string; url: string; recordIds: string[]; alreadyRetained: boolean }>();
   const records = CALIFORNIA_CANONICAL_RECORDS.map(record => {
@@ -83,7 +86,7 @@ export function buildCaliforniaCoverage() {
     accounting: {
       canonicalRecords: records.length, configuredSelectable: selectable.length,
       withheldCanonicalLabels: records.length - selectable.length,
-      boundedCorrectionPass: verifiedAccounting.corrections, awaitingCorrectionPass: pending.length,
+      boundedCorrectionPass: verifiedAccounting.corrections + reuseAccounting.corrections, awaitingCorrectionPass: pending.length,
       legacyRows: CALIFORNIA_LEGACY_DISPOSITIONS.length,
       legacyDispositions: CALIFORNIA_LEGACY_DISPOSITIONS.reduce<Record<string, number>>((out,row) => { out[row.disposition] = (out[row.disposition] ?? 0) + 1; return out; }, {}),
       retainedResearchSections: verifiedAccounting.sections, retainedResearchVersions: verifiedAccounting.versions,
@@ -94,12 +97,12 @@ export function buildCaliforniaCoverage() {
       acquiredSelectablePrimarySections: sourceRequests.filter(request => acquiredKeys.has(`${request.lawCode}:${request.section}`)).length,
       selectableRecordsWithAllPrimaryTextAcquired: selectable.filter(record => record.primaryKeys.length > 0 && record.primaryKeys.length === record.acquiredPrimaryKeys.length).length,
       totalAcquiredSectionsIncludingDependencies: acquiredKeys.size,
-      totalAcquiredVersionsIncludingDependencies: verifiedAccounting.versions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
+      totalAcquiredVersionsIncludingDependencies: verifiedAccounting.versions + reuseAccounting.addedVersions + Object.values(expansion?.documents ?? {}).reduce((sum, versions) => sum + versions.length, 0),
       statewideOffenseDenominator: null, statewideCoveragePercent: null,
       liveDeploymentParity: "not_verified_by_this_offline_report",
     },
     limits: [
-      "25 corrected records are not 25 fully certified offenses. Independent legal review, case law, and record-specific exceptions remain.",
+      "A bounded correction pass is not full legal certification. Independent legal review, case law, and record-specific exceptions remain.",
       "99 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
       "The legacy inventory overlaps the canonical inventory and must not be added to it.",
       "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
@@ -126,7 +129,8 @@ export function renderCaliforniaCoverage(report: ReturnType<typeof buildCaliforn
     "| Code | Selectable | Correction pass | Awaiting correction pass |", "| --- | ---: | ---: | ---: |",
     ...report.byLawCode.map(row => `| ${row.lawCode} | ${row.selectable} | ${row.corrected} | ${row.awaitingCorrection} |`), "",
     "## Next reuse batch", "", "These records share primary texts already used in the first batch. Their unreviewed subdivisions and missing dependencies still need substantive review.", "",
-    ...report.recommendedReuseBatch.map(id => `- ${id}`), "",
+    ...report.recommendedReuseBatch.map(id => `- ${id}`),
+    ...(report.recommendedReuseBatch.length ? [] : ["The first-batch reuse queue is complete. Next largest groups: " + report.groups.slice(0, 3).map(group => `${group.id} (${group.recordIds.length} records)`).join("; ") + "."]), "",
     `${a.awaitingCorrectionPass} remaining records form ${a.remainingSharedSourceGroups} shared-primary-source groups using ${a.remainingPrimarySections} distinct sections. ${a.remainingRecordsWithAllPrimaryTextAlreadyRetained} already have all primary text in the first-batch bundle; this is acquisition only, not verification.`, "",
     "| Shared source group | Records | Primary text acquired | Record IDs |", "| --- | ---: | --- | --- |",
     ...report.groups.map(group => `| ${group.id} | ${group.recordIds.length} | ${group.acquiredPrimaryKeys.length}/${group.primaryKeys.length} sections | ${group.recordIds.join(", ")} |`), "",

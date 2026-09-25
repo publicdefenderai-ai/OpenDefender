@@ -6,16 +6,16 @@ const expansion = () => JSON.parse(fs.readFileSync("scripts/data-review/output/c
 describe("California catalog coverage boundaries", () => {
   it("accounts for every catalog record without equating acquisition with correction", () => {
     const report = buildCaliforniaCoverage();
-    expect(report.accounting).toMatchObject({ canonicalRecords: 120, configuredSelectable: 99, withheldCanonicalLabels: 21, boundedCorrectionPass: 25, awaitingCorrectionPass: 74, acquiredSelectablePrimarySections: 69, selectableRecordsWithAllPrimaryTextAcquired: 99, totalAcquiredSectionsIncludingDependencies: 109, totalAcquiredVersionsIncludingDependencies: 110 });
+    expect(report.accounting).toMatchObject({ canonicalRecords: 120, configuredSelectable: 99, withheldCanonicalLabels: 21, boundedCorrectionPass: 31, awaitingCorrectionPass: 68, acquiredSelectablePrimarySections: 69, selectableRecordsWithAllPrimaryTextAcquired: 99, totalAcquiredSectionsIncludingDependencies: 111, totalAcquiredVersionsIncludingDependencies: 113 });
     expect(report.accounting.boundedCorrectionPass + report.accounting.awaitingCorrectionPass).toBe(report.accounting.configuredSelectable);
     expect(report.records.filter(row => row.status === "withheld_canonical_label")).toHaveLength(21);
     expect(JSON.parse(fs.readFileSync("scripts/data-review/output/california-catalog-coverage.json", "utf8"))).toEqual(report);
   });
-  it("groups all 74 remaining records exactly once and does not split shared primary sources", () => {
+  it("groups all 68 remaining records exactly once and does not split shared primary sources", () => {
     const report = buildCaliforniaCoverage();
     const ids = report.groups.flatMap(group => group.recordIds);
-    expect(ids).toHaveLength(74);
-    expect(new Set(ids).size).toBe(74);
+    expect(ids).toHaveLength(68);
+    expect(new Set(ids).size).toBe(68);
     expect([...ids].sort()).toEqual(report.records.filter(row => row.status === "awaiting_statutory_correction_pass").map(row => row.id).sort());
     const sources = report.groups.flatMap(group => group.primaryKeys);
     expect(new Set(sources).size).toBe(sources.length);
@@ -30,7 +30,7 @@ describe("California catalog coverage boundaries", () => {
     expect(report.accounting.statewideOffenseDenominator).toBeNull();
     expect(report.accounting.statewideCoveragePercent).toBeNull();
     expect(report.accounting.liveDeploymentParity).toBe("not_verified_by_this_offline_report");
-    expect(report.recommendedReuseBatch).toHaveLength(6);
+    expect(report.recommendedReuseBatch).toHaveLength(0);
   });
   it("rejects modified acquired text", () => {
     const source = expansion();

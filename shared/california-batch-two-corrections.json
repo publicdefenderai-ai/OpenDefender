@@ -1,0 +1,149 @@
+[
+  {
+    "id": "ca-assault-on-peace-officer",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "240",
+      "18.5",
+      "830"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Assault against a peace officer engaged in the performance of duties, where the person knew or reasonably should have known the protected status and duty circumstances (§241(c)). This record addresses the peace-officer branch; the section also names other protected workers. Officer status, performance of duties, and the assault elements must be established.",
+      "es": "Agresión contra un agente del orden que desempeña sus funciones, cuando la persona sabía o razonablemente debía saber su condición protegida y las circunstancias del servicio (§241(c)). Esta entrada trata la modalidad relativa al agente del orden; la norma también incluye otros trabajadores protegidos. Deben acreditarse la condición del agente, el ejercicio de sus funciones y los elementos de agresión.",
+      "zh": "对正在履行职务的治安人员实施袭击，且行为人知道或理应知道其受保护身份及履职情形（第241(c)条）。本条目涉及治安人员这一分支；该条还列有其他受保护工作人员。须证明人员身份、履职情况及袭击罪构成要件。"
+    },
+    "penalty": {
+      "en": "Under §241(c), up to 364 days in county jail (§18.5), a base fine up to $2,000, or both. This does not supply the punishment for battery, weapon-based assault, or another protected-victim provision. Assessments and other case-specific consequences require separate review.",
+      "es": "Según el §241(c), hasta 364 días de cárcel del condado (§18.5), multa base de hasta $2,000, o ambas. No es la pena de agresión física, agresión con arma u otra disposición sobre víctimas protegidas. Los recargos y otras consecuencias del caso requieren revisión aparte.",
+      "zh": "根据第241(c)条，可处县监狱监禁最高364天（第18.5条）、基本罚金最高2,000美元，或两者并处。这不是殴打、持械袭击或其他受保护受害人条款的刑罚。附加费用及其他案件后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-burglary-in-the-first-degree",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "461"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Burglary under §459 of a dwelling or other inhabited location described in §460(a), with the required intent at entry. Inhabited means currently used for dwelling purposes, whether someone is present or not. An empty home is not automatically second-degree burglary; the actual use and charged location matter.",
+      "es": "Burglary conforme al §459 en una vivienda u otro lugar habitado descrito en el §460(a), con la intención exigida al entrar. Habitado significa usado actualmente como vivienda, haya o no alguien presente. Una casa vacía no implica automáticamente segundo grado; importan su uso y el lugar acusado.",
+      "zh": "以进入时所需意图，在第460(a)条所述住宅或其他居住场所实施第459条入室盗窃。居住场所指目前用于居住，无论当时是否有人在场。无人住宅并不自动属于二级入室盗窃；须审查实际用途和被指控地点。"
+    },
+    "penalty": {
+      "en": "First-degree burglary is punishable by 2, 4, or 6 years in state prison under §461(a). This is not the second-degree county-jail alternative in §461(b). Enhancements, probation eligibility, fines, restitution, and other consequences require separate review.",
+      "es": "El burglary de primer grado se castiga con 2, 4 o 6 años de prisión estatal conforme al §461(a). No es la alternativa de cárcel del condado para segundo grado del §461(b). Los aumentos de pena, la elegibilidad para libertad condicional, multas, restitución y otras consecuencias requieren revisión aparte.",
+      "zh": "一级入室盗窃根据第461(a)条可处州监狱监禁2年、4年或6年。这不是第461(b)条二级入室盗窃的县监狱替代刑罚。加重处罚、缓刑资格、罚金、赔偿及其他后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-dui-second-offense",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5"
+    ],
+    "supportingVehicleSections": [
+      "23103.5",
+      "23542",
+      "23550.5",
+      "23600"
+    ],
+    "summary": {
+      "en": "A §23152 DUI with one qualifying prior violation resulting in conviction within the 10-year period specified by §23540. Qualifying priors include the specified alcohol/drug-related reckless-driving disposition, not every reckless-driving conviction. Verify the violation dates, convictions, and any prior felony allegation rather than relying on the label “second offense.”",
+      "es": "DUI del §23152 con una infracción previa admisible que resultó en condena dentro del período de 10 años del §23540. Incluye cierta resolución por conducción temeraria relacionada con alcohol o drogas, no cualquier condena por conducción temeraria. Verifique fechas de infracción, condenas y posibles antecedentes de delito grave, sin depender de la etiqueta «segunda infracción».",
+      "zh": "第23152条DUI，且在第23540条规定的10年期间内，有一次符合规定并导致定罪的先前违法。符合条件的前科包括特定与酒精或药物有关的危险驾驶处理结果，而非所有危险驾驶定罪。须核对违法日期、定罪及先前重罪指控，不能仅凭“第二次违法”标签判断。"
+    },
+    "penalty": {
+      "en": "Ordinary §23540 punishment without probation: 90–364 days in county jail and a $390–$1,000 base fine. With probation, §23542 requires the fine and jail under either its 10-day minimum branch or its 96-hour branch (two continuous 48-hour periods); the upper limit is 364 days (§18.5). An 18- or 30-month DUI program is required under the probation provision. Section 23550.5 can instead permit felony punishment for specified priors. License, interlock, assessments, and other consequences require separate review.",
+      "es": "Pena ordinaria del §23540 sin libertad condicional: de 90 a 364 días de cárcel del condado y multa base de $390 a $1,000. Con libertad condicional, el §23542 exige multa y cárcel según la modalidad con mínimo de 10 días o la de 96 horas (dos períodos continuos de 48 horas); el máximo es 364 días (§18.5). La norma exige un programa DUI de 18 o 30 meses. El §23550.5 puede permitir pena por delito grave por ciertos antecedentes. Licencia, bloqueo de encendido, recargos y otras consecuencias requieren revisión aparte.",
+      "zh": "未获缓刑时，第23540条普通处罚为县监狱监禁90至364天，并处390至1,000美元基本罚金。获缓刑时，第23542条要求罚金及监禁，可适用最低10天的分支，或96小时分支（两个各连续48小时的时段）；上限为364天（第18.5条）。缓刑条款还要求18或30个月的DUI课程。有特定前科时，第23550.5条可能允许重罪处罚。驾照、点火联锁装置、附加费用及其他后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-dui-third-offense",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5"
+    ],
+    "supportingVehicleSections": [
+      "23103.5",
+      "23548",
+      "23550.5",
+      "23600"
+    ],
+    "summary": {
+      "en": "A §23152 DUI with two qualifying prior violations resulting in convictions within the 10-year period specified by §23546. The dates and qualifying dispositions must be checked, including any applicable alcohol/drug-related reckless-driving prior. A prior felony can invoke a different sentencing provision.",
+      "es": "DUI del §23152 con dos infracciones previas admisibles que resultaron en condenas dentro del período de 10 años del §23546. Deben verificarse las fechas y resoluciones, incluida cierta conducción temeraria relacionada con alcohol o drogas. Un antecedente de delito grave puede activar otra disposición de pena.",
+      "zh": "第23152条DUI，且在第23546条规定的10年期间内，有两次符合规定并导致定罪的先前违法。须核对日期及符合条件的处理结果，包括可能适用的酒精或药物相关危险驾驶前科。先前重罪可能触发不同量刑条款。"
+    },
+    "penalty": {
+      "en": "Ordinary §23546 punishment: 120–364 days in county jail and a $390–$1,000 base fine. Probation normally retains that minimum under §23548(a); a court-approved 30-month treatment option under §23548(b), on specific request and good cause, substitutes a 30-day minimum, with the same 364-day maximum (§18.5). Section 23546 also specifies a three-year habitual-traffic-offender designation. Section 23550.5 may instead permit felony punishment for specified priors. Programs, license revocation, interlock, assessments, and other consequences require separate review.",
+      "es": "Pena ordinaria del §23546: de 120 a 364 días de cárcel del condado y multa base de $390 a $1,000. La libertad condicional normalmente conserva ese mínimo (§23548(a)); la opción de tratamiento de 30 meses aprobada por el tribunal según el §23548(b), a petición específica y con causa justificada, sustituye el mínimo por 30 días, con el mismo máximo de 364 días (§18.5). El §23546 también establece una designación de infractor habitual de tránsito por tres años. El §23550.5 puede permitir pena por delito grave por ciertos antecedentes. Programas, revocación de licencia, bloqueo de encendido, recargos y otras consecuencias requieren revisión aparte.",
+      "zh": "第23546条普通处罚：县监狱监禁120至364天，并处390至1,000美元基本罚金。第23548(a)条缓刑通常保留该最低刑期；依第23548(b)条，经专门申请、说明正当理由并获法院批准的30个月治疗方案，可将最低刑期改为30天，上限仍为364天（第18.5条）。第23546条还规定三年惯常交通违法者身份。有特定前科时，第23550.5条可能允许重罪处罚。课程、驾照吊销、点火联锁装置、附加费用及其他后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-grand-theft-agricultural-487-b1a",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "484",
+      "489",
+      "490",
+      "490.2",
+      "17",
+      "18.5",
+      "1170",
+      "667",
+      "290"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Theft of the domestic fowls or agricultural products listed in §487(b)(1)(A). Its literal threshold is more than $250, but §490.2 generally treats theft worth $950 or less as petty theft, subject to its prior-conviction exceptions. Do not infer felony exposure from the $250 language alone. This is not the livestock provision in §487a.",
+      "es": "Hurto de aves domésticas o productos agrícolas enumerados en el §487(b)(1)(A). El umbral literal supera $250, pero el §490.2 generalmente trata bienes de $950 o menos como hurto menor, sujeto a sus excepciones por antecedentes. No deduzca delito grave solo del umbral de $250. No es la disposición sobre ganado del §487a.",
+      "zh": "盗窃第487(b)(1)(A)条所列家禽或农产品。该条字面门槛为超过250美元，但第490.2条通常将价值不超过950美元的盗窃按轻微盗窃处理，特定前科例外除外。不能仅凭250美元表述推定重罪风险。本条不同于第487a条牲畜盗窃规定。"
+    },
+    "penalty": {
+      "en": "If §490.2 requires petty-theft treatment, §490 permits up to 6 months in county jail, a base fine up to $1,000, or both. Otherwise the applicable grand-theft branch in §489(c) permits misdemeanor jail up to 364 days (§18.5) or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. Qualifying priors, custody location, restitution, fines, and enhancements require separate review. The livestock-specific fine in §489(b) must not be transferred to this agricultural-products provision.",
+      "es": "Si el §490.2 exige tratarlo como hurto menor, el §490 permite hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas. En otro caso, el §489(c) permite hasta 364 días por delito menor (§18.5) o pena grave conforme al §1170(h), normalmente 16 meses, 2 o 3 años. Los antecedentes, lugar de reclusión, restitución, multas y aumentos de pena requieren revisión aparte. La multa para ganado del §489(b) no debe trasladarse a esta disposición agrícola.",
+      "zh": "若第490.2条要求按轻微盗窃处理，第490条允许县监狱监禁最高6个月、基本罚金最高1,000美元，或两者并处。否则，第489(c)条适用的重大盗窃分支允许轻罪监禁最高364天（第18.5条），或第1170(h)条重罪监禁，通常为16个月、2年或3年。符合规定的前科、服刑地点、赔偿、罚金及加重处罚须另行审查。不得将第489(b)条牲畜专用罚金套用于本农产品条款。"
+    }
+  },
+  {
+    "id": "ca-grand-theft-firearm-487-d2",
+    "categories": [
+      "felony"
+    ],
+    "supportingSections": [
+      "484",
+      "489",
+      "490.2"
+    ],
+    "supportingVehicleSections": [],
+    "summary": {
+      "en": "Theft of a firearm under §487(d)(2). Section 490.2(c) expressly excludes firearm theft from its general petty-theft rule for property worth $950 or less. This is a theft allegation, distinct from unlawful possession or carrying of a firearm.",
+      "es": "Hurto de un arma de fuego conforme al §487(d)(2). El §490.2(c) lo excluye expresamente de la regla general de hurto menor para bienes de $950 o menos. Es una acusación de hurto, distinta de posesión o porte ilícito de un arma.",
+      "zh": "第487(d)(2)条枪支盗窃。第490.2(c)条明确将枪支盗窃排除在价值不超过950美元的一般轻微盗窃规则之外。这是盗窃指控，不同于非法持有或携带枪支。"
+    },
+    "penalty": {
+      "en": "Grand theft of a firearm carries 16 months, 2 years, or 3 years in state prison under §489(a). The non-firearm misdemeanor/county-jail alternatives in §489(c) do not supply this branch’s ordinary punishment. Enhancements, fines, restitution, and other consequences require separate review.",
+      "es": "El hurto mayor de un arma de fuego conlleva 16 meses, 2 o 3 años de prisión estatal según el §489(a). Las alternativas de delito menor o cárcel del condado del §489(c) no constituyen la pena ordinaria de esta modalidad. Aumentos de pena, multas, restitución y otras consecuencias requieren revisión aparte.",
+      "zh": "枪支重大盗窃根据第489(a)条可处州监狱监禁16个月、2年或3年。第489(c)条非枪支盗窃的轻罪或县监狱替代处罚不是本分支的普通刑罚。加重处罚、罚金、赔偿及其他后果须另行审查。"
+    }
+  }
+]
