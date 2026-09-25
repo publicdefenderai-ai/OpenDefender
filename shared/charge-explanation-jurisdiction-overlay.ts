@@ -562,7 +562,7 @@ export const CHARGE_EXPLANATION_JURISDICTION_OVERLAY: Record<string, Jurisdictio
   "ca-aggravated-assault": {
     citation: "Cal. Penal Code § 245",
     keyRule: "California does not have a statute titled 'aggravated assault.' Its closest equivalent is assault with a deadly weapon or force likely to produce great bodily injury: an assault committed either with a deadly weapon or instrument, or by means of force likely to cause great bodily injury.",
-    penaltyClass: "2, 3, or 4 years in state prison, up to 1 year in county jail, and/or a fine up to $10,000",
+    penaltyClass: "2, 3, or 4 years in state prison, county jail up to 364 days under §18.5, or a base fine up to $10,000, or both fine and imprisonment as authorized; weapon confiscation may also be required",
     source: "California Legislative Information (leginfo.legislature.ca.gov)",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=245.",
     dataConfidence: "high",
@@ -654,8 +654,8 @@ export const CHARGE_EXPLANATION_JURISDICTION_OVERLAY: Record<string, Jurisdictio
   // FL does not have a separate statute; see aggravated-assault (fl-aggravated-assault).
   "ca-assault-with-a-deadly-weapon": {
     citation: "Cal. Penal Code § 245(a)(1)",
-    keyRule: "This charge covers an assault committed either with a deadly weapon or instrument, or by any means of force likely to produce great bodily injury. The two are alternative ways to commit the same offense; a weapon is not strictly required if the force used was likely to cause serious injury.",
-    penaltyClass: "2, 3, or 4 years in state prison, up to 1 year in county jail, and/or a fine up to $10,000",
+    keyRule: "Section 245(a)(1) covers assault with a deadly weapon or instrument other than a firearm. Force likely to produce great bodily injury without a deadly weapon is a separate statutory branch, §245(a)(4); do not substitute one citation for the other.",
+    penaltyClass: "2, 3, or 4 years in state prison, county jail up to 364 days under §18.5, or a base fine up to $10,000, or both fine and imprisonment as authorized; weapon confiscation may also be required",
     source: "California Legislative Information (leginfo.legislature.ca.gov)",
     sourceUrl: "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=245.",
     dataConfidence: "high",

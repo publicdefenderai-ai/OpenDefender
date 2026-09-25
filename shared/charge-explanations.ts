@@ -1,7 +1,7 @@
 import { CHARGE_EXPLANATION_JURISDICTION_OVERLAY, type JurisdictionChargeDetail } from "./charge-explanation-jurisdiction-overlay";
 import { CHARGE_EXPLANATION_TRANSLATIONS } from "./charge-explanations-translations";
 import { getScopedCaseGuidance } from "./charge-explanation-case-guidance";
-import { getCaliforniaExplanationSlug } from "./california-authority";
+import { getCaliforniaExplanationSlug, getCaliforniaBatchCorrection, getCaliforniaCanonicalRecord } from "./california-authority";
 import { OHIO_MANSLAUGHTER_EXPLANATIONS } from "./ohio-manslaughter-explanations";
 import { OHIO_AGGRAVATED_ASSAULT_EXPLANATION } from "./ohio-aggravated-assault";
 import { OHIO_FELONIOUS_ASSAULT_EXPLANATION } from "./ohio-felonious-assault";
@@ -3729,6 +3729,31 @@ export function getChargeExplanation(
   language?: string,
   canonicalChargeId?: string,
 ): ChargeExplanationWithJurisdiction | null {
+  // Exact California corrections must not fall through to a generic assault,
+  // domestic-violence, or failure-to-identify explanation with different scope.
+  if (canonicalChargeId && normalizeJurisdictionCode(jurisdiction ?? "") === "ca") {
+    const correction = getCaliforniaBatchCorrection(canonicalChargeId);
+    const record = getCaliforniaCanonicalRecord(canonicalChargeId);
+    if (correction && record) {
+      const requested = (language ?? "en").split("-")[0].toLowerCase();
+      const lang = requested === "es" || requested === "zh" ? requested : "en";
+      return {
+        canonicalChargeId, jurisdiction: "CA", chargePattern: /$^/,
+        slug: canonicalChargeId, plainSummary: correction.summary[lang],
+        keyTerms: [], degreeContext: correction.penalty[lang],
+        sources: record.sources.filter(source => source.kind !== "jury-instruction").map(source => ({
+          citation: source.citation, url: source.url, jurisdiction: "CA",
+        })),
+        jurisdictionDetail: {
+          citation: record.citation, keyRule: correction.summary[lang],
+          penaltyClass: correction.penalty[lang], source: "California Legislative Information",
+          sourceUrl: record.sources[0].url, dataConfidence: "high", lastVerified: "2026-09",
+        },
+        jurisdictionDetailMissing: false, translationDraft: lang !== "en",
+        dataConfidence: "high", lastVerified: "2026-09",
+      };
+    }
+  }
   const exactSlug =
     jurisdiction?.toUpperCase().trim() === "CA" && canonicalChargeId
       ? getCaliforniaExplanationSlug(canonicalChargeId)
@@ -3832,16 +3857,3 @@ export function getChargeExplanation(
   return null;
 }
 
-export function getMultipleChargeExplanations(
-  chargeNames: string[],
-  jurisdiction?: string,
-  language?: string
-): Array<{
-  chargeName: string;
-  explanation: ChargeExplanationWithJurisdiction | null;
-}> {
-  return chargeNames.map(name => ({
-    chargeName: name,
-    explanation: getChargeExplanation(name, jurisdiction, language)
-  }));
-}

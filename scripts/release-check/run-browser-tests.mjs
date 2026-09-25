@@ -62,6 +62,7 @@ const testProcess = spawn(
     "tests/e2e/export-release-gate.spec.ts",
     "tests/e2e/authority-boundary-release.spec.ts",
     "tests/e2e/ohio-common-charge-release.spec.ts",
+    "tests/e2e/california-batch-one-release.spec.ts",
     "tests/e2e/source-readiness-gate.spec.ts",
     "tests/e2e/multilingual-mobile-layout.spec.ts",
     "tests/e2e/localized-mobile-actions.spec.ts",
