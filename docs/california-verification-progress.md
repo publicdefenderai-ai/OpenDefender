@@ -125,3 +125,25 @@ Six additional sections were extracted from the already cached official archive:
 Application typecheck, production build, 82 focused tests, and six production-browser checks passed. Browser coverage includes all 25 corrected catalog penalties/categories, rules-guidance propagation, and visible license/DUI classification alternatives. No external AI or real user cases were used. The previously documented GitHub runner installation problem remains separate; these local results do not claim green GitHub CI.
 
 After review and merge, refresh the California source references in the intended Replit database, republish, and verify public rollout as described above. No production seed or deployment occurred here. The next scope is the remaining 74 selectable California records, alongside broader source-discovery accounting so missing charges are tracked rather than equated with catalog coverage. Complete case-law, enhancement, individualized sentencing, and independent legal review remain distinct from this 25-record correction pass. No new attorney data-entry task is needed for the current delivery.
+
+## Catalog-wide source acquisition and coverage accounting after PR 10
+
+PR 10 merged at `47b0a87da61a0e8b1415e9f6bf8cd2d79c3bbce5`. The [coverage report](../scripts/data-review/output/california-catalog-coverage.md) now distinguishes existing catalog scope, correction progress, source acquisition, and the still-unknown statewide offense denominator.
+
+Measured totals: 120 canonical records, 99 configured selectable records, 21 withheld canonical labels; 25 selectable records have the bounded correction pass and 74 await it. The separate 115-row legacy inventory overlaps these records and is not an additional 115 charges. Live availability still depends on Replit source seeding and publication; no new public rollout verification was performed.
+
+The next engineering step acquired all remaining declared primary sources in one offline pass. All 69 distinct primary sections used by the 99 selectable records now have retained text. The new expansion contributes 45 sections/45 versions from the same hash-verified archive; combined with the first-batch dependencies, the research evidence totals 109 sections/110 versions. No new record is marked corrected by this acquisition and no runtime catalog or eligibility behavior changes.
+
+The 74 remaining records use 52 primary sections and form 44 connected groups based on shared primary sources. Each remaining record appears exactly once. This is a reading queue, not permission to share a grade or penalty across subdivisions. The immediate reuse batch identifies six records whose primary text was already in the first-batch research: assault on a peace officer, first-degree burglary, second/third DUI, agricultural grand theft, and firearm grand theft. Their exact subdivisions and additional dependencies still need review.
+
+The acquisition also records code-table section/version counts across 30 code identifiers as a starting point for broader discovery. These include noncriminal law and retained versions; they are expressly not offense counts. Statewide criminal-charge coverage remains unknown, and no percentage of all California crimes is claimed.
+
+Reproduce without network access:
+
+1. `node --import tsx scripts/data-review/california-verification/coverage.ts`
+2. With the already downloaded official archive and its receipt present: `python3 scripts/data-review/california-verification/acquire-catalog.py`
+3. Rerun the coverage command to include the new acquisition evidence.
+
+The coverage report and evidence validation work from committed files on a fresh clone. The archive is needed only to reproduce acquisition. Hash, law-code identity, duplicate-source, and archive-provenance checks prevent silently substituting evidence. Shared-source grouping and the committed report are tested for drift. No credentials or private case data are included.
+
+Validation: 27 focused tests and the application typecheck passed. This is an offline research-only delivery, so no new production build/browser run was required. PR 10's GitHub failures were inspected and again occurred before test execution because Vitest and Playwright were not found; that separate installation problem remains unresolved.
