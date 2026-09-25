@@ -1,10 +1,18 @@
 import { describe, expect, it } from "vitest";
-import { getChargeById } from "../shared/criminal-charges";
+import { criminalCharges, getChargeById } from "../shared/criminal-charges";
 import { getChargeExplanation } from "../shared/charge-explanations";
 import corrections from "../shared/california-batch-one-corrections.json";
 import { readCaliforniaReview, validateCaliforniaReview } from "../scripts/data-review/california-verification/review";
 
 describe("California bounded correction delivery", () => {
+  it("exposes California alternatives to direct shared-catalog readers", () => {
+    expect(criminalCharges.find(row => row.id === "ca-vandalism")?.categories).toEqual(["misdemeanor", "felony"]);
+    expect(criminalCharges.find(row => row.id === "ca-petty-theft")?.categories).toEqual(["misdemeanor", "infraction", "felony"]);
+    for (const correction of corrections) {
+      const raw = criminalCharges.find(row => row.id === correction.id);
+      if (raw) expect(raw.categories, correction.id).toEqual(correction.categories);
+    }
+  });
   it("binds all corrections to preserved source bytes and accounts for unfinished records", () => {
     expect(validateCaliforniaReview(readCaliforniaReview())).toEqual({ batchRecords: 25, corrections: 19, pending: 6, sections: 58, versions: 59 });
   });
