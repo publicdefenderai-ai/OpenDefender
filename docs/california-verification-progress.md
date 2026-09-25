@@ -75,3 +75,25 @@ After this correction PR is reviewed and merged, Replit must pull the commit, ru
 The application typecheck, production build, 35 focused tests (including the nested four Python unittest cases), and two production-browser checks passed. Browser checks exercise all 11 catalog penalties/classification alternatives, a rules-guidance response, and selection by precise citation. They use synthetic inputs with external AI and production database credentials excluded. The new browser tests are included in the existing release-check runner. No full repository regression-suite success or generated AI legal accuracy is claimed.
 
 Next: finish the 14 remaining records as grouped property, controlled-substance, and driving reviews using the already acquired shared sources. Escalate only unresolved legal interpretations with concrete questions; the present delivery does not require attorney data entry.
+
+## Property and drug correction delivery after PR 8
+
+PR 8 merged at `e04bddca86daecd27cb23403eca51f31cd1877c9`, including deletion of the unused name-only multiple-explanation helper flagged by review.
+
+This delivery combines the six property and two drug records. The cumulative first batch now has 19 records with bounded corrections and six driving records still in research. This count describes corrected records, not completed legal certification or statewide coverage.
+
+The visible changes include misdemeanor-first labels with explicit alternatives for petty theft and §11350 possession; the narrow §490.1 infraction conditions; separate warnings for §§666.1 and 11395 repeat-offender paths; §489(c) and §461(b) punishment dependencies; vandalism fine thresholds; and §11364 exceptions with the §11374 punishment range. All eight use the existing exact-ID explanations in English, Spanish, and Chinese. Translations remain drafts. No new charge IDs or automatic case remappings are introduced.
+
+### Reuse and evidence
+
+All but one needed section were already in the shared review bundle. HSC §11374 was extracted from the existing official archive after verifying its receipt hash, without another network download. The combined bundle now retains 58 sections and 59 versions. Its source record preserves the archive member, table row hash, content hash, and official URL. The existing extractor's `extract(archive, requests)` function reproduces this additional request with `[{"lawCode":"HSC","section":"11374"}]`; it retains every version and never extracts archive paths to disk. The offline review validator and renderer continue to work without the ignored cache.
+
+Supporting references now explicitly distinguish Health and Safety Code sections from Penal Code sections. The same dependency resolver supplies the catalog and review checks. A tested source boundary withholds paraphernalia if its HSC §11374 reference is absent or replaced with a same-number Penal Code reference, while leaving an unrelated charge available.
+
+### Checks and rollout
+
+Application typecheck, production build, 76 focused tests, and four production-browser checks passed. Browser checks cover all 19 corrected penalties/classification alternatives, rules-guidance propagation, and visible petty-theft and possession labels. Synthetic inputs and a local fixture were used; external AI and production database credentials were excluded. The existing release runner already includes the expanded tests. No production seed or deployment was performed.
+
+GitHub checks on PR 8 failed before running tests because `vitest` and `playwright` were not found on the runner (run 36092327383). This is a separate CI installation issue; local passing checks do not establish green GitHub CI. No workflow permissions were requested and no CI configuration was bundled into this data-review change.
+
+After merge, the deployment requirement above still applies: refresh the California source references in the intended Replit database and republish. The next grouped review is the six driving records, including the four DUI subdivisions and the retained versions of VEH §13352. Complete case-law, enhancements, diversion, and independent legal review remain outside the bounded corrections; no new attorney data-entry task is created by this delivery.

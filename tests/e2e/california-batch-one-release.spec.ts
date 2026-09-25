@@ -21,6 +21,18 @@ test("California corrections reach the production catalog and rules guidance", a
   const guidance = (await responseGuidance.json()).guidance;
   expect(guidance.generatedBy).toBe("rule-based");
   expect(guidance.chargeClassifications[0].maxPenalty).toBe(row.penalty.en);
+  const ids = ["ca-petty-theft", "ca-possession-of-controlled-substance"];
+  const classified = await request.post("/api/legal-guidance/rules", {
+    headers: { Origin: process.env.PLAYWRIGHT_BASE_URL ?? "http://127.0.0.1:5001" },
+    data: { jurisdiction: "CA", charges: ids, caseStage: "arrest", custodyStatus: "in_custody" },
+  });
+  expect(classified.ok()).toBe(true);
+  const classes = (await classified.json()).guidance.chargeClassifications;
+  for (const id of ids) {
+    const item = classes.find((charge: any) => charge.id === id);
+    expect(item.categories).toEqual(corrections.find(correction => correction.id === id)!.categories);
+    expect(item.maxPenalty).toBe(corrections.find(correction => correction.id === id)!.penalty.en);
+  }
 });
 
 test("California screener finds the precise deadly-weapon charge by citation", async ({ page }) => {
@@ -37,3 +49,22 @@ test("California screener finds the precise deadly-weapon charge by citation", a
   await choice.locator("..").click();
   await expect(choice).toBeChecked();
 });
+
+for (const [id, search, label] of [
+  ["ca-petty-theft", "Petty Theft", "Misdemeanor / Infraction / Felony"],
+  ["ca-possession-of-controlled-substance", "11350", "Misdemeanor / Felony"],
+]) {
+  test(`California selector preserves classification alternatives for ${id}`, async ({ page }) => {
+    await page.route("**/api/ai/status", route => route.fulfill({ json: { available: true } }));
+    await page.goto("/case-guidance");
+    await page.getByTestId("button-start-guidance").click();
+    await page.getByTestId("button-choose-ai").click();
+    await page.getByTestId("select-jurisdiction").click();
+    await page.getByRole("option", { name: "California", exact: true }).click();
+    await page.getByTestId("button-next-jurisdiction").click();
+    await page.locator("#charge-search").fill(search);
+    const choice = page.getByTestId(`checkbox-charge-${id}`);
+    await expect(choice).toBeVisible();
+    await expect(choice.locator("..")).toContainText(label);
+  });
+}

@@ -150,6 +150,16 @@ export function getCaliforniaBatchCorrection(id: string) {
   return corrections.find(row => row.id === id);
 }
 
+export function getCaliforniaCorrectionDependencies(correction: {
+  supportingSections: string[];
+  supportingHealthSections?: string[];
+}) {
+  return [
+    ...correction.supportingSections.map(section => ({ lawCode: "PEN" as const, section })),
+    ...(correction.supportingHealthSections ?? []).map(section => ({ lawCode: "HSC" as const, section })),
+  ];
+}
+
 function record(seed: RecordSeed): CaliforniaCanonicalRecord {
   const correction = getCaliforniaBatchCorrection(seed.canonicalId);
   const sections = [...seed.code.matchAll(/(?:^|[;,]\s*)(\d+(?:\.\d+)*(?:[a-z])?)/g)].map(
@@ -176,8 +186,8 @@ function record(seed: RecordSeed): CaliforniaCanonicalRecord {
     legacyIds: seed.legacyIds ?? [seed.canonicalId],
     sources: [
       ...(jury ? [...statuteSources, jury] : statuteSources),
-      ...(correction?.supportingSections ?? []).map(section => ({
-        ...STATUTE_SOURCE("PEN", `Cal. Penal Code § ${section}`, section),
+      ...(correction ? getCaliforniaCorrectionDependencies(correction) : []).map(({ lawCode, section }) => ({
+        ...STATUTE_SOURCE(lawCode, `${LAW_CODE_LABELS[lawCode]} § ${section}`, section),
         kind: "classification" as const,
       })),
     ],

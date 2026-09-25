@@ -94980,6 +94980,13 @@ const currentCaliforniaIds = criminalCharges
   .filter((charge) => charge.jurisdiction === 'CA')
   .map((charge) => charge.id);
 assertCaliforniaInventoryComplete(currentCaliforniaIds);
+// Direct catalog readers need the same explicit alternatives as canonical
+// lookups. Preserve legacy IDs and primary categories for inventory accounting.
+for (const charge of criminalCharges) {
+  if (charge.jurisdiction !== 'CA') continue;
+  const categories = getCaliforniaCanonicalRecord(charge.id)?.categories;
+  if (categories) charge.categories = [...categories];
+}
 chargeCategories['CA'] = getCaliforniaCanonicalCharges(
   criminalCharges.filter((charge) => charge.jurisdiction === 'CA'),
 ).map((charge) => charge.id);
@@ -95099,4 +95106,3 @@ export function getSelectableCharges(): CriminalCharge[] {
     ...getChargesByJurisdiction('CA'),
   ];
 }
-

@@ -224,5 +224,211 @@
       "es": "Usar palabras ofensivas en un lugar público que, por su naturaleza, puedan provocar una reacción violenta inmediata, conforme al §415(3). Que una expresión sea ofensiva no basta; deben respetarse las garantías constitucionales de expresión.",
       "zh": "根据第415(3)条，在公共场所使用本身可能立即引发暴力反应的冒犯性言语。仅仅令人反感的表达并不足够；必须遵守宪法对言论自由的保障。"
     }
+  },
+  {
+    "id": "ca-petty-theft",
+    "categories": [
+      "misdemeanor",
+      "infraction",
+      "felony"
+    ],
+    "supportingSections": [
+      "488",
+      "490",
+      "490.1",
+      "17",
+      "19.6",
+      "19.7",
+      "1170",
+      "667",
+      "290",
+      "666.1"
+    ],
+    "supportingHealthSections": [],
+    "summary": {
+      "en": "Theft meeting the petty-theft rules in §§484 and 490.2, ordinarily involving property worth $950 or less. Firearm theft is excluded from §490.2. An infraction is a narrow option under §490.1 for property worth $50 or less with no theft-related prior conviction; it is not the default. Check any prior-conviction allegation and the exact charging statute, including §666.1.",
+      "es": "Hurto conforme a los §§484 y 490.2, normalmente de bienes valorados en $950 o menos. El §490.2 excluye el hurto de armas de fuego. La infracción del §490.1 es una opción limitada a bienes de $50 o menos y sin condenas previas relacionadas con hurto; no es la clasificación por defecto. Verifique los antecedentes alegados y la disposición acusada, incluido el §666.1.",
+      "zh": "符合第484及490.2条轻微盗窃规定的行为，通常涉及价值不超过950美元的财物。第490.2条不适用于盗窃枪支。第490.1条的违例处罚仅限财物价值不超过50美元且无盗窃相关前科的特定情况，并非默认分类。须核对所指控的前科和具体条款，包括第666.1条。"
+    },
+    "penalty": {
+      "en": "Ordinary misdemeanor petty theft: up to 6 months in county jail, a base fine up to $1,000, or both (§490). If charged as a qualifying §490.1 infraction: no jail and a fine up to $250. Specified serious prior convictions can permit felony punishment under §§490.2 and 1170(h). Section 666.1 creates a separate repeat-theft path; do not apply the ordinary maximum to that charge. Restitution, assessments, and other consequences require separate review.",
+      "es": "Hurto menor ordinario: hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas (§490). Una infracción admisible del §490.1 no conlleva cárcel y permite multa de hasta $250. Ciertos antecedentes graves pueden permitir pena por delito grave conforme a los §§490.2 y 1170(h). El §666.1 establece una vía distinta para reincidencia; no aplique a esa acusación el máximo ordinario. La restitución, los recargos y otras consecuencias requieren revisión aparte.",
+      "zh": "普通轻罪盗窃：县监狱监禁最高6个月、基本罚金最高1,000美元，或两者并处（第490条）。若符合条件并按第490.1条违例起诉，则不监禁，罚金最高250美元。特定严重前科可能使第490.2及1170(h)条重罪处罚适用。第666.1条另设重复盗窃处罚途径，不可将普通上限套用于该指控。赔偿、附加费用及其他后果须另行审查。"
+    }
+  },
+  {
+    "id": "ca-shoplifting",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "19",
+      "1170",
+      "667",
+      "290",
+      "666.1"
+    ],
+    "supportingHealthSections": [],
+    "summary": {
+      "en": "Entering a commercial establishment during regular business hours with intent to commit larceny involving property worth $950 or less (§459.5). The statute distinguishes this from burglary and bars charging both shoplifting and burglary or theft of the same property. Specified priors and a separately alleged §666.1 charge need their own review.",
+      "es": "Entrar en un establecimiento comercial durante su horario habitual con intención de hurtar bienes de $950 o menos (§459.5). La ley distingue esta conducta del burglary y prohíbe acusar simultáneamente de shoplifting y de burglary o hurto de los mismos bienes. Ciertos antecedentes y una acusación separada del §666.1 requieren su propia revisión.",
+      "zh": "在正常营业时间进入商业场所，意图盗窃价值不超过950美元的财物（第459.5条）。该条将此行为与入室盗窃区分，并禁止就相同财物同时指控商店行窃及入室盗窃或盗窃。特定前科及另行提出的第666.1条指控须分别审查。"
+    },
+    "penalty": {
+      "en": "Ordinary misdemeanor shoplifting: up to 6 months in county jail, a base fine up to $1,000, or both under §19. Section 459.5 permits felony punishment under §1170(h) for specified serious priors. A §666.1 repeat-theft allegation is a separate sentencing path and is not covered by the ordinary maximum. Restitution and other financial consequences may apply.",
+      "es": "Shoplifting ordinario como delito menor: hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas, según el §19. El §459.5 permite pena por delito grave conforme al §1170(h) por ciertos antecedentes graves. Una acusación de reincidencia del §666.1 sigue una vía distinta, no cubierta por el máximo ordinario. Pueden aplicarse restitución y otras consecuencias económicas.",
+      "zh": "普通商店行窃轻罪：根据第19条，县监狱监禁最高6个月、基本罚金最高1,000美元，或两者并处。第459.5条允许对有特定严重前科者适用第1170(h)条重罪处罚。第666.1条重复盗窃指控适用另一处罚途径，不受普通上限涵盖。还可能适用赔偿及其他经济后果。"
+    }
+  },
+  {
+    "id": "ca-grand-theft-487-a",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "484",
+      "489",
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [],
+    "summary": {
+      "en": "Grand theft by value under §487(a): the alleged theft exceeds $950, subject to the statute’s exceptions. This is not the separate firearm or livestock theft branch. Related acts may raise aggregation issues under §487(e), which require case-specific review.",
+      "es": "Hurto mayor por valor conforme al §487(a): el hurto alegado supera $950, sujeto a las excepciones legales. No corresponde a las disposiciones distintas sobre armas de fuego o ganado. Los actos relacionados pueden plantear cuestiones de acumulación de valores conforme al §487(e), que exigen revisión del caso.",
+      "zh": "第487(a)条按价值认定的重大盗窃：被指控盗窃的价值超过950美元，但须考虑法定例外。本条目不是枪支或牲畜盗窃的单独规定。相关行为可能涉及第487(e)条的价值合并问题，须结合案件审查。"
+    },
+    "penalty": {
+      "en": "For this non-firearm, non-livestock branch, §489(c) allows misdemeanor county jail up to 364 days (§18.5) or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years when no different term applies. Eligibility determines county jail versus state prison; enhancements, fines, and restitution require separate review.",
+      "es": "Para esta modalidad, distinta del hurto de armas de fuego o ganado, el §489(c) permite hasta 364 días de cárcel del condado por delito menor (§18.5), o prisión por delito grave conforme al §1170(h), normalmente 16 meses, 2 o 3 años si no se aplica otro plazo. La elegibilidad determina cárcel del condado o prisión estatal; los aumentos de pena, multas y restitución requieren revisión aparte.",
+      "zh": "对此非枪支、非牲畜盗窃类型，第489(c)条允许轻罪县监狱监禁最高364天（第18.5条），或依第1170(h)条判处重罪监禁；未另定刑期时通常为16个月、2年或3年。是否符合条件决定在县监狱或州监狱服刑；加重处罚、罚金及赔偿须另行审查。"
+    }
+  },
+  {
+    "id": "ca-theft-by-receiving",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "667",
+      "290"
+    ],
+    "supportingHealthSections": [],
+    "summary": {
+      "en": "Section 496(a) addresses buying, receiving, concealing, selling, or withholding stolen property with knowledge of its stolen character, including specified assistance. Section 496(b) separately addresses certain dealers who fail to make a reasonable inquiry. Confirm the charged subdivision; mere possession alone does not establish the required facts.",
+      "es": "El §496(a) abarca comprar, recibir, ocultar, vender o retener bienes sabiendo que fueron robados, incluida cierta ayuda para hacerlo. El §496(b) trata por separado a determinados comerciantes que omiten una indagación razonable. Confirme la subdivisión acusada; la mera posesión no demuestra por sí sola los hechos exigidos.",
+      "zh": "第496(a)条涉及明知财物系赃物仍购买、接收、藏匿、出售或扣留，以及特定协助行为。第496(b)条另行规定某些未进行合理询问的商家责任。须核对被指控的分款；仅仅占有财物本身不足以证明所需事实。"
+    },
+    "penalty": {
+      "en": "Under §496(a), property worth $950 or less is a misdemeanor with county jail up to 364 days unless specified serious prior convictions apply. Otherwise misdemeanor jail up to 364 days or felony imprisonment under §1170(h) may apply; the ordinary felony terms are 16 months, 2 years, or 3 years, with custody location subject to eligibility. Dealer, attempt, fine, restitution, and civil-liability rules require separate review; §496(c) also provides a civil damages remedy.",
+      "es": "Conforme al §496(a), los bienes de $950 o menos implican delito menor con hasta 364 días de cárcel del condado, salvo ciertos antecedentes graves. En otros casos puede haber hasta 364 días por delito menor o pena grave conforme al §1170(h), normalmente 16 meses, 2 o 3 años; el lugar de reclusión depende de la elegibilidad. Las reglas para comerciantes, tentativa, multas, restitución y responsabilidad civil requieren revisión aparte; el §496(c) prevé una acción civil de daños.",
+      "zh": "根据第496(a)条，财物价值不超过950美元时通常为轻罪，县监狱监禁最高364天，但有特定严重前科者除外。其他情况可能适用最高364天的轻罪监禁或第1170(h)条重罪监禁；普通重罪刑期为16个月、2年或3年，服刑地点取决于适用条件。商家、未遂、罚金、赔偿及民事责任规定须另行审查；第496(c)条还规定民事损害赔偿救济。"
+    }
+  },
+  {
+    "id": "ca-burglary-in-the-second-degree",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "461",
+      "459.5",
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [],
+    "summary": {
+      "en": "Entry into a place covered by §459 with the required intent to commit theft or a felony, outside first-degree burglary under §460. Qualifying entry into an open commercial establishment involving $950 or less may instead fall under the shoplifting rules in §459.5. Confirm the location, intent at entry, and exact charging document.",
+      "es": "Entrada en un lugar comprendido en el §459 con la intención exigida de cometer hurto o un delito grave, fuera del burglary de primer grado del §460. Una entrada admisible en un comercio abierto por un valor de $950 o menos puede corresponder a shoplifting conforme al §459.5. Confirme el lugar, la intención al entrar y la acusación exacta.",
+      "zh": "以盗窃或实施重罪的必要意图进入第459条所涵盖场所，且不属于第460条一级入室盗窃。进入正在营业的商业场所并涉及不超过950美元财物的符合条件行为，可能应适用第459.5条商店行窃规定。须核对地点、进入时的意图及具体起诉文书。"
+    },
+    "penalty": {
+      "en": "Section 461(b), not §460 alone, supplies the punishment: misdemeanor county jail up to 364 days (§18.5), or felony imprisonment under §1170(h), ordinarily 16 months, 2 years, or 3 years. Eligibility determines county jail versus state prison; enhancements, fines, and restitution require separate review.",
+      "es": "La pena procede del §461(b), no únicamente del §460: hasta 364 días de cárcel del condado por delito menor (§18.5), o prisión por delito grave conforme al §1170(h), normalmente 16 meses, 2 o 3 años. La elegibilidad determina cárcel del condado o prisión estatal; los aumentos de pena, multas y restitución requieren revisión aparte.",
+      "zh": "刑罚由第461(b)条而非仅第460条规定：轻罪县监狱监禁最高364天（第18.5条），或第1170(h)条重罪监禁，通常为16个月、2年或3年。是否符合条件决定县监狱或州监狱服刑；加重处罚、罚金及赔偿须另行审查。"
+    }
+  },
+  {
+    "id": "ca-vandalism",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingHealthSections": [],
+    "summary": {
+      "en": "Maliciously defacing, damaging, or destroying property not solely one’s own under §594. The amount of damage, any qualifying prior conviction, and the charged provision matter. Graffiti cleanup, repair, or replacement can be ordered in addition to punishment.",
+      "es": "Desfigurar, dañar o destruir maliciosamente bienes que no son exclusivamente propios conforme al §594. Importan el importe del daño, los antecedentes aplicables y la disposición acusada. Además de la pena, puede ordenarse limpiar grafiti, reparar o reemplazar bienes.",
+      "zh": "根据第594条，恶意涂污、损坏或毁坏并非完全属于自己的财物。损害金额、符合规定的前科及被指控条款均会影响处理。除刑罚外，还可能被命令清除涂鸦、修理或更换财物。"
+    },
+    "penalty": {
+      "en": "Under §594, damage below $400 generally permits county jail up to 364 days, a base fine up to $1,000, or both; a qualifying prior can raise that fine to $5,000. At $400 or more, misdemeanor jail or felony imprisonment under §1170(h) may apply, with a fine up to $10,000, or up to $50,000 when damage reaches $10,000, or both fine and imprisonment. Ordinary §1170(h) terms are 16 months, 2 years, or 3 years, subject to eligibility. Cleanup, restitution, and other consequences may also apply.",
+      "es": "Conforme al §594, daños inferiores a $400 permiten generalmente hasta 364 días de cárcel del condado, multa base de hasta $1,000, o ambas; ciertos antecedentes elevan esa multa a $5,000. Con daños de $400 o más puede haber cárcel por delito menor o prisión por delito grave según el §1170(h), multa de hasta $10,000; o $50,000 si el daño alcanza $10,000, o multa y prisión. Los plazos ordinarios del §1170(h) son 16 meses, 2 o 3 años, sujetos a elegibilidad. También pueden exigirse limpieza, restitución y otras consecuencias.",
+      "zh": "根据第594条，损害低于400美元时通常可处县监狱监禁最高364天、基本罚金最高1,000美元，或两者并处；符合规定的前科可使该罚金上限升至5,000美元。损害达到400美元时，可能适用轻罪监禁或第1170(h)条重罪监禁，并可处最高10,000美元罚金；损害达到10,000美元时罚金最高50,000美元，也可罚金与监禁并处。第1170(h)条普通刑期为16个月、2年或3年，须核对适用条件。还可能要求清理、赔偿及承担其他后果。"
+    }
+  },
+  {
+    "id": "ca-possession-of-controlled-substance",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170",
+      "667",
+      "290"
+    ],
+    "supportingHealthSections": [
+      "11054",
+      "11055",
+      "11056",
+      "11395"
+    ],
+    "summary": {
+      "en": "Knowing possession of a substance covered by §11350, without the required prescription or another applicable authorization. The section also protects authorized delivery to the prescription holder or lawful disposal under its specific conditions. Confirm the substance and subdivision; the separate §11395 treatment-mandated offense is not automatically the same charge.",
+      "es": "Posesión consciente de una sustancia comprendida en el §11350 sin la receta exigida u otra autorización aplicable. La norma también permite, bajo condiciones específicas, la entrega autorizada al titular de la receta o la eliminación lícita. Confirme la sustancia y subdivisión; el delito separado del §11395 con tratamiento obligatorio no es automáticamente la misma acusación.",
+      "zh": "明知而持有第11350条涵盖的物质，且无所需处方或其他适用授权。该条也在特定条件下允许经授权向处方持有人交付药物或合法处置。须核对物质及分款；第11395条另设强制治疗相关罪名，不能自动视为同一指控。"
+    },
+    "penalty": {
+      "en": "Ordinarily a misdemeanor with county jail up to 364 days (§18.5). Specified serious priors instead trigger felony punishment under §1170(h), ordinarily 16 months, 2 years, or 3 years, with custody location subject to eligibility. Section 11350(b) permits an additional fine up to $70 with ability-to-pay consideration. Felony probation ordinarily requires a $1,000 first-offense or $2,000 subsequent-offense minimum fine or community service, with statutory exceptions. Other charges, assessments, treatment, and diversion require separate review; this is not a §11395 sentencing calculation.",
+      "es": "Normalmente es delito menor con hasta 364 días de cárcel del condado (§18.5). Ciertos antecedentes graves exigen en cambio pena por delito grave conforme al §1170(h), normalmente 16 meses, 2 o 3 años; el lugar de reclusión depende de la elegibilidad. El §11350(b) permite multa adicional de hasta $70 considerando la capacidad de pago. La libertad condicional por delito grave exige normalmente multa mínima de $1,000 para la primera infracción o $2,000 para posteriores, o servicio comunitario, con excepciones legales. Otros cargos, recargos, tratamiento y programas alternativos requieren revisión aparte; esto no calcula la pena del §11395.",
+      "zh": "通常为轻罪，县监狱监禁最高364天（第18.5条）。有特定严重前科时则适用第1170(h)条重罪处罚，普通刑期为16个月、2年或3年，服刑地点取决于适用条件。第11350(b)条允许在考虑支付能力后加处最高70美元罚金。重罪缓刑通常要求首次违法最低1,000美元、后续违法最低2,000美元罚金或社区服务，但有法定例外。其他指控、附加费用、治疗及分流程序须另行审查；此处不是第11395条的量刑计算。"
+    }
+  },
+  {
+    "id": "ca-possession-of-drug-paraphernalia",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [],
+    "supportingHealthSections": [
+      "11054",
+      "11055",
+      "11374"
+    ],
+    "summary": {
+      "en": "Possession of covered equipment for unlawfully injecting or smoking specified controlled substances (§11364), with the required knowledge. Current exceptions include personal-use needles or syringes, safely containerized needles or syringes, and people obtaining qualifying controlled-substance checking services. An object’s association with drugs alone does not resolve those exceptions.",
+      "es": "Posesión, con el conocimiento exigido, de utensilios comprendidos en el §11364 para inyectar o fumar ilícitamente determinadas sustancias. Las excepciones vigentes incluyen agujas o jeringas para uso personal, las depositadas en recipientes seguros y las personas que obtienen servicios admisibles de análisis de sustancias. La asociación de un objeto con drogas no resuelve por sí sola esas excepciones.",
+      "zh": "在具备必要认知的情况下，持有第11364条涵盖的、用于非法注射或吸食特定受控物质的器具。现行例外包括仅供个人使用的针头或注射器、安全装盒处置的针头或注射器，以及接受符合规定的受控物质检测服务者。仅因物品与毒品有关，并不能排除这些例外。"
+    },
+    "penalty": {
+      "en": "The misdemeanor penalty comes from HSC §11374: a base fine of $30–$500, imprisonment of 15–180 days, or both. This describes the statutory punishment range, not a prediction that jail must be imposed. Probation, diversion, assessments, and other case-specific consequences require separate review.",
+      "es": "La pena de delito menor procede del HSC §11374: multa base de $30 a $500, prisión de 15 a 180 días, o ambas. Es el intervalo legal de pena, no una predicción de que deba imponerse cárcel. La libertad condicional, los programas alternativos, los recargos y otras consecuencias del caso requieren revisión aparte.",
+      "zh": "轻罪刑罚来自《健康与安全法》第11374条：基本罚金30至500美元、监禁15至180天，或两者并处。这是法定处罚范围，并非预测必须判处监禁。缓刑、分流程序、附加费用及其他案件后果须另行审查。"
+    }
   }
 ]
