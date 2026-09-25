@@ -74,7 +74,9 @@ describe("public-source coverage gate", () => {
         expect(gap.chargeIds).toEqual([...gap.chargeIds].sort());
       }
     }
-  });
+    // Three full jurisdiction reports take 9-12 seconds even in isolation.
+    // Keep the determinism checks intact and allow headroom for parallel CI load.
+  }, 30_000);
 
   it("keeps source access blockers concrete and separate from publication coverage", () => {
     const report = buildPublicSourceCoverageReport();
