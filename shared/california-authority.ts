@@ -8,6 +8,7 @@
  * currentness evidence are all present.
  */
 
+import corrections from "./california-batch-one-corrections.json";
 import type { CriminalCharge } from "./criminal-charges";
 
 export type CaliforniaDisposition =
@@ -46,6 +47,7 @@ export interface CaliforniaCanonicalRecord {
   elements: string[];
   mentalState: string;
   grading: string;
+  categories?: CriminalCharge["categories"];
   penalty: string;
   currentness: {
     status: "current";
@@ -144,7 +146,12 @@ type RecordSeed = Omit<
   juryInstruction?: { ref: string; url: string };
 };
 
+export function getCaliforniaBatchCorrection(id: string) {
+  return corrections.find(row => row.id === id);
+}
+
 function record(seed: RecordSeed): CaliforniaCanonicalRecord {
+  const correction = getCaliforniaBatchCorrection(seed.canonicalId);
   const sections = [...seed.code.matchAll(/(?:^|[;,]\s*)(\d+(?:\.\d+)*(?:[a-z])?)/g)].map(
     (match) => match[1],
   );
@@ -160,9 +167,20 @@ function record(seed: RecordSeed): CaliforniaCanonicalRecord {
     : undefined;
   return {
     ...seed,
+    ...(correction ? {
+      categories: correction.categories as NonNullable<CriminalCharge["categories"]>,
+      penalty: correction.penalty.en,
+      grading: correction.categories.join(" or "),
+    } : {}),
     disposition: "retain",
     legacyIds: seed.legacyIds ?? [seed.canonicalId],
-    sources: jury ? [...statuteSources, jury] : statuteSources,
+    sources: [
+      ...(jury ? [...statuteSources, jury] : statuteSources),
+      ...(correction?.supportingSections ?? []).map(section => ({
+        ...STATUTE_SOURCE("PEN", `Cal. Penal Code § ${section}`, section),
+        kind: "classification" as const,
+      })),
+    ],
     currentness: {
       status: "current",
       evidence: CURRENT_LAW_EVIDENCE,
@@ -279,8 +297,8 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
     lawCode: "PEN",
     citation: "Cal. Penal Code § 245(a)(1)",
     classification: "offense",
-    elements: ["The defendant committed an assault", "The assault was with a deadly weapon or by force likely to cause great bodily injury", "The defendant acted willfully and knew the relevant facts"],
-    mentalState: "Willful assault with knowledge of facts making the force likely to cause great bodily injury or involving a deadly weapon.",
+    elements: ["The defendant committed an assault", "The assault was with a deadly weapon or instrument other than a firearm", "The defendant acted willfully and knew the relevant facts"],
+    mentalState: "Willful assault with the required knowledge of the circumstances and use of a non-firearm deadly weapon.",
     grading: "Wobbler",
     penalty: "Misdemeanor punishment may include county jail up to 1 year; felony punishment may include imprisonment under Penal Code § 1170(h) for 2, 3, or 4 years, depending on the charged theory under § 245(a)(1).",
     juryInstruction: { ref: "CALCRIM 875", url: CALCRIM_URL },
@@ -1655,8 +1673,8 @@ export const CALIFORNIA_CANONICAL_RECORDS: CaliforniaCanonicalRecord[] = [
     lawCode: "PEN",
     citation: "Cal. Penal Code § 273.6(a)",
     classification: "offense",
-    elements: ["A court issued a protective or restraining order", "The defendant knew of the order", "The defendant intentionally or knowingly violated the order"],
-    mentalState: "Knowledge of the order and intentional or knowing violation.",
+    elements: ["A court issued a protective or restraining order", "The defendant knew of the order", "The defendant intentionally and knowingly violated the order"],
+    mentalState: "Knowledge of the order and intentional and knowing violation.",
     grading: "Misdemeanor.",
     penalty: "Punishable by county jail up to 1 year and/or a fine under Penal Code § 273.6(a).",
   }),
@@ -2039,19 +2057,28 @@ export function getCaliforniaCanonicalCharge(
 ): CriminalCharge | undefined {
   const metadata = getCaliforniaCanonicalRecord(legacyCharge.id);
   if (!metadata) return undefined;
+  const correction = getCaliforniaBatchCorrection(metadata.canonicalId);
   return {
     ...legacyCharge,
     id: metadata.canonicalId,
     name: metadata.officialTitle,
     code: metadata.code,
     description: `${metadata.officialTitle} under ${metadata.citation}. The prosecution generally must prove: ${metadata.elements.join("; ")}.`,
-    category:
+    categories: metadata.categories,
+    category: metadata.categories?.[0] ?? (
       metadata.grading.toLowerCase().includes("infraction")
         ? "infraction"
         : metadata.grading.toLowerCase().includes("misdemeanor") &&
             !metadata.grading.toLowerCase().includes("felony")
           ? "misdemeanor"
-          : "felony",
+          : "felony"),
+    ...(correction ? {
+      description: correction.summary.en,
+      descriptionEs: correction.summary.es,
+      descriptionZh: correction.summary.zh,
+      maxPenaltyEs: correction.penalty.es,
+      maxPenaltyZh: correction.penalty.zh,
+    } : {}),
     maxPenalty: metadata.penalty,
     commonDefenses: ["The available defenses depend on the exact statutory elements and facts; discuss them with a California criminal-defense attorney."],
     evidenceToGather: ["Obtain the charging document and the exact statutory subdivision before evaluating the allegations."],

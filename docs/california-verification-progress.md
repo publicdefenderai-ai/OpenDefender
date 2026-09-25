@@ -56,3 +56,22 @@ The public Ohio selector displayed 10 choices, including Criminal Trespass, and 
 ## Checks for this preparation
 
 Four extraction tests and 20 existing California authority/source-database tests pass. The application typecheck passes. The broader scripts typecheck reports errors in existing jsdom-dependent review scripts (missing declarations and resulting implicit/unknown types), outside these new files; it is not green. No production build or end-to-end guidance approval is claimed for this research-only preparation.
+
+
+## Combined correction delivery after PR 7
+
+The first two groups now have 11 bounded corrections: eight person/officer records and three disturbing-the-peace subdivisions. This improves the actual catalog and exact-ID explanations in English, Spanish, and Chinese. It corrects sentencing language, preserves alternative classifications explicitly, and separates non-firearm deadly-weapon assault from the different force-likely subdivision. The translations remain marked as drafts. These are proposed corrections, not complete legal certification of the records.
+
+The [combined review](../scripts/data-review/output/california-batch-one-review.md) accounts for all 25 records. Its JSON companion retains 57 public statute sections and 58 versions with content hashes. The 14 property, drug, and driving records remain in research. The two versions of VEH 13352 remain separate; neither is silently selected as current. The original baseline is historical and must not be regenerated over the pre-correction evidence.
+
+Shared sources are acquired once and reused across charge records. The offline review validator binds corrections to source hashes and their required dependencies, rejects unresolved versions for corrected references, and prevents unfinished records from being promoted merely by changing a status. Run it with `node --import tsx scripts/data-review/california-verification/review.ts`; it regenerates the human-readable review without the ignored download cache.
+
+### Deployment requirement
+
+After this correction PR is reviewed and merged, Replit must pull the commit, run the existing `npm run db:seed:california` command against its intended database, and republish. The source database still stores references, not the research XML. An old seed missing a new dependency intentionally withholds the affected charge until refreshed. No production database or deployment was changed here. Check the public catalog and guidance after deployment; local release fixtures do not prove public rollout.
+
+### Validation of the corrections
+
+The application typecheck, production build, 35 focused tests (including the nested four Python unittest cases), and two production-browser checks passed. Browser checks exercise all 11 catalog penalties/classification alternatives, a rules-guidance response, and selection by precise citation. They use synthetic inputs with external AI and production database credentials excluded. The new browser tests are included in the existing release-check runner. No full repository regression-suite success or generated AI legal accuracy is claimed.
+
+Next: finish the 14 remaining records as grouped property, controlled-substance, and driving reviews using the already acquired shared sources. Escalate only unresolved legal interpretations with concrete questions; the present delivery does not require attorney data entry.

@@ -72,7 +72,7 @@ describe("authoritative California charge release", () => {
     expect(getChargeById("ca-criminally-negligent-homicide")).toBeUndefined();
     expect(getChargeById("ca-assault-in-the-second-degree")).toBeUndefined();
     expect(getChargeById("ca-accessory-after-the-fact")).toBeUndefined();
-    expect(getChargeById("ca-resisting-arrest")?.maxPenalty).toContain("up to 1 year");
+    expect(getChargeById("ca-resisting-arrest")?.maxPenalty).toContain("up to 364 days");
     expect(getChargeById("ca-failure-to-pay-child-support")?.maxPenalty).toContain("up to 1 year");
     expect(getChargeById("ca-animal-cruelty-misdemeanor")?.maxPenalty).toContain("up to 1 year");
     expect(getChargeById("ca-reckless-driving")?.maxPenalty).toContain("5 to 90 days");

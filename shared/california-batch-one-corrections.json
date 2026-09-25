@@ -1,0 +1,228 @@
+[
+  {
+    "id": "ca-assault-240",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "241"
+    ],
+    "penalty": {
+      "en": "Ordinary assault under §240: up to 6 months in county jail, a base fine up to $1,000, or both under §241(a). Protected-victim variants require separate review.",
+      "es": "Agresión conforme al §240: hasta 6 meses de cárcel del condado, una multa base de hasta $1,000, o ambas, conforme al §241(a). Los casos con víctimas especialmente protegidas requieren revisión aparte.",
+      "zh": "第240条普通袭击罪：根据第241(a)条，县监狱监禁最高6个月、基本罚金最高1,000美元，或两者并处。涉及特别受保护受害人的情形须另行审查。"
+    },
+    "summary": {
+      "en": "An unlawful attempt, with present ability, to apply force to another person. An actual touching is not required; the alleged conduct and mental state still matter.",
+      "es": "Intento ilícito, con capacidad presente, de aplicar fuerza a otra persona. No se exige contacto físico efectivo; importan la conducta y el estado mental alegados.",
+      "zh": "具有当时实施能力而非法企图对他人使用暴力。无需实际接触；仍须审查被指控的行为和主观状态。"
+    }
+  },
+  {
+    "id": "ca-battery-243-a",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "242"
+    ],
+    "penalty": {
+      "en": "Battery under §243(a): up to 6 months in county jail, a base fine up to $2,000, or both. Injury and protected-victim variants are not covered by this ordinary penalty.",
+      "es": "Agresión física conforme al §243(a): hasta 6 meses de cárcel del condado, una multa base de hasta $2,000, o ambas. Esta pena ordinaria no cubre las variantes por lesiones o víctimas especialmente protegidas.",
+      "zh": "第243(a)条殴打罪：县监狱监禁最高6个月、基本罚金最高2,000美元，或两者并处。该普通刑罚不涵盖造成伤害或涉及特别受保护受害人的其他情形。"
+    },
+    "summary": {
+      "en": "Willful and unlawful force or harmful or offensive touching of another person. This record addresses ordinary battery under §243(a), not injury or protected-victim variants.",
+      "es": "Uso deliberado e ilícito de fuerza o contacto dañino u ofensivo con otra persona. Esta entrada corresponde al §243(a), no a variantes por lesiones o víctimas especialmente protegidas.",
+      "zh": "故意且非法对他人使用暴力，或进行有害、冒犯性的接触。本条目涉及第243(a)条普通殴打罪，不涵盖造成伤害或特别受保护受害人的其他情形。"
+    }
+  },
+  {
+    "id": "ca-domestic-battery",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "242",
+      "18.5",
+      "1203.097"
+    ],
+    "penalty": {
+      "en": "Under §243(e)(1), up to 364 days in county jail (§18.5), a base fine up to $2,000, or both. Probation or a suspended sentence requires at least a year of batterer treatment or approved alternative counseling; qualifying prior convictions can trigger a 48-hour minimum, subject to the statutory exception. Other probation payments and conditions may apply.",
+      "es": "Conforme al §243(e)(1): hasta 364 días de cárcel del condado (§18.5), una multa base de hasta $2,000, o ambas. La libertad condicional o suspensión de la pena exige al menos un año de tratamiento para agresores o asesoramiento alternativo aprobado. Ciertos antecedentes pueden exigir un mínimo de 48 horas, sujeto a la excepción legal. Pueden aplicarse otros pagos y condiciones.",
+      "zh": "根据第243(e)(1)条：县监狱监禁最高364天（第18.5条）、基本罚金最高2,000美元，或两者并处。缓刑或暂缓执行刑罚须接受至少一年的施暴者治疗或经批准的替代辅导。符合规定的前科可能触发最低48小时监禁，但有法定例外。还可能适用其他付款和缓刑条件。"
+    },
+    "summary": {
+      "en": "Battery against a person in a relationship listed in §243(e)(1), including a spouse, cohabitant, co-parent, former spouse, fiancé, or current or former dating or engagement partner. Check the actual relationship and alleged touching.",
+      "es": "Agresión física contra una persona con una relación incluida en el §243(e)(1), como cónyuge, conviviente, otro progenitor del hijo, excónyuge, prometido o pareja actual o anterior. Deben verificarse la relación y el contacto alegado.",
+      "zh": "对第243(e)(1)条所列关系中的人实施殴打，包括配偶、同居者、共同子女的另一方家长、前配偶、未婚伴侣或现任、前任约会或订婚对象。须核对具体关系及被指控的接触行为。"
+    }
+  },
+  {
+    "id": "ca-assault-with-deadly-weapon",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5"
+    ],
+    "penalty": {
+      "en": "For non-firearm deadly-weapon assault under §245(a)(1): 2, 3, or 4 years in state prison, or county jail up to 364 days (§18.5), or a base fine up to $10,000, or both fine and imprisonment as authorized. This is not a §1170(h) felony term. Section 245(e) requires confiscation of a covered weapon owned by the convicted person. Force-likely assault without a deadly weapon is a separate branch, §245(a)(4).",
+      "es": "Agresión con un arma mortal que no sea de fuego (§245(a)(1)): 2, 3 o 4 años de prisión estatal; o hasta 364 días de cárcel del condado (§18.5); o multa base de hasta $10,000; o multa y prisión según lo autorizado. No es una pena de delito grave conforme al §1170(h). El §245(e) exige confiscar el arma pertinente si pertenece a la persona condenada. La agresión mediante fuerza capaz de causar lesiones graves, sin arma mortal, corresponde a otra disposición: §245(a)(4).",
+      "zh": "第245(a)(1)条非枪支致命武器袭击罪：州监狱刑期为2、3或4年；或县监狱监禁最高364天（第18.5条）；或基本罚金最高10,000美元；或依法并处罚金与监禁。这不是第1170(h)条刑期。第245(e)条要求没收属于被定罪者的相关武器。未使用致命武器、但使用可能造成重大身体伤害的暴力，属于另一个分项：第245(a)(4)条。"
+    },
+    "summary": {
+      "en": "Assault with a deadly weapon or instrument other than a firearm under §245(a)(1). Force likely to cause great bodily injury without a deadly weapon is a different branch, §245(a)(4); do not substitute this record for that charge.",
+      "es": "Agresión con un arma o instrumento mortal que no sea de fuego, conforme al §245(a)(1). La fuerza capaz de causar lesiones graves sin arma mortal corresponde a otra disposición, §245(a)(4); no sustituya esa acusación por esta entrada.",
+      "zh": "根据第245(a)(1)条，使用枪支以外的致命武器或器具实施袭击。未使用致命武器但使用可能造成重大身体伤害的暴力属于第245(a)(4)条；不能用本条目替代该指控。"
+    }
+  },
+  {
+    "id": "ca-menacing",
+    "categories": [
+      "felony",
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "17",
+      "18",
+      "18.5"
+    ],
+    "penalty": {
+      "en": "Criminal threats under §422(a): county jail up to 364 days (§18.5), or a state-prison term of 16 months, 2 years, or 3 years under §18(a). The state-prison alternative is not a §1170(h) term. These are base custody limits; fines and other sentencing consequences require separate review.",
+      "es": "Amenazas criminales conforme al §422(a): hasta 364 días de cárcel del condado (§18.5), o prisión estatal de 16 meses, 2 años o 3 años conforme al §18(a). La alternativa de prisión estatal no es una pena conforme al §1170(h). Son límites básicos de privación de libertad; las multas y demás consecuencias requieren revisión aparte.",
+      "zh": "第422(a)条刑事威胁罪：县监狱监禁最高364天（第18.5条），或根据第18(a)条判处16个月、2年或3年州监狱刑期。州监狱刑期不属于第1170(h)条。这些是基本监禁范围；罚金和其他量刑后果须另行审查。"
+    },
+    "summary": {
+      "en": "A willful threat of death or great bodily injury intended to be taken as a threat, with the specificity and immediacy required by §422(a), causing reasonable sustained fear for personal or immediate-family safety. Intent to carry out the threat is not required.",
+      "es": "Amenaza deliberada de muerte o lesiones graves, con intención de que se entienda como amenaza y con la precisión e inmediatez exigidas por el §422(a), que causa temor sostenido y razonable por la seguridad propia o de la familia inmediata. No se exige intención de cumplirla.",
+      "zh": "故意作出死亡或重大身体伤害威胁，并意图让他人将其视为威胁；威胁须符合第422(a)条的具体性和即时性要求，造成对本人或直系家属安全的合理、持续恐惧。无需有实际执行威胁的意图。"
+    }
+  },
+  {
+    "id": "ca-resisting-arrest",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "18.5"
+    ],
+    "penalty": {
+      "en": "For §148(a)(1), when no other punishment is prescribed: county jail up to 364 days (§18.5), a base fine up to $1,000, or both. Weapon-taking and other subdivisions require separate review. Lawful recording of an officer does not by itself violate this provision (§148(g)).",
+      "es": "Para el §148(a)(1), cuando no se prescribe otra pena: hasta 364 días de cárcel del condado (§18.5), multa base de hasta $1,000, o ambas. Quitar un arma y otras subdivisiones requieren revisión aparte. Grabar legalmente a un agente no constituye por sí solo esta infracción (§148(g)).",
+      "zh": "第148(a)(1)条在没有另行规定刑罚时：县监狱监禁最高364天（第18.5条）、基本罚金最高1,000美元，或两者并处。夺取武器及其他分项须另行审查。合法录制执法人员的行为本身不违反本条（第148(g)条）。"
+    },
+    "summary": {
+      "en": "Willfully resisting, delaying, or obstructing a covered officer or emergency medical technician in the lawful performance of duties under §148(a)(1). Lawful recording alone is not a violation. Weapon-taking allegations require a different subdivision.",
+      "es": "Resistir, retrasar u obstruir deliberadamente a un agente o técnico de emergencias médicas cubierto por la ley mientras cumple legalmente sus funciones, conforme al §148(a)(1). Grabar legalmente no constituye por sí solo una infracción. Quitar un arma corresponde a otra subdivisión.",
+      "zh": "根据第148(a)(1)条，故意抗拒、拖延或妨碍法律涵盖的执法人员或急救技术人员合法履行职责。合法录制本身不构成违法。夺取武器的指控属于其他分项。"
+    }
+  },
+  {
+    "id": "ca-protective-order-273-6-a",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "18.5",
+      "1203.097"
+    ],
+    "penalty": {
+      "en": "Ordinary violation under §273.6(a): county jail up to 364 days (§18.5), a base fine up to $1,000, or both. Injury and qualifying repeat violations have different minimums or felony exposure under other subdivisions. Probation must be consistent with §1203.097; shelter payments and victim reimbursement may also apply.",
+      "es": "Infracción ordinaria del §273.6(a): hasta 364 días de cárcel del condado (§18.5), multa base de hasta $1,000, o ambas. Las lesiones y ciertas reincidencias tienen otros mínimos o posibles penas por delito grave en otras subdivisiones. La libertad condicional debe ajustarse al §1203.097; también pueden aplicarse pagos a refugios y reembolso a la víctima.",
+      "zh": "第273.6(a)条普通保护令违反行为：县监狱监禁最高364天（第18.5条）、基本罚金最高1,000美元，或两者并处。造成伤害或符合条件的再次违反行为，可能依其他分项适用不同最低刑期或重罪刑罚。缓刑须符合第1203.097条；还可能要求向庇护机构付款或补偿受害人。"
+    },
+    "summary": {
+      "en": "An intentional and knowing violation of an order covered by §273.6(a). Check the actual order, notice, and prohibited conduct. Injury and repeat-violation allegations can invoke other subdivisions.",
+      "es": "Violación intencional y consciente de una orden comprendida en el §273.6(a). Verifique la orden, su notificación y la conducta prohibida. Las lesiones y reincidencias pueden activar otras subdivisiones.",
+      "zh": "故意且明知地违反第273.6(a)条涵盖的命令。须核对命令本身、是否知悉命令以及禁止的行为。造成伤害或再次违反的指控可能适用其他分项。"
+    }
+  },
+  {
+    "id": "ca-false-info-to-police",
+    "categories": [
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "19"
+    ],
+    "penalty": {
+      "en": "False identification under §148.9 is a misdemeanor with the ordinary §19 limits: county jail up to 6 months, a base fine up to $1,000, or both. The statute requires a lawful detention or arrest and the specified evasion purpose; officer-status requirements differ between subdivisions (a) and (b).",
+      "es": "La identificación falsa conforme al §148.9 es un delito menor sujeto a los límites ordinarios del §19: hasta 6 meses de cárcel del condado, multa base de hasta $1,000, o ambas. Se exige una detención o arresto legal y el propósito de evasión especificado; los requisitos relativos al agente difieren entre (a) y (b).",
+      "zh": "第148.9条虚假身份行为属于轻罪，适用第19条普通上限：县监狱监禁最高6个月、基本罚金最高1,000美元，或两者并处。该条要求合法拘留或逮捕及规定的逃避目的；(a)与(b)分项对执法人员身份的要求不同。"
+    },
+    "summary": {
+      "en": "Falsely identifying oneself as another or a fictitious person during lawful detention or arrest, for the evasion purpose specified in §148.9. This is not a general rule requiring everyone to answer police questions. Officer requirements differ between subdivisions.",
+      "es": "Identificarse falsamente como otra persona o una persona ficticia durante una detención o arresto legal, con el propósito de evasión especificado en el §148.9. No es una obligación general de contestar preguntas policiales. Los requisitos relativos al agente varían entre subdivisiones.",
+      "zh": "在合法拘留或逮捕期间，为第148.9条规定的逃避目的，冒用他人或虚构身份。这不是要求所有人回答警方问题的一般规则。不同分项对执法人员的要求有所不同。"
+    }
+  },
+  {
+    "id": "ca-disturbing-the-peace-415-1",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "supportingSections": [
+      "17",
+      "19.6",
+      "19.8"
+    ],
+    "penalty": {
+      "en": "Under §415, the misdemeanor limit is 90 days in county jail, a base fine up to $400, or both. If treated as an infraction through §§17(d) and 19.8, the base fine is up to $250 and the infraction carries no imprisonment (§19.6). Confirm the charged classification; this entry does not decide it.",
+      "es": "Conforme al §415, el delito menor permite hasta 90 días de cárcel del condado, multa base de hasta $400, o ambas. Si se tramita como infracción conforme a los §§17(d) y 19.8, la multa base máxima es $250 y no conlleva prisión (§19.6). Confirme la clasificación acusada; esta entrada no la determina.",
+      "zh": "根据第415条，轻罪上限为县监狱监禁90天、基本罚金400美元，或两者并处。如依据第17(d)和19.8条按违章处理，基本罚金最高250美元，且该违章不处监禁（第19.6条）。请核对实际指控类别；本条目不替您确定类别。"
+    },
+    "summary": {
+      "en": "Unlawfully fighting, or challenging another person to fight, in a public place under §415(1). This entry does not cover the separate noise or offensive-words branches.",
+      "es": "Pelear ilícitamente o desafiar a otra persona a pelear en un lugar público, conforme al §415(1). Esta entrada no abarca las disposiciones separadas sobre ruido o palabras ofensivas.",
+      "zh": "根据第415(1)条，在公共场所非法打斗或挑战他人打斗。本条目不涵盖噪声或冒犯性言语的其他分项。"
+    }
+  },
+  {
+    "id": "ca-disturbing-the-peace-415-2",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "supportingSections": [
+      "17",
+      "19.6",
+      "19.8"
+    ],
+    "penalty": {
+      "en": "Under §415, the misdemeanor limit is 90 days in county jail, a base fine up to $400, or both. If treated as an infraction through §§17(d) and 19.8, the base fine is up to $250 and the infraction carries no imprisonment (§19.6). Confirm the charged classification; this entry does not decide it.",
+      "es": "Conforme al §415, el delito menor permite hasta 90 días de cárcel del condado, multa base de hasta $400, o ambas. Si se tramita como infracción conforme a los §§17(d) y 19.8, la multa base máxima es $250 y no conlleva prisión (§19.6). Confirme la clasificación acusada; esta entrada no la determina.",
+      "zh": "根据第415条，轻罪上限为县监狱监禁90天、基本罚金400美元，或两者并处。如依据第17(d)和19.8条按违章处理，基本罚金最高250美元，且该违章不处监禁（第19.6条）。请核对实际指控类别；本条目不替您确定类别。"
+    },
+    "summary": {
+      "en": "Maliciously and willfully disturbing another person through loud and unreasonable noise under §415(2). Loudness alone does not state all the required elements.",
+      "es": "Perturbar maliciosa y deliberadamente a otra persona mediante ruido fuerte e irrazonable, conforme al §415(2). El volumen elevado por sí solo no reúne todos los elementos exigidos.",
+      "zh": "根据第415(2)条，以恶意且故意的方式通过响亮、不合理的噪声扰乱他人。仅音量大并不满足全部构成要件。"
+    }
+  },
+  {
+    "id": "ca-disturbing-the-peace-415-3",
+    "categories": [
+      "misdemeanor",
+      "infraction"
+    ],
+    "supportingSections": [
+      "17",
+      "19.6",
+      "19.8"
+    ],
+    "penalty": {
+      "en": "Under §415, the misdemeanor limit is 90 days in county jail, a base fine up to $400, or both. If treated as an infraction through §§17(d) and 19.8, the base fine is up to $250 and the infraction carries no imprisonment (§19.6). Confirm the charged classification; this entry does not decide it.",
+      "es": "Conforme al §415, el delito menor permite hasta 90 días de cárcel del condado, multa base de hasta $400, o ambas. Si se tramita como infracción conforme a los §§17(d) y 19.8, la multa base máxima es $250 y no conlleva prisión (§19.6). Confirme la clasificación acusada; esta entrada no la determina.",
+      "zh": "根据第415条，轻罪上限为县监狱监禁90天、基本罚金400美元，或两者并处。如依据第17(d)和19.8条按违章处理，基本罚金最高250美元，且该违章不处监禁（第19.6条）。请核对实际指控类别；本条目不替您确定类别。"
+    },
+    "summary": {
+      "en": "Using offensive words in a public place that are inherently likely to provoke an immediate violent reaction under §415(3). Merely offensive speech is not enough; constitutional speech limits must be respected.",
+      "es": "Usar palabras ofensivas en un lugar público que, por su naturaleza, puedan provocar una reacción violenta inmediata, conforme al §415(3). Que una expresión sea ofensiva no basta; deben respetarse las garantías constitucionales de expresión.",
+      "zh": "根据第415(3)条，在公共场所使用本身可能立即引发暴力反应的冒犯性言语。仅仅令人反感的表达并不足够；必须遵守宪法对言论自由的保障。"
+    }
+  }
+]
