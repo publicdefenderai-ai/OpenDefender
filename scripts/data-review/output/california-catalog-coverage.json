@@ -1,0 +1,3665 @@
+{
+  "schemaVersion": 1,
+  "scope": "catalog_accounting_not_statewide_offense_coverage",
+  "accounting": {
+    "canonicalRecords": 120,
+    "configuredSelectable": 99,
+    "withheldCanonicalLabels": 21,
+    "boundedCorrectionPass": 25,
+    "awaitingCorrectionPass": 74,
+    "legacyRows": 115,
+    "legacyDispositions": {
+      "retain": 49,
+      "alias": 7,
+      "reselection-required": 44,
+      "remove": 15
+    },
+    "retainedResearchSections": 64,
+    "retainedResearchVersions": 65,
+    "distinctSelectablePrimarySections": 69,
+    "remainingSharedSourceGroups": 44,
+    "remainingPrimarySections": 52,
+    "remainingRecordsWithAllPrimaryTextAlreadyRetained": 6,
+    "acquiredSelectablePrimarySections": 69,
+    "selectableRecordsWithAllPrimaryTextAcquired": 99,
+    "totalAcquiredSectionsIncludingDependencies": 109,
+    "totalAcquiredVersionsIncludingDependencies": 110,
+    "statewideOffenseDenominator": null,
+    "statewideCoveragePercent": null,
+    "liveDeploymentParity": "not_verified_by_this_offline_report"
+  },
+  "limits": [
+    "25 corrected records are not 25 fully certified offenses. Independent legal review, case law, and record-specific exceptions remain.",
+    "99 configured selectable records are not a measured count of currently deployed choices; source seeding and deployment determine live availability.",
+    "The legacy inventory overlaps the canonical inventory and must not be added to it.",
+    "Sources are grouped by shared primary section only. This does not assign penalties across subdivisions or establish complete dependency coverage.",
+    "No statewide offense enumeration exists yet. Acquiring all primary catalog sources does not establish completeness or discover every missing charge."
+  ],
+  "byLawCode": [
+    {
+      "lawCode": "BPC",
+      "selectable": 1,
+      "corrected": 0,
+      "awaitingCorrection": 1
+    },
+    {
+      "lawCode": "HSC",
+      "selectable": 7,
+      "corrected": 2,
+      "awaitingCorrection": 5
+    },
+    {
+      "lawCode": "PEN",
+      "selectable": 79,
+      "corrected": 17,
+      "awaitingCorrection": 62
+    },
+    {
+      "lawCode": "VEH",
+      "selectable": 12,
+      "corrected": 6,
+      "awaitingCorrection": 6
+    }
+  ],
+  "recommendedReuseBatch": [
+    "ca-assault-on-peace-officer",
+    "ca-burglary-in-the-first-degree",
+    "ca-dui-second-offense",
+    "ca-dui-third-offense",
+    "ca-grand-theft-agricultural-487-b1a",
+    "ca-grand-theft-firearm-487-d2"
+  ],
+  "statutoryUniverse": [
+    {
+      "lawCode": "BPC",
+      "distinctSections": 10483,
+      "versionRows": 10524
+    },
+    {
+      "lawCode": "CCP",
+      "distinctSections": 3411,
+      "versionRows": 3424
+    },
+    {
+      "lawCode": "CIV",
+      "distinctSections": 4078,
+      "versionRows": 4087
+    },
+    {
+      "lawCode": "COM",
+      "distinctSections": 669,
+      "versionRows": 669
+    },
+    {
+      "lawCode": "CONS",
+      "distinctSections": 69,
+      "versionRows": 372
+    },
+    {
+      "lawCode": "CORP",
+      "distinctSections": 2430,
+      "versionRows": 2433
+    },
+    {
+      "lawCode": "EDC",
+      "distinctSections": 11508,
+      "versionRows": 11580
+    },
+    {
+      "lawCode": "ELEC",
+      "distinctSections": 2373,
+      "versionRows": 2376
+    },
+    {
+      "lawCode": "EVID",
+      "distinctSections": 506,
+      "versionRows": 506
+    },
+    {
+      "lawCode": "FAC",
+      "distinctSections": 9661,
+      "versionRows": 9663
+    },
+    {
+      "lawCode": "FAM",
+      "distinctSections": 1629,
+      "versionRows": 1636
+    },
+    {
+      "lawCode": "FGC",
+      "distinctSections": 2296,
+      "versionRows": 2297
+    },
+    {
+      "lawCode": "FIN",
+      "distinctSections": 3318,
+      "versionRows": 3320
+    },
+    {
+      "lawCode": "GOV",
+      "distinctSections": 21691,
+      "versionRows": 21875
+    },
+    {
+      "lawCode": "HNC",
+      "distinctSections": 1333,
+      "versionRows": 1333
+    },
+    {
+      "lawCode": "HSC",
+      "distinctSections": 17630,
+      "versionRows": 17730
+    },
+    {
+      "lawCode": "INS",
+      "distinctSections": 4511,
+      "versionRows": 4516
+    },
+    {
+      "lawCode": "LAB",
+      "distinctSections": 2635,
+      "versionRows": 2641
+    },
+    {
+      "lawCode": "MVC",
+      "distinctSections": 1244,
+      "versionRows": 1246
+    },
+    {
+      "lawCode": "PCC",
+      "distinctSections": 1658,
+      "versionRows": 1667
+    },
+    {
+      "lawCode": "PEN",
+      "distinctSections": 5741,
+      "versionRows": 5763
+    },
+    {
+      "lawCode": "PRC",
+      "distinctSections": 8179,
+      "versionRows": 8188
+    },
+    {
+      "lawCode": "PROB",
+      "distinctSections": 2710,
+      "versionRows": 2711
+    },
+    {
+      "lawCode": "PUC",
+      "distinctSections": 7566,
+      "versionRows": 7568
+    },
+    {
+      "lawCode": "RTC",
+      "distinctSections": 7319,
+      "versionRows": 7366
+    },
+    {
+      "lawCode": "SHC",
+      "distinctSections": 4625,
+      "versionRows": 4632
+    },
+    {
+      "lawCode": "UIC",
+      "distinctSections": 1115,
+      "versionRows": 1120
+    },
+    {
+      "lawCode": "VEH",
+      "distinctSections": 3781,
+      "versionRows": 3824
+    },
+    {
+      "lawCode": "WAT",
+      "distinctSections": 10123,
+      "versionRows": 10139
+    },
+    {
+      "lawCode": "WIC",
+      "distinctSections": 7134,
+      "versionRows": 7225
+    }
+  ],
+  "sourceRequests": [
+    {
+      "lawCode": "BPC",
+      "section": "25662",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25662&lawCode=BPC",
+      "recordIds": [
+        "ca-minor-in-possession"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11350",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11350&lawCode=HSC",
+      "recordIds": [
+        "ca-possession-of-controlled-substance"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11351",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11351&lawCode=HSC",
+      "recordIds": [
+        "ca-possession-with-intent-to-distribute"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11352",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11352&lawCode=HSC",
+      "recordIds": [
+        "ca-distribution-of-controlled-substance"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11364",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11364&lawCode=HSC",
+      "recordIds": [
+        "ca-possession-of-drug-paraphernalia"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11366",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11366&lawCode=HSC",
+      "recordIds": [
+        "ca-maintaining-drug-house"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "11379.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=11379.6&lawCode=HSC",
+      "recordIds": [
+        "ca-manufacturing-controlled-substance"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "HSC",
+      "section": "12677",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12677&lawCode=HSC",
+      "recordIds": [
+        "ca-illegal-fireworks-12677"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "1320",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1320&lawCode=PEN",
+      "recordIds": [
+        "ca-failure-to-appear-1320-a",
+        "ca-failure-to-appear-1320-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "148",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148&lawCode=PEN",
+      "recordIds": [
+        "ca-resisting-arrest"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "148.9",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=148.9&lawCode=PEN",
+      "recordIds": [
+        "ca-false-info-to-police"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "182",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=182&lawCode=PEN",
+      "recordIds": [
+        "ca-conspiracy-182-a1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "186.10",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=186.10&lawCode=PEN",
+      "recordIds": [
+        "ca-money-laundering"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "187",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=187&lawCode=PEN",
+      "recordIds": [
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree",
+        "ca-attempted-murder"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "189",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=189&lawCode=PEN",
+      "recordIds": [
+        "ca-murder-in-the-first-degree"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "191.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=191.5&lawCode=PEN",
+      "recordIds": [
+        "ca-gross-vehicular-manslaughter-191-5-a",
+        "ca-vehicular-manslaughter-191-5-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "192",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=192&lawCode=PEN",
+      "recordIds": [
+        "ca-voluntary-manslaughter",
+        "ca-involuntary-manslaughter",
+        "ca-vehicular-manslaughter-192-c1",
+        "ca-vehicular-manslaughter-192-c2",
+        "ca-vehicular-manslaughter-192-c3"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "211",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=211&lawCode=PEN",
+      "recordIds": [
+        "ca-robbery-in-the-first-degree",
+        "ca-robbery-in-the-second-degree",
+        "ca-attempted-robbery"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "212.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=212.5&lawCode=PEN",
+      "recordIds": [
+        "ca-robbery-in-the-first-degree",
+        "ca-robbery-in-the-second-degree"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "215",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=215&lawCode=PEN",
+      "recordIds": [
+        "ca-carjacking"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "240",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=240&lawCode=PEN",
+      "recordIds": [
+        "ca-assault-240"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "241",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=241&lawCode=PEN",
+      "recordIds": [
+        "ca-assault-on-peace-officer"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243&lawCode=PEN",
+      "recordIds": [
+        "ca-domestic-battery",
+        "ca-battery-243-a"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "243.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=243.4&lawCode=PEN",
+      "recordIds": [
+        "ca-sexual-battery-243-4-a",
+        "ca-sexual-battery-243-4-e1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "245",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=245&lawCode=PEN",
+      "recordIds": [
+        "ca-assault-with-deadly-weapon"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "246.3",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=246.3&lawCode=PEN",
+      "recordIds": [
+        "ca-discharge-of-firearm-in-city"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "25400",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=25400&lawCode=PEN",
+      "recordIds": [
+        "ca-unlawful-carrying-of-weapon"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "261",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261&lawCode=PEN",
+      "recordIds": [
+        "ca-rape-261-a2",
+        "ca-rape-261-a1",
+        "ca-rape-261-a3",
+        "ca-rape-261-a4",
+        "ca-rape-261-a5",
+        "ca-rape-261-a6",
+        "ca-rape-261-a7"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "261.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=261.5&lawCode=PEN",
+      "recordIds": [
+        "ca-unlawful-sexual-intercourse-261-5-b",
+        "ca-unlawful-sexual-intercourse-261-5-c",
+        "ca-unlawful-sexual-intercourse-261-5-d"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "270",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=270&lawCode=PEN",
+      "recordIds": [
+        "ca-failure-to-pay-child-support"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "273.6",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=273.6&lawCode=PEN",
+      "recordIds": [
+        "ca-protective-order-273-6-a"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "288",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=288&lawCode=PEN",
+      "recordIds": [
+        "ca-lewd-act-child-288-a",
+        "ca-lewd-act-child-288-c1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "289",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=289&lawCode=PEN",
+      "recordIds": [
+        "ca-sexual-penetration-289-a1a",
+        "ca-sexual-penetration-289-a1b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "29800",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=29800&lawCode=PEN",
+      "recordIds": [
+        "ca-felon-in-possession-of-firearm"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "30605",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=30605&lawCode=PEN",
+      "recordIds": [
+        "ca-possession-of-prohibited-weapon"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "314",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=314&lawCode=PEN",
+      "recordIds": [
+        "ca-indecent-exposure-314-1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "32",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=32&lawCode=PEN",
+      "recordIds": [
+        "ca-accessory-after-the-fact-32"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "33",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=33&lawCode=PEN",
+      "recordIds": [
+        "ca-accessory-after-the-fact-32"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "374.4",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=374.4&lawCode=PEN",
+      "recordIds": [
+        "ca-littering"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "415",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=415&lawCode=PEN",
+      "recordIds": [
+        "ca-disturbing-the-peace-415-1",
+        "ca-disturbing-the-peace-415-2",
+        "ca-disturbing-the-peace-415-3"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "422",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=422&lawCode=PEN",
+      "recordIds": [
+        "ca-menacing"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "459",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=459&lawCode=PEN",
+      "recordIds": [
+        "ca-burglary-in-the-first-degree",
+        "ca-burglary-in-the-second-degree"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "459.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=459.5&lawCode=PEN",
+      "recordIds": [
+        "ca-shoplifting"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "460",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=460&lawCode=PEN",
+      "recordIds": [
+        "ca-burglary-in-the-first-degree",
+        "ca-burglary-in-the-second-degree"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "470",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=470&lawCode=PEN",
+      "recordIds": [
+        "ca-forgery"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "476a",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=476a&lawCode=PEN",
+      "recordIds": [
+        "ca-check-fraud"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "484",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484&lawCode=PEN",
+      "recordIds": [
+        "ca-petty-theft"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "484g",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=484g&lawCode=PEN",
+      "recordIds": [
+        "ca-credit-card-fraud"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "487",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=487&lawCode=PEN",
+      "recordIds": [
+        "ca-grand-theft-487-a",
+        "ca-grand-theft-agricultural-487-b1a",
+        "ca-grand-theft-firearm-487-d2"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "490.2",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=490.2&lawCode=PEN",
+      "recordIds": [
+        "ca-petty-theft"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "496",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=496&lawCode=PEN",
+      "recordIds": [
+        "ca-theft-by-receiving"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "502",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=502&lawCode=PEN",
+      "recordIds": [
+        "ca-computer-crime-502-c1",
+        "ca-computer-crime-502-c5"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "503",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=503&lawCode=PEN",
+      "recordIds": [
+        "ca-embezzlement"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "530.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=530.5&lawCode=PEN",
+      "recordIds": [
+        "ca-identity-theft-530-5-a",
+        "ca-identity-theft-530-5-c1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "550",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=550&lawCode=PEN",
+      "recordIds": [
+        "ca-insurance-fraud-550-a1",
+        "ca-insurance-fraud-550-b1"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "594",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=594&lawCode=PEN",
+      "recordIds": [
+        "ca-vandalism"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "PEN",
+      "section": "597",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=597&lawCode=PEN",
+      "recordIds": [
+        "ca-animal-cruelty-misdemeanor"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "640",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=640&lawCode=PEN",
+      "recordIds": [
+        "ca-fare-evasion"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "647",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=647&lawCode=PEN",
+      "recordIds": [
+        "ca-public-intoxication",
+        "ca-prostitution-solicitation"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "653f",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=653f&lawCode=PEN",
+      "recordIds": [
+        "ca-criminal-solicitation-653f-a",
+        "ca-criminal-solicitation-653f-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "PEN",
+      "section": "664",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=664&lawCode=PEN",
+      "recordIds": [
+        "ca-attempted-murder",
+        "ca-attempted-robbery"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "12500",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12500&lawCode=VEH",
+      "recordIds": [
+        "ca-driving-without-license"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "16028",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=16028&lawCode=VEH",
+      "recordIds": [
+        "ca-driving-without-insurance"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23103",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23103&lawCode=VEH",
+      "recordIds": [
+        "ca-reckless-driving"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23152",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23152&lawCode=VEH",
+      "recordIds": [
+        "ca-dui-second-offense",
+        "ca-dui-third-offense",
+        "ca-dui-23152-a",
+        "ca-dui-23152-f",
+        "ca-dui-23152-g",
+        "ca-dui-23152-b"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23222",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23222&lawCode=VEH",
+      "recordIds": [
+        "ca-open-container-23222-a",
+        "ca-open-container-23222-b"
+      ],
+      "alreadyRetained": false
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23540",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23540&lawCode=VEH",
+      "recordIds": [
+        "ca-dui-second-offense"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "23546",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=23546&lawCode=VEH",
+      "recordIds": [
+        "ca-dui-third-offense"
+      ],
+      "alreadyRetained": true
+    },
+    {
+      "lawCode": "VEH",
+      "section": "4000",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=4000&lawCode=VEH",
+      "recordIds": [
+        "ca-expired-registration"
+      ],
+      "alreadyRetained": false
+    }
+  ],
+  "groups": [
+    {
+      "id": "PEN:261",
+      "recordIds": [
+        "ca-rape-261-a1",
+        "ca-rape-261-a2",
+        "ca-rape-261-a3",
+        "ca-rape-261-a4",
+        "ca-rape-261-a5",
+        "ca-rape-261-a6",
+        "ca-rape-261-a7"
+      ],
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ]
+    },
+    {
+      "id": "PEN:187+PEN:189+PEN:211+PEN:212.5+PEN:664",
+      "recordIds": [
+        "ca-attempted-murder",
+        "ca-attempted-robbery",
+        "ca-murder-in-the-first-degree",
+        "ca-murder-in-the-second-degree",
+        "ca-robbery-in-the-first-degree",
+        "ca-robbery-in-the-second-degree"
+      ],
+      "primaryKeys": [
+        "PEN:187",
+        "PEN:189",
+        "PEN:211",
+        "PEN:212.5",
+        "PEN:664"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:187",
+        "PEN:189",
+        "PEN:211",
+        "PEN:212.5",
+        "PEN:664"
+      ]
+    },
+    {
+      "id": "PEN:192",
+      "recordIds": [
+        "ca-involuntary-manslaughter",
+        "ca-vehicular-manslaughter-192-c1",
+        "ca-vehicular-manslaughter-192-c2",
+        "ca-vehicular-manslaughter-192-c3",
+        "ca-voluntary-manslaughter"
+      ],
+      "primaryKeys": [
+        "PEN:192"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192"
+      ]
+    },
+    {
+      "id": "PEN:261.5",
+      "recordIds": [
+        "ca-unlawful-sexual-intercourse-261-5-b",
+        "ca-unlawful-sexual-intercourse-261-5-c",
+        "ca-unlawful-sexual-intercourse-261-5-d"
+      ],
+      "primaryKeys": [
+        "PEN:261.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261.5"
+      ]
+    },
+    {
+      "id": "PEN:1320",
+      "recordIds": [
+        "ca-failure-to-appear-1320-a",
+        "ca-failure-to-appear-1320-b"
+      ],
+      "primaryKeys": [
+        "PEN:1320"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:1320"
+      ]
+    },
+    {
+      "id": "PEN:191.5",
+      "recordIds": [
+        "ca-gross-vehicular-manslaughter-191-5-a",
+        "ca-vehicular-manslaughter-191-5-b"
+      ],
+      "primaryKeys": [
+        "PEN:191.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:191.5"
+      ]
+    },
+    {
+      "id": "PEN:243.4",
+      "recordIds": [
+        "ca-sexual-battery-243-4-a",
+        "ca-sexual-battery-243-4-e1"
+      ],
+      "primaryKeys": [
+        "PEN:243.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.4"
+      ]
+    },
+    {
+      "id": "PEN:288",
+      "recordIds": [
+        "ca-lewd-act-child-288-a",
+        "ca-lewd-act-child-288-c1"
+      ],
+      "primaryKeys": [
+        "PEN:288"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288"
+      ]
+    },
+    {
+      "id": "PEN:289",
+      "recordIds": [
+        "ca-sexual-penetration-289-a1a",
+        "ca-sexual-penetration-289-a1b"
+      ],
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ]
+    },
+    {
+      "id": "PEN:487",
+      "recordIds": [
+        "ca-grand-theft-agricultural-487-b1a",
+        "ca-grand-theft-firearm-487-d2"
+      ],
+      "primaryKeys": [
+        "PEN:487"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:487"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:487"
+      ]
+    },
+    {
+      "id": "PEN:502",
+      "recordIds": [
+        "ca-computer-crime-502-c1",
+        "ca-computer-crime-502-c5"
+      ],
+      "primaryKeys": [
+        "PEN:502"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:502"
+      ]
+    },
+    {
+      "id": "PEN:530.5",
+      "recordIds": [
+        "ca-identity-theft-530-5-a",
+        "ca-identity-theft-530-5-c1"
+      ],
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ]
+    },
+    {
+      "id": "PEN:550",
+      "recordIds": [
+        "ca-insurance-fraud-550-a1",
+        "ca-insurance-fraud-550-b1"
+      ],
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ]
+    },
+    {
+      "id": "PEN:647",
+      "recordIds": [
+        "ca-prostitution-solicitation",
+        "ca-public-intoxication"
+      ],
+      "primaryKeys": [
+        "PEN:647"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647"
+      ]
+    },
+    {
+      "id": "PEN:653f",
+      "recordIds": [
+        "ca-criminal-solicitation-653f-a",
+        "ca-criminal-solicitation-653f-b"
+      ],
+      "primaryKeys": [
+        "PEN:653f"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:653f"
+      ]
+    },
+    {
+      "id": "VEH:23152+VEH:23540+VEH:23546",
+      "recordIds": [
+        "ca-dui-second-offense",
+        "ca-dui-third-offense"
+      ],
+      "primaryKeys": [
+        "VEH:23152",
+        "VEH:23540",
+        "VEH:23546"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152",
+        "VEH:23540",
+        "VEH:23546"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152",
+        "VEH:23540",
+        "VEH:23546"
+      ]
+    },
+    {
+      "id": "VEH:23222",
+      "recordIds": [
+        "ca-open-container-23222-a",
+        "ca-open-container-23222-b"
+      ],
+      "primaryKeys": [
+        "VEH:23222"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23222"
+      ]
+    },
+    {
+      "id": "BPC:25662",
+      "recordIds": [
+        "ca-minor-in-possession"
+      ],
+      "primaryKeys": [
+        "BPC:25662"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:25662"
+      ]
+    },
+    {
+      "id": "HSC:11351",
+      "recordIds": [
+        "ca-possession-with-intent-to-distribute"
+      ],
+      "primaryKeys": [
+        "HSC:11351"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11351"
+      ]
+    },
+    {
+      "id": "HSC:11352",
+      "recordIds": [
+        "ca-distribution-of-controlled-substance"
+      ],
+      "primaryKeys": [
+        "HSC:11352"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11352"
+      ]
+    },
+    {
+      "id": "HSC:11366",
+      "recordIds": [
+        "ca-maintaining-drug-house"
+      ],
+      "primaryKeys": [
+        "HSC:11366"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11366"
+      ]
+    },
+    {
+      "id": "HSC:11379.6",
+      "recordIds": [
+        "ca-manufacturing-controlled-substance"
+      ],
+      "primaryKeys": [
+        "HSC:11379.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11379.6"
+      ]
+    },
+    {
+      "id": "HSC:12677",
+      "recordIds": [
+        "ca-illegal-fireworks-12677"
+      ],
+      "primaryKeys": [
+        "HSC:12677"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:12677"
+      ]
+    },
+    {
+      "id": "PEN:182",
+      "recordIds": [
+        "ca-conspiracy-182-a1"
+      ],
+      "primaryKeys": [
+        "PEN:182"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:182"
+      ]
+    },
+    {
+      "id": "PEN:186.10",
+      "recordIds": [
+        "ca-money-laundering"
+      ],
+      "primaryKeys": [
+        "PEN:186.10"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:186.10"
+      ]
+    },
+    {
+      "id": "PEN:215",
+      "recordIds": [
+        "ca-carjacking"
+      ],
+      "primaryKeys": [
+        "PEN:215"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:215"
+      ]
+    },
+    {
+      "id": "PEN:241",
+      "recordIds": [
+        "ca-assault-on-peace-officer"
+      ],
+      "primaryKeys": [
+        "PEN:241"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:241"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:241"
+      ]
+    },
+    {
+      "id": "PEN:246.3",
+      "recordIds": [
+        "ca-discharge-of-firearm-in-city"
+      ],
+      "primaryKeys": [
+        "PEN:246.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:246.3"
+      ]
+    },
+    {
+      "id": "PEN:25400",
+      "recordIds": [
+        "ca-unlawful-carrying-of-weapon"
+      ],
+      "primaryKeys": [
+        "PEN:25400"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25400"
+      ]
+    },
+    {
+      "id": "PEN:270",
+      "recordIds": [
+        "ca-failure-to-pay-child-support"
+      ],
+      "primaryKeys": [
+        "PEN:270"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:270"
+      ]
+    },
+    {
+      "id": "PEN:29800",
+      "recordIds": [
+        "ca-felon-in-possession-of-firearm"
+      ],
+      "primaryKeys": [
+        "PEN:29800"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29800"
+      ]
+    },
+    {
+      "id": "PEN:30605",
+      "recordIds": [
+        "ca-possession-of-prohibited-weapon"
+      ],
+      "primaryKeys": [
+        "PEN:30605"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:30605"
+      ]
+    },
+    {
+      "id": "PEN:314",
+      "recordIds": [
+        "ca-indecent-exposure-314-1"
+      ],
+      "primaryKeys": [
+        "PEN:314"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:314"
+      ]
+    },
+    {
+      "id": "PEN:32+PEN:33",
+      "recordIds": [
+        "ca-accessory-after-the-fact-32"
+      ],
+      "primaryKeys": [
+        "PEN:32",
+        "PEN:33"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:32",
+        "PEN:33"
+      ]
+    },
+    {
+      "id": "PEN:374.4",
+      "recordIds": [
+        "ca-littering"
+      ],
+      "primaryKeys": [
+        "PEN:374.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:374.4"
+      ]
+    },
+    {
+      "id": "PEN:459+PEN:460",
+      "recordIds": [
+        "ca-burglary-in-the-first-degree"
+      ],
+      "primaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ]
+    },
+    {
+      "id": "PEN:470",
+      "recordIds": [
+        "ca-forgery"
+      ],
+      "primaryKeys": [
+        "PEN:470"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:470"
+      ]
+    },
+    {
+      "id": "PEN:476a",
+      "recordIds": [
+        "ca-check-fraud"
+      ],
+      "primaryKeys": [
+        "PEN:476a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:476a"
+      ]
+    },
+    {
+      "id": "PEN:484g",
+      "recordIds": [
+        "ca-credit-card-fraud"
+      ],
+      "primaryKeys": [
+        "PEN:484g"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:484g"
+      ]
+    },
+    {
+      "id": "PEN:503",
+      "recordIds": [
+        "ca-embezzlement"
+      ],
+      "primaryKeys": [
+        "PEN:503"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:503"
+      ]
+    },
+    {
+      "id": "PEN:597",
+      "recordIds": [
+        "ca-animal-cruelty-misdemeanor"
+      ],
+      "primaryKeys": [
+        "PEN:597"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:597"
+      ]
+    },
+    {
+      "id": "PEN:640",
+      "recordIds": [
+        "ca-fare-evasion"
+      ],
+      "primaryKeys": [
+        "PEN:640"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:640"
+      ]
+    },
+    {
+      "id": "VEH:16028",
+      "recordIds": [
+        "ca-driving-without-insurance"
+      ],
+      "primaryKeys": [
+        "VEH:16028"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:16028"
+      ]
+    },
+    {
+      "id": "VEH:4000",
+      "recordIds": [
+        "ca-expired-registration"
+      ],
+      "primaryKeys": [
+        "VEH:4000"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:4000"
+      ]
+    }
+  ],
+  "records": [
+    {
+      "id": "ca-murder-in-the-first-degree",
+      "title": "Murder — First Degree",
+      "citation": "Cal. Penal Code §§ 187(a), 189",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:187",
+        "PEN:189"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:187",
+        "PEN:189"
+      ],
+      "catalogSha256": "c5333028d7c507f7798aadb8c76b7b338fa3743dad673adc15d8a29c0b990fdc",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-murder-in-the-second-degree",
+      "title": "Murder — Second Degree",
+      "citation": "Cal. Penal Code § 187(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:187"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:187"
+      ],
+      "catalogSha256": "bca66ae9714ca45f1a85b9de075f3a14591d7fd396303eca9703ee487eb43061",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-voluntary-manslaughter",
+      "title": "Voluntary Manslaughter",
+      "citation": "Cal. Penal Code § 192(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:192"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192"
+      ],
+      "catalogSha256": "9dd54a954b9c2e199ea099a0509618940542f91806bb59435a609ebba0180af3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-involuntary-manslaughter",
+      "title": "Involuntary Manslaughter",
+      "citation": "Cal. Penal Code § 192(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:192"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192"
+      ],
+      "catalogSha256": "c217eaff5428626372e92290f99dda1e7dcfd15b270a79570a9dae570bb7b75f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-assault-in-the-second-degree",
+      "title": "Battery",
+      "citation": "Cal. Penal Code §§ 242, 243(a)",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:242",
+        "PEN:243"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:242",
+        "PEN:243"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:242",
+        "PEN:243"
+      ],
+      "catalogSha256": "d3b8e3ff4df747c2a6ffdcff28a6a6e5120feca045ac77d90685098fd07ffe31",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-assault-in-the-third-degree",
+      "title": "Assault",
+      "citation": "Cal. Penal Code § 240",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:240"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:240"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:240"
+      ],
+      "catalogSha256": "569d8a90688f430eca7536624d2e7fb3a6966b9e7b983582d2378cc5a343e090",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-assault-with-deadly-weapon",
+      "title": "Assault with a Deadly Weapon",
+      "citation": "Cal. Penal Code § 245(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:245"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:245"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:245"
+      ],
+      "catalogSha256": "8be4a48449baa653f76ff00636d45ee676532d466ec6db5f9efa78449a26b061",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-assault-on-peace-officer",
+      "title": "Assault on a Peace Officer",
+      "citation": "Cal. Penal Code § 241(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:241"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:241"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:241"
+      ],
+      "catalogSha256": "be333cf5788e8324c93c6429e6a110129e914ee8dcd479a1deb858395c3068cf",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-menacing",
+      "title": "Criminal Threats",
+      "citation": "Cal. Penal Code § 422",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:422"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:422"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:422"
+      ],
+      "catalogSha256": "83ba936b765903bb8786ca7b9284cf4d3904d75b2925d2c6b3a7e29f67c530df",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-in-the-first-degree",
+      "title": "Rape",
+      "citation": "Cal. Penal Code § 261",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "4b3f422031c6ea38641b65a794ee3b8b3ebb468cd3a88768a3f0497c1d164aad",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-sexual-assault-in-the-second-degree",
+      "title": "Sexual Penetration by a Foreign Object",
+      "citation": "Cal. Penal Code § 289",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "6540c46ee78219b1cd69a4375f4ca25b742144e787284b345050933e5ac0dbd3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-sexual-assault-in-the-third-degree",
+      "title": "Sexual Battery",
+      "citation": "Cal. Penal Code § 243.4",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:243.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.4"
+      ],
+      "catalogSha256": "6b6963a85d43a1d77d42d4099a5ef2922b4b37acecaa29decadc653288e2ec83",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-statutory-rape",
+      "title": "Unlawful Sexual Intercourse with a Minor",
+      "citation": "Cal. Penal Code § 261.5",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:261.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261.5"
+      ],
+      "catalogSha256": "191b2c1d2a7ce1b13714a01e9e7b7a9ceb88d95327ee11974a4043937fb7a1b2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-child-sexual-abuse",
+      "title": "Lewd or Lascivious Act with a Child",
+      "citation": "Cal. Penal Code § 288",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:288"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288"
+      ],
+      "catalogSha256": "03f5eed0ae3a650127aaa16f0d27f457cdfe8312b5569990708bd0f5f6f67ebd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-grand-theft-in-the-first-degree",
+      "title": "Grand Theft",
+      "citation": "Cal. Penal Code § 487",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:487"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:487"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:487"
+      ],
+      "catalogSha256": "4e7c9009adfa2b47ceac0bff9a098695983aac883091e88f3ee02458b3704c9e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-petty-theft",
+      "title": "Petty Theft",
+      "citation": "Cal. Penal Code §§ 484, 490.2",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:484",
+        "PEN:490.2"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:484",
+        "PEN:490.2"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:484",
+        "PEN:490.2"
+      ],
+      "catalogSha256": "7e4689dfec6177bd1e9244532045466bea34a8b75132f5f5599246dc5b94b2b9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-theft-by-receiving",
+      "title": "Receiving Stolen Property",
+      "citation": "Cal. Penal Code § 496",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:496"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:496"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:496"
+      ],
+      "catalogSha256": "c95a3dc07899a012486a8c4fa869f0cca90cb2132ae5198c6ba37c166c504138",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-identity-theft",
+      "title": "Identity Theft",
+      "citation": "Cal. Penal Code § 530.5",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ],
+      "catalogSha256": "87195a8a8b7ca7dd56d7da9ee69ed955def6730df849ea746e2f6bb63735eaca",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-credit-card-fraud",
+      "title": "Fraudulent Use of an Access Card",
+      "citation": "Cal. Penal Code § 484g",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:484g"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:484g"
+      ],
+      "catalogSha256": "a31e7ec8351f0fed26703c1d497a86fc2031a38bce85305fd685b049a2fa544b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-embezzlement",
+      "title": "Embezzlement",
+      "citation": "Cal. Penal Code § 503",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:503"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:503"
+      ],
+      "catalogSha256": "907e4258f6a033643a9a93dc3d6d5d24008cba00f9c9c8c1e4007a0dd36a96b1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-shoplifting",
+      "title": "Shoplifting",
+      "citation": "Cal. Penal Code § 459.5",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:459.5"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:459.5"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:459.5"
+      ],
+      "catalogSha256": "d6c2e07e4f75b40892392563fda502f1dda008b7d781a7fe9f566cdaa2083b8e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-burglary-in-the-first-degree",
+      "title": "First-Degree Burglary",
+      "citation": "Cal. Penal Code §§ 459, 460(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "catalogSha256": "eca0ccbc4a5953ffa4c77ea4dba208aae9ba4a1dffec0e863da0d5dfc3b11251",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-burglary-in-the-second-degree",
+      "title": "Second-Degree Burglary",
+      "citation": "Cal. Penal Code §§ 459, 460(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:459",
+        "PEN:460"
+      ],
+      "catalogSha256": "eb31f8863ba5284b24c00e55cc9371dcf82e2fa573ed5f3d020f6c3fbf20b8e2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-robbery-in-the-first-degree",
+      "title": "First-Degree Robbery",
+      "citation": "Cal. Penal Code § 212.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:211",
+        "PEN:212.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:211",
+        "PEN:212.5"
+      ],
+      "catalogSha256": "3117d786ba63d545b5ab3f7d7398454dba04fd5027f3526c670a62e056a47d1b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-robbery-in-the-second-degree",
+      "title": "Second-Degree Robbery",
+      "citation": "Cal. Penal Code § 212.5(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:211",
+        "PEN:212.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:211",
+        "PEN:212.5"
+      ],
+      "catalogSha256": "c0a0faab26de2503d2ad1d9c83e8b4e244ea812c07715a01db3c890180e8e14f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-carjacking",
+      "title": "Carjacking",
+      "citation": "Cal. Penal Code § 215",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:215"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:215"
+      ],
+      "catalogSha256": "7a3bc922cc02b8a79677ddc9fb1c94d04e187afeadcfe68f763930bf3047956f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-possession-of-controlled-substance",
+      "title": "Possession of a Controlled Substance",
+      "citation": "Cal. Health & Safety Code § 11350",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11350"
+      ],
+      "retainedPrimaryKeys": [
+        "HSC:11350"
+      ],
+      "acquiredPrimaryKeys": [
+        "HSC:11350"
+      ],
+      "catalogSha256": "b22a328f746a683d1d8b3b3e01e46bb6abbb01f90a4d4b5491d0acf1e609d570",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-possession-with-intent-to-distribute",
+      "title": "Possession for Sale of a Controlled Substance",
+      "citation": "Cal. Health & Safety Code § 11351",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "HSC:11351"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11351"
+      ],
+      "catalogSha256": "88466f6f876617a074d55ceadc257744ebe519e3d1e4b350a00323d3f503582b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-distribution-of-controlled-substance",
+      "title": "Sale or Transportation of a Controlled Substance",
+      "citation": "Cal. Health & Safety Code § 11352",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "HSC:11352"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11352"
+      ],
+      "catalogSha256": "27834afdc355ef02b6ae1926f81b832901677e2875ac4955a54d679943222bc4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-manufacturing-controlled-substance",
+      "title": "Manufacturing a Controlled Substance",
+      "citation": "Cal. Health & Safety Code § 11379.6",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "HSC:11379.6"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11379.6"
+      ],
+      "catalogSha256": "83601266b7ee1f97398086e66f21f2a42b033edd00efae29091e615ca41410d2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-possession-of-drug-paraphernalia",
+      "title": "Possession of Drug Paraphernalia",
+      "citation": "Cal. Health & Safety Code § 11364",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "HSC:11364"
+      ],
+      "retainedPrimaryKeys": [
+        "HSC:11364"
+      ],
+      "acquiredPrimaryKeys": [
+        "HSC:11364"
+      ],
+      "catalogSha256": "c17bdfe92c45316265abadb10a0c42dbe8af0b1c270244a84c79d285c7b65fcd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-maintaining-drug-house",
+      "title": "Maintaining a Place for Selling or Using Controlled Substances",
+      "citation": "Cal. Health & Safety Code § 11366",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "HSC:11366"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:11366"
+      ],
+      "catalogSha256": "95dfb5c5b58473ef5c4dca852c04a0df97f173aefe7d08f00e84c11a7f7d1c3e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-unlawful-carrying-of-weapon",
+      "title": "Carrying a Concealed Firearm",
+      "citation": "Cal. Penal Code § 25400",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:25400"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:25400"
+      ],
+      "catalogSha256": "abe3e61bc5460cf6d7751bf4f996559bcbec6c944ea07b4da1bf8f24bc4574aa",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-felon-in-possession-of-firearm",
+      "title": "Possession of a Firearm by a Person Prohibited by Prior Conviction",
+      "citation": "Cal. Penal Code § 29800",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:29800"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:29800"
+      ],
+      "catalogSha256": "eff54efa78b3830c0fabbdc8223f0ad8da02fd0dc610b75114a83446a4b65ca4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-discharge-of-firearm-in-city",
+      "title": "Negligent Discharge of a Firearm",
+      "citation": "Cal. Penal Code § 246.3",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:246.3"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:246.3"
+      ],
+      "catalogSha256": "03b60019d7e5da5565d96aa030f445341b7d29461abadde88216d6b5d0d899e8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-possession-of-prohibited-weapon",
+      "title": "Possession of an Assault Weapon",
+      "citation": "Cal. Penal Code § 30605",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:30605"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:30605"
+      ],
+      "catalogSha256": "40d14224f90b51c5b06f412c8d79f3457f5b37bfa9df8796ab46dbc205d17ac4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-check-fraud",
+      "title": "Making, Drawing, or Uttering a Check with Insufficient Funds",
+      "citation": "Cal. Penal Code § 476a",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:476a"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:476a"
+      ],
+      "catalogSha256": "a5d8b8078ec7d734219bfa16064931d34dd69b0e159f8ba285c401040d44b0a0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-insurance-fraud",
+      "title": "Insurance Fraud",
+      "citation": "Cal. Penal Code § 550",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "840de206afa351c7c186f289a0c1f6c9413ea63c5738938d73cceb6bb7484da8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-forgery",
+      "title": "Forgery",
+      "citation": "Cal. Penal Code § 470",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:470"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:470"
+      ],
+      "catalogSha256": "2748422e02b8837c9660977834379bf47fa482fde3eb762babadc2b58563f08d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-computer-fraud",
+      "title": "Unauthorized Computer Access",
+      "citation": "Cal. Penal Code § 502",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:502"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:502"
+      ],
+      "catalogSha256": "b4373c1ed3169922337b196995bd1951cb7f154c9b00a723a06d03535ab84903",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-public-intoxication",
+      "title": "Public Intoxication",
+      "citation": "Cal. Penal Code § 647(f)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:647"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647"
+      ],
+      "catalogSha256": "9b5c2161c43f1b29d2fb14e257b2997e2c853c30d659c397abc0cb8c7b5b0c3d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-disturbing-the-peace",
+      "title": "Disturbing the Peace",
+      "citation": "Cal. Penal Code § 415",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:415"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:415"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:415"
+      ],
+      "catalogSha256": "2cda003f35624be73b425aa722c3e11fc2e6bd8bc195a818280cbe8f9cd06291",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-vandalism",
+      "title": "Vandalism",
+      "citation": "Cal. Penal Code § 594",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:594"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:594"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:594"
+      ],
+      "catalogSha256": "db49aa7755a6d6752b3891a03d4b41804e7e51e6631a8c4d8ed9b12abbd92e25",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-dui-first-offense",
+      "title": "Driving Under the Influence — First Offense",
+      "citation": "Cal. Vehicle Code § 23152",
+      "lawCode": "VEH",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "VEH:23152"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "catalogSha256": "7c7a920d1ce84b862107269b75749f080f00961e667c25b79f11ccd8d82a4046",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-dui-second-offense",
+      "title": "Driving Under the Influence — Second Offense",
+      "citation": "Cal. Vehicle Code §§ 23152, 23540",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "VEH:23152",
+        "VEH:23540"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152",
+        "VEH:23540"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152",
+        "VEH:23540"
+      ],
+      "catalogSha256": "536e8035bebfcfc8114ff055e0ba4ef74e73e90dc59507fdce7361789b81bc46",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-dui-third-offense",
+      "title": "Driving Under the Influence — Third Offense",
+      "citation": "Cal. Vehicle Code §§ 23152, 23546",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "VEH:23152",
+        "VEH:23546"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152",
+        "VEH:23546"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152",
+        "VEH:23546"
+      ],
+      "catalogSha256": "70bf4d4c5f72667cde90ac44aa70de8f09282484394306c594e758b2e9af7ad2",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-reckless-driving",
+      "title": "Reckless Driving",
+      "citation": "Cal. Vehicle Code § 23103",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23103"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23103"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23103"
+      ],
+      "catalogSha256": "0233d5b2e4c7d372f5f00a47ba65353c0680d3348c964e724ea8c50b3c09d46b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-driving-without-license",
+      "title": "Driving Without a Valid License",
+      "citation": "Cal. Vehicle Code § 12500(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:12500"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:12500"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:12500"
+      ],
+      "catalogSha256": "d580e75f3462d4d0116a8474da6ca98246496db846fd77808f2a93691ed183ed",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-domestic-battery",
+      "title": "Battery Against a Spouse, Cohabitant, or Dating Partner",
+      "citation": "Cal. Penal Code § 243(e)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:243"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:243"
+      ],
+      "catalogSha256": "695f8e97b57ca12b44d071d168e999a684606801e186adce040999cd4975d604",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-fare-evasion",
+      "title": "Evasion of Payment on Public Transit",
+      "citation": "Cal. Penal Code § 640(c)(1); penalty cross-reference: § 640(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:640"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:640"
+      ],
+      "catalogSha256": "29d9899417c30b8d1e748a87ad8c773338178fa038ccde16167618ade224b3be",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-prostitution-solicitation",
+      "title": "Soliciting or Agreeing to Engage in Prostitution",
+      "citation": "Cal. Penal Code § 647(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:647"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:647"
+      ],
+      "catalogSha256": "81c941ec1a974ba63309f964814de28b809c9fe9b6837d2b5bd6cb5a32d3d033",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-failure-to-appear",
+      "title": "Failure to Appear After Release",
+      "citation": "Cal. Penal Code § 1320",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:1320"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:1320"
+      ],
+      "catalogSha256": "25187b0885d57aaba191330da5bc094432d568b05c3a60caef7ac87276d370be",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-resisting-arrest",
+      "title": "Resisting, Delaying, or Obstructing an Officer",
+      "citation": "Cal. Penal Code § 148(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:148"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:148"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:148"
+      ],
+      "catalogSha256": "584e350cf0f15500ea24ccd8b03f6ee0e02000df023c84b32f7039cf4da091d3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-protective-order-violation",
+      "title": "Violation of a Protective Order",
+      "citation": "Cal. Penal Code § 273.6",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:273.6"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "catalogSha256": "47730bd158f0ae39e8de67ba1aeff445e3c622d797c79a217cd8093ea9eb6753",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-open-container",
+      "title": "Possession of an Open Container in a Motor Vehicle",
+      "citation": "Cal. Vehicle Code § 23222",
+      "lawCode": "VEH",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "VEH:23222"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23222"
+      ],
+      "catalogSha256": "6390ea21afd7087d13c39043583d4dd3ad2f22316a5a4d8b6fb8b5e7a8e9b1e5",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-minor-in-possession",
+      "title": "Minor in Possession of Alcohol",
+      "citation": "Cal. Business & Professions Code § 25662",
+      "lawCode": "BPC",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "BPC:25662"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "BPC:25662"
+      ],
+      "catalogSha256": "07be1dd4b5ab9539900b0062536d0cb0ffc1f2190f0a119348eb659219618768",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-false-info-to-police",
+      "title": "False Identification to a Peace Officer",
+      "citation": "Cal. Penal Code § 148.9",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:148.9"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:148.9"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:148.9"
+      ],
+      "catalogSha256": "57a37f54de411f207a69fc04f286e6b3e6f172f3f4774f0398af3e052791ef28",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-driving-without-insurance",
+      "title": "Failure to Maintain Evidence of Financial Responsibility",
+      "citation": "Cal. Vehicle Code § 16028",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "VEH:16028"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:16028"
+      ],
+      "catalogSha256": "1968335448af7e52a7a0de21586151305afed415be90edef9c7898d809a2efe6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-expired-registration",
+      "title": "Operating an Unregistered Vehicle",
+      "citation": "Cal. Vehicle Code § 4000(a)(1)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "VEH:4000"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:4000"
+      ],
+      "catalogSha256": "c04ac07299f578848fb42d54f341223a0bc1febf58e83cf076a8f6efab06f80e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-failure-to-pay-child-support",
+      "title": "Failure to Provide Child Support",
+      "citation": "Cal. Penal Code § 270",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:270"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:270"
+      ],
+      "catalogSha256": "723bf1521dd662a26c964f4d81996f050abca9355dc17471575983cca911a204",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-indecent-exposure",
+      "title": "Indecent Exposure",
+      "citation": "Cal. Penal Code § 314",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:314"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:314"
+      ],
+      "catalogSha256": "25f1776f410b3f3da887b9bc280739a66f6536f112a12bc93fe059fd0c304739",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-animal-cruelty-misdemeanor",
+      "title": "Animal Cruelty",
+      "citation": "Cal. Penal Code § 597(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:597"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:597"
+      ],
+      "catalogSha256": "f2337b95b82e0aa558667c6c4dcf7af0756a88ce3674593f032b222acf243e27",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-littering",
+      "title": "Littering",
+      "citation": "Cal. Penal Code § 374.4",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:374.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:374.4"
+      ],
+      "catalogSha256": "4b9d9d19c9b593cb982e68a92ba765547fe0f0ed856ba3f42d427ad9a334bb2c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-illegal-fireworks",
+      "title": "Unlawful Fireworks Possession or Discharge",
+      "citation": "Cal. Health & Safety Code § 12677",
+      "lawCode": "HSC",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "HSC:12677"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:12677"
+      ],
+      "catalogSha256": "09e26e84b11bb47056c10ce3bbfe090601f7007e99b51c64b360b3a6da0a9a99",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-conspiracy",
+      "title": "Criminal Conspiracy",
+      "citation": "Cal. Penal Code § 182",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:182"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:182"
+      ],
+      "catalogSha256": "f3767fe9fb3e4d93a84c0a71f4721afdc084c60b8881cb3275dbaaffc92a1d62",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-accessory-after-the-fact",
+      "title": "Accessory After the Fact",
+      "citation": "Cal. Penal Code § 32",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:32"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:32"
+      ],
+      "catalogSha256": "d8065dc57794174226628cc6dd5ba0d69f6472ccff265f71e0e538f77e41c70e",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-attempted-murder",
+      "title": "Attempted Murder",
+      "citation": "Cal. Penal Code §§ 664, 187",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:187",
+        "PEN:664"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:187",
+        "PEN:664"
+      ],
+      "catalogSha256": "dce3ea593ba60fd2d13327297e9831ff47f6bcd789c85829ad12a1e47eb84483",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-attempted-robbery",
+      "title": "Attempted Robbery",
+      "citation": "Cal. Penal Code §§ 664, 211",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:211",
+        "PEN:664"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:211",
+        "PEN:664"
+      ],
+      "catalogSha256": "387f8ce136589898c7e8c9b1c1677d8c3068969cd03ac77f3a3e39c9219da5aa",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-criminal-solicitation",
+      "title": "Solicitation to Commit a Crime",
+      "citation": "Cal. Penal Code § 653f",
+      "lawCode": "PEN",
+      "selectable": false,
+      "status": "withheld_canonical_label",
+      "primaryKeys": [
+        "PEN:653f"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:653f"
+      ],
+      "catalogSha256": "9aa010347a29a837608910883c8db385aa5c665a3879443e9c8fdda3aff0b857",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-money-laundering",
+      "title": "Money Laundering",
+      "citation": "Cal. Penal Code § 186.10",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:186.10"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:186.10"
+      ],
+      "catalogSha256": "023638ba34c1a9ed66f428c7d5a4af56ed3c3be965278ad805a3eb2e9852ceaf",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-vehicular-manslaughter-192-c1",
+      "title": "Vehicular Manslaughter With Gross Negligence",
+      "citation": "Cal. Penal Code § 192(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:192"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192"
+      ],
+      "catalogSha256": "9dcf221b45f62dc7926d78d44ed3b74518e8a1873a87198bf518879e8aff0b69",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-vehicular-manslaughter-192-c2",
+      "title": "Vehicular Manslaughter Without Gross Negligence",
+      "citation": "Cal. Penal Code § 192(c)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:192"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192"
+      ],
+      "catalogSha256": "f6cada39f3fda006044390b91779767bc0ff0a28c7bcdada5ecf82319c7d2db6",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-vehicular-manslaughter-192-c3",
+      "title": "Vehicular Manslaughter for Financial Gain",
+      "citation": "Cal. Penal Code § 192(c)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:192"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:192"
+      ],
+      "catalogSha256": "75fabc63a6bd48cf1c2b023b0e986b28dabbaa1807e1766d3c09b6a25ad93a61",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-gross-vehicular-manslaughter-191-5-a",
+      "title": "Gross Vehicular Manslaughter While Intoxicated",
+      "citation": "Cal. Penal Code § 191.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:191.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:191.5"
+      ],
+      "catalogSha256": "6f833ca50d77b739829f05fe86e1bff72cc47ff32226963de36cf6bf46dcba15",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-vehicular-manslaughter-191-5-b",
+      "title": "Vehicular Manslaughter While Intoxicated",
+      "citation": "Cal. Penal Code § 191.5(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:191.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:191.5"
+      ],
+      "catalogSha256": "f469ad9fe9638e9741d2ab8a597a0e3072c58165799a11471f251f9214e05830",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-assault-240",
+      "title": "Assault",
+      "citation": "Cal. Penal Code § 240",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:240"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:240"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:240"
+      ],
+      "catalogSha256": "bcfeb738196eeee7846f2c0c9a7d4438db43b91b645b339bdf8bd1f4139bd4a9",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-battery-243-a",
+      "title": "Battery",
+      "citation": "Cal. Penal Code § 243(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:243"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:243"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:243"
+      ],
+      "catalogSha256": "d583c1ddecbba0728e59e2407e435ca6e994fd68c5f1cb321e2686618ac2ecc8",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-261-a2",
+      "title": "Rape by Force, Violence, Duress, or Threat",
+      "citation": "Cal. Penal Code § 261(a)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "56c2784a4d89806e745945da884c7134664a80610fb45f76dadf09d3170c0274",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-261-a1",
+      "title": "Rape of a Person Unable to Consent Due to a Disability",
+      "citation": "Cal. Penal Code § 261(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "c6eeae412d9301705ec42cde2c31bab10594bb93c7af6cb7797a91cf628f12cb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-261-a3",
+      "title": "Rape of a Person Unable to Resist Due to Intoxication",
+      "citation": "Cal. Penal Code § 261(a)(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "a67a48721ea9d596ce1f6b8446c68450c840b9b97bec1c71d6d66e5071f9857f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-261-a4",
+      "title": "Rape of a Person Unconscious of the Nature of the Act",
+      "citation": "Cal. Penal Code § 261(a)(4)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "ce9ba2def39cb4a8583cfebf6c9ddae37ba5d646703a694e39dbae40cd4d88cf",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-261-a5",
+      "title": "Rape by Mistaken Identity",
+      "citation": "Cal. Penal Code § 261(a)(5)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "3aaea959def2834b577179ffb25e88cc3447c0e6083cf3612b750d1b4ffdf90c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-261-a6",
+      "title": "Rape by Threat of Future Retaliation",
+      "citation": "Cal. Penal Code § 261(a)(6)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "f0b9c666537ee003328616db155498781758e3c56c80482d9780e41bc7237f35",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-rape-261-a7",
+      "title": "Rape by Threat of Official Authority",
+      "citation": "Cal. Penal Code § 261(a)(7)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261"
+      ],
+      "catalogSha256": "6ba423b6b93421a275dac03cc96025ce7bc6d534b18dbb6d5f6d10a6e4024815",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-sexual-penetration-289-a1a",
+      "title": "Sexual Penetration by Force or Fear",
+      "citation": "Cal. Penal Code § 289(a)(1)(A)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "df3e886aae1c09a8b5790a904fe640125d5a341780f1304153fd1110802b91db",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-sexual-penetration-289-a1b",
+      "title": "Sexual Penetration of a Child Under 14 by Force or Fear",
+      "citation": "Cal. Penal Code § 289(a)(1)(B)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:289"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:289"
+      ],
+      "catalogSha256": "0633637030fa05c9d0969790191b3a1fb9f4cc6e0ecfed356c27e2bbd4ad231d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-sexual-battery-243-4-a",
+      "title": "Sexual Battery by Restraint",
+      "citation": "Cal. Penal Code § 243.4(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:243.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.4"
+      ],
+      "catalogSha256": "35216cc818c15d193ae704b1704769d7af9bf667cc6d5c7870d4a4e79950bf35",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-sexual-battery-243-4-e1",
+      "title": "Misdemeanor Sexual Battery",
+      "citation": "Cal. Penal Code § 243.4(e)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:243.4"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:243.4"
+      ],
+      "catalogSha256": "d35a9798dd9d0b8133362d0b870f44862cd5bd4a4ec87878853037e54bad8b48",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-unlawful-sexual-intercourse-261-5-b",
+      "title": "Unlawful Sexual Intercourse With a Minor",
+      "citation": "Cal. Penal Code § 261.5(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261.5"
+      ],
+      "catalogSha256": "8c011138780be23836e5bd7c68e10258538d7743f799dfc6722c4fae858eb561",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-unlawful-sexual-intercourse-261-5-c",
+      "title": "Unlawful Sexual Intercourse With a Minor, Age-Difference Variant",
+      "citation": "Cal. Penal Code § 261.5(c)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261.5"
+      ],
+      "catalogSha256": "d6d6e86ff1f1a8c3d2ed73ec29fb6cf6c056e268a0ca70a22c9d29090913b42f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-unlawful-sexual-intercourse-261-5-d",
+      "title": "Unlawful Sexual Intercourse With a Minor, Felony Variant",
+      "citation": "Cal. Penal Code § 261.5(d)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:261.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:261.5"
+      ],
+      "catalogSha256": "4eba6f7943aa5a4831ebd59f7f62617a1349dffbc23de449f83214b68601f6b0",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-lewd-act-child-288-a",
+      "title": "Lewd or Lascivious Act on a Child Under 14",
+      "citation": "Cal. Penal Code § 288(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:288"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288"
+      ],
+      "catalogSha256": "6923911b2a0c718f4673136130830e15d245b70038eefe1b0bd87b760dcc80ef",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-lewd-act-child-288-c1",
+      "title": "Lewd or Lascivious Act on a Child Age 14 or 15",
+      "citation": "Cal. Penal Code § 288(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:288"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:288"
+      ],
+      "catalogSha256": "2014eccc669283bcb43459b48f44240a824db87419de2c6816a1a93ac68a4056",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-grand-theft-487-a",
+      "title": "Grand Theft by Value",
+      "citation": "Cal. Penal Code § 487(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:487"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:487"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:487"
+      ],
+      "catalogSha256": "e330790dfe264a9710e4bd2f7d9a0b1b275982ad2a634ead5e3f078e152ec2bb",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-grand-theft-agricultural-487-b1a",
+      "title": "Grand Theft of Specified Agricultural Crops",
+      "citation": "Cal. Penal Code § 487(b)(1)(A)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:487"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:487"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:487"
+      ],
+      "catalogSha256": "49de3f6c42a5f450e23f21a48bccdda0c6460217866a9d3cae8da2b460b71876",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-grand-theft-firearm-487-d2",
+      "title": "Grand Theft of a Firearm",
+      "citation": "Cal. Penal Code § 487(d)(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:487"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:487"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:487"
+      ],
+      "catalogSha256": "259303c6d32b2b1387c7ed5cfba0a9f15bb2591d3d44d277e199a7dbca7af1b1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-identity-theft-530-5-a",
+      "title": "Identity Theft",
+      "citation": "Cal. Penal Code § 530.5(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ],
+      "catalogSha256": "657366e33ed445d86b00afa85a6505ff3c95b8566a6d0b7b6ff978681a22b42a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-identity-theft-530-5-c1",
+      "title": "Acquiring Personal Identifying Information With Intent to Defraud",
+      "citation": "Cal. Penal Code § 530.5(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:530.5"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:530.5"
+      ],
+      "catalogSha256": "92aee95ae85c2f554aff837ba3b88942f6fca6b548c867053ca73f08954bfe72",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-insurance-fraud-550-a1",
+      "title": "Insurance Fraud by False Claim",
+      "citation": "Cal. Penal Code § 550(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "3b459c5e4baef9d599113ccbd9b9fd251544460427cb49dc6516f45600889d92",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-insurance-fraud-550-b1",
+      "title": "Insurance Fraud by False Statement",
+      "citation": "Cal. Penal Code § 550(b)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:550"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:550"
+      ],
+      "catalogSha256": "07025e083115eabfe256d4ddab1d518f3693b76f7867a680265deb3af7f8e529",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-computer-crime-502-c1",
+      "title": "Unauthorized Computer Access to Defraud or Obtain Property",
+      "citation": "Cal. Penal Code § 502(c)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:502"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:502"
+      ],
+      "catalogSha256": "58f9bc11e0162bd2e368b98481ff089c5605236431cb791503258157fd1fca1d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-computer-crime-502-c5",
+      "title": "Unauthorized Computer Damage or Disruption",
+      "citation": "Cal. Penal Code § 502(c)(5)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:502"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:502"
+      ],
+      "catalogSha256": "e97722bdee0e60c4ed24eb5cb3f9f4d287fd24408a591a565a2d40e2ad8a90dd",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-disturbing-the-peace-415-1",
+      "title": "Disturbing the Peace by Fighting",
+      "citation": "Cal. Penal Code § 415(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:415"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:415"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:415"
+      ],
+      "catalogSha256": "4054c4566d2950507d37113d76c60d144a79179f444d42c3cd0c388d64aaba03",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-disturbing-the-peace-415-2",
+      "title": "Disturbing the Peace by Loud or Unreasonable Noise",
+      "citation": "Cal. Penal Code § 415(2)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:415"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:415"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:415"
+      ],
+      "catalogSha256": "d94f49ef7756a1d67e414a5c8672949c2963652949370474102e49831cb80648",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-disturbing-the-peace-415-3",
+      "title": "Disturbing the Peace by Offensive Words",
+      "citation": "Cal. Penal Code § 415(3)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:415"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:415"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:415"
+      ],
+      "catalogSha256": "d5b3d41b98080a64ea1d2c2c5e670a13a3cf4ba34e0f934cfcfebad7796c4148",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-dui-23152-a",
+      "title": "Driving Under the Influence of Alcohol",
+      "citation": "Cal. Vehicle Code § 23152(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23152"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "catalogSha256": "ad9d514f8dad3cc138eadcddc67b90eaf0d8e3ab5b217624750c0e48ab07bdd3",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-dui-23152-f",
+      "title": "Driving Under the Influence of a Drug",
+      "citation": "Cal. Vehicle Code § 23152(f)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23152"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "catalogSha256": "d12f111e23795da7f4a6d1b99356a3b759338a6d42c28a651f42050da9ea879f",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-dui-23152-g",
+      "title": "Driving Under the Combined Influence of Alcohol and a Drug",
+      "citation": "Cal. Vehicle Code § 23152(g)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23152"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "catalogSha256": "b86f50561b2389d8fe94f8aabec2fc0433ec2f01483e4bb13f6011e1e5f87a89",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-dui-23152-b",
+      "title": "Driving With an Alcohol Concentration of 0.08 Percent or More",
+      "citation": "Cal. Vehicle Code § 23152(b)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "VEH:23152"
+      ],
+      "retainedPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "acquiredPrimaryKeys": [
+        "VEH:23152"
+      ],
+      "catalogSha256": "d5d49c8fc670d71d516623c3ac9eedab37b2f3a1ebe4b0c490804671ada624f4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-failure-to-appear-1320-a",
+      "title": "Failure to Appear After Release on Misdemeanor Charge",
+      "citation": "Cal. Penal Code § 1320(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:1320"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:1320"
+      ],
+      "catalogSha256": "802988039575a77b062c12505335a33a10c9e36c0a9ac5be6f49bb3ca8a7666c",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-failure-to-appear-1320-b",
+      "title": "Failure to Appear After Release on Felony Charge",
+      "citation": "Cal. Penal Code § 1320(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:1320"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:1320"
+      ],
+      "catalogSha256": "289b0be9531b880c0c441ef089ea90b489d0cdac2bcd9c8962e3ced1137e202a",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-protective-order-273-6-a",
+      "title": "Violation of a Protective Order",
+      "citation": "Cal. Penal Code § 273.6(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "bounded_correction_pass",
+      "primaryKeys": [
+        "PEN:273.6"
+      ],
+      "retainedPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "acquiredPrimaryKeys": [
+        "PEN:273.6"
+      ],
+      "catalogSha256": "31530268fda6be2e494ba63579b1980354ff0b3053b1041e7a0fc762f9fa9413",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-open-container-23222-a",
+      "title": "Driving With an Open Alcoholic Beverage",
+      "citation": "Cal. Vehicle Code § 23222(a)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "VEH:23222"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23222"
+      ],
+      "catalogSha256": "9f8ac5cbb0ed687947fe8ab12f1681cb9ebb1cd27371acde5df0fdd373eef0d4",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-open-container-23222-b",
+      "title": "Driving With an Open Cannabis Receptacle",
+      "citation": "Cal. Vehicle Code § 23222(b)(1)",
+      "lawCode": "VEH",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "VEH:23222"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "VEH:23222"
+      ],
+      "catalogSha256": "544c0bd7015d021dc47663b9ddb64707f7a87cfeb22e740ca18af16c7dfebb25",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-indecent-exposure-314-1",
+      "title": "Indecent Exposure",
+      "citation": "Cal. Penal Code § 314(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:314"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:314"
+      ],
+      "catalogSha256": "6b84c75d213439a8592bf044d39aa99b0ec56f36c49284d751f2d645fde4c9ff",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-illegal-fireworks-12677",
+      "title": "Unlawful Possession of Dangerous Fireworks Without a Permit",
+      "citation": "Cal. Health & Safety Code § 12677",
+      "lawCode": "HSC",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "HSC:12677"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "HSC:12677"
+      ],
+      "catalogSha256": "569322a31d4646c6194bc9adcda8c5dff9384646a9f268af5ccf0586b9932ef1",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-conspiracy-182-a1",
+      "title": "Conspiracy to Commit a Crime",
+      "citation": "Cal. Penal Code § 182(a)(1)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:182"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:182"
+      ],
+      "catalogSha256": "34d4228be783181b98bb5bbb16867635d388c6d7f71efd66272c5e83eda6ed9b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-accessory-after-the-fact-32",
+      "title": "Accessory After the Fact",
+      "citation": "Cal. Penal Code §§ 32, 33",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:32",
+        "PEN:33"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:32",
+        "PEN:33"
+      ],
+      "catalogSha256": "dacc386b1f4d15f5cb1f40415fb1790296bbc81ad816fc228fda27f2b8daa39d",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-criminal-solicitation-653f-a",
+      "title": "Solicitation to Commit a Specified Crime",
+      "citation": "Cal. Penal Code § 653f(a)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:653f"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:653f"
+      ],
+      "catalogSha256": "58941cda429b1e4f1eca3bc915ed7e6453de152db7f52432a51247a8156c863b",
+      "attorneyReview": "pending"
+    },
+    {
+      "id": "ca-criminal-solicitation-653f-b",
+      "title": "Solicitation to Commit Murder",
+      "citation": "Cal. Penal Code § 653f(b)",
+      "lawCode": "PEN",
+      "selectable": true,
+      "status": "awaiting_statutory_correction_pass",
+      "primaryKeys": [
+        "PEN:653f"
+      ],
+      "retainedPrimaryKeys": [],
+      "acquiredPrimaryKeys": [
+        "PEN:653f"
+      ],
+      "catalogSha256": "9224ba5ad99f93532750727be0c2c095f243eeee44fe96dff19a95950800c472",
+      "attorneyReview": "pending"
+    }
+  ]
+}
