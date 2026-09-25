@@ -1541,6 +1541,162 @@
         "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Every person who violates or fails to comply with any provision of this division, except one for which a penalty is otherwise in this division specifically provided, is guilty of a misdemeanor punishable by a fine in a sum not less than thirty dollars ($30) nor more than five hundred dollars ($500), or by imprisonment for not less than 15 nor more than 180 days, or by both.</p></caml:Content>",
         "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11374."
       }
+    ],
+    "VEH:23104": [
+      {
+        "id": "VEH23104.201115609",
+        "lawCode": "VEH",
+        "section": "23104.",
+        "opStatutes": "2011",
+        "opChapter": "15",
+        "opSection": "609",
+        "effectiveDate": "2011-04-04 00:00:00",
+        "versionId": "id_1f3b9ac2-61a6-11e0-8037-955a394cd808",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "1.",
+        "history": "Amended by Stats. 2011, Ch. 15, Sec. 609.   (AB 109)   Effective April 4, 2011.   Operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.",
+        "contentMember": "LAW_SECTION_TBL_142529.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 142529,
+        "tableRowSha256": "e185e1d6d1085f9c2b4bef9799764591d461a481ae691eb1599129f6deb20e46",
+        "contentSha256": "4624163dd5938357b93da34b96545a0867662d404207e8e0f60b294c8bc3a71c",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Except as provided in subdivision (b), whenever reckless driving of a vehicle proximately causes bodily injury to a person other than the driver, the person driving the vehicle shall, upon conviction thereof, be punished by imprisonment in the county jail for not less than 30 days nor more than six months or by a fine of not less than two hundred twenty dollars ($220) nor more than one thousand dollars ($1,000), or by both the fine and imprisonment.</p><p>(b)<span class=\"EnSpace\"/> A person convicted of reckless driving that proximately causes great bodily injury, as defined in Section 12022.7 of the Penal Code, to a person other than the driver, who previously has been convicted of a violation of Section\n\t\t\t\t  23103, 23104, 23105, 23109, 23109.1, 23152, or 23153, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code, by imprisonment in the county jail for not less than 30 days nor more than six months or by a fine of not less than two hundred twenty dollars ($220) nor more than one thousand dollars ($1,000) or by both the fine and imprisonment.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23104."
+      }
+    ],
+    "VEH:23105": [
+      {
+        "id": "VEH23105.201115610",
+        "lawCode": "VEH",
+        "section": "23105.",
+        "opStatutes": "2011",
+        "opChapter": "15",
+        "opSection": "610",
+        "effectiveDate": "2011-04-04 00:00:00",
+        "versionId": "id_213ebdc4-61a6-11e0-8037-955a394cd808",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "1.",
+        "history": "Amended by Stats. 2011, Ch. 15, Sec. 610.   (AB 109)   Effective April 4, 2011.   Operative October 1, 2011, by Sec. 636 of Ch. 15, as amended by Stats. 2011, Ch. 39, Sec. 68.",
+        "contentMember": "LAW_SECTION_TBL_142530.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 142530,
+        "tableRowSha256": "5bcbef071c938fffe41d6cb61aca1a2070a78afb18b206098ca6e429e5797dfd",
+        "contentSha256": "7ea344d4b3aef4935fbb2cb35e03f5f5370bf385d271e95a0664e00825732ec8",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>A person convicted of reckless driving in violation of Section 23103 that proximately causes one or more of the injuries specified in subdivision (b) to a person other than the driver, shall be punished by imprisonment pursuant to subdivision (h) of Section 1170 of the Penal Code, or by imprisonment in a county jail for not less than 30 days nor more than six months, or by a fine of not less than two hundred twenty dollars ($220) nor more than one thousand dollars ($1,000), or by both that fine and imprisonment.</p><p>(b)<span class=\"EnSpace\"/>This section applies to all of the following injuries:</p><p>(1)<span class=\"EnSpace\"/>A loss of consciousness.</p><p>(2)<span class=\"EnSpace\"/>A concussion.</p><p>(3)<span class=\"EnSpace\"/>A bone fracture.</p><p>(4)<span class=\"EnSpace\"/>A protracted loss or impairment of function of a bodily member or organ.</p><p>(5)<span class=\"EnSpace\"/>A wound requiring extensive suturing.</p><p>(6)<span class=\"EnSpace\"/>A serious disfigurement.</p><p>(7)<span class=\"EnSpace\"/>Brain injury.</p><p>(8)<span class=\"EnSpace\"/>Paralysis.</p><p>(c)<span class=\"EnSpace\"/>This section does not preclude or prohibit prosecution under any other provision of law.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23105."
+      }
+    ],
+    "VEH:40000.15": [
+      {
+        "id": "VEH40000.15.20066096",
+        "lawCode": "VEH",
+        "section": "40000.15.",
+        "opStatutes": "2006",
+        "opChapter": "609",
+        "opSection": "6",
+        "effectiveDate": "2007-01-01 00:00:00",
+        "versionId": "id_509dcf16-85f6-11db-a73d-a6a081de931e",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "1.",
+        "history": "Amended by Stats. 2006, Ch. 609, Sec. 6.   Effective January 1, 2007.",
+        "contentMember": "LAW_SECTION_TBL_144916.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:21",
+        "tableRow": 144916,
+        "tableRowSha256": "fb2d69ee24554abb39709d11f8df030214ca68c2e264ab2823917dbdb5037014",
+        "contentSha256": "f685126ff30c79147a042b6791d2021b933e1c30b3f993772bd71e1ff48b3c09",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>A violation of any of the following provisions shall constitute a misdemeanor, and not an infraction:</p><p>Subdivision (g), (j), (k), (l), or (m) of Section 22658, relating to unlawfully towed or stored vehicles.</p><p>Sections 23103 and 23104, relating to reckless driving.</p><p>Section 23109, relating to speed contests or exhibitions.</p><p>Subdivision (a) of Section 23110, relating to throwing at vehicles.</p><p>Section 23152, relating to driving under the influence.</p><p>Subdivision (b) of Section 23222, relating to possession of marijuana.</p><p>Subdivision (a) or (b) of Section 23224, relating to persons under 21 years of age knowingly driving, or being a passenger in, a motor vehicle carrying any alcoholic beverage.</p><p>Section 23253, relating to directions on toll highways or vehicular crossings.</p><p>Section 23332, relating to trespassing.</p><p>Section 24002.5, relating to unlawful operation of a farm vehicle.</p><p>Section 24011.3, relating to vehicle bumper strength notices.</p><p>Section 27150.1, relating to sale of exhaust systems.</p><p>Section 27362, relating to child passenger seat restraints.</p><p>Section 28050, relating to true mileage driven.</p><p>Section 28050.5, relating to nonfunctional odometers.</p><p>Section 28051, relating to resetting odometers.</p><p>Section 28051.5, relating to devices to reset odometers.</p><p>Subdivision (d) of Section 28150, relating to possessing four or more jamming devices.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.15."
+      }
+    ],
+    "VEH:40008": [
+      {
+        "id": "VEH40008.20106853",
+        "lawCode": "VEH",
+        "section": "40008.",
+        "opStatutes": "2010",
+        "opChapter": "685",
+        "opSection": "3",
+        "effectiveDate": "2011-01-01 00:00:00",
+        "versionId": "id_4b714c64-10eb-11e0-aa5c-a5112ecb123a",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "1.",
+        "history": "Added by Stats. 2010, Ch. 685, Sec. 3.   (AB 2479)   Effective January 1, 2011.",
+        "contentMember": "LAW_SECTION_TBL_145141.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:21",
+        "tableRow": 145141,
+        "tableRowSha256": "1ff5e140b48d3f6e90e43ee9801ecb3fe38d4de2f405177f67fcdaecc817a494",
+        "contentSha256": "852558a696c46ad33a3e550e26d3d4534dae7d6e6ebff96d5d30a4f1bdeb262a",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>Notwithstanding any other provision of law, except as otherwise provided in subdivision (c), any person who violates Section 21701, 21703, or 23103, with the intent to capture any type of visual image, sound recording, or other physical impression of another person for a commercial purpose, is guilty of a misdemeanor and not an infraction and shall be punished by imprisonment in a county jail for not more than six months and by a fine of not more than two thousand five hundred dollars ($2,500).</p><p>(b)<span class=\"EnSpace\"/>Notwithstanding any other provision of law, except as otherwise provided in subdivision (c), any person who violates Section 21701, 21703, or 23103, with the intent to capture any type of visual image, sound recording, or other physical impression of another person for a commercial purpose and who causes a minor child or\n\t\t\t\t  children to be placed in a situation in which the child’s person or health is endangered, is guilty of a misdemeanor and not an infraction and shall be punished by imprisonment in a county jail for not more than one year and by a fine of not more than five thousand dollars ($5,000).</p><p>(c)<span class=\"EnSpace\"/>Pursuant to Section 654 of the Penal Code, an act or omission described in subdivision (a) or (b) that is punishable in different ways by different provisions of law shall be punished under the provision that provides for the longest potential term of imprisonment, but in no case shall the act or omission be punished under more than one provision. An acquittal or conviction and sentence under any one provision bars a prosecution for the same act or omission under any other provision.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40008."
+      }
+    ],
+    "VEH:42002": [
+      {
+        "id": "VEH42002.19831092404",
+        "lawCode": "VEH",
+        "section": "42002.",
+        "opStatutes": "1983",
+        "opChapter": "1092",
+        "opSection": "404",
+        "effectiveDate": "1983-09-27 00:00:00",
+        "versionId": "id_15ddb0df-2921-11d9-a1bb-e0ce1cd664b1",
+        "division": "18.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "1.",
+        "history": "Amended by Stats. 1983, Ch. 1092, Sec. 404.   Effective September 27, 1983.   Operative January 1, 1984, by Sec. 427 of Ch. 1092.",
+        "contentMember": "LAW_SECTION_TBL_142247.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:22",
+        "tableRow": 142247,
+        "tableRowSha256": "ef06c648025ed0d6c5eb7898a31163557cb3a1f96de5c7142defc16b96a39246",
+        "contentSha256": "6af459c975564d2dc931f18006efd9ba0a52cc4a2ff8c6cc0408688ec615ea20",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Unless a different penalty is expressly provided by this code, every person convicted of a misdemeanor for a violation of any of the provisions of this code shall be punished by a fine of not exceeding one thousand dollars ($1,000) or by imprisonment in the county jail for not exceeding six months, or by both such fine and imprisonment.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=42002."
+      }
+    ],
+    "VEH:40000.10": [
+      {
+        "id": "VEH40000.10.202280020",
+        "lawCode": "VEH",
+        "section": "40000.10.",
+        "opStatutes": "2022",
+        "opChapter": "800",
+        "opSection": "20",
+        "effectiveDate": "2023-01-01 00:00:00",
+        "versionId": "id_8f8d6c53-6aad-11ed-823c-e74f056edb17",
+        "division": "17.",
+        "title": null,
+        "part": null,
+        "chapter": "1.",
+        "article": "1.",
+        "history": "Added by Stats. 2022, Ch. 800, Sec. 20.   (AB 2746)   Effective January 1, 2023.",
+        "contentMember": "LAW_SECTION_TBL_144870.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:21",
+        "tableRow": 144870,
+        "tableRowSha256": "cd5efb4dd4261af5b424fdeebc65e7c38fd1fffe313e73f58612d81f58a5e201",
+        "contentSha256": "1763f47405f4741f179c4c13304ad8196af617b908608f0ccccfedb446d92296",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>A violation of subdivision (a) of Section 12500 shall be punished as follows:</p><p>(a)<span class=\"EnSpace\"/>Except as provided in subdivision (b), as an infraction by a fine of one hundred dollars ($100) for a first or second violation.</p><p>(b)<span class=\"EnSpace\"/>As a misdemeanor or an infraction as prescribed by Section 19.8 of the Penal Code if a person has a prior driver’s license suspension or revocation for a violation of subdivision (c) of Section 192 of the Penal Code, subdivision (e) of Section 12809, or of Section 13353, 13353.1, 13353.2, 23103, 23104, 23105, 23109, 23152, 23153, or 23154.</p><p>(c)<span class=\"EnSpace\"/>As a\n\t\t\t\t\t\tmisdemeanor or an infraction as prescribed by Section 19.8 of the Penal Code for a third or subsequent violation.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.10."
+      }
     ]
   },
   "records": [
@@ -2076,7 +2232,7 @@
       "id": "ca-dui-23152-a",
       "baselineSha256": "1b98c99f8a76daf31777c76a8eac3f33ef1bca53289931f1e5262ee7328b9a0c",
       "group": "driving",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "VEH:23152"
       ],
@@ -2097,15 +2253,31 @@
         "VEH:13352",
         "VEH:40000.11"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "VEH:23152",
+        "VEH:23536",
+        "VEH:23538",
+        "VEH:23540",
+        "VEH:23542",
+        "VEH:23546",
+        "VEH:23548",
+        "VEH:23550",
+        "VEH:23550.5",
+        "VEH:23552",
+        "VEH:23600",
+        "VEH:40000.15"
+      ],
+      "correctionSha256": "286c7e10c0d8ef7ac6f2f42fb9e1d05516217ec12937db68d0be4208cb93bb47",
+      "remainingWork": "Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved."
     },
     {
       "id": "ca-dui-23152-b",
       "baselineSha256": "03e2ea9259c91ac6e33fef9447ee01915bca9b3314de4195d62c76deddff9ea9",
       "group": "driving",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "VEH:23152"
       ],
@@ -2126,15 +2298,31 @@
         "VEH:13352",
         "VEH:40000.11"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "VEH:23152",
+        "VEH:23536",
+        "VEH:23538",
+        "VEH:23540",
+        "VEH:23542",
+        "VEH:23546",
+        "VEH:23548",
+        "VEH:23550",
+        "VEH:23550.5",
+        "VEH:23552",
+        "VEH:23600",
+        "VEH:40000.15"
+      ],
+      "correctionSha256": "c47b3cdce4050bd0908e4e346e98c084aa103f81d052947938f73e6c3a19b219",
+      "remainingWork": "Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved."
     },
     {
       "id": "ca-dui-23152-f",
       "baselineSha256": "0515c7b937b4996d8b443d7808bca8fa3b5da487be8866f853a947eb6a109141",
       "group": "driving",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "VEH:23152"
       ],
@@ -2155,15 +2343,31 @@
         "VEH:13352",
         "VEH:40000.11"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "VEH:23152",
+        "VEH:23536",
+        "VEH:23538",
+        "VEH:23540",
+        "VEH:23542",
+        "VEH:23546",
+        "VEH:23548",
+        "VEH:23550",
+        "VEH:23550.5",
+        "VEH:23552",
+        "VEH:23600",
+        "VEH:40000.15"
+      ],
+      "correctionSha256": "59554022bacfbcb01cdfb1e6605682a3be811a5eef2a495151adf5045d579210",
+      "remainingWork": "Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved."
     },
     {
       "id": "ca-dui-23152-g",
       "baselineSha256": "949c039864022c9d02867a1e980244866da976579712e8d7f984ce37648de422",
       "group": "driving",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "VEH:23152"
       ],
@@ -2184,15 +2388,31 @@
         "VEH:13352",
         "VEH:40000.11"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "PEN:18.5",
+        "VEH:23152",
+        "VEH:23536",
+        "VEH:23538",
+        "VEH:23540",
+        "VEH:23542",
+        "VEH:23546",
+        "VEH:23548",
+        "VEH:23550",
+        "VEH:23550.5",
+        "VEH:23552",
+        "VEH:23600",
+        "VEH:40000.15"
+      ],
+      "correctionSha256": "454dec2fd968006bbaa2ca9d772332c3bad339228b2d25c64f6168b8dd38948a",
+      "remainingWork": "Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved."
     },
     {
       "id": "ca-reckless-driving",
       "baselineSha256": "6e9374e350d0cb963303cc83052ccddb702faefbe81c8c7b826ab7cc0a6a48df",
       "group": "driving",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "VEH:23103"
       ],
@@ -2213,15 +2433,23 @@
         "VEH:13352",
         "VEH:40000.11"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag."
+      "correctionSources": [
+        "PEN:1170",
+        "PEN:17",
+        "VEH:23103",
+        "VEH:23104",
+        "VEH:23105",
+        "VEH:40000.15",
+        "VEH:40008"
+      ],
+      "correctionSha256": "143a9f069b9dc10edb47fa0a91fe3a93652a33149a1a14d10639301ed538079b",
+      "remainingWork": "Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved."
     },
     {
       "id": "ca-driving-without-license",
       "baselineSha256": "fa653a9eff10703ccdfc8ce1e8f645f52c6546a0412619db9b14be71b5b93d8b",
       "group": "driving",
-      "status": "research_pending",
+      "status": "bounded_correction_proposed",
       "primarySources": [
         "VEH:12500"
       ],
@@ -2242,16 +2470,49 @@
         "VEH:13352",
         "VEH:40000.11"
       ],
-      "correctionSources": [],
-      "correctionSha256": null,
-      "remainingWork": "Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag."
+      "correctionSources": [
+        "PEN:17",
+        "PEN:19.6",
+        "PEN:19.8",
+        "VEH:12500",
+        "VEH:40000.10",
+        "VEH:42002"
+      ],
+      "correctionSha256": "fe83938730a3e1a0bd4af7a7e2ecbb742eb0751e749e7bcdcdbad8e76c5fae15",
+      "remainingWork": "Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved."
     }
   ],
   "limits": [
     "Source acquisition at the archived version is not a live refresh of every dependency.",
-    "All 25 records accounted; 19 bounded corrections proposed. Attorney review remains pending.",
+    "All 25 records accounted; 25 bounded corrections proposed. Attorney review remains pending.",
     "Multiple source versions are retained; no last-row-wins version selection.",
     "Shared research dependencies are not automatically all publication dependencies.",
     "Runtime source database remains reference-only; this research bundle does not pretend its XML has been seeded."
+  ],
+  "versionNotes": [
+    {
+      "sourceKey": "VEH:13352",
+      "asOf": "2026-09-24",
+      "scope": "research_only_not_runtime_license_calculation",
+      "selectedVersionId": "id_1f3f7ef6-c630-11f0-975c-e301db986e9c",
+      "transitionDate": "2033-01-01",
+      "note": "The amendment operative in 2026 has a scheduled 2033 repeal; the successor is not operative until 2033. Both versions remain preserved. The applicable statute can also depend on the offense date. No precise suspension duration or interlock eligibility is calculated by this correction batch.",
+      "versions": [
+        {
+          "versionId": "id_1f3f7ef6-c630-11f0-975c-e301db986e9c",
+          "contentSha256": "572916b1b63795ad3e0e72124d29ef56b1dff7442b6d1dc43a4f82a5205924a6",
+          "applicableFrom": "2026-01-01",
+          "applicableUntil": "2033-01-01",
+          "historyEvidence": "Amended (as amended by Stats. 2025, Ch. 16, Sec. 6) by Stats. 2025, Ch. 689, Sec. 1.   (AB 366)   Effective January 1, 2026.   Repealed as of January 1, 2033, by its own provisions.    See later operative version, as amended by Sec. 2 of Stats. 2025, Ch. 689."
+        },
+        {
+          "versionId": "id_21272ab8-c630-11f0-975c-e301db986e9c",
+          "contentSha256": "7d667bf18a71fbdbd127ba38ff0e067284e445bb98e8188144b563fa4685a526",
+          "applicableFrom": "2033-01-01",
+          "applicableUntil": null,
+          "historyEvidence": "Amended (as amended by Stats. 2025, Ch. 16, Sec. 7) by Stats. 2025, Ch. 689, Sec. 2.   (AB 366)   Effective January 1, 2026.   Section operative January 1, 2033, by its own provisions."
+        }
+      ]
+    }
   ]
 }

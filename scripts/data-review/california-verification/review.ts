@@ -1,4 +1,4 @@
-/** Offline audit of the bounded corrections and the remaining 25-record batch. */
+/** Offline audit of the bounded corrections for the initial 25-record batch. */
 import { createHash } from "node:crypto";
 import fs from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -19,6 +19,11 @@ export interface CaliforniaReview {
   schemaVersion: number; kind: string;
   archive: { sourceUrl: string; sha256: string; retrievedAt: string; lastModified: string };
   documents: Record<string, Document[]>; records: ReviewRow[]; limits: string[];
+  versionNotes: Array<{
+    sourceKey: string; asOf: string; scope: string; selectedVersionId: string;
+    transitionDate: string; note: string;
+    versions: Array<{ versionId: string; contentSha256: string; applicableFrom: string; applicableUntil: string | null; historyEvidence: string }>;
+  }>;
 }
 const hash = (text: string) => createHash("sha256").update(text).digest("hex");
 export const reviewPath = new URL("../output/california-batch-one-review.json", import.meta.url);
@@ -35,6 +40,21 @@ export function validateCaliforniaReview(review: CaliforniaReview) {
       if (`${doc.lawCode}:${doc.section.replace(/\.$/, "")}` !== key ||
           hash(doc.contentXml) !== doc.contentSha256) throw new Error(`Changed source: ${key}`);
     }
+  }
+  // Research-only version accounting. This never resolves a runtime license
+  // calculation or relaxes the multiple-version hold on correction sources.
+  if (review.versionNotes.length !== 1 || review.versionNotes[0].sourceKey !== "VEH:13352") throw new Error("Missing licensing version accounting");
+  for (const note of review.versionNotes) {
+    const docs = review.documents[note.sourceKey];
+    if (note.scope !== "research_only_not_runtime_license_calculation" || !/^\d{4}-\d{2}-\d{2}$/.test(note.asOf) ||
+        note.versions.length !== docs.length || new Set(note.versions.map(v => v.versionId)).size !== docs.length) throw new Error("Incomplete version accounting");
+    for (const version of note.versions) {
+      const doc = docs.find(item => item.versionId === version.versionId);
+      if (!doc || doc.contentSha256 !== version.contentSha256 || !version.historyEvidence || !doc.history.includes(version.historyEvidence)) throw new Error("Version evidence changed");
+    }
+    const current = note.versions.filter(v => v.applicableFrom <= note.asOf && (!v.applicableUntil || note.asOf < v.applicableUntil));
+    if (current.length !== 1 || current[0].versionId !== note.selectedVersionId || current[0].applicableUntil !== note.transitionDate ||
+        !note.versions.some(v => v.applicableFrom === note.transitionDate && v.versionId !== note.selectedVersionId)) throw new Error("Version date review required");
   }
   const correctedIds = new Set<string>();
   for (const row of review.records) {
@@ -68,15 +88,20 @@ export function validateCaliforniaReview(review: CaliforniaReview) {
       })) throw new Error(`Runtime dependency missing: ${row.id}/${lawCode}:${section}`);
     }
   }
-  if (correctedIds.size !== corrections.length || correctedIds.size !== 19) throw new Error("Correction coverage changed");
+  if (correctedIds.size !== corrections.length || correctedIds.size !== 25) throw new Error("Correction coverage changed");
   return { batchRecords: review.records.length, corrections: correctedIds.size, pending: review.records.length - correctedIds.size, sections: Object.keys(review.documents).length, versions: Object.values(review.documents).reduce((sum, rows) => sum + rows.length, 0) };
 }
 export function renderCaliforniaReview(review: CaliforniaReview) {
   const counts = validateCaliforniaReview(review);
   return ["# California batch one: corrections and remaining work", "",
-    `${counts.batchRecords} existing records accounted for: ${counts.corrections} bounded corrections proposed; ${counts.pending} remain in research. ${counts.sections} source sections (${counts.versions} versions) retained. No new charges published.`, "",
+    `${counts.batchRecords} existing records accounted for: ${counts.corrections} bounded corrections proposed; ${counts.pending} await this correction pass; deeper legal review remains. ${counts.sections} source sections (${counts.versions} versions) retained. No new charges published.`, "",
     `Archive: ${review.archive.sourceUrl}; modified ${review.archive.lastModified}; acquired ${review.archive.retrievedAt}.`, "",
     ...review.limits.map(limit => `- ${limit}`), "",
+    "## Known source transition", "",
+    ...review.versionNotes.flatMap(note => [
+      `${note.sourceKey}: research as of ${note.asOf}; transition ${note.transitionDate}. ${note.note}`, "",
+      ...note.versions.map(version => `- Version ${version.versionId}: ${version.applicableFrom} to ${version.applicableUntil ?? "no stated end"}. ${version.historyEvidence}`), "",
+    ]),
     ...review.records.flatMap(row => {
       const correction = corrections.find(item => item.id === row.id);
       return [`## ${row.id}`, "", correction ? correction.summary.en : "Research pending.", "", ...(correction ? [correction.penalty.en, "", "Supporting sources:", "", ...row.correctionSources.map(key => `- [${key}](${review.documents[key][0].sourceUrl})`), ""] : []), `Remaining work: ${row.remainingWork}`, ""];

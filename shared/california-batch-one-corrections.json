@@ -430,5 +430,198 @@
       "es": "La pena de delito menor procede del HSC §11374: multa base de $30 a $500, prisión de 15 a 180 días, o ambas. Es el intervalo legal de pena, no una predicción de que deba imponerse cárcel. La libertad condicional, los programas alternativos, los recargos y otras consecuencias del caso requieren revisión aparte.",
       "zh": "轻罪刑罚来自《健康与安全法》第11374条：基本罚金30至500美元、监禁15至180天，或两者并处。这是法定处罚范围，并非预测必须判处监禁。缓刑、分流程序、附加费用及其他案件后果须另行审查。"
     }
+  },
+  {
+    "id": "ca-dui-23152-a",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingVehicleSections": [
+      "23536",
+      "23538",
+      "23540",
+      "23542",
+      "23546",
+      "23548",
+      "23550",
+      "23550.5",
+      "23552",
+      "23600",
+      "40000.15"
+    ],
+    "summary": {
+      "en": "Driving while under the influence of alcohol under §23152(a). This is an impairment charge, distinct from the 0.08-percent concentration charge in subdivision (b). The citation alone does not establish that this is a first offense or determine the effect of prior convictions.",
+      "es": "Conducir bajo la influencia del alcohol conforme al §23152(a). Se refiere al deterioro de la capacidad para conducir, distinto de la concentración de 0.08 por ciento del apartado (b). La cita por sí sola no demuestra que sea una primera infracción ni determina el efecto de los antecedentes.",
+      "zh": "第23152(a)条：在酒精影响下驾驶，涉及驾驶能力受影响，与(b)款的0.08%酒精浓度罪名不同。仅凭条款编号不能认定为首次违法，也不能确定前科的影响。"
+    },
+    "penalty": {
+      "en": "For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.",
+      "es": "Para una primera infracción ordinaria sin libertad condicional, el §23536 establece de 96 horas a 6 meses de cárcel del condado (al menos 48 horas continuas) y multa base de $390 a $1,000. Con libertad condicional, el §23538 exige la multa, pero deja la cárcel a discreción del tribunal; si se impone conforme a esa norma, es de 48 horas a 6 meses. La libertad condicional suele durar de 3 a 5 años (§23600). Los antecedentes aplicables cambian la vía de pena y pueden permitir delito grave según los §§23550 o 23550.5; no use para esos casos el intervalo de primera infracción. Programas, restricciones o suspensión de licencia, bloqueo de encendido, recargos y agravantes requieren revisión del caso.",
+      "zh": "普通首次违法且未获缓刑时，第23536条规定县监狱监禁96小时至6个月（其中至少连续48小时），并处390至1,000美元基本罚金。获缓刑时，第23538条要求罚金，但是否附加监禁由法院裁量；若依该条判处监禁，范围为48小时至6个月。缓刑通常为3至5年（第23600条）。符合规定的前科会改变量刑途径，并可能使第23550或23550.5条重罪处罚适用，不可将首次违法的刑期套用于此类案件。课程、驾照限制或暂停、点火联锁装置、附加费用及加重情节须结合案件审查。"
+    }
+  },
+  {
+    "id": "ca-dui-23152-b",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingVehicleSections": [
+      "23536",
+      "23538",
+      "23540",
+      "23542",
+      "23546",
+      "23548",
+      "23550",
+      "23550.5",
+      "23552",
+      "23600",
+      "40000.15"
+    ],
+    "summary": {
+      "en": "Driving with a blood-alcohol concentration of 0.08 percent or more by weight under §23152(b). A test within three hours can create the statute’s rebuttable presumption about the concentration when driving; it is not conclusive proof. This is distinct from the impairment allegation in subdivision (a). Prior convictions still require review.",
+      "es": "Conducir con una concentración de alcohol en sangre de 0.08 por ciento o más en peso conforme al §23152(b). Una prueba dentro de tres horas puede crear la presunción legal refutable sobre la concentración al conducir; no es prueba concluyente. Es distinto de la acusación de deterioro de la capacidad del apartado (a). Los antecedentes requieren revisión.",
+      "zh": "第23152(b)条：驾驶时血液酒精浓度按重量计达到或超过0.08%。三小时内的检测可能产生关于驾驶时浓度的可反驳法定推定，并非不可推翻的证明。本条不同于(a)款的驾驶能力受影响指控。仍须审查前科。"
+    },
+    "penalty": {
+      "en": "For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.",
+      "es": "Para una primera infracción ordinaria sin libertad condicional, el §23536 establece de 96 horas a 6 meses de cárcel del condado (al menos 48 horas continuas) y multa base de $390 a $1,000. Con libertad condicional, el §23538 exige la multa, pero deja la cárcel a discreción del tribunal; si se impone conforme a esa norma, es de 48 horas a 6 meses. La libertad condicional suele durar de 3 a 5 años (§23600). Los antecedentes aplicables cambian la vía de pena y pueden permitir delito grave según los §§23550 o 23550.5; no use para esos casos el intervalo de primera infracción. Programas, restricciones o suspensión de licencia, bloqueo de encendido, recargos y agravantes requieren revisión del caso.",
+      "zh": "普通首次违法且未获缓刑时，第23536条规定县监狱监禁96小时至6个月（其中至少连续48小时），并处390至1,000美元基本罚金。获缓刑时，第23538条要求罚金，但是否附加监禁由法院裁量；若依该条判处监禁，范围为48小时至6个月。缓刑通常为3至5年（第23600条）。符合规定的前科会改变量刑途径，并可能使第23550或23550.5条重罪处罚适用，不可将首次违法的刑期套用于此类案件。课程、驾照限制或暂停、点火联锁装置、附加费用及加重情节须结合案件审查。"
+    }
+  },
+  {
+    "id": "ca-dui-23152-f",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingVehicleSections": [
+      "23536",
+      "23538",
+      "23540",
+      "23542",
+      "23546",
+      "23548",
+      "23550",
+      "23550.5",
+      "23552",
+      "23600",
+      "40000.15"
+    ],
+    "summary": {
+      "en": "Driving while under the influence of a drug under §23152(f). This subdivision does not use the alcohol concentration threshold in subdivision (b); the alleged impairment and evidence matter. A prescription does not by itself resolve whether driving was impaired. Prior convictions and sentencing circumstances require separate review.",
+      "es": "Conducir bajo la influencia de una droga conforme al §23152(f). Este apartado no usa el umbral de concentración de alcohol del apartado (b); importan el deterioro alegado y las pruebas. Una receta no resuelve por sí sola si se conducía con la capacidad afectada. Los antecedentes y circunstancias de pena requieren revisión aparte.",
+      "zh": "第23152(f)条：在药物影响下驾驶。本款不采用(b)款的酒精浓度门槛；须审查被指控的驾驶能力受影响情况及证据。持有处方本身不能确定驾驶是否受到影响。前科和量刑情形须另行审查。"
+    },
+    "penalty": {
+      "en": "For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.",
+      "es": "Para una primera infracción ordinaria sin libertad condicional, el §23536 establece de 96 horas a 6 meses de cárcel del condado (al menos 48 horas continuas) y multa base de $390 a $1,000. Con libertad condicional, el §23538 exige la multa, pero deja la cárcel a discreción del tribunal; si se impone conforme a esa norma, es de 48 horas a 6 meses. La libertad condicional suele durar de 3 a 5 años (§23600). Los antecedentes aplicables cambian la vía de pena y pueden permitir delito grave según los §§23550 o 23550.5; no use para esos casos el intervalo de primera infracción. Programas, restricciones o suspensión de licencia, bloqueo de encendido, recargos y agravantes requieren revisión del caso.",
+      "zh": "普通首次违法且未获缓刑时，第23536条规定县监狱监禁96小时至6个月（其中至少连续48小时），并处390至1,000美元基本罚金。获缓刑时，第23538条要求罚金，但是否附加监禁由法院裁量；若依该条判处监禁，范围为48小时至6个月。缓刑通常为3至5年（第23600条）。符合规定的前科会改变量刑途径，并可能使第23550或23550.5条重罪处罚适用，不可将首次违法的刑期套用于此类案件。课程、驾照限制或暂停、点火联锁装置、附加费用及加重情节须结合案件审查。"
+    }
+  },
+  {
+    "id": "ca-dui-23152-g",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "18.5",
+      "1170"
+    ],
+    "supportingVehicleSections": [
+      "23536",
+      "23538",
+      "23540",
+      "23542",
+      "23546",
+      "23548",
+      "23550",
+      "23550.5",
+      "23552",
+      "23600",
+      "40000.15"
+    ],
+    "summary": {
+      "en": "Driving while under the combined influence of alcohol and a drug under §23152(g). This is a combined-impairment allegation, not the separate 0.08-percent concentration charge. The charged subdivision, evidence of impairment, prior convictions, and sentencing circumstances must be checked.",
+      "es": "Conducir bajo la influencia combinada del alcohol y una droga conforme al §23152(g). Es una acusación de deterioro combinado de la capacidad, no la acusación separada por concentración de 0.08 por ciento. Deben verificarse la subdivisión, las pruebas, los antecedentes y las circunstancias de pena.",
+      "zh": "第23152(g)条：在酒精和药物的共同影响下驾驶。这是共同影响驾驶能力的指控，不是单独的0.08%酒精浓度罪名。须核对被指控分款、驾驶能力受影响的证据、前科及量刑情形。"
+    },
+    "penalty": {
+      "en": "For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.",
+      "es": "Para una primera infracción ordinaria sin libertad condicional, el §23536 establece de 96 horas a 6 meses de cárcel del condado (al menos 48 horas continuas) y multa base de $390 a $1,000. Con libertad condicional, el §23538 exige la multa, pero deja la cárcel a discreción del tribunal; si se impone conforme a esa norma, es de 48 horas a 6 meses. La libertad condicional suele durar de 3 a 5 años (§23600). Los antecedentes aplicables cambian la vía de pena y pueden permitir delito grave según los §§23550 o 23550.5; no use para esos casos el intervalo de primera infracción. Programas, restricciones o suspensión de licencia, bloqueo de encendido, recargos y agravantes requieren revisión del caso.",
+      "zh": "普通首次违法且未获缓刑时，第23536条规定县监狱监禁96小时至6个月（其中至少连续48小时），并处390至1,000美元基本罚金。获缓刑时，第23538条要求罚金，但是否附加监禁由法院裁量；若依该条判处监禁，范围为48小时至6个月。缓刑通常为3至5年（第23600条）。符合规定的前科会改变量刑途径，并可能使第23550或23550.5条重罪处罚适用，不可将首次违法的刑期套用于此类案件。课程、驾照限制或暂停、点火联锁装置、附加费用及加重情节须结合案件审查。"
+    }
+  },
+  {
+    "id": "ca-reckless-driving",
+    "categories": [
+      "misdemeanor",
+      "felony"
+    ],
+    "supportingSections": [
+      "17",
+      "1170"
+    ],
+    "supportingVehicleSections": [
+      "23104",
+      "23105",
+      "40008",
+      "40000.15"
+    ],
+    "summary": {
+      "en": "Driving on a highway or in an offstreet parking facility in willful or wanton disregard for the safety of persons or property (§23103). Ordinary careless driving alone is not the stated standard. Injury-related punishment and commercial-image-capture circumstances follow different provisions; check the allegations before using the ordinary penalty.",
+      "es": "Conducir en una vía pública o estacionamiento fuera de la vía con desprecio deliberado o temerario por la seguridad de personas o bienes (§23103). El simple descuido no es el criterio legal indicado. Las lesiones y circunstancias de captación comercial de imágenes siguen otras disposiciones; verifique las alegaciones antes de usar la pena ordinaria.",
+      "zh": "在公路或路外停车场驾驶时，故意或肆意漠视人身或财产安全（第23103条）。普通驾驶疏忽本身并非该条所述标准。涉及伤害或商业拍摄的情形适用不同规定，使用普通刑罚范围前须核对指控。"
+    },
+    "penalty": {
+      "en": "Ordinary §23103(c) misdemeanor: 5–90 days in county jail, a $145–$1,000 base fine, or both. Injury provisions in §§23104 and 23105 can change the range and, in specified cases, permit felony punishment. Section 40008 sets different penalties for specified commercial-image-capture conduct. Those branches, assessments, and license consequences need separate review; the ordinary 90-day maximum is not a maximum for every reckless-driving case.",
+      "es": "Delito menor ordinario del §23103(c): de 5 a 90 días de cárcel del condado, multa base de $145 a $1,000, o ambas. Las lesiones de los §§23104 y 23105 cambian el intervalo y, en ciertos casos, permiten pena por delito grave. El §40008 fija otras penas para determinada captación comercial de imágenes. Esas vías, recargos y consecuencias sobre la licencia requieren revisión aparte; 90 días no es el máximo para todos los casos.",
+      "zh": "第23103(c)条普通轻罪：县监狱监禁5至90天、基本罚金145至1,000美元，或两者并处。第23104和23105条的伤害规定可改变刑罚范围，并在特定情况下允许重罪处罚。第40008条对特定商业拍摄行为另设处罚。这些途径、附加费用及驾照后果须另行审查；普通90天上限并非所有危险驾驶案件的上限。"
+    }
+  },
+  {
+    "id": "ca-driving-without-license",
+    "categories": [
+      "infraction",
+      "misdemeanor"
+    ],
+    "supportingSections": [
+      "17",
+      "19.6",
+      "19.8"
+    ],
+    "supportingVehicleSections": [
+      "40000.10",
+      "42002"
+    ],
+    "summary": {
+      "en": "Driving a motor vehicle on a highway without the required valid license under §12500(a), subject to statutory exemptions. The charging history and specified prior suspensions or revocations affect classification under §40000.10. This is not the same offense as driving while a license is suspended or revoked.",
+      "es": "Conducir un vehículo en una vía pública sin la licencia válida exigida por el §12500(a), sujeto a las exenciones legales. El historial de infracciones y ciertas suspensiones o revocaciones previas afectan la clasificación conforme al §40000.10. No es el mismo delito que conducir con una licencia suspendida o revocada.",
+      "zh": "在公路上驾驶机动车但未持有第12500(a)条要求的有效驾照，法定豁免情形除外。违法记录及特定驾照暂停或吊销前史会影响第40000.10条下的分类。本罪名不同于驾照暂停或吊销期间驾驶。"
+    },
+    "penalty": {
+      "en": "Under §40000.10(a), an ordinary first or second violation is an infraction with a $100 base fine and no jail. A specified prior license suspension or revocation, or a third or later violation, allows misdemeanor or infraction treatment under §19.8: an infraction fine up to $250, or misdemeanor punishment up to 6 months in county jail, a fine up to $1,000, or both (§42002). Assessments and other consequences may add to the base fine; do not assume every §12500(a) charge is a misdemeanor.",
+      "es": "Según el §40000.10(a), una primera o segunda infracción ordinaria conlleva multa base de $100 y no cárcel. Ciertas suspensiones o revocaciones previas, o una tercera infracción o posterior, permiten delito menor o infracción conforme al §19.8: multa por infracción de hasta $250, o hasta 6 meses de cárcel del condado, multa de hasta $1,000, o ambas por delito menor (§42002). Los recargos y otras consecuencias pueden sumarse a la multa base; no suponga que todo cargo del §12500(a) es delito menor.",
+      "zh": "根据第40000.10(a)条，普通首次或第二次违法为违例，基本罚金100美元，不判监禁。有特定驾照暂停或吊销前史，或第三次及以后违法时，可依第19.8条按轻罪或违例处理：违例罚金最高250美元；轻罪可处县监狱监禁最高6个月、罚金最高1,000美元，或两者并处（第42002条）。附加费用及其他后果可能增加基本罚金之外的负担，不应假定所有第12500(a)条指控均为轻罪。"
+    }
   }
 ]

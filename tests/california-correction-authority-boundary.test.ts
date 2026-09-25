@@ -11,7 +11,7 @@ import { buildCaliforniaSourceDatabaseSeed } from "../server/data/california-sou
 describe("California corrections require seeded supporting references", () => {
   const seed = buildCaliforniaSourceDatabaseSeed(new Date("2026-09-24T00:00:00Z"));
   const affected = "ca-menacing";
-  const unaffected = "ca-reckless-driving";
+  const unaffected = "ca-prostitution-solicitation";
   const links = seed.links.filter(link => [affected, unaffected].includes(link.chargeId)).map(link => {
     const snapshot = seed.snapshots.find(row => row.sourceKey === link.snapshotKey)!;
     return { chargeId: link.chargeId, sourceUrl: snapshot.sourceUrl, citation: snapshot.citation, supportRole: link.supportRole, subdivision: link.subdivision };

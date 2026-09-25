@@ -14,12 +14,50 @@ describe("California bounded correction delivery", () => {
     }
   });
   it("binds all corrections to preserved source bytes and accounts for unfinished records", () => {
-    expect(validateCaliforniaReview(readCaliforniaReview())).toEqual({ batchRecords: 25, corrections: 19, pending: 6, sections: 58, versions: 59 });
+    expect(validateCaliforniaReview(readCaliforniaReview())).toEqual({ batchRecords: 25, corrections: 25, pending: 0, sections: 64, versions: 65 });
   });
   it("rejects changed source bytes", () => {
     const review = readCaliforniaReview();
     review.documents["PEN:18.5"][0].contentXml += " altered";
     expect(() => validateCaliforniaReview(review)).toThrow("Changed source");
+  });
+  it("keeps the 2033 licensing successor out of the 2026 research decision", () => {
+    const review = readCaliforniaReview();
+    const note = review.versionNotes[0];
+    expect(note.transitionDate).toBe("2033-01-01");
+    note.selectedVersionId = note.versions.find(version => version.applicableFrom === "2033-01-01")!.versionId;
+    expect(() => validateCaliforniaReview(review)).toThrow("Version date review required");
+  });
+  it("requires renewed version review at the scheduled transition", () => {
+    const review = readCaliforniaReview();
+    review.versionNotes[0].asOf = "2033-01-01";
+    expect(() => validateCaliforniaReview(review)).toThrow("Version date review required");
+  });
+  it("rejects lost future-version evidence", () => {
+    const review = readCaliforniaReview();
+    review.versionNotes[0].versions.pop();
+    expect(() => validateCaliforniaReview(review)).toThrow("Incomplete version accounting");
+  });
+  it("does not apply the ordinary misdemeanor penalty to first-time unlicensed driving", () => {
+    const charge = getChargeById("ca-driving-without-license")!;
+    expect(charge.category).toBe("infraction");
+    expect(charge.categories).toEqual(["infraction", "misdemeanor"]);
+    expect(charge.maxPenalty).toContain("$100 base fine and no jail");
+    expect(charge.maxPenalty).toContain("third or later violation");
+    expect(charge.maxPenalty).toContain("§40000.10(a)");
+  });
+  it("keeps DUI subdivisions distinct and makes first-offense jail conditional on the sentencing path", () => {
+    for (const subdivision of ["a", "b", "f", "g"]) {
+      const charge = getChargeById(`ca-dui-23152-${subdivision}`)!;
+      expect(charge.code).toBe(`23152(${subdivision})`);
+      expect(charge.categories).toEqual(["misdemeanor", "felony"]);
+      expect(charge.maxPenalty).toContain("without probation");
+      expect(charge.maxPenalty).toContain("makes jail discretionary");
+      expect(charge.maxPenalty).toContain("§§23550 or 23550.5");
+      expect(getChargeExplanation(charge.name, "CA", "en", charge.id)?.canonicalChargeId).toBe(charge.id);
+    }
+    expect(getChargeById("ca-dui-23152-b")?.description).toContain("rebuttable presumption");
+    expect(getChargeById("ca-dui-23152-f")?.description).toContain("does not use the alcohol concentration threshold");
   });
   it("rejects a lost sentencing dependency", () => {
     const review = readCaliforniaReview();
@@ -54,10 +92,10 @@ describe("California bounded correction delivery", () => {
     review.documents["PEN:18.5"].push(structuredClone(review.documents["PEN:18.5"][0]));
     expect(() => validateCaliforniaReview(review)).toThrow("unresolved source versions");
   });
-  it("does not let pending DUI work become approved through a status edit", () => {
+  it("does not let bounded corrections become full verification through a status edit", () => {
     const review = readCaliforniaReview();
-    review.records.find(row => row.id === "ca-dui-23152-a")!.status = "bounded_correction_proposed";
-    expect(() => validateCaliforniaReview(review)).toThrow("Unreviewed record promoted");
+    review.records.find(row => row.id === "ca-dui-23152-a")!.status = "fully_verified";
+    expect(() => validateCaliforniaReview(review)).toThrow("Correction changed");
   });
   it("delivers exact summaries and penalties in every supported language", () => {
     for (const row of corrections) {

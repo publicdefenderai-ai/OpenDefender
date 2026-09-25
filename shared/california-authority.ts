@@ -153,10 +153,12 @@ export function getCaliforniaBatchCorrection(id: string) {
 export function getCaliforniaCorrectionDependencies(correction: {
   supportingSections: string[];
   supportingHealthSections?: string[];
+  supportingVehicleSections?: string[];
 }) {
   return [
     ...correction.supportingSections.map(section => ({ lawCode: "PEN" as const, section })),
     ...(correction.supportingHealthSections ?? []).map(section => ({ lawCode: "HSC" as const, section })),
+    ...(correction.supportingVehicleSections ?? []).map(section => ({ lawCode: "VEH" as const, section })),
   ];
 }
 

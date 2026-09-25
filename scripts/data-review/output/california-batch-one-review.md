@@ -1,14 +1,21 @@
 # California batch one: corrections and remaining work
 
-25 existing records accounted for: 19 bounded corrections proposed; 6 remain in research. 58 source sections (59 versions) retained. No new charges published.
+25 existing records accounted for: 25 bounded corrections proposed; 0 await this correction pass; deeper legal review remains. 64 source sections (65 versions) retained. No new charges published.
 
 Archive: https://downloads.leginfo.legislature.ca.gov/pubinfo_2025.zip; modified Mon, 21 Sep 2026 04:26:05 GMT; acquired 2026-09-24T22:10:49.174194+00:00.
 
 - Source acquisition at the archived version is not a live refresh of every dependency.
-- All 25 records accounted; 19 bounded corrections proposed. Attorney review remains pending.
+- All 25 records accounted; 25 bounded corrections proposed. Attorney review remains pending.
 - Multiple source versions are retained; no last-row-wins version selection.
 - Shared research dependencies are not automatically all publication dependencies.
 - Runtime source database remains reference-only; this research bundle does not pretend its XML has been seeded.
+
+## Known source transition
+
+VEH:13352: research as of 2026-09-24; transition 2033-01-01. The amendment operative in 2026 has a scheduled 2033 repeal; the successor is not operative until 2033. Both versions remain preserved. The applicable statute can also depend on the offense date. No precise suspension duration or interlock eligibility is calculated by this correction batch.
+
+- Version id_1f3f7ef6-c630-11f0-975c-e301db986e9c: 2026-01-01 to 2033-01-01. Amended (as amended by Stats. 2025, Ch. 16, Sec. 6) by Stats. 2025, Ch. 689, Sec. 1.   (AB 366)   Effective January 1, 2026.   Repealed as of January 1, 2033, by its own provisions.    See later operative version, as amended by Sec. 2 of Stats. 2025, Ch. 689.
+- Version id_21272ab8-c630-11f0-975c-e301db986e9c: 2033-01-01 to no stated end. Amended (as amended by Stats. 2025, Ch. 16, Sec. 7) by Stats. 2025, Ch. 689, Sec. 2.   (AB 366)   Effective January 1, 2026.   Section operative January 1, 2033, by its own provisions.
 
 ## ca-assault-240
 
@@ -310,36 +317,139 @@ Remaining work: Bounded penalty/category and statutory-scope correction only; co
 
 ## ca-dui-23152-a
 
-Research pending.
+Driving while under the influence of alcohol under §23152(a). This is an impairment charge, distinct from the 0.08-percent concentration charge in subdivision (b). The citation alone does not establish that this is a first offense or determine the effect of prior convictions.
 
-Remaining work: Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag.
+For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [VEH:23152](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23152.)
+- [VEH:23536](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23536.)
+- [VEH:23538](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23538.)
+- [VEH:23540](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23540.)
+- [VEH:23542](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23542.)
+- [VEH:23546](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23546.)
+- [VEH:23548](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23548.)
+- [VEH:23550](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.)
+- [VEH:23550.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.5.)
+- [VEH:23552](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23552.)
+- [VEH:23600](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23600.)
+- [VEH:40000.15](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.15.)
+
+Remaining work: Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved.
 
 ## ca-dui-23152-b
 
-Research pending.
+Driving with a blood-alcohol concentration of 0.08 percent or more by weight under §23152(b). A test within three hours can create the statute’s rebuttable presumption about the concentration when driving; it is not conclusive proof. This is distinct from the impairment allegation in subdivision (a). Prior convictions still require review.
 
-Remaining work: Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag.
+For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [VEH:23152](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23152.)
+- [VEH:23536](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23536.)
+- [VEH:23538](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23538.)
+- [VEH:23540](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23540.)
+- [VEH:23542](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23542.)
+- [VEH:23546](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23546.)
+- [VEH:23548](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23548.)
+- [VEH:23550](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.)
+- [VEH:23550.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.5.)
+- [VEH:23552](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23552.)
+- [VEH:23600](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23600.)
+- [VEH:40000.15](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.15.)
+
+Remaining work: Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved.
 
 ## ca-dui-23152-f
 
-Research pending.
+Driving while under the influence of a drug under §23152(f). This subdivision does not use the alcohol concentration threshold in subdivision (b); the alleged impairment and evidence matter. A prescription does not by itself resolve whether driving was impaired. Prior convictions and sentencing circumstances require separate review.
 
-Remaining work: Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag.
+For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [VEH:23152](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23152.)
+- [VEH:23536](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23536.)
+- [VEH:23538](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23538.)
+- [VEH:23540](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23540.)
+- [VEH:23542](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23542.)
+- [VEH:23546](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23546.)
+- [VEH:23548](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23548.)
+- [VEH:23550](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.)
+- [VEH:23550.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.5.)
+- [VEH:23552](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23552.)
+- [VEH:23600](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23600.)
+- [VEH:40000.15](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.15.)
+
+Remaining work: Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved.
 
 ## ca-dui-23152-g
 
-Research pending.
+Driving while under the combined influence of alcohol and a drug under §23152(g). This is a combined-impairment allegation, not the separate 0.08-percent concentration charge. The charged subdivision, evidence of impairment, prior convictions, and sentencing circumstances must be checked.
 
-Remaining work: Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag.
+For an ordinary first offense without probation, §23536 specifies 96 hours to 6 months in county jail (at least 48 hours continuous) and a $390–$1,000 base fine. With probation, §23538 requires the fine but makes jail discretionary; if imposed under that provision, it is 48 hours to 6 months. Probation generally lasts 3–5 years (§23600). Qualifying priors change the sentencing branch and can permit felony punishment under §§23550 or 23550.5; do not use the first-offense range for those cases. Programs, license restrictions or suspension, ignition-interlock requirements, assessments, and aggravating facts require case-specific review.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:18.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=18.5.)
+- [VEH:23152](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23152.)
+- [VEH:23536](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23536.)
+- [VEH:23538](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23538.)
+- [VEH:23540](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23540.)
+- [VEH:23542](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23542.)
+- [VEH:23546](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23546.)
+- [VEH:23548](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23548.)
+- [VEH:23550](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.)
+- [VEH:23550.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23550.5.)
+- [VEH:23552](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23552.)
+- [VEH:23600](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23600.)
+- [VEH:40000.15](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.15.)
+
+Remaining work: Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved.
 
 ## ca-reckless-driving
 
-Research pending.
+Driving on a highway or in an offstreet parking facility in willful or wanton disregard for the safety of persons or property (§23103). Ordinary careless driving alone is not the stated standard. Injury-related punishment and commercial-image-capture circumstances follow different provisions; check the allegations before using the ordinary penalty.
 
-Remaining work: Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag.
+Ordinary §23103(c) misdemeanor: 5–90 days in county jail, a $145–$1,000 base fine, or both. Injury provisions in §§23104 and 23105 can change the range and, in specified cases, permit felony punishment. Section 40008 sets different penalties for specified commercial-image-capture conduct. Those branches, assessments, and license consequences need separate review; the ordinary 90-day maximum is not a maximum for every reckless-driving case.
+
+Supporting sources:
+
+- [PEN:1170](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=1170.)
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [VEH:23103](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23103.)
+- [VEH:23104](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23104.)
+- [VEH:23105](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23105.)
+- [VEH:40000.15](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.15.)
+- [VEH:40008](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40008.)
+
+Remaining work: Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved.
 
 ## ca-driving-without-license
 
-Research pending.
+Driving a motor vehicle on a highway without the required valid license under §12500(a), subject to statutory exemptions. The charging history and specified prior suspensions or revocations affect classification under §40000.10. This is not the same offense as driving while a license is suspended or revoked.
 
-Remaining work: Resolve DUI prior-history/probation branches and two §13352 versions, and §12500 infraction treatment; do not infer operative version from activeFlag.
+Under §40000.10(a), an ordinary first or second violation is an infraction with a $100 base fine and no jail. A specified prior license suspension or revocation, or a third or later violation, allows misdemeanor or infraction treatment under §19.8: an infraction fine up to $250, or misdemeanor punishment up to 6 months in county jail, a fine up to $1,000, or both (§42002). Assessments and other consequences may add to the base fine; do not assume every §12500(a) charge is a misdemeanor.
+
+Supporting sources:
+
+- [PEN:17](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=17.)
+- [PEN:19.6](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.6.)
+- [PEN:19.8](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=19.8.)
+- [VEH:12500](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=12500.)
+- [VEH:40000.10](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=40000.10.)
+- [VEH:42002](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=42002.)
+
+Remaining work: Bounded statutory correction only. Exact repeat-offense sentencing, enhancements, DMV administrative proceedings, license duration/restrictions and eligibility, and case-law/independent legal review remain. No personalized sentence or license calculation is approved.

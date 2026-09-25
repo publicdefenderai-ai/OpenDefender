@@ -97,3 +97,31 @@ Application typecheck, production build, 76 focused tests, and four production-b
 GitHub checks on PR 8 failed before running tests because `vitest` and `playwright` were not found on the runner (run 36092327383). This is a separate CI installation issue; local passing checks do not establish green GitHub CI. No workflow permissions were requested and no CI configuration was bundled into this data-review change.
 
 After merge, the deployment requirement above still applies: refresh the California source references in the intended Replit database and republish. The next grouped review is the six driving records, including the four DUI subdivisions and the retained versions of VEH §13352. Complete case-law, enhancements, diversion, and independent legal review remain outside the bounded corrections; no new attorney data-entry task is created by this delivery.
+
+## Driving correction delivery after PR 9
+
+PR 9 merged at `faa13f3ff41979e021cf032b4740f2834b8a9d57`, including the reviewed fix that copies explicit California classification alternatives onto existing shared-catalog entries. A regression test reads `criminalCharges` directly, including vandalism, rather than relying solely on canonical lookup helpers. Legacy inventory IDs and primary-category accounting are preserved.
+
+This delivery combines the six remaining initial-batch records: four distinct §23152 DUI subdivisions, reckless driving, and §12500(a) unlicensed driving. The initial 25 records now each have bounded statutory corrections. That is a completed correction pass, not complete legal certification, statewide discovery, or production deployment.
+
+The main corrections are:
+
+- First-offense DUI descriptions distinguish the §23536 punishment without probation from §23538's discretionary jail condition when probation is granted. They preserve repeat-offender felony possibilities and make clear that the ordinary first-offense range is not universal. Subdivisions (a), (b), (f), and (g) remain distinct, including the rebuttable BAC presumption in (b).
+- Reckless driving includes the ordinary jail/fine alternatives and identifies §§23104, 23105, and 40008 as separate punishment branches. The ordinary 90-day upper bound is not presented as the limit for every injury or commercial-image-capture case.
+- Unlicensed driving uses §40000.10, effective January 1, 2023: an ordinary first or second violation is a $100 infraction, with specified prior-suspension/revocation and third-or-later-violation exceptions. The record is no longer presented as invariably a misdemeanor. §42002 supplies the misdemeanor punishment. §40000.11, collected earlier as a candidate source, does not establish this charge's grading and is not a correction dependency.
+
+All six use the existing translated exact-ID explanation path; translations remain drafts. Vehicle Code dependencies use the same resolver and seeded-reference requirement as the Penal Code and Health and Safety Code dependencies. No new charge IDs or automatic remappings are introduced.
+
+### Future licensing law is accounted for separately
+
+The source bundle retains both VEH §13352 versions. The research note identifies the 2026 amendment with scheduled repeal on January 1, 2033, and the successor not operative until that date. The note binds both version identities and content hashes to their source histories and fixes an explicit research date. The validator rejects choosing the future version for that date, losing its evidence, or advancing the research date to the transition without renewed review.
+
+This is research accounting, not a runtime license calculator or an automatic monitoring service. Offense dates, administrative DMV proceedings, interlock eligibility, exact suspension/revocation duration, and statutory exceptions still require their own review. Neither multi-version section is silently admitted as a single correction source, and no precise license duration is newly published.
+
+### Reuse, checks, and what remains
+
+Six additional sections were extracted from the already cached official archive: VEH §§40000.10, 40000.15, 42002, 23104, 23105, and 40008. The bundle now holds 64 sections/65 versions. Their original member names, table/content hashes, and official URLs are preserved. Reproduce these requests with the existing extractor's `extract(archive, requests)` function after verifying the archive against its receipt. The correction validator/renderer continues to run entirely from committed evidence without that download cache.
+
+Application typecheck, production build, 82 focused tests, and six production-browser checks passed. Browser coverage includes all 25 corrected catalog penalties/categories, rules-guidance propagation, and visible license/DUI classification alternatives. No external AI or real user cases were used. The previously documented GitHub runner installation problem remains separate; these local results do not claim green GitHub CI.
+
+After review and merge, refresh the California source references in the intended Replit database, republish, and verify public rollout as described above. No production seed or deployment occurred here. The next scope is the remaining 74 selectable California records, alongside broader source-discovery accounting so missing charges are tracked rather than equated with catalog coverage. Complete case-law, enhancement, individualized sentencing, and independent legal review remain distinct from this 25-record correction pass. No new attorney data-entry task is needed for the current delivery.
