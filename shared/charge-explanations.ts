@@ -3857,16 +3857,3 @@ export function getChargeExplanation(
   return null;
 }
 
-export function getMultipleChargeExplanations(
-  chargeNames: string[],
-  jurisdiction?: string,
-  language?: string
-): Array<{
-  chargeName: string;
-  explanation: ChargeExplanationWithJurisdiction | null;
-}> {
-  return chargeNames.map(name => ({
-    chargeName: name,
-    explanation: getChargeExplanation(name, jurisdiction, language)
-  }));
-}
