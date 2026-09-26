@@ -1,3 +1,4 @@
+import receipt from "../scripts/data-review/output/florida-reviewed-refresh-receipt.json";
 import { describe, expect, it } from "vitest";
 import {
   buildFloridaCoverageInventory,
@@ -5,7 +6,15 @@ import {
 } from "../scripts/data-review/build-florida-coverage-inventory";
 
 describe("Florida coverage inventory", () => {
-  const inventory = buildFloridaCoverageInventory();
+  // Structural expectations use the receipt issuance time; expiry is tested separately.
+  const inventory = buildFloridaCoverageInventory(undefined, new Date(receipt.checkedAt));
+
+  it("reports zero reviewed selections when the receipt expires", () => {
+    const expired = buildFloridaCoverageInventory(undefined, new Date(receipt.expiresAt));
+    expect(expired.summary.reviewedSelectableRecords).toBe(0);
+    expect(expired.summary.currentSelectableRecords).toBe(25);
+    expect(expired.summary.reviewedRuntimeBlockReason).toBeTruthy();
+  });
 
   it("reports cached evidence without inventing a statewide completeness denominator", () => {
     expect(inventory.summary.cachedOfficialSections).toBe(1431);

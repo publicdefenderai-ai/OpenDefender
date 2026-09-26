@@ -1,3 +1,4 @@
+import receipt from "../scripts/data-review/output/florida-reviewed-refresh-receipt.json";
 import { describe, expect, it } from "vitest";
 import { createHash } from "node:crypto";
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
@@ -70,8 +71,10 @@ describe("Florida authority manifest", () => {
   });
 
   it("adds every currently approved source-first record without publishing held rows", () => {
-    const manifest = loadFloridaAuthorityManifest();
-    const seed = buildFloridaSourceDatabaseSeed(manifest);
+    // Reproduce the approved snapshot independently of the day this test runs.
+    const now = new Date(receipt.checkedAt);
+    const manifest = loadFloridaAuthorityManifest(undefined, now);
+    const seed = buildFloridaSourceDatabaseSeed(manifest, now);
     const approvedIds = new Set(
       FLORIDA_REVIEWED_SOURCE_RECORDS.map((record) => record.chargeId),
     );

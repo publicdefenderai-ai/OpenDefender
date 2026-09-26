@@ -10,7 +10,7 @@ nothing, and cannot activate records or extend timestamps.
 Run:
 
 ```sh
-npx tsx scripts/data-review/florida-reviewed-preflight.ts
+npm run review:florida-freshness
 ```
 
 The command prints JSON and exits nonzero if evidence is expired, is within the
@@ -65,3 +65,45 @@ The `--refresh` path permits deliberate retrieval during the 48-hour lead
 window; the preflight itself still does not retrieve anything. Reissuing or
 editing a receipt cannot extend the evidence's seven-day lifetime. No command
 in this runbook installs a reminder, scheduler, or automatic refresh.
+
+## September 26 recovery and deployment
+
+The September 25, 2026 21:18:23 UTC receipt expired. Independent checks reproduced
+three failing tests and a manifest reduction from 218 to 117 records. The public
+Case Guidance selector showed 25 Florida charges on September 26; this observation
+does not establish when production first lost the other 101 selections.
+
+All 92 required official sections were retrieved again in four bounded batches
+(30/30/30/2). Each section's full extracted text, title, section identity, URL,
+edition, effective-date field and recomputed content hash matched the previously
+reviewed evidence. The exact prepared report also matched the previous report
+apart from genuine retrieval timestamps. Existing legal decisions were preserved;
+no changed text was approved. See
+[the comparison receipt](../scripts/data-review/output/florida-refresh-2026-09-26.json).
+
+The recovered local manifest has 218 records and 126 selectable charges (25 legacy
+plus 101 source-first). This is not a claim of deployment or statewide completeness.
+The new expiry is **2026-10-03 01:39:08 UTC**, with a refresh target before
+**2026-10-01 01:39:08 UTC** (September 30 at 6:39 p.m. Pacific).
+
+After the recovery PR is merged, in Replit:
+
+1. Pull the latest GitHub main branch.
+2. Run `npm run review:florida-freshness`; require `ok: true`.
+3. Run `npm run db:seed:florida -- --dry-run`; expect 218 manifest records and
+   126 selectable charges for this snapshot.
+4. Run `npm run db:seed:florida`, then republish/restart the deployment so its
+   server loads the new committed receipt and evidence.
+5. Check the public Florida selector for 126 charges. If it still shows 25, check
+   that the published server and database received this revision; do not weaken
+   the freshness gate.
+
+Structural tests now use the receipt's issuance time so they do not change with
+the calendar. Separate tests verify exclusion exactly at expiry, including a
+previously composed manifest. These tests do not certify present freshness:
+`npm run review:florida-freshness` remains the real-clock operational check.
+Run that check daily and before deployment. A recurring source-maintenance job
+is still needed to prevent this class of interruption across states; no scheduled
+job is installed by this change. It should alert before expiry, compare unchanged
+sources mechanically, and route changed authority for review without copying its
+old approval.

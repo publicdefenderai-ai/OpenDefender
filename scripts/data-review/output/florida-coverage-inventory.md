@@ -1,6 +1,6 @@
 # Florida coverage inventory
 
-Inventory evidence as of: 2026-09-18T20:07:14.452Z
+Inventory evidence as of: 2026-09-26T01:42:27.663Z
 
 This is a technical evidence/workflow inventory, not a representation of all Florida criminal offenses. The statewide denominator and actual offense count are unknown; no completeness percentage is calculated. Cached, unreviewed sections are **not yet analyzed**. Legacy cleanup holds are not counted as missing offenses.
 
@@ -8,7 +8,7 @@ This is a technical evidence/workflow inventory, not a representation of all Flo
 
 | Measure | Count |
 |---|---:|
-| Cached official sections | 1426 |
+| Cached official sections | 1431 |
 | Current selectable records | 126 |
 | Reviewed selectable records | 101 |
 | Legacy selectable records | 25 |
@@ -70,4 +70,4 @@ This is a technical evidence/workflow inventory, not a representation of all Flo
 
 ## Machine-readable detail
 
-The JSON and CSV beside this report contain all 1432 section rows and 190 cited-scope rows, including original retrieval timestamps and content hashes. A duplicate-citation flag is informational only: it does not merge, alias, or delete records (including the legacy/new § 831.01 forgery records).
+The JSON and CSV beside this report contain all 1436 section rows and 190 cited-scope rows, including original retrieval timestamps and content hashes. A duplicate-citation flag is informational only: it does not merge, alias, or delete records (including the legacy/new § 831.01 forgery records).

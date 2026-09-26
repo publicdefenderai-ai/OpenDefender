@@ -1,3 +1,4 @@
+import receipt from "../scripts/data-review/output/florida-reviewed-refresh-receipt.json";
 import { describe, expect, it } from "vitest";
 import { loadFloridaAuthorityManifest } from "../server/data/florida-manifest-loader";
 import { buildFloridaSourceDatabaseSeed } from "../server/data/florida-source-database-seed";
@@ -5,9 +6,23 @@ import { FLORIDA_REVIEWED_SOURCE_RECORDS } from "../server/data/florida-reviewed
 import { FLORIDA_REVIEWED_DEFINITIONS } from "../shared/florida-reviewed-batch";
 
 describe("committed Florida deployment seed", () => {
+  it("withholds reviewed records exactly at expiry, including when seeding a previously fresh manifest", () => {
+    const freshAt = new Date(receipt.checkedAt);
+    const expiresAt = new Date(receipt.expiresAt);
+    const beforeExpiry = new Date(expiresAt.getTime() - 1);
+    const freshManifest = loadFloridaAuthorityManifest(undefined, freshAt);
+    expect(loadFloridaAuthorityManifest(undefined, beforeExpiry).catalogRecords).toHaveLength(117 + FLORIDA_REVIEWED_SOURCE_RECORDS.length);
+    expect(loadFloridaAuthorityManifest(undefined, expiresAt).catalogRecords).toHaveLength(117);
+    const expiredSeed = buildFloridaSourceDatabaseSeed(freshManifest, expiresAt);
+    expect(expiredSeed.selectableChargeIds).toHaveLength(25);
+    expect(expiredSeed.selectableChargeIds.some(id => id.startsWith("fl-fs-"))).toBe(false);
+  });
+
   it("loads the committed manifest without live legislative-site access", () => {
-    const manifest = loadFloridaAuthorityManifest();
-    const seed = buildFloridaSourceDatabaseSeed(manifest);
+    // Reproduce the approved snapshot independently of the day this test runs.
+    const now = new Date(receipt.checkedAt);
+    const manifest = loadFloridaAuthorityManifest(undefined, now);
+    const seed = buildFloridaSourceDatabaseSeed(manifest, now);
     const approvedIds = new Set(
       FLORIDA_REVIEWED_SOURCE_RECORDS.map((record) => record.chargeId),
     );

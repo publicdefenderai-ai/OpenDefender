@@ -1,0 +1,758 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "6da64f8ca4e1666b9bfab434c08c9f01192025ec",
+  "reviewedAt": "2026-09-26T01:42:36.108Z",
+  "previousExpiresAt": "2026-09-25T21:18:23.012Z",
+  "requiredSections": 92,
+  "changedSections": 0,
+  "comparison": "Exact equality of section, title, full extracted text, URL, edition, effectiveDateStart and recomputed content hash. All retrievals postdate preflight; no legal interpretation changed.",
+  "documents": [
+    {
+      "section": "104.091",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0104/Sections/0104.091.html",
+      "contentHash": "da78538a5794c2676e83b6fe65959cda20328bf2dfbe86b1dced5aa760d319ce",
+      "previousRetrievedAt": "2026-09-18T21:18:23.012Z",
+      "retrievedAt": "2026-09-26T01:39:08.514Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "316.061",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.061.html",
+      "contentHash": "5738ff75d998af32ab1026a843e15292b98d19b5b5d0dd73ac3b03e61a4bdfa4",
+      "previousRetrievedAt": "2026-09-18T21:18:25.575Z",
+      "retrievedAt": "2026-09-26T01:39:11.310Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "316.062",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.062.html",
+      "contentHash": "3aba09ad1688305730bb8a35ff246e2ed0955f5ffdebf575899ce5fd6176e2fa",
+      "previousRetrievedAt": "2026-09-18T21:18:27.711Z",
+      "retrievedAt": "2026-09-26T01:39:13.464Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "316.193",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0316/Sections/0316.193.html",
+      "contentHash": "e8713b0e9f2415de8fae4d55178db0c2ba572df5f3a3ad1107072b5506c4701f",
+      "previousRetrievedAt": "2026-09-18T21:18:29.918Z",
+      "retrievedAt": "2026-09-26T01:39:15.623Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "320.07",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0320/Sections/0320.07.html",
+      "contentHash": "2c7ee3607c70a574be9d6f5e607919a251d653e481e55713a99ca1f1d405680d",
+      "previousRetrievedAt": "2026-09-18T21:18:32.131Z",
+      "retrievedAt": "2026-09-26T01:39:17.867Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "322.01",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.01.html",
+      "contentHash": "c407705ecbc5c0eb5e044d38781f8612155ed9ca9c4147b2a6031763e4c5fa88",
+      "previousRetrievedAt": "2026-09-18T21:18:34.314Z",
+      "retrievedAt": "2026-09-26T01:39:20.146Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "322.264",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.264.html",
+      "contentHash": "c4eb707c8a2ed6985eaad76041793b38118aa53e8363663358792e2fd614b22c",
+      "previousRetrievedAt": "2026-09-18T21:18:36.528Z",
+      "retrievedAt": "2026-09-26T01:39:22.300Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "322.34",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0322/Sections/0322.34.html",
+      "contentHash": "9983473af9d386f96fb91611db1a1f4d235173a736b9376129b473da4e97612b",
+      "previousRetrievedAt": "2026-09-18T21:18:38.732Z",
+      "retrievedAt": "2026-09-26T01:39:24.444Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "379.2431",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0300-0399/0379/Sections/0379.2431.html",
+      "contentHash": "1149c82fb33f4f25158ac758c4a6c32533f83ae4a46ee7747ea938b423fbdb91",
+      "previousRetrievedAt": "2026-09-18T21:18:41.037Z",
+      "retrievedAt": "2026-09-26T01:39:26.595Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "403.413",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0403/Sections/0403.413.html",
+      "contentHash": "e777e643a98637b909a7a82e1e0fd6a42935addcb8817ba04ea9bd81e0e6e702",
+      "previousRetrievedAt": "2026-09-18T21:18:43.224Z",
+      "retrievedAt": "2026-09-26T01:39:28.748Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "562.12",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0500-0599/0562/Sections/0562.12.html",
+      "contentHash": "a3302039cc0f2923e07ba9090646b44914ee11d704fe2c6185f51cbbbfe4f32b",
+      "previousRetrievedAt": "2026-09-18T21:18:45.372Z",
+      "retrievedAt": "2026-09-26T01:39:30.891Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "741.30",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.30.html",
+      "contentHash": "6172a1f323138c9830739c30af5a74bfede5570ec9b5aba52242e86e986ae7a9",
+      "previousRetrievedAt": "2026-09-18T21:18:47.522Z",
+      "retrievedAt": "2026-09-26T01:39:33.026Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "741.31",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.31.html",
+      "contentHash": "f0433c68106ee239b69af6a51f56ba48ae06cd2cee67d0b92b0245efc3c15cae",
+      "previousRetrievedAt": "2026-09-18T21:18:49.650Z",
+      "retrievedAt": "2026-09-26T01:39:35.177Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "741.315",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.315.html",
+      "contentHash": "2625ce28385057cadc189bcd552d39251d0c024ab3c757f4f70cac8fa90a51de",
+      "previousRetrievedAt": "2026-09-18T21:18:51.792Z",
+      "retrievedAt": "2026-09-26T01:39:37.327Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "775.021",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.021.html",
+      "contentHash": "2a605d893dc481376f6e9fd2f989ddd2b5647d24c007da514f6d6cf63d8f7f99",
+      "previousRetrievedAt": "2026-09-18T21:18:53.917Z",
+      "retrievedAt": "2026-09-26T01:39:39.500Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "775.08",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.08.html",
+      "contentHash": "96a65ca0b053a329b5131dea9d261c044e712261b2d99e3ddeae23a8ee5c6b32",
+      "previousRetrievedAt": "2026-09-18T21:18:56.071Z",
+      "retrievedAt": "2026-09-26T01:39:41.647Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "775.082",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.082.html",
+      "contentHash": "ce7d77dd9b8582b3f7e8559aa0784d7798c48dd70f51aff79dbccebe94bedd9c",
+      "previousRetrievedAt": "2026-09-18T21:18:58.265Z",
+      "retrievedAt": "2026-09-26T01:39:43.798Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "775.083",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.083.html",
+      "contentHash": "d4e9a9527ef821de6935f5763bf7ccf7fd6dc0bdc59014b0c9e063611d2768a7",
+      "previousRetrievedAt": "2026-09-18T21:19:00.479Z",
+      "retrievedAt": "2026-09-26T01:39:45.951Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "775.084",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0775/Sections/0775.084.html",
+      "contentHash": "e2f0ef78192f6448f7552357472ee5e402a791da88c7ca3e64cb1424f9c98d53",
+      "previousRetrievedAt": "2026-09-18T21:19:02.633Z",
+      "retrievedAt": "2026-09-26T01:39:48.102Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.012",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.012.html",
+      "contentHash": "4c82f432745169104e9d97e706f1cc863c9b865cfdbd215340e2c87bbe1647cb",
+      "previousRetrievedAt": "2026-09-18T21:19:04.766Z",
+      "retrievedAt": "2026-09-26T01:39:50.256Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.013",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.013.html",
+      "contentHash": "9fc162802b16ff80f2f3594a3cdddfd9c0089011e608b48a203de83018668be1",
+      "previousRetrievedAt": "2026-09-18T21:19:06.890Z",
+      "retrievedAt": "2026-09-26T01:39:52.413Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.031",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.031.html",
+      "contentHash": "19a00e10c34d1876fc4feb29ac1901bf96edec719a8b1b5289a80b8c9c3cc084",
+      "previousRetrievedAt": "2026-09-18T21:19:09.020Z",
+      "retrievedAt": "2026-09-26T01:39:54.554Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.032",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.032.html",
+      "contentHash": "096c2ee76f0190119db9583677ce9bc92e2ba26757feee2314ca63ba84db8023",
+      "previousRetrievedAt": "2026-09-18T21:19:11.155Z",
+      "retrievedAt": "2026-09-26T01:39:56.706Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.041",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.041.html",
+      "contentHash": "99e3f241a9d7bc5a39740a6e0677394b99cf8f9b4c8b45b6b703bb7a53cdba5b",
+      "previousRetrievedAt": "2026-09-18T21:19:13.305Z",
+      "retrievedAt": "2026-09-26T01:39:58.860Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.05",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.05.html",
+      "contentHash": "34bb4f7f06619d06d5744a084e464a2c9dc41042800318af015b43e38fbf45fe",
+      "previousRetrievedAt": "2026-09-18T21:19:15.450Z",
+      "retrievedAt": "2026-09-26T01:40:01.162Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.051",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.051.html",
+      "contentHash": "9dc0a5e6e6bf54996472e375854a27c2ff4f6f54ef0569a11b64738a7dcda78a",
+      "previousRetrievedAt": "2026-09-18T21:19:17.641Z",
+      "retrievedAt": "2026-09-26T01:40:03.456Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.06",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.06.html",
+      "contentHash": "973dda02890b8d8bb21c11c0082396f96a362d86f7c3ba578e25cbc2e5689e39",
+      "previousRetrievedAt": "2026-09-18T21:19:19.798Z",
+      "retrievedAt": "2026-09-26T01:40:05.621Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.07",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.07.html",
+      "contentHash": "85c47a2137048b35c12b76e94c2f50268809ef09248917de3d5c1c3f78e35f8f",
+      "previousRetrievedAt": "2026-09-18T21:19:21.967Z",
+      "retrievedAt": "2026-09-26T01:40:07.769Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.08",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.08.html",
+      "contentHash": "166b2e2edbd124db3c91bfdf36964c0dda46571bd9f4f855dc2ee40602512a7d",
+      "previousRetrievedAt": "2026-09-18T21:19:24.180Z",
+      "retrievedAt": "2026-09-26T01:40:09.957Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.085",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.085.html",
+      "contentHash": "903aba7fb14da11661fbeb026184c44cdd8aec5404c5f8011c7478aa59d29080",
+      "previousRetrievedAt": "2026-09-18T21:19:26.359Z",
+      "retrievedAt": "2026-09-26T01:40:12.119Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "776.09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0776/Sections/0776.09.html",
+      "contentHash": "529f5a5cf36f99e0e95d66d1521bf1ce91746b2953e87bbf948bac3a9b1533eb",
+      "previousRetrievedAt": "2026-09-18T21:19:30.878Z",
+      "retrievedAt": "2026-09-26T01:40:12.474Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "777.03",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.03.html",
+      "contentHash": "f3042356d8a93432783f06ac32509bb4841877c64c66ddc856d0fbb82e6846f9",
+      "previousRetrievedAt": "2026-09-18T21:19:33.271Z",
+      "retrievedAt": "2026-09-26T01:40:14.965Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "777.04",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0777/Sections/0777.04.html",
+      "contentHash": "b0d68f606bbdb97a028ac1daf5fb72d6774fa097619dae5eee7fcc4ddb70208d",
+      "previousRetrievedAt": "2026-09-18T21:19:35.417Z",
+      "retrievedAt": "2026-09-26T01:40:17.119Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "782.03",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.03.html",
+      "contentHash": "66b49cf07e36ace8fd8a52371d26ff091c127bd13d2e8b2881ff31817aa63680",
+      "previousRetrievedAt": "2026-09-18T21:19:37.567Z",
+      "retrievedAt": "2026-09-26T01:40:19.282Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "782.04",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.04.html",
+      "contentHash": "886a87a3967443e7ecc55ed3d96d05b17cd7740dbafcc8cd1307a0a8eefafe45",
+      "previousRetrievedAt": "2026-09-18T21:19:39.713Z",
+      "retrievedAt": "2026-09-26T01:40:21.436Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "782.07",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0782/Sections/0782.07.html",
+      "contentHash": "2dc8e2be861854f9db54b928abffbeba8a4e014c5c3657b2d16b578817bb136c",
+      "previousRetrievedAt": "2026-09-18T21:19:41.844Z",
+      "retrievedAt": "2026-09-26T01:40:23.590Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "784.011",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.011.html",
+      "contentHash": "143f4f76426ca8661d0c6ee16a6f003b2e7e9a0f08d4b8c7c12155b5f6ac74e6",
+      "previousRetrievedAt": "2026-09-18T21:19:43.975Z",
+      "retrievedAt": "2026-09-26T01:40:25.748Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "784.03",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.03.html",
+      "contentHash": "c2683c299ff1785d755e2fadcdc82b5a8935321faac5d614bc68442c09816e20",
+      "previousRetrievedAt": "2026-09-18T21:19:46.108Z",
+      "retrievedAt": "2026-09-26T01:40:27.898Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "784.045",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.045.html",
+      "contentHash": "088b97218e1d088b7f11641413406be743db049b37a72a6cccb5f5d9b4eb3a85",
+      "previousRetrievedAt": "2026-09-18T21:19:48.241Z",
+      "retrievedAt": "2026-09-26T01:40:30.070Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "784.048",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0784/Sections/0784.048.html",
+      "contentHash": "5bb40bbb4be50afd26f3e959e1bfb87e90eed0fb52316e1518a9a3ba5c6faea1",
+      "previousRetrievedAt": "2026-09-18T21:19:50.472Z",
+      "retrievedAt": "2026-09-26T01:40:32.225Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "790.001",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.001.html",
+      "contentHash": "cd1b42285d13324a3914a699ee10c76b8a46e8beca1199d11cf0cd37c2a2072f",
+      "previousRetrievedAt": "2026-09-18T21:19:52.609Z",
+      "retrievedAt": "2026-09-26T01:40:34.357Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "790.221",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.221.html",
+      "contentHash": "e6ed1741c1a29b4614a6ae01ad7b29589a48ce433513d198ccf9420afda2d886",
+      "previousRetrievedAt": "2026-09-18T21:19:54.756Z",
+      "retrievedAt": "2026-09-26T01:40:36.504Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "790.23",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0790/Sections/0790.23.html",
+      "contentHash": "7cccddd133508a99f451fe827c60c0d01c22ea27bdd5b266ada759c222d50c1d",
+      "previousRetrievedAt": "2026-09-18T21:19:56.949Z",
+      "retrievedAt": "2026-09-26T01:40:38.652Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "794.011",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0794/Sections/0794.011.html",
+      "contentHash": "b77d824014613d68e1116453a3cc95bebc48cbba6353d8dd040c11474f65c60a",
+      "previousRetrievedAt": "2026-09-18T21:19:59.109Z",
+      "retrievedAt": "2026-09-26T01:40:41.030Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "796.07",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0796/Sections/0796.07.html",
+      "contentHash": "2db10ef8152b2810184e89cd93a4f35a3988589249c1d5a7016285d5b08814a7",
+      "previousRetrievedAt": "2026-09-18T21:20:01.385Z",
+      "retrievedAt": "2026-09-26T01:40:43.347Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "800.03",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.03.html",
+      "contentHash": "df7bd7420beae7f4fb552d265df5376026e0868b93ea5c093f5717b2cb28a940",
+      "previousRetrievedAt": "2026-09-18T21:20:03.683Z",
+      "retrievedAt": "2026-09-26T01:40:45.607Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "800.04",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0800/Sections/0800.04.html",
+      "contentHash": "be4860d2e8183e88e2c2da7747ecf9e8ab4ca31fbbb7cfd83285d066a521a96a",
+      "previousRetrievedAt": "2026-09-18T21:20:05.816Z",
+      "retrievedAt": "2026-09-26T01:40:47.841Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "806.01",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.01.html",
+      "contentHash": "e13db2fe21460576183be83a4004bdd0ccf52a7c5d9013a3ead2a7621092305c",
+      "previousRetrievedAt": "2026-09-18T21:20:07.969Z",
+      "retrievedAt": "2026-09-26T01:40:50.085Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "806.13",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0806/Sections/0806.13.html",
+      "contentHash": "2a26f6fe81a54e875fffe4fec87b9e390243943b9cf092999a9d8c13400852ac",
+      "previousRetrievedAt": "2026-09-18T21:20:10.194Z",
+      "retrievedAt": "2026-09-26T01:40:52.326Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "810.011",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.011.html",
+      "contentHash": "468602d34d5856eaba3645c3174e8f598866f1b0098f6e2c8c9320bafbe8821d",
+      "previousRetrievedAt": "2026-09-18T21:20:12.346Z",
+      "retrievedAt": "2026-09-26T01:40:54.635Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "810.09",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0810/Sections/0810.09.html",
+      "contentHash": "8d5da32e2029d8936090727630db84c1aadf8b060e51fce3d24001b864d671ec",
+      "previousRetrievedAt": "2026-09-18T21:20:14.481Z",
+      "retrievedAt": "2026-09-26T01:40:56.861Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "812.012",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.012.html",
+      "contentHash": "8137f28be09f21d9e5ac28cb5e2aa97152d87b8a76ac55a10da426e9655a53f0",
+      "previousRetrievedAt": "2026-09-18T21:20:16.629Z",
+      "retrievedAt": "2026-09-26T01:40:59.172Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "812.014",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.014.html",
+      "contentHash": "fe7a7c622d57b4b205f717d630c5e1b9c3414f6ce68327a1ce0d17f004247ec3",
+      "previousRetrievedAt": "2026-09-18T21:20:18.773Z",
+      "retrievedAt": "2026-09-26T01:41:01.396Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "812.015",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.015.html",
+      "contentHash": "291dd86e6b9004c610ac61c3064051a0e6175c3ad02ab4be30995591133b7238",
+      "previousRetrievedAt": "2026-09-18T21:20:20.936Z",
+      "retrievedAt": "2026-09-26T01:41:03.634Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "812.019",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0812/Sections/0812.019.html",
+      "contentHash": "94489dd693272ea5c58d6d5dc382e7726fd64c97e88ffc43506ef932c38a1a89",
+      "previousRetrievedAt": "2026-09-18T21:20:23.073Z",
+      "retrievedAt": "2026-09-26T01:41:05.949Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "815.06",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0815/Sections/0815.06.html",
+      "contentHash": "fa2eccee748350078b38da92e838a4525c91af38d1752a5eca4f9f1d0ba99377",
+      "previousRetrievedAt": "2026-09-18T21:20:25.242Z",
+      "retrievedAt": "2026-09-26T01:41:08.168Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "817.234",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.234.html",
+      "contentHash": "3f8622213620fe67548e2294bad82f7f83d8221086435a65a20d0497a62d75f5",
+      "previousRetrievedAt": "2026-09-18T21:20:27.470Z",
+      "retrievedAt": "2026-09-26T01:41:10.401Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "817.568",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.568.html",
+      "contentHash": "77a435e6d986110e314948f8e07ce0d1acb6f5807138f6026f3e0344c6158402",
+      "previousRetrievedAt": "2026-09-18T21:20:29.651Z",
+      "retrievedAt": "2026-09-26T01:41:12.717Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "817.61",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.61.html",
+      "contentHash": "0e9d649c4416380fa70119ad63b1642bc99589c8a37940ea5392a79381ba5f57",
+      "previousRetrievedAt": "2026-09-18T21:20:31.831Z",
+      "retrievedAt": "2026-09-26T01:41:15.044Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "817.67",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0817/Sections/0817.67.html",
+      "contentHash": "3faf1736c17c9faef9dc39a2914f08bdb6362186ba84446af3c91b9f151a4158",
+      "previousRetrievedAt": "2026-09-18T21:20:34.000Z",
+      "retrievedAt": "2026-09-26T01:41:17.287Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "825.101",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.101.html",
+      "contentHash": "d17c072dc5d6a9fd01ebba7d209167df5daa51f5f6f7b252d423bc37824fc15c",
+      "previousRetrievedAt": "2026-09-18T21:20:38.076Z",
+      "retrievedAt": "2026-09-26T01:41:17.651Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "825.102",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0825/Sections/0825.102.html",
+      "contentHash": "3e10ae58cfc3cb0bac6f33f759cfcabebfd47b4669469d3feab4d028dad80813",
+      "previousRetrievedAt": "2026-09-18T21:20:40.467Z",
+      "retrievedAt": "2026-09-26T01:41:20.095Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "827.01",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.01.html",
+      "contentHash": "b9affea3d8a2aff821678555ece05113167e9af78c36b46534ecea95f79de9b0",
+      "previousRetrievedAt": "2026-09-18T21:20:42.609Z",
+      "retrievedAt": "2026-09-26T01:41:22.325Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "827.03",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.03.html",
+      "contentHash": "5748c55edb59e945328d9eb507d06dc214730e7b64b4b7916f1ebb3c275a8645",
+      "previousRetrievedAt": "2026-09-18T21:20:44.765Z",
+      "retrievedAt": "2026-09-26T01:41:24.572Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "827.04",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.04.html",
+      "contentHash": "763687374ae1d7768bc561a6ef79cced5762ed247e234af826234c7bef1503b1",
+      "previousRetrievedAt": "2026-09-18T21:20:46.920Z",
+      "retrievedAt": "2026-09-26T01:41:26.799Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "827.06",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.06.html",
+      "contentHash": "b31c30167d25a0ad8dafaaf6086f2b1173a0a350945133f05c9eba7bb10111e0",
+      "previousRetrievedAt": "2026-09-18T21:20:49.091Z",
+      "retrievedAt": "2026-09-26T01:41:29.035Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "827.071",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0827/Sections/0827.071.html",
+      "contentHash": "9fda3cb2d153dbfdc74f881f5db914649710922fcd258f34db885c6e7056e7a5",
+      "previousRetrievedAt": "2026-09-18T21:20:51.258Z",
+      "retrievedAt": "2026-09-26T01:41:31.301Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "828.12",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.12.html",
+      "contentHash": "979062d1f596a3a8319f65588fc94dcffe3b0044221cf79f59134b0bc1871cee",
+      "previousRetrievedAt": "2026-09-18T21:20:53.482Z",
+      "retrievedAt": "2026-09-26T01:41:33.633Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "828.125",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0828/Sections/0828.125.html",
+      "contentHash": "d2fb14e21368b008008c4427b9772841ef05a135d7ffb274925e17b24d065da5",
+      "previousRetrievedAt": "2026-09-18T21:20:55.742Z",
+      "retrievedAt": "2026-09-26T01:41:35.859Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "831.01",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0831/Sections/0831.01.html",
+      "contentHash": "2983b98d3ba1ac0396e3b97717ac8c5b2fcf572fb3f6a453117065d070c95dd5",
+      "previousRetrievedAt": "2026-09-18T21:20:57.912Z",
+      "retrievedAt": "2026-09-26T01:41:38.104Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "832.05",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0832/Sections/0832.05.html",
+      "contentHash": "f6ee675959afb225bdedeb7bde9a8bc72d4fc8230e7e5e589425f4f8fc5085a2",
+      "previousRetrievedAt": "2026-09-18T21:21:00.111Z",
+      "retrievedAt": "2026-09-26T01:41:40.345Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "837.011",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.011.html",
+      "contentHash": "00aeb266ce23e76879a8ca14fcd7b22966a4e95a77112c7fcfba0f4050fc6583",
+      "previousRetrievedAt": "2026-09-18T21:21:02.320Z",
+      "retrievedAt": "2026-09-26T01:41:42.576Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "837.02",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.02.html",
+      "contentHash": "2448db83e19e9ce5749aca27f5536a916bfba44acca4100f38343a3db94dc7a5",
+      "previousRetrievedAt": "2026-09-18T21:21:04.507Z",
+      "retrievedAt": "2026-09-26T01:41:44.809Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "837.05",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0837/Sections/0837.05.html",
+      "contentHash": "10d2fea76549f8dabb0137942a00134b5aec3a6d10c01b3ff8dbfb4c2cd21c7a",
+      "previousRetrievedAt": "2026-09-18T21:21:06.677Z",
+      "retrievedAt": "2026-09-26T01:41:47.050Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "843.01",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.01.html",
+      "contentHash": "73b17f040c91922032611719813fc53f91c96cb914bb26703521ec185c85160f",
+      "previousRetrievedAt": "2026-09-18T21:21:08.848Z",
+      "retrievedAt": "2026-09-26T01:41:49.287Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "843.15",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.15.html",
+      "contentHash": "cf7b83030fd86432b4face535308860163812c3b80baedb44da0f97bc812b0d8",
+      "previousRetrievedAt": "2026-09-18T21:21:11.009Z",
+      "retrievedAt": "2026-09-26T01:41:51.524Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "843.19",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0843/Sections/0843.19.html",
+      "contentHash": "a0911c532005e085f3ad36a3a193bc259eab70e3a154403c8a2e23067bd1a656",
+      "previousRetrievedAt": "2026-09-18T21:21:13.157Z",
+      "retrievedAt": "2026-09-26T01:41:53.760Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "849.25",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0849/Sections/0849.25.html",
+      "contentHash": "ffb4c9f6afddc8e1221fd2a498755bb6199fac36342a8847c0558e1cadd85f55",
+      "previousRetrievedAt": "2026-09-18T21:21:15.332Z",
+      "retrievedAt": "2026-09-26T01:41:56.004Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "874.04",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0874/Sections/0874.04.html",
+      "contentHash": "da872aaedc45f61809b1c04ae840b5f53e49e607e4693870a6e4c1dc3acdb647",
+      "previousRetrievedAt": "2026-09-18T21:21:17.606Z",
+      "retrievedAt": "2026-09-26T01:41:58.248Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "877.03",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0877/Sections/0877.03.html",
+      "contentHash": "813f9375f538cb1c40f0079335c3c7a8447dbe82c71b8afb5120c1c439316e92",
+      "previousRetrievedAt": "2026-09-18T21:21:19.766Z",
+      "retrievedAt": "2026-09-26T01:42:00.481Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "893.02",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.02.html",
+      "contentHash": "5356b206019ee59d5f872b601345d6569be3a55a0728d6292949a4edc1ca4e17",
+      "previousRetrievedAt": "2026-09-18T21:21:21.928Z",
+      "retrievedAt": "2026-09-26T01:42:02.730Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "893.03",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.03.html",
+      "contentHash": "81424abc014f4f34e775b7e0d8c2d47d5e03963c81bf17a5f6b99552eb0ba4a1",
+      "previousRetrievedAt": "2026-09-18T21:21:24.137Z",
+      "retrievedAt": "2026-09-26T01:42:05.092Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "893.101",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.101.html",
+      "contentHash": "8176da80ba7f86ca86e3bd498f024dc09c53eac7d14d76482f3ad940d3d8c2aa",
+      "previousRetrievedAt": "2026-09-18T21:21:26.362Z",
+      "retrievedAt": "2026-09-26T01:42:07.528Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "893.13",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html",
+      "contentHash": "24ea1363382c208c816b76e26abe55a15f2cae5cc6f7f16a1162499cbda89291",
+      "previousRetrievedAt": "2026-09-18T21:21:28.520Z",
+      "retrievedAt": "2026-09-26T01:42:09.784Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "893.135",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.135.html",
+      "contentHash": "89e02bc5def35b31b0dd48d21b0d1b7f77c477dd5fd3a34cd41524cbdcae4b3f",
+      "previousRetrievedAt": "2026-09-18T21:21:30.702Z",
+      "retrievedAt": "2026-09-26T01:42:12.185Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "893.145",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.145.html",
+      "contentHash": "d9a2d3ad35d00cd483160e5fdc42cfece961cd466e04c58230f67faed79cafc0",
+      "previousRetrievedAt": "2026-09-18T21:21:32.884Z",
+      "retrievedAt": "2026-09-26T01:42:14.618Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "893.147",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.147.html",
+      "contentHash": "d087a2f6005abfe8a24146886d094031a6c97758d2cb684073db085a562ed536",
+      "previousRetrievedAt": "2026-09-18T21:21:35.068Z",
+      "retrievedAt": "2026-09-26T01:42:16.850Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "921.0022",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0022.html",
+      "contentHash": "a146ed5c7bf2fc327382ff6270aaf411435bc1c27be9514cc94dfc54511b0da6",
+      "previousRetrievedAt": "2026-09-18T21:21:37.237Z",
+      "retrievedAt": "2026-09-26T01:42:19.079Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "921.0023",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.0023.html",
+      "contentHash": "fe9d72e163647ca93413a707a2f9278e28b1b3465175fa8fe70c72b19e5ace61",
+      "previousRetrievedAt": "2026-09-18T21:21:39.499Z",
+      "retrievedAt": "2026-09-26T01:42:22.492Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "921.1425",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0921/Sections/0921.1425.html",
+      "contentHash": "3f12910e8649cf859740ec39a810f96319c887c24f5476314ca34e30d9bd0822",
+      "previousRetrievedAt": "2026-09-18T21:21:41.657Z",
+      "retrievedAt": "2026-09-26T01:42:24.742Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "932.701",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0932/Sections/0932.701.html",
+      "contentHash": "bbd401d5df7cfba062191d5f8fa58fcb2d2be49587fc0a7f7678e0b4413389d1",
+      "previousRetrievedAt": "2026-09-18T21:21:45.142Z",
+      "retrievedAt": "2026-09-26T01:42:25.198Z",
+      "result": "unchanged_reviewed_text"
+    },
+    {
+      "section": "943.10",
+      "sourceUrl": "https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0900-0999/0943/Sections/0943.10.html",
+      "contentHash": "8adad5e3d99b9ba0e3e226d9be154c33e77f068c7d30b4cbca2d9b0eceee30e5",
+      "previousRetrievedAt": "2026-09-18T21:21:47.564Z",
+      "retrievedAt": "2026-09-26T01:42:27.663Z",
+      "result": "unchanged_reviewed_text"
+    }
+  ],
+  "preparedReportReview": "Exact deep equality with baseline after removing only retrievedAt fields; all 101 drafts and source bindings unchanged.",
+  "eligibilityReview": "All eligibility decisions deep-equal baseline; only reportHash changed.",
+  "newExpiresAt": "2026-10-03T01:39:08.514Z",
+  "manifestRecords": 218,
+  "selectableRecords": 126,
+  "publicObservation": {
+    "checkedAt": "2026-09-26",
+    "url": "https://opendefender.net/case-guidance",
+    "floridaChoices": 25,
+    "deploymentVerified": false
+  }
+}
