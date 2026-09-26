@@ -187,8 +187,11 @@ battery in the new abuse records binds both §§784.03 and 784.045.
 
 The read-only freshness preflight and explicit pre-expiry retrieval procedure
 are documented in [florida-refresh-runbook.md](florida-refresh-runbook.md).
-The existing evidence deadline remains September 25, 2026, with a September 23
-review target. No scheduler, reminder, or automatic approval has been installed.
+The September 25 evidence deadline was missed. The September 26 recovery
+rechecked all 92 required sections and found no text changes. The current receipt
+expires October 3, 2026 at 01:39:08 UTC; its 48-hour review target is October 1
+at 01:39:08 UTC. Read the actual receipt for subsequent deadlines. No scheduler,
+reminder, or automatic approval has been installed.
 
 Generate the offline coverage inventory with
 `npx tsx scripts/data-review/build-florida-coverage-inventory.ts`.
