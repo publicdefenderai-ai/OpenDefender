@@ -147,3 +147,25 @@ Reproduce without network access:
 The coverage report and evidence validation work from committed files on a fresh clone. The archive is needed only to reproduce acquisition. Hash, law-code identity, duplicate-source, and archive-provenance checks prevent silently substituting evidence. Shared-source grouping and the committed report are tested for drift. No credentials or private case data are included.
 
 Validation: 27 focused tests and the application typecheck passed. This is an offline research-only delivery, so no new production build/browser run was required. PR 10's GitHub failures were inspected and again occurred before test execution because Vitest and Playwright were not found; that separate installation problem remains unresolved.
+
+## Combined six-record review after PR 11
+
+PR 11 merged at `00f954bbaeafcafff0b78b110b49b8215ba08395`. This delivery combines the complete six-record reuse queue: assault on a peace officer, first-degree burglary, second/third DUI, agricultural grand theft, and firearm grand theft. The [second-batch report](../scripts/data-review/output/california-batch-two-review.md) supplies the proposed text and source links for each record. A separate historical baseline preserves the six pre-correction records; the first batch's evidence is not rewritten.
+
+The corrections distinguish §241(c)'s protected-status/duty conditions and §18.5 jail limit; inhabited-location burglary and §461(a)'s state-prison terms; the second/third DUI probation alternatives and qualifying-prior requirements; the interaction between §487(b)(1)(A)'s literal $250 language and §490.2's general $950 petty-theft rule; and the separate firearm penalty and express firearm exception. Agricultural-product theft is not assigned the livestock-specific fine. Repeat-DUI ranges are not presented as universal where a prior felony invokes §23550.5.
+
+All six use the existing exact-ID explanation and classification path in English, Spanish, and Chinese; translations remain drafts. A small shared corrections registry combines batches without overwriting historical batch evidence. Existing IDs remain stable. Direct shared-catalog consumers retain explicit category alternatives through the already merged propagation fix.
+
+### Evidence reused and versions retained
+
+Most sources were already present. Only PEN §830 and VEH §23103.5 were additionally extracted from the hash-verified cached archive. The latter has two retained versions with a 2033 transition. This batch relies on subdivision (c), whose XML paragraph is identical in both versions, for the qualifying-prior rule. The validator requires that exact paragraph in every retained version and binds each version's identity and content hash. It rejects a missing version, changed clause, lost dependency, altered baseline, or promotion to full verification. It does not choose a whole-section version or publish the differing interlock provisions.
+
+The cumulative catalog report now records 31 of 99 configured records with the bounded statutory correction pass, 68 awaiting it, and 21 withheld canonical labels. Research evidence totals 111 sections/113 versions. These are catalog-progress and acquisition figures, not statewide completeness or full legal certification. The remaining 68 records form 40 shared-primary-source groups. The largest three groups cover 18 records, offering the next combined research queue while preserving subdivision-specific analysis.
+
+### Validation and rollout
+
+The 97-test focused suite initially found one old assertion comparing the display string `Felony.`. It now asserts the structured felony classification; the affected 27 tests passed on rerun, with the other 70 having passed the initial run. Application typecheck, production build, and seven production-browser checks passed. Browser checks cover all 31 catalog corrections, repeat-DUI/firearm guidance propagation, and the agricultural-theft selector. No external AI calls, real case inputs, or production credentials were used. The existing release runner includes these expanded tests. Previously documented GitHub installation failures remain separate from these local results.
+
+After review and merge, pull in Replit, refresh the California source references with `npm run db:seed:california` against the intended database, republish, and check public rollout. No production seed or deployment occurred here. Missing newly required references withhold affected records until refreshed. Complete case-law, record-specific priors/enhancements, sentencing/DMV calculations, and independent legal approval remain beyond the bounded pass.
+
+Offline reproduction: run `node --import tsx scripts/data-review/california-verification/reuse-review.ts`, then `node --import tsx scripts/data-review/california-verification/coverage.ts`. Both use committed evidence and need no archive download or credentials.

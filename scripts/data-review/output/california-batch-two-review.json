@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "scope": "bounded_shared_source_corrections_not_full_legal_certification",
+  "archiveSha256": "dd0f40a7256bcf31e8dff50efa4833e296a700a7f772e36c23dc276039ef22a4",
+  "documents": {
+    "PEN:830": [
+      {
+        "id": "PEN830.1989116519",
+        "lawCode": "PEN",
+        "section": "830.",
+        "opStatutes": "1989",
+        "opChapter": "1165",
+        "opSection": "19",
+        "effectiveDate": null,
+        "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+        "division": null,
+        "title": "3.",
+        "part": "2.",
+        "chapter": "4.5.",
+        "article": null,
+        "history": "Amended by Stats. 1989, Ch. 1165, Sec. 19.",
+        "contentMember": "LAW_SECTION_TBL_98452.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-21 01:00:17",
+        "tableRow": 98452,
+        "tableRowSha256": "9211da8a36aec6c659c546c9108cffdc41cc96ec5cc7a3dbb093872d41a893b6",
+        "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>Any person who comes within the provisions of this chapter and who otherwise meets all standards imposed by law on a peace officer is a peace officer, and notwithstanding any other provision of law, no person other than those designated in this chapter is a peace officer. The restriction of peace officer functions of any public officer or employee shall not affect his or her status for purposes of retirement.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=830."
+      }
+    ],
+    "VEH:23103.5": [
+      {
+        "id": "VEH23103.5.202568918",
+        "lawCode": "VEH",
+        "section": "23103.5.",
+        "opStatutes": "2025",
+        "opChapter": "689",
+        "opSection": "18",
+        "effectiveDate": "2026-01-01 00:00:00",
+        "versionId": "id_523c9fc4-c630-11f0-975c-e301db986e9c",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "1.",
+        "history": "Amended (as amended by Stats. 2016, Ch. 783, Sec. 24) by Stats. 2025, Ch. 689, Sec. 18.   (AB 366)   Effective January 1, 2026.   Repealed as of January 1, 2033, by its own provisions.    See later operative version, as amended by Sec. 19 of Stats. 2025, Ch. 689.",
+        "contentMember": "LAW_SECTION_TBL_141148.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 141148,
+        "tableRowSha256": "b5dce6fa51123abedfd1fe5cdc8df1e1baafdea502a81d7d72b50807b4155ccc",
+        "contentSha256": "5004ab71f6690b898ce0e07f6fec3171f358cb8ebd24d537090948a181ef6df9",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>If the prosecution agrees to a plea of guilty or nolo contendere to a charge of a violation of Section 23103 in satisfaction of, or as a substitute for, an original charge of a violation of Section 23152, the prosecution shall state for the record a factual basis for the satisfaction or substitution, including whether or not there had been consumption of an alcoholic beverage or ingestion or administration of a drug, or both, by the defendant in connection with the offense. The statement shall set forth the facts that show whether or not there was a consumption of an alcoholic beverage or the ingestion or administration of a drug by the defendant in connection with the offense.</p><p>(b)<span class=\"EnSpace\"/>The court shall advise the defendant, prior to the acceptance of the plea\n\t\t\t\t  offered pursuant to a factual statement pursuant to subdivision (a), of the consequences of a conviction of a violation of Section 23103 as set forth in subdivision (c).</p><p>(c)<span class=\"EnSpace\"/>If the court accepts the defendant’s plea of guilty or nolo contendere to a charge of a violation of Section 23103 and the prosecutor’s statement under subdivision (a) states that there was consumption of an alcoholic beverage or the ingestion or administration of a drug by the defendant in connection with the offense, the resulting conviction shall be a prior offense for the purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622, as specified in those sections.</p><p>(d)<span class=\"EnSpace\"/>The court shall notify the Department of Motor Vehicles of each conviction of Section 23103 that is required under this section to be a prior offense for purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622.</p><p>(e)<span class=\"EnSpace\"/>Except as provided in paragraph (1) of subdivision (f), if the court places the defendant on probation for a conviction of Section 23103 that is required under this section to be a prior offense for purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622, the court shall order the defendant to enroll in an alcohol and drug education program licensed under Chapter 9 (commencing with Section 11836) of Part 2 of Division 10.5 of the Health and Safety Code and complete, at a minimum, the educational component of that program, as a condition of probation. If compelling circumstances exist that mitigate against including the education component in the order, the court may make an affirmative finding to that effect. The court shall state the compelling circumstances and the affirmative finding on the record, and may, in these cases, exclude the educational component from the order.</p><p>(f)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>If the court places on probation a defendant convicted of a violation of Section 23103 that is required under this section to be a prior offense for purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622, and that offense occurred within 10 years of a separate conviction of a violation of Section 23103, as specified in this section, or within 10 years of a conviction of a violation of Section 23152 or 23153, the court shall order the defendant to participate for nine months or longer, as ordered by the court, in a program licensed under Chapter 9 (commencing with Section 11836) of Part 2 of Division 10.5 of the Health and Safety Code that consists of at least 60 hours of program activities, including education, group counseling, and individual interview sessions.</p><p>(2)<span class=\"EnSpace\"/>The court shall revoke the person’s probation, except for good cause shown, for the failure to enroll in, participate in, or\n\t\t\t\t  complete a program specified in paragraph (1).</p><p>(g)<span class=\"EnSpace\"/>Commencing January 1, 2019, the court may require a person convicted on or after January 1, 2019, of a violation of Section 23103, as described in this section, to install a functioning, certified ignition interlock device on any vehicle that the person operates and prohibit that person from operating a motor vehicle unless that vehicle is equipped with a functioning, certified ignition interlock device. If the court orders the ignition interlock device restriction, the term shall be determined by the court for a period of at least three months, but no longer than the term specified in Section 23575.3 that would have applied to the defendant had the defendant instead been convicted of a violation\n\t\t\t\t  of Section 23152, from the date of conviction. The court shall notify the Department of Motor Vehicles, as specified in subdivision (a) of Section 1803, of the terms of the restrictions in accordance with subdivision (a) of Section 1804. The Department of Motor Vehicles shall place the restriction in the person’s records in the Department of Motor Vehicles. A person who is required to install a functioning, certified ignition interlock device pursuant to this subdivision shall submit the “Verification of Installation” form described in paragraph (2) of subdivision (g) of Section 13386 and maintain the ignition interlock device as required under subdivision (f) of Section 23575.3. The department shall monitor the installation and maintenance of the ignition interlock device installed pursuant to this subdivision.</p><p>(h)<span class=\"EnSpace\"/>The Department of Motor Vehicles shall include in its annual report to the Legislature under Section 1821 an evaluation of the\n\t\t\t\t  effectiveness of the programs described in subdivisions (e) and (g) as to treating persons convicted of violating Section 23103.</p><p>(i)<span class=\"EnSpace\"/>This section shall remain in effect only until January 1,\n\t\t\t\t  2033, and as of that date is repealed, unless a later enacted statute, that is enacted before January 1,\n\t\t\t\t  2033, deletes or extends that date.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23103.5."
+      },
+      {
+        "id": "VEH23103.5.202568919",
+        "lawCode": "VEH",
+        "section": "23103.5.",
+        "opStatutes": "2025",
+        "opChapter": "689",
+        "opSection": "19",
+        "effectiveDate": "2026-01-01 00:00:00",
+        "versionId": "id_540d1a06-c630-11f0-975c-e301db986e9c",
+        "division": "11.",
+        "title": null,
+        "part": null,
+        "chapter": "12.",
+        "article": "1.",
+        "history": "Amended (as added by Stats. 2016, Ch. 783, Sec. 25) by Stats. 2025, Ch. 689, Sec. 19.   (AB 366)   Effective January 1, 2026.   Section operative January 1, 2033, by its own provisions.",
+        "contentMember": "LAW_SECTION_TBL_141149.lob",
+        "activeFlag": "Y",
+        "transUpdate": "2026-07-17 01:04:20",
+        "tableRow": 141149,
+        "tableRowSha256": "f2bc67132f147e3dc36aa1b29f28a6575c39dd56682df988a49191145831877d",
+        "contentSha256": "1e18f8a75e0e39ac6067e4ee800819b5564a7d061404849c12a776a0bed412ce",
+        "contentXml": "<caml:Content xmlns:caml=\"http://lc.ca.gov/legalservices/schemas/caml.1#\"><p>(a)<span class=\"EnSpace\"/>If the prosecution agrees to a plea of guilty or nolo contendere to a charge of a violation of Section 23103 in satisfaction of, or as a substitute for, an original charge of a violation of Section 23152, the prosecution shall state for the record a factual basis for the satisfaction or substitution, including whether or not there had been consumption of an alcoholic beverage or ingestion or administration of a drug, or both, by the defendant in connection with the offense. The statement shall set forth the facts that show whether or not there was a consumption of an alcoholic beverage or the ingestion or administration of a drug by the defendant in connection with the offense.</p><p>(b)<span class=\"EnSpace\"/>The court shall advise the defendant, prior to the acceptance of the plea\n\t\t\t\t  offered pursuant to a factual statement pursuant to subdivision (a), of the consequences of a conviction of a violation of Section 23103 as set forth in subdivision (c).</p><p>(c)<span class=\"EnSpace\"/>If the court accepts the defendant’s plea of guilty or nolo contendere to a charge of a violation of Section 23103 and the prosecutor’s statement under subdivision (a) states that there was consumption of an alcoholic beverage or the ingestion or administration of a drug by the defendant in connection with the offense, the resulting conviction shall be a prior offense for the purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622, as specified in those sections.</p><p>(d)<span class=\"EnSpace\"/>The court shall notify the Department of Motor Vehicles of each conviction of Section 23103 that is required under this section to be a prior offense for purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622.</p><p>(e)<span class=\"EnSpace\"/>Except as provided in paragraph (1) of subdivision (f), if the court places the defendant on probation for a conviction of Section 23103 that is required under this section to be a prior offense for purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622, the court shall order the defendant to enroll in an alcohol and drug education program licensed under Chapter 9 (commencing with Section 11836) of Part 2 of Division 10.5 of the Health and Safety Code and complete, at a minimum, the educational component of that program, as a condition of probation. If compelling circumstances exist that mitigate against including the education component in the order, the court may make an affirmative finding to that effect. The court shall state the compelling circumstances and the affirmative finding on the record, and may, in these cases, exclude the educational component from the order.</p><p>(f)<span class=\"EnSpace\"/>(1)<span class=\"EnSpace\"/>If the court places on probation a defendant convicted of a violation of Section 23103 that is required under this section to be a prior offense for purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622, and that offense occurred within 10 years of a separate conviction of a violation of Section 23103, as specified in this section, or within 10 years of a conviction of a violation of Section 23152 or 23153, the court shall order the defendant to participate for nine months or longer, as ordered by the court, in a program licensed under Chapter 9 (commencing with Section 11836) of Part 2 of Division 10.5 of the Health and Safety Code that consists of at least 60 hours of program activities, including education, group counseling, and individual interview sessions.</p><p>(2)<span class=\"EnSpace\"/>The court shall revoke the person’s probation, except for good cause shown, for the failure to enroll in, participate in, or\n\t\t\t\t  complete a program specified in paragraph (1).</p><p>(g)<span class=\"EnSpace\"/>The Department of Motor Vehicles shall include in its annual report to the Legislature under Section 1821 an evaluation of the effectiveness of the programs described in subdivisions (e) and (f) as to treating persons convicted of violating Section 23103.</p><p>(h)<span class=\"EnSpace\"/>This section shall become operative January 1, 2033.</p></caml:Content>",
+        "sourceUrl": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=VEH&sectionNum=23103.5."
+      }
+    ]
+  },
+  "commonVersionClauses": [
+    {
+      "sourceKey": "VEH:23103.5",
+      "clauseXml": "<p>(c)<span class=\"EnSpace\"/>If the court accepts the defendant’s plea of guilty or nolo contendere to a charge of a violation of Section 23103 and the prosecutor’s statement under subdivision (a) states that there was consumption of an alcoholic beverage or the ingestion or administration of a drug by the defendant in connection with the offense, the resulting conviction shall be a prior offense for the purposes of Section 23540, 23546, 23550, 23560, 23566, or 23622, as specified in those sections.</p>",
+      "limitation": "This batch relies only on subdivision (c), defining the qualifying prior, which matches byte-for-byte in both retained versions. The 2033 successor remains retained; different interlock provisions are not approved or selected by this batch."
+    }
+  ],
+  "records": [
+    {
+      "id": "ca-assault-on-peace-officer",
+      "baselineSha256": "be333cf5788e8324c93c6429e6a110129e914ee8dcd479a1deb858395c3068cf",
+      "correctionSha256": "6654f5db928b53271435e7d15682c08458959536e8a5b61476f99377e271cc1f",
+      "status": "bounded_correction_proposed",
+      "sources": [
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:240",
+          "versions": [
+            {
+              "versionId": "id_66510c18-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "4e6c6ade058fc214c4e17a93df6453903c5dce1d5e5547641b0bcd925f377a74"
+            }
+          ]
+        },
+        {
+          "key": "PEN:241",
+          "versions": [
+            {
+              "versionId": "id_f1f2d969-ac20-11ef-b77a-e14b39306f8a",
+              "contentSha256": "ce55986c2fd0cc5bec9396326fbafaa48923acf51dc133ad593b89be5101b35c"
+            }
+          ]
+        },
+        {
+          "key": "PEN:830",
+          "versions": [
+            {
+              "versionId": "id_698bc480-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "82eb19513c36caf34e8340a7f7a1514d71e620bd8bead373a5ebe81bc786bdca"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Complete element/case-law review, individualized prior and enhancement analysis, collateral consequences, and independent legal approval remain. No personalized sentencing or license calculation is approved."
+    },
+    {
+      "id": "ca-burglary-in-the-first-degree",
+      "baselineSha256": "eca0ccbc4a5953ffa4c77ea4dba208aae9ba4a1dffec0e863da0d5dfc3b11251",
+      "correctionSha256": "63dfd0e4735ddeaec7ec0c1ddc48c41bf0dc0a8e7f5aefa8ca8b092dc363e188",
+      "status": "bounded_correction_proposed",
+      "sources": [
+        {
+          "key": "PEN:459",
+          "versions": [
+            {
+              "versionId": "id_7e39251e-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "0b06cd7f628a56fc8823332e3fd862fe0b15d4217e00f063c0087f9de15f25aa"
+            }
+          ]
+        },
+        {
+          "key": "PEN:460",
+          "versions": [
+            {
+              "versionId": "id_67a74cd8-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "2e0449e8688d2a3d25ed7936aec92c233e91a69114c29c51c1aa1895aeda1fab"
+            }
+          ]
+        },
+        {
+          "key": "PEN:461",
+          "versions": [
+            {
+              "versionId": "id_8df2a723-660e-11e0-8fc7-8d05c2a88098",
+              "contentSha256": "308e136c4d855f1c803c5c8249939ee6efef254337e366f3871408ee3562abf4"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Complete element/case-law review, individualized prior and enhancement analysis, collateral consequences, and independent legal approval remain. No personalized sentencing or license calculation is approved."
+    },
+    {
+      "id": "ca-dui-second-offense",
+      "baselineSha256": "536e8035bebfcfc8114ff055e0ba4ef74e73e90dc59507fdce7361789b81bc46",
+      "correctionSha256": "2f8cdd611a695beddda43297a2e02f160363cd10ea2b0b02362a9818bea59591",
+      "status": "bounded_correction_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23103.5",
+          "versions": [
+            {
+              "versionId": "id_523c9fc4-c630-11f0-975c-e301db986e9c",
+              "contentSha256": "5004ab71f6690b898ce0e07f6fec3171f358cb8ebd24d537090948a181ef6df9"
+            },
+            {
+              "versionId": "id_540d1a06-c630-11f0-975c-e301db986e9c",
+              "contentSha256": "1e18f8a75e0e39ac6067e4ee800819b5564a7d061404849c12a776a0bed412ce"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23540",
+          "versions": [
+            {
+              "versionId": "id_7f17fa29-661e-11d9-8b2f-d2d285bd9e46",
+              "contentSha256": "4f1deb4b82a6728ad4f10a0724e0b86723a741502a7401321a2b40f025973127"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23542",
+          "versions": [
+            {
+              "versionId": "id_8071bdcd-661e-11d9-8b2f-d2d285bd9e46",
+              "contentSha256": "2efd10653a146e2e52b2e3fedb91deadf3241a5fe2b4d1ac3824638a3c45201d"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23550.5",
+          "versions": [
+            {
+              "versionId": "id_3d0f447f-8733-11e4-b191-b541c7e31c8c",
+              "contentSha256": "45e0c41c13faab32a833163a9a9c3ce7ae045d16192195f2c4e0074ef1715021"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23600",
+          "versions": [
+            {
+              "versionId": "id_10fd5e55-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "da73214d57bc60cd628d891cb1907b49b1e29286983440302aa885aa59358a50"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Complete element/case-law review, individualized prior and enhancement analysis, collateral consequences, and independent legal approval remain. No personalized sentencing or license calculation is approved."
+    },
+    {
+      "id": "ca-dui-third-offense",
+      "baselineSha256": "70bf4d4c5f72667cde90ac44aa70de8f09282484394306c594e758b2e9af7ad2",
+      "correctionSha256": "8aed96259a8155e824f6eca235a97a895740fbe3e733bddb0cf78ce99c367fad",
+      "status": "bounded_correction_proposed",
+      "sources": [
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23103.5",
+          "versions": [
+            {
+              "versionId": "id_523c9fc4-c630-11f0-975c-e301db986e9c",
+              "contentSha256": "5004ab71f6690b898ce0e07f6fec3171f358cb8ebd24d537090948a181ef6df9"
+            },
+            {
+              "versionId": "id_540d1a06-c630-11f0-975c-e301db986e9c",
+              "contentSha256": "1e18f8a75e0e39ac6067e4ee800819b5564a7d061404849c12a776a0bed412ce"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23152",
+          "versions": [
+            {
+              "versionId": "id_32316c19-c603-11e6-a742-84f150336b2e",
+              "contentSha256": "68eb015109fe286ee93abcc7c6d203294fa6bbc4cc4ed48b09ae12e705929d6a"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23546",
+          "versions": [
+            {
+              "versionId": "id_80fe465f-661e-11d9-8b2f-d2d285bd9e46",
+              "contentSha256": "6de2c509ec182cacdd052af8e6891533b58256f3a23cdc911024e003e53012e0"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23548",
+          "versions": [
+            {
+              "versionId": "id_5fe468c6-a0fc-11dd-9a1e-ee8c329b72d4",
+              "contentSha256": "4ba692415e7cc82afb4c8ac7bf280abb600b35c9bdcf682aea85f67bcbae3c8f"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23550.5",
+          "versions": [
+            {
+              "versionId": "id_3d0f447f-8733-11e4-b191-b541c7e31c8c",
+              "contentSha256": "45e0c41c13faab32a833163a9a9c3ce7ae045d16192195f2c4e0074ef1715021"
+            }
+          ]
+        },
+        {
+          "key": "VEH:23600",
+          "versions": [
+            {
+              "versionId": "id_10fd5e55-2921-11d9-a1bb-e0ce1cd664b1",
+              "contentSha256": "da73214d57bc60cd628d891cb1907b49b1e29286983440302aa885aa59358a50"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Complete element/case-law review, individualized prior and enhancement analysis, collateral consequences, and independent legal approval remain. No personalized sentencing or license calculation is approved."
+    },
+    {
+      "id": "ca-grand-theft-agricultural-487-b1a",
+      "baselineSha256": "49de3f6c42a5f450e23f21a48bccdda0c6460217866a9d3cae8da2b460b71876",
+      "correctionSha256": "ab784acb8595ff7ea5cdbcdd8ae94730ef146563bc6d3a06776d53ede562526e",
+      "status": "bounded_correction_proposed",
+      "sources": [
+        {
+          "key": "PEN:1170",
+          "versions": [
+            {
+              "versionId": "id_9509e7a0-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "7528c23fddd031d195794d6d8b0392fbe3f45dff263339105c513580c2d1d48e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:17",
+          "versions": [
+            {
+              "versionId": "id_6b594bda-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "3b31b2bede9df0309ca28a9407c967378fe6932b1bc9365e6abb8f9cf380950e"
+            }
+          ]
+        },
+        {
+          "key": "PEN:18.5",
+          "versions": [
+            {
+              "versionId": "id_1c3e4d55-c635-11e6-a742-84f150336b2e",
+              "contentSha256": "b5467c03c6087b79fa006a8fe608ee2bbeb3af9957c2788edb9fd0299805a128"
+            }
+          ]
+        },
+        {
+          "key": "PEN:290",
+          "versions": [
+            {
+              "versionId": "id_78218b42-c956-11f0-aea3-3b460998bfb4",
+              "contentSha256": "816bcf541f4f7afe6feb23908642dd478dd2da8bf7ba8a9434ef314043621c48"
+            }
+          ]
+        },
+        {
+          "key": "PEN:484",
+          "versions": [
+            {
+              "versionId": "id_67b508c6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "fc9c0f9bb3c2f28a98a6b0b55b068b8a3b2fdf0ffba16d7a6d9c9d3bea6e0920"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487",
+          "versions": [
+            {
+              "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490",
+          "versions": [
+            {
+              "versionId": "id_67be30b4-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "42f67e16ce678a3bb3de3791149faf6102b9aaf0323b76dbe9386110e8c82b16"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.2",
+          "versions": [
+            {
+              "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+              "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+            }
+          ]
+        },
+        {
+          "key": "PEN:667",
+          "versions": [
+            {
+              "versionId": "id_f43f86f1-5c47-11ec-9d2f-c3e210bbbdff",
+              "contentSha256": "6eabb9f13f04123c3765a942ebf11f7067ccc70cba742e0b1d1d876fc05356cc"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Complete element/case-law review, individualized prior and enhancement analysis, collateral consequences, and independent legal approval remain. No personalized sentencing or license calculation is approved."
+    },
+    {
+      "id": "ca-grand-theft-firearm-487-d2",
+      "baselineSha256": "259303c6d32b2b1387c7ed5cfba0a9f15bb2591d3d44d277e199a7dbca7af1b1",
+      "correctionSha256": "5947675527c0358b58408fd602516a6be62e95168d6e95452a61a479694e93b7",
+      "status": "bounded_correction_proposed",
+      "sources": [
+        {
+          "key": "PEN:484",
+          "versions": [
+            {
+              "versionId": "id_67b508c6-2920-11d9-9844-b32bb8dfae52",
+              "contentSha256": "fc9c0f9bb3c2f28a98a6b0b55b068b8a3b2fdf0ffba16d7a6d9c9d3bea6e0920"
+            }
+          ]
+        },
+        {
+          "key": "PEN:487",
+          "versions": [
+            {
+              "versionId": "id_0b411f19-ac21-11ef-b77a-e14b39306f8a",
+              "contentSha256": "c86782ecbc4879b3c71d84c690d2686fcb58c763d88ea6752c715f74b69d22c1"
+            }
+          ]
+        },
+        {
+          "key": "PEN:489",
+          "versions": [
+            {
+              "versionId": "id_ea41a1aa-0426-11eb-98af-9b545df5b3b9",
+              "contentSha256": "913b11ded62b86a57da382fec2f465d2ba518f54ed9c8d5df8a053e482fd761d"
+            }
+          ]
+        },
+        {
+          "key": "PEN:490.2",
+          "versions": [
+            {
+              "versionId": "id_905a3423-aab2-11e6-84f0-9150850bae3b",
+              "contentSha256": "183090d60d2ab478f05af042c62220c9c145ec5819d53179ce186aae8622cf87"
+            }
+          ]
+        }
+      ],
+      "remainingWork": "Complete element/case-law review, individualized prior and enhancement analysis, collateral consequences, and independent legal approval remain. No personalized sentencing or license calculation is approved."
+    }
+  ]
+}

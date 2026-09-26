@@ -179,7 +179,7 @@ describe("authoritative California charge release", () => {
 
     const firearm = getCaliforniaCanonicalRecord("ca-grand-theft-firearm-487-d2");
     expect(firearm?.citation).toBe("Cal. Penal Code § 487(d)(2)");
-    expect(firearm?.grading).toBe("Felony.");
+    expect(firearm?.categories).toEqual(["felony"]);
     expect(firearm?.penalty).toContain("16 months, 2 years, or 3 years");
 
     const withoutGrossNegligence = getCaliforniaCanonicalRecord("ca-vehicular-manslaughter-192-c2");

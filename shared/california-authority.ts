@@ -8,7 +8,7 @@
  * currentness evidence are all present.
  */
 
-import corrections from "./california-batch-one-corrections.json";
+import { CALIFORNIA_CHARGE_CORRECTIONS as corrections } from "./california-corrections";
 import type { CriminalCharge } from "./criminal-charges";
 
 export type CaliforniaDisposition =
